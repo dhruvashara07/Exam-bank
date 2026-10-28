@@ -5,7 +5,7 @@ All coordinates are PDF points with the origin at the top-left (PyMuPDF conventi
 import re
 import pymupdf as fitz
 
-CONTENT_X0, CONTENT_X1 = 41.0, 555.0      # outside this: margin strips, corner marks
+CONTENT_X0, CONTENT_X1 = 30.0, 570.0      # outside this: margin strips (corner marks are filtered by shape)
 QNUM_X = (44.0, 56.0)                     # question numbers
 LETTER_X = (64.0, 80.0)                   # (a) (b) ...
 ROMAN_X = (84.0, 104.0)                   # (i) (ii) ...
@@ -35,7 +35,7 @@ def page_bounds(page):
             t = ''.join(s['text'] for s in l['spans']).strip()
             y0, y1 = l['bbox'][1], l['bbox'][3]
             if y0 > 700 and ('©' in t or 'UCLES' in t or 'Turn over' in t or re.search(r'\d{4}/\d\d/[A-Z]/[A-Z]/\d\d', t)):
-                bottom = min(bottom, y0 - 1.5)
+                bottom = min(bottom, y0 + 1.0)
             if y1 < 56 and re.fullmatch(r'\d{1,2}', t):          # page number
                 top = max(top, y1 + 4)
     return top, bottom
@@ -72,7 +72,26 @@ def ink_boxes(page, top, bottom):
             continue
         if r.width > 0.95 * page.rect.width and r.height > 0.95 * page.rect.height:
             continue                         # full-page clip/background
-        boxes.append(fitz.Rect(max(r.x0, CONTENT_X0), max(r.y0, top), min(r.x1, CONTENT_X1), min(r.y1, bottom)))
+        if (r.width < 1.5 or r.height < 1.5) and (r.x0 < 40 or r.x1 > 556) and (r.y0 > bottom - 30 or r.y1 < top + 30):
+            continue                         # crop/corner marks
+        if d.get('fill') in ((1.0, 1.0, 1.0), (1, 1, 1)) and not d.get('color'):
+            continue                         # white masks: invisible on paper
+        parts = [r]
+        if len(d['items']) > 1 and r.height > 30:      # one path object can hold lines from several questions
+            parts = []
+            for it in d['items']:
+                pts = [x for x in it[1:] if isinstance(x, fitz.Point)]
+                if it[0] == 're':
+                    parts.append(fitz.Rect(it[1]))
+                elif it[0] == 'qu':
+                    parts.append(it[1].rect)
+                elif pts:
+                    xs = [p.x for p in pts]; ys = [p.y for p in pts]
+                    parts.append(fitz.Rect(min(xs), min(ys), max(xs), max(ys)))
+        for q in parts:
+            if q.y1 < top - 1 or q.y0 > bottom + 1:
+                continue
+            boxes.append(fitz.Rect(max(q.x0, CONTENT_X0), max(q.y0, top), min(q.x1, CONTENT_X1), min(q.y1, bottom)))
     for img in page.get_image_info():
         r = fitz.Rect(img['bbox'])
         if r.y1 > top and r.y0 < bottom:

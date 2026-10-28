@@ -6,7 +6,12 @@ Read this first in every session. Update it before ending a session.
 - 2026-10-29: 134 PDFs (0625 Physics, Feb/Mar 2025 to May/Jun 2026) in `raw/`.
 - 2026-10-29: Pipeline v1 (`pipeline/`): watermark removal, question/part splitting, exact SVG pieces,
   figures, mark-scheme linking, test-paper builder. All 66 papers processed: 1,200 questions,
-  every paper's marks match its cover total. 24 items in `review/queue.json`.
+  every paper's marks match its cover total. 21 items in `review/queue.json` (20 MCQs with
+  diagram options, 1 mark-scheme row). `pipeline/coverage.py`: all 923 question pages fully covered
+  (5 remaining hits are curve control points, checked by eye).
+- Review page (phone): https://claude.ai/artifact/LGic38rQwKjkZze9jL1zmq — feedback is stored in its
+  database collection `feedback` (doc id = question id). Read it with ArtifactData before changing the pipeline.
+- GitHub Action `.github/workflows/sync.yml` written; needs secrets (see docs/SETUP.md).
 
 ## Next
 1. Dhruv reviews flagged items (review page) and gives feedback on a sample of unflagged ones.

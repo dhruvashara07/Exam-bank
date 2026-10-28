@@ -69,11 +69,34 @@ def end_of_paper(page, top, bottom):
     return bottom
 
 
+def best_cut(boxes, y, floor):
+    """A cut line at or a little above y that slices through as little ink as possible.
+
+    Tall glyphs on a label's line (fractions, superscripts) can start above the label word,
+    so the default cut (label top minus padding) is moved up when it would split them.
+    """
+    cands = [y - k * 0.5 for k in range(0, 29) if y - k * 0.5 > floor]
+    if not cands:
+        return y
+    def cost(c):
+        return sum(1 for r in boxes if r.y0 < c - 0.3 and r.y1 > c + 0.3 and r.height < 80)
+    return min(cands, key=lambda c: (cost(c), abs(c - y)))
+
+
 def raw_segments(doc, bnds):
     """Strips of pages between consecutive boundaries, continuing across page breaks."""
     segs = []
     pages = [p for p in range(1, len(doc)) if not is_blank_page(doc[p])]
     bounds = {p: page_bounds(doc[p]) for p in pages}
+    boxes = {}
+    cuts = []
+    for i, b in enumerate(bnds):
+        p = b['page']
+        if p not in boxes:
+            boxes[p] = ink_boxes(doc[p], *bounds[p])
+        prev = [x['y'] for x in bnds[:i] if x['page'] == p]
+        floor = (max(prev) + 2) if prev else bounds[p][0] - 6
+        cuts.append(best_cut(boxes[p], b['y'] - PAD_TOP, floor))
     for i, b in enumerate(bnds):
         nxt = bnds[i + 1] if i + 1 < len(bnds) else None
         start_page = b['page']
@@ -82,8 +105,8 @@ def raw_segments(doc, bnds):
             top, bottom = bounds[p]
             if not nxt:
                 bottom = end_of_paper(doc[p], top, bottom)
-            y0 = b['y'] - PAD_TOP if p == start_page else top
-            y1 = nxt['y'] - PAD_TOP if (nxt and p == end_page) else bottom
+            y0 = cuts[i] if p == start_page else top
+            y1 = cuts[i + 1] if (nxt and p == end_page) else bottom
             if y1 - y0 > 3:
                 segs.append({'path': b['path'], 'page': p, 'y0': y0, 'y1': y1,
                              'continued': p != start_page})
@@ -94,7 +117,7 @@ def trim(doc, seg):
     """Shrink a strip to the ink it contains; drop strips with no ink."""
     page = doc[seg['page']]
     top, bottom = page_bounds(page)
-    boxes = [r for r in ink_boxes(page, top, bottom) if r.y1 > seg['y0'] + 1 and r.y0 < seg['y1'] - 1]
+    boxes = [r for r in ink_boxes(page, top, bottom) if seg['y0'] <= (r.y0 + r.y1) / 2 <= seg['y1']]
     if not boxes:
         return None
     ink_top = min(r.y0 for r in boxes)
