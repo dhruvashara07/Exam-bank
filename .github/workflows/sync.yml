@@ -1,0 +1,40 @@
+name: Sync to Cloudinary and MongoDB
+
+# Runs after every push that changes questions or images, or by hand from the Actions tab.
+on:
+  push:
+    branches: [main]
+    paths: ['assets/**', 'data/**']
+  workflow_dispatch:
+    inputs:
+      all:
+        description: 'Upload every SVG again (first run, or after a full re-run)'
+        type: boolean
+        default: true
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests pymongo
+      - name: Upload SVGs to Cloudinary
+        env:
+          CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
+          BEFORE_SHA: ${{ github.event_name == 'push' && github.event.before || '' }}
+        run: python3 pipeline/sync_cloudinary.py ${{ (github.event_name == 'workflow_dispatch' && inputs.all) && '--all' || '' }}
+      - name: Sync questions to MongoDB
+        env:
+          CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+        run: python3 pipeline/sync_mongo.py
