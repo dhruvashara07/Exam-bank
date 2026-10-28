@@ -65,8 +65,10 @@ def structured_rows(doc):
         cuts = [(l['y0'] - 4, l) for l in labels]
         if current and (not cuts or cuts[0][0] > top + 4):
             cuts.insert(0, (top, None))          # continuation of the previous label
+        headers = [l['y0'] for l in lines if l['text'] == 'Question' and l['x0'] < 130]
         for i, (y, lab) in enumerate(cuts):
             y_end = cuts[i + 1][0] if i + 1 < len(cuts) else bottom
+            y_end = min([y_end] + [h - 3 for h in headers if h > y + 6])   # a new table starts mid-page
             if lab is not None:
                 text = lab['text'].replace(' ', '')
                 m = LABEL.match(text)

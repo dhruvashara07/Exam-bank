@@ -7,7 +7,7 @@ We delete every q..Q group that directly sets a /gRLs0* graphics state, plus the
 final top-level group that carries the outline watermark and footer text.
 Files without the watermark are copied unchanged.
 """
-import sys, pathlib, pikepdf
+import re, sys, pathlib, pikepdf
 
 MARK = '/gRLs0'
 
@@ -32,16 +32,40 @@ def clean_page(pdf, page):
         inner = range(s, e + 1)
         if any(str(ops[k][1]) == 'gs' and str(ops[k][0][0]).startswith(MARK + '-0') for k in inner):
             drop.update(inner)
+    # Cambridge page furniture (corner marks, margin strips, barcode) sits in form XObjects /R0../R9;
+    # the question content itself is /R or inline, so those calls can go.
+    for i, (operands, op) in enumerate(ops):
+        if str(op) == 'Do' and re.fullmatch(r'/R\d', str(operands[0])):
+            drop.add(i)
     if not drop:
         return False
     kept = [ops[i] for i in range(len(ops)) if i not in drop]
     page.Contents = pdf.make_stream(pikepdf.unparse_content_stream(kept))
     return True
 
+def strip_corner_marks(path):
+    """Delete the crop/corner marks in the four page corners (question papers only)."""
+    import pymupdf as fitz
+    doc = fitz.open(path)
+    for page in doc:
+        W, H = page.rect.width, page.rect.height
+        if W > H:
+            continue
+        for r in (fitz.Rect(0, 0, 40.5, 52), fitz.Rect(555.5, 0, W, 52),
+                  fitz.Rect(0, H - 52, 40.5, H), fitz.Rect(555.5, H - 52, W, H)):
+            page.add_redact_annot(r, fill=False)
+        page.apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE,
+                              graphics=fitz.PDF_REDACT_LINE_ART_REMOVE_IF_COVERED,
+                              text=fitz.PDF_REDACT_TEXT_NONE)
+    doc.save(path, incremental=True, encryption=fitz.PDF_ENCRYPT_KEEP)
+
+
 def clean(src, dst):
     pdf = pikepdf.open(src)
     n = sum(clean_page(pdf, p) for p in pdf.pages)
     pdf.save(dst)
+    if '/qp_' in src.replace('\\', '/'):
+        strip_corner_marks(dst)
     return n
 
 if __name__ == '__main__':
