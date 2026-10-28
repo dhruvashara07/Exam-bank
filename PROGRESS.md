@@ -15,7 +15,7 @@ Read this first in every session. Update it before ending a session.
 - 2026-10-29: Storage reorganised into `bank/` (one folder per question: JSON + question/, figures/,
   markscheme/ SVGs), `bank/index.json`. Cloudinary public id = `question_bank/` + path inside bank/.
   MongoDB: database `question_bank`, collections `papers`, `questions` (our format, not QuestionV2 —
-  Dhruv adapts the website). Only approved papers (`review/approvals.json`) are synced.
+  Dhruv adapts the website). Only approved papers (`review/approvals/<paper>.json`) are synced.
 - 2026-10-29: Daily scheduled Claude check set up (docs/DAILY_CHECK.md, `pipeline/check.py`,
   `pipeline/approve.py`). All 66 current papers approved.
 - 2026-10-29: `.github/workflows/bank.yml`: upload PDFs to `inbox/` from phone → filed to `raw/` →
@@ -33,7 +33,7 @@ Read this first in every session. Update it before ending a session.
 1. Read `feedback_r2`, fix anything wrong (the daily check does this too).
 2. Topics/subtopics/keywords from the 0625 syllabus; alt text for figures.
 3. Other subjects (Chemistry, Biology, Maths), then AS/A level, IB.
-4. Test-paper builder on the website (reads `bank_questions`).
+4. Test-paper builder on the website (reads MongoDB `question_bank.questions`).
 
 ## How to run
     pip install -r requirements.txt
@@ -45,3 +45,5 @@ Read this first in every session. Update it before ending a session.
 ## Daily check log
 One line per run: date, pending papers checked/approved, feedback handled, fixes, notes.
 - 2026-10-29 (setup): 66 papers approved by hand after the full check. Review round 2 published, not yet answered.
+  Safe push (`pipeline/push.sh`) + CLAUDE.md added so the Action, this chat and the daily check never clash.
+  Action runs fail at the MongoDB step until Dhruv adds the secrets (expected).

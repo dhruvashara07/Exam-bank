@@ -11,10 +11,10 @@ How papers flow: Dhruv uploads PDFs to `inbox/` → GitHub Action files them int
 ## 1. Get ready
 ```
 cd /home/claude && [ -d exam-bank ] || git clone https://github.com/dhruvashara07/Exam-bank.git exam-bank
-cd exam-bank && git pull -q
+cd exam-bank && git pull -q --rebase
 python3 -c "import pymupdf, pikepdf, playwright" || pip install -r requirements.txt --break-system-packages
 ```
-Read `PROGRESS.md` (especially "Daily check log" at the end: what was last checked).
+Read `CLAUDE.md` and `PROGRESS.md` (especially "Daily check log" at the end: what was last checked).
 If git clone/pull fails for access reasons, attach the repo (add_repo dhruvashara07/Exam-bank, push access).
 
 ## 2. What is new
@@ -27,7 +27,7 @@ If git clone/pull fails for access reasons, attach the repo (add_repo dhruvashar
 - `ls inbox/` — files left there have names the filer did not understand: rename them in raw/ by hand
   (`raw/<syl>/<year>-<FM|MJ|ON>/<qp|ms>_<pv>.pdf`) and process them.
 
-If nothing is pending, no feedback is new and the Action is fine: add one log line, commit, stop. No notification.
+If nothing is pending, no feedback is new and the Action is fine: add one log line, `pipeline/push.sh`, stop. No notification.
 
 ## 3. Check each pending paper
 `python3 pipeline/check.py` (or with paper ids). It prints, per paper: marks found vs cover total, flagged
@@ -59,8 +59,10 @@ question | figures. **Open and look at every sheet** (Read the jpg). Check:
 python3 pipeline/approve.py <paper ids> --note "what was checked / fixed"
 ```
 Approve a paper only after looking at all its sheets. Leave a paper pending (and say why) if it has a
-defect you could not fix. Then append to the "Daily check log" in `PROGRESS.md`, commit (end the message
-with the Co-Authored-By / Claude-Session lines) and `git push`. The push triggers the Action → MongoDB.
+defect you could not fix. Then append to the "Daily check log" in `PROGRESS.md` and push with
+`pipeline/push.sh "message"` (never plain `git push`; end the message with the Co-Authored-By /
+Claude-Session lines). The push triggers the Action → MongoDB. If push.sh reports a real conflict,
+merge both sides by hand (see CLAUDE.md), never discard either.
 
 ## 6. Tell Dhruv (only if something happened)
 Short and plain: which papers came in, approved or not, what was fixed, what needs him (review page

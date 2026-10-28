@@ -23,9 +23,11 @@ bank/
             figures/                 diagrams/tables alone:  0625_2025MJ_41_q01a_fig1-1.svg
             markscheme/              mark-scheme rows:       0625_2025MJ_41_q01_a-ii_ms1.svg
 review/queue.json      items the pipeline is unsure about
-review/approvals.json  papers Claude has checked (only these go to MongoDB)
+review/approvals/      one file per paper Claude has checked (only these go to MongoDB)
 pipeline/              the scripts (see pipeline/README.md)
 docs/SETUP.md          one-time Cloudinary + MongoDB setup
+docs/DAILY_CHECK.md    what the daily Claude check does
+CLAUDE.md              rules for every Claude session (safe push etc.)
 ```
 
 File names always start with the question id (`syllabus_yearSession_paperVariant_qNN`), so a
@@ -36,4 +38,4 @@ folders mirror `bank/`.
 Upload PDFs into `inbox/` with the GitHub app → the **Question bank** Action files them, cuts the
 questions, commits them to `bank/` and uploads SVGs to Cloudinary (`question_bank/` folder). The paper is
 then *pending*: a daily scheduled Claude session checks it (docs/DAILY_CHECK.md) and approves it in
-`review/approvals.json`; only then does the Action put it in MongoDB (database `question_bank`).
+`review/approvals/`; only then does the Action put it in MongoDB (database `question_bank`).

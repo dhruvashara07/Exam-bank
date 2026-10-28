@@ -1,7 +1,7 @@
 """Copy the bank into MongoDB, in our own format (not tied to any website model).
 
 Needs secrets MONGODB_URI (or MONGO_URI) and CLOUDINARY_URL (only the cloud name is used, for image URLs).
-Only papers approved in review/approvals.json are synced (Claude checks each paper first).
+Only papers approved in review/approvals/ are synced (Claude checks each paper first).
 
     python3 pipeline/sync_mongo.py            # everything (upsert: re-running updates, never duplicates)
     python3 pipeline/sync_mongo.py --dry-run  # print one document, write nothing
