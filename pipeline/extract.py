@@ -10,7 +10,7 @@ import pymupdf as fitz
 from layout import page_bounds, visible_lines, ink_boxes, label_tokens, ROMAN, LETTERS, CONTENT_X0, CONTENT_X1
 
 PAD_TOP, PAD_BOTTOM = 4.0, 5.0
-CAPTION = re.compile(r'^(Fig\.|Figure|Table)\s*\d+(\.\d+)?$')
+CAPTION = re.compile(r'^(Fig\.|Figure|Table)\s*\d+(\.\d+)?(\s*\(.*\))?$')
 MARK = re.compile(r'\[(\d{1,2})\]')
 TOTAL = re.compile(r'\[Total:\s*(\d{1,3})\]')
 DOTS = re.compile(r'\.{12,}')
@@ -148,7 +148,7 @@ def find_figures(doc, seg, lines):
     drawings = [r for r in ink_boxes(page, top, bottom) if seg['y0'] <= r.y0 and r.y1 <= seg['y1'] + 1]
     for cap in caps:
         is_table = cap['text'].startswith('Table')
-        prose_above = [l for l in lines if l['y1'] <= cap['y0'] and (len(l['text']) > 40 or re.match(r'^(\d{1,2}|\([a-z]+\))\s', l['text']))]
+        prose_above = [l for l in lines if l['y1'] <= cap['y0'] and (len(l['text']) >= 25 or re.match(r'^(\d{1,2}|\([a-z]+\))\s', l['text']))]
         if is_table:   # table caption sits above the table
             prose_below = [l for l in lines if l['y0'] > cap['y1'] + 4 and (len(l['text']) > 40 and not DOTS.search(l['text']))]
             band = (cap['y0'] - 2, (min(l['y0'] for l in prose_below) - 4) if prose_below else seg['y1'])
@@ -225,7 +225,7 @@ def extract(pdf_path, syllabus, year, session, pv):
                    'answer_space': answer_space(lines, s)}
         node['segments'].append(seg_rec)
         for f in find_figures(doc, s, lines):
-            num = re.sub(r'^(Fig\.|Figure|Table)\s*', '', f['caption']).replace('.', '-')
+            num = re.match(r'^(?:Fig\.|Figure|Table)\s*([\d.]+)', f['caption']).group(1).replace('.', '-')
             kind = 'table' if f['caption'].startswith('Table') else 'fig'
             label = ''.join(str(x) for x in s['path'][1:])
             f['id'] = f"{q['id']}{label}_{kind}{num}"

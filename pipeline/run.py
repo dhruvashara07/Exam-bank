@@ -142,7 +142,19 @@ def process(qp_path):
                 node.setdefault('mark_scheme', []).append(entry)
                 if not exact:
                     q['review']['reasons'].append(f"mark scheme row {row['label']} has no matching part in the paper")
-            missing = [k['path'] for k in leaves(q) if not k.get('mark_scheme') and k.get('marks')]
+            with_ms = {str(q['number'])} if q.get('mark_scheme') else set()
+            def collect(n):
+                for k in n.get('parts', []):
+                    if k.get('mark_scheme'):
+                        with_ms.add(k['path'])
+                    collect(k)
+            collect(q)
+            def covered(p):   # answered on its own row or on a parent's combined row
+                return any(p == a or p.startswith(a + '(') for a in with_ms)
+            for k in leaves(q):
+                if not k.get('mark_scheme') and covered(k['path']):
+                    k['mark_scheme_on'] = max((a for a in with_ms if k['path'].startswith(a + '(')), key=len)
+            missing = [k['path'] for k in leaves(q) if k.get('marks') and not covered(k['path'])]
             if missing and msdoc:
                 q['review']['reasons'].append('no mark scheme for ' + ', '.join(missing))
         q.update({k: meta[k] for k in ('syllabus', 'subject', 'board', 'exam', 'year', 'session', 'season',
@@ -194,7 +206,10 @@ if __name__ == '__main__':
     os.makedirs(os.path.join(ROOT, 'review'), exist_ok=True)
     qfile = os.path.join(ROOT, 'review', 'queue.json')
     old = json.load(open(qfile)) if (sel and os.path.exists(qfile)) else []
-    done = {a['id'].rsplit('_q', 1)[0] for a in all_queue} | {os.path.relpath(p, ROOT) for p in papers}
+    def paper_id(p):
+        m = re.search(r'raw/(\w+)/(\d{4})-(\w\w)/qp_(\d\d)\.pdf$', p.replace('\\', '/'))
+        return f'{m.group(1)}_{m.group(2)}{m.group(3)}_{m.group(4)}'
+    done = {paper_id(p) for p in papers} | {os.path.relpath(p, ROOT) for p in papers}
     merged = [o for o in old if o['id'].rsplit('_q', 1)[0] not in done] + all_queue
     json.dump(merged, open(qfile, 'w'), ensure_ascii=False, indent=1)
     print('review queue:', len(merged))

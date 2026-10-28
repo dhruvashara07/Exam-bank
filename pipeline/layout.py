@@ -88,7 +88,7 @@ def label_tokens(page, top, bottom):
             continue
         if QNUM_X[0] <= x0 <= QNUM_X[1] and re.fullmatch(r'\d{1,2}', w):
             toks.append({'kind': 'q', 'val': int(w), 'x0': x0, 'y0': y0, 'y1': y1})
-        m = re.fullmatch(r'\(([a-z]{1,4})\)', w)
+        m = re.fullmatch(r'[a-z]?\(([a-z]{1,4})\)', w)   # some PDFs carry a stray hidden char: 'i(i)'
         if m:
             v = m.group(1)
             if LETTER_X[0] <= x0 <= LETTER_X[1] and v in LETTERS:
