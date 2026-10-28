@@ -1,0 +1,278 @@
+"""Split a cleaned Cambridge question paper into questions, parts and printable segments.
+
+A *segment* is a horizontal strip of one page that belongs to exactly one label path,
+for example question 4's stem, 4(a)'s stem, or 4(a)(ii). Printing the segments of a
+question (or of a chosen part plus its parent stems) in order reproduces the original
+layout, answer space included.
+"""
+import re
+import pymupdf as fitz
+from layout import page_bounds, visible_lines, ink_boxes, label_tokens, ROMAN, LETTERS, CONTENT_X0, CONTENT_X1
+
+PAD_TOP, PAD_BOTTOM = 4.0, 5.0
+CAPTION = re.compile(r'^(Fig\.|Figure|Table)\s*\d+(\.\d+)?$')
+MARK = re.compile(r'\[(\d{1,2})\]')
+TOTAL = re.compile(r'\[Total:\s*(\d{1,3})\]')
+DOTS = re.compile(r'\.{12,}')
+
+SESSION_NAMES = {'FM': 'February-March', 'MJ': 'May-June', 'ON': 'October-November'}
+PAPER_TYPES = {1: 'mcq_core', 2: 'mcq_extended', 3: 'theory_core', 4: 'theory_extended',
+               5: 'practical_test', 6: 'alternative_to_practical'}
+
+
+def paper_meta(doc, syllabus, year, session, pv):
+    cover = doc[0].get_text()
+    m = re.search(r'total mark for this paper is (\d+)', cover)
+    dur = re.search(r'\n\s*(\d+ hours?(?: \d+ minutes)?|\d+ minutes)\s*\n', cover)
+    return {
+        'syllabus': syllabus, 'subject': 'Physics', 'board': 'CAIE', 'exam': 'IGCSE',
+        'year': year, 'session': session, 'season': SESSION_NAMES[session],
+        'paper': int(pv[0]), 'variant': int(pv[1]), 'paper_code': f'{syllabus}/{pv}',
+        'paper_type': PAPER_TYPES[int(pv[0])],
+        'total_marks': int(m.group(1)) if m else None,
+        'duration': dur.group(1) if dur else None,
+        'pages': len(doc),
+    }
+
+
+def is_blank_page(page):
+    t = page.get_text()
+    return 'BLANK PAGE' in t and len(t.strip()) < 400
+
+
+def boundaries(doc):
+    """Walk pages in order and accept labels that continue the numbering sequence."""
+    out, q, letter, roman = [], 0, None, None
+    for pno in range(1, len(doc)):
+        page = doc[pno]
+        if is_blank_page(page):
+            continue
+        top, bottom = page_bounds(page)
+        for t in label_tokens(page, top, bottom):
+            if t['kind'] == 'q' and t['val'] == q + 1:
+                q, letter, roman = q + 1, None, None
+                out.append({'page': pno, 'y': t['y0'], 'path': (q,)})
+            elif t['kind'] == 'l' and q and t['val'] == (LETTERS[LETTERS.index(letter) + 1] if letter else 'a'):
+                letter, roman = t['val'], None
+                out.append({'page': pno, 'y': t['y0'], 'path': (q, letter)})
+            elif t['kind'] == 'r' and letter and t['val'] == (ROMAN[ROMAN.index(roman) + 1] if roman else 'i'):
+                roman = t['val']
+                out.append({'page': pno, 'y': t['y0'], 'path': (q, letter, roman)})
+    return out
+
+
+def end_of_paper(page, top, bottom):
+    """Stop above the copyright/permissions box on the last page."""
+    for l in visible_lines(page, top, bottom):
+        if l['text'].startswith('Permission to reproduce') or 'Cambridge Assessment International Education is part of' in l['text']:
+            return l['y0'] - 8
+    return bottom
+
+
+def raw_segments(doc, bnds):
+    """Strips of pages between consecutive boundaries, continuing across page breaks."""
+    segs = []
+    pages = [p for p in range(1, len(doc)) if not is_blank_page(doc[p])]
+    bounds = {p: page_bounds(doc[p]) for p in pages}
+    for i, b in enumerate(bnds):
+        nxt = bnds[i + 1] if i + 1 < len(bnds) else None
+        start_page = b['page']
+        end_page = nxt['page'] if nxt else pages[-1]
+        for p in [x for x in pages if start_page <= x <= end_page]:
+            top, bottom = bounds[p]
+            if not nxt:
+                bottom = end_of_paper(doc[p], top, bottom)
+            y0 = b['y'] - PAD_TOP if p == start_page else top
+            y1 = nxt['y'] - PAD_TOP if (nxt and p == end_page) else bottom
+            if y1 - y0 > 3:
+                segs.append({'path': b['path'], 'page': p, 'y0': y0, 'y1': y1,
+                             'continued': p != start_page})
+    return segs
+
+
+def trim(doc, seg):
+    """Shrink a strip to the ink it contains; drop strips with no ink."""
+    page = doc[seg['page']]
+    top, bottom = page_bounds(page)
+    boxes = [r for r in ink_boxes(page, top, bottom) if r.y1 > seg['y0'] + 1 and r.y0 < seg['y1'] - 1]
+    if not boxes:
+        return None
+    ink_top = min(r.y0 for r in boxes)
+    ink_bottom = max(r.y1 for r in boxes)
+    seg = dict(seg)
+    if seg['continued']:
+        seg['y0'] = max(seg['y0'], ink_top - PAD_TOP)
+    seg['y1'] = min(seg['y1'], ink_bottom + PAD_BOTTOM)
+    seg['bbox'] = [CONTENT_X0, round(seg['y0'], 1), CONTENT_X1, round(seg['y1'], 1)]
+    return seg
+
+
+def segment_text(doc, seg):
+    page = doc[seg['page']]
+    top, bottom = page_bounds(page)
+    return [l for l in visible_lines(page, top, bottom) if seg['y0'] - 1 <= (l['y0'] + l['y1']) / 2 <= seg['y1'] + 1]
+
+
+def strip_label(text, path):
+    """Remove leading '4', '(a)', '(ii)' labels from a line."""
+    return re.sub(r'^(\d{1,2}\s+)?(\([a-z]{1,4}\)\s*){0,2}', '', text).strip()
+
+
+def answer_space(lines, seg):
+    dotted = [l for l in lines if DOTS.search(l['text'])]
+    prompt = [l for l in lines if not DOTS.search(l['text']) and not MARK.fullmatch(l['text'])]
+    gaps, prev = [], seg['y0']
+    for l in sorted(lines, key=lambda d: d['y0']):
+        gaps.append(l['y0'] - prev); prev = max(prev, l['y1'])
+    answer_line = next((l['text'] for l in dotted if '=' in l['text']), None)
+    kind = 'none'
+    if answer_line:
+        kind = 'answer_line'
+    elif dotted:
+        kind = 'lines'
+    return {
+        'kind': kind,
+        'dotted_lines': len(dotted),
+        'answer_line': re.sub(DOTS, '……', answer_line) if answer_line else None,
+        'working_gap_pt': round(max(gaps), 1) if gaps else 0,
+        'height_pt': round(seg['y1'] - seg['y0'], 1),
+    }
+
+
+def find_figures(doc, seg, lines):
+    """Captioned figures (Fig. 1.1 / Table 2.1) inside a segment: band from the prose above to the caption."""
+    page = doc[seg['page']]
+    top, bottom = page_bounds(page)
+    figs = []
+    caps = [l for l in lines if CAPTION.match(l['text'])]
+    drawings = [r for r in ink_boxes(page, top, bottom) if seg['y0'] <= r.y0 and r.y1 <= seg['y1'] + 1]
+    for cap in caps:
+        is_table = cap['text'].startswith('Table')
+        prose_above = [l for l in lines if l['y1'] <= cap['y0'] and (len(l['text']) > 40 or re.match(r'^(\d{1,2}|\([a-z]+\))\s', l['text']))]
+        if is_table:   # table caption sits above the table
+            prose_below = [l for l in lines if l['y0'] > cap['y1'] + 4 and (len(l['text']) > 40 and not DOTS.search(l['text']))]
+            band = (cap['y0'] - 2, (min(l['y0'] for l in prose_below) - 4) if prose_below else seg['y1'])
+        else:
+            band = ((max(l['y1'] for l in prose_above) + 2) if prose_above else seg['y0'], cap['y1'] + 2)
+        inside = [r for r in drawings if r.y0 >= band[0] - 1 and r.y1 <= band[1] + 1]
+        if not inside:
+            continue
+        x0 = min(r.x0 for r in inside); x1 = max(r.x1 for r in inside)
+        y0 = min(r.y0 for r in inside); y1 = max(r.y1 for r in inside)
+        figs.append({'caption': cap['text'], 'page': seg['page'],
+                     'bbox': [round(x0 - 3, 1), round(y0 - 3, 1), round(x1 + 3, 1), round(y1 + 3, 1)]})
+    return figs
+
+
+def mcq_options(lines):
+    """Options A-D: the last A<B<C<D run of bold letters; text is whatever follows on the same row."""
+    cands = [l for l in lines if re.fullmatch(r'[ABCD]', l['text']) or
+             (re.match(r'^[ABCD]\s', l['text']) and 64 <= l['x0'] <= 82)]
+    cands.sort(key=lambda d: (round(d['y0']), d['x0']))
+    chosen, want, limit = {}, 'DCBA', len(cands)
+    for letter in want:
+        idx = max((i for i in range(limit) if cands[i]['text'][0] == letter), default=None)
+        if idx is None:
+            break
+        chosen[letter], limit = cands[idx], idx
+    labels = list(chosen.values())
+    opts = {}
+    for letter, lab in chosen.items():
+        if len(lab['text']) > 1:
+            opts[letter] = lab['text'][1:].strip(); continue
+        row_next = [o['x0'] for o in labels if abs(o['y0'] - lab['y0']) < 3 and o['x0'] > lab['x0']]
+        limit_x = min(row_next) if row_next else 1e9
+        same = [l for l in lines if abs(l['y0'] - lab['y0']) < 3.5 and lab['x1'] < l['x0'] < limit_x and l is not lab]
+        opts[letter] = ' '.join(l['text'] for l in sorted(same, key=lambda d: d['x0'])).strip()
+    return [{'label': k, 'text': opts[k]} for k in 'ABCD' if k in opts]
+
+
+def node_for(tree, path):
+    node = tree
+    for depth in range(1, len(path)):
+        label = path[depth]
+        kids = node.setdefault('parts', [])
+        found = next((k for k in kids if k['label'] == label), None)
+        if not found:
+            found = {'label': label, 'segments': [], 'text': '', 'marks': 0}
+            kids.append(found)
+        node = found
+    return node
+
+
+def extract(pdf_path, syllabus, year, session, pv):
+    doc = fitz.open(pdf_path)
+    meta = paper_meta(doc, syllabus, year, session, pv)
+    bnds = boundaries(doc)
+    segs = [s for s in (trim(doc, s) for s in raw_segments(doc, bnds)) if s]
+    sid = f"{syllabus}_{year}{session}_{pv}"
+    questions = {}
+    for s in segs:
+        qn = s['path'][0]
+        q = questions.setdefault(qn, {'id': f'{sid}_q{qn:02d}', 'number': qn, 'segments': [], 'text': '',
+                                     'marks': 0, 'figures': [], 'review': {'reasons': []}})
+        node = node_for(q, s['path'])
+        lines = segment_text(doc, s)
+        body = '\n'.join(strip_label(l['text'], s['path']) if i == 0 and not s['continued'] else l['text']
+                         for i, l in enumerate(lines) if not CAPTION.match(l['text']))
+        marks = sum(int(m) for l in lines for m in MARK.findall(l['text']) if not TOTAL.search(l['text']))
+        total = [int(m) for l in lines for m in TOTAL.findall(l['text'])]
+        if total:
+            q['total_marks'] = total[-1]
+        node['text'] = (node['text'] + '\n' + body).strip()
+        node['marks'] += marks
+        seg_rec = {'page': s['page'] + 1, 'bbox': s['bbox'], 'continued': s['continued'],
+                   'answer_space': answer_space(lines, s)}
+        node['segments'].append(seg_rec)
+        for f in find_figures(doc, s, lines):
+            num = re.sub(r'^(Fig\.|Figure|Table)\s*', '', f['caption']).replace('.', '-')
+            kind = 'table' if f['caption'].startswith('Table') else 'fig'
+            label = ''.join(str(x) for x in s['path'][1:])
+            f['id'] = f"{q['id']}{label}_{kind}{num}"
+            f['page'] += 1
+            f['part'] = '(' + ')('.join(str(x) for x in s['path'][1:]) + ')' if len(s['path']) > 1 else ''
+            f['alt'] = ''
+            q['figures'].append(f)
+    out = []
+    for qn in sorted(questions):
+        q = questions[qn]
+        if meta['paper'] in (1, 2):
+            q['type'] = 'mcq'
+            q['marks'] = 1
+            q['options'] = mcq_options(segment_text_all(doc, q))
+            if len(q['options']) < 4:
+                q['review']['reasons'].append('options not found as text (likely in a table or diagrams)')
+            q['has_diagram'] = bool(q['figures']) or has_drawings(doc, q)
+        else:
+            q['type'] = 'structured'
+            q['marks'] = sum_marks(q)
+            if 'total_marks' in q and q['total_marks'] != q['marks']:
+                q['review']['reasons'].append(f"marks found {q['marks']} but [Total: {q['total_marks']}]")
+        if len(q['segments']) == 0 and not q.get('parts'):
+            q['review']['reasons'].append('no content found')
+        q['review']['status'] = 'flagged' if q['review']['reasons'] else 'auto'
+        out.append(q)
+    return meta, out
+
+
+def segment_text_all(doc, q):
+    lines = []
+    for s in q['segments']:
+        seg = {'page': s['page'] - 1, 'y0': s['bbox'][1], 'y1': s['bbox'][3]}
+        lines += segment_text(doc, seg)
+    return lines
+
+
+def has_drawings(doc, q):
+    for s in q['segments']:
+        page = doc[s['page'] - 1]
+        top, bottom = page_bounds(page)
+        text = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in visible_lines(page, top, bottom)]
+        for r in ink_boxes(page, top, bottom):
+            if r.y0 >= s['bbox'][1] and r.y1 <= s['bbox'][3] and not any(r.intersects(t) for t in text) and r.width * r.height > 40:
+                return True
+    return False
+
+
+def sum_marks(node):
+    return node.get('marks', 0) + sum(sum_marks(k) for k in node.get('parts', []))
