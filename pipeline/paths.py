@@ -16,7 +16,7 @@ raw/<syllabus>/<year>-<session>/{qp,ms}_<pv>.pdf          the original PDFs
 
 Cloudinary public id = question_bank/ + the path inside bank/ without '.svg', so the cloud folders
 mirror the repo:  question_bank/cambridge-igcse/0625-physics/2025-MJ/p41/q01/question/0625_2025MJ_41_q01_a-ii_s1
-review/approvals.json  papers Claude has checked; only these go to MongoDB (see docs/DAILY_CHECK.md)
+review/approvals/<paper id>.json  papers Claude has checked; only these go to MongoDB (docs/DAILY_CHECK.md)
 """
 import glob, os
 
@@ -25,7 +25,7 @@ BANK = os.path.join(ROOT, 'bank')
 BOARD = {'CAIE': 'cambridge', 'IB': 'ib'}
 KINDS = ('question', 'figures', 'markscheme')
 CLOUD_ROOT = 'question_bank'                 # top Cloudinary folder
-APPROVALS = os.path.join(ROOT, 'review', 'approvals.json')
+APPROVALS = os.path.join(ROOT, 'review', 'approvals')      # one <paper id>.json per approved paper
 
 
 def paper_dir(meta):
@@ -81,11 +81,19 @@ def paper_id(meta):
 
 def approvals():
     import json
-    return json.load(open(APPROVALS)) if os.path.exists(APPROVALS) else {}
+    return {os.path.basename(f)[:-5]: json.load(open(f)) for f in sorted(glob.glob(os.path.join(APPROVALS, '*.json')))}
 
 
 def save_approvals(a):
+    """Write exactly the given approvals: one file per paper, files of unapproved papers removed."""
     import json
-    os.makedirs(os.path.dirname(APPROVALS), exist_ok=True)
-    with open(APPROVALS, 'w') as f:
-        json.dump(dict(sorted(a.items())), f, indent=1)
+    os.makedirs(APPROVALS, exist_ok=True)
+    for f in glob.glob(os.path.join(APPROVALS, '*.json')):
+        if os.path.basename(f)[:-5] not in a:
+            os.remove(f)
+    for pid, v in a.items():
+        f = os.path.join(APPROVALS, pid + '.json')
+        old = json.load(open(f)) if os.path.exists(f) else None
+        if old != v:
+            with open(f, 'w') as fh:
+                json.dump(v, fh, indent=1)

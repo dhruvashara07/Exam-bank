@@ -4,13 +4,13 @@ name: Question bank
 #   1. PDFs in inbox/ (any Cambridge name, e.g. 0625_s25_qp_41.pdf) are filed into raw/
 #   2. changed papers in raw/ are processed into bank/ and committed
 #   3. new/changed SVGs go to Cloudinary (folder question_bank/)
-#   4. papers Claude has approved (review/approvals.json) are synced to MongoDB.
+#   4. papers Claude has approved (review/approvals/) are synced to MongoDB.
 #      New or re-cut papers wait as 'pending' until the daily Claude check approves them.
 # Can also be started by hand: Actions -> Question bank -> Run workflow.
 on:
   push:
     branches: [main]
-    paths: ['inbox/**', 'raw/**', 'bank/**', 'review/approvals.json']
+    paths: ['inbox/**', 'raw/**', 'bank/**', 'review/approvals/**']
   workflow_dispatch:
     inputs:
       all:
@@ -34,10 +34,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
           cache: pip
@@ -64,9 +64,7 @@ jobs:
           if grep -qx ALL todo.txt; then python3 pipeline/run.py; else python3 pipeline/run.py $(cat todo.txt); fi
           git config user.name "exam-bank bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -A inbox raw bank review
-          git commit -m "Process papers: $(tr '\n' ' ' < todo.txt)" || echo "nothing to commit"
-          git push
+          SKIP_WAIT=1 pipeline/push.sh "Process papers: $(tr '\n' ' ' < todo.txt)" 
 
       - name: Upload SVGs to Cloudinary
         env:

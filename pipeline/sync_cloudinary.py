@@ -19,7 +19,10 @@ ROOT = paths.ROOT
 
 
 def creds():
-    u = urlparse(os.environ['CLOUDINARY_URL'])
+    raw = os.environ.get('CLOUDINARY_URL', '').strip()
+    if not raw.startswith('cloudinary://'):
+        sys.exit('CLOUDINARY_URL secret is missing or not in the form cloudinary://KEY:SECRET@CLOUD (see docs/SETUP.md)')
+    u = urlparse(raw)
     return u.hostname, u.username, u.password
 
 

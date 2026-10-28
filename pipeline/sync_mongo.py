@@ -79,7 +79,9 @@ if __name__ == '__main__':
         sys.exit(0)
     from pymongo import MongoClient, ReplaceOne, ASCENDING, TEXT
     from datetime import datetime, timezone
-    uri = os.environ.get('MONGODB_URI') or os.environ['MONGO_URI']
+    uri = (os.environ.get('MONGODB_URI') or os.environ.get('MONGO_URI') or '').strip()
+    if not uri.startswith('mongodb'):
+        sys.exit('MONGODB_URI secret is missing or not a mongodb:// / mongodb+srv:// address (see docs/SETUP.md)')
     db = MongoClient(uri)[DB_NAME]
     now = datetime.now(timezone.utc)
 

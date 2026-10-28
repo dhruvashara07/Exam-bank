@@ -31,8 +31,7 @@ if __name__ == '__main__':
     if args[0] == '--revoke':
         for p in args[1:]:
             a.pop(p, None)
-        paths.save_approvals(a)
-        from run import write_index; write_index(); sys.exit(0)
+        paths.save_approvals(a); sys.exit(0)
     note = ''
     if '--note' in args:
         i = args.index('--note'); note = args[i + 1]; args = args[:i] + args[i + 2:]
@@ -43,5 +42,4 @@ if __name__ == '__main__':
             sys.exit(f'unknown paper {p}')
         a[p] = {'at': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%MZ'), 'by': 'claude', 'commit': commit, 'note': note}
     paths.save_approvals(a)
-    from run import write_index; write_index()
     print(f'approved {len(args)}; pending {len(pending())}')

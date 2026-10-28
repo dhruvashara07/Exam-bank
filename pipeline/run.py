@@ -248,7 +248,7 @@ def leaves(node):
 
 def write_index():
     """bank/index.json: one small row per question, for searching and the test builder."""
-    rows, appr = [], paths.approvals()
+    rows = []
     for f in paths.question_files():
         q = json.load(open(f))
         rows.append({'id': q['id'], 'file': os.path.relpath(f, ROOT), 'paper_code': q['paper_code'],
@@ -256,8 +256,7 @@ def write_index():
                      'number': q['number'], 'type': q['type'], 'marks': q['marks'],
                      'parts': [k['path'] for k in leaves(q)], 'answer': q.get('answer'),
                      'figures': len(q['figures']), 'topic': q.get('topic'), 'keywords': q.get('keywords', []),
-                     'review': q['review']['status'], 'text': (q.get('text') or '')[:160],
-                     'approved': '_'.join(q['id'].split('_')[:3]) in appr})
+                     'review': q['review']['status'], 'text': (q.get('text') or '')[:160]})
     with open(os.path.join(paths.BANK, 'index.json'), 'w') as fh:
         json.dump(rows, fh, ensure_ascii=False, indent=0)
 
