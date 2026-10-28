@@ -16,9 +16,8 @@ def segs_of(node):
         out += segs_of(k)
     return out
 
-problems = []
-total_pages = 0
-for pj in paths.paper_files():
+def check_paper(pj):
+    """(pages checked, [(where, n lost boxes, bbox)]) for one paper.json."""
     d = os.path.dirname(pj); meta = json.load(open(pj)); folder = f"{meta['year']}-{meta['session']}"
     doc = fitz.open(cleaned(paths.raw_pdfs(meta['question_ids'][0])[0]))
     by_page = collections.defaultdict(list)
@@ -26,11 +25,12 @@ for pj in paths.paper_files():
         for s in segs_of(json.load(open(qf))):
             by_page[s['page']].append(fitz.Rect(s['bbox']))
     last = max(by_page) if by_page else 0
+    pages, problems = 0, []
     for pno in range(2, len(doc) + 1):
         page = doc[pno - 1]
         if is_blank_page(page):
             continue
-        total_pages += 1
+        pages += 1
         top, bottom = page_bounds(page)
         if pno >= last:
             bottom = end_of_paper(page, top, bottom)
@@ -39,6 +39,18 @@ for pj in paths.paper_files():
         if lost:
             u = lost[0] | lost[-1]
             problems.append((f"{meta['paper_code']} {folder} p{pno}", len(lost), [round(v) for v in u]))
-print('pages checked', total_pages, 'pages with uncovered ink', len(problems))
-for p in problems[:40]:
-    print(' ', p)
+    return pages, problems
+
+
+if __name__ == '__main__':
+    want = sys.argv[1:]          # paper ids like 0625_2025MJ_41; none = all
+    total_pages, problems = 0, []
+    for pj in paths.paper_files():
+        meta = json.load(open(pj))
+        if want and paths.paper_id(meta) not in want:
+            continue
+        n, p = check_paper(pj)
+        total_pages += n; problems += p
+    print('pages checked', total_pages, 'pages with uncovered ink', len(problems))
+    for p in problems[:40]:
+        print(' ', p)

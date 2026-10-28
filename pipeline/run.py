@@ -248,7 +248,7 @@ def leaves(node):
 
 def write_index():
     """bank/index.json: one small row per question, for searching and the test builder."""
-    rows = []
+    rows, appr = [], paths.approvals()
     for f in paths.question_files():
         q = json.load(open(f))
         rows.append({'id': q['id'], 'file': os.path.relpath(f, ROOT), 'paper_code': q['paper_code'],
@@ -256,7 +256,8 @@ def write_index():
                      'number': q['number'], 'type': q['type'], 'marks': q['marks'],
                      'parts': [k['path'] for k in leaves(q)], 'answer': q.get('answer'),
                      'figures': len(q['figures']), 'topic': q.get('topic'), 'keywords': q.get('keywords', []),
-                     'review': q['review']['status'], 'text': (q.get('text') or '')[:160]})
+                     'review': q['review']['status'], 'text': (q.get('text') or '')[:160],
+                     'approved': '_'.join(q['id'].split('_')[:3]) in appr})
     with open(os.path.join(paths.BANK, 'index.json'), 'w') as fh:
         json.dump(rows, fh, ensure_ascii=False, indent=0)
 
@@ -271,10 +272,12 @@ if __name__ == '__main__':
     if sels:
         papers = [p for p in papers if wanted(p)]
     all_queue = []
+    appr = paths.approvals()
     for p in papers:
         try:
             meta, queue = process(p)
             all_queue += queue
+            appr.pop(paths.paper_id(meta), None)     # new output = pending until Claude checks it again
             print(f"{meta['paper_code']} {meta['year']}-{meta['session']}: {meta['questions']} questions, "
                   f"marks {meta['marks_found']}/{meta['total_marks']}, flagged {len(queue)}")
         except Exception as e:  # keep going; record the failure for review
@@ -290,5 +293,6 @@ if __name__ == '__main__':
     merged = [o for o in old if o['id'].rsplit('_q', 1)[0] not in done] + all_queue
     json.dump(merged, open(qfile, 'w'), ensure_ascii=False, indent=1)
     print('review queue:', len(merged))
+    paths.save_approvals(appr)
     write_index()
 

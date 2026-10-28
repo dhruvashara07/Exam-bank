@@ -13,8 +13,11 @@ Read this first in every session. Update it before ending a session.
   gap limit). Rewritten: prose lines separate figures, labels attached, invisible ink dropped
   (pixel check), fraction-bar-only clusters ignored.
 - 2026-10-29: Storage reorganised into `bank/` (one folder per question: JSON + question/, figures/,
-  markscheme/ SVGs), `bank/index.json`. Cloudinary public id = repo path. MongoDB: own collections
-  `bank_papers`, `bank_questions` (not QuestionV2 — Dhruv will adapt the website to our format).
+  markscheme/ SVGs), `bank/index.json`. Cloudinary public id = `question_bank/` + path inside bank/.
+  MongoDB: database `question_bank`, collections `papers`, `questions` (our format, not QuestionV2 —
+  Dhruv adapts the website). Only approved papers (`review/approvals.json`) are synced.
+- 2026-10-29: Daily scheduled Claude check set up (docs/DAILY_CHECK.md, `pipeline/check.py`,
+  `pipeline/approve.py`). All 66 current papers approved.
 - 2026-10-29: `.github/workflows/bank.yml`: upload PDFs to `inbox/` from phone → filed to `raw/` →
   processed → committed → Cloudinary + MongoDB. Full re-run takes ~3.5 min.
 - Review page: https://claude.ai/artifact/LGic38rQwKjkZze9jL1zmq — round 1 feedback in collection
@@ -27,7 +30,7 @@ Read this first in every session. Update it before ending a session.
 3. May/Jun 2026 variant 7: mark schemes 17 and 27 exist, question papers missing.
 
 ## Next
-1. Read `feedback_r2`, fix anything wrong.
+1. Read `feedback_r2`, fix anything wrong (the daily check does this too).
 2. Topics/subtopics/keywords from the 0625 syllabus; alt text for figures.
 3. Other subjects (Chemistry, Biology, Maths), then AS/A level, IB.
 4. Test-paper builder on the website (reads `bank_questions`).
@@ -38,3 +41,7 @@ Read this first in every session. Update it before ending a session.
     python3 pipeline/run.py 2025-MJ/41               # one paper
     python3 pipeline/build_test.py out.pdf 0625_2025MJ_41_q01 0625_2025MJ_41_q05:c --ms
     python3 pipeline/coverage.py                     # check nothing on the pages was missed
+
+## Daily check log
+One line per run: date, pending papers checked/approved, feedback handled, fixes, notes.
+- 2026-10-29 (setup): 66 papers approved by hand after the full check. Review round 2 published, not yet answered.

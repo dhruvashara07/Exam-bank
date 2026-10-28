@@ -3,12 +3,14 @@ name: Question bank
 # Runs by itself whenever something is pushed (e.g. PDFs uploaded from the GitHub app):
 #   1. PDFs in inbox/ (any Cambridge name, e.g. 0625_s25_qp_41.pdf) are filed into raw/
 #   2. changed papers in raw/ are processed into bank/ and committed
-#   3. new/changed SVGs go to Cloudinary, all questions are synced to MongoDB
+#   3. new/changed SVGs go to Cloudinary (folder question_bank/)
+#   4. papers Claude has approved (review/approvals.json) are synced to MongoDB.
+#      New or re-cut papers wait as 'pending' until the daily Claude check approves them.
 # Can also be started by hand: Actions -> Question bank -> Run workflow.
 on:
   push:
     branches: [main]
-    paths: ['inbox/**', 'raw/**', 'bank/**']
+    paths: ['inbox/**', 'raw/**', 'bank/**', 'review/approvals.json']
   workflow_dispatch:
     inputs:
       all:
@@ -76,4 +78,8 @@ jobs:
         env:
           CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          MONGO_DB: question_bank
         run: python3 pipeline/sync_mongo.py
+
+      - name: Papers waiting for Claude's check
+        run: python3 pipeline/approve.py --pending

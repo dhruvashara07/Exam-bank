@@ -1,14 +1,16 @@
 """Copy the bank into MongoDB, in our own format (not tied to any website model).
 
-Needs secrets MONGODB_URI and CLOUDINARY_URL (only the cloud name is used, to build image URLs).
+Needs secrets MONGODB_URI (or MONGO_URI) and CLOUDINARY_URL (only the cloud name is used, for image URLs).
+Only papers approved in review/approvals.json are synced (Claude checks each paper first).
 
     python3 pipeline/sync_mongo.py            # everything (upsert: re-running updates, never duplicates)
     python3 pipeline/sync_mongo.py --dry-run  # print one document, write nothing
 
-Collections (database = the one named in MONGODB_URI):
-  bank_papers     _id '0625_2025MJ_41'      paper.json as is
-  bank_questions  _id '0625_2025MJ_41_q01'  the question JSON as is, with every svg.url filled in,
-                                             plus 'paper_id', 'search' (plain text) and 'leaf_paths'
+Database MONGO_DB (default 'question_bank'), collections:
+  papers     _id '0625_2025MJ_41'      paper.json as is
+  questions  _id '0625_2025MJ_41_q01'  the question JSON as is, with every svg.url filled in,
+                                        plus 'paper_id', 'search' (plain text) and 'leaf_paths'
+Every document carries origin='exam-bank'; clean-up only ever deletes documents with that mark.
 The git repo stays the master copy; MongoDB is the fast copy the website reads.
 """
 import json, os, sys
@@ -58,39 +60,54 @@ def question_doc(q, cloud):
     return d
 
 
+DB_NAME = os.environ.get('MONGO_DB', 'question_bank')
+ORIGIN = 'exam-bank'
+
+
+def approved_files():
+    appr = paths.approvals()
+    return [f for f in paths.question_files() if '_'.join(os.path.basename(f).split('_')[:3]) in appr], appr
+
+
 if __name__ == '__main__':
     cloud = cloud_name()
-    files = paths.question_files()
+    files, appr = approved_files()
+    print(f'{len(appr)} approved papers, {len(files)} questions')
     if '--dry-run' in sys.argv:
         q = json.load(open(next(f for f in files if json.load(open(f))['type'] != 'mcq')))
         print(json.dumps(question_doc(q, cloud), ensure_ascii=False, indent=1)[:3000])
         sys.exit(0)
     from pymongo import MongoClient, ReplaceOne, ASCENDING, TEXT
     from datetime import datetime, timezone
-    db = MongoClient(os.environ['MONGODB_URI']).get_default_database()
+    uri = os.environ.get('MONGODB_URI') or os.environ['MONGO_URI']
+    db = MongoClient(uri)[DB_NAME]
     now = datetime.now(timezone.utc)
 
     papers = []
     for f in paths.paper_files():
         p = json.load(open(f))
-        p['_id'] = f"{p['syllabus']}_{p['year']}{p['session']}_{p['paper']}{p['variant']}"
-        p['synced_at'] = now
+        p['_id'] = paths.paper_id(p)
+        if p['_id'] not in appr:
+            continue
+        p.update({'origin': ORIGIN, 'approval': appr[p['_id']], 'synced_at': now})
         papers.append(ReplaceOne({'_id': p['_id']}, p, upsert=True))
-    db.bank_papers.bulk_write(papers, ordered=False)
+    if papers:
+        db.papers.bulk_write(papers, ordered=False)
 
     ops, n = [], 0
     for f in files:
         d = question_doc(json.load(open(f)), cloud)
-        d['synced_at'] = now
+        d.update({'origin': ORIGIN, 'synced_at': now})
         ops.append(ReplaceOne({'_id': d['_id']}, d, upsert=True))
         if len(ops) == 200:
-            db.bank_questions.bulk_write(ops, ordered=False); n += len(ops); ops = []
+            db.questions.bulk_write(ops, ordered=False); n += len(ops); ops = []
     if ops:
-        db.bank_questions.bulk_write(ops, ordered=False); n += len(ops)
-    # questions that no longer exist in the repo (e.g. a paper re-cut) are removed
-    gone = db.bank_questions.delete_many({'synced_at': {'$lt': now}}).deleted_count
+        db.questions.bulk_write(ops, ordered=False); n += len(ops)
+    # ours but no longer in the repo / no longer approved (e.g. re-cut, waiting for a new check)
+    gone = db.questions.delete_many({'origin': ORIGIN, 'synced_at': {'$lt': now}}).deleted_count
+    db.papers.delete_many({'origin': ORIGIN, 'synced_at': {'$lt': now}})
 
-    qc = db.bank_questions
+    qc = db.questions
     qc.create_index([('syllabus', ASCENDING), ('year', ASCENDING), ('session', ASCENDING),
                      ('paper', ASCENDING), ('variant', ASCENDING), ('number', ASCENDING)])
     qc.create_index('paper_id'); qc.create_index('type'); qc.create_index('topic'); qc.create_index('keywords')

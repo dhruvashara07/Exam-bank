@@ -14,7 +14,9 @@ bank/
             markscheme/0625_2025MJ_41_q01_a-ii_ms1.svg  mark-scheme rows
 raw/<syllabus>/<year>-<session>/{qp,ms}_<pv>.pdf          the original PDFs
 
-Cloudinary public id = the same path without '.svg', so the cloud folders mirror the repo.
+Cloudinary public id = question_bank/ + the path inside bank/ without '.svg', so the cloud folders
+mirror the repo:  question_bank/cambridge-igcse/0625-physics/2025-MJ/p41/q01/question/0625_2025MJ_41_q01_a-ii_s1
+review/approvals.json  papers Claude has checked; only these go to MongoDB (see docs/DAILY_CHECK.md)
 """
 import glob, os
 
@@ -22,6 +24,8 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 BANK = os.path.join(ROOT, 'bank')
 BOARD = {'CAIE': 'cambridge', 'IB': 'ib'}
 KINDS = ('question', 'figures', 'markscheme')
+CLOUD_ROOT = 'question_bank'                 # top Cloudinary folder
+APPROVALS = os.path.join(ROOT, 'review', 'approvals.json')
 
 
 def paper_dir(meta):
@@ -68,4 +72,20 @@ def raw_pdfs(qid):
 
 
 def public_id(path):
-    return os.path.relpath(path, ROOT).replace('\\', '/')[:-4]
+    return CLOUD_ROOT + '/' + os.path.relpath(path, BANK).replace('\\', '/')[:-4]
+
+
+def paper_id(meta):
+    return f"{meta['syllabus']}_{meta['year']}{meta['session']}_{meta['paper']}{meta['variant']}"
+
+
+def approvals():
+    import json
+    return json.load(open(APPROVALS)) if os.path.exists(APPROVALS) else {}
+
+
+def save_approvals(a):
+    import json
+    os.makedirs(os.path.dirname(APPROVALS), exist_ok=True)
+    with open(APPROVALS, 'w') as f:
+        json.dump(dict(sorted(a.items())), f, indent=1)

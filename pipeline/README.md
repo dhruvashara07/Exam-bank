@@ -9,6 +9,7 @@
 | `extract.py` | Splits a paper into questions → parts → printable segments; marks, answer space, captioned figures, MCQ options |
 | `ms.py` | Mark schemes: MCQ key; structured rows by label (1(b)(iii)) as text + exact regions |
 | `render.py` | Cuts a page region to a standalone vector SVG (text as outlines, off-crop content deleted) |
+| `check.py`, `approve.py` | Daily check: report + contact sheets for pending papers; approve papers for MongoDB |
 | `run.py` | Runs everything for some or all papers; writes `bank/`, `bank/index.json`, `review/queue.json`. Also finds uncaptioned MCQ figures |
 | `build_test.py` | Builds a test PDF from chosen questions/parts in the original layout (+ mark scheme) |
 | `coverage.py` | Check: every bit of ink on every question page is inside some segment |

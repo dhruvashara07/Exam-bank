@@ -23,6 +23,7 @@ bank/
             figures/                 diagrams/tables alone:  0625_2025MJ_41_q01a_fig1-1.svg
             markscheme/              mark-scheme rows:       0625_2025MJ_41_q01_a-ii_ms1.svg
 review/queue.json      items the pipeline is unsure about
+review/approvals.json  papers Claude has checked (only these go to MongoDB)
 pipeline/              the scripts (see pipeline/README.md)
 docs/SETUP.md          one-time Cloudinary + MongoDB setup
 ```
@@ -33,4 +34,6 @@ folders mirror `bank/`.
 
 ## How it runs (no laptop needed)
 Upload PDFs into `inbox/` with the GitHub app → the **Question bank** Action files them, cuts the
-questions, commits them to `bank/`, uploads SVGs to Cloudinary and syncs MongoDB.
+questions, commits them to `bank/` and uploads SVGs to Cloudinary (`question_bank/` folder). The paper is
+then *pending*: a daily scheduled Claude session checks it (docs/DAILY_CHECK.md) and approves it in
+`review/approvals.json`; only then does the Action put it in MongoDB (database `question_bank`).
