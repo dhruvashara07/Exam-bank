@@ -6,6 +6,7 @@ import glob, json, os, sys, collections
 import pymupdf as fitz
 sys.path.insert(0, os.path.dirname(__file__))
 from run import cleaned, ROOT
+import paths
 from layout import page_bounds, ink_boxes
 from extract import is_blank_page, end_of_paper
 
@@ -17,12 +18,11 @@ def segs_of(node):
 
 problems = []
 total_pages = 0
-for pj in sorted(glob.glob(os.path.join(ROOT, 'data', '*', '*', '*', 'paper.json'))):
-    d = os.path.dirname(pj); meta = json.load(open(pj))
-    syl, folder, pv = d.split(os.sep)[-3:]
-    doc = fitz.open(cleaned(os.path.join(ROOT, 'raw', syl, folder, f'qp_{pv}.pdf')))
+for pj in paths.paper_files():
+    d = os.path.dirname(pj); meta = json.load(open(pj)); folder = f"{meta['year']}-{meta['session']}"
+    doc = fitz.open(cleaned(paths.raw_pdfs(meta['question_ids'][0])[0]))
     by_page = collections.defaultdict(list)
-    for qf in glob.glob(os.path.join(d, 'q*.json')):
+    for qf in glob.glob(os.path.join(d, 'q*', '*.json')):
         for s in segs_of(json.load(open(qf))):
             by_page[s['page']].append(fitz.Rect(s['bbox']))
     last = max(by_page) if by_page else 0

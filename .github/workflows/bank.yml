@@ -1,0 +1,79 @@
+name: Question bank
+
+# Runs by itself whenever something is pushed (e.g. PDFs uploaded from the GitHub app):
+#   1. PDFs in inbox/ (any Cambridge name, e.g. 0625_s25_qp_41.pdf) are filed into raw/
+#   2. changed papers in raw/ are processed into bank/ and committed
+#   3. new/changed SVGs go to Cloudinary, all questions are synced to MongoDB
+# Can also be started by hand: Actions -> Question bank -> Run workflow.
+on:
+  push:
+    branches: [main]
+    paths: ['inbox/**', 'raw/**', 'bank/**']
+  workflow_dispatch:
+    inputs:
+      all:
+        description: 'Upload every SVG again (first run, or after a full re-run)'
+        type: boolean
+        default: false
+      reprocess:
+        description: 'Re-process every paper (after a pipeline change)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bank
+  cancel-in-progress: false
+
+jobs:
+  bank:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: File inbox PDFs and find papers to process
+        id: todo
+        env:
+          BEFORE: ${{ github.event_name == 'push' && github.event.before || '' }}
+          REPROCESS: ${{ github.event_name == 'workflow_dispatch' && inputs.reprocess || false }}
+        run: |
+          python3 pipeline/inbox.py > todo.txt
+          if [ -n "$BEFORE" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ]; then
+            git diff --name-only "$BEFORE" HEAD -- raw | sed -nE 's#^raw/([0-9]+)/([0-9]{4}-[A-Z]{2})/(qp|ms)_([0-9]{2})\.pdf$#\1/\2/\4#p' >> todo.txt
+          fi
+          sort -u todo.txt -o todo.txt
+          if [ "$REPROCESS" = "true" ]; then echo "ALL" > todo.txt; fi
+          echo "papers: $(tr '\n' ' ' < todo.txt)"
+          echo "count=$(grep -c . todo.txt || true)" >> "$GITHUB_OUTPUT"
+
+      - name: Process papers
+        if: steps.todo.outputs.count != '0'
+        run: |
+          if grep -qx ALL todo.txt; then python3 pipeline/run.py; else python3 pipeline/run.py $(cat todo.txt); fi
+          git config user.name "exam-bank bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A inbox raw bank review
+          git commit -m "Process papers: $(tr '\n' ' ' < todo.txt)" || echo "nothing to commit"
+          git push
+
+      - name: Upload SVGs to Cloudinary
+        env:
+          CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
+          BEFORE_SHA: ${{ github.event_name == 'push' && github.event.before || '' }}
+        run: python3 pipeline/sync_cloudinary.py ${{ (github.event_name == 'workflow_dispatch' && (inputs.all || inputs.reprocess)) && '--all' || '' }}
+
+      - name: Sync to MongoDB
+        env:
+          CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+        run: python3 pipeline/sync_mongo.py

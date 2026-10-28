@@ -1,22 +1,21 @@
-"""Upsert question JSON into the learnerspoint MongoDB as QuestionV2 documents.
+"""Copy the bank into MongoDB, in our own format (not tied to any website model).
 
-Needs secrets MONGODB_URI (same as learnerspoint's .env) and CLOUDINARY_URL (for image URLs).
-Matching key: `source` = question id, so re-running updates instead of duplicating.
+Needs secrets MONGODB_URI and CLOUDINARY_URL (only the cloud name is used, to build image URLs).
 
-    python3 pipeline/sync_mongo.py            # all questions
-    python3 pipeline/sync_mongo.py --dry-run  # print one mapped document, write nothing
+    python3 pipeline/sync_mongo.py            # everything (upsert: re-running updates, never duplicates)
+    python3 pipeline/sync_mongo.py --dry-run  # print one document, write nothing
 
-Mapping (QuestionV2 fields used by the website):
-  mcqContent / structuredContent  image blocks of the exact question pieces (SVG on Cloudinary)
-  solutionData                    image blocks of the mark-scheme rows
-  pastPaper                       the full pipeline JSON (layout, answer space, text) for the
-                                  exact test-paper builder and search
+Collections (database = the one named in MONGODB_URI):
+  bank_papers     _id '0625_2025MJ_41'      paper.json as is
+  bank_questions  _id '0625_2025MJ_41_q01'  the question JSON as is, with every svg.url filled in,
+                                             plus 'paper_id', 'search' (plain text) and 'leaf_paths'
+The git repo stays the master copy; MongoDB is the fast copy the website reads.
 """
-import glob, json, os, sys
+import json, os, sys
 from urllib.parse import urlparse
 
-ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-COLLECTION = 'questionv2s'          # mongoose model 'QuestionV2'
+sys.path.insert(0, os.path.dirname(__file__))
+import paths
 
 
 def cloud_name():
@@ -24,85 +23,76 @@ def cloud_name():
     return urlparse(u).hostname if u else 'CLOUD_NAME'
 
 
-def url(svg, cloud):
-    return f"https://res.cloudinary.com/{cloud}/image/upload/{svg['public_id']}.svg"
+def fill_urls(node, cloud):
+    if isinstance(node, dict):
+        if 'public_id' in node and 'file' in node:
+            node['url'] = f"https://res.cloudinary.com/{cloud}/image/upload/{node['public_id']}.svg"
+        for v in node.values():
+            fill_urls(v, cloud)
+    elif isinstance(node, list):
+        for v in node:
+            fill_urls(v, cloud)
 
 
-def img_blocks(segments, cloud, alt, prefix):
-    return [{'id': f'{prefix}-s{i}', 'type': 'image', 'imageUrl': url(s['svg'], cloud), 'altText': alt}
-            for i, s in enumerate(segments, 1)]
+def leaf_paths(node):
+    kids = node.get('parts', [])
+    if not kids:
+        return [node['path']] if 'path' in node else []
+    return [p for k in kids for p in leaf_paths(k)]
 
 
-def ms_blocks(node, cloud, prefix):
-    out = []
-    for m in node.get('mark_scheme', []):
-        out += [{'id': f'{prefix}-ms{i}', 'type': 'image', 'imageUrl': url(s['svg'], cloud),
-                 'altText': f"Mark scheme {m['label']}"} for i, s in enumerate(m['segments'], 1)]
-    return out
+def all_text(node):
+    out = [node.get('text') or '']
+    for k in node.get('parts', []):
+        out.append(all_text(k))
+    return '\n'.join(t for t in out if t)
 
 
-def to_doc(q, cloud):
-    qid = q['id']
-    doc = {
-        'source': qid, 'board': 'CAIE', 'exam': 'IGCSE', 'paper_code': q['paper_code'], 'subject': q['subject'],
-        'paper': str(q['paper']), 'chapter': q.get('topic') or '', 'topic': q.get('topic') or '',
-        'subtopic': q.get('subtopic') or '', 'is_calc_allowed': True, 'total_marks': q['total_marks'],
-        'question_type': 'mcq' if q['type'] == 'mcq' else 'structured',
-        'isPastPaperQuestion': True, 'season': q['season'], 'year': q['year'], 'variant': q['variant'],
-        'keywords': q.get('keywords', []),
-        'images': [url(f['svg'], cloud) for f in q['figures']],
-        'diagrams': [], 'requiresLatex': False,
-        'pastPaper': {**q, 'cloudinary_cloud': cloud},
-    }
-    if q.get('difficulty'):
-        doc['level_of_difficulty'] = q['difficulty']
-    alt = f"{q['paper_code']} {q['season']} {q['year']} question {q['number']}"
-    if q['type'] == 'mcq':
-        doc['mcqContent'] = {
-            'question': img_blocks(q['segments'], cloud, alt, qid),
-            'options': [{'id': f"{qid}-{o['label']}", 'label': o['label'],
-                         'blocks': [{'id': f"{qid}-{o['label']}-t", 'type': 'text', 'content': o['text']}]} for o in q['options']],
-            'correctOption': (q.get('answer') or '').lower() or None,
-        }
-    else:
-        subparts, sol = [], []
-        for i, p in enumerate(q.get('parts', []), 1):
-            sp = {'id': f"{qid}-{p['label']}", 'number': i, 'title': f"({p['label']})", 'marks': p.get('marks', 0),
-                  'blocks': img_blocks(p['segments'], cloud, f"{alt} part ({p['label']})", f"{qid}-{p['label']}"), 'subsubparts': []}
-            sol.append({'id': sp['id'], 'blocks': ms_blocks(p, cloud, sp['id'])})
-            for j, k in enumerate(p.get('parts', []), 1):
-                ssp_id = f"{qid}-{p['label']}-{k['label']}"
-                sp['subsubparts'].append({'id': ssp_id, 'number': j, 'title': f"({k['label']})", 'marks': k.get('marks', 0),
-                                          'blocks': img_blocks(k['segments'], cloud, f"{alt} part {k.get('path', '')}", ssp_id)})
-                sol.append({'id': ssp_id, 'blocks': ms_blocks(k, cloud, ssp_id)})
-            subparts.append(sp)
-        doc['structuredContent'] = {'questionIntro': img_blocks(q['segments'], cloud, alt, qid), 'questionSubparts': subparts}
-        doc['solutionData'] = {'subparts': [s for s in sol if s['blocks']]}
-    return doc
-
-
-def all_questions():
-    for f in sorted(glob.glob(os.path.join(ROOT, 'data', '*', '*', '*', 'q*.json'))):
-        yield json.load(open(f))
+def question_doc(q, cloud):
+    d = json.loads(json.dumps(q))
+    fill_urls(d, cloud)
+    d['_id'] = q['id']
+    d['paper_id'] = '_'.join(q['id'].split('_')[:3])
+    d['leaf_paths'] = leaf_paths(q)
+    d['search'] = all_text(q)
+    return d
 
 
 if __name__ == '__main__':
     cloud = cloud_name()
+    files = paths.question_files()
     if '--dry-run' in sys.argv:
-        q = next(q for q in all_questions() if q['type'] != 'mcq')
-        print(json.dumps({k: v for k, v in to_doc(q, cloud).items() if k != 'pastPaper'}, indent=1)[:4000])
+        q = json.load(open(next(f for f in files if json.load(open(f))['type'] != 'mcq')))
+        print(json.dumps(question_doc(q, cloud), ensure_ascii=False, indent=1)[:3000])
         sys.exit(0)
-    from pymongo import MongoClient, UpdateOne
+    from pymongo import MongoClient, ReplaceOne, ASCENDING, TEXT
     from datetime import datetime, timezone
-    client = MongoClient(os.environ['MONGODB_URI'])
-    db = client.get_default_database()
-    col = db[COLLECTION]
+    db = MongoClient(os.environ['MONGODB_URI']).get_default_database()
     now = datetime.now(timezone.utc)
-    ops = []
-    for q in all_questions():
-        d = to_doc(q, cloud)
-        d['updatedAt'] = now
-        ops.append(UpdateOne({'source': d['source']}, {'$set': d, '$setOnInsert': {'createdAt': now}}, upsert=True))
-    res = col.bulk_write(ops, ordered=False)
-    col.create_index('source')
-    print(f'{len(ops)} questions: {res.upserted_count} new, {res.modified_count} updated (database {db.name}, collection {COLLECTION})')
+
+    papers = []
+    for f in paths.paper_files():
+        p = json.load(open(f))
+        p['_id'] = f"{p['syllabus']}_{p['year']}{p['session']}_{p['paper']}{p['variant']}"
+        p['synced_at'] = now
+        papers.append(ReplaceOne({'_id': p['_id']}, p, upsert=True))
+    db.bank_papers.bulk_write(papers, ordered=False)
+
+    ops, n = [], 0
+    for f in files:
+        d = question_doc(json.load(open(f)), cloud)
+        d['synced_at'] = now
+        ops.append(ReplaceOne({'_id': d['_id']}, d, upsert=True))
+        if len(ops) == 200:
+            db.bank_questions.bulk_write(ops, ordered=False); n += len(ops); ops = []
+    if ops:
+        db.bank_questions.bulk_write(ops, ordered=False); n += len(ops)
+    # questions that no longer exist in the repo (e.g. a paper re-cut) are removed
+    gone = db.bank_questions.delete_many({'synced_at': {'$lt': now}}).deleted_count
+
+    qc = db.bank_questions
+    qc.create_index([('syllabus', ASCENDING), ('year', ASCENDING), ('session', ASCENDING),
+                     ('paper', ASCENDING), ('variant', ASCENDING), ('number', ASCENDING)])
+    qc.create_index('paper_id'); qc.create_index('type'); qc.create_index('topic'); qc.create_index('keywords')
+    qc.create_index([('search', TEXT)])
+    print(f'{len(papers)} papers, {n} questions synced, {gone} removed (database {db.name})')

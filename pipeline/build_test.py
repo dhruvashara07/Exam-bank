@@ -13,16 +13,14 @@ import pymupdf as fitz
 
 sys.path.insert(0, os.path.dirname(__file__))
 from run import cleaned, ROOT
+import paths
 
 A4 = fitz.paper_rect('a4')
 TOP, BOTTOM, GAP = 50.0, A4.height - 45.0, 6.0
 
 
 def load(qid):
-    syl, ses, pv, q = qid.split('_')
-    folder = f'{ses[:4]}-{ses[4:]}'
-    return json.load(open(os.path.join(ROOT, 'data', syl, folder, pv, f'{q}.json'))), \
-        os.path.join(ROOT, 'raw', syl, folder, f'qp_{pv}.pdf'), os.path.join(ROOT, 'raw', syl, folder, f'ms_{pv}.pdf')
+    return (json.load(open(paths.question_file(qid))),) + paths.raw_pdfs(qid)
 
 
 def pieces(q, part):
