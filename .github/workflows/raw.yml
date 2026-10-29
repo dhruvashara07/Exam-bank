@@ -1,0 +1,48 @@
+name: Store original PDFs
+
+# Bulk upload path: PDFs pushed to the branch `incoming-raw` (under raw/) are stored in GitHub
+# Releases (one release per syllabus+year, e.g. raw-0625-2015) and listed in raw/manifest.json on main.
+# The PDFs never enter main, so the repo stays small. Delete the branch afterwards.
+on:
+  push:
+    branches: [incoming-raw]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: raw
+  cancel-in-progress: false
+
+jobs:
+  store:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Upload PDFs to Releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 pipeline/raw_store.py upload
+      - name: Save the manifest on main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp raw/manifest.json /tmp/manifest.incoming.json
+          git config user.name "exam-bank bot"
+          git config user.email "actions@users.noreply.github.com"
+          git fetch -q origin main
+          git checkout -q -f -B main origin/main
+          cp /tmp/manifest.incoming.json /tmp/m.json
+          python3 - <<'PY'
+          import json, os
+          a = json.load(open('/tmp/m.json'))
+          b = json.load(open('raw/manifest.json')) if os.path.exists('raw/manifest.json') else {}
+          b.update(a)
+          json.dump(dict(sorted(b.items())), open('raw/manifest.json', 'w'), indent=1)
+          PY
+          SKIP_WAIT=1 pipeline/push.sh "Store original PDFs in Releases: manifest $(python3 -c 'import json;print(len(json.load(open("raw/manifest.json"))))') files"
+          echo "::notice::raw manifest now lists $(python3 -c 'import json;print(len(json.load(open("raw/manifest.json"))))') PDFs"
