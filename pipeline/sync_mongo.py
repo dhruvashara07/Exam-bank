@@ -71,7 +71,7 @@ def approved_files():
     return [f for f in paths.question_files() if '_'.join(os.path.basename(f).split('_')[:3]) in appr], appr
 
 
-if __name__ == '__main__':
+def main():
     cloud = cloud_name()
     files, appr = approved_files()
     print(f'{len(appr)} approved papers, {len(files)} questions')
@@ -122,3 +122,23 @@ if __name__ == '__main__':
     print(msg)
     if os.environ.get('GITHUB_ACTIONS'):
         print(f'::notice::{msg}')
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except SystemExit as e:
+        if e.code not in (0, None):
+            print(e.code)
+            if os.environ.get('GITHUB_ACTIONS'):
+                print(f'::error::MongoDB: {e.code}')
+        raise
+    except Exception as e:      # report the real reason where Claude can read it (annotations)
+        msg = f'{type(e).__name__}: {e}'.replace('\n', ' ')[:900]
+        uri = (os.environ.get('MONGODB_URI') or os.environ.get('MONGO_URI') or '')
+        if '@' in uri:
+            msg = msg.replace(uri.split('@')[0], '***')       # never print the password
+        print(msg)
+        if os.environ.get('GITHUB_ACTIONS'):
+            print(f'::error::MongoDB: {msg}')
+        sys.exit(1)
