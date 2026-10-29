@@ -64,21 +64,62 @@ def upload(path, cloud, key, secret):
     raise RuntimeError(f'{pid}: gave up after retries')
 
 
+def existing(cloud, key, secret):
+    """{public_id: (bytes, etag)} of everything already in Cloudinary under question_bank/ (Admin API)."""
+    out, cursor = {}, None
+    while True:
+        params = {'prefix': paths.CLOUD_ROOT + '/', 'max_results': 500}
+        if cursor:
+            params['next_cursor'] = cursor
+        r = requests.get(f'https://api.cloudinary.com/v1_1/{cloud}/resources/image/upload',
+                         params=params, auth=(key, secret), timeout=60)
+        if r.status_code != 200:
+            note('warning', f'could not list existing files (HTTP {r.status_code}); uploading all')
+            return {}
+        j = r.json()
+        for x in j.get('resources', []):
+            out[x['public_id']] = (x.get('bytes'), x.get('etag'))
+        cursor = j.get('next_cursor')
+        if not cursor:
+            return out
+
+
+def note(level, msg):
+    """Print, and also as a GitHub annotation (readable through the API even when logs are not)."""
+    print(msg)
+    if os.environ.get('GITHUB_ACTIONS'):
+        print(f'::{level}::{msg}'.replace('\n', ' '))
+
+
 if __name__ == '__main__':
     cloud, key, secret = creds()
     files = changed_files()
-    print(f'uploading {len(files)} SVGs to {cloud}')
+    have = existing(cloud, key, secret) if files else {}
+    todo = []
+    for f in files:
+        b = open(f, 'rb').read()
+        prev = have.get(public_id(f))
+        if prev and (prev[1] == hashlib.md5(b).hexdigest() or (prev[1] is None and prev[0] == len(b))):
+            continue                       # already there, unchanged
+        todo.append(f)
+    print(f'{len(files)} SVGs to check, {len(files) - len(todo)} already in Cloudinary, uploading {len(todo)} to {cloud}')
     failed = []
-    with ThreadPoolExecutor(max_workers=8) as pool:
-        futs = {pool.submit(upload, f, cloud, key, secret): f for f in files}
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        futs = {pool.submit(upload, f, cloud, key, secret): f for f in todo}
         for i, fut in enumerate(as_completed(futs), 1):
             try:
                 fut.result()
             except Exception as e:
                 failed.append(str(e))
             if i % 250 == 0:
-                print(f'  {i}/{len(files)}')
-    print(f'done: {len(files) - len(failed)} uploaded, {len(failed)} failed')
-    for f in failed[:20]:
-        print('  FAILED', f)
+                print(f'  {i}/{len(todo)}')
+    note('notice' if not failed else 'error',
+         f'Cloudinary: {len(files)} checked, {len(files) - len(todo)} unchanged, '
+         f'{len(todo) - len(failed)} uploaded, {len(failed)} failed')
+    kinds = {}
+    for f in failed:
+        k = f.split(': ', 1)[1][:80] if ': ' in f else f[:80]
+        kinds.setdefault(k, []).append(f.split(':', 1)[0])
+    for k, ids in list(kinds.items())[:8]:
+        note('error', f'{len(ids)} x {k}  e.g. {ids[0]}')
     sys.exit(1 if failed else 0)

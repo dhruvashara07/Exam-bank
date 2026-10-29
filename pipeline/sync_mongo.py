@@ -118,4 +118,7 @@ if __name__ == '__main__':
                      ('paper', ASCENDING), ('variant', ASCENDING), ('number', ASCENDING)])
     qc.create_index('paper_id'); qc.create_index('type'); qc.create_index('topic'); qc.create_index('keywords')
     qc.create_index([('search', TEXT)])
-    print(f'{len(papers)} papers, {n} questions synced, {gone} removed (database {db.name})')
+    msg = f'MongoDB: {len(papers)} papers, {n} questions synced, {gone} removed (database {db.name})'
+    print(msg)
+    if os.environ.get('GITHUB_ACTIONS'):
+        print(f'::notice::{msg}')
