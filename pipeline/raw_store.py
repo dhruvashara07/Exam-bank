@@ -103,6 +103,13 @@ def wanted(r, sels):
     return False
 
 
+def assets_of(tag):
+    """{asset name: asset id} of one release (REST API: also works where GraphQL is blocked)."""
+    rel = json.loads(gh('api', f'repos/{REPO}/releases/tags/{tag}').stdout)
+    out = json.loads(gh('api', '--paginate', f'repos/{REPO}/releases/{rel["id"]}/assets?per_page=100').stdout.replace('][', ','))
+    return {a['name']: a['id'] for a in out}
+
+
 def fetch(sels=()):
     m = load()
     todo = [(r, v) for r, v in m.items() if wanted(r, sels)
@@ -112,21 +119,19 @@ def fetch(sels=()):
         by_tag.setdefault(v['tag'], []).append((r, v))
     got = 0
     for tag, items in by_tag.items():
-        tmpdir = f'/tmp/raw_{tag}'
-        os.makedirs(tmpdir, exist_ok=True)
-        if len(items) > 20:       # most of a release: one call
-            gh('release', 'download', tag, '-R', REPO, '-D', tmpdir, '--clobber', '-p', '*.pdf')
-        else:
-            for r, v in items:
-                gh('release', 'download', tag, '-R', REPO, '-D', tmpdir, '--clobber', '-p', v['asset'])
+        ids = assets_of(tag)
         for r, v in items:
-            src = os.path.join(tmpdir, v['asset'])
             dst = os.path.join(ROOT, 'raw', r)
             os.makedirs(os.path.dirname(dst), exist_ok=True)
-            if os.path.exists(src):
-                os.replace(src, dst); got += 1
+            if v['asset'] not in ids:
+                print('MISSING in release:', tag, v['asset']); continue
+            with open(dst + '.part', 'wb') as f:
+                p = subprocess.run(['gh', 'api', '-H', 'Accept: application/octet-stream',
+                                    f'repos/{REPO}/releases/assets/{ids[v["asset"]]}'], stdout=f)
+            if p.returncode == 0 and os.path.getsize(dst + '.part') == v['size'] and sha256(dst + '.part') == v['sha256']:
+                os.replace(dst + '.part', dst); got += 1
             else:
-                print('MISSING in release:', tag, v['asset'])
+                os.remove(dst + '.part'); print('download failed:', r)
     print(f'{got} PDFs fetched from Releases')
     return got
 
