@@ -73,3 +73,7 @@ One line per run: date, pending papers checked/approved, feedback handled, fixes
 - 2026-10-29 14:xx IST (chat session): 2015–2024 processed (see Done). 2025–26 re-approved (66): only
   whitespace at cut edges, notices/barcodes excluded, better MS codes, tighter figures, editable layer.
   411 older papers pending for the daily check. Cleaned-PDF cache now also rebuilds when clean.py changes.
+- 2026-10-29 22:xx IST: figure-crop fix (axis titles / centred labels were taken as prose, so 63 of 3,483
+  figure crops were cut); full re-run, all checks clean, 2025–26 re-approved (question pieces unchanged).
+  2015–2024 PDFs pushed to branch `incoming-raw` → Releases. Daily check paused while Dhruv and Claude agree
+  the batch/portal plan (portal A: Pages + Claude review page; twice-daily check; text-only editable layer).

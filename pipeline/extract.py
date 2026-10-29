@@ -202,9 +202,12 @@ def find_figures(doc, seg, lines):
     drawings = [r for r in ink_boxes(page, top, bottom) if seg['y0'] <= r.y0 and r.y1 <= seg['y1'] + 1
                 and not any(abs(r.x0 - m.x0) < 1 and abs(r.y0 - m.y0) < 1 and abs(r.x1 - m.x1) < 1 for m in marks_text)]
     long_x0 = [l['x0'] for l in lines if len(l['text']) >= 25]
+    para_x0 = [l['x0'] for l in lines if len(l['text']) >= 45]       # left edges of real paragraphs
+    def prose_like(l):            # a sentence of the question, not an axis title or label inside a figure
+        return len(l['text']) >= 45 or (len(l['text']) >= 25 and any(abs(l['x0'] - x) < 2.5 for x in para_x0))
     for cap in caps:
         is_table = cap['text'].startswith('Table')
-        prose_above = [l for l in lines if l['y1'] <= cap['y0'] and (len(l['text']) >= 25 or re.match(r'^(\d{1,2}|\([a-z]+\))\s', l['text'])
+        prose_above = [l for l in lines if l['y1'] <= cap['y0'] and (prose_like(l) or re.match(r'^(\d{1,2}|\([a-z]+\))\s', l['text'])
                                                                     or (l['x0'] <= 76 and l['text'].rstrip().endswith('.'))
                                                                     or (l['text'].rstrip().endswith(('.', ':')) and any(abs(l['x0'] - x) < 2 for x in long_x0)))]
         if is_table:   # table caption sits above the table
