@@ -40,7 +40,7 @@ concurrency:
 jobs:
   bank:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 330
     env:
       MONGO_URI: ${{ secrets.MONGO_URI }}
       MONGODB_URI: ${{ secrets.MONGODB_URI }}
@@ -91,10 +91,11 @@ jobs:
 
       - name: Upload SVGs to Cloudinary
         env:
-          BEFORE_SHA: ${{ github.event_name == 'push' && github.event.before || '' }}
-        run: python3 pipeline/sync_cloudinary.py ${{ (github.event_name == 'workflow_dispatch' && (inputs.all || inputs.reprocess)) && '--all' || '' }}
+          CLOUDINARY_MINUTES: '240'      # stop uploading after 4 h; the next run continues where it stopped
+        run: python3 pipeline/sync_cloudinary.py
 
       - name: Sync to MongoDB
+        if: ${{ !cancelled() }}
         run: python3 pipeline/sync_mongo.py
 
       - name: Papers waiting for Claude's check

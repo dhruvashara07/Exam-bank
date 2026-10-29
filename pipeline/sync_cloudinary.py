@@ -37,8 +37,11 @@ def public_id(path):
 
 
 def changed_files():
+    """Every SVG is compared with what Cloudinary already has (one listing of the folder), so a run that
+    stopped half way (time limit) is simply continued by the next run. --changed: only files changed
+    since BEFORE_SHA (quicker, but does not pick up an unfinished earlier run)."""
     before = os.environ.get('BEFORE_SHA', '')
-    if '--all' in sys.argv or not before or set(before) == {'0'}:
+    if '--changed' not in sys.argv or not before or set(before) == {'0'}:
         return paths.svg_files()
     out = subprocess.run(['git', 'diff', '--name-only', '--diff-filter=AM', before, 'HEAD', '--', 'bank'],
                          cwd=ROOT, capture_output=True, text=True, check=True).stdout.split()
@@ -102,17 +105,31 @@ if __name__ == '__main__':
         if prev and (prev[1] == hashlib.md5(b).hexdigest() or (prev[1] is None and prev[0] == len(b))):
             continue                       # already there, unchanged
         todo.append(f)
+    approved = set(paths.approvals())                  # pictures of approved papers first (they go to MongoDB)
+    todo.sort(key=lambda f: ('_'.join(os.path.basename(f).split('_')[:3]) not in approved, f))
     print(f'{len(files)} SVGs to check, {len(files) - len(todo)} already in Cloudinary, uploading {len(todo)} to {cloud}')
     failed = []
-    with ThreadPoolExecutor(max_workers=6) as pool:
-        futs = {pool.submit(upload, f, cloud, key, secret): f for f in todo}
+    budget = float(os.environ.get('CLOUDINARY_MINUTES', '0') or 0) * 60     # stop cleanly before the job limit
+    start, done, left = time.time(), 0, 0
+    with ThreadPoolExecutor(max_workers=10) as pool:
+        def job(f):
+            if budget and time.time() - start > budget:
+                return None                                 # out of time: the next run continues
+            return upload(f, cloud, key, secret)
+        futs = {pool.submit(job, f): f for f in todo}
         for i, fut in enumerate(as_completed(futs), 1):
             try:
-                fut.result()
+                if fut.result() is None:
+                    left += 1
+                else:
+                    done += 1
             except Exception as e:
                 failed.append(str(e))
-            if i % 250 == 0:
+            if i % 500 == 0:
                 print(f'  {i}/{len(todo)}')
+    if left:
+        note('warning', f'Cloudinary: time budget used up, {left} SVGs left for the next run')
+    todo = todo[:len(todo) - left] if left else todo
     note('notice' if not failed else 'error',
          f'Cloudinary: {len(files)} checked, {len(files) - len(todo)} unchanged, '
          f'{len(todo) - len(failed)} uploaded, {len(failed)} failed')
