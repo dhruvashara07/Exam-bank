@@ -122,4 +122,7 @@ if __name__ == '__main__':
         kinds.setdefault(k, []).append(f.split(':', 1)[0])
     for k, ids in list(kinds.items())[:8]:
         note('error', f'{len(ids)} x {k}  e.g. {ids[0]}')
+    if failed:   # every failed file, in one annotation, so it can be read through the API
+        short = [f.split(':', 1)[0].rsplit('/', 1)[-1] for f in failed]
+        note('warning', 'failed files: ' + ' '.join(sorted(short)))
     sys.exit(1 if failed else 0)
