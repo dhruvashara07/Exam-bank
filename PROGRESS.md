@@ -47,3 +47,7 @@ One line per run: date, pending papers checked/approved, feedback handled, fixes
 - 2026-10-29 (setup): 66 papers approved by hand after the full check. Review round 2 published, not yet answered.
   Safe push (`pipeline/push.sh`) + CLAUDE.md added so the Action, this chat and the daily check never clash.
   Action runs fail at the MongoDB step until Dhruv adds the secrets (expected).
+- 2026-10-29 10:xx IST: secrets added. Cloudinary rejected 62 SVGs ("Resource is invalid") = every SVG with
+  >=1000 <use> (one per glyph). render.limit_uses: drop empty-glyph uses, inline glyph paths above 900.
+  Pixel-identical (Chromium, 122 files). All 66 re-approved. Run logs are not readable from Claude's
+  workspace: scripts report via GitHub annotations (gh api .../check-runs/<job>/annotations).

@@ -38,7 +38,29 @@ def region_svg(src_doc, page_index, bbox):
     return minify(doc[0].get_svg_image(text_as_path=True))
 
 
+USE_LIMIT = 900        # Cloudinary rejects SVGs with 1000+ <use> elements ("Resource is invalid")
+
+
 def minify(svg):
     svg = re.sub(r'>\s+<', '><', svg)
     svg = re.sub(r'(-?\d*\.\d{3})\d+', r'\1', svg)   # 3 decimals: well below print resolution
-    return svg
+    return limit_uses(svg)
+
+
+def limit_uses(svg):
+    """Text-as-path SVGs draw every letter as <use href="#glyph">. Drop uses of empty glyphs (spaces);
+    if still too many for Cloudinary, write each glyph's path inline instead (same picture, bigger file)."""
+    glyphs = dict(re.findall(r'<path id="([^"]+)" d="([^"]*)"/>', svg))
+    empty = {k for k, d in glyphs.items() if not d.strip()}
+    use_re = re.compile(r'<use ([^>]*?)xlink:href="#([^"]+)"([^>]*)/>')
+    if empty:
+        svg = use_re.sub(lambda m: '' if m.group(2) in empty else m.group(0), svg)
+    if svg.count('<use') < USE_LIMIT:
+        return svg
+
+    def inline(m):
+        d = glyphs.get(m.group(2))
+        if d is None:
+            return m.group(0)
+        return f'<path {m.group(1)}{m.group(3).strip()} d="{d}"/>'.replace('  ', ' ')
+    return use_re.sub(inline, svg)
