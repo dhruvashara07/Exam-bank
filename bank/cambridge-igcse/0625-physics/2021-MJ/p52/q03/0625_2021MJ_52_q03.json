@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    100.0,
-    109.3,
-    495.8,
-    326.6
+    100.5,
+    112.5,
+    495.5,
+    325.0
    ],
    "id": "0625_2021MJ_52_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 9,
    "bbox": [
-    152.8,
-    58.0,
+    152.5,
+    61.5,
     442.5,
-    224.9
+    225.0
    ],
    "id": "0625_2021MJ_52_q03b_table3-1",
    "part": "(b)",
@@ -220,14 +220,14 @@
        "text": "Place the sliding contact S at C. Measure the potential difference (p.d.) VR across the resistor R."
       },
       {
-       "type": "text",
-       "html": "Open the switch.",
-       "text": "Open the switch."
-      },
-      {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "VR ="
+      },
+      {
+       "type": "text",
+       "html": "Open the switch.",
+       "text": "Open the switch."
       },
       {
        "type": "marks",
@@ -295,7 +295,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i> of the resistor using the equation <i>R</i> = \\(\\frac{<i>V</i><sub>R</sub>}{<i>I</i>}\\).",
+       "html": "Calculate the resistance <i>R</i> of the resistor using the equation <i>R</i> = \\(\\frac{V_{R}}{I}\\).",
        "text": "Calculate the resistance R of the resistor using the equation R = (VR)/(I)."
       },
       {
@@ -406,33 +406,9 @@
      ]
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>l</i> / cm",
-       "<i>V</i> / V"
-      ],
-      [
-       "20.0",
-       ""
-      ],
-      [
-       "40.0",
-       ""
-      ],
-      [
-       "60.0",
-       ""
-      ],
-      [
-       "80.0",
-       ""
-      ],
-      [
-       "100.0",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2021MJ_52_q03b_table3-1",
+     "caption": "Table 3.1"
     },
     {
      "type": "marks",
@@ -614,6 +590,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

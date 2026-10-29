@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    182.1,
-    113.7,
-    422.2,
-    330.6
+    182.5,
+    118.0,
+    422.0,
+    328.0
    ],
    "id": "0625_2017MJ_62_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2",
    "page": 2,
    "bbox": [
-    83.7,
-    441.5,
-    517.6,
-    604.2
+    83.0,
+    441.0,
+    518.0,
+    601.5
    ],
    "id": "0625_2017MJ_62_q01ai_fig1-2",
    "part": "(a)(i)",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-MJ/p62/q01/figures/0625_2017MJ_62_q01ai_fig1-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-MJ/p62/q01/figures/0625_2017MJ_62_q01ai_fig1-2",
     "url": null,
-    "kb": 54.7
+    "kb": 54.6
    }
   },
   {
    "caption": "Fig. 1.3",
    "page": 2,
    "bbox": [
-    83.7,
-    441.5,
-    517.6,
-    604.2
+    83.0,
+    441.0,
+    518.0,
+    601.5
    ],
    "id": "0625_2017MJ_62_q01ai_fig1-3",
    "part": "(a)(i)",
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-MJ/p62/q01/figures/0625_2017MJ_62_q01ai_fig1-3.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-MJ/p62/q01/figures/0625_2017MJ_62_q01ai_fig1-3",
     "url": null,
-    "kb": 54.7
+    "kb": 54.6
    }
   }
  ],
@@ -265,7 +265,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i> of the length <i>l</i> = 0.200 m of resistance wire, using the equation <i>R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\) .",
+       "html": "Calculate the resistance <i>R</i> of the length <i>l</i> = 0.200 m of resistance wire, using the equation <i>R</i> = \\(\\frac{V}{I}\\) .",
        "text": "Calculate the resistance R of the length l = 0.200 m of resistance wire, using the equation R = (V)/(I) ."
       },
       {
@@ -553,6 +553,11 @@
      "text": "3.08 Ω"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "R1 ="
+    },
+    {
      "type": "text",
      "html": "She then uses a short lead to connect points <b>B</b> and <b>D</b>. She uses the same method again to determine the combined resistance <i>R</i><sub>2</sub> of the resistance wires <b>AB</b> and <b>CD</b> connected together.",
      "text": "She then uses a short lead to connect points B and D. She uses the same method again to determine the combined resistance R2 of the resistance wires AB and CD connected together."
@@ -563,6 +568,11 @@
      "text": "1.50 Ω"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "R2 ="
+    },
+    {
      "type": "text",
      "html": "Use the student’s results to compare the resistance <i>R</i><sub>1</sub> of wire <b>AB</b> with the resistance <i>R</i><sub>2</sub> of wires <b>AB</b> and <b>CD</b> connected together. Tick the box next to the description that most closely matches the results.",
      "text": "Use the student’s results to compare the resistance R1 of wire AB with the resistance R2 of wires AB and CD connected together. Tick the box next to the description that most closely matches the results."
@@ -571,11 +581,6 @@
      "type": "text",
      "html": "<i>R</i><sub>1</sub> = <i>R</i><sub>2</sub> <i>R</i><sub>1</sub> = 2<i>R</i><sub>2</sub> 2<i>R</i><sub>1</sub> = <i>R</i><sub>2</sub> There is no simple relationship between <i>R</i><sub>1</sub> and <i>R</i><sub>2</sub>.",
      "text": "R1 = R2 R1 = 2R2 2R1 = R2 There is no simple relationship between R1 and R2."
-    },
-    {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "R2 ="
     },
     {
      "type": "marks",
@@ -643,13 +648,22 @@
    "content": [
     {
      "type": "text",
-     "html": "Suggest <b>two </b>reasons why different students, all carrying out this experiment carefully, with the same apparatus, may <b>not</b> obtain identical results.",
+     "html": "Suggest <b>two </b> reasons why different students, all carrying out this experiment carefully, with the same apparatus, may <b>not</b> obtain identical results.",
      "text": "Suggest two reasons why different students, all carrying out this experiment carefully, with the same apparatus, may not obtain identical results."
     },
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -676,6 +690,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

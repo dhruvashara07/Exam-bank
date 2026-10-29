@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    89.9,
-    113.8,
-    494.6,
-    251.6
+    90.0,
+    118.5,
+    494.0,
+    249.0
    ],
    "id": "0625_2017MJ_52_q02_fig2-1",
    "part": "",
@@ -52,9 +52,9 @@
    "caption": "Table 2.1",
    "page": 5,
    "bbox": [
-    223.6,
-    409.6,
-    371.7,
+    223.5,
+    414.5,
+    372.0,
     567.5
    ],
    "id": "0625_2017MJ_52_q02a_table2-1",
@@ -380,7 +380,18 @@
       {
        "type": "list",
        "items": [
-        "Use the balance provided to measure the mass <i>m</i>, in grams, of the metre rule.",
+        "Use the balance provided to measure the mass <i>m</i>, in grams, of the metre rule."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "m =",
+       "unit": "g"
+      },
+      {
+       "type": "list",
+       "items": [
         "Calculate the value of <i>mX</i>, where <i>X</i> = 0.05 N cm / g."
        ]
       },
@@ -457,7 +468,17 @@
       {
        "type": "list",
        "items": [
-        "Use the value of <i>a</i> in the first row of Table 2.1 to calculate <i>Pa</i>, where <i>P</i> = 1.00 N. <i>P</i> is the weight of load <b>P</b>. Include the unit.",
+        "Use the value of <i>a</i> in the first row of Table 2.1 to calculate <i>Pa</i>, where <i>P</i> = 1.00 N. <i>P</i> is the weight of load <b>P</b>. Include the unit."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Pa ="
+      },
+      {
+       "type": "list",
+       "items": [
         "Use the value of <i>b</i> in the first row of Table 2.1 to calculate <i>Qb</i>, where <i>Q</i> = 0.80 N. <i>Q</i> is the weight of load <b>Q</b>. Include the unit."
        ]
       },
@@ -562,6 +583,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

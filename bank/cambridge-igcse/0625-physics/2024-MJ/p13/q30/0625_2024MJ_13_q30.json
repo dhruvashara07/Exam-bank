@@ -32,10 +32,10 @@
   {
    "page": 12,
    "bbox": [
-    67.7,
-    608.2,
+    67.5,
+    608.0,
     351.0,
-    733.7
+    734.0
    ],
    "id": "0625_2024MJ_13_q30_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p13/q30/figures/0625_2024MJ_13_q30_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p13/q30/figures/0625_2024MJ_13_q30_figA",
     "url": null,
-    "kb": 22.0
+    "kb": 21.9
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A transformer has 400 turns on the primary coil connected to the 240V mains supply.",
-   "text": "A transformer has 400 turns on the primary coil connected to the 240V mains supply."
+   "html": "A transformer has 400 turns on the primary coil connected to the 240 V mains supply.",
+   "text": "A transformer has 400 turns on the primary coil connected to the 240 V mains supply."
   },
   {
    "type": "text",
@@ -107,40 +108,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "p.d. across",
-     "p.d. across"
-    ],
-    [
-     "",
-     "secondary coil 1/V",
-     "secondary coil 2/V"
-    ],
-    [
-     "<b>A</b>",
-     "12",
-     "3.2"
-    ],
-    [
-     "<b>B</b>",
-     "1500",
-     "12"
-    ],
-    [
-     "<b>C</b>",
-     "4200",
-     "12"
-    ],
-    [
-     "<b>D</b>",
-     "4200",
-     "33"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_13_q30_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "12 3.2"
+    },
+    {
+     "label": "B",
+     "html": "1500 12"
+    },
+    {
+     "label": "C",
+     "html": "4200 12"
+    },
+    {
+     "label": "D",
+     "html": "4200 33"
+    }
+   ]
   }
  ]
 }

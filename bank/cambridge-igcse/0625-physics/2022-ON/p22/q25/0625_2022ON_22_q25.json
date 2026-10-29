@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    165.7,
-    460.2,
-    429.0,
-    538.4
+    165.0,
+    460.0,
+    429.5,
+    539.0
    ],
    "id": "0625_2022ON_22_q25_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p22/q25/figures/0625_2022ON_22_q25_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p22/q25/figures/0625_2022ON_22_q25_figA",
     "url": null,
-    "kb": 5.0
+    "kb": 4.8
    }
   },
   {
    "page": 11,
    "bbox": [
-    67.7,
-    570.8,
-    271.3,
-    682.1
+    67.5,
+    570.5,
+    271.5,
+    682.5
    ],
    "id": "0625_2022ON_22_q25_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p22/q25/figures/0625_2022ON_22_q25_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p22/q25/figures/0625_2022ON_22_q25_figB",
     "url": null,
-    "kb": 15.8
+    "kb": 15.5
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,31 @@
    "text": "Which row shows the direction of the forces exerted on X and Y by the magnetic field?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "force on X",
-     "force on Y"
-    ],
-    [
-     "<b>A</b>",
-     "",
-     ""
-    ],
-    [
-     "<b>B</b>",
-     "",
-     ""
-    ],
-    [
-     "<b>C</b>",
-     "",
-     ""
-    ],
-    [
-     "<b>D</b>",
-     "",
-     ""
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_22_q25_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "in_figure": true,
+   "options": [
+    {
+     "label": "A",
+     "html": ""
+    },
+    {
+     "label": "B",
+     "html": ""
+    },
+    {
+     "label": "C",
+     "html": ""
+    },
+    {
+     "label": "D",
+     "html": ""
+    }
+   ]
   }
  ]
 }

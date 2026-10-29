@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    158.6,
-    113.0,
-    426.9,
-    338.3
+    158.0,
+    116.0,
+    427.5,
+    336.5
    ],
    "id": "0625_2021ON_51_q02_fig2-1",
    "part": "",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p51/q02/figures/0625_2021ON_51_q02_fig2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p51/q02/figures/0625_2021ON_51_q02_fig2-1",
     "url": null,
-    "kb": 14.2
+    "kb": 14.1
    }
   }
  ],
@@ -289,7 +289,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate <i>R</i><sub>X</sub>, the resistance of resistor X, using the equation <i>R</i><sub>X</sub> = \\(\\frac{<i>V</i><sub>X</sub>}{<i>I</i><sub>X</sub>}\\).",
+       "html": "Calculate <i>R</i><sub>X</sub>, the resistance of resistor X, using the equation <i>R</i><sub>X</sub> = \\(\\frac{V_{X}}{I_{X}}\\).",
        "text": "Calculate RX, the resistance of resistor X, using the equation RX = (VX)/(IX)."
       },
       {
@@ -406,6 +406,11 @@
        "text": "Record VXY."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "VXY ="
+      },
+      {
        "type": "text",
        "html": "Record <i>I</i><sub>XY</sub>, the current in the circuit and then switch off the power supply.",
        "text": "Record IXY, the current in the circuit and then switch off the power supply."
@@ -490,13 +495,8 @@
       },
       {
        "type": "text",
-       "html": "the equation <i>R</i> = \\(\\frac{<i>V</i>XY}{<i>I</i>XY}\\).",
+       "html": "the equation <i>R</i> = \\(\\frac{\\text{VXY}}{\\text{IXY}}\\).",
        "text": "the equation R = (VXY)/(IXY)."
-      },
-      {
-       "type": "text",
-       "html": "XY",
-       "text": "XY"
       },
       {
        "type": "text",
@@ -507,6 +507,11 @@
        "type": "answer",
        "kind": "answer_line",
        "prefix": "R ="
+      },
+      {
+       "type": "text",
+       "html": "XY",
+       "text": "XY"
       },
       {
        "type": "marks",
@@ -691,6 +696,11 @@
        "text": "Switch on. Record VXZ, the potential difference across the two resistors X and Z in parallel."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "VXZ ="
+      },
+      {
        "type": "text",
        "html": "Record <i>I</i><sub>XZ</sub>, the current in the circuit and then switch off the power supply.",
        "text": "Record IXZ, the current in the circuit and then switch off the power supply."
@@ -775,13 +785,8 @@
       },
       {
        "type": "text",
-       "html": "the equation <i>R</i> = \\(\\frac{<i>V</i>XZ}{<i>I</i>XZ}\\).",
+       "html": "the equation <i>R</i> = \\(\\frac{\\text{VXZ}}{\\text{IXZ}}\\).",
        "text": "the equation R = (VXZ)/(IXZ)."
-      },
-      {
-       "type": "text",
-       "html": "XZ",
-       "text": "XZ"
       },
       {
        "type": "text",
@@ -792,6 +797,11 @@
        "type": "answer",
        "kind": "answer_line",
        "prefix": "R ="
+      },
+      {
+       "type": "text",
+       "html": "XZ",
+       "text": "XZ"
       },
       {
        "type": "marks",
@@ -901,6 +911,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

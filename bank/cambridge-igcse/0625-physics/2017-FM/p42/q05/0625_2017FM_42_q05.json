@@ -10,9 +10,9 @@
    "page": 8,
    "bbox": [
     139.0,
-    293.1,
+    293.5,
     460.0,
-    511.5
+    509.0
    ],
    "id": "0625_2017FM_42_q05b_fig5-1",
    "part": "(b)",
@@ -101,7 +101,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "2",
+       "prefix": "1"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "2"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -283,7 +292,21 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "point A"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "point B"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "point C"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -397,5 +420,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

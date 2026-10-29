@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    160.7,
-    485.3,
-    434.7,
-    608.6
+    160.5,
+    482.5,
+    435.0,
+    610.5
    ],
    "id": "0625_2023FM_22_q20_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    643.4,
-    476.3,
-    754.8
+    67.5,
+    643.5,
+    476.5,
+    755.0
    ],
    "id": "0625_2023FM_22_q20_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-FM/p22/q20/figures/0625_2023FM_22_q20_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-FM/p22/q20/figures/0625_2023FM_22_q20_figB",
     "url": null,
-    "kb": 37.8
+    "kb": 37.7
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Where is the image formed and how does its size compare to the object?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "image position",
-     "image size"
-    ],
-    [
-     "<b>A</b>",
-     "on the opposite side of the lens to the object",
-     "larger than the object"
-    ],
-    [
-     "<b>B</b>",
-     "on the opposite side of the lens to the object",
-     "smaller than the object"
-    ],
-    [
-     "<b>C</b>",
-     "on the same side of the lens as the object",
-     "larger than the object"
-    ],
-    [
-     "<b>D</b>",
-     "on the same side of the lens as the object",
-     "smaller than the object"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023FM_22_q20_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "on the opposite side of the lens to the object larger than the object"
+    },
+    {
+     "label": "B",
+     "html": "on the opposite side of the lens to the object smaller than the object"
+    },
+    {
+     "label": "C",
+     "html": "on the same side of the lens as the object larger than the object"
+    },
+    {
+     "label": "D",
+     "html": "on the same side of the lens as the object smaller than the object"
+    }
+   ]
   }
  ]
 }

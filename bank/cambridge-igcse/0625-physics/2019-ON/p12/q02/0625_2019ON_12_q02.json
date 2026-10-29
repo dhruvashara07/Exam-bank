@@ -33,8 +33,8 @@
    "page": 2,
    "bbox": [
     194.0,
-    352.3,
-    372.8,
+    352.5,
+    373.0,
     474.1
    ],
    "id": "0625_2019ON_12_q02_figA",
@@ -51,10 +51,10 @@
   {
    "page": 2,
    "bbox": [
-    64.3,
-    505.4,
-    323.3,
-    625.3
+    64.0,
+    505.0,
+    323.5,
+    625.5
    ],
    "id": "0625_2019ON_12_q02_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p12/q02/figures/0625_2019ON_12_q02_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p12/q02/figures/0625_2019ON_12_q02_figB",
     "url": null,
-    "kb": 22.7
+    "kb": 22.6
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "the car is at rest at",
-     "the car is moving at a constant speed at"
-    ],
-    [
-     "<b>A</b>",
-     "0.0s",
-     "2.0s"
-    ],
-    [
-     "<b>B</b>",
-     "0.0s",
-     "4.0s"
-    ],
-    [
-     "<b>C</b>",
-     "4.0s",
-     "0.0s"
-    ],
-    [
-     "<b>D</b>",
-     "4.0s",
-     "2.0s"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019ON_12_q02_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0.0s 2.0s"
+    },
+    {
+     "label": "B",
+     "html": "0.0s 4.0s"
+    },
+    {
+     "label": "C",
+     "html": "4.0s 0.0s"
+    },
+    {
+     "label": "D",
+     "html": "4.0s 2.0s"
+    }
+   ]
   }
  ]
 }

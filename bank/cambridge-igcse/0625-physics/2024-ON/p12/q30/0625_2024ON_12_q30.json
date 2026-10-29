@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    228.4,
-    85.6,
-    366.3,
-    196.2
+    228.0,
+    85.0,
+    366.5,
+    196.5
    ],
    "id": "0625_2024ON_12_q30_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p12/q30/figures/0625_2024ON_12_q30_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p12/q30/figures/0625_2024ON_12_q30_figA",
     "url": null,
-    "kb": 46.8
+    "kb": 46.7
    }
   },
   {
    "page": 13,
    "bbox": [
-    67.7,
+    67.5,
     266.5,
-    300.7,
-    377.9
+    301.0,
+    378.0
    ],
    "id": "0625_2024ON_12_q30_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Where should the fuse be placed and which rating should the fuse have?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "position of fuse",
-     "fuse rating/A"
-    ],
-    [
-     "<b>A</b>",
-     "live wire",
-     "10"
-    ],
-    [
-     "<b>B</b>",
-     "live wire",
-     "13"
-    ],
-    [
-     "<b>C</b>",
-     "neutral wire",
-     "10"
-    ],
-    [
-     "<b>D</b>",
-     "neutral wire",
-     "13"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_12_q30_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "live wire 10"
+    },
+    {
+     "label": "B",
+     "html": "live wire 13"
+    },
+    {
+     "label": "C",
+     "html": "neutral wire 10"
+    },
+    {
+     "label": "D",
+     "html": "neutral wire 13"
+    }
+   ]
   }
  ]
 }

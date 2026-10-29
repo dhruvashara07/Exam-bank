@@ -32,9 +32,9 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    449.7,
-    260.2,
+    67.5,
+    449.5,
+    260.5,
     561.0
    ],
    "id": "0625_2020ON_22_q26_figA",
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row describes the amplitude and the frequency of the sound?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "amplitude",
-     "frequency"
-    ],
-    [
-     "<b>A</b>",
-     "constant",
-     "constant"
-    ],
-    [
-     "<b>B</b>",
-     "constant",
-     "varying"
-    ],
-    [
-     "<b>C</b>",
-     "varying",
-     "constant"
-    ],
-    [
-     "<b>D</b>",
-     "varying",
-     "varying"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020ON_22_q26_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "constant constant"
+    },
+    {
+     "label": "B",
+     "html": "constant varying"
+    },
+    {
+     "label": "C",
+     "html": "varying constant"
+    },
+    {
+     "label": "D",
+     "html": "varying varying"
+    }
+   ]
   }
  ]
 }

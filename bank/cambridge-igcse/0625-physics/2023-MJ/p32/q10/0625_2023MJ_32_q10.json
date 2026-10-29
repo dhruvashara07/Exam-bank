@@ -33,10 +33,10 @@
    "caption": "Fig. 10.1",
    "page": 12,
    "bbox": [
-    272.6,
-    92.6,
-    322.7,
-    151.4
+    273.5,
+    96.0,
+    321.0,
+    150.0
    ],
    "id": "0625_2023MJ_32_q10_fig10-1",
    "part": "",
@@ -275,7 +275,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "A beta-particle is"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "A gamma ray is"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -348,10 +357,9 @@
      "text": "A sample contains 1.6 mg of iodine-131. The half-life of iodine-131 is 8.0 days. Calculate the mass of iodine-131 remaining in the sample after 24.0 days."
     },
     {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "mass of iodine-131 remaining =",
-     "unit": "mg"
+     "type": "text",
+     "html": "mass of iodine-131 remaining = …… mg",
+     "text": "mass of iodine-131 remaining = …… mg"
     },
     {
      "type": "marks",
@@ -377,6 +385,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

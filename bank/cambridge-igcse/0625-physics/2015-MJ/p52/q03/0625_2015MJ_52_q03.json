@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 6,
    "bbox": [
-    180.1,
-    115.7,
-    415.1,
-    330.4
+    179.5,
+    117.5,
+    415.5,
+    330.5
    ],
    "id": "0625_2015MJ_52_q03_fig3-1",
    "part": "",
@@ -131,6 +131,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "VP ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "IP ="
       },
       {
@@ -198,8 +203,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the combined resistance <i>R</i><sub>P</sub> of the lamps using the equation <i>R</i><sub>P</sub> = \\(\\frac{<i>V</i><sub>P</sub>}{I<sub>P</sub>}\\).",
-       "text": "Calculate the combined resistance RP of the lamps using the equation RP = (VP)/(IP)."
+       "html": "Calculate the combined resistance <i>R</i><sub>P</sub> of the lamps using the equation <i>R</i><sub>P</sub> = \\(\\frac{V_{P}}{I_{P}}\\) .",
+       "text": "Calculate the combined resistance RP of the lamps using the equation RP = (VP)/(IP) ."
       },
       {
        "type": "answer",
@@ -402,6 +407,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "VS ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "IS ="
       },
       {
@@ -470,8 +480,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>S</sub> of the lamps using the equation <i>R</i><sub>S</sub> = \\(\\frac{<i>V</i><sub>S</sub>}{I<sub>S</sub>}\\).",
-       "text": "Calculate the resistance RS of the lamps using the equation RS = (VS)/(IS)."
+       "html": "Calculate the resistance <i>R</i><sub>S</sub> of the lamps using the equation <i>R</i><sub>S</sub> = \\(\\frac{V_{S}}{I_{S}}\\) .",
+       "text": "Calculate the resistance RS of the lamps using the equation RS = (VS)/(IS) ."
       },
       {
        "type": "answer",
@@ -667,6 +677,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

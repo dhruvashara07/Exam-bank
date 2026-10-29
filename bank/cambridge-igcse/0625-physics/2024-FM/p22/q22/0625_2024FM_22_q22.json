@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    427.2,
+    67.5,
+    427.0,
     549.0,
-    538.6
+    538.5
    ],
    "id": "0625_2024FM_22_q22_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-FM/p22/q22/figures/0625_2024FM_22_q22_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-FM/p22/q22/figures/0625_2024FM_22_q22_figA",
     "url": null,
-    "kb": 41.8
+    "kb": 41.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row about converging lenses and diverging lenses is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "converging lenses",
-     "diverging lenses"
-    ],
-    [
-     "<b>A</b>",
-     "always produce inverted images",
-     "can focus a parallel beam of light"
-    ],
-    [
-     "<b>B</b>",
-     "can be used as magnifying glasses",
-     "do not have a principal focus"
-    ],
-    [
-     "<b>C</b>",
-     "can be used to correct short-sightedness",
-     "are usually thinner than converging lenses"
-    ],
-    [
-     "<b>D</b>",
-     "can produce real and virtual images",
-     "can be used to correct short-sightedness"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024FM_22_q22_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "always produce inverted images can focus a parallel beam of light"
+    },
+    {
+     "label": "B",
+     "html": "can be used as magnifying glasses do not have a principal focus"
+    },
+    {
+     "label": "C",
+     "html": "can be used to correct short-sightedness are usually thinner than converging lenses"
+    },
+    {
+     "label": "D",
+     "html": "can produce real and virtual images can be used to correct short-sightedness"
+    }
+   ]
   }
  ]
 }

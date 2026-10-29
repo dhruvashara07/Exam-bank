@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 6,
    "bbox": [
-    52.1,
-    167.3,
-    546.8,
-    452.9
+    52.5,
+    168.0,
+    546.0,
+    453.0
    ],
    "id": "0625_2025FM_62_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 7,
    "bbox": [
-    161.2,
-    281.9,
-    434.2,
-    505.0
+    161.0,
+    282.5,
+    434.5,
+    505.5
    ],
    "id": "0625_2025FM_62_q02b_table2-1",
    "part": "(b)",
@@ -287,13 +287,13 @@
    "content": [
     {
      "type": "text",
-     "html": "The student pours 200cm<sup>3</sup> of hot water into beaker A and records the temperature θ at time t = 0.",
-     "text": "The student pours 200cm3 of hot water into beaker A and records the temperature θ at time t = 0."
+     "html": "The student pours 200 cm<sup>3</sup> of hot water into beaker A and records the temperature θ at time t = 0.",
+     "text": "The student pours 200 cm3 of hot water into beaker A and records the temperature θ at time t = 0."
     },
     {
      "type": "text",
-     "html": "He records, in Table 2.1, the temperature of the water in the beaker every 30s.",
-     "text": "He records, in Table 2.1, the temperature of the water in the beaker every 30s."
+     "html": "He records, in Table 2.1, the temperature of the water in the beaker every 30 s.",
+     "text": "He records, in Table 2.1, the temperature of the water in the beaker every 30 s."
     },
     {
      "type": "text",
@@ -302,8 +302,8 @@
     },
     {
      "type": "text",
-     "html": "It is important that the temperatures are recorded at exactly every 30s.",
-     "text": "It is important that the temperatures are recorded at exactly every 30s."
+     "html": "It is important that the temperatures are recorded at exactly every 30 s.",
+     "text": "It is important that the temperatures are recorded at exactly every 30 s."
     },
     {
      "type": "text",
@@ -311,59 +311,9 @@
      "text": "Describe a technique which will make it easier for the student to do that."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "",
-       "beaker A",
-       "beaker B"
-      ],
-      [
-       "",
-       "with insulation",
-       "without insulation"
-      ],
-      [
-       "t /s",
-       "θ/°C",
-       "θ/°C"
-      ],
-      [
-       "0",
-       "92.5",
-       "93.0"
-      ],
-      [
-       "30",
-       "90.5",
-       "90.5"
-      ],
-      [
-       "60",
-       "89.0",
-       "88.5"
-      ],
-      [
-       "90",
-       "87.5",
-       "87.0"
-      ],
-      [
-       "120",
-       "86.0",
-       "85.5"
-      ],
-      [
-       "150",
-       "85.0",
-       "84.0"
-      ],
-      [
-       "180",
-       "85.5",
-       "83.0"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2025FM_62_q02b_table2-1",
+     "caption": "Table 2.1"
     },
     {
      "type": "answer",
@@ -525,13 +475,13 @@
       },
       {
        "type": "text",
-       "html": "x<sub>1</sub> = \\(\\frac{θ<sub>0</sub>–θ<sub>90</sub>}{T}\\),",
-       "text": "x1 = (θ0–θ90)/(T),"
+       "html": "x<sub>1</sub> = \\(\\frac{θ_{0} – θ_{90}}{T}\\) ,",
+       "text": "x1 = (θ0–θ90)/(T) ,"
       },
       {
        "type": "text",
-       "html": "where T = 90s and θ<sub>0</sub> and θ<sub>90</sub> are the temperatures of the water in beaker B at times t = 0 and t = 90s.",
-       "text": "where T = 90s and θ0 and θ90 are the temperatures of the water in beaker B at times t = 0 and t = 90s."
+       "html": "where T = 90 s and θ<sub>0</sub> and θ<sub>90</sub> are the temperatures of the water in beaker B at times t = 0 and t = 90 s.",
+       "text": "where T = 90 s and θ0 and θ90 are the temperatures of the water in beaker B at times t = 0 and t = 90 s."
       },
       {
        "type": "text",
@@ -613,13 +563,13 @@
       },
       {
        "type": "text",
-       "html": "x<sub>2</sub> = \\(\\frac{θ<sub>90</sub>–θ<sub>180</sub>}{T}\\),",
-       "text": "x2 = (θ90–θ180)/(T),"
+       "html": "x<sub>2</sub> = \\(\\frac{θ_{90} – θ_{180}}{T}\\) ,",
+       "text": "x2 = (θ90–θ180)/(T) ,"
       },
       {
        "type": "text",
-       "html": "where T = 90s and θ<sub>90</sub> and θ<sub>180</sub> are the temperatures of the water in beaker B at t = 90s and t = 180s.",
-       "text": "where T = 90s and θ90 and θ180 are the temperatures of the water in beaker B at t = 90s and t = 180s."
+       "html": "where T = 90 s and θ<sub>90</sub> and θ<sub>180</sub> are the temperatures of the water in beaker B at t = 90 s and t = 180 s.",
+       "text": "where T = 90 s and θ90 and θ180 are the temperatures of the water in beaker B at t = 90 s and t = 180 s."
       },
       {
        "type": "text",
@@ -902,6 +852,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

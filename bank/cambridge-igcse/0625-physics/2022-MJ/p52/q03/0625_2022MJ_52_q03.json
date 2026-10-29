@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 7,
    "bbox": [
-    65.1,
-    107.8,
-    530.2,
-    277.1
+    65.5,
+    112.5,
+    529.5,
+    275.5
    ],
    "id": "0625_2022MJ_52_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 8,
    "bbox": [
-    166.9,
-    110.0,
-    428.4,
-    207.1
+    167.0,
+    113.5,
+    428.5,
+    207.5
    ],
    "id": "0625_2022MJ_52_q03b_table3-1",
    "part": "(b)",
@@ -303,7 +303,7 @@
       },
       {
        "type": "text",
-       "html": "<i>f</i> = \\(\\frac{<i>uv</i>}{<i>D</i>}\\).",
+       "html": "<i>f</i> = \\(\\frac{\\text{uv}}{D}\\).",
        "text": "f = (uv)/(D)."
       },
       {
@@ -426,36 +426,13 @@
     },
     {
      "type": "text",
-     "html": "<i>f</i> = \\(\\frac{<i>uv</i>}{<i>D</i>}\\).",
+     "html": "<i>f</i> = \\(\\frac{\\text{uv}}{D}\\).",
      "text": "f = (uv)/(D)."
     },
     {
      "type": "figure",
      "id": "0625_2022MJ_52_q03b_table3-1",
      "caption": "Table 3.1"
-    },
-    {
-     "type": "table",
-     "rows": [
-      [
-       "<i>D</i> / cm",
-       "<i>u</i> / cm",
-       "<i>v</i> / cm",
-       "<i>f</i> / cm"
-      ],
-      [
-       "75.0",
-       "",
-       "",
-       ""
-      ],
-      [
-       "85.0",
-       "",
-       "",
-       ""
-      ]
-     ]
     },
     {
      "type": "marks",
@@ -603,7 +580,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -816,6 +802,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

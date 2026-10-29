@@ -8,7 +8,7 @@
     30.0,
     57.0,
     570.0,
-    356.5
+    382.8
    ],
    "continued": false,
    "answer_space": {
@@ -16,19 +16,39 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 13.7,
-    "height_pt": 299.5
+    "height_pt": 325.8
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p33/q01/question/0625_2023MJ_33_q01_stem_s1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p33/q01/question/0625_2023MJ_33_q01_stem_s1",
     "url": null,
-    "kb": 68.1
+    "kb": 69.9
    }
   }
  ],
  "text": "1\nFig. 1.1 shows the distance–time graph for an engineer’s journey.\nShe drives from her home directly to her office and parks the car.\nShe then drives from her office to her friend’s house and parks the car.\n70\n60\n50\ndistance from\n40\nhome/km\n30\n20\n10\n0\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\ntime/h",
  "marks": 7,
- "figures": [],
+ "figures": [
+  {
+   "caption": "Fig. 1.1",
+   "page": 2,
+   "bbox": [
+    90.5,
+    113.5,
+    504.5,
+    384.5
+   ],
+   "id": "0625_2023MJ_33_q01_fig1-1",
+   "part": "",
+   "alt": "",
+   "svg": {
+    "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p33/q01/figures/0625_2023MJ_33_q01_fig1-1.svg",
+    "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p33/q01/figures/0625_2023MJ_33_q01_fig1-1",
+    "url": null,
+    "kb": 41.3
+   }
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -41,7 +61,7 @@
      "page": 2,
      "bbox": [
       30.0,
-      369.8,
+      382.8,
       570.0,
       399.5
      ],
@@ -51,17 +71,17 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": -2.5,
-      "height_pt": 29.7
+      "height_pt": 16.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p33/q01/question/0625_2023MJ_33_q01_a_s1.svg",
       "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p33/q01/question/0625_2023MJ_33_q01_a_s1",
       "url": null,
-      "kb": 12.7
+      "kb": 1.0
      }
     }
    ],
-   "text": "(a) Determine the distance between:",
+   "text": "Determine the distance between:",
    "marks": 0,
    "parts": [
     {
@@ -122,10 +142,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "the engineer’s home and her office …… km",
+       "text": "the engineer’s home and her office …… km"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(i) the engineer’s home and her office",
-       "unit": "km"
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -191,10 +214,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "the engineer’s office and her friend’s house. …… km",
+       "text": "the engineer’s office and her friend’s house. …… km"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(ii) the engineer’s office and her friend’s house.",
-       "unit": "km"
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -205,11 +231,6 @@
    ],
    "path": "1(a)",
    "content": [
-    {
-     "type": "text",
-     "html": "<b>Fig. 1.1</b>",
-     "text": "Fig. 1.1"
-    },
     {
      "type": "text",
      "html": "Determine the distance between:",
@@ -305,10 +326,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "the engineer’s home and her office …… h",
+       "text": "the engineer’s home and her office …… h"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(i) the engineer’s home and her office",
-       "unit": "h"
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -374,10 +398,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "the engineer’s office and her friend’s house. …… h",
+       "text": "the engineer’s office and her friend’s house. …… h"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(ii) the engineer’s office and her friend’s house.",
-       "unit": "h"
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -489,6 +516,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -496,49 +524,9 @@
    "text": "Fig. 1.1 shows the distance–time graph for an engineer’s journey. She drives from her home directly to her office and parks the car. She then drives from her office to her friend’s house and parks the car."
   },
   {
-   "type": "text",
-   "html": "70",
-   "text": "70"
-  },
-  {
-   "type": "text",
-   "html": "60",
-   "text": "60"
-  },
-  {
-   "type": "text",
-   "html": "50",
-   "text": "50"
-  },
-  {
-   "type": "text",
-   "html": "distance from 40 home/km",
-   "text": "distance from 40 home/km"
-  },
-  {
-   "type": "text",
-   "html": "30",
-   "text": "30"
-  },
-  {
-   "type": "text",
-   "html": "20",
-   "text": "20"
-  },
-  {
-   "type": "text",
-   "html": "10",
-   "text": "10"
-  },
-  {
-   "type": "text",
-   "html": "0 1 2 3 4 5 6 7 8 9 10 11",
-   "text": "0 1 2 3 4 5 6 7 8 9 10 11"
-  },
-  {
-   "type": "text",
-   "html": "time/h",
-   "text": "time/h"
+   "type": "figure",
+   "id": "0625_2023MJ_33_q01_fig1-1",
+   "caption": "Fig. 1.1"
   }
  ]
 }

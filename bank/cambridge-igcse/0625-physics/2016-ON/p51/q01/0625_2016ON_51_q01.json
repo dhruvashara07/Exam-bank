@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    142.3,
-    115.7,
-    449.8,
-    330.7
+    143.0,
+    115.5,
+    449.5,
+    331.0
    ],
    "id": "0625_2016ON_51_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2",
    "page": 2,
    "bbox": [
-    142.3,
-    115.7,
-    449.8,
-    330.7
+    143.0,
+    115.5,
+    449.5,
+    331.0
    ],
    "id": "0625_2016ON_51_q01_fig1-2",
    "part": "",
@@ -555,7 +555,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the acceleration of free fall <i>g</i> using the equation <i>g</i> = \\(\\frac{4π<sup>2</sup><i>l</i>}{<i>T </i><sup>2</sup>}\\) . Give your answer to a suitable number of significant figures for this experiment.",
+       "html": "Calculate the acceleration of free fall <i>g</i> using the equation <i>g</i> = \\(\\frac{4π^{2}l}{T ^{2}}\\) . Give your answer to a suitable number of significant figures for this experiment.",
        "text": "Calculate the acceleration of free fall g using the equation g = (4π2l)/(T 2) . Give your answer to a suitable number of significant figures for this experiment."
       },
       {
@@ -741,7 +741,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "2.",
+       "prefix": "1."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "2."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -778,6 +787,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    211.4,
+    210.5,
     124.7,
-    384.2,
-    255.2
+    385.0,
+    255.5
    ],
    "id": "0625_2020MJ_21_q26_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
+    67.5,
     325.5,
-    327.9,
-    457.2
+    328.0,
+    457.5
    ],
    "id": "0625_2020MJ_21_q26_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p21/q26/figures/0625_2020MJ_21_q26_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p21/q26/figures/0625_2020MJ_21_q26_figB",
     "url": null,
-    "kb": 25.7
+    "kb": 25.5
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,40 +137,30 @@
    "text": "Which nail becomes the strongest permanent magnet?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "number of paper clips attached to the nail",
-     ""
-    ],
-    [
-     "",
-     "bar magnet present",
-     "bar magnet removed"
-    ],
-    [
-     "<b>A</b>",
-     "2",
-     "0"
-    ],
-    [
-     "<b>B</b>",
-     "2",
-     "1"
-    ],
-    [
-     "<b>C</b>",
-     "4",
-     "3"
-    ],
-    [
-     "<b>D</b>",
-     "5",
-     "2"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020MJ_21_q26_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "2 0"
+    },
+    {
+     "label": "B",
+     "html": "2 1"
+    },
+    {
+     "label": "C",
+     "html": "4 3"
+    },
+    {
+     "label": "D",
+     "html": "5 2"
+    }
+   ]
   }
  ]
 }

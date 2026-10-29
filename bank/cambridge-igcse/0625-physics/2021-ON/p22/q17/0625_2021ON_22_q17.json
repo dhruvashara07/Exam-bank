@@ -32,7 +32,7 @@
   {
    "page": 8,
    "bbox": [
-    225.7,
+    225.0,
     402.3,
     369.7,
     527.0
@@ -51,10 +51,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
+    67.5,
     559.0,
-    375.8,
-    670.3
+    376.0,
+    670.5
    ],
    "id": "0625_2021ON_22_q17_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row names the process shown and describes the effect of using a wider gap?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "name of process",
-     "wider gap"
-    ],
-    [
-     "<b>A</b>",
-     "refraction",
-     "waves spread out less"
-    ],
-    [
-     "<b>B</b>",
-     "refraction",
-     "waves spread out more"
-    ],
-    [
-     "<b>C</b>",
-     "diffraction",
-     "waves spread out less"
-    ],
-    [
-     "<b>D</b>",
-     "diffraction",
-     "waves spread out more"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_22_q17_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "refraction waves spread out less"
+    },
+    {
+     "label": "B",
+     "html": "refraction waves spread out more"
+    },
+    {
+     "label": "C",
+     "html": "diffraction waves spread out less"
+    },
+    {
+     "label": "D",
+     "html": "diffraction waves spread out more"
+    }
+   ]
   }
  ]
 }

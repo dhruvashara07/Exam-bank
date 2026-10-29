@@ -9,10 +9,10 @@
    "caption": "Fig. 9.1",
    "page": 14,
    "bbox": [
-    149.1,
-    96.2,
-    446.2,
-    265.2
+    149.0,
+    99.5,
+    446.0,
+    263.5
    ],
    "id": "0625_2020MJ_41_q09c_fig9-1",
    "part": "(c)",
@@ -359,6 +359,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "upper input ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "lower input ="
       },
       {
@@ -434,7 +439,6 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "lines": 4,
        "prefix": "logic state of Q ="
       },
       {
@@ -480,5 +484,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

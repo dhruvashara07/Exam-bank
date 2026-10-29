@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    67.6,
-    366.7,
-    273.3,
-    492.2
+    67.5,
+    366.5,
+    273.5,
+    492.5
    ],
    "id": "0625_2016MJ_11_q05_figA",
    "caption": null,
@@ -90,21 +90,22 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "An object has a mass of 50kg.",
-   "text": "An object has a mass of 50kg."
+   "html": "An object has a mass of 50 kg.",
+   "text": "An object has a mass of 50 kg."
   },
   {
    "type": "text",
-   "html": "The gravitational field strength on Earth is 10.0N/kg.",
-   "text": "The gravitational field strength on Earth is 10.0N/kg."
+   "html": "The gravitational field strength on Earth is 10.0 N / kg.",
+   "text": "The gravitational field strength on Earth is 10.0 N / kg."
   },
   {
    "type": "text",
-   "html": "The gravitational field strength on a distant planet is 4.0N/kg.",
-   "text": "The gravitational field strength on a distant planet is 4.0N/kg."
+   "html": "The gravitational field strength on a distant planet is 4.0 N / kg.",
+   "text": "The gravitational field strength on a distant planet is 4.0 N / kg."
   },
   {
    "type": "text",
@@ -112,35 +113,30 @@
    "text": "What is the weight of the object on Earth, and what is its weight on the distant planet?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "on Earth",
-     "on the distant planet"
-    ],
-    [
-     "A",
-     "5.0kg",
-     "12.5kg"
-    ],
-    [
-     "B",
-     "5.0N",
-     "12.5N"
-    ],
-    [
-     "C",
-     "500kg",
-     "200kg"
-    ],
-    [
-     "D",
-     "500N",
-     "200N"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_11_q05_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "5.0kg 12.5kg"
+    },
+    {
+     "label": "B",
+     "html": "5.0N 12.5N"
+    },
+    {
+     "label": "C",
+     "html": "500kg 200kg"
+    },
+    {
+     "label": "D",
+     "html": "500N 200N"
+    }
+   ]
   }
  ]
 }

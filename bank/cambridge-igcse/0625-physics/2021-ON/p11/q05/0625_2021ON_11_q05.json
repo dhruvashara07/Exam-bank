@@ -70,10 +70,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    489.1,
-    283.9,
-    614.6
+    67.5,
+    489.0,
+    284.0,
+    615.0
    ],
    "id": "0625_2021ON_11_q05_figC",
    "caption": null,
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p11/q05/figures/0625_2021ON_11_q05_figC.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p11/q05/figures/0625_2021ON_11_q05_figC",
     "url": null,
-    "kb": 21.9
+    "kb": 21.8
    }
   }
  ],
@@ -128,11 +128,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A 100cm beam balances as shown.",
-   "text": "A 100cm beam balances as shown."
+   "html": "A 100 cm beam balances as shown.",
+   "text": "A 100 cm beam balances as shown."
   },
   {
    "type": "figure",
@@ -141,8 +142,8 @@
   },
   {
    "type": "text",
-   "html": "The pivot is moved 10cm to the left.",
-   "text": "The pivot is moved 10cm to the left."
+   "html": "The pivot is moved 10 cm to the left.",
+   "text": "The pivot is moved 10 cm to the left."
   },
   {
    "type": "figure",
@@ -155,40 +156,30 @@
    "text": "What will be the effect of this change on the anticlockwise and clockwise moments about the pivot?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "anticlockwise",
-     "clockwise"
-    ],
-    [
-     "",
-     "moment",
-     "moment"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_11_q05_figC",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

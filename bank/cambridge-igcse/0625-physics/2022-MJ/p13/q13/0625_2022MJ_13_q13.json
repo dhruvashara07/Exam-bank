@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    566.2,
-    244.2,
-    677.6
+    67.5,
+    566.0,
+    244.5,
+    677.5
    ],
    "id": "0625_2022MJ_13_q13_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p13/q13/figures/0625_2022MJ_13_q13_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p13/q13/figures/0625_2022MJ_13_q13_figA",
     "url": null,
-    "kb": 16.9
+    "kb": 16.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -122,35 +123,30 @@
    "text": "What are states 1 and 2?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "state 1",
-     "state 2"
-    ],
-    [
-     "<b>A</b>",
-     "gas",
-     "liquid"
-    ],
-    [
-     "<b>B</b>",
-     "liquid",
-     "solid"
-    ],
-    [
-     "<b>C</b>",
-     "solid",
-     "liquid"
-    ],
-    [
-     "<b>D</b>",
-     "gas",
-     "solid"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_13_q13_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "gas liquid"
+    },
+    {
+     "label": "B",
+     "html": "liquid solid"
+    },
+    {
+     "label": "C",
+     "html": "solid liquid"
+    },
+    {
+     "label": "D",
+     "html": "gas solid"
+    }
+   ]
   }
  ]
 }

@@ -35,7 +35,7 @@
     93.2,
     251.0,
     501.4,
-    274.6
+    275.0
    ],
    "id": "0625_2022FM_22_q26_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    307.1,
-    268.4,
-    418.4
+    67.5,
+    307.0,
+    268.5,
+    418.5
    ],
    "id": "0625_2022FM_22_q26_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-FM/p22/q26/figures/0625_2022FM_22_q26_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-FM/p22/q26/figures/0625_2022FM_22_q26_figB",
     "url": null,
-    "kb": 19.1
+    "kb": 18.7
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row correctly identifies the position of a compression and position of a rarefaction?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "compression",
-     "rarefaction"
-    ],
-    [
-     "<b>A</b>",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>B</b>",
-     "Y",
-     "X"
-    ],
-    [
-     "<b>C</b>",
-     "V",
-     "Z"
-    ],
-    [
-     "<b>D</b>",
-     "Z",
-     "V"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022FM_22_q26_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "X Y"
+    },
+    {
+     "label": "B",
+     "html": "Y X"
+    },
+    {
+     "label": "C",
+     "html": "V Z"
+    },
+    {
+     "label": "D",
+     "html": "Z V"
+    }
+   ]
   }
  ]
 }

@@ -32,7 +32,7 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
+    67.5,
     316.0,
     379.0,
     441.5
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row describes the behaviour of particles in a liquid?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "force between particles",
-     "motion of particles"
-    ],
-    [
-     "<b>A</b>",
-     "strong",
-     "move randomly at high speed"
-    ],
-    [
-     "<b>B</b>",
-     "strong",
-     "vibrate, but change positions"
-    ],
-    [
-     "<b>C</b>",
-     "weak",
-     "vibrate in fixed positions"
-    ],
-    [
-     "<b>D</b>",
-     "weak",
-     "move randomly at high speed"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024FM_22_q14_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "strong move randomly at high speed"
+    },
+    {
+     "label": "B",
+     "html": "strong vibrate, but change positions"
+    },
+    {
+     "label": "C",
+     "html": "weak vibrate in fixed positions"
+    },
+    {
+     "label": "D",
+     "html": "weak move randomly at high speed"
+    }
+   ]
   }
  ]
 }

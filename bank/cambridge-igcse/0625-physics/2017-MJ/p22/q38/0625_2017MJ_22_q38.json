@@ -32,10 +32,10 @@
   {
    "page": 17,
    "bbox": [
-    67.7,
+    67.5,
     236.5,
-    449.8,
-    347.8
+    450.0,
+    348.0
    ],
    "id": "0625_2017MJ_22_q38_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which row describes this type of reaction?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "nuclear reaction",
-     "nuclei formed",
-     "energy transfer"
-    ],
-    [
-     "<b>A</b>",
-     "fission",
-     "larger than original nuclei",
-     "released"
-    ],
-    [
-     "<b>B</b>",
-     "fission",
-     "smaller than original nuclei",
-     "absorbed"
-    ],
-    [
-     "<b>C</b>",
-     "fusion",
-     "larger than original nuclei",
-     "released"
-    ],
-    [
-     "<b>D</b>",
-     "fusion",
-     "smaller than original nuclei",
-     "absorbed"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017MJ_22_q38_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "fission larger than original nuclei released"
+    },
+    {
+     "label": "B",
+     "html": "fission smaller than original nuclei absorbed"
+    },
+    {
+     "label": "C",
+     "html": "fusion larger than original nuclei released"
+    },
+    {
+     "label": "D",
+     "html": "fusion smaller than original nuclei absorbed"
+    }
+   ]
   }
  ]
 }

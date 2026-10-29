@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 10,
    "bbox": [
-    68.6,
-    137.3,
-    529.7,
-    782.6
+    68.0,
+    136.5,
+    530.5,
+    781.0
    ],
    "id": "0625_2021MJ_63_q03_fig3-1",
    "part": "",
@@ -300,7 +300,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -455,6 +464,12 @@
        "text": "Measure the length a of line NH."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "a =",
+       "unit": "cm"
+      },
+      {
        "type": "text",
        "html": "Measure the length <i>b</i> of line <b>GH</b>.",
        "text": "Measure the length b of line GH."
@@ -531,7 +546,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a value <i>n</i> for the refractive index, using the equation <i>n</i> = \\(\\frac{<i>a</i>}{<i>b</i>}\\) .",
+       "html": "Calculate a value <i>n</i> for the refractive index, using the equation <i>n</i> = \\(\\frac{a}{b}\\) .",
        "text": "Calculate a value n for the refractive index, using the equation n = (a)/(b) ."
       },
       {
@@ -716,7 +731,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -907,6 +931,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

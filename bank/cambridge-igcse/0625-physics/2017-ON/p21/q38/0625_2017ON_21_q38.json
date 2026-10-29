@@ -32,10 +32,10 @@
   {
    "page": 19,
    "bbox": [
-    67.9,
-    84.9,
+    92.8,
+    110.0,
     502.0,
-    210.8
+    210.5
    ],
    "id": "0625_2017ON_21_q38_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p21/q38/figures/0625_2017ON_21_q38_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p21/q38/figures/0625_2017ON_21_q38_figA",
     "url": null,
-    "kb": 19.9
+    "kb": 15.8
    }
   },
   {
    "page": 19,
    "bbox": [
-    67.7,
-    242.9,
-    283.9,
-    354.2
+    67.5,
+    242.5,
+    284.0,
+    354.5
    ],
    "id": "0625_2017ON_21_q38_figB",
    "caption": null,
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "Emissions X and Y from radioactive material are passed through a magnetic field. The diagram shows the direction of the emissions, the direction of the magnetic field and the effect on the",
-   "text": "Emissions X and Y from radioactive material are passed through a magnetic field. The diagram shows the direction of the emissions, the direction of the magnetic field and the effect on the"
+   "html": "Emissions X and Y from radioactive material are passed through a magnetic field. The diagram shows the direction of the emissions, the direction of the magnetic field and the effect on the emissions.",
+   "text": "Emissions X and Y from radioactive material are passed through a magnetic field. The diagram shows the direction of the emissions, the direction of the magnetic field and the effect on the emissions."
   },
   {
    "type": "figure",
@@ -126,35 +127,30 @@
    "text": "Which type of emission is X, and which type of emission is Y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "emission X",
-     "emission Y"
-    ],
-    [
-     "<b>A</b>",
-     "α-particles",
-     "β-particles"
-    ],
-    [
-     "<b>B</b>",
-     "α-particles",
-     "γ-rays"
-    ],
-    [
-     "<b>C</b>",
-     "β-particles",
-     "α-particles"
-    ],
-    [
-     "<b>D</b>",
-     "β-particles",
-     "γ-rays"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017ON_21_q38_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "α-particles β-particles"
+    },
+    {
+     "label": "B",
+     "html": "α-particles γ-rays"
+    },
+    {
+     "label": "C",
+     "html": "β-particles α-particles"
+    },
+    {
+     "label": "D",
+     "html": "β-particles γ-rays"
+    }
+   ]
   }
  ]
 }

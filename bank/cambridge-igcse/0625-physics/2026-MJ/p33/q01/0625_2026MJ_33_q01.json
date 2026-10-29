@@ -9,10 +9,10 @@
    "caption": "Figure 1.1",
    "page": 2,
    "bbox": [
-    93.1,
-    89.3,
-    470.1,
-    444.9
+    93.5,
+    90.0,
+    468.0,
+    445.0
    ],
    "id": "0625_2026MJ_33_q01a_fig1-1",
    "part": "(a)",
@@ -119,14 +119,14 @@
      "content": [
       {
        "type": "text",
-       "html": "Determine the speed of the student at time = 1.0s.",
-       "text": "Determine the speed of the student at time = 1.0s."
+       "html": "Determine the speed of the student at time = 1.0 s.",
+       "text": "Determine the speed of the student at time = 1.0 s."
       },
       {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "speed =",
-       "unit": "m/s"
+       "unit": "m / s"
       },
       {
        "type": "marks",
@@ -198,9 +198,11 @@
        "text": "Describe the speed of the student between:"
       },
       {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "• time = 8.0s and time = 11s"
+       "type": "list",
+       "items": [
+        "time = 2.0 s and time = 8.0 s ……",
+        "time = 8.0 s and time = 11 s ……"
+       ]
       },
       {
        "type": "marks",
@@ -269,8 +271,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the distance travelled by the student between time = 2.0s and time = 8.0s.",
-       "text": "Calculate the distance travelled by the student between time = 2.0s and time = 8.0s."
+       "html": "Calculate the distance travelled by the student between time = 2.0 s and time = 8.0 s.",
+       "text": "Calculate the distance travelled by the student between time = 2.0 s and time = 8.0 s."
       },
       {
        "type": "answer",
@@ -361,19 +363,19 @@
    "content": [
     {
      "type": "text",
-     "html": "In a different race, the student runs a distance of 400m in a time of 2.0 minutes.",
-     "text": "In a different race, the student runs a distance of 400m in a time of 2.0 minutes."
+     "html": "In a different race, the student runs a distance of 400 m in a time of 2.0 minutes.",
+     "text": "In a different race, the student runs a distance of 400 m in a time of 2.0 minutes."
     },
     {
      "type": "text",
-     "html": "Calculate the average speed of the student. Give your answer in m/s.",
-     "text": "Calculate the average speed of the student. Give your answer in m/s."
+     "html": "Calculate the average speed of the student. Give your answer in m / s.",
+     "text": "Calculate the average speed of the student. Give your answer in m / s."
     },
     {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "average speed =",
-     "unit": "m/s"
+     "unit": "m / s"
     },
     {
      "type": "marks",
@@ -398,5 +400,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    122.6,
-    325.1,
-    233.9
+    67.5,
+    122.5,
+    325.5,
+    234.0
    ],
    "id": "0625_2021MJ_22_q21_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p22/q21/figures/0625_2021MJ_22_q21_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p22/q21/figures/0625_2021MJ_22_q21_figA",
     "url": null,
-    "kb": 24.7
+    "kb": 24.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "As it passes into the slow region, what happens to the frequency and what happens to the wavelength of the wave?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "frequency",
-     "wavelength"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "remains the same"
-    ],
-    [
-     "<b>B</b>",
-     "increases",
-     "remains the same"
-    ],
-    [
-     "<b>C</b>",
-     "remains the same",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "remains the same",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_22_q21_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases remains the same"
+    },
+    {
+     "label": "B",
+     "html": "increases remains the same"
+    },
+    {
+     "label": "C",
+     "html": "remains the same decreases"
+    },
+    {
+     "label": "D",
+     "html": "remains the same increases"
+    }
+   ]
   }
  ]
 }

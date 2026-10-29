@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 7,
    "bbox": [
-    40.7,
-    165.1,
-    552.4,
-    321.9
+    41.5,
+    168.5,
+    552.0,
+    320.5
    ],
    "id": "0625_2022MJ_53_q03a_fig3-1",
    "part": "(a)",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 8,
    "bbox": [
-    40.7,
-    139.1,
-    552.4,
-    271.7
+    41.5,
+    142.5,
+    552.0,
+    270.0
    ],
    "id": "0625_2022MJ_53_q03b_fig3-2",
    "part": "(b)",
@@ -386,6 +386,11 @@
        "text": "Measure hO, the height of the illuminated triangle, as indicated in Fig. 3.2."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "hO ="
+      },
+      {
        "type": "text",
        "html": "Measure <i>h</i><sub>I</sub>, the height of the image of the triangle on the screen.",
        "text": "Measure hI, the height of the image of the triangle on the screen."
@@ -461,12 +466,17 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a value <i>W</i> using the equation <i>W</i> = \\(\\frac{<i>h</i><sub>O</sub>}{<i>h</i><sub>I</sub>}\\).",
+       "html": "Calculate a value <i>W</i> using the equation <i>W</i> = \\(\\frac{h_{O}}{h_{I}}\\).",
        "text": "Calculate a value W using the equation W = (hO)/(hI)."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "W ="
+      },
+      {
        "type": "text",
-       "html": "Calculate a second value <i>f</i><sub>2</sub> for the focal length of the lens, using the equation <i>f</i><sub>2</sub> = \\(\\frac{<i>u</i>}{(<i>W </i>+ 1)}\\) .",
+       "html": "Calculate a second value <i>f</i><sub>2</sub> for the focal length of the lens, using the equation <i>f</i><sub>2</sub> = \\(\\frac{u}{(W + 1)}\\) .",
        "text": "Calculate a second value f2 for the focal length of the lens, using the equation f2 = (u)/((W + 1)) ."
       },
       {
@@ -546,7 +556,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "improvement",
+       "prefix": "difficulty"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "improvement"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -641,7 +660,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -741,6 +769,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -70,6 +70,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -78,13 +79,13 @@
   },
   {
    "type": "text",
-   "html": "A mechanic sets the torque wrench to produce a moment of 50 Nm.",
-   "text": "A mechanic sets the torque wrench to produce a moment of 50 Nm."
+   "html": "A mechanic sets the torque wrench to produce a moment of 50 N m.",
+   "text": "A mechanic sets the torque wrench to produce a moment of 50 N m."
   },
   {
    "type": "text",
-   "html": "The torque wrench has a length from the centre of the bolt to the handle of 600mm.",
-   "text": "The torque wrench has a length from the centre of the bolt to the handle of 600mm."
+   "html": "The torque wrench has a length from the centre of the bolt to the handle of 600 mm.",
+   "text": "The torque wrench has a length from the centre of the bolt to the handle of 600 mm."
   },
   {
    "type": "text",
@@ -96,19 +97,19 @@
    "options": [
     {
      "label": "A",
-     "html": "0.080N"
+     "html": "0.080 N"
     },
     {
      "label": "B",
-     "html": "30N"
+     "html": "30 N"
     },
     {
      "label": "C",
-     "html": "83N"
+     "html": "83 N"
     },
     {
      "label": "D",
-     "html": "30kN"
+     "html": "30 kN"
     }
    ]
   }

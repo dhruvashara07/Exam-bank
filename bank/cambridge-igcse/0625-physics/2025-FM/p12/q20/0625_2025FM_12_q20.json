@@ -35,7 +35,7 @@
     199.1,
     448.9,
     395.2,
-    584.3
+    585.0
    ],
    "id": "0625_2025FM_12_q20_figA",
    "caption": null,
@@ -51,9 +51,9 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
-    616.7,
-    321.6,
+    67.5,
+    616.5,
+    322.0,
     728.0
    ],
    "id": "0625_2025FM_12_q20_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-FM/p12/q20/figures/0625_2025FM_12_q20_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-FM/p12/q20/figures/0625_2025FM_12_q20_figB",
     "url": null,
-    "kb": 23.2
+    "kb": 23.1
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "What is the main method of heat transfer through the glass and within the water?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "through the glass",
-     "within the water"
-    ],
-    [
-     "<b>A</b>",
-     "conduction",
-     "conduction"
-    ],
-    [
-     "<b>B</b>",
-     "conduction",
-     "convection"
-    ],
-    [
-     "<b>C</b>",
-     "convection",
-     "conduction"
-    ],
-    [
-     "<b>D</b>",
-     "convection",
-     "convection"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025FM_12_q20_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "conduction conduction"
+    },
+    {
+     "label": "B",
+     "html": "conduction convection"
+    },
+    {
+     "label": "C",
+     "html": "convection conduction"
+    },
+    {
+     "label": "D",
+     "html": "convection convection"
+    }
+   ]
   }
  ]
 }

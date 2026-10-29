@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    98.9,
-    253.9,
+    98.5,
+    253.5,
     495.8,
-    403.3
+    403.5
    ],
    "id": "0625_2015FM_12_q09_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-FM/p12/q09/figures/0625_2015FM_12_q09_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-FM/p12/q09/figures/0625_2015FM_12_q09_figA",
     "url": null,
-    "kb": 87.3
+    "kb": 87.1
    }
   },
   {
    "page": 5,
    "bbox": [
-    68.7,
+    68.5,
     435.5,
-    449.7,
-    546.9
+    450.0,
+    547.0
    ],
    "id": "0625_2015FM_12_q09_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-FM/p12/q09/figures/0625_2015FM_12_q09_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-FM/p12/q09/figures/0625_2015FM_12_q09_figB",
     "url": null,
-    "kb": 36.8
+    "kb": 36.6
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which person produces the greatest average power?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "person",
-     "route",
-     "time taken/s"
-    ],
-    [
-     "A",
-     "runs across the beach, then climbs the ladder",
-     "8"
-    ],
-    [
-     "B",
-     "walks across the beach, then climbs the ladder",
-     "16"
-    ],
-    [
-     "C",
-     "runs up the slipway",
-     "5"
-    ],
-    [
-     "D",
-     "walks up the slipway",
-     "10"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015FM_12_q09_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "runs across the beach, then climbs the ladder 8"
+    },
+    {
+     "label": "B",
+     "html": "walks across the beach, then climbs the ladder 16"
+    },
+    {
+     "label": "C",
+     "html": "runs up the slipway 5"
+    },
+    {
+     "label": "D",
+     "html": "walks up the slipway 10"
+    }
+   ]
   }
  ]
 }

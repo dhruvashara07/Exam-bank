@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.6,
-    135.4,
-    300.9,
-    246.7
+    67.5,
+    135.0,
+    301.0,
+    247.0
    ],
    "id": "0625_2016MJ_11_q10_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p11/q10/figures/0625_2016MJ_11_q10_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p11/q10/figures/0625_2016MJ_11_q10_figA",
     "url": null,
-    "kb": 21.9
+    "kb": 21.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which words are used to describe the energy stored in the coal and the energy of the moving generator?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "coal",
-     "generator"
-    ],
-    [
-     "A",
-     "chemical",
-     "hydroelectric"
-    ],
-    [
-     "B",
-     "chemical",
-     "kinetic"
-    ],
-    [
-     "C",
-     "geothermal",
-     "hydroelectric"
-    ],
-    [
-     "D",
-     "geothermal",
-     "kinetic"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_11_q10_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "chemical hydroelectric"
+    },
+    {
+     "label": "B",
+     "html": "chemical kinetic"
+    },
+    {
+     "label": "C",
+     "html": "geothermal hydroelectric"
+    },
+    {
+     "label": "D",
+     "html": "geothermal kinetic"
+    }
+   ]
   }
  ]
 }

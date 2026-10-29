@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    441.4,
-    383.2,
-    581.1
+    67.5,
+    441.0,
+    383.5,
+    581.5
    ],
    "id": "0625_2022MJ_22_q14_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p22/q14/figures/0625_2022MJ_22_q14_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p22/q14/figures/0625_2022MJ_22_q14_figA",
     "url": null,
-    "kb": 28.9
+    "kb": 28.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,45 +108,30 @@
    "text": "Which row about the pressure after each stage is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "stage 1",
-     "stage 2"
-    ],
-    [
-     "",
-     "pressure compared",
-     "pressure compared to"
-    ],
-    [
-     "",
-     "to original pressure",
-     "pressure after stage 1"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_22_q14_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

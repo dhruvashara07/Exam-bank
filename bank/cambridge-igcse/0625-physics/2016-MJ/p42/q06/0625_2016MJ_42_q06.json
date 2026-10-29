@@ -9,10 +9,10 @@
    "caption": "Fig. 6.1",
    "page": 12,
    "bbox": [
-    70.4,
-    106.4,
-    523.4,
-    330.6
+    70.5,
+    106.5,
+    523.5,
+    331.0
    ],
    "id": "0625_2016MJ_42_q06a_fig6-1",
    "part": "(a)",
@@ -28,9 +28,9 @@
    "caption": "Fig. 6.2",
    "page": 13,
    "bbox": [
-    133.4,
-    237.3,
-    460.4,
+    133.5,
+    237.0,
+    460.0,
     444.0
    ],
    "id": "0625_2016MJ_42_q06c_fig6-2",
@@ -143,44 +143,19 @@
      "text": "glass towards the boundary with air."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "",
-       "",
-       "",
-       "air"
-      ],
-      [
-       "glass",
-       "",
-       "",
-       ""
-      ],
-      [
-       "90",
-       "",
-       "",
-       ""
-      ],
-      [
-       "incident ray",
-       "",
-       "",
-       ""
-      ],
-      [
-       "",
-       "",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2016MJ_42_q06a_fig6-1",
+     "caption": "Fig. 6.1"
     },
     {
      "type": "text",
      "html": "Use the protractor to measure the angle of incidence of the ray of light at the boundary with the air.",
      "text": "Use the protractor to measure the angle of incidence of the ray of light at the boundary with the air."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "angle of incidence ="
     },
     {
      "type": "text",
@@ -487,5 +462,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

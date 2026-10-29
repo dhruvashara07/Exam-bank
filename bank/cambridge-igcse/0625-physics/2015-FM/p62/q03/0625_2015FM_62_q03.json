@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    64.3,
-    125.6,
-    529.1,
-    380.2
+    64.5,
+    126.0,
+    528.5,
+    380.5
    ],
    "id": "0625_2015FM_62_q03_fig3-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-FM/p62/q03/figures/0625_2015FM_62_q03_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-FM/p62/q03/figures/0625_2015FM_62_q03_fig3-1",
     "url": null,
-    "kb": 43.9
+    "kb": 43.8
    }
   },
   {
    "caption": "Table 3.1",
    "page": 8,
    "bbox": [
-    127.2,
+    127.0,
     481.0,
     468.0,
-    609.0
+    609.5
    ],
    "id": "0625_2015FM_62_q03b_table3-1",
    "part": "(b)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 3.2",
    "page": 9,
    "bbox": [
-    72.5,
-    88.4,
-    522.7,
-    417.8
+    72.0,
+    88.0,
+    523.5,
+    418.0
    ],
    "id": "0625_2015FM_62_q03b_fig3-2",
    "part": "(b)",
@@ -354,37 +354,9 @@
      "text": "The students attach the crocodile clip to various lengths l of the resistance wire and record, in Table 3.1, the potential difference V and the current I for the lamp. They also record observations of the lamp filament."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>l</i> / cm",
-       "<i>V</i> / V",
-       "<i>I</i> / A",
-       "observation of lamp filament",
-       "<i>R</i> / Ω"
-      ],
-      [
-       "100",
-       "2.5",
-       "0.26",
-       "bright",
-       ""
-      ],
-      [
-       "60",
-       "1.5",
-       "0.19",
-       "dim",
-       ""
-      ],
-      [
-       "20",
-       "0.5",
-       "0.11",
-       "just glowing",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2015FM_62_q03b_table3-1",
+     "caption": "Table 3.1"
     },
     {
      "type": "text",
@@ -458,7 +430,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate, and record in the table, the resistance <i>R</i> of the lamp for each value of<i> l</i>, using the equation <i>R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\).",
+     "html": "Calculate, and record in the table, the resistance <i>R</i> of the lamp for each value of<i> l</i>, using the equation <i>R</i> = \\(\\frac{V}{I}\\).",
      "text": "Calculate, and record in the table, the resistance R of the lamp for each value of l, using the equation R = (V)/(I)."
     },
     {
@@ -533,7 +505,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 3
     },
     {
@@ -645,6 +626,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

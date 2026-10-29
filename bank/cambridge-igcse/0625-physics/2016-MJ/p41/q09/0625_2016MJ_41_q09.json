@@ -33,10 +33,10 @@
    "caption": "Fig. 9.1",
    "page": 16,
    "bbox": [
-    160.9,
-    120.4,
-    432.9,
-    352.1
+    160.5,
+    120.5,
+    433.5,
+    352.5
    ],
    "id": "0625_2016MJ_41_q09_fig9-1",
    "part": "",
@@ -171,9 +171,19 @@
      "text": "resistors A and B,"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "resistance ="
+    },
+    {
      "type": "text",
      "html": "resistors A, B and C,",
      "text": "resistors A, B and C,"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "resistance ="
     },
     {
      "type": "text",
@@ -284,6 +294,11 @@
      "text": "the current in the battery,"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "current ="
+    },
+    {
      "type": "text",
      "html": "the energy transferred from the battery to the circuit in 50s.",
      "text": "the energy transferred from the battery to the circuit in 50s."
@@ -317,11 +332,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "Fig. 9.1 shows a 12V battery connected in a circuit containing resistors A, B, C and D. Each resistor has a resistance of 6.0Ω.",
-   "text": "Fig. 9.1 shows a 12V battery connected in a circuit containing resistors A, B, C and D. Each resistor has a resistance of 6.0Ω."
+   "html": "Fig. 9.1 shows a 12V battery connected in a circuit containing resistors A, B, C and D. Each resistor has a resistance of 6.0 Ω.",
+   "text": "Fig. 9.1 shows a 12V battery connected in a circuit containing resistors A, B, C and D. Each resistor has a resistance of 6.0 Ω."
   },
   {
    "type": "figure",

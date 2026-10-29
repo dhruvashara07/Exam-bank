@@ -278,8 +278,8 @@
      "content": [
       {
        "type": "text",
-       "html": "A sample of wood contains carbon-14 to carbon-12 atoms in the ratio 1:4 × 10<sup>12</sup>.",
-       "text": "A sample of wood contains carbon-14 to carbon-12 atoms in the ratio 1:4 × 1012."
+       "html": "A sample of wood contains carbon-14 to carbon-12 atoms in the ratio 1 : 4 × 10<sup>12</sup>.",
+       "text": "A sample of wood contains carbon-14 to carbon-12 atoms in the ratio 1 : 4 × 1012."
       },
       {
        "type": "text",
@@ -292,6 +292,10 @@
        "unit": "years ago"
       },
       {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
        "type": "marks",
        "value": 3
       }
@@ -302,8 +306,8 @@
    "content": [
     {
      "type": "text",
-     "html": "All living organisms contain both carbon-12 atoms and carbon-14 atoms. The ratio of carbon-14 to carbon-12 is 1:1 × 10<sup>12</sup>.",
-     "text": "All living organisms contain both carbon-12 atoms and carbon-14 atoms. The ratio of carbon-14 to carbon-12 is 1:1 × 1012."
+     "html": "All living organisms contain both carbon-12 atoms and carbon-14 atoms. The ratio of carbon-14 to carbon-12 is 1 : 1 × 10<sup>12</sup>.",
+     "text": "All living organisms contain both carbon-12 atoms and carbon-14 atoms. The ratio of carbon-14 to carbon-12 is 1 : 1 × 1012."
     },
     {
      "type": "text",
@@ -388,7 +392,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "use"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -415,6 +428,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

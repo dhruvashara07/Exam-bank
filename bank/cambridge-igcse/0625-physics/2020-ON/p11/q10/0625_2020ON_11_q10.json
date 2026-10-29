@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    465.1,
+    67.5,
+    465.0,
     450.5,
-    575.9
+    576.0
    ],
    "id": "0625_2020ON_11_q10_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p11/q10/figures/0625_2020ON_11_q10_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p11/q10/figures/0625_2020ON_11_q10_figA",
     "url": null,
-    "kb": 32.8
+    "kb": 32.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "What are the processes for the transfer of energy between the turbine and the generator and between the generator and the output transformer?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "turbine to generator",
-     "generator to output transformer"
-    ],
-    [
-     "<b>A</b>",
-     "electrical working",
-     "electrical working"
-    ],
-    [
-     "<b>B</b>",
-     "mechanical working",
-     "electrical working"
-    ],
-    [
-     "<b>C</b>",
-     "mechanical working",
-     "transfer of thermal energy"
-    ],
-    [
-     "<b>D</b>",
-     "transfer of thermal energy",
-     "mechanical working"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020ON_11_q10_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "electrical working electrical working"
+    },
+    {
+     "label": "B",
+     "html": "mechanical working electrical working"
+    },
+    {
+     "label": "C",
+     "html": "mechanical working transfer of thermal energy"
+    },
+    {
+     "label": "D",
+     "html": "transfer of thermal energy mechanical working"
+    }
+   ]
   }
  ]
 }

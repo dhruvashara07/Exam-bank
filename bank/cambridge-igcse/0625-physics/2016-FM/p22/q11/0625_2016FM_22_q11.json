@@ -70,11 +70,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A wind turbine generates 54kW of useful power from an input of 180kW of wind power.",
-   "text": "A wind turbine generates 54kW of useful power from an input of 180kW of wind power."
+   "html": "A wind turbine generates 54 kW of useful power from an input of 180 kW of wind power.",
+   "text": "A wind turbine generates 54 kW of useful power from an input of 180 kW of wind power."
   },
   {
    "type": "text",
@@ -86,19 +87,19 @@
    "options": [
     {
      "label": "A",
-     "html": "\\(\\frac{54000}{180000×100}\\) %"
+     "html": "\\(\\frac{54000}{180000 \\times 100}\\) %"
     },
     {
      "label": "B",
-     "html": "\\(\\frac{180000}{54000×100}\\) %"
+     "html": "\\(\\frac{180000}{54000 \\times 100}\\) %"
     },
     {
      "label": "C",
-     "html": "\\(\\frac{54000×100}{180000}\\) %"
+     "html": "\\(\\frac{54000 \\times 100}{180000}\\) %"
     },
     {
      "label": "D",
-     "html": "\\(\\frac{180000×100}{54000}\\) %"
+     "html": "\\(\\frac{180000 \\times 100}{54000}\\) %"
     }
    ]
   }

@@ -32,8 +32,8 @@
   {
    "page": 8,
    "bbox": [
-    228.7,
-    503.2,
+    228.5,
+    506.1,
     369.8,
     571.2
    ],
@@ -51,10 +51,10 @@
   {
    "page": 8,
    "bbox": [
-    67.6,
-    613.3,
-    364.7,
-    724.7
+    67.5,
+    613.0,
+    365.0,
+    725.0
    ],
    "id": "0625_2017FM_12_q18_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-FM/p12/q18/figures/0625_2017FM_12_q18_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-FM/p12/q18/figures/0625_2017FM_12_q18_figB",
     "url": null,
-    "kb": 24.1
+    "kb": 23.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row shows whether heat can be transferred between the surfaces by conduction and convection?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "",
-     "conduction",
-     "convection"
-    ],
-    [
-     "A",
-     "air (gas)",
-     "yes",
-     "no"
-    ],
-    [
-     "B",
-     "iron (solid)",
-     "yes",
-     "no"
-    ],
-    [
-     "C",
-     "vacuum",
-     "no",
-     "yes"
-    ],
-    [
-     "D",
-     "water (liquid)",
-     "yes",
-     "no"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017FM_12_q18_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "air (gas) yes no"
+    },
+    {
+     "label": "B",
+     "html": "iron (solid) yes no"
+    },
+    {
+     "label": "C",
+     "html": "vacuum no yes"
+    },
+    {
+     "label": "D",
+     "html": "water (liquid) yes no"
+    }
+   ]
   }
  ]
 }

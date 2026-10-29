@@ -9,10 +9,10 @@
    "caption": "Figure 9.1",
    "page": 12,
    "bbox": [
-    166.3,
-    364.8,
-    429.0,
-    563.4
+    167.0,
+    365.5,
+    428.5,
+    563.5
    ],
    "id": "0625_2026MJ_42_q09aii_fig9-1",
    "part": "(a)(ii)",
@@ -125,7 +125,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "similarity"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "difference"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -199,8 +208,8 @@
       },
       {
        "type": "text",
-       "html": "A tree contains 16μg of carbon-14 when it dies.",
-       "text": "A tree contains 16μg of carbon-14 when it dies."
+       "html": "A tree contains 16 μg of carbon-14 when it dies.",
+       "text": "A tree contains 16 μg of carbon-14 when it dies."
       },
       {
        "type": "text",
@@ -209,8 +218,8 @@
       },
       {
        "type": "text",
-       "html": "On Figure 9.1, sketch a graph to show how the mass of carbon-14 in the tree decreases during the first 15000 years after the tree dies.",
-       "text": "On Figure 9.1, sketch a graph to show how the mass of carbon-14 in the tree decreases during the first 15000 years after the tree dies."
+       "html": "On Figure 9.1, sketch a graph to show how the mass of carbon-14 in the tree decreases during the first 15 000 years after the tree dies.",
+       "text": "On Figure 9.1, sketch a graph to show how the mass of carbon-14 in the tree decreases during the first 15 000 years after the tree dies."
       },
       {
        "type": "text",
@@ -317,6 +326,10 @@
      "unit": "radiation."
     },
     {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
      "type": "marks",
      "value": 1
     }
@@ -412,5 +425,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

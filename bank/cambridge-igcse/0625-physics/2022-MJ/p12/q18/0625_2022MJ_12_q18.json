@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    152.2,
-    97.8,
+    152.0,
+    97.5,
     443.4,
-    251.2
+    234.5
    ],
    "id": "0625_2022MJ_12_q18_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p12/q18/figures/0625_2022MJ_12_q18_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p12/q18/figures/0625_2022MJ_12_q18_figA",
     "url": null,
-    "kb": 30.4
+    "kb": 30.2
    }
   },
   {
    "page": 8,
    "bbox": [
-    67.7,
-    283.3,
-    293.9,
-    408.7
+    67.5,
+    283.0,
+    294.0,
+    409.0
    ],
    "id": "0625_2022MJ_12_q18_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p12/q18/figures/0625_2022MJ_12_q18_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p12/q18/figures/0625_2022MJ_12_q18_figB",
     "url": null,
-    "kb": 26.2
+    "kb": 26.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row describes how energy is transferred from the Sun and through the metal of the pipes?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "from the Sun",
-     "through the metal of the pipes"
-    ],
-    [
-     "<b>A</b>",
-     "conduction",
-     "conduction"
-    ],
-    [
-     "<b>B</b>",
-     "conduction",
-     "convection"
-    ],
-    [
-     "<b>C</b>",
-     "radiation",
-     "conduction"
-    ],
-    [
-     "<b>D</b>",
-     "radiation",
-     "convection"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_12_q18_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "conduction conduction"
+    },
+    {
+     "label": "B",
+     "html": "conduction convection"
+    },
+    {
+     "label": "C",
+     "html": "radiation conduction"
+    },
+    {
+     "label": "D",
+     "html": "radiation convection"
+    }
+   ]
   }
  ]
 }

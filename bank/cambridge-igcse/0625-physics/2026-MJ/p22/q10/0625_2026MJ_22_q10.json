@@ -32,10 +32,10 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    426.2,
+    67.5,
+    426.0,
     372.0,
-    551.3
+    551.5
    ],
    "id": "0625_2026MJ_22_q10_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,40 +108,30 @@
    "text": "Which row correctly compares the liquid with the gas?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>average distance</b>",
-     "<b>average speed</b>"
-    ],
-    [
-     "",
-     "<b>between the particles</b>",
-     "<b>of the particles</b>"
-    ],
-    [
-     "<b>A</b>",
-     "greater in the liquid",
-     "greater in the liquid"
-    ],
-    [
-     "<b>B</b>",
-     "greater in the liquid",
-     "smaller in the liquid"
-    ],
-    [
-     "<b>C</b>",
-     "smaller in the liquid",
-     "greater in the liquid"
-    ],
-    [
-     "<b>D</b>",
-     "smaller in the liquid",
-     "smaller in the liquid"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_22_q10_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "greater in the liquid greater in the liquid"
+    },
+    {
+     "label": "B",
+     "html": "greater in the liquid smaller in the liquid"
+    },
+    {
+     "label": "C",
+     "html": "smaller in the liquid greater in the liquid"
+    },
+    {
+     "label": "D",
+     "html": "smaller in the liquid smaller in the liquid"
+    }
+   ]
   }
  ]
 }

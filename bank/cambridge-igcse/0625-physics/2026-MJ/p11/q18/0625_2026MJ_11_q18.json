@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.9,
+    67.5,
     294.6,
-    238.9,
-    392.1
+    372.5,
+    536.0
    ],
    "id": "0625_2026MJ_11_q18_figA",
    "caption": null,
@@ -45,26 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p11/q18/figures/0625_2026MJ_11_q18_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p11/q18/figures/0625_2026MJ_11_q18_figA",
     "url": null,
-    "kb": 5.3
-   }
-  },
-  {
-   "page": 8,
-   "bbox": [
-    67.7,
-    424.7,
-    372.4,
-    536.0
-   ],
-   "id": "0625_2026MJ_11_q18_figB",
-   "caption": null,
-   "part": "",
-   "alt": "",
-   "svg": {
-    "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p11/q18/figures/0625_2026MJ_11_q18_figB.svg",
-    "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p11/q18/figures/0625_2026MJ_11_q18_figB",
-    "url": null,
-    "kb": 30.8
+    "kb": 41.9
    }
   }
  ],
@@ -109,62 +90,38 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "<b>18</b>",
-   "text": "18"
+   "html": "The diagram shows a wave. Two distances, P and Q, are labelled.",
+   "text": "The diagram shows a wave. Two distances, P and Q, are labelled."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "The diagram shows a wave. Two distances, P and Q, are labelled.",
-     "",
-     ""
-    ],
-    [
-     "P",
-     "",
-     ""
-    ],
-    [
-     "Q",
-     "",
-     ""
-    ],
-    [
-     "What is distance P and what is distance Q?",
-     "",
-     ""
-    ],
-    [
-     "",
-     "<b>distance P</b>",
-     "<b>distance Q</b>"
-    ],
-    [
-     "<b>A</b>",
-     "wavelength",
-     "amplitude"
-    ],
-    [
-     "<b>B</b>",
-     "wavelength",
-     "double the amplitude"
-    ],
-    [
-     "<b>C</b>",
-     "double the wavelength",
-     "amplitude"
-    ],
-    [
-     "<b>D</b>",
-     "double the wavelength",
-     "double the amplitude"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_11_q18_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "wavelength amplitude"
+    },
+    {
+     "label": "B",
+     "html": "wavelength double the amplitude"
+    },
+    {
+     "label": "C",
+     "html": "double the wavelength amplitude"
+    },
+    {
+     "label": "D",
+     "html": "double the wavelength double the amplitude"
+    }
+   ]
   }
  ]
 }

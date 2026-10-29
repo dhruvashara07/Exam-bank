@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    147.9,
-    300.8,
-    273.4
+    67.5,
+    147.5,
+    301.0,
+    273.5
    ],
    "id": "0625_2025MJ_12_q32_figA",
    "caption": null,
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The transformer in a laptop power supply is used to change mains voltage from 240V to 20V.",
-   "text": "The transformer in a laptop power supply is used to change mains voltage from 240V to 20V."
+   "html": "The transformer in a laptop power supply is used to change mains voltage from 240 V to 20 V.",
+   "text": "The transformer in a laptop power supply is used to change mains voltage from 240 V to 20 V."
   },
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "Which type of transformer is it and how many turns does the transformer have on the primary coil?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "transformer type",
-     "number of turns on primary coil"
-    ],
-    [
-     "<b>A</b>",
-     "step-down",
-     "50"
-    ],
-    [
-     "<b>B</b>",
-     "step-down",
-     "7200"
-    ],
-    [
-     "<b>C</b>",
-     "step-up",
-     "50"
-    ],
-    [
-     "<b>D</b>",
-     "step-up",
-     "7200"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_12_q32_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "step-down 50"
+    },
+    {
+     "label": "B",
+     "html": "step-down 7200"
+    },
+    {
+     "label": "C",
+     "html": "step-up 50"
+    },
+    {
+     "label": "D",
+     "html": "step-up 7200"
+    }
+   ]
   }
  ]
 }

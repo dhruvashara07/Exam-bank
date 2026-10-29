@@ -32,9 +32,9 @@
   {
    "page": 16,
    "bbox": [
-    67.7,
-    444.7,
-    506.4,
+    67.5,
+    444.5,
+    506.5,
     555.5
    ],
    "id": "0625_2016ON_12_q36_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p12/q36/figures/0625_2016ON_12_q36_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p12/q36/figures/0625_2016ON_12_q36_figA",
     "url": null,
-    "kb": 38.6
+    "kb": 38.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row shows the effect that a relay uses and one application of a relay?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "effect used by a relay",
-     "one application of a relay"
-    ],
-    [
-     "<b>A</b>",
-     "heating effect",
-     "allowing a small current to switch on a large current"
-    ],
-    [
-     "<b>B</b>",
-     "heating effect",
-     "changing the voltage of an a.c. supply"
-    ],
-    [
-     "<b>C</b>",
-     "magnetic effect",
-     "allowing a small current to switch on a large current"
-    ],
-    [
-     "<b>D</b>",
-     "magnetic effect",
-     "changing the voltage of an a.c. supply"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_12_q36_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "heating effect allowing a small current to switch on a large current"
+    },
+    {
+     "label": "B",
+     "html": "heating effect changing the voltage of an a.c. supply"
+    },
+    {
+     "label": "C",
+     "html": "magnetic effect allowing a small current to switch on a large current"
+    },
+    {
+     "label": "D",
+     "html": "magnetic effect changing the voltage of an a.c. supply"
+    }
+   ]
   }
  ]
 }

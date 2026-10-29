@@ -33,10 +33,10 @@
    "caption": "Fig. 4.1",
    "page": 8,
    "bbox": [
-    79.5,
-    87.4,
-    504.3,
-    242.9
+    82.5,
+    92.0,
+    505.0,
+    241.5
    ],
    "id": "0625_2020ON_43_q04_fig4-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 4.2",
    "page": 8,
    "bbox": [
-    204.8,
-    511.9,
-    401.5,
-    663.4
+    205.0,
+    515.0,
+    401.0,
+    661.5
    ],
    "id": "0625_2020ON_43_q04c_fig4-2",
    "part": "(c)",
@@ -134,6 +134,18 @@
      "type": "text",
      "html": "Identify the states <b>A</b>, <b>B</b> and <b>C</b>.",
      "text": "Identify the states A, B and C."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "A",
+     "unit": ".."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "B",
+     "unit": ".."
     },
     {
      "type": "answer",
@@ -393,7 +405,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -440,6 +461,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

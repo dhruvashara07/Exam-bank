@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
+    67.5,
     376.0,
-    332.2,
-    487.4
+    332.5,
+    487.5
    ],
    "id": "0625_2023MJ_13_q21_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p13/q21/figures/0625_2023MJ_13_q21_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p13/q21/figures/0625_2023MJ_13_q21_figA",
     "url": null,
-    "kb": 26.3
+    "kb": 26.1
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row matches a region of the electromagnetic spectrum to one of its uses?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "region",
-     "use"
-    ],
-    [
-     "<b>A</b>",
-     "gamma rays",
-     "intruder alarms"
-    ],
-    [
-     "<b>B</b>",
-     "infrared",
-     "satellite television"
-    ],
-    [
-     "<b>C</b>",
-     "microwaves",
-     "mobile (cell) phones"
-    ],
-    [
-     "<b>D</b>",
-     "radio waves",
-     "sterilising food"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_13_q21_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "gamma rays intruder alarms"
+    },
+    {
+     "label": "B",
+     "html": "infrared satellite television"
+    },
+    {
+     "label": "C",
+     "html": "microwaves mobile (cell) phones"
+    },
+    {
+     "label": "D",
+     "html": "radio waves sterilising food"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 17,
    "bbox": [
-    141.8,
-    375.9,
-    266.6,
-    404.0
+    136.0,
+    377.0,
+    262.5,
+    402.0
    ],
    "id": "0625_2021MJ_23_q39_figA",
    "caption": null,
@@ -45,15 +45,15 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p23/q39/figures/0625_2021MJ_23_q39_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p23/q39/figures/0625_2021MJ_23_q39_figA",
     "url": null,
-    "kb": 11.0
+    "kb": 11.1
    }
   },
   {
    "page": 17,
    "bbox": [
-    67.7,
+    67.5,
     488.0,
-    288.1,
+    288.0,
     613.0
    ],
    "id": "0625_2021MJ_23_q39_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p23/q39/figures/0625_2021MJ_23_q39_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p23/q39/figures/0625_2021MJ_23_q39_figB",
     "url": null,
-    "kb": 21.0
+    "kb": 20.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "figure",
@@ -136,40 +137,30 @@
    "text": "Which properties of α-particles, compared to other emissions, enable this use of radium-226?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "ionising effect",
-     "penetration"
-    ],
-    [
-     "",
-     "of α-particles",
-     "of α-particles"
-    ],
-    [
-     "<b>A</b>",
-     "high",
-     "high"
-    ],
-    [
-     "<b>B</b>",
-     "high",
-     "low"
-    ],
-    [
-     "<b>C</b>",
-     "low",
-     "high"
-    ],
-    [
-     "<b>D</b>",
-     "low",
-     "low"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_23_q39_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "high high"
+    },
+    {
+     "label": "B",
+     "html": "high low"
+    },
+    {
+     "label": "C",
+     "html": "low high"
+    },
+    {
+     "label": "D",
+     "html": "low low"
+    }
+   ]
   }
  ]
 }

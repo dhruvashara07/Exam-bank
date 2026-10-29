@@ -9,10 +9,10 @@
    "caption": "Fig. 11.1",
    "page": 14,
    "bbox": [
-    181.1,
-    85.9,
-    414.2,
-    333.4
+    181.0,
+    85.5,
+    414.5,
+    330.5
    ],
    "id": "0625_2018ON_41_q11a_fig11-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 11.2",
    "page": 15,
    "bbox": [
-    169.8,
-    137.9,
+    169.5,
+    137.5,
     425.5,
-    272.3
+    269.5
    ],
    "id": "0625_2018ON_41_q11b_fig11-2",
    "part": "(b)",
@@ -115,59 +115,9 @@
      "text": "Fig. 11.1 shows data about nine elements."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "proton number",
-       "element",
-       "symbol"
-      ],
-      [
-       "2",
-       "helium",
-       "He"
-      ],
-      [
-       "3",
-       "lithium",
-       "Li"
-      ],
-      [
-       "4",
-       "beryllium",
-       "Be"
-      ],
-      [
-       "5",
-       "boron",
-       "B"
-      ],
-      [
-       "6",
-       "carbon",
-       "C"
-      ],
-      [
-       "7",
-       "nitrogen",
-       "N"
-      ],
-      [
-       "8",
-       "oxygen",
-       "O"
-      ],
-      [
-       "9",
-       "fluorine",
-       "F"
-      ],
-      [
-       "10",
-       "neon",
-       "Ne"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2018ON_41_q11a_fig11-1",
+     "caption": "Fig. 11.1"
     },
     {
      "type": "text",
@@ -250,25 +200,9 @@
      "text": "A radioactive sample is placed close to a detector. The radioactive isotope in the sample has a long half-life. The detector records a count rate of 597 counts / s. Fig. 11.2 shows the readings when different materials are placed between the radioactive sample and the detector."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "material",
-       "count rate counts / s"
-      ],
-      [
-       "a sheet of paper",
-       "602"
-      ],
-      [
-       "a piece of thin aluminium",
-       "598"
-      ],
-      [
-       "a piece of thin lead",
-       "510"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2018ON_41_q11b_fig11-2",
+     "caption": "Fig. 11.2"
     },
     {
      "type": "text",
@@ -278,7 +212,21 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "γ-rays",
+     "prefix": "α-particles"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "β-particles"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "γ-rays"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 3
     },
     {
@@ -304,5 +252,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

@@ -35,7 +35,7 @@
     212.2,
     295.2,
     383.0,
-    497.6
+    488.5
    ],
    "id": "0625_2019MJ_12_q12_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-MJ/p12/q12/figures/0625_2019MJ_12_q12_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-MJ/p12/q12/figures/0625_2019MJ_12_q12_figA",
     "url": null,
-    "kb": 8.0
+    "kb": 7.9
    }
   },
   {
    "page": 8,
    "bbox": [
-    67.7,
-    580.3,
-    275.7,
-    691.6
+    67.5,
+    580.0,
+    276.0,
+    691.5
    ],
    "id": "0625_2019MJ_12_q12_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-MJ/p12/q12/figures/0625_2019MJ_12_q12_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-MJ/p12/q12/figures/0625_2019MJ_12_q12_figB",
     "url": null,
-    "kb": 18.1
+    "kb": 18.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,35 +137,30 @@
    "text": "Which motor produces the most power?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "load",
-     "time taken/s"
-    ],
-    [
-     "<b>A</b>",
-     "heavy",
-     "12"
-    ],
-    [
-     "<b>B</b>",
-     "heavy",
-     "16"
-    ],
-    [
-     "<b>C</b>",
-     "light",
-     "12"
-    ],
-    [
-     "<b>D</b>",
-     "light",
-     "16"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019MJ_12_q12_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "heavy 12"
+    },
+    {
+     "label": "B",
+     "html": "heavy 16"
+    },
+    {
+     "label": "C",
+     "html": "light 12"
+    },
+    {
+     "label": "D",
+     "html": "light 16"
+    }
+   ]
   }
  ]
 }

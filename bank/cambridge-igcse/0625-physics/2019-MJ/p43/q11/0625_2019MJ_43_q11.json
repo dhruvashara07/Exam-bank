@@ -186,7 +186,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "Explanation:",
+       "prefix": "Suggestion:"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Explanation:"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -260,7 +269,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "Reason 2",
+       "prefix": "Reason 1"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Reason 2"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -296,5 +314,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

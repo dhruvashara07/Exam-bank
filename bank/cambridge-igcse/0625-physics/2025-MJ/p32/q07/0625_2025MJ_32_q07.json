@@ -9,10 +9,10 @@
    "caption": "Table 7.1",
    "page": 10,
    "bbox": [
-    119.9,
-    86.2,
-    475.4,
-    220.0
+    120.0,
+    87.0,
+    475.5,
+    220.5
    ],
    "id": "0625_2025MJ_32_q07a_table7-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 7.1 (not to scale)",
    "page": 10,
    "bbox": [
-    106.4,
+    106.5,
     274.5,
-    489.0,
-    465.4
+    488.5,
+    465.5
    ],
    "id": "0625_2025MJ_32_q07b_fig7-1",
    "part": "(b)",
@@ -112,34 +112,9 @@
      "text": "Place ticks (✓) in Table 7.1 to show the properties of sound waves and of microwaves."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "property",
-       "sound waves",
-       "microwaves"
-      ],
-      [
-       "longitudinal",
-       "",
-       ""
-      ],
-      [
-       "transverse",
-       "",
-       ""
-      ],
-      [
-       "electromagnetic",
-       "",
-       ""
-      ],
-      [
-       "travel in a vacuum",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2025MJ_32_q07a_table7-1",
+     "caption": "Table 7.1"
     },
     {
      "type": "marks",
@@ -218,8 +193,8 @@
     },
     {
      "type": "text",
-     "html": "A scientist in an observatory sends a ray of red light from the observatory to the reflector on the Moon, as shown in Fig. 7.1. The ray takes a total time of 2.5s to travel from the observatory to the reflector and back to the observatory. The speed of light is 3.0 × 10<sup>8</sup>m/s.",
-     "text": "A scientist in an observatory sends a ray of red light from the observatory to the reflector on the Moon, as shown in Fig. 7.1. The ray takes a total time of 2.5s to travel from the observatory to the reflector and back to the observatory. The speed of light is 3.0 × 108m/s."
+     "html": "A scientist in an observatory sends a ray of red light from the observatory to the reflector on the Moon, as shown in Fig. 7.1. The ray takes a total time of 2.5 s to travel from the observatory to the reflector and back to the observatory. The speed of light is 3.0 × 10<sup>8</sup> m / s.",
+     "text": "A scientist in an observatory sends a ray of red light from the observatory to the reflector on the Moon, as shown in Fig. 7.1. The ray takes a total time of 2.5 s to travel from the observatory to the reflector and back to the observatory. The speed of light is 3.0 × 108 m / s."
     },
     {
      "type": "text",
@@ -410,5 +385,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

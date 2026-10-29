@@ -32,10 +32,10 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    504.7,
-    318.2,
-    630.2
+    67.5,
+    504.5,
+    318.5,
+    630.5
    ],
    "id": "0625_2018MJ_13_q09_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p13/q09/figures/0625_2018MJ_13_q09_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p13/q09/figures/0625_2018MJ_13_q09_figA",
     "url": null,
-    "kb": 25.3
+    "kb": 25.2
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,40 +108,30 @@
    "text": "Which row indicates that the student is now doing twice as much work?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "force used",
-     "distance the"
-    ],
-    [
-     "",
-     "to pull box",
-     "box is pulled"
-    ],
-    [
-     "<b>A</b>",
-     "is doubled",
-     "is doubled"
-    ],
-    [
-     "<b>B</b>",
-     "is doubled",
-     "is halved"
-    ],
-    [
-     "<b>C</b>",
-     "stays the same",
-     "is doubled"
-    ],
-    [
-     "<b>D</b>",
-     "stays the same",
-     "is halved"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_13_q09_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "is doubled is doubled"
+    },
+    {
+     "label": "B",
+     "html": "is doubled is halved"
+    },
+    {
+     "label": "C",
+     "html": "stays the same is doubled"
+    },
+    {
+     "label": "D",
+     "html": "stays the same is halved"
+    }
+   ]
   }
  ]
 }

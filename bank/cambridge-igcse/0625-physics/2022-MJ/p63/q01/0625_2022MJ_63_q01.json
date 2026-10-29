@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    61.4,
-    106.2,
-    533.9,
-    310.1
+    61.5,
+    109.5,
+    533.5,
+    308.5
    ],
    "id": "0625_2022MJ_63_q01_fig1-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p63/q01/figures/0625_2022MJ_63_q01_fig1-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p63/q01/figures/0625_2022MJ_63_q01_fig1-1",
     "url": null,
-    "kb": 32.0
+    "kb": 31.9
    }
   },
   {
    "caption": "Fig. 1.2",
    "page": 2,
    "bbox": [
-    196.4,
-    588.5,
-    398.4,
-    748.6
+    196.5,
+    591.5,
+    398.5,
+    747.0
    ],
    "id": "0625_2022MJ_63_q01bi_fig1-2",
    "part": "(b)(i)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 1.3",
    "page": 3,
    "bbox": [
-    85.1,
-    85.3,
-    510.2,
-    500.6
+    85.5,
+    84.5,
+    510.0,
+    499.0
    ],
    "id": "0625_2022MJ_63_q01bii_fig1-3",
    "part": "(b)(ii)",
@@ -90,10 +90,10 @@
    "caption": "Table 1.1",
    "page": 4,
    "bbox": [
-    209.4,
-    136.0,
-    385.8,
-    295.4
+    209.5,
+    139.5,
+    386.0,
+    295.5
    ],
    "id": "0625_2022MJ_63_q01c_table1-1",
    "part": "(c)",
@@ -354,6 +354,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "FP ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "FQ ="
       },
       {
@@ -432,39 +437,9 @@
      "text": "The student moves the 1.00 N load to distances d = 25.0 cm, d = 35.0 cm, d = 45.0 cm, d = 55.0 cm and d = 65.0 cm. He reads the value FP on newton meter P and the value FQ on newton meter Q. His readings are shown in Table 1.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>d</i> / cm",
-       "<i>F</i><sub>P</sub> / N",
-       "<i>F</i><sub>Q</sub> / N"
-      ],
-      [
-       "25.0",
-       "1.81",
-       "1.19"
-      ],
-      [
-       "35.0",
-       "1.70",
-       "1.30"
-      ],
-      [
-       "45.0",
-       "1.56",
-       "1.45"
-      ],
-      [
-       "55.0",
-       "1.44",
-       "1.55"
-      ],
-      [
-       "65.0",
-       "1.31",
-       "1.69"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2022MJ_63_q01c_table1-1",
+     "caption": "Table 1.1"
     },
     {
      "type": "text",
@@ -473,8 +448,8 @@
     },
     {
      "type": "text",
-     "html": "<i>F</i><sub>P</sub>/N <i>F</i><sub>Q</sub>/N",
-     "text": "FP/N FQ/N"
+     "html": "<i>F</i><sub>P</sub> / N <i>F</i><sub>Q</sub> / N",
+     "text": "FP / N FQ / N"
     },
     {
      "type": "answer",
@@ -549,6 +524,11 @@
      "type": "text",
      "html": "From your graph, determine <i>F</i><sub>0</sub>, the value of <i>F</i><sub>P</sub> where the two best-fit lines cross.",
      "text": "From your graph, determine F0, the value of FP where the two best-fit lines cross."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "F0 ="
     },
     {
      "type": "text",
@@ -657,6 +637,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

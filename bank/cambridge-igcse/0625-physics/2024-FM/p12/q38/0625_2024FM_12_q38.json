@@ -32,9 +32,9 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
-    341.6,
-    383.2,
+    67.5,
+    341.5,
+    383.5,
     453.0
    ],
    "id": "0625_2024FM_12_q38_figA",
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row shows the most common elements in the Sun and the regions of the electromagnetic spectrum in which most of the Sun’s energy is radiated?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "elements",
-     "regions"
-    ],
-    [
-     "<b>A</b>",
-     "carbon and oxygen",
-     "gamma and radio waves"
-    ],
-    [
-     "<b>B</b>",
-     "carbon and oxygen",
-     "infrared and visible"
-    ],
-    [
-     "<b>C</b>",
-     "hydrogen and helium",
-     "gamma and radio waves"
-    ],
-    [
-     "<b>D</b>",
-     "hydrogen and helium",
-     "infrared and visible"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024FM_12_q38_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "carbon and oxygen gamma and radio waves"
+    },
+    {
+     "label": "B",
+     "html": "carbon and oxygen infrared and visible"
+    },
+    {
+     "label": "C",
+     "html": "hydrogen and helium gamma and radio waves"
+    },
+    {
+     "label": "D",
+     "html": "hydrogen and helium infrared and visible"
+    }
+   ]
   }
  ]
 }

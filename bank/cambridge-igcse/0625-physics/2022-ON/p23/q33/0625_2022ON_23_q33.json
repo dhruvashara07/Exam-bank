@@ -32,10 +32,10 @@
   {
    "page": 15,
    "bbox": [
-    50.2,
-    86.5,
-    544.7,
-    297.2
+    49.5,
+    86.0,
+    545.5,
+    298.0
    ],
    "id": "0625_2022ON_23_q33_figA",
    "caption": null,
@@ -45,15 +45,15 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p23/q33/figures/0625_2022ON_23_q33_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p23/q33/figures/0625_2022ON_23_q33_figA",
     "url": null,
-    "kb": 31.6
+    "kb": 31.5
    }
   },
   {
    "page": 15,
    "bbox": [
-    67.7,
-    380.2,
-    297.8,
+    67.5,
+    380.0,
+    298.0,
     491.0
    ],
    "id": "0625_2022ON_23_q33_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p23/q33/figures/0625_2022ON_23_q33_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p23/q33/figures/0625_2022ON_23_q33_figB",
     "url": null,
-    "kb": 17.2
+    "kb": 17.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,35 +137,30 @@
    "text": "What is the logic state at Y and what is the state of the warning light?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "logic state at Y",
-     "warning light"
-    ],
-    [
-     "<b>A</b>",
-     "0",
-     "off"
-    ],
-    [
-     "<b>B</b>",
-     "0",
-     "on"
-    ],
-    [
-     "<b>C</b>",
-     "1",
-     "off"
-    ],
-    [
-     "<b>D</b>",
-     "1",
-     "on"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_23_q33_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0 off"
+    },
+    {
+     "label": "B",
+     "html": "0 on"
+    },
+    {
+     "label": "C",
+     "html": "1 off"
+    },
+    {
+     "label": "D",
+     "html": "1 on"
+    }
+   ]
   }
  ]
 }

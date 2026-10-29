@@ -9,10 +9,10 @@
    "caption": "Fig. 9.1",
    "page": 16,
    "bbox": [
-    107.9,
-    98.5,
-    487.4,
-    337.0
+    108.0,
+    99.5,
+    487.0,
+    337.5
    ],
    "id": "0625_2025ON_42_q09a_fig9-1",
    "part": "(a)",
@@ -21,17 +21,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p42/q09/figures/0625_2025ON_42_q09a_fig9-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p42/q09/figures/0625_2025ON_42_q09a_fig9-1",
     "url": null,
-    "kb": 50.9
+    "kb": 50.8
    }
   },
   {
    "caption": "Table 9.1",
    "page": 16,
    "bbox": [
-    149.8,
-    528.0,
+    149.5,
+    529.0,
     445.5,
-    697.6
+    698.0
    ],
    "id": "0625_2025ON_42_q09b_table9-1",
    "part": "(b)",
@@ -47,10 +47,10 @@
    "caption": "Fig. 9.2",
    "page": 17,
    "bbox": [
-    172.7,
-    97.8,
+    172.0,
+    97.5,
     423.0,
-    271.0
+    271.5
    ],
    "id": "0625_2025ON_42_q09bii_fig9-2",
    "part": "(b)(ii)",
@@ -524,7 +524,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "most suitable source"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 6
       },
       {
@@ -542,39 +551,9 @@
      "text": "Table 9.1 shows five radioactive sources, the main type of radiation emitted by each source and the half‑life of each source."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "radioactive source",
-       "type of radiation emitted",
-       "half‑life"
-      ],
-      [
-       "P",
-       "alpha",
-       "460 years"
-      ],
-      [
-       "Q",
-       "alpha",
-       "10 days"
-      ],
-      [
-       "R",
-       "beta",
-       "29 years"
-      ],
-      [
-       "S",
-       "beta",
-       "14 days"
-      ],
-      [
-       "T",
-       "gamma",
-       "30 years"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2025ON_42_q09b_table9-1",
+     "caption": "Table 9.1"
     }
    ]
   }
@@ -595,5 +574,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

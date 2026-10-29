@@ -32,10 +32,10 @@
   {
    "page": 15,
    "bbox": [
-    69.4,
-    299.8,
-    393.1,
-    411.1
+    69.0,
+    299.5,
+    393.0,
+    411.0
    ],
    "id": "0625_2022ON_21_q37_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p21/q37/figures/0625_2022ON_21_q37_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p21/q37/figures/0625_2022ON_21_q37_figA",
     "url": null,
-    "kb": 30.3
+    "kb": 30.1
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "Which particles were used, and to which conclusion did the experiment lead?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "particles",
-     "conclusion"
-    ],
-    [
-     "<b>A</b>",
-     "alpha-particles",
-     "matter is made up of atoms"
-    ],
-    [
-     "<b>B</b>",
-     "alpha-particles",
-     "atoms have a very small nucleus"
-    ],
-    [
-     "<b>C</b>",
-     "beta-particles",
-     "matter is made up of atoms"
-    ],
-    [
-     "<b>D</b>",
-     "beta-particles",
-     "atoms have a very small nucleus"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_21_q37_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "alpha-particles matter is made up of atoms"
+    },
+    {
+     "label": "B",
+     "html": "alpha-particles atoms have a very small nucleus"
+    },
+    {
+     "label": "C",
+     "html": "beta-particles matter is made up of atoms"
+    },
+    {
+     "label": "D",
+     "html": "beta-particles atoms have a very small nucleus"
+    }
+   ]
   }
  ]
 }

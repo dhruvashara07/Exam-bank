@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    67.6,
-    265.2,
+    67.5,
+    265.0,
     235.5,
-    376.6
+    376.5
    ],
    "id": "0625_2015ON_12_q10_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p12/q10/figures/0625_2015ON_12_q10_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p12/q10/figures/0625_2015ON_12_q10_figA",
     "url": null,
-    "kb": 15.0
+    "kb": 14.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row gives the largest pressure on the surface?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "force/N",
-     "<sup>2</sup> area/m"
-    ],
-    [
-     "A",
-     "20",
-     "2"
-    ],
-    [
-     "B",
-     "40",
-     "2"
-    ],
-    [
-     "C",
-     "20",
-     "4"
-    ],
-    [
-     "D",
-     "40",
-     "4"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015ON_12_q10_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "20 2"
+    },
+    {
+     "label": "B",
+     "html": "40 2"
+    },
+    {
+     "label": "C",
+     "html": "20 4"
+    },
+    {
+     "label": "D",
+     "html": "40 4"
+    }
+   ]
   }
  ]
 }

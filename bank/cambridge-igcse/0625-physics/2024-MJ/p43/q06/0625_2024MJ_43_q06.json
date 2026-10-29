@@ -33,10 +33,10 @@
    "caption": "Fig. 6.1",
    "page": 9,
    "bbox": [
-    67.9,
-    85.6,
-    527.4,
-    349.2
+    67.5,
+    85.0,
+    527.5,
+    347.5
    ],
    "id": "0625_2024MJ_43_q06_fig6-1",
    "part": "",
@@ -120,7 +120,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "focal length",
+     "prefix": "principal focus"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "focal length"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -217,6 +226,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -224,17 +234,9 @@
    "text": "Fig. 6.1 shows a thin converging lens used to produce a magnified image of an object AB."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "B",
-     ""
-    ],
-    [
-     "F<sub>1</sub> A principal axis",
-     "F<sub>2</sub>"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2024MJ_43_q06_fig6-1",
+   "caption": "Fig. 6.1"
   }
  ]
 }

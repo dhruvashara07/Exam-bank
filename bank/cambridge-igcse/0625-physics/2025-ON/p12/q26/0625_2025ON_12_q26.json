@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
-    493.6,
-    258.7,
-    619.1
+    67.5,
+    493.5,
+    259.0,
+    619.5
    ],
    "id": "0625_2025ON_12_q26_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "What are permanent magnets and temporary magnets made of?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "permanent",
-     "temporary"
-    ],
-    [
-     "",
-     "magnet",
-     "magnet"
-    ],
-    [
-     "<b>A</b>",
-     "soft iron",
-     "soft iron"
-    ],
-    [
-     "<b>B</b>",
-     "soft iron",
-     "steel"
-    ],
-    [
-     "<b>C</b>",
-     "steel",
-     "soft iron"
-    ],
-    [
-     "<b>D</b>",
-     "steel",
-     "steel"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025ON_12_q26_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "soft iron soft iron"
+    },
+    {
+     "label": "B",
+     "html": "soft iron steel"
+    },
+    {
+     "label": "C",
+     "html": "steel soft iron"
+    },
+    {
+     "label": "D",
+     "html": "steel steel"
+    }
+   ]
   }
  ]
 }

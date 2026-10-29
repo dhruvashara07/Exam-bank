@@ -33,6 +33,7 @@ def spans_in(page, rect):
     Normal PDFs: one piece per span (font name tells bold/italic). Merged-font PDFs ('AllAndNone',
     2025+): one piece per word, bold decided from the printed stroke width (see stroke_bold)."""
     out = []
+    gap_after = set()                 # word groups followed by a (thin) space in the PDF
     for b in page.get_text('rawdict', clip=rect)['blocks']:
         if b['type'] != 0:
             continue
@@ -50,6 +51,8 @@ def spans_in(page, rect):
                     if merged and c['c'].isspace():
                         if cur:
                             groups.append(cur); cur = []
+                        if groups:
+                            gap_after.add(id(groups[-1]))
                     else:
                         cur.append(c)
                 if cur:
@@ -64,7 +67,7 @@ def spans_in(page, rect):
                     cx, cy = (r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2
                     if not (rect.x0 <= cx <= rect.x1 and rect.y0 <= cy <= rect.y1):
                         continue
-                    out.append({**base, 'text': t, 'bbox': r})
+                    out.append({**base, 'text': t, 'bbox': r, 'space_after': id(g) in gap_after})
     return out
 
 
@@ -117,11 +120,27 @@ def fraction_tokens(page, rect, spans, figure_rects):
         if not num or not den:
             continue
         def tex(ids):
-            return ''.join(inline(spans[i], spans) for i in sorted(ids, key=lambda i: spans[i]['bbox'].x0)).strip()
+            ss = sorted((spans[i] for i in ids), key=lambda s: s['bbox'].x0)
+            return html_to_tex(tok_html([(inline(s, spans), s['text'], s['bbox'].x0, s['bbox'].x1) for s in ss]))
         used.update(num); used.update(den)
         toks.append({'html': f'\\(\\frac{{{tex(num)}}}{{{tex(den)}}}\\)', 'text': f'({plain(num, spans)})/({plain(den, spans)})',
                      'bbox': fitz.Rect(r.x0, r.y0 - 6, r.x1, r.y1 + 6), 'oy': y + 2.7, 'size': 11})
     return toks, used
+
+
+def html_to_tex(h):
+    """Inline HTML of a numerator/denominator -> LaTeX: words in \\text{}, sub/sup as _{} ^{}."""
+    h = htmlmod.unescape(re.sub(r'</?(b|i)>', '', h))
+    h = re.sub(r'<sub>(.*?)</sub>', lambda m: '_{' + m.group(1) + '}', h)
+    h = re.sub(r'<sup>(.*?)</sup>', lambda m: '^{' + m.group(1) + '}', h)
+    # runs of words (2+ letters, with spaces between) become text; single letters stay maths variables;
+    # sin/cos/tan are maths functions
+    def word(m):
+        w = m.group(0)
+        return '\\' + w + ' ' if w in ('sin', 'cos', 'tan', 'log', 'ln') else '\\text{' + w + '}'
+    h = re.sub(r'[A-Za-z]{2,}(?:\s+[A-Za-z]{2,})*', word, h)
+    h = h.replace('%', '\\%').replace('×', '\\times ').replace('÷', '\\div ')
+    return re.sub(r'\s+', ' ', h).strip()
 
 
 def plain(ids, spans):
@@ -213,6 +232,8 @@ def build_segment(page, bbox, figures, tables_out):
                 continue                                   # answer lines read as a table
             if any(re.fullmatch(r'\((?:[a-h]|[ivx]+)\)', c) for c in cells):
                 continue                                   # a part label column, not a real table
+            if any((tr & f).get_area() > 0.6 * tr.get_area() for f in fig_rects):
+                continue                                   # labels inside a diagram, not a table
             table_rects.append(tr)
             tables_out.append({'type': 'table', 'rows': rows, 'y': tr.y0, 'bbox': tr})
     except Exception:
@@ -220,7 +241,7 @@ def build_segment(page, bbox, figures, tables_out):
     keep = [s for s in spans if not any(f.contains(s['bbox']) or (f & s['bbox']).get_area() > 0.6 * s['bbox'].get_area() for f in fig_rects + table_rects)]
     fr, used = fraction_tokens(page, rect, keep, fig_rects + table_rects)
     toks = [{'html': inline(s, keep), 'text': s['text'], 'bbox': s['bbox'], 'oy': s['oy'],
-             'size': s['size'], 'script': s.get('script')} for i, s in enumerate(keep) if i not in used] + fr
+             'size': s['size'], 'script': s.get('script'), 'space_after': s.get('space_after')} for i, s in enumerate(keep) if i not in used] + fr
     # lines by baseline; sub/superscripts join the line of the character they sit next to
     main = [t for t in toks if not t.get('script')]
     scripts = [t for t in toks if t.get('script')]
@@ -241,12 +262,12 @@ def build_segment(page, bbox, figures, tables_out):
     out_lines = []
     for L in lines:
         L['toks'].sort(key=lambda t: t['bbox'].x0)
-        h, txt, prev = '', '', None
+        h, txt, prev, prev_sp = '', '', None, False
         for t in L['toks']:
             gap = (t['bbox'].x0 - prev.x1) if prev else 0
-            if prev and gap > 1.8 and not h.endswith(' ') and not t['html'].startswith(' ') and not t.get('script'):
+            if prev and (gap > 1.0 or (prev_sp and gap > 0.4)) and not h.endswith(' ') and not t['html'].startswith(' ') and not t.get('script'):
                 h += ' '; txt += ' '
-            h += t['html']; txt += t['text']; prev = t['bbox']
+            h += t['html']; txt += t['text']; prev = t['bbox']; prev_sp = t.get('space_after')
         x0 = min(t['bbox'].x0 for t in L['toks']); y0 = min(t['bbox'].y0 for t in L['toks']); y1 = max(t['bbox'].y1 for t in L['toks'])
         h = re.sub(r'\s+', ' ', h)
         out_lines.append({'html': h.strip(), 'text': re.sub(r'\s+', ' ', txt).strip(), 'x0': x0, 'y0': y0, 'y1': y1,
@@ -294,7 +315,7 @@ def option_starts(line, expect):
 def tok_html(toks):
     h, prev = '', None
     for th, tt, x0, x1 in toks:
-        if prev is not None and x0 - prev > 1.8 and not h.endswith(' ') and not th.startswith(' '):
+        if prev is not None and x0 - prev > 1.0 and not h.endswith(' ') and not th.startswith(' '):
             h += ' '
         h += th; prev = x1
     h = re.sub(r'\s+(</(?:b|i|sub|sup)>)', r'\1 ', h)
@@ -347,13 +368,18 @@ def to_blocks(lines, figures, tables, seg, mcq=False):
         if DOTS.search(t):                                   # answer line / dotted lines
             pre = DOTS.split(t)[0].strip()
             post = MARK.sub('', DOTS.split(t)[-1]).strip()
-            if pre or post:
-                answer.update({'kind': 'answer_line', 'prefix': pre or None, 'unit': post or None})
+            if pre.startswith(BULLET) or len(pre) > 25 or len(post) > 12:
+                # a sentence with a gap to fill ('Room temperature has decreased by ...... .'): keep the words
+                t = DOTS.sub('……', t); h = DOTS.sub('……', h)
+            elif pre or post:
+                blocks.append({k: v for k, v in {'type': 'answer', 'kind': 'answer_line', 'prefix': pre or None,
+                                                 'unit': post or None}.items() if v is not None})
+                para = None; continue
             else:
                 answer['lines'] = answer.get('lines', 0) + 1
                 if answer['kind'] in ('none', 'space'):
                     answer['kind'] = 'lines'
-            para = None; continue
+                para = None; continue
         t = MARK.sub('', t).strip(); h = MARK.sub('', h).strip()
         if not t:
             continue
@@ -382,7 +408,7 @@ def to_blocks(lines, figures, tables, seg, mcq=False):
     ans = seg.get('answer_space') or {}
     if answer['kind'] in ('none', 'space') and ans.get('working_gap_pt', 0) > 40:
         answer.update({'kind': 'space', 'height_pt': ans.get('working_gap_pt')})
-    if answer['kind'] != 'none':
+    if answer['kind'] in ('lines', 'space'):         # answer lines with a label were added where they stand
         blocks.append({k: v for k, v in answer.items() if v is not None})
     if marks:
         blocks.append({'type': 'marks', 'value': marks})

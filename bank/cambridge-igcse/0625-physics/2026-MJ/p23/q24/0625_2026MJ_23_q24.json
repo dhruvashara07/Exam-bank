@@ -32,8 +32,8 @@
   {
    "page": 11,
    "bbox": [
-    67.9,
-    72.2,
+    68.0,
+    97.5,
     529.5,
     214.7
    ],
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p23/q24/figures/0625_2026MJ_23_q24_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p23/q24/figures/0625_2026MJ_23_q24_figA",
     "url": null,
-    "kb": 355.4
+    "kb": 352.2
    }
   },
   {
    "page": 11,
    "bbox": [
-    67.7,
-    286.2,
-    379.7,
-    411.2
+    67.5,
+    286.0,
+    380.0,
+    411.5
    ],
    "id": "0625_2026MJ_23_q24_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p23/q24/figures/0625_2026MJ_23_q24_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p23/q24/figures/0625_2026MJ_23_q24_figB",
     "url": null,
-    "kb": 32.3
+    "kb": 32.1
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The diagram shows compressions and rarefactions in air as a sound wave moves from left",
-   "text": "The diagram shows compressions and rarefactions in air as a sound wave moves from left"
+   "html": "The diagram shows compressions and rarefactions in air as a sound wave moves from left to right.",
+   "text": "The diagram shows compressions and rarefactions in air as a sound wave moves from left to right."
   },
   {
    "type": "figure",
@@ -131,40 +132,30 @@
    "text": "What happens to the number of particles in a region of rarefaction and in a region of compression?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>number of particles in</b>",
-     "<b>number of particles in</b>"
-    ],
-    [
-     "",
-     "<b>region of rarefaction</b>",
-     "<b>region of compression</b>"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_23_q24_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

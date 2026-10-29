@@ -35,7 +35,7 @@
     160.7,
     99.8,
     434.4,
-    245.1
+    246.0
    ],
    "id": "0625_2021ON_22_q09_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p22/q09/figures/0625_2021ON_22_q09_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p22/q09/figures/0625_2021ON_22_q09_figA",
     "url": null,
-    "kb": 16.1
+    "kb": 16.2
    }
   },
   {
    "page": 5,
    "bbox": [
-    67.7,
+    67.5,
     315.5,
     356.0,
-    440.9
+    441.0
    ],
    "id": "0625_2021ON_22_q09_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p22/q09/figures/0625_2021ON_22_q09_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p22/q09/figures/0625_2021ON_22_q09_figB",
     "url": null,
-    "kb": 23.9
+    "kb": 23.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,40 +132,30 @@
    "text": "Which row gives the loss in gravitational potential energy and the work done against friction?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "loss in gravitational",
-     "work done"
-    ],
-    [
-     "",
-     "potential energy",
-     "against friction"
-    ],
-    [
-     "<b>A</b>",
-     "<i>mgd</i>",
-     "<i>F</i><i>l</i>"
-    ],
-    [
-     "<b>B</b>",
-     "<i>mgd</i>",
-     "<i>Fd</i>"
-    ],
-    [
-     "<b>C</b>",
-     "<i>mg</i><i>l</i>",
-     "<i>F</i><i>l</i>"
-    ],
-    [
-     "<b>D</b>",
-     "<i>mg</i><i>l</i>",
-     "<i>Fd</i>"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_22_q09_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "mgd Fl"
+    },
+    {
+     "label": "B",
+     "html": "mgd Fd"
+    },
+    {
+     "label": "C",
+     "html": "mgl Fl"
+    },
+    {
+     "label": "D",
+     "html": "mgl Fd"
+    }
+   ]
   }
  ]
 }

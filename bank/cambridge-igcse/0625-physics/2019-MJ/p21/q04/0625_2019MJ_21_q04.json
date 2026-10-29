@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    109.9,
-    316.9,
-    221.3
+    67.5,
+    109.5,
+    317.0,
+    221.5
    ],
    "id": "0625_2019MJ_21_q04_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-MJ/p21/q04/figures/0625_2019MJ_21_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-MJ/p21/q04/figures/0625_2019MJ_21_q04_figA",
     "url": null,
-    "kb": 20.0
+    "kb": 19.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What happens to its mass and to its weight due to the move?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass",
-     "weight"
-    ],
-    [
-     "<b>A</b>",
-     "changes",
-     "changes"
-    ],
-    [
-     "<b>B</b>",
-     "changes",
-     "stays the same"
-    ],
-    [
-     "<b>C</b>",
-     "stays the same",
-     "changes"
-    ],
-    [
-     "<b>D</b>",
-     "stays the same",
-     "stays the same"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019MJ_21_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "changes changes"
+    },
+    {
+     "label": "B",
+     "html": "changes stays the same"
+    },
+    {
+     "label": "C",
+     "html": "stays the same changes"
+    },
+    {
+     "label": "D",
+     "html": "stays the same stays the same"
+    }
+   ]
   }
  ]
 }

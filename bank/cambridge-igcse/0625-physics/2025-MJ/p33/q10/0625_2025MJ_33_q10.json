@@ -272,8 +272,8 @@
    "content": [
     {
      "type": "text",
-     "html": "A sample containing 60mg of radon-222 decays to 7.5mg in 11.5 days.",
-     "text": "A sample containing 60mg of radon-222 decays to 7.5mg in 11.5 days."
+     "html": "A sample containing 60 mg of radon-222 decays to 7.5 mg in 11.5 days.",
+     "text": "A sample containing 60 mg of radon-222 decays to 7.5 mg in 11.5 days."
     },
     {
      "type": "text",
@@ -362,7 +362,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -387,5 +396,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

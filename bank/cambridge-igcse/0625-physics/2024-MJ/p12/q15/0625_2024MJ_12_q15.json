@@ -32,9 +32,9 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    611.6,
-    335.8,
+    67.5,
+    611.5,
+    336.0,
     723.0
    ],
    "id": "0625_2024MJ_12_q15_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p12/q15/figures/0625_2024MJ_12_q15_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p12/q15/figures/0625_2024MJ_12_q15_figA",
     "url": null,
-    "kb": 18.0
+    "kb": 17.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,50 +103,35 @@
    "text": "Which mediums can thermal radiation travel through?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "glass",
-     "water",
-     "air",
-     "vacuum"
-    ],
-    [
-     "<b>A</b>",
-     "\u0016",
-     "\u0016",
-     "\u0016",
-     "\u0016"
-    ],
-    [
-     "<b>B</b>",
-     "\u0016",
-     "\u0016",
-     "\u0016",
-     "\u001a"
-    ],
-    [
-     "<b>C</b>",
-     "\u001a",
-     "\u0016",
-     "\u0016",
-     "\u0016"
-    ],
-    [
-     "<b>D</b>",
-     "\u001a",
-     "\u001a",
-     "\u001a",
-     "\u0016"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_12_q15_figA",
+   "caption": null
   },
   {
    "type": "text",
-   "html": "key \u0016= can travel through this medium \u001a = cannot travel through this medium",
-   "text": "key \u0016= can travel through this medium \u001a = cannot travel through this medium"
+   "html": "key \u0016 = can travel through this medium \u001a = cannot travel through this medium",
+   "text": "key \u0016 = can travel through this medium \u001a = cannot travel through this medium"
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "\u0016 \u0016 \u0016 \u0016 key"
+    },
+    {
+     "label": "B",
+     "html": "\u0016 \u0016 \u0016 \u001a \u0016= can travel through this medium"
+    },
+    {
+     "label": "C",
+     "html": "\u001a \u0016 \u0016 \u0016 \u001a = cannot travel through this medium"
+    },
+    {
+     "label": "D",
+     "html": "\u001a \u001a \u001a \u0016"
+    }
+   ]
   }
  ]
 }

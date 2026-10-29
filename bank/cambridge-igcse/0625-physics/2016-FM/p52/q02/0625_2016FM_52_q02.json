@@ -33,9 +33,9 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    109.0,
-    156.9,
-    479.8,
+    108.5,
+    157.5,
+    479.5,
     419.5
    ],
    "id": "0625_2016FM_52_q02_fig2-1",
@@ -53,9 +53,9 @@
    "page": 4,
    "bbox": [
     232.5,
-    572.3,
-    362.7,
-    739.6
+    572.0,
+    363.0,
+    740.0
    ],
    "id": "0625_2016FM_52_q02a_table2-1",
    "part": "(a)",
@@ -141,33 +141,9 @@
      ]
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>V</i> / V",
-       "<i>I</i> / A"
-      ],
-      [
-       "0.4",
-       ""
-      ],
-      [
-       "0.8",
-       ""
-      ],
-      [
-       "1.2",
-       ""
-      ],
-      [
-       "1.6",
-       ""
-      ],
-      [
-       "2.0",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2016FM_52_q02a_table2-1",
+     "caption": "Table 2.1"
     },
     {
      "type": "marks",
@@ -237,8 +213,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of <i>V</i> / V (<i>y</i>-axis) against <i>I</i>/ A (<i>x-</i>axis). Start both axes at the origin (0,0).",
-     "text": "Plot a graph of V / V (y-axis) against I/ A (x-axis). Start both axes at the origin (0,0)."
+     "html": "Plot a graph of <i>V</i> / V (<i>y</i>-axis) against <i>I</i> / A (<i>x-</i>axis). Start both axes at the origin (0,0).",
+     "text": "Plot a graph of V / V (y-axis) against I / A (x-axis). Start both axes at the origin (0,0)."
     },
     {
      "type": "text",
@@ -493,7 +469,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 3
     },
     {
@@ -598,6 +583,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

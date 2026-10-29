@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    64.2,
-    111.5,
-    531.1,
-    267.9
+    65.0,
+    112.5,
+    530.5,
+    268.0
    ],
    "id": "0625_2024ON_61_q03_fig3-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p61/q03/figures/0625_2024ON_61_q03_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p61/q03/figures/0625_2024ON_61_q03_fig3-1",
     "url": null,
-    "kb": 24.7
+    "kb": 24.6
    }
   },
   {
    "caption": "Fig. 3.2",
    "page": 8,
    "bbox": [
-    64.2,
-    111.5,
-    531.1,
-    421.9
+    65.0,
+    112.5,
+    530.5,
+    422.0
    ],
    "id": "0625_2024ON_61_q03_fig3-2",
    "part": "",
@@ -207,8 +207,8 @@
    "content": [
     {
      "type": "text",
-     "html": "The student places the lens at a distance u = 25.0cm from the illuminated object.",
-     "text": "The student places the lens at a distance u = 25.0cm from the illuminated object."
+     "html": "The student places the lens at a distance u = 25.0 cm from the illuminated object.",
+     "text": "The student places the lens at a distance u = 25.0 cm from the illuminated object."
     },
     {
      "type": "text",
@@ -221,6 +221,12 @@
      "text": "He measures the distance v between the centre of the lens and the screen."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "v =",
+     "unit": "41.2 cm"
+    },
+    {
      "type": "text",
      "html": "Describe <b>two</b> techniques that you use to obtain a clearly focused image.",
      "text": "Describe two techniques that you use to obtain a clearly focused image."
@@ -228,8 +234,12 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2",
-     "lines": 2
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
     },
     {
      "type": "marks",
@@ -298,7 +308,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate the focal length f of the lens using the equation f = \\(\\frac{uv}{(u+v)}\\).",
+     "html": "Calculate the focal length f of the lens using the equation f = \\(\\frac{\\text{uv}}{(u + v)}\\).",
      "text": "Calculate the focal length f of the lens using the equation f = (uv)/((u+v))."
     },
     {
@@ -383,7 +393,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1 The image is"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2 The image is"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -450,12 +469,18 @@
    "content": [
     {
      "type": "text",
-     "html": "The student repeats the steps in (b) using a distance u = 30.0cm.",
-     "text": "The student repeats the steps in (b) using a distance u = 30.0cm."
+     "html": "The student repeats the steps in (b) using a distance u = 30.0 cm.",
+     "text": "The student repeats the steps in (b) using a distance u = 30.0 cm."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "v =",
+     "unit": "cm29.8"
     },
     {
      "type": "text",
-     "html": "Calculate the focal length f of the lens using the equation f = \\(\\frac{uv}{(u+v)}\\).",
+     "html": "Calculate the focal length f of the lens using the equation f = \\(\\frac{\\text{uv}}{(u + v)}\\).",
      "text": "Calculate the focal length f of the lens using the equation f = (uv)/((u+v))."
     },
     {
@@ -535,7 +560,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 3
     },
     {
@@ -562,6 +596,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

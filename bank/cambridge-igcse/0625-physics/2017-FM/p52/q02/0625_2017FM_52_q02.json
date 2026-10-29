@@ -34,9 +34,9 @@
    "page": 6,
    "bbox": [
     144.0,
-    119.2,
-    502.3,
-    334.8
+    124.0,
+    502.0,
+    332.0
    ],
    "id": "0625_2017FM_52_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 6,
    "bbox": [
-    152.8,
-    505.8,
+    152.5,
+    510.5,
     442.5,
-    625.3
+    625.5
    ],
    "id": "0625_2017FM_52_q02ai_table2-1",
    "part": "(a)(i)",
@@ -72,9 +72,9 @@
    "page": 6,
    "bbox": [
     144.5,
-    684.5,
-    451.5,
-    786.3
+    689.0,
+    452.0,
+    783.5
    ],
    "id": "0625_2017FM_52_q02aii_fig2-2",
    "part": "(a)(ii)",
@@ -172,39 +172,6 @@
        "type": "figure",
        "id": "0625_2017FM_52_q02ai_table2-1",
        "caption": "Table 2.1"
-      },
-      {
-       "type": "table",
-       "rows": [
-        [
-         "wire",
-         "<i>l</i> / m",
-         "<i>V</i> / V",
-         "<i>I</i> / A",
-         "<i>R</i> / Ω"
-        ],
-        [
-         "<b>X</b>",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "<b>Y</b>",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "<b>Z</b>",
-         "",
-         "",
-         "",
-         ""
-        ]
-       ]
       },
       {
        "type": "marks",
@@ -348,7 +315,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate, and record in the table, the resistance <i>R</i> of each wire. Use the equation <i>R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\) .",
+     "html": "Calculate, and record in the table, the resistance <i>R</i> of each wire. Use the equation <i>R</i> = \\(\\frac{V}{I}\\) .",
      "text": "Calculate, and record in the table, the resistance R of each wire. Use the equation R = (V)/(I) ."
     },
     {
@@ -428,8 +395,18 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance per unit length <i>r</i> of each wire using the equation <i>r</i> = \\(\\frac{<i>R</i>}{<i>l</i>}\\).",
+       "html": "Calculate the resistance per unit length <i>r</i> of each wire using the equation <i>r</i> = \\(\\frac{R}{l}\\).",
        "text": "Calculate the resistance per unit length r of each wire using the equation r = (R)/(l)."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "r for wire X ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "r for wire Y ="
       },
       {
        "type": "answer",
@@ -508,7 +485,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -611,6 +597,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

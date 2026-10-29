@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    135.2,
-    240.9,
-    246.6
+    67.5,
+    135.0,
+    241.0,
+    246.5
    ],
    "id": "0625_2022FM_22_q04_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-FM/p22/q04/figures/0625_2022FM_22_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-FM/p22/q04/figures/0625_2022FM_22_q04_figA",
     "url": null,
-    "kb": 17.3
+    "kb": 17.2
    }
   }
  ],
@@ -90,16 +90,17 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The gravitational field strength is 8.8N/kg on Venus and 3.8N/kg on Mars.",
-   "text": "The gravitational field strength is 8.8N/kg on Venus and 3.8N/kg on Mars."
+   "html": "The gravitational field strength is 8.8 N / kg on Venus and 3.8 N / kg on Mars.",
+   "text": "The gravitational field strength is 8.8 N / kg on Venus and 3.8 N / kg on Mars."
   },
   {
    "type": "text",
-   "html": "An object has a weight of 42N on Venus.",
-   "text": "An object has a weight of 42N on Venus."
+   "html": "An object has a weight of 42 N on Venus.",
+   "text": "An object has a weight of 42 N on Venus."
   },
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "What are the mass and the weight of the object on Mars?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass/kg",
-     "weight/N"
-    ],
-    [
-     "<b>A</b>",
-     "4.8",
-     "18"
-    ],
-    [
-     "<b>B</b>",
-     "4.8",
-     "42"
-    ],
-    [
-     "<b>C</b>",
-     "11",
-     "42"
-    ],
-    [
-     "<b>D</b>",
-     "11",
-     "97"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022FM_22_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "4.8 18"
+    },
+    {
+     "label": "B",
+     "html": "4.8 42"
+    },
+    {
+     "label": "C",
+     "html": "11 42"
+    },
+    {
+     "label": "D",
+     "html": "11 97"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
-    97.3,
-    381.1,
-    222.8
+    67.5,
+    97.0,
+    381.5,
+    223.0
    ],
    "id": "0625_2022ON_22_q01_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p22/q01/figures/0625_2022ON_22_q01_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p22/q01/figures/0625_2022ON_22_q01_figA",
     "url": null,
-    "kb": 30.8
+    "kb": 30.6
    }
   }
  ],
@@ -90,42 +90,38 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "Which measuring devices are most suitable to determine the volume of about 200ml of liquid and the diameter of a thin wire?",
-   "text": "Which measuring devices are most suitable to determine the volume of about 200ml of liquid and the diameter of a thin wire?"
+   "html": "Which measuring devices are most suitable to determine the volume of about 200 ml of liquid and the diameter of a thin wire?",
+   "text": "Which measuring devices are most suitable to determine the volume of about 200 ml of liquid and the diameter of a thin wire?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "volume of about 200ml of liquid",
-     "diameter of a thin wire"
-    ],
-    [
-     "<b>A</b>",
-     "measuring cylinder",
-     "micrometer screw gauge"
-    ],
-    [
-     "<b>B</b>",
-     "measuring cylinder",
-     "ruler"
-    ],
-    [
-     "<b>C</b>",
-     "ruler",
-     "measuring cylinder"
-    ],
-    [
-     "<b>D</b>",
-     "ruler",
-     "micrometer screw gauge"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_22_q01_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "measuring cylinder micrometer screw gauge"
+    },
+    {
+     "label": "B",
+     "html": "measuring cylinder ruler"
+    },
+    {
+     "label": "C",
+     "html": "ruler measuring cylinder"
+    },
+    {
+     "label": "D",
+     "html": "ruler micrometer screw gauge"
+    }
+   ]
   }
  ]
 }

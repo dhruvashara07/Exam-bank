@@ -9,10 +9,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    114.7,
-    99.8,
-    353.7,
-    296.1
+    241.0,
+    124.0,
+    354.5,
+    296.5
    ],
    "id": "0625_2025ON_31_q02ai_fig2-1",
    "part": "(a)(i)",
@@ -21,17 +21,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q02/figures/0625_2025ON_31_q02ai_fig2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p31/q02/figures/0625_2025ON_31_q02ai_fig2-1",
     "url": null,
-    "kb": 22.8
+    "kb": 17.8
    }
   },
   {
    "caption": "Fig. 2.2",
    "page": 5,
    "bbox": [
-    220.3,
-    98.7,
-    374.9,
-    279.3
+    220.5,
+    98.0,
+    375.0,
+    279.5
    ],
    "id": "0625_2025ON_31_q02b_fig2-2",
    "part": "(b)",
@@ -138,8 +138,8 @@
      "content": [
       {
        "type": "text",
-       "html": "A student collects some drops in a measuring cylinder. Fig. 2.1 shows the water collected",
-       "text": "A student collects some drops in a measuring cylinder. Fig. 2.1 shows the water collected"
+       "html": "A student collects some drops in a measuring cylinder. Fig. 2.1 shows the water collected by the student.",
+       "text": "A student collects some drops in a measuring cylinder. Fig. 2.1 shows the water collected by the student."
       },
       {
        "type": "figure",
@@ -239,8 +239,8 @@
       },
       {
        "type": "text",
-       "html": "volume of water in the measuring cylinder = 24cm<sup>3</sup>",
-       "text": "volume of water in the measuring cylinder = 24cm3"
+       "html": "volume of water in the measuring cylinder = 24 cm<sup>3</sup>",
+       "text": "volume of water in the measuring cylinder = 24 cm3"
       },
       {
        "type": "text",
@@ -248,10 +248,9 @@
        "text": "Calculate the volume of one drop of water."
       },
       {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "volume of one drop of water =",
-       "unit": "cm3"
+       "type": "text",
+       "html": "volume of <b>one</b> drop of water = …… cm<sup>3</sup>",
+       "text": "volume of one drop of water = …… cm3"
       },
       {
        "type": "marks",
@@ -350,7 +349,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "density of the plastic is"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "evidence"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -375,5 +383,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

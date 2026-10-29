@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    208.4,
-    392.2,
+    208.0,
+    391.5,
     386.6,
-    548.2
+    548.5
    ],
    "id": "0625_2025MJ_11_q20_figA",
    "caption": null,
@@ -51,9 +51,9 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
-    580.7,
-    271.2,
+    67.5,
+    580.5,
+    271.5,
     692.0
    ],
    "id": "0625_2025MJ_11_q20_figB",
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "What are the correct labels for X and Y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>A</b>",
-     "amplitude",
-     "wavelength"
-    ],
-    [
-     "<b>B</b>",
-     "wavefront",
-     "wavelength"
-    ],
-    [
-     "<b>C</b>",
-     "amplitude",
-     "wavefront"
-    ],
-    [
-     "<b>D</b>",
-     "wavefront",
-     "amplitude"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_11_q20_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "amplitude wavelength"
+    },
+    {
+     "label": "B",
+     "html": "wavefront wavelength"
+    },
+    {
+     "label": "C",
+     "html": "amplitude wavefront"
+    },
+    {
+     "label": "D",
+     "html": "wavefront amplitude"
+    }
+   ]
   }
  ]
 }

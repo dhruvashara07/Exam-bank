@@ -51,10 +51,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    271.9,
-    496.6,
-    383.2
+    67.5,
+    271.5,
+    497.0,
+    383.5
    ],
    "id": "0625_2024MJ_22_q16_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p22/q16/figures/0625_2024MJ_22_q16_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p22/q16/figures/0625_2024MJ_22_q16_figB",
     "url": null,
-    "kb": 38.4
+    "kb": 38.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,35 +137,30 @@
    "text": "Which row correctly compares the decrease in internal energy and the initial rate of cooling for each sample?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "decrease in internal energy",
-     "initial rate of cooling"
-    ],
-    [
-     "<b>A</b>",
-     "X loses more internal energy than Y",
-     "X cools down faster than Y"
-    ],
-    [
-     "<b>B</b>",
-     "Y loses more internal energy than X",
-     "Y cools down faster than X"
-    ],
-    [
-     "<b>C</b>",
-     "X and Y lose the same quantity of energy",
-     "X cools down faster than Y"
-    ],
-    [
-     "<b>D</b>",
-     "X and Y lose the same quantity of energy",
-     "Y cools down faster than X"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_22_q16_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "X loses more internal energy than Y X cools down faster than Y"
+    },
+    {
+     "label": "B",
+     "html": "Y loses more internal energy than X Y cools down faster than X"
+    },
+    {
+     "label": "C",
+     "html": "X and Y lose the same quantity of energy X cools down faster than Y"
+    },
+    {
+     "label": "D",
+     "html": "X and Y lose the same quantity of energy Y cools down faster than X"
+    }
+   ]
   }
  ]
 }

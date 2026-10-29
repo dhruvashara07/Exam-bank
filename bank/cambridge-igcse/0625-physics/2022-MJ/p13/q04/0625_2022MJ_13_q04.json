@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    332.4,
+    67.5,
+    332.0,
     261.5,
-    457.9
+    458.0
    ],
    "id": "0625_2022MJ_13_q04_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p13/q04/figures/0625_2022MJ_13_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p13/q04/figures/0625_2022MJ_13_q04_figA",
     "url": null,
-    "kb": 25.9
+    "kb": 25.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -112,40 +113,30 @@
    "text": "Which row gives a possible result?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass of",
-     "weight of"
-    ],
-    [
-     "",
-     "object P",
-     "object Q"
-    ],
-    [
-     "<b>A</b>",
-     "10kg",
-     "10kg"
-    ],
-    [
-     "<b>B</b>",
-     "10kg",
-     "10N"
-    ],
-    [
-     "<b>C</b>",
-     "10N",
-     "10kg"
-    ],
-    [
-     "<b>D</b>",
-     "10N",
-     "10N"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_13_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "10kg 10kg"
+    },
+    {
+     "label": "B",
+     "html": "10kg 10N"
+    },
+    {
+     "label": "C",
+     "html": "10N 10kg"
+    },
+    {
+     "label": "D",
+     "html": "10N 10N"
+    }
+   ]
   }
  ]
 }

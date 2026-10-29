@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    279.2,
-    562.5,
-    316.2,
-    588.5
+    67.5,
+    620.5,
+    259.0,
+    746.0
    ],
    "id": "0625_2020ON_22_q38_figA",
    "caption": null,
@@ -45,26 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p22/q38/figures/0625_2020ON_22_q38_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p22/q38/figures/0625_2020ON_22_q38_figA",
     "url": null,
-    "kb": 6.9
-   }
-  },
-  {
-   "page": 14,
-   "bbox": [
-    67.7,
-    620.5,
-    258.7,
-    746.0
-   ],
-   "id": "0625_2020ON_22_q38_figB",
-   "caption": null,
-   "part": "",
-   "alt": "",
-   "svg": {
-    "file": "bank/cambridge-igcse/0625-physics/2020-ON/p22/q38/figures/0625_2020ON_22_q38_figB.svg",
-    "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p22/q38/figures/0625_2020ON_22_q38_figB",
-    "url": null,
-    "kb": 18.7
+    "kb": 18.6
    }
   }
  ],
@@ -109,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -116,50 +98,35 @@
    "text": "The symbol represents a nucleus of zinc."
   },
   {
-   "type": "figure",
-   "id": "0625_2020ON_22_q38_figA",
-   "caption": null
-  },
-  {
    "type": "text",
    "html": "Which row gives the numbers of protons and neutrons in this nucleus?",
    "text": "Which row gives the numbers of protons and neutrons in this nucleus?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "number of",
-     "number of"
-    ],
-    [
-     "",
-     "protons",
-     "neutrons"
-    ],
-    [
-     "<b>A</b>",
-     "30",
-     "38"
-    ],
-    [
-     "<b>B</b>",
-     "30",
-     "68"
-    ],
-    [
-     "<b>C</b>",
-     "38",
-     "30"
-    ],
-    [
-     "<b>D</b>",
-     "38",
-     "68"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020ON_22_q38_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "30 38"
+    },
+    {
+     "label": "B",
+     "html": "30 68"
+    },
+    {
+     "label": "C",
+     "html": "38 30"
+    },
+    {
+     "label": "D",
+     "html": "38 68"
+    }
+   ]
   }
  ]
 }

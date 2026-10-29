@@ -33,7 +33,7 @@
    "page": 4,
    "bbox": [
     157.7,
-    110.5,
+    110.0,
     437.3,
     175.7
    ],
@@ -51,10 +51,10 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    234.2,
+    67.5,
+    234.0,
     291.5,
-    359.7
+    360.0
    ],
    "id": "0625_2022ON_22_q05_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p22/q05/figures/0625_2022ON_22_q05_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p22/q05/figures/0625_2022ON_22_q05_figB",
     "url": null,
-    "kb": 22.9
+    "kb": 22.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,40 +137,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "total moment",
-     "total moment"
-    ],
-    [
-     "",
-     "about M",
-     "about N"
-    ],
-    [
-     "<b>A</b>",
-     "is clockwise",
-     "is anticlockwise"
-    ],
-    [
-     "<b>B</b>",
-     "is clockwise",
-     "is zero"
-    ],
-    [
-     "<b>C</b>",
-     "is zero",
-     "is clockwise"
-    ],
-    [
-     "<b>D</b>",
-     "is zero",
-     "is zero"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_22_q05_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "is clockwise is anticlockwise"
+    },
+    {
+     "label": "B",
+     "html": "is clockwise is zero"
+    },
+    {
+     "label": "C",
+     "html": "is zero is clockwise"
+    },
+    {
+     "label": "D",
+     "html": "is zero is zero"
+    }
+   ]
   }
  ]
 }

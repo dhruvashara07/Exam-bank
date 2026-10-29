@@ -9,10 +9,10 @@
    "caption": "Fig. 9.1",
    "page": 14,
    "bbox": [
-    254.8,
-    85.3,
+    254.5,
+    84.5,
     340.5,
-    157.0
+    155.5
    ],
    "id": "0625_2020FM_42_q09a_fig9-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Table 9.1",
    "page": 14,
    "bbox": [
-    92.0,
-    213.3,
-    548.4,
-    354.8
+    239.0,
+    217.0,
+    356.0,
+    312.5
    ],
    "id": "0625_2020FM_42_q09b_table9-1",
    "part": "(b)",
@@ -40,17 +40,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-FM/p42/q09/figures/0625_2020FM_42_q09b_table9-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-FM/p42/q09/figures/0625_2020FM_42_q09b_table9-1",
     "url": null,
-    "kb": 27.9
+    "kb": 12.8
    }
   },
   {
    "caption": "Fig. 9.2",
    "page": 14,
    "bbox": [
-    111.7,
-    385.6,
-    483.6,
-    509.7
+    112.0,
+    386.0,
+    483.0,
+    508.0
    ],
    "id": "0625_2020FM_42_q09c_fig9-2",
    "part": "(c)",
@@ -59,17 +59,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-FM/p42/q09/figures/0625_2020FM_42_q09c_fig9-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-FM/p42/q09/figures/0625_2020FM_42_q09c_fig9-2",
     "url": null,
-    "kb": 9.9
+    "kb": 9.8
    }
   },
   {
    "caption": "Table 9.2",
    "page": 14,
    "bbox": [
-    181.1,
-    540.0,
-    414.2,
-    684.1
+    181.0,
+    543.5,
+    414.5,
+    684.5
    ],
    "id": "0625_2020FM_42_q09c_table9-2",
    "part": "(c)",
@@ -233,25 +233,13 @@
      "caption": "Table 9.1"
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "input",
-       "output"
-      ],
-      [
-       "0",
-       "1"
-      ],
-      [
-       "1",
-       "0"
-      ]
-     ]
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
     },
     {
-     "type": "answer",
-     "kind": "lines"
+     "type": "marks",
+     "value": 1
     }
    ]
   },
@@ -331,44 +319,9 @@
      "text": "Complete the truth table in Table 9.2 for this circuit for all possible combinations of input."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "A",
-       "B",
-       "C",
-       "D",
-       "E"
-      ],
-      [
-       "",
-       "",
-       "1",
-       "1",
-       ""
-      ],
-      [
-       "",
-       "",
-       "1",
-       "0",
-       ""
-      ],
-      [
-       "",
-       "",
-       "1",
-       "0",
-       ""
-      ],
-      [
-       "",
-       "",
-       "0",
-       "0",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2020FM_42_q09c_table9-2",
+     "caption": "Table 9.2"
     },
     {
      "type": "marks",
@@ -393,5 +346,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

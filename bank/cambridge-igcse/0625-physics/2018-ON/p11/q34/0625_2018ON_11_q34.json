@@ -32,8 +32,8 @@
   {
    "page": 14,
    "bbox": [
-    67.9,
-    451.6,
+    169.3,
+    478.9,
     426.1,
     599.3
    ],
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-ON/p11/q34/figures/0625_2018ON_11_q34_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-ON/p11/q34/figures/0625_2018ON_11_q34_figA",
     "url": null,
-    "kb": 25.5
+    "kb": 16.4
    }
   },
   {
    "page": 14,
    "bbox": [
-    67.4,
-    645.2,
-    278.9,
-    770.8
+    67.0,
+    645.0,
+    279.0,
+    771.0
    ],
    "id": "0625_2018ON_11_q34_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-ON/p11/q34/figures/0625_2018ON_11_q34_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-ON/p11/q34/figures/0625_2018ON_11_q34_figB",
     "url": null,
-    "kb": 17.5
+    "kb": 17.2
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "Either a fuse or a circuit-breaker can be used to protect electrical cables from large currents that",
-   "text": "Either a fuse or a circuit-breaker can be used to protect electrical cables from large currents that"
+   "html": "Either a fuse or a circuit-breaker can be used to protect electrical cables from large currents that could cause overheating.",
+   "text": "Either a fuse or a circuit-breaker can be used to protect electrical cables from large currents that could cause overheating."
   },
   {
    "type": "figure",
@@ -126,40 +127,30 @@
    "text": "When a fuse is used, where should it be connected, and when a circuit-breaker is used, where should it be connected?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "position",
-     "position of"
-    ],
-    [
-     "",
-     "of fuse",
-     "circuit-breaker"
-    ],
-    [
-     "<b>A</b>",
-     "X",
-     "X"
-    ],
-    [
-     "<b>B</b>",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>C</b>",
-     "Y",
-     "X"
-    ],
-    [
-     "<b>D</b>",
-     "Y",
-     "Y"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018ON_11_q34_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "X X"
+    },
+    {
+     "label": "B",
+     "html": "X Y"
+    },
+    {
+     "label": "C",
+     "html": "Y X"
+    },
+    {
+     "label": "D",
+     "html": "Y Y"
+    }
+   ]
   }
  ]
 }

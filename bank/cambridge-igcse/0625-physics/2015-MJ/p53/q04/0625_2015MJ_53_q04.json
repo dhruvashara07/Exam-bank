@@ -33,10 +33,10 @@
    "caption": "Fig. 4.1",
    "page": 10,
    "bbox": [
-    102.4,
-    101.2,
-    506.4,
-    258.7
+    103.0,
+    118.5,
+    491.0,
+    259.0
    ],
    "id": "0625_2015MJ_53_q04_fig4-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 4.1",
    "page": 10,
    "bbox": [
-    223.6,
+    223.5,
     385.5,
-    371.6,
-    481.9
+    372.0,
+    482.0
    ],
    "id": "0625_2015MJ_53_q04aiii_table4-1",
    "part": "(a)(iii)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 4.2",
    "page": 11,
    "bbox": [
-    97.3,
-    91.9,
-    498.6,
-    199.7
+    98.0,
+    92.5,
+    498.0,
+    200.0
    ],
    "id": "0625_2015MJ_53_q04ci_fig4-2",
    "part": "(c)(i)",
@@ -90,10 +90,10 @@
    "caption": "Table 4.2",
    "page": 11,
    "bbox": [
-    188.2,
+    188.0,
     287.5,
-    407.1,
-    383.9
+    407.0,
+    384.0
    ],
    "id": "0625_2015MJ_53_q04civ_table4-2",
    "part": "(c)(iv)",
@@ -241,23 +241,6 @@
        "type": "figure",
        "id": "0625_2015MJ_53_q04aiii_table4-1",
        "caption": "Table 4.1"
-      },
-      {
-       "type": "table",
-       "rows": [
-        [
-         "<i>D</i> / cm",
-         "<i>f</i> / cm"
-        ],
-        [
-         "20",
-         ""
-        ],
-        [
-         "40",
-         ""
-        ]
-       ]
       },
       {
        "type": "marks",
@@ -592,26 +575,6 @@
        "caption": "Table 4.2"
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>u</i> / cm",
-         "<i>v</i> / cm",
-         "<i>f</i> / cm"
-        ],
-        [
-         "20.0",
-         "",
-         ""
-        ],
-        [
-         "30.0",
-         "",
-         ""
-        ]
-       ]
-      },
-      {
        "type": "marks",
        "value": 3
       }
@@ -690,7 +653,7 @@
      "content": [
       {
        "type": "text",
-       "html": "For each value of <i>u</i>, calculate and record in the table the focal length <i>f</i>, using your results from the table and the equation <i>f</i> = \\(\\frac{<i>uv</i>}{(<i>u</i> + <i>v</i>)}\\) .",
+       "html": "For each value of <i>u</i>, calculate and record in the table the focal length <i>f</i>, using your results from the table and the equation <i>f</i> = \\(\\frac{\\text{uv}}{(u + v)}\\) .",
        "text": "For each value of u, calculate and record in the table the focal length f, using your results from the table and the equation f = (uv)/((u + v)) ."
       }
      ]
@@ -875,7 +838,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -950,7 +922,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -977,6 +958,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

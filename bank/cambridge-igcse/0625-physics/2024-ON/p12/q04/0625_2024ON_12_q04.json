@@ -32,9 +32,9 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    84.6,
-    542.4,
+    67.5,
+    84.5,
+    542.5,
     196.0
    ],
    "id": "0625_2024ON_12_q04_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p12/q04/figures/0625_2024ON_12_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p12/q04/figures/0625_2024ON_12_q04_figA",
     "url": null,
-    "kb": 39.1
+    "kb": 39.0
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row contains two correct statements about the mass and the weight of an object?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass of an object",
-     "weight of an object"
-    ],
-    [
-     "<b>A</b>",
-     "is measured using a measuring cylinder",
-     "is measured using a balance"
-    ],
-    [
-     "<b>B</b>",
-     "is the gravitational force exerted on the object",
-     "is the quantity of matter in the object"
-    ],
-    [
-     "<b>C</b>",
-     "is measured in newtons",
-     "is measured in kilograms"
-    ],
-    [
-     "<b>D</b>",
-     "is the same everywhere",
-     "can vary from place to place"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_12_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "is measured using a measuring cylinder is measured using a balance"
+    },
+    {
+     "label": "B",
+     "html": "is the gravitational force exerted on the object is the quantity of matter in the object"
+    },
+    {
+     "label": "C",
+     "html": "is measured in newtons is measured in kilograms"
+    },
+    {
+     "label": "D",
+     "html": "is the same everywhere can vary from place to place"
+    }
+   ]
   }
  ]
 }

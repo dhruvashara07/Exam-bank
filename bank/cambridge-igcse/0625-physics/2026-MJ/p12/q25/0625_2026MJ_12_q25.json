@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
+    67.5,
     527.5,
-    399.8,
-    638.9
+    400.0,
+    639.0
    ],
    "id": "0625_2026MJ_12_q25_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p12/q25/figures/0625_2026MJ_12_q25_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p12/q25/figures/0625_2026MJ_12_q25_figA",
     "url": null,
-    "kb": 34.9
+    "kb": 34.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,40 +108,30 @@
    "text": "Which property gives possible correct information for both the audible sound wave and the ultrasound wave?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>property</b>",
-     "<b>audible sound</b>",
-     "<b>ultrasound</b>"
-    ],
-    [
-     "<b>A</b>",
-     "frequency",
-     "3.0kHz",
-     "30kHz"
-    ],
-    [
-     "<b>B</b>",
-     "speed",
-     "330m/s",
-     "3300m/s"
-    ],
-    [
-     "<b>C</b>",
-     "wavelength",
-     "1.0m",
-     "10m"
-    ],
-    [
-     "<b>D</b>",
-     "wave type",
-     "longitudinal",
-     "transverse"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_12_q25_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "frequency 3.0kHz 30kHz"
+    },
+    {
+     "label": "B",
+     "html": "speed 330m/s 3300m/s"
+    },
+    {
+     "label": "C",
+     "html": "wavelength 1.0m 10m"
+    },
+    {
+     "label": "D",
+     "html": "wave type longitudinal transverse"
+    }
+   ]
   }
  ]
 }

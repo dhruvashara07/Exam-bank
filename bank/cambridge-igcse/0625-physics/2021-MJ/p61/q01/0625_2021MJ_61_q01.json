@@ -33,10 +33,10 @@
    "caption": "Table 1.1",
    "page": 3,
    "bbox": [
-    96.1,
-    58.0,
-    499.2,
-    224.9
+    96.0,
+    61.5,
+    499.5,
+    225.0
    ],
    "id": "0625_2021MJ_61_q01biii_table1-1",
    "part": "(b)(iii)",
@@ -122,14 +122,14 @@
      "text": "120.0 cm"
     },
     {
-     "type": "text",
-     "html": "This distance <i>d</i> remains constant throughout the experiment. He adjusts the length <i>l </i> of the pendulum to 70.0 cm. Calculate the distance <i>x</i> between the centre of the pendulum bob and the floor. Record the value of <i>x</i> in the first row of Table 1.1.",
-     "text": "This distance d remains constant throughout the experiment. He adjusts the length l of the pendulum to 70.0 cm. Calculate the distance x between the centre of the pendulum bob and the floor. Record the value of x in the first row of Table 1.1."
-    },
-    {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "d ="
+    },
+    {
+     "type": "text",
+     "html": "This distance <i>d</i> remains constant throughout the experiment. He adjusts the length <i>l </i> of the pendulum to 70.0 cm. Calculate the distance <i>x</i> between the centre of the pendulum bob and the floor. Record the value of <i>x</i> in the first row of Table 1.1.",
+     "text": "This distance d remains constant throughout the experiment. He adjusts the length l of the pendulum to 70.0 cm. Calculate the distance x between the centre of the pendulum bob and the floor. Record the value of x in the first row of Table 1.1."
     },
     {
      "type": "marks",
@@ -394,45 +394,9 @@
        "value": 1
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>x</i> /",
-         "<i>t</i> /",
-         "<i>T</i> /",
-         "<sup>2</sup> <i>T</i> /"
-        ],
-        [
-         "",
-         "16.7",
-         "",
-         ""
-        ],
-        [
-         "45.0",
-         "17.3",
-         "1.73",
-         "2.99"
-        ],
-        [
-         "40.0",
-         "17.9",
-         "1.79",
-         "3.20"
-        ],
-        [
-         "35.0",
-         "18.4",
-         "1.84",
-         "3.39"
-        ],
-        [
-         "30.0",
-         "19.0",
-         "1.90",
-         "3.61"
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2021MJ_61_q01biii_table1-1",
+       "caption": "Table 1.1"
       }
      ]
     }
@@ -587,7 +551,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "reason"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -686,6 +659,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

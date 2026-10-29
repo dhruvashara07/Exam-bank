@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    112.8,
-    85.3,
+    112.0,
+    85.0,
     482.5,
-    298.6
+    299.0
    ],
    "id": "0625_2020MJ_13_q11_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p13/q11/figures/0625_2020MJ_13_q11_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p13/q11/figures/0625_2020MJ_13_q11_figA",
     "url": null,
-    "kb": 54.9
+    "kb": 54.3
    }
   },
   {
    "page": 6,
    "bbox": [
-    67.7,
+    67.5,
     430.5,
-    305.4,
-    570.1
+    305.5,
+    570.5
    ],
    "id": "0625_2020MJ_13_q11_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p13/q11/figures/0625_2020MJ_13_q11_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p13/q11/figures/0625_2020MJ_13_q11_figB",
     "url": null,
-    "kb": 25.5
+    "kb": 25.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -141,35 +142,30 @@
    "text": "How much useful work against gravity is done by the lift, and how much useful power is developed by the lift?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "useful work done against gravity by lift",
-     "useful power developed by lift"
-    ],
-    [
-     "<b>A</b>",
-     "more than <i>W</i>",
-     "less than <i>P</i>"
-    ],
-    [
-     "<b>B</b>",
-     "more than <i>W</i>",
-     "<i>P</i>"
-    ],
-    [
-     "<b>C</b>",
-     "<i>W</i>",
-     "less than <i>P</i>"
-    ],
-    [
-     "<b>D</b>",
-     "<i>W</i>",
-     "<i>P</i>"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020MJ_13_q11_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "more than W less than P"
+    },
+    {
+     "label": "B",
+     "html": "more than W P"
+    },
+    {
+     "label": "C",
+     "html": "W less than P"
+    },
+    {
+     "label": "D",
+     "html": "W P"
+    }
+   ]
   }
  ]
 }

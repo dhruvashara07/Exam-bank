@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    67.6,
-    458.1,
-    313.4,
-    597.9
+    67.5,
+    458.0,
+    313.5,
+    598.0
    ],
    "id": "0625_2017FM_12_q31_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-FM/p12/q31/figures/0625_2017FM_12_q31_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-FM/p12/q31/figures/0625_2017FM_12_q31_figA",
     "url": null,
-    "kb": 21.6
+    "kb": 21.3
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,45 +103,35 @@
    "text": "From which of these devices is all this energy eventually transferred to the surroundings?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "air- conditioning unit",
-     "lamp",
-     "electric fire"
-    ],
-    [
-     "A",
-     "\u0013",
-     "\u0013",
-     "\u0013"
-    ],
-    [
-     "B",
-     "\u0013",
-     "\u0017",
-     "\u0013"
-    ],
-    [
-     "C",
-     "\u0017",
-     "\u0013",
-     "\u0013"
-    ],
-    [
-     "D",
-     "\u0017",
-     "\u0017",
-     "\u0013"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017FM_12_q31_figA",
+   "caption": null
   },
   {
    "type": "text",
    "html": "key \u0013= all energy transferred to surroundings \u0017= not all energy transferred to surroundings",
    "text": "key \u0013= all energy transferred to surroundings \u0017= not all energy transferred to surroundings"
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "\u0013 \u0013 \u0013 key"
+    },
+    {
+     "label": "B",
+     "html": "\u0013 \u0017 \u0013 \u0013= all energy transferred to surroundings"
+    },
+    {
+     "label": "C",
+     "html": "\u0017 \u0013 \u0013 \u0017= not all energy transferred to surroundings"
+    },
+    {
+     "label": "D",
+     "html": "\u0017 \u0017 \u0013"
+    }
+   ]
   }
  ]
 }

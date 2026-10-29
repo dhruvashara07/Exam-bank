@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    421.7,
-    292.9,
-    546.7
+    67.5,
+    421.5,
+    293.0,
+    547.0
    ],
    "id": "0625_2020ON_12_q17_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p12/q17/figures/0625_2020ON_12_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p12/q17/figures/0625_2020ON_12_q17_figA",
     "url": null,
-    "kb": 23.6
+    "kb": 23.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which sample has the highest thermal capacity?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "sample",
-     "temperature rise/°C"
-    ],
-    [
-     "<b>A</b>",
-     "aluminium",
-     "6.0"
-    ],
-    [
-     "<b>B</b>",
-     "copper",
-     "8.0"
-    ],
-    [
-     "<b>C</b>",
-     "mercury",
-     "10.0"
-    ],
-    [
-     "<b>D</b>",
-     "water",
-     "5.0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020ON_12_q17_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "aluminium 6.0"
+    },
+    {
+     "label": "B",
+     "html": "copper 8.0"
+    },
+    {
+     "label": "C",
+     "html": "mercury 10.0"
+    },
+    {
+     "label": "D",
+     "html": "water 5.0"
+    }
+   ]
   }
  ]
 }

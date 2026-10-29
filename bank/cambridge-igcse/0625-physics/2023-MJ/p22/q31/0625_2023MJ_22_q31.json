@@ -32,8 +32,8 @@
   {
    "page": 11,
    "bbox": [
-    224.5,
-    210.7,
+    224.0,
+    210.5,
     372.5,
     335.0
    ],
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p22/q31/figures/0625_2023MJ_22_q31_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p22/q31/figures/0625_2023MJ_22_q31_figA",
     "url": null,
-    "kb": 7.7
+    "kb": 7.6
    }
   },
   {
    "page": 11,
    "bbox": [
-    67.7,
-    367.2,
-    322.2,
-    492.7
+    67.5,
+    367.0,
+    322.5,
+    493.0
    ],
    "id": "0625_2023MJ_22_q31_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p22/q31/figures/0625_2023MJ_22_q31_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p22/q31/figures/0625_2023MJ_22_q31_figB",
     "url": null,
-    "kb": 24.1
+    "kb": 24.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "direction of field",
-     "relative strength of field"
-    ],
-    [
-     "<b>A</b>",
-     "X",
-     "greater at P than Q"
-    ],
-    [
-     "<b>B</b>",
-     "Y",
-     "greater at P than Q"
-    ],
-    [
-     "<b>C</b>",
-     "X",
-     "greater at Q than P"
-    ],
-    [
-     "<b>D</b>",
-     "Y",
-     "greater at Q than P"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_22_q31_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "X greater at P than Q"
+    },
+    {
+     "label": "B",
+     "html": "Y greater at P than Q"
+    },
+    {
+     "label": "C",
+     "html": "X greater at Q than P"
+    },
+    {
+     "label": "D",
+     "html": "Y greater at Q than P"
+    }
+   ]
   }
  ]
 }

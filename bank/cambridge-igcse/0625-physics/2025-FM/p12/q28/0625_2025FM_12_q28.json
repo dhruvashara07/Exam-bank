@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    226.1,
-    210.1,
-    368.7,
-    244.9
+    225.5,
+    209.5,
+    369.5,
+    245.5
    ],
    "id": "0625_2025FM_12_q28_figA",
    "caption": null,
@@ -51,9 +51,9 @@
   {
    "page": 11,
    "bbox": [
-    189.1,
-    291.5,
-    405.3,
+    188.5,
+    291.0,
+    406.0,
     340.6
    ],
    "id": "0625_2025FM_12_q28_figB",
@@ -70,10 +70,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
+    67.5,
     374.0,
-    227.8,
-    485.4
+    228.0,
+    485.5
    ],
    "id": "0625_2025FM_12_q28_figC",
    "caption": null,
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-FM/p12/q28/figures/0625_2025FM_12_q28_figC.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-FM/p12/q28/figures/0625_2025FM_12_q28_figC",
     "url": null,
-    "kb": 11.2
+    "kb": 11.0
    }
   }
  ],
@@ -128,6 +128,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -155,35 +156,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "pole X",
-     "pole P"
-    ],
-    [
-     "<b>A</b>",
-     "N",
-     "N"
-    ],
-    [
-     "<b>B</b>",
-     "N",
-     "S"
-    ],
-    [
-     "<b>C</b>",
-     "S",
-     "N"
-    ],
-    [
-     "<b>D</b>",
-     "S",
-     "S"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025FM_12_q28_figC",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "N N"
+    },
+    {
+     "label": "B",
+     "html": "N S"
+    },
+    {
+     "label": "C",
+     "html": "S N"
+    },
+    {
+     "label": "D",
+     "html": "S S"
+    }
+   ]
   }
  ]
 }

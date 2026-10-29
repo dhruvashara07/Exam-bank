@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    54.9,
-    120.7,
-    508.1,
-    263.6
+    55.0,
+    125.0,
+    507.5,
+    261.0
    ],
    "id": "0625_2019ON_51_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 1.1",
    "page": 2,
    "bbox": [
-    145.3,
-    413.8,
-    421.6,
-    576.8
+    145.0,
+    418.5,
+    421.5,
+    577.0
    ],
    "id": "0625_2019ON_51_q01a_table1-1",
    "part": "(a)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p51/q01/figures/0625_2019ON_51_q01a_table1-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p51/q01/figures/0625_2019ON_51_q01a_table1-1",
     "url": null,
-    "kb": 30.4
+    "kb": 30.3
    }
   }
  ],
@@ -148,50 +148,14 @@
      "items": [
       "In Table 1.1, record the distance <i>a</i> from the 50.0 cm mark to the pivot.",
       "In Table 1.1, record the distance <i>b</i> from the 90.0 cm mark to the pivot.",
-      "Calculate \\(\\frac{<i>a</i>}{<i>b</i>}\\). Record its value in Table 1.1.",
+      "Calculate \\(\\frac{a}{b}\\). Record its value in Table 1.1.",
       "Repeat the procedure using the loads labelled <b>1.2 N</b>, <b>1.0 N</b>, <b>0.8 N</b> and <b>0.5 N</b>."
      ]
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "Weight of load <b>P</b> / N",
-       "<i>a</i> / cm",
-       "<i>b</i> / cm",
-       "<i>a</i> <i>b</i>"
-      ],
-      [
-       "1.5",
-       "",
-       "",
-       ""
-      ],
-      [
-       "1.2",
-       "",
-       "",
-       ""
-      ],
-      [
-       "1.0",
-       "",
-       "",
-       ""
-      ],
-      [
-       "0.8",
-       "",
-       "",
-       ""
-      ],
-      [
-       "0.5",
-       "",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2019ON_51_q01a_table1-1",
+     "caption": "Table 1.1"
     },
     {
      "type": "marks",
@@ -261,7 +225,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of Weight of Load <b>P</b> / N (<i>y</i>-axis) against \\(\\frac{<i>a</i>}{<i>b</i>}\\) (<i>x</i>-axis). You do <b>not</b> need to begin your axes at the origin, (0,0).",
+     "html": "Plot a graph of Weight of Load <b>P</b> / N (<i>y</i>-axis) against \\(\\frac{a}{b}\\) (<i>x</i>-axis). You do <b>not</b> need to begin your axes at the origin, (0,0).",
      "text": "Plot a graph of Weight of Load P / N (y-axis) against (a)/(b) (x-axis). You do not need to begin your axes at the origin, (0,0)."
     },
     {
@@ -441,6 +405,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

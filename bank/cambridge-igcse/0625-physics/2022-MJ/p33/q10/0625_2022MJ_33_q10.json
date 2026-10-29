@@ -77,7 +77,21 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "3."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -178,6 +192,10 @@
        "prefix": "(i) the nucleon number"
       },
       {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
        "type": "marks",
        "value": 1
       }
@@ -246,6 +264,10 @@
        "prefix": "(ii) the proton number"
       },
       {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
        "type": "marks",
        "value": 1
       }
@@ -309,9 +331,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "the number of neutrons. ……",
+       "text": "the number of neutrons. ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(iii) the number of neutrons."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -388,14 +414,12 @@
    "content": [
     {
      "type": "text",
-     "html": "Complete the sentence:",
-     "text": "Complete the sentence:"
+     "html": "Complete the sentence: In a neutral atom, the number of protons is equal to the number of …… .",
+     "text": "Complete the sentence: In a neutral atom, the number of protons is equal to the number of …… ."
     },
     {
      "type": "answer",
-     "kind": "answer_line",
-     "prefix": "In a neutral atom, the number of protons is equal to the number of",
-     "unit": "."
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -420,5 +444,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    103.3,
-    83.2,
-    491.9,
-    499.6
+    103.5,
+    86.5,
+    491.5,
+    498.0
    ],
    "id": "0625_2023ON_31_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2",
    "page": 3,
    "bbox": [
-    216.5,
-    84.8,
-    378.8,
-    311.0
+    216.0,
+    84.5,
+    379.5,
+    309.5
    ],
    "id": "0625_2023ON_31_q01b_fig1-2",
    "part": "(b)",
@@ -369,29 +369,20 @@
      "text": "Fig. 1.2 shows the cyclist riding along a long straight road."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "",
-       "<b>W</b>",
-       ""
-      ],
-      [
-       "",
-       "<b>S</b> <b>N</b>",
-       ""
-      ],
-      [
-       "",
-       "<b>E</b>",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2023ON_31_q01b_fig1-2",
+     "caption": "Fig. 1.2"
     },
     {
      "type": "text",
      "html": "The speed of the cyclist is 15 m / s. Determine the velocity of the cyclist.",
      "text": "The speed of the cyclist is 15 m / s. Determine the velocity of the cyclist."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "velocity =",
+     "unit": "m / s"
     },
     {
      "type": "answer",
@@ -422,6 +413,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

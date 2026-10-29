@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    111.8,
-    113.0,
-    486.2,
-    308.5
+    111.5,
+    116.0,
+    485.5,
+    307.0
    ],
    "id": "0625_2021FM_52_q01_fig1-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-FM/p52/q01/figures/0625_2021FM_52_q01_fig1-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-FM/p52/q01/figures/0625_2021FM_52_q01_fig1-1",
     "url": null,
-    "kb": 25.1
+    "kb": 25.0
    }
   },
   {
    "caption": "Fig. 1.2",
    "page": 2,
    "bbox": [
-    78.7,
-    666.8,
-    514.0,
-    783.0
+    79.0,
+    670.0,
+    513.5,
+    781.5
    ],
    "id": "0625_2021FM_52_q01b_fig1-2",
    "part": "(b)",
@@ -71,10 +71,10 @@
    "caption": "Table 1.1",
    "page": 3,
    "bbox": [
-    179.7,
-    123.0,
-    415.6,
-    293.0
+    179.5,
+    126.5,
+    415.5,
+    293.5
    ],
    "id": "0625_2021FM_52_q01b_table1-1",
    "part": "(b)",
@@ -267,39 +267,9 @@
      "text": "Measure, and record in Table 1.1, the time t for 5 complete oscillations of the metre rule. Repeat this procedure for d values of 30.0 cm, 40.0 cm, 50.0 cm and 60.0 cm. For each value, the threads must be at equal distances either side of the 50.0 cm mark on the metre rule."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>d</i> / cm",
-       "<i>t</i> / s",
-       "1 1 <i>T</i> /s"
-      ],
-      [
-       "20.0",
-       "",
-       ""
-      ],
-      [
-       "30.0",
-       "",
-       ""
-      ],
-      [
-       "40.0",
-       "",
-       ""
-      ],
-      [
-       "50.0",
-       "",
-       ""
-      ],
-      [
-       "60.0",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2021FM_52_q01b_table1-1",
+     "caption": "Table 1.1"
     },
     {
      "type": "marks",
@@ -366,7 +336,7 @@
    "content": [
     {
      "type": "text",
-     "html": "For each value of the distance <i>d</i>, calculate and record in Table 1.1, the value of \\(\\frac{1}{<i>T</i>}\\) where <i>T</i> is the time for 1 oscillation of the metre rule. Use your values of time <i>t</i> from Table 1.1 and the equation \\(\\frac{1}{<i>T</i>}\\) = 5 .",
+     "html": "For each value of the distance <i>d</i>, calculate and record in Table 1.1, the value of \\(\\frac{1}{T}\\) where <i>T</i> is the time for 1 oscillation of the metre rule. Use your values of time <i>t</i> from Table 1.1 and the equation \\(\\frac{1}{T}\\) = 5 .",
      "text": "For each value of the distance d, calculate and record in Table 1.1, the value of (1)/(T) where T is the time for 1 oscillation of the metre rule. Use your values of time t from Table 1.1 and the equation (1)/(T) = 5 ."
     },
     {
@@ -447,7 +417,7 @@
     },
     {
      "type": "text",
-     "html": "Plot a graph of distance <i>d</i> / cm (<i>y</i>-axis) against \\(\\frac{1}{<i>T</i>}\\) \\(\\frac{1}{s}\\) (<i>x</i>-axis).",
+     "html": "Plot a graph of distance <i>d</i> / cm (<i>y</i>-axis) against \\(\\frac{1}{T}\\) \\(\\frac{1}{s}\\) (<i>x</i>-axis).",
      "text": "Plot a graph of distance d / cm (y-axis) against (1)/(T) (1)/(s) (x-axis)."
     },
     {
@@ -712,6 +682,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -32,8 +32,8 @@
   {
    "page": 14,
    "bbox": [
-    67.9,
-    98.9,
+    68.0,
+    98.5,
     352.5,
     195.0
    ],
@@ -51,10 +51,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
+    67.5,
     227.0,
-    369.1,
-    352.6
+    369.5,
+    352.5
    ],
    "id": "0625_2026MJ_22_q35_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p22/q35/figures/0625_2026MJ_22_q35_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p22/q35/figures/0625_2026MJ_22_q35_figB",
     "url": null,
-    "kb": 39.1
+    "kb": 38.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,46 +127,30 @@
    "text": "Which row shows the deflections of the different particles?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>deflection of</b>",
-     "<b>deflection of</b>",
-     "<b>deflection of</b>"
-    ],
-    [
-     "",
-     "α<b>-particles</b>",
-     "β<b>-particles</b>",
-     "γ<b>-rays</b>"
-    ],
-    [
-     "<b>A</b>",
-     "towards X",
-     "towards Y",
-     "undeflected"
-    ],
-    [
-     "<b>B</b>",
-     "towards Y",
-     "towards X",
-     "undeflected"
-    ],
-    [
-     "<b>C</b>",
-     "undeflected",
-     "undeflected",
-     "towards X"
-    ],
-    [
-     "<b>D</b>",
-     "undeflected",
-     "towards X",
-     "towards Y"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_22_q35_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "towards X towards Y undeflected"
+    },
+    {
+     "label": "B",
+     "html": "towards Y towards X undeflected"
+    },
+    {
+     "label": "C",
+     "html": "undeflected undeflected towards X"
+    },
+    {
+     "label": "D",
+     "html": "undeflected towards X towards Y"
+    }
+   ]
   }
  ]
 }

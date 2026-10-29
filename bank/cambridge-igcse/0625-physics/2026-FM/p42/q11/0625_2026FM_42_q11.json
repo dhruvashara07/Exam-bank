@@ -100,7 +100,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "r is"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "T is"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -297,8 +306,8 @@
    "content": [
     {
      "type": "text",
-     "html": "The average orbital speed of Saturn is 9600m/s.",
-     "text": "The average orbital speed of Saturn is 9600m/s."
+     "html": "The average orbital speed of Saturn is 9600 m / s.",
+     "text": "The average orbital speed of Saturn is 9600 m / s."
     }
    ]
   }
@@ -320,6 +329,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -33,10 +33,10 @@
    "caption": "Fig. 5.1",
    "page": 10,
    "bbox": [
-    137.8,
-    117.9,
-    458.1,
-    220.1
+    138.5,
+    118.5,
+    457.5,
+    220.5
    ],
    "id": "0625_2016MJ_61_q05_fig5-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 5.1",
    "page": 11,
    "bbox": [
-    114.9,
-    101.3,
-    480.3,
-    170.9
+    115.0,
+    101.0,
+    480.5,
+    171.0
    ],
    "id": "0625_2016MJ_61_q05c_table5-1",
    "part": "(c)",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p61/q05/figures/0625_2016MJ_61_q05c_table5-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p61/q05/figures/0625_2016MJ_61_q05c_table5-1",
     "url": null,
-    "kb": 13.2
+    "kb": 13.1
    }
   },
   {
    "caption": "Fig. 5.2",
    "page": 11,
    "bbox": [
-    117.0,
-    434.0,
-    524.2,
-    536.1
+    117.5,
+    434.5,
+    523.5,
+    536.5
    ],
    "id": "0625_2016MJ_61_q05d_fig5-2",
    "part": "(d)",
@@ -162,7 +162,18 @@
     {
      "type": "list",
      "items": [
-      "measure the distance <i>u </i>from the illuminated object to the centre of the lens,",
+      "measure the distance <i>u </i>from the illuminated object to the centre of the lens,"
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "u =",
+     "unit": "mm"
+    },
+    {
+     "type": "list",
+     "items": [
       "measure the distance <i>v </i>from the screen to the centre of the lens."
      ]
     },
@@ -268,7 +279,18 @@
       {
        "type": "list",
        "items": [
-        "Calculate the actual distance <i>U </i>from the illuminated object to the centre of the lens.",
+        "Calculate the actual distance <i>U </i>from the illuminated object to the centre of the lens."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "U =",
+       "unit": "mm"
+      },
+      {
+       "type": "list",
+       "items": [
         "Calculate the actual distance <i>V </i>from the screen to the centre of the lens."
        ]
       },
@@ -344,8 +366,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a value <i>f</i><sub>1</sub> for the focal length of the lens using the equation <i>f</i><sub>1</sub> = \\(\\frac{<i>UV</i>}{(<i>U</i> + <i>V</i>)}\\).",
-       "text": "Calculate a value f1 for the focal length of the lens using the equation f1 = (UV)/((U + V))."
+       "html": "Calculate a value <i>f</i><sub>1</sub> for the focal length of the lens using the equation <i>f</i><sub>1</sub> = \\(\\frac{\\text{UV}}{(U + V )}\\) .",
+       "text": "Calculate a value f1 for the focal length of the lens using the equation f1 = (UV)/((U + V)) ."
       },
       {
        "type": "answer",
@@ -435,23 +457,6 @@
      "type": "figure",
      "id": "0625_2016MJ_61_q05c_table5-1",
      "caption": "Table 5.1"
-    },
-    {
-     "type": "table",
-     "rows": [
-      [
-       "",
-       "1",
-       "2",
-       "3"
-      ],
-      [
-       "focal length /mm",
-       "132",
-       "141",
-       "135"
-      ]
-     ]
     },
     {
      "type": "text",
@@ -545,6 +550,12 @@
      ]
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2f =",
+     "unit": "mm"
+    },
+    {
      "type": "text",
      "html": "The student sets up the apparatus as shown in Fig. 5.2. She adjusts both <i>x</i> and <i>y</i> to be 400 mm.",
      "text": "The student sets up the apparatus as shown in Fig. 5.2. She adjusts both x and y to be 400 mm."
@@ -563,13 +574,6 @@
      "type": "text",
      "html": "Discuss whether the student’s results confirm the statement in the book.",
      "text": "Discuss whether the student’s results confirm the statement in the book."
-    },
-    {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "2f =",
-     "unit": "mm",
-     "lines": 3
     },
     {
      "type": "marks",
@@ -642,7 +646,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -669,6 +682,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

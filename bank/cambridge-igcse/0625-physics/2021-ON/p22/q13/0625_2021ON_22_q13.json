@@ -32,9 +32,9 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    122.6,
-    329.3,
+    67.5,
+    122.5,
+    329.5,
     233.5
    ],
    "id": "0625_2021ON_22_q13_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p22/q13/figures/0625_2021ON_22_q13_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p22/q13/figures/0625_2021ON_22_q13_figA",
     "url": null,
-    "kb": 24.8
+    "kb": 24.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What happens to the average speed and what happens to the total kinetic energy of the gas molecules?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "average speed",
-     "total kinetic energy"
-    ],
-    [
-     "<b>A</b>",
-     "does not change",
-     "does not change"
-    ],
-    [
-     "<b>B</b>",
-     "does not change",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "does not change"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_22_q13_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "does not change does not change"
+    },
+    {
+     "label": "B",
+     "html": "does not change increases"
+    },
+    {
+     "label": "C",
+     "html": "increases does not change"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

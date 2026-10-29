@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    261.8,
-    451.8,
-    387.3
+    67.5,
+    261.5,
+    452.0,
+    387.5
    ],
    "id": "0625_2021MJ_12_q10_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which method has a correct description?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "method",
-     "energy source is renewable",
-     "emits carbon dioxide"
-    ],
-    [
-     "<b>A</b>",
-     "a hydroelectric power station",
-     "yes",
-     "no"
-    ],
-    [
-     "<b>B</b>",
-     "a coal-fired power station",
-     "no",
-     "no"
-    ],
-    [
-     "<b>C</b>",
-     "a wind turbine",
-     "no",
-     "yes"
-    ],
-    [
-     "<b>D</b>",
-     "a nuclear power station",
-     "yes",
-     "yes"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_12_q10_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "a hydroelectric power station yes no"
+    },
+    {
+     "label": "B",
+     "html": "a coal-fired power station no no"
+    },
+    {
+     "label": "C",
+     "html": "a wind turbine no yes"
+    },
+    {
+     "label": "D",
+     "html": "a nuclear power station yes yes"
+    }
+   ]
   }
  ]
 }

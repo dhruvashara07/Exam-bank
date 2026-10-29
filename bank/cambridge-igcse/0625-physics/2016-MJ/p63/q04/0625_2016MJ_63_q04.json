@@ -33,9 +33,9 @@
    "caption": "Fig. 4.1",
    "page": 10,
    "bbox": [
-    199.7,
-    115.9,
-    397.0,
+    199.0,
+    116.5,
+    397.5,
     302.0
    ],
    "id": "0625_2016MJ_63_q04_fig4-1",
@@ -52,10 +52,10 @@
    "caption": "Fig. 4.2",
    "page": 10,
    "bbox": [
-    209.3,
-    415.6,
-    385.4,
-    569.8
+    208.5,
+    415.0,
+    386.0,
+    570.0
    ],
    "id": "0625_2016MJ_63_q04b_fig4-2",
    "part": "(b)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 4.3",
    "page": 11,
    "bbox": [
-    110.1,
-    102.0,
-    484.7,
-    271.9
+    109.5,
+    101.5,
+    485.5,
+    272.0
    ],
    "id": "0625_2016MJ_63_q04c_fig4-3",
    "part": "(c)",
@@ -90,10 +90,10 @@
    "caption": "Table 4.1",
    "page": 11,
    "bbox": [
-    145.6,
-    320.7,
-    449.6,
-    454.1
+    145.5,
+    320.5,
+    449.5,
+    454.5
    ],
    "id": "0625_2016MJ_63_q04c_table4-1",
    "part": "(c)",
@@ -243,14 +243,14 @@
      "text": "Record the current I in the circuit, as shown on the ammeter in Fig. 4.2."
     },
     {
-     "type": "figure",
-     "id": "0625_2016MJ_63_q04b_fig4-2",
-     "caption": "Fig. 4.2"
-    },
-    {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "I ="
+    },
+    {
+     "type": "figure",
+     "id": "0625_2016MJ_63_q04b_fig4-2",
+     "caption": "Fig. 4.2"
     },
     {
      "type": "marks",
@@ -334,10 +334,6 @@
      "type": "figure",
      "id": "0625_2016MJ_63_q04c_table4-1",
      "caption": "Table 4.1"
-    },
-    {
-     "type": "answer",
-     "kind": "answer_line"
     },
     {
      "type": "marks",
@@ -612,7 +608,7 @@
     },
     {
      "type": "text",
-     "html": "<i>R</i> = \\(\\frac{(<i>V</i><sub>P</sub> + <i>V</i><sub>Q</sub>)}{<i>I</i>}\\)",
+     "html": "<i>R</i> = \\(\\frac{(V_{P} + V_{Q})}{I}\\)",
      "text": "R = ((VP + VQ))/(I)"
     },
     {
@@ -695,6 +691,11 @@
      "text": "3.1 V"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "VS ="
+    },
+    {
      "type": "text",
      "html": "He suggests that <i>V</i><sub>S</sub> should be equal to <i>V</i><sub>P</sub> + <i>V</i><sub>Q</sub> .",
      "text": "He suggests that VS should be equal to VP + VQ ."
@@ -707,7 +708,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -734,6 +744,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -33,10 +33,10 @@
    "caption": "Fig. 6.1",
    "page": 10,
    "bbox": [
-    139.3,
-    186.8,
-    456.0,
-    490.4
+    139.5,
+    190.5,
+    455.5,
+    489.0
    ],
    "id": "0625_2022MJ_31_q06aii_fig6-1",
    "part": "(a)(ii)",
@@ -204,14 +204,12 @@
       },
       {
        "type": "text",
-       "html": "Using the graph in Fig. 6.1, determine:",
-       "text": "Using the graph in Fig. 6.1, determine:"
+       "html": "Using the graph in Fig. 6.1, determine: <b> 1. </b> the melting point of the wax …… °C <b> 2. </b> the boiling point of the wax …… °C <b> 3. </b> the time at which the wax starts to boil. …… min",
+       "text": "Using the graph in Fig. 6.1, determine: 1. the melting point of the wax …… °C 2. the boiling point of the wax …… °C 3. the time at which the wax starts to boil. …… min"
       },
       {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "3. the time at which the wax starts to boil.",
-       "unit": "min"
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -288,7 +286,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "wax as a gas",
+     "prefix": "solid wax"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "wax as a gas"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -315,6 +322,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

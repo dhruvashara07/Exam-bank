@@ -9,10 +9,10 @@
    "caption": "Fig. 10.1",
    "page": 14,
    "bbox": [
-    174.8,
-    88.1,
-    422.2,
-    165.4
+    174.0,
+    87.5,
+    423.0,
+    162.5
    ],
    "id": "0625_2016ON_31_q10a_fig10-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 10.2",
    "page": 14,
    "bbox": [
-    159.7,
-    262.9,
-    423.2,
-    430.4
+    159.0,
+    267.5,
+    424.0,
+    427.5
    ],
    "id": "0625_2016ON_31_q10b_fig10-2",
    "part": "(b)",
@@ -47,10 +47,10 @@
    "caption": "Table 10.1",
    "page": 14,
    "bbox": [
-    202.4,
-    536.4,
-    392.9,
-    632.8
+    202.0,
+    541.0,
+    393.0,
+    633.0
    ],
    "id": "0625_2016ON_31_q10bi_table10-1",
    "part": "(b)(i)",
@@ -66,10 +66,10 @@
    "caption": "Fig. 10.3",
    "page": 15,
    "bbox": [
-    88.5,
-    101.1,
-    506.8,
-    414.2
+    88.0,
+    100.5,
+    507.5,
+    411.5
    ],
    "id": "0625_2016ON_31_q10bii_fig10-3",
    "part": "(b)(ii)",
@@ -266,23 +266,6 @@
        "type": "figure",
        "id": "0625_2016ON_31_q10bi_table10-1",
        "caption": "Table 10.1"
-      },
-      {
-       "type": "table",
-       "rows": [
-        [
-         "position",
-         "pole"
-        ],
-        [
-         "end A",
-         ""
-        ],
-        [
-         "end B",
-         ""
-        ]
-       ]
       },
       {
        "type": "marks",
@@ -529,7 +512,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -554,5 +546,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    119.5,
-    109.2,
-    475.7,
-    270.1
+    120.0,
+    112.5,
+    475.0,
+    268.5
    ],
    "id": "0625_2024MJ_61_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 8,
    "bbox": [
-    119.5,
-    109.2,
-    475.7,
-    415.0
+    120.0,
+    112.5,
+    475.0,
+    413.5
    ],
    "id": "0625_2024MJ_61_q03_fig3-2",
    "part": "",
@@ -314,8 +314,8 @@
       },
       {
        "type": "text",
-       "html": "<i>r</i> = \\(\\frac{<i>u</i>}{<i>x</i>}\\),",
-       "text": "r = (u)/(x),"
+       "html": "<i>r</i> = \\(\\frac{u}{x}\\) ,",
+       "text": "r = (u)/(x) ,"
       },
       {
        "type": "text",
@@ -596,8 +596,8 @@
     },
     {
      "type": "text",
-     "html": "<i>f</i> = \\(\\frac{<i>uv </i>}{(<i>u </i>+ <i>v</i>}\\).",
-     "text": "f = (uv)/((u + v)."
+     "html": "<i>f</i> = \\(\\frac{\\text{uv}}{(u + v}\\) .",
+     "text": "f = (uv)/((u + v) ."
     },
     {
      "type": "text",
@@ -687,7 +687,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -787,6 +796,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

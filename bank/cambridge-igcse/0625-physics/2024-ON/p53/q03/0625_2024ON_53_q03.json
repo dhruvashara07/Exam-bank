@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    67.6,
-    150.5,
-    527.8,
-    572.4
+    68.0,
+    150.0,
+    528.0,
+    572.5
    ],
    "id": "0625_2024ON_53_q03_fig3-1",
    "part": "",
@@ -119,13 +119,13 @@
     },
     {
      "type": "text",
-     "html": "Draw a normal to line AB at a point N, 2cm from A. Extend the normal downwards until it crosses the line CD. Label the point at which it crosses CD with the letter F.",
-     "text": "Draw a normal to line AB at a point N, 2cm from A. Extend the normal downwards until it crosses the line CD. Label the point at which it crosses CD with the letter F."
+     "html": "Draw a normal to line AB at a point N, 2 cm from A. Extend the normal downwards until it crosses the line CD. Label the point at which it crosses CD with the letter F.",
+     "text": "Draw a normal to line AB at a point N, 2 cm from A. Extend the normal downwards until it crosses the line CD. Label the point at which it crosses CD with the letter F."
     },
     {
      "type": "text",
-     "html": "Draw a line NE, as indicated by Fig. 3.1, 7cm long and at an angle θ<sub>1</sub> = 15° to the normal.",
-     "text": "Draw a line NE, as indicated by Fig. 3.1, 7cm long and at an angle θ1 = 15° to the normal."
+     "html": "Draw a line NE, as indicated by Fig. 3.1, 7 cm long and at an angle θ<sub>1</sub> = 15° to the normal.",
+     "text": "Draw a line NE, as indicated by Fig. 3.1, 7 cm long and at an angle θ1 = 15° to the normal."
     },
     {
      "type": "marks",
@@ -286,9 +286,21 @@
      "text": "Measure the length a of line HN."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "a =",
+     "unit": "cm"
+    },
+    {
      "type": "text",
      "html": "Measure the length b of line HG.",
      "text": "Measure the length b of line HG."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "b =",
+     "unit": "cm"
     },
     {
      "type": "text",
@@ -365,8 +377,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Draw a new line NE, as indicated by Fig. 3.1, 7cm long and at an angle θ<sub>2</sub> = 40° to the normal.",
-     "text": "Draw a new line NE, as indicated by Fig. 3.1, 7cm long and at an angle θ2 = 40° to the normal."
+     "html": "Draw a new line NE, as indicated by Fig. 3.1, 7 cm long and at an angle θ<sub>2</sub> = 40° to the normal.",
+     "text": "Draw a new line NE, as indicated by Fig. 3.1, 7 cm long and at an angle θ2 = 40° to the normal."
     },
     {
      "type": "text",
@@ -455,7 +467,7 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "α="
+       "prefix": "α ="
       },
       {
        "type": "marks",
@@ -523,8 +535,8 @@
      "content": [
       {
        "type": "text",
-       "html": "A student suggests that angle αshould be equal to the difference between angle θ<sub>2</sub> from and angle θ<sub>1</sub> from (a).",
-       "text": "A student suggests that angle αshould be equal to the difference between angle θ2 from and angle θ1 from (a)."
+       "html": "A student suggests that angle α should be equal to the difference between angle θ<sub>2</sub> from and angle θ<sub>1</sub> from (a).",
+       "text": "A student suggests that angle α should be equal to the difference between angle θ2 from and angle θ1 from (a)."
       },
       {
        "type": "text",
@@ -534,7 +546,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -642,6 +663,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -659,39 +681,9 @@
    "text": "You may refer to Fig. 3.1 for guidance."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "E",
-     ""
-    ],
-    [
-     "",
-     "θ",
-     ""
-    ],
-    [
-     "",
-     "A N B",
-     ""
-    ],
-    [
-     "",
-     "2cm",
-     ""
-    ],
-    [
-     "",
-     "D F C",
-     ""
-    ],
-    [
-     "",
-     "eye",
-     ""
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2024ON_53_q03_fig3-1",
+   "caption": "Fig. 3.1"
   }
  ]
 }

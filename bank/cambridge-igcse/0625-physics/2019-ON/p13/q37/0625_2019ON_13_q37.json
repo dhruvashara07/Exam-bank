@@ -33,9 +33,9 @@
    "page": 14,
    "bbox": [
     208.7,
-    85.0,
-    385.8,
-    211.2
+    84.5,
+    386.0,
+    211.5
    ],
    "id": "0625_2019ON_13_q37_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p13/q37/figures/0625_2019ON_13_q37_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p13/q37/figures/0625_2019ON_13_q37_figA",
     "url": null,
-    "kb": 10.1
+    "kb": 10.2
    }
   },
   {
    "page": 14,
    "bbox": [
-    67.7,
-    243.6,
-    354.7,
-    369.1
+    67.5,
+    243.5,
+    355.0,
+    369.5
    ],
    "id": "0625_2019ON_13_q37_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p13/q37/figures/0625_2019ON_13_q37_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p13/q37/figures/0625_2019ON_13_q37_figB",
     "url": null,
-    "kb": 20.1
+    "kb": 20.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row identifies each type of particle in the diagram?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "",
-     "",
-     ""
-    ],
-    [
-     "<b>A</b>",
-     "electron",
-     "neutron",
-     "proton"
-    ],
-    [
-     "<b>B</b>",
-     "electron",
-     "proton",
-     "neutron"
-    ],
-    [
-     "<b>C</b>",
-     "neutron",
-     "electron",
-     "proton"
-    ],
-    [
-     "<b>D</b>",
-     "proton",
-     "electron",
-     "neutron"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019ON_13_q37_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "electron neutron proton"
+    },
+    {
+     "label": "B",
+     "html": "electron proton neutron"
+    },
+    {
+     "label": "C",
+     "html": "neutron electron proton"
+    },
+    {
+     "label": "D",
+     "html": "proton electron neutron"
+    }
+   ]
   }
  ]
 }

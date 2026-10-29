@@ -9,10 +9,10 @@
    "caption": "Fig. 7.1",
    "page": 10,
    "bbox": [
-    46.6,
-    99.8,
+    46.5,
+    99.5,
     549.0,
-    191.8
+    190.0
    ],
    "id": "0625_2021MJ_32_q07a_fig7-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 7.2",
    "page": 11,
    "bbox": [
-    113.2,
-    84.8,
-    482.0,
-    323.1
+    113.5,
+    85.0,
+    481.5,
+    321.5
    ],
    "id": "0625_2021MJ_32_q07b_fig7-2",
    "part": "(b)",
@@ -287,7 +287,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "reason"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -531,5 +540,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

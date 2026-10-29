@@ -82,7 +82,21 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "gas",
+     "prefix": "solid"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "liquid"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "gas"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 3
     },
     {
@@ -294,5 +308,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

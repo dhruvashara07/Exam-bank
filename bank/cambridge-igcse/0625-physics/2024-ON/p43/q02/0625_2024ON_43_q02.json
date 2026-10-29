@@ -9,10 +9,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    177.7,
-    98.5,
-    417.6,
-    324.7
+    178.0,
+    99.5,
+    417.0,
+    325.0
    ],
    "id": "0625_2024ON_43_q02b_fig2-1",
    "part": "(b)",
@@ -29,9 +29,9 @@
    "page": 5,
    "bbox": [
     271.5,
-    576.6,
-    323.8,
-    593.6
+    577.5,
+    322.0,
+    591.5
    ],
    "id": "0625_2024ON_43_q02bii_table2-1",
    "part": "(b)(ii)",
@@ -323,7 +323,7 @@
        "rows": [
         [
          "spring",
-         "spring constant N/cm"
+         "spring constant N / cm"
         ],
         [
          "Q",
@@ -342,13 +342,18 @@
       },
       {
        "type": "text",
-       "html": "The total weight of the baby and the holder is 120N.",
-       "text": "The total weight of the baby and the holder is 120N."
+       "html": "The total weight of the baby and the holder is 120 N.",
+       "text": "The total weight of the baby and the holder is 120 N."
       },
       {
        "type": "text",
        "html": "Calculate the extension of each spring for this weight.",
        "text": "Calculate the extension of each spring for this weight."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "extension of spring Q ="
       },
       {
        "type": "answer",
@@ -420,8 +425,8 @@
      "content": [
       {
        "type": "text",
-       "html": "The unstretched length of each spring is 25cm.",
-       "text": "The unstretched length of each spring is 25cm."
+       "html": "The unstretched length of each spring is 25 cm.",
+       "text": "The unstretched length of each spring is 25 cm."
       },
       {
        "type": "text",
@@ -431,7 +436,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "spring"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -472,5 +486,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

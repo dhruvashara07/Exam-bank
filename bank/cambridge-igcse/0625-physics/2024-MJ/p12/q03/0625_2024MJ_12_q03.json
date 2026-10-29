@@ -32,9 +32,9 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
-    617.9,
-    395.1,
+    67.5,
+    617.5,
+    395.5,
     743.5
    ],
    "id": "0625_2024MJ_12_q03_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p12/q03/figures/0625_2024MJ_12_q03_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p12/q03/figures/0625_2024MJ_12_q03_figA",
     "url": null,
-    "kb": 31.9
+    "kb": 31.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row shows the gravitational field strength on the Earth and the definition of velocity?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "gravitational field strength on the Earth",
-     "definition of velocity"
-    ],
-    [
-     "<b>A</b>",
-     "9.8kg/N",
-     "the change in the speed"
-    ],
-    [
-     "<b>B</b>",
-     "9.8N/kg",
-     "the change in the speed"
-    ],
-    [
-     "<b>C</b>",
-     "9.8kg/N",
-     "the speed in a given direction"
-    ],
-    [
-     "<b>D</b>",
-     "9.8N/kg",
-     "the speed in a given direction"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_12_q03_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "9.8kg/N the change in the speed"
+    },
+    {
+     "label": "B",
+     "html": "9.8N/kg the change in the speed"
+    },
+    {
+     "label": "C",
+     "html": "9.8kg/N the speed in a given direction"
+    },
+    {
+     "label": "D",
+     "html": "9.8N/kg the speed in a given direction"
+    }
+   ]
   }
  ]
 }

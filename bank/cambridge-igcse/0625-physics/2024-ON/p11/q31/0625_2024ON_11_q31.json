@@ -33,8 +33,8 @@
    "page": 13,
    "bbox": [
     31.0,
-    72.3,
-    519.3,
+    99.2,
+    520.0,
     317.0
    ],
    "id": "0625_2024ON_11_q31_figA",
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p11/q31/figures/0625_2024ON_11_q31_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p11/q31/figures/0625_2024ON_11_q31_figA",
     "url": null,
-    "kb": 105.5
+    "kb": 98.5
    }
   },
   {
    "page": 13,
    "bbox": [
-    67.7,
-    362.9,
-    227.9,
-    488.4
+    67.5,
+    362.5,
+    228.0,
+    488.5
    ],
    "id": "0625_2024ON_11_q31_figB",
    "caption": null,
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The diagrams show a strong magnet and a weak magnet moving into the same coil of wire at",
-   "text": "The diagrams show a strong magnet and a weak magnet moving into the same coil of wire at"
+   "html": "The diagrams show a strong magnet and a weak magnet moving into the same coil of wire at different speeds.",
+   "text": "The diagrams show a strong magnet and a weak magnet moving into the same coil of wire at different speeds."
   },
   {
    "type": "figure",
@@ -126,40 +127,30 @@
    "text": "Which arrangement induces the largest electromotive force (e.m.f.) and which arrangement induces the smallest e.m.f.?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "largest",
-     "smallest"
-    ],
-    [
-     "",
-     "e.m.f.",
-     "e.m.f."
-    ],
-    [
-     "<b>A</b>",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>B</b>",
-     "Y",
-     "Z"
-    ],
-    [
-     "<b>C</b>",
-     "Z",
-     "X"
-    ],
-    [
-     "<b>D</b>",
-     "Z",
-     "Y"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_11_q31_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "X Y"
+    },
+    {
+     "label": "B",
+     "html": "Y Z"
+    },
+    {
+     "label": "C",
+     "html": "Z X"
+    },
+    {
+     "label": "D",
+     "html": "Z Y"
+    }
+   ]
   }
  ]
 }

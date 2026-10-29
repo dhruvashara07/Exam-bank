@@ -32,9 +32,9 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    635.3,
-    394.3,
+    67.5,
+    635.0,
+    394.5,
     775.0
    ],
    "id": "0625_2025ON_22_q07_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p22/q07/figures/0625_2025ON_22_q07_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p22/q07/figures/0625_2025ON_22_q07_figA",
     "url": null,
-    "kb": 31.1
+    "kb": 30.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which energy changes occur during the initial movement of the mass when the mass is released?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "gravitational potential energy store",
-     "kinetic energy store",
-     "elastic potential energy store"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "increases",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases",
-     "decreases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025ON_22_q07_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases increases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases decreases"
+    }
+   ]
   }
  ]
 }

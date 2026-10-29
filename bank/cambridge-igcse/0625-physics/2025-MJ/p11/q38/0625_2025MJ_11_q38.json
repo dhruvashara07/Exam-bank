@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    365.4,
-    300.7,
-    476.8
+    67.5,
+    365.0,
+    301.0,
+    477.0
    ],
    "id": "0625_2025MJ_11_q38_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p11/q38/figures/0625_2025MJ_11_q38_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p11/q38/figures/0625_2025MJ_11_q38_figA",
     "url": null,
-    "kb": 24.4
+    "kb": 24.3
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "What is the time taken for the Earth to spin once on its axis and the time taken for the Earth to orbit the Sun?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "spin on its axis",
-     "orbit the Sun"
-    ],
-    [
-     "<b>A</b>",
-     "24 hours",
-     "1 month"
-    ],
-    [
-     "<b>B</b>",
-     "24 hours",
-     "365 days"
-    ],
-    [
-     "<b>C</b>",
-     "1 month",
-     "1 month"
-    ],
-    [
-     "<b>D</b>",
-     "1 month",
-     "365 days"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_11_q38_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "24 hours 1 month"
+    },
+    {
+     "label": "B",
+     "html": "24 hours 365 days"
+    },
+    {
+     "label": "C",
+     "html": "1 month 1 month"
+    },
+    {
+     "label": "D",
+     "html": "1 month 365 days"
+    }
+   ]
   }
  ]
 }

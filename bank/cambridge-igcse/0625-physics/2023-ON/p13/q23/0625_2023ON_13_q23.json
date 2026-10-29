@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    109.9,
-    305.6,
-    221.3
+    67.5,
+    109.5,
+    305.5,
+    221.5
    ],
    "id": "0625_2023ON_13_q23_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p13/q23/figures/0625_2023ON_13_q23_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p13/q23/figures/0625_2023ON_13_q23_figA",
     "url": null,
-    "kb": 21.8
+    "kb": 21.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "How do the properties of the echo compare to the original sound wave?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "amplitude",
-     "frequency",
-     "speed"
-    ],
-    [
-     "<b>A</b>",
-     "lower",
-     "lower",
-     "lower"
-    ],
-    [
-     "<b>B</b>",
-     "lower",
-     "same",
-     "same"
-    ],
-    [
-     "<b>C</b>",
-     "same",
-     "lower",
-     "lower"
-    ],
-    [
-     "<b>D</b>",
-     "same",
-     "same",
-     "same"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_13_q23_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "lower lower lower"
+    },
+    {
+     "label": "B",
+     "html": "lower same same"
+    },
+    {
+     "label": "C",
+     "html": "same lower lower"
+    },
+    {
+     "label": "D",
+     "html": "same same same"
+    }
+   ]
   }
  ]
 }

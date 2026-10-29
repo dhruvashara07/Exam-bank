@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 10,
    "bbox": [
-    72.3,
-    113.8,
-    523.1,
-    681.9
+    71.5,
+    113.0,
+    523.5,
+    682.0
    ],
    "id": "0625_2025FM_62_q03_fig3-1",
    "part": "",
@@ -211,13 +211,13 @@
      "content": [
       {
        "type": "text",
-       "html": "The student draws line EN as shown in Fig. 3.1. On Fig. 3.1, measure the acute angle θbetween the lines LN and EN. An acute angle is an angle of less than 90°.",
-       "text": "The student draws line EN as shown in Fig. 3.1. On Fig. 3.1, measure the acute angle θbetween the lines LN and EN. An acute angle is an angle of less than 90°."
+       "html": "The student draws line EN as shown in Fig. 3.1. On Fig. 3.1, measure the acute angle θ between the lines LN and EN. An acute angle is an angle of less than 90°.",
+       "text": "The student draws line EN as shown in Fig. 3.1. On Fig. 3.1, measure the acute angle θ between the lines LN and EN. An acute angle is an angle of less than 90°."
       },
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "θ="
+       "prefix": "θ ="
       },
       {
        "type": "marks",
@@ -324,8 +324,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Measure distance d between pins P<sub>1</sub> and P<sub>2</sub>.",
-       "text": "Measure distance d between pins P1 and P2."
+       "html": "Measure distance d between pins P<sub>1</sub> and P<sub>2</sub> .",
+       "text": "Measure distance d between pins P1 and P2 ."
       },
       {
        "type": "answer",
@@ -404,7 +404,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -487,8 +496,8 @@
     },
     {
      "type": "text",
-     "html": "Draw a line through P<sub>3</sub> and P<sub>4</sub>. Extend this line to meet CD.",
-     "text": "Draw a line through P3 and P4. Extend this line to meet CD."
+     "html": "Draw a line through P<sub>3</sub> and P<sub>4</sub> . Extend this line to meet CD.",
+     "text": "Draw a line through P3 and P4 . Extend this line to meet CD."
     },
     {
      "type": "text",
@@ -497,8 +506,8 @@
     },
     {
      "type": "text",
-     "html": "Extend line EN to approximately 5cm below line CD. Label the point at which this line crosses CD with the letter H. Label the lower end of this line with the letter J.",
-     "text": "Extend line EN to approximately 5cm below line CD. Label the point at which this line crosses CD with the letter H. Label the lower end of this line with the letter J."
+     "html": "Extend line EN to approximately 5 cm below line CD. Label the point at which this line crosses CD with the letter H. Label the lower end of this line with the letter J.",
+     "text": "Extend line EN to approximately 5 cm below line CD. Label the point at which this line crosses CD with the letter H. Label the lower end of this line with the letter J."
     },
     {
      "type": "marks",
@@ -571,8 +580,14 @@
      "content": [
       {
        "type": "text",
-       "html": "Measure the acute angle αbetween lines CD and GF.",
-       "text": "Measure the acute angle αbetween lines CD and GF."
+       "html": "Measure the acute angle α between lines CD and GF.",
+       "text": "Measure the acute angle α between lines CD and GF."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "α =",
+       "unit": "°"
       },
       {
        "type": "text",
@@ -582,7 +597,7 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "β=",
+       "prefix": "β =",
        "unit": "°"
       },
       {
@@ -651,8 +666,8 @@
      "content": [
       {
        "type": "text",
-       "html": "A student suggests that angle αshould be equal to angle β.",
-       "text": "A student suggests that angle αshould be equal to angle β."
+       "html": "A student suggests that angle α should be equal to angle β.",
+       "text": "A student suggests that angle α should be equal to angle β."
       },
       {
        "type": "text",
@@ -662,7 +677,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -739,7 +763,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -839,6 +872,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

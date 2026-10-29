@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    401.4,
-    456.8,
-    526.9
+    67.5,
+    401.0,
+    457.0,
+    527.0
    ],
    "id": "0625_2018MJ_21_q23_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p21/q23/figures/0625_2018MJ_21_q23_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p21/q23/figures/0625_2018MJ_21_q23_figA",
     "url": null,
-    "kb": 37.6
+    "kb": 37.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,40 +108,30 @@
    "text": "Which row gives correct information about the infra-red radiation?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "wavelength of",
-     "time taken for infra-red"
-    ],
-    [
-     "",
-     "infra-red radiation",
-     "radiation to reach Earth"
-    ],
-    [
-     "<b>A</b>",
-     "longer than wavelength of light",
-     "8 minutes"
-    ],
-    [
-     "<b>B</b>",
-     "longer than wavelength of light",
-     "much less than 8 minutes"
-    ],
-    [
-     "<b>C</b>",
-     "shorter than wavelength of light",
-     "8 minutes"
-    ],
-    [
-     "<b>D</b>",
-     "shorter than wavelength of light",
-     "much more than 8 minutes"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_21_q23_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "longer than wavelength of light 8 minutes"
+    },
+    {
+     "label": "B",
+     "html": "longer than wavelength of light much less than 8 minutes"
+    },
+    {
+     "label": "C",
+     "html": "shorter than wavelength of light 8 minutes"
+    },
+    {
+     "label": "D",
+     "html": "shorter than wavelength of light much more than 8 minutes"
+    }
+   ]
   }
  ]
 }

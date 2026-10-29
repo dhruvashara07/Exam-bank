@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    236.7,
+    236.0,
     99.5,
     358.4,
-    207.7
+    208.5
    ],
    "id": "0625_2025ON_21_q10_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    278.2,
-    300.7,
-    403.7
+    67.5,
+    278.0,
+    301.0,
+    404.0
    ],
    "id": "0625_2025ON_21_q10_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p21/q10/figures/0625_2025ON_21_q10_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p21/q10/figures/0625_2025ON_21_q10_figB",
     "url": null,
-    "kb": 26.0
+    "kb": 25.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,40 +132,30 @@
    "text": "Which row describes the average speed of the gas particles and the pressure of the gas as the temperature decreases?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "average speed of",
-     "pressure of"
-    ],
-    [
-     "",
-     "the gas particles",
-     "the gas"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "stays the same"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "increases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "stays the same"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025ON_21_q10_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases stays the same"
+    },
+    {
+     "label": "C",
+     "html": "increases increases"
+    },
+    {
+     "label": "D",
+     "html": "increases stays the same"
+    }
+   ]
   }
  ]
 }

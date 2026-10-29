@@ -9,10 +9,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    154.8,
-    191.6,
+    154.5,
+    191.0,
     440.5,
-    360.5
+    357.5
    ],
    "id": "0625_2019ON_41_q02b_fig2-1",
    "part": "(b)",
@@ -95,7 +95,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -287,6 +296,11 @@
        "text": "Each athlete pulls the handle towards himself with a force of 1300 N. 1. State the tension in each spring."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "tension ="
+      },
+      {
        "type": "text",
        "html": "<b>2. </b> The chest expander stretches and each spring is now 0.94 m long. Calculate the spring constant <i>k </i>of each spring.",
        "text": "2. The chest expander stretches and each spring is now 0.94 m long. Calculate the spring constant k of each spring."
@@ -413,5 +427,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

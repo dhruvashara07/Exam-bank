@@ -32,10 +32,10 @@
   {
    "page": 19,
    "bbox": [
-    268.2,
-    528.0,
-    326.6,
-    591.0
+    267.5,
+    527.5,
+    327.0,
+    591.5
    ],
    "id": "0625_2017MJ_12_q38_figA",
    "caption": null,
@@ -45,15 +45,15 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-MJ/p12/q38/figures/0625_2017MJ_12_q38_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-MJ/p12/q38/figures/0625_2017MJ_12_q38_figA",
     "url": null,
-    "kb": 3.2
+    "kb": 3.3
    }
   },
   {
    "page": 19,
    "bbox": [
-    67.7,
+    67.5,
     623.5,
-    237.2,
+    237.5,
     749.0
    ],
    "id": "0625_2017MJ_12_q38_figB",
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row gives the proton number and the nucleon number for this nucleus?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "proton",
-     "nucleon"
-    ],
-    [
-     "",
-     "number",
-     "number"
-    ],
-    [
-     "<b>A</b>",
-     "3",
-     "4"
-    ],
-    [
-     "<b>B</b>",
-     "3",
-     "7"
-    ],
-    [
-     "<b>C</b>",
-     "4",
-     "3"
-    ],
-    [
-     "<b>D</b>",
-     "4",
-     "7"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017MJ_12_q38_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "3 4"
+    },
+    {
+     "label": "B",
+     "html": "3 7"
+    },
+    {
+     "label": "C",
+     "html": "4 3"
+    },
+    {
+     "label": "D",
+     "html": "4 7"
+    }
+   ]
   }
  ]
 }

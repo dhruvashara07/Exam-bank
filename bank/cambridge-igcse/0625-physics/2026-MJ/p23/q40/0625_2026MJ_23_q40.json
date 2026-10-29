@@ -32,9 +32,9 @@
   {
    "page": 17,
    "bbox": [
-    67.7,
-    122.6,
-    300.7,
+    67.5,
+    122.5,
+    301.0,
     248.0
    ],
    "id": "0625_2026MJ_23_q40_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p23/q40/figures/0625_2026MJ_23_q40_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p23/q40/figures/0625_2026MJ_23_q40_figA",
     "url": null,
-    "kb": 26.6
+    "kb": 26.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which type of nuclear reaction takes place and which element undergoes this reaction in the Sun?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>type of nuclear</b> <b>reaction</b>",
-     "<b>element</b>"
-    ],
-    [
-     "<b>A</b>",
-     "fission",
-     "hydrogen"
-    ],
-    [
-     "<b>B</b>",
-     "fission",
-     "uranium"
-    ],
-    [
-     "<b>C</b>",
-     "fusion",
-     "hydrogen"
-    ],
-    [
-     "<b>D</b>",
-     "fusion",
-     "uranium"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_23_q40_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "fission hydrogen"
+    },
+    {
+     "label": "B",
+     "html": "fission uranium"
+    },
+    {
+     "label": "C",
+     "html": "fusion hydrogen"
+    },
+    {
+     "label": "D",
+     "html": "fusion uranium"
+    }
+   ]
   }
  ]
 }

@@ -32,9 +32,9 @@
   {
    "page": 12,
    "bbox": [
-    67.7,
-    84.7,
-    238.4,
+    67.5,
+    84.5,
+    238.5,
     196.0
    ],
    "id": "0625_2017MJ_13_q26_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-MJ/p13/q26/figures/0625_2017MJ_13_q26_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-MJ/p13/q26/figures/0625_2017MJ_13_q26_figA",
     "url": null,
-    "kb": 15.7
+    "kb": 15.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "From which materials are the coil and the core of an electromagnet made?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "coil",
-     "core"
-    ],
-    [
-     "<b>A</b>",
-     "copper",
-     "soft iron"
-    ],
-    [
-     "<b>B</b>",
-     "copper",
-     "steel"
-    ],
-    [
-     "<b>C</b>",
-     "soft iron",
-     "copper"
-    ],
-    [
-     "<b>D</b>",
-     "steel",
-     "soft iron"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017MJ_13_q26_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "copper soft iron"
+    },
+    {
+     "label": "B",
+     "html": "copper steel"
+    },
+    {
+     "label": "C",
+     "html": "soft iron copper"
+    },
+    {
+     "label": "D",
+     "html": "steel soft iron"
+    }
+   ]
   }
  ]
 }

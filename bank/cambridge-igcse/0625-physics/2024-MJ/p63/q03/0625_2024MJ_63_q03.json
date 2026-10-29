@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 10,
    "bbox": [
-    42.8,
-    83.2,
-    552.5,
-    204.1
+    43.5,
+    86.5,
+    552.0,
+    202.5
    ],
    "id": "0625_2024MJ_63_q03_fig3-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p63/q03/figures/0625_2024MJ_63_q03_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p63/q03/figures/0625_2024MJ_63_q03_fig3-1",
     "url": null,
-    "kb": 22.8
+    "kb": 22.7
    }
   },
   {
    "caption": "Fig. 3.2",
    "page": 10,
    "bbox": [
-    125.4,
-    443.6,
-    492.3,
-    604.8
+    124.5,
+    443.0,
+    493.0,
+    603.0
    ],
    "id": "0625_2024MJ_63_q03b_fig3-2",
    "part": "(b)",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p63/q03/figures/0625_2024MJ_63_q03b_fig3-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p63/q03/figures/0625_2024MJ_63_q03b_fig3-2",
     "url": null,
-    "kb": 10.0
+    "kb": 9.9
    }
   },
   {
    "caption": "Fig. 3.3",
    "page": 10,
    "bbox": [
-    125.4,
-    443.6,
-    492.3,
-    604.8
+    124.5,
+    443.0,
+    493.0,
+    603.0
    ],
    "id": "0625_2024MJ_63_q03b_fig3-3",
    "part": "(b)",
@@ -83,17 +83,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p63/q03/figures/0625_2024MJ_63_q03b_fig3-3.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p63/q03/figures/0625_2024MJ_63_q03b_fig3-3",
     "url": null,
-    "kb": 10.0
+    "kb": 9.9
    }
   },
   {
    "caption": "Table 3.1",
    "page": 11,
    "bbox": [
-    188.2,
-    91.5,
-    407.1,
-    247.8
+    188.0,
+    94.5,
+    407.0,
+    248.0
    ],
    "id": "0625_2024MJ_63_q03c_table3-1",
    "part": "(c)",
@@ -278,6 +278,12 @@
        "text": "Measure hO, the height of the illuminated object, as shown in Fig. 3.2."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "hO =",
+       "unit": "cm"
+      },
+      {
        "type": "text",
        "html": "Measure <i>h</i><sub>I</sub>, the height of the image on the screen, as shown in Fig. 3.3.",
        "text": "Measure hI, the height of the image on the screen, as shown in Fig. 3.3."
@@ -353,7 +359,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a value <i>W</i> using your measurements from <b>(b)(i)</b> and the equation <i>W</i> = \\(\\frac{<i>h</i><sub>O</sub>}{<i>h</i><sub>I</sub>}\\).",
+       "html": "Calculate a value <i>W</i> using your measurements from <b>(b)(i)</b> and the equation <i>W</i> = \\(\\frac{h_{O}}{h_{I}}\\).",
        "text": "Calculate a value W using your measurements from (b)(i) and the equation W = (hO)/(hI)."
       },
       {
@@ -453,39 +459,9 @@
      "text": "The student repeats this procedure for u = 20.0 cm, 30.0 cm, 40.0 cm, 50.0 cm and 60.0 cm. His results are shown in Table 3.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>u</i> / cm",
-       "<i>h</i><sub>I</sub> / cm",
-       "<i>W</i>"
-      ],
-      [
-       "20.0",
-       "5.0",
-       "0.4"
-      ],
-      [
-       "30.0",
-       "2.0",
-       "1.0"
-      ],
-      [
-       "40.0",
-       "1.3",
-       "1.6"
-      ],
-      [
-       "50.0",
-       "0.8",
-       "2.4"
-      ],
-      [
-       "60.0",
-       "0.7",
-       "2.9"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2024MJ_63_q03c_table3-1",
+     "caption": "Table 3.1"
     },
     {
      "type": "text",
@@ -755,6 +731,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

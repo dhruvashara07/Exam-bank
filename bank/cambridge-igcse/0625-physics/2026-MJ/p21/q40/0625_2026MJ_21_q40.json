@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
+    67.5,
     613.0,
-    276.8,
-    724.2
+    277.0,
+    724.5
    ],
    "id": "0625_2026MJ_21_q40_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p21/q40/figures/0625_2026MJ_21_q40_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p21/q40/figures/0625_2026MJ_21_q40_figA",
     "url": null,
-    "kb": 26.4
+    "kb": 26.2
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row shows two later stages in its life cycle?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>next stage</b>",
-     "<b>final stage</b>"
-    ],
-    [
-     "<b>A</b>",
-     "supernova",
-     "white dwarf"
-    ],
-    [
-     "<b>B</b>",
-     "supernova",
-     "neutron star"
-    ],
-    [
-     "<b>C</b>",
-     "red giant",
-     "white dwarf"
-    ],
-    [
-     "<b>D</b>",
-     "red giant",
-     "neutron star"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_21_q40_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "supernova white dwarf"
+    },
+    {
+     "label": "B",
+     "html": "supernova neutron star"
+    },
+    {
+     "label": "C",
+     "html": "red giant white dwarf"
+    },
+    {
+     "label": "D",
+     "html": "red giant neutron star"
+    }
+   ]
   }
  ]
 }

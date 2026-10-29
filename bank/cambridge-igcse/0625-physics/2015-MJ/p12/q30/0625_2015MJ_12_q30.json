@@ -34,8 +34,8 @@
    "bbox": [
     161.2,
     86.4,
-    433.5,
-    217.6
+    434.0,
+    217.5
    ],
    "id": "0625_2015MJ_12_q30_figA",
    "caption": null,
@@ -51,9 +51,9 @@
   {
    "page": 16,
    "bbox": [
-    67.6,
-    287.7,
-    329.3,
+    67.5,
+    287.5,
+    329.5,
     399.0
    ],
    "id": "0625_2015MJ_12_q30_figB",
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "What happens to the capacitor when the switch is moved to position X, and what happens when the switch is then moved to position Y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "switch at X",
-     "switch at Y"
-    ],
-    [
-     "A",
-     "capacitor charges",
-     "capacitor charges"
-    ],
-    [
-     "B",
-     "capacitor charges",
-     "capacitor discharges"
-    ],
-    [
-     "C",
-     "capacitor discharges",
-     "capacitor charges"
-    ],
-    [
-     "D",
-     "capacitor discharges",
-     "capacitor discharges"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_12_q30_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "capacitor charges capacitor charges"
+    },
+    {
+     "label": "B",
+     "html": "capacitor charges capacitor discharges"
+    },
+    {
+     "label": "C",
+     "html": "capacitor discharges capacitor charges"
+    },
+    {
+     "label": "D",
+     "html": "capacitor discharges capacitor discharges"
+    }
+   ]
   }
  ]
 }

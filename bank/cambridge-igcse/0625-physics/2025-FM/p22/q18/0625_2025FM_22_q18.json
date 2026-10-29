@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    382.1,
-    339.7,
-    493.4
+    67.5,
+    382.0,
+    340.0,
+    493.5
    ],
    "id": "0625_2025FM_22_q18_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-FM/p22/q18/figures/0625_2025FM_22_q18_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-FM/p22/q18/figures/0625_2025FM_22_q18_figA",
     "url": null,
-    "kb": 20.9
+    "kb": 20.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row describes two changes that both reduce the rate of emission of radiation?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "surface area",
-     "surface temperature"
-    ],
-    [
-     "<b>A</b>",
-     "increased",
-     "increased"
-    ],
-    [
-     "<b>B</b>",
-     "increased",
-     "reduced"
-    ],
-    [
-     "<b>C</b>",
-     "reduced",
-     "increased"
-    ],
-    [
-     "<b>D</b>",
-     "reduced",
-     "reduced"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025FM_22_q18_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "increased increased"
+    },
+    {
+     "label": "B",
+     "html": "increased reduced"
+    },
+    {
+     "label": "C",
+     "html": "reduced increased"
+    },
+    {
+     "label": "D",
+     "html": "reduced reduced"
+    }
+   ]
   }
  ]
 }

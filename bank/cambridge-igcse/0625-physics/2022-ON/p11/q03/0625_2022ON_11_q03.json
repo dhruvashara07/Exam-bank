@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    199.4,
+    199.5,
     86.6,
     395.3,
-    179.1
+    179.5
    ],
    "id": "0625_2022ON_11_q03_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p11/q03/figures/0625_2022ON_11_q03_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p11/q03/figures/0625_2022ON_11_q03_figA",
     "url": null,
-    "kb": 23.9
+    "kb": 24.0
    }
   },
   {
    "page": 3,
    "bbox": [
-    67.7,
-    211.6,
-    224.3,
-    322.4
+    67.5,
+    211.5,
+    224.5,
+    322.5
    ],
    "id": "0625_2022ON_11_q03_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p11/q03/figures/0625_2022ON_11_q03_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p11/q03/figures/0625_2022ON_11_q03_figB",
     "url": null,
-    "kb": 17.3
+    "kb": 17.1
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row gives the mass and weight of the stone?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass",
-     "weight"
-    ],
-    [
-     "<b>A</b>",
-     "120g",
-     "1.2N"
-    ],
-    [
-     "<b>B</b>",
-     "120g",
-     "1200N"
-    ],
-    [
-     "<b>C</b>",
-     "1.2N",
-     "120g"
-    ],
-    [
-     "<b>D</b>",
-     "1200N",
-     "120g"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_11_q03_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "120g 1.2N"
+    },
+    {
+     "label": "B",
+     "html": "120g 1200N"
+    },
+    {
+     "label": "C",
+     "html": "1.2N 120g"
+    },
+    {
+     "label": "D",
+     "html": "1200N 120g"
+    }
+   ]
   }
  ]
 }

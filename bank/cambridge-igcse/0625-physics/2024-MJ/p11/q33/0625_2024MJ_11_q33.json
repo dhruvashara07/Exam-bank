@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
+    67.5,
     280.0,
-    227.2,
-    391.4
+    227.5,
+    391.5
    ],
    "id": "0625_2024MJ_11_q33_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "What is the charge on a proton and what is the charge on a neutron?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "proton",
-     "neutron"
-    ],
-    [
-     "<b>A</b>",
-     "+1",
-     "–1"
-    ],
-    [
-     "<b>B</b>",
-     "+1",
-     "0"
-    ],
-    [
-     "<b>C</b>",
-     "–1",
-     "+1"
-    ],
-    [
-     "<b>D</b>",
-     "–1",
-     "0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_11_q33_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "+1 –1"
+    },
+    {
+     "label": "B",
+     "html": "+1 0"
+    },
+    {
+     "label": "C",
+     "html": "–1 +1"
+    },
+    {
+     "label": "D",
+     "html": "–1 0"
+    }
+   ]
   }
  ]
 }

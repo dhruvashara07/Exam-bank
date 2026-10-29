@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    196.4,
+    196.0,
     99.5,
-    398.5,
-    293.2
+    399.0,
+    293.5
    ],
    "id": "0625_2020ON_22_q34_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p22/q34/figures/0625_2020ON_22_q34_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p22/q34/figures/0625_2020ON_22_q34_figA",
     "url": null,
-    "kb": 18.2
+    "kb": 18.1
    }
   },
   {
    "page": 13,
    "bbox": [
-    67.7,
-    325.3,
-    247.4,
-    436.6
+    67.5,
+    325.0,
+    247.5,
+    437.0
    ],
    "id": "0625_2020ON_22_q34_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p22/q34/figures/0625_2020ON_22_q34_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p22/q34/figures/0625_2020ON_22_q34_figB",
     "url": null,
-    "kb": 13.3
+    "kb": 13.1
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which magnetic poles are X and Y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>A</b>",
-     "N pole",
-     "N pole"
-    ],
-    [
-     "<b>B</b>",
-     "N pole",
-     "S pole"
-    ],
-    [
-     "<b>C</b>",
-     "S pole",
-     "N pole"
-    ],
-    [
-     "<b>D</b>",
-     "S pole",
-     "S pole"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020ON_22_q34_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "N pole N pole"
+    },
+    {
+     "label": "B",
+     "html": "N pole S pole"
+    },
+    {
+     "label": "C",
+     "html": "S pole N pole"
+    },
+    {
+     "label": "D",
+     "html": "S pole S pole"
+    }
+   ]
   }
  ]
 }

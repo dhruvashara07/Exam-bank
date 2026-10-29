@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
+    67.5,
     656.0,
-    243.2,
-    766.8
+    243.5,
+    767.0
    ],
    "id": "0625_2020MJ_13_q05_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -98,39 +99,34 @@
   },
   {
    "type": "text",
-   "html": "The value of <i>g</i> is 10N/kg.",
-   "text": "The value of g is 10N/kg."
+   "html": "The value of <i>g</i> is 10 N / kg.",
+   "text": "The value of g is 10 N / kg."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass/kg",
-     "weight/N"
-    ],
-    [
-     "<b>A</b>",
-     "2",
-     "20"
-    ],
-    [
-     "<b>B</b>",
-     "10",
-     "1"
-    ],
-    [
-     "<b>C</b>",
-     "10",
-     "10"
-    ],
-    [
-     "<b>D</b>",
-     "20",
-     "2"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020MJ_13_q05_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "2 20"
+    },
+    {
+     "label": "B",
+     "html": "10 1"
+    },
+    {
+     "label": "C",
+     "html": "10 10"
+    },
+    {
+     "label": "D",
+     "html": "20 2"
+    }
+   ]
   }
  ]
 }

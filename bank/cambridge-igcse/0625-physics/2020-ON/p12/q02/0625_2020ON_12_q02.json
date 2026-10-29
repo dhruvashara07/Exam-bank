@@ -32,10 +32,10 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
-    554.9,
-    303.8,
-    666.3
+    67.5,
+    555.0,
+    304.0,
+    666.5
    ],
    "id": "0625_2020ON_12_q02_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p12/q02/figures/0625_2020ON_12_q02_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p12/q02/figures/0625_2020ON_12_q02_figA",
     "url": null,
-    "kb": 17.3
+    "kb": 17.1
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "In which journey does the driver have the greatest average speed?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "distance/km",
-     "time/h"
-    ],
-    [
-     "<b>A</b>",
-     "60",
-     "2"
-    ],
-    [
-     "<b>B</b>",
-     "60",
-     "3"
-    ],
-    [
-     "<b>C</b>",
-     "120",
-     "3"
-    ],
-    [
-     "<b>D</b>",
-     "120",
-     "4"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020ON_12_q02_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "60 2"
+    },
+    {
+     "label": "B",
+     "html": "60 3"
+    },
+    {
+     "label": "C",
+     "html": "120 3"
+    },
+    {
+     "label": "D",
+     "html": "120 4"
+    }
+   ]
   }
  ]
 }

@@ -32,9 +32,9 @@
   {
    "page": 9,
    "bbox": [
-    69.4,
-    84.7,
-    389.9,
+    69.0,
+    84.5,
+    390.0,
     195.5
    ],
    "id": "0625_2017ON_22_q17_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p22/q17/figures/0625_2017ON_22_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p22/q17/figures/0625_2017ON_22_q17_figA",
     "url": null,
-    "kb": 33.0
+    "kb": 32.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row identifies the fixed points on the Celsius scale?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "lower fixed point",
-     "upper fixed point"
-    ],
-    [
-     "<b>A</b>",
-     "boiling point of mercury",
-     "melting point of pure ice"
-    ],
-    [
-     "<b>B</b>",
-     "boiling point of pure water",
-     "melting point of pure ice"
-    ],
-    [
-     "<b>C</b>",
-     "melting point of mercury",
-     "boiling point of pure water"
-    ],
-    [
-     "<b>D</b>",
-     "melting point of pure ice",
-     "boiling point of pure water"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017ON_22_q17_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "boiling point of mercury melting point of pure ice"
+    },
+    {
+     "label": "B",
+     "html": "boiling point of pure water melting point of pure ice"
+    },
+    {
+     "label": "C",
+     "html": "melting point of mercury boiling point of pure water"
+    },
+    {
+     "label": "D",
+     "html": "melting point of pure ice boiling point of pure water"
+    }
+   ]
   }
  ]
 }

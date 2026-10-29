@@ -34,9 +34,9 @@
    "page": 6,
    "bbox": [
     110.0,
-    111.3,
-    485.3,
-    433.3
+    110.5,
+    484.5,
+    431.5
    ],
    "id": "0625_2023FM_62_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 7,
    "bbox": [
-    199.9,
-    162.0,
-    395.3,
-    359.1
+    200.0,
+    165.5,
+    395.5,
+    359.5
    ],
    "id": "0625_2023FM_62_q02b_table2-1",
    "part": "(b)",
@@ -325,49 +325,9 @@
      "text": "Experiment B The student repeats the process. She waits until the initial temperature θB of the water is the same value as the temperature θA at 90 s in Experiment A. In the first line of Table 2.1, record her initial temperature θB for Experiment B. Her readings for the remainder of Experiment B are shown in Table 2.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>t</i> / s",
-       "θ<sub>A</sub> / °C",
-       "θ<sub>B</sub> / °C"
-      ],
-      [
-       "0",
-       "92.0",
-       ""
-      ],
-      [
-       "30",
-       "89.5",
-       "83.5"
-      ],
-      [
-       "60",
-       "87.0",
-       "81.5"
-      ],
-      [
-       "90",
-       "85.0",
-       "79.5"
-      ],
-      [
-       "120",
-       "83.5",
-       "78.0"
-      ],
-      [
-       "150",
-       "82.0",
-       "76.5"
-      ],
-      [
-       "180",
-       "80.0",
-       "75.0"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2023FM_62_q02b_table2-1",
+     "caption": "Table 2.1"
     },
     {
      "type": "marks",
@@ -524,7 +484,7 @@
       },
       {
        "type": "text",
-       "html": "<i>x</i><sub>1</sub> = \\(\\frac{θ<sub>A90 </sub>– θ<sub>A180</sub>}{<i>T</i>}\\)",
+       "html": "<i>x</i><sub>1</sub> = \\(\\frac{θ_{A90} – θ_{A180}}{T}\\)",
        "text": "x1 = (θA90 – θA180)/(T)"
       },
       {
@@ -607,7 +567,7 @@
       },
       {
        "type": "text",
-       "html": "<i>x</i><sub>2</sub> = \\(\\frac{θ<sub>B0 </sub>– θ<sub>B90</sub>}{<i>T</i>}\\)",
+       "html": "<i>x</i><sub>2</sub> = \\(\\frac{θ_{B0} – θ_{B90}}{T}\\)",
        "text": "x2 = (θB0 – θB90)/(T)"
       },
       {
@@ -692,7 +652,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -769,7 +738,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -796,6 +774,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

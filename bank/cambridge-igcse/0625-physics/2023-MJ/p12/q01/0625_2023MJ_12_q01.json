@@ -32,10 +32,10 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
-    97.3,
-    326.9,
-    208.6
+    67.5,
+    97.0,
+    327.0,
+    209.0
    ],
    "id": "0625_2023MJ_12_q01_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p12/q01/figures/0625_2023MJ_12_q01_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p12/q01/figures/0625_2023MJ_12_q01_figA",
     "url": null,
-    "kb": 24.1
+    "kb": 24.0
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which single apparatus is used to find the volume of a solid cube and which single apparatus is used to find the volume of a quantity of liquid?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "volume of solid cube",
-     "volume of liquid"
-    ],
-    [
-     "<b>A</b>",
-     "balance",
-     "balance"
-    ],
-    [
-     "<b>B</b>",
-     "balance",
-     "measuring cylinder"
-    ],
-    [
-     "<b>C</b>",
-     "ruler",
-     "balance"
-    ],
-    [
-     "<b>D</b>",
-     "ruler",
-     "measuring cylinder"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_12_q01_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "balance balance"
+    },
+    {
+     "label": "B",
+     "html": "balance measuring cylinder"
+    },
+    {
+     "label": "C",
+     "html": "ruler balance"
+    },
+    {
+     "label": "D",
+     "html": "ruler measuring cylinder"
+    }
+   ]
   }
  ]
 }

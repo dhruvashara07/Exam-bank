@@ -33,9 +33,9 @@
    "page": 13,
    "bbox": [
     185.2,
-    85.6,
-    409.9,
-    219.0
+    85.5,
+    410.0,
+    219.5
    ],
    "id": "0625_2018ON_13_q32_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-ON/p13/q32/figures/0625_2018ON_13_q32_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-ON/p13/q32/figures/0625_2018ON_13_q32_figA",
     "url": null,
-    "kb": 13.7
+    "kb": 13.6
    }
   },
   {
    "page": 13,
    "bbox": [
-    67.7,
-    251.6,
-    369.1,
-    362.9
+    67.5,
+    251.5,
+    369.5,
+    363.0
    ],
    "id": "0625_2018ON_13_q32_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-ON/p13/q32/figures/0625_2018ON_13_q32_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-ON/p13/q32/figures/0625_2018ON_13_q32_figB",
     "url": null,
-    "kb": 19.0
+    "kb": 18.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row gives the possible readings on the three ammeters?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "ammeter 1/A",
-     "ammeter 2/A",
-     "ammeter 3/A"
-    ],
-    [
-     "<b>A</b>",
-     "1.5",
-     "3.0",
-     "4.5"
-    ],
-    [
-     "<b>B</b>",
-     "3.0",
-     "1.5",
-     "4.5"
-    ],
-    [
-     "<b>C</b>",
-     "3.0",
-     "4.5",
-     "1.5"
-    ],
-    [
-     "<b>D</b>",
-     "4.5",
-     "1.5",
-     "3.0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018ON_13_q32_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "1.5 3.0 4.5"
+    },
+    {
+     "label": "B",
+     "html": "3.0 1.5 4.5"
+    },
+    {
+     "label": "C",
+     "html": "3.0 4.5 1.5"
+    },
+    {
+     "label": "D",
+     "html": "4.5 1.5 3.0"
+    }
+   ]
   }
  ]
 }

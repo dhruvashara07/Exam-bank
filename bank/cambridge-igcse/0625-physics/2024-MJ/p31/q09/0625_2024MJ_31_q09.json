@@ -9,10 +9,10 @@
    "caption": "Fig. 9.1",
    "page": 13,
    "bbox": [
-    216.5,
-    83.2,
-    378.5,
-    225.6
+    217.0,
+    82.5,
+    379.0,
+    224.0
    ],
    "id": "0625_2024MJ_31_q09a_fig9-1",
    "part": "(a)",
@@ -125,7 +125,21 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "1"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "2"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "3"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -316,10 +330,9 @@
        "text": "Calculate the output voltage Vs of the secondary coil."
       },
       {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "secondary coil output voltage Vs =",
-       "unit": "V"
+       "type": "text",
+       "html": "secondary coil output voltage <i>V</i><sub>s</sub> = …… V",
+       "text": "secondary coil output voltage Vs = …… V"
       },
       {
        "type": "marks",
@@ -430,5 +443,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

@@ -35,7 +35,7 @@
     226.3,
     331.4,
     369.4,
-    393.8
+    394.5
    ],
    "id": "0625_2022ON_11_q28_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    427.1,
-    322.9,
-    552.1
+    67.5,
+    427.0,
+    323.0,
+    552.0
    ],
    "id": "0625_2022ON_11_q28_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p11/q28/figures/0625_2022ON_11_q28_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p11/q28/figures/0625_2022ON_11_q28_figB",
     "url": null,
-    "kb": 25.6
+    "kb": 25.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "What are the directions of the electrostatic forces on rod P and on rod Q?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "electrostatic force",
-     "electrostatic force"
-    ],
-    [
-     "",
-     "on rod P",
-     "on rod Q"
-    ],
-    [
-     "<b>A</b>",
-     "downwards",
-     "downwards"
-    ],
-    [
-     "<b>B</b>",
-     "downwards",
-     "upwards"
-    ],
-    [
-     "<b>C</b>",
-     "upwards",
-     "downwards"
-    ],
-    [
-     "<b>D</b>",
-     "upwards",
-     "upwards"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_11_q28_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "downwards downwards"
+    },
+    {
+     "label": "B",
+     "html": "downwards upwards"
+    },
+    {
+     "label": "C",
+     "html": "upwards downwards"
+    },
+    {
+     "label": "D",
+     "html": "upwards upwards"
+    }
+   ]
   }
  ]
 }

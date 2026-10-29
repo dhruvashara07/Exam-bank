@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    248.7,
-    317.1,
-    346.3,
-    442.4
+    248.0,
+    316.5,
+    347.0,
+    442.5
    ],
    "id": "0625_2019MJ_23_q15_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    487.1,
-    336.4,
-    612.6
+    67.5,
+    487.0,
+    336.5,
+    613.0
    ],
    "id": "0625_2019MJ_23_q15_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-MJ/p23/q15/figures/0625_2019MJ_23_q15_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-MJ/p23/q15/figures/0625_2019MJ_23_q15_figB",
     "url": null,
-    "kb": 23.1
+    "kb": 22.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which thermal capacity and which night-time temperature increase will cause the most energy to be stored by the block?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "thermal capacity",
-     "night-time"
-    ],
-    [
-     "",
-     "of block",
-     "temperature increase"
-    ],
-    [
-     "<b>A</b>",
-     "large",
-     "large"
-    ],
-    [
-     "<b>B</b>",
-     "large",
-     "small"
-    ],
-    [
-     "<b>C</b>",
-     "small",
-     "large"
-    ],
-    [
-     "<b>D</b>",
-     "small",
-     "small"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019MJ_23_q15_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "large large"
+    },
+    {
+     "label": "B",
+     "html": "large small"
+    },
+    {
+     "label": "C",
+     "html": "small large"
+    },
+    {
+     "label": "D",
+     "html": "small small"
+    }
+   ]
   }
  ]
 }

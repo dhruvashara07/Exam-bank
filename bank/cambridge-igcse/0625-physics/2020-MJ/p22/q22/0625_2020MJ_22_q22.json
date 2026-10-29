@@ -32,7 +32,7 @@
   {
    "page": 9,
    "bbox": [
-    173.8,
+    173.5,
     87.0,
     421.4,
     181.3
@@ -51,10 +51,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    214.6,
-    268.4,
-    339.6
+    67.5,
+    214.5,
+    268.5,
+    340.0
    ],
    "id": "0625_2020MJ_22_q22_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p22/q22/figures/0625_2020MJ_22_q22_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p22/q22/figures/0625_2020MJ_22_q22_figB",
     "url": null,
-    "kb": 19.6
+    "kb": 19.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "position of",
-     "nature of"
-    ],
-    [
-     "",
-     "the image",
-     "the image"
-    ],
-    [
-     "<b>A</b>",
-     "1",
-     "real"
-    ],
-    [
-     "<b>B</b>",
-     "1",
-     "virtual"
-    ],
-    [
-     "<b>C</b>",
-     "2",
-     "real"
-    ],
-    [
-     "<b>D</b>",
-     "2",
-     "virtual"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020MJ_22_q22_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "1 real"
+    },
+    {
+     "label": "B",
+     "html": "1 virtual"
+    },
+    {
+     "label": "C",
+     "html": "2 real"
+    },
+    {
+     "label": "D",
+     "html": "2 virtual"
+    }
+   ]
   }
  ]
 }

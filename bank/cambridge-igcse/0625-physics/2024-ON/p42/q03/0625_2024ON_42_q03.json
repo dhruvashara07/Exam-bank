@@ -75,7 +75,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -173,8 +182,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Show that the mass of air hitting the turbine each second is approximately 550kg.",
-       "text": "Show that the mass of air hitting the turbine each second is approximately 550kg."
+       "html": "Show that the mass of air hitting the turbine each second is approximately 550 kg.",
+       "text": "Show that the mass of air hitting the turbine each second is approximately 550 kg."
       },
       {
        "type": "answer",
@@ -267,8 +276,8 @@
    "content": [
     {
      "type": "text",
-     "html": "A wind turbine is used to generate electricity. The useful output from the turbine in 1.0s is 6000J. The kinetic energy of the wind hitting the turbine in 1.0s is 11000J. The velocity of the wind hitting the turbine is 6.3m/s.",
-     "text": "A wind turbine is used to generate electricity. The useful output from the turbine in 1.0s is 6000J. The kinetic energy of the wind hitting the turbine in 1.0s is 11000J. The velocity of the wind hitting the turbine is 6.3m/s."
+     "html": "A wind turbine is used to generate electricity. The useful output from the turbine in 1.0 s is 6000 J. The kinetic energy of the wind hitting the turbine in 1.0 s is 11 000 J. The velocity of the wind hitting the turbine is 6.3 m / s.",
+     "text": "A wind turbine is used to generate electricity. The useful output from the turbine in 1.0 s is 6000 J. The kinetic energy of the wind hitting the turbine in 1.0 s is 11 000 J. The velocity of the wind hitting the turbine is 6.3 m / s."
     }
    ]
   },
@@ -367,5 +376,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
+    67.5,
     383.0,
-    493.7,
-    494.3
+    494.0,
+    494.5
    ],
    "id": "0625_2022MJ_11_q04_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p11/q04/figures/0625_2022MJ_11_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p11/q04/figures/0625_2022MJ_11_q04_figA",
     "url": null,
-    "kb": 44.8
+    "kb": 44.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -117,35 +118,30 @@
    "text": "How would the measurements on the Earth compare with those on the Moon?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "spring balance measurements",
-     "beam balance measurements"
-    ],
-    [
-     "<b>A</b>",
-     "larger on the Earth than on the Moon",
-     "larger on the Earth than on the Moon"
-    ],
-    [
-     "<b>B</b>",
-     "larger on the Earth than on the Moon",
-     "same on the Earth as on the Moon"
-    ],
-    [
-     "<b>C</b>",
-     "same on the Earth as on the Moon",
-     "larger on the Earth than on the Moon"
-    ],
-    [
-     "<b>D</b>",
-     "same on the Earth as on the Moon",
-     "same on the Earth as on the Moon"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_11_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "larger on the Earth than on the Moon larger on the Earth than on the Moon"
+    },
+    {
+     "label": "B",
+     "html": "larger on the Earth than on the Moon same on the Earth as on the Moon"
+    },
+    {
+     "label": "C",
+     "html": "same on the Earth as on the Moon larger on the Earth than on the Moon"
+    },
+    {
+     "label": "D",
+     "html": "same on the Earth as on the Moon same on the Earth as on the Moon"
+    }
+   ]
   }
  ]
 }

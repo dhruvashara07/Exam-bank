@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    303.8,
-    351.9,
-    415.2
+    67.5,
+    303.5,
+    352.0,
+    415.5
    ],
    "id": "0625_2021ON_13_q04_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p13/q04/figures/0625_2021ON_13_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p13/q04/figures/0625_2021ON_13_q04_figA",
     "url": null,
-    "kb": 24.6
+    "kb": 24.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,40 +98,30 @@
    "text": "Which substance in the table has the lowest density?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "substance",
-     "mass/g",
-     "<sup>3</sup> volume/cm"
-    ],
-    [
-     "<b>A</b>",
-     "nylon",
-     "1.2",
-     "1.0"
-    ],
-    [
-     "<b>B</b>",
-     "cotton",
-     "1.5",
-     "1.0"
-    ],
-    [
-     "<b>C</b>",
-     "olive oil",
-     "1.8",
-     "2.0"
-    ],
-    [
-     "<b>D</b>",
-     "water",
-     "2.0",
-     "2.0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_13_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "nylon 1.2 1.0"
+    },
+    {
+     "label": "B",
+     "html": "cotton 1.5 1.0"
+    },
+    {
+     "label": "C",
+     "html": "olive oil 1.8 2.0"
+    },
+    {
+     "label": "D",
+     "html": "water 2.0 2.0"
+    }
+   ]
   }
  ]
 }

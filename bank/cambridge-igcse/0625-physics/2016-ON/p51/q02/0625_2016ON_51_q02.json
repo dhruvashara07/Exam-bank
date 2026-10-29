@@ -97,10 +97,30 @@
      "type": "list",
      "items": [
       "Pour 100 cm<sup>3</sup> of the hot water provided into beaker <b>A</b>.",
-      "Measure the temperature θ<sub>H</sub> of the water in beaker <b>A</b>.",
+      "Measure the temperature θ<sub>H</sub> of the water in beaker <b>A</b>."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θH ="
+    },
+    {
+     "type": "list",
+     "items": [
       "Pour 100 cm<sup>3</sup> of the cold water provided into beaker <b>B</b>.",
-      "Measure the temperature θ<sub>C</sub> of the water in beaker <b>B</b>.",
-      "Calculate the average temperature θ<sub>AV</sub> using the equation θ<sub>AV</sub> = \\(\\frac{θ<sub>H</sub> + θ<sub>C</sub>}{2}\\) ."
+      "Measure the temperature θ<sub>C</sub> of the water in beaker <b>B</b>."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θC ="
+    },
+    {
+     "type": "list",
+     "items": [
+      "Calculate the average temperature θ<sub>AV</sub> using the equation θ<sub>AV</sub> = \\(\\frac{θ_{H} + θ_{C}}{2}\\) ."
      ]
     },
     {
@@ -434,6 +454,21 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "θH ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "θC ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "θAV ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "θM ="
       },
       {
@@ -580,7 +615,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "1."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "2."
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -629,6 +673,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

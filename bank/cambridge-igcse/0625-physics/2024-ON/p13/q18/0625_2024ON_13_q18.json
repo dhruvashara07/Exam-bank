@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    384.7,
-    257.2,
-    496.1
+    67.5,
+    384.5,
+    257.5,
+    496.0
    ],
    "id": "0625_2024ON_13_q18_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row shows an example of a transverse wave and an example of a longitudinal wave?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "transverse",
-     "longitudinal"
-    ],
-    [
-     "<b>A</b>",
-     "light",
-     "radio"
-    ],
-    [
-     "<b>B</b>",
-     "radio",
-     "sound"
-    ],
-    [
-     "<b>C</b>",
-     "sound",
-     "water"
-    ],
-    [
-     "<b>D</b>",
-     "water",
-     "light"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_13_q18_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "light radio"
+    },
+    {
+     "label": "B",
+     "html": "radio sound"
+    },
+    {
+     "label": "C",
+     "html": "sound water"
+    },
+    {
+     "label": "D",
+     "html": "water light"
+    }
+   ]
   }
  ]
 }

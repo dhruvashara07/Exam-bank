@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    236.0,
-    99.2,
+    235.5,
+    99.0,
     359.3,
-    224.7
+    225.5
    ],
    "id": "0625_2016MJ_13_q32_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 14,
    "bbox": [
-    67.6,
-    257.9,
-    272.4,
-    369.3
+    67.5,
+    258.0,
+    272.5,
+    369.5
    ],
    "id": "0625_2016MJ_13_q32_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p13/q32/figures/0625_2016MJ_13_q32_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p13/q32/figures/0625_2016MJ_13_q32_figB",
     "url": null,
-    "kb": 22.2
+    "kb": 22.0
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The diagram shows a cell connected to two 6.0Ω resistors. Three currents, I<sub>1</sub>, I<sub>2</sub> and I<sub>3</sub>, are labelled.",
-   "text": "The diagram shows a cell connected to two 6.0Ω resistors. Three currents, I1, I2 and I3, are labelled."
+   "html": "The diagram shows a cell connected to two 6.0 Ω resistors. Three currents, I<sub>1</sub>, I<sub>2</sub> and I<sub>3</sub>, are labelled.",
+   "text": "The diagram shows a cell connected to two 6.0 Ω resistors. Three currents, I1, I2 and I3, are labelled."
   },
   {
    "type": "figure",
@@ -126,35 +127,30 @@
    "text": "Which row correctly compares I2 and I3 with I1?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "I<sub>2</sub>",
-     "I<sub>3</sub>"
-    ],
-    [
-     "A",
-     "same as I<sub>1</sub>",
-     "same as I<sub>1</sub>"
-    ],
-    [
-     "B",
-     "same as I<sub>1</sub>",
-     "smaller than I<sub>1</sub>"
-    ],
-    [
-     "C",
-     "smaller than I<sub>1</sub>",
-     "same as I<sub>1</sub>"
-    ],
-    [
-     "D",
-     "smaller than I<sub>1</sub>",
-     "smaller than I<sub>1</sub>"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_13_q32_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "same as I1 same as I1"
+    },
+    {
+     "label": "B",
+     "html": "same as I1 smaller than I1"
+    },
+    {
+     "label": "C",
+     "html": "smaller than I1 same as I1"
+    },
+    {
+     "label": "D",
+     "html": "smaller than I1 smaller than I1"
+    }
+   ]
   }
  ]
 }

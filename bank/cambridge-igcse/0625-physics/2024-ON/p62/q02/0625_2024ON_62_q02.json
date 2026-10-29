@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    183.3,
-    111.5,
-    412.0,
-    327.8
+    182.5,
+    114.0,
+    412.5,
+    328.0
    ],
    "id": "0625_2024ON_62_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 4,
    "bbox": [
-    194.0,
-    491.3,
-    401.3,
-    645.1
+    193.5,
+    490.5,
+    402.0,
+    645.5
    ],
    "id": "0625_2024ON_62_q02aii_fig2-2",
    "part": "(a)(ii)",
@@ -71,10 +71,10 @@
    "caption": "Table 2.1",
    "page": 5,
    "bbox": [
-    104.6,
-    60.8,
-    490.7,
-    207.6
+    104.5,
+    61.5,
+    491.0,
+    208.0
    ],
    "id": "0625_2024ON_62_q02aii_table2-1",
    "part": "(a)(ii)",
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p62/q02/figures/0625_2024ON_62_q02aii_table2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p62/q02/figures/0625_2024ON_62_q02aii_table2-1",
     "url": null,
-    "kb": 32.0
+    "kb": 31.9
    }
   }
  ],
@@ -182,8 +182,8 @@
      "content": [
       {
        "type": "text",
-       "html": "On Fig. 2.1, draw the symbol for a voltmeter connected to measure the potential difference across the 220Ω resistor.",
-       "text": "On Fig. 2.1, draw the symbol for a voltmeter connected to measure the potential difference across the 220Ω resistor."
+       "html": "On Fig. 2.1, draw the symbol for a voltmeter connected to measure the potential difference across the 220 Ω resistor.",
+       "text": "On Fig. 2.1, draw the symbol for a voltmeter connected to measure the potential difference across the 220 Ω resistor."
       },
       {
        "type": "marks",
@@ -296,30 +296,9 @@
        "value": 1
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "resistance between P and Q /Ω",
-         "V<sub>PQ</sub>/V",
-         "V<sub>QR</sub>/V",
-         "I/A",
-         "R<sub>LED</sub>/Ω"
-        ],
-        [
-         "220",
-         "",
-         "2.1",
-         "",
-         ""
-        ],
-        [
-         "330",
-         "",
-         "2.0",
-         "0.0076",
-         "263"
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2024ON_62_q02aii_table2-1",
+       "caption": "Table 2.1"
       }
      ]
     }
@@ -334,7 +313,7 @@
     {
      "type": "list",
      "items": [
-      "connects a voltmeter to measure the potential difference across the 220Ω resistor",
+      "connects a voltmeter to measure the potential difference across the 220 Ω resistor",
       "closes the switch",
       "records the voltmeter reading V<sub>PQ</sub> in the top row of Table 2.1",
       "opens the switch."
@@ -421,13 +400,13 @@
     },
     {
      "type": "text",
-     "html": "I = \\(\\frac{V<sub>PQ</sub>}{R}\\)",
+     "html": "I = \\(\\frac{V_{\\text{PQ}}}{R}\\)",
      "text": "I = (VPQ)/(R)"
     },
     {
      "type": "text",
-     "html": "where R = 220Ω.",
-     "text": "where R = 220Ω."
+     "html": "where R = 220 Ω.",
+     "text": "where R = 220 Ω."
     },
     {
      "type": "text",
@@ -505,7 +484,7 @@
     },
     {
      "type": "text",
-     "html": "R<sub>LED</sub> = \\(\\frac{V<sub>QR</sub>}{I}\\)",
+     "html": "R<sub>LED</sub> = \\(\\frac{V_{\\text{QR}}}{I}\\)",
      "text": "RLED = (VQR)/(I)"
     },
     {
@@ -584,15 +563,15 @@
     {
      "type": "list",
      "items": [
-      "removes the 220Ω resistor from the circuit and replaces it with a 330Ω resistor",
+      "removes the 220 Ω resistor from the circuit and replaces it with a 330 Ω resistor",
       "reconnects the voltmeter across the resistor between points P and Q",
-      "repeats parts (a) to (c) for the 330Ω resistor."
+      "repeats parts (a) to (c) for the 330 Ω resistor."
      ]
     },
     {
      "type": "text",
-     "html": "Use the information in Table 2.1 to calculate the value of the potential difference V<sub>PQ</sub> across the 330Ω resistor.",
-     "text": "Use the information in Table 2.1 to calculate the value of the potential difference VPQ across the 330Ω resistor."
+     "html": "Use the information in Table 2.1 to calculate the value of the potential difference V<sub>PQ</sub> across the 330 Ω resistor.",
+     "text": "Use the information in Table 2.1 to calculate the value of the potential difference VPQ across the 330 Ω resistor."
     },
     {
      "type": "text",
@@ -867,6 +846,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

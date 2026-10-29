@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    52.4,
-    122.2,
-    542.9,
-    548.2
+    53.0,
+    124.5,
+    543.0,
+    546.5
    ],
    "id": "0625_2022FM_52_q03_fig3-1",
    "part": "",
@@ -513,7 +513,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -694,6 +703,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -701,54 +711,9 @@
    "text": "In this experiment, you will investigate the refraction of light using a transparent block. Carry out the following instructions, using the separate ray-trace sheet provided. You may refer to Fig. 3.1 for guidance."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>E</b>",
-     ""
-    ],
-    [
-     "",
-     "<b>L</b>",
-     ""
-    ],
-    [
-     "",
-     "eye",
-     ""
-    ],
-    [
-     "",
-     "θ",
-     ""
-    ],
-    [
-     "",
-     "<b>N</b>",
-     ""
-    ],
-    [
-     "",
-     "<b>A</b> <b>B</b>",
-     ""
-    ],
-    [
-     "",
-     "2cm",
-     ""
-    ],
-    [
-     "",
-     "<b>D</b> <b>C</b>",
-     ""
-    ],
-    [
-     "",
-     "mirror",
-     ""
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2022FM_52_q03_fig3-1",
+   "caption": "Fig. 3.1"
   }
  ]
 }

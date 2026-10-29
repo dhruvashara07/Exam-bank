@@ -158,7 +158,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -259,15 +268,14 @@
      "text": "Calculate the new pressure of the helium. Assume that the temperature stays constant."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "pressure ="
+    },
+    {
      "type": "text",
      "html": "Suggest why it may be necessary to release helium from the balloon as it rises even higher.",
      "text": "Suggest why it may be necessary to release helium from the balloon as it rises even higher."
-    },
-    {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "pressure =",
-     "lines": 2
     },
     {
      "type": "marks",
@@ -292,5 +300,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

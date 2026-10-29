@@ -32,8 +32,8 @@
   {
    "page": 13,
    "bbox": [
-    162.4,
-    97.9,
+    162.0,
+    97.5,
     432.4,
     259.9
    ],
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-MJ/p21/q24/figures/0625_2017MJ_21_q24_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-MJ/p21/q24/figures/0625_2017MJ_21_q24_figA",
     "url": null,
-    "kb": 36.0
+    "kb": 36.2
    }
   },
   {
    "page": 13,
    "bbox": [
-    67.7,
-    293.2,
-    258.7,
-    404.6
+    67.5,
+    293.0,
+    259.0,
+    404.5
    ],
    "id": "0625_2017MJ_21_q24_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-MJ/p21/q24/figures/0625_2017MJ_21_q24_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-MJ/p21/q24/figures/0625_2017MJ_21_q24_figB",
     "url": null,
-    "kb": 22.0
+    "kb": 21.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "What are possible materials from which the fish and the rod are made?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "fish",
-     "rod"
-    ],
-    [
-     "<b>A</b>",
-     "aluminium",
-     "soft iron"
-    ],
-    [
-     "<b>B</b>",
-     "aluminium",
-     "steel"
-    ],
-    [
-     "<b>C</b>",
-     "soft iron",
-     "soft iron"
-    ],
-    [
-     "<b>D</b>",
-     "soft iron",
-     "steel"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017MJ_21_q24_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "aluminium soft iron"
+    },
+    {
+     "label": "B",
+     "html": "aluminium steel"
+    },
+    {
+     "label": "C",
+     "html": "soft iron soft iron"
+    },
+    {
+     "label": "D",
+     "html": "soft iron steel"
+    }
+   ]
   }
  ]
 }

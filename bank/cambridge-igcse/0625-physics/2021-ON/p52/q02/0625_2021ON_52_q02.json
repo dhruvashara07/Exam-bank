@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    163.5,
-    109.2,
-    431.8,
-    330.8
+    163.0,
+    112.5,
+    432.5,
+    329.0
    ],
    "id": "0625_2021ON_52_q02_fig2-1",
    "part": "",
@@ -289,8 +289,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate <i>R</i><sub>S</sub>, the resistance of resistor R, using the equation <i>R</i><sub>S</sub> = \\(\\frac{<i>V</i><sub>S</sub>}{<i>I</i>}\\).",
-       "text": "Calculate RS, the resistance of resistor R, using the equation RS = (VS)/(I)."
+       "html": "Calculate <i>R</i><sub>S</sub>, the resistance of resistor R, using the equation <i>R</i><sub>S</sub> = \\(\\frac{V_{S}}{I}\\) .",
+       "text": "Calculate RS, the resistance of resistor R, using the equation RS = (VS)/(I) ."
       },
       {
        "type": "text",
@@ -411,6 +411,11 @@
        "text": "Record VL, the potential difference across the lamp."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "VL="
+      },
+      {
        "type": "text",
        "html": "Record <i>I</i><sub>L</sub>, the current in the circuit and then switch off the power supply.",
        "text": "Record IL, the current in the circuit and then switch off the power supply."
@@ -485,7 +490,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate <i>R</i><sub>L</sub>, the resistance of the lamp, using the equation <i>R</i><sub>L</sub> = \\(\\frac{<i>V</i><sub>L</sub>}{<i>I</i>}\\) .",
+       "html": "Calculate <i>R</i><sub>L</sub>, the resistance of the lamp, using the equation <i>R</i><sub>L</sub> = \\(\\frac{V_{L}}{I}\\) .",
        "text": "Calculate RL, the resistance of the lamp, using the equation RL = (VL)/(I) ."
       },
       {
@@ -685,6 +690,11 @@
        "text": "Switch on. Record VC, the potential difference across the resistor and the lamp in series."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "VC ="
+      },
+      {
        "type": "text",
        "html": "Record <i>I</i><sub>C</sub>, the current in the circuit and then switch off the power supply.",
        "text": "Record IC, the current in the circuit and then switch off the power supply."
@@ -759,8 +769,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate <i>R</i><sub>C</sub>, the combined resistance of the resistor and the lamp connected in series, using the equation <i>R</i><sub>C</sub> = \\(\\frac{<i>V</i><sub>C</sub>}{<i>I</i>}\\).",
-       "text": "Calculate RC, the combined resistance of the resistor and the lamp connected in series, using the equation RC = (VC)/(I)."
+       "html": "Calculate <i>R</i><sub>C</sub>, the combined resistance of the resistor and the lamp connected in series, using the equation <i>R</i><sub>C</sub> = \\(\\frac{V_{C}}{I}\\) .",
+       "text": "Calculate RC, the combined resistance of the resistor and the lamp connected in series, using the equation RC = (VC)/(I) ."
       },
       {
        "type": "text",
@@ -857,7 +867,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -884,6 +903,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

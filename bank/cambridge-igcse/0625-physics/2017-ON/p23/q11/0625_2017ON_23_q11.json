@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    533.2,
-    341.9,
-    658.7
+    67.5,
+    533.0,
+    342.0,
+    659.0
    ],
    "id": "0625_2017ON_23_q11_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p23/q11/figures/0625_2017ON_23_q11_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p23/q11/figures/0625_2017ON_23_q11_figA",
     "url": null,
-    "kb": 31.5
+    "kb": 31.3
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A 150W filament lamp has an efficiency of 10%. A 40W compact fluorescent lamp (CFL) has an efficiency of 30%.",
-   "text": "A 150W filament lamp has an efficiency of 10%. A 40W compact fluorescent lamp (CFL) has an efficiency of 30%."
+   "html": "A 150 W filament lamp has an efficiency of 10%. A 40 W compact fluorescent lamp (CFL) has an efficiency of 30%.",
+   "text": "A 150 W filament lamp has an efficiency of 10%. A 40 W compact fluorescent lamp (CFL) has an efficiency of 30%."
   },
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "Which lamp produces more light and which lamp converts more energy into other forms of energy?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "produces more light",
-     "converts more energy into other forms"
-    ],
-    [
-     "<b>A</b>",
-     "CFL lamp",
-     "CFL lamp"
-    ],
-    [
-     "<b>B</b>",
-     "CFL lamp",
-     "filament lamp"
-    ],
-    [
-     "<b>C</b>",
-     "filament lamp",
-     "CFL lamp"
-    ],
-    [
-     "<b>D</b>",
-     "filament lamp",
-     "filament lamp"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017ON_23_q11_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "CFL lamp CFL lamp"
+    },
+    {
+     "label": "B",
+     "html": "CFL lamp filament lamp"
+    },
+    {
+     "label": "C",
+     "html": "filament lamp CFL lamp"
+    },
+    {
+     "label": "D",
+     "html": "filament lamp filament lamp"
+    }
+   ]
   }
  ]
 }

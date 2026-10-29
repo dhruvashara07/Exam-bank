@@ -9,10 +9,10 @@
    "caption": "Fig. 2.1 (not to scale)",
    "page": 4,
    "bbox": [
-    141.9,
-    85.5,
+    142.5,
+    86.5,
     453.5,
-    267.9
+    268.0
    ],
    "id": "0625_2025ON_33_q02a_fig2-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 2.2 (not to scale)",
    "page": 4,
    "bbox": [
-    154.6,
-    418.5,
-    441.2,
-    621.5
+    154.0,
+    419.5,
+    440.5,
+    622.0
    ],
    "id": "0625_2025ON_33_q02b_fig2-2",
    "part": "(b)",
@@ -120,8 +120,8 @@
     },
     {
      "type": "text",
-     "html": "Calculate the moment of the 320N force about the pivot.",
-     "text": "Calculate the moment of the 320N force about the pivot."
+     "html": "Calculate the moment of the 320 N force about the pivot.",
+     "text": "Calculate the moment of the 320 N force about the pivot."
     },
     {
      "type": "answer",
@@ -205,39 +205,14 @@
      "caption": "Fig. 2.2 (not to scale)"
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "position 2",
-       "",
-       ""
-      ],
-      [
-       "0.60m",
-       "",
-       ""
-      ],
-      [
-       "",
-       "0.60",
-       "m"
-      ],
-      [
-       "",
-       "",
-       ""
-      ]
-     ]
+     "type": "text",
+     "html": "The truck lifts the rock through a vertical height of 0.60 m.",
+     "text": "The truck lifts the rock through a vertical height of 0.60 m."
     },
     {
      "type": "text",
-     "html": "The truck lifts the rock through a vertical height of 0.60m.",
-     "text": "The truck lifts the rock through a vertical height of 0.60m."
-    },
-    {
-     "type": "text",
-     "html": "The weight of the rock is 4800N.",
-     "text": "The weight of the rock is 4800N."
+     "html": "The weight of the rock is 4800 N.",
+     "text": "The weight of the rock is 4800 N."
     },
     {
      "type": "text",
@@ -249,6 +224,10 @@
      "kind": "answer_line",
      "prefix": "work done",
      "unit": "J"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -318,13 +297,13 @@
    "content": [
     {
      "type": "text",
-     "html": "The work done by the truck in lifting a different rock is 5800J.",
-     "text": "The work done by the truck in lifting a different rock is 5800J."
+     "html": "The work done by the truck in lifting a different rock is 5800 J.",
+     "text": "The work done by the truck in lifting a different rock is 5800 J."
     },
     {
      "type": "text",
-     "html": "The truck lifts the rock in a time of 7.4s.",
-     "text": "The truck lifts the rock in a time of 7.4s."
+     "html": "The truck lifts the rock in a time of 7.4 s.",
+     "text": "The truck lifts the rock in a time of 7.4 s."
     },
     {
      "type": "text",
@@ -359,5 +338,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

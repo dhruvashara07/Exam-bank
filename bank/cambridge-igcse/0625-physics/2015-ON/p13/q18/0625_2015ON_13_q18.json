@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    67.6,
-    251.7,
-    485.2,
-    363.1
+    67.5,
+    251.5,
+    485.5,
+    363.0
    ],
    "id": "0625_2015ON_13_q18_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p13/q18/figures/0625_2015ON_13_q18_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p13/q18/figures/0625_2015ON_13_q18_figA",
     "url": null,
-    "kb": 41.7
+    "kb": 41.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,40 +98,30 @@
    "text": "Which row correctly defines a type of wave and gives a correct example?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "wave type",
-     "direction of vibrations",
-     "example"
-    ],
-    [
-     "A",
-     "longitudinal",
-     "parallel to direction of wave travel",
-     "radio waves"
-    ],
-    [
-     "B",
-     "longitudinal",
-     "perpendicular to direction of wave travel",
-     "light waves"
-    ],
-    [
-     "C",
-     "transverse",
-     "parallel to direction of wave travel",
-     "light waves"
-    ],
-    [
-     "D",
-     "transverse",
-     "perpendicular to direction of wave travel",
-     "radio waves"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015ON_13_q18_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "longitudinal parallel to direction of wave travel radio waves"
+    },
+    {
+     "label": "B",
+     "html": "longitudinal perpendicular to direction of wave travel light waves"
+    },
+    {
+     "label": "C",
+     "html": "transverse parallel to direction of wave travel light waves"
+    },
+    {
+     "label": "D",
+     "html": "transverse perpendicular to direction of wave travel radio waves"
+    }
+   ]
   }
  ]
 }

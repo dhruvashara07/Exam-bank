@@ -32,9 +32,9 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    122.6,
-    400.7,
+    67.5,
+    122.5,
+    401.0,
     233.5
    ],
    "id": "0625_2024MJ_12_q35_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p12/q35/figures/0625_2024MJ_12_q35_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p12/q35/figures/0625_2024MJ_12_q35_figA",
     "url": null,
-    "kb": 26.3
+    "kb": 26.2
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The emissions from a radioactive source pass through a sheet of lead that is 10mm thick.",
-   "text": "The emissions from a radioactive source pass through a sheet of lead that is 10mm thick."
+   "html": "The emissions from a radioactive source pass through a sheet of lead that is 10 mm thick.",
+   "text": "The emissions from a radioactive source pass through a sheet of lead that is 10 mm thick."
   },
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which type of radiation is emitted from the source and how is the radiation affected by an electric field?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "type of radiation",
-     "effect of electric field on radiation"
-    ],
-    [
-     "<b>A</b>",
-     "α",
-     "radiation deflected"
-    ],
-    [
-     "<b>B</b>",
-     "α",
-     "radiation <b>not</b> deflected"
-    ],
-    [
-     "<b>C</b>",
-     "γ",
-     "radiation deflected"
-    ],
-    [
-     "<b>D</b>",
-     "γ",
-     "radiation <b>not</b> deflected"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_12_q35_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "α radiation deflected"
+    },
+    {
+     "label": "B",
+     "html": "α radiation not deflected"
+    },
+    {
+     "label": "C",
+     "html": "γ radiation deflected"
+    },
+    {
+     "label": "D",
+     "html": "γ radiation not deflected"
+    }
+   ]
   }
  ]
 }

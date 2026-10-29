@@ -51,10 +51,10 @@
   {
    "page": 18,
    "bbox": [
-    67.7,
-    550.4,
+    67.5,
+    550.0,
     526.0,
-    661.8
+    662.0
    ],
    "id": "0625_2017MJ_12_q34_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-MJ/p12/q34/figures/0625_2017MJ_12_q34_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-MJ/p12/q34/figures/0625_2017MJ_12_q34_figB",
     "url": null,
-    "kb": 39.0
+    "kb": 38.8
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A circuit-breaker is designed to protect a circuit which usually carries a current of 2A.",
-   "text": "A circuit-breaker is designed to protect a circuit which usually carries a current of 2A."
+   "html": "A circuit-breaker is designed to protect a circuit which usually carries a current of 2 A.",
+   "text": "A circuit-breaker is designed to protect a circuit which usually carries a current of 2 A."
   },
   {
    "type": "text",
@@ -127,44 +128,39 @@
   },
   {
    "type": "text",
-   "html": "current/A",
-   "text": "current/A"
+   "html": "current / A",
+   "text": "current / A"
   },
   {
    "type": "text",
-   "html": "What happens when the current in the circuit is 2A and what happens when the current is 18A?",
-   "text": "What happens when the current in the circuit is 2A and what happens when the current is 18A?"
+   "html": "What happens when the current in the circuit is 2 A and what happens when the current is 18 A?",
+   "text": "What happens when the current in the circuit is 2 A and what happens when the current is 18 A?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "when the current is 2A",
-     "when the current is 18A"
-    ],
-    [
-     "<b>A</b>",
-     "the circuit breaks in less than 0.01s",
-     "the circuit breaks in less than 0.01s"
-    ],
-    [
-     "<b>B</b>",
-     "the circuit breaks in less than 0.01s",
-     "the circuit does not break"
-    ],
-    [
-     "<b>C</b>",
-     "the circuit does not break",
-     "the circuit breaks in less than 0.01s"
-    ],
-    [
-     "<b>D</b>",
-     "the circuit does not break",
-     "the circuit does not break"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017MJ_12_q34_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "the circuit breaks in less than 0.01s the circuit breaks in less than 0.01s"
+    },
+    {
+     "label": "B",
+     "html": "the circuit breaks in less than 0.01s the circuit does not break"
+    },
+    {
+     "label": "C",
+     "html": "the circuit does not break the circuit breaks in less than 0.01s"
+    },
+    {
+     "label": "D",
+     "html": "the circuit does not break the circuit does not break"
+    }
+   ]
   }
  ]
 }

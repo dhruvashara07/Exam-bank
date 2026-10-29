@@ -9,10 +9,10 @@
    "caption": "Fig. 10.1",
    "page": 14,
    "bbox": [
-    219.4,
-    98.3,
-    375.9,
-    172.2
+    219.5,
+    97.5,
+    376.0,
+    170.5
    ],
    "id": "0625_2021ON_42_q10a_fig10-1",
    "part": "(a)",
@@ -21,17 +21,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p42/q10/figures/0625_2021ON_42_q10a_fig10-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p42/q10/figures/0625_2021ON_42_q10a_fig10-1",
     "url": null,
-    "kb": 5.0
+    "kb": 4.9
    }
   },
   {
    "caption": "Fig. 10.2",
    "page": 14,
    "bbox": [
-    129.3,
-    216.8,
-    466.0,
-    290.7
+    130.0,
+    216.0,
+    465.5,
+    289.0
    ],
    "id": "0625_2021ON_42_q10b_fig10-2",
    "part": "(b)",
@@ -47,10 +47,10 @@
    "caption": "Table 10.1",
    "page": 14,
    "bbox": [
-    145.7,
-    334.0,
-    449.6,
-    436.8
+    145.5,
+    337.5,
+    449.5,
+    437.0
    ],
    "id": "0625_2021ON_42_q10b_table10-1",
    "part": "(b)",
@@ -126,14 +126,18 @@
    ],
    "content": [
     {
+     "type": "text",
+     "html": "Name the logic gate shown in Fig. 10.1. ……",
+     "text": "Name the logic gate shown in Fig. 10.1. ……"
+    },
+    {
      "type": "figure",
      "id": "0625_2021ON_42_q10a_fig10-1",
      "caption": "Fig. 10.1"
     },
     {
      "type": "answer",
-     "kind": "answer_line",
-     "prefix": "10 (a) Name the logic gate shown in Fig. 10.1."
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -218,26 +222,6 @@
      "type": "figure",
      "id": "0625_2021ON_42_q10b_table10-1",
      "caption": "Table 10.1"
-    },
-    {
-     "type": "table",
-     "rows": [
-      [
-       "input I",
-       "",
-       "output O"
-      ],
-      [
-       "0",
-       "",
-       ""
-      ],
-      [
-       "1",
-       "",
-       ""
-      ]
-     ]
     },
     {
      "type": "marks",
@@ -503,5 +487,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

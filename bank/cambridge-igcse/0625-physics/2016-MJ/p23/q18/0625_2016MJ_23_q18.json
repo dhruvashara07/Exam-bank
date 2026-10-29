@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    69.3,
-    97.4,
-    305.4,
-    208.8
+    69.0,
+    97.0,
+    305.5,
+    209.0
    ],
    "id": "0625_2016MJ_23_q18_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p23/q18/figures/0625_2016MJ_23_q18_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p23/q18/figures/0625_2016MJ_23_q18_figA",
     "url": null,
-    "kb": 25.2
+    "kb": 24.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row shows the surface that is the better absorber and the surface that is the better emitter of infra-red radiation?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "better absorber",
-     "better emitter"
-    ],
-    [
-     "A",
-     "black surface",
-     "black surface"
-    ],
-    [
-     "B",
-     "black surface",
-     "white surface"
-    ],
-    [
-     "C",
-     "white surface",
-     "black surface"
-    ],
-    [
-     "D",
-     "white surface",
-     "white surface"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_23_q18_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "black surface black surface"
+    },
+    {
+     "label": "B",
+     "html": "black surface white surface"
+    },
+    {
+     "label": "C",
+     "html": "white surface black surface"
+    },
+    {
+     "label": "D",
+     "html": "white surface white surface"
+    }
+   ]
   }
  ]
 }

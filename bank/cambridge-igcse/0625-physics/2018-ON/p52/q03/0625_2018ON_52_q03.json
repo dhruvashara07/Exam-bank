@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    105.5,
-    85.9,
-    487.8,
-    549.2
+    106.0,
+    87.5,
+    488.5,
+    546.5
    ],
    "id": "0625_2018ON_52_q03_fig3-1",
    "part": "",
@@ -433,7 +433,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the refractive index <i>n</i> using the equation <i>n</i> = \\(\\frac{<i>a</i>}{<i>b</i>}\\)",
+       "html": "Calculate the refractive index <i>n</i> using the equation <i>n</i> = \\(\\frac{a}{b}\\)",
        "text": "Calculate the refractive index n using the equation n = (a)/(b)"
       },
       {
@@ -545,6 +545,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "a ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "b ="
       },
       {
@@ -612,7 +617,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the refractive index <i>n</i> using the equation <i>n</i> = \\(\\frac{<i>a</i>}{<i>b</i>}\\)",
+       "html": "Calculate the refractive index <i>n</i> using the equation <i>n</i> = \\(\\frac{a}{b}\\)",
        "text": "Calculate the refractive index n using the equation n = (a)/(b)"
       },
       {
@@ -699,14 +704,23 @@
      "text": "A student carries out this experiment with care and expects the two values of refractive index n obtained in this experiment to be equal. State two difficulties with this type of experiment that could account for any difference in the two values of n."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
      "type": "text",
      "html": "<b>Tie your ray-trace sheet into this Question Booklet between pages 8 and 9.</b>",
      "text": "Tie your ray-trace sheet into this Question Booklet between pages 8 and 9."
     },
     {
      "type": "answer",
-     "kind": "answer_line",
-     "prefix": "2.",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -733,6 +747,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -740,33 +755,9 @@
    "text": "In this experiment, you will determine the refractive index n of the material of a transparent block."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>E</b>"
-    ],
-    [
-     "",
-     "<b>N</b>"
-    ],
-    [
-     "",
-     "<b>A</b> <b>F</b> <b>B</b>"
-    ],
-    [
-     "",
-     "<b>D</b> <b>C</b>"
-    ],
-    [
-     "",
-     "<b>G</b>"
-    ],
-    [
-     "",
-     "<b>L</b>"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2018ON_52_q03_fig3-1",
+   "caption": "Fig. 3.1"
   }
  ]
 }

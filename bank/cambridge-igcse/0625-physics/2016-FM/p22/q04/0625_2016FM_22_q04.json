@@ -32,10 +32,10 @@
   {
    "page": 2,
    "bbox": [
-    67.6,
+    67.5,
     526.0,
-    274.7,
-    637.3
+    275.0,
+    637.5
    ],
    "id": "0625_2016FM_22_q04_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-FM/p22/q04/figures/0625_2016FM_22_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-FM/p22/q04/figures/0625_2016FM_22_q04_figA",
     "url": null,
-    "kb": 20.7
+    "kb": 20.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What is the effect of this weaker field on the mass and on the weight of the post at the top of the mountain?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass",
-     "weight"
-    ],
-    [
-     "A",
-     "is less",
-     "is less"
-    ],
-    [
-     "B",
-     "is less",
-     "is unchanged"
-    ],
-    [
-     "C",
-     "is unchanged",
-     "is less"
-    ],
-    [
-     "D",
-     "is unchanged",
-     "is unchanged"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016FM_22_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "is less is less"
+    },
+    {
+     "label": "B",
+     "html": "is less is unchanged"
+    },
+    {
+     "label": "C",
+     "html": "is unchanged is less"
+    },
+    {
+     "label": "D",
+     "html": "is unchanged is unchanged"
+    }
+   ]
   }
  ]
 }

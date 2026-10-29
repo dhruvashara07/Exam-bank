@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    67.4,
-    111.3,
-    527.9,
-    384.1
+    67.5,
+    110.5,
+    527.5,
+    384.5
    ],
    "id": "0625_2025ON_63_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 5,
    "bbox": [
-    140.4,
-    534.7,
-    455.4,
-    717.8
+    140.0,
+    534.0,
+    455.5,
+    718.0
    ],
    "id": "0625_2025ON_63_q02bi_fig2-2",
    "part": "(b)(i)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 2.3",
    "page": 6,
    "bbox": [
-    77.0,
-    111.3,
-    518.3,
-    281.9
+    76.5,
+    110.5,
+    519.0,
+    282.0
    ],
    "id": "0625_2025ON_63_q02bii_fig2-3",
    "part": "(b)(ii)",
@@ -90,10 +90,10 @@
    "caption": "Fig. 2.4",
    "page": 6,
    "bbox": [
-    77.0,
-    111.3,
-    518.3,
-    281.9
+    76.5,
+    110.5,
+    519.0,
+    282.0
    ],
    "id": "0625_2025ON_63_q02bii_fig2-4",
    "part": "(b)(ii)",
@@ -109,10 +109,10 @@
    "caption": "Table 2.1",
    "page": 6,
    "bbox": [
-    175.4,
-    330.0,
+    175.0,
+    331.0,
     420.0,
-    441.6
+    442.0
    ],
    "id": "0625_2025ON_63_q02bii_table2-1",
    "part": "(b)(ii)",
@@ -292,8 +292,8 @@
      "content": [
       {
        "type": "text",
-       "html": "On Fig. 2.2, draw an arrow ( ) to indicate precisely between which two points she should measure l = 80.0cm for wire A.",
-       "text": "On Fig. 2.2, draw an arrow ( ) to indicate precisely between which two points she should measure l = 80.0cm for wire A."
+       "html": "On Fig. 2.2, draw an arrow ( ) to indicate precisely between which two points she should measure l = 80.0 cm for wire A.",
+       "text": "On Fig. 2.2, draw an arrow ( ) to indicate precisely between which two points she should measure l = 80.0 cm for wire A."
       },
       {
        "type": "figure",
@@ -394,31 +394,6 @@
        "caption": "Table 2.1"
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "circuit",
-         "V/V",
-         "I/A"
-        ],
-        [
-         "A",
-         "",
-         ""
-        ],
-        [
-         "B",
-         "2.2",
-         "0.59"
-        ],
-        [
-         "C",
-         "1.8",
-         "0.72"
-        ]
-       ]
-      },
-      {
        "type": "answer",
        "kind": "space",
        "height_pt": 66.6
@@ -434,8 +409,8 @@
    "content": [
     {
      "type": "text",
-     "html": "The student connects crocodile clip A to a length l = 80.0cm of resistance wire A.",
-     "text": "The student connects crocodile clip A to a length l = 80.0cm of resistance wire A."
+     "html": "The student connects crocodile clip A to a length l = 80.0 cm of resistance wire A.",
+     "text": "The student connects crocodile clip A to a length l = 80.0 cm of resistance wire A."
     }
    ]
   },
@@ -498,13 +473,13 @@
    "content": [
     {
      "type": "text",
-     "html": "<b>Circuit</b> <b>B</b> The student connects crocodile clip B to a length l = 80.0cm of resistance wire B so that wires A and B are connected in parallel.",
-     "text": "Circuit B The student connects crocodile clip B to a length l = 80.0cm of resistance wire B so that wires A and B are connected in parallel."
+     "html": "<b>Circuit</b> <b>B</b> The student connects crocodile clip B to a length l = 80.0 cm of resistance wire B so that wires A and B are connected in parallel.",
+     "text": "Circuit B The student connects crocodile clip B to a length l = 80.0 cm of resistance wire B so that wires A and B are connected in parallel."
     },
     {
      "type": "text",
-     "html": "<b>Circuit</b> <b>C</b> The student connects crocodile clip C to a length l = 80.0cm of resistance wire C so that wires A, B and C <b>are</b> connected in parallel. In each circuit, she measures the potential difference V across terminals X and Y and measures the current I in the circuit. Her readings are shown in Table 2.1.",
-     "text": "Circuit C The student connects crocodile clip C to a length l = 80.0cm of resistance wire C so that wires A, B and C are connected in parallel. In each circuit, she measures the potential difference V across terminals X and Y and measures the current I in the circuit. Her readings are shown in Table 2.1."
+     "html": "<b>Circuit</b> <b>C</b> The student connects crocodile clip C to a length l = 80.0 cm of resistance wire C so that wires A, B and C <b>are</b> connected in parallel. In each circuit, she measures the potential difference V across terminals X and Y and measures the current I in the circuit. Her readings are shown in Table 2.1.",
+     "text": "Circuit C The student connects crocodile clip C to a length l = 80.0 cm of resistance wire C so that wires A, B and C are connected in parallel. In each circuit, she measures the potential difference V across terminals X and Y and measures the current I in the circuit. Her readings are shown in Table 2.1."
     },
     {
      "type": "text",
@@ -591,6 +566,12 @@
        "text": "Record a resistance RA. RA is the value of R from Circuit A."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "RA =",
+       "unit": "Ω"
+      },
+      {
        "type": "text",
        "html": "Calculate a resistance R<sub>B</sub>. Use the value of R from Circuit B and the equation:",
        "text": "Calculate a resistance RB. Use the value of R from Circuit B and the equation:"
@@ -599,6 +580,12 @@
        "type": "text",
        "html": "R<sub>B</sub> = R × 2",
        "text": "RB = R × 2"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "RB =",
+       "unit": "Ω"
       },
       {
        "type": "text",
@@ -692,7 +679,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -763,8 +759,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Briefly explain why resistor R<sub>P</sub>, shown in Fig. 2.1, must remain in place throughout the experiment.",
-     "text": "Briefly explain why resistor RP, shown in Fig. 2.1, must remain in place throughout the experiment."
+     "html": "Briefly explain why resistor R<sub>P</sub> , shown in Fig. 2.1, must remain in place throughout the experiment.",
+     "text": "Briefly explain why resistor RP , shown in Fig. 2.1, must remain in place throughout the experiment."
     },
     {
      "type": "answer",
@@ -868,6 +864,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

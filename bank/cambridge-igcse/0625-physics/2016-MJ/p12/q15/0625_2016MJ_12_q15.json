@@ -32,8 +32,8 @@
   {
    "page": 7,
    "bbox": [
-    146.5,
-    238.3,
+    145.5,
+    237.5,
     449.2,
     329.3
    ],
@@ -51,10 +51,10 @@
   {
    "page": 7,
    "bbox": [
-    69.3,
-    387.8,
-    357.6,
-    513.4
+    69.0,
+    387.5,
+    358.0,
+    513.5
    ],
    "id": "0625_2016MJ_12_q15_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p12/q15/figures/0625_2016MJ_12_q15_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p12/q15/figures/0625_2016MJ_12_q15_figB",
     "url": null,
-    "kb": 31.3
+    "kb": 30.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,46 +132,30 @@
    "text": "Which row describes the effect of moving the piston slowly in the direction shown in the table?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "movement",
-     "speed of gas",
-     "pressure"
-    ],
-    [
-     "",
-     "of piston",
-     "molecules",
-     "of gas"
-    ],
-    [
-     "A",
-     "to the left",
-     "increases",
-     "decreases"
-    ],
-    [
-     "B",
-     "to the left",
-     "no change",
-     "increases"
-    ],
-    [
-     "C",
-     "to the right",
-     "increases",
-     "decreases"
-    ],
-    [
-     "D",
-     "to the right",
-     "no change",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_12_q15_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "to the left increases decreases"
+    },
+    {
+     "label": "B",
+     "html": "to the left no change increases"
+    },
+    {
+     "label": "C",
+     "html": "to the right increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "to the right no change increases"
+    }
+   ]
   }
  ]
 }

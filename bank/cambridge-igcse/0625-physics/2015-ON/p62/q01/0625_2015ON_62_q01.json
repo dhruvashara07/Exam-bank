@@ -34,9 +34,9 @@
    "page": 2,
    "bbox": [
     96.5,
-    117.9,
-    488.0,
-    240.4
+    118.5,
+    487.5,
+    240.5
    ],
    "id": "0625_2015ON_62_q01_fig1-1",
    "part": "",
@@ -53,8 +53,8 @@
    "page": 2,
    "bbox": [
     216.5,
-    497.2,
-    378.7,
+    497.0,
+    379.0,
     656.0
    ],
    "id": "0625_2015ON_62_q01aiii_table1-1",
@@ -238,33 +238,9 @@
        "text": "Calculate the actual distance a from the centre of load P to the pivot. Calculate the actual distance b from the pivot to the centre of load Q. Write the results in Table 1.1."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>a</i> / cm",
-         "<i>b</i> / cm"
-        ],
-        [
-         "",
-         ""
-        ],
-        [
-         "35.0",
-         "17.6"
-        ],
-        [
-         "30.0",
-         "14.8"
-        ],
-        [
-         "25.0",
-         "12.7"
-        ],
-        [
-         "20.0",
-         "10.1"
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2015ON_62_q01aiii_table1-1",
+       "caption": "Table 1.1"
       },
       {
        "type": "marks",
@@ -513,6 +489,11 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "estimated mass of P ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "estimated mass of Q ="
     },
     {
@@ -566,6 +547,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

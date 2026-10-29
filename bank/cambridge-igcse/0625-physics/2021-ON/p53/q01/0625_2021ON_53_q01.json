@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    63.9,
-    163.3,
-    531.3,
-    348.1
+    64.5,
+    162.5,
+    531.0,
+    346.5
    ],
    "id": "0625_2021ON_53_q01_fig1-1",
    "part": "",
@@ -52,9 +52,9 @@
    "caption": "Table 1.1",
    "page": 3,
    "bbox": [
-    96.1,
-    58.0,
-    499.2,
+    96.0,
+    61.5,
+    499.5,
     308.0
    ],
    "id": "0625_2021ON_53_q01bii_table1-1",
@@ -320,59 +320,9 @@
        "value": 1
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "",
-         "beaker A",
-         "beaker B"
-        ],
-        [
-         "",
-         "with insulation",
-         "without insulation"
-        ],
-        [
-         "<i>t</i> /",
-         "θ /",
-         "θ /"
-        ],
-        [
-         "0",
-         "",
-         ""
-        ],
-        [
-         "30",
-         "",
-         ""
-        ],
-        [
-         "60",
-         "",
-         ""
-        ],
-        [
-         "90",
-         "",
-         ""
-        ],
-        [
-         "120",
-         "",
-         ""
-        ],
-        [
-         "150",
-         "",
-         ""
-        ],
-        [
-         "180",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2021ON_53_q01bii_table1-1",
+       "caption": "Table 1.1"
       }
      ]
     }
@@ -528,7 +478,7 @@
       },
       {
        "type": "text",
-       "html": "<i>x</i><sub>1</sub> = \\(\\frac{θ<sub>0</sub> – θ<sub>90</sub>}{<i>T</i>}\\),",
+       "html": "<i>x</i><sub>1</sub> = \\(\\frac{θ_{0} – θ_{90}}{T}\\),",
        "text": "x1 = (θ0 – θ90)/(T),"
       },
       {
@@ -611,7 +561,7 @@
       },
       {
        "type": "text",
-       "html": "<i>x</i><sub>2</sub> = \\(\\frac{θ<sub>90</sub> – θ<sub>180</sub>}{<i>T</i>}\\),",
+       "html": "<i>x</i><sub>2</sub> = \\(\\frac{θ_{90} – θ_{180}}{T}\\),",
        "text": "x2 = (θ90 – θ180)/(T),"
       },
       {
@@ -783,7 +733,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -813,6 +772,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    69.4,
+    69.0,
     591.5,
     390.5,
-    702.9
+    703.0
    ],
    "id": "0625_2016ON_21_q19_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p21/q19/figures/0625_2016ON_21_q19_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p21/q19/figures/0625_2016ON_21_q19_figA",
     "url": null,
-    "kb": 25.7
+    "kb": 25.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What is this method of thermal energy transfer, and what is the second process?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "method",
-     "second process"
-    ],
-    [
-     "<b>A</b>",
-     "conduction",
-     "density change"
-    ],
-    [
-     "<b>B</b>",
-     "conduction",
-     "lattice vibration"
-    ],
-    [
-     "<b>C</b>",
-     "convection",
-     "density change"
-    ],
-    [
-     "<b>D</b>",
-     "convection",
-     "lattice vibration"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_21_q19_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "conduction density change"
+    },
+    {
+     "label": "B",
+     "html": "conduction lattice vibration"
+    },
+    {
+     "label": "C",
+     "html": "convection density change"
+    },
+    {
+     "label": "D",
+     "html": "convection lattice vibration"
+    }
+   ]
   }
  ]
 }

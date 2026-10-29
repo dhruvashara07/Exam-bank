@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    135.2,
-    267.8,
-    246.6
+    67.5,
+    135.0,
+    268.0,
+    246.5
    ],
    "id": "0625_2023ON_23_q17_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p23/q17/figures/0625_2023ON_23_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p23/q17/figures/0625_2023ON_23_q17_figA",
     "url": null,
-    "kb": 17.7
+    "kb": 17.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which combination for diameter and wavelength will result in the sharpest image (least blurring)?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "diameter",
-     "wavelength"
-    ],
-    [
-     "<b>A</b>",
-     "large",
-     "long"
-    ],
-    [
-     "<b>B</b>",
-     "large",
-     "short"
-    ],
-    [
-     "<b>C</b>",
-     "small",
-     "long"
-    ],
-    [
-     "<b>D</b>",
-     "small",
-     "short"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_23_q17_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "large long"
+    },
+    {
+     "label": "B",
+     "html": "large short"
+    },
+    {
+     "label": "C",
+     "html": "small long"
+    },
+    {
+     "label": "D",
+     "html": "small short"
+    }
+   ]
   }
  ]
 }

@@ -3,13 +3,15 @@
     python3 pipeline/approve.py 0625_2025MJ_41 0625_2025MJ_42 --note "checked: marks, coverage, figures"
     python3 pipeline/approve.py --pending            # list papers waiting for a check
     python3 pipeline/approve.py --revoke 0625_2025MJ_41
-Re-processing a paper (pipeline/run.py) removes its approval automatically.
+Re-processing a paper (pipeline/run.py) removes its approval when its cut changed (pieces, marks,
+answers, mark-scheme rows); figure crops or editable-text improvements keep it.
 """
 import json, os, subprocess, sys
 from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(__file__))
 import paths
+from golden import cut_hash
 
 
 def all_papers():
@@ -40,6 +42,7 @@ if __name__ == '__main__':
     for p in args:
         if p not in known:
             sys.exit(f'unknown paper {p}')
-        a[p] = {'at': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%MZ'), 'by': 'claude', 'commit': commit, 'note': note}
+        a[p] = {'at': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%MZ'), 'by': 'claude', 'commit': commit,
+                'cut': cut_hash(known[p]), 'note': note}
     paths.save_approvals(a)
     print(f'approved {len(args)}; pending {len(pending())}')

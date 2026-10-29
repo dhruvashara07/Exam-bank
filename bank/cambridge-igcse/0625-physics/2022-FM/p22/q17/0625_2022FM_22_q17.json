@@ -32,9 +32,9 @@
   {
    "page": 7,
    "bbox": [
-    67.9,
-    72.3,
-    472.0,
+    123.2,
+    99.3,
+    471.5,
     229.9
    ],
    "id": "0625_2022FM_22_q17_figA",
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-FM/p22/q17/figures/0625_2022FM_22_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-FM/p22/q17/figures/0625_2022FM_22_q17_figA",
     "url": null,
-    "kb": 17.5
+    "kb": 11.6
    }
   },
   {
    "page": 7,
    "bbox": [
-    67.7,
-    263.2,
+    67.5,
+    263.0,
     318.5,
-    374.6
+    375.0
    ],
    "id": "0625_2022FM_22_q17_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-FM/p22/q17/figures/0625_2022FM_22_q17_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-FM/p22/q17/figures/0625_2022FM_22_q17_figB",
     "url": null,
-    "kb": 26.0
+    "kb": 25.9
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "Some ice is slowly heated and its temperature is measured. A graph is plotted of temperature",
-   "text": "Some ice is slowly heated and its temperature is measured. A graph is plotted of temperature"
+   "html": "Some ice is slowly heated and its temperature is measured. A graph is plotted of temperature against time.",
+   "text": "Some ice is slowly heated and its temperature is measured. A graph is plotted of temperature against time."
   },
   {
    "type": "figure",
@@ -126,35 +127,30 @@
    "text": "Which row describes what happens to the thermal energy and to the temperature in section X?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "thermal energy",
-     "temperature of ice"
-    ],
-    [
-     "<b>A</b>",
-     "gained by ice",
-     "rises"
-    ],
-    [
-     "<b>B</b>",
-     "gained by ice",
-     "stays the same"
-    ],
-    [
-     "<b>C</b>",
-     "not gained by ice",
-     "rises"
-    ],
-    [
-     "<b>D</b>",
-     "not gained by ice",
-     "stays the same"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022FM_22_q17_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "gained by ice rises"
+    },
+    {
+     "label": "B",
+     "html": "gained by ice stays the same"
+    },
+    {
+     "label": "C",
+     "html": "not gained by ice rises"
+    },
+    {
+     "label": "D",
+     "html": "not gained by ice stays the same"
+    }
+   ]
   }
  ]
 }

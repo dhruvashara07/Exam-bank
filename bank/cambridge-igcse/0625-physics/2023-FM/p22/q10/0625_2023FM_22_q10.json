@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    174.8,
-    386.7,
-    286.2
+    67.5,
+    174.5,
+    387.0,
+    286.5
    ],
    "id": "0625_2023FM_22_q10_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-FM/p22/q10/figures/0625_2023FM_22_q10_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-FM/p22/q10/figures/0625_2023FM_22_q10_figA",
     "url": null,
-    "kb": 22.1
+    "kb": 22.0
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -112,35 +113,30 @@
    "text": "Which row gives the quantities Y and Z?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<i>Y</i>",
-     "<i>Z</i>"
-    ],
-    [
-     "<b>A</b>",
-     "mass",
-     "gravitational field strength"
-    ],
-    [
-     "<b>B</b>",
-     "gravitational field strength",
-     "density"
-    ],
-    [
-     "<b>C</b>",
-     "density",
-     "speed"
-    ],
-    [
-     "<b>D</b>",
-     "speed",
-     "mass"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023FM_22_q10_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "mass gravitational field strength"
+    },
+    {
+     "label": "B",
+     "html": "gravitational field strength density"
+    },
+    {
+     "label": "C",
+     "html": "density speed"
+    },
+    {
+     "label": "D",
+     "html": "speed mass"
+    }
+   ]
   }
  ]
 }

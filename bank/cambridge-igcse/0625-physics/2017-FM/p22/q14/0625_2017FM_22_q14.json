@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    67.6,
+    67.5,
     123.5,
-    290.1,
-    249.1
+    290.5,
+    249.0
    ],
    "id": "0625_2017FM_22_q14_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-FM/p22/q14/figures/0625_2017FM_22_q14_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-FM/p22/q14/figures/0625_2017FM_22_q14_figA",
     "url": null,
-    "kb": 22.2
+    "kb": 22.0
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "At –39°C, liquid mercury solidifies without a change of temperature.",
-   "text": "At –39°C, liquid mercury solidifies without a change of temperature."
+   "html": "At –39 °C, liquid mercury solidifies without a change of temperature.",
+   "text": "At –39 °C, liquid mercury solidifies without a change of temperature."
   },
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row shows whether the mercury absorbs or releases energy and what happens to the bonds between the mercury atoms?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "energy",
-     "bonds between atoms"
-    ],
-    [
-     "A",
-     "absorbed",
-     "stronger"
-    ],
-    [
-     "B",
-     "absorbed",
-     "weaker"
-    ],
-    [
-     "C",
-     "released",
-     "stronger"
-    ],
-    [
-     "D",
-     "released",
-     "weaker"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017FM_22_q14_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "absorbed stronger"
+    },
+    {
+     "label": "B",
+     "html": "absorbed weaker"
+    },
+    {
+     "label": "C",
+     "html": "released stronger"
+    },
+    {
+     "label": "D",
+     "html": "released weaker"
+    }
+   ]
   }
  ]
 }

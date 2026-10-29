@@ -70,6 +70,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -78,27 +79,27 @@
   },
   {
    "type": "text",
-   "html": "What is the relationship between the refractive index <i>n</i> of the glass, the angle of incidence <i>i</i> and the angle of refraction <i>r</i>?",
-   "text": "What is the relationship between the refractive index n of the glass, the angle of incidence i and the angle of refraction r?"
+   "html": "What is the relationship between the refractive index <i>n</i> of the glass, the angle of incidence <i>i</i> and the angle of refraction <i>r</i> ?",
+   "text": "What is the relationship between the refractive index n of the glass, the angle of incidence i and the angle of refraction r ?"
   },
   {
    "type": "options",
    "options": [
     {
      "label": "A",
-     "html": "<i>n</i> = \\(\\frac{<i>i</i>}{<i>r</i>}\\)"
+     "html": "<i>n</i> = \\(\\frac{i}{r}\\)"
     },
     {
      "label": "B",
-     "html": "<i>n</i> = \\(\\frac{<i>r</i>}{<i>i</i>}\\)"
+     "html": "<i>n</i> = \\(\\frac{r}{i}\\)"
     },
     {
      "label": "C",
-     "html": "<i>n</i> = \\(\\frac{sin<i>i</i>}{sin<i>r</i>}\\)"
+     "html": "<i>n</i> = \\(\\frac{\\sin i}{\\sin r}\\)"
     },
     {
      "label": "D",
-     "html": "<i>n</i> = \\(\\frac{sin<i>r</i>}{sin<i>i</i>}\\)"
+     "html": "<i>n</i> = \\(\\frac{\\sin r}{\\sin i}\\)"
     }
    ]
   }

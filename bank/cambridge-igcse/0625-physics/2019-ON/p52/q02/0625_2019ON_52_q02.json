@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    97.4,
-    104.4,
-    472.1,
-    313.8
+    98.0,
+    108.5,
+    471.5,
+    311.0
    ],
    "id": "0625_2019ON_52_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 4,
    "bbox": [
-    179.1,
-    550.6,
-    387.9,
-    713.6
+    179.0,
+    555.0,
+    388.0,
+    714.0
    ],
    "id": "0625_2019ON_52_q02aii_table2-1",
    "part": "(a)(ii)",
@@ -223,45 +223,15 @@
        "items": [
         "Place the sliding contact <b>C</b> at a distance <i>l</i> = 20.0 cm from <b>P</b>.",
         "Measure, and record in Table 2.1, the potential difference <i>V</i> across the length <i>l</i> of the resistance wire.",
-        "Calculate, and record in Table 2.1, the resistance <i>R</i> of 20.0 cm of the resistance wire. Use the equation <i>R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\) .",
+        "Calculate, and record in Table 2.1, the resistance <i>R</i> of 20.0 cm of the resistance wire. Use the equation <i>R</i> = \\(\\frac{V}{I}\\) .",
         "Repeat the procedure using <i>l</i> values of 40.0 cm, 60.0 cm, 80.0 cm and 100.0 cm.",
         "Open switch."
        ]
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>l</i>/ cm",
-         "<i>V</i> / V",
-         "<i>R</i> / Ω"
-        ],
-        [
-         "20.0",
-         "",
-         ""
-        ],
-        [
-         "40.0",
-         "",
-         ""
-        ],
-        [
-         "60.0",
-         "",
-         ""
-        ],
-        [
-         "80.0",
-         "",
-         ""
-        ],
-        [
-         "100.0",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2019ON_52_q02aii_table2-1",
+       "caption": "Table 2.1"
       },
       {
        "type": "marks",
@@ -602,7 +572,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance of 50.0 cm of the resistance wire using the equation <i>R</i> = \\(\\frac{<i>V</i><sub>e</sub>}{<i>I</i>}\\) . Use the value of current <i>I</i> from part <b>(a)</b>. Give your answer to a suitable number of significant figures for this experiment and include the unit.",
+       "html": "Calculate the resistance of 50.0 cm of the resistance wire using the equation <i>R</i> = \\(\\frac{V_{e}}{I}\\) . Use the value of current <i>I</i> from part <b>(a)</b>. Give your answer to a suitable number of significant figures for this experiment and include the unit.",
        "text": "Calculate the resistance of 50.0 cm of the resistance wire using the equation R = (Ve)/(I) . Use the value of current I from part (a). Give your answer to a suitable number of significant figures for this experiment and include the unit."
       },
       {
@@ -637,6 +607,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

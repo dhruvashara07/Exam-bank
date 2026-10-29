@@ -32,9 +32,9 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    109.9,
-    371.3,
+    67.5,
+    109.5,
+    371.5,
     235.0
    ],
    "id": "0625_2026MJ_21_q22_figA",
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>speeds of the two</b>",
-     "<b>wavelengths of the two</b>"
-    ],
-    [
-     "",
-     "<b>colours in a vacuum</b>",
-     "<b>colours in a vacuum</b>"
-    ],
-    [
-     "<b>A</b>",
-     "different",
-     "different"
-    ],
-    [
-     "<b>B</b>",
-     "different",
-     "the same"
-    ],
-    [
-     "<b>C</b>",
-     "the same",
-     "different"
-    ],
-    [
-     "<b>D</b>",
-     "the same",
-     "the same"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_21_q22_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "different different"
+    },
+    {
+     "label": "B",
+     "html": "different the same"
+    },
+    {
+     "label": "C",
+     "html": "the same different"
+    },
+    {
+     "label": "D",
+     "html": "the same the same"
+    }
+   ]
   }
  ]
 }

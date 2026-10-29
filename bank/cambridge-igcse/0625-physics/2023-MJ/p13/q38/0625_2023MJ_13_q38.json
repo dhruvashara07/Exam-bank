@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    84.7,
-    315.4,
-    224.3
+    67.5,
+    84.5,
+    315.5,
+    224.5
    ],
    "id": "0625_2023MJ_13_q38_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p13/q38/figures/0625_2023MJ_13_q38_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p13/q38/figures/0625_2023MJ_13_q38_figA",
     "url": null,
-    "kb": 29.4
+    "kb": 29.3
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,45 +98,30 @@
    "text": "Which row about the orbits of the Earth and the Moon is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "approximate time",
-     "approximate time"
-    ],
-    [
-     "",
-     "for the Earth",
-     "for the Moon"
-    ],
-    [
-     "",
-     "to orbit the Sun",
-     "to orbit the Earth"
-    ],
-    [
-     "<b>A</b>",
-     "1 day",
-     "30 days"
-    ],
-    [
-     "<b>B</b>",
-     "30 days",
-     "1 day"
-    ],
-    [
-     "<b>C</b>",
-     "365 days",
-     "1 day"
-    ],
-    [
-     "<b>D</b>",
-     "365 days",
-     "30 days"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_13_q38_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "1 day 30 days"
+    },
+    {
+     "label": "B",
+     "html": "30 days 1 day"
+    },
+    {
+     "label": "C",
+     "html": "365 days 1 day"
+    },
+    {
+     "label": "D",
+     "html": "365 days 30 days"
+    }
+   ]
   }
  ]
 }

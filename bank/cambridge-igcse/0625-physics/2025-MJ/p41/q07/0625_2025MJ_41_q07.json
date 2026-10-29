@@ -9,10 +9,10 @@
    "caption": "Fig. 7.1",
    "page": 10,
    "bbox": [
-    238.8,
-    84.8,
+    238.5,
+    85.0,
     356.5,
-    230.1
+    230.5
    ],
    "id": "0625_2025MJ_41_q07a_fig7-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 7.2",
    "page": 10,
    "bbox": [
-    215.7,
-    548.1,
-    369.5,
-    695.5
+    215.0,
+    549.0,
+    370.0,
+    696.0
    ],
    "id": "0625_2025MJ_41_q07b_fig7-2",
    "part": "(b)",
@@ -150,7 +150,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "name"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -510,8 +519,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Fig. 7.2 shows an electric circuit for two identical electric heaters, A and B, connected to a mains supply of 230V.",
-     "text": "Fig. 7.2 shows an electric circuit for two identical electric heaters, A and B, connected to a mains supply of 230V."
+     "html": "Fig. 7.2 shows an electric circuit for two identical electric heaters, A and B, connected to a mains supply of 230 V.",
+     "text": "Fig. 7.2 shows an electric circuit for two identical electric heaters, A and B, connected to a mains supply of 230 V."
     },
     {
      "type": "figure",
@@ -520,8 +529,8 @@
     },
     {
      "type": "text",
-     "html": "S<sub>1</sub> is closed. S<sub>2</sub> is open. The reading on the ammeter is 3.9A.",
-     "text": "S1 is closed. S2 is open. The reading on the ammeter is 3.9A."
+     "html": "S<sub>1</sub> is closed. S<sub>2</sub> is open. The reading on the ammeter is 3.9 A.",
+     "text": "S1 is closed. S2 is open. The reading on the ammeter is 3.9 A."
     }
    ]
   }
@@ -542,5 +551,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

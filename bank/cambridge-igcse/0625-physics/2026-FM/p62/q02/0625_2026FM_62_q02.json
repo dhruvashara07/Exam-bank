@@ -33,10 +33,10 @@
    "caption": "Figure 2.1",
    "page": 5,
    "bbox": [
-    69.3,
-    111.2,
-    321.7,
-    350.2
+    69.5,
+    110.5,
+    321.0,
+    350.5
    ],
    "id": "0625_2026FM_62_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Figure 2.2",
    "page": 6,
    "bbox": [
-    232.7,
-    136.8,
-    362.3,
-    350.9
+    232.5,
+    136.5,
+    363.0,
+    351.0
    ],
    "id": "0625_2026FM_62_q02aii_fig2-2",
    "part": "(a)(ii)",
@@ -72,9 +72,9 @@
    "page": 6,
    "bbox": [
     92.0,
-    528.9,
-    549.2,
-    685.5
+    529.5,
+    549.5,
+    686.0
    ],
    "id": "0625_2026FM_62_q02b_table2-1",
    "part": "(b)",
@@ -169,7 +169,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "2",
+       "prefix": "1"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "2"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -263,6 +272,10 @@
        "unit": "mm"
       },
       {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
        "type": "marks",
        "value": 2
       }
@@ -341,7 +354,7 @@
       "records the new length l of the spring in Table 2.1",
       "calculates the extension x of the spring using the equation x = l – l<sub>0</sub>",
       "records the value of x in Table 2.1",
-      "repeats the procedure using loads L = 2.0N, 3.0N, 4.0N and 5.0N."
+      "repeats the procedure using loads L = 2.0 N, 3.0 N, 4.0 N and 5.0 N."
      ]
     },
     {
@@ -350,39 +363,9 @@
      "text": "Complete Table 2.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "L/N",
-       "l/mm",
-       "x/mm"
-      ],
-      [
-       "1.0",
-       "42",
-       ""
-      ],
-      [
-       "2.0",
-       "61",
-       ""
-      ],
-      [
-       "3.0",
-       "82",
-       ""
-      ],
-      [
-       "4.0",
-       "107",
-       ""
-      ],
-      [
-       "5.0",
-       "125",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2026FM_62_q02b_table2-1",
+     "caption": "Table 2.1"
     },
     {
      "type": "marks",
@@ -458,8 +441,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Plot a graph of L/N (y-axis) against x/mm (x-axis).",
-       "text": "Plot a graph of L/N (y-axis) against x/mm (x-axis)."
+       "html": "Plot a graph of L / N (y-axis) against x / mm (x-axis).",
+       "text": "Plot a graph of L / N (y-axis) against x / mm (x-axis)."
       },
       {
        "type": "text",
@@ -576,6 +559,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

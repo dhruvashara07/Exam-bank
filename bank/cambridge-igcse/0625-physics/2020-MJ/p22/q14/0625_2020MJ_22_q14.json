@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    515.3,
-    299.9,
-    640.3
+    67.5,
+    515.0,
+    300.0,
+    640.5
    ],
    "id": "0625_2020MJ_22_q14_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p22/q14/figures/0625_2020MJ_22_q14_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p22/q14/figures/0625_2020MJ_22_q14_figA",
     "url": null,
-    "kb": 23.5
+    "kb": 23.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,40 +98,30 @@
    "text": "Which row describes the forces between the molecules and the motion of the molecules in a solid?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "forces between",
-     "motion"
-    ],
-    [
-     "",
-     "molecules",
-     "of molecules"
-    ],
-    [
-     "<b>A</b>",
-     "strong",
-     "move freely"
-    ],
-    [
-     "<b>B</b>",
-     "strong",
-     "vibrate only"
-    ],
-    [
-     "<b>C</b>",
-     "weak",
-     "move freely"
-    ],
-    [
-     "<b>D</b>",
-     "weak",
-     "vibrate only"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020MJ_22_q14_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "strong move freely"
+    },
+    {
+     "label": "B",
+     "html": "strong vibrate only"
+    },
+    {
+     "label": "C",
+     "html": "weak move freely"
+    },
+    {
+     "label": "D",
+     "html": "weak vibrate only"
+    }
+   ]
   }
  ]
 }

@@ -70,6 +70,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -91,11 +92,11 @@
    "options": [
     {
      "label": "A",
-     "html": "\\(\\frac{1}{<sub>2</sub>}\\) mv<sup>2</sup>"
+     "html": "\\(\\frac{1}{_{2}}\\) mv<sup>2</sup>"
     },
     {
      "label": "B",
-     "html": "mgh – \\(\\frac{<sup>1</sup>}{<sub>2</sub>}\\)"
+     "html": "mgh – \\(\\frac{^{1}}{_{2}}\\)"
     },
     {
      "label": "C",
@@ -103,7 +104,7 @@
     },
     {
      "label": "D",
-     "html": "mgh + \\(\\frac{<sup>1</sup>}{<sub>2</sub>}\\)"
+     "html": "mgh + \\(\\frac{^{1}}{_{2}}\\)"
     }
    ]
   }

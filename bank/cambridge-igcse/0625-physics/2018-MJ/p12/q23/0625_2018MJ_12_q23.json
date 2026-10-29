@@ -32,9 +32,9 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
+    67.5,
     473.5,
-    307.7,
+    308.0,
     599.0
    ],
    "id": "0625_2018MJ_12_q23_figA",
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "colour refracted",
-     "colour next"
-    ],
-    [
-     "",
-     "the most",
-     "to the red"
-    ],
-    [
-     "<b>A</b>",
-     "red",
-     "orange"
-    ],
-    [
-     "<b>B</b>",
-     "red",
-     "yellow"
-    ],
-    [
-     "<b>C</b>",
-     "violet",
-     "orange"
-    ],
-    [
-     "<b>D</b>",
-     "violet",
-     "yellow"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_12_q23_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "red orange"
+    },
+    {
+     "label": "B",
+     "html": "red yellow"
+    },
+    {
+     "label": "C",
+     "html": "violet orange"
+    },
+    {
+     "label": "D",
+     "html": "violet yellow"
+    }
+   ]
   }
  ]
 }

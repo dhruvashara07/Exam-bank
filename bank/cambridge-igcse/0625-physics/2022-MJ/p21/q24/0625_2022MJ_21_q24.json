@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    439.4,
+    67.5,
+    439.0,
     513.5,
-    550.8
+    551.0
    ],
    "id": "0625_2022MJ_21_q24_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p21/q24/figures/0625_2022MJ_21_q24_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p21/q24/figures/0625_2022MJ_21_q24_figA",
     "url": null,
-    "kb": 40.1
+    "kb": 39.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row describes a real and a virtual image?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "real image",
-     "virtual image"
-    ],
-    [
-     "<b>A</b>",
-     "rays converge to form the image",
-     "image can be projected onto a screen"
-    ],
-    [
-     "<b>B</b>",
-     "rays converge to form the image",
-     "image cannot be projected onto a screen"
-    ],
-    [
-     "<b>C</b>",
-     "rays diverge to form the image",
-     "image can be projected onto a screen"
-    ],
-    [
-     "<b>D</b>",
-     "rays diverge to form the image",
-     "image cannot be projected onto a screen"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_21_q24_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "rays converge to form the image image can be projected onto a screen"
+    },
+    {
+     "label": "B",
+     "html": "rays converge to form the image image cannot be projected onto a screen"
+    },
+    {
+     "label": "C",
+     "html": "rays diverge to form the image image can be projected onto a screen"
+    },
+    {
+     "label": "D",
+     "html": "rays diverge to form the image image cannot be projected onto a screen"
+    }
+   ]
   }
  ]
 }

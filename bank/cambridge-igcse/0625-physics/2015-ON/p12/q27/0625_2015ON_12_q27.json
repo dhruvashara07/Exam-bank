@@ -32,10 +32,10 @@
   {
    "page": 12,
    "bbox": [
-    193.7,
-    85.3,
-    401.2,
-    247.5
+    193.0,
+    85.0,
+    402.0,
+    248.0
    ],
    "id": "0625_2015ON_12_q27_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p12/q27/figures/0625_2015ON_12_q27_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p12/q27/figures/0625_2015ON_12_q27_figA",
     "url": null,
-    "kb": 7.6
+    "kb": 7.5
    }
   },
   {
    "page": 12,
    "bbox": [
-    67.6,
+    67.5,
     305.0,
-    282.4,
-    416.4
+    282.5,
+    416.5
    ],
    "id": "0625_2015ON_12_q27_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "What happens to the rods in each position?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "near end X",
-     "near end Y"
-    ],
-    [
-     "A",
-     "they attract",
-     "they attract"
-    ],
-    [
-     "B",
-     "they attract",
-     "they repel"
-    ],
-    [
-     "C",
-     "they repel",
-     "they attract"
-    ],
-    [
-     "D",
-     "they repel",
-     "they repel"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015ON_12_q27_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "they attract they attract"
+    },
+    {
+     "label": "B",
+     "html": "they attract they repel"
+    },
+    {
+     "label": "C",
+     "html": "they repel they attract"
+    },
+    {
+     "label": "D",
+     "html": "they repel they repel"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    109.9,
-    260.8,
-    235.4
+    67.5,
+    109.5,
+    261.0,
+    235.5
    ],
    "id": "0625_2021FM_12_q11_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which machine is the most powerful?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "work done",
-     "time taken"
-    ],
-    [
-     "",
-     "/kJ",
-     "/s"
-    ],
-    [
-     "<b>A</b>",
-     "100",
-     "10"
-    ],
-    [
-     "<b>B</b>",
-     "100",
-     "20"
-    ],
-    [
-     "<b>C</b>",
-     "200",
-     "10"
-    ],
-    [
-     "<b>D</b>",
-     "200",
-     "20"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021FM_12_q11_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "100 10"
+    },
+    {
+     "label": "B",
+     "html": "100 20"
+    },
+    {
+     "label": "C",
+     "html": "200 10"
+    },
+    {
+     "label": "D",
+     "html": "200 20"
+    }
+   ]
   }
  ]
 }

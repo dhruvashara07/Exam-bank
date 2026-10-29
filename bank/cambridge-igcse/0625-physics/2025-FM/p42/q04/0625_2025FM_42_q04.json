@@ -173,8 +173,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Show that the maximum speed of the train is approximately 56m/s.",
-       "text": "Show that the maximum speed of the train is approximately 56m/s."
+       "html": "Show that the maximum speed of the train is approximately 56 m / s.",
+       "text": "Show that the maximum speed of the train is approximately 56 m / s."
       },
       {
        "type": "answer",
@@ -330,8 +330,8 @@
      "content": [
       {
        "type": "text",
-       "html": "The train has a total mass of 440000kg. Calculate the force which causes the",
-       "text": "The train has a total mass of 440000kg. Calculate the force which causes the"
+       "html": "The train has a total mass of 440 000 kg. Calculate the force which causes the",
+       "text": "The train has a total mass of 440 000 kg. Calculate the force which causes the"
       },
       {
        "type": "text",
@@ -414,7 +414,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -444,11 +453,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A train has a maximum speed of 200km/h. It accelerates from rest with constant acceleration of 0.70m/s<sup>2</sup>.",
-   "text": "A train has a maximum speed of 200km/h. It accelerates from rest with constant acceleration of 0.70m/s2."
+   "html": "A train has a maximum speed of 200 km / h. It accelerates from rest with constant acceleration of 0.70 m / s<sup>2</sup>.",
+   "text": "A train has a maximum speed of 200 km / h. It accelerates from rest with constant acceleration of 0.70 m / s2."
   }
  ]
 }

@@ -1,88 +1,96 @@
-# Daily check (Claude, scheduled task)
+# Scheduled Claude check (twice a day, 9:47 am and 10:47 pm IST)
 
-A scheduled Claude session runs this every day. It is a fresh session: everything it needs to know is
-in this repo (this file, `PROGRESS.md`, `pipeline/README.md`). Goal: nothing reaches MongoDB/the website
-without a careful check, and results are right first time.
+A fresh Claude session runs this. Everything it needs is in the repo: this file, `PROGRESS.md`,
+`CLAUDE.md`, `pipeline/README.md`. Goal: every paper reaches MongoDB only after (1) the automatic checks,
+(2) Claude looked at every page, (3) Dhruv's review round, and with the pipeline (not single files) fixed
+whenever something is wrong.
 
-How papers flow: Dhruv uploads PDFs to `inbox/` → GitHub Action files them into `raw/`, cuts them into
-`bank/` and uploads SVGs to Cloudinary → the paper is **pending** → this check looks at it → `approve.py`
-→ the Action syncs it to MongoDB. Re-cutting a paper (`run.py`) makes it pending again.
+```
+upload (Dhruv) -> Action: store PDFs, process, auto-check, batch record      [docs/UPLOAD.md]
+   -> THIS CHECK: Claude-check papers -> review round -> read answers -> fix -> approve
+   -> Action: Cloudinary + MongoDB -> 'published'
+```
+Stages are worked out from files (`pipeline/batch.py`): processed (bank/), auto_checked (review/checks/),
+claude_checked / needs_fix (review/claude/), your_review (open round in review/rounds/), approved
+(review/approvals/), published (review/published.json).
 
 ## 1. Get ready
 ```
 cd /home/claude && [ -d exam-bank ] || git clone https://github.com/dhruvashara07/Exam-bank.git exam-bank
 cd exam-bank && git pull -q --rebase
 python3 -c "import pymupdf, pikepdf, playwright" || pip install -r requirements.txt --break-system-packages
+python3 pipeline/batch.py status
 ```
-Read `CLAUDE.md` and `PROGRESS.md` (especially "Daily check log" at the end: what was last checked).
-Original PDFs are not in git; they live in GitHub Releases (listed in `raw/manifest.json`). Fetch the ones
-you need before checking or re-cutting: `python3 pipeline/raw_store.py fetch 0625/2025-MJ/41 ...`
-(papers), `... fetch 2025` (a year) or `... fetch` (all, ~650 MB).
-If git clone/pull fails for access reasons, attach the repo (add_repo dhruvashara07/Exam-bank, push access).
+Read `CLAUDE.md` and the end of `PROGRESS.md`. Original PDFs are in GitHub Releases, not git: fetch the
+papers you work on with `python3 pipeline/raw_store.py fetch 0625/2025-MJ/41 ...` (or a year: `fetch 2019`).
+If clone/push fails for access reasons, attach the repo (add_repo dhruvashara07/Exam-bank, push access).
 
 ## 2. What is new
-- `python3 pipeline/approve.py --pending` → papers waiting for a check.
-- `gh run list --limit 5` (or the GitHub API) → did the last "Question bank" Action runs succeed? A failure
-  in the Cloudinary/MongoDB steps right after setup usually means a missing secret; report it, don't guess.
-- Dhruv's reports from the review website (https://dhruvashara07.github.io/Exam-bank/, "Report a problem"):
-  open issues labelled `review`: `gh api "repos/dhruvashara07/Exam-bank/issues?labels=review&state=open"`
-  (REST only; `gh issue list` uses GraphQL, which is blocked). Each names a question id and what is wrong.
-  When fixed, say so in the log; Dhruv closes the issue (or ask him to).
-- Old review page https://claude.ai/artifact/LGic38rQwKjkZze9jL1zmq: read the newest feedback collection
-  (`feedback`, `feedback_r2`, ... — doc id = question id, fields verdict/note) with ArtifactData. Anything
-  marked wrong since the last log entry is work to do.
-- `ls inbox/` — files left there have names the filer did not understand: rename them in raw/ by hand
-  (`raw/<syl>/<year>-<FM|MJ|ON>/<qp|ms>_<pv>.pdf`) and process them.
+- Action runs: `gh api "repos/dhruvashara07/Exam-bank/actions/runs?per_page=10"`; for a failed or
+  warning run read the annotations: `gh api repos/dhruvashara07/Exam-bank/check-runs/<job id>/annotations`
+  (logs are not readable from here). Branches named `upload*`/`*-patch-*` still existing = an upload with
+  unrecognised file names: rename in raw/ by hand (`raw/<syl>/<year>-<FM|MJ|ON>/<qp|ms>_<pv>.pdf`) and process.
+- Dhruv's answers: open rounds are `review/rounds/<n>.json` with `"status": "open"`. Read the answers with
+  ArtifactData `list`, url = `review_url` in `review/portal.json`, collection `feedback_r<n>`
+  (doc id = question id: verdict ok|wrong, issues, note).
+- Website reports: `gh api "repos/dhruvashara07/Exam-bank/issues?labels=review&state=open"`.
+- Golden set still identical: `python3 pipeline/golden.py check` (must say 0 with changed cuts).
 
-If nothing is pending, no feedback is new and the Action is fine: add one log line, `pipeline/push.sh`, stop. No notification.
+## 3. Answers first
+For every "wrong": look at the question (contact sheet: `python3 pipeline/check.py <paper>`), find the
+cause, fix the pipeline, re-run the affected papers (`python3 pipeline/run.py <papers>`), then
+`python3 pipeline/checks.py <papers>` and `python3 pipeline/golden.py check`. A change that alters a golden
+paper: look at that paper again, then `golden.py add` it. Save the answers to a file and close the round
+when every item is answered (or the round is older than 3 days):
+`python3 pipeline/review_round.py close <n> answers.json`. Fixed items go into the next round as "Flagged"
+with the reason "fixed: ...", so Dhruv sees the fix.
 
-## 3. Check each pending paper
-Backlog (2015–2024, ~410 papers, all automatic checks clean on 2026-10-29): check and approve **up to 40
-papers per run**, oldest year first, after the new uploads. Fetch their PDFs first (`raw_store.py fetch`).
+## 4. Claude-check new papers (oldest batch first, up to 40 papers per run)
+For each paper at stage `auto_checked`:
+1. `python3 pipeline/overview.py <papers>` → `out/overview/<paper>.png`: every question page with its cut
+   boxes. **Open and look at every overview.** Check: each box starts at its label and ends before the
+   next; nothing printed outside a box; no footer, barcode or "Turn over" inside; figure crops (orange)
+   hold the whole diagram; question numbers in order; marks in the header match the cover.
+2. Read `review/checks/<paper>.json`: blocking problems (marks, coverage, piece) must be zero (fix the
+   pipeline if not); warnings (figure crop, editable text below 97%) are fixed in the pipeline when you can,
+   otherwise they go into the review round (review_round.py picks them up); flags are
+   Cambridge labelling differences or errata: look at those questions' contact sheets
+   (`python3 pipeline/check.py <paper>`), they go into the review round.
+3. Record the result: `python3 pipeline/claude_check.py ok <papers> --note "what you looked at"` or
+   `python3 pipeline/claude_check.py needs_fix <paper> --note "exactly what is wrong"` (a defect you could
+   not fix this run). `python3 pipeline/claude_check.py list` shows papers waiting for this step.
+   The record holds the paper's cut hash: a later re-cut sends the paper back to this step by itself.
+Rules: render SVGs with Chromium (`review_assets.svg_img`), never MuPDF (it drops dashed lines).
+After any pipeline change re-run the affected papers and the golden check before going on.
 
-`python3 pipeline/check.py` (or with paper ids). It prints, per paper: marks found vs cover total, flagged
-items, uncovered ink, and writes contact sheets `out/check/<paper>/sheet_NN.jpg`.
-Each sheet row = original page (uncleaned, so barcodes appear there; boxes = how it was cut) | rebuilt
-question | figures. **Open and look at every sheet** (Read the jpg). Check:
-- marks found == cover total; every question number present, in order; no question split wrongly
-- part labels (a)(b)(i)(ii) match the paper; each part's own answer space (dotted lines, answer line, grid) is in it
-- nothing cut off at any edge; no Cambridge barcode, corner marks or footer in the rebuilt column
-- figures: complete (axes, tick labels, A–D labels, dashed/dotted lines, hatching, dots), nothing from the text inside
-- MCQ: an answer letter (header shows answer=); structured: mark-scheme rows attached (see the JSON if unsure)
-- uncovered ink reported by coverage: look at that spot on the page; curve control points are harmless
-- new paper types (a new subject, AS/A level, IB) need extra care: layouts differ
-
-## 4. Fix, don't patch
-- Fix problems in the pipeline so they are fixed for every paper, not by editing one JSON.
-- Each question has two copies: the exact SVG pieces (the master, what students see) and an editable
-  `content` layer (text with bold/italic/sub/sup/LaTeX fractions, tables, figure references, answer
-  space, options) built by `pipeline/editable.py`. Check the editable view on the website (Side by side)
-  for a few questions per paper; `python3 pipeline/editable.py <paper ids>` rebuilds only that layer.
-- After a pipeline change: re-run **all** papers (`python3 pipeline/run.py`, ~25 min for 477 papers; fetch all PDFs first), then
-  compare with before: marks still match everywhere (`grep -v` the run log), `python3 pipeline/coverage.py`,
-  and look at sheets of a sample of changed questions (figure counts, sizes). A full re-run makes every
-  paper pending: re-approve the ones whose output did not change in substance, with a note.
-- Render SVGs with Chromium (playwright) when looking at them; MuPDF's SVG reader ignores dashed strokes.
-- If something needs Dhruv's eye (you are not sure what's right), add it to a new review round:
-  `review_assets.render_items(out_dir, [(qid, 'flagged'), ...], {qid: [reason]})`, copy the review page
-  `index.html` from the last round, switch it to a new collection `feedback_rN`, publish to the same
-  artifact URL with the Artifact tool, and say so in the notification.
-
-## 5. Approve and record
+## 5. Review round for Dhruv (when papers are Claude-checked and no round is open)
 ```
-python3 pipeline/approve.py <paper ids> --note "what was checked / fixed"
+python3 pipeline/review_round.py new <n> <claude-checked paper ids> --sample 2
 ```
-Approve a paper only after looking at all its sheets. Leave a paper pending (and say why) if it has a
-defect you could not fix. Then append to the "Daily check log" in `PROGRESS.md` and push with
-`pipeline/push.sh "message"` (never plain `git push`; end the message with the Co-Authored-By /
-Claude-Session lines). The push triggers the Action → MongoDB. If push.sh reports a real conflict,
-merge both sides by hand (see CLAUDE.md), never discard either.
+(n = last round + 1). Publish `out/review/round_<n>/` to the review page with the Artifact tool:
+`file_path` = `site/review/index.html`, `url` = review_url from `review/portal.json`, `files` = every file
+under `out/review/round_<n>/` at its relative path (round.json, items.json, <qid>/*.jpg), and `null` for
+the previous round's image paths (one version holds at most 511 files). Keep capabilities as they are (db).
 
-## 6. Tell Dhruv (only if something happened)
-Short and plain: which papers came in, approved or not, what was fixed, what needs him (review page
-items, missing mark schemes, Action failures). He reads on his phone.
+## 6. Approve
+A paper is approved when: Claude result `ok`, no blocking automatic problem, and its items in the review round are
+answered ✓ — or the round has been open 3 days and the paper had only random-sample items (no flags).
+```
+python3 pipeline/approve.py <ids> --note "overview checked; checks clean; round <n> ✓ (k items)"
+```
+(`approve.py` stores the cut hash too: re-running the pipeline keeps an approval when the pieces, marks,
+answers and mark-scheme rows did not change; a changed cut makes the paper pending again.)
+Then log one line in `PROGRESS.md` ("Daily check log") and push with `pipeline/push.sh "message"`
+(never plain `git push`; end the message with the Co-Authored-By / Claude-Session lines). The push runs
+the Action → Cloudinary + MongoDB → `review/published.json` → stage 'published'.
+
+## 7. Tell Dhruv (only if something happened)
+A short push notification, plain words, for his phone: what came in, what was approved/published,
+what was fixed, and the review page link if a new round is waiting.
+If nothing is pending: one log line, push, no notification.
 
 ## Never
 - Never put keys in the repo or in chat; they live in GitHub Secrets.
-- Never delete files in `raw/`; never force-push; never rewrite history.
+- Never delete files in `raw/` or Releases; never force-push; never rewrite history.
 - Never write to MongoDB or Cloudinary directly; the Action does that.
+- Fix the pipeline, not single JSON files.

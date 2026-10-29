@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    163.5,
-    109.2,
-    431.8,
-    332.8
+    163.0,
+    112.5,
+    432.5,
+    331.0
    ],
    "id": "0625_2021ON_61_q02_fig2-1",
    "part": "",
@@ -170,6 +170,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "VX ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "IX ="
       },
       {
@@ -238,8 +243,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate <i>R</i><sub>X</sub>, the resistance of resistor X, using the equation <i>R</i><sub>X</sub> = \\(\\frac{<i>V</i><sub>X</sub>}{<i>I</i>}\\).",
-       "text": "Calculate RX, the resistance of resistor X, using the equation RX = (VX)/(I)."
+       "html": "Calculate <i>R</i><sub>X</sub>, the resistance of resistor X, using the equation <i>R</i><sub>X</sub> = \\(\\frac{V_{X}}{I}\\) .",
+       "text": "Calculate RX, the resistance of resistor X, using the equation RX = (VX)/(I) ."
       },
       {
        "type": "text",
@@ -335,6 +340,11 @@
      "text": "10.4"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "RXY ="
+    },
+    {
      "type": "text",
      "html": "She calculates the resistance <i>R</i><sub>Y</sub> of resistor Y.",
      "text": "She calculates the resistance RY of resistor Y."
@@ -345,15 +355,14 @@
      "text": "5.78"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "RY ="
+    },
+    {
      "type": "text",
      "html": "State and explain whether <i>R</i><sub>X</sub> and <i>R</i><sub>Y</sub> can be considered to be equal within the limits of experimental accuracy.",
      "text": "State and explain whether RX and RY can be considered to be equal within the limits of experimental accuracy."
-    },
-    {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "RY =",
-     "lines": 3
     },
     {
      "type": "marks",
@@ -504,13 +513,23 @@
      "text": "0.8"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "VXZ ="
+    },
+    {
      "type": "text",
      "html": "0.36",
      "text": "0.36"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "IXZ ="
+    },
+    {
      "type": "text",
-     "html": "Calculate <i>R</i><sub>XZ</sub>, the combined resistance of resistors X and Z connected in parallel, using the equation <i>R</i><sub>XZ</sub> = \\(\\frac{<i>V</i><sub>XZ</sub>}{<i>I</i><sub>XZ</sub>}\\) . Give your answer to 2 significant figures.",
+     "html": "Calculate <i>R</i><sub>XZ</sub>, the combined resistance of resistors X and Z connected in parallel, using the equation <i>R</i><sub>XZ</sub> = \\(\\frac{V_{\\text{XZ}}}{I_{\\text{XZ}}}\\) . Give your answer to 2 significant figures.",
      "text": "Calculate RXZ, the combined resistance of resistors X and Z connected in parallel, using the equation RXZ = (VXZ)/(IXZ) . Give your answer to 2 significant figures."
     },
     {
@@ -616,6 +635,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

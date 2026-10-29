@@ -32,9 +32,9 @@
   {
    "page": 11,
    "bbox": [
-    270.2,
-    480.8,
-    324.2,
+    269.5,
+    480.5,
+    325.0,
     585.5
    ],
    "id": "0625_2020FM_22_q23_figA",
@@ -51,10 +51,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    642.8,
-    292.2,
-    768.2
+    67.5,
+    642.5,
+    292.5,
+    768.5
    ],
    "id": "0625_2020FM_22_q23_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-FM/p22/q23/figures/0625_2020FM_22_q23_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-FM/p22/q23/figures/0625_2020FM_22_q23_figB",
     "url": null,
-    "kb": 21.9
+    "kb": 21.7
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,40 +132,30 @@
    "text": "Which student produces the waves which have the most diffraction?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "gap size",
-     "wavelength"
-    ],
-    [
-     "",
-     "/cm",
-     "/cm"
-    ],
-    [
-     "<b>A</b>",
-     "2.0",
-     "1.8"
-    ],
-    [
-     "<b>B</b>",
-     "3.0",
-     "2.1"
-    ],
-    [
-     "<b>C</b>",
-     "4.0",
-     "2.0"
-    ],
-    [
-     "<b>D</b>",
-     "5.0",
-     "0.9"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020FM_22_q23_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "2.0 1.8"
+    },
+    {
+     "label": "B",
+     "html": "3.0 2.1"
+    },
+    {
+     "label": "C",
+     "html": "4.0 2.0"
+    },
+    {
+     "label": "D",
+     "html": "5.0 0.9"
+    }
+   ]
   }
  ]
 }

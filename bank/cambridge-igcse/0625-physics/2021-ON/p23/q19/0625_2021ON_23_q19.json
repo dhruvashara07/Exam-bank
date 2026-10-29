@@ -32,9 +32,9 @@
   {
    "page": 9,
    "bbox": [
-    180.2,
-    291.6,
-    415.3,
+    180.0,
+    291.5,
+    415.5,
     382.0
    ],
    "id": "0625_2021ON_23_q19_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p23/q19/figures/0625_2021ON_23_q19_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p23/q19/figures/0625_2021ON_23_q19_figA",
     "url": null,
-    "kb": 19.5
+    "kb": 19.3
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,29 +98,9 @@
    "text": "A ray of light travels from air into a glass block."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "in air",
-     "in glass"
-    ],
-    [
-     "speed of ray",
-     "<i>v</i><sub>a</sub>",
-     "<i>v</i><sub>g</sub>"
-    ],
-    [
-     "wavelength of ray",
-     "λa",
-     "λg"
-    ],
-    [
-     "frequency of ray",
-     "<i>f</i><sub>a</sub>",
-     "<i>f</i><sub>g</sub>"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2021ON_23_q19_figA",
+   "caption": null
   },
   {
    "type": "text",
@@ -128,7 +109,7 @@
   },
   {
    "type": "text",
-   "html": "<i>n</i> = \\(\\frac{<i>v</i><sub>a</sub>}{<i>v</i><sub>g</sub>}\\)",
+   "html": "<i>n</i> = \\(\\frac{v_{a}}{v_{g}}\\)",
    "text": "n = (va)/(vg)"
   },
   {
@@ -138,7 +119,7 @@
   },
   {
    "type": "text",
-   "html": "<i>n</i> = \\(\\frac{<i>f</i><sub>a</sub>}{<i>f</i><sub>g</sub>}\\)",
+   "html": "<i>n</i> = \\(\\frac{f_{a}}{f_{g}}\\)",
    "text": "n = (fa)/(fg)"
   },
   {

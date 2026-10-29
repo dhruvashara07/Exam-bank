@@ -32,9 +32,9 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
+    67.5,
     568.0,
-    246.8,
+    247.0,
     693.5
    ],
    "id": "0625_2018MJ_22_q39_figA",
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "least",
-     "most"
-    ],
-    [
-     "",
-     "penetrating",
-     "ionising"
-    ],
-    [
-     "<b>A</b>",
-     "α",
-     "α"
-    ],
-    [
-     "<b>B</b>",
-     "α",
-     "γ"
-    ],
-    [
-     "<b>C</b>",
-     "γ",
-     "α"
-    ],
-    [
-     "<b>D</b>",
-     "γ",
-     "γ"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_22_q39_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "α α"
+    },
+    {
+     "label": "B",
+     "html": "α γ"
+    },
+    {
+     "label": "C",
+     "html": "γ α"
+    },
+    {
+     "label": "D",
+     "html": "γ γ"
+    }
+   ]
   }
  ]
 }

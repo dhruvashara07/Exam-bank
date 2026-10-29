@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.6,
+    67.5,
     304.0,
     548.0,
-    347.2
+    347.5
    ],
    "id": "0625_2015MJ_11_q20_figA",
    "caption": null,
@@ -45,15 +45,15 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p11/q20/figures/0625_2015MJ_11_q20_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p11/q20/figures/0625_2015MJ_11_q20_figA",
     "url": null,
-    "kb": 18.0
+    "kb": 17.7
    }
   },
   {
    "page": 10,
    "bbox": [
-    67.6,
-    379.1,
-    332.1,
+    67.5,
+    379.0,
+    332.5,
     490.5
    ],
    "id": "0625_2015MJ_11_q20_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p11/q20/figures/0625_2015MJ_11_q20_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p11/q20/figures/0625_2015MJ_11_q20_figB",
     "url": null,
-    "kb": 27.3
+    "kb": 27.1
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,40 +132,30 @@
    "text": "Which types of electromagnetic radiation are represented by P, by Q and by R?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "P",
-     "Q",
-     "R"
-    ],
-    [
-     "A",
-     "infra-red",
-     "radio waves",
-     "ultraviolet"
-    ],
-    [
-     "B",
-     "infra-red",
-     "ultraviolet",
-     "radio waves"
-    ],
-    [
-     "C",
-     "ultraviolet",
-     "infra-red",
-     "radio waves"
-    ],
-    [
-     "D",
-     "ultraviolet",
-     "radio waves",
-     "infra-red"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_11_q20_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "infra-red radio waves ultraviolet"
+    },
+    {
+     "label": "B",
+     "html": "infra-red ultraviolet radio waves"
+    },
+    {
+     "label": "C",
+     "html": "ultraviolet infra-red radio waves"
+    },
+    {
+     "label": "D",
+     "html": "ultraviolet radio waves infra-red"
+    }
+   ]
   }
  ]
 }

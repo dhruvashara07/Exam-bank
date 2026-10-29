@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 6,
    "bbox": [
-    189.6,
-    128.7,
-    403.0,
-    349.6
+    189.5,
+    130.5,
+    403.5,
+    350.0
    ],
    "id": "0625_2015MJ_51_q03_fig3-1",
    "part": "",
@@ -131,6 +131,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "VS ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "IS ="
       },
       {
@@ -198,7 +203,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>S</sub> of the lamp filaments using the equation <i>R</i><sub>S</sub> = \\(\\frac{<i>V</i><sub>S</sub>}{<i>I</i><sub>S</sub>}\\).",
+       "html": "Calculate the resistance <i>R</i><sub>S</sub> of the lamp filaments using the equation <i>R</i><sub>S</sub> = \\(\\frac{V_{S}}{I_{S}}\\).",
        "text": "Calculate the resistance RS of the lamp filaments using the equation RS = (VS)/(IS)."
       },
       {
@@ -397,6 +402,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "VP ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "IP ="
       },
       {
@@ -464,7 +474,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>P</sub> of the lamp filaments using the equation <i>R</i><sub>P</sub> = \\(\\frac{<i>V</i><sub>P</sub>}{<i>I</i><sub>P</sub>}\\).",
+       "html": "Calculate the resistance <i>R</i><sub>P</sub> of the lamp filaments using the equation <i>R</i><sub>P</sub> = \\(\\frac{V_{P}}{I_{P}}\\).",
        "text": "Calculate the resistance RP of the lamp filaments using the equation RP = (VP)/(IP)."
       },
       {
@@ -533,7 +543,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the ratio \\(\\frac{<i>R</i><sub>S</sub>}{<i>R</i><sub>P</sub>}\\).",
+       "html": "Calculate the ratio \\(\\frac{R_{S}}{R_{P}}\\).",
        "text": "Calculate the ratio (RS)/(RP)."
       },
       {
@@ -734,7 +744,7 @@
    "content": [
     {
      "type": "text",
-     "html": "A student wishes to investigate whether the ratio \\(\\frac{<i>R</i><sub>S</sub>}{<i>R</i><sub>P</sub>}\\) for the two lamps is the same under all conditions.",
+     "html": "A student wishes to investigate whether the ratio \\(\\frac{R_{S}}{R_{P}}\\) for the two lamps is the same under all conditions.",
      "text": "A student wishes to investigate whether the ratio (RS)/(RP) for the two lamps is the same under all conditions."
     }
    ]
@@ -757,6 +767,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

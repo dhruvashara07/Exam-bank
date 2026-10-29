@@ -32,9 +32,9 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
+    67.5,
     363.0,
-    438.7,
+    439.0,
     488.5
    ],
    "id": "0625_2025ON_22_q26_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p22/q26/figures/0625_2025ON_22_q26_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p22/q26/figures/0625_2025ON_22_q26_figA",
     "url": null,
-    "kb": 28.2
+    "kb": 28.0
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,52 +103,30 @@
    "text": "Which row identifies a possible pair of values for X and for Y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "length of X",
-     "diameter of X",
-     "length of Y",
-     "diameter of Y"
-    ],
-    [
-     "",
-     "/cm",
-     "/mm",
-     "/cm",
-     "/mm"
-    ],
-    [
-     "<b>A</b>",
-     "50",
-     "0.40",
-     "200",
-     "0.10"
-    ],
-    [
-     "<b>B</b>",
-     "50",
-     "0.40",
-     "200",
-     "0.20"
-    ],
-    [
-     "<b>C</b>",
-     "50",
-     "0.40",
-     "200",
-     "0.80"
-    ],
-    [
-     "<b>D</b>",
-     "50",
-     "0.40",
-     "200",
-     "1.60"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025ON_22_q26_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "50 0.40 200 0.10"
+    },
+    {
+     "label": "B",
+     "html": "50 0.40 200 0.20"
+    },
+    {
+     "label": "C",
+     "html": "50 0.40 200 0.80"
+    },
+    {
+     "label": "D",
+     "html": "50 0.40 200 1.60"
+    }
+   ]
   }
  ]
 }

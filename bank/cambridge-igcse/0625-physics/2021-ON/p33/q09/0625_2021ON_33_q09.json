@@ -9,10 +9,10 @@
    "caption": "Fig. 9.1",
    "page": 16,
    "bbox": [
-    108.5,
-    161.2,
-    487.2,
-    319.6
+    108.0,
+    164.5,
+    487.5,
+    318.0
    ],
    "id": "0625_2021ON_33_q09a_fig9-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 9.2",
    "page": 16,
    "bbox": [
-    108.5,
-    161.2,
-    487.2,
-    319.6
+    108.0,
+    164.5,
+    487.5,
+    318.0
    ],
    "id": "0625_2021ON_33_q09a_fig9-2",
    "part": "(a)",
@@ -47,10 +47,10 @@
    "caption": "Fig. 9.3",
    "page": 17,
    "bbox": [
-    209.1,
-    84.8,
-    386.2,
-    210.5
+    208.5,
+    84.5,
+    387.0,
+    209.0
    ],
    "id": "0625_2021ON_33_q09c_fig9-3",
    "part": "(c)",
@@ -156,10 +156,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "The current in A<sub>1</sub> is …… the current in A<sub>2</sub>.",
+       "text": "The current in A1 is …… the current in A2."
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(i) The current in A1 is",
-       "unit": "the current in A2."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -225,10 +228,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "The current in A<sub>3</sub> is …… the current in A<sub>4</sub>.",
+       "text": "The current in A3 is …… the current in A4."
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(ii) The current in A3 is",
-       "unit": "the current in A4."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -294,10 +300,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "The current in A<sub>4</sub> is …… the current in A<sub>5</sub>.",
+       "text": "The current in A4 is …… the current in A5."
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(iii) The current in A4 is",
-       "unit": "the current in A5."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -363,10 +372,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "The current in A<sub>1</sub> is …… the current in A<sub>3</sub>.",
+       "text": "The current in A1 is …… the current in A3."
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(iv) The current in A1 is",
-       "unit": "the current in A3."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -580,5 +592,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

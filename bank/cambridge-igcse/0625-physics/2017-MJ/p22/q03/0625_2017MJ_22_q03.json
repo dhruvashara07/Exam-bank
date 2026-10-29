@@ -32,7 +32,7 @@
   {
    "page": 3,
    "bbox": [
-    194.2,
+    194.5,
     86.9,
     400.7,
     243.3
@@ -51,10 +51,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    289.3,
-    292.3,
-    414.7
+    67.5,
+    289.0,
+    292.5,
+    415.0
    ],
    "id": "0625_2017MJ_22_q03_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-MJ/p22/q03/figures/0625_2017MJ_22_q03_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-MJ/p22/q03/figures/0625_2017MJ_22_q03_figB",
     "url": null,
-    "kb": 18.7
+    "kb": 18.5
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "What is the acceleration of the car during the first two seconds and what is the total distance that it travels?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "acceleration <sup>2</sup> m/s",
-     "total distance/m"
-    ],
-    [
-     "<b>A</b>",
-     "0.50",
-     "10"
-    ],
-    [
-     "<b>B</b>",
-     "0.50",
-     "20"
-    ],
-    [
-     "<b>C</b>",
-     "2.0",
-     "10"
-    ],
-    [
-     "<b>D</b>",
-     "2.0",
-     "20"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017MJ_22_q03_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0.50 10"
+    },
+    {
+     "label": "B",
+     "html": "0.50 20"
+    },
+    {
+     "label": "C",
+     "html": "2.0 10"
+    },
+    {
+     "label": "D",
+     "html": "2.0 20"
+    }
+   ]
   }
  ]
 }

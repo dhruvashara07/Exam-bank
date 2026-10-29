@@ -34,9 +34,9 @@
    "page": 5,
    "bbox": [
     105.5,
-    126.8,
-    480.8,
-    288.1
+    126.0,
+    480.0,
+    286.5
    ],
    "id": "0625_2022MJ_53_q02_fig2-1",
    "part": "",
@@ -52,9 +52,9 @@
    "caption": "Table 2.1",
    "page": 5,
    "bbox": [
-    95.9,
-    513.3,
-    499.4,
+    95.5,
+    517.0,
+    499.5,
     748.0
    ],
    "id": "0625_2022MJ_53_q02bii_table2-1",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p53/q02/figures/0625_2022MJ_53_q02bii_table2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p53/q02/figures/0625_2022MJ_53_q02bii_table2-1",
     "url": null,
-    "kb": 35.9
+    "kb": 35.8
    }
   }
  ],
@@ -279,64 +279,9 @@
        "text": "Complete the headings in Table 2.1."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "",
-         "beaker",
-         "beaker"
-        ],
-        [
-         "",
-         "<sup>3</sup>",
-         "<sup>3</sup>"
-        ],
-        [
-         "",
-         "with 150 cm of hot water",
-         "with 50 cm of hot water"
-        ],
-        [
-         "<i>t</i> /",
-         "θ /",
-         "θ /"
-        ],
-        [
-         "0",
-         "",
-         ""
-        ],
-        [
-         "30",
-         "",
-         ""
-        ],
-        [
-         "60",
-         "",
-         ""
-        ],
-        [
-         "90",
-         "",
-         ""
-        ],
-        [
-         "120",
-         "",
-         ""
-        ],
-        [
-         "150",
-         "",
-         ""
-        ],
-        [
-         "180",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2022MJ_53_q02bii_table2-1",
+       "caption": "Table 2.1"
       },
       {
        "type": "marks",
@@ -496,7 +441,7 @@
       },
       {
        "type": "text",
-       "html": "<i>x</i> = \\(\\frac{θ<sub>0</sub> – θ<sub>90</sub>}{<i>T</i>}\\)",
+       "html": "<i>x</i> = \\(\\frac{θ_{0} – θ_{90}}{T}\\)",
        "text": "x = (θ0 – θ90)/(T)"
       },
       {
@@ -581,7 +526,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -659,7 +613,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "use of results",
+     "prefix": "additional experiment"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "use of results"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -686,6 +649,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

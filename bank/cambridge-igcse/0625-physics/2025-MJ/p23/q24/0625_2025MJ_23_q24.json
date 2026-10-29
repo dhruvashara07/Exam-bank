@@ -32,8 +32,8 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
-    518.1,
+    67.5,
+    518.0,
     389.5,
     629.5
    ],
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p23/q24/figures/0625_2025MJ_23_q24_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p23/q24/figures/0625_2025MJ_23_q24_figA",
     "url": null,
-    "kb": 28.0
+    "kb": 27.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row describes the magnetic field around a weak magnet?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "direction of field",
-     "spacing of field lines"
-    ],
-    [
-     "<b>A</b>",
-     "north pole to south pole",
-     "close together"
-    ],
-    [
-     "<b>B</b>",
-     "north pole to south pole",
-     "far apart"
-    ],
-    [
-     "<b>C</b>",
-     "south pole to north pole",
-     "close together"
-    ],
-    [
-     "<b>D</b>",
-     "south pole to north pole",
-     "far apart"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_23_q24_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "north pole to south pole close together"
+    },
+    {
+     "label": "B",
+     "html": "north pole to south pole far apart"
+    },
+    {
+     "label": "C",
+     "html": "south pole to north pole close together"
+    },
+    {
+     "label": "D",
+     "html": "south pole to north pole far apart"
+    }
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Figure 3.1",
    "page": 6,
    "bbox": [
-    69.3,
-    73.8,
-    388.5,
-    228.2
+    69.5,
+    74.5,
+    389.0,
+    228.5
    ],
    "id": "0625_2026FM_42_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 6,
    "bbox": [
-    69.3,
-    263.2,
-    373.4,
-    354.8
+    69.0,
+    264.0,
+    373.5,
+    355.0
    ],
    "id": "0625_2026FM_42_q03_table3-1",
    "part": "",
@@ -303,14 +303,13 @@
       },
       {
        "type": "text",
-       "html": "in contact with ice in contact with ice",
-       "text": "in contact with ice in contact with ice"
+       "html": "mass of polar bear = …… × mass of person area of polar bear = …… × <b>area</b> of person in contact with ice in contact with ice",
+       "text": "mass of polar bear = …… × mass of person area of polar bear = …… × area of person in contact with ice in contact with ice"
       },
       {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "pressure exerted by person =",
-       "unit": "× pressure exerted by polar bear"
+       "type": "text",
+       "html": "pressure exerted by person = …… × pressure exerted by polar bear",
+       "text": "pressure exerted by person = …… × pressure exerted by polar bear"
       },
       {
        "type": "marks",
@@ -381,13 +380,13 @@
    "content": [
     {
      "type": "text",
-     "html": "Under the ice is <b>sea</b> water with a density of 1030kg/m<sup>3</sup>.",
-     "text": "Under the ice is sea water with a density of 1030kg/m3."
+     "html": "Under the ice is <b>sea</b> water with a density of 1030 kg / m<sup>3</sup>.",
+     "text": "Under the ice is sea water with a density of 1030 kg / m3."
     },
     {
      "type": "text",
-     "html": "Calculate the change in pressure Δp between the top of the <b>sea</b> water and a depth of 2.50m.",
-     "text": "Calculate the change in pressure Δp between the top of the sea water and a depth of 2.50m."
+     "html": "Calculate the change in pressure Δp between the top of the <b>sea</b> water and a depth of 2.50 m.",
+     "text": "Calculate the change in pressure Δp between the top of the sea water and a depth of 2.50 m."
     },
     {
      "type": "answer",
@@ -419,6 +418,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -439,26 +439,6 @@
    "type": "figure",
    "id": "0625_2026FM_42_q03_table3-1",
    "caption": "Table 3.1"
-  },
-  {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>polar</b> <b>bear</b>",
-     "<b>person</b>"
-    ],
-    [
-     "mass/kg",
-     "590",
-     "84"
-    ],
-    [
-     "<sup>2</sup> area in contact with ice/m",
-     "1.12",
-     "0.020"
-    ]
-   ]
   }
  ]
 }

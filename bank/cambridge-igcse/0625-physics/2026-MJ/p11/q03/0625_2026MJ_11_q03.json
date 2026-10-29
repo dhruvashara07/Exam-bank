@@ -32,10 +32,10 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
-    425.4,
-    334.2,
-    550.9
+    67.5,
+    425.0,
+    334.5,
+    551.0
    ],
    "id": "0625_2026MJ_11_q03_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p11/q03/figures/0625_2026MJ_11_q03_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p11/q03/figures/0625_2026MJ_11_q03_figA",
     "url": null,
-    "kb": 31.8
+    "kb": 31.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What is the approximate value of g and what is the approximate change in g as the object gets nearer to the Earth?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>approximat</b><b>e</b> <b>value</b> <b>of</b> <b><i>g</i></b> <b><sup>2</sup></b> <b>m</b><b>/</b><b>s</b>",
-     "<b>approximate</b> <b>change in</b> <b><i>g</i></b>"
-    ],
-    [
-     "<b>A</b>",
-     "8.9",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "8.9",
-     "no change"
-    ],
-    [
-     "<b>C</b>",
-     "9.8",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "9.8",
-     "no change"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_11_q03_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "8.9 decreases"
+    },
+    {
+     "label": "B",
+     "html": "8.9 no change"
+    },
+    {
+     "label": "C",
+     "html": "9.8 decreases"
+    },
+    {
+     "label": "D",
+     "html": "9.8 no change"
+    }
+   ]
   }
  ]
 }

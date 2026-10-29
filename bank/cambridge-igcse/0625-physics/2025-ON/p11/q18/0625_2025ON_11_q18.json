@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
+    67.5,
     491.0,
-    277.6,
-    616.6
+    277.5,
+    616.5
    ],
    "id": "0625_2025ON_11_q18_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p11/q18/figures/0625_2025ON_11_q18_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p11/q18/figures/0625_2025ON_11_q18_figA",
     "url": null,
-    "kb": 24.9
+    "kb": 24.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What is the type of wave and what is the name of the seismic wave?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "type of wave",
-     "name of seismic wave"
-    ],
-    [
-     "<b>A</b>",
-     "longitudinal",
-     "P-wave"
-    ],
-    [
-     "<b>B</b>",
-     "longitudinal",
-     "S-wave"
-    ],
-    [
-     "<b>C</b>",
-     "transverse",
-     "P-wave"
-    ],
-    [
-     "<b>D</b>",
-     "transverse",
-     "S-wave"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025ON_11_q18_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "longitudinal P-wave"
+    },
+    {
+     "label": "B",
+     "html": "longitudinal S-wave"
+    },
+    {
+     "label": "C",
+     "html": "transverse P-wave"
+    },
+    {
+     "label": "D",
+     "html": "transverse S-wave"
+    }
+   ]
   }
  ]
 }

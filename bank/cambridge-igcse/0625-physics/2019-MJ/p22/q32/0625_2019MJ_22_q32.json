@@ -32,10 +32,10 @@
   {
    "page": 12,
    "bbox": [
-    219.2,
-    478.8,
-    375.6,
-    609.2
+    219.0,
+    478.0,
+    376.0,
+    609.5
    ],
    "id": "0625_2019MJ_22_q32_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-MJ/p22/q32/figures/0625_2019MJ_22_q32_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-MJ/p22/q32/figures/0625_2019MJ_22_q32_figA",
     "url": null,
-    "kb": 5.1
+    "kb": 4.9
    }
   },
   {
    "page": 12,
    "bbox": [
-    67.7,
+    67.5,
     641.5,
-    397.9,
-    752.8
+    398.0,
+    753.0
    ],
    "id": "0625_2019MJ_22_q32_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-MJ/p22/q32/figures/0625_2019MJ_22_q32_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-MJ/p22/q32/figures/0625_2019MJ_22_q32_figB",
     "url": null,
-    "kb": 22.5
+    "kb": 22.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row shows the components X and Y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>A</b>",
-     "light-dependent resistor",
-     "resistor"
-    ],
-    [
-     "<b>B</b>",
-     "resistor",
-     "light-dependent resistor"
-    ],
-    [
-     "<b>C</b>",
-     "resistor",
-     "thermistor"
-    ],
-    [
-     "<b>D</b>",
-     "thermistor",
-     "resistor"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019MJ_22_q32_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "light-dependent resistor resistor"
+    },
+    {
+     "label": "B",
+     "html": "resistor light-dependent resistor"
+    },
+    {
+     "label": "C",
+     "html": "resistor thermistor"
+    },
+    {
+     "label": "D",
+     "html": "thermistor resistor"
+    }
+   ]
   }
  ]
 }

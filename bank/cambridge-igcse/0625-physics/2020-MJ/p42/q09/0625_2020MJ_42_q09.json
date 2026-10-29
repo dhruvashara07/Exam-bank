@@ -9,10 +9,10 @@
    "caption": "Table 9.1",
    "page": 11,
    "bbox": [
-    166.9,
-    84.0,
-    428.3,
-    211.5
+    167.0,
+    87.5,
+    428.5,
+    212.0
    ],
    "id": "0625_2020MJ_42_q09a_table9-1",
    "part": "(a)",
@@ -21,17 +21,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p42/q09/figures/0625_2020MJ_42_q09a_table9-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p42/q09/figures/0625_2020MJ_42_q09a_table9-1",
     "url": null,
-    "kb": 18.2
+    "kb": 18.1
    }
   },
   {
    "caption": "Fig. 9.1",
    "page": 11,
    "bbox": [
-    172.9,
-    245.3,
-    422.4,
-    356.4
+    173.0,
+    247.5,
+    422.0,
+    355.0
    ],
    "id": "0625_2020MJ_42_q09b_fig9-1",
    "part": "(b)",
@@ -47,10 +47,10 @@
    "caption": "Table 9.2",
    "page": 11,
    "bbox": [
-    117.3,
-    386.7,
+    117.0,
+    390.5,
     478.0,
-    533.5
+    534.0
    ],
    "id": "0625_2020MJ_42_q09b_table9-2",
    "part": "(b)",
@@ -59,7 +59,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p42/q09/figures/0625_2020MJ_42_q09b_table9-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p42/q09/figures/0625_2020MJ_42_q09b_table9-2",
     "url": null,
-    "kb": 31.2
+    "kb": 31.1
    }
   }
  ],
@@ -131,34 +131,9 @@
      "text": "Complete the truth table shown in Table 9.1 for a NAND gate."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "input 1",
-       "input 2",
-       "output"
-      ],
-      [
-       "0",
-       "0",
-       ""
-      ],
-      [
-       "0",
-       "1",
-       ""
-      ],
-      [
-       "1",
-       "0",
-       ""
-      ],
-      [
-       "1",
-       "1",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2020MJ_42_q09a_table9-1",
+     "caption": "Table 9.1"
     },
     {
      "type": "marks",
@@ -357,51 +332,9 @@
      "text": "Table 9.2 shows a partially completed truth table for this circuit."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "input",
-       "",
-       "intermediate point",
-       "",
-       "output"
-      ],
-      [
-       "A",
-       "B",
-       "C",
-       "D",
-       "E"
-      ],
-      [
-       "0",
-       "0",
-       "0",
-       "0",
-       ""
-      ],
-      [
-       "0",
-       "1",
-       "1",
-       "0",
-       ""
-      ],
-      [
-       "1",
-       "0",
-       "1",
-       "0",
-       ""
-      ],
-      [
-       "1",
-       "1",
-       "1",
-       "1",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2020MJ_42_q09b_table9-2",
+     "caption": "Table 9.2"
     }
    ]
   },
@@ -497,5 +430,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

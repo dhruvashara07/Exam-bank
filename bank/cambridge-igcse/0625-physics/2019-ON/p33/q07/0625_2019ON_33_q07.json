@@ -75,13 +75,12 @@
     },
     {
      "type": "text",
-     "html": "The physical property that varies with temperature in a liquid-in-glass thermometer is the",
-     "text": "The physical property that varies with temperature in a liquid-in-glass thermometer is the"
+     "html": "The unit of temperature is called the …… . The physical property that varies with temperature in a liquid-in-glass thermometer is the …… of the liquid.",
+     "text": "The unit of temperature is called the …… . The physical property that varies with temperature in a liquid-in-glass thermometer is the …… of the liquid."
     },
     {
      "type": "answer",
-     "kind": "answer_line",
-     "unit": "of the liquid."
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -157,7 +156,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "Upper fixed point",
+     "prefix": "Lower fixed point"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Upper fixed point"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -183,5 +191,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

@@ -32,10 +32,10 @@
   {
    "page": 16,
    "bbox": [
-    67.7,
-    166.3,
-    215.3,
-    277.6
+    67.5,
+    166.0,
+    215.5,
+    278.0
    ],
    "id": "0625_2019MJ_22_q39_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-MJ/p22/q39/figures/0625_2019MJ_22_q39_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-MJ/p22/q39/figures/0625_2019MJ_22_q39_figA",
     "url": null,
-    "kb": 11.4
+    "kb": 11.3
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "What are the numbers x and y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "x",
-     "y"
-    ],
-    [
-     "<b>A</b>",
-     "231",
-     "94"
-    ],
-    [
-     "<b>B</b>",
-     "231",
-     "90"
-    ],
-    [
-     "<b>C</b>",
-     "239",
-     "94"
-    ],
-    [
-     "<b>D</b>",
-     "239",
-     "90"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019MJ_22_q39_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "231 94"
+    },
+    {
+     "label": "B",
+     "html": "231 90"
+    },
+    {
+     "label": "C",
+     "html": "239 94"
+    },
+    {
+     "label": "D",
+     "html": "239 90"
+    }
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    69.4,
-    124.3,
+    69.0,
+    123.5,
     526.0,
-    329.9
+    330.0
    ],
    "id": "0625_2025MJ_53_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 1.1",
    "page": 3,
    "bbox": [
-    212.6,
-    151.8,
-    382.7,
-    308.5
+    212.5,
+    152.5,
+    383.0,
+    309.0
    ],
    "id": "0625_2025MJ_53_q01b_table1-1",
    "part": "(b)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p53/q01/figures/0625_2025MJ_53_q01b_table1-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p53/q01/figures/0625_2025MJ_53_q01b_table1-1",
     "url": null,
-    "kb": 19.2
+    "kb": 19.1
    }
   }
  ],
@@ -138,8 +138,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Move the 1.50N load to a distance d = 40.0cm from the 0.0cm end of the ruler.",
-       "text": "Move the 1.50N load to a distance d = 40.0cm from the 0.0cm end of the ruler."
+       "html": "Move the 1.50 N load to a distance d = 40.0 cm from the 0.0 cm end of the ruler.",
+       "text": "Move the 1.50 N load to a distance d = 40.0 cm from the 0.0 cm end of the ruler."
       },
       {
        "type": "text",
@@ -152,9 +152,21 @@
        "text": "Read the value FX on force meter X and the value FY on force meter Y."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "FX =",
+       "unit": "N"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "FY =",
+       "unit": "N"
+      },
+      {
        "type": "text",
-       "html": "Calculate a value W<sub>X</sub> using the equation W<sub>X</sub> = F<sub>X</sub> + F<sub>Y</sub> – k, where k = 1.50N.",
-       "text": "Calculate a value WX using the equation WX = FX + FY – k, where k = 1.50N."
+       "html": "Calculate a value W<sub>X</sub> using the equation W<sub>X</sub> = F<sub>X</sub> + F<sub>Y</sub> – k, where k = 1.50 N.",
+       "text": "Calculate a value WX using the equation WX = FX + FY – k, where k = 1.50 N."
       },
       {
        "type": "answer",
@@ -304,8 +316,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Move the 1.50N load to a distance d = 10.0cm from the 0.0cm end of the ruler. Ensure that the metre ruler is as near to horizontal as possible.",
-     "text": "Move the 1.50N load to a distance d = 10.0cm from the 0.0cm end of the ruler. Ensure that the metre ruler is as near to horizontal as possible."
+     "html": "Move the 1.50 N load to a distance d = 10.0 cm from the 0.0 cm end of the ruler. Ensure that the metre ruler is as near to horizontal as possible.",
+     "text": "Move the 1.50 N load to a distance d = 10.0 cm from the 0.0 cm end of the ruler. Ensure that the metre ruler is as near to horizontal as possible."
     },
     {
      "type": "text",
@@ -314,37 +326,13 @@
     },
     {
      "type": "text",
-     "html": "Repeat this procedure for d = 30.0cm, 50.0cm, 70.0cm and 90.0cm.",
-     "text": "Repeat this procedure for d = 30.0cm, 50.0cm, 70.0cm and 90.0cm."
+     "html": "Repeat this procedure for d = 30.0 cm, 50.0 cm, 70.0 cm and 90.0 cm.",
+     "text": "Repeat this procedure for d = 30.0 cm, 50.0 cm, 70.0 cm and 90.0 cm."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "d/cm",
-       "F<sub>X</sub>/N"
-      ],
-      [
-       "10.0",
-       ""
-      ],
-      [
-       "30.0",
-       ""
-      ],
-      [
-       "50.0",
-       ""
-      ],
-      [
-       "70.0",
-       ""
-      ],
-      [
-       "90.0",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2025MJ_53_q01b_table1-1",
+     "caption": "Table 1.1"
     },
     {
      "type": "marks",
@@ -414,8 +402,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of F<sub>X</sub>/N (y-axis) against d/cm (x-axis). Start the axes at the origin (0,0).",
-     "text": "Plot a graph of FX/N (y-axis) against d/cm (x-axis). Start the axes at the origin (0,0)."
+     "html": "Plot a graph of F<sub>X</sub> / N (y-axis) against d / cm (x-axis). Start the axes at the origin (0, 0).",
+     "text": "Plot a graph of FX / N (y-axis) against d / cm (x-axis). Start the axes at the origin (0, 0)."
     },
     {
      "type": "text",
@@ -498,8 +486,13 @@
    "content": [
     {
      "type": "text",
-     "html": "From your graph, determine F<sub>0</sub>, the value of F<sub>X</sub> when d = 0.0cm.",
-     "text": "From your graph, determine F0, the value of FX when d = 0.0cm."
+     "html": "From your graph, determine F<sub>0</sub>, the value of F<sub>X</sub> when d = 0.0 cm.",
+     "text": "From your graph, determine F0, the value of FX when d = 0.0 cm."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "F0 ="
     },
     {
      "type": "text",
@@ -583,7 +576,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -610,6 +612,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

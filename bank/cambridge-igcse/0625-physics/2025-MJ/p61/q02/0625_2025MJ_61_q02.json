@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    160.1,
-    107.3,
-    435.3,
-    253.5
+    160.5,
+    106.5,
+    434.5,
+    254.0
    ],
    "id": "0625_2025MJ_61_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 4,
    "bbox": [
-    91.9,
-    330.9,
-    503.5,
-    409.8
+    91.0,
+    330.0,
+    504.0,
+    410.0
    ],
    "id": "0625_2025MJ_61_q02a_fig2-2",
    "part": "(a)",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p61/q02/figures/0625_2025MJ_61_q02a_fig2-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p61/q02/figures/0625_2025MJ_61_q02a_fig2-2",
     "url": null,
-    "kb": 25.8
+    "kb": 25.7
    }
   },
   {
    "caption": "Table 2.1",
    "page": 4,
    "bbox": [
-    209.4,
-    565.4,
+    209.5,
+    566.0,
     386.0,
-    793.9
+    794.5
    ],
    "id": "0625_2025MJ_61_q02b_table2-1",
    "part": "(b)",
@@ -151,8 +151,8 @@
    "content": [
     {
      "type": "text",
-     "html": "The student uses a thermometer to measure room temperature θ<sub>R</sub>. Room temperature is 22°C.",
-     "text": "The student uses a thermometer to measure room temperature θR. Room temperature is 22°C."
+     "html": "The student uses a thermometer to measure room temperature θ<sub>R</sub>. Room temperature is °C.",
+     "text": "The student uses a thermometer to measure room temperature θR. Room temperature is °C."
     },
     {
      "type": "text",
@@ -234,8 +234,8 @@
    "content": [
     {
      "type": "text",
-     "html": "The student pours 100cm<sup>3</sup> of hot water into an empty beaker. She records the temperature θ of the hot water in the V = 100cm<sup>3</sup> row of Table 2.1, as shown. Without delay, she pours 20cm<sup>3</sup> of cold water into the beaker. She stirs the water and measures the temperature of the mixture of hot and cold water. She repeats the procedure until she has added a total of 100cm<sup>3</sup> of cold water to the beaker.",
-     "text": "The student pours 100cm3 of hot water into an empty beaker. She records the temperature θ of the hot water in the V = 100cm3 row of Table 2.1, as shown. Without delay, she pours 20cm3 of cold water into the beaker. She stirs the water and measures the temperature of the mixture of hot and cold water. She repeats the procedure until she has added a total of 100cm3 of cold water to the beaker."
+     "html": "The student pours 100 cm<sup>3</sup> of hot water into an empty beaker. She records the temperature θ of the hot water in the V = 100 cm<sup>3</sup> row of Table 2.1, as shown. Without delay, she pours 20 cm<sup>3</sup> of cold water into the beaker. She stirs the water and measures the temperature of the mixture of hot and cold water. She repeats the procedure until she has added a total of 100 cm<sup>3</sup> of cold water to the beaker.",
+     "text": "The student pours 100 cm3 of hot water into an empty beaker. She records the temperature θ of the hot water in the V = 100 cm3 row of Table 2.1, as shown. Without delay, she pours 20 cm3 of cold water into the beaker. She stirs the water and measures the temperature of the mixture of hot and cold water. She repeats the procedure until she has added a total of 100 cm3 of cold water to the beaker."
     },
     {
      "type": "text",
@@ -248,37 +248,9 @@
      "text": "Complete the column headings in Table 2.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "V/",
-       "θ/"
-      ],
-      [
-       "100",
-       "87"
-      ],
-      [
-       "120",
-       "73"
-      ],
-      [
-       "140",
-       "65"
-      ],
-      [
-       "160",
-       "59"
-      ],
-      [
-       "180",
-       "54"
-      ],
-      [
-       "200",
-       "49"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2025MJ_61_q02b_table2-1",
+     "caption": "Table 2.1"
     },
     {
      "type": "marks",
@@ -348,8 +320,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of temperature θ(y-axis) against total volume of water V (x-axis). You do <b>not</b> need to start the axes at the origin (0,0).",
-     "text": "Plot a graph of temperature θ(y-axis) against total volume of water V (x-axis). You do not need to start the axes at the origin (0,0)."
+     "html": "Plot a graph of temperature θ (y-axis) against total volume of water V (x-axis). You do <b>not</b> need to start the axes at the origin (0, 0).",
+     "text": "Plot a graph of temperature θ (y-axis) against total volume of water V (x-axis). You do not need to start the axes at the origin (0, 0)."
     },
     {
      "type": "text",
@@ -460,9 +432,13 @@
        "text": "Complete the sentence to explain why it is important to add the cold water without delay at each stage."
       },
       {
+       "type": "text",
+       "html": "The cold water is added without delay ……",
+       "text": "The cold water is added without delay ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "The cold water is added without delay",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -534,9 +510,13 @@
        "text": "Complete the sentence to explain the reason for stirring the water at each stage."
       },
       {
+       "type": "text",
+       "html": "The student stirs the water before recording the temperature ……",
+       "text": "The student stirs the water before recording the temperature ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "The student stirs the water before recording the temperature",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -620,7 +600,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -720,6 +709,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

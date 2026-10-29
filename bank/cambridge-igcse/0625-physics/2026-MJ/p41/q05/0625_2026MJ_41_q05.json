@@ -108,6 +108,12 @@
      "text": "Air molecules inside the box are very small and move freely. The air molecules"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "also move",
+     "unit": "."
+    },
+    {
      "type": "text",
      "html": "Air molecules hit dust particles causing the dust particles",
      "text": "Air molecules hit dust particles causing the dust particles"
@@ -117,6 +123,10 @@
      "kind": "answer_line",
      "prefix": "to",
      "unit": "."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -195,7 +205,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 3
     },
     {
@@ -263,8 +282,8 @@
    "content": [
     {
      "type": "text",
-     "html": "The air temperature inside the box is 296K.",
-     "text": "The air temperature inside the box is 296K."
+     "html": "The air temperature inside the box is 296 K.",
+     "text": "The air temperature inside the box is 296 K."
     },
     {
      "type": "text",
@@ -301,6 +320,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

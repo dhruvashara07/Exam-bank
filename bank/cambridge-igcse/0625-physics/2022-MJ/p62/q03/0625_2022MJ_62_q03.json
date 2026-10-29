@@ -34,9 +34,9 @@
    "page": 8,
    "bbox": [
     118.5,
-    113.0,
-    464.1,
-    304.9
+    116.0,
+    464.5,
+    303.5
    ],
    "id": "0625_2022MJ_62_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 8,
    "bbox": [
-    166.8,
-    608.2,
+    166.5,
+    612.0,
     428.5,
-    711.1
+    711.5
    ],
    "id": "0625_2022MJ_62_q03ai_table3-1",
    "part": "(a)(i)",
@@ -143,9 +143,19 @@
        "text": "On Fig. 3.1, measure the distance x from the screen to the illuminated object."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "x ="
+      },
+      {
        "type": "text",
        "html": "Fig. 3.1 is drawn to scale. The actual distance <i>D</i> between the illuminated object and the screen is 75.0 cm. She places the lens between the object and the screen so that the lens is close to the illuminated object. She moves the lens away from the object until a clearly focused image is formed on the screen. On Fig. 3.1, measure the distance <i>y</i> between the centre of the lens and the illuminated object.",
        "text": "Fig. 3.1 is drawn to scale. The actual distance D between the illuminated object and the screen is 75.0 cm. She places the lens between the object and the screen so that the lens is close to the illuminated object. She moves the lens away from the object until a clearly focused image is formed on the screen. On Fig. 3.1, measure the distance y between the centre of the lens and the illuminated object."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "y ="
       },
       {
        "type": "text",
@@ -153,37 +163,14 @@
        "text": "On Fig. 3.1, measure the distance z between the centre of the lens and the screen."
       },
       {
-       "type": "figure",
-       "id": "0625_2022MJ_62_q03ai_table3-1",
-       "caption": "Table 3.1"
-      },
-      {
-       "type": "table",
-       "rows": [
-        [
-         "<i>D</i>/cm",
-         "<i>u</i>/cm",
-         "<i>v</i>/cm",
-         "<i>f</i>/cm"
-        ],
-        [
-         "75.0",
-         "",
-         "",
-         ""
-        ],
-        [
-         "85.0",
-         "19.1",
-         "64.1",
-         "14.4"
-        ]
-       ]
-      },
-      {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "z ="
+      },
+      {
+       "type": "figure",
+       "id": "0625_2022MJ_62_q03ai_table3-1",
+       "caption": "Table 3.1"
       },
       {
        "type": "marks",
@@ -323,7 +310,7 @@
       },
       {
        "type": "text",
-       "html": "rac{<i>uv</i>}{<i>D</i>}\\) <i>f</i> = .",
+       "html": "rac{\\text{uv}}{D}\\) <i>f</i> = .",
        "text": "/(D) f = ."
       },
       {
@@ -475,7 +462,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -689,6 +685,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

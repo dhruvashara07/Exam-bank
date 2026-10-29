@@ -32,9 +32,9 @@
   {
    "page": 18,
    "bbox": [
-    67.6,
-    85.6,
-    364.7,
+    67.5,
+    85.5,
+    365.0,
     197.0
    ],
    "id": "0625_2015MJ_14_q39_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p14/q39/figures/0625_2015MJ_14_q39_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p14/q39/figures/0625_2015MJ_14_q39_figA",
     "url": null,
-    "kb": 27.9
+    "kb": 27.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row shows the nature and the penetrating ability of β-particles?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "nature",
-     "most are stopped by"
-    ],
-    [
-     "A",
-     "electron",
-     "a few mm of aluminium"
-    ],
-    [
-     "B",
-     "electron",
-     "a thin sheet of paper"
-    ],
-    [
-     "C",
-     "helium nucleus",
-     "a few mm of aluminium"
-    ],
-    [
-     "D",
-     "helium nucleus",
-     "a thin sheet of paper"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_14_q39_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "electron a few mm of aluminium"
+    },
+    {
+     "label": "B",
+     "html": "electron a thin sheet of paper"
+    },
+    {
+     "label": "C",
+     "html": "helium nucleus a few mm of aluminium"
+    },
+    {
+     "label": "D",
+     "html": "helium nucleus a thin sheet of paper"
+    }
+   ]
   }
  ]
 }

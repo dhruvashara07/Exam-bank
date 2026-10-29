@@ -72,7 +72,7 @@
    "content": [
     {
      "type": "text",
-     "html": "<b>) </b> State and explain the <b>two </b>features of a liquid-in-glass thermometer that are necessary for",
+     "html": "<b>) </b> State and explain the <b>two </b> features of a liquid-in-glass thermometer that are necessary for",
      "text": "State and explain the two features of a liquid-in-glass thermometer that are necessary for"
     },
     {
@@ -83,7 +83,26 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "statement 1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "statement 2"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -257,5 +276,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

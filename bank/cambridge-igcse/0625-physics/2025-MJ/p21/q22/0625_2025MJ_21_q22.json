@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    652.1,
-    300.7,
-    777.6
+    67.5,
+    652.0,
+    301.0,
+    778.0
    ],
    "id": "0625_2025MJ_21_q22_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p21/q22/figures/0625_2025MJ_21_q22_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p21/q22/figures/0625_2025MJ_21_q22_figA",
     "url": null,
-    "kb": 26.0
+    "kb": 25.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row shows the type of satellite and the electromagnetic waves used?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "type of satellite",
-     "electromagnetic waves used"
-    ],
-    [
-     "<b>A</b>",
-     "low orbit",
-     "infrared"
-    ],
-    [
-     "<b>B</b>",
-     "low orbit",
-     "microwaves"
-    ],
-    [
-     "<b>C</b>",
-     "geostationary",
-     "infrared"
-    ],
-    [
-     "<b>D</b>",
-     "geostationary",
-     "microwaves"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_21_q22_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "low orbit infrared"
+    },
+    {
+     "label": "B",
+     "html": "low orbit microwaves"
+    },
+    {
+     "label": "C",
+     "html": "geostationary infrared"
+    },
+    {
+     "label": "D",
+     "html": "geostationary microwaves"
+    }
+   ]
   }
  ]
 }

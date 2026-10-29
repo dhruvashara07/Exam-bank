@@ -70,6 +70,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -81,7 +82,7 @@
    "options": [
     {
      "label": "A",
-     "html": "power = \\(\\frac{distancemoved×timetaken}{force}\\)"
+     "html": "power = \\(\\frac{\\text{distance moved} \\times \\text{time taken}}{\\text{force}}\\)"
     },
     {
      "label": "B",
@@ -89,11 +90,11 @@
     },
     {
      "label": "C",
-     "html": "power = \\(\\frac{force ×timetaken}{distancemoved}\\)"
+     "html": "power = \\(\\frac{\\text{force} \\times \\text{time taken}}{\\text{distance moved}}\\)"
     },
     {
      "label": "D",
-     "html": "power = \\(\\frac{force ×distancemoved}{timetaken}\\)"
+     "html": "power = \\(\\frac{\\text{force} \\times \\text{distance moved}}{\\text{time taken}}\\)"
     }
    ]
   }

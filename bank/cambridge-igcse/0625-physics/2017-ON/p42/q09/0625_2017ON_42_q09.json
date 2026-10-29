@@ -10,9 +10,9 @@
    "page": 12,
    "bbox": [
     177.5,
-    85.6,
-    417.3,
-    307.9
+    85.0,
+    418.0,
+    305.0
    ],
    "id": "0625_2017ON_42_q09a_fig9-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 9.2",
    "page": 13,
    "bbox": [
-    126.3,
-    82.8,
-    468.9,
-    217.3
+    126.5,
+    85.0,
+    468.5,
+    214.5
    ],
    "id": "0625_2017ON_42_q09b_fig9-2",
    "part": "(b)",
@@ -145,7 +145,21 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "component A"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "component B"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "component C"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -406,5 +420,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

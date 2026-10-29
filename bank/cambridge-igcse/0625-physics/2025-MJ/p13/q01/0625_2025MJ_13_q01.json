@@ -70,11 +70,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A pendulum starts swinging and its motion is timed. The time measured for 20 complete swings is 30s.",
-   "text": "A pendulum starts swinging and its motion is timed. The time measured for 20 complete swings is 30s."
+   "html": "A pendulum starts swinging and its motion is timed. The time measured for 20 complete swings is s.",
+   "text": "A pendulum starts swinging and its motion is timed. The time measured for 20 complete swings is s."
   },
   {
    "type": "text",
@@ -86,19 +87,19 @@
    "options": [
     {
      "label": "A",
-     "html": "0.67s"
+     "html": "0.67 s"
     },
     {
      "label": "B",
-     "html": "0.75s"
+     "html": "0.75 s"
     },
     {
      "label": "C",
-     "html": "1.5s"
+     "html": "1.5 s"
     },
     {
      "label": "D",
-     "html": "3.0s"
+     "html": "3.0 s"
     }
    ]
   }

@@ -32,10 +32,10 @@
   {
    "page": 12,
    "bbox": [
-    67.7,
-    122.6,
-    346.1,
-    262.3
+    67.5,
+    122.5,
+    346.5,
+    262.5
    ],
    "id": "0625_2023MJ_22_q33_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,45 +103,30 @@
    "text": "How does the total mass of the nuclides produced compare with the total mass of the original nuclide or nuclides in these nuclear processes?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "total mass of fission",
-     "total mass of fusion"
-    ],
-    [
-     "",
-     "products compared",
-     "products compared"
-    ],
-    [
-     "",
-     "to original nuclide",
-     "to original nuclides"
-    ],
-    [
-     "<b>A</b>",
-     "same",
-     "same"
-    ],
-    [
-     "<b>B</b>",
-     "more",
-     "less"
-    ],
-    [
-     "<b>C</b>",
-     "less",
-     "more"
-    ],
-    [
-     "<b>D</b>",
-     "less",
-     "less"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_22_q33_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "same same"
+    },
+    {
+     "label": "B",
+     "html": "more less"
+    },
+    {
+     "label": "C",
+     "html": "less more"
+    },
+    {
+     "label": "D",
+     "html": "less less"
+    }
+   ]
   }
  ]
 }

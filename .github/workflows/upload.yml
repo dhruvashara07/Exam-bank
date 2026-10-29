@@ -1,0 +1,86 @@
+name: Upload batch
+
+# How Dhruv adds papers (docs/UPLOAD.md): upload PDFs into inbox/ on a NEW branch (name starting with
+# "upload", or the "...-patch-1" name GitHub suggests). This keeps the PDFs out of main's history.
+#   1. files the PDFs (any Cambridge name) and stores them in GitHub Releases (raw/manifest.json)
+#   2. on main: cuts the papers, runs the automatic checks, records a batch (review/batches/)
+#   3. pushes the result to main, uploads the SVGs to Cloudinary, deletes the upload branch
+# Then the scheduled Claude check looks at the batch, builds a review round, and approves.
+on:
+  push:
+    branches: ['upload**', '*-patch-*', 'patch-*']
+    paths: ['inbox/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bank              # never at the same time as the "Question bank" workflow
+  cancel-in-progress: false
+
+jobs:
+  batch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    env:
+      GH_TOKEN: ${{ github.token }}
+      CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
+      CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+      CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+      CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: File the PDFs and store them in Releases
+        run: |
+          ls inbox/ || true
+          python3 pipeline/inbox.py > /tmp/todo.txt 2> /tmp/inbox_err.txt || true
+          cat /tmp/inbox_err.txt
+          left=$(ls inbox 2>/dev/null | grep -iv '^readme' | grep -ic '\.pdf$' || true)
+          if [ "$left" != "0" ]; then echo "::warning::$left PDF(s) in inbox/ have names the filer does not understand: kept on branch ${GITHUB_REF_NAME}"; touch /tmp/keep_branch; fi
+          python3 pipeline/raw_store.py upload
+          cp raw/manifest.json /tmp/manifest.incoming.json
+          mkdir -p /tmp/raw && cp -r raw/. /tmp/raw/
+          sort -u /tmp/todo.txt -o /tmp/todo.txt
+          echo "papers: $(tr '\n' ' ' < /tmp/todo.txt)"
+          if [ ! -s /tmp/todo.txt ]; then echo "::error::no question paper or mark scheme recognised in inbox/"; exit 1; fi
+
+      - name: Process on main, check, record the batch
+        run: |
+          git config user.name "exam-bank bot"
+          git config user.email "actions@users.noreply.github.com"
+          git fetch -q origin main
+          git checkout -q -f -B main origin/main
+          rsync -a --ignore-existing --exclude manifest.json /tmp/raw/ raw/
+          python3 - <<'PY'
+          import json, os
+          a = json.load(open('/tmp/manifest.incoming.json'))
+          b = json.load(open('raw/manifest.json')) if os.path.exists('raw/manifest.json') else {}
+          b.update(a)
+          json.dump(dict(sorted(b.items())), open('raw/manifest.json', 'w'), indent=1)
+          PY
+          python3 pipeline/raw_store.py fetch $(cat /tmp/todo.txt)
+          python3 pipeline/run.py $(cat /tmp/todo.txt)
+          python3 pipeline/checks.py $(cat /tmp/todo.txt)
+          python3 pipeline/batch.py new "Upload ${GITHUB_REF_NAME} $(date -u +%Y-%m-%d)" $(cat /tmp/todo.txt)
+          python3 pipeline/batch.py status | tail -3
+          SKIP_WAIT=1 pipeline/push.sh "Batch from ${GITHUB_REF_NAME}: $(tr '\n' ' ' < /tmp/todo.txt)"
+
+      - name: Upload SVGs to Cloudinary
+        env:
+          CLOUDINARY_MINUTES: '240'
+        run: python3 pipeline/sync_cloudinary.py
+
+      - name: Remove the upload branch (its PDFs are in Releases now)
+        if: ${{ success() && github.event_name == 'push' }}
+        run: |
+          if [ -e /tmp/keep_branch ]; then echo "branch kept (unrecognised files)"; exit 0; fi
+          git push origin --delete "${GITHUB_REF_NAME}" || echo "::warning::could not delete branch ${GITHUB_REF_NAME}"

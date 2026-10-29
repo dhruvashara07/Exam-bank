@@ -32,8 +32,8 @@
   {
    "page": 14,
    "bbox": [
-    107.7,
-    97.4,
+    107.0,
+    105.5,
     487.9,
     215.0
    ],
@@ -51,9 +51,9 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
+    67.5,
     273.5,
-    378.3,
+    378.5,
     398.5
    ],
    "id": "0625_2022MJ_11_q28_figB",
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "observation",
-     "the overall state of the metal sphere"
-    ],
-    [
-     "<b>A</b>",
-     "The rod attracts the sphere.",
-     "charged"
-    ],
-    [
-     "<b>B</b>",
-     "The rod attracts the sphere.",
-     "uncharged"
-    ],
-    [
-     "<b>C</b>",
-     "The rod repels the sphere.",
-     "charged"
-    ],
-    [
-     "<b>D</b>",
-     "The rod repels the sphere.",
-     "uncharged"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_11_q28_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "The rod attracts the sphere. charged"
+    },
+    {
+     "label": "B",
+     "html": "The rod attracts the sphere. uncharged"
+    },
+    {
+     "label": "C",
+     "html": "The rod repels the sphere. charged"
+    },
+    {
+     "label": "D",
+     "html": "The rod repels the sphere. uncharged"
+    }
+   ]
   }
  ]
 }

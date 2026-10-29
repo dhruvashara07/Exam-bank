@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    105.6,
-    126.0,
-    489.6,
-    690.2
+    105.0,
+    128.0,
+    490.0,
+    687.5
    ],
    "id": "0625_2017MJ_52_q03_fig3-1",
    "part": "",
@@ -194,7 +194,17 @@
      "type": "list",
      "items": [
       "Draw a line joining the positions of P<sub>3</sub> and P<sub>4</sub>. Continue the line until it meets the normal <b>NL</b>. Label the point <b>K</b> where this line crosses <b>CD</b>.",
-      "Measure and record the angle α between the line joining the positions of P<sub>3</sub> and P<sub>4</sub> and the normal <b>NL</b>.",
+      "Measure and record the angle α between the line joining the positions of P<sub>3</sub> and P<sub>4</sub> and the normal <b>NL</b>."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "α ="
+    },
+    {
+     "type": "list",
+     "items": [
       "Measure and record the length <i>x</i> between points <b>M</b> and <b>K</b>."
      ]
     },
@@ -273,7 +283,17 @@
      "items": [
       "Repeat the steps in <b>(a)</b> but with the line <b>FE</b> to the right of the normal.",
       "Draw a line joining the new positions of P<sub>3</sub> and P<sub>4</sub>. Continue the line until it meets the normal <b>NL</b>. Label the point <b>Q</b> where this line crosses <b>CD</b>.",
-      "Measure and record the angle β between the line joining the new positions of P<sub>3</sub> and P<sub>4</sub> and the normal <b>NL</b>.",
+      "Measure and record the angle β between the line joining the new positions of P<sub>3</sub> and P<sub>4</sub> and the normal <b>NL</b>."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "β ="
+    },
+    {
+     "type": "list",
+     "items": [
       "Measure and record the length <i>y</i> between points <b>M</b> and <b>Q</b>."
      ]
     },
@@ -354,7 +374,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -459,6 +488,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

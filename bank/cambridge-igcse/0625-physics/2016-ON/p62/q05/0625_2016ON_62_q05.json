@@ -33,10 +33,10 @@
    "caption": "Fig. 5.1",
    "page": 10,
    "bbox": [
-    44.3,
-    111.4,
-    550.9,
-    647.3
+    43.5,
+    111.0,
+    551.5,
+    647.5
    ],
    "id": "0625_2016ON_62_q05_fig5-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 5.1",
    "page": 11,
    "bbox": [
-    248.4,
-    192.3,
-    346.8,
-    371.2
+    248.0,
+    192.0,
+    347.0,
+    371.5
    ],
    "id": "0625_2016ON_62_q05b_table5-1",
    "part": "(b)",
@@ -330,37 +330,9 @@
      "text": "He repeats the procedure using i values of 0°, 30°, 40°, 50° and 60°. The readings are shown in Table 5.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>i</i> / °",
-       "<i>d</i> / cm"
-      ],
-      [
-       "0",
-       "0.0"
-      ],
-      [
-       "20",
-       "1.8"
-      ],
-      [
-       "30",
-       "2.9"
-      ],
-      [
-       "40",
-       "4.2"
-      ],
-      [
-       "50",
-       "6.0"
-      ],
-      [
-       "60",
-       "8.7"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2016ON_62_q05b_table5-1",
+     "caption": "Table 5.1"
     },
     {
      "type": "text",
@@ -449,7 +421,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -521,7 +502,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -548,6 +538,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

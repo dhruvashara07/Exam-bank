@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    64.3,
-    382.6,
-    318.6,
-    488.9
+    64.0,
+    382.5,
+    319.0,
+    489.0
    ],
    "id": "0625_2019ON_23_q15_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p23/q15/figures/0625_2019ON_23_q15_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p23/q15/figures/0625_2019ON_23_q15_figA",
     "url": null,
-    "kb": 25.1
+    "kb": 25.0
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row compares the separation and the motion of the molecules of a hot gas with those of a cool liquid? (Both the gas and the liquid are at the same pressure.)"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "separation",
-     "motion"
-    ],
-    [
-     "<b>A</b>",
-     "greater for a gas",
-     "faster for a gas"
-    ],
-    [
-     "<b>B</b>",
-     "greater for a gas",
-     "slower for a gas"
-    ],
-    [
-     "<b>C</b>",
-     "smaller for a gas",
-     "faster for a gas"
-    ],
-    [
-     "<b>D</b>",
-     "smaller for a gas",
-     "slower for a gas"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019ON_23_q15_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "greater for a gas faster for a gas"
+    },
+    {
+     "label": "B",
+     "html": "greater for a gas slower for a gas"
+    },
+    {
+     "label": "C",
+     "html": "smaller for a gas faster for a gas"
+    },
+    {
+     "label": "D",
+     "html": "smaller for a gas slower for a gas"
+    }
+   ]
   }
  ]
 }

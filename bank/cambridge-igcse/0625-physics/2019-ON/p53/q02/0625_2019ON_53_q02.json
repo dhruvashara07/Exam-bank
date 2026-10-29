@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    59.7,
-    112.2,
-    533.9,
-    260.8
+    60.5,
+    118.5,
+    533.5,
+    258.0
    ],
    "id": "0625_2019ON_53_q02_fig2-1",
    "part": "",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p53/q02/figures/0625_2019ON_53_q02_fig2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p53/q02/figures/0625_2019ON_53_q02_fig2-1",
     "url": null,
-    "kb": 22.0
+    "kb": 21.3
    }
   }
  ],
@@ -222,7 +222,7 @@
       },
       {
        "type": "text",
-       "html": "rac{<i>uv</i>}{(<i>u</i> + <i>v</i>)}\\)",
+       "html": "rac{\\text{uv}}{(u + v)}\\)",
        "text": "/((u + v))"
       },
       {
@@ -449,6 +449,11 @@
        "text": "Measure hI, the height of the image of the triangle on the screen."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "hI ="
+      },
+      {
        "type": "text",
        "html": "Measure <i>h</i><sub>O</sub>, the height of the illuminated triangle, as indicated in Fig. 2.1.",
        "text": "Measure hO, the height of the illuminated triangle, as indicated in Fig. 2.1."
@@ -528,7 +533,7 @@
       },
       {
        "type": "text",
-       "html": "\\(\\frac{<i>h</i><sub>I</sub>}{<i>h</i><sub>O</sub>}\\)",
+       "html": "\\(\\frac{h_{I}}{h_{O}}\\)",
        "text": "(hI)/(hO)"
       },
       {
@@ -606,7 +611,7 @@
       },
       {
        "type": "text",
-       "html": "frac{<i>v</i>}{(<i>M</i> + 1)}\\)",
+       "html": "frac{v}{(M + 1)}\\)",
        "text": "/((M + 1))"
       },
       {
@@ -696,7 +701,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -843,7 +857,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "suggestion"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -870,6 +893,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

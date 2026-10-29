@@ -1,0 +1,312 @@
+<title>0625 Question Review</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<style>
+/* Layout: one column of review cards under a sticky progress bar; each card = header, one view at a time
+   (rebuilt / original page / editable / mark scheme / figures), then the verdict. Source: site/review/index.html */
+:root {
+  --paper: #f3f4f2; --card: #ffffff; --ink: #1b2129; --muted: #5d6673; --rule: #dde1de;
+  --accent: #2a5d84; --accent-soft: #e4edf4; --ok: #2f7d4f; --ok-soft: #e3f1e8;
+  --bad: #b3362c; --bad-soft: #f8e5e2; --warn: #9a6514; --warn-soft: #f7eedb;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #121518; --card: #1a1f24; --ink: #e7eaed; --muted: #9aa4ae; --rule: #2c333a;
+  --accent: #7fb2db; --accent-soft: #1d2c38; --ok: #5cbf85; --ok-soft: #17301f;
+  --bad: #ef7b70; --bad-soft: #3a1e1b; --warn: #e0a64a; --warn-soft: #33281a; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --paper: #121518; --card: #1a1f24; --ink: #e7eaed; --muted: #9aa4ae; --rule: #2c333a;
+  --accent: #7fb2db; --accent-soft: #1d2c38; --ok: #5cbf85; --ok-soft: #17301f;
+  --bad: #ef7b70; --bad-soft: #3a1e1b; --warn: #e0a64a; --warn-soft: #33281a; color-scheme: dark }
+
+body { background: var(--paper); color: var(--ink); font: 15px/1.5 var(--sans);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); }
+.wrap { max-width: 860px; margin: 0 auto; padding-block: 0 48px; }
+header.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--paper);
+  padding-block: 14px 10px; border-bottom: 1px solid var(--rule); display: grid; gap: 10px; }
+.titlerow { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+h1 { font-size: 19px; font-weight: 600; margin: 0; text-wrap: balance; }
+h1 span { font-family: var(--mono); font-weight: 500; color: var(--accent); }
+.progress { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.progress b { color: var(--ink); font-weight: 600; }
+.meter { height: 4px; background: var(--rule); border-radius: 2px; overflow: hidden; }
+.meter i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .3s; }
+.filters { display: flex; gap: 6px; flex-wrap: wrap; }
+.filters button { font: 500 13px var(--sans); color: var(--muted); background: transparent; border: 1px solid var(--rule);
+  border-radius: 999px; padding: 5px 12px; cursor: pointer; font-variant-numeric: tabular-nums; }
+.filters button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.notice { margin-top: 14px; padding: 10px 12px; border-radius: 8px; background: var(--warn-soft); color: var(--warn); font-size: 13px; }
+.intro { color: var(--muted); font-size: 14px; margin: 14px 0 4px; max-width: 65ch; }
+
+.list { display: grid; gap: 18px; margin-top: 16px; }
+.card { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; min-width: 0; }
+.card.done-ok { border-left: 4px solid var(--ok); }
+.card.done-bad { border-left: 4px solid var(--bad); }
+.chead { padding: 12px 14px 8px; display: grid; gap: 6px; }
+.idrow { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.qid { font: 500 13px var(--mono); color: var(--muted); word-break: break-all; }
+.pill { font-size: 11.5px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; }
+.pill.flag { background: var(--warn-soft); color: var(--warn); }
+.pill.sample { background: var(--accent-soft); color: var(--accent); }
+.pill.ok { background: var(--ok-soft); color: var(--ok); }
+.pill.bad { background: var(--bad-soft); color: var(--bad); }
+.meta { font-size: 15px; font-weight: 600; }
+.meta .marks { font-family: var(--mono); font-weight: 500; color: var(--muted); }
+.reasons { margin: 0; padding: 8px 12px; background: var(--warn-soft); color: var(--warn); border-radius: 6px; font-size: 13.5px; list-style: none; display: grid; gap: 2px; }
+.tabs { display: flex; gap: 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); overflow-x: auto; }
+.tabs button { flex: 1 0 auto; font: 500 13px var(--sans); color: var(--muted); background: transparent; border: 0;
+  border-bottom: 2px solid transparent; padding: 9px 12px; cursor: pointer; white-space: nowrap; }
+.tabs button[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+.view { background: #ffffff; padding: 8px; color: #111; min-width: 0; overflow-x: auto; }
+.view img { display: block; width: 100%; height: auto; }
+.legend { font-size: 12.5px; color: var(--muted); padding: 8px 14px 0; }
+/* editable view: printed-paper look on white in both themes */
+.ed { font: 14px/1.55 Arial, "Helvetica Neue", Helvetica, sans-serif; padding: 6px 8px; }
+.ed p { margin: 0 0 8px; max-width: 68ch; }
+.ed ul { margin: 0 0 8px; padding-left: 22px; }
+.ed .lab { font-weight: 700; margin: 10px 0 4px; }
+.ed .fig img { max-width: 100%; width: auto; display: block; margin: 6px 0; }
+.ed .cap { font-weight: 700; font-size: 13px; }
+.ed table { border-collapse: collapse; margin: 6px 0 10px; }
+.ed td { border: 1px solid #555; padding: 3px 8px; }
+.ed .ans { color: #777; font-size: 13px; margin: 2px 0 8px; }
+.ed .mk { text-align: right; font-weight: 700; color: #b3362c; }
+.ed .opts { display: grid; gap: 4px; margin: 4px 0; }
+details { padding: 8px 14px 0; font-size: 13.5px; }
+summary { cursor: pointer; color: var(--accent); font-weight: 500; }
+table.parts { border-collapse: collapse; width: 100%; margin-top: 6px; font-variant-numeric: tabular-nums; }
+table.parts th, table.parts td { text-align: left; padding: 4px 6px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table.parts th { font-weight: 500; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+td.mono { font-family: var(--mono); font-size: 12.5px; }
+.tablewrap { overflow-x: auto; }
+.verdict { padding: 12px 14px 14px; display: grid; gap: 10px; }
+.btns { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn { font: 600 14px var(--sans); border-radius: 8px; padding: 9px 14px; cursor: pointer; border: 1px solid var(--rule); background: var(--card); color: var(--ink); }
+.btn.ok { border-color: var(--ok); color: var(--ok); }
+.btn.ok.on { background: var(--ok); color: var(--card); }
+.btn.bad { border-color: var(--bad); color: var(--bad); }
+.btn.bad.on { background: var(--bad); color: var(--card); }
+.btn.save { background: var(--accent); border-color: var(--accent); color: var(--card); }
+.btn:disabled { opacity: .45; cursor: not-allowed; }
+.btn:focus-visible, .filters button:focus-visible, .tabs button:focus-visible, .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.issues { display: flex; gap: 6px; flex-wrap: wrap; }
+.chip { font: 500 13px var(--sans); padding: 5px 10px; border-radius: 999px; border: 1px solid var(--rule); background: transparent; color: var(--ink); cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); }
+textarea { width: 100%; box-sizing: border-box; min-height: 64px; font: 14px/1.4 var(--sans); color: var(--ink); background: var(--paper);
+  border: 1px solid var(--rule); border-radius: 8px; padding: 8px 10px; resize: vertical; }
+.saved { font-size: 12.5px; color: var(--muted); }
+.empty { text-align: center; color: var(--muted); padding: 40px 0; }
+@media (prefers-reduced-motion: reduce) { .meter i { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header class="bar">
+    <div class="titlerow">
+      <h1 id="title"><span>0625</span> Physics question review</h1>
+      <div class="progress" id="progress">Loading…</div>
+    </div>
+    <div class="meter"><i id="meter"></i></div>
+    <div class="filters" id="filters" role="group" aria-label="Show">
+      <button id="f-todo" data-f="todo" aria-pressed="true">To review</button>
+      <button id="f-flagged" data-f="flagged" aria-pressed="false">Flagged</button>
+      <button id="f-sample" data-f="sample" aria-pressed="false">Random check</button>
+      <button id="f-wrong" data-f="wrong" aria-pressed="false">Marked wrong</button>
+      <button id="f-all" data-f="all" aria-pressed="false">All</button>
+    </div>
+  </header>
+  <div id="notice" class="notice" hidden></div>
+  <p class="intro" id="intro"></p>
+  <div class="list" id="list"><div class="empty">Loading questions…</div></div>
+</div>
+
+<script>
+const ISSUES = ['Split wrong', 'Part missing', 'Crop cuts content', 'Junk visible', 'Figure crop wrong',
+  'Options or answer wrong', 'Mark scheme wrong', 'Marks wrong', 'Answer space wrong', 'Editable text wrong'];
+const VIEWS = [['q', 'Rebuilt'], ['orig', 'Original page'], ['edit', 'Editable'], ['ms', 'Mark scheme'], ['figs', 'Figures']];
+let items = [], round = { collection: 'feedback', title: 'Question review' }, fb = {}, filter = 'todo', db = null, dbReady = false;
+const open = {};
+
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const el = (tag, attrs = {}, ...kids) => {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === 'class') e.className = v; else if (k === 'text') e.textContent = v;
+    else if (k.startsWith('on')) e.addEventListener(k.slice(2), v); else if (v !== null && v !== undefined) e.setAttribute(k, v);
+  }
+  for (const k of kids) if (k) e.append(k);
+  return e;
+};
+
+function stateOf(id) { return open[id] || (open[id] = { tab: 'q', wrongOpen: false, issues: new Set(fb[id]?.issues || []), note: fb[id]?.note || '' }); }
+
+function visible() {
+  return items.filter(it => {
+    const v = fb[it.id]?.verdict;
+    if (filter === 'todo') return !v;
+    if (filter === 'flagged') return it.group === 'flagged';
+    if (filter === 'sample') return it.group === 'sample';
+    if (filter === 'wrong') return v === 'wrong';
+    return true;
+  });
+}
+
+function renderProgress() {
+  const done = items.filter(i => fb[i.id]?.verdict).length;
+  const wrong = items.filter(i => fb[i.id]?.verdict === 'wrong').length;
+  $('#progress').innerHTML = '';
+  $('#progress').append(el('b', { text: `${done} / ${items.length}` }), ` reviewed · ${wrong} marked wrong`);
+  $('#meter').style.width = items.length ? `${(100 * done / items.length).toFixed(1)}%` : '0';
+  const counts = { todo: items.filter(i => !fb[i.id]?.verdict).length, flagged: items.filter(i => i.group === 'flagged').length,
+    sample: items.filter(i => i.group === 'sample').length, wrong, all: items.length };
+  for (const b of $('#filters').children) {
+    const label = b.textContent.replace(/\s\d+$/, '');
+    b.textContent = `${label} ${counts[b.dataset.f]}`;
+    b.setAttribute('aria-pressed', String(b.dataset.f === filter));
+  }
+}
+
+function editableHtml(it) {
+  const figs = it.figure_images || {};
+  let h = '';
+  for (const n of it.editable || []) {
+    let part = n.label ? `<div class="lab">(${esc(n.label)})</div>` : '';
+    for (const b of n.content || []) {
+      if (b.type === 'text') part += `<p>${b.html}</p>`;
+      else if (b.type === 'list') part += `<ul>${b.items.map(x => `<li>${x}</li>`).join('')}</ul>`;
+      else if (b.type === 'figure') part += `<div class="fig">${figs[b.id] ? `<img loading="lazy" alt="${esc(b.caption || 'figure')}" src="${esc(figs[b.id])}">` : ''}${b.caption ? `<div class="cap">${esc(b.caption)}</div>` : ''}</div>`;
+      else if (b.type === 'table') part += `<table>${b.rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join('')}</tr>`).join('')}</table>`;
+      else if (b.type === 'answer') {
+        if (b.kind === 'answer_line') part += `<div class="ans">${esc(b.prefix || '')} ………… ${esc(b.unit || '')}</div>`;
+        else if (b.kind === 'lines') part += `<div class="ans">${'…………………………………………<br>'.repeat(b.lines || 1)}</div>`;
+        else if (b.kind === 'space') part += `<div class="ans">[working space]</div>`;
+      }
+      else if (b.type === 'marks') part += `<div class="mk">[${b.value}]</div>`;
+      else if (b.type === 'options') part += b.in_figure ? `<p class="ans">Options ${b.options.map(o => esc(o.label)).join(', ')} are drawn in the diagram.</p>`
+        : `<div class="opts">${b.options.map(o => `<div><b>${esc(o.label)}</b> ${o.html}</div>`).join('')}</div>`;
+    }
+    h += `<div style="margin-left:${n.depth * 16}px">${part}</div>`;
+  }
+  return h || '<p class="ans">No editable text for this question.</p>';
+}
+
+function card(it) {
+  const st = stateOf(it.id), v = fb[it.id]?.verdict;
+  const c = el('article', { class: 'card' + (v === 'ok' ? ' done-ok' : v === 'wrong' ? ' done-bad' : ''), id: 'card-' + it.id });
+  const head = el('div', { class: 'chead' },
+    el('div', { class: 'idrow' },
+      el('span', { class: 'qid', text: it.id }),
+      el('span', { class: 'pill ' + (it.group === 'flagged' ? 'flag' : 'sample'), text: it.group === 'flagged' ? 'Flagged' : 'Random check' }),
+      v ? el('span', { class: 'pill ' + (v === 'ok' ? 'ok' : 'bad'), text: v === 'ok' ? 'Right' : 'Wrong' }) : null),
+    el('div', { class: 'meta' }, `${it.paper} · ${it.session} · Q${it.number} `,
+      el('span', { class: 'marks', text: `[${it.marks}] ${it.type === 'mcq' ? 'MCQ' : 'structured'}` })));
+  if (it.reasons.length) head.append(el('ul', { class: 'reasons' }, ...it.reasons.map(r => el('li', { text: r }))));
+  c.append(head);
+
+  const tabs = el('div', { class: 'tabs', role: 'tablist' });
+  const view = el('div', { class: 'view' });
+  const legend = el('div', { class: 'legend' });
+  const has = k => k === 'edit' ? !!(it.editable && it.editable.length) : !!it.images[k];
+  const show = key => {
+    st.tab = key;
+    for (const b of tabs.children) b.setAttribute('aria-selected', String(b.dataset.k === key));
+    view.innerHTML = '';
+    if (key === 'edit') {
+      const d = el('div', { class: 'ed' }); d.innerHTML = editableHtml(it); view.append(d);
+      if (window.renderMathInElement) renderMathInElement(d, { delimiters: [{ left: '\\(', right: '\\)', display: false }], throwOnError: false });
+    } else view.append(el('img', { src: it.images[key], alt: `${VIEWS.find(x => x[0] === key)[1]} for ${it.id}`, loading: 'lazy' }));
+    legend.textContent = key === 'orig' ? 'Boxes = detected pieces. Orange = cropped figures. Check nothing important falls outside a box.'
+      : key === 'q' ? 'Rebuilt from the exact pieces. Red lines only mark where one piece ends; they are not printed.'
+      : key === 'edit' ? 'The editable copy (text you can search and change). Diagrams stay pictures.'
+      : key === 'figs' ? it.figures.map(f => f.id.split('_').slice(3).join('_') + (f.caption ? ` (${f.caption})` : '')).join(' · ')
+      : 'Mark scheme rows linked to this question.';
+  };
+  for (const [k, name] of VIEWS) if (has(k))
+    tabs.append(el('button', { role: 'tab', 'data-k': k, id: `tab-${it.id}-${k}`, 'aria-selected': 'false', text: name, onclick: () => show(k) }));
+  c.append(tabs, legend, view);
+  show(has(st.tab) ? st.tab : 'q');
+
+  const det = el('details', {}, el('summary', { text: it.type === 'mcq' ? 'Answer key' : 'Parts found' }));
+  if (it.type === 'mcq') det.append(el('p', { text: `Answer key: ${it.answer || 'not found'}` }));
+  else {
+    const t = el('table', { class: 'parts' }, el('tr', {}, el('th', { text: 'Part' }), el('th', { text: 'Marks' }), el('th', { text: 'Answer space' }), el('th', { text: 'Mark scheme' })));
+    for (const p of it.parts) t.append(el('tr', {}, el('td', { class: 'mono', text: ' '.repeat(p.depth * 3) + p.label }), el('td', { text: p.marks || '' }),
+      el('td', { text: p.space === 'none' ? '' : String(p.space || '').replace('_', ' ') }), el('td', { text: p.ms ? 'linked' : '' })));
+    det.append(el('div', { class: 'tablewrap' }, t));
+  }
+  c.append(det);
+
+  const ver = el('div', { class: 'verdict' });
+  const okBtn = el('button', { class: 'btn ok' + (v === 'ok' ? ' on' : ''), id: `ok-${it.id}`, text: 'Looks right', onclick: () => save(it.id, 'ok') });
+  const badBtn = el('button', { class: 'btn bad' + (v === 'wrong' ? ' on' : ''), id: `bad-${it.id}`, text: 'Something’s wrong',
+    onclick: () => { st.wrongOpen = !st.wrongOpen; wrongBox.hidden = !st.wrongOpen; } });
+  if (!dbReady) { okBtn.disabled = true; badBtn.disabled = true; }
+  const chips = el('div', { class: 'issues' });
+  for (const name of ISSUES) {
+    const ch = el('button', { class: 'chip', 'aria-pressed': String(st.issues.has(name)), text: name, onclick: () => {
+      st.issues.has(name) ? st.issues.delete(name) : st.issues.add(name); ch.setAttribute('aria-pressed', String(st.issues.has(name))); } });
+    chips.append(ch);
+  }
+  const ta = el('textarea', { id: `note-${it.id}`, placeholder: 'What is wrong? e.g. "(b)(ii) missing", "figure cuts off label"' });
+  ta.value = st.note; ta.addEventListener('input', () => { st.note = ta.value; });
+  const wrongBox = el('div', { style: 'display:grid;gap:8px' }, chips, ta,
+    el('div', { class: 'btns' }, el('button', { class: 'btn save', id: `save-${it.id}`, text: 'Save as wrong', onclick: () => save(it.id, 'wrong') })));
+  wrongBox.hidden = !(st.wrongOpen || v === 'wrong');
+  ver.append(el('div', { class: 'btns' }, okBtn, badBtn), wrongBox);
+  if (fb[it.id]?.at) ver.append(el('div', { class: 'saved', text: `Saved ${new Date(fb[it.id].at).toLocaleString()}` }));
+  c.append(ver);
+  return c;
+}
+
+function render() {
+  renderProgress();
+  const list = $('#list'); list.innerHTML = '';
+  const vis = visible();
+  if (!vis.length) { list.append(el('div', { class: 'empty', text: filter === 'todo' ? 'Everything here is reviewed. Claude reads your answers at the next check.' : 'Nothing in this view.' })); return; }
+  for (const it of vis) list.append(card(it));
+}
+
+async function save(id, verdict) {
+  if (!db) return;
+  const st = stateOf(id);
+  const body = { verdict, issues: verdict === 'wrong' ? [...st.issues] : [], note: verdict === 'wrong' ? st.note.trim() : '', at: new Date().toISOString() };
+  if (verdict === 'wrong' && !body.issues.length && !body.note) { $(`#note-${CSS.escape(id)}`).focus(); return; }
+  try {
+    await db.collection(round.collection).doc(id).set(body);
+    fb[id] = body; st.wrongOpen = false;
+    const old = $(`#card-${CSS.escape(id)}`);
+    if (old) {
+      if (filter === 'todo') { const next = old.nextElementSibling; old.remove(); renderProgress(); if (next) next.scrollIntoView({ block: 'nearest' }); if (!$('#list').children.length) render(); }
+      else old.replaceWith(card(items.find(i => i.id === id))), renderProgress();
+    }
+  } catch (e) {
+    showNotice(e?.code === 'invalid_argument' ? 'You can view this page but not save feedback with your access level.' : 'Could not save just now. Try again in a moment.');
+  }
+}
+
+function showNotice(text) { const n = $('#notice'); n.textContent = text; n.hidden = false; }
+
+for (const b of $('#filters').children) b.addEventListener('click', () => { filter = b.dataset.f; render(); window.scrollTo({ top: 0 }); });
+
+(async () => {
+  try {
+    [round, items] = await Promise.all([fetch('round.json').then(r => r.json()), fetch('items.json').then(r => r.json())]);
+  } catch { $('#list').innerHTML = ''; showNotice('Could not load this review round.'); return; }
+  $('#title').innerHTML = `<span>0625</span> Physics question review · round ${esc(round.round)}`;
+  $('#intro').textContent = round.intro || '';
+  render();
+  db = window.claude ? await window.claude.use('db') : null;
+  if (!db) { showNotice('Feedback can only be saved when you are signed in to claude.ai. You can still look through the questions.'); return; }
+  dbReady = true;
+  db.collection(round.collection).onSnapshot(snap => {
+    fb = {}; for (const d of snap.docs) fb[d.id] = d.data();
+    render();
+  }, () => showNotice('Lost connection to saved feedback. Reload the page to reconnect.'));
+  render();
+})();
+</script>

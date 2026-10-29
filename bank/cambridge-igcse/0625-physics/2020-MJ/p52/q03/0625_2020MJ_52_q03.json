@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    97.0,
-    120.8,
-    505.6,
-    388.5
+    97.5,
+    120.0,
+    505.5,
+    387.0
    ],
    "id": "0625_2020MJ_52_q03_fig3-1",
    "part": "",
@@ -115,6 +115,11 @@
      "type": "text",
      "html": "Use the thermometer to measure room temperature θ<sub>S</sub>.",
      "text": "Use the thermometer to measure room temperature θS."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θS ="
     },
     {
      "type": "text",
@@ -274,6 +279,11 @@
        "text": "Calculate the rise in temperature θR of the sand using the equation θR = (θM – θS)."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "θR ="
+      },
+      {
        "type": "text",
        "html": "Calculate the fall in temperature θ<sub>F</sub> of the hot water using the equation θ<sub>F</sub> = (θ<sub>H</sub> – θ<sub>M</sub>).",
        "text": "Calculate the fall in temperature θF of the hot water using the equation θF = (θH – θM)."
@@ -348,7 +358,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the ratio <i>S</i> using the equation <i>S</i> = \\(\\frac{θ<sub>R</sub>}{θ}\\).",
+       "html": "Calculate the ratio <i>S</i> using the equation <i>S</i> = \\(\\frac{θ_{R}}{θ}\\).",
        "text": "Calculate the ratio S using the equation S = (θR)/(θ)."
       },
       {
@@ -579,13 +589,23 @@
      "text": "Calculate the rise in temperature θR of the cold water using the equation θR = (θM – θS). Use the value of room temperature θS recorded in (a) and the value of θM recorded in (e)."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θR ="
+    },
+    {
      "type": "text",
      "html": "Calculate the fall in temperature θ<sub>F</sub> of the hot water using the equation θ<sub>F</sub> = (θ<sub>H</sub> – θ<sub>M</sub>). Use the value of θ<sub>H </sub>from <b>(d)</b> and θ<sub>M</sub> from <b>(e)</b>.",
      "text": "Calculate the fall in temperature θF of the hot water using the equation θF = (θH – θM). Use the value of θH from (d) and θM from (e)."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θF ="
+    },
+    {
      "type": "text",
-     "html": "Calculate the ratio <i>W</i> using the equation <i>W</i> = \\(\\frac{θ<sub>R</sub>}{θ}\\).",
+     "html": "Calculate the ratio <i>W</i> using the equation <i>W</i> = \\(\\frac{θ_{R}}{θ}\\).",
      "text": "Calculate the ratio W using the equation W = (θR)/(θ)."
     },
     {
@@ -670,7 +690,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -745,7 +774,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -771,6 +809,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

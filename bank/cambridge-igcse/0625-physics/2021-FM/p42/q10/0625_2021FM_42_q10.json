@@ -77,7 +77,21 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "proton number"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "nucleon number"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "charge"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -251,5 +265,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

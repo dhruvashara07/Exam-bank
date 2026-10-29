@@ -181,7 +181,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "advantage"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "disadvantage"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -296,5 +305,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

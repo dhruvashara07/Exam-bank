@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    122.6,
-    317.2,
-    248.1
+    67.5,
+    122.5,
+    317.5,
+    248.0
    ],
    "id": "0625_2016ON_21_q14_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p21/q14/figures/0625_2016ON_21_q14_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p21/q14/figures/0625_2016ON_21_q14_figA",
     "url": null,
-    "kb": 26.2
+    "kb": 26.1
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row describes the escaping molecules and the change in temperature of the liquid?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "escaping molecules",
-     "temperature of the liquid"
-    ],
-    [
-     "<b>A</b>",
-     "less energetic",
-     "goes down"
-    ],
-    [
-     "<b>B</b>",
-     "less energetic",
-     "goes up"
-    ],
-    [
-     "<b>C</b>",
-     "more energetic",
-     "goes down"
-    ],
-    [
-     "<b>D</b>",
-     "more energetic",
-     "goes up"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_21_q14_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "less energetic goes down"
+    },
+    {
+     "label": "B",
+     "html": "less energetic goes up"
+    },
+    {
+     "label": "C",
+     "html": "more energetic goes down"
+    },
+    {
+     "label": "D",
+     "html": "more energetic goes up"
+    }
+   ]
   }
  ]
 }

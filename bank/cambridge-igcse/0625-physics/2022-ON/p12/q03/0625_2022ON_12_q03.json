@@ -32,9 +32,9 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
-    652.1,
-    237.2,
+    67.5,
+    652.0,
+    237.5,
     763.0
    ],
    "id": "0625_2022ON_12_q03_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p12/q03/figures/0625_2022ON_12_q03_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p12/q03/figures/0625_2022ON_12_q03_figA",
     "url": null,
-    "kb": 15.3
+    "kb": 15.1
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row shows the mass and the weight of an object near the Earth’s surface?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass/kg",
-     "weight/N"
-    ],
-    [
-     "<b>A</b>",
-     "0.2",
-     "0.2"
-    ],
-    [
-     "<b>B</b>",
-     "2",
-     "0.2"
-    ],
-    [
-     "<b>C</b>",
-     "2",
-     "20"
-    ],
-    [
-     "<b>D</b>",
-     "20",
-     "10"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_12_q03_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0.2 0.2"
+    },
+    {
+     "label": "B",
+     "html": "2 0.2"
+    },
+    {
+     "label": "C",
+     "html": "2 20"
+    },
+    {
+     "label": "D",
+     "html": "20 10"
+    }
+   ]
   }
  ]
 }

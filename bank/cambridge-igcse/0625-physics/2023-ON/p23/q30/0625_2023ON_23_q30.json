@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    218.2,
-    84.9,
-    376.2,
-    215.1
+    218.0,
+    84.5,
+    377.0,
+    216.0
    ],
    "id": "0625_2023ON_23_q30_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p23/q30/figures/0625_2023ON_23_q30_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p23/q30/figures/0625_2023ON_23_q30_figA",
     "url": null,
-    "kb": 5.2
+    "kb": 5.1
    }
   },
   {
    "page": 14,
    "bbox": [
-    67.7,
+    67.5,
     285.5,
-    350.9,
-    396.9
+    351.0,
+    397.0
    ],
    "id": "0625_2023ON_23_q30_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Which row shows what happens to the resistance of the LDR and what happens to the reading on the voltmeter?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "resistance of LDR",
-     "reading on voltmeter"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_23_q30_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

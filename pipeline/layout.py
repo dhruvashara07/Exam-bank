@@ -183,6 +183,64 @@ def dark_mask(page):
     return _RASTER[key]
 
 
+def tight_ink(page, r, exclude=()):
+    """Smallest rect (pt) around the printed ink inside r, ignoring the rects in `exclude` (text), or None.
+    A drawing object's own box can be much bigger than what it prints (clip paths, invisible frames,
+    curve control points), so figures are built from what is printed."""
+    import numpy as np
+    m = dark_mask(page)
+    H, W = m.shape
+    x0, y0 = max(int(r.x0 * ZOOM) - 1, 0), max(int(r.y0 * ZOOM) - 1, 0)
+    x1, y1 = min(int(r.x1 * ZOOM) + 2, W), min(int(r.y1 * ZOOM) + 2, H)
+    if x1 <= x0 or y1 <= y0:
+        return None
+    sub = m[y0:y1, x0:x1].copy()
+    for t in exclude:
+        tx0, ty0 = int(t.x0 * ZOOM) - x0, int(t.y0 * ZOOM) - y0
+        tx1, ty1 = int(t.x1 * ZOOM) + 1 - x0, int(t.y1 * ZOOM) + 1 - y0
+        if tx1 > 0 and ty1 > 0:
+            sub[max(ty0, 0):max(ty1, 0), max(tx0, 0):max(tx1, 0)] = False
+    ys, xs = np.nonzero(sub)
+    if len(ys) == 0:
+        return None
+    return fitz.Rect((x0 + xs.min()) / ZOOM, (y0 + ys.min()) / ZOOM, (x0 + xs.max() + 1) / ZOOM, (y0 + ys.max() + 1) / ZOOM)
+
+
+def grow_to_ink(page, r, limit, step=1.0, max_grow=80):
+    """Grow r while printed ink runs across one of its edges (a line, curve or label that continues
+    outside), staying inside `limit`. Fixes crops that end in the middle of a wire or an axis."""
+    m = dark_mask(page); H, W = m.shape; Z = ZOOM
+    r = fitz.Rect(r)
+    def crosses(edge):
+        y0, y1 = max(0, int(r.y0 * Z)), min(H, int(r.y1 * Z) + 1)
+        x0, x1 = max(0, int(r.x0 * Z)), min(W, int(r.x1 * Z) + 1)
+        if edge == 'l':
+            a, b = int((r.x0 - 1) * Z), int(r.x0 * Z)
+            return 0 <= a < W and (m[y0:y1, a] & m[y0:y1, b]).any()
+        if edge == 'r':
+            a, b = int((r.x1 + 1) * Z), int(r.x1 * Z)
+            return a < W and (m[y0:y1, a] & m[y0:y1, min(b, W - 1)]).any()
+        if edge == 't':
+            a, b = int((r.y0 - 1) * Z), int(r.y0 * Z)
+            return 0 <= a < H and (m[a, x0:x1] & m[b, x0:x1]).any()
+        a, b = int((r.y1 + 1) * Z), int(r.y1 * Z)
+        return a < H and (m[a, x0:x1] & m[min(b, H - 1), x0:x1]).any()
+    grown = 0
+    changed = True
+    while changed and grown < max_grow:
+        changed = False
+        if r.x0 - step >= limit.x0 and crosses('l'):
+            r.x0 -= step; changed = True
+        if r.x1 + step <= limit.x1 and crosses('r'):
+            r.x1 += step; changed = True
+        if r.y0 - step >= limit.y0 and crosses('t'):
+            r.y0 -= step; changed = True
+        if r.y1 + step <= limit.y1 and crosses('b'):
+            r.y1 += step; changed = True
+        grown += step
+    return r
+
+
 def row_ink(page):
     """Dark pixels per pixel row (index = y_pt * ZOOM)."""
     return dark_mask(page).sum(axis=1)

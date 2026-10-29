@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    265.6,
-    86.0,
+    265.5,
+    85.5,
     328.6,
-    267.7
+    268.0
    ],
    "id": "0625_2015MJ_14_q17_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p14/q17/figures/0625_2015MJ_14_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p14/q17/figures/0625_2015MJ_14_q17_figA",
     "url": null,
-    "kb": 6.5
+    "kb": 6.6
    }
   },
   {
    "page": 8,
    "bbox": [
-    67.6,
-    299.7,
-    254.4,
-    425.2
+    67.5,
+    299.5,
+    254.5,
+    425.5
    ],
    "id": "0625_2015MJ_14_q17_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p14/q17/figures/0625_2015MJ_14_q17_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p14/q17/figures/0625_2015MJ_14_q17_figB",
     "url": null,
-    "kb": 19.0
+    "kb": 18.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which temperatures are the upper and lower fixed points?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "upper fixed",
-     "lower fixed"
-    ],
-    [
-     "",
-     "point/°C",
-     "point/°C"
-    ],
-    [
-     "A",
-     "110",
-     "0"
-    ],
-    [
-     "B",
-     "110",
-     "–10"
-    ],
-    [
-     "C",
-     "100",
-     "0"
-    ],
-    [
-     "D",
-     "100",
-     "–10"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_14_q17_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "110 0"
+    },
+    {
+     "label": "B",
+     "html": "110 –10"
+    },
+    {
+     "label": "C",
+     "html": "100 0"
+    },
+    {
+     "label": "D",
+     "html": "100 –10"
+    }
+   ]
   }
  ]
 }

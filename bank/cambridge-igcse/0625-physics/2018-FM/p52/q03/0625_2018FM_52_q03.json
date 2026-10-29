@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    134.2,
-    152.7,
+    134.5,
+    157.0,
     472.5,
-    374.3
+    371.5
    ],
    "id": "0625_2018FM_52_q03_fig3-1",
    "part": "",
@@ -53,9 +53,9 @@
    "page": 9,
    "bbox": [
     69.0,
-    83.0,
-    526.3,
-    306.2
+    82.5,
+    526.5,
+    306.5
    ],
    "id": "0625_2018FM_52_q03bii_table3-1",
    "part": "(b)(ii)",
@@ -306,69 +306,9 @@
        "value": 2
       },
       {
-       "type": "text",
-       "html": "<b>Table 3.1</b>",
-       "text": "Table 3.1"
-      },
-      {
-       "type": "table",
-       "rows": [
-        [
-         "",
-         "beaker",
-         "beaker"
-        ],
-        [
-         "",
-         "<sup>3</sup>",
-         "<sup>3</sup>"
-        ],
-        [
-         "",
-         "with 200 cm of hot water",
-         "with 100 cm of hot water"
-        ],
-        [
-         "<i>t</i> /",
-         "θ /",
-         "θ /"
-        ],
-        [
-         "0",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2018FM_52_q03bii_table3-1",
+       "caption": "Table 3.1"
       }
      ]
     }
@@ -524,7 +464,7 @@
       },
       {
        "type": "text",
-       "html": "<i>x</i><sub>1</sub> = \\(\\frac{θ<sub>0</sub> – θ<sub>90</sub>}{<i>t</i>}\\),",
+       "html": "<i>x</i><sub>1</sub> = \\(\\frac{θ_{0} – θ_{90}}{t}\\),",
        "text": "x1 = (θ0 – θ90)/(t),"
       },
       {
@@ -607,7 +547,7 @@
       },
       {
        "type": "text",
-       "html": "<i>x</i><sub>2</sub> = \\(\\frac{θ<sub>90</sub> – θ<sub>180</sub>}{<i>t</i>}\\),",
+       "html": "<i>x</i><sub>2</sub> = \\(\\frac{θ_{90} – θ_{180}}{t}\\),",
        "text": "x2 = (θ90 – θ180)/(t),"
       },
       {
@@ -694,7 +634,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -795,6 +744,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

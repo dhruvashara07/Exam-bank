@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    188.3,
+    67.5,
+    188.0,
     265.5,
-    299.7
+    300.0
    ],
    "id": "0625_2022ON_12_q22_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p12/q22/figures/0625_2022ON_12_q22_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p12/q22/figures/0625_2022ON_12_q22_figA",
     "url": null,
-    "kb": 19.0
+    "kb": 18.8
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "Visible light has a frequency of approximately 5.0 × 10<sup>14</sup>Hz.",
-   "text": "Visible light has a frequency of approximately 5.0 × 1014Hz."
+   "html": "Visible light has a frequency of approximately 5.0 × 10<sup>14</sup> Hz.",
+   "text": "Visible light has a frequency of approximately 5.0 × 1014 Hz."
   },
   {
    "type": "text",
@@ -103,13 +104,13 @@
   },
   {
    "type": "text",
-   "html": "The frequency of M is 5.0 × 10<sup>6</sup>Hz.",
-   "text": "The frequency of M is 5.0 × 106Hz."
+   "html": "The frequency of M is 5.0 × 10<sup>6</sup> Hz.",
+   "text": "The frequency of M is 5.0 × 106 Hz."
   },
   {
    "type": "text",
-   "html": "The frequency of N is 5.0 × 10<sup>15</sup>Hz.",
-   "text": "The frequency of N is 5.0 × 1015Hz."
+   "html": "The frequency of N is 5.0 × 10<sup>15</sup> Hz.",
+   "text": "The frequency of N is 5.0 × 1015 Hz."
   },
   {
    "type": "text",
@@ -117,35 +118,30 @@
    "text": "Which types of radiation are M and N?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "M",
-     "N"
-    ],
-    [
-     "<b>A</b>",
-     "radio waves",
-     "infrared"
-    ],
-    [
-     "<b>B</b>",
-     "radio waves",
-     "ultraviolet"
-    ],
-    [
-     "<b>C</b>",
-     "ultraviolet",
-     "X-rays"
-    ],
-    [
-     "<b>D</b>",
-     "X-rays",
-     "infrared"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_12_q22_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "radio waves infrared"
+    },
+    {
+     "label": "B",
+     "html": "radio waves ultraviolet"
+    },
+    {
+     "label": "C",
+     "html": "ultraviolet X-rays"
+    },
+    {
+     "label": "D",
+     "html": "X-rays infrared"
+    }
+   ]
   }
  ]
 }

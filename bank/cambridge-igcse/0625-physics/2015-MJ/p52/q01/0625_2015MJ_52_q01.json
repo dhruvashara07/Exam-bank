@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    144.1,
-    115.7,
-    448.1,
-    338.9
+    144.5,
+    115.5,
+    448.0,
+    339.0
    ],
    "id": "0625_2015MJ_52_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2",
    "page": 2,
    "bbox": [
-    144.1,
-    115.7,
-    448.1,
-    338.9
+    144.5,
+    115.5,
+    448.0,
+    339.0
    ],
    "id": "0625_2015MJ_52_q01_fig1-2",
    "part": "",
@@ -450,6 +450,11 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "t ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "T ="
     },
     {
@@ -529,7 +534,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -635,6 +649,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

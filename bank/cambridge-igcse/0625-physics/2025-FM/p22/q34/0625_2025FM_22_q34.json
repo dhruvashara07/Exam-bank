@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
+    67.5,
     510.5,
-    288.7,
-    621.8
+    289.0,
+    622.0
    ],
    "id": "0625_2025FM_22_q34_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row gives the atomic number and mass number of this isotope of protactinium?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "atomic number",
-     "mass number"
-    ],
-    [
-     "<b>A</b>",
-     "89",
-     "234"
-    ],
-    [
-     "<b>B</b>",
-     "90",
-     "235"
-    ],
-    [
-     "<b>C</b>",
-     "91",
-     "234"
-    ],
-    [
-     "<b>D</b>",
-     "95",
-     "235"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025FM_22_q34_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "89 234"
+    },
+    {
+     "label": "B",
+     "html": "90 235"
+    },
+    {
+     "label": "C",
+     "html": "91 234"
+    },
+    {
+     "label": "D",
+     "html": "95 235"
+    }
+   ]
   }
  ]
 }

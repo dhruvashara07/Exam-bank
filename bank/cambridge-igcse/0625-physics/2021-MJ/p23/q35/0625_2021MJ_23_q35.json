@@ -51,10 +51,10 @@
   {
    "page": 15,
    "bbox": [
-    67.7,
-    547.7,
-    303.8,
-    673.2
+    67.5,
+    547.5,
+    304.0,
+    673.5
    ],
    "id": "0625_2021MJ_23_q35_figB",
    "caption": null,
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A 12V, 36W lamp shines at normal brightness when connected to a mains transformer.",
-   "text": "A 12V, 36W lamp shines at normal brightness when connected to a mains transformer."
+   "html": "A 12 V, 36 W lamp shines at normal brightness when connected to a mains transformer.",
+   "text": "A 12 V, 36 W lamp shines at normal brightness when connected to a mains transformer."
   },
   {
    "type": "text",
@@ -131,40 +132,30 @@
    "text": "Which row shows the number of turns in the secondary coil and the current in the mains wires?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "number of turns",
-     "current in the"
-    ],
-    [
-     "",
-     "in secondary coil",
-     "mains wire/A"
-    ],
-    [
-     "<b>A</b>",
-     "60",
-     "0.15"
-    ],
-    [
-     "<b>B</b>",
-     "60",
-     "3.0"
-    ],
-    [
-     "<b>C</b>",
-     "180",
-     "0.15"
-    ],
-    [
-     "<b>D</b>",
-     "180",
-     "3.0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_23_q35_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "60 0.15"
+    },
+    {
+     "label": "B",
+     "html": "60 3.0"
+    },
+    {
+     "label": "C",
+     "html": "180 0.15"
+    },
+    {
+     "label": "D",
+     "html": "180 3.0"
+    }
+   ]
   }
  ]
 }

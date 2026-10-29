@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.9,
-    72.3,
+    170.2,
+    98.0,
     425.1,
-    231.6
+    232.0
    ],
    "id": "0625_2018FM_12_q20_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-FM/p12/q20/figures/0625_2018FM_12_q20_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-FM/p12/q20/figures/0625_2018FM_12_q20_figA",
     "url": null,
-    "kb": 16.5
+    "kb": 9.0
    }
   },
   {
    "page": 10,
    "bbox": [
-    67.7,
-    264.2,
-    283.1,
-    375.1
+    67.5,
+    264.0,
+    283.5,
+    375.5
    ],
    "id": "0625_2018FM_12_q20_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-FM/p12/q20/figures/0625_2018FM_12_q20_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-FM/p12/q20/figures/0625_2018FM_12_q20_figB",
     "url": null,
-    "kb": 22.5
+    "kb": 22.3
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A hot metal plate is placed near to a cold metal plate. Infra-red radiation transfers thermal energy",
-   "text": "A hot metal plate is placed near to a cold metal plate. Infra-red radiation transfers thermal energy"
+   "html": "A hot metal plate is placed near to a cold metal plate. Infra-red radiation transfers thermal energy between the two plates.",
+   "text": "A hot metal plate is placed near to a cold metal plate. Infra-red radiation transfers thermal energy between the two plates."
   },
   {
    "type": "figure",
@@ -126,35 +127,30 @@
    "text": "Which choice of colour causes the temperature of the cold plate to increase most slowly?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "hot plate",
-     "cold plate"
-    ],
-    [
-     "<b>A</b>",
-     "matt black",
-     "matt black"
-    ],
-    [
-     "<b>B</b>",
-     "matt black",
-     "shiny white"
-    ],
-    [
-     "<b>C</b>",
-     "shiny white",
-     "matt black"
-    ],
-    [
-     "<b>D</b>",
-     "shiny white",
-     "shiny white"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018FM_12_q20_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "matt black matt black"
+    },
+    {
+     "label": "B",
+     "html": "matt black shiny white"
+    },
+    {
+     "label": "C",
+     "html": "shiny white matt black"
+    },
+    {
+     "label": "D",
+     "html": "shiny white shiny white"
+    }
+   ]
   }
  ]
 }

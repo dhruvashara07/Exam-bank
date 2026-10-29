@@ -10,9 +10,9 @@
    "page": 6,
    "bbox": [
     250.0,
-    243.6,
-    344.5,
-    418.8
+    243.5,
+    345.0,
+    419.0
    ],
    "id": "0625_2016ON_62_q03b_fig3-1",
    "part": "(b)",
@@ -105,7 +105,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -251,10 +260,16 @@
        "text": "is proportional to"
       },
       {
+       "type": "list",
+       "items": [
+        "An increase in length <i>l</i> …… the period <i>T</i>.",
+        "An increase in mass <i>m</i> …… the period <i>T</i>.",
+        "An increase in amplitude θ …… the period <i>T</i>."
+       ]
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "• An increase in amplitude θ",
-       "unit": "the period T."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -488,5 +503,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

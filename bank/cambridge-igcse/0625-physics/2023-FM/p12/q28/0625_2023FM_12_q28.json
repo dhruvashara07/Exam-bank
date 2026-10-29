@@ -32,9 +32,9 @@
   {
    "page": 12,
    "bbox": [
-    69.7,
+    69.0,
     86.9,
-    524.8,
+    525.5,
     222.1
    ],
    "id": "0625_2023FM_12_q28_figA",
@@ -45,15 +45,15 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-FM/p12/q28/figures/0625_2023FM_12_q28_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-FM/p12/q28/figures/0625_2023FM_12_q28_figA",
     "url": null,
-    "kb": 16.0
+    "kb": 15.8
    }
   },
   {
    "page": 12,
    "bbox": [
-    67.7,
-    255.6,
-    245.3,
+    67.5,
+    255.5,
+    245.5,
     367.0
    ],
    "id": "0625_2023FM_12_q28_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-FM/p12/q28/figures/0625_2023FM_12_q28_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-FM/p12/q28/figures/0625_2023FM_12_q28_figB",
     "url": null,
-    "kb": 10.8
+    "kb": 10.6
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,45 +127,35 @@
    "text": "In which lamps is there a current?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "X",
-     "Y",
-     "Z"
-    ],
-    [
-     "<b>A</b>",
-     "\u0016",
-     "\u001a",
-     "\u0016"
-    ],
-    [
-     "<b>B</b>",
-     "\u0016",
-     "\u001a",
-     "\u001a"
-    ],
-    [
-     "<b>C</b>",
-     "\u001a",
-     "\u0016",
-     "\u0016"
-    ],
-    [
-     "<b>D</b>",
-     "\u001a",
-     "\u0016",
-     "\u001a"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023FM_12_q28_figB",
+   "caption": null
   },
   {
    "type": "text",
    "html": "key \u0016= current in lamp \u001a= no current in lamp",
    "text": "key \u0016= current in lamp \u001a= no current in lamp"
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "\u0016 \u001a \u0016 key"
+    },
+    {
+     "label": "B",
+     "html": "\u0016 \u001a \u001a \u0016= current in lamp"
+    },
+    {
+     "label": "C",
+     "html": "\u001a \u0016 \u0016 \u001a= no current in lamp"
+    },
+    {
+     "label": "D",
+     "html": "\u001a \u0016 \u001a"
+    }
+   ]
   }
  ]
 }

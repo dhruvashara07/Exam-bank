@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    160.6,
-    124.5,
-    434.7,
-    269.3
+    161.0,
+    125.5,
+    435.0,
+    269.5
    ],
    "id": "0625_2024ON_52_q01_fig1-1",
    "part": "",
@@ -125,6 +125,18 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "l =",
+     "unit": "cm"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "w =",
+     "unit": "cm"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "h =",
      "unit": "cm"
     },
@@ -204,8 +216,8 @@
       },
       {
        "type": "text",
-       "html": "nearest 0.1g.",
-       "text": "nearest 0.1g."
+       "html": "nearest 0.1 g.",
+       "text": "nearest 0.1 g."
       },
       {
        "type": "answer",
@@ -279,18 +291,23 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the density ρof the glass. Use your results from (a) and (b)(i) and the equation shown.",
-       "text": "Calculate the density ρof the glass. Use your results from (a) and (b)(i) and the equation shown."
+       "html": "Calculate the density ρ of the glass. Use your results from (a) and (b)(i) and the equation shown.",
+       "text": "Calculate the density ρ of the glass. Use your results from (a) and (b)(i) and the equation shown."
       },
       {
        "type": "text",
-       "html": "ρ= \\(\\frac{M}{lwh}\\)",
-       "text": "ρ= (M)/(lwh)"
+       "html": "ρ = \\(\\frac{M}{\\text{lwh}}\\)",
+       "text": "ρ = (M)/(lwh)"
       },
       {
        "type": "text",
        "html": "Give the unit for your answer.",
        "text": "Give the unit for your answer."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "ρ ="
       },
       {
        "type": "answer",
@@ -499,6 +516,12 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "m =",
+     "unit": "g"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "t =",
      "unit": "cm"
     }
@@ -586,6 +609,10 @@
      "type": "answer",
      "kind": "answer_line",
      "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -684,6 +711,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

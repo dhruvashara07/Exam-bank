@@ -10,9 +10,9 @@
    "page": 2,
    "bbox": [
     187.0,
-    112.5,
-    417.0,
-    265.6
+    115.0,
+    417.5,
+    264.0
    ],
    "id": "0625_2021FM_42_q01a_fig1-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 1.2 (not to scale)",
    "page": 3,
    "bbox": [
-    162.9,
-    114.3,
-    440.6,
-    356.5
+    164.0,
+    113.5,
+    441.5,
+    355.0
    ],
    "id": "0625_2021FM_42_q01c_fig1-2",
    "part": "(c)",
@@ -207,6 +207,11 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "force ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "direction of force"
     },
     {
@@ -317,5 +322,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

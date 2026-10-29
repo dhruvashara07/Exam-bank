@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    198.7,
+    198.0,
     99.3,
-    396.7,
-    159.9
+    397.5,
+    160.5
    ],
    "id": "0625_2016MJ_22_q19_figA",
    "caption": null,
@@ -51,9 +51,9 @@
   {
    "page": 8,
    "bbox": [
-    69.3,
+    69.0,
     205.0,
-    300.9,
+    301.0,
     330.5
    ],
    "id": "0625_2016MJ_22_q19_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p22/q19/figures/0625_2016MJ_22_q19_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p22/q19/figures/0625_2016MJ_22_q19_figB",
     "url": null,
-    "kb": 24.0
+    "kb": 23.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which part of the beam heats up more quickly during the day, and which part cools down more quickly at night?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "part heating up",
-     "part cooling down"
-    ],
-    [
-     "",
-     "more quickly",
-     "more quickly"
-    ],
-    [
-     "A",
-     "black",
-     "black"
-    ],
-    [
-     "B",
-     "black",
-     "white"
-    ],
-    [
-     "C",
-     "white",
-     "black"
-    ],
-    [
-     "D",
-     "white",
-     "white"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_22_q19_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "black black"
+    },
+    {
+     "label": "B",
+     "html": "black white"
+    },
+    {
+     "label": "C",
+     "html": "white black"
+    },
+    {
+     "label": "D",
+     "html": "white white"
+    }
+   ]
   }
  ]
 }

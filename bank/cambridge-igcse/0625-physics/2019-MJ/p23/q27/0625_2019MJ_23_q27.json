@@ -33,9 +33,9 @@
    "page": 11,
    "bbox": [
     141.2,
-    110.1,
+    110.0,
     453.8,
-    259.3
+    259.5
    ],
    "id": "0625_2019MJ_23_q27_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
+    67.5,
     329.5,
     335.0,
-    440.9
+    441.0
    ],
    "id": "0625_2019MJ_23_q27_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-MJ/p23/q27/figures/0625_2019MJ_23_q27_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-MJ/p23/q27/figures/0625_2019MJ_23_q27_figB",
     "url": null,
-    "kb": 23.4
+    "kb": 23.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,35 +137,30 @@
    "text": "Which row describes the charge on the strips after rubbing, and the force between the strips after rubbing?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "charge on strips",
-     "force between strips"
-    ],
-    [
-     "<b>A</b>",
-     "opposite",
-     "attraction"
-    ],
-    [
-     "<b>B</b>",
-     "opposite",
-     "repulsion"
-    ],
-    [
-     "<b>C</b>",
-     "the same",
-     "attraction"
-    ],
-    [
-     "<b>D</b>",
-     "the same",
-     "repulsion"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019MJ_23_q27_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "opposite attraction"
+    },
+    {
+     "label": "B",
+     "html": "opposite repulsion"
+    },
+    {
+     "label": "C",
+     "html": "the same attraction"
+    },
+    {
+     "label": "D",
+     "html": "the same repulsion"
+    }
+   ]
   }
  ]
 }

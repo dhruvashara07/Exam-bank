@@ -32,10 +32,10 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
-    562.3,
+    67.5,
+    562.0,
     372.0,
-    687.2
+    687.5
    ],
    "id": "0625_2024ON_23_q03_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p23/q03/figures/0625_2024ON_23_q03_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p23/q03/figures/0625_2024ON_23_q03_figA",
     "url": null,
-    "kb": 31.1
+    "kb": 30.9
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "An object of mass 1.0kg is at rest on the Earth. An identical object is at rest on a planet with a gravitational field strength of twice that on the Earth.",
-   "text": "An object of mass 1.0kg is at rest on the Earth. An identical object is at rest on a planet with a gravitational field strength of twice that on the Earth."
+   "html": "An object of mass 1.0 kg is at rest on the Earth. An identical object is at rest on a planet with a gravitational field strength of twice that on the Earth.",
+   "text": "An object of mass 1.0 kg is at rest on the Earth. An identical object is at rest on a planet with a gravitational field strength of twice that on the Earth."
   },
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row correctly compares the object on the planet to the object on the Earth?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "its weight",
-     "its acceleration when the same horizontal resultant force is applied"
-    ],
-    [
-     "<b>A</b>",
-     "double",
-     "equal to that on the Earth"
-    ],
-    [
-     "<b>B</b>",
-     "double",
-     "half that on the Earth"
-    ],
-    [
-     "<b>C</b>",
-     "half",
-     "equal to that on the Earth"
-    ],
-    [
-     "<b>D</b>",
-     "half",
-     "half that on the Earth"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_23_q03_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "double equal to that on the Earth"
+    },
+    {
+     "label": "B",
+     "html": "double half that on the Earth"
+    },
+    {
+     "label": "C",
+     "html": "half equal to that on the Earth"
+    },
+    {
+     "label": "D",
+     "html": "half half that on the Earth"
+    }
+   ]
   }
  ]
 }

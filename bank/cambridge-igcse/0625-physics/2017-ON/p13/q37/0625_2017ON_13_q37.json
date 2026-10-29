@@ -32,10 +32,10 @@
   {
    "page": 18,
    "bbox": [
-    67.7,
-    302.2,
+    67.5,
+    302.0,
     271.0,
-    427.7
+    428.0
    ],
    "id": "0625_2017ON_13_q37_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row states the charge on an electron and states whether electrons are located inside the nucleus of an atom?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "charge",
-     "located inside the nucleus"
-    ],
-    [
-     "<b>A</b>",
-     "negative",
-     "no"
-    ],
-    [
-     "<b>B</b>",
-     "negative",
-     "yes"
-    ],
-    [
-     "<b>C</b>",
-     "positive",
-     "no"
-    ],
-    [
-     "<b>D</b>",
-     "positive",
-     "yes"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017ON_13_q37_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "negative no"
+    },
+    {
+     "label": "B",
+     "html": "negative yes"
+    },
+    {
+     "label": "C",
+     "html": "positive no"
+    },
+    {
+     "label": "D",
+     "html": "positive yes"
+    }
+   ]
   }
  ]
 }

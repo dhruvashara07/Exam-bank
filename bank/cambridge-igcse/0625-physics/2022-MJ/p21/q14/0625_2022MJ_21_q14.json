@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    147.9,
-    333.2,
-    273.4
+    67.5,
+    147.5,
+    333.5,
+    273.5
    ],
    "id": "0625_2022MJ_21_q14_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,40 +108,30 @@
    "text": "Which row correctly describes what happens to the air in the container?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "average distance",
-     "average speed"
-    ],
-    [
-     "",
-     "between air particles",
-     "of air particles"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>C</b>",
-     "no change",
-     "increases"
-    ],
-    [
-     "<b>D</b>",
-     "no change",
-     "decreases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_21_q14_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases increases"
+    },
+    {
+     "label": "B",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "C",
+     "html": "no change increases"
+    },
+    {
+     "label": "D",
+     "html": "no change decreases"
+    }
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    90.6,
-    111.3,
-    504.7,
-    349.7
+    90.5,
+    110.5,
+    505.0,
+    348.0
    ],
    "id": "0625_2022ON_52_q01_fig1-1",
    "part": "",
@@ -190,7 +190,9 @@
      "type": "list",
      "items": [
       "Pour 100 cm<sup>3</sup> of cold water into beaker A.",
+      "Record the temperature θ<sub>C</sub> of the cold water. θ<sub>C</sub> = ……°C",
       "Pour 100 cm<sup>3</sup> of the hot water provided into beaker B.",
+      "Record the temperature θ<sub>H</sub> of the hot water. θ<sub>H</sub> = ……°C",
       "Immediately pour the cold water into the hot water in beaker B. Stir the mixture and record the highest temperature θ<sub>M</sub> of the mixture."
      ]
     },
@@ -507,7 +509,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -581,7 +592,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -607,6 +627,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

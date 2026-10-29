@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    170.1,
-    127.4,
-    425.1,
-    453.3
+    170.0,
+    128.5,
+    424.0,
+    453.5
    ],
    "id": "0625_2015MJ_62_q02a_fig2-1",
    "part": "(a)",
@@ -313,6 +313,11 @@
      "text": "°C"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θ1 ="
+    },
+    {
      "type": "text",
      "html": "Calculate the decrease in temperature θ<sub>A</sub> using the equation θ<sub>A</sub> = (θ<sub>H</sub> – θ<sub>1</sub>).",
      "text": "Calculate the decrease in temperature θA using the equation θA = (θH – θ1)."
@@ -396,6 +401,11 @@
      "text": "°C"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θ2 ="
+    },
+    {
      "type": "text",
      "html": "Calculate the decrease in temperature θ<sub>B</sub> using the equation θ<sub>B</sub> = (θ<sub>1</sub> – θ<sub>2</sub>).",
      "text": "Calculate the decrease in temperature θB using the equation θB = (θ1 – θ2)."
@@ -474,7 +484,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -575,6 +594,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

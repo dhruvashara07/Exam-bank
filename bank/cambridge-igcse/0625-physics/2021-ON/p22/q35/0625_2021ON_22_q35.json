@@ -32,9 +32,9 @@
   {
    "page": 15,
    "bbox": [
-    70.7,
+    70.5,
     423.5,
-    524.2,
+    524.5,
     532.7
    ],
    "id": "0625_2021ON_22_q35_figA",
@@ -51,10 +51,10 @@
   {
    "page": 15,
    "bbox": [
-    67.7,
-    565.8,
-    400.1,
-    691.3
+    67.5,
+    565.5,
+    400.5,
+    691.5
    ],
    "id": "0625_2021ON_22_q35_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p22/q35/figures/0625_2021ON_22_q35_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p22/q35/figures/0625_2021ON_22_q35_figB",
     "url": null,
-    "kb": 28.5
+    "kb": 28.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "turning effect of the forces",
-     "turning effect of the forces"
-    ],
-    [
-     "",
-     "in positions 1 and 3",
-     "in positions 2 and 4"
-    ],
-    [
-     "<b>A</b>",
-     "different",
-     "different"
-    ],
-    [
-     "<b>B</b>",
-     "different",
-     "same"
-    ],
-    [
-     "<b>C</b>",
-     "same",
-     "different"
-    ],
-    [
-     "<b>D</b>",
-     "same",
-     "same"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_22_q35_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "different different"
+    },
+    {
+     "label": "B",
+     "html": "different same"
+    },
+    {
+     "label": "C",
+     "html": "same different"
+    },
+    {
+     "label": "D",
+     "html": "same same"
+    }
+   ]
   }
  ]
 }

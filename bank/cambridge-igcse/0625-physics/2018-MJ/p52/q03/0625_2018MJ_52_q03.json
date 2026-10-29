@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    74.0,
-    111.3,
-    523.2,
-    235.6
+    74.5,
+    115.5,
+    522.5,
+    233.0
    ],
    "id": "0625_2018MJ_52_q03_fig3-1",
    "part": "",
@@ -216,7 +216,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the focal length <i>f</i><sub>1</sub> of the lens using the equation <i>f</i><sub>1 </sub>= \\(\\frac{<i>u</i><sub>1</sub><i>v</i><sub>1</sub>}{(<i>u</i><sub>1</sub> + <i>v</i><sub>1</sub>)}\\).",
+       "html": "Calculate the focal length <i>f</i><sub>1</sub> of the lens using the equation <i>f</i><sub>1 </sub>= \\(\\frac{u_{1}v_{1}}{(u_{1} + v_{1})}\\).",
        "text": "Calculate the focal length f1 of the lens using the equation f1 = (u1v1)/((u1 + v1))."
       },
       {
@@ -387,7 +387,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the focal length <i>f</i><sub>2</sub> of the lens using the equation <i>f</i><sub>2</sub> = \\(\\frac{<i>u</i><sub>2</sub><i>v</i><sub>2</sub>}{(<i>u</i><sub>2</sub> + <i>v</i><sub>2</sub>)}\\).",
+       "html": "Calculate the focal length <i>f</i><sub>2</sub> of the lens using the equation <i>f</i><sub>2</sub> = \\(\\frac{u_{2}v_{2}}{(u_{2} + v_{2})}\\).",
        "text": "Calculate the focal length f2 of the lens using the equation f2 = (u2v2)/((u2 + v2))."
       },
       {
@@ -617,7 +617,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -644,6 +653,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

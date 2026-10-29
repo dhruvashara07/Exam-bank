@@ -98,9 +98,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "is the most penetrating ……",
+       "text": "is the most penetrating ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(i) is the most penetrating"
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -171,6 +175,10 @@
        "prefix": "(ii) is the most ionising"
       },
       {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
        "type": "marks",
        "value": 1
       }
@@ -234,9 +242,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "has a positive charge. ……",
+       "text": "has a positive charge. ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(iii) has a positive charge."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -342,9 +354,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "Determine the number of protons in one nucleus of iodine-131. ……",
+       "text": "Determine the number of protons in one nucleus of iodine-131. ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(i) Determine the number of protons in one nucleus of iodine-131."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -410,9 +426,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "Determine the number of neutrons in one nucleus of iodine-131. ……",
+       "text": "Determine the number of neutrons in one nucleus of iodine-131. ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(ii) Determine the number of neutrons in one nucleus of iodine-131."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -527,5 +547,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

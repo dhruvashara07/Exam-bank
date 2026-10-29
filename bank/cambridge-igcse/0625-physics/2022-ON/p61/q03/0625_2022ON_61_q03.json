@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 6,
    "bbox": [
-    89.6,
-    111.3,
-    505.7,
-    344.4
+    89.5,
+    110.5,
+    505.0,
+    342.5
    ],
    "id": "0625_2022ON_61_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 6,
    "bbox": [
-    107.6,
-    388.9,
-    487.7,
-    452.0
+    107.0,
+    388.5,
+    488.5,
+    450.5
    ],
    "id": "0625_2022ON_61_q03a_fig3-2",
    "part": "(a)",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p61/q03/figures/0625_2022ON_61_q03a_fig3-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p61/q03/figures/0625_2022ON_61_q03a_fig3-2",
     "url": null,
-    "kb": 38.0
+    "kb": 37.9
    }
   },
   {
    "caption": "Table 3.1",
    "page": 6,
    "bbox": [
-    210.9,
-    586.3,
-    384.3,
-    783.2
+    211.0,
+    590.0,
+    384.5,
+    783.5
    ],
    "id": "0625_2022ON_61_q03b_table3-1",
    "part": "(b)",
@@ -90,10 +90,10 @@
    "caption": "Table 3.2",
    "page": 7,
    "bbox": [
-    210.9,
-    291.0,
-    384.3,
-    425.6
+    211.0,
+    294.5,
+    384.5,
+    426.0
    ],
    "id": "0625_2022ON_61_q03d_table3-2",
    "part": "(d)",
@@ -194,15 +194,15 @@
      "caption": "Fig. 3.2"
     },
     {
-     "type": "text",
-     "html": "R",
-     "text": "R"
-    },
-    {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "θ =",
      "unit": "°C"
+    },
+    {
+     "type": "text",
+     "html": "R",
+     "text": "R"
     },
     {
      "type": "marks",
@@ -273,41 +273,9 @@
      "text": "The student uses a measuring cylinder to pour 200 cm3 of hot water into the beaker. He records in Table 3.1 the temperature θ of the hot water at time t = 0. He measures, and records in Table 3.1, the water temperature every 30 s. Complete the time t column in Table 3.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>t</i> / s",
-       "θ / °C"
-      ],
-      [
-       "0",
-       "88"
-      ],
-      [
-       "",
-       "82"
-      ],
-      [
-       "",
-       "78"
-      ],
-      [
-       "",
-       "74"
-      ],
-      [
-       "",
-       "71"
-      ],
-      [
-       "",
-       "69"
-      ],
-      [
-       "",
-       "67"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2022ON_61_q03b_table3-1",
+     "caption": "Table 3.1"
     },
     {
      "type": "marks",
@@ -379,9 +347,14 @@
      "text": "Calculate the decrease in temperature Δθ1 between t = 0 and t = 180 s."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Δθ1 ="
+    },
+    {
      "type": "text",
-     "html": "Calculate the average rate of cooling <i>C</i><sub>1</sub> of the water using the equation <i>C</i><sub>1</sub> = \\(\\frac{Δθ<sub>1</sub>}{Δ<i>t</i>}\\), where Δ<i>t</i> = 180 s. Include the unit.",
-     "text": "Calculate the average rate of cooling C1 of the water using the equation C1 = (Δθ1)/(Δt), where Δt = 180 s. Include the unit."
+     "html": "Calculate the average rate of cooling <i>C</i><sub>1</sub> of the water using the equation <i>C</i><sub>1</sub> = \\(\\frac{Δθ_{1}}{Δt}\\) , where Δ<i>t</i> = 180 s. Include the unit.",
+     "text": "Calculate the average rate of cooling C1 of the water using the equation C1 = (Δθ1)/(Δt) , where Δt = 180 s. Include the unit."
     },
     {
      "type": "answer",
@@ -457,29 +430,9 @@
      "text": "The student empties the beaker. He pours warm water into the same beaker. He records in Table 3.2 the temperature θ of the warm water at time t = 0. He measures, and records in Table 3.2, the water temperature every 30 s."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>t</i> / s",
-       "θ / °C"
-      ],
-      [
-       "0",
-       "74"
-      ],
-      [
-       "30",
-       "71"
-      ],
-      [
-       "60",
-       "70"
-      ],
-      [
-       "90",
-       "68"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2022ON_61_q03d_table3-2",
+     "caption": "Table 3.2"
     },
     {
      "type": "text",
@@ -487,9 +440,14 @@
      "text": "Using Table 3.2, calculate the decrease in temperature Δθ2 between t = 0 and t = 90 s."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Δθ2 ="
+    },
+    {
      "type": "text",
-     "html": "Calculate the average rate of cooling <i>C</i><sub>2</sub> of the water using the equation <i>C</i><sub>2</sub> = \\(\\frac{Δθ<sub>2</sub>}{Δ<i>t</i>}\\), where Δ<i>t</i> = 90 s.",
-     "text": "Calculate the average rate of cooling C2 of the water using the equation C2 = (Δθ2)/(Δt), where Δt = 90 s."
+     "html": "Calculate the average rate of cooling <i>C</i><sub>2</sub> of the water using the equation <i>C</i><sub>2</sub> = \\(\\frac{Δθ_{2}}{Δt}\\) , where Δ<i>t</i> = 90 s.",
+     "text": "Calculate the average rate of cooling C2 of the water using the equation C2 = (Δθ2)/(Δt) , where Δt = 90 s."
     },
     {
      "type": "answer",
@@ -568,7 +526,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "conclusion"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -643,7 +610,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1. ."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2. ."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -716,7 +692,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -742,6 +727,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

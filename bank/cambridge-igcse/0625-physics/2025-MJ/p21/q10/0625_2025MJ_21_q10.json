@@ -32,9 +32,9 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    438.1,
-    413.4,
+    67.5,
+    438.0,
+    413.5,
     549.5
    ],
    "id": "0625_2025MJ_21_q10_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p21/q10/figures/0625_2025MJ_21_q10_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p21/q10/figures/0625_2025MJ_21_q10_figA",
     "url": null,
-    "kb": 34.9
+    "kb": 34.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row describes the separation and the motion of the particles of a hot gas compared to those of a cool liquid?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "separation of gas particles",
-     "motion of gas particles"
-    ],
-    [
-     "<b>A</b>",
-     "greater than a cool liquid",
-     "faster than a cool liquid"
-    ],
-    [
-     "<b>B</b>",
-     "greater than a cool liquid",
-     "slower than a cool liquid"
-    ],
-    [
-     "<b>C</b>",
-     "less than a cool liquid",
-     "faster than a cool liquid"
-    ],
-    [
-     "<b>D</b>",
-     "less than a cool liquid",
-     "slower than a cool liquid"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_21_q10_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "greater than a cool liquid faster than a cool liquid"
+    },
+    {
+     "label": "B",
+     "html": "greater than a cool liquid slower than a cool liquid"
+    },
+    {
+     "label": "C",
+     "html": "less than a cool liquid faster than a cool liquid"
+    },
+    {
+     "label": "D",
+     "html": "less than a cool liquid slower than a cool liquid"
+    }
+   ]
   }
  ]
 }

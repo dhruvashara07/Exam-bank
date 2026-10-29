@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    69.4,
-    403.6,
+    69.0,
+    403.5,
     457.7,
-    514.9
+    515.0
    ],
    "id": "0625_2016ON_23_q15_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p23/q15/figures/0625_2016ON_23_q15_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p23/q15/figures/0625_2016ON_23_q15_figA",
     "url": null,
-    "kb": 23.8
+    "kb": 23.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -112,40 +113,30 @@
    "text": "Which quantities are kept constant and which quantities change?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "density of gas",
-     "mass of gas",
-     "temperature of gas"
-    ],
-    [
-     "<b>A</b>",
-     "\u0016",
-     "\u0016",
-     "\u001a"
-    ],
-    [
-     "<b>B</b>",
-     "\u0016",
-     "\u001a",
-     "\u0016"
-    ],
-    [
-     "<b>C</b>",
-     "\u001a",
-     "\u0016",
-     "\u0016"
-    ],
-    [
-     "<b>D</b>",
-     "\u001a",
-     "\u001a",
-     "\u0016"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_23_q15_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "\u0016 \u0016 \u001a key"
+    },
+    {
+     "label": "B",
+     "html": "\u0016 \u001a \u0016 \u0016= constant"
+    },
+    {
+     "label": "C",
+     "html": "\u001a \u0016 \u0016 \u001a= changed"
+    },
+    {
+     "label": "D",
+     "html": "\u001a \u001a \u0016"
+    }
+   ]
   }
  ]
 }

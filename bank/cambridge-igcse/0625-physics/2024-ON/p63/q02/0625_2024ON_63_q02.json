@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 6,
    "bbox": [
-    100.2,
-    111.3,
-    495.6,
-    354.4
+    99.5,
+    110.5,
+    495.5,
+    354.5
    ],
    "id": "0625_2024ON_63_q02_fig2-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p63/q02/figures/0625_2024ON_63_q02_fig2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p63/q02/figures/0625_2024ON_63_q02_fig2-1",
     "url": null,
-    "kb": 29.7
+    "kb": 29.6
    }
   },
   {
    "caption": "Fig. 2.2",
    "page": 6,
    "bbox": [
-    194.8,
-    452.9,
-    400.6,
-    623.5
+    194.0,
+    452.0,
+    401.0,
+    624.0
    ],
    "id": "0625_2024ON_63_q02b_fig2-2",
    "part": "(b)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 2.3",
    "page": 7,
    "bbox": [
-    194.8,
-    124.3,
-    400.6,
-    294.9
+    194.0,
+    123.5,
+    401.0,
+    295.0
    ],
    "id": "0625_2024ON_63_q02c_fig2-3",
    "part": "(c)",
@@ -90,10 +90,10 @@
    "caption": "Table 2.1",
    "page": 7,
    "bbox": [
-    231.6,
-    356.0,
-    363.7,
-    513.0
+    231.5,
+    357.0,
+    364.0,
+    513.5
    ],
    "id": "0625_2024ON_63_q02d_table2-1",
    "part": "(d)",
@@ -238,8 +238,8 @@
    "content": [
     {
      "type": "text",
-     "html": "The student connects the crocodile clip to the resistance wire at the 100.0cm mark on the metre ruler and measures the potential difference V<sub>0</sub> across the resistor. The voltmeter is shown in Fig. 2.2.",
-     "text": "The student connects the crocodile clip to the resistance wire at the 100.0cm mark on the metre ruler and measures the potential difference V0 across the resistor. The voltmeter is shown in Fig. 2.2."
+     "html": "The student connects the crocodile clip to the resistance wire at the 100.0 cm mark on the metre ruler and measures the potential difference V<sub>0</sub> across the resistor. The voltmeter is shown in Fig. 2.2.",
+     "text": "The student connects the crocodile clip to the resistance wire at the 100.0 cm mark on the metre ruler and measures the potential difference V0 across the resistor. The voltmeter is shown in Fig. 2.2."
     },
     {
      "type": "figure",
@@ -322,13 +322,13 @@
    "content": [
     {
      "type": "text",
-     "html": "The student moves the crocodile clip to a length of resistance wire l = 20.0cm.",
-     "text": "The student moves the crocodile clip to a length of resistance wire l = 20.0cm."
+     "html": "The student moves the crocodile clip to a length of resistance wire l = 20.0 cm.",
+     "text": "The student moves the crocodile clip to a length of resistance wire l = 20.0 cm."
     },
     {
      "type": "text",
-     "html": "Read and record in Table 2.1, the current for l = 20.0cm, shown on the ammeter in Fig. 2.3.",
-     "text": "Read and record in Table 2.1, the current for l = 20.0cm, shown on the ammeter in Fig. 2.3."
+     "html": "Read and record in Table 2.1, the current for l = 20.0 cm, shown on the ammeter in Fig. 2.3.",
+     "text": "Read and record in Table 2.1, the current for l = 20.0 cm, shown on the ammeter in Fig. 2.3."
     },
     {
      "type": "figure",
@@ -431,42 +431,18 @@
    "content": [
     {
      "type": "text",
-     "html": "The student measures the current I for lengths of resistance wire l = 30.0cm, l = 40.0cm, l = 50.0cm and l = 60.0cm. Her readings <b>are</b> shown in Table 2.1.",
-     "text": "The student measures the current I for lengths of resistance wire l = 30.0cm, l = 40.0cm, l = 50.0cm and l = 60.0cm. Her readings are shown in Table 2.1."
+     "html": "The student measures the current I for lengths of resistance wire l = 30.0 cm, l = 40.0 cm, l = 50.0 cm and l = 60.0 cm. Her readings <b>are</b> shown in Table 2.1.",
+     "text": "The student measures the current I for lengths of resistance wire l = 30.0 cm, l = 40.0 cm, l = 50.0 cm and l = 60.0 cm. Her readings are shown in Table 2.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "l/cm",
-       "I/A"
-      ],
-      [
-       "20.0",
-       ""
-      ],
-      [
-       "30.0",
-       "0.22"
-      ],
-      [
-       "40.0",
-       "0.30"
-      ],
-      [
-       "50.0",
-       "0.39"
-      ],
-      [
-       "60.0",
-       "0.42"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2024ON_63_q02d_table2-1",
+     "caption": "Table 2.1"
     },
     {
      "type": "text",
-     "html": "Plot a graph of l/cm (y-axis) against I/A (x-axis).",
-     "text": "Plot a graph of l/cm (y-axis) against I/A (x-axis)."
+     "html": "Plot a graph of l / cm (y-axis) against I / A (x-axis).",
+     "text": "Plot a graph of l / cm (y-axis) against I / A (x-axis)."
     },
     {
      "type": "text",
@@ -632,7 +608,7 @@
       },
       {
        "type": "text",
-       "html": "R = \\(\\frac{G×V<sub>0</sub>}{100k}\\) where k = 1.0 A",
+       "html": "R = \\(\\frac{G \\times V_{0}}{100k}\\) where k = 1.0 A",
        "text": "R = (G×V0)/(100k) where k = 1.0 A"
       },
       {
@@ -814,6 +790,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

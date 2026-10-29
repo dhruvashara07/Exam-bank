@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 6,
    "bbox": [
-    58.1,
-    150.3,
-    537.2,
-    436.2
+    58.5,
+    149.5,
+    536.5,
+    434.5
    ],
    "id": "0625_2022ON_63_q02_fig2-1",
    "part": "",
@@ -53,9 +53,9 @@
    "page": 7,
    "bbox": [
     112.5,
-    84.0,
-    482.8,
-    314.7
+    87.5,
+    483.0,
+    315.0
    ],
    "id": "0625_2022ON_63_q02bii_table2-1",
    "part": "(b)(ii)",
@@ -317,59 +317,9 @@
        "text": "Add units to the column headings in Table 2.1."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "",
-         "beaker A",
-         "beaker B"
-        ],
-        [
-         "",
-         "with black card",
-         "with shiny metal foil"
-        ],
-        [
-         "<i>t</i> /",
-         "θ /",
-         "θ /"
-        ],
-        [
-         "0",
-         "86.0",
-         "85.5"
-        ],
-        [
-         "30",
-         "80.5",
-         "83.5"
-        ],
-        [
-         "60",
-         "76.0",
-         "82.0"
-        ],
-        [
-         "90",
-         "73.0",
-         "80.5"
-        ],
-        [
-         "120",
-         "71.0",
-         "79.5"
-        ],
-        [
-         "150",
-         "69.5",
-         "79.0"
-        ],
-        [
-         "180",
-         "68.5",
-         "78.5"
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2022ON_63_q02bii_table2-1",
+       "caption": "Table 2.1"
       },
       {
        "type": "marks",
@@ -536,7 +486,7 @@
       },
       {
        "type": "text",
-       "html": "<i>x</i><sub>A</sub> = \\(\\frac{θ<sub>0</sub> – θ<sub>180</sub>}{<i>T</i>}\\)",
+       "html": "<i>x</i><sub>A</sub> = \\(\\frac{θ_{0} – θ_{180}}{T}\\)",
        "text": "xA = (θ0 – θ180)/(T)"
       },
       {
@@ -619,7 +569,7 @@
       },
       {
        "type": "text",
-       "html": "<i>x</i><sub>B</sub> = \\(\\frac{θ<sub>0</sub> – θ<sub>180</sub>}{<i>T</i>}\\)",
+       "html": "<i>x</i><sub>B</sub> = \\(\\frac{θ_{0} – θ_{180}}{T}\\)",
        "text": "xB = (θ0 – θ180)/(T)"
       },
       {
@@ -790,7 +740,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "2.",
+       "prefix": "1."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "2."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -864,7 +823,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -894,6 +862,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

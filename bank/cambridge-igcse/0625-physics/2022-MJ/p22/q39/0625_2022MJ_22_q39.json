@@ -32,10 +32,10 @@
   {
    "page": 18,
    "bbox": [
-    67.7,
-    298.9,
-    325.7,
-    410.2
+    67.5,
+    298.5,
+    326.0,
+    410.5
    ],
    "id": "0625_2022MJ_22_q39_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which radioactive source is used in a smoke alarm system and what is the reason for this?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "source",
-     "reason"
-    ],
-    [
-     "<b>A</b>",
-     "α",
-     "causes least ionisation of air"
-    ],
-    [
-     "<b>B</b>",
-     "α",
-     "causes most ionisation of air"
-    ],
-    [
-     "<b>C</b>",
-     "γ",
-     "causes least ionisation of air"
-    ],
-    [
-     "<b>D</b>",
-     "γ",
-     "causes most ionisation of air"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_22_q39_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "α causes least ionisation of air"
+    },
+    {
+     "label": "B",
+     "html": "α causes most ionisation of air"
+    },
+    {
+     "label": "C",
+     "html": "γ causes least ionisation of air"
+    },
+    {
+     "label": "D",
+     "html": "γ causes most ionisation of air"
+    }
+   ]
   }
  ]
 }

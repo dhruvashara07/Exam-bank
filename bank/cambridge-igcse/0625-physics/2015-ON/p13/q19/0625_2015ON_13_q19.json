@@ -33,9 +33,9 @@
    "page": 7,
    "bbox": [
     206.3,
-    407.7,
-    321.8,
-    557.6
+    407.5,
+    388.8,
+    556.5
    ],
    "id": "0625_2015ON_13_q19_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p13/q19/figures/0625_2015ON_13_q19_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p13/q19/figures/0625_2015ON_13_q19_figA",
     "url": null,
-    "kb": 9.0
+    "kb": 11.3
    }
   },
   {
    "page": 7,
    "bbox": [
-    67.6,
+    67.5,
     627.5,
-    299.1,
-    738.9
+    299.0,
+    739.0
    ],
    "id": "0625_2015ON_13_q19_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p13/q19/figures/0625_2015ON_13_q19_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p13/q19/figures/0625_2015ON_13_q19_figB",
     "url": null,
-    "kb": 25.3
+    "kb": 25.2
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -122,11 +123,6 @@
   },
   {
    "type": "text",
-   "html": "shallow water",
-   "text": "shallow water"
-  },
-  {
-   "type": "text",
    "html": "The wave now enters shallow water and its speed decreases.",
    "text": "The wave now enters shallow water and its speed decreases."
   },
@@ -136,35 +132,30 @@
    "text": "Which row shows what happens to the frequency of the wave, and what happens to the wavelength of the wave?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "frequency",
-     "wavelength"
-    ],
-    [
-     "A",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "B",
-     "decreases",
-     "does not change"
-    ],
-    [
-     "C",
-     "does not change",
-     "decreases"
-    ],
-    [
-     "D",
-     "does not change",
-     "does not change"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015ON_13_q19_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases does not change"
+    },
+    {
+     "label": "C",
+     "html": "does not change decreases"
+    },
+    {
+     "label": "D",
+     "html": "does not change does not change"
+    }
+   ]
   }
  ]
 }

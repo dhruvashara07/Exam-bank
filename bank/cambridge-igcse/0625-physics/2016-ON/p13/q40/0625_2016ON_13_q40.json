@@ -32,10 +32,10 @@
   {
    "page": 19,
    "bbox": [
-    196.7,
-    111.6,
-    398.7,
-    216.1
+    196.5,
+    111.5,
+    399.0,
+    216.5
    ],
    "id": "0625_2016ON_13_q40_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p13/q40/figures/0625_2016ON_13_q40_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p13/q40/figures/0625_2016ON_13_q40_figA",
     "url": null,
-    "kb": 17.5
+    "kb": 17.4
    }
   },
   {
    "page": 19,
    "bbox": [
-    67.7,
+    67.5,
     248.0,
     336.0,
-    387.7
+    388.0
    ],
    "id": "0625_2016ON_13_q40_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p13/q40/figures/0625_2016ON_13_q40_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p13/q40/figures/0625_2016ON_13_q40_figB",
     "url": null,
-    "kb": 22.2
+    "kb": 22.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -121,21 +122,9 @@
    "text": "The table shows the rate of emission of α-particles from the material at different times."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "time",
-     "rate of emission"
-    ],
-    [
-     "/hours",
-     "/particles per minute"
-    ],
-    [
-     "0.0 4.0 8.0",
-     "160 40"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2016ON_13_q40_figA",
+   "caption": null
   },
   {
    "type": "text",
@@ -143,40 +132,30 @@
    "text": "What is the half-life of the material and what is the missing value at 8.0 hours?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "half-life",
-     "rate of emission at 8.0 hours"
-    ],
-    [
-     "",
-     "/hours",
-     "/particles per minute"
-    ],
-    [
-     "<b>A</b>",
-     "2.0",
-     "0"
-    ],
-    [
-     "<b>B</b>",
-     "2.0",
-     "10"
-    ],
-    [
-     "<b>C</b>",
-     "4.0",
-     "0"
-    ],
-    [
-     "<b>D</b>",
-     "4.0",
-     "10"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_13_q40_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "2.0 0"
+    },
+    {
+     "label": "B",
+     "html": "2.0 10"
+    },
+    {
+     "label": "C",
+     "html": "4.0 0"
+    },
+    {
+     "label": "D",
+     "html": "4.0 10"
+    }
+   ]
   }
  ]
 }

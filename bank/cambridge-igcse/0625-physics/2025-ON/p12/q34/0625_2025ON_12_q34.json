@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    592.2,
-    259.4,
-    717.7
+    67.5,
+    592.0,
+    259.5,
+    718.0
    ],
    "id": "0625_2025ON_12_q34_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p12/q34/figures/0625_2025ON_12_q34_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p12/q34/figures/0625_2025ON_12_q34_figA",
     "url": null,
-    "kb": 16.5
+    "kb": 16.4
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "An isotope of carbon has the nuclide notation<sup>14</sup><sub>6</sub>C.",
-   "text": "An isotope of carbon has the nuclide notation146C."
+   "html": "An isotope of carbon has the nuclide notation<sup>14</sup><sub>6</sub> C.",
+   "text": "An isotope of carbon has the nuclide notation146 C."
   },
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "What does the nucleus of one atom of this isotope contain?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "number of",
-     "number of"
-    ],
-    [
-     "",
-     "protons",
-     "neutrons"
-    ],
-    [
-     "<b>A</b>",
-     "6",
-     "6"
-    ],
-    [
-     "<b>B</b>",
-     "6",
-     "8"
-    ],
-    [
-     "<b>C</b>",
-     "8",
-     "6"
-    ],
-    [
-     "<b>D</b>",
-     "8",
-     "8"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025ON_12_q34_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "6 6"
+    },
+    {
+     "label": "B",
+     "html": "6 8"
+    },
+    {
+     "label": "C",
+     "html": "8 6"
+    },
+    {
+     "label": "D",
+     "html": "8 8"
+    }
+   ]
   }
  ]
 }

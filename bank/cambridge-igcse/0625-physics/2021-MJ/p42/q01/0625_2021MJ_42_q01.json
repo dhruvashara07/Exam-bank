@@ -9,10 +9,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    220.6,
-    85.3,
-    375.2,
-    278.8
+    220.0,
+    84.5,
+    375.0,
+    277.0
    ],
    "id": "0625_2021MJ_42_q01a_fig1-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 1.2",
    "page": 3,
    "bbox": [
-    148.9,
-    123.8,
-    446.3,
-    315.0
+    149.0,
+    124.5,
+    446.0,
+    313.5
    ],
    "id": "0625_2021MJ_42_q01ci_fig1-2",
    "part": "(c)(i)",
@@ -495,7 +495,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "initial acceleration"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "final acceleration"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -530,5 +539,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

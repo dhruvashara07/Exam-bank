@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    152.9,
-    138.4,
-    442.7,
-    315.0
+    153.5,
+    142.5,
+    442.5,
+    312.0
    ],
    "id": "0625_2018MJ_52_q01_fig1-1",
    "part": "",
@@ -283,7 +283,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the average diameter <i>D</i> of the cup using the equation <i>D</i> = \\(\\frac{<i>D</i><sub>B</sub> + <i>D</i><sub>T</sub>}{2}\\).",
+       "html": "Calculate the average diameter <i>D</i> of the cup using the equation <i>D</i> = \\(\\frac{D_{B} + D_{T}}{2}\\).",
        "text": "Calculate the average diameter D of the cup using the equation D = (DB + DT)/(2)."
       },
       {
@@ -467,6 +467,12 @@
        "type": "text",
        "html": "1. Calculate the volume <i>V</i> of the cup using the equation <i>V</i> = 0.785 <i>D</i><sup>2 </sup><i>h</i>.",
        "text": "1. Calculate the volume V of the cup using the equation V = 0.785 D2 h."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V =",
+       "unit": "cm3"
       },
       {
        "type": "text",
@@ -653,7 +659,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Determine the density ρ of water using the equation ρ= \\(\\frac{2 <i>m</i>}{<i>V</i>}\\). Give your answer to a suitable number of significant figures for this experiment. Include the unit.",
+       "html": "Determine the density ρ of water using the equation ρ= \\(\\frac{2 m}{V}\\). Give your answer to a suitable number of significant figures for this experiment. Include the unit.",
        "text": "Determine the density ρ of water using the equation ρ= (2 m)/(V). Give your answer to a suitable number of significant figures for this experiment. Include the unit."
       },
       {
@@ -742,7 +748,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "reason",
+     "prefix": "part"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "reason"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -769,6 +784,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

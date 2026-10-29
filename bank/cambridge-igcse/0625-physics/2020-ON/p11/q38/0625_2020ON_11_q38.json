@@ -32,10 +32,10 @@
   {
    "page": 15,
    "bbox": [
-    284.7,
-    534.5,
-    310.4,
-    561.0
+    67.5,
+    593.0,
+    249.0,
+    718.0
    ],
    "id": "0625_2020ON_11_q38_figA",
    "caption": null,
@@ -44,25 +44,6 @@
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p11/q38/figures/0625_2020ON_11_q38_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p11/q38/figures/0625_2020ON_11_q38_figA",
-    "url": null,
-    "kb": 3.3
-   }
-  },
-  {
-   "page": 15,
-   "bbox": [
-    67.7,
-    593.0,
-    248.7,
-    718.0
-   ],
-   "id": "0625_2020ON_11_q38_figB",
-   "caption": null,
-   "part": "",
-   "alt": "",
-   "svg": {
-    "file": "bank/cambridge-igcse/0625-physics/2020-ON/p11/q38/figures/0625_2020ON_11_q38_figB.svg",
-    "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p11/q38/figures/0625_2020ON_11_q38_figB",
     "url": null,
     "kb": 16.5
    }
@@ -109,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -116,50 +98,35 @@
    "text": "The nucleus of an atom X is represented by the notation shown."
   },
   {
-   "type": "figure",
-   "id": "0625_2020ON_11_q38_figA",
-   "caption": null
-  },
-  {
    "type": "text",
    "html": "How many protons and how many neutrons are in this nucleus?",
    "text": "How many protons and how many neutrons are in this nucleus?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "number of",
-     "number of"
-    ],
-    [
-     "",
-     "protons",
-     "neutrons"
-    ],
-    [
-     "<b>A</b>",
-     "P",
-     "Q"
-    ],
-    [
-     "<b>B</b>",
-     "P",
-     "Q – P"
-    ],
-    [
-     "<b>C</b>",
-     "Q",
-     "P"
-    ],
-    [
-     "<b>D</b>",
-     "Q",
-     "P – Q"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020ON_11_q38_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "P Q"
+    },
+    {
+     "label": "B",
+     "html": "P Q – P"
+    },
+    {
+     "label": "C",
+     "html": "Q P"
+    },
+    {
+     "label": "D",
+     "html": "Q P – Q"
+    }
+   ]
   }
  ]
 }

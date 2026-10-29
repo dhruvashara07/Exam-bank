@@ -9,10 +9,10 @@
    "caption": "Fig. 4.1",
    "page": 6,
    "bbox": [
-    127.6,
-    233.7,
-    466.6,
-    474.0
+    128.0,
+    232.5,
+    467.5,
+    474.5
    ],
    "id": "0625_2025ON_43_q04aii_fig4-1",
    "part": "(a)(ii)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 4.2",
    "page": 7,
    "bbox": [
-    129.4,
-    74.2,
-    496.1,
-    262.5
+    129.5,
+    85.5,
+    465.0,
+    263.0
    ],
    "id": "0625_2025ON_43_q04b_fig4-2",
    "part": "(b)",
@@ -47,10 +47,10 @@
    "caption": "Fig. 4.3",
    "page": 7,
    "bbox": [
-    121.0,
-    425.7,
-    474.2,
-    567.3
+    121.5,
+    425.5,
+    474.5,
+    567.5
    ],
    "id": "0625_2025ON_43_q04c_fig4-3",
    "part": "(c)",
@@ -133,8 +133,8 @@
      "content": [
       {
        "type": "text",
-       "html": "A rectangular glass tank contains 3.0m<sup>3</sup> of liquid. The mass of the liquid is 2800kg.",
-       "text": "A rectangular glass tank contains 3.0m3 of liquid. The mass of the liquid is 2800kg."
+       "html": "A rectangular glass tank contains 3.0 m<sup>3</sup> of liquid. The mass of the liquid is 2800 kg.",
+       "text": "A rectangular glass tank contains 3.0 m3 of liquid. The mass of the liquid is 2800 kg."
       },
       {
        "type": "text",
@@ -218,8 +218,8 @@
      "content": [
       {
        "type": "text",
-       "html": "A metal block is placed in the tank and it sinks to the bottom. The top surface of the block is 1.1m below the surface of the liquid.",
-       "text": "A metal block is placed in the tank and it sinks to the bottom. The top surface of the block is 1.1m below the surface of the liquid."
+       "html": "A metal block is placed in the tank and it sinks to the bottom. The top surface of the block is 1.1 m below the surface of the liquid.",
+       "text": "A metal block is placed in the tank and it sinks to the bottom. The top surface of the block is 1.1 m below the surface of the liquid."
       },
       {
        "type": "text",
@@ -232,68 +232,14 @@
        "caption": "Fig. 4.1"
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "1.1m",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "0.30m",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         "m",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "1.1m",
-         "m",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         "",
-         "0.30m",
-         ""
-        ],
-        [
-         "",
-         "",
-         "",
-         "",
-         ""
-        ]
-       ]
-      },
-      {
        "type": "text",
        "html": "Calculate the force exerted by the liquid on the top of the block.",
        "text": "Calculate the force exerted by the liquid on the top of the block."
       },
       {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "force on top of the block ="
+       "type": "text",
+       "html": "force on top of the block = ……",
+       "text": "force on top of the block = ……"
       },
       {
        "type": "marks",
@@ -380,7 +326,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -490,5 +445,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

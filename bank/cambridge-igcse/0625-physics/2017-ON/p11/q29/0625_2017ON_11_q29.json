@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    81.0,
+    80.5,
     457.3,
-    514.0,
-    570.1
+    514.5,
+    570.5
    ],
    "id": "0625_2017ON_11_q29_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p11/q29/figures/0625_2017ON_11_q29_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p11/q29/figures/0625_2017ON_11_q29_figA",
     "url": null,
-    "kb": 38.8
+    "kb": 39.3
    }
   },
   {
    "page": 14,
    "bbox": [
-    67.7,
-    602.6,
-    364.3,
-    713.9
+    67.5,
+    602.5,
+    364.5,
+    714.0
    ],
    "id": "0625_2017ON_11_q29_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p11/q29/figures/0625_2017ON_11_q29_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p11/q29/figures/0625_2017ON_11_q29_figB",
     "url": null,
-    "kb": 28.4
+    "kb": 28.2
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -146,40 +147,30 @@
    "text": "Which row gives possible charges that explain these observations?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "charge on P",
-     "charge on Q",
-     "charge on R"
-    ],
-    [
-     "<b>A</b>",
-     "negative",
-     "positive",
-     "negative"
-    ],
-    [
-     "<b>B</b>",
-     "negative",
-     "negative",
-     "negative"
-    ],
-    [
-     "<b>C</b>",
-     "positive",
-     "positive",
-     "negative"
-    ],
-    [
-     "<b>D</b>",
-     "positive",
-     "negative",
-     "positive"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017ON_11_q29_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "negative positive negative"
+    },
+    {
+     "label": "B",
+     "html": "negative negative negative"
+    },
+    {
+     "label": "C",
+     "html": "positive positive negative"
+    },
+    {
+     "label": "D",
+     "html": "positive negative positive"
+    }
+   ]
   }
  ]
 }

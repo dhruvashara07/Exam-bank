@@ -33,10 +33,10 @@
    "caption": "Figure 7.1",
    "page": 12,
    "bbox": [
-    71.0,
-    87.4,
-    272.8,
-    259.3
+    70.5,
+    87.0,
+    273.5,
+    259.5
    ],
    "id": "0625_2026FM_42_q07_fig7-1",
    "part": "",
@@ -191,10 +191,19 @@
      "text": "Complete the sentence to define electric current."
     },
     {
+     "type": "text",
+     "html": "Electric current is the amount of …… passing a point",
+     "text": "Electric current is the amount of …… passing a point"
+    },
+    {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "per unit",
      "unit": "."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -263,8 +272,8 @@
    "content": [
     {
      "type": "text",
-     "html": "The resistance of the fixed resistor is 480Ω.",
-     "text": "The resistance of the fixed resistor is 480Ω."
+     "html": "The resistance of the fixed resistor is 480 Ω.",
+     "text": "The resistance of the fixed resistor is 480 Ω."
     },
     {
      "type": "text",
@@ -348,7 +357,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "voltmeter"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "ammeter"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -374,6 +392,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -387,8 +406,8 @@
   },
   {
    "type": "text",
-   "html": "The switch is closed. The reading on the voltmeter is 9.0V. The reading on the ammeter is 4.6mA.",
-   "text": "The switch is closed. The reading on the voltmeter is 9.0V. The reading on the ammeter is 4.6mA."
+   "html": "The switch is closed. The reading on the voltmeter is 9.0 V. The reading on the ammeter is 4.6 mA.",
+   "text": "The switch is closed. The reading on the voltmeter is 9.0 V. The reading on the ammeter is 4.6 mA."
   }
  ]
 }

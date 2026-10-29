@@ -32,10 +32,10 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
-    616.9,
-    316.9,
-    728.2
+    67.5,
+    616.5,
+    317.0,
+    728.5
    ],
    "id": "0625_2019ON_22_q04_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p22/q04/figures/0625_2019ON_22_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p22/q04/figures/0625_2019ON_22_q04_figA",
     "url": null,
-    "kb": 19.1
+    "kb": 19.0
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A box is placed on the ground. An upward force of 15N is needed to lift the box at constant speed.",
-   "text": "A box is placed on the ground. An upward force of 15N is needed to lift the box at constant speed."
+   "html": "A box is placed on the ground. An upward force of 15 N is needed to lift the box at constant speed.",
+   "text": "A box is placed on the ground. An upward force of 15 N is needed to lift the box at constant speed."
   },
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row correctly describes the box?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass of the box",
-     "weight of the box"
-    ],
-    [
-     "<b>A</b>",
-     "1.5kg",
-     "15N"
-    ],
-    [
-     "<b>B</b>",
-     "15N",
-     "1.5kg"
-    ],
-    [
-     "<b>C</b>",
-     "15N",
-     "150kg"
-    ],
-    [
-     "<b>D</b>",
-     "150kg",
-     "15N"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019ON_22_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "1.5kg 15N"
+    },
+    {
+     "label": "B",
+     "html": "15N 1.5kg"
+    },
+    {
+     "label": "C",
+     "html": "15N 150kg"
+    },
+    {
+     "label": "D",
+     "html": "150kg 15N"
+    }
+   ]
   }
  ]
 }

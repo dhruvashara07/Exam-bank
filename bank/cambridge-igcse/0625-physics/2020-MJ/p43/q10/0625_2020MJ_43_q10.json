@@ -192,7 +192,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "source",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "source"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -304,5 +313,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

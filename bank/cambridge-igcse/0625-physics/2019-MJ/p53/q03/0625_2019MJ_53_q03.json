@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 7,
    "bbox": [
-    130.8,
-    122.9,
-    465.4,
-    378.5
+    130.0,
+    127.0,
+    466.0,
+    375.5
    ],
    "id": "0625_2019MJ_53_q03_fig3-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-MJ/p53/q03/figures/0625_2019MJ_53_q03_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-MJ/p53/q03/figures/0625_2019MJ_53_q03_fig3-1",
     "url": null,
-    "kb": 14.1
+    "kb": 14.0
    }
   },
   {
    "caption": "Table 3.1",
    "page": 7,
    "bbox": [
-    166.9,
-    458.4,
-    428.3,
-    596.4
+    167.0,
+    463.0,
+    428.5,
+    596.5
    ],
    "id": "0625_2019MJ_53_q03a_table3-1",
    "part": "(a)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-MJ/p53/q03/figures/0625_2019MJ_53_q03a_table3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-MJ/p53/q03/figures/0625_2019MJ_53_q03a_table3-1",
     "url": null,
-    "kb": 24.2
+    "kb": 24.1
    }
   }
  ],
@@ -136,33 +136,9 @@
      "text": "Switch on. Measure, and record in Table 3.1, the current I in the circuit. Use the voltmeter to measure and record the potential difference V across resistor X."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "resistor combination",
-       "<i>I</i>/",
-       "<i>V</i> /",
-       "<i>R</i> /"
-      ],
-      [
-       "X",
-       "",
-       "",
-       ""
-      ],
-      [
-       "X and Y",
-       "",
-       "",
-       ""
-      ],
-      [
-       "X, Y and Z",
-       "",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2019MJ_53_q03a_table3-1",
+     "caption": "Table 3.1"
     },
     {
      "type": "marks",
@@ -382,7 +358,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -465,7 +450,7 @@
       },
       {
        "type": "text",
-       "html": "Use your readings from Table 3.1 and the equation <i>R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\) .",
+       "html": "Use your readings from Table 3.1 and the equation <i>R</i> = \\(\\frac{V}{I}\\) .",
        "text": "Use your readings from Table 3.1 and the equation R = (V)/(I) ."
       },
       {
@@ -540,6 +525,11 @@
        "type": "text",
        "html": "For resistors in series, the total resistance of the combination is the sum of the individual resistances. Use your results from Table 3.1 to calculate the resistances <i>R</i><sub>Y</sub> and<i> R</i><sub>Z</sub> of resistors Y and Z.",
        "text": "For resistors in series, the total resistance of the combination is the sum of the individual resistances. Use your results from Table 3.1 to calculate the resistances RY and RZ of resistors Y and Z."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "RY ="
       },
       {
        "type": "answer",
@@ -706,8 +696,18 @@
      "text": "Set up the circuit as described in (e). Switch on. Measure and record the current IP in the circuit and the potential difference VP across the resistors."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "IP ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "VP ="
+    },
+    {
      "type": "text",
-     "html": "Switch off. Calculate the resistance <i>R</i><sub>P </sub> of the resistors in parallel. Use your readings and the equation<i> R</i><sub>P</sub> = \\(\\frac{<i>V</i><sub>P</sub>}{<i>I</i><sub>P</sub>}\\) .",
+     "html": "Switch off. Calculate the resistance <i>R</i><sub>P </sub> of the resistors in parallel. Use your readings and the equation<i> R</i><sub>P</sub> = \\(\\frac{V_{P}}{I_{P}}\\) .",
      "text": "Switch off. Calculate the resistance RP of the resistors in parallel. Use your readings and the equation RP = (VP)/(IP) ."
     },
     {
@@ -739,6 +739,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

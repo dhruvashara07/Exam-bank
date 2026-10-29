@@ -32,8 +32,8 @@
   {
    "page": 11,
    "bbox": [
-    67.9,
-    74.1,
+    50.7,
+    98.0,
     544.0,
     210.1
    ],
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p13/q24/figures/0625_2016MJ_13_q24_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p13/q24/figures/0625_2016MJ_13_q24_figA",
     "url": null,
-    "kb": 24.0
+    "kb": 21.0
    }
   },
   {
    "page": 11,
    "bbox": [
-    69.3,
-    243.4,
-    364.7,
-    368.9
+    69.0,
+    243.0,
+    365.0,
+    369.0
    ],
    "id": "0625_2016MJ_13_q24_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p13/q24/figures/0625_2016MJ_13_q24_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p13/q24/figures/0625_2016MJ_13_q24_figB",
     "url": null,
-    "kb": 26.5
+    "kb": 26.1
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "White light enters a glass prism. The light leaving the other side of the prism is separated into",
-   "text": "White light enters a glass prism. The light leaving the other side of the prism is separated into"
+   "html": "White light enters a glass prism. The light leaving the other side of the prism is separated into colours.",
+   "text": "White light enters a glass prism. The light leaving the other side of the prism is separated into colours."
   },
   {
    "type": "figure",
@@ -122,49 +123,34 @@
   },
   {
    "type": "text",
-   "html": "white light",
-   "text": "white light"
-  },
-  {
-   "type": "text",
    "html": "Which row correctly describes what happens?",
    "text": "Which row correctly describes what happens?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "path taken by the light",
-     "colour 1",
-     "colour 2"
-    ],
-    [
-     "A",
-     "diagram 1",
-     "red",
-     "violet"
-    ],
-    [
-     "B",
-     "diagram 1",
-     "violet",
-     "red"
-    ],
-    [
-     "C",
-     "diagram 2",
-     "red",
-     "violet"
-    ],
-    [
-     "D",
-     "diagram 2",
-     "violet",
-     "red"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_13_q24_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "diagram 1 red violet"
+    },
+    {
+     "label": "B",
+     "html": "diagram 1 violet red"
+    },
+    {
+     "label": "C",
+     "html": "diagram 2 red violet"
+    },
+    {
+     "label": "D",
+     "html": "diagram 2 violet red"
+    }
+   ]
   }
  ]
 }

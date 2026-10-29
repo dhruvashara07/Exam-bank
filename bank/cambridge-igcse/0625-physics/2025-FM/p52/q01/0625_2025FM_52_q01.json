@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    203.2,
-    180.3,
-    383.6,
-    398.1
+    204.0,
+    181.0,
+    383.0,
+    398.5
    ],
    "id": "0625_2025FM_52_q01a_fig1-1",
    "part": "(a)",
@@ -52,10 +52,10 @@
    "caption": "Table 1.1",
    "page": 2,
    "bbox": [
-    234.9,
-    485.1,
+    235.0,
+    486.0,
     360.5,
-    636.2
+    636.5
    ],
    "id": "0625_2025FM_52_q01a_table1-1",
    "part": "(a)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-FM/p52/q01/figures/0625_2025FM_52_q01a_table1-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-FM/p52/q01/figures/0625_2025FM_52_q01a_table1-1",
     "url": null,
-    "kb": 18.8
+    "kb": 18.7
    }
   }
  ],
@@ -133,8 +133,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Suspend a mass m = 100g from the spring as shown in Fig. 1.1.",
-     "text": "Suspend a mass m = 100g from the spring as shown in Fig. 1.1."
+     "html": "Suspend a mass m = 100 g from the spring as shown in Fig. 1.1.",
+     "text": "Suspend a mass m = 100 g from the spring as shown in Fig. 1.1."
     },
     {
      "type": "figure",
@@ -148,8 +148,8 @@
     },
     {
      "type": "text",
-     "html": "Repeat this step for values of m = 200g, m = 300g, m = 400g and m = 500g.",
-     "text": "Repeat this step for values of m = 200g, m = 300g, m = 400g and m = 500g."
+     "html": "Repeat this step for values of m = 200 g, m = 300 g, m = 400 g and m = 500 g.",
+     "text": "Repeat this step for values of m = 200 g, m = 300 g, m = 400 g and m = 500 g."
     },
     {
      "type": "text",
@@ -157,33 +157,9 @@
      "text": "Remove the mass m from the spring."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "m/g",
-       "l /cm"
-      ],
-      [
-       "100",
-       ""
-      ],
-      [
-       "200",
-       ""
-      ],
-      [
-       "300",
-       ""
-      ],
-      [
-       "400",
-       ""
-      ],
-      [
-       "500",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2025FM_52_q01a_table1-1",
+     "caption": "Table 1.1"
     },
     {
      "type": "answer",
@@ -331,8 +307,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of l /cm (y-axis) against m/g (x-axis). Start the <b>axes</b> from the origin (0,0).",
-     "text": "Plot a graph of l /cm (y-axis) against m/g (x-axis). Start the axes from the origin (0,0)."
+     "html": "Plot a graph of l / cm (y-axis) against m / g (x-axis). Start the <b>axes</b> from the origin (0, 0).",
+     "text": "Plot a graph of l / cm (y-axis) against m / g (x-axis). Start the axes from the origin (0, 0)."
     },
     {
      "type": "text",
@@ -493,9 +469,15 @@
      "text": "Suspend object X from the spring and measure the stretched length lX of the spring."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "lX =",
+     "unit": "cm"
+    },
+    {
      "type": "text",
-     "html": "Use the graph and your value of l<sub>X</sub>, to determine the mass m<sub>X</sub> of object X. Show clearly on the graph how you obtained your answer.",
-     "text": "Use the graph and your value of lX, to determine the mass mX of object X. Show clearly on the graph how you obtained your answer."
+     "html": "Use the graph and your value of l<sub>X</sub> , to determine the mass m<sub>X</sub> of object X. Show clearly on the graph how you obtained your answer.",
+     "text": "Use the graph and your value of lX , to determine the mass mX of object X. Show clearly on the graph how you obtained your answer."
     },
     {
      "type": "answer",
@@ -568,8 +550,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Two students measure the mass of another object using the same method and apparatus. One student records the mass as 132.6g. The other student records the mass as 130g.",
-     "text": "Two students measure the mass of another object using the same method and apparatus. One student records the mass as 132.6g. The other student records the mass as 130g."
+     "html": "Two students measure the mass of another object using the same method and apparatus. One student records the mass as 132.6 g. The other student records the mass as 130 g.",
+     "text": "Two students measure the mass of another object using the same method and apparatus. One student records the mass as 132.6 g. The other student records the mass as 130 g."
     },
     {
      "type": "text",
@@ -579,7 +561,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -606,6 +597,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

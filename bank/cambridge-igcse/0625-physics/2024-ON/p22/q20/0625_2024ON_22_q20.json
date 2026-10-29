@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    223.7,
-    395.7,
-    371.3,
-    512.9
+    223.5,
+    395.5,
+    371.5,
+    513.0
    ],
    "id": "0625_2024ON_22_q20_figA",
    "caption": null,
@@ -45,15 +45,15 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p22/q20/figures/0625_2024ON_22_q20_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p22/q20/figures/0625_2024ON_22_q20_figA",
     "url": null,
-    "kb": 11.9
+    "kb": 11.8
    }
   },
   {
    "page": 8,
    "bbox": [
-    67.7,
-    545.1,
-    360.8,
+    67.5,
+    545.0,
+    361.0,
     656.5
    ],
    "id": "0625_2024ON_22_q20_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p22/q20/figures/0625_2024ON_22_q20_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p22/q20/figures/0625_2024ON_22_q20_figB",
     "url": null,
-    "kb": 20.0
+    "kb": 19.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -121,57 +122,35 @@
    "caption": null
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "normal",
-     ""
-    ],
-    [
-     "50\u0001",
-     ""
-    ],
-    [
-     "",
-     "25\u0001"
-    ]
-   ]
-  },
-  {
    "type": "text",
    "html": "What are the angles of incidence and refraction of the ray?",
    "text": "What are the angles of incidence and refraction of the ray?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "angle of incidence/°",
-     "angle of refraction/°"
-    ],
-    [
-     "<b>A</b>",
-     "40",
-     "25"
-    ],
-    [
-     "<b>B</b>",
-     "40",
-     "65"
-    ],
-    [
-     "<b>C</b>",
-     "50",
-     "25"
-    ],
-    [
-     "<b>D</b>",
-     "50",
-     "65"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_22_q20_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "40 25"
+    },
+    {
+     "label": "B",
+     "html": "40 65"
+    },
+    {
+     "label": "C",
+     "html": "50 25"
+    },
+    {
+     "label": "D",
+     "html": "50 65"
+    }
+   ]
   }
  ]
 }

@@ -33,9 +33,9 @@
    "caption": "Fig. 2.1",
    "page": 6,
    "bbox": [
-    208.7,
-    114.4,
-    373.3,
+    208.5,
+    114.5,
+    373.5,
     258.0
    ],
    "id": "0625_2015MJ_53_q02_fig2-1",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 6,
    "bbox": [
-    152.7,
-    384.8,
+    152.5,
+    384.5,
     442.5,
-    657.7
+    658.0
    ],
    "id": "0625_2015MJ_53_q02aiii_table2-1",
    "part": "(a)(iii)",
@@ -200,53 +200,9 @@
        "text": "Record in the table, the temperature θ of the water at times t = 30 s, 60 s, 90 s, 120 s, 150 s, 180 s, 210 s, 240 s and 270 s."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>t</i> / s",
-         "θ / °C"
-        ],
-        [
-         "0",
-         ""
-        ],
-        [
-         "",
-         ""
-        ],
-        [
-         "",
-         ""
-        ],
-        [
-         "",
-         ""
-        ],
-        [
-         "",
-         ""
-        ],
-        [
-         "",
-         ""
-        ],
-        [
-         "",
-         ""
-        ],
-        [
-         "",
-         ""
-        ],
-        [
-         "",
-         ""
-        ],
-        [
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2015MJ_53_q02aiii_table2-1",
+       "caption": "Table 2.1"
       },
       {
        "type": "answer",
@@ -360,7 +316,7 @@
       },
       {
        "type": "text",
-       "html": "readings from the table and the equation <i>x</i><sub>1</sub> = \\(\\frac{(θ<sub>0</sub> – θ<sub>90</sub>)}{<i>T</i>}\\), where <i>T</i> = 90 s and θ<sub>0</sub> and θ<sub>90</sub> are the temperatures at 0 s and 90 s. Give the unit for the cooling rate.",
+       "html": "readings from the table and the equation <i>x</i><sub>1</sub> = \\(\\frac{(θ_{0} – θ_{90})}{T}\\), where <i>T</i> = 90 s and θ<sub>0</sub> and θ<sub>90</sub> are the temperatures at 0 s and 90 s. Give the unit for the cooling rate.",
        "text": "readings from the table and the equation x1 = ((θ0 – θ90))/(T), where T = 90 s and θ0 and θ90 are the temperatures at 0 s and 90 s. Give the unit for the cooling rate."
       },
       {
@@ -433,7 +389,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the average cooling rate <i>x</i><sub>2</sub> in the next 90 s of the experiment. Use your readings from the table and the equation <i>x</i><sub>2</sub> = \\(\\frac{(θ<sub>90</sub> – θ<sub>180</sub>)}{<i>T</i>}\\), where <i>T</i> = 90 s and θ<sub>90</sub> and θ<sub>180 </sub>are the temperatures at 90 s and 180 s.",
+       "html": "Calculate the average cooling rate <i>x</i><sub>2</sub> in the next 90 s of the experiment. Use your readings from the table and the equation <i>x</i><sub>2</sub> = \\(\\frac{(θ_{90} – θ_{180})}{T}\\), where <i>T</i> = 90 s and θ<sub>90</sub> and θ<sub>180 </sub>are the temperatures at 90 s and 180 s.",
        "text": "Calculate the average cooling rate x2 in the next 90 s of the experiment. Use your readings from the table and the equation x2 = ((θ90 – θ180))/(T), where T = 90 s and θ90 and θ180 are the temperatures at 90 s and 180 s."
       },
       {
@@ -506,7 +462,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the average cooling rate <i>x</i><sub>3</sub> in the last 90 s of the experiment. Use your readings from the table and the equation <i>x</i><sub>3</sub> = \\(\\frac{(θ<sub>180</sub> – θ<sub>270</sub>)}{<i>T</i>}\\), where <i>T</i> = 90 s and θ<sub>180</sub> and θ<sub>270 </sub>are the temperatures at 180 s and 270 s.",
+       "html": "Calculate the average cooling rate <i>x</i><sub>3</sub> in the last 90 s of the experiment. Use your readings from the table and the equation <i>x</i><sub>3</sub> = \\(\\frac{(θ_{180} – θ_{270})}{T}\\), where <i>T</i> = 90 s and θ<sub>180</sub> and θ<sub>270 </sub>are the temperatures at 180 s and 270 s.",
        "text": "Calculate the average cooling rate x3 in the last 90 s of the experiment. Use your readings from the table and the equation x3 = ((θ180 – θ270))/(T), where T = 90 s and θ180 and θ270 are the temperatures at 180 s and 270 s."
       },
       {
@@ -589,8 +545,12 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
-     "lines": 2
+     "prefix": "prediction for x4 ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
     },
     {
      "type": "marks",
@@ -767,6 +727,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

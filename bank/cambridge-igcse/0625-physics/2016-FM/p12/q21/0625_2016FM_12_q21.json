@@ -51,9 +51,9 @@
   {
    "page": 10,
    "bbox": [
-    69.3,
-    647.2,
-    305.4,
+    69.0,
+    647.0,
+    305.5,
     758.5
    ],
    "id": "0625_2016FM_12_q21_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-FM/p12/q21/figures/0625_2016FM_12_q21_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-FM/p12/q21/figures/0625_2016FM_12_q21_figB",
     "url": null,
-    "kb": 25.8
+    "kb": 25.5
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "What happens to the speed and what happens to the wavelength of the wave as it passes through the gap?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "speed",
-     "wavelength"
-    ],
-    [
-     "A",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "B",
-     "decreases",
-     "remains constant"
-    ],
-    [
-     "C",
-     "remains constant",
-     "decreases"
-    ],
-    [
-     "D",
-     "remains constant",
-     "remains constant"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016FM_12_q21_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases remains constant"
+    },
+    {
+     "label": "C",
+     "html": "remains constant decreases"
+    },
+    {
+     "label": "D",
+     "html": "remains constant remains constant"
+    }
+   ]
   }
  ]
 }

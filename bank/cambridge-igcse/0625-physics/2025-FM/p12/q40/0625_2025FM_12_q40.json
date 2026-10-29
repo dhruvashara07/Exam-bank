@@ -34,8 +34,8 @@
    "bbox": [
     167.2,
     338.0,
-    429.3,
-    450.4
+    428.0,
+    450.5
    ],
    "id": "0625_2025FM_12_q40_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-FM/p12/q40/figures/0625_2025FM_12_q40_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-FM/p12/q40/figures/0625_2025FM_12_q40_figA",
     "url": null,
-    "kb": 504.9
+    "kb": 505.0
    }
   },
   {
    "page": 14,
    "bbox": [
-    67.7,
-    495.4,
-    439.2,
-    606.7
+    67.5,
+    495.0,
+    439.5,
+    607.0
    ],
    "id": "0625_2025FM_12_q40_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-FM/p12/q40/figures/0625_2025FM_12_q40_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-FM/p12/q40/figures/0625_2025FM_12_q40_figB",
     "url": null,
-    "kb": 33.7
+    "kb": 33.5
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row identifies and explains the correct season in the northern hemisphere on the Earth in position 1?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "season",
-     "explanation"
-    ],
-    [
-     "<b>A</b>",
-     "summer",
-     "the northern hemisphere tilts away from the Sun"
-    ],
-    [
-     "<b>B</b>",
-     "summer",
-     "the northern hemisphere tilts towards the Sun"
-    ],
-    [
-     "<b>C</b>",
-     "winter",
-     "the northern hemisphere tilts away from the Sun"
-    ],
-    [
-     "<b>D</b>",
-     "winter",
-     "the northern hemisphere tilts towards the Sun"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025FM_12_q40_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "summer the northern hemisphere tilts away from the Sun"
+    },
+    {
+     "label": "B",
+     "html": "summer the northern hemisphere tilts towards the Sun"
+    },
+    {
+     "label": "C",
+     "html": "winter the northern hemisphere tilts away from the Sun"
+    },
+    {
+     "label": "D",
+     "html": "winter the northern hemisphere tilts towards the Sun"
+    }
+   ]
   }
  ]
 }

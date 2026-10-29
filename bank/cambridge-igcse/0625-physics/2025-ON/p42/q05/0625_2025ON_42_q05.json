@@ -180,7 +180,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "Explanation",
+       "prefix": "Statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -294,5 +303,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 6,
    "bbox": [
-    180.1,
-    115.7,
-    415.1,
-    330.4
+    179.5,
+    117.5,
+    415.5,
+    330.5
    ],
    "id": "0625_2015MJ_62_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 6,
    "bbox": [
-    135.5,
-    379.3,
-    459.7,
-    517.8
+    135.0,
+    378.5,
+    460.5,
+    518.0
    ],
    "id": "0625_2015MJ_62_q03a_fig3-2",
    "part": "(a)",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p62/q03/figures/0625_2015MJ_62_q03a_fig3-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p62/q03/figures/0625_2015MJ_62_q03a_fig3-2",
     "url": null,
-    "kb": 35.7
+    "kb": 35.6
    }
   },
   {
    "caption": "Fig. 3.3",
    "page": 6,
    "bbox": [
-    135.5,
-    379.3,
-    459.7,
-    517.8
+    135.0,
+    378.5,
+    460.5,
+    518.0
    ],
    "id": "0625_2015MJ_62_q03a_fig3-3",
    "part": "(a)",
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p62/q03/figures/0625_2015MJ_62_q03a_fig3-3.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p62/q03/figures/0625_2015MJ_62_q03a_fig3-3",
     "url": null,
-    "kb": 35.7
+    "kb": 35.6
    }
   }
  ],
@@ -188,6 +188,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "VP ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "IP ="
       },
       {
@@ -255,8 +260,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>P</sub> of the lamp filaments using the equation <i>R</i><sub>P</sub> = \\(\\frac{<i>V</i><sub>P</sub>}{I<sub>P</sub>}\\).",
-       "text": "Calculate the resistance RP of the lamp filaments using the equation RP = (VP)/(IP)."
+       "html": "Calculate the resistance <i>R</i><sub>P</sub> of the lamp filaments using the equation <i>R</i><sub>P</sub> = \\(\\frac{V_{P}}{I_{P}}\\) .",
+       "text": "Calculate the resistance RP of the lamp filaments using the equation RP = (VP)/(IP) ."
       },
       {
        "type": "answer",
@@ -444,14 +449,24 @@
      "text": "2.5 V"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "VS ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "IS ="
+    },
+    {
      "type": "text",
      "html": "0.22 A",
      "text": "0.22 A"
     },
     {
      "type": "text",
-     "html": "Calculate the resistance <i>R</i><sub>S</sub> of the lamp filaments using the equation <i>R</i><sub>S</sub> = \\(\\frac{<i>V</i><sub>S</sub>}{I<sub>S</sub>}\\).",
-     "text": "Calculate the resistance RS of the lamp filaments using the equation RS = (VS)/(IS)."
+     "html": "Calculate the resistance <i>R</i><sub>S</sub> of the lamp filaments using the equation <i>R</i><sub>S</sub> = \\(\\frac{V_{S}}{I_{S}}\\) .",
+     "text": "Calculate the resistance RS of the lamp filaments using the equation RS = (VS)/(IS) ."
     },
     {
      "type": "answer",
@@ -642,6 +657,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

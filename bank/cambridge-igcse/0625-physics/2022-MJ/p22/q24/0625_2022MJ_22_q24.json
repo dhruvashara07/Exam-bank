@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    413.8,
+    67.5,
+    413.5,
     407.0,
-    538.7
+    539.0
    ],
    "id": "0625_2022MJ_22_q24_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p22/q24/figures/0625_2022MJ_22_q24_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p22/q24/figures/0625_2022MJ_22_q24_figA",
     "url": null,
-    "kb": 31.5
+    "kb": 31.4
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "An object is placed in front of a converging lens of focal length 15cm.",
-   "text": "An object is placed in front of a converging lens of focal length 15cm."
+   "html": "An object is placed in front of a converging lens of focal length 15 cm.",
+   "text": "An object is placed in front of a converging lens of focal length 15 cm."
   },
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row describes the image of the object?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "distance of object from lens/cm",
-     "nature of the image"
-    ],
-    [
-     "<b>A</b>",
-     "40",
-     "real, upright, diminished"
-    ],
-    [
-     "<b>B</b>",
-     "30",
-     "virtual, inverted, enlarged"
-    ],
-    [
-     "<b>C</b>",
-     "20",
-     "real, inverted, diminished"
-    ],
-    [
-     "<b>D</b>",
-     "10",
-     "virtual, upright, enlarged"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_22_q24_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "40 real, upright, diminished"
+    },
+    {
+     "label": "B",
+     "html": "30 virtual, inverted, enlarged"
+    },
+    {
+     "label": "C",
+     "html": "20 real, inverted, diminished"
+    },
+    {
+     "label": "D",
+     "html": "10 virtual, upright, enlarged"
+    }
+   ]
   }
  ]
 }

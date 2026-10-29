@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.9,
-    74.1,
-    509.5,
-    252.6
+    84.5,
+    99.4,
+    510.0,
+    275.0
    ],
    "id": "0625_2015ON_12_q12_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p12/q12/figures/0625_2015ON_12_q12_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p12/q12/figures/0625_2015ON_12_q12_figA",
     "url": null,
-    "kb": 95.9
+    "kb": 92.5
    }
   },
   {
    "page": 6,
    "bbox": [
-    67.6,
-    308.4,
+    67.5,
+    308.0,
     230.0,
-    419.7
+    420.0
    ],
    "id": "0625_2015ON_12_q12_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p12/q12/figures/0625_2015ON_12_q12_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p12/q12/figures/0625_2015ON_12_q12_figB",
     "url": null,
-    "kb": 18.8
+    "kb": 18.7
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The diagrams represent the molecules in two different states of matter. The arrows show the",
-   "text": "The diagrams represent the molecules in two different states of matter. The arrows show the"
+   "html": "The diagrams represent the molecules in two different states of matter. The arrows show the motion of the molecules.",
+   "text": "The diagrams represent the molecules in two different states of matter. The arrows show the motion of the molecules."
   },
   {
    "type": "figure",
@@ -122,44 +123,34 @@
   },
   {
    "type": "text",
-   "html": "state 1 state 2",
-   "text": "state 1 state 2"
-  },
-  {
-   "type": "text",
    "html": "What is state 1, and what is state 2?",
    "text": "What is state 1, and what is state 2?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "state 1",
-     "state 2"
-    ],
-    [
-     "A",
-     "gas",
-     "liquid"
-    ],
-    [
-     "B",
-     "gas",
-     "solid"
-    ],
-    [
-     "C",
-     "liquid",
-     "gas"
-    ],
-    [
-     "D",
-     "liquid",
-     "solid"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015ON_12_q12_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "gas liquid"
+    },
+    {
+     "label": "B",
+     "html": "gas solid"
+    },
+    {
+     "label": "C",
+     "html": "liquid gas"
+    },
+    {
+     "label": "D",
+     "html": "liquid solid"
+    }
+   ]
   }
  ]
 }

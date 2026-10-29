@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    390.2,
-    463.7,
-    515.7
+    67.5,
+    390.0,
+    464.0,
+    516.0
    ],
    "id": "0625_2024FM_12_q17_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-FM/p12/q17/figures/0625_2024FM_12_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-FM/p12/q17/figures/0625_2024FM_12_q17_figA",
     "url": null,
-    "kb": 37.2
+    "kb": 37.1
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row gives an example of a longitudinal wave and describes the direction of the vibrations?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "example of a longitudinal wave",
-     "direction of vibrations"
-    ],
-    [
-     "<b>A</b>",
-     "light wave",
-     "at right angles to the direction of propagation"
-    ],
-    [
-     "<b>B</b>",
-     "Iight wave",
-     "parallel to the direction of propagation"
-    ],
-    [
-     "<b>C</b>",
-     "sound wave",
-     "at right angles to the direction of propagation"
-    ],
-    [
-     "<b>D</b>",
-     "sound wave",
-     "parallel to the direction of propagation"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024FM_12_q17_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "light wave at right angles to the direction of propagation"
+    },
+    {
+     "label": "B",
+     "html": "Iight wave parallel to the direction of propagation"
+    },
+    {
+     "label": "C",
+     "html": "sound wave at right angles to the direction of propagation"
+    },
+    {
+     "label": "D",
+     "html": "sound wave parallel to the direction of propagation"
+    }
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    139.8,
-    135.2,
-    455.5,
-    309.3
+    140.5,
+    138.5,
+    455.0,
+    307.5
    ],
    "id": "0625_2020ON_52_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 8,
    "bbox": [
-    169.8,
-    339.6,
+    169.5,
+    343.0,
     425.5,
-    453.4
+    453.5
    ],
    "id": "0625_2020ON_52_q03_table3-1",
    "part": "",
@@ -218,8 +218,13 @@
        "text": "Connect the voltmeter across section BC of the resistance wire. Measure and record the potential difference (p.d.) V1 across section BC. Switch off."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V1 ="
+      },
+      {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>1</sub> of section BC using the equation <i>R</i><sub>1</sub> = \\(\\frac{<i>V</i><sub>1</sub>}{<i>I</i>}\\) . Give your answer to a suitable number of significant figures for this experiment and include the unit.",
+       "html": "Calculate the resistance <i>R</i><sub>1</sub> of section BC using the equation <i>R</i><sub>1</sub> = \\(\\frac{V_{1}}{I}\\) . Give your answer to a suitable number of significant figures for this experiment and include the unit.",
        "text": "Calculate the resistance R1 of section BC using the equation R1 = (V1)/(I) . Give your answer to a suitable number of significant figures for this experiment and include the unit."
       },
       {
@@ -296,8 +301,13 @@
        "text": "Disconnect the voltmeter and its leads from section BC. Connect the voltmeter across section CD. Switch on. Measure and record the potential difference (p.d.) V2 across section CD. Switch off."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V2 ="
+      },
+      {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>2</sub> of section CD using the equation <i>R</i><sub>2</sub> = \\(\\frac{<i>V</i><sub>2</sub>}{<i>I</i>}\\) . Give your answer to a suitable number of significant figures for this experiment and include the unit.",
+       "html": "Calculate the resistance <i>R</i><sub>2</sub> of section CD using the equation <i>R</i><sub>2</sub> = \\(\\frac{V_{2}}{I}\\) . Give your answer to a suitable number of significant figures for this experiment and include the unit.",
        "text": "Calculate the resistance R2 of section CD using the equation R2 = (V2)/(I) . Give your answer to a suitable number of significant figures for this experiment and include the unit."
       },
       {
@@ -376,8 +386,13 @@
        "text": "Disconnect the voltmeter and its leads from section CD. Connect the voltmeter across section DE. Switch on. Measure and record the potential difference (p.d.) V3 across section DE. Switch off."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V3 ="
+      },
+      {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>3</sub> of section DE using the equation <i>R</i><sub>3</sub> = \\(\\frac{<i>V</i><sub>3</sub>}{<i>I</i>}\\) . Give your answer to a suitable number of significant figures for this experiment and include the unit.",
+       "html": "Calculate the resistance <i>R</i><sub>3</sub> of section DE using the equation <i>R</i><sub>3</sub> = \\(\\frac{V_{3}}{I}\\) . Give your answer to a suitable number of significant figures for this experiment and include the unit.",
        "text": "Calculate the resistance R3 of section DE using the equation R3 = (V3)/(I) . Give your answer to a suitable number of significant figures for this experiment and include the unit."
       },
       {
@@ -646,6 +661,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -663,25 +679,9 @@
    "text": "Table 3.1 shows how the samples of wire are connected into the circuit."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "section",
-     "resistance wire"
-    ],
-    [
-     "BC",
-     "one 30 cm piece"
-    ],
-    [
-     "CD",
-     "two 30 cm pieces"
-    ],
-    [
-     "DE",
-     "three 30 cm pieces"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2020ON_52_q03_table3-1",
+   "caption": "Table 3.1"
   }
  ]
 }

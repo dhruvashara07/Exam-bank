@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 11,
    "bbox": [
-    175.4,
-    161.2,
-    419.8,
-    405.4
+    175.0,
+    164.5,
+    420.5,
+    404.0
    ],
    "id": "0625_2022ON_53_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 12,
    "bbox": [
-    180.4,
-    362.9,
-    414.9,
-    561.2
+    180.0,
+    366.0,
+    415.5,
+    559.5
    ],
    "id": "0625_2022ON_53_q03b_fig3-2",
    "part": "(b)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 3.3",
    "page": 13,
    "bbox": [
-    180.4,
-    109.2,
-    414.9,
-    311.6
+    180.0,
+    112.5,
+    415.5,
+    310.0
    ],
    "id": "0625_2022ON_53_q03c_fig3-3",
    "part": "(c)",
@@ -167,19 +167,24 @@
        "text": "Measure the potential difference (p.d.) V across the parallel combination of resistors P and Q."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V ="
+      },
+      {
        "type": "text",
        "html": "Measure the current <i>I</i><sub>T</sub> in the circuit.",
        "text": "Measure the current IT in the circuit."
       },
       {
-       "type": "text",
-       "html": "Open the switch.",
-       "text": "Open the switch."
-      },
-      {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "IT ="
+      },
+      {
+       "type": "text",
+       "html": "Open the switch.",
+       "text": "Open the switch."
       },
       {
        "type": "marks",
@@ -246,7 +251,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>PQ</sub> of the parallel combination of resistors P and Q. Use your readings from <b>(a)(i)</b> and the equation <i>R</i><sub>PQ</sub> = \\(\\frac{<i>V</i>}{<i>I</i>}\\).",
+       "html": "Calculate the resistance <i>R</i><sub>PQ</sub> of the parallel combination of resistors P and Q. Use your readings from <b>(a)(i)</b> and the equation <i>R</i><sub>PQ</sub> = \\(\\frac{V}{I}\\).",
        "text": "Calculate the resistance RPQ of the parallel combination of resistors P and Q. Use your readings from (a)(i) and the equation RPQ = (V)/(I)."
       },
       {
@@ -329,8 +334,13 @@
        "text": "Disconnect the voltmeter and reconnect it to measure the potential difference across resistor S. Close the switch. Measure the potential difference VS across resistor S."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "VS ="
+      },
+      {
        "type": "text",
-       "html": "Open the switch. Disconnect the voltmeter from the circuit. Calculate the resistance <i>R</i><sub>S</sub> of resistor S. Use your readings from <b>(a)(i)</b>, <b>(a)(iii)</b> and the equation <i>R</i><sub>S</sub> = \\(\\frac{<i>V</i><sub>S</sub>}{<i>I</i><sub>T</sub>}\\).",
+       "html": "Open the switch. Disconnect the voltmeter from the circuit. Calculate the resistance <i>R</i><sub>S</sub> of resistor S. Use your readings from <b>(a)(i)</b>, <b>(a)(iii)</b> and the equation <i>R</i><sub>S</sub> = \\(\\frac{V_{S}}{I_{T}}\\).",
        "text": "Open the switch. Disconnect the voltmeter from the circuit. Calculate the resistance RS of resistor S. Use your readings from (a)(i), (a)(iii) and the equation RS = (VS)/(IT)."
       },
       {
@@ -420,14 +430,14 @@
      "text": "Close the switch. Measure the current IP in resistor P."
     },
     {
-     "type": "text",
-     "html": "Open the switch.",
-     "text": "Open the switch."
-    },
-    {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "IP ="
+    },
+    {
+     "type": "text",
+     "html": "Open the switch.",
+     "text": "Open the switch."
     },
     {
      "type": "marks",
@@ -509,14 +519,14 @@
      "text": "Close the switch. Measure the current IQ in resistor Q."
     },
     {
-     "type": "text",
-     "html": "Open the switch.",
-     "text": "Open the switch."
-    },
-    {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "IQ ="
+    },
+    {
+     "type": "text",
+     "html": "Open the switch.",
+     "text": "Open the switch."
     },
     {
      "type": "marks",
@@ -589,7 +599,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -781,6 +800,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

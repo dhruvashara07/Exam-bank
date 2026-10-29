@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    140.6,
-    165.8,
-    457.4,
-    510.4
+    141.5,
+    165.0,
+    458.0,
+    509.0
    ],
    "id": "0625_2022FM_62_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2",
    "page": 2,
    "bbox": [
-    140.6,
-    165.8,
-    457.4,
-    510.4
+    141.5,
+    165.0,
+    458.0,
+    509.0
    ],
    "id": "0625_2022FM_62_q01_fig1-2",
    "part": "",
@@ -71,10 +71,10 @@
    "caption": "Fig. 1.3",
    "page": 3,
    "bbox": [
-    62.3,
-    102.8,
-    525.5,
-    311.6
+    63.0,
+    102.5,
+    525.0,
+    310.0
    ],
    "id": "0625_2022FM_62_q01b_fig1-3",
    "part": "(b)",
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-FM/p62/q01/figures/0625_2022FM_62_q01b_fig1-3.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-FM/p62/q01/figures/0625_2022FM_62_q01b_fig1-3",
     "url": null,
-    "kb": 64.9
+    "kb": 64.6
    }
   },
   {
@@ -91,9 +91,9 @@
    "page": 4,
    "bbox": [
     235.0,
-    136.0,
-    360.3,
-    306.9
+    139.5,
+    360.5,
+    307.0
    ],
    "id": "0625_2022FM_62_q01c_table1-1",
    "part": "(c)",
@@ -102,7 +102,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-FM/p62/q01/figures/0625_2022FM_62_q01c_table1-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-FM/p62/q01/figures/0625_2022FM_62_q01c_table1-1",
     "url": null,
-    "kb": 22.1
+    "kb": 22.0
    }
   }
  ],
@@ -173,6 +173,12 @@
      "type": "text",
      "html": "On Fig. 1.1, measure the length <i>l</i><sub>0</sub> of the spring without any load.",
      "text": "On Fig. 1.1, measure the length l0 of the spring without any load."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "l0 =",
+     "unit": "cm"
     },
     {
      "type": "text",
@@ -257,74 +263,6 @@
      "type": "figure",
      "id": "0625_2022FM_62_q01b_fig1-3",
      "caption": "Fig. 1.3"
-    },
-    {
-     "type": "table",
-     "rows": [
-      [
-       "",
-       "<i>l</i>",
-       "",
-       "",
-       "",
-       "",
-       ""
-      ],
-      [
-       "",
-       "metre rule",
-       "",
-       "",
-       "",
-       "",
-       ""
-      ],
-      [
-       "",
-       "<i>d</i>",
-       "",
-       "",
-       "",
-       "",
-       ""
-      ],
-      [
-       "",
-       "load W",
-       "",
-       "",
-       "",
-       "",
-       ""
-      ],
-      [
-       "",
-       "",
-       "",
-       "",
-       "",
-       "",
-       ""
-      ],
-      [
-       "",
-       "",
-       "",
-       "",
-       "",
-       "",
-       ""
-      ],
-      [
-       "",
-       "",
-       "",
-       "",
-       "",
-       "",
-       ""
-      ]
-     ]
     },
     {
      "type": "text",
@@ -590,7 +528,7 @@
       },
       {
        "type": "text",
-       "html": "<i>W</i><sub>R</sub> = \\(\\frac{2(<i>L</i> – <i>l</i><sub>0</sub>)}{(<i>l</i>– <i>l</i>)}\\) × <i>k</i>",
+       "html": "<i>W</i><sub>R</sub> = \\(\\frac{2(L – l_{0})}{(l – l )}\\) × <i>k</i>",
        "text": "WR = (2(L – l0))/((l– l)) × k"
       },
       {
@@ -623,33 +561,9 @@
      "text": "The student moves load W to distances d = 20.0 cm, d = 30.0 cm, d = 40.0 cm, d = 50.0 cm and d = 60.0 cm from the pivot. She reads the length l of the spring for each value of d. Her readings are shown in Table 1.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>d</i> / cm",
-       "<i>l</i> / cm"
-      ],
-      [
-       "20.0",
-       "6.2"
-      ],
-      [
-       "30.0",
-       "7.1"
-      ],
-      [
-       "40.0",
-       "7.6"
-      ],
-      [
-       "50.0",
-       "8.3"
-      ],
-      [
-       "60.0",
-       "9.0"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2022FM_62_q01c_table1-1",
+     "caption": "Table 1.1"
     }
    ]
   },
@@ -831,6 +745,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

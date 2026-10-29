@@ -33,10 +33,10 @@
    "caption": "Fig. 4.1",
    "page": 6,
    "bbox": [
-    109.0,
-    96.1,
-    486.1,
-    245.5
+    109.5,
+    95.5,
+    486.0,
+    246.0
    ],
    "id": "0625_2024MJ_32_q04_fig4-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 4.2",
    "page": 6,
    "bbox": [
-    148.3,
-    453.5,
-    446.9,
-    628.2
+    148.0,
+    453.0,
+    447.0,
+    628.5
    ],
    "id": "0625_2024MJ_32_q04b_fig4-2",
    "part": "(b)",
@@ -145,7 +145,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "1"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "2"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -399,7 +408,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "disadvantage",
+       "prefix": "advantage"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "disadvantage"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -441,6 +459,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

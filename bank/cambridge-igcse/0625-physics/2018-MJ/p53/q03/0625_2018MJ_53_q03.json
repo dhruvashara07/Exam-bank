@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    69.8,
-    108.2,
-    525.5,
-    232.5
+    69.5,
+    112.5,
+    525.0,
+    229.5
    ],
    "id": "0625_2018MJ_53_q03_fig3-1",
    "part": "",
@@ -52,9 +52,9 @@
    "caption": "Table 3.1",
    "page": 8,
    "bbox": [
-    188.2,
-    403.5,
-    407.1,
+    188.0,
+    408.0,
+    407.0,
     605.5
    ],
    "id": "0625_2018MJ_53_q03a_table3-1",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p53/q03/figures/0625_2018MJ_53_q03a_table3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p53/q03/figures/0625_2018MJ_53_q03a_table3-1",
     "url": null,
-    "kb": 20.8
+    "kb": 20.7
    }
   }
  ],
@@ -134,7 +134,18 @@
     {
      "type": "list",
      "items": [
-      "Measure and record the height <i>h</i><sub>o</sub> of the triangular object.",
+      "Measure and record the height <i>h</i><sub>o</sub> of the triangular object."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "ho =",
+     "unit": "cm"
+    },
+    {
+     "type": "list",
+     "items": [
       "Switch on the lamp.",
       "Set the distance between the triangular object and the lens, <i>u</i>, to 30.0 cm. Move the screen until a clear focused image of the triangular object is seen."
      ]
@@ -152,45 +163,9 @@
      ]
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>u</i> / cm",
-       "<i>h</i><sub>I</sub> / cm",
-       "<i>N</i>"
-      ],
-      [
-       "30.0",
-       "",
-       ""
-      ],
-      [
-       "35.0",
-       "",
-       ""
-      ],
-      [
-       "40.0",
-       "",
-       ""
-      ],
-      [
-       "45.0",
-       "",
-       ""
-      ],
-      [
-       "50.0",
-       "",
-       ""
-      ]
-     ]
-    },
-    {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "ho =",
-     "unit": "cm"
+     "type": "figure",
+     "id": "0625_2018MJ_53_q03a_table3-1",
+     "caption": "Table 3.1"
     },
     {
      "type": "marks",
@@ -257,7 +232,7 @@
    "content": [
     {
      "type": "text",
-     "html": "For each distance <i>u</i>, calculate, and record in the table, a value <i>N</i> using your results from <b>(a) </b> and the equation <i>N</i> = \\(\\frac{<i>h</i><sub>o</sub>}{<i>h</i>}\\).",
+     "html": "For each distance <i>u</i>, calculate, and record in the table, a value <i>N</i> using your results from <b>(a) </b> and the equation <i>N</i> = \\(\\frac{h_{o}}{h}\\).",
      "text": "For each distance u, calculate, and record in the table, a value N using your results from (a) and the equation N = (ho)/(h)."
     },
     {
@@ -487,7 +462,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "improvement",
+     "prefix": "difficulty"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "improvement"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -514,6 +498,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

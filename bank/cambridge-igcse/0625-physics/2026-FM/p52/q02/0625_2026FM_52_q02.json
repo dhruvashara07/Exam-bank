@@ -33,10 +33,10 @@
    "caption": "Figure 2.1",
    "page": 4,
    "bbox": [
-    69.3,
-    111.2,
-    321.7,
-    350.3
+    69.5,
+    110.5,
+    321.0,
+    350.5
    ],
    "id": "0625_2026FM_52_q02_fig2-1",
    "part": "",
@@ -53,9 +53,9 @@
    "page": 6,
    "bbox": [
     92.0,
-    139.6,
+    140.5,
     371.5,
-    362.4
+    363.0
    ],
    "id": "0625_2026FM_52_q02b_table2-1",
    "part": "(b)",
@@ -156,6 +156,10 @@
        "kind": "answer_line",
        "prefix": "l0",
        "unit": "mm"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -311,7 +315,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "2",
+       "prefix": "1"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "2"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -384,47 +397,17 @@
     {
      "type": "list",
      "items": [
-      "Suspend a load L = 1.0N from the spring.",
+      "Suspend a load L = 1.0 N from the spring.",
       "Record the new length l of the spring in Table 2.1.",
       "Calculate the extension x of the spring using the equation x = l – l<sub>0</sub>.",
       "Record the value of x in Table 2.1.",
-      "Repeat the procedure using loads L = 2.0N, 3.0N, 4.0N and 5.0N."
+      "Repeat the procedure using loads L = 2.0 N, 3.0 N, 4.0 N and 5.0 N."
      ]
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "L/N",
-       "l/mm",
-       "x/mm"
-      ],
-      [
-       "1.0",
-       "",
-       ""
-      ],
-      [
-       "2.0",
-       "",
-       ""
-      ],
-      [
-       "3.0",
-       "",
-       ""
-      ],
-      [
-       "4.0",
-       "",
-       ""
-      ],
-      [
-       "5.0",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2026FM_52_q02b_table2-1",
+     "caption": "Table 2.1"
     },
     {
      "type": "marks",
@@ -500,8 +483,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Plot a graph of L/N (y-axis) against x/mm (x-axis).",
-       "text": "Plot a graph of L/N (y-axis) against x/mm (x-axis)."
+       "html": "Plot a graph of L / N (y-axis) against x / mm (x-axis).",
+       "text": "Plot a graph of L / N (y-axis) against x / mm (x-axis)."
       },
       {
        "type": "text",
@@ -618,6 +601,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

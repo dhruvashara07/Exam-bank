@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    170.6,
-    160.2,
-    424.7,
-    354.2
+    170.5,
+    164.5,
+    425.0,
+    351.5
    ],
    "id": "0625_2018MJ_53_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 5,
    "bbox": [
-    96.1,
-    512.2,
-    499.2,
-    657.4
+    96.0,
+    517.0,
+    499.5,
+    657.5
    ],
    "id": "0625_2018MJ_53_q02a_table2-1",
    "part": "(a)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p53/q02/figures/0625_2018MJ_53_q02a_table2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p53/q02/figures/0625_2018MJ_53_q02a_table2-1",
     "url": null,
-    "kb": 22.2
+    "kb": 22.1
    }
   }
  ],
@@ -151,33 +151,9 @@
      ]
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "Resistor",
-       "<i>R</i> / Ω",
-       "<i>I</i> /",
-       "<i>V</i> /"
-      ],
-      [
-       "<b>X</b>",
-       "1",
-       "",
-       ""
-      ],
-      [
-       "<b>Y</b>",
-       "3",
-       "",
-       ""
-      ],
-      [
-       "<b>Z</b>",
-       "10",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2018MJ_53_q02a_table2-1",
+     "caption": "Table 2.1"
     },
     {
      "type": "marks",
@@ -318,10 +294,19 @@
      "text": "Calculate the power P supplied to each of the resistors X, Y and Z. Use your readings from (a) and the equation P = I × V. Give your answers to a suitable number of significant figures."
     },
     {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "Power P supplied to resistor Z =",
-     "unit": "W"
+     "type": "text",
+     "html": "Power <i>P</i> supplied to resistor <b>X</b> = …… W",
+     "text": "Power P supplied to resistor X = …… W"
+    },
+    {
+     "type": "text",
+     "html": "Power <i>P</i> supplied to resistor <b>Y</b> = …… W",
+     "text": "Power P supplied to resistor Y = …… W"
+    },
+    {
+     "type": "text",
+     "html": "Power <i>P</i> supplied to resistor <b>Z</b> = …… W",
+     "text": "Power P supplied to resistor Z = …… W"
     },
     {
      "type": "marks",
@@ -468,7 +453,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -495,6 +489,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

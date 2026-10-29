@@ -32,10 +32,10 @@
   {
    "page": 12,
    "bbox": [
-    194.2,
+    194.0,
     359.4,
-    400.8,
-    482.7
+    401.0,
+    483.5
    ],
    "id": "0625_2020MJ_11_q23_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 12,
    "bbox": [
-    67.7,
+    67.5,
     515.5,
-    357.7,
-    640.9
+    358.0,
+    641.0
    ],
    "id": "0625_2020MJ_11_q23_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p11/q23/figures/0625_2020MJ_11_q23_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p11/q23/figures/0625_2020MJ_11_q23_figB",
     "url": null,
-    "kb": 30.0
+    "kb": 29.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row correctly describes what is happening at the glass-air interface?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "angle of incidence at the interface",
-     "observation"
-    ],
-    [
-     "<b>A</b>",
-     "30°",
-     "some internal reflection"
-    ],
-    [
-     "<b>B</b>",
-     "30°",
-     "total internal reflection"
-    ],
-    [
-     "<b>C</b>",
-     "60°",
-     "some internal reflection"
-    ],
-    [
-     "<b>D</b>",
-     "60°",
-     "total internal reflection"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020MJ_11_q23_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "30° some internal reflection"
+    },
+    {
+     "label": "B",
+     "html": "30° total internal reflection"
+    },
+    {
+     "label": "C",
+     "html": "60° some internal reflection"
+    },
+    {
+     "label": "D",
+     "html": "60° total internal reflection"
+    }
+   ]
   }
  ]
 }

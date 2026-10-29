@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 6,
    "bbox": [
-    174.9,
-    111.4,
-    420.0,
-    370.7
+    175.5,
+    111.5,
+    420.5,
+    371.0
    ],
    "id": "0625_2016MJ_53_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 7,
    "bbox": [
-    71.6,
-    62.3,
-    523.6,
-    282.3
+    71.5,
+    62.0,
+    523.5,
+    282.5
    ],
    "id": "0625_2016MJ_53_q02a_table2-1",
    "part": "(a)",
@@ -180,63 +180,9 @@
      ]
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "",
-       "beaker <b>A</b>",
-       "beaker <b>B</b>",
-       "beaker <b>C</b>"
-      ],
-      [
-       "",
-       "insulation and lid",
-       "insulation, no lid",
-       "lid, no insulation"
-      ],
-      [
-       "<i>t</i> / s",
-       "θ /",
-       "θ /",
-       "θ /"
-      ],
-      [
-       "0",
-       "",
-       "",
-       ""
-      ],
-      [
-       "30",
-       "",
-       "",
-       ""
-      ],
-      [
-       "60",
-       "",
-       "",
-       ""
-      ],
-      [
-       "90",
-       "",
-       "",
-       ""
-      ],
-      [
-       "120",
-       "",
-       "",
-       ""
-      ],
-      [
-       "150",
-       "",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2016MJ_53_q02a_table2-1",
+     "caption": "Table 2.1"
     },
     {
      "type": "marks",
@@ -547,7 +493,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -648,6 +603,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

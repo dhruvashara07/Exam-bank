@@ -87,7 +87,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "greatest expansion"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "least expansion"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -160,7 +169,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "gases",
+       "prefix": "solids"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "gases"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -347,5 +365,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

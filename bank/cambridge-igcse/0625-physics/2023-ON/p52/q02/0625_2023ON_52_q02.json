@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    107.3,
-    111.3,
-    488.0,
-    317.5
+    108.0,
+    110.5,
+    487.5,
+    316.0
    ],
    "id": "0625_2023ON_52_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 5,
    "bbox": [
-    132.6,
-    58.0,
-    462.7,
-    224.9
+    132.5,
+    61.5,
+    463.0,
+    225.0
    ],
    "id": "0625_2023ON_52_q02b_table2-1",
    "part": "(b)",
@@ -132,13 +132,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Close the switch.",
-     "text": "Close the switch."
-    },
-    {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "Measure the current I in the circuit. I ="
+     "html": "Close the switch. Measure the current <i>I</i> in the circuit. <i>I</i> = ……",
+     "text": "Close the switch. Measure the current I in the circuit. I = ……"
     },
     {
      "type": "marks",
@@ -236,7 +231,7 @@
     },
     {
      "type": "text",
-     "html": "<i>R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\)",
+     "html": "<i>R</i> = \\(\\frac{V}{I}\\)",
      "text": "R = (V)/(I)"
     },
     {
@@ -245,39 +240,9 @@
      "text": "where I is the current recorded in (a). Close the switch. Repeat the procedure using l = 20.0 cm, 30.0 cm, 40.0 cm and 50.0 cm. Open the switch."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>l</i> / cm",
-       "<i>V</i> / V",
-       "<i>R</i> / Ω"
-      ],
-      [
-       "10.0",
-       "",
-       ""
-      ],
-      [
-       "20.0",
-       "",
-       ""
-      ],
-      [
-       "30.0",
-       "",
-       ""
-      ],
-      [
-       "40.0",
-       "",
-       ""
-      ],
-      [
-       "50.0",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2023ON_52_q02b_table2-1",
+     "caption": "Table 2.1"
     },
     {
      "type": "marks",
@@ -458,6 +423,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

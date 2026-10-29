@@ -10,9 +10,9 @@
    "page": 16,
    "bbox": [
     131.0,
-    85.9,
-    463.7,
-    191.6
+    85.5,
+    464.5,
+    192.0
    ],
    "id": "0625_2016FM_42_q11ai_fig11-1",
    "part": "(a)(i)",
@@ -28,9 +28,9 @@
    "caption": "Fig. 11.2",
    "page": 16,
    "bbox": [
-    134.3,
-    251.0,
-    460.4,
+    134.5,
+    250.5,
+    461.0,
     358.5
    ],
    "id": "0625_2016FM_42_q11aii_fig11-2",
@@ -47,10 +47,10 @@
    "caption": "Fig. 11.3",
    "page": 16,
    "bbox": [
-    193.8,
-    417.9,
+    194.0,
+    417.0,
     401.5,
-    582.2
+    582.5
    ],
    "id": "0625_2016FM_42_q11b_fig11-3",
    "part": "(b)",
@@ -59,7 +59,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-FM/p42/q11/figures/0625_2016FM_42_q11b_fig11-3.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-FM/p42/q11/figures/0625_2016FM_42_q11b_fig11-3",
     "url": null,
-    "kb": 7.2
+    "kb": 7.1
    }
   }
  ],
@@ -119,39 +119,13 @@
        "caption": "Fig. 11.1"
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "input A",
-         "input B",
-         "output"
-        ],
-        [
-         "0",
-         "0",
-         "0"
-        ],
-        [
-         "1",
-         "0",
-         "0"
-        ],
-        [
-         "0",
-         "1",
-         "0"
-        ],
-        [
-         "1",
-         "1",
-         "1"
-        ]
-       ]
+       "type": "text",
+       "html": "State the name of this logic gate. ……",
+       "text": "State the name of this logic gate. ……"
       },
       {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "State the name of this logic gate."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -200,36 +174,6 @@
        "type": "figure",
        "id": "0625_2016FM_42_q11aii_fig11-2",
        "caption": "Fig. 11.2"
-      },
-      {
-       "type": "table",
-       "rows": [
-        [
-         "input A",
-         "input B",
-         "output"
-        ],
-        [
-         "0",
-         "0",
-         ""
-        ],
-        [
-         "1",
-         "0",
-         ""
-        ],
-        [
-         "0",
-         "1",
-         ""
-        ],
-        [
-         "1",
-         "1",
-         ""
-        ]
-       ]
       },
       {
        "type": "marks",
@@ -413,5 +357,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

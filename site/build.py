@@ -16,6 +16,7 @@ import argparse, glob, json, os, shutil, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, '..', 'pipeline'))
 import paths
+import batch as batches
 
 REPO = os.environ.get('GITHUB_REPOSITORY', 'dhruvashara07/Exam-bank')
 
@@ -39,6 +40,7 @@ def main():
     queue = json.load(open(os.path.join(paths.ROOT, 'review', 'queue.json'))) \
         if os.path.exists(os.path.join(paths.ROOT, 'review', 'queue.json')) else []
     rows = []
+    index, published, rounds = batches.papers_index(), batches.load_json(paths.PUBLISHED, {}), batches.open_round_items()
     for pj in paths.paper_files():
         meta = json.load(open(pj))
         pid = paths.paper_id(meta)
@@ -49,6 +51,9 @@ def main():
             qs.append(q)
         ap_ = approvals.get(pid)
         paper_flags = [x for x in queue if x['id'] == pid]
+        chk = batches.load_json(os.path.join(paths.CHECKS, pid + '.json'), None)
+        claude = batches.load_json(os.path.join(paths.CLAUDE_CHECKS, pid + '.json'), None)
+        stage = batches.stage_of(pid, index, approvals, published, rounds)
         rows.append({
             'id': pid, 'code': meta['paper_code'], 'year': meta['year'], 'session': meta['session'],
             'paper': meta['paper'], 'variant': meta['variant'], 'type': meta.get('paper_type'),
@@ -56,19 +61,26 @@ def main():
             'total': meta.get('total_marks'), 'ms': meta.get('mark_scheme') != 'missing',
             'erratum': bool(meta.get('erratum')),
             'status': 'approved' if ap_ else 'pending',
+            'stage': stage,
+            'problems': len(chk['problems']) if chk else None,
+            'text_min': chk.get('text_score_min') if chk else None,
             'approved_at': ap_.get('at') if ap_ else None,
             'flagged': sum(1 for q in qs if flags(q)) + len(paper_flags),
         })
         with open(os.path.join(out, 'data', 'p', pid + '.json'), 'w') as f:
-            json.dump({'meta': meta, 'approval': ap_, 'paper_flags': paper_flags, 'questions': qs},
+            json.dump({'meta': meta, 'approval': ap_, 'paper_flags': paper_flags, 'questions': qs,
+                       'stage': stage, 'checks': chk, 'claude': claude},
                       f, ensure_ascii=False, separators=(',', ':'))
     rows.sort(key=lambda r: (-r['year'], r['session'], r['code']))
     with open(os.path.join(out, 'data', 'papers.json'), 'w') as f:
         json.dump(rows, f, separators=(',', ':'))
+    with open(os.path.join(out, 'data', 'batches.json'), 'w') as f:
+        json.dump([{k: v for k, v in b.items()} for b in batches.all_batches()], f, separators=(',', ':'))
     with open(os.path.join(out, 'data', 'queue.json'), 'w') as f:
         json.dump(queue, f, ensure_ascii=False, separators=(',', ':'))
     with open(os.path.join(out, 'config.js'), 'w') as f:
-        f.write('window.BANK = ' + json.dumps({'img': img, 'repo': REPO}) + ';\n')
+        portal = batches.load_json(os.path.join(paths.ROOT, 'review', 'portal.json'), {})
+        f.write('window.BANK = ' + json.dumps({'img': img, 'repo': REPO, 'review': portal.get('review_url')}) + ';\n')
     shutil.copy(os.path.join(HERE, 'index.html'), os.path.join(out, 'index.html'))
     open(os.path.join(out, '.nojekyll'), 'w').close()
     print(f'{len(rows)} papers, {sum(r["questions"] for r in rows)} questions -> {out}')

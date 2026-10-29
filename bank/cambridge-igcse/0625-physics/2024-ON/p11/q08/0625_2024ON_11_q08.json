@@ -32,10 +32,10 @@
   {
    "page": 4,
    "bbox": [
-    237.1,
-    352.4,
+    236.5,
+    352.0,
     358.6,
-    486.9
+    487.5
    ],
    "id": "0625_2024ON_11_q08_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
+    67.5,
     532.0,
-    283.1,
-    671.8
+    283.5,
+    672.0
    ],
    "id": "0625_2024ON_11_q08_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p11/q08/figures/0625_2024ON_11_q08_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p11/q08/figures/0625_2024ON_11_q08_figB",
     "url": null,
-    "kb": 19.4
+    "kb": 19.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,45 +127,30 @@
    "text": "Which row indicates what happens to the steel sphere and what happens to the oil as the steel sphere falls?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "the steel sphere",
-     "the oil"
-    ],
-    [
-     "",
-     "becomes",
-     "becomes"
-    ],
-    [
-     "",
-     "warmer",
-     "warmer"
-    ],
-    [
-     "<b>A</b>",
-     "yes",
-     "yes"
-    ],
-    [
-     "<b>B</b>",
-     "yes",
-     "no"
-    ],
-    [
-     "<b>C</b>",
-     "no",
-     "yes"
-    ],
-    [
-     "<b>D</b>",
-     "no",
-     "no"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_11_q08_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "yes yes"
+    },
+    {
+     "label": "B",
+     "html": "yes no"
+    },
+    {
+     "label": "C",
+     "html": "no yes"
+    },
+    {
+     "label": "D",
+     "html": "no no"
+    }
+   ]
   }
  ]
 }

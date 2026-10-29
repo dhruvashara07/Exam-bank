@@ -32,9 +32,9 @@
   {
    "page": 6,
    "bbox": [
-    67.9,
-    432.7,
-    447.8,
+    146.5,
+    458.5,
+    448.0,
     574.4
    ],
    "id": "0625_2017ON_13_q10_figA",
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p13/q10/figures/0625_2017ON_13_q10_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p13/q10/figures/0625_2017ON_13_q10_figA",
     "url": null,
-    "kb": 16.5
+    "kb": 11.2
    }
   },
   {
    "page": 6,
    "bbox": [
-    67.7,
-    620.3,
-    292.2,
-    745.8
+    67.5,
+    620.0,
+    292.5,
+    746.0
    ],
    "id": "0625_2017ON_13_q10_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p13/q10/figures/0625_2017ON_13_q10_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p13/q10/figures/0625_2017ON_13_q10_figB",
     "url": null,
-    "kb": 24.9
+    "kb": 24.8
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A toy car without a motor is moving at high speed along a track. The toy car follows a vertical",
-   "text": "A toy car without a motor is moving at high speed along a track. The toy car follows a vertical"
+   "html": "A toy car without a motor is moving at high speed along a track. The toy car follows a vertical loop as shown.",
+   "text": "A toy car without a motor is moving at high speed along a track. The toy car follows a vertical loop as shown."
   },
   {
    "type": "figure",
@@ -126,35 +127,30 @@
    "text": "Which row describes the changes that are taking place in the kinetic energy and in the gravitational potential energy of the car in the position shown?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "kinetic energy",
-     "gravitational potential energy"
-    ],
-    [
-     "<b>A</b>",
-     "decreasing",
-     "decreasing"
-    ],
-    [
-     "<b>B</b>",
-     "decreasing",
-     "increasing"
-    ],
-    [
-     "<b>C</b>",
-     "increasing",
-     "decreasing"
-    ],
-    [
-     "<b>D</b>",
-     "increasing",
-     "increasing"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017ON_13_q10_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreasing decreasing"
+    },
+    {
+     "label": "B",
+     "html": "decreasing increasing"
+    },
+    {
+     "label": "C",
+     "html": "increasing decreasing"
+    },
+    {
+     "label": "D",
+     "html": "increasing increasing"
+    }
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    148.8,
-    108.2,
-    446.5,
-    307.7
+    148.0,
+    112.5,
+    447.0,
+    305.0
    ],
    "id": "0625_2018MJ_51_q02_fig2-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p51/q02/figures/0625_2018MJ_51_q02_fig2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p51/q02/figures/0625_2018MJ_51_q02_fig2-1",
     "url": null,
-    "kb": 19.1
+    "kb": 19.0
    }
   },
   {
    "caption": "Fig. 2.2",
    "page": 6,
    "bbox": [
-    149.9,
-    186.2,
-    445.4,
-    514.1
+    149.5,
+    190.5,
+    446.0,
+    511.5
    ],
    "id": "0625_2018MJ_51_q02e_fig2-2",
    "part": "(e)",
@@ -150,6 +150,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "V1 ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "I ="
       },
       {
@@ -217,7 +222,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance of the resistor <b>R</b><b><sub>1</sub></b> using the equation <i>R</i><sub>1</sub> = \\(\\frac{<i>V</i><sub>1</sub>}{<i>I</i>}\\).",
+       "html": "Calculate the resistance of the resistor <b>R</b><b><sub>1</sub></b> using the equation <i>R</i><sub>1</sub> = \\(\\frac{V_{1}}{I}\\).",
        "text": "Calculate the resistance of the resistor R1 using the equation R1 = (V1)/(I)."
       },
       {
@@ -393,7 +398,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance of the resistor <b>R</b><b><sub>2</sub></b> using the equation <i>R</i><sub>2</sub> = \\(\\frac{<i>V</i><sub>2</sub>}{<i>I</i>}\\).",
+       "html": "Calculate the resistance of the resistor <b>R</b><b><sub>2</sub></b> using the equation <i>R</i><sub>2</sub> = \\(\\frac{V_{2}}{I}\\).",
        "text": "Calculate the resistance of the resistor R2 using the equation R2 = (V2)/(I)."
       },
       {
@@ -576,7 +581,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance of the resistor <b>R</b><b><sub>3</sub></b> using the equation <i>R</i><sub>3</sub> = \\(\\frac{<i>V</i><sub>3</sub>}{<i>I</i>}\\).",
+       "html": "Calculate the resistance of the resistor <b>R</b><b><sub>3</sub></b> using the equation <i>R</i><sub>3</sub> = \\(\\frac{V_{3}}{I}\\).",
        "text": "Calculate the resistance of the resistor R3 using the equation R3 = (V3)/(I)."
       },
       {
@@ -739,7 +744,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -859,6 +873,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

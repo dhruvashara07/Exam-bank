@@ -32,8 +32,8 @@
   {
    "page": 12,
    "bbox": [
-    69.3,
-    586.6,
+    69.0,
+    586.5,
     327.5,
     698.0
    ],
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p13/q28/figures/0625_2015MJ_13_q28_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p13/q28/figures/0625_2015MJ_13_q28_figA",
     "url": null,
-    "kb": 19.5
+    "kb": 19.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which sample of copper wire has the greatest electrical resistance?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "length of wire/m",
-     "diameter of wire/mm"
-    ],
-    [
-     "A",
-     "1.0",
-     "2.0"
-    ],
-    [
-     "B",
-     "1.0",
-     "4.0"
-    ],
-    [
-     "C",
-     "10",
-     "2.0"
-    ],
-    [
-     "D",
-     "10",
-     "4.0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_13_q28_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "1.0 2.0"
+    },
+    {
+     "label": "B",
+     "html": "1.0 4.0"
+    },
+    {
+     "label": "C",
+     "html": "10 2.0"
+    },
+    {
+     "label": "D",
+     "html": "10 4.0"
+    }
+   ]
   }
  ]
 }

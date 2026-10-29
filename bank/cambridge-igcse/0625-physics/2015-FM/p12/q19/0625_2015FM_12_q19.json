@@ -51,10 +51,10 @@
   {
    "page": 9,
    "bbox": [
-    67.6,
+    67.5,
     304.0,
-    384.6,
-    414.9
+    384.5,
+    415.0
    ],
    "id": "0625_2015FM_12_q19_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-FM/p12/q19/figures/0625_2015FM_12_q19_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-FM/p12/q19/figures/0625_2015FM_12_q19_figB",
     "url": null,
-    "kb": 31.9
+    "kb": 31.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "What is the name of this curving effect, and how can the gap be changed so that the wavefronts do not reach the boat?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "name of effect",
-     "change to the gap"
-    ],
-    [
-     "A",
-     "diffraction",
-     "make the gap slightly bigger"
-    ],
-    [
-     "B",
-     "diffraction",
-     "make the gap slightly smaller"
-    ],
-    [
-     "C",
-     "refraction",
-     "make the gap slightly bigger"
-    ],
-    [
-     "D",
-     "refraction",
-     "make the gap slightly smaller"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015FM_12_q19_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "diffraction make the gap slightly bigger"
+    },
+    {
+     "label": "B",
+     "html": "diffraction make the gap slightly smaller"
+    },
+    {
+     "label": "C",
+     "html": "refraction make the gap slightly bigger"
+    },
+    {
+     "label": "D",
+     "html": "refraction make the gap slightly smaller"
+    }
+   ]
   }
  ]
 }

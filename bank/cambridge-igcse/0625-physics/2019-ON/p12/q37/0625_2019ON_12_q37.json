@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    170.2,
-    386.7,
-    397.0,
-    476.8
+    169.5,
+    386.0,
+    397.5,
+    477.5
    ],
    "id": "0625_2019ON_12_q37_figA",
    "caption": null,
@@ -45,15 +45,15 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p12/q37/figures/0625_2019ON_12_q37_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p12/q37/figures/0625_2019ON_12_q37_figA",
     "url": null,
-    "kb": 8.0
+    "kb": 7.9
    }
   },
   {
    "page": 14,
    "bbox": [
-    64.3,
-    531.7,
-    353.3,
+    64.0,
+    531.5,
+    353.5,
     651.5
    ],
    "id": "0625_2019ON_12_q37_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p12/q37/figures/0625_2019ON_12_q37_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p12/q37/figures/0625_2019ON_12_q37_figB",
     "url": null,
-    "kb": 21.9
+    "kb": 21.7
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,40 +132,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "atom with",
-     "atom with a more"
-    ],
-    [
-     "",
-     "more electrons",
-     "positively charged nucleus"
-    ],
-    [
-     "<b>A</b>",
-     "X",
-     "X"
-    ],
-    [
-     "<b>B</b>",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>C</b>",
-     "Y",
-     "X"
-    ],
-    [
-     "<b>D</b>",
-     "Y",
-     "Y"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019ON_12_q37_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "X X"
+    },
+    {
+     "label": "B",
+     "html": "X Y"
+    },
+    {
+     "label": "C",
+     "html": "Y X"
+    },
+    {
+     "label": "D",
+     "html": "Y Y"
+    }
+   ]
   }
  ]
 }

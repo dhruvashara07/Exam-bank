@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    493.8,
-    353.8,
-    619.6
+    67.5,
+    493.5,
+    354.0,
+    619.5
    ],
    "id": "0625_2024MJ_21_q12_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which row identifies where these particles escape from and describes the temperature change?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "place from which",
-     "temperature of"
-    ],
-    [
-     "",
-     "the particles escape",
-     "remaining liquid"
-    ],
-    [
-     "<b>A</b>",
-     "body of the liquid",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "body of the liquid",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "surface of the liquid",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "surface of the liquid",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_21_q12_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "body of the liquid decreases"
+    },
+    {
+     "label": "B",
+     "html": "body of the liquid increases"
+    },
+    {
+     "label": "C",
+     "html": "surface of the liquid decreases"
+    },
+    {
+     "label": "D",
+     "html": "surface of the liquid increases"
+    }
+   ]
   }
  ]
 }

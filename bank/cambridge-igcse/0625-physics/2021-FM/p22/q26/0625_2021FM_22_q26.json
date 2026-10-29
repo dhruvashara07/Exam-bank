@@ -32,9 +32,9 @@
   {
    "page": 10,
    "bbox": [
-    185.2,
+    184.5,
     267.5,
-    409.3,
+    410.0,
     341.6
    ],
    "id": "0625_2021FM_22_q26_figA",
@@ -51,10 +51,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    374.8,
-    303.8,
-    486.2
+    67.5,
+    374.5,
+    304.0,
+    486.5
    ],
    "id": "0625_2021FM_22_q26_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-FM/p22/q26/figures/0625_2021FM_22_q26_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-FM/p22/q26/figures/0625_2021FM_22_q26_figB",
     "url": null,
-    "kb": 22.5
+    "kb": 22.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "What are the names of the parts of the sound wave labelled X and Y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>A</b>",
-     "amplitude",
-     "wavelength"
-    ],
-    [
-     "<b>B</b>",
-     "compression",
-     "rarefaction"
-    ],
-    [
-     "<b>C</b>",
-     "rarefaction",
-     "amplitude"
-    ],
-    [
-     "<b>D</b>",
-     "wavelength",
-     "compression"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021FM_22_q26_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "amplitude wavelength"
+    },
+    {
+     "label": "B",
+     "html": "compression rarefaction"
+    },
+    {
+     "label": "C",
+     "html": "rarefaction amplitude"
+    },
+    {
+     "label": "D",
+     "html": "wavelength compression"
+    }
+   ]
   }
  ]
 }

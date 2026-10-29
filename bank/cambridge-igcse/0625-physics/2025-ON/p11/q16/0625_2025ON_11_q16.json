@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    603.4,
-    340.4,
-    743.2
+    67.5,
+    603.0,
+    340.5,
+    743.5
    ],
    "id": "0625_2025ON_11_q16_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p11/q16/figures/0625_2025ON_11_q16_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p11/q16/figures/0625_2025ON_11_q16_figA",
     "url": null,
-    "kb": 28.4
+    "kb": 28.2
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row describes the change in the density of the air and which form of thermal energy transfer occurs as a result of this change?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "what happens to the density of the air",
-     "thermal energy transfer that occurs as a result"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "conduction"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "convection"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "conduction"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "convection"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025ON_11_q16_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases conduction"
+    },
+    {
+     "label": "B",
+     "html": "decreases convection"
+    },
+    {
+     "label": "C",
+     "html": "increases conduction"
+    },
+    {
+     "label": "D",
+     "html": "increases convection"
+    }
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 3,
    "bbox": [
-    63.9,
-    163.3,
-    531.3,
-    350.5
+    64.5,
+    162.5,
+    531.0,
+    354.0
    ],
    "id": "0625_2021ON_63_q01_fig1-1",
    "part": "",
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p63/q01/figures/0625_2021ON_63_q01_fig1-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p63/q01/figures/0625_2021ON_63_q01_fig1-1",
     "url": null,
-    "kb": 27.4
+    "kb": 27.6
    }
   },
   {
    "caption": "Table 1.1",
    "page": 4,
    "bbox": [
-    111.7,
-    58.0,
-    483.6,
+    111.5,
+    61.5,
+    483.5,
     308.0
    ],
    "id": "0625_2021ON_63_q01b_table1-1",
@@ -236,59 +236,9 @@
      "value": 1
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "",
-       "beaker A",
-       "beaker B"
-      ],
-      [
-       "",
-       "with insulation",
-       "without insulation"
-      ],
-      [
-       "<i>t</i> /",
-       "θ /",
-       "θ /"
-      ],
-      [
-       "0",
-       "88.0",
-       "87.5"
-      ],
-      [
-       "30",
-       "86.0",
-       "83.5"
-      ],
-      [
-       "60",
-       "84.5",
-       "81.5"
-      ],
-      [
-       "90",
-       "83.5",
-       "80.0"
-      ],
-      [
-       "120",
-       "82.5",
-       "79.0"
-      ],
-      [
-       "150",
-       "82.0",
-       "78.5"
-      ],
-      [
-       "180",
-       "81.5",
-       "78.0"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2021ON_63_q01b_table1-1",
+     "caption": "Table 1.1"
     }
    ]
   },
@@ -357,7 +307,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -515,7 +474,7 @@
       },
       {
        "type": "text",
-       "html": "<i>x</i><sub>1</sub> = \\(\\frac{θ<sub>0</sub> – θ<sub>90</sub>}{<i>T</i>}\\),",
+       "html": "<i>x</i><sub>1</sub> = \\(\\frac{θ_{0} – θ_{90}}{T}\\),",
        "text": "x1 = (θ0 – θ90)/(T),"
       },
       {
@@ -598,7 +557,7 @@
       },
       {
        "type": "text",
-       "html": "<i>x</i><sub>2</sub> = \\(\\frac{θ<sub>90</sub> – θ<sub>180</sub>}{<i>T</i>}\\),",
+       "html": "<i>x</i><sub>2</sub> = \\(\\frac{θ_{90} – θ_{180}}{T}\\),",
        "text": "x2 = (θ90 – θ180)/(T),"
       },
       {
@@ -770,7 +729,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -800,6 +768,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

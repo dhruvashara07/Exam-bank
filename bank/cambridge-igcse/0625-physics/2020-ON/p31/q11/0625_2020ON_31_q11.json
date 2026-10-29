@@ -9,10 +9,10 @@
    "caption": "Fig. 11.1",
    "page": 19,
    "bbox": [
-    153.6,
-    85.3,
-    442.1,
-    336.4
+    153.0,
+    84.5,
+    442.0,
+    335.0
    ],
    "id": "0625_2020ON_31_q11a_fig11-1",
    "part": "(a)",
@@ -118,9 +118,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "Determine the number of electrons. ……",
+       "text": "Determine the number of electrons. ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(i) Determine the number of electrons."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -186,9 +190,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "Determine the value of the nucleon number. ……",
+       "text": "Determine the value of the nucleon number. ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(ii) Determine the value of the nucleon number."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -254,9 +262,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "Determine the number of neutrons. ……",
+       "text": "Determine the number of neutrons. ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(iii) Determine the number of neutrons."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -349,10 +361,9 @@
      "text": "The count rate of a radioactive sample is 2400 counts per minute at 10 am on one day. The half-life of the sample is two days. Predict the count rate at 10 am four days later."
     },
     {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "count rate =",
-     "unit": "counts per minute"
+     "type": "text",
+     "html": "count rate = …… counts per minute",
+     "text": "count rate = …… counts per minute"
     },
     {
      "type": "marks",
@@ -377,5 +388,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

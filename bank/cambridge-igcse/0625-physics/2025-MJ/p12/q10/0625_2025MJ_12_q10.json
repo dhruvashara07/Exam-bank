@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    638.8,
-    318.2,
-    750.2
+    67.5,
+    638.5,
+    318.5,
+    750.5
    ],
    "id": "0625_2025MJ_12_q10_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p12/q10/figures/0625_2025MJ_12_q10_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p12/q10/figures/0625_2025MJ_12_q10_figA",
     "url": null,
-    "kb": 22.8
+    "kb": 22.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row describes the two changes of state of the substance as it is heated?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "change of state 1",
-     "change of state 2"
-    ],
-    [
-     "<b>A</b>",
-     "freezing",
-     "condensing"
-    ],
-    [
-     "<b>B</b>",
-     "freezing",
-     "boiling"
-    ],
-    [
-     "<b>C</b>",
-     "melting",
-     "condensing"
-    ],
-    [
-     "<b>D</b>",
-     "melting",
-     "boiling"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_12_q10_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "freezing condensing"
+    },
+    {
+     "label": "B",
+     "html": "freezing boiling"
+    },
+    {
+     "label": "C",
+     "html": "melting condensing"
+    },
+    {
+     "label": "D",
+     "html": "melting boiling"
+    }
+   ]
   }
  ]
 }

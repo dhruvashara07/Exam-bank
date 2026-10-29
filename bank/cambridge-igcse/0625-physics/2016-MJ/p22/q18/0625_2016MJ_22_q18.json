@@ -32,9 +32,9 @@
   {
    "page": 7,
    "bbox": [
-    69.3,
+    69.0,
     552.5,
-    322.2,
+    322.5,
     678.0
    ],
    "id": "0625_2016MJ_22_q18_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p22/q18/figures/0625_2016MJ_22_q18_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p22/q18/figures/0625_2016MJ_22_q18_figA",
     "url": null,
-    "kb": 21.6
+    "kb": 21.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,51 +98,35 @@
    "text": "Which processes occur in a metal to cause thermal conduction?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "electron",
-     "proton",
-     "lattice"
-    ],
-    [
-     "",
-     "transfer",
-     "transfer",
-     "vibration"
-    ],
-    [
-     "A",
-     "\u0013",
-     "\u0013",
-     "\u0013"
-    ],
-    [
-     "B",
-     "\u0013",
-     "\u0013",
-     "\u0017"
-    ],
-    [
-     "C",
-     "\u0013",
-     "\u0017",
-     "\u0013"
-    ],
-    [
-     "D",
-     "\u0017",
-     "\u0013",
-     "\u0013"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_22_q18_figA",
+   "caption": null
   },
   {
    "type": "text",
    "html": "key \u0013= process occurs \u0017= process does not occur",
    "text": "key \u0013= process occurs \u0017= process does not occur"
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "\u0013 \u0013 \u0013 key"
+    },
+    {
+     "label": "B",
+     "html": "\u0013 \u0013 \u0017 \u0013= process occurs"
+    },
+    {
+     "label": "C",
+     "html": "\u0013 \u0017 \u0013 \u0017= process does not occur"
+    },
+    {
+     "label": "D",
+     "html": "\u0017 \u0013 \u0013"
+    }
+   ]
   }
  ]
 }

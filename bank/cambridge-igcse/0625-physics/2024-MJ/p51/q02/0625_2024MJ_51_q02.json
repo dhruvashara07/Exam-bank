@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    109.1,
-    111.3,
-    486.2,
-    327.1
+    110.0,
+    110.5,
+    486.0,
+    325.5
    ],
    "id": "0625_2024MJ_51_q02_fig2-1",
    "part": "",
@@ -291,7 +291,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>50</sub> of 50.0 cm of the resistance wire using the equation <i>R</i><sub>50</sub> = \\(\\frac{<i>V</i><sub>50</sub>}{<i>I</i>}\\). Include the unit.",
+       "html": "Calculate the resistance <i>R</i><sub>50</sub> of 50.0 cm of the resistance wire using the equation <i>R</i><sub>50</sub> = \\(\\frac{V_{50}}{I}\\). Include the unit.",
        "text": "Calculate the resistance R50 of 50.0 cm of the resistance wire using the equation R50 = (V50)/(I). Include the unit."
       },
       {
@@ -365,7 +365,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate <i>r</i><sub>1</sub>, a value for the resistance per cm of the resistance wire, using the equation <i>r</i><sub>1</sub> = \\(\\frac{<i>R</i><sub>50</sub>}{<i>d</i>}\\), where <i>d</i> = 50.0 cm. Include the unit.",
+       "html": "Calculate <i>r</i><sub>1</sub>, a value for the resistance per cm of the resistance wire, using the equation <i>r</i><sub>1</sub> = \\(\\frac{R_{50}}{d}\\), where <i>d</i> = 50.0 cm. Include the unit.",
        "text": "Calculate r1, a value for the resistance per cm of the resistance wire, using the equation r1 = (R50)/(d), where d = 50.0 cm. Include the unit."
       },
       {
@@ -448,8 +448,18 @@
    "content": [
     {
      "type": "text",
-     "html": "Close the switch. Repeat the procedure in <b>(b)</b> using <i>d</i> = 75.0 cm and calculate <i>r</i><sub>2</sub> using the equation <i>r</i><sub>2</sub> = \\(\\frac{<i>R</i><sub>75</sub>}{<i>d</i>}\\). Open the switch.",
+     "html": "Close the switch. Repeat the procedure in <b>(b)</b> using <i>d</i> = 75.0 cm and calculate <i>r</i><sub>2</sub> using the equation <i>r</i><sub>2</sub> = \\(\\frac{R_{75}}{d}\\). Open the switch.",
      "text": "Close the switch. Repeat the procedure in (b) using d = 75.0 cm and calculate r2 using the equation r2 = (R75)/(d). Open the switch."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V75 ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "R75 ="
     },
     {
      "type": "answer",
@@ -532,7 +542,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -744,6 +763,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

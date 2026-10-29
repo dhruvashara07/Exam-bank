@@ -34,8 +34,8 @@
    "bbox": [
     135.7,
     112.2,
-    459.1,
-    223.4
+    459.0,
+    224.0
    ],
    "id": "0625_2023MJ_12_q09_figA",
    "caption": null,
@@ -51,9 +51,9 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    268.6,
-    204.1,
+    67.5,
+    268.5,
+    204.0,
     394.0
    ],
    "id": "0625_2023MJ_12_q09_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p12/q09/figures/0625_2023MJ_12_q09_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p12/q09/figures/0625_2023MJ_12_q09_figB",
     "url": null,
-    "kb": 14.6
+    "kb": 14.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which toy is the most stable and which toy is the least stable when balanced in the positions shown?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "most",
-     "least"
-    ],
-    [
-     "",
-     "stable",
-     "stable"
-    ],
-    [
-     "<b>A</b>",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>B</b>",
-     "X",
-     "Z"
-    ],
-    [
-     "<b>C</b>",
-     "Y",
-     "X"
-    ],
-    [
-     "<b>D</b>",
-     "Y",
-     "Z"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_12_q09_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "X Y"
+    },
+    {
+     "label": "B",
+     "html": "X Z"
+    },
+    {
+     "label": "C",
+     "html": "Y X"
+    },
+    {
+     "label": "D",
+     "html": "Y Z"
+    }
+   ]
   }
  ]
 }

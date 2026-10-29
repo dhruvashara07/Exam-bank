@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    108.9,
-    111.3,
-    486.4,
-    320.1
+    109.0,
+    110.5,
+    486.5,
+    318.5
    ],
    "id": "0625_2023MJ_62_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 4,
    "bbox": [
-    107.6,
-    364.6,
-    487.7,
-    427.7
+    107.0,
+    364.0,
+    488.5,
+    426.0
    ],
    "id": "0625_2023MJ_62_q02a_fig2-2",
    "part": "(a)",
@@ -71,10 +71,10 @@
    "caption": "Table 2.1",
    "page": 5,
    "bbox": [
-    200.9,
-    227.0,
-    394.4,
-    427.9
+    201.0,
+    230.5,
+    394.5,
+    428.0
    ],
    "id": "0625_2023MJ_62_q02bii_table2-1",
    "part": "(b)(ii)",
@@ -175,14 +175,14 @@
      "caption": "Fig. 2.2"
     },
     {
-     "type": "text",
-     "html": "R",
-     "text": "R"
-    },
-    {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "θ ="
+    },
+    {
+     "type": "text",
+     "html": "R",
+     "text": "R"
     },
     {
      "type": "marks",
@@ -351,41 +351,9 @@
        "text": "Write the times in the first column of Table 2.1."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>t</i> /",
-         "θ /"
-        ],
-        [
-         "",
-         "92"
-        ],
-        [
-         "",
-         "87"
-        ],
-        [
-         "",
-         "83"
-        ],
-        [
-         "",
-         "80"
-        ],
-        [
-         "",
-         "78"
-        ],
-        [
-         "",
-         "76"
-        ],
-        [
-         "",
-         "75"
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2023MJ_62_q02bii_table2-1",
+       "caption": "Table 2.1"
       },
       {
        "type": "marks",
@@ -542,7 +510,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the average rate of cooling <i>R</i> of the water using the equation <i>R</i> = \\(\\frac{Δθ}{Δ<i>t</i>}\\), where Δ<i>t</i> = 180 s. Include the unit.",
+       "html": "Calculate the average rate of cooling <i>R</i> of the water using the equation <i>R</i> = \\(\\frac{Δθ}{Δt}\\), where Δ<i>t</i> = 180 s. Include the unit.",
        "text": "Calculate the average rate of cooling R of the water using the equation R = (Δθ)/(Δt), where Δt = 180 s. Include the unit."
       },
       {
@@ -624,7 +592,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -698,7 +675,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -798,6 +784,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

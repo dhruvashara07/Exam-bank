@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    69.3,
+    69.0,
     615.0,
-    333.1,
-    740.6
+    333.5,
+    740.5
    ],
    "id": "0625_2015MJ_13_q13_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p13/q13/figures/0625_2015MJ_13_q13_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p13/q13/figures/0625_2015MJ_13_q13_figA",
     "url": null,
-    "kb": 28.3
+    "kb": 28.0
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which molecules escape and how does the temperature change?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "molecules escaping",
-     "temperature of remaining liquid"
-    ],
-    [
-     "A",
-     "least energetic",
-     "decreases"
-    ],
-    [
-     "B",
-     "least energetic",
-     "increases"
-    ],
-    [
-     "C",
-     "most energetic",
-     "decreases"
-    ],
-    [
-     "D",
-     "most energetic",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_13_q13_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "least energetic decreases"
+    },
+    {
+     "label": "B",
+     "html": "least energetic increases"
+    },
+    {
+     "label": "C",
+     "html": "most energetic decreases"
+    },
+    {
+     "label": "D",
+     "html": "most energetic increases"
+    }
+   ]
   }
  ]
 }

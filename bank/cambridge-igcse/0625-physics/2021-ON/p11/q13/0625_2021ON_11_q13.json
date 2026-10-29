@@ -32,8 +32,8 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    84.7,
+    67.5,
+    84.5,
     386.0,
     196.0
    ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row correctly describes the movement of particles in solids and liquids?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "solids",
-     "liquids"
-    ],
-    [
-     "<b>A</b>",
-     "no movement",
-     "move around each other"
-    ],
-    [
-     "<b>B</b>",
-     "no movement",
-     "vibration only"
-    ],
-    [
-     "<b>C</b>",
-     "vibration only",
-     "move around each other"
-    ],
-    [
-     "<b>D</b>",
-     "vibration only",
-     "vibration only"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_11_q13_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "no movement move around each other"
+    },
+    {
+     "label": "B",
+     "html": "no movement vibration only"
+    },
+    {
+     "label": "C",
+     "html": "vibration only move around each other"
+    },
+    {
+     "label": "D",
+     "html": "vibration only vibration only"
+    }
+   ]
   }
  ]
 }

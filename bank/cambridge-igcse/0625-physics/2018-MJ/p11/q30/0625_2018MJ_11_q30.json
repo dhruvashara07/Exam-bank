@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    479.3,
-    329.3,
-    590.7
+    67.5,
+    479.0,
+    329.5,
+    591.0
    ],
    "id": "0625_2018MJ_11_q30_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p11/q30/figures/0625_2018MJ_11_q30_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p11/q30/figures/0625_2018MJ_11_q30_figA",
     "url": null,
-    "kb": 23.4
+    "kb": 23.2
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What happens to the plastic rod and what is the charge on the cloth?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "plastic rod",
-     "charge on cloth"
-    ],
-    [
-     "<b>A</b>",
-     "gains electrons",
-     "negative"
-    ],
-    [
-     "<b>B</b>",
-     "gains electrons",
-     "positive"
-    ],
-    [
-     "<b>C</b>",
-     "loses electrons",
-     "negative"
-    ],
-    [
-     "<b>D</b>",
-     "loses electrons",
-     "positive"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_11_q30_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "gains electrons negative"
+    },
+    {
+     "label": "B",
+     "html": "gains electrons positive"
+    },
+    {
+     "label": "C",
+     "html": "loses electrons negative"
+    },
+    {
+     "label": "D",
+     "html": "loses electrons positive"
+    }
+   ]
   }
  ]
 }

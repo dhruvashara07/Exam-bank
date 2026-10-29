@@ -32,7 +32,7 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
+    67.5,
     347.0,
     422.5,
     472.0
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p12/q05/figures/0625_2018MJ_12_q05_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p12/q05/figures/0625_2018MJ_12_q05_figA",
     "url": null,
-    "kb": 30.7
+    "kb": 30.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,52 +108,30 @@
    "text": "Which row for the densities of object P, object Q and the liquid is possible?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "density of object P",
-     "density of object Q",
-     "density of liquid"
-    ],
-    [
-     "",
-     "<sup>3</sup>",
-     "<sup>3</sup>",
-     "<sup>3</sup>"
-    ],
-    [
-     "",
-     "g / cm",
-     "g / cm",
-     "g / cm"
-    ],
-    [
-     "<b>A</b>",
-     "1.2",
-     "0.6",
-     "0.8"
-    ],
-    [
-     "<b>B</b>",
-     "1.2",
-     "1.4",
-     "1.0"
-    ],
-    [
-     "<b>C</b>",
-     "11.3",
-     "8.9",
-     "13.6"
-    ],
-    [
-     "<b>D</b>",
-     "11.3",
-     "19.3",
-     "13.6"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_12_q05_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "1.2 0.6 0.8"
+    },
+    {
+     "label": "B",
+     "html": "1.2 1.4 1.0"
+    },
+    {
+     "label": "C",
+     "html": "11.3 8.9 13.6"
+    },
+    {
+     "label": "D",
+     "html": "11.3 19.3 13.6"
+    }
+   ]
   }
  ]
 }

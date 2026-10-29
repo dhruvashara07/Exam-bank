@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 7,
    "bbox": [
-    218.8,
-    109.6,
-    377.4,
-    260.6
+    220.0,
+    114.0,
+    377.0,
+    258.0
    ],
    "id": "0625_2019ON_53_q03_fig3-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p53/q03/figures/0625_2019ON_53_q03_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p53/q03/figures/0625_2019ON_53_q03_fig3-1",
     "url": null,
-    "kb": 23.1
+    "kb": 23.0
    }
   },
   {
    "caption": "Fig. 3.2",
    "page": 8,
    "bbox": [
-    226.7,
-    85.1,
-    366.5,
-    304.6
+    227.0,
+    85.0,
+    367.0,
+    302.0
    ],
    "id": "0625_2019ON_53_q03b_fig3-2",
    "part": "(b)",
@@ -71,10 +71,10 @@
    "caption": "Table 3.1",
    "page": 8,
    "bbox": [
-    209.4,
-    384.6,
-    385.8,
-    511.2
+    209.5,
+    389.5,
+    386.0,
+    511.5
    ],
    "id": "0625_2019ON_53_q03b_table3-1",
    "part": "(b)",
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p53/q03/figures/0625_2019ON_53_q03b_table3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p53/q03/figures/0625_2019ON_53_q03b_table3-1",
     "url": null,
-    "kb": 17.4
+    "kb": 17.3
    }
   }
  ],
@@ -237,7 +237,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "2",
+       "prefix": "1"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "2"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -328,31 +337,6 @@
      "type": "figure",
      "id": "0625_2019ON_53_q03b_table3-1",
      "caption": "Table 3.1"
-    },
-    {
-     "type": "table",
-     "rows": [
-      [
-       "<i>L</i> / N",
-       "<i>l</i> / cm",
-       "<i>e</i> / cm"
-      ],
-      [
-       "1.0",
-       "",
-       ""
-      ],
-      [
-       "2.0",
-       "",
-       ""
-      ],
-      [
-       "3.0",
-       "",
-       ""
-      ]
-     ]
     },
     {
      "type": "answer",
@@ -499,7 +483,18 @@
     {
      "type": "list",
      "items": [
-      "Remove load <i>L</i> from the spring. Suspend object <b>X</b> from the spring. Measure the stretched length <i>l</i><sub>X</sub> of the spring.",
+      "Remove load <i>L</i> from the spring. Suspend object <b>X</b> from the spring. Measure the stretched length <i>l</i><sub>X</sub> of the spring."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "lX =",
+     "unit": "cm"
+    },
+    {
+     "type": "list",
+     "items": [
       "Estimate the weight <i>W</i><sub>X</sub> of object <b>X</b>. Explain how you obtained your answer."
      ]
     },
@@ -507,8 +502,7 @@
      "type": "answer",
      "kind": "answer_line",
      "prefix": "WX =",
-     "unit": "N",
-     "lines": 3
+     "unit": "N"
     },
     {
      "type": "marks",
@@ -593,7 +587,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -697,6 +700,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

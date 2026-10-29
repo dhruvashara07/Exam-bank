@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    576.3,
-    215.9,
-    687.6
+    67.5,
+    576.0,
+    216.0,
+    688.0
    ],
    "id": "0625_2019FM_22_q39_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-FM/p22/q39/figures/0625_2019FM_22_q39_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-FM/p22/q39/figures/0625_2019FM_22_q39_figA",
     "url": null,
-    "kb": 9.2
+    "kb": 9.0
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "What is the value of X and of Y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>A</b>",
-     "6",
-     "–1"
-    ],
-    [
-     "<b>B</b>",
-     "6",
-     "1"
-    ],
-    [
-     "<b>C</b>",
-     "8",
-     "–1"
-    ],
-    [
-     "<b>D</b>",
-     "8",
-     "1"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019FM_22_q39_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "6 –1"
+    },
+    {
+     "label": "B",
+     "html": "6 1"
+    },
+    {
+     "label": "C",
+     "html": "8 –1"
+    },
+    {
+     "label": "D",
+     "html": "8 1"
+    }
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    180.6,
-    137.9,
-    414.8,
-    383.8
+    180.0,
+    138.5,
+    415.5,
+    384.0
    ],
    "id": "0625_2025MJ_61_q01a_fig1-1",
    "part": "(a)",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2",
    "page": 3,
    "bbox": [
-    216.3,
-    190.1,
-    379.0,
-    316.9
+    215.5,
+    189.5,
+    379.5,
+    317.0
    ],
    "id": "0625_2025MJ_61_q01c_fig1-2",
    "part": "(c)",
@@ -164,6 +164,12 @@
        "type": "text",
        "html": "On Fig. 1.1, measure the lengths d<sub>1</sub> and d<sub>2</sub>.",
        "text": "On Fig. 1.1, measure the lengths d1 and d2."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "d1 =",
+       "unit": "cm"
       },
       {
        "type": "answer",
@@ -493,6 +499,12 @@
      "text": "102.5"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "mD =",
+     "unit": "g"
+    },
+    {
      "type": "text",
      "html": "He places the ball in the dish and measures the combined mass m<sub>C</sub> of the dish and the ball.",
      "text": "He places the ball in the dish and measures the combined mass mC of the dish and the ball."
@@ -511,6 +523,12 @@
      "type": "figure",
      "id": "0625_2025MJ_61_q01c_fig1-2",
      "caption": "Fig. 1.2"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "mC =",
+     "unit": "g"
     },
     {
      "type": "text",
@@ -590,13 +608,13 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate the density ρof the ball using the equation:",
-     "text": "Calculate the density ρof the ball using the equation:"
+     "html": "Calculate the density ρ of the ball using the equation:",
+     "text": "Calculate the density ρ of the ball using the equation:"
     },
     {
      "type": "text",
-     "html": "\\(\\frac{m<sub>B</sub>}{V}\\) ρ= .",
-     "text": "(mB)/(V) ρ= ."
+     "html": "\\(\\frac{m_{B}}{V}\\) ρ = .",
+     "text": "(mB)/(V) ρ = ."
     },
     {
      "type": "text",
@@ -606,7 +624,7 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "ρ="
+     "prefix": "ρ ="
     },
     {
      "type": "marks",
@@ -632,6 +650,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

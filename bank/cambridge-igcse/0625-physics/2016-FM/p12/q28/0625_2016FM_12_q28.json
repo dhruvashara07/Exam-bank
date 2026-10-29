@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    151.1,
-    212.1,
-    443.7,
-    404.0
+    150.5,
+    212.0,
+    444.0,
+    404.5
    ],
    "id": "0625_2016FM_12_q28_figA",
    "caption": null,
@@ -45,7 +45,26 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-FM/p12/q28/figures/0625_2016FM_12_q28_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-FM/p12/q28/figures/0625_2016FM_12_q28_figA",
     "url": null,
-    "kb": 6.5
+    "kb": 6.4
+   }
+  },
+  {
+   "page": 13,
+   "bbox": [
+    92.0,
+    437.0,
+    279.5,
+    553.5
+   ],
+   "id": "0625_2016FM_12_q28_figB",
+   "caption": null,
+   "part": "",
+   "alt": "",
+   "svg": {
+    "file": "bank/cambridge-igcse/0625-physics/2016-FM/p12/q28/figures/0625_2016FM_12_q28_figB.svg",
+    "public_id": "question_bank/cambridge-igcse/0625-physics/2016-FM/p12/q28/figures/0625_2016FM_12_q28_figB",
+    "url": null,
+    "kb": 7.0
    }
   }
  ],
@@ -90,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,25 +127,31 @@
    "text": "Which diagram shows the poles of the magnets?"
   },
   {
+   "type": "figure",
+   "id": "0625_2016FM_12_q28_figB",
+   "caption": null
+  },
+  {
    "type": "options",
    "options": [
     {
      "label": "A",
-     "html": "N S N S"
+     "html": ""
     },
     {
      "label": "B",
-     "html": "N S S N"
+     "html": ""
     },
     {
      "label": "C",
-     "html": "S N N S"
+     "html": ""
     },
     {
      "label": "D",
-     "html": "S N S N"
+     "html": ""
     }
-   ]
+   ],
+   "in_figure": true
   }
  ]
 }

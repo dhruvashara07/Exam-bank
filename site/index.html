@@ -82,6 +82,24 @@ select { background: var(--panel); border: 1px solid var(--line); border-radius:
 .pill.approved { background: var(--ok-soft); color: var(--ok) }
 .pill.pending { background: var(--wait-soft); color: var(--wait) }
 .pill.flag { background: var(--red-soft); color: var(--red) }
+.pill.st-published, .pill.st-approved { background: var(--ok-soft); color: var(--ok) }
+.pill.st-your_review, .pill.st-needs_fix { background: var(--red-soft); color: var(--red) }
+.pill.st-uploaded, .pill.st-processed, .pill.st-auto_checked, .pill.st-claude_checked { background: var(--wait-soft); color: var(--wait) }
+/* batches */
+.batch { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 14px; display: grid; gap: 8px; min-width: 0 }
+.batch .t { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline }
+.batch h2 { font-size: 16px; letter-spacing: 0 }
+.flow { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; min-width: 0 }
+.flow div { background: var(--desk); border-radius: 6px; padding: 6px 4px; text-align: center; font-size: 11px; color: var(--muted); min-width: 0 }
+.flow div b { display: block; font: 600 18px var(--mono); color: var(--ink) }
+.flow div.on { outline: 2px solid var(--wait) }
+.flow div.done b { color: var(--ok) }
+@media (max-width: 560px) { .flow { grid-template-columns: repeat(4, 1fr) } }
+.batch details summary { cursor: pointer; font-size: 13px; color: var(--muted) }
+.batch .plist { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px }
+.batch .plist a { text-decoration: none }
+.checks { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; font-size: 14px }
+.checks ul { margin: 4px 0 0; padding-left: 18px }
 .card .pills { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px }
 @media (max-width: 560px) { .session { grid-template-columns: 1fr; gap: 6px } }
 
@@ -154,6 +172,7 @@ select { background: var(--panel); border: 1px solid var(--line); border-radius:
 <header class="bar"><div class="wrap">
   <a class="brand" href="#papers">Exam Bank Review <small>0625 Physics</small></a>
   <nav class="tabs">
+    <a href="#batches" id="tab-batches">Batches</a>
     <a href="#papers" id="tab-papers">Papers</a>
     <a href="#check" id="tab-check">To check <span class="count" id="ncheck">…</span></a>
   </nav>
@@ -166,7 +185,11 @@ const SESS = { FM: ['Feb/March', 'm'], MJ: ['May/June', 's'], ON: ['Oct/Nov', 'w
 const SORDER = { FM: 0, MJ: 1, ON: 2 };
 const app = document.getElementById('app');
 new ResizeObserver(([e]) => document.documentElement.style.setProperty('--hdr', e.target.offsetHeight + 'px')).observe(document.querySelector('header.bar'));
-let PAPERS = [], QUEUE = [];
+let PAPERS = [], QUEUE = [], BATCHES = [];
+const STAGES = [['uploaded', 'Uploaded'], ['processed', 'Processed'], ['auto_checked', 'Auto-checked'], ['claude_checked', 'Claude checked'],
+                ['your_review', 'Your review'], ['approved', 'Approved'], ['published', 'Published']];
+const STAGE_NAME = Object.fromEntries(STAGES.concat([['needs_fix', 'Needs fix']]));
+const stagePill = s => `<span class="pill st-${s}">${STAGE_NAME[s] || s}</span>`;
 const cache = {};
 const store = {
   get(k, d) { try { const v = localStorage.getItem('eb.' + k); return v === null ? d : JSON.parse(v) } catch (e) { return d } },
@@ -225,7 +248,7 @@ function renderPapers() {
         h += `<a class="card ${bad ? 'bad' : ''}" href="#paper-${p.id}">
           <span class="code">${p.code}</span>
           <span class="sub">${p.questions} q · ${p.marks}/${p.total}</span>
-          <span class="pills"><span class="pill ${p.status}">${p.status}</span>${p.flagged ? `<span class="pill flag">${p.flagged} to check</span>` : ''}</span></a>`;
+          <span class="pills">${stagePill(p.stage || p.status)}${p.problems ? `<span class="pill flag">${p.problems} problem${p.problems > 1 ? 's' : ''}</span>` : ''}${p.flagged ? `<span class="pill flag">${p.flagged} flag${p.flagged > 1 ? 's' : ''}</span>` : ''}</span></a>`;
       }
       h += `</div></div>`;
     }
@@ -313,11 +336,18 @@ async function renderPaper(pid, qanchor) {
   <div class="phead"><h1>${esc(paperName(p))}</h1>
   <div class="stats"><span>${esc((m.paper_type || '').replace(/_/g, ' '))}</span><span><b>${qs.length}</b> questions</span>
     <span>marks <b>${m.marks_found}/${m.total_marks}</b>${m.total_marks_source && m.total_marks_source !== 'cover' ? ' (standard total)' : ''}</span>
-    <span><span class="pill ${p.status}">${p.status}</span></span>
+    <span>${stagePill(d.stage || p.status)}</span>
     <span class="mono">${cambridgeName(p, 'qp')}.pdf · ${cambridgeName(p, 'ms')}.pdf</span></div></div>`;
   if (d.approval) h += `<div class="notice ok">Approved by ${esc(d.approval.by)} on ${esc((d.approval.at || '').slice(0, 10))}${d.approval.note ? ': ' + esc(d.approval.note) : ''}</div>`;
   else h += `<div class="notice wait">Waiting for approval. It goes to the database after the daily check approves it.</div>`;
   for (const f of d.paper_flags || []) h += `<div class="notice">${f.reasons.map(esc).join('<br>')}</div>`;
+  if (d.checks) {
+    const c = d.checks;
+    h += `<div class="checks"><b>Automatic checks</b> (${esc((c.checked_at || '').replace('T', ' '))}): ${c.clean ? 'no problems' : c.problems.length + ' problem(s)'}` +
+      `, editable text ${c.text_score_min != null ? Math.round(c.text_score_min * 100) + '% or better' : 'n/a'}` +
+      (c.problems.length ? `<ul>${c.problems.map(x => `<li><span class="mono">${esc(x.id)}</span> ${esc(x.kind)}: ${esc(x.detail)}</li>`).join('')}</ul>` : '') + `</div>`;
+  }
+  if (d.claude) h += `<div class="checks"><b>Claude's check</b> (${esc(d.claude.checked_at || '')}): ${esc(d.claude.result)}${d.claude.note ? ' – ' + esc(d.claude.note) : ''}</div>`;
   if (m.mark_scheme === 'missing') h += `<div class="notice">No mark scheme PDF for this paper.</div>`;
   h += `<div class="toolbar">
     <span class="seg" id="v-mode">${[['exact', 'Exact'], ['editable', 'Editable'], ['both', 'Side by side']].map(([k, l]) => `<button data-v="${k}" aria-pressed="${view === k}">${l}</button>`).join('')}</span>
@@ -337,6 +367,23 @@ function math() {
   if (window.renderMathInElement) renderMathInElement(app, { delimiters: [{ left: '\\(', right: '\\)', display: false }], throwOnError: false });
 }
 
+/* ---------------- batches ---------------- */
+function renderBatches() {
+  let h = `<h1>Batches</h1><p class="muted">Every upload is a batch. Each paper moves left to right; red pills need you or a fix.</p>`;
+  if (!BATCHES.length) h += `<div class="empty-state">No batches yet. Upload PDFs as described in docs/UPLOAD.md.</div>`;
+  for (const b of BATCHES.slice().reverse()) {
+    const n = b.papers.length, c = b.counts || {};
+    const first = STAGES.findIndex(([k]) => c[k]);
+    h += `<section class="batch"><div class="t"><h2>${esc(b.name)}</h2><span class="muted mono">${esc(b.id)} · ${esc((b.created || '').replace('T', ' '))}</span>
+      <span class="muted">${n} papers</span>${c.needs_fix ? `<span class="pill st-needs_fix">${c.needs_fix} need a fix</span>` : ''}</div>
+      <div class="flow">${STAGES.map(([k, l], i) => `<div class="${i === first ? 'on' : ''} ${k === 'published' && c[k] === n ? 'done' : ''}"><b>${c[k] || 0}</b>${l}</div>`).join('')}</div>
+      <details><summary>Papers</summary><div class="plist">${b.papers.map(p => `<a href="#paper-${p}"><span class="mono" style="font-size:12px">${esc(p.replace(/^\d+_/, ''))}</span> ${stagePill(b.stages[p])}</a>`).join('')}</div></details>
+    </section>`;
+  }
+  app.innerHTML = h;
+  window.scrollTo(0, 0);
+}
+
 /* ---------------- to check ---------------- */
 function renderCheck() {
   const byPaper = {};
@@ -346,6 +393,7 @@ function renderCheck() {
   }
   const pend = PAPERS.filter(p => p.status === 'pending');
   let h = `<h1>To check</h1><div class="stats"><span><b>${QUEUE.length}</b> items the pipeline flagged</span><span><b>${pend.length}</b> papers waiting for approval</span></div>`;
+  if (CFG.review) h += `<div class="notice wait">Give your ✓ / ✗ on the current review round here: <a href="${esc(CFG.review)}" target="_blank" rel="noopener">review page</a></div>`;
   const pids = Object.keys(byPaper).sort();
   if (!pids.length) h += `<div class="empty-state">Nothing flagged.</div>`;
   h += `<div class="tc">`;
@@ -365,17 +413,18 @@ function renderCheck() {
 /* ---------------- routing ---------------- */
 async function route(keep) {
   const hsh = location.hash.slice(1) || 'papers';
-  document.getElementById('tab-papers').setAttribute('aria-current', hsh === 'check' ? 'false' : 'page');
-  document.getElementById('tab-check').setAttribute('aria-current', hsh === 'check' ? 'page' : 'false');
+  const tab = hsh === 'check' ? 'check' : hsh === 'batches' ? 'batches' : 'papers';
+  for (const t of ['papers', 'check', 'batches']) document.getElementById('tab-' + t).setAttribute('aria-current', t === tab ? 'page' : 'false');
   const m = hsh.match(/^paper-(\w+?_\d{4}[A-Z]{2}_\d\d)(?:-(q\d+))?$/);
   try {
     if (m) await renderPaper(m[1], keep ? null : m[2]);
     else if (hsh === 'check') renderCheck();
+    else if (hsh === 'batches') renderBatches();
     else renderPapers();
   } catch (e) { app.innerHTML = `<div class="notice">Could not load: ${esc(e.message)}. Reload the page to try again.</div>` }
 }
 (async () => {
-  try { [PAPERS, QUEUE] = await Promise.all([getJSON('data/papers.json'), getJSON('data/queue.json')]) }
+  try { [PAPERS, QUEUE, BATCHES] = await Promise.all([getJSON('data/papers.json'), getJSON('data/queue.json'), getJSON('data/batches.json').catch(() => [])]) }
   catch (e) { app.innerHTML = `<div class="notice">Could not load the bank index (${esc(e.message)}).</div>`; return }
   document.getElementById('ncheck').textContent = QUEUE.length;
   window.addEventListener('hashchange', () => route(false));

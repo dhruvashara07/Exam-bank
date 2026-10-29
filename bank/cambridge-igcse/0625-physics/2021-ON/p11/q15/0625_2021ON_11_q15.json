@@ -35,7 +35,7 @@
     195.7,
     85.0,
     399.5,
-    232.1
+    232.5
    ],
    "id": "0625_2021ON_11_q15_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    365.8,
-    286.7,
-    491.3
+    67.5,
+    365.5,
+    287.0,
+    491.5
    ],
    "id": "0625_2021ON_11_q15_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p11/q15/figures/0625_2021ON_11_q15_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p11/q15/figures/0625_2021ON_11_q15_figB",
     "url": null,
-    "kb": 16.8
+    "kb": 16.7
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -141,40 +142,30 @@
    "text": "Which row is correct for the level of the liquid?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "rises most in",
-     "falls most in"
-    ],
-    [
-     "",
-     "warm water",
-     "cold water"
-    ],
-    [
-     "<b>A</b>",
-     "X",
-     "X"
-    ],
-    [
-     "<b>B</b>",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>C</b>",
-     "Y",
-     "X"
-    ],
-    [
-     "<b>D</b>",
-     "Y",
-     "Y"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_11_q15_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "X X"
+    },
+    {
+     "label": "B",
+     "html": "X Y"
+    },
+    {
+     "label": "C",
+     "html": "Y X"
+    },
+    {
+     "label": "D",
+     "html": "Y Y"
+    }
+   ]
   }
  ]
 }

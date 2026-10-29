@@ -32,10 +32,10 @@
   {
    "page": 12,
    "bbox": [
-    236.5,
-    465.8,
-    358.2,
-    599.5
+    236.0,
+    465.5,
+    358.5,
+    600.0
    ],
    "id": "0625_2022ON_11_q31_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p11/q31/figures/0625_2022ON_11_q31_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p11/q31/figures/0625_2022ON_11_q31_figA",
     "url": null,
-    "kb": 7.1
+    "kb": 7.0
    }
   },
   {
    "page": 12,
    "bbox": [
-    67.7,
-    657.2,
-    366.4,
-    768.6
+    67.5,
+    657.0,
+    366.5,
+    769.0
    ],
    "id": "0625_2022ON_11_q31_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p11/q31/figures/0625_2022ON_11_q31_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p11/q31/figures/0625_2022ON_11_q31_figB",
     "url": null,
-    "kb": 26.6
+    "kb": 26.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "What happens to the brightness of each bulb?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "brightness of bulb P",
-     "brightness of bulb Q"
-    ],
-    [
-     "<b>A</b>",
-     "dimmer",
-     "dimmer"
-    ],
-    [
-     "<b>B</b>",
-     "dimmer",
-     "remains the same"
-    ],
-    [
-     "<b>C</b>",
-     "remains the same",
-     "dimmer"
-    ],
-    [
-     "<b>D</b>",
-     "remains the same",
-     "remains the same"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_11_q31_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "dimmer dimmer"
+    },
+    {
+     "label": "B",
+     "html": "dimmer remains the same"
+    },
+    {
+     "label": "C",
+     "html": "remains the same dimmer"
+    },
+    {
+     "label": "D",
+     "html": "remains the same remains the same"
+    }
+   ]
   }
  ]
 }

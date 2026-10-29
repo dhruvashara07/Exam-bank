@@ -32,9 +32,9 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    274.4,
-    399.9,
+    67.5,
+    274.5,
+    400.0,
     400.0
    ],
    "id": "0625_2024MJ_12_q21_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p12/q21/figures/0625_2024MJ_12_q21_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p12/q21/figures/0625_2024MJ_12_q21_figA",
     "url": null,
-    "kb": 30.9
+    "kb": 30.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which regions cause mutation of cells in the body, skin burns and internal heating of body cells?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mutation of cells",
-     "skin burns",
-     "internal heating of body cells"
-    ],
-    [
-     "<b>A</b>",
-     "radio waves",
-     "infrared",
-     "visible light"
-    ],
-    [
-     "<b>B</b>",
-     "radio waves",
-     "ultraviolet",
-     "microwaves"
-    ],
-    [
-     "<b>C</b>",
-     "X-rays",
-     "infrared",
-     "microwaves"
-    ],
-    [
-     "<b>D</b>",
-     "X-rays",
-     "ultraviolet",
-     "visible light"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_12_q21_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "radio waves infrared visible light"
+    },
+    {
+     "label": "B",
+     "html": "radio waves ultraviolet microwaves"
+    },
+    {
+     "label": "C",
+     "html": "X-rays infrared microwaves"
+    },
+    {
+     "label": "D",
+     "html": "X-rays ultraviolet visible light"
+    }
+   ]
   }
  ]
 }

@@ -33,9 +33,9 @@
    "page": 11,
    "bbox": [
     149.2,
-    84.7,
+    84.5,
     445.7,
-    186.7
+    187.0
    ],
    "id": "0625_2021MJ_21_q27_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    218.6,
-    258.7,
-    329.9
+    67.5,
+    218.5,
+    259.0,
+    330.0
    ],
    "id": "0625_2021MJ_21_q27_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p21/q27/figures/0625_2021MJ_21_q27_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p21/q27/figures/0625_2021MJ_21_q27_figB",
     "url": null,
-    "kb": 19.8
+    "kb": 19.7
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which combination of materials gives the shortest time for the sound to reach the microphone?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "material 1",
-     "material 2"
-    ],
-    [
-     "<b>A</b>",
-     "air",
-     "hydrogen"
-    ],
-    [
-     "<b>B</b>",
-     "air",
-     "water"
-    ],
-    [
-     "<b>C</b>",
-     "copper",
-     "aluminium"
-    ],
-    [
-     "<b>D</b>",
-     "water",
-     "oil"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_21_q27_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "air hydrogen"
+    },
+    {
+     "label": "B",
+     "html": "air water"
+    },
+    {
+     "label": "C",
+     "html": "copper aluminium"
+    },
+    {
+     "label": "D",
+     "html": "water oil"
+    }
+   ]
   }
  ]
 }

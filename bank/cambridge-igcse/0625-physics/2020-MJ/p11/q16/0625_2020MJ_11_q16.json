@@ -32,8 +32,8 @@
   {
    "page": 9,
    "bbox": [
-    268.2,
-    381.8,
+    267.5,
+    381.0,
     327.5,
     562.8
    ],
@@ -51,10 +51,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
+    67.5,
     596.0,
-    498.7,
-    706.8
+    499.0,
+    707.0
    ],
    "id": "0625_2020MJ_11_q16_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p11/q16/figures/0625_2020MJ_11_q16_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p11/q16/figures/0625_2020MJ_11_q16_figB",
     "url": null,
-    "kb": 34.8
+    "kb": 34.6
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Which row describes these fixed points on the Celsius scale?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>A</b>",
-     "temperature of pure boiling water",
-     "normal body temperature"
-    ],
-    [
-     "<b>B</b>",
-     "temperature of pure boiling water",
-     "temperature of pure melting ice"
-    ],
-    [
-     "<b>C</b>",
-     "normal body temperature",
-     "temperature of pure boiling water"
-    ],
-    [
-     "<b>D</b>",
-     "temperature of pure melting ice",
-     "temperature of pure boiling water"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020MJ_11_q16_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "temperature of pure boiling water normal body temperature"
+    },
+    {
+     "label": "B",
+     "html": "temperature of pure boiling water temperature of pure melting ice"
+    },
+    {
+     "label": "C",
+     "html": "normal body temperature temperature of pure boiling water"
+    },
+    {
+     "label": "D",
+     "html": "temperature of pure melting ice temperature of pure boiling water"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    135.2,
-    283.6,
-    246.6
+    67.5,
+    135.0,
+    283.5,
+    247.0
    ],
    "id": "0625_2025MJ_11_q26_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p11/q26/figures/0625_2025MJ_11_q26_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p11/q26/figures/0625_2025MJ_11_q26_figA",
     "url": null,
-    "kb": 20.1
+    "kb": 19.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "What are the charges on X and Y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "charge on X",
-     "charge on Y"
-    ],
-    [
-     "<b>A</b>",
-     "negative",
-     "negative"
-    ],
-    [
-     "<b>B</b>",
-     "negative",
-     "positive"
-    ],
-    [
-     "<b>C</b>",
-     "positive",
-     "negative"
-    ],
-    [
-     "<b>D</b>",
-     "positive",
-     "positive"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_11_q26_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "negative negative"
+    },
+    {
+     "label": "B",
+     "html": "negative positive"
+    },
+    {
+     "label": "C",
+     "html": "positive negative"
+    },
+    {
+     "label": "D",
+     "html": "positive positive"
+    }
+   ]
   }
  ]
 }

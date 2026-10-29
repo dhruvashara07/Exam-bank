@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    218.2,
-    272.7,
-    376.1,
-    403.0
+    218.0,
+    272.0,
+    376.5,
+    403.5
    ],
    "id": "0625_2021FM_22_q34_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-FM/p22/q34/figures/0625_2021FM_22_q34_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-FM/p22/q34/figures/0625_2021FM_22_q34_figA",
     "url": null,
-    "kb": 4.4
+    "kb": 4.3
    }
   },
   {
    "page": 13,
    "bbox": [
-    67.7,
-    447.9,
-    342.7,
-    558.8
+    67.5,
+    447.5,
+    343.0,
+    559.0
    ],
    "id": "0625_2021FM_22_q34_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-FM/p22/q34/figures/0625_2021FM_22_q34_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-FM/p22/q34/figures/0625_2021FM_22_q34_figB",
     "url": null,
-    "kb": 24.6
+    "kb": 24.5
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "What happens to the brightness of the lamp and the potential difference (p.d.) across the lamp, when the slider is moved from X to Y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "brightness of lamp",
-     "p.d. across the lamp"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021FM_22_q34_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

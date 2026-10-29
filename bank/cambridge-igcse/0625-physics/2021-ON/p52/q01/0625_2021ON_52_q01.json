@@ -105,6 +105,18 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "l =",
+       "unit": "cm"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "w =",
+       "unit": "cm"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "h =",
        "unit": "cm"
       },
@@ -322,7 +334,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the density ρ of the wood using the equation ρ = \\(\\frac{<i>m</i>}{<i>V</i>}\\). Give your answer to a suitable number of significant figures for this experiment and include the unit.",
+       "html": "Calculate the density ρ of the wood using the equation ρ = \\(\\frac{m}{V}\\). Give your answer to a suitable number of significant figures for this experiment and include the unit.",
        "text": "Calculate the density ρ of the wood using the equation ρ = (m)/(V). Give your answer to a suitable number of significant figures for this experiment and include the unit."
       },
       {
@@ -804,6 +816,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

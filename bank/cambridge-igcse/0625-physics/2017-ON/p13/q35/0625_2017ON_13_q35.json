@@ -32,10 +32,10 @@
   {
    "page": 17,
    "bbox": [
-    67.7,
-    459.1,
-    315.1,
-    584.6
+    67.5,
+    459.0,
+    315.5,
+    585.0
    ],
    "id": "0625_2017ON_13_q35_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p13/q35/figures/0625_2017ON_13_q35_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p13/q35/figures/0625_2017ON_13_q35_figA",
     "url": null,
-    "kb": 24.1
+    "kb": 24.0
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "An electrical device requires a voltage of 5.0V to operate normally. The mains supply voltage is 250V.",
-   "text": "An electrical device requires a voltage of 5.0V to operate normally. The mains supply voltage is 250V."
+   "html": "An electrical device requires a voltage of 5.0 V to operate normally. The mains supply voltage is 250 V.",
+   "text": "An electrical device requires a voltage of 5.0 V to operate normally. The mains supply voltage is 250 V."
   },
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which row shows a transformer that provides output voltage that enables the device to operate normally when connected to the mains supply?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "number of turns on",
-     "number of turns on"
-    ],
-    [
-     "",
-     "the primary coil",
-     "the secondary coil"
-    ],
-    [
-     "<b>A</b>",
-     "500",
-     "2500"
-    ],
-    [
-     "<b>B</b>",
-     "500",
-     "25000"
-    ],
-    [
-     "<b>C</b>",
-     "2500",
-     "500"
-    ],
-    [
-     "<b>D</b>",
-     "25000",
-     "500"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017ON_13_q35_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "500 2500"
+    },
+    {
+     "label": "B",
+     "html": "500 25000"
+    },
+    {
+     "label": "C",
+     "html": "2500 500"
+    },
+    {
+     "label": "D",
+     "html": "25000 500"
+    }
+   ]
   }
  ]
 }

@@ -32,7 +32,7 @@
   {
    "page": 6,
    "bbox": [
-    181.6,
+    181.0,
     226.4,
     413.5,
     339.3
@@ -45,15 +45,15 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p12/q13/figures/0625_2024ON_12_q13_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p12/q13/figures/0625_2024ON_12_q13_figA",
     "url": null,
-    "kb": 12.3
+    "kb": 12.2
    }
   },
   {
    "page": 6,
    "bbox": [
-    67.7,
-    372.6,
-    301.3,
+    67.5,
+    372.5,
+    301.5,
     483.5
    ],
    "id": "0625_2024ON_12_q13_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p12/q13/figures/0625_2024ON_12_q13_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p12/q13/figures/0625_2024ON_12_q13_figB",
     "url": null,
-    "kb": 22.4
+    "kb": 22.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "What happens to the pressure and the volume of the trapped air?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "pressure",
-     "volume"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "does not change"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_12_q13_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases does not change"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

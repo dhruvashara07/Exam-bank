@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    160.6,
+    67.5,
+    160.5,
     386.0,
-    271.9
+    272.0
    ],
    "id": "0625_2019FM_12_q04_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-FM/p12/q04/figures/0625_2019FM_12_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-FM/p12/q04/figures/0625_2019FM_12_q04_figA",
     "url": null,
-    "kb": 30.3
+    "kb": 30.2
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "An astronaut in a space station orbits above the Earth. In the space station, the acceleration due to gravity is 7.5m/s<sup>2</sup>. On Earth, the acceleration due to gravity is 10m/s<sup>2</sup>.",
-   "text": "An astronaut in a space station orbits above the Earth. In the space station, the acceleration due to gravity is 7.5m/s2. On Earth, the acceleration due to gravity is 10m/s2."
+   "html": "An astronaut in a space station orbits above the Earth. In the space station, the acceleration due to gravity is 7.5 m / s<sup>2</sup>. On Earth, the acceleration due to gravity is 10 m / s<sup>2</sup>.",
+   "text": "An astronaut in a space station orbits above the Earth. In the space station, the acceleration due to gravity is 7.5 m / s2. On Earth, the acceleration due to gravity is 10 m / s2."
   },
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which statement about the astronaut’s mass and weight in the space station is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass of astronaut",
-     "weight of astronaut"
-    ],
-    [
-     "<b>A</b>",
-     "same as on the Earth",
-     "less than on the Earth"
-    ],
-    [
-     "<b>B</b>",
-     "same as on the Earth",
-     "greater than on the Earth"
-    ],
-    [
-     "<b>C</b>",
-     "lower than on the Earth",
-     "less than on the Earth"
-    ],
-    [
-     "<b>D</b>",
-     "lower than on the Earth",
-     "greater than on the Earth"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019FM_12_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "same as on the Earth less than on the Earth"
+    },
+    {
+     "label": "B",
+     "html": "same as on the Earth greater than on the Earth"
+    },
+    {
+     "label": "C",
+     "html": "lower than on the Earth less than on the Earth"
+    },
+    {
+     "label": "D",
+     "html": "lower than on the Earth greater than on the Earth"
+    }
+   ]
   }
  ]
 }

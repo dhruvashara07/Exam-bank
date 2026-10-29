@@ -32,10 +32,10 @@
   {
    "page": 12,
    "bbox": [
-    67.7,
-    438.9,
-    446.9,
-    550.3
+    67.5,
+    438.5,
+    447.0,
+    550.5
    ],
    "id": "0625_2025MJ_12_q38_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p12/q38/figures/0625_2025MJ_12_q38_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p12/q38/figures/0625_2025MJ_12_q38_figA",
     "url": null,
-    "kb": 35.8
+    "kb": 35.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "Which row relates the periods of these cycles to the motions of these bodies?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "period of day and night",
-     "period of the seasons"
-    ],
-    [
-     "<b>A</b>",
-     "the Earth orbits the Sun",
-     "the Earth rotates about its axis"
-    ],
-    [
-     "<b>B</b>",
-     "the Earth orbits the Sun",
-     "the Moon orbits the Earth"
-    ],
-    [
-     "<b>C</b>",
-     "the Earth rotates about its axis",
-     "the Earth orbits the Sun"
-    ],
-    [
-     "<b>D</b>",
-     "the Earth rotates about its axis",
-     "the Moon orbits the Earth"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_12_q38_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "the Earth orbits the Sun the Earth rotates about its axis"
+    },
+    {
+     "label": "B",
+     "html": "the Earth orbits the Sun the Moon orbits the Earth"
+    },
+    {
+     "label": "C",
+     "html": "the Earth rotates about its axis the Earth orbits the Sun"
+    },
+    {
+     "label": "D",
+     "html": "the Earth rotates about its axis the Moon orbits the Earth"
+    }
+   ]
   }
  ]
 }

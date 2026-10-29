@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    460.2,
+    67.5,
+    460.0,
     501.5,
-    571.6
+    571.5
    ],
    "id": "0625_2024ON_11_q25_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p11/q25/figures/0625_2024ON_11_q25_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p11/q25/figures/0625_2024ON_11_q25_figA",
     "url": null,
-    "kb": 40.0
+    "kb": 39.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row about electrical conduction in metals is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "statement 1",
-     "statement 2"
-    ],
-    [
-     "<b>A</b>",
-     "It is the movement of free electrons.",
-     "Electric charge is a flow of current."
-    ],
-    [
-     "<b>B</b>",
-     "It is the movement of positive ions.",
-     "Electric charge is a flow of current."
-    ],
-    [
-     "<b>C</b>",
-     "It is the movement of free electrons.",
-     "Electric current is a flow of charge."
-    ],
-    [
-     "<b>D</b>",
-     "It is the movement of positive ions.",
-     "Electric current is a flow of charge."
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_11_q25_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "It is the movement of free electrons. Electric charge is a flow of current."
+    },
+    {
+     "label": "B",
+     "html": "It is the movement of positive ions. Electric charge is a flow of current."
+    },
+    {
+     "label": "C",
+     "html": "It is the movement of free electrons. Electric current is a flow of charge."
+    },
+    {
+     "label": "D",
+     "html": "It is the movement of positive ions. Electric current is a flow of charge."
+    }
+   ]
   }
  ]
 }

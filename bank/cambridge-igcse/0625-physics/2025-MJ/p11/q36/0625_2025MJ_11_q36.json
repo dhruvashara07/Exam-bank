@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    109.9,
-    327.2,
-    221.3
+    67.5,
+    109.5,
+    327.5,
+    221.5
    ],
    "id": "0625_2025MJ_11_q36_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which words correctly complete the sentence?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "1",
-     "2",
-     "3"
-    ],
-    [
-     "<b>A</b>",
-     "atoms",
-     "negatively",
-     "ions"
-    ],
-    [
-     "<b>B</b>",
-     "ions",
-     "negatively",
-     "atoms"
-    ],
-    [
-     "<b>C</b>",
-     "atoms",
-     "positively",
-     "ions"
-    ],
-    [
-     "<b>D</b>",
-     "ions",
-     "positively",
-     "atoms"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_11_q36_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "atoms negatively ions"
+    },
+    {
+     "label": "B",
+     "html": "ions negatively atoms"
+    },
+    {
+     "label": "C",
+     "html": "atoms positively ions"
+    },
+    {
+     "label": "D",
+     "html": "ions positively atoms"
+    }
+   ]
   }
  ]
 }

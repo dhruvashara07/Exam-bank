@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    59.7,
-    98.5,
-    535.6,
-    409.9
+    59.5,
+    99.5,
+    535.0,
+    410.0
    ],
    "id": "0625_2025MJ_31_q01_fig1-1",
    "part": "",
@@ -117,10 +117,13 @@
      "text": "Complete the following sentence."
     },
     {
+     "type": "text",
+     "html": "The car has the largest acceleration in section …… .",
+     "text": "The car has the largest acceleration in section …… ."
+    },
+    {
      "type": "answer",
-     "kind": "answer_line",
-     "prefix": "The car has the largest acceleration in section",
-     "unit": "."
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -189,8 +192,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate the distance travelled by the car between time = 20s and time = 35s.",
-     "text": "Calculate the distance travelled by the car between time = 20s and time = 35s."
+     "html": "Calculate the distance travelled by the car between time = 20 s and time = 35 s.",
+     "text": "Calculate the distance travelled by the car between time = 20 s and time = 35 s."
     },
     {
      "type": "answer",
@@ -451,8 +454,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Another car travels a distance of 500m in a time of 20s.",
-     "text": "Another car travels a distance of 500m in a time of 20s."
+     "html": "Another car travels a distance of 500 m in a time of 20 s.",
+     "text": "Another car travels a distance of 500 m in a time of 20 s."
     },
     {
      "type": "text",
@@ -463,7 +466,7 @@
      "type": "answer",
      "kind": "answer_line",
      "prefix": "average speed =",
-     "unit": "m/s"
+     "unit": "m / s"
     },
     {
      "type": "marks",
@@ -489,6 +492,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -32,10 +32,10 @@
   {
    "page": 18,
    "bbox": [
-    67.7,
+    67.5,
     508.0,
-    374.8,
-    633.4
+    375.0,
+    633.5
    ],
    "id": "0625_2022ON_23_q40_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p23/q40/figures/0625_2022ON_23_q40_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p23/q40/figures/0625_2022ON_23_q40_figA",
     "url": null,
-    "kb": 26.8
+    "kb": 26.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -112,40 +113,30 @@
    "text": "Which isotope has a half-life of 4 hours?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "count rate at the start",
-     "count rate after 8 hours"
-    ],
-    [
-     "",
-     "counts per minute",
-     "counts per minute"
-    ],
-    [
-     "<b>A</b>",
-     "150",
-     "36"
-    ],
-    [
-     "<b>B</b>",
-     "212",
-     "53"
-    ],
-    [
-     "<b>C</b>",
-     "260",
-     "92"
-    ],
-    [
-     "<b>D</b>",
-     "356",
-     "80"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_23_q40_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "150 36"
+    },
+    {
+     "label": "B",
+     "html": "212 53"
+    },
+    {
+     "label": "C",
+     "html": "260 92"
+    },
+    {
+     "label": "D",
+     "html": "356 80"
+    }
+   ]
   }
  ]
 }

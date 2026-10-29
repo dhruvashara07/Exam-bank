@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    187.7,
-    98.3,
+    187.5,
+    98.0,
     407.5,
-    212.4
+    212.5
    ],
    "id": "0625_2016MJ_12_q23_figA",
    "caption": null,
@@ -51,7 +51,7 @@
   {
    "page": 10,
    "bbox": [
-    69.3,
+    69.0,
     257.0,
     265.5,
     382.5
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p12/q23/figures/0625_2016MJ_12_q23_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p12/q23/figures/0625_2016MJ_12_q23_figB",
     "url": null,
-    "kb": 19.9
+    "kb": 19.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row gives the angle of incidence and shows whether the ray undergoes total internal reflection?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "angle of",
-     "total internal"
-    ],
-    [
-     "",
-     "incidence",
-     "reflection"
-    ],
-    [
-     "A",
-     "p",
-     "no"
-    ],
-    [
-     "B",
-     "p",
-     "yes"
-    ],
-    [
-     "C",
-     "q",
-     "no"
-    ],
-    [
-     "D",
-     "q",
-     "yes"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_12_q23_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "p no"
+    },
+    {
+     "label": "B",
+     "html": "p yes"
+    },
+    {
+     "label": "C",
+     "html": "q no"
+    },
+    {
+     "label": "D",
+     "html": "q yes"
+    }
+   ]
   }
  ]
 }

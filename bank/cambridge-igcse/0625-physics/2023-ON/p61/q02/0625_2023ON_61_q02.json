@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 6,
    "bbox": [
-    106.3,
-    111.3,
-    489.0,
-    309.6
+    107.0,
+    110.5,
+    488.5,
+    308.0
    ],
    "id": "0625_2023ON_61_q02_fig2-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p61/q02/figures/0625_2023ON_61_q02_fig2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p61/q02/figures/0625_2023ON_61_q02_fig2-1",
     "url": null,
-    "kb": 22.5
+    "kb": 22.4
    }
   },
   {
    "caption": "Fig. 2.2",
    "page": 6,
    "bbox": [
-    105.0,
-    406.2,
-    490.3,
-    545.3
+    104.5,
+    405.5,
+    491.0,
+    543.5
    ],
    "id": "0625_2023ON_61_q02a_fig2-2",
    "part": "(a)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 2.3",
    "page": 6,
    "bbox": [
-    105.0,
-    406.2,
-    490.3,
-    545.3
+    104.5,
+    405.5,
+    491.0,
+    543.5
    ],
    "id": "0625_2023ON_61_q02a_fig2-3",
    "part": "(a)",
@@ -90,10 +90,10 @@
    "caption": "Table 2.1",
    "page": 7,
    "bbox": [
-    95.3,
-    58.0,
-    499.9,
-    185.9
+    95.0,
+    61.5,
+    500.0,
+    186.0
    ],
    "id": "0625_2023ON_61_q02a_table2-1",
    "part": "(a)",
@@ -364,7 +364,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate, and record in Table 2.1, the resistance <i>R</i> of 20.0 cm of the resistance wire. Use the equation <i>R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\).",
+       "html": "Calculate, and record in Table 2.1, the resistance <i>R</i> of 20.0 cm of the resistance wire. Use the equation <i>R</i> = \\(\\frac{V}{I}\\).",
        "text": "Calculate, and record in Table 2.1, the resistance R of 20.0 cm of the resistance wire. Use the equation R = (V)/(I)."
       },
       {
@@ -432,7 +432,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate, and record in the first row of Table 2.1, \\(\\frac{<i>R</i>}{<i>l</i>}\\) for <i>l</i> = 20.0 cm.",
+       "html": "Calculate, and record in the first row of Table 2.1, \\(\\frac{R}{l}\\) for <i>l</i> = 20.0 cm.",
        "text": "Calculate, and record in the first row of Table 2.1, (R)/(l) for l = 20.0 cm."
       },
       {
@@ -529,33 +529,9 @@
      "caption": "Fig. 2.3"
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>l</i>/",
-       "<i>V</i>/",
-       "<i>R</i>/",
-       "<i>R</i> / <i>l</i>"
-      ],
-      [
-       "20.0",
-       "",
-       "",
-       ""
-      ],
-      [
-       "60.0",
-       "1.6",
-       "2.1",
-       "0.035"
-      ],
-      [
-       "100.0",
-       "2.5",
-       "3.3",
-       "0.033"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2023ON_61_q02a_table2-1",
+     "caption": "Table 2.1"
     }
    ]
   },
@@ -745,7 +721,7 @@
     },
     {
      "type": "text",
-     "html": "\\(\\frac{<i>R</i>}{<i>l</i>}\\)",
+     "html": "\\(\\frac{R}{l}\\)",
      "text": "(R)/(l)"
     }
    ]
@@ -843,6 +819,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

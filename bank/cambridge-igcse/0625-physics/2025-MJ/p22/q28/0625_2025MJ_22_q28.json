@@ -32,10 +32,10 @@
   {
    "page": 12,
    "bbox": [
-    67.7,
+    67.5,
     110.2,
-    350.0,
-    282.4
+    355.0,
+    282.5
    ],
    "id": "0625_2025MJ_22_q28_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p22/q28/figures/0625_2025MJ_22_q28_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p22/q28/figures/0625_2025MJ_22_q28_figA",
     "url": null,
-    "kb": 32.2
+    "kb": 32.3
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,40 +108,25 @@
    "caption": null
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "resistance of",
-     "resistance of wire"
-    ],
-    [
-     "",
-     "shorter wire",
-     "with smaller diameter"
-    ],
-    [
-     "<b>A</b>",
-     "greater",
-     "greater"
-    ],
-    [
-     "<b>B</b>",
-     "greater",
-     "smaller"
-    ],
-    [
-     "<b>C</b>",
-     "smaller",
-     "greater"
-    ],
-    [
-     "<b>D</b>",
-     "smaller",
-     "smaller"
-    ]
-   ],
-   "options": true
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "greater greater"
+    },
+    {
+     "label": "B",
+     "html": "greater smaller"
+    },
+    {
+     "label": "C",
+     "html": "smaller greater"
+    },
+    {
+     "label": "D",
+     "html": "smaller smaller"
+    }
+   ]
   }
  ]
 }

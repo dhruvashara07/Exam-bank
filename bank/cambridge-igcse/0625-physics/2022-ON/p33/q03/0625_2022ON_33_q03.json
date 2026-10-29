@@ -9,10 +9,10 @@
    "caption": "Table 3.1",
    "page": 5,
    "bbox": [
-    124.4,
-    123.0,
-    470.9,
-    261.6
+    124.5,
+    126.5,
+    471.0,
+    262.0
    ],
    "id": "0625_2022ON_33_q03a_table3-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 3.1",
    "page": 5,
    "bbox": [
-    105.4,
-    308.3,
-    489.8,
-    477.5
+    105.0,
+    312.0,
+    490.0,
+    476.0
    ],
    "id": "0625_2022ON_33_q03b_fig3-1",
    "part": "(b)",
@@ -40,7 +40,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p33/q03/figures/0625_2022ON_33_q03b_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p33/q03/figures/0625_2022ON_33_q03b_fig3-1",
     "url": null,
-    "kb": 77.6
+    "kb": 77.5
    }
   }
  ],
@@ -119,34 +119,9 @@
      "text": "energy for a number of devices. The table is only complete for the microphone. Complete Table 3.1 by writing in each blank space."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "device",
-       "input energy",
-       "useful output energy"
-      ],
-      [
-       "microphone",
-       "sound",
-       "electrical"
-      ],
-      [
-       "electric fire",
-       "electrical",
-       ""
-      ],
-      [
-       "wind turbine",
-       "",
-       "electrical"
-      ],
-      [
-       "",
-       "electrical",
-       "sound"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2022ON_33_q03a_table3-1",
+     "caption": "Table 3.1"
     },
     {
      "type": "marks",
@@ -244,14 +219,23 @@
      "content": [
       {
        "type": "text",
-       "html": "Complete the sentences about energy transfers.",
-       "text": "Complete the sentences about energy transfers."
+       "html": "Complete the sentences about energy transfers. <b> 1. </b> When the player swings the tennis racket, his body converts ……",
+       "text": "Complete the sentences about energy transfers. 1. When the player swings the tennis racket, his body converts ……"
       },
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "2. When the tennis ball is moving upwards, the ball gains",
+       "prefix": "energy to",
        "unit": "energy."
+      },
+      {
+       "type": "text",
+       "html": "<b> 2. </b> When the tennis ball is moving upwards, the ball gains …… energy.",
+       "text": "2. When the tennis ball is moving upwards, the ball gains …… energy."
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -364,5 +348,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

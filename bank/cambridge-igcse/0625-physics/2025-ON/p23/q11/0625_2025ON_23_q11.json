@@ -32,9 +32,9 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    633.8,
-    370.6,
+    67.5,
+    633.5,
+    370.5,
     773.5
    ],
    "id": "0625_2025ON_23_q11_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p23/q11/figures/0625_2025ON_23_q11_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p23/q11/figures/0625_2025ON_23_q11_figA",
     "url": null,
-    "kb": 30.4
+    "kb": 30.2
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row explains the decrease in pressure in terms of the movement of air particles?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "kinetic energy of air particles",
-     "frequency of collisions between air particles and inside surface of ball"
-    ],
-    [
-     "<b>A</b>",
-     "decreased",
-     "decreased"
-    ],
-    [
-     "<b>B</b>",
-     "decreased",
-     "unchanged"
-    ],
-    [
-     "<b>C</b>",
-     "unchanged",
-     "decreased"
-    ],
-    [
-     "<b>D</b>",
-     "unchanged",
-     "unchanged"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025ON_23_q11_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreased decreased"
+    },
+    {
+     "label": "B",
+     "html": "decreased unchanged"
+    },
+    {
+     "label": "C",
+     "html": "unchanged decreased"
+    },
+    {
+     "label": "D",
+     "html": "unchanged unchanged"
+    }
+   ]
   }
  ]
 }

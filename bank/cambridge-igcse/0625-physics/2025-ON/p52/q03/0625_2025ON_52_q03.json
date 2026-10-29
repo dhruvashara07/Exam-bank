@@ -34,9 +34,9 @@
    "page": 10,
    "bbox": [
     171.0,
-    98.5,
-    424.4,
-    293.8
+    98.0,
+    423.5,
+    294.0
    ],
    "id": "0625_2025ON_52_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 10,
    "bbox": [
-    124.3,
-    460.4,
+    124.0,
+    461.0,
     471.0,
-    695.7
+    696.0
    ],
    "id": "0625_2025ON_52_q03bi_table3-1",
    "part": "(b)(i)",
@@ -132,8 +132,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Measure and record the room temperature θ<sub>R</sub> to the nearest 0.5°C.",
-     "text": "Measure and record the room temperature θR to the nearest 0.5°C."
+     "html": "Measure and record the room temperature θ<sub>R</sub> to the nearest 0.5 °C.",
+     "text": "Measure and record the room temperature θR to the nearest 0.5 °C."
     },
     {
      "type": "answer",
@@ -214,53 +214,21 @@
       {
        "type": "list",
        "items": [
-        "Pour approximately 60cm<sup>3</sup> of hot water into the beaker.",
-        "Wait for 30s.",
-        "Measure and record in Table 3.1, the temperature θof the water at time t = 0.",
+        "Pour approximately 60 cm<sup>3</sup> of hot water into the beaker.",
+        "Wait for 30 s.",
+        "Measure and record in Table 3.1, the temperature θ of the water at time t = 0.",
         "Immediately start the stop-watch and measure the temperature of the water at one-minute intervals for 5 minutes."
        ]
       },
       {
        "type": "text",
-       "html": "Record in Table 3.1 the temperatures to the nearest 1°C.",
-       "text": "Record in Table 3.1 the temperatures to the nearest 1°C."
+       "html": "Record in Table 3.1 the temperatures to the nearest 1 °C.",
+       "text": "Record in Table 3.1 the temperatures to the nearest 1 °C."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "time t",
-         "temperature θ"
-        ],
-        [
-         "/min",
-         "/°C"
-        ],
-        [
-         "0",
-         ""
-        ],
-        [
-         "1",
-         ""
-        ],
-        [
-         "2",
-         ""
-        ],
-        [
-         "3",
-         ""
-        ],
-        [
-         "4",
-         ""
-        ],
-        [
-         "5",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2025ON_52_q03bi_table3-1",
+       "caption": "Table 3.1"
       },
       {
        "type": "marks",
@@ -327,8 +295,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Suggest why you wait for 30s before measuring the initial temperature of the hot water.",
-       "text": "Suggest why you wait for 30s before measuring the initial temperature of the hot water."
+       "html": "Suggest why you wait for 30 s before measuring the initial temperature of the hot water.",
+       "text": "Suggest why you wait for 30 s before measuring the initial temperature of the hot water."
       },
       {
        "type": "answer",
@@ -482,8 +450,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the decrease in temperature Δθof the hot water during the <b>first</b> <b>two</b> minutes of",
-       "text": "Calculate the decrease in temperature Δθof the hot water during the first two minutes of"
+       "html": "Calculate the decrease in temperature Δθ of the hot water during the <b>first</b> <b>two</b> minutes of",
+       "text": "Calculate the decrease in temperature Δθ of the hot water during the first two minutes of"
       },
       {
        "type": "text",
@@ -493,7 +461,7 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "Δθ=",
+       "prefix": "Δθ =",
        "unit": "°C"
       },
       {
@@ -571,14 +539,14 @@
       },
       {
        "type": "text",
-       "html": "R<sub>1</sub> = \\(\\frac{decreaseintemperature}{time}\\)",
+       "html": "R<sub>1</sub> = \\(\\frac{\\text{decrease in temperature}}{\\text{time}}\\)",
        "text": "R1 = (decreaseintemperature)/(time)"
       },
       {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "R1 =",
-       "unit": "°C/min"
+       "unit": "°C / min"
       },
       {
        "type": "marks",
@@ -652,7 +620,7 @@
        "type": "answer",
        "kind": "answer_line",
        "prefix": "R2 =",
-       "unit": "°C/min"
+       "unit": "°C / min"
       },
       {
        "type": "marks",
@@ -942,6 +910,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

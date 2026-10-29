@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1 (not to scale)",
    "page": 2,
    "bbox": [
-    175.5,
-    141.5,
-    416.2,
-    294.9
+    176.0,
+    141.0,
+    416.0,
+    293.0
    ],
    "id": "0625_2021MJ_52_q01_fig1-1",
    "part": "",
@@ -355,13 +355,19 @@
      "text": "Measure the height h of beaker A, as shown in Fig. 1.1."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "h",
+     "unit": "cm"
+    },
+    {
      "type": "text",
      "html": "Calculate the volume <i>V</i><sub>A</sub> of beaker A using the equation",
      "text": "Calculate the volume VA of beaker A using the equation"
     },
     {
      "type": "text",
-     "html": "<i>V</i><sub>A</sub> = \\(\\frac{<i>hc </i><sup>2</sup>}{12.6}\\) .",
+     "html": "<i>V</i><sub>A</sub> = \\(\\frac{\\text{hc} ^{2}}{12.6}\\) .",
      "text": "VA = (hc 2)/(12.6) ."
     },
     {
@@ -448,9 +454,42 @@
       {
        "type": "list",
        "items": [
-        "Record the volume <i>V</i><sub>S</sub> of sand.",
-        "Write down the mass <i>m</i><sub>B</sub> of beaker B, given on the card.",
-        "Pour the sand into beaker B. Measure the mass <i>m</i> of beaker B containing the sand.",
+        "Record the volume <i>V</i><sub>S</sub> of sand."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "VS =",
+       "unit": "cm3"
+      },
+      {
+       "type": "list",
+       "items": [
+        "Write down the mass <i>m</i><sub>B</sub> of beaker B, given on the card."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "mB =",
+       "unit": "g"
+      },
+      {
+       "type": "list",
+       "items": [
+        "Pour the sand into beaker B. Measure the mass <i>m</i> of beaker B containing the sand."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "m =",
+       "unit": "g"
+      },
+      {
+       "type": "list",
+       "items": [
         "Calculate the mass <i>m</i><sub>S</sub> of sand in the beaker. Use the equation <i>m</i><sub>S</sub> = (<i>m</i> – <i>m</i><sub>B</sub>)."
        ]
       },
@@ -531,7 +570,7 @@
       },
       {
        "type": "text",
-       "html": "ρ= \\(\\frac{<i>m</i><sub>S</sub>}{<i>V</i>}\\) . <sub>S</sub>",
+       "html": "ρ= \\(\\frac{m_{S}}{V}\\) . <sub>S</sub>",
        "text": "ρ= (mS)/(V) . S"
       },
       {
@@ -571,6 +610,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

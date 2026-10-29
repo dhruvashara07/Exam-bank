@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 7,
    "bbox": [
-    64.6,
-    109.2,
-    530.6,
-    255.2
+    64.5,
+    112.5,
+    530.5,
+    253.5
    ],
    "id": "0625_2022ON_52_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 8,
    "bbox": [
-    64.6,
-    135.3,
-    530.7,
-    290.2
+    64.5,
+    140.0,
+    530.5,
+    288.5
    ],
    "id": "0625_2022ON_52_q03bi_fig3-2",
    "part": "(b)(i)",
@@ -71,10 +71,10 @@
    "caption": "Table 3.1",
    "page": 8,
    "bbox": [
-    190.4,
-    346.5,
-    404.9,
-    517.9
+    190.5,
+    350.0,
+    405.0,
+    518.0
    ],
    "id": "0625_2022ON_52_q03bii_table3-1",
    "part": "(b)(ii)",
@@ -334,39 +334,9 @@
        "text": "Repeat the steps above, using loads of weight P = 2.0 N, 3.0 N, 4.0 N and 5.0 N. Record all the values of a in Table 3.1."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>P</i> / N",
-         "<i>a</i> / cm",
-         "1 1 <i>P</i>/N"
-        ],
-        [
-         "1.0",
-         "",
-         "1.00"
-        ],
-        [
-         "2.0",
-         "",
-         "0.50"
-        ],
-        [
-         "3.0",
-         "",
-         "0.33"
-        ],
-        [
-         "4.0",
-         "",
-         "0.25"
-        ],
-        [
-         "5.0",
-         "",
-         "0.20"
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2022ON_52_q03bii_table3-1",
+       "caption": "Table 3.1"
       },
       {
        "type": "marks",
@@ -453,7 +423,7 @@
     },
     {
      "type": "text",
-     "html": "Plot a graph of <i>a</i> / cm (<i>y</i>-axis) against \\(\\frac{1}{<i>P</i>}\\) \\(\\frac{1}{N}\\) (<i>x</i>-axis). Start the <i>y</i>-axis at <i>a</i> / cm = 30. Start the <i>x</i>-axis at 0.",
+     "html": "Plot a graph of <i>a</i> / cm (<i>y</i>-axis) against \\(\\frac{1}{P}\\) \\(\\frac{1}{N}\\) (<i>x</i>-axis). Start the <i>y</i>-axis at <i>a</i> / cm = 30. Start the <i>x</i>-axis at 0.",
      "text": "Plot a graph of a / cm (y-axis) against (1)/(P) (1)/(N) (x-axis). Start the y-axis at a / cm = 30. Start the x-axis at 0."
     },
     {
@@ -527,7 +497,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Record the value of <i>a</i> when \\(\\frac{1}{<i>P</i>}\\) = 0. Show clearly on the graph how you obtained the necessary information.",
+     "html": "Record the value of <i>a</i> when \\(\\frac{1}{P}\\) = 0. Show clearly on the graph how you obtained the necessary information.",
      "text": "Record the value of a when (1)/(P) = 0. Show clearly on the graph how you obtained the necessary information."
     },
     {
@@ -559,6 +529,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

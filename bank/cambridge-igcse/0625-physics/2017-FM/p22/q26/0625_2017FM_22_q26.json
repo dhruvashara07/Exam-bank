@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    67.6,
-    321.6,
-    401.2,
-    447.1
+    67.5,
+    321.5,
+    401.5,
+    447.5
    ],
    "id": "0625_2017FM_22_q26_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-FM/p22/q26/figures/0625_2017FM_22_q26_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-FM/p22/q26/figures/0625_2017FM_22_q26_figA",
     "url": null,
-    "kb": 38.3
+    "kb": 38.1
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which row completes the descriptions of how these processes are carried out?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "hammering bar magnet",
-     "slowly removing bar magnet"
-    ],
-    [
-     "",
-     "for a long time with",
-     "from a coil connected to"
-    ],
-    [
-     "A",
-     "magnet aligned E-W",
-     "a d.c. power supply"
-    ],
-    [
-     "B",
-     "magnet aligned E-W",
-     "an a.c. power supply"
-    ],
-    [
-     "C",
-     "magnet aligned N-S",
-     "a d.c. power supply"
-    ],
-    [
-     "D",
-     "magnet aligned N-S",
-     "an a.c. power supply"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017FM_22_q26_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "magnet aligned E-W a d.c. power supply"
+    },
+    {
+     "label": "B",
+     "html": "magnet aligned E-W an a.c. power supply"
+    },
+    {
+     "label": "C",
+     "html": "magnet aligned N-S a d.c. power supply"
+    },
+    {
+     "label": "D",
+     "html": "magnet aligned N-S an a.c. power supply"
+    }
+   ]
   }
  ]
 }

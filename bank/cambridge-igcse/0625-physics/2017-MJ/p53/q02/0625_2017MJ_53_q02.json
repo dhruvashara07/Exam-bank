@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    89.7,
-    140.1,
-    502.6,
-    660.3
+    89.5,
+    139.5,
+    504.0,
+    657.5
    ],
    "id": "0625_2017MJ_53_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 5,
    "bbox": [
-    89.7,
-    140.1,
-    502.6,
-    660.3
+    89.5,
+    139.5,
+    504.0,
+    657.5
    ],
    "id": "0625_2017MJ_53_q02_fig2-2",
    "part": "",
@@ -374,10 +374,19 @@
     {
      "type": "list",
      "items": [
-      "Record the new reading <i>W</i><sub>2</sub> of the forcemeter.",
-      "Record the new reading <i>V</i><sub>2</sub> of the measuring cylinder, with the piece of modelling clay in the water.",
-      "Remove the modelling clay from the measuring cylinder.",
-      "<b>Do not empty the measuring cylinder</b>."
+      "Record the new reading <i>W</i><sub>2</sub> of the forcemeter."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "W2 =",
+     "unit": "N"
+    },
+    {
+     "type": "list",
+     "items": [
+      "Record the new reading <i>V</i><sub>2</sub> of the measuring cylinder, with the piece of modelling clay in the water."
      ]
     },
     {
@@ -385,6 +394,13 @@
      "kind": "answer_line",
      "prefix": "V2 =",
      "unit": "cm3"
+    },
+    {
+     "type": "list",
+     "items": [
+      "Remove the modelling clay from the measuring cylinder.",
+      "<b>Do not empty the measuring cylinder</b>."
+     ]
     },
     {
      "type": "marks",
@@ -480,7 +496,7 @@
     },
     {
      "type": "text",
-     "html": "ρ<sub>1</sub> = \\(\\frac{(<i>W</i><sub>1</sub> – <i>W</i><sub>2</sub>)}{(<i>V</i> – <i>V</i>)}\\) × <i>k</i>",
+     "html": "ρ<sub>1</sub> = \\(\\frac{(W_{1} – W_{2})}{(V – V )}\\) × <i>k</i>",
      "text": "ρ1 = ((W1 – W2))/((V – V)) × k"
     },
     {
@@ -569,7 +585,17 @@
     {
      "type": "list",
      "items": [
-      "Measure the mass <i>m</i><sub>1</sub> of the measuring cylinder, still containing the volume <i>V</i><sub>1</sub> of water. Use the balance provided.",
+      "Measure the mass <i>m</i><sub>1</sub> of the measuring cylinder, still containing the volume <i>V</i><sub>1</sub> of water. Use the balance provided."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "m1 ="
+    },
+    {
+     "type": "list",
+     "items": [
       "Empty the measuring cylinder.",
       "Measure the mass <i>m</i><sub>2</sub> of the empty measuring cylinder."
      ]
@@ -649,7 +675,7 @@
     },
     {
      "type": "text",
-     "html": "ρ<sub>2</sub> = \\(\\frac{(<i>m</i><sub>1</sub> – <i>m</i><sub>2</sub>)}{<i>V</i>}\\) .",
+     "html": "ρ<sub>2</sub> = \\(\\frac{(m_{1} – m_{2})}{V}\\) .",
      "text": "ρ2 = ((m1 – m2))/(V) ."
     },
     {
@@ -734,7 +760,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation of improvement",
+     "prefix": "suggestion"
+    },
+    {
+     "type": "text",
+     "html": "explanation of improvement ……",
+     "text": "explanation of improvement ……"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 3
     },
     {
@@ -761,6 +796,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

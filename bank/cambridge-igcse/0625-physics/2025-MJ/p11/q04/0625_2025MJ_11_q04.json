@@ -32,9 +32,9 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    84.6,
-    243.2,
+    67.5,
+    84.5,
+    243.5,
     195.5
    ],
    "id": "0625_2025MJ_11_q04_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p11/q04/figures/0625_2025MJ_11_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p11/q04/figures/0625_2025MJ_11_q04_figA",
     "url": null,
-    "kb": 21.5
+    "kb": 21.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row gives the correct weight for the mass shown when it is at the Earth’s surface?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass/kg",
-     "weight/N"
-    ],
-    [
-     "<b>A</b>",
-     "2.00",
-     "19.6"
-    ],
-    [
-     "<b>B</b>",
-     "10.0",
-     "1.02"
-    ],
-    [
-     "<b>C</b>",
-     "10.0",
-     "9.80"
-    ],
-    [
-     "<b>D</b>",
-     "20.0",
-     "2.04"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_11_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "2.00 19.6"
+    },
+    {
+     "label": "B",
+     "html": "10.0 1.02"
+    },
+    {
+     "label": "C",
+     "html": "10.0 9.80"
+    },
+    {
+     "label": "D",
+     "html": "20.0 2.04"
+    }
+   ]
   }
  ]
 }

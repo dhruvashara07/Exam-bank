@@ -34,7 +34,7 @@
    "bbox": [
     220.3,
     97.5,
-    374.4,
+    374.5,
     223.9
    ],
    "id": "0625_2023ON_12_q21_figA",
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p12/q21/figures/0625_2023ON_12_q21_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p12/q21/figures/0625_2023ON_12_q21_figA",
     "url": null,
-    "kb": 4.9
+    "kb": 5.0
    }
   },
   {
    "page": 10,
    "bbox": [
-    67.7,
-    257.2,
+    67.5,
+    257.0,
     218.5,
-    368.6
+    369.0
    ],
    "id": "0625_2023ON_12_q21_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p12/q21/figures/0625_2023ON_12_q21_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p12/q21/figures/0625_2023ON_12_q21_figB",
     "url": null,
-    "kb": 15.2
+    "kb": 15.1
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which lens has the longest focal length?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<i>x</i>/cm",
-     "<i>y</i>/cm"
-    ],
-    [
-     "<b>A</b>",
-     "4.6",
-     "2.0"
-    ],
-    [
-     "<b>B</b>",
-     "5.1",
-     "3.1"
-    ],
-    [
-     "<b>C</b>",
-     "5.9",
-     "2.3"
-    ],
-    [
-     "<b>D</b>",
-     "6.1",
-     "2.4"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_12_q21_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "4.6 2.0"
+    },
+    {
+     "label": "B",
+     "html": "5.1 3.1"
+    },
+    {
+     "label": "C",
+     "html": "5.9 2.3"
+    },
+    {
+     "label": "D",
+     "html": "6.1 2.4"
+    }
+   ]
   }
  ]
 }

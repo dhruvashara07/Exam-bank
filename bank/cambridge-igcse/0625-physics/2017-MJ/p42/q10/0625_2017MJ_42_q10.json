@@ -9,10 +9,10 @@
    "caption": "Table 10.1",
    "page": 18,
    "bbox": [
-    209.4,
-    159.5,
-    385.8,
-    294.1
+    209.5,
+    163.0,
+    386.0,
+    294.5
    ],
    "id": "0625_2017MJ_42_q10b_table10-1",
    "part": "(b)",
@@ -28,10 +28,10 @@
    "caption": "Table 10.2",
    "page": 18,
    "bbox": [
-    144.4,
-    413.7,
-    450.9,
-    548.3
+    144.0,
+    417.5,
+    451.0,
+    548.5
    ],
    "id": "0625_2017MJ_42_q10c_table10-2",
    "part": "(c)",
@@ -180,34 +180,9 @@
      "text": "Table 10.1 shows the truth table for a logic gate."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "input 1",
-       "input 2",
-       "output"
-      ],
-      [
-       "0",
-       "0",
-       "1"
-      ],
-      [
-       "0",
-       "1",
-       "0"
-      ],
-      [
-       "1",
-       "0",
-       "0"
-      ],
-      [
-       "1",
-       "1",
-       "0"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2017MJ_42_q10b_table10-1",
+     "caption": "Table 10.1"
     },
     {
      "type": "text",
@@ -407,39 +382,9 @@
      "text": "It is possible to connect together the two inputs of the gate in (b). Using two or more of the logic gates in (b), design a circuit with two inputs and one output which has the truth table shown in Table 10.2."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "input 1",
-       "input 2",
-       "intermediate point, X",
-       "output"
-      ],
-      [
-       "0",
-       "0",
-       "",
-       "0"
-      ],
-      [
-       "0",
-       "1",
-       "",
-       "1"
-      ],
-      [
-       "1",
-       "0",
-       "",
-       "1"
-      ],
-      [
-       "1",
-       "1",
-       "",
-       "1"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2017MJ_42_q10c_table10-2",
+     "caption": "Table 10.2"
     }
    ]
   }
@@ -460,5 +405,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

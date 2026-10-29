@@ -32,9 +32,9 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
-    109.9,
-    390.9,
+    67.5,
+    109.5,
+    391.0,
     235.0
    ],
    "id": "0625_2022MJ_13_q28_figA",
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "the state of",
-     "what happened when"
-    ],
-    [
-     "",
-     "the plastic rod",
-     "the rod was rubbed"
-    ],
-    [
-     "<b>A</b>",
-     "negatively charged",
-     "it gained some electrons"
-    ],
-    [
-     "<b>B</b>",
-     "negatively charged",
-     "it lost some protons"
-    ],
-    [
-     "<b>C</b>",
-     "positively charged",
-     "it lost some electrons"
-    ],
-    [
-     "<b>D</b>",
-     "positively charged",
-     "it gained some protons"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_13_q28_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "negatively charged it gained some electrons"
+    },
+    {
+     "label": "B",
+     "html": "negatively charged it lost some protons"
+    },
+    {
+     "label": "C",
+     "html": "positively charged it lost some electrons"
+    },
+    {
+     "label": "D",
+     "html": "positively charged it gained some protons"
+    }
+   ]
   }
  ]
 }

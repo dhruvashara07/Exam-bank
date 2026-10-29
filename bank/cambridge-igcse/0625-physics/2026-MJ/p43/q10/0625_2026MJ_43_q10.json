@@ -100,7 +100,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "similarity"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "difference"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -360,13 +369,13 @@
     },
     {
      "type": "text",
-     "html": "The object contains 1.0 × 10<sup>–10</sup>g of carbon-14.",
-     "text": "The object contains 1.0 × 10–10g of carbon-14."
+     "html": "The object contains 1.0 × 10<sup>–10</sup> g of carbon-14.",
+     "text": "The object contains 1.0 × 10–10 g of carbon-14."
     },
     {
      "type": "text",
-     "html": "The object contained 8.0 × 10<sup>–10</sup>g of carbon-14 when it was made.",
-     "text": "The object contained 8.0 × 10–10g of carbon-14 when it was made."
+     "html": "The object contained 8.0 × 10<sup>–10</sup> g of carbon-14 when it was made.",
+     "text": "The object contained 8.0 × 10–10 g of carbon-14 when it was made."
     },
     {
      "type": "text",
@@ -408,6 +417,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

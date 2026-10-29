@@ -9,10 +9,10 @@
    "caption": "Table 9.1",
    "page": 18,
    "bbox": [
-    108.9,
-    281.9,
+    108.5,
+    282.5,
     486.5,
-    464.4
+    464.5
    ],
    "id": "0625_2025ON_43_q09b_table9-1",
    "part": "(b)",
@@ -318,14 +318,14 @@
       },
       {
        "type": "text",
-       "html": "Calculate the average orbital speed v of Venus. Give your answer in km/h.",
-       "text": "Calculate the average orbital speed v of Venus. Give your answer in km/h."
+       "html": "Calculate the average orbital speed v of Venus. Give your answer in km / h.",
+       "text": "Calculate the average orbital speed v of Venus. Give your answer in km / h."
       },
       {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "orbital speed =",
-       "unit": "km/h"
+       "unit": "km / h"
       },
       {
        "type": "marks",
@@ -415,45 +415,9 @@
      "text": "Table 9.1 shows data about planets in our solar system."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "planet",
-       "average radius of orbit around the Sun/ <sup>6</sup> 10 km",
-       "time for one orbit/ Earth years",
-       "average surface temperature/ °C"
-      ],
-      [
-       "Venus",
-       "108",
-       "0.62",
-       "460"
-      ],
-      [
-       "Earth",
-       "150",
-       "1.00",
-       "15"
-      ],
-      [
-       "Mars",
-       "228",
-       "1.90",
-       "–65"
-      ],
-      [
-       "Jupiter",
-       "778",
-       "12.00",
-       "–110"
-      ],
-      [
-       "Saturn",
-       "1430",
-       "29.00",
-       "–140"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2025ON_43_q09b_table9-1",
+     "caption": "Table 9.1"
     }
    ]
   }
@@ -474,5 +438,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

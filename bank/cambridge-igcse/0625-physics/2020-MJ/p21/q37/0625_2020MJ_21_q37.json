@@ -32,10 +32,10 @@
   {
    "page": 15,
    "bbox": [
-    67.7,
-    178.9,
-    248.9,
-    290.2
+    67.5,
+    178.5,
+    249.0,
+    290.5
    ],
    "id": "0625_2020MJ_21_q37_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p21/q37/figures/0625_2020MJ_21_q37_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p21/q37/figures/0625_2020MJ_21_q37_figA",
     "url": null,
-    "kb": 15.0
+    "kb": 14.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "During this chain of decay, how many protons and how many neutrons are lost from a single nucleus of uranium-235 to form a single nucleus of lead-207?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "protons",
-     "neutrons"
-    ],
-    [
-     "<b>A</b>",
-     "10",
-     "18"
-    ],
-    [
-     "<b>B</b>",
-     "10",
-     "28"
-    ],
-    [
-     "<b>C</b>",
-     "18",
-     "10"
-    ],
-    [
-     "<b>D</b>",
-     "28",
-     "10"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020MJ_21_q37_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "10 18"
+    },
+    {
+     "label": "B",
+     "html": "10 28"
+    },
+    {
+     "label": "C",
+     "html": "18 10"
+    },
+    {
+     "label": "D",
+     "html": "28 10"
+    }
+   ]
   }
  ]
 }

@@ -32,9 +32,9 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    135.2,
-    331.8,
+    67.5,
+    135.0,
+    332.0,
     281.0
    ],
    "id": "0625_2025FM_22_q04_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-FM/p22/q04/figures/0625_2025FM_22_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-FM/p22/q04/figures/0625_2025FM_22_q04_figA",
     "url": null,
-    "kb": 24.8
+    "kb": 24.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -98,8 +99,8 @@
   },
   {
    "type": "text",
-   "html": "On the Earth, an astronaut’s mass is measured as 60kg.",
-   "text": "On the Earth, an astronaut’s mass is measured as 60kg."
+   "html": "On the Earth, an astronaut’s mass is measured as 60 kg.",
+   "text": "On the Earth, an astronaut’s mass is measured as 60 kg."
   },
   {
    "type": "text",
@@ -107,59 +108,30 @@
    "text": "Which row gives the mass and weight of the astronaut on the Earth and on the Moon?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "Earth",
-     "",
-     "Moon",
-     ""
-    ],
-    [
-     "",
-     "mass",
-     "weight",
-     "mass",
-     "weight"
-    ],
-    [
-     "",
-     "/kg",
-     "/N",
-     "/kg",
-     "/N"
-    ],
-    [
-     "<b>A</b>",
-     "60",
-     "6.1",
-     "10",
-     "1.0"
-    ],
-    [
-     "<b>B</b>",
-     "60",
-     "6.1",
-     "60",
-     "6.1"
-    ],
-    [
-     "<b>C</b>",
-     "60",
-     "590",
-     "10",
-     "16"
-    ],
-    [
-     "<b>D</b>",
-     "60",
-     "590",
-     "60",
-     "98"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025FM_22_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "60 6.1 10 1.0"
+    },
+    {
+     "label": "B",
+     "html": "60 6.1 60 6.1"
+    },
+    {
+     "label": "C",
+     "html": "60 590 10 16"
+    },
+    {
+     "label": "D",
+     "html": "60 590 60 98"
+    }
+   ]
   }
  ]
 }

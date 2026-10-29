@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    319.1,
-    478.1,
-    444.6
+    67.5,
+    319.0,
+    478.5,
+    445.0
    ],
    "id": "0625_2022MJ_12_q16_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p12/q16/figures/0625_2022MJ_12_q16_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p12/q16/figures/0625_2022MJ_12_q16_figA",
     "url": null,
-    "kb": 36.0
+    "kb": 35.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "change in internal energy",
-     "explanation"
-    ],
-    [
-     "<b>A</b>",
-     "increase",
-     "The random kinetic energy of the particles increases."
-    ],
-    [
-     "<b>B</b>",
-     "increase",
-     "The oil evaporates when it is heated."
-    ],
-    [
-     "<b>C</b>",
-     "decrease",
-     "The potential energy of the particles increases."
-    ],
-    [
-     "<b>D</b>",
-     "decrease",
-     "The oil changes state to a gas when it is heated."
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_12_q16_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "increase The random kinetic energy of the particles increases."
+    },
+    {
+     "label": "B",
+     "html": "increase The oil evaporates when it is heated."
+    },
+    {
+     "label": "C",
+     "html": "decrease The potential energy of the particles increases."
+    },
+    {
+     "label": "D",
+     "html": "decrease The oil changes state to a gas when it is heated."
+    }
+   ]
   }
  ]
 }

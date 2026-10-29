@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
-    109.9,
-    322.2,
-    235.4
+    67.5,
+    109.5,
+    322.5,
+    235.5
    ],
    "id": "0625_2023MJ_13_q18_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row describes the other characteristics of the optical image formed?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "distance from the mirror",
-     "real or virtual"
-    ],
-    [
-     "<b>A</b>",
-     "same as object",
-     "virtual"
-    ],
-    [
-     "<b>B</b>",
-     "smaller than object",
-     "virtual"
-    ],
-    [
-     "<b>C</b>",
-     "larger than object",
-     "real"
-    ],
-    [
-     "<b>D</b>",
-     "same as object",
-     "real"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_13_q18_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "same as object virtual"
+    },
+    {
+     "label": "B",
+     "html": "smaller than object virtual"
+    },
+    {
+     "label": "C",
+     "html": "larger than object real"
+    },
+    {
+     "label": "D",
+     "html": "same as object real"
+    }
+   ]
   }
  ]
 }

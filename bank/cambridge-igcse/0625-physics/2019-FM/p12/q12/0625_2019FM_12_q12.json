@@ -33,9 +33,9 @@
    "page": 5,
    "bbox": [
     204.7,
-    350.9,
+    351.0,
     390.1,
-    547.8
+    548.5
    ],
    "id": "0625_2019FM_12_q12_figA",
    "caption": null,
@@ -51,7 +51,7 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
+    67.5,
     593.0,
     507.5,
     718.5
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-FM/p12/q12/figures/0625_2019FM_12_q12_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-FM/p12/q12/figures/0625_2019FM_12_q12_figB",
     "url": null,
-    "kb": 39.4
+    "kb": 39.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row compares the pressure exerted by liquid X and by liquid Y on the mercury, and the density of liquid X and the density of liquid Y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "pressure exerted by X and",
-     "densities of"
-    ],
-    [
-     "",
-     "by Y on the mercury",
-     "X and of Y"
-    ],
-    [
-     "<b>A</b>",
-     "pressure of X is greater than Y",
-     "density of X is greater than Y"
-    ],
-    [
-     "<b>B</b>",
-     "pressure of Y is greater than X",
-     "density of Y is greater than X"
-    ],
-    [
-     "<b>C</b>",
-     "pressure of X and of Y is the same",
-     "density of X is greater than Y"
-    ],
-    [
-     "<b>D</b>",
-     "pressure of X and of Y is the same",
-     "density of Y is greater than X"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019FM_12_q12_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "pressure of X is greater than Y density of X is greater than Y"
+    },
+    {
+     "label": "B",
+     "html": "pressure of Y is greater than X density of Y is greater than X"
+    },
+    {
+     "label": "C",
+     "html": "pressure of X and of Y is the same density of X is greater than Y"
+    },
+    {
+     "label": "D",
+     "html": "pressure of X and of Y is the same density of Y is greater than X"
+    }
+   ]
   }
  ]
 }

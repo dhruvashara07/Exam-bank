@@ -32,10 +32,10 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    375.7,
-    355.8,
-    501.1
+    67.5,
+    375.5,
+    356.0,
+    501.5
    ],
    "id": "0625_2026MJ_21_q10_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p21/q10/figures/0625_2026MJ_21_q10_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p21/q10/figures/0625_2026MJ_21_q10_figA",
     "url": null,
-    "kb": 38.6
+    "kb": 38.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,40 +98,30 @@
    "text": "Which row describes the arrangement and the average separation of gas particles?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>arrangement</b>",
-     "<b>average separation</b>"
-    ],
-    [
-     "",
-     "<b>of gas particles</b>",
-     "<b>of gas particles</b>"
-    ],
-    [
-     "<b>A</b>",
-     "in fixed positions",
-     "less than in solids"
-    ],
-    [
-     "<b>B</b>",
-     "in fixed positions",
-     "greater than in solids"
-    ],
-    [
-     "<b>C</b>",
-     "in variable positions",
-     "less than in solids"
-    ],
-    [
-     "<b>D</b>",
-     "in variable positions",
-     "greater than in solids"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_21_q10_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "in fixed positions less than in solids"
+    },
+    {
+     "label": "B",
+     "html": "in fixed positions greater than in solids"
+    },
+    {
+     "label": "C",
+     "html": "in variable positions less than in solids"
+    },
+    {
+     "label": "D",
+     "html": "in variable positions greater than in solids"
+    }
+   ]
   }
  ]
 }

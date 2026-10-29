@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.9,
-    97.8,
+    68.0,
+    97.5,
     295.0,
-    233.7
+    234.0
    ],
    "id": "0625_2026MJ_23_q20_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p23/q20/figures/0625_2026MJ_23_q20_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p23/q20/figures/0625_2026MJ_23_q20_figA",
     "url": null,
-    "kb": 7.7
+    "kb": 7.5
    }
   },
   {
    "page": 9,
    "bbox": [
-    67.7,
-    266.3,
+    67.5,
+    266.0,
     328.0,
-    391.2
+    391.5
    ],
    "id": "0625_2026MJ_23_q20_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p23/q20/figures/0625_2026MJ_23_q20_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p23/q20/figures/0625_2026MJ_23_q20_figB",
     "url": null,
-    "kb": 27.1
+    "kb": 26.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>the type of</b>",
-     "<b>the principal focus</b>"
-    ],
-    [
-     "",
-     "<b>image formed is</b>",
-     "<b>of the lens lies</b>"
-    ],
-    [
-     "<b>A</b>",
-     "real",
-     "at P"
-    ],
-    [
-     "<b>B</b>",
-     "real",
-     "at Q"
-    ],
-    [
-     "<b>C</b>",
-     "virtual",
-     "at P"
-    ],
-    [
-     "<b>D</b>",
-     "virtual",
-     "at Q"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_23_q20_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "real at P"
+    },
+    {
+     "label": "B",
+     "html": "real at Q"
+    },
+    {
+     "label": "C",
+     "html": "virtual at P"
+    },
+    {
+     "label": "D",
+     "html": "virtual at Q"
+    }
+   ]
   }
  ]
 }

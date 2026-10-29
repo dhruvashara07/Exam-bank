@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 9,
    "bbox": [
-    175.4,
-    135.2,
-    419.8,
-    372.5
+    175.0,
+    138.5,
+    420.5,
+    371.0
    ],
    "id": "0625_2022ON_63_q03_fig3-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p63/q03/figures/0625_2022ON_63_q03_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p63/q03/figures/0625_2022ON_63_q03_fig3-1",
     "url": null,
-    "kb": 12.5
+    "kb": 12.4
    }
   },
   {
    "caption": "Fig. 3.4",
    "page": 10,
    "bbox": [
-    191.0,
-    206.3,
-    404.3,
-    383.8
+    190.5,
+    205.5,
+    404.5,
+    382.0
    ],
    "id": "0625_2022ON_63_q03c_fig3-4",
    "part": "(c)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p63/q03/figures/0625_2022ON_63_q03c_fig3-4.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p63/q03/figures/0625_2022ON_63_q03c_fig3-4",
     "url": null,
-    "kb": 21.2
+    "kb": 21.3
    }
   }
  ],
@@ -237,6 +237,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "V ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "IT ="
       },
       {
@@ -305,7 +310,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>PQ</sub> of the parallel combination of resistors P and Q. Use your readings from <b>(b)(i)</b> and the equation <i>R</i><sub>PQ</sub> = \\(\\frac{<i>V</i>}{<i>I</i>}\\).",
+       "html": "Calculate the resistance <i>R</i><sub>PQ</sub> of the parallel combination of resistors P and Q. Use your readings from <b>(b)(i)</b> and the equation <i>R</i><sub>PQ</sub> = \\(\\frac{V}{I}\\).",
        "text": "Calculate the resistance RPQ of the parallel combination of resistors P and Q. Use your readings from (b)(i) and the equation RPQ = (V)/(I)."
       },
       {
@@ -432,8 +437,13 @@
      "text": "Read the value of the potential difference VS across resistor S shown in Fig. 3.4."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "VS ="
+    },
+    {
      "type": "text",
-     "html": "Calculate the resistance <i>R</i><sub>S</sub> of resistor S. Use your readings from <b>(c)</b> and <b>(b)(i)</b> and the equation <i>R</i><sub>S</sub> = \\(\\frac{<i>V</i><i><sub>s</sub></i>}{<i>I</i><sub>T</sub>}\\) .",
+     "html": "Calculate the resistance <i>R</i><sub>S</sub> of resistor S. Use your readings from <b>(c)</b> and <b>(b)(i)</b> and the equation <i>R</i><sub>S</sub> = \\(\\frac{V_{s}}{I_{T}}\\) .",
      "text": "Calculate the resistance RS of resistor S. Use your readings from (c) and (b)(i) and the equation RS = (Vs)/(IT) ."
     },
     {
@@ -540,6 +550,11 @@
        "text": "Read the value of the current IP in resistor P shown in Fig. 3.5."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "IP ="
+      },
+      {
        "type": "text",
        "html": "Read the value of the current <i>I</i><sub>Q</sub> in resistor Q shown in Fig. 3.6.",
        "text": "Read the value of the current IQ in resistor Q shown in Fig. 3.6."
@@ -621,7 +636,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -843,6 +867,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

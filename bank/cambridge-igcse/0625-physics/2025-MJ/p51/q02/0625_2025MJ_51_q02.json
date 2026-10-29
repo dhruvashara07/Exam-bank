@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    124.3,
-    84.8,
-    471.0,
-    260.8
+    125.0,
+    84.5,
+    470.5,
+    261.0
    ],
    "id": "0625_2025MJ_51_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 4,
    "bbox": [
-    181.1,
-    386.9,
-    414.2,
-    637.1
+    181.0,
+    387.5,
+    414.5,
+    637.5
    ],
    "id": "0625_2025MJ_51_q02bi_table2-1",
    "part": "(b)(i)",
@@ -220,37 +220,9 @@
        "text": "Complete the column headings in Table 2.1."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "V/",
-         "θ/"
-        ],
-        [
-         "100",
-         ""
-        ],
-        [
-         "120",
-         ""
-        ],
-        [
-         "140",
-         ""
-        ],
-        [
-         "160",
-         ""
-        ],
-        [
-         "180",
-         ""
-        ],
-        [
-         "200",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2025MJ_51_q02bi_table2-1",
+       "caption": "Table 2.1"
       },
       {
        "type": "marks",
@@ -320,13 +292,13 @@
       {
        "type": "list",
        "items": [
-        "Pour 100cm<sup>3</sup> of hot water into beaker A.",
+        "Pour 100 cm<sup>3</sup> of hot water into beaker A.",
         "Place the thermometer in the hot water in beaker A.",
-        "Record in Table 2.1 the temperature θof the hot water.",
-        "Without delay, use the measuring cylinder to add 20cm<sup>3</sup> of the cold water to the water in beaker A.",
+        "Record in Table 2.1 the temperature θ of the hot water.",
+        "Without delay, use the measuring cylinder to add 20 cm<sup>3</sup> of the cold water to the water in beaker A.",
         "Stir the water in beaker A.",
         "Record in Table 2.1 the temperature of the mixture of hot and cold water.",
-        "Repeat the procedure, adding 20cm<sup>3</sup> of cold water each time, until you have a total of 200cm<sup>3</sup> of water in beaker A."
+        "Repeat the procedure, adding 20 cm<sup>3</sup> of cold water each time, until you have a total of 200 cm<sup>3</sup> of water in beaker A."
        ]
       },
       {
@@ -400,8 +372,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of temperature θ(y-axis) against total volume of water V (x-axis). You do <b>not</b> need to start the <b>axes</b> at the origin (0,0).",
-     "text": "Plot a graph of temperature θ(y-axis) against total volume of water V (x-axis). You do not need to start the axes at the origin (0,0)."
+     "html": "Plot a graph of temperature θ (y-axis) against total volume of water V (x-axis). You do <b>not</b> need to start the <b>axes</b> at the origin (0, 0).",
+     "text": "Plot a graph of temperature θ (y-axis) against total volume of water V (x-axis). You do not need to start the axes at the origin (0, 0)."
     },
     {
      "type": "text",
@@ -484,7 +456,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -511,6 +492,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

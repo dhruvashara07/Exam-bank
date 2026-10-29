@@ -33,9 +33,9 @@
    "page": 2,
    "bbox": [
     231.5,
-    352.3,
-    363.9,
-    498.8
+    352.0,
+    364.0,
+    499.0
    ],
    "id": "0625_2015ON_12_q02_figA",
    "caption": null,
@@ -45,15 +45,15 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p12/q02/figures/0625_2015ON_12_q02_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p12/q02/figures/0625_2015ON_12_q02_figA",
     "url": null,
-    "kb": 17.0
+    "kb": 16.9
    }
   },
   {
    "page": 2,
    "bbox": [
-    69.3,
-    529.1,
-    285.9,
+    69.0,
+    529.0,
+    286.0,
     640.5
    ],
    "id": "0625_2015ON_12_q02_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p12/q02/figures/0625_2015ON_12_q02_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p12/q02/figures/0625_2015ON_12_q02_figB",
     "url": null,
-    "kb": 21.3
+    "kb": 21.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -116,33 +117,9 @@
    "text": "The table shows the readings on a car speedometer at 5 second intervals."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "time/s",
-     "speed km/h"
-    ],
-    [
-     "0",
-     "0"
-    ],
-    [
-     "5",
-     "30"
-    ],
-    [
-     "10",
-     "50"
-    ],
-    [
-     "15",
-     "60"
-    ],
-    [
-     "20",
-     "65"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2015ON_12_q02_figA",
+   "caption": null
   },
   {
    "type": "text",
@@ -150,35 +127,30 @@
    "text": "Which row describes the speed and the acceleration of the car?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "speed",
-     "acceleration"
-    ],
-    [
-     "A",
-     "decreasing",
-     "zero"
-    ],
-    [
-     "B",
-     "decreasing",
-     "not zero"
-    ],
-    [
-     "C",
-     "increasing",
-     "zero"
-    ],
-    [
-     "D",
-     "increasing",
-     "not zero"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015ON_12_q02_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreasing zero"
+    },
+    {
+     "label": "B",
+     "html": "decreasing not zero"
+    },
+    {
+     "label": "C",
+     "html": "increasing zero"
+    },
+    {
+     "label": "D",
+     "html": "increasing not zero"
+    }
+   ]
   }
  ]
 }

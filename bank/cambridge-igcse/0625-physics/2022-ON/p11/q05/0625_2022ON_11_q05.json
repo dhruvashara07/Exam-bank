@@ -32,10 +32,10 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    109.9,
+    67.5,
+    109.5,
     271.0,
-    221.3
+    221.5
    ],
    "id": "0625_2022ON_11_q05_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p11/q05/figures/0625_2022ON_11_q05_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p11/q05/figures/0625_2022ON_11_q05_figA",
     "url": null,
-    "kb": 21.3
+    "kb": 21.2
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which two changes both increase the moment of the force about the pivot?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "change 1",
-     "change 2"
-    ],
-    [
-     "<b>A</b>",
-     "decrease<i> F</i>",
-     "decrease <i>x</i>"
-    ],
-    [
-     "<b>B</b>",
-     "decrease<i> F</i>",
-     "increase <i>x</i>"
-    ],
-    [
-     "<b>C</b>",
-     "increase <i>F</i>",
-     "decrease <i>x</i>"
-    ],
-    [
-     "<b>D</b>",
-     "increase <i>F</i>",
-     "increase <i>x</i>"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_11_q05_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decrease F decrease x"
+    },
+    {
+     "label": "B",
+     "html": "decrease F increase x"
+    },
+    {
+     "label": "C",
+     "html": "increase F decrease x"
+    },
+    {
+     "label": "D",
+     "html": "increase F increase x"
+    }
+   ]
   }
  ]
 }

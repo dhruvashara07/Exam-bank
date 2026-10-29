@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    135.2,
-    329.3,
-    246.1
+    67.5,
+    135.0,
+    329.5,
+    246.5
    ],
    "id": "0625_2018ON_11_q25_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-ON/p11/q25/figures/0625_2018ON_11_q25_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-ON/p11/q25/figures/0625_2018ON_11_q25_figA",
     "url": null,
-    "kb": 28.0
+    "kb": 27.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "Which row compares the frequency and the amplitude of the two notes?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "first note",
-     "second note"
-    ],
-    [
-     "<b>A</b>",
-     "higher frequency",
-     "larger amplitude"
-    ],
-    [
-     "<b>B</b>",
-     "higher frequency",
-     "smaller amplitude"
-    ],
-    [
-     "<b>C</b>",
-     "lower frequency",
-     "larger amplitude"
-    ],
-    [
-     "<b>D</b>",
-     "lower frequency",
-     "smaller amplitude"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018ON_11_q25_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "higher frequency larger amplitude"
+    },
+    {
+     "label": "B",
+     "html": "higher frequency smaller amplitude"
+    },
+    {
+     "label": "C",
+     "html": "lower frequency larger amplitude"
+    },
+    {
+     "label": "D",
+     "html": "lower frequency smaller amplitude"
+    }
+   ]
   }
  ]
 }

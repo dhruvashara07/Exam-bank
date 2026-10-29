@@ -32,10 +32,10 @@
   {
    "page": 16,
    "bbox": [
-    67.7,
+    67.5,
     570.5,
-    316.9,
-    681.9
+    317.0,
+    682.0
    ],
    "id": "0625_2019MJ_23_q40_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-MJ/p23/q40/figures/0625_2019MJ_23_q40_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-MJ/p23/q40/figures/0625_2019MJ_23_q40_figA",
     "url": null,
-    "kb": 17.3
+    "kb": 17.2
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "What are the nucleon number and proton number for the nucleus produced by this decay?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "nucleon number",
-     "proton number"
-    ],
-    [
-     "<b>A</b>",
-     "222",
-     "86"
-    ],
-    [
-     "<b>B</b>",
-     "222",
-     "87"
-    ],
-    [
-     "<b>C</b>",
-     "226",
-     "86"
-    ],
-    [
-     "<b>D</b>",
-     "226",
-     "87"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019MJ_23_q40_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "222 86"
+    },
+    {
+     "label": "B",
+     "html": "222 87"
+    },
+    {
+     "label": "C",
+     "html": "226 86"
+    },
+    {
+     "label": "D",
+     "html": "226 87"
+    }
+   ]
   }
  ]
 }

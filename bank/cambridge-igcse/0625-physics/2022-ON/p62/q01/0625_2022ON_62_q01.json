@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    95.3,
-    111.3,
-    500.0,
-    344.0
+    95.0,
+    110.5,
+    499.5,
+    342.5
    ],
    "id": "0625_2022ON_62_q01_fig1-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p62/q01/figures/0625_2022ON_62_q01_fig1-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p62/q01/figures/0625_2022ON_62_q01_fig1-1",
     "url": null,
-    "kb": 19.8
+    "kb": 19.7
    }
   },
   {
    "caption": "Fig. 1.2",
    "page": 2,
    "bbox": [
-    81.0,
-    401.6,
-    514.2,
-    468.5
+    80.5,
+    401.0,
+    515.0,
+    467.0
    ],
    "id": "0625_2022ON_62_q01a_fig1-2",
    "part": "(a)",
@@ -247,7 +247,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "2.",
+       "prefix": "1."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "2."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -320,6 +329,11 @@
        "text": "Calculate the decrease in temperature Δθ1 of the hot water using the equation Δθ1 = (θH – θM). Include the unit."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Δθ1 ="
+      },
+      {
        "type": "text",
        "html": "Calculate the increase in temperature Δθ<sub>2</sub> of the cold water using the equation Δθ<sub>2</sub> = (θ<sub>M</sub> – θ<sub>C</sub>). Include the unit.",
        "text": "Calculate the increase in temperature Δθ2 of the cold water using the equation Δθ2 = (θM – θC). Include the unit."
@@ -349,6 +363,12 @@
      "text": "19"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θC =",
+     "unit": "°C"
+    },
+    {
      "type": "text",
      "html": "She records the temperature θ<sub>H</sub> of a supply of hot water.",
      "text": "She records the temperature θH of a supply of hot water."
@@ -357,6 +377,12 @@
      "type": "text",
      "html": "88",
      "text": "88"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θH =",
+     "unit": "°C"
     },
     {
      "type": "text",
@@ -516,7 +542,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -590,7 +625,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -616,6 +660,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

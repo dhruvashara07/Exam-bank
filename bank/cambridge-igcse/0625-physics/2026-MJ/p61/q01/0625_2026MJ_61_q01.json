@@ -33,10 +33,10 @@
    "caption": "Figure 1.1",
    "page": 2,
    "bbox": [
-    69.3,
-    111.5,
-    497.4,
-    270.8
+    69.0,
+    112.5,
+    497.5,
+    271.0
    ],
    "id": "0625_2026MJ_61_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 1.1",
    "page": 2,
    "bbox": [
-    69.3,
-    474.8,
-    245.9,
-    631.4
+    69.0,
+    475.5,
+    246.0,
+    632.0
    ],
    "id": "0625_2026MJ_61_q01_table1-1",
    "part": "",
@@ -135,8 +135,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of y/cm (y‑axis) against x/cm (x‑axis). You do not need to start the axes at the origin (0,0).",
-     "text": "Plot a graph of y/cm (y‑axis) against x/cm (x‑axis). You do not need to start the axes at the origin (0,0)."
+     "html": "Plot a graph of y / cm (y‑axis) against x / cm (x‑axis). You do not need to start the axes at the origin (0,0).",
+     "text": "Plot a graph of y / cm (y‑axis) against x / cm (x‑axis). You do not need to start the axes at the origin (0,0)."
     },
     {
      "type": "text",
@@ -289,7 +289,7 @@
    "content": [
     {
      "type": "text",
-     "html": "\\(\\frac{W<sub>P</sub>}{W}\\)",
+     "html": "\\(\\frac{W_{P}}{W}\\)",
      "text": "(WP)/(W)"
     },
     {
@@ -304,8 +304,8 @@
     },
     {
      "type": "text",
-     "html": "W<sub>Q</sub> is the weight of object Q. W<sub>P</sub> = 2.0N. Calculate W<sub>Q</sub>. Show your working.",
-     "text": "WQ is the weight of object Q. WP = 2.0N. Calculate WQ. Show your working."
+     "html": "W<sub>Q</sub> is the weight of object Q. W<sub>P</sub> = 2.0 N. Calculate W<sub>Q</sub>. Show your working.",
+     "text": "WQ is the weight of object Q. WP = 2.0 N. Calculate WQ. Show your working."
     },
     {
      "type": "answer",
@@ -378,8 +378,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Explain how to place the centre of object P on the 10.0cm mark as accurately as possible. Draw a diagram to illustrate your answer.",
-     "text": "Explain how to place the centre of object P on the 10.0cm mark as accurately as possible. Draw a diagram to illustrate your answer."
+     "html": "Explain how to place the centre of object P on the 10.0 cm mark as accurately as possible. Draw a diagram to illustrate your answer.",
+     "text": "Explain how to place the centre of object P on the 10.0 cm mark as accurately as possible. Draw a diagram to illustrate your answer."
     },
     {
      "type": "answer",
@@ -410,6 +410,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -434,18 +435,18 @@
   {
    "type": "list",
    "items": [
-    "places a metre ruler with the 50.0cm mark exactly above the pivot",
-    "places an object P with its centre on the metre ruler at the 10.0cm mark",
-    "records, in Table 1.1, the distance x = 40.0cm between the centre of object P and the 50.0cm mark",
+    "places a metre ruler with the 50.0 cm mark exactly above the pivot",
+    "places an object P with its centre on the metre ruler at the 10.0 cm mark",
+    "records, in Table 1.1, the distance x = 40.0 cm between the centre of object P and the 50.0 cm mark",
     "places an object Q on the metre ruler",
     "adjusts the position of Q until the metre ruler is as close as possible to being balanced",
-    "records, in Table 1.1, the distance y between the centre of object Q and the 50.0cm mark."
+    "records, in Table 1.1, the distance y between the centre of object Q and the 50.0 cm mark."
    ]
   },
   {
    "type": "text",
-   "html": "The student repeats the steps above using distances of x = 35.0cm, 30.0cm, 25.0cm and 20.0cm.",
-   "text": "The student repeats the steps above using distances of x = 35.0cm, 30.0cm, 25.0cm and 20.0cm."
+   "html": "The student repeats the steps above using distances of x = 35.0 cm, 30.0 cm, 25.0 cm and 20.0 cm.",
+   "text": "The student repeats the steps above using distances of x = 35.0 cm, 30.0 cm, 25.0 cm and 20.0 cm."
   },
   {
    "type": "text",
@@ -453,33 +454,9 @@
    "text": "The values of x and y are recorded in Table 1.1."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "x/cm",
-     "y/cm"
-    ],
-    [
-     "40.0",
-     "27.0"
-    ],
-    [
-     "35.0",
-     "24.5"
-    ],
-    [
-     "30.0",
-     "19.5"
-    ],
-    [
-     "25.0",
-     "17.0"
-    ],
-    [
-     "20.0",
-     "13.5"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2026MJ_61_q01_table1-1",
+   "caption": "Table 1.1"
   }
  ]
 }

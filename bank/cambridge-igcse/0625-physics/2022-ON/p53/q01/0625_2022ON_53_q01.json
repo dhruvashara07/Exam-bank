@@ -34,9 +34,9 @@
    "page": 3,
    "bbox": [
     189.0,
-    124.3,
-    406.2,
-    325.5
+    123.5,
+    405.5,
+    324.0
    ],
    "id": "0625_2022ON_53_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 1.1",
    "page": 4,
    "bbox": [
-    207.2,
-    163.0,
-    388.1,
-    318.4
+    207.0,
+    166.5,
+    388.0,
+    318.5
    ],
    "id": "0625_2022ON_53_q01b_table1-1",
    "part": "(b)",
@@ -136,16 +136,15 @@
      "text": "Pour approximately 3 cm3 of water into the boiling tube. Measure the height h0 of the water level from the bench, as shown in Fig. 1.1."
     },
     {
-     "type": "text",
-     "html": "Suggest <b>one</b> precaution that is taken when measuring the height of the water level to ensure the reading is accurate. You may draw a diagram if it helps your explanation.",
-     "text": "Suggest one precaution that is taken when measuring the height of the water level to ensure the reading is accurate. You may draw a diagram if it helps your explanation."
-    },
-    {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "h0 =",
-     "unit": "cm",
-     "lines": 2
+     "unit": "cm"
+    },
+    {
+     "type": "text",
+     "html": "Suggest <b>one</b> precaution that is taken when measuring the height of the water level to ensure the reading is accurate. You may draw a diagram if it helps your explanation.",
+     "text": "Suggest one precaution that is taken when measuring the height of the water level to ensure the reading is accurate. You may draw a diagram if it helps your explanation."
     },
     {
      "type": "marks",
@@ -216,39 +215,9 @@
      "text": "Using the dropping pipette, and measuring cylinder if necessary, add a further volume of water V = 5.0 cm3 to the water already in the boiling tube. Measure, and record in Table 1.1, the new height h of the water level from the bench. Repeat this procedure, adding 5.0 cm3 of water each time so that the total volume of water added V = 10.0 cm3, 15.0 cm3, 20.0 cm3 and 25.0 cm3."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<sup>3</sup> <i>V</i> / cm",
-       "<i>h</i> / cm",
-       "<i>H</i> / cm"
-      ],
-      [
-       "5.0",
-       "",
-       ""
-      ],
-      [
-       "10.0",
-       "",
-       ""
-      ],
-      [
-       "15.0",
-       "",
-       ""
-      ],
-      [
-       "20.0",
-       "",
-       ""
-      ],
-      [
-       "25.0",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2022ON_53_q01b_table1-1",
+     "caption": "Table 1.1"
     },
     {
      "type": "marks",
@@ -548,7 +517,7 @@
       },
       {
        "type": "text",
-       "html": "Use the equation <i>D</i> = \\(\\frac{4<i>G</i>}{π}\\), where <i>G</i> is numerically equivalent to the gradient in <b>(e)(i)</b>.",
+       "html": "Use the equation <i>D</i> = \\(\\frac{4G}{π}\\), where <i>G</i> is numerically equivalent to the gradient in <b>(e)(i)</b>.",
        "text": "Use the equation D = (4G)/(π), where G is numerically equivalent to the gradient in (e)(i)."
       },
       {
@@ -730,6 +699,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

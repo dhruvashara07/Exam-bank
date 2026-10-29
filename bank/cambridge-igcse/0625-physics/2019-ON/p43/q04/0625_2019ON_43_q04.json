@@ -81,6 +81,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -90,7 +91,21 @@
   {
    "type": "answer",
    "kind": "answer_line",
-   "prefix": "Gases",
+   "prefix": "Solids"
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "Liquids"
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "Gases"
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
    "lines": 6
   },
   {

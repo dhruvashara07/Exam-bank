@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 6,
    "bbox": [
-    95.6,
-    127.3,
-    499.6,
-    362.0
+    96.0,
+    126.5,
+    499.5,
+    360.5
    ],
    "id": "0625_2022ON_51_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 6,
    "bbox": [
-    195.3,
-    522.2,
+    195.0,
+    526.0,
     400.0,
-    738.4
+    738.5
    ],
    "id": "0625_2022ON_51_q03b_table3-1",
    "part": "(b)",
@@ -71,10 +71,10 @@
    "caption": "Table 3.2",
    "page": 7,
    "bbox": [
-    195.3,
-    383.0,
+    195.0,
+    386.5,
     400.0,
-    531.2
+    531.5
    ],
    "id": "0625_2022ON_51_q03di_table3-2",
    "part": "(d)(i)",
@@ -230,41 +230,9 @@
      "text": "Pour 200 cm3 of hot water into the beaker. Place the thermometer in the hot water. Record in Table 3.1 the temperature θ of the hot water at time t = 0. Immediately start the stop-watch. Measure, and record in Table 3.1, the water temperature every 30 s until you have seven sets of readings."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>t</i> /s",
-       "θ/°C"
-      ],
-      [
-       "0",
-       ""
-      ],
-      [
-       "30",
-       ""
-      ],
-      [
-       "60",
-       ""
-      ],
-      [
-       "90",
-       ""
-      ],
-      [
-       "120",
-       ""
-      ],
-      [
-       "150",
-       ""
-      ],
-      [
-       "180",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2022ON_51_q03b_table3-1",
+     "caption": "Table 3.1"
     },
     {
      "type": "marks",
@@ -335,8 +303,13 @@
      "text": "Calculate the decrease in temperature Δθ1 between t = 0 and t = 180 s."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Δθ1 ="
+    },
+    {
      "type": "text",
-     "html": "Calculate the average rate of cooling <i>C</i><sub>1</sub> of the water using the equation <i>C</i><sub>1</sub> = \\(\\frac{Δθ<sub>1</sub>}{Δ<i>t</i>}\\), where Δ<i>t</i> = 180 s.",
+     "html": "Calculate the average rate of cooling <i>C</i><sub>1</sub> of the water using the equation <i>C</i><sub>1</sub> = \\(\\frac{Δθ_{1}}{Δt}\\), where Δ<i>t</i> = 180 s.",
      "text": "Calculate the average rate of cooling C1 of the water using the equation C1 = (Δθ1)/(Δt), where Δt = 180 s."
     },
     {
@@ -444,39 +417,19 @@
        "text": "Using Table 3.1, write down the temperature θ90 of the water at time t = 90 s."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "θ90 ="
+      },
+      {
        "type": "text",
        "html": "Pour 150 cm<sup>3</sup> of hot water into the beaker. Place the thermometer in the water. Slowly add cold water, stirring continuously, until the temperature of the water in the beaker is as close as possible to θ<sub>90</sub>. Record this temperature in Table 3.2 at time <i>t</i> = 0. Immediately start the stop-watch. Measure, and record in Table 3.2, the water temperature every 30 s until you have four sets of readings.",
        "text": "Pour 150 cm3 of hot water into the beaker. Place the thermometer in the water. Slowly add cold water, stirring continuously, until the temperature of the water in the beaker is as close as possible to θ90. Record this temperature in Table 3.2 at time t = 0. Immediately start the stop-watch. Measure, and record in Table 3.2, the water temperature every 30 s until you have four sets of readings."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>t</i> / s",
-         "θ/°C"
-        ],
-        [
-         "0",
-         ""
-        ],
-        [
-         "30",
-         ""
-        ],
-        [
-         "60",
-         ""
-        ],
-        [
-         "90",
-         ""
-        ]
-       ]
-      },
-      {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "θ90 ="
+       "type": "figure",
+       "id": "0625_2022ON_51_q03di_table3-2",
+       "caption": "Table 3.2"
       },
       {
        "type": "marks",
@@ -547,8 +500,13 @@
        "text": "Using Table 3.2, calculate the decrease in temperature Δθ2 between t = 0 and t = 90 s."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Δθ2 ="
+      },
+      {
        "type": "text",
-       "html": "Calculate the average rate of cooling <i>C</i><sub>2</sub> of the water using the equation <i>C</i><sub>2</sub> = \\(\\frac{Δθ<sub>2</sub>}{Δ<i>t</i>}\\), where Δ<i>t</i> = 90 s.",
+       "html": "Calculate the average rate of cooling <i>C</i><sub>2</sub> of the water using the equation <i>C</i><sub>2</sub> = \\(\\frac{Δθ_{2}}{Δt}\\), where Δ<i>t</i> = 90 s.",
        "text": "Calculate the average rate of cooling C2 of the water using the equation C2 = (Δθ2)/(Δt), where Δt = 90 s."
       },
       {
@@ -638,7 +596,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "conclusion"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -713,7 +680,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -739,6 +715,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    157.9,
-    108.9,
+    158.5,
+    112.0,
     437.0,
-    284.0
+    282.5
    ],
    "id": "0625_2020FM_52_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2",
    "page": 3,
    "bbox": [
-    216.1,
-    322.4,
-    379.7,
-    529.5
+    215.5,
+    322.0,
+    379.0,
+    528.0
    ],
    "id": "0625_2020FM_52_q01di_fig1-2",
    "part": "(d)(i)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 1.3",
    "page": 4,
    "bbox": [
-    46.6,
-    58.0,
-    442.2,
-    278.6
+    47.0,
+    61.5,
+    442.5,
+    277.0
    ],
    "id": "0625_2020FM_52_q01dii_fig1-3",
    "part": "(d)(ii)",
@@ -90,10 +90,10 @@
    "caption": "Fig. 1.4",
    "page": 4,
    "bbox": [
-    46.6,
-    58.0,
-    442.2,
-    278.6
+    47.0,
+    61.5,
+    442.5,
+    277.0
    ],
    "id": "0625_2020FM_52_q01dii_fig1-4",
    "part": "(d)(ii)",
@@ -181,6 +181,12 @@
        "type": "text",
        "html": "Use a ruler to measure the length <i>l</i> and the diameter <i>d</i> of the wooden rod you are using.",
        "text": "Use a ruler to measure the length l and the diameter d of the wooden rod you are using."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "l =",
+       "unit": "cm"
       },
       {
        "type": "answer",
@@ -404,18 +410,18 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate a value ρ<sub>1</sub> for the density of the wooden rod. Use your values from <b>(a)(i)</b> and <b>(b) </b> and the equation ρ<sub>1</sub> = \\(\\frac{4 <i>m</i>}{π<i>d </i><sup>2</sup><i>l</i>}\\) . Include a suitable unit.",
+     "html": "Calculate a value ρ<sub>1</sub> for the density of the wooden rod. Use your values from <b>(a)(i)</b> and <b>(b) </b> and the equation ρ<sub>1</sub> = \\(\\frac{4 m}{π d ^{2} l}\\) . Include a suitable unit.",
      "text": "Calculate a value ρ1 for the density of the wooden rod. Use your values from (a)(i) and (b) and the equation ρ1 = (4 m)/(πd 2l) . Include a suitable unit."
-    },
-    {
-     "type": "text",
-     "html": "<b>Method 2</b>",
-     "text": "Method 2"
     },
     {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "ρ1 ="
+    },
+    {
+     "type": "text",
+     "html": "<b>Method 2</b>",
+     "text": "Method 2"
     },
     {
      "type": "marks",
@@ -495,6 +501,12 @@
        "type": "text",
        "html": "Record the reading <i>V</i><sub>1</sub> of the water level in the measuring cylinder.",
        "text": "Record the reading V1 of the water level in the measuring cylinder."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V1 =",
+       "unit": "cm3"
       },
       {
        "type": "text",
@@ -628,13 +640,25 @@
        "text": "Remove the rod from the measuring cylinder and lower the modelling clay into the water until it is completely submerged as shown in Fig. 1.3. Record the new reading V3 of the water level in the measuring cylinder."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V3 =",
+       "unit": "cm3"
+      },
+      {
        "type": "text",
        "html": "Remove the modelling clay from the measuring cylinder. Attach the rod to the modelling clay using the hook on the modelling clay and the loop of thread on the rod as shown in Fig. 1.4. Lower the modelling clay and rod into the water until the rod is completely submerged. Record the new reading <i>V</i><sub>4</sub> of the water level in the measuring cylinder.",
        "text": "Remove the modelling clay from the measuring cylinder. Attach the rod to the modelling clay using the hook on the modelling clay and the loop of thread on the rod as shown in Fig. 1.4. Lower the modelling clay and rod into the water until the rod is completely submerged. Record the new reading V4 of the water level in the measuring cylinder."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V4 =",
+       "unit": "cm3"
+      },
+      {
        "type": "text",
-       "html": "Calculate another value ρ<sub>2</sub> for the density of the wooden rod. Use your values from <b>(d)</b> and <b>(e)</b> and the equation ρ<sub>2</sub> = \\(\\frac{(<i>V</i><sub>2</sub> – <i>V</i><sub>1</sub>)}{(<i>V</i><sub>4</sub> – <i>V</i><sub>3</sub>)}\\) × <i>k</i> where <i>k</i> = 1.0 g / cm<sup>3</sup>.",
+       "html": "Calculate another value ρ<sub>2</sub> for the density of the wooden rod. Use your values from <b>(d)</b> and <b>(e)</b> and the equation ρ<sub>2</sub> = \\(\\frac{(V_{2} – V_{1})}{(V_{4} – V_{3})}\\) × <i>k</i> where <i>k</i> = 1.0 g / cm<sup>3</sup>.",
        "text": "Calculate another value ρ2 for the density of the wooden rod. Use your values from (d) and (e) and the equation ρ2 = ((V2 – V1))/((V4 – V3)) × k where k = 1.0 g / cm3."
       },
       {
@@ -696,6 +720,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -32,9 +32,9 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
-    122.6,
-    244.6,
+    67.5,
+    122.5,
+    244.5,
     248.0
    ],
    "id": "0625_2026MJ_11_q17_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p11/q17/figures/0625_2026MJ_11_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p11/q17/figures/0625_2026MJ_11_q17_figA",
     "url": null,
-    "kb": 23.3
+    "kb": 23.2
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which sphere emits infrared radiation at the greatest rate?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>surface</b>",
-     "<b>surface</b>"
-    ],
-    [
-     "",
-     "<b>texture</b>",
-     "<b>colour</b>"
-    ],
-    [
-     "<b>A</b>",
-     "shiny",
-     "black"
-    ],
-    [
-     "<b>B</b>",
-     "shiny",
-     "white"
-    ],
-    [
-     "<b>C</b>",
-     "dull",
-     "black"
-    ],
-    [
-     "<b>D</b>",
-     "dull",
-     "white"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_11_q17_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "shiny black"
+    },
+    {
+     "label": "B",
+     "html": "shiny white"
+    },
+    {
+     "label": "C",
+     "html": "dull black"
+    },
+    {
+     "label": "D",
+     "html": "dull white"
+    }
+   ]
   }
  ]
 }

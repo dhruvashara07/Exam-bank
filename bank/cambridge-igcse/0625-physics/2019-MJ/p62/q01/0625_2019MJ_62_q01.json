@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    67.9,
-    113.7,
-    524.8,
-    251.1
+    67.5,
+    118.0,
+    525.0,
+    248.5
    ],
    "id": "0625_2019MJ_62_q01_fig1-1",
    "part": "",
@@ -52,9 +52,9 @@
    "caption": "Table 1.1",
    "page": 2,
    "bbox": [
-    209.4,
-    591.1,
-    385.8,
+    209.5,
+    596.0,
+    386.0,
     753.0
    ],
    "id": "0625_2019MJ_62_q01b_table1-1",
@@ -71,10 +71,10 @@
    "caption": "Fig. 1.2",
    "page": 3,
    "bbox": [
-    259.2,
-    625.5,
-    336.1,
-    747.1
+    258.5,
+    625.0,
+    336.5,
+    744.5
    ],
    "id": "0625_2019MJ_62_q01e_fig1-2",
    "part": "(e)",
@@ -254,33 +254,9 @@
      "text": "She places a load P on the metre rule so that the edge that is furthest from the pivot is exactly at the 10.0 cm mark on the rule. She measures the distance a between this edge of the load P and the pivot, as shown in Fig. 1.1. She places a load Q on the metre rule and adjusts the position of load Q so that the metre rule is as near as possible to being balanced. She measures the distance b between the centre of load Q and the pivot, as shown in Fig. 1.1. She repeats the procedure, with the edge of the load P that is furthest from the pivot at the 15.0 cm, 20.0 cm, 25.0 cm and 30.0 cm marks. All the readings are shown in Table 1.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>a</i> / cm",
-       "<i>b</i> / cm"
-      ],
-      [
-       "38.0",
-       "44.5"
-      ],
-      [
-       "33.0",
-       "38.5"
-      ],
-      [
-       "28.0",
-       "33.6"
-      ],
-      [
-       "23.0",
-       "27.2"
-      ],
-      [
-       "18.0",
-       "22.0"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2019MJ_62_q01b_table1-1",
+     "caption": "Table 1.1"
     },
     {
      "type": "text",
@@ -589,7 +565,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -689,6 +674,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

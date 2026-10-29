@@ -32,10 +32,10 @@
   {
    "page": 17,
    "bbox": [
-    249.2,
-    98.3,
-    345.6,
-    230.7
+    249.0,
+    97.5,
+    346.0,
+    231.5
    ],
    "id": "0625_2017ON_21_q34_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p21/q34/figures/0625_2017ON_21_q34_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p21/q34/figures/0625_2017ON_21_q34_figA",
     "url": null,
-    "kb": 3.5
+    "kb": 3.4
    }
   },
   {
    "page": 17,
    "bbox": [
-    67.7,
-    275.9,
-    386.7,
-    400.9
+    67.5,
+    275.5,
+    387.0,
+    401.0
    ],
    "id": "0625_2017ON_21_q34_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p21/q34/figures/0625_2017ON_21_q34_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p21/q34/figures/0625_2017ON_21_q34_figB",
     "url": null,
-    "kb": 28.9
+    "kb": 29.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row shows how temperature change affects the resistance of the thermistor and the current in the circuit?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "temperature",
-     "resistance of thermistor",
-     "current in circuit"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017ON_21_q34_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases increases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases decreases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases increases"
+    }
+   ]
   }
  ]
 }

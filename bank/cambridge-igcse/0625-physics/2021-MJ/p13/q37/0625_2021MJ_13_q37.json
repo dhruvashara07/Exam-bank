@@ -32,9 +32,9 @@
   {
    "page": 17,
    "bbox": [
-    67.7,
-    512.2,
-    249.7,
+    67.5,
+    512.0,
+    250.0,
     623.5
    ],
    "id": "0625_2021MJ_13_q37_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p13/q37/figures/0625_2021MJ_13_q37_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p13/q37/figures/0625_2021MJ_13_q37_figA",
     "url": null,
-    "kb": 12.5
+    "kb": 12.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What is the charge on an electron and what is the charge on a neutron?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "electron",
-     "neutron"
-    ],
-    [
-     "<b>A</b>",
-     "<i>e</i>",
-     "<i>e</i>"
-    ],
-    [
-     "<b>B</b>",
-     "<i>e</i>",
-     "0"
-    ],
-    [
-     "<b>C</b>",
-     "<i>–</i><i>e</i>",
-     "–<i>e</i>"
-    ],
-    [
-     "<b>D</b>",
-     "–<i>e</i>",
-     "0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_13_q37_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "e e"
+    },
+    {
+     "label": "B",
+     "html": "e 0"
+    },
+    {
+     "label": "C",
+     "html": "–e –e"
+    },
+    {
+     "label": "D",
+     "html": "–e 0"
+    }
+   ]
   }
  ]
 }

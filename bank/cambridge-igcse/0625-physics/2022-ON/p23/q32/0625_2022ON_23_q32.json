@@ -33,9 +33,9 @@
    "page": 14,
    "bbox": [
     173.2,
-    85.2,
+    85.0,
     422.1,
-    189.1
+    189.5
    ],
    "id": "0625_2022ON_23_q32_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    246.9,
-    363.6,
-    358.3
+    67.5,
+    246.5,
+    364.0,
+    358.5
    ],
    "id": "0625_2022ON_23_q32_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p23/q32/figures/0625_2022ON_23_q32_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p23/q32/figures/0625_2022ON_23_q32_figB",
     "url": null,
-    "kb": 25.5
+    "kb": 25.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -122,8 +123,8 @@
   },
   {
    "type": "text",
-   "html": "The current reading on ammeter 2 is 0.20A.",
-   "text": "The current reading on ammeter 2 is 0.20A."
+   "html": "The current reading on ammeter 2 is 0.20 A.",
+   "text": "The current reading on ammeter 2 is 0.20 A."
   },
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "What is the name for this type of circuit and what is the reading on ammeter 1?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "type of circuit",
-     "reading on ammeter 1"
-    ],
-    [
-     "<b>A</b>",
-     "series",
-     "0.20A"
-    ],
-    [
-     "<b>B</b>",
-     "series",
-     "greater than 0.20A"
-    ],
-    [
-     "<b>C</b>",
-     "parallel",
-     "0.20A"
-    ],
-    [
-     "<b>D</b>",
-     "parallel",
-     "greater than 0.20A"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_23_q32_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "series 0.20A"
+    },
+    {
+     "label": "B",
+     "html": "series greater than 0.20A"
+    },
+    {
+     "label": "C",
+     "html": "parallel 0.20A"
+    },
+    {
+     "label": "D",
+     "html": "parallel greater than 0.20A"
+    }
+   ]
   }
  ]
 }

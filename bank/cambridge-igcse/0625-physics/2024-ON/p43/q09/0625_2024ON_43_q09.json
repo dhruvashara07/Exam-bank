@@ -9,10 +9,10 @@
    "caption": "Fig. 9.1",
    "page": 18,
    "bbox": [
-    103.3,
-    85.5,
-    491.7,
-    229.7
+    103.5,
+    86.5,
+    492.0,
+    230.0
    ],
    "id": "0625_2024ON_43_q09a_fig9-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Table 9.1",
    "page": 19,
    "bbox": [
-    90.3,
-    125.8,
+    90.0,
+    126.5,
     505.0,
-    267.6
+    268.0
    ],
    "id": "0625_2024ON_43_q09c_table9-1",
    "part": "(c)",
@@ -197,13 +197,13 @@
     },
     {
      "type": "text",
-     "html": "Scientists on the Earth measure the wavelength of the radiation from the very distant galaxy. The wavelength is 918nm.",
-     "text": "Scientists on the Earth measure the wavelength of the radiation from the very distant galaxy. The wavelength is 918nm."
+     "html": "Scientists on the Earth measure the wavelength of the radiation from the very distant galaxy. The wavelength is 918 nm.",
+     "text": "Scientists on the Earth measure the wavelength of the radiation from the very distant galaxy. The wavelength is 918 nm."
     },
     {
      "type": "text",
-     "html": "On the Earth, hydrogen in the laboratory emits electromagnetic radiation of wavelength 656nm.",
-     "text": "On the Earth, hydrogen in the laboratory emits electromagnetic radiation of wavelength 656nm."
+     "html": "On the Earth, hydrogen in the laboratory emits electromagnetic radiation of wavelength 656 nm.",
+     "text": "On the Earth, hydrogen in the laboratory emits electromagnetic radiation of wavelength 656 nm."
     },
     {
      "type": "text",
@@ -290,29 +290,9 @@
      "text": "The galaxies are at different distances from the Earth."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "object",
-       "wavelength of hydrogen from object, observed on the Earth/nm"
-      ],
-      [
-       "gas tube in laboratory",
-       "656"
-      ],
-      [
-       "nearby galaxy",
-       "667"
-      ],
-      [
-       "distant galaxy",
-       "750"
-      ],
-      [
-       "very distant galaxy",
-       "918"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2024ON_43_q09c_table9-1",
+     "caption": "Table 9.1"
     },
     {
      "type": "text",
@@ -347,5 +327,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    80.9,
-    113.2,
-    514.9,
-    321.9
+    80.5,
+    113.0,
+    514.5,
+    322.0
    ],
    "id": "0625_2016ON_62_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 4,
    "bbox": [
-    208.9,
-    370.8,
-    386.3,
-    524.6
+    208.5,
+    370.0,
+    387.0,
+    525.0
    ],
    "id": "0625_2016ON_62_q02a_fig2-2",
    "part": "(a)",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p62/q02/figures/0625_2016ON_62_q02a_fig2-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p62/q02/figures/0625_2016ON_62_q02a_fig2-2",
     "url": null,
-    "kb": 19.6
+    "kb": 19.5
    }
   },
   {
    "caption": "Fig. 2.3",
    "page": 4,
    "bbox": [
-    208.9,
-    370.8,
-    386.3,
-    688.4
+    208.5,
+    370.0,
+    387.0,
+    688.5
    ],
    "id": "0625_2016ON_62_q02a_fig2-3",
    "part": "(a)",
@@ -188,6 +188,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "V1 ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "I1 ="
       },
       {
@@ -255,7 +260,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i> of the resistor <b>R</b> using the equation <i>R</i> = \\(\\frac{<i>V</i><sub>1</sub>}{<i>I</i>}\\).",
+       "html": "Calculate the resistance <i>R</i> of the resistor <b>R</b> using the equation <i>R</i> = \\(\\frac{V_{1}}{I}\\).",
        "text": "Calculate the resistance R of the resistor R using the equation R = (V1)/(I)."
       },
       {
@@ -378,6 +383,11 @@
      "text": "4.96 Ω, 5.12 Ω, 4.89 Ω"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "R ="
+    },
+    {
      "type": "text",
      "html": "A student suggests that the resistance <i>R</i> should be constant throughout the experiment.",
      "text": "A student suggests that the resistance R should be constant throughout the experiment."
@@ -390,8 +400,12 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
-     "lines": 2
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
     },
     {
      "type": "marks",
@@ -579,6 +593,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

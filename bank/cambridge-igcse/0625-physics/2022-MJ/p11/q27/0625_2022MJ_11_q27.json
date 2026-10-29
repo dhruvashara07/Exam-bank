@@ -34,8 +34,8 @@
    "bbox": [
     106.7,
     112.3,
-    489.8,
-    278.5
+    488.5,
+    279.0
    ],
    "id": "0625_2022MJ_11_q27_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
-    336.2,
-    353.8,
-    461.7
+    67.5,
+    336.0,
+    354.0,
+    462.0
    ],
    "id": "0625_2022MJ_11_q27_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p11/q27/figures/0625_2022MJ_11_q27_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p11/q27/figures/0625_2022MJ_11_q27_figB",
     "url": null,
-    "kb": 22.6
+    "kb": 22.5
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,40 +132,30 @@
    "text": "Which core is made out of soft iron?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "pins picked up with",
-     "pins picked up with"
-    ],
-    [
-     "",
-     "the power supply on",
-     "the power supply off"
-    ],
-    [
-     "<b>A</b>",
-     "0",
-     "0"
-    ],
-    [
-     "<b>B</b>",
-     "2",
-     "7"
-    ],
-    [
-     "<b>C</b>",
-     "8",
-     "5"
-    ],
-    [
-     "<b>D</b>",
-     "12",
-     "0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_11_q27_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0 0"
+    },
+    {
+     "label": "B",
+     "html": "2 7"
+    },
+    {
+     "label": "C",
+     "html": "8 5"
+    },
+    {
+     "label": "D",
+     "html": "12 0"
+    }
+   ]
   }
  ]
 }

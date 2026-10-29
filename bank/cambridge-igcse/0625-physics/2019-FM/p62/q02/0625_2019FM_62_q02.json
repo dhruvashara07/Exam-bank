@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    93.6,
-    97.4,
-    501.3,
-    348.4
+    94.0,
+    99.0,
+    501.5,
+    345.5
    ],
    "id": "0625_2019FM_62_q02_fig2-1",
    "part": "",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-FM/p62/q02/figures/0625_2019FM_62_q02_fig2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-FM/p62/q02/figures/0625_2019FM_62_q02_fig2-1",
     "url": null,
-    "kb": 40.2
+    "kb": 40.1
    }
   },
   {
@@ -53,9 +53,9 @@
    "page": 5,
    "bbox": [
     169.5,
-    506.3,
-    425.8,
-    744.8
+    511.0,
+    426.0,
+    745.0
    ],
    "id": "0625_2019FM_62_q02b_table2-1",
    "part": "(b)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-FM/p62/q02/figures/0625_2019FM_62_q02b_table2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-FM/p62/q02/figures/0625_2019FM_62_q02b_table2-1",
     "url": null,
-    "kb": 40.7
+    "kb": 40.6
    }
   }
  ],
@@ -208,7 +208,7 @@
      "type": "list",
      "items": [
       "100 cm<sup>3</sup> of hot water is poured into beaker <b>A</b> and the initial temperature θ is recorded in Table 2.1.",
-      "The temperature θof the water at times <i>t</i> = 30 s, 60 s, 90 s, 120 s, 150 s and 180 s are shown in Table 2.1.",
+      "The temperature θ of the water at times <i>t</i> = 30 s, 60 s, 90 s, 120 s, 150 s and 180 s are shown in Table 2.1.",
       "This process is repeated for beaker <b>B</b>."
      ]
     },
@@ -218,59 +218,9 @@
      "text": "Complete the headings and the time column in Table 2.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "",
-       "beaker <b>A</b>",
-       "beaker <b>B</b>"
-      ],
-      [
-       "",
-       "with insulation",
-       "with a lid"
-      ],
-      [
-       "<i>t</i> /",
-       "θ /",
-       "θ /"
-      ],
-      [
-       "0",
-       "83.0",
-       "86.0"
-      ],
-      [
-       "",
-       "79.0",
-       "84.0"
-      ],
-      [
-       "",
-       "75.5",
-       "82.5"
-      ],
-      [
-       "",
-       "73.0",
-       "81.0"
-      ],
-      [
-       "",
-       "71.0",
-       "80.0"
-      ],
-      [
-       "",
-       "69.5",
-       "79.0"
-      ],
-      [
-       "",
-       "68.5",
-       "78.5"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2019FM_62_q02b_table2-1",
+     "caption": "Table 2.1"
     },
     {
      "type": "marks",
@@ -418,7 +368,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "additional experiment"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 4
     },
     {
@@ -503,7 +462,7 @@
       },
       {
        "type": "text",
-       "html": "<i>x</i><b><sub>A</sub></b> = \\(\\frac{θ<sub>0</sub> – θ<sub>180</sub>}{<i>T</i>}\\)",
+       "html": "<i>x</i><b><sub>A</sub></b> = \\(\\frac{θ_{0} – θ_{180}}{T}\\)",
        "text": "xA = (θ0 – θ180)/(T)"
       },
       {
@@ -588,7 +547,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 3
       },
       {
@@ -618,6 +586,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

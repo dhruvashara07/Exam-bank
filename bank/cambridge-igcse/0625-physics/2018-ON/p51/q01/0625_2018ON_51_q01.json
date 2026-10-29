@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    95.2,
-    240.2,
-    494.6,
-    521.2
+    95.5,
+    244.5,
+    494.0,
+    518.5
    ],
    "id": "0625_2018ON_51_q01b_fig1-1",
    "part": "(b)",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2",
    "page": 3,
    "bbox": [
-    95.2,
-    135.2,
-    494.6,
-    417.9
+    95.5,
+    139.5,
+    494.0,
+    415.0
    ],
    "id": "0625_2018ON_51_q01c_fig1-2",
    "part": "(c)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-ON/p51/q01/figures/0625_2018ON_51_q01c_fig1-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-ON/p51/q01/figures/0625_2018ON_51_q01c_fig1-2",
     "url": null,
-    "kb": 46.7
+    "kb": 46.6
    }
   }
  ],
@@ -407,8 +407,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a value for the spring constant <i>k</i> using the equation <i>k</i> = \\(\\frac{<i>F</i>}{<i>e</i>}\\), where <i>F</i> = 3.0 N.",
-       "text": "Calculate a value for the spring constant k using the equation k = (F)/(e), where F = 3.0 N."
+       "html": "Calculate a value for the spring constant <i>k</i> using the equation <i>k</i> = \\(\\frac{F}{e}\\) , where <i>F</i> = 3.0 N.",
+       "text": "Calculate a value for the spring constant k using the equation k = (F)/(e) , where F = 3.0 N."
       },
       {
        "type": "answer",
@@ -609,6 +609,12 @@
        "text": "1. Calculate the time T taken for one complete oscillation."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "T =",
+       "unit": "s"
+      },
+      {
        "type": "text",
        "html": "2. Calculate <i>T </i><sup>2</sup>.",
        "text": "2. Calculate T 2."
@@ -683,8 +689,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the spring constant <i>k</i> using the equation <i>k</i> = \\(\\frac{0 040.<i>m</i>}{<i>T</i><sup>2</sup>}\\), where <i>m</i> = 0.300 kg.",
-       "text": "Calculate the spring constant k using the equation k = (0 040.m)/(T2), where m = 0.300 kg."
+       "html": "Calculate the spring constant <i>k</i> using the equation <i>k</i> = \\(\\frac{0 040. m}{T ^{2}}\\) , where <i>m</i> = 0.300 kg.",
+       "text": "Calculate the spring constant k using the equation k = (0 040.m)/(T2) , where m = 0.300 kg."
       },
       {
        "type": "answer",
@@ -779,7 +785,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -880,6 +895,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

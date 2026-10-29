@@ -32,10 +32,10 @@
   {
    "page": 12,
    "bbox": [
-    67.7,
-    283.8,
+    67.5,
+    283.5,
     242.5,
-    409.3
+    409.5
    ],
    "id": "0625_2024MJ_21_q34_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "How many neutrons are in the nucleus of this isotope and what is the relative charge on the nucleus?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "number of",
-     "relative"
-    ],
-    [
-     "",
-     "neutrons",
-     "charge"
-    ],
-    [
-     "<b>A</b>",
-     "1",
-     "+1"
-    ],
-    [
-     "<b>B</b>",
-     "1",
-     "+2"
-    ],
-    [
-     "<b>C</b>",
-     "2",
-     "+1"
-    ],
-    [
-     "<b>D</b>",
-     "2",
-     "+2"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_21_q34_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "1 +1"
+    },
+    {
+     "label": "B",
+     "html": "1 +2"
+    },
+    {
+     "label": "C",
+     "html": "2 +1"
+    },
+    {
+     "label": "D",
+     "html": "2 +2"
+    }
+   ]
   }
  ]
 }

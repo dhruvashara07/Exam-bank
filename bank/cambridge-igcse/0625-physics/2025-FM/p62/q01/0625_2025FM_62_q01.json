@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    203.2,
-    128.3,
-    383.6,
-    346.1
+    204.0,
+    129.0,
+    383.0,
+    346.5
    ],
    "id": "0625_2025FM_62_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 1.1",
    "page": 3,
    "bbox": [
-    209.4,
-    99.8,
+    209.5,
+    100.5,
     386.0,
-    250.9
+    251.5
    ],
    "id": "0625_2025FM_62_q01b_table1-1",
    "part": "(b)",
@@ -72,9 +72,9 @@
    "page": 4,
    "bbox": [
     163.0,
-    61.6,
-    418.3,
-    553.3
+    61.5,
+    418.5,
+    553.5
    ],
    "id": "0625_2025FM_62_q01c_fig1-2",
    "part": "(c)",
@@ -151,8 +151,8 @@
    "content": [
     {
      "type": "text",
-     "html": "The student suspends a mass m = 100g from the spring. She measures, and records in Table 1.1, the stretched length l of the spring, as indicated in Fig. 1.1.",
-     "text": "The student suspends a mass m = 100g from the spring. She measures, and records in Table 1.1, the stretched length l of the spring, as indicated in Fig. 1.1."
+     "html": "The student suspends a mass m = 100 g from the spring. She measures, and records in Table 1.1, the stretched length l of the spring, as indicated in Fig. 1.1.",
+     "text": "The student suspends a mass m = 100 g from the spring. She measures, and records in Table 1.1, the stretched length l of the spring, as indicated in Fig. 1.1."
     },
     {
      "type": "text",
@@ -162,7 +162,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -233,42 +242,18 @@
    "content": [
     {
      "type": "text",
-     "html": "She repeats step (a) for values of m = 200g, m = 300g, m = 400g and m = 500g. Her readings <b>are</b> shown in Table 1.1.",
-     "text": "She repeats step (a) for values of m = 200g, m = 300g, m = 400g and m = 500g. Her readings are shown in Table 1.1."
+     "html": "She repeats step (a) for values of m = 200 g, m = 300 g, m = 400 g and m = 500 g. Her readings <b>are</b> shown in Table 1.1.",
+     "text": "She repeats step (a) for values of m = 200 g, m = 300 g, m = 400 g and m = 500 g. Her readings are shown in Table 1.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "m/g",
-       "l /cm"
-      ],
-      [
-       "100",
-       "6.0"
-      ],
-      [
-       "200",
-       "9.2"
-      ],
-      [
-       "300",
-       "13.6"
-      ],
-      [
-       "400",
-       "16.8"
-      ],
-      [
-       "500",
-       "21.0"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2025FM_62_q01b_table1-1",
+     "caption": "Table 1.1"
     },
     {
      "type": "text",
-     "html": "Plot a graph of l /cm (y-axis) against m/g (x-axis). Start the <b>axes</b> from the origin (0,0).",
-     "text": "Plot a graph of l /cm (y-axis) against m/g (x-axis). Start the axes from the origin (0,0)."
+     "html": "Plot a graph of l / cm (y-axis) against m / g (x-axis). Start the <b>axes</b> from the origin (0, 0).",
+     "text": "Plot a graph of l / cm (y-axis) against m / g (x-axis). Start the axes from the origin (0, 0)."
     },
     {
      "type": "text",
@@ -645,8 +630,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Two students measure the mass of another object using the same method and apparatus. One student records the mass as 132.6g. The other student records the mass as 130g.",
-     "text": "Two students measure the mass of another object using the same method and apparatus. One student records the mass as 132.6g. The other student records the mass as 130g."
+     "html": "Two students measure the mass of another object using the same method and apparatus. One student records the mass as 132.6 g. The other student records the mass as 130 g.",
+     "text": "Two students measure the mass of another object using the same method and apparatus. One student records the mass as 132.6 g. The other student records the mass as 130 g."
     },
     {
      "type": "text",
@@ -656,7 +641,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -683,6 +677,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

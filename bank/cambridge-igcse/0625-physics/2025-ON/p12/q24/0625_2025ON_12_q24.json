@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
-    160.6,
-    360.1,
-    271.9
+    67.5,
+    160.5,
+    360.5,
+    272.0
    ],
    "id": "0625_2025ON_12_q24_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p12/q24/figures/0625_2025ON_12_q24_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p12/q24/figures/0625_2025ON_12_q24_figA",
     "url": null,
-    "kb": 24.6
+    "kb": 24.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -112,40 +113,30 @@
    "text": "Intruder alarms use ......3...... ."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "1",
-     "2",
-     "3"
-    ],
-    [
-     "<b>A</b>",
-     "radio waves",
-     "X-rays",
-     "radio waves"
-    ],
-    [
-     "<b>B</b>",
-     "microwaves",
-     "microwaves",
-     "infrared"
-    ],
-    [
-     "<b>C</b>",
-     "microwaves",
-     "X-rays",
-     "radio waves"
-    ],
-    [
-     "<b>D</b>",
-     "microwaves",
-     "X-rays",
-     "infrared"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025ON_12_q24_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "radio waves X-rays radio waves"
+    },
+    {
+     "label": "B",
+     "html": "microwaves microwaves infrared"
+    },
+    {
+     "label": "C",
+     "html": "microwaves X-rays radio waves"
+    },
+    {
+     "label": "D",
+     "html": "microwaves X-rays infrared"
+    }
+   ]
   }
  ]
 }

@@ -34,7 +34,7 @@
    "bbox": [
     163.3,
     124.6,
-    430.8,
+    431.5,
     327.2
    ],
    "id": "0625_2019ON_21_q31_figA",
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p21/q31/figures/0625_2019ON_21_q31_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p21/q31/figures/0625_2019ON_21_q31_figA",
     "url": null,
-    "kb": 13.3
+    "kb": 13.4
    }
   },
   {
    "page": 11,
    "bbox": [
-    67.7,
+    67.5,
     360.5,
-    293.9,
-    471.4
+    294.0,
+    471.5
    ],
    "id": "0625_2019ON_21_q31_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p21/q31/figures/0625_2019ON_21_q31_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p21/q31/figures/0625_2019ON_21_q31_figB",
     "url": null,
-    "kb": 17.2
+    "kb": 17.1
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A circuit contains a cell of electromotive force (e.m.f.) 2.0V, three resistors, three ammeters and two voltmeters. One ammeter is labelled P and one voltmeter is labelled Q.",
-   "text": "A circuit contains a cell of electromotive force (e.m.f.) 2.0V, three resistors, three ammeters and two voltmeters. One ammeter is labelled P and one voltmeter is labelled Q."
+   "html": "A circuit contains a cell of electromotive force (e.m.f.) 2.0 V, three resistors, three ammeters and two voltmeters. One ammeter is labelled P and one voltmeter is labelled Q.",
+   "text": "A circuit contains a cell of electromotive force (e.m.f.) 2.0 V, three resistors, three ammeters and two voltmeters. One ammeter is labelled P and one voltmeter is labelled Q."
   },
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "What is the reading on ammeter P and what is the reading on voltmeter Q?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "reading on P/A",
-     "reading on Q/V"
-    ],
-    [
-     "<b>A</b>",
-     "1.5",
-     "1.5"
-    ],
-    [
-     "<b>B</b>",
-     "1.5",
-     "2.5"
-    ],
-    [
-     "<b>C</b>",
-     "2.5",
-     "1.5"
-    ],
-    [
-     "<b>D</b>",
-     "2.5",
-     "2.5"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019ON_21_q31_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "1.5 1.5"
+    },
+    {
+     "label": "B",
+     "html": "1.5 2.5"
+    },
+    {
+     "label": "C",
+     "html": "2.5 1.5"
+    },
+    {
+     "label": "D",
+     "html": "2.5 2.5"
+    }
+   ]
   }
  ]
 }

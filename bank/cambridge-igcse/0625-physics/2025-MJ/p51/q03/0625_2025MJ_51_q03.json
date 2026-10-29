@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 6,
    "bbox": [
-    175.0,
-    111.5,
-    420.3,
-    491.5
+    174.5,
+    112.5,
+    421.0,
+    492.0
    ],
    "id": "0625_2025MJ_51_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 7,
    "bbox": [
-    143.1,
-    183.3,
-    452.3,
-    636.9
+    142.5,
+    182.5,
+    453.0,
+    637.0
    ],
    "id": "0625_2025MJ_51_q03c_fig3-2",
    "part": "(c)",
@@ -135,7 +135,7 @@
     {
      "type": "list",
      "items": [
-      "Draw a line 10.0cm long near the middle of the ray-trace sheet. Label the line MR. Draw a normal to this line that passes through its centre. Label the normal NL. Label the point"
+      "Draw a line 10.0 cm long near the middle of the ray-trace sheet. Label the line MR. Draw a normal to this line that passes through its centre. Label the normal NL. Label the point"
      ]
     },
     {
@@ -146,7 +146,7 @@
     {
      "type": "list",
      "items": [
-      "Draw a line below MR, 10.0cm long from B at an angle of incidence i = 40° to the normal and to the left of the normal. Label the end of this line A.",
+      "Draw a line below MR, 10.0 cm long from B at an angle of incidence i = 40° to the normal and to the left of the normal. Label the end of this line A.",
       "Place the reflecting face of the mirror vertically on the line MR.",
       "Place two pins, P<sub>1</sub> and P<sub>2</sub>, on line AB at a suitable distance apart for this type of ray-trace experiment. Label the positions of P<sub>1</sub> and P<sub>2</sub>.",
       "View the images of pins P<sub>1</sub> and P<sub>2</sub> from the direction indicated by the eye in Fig. 3.1. Place two pins, P<sub>3</sub> and P<sub>4</sub>, so that pins P<sub>3</sub> and P<sub>4</sub> and the images of P<sub>2</sub> and P<sub>1</sub> all appear"
@@ -227,13 +227,13 @@
     },
     {
      "type": "text",
-     "html": "Measure the acute angle αbetween this line and the normal NL. An acute angle is an angle less than 90°.",
-     "text": "Measure the acute angle αbetween this line and the normal NL. An acute angle is an angle less than 90°."
+     "html": "Measure the acute angle α between this line and the normal NL. An acute angle is an angle less than 90°.",
+     "text": "Measure the acute angle α between this line and the normal NL. An acute angle is an angle less than 90°."
     },
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "α=",
+     "prefix": "α =",
      "unit": "°"
     },
     {
@@ -313,7 +313,7 @@
     {
      "type": "list",
      "items": [
-      "Draw a line below MR, 10.0cm long from B at an angle of incidence i = 50° to the normal and to the left of the normal. Label the end of this line C.",
+      "Draw a line below MR, 10.0 cm long from B at an angle of incidence i = 50° to the normal and to the left of the normal. Label the end of this line C.",
       "Place pins P<sub>1</sub> and P<sub>2</sub> on line CB at a suitable distance apart for this type of ray-trace experiment.",
       "Place the reflecting face of the mirror vertically on the line MR with the centre of the mirror at B.",
       "View the images of pins P<sub>1</sub> and P<sub>2</sub> from the direction indicated by the eye in Fig. 3.2.",
@@ -400,13 +400,13 @@
     },
     {
      "type": "text",
-     "html": "Measure the acute angle βbetween this line and the <b>horizontal</b> line MR.",
-     "text": "Measure the acute angle βbetween this line and the horizontal line MR."
+     "html": "Measure the acute angle β between this line and the <b>horizontal</b> line MR.",
+     "text": "Measure the acute angle β between this line and the horizontal line MR."
     },
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "β=",
+     "prefix": "β =",
      "unit": "°"
     },
     {
@@ -475,13 +475,22 @@
    "content": [
     {
      "type": "text",
-     "html": "Suggest a relationship between αand β. Justify your answer by reference to the results.",
-     "text": "Suggest a relationship between αand β. Justify your answer by reference to the results."
+     "html": "Suggest a relationship between α and β. Justify your answer by reference to the results.",
+     "text": "Suggest a relationship between α and β. Justify your answer by reference to the results."
     },
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "relationship"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -553,14 +562,23 @@
      "text": "State two techniques that you use to obtain an accurate ray trace."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
      "type": "text",
      "html": "Write your name, centre number and candidate number on your ray-trace sheet. Tie your ray-trace sheet into this question booklet between pages 8 and 9.",
      "text": "Write your name, centre number and candidate number on your ray-trace sheet. Tie your ray-trace sheet into this question booklet between pages 8 and 9."
     },
     {
      "type": "answer",
-     "kind": "answer_line",
-     "prefix": "2",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -587,6 +605,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

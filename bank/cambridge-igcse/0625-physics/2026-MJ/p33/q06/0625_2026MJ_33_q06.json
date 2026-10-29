@@ -33,10 +33,10 @@
    "caption": "Figure 6.1",
    "page": 9,
    "bbox": [
-    57.4,
-    149.0,
-    536.0,
-    200.2
+    57.0,
+    99.5,
+    536.5,
+    200.5
    ],
    "id": "0625_2026MJ_33_q06_fig6-1",
    "part": "",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p33/q06/figures/0625_2026MJ_33_q06_fig6-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p33/q06/figures/0625_2026MJ_33_q06_fig6-1",
     "url": null,
-    "kb": 7.4
+    "kb": 24.8
    }
   }
  ],
@@ -265,9 +265,13 @@
      "text": "Complete the sentence."
     },
     {
+     "type": "text",
+     "html": "In a vacuum, the speed of X-rays is ……",
+     "text": "In a vacuum, the speed of X-rays is ……"
+    },
+    {
      "type": "answer",
-     "kind": "answer_line",
-     "prefix": "In a vacuum, the speed of X-rays is"
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -423,7 +427,21 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "3"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -449,16 +467,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
    "html": "The chart in Figure 6.1 shows the regions of the electromagnetic spectrum. Two of the regions are <b>not</b> labelled.",
    "text": "The chart in Figure 6.1 shows the regions of the electromagnetic spectrum. Two of the regions are not labelled."
-  },
-  {
-   "type": "text",
-   "html": "X-rays ultraviolet visible light infrared radio waves",
-   "text": "X-rays ultraviolet visible light infrared radio waves"
   },
   {
    "type": "figure",
@@ -467,8 +481,7 @@
   },
   {
    "type": "answer",
-   "kind": "lines",
-   "lines": 1
+   "kind": "lines"
   }
  ]
 }

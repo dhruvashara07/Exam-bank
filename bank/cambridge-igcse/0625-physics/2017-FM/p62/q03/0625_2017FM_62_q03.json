@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    75.8,
-    108.2,
-    519.5,
-    231.3
+    75.5,
+    112.5,
+    519.0,
+    228.5
    ],
    "id": "0625_2017FM_62_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 8,
    "bbox": [
-    221.0,
-    365.6,
-    374.3,
-    531.4
+    220.0,
+    365.0,
+    375.0,
+    528.5
    ],
    "id": "0625_2017FM_62_q03a_fig3-2",
    "part": "(a)",
@@ -71,10 +71,10 @@
    "caption": "Table 3.1",
    "page": 8,
    "bbox": [
-    124.4,
-    559.4,
-    470.9,
-    727.4
+    124.5,
+    564.0,
+    471.0,
+    727.5
    ],
    "id": "0625_2017FM_62_q03a_table3-1",
    "part": "(a)",
@@ -160,6 +160,11 @@
      "text": "1.5 cm"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "hO ="
+    },
+    {
      "type": "text",
      "html": "Measure and record, in Table 3.1, the height of the image of the triangle <i>h</i><sub>I </sub>on the screen, as shown in Fig. 3.2.",
      "text": "Measure and record, in Table 3.1, the height of the image of the triangle hI on the screen, as shown in Fig. 3.2."
@@ -170,44 +175,9 @@
      "caption": "Fig. 3.2"
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>u</i> / cm",
-       "<i>h</i><sub>I</sub> / cm",
-       "<i>M</i>"
-      ],
-      [
-       "20.0",
-       "",
-       ""
-      ],
-      [
-       "25.0",
-       "2.25",
-       ""
-      ],
-      [
-       "35.0",
-       "1.10",
-       ""
-      ],
-      [
-       "45.0",
-       "0.75",
-       ""
-      ],
-      [
-       "55.0",
-       "0.55",
-       ""
-      ]
-     ]
-    },
-    {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "hO ="
+     "type": "figure",
+     "id": "0625_2017FM_62_q03a_table3-1",
+     "caption": "Table 3.1"
     },
     {
      "type": "marks",
@@ -274,7 +244,7 @@
    "content": [
     {
      "type": "text",
-     "html": "The student measures the height <i>h</i><sub>I </sub>of the image for <i>u</i> values of 25.0 cm, 35.0 cm, 45.0 cm and 55.0 cm. Her results are shown in Table 3.1. For each value of <i>u</i>, calculate and record in Table 3.1 a value for the magnification <i>M</i>. Use the equation <i>M</i> = \\(\\frac{<i>h</i><sub>I</sub>}{<i>h</i><sub>O</sub>}\\) and the value of <i>h</i><sub>O</sub> from <b>(a)</b>.",
+     "html": "The student measures the height <i>h</i><sub>I </sub>of the image for <i>u</i> values of 25.0 cm, 35.0 cm, 45.0 cm and 55.0 cm. Her results are shown in Table 3.1. For each value of <i>u</i>, calculate and record in Table 3.1 a value for the magnification <i>M</i>. Use the equation <i>M</i> = \\(\\frac{h_{I}}{h_{O}}\\) and the value of <i>h</i><sub>O</sub> from <b>(a)</b>.",
      "text": "The student measures the height hI of the image for u values of 25.0 cm, 35.0 cm, 45.0 cm and 55.0 cm. Her results are shown in Table 3.1. For each value of u, calculate and record in Table 3.1 a value for the magnification M. Use the equation M = (hI)/(hO) and the value of hO from (a)."
     },
     {
@@ -499,7 +469,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "improvement",
+     "prefix": "difficulty"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "improvement"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -599,6 +578,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

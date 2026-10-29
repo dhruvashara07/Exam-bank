@@ -70,6 +70,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -86,19 +87,19 @@
    "options": [
     {
      "label": "A",
-     "html": "\\(\\frac{totalenergy output}{totalenergy input}\\) × 100%"
+     "html": "\\(\\frac{\\text{total energy output}}{\\text{total energy input}}\\) × 100%"
     },
     {
      "label": "B",
-     "html": "\\(\\frac{usefulenergy output}{totalenergy input}\\) × 100%"
+     "html": "\\(\\frac{\\text{useful energy output}}{\\text{total energy input}}\\) × 100%"
     },
     {
      "label": "C",
-     "html": "\\(\\frac{wastedenergy output}{totalenergy input}\\) × 100%"
+     "html": "\\(\\frac{\\text{wasted energy output}}{\\text{total energy input}}\\) × 100%"
     },
     {
      "label": "D",
-     "html": "\\(\\frac{wastedenergy output}{usefulenergy output}\\) × 100%"
+     "html": "\\(\\frac{\\text{wasted energy output}}{\\text{useful energy output}}\\) × 100%"
     }
    ]
   }

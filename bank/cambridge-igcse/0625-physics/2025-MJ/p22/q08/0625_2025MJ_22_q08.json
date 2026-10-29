@@ -70,11 +70,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A stone is thrown vertically upwards at a speed of 5.0m/s.",
-   "text": "A stone is thrown vertically upwards at a speed of 5.0m/s."
+   "html": "A stone is thrown vertically upwards at a speed of 5.0 m / s.",
+   "text": "A stone is thrown vertically upwards at a speed of 5.0 m / s."
   },
   {
    "type": "text",
@@ -91,19 +92,19 @@
    "options": [
     {
      "label": "A",
-     "html": "<i>h</i> = \\(\\frac{9.8}{2×5.0<sup>2</sup>}\\)"
+     "html": "<i>h</i> = \\(\\frac{9.8}{2 \\times 5.0^{2}}\\)"
     },
     {
      "label": "B",
-     "html": "<i>h</i> = \\(\\frac{5.0<sup>2</sup>×2}{9.8}\\)"
+     "html": "<i>h</i> = \\(\\frac{5.0^{2} \\times 2}{9.8}\\)"
     },
     {
      "label": "C",
-     "html": "<i>h</i> = \\(\\frac{5.0<sup>2</sup>}{2×9.8}\\)"
+     "html": "<i>h</i> = \\(\\frac{5.0^{2}}{2 \\times 9.8}\\)"
     },
     {
      "label": "D",
-     "html": "<i>h</i> = \\(\\frac{2×9.8}{5.0<sup>2</sup>}\\)"
+     "html": "<i>h</i> = \\(\\frac{2 \\times 9.8}{5.0^{2}}\\)"
     }
    ]
   }

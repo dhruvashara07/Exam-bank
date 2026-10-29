@@ -34,7 +34,7 @@
    "bbox": [
     182.2,
     86.9,
-    412.6,
+    413.5,
     216.3
    ],
    "id": "0625_2022ON_21_q34_figA",
@@ -51,9 +51,9 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    249.6,
-    277.4,
+    67.5,
+    249.5,
+    277.5,
     361.0
    ],
    "id": "0625_2022ON_21_q34_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p21/q34/figures/0625_2022ON_21_q34_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p21/q34/figures/0625_2022ON_21_q34_figB",
     "url": null,
-    "kb": 18.9
+    "kb": 18.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row shows materials suitable for making the core and the primary coil?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "core",
-     "primary coil"
-    ],
-    [
-     "<b>A</b>",
-     "iron",
-     "copper"
-    ],
-    [
-     "<b>B</b>",
-     "iron",
-     "plastic"
-    ],
-    [
-     "<b>C</b>",
-     "steel",
-     "copper"
-    ],
-    [
-     "<b>D</b>",
-     "steel",
-     "plastic"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_21_q34_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "iron copper"
+    },
+    {
+     "label": "B",
+     "html": "iron plastic"
+    },
+    {
+     "label": "C",
+     "html": "steel copper"
+    },
+    {
+     "label": "D",
+     "html": "steel plastic"
+    }
+   ]
   }
  ]
 }

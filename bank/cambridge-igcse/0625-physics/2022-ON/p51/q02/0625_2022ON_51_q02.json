@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    135.8,
-    114.7,
-    467.6,
-    319.9
+    135.5,
+    114.0,
+    467.5,
+    318.5
    ],
    "id": "0625_2022ON_51_q02_fig2-1",
    "part": "",
@@ -291,7 +291,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>1</sub> of lamp L. Use the equation <i>R</i><sub>1</sub> = \\(\\frac{<i>V</i><sub>1</sub>}{<i>I</i><sub>1</sub>}\\). Include the unit.",
+       "html": "Calculate the resistance <i>R</i><sub>1</sub> of lamp L. Use the equation <i>R</i><sub>1</sub> = \\(\\frac{V_{1}}{I_{1}}\\). Include the unit.",
        "text": "Calculate the resistance R1 of lamp L. Use the equation R1 = (V1)/(I1). Include the unit."
       },
       {
@@ -404,7 +404,18 @@
     {
      "type": "list",
      "items": [
-      "Measure the current <i>I</i><sub>2</sub> in the circuit.",
+      "Measure the current <i>I</i><sub>2</sub> in the circuit."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "I2 =",
+     "unit": "A"
+    },
+    {
+     "type": "list",
+     "items": [
       "Measure the potential difference <i>V</i><sub>2</sub> across lamp L."
      ]
     },
@@ -418,7 +429,7 @@
      "type": "list",
      "items": [
       "Open the switch.",
-      "Calculate the resistance <i>R</i><sub>2</sub> of lamp L. Use the equation <i>R</i><sub>2</sub> = \\(\\frac{<i>V</i><sub>2</sub>}{<i>I</i><sub>2</sub>}\\). Include the unit."
+      "Calculate the resistance <i>R</i><sub>2</sub> of lamp L. Use the equation <i>R</i><sub>2</sub> = \\(\\frac{V_{2}}{I_{2}}\\). Include the unit."
      ]
     },
     {
@@ -498,10 +509,32 @@
     {
      "type": "list",
      "items": [
-      "Measure the current <i>I</i><sub>3</sub> in the circuit.",
-      "Measure the potential difference <i>V</i><sub>3</sub> across lamp L.",
+      "Measure the current <i>I</i><sub>3</sub> in the circuit."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "I3 =",
+     "unit": "A"
+    },
+    {
+     "type": "list",
+     "items": [
+      "Measure the potential difference <i>V</i><sub>3</sub> across lamp L."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V3 =",
+     "unit": "V"
+    },
+    {
+     "type": "list",
+     "items": [
       "Open the switch.",
-      "Calculate the resistance <i>R</i><sub>3</sub> of lamp L. Use the equation <i>R</i><sub>3</sub> = \\(\\frac{<i>V</i><sub>3</sub>}{<i>I</i><sub>3</sub>}\\). Include the unit."
+      "Calculate the resistance <i>R</i><sub>3</sub> of lamp L. Use the equation <i>R</i><sub>3</sub> = \\(\\frac{V_{3}}{I_{3}}\\). Include the unit."
      ]
     },
     {
@@ -584,6 +617,12 @@
      "text": "Complete the following statements, referring to your observations and results. 1. As the length of resistance wire included in the circuit is increased, the brightness of the"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "lamp",
+     "unit": "."
+    },
+    {
      "type": "text",
      "html": "2. As the length of resistance wire included in the circuit is increased, the resistance of the",
      "text": "2. As the length of resistance wire included in the circuit is increased, the resistance of the"
@@ -593,6 +632,10 @@
      "kind": "answer_line",
      "prefix": "lamp",
      "unit": "."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -692,6 +735,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

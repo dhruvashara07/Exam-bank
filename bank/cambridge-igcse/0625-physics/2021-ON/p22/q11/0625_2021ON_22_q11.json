@@ -70,6 +70,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -81,11 +82,11 @@
    "options": [
     {
      "label": "A",
-     "html": "<i>p</i> = \\(\\frac{<i>h</i>}{ρ<i>g</i>}\\)"
+     "html": "<i>p</i> = \\(\\frac{h}{ρg}\\)"
     },
     {
      "label": "B",
-     "html": "<i>p</i> = \\(\\frac{<i>h</i>ρ}{<i>g</i>}\\)"
+     "html": "<i>p</i> = \\(\\frac{hρ}{g}\\)"
     },
     {
      "label": "C",
@@ -93,7 +94,7 @@
     },
     {
      "label": "D",
-     "html": "<i>p</i> = \\(\\frac{1}{<i>h</i>ρ<i>g</i>}\\)"
+     "html": "<i>p</i> = \\(\\frac{1}{hρg}\\)"
     }
    ]
   }

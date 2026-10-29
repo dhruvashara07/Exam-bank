@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    171.2,
-    249.5,
-    422.9,
-    289.6
+    171.0,
+    249.8,
+    423.5,
+    290.0
    ],
    "id": "0625_2015ON_13_q15_figA",
    "caption": null,
@@ -45,14 +45,14 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p13/q15/figures/0625_2015ON_13_q15_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p13/q15/figures/0625_2015ON_13_q15_figA",
     "url": null,
-    "kb": 3.3
+    "kb": 3.4
    }
   },
   {
    "page": 6,
    "bbox": [
-    207.4,
-    362.2,
+    207.0,
+    362.0,
     388.0,
     431.5
    ],
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p13/q15/figures/0625_2015ON_13_q15_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p13/q15/figures/0625_2015ON_13_q15_figB",
     "url": null,
-    "kb": 16.2
+    "kb": 16.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -127,49 +128,37 @@
   },
   {
    "type": "text",
-   "html": "The length l is measured when the thermometer bulb is placed in water at 0°C, and also when it is in water at 100°C. The table shows the results.",
-   "text": "The length l is measured when the thermometer bulb is placed in water at 0°C, and also when it is in water at 100°C. The table shows the results."
+   "html": "The length l is measured when the thermometer bulb is placed in water at 0 °C, and also when it is in water at 100 °C. The table shows the results.",
+   "text": "The length l is measured when the thermometer bulb is placed in water at 0 °C, and also when it is in water at 100 °C. The table shows the results."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "temperature/°C",
-     "length l /cm"
-    ],
-    [
-     "0",
-     "2.0"
-    ],
-    [
-     "100",
-     "26.0"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2015ON_13_q15_figB",
+   "caption": null
   },
   {
    "type": "text",
-   "html": "What is the value of l when the bulb is placed in water at 50°C?",
-   "text": "What is the value of l when the bulb is placed in water at 50°C?"
+   "html": "What is the value of l when the bulb is placed in water at 50 °C?",
+   "text": "What is the value of l when the bulb is placed in water at 50 °C?"
   },
   {
    "type": "options",
    "options": [
     {
      "label": "A",
-     "html": "12.0cm"
+     "html": "12.0 cm"
     },
     {
      "label": "B",
-     "html": "13.0cm"
+     "html": "13.0 cm"
     },
     {
      "label": "C",
-     "html": "14.0cm"
+     "html": "14.0 cm"
     },
     {
      "label": "D",
-     "html": "16.0cm"
+     "html": "16.0 cm"
     }
    ]
   }

@@ -34,9 +34,9 @@
    "page": 14,
    "bbox": [
     190.5,
-    98.8,
-    403.9,
-    288.7
+    98.0,
+    405.0,
+    289.0
    ],
    "id": "0625_2026MJ_41_q09_fig9-1",
    "part": "",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p41/q09/figures/0625_2026MJ_41_q09_fig9-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p41/q09/figures/0625_2026MJ_41_q09_fig9-1",
     "url": null,
-    "kb": 18.4
+    "kb": 18.3
    }
   }
  ],
@@ -124,9 +124,15 @@
        "text": "State which of the rays, 1, 2, 3 or 4, is:"
       },
       {
+       "type": "list",
+       "items": [
+        "the green ray ……",
+        "the red ray. ……"
+       ]
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "• the red ray."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -292,7 +298,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "1"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "2"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -586,6 +601,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

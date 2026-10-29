@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    98.0,
-    113.4,
-    497.9,
-    243.5
+    98.5,
+    114.0,
+    497.5,
+    244.0
    ],
    "id": "0625_2016MJ_61_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 1.1",
    "page": 2,
    "bbox": [
-    135.7,
-    422.4,
+    135.5,
+    422.5,
     459.5,
-    616.4
+    616.5
    ],
    "id": "0625_2016MJ_61_q01a_table1-1",
    "part": "(a)",
@@ -255,45 +255,9 @@
      ]
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>x</i> /",
-       "<i>y</i> /",
-       "<i>A</i> /",
-       "<i>B</i> /"
-      ],
-      [
-       "40.0",
-       "42.5",
-       "",
-       ""
-      ],
-      [
-       "35.0",
-       "36.0",
-       "",
-       ""
-      ],
-      [
-       "30.0",
-       "30.0",
-       "",
-       ""
-      ],
-      [
-       "25.0",
-       "24.0",
-       "",
-       ""
-      ],
-      [
-       "20.0",
-       "17.5",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2016MJ_61_q01a_table1-1",
+     "caption": "Table 1.1"
     }
    ]
   },
@@ -505,7 +469,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate the weight <i>W</i> of the metre rule using the equation <i>W</i> = \\(\\frac{<i>Y</i>}{<i>z</i>}\\) , where <i>z</i> = 5.0 cm.",
+     "html": "Calculate the weight <i>W</i> of the metre rule using the equation <i>W</i> = \\(\\frac{Y}{z}\\) , where <i>z</i> = 5.0 cm.",
      "text": "Calculate the weight W of the metre rule using the equation W = (Y)/(z) , where z = 5.0 cm."
     },
     {
@@ -661,14 +625,23 @@
     },
     {
      "type": "text",
+     "html": "weight obtained on the balance = ……",
+     "text": "weight obtained on the balance = ……"
+    },
+    {
+     "type": "text",
      "html": "State and explain whether the two values for the weight agree within the limits of experimental accuracy.",
      "text": "State and explain whether the two values for the weight agree within the limits of experimental accuracy."
     },
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
-     "lines": 1
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
     },
     {
      "type": "marks",
@@ -694,6 +667,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

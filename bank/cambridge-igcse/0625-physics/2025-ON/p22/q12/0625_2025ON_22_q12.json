@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.9,
-    72.2,
-    489.1,
-    189.7
+    105.5,
+    99.2,
+    489.5,
+    190.5
    ],
    "id": "0625_2025ON_22_q12_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p22/q12/figures/0625_2025ON_22_q12_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p22/q12/figures/0625_2025ON_22_q12_figA",
     "url": null,
-    "kb": 90.6
+    "kb": 87.3
    }
   },
   {
    "page": 6,
    "bbox": [
-    67.7,
+    67.5,
     285.5,
-    350.3,
-    425.2
+    350.5,
+    425.5
    ],
    "id": "0625_2025ON_22_q12_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p22/q12/figures/0625_2025ON_22_q12_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p22/q12/figures/0625_2025ON_22_q12_figB",
     "url": null,
-    "kb": 32.7
+    "kb": 32.5
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The diagram represents the particle arrangements in samples of three different substances, P, Q",
-   "text": "The diagram represents the particle arrangements in samples of three different substances, P, Q"
+   "html": "The diagram represents the particle arrangements in samples of three different substances, P, Q and R.",
+   "text": "The diagram represents the particle arrangements in samples of three different substances, P, Q and R."
   },
   {
    "type": "figure",
@@ -136,52 +137,30 @@
    "text": "Which row shows possible percentage increases in volume for the three samples?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "sample of",
-     "sample of",
-     "sample of"
-    ],
-    [
-     "",
-     "substance P",
-     "substance Q",
-     "substance R"
-    ],
-    [
-     "",
-     "/%",
-     "/%",
-     "/%"
-    ],
-    [
-     "<b>A</b>",
-     "0.066",
-     "1.9",
-     "7.2"
-    ],
-    [
-     "<b>B</b>",
-     "0.066",
-     "7.2",
-     "1.9"
-    ],
-    [
-     "<b>C</b>",
-     "1.9",
-     "0.066",
-     "7.2"
-    ],
-    [
-     "<b>D</b>",
-     "1.9",
-     "7.2",
-     "0.066"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025ON_22_q12_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0.066 1.9 7.2"
+    },
+    {
+     "label": "B",
+     "html": "0.066 7.2 1.9"
+    },
+    {
+     "label": "C",
+     "html": "1.9 0.066 7.2"
+    },
+    {
+     "label": "D",
+     "html": "1.9 7.2 0.066"
+    }
+   ]
   }
  ]
 }

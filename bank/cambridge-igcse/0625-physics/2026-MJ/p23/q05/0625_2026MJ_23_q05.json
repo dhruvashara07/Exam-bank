@@ -51,10 +51,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    237.8,
-    339.7,
-    349.2
+    67.5,
+    237.5,
+    340.0,
+    349.5
    ],
    "id": "0625_2026MJ_23_q05_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p23/q05/figures/0625_2026MJ_23_q05_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p23/q05/figures/0625_2026MJ_23_q05_figB",
     "url": null,
-    "kb": 27.9
+    "kb": 27.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>forces</b>",
-     "<b>turning effects</b>"
-    ],
-    [
-     "<b>A</b>",
-     "<i>P</i> = <i>Q</i> + <i>R</i> + <i>S</i>",
-     "(<i>Q</i> × <i>a</i>) = (<i>R</i> × <i>a</i>) + (<i>S</i> × <i>a</i>)"
-    ],
-    [
-     "<b>B</b>",
-     "<i>P</i> = <i>Q</i> + <i>R</i> + <i>S</i>",
-     "(<i>Q</i> × <i>a</i>) = (<i>R</i> × <i>a</i>) + (<i>S</i> × 2<i>a</i>)"
-    ],
-    [
-     "<b>C</b>",
-     "<i>Q</i> = <i>R</i> + <i>S</i>",
-     "(<i>Q</i> × <i>a</i>) = (<i>R</i> × <i>a</i>) + (<i>S</i> × <i>a</i>)"
-    ],
-    [
-     "<b>D</b>",
-     "<i>Q</i> = <i>R</i> + <i>S</i>",
-     "(<i>Q</i> × <i>a</i>) = (<i>R</i> × <i>a</i>) + (<i>S</i> × 2<i>a</i>)"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_23_q05_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "P = Q + R + S (Q×a) = (R×a) + (S×a)"
+    },
+    {
+     "label": "B",
+     "html": "P = Q + R + S (Q×a) = (R×a) + (S× 2a)"
+    },
+    {
+     "label": "C",
+     "html": "Q = R + S (Q×a) = (R×a) + (S×a)"
+    },
+    {
+     "label": "D",
+     "html": "Q = R + S (Q×a) = (R×a) + (S× 2a)"
+    }
+   ]
   }
  ]
 }

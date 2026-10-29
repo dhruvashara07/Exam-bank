@@ -100,7 +100,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "3. the number of electrons."
+     "prefix": "1. the number of protons,"
+    },
+    {
+     "type": "text",
+     "html": "<b>2.</b> the number of neutrons, …… <b>3.</b> the number of electrons. ……",
+     "text": "2. the number of neutrons, …… 3. the number of electrons. ……"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -173,8 +182,8 @@
     },
     {
      "type": "text",
-     "html": "<sup>222</sup><sub>86</sub>Rn",
-     "text": "22286Rn"
+     "html": "<sup>222</sup><sub>86</sub> Rn",
+     "text": "22286 Rn"
     },
     {
      "type": "marks",
@@ -275,6 +284,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

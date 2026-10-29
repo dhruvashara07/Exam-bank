@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    74.1,
-    109.2,
-    522.0,
-    251.1
+    74.0,
+    113.5,
+    521.5,
+    248.5
    ],
    "id": "0625_2017ON_51_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 1.1",
    "page": 2,
    "bbox": [
-    166.9,
-    513.1,
-    428.3,
-    686.5
+    167.0,
+    518.0,
+    428.5,
+    687.0
    ],
    "id": "0625_2017ON_51_q01bii_table1-1",
    "part": "(b)(ii)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p51/q01/figures/0625_2017ON_51_q01bii_table1-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p51/q01/figures/0625_2017ON_51_q01bii_table1-1",
     "url": null,
-    "kb": 18.0
+    "kb": 17.9
    }
   }
  ],
@@ -304,39 +304,9 @@
        "text": "Repeat the procedure, with the load P remaining at the 30.0 cm mark, using Q values of 2.0 N, 3.0 N, 4.0 N and 5.0 N. Record all the readings in the table."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>Q</i> / N",
-         "<i>b</i> / cm",
-         "1 1 <i>Q</i> N"
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2017ON_51_q01bii_table1-1",
+       "caption": "Table 1.1"
       }
      ]
     },
@@ -399,7 +369,7 @@
      "content": [
       {
        "type": "text",
-       "html": "For each value of <i>Q</i>, calculate \\(\\frac{1}{<i>Q</i>}\\) and record the result in the table.",
+       "html": "For each value of <i>Q</i>, calculate \\(\\frac{1}{Q}\\) and record the result in the table.",
        "text": "For each value of Q, calculate (1)/(Q) and record the result in the table."
       },
       {
@@ -480,7 +450,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of <i>b</i> / cm (<i>y</i>-axis) against \\(\\frac{1}{<i>Q</i>}\\) \\(\\frac{1}{N}\\) (<i>x</i>-axis).",
+     "html": "Plot a graph of <i>b</i> / cm (<i>y</i>-axis) against \\(\\frac{1}{Q}\\) \\(\\frac{1}{N}\\) (<i>x</i>-axis).",
      "text": "Plot a graph of b / cm (y-axis) against (1)/(Q) (1)/(N) (x-axis)."
     },
     {
@@ -627,8 +597,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate the weight <i>P </i>of load<b> P </b>using the equation <i>P</i> = \\(\\frac{<i>G</i>}{<i>a</i>}\\).",
-     "text": "Calculate the weight P of load P using the equation P = (G)/(a)."
+     "html": "Calculate the weight <i>P </i>of load<b> P </b>using the equation <i>P</i> = \\(\\frac{G}{a}\\) .",
+     "text": "Calculate the weight P of load P using the equation P = (G)/(a) ."
     },
     {
      "type": "answer",
@@ -659,6 +629,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

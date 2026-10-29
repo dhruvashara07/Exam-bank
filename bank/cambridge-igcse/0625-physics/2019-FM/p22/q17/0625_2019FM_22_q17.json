@@ -32,7 +32,7 @@
   {
    "page": 7,
    "bbox": [
-    139.7,
+    139.5,
     87.8,
     458.8,
     135.8
@@ -51,10 +51,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    165.4,
-    293.9,
-    290.9
+    67.5,
+    165.0,
+    294.0,
+    291.0
    ],
    "id": "0625_2019FM_22_q17_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-FM/p22/q17/figures/0625_2019FM_22_q17_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-FM/p22/q17/figures/0625_2019FM_22_q17_figB",
     "url": null,
-    "kb": 17.9
+    "kb": 17.7
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A thermometer has graduations which start at –10°C and end at 110°C.",
-   "text": "A thermometer has graduations which start at –10°C and end at 110°C."
+   "html": "A thermometer has graduations which start at –10 °C and end at 110 °C.",
+   "text": "A thermometer has graduations which start at –10 °C and end at 110 °C."
   },
   {
    "type": "figure",
@@ -126,40 +127,30 @@
    "text": "What is the lower fixed point and what is the upper fixed point of the Celsius scale?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "lower fixed point",
-     "upper fixed point"
-    ],
-    [
-     "",
-     "/°C",
-     "/°C"
-    ],
-    [
-     "<b>A</b>",
-     "–10",
-     "100"
-    ],
-    [
-     "<b>B</b>",
-     "–10",
-     "110"
-    ],
-    [
-     "<b>C</b>",
-     "0",
-     "100"
-    ],
-    [
-     "<b>D</b>",
-     "0",
-     "110"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019FM_22_q17_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "–10 100"
+    },
+    {
+     "label": "B",
+     "html": "–10 110"
+    },
+    {
+     "label": "C",
+     "html": "0 100"
+    },
+    {
+     "label": "D",
+     "html": "0 110"
+    }
+   ]
   }
  ]
 }

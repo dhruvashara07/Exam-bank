@@ -103,9 +103,16 @@
        "text": "State which letter, A, X or Z, is the"
       },
       {
+       "type": "list",
+       "items": [
+        "chemical symbol, ……",
+        "nucleon number, ……",
+        "proton number. ……"
+       ]
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "• proton number."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -180,6 +187,11 @@
        "type": "text",
        "html": "<b> 1.</b> Determine the number of electrons in a neutral atom of americium-241.",
        "text": "1. Determine the number of electrons in a neutral atom of americium-241."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "number of electrons ="
       },
       {
        "type": "text",
@@ -298,5 +310,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

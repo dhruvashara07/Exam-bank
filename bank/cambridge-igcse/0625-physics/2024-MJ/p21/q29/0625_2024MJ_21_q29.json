@@ -32,9 +32,9 @@
   {
    "page": 10,
    "bbox": [
-    207.6,
-    250.7,
-    386.7,
+    207.0,
+    250.0,
+    386.5,
     329.0
    ],
    "id": "0625_2024MJ_21_q29_figA",
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p21/q29/figures/0625_2024MJ_21_q29_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p21/q29/figures/0625_2024MJ_21_q29_figA",
     "url": null,
-    "kb": 32.0
+    "kb": 31.5
    }
   },
   {
    "page": 10,
    "bbox": [
-    67.7,
-    373.7,
-    323.8,
-    499.2
+    67.5,
+    373.5,
+    324.0,
+    499.5
    ],
    "id": "0625_2024MJ_21_q29_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row compares the strength of the magnetic field due to the solenoid at points Y and Z with the strength of the magnetic field at point X?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "magnetic field",
-     "magnetic field"
-    ],
-    [
-     "",
-     "strength at Y",
-     "strength at Z"
-    ],
-    [
-     "<b>A</b>",
-     "equal to X",
-     "less than X"
-    ],
-    [
-     "<b>B</b>",
-     "equal to X",
-     "greater than X"
-    ],
-    [
-     "<b>C</b>",
-     "greater than X",
-     "less than X"
-    ],
-    [
-     "<b>D</b>",
-     "greater than X",
-     "greater than X"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_21_q29_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "equal to X less than X"
+    },
+    {
+     "label": "B",
+     "html": "equal to X greater than X"
+    },
+    {
+     "label": "C",
+     "html": "greater than X less than X"
+    },
+    {
+     "label": "D",
+     "html": "greater than X greater than X"
+    }
+   ]
   }
  ]
 }

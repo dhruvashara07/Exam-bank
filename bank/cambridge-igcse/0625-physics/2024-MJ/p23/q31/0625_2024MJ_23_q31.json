@@ -32,7 +32,7 @@
   {
    "page": 11,
    "bbox": [
-    89.6,
+    89.5,
     339.2,
     506.0,
     492.0
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p23/q31/figures/0625_2024MJ_23_q31_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p23/q31/figures/0625_2024MJ_23_q31_figA",
     "url": null,
-    "kb": 20.5
+    "kb": 20.4
    }
   },
   {
    "page": 11,
    "bbox": [
-    68.1,
-    537.8,
-    276.8,
-    649.2
+    68.0,
+    537.5,
+    277.0,
+    649.5
    ],
    "id": "0625_2024MJ_23_q31_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p23/q31/figures/0625_2024MJ_23_q31_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p23/q31/figures/0625_2024MJ_23_q31_figB",
     "url": null,
-    "kb": 18.3
+    "kb": 18.1
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Which environmental conditions will cause the light-emitting diodes in circuit 1 and circuit 2 both to emit light?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "temperature",
-     "light intensity"
-    ],
-    [
-     "<b>A</b>",
-     "high",
-     "high"
-    ],
-    [
-     "<b>B</b>",
-     "high",
-     "low"
-    ],
-    [
-     "<b>C</b>",
-     "low",
-     "high"
-    ],
-    [
-     "<b>D</b>",
-     "low",
-     "low"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_23_q31_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "high high"
+    },
+    {
+     "label": "B",
+     "html": "high low"
+    },
+    {
+     "label": "C",
+     "html": "low high"
+    },
+    {
+     "label": "D",
+     "html": "low low"
+    }
+   ]
   }
  ]
 }

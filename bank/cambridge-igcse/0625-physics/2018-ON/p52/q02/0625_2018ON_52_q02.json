@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    231.4,
-    114.1,
-    363.2,
-    256.6
+    231.5,
+    113.5,
+    364.0,
+    254.0
    ],
    "id": "0625_2018ON_52_q02_fig2-1",
    "part": "",
@@ -131,6 +131,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "VT ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "IT ="
       },
       {
@@ -198,8 +203,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the power <i>P</i><sub>T</sub> produced by the lamp filaments, using the equation <i>P</i><sub>T</sub> = <i>V</i><sub>T</sub><i>I</i><sub>T</sub> .",
-       "text": "Calculate the power PT produced by the lamp filaments, using the equation PT = VTIT ."
+       "html": "Calculate the power <i>P</i><sub>T</sub> produced by the lamp filaments, using the equation <i>P</i><sub>T</sub> = <i>V</i><sub>T</sub> <i>I</i><sub>T</sub> .",
+       "text": "Calculate the power PT produced by the lamp filaments, using the equation PT = VT IT ."
       },
       {
        "type": "answer",
@@ -310,6 +315,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "VX ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "IX ="
       },
       {
@@ -377,8 +387,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the power <i>P</i><sub>X</sub> produced by the lamp filament using the equation <i>P</i><sub>X</sub> = <i>V</i><sub>X</sub><i>I</i><sub>X</sub>.",
-       "text": "Calculate the power PX produced by the lamp filament using the equation PX = VXIX."
+       "html": "Calculate the power <i>P</i><sub>X</sub> produced by the lamp filament using the equation <i>P</i><sub>X</sub> = <i>V</i><sub>X</sub> <i>I</i><sub>X</sub>.",
+       "text": "Calculate the power PX produced by the lamp filament using the equation PX = VX IX."
       },
       {
        "type": "answer",
@@ -496,6 +506,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "VY ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "IY ="
       },
       {
@@ -563,8 +578,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the power <i>P</i><sub>Y</sub> produced by the lamp filament using the equation <i>P</i><sub>Y</sub> = <i>V</i><sub>Y</sub><i>I</i><sub>Y</sub>.",
-       "text": "Calculate the power PY produced by the lamp filament using the equation PY = VYIY."
+       "html": "Calculate the power <i>P</i><sub>Y</sub> produced by the lamp filament using the equation <i>P</i><sub>Y</sub> = <i>V</i><sub>Y</sub> <i>I</i><sub>Y</sub>.",
+       "text": "Calculate the power PY produced by the lamp filament using the equation PY = VY IY."
       },
       {
        "type": "answer",
@@ -653,7 +668,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -767,6 +791,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    227.9,
-    432.2,
+    227.5,
+    432.0,
     366.6,
-    554.3
+    554.5
    ],
    "id": "0625_2025ON_11_q38_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
-    586.7,
-    330.7,
-    697.9
+    67.5,
+    586.5,
+    331.0,
+    698.0
    ],
    "id": "0625_2025ON_11_q38_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p11/q38/figures/0625_2025ON_11_q38_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p11/q38/figures/0625_2025ON_11_q38_figB",
     "url": null,
-    "kb": 20.9
+    "kb": 20.7
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,40 +137,30 @@
    "text": "Which types of object are X, Y and Z?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "object X",
-     "object Y",
-     "object Z"
-    ],
-    [
-     "<b>A</b>",
-     "planet",
-     "moon",
-     "star"
-    ],
-    [
-     "<b>B</b>",
-     "planet",
-     "star",
-     "moon"
-    ],
-    [
-     "<b>C</b>",
-     "star",
-     "planet",
-     "moon"
-    ],
-    [
-     "<b>D</b>",
-     "star",
-     "moon",
-     "planet"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025ON_11_q38_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "planet moon star"
+    },
+    {
+     "label": "B",
+     "html": "planet star moon"
+    },
+    {
+     "label": "C",
+     "html": "star planet moon"
+    },
+    {
+     "label": "D",
+     "html": "star moon planet"
+    }
+   ]
   }
  ]
 }

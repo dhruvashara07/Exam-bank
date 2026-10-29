@@ -32,10 +32,10 @@
   {
    "page": 16,
    "bbox": [
-    67.7,
-    497.5,
-    320.6,
-    629.2
+    67.5,
+    497.0,
+    320.5,
+    629.5
    ],
    "id": "0625_2018MJ_13_q40_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p13/q40/figures/0625_2018MJ_13_q40_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p13/q40/figures/0625_2018MJ_13_q40_figA",
     "url": null,
-    "kb": 24.8
+    "kb": 24.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,46 +108,30 @@
    "text": "Which source has the longest half-life?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "rate of emission/emissions per minute",
-     "",
-     ""
-    ],
-    [
-     "",
-     "time 0",
-     "time 20min",
-     "time 40min"
-    ],
-    [
-     "<b>A</b>",
-     "120",
-     "60",
-     "30"
-    ],
-    [
-     "<b>B</b>",
-     "120",
-     "110",
-     "101"
-    ],
-    [
-     "<b>C</b>",
-     "240",
-     "60",
-     "15"
-    ],
-    [
-     "<b>D</b>",
-     "240",
-     "170",
-     "122"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_13_q40_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "120 60 30"
+    },
+    {
+     "label": "B",
+     "html": "120 110 101"
+    },
+    {
+     "label": "C",
+     "html": "240 60 15"
+    },
+    {
+     "label": "D",
+     "html": "240 170 122"
+    }
+   ]
   }
  ]
 }

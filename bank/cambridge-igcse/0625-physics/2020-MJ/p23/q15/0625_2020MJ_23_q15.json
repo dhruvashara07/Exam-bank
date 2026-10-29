@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    261.8,
-    281.8,
-    373.1
+    67.5,
+    261.5,
+    282.0,
+    373.5
    ],
    "id": "0625_2020MJ_23_q15_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p23/q15/figures/0625_2020MJ_23_q15_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p23/q15/figures/0625_2020MJ_23_q15_figA",
     "url": null,
-    "kb": 20.5
+    "kb": 20.3
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Under which conditions for the mass of a gas and for its temperature does the equation hold?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass",
-     "temperature"
-    ],
-    [
-     "<b>A</b>",
-     "changing",
-     "changing"
-    ],
-    [
-     "<b>B</b>",
-     "changing",
-     "constant"
-    ],
-    [
-     "<b>C</b>",
-     "constant",
-     "changing"
-    ],
-    [
-     "<b>D</b>",
-     "constant",
-     "constant"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020MJ_23_q15_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "changing changing"
+    },
+    {
+     "label": "B",
+     "html": "changing constant"
+    },
+    {
+     "label": "C",
+     "html": "constant changing"
+    },
+    {
+     "label": "D",
+     "html": "constant constant"
+    }
+   ]
   }
  ]
 }

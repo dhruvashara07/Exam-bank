@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    159.3,
-    75.9,
-    478.7,
-    368.7
+    158.5,
+    98.0,
+    436.0,
+    369.5
    ],
    "id": "0625_2017ON_11_q07_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p11/q07/figures/0625_2017ON_11_q07_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p11/q07/figures/0625_2017ON_11_q07_figA",
     "url": null,
-    "kb": 43.7
+    "kb": 35.2
    }
   },
   {
    "page": 5,
    "bbox": [
-    67.7,
-    401.2,
-    243.2,
-    532.9
+    67.5,
+    401.0,
+    243.5,
+    533.0
    ],
    "id": "0625_2017ON_11_q07_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p11/q07/figures/0625_2017ON_11_q07_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p11/q07/figures/0625_2017ON_11_q07_figB",
     "url": null,
-    "kb": 20.2
+    "kb": 19.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,46 +127,30 @@
    "text": "Which row gives the correct extensions of the spring?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "extension/cm",
-     "",
-     ""
-    ],
-    [
-     "",
-     "0N",
-     "2.0N",
-     "4.0N"
-    ],
-    [
-     "<b>A</b>",
-     "0",
-     "3.0",
-     "3.0"
-    ],
-    [
-     "<b>B</b>",
-     "0",
-     "3.0",
-     "6.0"
-    ],
-    [
-     "<b>C</b>",
-     "3.0",
-     "3.0",
-     "3.0"
-    ],
-    [
-     "<b>D</b>",
-     "3.0",
-     "6.0",
-     "9.0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017ON_11_q07_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0 3.0 3.0"
+    },
+    {
+     "label": "B",
+     "html": "0 3.0 6.0"
+    },
+    {
+     "label": "C",
+     "html": "3.0 3.0 3.0"
+    },
+    {
+     "label": "D",
+     "html": "3.0 6.0 9.0"
+    }
+   ]
   }
  ]
 }

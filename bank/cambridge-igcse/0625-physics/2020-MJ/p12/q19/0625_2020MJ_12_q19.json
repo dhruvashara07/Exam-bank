@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.9,
-    72.3,
+    49.7,
+    99.1,
     544.9,
-    221.7
+    222.5
    ],
    "id": "0625_2020MJ_12_q19_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p12/q19/figures/0625_2020MJ_12_q19_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p12/q19/figures/0625_2020MJ_12_q19_figA",
     "url": null,
-    "kb": 23.1
+    "kb": 17.2
    }
   },
   {
    "page": 9,
    "bbox": [
-    67.7,
-    254.2,
+    67.5,
+    254.0,
     386.0,
-    365.1
+    365.5
    ],
    "id": "0625_2020MJ_12_q19_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p12/q19/figures/0625_2020MJ_12_q19_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p12/q19/figures/0625_2020MJ_12_q19_figB",
     "url": null,
-    "kb": 28.7
+    "kb": 28.5
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A room is heated by a radiator. The diagrams X and Y show two possible circulations of hot air,",
-   "text": "A room is heated by a radiator. The diagrams X and Y show two possible circulations of hot air,"
+   "html": "A room is heated by a radiator. The diagrams X and Y show two possible circulations of hot air, which heat the room.",
+   "text": "A room is heated by a radiator. The diagrams X and Y show two possible circulations of hot air, which heat the room."
   },
   {
    "type": "figure",
@@ -122,44 +123,34 @@
   },
   {
    "type": "text",
-   "html": "radiator",
-   "text": "radiator"
-  },
-  {
-   "type": "text",
    "html": "Which diagram and reason explain the heating of the room by convection?",
    "text": "Which diagram and reason explain the heating of the room by convection?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "diagram",
-     "reason"
-    ],
-    [
-     "<b>A</b>",
-     "X",
-     "air density decreases when air is heated"
-    ],
-    [
-     "<b>B</b>",
-     "X",
-     "air density increases when air is heated"
-    ],
-    [
-     "<b>C</b>",
-     "Y",
-     "air density decreases when air is heated"
-    ],
-    [
-     "<b>D</b>",
-     "Y",
-     "air density increases when air is heated"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020MJ_12_q19_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "X air density decreases when air is heated"
+    },
+    {
+     "label": "B",
+     "html": "X air density increases when air is heated"
+    },
+    {
+     "label": "C",
+     "html": "Y air density decreases when air is heated"
+    },
+    {
+     "label": "D",
+     "html": "Y air density increases when air is heated"
+    }
+   ]
   }
  ]
 }

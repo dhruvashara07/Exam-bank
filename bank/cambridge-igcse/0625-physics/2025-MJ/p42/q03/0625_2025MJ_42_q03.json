@@ -9,10 +9,10 @@
    "caption": "Fig. 3.1",
    "page": 6,
    "bbox": [
-    121.6,
-    137.5,
-    473.8,
-    249.9
+    121.5,
+    138.5,
+    474.0,
+    250.0
    ],
    "id": "0625_2025MJ_42_q03b_fig3-1",
    "part": "(b)",
@@ -175,8 +175,8 @@
     },
     {
      "type": "text",
-     "html": "The mass of train A is 0.45kg and the mass of train B is 0.21kg. The trains do <b>not</b> have motors.",
-     "text": "The mass of train A is 0.45kg and the mass of train B is 0.21kg. The trains do not have motors."
+     "html": "The mass of train A is 0.45 kg and the mass of train B is 0.21 kg. The trains do <b>not</b> have motors.",
+     "text": "The mass of train A is 0.45 kg and the mass of train B is 0.21 kg. The trains do not have motors."
     },
     {
      "type": "text",
@@ -191,8 +191,8 @@
     {
      "type": "list",
      "items": [
-      "the velocity of train A is 0.34m/s to the right",
-      "the velocity of train B is 0.12m/s to the left."
+      "the velocity of train A is 0.34 m / s to the right",
+      "the velocity of train B is 0.12 m / s to the left."
      ]
     },
     {
@@ -204,6 +204,11 @@
      "type": "text",
      "html": "Calculate the velocity of the trains immediately after the collision.",
      "text": "Calculate the velocity of the trains immediately after the collision."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "velocity ="
     },
     {
      "type": "answer",
@@ -276,13 +281,13 @@
    "content": [
     {
      "type": "text",
-     "html": "A different train is travelling with a momentum of 0.26kgm/s.",
-     "text": "A different train is travelling with a momentum of 0.26kgm/s."
+     "html": "A different train is travelling with a momentum of 0.26 kg m / s.",
+     "text": "A different train is travelling with a momentum of 0.26 kg m / s."
     },
     {
      "type": "text",
-     "html": "The train slows down and stops after 2.1s.",
-     "text": "The train slows down and stops after 2.1s."
+     "html": "The train slows down and stops after 2.1 s.",
+     "text": "The train slows down and stops after 2.1 s."
     },
     {
      "type": "text",
@@ -317,5 +322,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

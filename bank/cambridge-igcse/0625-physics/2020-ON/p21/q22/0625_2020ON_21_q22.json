@@ -34,8 +34,8 @@
    "bbox": [
     204.2,
     242.7,
-    390.5,
-    364.6
+    391.0,
+    364.5
    ],
    "id": "0625_2020ON_21_q22_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p21/q22/figures/0625_2020ON_21_q22_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p21/q22/figures/0625_2020ON_21_q22_figA",
     "url": null,
-    "kb": 11.8
+    "kb": 11.9
    }
   },
   {
    "page": 9,
    "bbox": [
-    67.7,
-    434.5,
-    288.1,
-    545.3
+    67.5,
+    434.0,
+    288.0,
+    545.5
    ],
    "id": "0625_2020ON_21_q22_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p21/q22/figures/0625_2020ON_21_q22_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p21/q22/figures/0625_2020ON_21_q22_figB",
     "url": null,
-    "kb": 18.5
+    "kb": 18.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Which row produces the required semicircular diffracted wave pattern?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "gap in barrier",
-     "wavelength"
-    ],
-    [
-     "<b>A</b>",
-     "larger",
-     "same"
-    ],
-    [
-     "<b>B</b>",
-     "larger",
-     "smaller"
-    ],
-    [
-     "<b>C</b>",
-     "same",
-     "larger"
-    ],
-    [
-     "<b>D</b>",
-     "same",
-     "smaller"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020ON_21_q22_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "larger same"
+    },
+    {
+     "label": "B",
+     "html": "larger smaller"
+    },
+    {
+     "label": "C",
+     "html": "same larger"
+    },
+    {
+     "label": "D",
+     "html": "same smaller"
+    }
+   ]
   }
  ]
 }

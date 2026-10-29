@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    226.3,
-    475.6,
-    368.3,
-    573.4
+    225.5,
+    475.5,
+    369.0,
+    574.0
    ],
    "id": "0625_2015ON_12_q29_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 13,
    "bbox": [
-    67.6,
-    605.9,
-    340.6,
-    717.3
+    67.5,
+    605.5,
+    340.5,
+    717.5
    ],
    "id": "0625_2015ON_12_q29_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p12/q29/figures/0625_2015ON_12_q29_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p12/q29/figures/0625_2015ON_12_q29_figB",
     "url": null,
-    "kb": 20.4
+    "kb": 20.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "In which wire is the current the largest?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "length of wire/m",
-     "diameter of wire/mm"
-    ],
-    [
-     "A",
-     "0.5",
-     "0.5"
-    ],
-    [
-     "B",
-     "0.5",
-     "1.0"
-    ],
-    [
-     "C",
-     "1.0",
-     "0.5"
-    ],
-    [
-     "D",
-     "1.0",
-     "1.0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015ON_12_q29_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0.5 0.5"
+    },
+    {
+     "label": "B",
+     "html": "0.5 1.0"
+    },
+    {
+     "label": "C",
+     "html": "1.0 0.5"
+    },
+    {
+     "label": "D",
+     "html": "1.0 1.0"
+    }
+   ]
   }
  ]
 }

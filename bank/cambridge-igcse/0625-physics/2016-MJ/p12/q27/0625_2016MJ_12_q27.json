@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    118.7,
+    118.0,
     264.4,
-    476.2,
-    340.4
+    477.0,
+    341.0
    ],
    "id": "0625_2016MJ_12_q27_figA",
    "caption": null,
@@ -51,9 +51,9 @@
   {
    "page": 11,
    "bbox": [
-    69.3,
+    69.0,
     385.5,
-    364.7,
+    365.0,
     511.0
    ],
    "id": "0625_2016MJ_12_q27_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p12/q27/figures/0625_2016MJ_12_q27_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p12/q27/figures/0625_2016MJ_12_q27_figB",
     "url": null,
-    "kb": 26.3
+    "kb": 25.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,46 +132,30 @@
    "text": "Which row states the pole induced at P, the pole induced at Q, and the type of magnetic force between P and Q?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "pole induced",
-     "pole induced",
-     "force between"
-    ],
-    [
-     "",
-     "at P",
-     "at Q",
-     "P and Q"
-    ],
-    [
-     "A",
-     "N",
-     "S",
-     "attraction"
-    ],
-    [
-     "B",
-     "N",
-     "S",
-     "repulsion"
-    ],
-    [
-     "C",
-     "S",
-     "N",
-     "attraction"
-    ],
-    [
-     "D",
-     "S",
-     "N",
-     "repulsion"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_12_q27_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "N S attraction"
+    },
+    {
+     "label": "B",
+     "html": "N S repulsion"
+    },
+    {
+     "label": "C",
+     "html": "S N attraction"
+    },
+    {
+     "label": "D",
+     "html": "S N repulsion"
+    }
+   ]
   }
  ]
 }

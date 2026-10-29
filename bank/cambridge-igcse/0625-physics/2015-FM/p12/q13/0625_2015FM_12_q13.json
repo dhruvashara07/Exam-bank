@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    108.7,
-    514.1,
+    108.0,
+    513.5,
     486.6,
-    597.1
+    597.5
    ],
    "id": "0625_2015FM_12_q13_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 6,
    "bbox": [
-    69.3,
-    668.8,
-    285.9,
-    780.2
+    69.0,
+    668.5,
+    286.0,
+    780.5
    ],
    "id": "0625_2015FM_12_q13_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-FM/p12/q13/figures/0625_2015FM_12_q13_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-FM/p12/q13/figures/0625_2015FM_12_q13_figB",
     "url": null,
-    "kb": 21.5
+    "kb": 21.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Which row in the table states what happens to the density of the gas and to the pressure of the gas when it is compressed?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "density",
-     "pressure"
-    ],
-    [
-     "A",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "B",
-     "decreases",
-     "increases"
-    ],
-    [
-     "C",
-     "increases",
-     "decreases"
-    ],
-    [
-     "D",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015FM_12_q13_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

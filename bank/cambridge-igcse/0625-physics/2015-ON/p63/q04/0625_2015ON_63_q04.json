@@ -33,10 +33,10 @@
    "caption": "Fig. 4.1",
    "page": 10,
    "bbox": [
-    103.8,
-    130.9,
-    484.9,
-    415.3
+    103.0,
+    131.5,
+    484.5,
+    415.5
    ],
    "id": "0625_2015ON_63_q04_fig4-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 4.2",
    "page": 10,
    "bbox": [
-    53.8,
-    477.1,
-    540.4,
-    704.3
+    53.0,
+    504.5,
+    541.0,
+    704.5
    ],
    "id": "0625_2015ON_63_q04b_fig4-2",
    "part": "(b)",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p63/q04/figures/0625_2015ON_63_q04b_fig4-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p63/q04/figures/0625_2015ON_63_q04b_fig4-2",
     "url": null,
-    "kb": 42.7
+    "kb": 38.2
    }
   },
   {
    "caption": "Fig. 4.3",
    "page": 10,
    "bbox": [
-    53.8,
-    477.1,
-    540.4,
-    704.3
+    53.0,
+    504.5,
+    541.0,
+    704.5
    ],
    "id": "0625_2015ON_63_q04b_fig4-3",
    "part": "(b)",
@@ -83,17 +83,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p63/q04/figures/0625_2015ON_63_q04b_fig4-3.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p63/q04/figures/0625_2015ON_63_q04b_fig4-3",
     "url": null,
-    "kb": 42.7
+    "kb": 38.2
    }
   },
   {
    "caption": "Table 4.1",
    "page": 11,
    "bbox": [
-    194.6,
-    62.3,
-    400.6,
-    233.9
+    194.5,
+    62.0,
+    400.5,
+    234.0
    ],
    "id": "0625_2015ON_63_q04b_table4-1",
    "part": "(b)",
@@ -109,10 +109,10 @@
    "caption": "Fig. 4.4",
    "page": 11,
    "bbox": [
-    53.8,
-    335.1,
-    540.5,
-    534.4
+    53.0,
+    334.5,
+    541.0,
+    534.5
    ],
    "id": "0625_2015ON_63_q04c_fig4-4",
    "part": "(c)",
@@ -128,10 +128,10 @@
    "caption": "Fig. 4.5",
    "page": 11,
    "bbox": [
-    53.8,
-    335.1,
-    540.5,
-    534.4
+    53.0,
+    334.5,
+    541.0,
+    534.5
    ],
    "id": "0625_2015ON_63_q04c_fig4-5",
    "part": "(c)",
@@ -299,8 +299,8 @@
    "content": [
     {
      "type": "text",
-     "html": "In Table 4.1, write down the potential difference <i>V</i> and the current <i>I</i> for wire <b>A</b> as shown in",
-     "text": "In Table 4.1, write down the potential difference V and the current I for wire A as shown in"
+     "html": "In Table 4.1, write down the potential difference <i>V</i> and the current <i>I</i> for wire <b>A</b> as shown in Figs. 4.2 and 4.3.",
+     "text": "In Table 4.1, write down the potential difference V and the current I for wire A as shown in Figs. 4.2 and 4.3."
     },
     {
      "type": "figure",
@@ -318,29 +318,9 @@
      "height_pt": 74.9
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "wire combination",
-       "<i>V</i> / V",
-       "<i>I</i> /A"
-      ],
-      [
-       "<b>A</b> only",
-       "",
-       ""
-      ],
-      [
-       "<b>A</b> and <b>B</b> in parallel",
-       "2.9",
-       "0.77"
-      ],
-      [
-       "<b>A</b>, <b>B</b> and <b>C</b> in parallel",
-       "2.6",
-       "0.98"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2015ON_63_q04b_table4-1",
+     "caption": "Table 4.1"
     },
     {
      "type": "marks",
@@ -497,13 +477,23 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate, and record below, the resistance <i>R</i> of each wire combination, using the equation <i>R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\) .",
+     "html": "Calculate, and record below, the resistance <i>R</i> of each wire combination, using the equation <i>R</i> = \\(\\frac{V}{I}\\) .",
      "text": "Calculate, and record below, the resistance R of each wire combination, using the equation R = (V)/(I) ."
     },
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "resistance of wires A, B and C in parallel R3 ="
+     "prefix": "resistance of wire A R1 ="
+    },
+    {
+     "type": "text",
+     "html": "resistance of wires <b>A</b> and <b>B</b> in parallel <i>R</i><sub>2</sub> = ……",
+     "text": "resistance of wires A and B in parallel R2 = ……"
+    },
+    {
+     "type": "text",
+     "html": "resistance of wires <b>A</b>, <b>B</b> and <b>C</b> in parallel <i>R</i><sub>3</sub> = ……",
+     "text": "resistance of wires A, B and C in parallel R3 = ……"
     },
     {
      "type": "marks",
@@ -598,7 +588,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -701,6 +700,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

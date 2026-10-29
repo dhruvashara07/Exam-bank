@@ -170,17 +170,42 @@
      "type": "list",
      "items": [
       "Pour 50 cm<sup>3</sup> of the hot water provided into beaker <b>A</b>.",
-      "Measure the temperature θ<sub>H</sub> of the water in beaker <b>A</b>.",
+      "Measure the temperature θ<sub>H</sub> of the water in beaker <b>A</b>."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θH ="
+    },
+    {
+     "type": "list",
+     "items": [
       "Add 50 cm<sup>3</sup> of the cold water provided to the hot water in beaker <b>A</b>. Stir the water briefly.",
-      "Measure the temperature θ<sub>M</sub> of the water in beaker <b>A</b>.",
-      "Calculate the temperature fall θ<sub>F</sub> using the equation θ<sub>F</sub> = θ<sub>H</sub> − θ<sub>M</sub>.",
-      "Empty beaker <b>A</b>."
+      "Measure the temperature θ<sub>M</sub> of the water in beaker <b>A</b>."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θM ="
+    },
+    {
+     "type": "list",
+     "items": [
+      "Calculate the temperature fall θ<sub>F</sub> using the equation θ<sub>F</sub> = θ<sub>H</sub> − θ<sub>M</sub>."
      ]
     },
     {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "θF ="
+    },
+    {
+     "type": "list",
+     "items": [
+      "Empty beaker <b>A</b>."
+     ]
     },
     {
      "type": "marks",
@@ -326,6 +351,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "θH ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θM ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "θF ="
     },
     {
@@ -395,6 +430,16 @@
      "type": "text",
      "html": "Repeat the procedure in <b>(b) </b>using 100 cm<sup>3</sup> of hot water and 100 cm<sup>3</sup> of cold water.",
      "text": "Repeat the procedure in (b) using 100 cm3 of hot water and 100 cm3 of cold water."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θH ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θM ="
     },
     {
      "type": "answer",
@@ -470,15 +515,22 @@
      "text": "Measure room temperature θR again."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θR ="
+    },
+    {
      "type": "text",
      "html": "Complete the appropriate sentence.",
      "text": "Complete the appropriate sentence."
     },
     {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "• Room temperature has increased by",
-     "unit": "."
+     "type": "list",
+     "items": [
+      "Room temperature has remained constant at …… .",
+      "Room temperature has decreased by …… .",
+      "Room temperature has increased by …… ."
+     ]
     },
     {
      "type": "marks",
@@ -723,6 +775,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

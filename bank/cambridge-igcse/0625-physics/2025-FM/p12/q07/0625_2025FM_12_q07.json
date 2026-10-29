@@ -70,6 +70,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -81,7 +82,7 @@
    "options": [
     {
      "label": "A",
-     "html": "mass = \\(\\frac{acceleration}{force}\\)"
+     "html": "mass = \\(\\frac{\\text{acceleration}}{\\text{force}}\\)"
     },
     {
      "label": "B",
@@ -89,11 +90,11 @@
     },
     {
      "label": "C",
-     "html": "mass = \\(\\frac{force}{impulse}\\)"
+     "html": "mass = \\(\\frac{\\text{force}}{\\text{impulse}}\\)"
     },
     {
      "label": "D",
-     "html": "mass = \\(\\frac{kinetic energy}{velocity<sup>2</sup>}\\)"
+     "html": "mass = \\(\\frac{\\text{kinetic energy}}{\\text{velocity}^{2}}\\)"
     }
    ]
   }

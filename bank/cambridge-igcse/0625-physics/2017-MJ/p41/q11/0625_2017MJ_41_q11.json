@@ -9,10 +9,10 @@
    "caption": "Table 11.1",
    "page": 15,
    "bbox": [
-    46.6,
-    97.0,
+    46.5,
+    100.5,
     548.5,
-    169.3
+    169.5
    ],
    "id": "0625_2017MJ_41_q11a_table11-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 11.1",
    "page": 16,
    "bbox": [
-    205.2,
-    100.0,
-    375.8,
-    302.3
+    205.0,
+    103.0,
+    375.5,
+    300.5
    ],
    "id": "0625_2017MJ_41_q11c_fig11-1",
    "part": "(c)",
@@ -125,42 +125,14 @@
      "caption": "Table 11.1"
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "time / hours",
-       "0",
-       "1",
-       "2",
-       "3",
-       "4",
-       "5",
-       "6",
-       "7",
-       "8",
-       "9",
-       "10"
-      ],
-      [
-       "detector reading / (counts / s)",
-       "324",
-       "96",
-       "39",
-       "23",
-       "21",
-       "17",
-       "21",
-       "20",
-       "19",
-       "20",
-       "18"
-      ]
-     ]
-    },
-    {
      "type": "text",
      "html": "Use the readings to suggest a value for the background count rate during the test, and to determine the half-life of the sample.",
      "text": "Use the readings to suggest a value for the background count rate during the test, and to determine the half-life of the sample."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "background count rate ="
     },
     {
      "type": "answer",
@@ -240,8 +212,12 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "lines": 1,
      "unit": "X"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
     },
     {
      "type": "marks",
@@ -351,5 +327,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

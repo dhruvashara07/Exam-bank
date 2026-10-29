@@ -9,10 +9,10 @@
    "caption": "Fig. 9.1",
    "page": 13,
    "bbox": [
-    192.3,
-    357.0,
-    395.6,
-    450.6
+    192.5,
+    360.0,
+    395.0,
+    449.0
    ],
    "id": "0625_2021FM_42_q09c_fig9-1",
    "part": "(c)",
@@ -28,10 +28,10 @@
    "caption": "Table 9.1",
    "page": 13,
    "bbox": [
-    203.8,
-    478.8,
+    203.5,
+    482.5,
     391.5,
-    612.4
+    612.5
    ],
    "id": "0625_2021FM_42_q09ci_table9-1",
    "part": "(c)(i)",
@@ -287,39 +287,9 @@
        "text": "Table 9.1 is the truth table for the circuit shown in Fig. 9.1."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "P",
-         "Q",
-         "R",
-         "S"
-        ],
-        [
-         "0",
-         "0",
-         "",
-         "0"
-        ],
-        [
-         "0",
-         "1",
-         "",
-         "0"
-        ],
-        [
-         "1",
-         "0",
-         "",
-         "1"
-        ],
-        [
-         "1",
-         "1",
-         "",
-         "0"
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2021FM_42_q09ci_table9-1",
+       "caption": "Table 9.1"
       },
       {
        "type": "text",
@@ -399,7 +369,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -440,5 +419,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

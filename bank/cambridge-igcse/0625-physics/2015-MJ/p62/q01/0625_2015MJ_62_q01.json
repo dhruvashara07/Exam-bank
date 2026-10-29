@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    144.1,
-    115.7,
-    448.1,
-    338.9
+    144.5,
+    115.5,
+    448.0,
+    339.0
    ],
    "id": "0625_2015MJ_62_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2",
    "page": 2,
    "bbox": [
-    144.1,
-    115.7,
-    448.1,
-    338.9
+    144.5,
+    115.5,
+    448.0,
+    339.0
    ],
    "id": "0625_2015MJ_62_q01_fig1-2",
    "part": "",
@@ -71,10 +71,10 @@
    "caption": "Fig. 1.3",
    "page": 3,
    "bbox": [
-    242.0,
-    125.0,
-    353.0,
-    265.4
+    243.0,
+    125.5,
+    352.0,
+    265.5
    ],
    "id": "0625_2015MJ_62_q01bi_fig1-3",
    "part": "(b)(i)",
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p62/q01/figures/0625_2015MJ_62_q01bi_fig1-3.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p62/q01/figures/0625_2015MJ_62_q01bi_fig1-3",
     "url": null,
-    "kb": 32.1
+    "kb": 31.8
    }
   }
  ],
@@ -504,6 +504,11 @@
      "text": "2.06 s"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "T ="
+    },
+    {
      "type": "text",
      "html": "Another student suggests that doubling the length <i>l</i> of the pendulum should double the period <i>T</i>.",
      "text": "Another student suggests that doubling the length l of the pendulum should double the period T."
@@ -516,8 +521,12 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
-     "lines": 1
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
     },
     {
      "type": "marks",
@@ -622,6 +631,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

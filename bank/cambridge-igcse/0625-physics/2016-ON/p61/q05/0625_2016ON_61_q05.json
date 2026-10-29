@@ -33,9 +33,9 @@
    "caption": "Fig. 5.1",
    "page": 14,
    "bbox": [
-    138.3,
-    114.4,
-    463.6,
+    138.5,
+    114.0,
+    463.5,
     331.0
    ],
    "id": "0625_2016ON_61_q05a_fig5-1",
@@ -238,7 +238,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -317,6 +326,11 @@
        "text": "0.1744729"
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "G ="
+      },
+      {
        "type": "text",
        "html": "<i>G</i> is numerically equal to a constant <i>k </i>for the spring.",
        "text": "G is numerically equal to a constant k for the spring."
@@ -357,8 +371,8 @@
     },
     {
      "type": "text",
-     "html": "load/N",
-     "text": "load/N"
+     "html": "load / N",
+     "text": "load / N"
     },
     {
      "type": "text",
@@ -382,8 +396,8 @@
     },
     {
      "type": "text",
-     "html": "extension/mm",
-     "text": "extension/mm"
+     "html": "extension / mm",
+     "text": "extension / mm"
     }
    ]
   }
@@ -405,6 +419,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

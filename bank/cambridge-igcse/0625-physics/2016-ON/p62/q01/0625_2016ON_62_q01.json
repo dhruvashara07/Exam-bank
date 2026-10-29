@@ -34,9 +34,9 @@
    "page": 2,
    "bbox": [
     102.5,
-    115.7,
-    491.7,
-    246.9
+    115.5,
+    491.5,
+    247.0
    ],
    "id": "0625_2016ON_62_q01_fig1-1",
    "part": "",
@@ -246,14 +246,14 @@
      "text": "50.2 cm"
     },
     {
-     "type": "text",
-     "html": "He places a 2.00 N load <b>P</b> on the metre rule so that its centre is exactly at the 20.0 cm mark on the rule.",
-     "text": "He places a 2.00 N load P on the metre rule so that its centre is exactly at the 20.0 cm mark on the rule."
-    },
-    {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "scale reading ="
+    },
+    {
+     "type": "text",
+     "html": "He places a 2.00 N load <b>P</b> on the metre rule so that its centre is exactly at the 20.0 cm mark on the rule.",
+     "text": "He places a 2.00 N load P on the metre rule so that its centre is exactly at the 20.0 cm mark on the rule."
     }
    ]
   },
@@ -330,8 +330,13 @@
      "text": "15.3 cm"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "y ="
+    },
+    {
      "type": "text",
-     "html": "Calculate the weight <i>W</i> of load <b>Q</b> using the equation <i>W</i> = \\(\\frac{<i>kx</i>}{<i>y</i>}\\), where <i>k</i> = 2.00 N.",
+     "html": "Calculate the weight <i>W</i> of load <b>Q</b> using the equation <i>W</i> = \\(\\frac{\\text{kx}}{y}\\), where <i>k</i> = 2.00 N.",
      "text": "Calculate the weight W of load Q using the equation W = (kx)/(y), where k = 2.00 N."
     },
     {
@@ -492,9 +497,19 @@
      "text": "4.04 N"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "W ="
+    },
+    {
      "type": "text",
      "html": "Suggest two reasons why the values determined for <i>W</i> may not be the same.",
      "text": "Suggest two reasons why the values determined for W may not be the same."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "1."
     },
     {
      "type": "answer",
@@ -601,6 +616,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

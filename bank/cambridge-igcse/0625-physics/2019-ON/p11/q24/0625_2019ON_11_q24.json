@@ -32,9 +32,9 @@
   {
    "page": 10,
    "bbox": [
-    69.4,
-    108.3,
-    393.1,
+    69.0,
+    108.0,
+    393.5,
     247.5
    ],
    "id": "0625_2019ON_11_q24_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p11/q24/figures/0625_2019ON_11_q24_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p11/q24/figures/0625_2019ON_11_q24_figA",
     "url": null,
-    "kb": 31.6
+    "kb": 31.3
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Under which conditions is light totally internally reflected?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "medium in which light travels towards the boundary",
-     "angle of incidence"
-    ],
-    [
-     "<b>A</b>",
-     "air",
-     "greater than the critical angle"
-    ],
-    [
-     "<b>B</b>",
-     "air",
-     "less than the critical angle"
-    ],
-    [
-     "<b>C</b>",
-     "glass",
-     "greater than the critical angle"
-    ],
-    [
-     "<b>D</b>",
-     "glass",
-     "less than the critical angle"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019ON_11_q24_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "air greater than the critical angle"
+    },
+    {
+     "label": "B",
+     "html": "air less than the critical angle"
+    },
+    {
+     "label": "C",
+     "html": "glass greater than the critical angle"
+    },
+    {
+     "label": "D",
+     "html": "glass less than the critical angle"
+    }
+   ]
   }
  ]
 }

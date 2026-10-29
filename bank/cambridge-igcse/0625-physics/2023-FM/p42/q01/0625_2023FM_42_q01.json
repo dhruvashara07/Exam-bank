@@ -83,7 +83,12 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "direction relative to the river bank ="
+     "prefix": "speed ="
+    },
+    {
+     "type": "text",
+     "html": "direction relative to the river bank = ……",
+     "text": "direction relative to the river bank = ……"
     },
     {
      "type": "marks",
@@ -157,7 +162,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "scalar quantity"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "vector quantity"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -182,5 +196,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

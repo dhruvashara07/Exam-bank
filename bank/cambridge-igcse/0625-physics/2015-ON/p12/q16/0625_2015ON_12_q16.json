@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    67.6,
+    67.5,
     312.5,
-    245.9,
-    423.8
+    246.0,
+    424.0
    ],
    "id": "0625_2015ON_12_q16_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row shows the best position for the cooling unit and the best position for the heater?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "cooling unit",
-     "heater"
-    ],
-    [
-     "A",
-     "bottom",
-     "bottom"
-    ],
-    [
-     "B",
-     "bottom",
-     "top"
-    ],
-    [
-     "C",
-     "top",
-     "bottom"
-    ],
-    [
-     "D",
-     "top",
-     "top"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015ON_12_q16_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "bottom bottom"
+    },
+    {
+     "label": "B",
+     "html": "bottom top"
+    },
+    {
+     "label": "C",
+     "html": "top bottom"
+    },
+    {
+     "label": "D",
+     "html": "top top"
+    }
+   ]
   }
  ]
 }

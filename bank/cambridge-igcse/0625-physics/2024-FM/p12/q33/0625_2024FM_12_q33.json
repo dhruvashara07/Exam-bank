@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    582.1,
-    475.9,
-    693.4
+    67.5,
+    582.0,
+    476.0,
+    693.5
    ],
    "id": "0625_2024FM_12_q33_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-FM/p12/q33/figures/0625_2024FM_12_q33_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-FM/p12/q33/figures/0625_2024FM_12_q33_figA",
     "url": null,
-    "kb": 34.9
+    "kb": 34.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,40 +98,30 @@
    "text": "Which row correctly identifies the nature of each radioactive emission?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "alpha (α)",
-     "beta (β)",
-     "gamma (γ)"
-    ],
-    [
-     "<b>A</b>",
-     "helium nucleus",
-     "electromagnetic wave",
-     "electron"
-    ],
-    [
-     "<b>B</b>",
-     "electron",
-     "helium nucleus",
-     "electromagnetic wave"
-    ],
-    [
-     "<b>C</b>",
-     "helium nucleus",
-     "electron",
-     "electromagnetic wave"
-    ],
-    [
-     "<b>D</b>",
-     "electromagnetic wave",
-     "electron",
-     "helium nucleus"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024FM_12_q33_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "helium nucleus electromagnetic wave electron"
+    },
+    {
+     "label": "B",
+     "html": "electron helium nucleus electromagnetic wave"
+    },
+    {
+     "label": "C",
+     "html": "helium nucleus electron electromagnetic wave"
+    },
+    {
+     "label": "D",
+     "html": "electromagnetic wave electron helium nucleus"
+    }
+   ]
   }
  ]
 }

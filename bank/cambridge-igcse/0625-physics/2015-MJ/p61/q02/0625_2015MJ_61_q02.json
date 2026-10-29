@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    162.4,
-    153.4,
-    432.9,
-    476.0
+    162.0,
+    154.5,
+    432.0,
+    476.5
    ],
    "id": "0625_2015MJ_61_q02a_fig2-1",
    "part": "(a)",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 4,
    "bbox": [
-    209.4,
-    576.9,
-    385.8,
-    766.8
+    209.5,
+    577.0,
+    386.0,
+    767.0
    ],
    "id": "0625_2015MJ_61_q02b_table2-1",
    "part": "(b)",
@@ -220,37 +220,9 @@
      "text": "Complete the column headings in the table."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>t</i> /",
-       "<i>θ</i> /"
-      ],
-      [
-       "0",
-       ""
-      ],
-      [
-       "30",
-       "72"
-      ],
-      [
-       "60",
-       "64"
-      ],
-      [
-       "90",
-       "60"
-      ],
-      [
-       "120",
-       "57"
-      ],
-      [
-       "150",
-       "56"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2015MJ_61_q02b_table2-1",
+     "caption": "Table 2.1"
     },
     {
      "type": "marks",
@@ -409,10 +381,13 @@
        "text": "stays approximately constant during the period of cooling."
       },
       {
+       "type": "text",
+       "html": "The rate of cooling of the water …… .",
+       "text": "The rate of cooling of the water …… ."
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "The rate of cooling of the water",
-       "unit": "."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -514,6 +489,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

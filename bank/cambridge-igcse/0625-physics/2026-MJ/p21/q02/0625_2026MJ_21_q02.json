@@ -32,10 +32,10 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
-    312.4,
+    67.5,
+    312.0,
     291.5,
-    423.7
+    424.0
    ],
    "id": "0625_2026MJ_21_q02_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p21/q02/figures/0625_2026MJ_21_q02_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p21/q02/figures/0625_2026MJ_21_q02_figA",
     "url": null,
-    "kb": 28.3
+    "kb": 28.2
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -98,13 +99,13 @@
   },
   {
    "type": "text",
-   "html": "The energy in the kinetic store of the moving object is 90J.",
-   "text": "The energy in the kinetic store of the moving object is 90J."
+   "html": "The energy in the kinetic store of the moving object is 90 J.",
+   "text": "The energy in the kinetic store of the moving object is 90 J."
   },
   {
    "type": "text",
-   "html": "The momentum of the object is 60kgm/s.",
-   "text": "The momentum of the object is 60kgm/s."
+   "html": "The momentum of the object is 60 kg m / s.",
+   "text": "The momentum of the object is 60 kg m / s."
   },
   {
    "type": "text",
@@ -112,35 +113,30 @@
    "text": "Which quantities are vector quantities and what is the mass of the object?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>vector quantities</b>",
-     "<b>mass</b><b>/</b><b>kg</b>"
-    ],
-    [
-     "<b>A</b>",
-     "energy and mass",
-     "20"
-    ],
-    [
-     "<b>B</b>",
-     "energy and mass",
-     "30"
-    ],
-    [
-     "<b>C</b>",
-     "momentum",
-     "20"
-    ],
-    [
-     "<b>D</b>",
-     "momentum",
-     "30"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_21_q02_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "energy and mass 20"
+    },
+    {
+     "label": "B",
+     "html": "energy and mass 30"
+    },
+    {
+     "label": "C",
+     "html": "momentum 20"
+    },
+    {
+     "label": "D",
+     "html": "momentum 30"
+    }
+   ]
   }
  ]
 }

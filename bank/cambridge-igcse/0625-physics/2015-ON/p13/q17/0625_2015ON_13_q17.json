@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    69.3,
-    95.8,
-    333.9,
-    207.1
+    69.0,
+    95.5,
+    334.0,
+    207.5
    ],
    "id": "0625_2015ON_13_q17_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p13/q17/figures/0625_2015ON_13_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p13/q17/figures/0625_2015ON_13_q17_figA",
     "url": null,
-    "kb": 24.9
+    "kb": 24.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row shows how heating changes the density of air, and the name of the method of energy transfer caused by this density change?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "density",
-     "method of energy transfer"
-    ],
-    [
-     "A",
-     "decreases",
-     "conduction"
-    ],
-    [
-     "B",
-     "decreases",
-     "convection"
-    ],
-    [
-     "C",
-     "increases",
-     "conduction"
-    ],
-    [
-     "D",
-     "increases",
-     "convection"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015ON_13_q17_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases conduction"
+    },
+    {
+     "label": "B",
+     "html": "decreases convection"
+    },
+    {
+     "label": "C",
+     "html": "increases conduction"
+    },
+    {
+     "label": "D",
+     "html": "increases convection"
+    }
+   ]
   }
  ]
 }

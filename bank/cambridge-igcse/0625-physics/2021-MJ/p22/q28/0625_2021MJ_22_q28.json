@@ -32,10 +32,10 @@
   {
    "page": 12,
    "bbox": [
-    62.7,
-    207.7,
+    62.5,
+    207.0,
     532.0,
-    500.3
+    492.5
    ],
    "id": "0625_2021MJ_22_q28_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p22/q28/figures/0625_2021MJ_22_q28_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p22/q28/figures/0625_2021MJ_22_q28_figA",
     "url": null,
-    "kb": 32.6
+    "kb": 32.4
    }
   },
   {
    "page": 12,
    "bbox": [
-    67.7,
+    67.5,
     532.5,
-    292.3,
-    643.9
+    292.5,
+    644.0
    ],
    "id": "0625_2021MJ_22_q28_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p22/q28/figures/0625_2021MJ_22_q28_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p22/q28/figures/0625_2021MJ_22_q28_figB",
     "url": null,
-    "kb": 15.9
+    "kb": 15.7
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -151,40 +152,30 @@
    "text": "Which row correctly identifies the materials from which the nails are made?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "copper",
-     "soft iron",
-     "steel"
-    ],
-    [
-     "<b>A</b>",
-     "P",
-     "Q",
-     "R"
-    ],
-    [
-     "<b>B</b>",
-     "P",
-     "R",
-     "Q"
-    ],
-    [
-     "<b>C</b>",
-     "Q",
-     "P",
-     "R"
-    ],
-    [
-     "<b>D</b>",
-     "Q",
-     "R",
-     "P"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_22_q28_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "P Q R"
+    },
+    {
+     "label": "B",
+     "html": "P R Q"
+    },
+    {
+     "label": "C",
+     "html": "Q P R"
+    },
+    {
+     "label": "D",
+     "html": "Q R P"
+    }
+   ]
   }
  ]
 }

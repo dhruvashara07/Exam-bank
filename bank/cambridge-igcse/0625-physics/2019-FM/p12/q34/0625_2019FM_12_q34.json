@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
-    659.6,
-    243.2,
-    770.9
+    67.5,
+    659.5,
+    243.5,
+    771.0
    ],
    "id": "0625_2019FM_12_q34_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-FM/p12/q34/figures/0625_2019FM_12_q34_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-FM/p12/q34/figures/0625_2019FM_12_q34_figA",
     "url": null,
-    "kb": 14.8
+    "kb": 14.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,40 +108,35 @@
    "text": "Which other apparatus does he need?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "voltmeter",
-     "battery"
-    ],
-    [
-     "<b>A</b>",
-     "\u0016",
-     "\u0016"
-    ],
-    [
-     "<b>B</b>",
-     "\u0016",
-     "\u001a"
-    ],
-    [
-     "<b>C</b>",
-     "\u001a",
-     "\u0016"
-    ],
-    [
-     "<b>D</b>",
-     "\u001a",
-     "\u001a"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019FM_12_q34_figA",
+   "caption": null
   },
   {
    "type": "text",
    "html": "key \u0016= needed \u001a= not needed",
    "text": "key \u0016= needed \u001a= not needed"
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "\u0016 \u0016 key"
+    },
+    {
+     "label": "B",
+     "html": "\u0016 \u001a \u0016= needed"
+    },
+    {
+     "label": "C",
+     "html": "\u001a \u0016 \u001a= not needed"
+    },
+    {
+     "label": "D",
+     "html": "\u001a \u001a"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    222.3,
-    124.8,
-    373.1,
-    187.7
+    221.5,
+    124.0,
+    374.0,
+    188.5
    ],
    "id": "0625_2023ON_11_q15_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p11/q15/figures/0625_2023ON_11_q15_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p11/q15/figures/0625_2023ON_11_q15_figA",
     "url": null,
-    "kb": 8.6
+    "kb": 8.5
    }
   },
   {
    "page": 7,
    "bbox": [
-    67.7,
-    246.3,
-    300.8,
-    371.8
+    67.5,
+    246.0,
+    301.0,
+    372.0
    ],
    "id": "0625_2023ON_11_q15_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p11/q15/figures/0625_2023ON_11_q15_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p11/q15/figures/0625_2023ON_11_q15_figB",
     "url": null,
-    "kb": 24.2
+    "kb": 24.1
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A student has two blocks of metal, X and Y. The temperature of X is 50°C and the temperature of Y is 0°C.",
-   "text": "A student has two blocks of metal, X and Y. The temperature of X is 50°C and the temperature of Y is 0°C."
+   "html": "A student has two blocks of metal, X and Y. The temperature of X is 50 °C and the temperature of Y is 0 °C.",
+   "text": "A student has two blocks of metal, X and Y. The temperature of X is 50 °C and the temperature of Y is 0 °C."
   },
   {
    "type": "text",
@@ -126,22 +127,9 @@
    "caption": null
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "X",
-     "Y"
-    ],
-    [
-     "at 50\u0001C",
-     "at 0\u0001C"
-    ]
-   ]
-  },
-  {
    "type": "text",
-   "html": "After some time, both blocks have a temperature of 25°C.",
-   "text": "After some time, both blocks have a temperature of 25°C."
+   "html": "After some time, both blocks have a temperature of 25 °C.",
+   "text": "After some time, both blocks have a temperature of 25 °C."
   },
   {
    "type": "text",
@@ -149,40 +137,30 @@
    "text": "What has happened to the internal energy of each block?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "internal energy",
-     "internal energy"
-    ],
-    [
-     "",
-     "of X",
-     "of Y"
-    ],
-    [
-     "<b>A</b>",
-     "decreased",
-     "decreased"
-    ],
-    [
-     "<b>B</b>",
-     "decreased",
-     "increased"
-    ],
-    [
-     "<b>C</b>",
-     "increased",
-     "decreased"
-    ],
-    [
-     "<b>D</b>",
-     "unchanged",
-     "unchanged"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_11_q15_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreased decreased"
+    },
+    {
+     "label": "B",
+     "html": "decreased increased"
+    },
+    {
+     "label": "C",
+     "html": "increased decreased"
+    },
+    {
+     "label": "D",
+     "html": "unchanged unchanged"
+    }
+   ]
   }
  ]
 }

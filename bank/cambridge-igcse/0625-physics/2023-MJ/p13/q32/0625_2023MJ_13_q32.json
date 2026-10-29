@@ -32,10 +32,10 @@
   {
    "page": 12,
    "bbox": [
-    67.7,
-    413.6,
-    399.9,
-    553.3
+    67.5,
+    413.5,
+    400.0,
+    553.5
    ],
    "id": "0625_2023MJ_13_q32_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p13/q32/figures/0625_2023MJ_13_q32_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p13/q32/figures/0625_2023MJ_13_q32_figA",
     "url": null,
-    "kb": 29.3
+    "kb": 29.2
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,52 +103,30 @@
    "text": "Which row shows the correct labels?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "number of",
-     "number of",
-     "step-up or"
-    ],
-    [
-     "",
-     "turns on the",
-     "turns on the",
-     "step-down"
-    ],
-    [
-     "",
-     "primary coil",
-     "secondary coil",
-     "transformer"
-    ],
-    [
-     "<b>A</b>",
-     "5",
-     "5",
-     "step-up"
-    ],
-    [
-     "<b>B</b>",
-     "10",
-     "5",
-     "step-up"
-    ],
-    [
-     "<b>C</b>",
-     "10",
-     "20",
-     "step-down"
-    ],
-    [
-     "<b>D</b>",
-     "20",
-     "10",
-     "step-down"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_13_q32_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "5 5 step-up"
+    },
+    {
+     "label": "B",
+     "html": "10 5 step-up"
+    },
+    {
+     "label": "C",
+     "html": "10 20 step-down"
+    },
+    {
+     "label": "D",
+     "html": "20 10 step-down"
+    }
+   ]
   }
  ]
 }

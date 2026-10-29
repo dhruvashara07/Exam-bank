@@ -32,7 +32,7 @@
   {
    "page": 15,
    "bbox": [
-    199.4,
+    199.0,
     151.0,
     395.3,
     358.4
@@ -51,8 +51,8 @@
   {
    "page": 15,
    "bbox": [
-    67.7,
-    391.7,
+    67.5,
+    391.5,
     317.5,
     503.0
    ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,40 +137,30 @@
    "text": "Which radiation follows path X, path Y and path Z?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "X",
-     "Y",
-     "Z"
-    ],
-    [
-     "<b>A</b>",
-     "α-particles",
-     "β-particles",
-     "γ-rays"
-    ],
-    [
-     "<b>B</b>",
-     "α-particles",
-     "γ-rays",
-     "β-particles"
-    ],
-    [
-     "<b>C</b>",
-     "β-particles",
-     "α-particles",
-     "γ-rays"
-    ],
-    [
-     "<b>D</b>",
-     "β-particles",
-     "γ-rays",
-     "α-particles"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019MJ_21_q39_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "α-particles β-particles γ-rays"
+    },
+    {
+     "label": "B",
+     "html": "α-particles γ-rays β-particles"
+    },
+    {
+     "label": "C",
+     "html": "β-particles α-particles γ-rays"
+    },
+    {
+     "label": "D",
+     "html": "β-particles γ-rays α-particles"
+    }
+   ]
   }
  ]
 }

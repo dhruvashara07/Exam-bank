@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    128.2,
+    127.5,
     125.0,
     467.6,
-    343.0
+    342.5
    ],
    "id": "0625_2024MJ_11_q08_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p11/q08/figures/0625_2024MJ_11_q08_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p11/q08/figures/0625_2024MJ_11_q08_figA",
     "url": null,
-    "kb": 39.9
+    "kb": 39.6
    }
   },
   {
    "page": 5,
    "bbox": [
-    67.7,
-    387.2,
+    67.5,
+    387.0,
     354.5,
-    512.7
+    513.0
    ],
    "id": "0625_2024MJ_11_q08_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p11/q08/figures/0625_2024MJ_11_q08_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p11/q08/figures/0625_2024MJ_11_q08_figB",
     "url": null,
-    "kb": 35.5
+    "kb": 35.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,40 +132,30 @@
    "text": "Which row is correct for the difference in pressure from the initial to the final depth of each submarine?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "least change",
-     "greatest change"
-    ],
-    [
-     "",
-     "in pressure",
-     "in pressure"
-    ],
-    [
-     "<b>A</b>",
-     "submarines P and Q",
-     "submarines R and S"
-    ],
-    [
-     "<b>B</b>",
-     "submarines P and Q",
-     "submarine R only"
-    ],
-    [
-     "<b>C</b>",
-     "submarine P only",
-     "submarines R and S"
-    ],
-    [
-     "<b>D</b>",
-     "submarine P only",
-     "submarine R only"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_11_q08_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "submarines P and Q submarines R and S"
+    },
+    {
+     "label": "B",
+     "html": "submarines P and Q submarine R only"
+    },
+    {
+     "label": "C",
+     "html": "submarine P only submarines R and S"
+    },
+    {
+     "label": "D",
+     "html": "submarine P only submarine R only"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    220.3,
+    220.0,
     379.1,
     374.8,
-    443.2
+    444.0
    ],
    "id": "0625_2017MJ_22_q09_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    513.7,
-    295.1,
-    639.2
+    67.5,
+    513.5,
+    295.0,
+    639.5
    ],
    "id": "0625_2017MJ_22_q09_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-MJ/p22/q09/figures/0625_2017MJ_22_q09_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-MJ/p22/q09/figures/0625_2017MJ_22_q09_figB",
     "url": null,
-    "kb": 19.4
+    "kb": 19.3
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A ball of mass 2.0kg is travelling at a speed of 12m/s. It moves towards an object of mass 3.0kg which is at rest.",
-   "text": "A ball of mass 2.0kg is travelling at a speed of 12m/s. It moves towards an object of mass 3.0kg which is at rest."
+   "html": "A ball of mass 2.0 kg is travelling at a speed of 12 m / s. It moves towards an object of mass 3.0 kg which is at rest.",
+   "text": "A ball of mass 2.0 kg is travelling at a speed of 12 m / s. It moves towards an object of mass 3.0 kg which is at rest."
   },
   {
    "type": "figure",
@@ -131,40 +132,30 @@
    "text": "Which row gives the total momentum, and the speed of both objects immediately after the collision?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "total momentum",
-     "speed"
-    ],
-    [
-     "",
-     "kgm/s",
-     "m/s"
-    ],
-    [
-     "<b>A</b>",
-     "0",
-     "4.8"
-    ],
-    [
-     "<b>B</b>",
-     "0",
-     "8.0"
-    ],
-    [
-     "<b>C</b>",
-     "24",
-     "4.8"
-    ],
-    [
-     "<b>D</b>",
-     "24",
-     "8.0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017MJ_22_q09_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0 4.8"
+    },
+    {
+     "label": "B",
+     "html": "0 8.0"
+    },
+    {
+     "label": "C",
+     "html": "24 4.8"
+    },
+    {
+     "label": "D",
+     "html": "24 8.0"
+    }
+   ]
   }
  ]
 }

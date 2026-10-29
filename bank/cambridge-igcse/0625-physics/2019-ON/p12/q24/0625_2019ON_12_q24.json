@@ -33,9 +33,9 @@
    "page": 9,
    "bbox": [
     149.2,
-    416.4,
-    417.2,
-    514.5
+    415.5,
+    417.5,
+    515.0
    ],
    "id": "0625_2019ON_12_q24_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 9,
    "bbox": [
-    65.9,
-    580.3,
-    313.9,
-    699.7
+    66.0,
+    580.0,
+    314.0,
+    700.0
    ],
    "id": "0625_2019ON_12_q24_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p12/q24/figures/0625_2019ON_12_q24_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p12/q24/figures/0625_2019ON_12_q24_figB",
     "url": null,
-    "kb": 25.0
+    "kb": 24.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,35 +137,30 @@
    "text": "What is the name of this effect and which colour of light has the smallest angle of deviation?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "name of effect",
-     "colour with smallest angle of deviation"
-    ],
-    [
-     "<b>A</b>",
-     "diffraction",
-     "red"
-    ],
-    [
-     "<b>B</b>",
-     "diffraction",
-     "violet"
-    ],
-    [
-     "<b>C</b>",
-     "dispersion",
-     "red"
-    ],
-    [
-     "<b>D</b>",
-     "dispersion",
-     "violet"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019ON_12_q24_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "diffraction red"
+    },
+    {
+     "label": "B",
+     "html": "diffraction violet"
+    },
+    {
+     "label": "C",
+     "html": "dispersion red"
+    },
+    {
+     "label": "D",
+     "html": "dispersion violet"
+    }
+   ]
   }
  ]
 }

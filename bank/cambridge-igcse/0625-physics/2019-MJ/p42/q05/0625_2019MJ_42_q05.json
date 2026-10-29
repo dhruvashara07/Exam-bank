@@ -9,10 +9,10 @@
    "caption": "Fig. 5.1",
    "page": 7,
    "bbox": [
-    184.3,
-    220.8,
-    411.4,
-    401.1
+    184.5,
+    220.5,
+    411.5,
+    399.5
    ],
    "id": "0625_2019MJ_42_q05bi_fig5-1",
    "part": "(b)(i)",
@@ -100,13 +100,12 @@
       },
       {
        "type": "text",
-       "html": "to the atmosphere.",
-       "text": "to the atmosphere."
+       "html": "to the atmosphere. State the name of this process ……",
+       "text": "to the atmosphere. State the name of this process ……"
       },
       {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "State the name of this process"
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -173,13 +172,12 @@
      "content": [
       {
        "type": "text",
-       "html": "At a lower temperature than in <b>(a)(i)</b>, molecules escape from the surface to the atmosphere.",
-       "text": "At a lower temperature than in (a)(i), molecules escape from the surface to the atmosphere."
+       "html": "At a lower temperature than in <b>(a)(i)</b>, molecules escape from the surface to the atmosphere. State the name of this process ……",
+       "text": "At a lower temperature than in (a)(i), molecules escape from the surface to the atmosphere. State the name of this process ……"
       },
       {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "State the name of this process"
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -348,7 +346,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "Explanation",
+       "prefix": "Statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -377,5 +384,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

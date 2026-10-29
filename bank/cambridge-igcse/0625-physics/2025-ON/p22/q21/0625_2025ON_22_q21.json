@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    135.2,
-    311.8,
-    260.8
+    67.5,
+    135.0,
+    312.0,
+    261.0
    ],
    "id": "0625_2025ON_22_q21_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p22/q21/figures/0625_2025ON_22_q21_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p22/q21/figures/0625_2025ON_22_q21_figA",
     "url": null,
-    "kb": 26.5
+    "kb": 26.3
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Where is the image formed relative to the retina and which type of lens is used to correct long-sightedness?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "position of image",
-     "lens used for correction"
-    ],
-    [
-     "<b>A</b>",
-     "behind retina",
-     "converging"
-    ],
-    [
-     "<b>B</b>",
-     "behind retina",
-     "diverging"
-    ],
-    [
-     "<b>C</b>",
-     "in front of retina",
-     "converging"
-    ],
-    [
-     "<b>D</b>",
-     "in front of retina",
-     "diverging"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025ON_22_q21_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "behind retina converging"
+    },
+    {
+     "label": "B",
+     "html": "behind retina diverging"
+    },
+    {
+     "label": "C",
+     "html": "in front of retina converging"
+    },
+    {
+     "label": "D",
+     "html": "in front of retina diverging"
+    }
+   ]
   }
  ]
 }

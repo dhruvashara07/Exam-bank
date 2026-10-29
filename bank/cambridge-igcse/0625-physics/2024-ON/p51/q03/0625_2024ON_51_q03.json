@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1 (not to scale)",
    "page": 8,
    "bbox": [
-    78.5,
-    111.5,
-    516.8,
-    264.7
+    79.0,
+    112.5,
+    516.0,
+    265.0
    ],
    "id": "0625_2024ON_51_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2 (not to scale)",
    "page": 8,
    "bbox": [
-    78.5,
-    111.5,
-    516.8,
-    440.1
+    79.0,
+    112.5,
+    516.0,
+    440.5
    ],
    "id": "0625_2024ON_51_q03_fig3-2",
    "part": "",
@@ -207,7 +207,7 @@
     {
      "type": "list",
      "items": [
-      "Place the lens a distance u = 25.0cm from the illuminated object.",
+      "Place the lens a distance u = 25.0 cm from the illuminated object.",
       "Move the screen slowly until a clearly focused image is formed on the screen.",
       "Measure the distance v between the centre of the lens and the screen."
      ]
@@ -285,7 +285,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate the focal length f of the lens using the equation f = \\(\\frac{uv}{(u+v)}\\)",
+     "html": "Calculate the focal length f of the lens using the equation f = \\(\\frac{\\text{uv}}{(u+v)}\\)",
      "text": "Calculate the focal length f of the lens using the equation f = (uv)/((u+v))"
     },
     {
@@ -370,7 +370,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1. The image is"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2. The image is"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -438,8 +447,14 @@
    "content": [
     {
      "type": "text",
-     "html": "Repeat the steps in (b) and (c) using a distance u = 30.0cm.",
-     "text": "Repeat the steps in (b) and (c) using a distance u = 30.0cm."
+     "html": "Repeat the steps in (b) and (c) using a distance u = 30.0 cm.",
+     "text": "Repeat the steps in (b) and (c) using a distance u = 30.0 cm."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "v =",
+     "unit": "cm"
     },
     {
      "type": "answer",
@@ -543,6 +558,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    107.6,
-    122.2,
-    487.7,
-    444.7
+    107.5,
+    125.5,
+    488.0,
+    443.0
    ],
    "id": "0625_2024MJ_33_q01_fig1-1",
    "part": "",
@@ -142,9 +142,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "the force due to gravity ……",
+       "text": "the force due to gravity ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(i) the force due to gravity"
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -210,9 +214,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "the force due to air resistance. ……",
+       "text": "the force due to air resistance. ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(ii) the force due to air resistance."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -471,8 +479,13 @@
      "content": [
       {
        "type": "text",
-       "html": "The cyclist exerts a force of 36 N to move the cycle forwards. Calculate the work done by this force when the cyclist travels 250m. Include the unit.",
-       "text": "The cyclist exerts a force of 36 N to move the cycle forwards. Calculate the work done by this force when the cyclist travels 250m. Include the unit."
+       "html": "The cyclist exerts a force of 36 N to move the cycle forwards. Calculate the work done by this force when the cyclist travels 250 m. Include the unit.",
+       "text": "The cyclist exerts a force of 36 N to move the cycle forwards. Calculate the work done by this force when the cyclist travels 250 m. Include the unit."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "work done ="
       },
       {
        "type": "answer",
@@ -513,6 +526,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

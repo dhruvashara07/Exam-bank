@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    456.8,
+    67.5,
+    456.5,
     489.4,
-    567.7
+    568.0
    ],
    "id": "0625_2025MJ_22_q05_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p22/q05/figures/0625_2025MJ_22_q05_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p22/q05/figures/0625_2025MJ_22_q05_figA",
     "url": null,
-    "kb": 25.7
+    "kb": 25.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,45 +108,30 @@
    "text": "Which other apparatus does she need?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "balance",
-     "ruler",
-     "stop-watch",
-     "thermometer"
-    ],
-    [
-     "<b>A</b>",
-     "\u0016",
-     "\u0016",
-     "\u0016",
-     "\u0016"
-    ],
-    [
-     "<b>B</b>",
-     "\u0016",
-     "\u0016",
-     "\u0016",
-     "\u001a"
-    ],
-    [
-     "<b>C</b>",
-     "\u0016",
-     "\u0016",
-     "\u001a",
-     "\u001a"
-    ],
-    [
-     "<b>D</b>",
-     "\u0016",
-     "\u001a",
-     "\u001a",
-     "\u001a"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_22_q05_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "\u0016 \u0016 \u0016 \u0016 key"
+    },
+    {
+     "label": "B",
+     "html": "\u0016 \u0016 \u0016 \u001a \u0016= needed"
+    },
+    {
+     "label": "C",
+     "html": "\u0016 \u0016 \u001a \u001a \u001a = not needed"
+    },
+    {
+     "label": "D",
+     "html": "\u0016 \u001a \u001a \u001a"
+    }
+   ]
   }
  ]
 }

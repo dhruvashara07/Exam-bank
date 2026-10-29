@@ -32,9 +32,9 @@
   {
    "page": 5,
    "bbox": [
-    67.6,
-    249.3,
-    363.3,
+    67.5,
+    249.0,
+    363.5,
     372.0
    ],
    "id": "0625_2015MJ_14_q09_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p14/q09/figures/0625_2015MJ_14_q09_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p14/q09/figures/0625_2015MJ_14_q09_figA",
     "url": null,
-    "kb": 29.7
+    "kb": 29.4
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "Four different model steam engines each lift a 1.0kg object from the same laboratory floor to the same laboratory bench. Each engine takes a different time to lift the object.",
-   "text": "Four different model steam engines each lift a 1.0kg object from the same laboratory floor to the same laboratory bench. Each engine takes a different time to lift the object."
+   "html": "Four different model steam engines each lift a 1.0 kg object from the same laboratory floor to the same laboratory bench. Each engine takes a different time to lift the object.",
+   "text": "Four different model steam engines each lift a 1.0 kg object from the same laboratory floor to the same laboratory bench. Each engine takes a different time to lift the object."
   },
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "How does the most powerful engine compare with the other engines?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "speed of lifting object onto bench",
-     "useful work done"
-    ],
-    [
-     "A",
-     "faster",
-     "more than other engines"
-    ],
-    [
-     "B",
-     "faster",
-     "same as other engines"
-    ],
-    [
-     "C",
-     "slower",
-     "less than other engines"
-    ],
-    [
-     "D",
-     "slower",
-     "same as other engines"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_14_q09_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "faster more than other engines"
+    },
+    {
+     "label": "B",
+     "html": "faster same as other engines"
+    },
+    {
+     "label": "C",
+     "html": "slower less than other engines"
+    },
+    {
+     "label": "D",
+     "html": "slower same as other engines"
+    }
+   ]
   }
  ]
 }

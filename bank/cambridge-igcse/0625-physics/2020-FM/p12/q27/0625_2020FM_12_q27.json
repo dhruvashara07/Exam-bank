@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
+    67.5,
     647.5,
-    356.6,
-    758.8
+    357.0,
+    759.0
    ],
    "id": "0625_2020FM_12_q27_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-FM/p12/q27/figures/0625_2020FM_12_q27_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-FM/p12/q27/figures/0625_2020FM_12_q27_figA",
     "url": null,
-    "kb": 22.8
+    "kb": 22.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "N pole and N pole",
-     "N pole and S pole"
-    ],
-    [
-     "<b>A</b>",
-     "attraction",
-     "attraction"
-    ],
-    [
-     "<b>B</b>",
-     "attraction",
-     "repulsion"
-    ],
-    [
-     "<b>C</b>",
-     "repulsion",
-     "attraction"
-    ],
-    [
-     "<b>D</b>",
-     "repulsion",
-     "repulsion"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020FM_12_q27_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "attraction attraction"
+    },
+    {
+     "label": "B",
+     "html": "attraction repulsion"
+    },
+    {
+     "label": "C",
+     "html": "repulsion attraction"
+    },
+    {
+     "label": "D",
+     "html": "repulsion repulsion"
+    }
+   ]
   }
  ]
 }

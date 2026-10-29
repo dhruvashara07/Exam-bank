@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 7,
    "bbox": [
-    112.7,
-    109.2,
-    482.5,
-    385.1
+    112.5,
+    112.5,
+    482.0,
+    383.5
    ],
    "id": "0625_2024MJ_63_q02_fig2-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p63/q02/figures/0625_2024MJ_63_q02_fig2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p63/q02/figures/0625_2024MJ_63_q02_fig2-1",
     "url": null,
-    "kb": 29.5
+    "kb": 29.4
    }
   },
   {
    "caption": "Table 2.1",
    "page": 8,
    "bbox": [
-    126.1,
-    266.5,
-    469.2,
-    552.7
+    126.0,
+    269.5,
+    469.5,
+    553.0
    ],
    "id": "0625_2024MJ_63_q02bii_table2-1",
    "part": "(b)(ii)",
@@ -241,7 +241,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "2",
+       "prefix": "1"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "2"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -313,64 +322,9 @@
        "text": "Her readings are shown in Table 2.1. Add units to the column headings in Table 2.1."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "",
-         "beaker",
-         "beaker"
-        ],
-        [
-         "",
-         "<sup>3</sup>",
-         "<sup>3</sup>"
-        ],
-        [
-         "",
-         "with 200 cm of hot water",
-         "with 75 cm of hot water"
-        ],
-        [
-         "<i>t</i> /",
-         "θ /",
-         "θ /"
-        ],
-        [
-         "0",
-         "87.5",
-         "85.5"
-        ],
-        [
-         "30",
-         "85.5",
-         "82.0"
-        ],
-        [
-         "60",
-         "84.0",
-         "78.5"
-        ],
-        [
-         "90",
-         "82.5",
-         "75.0"
-        ],
-        [
-         "120",
-         "81.0",
-         "72.0"
-        ],
-        [
-         "150",
-         "80.0",
-         "69.5"
-        ],
-        [
-         "180",
-         "79.0",
-         "67.0"
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2024MJ_63_q02bii_table2-1",
+       "caption": "Table 2.1"
       },
       {
        "type": "marks",
@@ -538,7 +492,7 @@
       },
       {
        "type": "text",
-       "html": "<i>x</i><sub>1</sub> = \\(\\frac{θ<sub>0</sub> – θ<sub>90</sub>}{<i>T</i>}\\)",
+       "html": "<i>x</i><sub>1</sub> = \\(\\frac{θ_{0} – θ_{90}}{T}\\)",
        "text": "x1 = (θ0 – θ90)/(T)"
       },
       {
@@ -547,13 +501,18 @@
        "text": "where T = 90 s and θ0 and θ90 are the temperatures at t = 0 and t = 90 s. Include the unit for the cooling rate."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "x1 ="
+      },
+      {
        "type": "text",
        "html": "Using the values for 75 cm<sup>3</sup> of water, calculate the average cooling rate <i>x</i><sub>2</sub> for the last s of the experiment. Use the readings from Table 2.1 and the equation",
        "text": "Using the values for 75 cm3 of water, calculate the average cooling rate x2 for the last s of the experiment. Use the readings from Table 2.1 and the equation"
       },
       {
        "type": "text",
-       "html": "<i>x</i><sub>2</sub> = \\(\\frac{θ<sub>90</sub> – θ<sub>180</sub>}{<i>T</i>}\\)",
+       "html": "<i>x</i><sub>2</sub> = \\(\\frac{θ_{90} – θ_{180}}{T}\\)",
        "text": "x2 = (θ90 – θ180)/(T)"
       },
       {
@@ -713,7 +672,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -740,6 +708,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

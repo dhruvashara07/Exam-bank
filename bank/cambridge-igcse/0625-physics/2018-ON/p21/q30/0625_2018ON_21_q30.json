@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    615.8,
+    67.5,
+    615.5,
     398.5,
-    727.1
+    727.5
    ],
    "id": "0625_2018ON_21_q30_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-ON/p21/q30/figures/0625_2018ON_21_q30_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-ON/p21/q30/figures/0625_2018ON_21_q30_figA",
     "url": null,
-    "kb": 27.7
+    "kb": 27.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which device develops the greatest power?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "device",
-     "voltage",
-     "current"
-    ],
-    [
-     "<b>A</b>",
-     "car headlight",
-     "12V",
-     "3.0A"
-    ],
-    [
-     "<b>B</b>",
-     "cooling fan",
-     "110V",
-     "0.40A"
-    ],
-    [
-     "<b>C</b>",
-     "electric spark generator",
-     "400kV",
-     "0.10mA"
-    ],
-    [
-     "<b>D</b>",
-     "mains lamp",
-     "240V",
-     "0.20A"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018ON_21_q30_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "car headlight 12V 3.0A"
+    },
+    {
+     "label": "B",
+     "html": "cooling fan 110V 0.40A"
+    },
+    {
+     "label": "C",
+     "html": "electric spark generator 400kV 0.10mA"
+    },
+    {
+     "label": "D",
+     "html": "mains lamp 240V 0.20A"
+    }
+   ]
   }
  ]
 }

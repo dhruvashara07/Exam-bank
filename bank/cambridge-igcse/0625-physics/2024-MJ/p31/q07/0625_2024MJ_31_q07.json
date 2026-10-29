@@ -9,10 +9,10 @@
    "caption": "Fig. 7.1",
    "page": 10,
    "bbox": [
-    155.2,
-    83.2,
-    439.9,
-    270.3
+    156.0,
+    86.5,
+    440.0,
+    268.5
    ],
    "id": "0625_2024MJ_31_q07a_fig7-1",
    "part": "(a)",
@@ -29,9 +29,9 @@
    "page": 10,
    "bbox": [
     103.0,
-    452.7,
-    492.3,
-    690.9
+    452.0,
+    492.5,
+    689.0
    ],
    "id": "0625_2024MJ_31_q07b_fig7-2",
    "part": "(b)",
@@ -47,10 +47,10 @@
    "caption": "Fig. 7.3",
    "page": 11,
    "bbox": [
-    99.2,
-    83.2,
-    496.0,
-    238.7
+    100.0,
+    86.5,
+    495.5,
+    237.0
    ],
    "id": "0625_2024MJ_31_q07c_fig7-3",
    "part": "(c)",
@@ -611,7 +611,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "Z",
+       "prefix": "X"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Z"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 5
       },
       {
@@ -652,5 +661,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

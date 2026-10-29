@@ -33,9 +33,9 @@
    "page": 7,
    "bbox": [
     81.5,
-    418.4,
+    389.2,
     518.9,
-    534.2
+    535.0
    ],
    "id": "0625_2026FM_22_q15_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-FM/p22/q15/figures/0625_2026FM_22_q15_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-FM/p22/q15/figures/0625_2026FM_22_q15_figA",
     "url": null,
-    "kb": 11.1
+    "kb": 13.5
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "Equal volumes of water at 100°C are put in four containers. Two containers have matt black sides and two containers have shiny white sides. One of each type of container has a lid.",
-   "text": "Equal volumes of water at 100°C are put in four containers. Two containers have matt black sides and two containers have shiny white sides. One of each type of container has a lid."
+   "html": "Equal volumes of water at 100 °C are put in four containers. Two containers have matt black sides and two containers have shiny white sides. One of each type of container has a lid.",
+   "text": "Equal volumes of water at 100 °C are put in four containers. Two containers have matt black sides and two containers have shiny white sides. One of each type of container has a lid."
   },
   {
    "type": "text",
@@ -107,7 +108,18 @@
    "text": "Which container of water has the highest temperature?"
   },
   {
+   "type": "figure",
+   "id": "0625_2026FM_22_q15_figA",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "matt black sides matt black sides shiny white sides shiny white sides",
+   "text": "matt black sides matt black sides shiny white sides shiny white sides"
+  },
+  {
    "type": "options",
+   "in_figure": true,
    "options": [
     {
      "label": "A",
@@ -125,18 +137,7 @@
      "label": "D",
      "html": ""
     }
-   ],
-   "in_figure": true
-  },
-  {
-   "type": "figure",
-   "id": "0625_2026FM_22_q15_figA",
-   "caption": null
-  },
-  {
-   "type": "text",
-   "html": "matt black sides matt black sides shiny white sides shiny white sides",
-   "text": "matt black sides matt black sides shiny white sides shiny white sides"
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    180.2,
-    121.2,
-    414.4,
-    385.8
+    180.5,
+    125.5,
+    415.0,
+    383.0
    ],
    "id": "0625_2017ON_53_q02_fig2-1",
    "part": "",
@@ -265,6 +265,11 @@
        ]
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "VX ="
+      },
+      {
        "type": "text",
        "html": "Disconnect the voltmeter.",
        "text": "Disconnect the voltmeter."
@@ -276,14 +281,14 @@
        ]
       },
       {
-       "type": "text",
-       "html": "Disconnect the voltmeter.",
-       "text": "Disconnect the voltmeter."
-      },
-      {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "VY ="
+      },
+      {
+       "type": "text",
+       "html": "Disconnect the voltmeter.",
+       "text": "Disconnect the voltmeter."
       },
       {
        "type": "marks",
@@ -354,14 +359,14 @@
        "text": "Reconnect the voltmeter to measure and record the potential difference VS across the combination of both resistors."
       },
       {
-       "type": "text",
-       "html": "Switch off.",
-       "text": "Switch off."
-      },
-      {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "VS ="
+      },
+      {
+       "type": "text",
+       "html": "Switch off.",
+       "text": "Switch off."
       },
       {
        "type": "marks",
@@ -435,7 +440,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -512,7 +526,7 @@
     },
     {
      "type": "text",
-     "html": "<i>R</i><sub>S</sub> = \\(\\frac{<i>V</i><sub>S</sub>}{<i>I</i>}\\) .",
+     "html": "<i>R</i><sub>S</sub> = \\(\\frac{V_{S}}{I}\\) .",
      "text": "RS = (VS)/(I) ."
     },
     {
@@ -681,14 +695,19 @@
      "text": "Set up the circuit as described in (d). Switch on. Measure and record the total current IP in the circuit and the potential difference VP across the resistors."
     },
     {
-     "type": "text",
-     "html": "Switch off.",
-     "text": "Switch off."
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "IP ="
     },
     {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "VP ="
+    },
+    {
+     "type": "text",
+     "html": "Switch off.",
+     "text": "Switch off."
     },
     {
      "type": "marks",
@@ -714,6 +733,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

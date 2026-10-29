@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    652.7,
-    295.1,
-    764.1
+    67.5,
+    652.5,
+    295.0,
+    764.5
    ],
    "id": "0625_2023MJ_23_q23_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p23/q23/figures/0625_2023MJ_23_q23_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p23/q23/figures/0625_2023MJ_23_q23_figA",
     "url": null,
-    "kb": 20.8
+    "kb": 20.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row gives the metal used to make the core of an electromagnet and one property of the electromagnet?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "metal",
-     "property"
-    ],
-    [
-     "<b>A</b>",
-     "iron",
-     "permanent magnet"
-    ],
-    [
-     "<b>B</b>",
-     "iron",
-     "temporary magnet"
-    ],
-    [
-     "<b>C</b>",
-     "steel",
-     "permanent magnet"
-    ],
-    [
-     "<b>D</b>",
-     "steel",
-     "temporary magnet"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_23_q23_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "iron permanent magnet"
+    },
+    {
+     "label": "B",
+     "html": "iron temporary magnet"
+    },
+    {
+     "label": "C",
+     "html": "steel permanent magnet"
+    },
+    {
+     "label": "D",
+     "html": "steel temporary magnet"
+    }
+   ]
   }
  ]
 }

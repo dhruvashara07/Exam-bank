@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 6,
    "bbox": [
-    92.0,
-    138.8,
+    120.0,
+    164.0,
     471.0,
-    320.9
+    321.0
    ],
    "id": "0625_2025MJ_52_q02a_fig2-1",
    "part": "(a)",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p52/q02/figures/0625_2025MJ_52_q02a_fig2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p52/q02/figures/0625_2025MJ_52_q02a_fig2-1",
     "url": null,
-    "kb": 17.8
+    "kb": 12.9
    }
   }
  ],
@@ -114,8 +114,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Draw a circuit diagram of the circuit that has been set up for you. Choose symbols from the",
-     "text": "Draw a circuit diagram of the circuit that has been set up for you. Choose symbols from the"
+     "html": "Draw a circuit diagram of the circuit that has been set up for you. Choose symbols from the list in Fig. 2.1.",
+     "text": "Draw a circuit diagram of the circuit that has been set up for you. Choose symbols from the list in Fig. 2.1."
     },
     {
      "type": "figure",
@@ -289,16 +289,16 @@
        "text": "Record the voltmeter reading VYZ."
       },
       {
-       "type": "list",
-       "items": [
-        "Open the switch."
-       ]
-      },
-      {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "VYZ =",
        "unit": "V"
+      },
+      {
+       "type": "list",
+       "items": [
+        "Open the switch."
+       ]
       },
       {
        "type": "marks",
@@ -379,13 +379,13 @@
       },
       {
        "type": "text",
-       "html": "I = \\(\\frac{V<sub>XY</sub>}{R}\\),",
-       "text": "I = (VXY)/(R),"
+       "html": "I = \\(\\frac{V_{\\text{XY}}}{R}\\) ,",
+       "text": "I = (VXY)/(R) ,"
       },
       {
        "type": "text",
-       "html": "where R = 470Ω.",
-       "text": "where R = 470Ω."
+       "html": "where R = 470 Ω.",
+       "text": "where R = 470 Ω."
       },
       {
        "type": "text",
@@ -468,8 +468,8 @@
       },
       {
        "type": "text",
-       "html": "R = \\(\\frac{V<sub>YZ</sub>}{I}\\).",
-       "text": "R = (VYZ)/(I)."
+       "html": "R = \\(\\frac{V_{\\text{YZ}}}{I}\\) .",
+       "text": "R = (VYZ)/(I) ."
       },
       {
        "type": "text",
@@ -563,6 +563,12 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "VXY =",
+     "unit": "V"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "VYZ =",
      "unit": "V"
     },
@@ -634,7 +640,7 @@
      "items": [
       "Ensure that the voltmeter is connected between points Y and Z.",
       "Close the switch.",
-      "Hold the card horizontally about 50cm above the LDR.",
+      "Hold the card horizontally about 50 cm above the LDR.",
       "Slowly move the card towards the LDR until it rests on top of the LDR.",
       "Observe the reading on the voltmeter as you move the card."
      ]
@@ -829,6 +835,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -837,8 +844,8 @@
   },
   {
    "type": "text",
-   "html": "You are provided with a series circuit consisting of a power supply, a switch, a 470Ω resistor and an LDR.",
-   "text": "You are provided with a series circuit consisting of a power supply, a switch, a 470Ω resistor and an LDR."
+   "html": "You are provided with a series circuit consisting of a power supply, a switch, a 470 Ω resistor and an LDR.",
+   "text": "You are provided with a series circuit consisting of a power supply, a switch, a 470 Ω resistor and an LDR."
   }
  ]
 }

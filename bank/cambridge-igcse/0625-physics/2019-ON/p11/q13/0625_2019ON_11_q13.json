@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    414.3,
-    316.9,
-    539.8
+    67.5,
+    414.0,
+    317.0,
+    540.0
    ],
    "id": "0625_2019ON_11_q13_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p11/q13/figures/0625_2019ON_11_q13_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p11/q13/figures/0625_2019ON_11_q13_figA",
     "url": null,
-    "kb": 21.8
+    "kb": 21.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row shows the least pressure?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "size of the force/N",
-     "area of the surface <sup>2</sup> /m"
-    ],
-    [
-     "<b>A</b>",
-     "0.30",
-     "0.040"
-    ],
-    [
-     "<b>B</b>",
-     "10",
-     "2.0"
-    ],
-    [
-     "<b>C</b>",
-     "60",
-     "15"
-    ],
-    [
-     "<b>D</b>",
-     "1200",
-     "40"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019ON_11_q13_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0.30 0.040"
+    },
+    {
+     "label": "B",
+     "html": "10 2.0"
+    },
+    {
+     "label": "C",
+     "html": "60 15"
+    },
+    {
+     "label": "D",
+     "html": "1200 40"
+    }
+   ]
   }
  ]
 }

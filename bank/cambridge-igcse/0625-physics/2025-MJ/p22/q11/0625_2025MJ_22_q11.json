@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    429.9,
-    342.6,
-    541.3
+    67.5,
+    429.5,
+    343.0,
+    541.5
    ],
    "id": "0625_2025MJ_22_q11_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p22/q11/figures/0625_2025MJ_22_q11_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p22/q11/figures/0625_2025MJ_22_q11_figA",
     "url": null,
-    "kb": 23.7
+    "kb": 23.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row describes the motion of the smoke particle and of the nitrogen molecule after the collision?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "smoke particle",
-     "nitrogen molecule"
-    ],
-    [
-     "<b>A</b>",
-     "moves",
-     "rebounds"
-    ],
-    [
-     "<b>B</b>",
-     "moves",
-     "stops"
-    ],
-    [
-     "<b>C</b>",
-     "remains stationary",
-     "rebounds"
-    ],
-    [
-     "<b>D</b>",
-     "remains stationary",
-     "stops"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_22_q11_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "moves rebounds"
+    },
+    {
+     "label": "B",
+     "html": "moves stops"
+    },
+    {
+     "label": "C",
+     "html": "remains stationary rebounds"
+    },
+    {
+     "label": "D",
+     "html": "remains stationary stops"
+    }
+   ]
   }
  ]
 }

@@ -33,9 +33,9 @@
    "page": 7,
    "bbox": [
     95.8,
-    84.3,
+    85.0,
     499.0,
-    181.8
+    180.5
    ],
    "id": "0625_2019ON_21_q21_figA",
    "caption": null,
@@ -45,15 +45,15 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p21/q21/figures/0625_2019ON_21_q21_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p21/q21/figures/0625_2019ON_21_q21_figA",
     "url": null,
-    "kb": 16.5
+    "kb": 16.4
    }
   },
   {
    "page": 7,
    "bbox": [
-    67.7,
-    250.6,
-    387.1,
+    67.5,
+    250.5,
+    387.0,
     375.5
    ],
    "id": "0625_2019ON_21_q21_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p21/q21/figures/0625_2019ON_21_q21_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p21/q21/figures/0625_2019ON_21_q21_figB",
     "url": null,
-    "kb": 37.1
+    "kb": 37.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,40 +132,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "A possible way",
-     "A stronger signal is"
-    ],
-    [
-     "",
-     "for this to happen is",
-     "received using"
-    ],
-    [
-     "<b>A</b>",
-     "diffraction round the hill.",
-     "longer wavelengths."
-    ],
-    [
-     "<b>B</b>",
-     "diffraction round the hill.",
-     "shorter wavelengths."
-    ],
-    [
-     "<b>C</b>",
-     "refraction round the hill.",
-     "longer wavelengths."
-    ],
-    [
-     "<b>D</b>",
-     "refraction round the hill.",
-     "shorter wavelengths."
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019ON_21_q21_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "diffraction round the hill. longer wavelengths."
+    },
+    {
+     "label": "B",
+     "html": "diffraction round the hill. shorter wavelengths."
+    },
+    {
+     "label": "C",
+     "html": "refraction round the hill. longer wavelengths."
+    },
+    {
+     "label": "D",
+     "html": "refraction round the hill. shorter wavelengths."
+    }
+   ]
   }
  ]
 }

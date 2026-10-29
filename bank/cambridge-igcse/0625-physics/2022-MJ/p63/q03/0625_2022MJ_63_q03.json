@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 9,
    "bbox": [
-    86.8,
-    135.2,
-    508.4,
-    289.2
+    87.5,
+    138.5,
+    508.0,
+    287.5
    ],
    "id": "0625_2022MJ_63_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 10,
    "bbox": [
-    86.8,
-    109.3,
-    508.4,
-    237.6
+    87.5,
+    111.0,
+    508.0,
+    236.0
    ],
    "id": "0625_2022MJ_63_q03aii_fig3-2",
    "part": "(a)(ii)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 3.3",
    "page": 10,
    "bbox": [
-    121.0,
-    412.1,
-    474.3,
-    593.8
+    120.0,
+    411.5,
+    475.0,
+    592.0
    ],
    "id": "0625_2022MJ_63_q03bi_fig3-3",
    "part": "(b)(i)",
@@ -90,10 +90,10 @@
    "caption": "Fig. 3.4",
    "page": 10,
    "bbox": [
-    121.0,
-    412.1,
-    474.3,
-    593.8
+    120.0,
+    411.5,
+    475.0,
+    592.0
    ],
    "id": "0625_2022MJ_63_q03bi_fig3-4",
    "part": "(b)(i)",
@@ -203,6 +203,11 @@
        "type": "text",
        "html": "On Fig. 3.1, measure the distance <i>f</i><sub>1</sub> between the illuminated triangle and the lens.",
        "text": "On Fig. 3.1, measure the distance f1 between the illuminated triangle and the lens."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "f1 ="
       },
       {
        "type": "text",
@@ -429,9 +434,19 @@
        "text": "Measure hO, the height of the illuminated triangle as shown in Fig. 3.3."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "hO ="
+      },
+      {
        "type": "text",
        "html": "Measure <i>h</i><sub>I</sub>, the height of the image on the screen as shown in Fig. 3.4.",
        "text": "Measure hI, the height of the image on the screen as shown in Fig. 3.4."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "hI ="
       },
       {
        "type": "figure",
@@ -442,11 +457,6 @@
        "type": "figure",
        "id": "0625_2022MJ_63_q03bi_fig3-4",
        "caption": "Fig. 3.4"
-      },
-      {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "hI ="
       },
       {
        "type": "marks",
@@ -520,7 +530,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "improvement",
+       "prefix": "difficulty"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "improvement"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -589,7 +608,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a value <i>W </i>using the equation <i>W</i> = \\(\\frac{<i>h</i><sub>O</sub>}{<i>h</i>}\\).",
+       "html": "Calculate a value <i>W </i>using the equation <i>W</i> = \\(\\frac{h_{O}}{h}\\).",
        "text": "Calculate a value W using the equation W = (hO)/(h)."
       },
       {
@@ -598,8 +617,13 @@
        "text": "I"
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "W ="
+      },
+      {
        "type": "text",
-       "html": "Calculate a second value <i>F</i><sub>2</sub> for the focal length of the lens, using the equation <i>F</i><sub>2</sub> = \\(\\frac{<i>U</i>}{(<i>W</i> + 1)}\\)<i>.</i>",
+       "html": "Calculate a second value <i>F</i><sub>2</sub> for the focal length of the lens, using the equation <i>F</i><sub>2</sub> = \\(\\frac{U}{(W + 1)}\\)<i>.</i>",
        "text": "Calculate a second value F2 for the focal length of the lens, using the equation F2 = (U)/((W + 1))."
       },
       {
@@ -689,7 +713,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -789,6 +822,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

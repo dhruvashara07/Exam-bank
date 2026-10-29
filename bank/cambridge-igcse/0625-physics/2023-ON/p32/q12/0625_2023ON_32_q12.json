@@ -33,10 +33,10 @@
    "caption": "Table 12.1",
    "page": 19,
    "bbox": [
-    46.6,
-    110.0,
-    548.7,
-    223.0
+    46.5,
+    113.5,
+    549.0,
+    223.5
    ],
    "id": "0625_2023ON_32_q12_table12-1",
    "part": "",
@@ -188,7 +188,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -267,7 +276,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "Mercury is"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "Jupiter is"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -293,6 +311,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -300,29 +319,9 @@
    "text": "There are eight planets in our Solar System. Table 12.1 shows the names of some of the planets in order of distance from the Sun."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "Mercury",
-     "",
-     "",
-     "",
-     "Jupiter",
-     "",
-     "",
-     "Neptune"
-    ],
-    [
-     "increasing distance from the Sun",
-     "",
-     "",
-     "",
-     "",
-     "",
-     "",
-     ""
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2023ON_32_q12_table12-1",
+   "caption": "Table 12.1"
   }
  ]
 }

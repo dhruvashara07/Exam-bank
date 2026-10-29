@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    180.5,
-    110.5,
-    414.5,
-    155.6
+    180.0,
+    110.0,
+    415.0,
+    156.0
    ],
    "id": "0625_2024ON_11_q09_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    187.9,
-    356.6,
-    313.4
+    67.5,
+    187.5,
+    357.0,
+    313.5
    ],
    "id": "0625_2024ON_11_q09_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p11/q09/figures/0625_2024ON_11_q09_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p11/q09/figures/0625_2024ON_11_q09_figB",
     "url": null,
-    "kb": 29.6
+    "kb": 29.5
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A moving object is brought to rest by a frictional force of 30 N over a distance of 5.0m.",
-   "text": "A moving object is brought to rest by a frictional force of 30 N over a distance of 5.0m."
+   "html": "A moving object is brought to rest by a frictional force of 30 N over a distance of 5.0 m.",
+   "text": "A moving object is brought to rest by a frictional force of 30 N over a distance of 5.0 m."
   },
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "How much energy is transferred by this force and how is the energy transferred?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "energy transferred/J",
-     "how the energy is transferred"
-    ],
-    [
-     "<b>A</b>",
-     "6.0",
-     "by electrical working"
-    ],
-    [
-     "<b>B</b>",
-     "6.0",
-     "by mechanical working"
-    ],
-    [
-     "<b>C</b>",
-     "150",
-     "by electrical working"
-    ],
-    [
-     "<b>D</b>",
-     "150",
-     "by mechanical working"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_11_q09_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "6.0 by electrical working"
+    },
+    {
+     "label": "B",
+     "html": "6.0 by mechanical working"
+    },
+    {
+     "label": "C",
+     "html": "150 by electrical working"
+    },
+    {
+     "label": "D",
+     "html": "150 by mechanical working"
+    }
+   ]
   }
  ]
 }

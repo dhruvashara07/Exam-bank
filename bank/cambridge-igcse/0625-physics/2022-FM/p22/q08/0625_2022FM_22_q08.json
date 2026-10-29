@@ -51,10 +51,10 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    411.7,
+    67.5,
+    411.5,
     375.5,
-    536.7
+    537.0
    ],
    "id": "0625_2022FM_22_q08_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,40 +137,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "direction of resultant",
-     "direction of resultant"
-    ],
-    [
-     "",
-     "moment about point M",
-     "force on the rule"
-    ],
-    [
-     "<b>A</b>",
-     "clockwise",
-     "downwards"
-    ],
-    [
-     "<b>B</b>",
-     "clockwise",
-     "zero"
-    ],
-    [
-     "<b>C</b>",
-     "zero",
-     "downwards"
-    ],
-    [
-     "<b>D</b>",
-     "zero",
-     "zero"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022FM_22_q08_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "clockwise downwards"
+    },
+    {
+     "label": "B",
+     "html": "clockwise zero"
+    },
+    {
+     "label": "C",
+     "html": "zero downwards"
+    },
+    {
+     "label": "D",
+     "html": "zero zero"
+    }
+   ]
   }
  ]
 }

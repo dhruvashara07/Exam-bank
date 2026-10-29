@@ -33,9 +33,9 @@
    "page": 8,
    "bbox": [
     113.2,
-    107.7,
-    409.9,
-    187.8
+    98.9,
+    482.0,
+    188.5
    ],
    "id": "0625_2018FM_12_q15_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-FM/p12/q15/figures/0625_2018FM_12_q15_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-FM/p12/q15/figures/0625_2018FM_12_q15_figA",
     "url": null,
-    "kb": 13.5
+    "kb": 15.5
    }
   },
   {
    "page": 8,
    "bbox": [
     117.7,
-    230.6,
-    401.3,
-    310.7
+    221.8,
+    476.8,
+    311.5
    ],
    "id": "0625_2018FM_12_q15_figB",
    "caption": null,
@@ -64,16 +64,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-FM/p12/q15/figures/0625_2018FM_12_q15_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-FM/p12/q15/figures/0625_2018FM_12_q15_figB",
     "url": null,
-    "kb": 9.4
+    "kb": 11.6
    }
   },
   {
    "page": 8,
    "bbox": [
-    67.7,
-    343.2,
-    458.2,
-    454.6
+    67.5,
+    343.0,
+    458.5,
+    454.5
    ],
    "id": "0625_2018FM_12_q15_figC",
    "caption": null,
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-FM/p12/q15/figures/0625_2018FM_12_q15_figC.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-FM/p12/q15/figures/0625_2018FM_12_q15_figC",
     "url": null,
-    "kb": 37.4
+    "kb": 37.2
    }
   }
  ],
@@ -128,16 +128,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
    "html": "A cylinder with a tap contains a fixed mass of gas X. The gas is contained by a piston which can move freely towards or away from the tap.",
    "text": "A cylinder with a tap contains a fixed mass of gas X. The gas is contained by a piston which can move freely towards or away from the tap."
-  },
-  {
-   "type": "text",
-   "html": "atmosphere",
-   "text": "atmosphere"
   },
   {
    "type": "figure",
@@ -150,11 +146,6 @@
    "text": "When the tap is opened, the piston moves slightly to the right, towards the tap."
   },
   {
-   "type": "text",
-   "html": "atmosphere",
-   "text": "atmosphere"
-  },
-  {
    "type": "figure",
    "id": "0625_2018FM_12_q15_figB",
    "caption": null
@@ -165,35 +156,30 @@
    "text": "What can be deduced about the pressure of gas X?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "before opening tap",
-     "after opening tap"
-    ],
-    [
-     "<b>A</b>",
-     "less than atmospheric pressure",
-     "more than atmospheric pressure"
-    ],
-    [
-     "<b>B</b>",
-     "same as atmospheric pressure",
-     "more than atmospheric pressure"
-    ],
-    [
-     "<b>C</b>",
-     "more than atmospheric pressure",
-     "less than atmospheric pressure"
-    ],
-    [
-     "<b>D</b>",
-     "more than atmospheric pressure",
-     "same as atmospheric pressure"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018FM_12_q15_figC",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "less than atmospheric pressure more than atmospheric pressure"
+    },
+    {
+     "label": "B",
+     "html": "same as atmospheric pressure more than atmospheric pressure"
+    },
+    {
+     "label": "C",
+     "html": "more than atmospheric pressure less than atmospheric pressure"
+    },
+    {
+     "label": "D",
+     "html": "more than atmospheric pressure same as atmospheric pressure"
+    }
+   ]
   }
  ]
 }

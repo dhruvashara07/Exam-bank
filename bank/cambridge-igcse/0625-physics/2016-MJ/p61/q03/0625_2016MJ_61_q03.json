@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 6,
    "bbox": [
-    135.3,
-    117.4,
-    447.2,
-    326.9
+    135.0,
+    120.0,
+    447.0,
+    327.0
    ],
    "id": "0625_2016MJ_61_q03_fig3-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p61/q03/figures/0625_2016MJ_61_q03_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p61/q03/figures/0625_2016MJ_61_q03_fig3-1",
     "url": null,
-    "kb": 20.6
+    "kb": 20.5
    }
   },
   {
    "caption": "Table 3.1",
    "page": 6,
    "bbox": [
-    98.9,
-    491.7,
-    496.4,
-    670.4
+    98.5,
+    491.5,
+    496.5,
+    670.5
    ],
    "id": "0625_2016MJ_61_q03aii_table3-1",
    "part": "(a)(ii)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p61/q03/figures/0625_2016MJ_61_q03aii_table3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p61/q03/figures/0625_2016MJ_61_q03aii_table3-1",
     "url": null,
-    "kb": 30.2
+    "kb": 30.1
    }
   }
  ],
@@ -163,7 +163,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i> of the lamp filament for each set of readings. Use the equation <i> R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\) .",
+       "html": "Calculate the resistance <i>R</i> of the lamp filament for each set of readings. Use the equation <i> R</i> = \\(\\frac{V}{I}\\) .",
        "text": "Calculate the resistance R of the lamp filament for each set of readings. Use the equation R = (V)/(I) ."
       },
       {
@@ -235,44 +235,9 @@
        "text": "Complete the column headings in the table."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>d</i> /",
-         "<i>V</i> /",
-         "<i>I</i> /",
-         "<i>R</i> /",
-         "appearance of lamp filament"
-        ],
-        [
-         "0.200",
-         "1.6",
-         "1.00",
-         "",
-         "very bright"
-        ],
-        [
-         "0.400",
-         "1.3",
-         "0.86",
-         "",
-         "bright"
-        ],
-        [
-         "0.600",
-         "1.0",
-         "0.74",
-         "",
-         "dim"
-        ],
-        [
-         "0.800",
-         "0.8",
-         "0.66",
-         "",
-         "does not glow"
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2016MJ_61_q03aii_table3-1",
+       "caption": "Table 3.1"
       },
       {
        "type": "marks",
@@ -365,7 +330,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "reason",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "reason"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -632,6 +606,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

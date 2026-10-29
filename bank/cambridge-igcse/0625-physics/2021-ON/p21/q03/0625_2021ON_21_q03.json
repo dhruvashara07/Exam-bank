@@ -32,9 +32,9 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
+    67.5,
     617.0,
-    285.2,
+    285.5,
     742.0
    ],
    "id": "0625_2021ON_21_q03_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p21/q03/figures/0625_2021ON_21_q03_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p21/q03/figures/0625_2021ON_21_q03_figA",
     "url": null,
-    "kb": 18.4
+    "kb": 18.3
    }
   }
  ],
@@ -90,47 +90,43 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "An object has a weight of 6.4N on the Earth where the gravitational field strength is 10N/kg.",
-   "text": "An object has a weight of 6.4N on the Earth where the gravitational field strength is 10N/kg."
+   "html": "An object has a weight of 6.4 N on the Earth where the gravitational field strength is 10 N / kg.",
+   "text": "An object has a weight of 6.4 N on the Earth where the gravitational field strength is 10 N / kg."
   },
   {
    "type": "text",
-   "html": "Which row states the mass and the weight of the object on the Moon where the gravitational field strength is 1.6N/kg?",
-   "text": "Which row states the mass and the weight of the object on the Moon where the gravitational field strength is 1.6N/kg?"
+   "html": "Which row states the mass and the weight of the object on the Moon where the gravitational field strength is 1.6 N / kg?",
+   "text": "Which row states the mass and the weight of the object on the Moon where the gravitational field strength is 1.6 N / kg?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass/kg",
-     "weight on the Moon/N"
-    ],
-    [
-     "<b>A</b>",
-     "0.64",
-     "1.0"
-    ],
-    [
-     "<b>B</b>",
-     "0.64",
-     "6.4"
-    ],
-    [
-     "<b>C</b>",
-     "4.0",
-     "1.0"
-    ],
-    [
-     "<b>D</b>",
-     "4.0",
-     "6.4"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_21_q03_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0.64 1.0"
+    },
+    {
+     "label": "B",
+     "html": "0.64 6.4"
+    },
+    {
+     "label": "C",
+     "html": "4.0 1.0"
+    },
+    {
+     "label": "D",
+     "html": "4.0 6.4"
+    }
+   ]
   }
  ]
 }

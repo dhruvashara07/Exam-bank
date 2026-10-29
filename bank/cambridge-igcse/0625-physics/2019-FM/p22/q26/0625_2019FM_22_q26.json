@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    122.6,
-    421.1,
-    233.9
+    67.5,
+    122.5,
+    421.0,
+    234.0
    ],
    "id": "0625_2019FM_22_q26_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-FM/p22/q26/figures/0625_2019FM_22_q26_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-FM/p22/q26/figures/0625_2019FM_22_q26_figA",
     "url": null,
-    "kb": 32.5
+    "kb": 32.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which descriptions apply to this sound wave?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "the type of wave motion",
-     "the frequency of the sound"
-    ],
-    [
-     "<b>A</b>",
-     "longitudinal",
-     "outside human hearing range"
-    ],
-    [
-     "<b>B</b>",
-     "longitudinal",
-     "within human hearing range"
-    ],
-    [
-     "<b>C</b>",
-     "transverse",
-     "outside human hearing range"
-    ],
-    [
-     "<b>D</b>",
-     "transverse",
-     "within human hearing range"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019FM_22_q26_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "longitudinal outside human hearing range"
+    },
+    {
+     "label": "B",
+     "html": "longitudinal within human hearing range"
+    },
+    {
+     "label": "C",
+     "html": "transverse outside human hearing range"
+    },
+    {
+     "label": "D",
+     "html": "transverse within human hearing range"
+    }
+   ]
   }
  ]
 }

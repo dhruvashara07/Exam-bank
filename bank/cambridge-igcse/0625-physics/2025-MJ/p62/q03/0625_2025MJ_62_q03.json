@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 10,
    "bbox": [
-    44.6,
-    257.9,
-    550.7,
-    439.9
+    44.5,
+    258.5,
+    551.0,
+    440.0
    ],
    "id": "0625_2025MJ_62_q03a_fig3-1",
    "part": "(a)",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 11,
    "bbox": [
-    116.2,
-    143.0,
-    438.6,
-    299.3
+    115.5,
+    142.0,
+    438.0,
+    299.5
    ],
    "id": "0625_2025MJ_62_q03bi_fig3-2",
    "part": "(b)(i)",
@@ -162,8 +162,8 @@
      "content": [
       {
        "type": "text",
-       "html": "On Fig. 3.1, measure, to the nearest 0.1cm, the object distance x from the centre of the lens to the illuminated object.",
-       "text": "On Fig. 3.1, measure, to the nearest 0.1cm, the object distance x from the centre of the lens to the illuminated object."
+       "html": "On Fig. 3.1, measure, to the nearest 0.1 cm, the object distance x from the centre of the lens to the illuminated object.",
+       "text": "On Fig. 3.1, measure, to the nearest 0.1 cm, the object distance x from the centre of the lens to the illuminated object."
       },
       {
        "type": "answer",
@@ -268,7 +268,7 @@
      "type": "list",
      "items": [
       "switches on the lamp",
-      "places the screen a distance D = 80.0cm from the illuminated object (a triangular hole in a piece of card)",
+      "places the screen a distance D = 80.0 cm from the illuminated object (a triangular hole in a piece of card)",
       "places the lens close to the illuminated object",
       "moves the lens away from the illuminated object until a magnified, inverted, sharp image of the illuminated object is formed on the screen."
      ]
@@ -484,13 +484,13 @@
      "type": "list",
      "items": [
       "continues to move the lens away from the illuminated object until a second sharp image, which is diminished and inverted, is formed on the screen",
-      "measures, to the nearest 0.1cm, the object distance Y from the centre of the lens to the illuminated object."
+      "measures, to the nearest 0.1 cm, the object distance Y from the centre of the lens to the illuminated object."
      ]
     },
     {
      "type": "text",
-     "html": "59.8cm",
-     "text": "59.8cm"
+     "html": "59.8 cm",
+     "text": "59.8 cm"
     },
     {
      "type": "answer",
@@ -564,8 +564,8 @@
     },
     {
      "type": "text",
-     "html": "f = \\(\\frac{(D<sup>2</sup>–d<sup>2</sup>)}{4D}\\).",
-     "text": "f = ((D2–d2))/(4D)."
+     "html": "f = \\(\\frac{(D^{2} – d^{2})}{4D}\\) .",
+     "text": "f = ((D2–d2))/(4D) ."
     },
     {
      "type": "text",
@@ -648,8 +648,8 @@
    "content": [
     {
      "type": "text",
-     "html": "The student repeats the procedure in (a) and (b) for an object to screen distance D = 100.0cm.",
-     "text": "The student repeats the procedure in (a) and (b) for an object to screen distance D = 100.0cm."
+     "html": "The student repeats the procedure in (a) and (b) for an object to screen distance D = 100.0 cm.",
+     "text": "The student repeats the procedure in (a) and (b) for an object to screen distance D = 100.0 cm."
     },
     {
      "type": "text",
@@ -658,18 +658,33 @@
     },
     {
      "type": "text",
-     "html": "18.1cm",
-     "text": "18.1cm"
+     "html": "18.1 cm",
+     "text": "18.1 cm"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "X ="
     },
     {
      "type": "text",
-     "html": "81.8cm",
-     "text": "81.8cm"
+     "html": "81.8 cm",
+     "text": "81.8 cm"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Y ="
     },
     {
      "type": "text",
-     "html": "63.7cm",
-     "text": "63.7cm"
+     "html": "63.7 cm",
+     "text": "63.7 cm"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "d ="
     },
     {
      "type": "text",
@@ -764,7 +779,11 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "statement",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -956,6 +975,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

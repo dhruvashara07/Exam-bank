@@ -32,9 +32,9 @@
   {
    "page": 9,
    "bbox": [
-    54.2,
+    53.5,
     423.5,
-    541.2,
+    542.0,
     568.0
    ],
    "id": "0625_2015ON_11_q22_figA",
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p11/q22/figures/0625_2015ON_11_q22_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p11/q22/figures/0625_2015ON_11_q22_figA",
     "url": null,
-    "kb": 19.3
+    "kb": 19.2
    }
   },
   {
    "page": 9,
    "bbox": [
-    69.3,
-    601.3,
-    245.8,
-    726.8
+    69.0,
+    601.0,
+    246.0,
+    727.0
    ],
    "id": "0625_2015ON_11_q22_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p11/q22/figures/0625_2015ON_11_q22_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p11/q22/figures/0625_2015ON_11_q22_figB",
     "url": null,
-    "kb": 20.0
+    "kb": 19.7
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row shows what happens to the light when it reaches the surface of the glass rod?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "any light",
-     "any light"
-    ],
-    [
-     "",
-     "reflected?",
-     "refracted?"
-    ],
-    [
-     "A",
-     "no",
-     "no"
-    ],
-    [
-     "B",
-     "no",
-     "yes"
-    ],
-    [
-     "C",
-     "yes",
-     "no"
-    ],
-    [
-     "D",
-     "yes",
-     "yes"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015ON_11_q22_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "no no"
+    },
+    {
+     "label": "B",
+     "html": "no yes"
+    },
+    {
+     "label": "C",
+     "html": "yes no"
+    },
+    {
+     "label": "D",
+     "html": "yes yes"
+    }
+   ]
   }
  ]
 }

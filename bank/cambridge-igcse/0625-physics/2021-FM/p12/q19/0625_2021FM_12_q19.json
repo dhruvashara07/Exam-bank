@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.9,
-    423.9,
+    130.3,
+    450.5,
     464.1,
-    559.4
+    560.0
    ],
    "id": "0625_2021FM_12_q19_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-FM/p12/q19/figures/0625_2021FM_12_q19_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-FM/p12/q19/figures/0625_2021FM_12_q19_figA",
     "url": null,
-    "kb": 48.4
+    "kb": 40.0
    }
   },
   {
    "page": 8,
    "bbox": [
-    67.7,
-    604.6,
-    322.2,
-    730.1
+    67.5,
+    604.5,
+    322.5,
+    730.5
    ],
    "id": "0625_2021FM_12_q19_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-FM/p12/q19/figures/0625_2021FM_12_q19_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-FM/p12/q19/figures/0625_2021FM_12_q19_figB",
     "url": null,
-    "kb": 25.9
+    "kb": 25.8
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A piece of melting ice at 0°C and a beaker of boiling water are both in a laboratory. The",
-   "text": "A piece of melting ice at 0°C and a beaker of boiling water are both in a laboratory. The"
+   "html": "A piece of melting ice at 0 °C and a beaker of boiling water are both in a laboratory. The laboratory is at 20 °C.",
+   "text": "A piece of melting ice at 0 °C and a beaker of boiling water are both in a laboratory. The laboratory is at 20 °C."
   },
   {
    "type": "figure",
@@ -126,40 +127,30 @@
    "text": "What is happening to the temperature of the melting ice and what is happening to the temperature of the boiling water?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "temperature of",
-     "temperature of"
-    ],
-    [
-     "",
-     "melting ice",
-     "boiling water"
-    ],
-    [
-     "<b>A</b>",
-     "constant",
-     "constant"
-    ],
-    [
-     "<b>B</b>",
-     "constant",
-     "increasing"
-    ],
-    [
-     "<b>C</b>",
-     "increasing",
-     "constant"
-    ],
-    [
-     "<b>D</b>",
-     "increasing",
-     "increasing"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021FM_12_q19_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "constant constant"
+    },
+    {
+     "label": "B",
+     "html": "constant increasing"
+    },
+    {
+     "label": "C",
+     "html": "increasing constant"
+    },
+    {
+     "label": "D",
+     "html": "increasing increasing"
+    }
+   ]
   }
  ]
 }

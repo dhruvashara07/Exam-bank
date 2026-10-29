@@ -34,7 +34,7 @@
    "bbox": [
     221.2,
     372.1,
-    373.6,
+    374.0,
     537.9
    ],
    "id": "0625_2016MJ_11_q33_figA",
@@ -51,9 +51,9 @@
   {
    "page": 14,
    "bbox": [
-    67.6,
-    609.2,
-    322.2,
+    67.5,
+    609.0,
+    322.5,
     720.5
    ],
    "id": "0625_2016MJ_11_q33_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p11/q33/figures/0625_2016MJ_11_q33_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p11/q33/figures/0625_2016MJ_11_q33_figB",
     "url": null,
-    "kb": 24.2
+    "kb": 23.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Which row shows the effect on the resistance of the light-dependent resistor (LDR) and on the potential difference (p.d.) across it?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "resistance of LDR",
-     "p.d. across LDR"
-    ],
-    [
-     "A",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "B",
-     "decreases",
-     "increases"
-    ],
-    [
-     "C",
-     "increases",
-     "decreases"
-    ],
-    [
-     "D",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_11_q33_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

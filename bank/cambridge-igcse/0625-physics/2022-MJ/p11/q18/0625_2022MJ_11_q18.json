@@ -33,9 +33,9 @@
    "page": 9,
    "bbox": [
     235.7,
-    98.0,
-    359.4,
-    215.7
+    97.5,
+    359.5,
+    216.5
    ],
    "id": "0625_2022MJ_11_q18_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    248.2,
-    318.2,
-    359.6
+    67.5,
+    248.0,
+    318.5,
+    359.5
    ],
    "id": "0625_2022MJ_11_q18_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p11/q18/figures/0625_2022MJ_11_q18_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p11/q18/figures/0625_2022MJ_11_q18_figB",
     "url": null,
-    "kb": 26.6
+    "kb": 26.5
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row correctly compares the temperatures and densities at water points P and Q?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "temperature at P",
-     "density at P"
-    ],
-    [
-     "<b>A</b>",
-     "higher than at Q",
-     "higher than at Q"
-    ],
-    [
-     "<b>B</b>",
-     "higher than at Q",
-     "lower than at Q"
-    ],
-    [
-     "<b>C</b>",
-     "lower than at Q",
-     "higher than at Q"
-    ],
-    [
-     "<b>D</b>",
-     "lower than at Q",
-     "lower than at Q"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_11_q18_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "higher than at Q higher than at Q"
+    },
+    {
+     "label": "B",
+     "html": "higher than at Q lower than at Q"
+    },
+    {
+     "label": "C",
+     "html": "lower than at Q higher than at Q"
+    },
+    {
+     "label": "D",
+     "html": "lower than at Q lower than at Q"
+    }
+   ]
   }
  ]
 }

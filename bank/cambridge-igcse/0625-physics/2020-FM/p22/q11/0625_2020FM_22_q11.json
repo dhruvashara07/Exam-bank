@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    575.3,
-    393.1,
-    686.6
+    67.5,
+    575.0,
+    393.0,
+    687.0
    ],
    "id": "0625_2020FM_22_q11_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-FM/p22/q11/figures/0625_2020FM_22_q11_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-FM/p22/q11/figures/0625_2020FM_22_q11_figA",
     "url": null,
-    "kb": 28.0
+    "kb": 27.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row describes an advantage and a disadvantage of wind turbines?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "advantage",
-     "disadvantage"
-    ],
-    [
-     "<b>A</b>",
-     "no fuel needed",
-     "harmful gases released"
-    ],
-    [
-     "<b>B</b>",
-     "variable supply",
-     "fuel needed"
-    ],
-    [
-     "<b>C</b>",
-     "no harmful gases released",
-     "variable supply"
-    ],
-    [
-     "<b>D</b>",
-     "constant supply",
-     "noisy"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020FM_22_q11_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "no fuel needed harmful gases released"
+    },
+    {
+     "label": "B",
+     "html": "variable supply fuel needed"
+    },
+    {
+     "label": "C",
+     "html": "no harmful gases released variable supply"
+    },
+    {
+     "label": "D",
+     "html": "constant supply noisy"
+    }
+   ]
   }
  ]
 }

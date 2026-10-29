@@ -51,10 +51,10 @@
   {
    "page": 15,
    "bbox": [
-    67.7,
+    67.5,
     479.5,
-    314.6,
-    590.8
+    315.0,
+    591.0
    ],
    "id": "0625_2020FM_22_q29_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-FM/p22/q29/figures/0625_2020FM_22_q29_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-FM/p22/q29/figures/0625_2020FM_22_q29_figB",
     "url": null,
-    "kb": 20.1
+    "kb": 20.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -141,40 +142,30 @@
    "text": "Which row correctly identifies the metal rods?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "P",
-     "Q",
-     "R"
-    ],
-    [
-     "<b>A</b>",
-     "copper",
-     "soft iron",
-     "steel"
-    ],
-    [
-     "<b>B</b>",
-     "soft iron",
-     "copper",
-     "steel"
-    ],
-    [
-     "<b>C</b>",
-     "steel",
-     "soft iron",
-     "copper"
-    ],
-    [
-     "<b>D</b>",
-     "copper",
-     "steel",
-     "soft iron"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020FM_22_q29_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "copper soft iron steel"
+    },
+    {
+     "label": "B",
+     "html": "soft iron copper steel"
+    },
+    {
+     "label": "C",
+     "html": "steel soft iron copper"
+    },
+    {
+     "label": "D",
+     "html": "copper steel soft iron"
+    }
+   ]
   }
  ]
 }

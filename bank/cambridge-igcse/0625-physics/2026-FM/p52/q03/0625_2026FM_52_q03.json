@@ -33,10 +33,10 @@
    "caption": "Figure 3.1",
    "page": 8,
    "bbox": [
-    115.2,
-    163.3,
-    249.7,
-    311.0
+    114.5,
+    163.0,
+    250.0,
+    311.5
    ],
    "id": "0625_2026FM_52_q03ai_fig3-1",
    "part": "(a)(i)",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 8,
    "bbox": [
-    114.7,
-    463.0,
-    446.8,
-    631.1
+    114.5,
+    464.0,
+    447.0,
+    631.5
    ],
    "id": "0625_2026FM_52_q03ai_table3-1",
    "part": "(a)(i)",
@@ -71,10 +71,10 @@
    "caption": "Figure 3.2",
    "page": 9,
    "bbox": [
-    114.7,
-    163.3,
-    289.0,
-    375.1
+    115.5,
+    163.0,
+    288.5,
+    375.5
    ],
    "id": "0625_2026FM_52_q03aii_fig3-2",
    "part": "(a)(ii)",
@@ -90,10 +90,10 @@
    "caption": "Figure 3.3",
    "page": 10,
    "bbox": [
-    115.2,
-    267.3,
-    337.3,
-    512.6
+    114.5,
+    267.0,
+    337.5,
+    513.0
    ],
    "id": "0625_2026FM_52_q03av_fig3-3",
    "part": "(a)(v)",
@@ -109,10 +109,10 @@
    "caption": "Figure 3.4",
    "page": 11,
    "bbox": [
-    210.5,
-    163.3,
-    384.8,
-    441.6
+    211.0,
+    163.0,
+    384.5,
+    442.0
    ],
    "id": "0625_2026FM_52_q03bi_fig3-4",
    "part": "(b)(i)",
@@ -209,56 +209,14 @@
        "text": "Circuit 1."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "A",
-         "",
-         "",
-         ""
-        ],
-        [
-         "V",
-         "",
-         "",
-         ""
-        ],
-        [
-         "P Q",
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "V",
-         "",
-         ""
-        ],
-        [
-         "",
-         "P Q",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2026FM_52_q03ai_fig3-1",
+       "caption": "Figure 3.1"
       },
       {
        "type": "text",
-       "html": "Circuit 1 contains one resistor of resistance XΩ.",
-       "text": "Circuit 1 contains one resistor of resistance XΩ."
+       "html": "Circuit 1 contains one resistor of resistance X Ω.",
+       "text": "Circuit 1 contains one resistor of resistance X Ω."
       },
       {
        "type": "text",
@@ -280,33 +238,9 @@
        "text": "Complete the table headings in Table 3.1 by inserting the missing units."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "circuit",
-         "V/…",
-         "I/…",
-         "R/Ω"
-        ],
-        [
-         "1",
-         "",
-         "",
-         ""
-        ],
-        [
-         "2",
-         "",
-         "",
-         ""
-        ],
-        [
-         "4",
-         "",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2026FM_52_q03ai_table3-1",
+       "caption": "Table 3.1"
       },
       {
        "type": "answer",
@@ -397,70 +331,14 @@
        "text": "Circuit 2."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "A",
-         "",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "V",
-         "",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "P",
-         "",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "V",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         "",
-         "",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2026FM_52_q03aii_fig3-2",
+       "caption": "Figure 3.2"
       },
       {
        "type": "text",
-       "html": "Circuit 2 contains four identical resistors each of resistance XΩ.",
-       "text": "Circuit 2 contains four identical resistors each of resistance XΩ."
+       "html": "Circuit 2 contains four identical resistors each of resistance X Ω.",
+       "text": "Circuit 2 contains four identical resistors each of resistance X Ω."
       },
       {
        "type": "text",
@@ -642,7 +520,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -719,79 +606,9 @@
        "text": "Circuit 3."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "A",
-         "",
-         "",
-         "",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "V",
-         "",
-         "",
-         "",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "V",
-         "",
-         "",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         "",
-         "",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         "",
-         "",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         "",
-         "",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         "",
-         "",
-         "",
-         "",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2026FM_52_q03av_fig3-3",
+       "caption": "Figure 3.3"
       },
       {
        "type": "text",
@@ -800,8 +617,8 @@
       },
       {
        "type": "text",
-       "html": "Circuit 3 contains nine identical resistors each of resistance XΩ.",
-       "text": "Circuit 3 contains nine identical resistors each of resistance XΩ."
+       "html": "Circuit 3 contains nine identical resistors each of resistance X Ω.",
+       "text": "Circuit 3 contains nine identical resistors each of resistance X Ω."
       },
       {
        "type": "text",
@@ -812,6 +629,10 @@
        "type": "answer",
        "kind": "answer_line",
        "unit": "Ω"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -1088,6 +909,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

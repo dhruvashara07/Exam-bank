@@ -32,7 +32,7 @@
   {
    "page": 6,
    "bbox": [
-    169.6,
+    169.0,
     86.8,
     426.0,
     185.2
@@ -51,10 +51,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    256.6,
-    509.9,
-    367.9
+    67.5,
+    256.5,
+    510.0,
+    368.0
    ],
    "id": "0625_2025MJ_11_q14_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p11/q14/figures/0625_2025MJ_11_q14_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p11/q14/figures/0625_2025MJ_11_q14_figB",
     "url": null,
-    "kb": 40.2
+    "kb": 40.1
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Which row explains what happens to the pressure of the gas in the syringe?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "pressure of gas",
-     "explanation"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "gas particles collide with the syringe wall less frequently"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "gas particles collide with the syringe wall more frequently"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "gas particles collide with the syringe wall less frequently"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "gas particles collide with the syringe wall more frequently"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_11_q14_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases gas particles collide with the syringe wall less frequently"
+    },
+    {
+     "label": "B",
+     "html": "decreases gas particles collide with the syringe wall more frequently"
+    },
+    {
+     "label": "C",
+     "html": "increases gas particles collide with the syringe wall less frequently"
+    },
+    {
+     "label": "D",
+     "html": "increases gas particles collide with the syringe wall more frequently"
+    }
+   ]
   }
  ]
 }

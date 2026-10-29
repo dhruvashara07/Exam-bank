@@ -34,7 +34,7 @@
    "bbox": [
     130.7,
     100.3,
-    463.9,
+    463.5,
     242.8
    ],
    "id": "0625_2024ON_21_q16_figA",
@@ -51,10 +51,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
-    288.7,
-    311.2,
-    413.8
+    67.5,
+    288.5,
+    311.5,
+    414.0
    ],
    "id": "0625_2024ON_21_q16_figB",
    "caption": null,
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A block of ice is at a temperature of –100°C. Energy is supplied at a constant rate. The graph shows how its temperature changes.",
-   "text": "A block of ice is at a temperature of –100°C. Energy is supplied at a constant rate. The graph shows how its temperature changes."
+   "html": "A block of ice is at a temperature of –100 °C. Energy is supplied at a constant rate. The graph shows how its temperature changes.",
+   "text": "A block of ice is at a temperature of –100 °C. Energy is supplied at a constant rate. The graph shows how its temperature changes."
   },
   {
    "type": "figure",
@@ -126,40 +127,30 @@
    "text": "At which points have the ice completely changed state to water and all the water completely changed state to steam?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "completely",
-     "completely"
-    ],
-    [
-     "",
-     "changed to water",
-     "changed to steam"
-    ],
-    [
-     "<b>A</b>",
-     "1",
-     "3"
-    ],
-    [
-     "<b>B</b>",
-     "1",
-     "4"
-    ],
-    [
-     "<b>C</b>",
-     "2",
-     "3"
-    ],
-    [
-     "<b>D</b>",
-     "2",
-     "4"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_21_q16_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "1 3"
+    },
+    {
+     "label": "B",
+     "html": "1 4"
+    },
+    {
+     "label": "C",
+     "html": "2 3"
+    },
+    {
+     "label": "D",
+     "html": "2 4"
+    }
+   ]
   }
  ]
 }

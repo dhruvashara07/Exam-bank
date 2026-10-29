@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    109.9,
-    362.2,
-    221.3
+    67.5,
+    109.5,
+    362.5,
+    221.5
    ],
    "id": "0625_2024ON_13_q36_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which words correctly complete gaps 1 and 2?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "1",
-     "2"
-    ],
-    [
-     "<b>A</b>",
-     "half of the time taken",
-     "nucleon number of"
-    ],
-    [
-     "<b>B</b>",
-     "half of the time taken",
-     "number of nuclei in"
-    ],
-    [
-     "<b>C</b>",
-     "the time taken",
-     "nucleon number of"
-    ],
-    [
-     "<b>D</b>",
-     "the time taken",
-     "number of nuclei in"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_13_q36_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "half of the time taken nucleon number of"
+    },
+    {
+     "label": "B",
+     "html": "half of the time taken number of nuclei in"
+    },
+    {
+     "label": "C",
+     "html": "the time taken nucleon number of"
+    },
+    {
+     "label": "D",
+     "html": "the time taken number of nuclei in"
+    }
+   ]
   }
  ]
 }

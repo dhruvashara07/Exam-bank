@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    217.3,
+    217.0,
     111.9,
-    378.2,
-    145.4
+    378.5,
+    146.0
    ],
    "id": "0625_2016ON_11_q31_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 14,
    "bbox": [
-    69.4,
-    215.8,
-    279.3,
-    327.2
+    69.0,
+    215.5,
+    279.5,
+    327.5
    ],
    "id": "0625_2016ON_11_q31_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p11/q31/figures/0625_2016ON_11_q31_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p11/q31/figures/0625_2016ON_11_q31_figB",
     "url": null,
-    "kb": 21.5
+    "kb": 21.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,35 +137,30 @@
    "text": "Which row shows what happens to the resistance of the thermistor and what happens to the current?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "resistance",
-     "current"
-    ],
-    [
-     "<b>A</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "increases",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "stays the same",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "stays the same",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_11_q31_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "increases decreases"
+    },
+    {
+     "label": "B",
+     "html": "increases increases"
+    },
+    {
+     "label": "C",
+     "html": "stays the same decreases"
+    },
+    {
+     "label": "D",
+     "html": "stays the same increases"
+    }
+   ]
   }
  ]
 }

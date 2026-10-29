@@ -32,10 +32,10 @@
   {
    "page": 2,
    "bbox": [
-    178.8,
-    321.1,
-    416.7,
-    429.0
+    178.5,
+    320.5,
+    417.0,
+    429.5
    ],
    "id": "0625_2016FM_12_q02_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-FM/p12/q02/figures/0625_2016FM_12_q02_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-FM/p12/q02/figures/0625_2016FM_12_q02_figA",
     "url": null,
-    "kb": 3.6
+    "kb": 3.5
    }
   },
   {
    "page": 2,
    "bbox": [
-    69.3,
+    69.0,
     461.5,
-    271.3,
-    572.9
+    271.5,
+    573.0
    ],
    "id": "0625_2016FM_12_q02_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-FM/p12/q02/figures/0625_2016FM_12_q02_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-FM/p12/q02/figures/0625_2016FM_12_q02_figB",
     "url": null,
-    "kb": 22.5
+    "kb": 22.2
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row describes the velocity and the acceleration of the ball at point X?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "acceleration",
-     "velocity"
-    ],
-    [
-     "A",
-     "constant",
-     "constant"
-    ],
-    [
-     "B",
-     "constant",
-     "increasing"
-    ],
-    [
-     "C",
-     "increasing",
-     "constant"
-    ],
-    [
-     "D",
-     "increasing",
-     "increasing"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016FM_12_q02_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "constant constant"
+    },
+    {
+     "label": "B",
+     "html": "constant increasing"
+    },
+    {
+     "label": "C",
+     "html": "increasing constant"
+    },
+    {
+     "label": "D",
+     "html": "increasing increasing"
+    }
+   ]
   }
  ]
 }

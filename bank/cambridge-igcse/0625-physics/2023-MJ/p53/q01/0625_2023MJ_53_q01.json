@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    110.9,
-    108.8,
-    484.4,
-    250.2
+    111.5,
+    112.5,
+    484.0,
+    248.5
    ],
    "id": "0625_2023MJ_53_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 1.1",
    "page": 3,
    "bbox": [
-    152.8,
-    58.0,
+    152.5,
+    61.5,
     442.5,
-    235.9
+    236.0
    ],
    "id": "0625_2023MJ_53_q01aii_table1-1",
    "part": "(a)(ii)",
@@ -260,51 +260,9 @@
        "value": 2
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>M</i> / g",
-         "<i>p</i> / cm",
-         "<i>a</i> / cm",
-         "<i>b</i> / cm",
-         "<i>b</i> <i>a</i>"
-        ],
-        [
-         "20",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "40",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "60",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "80",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "100",
-         "",
-         "",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2023MJ_53_q01aii_table1-1",
+       "caption": "Table 1.1"
       }
      ]
     }
@@ -370,7 +328,7 @@
    "content": [
     {
      "type": "text",
-     "html": "For each value of <i>M</i>, calculate and record in Table 1.1 the value \\(\\frac{<i>b</i>}{<i>a</i>}\\).",
+     "html": "For each value of <i>M</i>, calculate and record in Table 1.1 the value \\(\\frac{b}{a}\\).",
      "text": "For each value of M, calculate and record in Table 1.1 the value (b)/(a)."
     },
     {
@@ -441,7 +399,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of <i>M</i> / g (<i>y</i>-axis) against \\(\\frac{<i>b</i>}{<i>a</i>}\\) (<i>x</i>-axis). Draw the best-fit line.",
+     "html": "Plot a graph of <i>M</i> / g (<i>y</i>-axis) against \\(\\frac{b}{a}\\) (<i>x</i>-axis). Draw the best-fit line.",
      "text": "Plot a graph of M / g (y-axis) against (b)/(a) (x-axis). Draw the best-fit line."
     },
     {
@@ -706,6 +664,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

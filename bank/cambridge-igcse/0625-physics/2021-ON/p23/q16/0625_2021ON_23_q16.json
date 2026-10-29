@@ -51,10 +51,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
-    244.6,
-    399.3,
-    355.4
+    67.5,
+    244.5,
+    399.5,
+    355.5
    ],
    "id": "0625_2021ON_23_q16_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p23/q16/figures/0625_2021ON_23_q16_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p23/q16/figures/0625_2021ON_23_q16_figB",
     "url": null,
-    "kb": 34.5
+    "kb": 34.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row is correct for the materials used to make the base and the handle of the pan?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "base of pan",
-     "handle of pan"
-    ],
-    [
-     "<b>A</b>",
-     "good thermal conductor",
-     "good thermal conductor"
-    ],
-    [
-     "<b>B</b>",
-     "good thermal conductor",
-     "poor thermal conductor"
-    ],
-    [
-     "<b>C</b>",
-     "poor thermal conductor",
-     "good thermal conductor"
-    ],
-    [
-     "<b>D</b>",
-     "poor thermal conductor",
-     "poor thermal conductor"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_23_q16_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "good thermal conductor good thermal conductor"
+    },
+    {
+     "label": "B",
+     "html": "good thermal conductor poor thermal conductor"
+    },
+    {
+     "label": "C",
+     "html": "poor thermal conductor good thermal conductor"
+    },
+    {
+     "label": "D",
+     "html": "poor thermal conductor poor thermal conductor"
+    }
+   ]
   }
  ]
 }

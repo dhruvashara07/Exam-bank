@@ -9,10 +9,10 @@
    "caption": "Fig. 8.1",
    "page": 13,
    "bbox": [
-    194.5,
-    105.7,
-    404.6,
-    303.8
+    194.0,
+    105.5,
+    405.0,
+    302.0
    ],
    "id": "0625_2020ON_43_q08ai_fig8-1",
    "part": "(a)(i)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 8.2",
    "page": 13,
    "bbox": [
-    194.5,
-    459.7,
-    404.6,
-    657.9
+    194.0,
+    459.5,
+    405.0,
+    656.5
    ],
    "id": "0625_2020ON_43_q08aii_fig8-2",
    "part": "(a)(ii)",
@@ -47,10 +47,10 @@
    "caption": "Fig. 8.3",
    "page": 14,
    "bbox": [
-    260.4,
-    93.2,
-    335.3,
-    162.9
+    260.5,
+    95.0,
+    335.0,
+    161.5
    ],
    "id": "0625_2020ON_43_q08b_fig8-3",
    "part": "(b)",
@@ -67,9 +67,9 @@
    "page": 14,
    "bbox": [
     196.5,
-    193.2,
-    398.8,
-    329.8
+    197.0,
+    399.0,
+    330.0
    ],
    "id": "0625_2020ON_43_q08b_table8-1",
    "part": "(b)",
@@ -78,17 +78,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p43/q08/figures/0625_2020ON_43_q08b_table8-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p43/q08/figures/0625_2020ON_43_q08b_table8-1",
     "url": null,
-    "kb": 18.9
+    "kb": 18.8
    }
   },
   {
    "caption": "Fig. 8.4",
    "page": 14,
    "bbox": [
-    156.8,
-    398.9,
-    448.8,
-    516.4
+    157.0,
+    402.0,
+    448.5,
+    514.5
    ],
    "id": "0625_2020ON_43_q08ci_fig8-4",
    "part": "(c)(i)",
@@ -105,9 +105,9 @@
    "page": 14,
    "bbox": [
     107.5,
-    546.6,
-    487.8,
-    686.1
+    550.0,
+    488.0,
+    686.5
    ],
    "id": "0625_2020ON_43_q08ci_table8-2",
    "part": "(c)(i)",
@@ -296,8 +296,12 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
-       "lines": 1
+       "prefix": "reading ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
       },
       {
        "type": "marks",
@@ -381,40 +385,14 @@
      "text": "The truth table for this logic gate is shown in Table 8.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "input X",
-       "input Y",
-       "output Z"
-      ],
-      [
-       "0",
-       "0",
-       "0"
-      ],
-      [
-       "0",
-       "1",
-       "0"
-      ],
-      [
-       "1",
-       "0",
-       "0"
-      ],
-      [
-       "1",
-       "1",
-       "1"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2020ON_43_q08b_table8-1",
+     "caption": "Table 8.1"
     },
     {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "State the name of this logic gate.",
-     "unit": ".."
+     "type": "text",
+     "html": "State the name of this logic gate. ……..",
+     "text": "State the name of this logic gate. …….."
     },
     {
      "type": "marks",
@@ -503,44 +481,9 @@
        "text": "Complete the truth table for this circuit in Table 8.2."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "A",
-         "B",
-         "C",
-         "D",
-         "E"
-        ],
-        [
-         "0",
-         "0",
-         "",
-         "",
-         ""
-        ],
-        [
-         "0",
-         "1",
-         "",
-         "",
-         ""
-        ],
-        [
-         "1",
-         "0",
-         "",
-         "",
-         ""
-        ],
-        [
-         "1",
-         "1",
-         "",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2020ON_43_q08ci_table8-2",
+       "caption": "Table 8.2"
       },
       {
        "type": "marks",
@@ -607,14 +550,8 @@
      "content": [
       {
        "type": "text",
-       "html": "A single logic gate can be used to produce output E in Fig. 8.4 with the inputs A and B shown in Table 8.2.",
-       "text": "A single logic gate can be used to produce output E in Fig. 8.4 with the inputs A and B shown in Table 8.2."
-      },
-      {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "State the name of this logic gate.",
-       "unit": "."
+       "html": "A single logic gate can be used to produce output E in Fig. 8.4 with the inputs A and B shown in Table 8.2. State the name of this logic gate. …….",
+       "text": "A single logic gate can be used to produce output E in Fig. 8.4 with the inputs A and B shown in Table 8.2. State the name of this logic gate. ……."
       },
       {
        "type": "marks",
@@ -642,5 +579,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

@@ -32,9 +32,9 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    84.7,
-    337.7,
+    67.5,
+    84.5,
+    338.0,
     196.0
    ],
    "id": "0625_2024MJ_12_q12_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p12/q12/figures/0625_2024MJ_12_q12_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p12/q12/figures/0625_2024MJ_12_q12_figA",
     "url": null,
-    "kb": 23.0
+    "kb": 22.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,45 +98,30 @@
    "text": "Which row correctly describes the state of water at the temperatures shown?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "250K",
-     "300K",
-     "350K",
-     "400K"
-    ],
-    [
-     "<b>A</b>",
-     "liquid",
-     "liquid",
-     "gas",
-     "gas"
-    ],
-    [
-     "<b>B</b>",
-     "solid",
-     "solid",
-     "liquid",
-     "liquid"
-    ],
-    [
-     "<b>C</b>",
-     "solid",
-     "liquid",
-     "liquid",
-     "gas"
-    ],
-    [
-     "<b>D</b>",
-     "solid",
-     "liquid",
-     "gas",
-     "gas"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_12_q12_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "liquid liquid gas gas"
+    },
+    {
+     "label": "B",
+     "html": "solid solid liquid liquid"
+    },
+    {
+     "label": "C",
+     "html": "solid liquid liquid gas"
+    },
+    {
+     "label": "D",
+     "html": "solid liquid gas gas"
+    }
+   ]
   }
  ]
 }

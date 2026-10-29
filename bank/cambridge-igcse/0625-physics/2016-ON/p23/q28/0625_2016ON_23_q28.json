@@ -33,9 +33,9 @@
    "page": 12,
    "bbox": [
     201.7,
-    85.2,
-    394.0,
-    202.3
+    85.0,
+    393.5,
+    202.5
    ],
    "id": "0625_2016ON_23_q28_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 12,
    "bbox": [
-    67.7,
-    259.9,
-    367.2,
-    371.2
+    67.5,
+    259.5,
+    367.5,
+    371.5
    ],
    "id": "0625_2016ON_23_q28_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Of which material could the rod be made, and which transfer of charge has happened?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "material of rod",
-     "transfer of charge"
-    ],
-    [
-     "<b>A</b>",
-     "metal",
-     "negative charge from rod to cloth"
-    ],
-    [
-     "<b>B</b>",
-     "metal",
-     "positive charge from cloth to rod"
-    ],
-    [
-     "<b>C</b>",
-     "plastic",
-     "negative charge from rod to cloth"
-    ],
-    [
-     "<b>D</b>",
-     "plastic",
-     "positive charge from cloth to rod"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_23_q28_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "metal negative charge from rod to cloth"
+    },
+    {
+     "label": "B",
+     "html": "metal positive charge from cloth to rod"
+    },
+    {
+     "label": "C",
+     "html": "plastic negative charge from rod to cloth"
+    },
+    {
+     "label": "D",
+     "html": "plastic positive charge from cloth to rod"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    197.2,
-    498.8,
+    197.0,
+    498.5,
     397.2,
-    608.9
+    609.0
    ],
    "id": "0625_2018MJ_22_q32_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    666.2,
-    308.2,
-    777.6
+    67.5,
+    666.0,
+    308.5,
+    778.0
    ],
    "id": "0625_2018MJ_22_q32_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p22/q32/figures/0625_2018MJ_22_q32_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p22/q32/figures/0625_2018MJ_22_q32_figB",
     "url": null,
-    "kb": 21.4
+    "kb": 21.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -121,23 +122,6 @@
    "caption": null
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "V"
-    ],
-    [
-     "",
-     "X"
-    ],
-    [
-     "",
-     "V"
-    ]
-   ]
-  },
-  {
    "type": "text",
    "html": "The sliding connection at point X is moved towards the top of the diagram.",
    "text": "The sliding connection at point X is moved towards the top of the diagram."
@@ -148,35 +132,30 @@
    "text": "What happens to the reading on P and to the reading on Q?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "reading on P",
-     "reading on Q"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_22_q32_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

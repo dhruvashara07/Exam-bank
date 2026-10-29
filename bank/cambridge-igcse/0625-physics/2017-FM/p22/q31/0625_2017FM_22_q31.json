@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    236.2,
-    85.7,
-    357.8,
-    232.7
+    236.0,
+    85.0,
+    358.5,
+    233.0
    ],
    "id": "0625_2017FM_22_q31_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-FM/p22/q31/figures/0625_2017FM_22_q31_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-FM/p22/q31/figures/0625_2017FM_22_q31_figA",
     "url": null,
-    "kb": 4.8
+    "kb": 4.7
    }
   },
   {
    "page": 13,
    "bbox": [
-    67.6,
-    302.7,
+    67.5,
+    302.5,
     358.0,
-    428.2
+    428.5
    ],
    "id": "0625_2017FM_22_q31_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-FM/p22/q31/figures/0625_2017FM_22_q31_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-FM/p22/q31/figures/0625_2017FM_22_q31_figB",
     "url": null,
-    "kb": 33.1
+    "kb": 32.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,46 +132,30 @@
    "text": "What happens to the resistance of the LDR, the current in the fixed resistor and the reading on the voltmeter?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "resistance of",
-     "current in",
-     "reading on"
-    ],
-    [
-     "",
-     "LDR",
-     "fixed resistor",
-     "voltmeter"
-    ],
-    [
-     "A",
-     "decreases",
-     "increases",
-     "decreases"
-    ],
-    [
-     "B",
-     "decreases",
-     "increases",
-     "increases"
-    ],
-    [
-     "C",
-     "increases",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "D",
-     "increases",
-     "decreases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017FM_22_q31_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases increases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases decreases increases"
+    }
+   ]
   }
  ]
 }

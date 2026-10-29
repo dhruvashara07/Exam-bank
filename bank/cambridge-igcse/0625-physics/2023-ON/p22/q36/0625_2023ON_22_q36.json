@@ -33,9 +33,9 @@
    "page": 14,
    "bbox": [
     177.0,
-    469.8,
-    418.4,
-    531.2
+    469.5,
+    418.5,
+    531.5
    ],
    "id": "0625_2023ON_22_q36_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p22/q36/figures/0625_2023ON_22_q36_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p22/q36/figures/0625_2023ON_22_q36_figA",
     "url": null,
-    "kb": 17.1
+    "kb": 16.9
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A radioactive isotope of sodium has a half-life of 15h.",
-   "text": "A radioactive isotope of sodium has a half-life of 15h."
+   "html": "A radioactive isotope of sodium has a half-life of 15 h.",
+   "text": "A radioactive isotope of sodium has a half-life of 15 h."
   },
   {
    "type": "text",
@@ -107,23 +108,9 @@
    "text": "The background count rate has not been subtracted from these data."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "time/h",
-     "0",
-     "10",
-     "20",
-     "30"
-    ],
-    [
-     "count rate counts/s",
-     "400",
-     "260",
-     "170",
-     "115"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2023ON_22_q36_figA",
+   "caption": null
   },
   {
    "type": "text",
@@ -135,19 +122,19 @@
    "options": [
     {
      "label": "A",
-     "html": "12 counts/s"
+     "html": "12 counts / s"
     },
     {
      "label": "B",
-     "html": "15 counts/s"
+     "html": "15 counts / s"
     },
     {
      "label": "C",
-     "html": "20 counts/s"
+     "html": "20 counts / s"
     },
     {
      "label": "D",
-     "html": "30 counts/s"
+     "html": "30 counts / s"
     }
    ]
   }

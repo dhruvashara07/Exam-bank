@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    543.8,
-    278.2,
-    655.2
+    67.5,
+    543.5,
+    278.5,
+    655.5
    ],
    "id": "0625_2024MJ_21_q08_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p21/q08/figures/0625_2024MJ_21_q08_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p21/q08/figures/0625_2024MJ_21_q08_figA",
     "url": null,
-    "kb": 20.8
+    "kb": 20.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row gives the name of the energy store in the coal and the energy store of the moving generator?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "coal",
-     "generator"
-    ],
-    [
-     "<b>A</b>",
-     "chemical",
-     "hydroelectric"
-    ],
-    [
-     "<b>B</b>",
-     "chemical",
-     "kinetic"
-    ],
-    [
-     "<b>C</b>",
-     "geothermal",
-     "hydroelectric"
-    ],
-    [
-     "<b>D</b>",
-     "geothermal",
-     "kinetic"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_21_q08_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "chemical hydroelectric"
+    },
+    {
+     "label": "B",
+     "html": "chemical kinetic"
+    },
+    {
+     "label": "C",
+     "html": "geothermal hydroelectric"
+    },
+    {
+     "label": "D",
+     "html": "geothermal kinetic"
+    }
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    141.2,
-    105.5,
-    426.2,
-    307.6
+    141.5,
+    110.0,
+    426.0,
+    305.0
    ],
    "id": "0625_2019ON_63_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2",
    "page": 2,
    "bbox": [
-    54.6,
-    490.1,
-    512.4,
-    665.7
+    54.0,
+    489.5,
+    513.0,
+    663.0
    ],
    "id": "0625_2019ON_63_q01bi_fig1-2",
    "part": "(b)(i)",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p63/q01/figures/0625_2019ON_63_q01bi_fig1-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p63/q01/figures/0625_2019ON_63_q01bi_fig1-2",
     "url": null,
-    "kb": 33.3
+    "kb": 33.2
    }
   },
   {
    "caption": "Table 1.1",
    "page": 3,
    "bbox": [
-    226.3,
-    96.8,
-    340.6,
-    251.3
+    226.0,
+    101.5,
+    340.5,
+    251.5
    ],
    "id": "0625_2019ON_63_q01bii_table1-1",
    "part": "(b)(ii)",
@@ -90,10 +90,10 @@
    "caption": "Fig. 1.3",
    "page": 4,
    "bbox": [
-    146.9,
-    292.7,
-    418.6,
-    566.5
+    147.0,
+    297.0,
+    419.0,
+    564.0
    ],
    "id": "0625_2019ON_63_q01e_fig1-3",
    "part": "(e)",
@@ -272,14 +272,19 @@
        "text": "Record the voltmeter and ammeter readings shown in Fig. 1.2 for a value of l = 20.0 cm."
       },
       {
-       "type": "figure",
-       "id": "0625_2019ON_63_q01bi_fig1-2",
-       "caption": "Fig. 1.2"
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V ="
       },
       {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "I ="
+      },
+      {
+       "type": "figure",
+       "id": "0625_2019ON_63_q01bi_fig1-2",
+       "caption": "Fig. 1.2"
       },
       {
        "type": "marks",
@@ -351,37 +356,13 @@
       },
       {
        "type": "text",
-       "html": "\\(\\frac{<i>V</i>}{<i>I</i>}\\)",
+       "html": "\\(\\frac{V}{I}\\)",
        "text": "(V)/(I)"
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>l</i> / cm",
-         "<i>R</i> / Ω"
-        ],
-        [
-         "20.0",
-         ""
-        ],
-        [
-         "40.0",
-         "7.5"
-        ],
-        [
-         "60.0",
-         "10"
-        ],
-        [
-         "80.0",
-         "12"
-        ],
-        [
-         "100.0",
-         "13"
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2019ON_63_q01bii_table1-1",
+       "caption": "Table 1.1"
       },
       {
        "type": "marks",
@@ -541,7 +522,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -647,6 +637,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

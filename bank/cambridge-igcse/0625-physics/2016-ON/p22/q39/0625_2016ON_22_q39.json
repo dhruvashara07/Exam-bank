@@ -32,10 +32,10 @@
   {
    "page": 16,
    "bbox": [
-    69.4,
+    69.0,
     112.0,
-    305.4,
-    223.3
+    305.5,
+    223.5
    ],
    "id": "0625_2016ON_22_q39_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p22/q39/figures/0625_2016ON_22_q39_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p22/q39/figures/0625_2016ON_22_q39_figA",
     "url": null,
-    "kb": 18.0
+    "kb": 17.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What is the proton number and what is the nucleon number of the nucleus formed by this decay?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "proton number",
-     "nucleon number"
-    ],
-    [
-     "<b>A</b>",
-     "81",
-     "210"
-    ],
-    [
-     "<b>B</b>",
-     "81",
-     "212"
-    ],
-    [
-     "<b>C</b>",
-     "84",
-     "213"
-    ],
-    [
-     "<b>D</b>",
-     "84",
-     "214"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_22_q39_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "81 210"
+    },
+    {
+     "label": "B",
+     "html": "81 212"
+    },
+    {
+     "label": "C",
+     "html": "84 213"
+    },
+    {
+     "label": "D",
+     "html": "84 214"
+    }
+   ]
   }
  ]
 }

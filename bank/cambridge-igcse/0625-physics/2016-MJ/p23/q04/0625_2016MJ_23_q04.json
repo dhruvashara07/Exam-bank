@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    67.6,
-    299.9,
-    327.6,
-    410.7
+    67.5,
+    299.5,
+    328.0,
+    411.0
    ],
    "id": "0625_2016MJ_23_q04_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p23/q04/figures/0625_2016MJ_23_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p23/q04/figures/0625_2016MJ_23_q04_figA",
     "url": null,
-    "kb": 22.2
+    "kb": 22.1
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "What happens to the mass and what happens to the weight of the liquid in the cup?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass",
-     "weight"
-    ],
-    [
-     "A",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "B",
-     "decreases",
-     "stays the same"
-    ],
-    [
-     "C",
-     "stays the same",
-     "decreases"
-    ],
-    [
-     "D",
-     "stays the same",
-     "stays the same"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_23_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases stays the same"
+    },
+    {
+     "label": "C",
+     "html": "stays the same decreases"
+    },
+    {
+     "label": "D",
+     "html": "stays the same stays the same"
+    }
+   ]
   }
  ]
 }

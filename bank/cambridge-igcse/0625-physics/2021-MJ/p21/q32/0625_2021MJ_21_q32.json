@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    218.2,
-    111.2,
-    376.1,
-    241.6
+    218.0,
+    110.5,
+    376.5,
+    242.0
    ],
    "id": "0625_2021MJ_21_q32_figA",
    "caption": null,
@@ -45,15 +45,15 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p21/q32/figures/0625_2021MJ_21_q32_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p21/q32/figures/0625_2021MJ_21_q32_figA",
     "url": null,
-    "kb": 5.7
+    "kb": 5.5
    }
   },
   {
    "page": 13,
    "bbox": [
-    67.7,
-    286.6,
-    357.7,
+    67.5,
+    286.5,
+    358.0,
     412.0
    ],
    "id": "0625_2021MJ_21_q32_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p21/q32/figures/0625_2021MJ_21_q32_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p21/q32/figures/0625_2021MJ_21_q32_figB",
     "url": null,
-    "kb": 25.8
+    "kb": 25.7
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,40 +132,30 @@
    "text": "Which row shows the resistance of the LDR and the potential difference (p.d.) shown on the voltmeter at a specific light level?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "light level",
-     "resistance of LDR",
-     "p.d. shown on the voltmeter"
-    ],
-    [
-     "<b>A</b>",
-     "bright",
-     "low",
-     "high"
-    ],
-    [
-     "<b>B</b>",
-     "bright",
-     "high",
-     "low"
-    ],
-    [
-     "<b>C</b>",
-     "dim",
-     "high",
-     "high"
-    ],
-    [
-     "<b>D</b>",
-     "dim",
-     "low",
-     "low"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_21_q32_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "bright low high"
+    },
+    {
+     "label": "B",
+     "html": "bright high low"
+    },
+    {
+     "label": "C",
+     "html": "dim high high"
+    },
+    {
+     "label": "D",
+     "html": "dim low low"
+    }
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    85.2,
-    109.2,
-    509.6,
-    437.2
+    85.5,
+    112.5,
+    510.0,
+    435.5
    ],
    "id": "0625_2021ON_61_q01_fig1-1",
    "part": "",
@@ -53,9 +53,9 @@
    "page": 3,
    "bbox": [
     199.5,
-    123.0,
-    395.8,
-    299.1
+    126.5,
+    396.0,
+    299.5
    ],
    "id": "0625_2021ON_61_q01c_table1-1",
    "part": "(c)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 1.2",
    "page": 4,
    "bbox": [
-    253.2,
-    98.3,
-    342.0,
-    314.7
+    252.5,
+    97.5,
+    342.5,
+    313.0
    ],
    "id": "0625_2021ON_61_q01d_fig1-2",
    "part": "(d)",
@@ -184,6 +184,12 @@
        "type": "text",
        "html": "Write down the scale readings in mm from the metre rule at the top and bottom of the spring, as shown in Fig. 1.1.",
        "text": "Write down the scale readings in mm from the metre rule at the top and bottom of the spring, as shown in Fig. 1.1."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "top reading =",
+       "unit": "mm"
       },
       {
        "type": "answer",
@@ -517,44 +523,9 @@
      "text": "The student repeats the procedure using loads L = 0.40 N, L = 0.60 N, L = 0.80 N and L = 1.00 N. He records the readings and results in Table 1.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>L</i> / N",
-       "<i>l</i> / mm",
-       "<i>e</i> /"
-      ],
-      [
-       "0.00",
-       "",
-       "0"
-      ],
-      [
-       "0.20",
-       "17",
-       ""
-      ],
-      [
-       "0.40",
-       "20",
-       "5"
-      ],
-      [
-       "0.60",
-       "23",
-       "8"
-      ],
-      [
-       "0.80",
-       "25",
-       "10"
-      ],
-      [
-       "1.00",
-       "28",
-       "13"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2021ON_61_q01c_table1-1",
+     "caption": "Table 1.1"
     },
     {
      "type": "text",
@@ -669,6 +640,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

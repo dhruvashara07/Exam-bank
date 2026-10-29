@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
+    67.5,
     400.0,
-    430.1,
-    510.9
+    430.5,
+    511.0
    ],
    "id": "0625_2021ON_11_q17_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p11/q17/figures/0625_2021ON_11_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p11/q17/figures/0625_2021ON_11_q17_figA",
     "url": null,
-    "kb": 38.3
+    "kb": 38.0
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row gives the correct description of a sound wave?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "action of wave",
-     "type of wave"
-    ],
-    [
-     "<b>A</b>",
-     "transfers energy without transferring matter",
-     "longitudinal"
-    ],
-    [
-     "<b>B</b>",
-     "transfers energy without transferring matter",
-     "transverse"
-    ],
-    [
-     "<b>C</b>",
-     "transfers matter without transferring energy",
-     "longitudinal"
-    ],
-    [
-     "<b>D</b>",
-     "transfers matter without transferring energy",
-     "transverse"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_11_q17_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "transfers energy without transferring matter longitudinal"
+    },
+    {
+     "label": "B",
+     "html": "transfers energy without transferring matter transverse"
+    },
+    {
+     "label": "C",
+     "html": "transfers matter without transferring energy longitudinal"
+    },
+    {
+     "label": "D",
+     "html": "transfers matter without transferring energy transverse"
+    }
+   ]
   }
  ]
 }

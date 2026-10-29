@@ -51,10 +51,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    595.4,
-    334.2,
-    720.4
+    67.5,
+    595.0,
+    334.5,
+    720.5
    ],
    "id": "0625_2021MJ_21_q35_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p21/q35/figures/0625_2021MJ_21_q35_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p21/q35/figures/0625_2021MJ_21_q35_figB",
     "url": null,
-    "kb": 27.1
+    "kb": 27.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row describes the generator?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "the generator",
-     "the voltage output"
-    ],
-    [
-     "",
-     "produces",
-     "will be zero when"
-    ],
-    [
-     "<b>A</b>",
-     "a.c.",
-     "the coil is horizontal"
-    ],
-    [
-     "<b>B</b>",
-     "a.c.",
-     "the coil is vertical"
-    ],
-    [
-     "<b>C</b>",
-     "d.c.",
-     "the coil is horizontal"
-    ],
-    [
-     "<b>D</b>",
-     "d.c.",
-     "the coil is vertical"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_21_q35_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "a.c. the coil is horizontal"
+    },
+    {
+     "label": "B",
+     "html": "a.c. the coil is vertical"
+    },
+    {
+     "label": "C",
+     "html": "d.c. the coil is horizontal"
+    },
+    {
+     "label": "D",
+     "html": "d.c. the coil is vertical"
+    }
+   ]
   }
  ]
 }

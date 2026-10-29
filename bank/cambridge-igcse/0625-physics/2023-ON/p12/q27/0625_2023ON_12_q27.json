@@ -70,18 +70,19 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "Which equation is correct for resistance<i> R</i>, potential difference (p.d.) <i>V</i> and current <i>I</i>?",
-   "text": "Which equation is correct for resistance R, potential difference (p.d.) V and current I?"
+   "html": "Which equation is correct for resistance<i> R</i>, potential difference (p.d.) <i>V</i> and current <i>I</i> ?",
+   "text": "Which equation is correct for resistance R, potential difference (p.d.) V and current I ?"
   },
   {
    "type": "options",
    "options": [
     {
      "label": "A",
-     "html": "<i>R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\)"
+     "html": "<i>R</i> = \\(\\frac{V}{I}\\)"
     },
     {
      "label": "B",
@@ -89,7 +90,7 @@
     },
     {
      "label": "C",
-     "html": "<i>R</i> = \\(\\frac{<i>I</i>}{<i>V</i>}\\)"
+     "html": "<i>R</i> = \\(\\frac{I}{V}\\)"
     },
     {
      "label": "D",

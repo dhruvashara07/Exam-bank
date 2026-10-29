@@ -33,10 +33,10 @@
    "caption": "Figure 2.1",
    "page": 7,
    "bbox": [
-    161.0,
-    124.5,
-    434.3,
-    309.1
+    161.5,
+    125.5,
+    434.0,
+    309.5
    ],
    "id": "0625_2026MJ_63_q02a_fig2-1",
    "part": "(a)",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 8,
    "bbox": [
-    114.7,
-    86.8,
-    418.8,
-    309.7
+    114.5,
+    87.5,
+    419.0,
+    310.0
    ],
    "id": "0625_2026MJ_63_q02bi_table2-1",
    "part": "(b)(i)",
@@ -236,7 +236,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "2",
+       "prefix": "1"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "2"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -267,10 +276,10 @@
      "type": "list",
      "items": [
       "measures the original length l<sub>0</sub> of the spring",
-      "attaches a mass of m = 10g to the spring",
+      "attaches a mass of m = 10 g to the spring",
       "measures the new length L of the spring",
       "calculates the extension e of the spring",
-      "repeats the procedure using masses of m = 20g, 30g, 40g and 50g."
+      "repeats the procedure using masses of m = 20 g, 30 g, 40 g and 50 g."
      ]
     }
    ]
@@ -344,49 +353,14 @@
        "text": "The student’s readings are shown in Table 2.1."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<b>mass</b> m/g",
-         "<b>length</b> L/cm",
-         "<b>extension</b> e/cm"
-        ],
-        [
-         "0",
-         "1.9",
-         "0.0"
-        ],
-        [
-         "10",
-         "2.4",
-         "0.5"
-        ],
-        [
-         "20",
-         "2.8",
-         "0.9"
-        ],
-        [
-         "30",
-         "3.3",
-         "1.4"
-        ],
-        [
-         "40",
-         "3.7",
-         ""
-        ],
-        [
-         "50",
-         "4.2",
-         "2.3"
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2026MJ_63_q02bi_table2-1",
+       "caption": "Table 2.1"
       },
       {
        "type": "text",
-       "html": "Calculate the extension e when a mass of 40g is suspended from the spring. Use the equation:",
-       "text": "Calculate the extension e when a mass of 40g is suspended from the spring. Use the equation:"
+       "html": "Calculate the extension e when a mass of 40 g is suspended from the spring. Use the equation:",
+       "text": "Calculate the extension e when a mass of 40 g is suspended from the spring. Use the equation:"
       },
       {
        "type": "text",
@@ -465,8 +439,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Plot a graph of extension e/cm (y-axis) against mass m/g (x-axis).",
-       "text": "Plot a graph of extension e/cm (y-axis) against mass m/g (x-axis)."
+       "html": "Plot a graph of extension e / cm (y-axis) against mass m / g (x-axis).",
+       "text": "Plot a graph of extension e / cm (y-axis) against mass m / g (x-axis)."
       },
       {
        "type": "text",
@@ -480,8 +454,8 @@
       },
       {
        "type": "text",
-       "html": "e/cm",
-       "text": "e/cm"
+       "html": "e / cm",
+       "text": "e / cm"
       },
       {
        "type": "text",
@@ -490,8 +464,8 @@
       },
       {
        "type": "text",
-       "html": "m/g",
-       "text": "m/g"
+       "html": "m / g",
+       "text": "m / g"
       },
       {
        "type": "answer",
@@ -565,8 +539,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Use your graph to determine the length L of the spring when a mass of 12g is suspended from the spring.",
-       "text": "Use your graph to determine the length L of the spring when a mass of 12g is suspended from the spring."
+       "html": "Use your graph to determine the length L of the spring when a mass of 12 g is suspended from the spring.",
+       "text": "Use your graph to determine the length L of the spring when a mass of 12 g is suspended from the spring."
       },
       {
        "type": "text",
@@ -679,6 +653,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

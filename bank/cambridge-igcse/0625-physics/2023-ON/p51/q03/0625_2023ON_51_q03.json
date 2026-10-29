@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 6,
    "bbox": [
-    72.2,
-    107.9,
-    523.1,
-    271.8
+    72.5,
+    112.5,
+    522.5,
+    270.0
    ],
    "id": "0625_2023ON_51_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2 (not to scale)",
    "page": 6,
    "bbox": [
-    72.2,
-    107.9,
-    523.1,
-    436.3
+    72.5,
+    112.5,
+    522.5,
+    434.5
    ],
    "id": "0625_2023ON_51_q03_fig3-2",
    "part": "",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p51/q03/figures/0625_2023ON_51_q03_fig3-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p51/q03/figures/0625_2023ON_51_q03_fig3-2",
     "url": null,
-    "kb": 33.5
+    "kb": 33.4
    }
   },
   {
@@ -72,9 +72,9 @@
    "page": 7,
    "bbox": [
     124.0,
-    58.0,
-    471.3,
-    171.7
+    61.5,
+    471.5,
+    172.0
    ],
    "id": "0625_2023ON_51_q03b_table3-1",
    "part": "(b)",
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p51/q03/figures/0625_2023ON_51_q03b_table3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p51/q03/figures/0625_2023ON_51_q03b_table3-1",
     "url": null,
-    "kb": 20.2
+    "kb": 20.1
    }
   }
  ],
@@ -257,37 +257,16 @@
       "Move the screen slowly until a clearly focused image is formed on the screen.",
       "Measure the distance<i> v</i> between the centre of the lens and the screen.",
       "Record <i>v</i> in Table 3.1.",
-      "Calculate, and record in Table 3.1, the magnification <i>m</i> using the equation <i>m</i> = \\(\\frac{<i>v</i>}{<i>u</i>}\\) .",
+      "Calculate, and record in Table 3.1, the magnification <i>m</i> using the equation <i>m</i> = \\(\\frac{v}{u}\\) .",
       "Measure, and record in Table 3.1, the height of the image <i>h</i><sub>I</sub> formed on the screen.",
-      "Calculate, and record in Table 3.1, the ratio \\(\\frac{<i>h</i><i><sub>I</sub></i>}{<i>h</i><i><sub>O</sub></i>}\\) , where <i>h</i><sub>O</sub> is the height of the object recorded in<b> (a)</b>.",
+      "Calculate, and record in Table 3.1, the ratio \\(\\frac{h_{I}}{h_{O}}\\) , where <i>h</i><sub>O</sub> is the height of the object recorded in<b> (a)</b>.",
       "Repeat the procedure using <i>u</i> = 30.0 cm."
      ]
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>u</i> / cm",
-       "<i>v</i> / cm",
-       "<i>m</i>",
-       "<i>h</i><sub>I</sub> / cm",
-       "<i>h</i><i><sub>I</sub></i> <i>h</i><i><sub>O</sub></i>"
-      ],
-      [
-       "20.0",
-       "",
-       "",
-       "",
-       ""
-      ],
-      [
-       "30.0",
-       "",
-       "",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2023ON_51_q03b_table3-1",
+     "caption": "Table 3.1"
     }
    ]
   },
@@ -387,7 +366,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -456,7 +444,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Suggest how you would continue to use the same apparatus to test the suggestion that the magnification <i>m</i> is equal to the ratio \\(\\frac{<i>h</i><i><sub>I</sub></i>}{<i>h</i><i><sub>O</sub></i>}\\) .",
+       "html": "Suggest how you would continue to use the same apparatus to test the suggestion that the magnification <i>m</i> is equal to the ratio \\(\\frac{h_{I}}{h_{O}}\\) .",
        "text": "Suggest how you would continue to use the same apparatus to test the suggestion that the magnification m is equal to the ratio (hI)/(hO) ."
       },
       {
@@ -475,7 +463,7 @@
    "content": [
     {
      "type": "text",
-     "html": "A student suggests that the magnification <i>m</i> is equal to the ratio \\(\\frac{<i>h</i><i><sub>I</sub></i>}{<i>h</i><i><sub>O</sub></i>}\\) .",
+     "html": "A student suggests that the magnification <i>m</i> is equal to the ratio \\(\\frac{h_{I}}{h_{O}}\\) .",
      "text": "A student suggests that the magnification m is equal to the ratio (hI)/(hO) ."
     },
     {
@@ -502,6 +490,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

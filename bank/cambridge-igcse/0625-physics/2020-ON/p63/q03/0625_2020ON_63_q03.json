@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    68.4,
-    112.3,
-    528.6,
-    242.0
+    69.0,
+    115.5,
+    528.0,
+    240.5
    ],
    "id": "0625_2020ON_63_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 8,
    "bbox": [
-    218.5,
-    288.7,
-    372.0,
-    458.9
+    218.0,
+    288.0,
+    372.5,
+    457.5
    ],
    "id": "0625_2020ON_63_q03a_fig3-2",
    "part": "(a)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 3.3",
    "page": 9,
    "bbox": [
-    211.0,
-    75.3,
-    385.6,
-    294.4
+    210.5,
+    74.5,
+    386.0,
+    293.0
    ],
    "id": "0625_2020ON_63_q03b_fig3-3",
    "part": "(b)",
@@ -90,10 +90,10 @@
    "caption": "Table 3.1",
    "page": 9,
    "bbox": [
-    188.2,
-    395.3,
-    407.1,
-    555.1
+    188.0,
+    399.0,
+    407.0,
+    555.5
    ],
    "id": "0625_2020ON_63_q03bii_table3-1",
    "part": "(b)(ii)",
@@ -375,43 +375,13 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate and record in Table 3.1 a value <i>W</i> using your measurements for <i>h</i><sub>O</sub> and <i>h</i><sub>I</sub> and the equation <i>W</i> = \\(\\frac{<i>h</i><sub>O</sub>}{<i>h</i><sub>I</sub>}\\) .",
+       "html": "Calculate and record in Table 3.1 a value <i>W</i> using your measurements for <i>h</i><sub>O</sub> and <i>h</i><sub>I</sub> and the equation <i>W</i> = \\(\\frac{h_{O}}{h_{I}}\\) .",
        "text": "Calculate and record in Table 3.1 a value W using your measurements for hO and hI and the equation W = (hO)/(hI) ."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>u</i> / cm",
-         "<i>h</i><sub>I</sub>/ cm",
-         "<i>W</i>"
-        ],
-        [
-         "20.0",
-         "",
-         ""
-        ],
-        [
-         "30.0",
-         "1.5",
-         "1.3"
-        ],
-        [
-         "40.0",
-         "1.0",
-         "2.0"
-        ],
-        [
-         "50.0",
-         "0.7",
-         "2.9"
-        ],
-        [
-         "60.0",
-         "0.6",
-         "3.3"
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2020ON_63_q03bii_table3-1",
+       "caption": "Table 3.1"
       },
       {
        "type": "marks",
@@ -678,7 +648,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "improvement",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "improvement"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -705,6 +684,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

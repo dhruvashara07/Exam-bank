@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    438.9,
-    344.9,
-    563.9
+    67.5,
+    438.5,
+    345.0,
+    564.0
    ],
    "id": "0625_2023MJ_22_q16_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p22/q16/figures/0625_2023MJ_22_q16_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p22/q16/figures/0625_2023MJ_22_q16_figA",
     "url": null,
-    "kb": 22.8
+    "kb": 22.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which cup keeps the coffee warm the longest?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "the outside surface of the cup",
-     "the top of the cup"
-    ],
-    [
-     "<b>A</b>",
-     "black",
-     "covered with a lid"
-    ],
-    [
-     "<b>B</b>",
-     "black",
-     "no lid"
-    ],
-    [
-     "<b>C</b>",
-     "white",
-     "covered with a lid"
-    ],
-    [
-     "<b>D</b>",
-     "white",
-     "no lid"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_22_q16_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "black covered with a lid"
+    },
+    {
+     "label": "B",
+     "html": "black no lid"
+    },
+    {
+     "label": "C",
+     "html": "white covered with a lid"
+    },
+    {
+     "label": "D",
+     "html": "white no lid"
+    }
+   ]
   }
  ]
 }

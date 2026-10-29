@@ -33,7 +33,7 @@
    "page": 14,
    "bbox": [
     160.7,
-    493.8,
+    494.0,
     434.6,
     636.2
    ],
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p12/q39/figures/0625_2023MJ_12_q39_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p12/q39/figures/0625_2023MJ_12_q39_figA",
     "url": null,
-    "kb": 15.3
+    "kb": 15.2
    }
   },
   {
    "page": 14,
    "bbox": [
-    67.7,
-    669.6,
+    67.5,
+    669.5,
     270.5,
-    780.9
+    781.0
    ],
    "id": "0625_2023MJ_12_q39_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p12/q39/figures/0625_2023MJ_12_q39_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p12/q39/figures/0625_2023MJ_12_q39_figB",
     "url": null,
-    "kb": 19.0
+    "kb": 18.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which parts of the electromagnetic spectrum are P and R?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "P",
-     "R"
-    ],
-    [
-     "<b>A</b>",
-     "gamma ray",
-     "radio"
-    ],
-    [
-     "<b>B</b>",
-     "infrared",
-     "ultraviolet"
-    ],
-    [
-     "<b>C</b>",
-     "radio",
-     "gamma ray"
-    ],
-    [
-     "<b>D</b>",
-     "ultraviolet",
-     "infrared"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_12_q39_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "gamma ray radio"
+    },
+    {
+     "label": "B",
+     "html": "infrared ultraviolet"
+    },
+    {
+     "label": "C",
+     "html": "radio gamma ray"
+    },
+    {
+     "label": "D",
+     "html": "ultraviolet infrared"
+    }
+   ]
   }
  ]
 }

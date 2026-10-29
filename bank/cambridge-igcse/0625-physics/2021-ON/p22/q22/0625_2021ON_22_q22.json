@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    135.2,
-    456.8,
-    260.8
+    67.5,
+    135.0,
+    457.0,
+    261.0
    ],
    "id": "0625_2021ON_22_q22_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,40 +108,30 @@
    "text": "Which row gives correct information about the infrared radiation?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "wavelength of",
-     "time taken for infrared"
-    ],
-    [
-     "",
-     "infrared radiation",
-     "radiation to reach the Earth"
-    ],
-    [
-     "<b>A</b>",
-     "longer than wavelength of light",
-     "8 minutes"
-    ],
-    [
-     "<b>B</b>",
-     "longer than wavelength of light",
-     "much less than 8 minutes"
-    ],
-    [
-     "<b>C</b>",
-     "shorter than wavelength of light",
-     "8 minutes"
-    ],
-    [
-     "<b>D</b>",
-     "shorter than wavelength of light",
-     "much more than 8 minutes"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_22_q22_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "longer than wavelength of light 8 minutes"
+    },
+    {
+     "label": "B",
+     "html": "longer than wavelength of light much less than 8 minutes"
+    },
+    {
+     "label": "C",
+     "html": "shorter than wavelength of light 8 minutes"
+    },
+    {
+     "label": "D",
+     "html": "shorter than wavelength of light much more than 8 minutes"
+    }
+   ]
   }
  ]
 }

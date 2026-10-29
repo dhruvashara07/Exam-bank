@@ -32,9 +32,9 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    173.2,
-    284.6,
+    67.5,
+    173.0,
+    284.5,
     284.5
    ],
    "id": "0625_2024MJ_12_q16_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p12/q16/figures/0625_2024MJ_12_q16_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p12/q16/figures/0625_2024MJ_12_q16_figA",
     "url": null,
-    "kb": 21.2
+    "kb": 21.0
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The radius of a circular pond is 3.0m.",
-   "text": "The radius of a circular pond is 3.0m."
+   "html": "The radius of a circular pond is 3.0 m.",
+   "text": "The radius of a circular pond is 3.0 m."
   },
   {
    "type": "text",
@@ -103,8 +104,8 @@
   },
   {
    "type": "text",
-   "html": "There are 10 whole waves between the centre and the edge of the pond and it takes 5.0s for all waves to reach the edge.",
-   "text": "There are 10 whole waves between the centre and the edge of the pond and it takes 5.0s for all waves to reach the edge."
+   "html": "There are 10 whole waves between the centre and the edge of the pond and it takes 5.0 s for all waves to reach the edge.",
+   "text": "There are 10 whole waves between the centre and the edge of the pond and it takes 5.0 s for all waves to reach the edge."
   },
   {
    "type": "text",
@@ -112,35 +113,30 @@
    "text": "What is the wavelength and the frequency of the waves?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "wavelength/m",
-     "frequency/Hz"
-    ],
-    [
-     "<b>A</b>",
-     "0.30",
-     "0.50"
-    ],
-    [
-     "<b>B</b>",
-     "0.30",
-     "2.0"
-    ],
-    [
-     "<b>C</b>",
-     "0.60",
-     "0.50"
-    ],
-    [
-     "<b>D</b>",
-     "0.60",
-     "2.0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_12_q16_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0.30 0.50"
+    },
+    {
+     "label": "B",
+     "html": "0.30 2.0"
+    },
+    {
+     "label": "C",
+     "html": "0.60 0.50"
+    },
+    {
+     "label": "D",
+     "html": "0.60 2.0"
+    }
+   ]
   }
  ]
 }

@@ -32,9 +32,9 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    615.6,
-    457.4,
+    67.5,
+    615.5,
+    457.5,
     727.0
    ],
    "id": "0625_2025MJ_22_q20_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p22/q20/figures/0625_2025MJ_22_q20_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p22/q20/figures/0625_2025MJ_22_q20_figA",
     "url": null,
-    "kb": 33.9
+    "kb": 33.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row gives the correct properties of the image?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "real or virtual",
-     "distance of the image from the mirror"
-    ],
-    [
-     "<b>A</b>",
-     "real",
-     "closer to the mirror than the object"
-    ],
-    [
-     "<b>B</b>",
-     "real",
-     "the same distance from the mirror as the object"
-    ],
-    [
-     "<b>C</b>",
-     "virtual",
-     "closer to the mirror than the object"
-    ],
-    [
-     "<b>D</b>",
-     "virtual",
-     "the same distance from the mirror as the object"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_22_q20_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "real closer to the mirror than the object"
+    },
+    {
+     "label": "B",
+     "html": "real the same distance from the mirror as the object"
+    },
+    {
+     "label": "C",
+     "html": "virtual closer to the mirror than the object"
+    },
+    {
+     "label": "D",
+     "html": "virtual the same distance from the mirror as the object"
+    }
+   ]
   }
  ]
 }

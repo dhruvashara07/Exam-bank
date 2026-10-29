@@ -32,10 +32,10 @@
   {
    "page": 12,
    "bbox": [
-    67.7,
-    426.1,
-    286.7,
-    551.6
+    67.5,
+    426.0,
+    287.0,
+    552.0
    ],
    "id": "0625_2016ON_11_q28_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p11/q28/figures/0625_2016ON_11_q28_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p11/q28/figures/0625_2016ON_11_q28_figA",
     "url": null,
-    "kb": 25.5
+    "kb": 25.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which row gives the name of these charged particles, and the direction in which they move?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "charged",
-     "direction of"
-    ],
-    [
-     "",
-     "particles",
-     "movement"
-    ],
-    [
-     "<b>A</b>",
-     "electrons",
-     "from cloth to rod"
-    ],
-    [
-     "<b>B</b>",
-     "electrons",
-     "from rod to cloth"
-    ],
-    [
-     "<b>C</b>",
-     "protons",
-     "from cloth to rod"
-    ],
-    [
-     "<b>D</b>",
-     "protons",
-     "from rod to cloth"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_11_q28_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "electrons from cloth to rod"
+    },
+    {
+     "label": "B",
+     "html": "electrons from rod to cloth"
+    },
+    {
+     "label": "C",
+     "html": "protons from cloth to rod"
+    },
+    {
+     "label": "D",
+     "html": "protons from rod to cloth"
+    }
+   ]
   }
  ]
 }

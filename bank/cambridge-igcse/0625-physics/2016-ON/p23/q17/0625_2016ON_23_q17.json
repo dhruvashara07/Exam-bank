@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    69.4,
-    469.0,
+    69.0,
+    468.5,
     416.0,
-    580.3
+    580.5
    ],
    "id": "0625_2016ON_23_q17_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which thermometer is better for measuring a very high temperature, and which thermometer is better for measuring a rapidly varying temperature?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "very high temperature",
-     "rapidly varying temperature"
-    ],
-    [
-     "<b>A</b>",
-     "liquid-in-glass",
-     "liquid-in-glass"
-    ],
-    [
-     "<b>B</b>",
-     "liquid-in-glass",
-     "thermocouple"
-    ],
-    [
-     "<b>C</b>",
-     "thermocouple",
-     "liquid-in-glass"
-    ],
-    [
-     "<b>D</b>",
-     "thermocouple",
-     "thermocouple"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_23_q17_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "liquid-in-glass liquid-in-glass"
+    },
+    {
+     "label": "B",
+     "html": "liquid-in-glass thermocouple"
+    },
+    {
+     "label": "C",
+     "html": "thermocouple liquid-in-glass"
+    },
+    {
+     "label": "D",
+     "html": "thermocouple thermocouple"
+    }
+   ]
   }
  ]
 }

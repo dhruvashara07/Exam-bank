@@ -33,10 +33,10 @@
    "caption": "Fig. 4.1",
    "page": 8,
    "bbox": [
-    123.7,
-    115.7,
-    472.2,
-    667.7
+    124.5,
+    115.5,
+    473.0,
+    668.0
    ],
    "id": "0625_2015MJ_52_q04_fig4-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p52/q04/figures/0625_2015MJ_52_q04_fig4-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p52/q04/figures/0625_2015MJ_52_q04_fig4-1",
     "url": null,
-    "kb": 14.2
+    "kb": 14.1
    }
   },
   {
    "caption": "Table 4.1",
    "page": 9,
    "bbox": [
-    248.4,
-    283.3,
-    346.8,
-    420.8
+    248.0,
+    283.0,
+    347.0,
+    421.0
    ],
    "id": "0625_2015MJ_52_q04h_table4-1",
    "part": "(h)",
@@ -615,29 +615,9 @@
      "text": "Remove pins P1 and P2. Draw lines at angles θ = 10 °, 20 ° and 30 ° to MR, one of which is shown in Fig. 4.1. Repeat steps (d) to (g), placing the mirror on each of the new lines in turn, so that you obtain four sets of readings."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "θ / °",
-       "α / °"
-      ],
-      [
-       "0",
-       ""
-      ],
-      [
-       "10",
-       ""
-      ],
-      [
-       "20",
-       ""
-      ],
-      [
-       "30",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2015MJ_52_q04h_table4-1",
+     "caption": "Table 4.1"
     },
     {
      "type": "marks",
@@ -785,14 +765,23 @@
      "text": "State whether your graph line shows that the angle α is directly proportional to the angle θ. Justify your statement by reference to your graph line."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
      "type": "text",
      "html": "<b>Tie your ray-trace sheet into this Booklet between pages 10 and 11. </b>",
      "text": "Tie your ray-trace sheet into this Booklet between pages 10 and 11."
     },
     {
      "type": "answer",
-     "kind": "answer_line",
-     "prefix": "justification",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -819,6 +808,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

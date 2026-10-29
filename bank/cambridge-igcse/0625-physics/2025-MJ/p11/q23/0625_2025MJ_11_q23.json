@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    109.9,
-    265.6,
-    221.3
+    67.5,
+    109.5,
+    265.5,
+    221.5
    ],
    "id": "0625_2025MJ_11_q23_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p11/q23/figures/0625_2025MJ_11_q23_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p11/q23/figures/0625_2025MJ_11_q23_figA",
     "url": null,
-    "kb": 20.0
+    "kb": 19.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What happens to the loudness and what happens to the pitch of the sound?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "loudness",
-     "pitch"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_11_q23_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

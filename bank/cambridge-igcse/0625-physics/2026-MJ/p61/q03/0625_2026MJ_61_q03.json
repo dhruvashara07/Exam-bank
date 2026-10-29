@@ -33,10 +33,10 @@
    "caption": "Figure 3.1",
    "page": 8,
    "bbox": [
-    70.0,
-    109.6,
-    555.9,
-    260.1
+    70.5,
+    110.5,
+    555.0,
+    260.5
    ],
    "id": "0625_2026MJ_61_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Figure 3.2",
    "page": 8,
    "bbox": [
-    70.0,
-    109.6,
-    555.9,
-    410.3
+    70.5,
+    110.5,
+    555.0,
+    410.5
    ],
    "id": "0625_2026MJ_61_q03_fig3-2",
    "part": "",
@@ -341,7 +341,7 @@
     {
      "type": "list",
      "items": [
-      "places the lens a distance U = 20.0cm from the illuminated object",
+      "places the lens a distance U = 20.0 cm from the illuminated object",
       "adjusts the position of the screen until a focused image is formed on the screen."
      ]
     }
@@ -434,8 +434,8 @@
     },
     {
      "type": "text",
-     "html": "3.3cm",
-     "text": "3.3cm"
+     "html": "3.3 cm",
+     "text": "3.3 cm"
     },
     {
      "type": "answer",
@@ -449,7 +449,7 @@
     },
     {
      "type": "text",
-     "html": "m<sub>1</sub> = \\(\\frac{h<sub>1</sub>}{h}\\).",
+     "html": "m<sub>1</sub> = \\(\\frac{h_{1}}{h}\\).",
      "text": "m1 = (h1)/(h)."
     },
     {
@@ -546,8 +546,13 @@
     },
     {
      "type": "text",
-     "html": "0.6cm",
-     "text": "0.6cm"
+     "html": "0.6 cm",
+     "text": "0.6 cm"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "h2 ="
     },
     {
      "type": "text",
@@ -556,7 +561,7 @@
     },
     {
      "type": "text",
-     "html": "m<sub>2</sub> = \\(\\frac{h<sub>2</sub>}{h}\\).",
+     "html": "m<sub>2</sub> = \\(\\frac{h_{2}}{h}\\).",
      "text": "m2 = (h2)/(h)."
     },
     {
@@ -653,7 +658,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -733,7 +747,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -760,6 +783,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

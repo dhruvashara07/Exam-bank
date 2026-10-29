@@ -32,8 +32,8 @@
   {
    "page": 11,
    "bbox": [
-    113.8,
-    97.6,
+    113.5,
+    97.5,
     481.5,
     257.0
    ],
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p13/q24/figures/0625_2022ON_13_q24_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p13/q24/figures/0625_2022ON_13_q24_figA",
     "url": null,
-    "kb": 47.7
+    "kb": 47.4
    }
   },
   {
    "page": 11,
    "bbox": [
-    67.7,
-    290.2,
-    348.9,
-    401.6
+    67.5,
+    290.0,
+    349.0,
+    401.5
    ],
    "id": "0625_2022ON_13_q24_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p13/q24/figures/0625_2022ON_13_q24_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p13/q24/figures/0625_2022ON_13_q24_figB",
     "url": null,
-    "kb": 29.4
+    "kb": 29.3
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A 100m race is started by firing a gun. The gun makes a bang and a puff of smoke at the same time.",
-   "text": "A 100m race is started by firing a gun. The gun makes a bang and a puff of smoke at the same time."
+   "html": "A 100 m race is started by firing a gun. The gun makes a bang and a puff of smoke at the same time.",
+   "text": "A 100 m race is started by firing a gun. The gun makes a bang and a puff of smoke at the same time."
   },
   {
    "type": "figure",
@@ -126,35 +127,30 @@
    "text": "When does the finishing judge see the smoke and when does he hear the bang?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "sees the smoke",
-     "hears the bang"
-    ],
-    [
-     "<b>A</b>",
-     "almost immediately",
-     "almost immediately"
-    ],
-    [
-     "<b>B</b>",
-     "almost immediately",
-     "after about 0.3s"
-    ],
-    [
-     "<b>C</b>",
-     "after about 0.3s",
-     "almost immediately"
-    ],
-    [
-     "<b>D</b>",
-     "after about 0.3s",
-     "after about 0.3s"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_13_q24_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "almost immediately almost immediately"
+    },
+    {
+     "label": "B",
+     "html": "almost immediately after about 0.3s"
+    },
+    {
+     "label": "C",
+     "html": "after about 0.3s almost immediately"
+    },
+    {
+     "label": "D",
+     "html": "after about 0.3s after about 0.3s"
+    }
+   ]
   }
  ]
 }

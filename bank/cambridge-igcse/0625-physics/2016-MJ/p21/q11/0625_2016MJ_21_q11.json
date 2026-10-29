@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.6,
-    135.4,
-    322.2,
-    246.7
+    67.5,
+    135.0,
+    322.5,
+    247.0
    ],
    "id": "0625_2016MJ_21_q11_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p21/q11/figures/0625_2016MJ_21_q11_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p21/q11/figures/0625_2016MJ_21_q11_figA",
     "url": null,
-    "kb": 22.7
+    "kb": 22.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row represents a situation in which the largest amount of work is done on the object by the force?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "force/N",
-     "distance moved/m"
-    ],
-    [
-     "A",
-     "2.0",
-     "40.0"
-    ],
-    [
-     "B",
-     "10.0",
-     "2.0"
-    ],
-    [
-     "C",
-     "20.0",
-     "6.0"
-    ],
-    [
-     "D",
-     "100.0",
-     "1.0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_21_q11_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "2.0 40.0"
+    },
+    {
+     "label": "B",
+     "html": "10.0 2.0"
+    },
+    {
+     "label": "C",
+     "html": "20.0 6.0"
+    },
+    {
+     "label": "D",
+     "html": "100.0 1.0"
+    }
+   ]
   }
  ]
 }

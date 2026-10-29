@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    187.7,
+    187.5,
     264.3,
     407.5,
-    383.7
+    383.5
    ],
    "id": "0625_2021ON_21_q20_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
-    415.7,
-    263.9,
-    541.3
+    67.5,
+    415.5,
+    264.0,
+    541.5
    ],
    "id": "0625_2021ON_21_q20_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p21/q20/figures/0625_2021ON_21_q20_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p21/q20/figures/0625_2021ON_21_q20_figB",
     "url": null,
-    "kb": 18.9
+    "kb": 18.7
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row gives the angle of incidence and states whether total internal reflection occurs?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "angle of",
-     "total internal"
-    ],
-    [
-     "",
-     "incidence",
-     "reflection"
-    ],
-    [
-     "<b>A</b>",
-     "<i>p</i>",
-     "no"
-    ],
-    [
-     "<b>B</b>",
-     "<i>p</i>",
-     "yes"
-    ],
-    [
-     "<b>C</b>",
-     "<i>q</i>",
-     "no"
-    ],
-    [
-     "<b>D</b>",
-     "<i>q</i>",
-     "yes"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_21_q20_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "p no"
+    },
+    {
+     "label": "B",
+     "html": "p yes"
+    },
+    {
+     "label": "C",
+     "html": "q no"
+    },
+    {
+     "label": "D",
+     "html": "q yes"
+    }
+   ]
   }
  ]
 }

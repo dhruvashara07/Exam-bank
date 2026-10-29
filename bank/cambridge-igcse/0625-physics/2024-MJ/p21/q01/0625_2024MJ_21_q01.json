@@ -32,8 +32,8 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
-    84.6,
+    67.5,
+    84.5,
     500.0,
     196.0
    ],
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p21/q01/figures/0625_2024MJ_21_q01_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p21/q01/figures/0625_2024MJ_21_q01_figA",
     "url": null,
-    "kb": 33.9
+    "kb": 33.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "In which row are quantities correctly categorised into scalar quantities and vector quantities?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "scalar quantities",
-     "vector quantities"
-    ],
-    [
-     "<b>A</b>",
-     "mass and energy",
-     "weight and acceleration"
-    ],
-    [
-     "<b>B</b>",
-     "gravitational field strength and time",
-     "force and electric field strength"
-    ],
-    [
-     "<b>C</b>",
-     "speed and momentum",
-     "distance and force"
-    ],
-    [
-     "<b>D</b>",
-     "distance and energy",
-     "velocity and temperature"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_21_q01_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "mass and energy weight and acceleration"
+    },
+    {
+     "label": "B",
+     "html": "gravitational field strength and time force and electric field strength"
+    },
+    {
+     "label": "C",
+     "html": "speed and momentum distance and force"
+    },
+    {
+     "label": "D",
+     "html": "distance and energy velocity and temperature"
+    }
+   ]
   }
  ]
 }

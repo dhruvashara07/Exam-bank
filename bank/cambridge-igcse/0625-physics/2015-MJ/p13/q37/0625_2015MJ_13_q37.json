@@ -32,10 +32,10 @@
   {
    "page": 17,
    "bbox": [
-    141.3,
+    141.0,
     86.9,
-    453.5,
-    242.1
+    454.0,
+    242.5
    ],
    "id": "0625_2015MJ_13_q37_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p13/q37/figures/0625_2015MJ_13_q37_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p13/q37/figures/0625_2015MJ_13_q37_figA",
     "url": null,
-    "kb": 15.1
+    "kb": 15.0
    }
   },
   {
    "page": 17,
    "bbox": [
-    67.6,
-    274.7,
-    308.2,
-    386.1
+    67.5,
+    274.5,
+    308.5,
+    386.0
    ],
    "id": "0625_2015MJ_13_q37_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p13/q37/figures/0625_2015MJ_13_q37_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p13/q37/figures/0625_2015MJ_13_q37_figB",
     "url": null,
-    "kb": 21.1
+    "kb": 20.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which electrode should be heated, and which electrode should be positive?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "heated electrode",
-     "positive electrode"
-    ],
-    [
-     "A",
-     "anode",
-     "anode"
-    ],
-    [
-     "B",
-     "anode",
-     "cathode"
-    ],
-    [
-     "C",
-     "cathode",
-     "anode"
-    ],
-    [
-     "D",
-     "cathode",
-     "cathode"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_13_q37_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "anode anode"
+    },
+    {
+     "label": "B",
+     "html": "anode cathode"
+    },
+    {
+     "label": "C",
+     "html": "cathode anode"
+    },
+    {
+     "label": "D",
+     "html": "cathode cathode"
+    }
+   ]
   }
  ]
 }

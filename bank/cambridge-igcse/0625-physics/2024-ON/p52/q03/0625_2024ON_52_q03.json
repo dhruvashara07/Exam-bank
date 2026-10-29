@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 6,
    "bbox": [
-    115.4,
-    111.5,
-    480.0,
-    269.4
+    115.0,
+    112.5,
+    479.5,
+    269.5
    ],
    "id": "0625_2024ON_52_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 6,
    "bbox": [
-    118.8,
-    434.4,
-    476.6,
-    634.7
+    118.5,
+    435.0,
+    476.5,
+    635.0
    ],
    "id": "0625_2024ON_52_q03a_table3-1",
    "part": "(a)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 3.2",
    "page": 7,
    "bbox": [
-    252.2,
-    85.8,
-    343.2,
-    478.2
+    252.5,
+    85.0,
+    343.0,
+    478.5
    ],
    "id": "0625_2024ON_52_q03bi_fig3-2",
    "part": "(b)(i)",
@@ -153,14 +153,14 @@
      "type": "list",
      "items": [
       "Switch on the lamp.",
-      "Place the lens at a distance u = 20.0cm from the illuminated object (the triangular hole in the card).",
+      "Place the lens at a distance u = 20.0 cm from the illuminated object (the triangular hole in the card).",
       "Adjust the position of the screen until a sharp image of the illuminated object is formed on the screen."
      ]
     },
     {
      "type": "text",
-     "html": "Measure, to the nearest 0.1cm, the image distance v from the centre of the lens to the screen.",
-     "text": "Measure, to the nearest 0.1cm, the image distance v from the centre of the lens to the screen."
+     "html": "Measure, to the nearest 0.1 cm, the image distance v from the centre of the lens to the screen.",
+     "text": "Measure, to the nearest 0.1 cm, the image distance v from the centre of the lens to the screen."
     },
     {
      "type": "text",
@@ -168,41 +168,9 @@
      "text": "Record the image distance v in the top row of Table 3.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "object distance u",
-       "image distance v"
-      ],
-      [
-       "/cm",
-       "/cm"
-      ],
-      [
-       "20.0",
-       ""
-      ],
-      [
-       "25.0",
-       ""
-      ],
-      [
-       "35.0",
-       ""
-      ],
-      [
-       "45.0",
-       ""
-      ],
-      [
-       "55.0",
-       ""
-      ],
-      [
-       "60.0",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2024ON_52_q03a_table3-1",
+     "caption": "Table 3.1"
     },
     {
      "type": "marks",
@@ -439,8 +407,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Repeat the procedure in (a) for values of u = 25.0cm, u = 35.0cm, u = 45.0cm, u = 55.0cm and u = 60.0cm.",
-     "text": "Repeat the procedure in (a) for values of u = 25.0cm, u = 35.0cm, u = 45.0cm, u = 55.0cm and u = 60.0cm."
+     "html": "Repeat the procedure in (a) for values of u = 25.0 cm, u = 35.0 cm, u = 45.0 cm, u = 55.0 cm and u = 60.0 cm.",
+     "text": "Repeat the procedure in (a) for values of u = 25.0 cm, u = 35.0 cm, u = 45.0 cm, u = 55.0 cm and u = 60.0 cm."
     },
     {
      "type": "marks",
@@ -509,8 +477,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of v/cm (y‑axis) against u/cm (x‑axis).",
-     "text": "Plot a graph of v/cm (y‑axis) against u/cm (x‑axis)."
+     "html": "Plot a graph of v /cm (y‑axis) against u /cm (x‑axis).",
+     "text": "Plot a graph of v /cm (y‑axis) against u /cm (x‑axis)."
     },
     {
      "type": "text",
@@ -633,8 +601,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Use your graph to find the value of v when u = 30.0cm. Show clearly on the graph how you obtained the necessary information",
-     "text": "Use your graph to find the value of v when u = 30.0cm. Show clearly on the graph how you obtained the necessary information"
+     "html": "Use your graph to find the value of v when u = 30.0 cm. Show clearly on the graph how you obtained the necessary information",
+     "text": "Use your graph to find the value of v when u = 30.0 cm. Show clearly on the graph how you obtained the necessary information"
     },
     {
      "type": "answer",
@@ -707,7 +675,7 @@
    "content": [
     {
      "type": "text",
-     "html": "The focal length f of the lens can be found using the equation f = \\(\\frac{uv}{(u+v)}\\).",
+     "html": "The focal length f of the lens can be found using the equation f = \\(\\frac{\\text{uv}}{(u + v)}\\).",
      "text": "The focal length f of the lens can be found using the equation f = (uv)/((u+v))."
     },
     {
@@ -818,6 +786,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

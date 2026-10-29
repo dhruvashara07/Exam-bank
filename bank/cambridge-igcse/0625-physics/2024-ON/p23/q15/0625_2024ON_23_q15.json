@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
-    109.9,
-    311.2,
-    220.8
+    67.5,
+    109.5,
+    311.5,
+    221.0
    ],
    "id": "0625_2024ON_23_q15_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which effect does this have on its mass and on its density?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass",
-     "density"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "stays constant"
-    ],
-    [
-     "<b>C</b>",
-     "stays constant",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "stays constant",
-     "stays constant"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_23_q15_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases stays constant"
+    },
+    {
+     "label": "C",
+     "html": "stays constant decreases"
+    },
+    {
+     "label": "D",
+     "html": "stays constant stays constant"
+    }
+   ]
   }
  ]
 }

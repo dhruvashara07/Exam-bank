@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    58.6,
-    127.9,
-    544.8,
-    357.2
+    59.0,
+    129.0,
+    544.0,
+    355.5
    ],
    "id": "0625_2020MJ_63_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2 (not to scale)",
    "page": 2,
    "bbox": [
-    159.8,
-    442.4,
-    436.8,
-    600.1
+    161.0,
+    445.5,
+    433.0,
+    598.5
    ],
    "id": "0625_2020MJ_63_q01a_fig1-2",
    "part": "(a)",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p63/q01/figures/0625_2020MJ_63_q01a_fig1-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p63/q01/figures/0625_2020MJ_63_q01a_fig1-2",
     "url": null,
-    "kb": 69.5
+    "kb": 69.4
    }
   },
   {
    "caption": "Fig. 1.3",
    "page": 3,
    "bbox": [
-    188.2,
-    68.7,
-    381.5,
-    461.9
+    189.0,
+    68.0,
+    382.0,
+    460.0
    ],
    "id": "0625_2020MJ_63_q01ai_fig1-3",
    "part": "(a)(i)",
@@ -83,17 +83,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p63/q01/figures/0625_2020MJ_63_q01ai_fig1-3.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p63/q01/figures/0625_2020MJ_63_q01ai_fig1-3",
     "url": null,
-    "kb": 23.0
+    "kb": 22.8
    }
   },
   {
    "caption": "Table 1.1",
    "page": 4,
    "bbox": [
-    237.8,
-    97.0,
+    237.5,
+    100.5,
     357.5,
-    256.4
+    256.5
    ],
    "id": "0625_2020MJ_63_q01b_table1-1",
    "part": "(b)",
@@ -238,41 +238,9 @@
        "value": 2
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "N",
-         ""
-        ],
-        [
-         "0.0",
-         ""
-        ],
-        [
-         "0.5",
-         ""
-        ],
-        [
-         "1.0",
-         ""
-        ],
-        [
-         "1.5",
-         ""
-        ],
-        [
-         "2.0",
-         ""
-        ],
-        [
-         "2.5",
-         ""
-        ],
-        [
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2020MJ_63_q01ai_fig1-3",
+       "caption": "Fig. 1.3"
       },
       {
        "type": "answer",
@@ -509,33 +477,9 @@
      "text": "The student carries out the procedure for values of l = 20.0 cm, 30.0 cm, 40.0 cm, 50.0 cm and 60.0 cm. Her readings are shown in Table 1.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>l</i>/ cm",
-       "<i>F</i> / N"
-      ],
-      [
-       "20.0",
-       "1.35"
-      ],
-      [
-       "30.0",
-       "1.60"
-      ],
-      [
-       "40.0",
-       "1.90"
-      ],
-      [
-       "50.0",
-       "2.15"
-      ],
-      [
-       "60.0",
-       "2.45"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2020MJ_63_q01b_table1-1",
+     "caption": "Table 1.1"
     },
     {
      "type": "text",
@@ -801,6 +745,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

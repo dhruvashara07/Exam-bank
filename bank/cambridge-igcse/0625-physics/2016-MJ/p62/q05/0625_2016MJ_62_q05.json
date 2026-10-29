@@ -33,10 +33,10 @@
    "caption": "Fig. 5.1",
    "page": 10,
    "bbox": [
-    163.2,
-    122.8,
-    431.3,
-    364.4
+    164.0,
+    122.5,
+    432.0,
+    364.5
    ],
    "id": "0625_2016MJ_62_q05_fig5-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 5.1",
    "page": 10,
    "bbox": [
-    71.6,
-    530.2,
-    523.6,
-    750.3
+    71.5,
+    530.0,
+    523.5,
+    750.5
    ],
    "id": "0625_2016MJ_62_q05aii_table5-1",
    "part": "(a)(ii)",
@@ -239,63 +239,9 @@
        "text": "Record this temperature in the table at time t = 0 s."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "",
-         "beaker <b>A</b>",
-         "beaker <b>B</b>",
-         "beaker <b>C</b>"
-        ],
-        [
-         "",
-         "insulation and lid",
-         "insulation, no lid",
-         "lid, no insulation"
-        ],
-        [
-         "<i>t</i> /",
-         "θ /",
-         "θ /",
-         "θ /"
-        ],
-        [
-         "0",
-         "",
-         "85",
-         "78"
-        ],
-        [
-         "30",
-         "80",
-         "79",
-         "74"
-        ],
-        [
-         "60",
-         "77",
-         "74",
-         "71"
-        ],
-        [
-         "90",
-         "75",
-         "70",
-         "68"
-        ],
-        [
-         "120",
-         "73",
-         "67",
-         "66"
-        ],
-        [
-         "150",
-         "71",
-         "64",
-         "64"
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2016MJ_62_q05aii_table5-1",
+       "caption": "Table 5.1"
       },
       {
        "type": "marks",
@@ -587,7 +533,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -662,7 +617,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "reason",
+     "prefix": "material"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "reason"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -763,6 +727,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

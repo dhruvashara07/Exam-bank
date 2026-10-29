@@ -34,9 +34,9 @@
    "page": 2,
    "bbox": [
     189.0,
-    98.3,
-    406.2,
-    299.5
+    97.5,
+    405.5,
+    298.0
    ],
    "id": "0625_2022ON_63_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2",
    "page": 3,
    "bbox": [
-    207.3,
-    113.6,
-    399.3,
-    321.4
+    218.0,
+    124.0,
+    398.5,
+    320.0
    ],
    "id": "0625_2022ON_63_q01b_fig1-2",
    "part": "(b)",
@@ -71,10 +71,10 @@
    "caption": "Table 1.1",
    "page": 3,
    "bbox": [
-    213.6,
-    364.7,
-    381.7,
-    520.0
+    213.5,
+    368.5,
+    382.0,
+    520.5
    ],
    "id": "0625_2022ON_63_q01b_table1-1",
    "part": "(b)",
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p63/q01/figures/0625_2022ON_63_q01b_table1-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p63/q01/figures/0625_2022ON_63_q01b_table1-1",
     "url": null,
-    "kb": 25.9
+    "kb": 25.8
    }
   }
  ],
@@ -160,16 +160,15 @@
      "text": "2.6"
     },
     {
-     "type": "text",
-     "html": "Suggest <b>one</b> precaution that is taken when measuring the height of the water level to ensure the reading is accurate. You may draw a diagram if it helps your explanation.",
-     "text": "Suggest one precaution that is taken when measuring the height of the water level to ensure the reading is accurate. You may draw a diagram if it helps your explanation."
-    },
-    {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "h0 =",
-     "unit": "cm",
-     "lines": 2
+     "unit": "cm"
+    },
+    {
+     "type": "text",
+     "html": "Suggest <b>one</b> precaution that is taken when measuring the height of the water level to ensure the reading is accurate. You may draw a diagram if it helps your explanation.",
+     "text": "Suggest one precaution that is taken when measuring the height of the water level to ensure the reading is accurate. You may draw a diagram if it helps your explanation."
     },
     {
      "type": "marks",
@@ -250,39 +249,9 @@
      "text": "Measure, and record in the first row of Table 1.1, the new height h of the water level from the bench."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<sup>3</sup> <i>V</i> / cm",
-       "<i>h</i> / cm",
-       "<i>H</i> / cm"
-      ],
-      [
-       "5.0",
-       "",
-       ""
-      ],
-      [
-       "10.0",
-       "5.5",
-       "2.9"
-      ],
-      [
-       "15.0",
-       "6.7",
-       "4.1"
-      ],
-      [
-       "20.0",
-       "8.3",
-       "5.7"
-      ],
-      [
-       "25.0",
-       "9.6",
-       "7.0"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2022ON_63_q01b_table1-1",
+     "caption": "Table 1.1"
     },
     {
      "type": "answer",
@@ -582,7 +551,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate <i>D</i>, the inside diameter of the boiling tube. Use the equation <i>D</i> = \\(\\frac{4<i>G</i>}{π}\\), where <i>G</i> is numerically equivalent to the gradient in <b>(e)(i)</b>.",
+       "html": "Calculate <i>D</i>, the inside diameter of the boiling tube. Use the equation <i>D</i> = \\(\\frac{4G}{π}\\), where <i>G</i> is numerically equivalent to the gradient in <b>(e)(i)</b>.",
        "text": "Calculate D, the inside diameter of the boiling tube. Use the equation D = (4G)/(π), where G is numerically equivalent to the gradient in (e)(i)."
       },
       {
@@ -764,6 +733,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

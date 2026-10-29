@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.6,
-    187.6,
+    67.5,
+    187.5,
     225.0,
-    319.3
+    319.5
    ],
    "id": "0625_2015MJ_12_q15_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p12/q15/figures/0625_2015MJ_12_q15_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p12/q15/figures/0625_2015MJ_12_q15_figA",
     "url": null,
-    "kb": 16.8
+    "kb": 16.7
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "Two metal blocks X and Y are at room temperature. Each block is heated so that its temperature rises by 10°C.",
-   "text": "Two metal blocks X and Y are at room temperature. Each block is heated so that its temperature rises by 10°C."
+   "html": "Two metal blocks X and Y are at room temperature. Each block is heated so that its temperature rises by 10 °C.",
+   "text": "Two metal blocks X and Y are at room temperature. Each block is heated so that its temperature rises by 10 °C."
   },
   {
    "type": "text",
@@ -108,44 +109,34 @@
   },
   {
    "type": "text",
-   "html": "Which block needs more thermal (heat) energy to heat it up by 10°C and which block loses more thermal (heat) energy as it cools back to room temperature?",
-   "text": "Which block needs more thermal (heat) energy to heat it up by 10°C and which block loses more thermal (heat) energy as it cools back to room temperature?"
+   "html": "Which block needs more thermal (heat) energy to heat it up by 10 °C and which block loses more thermal (heat) energy as it cools back to room temperature?",
+   "text": "Which block needs more thermal (heat) energy to heat it up by 10 °C and which block loses more thermal (heat) energy as it cools back to room temperature?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "more energy",
-     ""
-    ],
-    [
-     "",
-     "heating",
-     "cooling"
-    ],
-    [
-     "A",
-     "X",
-     "X"
-    ],
-    [
-     "B",
-     "X",
-     "Y"
-    ],
-    [
-     "C",
-     "Y",
-     "X"
-    ],
-    [
-     "D",
-     "Y",
-     "Y"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_12_q15_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "X X"
+    },
+    {
+     "label": "B",
+     "html": "X Y"
+    },
+    {
+     "label": "C",
+     "html": "Y X"
+    },
+    {
+     "label": "D",
+     "html": "Y Y"
+    }
+   ]
   }
  ]
 }

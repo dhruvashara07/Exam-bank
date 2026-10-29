@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    130.5,
-    123.6,
-    465.9,
-    536.3
+    131.0,
+    126.5,
+    465.5,
+    534.5
    ],
    "id": "0625_2021MJ_52_q02_fig2-1",
    "part": "",
@@ -488,7 +488,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate \\(\\frac{<i>a</i>}{<i>b</i>}\\).",
+       "html": "Calculate \\(\\frac{a}{b}\\).",
        "text": "Calculate (a)/(b)."
       },
       {
@@ -566,9 +566,29 @@
      "type": "list",
      "items": [
       "Repeat the steps in parts <b>(b)</b> and <b>(c)</b> using an angle of incidence θ<sub>2</sub> = 10°.",
-      "Measure and record the distance <i>c</i> from <b>X</b> to P<sub>3</sub>.",
-      "Measure and record the distance <i>d</i> from <b>Y</b> to P<sub>4</sub>.",
-      "Calculate \\(\\frac{<i>c</i>}{<i>d</i>}\\)."
+      "Measure and record the distance <i>c</i> from <b>X</b> to P<sub>3</sub>."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "c ="
+    },
+    {
+     "type": "list",
+     "items": [
+      "Measure and record the distance <i>d</i> from <b>Y</b> to P<sub>4</sub>."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "d ="
+    },
+    {
+     "type": "list",
+     "items": [
+      "Calculate \\(\\frac{c}{d}\\)."
      ]
     },
     {
@@ -641,7 +661,7 @@
    "content": [
     {
      "type": "text",
-     "html": "State and explain whether the values of \\(\\frac{<i>a</i>}{<i>b</i>}\\) and \\(\\frac{<i>c</i>}{<i>d</i>}\\) can be considered to be equal in this experiment.",
+     "html": "State and explain whether the values of \\(\\frac{a}{b}\\) and \\(\\frac{c}{d}\\) can be considered to be equal in this experiment.",
      "text": "State and explain whether the values of (a)/(b) and (c)/(d) can be considered to be equal in this experiment."
     },
     {
@@ -751,6 +771,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -758,57 +779,9 @@
    "text": "In this experiment, you will investigate the position of the image in a plane mirror. Carry out the following instructions. Use the ray-trace sheet supplied, referring to Fig. 2.1 for guidance."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>N</b>"
-    ],
-    [
-     "",
-     "<b>B</b>"
-    ],
-    [
-     "",
-     "<b>M</b> <b>R</b>"
-    ],
-    [
-     "",
-     "θ"
-    ],
-    [
-     "",
-     "8.0cm"
-    ],
-    [
-     "",
-     "<b>A</b>"
-    ],
-    [
-     "",
-     "<b>C</b> <b>D</b>"
-    ],
-    [
-     "",
-     "<b>X</b>"
-    ],
-    [
-     "",
-     "8.0cm"
-    ],
-    [
-     "",
-     "<b>E</b> <b>F</b>"
-    ],
-    [
-     "",
-     "<b>Y</b>"
-    ],
-    [
-     "",
-     "<b>L</b>"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2021MJ_52_q02_fig2-1",
+   "caption": "Fig. 2.1"
   }
  ]
 }

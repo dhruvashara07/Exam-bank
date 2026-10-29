@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 3,
    "bbox": [
-    82.4,
-    89.3,
-    513.6,
-    241.3
+    81.0,
+    90.0,
+    514.0,
+    241.5
    ],
    "id": "0625_2015ON_22_q01_fig1-1",
    "part": "",
@@ -53,9 +53,9 @@
    "page": 3,
    "bbox": [
     222.0,
-    452.2,
-    372.2,
-    584.3
+    451.5,
+    372.0,
+    584.5
    ],
    "id": "0625_2015ON_22_q01b_fig1-2",
    "part": "(b)",
@@ -138,7 +138,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -316,10 +325,9 @@
        "text": "Calculate the average thickness of the wire, in mm. Give your answer correct to two significant figures."
       },
       {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "average thickness of wire =",
-       "unit": "mm"
+       "type": "text",
+       "html": "average thickness of wire = …… mm",
+       "text": "average thickness of wire = …… mm"
       },
       {
        "type": "marks",
@@ -360,6 +368,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

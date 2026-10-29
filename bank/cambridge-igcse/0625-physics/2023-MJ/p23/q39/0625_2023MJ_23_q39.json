@@ -32,10 +32,10 @@
   {
    "page": 15,
    "bbox": [
-    67.7,
-    84.7,
-    300.8,
-    210.1
+    67.5,
+    84.5,
+    301.0,
+    210.5
    ],
    "id": "0625_2023MJ_23_q39_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p23/q39/figures/0625_2023MJ_23_q39_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p23/q39/figures/0625_2023MJ_23_q39_figA",
     "url": null,
-    "kb": 21.8
+    "kb": 21.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row describes the power source for a stable star?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "type of nuclear reaction",
-     "fuel"
-    ],
-    [
-     "<b>A</b>",
-     "fission",
-     "hydrogen"
-    ],
-    [
-     "<b>B</b>",
-     "fission",
-     "uranium"
-    ],
-    [
-     "<b>C</b>",
-     "fusion",
-     "hydrogen"
-    ],
-    [
-     "<b>D</b>",
-     "fusion",
-     "uranium"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_23_q39_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "fission hydrogen"
+    },
+    {
+     "label": "B",
+     "html": "fission uranium"
+    },
+    {
+     "label": "C",
+     "html": "fusion hydrogen"
+    },
+    {
+     "label": "D",
+     "html": "fusion uranium"
+    }
+   ]
   }
  ]
 }

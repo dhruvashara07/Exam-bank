@@ -128,6 +128,16 @@
      "text": "State the values of X and Y in the symbol ."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "X ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Y ="
+    },
+    {
      "type": "text",
      "html": "This isotope is radioactive and it decays by the emission of a β-particle, β, to an isotope of uranium, U.",
      "text": "This isotope is radioactive and it decays by the emission of a β-particle, β, to an isotope of uranium, U."
@@ -143,15 +153,14 @@
      "text": "0"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "U"
+    },
+    {
      "type": "text",
      "html": "–1",
      "text": "–1"
-    },
-    {
-     "type": "answer",
-     "kind": "answer_line",
-     "unit": "U",
-     "lines": 1
     },
     {
      "type": "marks",
@@ -301,6 +310,16 @@
      "text": "Suggest two naturally occurring sources of background radiation."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
      "type": "text",
      "html": "The sample is placed in the laboratory close to the radiation detector, and the count rate increases to 544 counts/minute.",
      "text": "The sample is placed in the laboratory close to the radiation detector, and the count rate increases to 544 counts/minute."
@@ -358,6 +377,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

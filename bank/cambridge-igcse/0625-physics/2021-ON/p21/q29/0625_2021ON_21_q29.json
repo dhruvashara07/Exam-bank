@@ -33,8 +33,8 @@
    "page": 11,
    "bbox": [
     224.8,
-    390.7,
-    370.3,
+    391.0,
+    370.0,
     513.5
    ],
    "id": "0625_2021ON_21_q29_figA",
@@ -51,10 +51,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    559.3,
-    279.7,
-    684.8
+    67.5,
+    559.0,
+    280.0,
+    685.0
    ],
    "id": "0625_2021ON_21_q29_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "What happens to the resistance of X and what happens to the temperature of X as the voltage increases?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "resistance",
-     "temperature"
-    ],
-    [
-     "",
-     "of X",
-     "of X"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_21_q29_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

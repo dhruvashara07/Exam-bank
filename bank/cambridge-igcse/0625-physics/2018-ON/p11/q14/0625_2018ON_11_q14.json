@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    122.6,
-    353.8,
-    248.3
+    67.5,
+    122.5,
+    354.0,
+    248.5
    ],
    "id": "0625_2018ON_11_q14_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which row identifies where these molecules escape from and describes the temperature change?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "molecules",
-     "temperature of"
-    ],
-    [
-     "",
-     "escape from the",
-     "remaining liquid"
-    ],
-    [
-     "<b>A</b>",
-     "body of the liquid",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "body of the liquid",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "surface of the liquid",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "surface of the liquid",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018ON_11_q14_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "body of the liquid decreases"
+    },
+    {
+     "label": "B",
+     "html": "body of the liquid increases"
+    },
+    {
+     "label": "C",
+     "html": "surface of the liquid decreases"
+    },
+    {
+     "label": "D",
+     "html": "surface of the liquid increases"
+    }
+   ]
   }
  ]
 }

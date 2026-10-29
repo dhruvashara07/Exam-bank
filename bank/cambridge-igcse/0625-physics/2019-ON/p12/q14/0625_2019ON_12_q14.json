@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    64.3,
-    527.3,
-    266.6,
-    633.6
+    64.0,
+    527.0,
+    267.0,
+    633.5
    ],
    "id": "0625_2019ON_12_q14_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p12/q14/figures/0625_2019ON_12_q14_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p12/q14/figures/0625_2019ON_12_q14_figA",
     "url": null,
-    "kb": 24.4
+    "kb": 24.2
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row describes the arrangement and the motion of the molecules in a gas?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "arrangement",
-     "motion"
-    ],
-    [
-     "<b>A</b>",
-     "far apart",
-     "move freely"
-    ],
-    [
-     "<b>B</b>",
-     "far apart",
-     "vibrate only"
-    ],
-    [
-     "<b>C</b>",
-     "tightly packed",
-     "move freely"
-    ],
-    [
-     "<b>D</b>",
-     "tightly packed",
-     "vibrate only"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019ON_12_q14_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "far apart move freely"
+    },
+    {
+     "label": "B",
+     "html": "far apart vibrate only"
+    },
+    {
+     "label": "C",
+     "html": "tightly packed move freely"
+    },
+    {
+     "label": "D",
+     "html": "tightly packed vibrate only"
+    }
+   ]
   }
  ]
 }

@@ -33,8 +33,8 @@
    "page": 19,
    "bbox": [
     174.7,
-    293.9,
-    420.2,
+    293.5,
+    420.5,
     415.2
    ],
    "id": "0625_2017ON_11_q39_figA",
@@ -51,10 +51,10 @@
   {
    "page": 19,
    "bbox": [
-    67.7,
-    448.4,
-    400.3,
-    559.7
+    67.5,
+    448.0,
+    400.5,
+    560.0
    ],
    "id": "0625_2017ON_11_q39_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p11/q39/figures/0625_2017ON_11_q39_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p11/q39/figures/0625_2017ON_11_q39_figB",
     "url": null,
-    "kb": 26.9
+    "kb": 26.6
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,40 +132,30 @@
    "text": "Which types of radiation are R, S and T?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "R",
-     "S",
-     "T"
-    ],
-    [
-     "<b>A</b>",
-     "α-particles",
-     "β-particles",
-     "γ-rays"
-    ],
-    [
-     "<b>B</b>",
-     "α-particles",
-     "γ-rays",
-     "β-particles"
-    ],
-    [
-     "<b>C</b>",
-     "β-particles",
-     "α-particles",
-     "γ-rays"
-    ],
-    [
-     "<b>D</b>",
-     "γ-rays",
-     "β-particles",
-     "α-particles"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017ON_11_q39_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "α-particles β-particles γ-rays"
+    },
+    {
+     "label": "B",
+     "html": "α-particles γ-rays β-particles"
+    },
+    {
+     "label": "C",
+     "html": "β-particles α-particles γ-rays"
+    },
+    {
+     "label": "D",
+     "html": "γ-rays β-particles α-particles"
+    }
+   ]
   }
  ]
 }

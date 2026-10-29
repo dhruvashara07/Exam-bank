@@ -9,10 +9,10 @@
    "caption": "Table 10.1",
    "page": 19,
    "bbox": [
-    116.9,
-    86.8,
-    478.4,
-    235.6
+    117.0,
+    87.5,
+    478.5,
+    236.0
    ],
    "id": "0625_2025MJ_42_q10a_table10-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 10.1",
    "page": 20,
    "bbox": [
-    272.7,
-    344.0,
-    322.7,
-    361.0
+    242.0,
+    85.0,
+    354.5,
+    361.5
    ],
    "id": "0625_2025MJ_42_q10b_fig10-1",
    "part": "(b)",
@@ -40,7 +40,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p42/q10/figures/0625_2025MJ_42_q10b_fig10-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p42/q10/figures/0625_2025MJ_42_q10b_fig10-1",
     "url": null,
-    "kb": 4.1
+    "kb": 28.2
    }
   }
  ],
@@ -287,13 +287,13 @@
      "content": [
       {
        "type": "text",
-       "html": "An object falls through a height of 2m on each of the planets in Table 10.1.",
-       "text": "An object falls through a height of 2m on each of the planets in Table 10.1."
+       "html": "An object falls through a height of 2 m on each of the planets in Table 10.1.",
+       "text": "An object falls through a height of 2 m on each of the planets in Table 10.1."
       },
       {
        "type": "text",
-       "html": "State and explain on which planet the object falls 2m in the shortest time. Ignore any effect due to the atmosphere.",
-       "text": "State and explain on which planet the object falls 2m in the shortest time. Ignore any effect due to the atmosphere."
+       "html": "State and explain on which planet the object falls 2 m in the shortest time. Ignore any effect due to the atmosphere.",
+       "text": "State and explain on which planet the object falls 2 m in the shortest time. Ignore any effect due to the atmosphere."
       },
       {
        "type": "answer",
@@ -315,39 +315,9 @@
      "text": "Table 10.1 shows data for planets A, B, C and D."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "planet",
-       "surface temperature /K",
-       "diameter /km",
-       "gravitational field strength N/kg"
-      ],
-      [
-       "A",
-       "153",
-       "143000",
-       "23.0"
-      ],
-      [
-       "B",
-       "623",
-       "4800",
-       "3.7"
-      ],
-      [
-       "C",
-       "53",
-       "50000",
-       "11.0"
-      ],
-      [
-       "D",
-       "93",
-       "120000",
-       "9.0"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2025MJ_42_q10a_table10-1",
+     "caption": "Table 10.1"
     }
    ]
   },
@@ -533,21 +503,6 @@
      "text": "Fig. 10.1 shows some of the stages in the life cycle of a massive star."
     },
     {
-     "type": "text",
-     "html": "massive star expands",
-     "text": "massive star expands"
-    },
-    {
-     "type": "text",
-     "html": "supernova",
-     "text": "supernova"
-    },
-    {
-     "type": "text",
-     "html": "leaves behind",
-     "text": "leaves behind"
-    },
-    {
      "type": "figure",
      "id": "0625_2025MJ_42_q10b_fig10-1",
      "caption": "Fig. 10.1"
@@ -555,8 +510,12 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "lines": 2,
-     "prefix": "nebula which contains"
+     "prefix": "nebula which"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
     }
    ]
   }
@@ -577,5 +536,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

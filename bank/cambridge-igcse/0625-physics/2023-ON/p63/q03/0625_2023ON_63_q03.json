@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    53.0,
-    107.9,
-    542.2,
-    239.6
+    53.5,
+    112.5,
+    541.5,
+    238.0
    ],
    "id": "0625_2023ON_63_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 9,
    "bbox": [
-    188.2,
-    97.0,
-    407.1,
-    269.1
+    188.0,
+    100.5,
+    407.0,
+    269.5
    ],
    "id": "0625_2023ON_63_q03b_table3-1",
    "part": "(b)",
@@ -217,43 +217,13 @@
      "text": "The student repeats the procedure for u = 30.0 cm, 40.0 cm, 50.0 cm and 60.0 cm. Her readings are shown in Table 3.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>u</i> / cm",
-       "<i>v</i> / cm",
-       "<i>u</i> <i>v</i>"
-      ],
-      [
-       "20.0",
-       "60.0",
-       ""
-      ],
-      [
-       "30.0",
-       "27.3",
-       "1.10"
-      ],
-      [
-       "40.0",
-       "25.8",
-       "1.55"
-      ],
-      [
-       "50.0",
-       "21.4",
-       "2.34"
-      ],
-      [
-       "60.0",
-       "20.0",
-       "3.00"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2023ON_63_q03b_table3-1",
+     "caption": "Table 3.1"
     },
     {
      "type": "text",
-     "html": "For distance <i>u</i> = 20.0 cm, calculate, and record in Table 3.1, the value of \\(\\frac{<i>u</i>}{<i>v</i>}\\).",
+     "html": "For distance <i>u</i> = 20.0 cm, calculate, and record in Table 3.1, the value of \\(\\frac{u}{v}\\).",
      "text": "For distance u = 20.0 cm, calculate, and record in Table 3.1, the value of (u)/(v)."
     },
     {
@@ -324,7 +294,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of <i>u</i> / cm (<i>y</i>‑axis) against \\(\\frac{<i>u</i>}{<i>v</i>}\\) (<i>x</i>‑axis). Start your graph at the origin (0,0). Draw the best‑fit line.",
+     "html": "Plot a graph of <i>u</i> / cm (<i>y</i>‑axis) against \\(\\frac{u}{v}\\) (<i>x</i>‑axis). Start your graph at the origin (0,0). Draw the best‑fit line.",
      "text": "Plot a graph of u / cm (y‑axis) against (u)/(v) (x‑axis). Start your graph at the origin (0,0). Draw the best‑fit line."
     },
     {
@@ -409,7 +379,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Determine the value <i>u</i><sub>0</sub> of <i>u</i> when \\(\\frac{<i>u</i>}{<i>v</i>}\\) = 0.",
+       "html": "Determine the value <i>u</i><sub>0</sub> of <i>u</i> when \\(\\frac{u}{v}\\) = 0.",
        "text": "Determine the value u0 of u when (u)/(v) = 0."
       },
       {
@@ -590,6 +560,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

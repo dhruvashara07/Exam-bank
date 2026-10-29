@@ -32,10 +32,10 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
+    67.5,
     462.5,
-    362.2,
-    573.9
+    362.5,
+    574.0
    ],
    "id": "0625_2022MJ_21_q03_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p21/q03/figures/0625_2022MJ_21_q03_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p21/q03/figures/0625_2022MJ_21_q03_figA",
     "url": null,
-    "kb": 35.4
+    "kb": 35.2
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which quantities are calculated from the gradient of the graph and from the area under the graph?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "gradient of the graph",
-     "area under the graph"
-    ],
-    [
-     "<b>A</b>",
-     "acceleration",
-     "distance travelled"
-    ],
-    [
-     "<b>B</b>",
-     "acceleration",
-     "total journey time"
-    ],
-    [
-     "<b>C</b>",
-     "distance travelled",
-     "acceleration"
-    ],
-    [
-     "<b>D</b>",
-     "total journey time",
-     "distance travelled"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_21_q03_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "acceleration distance travelled"
+    },
+    {
+     "label": "B",
+     "html": "acceleration total journey time"
+    },
+    {
+     "label": "C",
+     "html": "distance travelled acceleration"
+    },
+    {
+     "label": "D",
+     "html": "total journey time distance travelled"
+    }
+   ]
   }
  ]
 }

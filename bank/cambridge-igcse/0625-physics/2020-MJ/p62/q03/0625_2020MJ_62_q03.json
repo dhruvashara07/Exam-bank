@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    136.3,
-    113.0,
-    447.7,
-    359.4
+    136.0,
+    112.5,
+    447.0,
+    358.0
    ],
    "id": "0625_2020MJ_62_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 8,
    "bbox": [
-    109.0,
-    406.9,
-    489.1,
-    472.5
+    108.5,
+    406.0,
+    489.5,
+    471.0
    ],
    "id": "0625_2020MJ_62_q03a_fig3-2",
    "part": "(a)",
@@ -156,15 +156,15 @@
      "caption": "Fig. 3.2"
     },
     {
-     "type": "text",
-     "html": "S",
-     "text": "S"
-    },
-    {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "θ =",
      "unit": "°C"
+    },
+    {
+     "type": "text",
+     "html": "S",
+     "text": "S"
     },
     {
      "type": "marks",
@@ -412,9 +412,15 @@
        "text": "Calculate the fall in temperature θF of the hot water using the equation θF = (θH – θM)."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "θF =",
+       "unit": "°C"
+      },
+      {
        "type": "text",
-       "html": "Calculate the ratio <i>S</i> using the equation <i>S</i> = \\(\\frac{θ<sub>R</sub>}{θ<sub>F</sub>}\\). Give your answer to a suitable number of significant figures for this experiment.",
-       "text": "Calculate the ratio S using the equation S = (θR)/(θF). Give your answer to a suitable number of significant figures for this experiment."
+       "html": "Calculate the ratio <i>S</i> using the equation <i>S</i> = \\(\\frac{θ_{R}}{θ_{F}}\\) . Give your answer to a suitable number of significant figures for this experiment.",
+       "text": "Calculate the ratio S using the equation S = (θR)/(θF) . Give your answer to a suitable number of significant figures for this experiment."
       },
       {
        "type": "answer",
@@ -439,6 +445,11 @@
      "type": "text",
      "html": "°C",
      "text": "°C"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θH ="
     },
     {
      "type": "text",
@@ -526,9 +537,19 @@
      "text": "49° C"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θM ="
+    },
+    {
      "type": "text",
      "html": "Calculate the rise in temperature θ<sub>R</sub> of the cold water using the equation θ<sub>R</sub> = (θ<sub>M</sub> – θ<sub>S</sub>). Use the value of room temperature θ<sub>S</sub> recorded in <b>(a)</b>.",
      "text": "Calculate the rise in temperature θR of the cold water using the equation θR = (θM – θS). Use the value of room temperature θS recorded in (a)."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θR ="
     },
     {
      "type": "text",
@@ -536,9 +557,14 @@
      "text": "Calculate the fall in temperature θF of the hot water using the equation θF = (θH – θM)."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θF ="
+    },
+    {
      "type": "text",
-     "html": "Calculate the ratio <i>W</i> using the equation <i>W</i> = \\(\\frac{θ<sub>R</sub>}{θ<sub>F</sub>}\\).",
-     "text": "Calculate the ratio W using the equation W = (θR)/(θF)."
+     "html": "Calculate the ratio <i>W</i> using the equation <i>W</i> = \\(\\frac{θ_{R}}{θ_{F}}\\) .",
+     "text": "Calculate the ratio W using the equation W = (θR)/(θF) ."
     },
     {
      "type": "answer",
@@ -617,7 +643,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -692,7 +727,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -791,6 +835,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

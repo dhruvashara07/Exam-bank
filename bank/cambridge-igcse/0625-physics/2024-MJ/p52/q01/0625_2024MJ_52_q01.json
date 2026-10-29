@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 3,
    "bbox": [
-    135.6,
-    188.7,
-    458.6,
-    427.1
+    135.5,
+    188.0,
+    458.5,
+    427.5
    ],
    "id": "0625_2024MJ_52_q01a_fig1-1",
    "part": "(a)",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2",
    "page": 3,
    "bbox": [
-    134.4,
-    578.4,
-    463.4,
-    652.9
+    135.0,
+    576.5,
+    463.5,
+    653.0
    ],
    "id": "0625_2024MJ_52_q01a_fig1-2",
    "part": "(a)",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p52/q01/figures/0625_2024MJ_52_q01a_fig1-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p52/q01/figures/0625_2024MJ_52_q01a_fig1-2",
     "url": null,
-    "kb": 16.7
+    "kb": 18.8
    }
   },
   {
    "caption": "Table 1.1",
    "page": 3,
    "bbox": [
-    103.1,
-    714.0,
-    492.1,
-    787.3
+    103.0,
+    715.0,
+    492.0,
+    787.5
    ],
    "id": "0625_2024MJ_52_q01ai_table1-1",
    "part": "(a)(i)",
@@ -90,10 +90,10 @@
    "caption": "Table 1.2",
    "page": 4,
    "bbox": [
-    166.9,
-    486.8,
-    428.3,
-    654.8
+    167.0,
+    487.5,
+    428.5,
+    655.0
    ],
    "id": "0625_2024MJ_52_q01bi_table1-2",
    "part": "(b)(i)",
@@ -212,21 +212,6 @@
        "type": "figure",
        "id": "0625_2024MJ_52_q01ai_table1-1",
        "caption": "Table 1.1"
-      },
-      {
-       "type": "table",
-       "rows": [
-        [
-         "<i>m</i> / g",
-         "<i>t</i> / s",
-         "<i>T</i> / s"
-        ],
-        [
-         "500",
-         "",
-         ""
-        ]
-       ]
       },
       {
        "type": "marks",
@@ -449,19 +434,19 @@
       },
       {
        "type": "text",
-       "html": "<i>k</i><sub>1</sub> = \\(\\frac{19.7}{<i>T </i><sup>2</sup>}\\)",
+       "html": "<i>k</i><sub>1</sub> = \\(\\frac{19.7}{T ^{2}}\\)",
        "text": "k1 = (19.7)/(T 2)"
-      },
-      {
-       "type": "text",
-       "html": "<b>Method 2</b>",
-       "text": "Method 2"
       },
       {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "k1 =",
        "unit": "N / m"
+      },
+      {
+       "type": "text",
+       "html": "<b>Method 2</b>",
+       "text": "Method 2"
       },
       {
        "type": "marks",
@@ -606,33 +591,9 @@
        "text": "Record l in Table 1.2."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>m</i> / g",
-         "<i>l</i> / cm"
-        ],
-        [
-         "500",
-         ""
-        ],
-        [
-         "400",
-         ""
-        ],
-        [
-         "300",
-         ""
-        ],
-        [
-         "200",
-         ""
-        ],
-        [
-         "100",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2024MJ_52_q01bi_table1-2",
+       "caption": "Table 1.2"
       },
       {
        "type": "marks",
@@ -784,8 +745,8 @@
       },
       {
        "type": "text",
-       "html": "<i>l</i>/cm",
-       "text": "l/cm"
+       "html": "<i>l</i> / cm",
+       "text": "l / cm"
       },
       {
        "type": "text",
@@ -794,8 +755,8 @@
       },
       {
        "type": "text",
-       "html": "<i>m</i>/g",
-       "text": "m/g"
+       "html": "<i>m</i> / g",
+       "text": "m / g"
       },
       {
        "type": "answer",
@@ -945,7 +906,7 @@
       },
       {
        "type": "text",
-       "html": "<i>k</i><sub>2</sub> = \\(\\frac{1}{<i>G</i>}\\).",
+       "html": "<i>k</i><sub>2</sub> = \\(\\frac{1}{G}\\).",
        "text": "k2 = (1)/(G)."
       },
       {
@@ -1075,6 +1036,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

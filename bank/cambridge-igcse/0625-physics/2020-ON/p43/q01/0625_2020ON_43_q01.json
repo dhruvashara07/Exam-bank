@@ -9,10 +9,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    179.4,
-    100.3,
-    414.9,
-    257.1
+    179.0,
+    100.0,
+    415.0,
+    255.5
    ],
    "id": "0625_2020ON_43_q01a_fig1-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 1.2",
    "page": 2,
    "bbox": [
-    174.9,
-    337.6,
-    431.6,
-    412.5
+    176.0,
+    337.0,
+    431.0,
+    411.0
    ],
    "id": "0625_2020ON_43_q01a_fig1-2",
    "part": "(a)",
@@ -47,10 +47,10 @@
    "caption": "Fig. 1.3",
    "page": 3,
    "bbox": [
-    171.1,
-    111.9,
-    400.4,
-    342.1
+    171.5,
+    115.0,
+    400.0,
+    340.5
    ],
    "id": "0625_2020ON_43_q01b_fig1-3",
    "part": "(b)",
@@ -59,17 +59,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p43/q01/figures/0625_2020ON_43_q01b_fig1-3.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p43/q01/figures/0625_2020ON_43_q01b_fig1-3",
     "url": null,
-    "kb": 24.8
+    "kb": 24.7
    }
   },
   {
    "caption": "Fig. 1.4",
    "page": 4,
    "bbox": [
-    209.6,
-    96.6,
-    377.8,
-    291.9
+    209.5,
+    96.0,
+    377.0,
+    290.5
    ],
    "id": "0625_2020ON_43_q01c_fig1-4",
    "part": "(c)",
@@ -256,7 +256,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "description"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -474,5 +483,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

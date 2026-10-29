@@ -32,9 +32,9 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
+    67.5,
     565.5,
-    259.4,
+    259.5,
     691.0
    ],
    "id": "0625_2022MJ_12_q11_figA",
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which block exerts the greatest pressure on its base?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "weight/N",
-     "area of <sup>2</sup> base/m"
-    ],
-    [
-     "<b>A</b>",
-     "3000",
-     "0.20"
-    ],
-    [
-     "<b>B</b>",
-     "10000",
-     "0.50"
-    ],
-    [
-     "<b>C</b>",
-     "16000",
-     "2.0"
-    ],
-    [
-     "<b>D</b>",
-     "20000",
-     "1.5"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_12_q11_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "3000 0.20"
+    },
+    {
+     "label": "B",
+     "html": "10000 0.50"
+    },
+    {
+     "label": "C",
+     "html": "16000 2.0"
+    },
+    {
+     "label": "D",
+     "html": "20000 1.5"
+    }
+   ]
   }
  ]
 }

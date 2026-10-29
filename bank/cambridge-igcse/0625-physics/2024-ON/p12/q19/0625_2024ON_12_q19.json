@@ -32,9 +32,9 @@
   {
    "page": 8,
    "bbox": [
-    213.6,
+    213.5,
     351.5,
-    380.9,
+    381.0,
     465.2
    ],
    "id": "0625_2024ON_12_q19_figA",
@@ -51,9 +51,9 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
+    67.5,
     498.5,
-    246.7,
+    247.0,
     624.0
    ],
    "id": "0625_2024ON_12_q19_figB",
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row shows the angle of refraction and the normal?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "angle of refraction",
-     "normal"
-    ],
-    [
-     "<b>A</b>",
-     "P",
-     "R"
-    ],
-    [
-     "<b>B</b>",
-     "P",
-     "S"
-    ],
-    [
-     "<b>C</b>",
-     "Q",
-     "R"
-    ],
-    [
-     "<b>D</b>",
-     "Q",
-     "S"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_12_q19_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "P R"
+    },
+    {
+     "label": "B",
+     "html": "P S"
+    },
+    {
+     "label": "C",
+     "html": "Q R"
+    },
+    {
+     "label": "D",
+     "html": "Q S"
+    }
+   ]
   }
  ]
 }

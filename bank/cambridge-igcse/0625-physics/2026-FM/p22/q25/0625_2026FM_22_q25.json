@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    122.6,
-    227.2,
-    233.4
+    67.5,
+    122.5,
+    227.5,
+    233.5
    ],
    "id": "0625_2026FM_22_q25_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-FM/p22/q25/figures/0625_2026FM_22_q25_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-FM/p22/q25/figures/0625_2026FM_22_q25_figA",
     "url": null,
-    "kb": 20.6
+    "kb": 20.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What will be the result?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>N pole</b>",
-     "<b>S pole</b>"
-    ],
-    [
-     "<b>A</b>",
-     "attracts",
-     "attracts"
-    ],
-    [
-     "<b>B</b>",
-     "attracts",
-     "repels"
-    ],
-    [
-     "<b>C</b>",
-     "repels",
-     "attracts"
-    ],
-    [
-     "<b>D</b>",
-     "repels",
-     "repels"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026FM_22_q25_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "attracts attracts"
+    },
+    {
+     "label": "B",
+     "html": "attracts repels"
+    },
+    {
+     "label": "C",
+     "html": "repels attracts"
+    },
+    {
+     "label": "D",
+     "html": "repels repels"
+    }
+   ]
   }
  ]
 }

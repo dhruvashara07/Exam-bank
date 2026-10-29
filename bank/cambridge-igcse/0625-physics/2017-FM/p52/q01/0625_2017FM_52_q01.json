@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    94.2,
-    127.1,
+    94.0,
+    126.5,
     488.5,
-    320.5
+    317.5
    ],
    "id": "0625_2017FM_52_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 1.1",
    "page": 3,
    "bbox": [
-    112.9,
-    83.1,
+    113.5,
+    88.0,
     483.5,
-    319.9
+    320.0
    ],
    "id": "0625_2017FM_52_q01bii_table1-1",
    "part": "(b)(ii)",
@@ -296,14 +296,19 @@
        "items": [
         "Carefully empty the boiling tube and the beaker.",
         "Pour 150 cm<sup>3 </sup>of cold water and 50 cm<sup>3</sup> of hot water <b>into the beaker</b>.",
-        "Record the temperature θ<sub>2</sub> of the warm water in the beaker.",
-        "Repeat the steps in <b>(a)(ii)</b>, recording the temperature θ of the water in the boiling tube in the third column of the table."
+        "Record the temperature θ<sub>2</sub> of the warm water in the beaker."
        ]
       },
       {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "θ2 ="
+      },
+      {
+       "type": "list",
+       "items": [
+        "Repeat the steps in <b>(a)(ii)</b>, recording the temperature θ of the water in the boiling tube in the third column of the table."
+       ]
       },
       {
        "type": "marks",
@@ -375,59 +380,9 @@
        "text": "Complete the heading and the time column in the table."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "",
-         "tube in beaker with",
-         "tube in beaker"
-        ],
-        [
-         "",
-         "cold water",
-         "with warm water"
-        ],
-        [
-         "<i>t</i> /",
-         "θ/",
-         "θ/"
-        ],
-        [
-         "0",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2017FM_52_q01bii_table1-1",
+       "caption": "Table 1.1"
       },
       {
        "type": "marks",
@@ -503,7 +458,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -652,7 +616,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "change"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -679,6 +652,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -33,9 +33,9 @@
    "page": 6,
    "bbox": [
     67.9,
-    263.1,
+    262.5,
     367.3,
-    436.3
+    437.0
    ],
    "id": "0625_2026MJ_21_q15_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p21/q15/figures/0625_2026MJ_21_q15_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p21/q15/figures/0625_2026MJ_21_q15_figA",
     "url": null,
-    "kb": 16.1
+    "kb": 16.0
    }
   },
   {
    "page": 6,
    "bbox": [
-    67.7,
-    481.4,
-    370.6,
-    606.8
+    67.5,
+    481.0,
+    370.5,
+    607.0
    ],
    "id": "0625_2026MJ_21_q15_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p21/q15/figures/0625_2026MJ_21_q15_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p21/q15/figures/0625_2026MJ_21_q15_figB",
     "url": null,
-    "kb": 22.2
+    "kb": 22.1
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,40 +132,30 @@
    "text": "Which row matches a description of a method of thermal energy transfer to the arrow in the diagram representing this transfer?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>results from</b>",
-     "<b>relies upon molecular</b>"
-    ],
-    [
-     "",
-     "<b>changes in density</b>",
-     "<b>lattice vibrations</b>"
-    ],
-    [
-     "<b>A</b>",
-     "X",
-     "Z"
-    ],
-    [
-     "<b>B</b>",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>C</b>",
-     "Y",
-     "X"
-    ],
-    [
-     "<b>D</b>",
-     "Z",
-     "X"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_21_q15_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "X Z"
+    },
+    {
+     "label": "B",
+     "html": "X Y"
+    },
+    {
+     "label": "C",
+     "html": "Y X"
+    },
+    {
+     "label": "D",
+     "html": "Z X"
+    }
+   ]
   }
  ]
 }

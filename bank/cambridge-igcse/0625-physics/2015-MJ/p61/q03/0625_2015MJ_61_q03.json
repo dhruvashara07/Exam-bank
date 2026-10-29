@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 6,
    "bbox": [
-    189.6,
-    108.7,
-    403.0,
-    326.1
+    189.5,
+    110.5,
+    403.5,
+    326.5
    ],
    "id": "0625_2015MJ_61_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 6,
    "bbox": [
-    188.4,
-    440.0,
-    231.8,
-    526.9
+    105.0,
+    357.0,
+    315.0,
+    527.0
    ],
    "id": "0625_2015MJ_61_q03ai_fig3-2",
    "part": "(a)(i)",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p61/q03/figures/0625_2015MJ_61_q03ai_fig3-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p61/q03/figures/0625_2015MJ_61_q03ai_fig3-2",
     "url": null,
-    "kb": 3.9
+    "kb": 18.7
    }
   },
   {
    "caption": "Fig. 3.3",
    "page": 6,
    "bbox": [
-    188.4,
-    648.5,
-    231.8,
-    705.2
+    105.0,
+    357.0,
+    315.5,
+    705.5
    ],
    "id": "0625_2015MJ_61_q03ai_fig3-3",
    "part": "(a)(i)",
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p61/q03/figures/0625_2015MJ_61_q03ai_fig3-3.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p61/q03/figures/0625_2015MJ_61_q03ai_fig3-3",
     "url": null,
-    "kb": 3.4
+    "kb": 32.8
    }
   }
  ],
@@ -107,9 +107,9 @@
        "page": 6,
        "bbox": [
         30.0,
-        332.9,
+        335.9,
         570.0,
-        704.9
+        705.1
        ],
        "continued": false,
        "answer_space": {
@@ -117,13 +117,13 @@
         "dotted_lines": 2,
         "answer_line": "VS =  ……",
         "working_gap_pt": 60.6,
-        "height_pt": 372.0
+        "height_pt": 369.1
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p61/q03/question/0625_2015MJ_61_q03_a-i_s1.svg",
         "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p61/q03/question/0625_2015MJ_61_q03_a-i_s1",
         "url": null,
-        "kb": 55.5
+        "kb": 55.4
        }
       }
      ],
@@ -164,39 +164,19 @@
        "text": "Write down the readings shown on the meters in Figs. 3.2 and 3.3."
       },
       {
-       "type": "text",
-       "html": "5 6 7",
-       "text": "5 6 7"
-      },
-      {
-       "type": "text",
-       "html": "8 9 10",
-       "text": "8 9 10"
-      },
-      {
        "type": "figure",
        "id": "0625_2015MJ_61_q03ai_fig3-2",
        "caption": "Fig. 3.2"
       },
       {
-       "type": "text",
-       "html": "0.4 0.6",
-       "text": "0.4 0.6"
-      },
-      {
-       "type": "text",
-       "html": "0.2 0.8 1.0",
-       "text": "0.2 0.8 1.0"
-      },
-      {
-       "type": "text",
-       "html": "A",
-       "text": "A"
-      },
-      {
        "type": "figure",
        "id": "0625_2015MJ_61_q03ai_fig3-3",
        "caption": "Fig. 3.3"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "VS ="
       },
       {
        "type": "answer",
@@ -216,7 +196,7 @@
        "page": 6,
        "bbox": [
         30.0,
-        704.9,
+        705.1,
         570.0,
         796.0
        ],
@@ -226,7 +206,7 @@
         "dotted_lines": 1,
         "answer_line": "RS =  ……[1]",
         "working_gap_pt": 44.5,
-        "height_pt": 91.1
+        "height_pt": 90.9
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p61/q03/question/0625_2015MJ_61_q03_a-ii_s1.svg",
@@ -268,7 +248,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>S</sub> of the lamp filaments using the equation <i>R</i><sub>S</sub> = \\(\\frac{<i>V</i><sub>S</sub>}{<i>I</i><sub>S</sub>}\\).",
+       "html": "Calculate the resistance <i>R</i><sub>S</sub> of the lamp filaments using the equation <i>R</i><sub>S</sub> = \\(\\frac{V_{S}}{I_{S}}\\).",
        "text": "Calculate the resistance RS of the lamp filaments using the equation RS = (VS)/(IS)."
       },
       {
@@ -432,13 +412,23 @@
        "text": "2.0 V"
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "VP ="
+      },
+      {
        "type": "text",
        "html": "0.60 A",
        "text": "0.60 A"
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "IP ="
+      },
+      {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>P</sub> of the lamp filaments using the equation <i>R</i><sub>P</sub> = \\(\\frac{<i>V</i><sub>P</sub>}{<i>I</i><sub>P</sub>}\\).",
+       "html": "Calculate the resistance <i>R</i><sub>P</sub> of the lamp filaments using the equation <i>R</i><sub>P</sub> = \\(\\frac{V_{P}}{I_{P}}\\).",
        "text": "Calculate the resistance RP of the lamp filaments using the equation RP = (VP)/(IP)."
       },
       {
@@ -481,7 +471,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the ratio \\(\\frac{<i>R</i><sub>S</sub>}{<i>R</i><sub>P</sub>}\\).",
+       "html": "Calculate the ratio \\(\\frac{R_{S}}{R_{P}}\\).",
        "text": "Calculate the ratio (RS)/(RP)."
       },
       {
@@ -690,7 +680,7 @@
    "content": [
     {
      "type": "text",
-     "html": "A student wishes to investigate whether the ratio \\(\\frac{<i>R</i><sub>S</sub>}{<i>R</i><sub>P</sub>}\\) for the two lamps is the same under all conditions.",
+     "html": "A student wishes to investigate whether the ratio \\(\\frac{R_{S}}{R_{P}}\\) for the two lamps is the same under all conditions.",
      "text": "A student wishes to investigate whether the ratio (RS)/(RP) for the two lamps is the same under all conditions."
     }
    ]
@@ -713,6 +703,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

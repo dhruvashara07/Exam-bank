@@ -9,10 +9,10 @@
    "caption": "Fig. 2.1",
    "page": 3,
    "bbox": [
-    143.4,
-    181.5,
-    451.8,
-    399.3
+    143.5,
+    184.0,
+    451.5,
+    396.5
    ],
    "id": "0625_2019FM_42_q02b_fig2-1",
    "part": "(b)",
@@ -101,7 +101,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "advantage"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "disadvantage"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -203,6 +212,11 @@
        "type": "text",
        "html": "The wind blows at a speed of 16 m / s towards the turbine blades. In one second, a volume of 24 000 m<sup>3</sup> of air passes through the circular area swept out by the blades. The density of air is 1.3 kg / m<sup>3</sup>. Calculate: <b> 1.</b> the mass of air that passes through the circular area swept out by the blades in 1.0 s",
        "text": "The wind blows at a speed of 16 m / s towards the turbine blades. In one second, a volume of 24 000 m3 of air passes through the circular area swept out by the blades. The density of air is 1.3 kg / m3. Calculate: 1. the mass of air that passes through the circular area swept out by the blades in 1.0 s"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "mass ="
       },
       {
        "type": "text",
@@ -325,5 +339,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

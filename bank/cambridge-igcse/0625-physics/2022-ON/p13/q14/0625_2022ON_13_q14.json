@@ -33,8 +33,8 @@
    "page": 7,
    "bbox": [
     276.3,
-    86.1,
-    318.3,
+    85.5,
+    319.0,
     294.5
    ],
    "id": "0625_2022ON_13_q14_figA",
@@ -51,10 +51,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    326.6,
-    246.1,
-    452.1
+    67.5,
+    326.5,
+    246.0,
+    452.5
    ],
    "id": "0625_2022ON_13_q14_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p13/q14/figures/0625_2022ON_13_q14_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p13/q14/figures/0625_2022ON_13_q14_figB",
     "url": null,
-    "kb": 18.0
+    "kb": 17.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "What are the values of the lower fixed point and of the upper fixed point on the Celsius scale?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "lower fixed",
-     "upper fixed"
-    ],
-    [
-     "",
-     "point/°C",
-     "point/°C"
-    ],
-    [
-     "<b>A</b>",
-     "–10",
-     "110"
-    ],
-    [
-     "<b>B</b>",
-     "0",
-     "20"
-    ],
-    [
-     "<b>C</b>",
-     "0",
-     "100"
-    ],
-    [
-     "<b>D</b>",
-     "20",
-     "100"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_13_q14_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "–10 110"
+    },
+    {
+     "label": "B",
+     "html": "0 20"
+    },
+    {
+     "label": "C",
+     "html": "0 100"
+    },
+    {
+     "label": "D",
+     "html": "20 100"
+    }
+   ]
   }
  ]
 }

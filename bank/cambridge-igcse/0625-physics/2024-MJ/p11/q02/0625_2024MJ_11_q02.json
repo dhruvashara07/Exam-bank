@@ -33,9 +33,9 @@
    "page": 2,
    "bbox": [
     179.8,
-    323.7,
+    335.0,
     415.7,
-    467.6
+    468.0
    ],
    "id": "0625_2024MJ_11_q02_figA",
    "caption": null,
@@ -51,9 +51,9 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
-    500.1,
-    552.6,
+    67.5,
+    500.0,
+    553.0,
     611.5
    ],
    "id": "0625_2024MJ_11_q02_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p11/q02/figures/0625_2024MJ_11_q02_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p11/q02/figures/0625_2024MJ_11_q02_figB",
     "url": null,
-    "kb": 40.9
+    "kb": 40.6
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Which row compares the mass and the weight of the two objects?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass",
-     "weight"
-    ],
-    [
-     "<b>A</b>",
-     "both objects have the same mass",
-     "both objects have the same weight"
-    ],
-    [
-     "<b>B</b>",
-     "both objects have the same mass",
-     "the weight of X is less than the weight of Y"
-    ],
-    [
-     "<b>C</b>",
-     "the mass of X is less than the mass of Y",
-     "both objects have the same weight"
-    ],
-    [
-     "<b>D</b>",
-     "the mass of X is less than the mass of Y",
-     "the weight of X is less than the weight of Y"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_11_q02_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "both objects have the same mass both objects have the same weight"
+    },
+    {
+     "label": "B",
+     "html": "both objects have the same mass the weight of X is less than the weight of Y"
+    },
+    {
+     "label": "C",
+     "html": "the mass of X is less than the mass of Y both objects have the same weight"
+    },
+    {
+     "label": "D",
+     "html": "the mass of X is less than the mass of Y the weight of X is less than the weight of Y"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    196.8,
+    196.0,
     438.0,
-    397.9,
-    548.6
+    398.5,
+    549.0
    ],
    "id": "0625_2024ON_22_q06_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p22/q06/figures/0625_2024ON_22_q06_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p22/q06/figures/0625_2024ON_22_q06_figA",
     "url": null,
-    "kb": 12.1
+    "kb": 11.9
    }
   },
   {
    "page": 3,
    "bbox": [
-    67.7,
-    580.7,
-    288.8,
-    720.4
+    67.5,
+    580.5,
+    289.0,
+    720.5
    ],
    "id": "0625_2024ON_22_q06_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p22/q06/figures/0625_2024ON_22_q06_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p22/q06/figures/0625_2024ON_22_q06_figB",
     "url": null,
-    "kb": 24.5
+    "kb": 24.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,45 +132,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "clockwise",
-     "anticlockwise"
-    ],
-    [
-     "",
-     "moment about",
-     "moment about"
-    ],
-    [
-     "",
-     "the pivot",
-     "the pivot"
-    ],
-    [
-     "<b>A</b>",
-     "<i>F</i><sub>2</sub><i>d</i><sub>2</sub>",
-     "<i>F</i><sub>1</sub><i>d</i><sub>1</sub>"
-    ],
-    [
-     "<b>B</b>",
-     "<i>F</i><sub>2</sub><i>d</i><sub>2</sub>",
-     "<i>F</i><sub>1</sub><i>d</i><sub>3</sub>"
-    ],
-    [
-     "<b>C</b>",
-     "<i>F</i><sub>2</sub><i>d</i><sub>4</sub>",
-     "<i>F</i><sub>1</sub><i>d</i><sub>1</sub>"
-    ],
-    [
-     "<b>D</b>",
-     "<i>F</i><sub>2</sub><i>d</i><sub>4</sub>",
-     "<i>F</i><sub>1</sub><i>d</i><sub>3</sub>"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_22_q06_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "F2d2 F1d1"
+    },
+    {
+     "label": "B",
+     "html": "F2d2 F1d3"
+    },
+    {
+     "label": "C",
+     "html": "F2d4 F1d1"
+    },
+    {
+     "label": "D",
+     "html": "F2d4 F1d3"
+    }
+   ]
   }
  ]
 }

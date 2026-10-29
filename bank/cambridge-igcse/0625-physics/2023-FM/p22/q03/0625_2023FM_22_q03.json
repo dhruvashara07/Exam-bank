@@ -32,10 +32,10 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
-    568.7,
-    531.2,
-    694.2
+    67.5,
+    568.5,
+    531.5,
+    694.5
    ],
    "id": "0625_2023FM_22_q03_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-FM/p22/q03/figures/0625_2023FM_22_q03_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-FM/p22/q03/figures/0625_2023FM_22_q03_figA",
     "url": null,
-    "kb": 29.9
+    "kb": 29.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,52 +108,30 @@
    "text": "Which object is moving with constant non-zero acceleration?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "distance moved",
-     "distance moved",
-     "distance moved",
-     "distance moved"
-    ],
-    [
-     "",
-     "in 1st second/m",
-     "in 2nd second/m",
-     "in 3rd second/m",
-     "in 4th second/m"
-    ],
-    [
-     "<b>A</b>",
-     "5",
-     "5",
-     "5",
-     "5"
-    ],
-    [
-     "<b>B</b>",
-     "5",
-     "6",
-     "7",
-     "8"
-    ],
-    [
-     "<b>C</b>",
-     "5",
-     "7",
-     "10",
-     "14"
-    ],
-    [
-     "<b>D</b>",
-     "5",
-     "8",
-     "14",
-     "26"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023FM_22_q03_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "5 5 5 5"
+    },
+    {
+     "label": "B",
+     "html": "5 6 7 8"
+    },
+    {
+     "label": "C",
+     "html": "5 7 10 14"
+    },
+    {
+     "label": "D",
+     "html": "5 8 14 26"
+    }
+   ]
   }
  ]
 }

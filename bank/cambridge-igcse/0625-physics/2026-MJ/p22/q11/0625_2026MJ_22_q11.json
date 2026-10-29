@@ -34,7 +34,7 @@
    "bbox": [
     67.9,
     86.6,
-    334.5,
+    335.0,
     155.5
    ],
    "id": "0625_2026MJ_22_q11_figA",
@@ -51,10 +51,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    200.3,
-    470.6,
-    311.6
+    67.5,
+    200.0,
+    471.0,
+    312.0
    ],
    "id": "0625_2026MJ_22_q11_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p22/q11/figures/0625_2026MJ_22_q11_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p22/q11/figures/0625_2026MJ_22_q11_figB",
     "url": null,
-    "kb": 41.3
+    "kb": 41.1
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "What happens to the gas particles and the pressure of the gas as the plunger is pushed further in?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>gas particles</b>",
-     "<b>pressure of the gas</b>"
-    ],
-    [
-     "<b>A</b>",
-     "hit the walls of the syringe less frequently",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "hit the walls of the syringe less frequently",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "hit the walls of the syringe more frequently",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "hit the walls of the syringe more frequently",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_22_q11_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "hit the walls of the syringe less frequently decreases"
+    },
+    {
+     "label": "B",
+     "html": "hit the walls of the syringe less frequently increases"
+    },
+    {
+     "label": "C",
+     "html": "hit the walls of the syringe more frequently decreases"
+    },
+    {
+     "label": "D",
+     "html": "hit the walls of the syringe more frequently increases"
+    }
+   ]
   }
  ]
 }

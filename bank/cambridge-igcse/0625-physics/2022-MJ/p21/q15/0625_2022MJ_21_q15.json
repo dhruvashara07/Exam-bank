@@ -32,8 +32,8 @@
   {
    "page": 6,
    "bbox": [
-    181.8,
-    331.5,
+    181.0,
+    331.0,
     417.3,
     426.9
    ],
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p21/q15/figures/0625_2022MJ_21_q15_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p21/q15/figures/0625_2022MJ_21_q15_figA",
     "url": null,
-    "kb": 9.7
+    "kb": 9.6
    }
   },
   {
    "page": 6,
    "bbox": [
-    67.7,
-    469.3,
+    67.5,
+    469.0,
     432.5,
-    594.7
+    595.0
    ],
    "id": "0625_2022MJ_21_q15_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p21/q15/figures/0625_2022MJ_21_q15_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p21/q15/figures/0625_2022MJ_21_q15_figB",
     "url": null,
-    "kb": 33.6
+    "kb": 33.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "From which container does the water evaporate at the greater rate and how can the rate of evaporation be increased?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "container with the greater",
-     "how the rate of"
-    ],
-    [
-     "",
-     "rate of evaporation",
-     "evaporation can be increased"
-    ],
-    [
-     "<b>A</b>",
-     "1",
-     "decrease the water temperature"
-    ],
-    [
-     "<b>B</b>",
-     "1",
-     "increase the water temperature"
-    ],
-    [
-     "<b>C</b>",
-     "2",
-     "decrease the water temperature"
-    ],
-    [
-     "<b>D</b>",
-     "2",
-     "increase the water temperature"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_21_q15_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "1 decrease the water temperature"
+    },
+    {
+     "label": "B",
+     "html": "1 increase the water temperature"
+    },
+    {
+     "label": "C",
+     "html": "2 decrease the water temperature"
+    },
+    {
+     "label": "D",
+     "html": "2 increase the water temperature"
+    }
+   ]
   }
  ]
 }

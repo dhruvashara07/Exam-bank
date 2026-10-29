@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    76.7,
-    113.7,
-    520.4,
-    239.4
+    76.5,
+    118.0,
+    520.0,
+    236.5
    ],
    "id": "0625_2017FM_52_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 8,
    "bbox": [
-    166.9,
-    436.3,
-    428.3,
-    597.3
+    167.0,
+    441.0,
+    428.5,
+    597.5
    ],
    "id": "0625_2017FM_52_q03b_table3-1",
    "part": "(b)",
@@ -218,39 +218,9 @@
      ]
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>u</i> / cm",
-       "<i>h</i><sub>I</sub> / cm",
-       "<i>M</i>"
-      ],
-      [
-       "20.0",
-       "",
-       ""
-      ],
-      [
-       "25.0",
-       "",
-       ""
-      ],
-      [
-       "35.0",
-       "",
-       ""
-      ],
-      [
-       "45.0",
-       "",
-       ""
-      ],
-      [
-       "55.0",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2017FM_52_q03b_table3-1",
+     "caption": "Table 3.1"
     },
     {
      "type": "marks",
@@ -322,7 +292,7 @@
     },
     {
      "type": "text",
-     "html": "<i>M</i> = \\(\\frac{<i>h</i>}{<i>h</i>}\\)<sub>I</sub> . <sub>o</sub>",
+     "html": "<i>M</i> = \\(\\frac{h}{h}\\)<sub>I</sub> . <sub>o</sub>",
      "text": "M = (h)/(h)I . o"
     },
     {
@@ -552,7 +522,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "improvement",
+     "prefix": "difficulty"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "improvement"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -579,6 +558,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

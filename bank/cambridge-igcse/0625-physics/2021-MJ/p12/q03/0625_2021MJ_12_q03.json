@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    109.9,
-    553.9,
-    221.3
+    67.5,
+    109.5,
+    554.0,
+    221.5
    ],
    "id": "0625_2021MJ_12_q03_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p12/q03/figures/0625_2021MJ_12_q03_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p12/q03/figures/0625_2021MJ_12_q03_figA",
     "url": null,
-    "kb": 42.8
+    "kb": 42.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What will happen and why?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "what will happen",
-     "why"
-    ],
-    [
-     "<b>A</b>",
-     "Both stones hit the floor at the same time.",
-     "Acceleration of free fall is constant."
-    ],
-    [
-     "<b>B</b>",
-     "Both stones hit the floor at the same time.",
-     "They fall at constant speed."
-    ],
-    [
-     "<b>C</b>",
-     "The heavier stone hits the floor first.",
-     "Acceleration increases with weight."
-    ],
-    [
-     "<b>D</b>",
-     "The heavier stone hits the floor first.",
-     "Speed increases with weight."
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_12_q03_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "Both stones hit the floor at the same time. Acceleration of free fall is constant."
+    },
+    {
+     "label": "B",
+     "html": "Both stones hit the floor at the same time. They fall at constant speed."
+    },
+    {
+     "label": "C",
+     "html": "The heavier stone hits the floor first. Acceleration increases with weight."
+    },
+    {
+     "label": "D",
+     "html": "The heavier stone hits the floor first. Speed increases with weight."
+    }
+   ]
   }
  ]
 }

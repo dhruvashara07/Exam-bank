@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    108.1,
-    100.7,
-    491.9,
-    309.1
+    108.5,
+    103.5,
+    491.5,
+    306.5
    ],
    "id": "0625_2018MJ_61_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2",
    "page": 2,
    "bbox": [
-    108.1,
-    100.7,
-    491.9,
-    309.1
+    108.5,
+    103.5,
+    491.5,
+    306.5
    ],
    "id": "0625_2018MJ_61_q01_fig1-2",
    "part": "",
@@ -71,10 +71,10 @@
    "caption": "Fig. 1.3",
    "page": 2,
    "bbox": [
-    247.0,
-    497.5,
-    349.0,
-    637.4
+    247.5,
+    497.0,
+    347.5,
+    634.5
    ],
    "id": "0625_2018MJ_61_q01bi_fig1-3",
    "part": "(b)(i)",
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p61/q01/figures/0625_2018MJ_61_q01bi_fig1-3.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p61/q01/figures/0625_2018MJ_61_q01bi_fig1-3",
     "url": null,
-    "kb": 21.9
+    "kb": 21.8
    }
   }
  ],
@@ -259,6 +259,12 @@
        "text": "Calculate the actual distance D from the bottom of the clamp to the centre of the bob."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "D =",
+       "unit": "cm"
+      },
+      {
        "type": "text",
        "html": "The student displaces the bob slightly and releases it so that it swings. He measures the time <i>t</i> for 10 complete oscillations. The time <i>t</i> is shown on the stopwatch in Fig. 1.3.",
        "text": "The student displaces the bob slightly and releases it so that it swings. He measures the time t for 10 complete oscillations. The time t is shown on the stopwatch in Fig. 1.3."
@@ -267,12 +273,6 @@
        "type": "figure",
        "id": "0625_2018MJ_61_q01bi_fig1-3",
        "caption": "Fig. 1.3"
-      },
-      {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "D =",
-       "unit": "cm"
       },
       {
        "type": "marks",
@@ -558,7 +558,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the acceleration of free fall <i>g</i> using the equation <i>g</i> = \\(\\frac{20}{<i>T</i><sup>2</sup>}\\).",
+       "html": "Calculate the acceleration of free fall <i>g</i> using the equation <i>g</i> = \\(\\frac{20}{T ^{2}}\\).",
        "text": "Calculate the acceleration of free fall g using the equation g = (20)/(T2)."
       },
       {
@@ -739,7 +739,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the acceleration of free fall <i>g</i> using the equation <i>g</i> = \\(\\frac{40}{<i>T</i><sup>2</sup>}\\) and the value of <i>T</i> 2 from <b>(c)</b>. Give your answer to a suitable number of significant figures for this experiment.",
+       "html": "Calculate the acceleration of free fall <i>g</i> using the equation <i>g</i> = \\(\\frac{40}{T ^{2}}\\) and the value of <i>T</i> 2 from <b>(c)</b>. Give your answer to a suitable number of significant figures for this experiment.",
        "text": "Calculate the acceleration of free fall g using the equation g = (40)/(T2) and the value of T 2 from (c). Give your answer to a suitable number of significant figures for this experiment."
       },
       {
@@ -839,7 +839,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -939,6 +948,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

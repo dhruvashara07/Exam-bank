@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    219.3,
-    340.6,
-    375.6,
-    424.1
+    218.5,
+    340.0,
+    376.0,
+    424.5
    ],
    "id": "0625_2015MJ_11_q11_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p11/q11/figures/0625_2015MJ_11_q11_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p11/q11/figures/0625_2015MJ_11_q11_figA",
     "url": null,
-    "kb": 8.2
+    "kb": 8.1
    }
   },
   {
    "page": 6,
    "bbox": [
-    219.3,
-    457.4,
-    375.6,
-    499.0
+    218.5,
+    457.0,
+    376.0,
+    499.5
    ],
    "id": "0625_2015MJ_11_q11_figB",
    "caption": null,
@@ -64,16 +64,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p11/q11/figures/0625_2015MJ_11_q11_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p11/q11/figures/0625_2015MJ_11_q11_figB",
     "url": null,
-    "kb": 3.2
+    "kb": 3.1
    }
   },
   {
    "page": 6,
    "bbox": [
-    69.3,
-    531.6,
-    285.9,
-    642.9
+    69.0,
+    531.5,
+    286.0,
+    643.0
    ],
    "id": "0625_2015MJ_11_q11_figC",
    "caption": null,
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p11/q11/figures/0625_2015MJ_11_q11_figC.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p11/q11/figures/0625_2015MJ_11_q11_figC",
     "url": null,
-    "kb": 22.8
+    "kb": 22.5
    }
   }
  ],
@@ -128,6 +128,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -135,21 +136,9 @@
    "text": "A block with flat, rectangular sides rests on a table."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "block",
-     "block"
-    ],
-    [
-     "table",
-     "table"
-    ],
-    [
-     "",
-     ""
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2015MJ_11_q11_figA",
+   "caption": null
   },
   {
    "type": "text",
@@ -167,35 +156,30 @@
    "text": "How has this change affected the force and the pressure exerted by the block on the table?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "force",
-     "pressure"
-    ],
-    [
-     "A",
-     "decreased",
-     "decreased"
-    ],
-    [
-     "B",
-     "decreased",
-     "unchanged"
-    ],
-    [
-     "C",
-     "unchanged",
-     "decreased"
-    ],
-    [
-     "D",
-     "unchanged",
-     "unchanged"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_11_q11_figC",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreased decreased"
+    },
+    {
+     "label": "B",
+     "html": "decreased unchanged"
+    },
+    {
+     "label": "C",
+     "html": "unchanged decreased"
+    },
+    {
+     "label": "D",
+     "html": "unchanged unchanged"
+    }
+   ]
   }
  ]
 }

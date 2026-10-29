@@ -32,10 +32,10 @@
   {
    "page": 17,
    "bbox": [
-    237.7,
-    97.7,
-    357.9,
-    265.8
+    237.0,
+    97.5,
+    358.0,
+    266.5
    ],
    "id": "0625_2021MJ_12_q31_figA",
    "caption": null,
@@ -45,13 +45,13 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p12/q31/figures/0625_2021MJ_12_q31_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p12/q31/figures/0625_2021MJ_12_q31_figA",
     "url": null,
-    "kb": 11.2
+    "kb": 11.0
    }
   },
   {
    "page": 17,
    "bbox": [
-    67.7,
+    67.5,
     323.5,
     403.0,
     449.0
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -122,8 +123,8 @@
   },
   {
    "type": "text",
-   "html": "With only switch S<sub>1</sub> closed, the reading on the ammeter is 0.04A.",
-   "text": "With only switch S1 closed, the reading on the ammeter is 0.04A."
+   "html": "With only switch S<sub>1</sub> closed, the reading on the ammeter is 0.04 A.",
+   "text": "With only switch S1 closed, the reading on the ammeter is 0.04 A."
   },
   {
    "type": "text",
@@ -131,45 +132,30 @@
    "text": "Which row states the incorrect ammeter reading for the switch conditions given?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "switch S<sub>1</sub>",
-     "switch S<sub>2</sub>",
-     "switch S<sub>3</sub>",
-     "ammeter reading/A"
-    ],
-    [
-     "<b>A</b>",
-     "open",
-     "open",
-     "open",
-     "0.00"
-    ],
-    [
-     "<b>B</b>",
-     "open",
-     "closed",
-     "open",
-     "0.04"
-    ],
-    [
-     "<b>C</b>",
-     "open",
-     "open",
-     "closed",
-     "0.08"
-    ],
-    [
-     "<b>D</b>",
-     "closed",
-     "closed",
-     "closed",
-     "0.12"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_12_q31_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "open open open 0.00"
+    },
+    {
+     "label": "B",
+     "html": "open closed open 0.04"
+    },
+    {
+     "label": "C",
+     "html": "open open closed 0.08"
+    },
+    {
+     "label": "D",
+     "html": "closed closed closed 0.12"
+    }
+   ]
   }
  ]
 }

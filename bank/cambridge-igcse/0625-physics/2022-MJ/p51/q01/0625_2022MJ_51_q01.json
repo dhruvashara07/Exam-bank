@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    115.7,
-    114.4,
-    479.9,
-    371.4
+    116.0,
+    113.5,
+    479.5,
+    370.0
    ],
    "id": "0625_2022MJ_51_q01_fig1-1",
    "part": "",
@@ -147,6 +147,18 @@
        "type": "text",
        "html": "Take two readings from the metre rule to determine the unstretched length <i>l</i><sub>0</sub> of the coiled part of the spring. Use the set square provided.",
        "text": "Take two readings from the metre rule to determine the unstretched length l0 of the coiled part of the spring. Use the set square provided."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "reading 1",
+       "unit": "cm"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "reading 2",
+       "unit": "cm"
       },
       {
        "type": "answer",
@@ -307,9 +319,21 @@
      "text": "Suspend a load of P = 1.0 N from the spring. Record the new length l1 of the coiled part of the spring."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "l1 =",
+     "unit": "cm"
+    },
+    {
      "type": "text",
      "html": "Calculate the extension <i>e</i><sub>1</sub> using the equation <i>e</i><sub>1</sub> = (<i>l</i><sub>1</sub> – <i>l</i><sub>0</sub>).",
      "text": "Calculate the extension e1 using the equation e1 = (l1 – l0)."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "e1 =",
+     "unit": "cm"
     },
     {
      "type": "text",
@@ -318,7 +342,7 @@
     },
     {
      "type": "text",
-     "html": "<i>k</i> = \\(\\frac{<i>P</i>}{<i>e</i><sub>1</sub>}\\).",
+     "html": "<i>k</i> = \\(\\frac{P}{e_{1}}\\).",
      "text": "k = (P)/(e1)."
     },
     {
@@ -401,9 +425,21 @@
      "text": "Suspend a load of P = 5.0 N from the spring. Record the new length l5 of the coiled part of the spring."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "l5 =",
+     "unit": "cm"
+    },
+    {
      "type": "text",
      "html": "Calculate the extension<i> e</i><sub>5</sub> using the equation <i>e</i><sub>5</sub> = (<i>l</i><sub>5</sub> – <i>l</i><sub>0</sub>).",
      "text": "Calculate the extension e5 using the equation e5 = (l5 – l0)."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "e5 =",
+     "unit": "cm"
     },
     {
      "type": "text",
@@ -412,7 +448,7 @@
     },
     {
      "type": "text",
-     "html": "<i>k</i> = \\(\\frac{<i>P</i>}{<i>e</i><sub>5</sub>}\\).",
+     "html": "<i>k</i> = \\(\\frac{P}{e_{5}}\\).",
      "text": "k = (P)/(e5)."
     },
     {
@@ -496,7 +532,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -709,6 +754,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

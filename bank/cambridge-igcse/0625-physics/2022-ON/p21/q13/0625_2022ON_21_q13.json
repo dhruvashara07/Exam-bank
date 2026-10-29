@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    397.0,
-    416.1,
-    508.3
+    67.5,
+    396.5,
+    416.5,
+    508.5
    ],
    "id": "0625_2022ON_21_q13_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row correctly describes boiling and evaporation of water?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "boiling",
-     "evaporation"
-    ],
-    [
-     "<b>A</b>",
-     "bubbles seen",
-     "occurs at surface only"
-    ],
-    [
-     "<b>B</b>",
-     "bubbles seen",
-     "occurs throughout the water"
-    ],
-    [
-     "<b>C</b>",
-     "no bubbles",
-     "occurs at surface only"
-    ],
-    [
-     "<b>D</b>",
-     "no bubbles",
-     "occurs throughout the water"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_21_q13_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "bubbles seen occurs at surface only"
+    },
+    {
+     "label": "B",
+     "html": "bubbles seen occurs throughout the water"
+    },
+    {
+     "label": "C",
+     "html": "no bubbles occurs at surface only"
+    },
+    {
+     "label": "D",
+     "html": "no bubbles occurs throughout the water"
+    }
+   ]
   }
  ]
 }

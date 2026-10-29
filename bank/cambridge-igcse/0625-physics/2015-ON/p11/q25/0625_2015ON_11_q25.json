@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    69.3,
-    401.9,
-    285.9,
-    513.2
+    69.0,
+    401.5,
+    286.0,
+    513.5
    ],
    "id": "0625_2015ON_11_q25_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p11/q25/figures/0625_2015ON_11_q25_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p11/q25/figures/0625_2015ON_11_q25_figA",
     "url": null,
-    "kb": 19.6
+    "kb": 19.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row states whether each metal is ferrous or non-ferrous?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "ferrous",
-     "non-ferrous"
-    ],
-    [
-     "A",
-     "aluminium",
-     "copper"
-    ],
-    [
-     "B",
-     "copper",
-     "iron"
-    ],
-    [
-     "C",
-     "iron",
-     "steel"
-    ],
-    [
-     "D",
-     "steel",
-     "aluminium"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015ON_11_q25_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "aluminium copper"
+    },
+    {
+     "label": "B",
+     "html": "copper iron"
+    },
+    {
+     "label": "C",
+     "html": "iron steel"
+    },
+    {
+     "label": "D",
+     "html": "steel aluminium"
+    }
+   ]
   }
  ]
 }

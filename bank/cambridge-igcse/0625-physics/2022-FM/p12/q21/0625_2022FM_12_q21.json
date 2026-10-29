@@ -51,10 +51,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    227.6,
-    300.7,
-    338.9
+    67.5,
+    227.5,
+    301.0,
+    339.0
    ],
    "id": "0625_2022FM_12_q21_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-FM/p12/q21/figures/0625_2022FM_12_q21_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-FM/p12/q21/figures/0625_2022FM_12_q21_figB",
     "url": null,
-    "kb": 23.1
+    "kb": 23.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "How do the properties of the wave change as the distance from the origin increases?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "amplitude",
-     "wavelength"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "stays the same"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "increases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "stays the same"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022FM_12_q21_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases increases"
+    },
+    {
+     "label": "B",
+     "html": "decreases stays the same"
+    },
+    {
+     "label": "C",
+     "html": "increases increases"
+    },
+    {
+     "label": "D",
+     "html": "increases stays the same"
+    }
+   ]
   }
  ]
 }

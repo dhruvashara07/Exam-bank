@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    75.6,
-    111.5,
-    519.7,
-    279.0
+    75.5,
+    112.5,
+    520.0,
+    279.5
    ],
    "id": "0625_2025ON_51_q01_fig1-1",
    "part": "",
@@ -89,14 +89,14 @@
     {
      "type": "list",
      "items": [
-      "Place the metre ruler on the pivot at the 50.0cm mark.",
-      "Place the object Q with its centre on the metre ruler at the 90.0cm mark."
+      "Place the metre ruler on the pivot at the 50.0 cm mark.",
+      "Place the object Q with its centre on the metre ruler at the 90.0 cm mark."
      ]
     },
     {
      "type": "text",
-     "html": "Determine the distance y from the 50.0cm mark to the centre of the object Q.",
-     "text": "Determine the distance y from the 50.0cm mark to the centre of the object Q."
+     "html": "Determine the distance y from the 50.0 cm mark to the centre of the object Q.",
+     "text": "Determine the distance y from the 50.0 cm mark to the centre of the object Q."
     },
     {
      "type": "answer",
@@ -199,8 +199,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Determine the distance x from the centre of the load to the 50.0cm mark.",
-       "text": "Determine the distance x from the centre of the load to the 50.0cm mark."
+       "html": "Determine the distance x from the centre of the load to the 50.0 cm mark.",
+       "text": "Determine the distance x from the centre of the load to the 50.0 cm mark."
       },
       {
        "type": "answer",
@@ -273,8 +273,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the weight W of object Q, using the equation W = \\(\\frac{x}{y}\\) × 2.0N. Give your answer to a suitable number of significant figures for this experiment.",
-       "text": "Calculate the weight W of object Q, using the equation W = (x)/(y) × 2.0N. Give your answer to a suitable number of significant figures for this experiment."
+       "html": "Calculate the weight W of object Q, using the equation W = \\(\\frac{x}{y}\\) × 2.0 N. Give your answer to a suitable number of significant figures for this experiment.",
+       "text": "Calculate the weight W of object Q, using the equation W = (x)/(y) × 2.0 N. Give your answer to a suitable number of significant figures for this experiment."
       },
       {
        "type": "answer",
@@ -294,7 +294,7 @@
     {
      "type": "list",
      "items": [
-      "Place the 2.0N load on the metre ruler.",
+      "Place the 2.0 N load on the metre ruler.",
       "Adjust the position of the load so that the metre ruler is as near as possible to being balanced."
      ]
     }
@@ -359,13 +359,25 @@
    "content": [
     {
      "type": "text",
-     "html": "Remove the 2.0N load from the metre ruler. Do <b>not</b> change the position of object Q.",
-     "text": "Remove the 2.0N load from the metre ruler. Do not change the position of object Q."
+     "html": "Remove the 2.0 N load from the metre ruler. Do <b>not</b> change the position of object Q.",
+     "text": "Remove the 2.0 N load from the metre ruler. Do not change the position of object Q."
     },
     {
      "type": "text",
-     "html": "Repeat the steps above, using the 3.0N load and the equation W = \\(\\frac{x}{y}\\) × 3.0N.",
-     "text": "Repeat the steps above, using the 3.0N load and the equation W = (x)/(y) × 3.0N."
+     "html": "Repeat the steps above, using the 3.0 N load and the equation W = \\(\\frac{x}{y}\\) × 3.0 N.",
+     "text": "Repeat the steps above, using the 3.0 N load and the equation W = (x)/(y) × 3.0 N."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "y =",
+     "unit": "cm"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "x =",
+     "unit": "cm"
     },
     {
      "type": "answer",
@@ -444,7 +456,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -512,8 +533,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Explain how you ensure that the centre of object Q is directly over the 90.0cm mark of the metre ruler. You may draw a diagram.",
-     "text": "Explain how you ensure that the centre of object Q is directly over the 90.0cm mark of the metre ruler. You may draw a diagram."
+     "html": "Explain how you ensure that the centre of object Q is directly over the 90.0 cm mark of the metre ruler. You may draw a diagram.",
+     "text": "Explain how you ensure that the centre of object Q is directly over the 90.0 cm mark of the metre ruler. You may draw a diagram."
     },
     {
      "type": "answer",
@@ -648,6 +669,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

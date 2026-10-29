@@ -33,7 +33,7 @@
    "page": 8,
    "bbox": [
     146.8,
-    322.8,
+    322.5,
     448.4,
     510.4
    ],
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p23/q16/figures/0625_2023ON_23_q16_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p23/q16/figures/0625_2023ON_23_q16_figA",
     "url": null,
-    "kb": 19.8
+    "kb": 19.7
    }
   },
   {
    "page": 8,
    "bbox": [
-    67.7,
-    543.8,
-    348.9,
-    655.1
+    67.5,
+    543.5,
+    349.0,
+    655.5
    ],
    "id": "0625_2023ON_23_q16_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p23/q16/figures/0625_2023ON_23_q16_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p23/q16/figures/0625_2023ON_23_q16_figB",
     "url": null,
-    "kb": 24.8
+    "kb": 24.7
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row describes the temperature and the direction of movement of the air in the gap?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "air temperature",
-     "air direction"
-    ],
-    [
-     "<b>A</b>",
-     "cool",
-     "away from the heater"
-    ],
-    [
-     "<b>B</b>",
-     "cool",
-     "towards the heater"
-    ],
-    [
-     "<b>C</b>",
-     "warm",
-     "away from the heater"
-    ],
-    [
-     "<b>D</b>",
-     "warm",
-     "towards the heater"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_23_q16_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "cool away from the heater"
+    },
+    {
+     "label": "B",
+     "html": "cool towards the heater"
+    },
+    {
+     "label": "C",
+     "html": "warm away from the heater"
+    },
+    {
+     "label": "D",
+     "html": "warm towards the heater"
+    }
+   ]
   }
  ]
 }

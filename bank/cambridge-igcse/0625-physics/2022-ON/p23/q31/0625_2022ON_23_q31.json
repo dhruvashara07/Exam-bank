@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    209.7,
+    209.0,
     85.0,
-    385.0,
-    187.1
+    385.5,
+    187.5
    ],
    "id": "0625_2022ON_23_q31_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 13,
    "bbox": [
-    209.7,
+    209.0,
     246.0,
-    385.0,
-    348.1
+    385.5,
+    348.5
    ],
    "id": "0625_2022ON_23_q31_figB",
    "caption": null,
@@ -64,16 +64,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p23/q31/figures/0625_2022ON_23_q31_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p23/q31/figures/0625_2022ON_23_q31_figB",
     "url": null,
-    "kb": 8.2
+    "kb": 8.1
    }
   },
   {
    "page": 13,
    "bbox": [
-    67.7,
-    381.3,
-    276.6,
-    492.7
+    67.5,
+    381.0,
+    277.0,
+    493.0
    ],
    "id": "0625_2022ON_23_q31_figC",
    "caption": null,
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p23/q31/figures/0625_2022ON_23_q31_figC.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p23/q31/figures/0625_2022ON_23_q31_figC",
     "url": null,
-    "kb": 17.3
+    "kb": 17.1
    }
   }
  ],
@@ -128,6 +128,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -160,35 +161,30 @@
    "text": "How do the currents I1 and I2 in the resistors R1 and R2 compare to current I0?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "current in R<sub>1</sub>",
-     "current in R<sub>2</sub>"
-    ],
-    [
-     "<b>A</b>",
-     "I<sub>1</sub> = I<sub>0</sub>",
-     "I<sub>2</sub> &lt; I<sub>0</sub>"
-    ],
-    [
-     "<b>B</b>",
-     "I<sub>1</sub> = I<sub>0</sub>",
-     "I<sub>2</sub> = I<sub>0</sub>"
-    ],
-    [
-     "<b>C</b>",
-     "I<sub>1</sub> &gt; I<sub>0</sub>",
-     "I<sub>2</sub> = I<sub>0</sub>"
-    ],
-    [
-     "<b>D</b>",
-     "I<sub>1</sub> &gt; I<sub>0</sub>",
-     "I<sub>2</sub> &lt; I<sub>0</sub>"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_23_q31_figC",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "I1 = I0 I2 &lt; I0"
+    },
+    {
+     "label": "B",
+     "html": "I1 = I0 I2 = I0"
+    },
+    {
+     "label": "C",
+     "html": "I1 &gt; I0 I2 = I0"
+    },
+    {
+     "label": "D",
+     "html": "I1 &gt; I0 I2 &lt; I0"
+    }
+   ]
   }
  ]
 }

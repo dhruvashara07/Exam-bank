@@ -33,10 +33,10 @@
    "caption": "Fig. 4.1",
    "page": 8,
    "bbox": [
-    123.7,
-    114.4,
-    472.2,
-    641.1
+    124.5,
+    114.0,
+    473.0,
+    641.5
    ],
    "id": "0625_2015MJ_62_q04_fig4-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 4.1",
    "page": 9,
    "bbox": [
-    248.4,
-    231.3,
-    346.8,
-    390.0
+    248.0,
+    231.0,
+    347.0,
+    390.5
    ],
    "id": "0625_2015MJ_62_q04c_table4-1",
    "part": "(c)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p62/q04/figures/0625_2015MJ_62_q04c_table4-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p62/q04/figures/0625_2015MJ_62_q04c_table4-1",
     "url": null,
-    "kb": 15.5
+    "kb": 15.4
    }
   }
  ],
@@ -392,7 +392,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -498,33 +507,9 @@
      "text": "She continues using angles θ = 20 °, 30 ° and 40 °. The readings are shown in Table 4.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "θ / °",
-       "α / °"
-      ],
-      [
-       "0",
-       "32"
-      ],
-      [
-       "10",
-       "50"
-      ],
-      [
-       "20",
-       "69"
-      ],
-      [
-       "30",
-       "92"
-      ],
-      [
-       "40",
-       "108"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2015MJ_62_q04c_table4-1",
+     "caption": "Table 4.1"
     }
    ]
   }
@@ -546,6 +531,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -33,9 +33,9 @@
    "page": 11,
    "bbox": [
     214.3,
-    375.8,
-    380.0,
-    501.5
+    375.0,
+    380.5,
+    502.0
    ],
    "id": "0625_2024MJ_22_q29_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,39 +98,14 @@
    "text": "The diagram shows two resistors used as a potential divider."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "",
-     "5.0ku"
-    ],
-    [
-     "",
-     "",
-     "R V"
-    ],
-    [
-     "",
-     "",
-     ""
-    ],
-    [
-     "",
-     "",
-     "R V"
-    ],
-    [
-     "",
-     "",
-     ""
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2024MJ_22_q29_figA",
+   "caption": null
   },
   {
    "type": "text",
-   "html": "The reading on the voltmeter is 1.8V.",
-   "text": "The reading on the voltmeter is 1.8V."
+   "html": "The reading on the voltmeter is 1.8 V.",
+   "text": "The reading on the voltmeter is 1.8 V."
   },
   {
    "type": "text",
@@ -141,19 +117,19 @@
    "options": [
     {
      "label": "A",
-     "html": "3.0kΩ"
+     "html": "3.0 kΩ"
     },
     {
      "label": "B",
-     "html": "3.3kΩ"
+     "html": "3.3 kΩ"
     },
     {
      "label": "C",
-     "html": "7.5kΩ"
+     "html": "7.5 kΩ"
     },
     {
      "label": "D",
-     "html": "13kΩ"
+     "html": "13 kΩ"
     }
    ]
   }

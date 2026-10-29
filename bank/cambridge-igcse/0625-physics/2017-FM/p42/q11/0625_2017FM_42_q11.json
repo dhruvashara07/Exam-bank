@@ -33,10 +33,10 @@
    "caption": "Fig. 11.1 (not to scale)",
    "page": 15,
    "bbox": [
-    129.5,
-    101.3,
-    460.2,
-    278.3
+    130.0,
+    103.5,
+    460.5,
+    275.5
    ],
    "id": "0625_2017FM_42_q11_fig11-1",
    "part": "",
@@ -123,7 +123,21 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "γ-rays",
+     "prefix": "α-particles"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "β-particles"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "γ-rays"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 3
     },
     {
@@ -198,8 +212,24 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "α-particles",
+     "unit": "counts / s"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "β-particles",
+     "unit": "counts / s"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "γ-rays",
      "unit": "counts / s"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -225,6 +255,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

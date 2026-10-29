@@ -10,9 +10,9 @@
    "page": 2,
    "bbox": [
     92.0,
-    84.8,
-    484.2,
-    305.2
+    84.5,
+    484.5,
+    305.5
    ],
    "id": "0625_2026MJ_42_q01a_fig1-1",
    "part": "(a)",
@@ -127,7 +127,21 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "A and B"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "C and D"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "D and E"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -195,8 +209,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the distance travelled between time = 0 and time = 18s.",
-       "text": "Calculate the distance travelled between time = 0 and time = 18s."
+       "html": "Calculate the distance travelled between time = 0 and time = 18 s.",
+       "text": "Calculate the distance travelled between time = 0 and time = 18 s."
       },
       {
        "type": "answer",
@@ -318,10 +332,13 @@
        "text": "Complete the sentence."
       },
       {
+       "type": "text",
+       "html": "A vector quantity has magnitude (size) and …… .",
+       "text": "A vector quantity has magnitude (size) and …… ."
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "A vector quantity has magnitude (size) and",
-       "unit": "."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -434,5 +451,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

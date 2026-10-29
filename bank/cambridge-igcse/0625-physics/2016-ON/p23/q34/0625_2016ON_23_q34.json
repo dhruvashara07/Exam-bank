@@ -51,9 +51,9 @@
   {
    "page": 15,
    "bbox": [
-    67.7,
-    557.1,
-    253.1,
+    67.5,
+    557.0,
+    253.0,
     668.5
    ],
    "id": "0625_2016ON_23_q34_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p23/q34/figures/0625_2016ON_23_q34_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p23/q34/figures/0625_2016ON_23_q34_figB",
     "url": null,
-    "kb": 15.4
+    "kb": 15.2
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "What are the logic states at P and at Q?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "P",
-     "Q"
-    ],
-    [
-     "<b>A</b>",
-     "high (1)",
-     "high (1)"
-    ],
-    [
-     "<b>B</b>",
-     "high (1)",
-     "low (0)"
-    ],
-    [
-     "<b>C</b>",
-     "low (0)",
-     "high (1)"
-    ],
-    [
-     "<b>D</b>",
-     "low (0)",
-     "low (0)"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_23_q34_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "high (1) high (1)"
+    },
+    {
+     "label": "B",
+     "html": "high (1) low (0)"
+    },
+    {
+     "label": "C",
+     "html": "low (0) high (1)"
+    },
+    {
+     "label": "D",
+     "html": "low (0) low (0)"
+    }
+   ]
   }
  ]
 }

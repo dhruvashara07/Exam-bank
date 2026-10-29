@@ -35,7 +35,7 @@
     181.3,
     483.9,
     413.3,
-    612.2
+    613.0
    ],
    "id": "0625_2018MJ_13_q37_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 15,
    "bbox": [
-    67.7,
-    644.8,
+    67.5,
+    644.5,
     293.0,
-    756.1
+    756.5
    ],
    "id": "0625_2018MJ_13_q37_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p13/q37/figures/0625_2018MJ_13_q37_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p13/q37/figures/0625_2018MJ_13_q37_figB",
     "url": null,
-    "kb": 23.5
+    "kb": 23.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "What is the name of the central mass and of the orbiting particles?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "central mass",
-     "orbiting particles"
-    ],
-    [
-     "<b>A</b>",
-     "neutron",
-     "α-particles"
-    ],
-    [
-     "<b>B</b>",
-     "neutron",
-     "electrons"
-    ],
-    [
-     "<b>C</b>",
-     "nucleus",
-     "α-particles"
-    ],
-    [
-     "<b>D</b>",
-     "nucleus",
-     "electrons"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_13_q37_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "neutron α-particles"
+    },
+    {
+     "label": "B",
+     "html": "neutron electrons"
+    },
+    {
+     "label": "C",
+     "html": "nucleus α-particles"
+    },
+    {
+     "label": "D",
+     "html": "nucleus electrons"
+    }
+   ]
   }
  ]
 }

@@ -32,9 +32,9 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    560.1,
-    385.3,
+    67.5,
+    560.0,
+    385.5,
     671.5
    ],
    "id": "0625_2024MJ_13_q04_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p13/q04/figures/0625_2024MJ_13_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p13/q04/figures/0625_2024MJ_13_q04_figA",
     "url": null,
-    "kb": 26.0
+    "kb": 25.8
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "An object is taken from the Earth to the Moon. The acceleration of free fall is 9.8m/s<sup>2</sup> on the Earth and is 1.6m/s<sup>2</sup> on the Moon.",
-   "text": "An object is taken from the Earth to the Moon. The acceleration of free fall is 9.8m/s2 on the Earth and is 1.6m/s2 on the Moon."
+   "html": "An object is taken from the Earth to the Moon. The acceleration of free fall is 9.8 m / s<sup>2</sup> on the Earth and is 1.6 m / s<sup>2</sup> on the Moon.",
+   "text": "An object is taken from the Earth to the Moon. The acceleration of free fall is 9.8 m / s2 on the Earth and is 1.6 m / s2 on the Moon."
   },
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row describes the mass and the weight of the object on the Moon compared to on the Earth?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass",
-     "weight"
-    ],
-    [
-     "<b>A</b>",
-     "greater than on the Earth",
-     "same as on the Earth"
-    ],
-    [
-     "<b>B</b>",
-     "less than on the Earth",
-     "same as on the Earth"
-    ],
-    [
-     "<b>C</b>",
-     "same as on the Earth",
-     "greater than on the Earth"
-    ],
-    [
-     "<b>D</b>",
-     "same as on the Earth",
-     "less than on the Earth"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_13_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "greater than on the Earth same as on the Earth"
+    },
+    {
+     "label": "B",
+     "html": "less than on the Earth same as on the Earth"
+    },
+    {
+     "label": "C",
+     "html": "same as on the Earth greater than on the Earth"
+    },
+    {
+     "label": "D",
+     "html": "same as on the Earth less than on the Earth"
+    }
+   ]
   }
  ]
 }

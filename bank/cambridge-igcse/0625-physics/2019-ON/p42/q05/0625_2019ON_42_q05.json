@@ -106,7 +106,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "rarefaction",
+       "prefix": "compression"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "rarefaction"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 4
       },
       {
@@ -181,7 +190,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "Transverse wave motion",
+       "prefix": "Longitudinal wave motion"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Transverse wave motion"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 4
       },
       {
@@ -357,7 +375,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -386,5 +413,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

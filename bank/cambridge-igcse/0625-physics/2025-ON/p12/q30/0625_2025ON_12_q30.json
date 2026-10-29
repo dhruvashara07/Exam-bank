@@ -70,6 +70,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -86,15 +87,15 @@
    "options": [
     {
      "label": "A",
-     "html": "<i>E</i> = \\(\\frac{<i>I</i><i>V</i>}{<i>t</i>}\\)"
+     "html": "<i>E</i> = \\(\\frac{\\text{IV}}{t}\\)"
     },
     {
      "label": "B",
-     "html": "<i>E</i> = \\(\\frac{<i>I</i><i>t</i>}{<i>V</i>}\\)"
+     "html": "<i>E</i> = \\(\\frac{\\text{It}}{V}\\)"
     },
     {
      "label": "C",
-     "html": "<i>E</i> = \\(\\frac{<i>Vt</i>}{<i>I</i>}\\)"
+     "html": "<i>E</i> = \\(\\frac{\\text{Vt}}{I}\\)"
     },
     {
      "label": "D",

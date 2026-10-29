@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    160.7,
-    272.0,
+    67.5,
+    292.3,
     434.5,
-    387.6
+    531.5
    ],
    "id": "0625_2023ON_23_q18_figA",
    "caption": null,
@@ -45,26 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p23/q18/figures/0625_2023ON_23_q18_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p23/q18/figures/0625_2023ON_23_q18_figA",
     "url": null,
-    "kb": 9.3
-   }
-  },
-  {
-   "page": 9,
-   "bbox": [
-    67.7,
-    420.1,
-    257.9,
-    531.5
-   ],
-   "id": "0625_2023ON_23_q18_figB",
-   "caption": null,
-   "part": "",
-   "alt": "",
-   "svg": {
-    "file": "bank/cambridge-igcse/0625-physics/2023-ON/p23/q18/figures/0625_2023ON_23_q18_figB.svg",
-    "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p23/q18/figures/0625_2023ON_23_q18_figB",
-    "url": null,
-    "kb": 17.4
+    "kb": 34.6
    }
   }
  ],
@@ -109,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -116,85 +98,30 @@
    "text": "The diagram shows a transverse wave."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "The diagram shows a transverse wave.",
-     "",
-     ""
-    ],
-    [
-     "<i>S</i>",
-     "",
-     ""
-    ],
-    [
-     "<i>P</i> <i>R</i>",
-     "",
-     ""
-    ],
-    [
-     "<i>Q</i>",
-     "",
-     ""
-    ],
-    [
-     "Which row identifies the amplitude and the wavelength of the wave?",
-     "",
-     ""
-    ],
-    [
-     "amplitude wavelength",
-     "",
-     ""
-    ],
-    [
-     "<b>A</b> <i>P</i> <i>R</i>",
-     "",
-     ""
-    ],
-    [
-     "<b>B</b> <i>P</i> <i>S</i>",
-     "",
-     ""
-    ],
-    [
-     "<b>C</b> <i>Q</i> <i>R</i>",
-     "",
-     ""
-    ],
-    [
-     "<b>D</b> <i>Q</i> <i>S</i>",
-     "",
-     ""
-    ],
-    [
-     "",
-     "amplitude",
-     "wavelength"
-    ],
-    [
-     "<b>A</b>",
-     "<i>P</i>",
-     "<i>R</i>"
-    ],
-    [
-     "<b>B</b>",
-     "<i>P</i>",
-     "<i>S</i>"
-    ],
-    [
-     "<b>C</b>",
-     "<i>Q</i>",
-     "<i>R</i>"
-    ],
-    [
-     "<b>D</b>",
-     "<i>Q</i>",
-     "<i>S</i>"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_23_q18_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "P R"
+    },
+    {
+     "label": "B",
+     "html": "P S"
+    },
+    {
+     "label": "C",
+     "html": "Q R"
+    },
+    {
+     "label": "D",
+     "html": "Q S"
+    }
+   ]
   }
  ]
 }

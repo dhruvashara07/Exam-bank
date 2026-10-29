@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    67.6,
-    484.9,
-    306.6,
-    596.2
+    67.5,
+    484.5,
+    307.0,
+    596.5
    ],
    "id": "0625_2015MJ_11_q23_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p11/q23/figures/0625_2015MJ_11_q23_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p11/q23/figures/0625_2015MJ_11_q23_figA",
     "url": null,
-    "kb": 24.8
+    "kb": 24.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row states two properties of sound waves?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "can travel through",
-     "type of wave"
-    ],
-    [
-     "A",
-     "a vacuum",
-     "longitudinal"
-    ],
-    [
-     "B",
-     "a vacuum",
-     "transverse"
-    ],
-    [
-     "C",
-     "water",
-     "longitudinal"
-    ],
-    [
-     "D",
-     "water",
-     "transverse"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_11_q23_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "a vacuum longitudinal"
+    },
+    {
+     "label": "B",
+     "html": "a vacuum transverse"
+    },
+    {
+     "label": "C",
+     "html": "water longitudinal"
+    },
+    {
+     "label": "D",
+     "html": "water transverse"
+    }
+   ]
   }
  ]
 }

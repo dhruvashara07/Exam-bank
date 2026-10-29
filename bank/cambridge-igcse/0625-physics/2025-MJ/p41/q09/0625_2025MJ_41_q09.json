@@ -33,10 +33,10 @@
    "caption": "Table 9.1",
    "page": 14,
    "bbox": [
-    209.4,
-    429.2,
+    209.5,
+    430.0,
     386.0,
-    685.0
+    685.5
    ],
    "id": "0625_2025MJ_41_q09b_table9-1",
    "part": "(b)",
@@ -52,10 +52,10 @@
    "caption": "Fig. 9.1",
    "page": 15,
    "bbox": [
-    26.5,
-    85.4,
-    569.1,
-    487.8
+    27.0,
+    86.0,
+    568.5,
+    488.0
    ],
    "id": "0625_2025MJ_41_q09b_fig9-1",
    "part": "(b)",
@@ -150,7 +150,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "suggestion"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -230,8 +239,12 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "lines": 1,
        "prefix": "38"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       },
       {
        "type": "marks",
@@ -527,49 +540,9 @@
      "text": "Yttrium is also unstable. A scientist places a sample of yttrium near a radiation detector. Table 9.1 shows the count rate recorded by the detector as the sample decays."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "time/h",
-       "recorded count rate counts/min"
-      ],
-      [
-       "0",
-       "68"
-      ],
-      [
-       "50",
-       "49"
-      ],
-      [
-       "100",
-       "38"
-      ],
-      [
-       "150",
-       "32"
-      ],
-      [
-       "200",
-       "26"
-      ],
-      [
-       "250",
-       "24"
-      ],
-      [
-       "300",
-       "20"
-      ],
-      [
-       "350",
-       "21"
-      ],
-      [
-       "400",
-       "20"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2025MJ_41_q09b_table9-1",
+     "caption": "Table 9.1"
     },
     {
      "type": "text",
@@ -601,6 +574,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

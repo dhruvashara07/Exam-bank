@@ -33,9 +33,9 @@
    "page": 15,
    "bbox": [
     190.7,
-    85.2,
-    403.5,
-    204.6
+    85.0,
+    404.0,
+    204.5
    ],
    "id": "0625_2020ON_21_q39_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 15,
    "bbox": [
-    67.7,
-    236.6,
-    260.8,
-    347.9
+    67.5,
+    236.5,
+    261.0,
+    348.0
    ],
    "id": "0625_2020ON_21_q39_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p21/q39/figures/0625_2020ON_21_q39_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p21/q39/figures/0625_2020ON_21_q39_figB",
     "url": null,
-    "kb": 20.9
+    "kb": 20.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which type of radiations are P and Q?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "P",
-     "Q"
-    ],
-    [
-     "<b>A</b>",
-     "beta (β)",
-     "alpha (α)"
-    ],
-    [
-     "<b>B</b>",
-     "beta (β)",
-     "gamma (γ)"
-    ],
-    [
-     "<b>C</b>",
-     "gamma (γ)",
-     "alpha (α)"
-    ],
-    [
-     "<b>D</b>",
-     "gamma (γ)",
-     "gamma (γ)"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020ON_21_q39_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "beta (β) alpha (α)"
+    },
+    {
+     "label": "B",
+     "html": "beta (β) gamma (γ)"
+    },
+    {
+     "label": "C",
+     "html": "gamma (γ) alpha (α)"
+    },
+    {
+     "label": "D",
+     "html": "gamma (γ) gamma (γ)"
+    }
+   ]
   }
  ]
 }

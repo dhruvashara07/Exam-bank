@@ -9,10 +9,10 @@
    "caption": "Table 4.1",
    "page": 6,
    "bbox": [
-    152.8,
-    383.1,
+    152.5,
+    386.5,
     442.5,
-    455.3
+    455.5
    ],
    "id": "0625_2019MJ_42_q04b_table4-1",
    "part": "(b)",
@@ -101,7 +101,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "Explanation",
+     "prefix": "Statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 5
     },
     {
@@ -206,5 +215,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

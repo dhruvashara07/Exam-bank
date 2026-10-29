@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    109.9,
-    274.7,
-    221.3
+    67.5,
+    109.5,
+    275.0,
+    221.5
    ],
    "id": "0625_2018MJ_12_q25_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What is happening to the amplitude and to the frequency of the emitted sound wave?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "amplitude",
-     "frequency"
-    ],
-    [
-     "<b>A</b>",
-     "decreasing",
-     "decreasing"
-    ],
-    [
-     "<b>B</b>",
-     "decreasing",
-     "increasing"
-    ],
-    [
-     "<b>C</b>",
-     "increasing",
-     "decreasing"
-    ],
-    [
-     "<b>D</b>",
-     "increasing",
-     "increasing"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_12_q25_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreasing decreasing"
+    },
+    {
+     "label": "B",
+     "html": "decreasing increasing"
+    },
+    {
+     "label": "C",
+     "html": "increasing decreasing"
+    },
+    {
+     "label": "D",
+     "html": "increasing increasing"
+    }
+   ]
   }
  ]
 }

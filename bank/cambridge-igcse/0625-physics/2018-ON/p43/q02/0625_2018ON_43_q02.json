@@ -9,10 +9,10 @@
    "caption": "Fig. 2.1",
    "page": 3,
    "bbox": [
-    152.8,
-    98.9,
+    152.5,
+    98.5,
     442.5,
-    221.3
+    218.5
    ],
    "id": "0625_2018ON_43_q02a_fig2-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 2.2",
    "page": 3,
    "bbox": [
-    214.4,
-    252.8,
-    379.9,
-    412.8
+    214.5,
+    253.0,
+    379.5,
+    410.0
    ],
    "id": "0625_2018ON_43_q02b_fig2-2",
    "part": "(b)",
@@ -121,23 +121,6 @@
      "type": "figure",
      "id": "0625_2018ON_43_q02a_fig2-1",
      "caption": "Fig. 2.1"
-    },
-    {
-     "type": "table",
-     "rows": [
-      [
-       "product",
-       "quantity"
-      ],
-      [
-       "mass × acceleration",
-       ""
-      ],
-      [
-       "force × time",
-       ""
-      ]
-     ]
     },
     {
      "type": "marks",
@@ -239,6 +222,11 @@
        "type": "text",
        "html": "Calculate: <b> 1.</b> the momentum of the ball as it leaves the golf club",
        "text": "Calculate: 1. the momentum of the ball as it leaves the golf club"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "momentum ="
       },
       {
        "type": "text",
@@ -366,5 +354,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

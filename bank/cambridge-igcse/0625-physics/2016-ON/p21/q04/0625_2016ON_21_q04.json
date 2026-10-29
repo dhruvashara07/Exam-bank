@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    69.4,
+    69.0,
     482.5,
-    360.9,
-    607.9
+    361.0,
+    608.0
    ],
    "id": "0625_2016ON_21_q04_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p21/q04/figures/0625_2016ON_21_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p21/q04/figures/0625_2016ON_21_q04_figA",
     "url": null,
-    "kb": 26.9
+    "kb": 26.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which type of force causes the spaceship’s weight, and which property of the spaceship resists its change in speed and direction?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "force that",
-     "property that resists change in"
-    ],
-    [
-     "",
-     "causes weight",
-     "speed and direction"
-    ],
-    [
-     "<b>A</b>",
-     "gravitational",
-     "mass"
-    ],
-    [
-     "<b>B</b>",
-     "gravitational",
-     "volume"
-    ],
-    [
-     "<b>C</b>",
-     "magnetic",
-     "mass"
-    ],
-    [
-     "<b>D</b>",
-     "magnetic",
-     "volume"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_21_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "gravitational mass"
+    },
+    {
+     "label": "B",
+     "html": "gravitational volume"
+    },
+    {
+     "label": "C",
+     "html": "magnetic mass"
+    },
+    {
+     "label": "D",
+     "html": "magnetic volume"
+    }
+   ]
   }
  ]
 }

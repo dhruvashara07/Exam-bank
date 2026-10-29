@@ -33,7 +33,7 @@
    "page": 9,
    "bbox": [
     147.2,
-    85.2,
+    85.0,
     447.6,
     260.5
    ],
@@ -51,10 +51,10 @@
   {
    "page": 9,
    "bbox": [
-    67.6,
-    293.7,
-    348.9,
-    405.1
+    67.5,
+    293.5,
+    349.0,
+    405.0
    ],
    "id": "0625_2015MJ_12_q17_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row describes the temperature, and the direction of movement, of the air in the gap?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "air temperature",
-     "air direction"
-    ],
-    [
-     "A",
-     "cool",
-     "away from the heater"
-    ],
-    [
-     "B",
-     "cool",
-     "towards the heater"
-    ],
-    [
-     "C",
-     "warm",
-     "away from the heater"
-    ],
-    [
-     "D",
-     "warm",
-     "towards the heater"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_12_q17_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "cool away from the heater"
+    },
+    {
+     "label": "B",
+     "html": "cool towards the heater"
+    },
+    {
+     "label": "C",
+     "html": "warm away from the heater"
+    },
+    {
+     "label": "D",
+     "html": "warm towards the heater"
+    }
+   ]
   }
  ]
 }

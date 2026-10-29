@@ -32,10 +32,10 @@
   {
    "page": 4,
    "bbox": [
-    159.3,
+    158.5,
     85.0,
     436.1,
-    253.1
+    253.5
    ],
    "id": "0625_2022FM_12_q05_figA",
    "caption": null,
@@ -51,8 +51,8 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    285.6,
+    67.5,
+    285.5,
     412.5,
     397.0
    ],
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-FM/p12/q05/figures/0625_2022FM_12_q05_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-FM/p12/q05/figures/0625_2022FM_12_q05_figB",
     "url": null,
-    "kb": 30.4
+    "kb": 30.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which two quantities does the student need to make to determine the density of the rock?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "quantity 1",
-     "quantity 2"
-    ],
-    [
-     "<b>A</b>",
-     "increase in mass",
-     "increase in volume of liquid"
-    ],
-    [
-     "<b>B</b>",
-     "final mass",
-     "increase in depth of liquid"
-    ],
-    [
-     "<b>C</b>",
-     "increase in mass",
-     "increase in depth of liquid"
-    ],
-    [
-     "<b>D</b>",
-     "final mass",
-     "increase in volume of liquid"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022FM_12_q05_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "increase in mass increase in volume of liquid"
+    },
+    {
+     "label": "B",
+     "html": "final mass increase in depth of liquid"
+    },
+    {
+     "label": "C",
+     "html": "increase in mass increase in depth of liquid"
+    },
+    {
+     "label": "D",
+     "html": "final mass increase in volume of liquid"
+    }
+   ]
   }
  ]
 }

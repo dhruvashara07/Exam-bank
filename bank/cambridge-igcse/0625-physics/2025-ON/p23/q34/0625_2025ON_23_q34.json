@@ -32,7 +32,7 @@
   {
    "page": 14,
    "bbox": [
-    199.3,
+    199.0,
     151.0,
     395.1,
     358.3
@@ -51,9 +51,9 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    391.7,
-    317.4,
+    67.5,
+    391.5,
+    317.5,
     503.0
    ],
    "id": "0625_2025ON_23_q34_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p23/q34/figures/0625_2025ON_23_q34_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p23/q34/figures/0625_2025ON_23_q34_figB",
     "url": null,
-    "kb": 25.1
+    "kb": 25.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,40 +137,30 @@
    "text": "Which radiation follows path J, path K and path L?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "J",
-     "K",
-     "L"
-    ],
-    [
-     "<b>A</b>",
-     "α-particles",
-     "β-particles",
-     "γ-rays"
-    ],
-    [
-     "<b>B</b>",
-     "α-particles",
-     "γ-rays",
-     "β-particles"
-    ],
-    [
-     "<b>C</b>",
-     "β-particles",
-     "α-particles",
-     "γ-rays"
-    ],
-    [
-     "<b>D</b>",
-     "β-particles",
-     "γ-rays",
-     "α-particles"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025ON_23_q34_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "α-particles β-particles γ-rays"
+    },
+    {
+     "label": "B",
+     "html": "α-particles γ-rays β-particles"
+    },
+    {
+     "label": "C",
+     "html": "β-particles α-particles γ-rays"
+    },
+    {
+     "label": "D",
+     "html": "β-particles γ-rays α-particles"
+    }
+   ]
   }
  ]
 }

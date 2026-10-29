@@ -35,7 +35,7 @@
     172.7,
     415.7,
     422.3,
-    545.4
+    546.0
    ],
    "id": "0625_2023MJ_12_q21_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    577.8,
-    271.4,
-    703.3
+    67.5,
+    577.5,
+    271.5,
+    703.5
    ],
    "id": "0625_2023MJ_12_q21_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p12/q21/figures/0625_2023MJ_12_q21_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p12/q21/figures/0625_2023MJ_12_q21_figB",
     "url": null,
-    "kb": 24.0
+    "kb": 23.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which types of waves are used in these devices?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "medical",
-     "remote"
-    ],
-    [
-     "",
-     "scanning",
-     "controller"
-    ],
-    [
-     "<b>A</b>",
-     "ultraviolet",
-     "infrared"
-    ],
-    [
-     "<b>B</b>",
-     "ultraviolet",
-     "microwaves"
-    ],
-    [
-     "<b>C</b>",
-     "X-rays",
-     "infrared"
-    ],
-    [
-     "<b>D</b>",
-     "X-rays",
-     "microwaves"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_12_q21_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "ultraviolet infrared"
+    },
+    {
+     "label": "B",
+     "html": "ultraviolet microwaves"
+    },
+    {
+     "label": "C",
+     "html": "X-rays infrared"
+    },
+    {
+     "label": "D",
+     "html": "X-rays microwaves"
+    }
+   ]
   }
  ]
 }

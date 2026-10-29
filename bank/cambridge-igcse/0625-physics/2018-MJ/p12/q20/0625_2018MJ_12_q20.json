@@ -33,9 +33,9 @@
    "page": 8,
    "bbox": [
     182.2,
-    269.4,
-    412.7,
-    385.0
+    249.5,
+    413.0,
+    402.0
    ],
    "id": "0625_2018MJ_12_q20_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
-    434.1,
-    235.6,
-    559.1
+    67.5,
+    434.0,
+    235.5,
+    559.5
    ],
    "id": "0625_2018MJ_12_q20_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p12/q20/figures/0625_2018MJ_12_q20_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p12/q20/figures/0625_2018MJ_12_q20_figB",
     "url": null,
-    "kb": 19.5
+    "kb": 19.3
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The diagrams show a wave on the surface of the water in a tank at times 1.0s apart. The wave is produced at P and travels to the right.",
-   "text": "The diagrams show a wave on the surface of the water in a tank at times 1.0s apart. The wave is produced at P and travels to the right."
+   "html": "The diagrams show a wave on the surface of the water in a tank at times 1.0 s apart. The wave is produced at P and travels to the right.",
+   "text": "The diagrams show a wave on the surface of the water in a tank at times 1.0 s apart. The wave is produced at P and travels to the right."
   },
   {
    "type": "figure",
@@ -126,40 +127,30 @@
    "text": "Which row gives the frequency and the speed of this water wave?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "frequency",
-     "speed"
-    ],
-    [
-     "",
-     "/Hz",
-     "cm/s"
-    ],
-    [
-     "<b>A</b>",
-     "2.0",
-     "4.0"
-    ],
-    [
-     "<b>B</b>",
-     "2.0",
-     "8.0"
-    ],
-    [
-     "<b>C</b>",
-     "4.0",
-     "4.0"
-    ],
-    [
-     "<b>D</b>",
-     "4.0",
-     "8.0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_12_q20_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "2.0 4.0"
+    },
+    {
+     "label": "B",
+     "html": "2.0 8.0"
+    },
+    {
+     "label": "C",
+     "html": "4.0 4.0"
+    },
+    {
+     "label": "D",
+     "html": "4.0 8.0"
+    }
+   ]
   }
  ]
 }

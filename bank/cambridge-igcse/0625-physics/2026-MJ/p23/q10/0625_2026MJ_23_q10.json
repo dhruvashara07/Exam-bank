@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    160.6,
-    329.4,
-    286.1
+    67.5,
+    160.5,
+    329.5,
+    286.0
    ],
    "id": "0625_2026MJ_23_q10_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p23/q10/figures/0625_2026MJ_23_q10_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p23/q10/figures/0625_2026MJ_23_q10_figA",
     "url": null,
-    "kb": 30.6
+    "kb": 30.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,40 +108,30 @@
    "text": "What happens to the kinetic energy of the gas particles and the rate at which they collide with the piston?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>kinetic energy</b>",
-     "<b>rate at which they</b>"
-    ],
-    [
-     "",
-     "<b>of particles</b>",
-     "<b>collide with the piston</b>"
-    ],
-    [
-     "<b>A</b>",
-     "no change",
-     "no change"
-    ],
-    [
-     "<b>B</b>",
-     "no change",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "no change"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_23_q10_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "no change no change"
+    },
+    {
+     "label": "B",
+     "html": "no change increases"
+    },
+    {
+     "label": "C",
+     "html": "increases no change"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

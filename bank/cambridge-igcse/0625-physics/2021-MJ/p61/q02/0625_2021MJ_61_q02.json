@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    154.5,
-    113.0,
-    442.3,
-    324.3
+    154.0,
+    116.0,
+    443.0,
+    322.5
    ],
    "id": "0625_2021MJ_61_q02_fig2-1",
    "part": "",
@@ -171,6 +171,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "V1 ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "I1 ="
       },
       {
@@ -238,7 +243,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>1</sub> of the resistor using the equation <i>R</i><sub>1</sub> = \\(\\frac{<i>V</i><sub>1</sub>}{<i>I</i>}\\) .",
+       "html": "Calculate the resistance <i>R</i><sub>1</sub> of the resistor using the equation <i>R</i><sub>1</sub> = \\(\\frac{V_{1}}{I}\\) .",
        "text": "Calculate the resistance R1 of the resistor using the equation R1 = (V1)/(I) ."
       },
       {
@@ -335,13 +340,23 @@
      "text": "2.6"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V2 ="
+    },
+    {
      "type": "text",
      "html": "0.28",
      "text": "0.28"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "I2 ="
+    },
+    {
      "type": "text",
-     "html": "Calculate the resistance <i>R</i><sub>S</sub> of the resistors in series using the equation <i>R</i><sub>S</sub> = \\(\\frac{<i>V</i><sub>2</sub>}{<i>I</i>}\\) .",
+     "html": "Calculate the resistance <i>R</i><sub>S</sub> of the resistors in series using the equation <i>R</i><sub>S</sub> = \\(\\frac{V_{2}}{I}\\) .",
      "text": "Calculate the resistance RS of the resistors in series using the equation RS = (V2)/(I) ."
     },
     {
@@ -428,13 +443,23 @@
      "text": "2.4"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V3 ="
+    },
+    {
      "type": "text",
      "html": "0.99",
      "text": "0.99"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "I3 ="
+    },
+    {
      "type": "text",
-     "html": "Calculate the resistance <i>R</i><sub>P</sub> of the resistors in parallel using the equation <i>R</i><sub>P</sub> = \\(\\frac{<i>V</i><sub>3</sub>}{<i>I</i>}\\) . Give your answer to a suitable number of significant figures for this experiment.",
+     "html": "Calculate the resistance <i>R</i><sub>P</sub> of the resistors in parallel using the equation <i>R</i><sub>P</sub> = \\(\\frac{V_{3}}{I}\\) . Give your answer to a suitable number of significant figures for this experiment.",
      "text": "Calculate the resistance RP of the resistors in parallel using the equation RP = (V3)/(I) . Give your answer to a suitable number of significant figures for this experiment."
     },
     {
@@ -692,6 +717,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

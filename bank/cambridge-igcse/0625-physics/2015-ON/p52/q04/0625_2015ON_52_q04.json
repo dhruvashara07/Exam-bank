@@ -33,10 +33,10 @@
    "caption": "Fig. 4.1",
    "page": 9,
    "bbox": [
-    126.4,
-    128.7,
-    468.9,
-    680.2
+    125.5,
+    128.5,
+    469.5,
+    680.5
    ],
    "id": "0625_2015ON_52_q04_fig4-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 4.1",
    "page": 10,
    "bbox": [
-    249.1,
-    270.3,
-    346.1,
-    365.2
+    249.0,
+    270.0,
+    346.0,
+    365.5
    ],
    "id": "0625_2015ON_52_q04h_table4-1",
    "part": "(h)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 4.2",
    "page": 11,
    "bbox": [
-    93.9,
-    114.4,
-    498.2,
-    644.2
+    94.0,
+    114.0,
+    498.0,
+    644.5
    ],
    "id": "0625_2015ON_52_q04j_fig4-2",
    "part": "(j)",
@@ -643,23 +643,6 @@
      "caption": "Table 4.1"
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>i</i> / °",
-       "<i>r</i> / °"
-      ],
-      [
-       "30",
-       ""
-      ],
-      [
-       "30",
-       ""
-      ]
-     ]
-    },
-    {
      "type": "marks",
      "value": 2
     }
@@ -756,7 +739,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -830,37 +822,9 @@
      "text": "Turn your ray-trace sheet through 180 °. Draw a line 8 cm long from A at an angle of incidence i = 30 ° to the normal, below MR and to the right of the normal, as shown in Fig. 4.2. Label the end of this line C."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<b>L</b> <b>B</b>",
-       ""
-      ],
-      [
-       "<b>R</b> <b>M</b>",
-       ""
-      ],
-      [
-       "<b>A</b>",
-       ""
-      ],
-      [
-       "reflecting",
-       ""
-      ],
-      [
-       "surface",
-       ""
-      ],
-      [
-       "<b>N</b>",
-       ""
-      ],
-      [
-       "<b>C</b>",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2015ON_52_q04j_fig4-2",
+     "caption": "Fig. 4.2"
     },
     {
      "type": "answer",
@@ -1102,6 +1066,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

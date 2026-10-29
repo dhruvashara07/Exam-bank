@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    147.8,
-    113.8,
-    436.3,
-    312.9
+    147.5,
+    113.0,
+    437.0,
+    311.0
    ],
    "id": "0625_2022MJ_62_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 5,
    "bbox": [
-    79.7,
-    385.9,
-    515.0,
-    561.4
+    79.0,
+    385.5,
+    515.5,
+    560.0
    ],
    "id": "0625_2022MJ_62_q02a_fig2-2",
    "part": "(a)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 2.3",
    "page": 5,
    "bbox": [
-    79.7,
-    385.9,
-    515.0,
-    561.4
+    79.0,
+    385.5,
+    515.5,
+    560.0
    ],
    "id": "0625_2022MJ_62_q02a_fig2-3",
    "part": "(a)",
@@ -90,10 +90,10 @@
    "caption": "Fig. 2.4",
    "page": 7,
    "bbox": [
-    147.8,
-    86.8,
-    436.3,
-    283.9
+    147.5,
+    86.0,
+    437.0,
+    282.0
    ],
    "id": "0625_2022MJ_62_q02e_fig2-4",
    "part": "(e)",
@@ -102,7 +102,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p62/q02/figures/0625_2022MJ_62_q02e_fig2-4.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p62/q02/figures/0625_2022MJ_62_q02e_fig2-4",
     "url": null,
-    "kb": 11.5
+    "kb": 11.4
    }
   }
  ],
@@ -415,7 +415,7 @@
     },
     {
      "type": "text",
-     "html": "\\(\\frac{<i>V</i><sub>1</sub>}{<i>I</i>}\\) <i>R</i><sub>1</sub> = <sub>1</sub> .",
+     "html": "\\(\\frac{V_{1}}{I}\\) <i>R</i><sub>1</sub> = <sub>1</sub> .",
      "text": "(V1)/(I) R1 = 1 ."
     },
     {
@@ -606,6 +606,12 @@
        "text": "0.68"
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "I2 =",
+       "unit": "A"
+      },
+      {
        "type": "text",
        "html": "He measures the potential difference<i> V</i><sub>2</sub> across the combination of the three resistors.",
        "text": "He measures the potential difference V2 across the combination of the three resistors."
@@ -616,13 +622,19 @@
        "text": "2.1"
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V2 =",
+       "unit": "V"
+      },
+      {
        "type": "text",
        "html": "Calculate the resistance <i>R</i><sub>2</sub> of the combination of resistors. Use the equation",
        "text": "Calculate the resistance R2 of the combination of resistors. Use the equation"
       },
       {
        "type": "text",
-       "html": "\\(\\frac{<i>V</i><sub>2</sub>}{<i>I</i>}\\) <i>R</i><sub>2</sub> = <sub>2</sub> .",
+       "html": "\\(\\frac{V_{2}}{I}\\) <i>R</i><sub>2</sub> = <sub>2</sub> .",
        "text": "(V2)/(I) R2 = 2 ."
       },
       {
@@ -729,6 +741,12 @@
      "text": "0.29"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "I3 =",
+     "unit": "A"
+    },
+    {
      "type": "text",
      "html": "He measures the potential difference <i>V</i><sub>3</sub> across the combination of the three resistors.",
      "text": "He measures the potential difference V3 across the combination of the three resistors."
@@ -739,13 +757,19 @@
      "text": "2.1"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V3 =",
+     "unit": "V"
+    },
+    {
      "type": "text",
      "html": "Calculate the resistance <i>R</i><sub>3</sub> of the combination of resistors. Use the equation",
      "text": "Calculate the resistance R3 of the combination of resistors. Use the equation"
     },
     {
      "type": "text",
-     "html": "\\(\\frac{<i>V</i><sub>3</sub>}{<i>I</i>}\\) <i>R</i><sub>3</sub> = <sub>3</sub> .",
+     "html": "\\(\\frac{V_{3}}{I}\\) <i>R</i><sub>3</sub> = <sub>3</sub> .",
      "text": "(V3)/(I) R3 = 3 ."
     },
     {
@@ -969,6 +993,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

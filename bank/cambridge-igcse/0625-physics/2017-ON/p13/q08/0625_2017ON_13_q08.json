@@ -51,10 +51,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    593.2,
+    67.5,
+    593.0,
     317.5,
-    718.7
+    719.0
    ],
    "id": "0625_2017ON_13_q08_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p13/q08/figures/0625_2017ON_13_q08_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p13/q08/figures/0625_2017ON_13_q08_figB",
     "url": null,
-    "kb": 23.0
+    "kb": 22.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,46 +137,30 @@
    "text": "Which combination of pivot position and loads causes the beam to be in equilibrium?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "pivot position",
-     "load <i>P</i>",
-     "load <i>Q</i>"
-    ],
-    [
-     "",
-     "/cm",
-     "/N",
-     "/N"
-    ],
-    [
-     "<b>A</b>",
-     "30",
-     "6.0",
-     "4.0"
-    ],
-    [
-     "<b>B</b>",
-     "40",
-     "6.0",
-     "4.0"
-    ],
-    [
-     "<b>C</b>",
-     "50",
-     "5.0",
-     "9.0"
-    ],
-    [
-     "<b>D</b>",
-     "60",
-     "3.0",
-     "9.0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017ON_13_q08_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "30 6.0 4.0"
+    },
+    {
+     "label": "B",
+     "html": "40 6.0 4.0"
+    },
+    {
+     "label": "C",
+     "html": "50 5.0 9.0"
+    },
+    {
+     "label": "D",
+     "html": "60 3.0 9.0"
+    }
+   ]
   }
  ]
 }

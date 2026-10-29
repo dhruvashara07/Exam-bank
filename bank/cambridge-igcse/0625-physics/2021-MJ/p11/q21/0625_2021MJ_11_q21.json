@@ -34,8 +34,8 @@
    "bbox": [
     178.7,
     86.3,
-    416.1,
-    204.6
+    416.0,
+    204.5
    ],
    "id": "0625_2021MJ_11_q21_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    236.6,
-    297.6,
-    347.9
+    67.5,
+    236.5,
+    298.0,
+    348.0
    ],
    "id": "0625_2021MJ_11_q21_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p11/q21/figures/0625_2021MJ_11_q21_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p11/q21/figures/0625_2021MJ_11_q21_figB",
     "url": null,
-    "kb": 21.1
+    "kb": 20.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which type of wave is shown and which labelled arrow shows the wavelength of the wave?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "type of wave",
-     "wavelength"
-    ],
-    [
-     "<b>A</b>",
-     "longitudinal",
-     "X"
-    ],
-    [
-     "<b>B</b>",
-     "longitudinal",
-     "Y"
-    ],
-    [
-     "<b>C</b>",
-     "transverse",
-     "X"
-    ],
-    [
-     "<b>D</b>",
-     "transverse",
-     "Y"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_11_q21_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "longitudinal X"
+    },
+    {
+     "label": "B",
+     "html": "longitudinal Y"
+    },
+    {
+     "label": "C",
+     "html": "transverse X"
+    },
+    {
+     "label": "D",
+     "html": "transverse Y"
+    }
+   ]
   }
  ]
 }

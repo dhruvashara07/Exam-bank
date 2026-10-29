@@ -32,10 +32,10 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    577.6,
+    67.5,
+    577.5,
     281.0,
-    703.1
+    703.5
    ],
    "id": "0625_2018ON_23_q08_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-ON/p23/q08/figures/0625_2018ON_23_q08_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-ON/p23/q08/figures/0625_2018ON_23_q08_figA",
     "url": null,
-    "kb": 20.8
+    "kb": 20.7
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "An electron is moving at a speed of 5 × 10<sup>6</sup>m/s. A neutron is moving at a speed of 5 × 10<sup>4</sup>m/s.",
-   "text": "An electron is moving at a speed of 5 × 106m/s. A neutron is moving at a speed of 5 × 104m/s."
+   "html": "An electron is moving at a speed of 5 × 10<sup>6</sup> m / s. A neutron is moving at a speed of 5 × 10<sup>4</sup> m / s.",
+   "text": "An electron is moving at a speed of 5 × 106 m / s. A neutron is moving at a speed of 5 × 104 m / s."
   },
   {
    "type": "text",
@@ -107,40 +108,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "greater",
-     "greater"
-    ],
-    [
-     "",
-     "momentum",
-     "kinetic energy"
-    ],
-    [
-     "<b>A</b>",
-     "electron",
-     "electron"
-    ],
-    [
-     "<b>B</b>",
-     "electron",
-     "neutron"
-    ],
-    [
-     "<b>C</b>",
-     "neutron",
-     "electron"
-    ],
-    [
-     "<b>D</b>",
-     "neutron",
-     "neutron"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018ON_23_q08_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "electron electron"
+    },
+    {
+     "label": "B",
+     "html": "electron neutron"
+    },
+    {
+     "label": "C",
+     "html": "neutron electron"
+    },
+    {
+     "label": "D",
+     "html": "neutron neutron"
+    }
+   ]
   }
  ]
 }

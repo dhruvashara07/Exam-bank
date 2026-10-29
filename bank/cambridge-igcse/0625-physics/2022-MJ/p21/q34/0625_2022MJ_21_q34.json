@@ -33,9 +33,9 @@
    "page": 14,
    "bbox": [
     184.7,
-    418.8,
+    418.0,
     410.0,
-    465.2
+    466.0
    ],
    "id": "0625_2022MJ_21_q34_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p21/q34/figures/0625_2022MJ_21_q34_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p21/q34/figures/0625_2022MJ_21_q34_figA",
     "url": null,
-    "kb": 4.1
+    "kb": 4.0
    }
   },
   {
    "page": 14,
    "bbox": [
-    67.7,
-    498.1,
+    67.5,
+    498.0,
     308.5,
-    609.4
+    609.5
    ],
    "id": "0625_2022MJ_21_q34_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p21/q34/figures/0625_2022MJ_21_q34_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p21/q34/figures/0625_2022MJ_21_q34_figB",
     "url": null,
-    "kb": 10.5
+    "kb": 10.2
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,45 +127,30 @@
    "text": "Which row is correct for this digital circuit?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "W",
-     "X",
-     "Y",
-     "Z"
-    ],
-    [
-     "<b>A</b>",
-     "0",
-     "0",
-     "1",
-     "0"
-    ],
-    [
-     "<b>B</b>",
-     "0",
-     "1",
-     "0",
-     "1"
-    ],
-    [
-     "<b>C</b>",
-     "1",
-     "0",
-     "1",
-     "0"
-    ],
-    [
-     "<b>D</b>",
-     "1",
-     "1",
-     "0",
-     "1"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_21_q34_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0 0 1 0"
+    },
+    {
+     "label": "B",
+     "html": "0 1 0 1"
+    },
+    {
+     "label": "C",
+     "html": "1 0 1 0"
+    },
+    {
+     "label": "D",
+     "html": "1 1 0 1"
+    }
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    79.4,
-    109.2,
-    515.9,
-    262.6
+    80.0,
+    112.5,
+    516.0,
+    261.0
    ],
    "id": "0625_2021ON_62_q03_fig3-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p62/q03/figures/0625_2021ON_62_q03_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p62/q03/figures/0625_2021ON_62_q03_fig3-1",
     "url": null,
-    "kb": 22.9
+    "kb": 22.8
    }
   },
   {
    "caption": "Table 3.1",
    "page": 8,
    "bbox": [
-    199.1,
-    409.9,
-    396.2,
-    585.5
+    199.0,
+    413.5,
+    396.5,
+    586.0
    ],
    "id": "0625_2021ON_62_q03a_table3-1",
    "part": "(a)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p62/q03/figures/0625_2021ON_62_q03a_table3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p62/q03/figures/0625_2021ON_62_q03a_table3-1",
     "url": null,
-    "kb": 29.0
+    "kb": 28.9
    }
   }
  ],
@@ -136,44 +136,14 @@
       "The student places the lens a distance <i>u</i> = 20.0 cm from the illuminated object.",
       "He moves the screen until a clearly focused image is formed on the screen.",
       "He measures the distance <i>v</i> between the centre of the lens and the screen.",
-      "Calculate, and record in the first row of Table 3.1, \\(\\frac{<i>u</i>}{<i>v</i>}\\).",
+      "Calculate, and record in the first row of Table 3.1, \\(\\frac{u}{v}\\).",
       "He repeats the procedure for <i>u</i> = 25.0 cm, <i>u</i> = 30.0 cm, <i>u</i> = 35.0 cm and <i>u</i> = 40.0 cm. The readings and results are shown in Table 3.1."
      ]
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>u</i> / cm",
-       "<i>v</i> / cm",
-       "<i>u</i> <i>v</i>"
-      ],
-      [
-       "20.0",
-       "79.5",
-       ""
-      ],
-      [
-       "25.0",
-       "44.5",
-       "0.56"
-      ],
-      [
-       "30.0",
-       "35.0",
-       "0.86"
-      ],
-      [
-       "35.0",
-       "30.0",
-       "1.17"
-      ],
-      [
-       "40.0",
-       "27.0",
-       "1.48"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2021ON_62_q03a_table3-1",
+     "caption": "Table 3.1"
     },
     {
      "type": "marks",
@@ -243,7 +213,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of <i>u </i>/ cm (<i>y</i>-axis) against \\(\\frac{<i>u</i>}{<i>v</i>}\\) (<i>x</i>-axis). Start the <i>y</i>-axis at <i>u</i> = 15.0 cm.",
+     "html": "Plot a graph of <i>u </i>/ cm (<i>y</i>-axis) against \\(\\frac{u}{v}\\) (<i>x</i>-axis). Start the <i>y</i>-axis at <i>u</i> = 15.0 cm.",
      "text": "Plot a graph of u / cm (y-axis) against (u)/(v) (x-axis). Start the y-axis at u = 15.0 cm."
     },
     {
@@ -317,7 +287,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Use your graph to find <i>u</i><sub>1</sub>, the value of <i>u</i> when \\(\\frac{<i>u</i>}{<i>v</i>}\\) = 1.0. Show clearly on the graph how you obtained the necessary information.",
+     "html": "Use your graph to find <i>u</i><sub>1</sub>, the value of <i>u</i> when \\(\\frac{u}{v}\\) = 1.0. Show clearly on the graph how you obtained the necessary information.",
      "text": "Use your graph to find u1, the value of u when (u)/(v) = 1.0. Show clearly on the graph how you obtained the necessary information."
     },
     {
@@ -391,7 +361,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate the focal length <i>f</i> of the lens using the equation <i>f</i> = \\(\\frac{<i>u</i><sub>1</sub>}{2}\\). Give your answer to a suitable number of significant figures for this experiment.",
+     "html": "Calculate the focal length <i>f</i> of the lens using the equation <i>f</i> = \\(\\frac{u_{1}}{2}\\). Give your answer to a suitable number of significant figures for this experiment.",
      "text": "Calculate the focal length f of the lens using the equation f = (u1)/(2). Give your answer to a suitable number of significant figures for this experiment."
     },
     {
@@ -472,7 +442,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "suggestion"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 3
     },
     {
@@ -499,6 +478,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

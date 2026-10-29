@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 7,
    "bbox": [
-    104.9,
-    109.2,
-    490.3,
-    335.4
+    105.5,
+    112.5,
+    490.0,
+    333.5
    ],
    "id": "0625_2021MJ_62_q03_fig3-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p62/q03/figures/0625_2021MJ_62_q03_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p62/q03/figures/0625_2021MJ_62_q03_fig3-1",
     "url": null,
-    "kb": 27.2
+    "kb": 27.1
    }
   },
   {
    "caption": "Table 3.1",
    "page": 8,
    "bbox": [
-    195.3,
-    149.0,
+    195.0,
+    152.5,
     400.0,
-    315.9
+    316.0
    ],
    "id": "0625_2021MJ_62_q03b_table3-1",
    "part": "(b)",
@@ -169,6 +169,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "V1 ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "I1 ="
       },
       {
@@ -237,7 +242,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>1</sub> of the resistor using the equation <i>R</i><sub>1</sub> = \\(\\frac{<i>V</i><sub>1</sub>}{<i>I</i>}\\) .",
+       "html": "Calculate the resistance <i>R</i><sub>1</sub> of the resistor using the equation <i>R</i><sub>1</sub> = \\(\\frac{V_{1}}{I}\\) .",
        "text": "Calculate the resistance R1 of the resistor using the equation R1 = (V1)/(I) ."
       },
       {
@@ -352,33 +357,9 @@
      "text": "The student disconnects the voltmeter from terminal B and connects the voltmeter to terminal C. He places the sliding contact S at a distance l = 20.0 cm from C. He records, in Table 3.1, the reading on the voltmeter. He repeats the procedure using l = 40.0 cm, 60.0 cm, 80.0 cm and 100.0 cm. His readings are shown in Table 3.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>l</i> / cm",
-       "<i>V</i> / V"
-      ],
-      [
-       "20.0",
-       "0.4"
-      ],
-      [
-       "40.0",
-       "0.8"
-      ],
-      [
-       "60.0",
-       "1.1"
-      ],
-      [
-       "80.0",
-       "1.5"
-      ],
-      [
-       "100.0",
-       "1.9"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2021MJ_62_q03b_table3-1",
+     "caption": "Table 3.1"
     },
     {
      "type": "text",
@@ -544,6 +525,10 @@
      "prefix": "estimate"
     },
     {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
      "type": "marks",
      "value": 1
     }
@@ -567,6 +552,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

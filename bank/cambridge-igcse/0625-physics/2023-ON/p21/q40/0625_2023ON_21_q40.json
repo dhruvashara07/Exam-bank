@@ -32,10 +32,10 @@
   {
    "page": 15,
    "bbox": [
-    67.7,
+    67.5,
     516.5,
     396.5,
-    627.9
+    628.0
    ],
    "id": "0625_2023ON_21_q40_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p21/q40/figures/0625_2023ON_21_q40_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p21/q40/figures/0625_2023ON_21_q40_figA",
     "url": null,
-    "kb": 33.8
+    "kb": 33.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which star will eventually explode as a supernova?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "name of star",
-     "type of star",
-     "temperature/°C"
-    ],
-    [
-     "<b>A</b>",
-     "Aldebaran",
-     "red giant",
-     "3700"
-    ],
-    [
-     "<b>B</b>",
-     "Betelgeuse",
-     "red supergiant",
-     "3300"
-    ],
-    [
-     "<b>C</b>",
-     "Geminga",
-     "neutron star",
-     "520000"
-    ],
-    [
-     "<b>D</b>",
-     "Sirius B",
-     "white dwarf",
-     "25000"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_21_q40_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "Aldebaran red giant 3700"
+    },
+    {
+     "label": "B",
+     "html": "Betelgeuse red supergiant 3300"
+    },
+    {
+     "label": "C",
+     "html": "Geminga neutron star 520000"
+    },
+    {
+     "label": "D",
+     "html": "Sirius B white dwarf 25000"
+    }
+   ]
   }
  ]
 }

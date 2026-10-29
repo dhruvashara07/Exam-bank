@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    182.1,
-    120.6,
-    425.3,
-    316.3
+    182.5,
+    125.0,
+    425.0,
+    313.5
    ],
    "id": "0625_2017MJ_52_q01_fig1-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-MJ/p52/q01/figures/0625_2017MJ_52_q01_fig1-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-MJ/p52/q01/figures/0625_2017MJ_52_q01_fig1-1",
     "url": null,
-    "kb": 21.0
+    "kb": 20.9
    }
   },
   {
    "caption": "Table 1.1",
    "page": 2,
    "bbox": [
-    152.8,
-    491.3,
+    152.5,
+    496.0,
     442.5,
-    586.4
+    586.5
    ],
    "id": "0625_2017MJ_52_q01ai_table1-1",
    "part": "(a)(i)",
@@ -144,7 +144,7 @@
        "items": [
         "Switch on. Place the sliding contact <b>S</b> on the resistance wire <b>AB</b> at a distance <i>l</i> = 0.200 m from point <b>A</b>.",
         "Measure and record in Table 1.1 the current <i>I</i> in the circuit and the potential difference (p.d.) <i>V</i> across the length <i>l</i> = 0.200 m of resistance wire <b>AB</b>.",
-        "Calculate the resistance <i>R</i> of the length <i>l</i> = 0.200 m of resistance wire <b>AB</b>, using the equation <i>R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\) . Record <i>R</i> in the table.",
+        "Calculate the resistance <i>R</i> of the length <i>l</i> = 0.200 m of resistance wire <b>AB</b>, using the equation <i>R</i> = \\(\\frac{V}{I}\\) . Record <i>R</i> in the table.",
         "Repeat the procedure using the distance <i>l</i> = 0.400 m. Switch off.",
         "Complete the column headings in the table."
        ]
@@ -153,29 +153,6 @@
        "type": "figure",
        "id": "0625_2017MJ_52_q01ai_table1-1",
        "caption": "Table 1.1"
-      },
-      {
-       "type": "table",
-       "rows": [
-        [
-         "<i>l</i> /",
-         "<i>V</i> /",
-         "<i>I</i> /",
-         "<i>R</i> /"
-        ],
-        [
-         "0.200",
-         "",
-         "",
-         ""
-        ],
-        [
-         "0.400",
-         "",
-         "",
-         ""
-        ]
-       ]
       },
       {
        "type": "marks",
@@ -326,8 +303,23 @@
        "type": "list",
        "items": [
         "Switch on. Place the sliding contact <b>S</b> on the resistance wire <b>AB</b> at a distance <i>l</i> = 0.500 m from point <b>A</b>.",
-        "Measure and record the current <i>I</i><sub>1</sub> in the circuit and the potential difference <i>V</i><sub>1</sub>.",
-        "Calculate the resistance <i>R</i><sub>1</sub> of the length <i>l</i> = 0.500 m of resistance wire <b>AB</b>, using the equation <i>R</i><sub>1</sub> = \\(\\frac{<i>V</i><sub>1</sub>}{<i>I</i><sub>1</sub>}\\)."
+        "Measure and record the current <i>I</i><sub>1</sub> in the circuit and the potential difference <i>V</i><sub>1</sub>."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "I1 ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V1 ="
+      },
+      {
+       "type": "list",
+       "items": [
+        "Calculate the resistance <i>R</i><sub>1</sub> of the length <i>l</i> = 0.500 m of resistance wire <b>AB</b>, using the equation <i>R</i><sub>1</sub> = \\(\\frac{V_{1}}{I_{1}}\\)."
        ]
       },
       {
@@ -412,8 +404,18 @@
        ]
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "I2 ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V2 ="
+      },
+      {
        "type": "text",
-       "html": "Calculate the combined resistance <i>R</i><sub>2</sub> of resistance wires <b>AB</b> and <b>CD</b>, using the equation <i>R</i><sub>2</sub> = \\(\\frac{<i>V</i><sub>2</sub>}{<i>I</i><sub>2</sub>}\\).",
+       "html": "Calculate the combined resistance <i>R</i><sub>2</sub> of resistance wires <b>AB</b> and <b>CD</b>, using the equation <i>R</i><sub>2</sub> = \\(\\frac{V_{2}}{I_{2}}\\).",
        "text": "Calculate the combined resistance R2 of resistance wires AB and CD, using the equation R2 = (V2)/(I2)."
       },
       {
@@ -568,7 +570,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -595,6 +606,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

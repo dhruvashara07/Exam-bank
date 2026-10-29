@@ -32,9 +32,9 @@
   {
    "page": 10,
    "bbox": [
-    69.3,
-    83.1,
-    285.9,
+    69.0,
+    83.0,
+    286.0,
     194.5
    ],
    "id": "0625_2015ON_11_q23_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p11/q23/figures/0625_2015ON_11_q23_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p11/q23/figures/0625_2015ON_11_q23_figA",
     "url": null,
-    "kb": 17.2
+    "kb": 16.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row states whether light waves and whether sound waves can travel in a vacuum?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "sound waves",
-     "light waves"
-    ],
-    [
-     "A",
-     "no",
-     "no"
-    ],
-    [
-     "B",
-     "no",
-     "yes"
-    ],
-    [
-     "C",
-     "yes",
-     "no"
-    ],
-    [
-     "D",
-     "yes",
-     "yes"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015ON_11_q23_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "no no"
+    },
+    {
+     "label": "B",
+     "html": "no yes"
+    },
+    {
+     "label": "C",
+     "html": "yes no"
+    },
+    {
+     "label": "D",
+     "html": "yes yes"
+    }
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 3,
    "bbox": [
-    216.7,
-    95.8,
-    415.9,
-    292.9
+    217.0,
+    100.0,
+    416.0,
+    290.0
    ],
    "id": "0625_2017FM_32_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 3,
    "bbox": [
-    238.8,
-    325.8,
-    417.2,
-    513.3
+    238.0,
+    325.5,
+    416.5,
+    510.5
    ],
    "id": "0625_2017FM_32_q02_fig2-2",
    "part": "",
@@ -162,6 +162,11 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "mass of stone = reading"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "volume of stone = reading"
     },
     {
@@ -241,9 +246,19 @@
      "text": "78.0 g"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "mass of stone ="
+    },
+    {
      "type": "text",
      "html": "30.0 cm<sup>3</sup>",
      "text": "30.0 cm3"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "volume of stone ="
     },
     {
      "type": "text",
@@ -279,6 +294,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

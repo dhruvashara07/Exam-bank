@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    151.1,
-    122.2,
-    466.8,
-    338.0
+    152.0,
+    125.5,
+    466.5,
+    336.5
    ],
    "id": "0625_2020ON_62_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 8,
    "bbox": [
-    195.3,
-    368.2,
+    195.0,
+    372.0,
     400.0,
-    486.0
+    486.5
    ],
    "id": "0625_2020ON_62_q03_table3-1",
    "part": "",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p62/q03/figures/0625_2020ON_62_q03_table3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p62/q03/figures/0625_2020ON_62_q03_table3-1",
     "url": null,
-    "kb": 24.3
+    "kb": 24.2
    }
   }
  ],
@@ -309,7 +309,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>1</sub> of the section BC of the resistance wire. Use the equation <i>R</i><sub>1</sub> = \\(\\frac{<i>V</i><sub>1</sub>}{<i>I</i>}\\) . Give your answer to a suitable number of significant figures for this experiment.",
+       "html": "Calculate the resistance <i>R</i><sub>1</sub> of the section BC of the resistance wire. Use the equation <i>R</i><sub>1</sub> = \\(\\frac{V_{1}}{I}\\) . Give your answer to a suitable number of significant figures for this experiment.",
        "text": "Calculate the resistance R1 of the section BC of the resistance wire. Use the equation R1 = (V1)/(I) . Give your answer to a suitable number of significant figures for this experiment."
       },
       {
@@ -394,6 +394,11 @@
      "text": "0.70"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V2 ="
+    },
+    {
      "type": "text",
      "html": "He calculates the resistance <i>R</i><sub>2 </sub>of section CD.",
      "text": "He calculates the resistance R2 of section CD."
@@ -402,6 +407,11 @@
      "type": "text",
      "html": "1.25",
      "text": "1.25"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "R2 ="
     },
     {
      "type": "text",
@@ -414,8 +424,13 @@
      "text": "0.46"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V3 ="
+    },
+    {
      "type": "text",
-     "html": "Calculate the resistance <i>R</i><sub>3 </sub>of section DE using the equation <i>R</i><sub>3</sub> = \\(\\frac{<i>V</i><sub>3</sub>}{<i>I</i>}\\) . Use the value of <i>I</i> from . Give your answer to a suitable number of significant figures for this experiment.",
+     "html": "Calculate the resistance <i>R</i><sub>3 </sub>of section DE using the equation <i>R</i><sub>3</sub> = \\(\\frac{V_{3}}{I}\\) . Use the value of <i>I</i> from . Give your answer to a suitable number of significant figures for this experiment.",
      "text": "Calculate the resistance R3 of section DE using the equation R3 = (V3)/(I) . Use the value of I from . Give your answer to a suitable number of significant figures for this experiment."
     },
     {
@@ -961,6 +976,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -981,27 +997,6 @@
    "type": "figure",
    "id": "0625_2020ON_62_q03_table3-1",
    "caption": "Table 3.1"
-  },
-  {
-   "type": "table",
-   "rows": [
-    [
-     "section",
-     "wire"
-    ],
-    [
-     "BC",
-     "one 30 cm piece"
-    ],
-    [
-     "CD",
-     "two 30 cm pieces"
-    ],
-    [
-     "DE",
-     "three 30 cm pieces"
-    ]
-   ]
   }
  ]
 }

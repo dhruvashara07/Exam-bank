@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 7,
    "bbox": [
-    150.1,
-    113.7,
-    440.0,
-    319.9
+    150.0,
+    118.0,
+    440.5,
+    317.0
    ],
    "id": "0625_2019MJ_52_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 9,
    "bbox": [
-    152.0,
-    348.1,
-    440.0,
-    593.9
+    151.5,
+    347.5,
+    440.5,
+    591.0
    ],
    "id": "0625_2019MJ_52_q03f_fig3-2",
    "part": "(f)",
@@ -150,6 +150,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "V1 ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "I1 ="
       },
       {
@@ -217,7 +222,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>1</sub> of the resistor P using the equation <i>R</i><sub>1</sub> = \\(\\frac{<i>V</i><sub>1</sub>}{<i>I</i><sub>1</sub>}\\).",
+       "html": "Calculate the resistance <i>R</i><sub>1</sub> of the resistor P using the equation <i>R</i><sub>1</sub> = \\(\\frac{V_{1}}{I_{1}}\\).",
        "text": "Calculate the resistance R1 of the resistor P using the equation R1 = (V1)/(I1)."
       },
       {
@@ -297,8 +302,13 @@
      "text": "Disconnect the voltmeter. Connect the voltmeter across the lamp L. Switch on. Measure and record the potential difference V2 across the lamp L. Switch off."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V2 ="
+    },
+    {
      "type": "text",
-     "html": "Calculate the resistance <i>R</i><sub>2</sub> of the lamp L using the equation <i>R</i><sub>2</sub> = \\(\\frac{<i>V</i><sub>2</sub>}{<i>I</i><sub>1</sub>}\\).",
+     "html": "Calculate the resistance <i>R</i><sub>2</sub> of the lamp L using the equation <i>R</i><sub>2</sub> = \\(\\frac{V_{2}}{I_{1}}\\).",
      "text": "Calculate the resistance R2 of the lamp L using the equation R2 = (V2)/(I1)."
     },
     {
@@ -375,8 +385,18 @@
      "text": "Disconnect the voltmeter. Replace the resistor P with the resistor Q. Connect the voltmeter across the resistor Q. Switch on. Measure and record the potential difference V3 across the resistor Q and the current I2 in the circuit. Switch off."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V3 ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "I2 ="
+    },
+    {
      "type": "text",
-     "html": "Calculate the resistance <i>R</i><sub>3</sub> of the resistor Q using the equation <i>R</i><sub>3</sub> = \\(\\frac{<i>V</i><sub>3</sub>}{<i>I</i><sub>2</sub>}\\).",
+     "html": "Calculate the resistance <i>R</i><sub>3</sub> of the resistor Q using the equation <i>R</i><sub>3</sub> = \\(\\frac{V_{3}}{I_{2}}\\).",
      "text": "Calculate the resistance R3 of the resistor Q using the equation R3 = (V3)/(I2)."
     },
     {
@@ -453,8 +473,13 @@
      "text": "Disconnect the voltmeter. Connect the voltmeter across the lamp L. Switch on. Measure and record the potential difference V4 across the lamp L. Switch off."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V4 ="
+    },
+    {
      "type": "text",
-     "html": "Calculate the resistance <i>R</i><sub>4</sub> of the lamp L using the equation <i>R</i><sub>4</sub> = \\(\\frac{<i>V</i><sub>4</sub>}{<i>I</i><sub>2</sub>}\\).",
+     "html": "Calculate the resistance <i>R</i><sub>4</sub> of the lamp L using the equation <i>R</i><sub>4</sub> = \\(\\frac{V_{4}}{I_{2}}\\).",
      "text": "Calculate the resistance R4 of the lamp L using the equation R4 = (V4)/(I2)."
     },
     {
@@ -534,7 +559,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -725,6 +759,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

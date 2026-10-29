@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    109.9,
-    512.7,
-    221.3
+    67.5,
+    109.5,
+    513.0,
+    221.5
    ],
    "id": "0625_2021MJ_11_q25_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "In which row are both the uses correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "radiation",
-     "use 1",
-     "use 2"
-    ],
-    [
-     "<b>A</b>",
-     "radio",
-     "sterilising medical equipment",
-     "mobile phone masts"
-    ],
-    [
-     "<b>B</b>",
-     "microwaves",
-     "mobile phones",
-     "sterilising medical equipment"
-    ],
-    [
-     "<b>C</b>",
-     "infrared",
-     "remote controllers",
-     "intruder alarms"
-    ],
-    [
-     "<b>D</b>",
-     "X-rays",
-     "security in airports",
-     "intruder alarms"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_11_q25_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "radio sterilising medical equipment mobile phone masts"
+    },
+    {
+     "label": "B",
+     "html": "microwaves mobile phones sterilising medical equipment"
+    },
+    {
+     "label": "C",
+     "html": "infrared remote controllers intruder alarms"
+    },
+    {
+     "label": "D",
+     "html": "X-rays security in airports intruder alarms"
+    }
+   ]
   }
  ]
 }

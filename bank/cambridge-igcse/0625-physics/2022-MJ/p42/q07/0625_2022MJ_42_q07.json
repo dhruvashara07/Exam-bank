@@ -34,9 +34,9 @@
    "page": 10,
    "bbox": [
     124.0,
-    103.8,
-    471.3,
-    264.0
+    103.0,
+    471.5,
+    262.5
    ],
    "id": "0625_2022MJ_42_q07_fig7-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 7.2",
    "page": 10,
    "bbox": [
-    202.3,
-    402.0,
+    202.0,
+    401.5,
     393.0,
-    594.6
+    593.0
    ],
    "id": "0625_2022MJ_42_q07b_fig7-2",
    "part": "(b)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 7.3",
    "page": 11,
    "bbox": [
-    169.5,
-    87.8,
-    421.8,
-    280.4
+    169.0,
+    87.5,
+    421.5,
+    278.5
    ],
    "id": "0625_2022MJ_42_q07c_fig7-3",
    "part": "(c)",
@@ -157,7 +157,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "pole A"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "pole B"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -351,6 +360,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

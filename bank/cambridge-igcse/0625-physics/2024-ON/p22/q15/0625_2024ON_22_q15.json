@@ -70,6 +70,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -91,19 +92,19 @@
    "options": [
     {
      "label": "A",
-     "html": "\\(\\frac{<i>m</i>}{Δ<i>E</i>Δ<i>T</i>}\\)"
+     "html": "\\(\\frac{m}{ΔEΔT}\\)"
     },
     {
      "label": "B",
-     "html": "\\(\\frac{<i>m</i>Δ<i>T</i>}{Δ<i>E</i>}\\)"
+     "html": "\\(\\frac{m ΔT}{ΔE}\\)"
     },
     {
      "label": "C",
-     "html": "\\(\\frac{Δ<i>E</i>}{<i>m</i>Δ<i>T</i>}\\)"
+     "html": "\\(\\frac{ΔE}{m ΔT}\\)"
     },
     {
      "label": "D",
-     "html": "\\(\\frac{Δ<i>E</i>Δ<i>T</i>}{<i>m</i>}\\)"
+     "html": "\\(\\frac{ΔE ΔT}{m}\\)"
     }
    ]
   }

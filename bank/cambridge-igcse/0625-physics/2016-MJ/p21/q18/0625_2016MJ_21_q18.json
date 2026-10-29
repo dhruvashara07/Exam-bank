@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.6,
+    67.5,
     148.0,
-    293.8,
-    287.7
+    294.0,
+    288.0
    ],
    "id": "0625_2016MJ_21_q18_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p21/q18/figures/0625_2016MJ_21_q18_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p21/q18/figures/0625_2016MJ_21_q18_figA",
     "url": null,
-    "kb": 25.7
+    "kb": 25.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,45 +103,30 @@
    "text": "Which car shows the greater rate of temperature increase and which car shows the greater rate of temperature decrease?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "greater rate of",
-     "greater rate of"
-    ],
-    [
-     "",
-     "temperature",
-     "temperature"
-    ],
-    [
-     "",
-     "increase",
-     "decrease"
-    ],
-    [
-     "A",
-     "black",
-     "black"
-    ],
-    [
-     "B",
-     "black",
-     "white"
-    ],
-    [
-     "C",
-     "white",
-     "black"
-    ],
-    [
-     "D",
-     "white",
-     "white"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_21_q18_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "black black"
+    },
+    {
+     "label": "B",
+     "html": "black white"
+    },
+    {
+     "label": "C",
+     "html": "white black"
+    },
+    {
+     "label": "D",
+     "html": "white white"
+    }
+   ]
   }
  ]
 }

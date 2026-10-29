@@ -34,7 +34,7 @@
    "bbox": [
     132.2,
     99.5,
-    462.2,
+    463.0,
     232.1
    ],
    "id": "0625_2020MJ_11_q20_figA",
@@ -51,7 +51,7 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
+    67.5,
     290.5,
     344.0,
     416.0
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Which freezer gains the least amount of thermal energy in this time and why?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "freezer gaining the least thermal energy",
-     "reason"
-    ],
-    [
-     "<b>A</b>",
-     "X",
-     "cold air falls"
-    ],
-    [
-     "<b>B</b>",
-     "X",
-     "warm air falls"
-    ],
-    [
-     "<b>C</b>",
-     "Y",
-     "cold air falls"
-    ],
-    [
-     "<b>D</b>",
-     "Y",
-     "warm air falls"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020MJ_11_q20_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "X cold air falls"
+    },
+    {
+     "label": "B",
+     "html": "X warm air falls"
+    },
+    {
+     "label": "C",
+     "html": "Y cold air falls"
+    },
+    {
+     "label": "D",
+     "html": "Y warm air falls"
+    }
+   ]
   }
  ]
 }

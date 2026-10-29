@@ -32,10 +32,10 @@
   {
    "page": 15,
    "bbox": [
-    205.8,
-    110.8,
-    407.8,
-    268.1
+    205.0,
+    110.5,
+    408.5,
+    268.5
    ],
    "id": "0625_2015MJ_12_q29_figA",
    "caption": null,
@@ -45,15 +45,15 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p12/q29/figures/0625_2015MJ_12_q29_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p12/q29/figures/0625_2015MJ_12_q29_figA",
     "url": null,
-    "kb": 7.8
+    "kb": 7.7
    }
   },
   {
    "page": 15,
    "bbox": [
-    67.6,
-    339.7,
-    334.9,
+    67.5,
+    339.5,
+    335.0,
     451.0
    ],
    "id": "0625_2015MJ_12_q29_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p12/q29/figures/0625_2015MJ_12_q29_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p12/q29/figures/0625_2015MJ_12_q29_figB",
     "url": null,
-    "kb": 24.7
+    "kb": 24.6
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,35 +137,30 @@
    "text": "Which row describes the charge on the strips after rubbing, and the force between the strips after rubbing?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "charge on strips",
-     "force between strips"
-    ],
-    [
-     "A",
-     "opposite",
-     "attraction"
-    ],
-    [
-     "B",
-     "opposite",
-     "repulsion"
-    ],
-    [
-     "C",
-     "the same",
-     "attraction"
-    ],
-    [
-     "D",
-     "the same",
-     "repulsion"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_12_q29_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "opposite attraction"
+    },
+    {
+     "label": "B",
+     "html": "opposite repulsion"
+    },
+    {
+     "label": "C",
+     "html": "the same attraction"
+    },
+    {
+     "label": "D",
+     "html": "the same repulsion"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    135.2,
-    232.9,
-    246.1
+    67.5,
+    135.0,
+    233.0,
+    246.5
    ],
    "id": "0625_2018MJ_13_q04_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p13/q04/figures/0625_2018MJ_13_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p13/q04/figures/0625_2018MJ_13_q04_figA",
     "url": null,
-    "kb": 24.9
+    "kb": 24.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "Which row shows the readings on the scales?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass",
-     "weight"
-    ],
-    [
-     "<b>A</b>",
-     "60N",
-     "600kg"
-    ],
-    [
-     "<b>B</b>",
-     "60kg",
-     "600N"
-    ],
-    [
-     "<b>C</b>",
-     "600kg",
-     "60N"
-    ],
-    [
-     "<b>D</b>",
-     "600N",
-     "60kg"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_13_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "60N 600kg"
+    },
+    {
+     "label": "B",
+     "html": "60kg 600N"
+    },
+    {
+     "label": "C",
+     "html": "600kg 60N"
+    },
+    {
+     "label": "D",
+     "html": "600N 60kg"
+    }
+   ]
   }
  ]
 }

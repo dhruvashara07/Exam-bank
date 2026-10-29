@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 7,
    "bbox": [
-    42.6,
-    109.2,
-    552.7,
-    269.2
+    42.5,
+    112.5,
+    552.0,
+    267.5
    ],
    "id": "0625_2021ON_53_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 7,
    "bbox": [
-    188.2,
-    468.5,
-    407.1,
-    654.9
+    188.0,
+    472.0,
+    407.0,
+    655.0
    ],
    "id": "0625_2021ON_53_q03a_table3-1",
    "part": "(a)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p53/q03/figures/0625_2021ON_53_q03a_table3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p53/q03/figures/0625_2021ON_53_q03a_table3-1",
     "url": null,
-    "kb": 23.7
+    "kb": 23.6
    }
   }
  ],
@@ -136,6 +136,12 @@
      "text": "Measure and record the height hO of the triangular object."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "hO =",
+     "unit": "cm"
+    },
+    {
      "type": "list",
      "items": [
       "Place the lens a distance <i>u</i> = 20.0 cm from the triangular object.",
@@ -151,45 +157,9 @@
      "text": "Repeat the procedure for u = 25.0 cm, u = 30.0 cm, u = 35.0 cm and u = 40.0 cm. Switch off the lamp."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>u</i> / cm",
-       "<i>h</i><sub>I</sub> / cm",
-       "1 1 <i>h</i><sub>I</sub> cm"
-      ],
-      [
-       "20.0",
-       "",
-       ""
-      ],
-      [
-       "25.0",
-       "",
-       ""
-      ],
-      [
-       "30.0",
-       "",
-       ""
-      ],
-      [
-       "35.0",
-       "",
-       ""
-      ],
-      [
-       "40.0",
-       "",
-       ""
-      ]
-     ]
-    },
-    {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "hO =",
-     "unit": "cm"
+     "type": "figure",
+     "id": "0625_2021ON_53_q03a_table3-1",
+     "caption": "Table 3.1"
     },
     {
      "type": "marks",
@@ -256,7 +226,7 @@
    "content": [
     {
      "type": "text",
-     "html": "For each distance <i>u</i>, calculate, and record in Table 3.1, the value of \\(\\frac{1}{<i>h</i>}\\) .",
+     "html": "For each distance <i>u</i>, calculate, and record in Table 3.1, the value of \\(\\frac{1}{h}\\) .",
      "text": "For each distance u, calculate, and record in Table 3.1, the value of (1)/(h) ."
     },
     {
@@ -332,7 +302,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of <i>u</i> / cm (<i>y</i>-axis) against \\(\\frac{1}{<i>h</i>}\\) \\(\\frac{1}{cm}\\) (<i>x-</i>axis). Start the axes at the origin (0,0).",
+     "html": "Plot a graph of <i>u</i> / cm (<i>y</i>-axis) against \\(\\frac{1}{h}\\) \\(\\frac{1}{\\text{cm}}\\) (<i>x-</i>axis). Start the axes at the origin (0,0).",
      "text": "Plot a graph of u / cm (y-axis) against (1)/(h) (1)/(cm) (x-axis). Start the axes at the origin (0,0)."
     },
     {
@@ -416,7 +386,7 @@
      "content": [
       {
        "type": "text",
-       "html": "From your graph, determine <i>u</i><sub>0</sub>, the value of <i>u</i> when \\(\\frac{1}{<i>h</i>}\\) = 0.0.",
+       "html": "From your graph, determine <i>u</i><sub>0</sub>, the value of <i>u</i> when \\(\\frac{1}{h}\\) = 0.0.",
        "text": "From your graph, determine u0, the value of u when (1)/(h) = 0.0."
       },
       {
@@ -572,7 +542,7 @@
       },
       {
        "type": "text",
-       "html": "<i>f</i> = \\(\\frac{<i>G</i>}{<i>h</i>}\\), <sub>O</sub>",
+       "html": "<i>f</i> = \\(\\frac{G}{h}\\), <sub>O</sub>",
        "text": "f = (G)/(h), O"
       },
       {
@@ -660,7 +630,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "improvement",
+     "prefix": "difficulty"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "improvement"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -687,6 +666,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -33,10 +33,10 @@
    "caption": "Fig. 7.1",
    "page": 12,
    "bbox": [
-    152.1,
-    139.1,
-    447.0,
-    307.7
+    152.0,
+    139.0,
+    441.0,
+    305.0
    ],
    "id": "0625_2016ON_33_q07_fig7-1",
    "part": "",
@@ -100,6 +100,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,44 +108,28 @@
    "text": "Two people watch a storm cloud above a tree. Person A is watching from her house and person B is watching from a distant hill. Lightning creates a bright flash and loud thunder at the same time. The lightning strikes the tree not far from person A’s house, as shown in Fig. 7.1."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "lightning",
-     "",
-     ""
-    ],
-    [
-     "B",
-     "",
-     ""
-    ],
-    [
-     "A",
-     "",
-     ""
-    ],
-    [
-     "",
-     "",
-     ""
-    ],
-    [
-     "",
-     "",
-     ""
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2016ON_33_q07_fig7-1",
+   "caption": "Fig. 7.1"
   },
   {
    "type": "text",
-   "html": "For each person, describe the time interval between seeing the lightning and hearing the thunder and explain your answers.",
-   "text": "For each person, describe the time interval between seeing the lightning and hearing the thunder and explain your answers."
+   "html": "For each person, describe the time interval between seeing the lightning and hearing the thunder and explain your answers. person A description of time interval ……",
+   "text": "For each person, describe the time interval between seeing the lightning and hearing the thunder and explain your answers. person A description of time interval ……"
+  },
+  {
+   "type": "text",
+   "html": "person B description of time interval ……",
+   "text": "person B description of time interval ……"
   },
   {
    "type": "answer",
    "kind": "answer_line",
-   "prefix": "explanation",
+   "prefix": "explanation"
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
    "lines": 8
   },
   {

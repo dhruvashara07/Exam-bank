@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    598.1,
-    340.1,
-    709.4
+    67.5,
+    598.0,
+    340.0,
+    709.5
    ],
    "id": "0625_2024ON_13_q05_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p13/q05/figures/0625_2024ON_13_q05_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p13/q05/figures/0625_2024ON_13_q05_figA",
     "url": null,
-    "kb": 22.4
+    "kb": 22.2
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -98,7 +99,7 @@
   },
   {
    "type": "text",
-   "html": "A student uses the equation ρ = \\(\\frac{<i>m</i>}{<i>V</i>}\\)",
+   "html": "A student uses the equation ρ = \\(\\frac{m}{V}\\)",
    "text": "A student uses the equation ρ = (m)/(V)"
   },
   {
@@ -107,40 +108,30 @@
    "text": "Which row shows the correct meaning of these symbols?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "ρ",
-     "<i>m</i>",
-     "<i>V</i>"
-    ],
-    [
-     "<b>A</b>",
-     "density",
-     "mass",
-     "velocity"
-    ],
-    [
-     "<b>B</b>",
-     "density",
-     "mass",
-     "volume"
-    ],
-    [
-     "<b>C</b>",
-     "pressure",
-     "mass",
-     "volume"
-    ],
-    [
-     "<b>D</b>",
-     "pressure",
-     "moment",
-     "velocity"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_13_q05_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "density mass velocity"
+    },
+    {
+     "label": "B",
+     "html": "density mass volume"
+    },
+    {
+     "label": "C",
+     "html": "pressure mass volume"
+    },
+    {
+     "label": "D",
+     "html": "pressure moment velocity"
+    }
+   ]
   }
  ]
 }

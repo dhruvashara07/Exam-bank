@@ -32,10 +32,10 @@
   {
    "page": 16,
    "bbox": [
-    67.4,
-    121.3,
-    272.3,
-    246.8
+    67.0,
+    121.0,
+    272.5,
+    247.0
    ],
    "id": "0625_2018MJ_13_q38_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p13/q38/figures/0625_2018MJ_13_q38_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p13/q38/figures/0625_2018MJ_13_q38_figA",
     "url": null,
-    "kb": 18.4
+    "kb": 18.2
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "How many neutrons and how many protons does one nucleus of this isotope contain?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "number of",
-     "number of"
-    ],
-    [
-     "",
-     "neutrons",
-     "protons"
-    ],
-    [
-     "<b>A</b>",
-     "82",
-     "132"
-    ],
-    [
-     "<b>B</b>",
-     "82",
-     "214"
-    ],
-    [
-     "<b>C</b>",
-     "132",
-     "82"
-    ],
-    [
-     "<b>D</b>",
-     "214",
-     "82"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_13_q38_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "82 132"
+    },
+    {
+     "label": "B",
+     "html": "82 214"
+    },
+    {
+     "label": "C",
+     "html": "132 82"
+    },
+    {
+     "label": "D",
+     "html": "214 82"
+    }
+   ]
   }
  ]
 }

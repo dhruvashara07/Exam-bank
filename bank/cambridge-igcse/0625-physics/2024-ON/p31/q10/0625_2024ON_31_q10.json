@@ -95,13 +95,13 @@
    "content": [
     {
      "type": "text",
-     "html": "The current in the electrical heater is 2.2 A. The voltage (p.d.) across the heater is 12V.",
-     "text": "The current in the electrical heater is 2.2 A. The voltage (p.d.) across the heater is 12V."
+     "html": "The current in the electrical heater is 2.2 A. The voltage (p.d.) across the heater is 12 V.",
+     "text": "The current in the electrical heater is 2.2 A. The voltage (p.d.) across the heater is 12 V."
     },
     {
      "type": "text",
-     "html": "Calculate the energy transferred to the heater in 90s.",
-     "text": "Calculate the energy transferred to the heater in 90s."
+     "html": "Calculate the energy transferred to the heater in 90 s.",
+     "text": "Calculate the energy transferred to the heater in 90 s."
     },
     {
      "type": "answer",
@@ -188,6 +188,10 @@
      "prefix": "1"
     },
     {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
      "type": "marks",
      "value": 2
     }
@@ -259,8 +263,8 @@
     },
     {
      "type": "text",
-     "html": "The voltage (V<sub>p</sub>) across the primary coil of the transformer is 228V. The voltage (V<sub>s</sub>) across the secondary coil of the transformer is 12V. The number of turns on the primary coil (N<sub>p</sub>) is 760.",
-     "text": "The voltage (Vp) across the primary coil of the transformer is 228V. The voltage (Vs) across the secondary coil of the transformer is 12V. The number of turns on the primary coil (Np) is 760."
+     "html": "The voltage (V<sub>p</sub>) across the primary coil of the transformer is 228 V. The voltage (V<sub>s</sub>) across the secondary coil of the transformer is 12 V. The number of turns on the primary coil (N<sub>p</sub>) is 760.",
+     "text": "The voltage (Vp) across the primary coil of the transformer is 228 V. The voltage (Vs) across the secondary coil of the transformer is 12 V. The number of turns on the primary coil (Np) is 760."
     },
     {
      "type": "text",
@@ -268,9 +272,9 @@
      "text": "Calculate the number of turns (Ns) on the secondary coil."
     },
     {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "number of turns on secondary coil ="
+     "type": "text",
+     "html": "number of turns on secondary coil = ……",
+     "text": "number of turns on secondary coil = ……"
     },
     {
      "type": "marks",
@@ -296,6 +300,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

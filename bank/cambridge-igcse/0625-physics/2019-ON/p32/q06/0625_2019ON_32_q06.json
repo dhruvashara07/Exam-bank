@@ -9,10 +9,10 @@
    "caption": "Fig. 6.1",
    "page": 10,
    "bbox": [
-    75.0,
-    85.6,
-    520.3,
-    154.5
+    74.5,
+    85.0,
+    521.0,
+    151.5
    ],
    "id": "0625_2019ON_32_q06a_fig6-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 6.2",
    "page": 10,
    "bbox": [
-    180.0,
-    314.4,
-    415.2,
-    570.9
+    180.5,
+    314.0,
+    414.5,
+    568.0
    ],
    "id": "0625_2019ON_32_q06b_fig6-2",
    "part": "(b)",
@@ -220,6 +220,10 @@
        "unit": "°C"
       },
       {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
        "type": "marks",
        "value": 1
       }
@@ -338,9 +342,13 @@
        "text": "conduction convection radiation"
       },
       {
+       "type": "text",
+       "html": "Thermal (heat) energy moves through the metal can by ……",
+       "text": "Thermal (heat) energy moves through the metal can by ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "Thermal (heat) energy moves through the metal can by"
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -453,5 +461,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

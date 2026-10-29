@@ -32,10 +32,10 @@
   {
    "page": 12,
    "bbox": [
-    219.2,
-    404.2,
-    375.6,
-    534.3
+    219.0,
+    404.0,
+    376.0,
+    535.0
    ],
    "id": "0625_2018ON_23_q30_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-ON/p23/q30/figures/0625_2018ON_23_q30_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-ON/p23/q30/figures/0625_2018ON_23_q30_figA",
     "url": null,
-    "kb": 4.7
+    "kb": 4.6
    }
   },
   {
    "page": 12,
    "bbox": [
-    67.7,
-    604.8,
-    350.9,
-    716.2
+    67.5,
+    604.5,
+    351.0,
+    716.5
    ],
    "id": "0625_2018ON_23_q30_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-ON/p23/q30/figures/0625_2018ON_23_q30_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-ON/p23/q30/figures/0625_2018ON_23_q30_figB",
     "url": null,
-    "kb": 24.2
+    "kb": 24.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Which row shows what happens to the resistance of the LDR, and what happens to the reading on the voltmeter?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "resistance of LDR",
-     "reading on voltmeter"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018ON_23_q30_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

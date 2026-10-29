@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 8,
    "bbox": [
-    58.1,
-    163.3,
-    537.2,
-    322.8
+    58.5,
+    162.5,
+    536.5,
+    321.0
    ],
    "id": "0625_2022ON_53_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 8,
    "bbox": [
-    123.1,
-    522.1,
-    472.2,
-    752.7
+    123.0,
+    525.5,
+    472.5,
+    753.0
    ],
    "id": "0625_2022ON_53_q02bii_table2-1",
    "part": "(b)(ii)",
@@ -279,59 +279,9 @@
        "text": "Add units to the column headings in Table 2.1."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "",
-         "beaker A",
-         "beaker B"
-        ],
-        [
-         "",
-         "with black card",
-         "with shiny foil"
-        ],
-        [
-         "<i>t</i> /",
-         "θ /",
-         "θ /"
-        ],
-        [
-         "0",
-         "",
-         ""
-        ],
-        [
-         "30",
-         "",
-         ""
-        ],
-        [
-         "60",
-         "",
-         ""
-        ],
-        [
-         "90",
-         "",
-         ""
-        ],
-        [
-         "120",
-         "",
-         ""
-        ],
-        [
-         "150",
-         "",
-         ""
-        ],
-        [
-         "180",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2022ON_53_q02bii_table2-1",
+       "caption": "Table 2.1"
       },
       {
        "type": "marks",
@@ -491,7 +441,7 @@
       },
       {
        "type": "text",
-       "html": "<i>x</i><sub>A</sub> = \\(\\frac{θ<sub>0</sub> – θ<sub>180</sub>}{<i>T</i>}\\)",
+       "html": "<i>x</i><sub>A</sub> = \\(\\frac{θ_{0} – θ_{180}}{T}\\)",
        "text": "xA = (θ0 – θ180)/(T)"
       },
       {
@@ -574,7 +524,7 @@
       },
       {
        "type": "text",
-       "html": "<i>x</i><sub>B</sub> = \\(\\frac{θ<sub>0</sub> – θ<sub>180</sub>}{<i>T</i>}\\)",
+       "html": "<i>x</i><sub>B</sub> = \\(\\frac{θ_{0} – θ_{180}}{T}\\)",
        "text": "xB = (θ0 – θ180)/(T)"
       },
       {
@@ -818,7 +768,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -848,6 +807,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -70,6 +70,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -83,23 +84,23 @@
   },
   {
    "type": "text",
-   "html": "What is the total liquid pressure at depth <i>h</i>?",
-   "text": "What is the total liquid pressure at depth h?"
+   "html": "What is the total liquid pressure at depth <i>h</i> ?",
+   "text": "What is the total liquid pressure at depth h ?"
   },
   {
    "type": "options",
    "options": [
     {
      "label": "A",
-     "html": "\\(\\frac{<i>h</i>ρ}{<i>g</i>}\\)"
+     "html": "\\(\\frac{hρ}{g}\\)"
     },
     {
      "label": "B",
-     "html": "\\(\\frac{<i>hg</i>}{ρ}\\)"
+     "html": "\\(\\frac{\\text{hg}}{ρ}\\)"
     },
     {
      "label": "C",
-     "html": "\\(\\frac{1}{<i>h</i>ρ<i>g</i>}\\)"
+     "html": "\\(\\frac{1}{hρg}\\)"
     },
     {
      "label": "D",

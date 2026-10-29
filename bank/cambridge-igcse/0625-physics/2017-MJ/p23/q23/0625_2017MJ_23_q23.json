@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    67.8,
-    287.0,
+    67.5,
+    286.5,
     258.0,
-    398.3
+    398.5
    ],
    "id": "0625_2017MJ_23_q23_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What effect does this have on the amplitude and on the frequency of the sound?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "amplitude",
-     "frequency"
-    ],
-    [
-     "<b>A</b>",
-     "larger",
-     "greater"
-    ],
-    [
-     "<b>B</b>",
-     "larger",
-     "smaller"
-    ],
-    [
-     "<b>C</b>",
-     "smaller",
-     "greater"
-    ],
-    [
-     "<b>D</b>",
-     "smaller",
-     "smaller"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017MJ_23_q23_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "larger greater"
+    },
+    {
+     "label": "B",
+     "html": "larger smaller"
+    },
+    {
+     "label": "C",
+     "html": "smaller greater"
+    },
+    {
+     "label": "D",
+     "html": "smaller smaller"
+    }
+   ]
   }
  ]
 }

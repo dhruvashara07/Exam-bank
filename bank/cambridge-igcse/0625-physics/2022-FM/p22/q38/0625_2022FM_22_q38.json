@@ -51,10 +51,10 @@
   {
    "page": 15,
    "bbox": [
-    67.7,
+    67.5,
     292.0,
-    520.7,
-    403.3
+    521.0,
+    403.5
    ],
    "id": "0625_2022FM_22_q38_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-FM/p22/q38/figures/0625_2022FM_22_q38_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-FM/p22/q38/figures/0625_2022FM_22_q38_figB",
     "url": null,
-    "kb": 39.6
+    "kb": 39.5
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row correctly describes a conclusion that can be drawn from each of these observations about the structure of the atom?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "most follow path X",
-     "some follow path Y"
-    ],
-    [
-     "<b>A</b>",
-     "atom is mostly empty space",
-     "atom contains something that repels α-particles"
-    ],
-    [
-     "<b>B</b>",
-     "atom is mostly empty space",
-     "nucleus contains protons and neutrons"
-    ],
-    [
-     "<b>C</b>",
-     "atom is neutral",
-     "atom contains something that repels α-particles"
-    ],
-    [
-     "<b>D</b>",
-     "atom is neutral",
-     "nucleus contains protons and neutrons"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022FM_22_q38_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "atom is mostly empty space atom contains something that repels α-particles"
+    },
+    {
+     "label": "B",
+     "html": "atom is mostly empty space nucleus contains protons and neutrons"
+    },
+    {
+     "label": "C",
+     "html": "atom is neutral atom contains something that repels α-particles"
+    },
+    {
+     "label": "D",
+     "html": "atom is neutral nucleus contains protons and neutrons"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    265.4,
+    67.5,
+    265.0,
     249.5,
-    390.8
+    391.0
    ],
    "id": "0625_2025MJ_11_q05_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p11/q05/figures/0625_2025MJ_11_q05_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p11/q05/figures/0625_2025MJ_11_q05_figA",
     "url": null,
-    "kb": 24.7
+    "kb": 24.5
    }
   }
  ],
@@ -90,42 +90,38 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The masses and volumes of four objects are shown. Which object floats in a liquid of density 1.4g/cm<sup>3</sup>?",
-   "text": "The masses and volumes of four objects are shown. Which object floats in a liquid of density 1.4g/cm3?"
+   "html": "The masses and volumes of four objects are shown. Which object floats in a liquid of density 1.4 g / cm<sup>3</sup>?",
+   "text": "The masses and volumes of four objects are shown. Which object floats in a liquid of density 1.4 g / cm3?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass of object/g",
-     "volume of <sup>3</sup> object/cm"
-    ],
-    [
-     "<b>A</b>",
-     "1.0",
-     "0.5"
-    ],
-    [
-     "<b>B</b>",
-     "2.0",
-     "3.0"
-    ],
-    [
-     "<b>C</b>",
-     "6.0",
-     "4.0"
-    ],
-    [
-     "<b>D</b>",
-     "9.0",
-     "6.0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_11_q05_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "1.0 0.5"
+    },
+    {
+     "label": "B",
+     "html": "2.0 3.0"
+    },
+    {
+     "label": "C",
+     "html": "6.0 4.0"
+    },
+    {
+     "label": "D",
+     "html": "9.0 6.0"
+    }
+   ]
   }
  ]
 }

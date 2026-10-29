@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    69.4,
-    558.4,
-    361.8,
-    669.8
+    69.0,
+    558.0,
+    362.0,
+    670.0
    ],
    "id": "0625_2016ON_22_q13_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p22/q13/figures/0625_2016ON_22_q13_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p22/q13/figures/0625_2016ON_22_q13_figA",
     "url": null,
-    "kb": 27.2
+    "kb": 27.0
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -112,35 +113,30 @@
    "text": "Which row gives the quantities Y and Z?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<i>Y</i>",
-     "<i>Z</i>"
-    ],
-    [
-     "<b>A</b>",
-     "cross-sectional area",
-     "gravitational field strength"
-    ],
-    [
-     "<b>B</b>",
-     "cross-sectional area",
-     "volume"
-    ],
-    [
-     "<b>C</b>",
-     "density",
-     "cross-sectional area"
-    ],
-    [
-     "<b>D</b>",
-     "density",
-     "gravitational field strength"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_22_q13_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "cross-sectional area gravitational field strength"
+    },
+    {
+     "label": "B",
+     "html": "cross-sectional area volume"
+    },
+    {
+     "label": "C",
+     "html": "density cross-sectional area"
+    },
+    {
+     "label": "D",
+     "html": "density gravitational field strength"
+    }
+   ]
   }
  ]
 }

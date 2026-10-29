@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    147.9,
-    266.3,
-    273.4
+    67.5,
+    147.5,
+    266.5,
+    273.5
    ],
    "id": "0625_2023MJ_23_q24_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,40 +108,30 @@
    "text": "What is the charge on the cloth and which particles moved in the charging process?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "charge",
-     "particles"
-    ],
-    [
-     "",
-     "on cloth",
-     "that moved"
-    ],
-    [
-     "<b>A</b>",
-     "negative",
-     "electrons"
-    ],
-    [
-     "<b>B</b>",
-     "negative",
-     "neutrons"
-    ],
-    [
-     "<b>C</b>",
-     "positive",
-     "electrons"
-    ],
-    [
-     "<b>D</b>",
-     "positive",
-     "neutrons"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_23_q24_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "negative electrons"
+    },
+    {
+     "label": "B",
+     "html": "negative neutrons"
+    },
+    {
+     "label": "C",
+     "html": "positive electrons"
+    },
+    {
+     "label": "D",
+     "html": "positive neutrons"
+    }
+   ]
   }
  ]
 }

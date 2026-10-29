@@ -32,10 +32,10 @@
   {
    "page": 16,
    "bbox": [
-    67.7,
-    185.8,
+    67.5,
+    185.5,
     386.0,
-    311.3
+    311.5
    ],
    "id": "0625_2021ON_21_q39_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p21/q39/figures/0625_2021ON_21_q39_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p21/q39/figures/0625_2021ON_21_q39_figA",
     "url": null,
-    "kb": 29.0
+    "kb": 28.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -98,54 +99,44 @@
   },
   {
    "type": "text",
-   "html": "The reading on the detector is 320 counts/min.",
-   "text": "The reading on the detector is 320 counts/min."
+   "html": "The reading on the detector is 320 counts / min.",
+   "text": "The reading on the detector is 320 counts / min."
   },
   {
    "type": "text",
-   "html": "The detector is switched on again after the source has been removed and it shows a reading of counts/min.",
-   "text": "The detector is switched on again after the source has been removed and it shows a reading of counts/min."
+   "html": "The detector is switched on again after the source has been removed and it shows a reading of counts / min.",
+   "text": "The detector is switched on again after the source has been removed and it shows a reading of counts / min."
   },
   {
    "type": "text",
-   "html": "What is the counts/min solely due to the source and why is there a reading on the detector when there is no radioactive source present?",
-   "text": "What is the counts/min solely due to the source and why is there a reading on the detector when there is no radioactive source present?"
+   "html": "What is the counts / min solely due to the source and why is there a reading on the detector when there is no radioactive source present?",
+   "text": "What is the counts / min solely due to the source and why is there a reading on the detector when there is no radioactive source present?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "counts/min",
-     "reason for reading"
-    ],
-    [
-     "",
-     "due to the source",
-     "with no source"
-    ],
-    [
-     "<b>A</b>",
-     "300",
-     "zero error on detector"
-    ],
-    [
-     "<b>B</b>",
-     "300",
-     "background radiation"
-    ],
-    [
-     "<b>C</b>",
-     "340",
-     "zero error on detector"
-    ],
-    [
-     "<b>D</b>",
-     "340",
-     "background radiation"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_21_q39_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "300 zero error on detector"
+    },
+    {
+     "label": "B",
+     "html": "300 background radiation"
+    },
+    {
+     "label": "C",
+     "html": "340 zero error on detector"
+    },
+    {
+     "label": "D",
+     "html": "340 background radiation"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    86.1,
-    381.7,
-    509.3,
-    417.1
+    86.0,
+    381.5,
+    509.5,
+    417.0
    ],
    "id": "0625_2020ON_11_q25_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p11/q25/figures/0625_2020ON_11_q25_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p11/q25/figures/0625_2020ON_11_q25_figA",
     "url": null,
-    "kb": 15.1
+    "kb": 15.0
    }
   },
   {
    "page": 11,
    "bbox": [
-    67.7,
+    67.5,
     449.0,
-    353.9,
-    559.9
+    354.0,
+    560.0
    ],
    "id": "0625_2020ON_11_q25_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p11/q25/figures/0625_2020ON_11_q25_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p11/q25/figures/0625_2020ON_11_q25_figB",
     "url": null,
-    "kb": 23.2
+    "kb": 23.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which types of wave are E, F and G?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "E",
-     "F",
-     "G"
-    ],
-    [
-     "<b>A</b>",
-     "radio",
-     "visible light",
-     "X-rays"
-    ],
-    [
-     "<b>B</b>",
-     "radio",
-     "X-rays",
-     "ultrasound"
-    ],
-    [
-     "<b>C</b>",
-     "X-rays",
-     "radio",
-     "ultrasound"
-    ],
-    [
-     "<b>D</b>",
-     "X-rays",
-     "visible light",
-     "radio"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020ON_11_q25_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "radio visible light X-rays"
+    },
+    {
+     "label": "B",
+     "html": "radio X-rays ultrasound"
+    },
+    {
+     "label": "C",
+     "html": "X-rays radio ultrasound"
+    },
+    {
+     "label": "D",
+     "html": "X-rays visible light radio"
+    }
+   ]
   }
  ]
 }

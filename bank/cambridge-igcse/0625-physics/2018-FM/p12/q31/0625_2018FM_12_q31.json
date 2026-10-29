@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    218.7,
-    85.4,
+    218.0,
+    85.5,
     376.5,
-    195.2
+    196.0
    ],
    "id": "0625_2018FM_12_q31_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-FM/p12/q31/figures/0625_2018FM_12_q31_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-FM/p12/q31/figures/0625_2018FM_12_q31_figA",
     "url": null,
-    "kb": 3.5
+    "kb": 3.4
    }
   },
   {
    "page": 14,
    "bbox": [
-    67.7,
-    252.9,
-    304.1,
-    364.3
+    67.5,
+    252.5,
+    304.5,
+    364.5
    ],
    "id": "0625_2018FM_12_q31_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "What happens to the ammeter reading and what happens to the brightness of the lamp?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "ammeter reading",
-     "lamp brightness"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018FM_12_q31_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

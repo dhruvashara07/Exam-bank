@@ -9,10 +9,10 @@
    "caption": "Fig. 9.1",
    "page": 15,
    "bbox": [
-    153.3,
-    87.0,
-    441.8,
-    223.3
+    154.0,
+    90.0,
+    442.0,
+    221.5
    ],
    "id": "0625_2021ON_32_q09a_fig9-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 9.2",
    "page": 15,
    "bbox": [
-    121.2,
-    321.6,
-    474.1,
-    537.7
+    121.5,
+    324.5,
+    474.0,
+    536.0
    ],
    "id": "0625_2021ON_32_q09b_fig9-2",
    "part": "(b)",
@@ -137,9 +137,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "State which angle, <i>a</i>, <i>b</i>, <i>c</i> or <i>d</i>, is the angle of incidence. ……",
+       "text": "State which angle, a, b, c or d, is the angle of incidence. ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(i) State which angle, a, b, c or d, is the angle of incidence."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -205,9 +209,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "State which angle, <i>a</i>, <i>b</i>, <i>c</i> or <i>d</i>, is the angle of reflection. ……",
+       "text": "State which angle, a, b, c or d, is the angle of reflection. ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(ii) State which angle, a, b, c or d, is the angle of reflection."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -331,5 +339,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 10.1",
    "page": 14,
    "bbox": [
-    234.0,
-    89.7,
-    362.0,
-    219.2
+    234.5,
+    89.5,
+    362.5,
+    219.5
    ],
    "id": "0625_2016MJ_31_q10_fig10-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 10.2",
    "page": 14,
    "bbox": [
-    100.1,
+    101.0,
     369.0,
-    492.1,
-    671.9
+    492.0,
+    672.0
    ],
    "id": "0625_2016MJ_31_q10b_fig10-2",
    "part": "(b)",
@@ -161,9 +161,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "Components X and Y are connected in ……",
+       "text": "Components X and Y are connected in ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(i) Components X and Y are connected in"
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -232,6 +236,10 @@
        "type": "answer",
        "kind": "answer_line",
        "prefix": "(ii) The component Y is a"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -548,6 +556,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

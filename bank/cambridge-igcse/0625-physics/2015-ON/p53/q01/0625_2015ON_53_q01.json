@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    106.2,
-    156.9,
-    482.5,
-    441.3
+    105.5,
+    157.5,
+    482.0,
+    441.5
    ],
    "id": "0625_2015ON_53_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 1.1",
    "page": 2,
    "bbox": [
-    194.6,
-    555.1,
-    400.6,
-    688.5
+    194.5,
+    555.0,
+    400.5,
+    689.0
    ],
    "id": "0625_2015ON_53_q01bi_table1-1",
    "part": "(b)(i)",
@@ -242,29 +242,9 @@
        "text": "the current I in the circuit. Switch off."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "wire combination",
-         "<i>V</i> / V",
-         "<i>I</i> / A"
-        ],
-        [
-         "<b>A</b>",
-         "",
-         ""
-        ],
-        [
-         "<b>A</b> and <b>B</b>",
-         "",
-         ""
-        ],
-        [
-         "<b>A</b>, <b>B</b> and <b>C</b>",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2015ON_53_q01bi_table1-1",
+       "caption": "Table 1.1"
       },
       {
        "type": "marks",
@@ -452,13 +432,23 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate the resistance <i>R</i> of each wire combination, using the equation <i>R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\) .",
+     "html": "Calculate the resistance <i>R</i> of each wire combination, using the equation <i>R</i> = \\(\\frac{V}{I}\\) .",
      "text": "Calculate the resistance R of each wire combination, using the equation R = (V)/(I) ."
     },
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "resistance of wires A, B and C in parallel R3 ="
+     "prefix": "resistance of wire A R1 ="
+    },
+    {
+     "type": "text",
+     "html": "resistance of wires <b>A</b> and <b>B</b> in parallel <i>R</i><sub>2</sub> = ……",
+     "text": "resistance of wires A and B in parallel R2 = ……"
+    },
+    {
+     "type": "text",
+     "html": "resistance of wires <b>A</b>, <b>B</b> and <b>C</b> in parallel <i>R</i><sub>3</sub> = ……",
+     "text": "resistance of wires A, B and C in parallel R3 = ……"
     },
     {
      "type": "marks",
@@ -537,7 +527,7 @@
       },
       {
        "type": "text",
-       "html": "should be equal to \\(\\frac{<sup>1</sup>}{<sub>2</sub>}\\) of the resistance of a single wire.",
+       "html": "should be equal to \\(\\frac{^{1}}{_{2}}\\) of the resistance of a single wire.",
        "text": "should be equal to (1)/(2) of the resistance of a single wire."
       },
       {
@@ -553,7 +543,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 3
       },
       {
@@ -656,6 +655,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

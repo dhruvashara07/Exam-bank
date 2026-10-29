@@ -32,10 +32,10 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    244.7,
-    478.4,
-    384.4
+    67.5,
+    244.5,
+    478.5,
+    384.5
    ],
    "id": "0625_2024ON_22_q08_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p22/q08/figures/0625_2024ON_22_q08_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p22/q08/figures/0625_2024ON_22_q08_figA",
     "url": null,
-    "kb": 39.2
+    "kb": 39.1
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,52 +98,30 @@
    "text": "Which row shows the process by which energy in the Sun is released, the process by which it is transferred to the Earth and a way in which it is stored once it reaches the Earth?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "process by which",
-     "process by which the",
-     "a method by which"
-    ],
-    [
-     "",
-     "energy is released",
-     "energy is transferred from",
-     "the energy is stored"
-    ],
-    [
-     "",
-     "in the Sun",
-     "the Sun to the Earth",
-     "on the Earth"
-    ],
-    [
-     "<b>A</b>",
-     "fission",
-     "convection",
-     "biofuel"
-    ],
-    [
-     "<b>B</b>",
-     "fusion",
-     "radiation",
-     "nuclear fuel"
-    ],
-    [
-     "<b>C</b>",
-     "fusion",
-     "convection",
-     "nuclear fuel"
-    ],
-    [
-     "<b>D</b>",
-     "fusion",
-     "radiation",
-     "biofuel"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_22_q08_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "fission convection biofuel"
+    },
+    {
+     "label": "B",
+     "html": "fusion radiation nuclear fuel"
+    },
+    {
+     "label": "C",
+     "html": "fusion convection nuclear fuel"
+    },
+    {
+     "label": "D",
+     "html": "fusion radiation biofuel"
+    }
+   ]
   }
  ]
 }

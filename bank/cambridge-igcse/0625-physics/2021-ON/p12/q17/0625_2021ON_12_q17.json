@@ -32,7 +32,7 @@
   {
    "page": 8,
    "bbox": [
-    90.7,
+    90.5,
     86.2,
     503.5,
     242.2
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p12/q17/figures/0625_2021ON_12_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p12/q17/figures/0625_2021ON_12_q17_figA",
     "url": null,
-    "kb": 12.9
+    "kb": 12.8
    }
   },
   {
    "page": 8,
    "bbox": [
-    67.7,
-    275.6,
-    269.9,
-    386.9
+    67.5,
+    275.5,
+    270.0,
+    387.0
    ],
    "id": "0625_2021ON_12_q17_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p12/q17/figures/0625_2021ON_12_q17_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p12/q17/figures/0625_2021ON_12_q17_figB",
     "url": null,
-    "kb": 21.6
+    "kb": 21.5
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which two effects are shown in the diagrams?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "diagram 1",
-     "diagram 2"
-    ],
-    [
-     "<b>A</b>",
-     "reflection",
-     "diffraction"
-    ],
-    [
-     "<b>B</b>",
-     "reflection",
-     "refraction"
-    ],
-    [
-     "<b>C</b>",
-     "refraction",
-     "diffraction"
-    ],
-    [
-     "<b>D</b>",
-     "refraction",
-     "reflection"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_12_q17_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "reflection diffraction"
+    },
+    {
+     "label": "B",
+     "html": "reflection refraction"
+    },
+    {
+     "label": "C",
+     "html": "refraction diffraction"
+    },
+    {
+     "label": "D",
+     "html": "refraction reflection"
+    }
+   ]
   }
  ]
 }

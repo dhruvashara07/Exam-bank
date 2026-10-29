@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    67.9,
-    443.7,
+    128.2,
+    471.0,
     466.1,
-    577.4
+    578.0
    ],
    "id": "0625_2016ON_21_q16_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p21/q16/figures/0625_2016ON_21_q16_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p21/q16/figures/0625_2016ON_21_q16_figA",
     "url": null,
-    "kb": 50.0
+    "kb": 41.6
    }
   },
   {
    "page": 7,
    "bbox": [
-    67.7,
-    622.4,
-    322.2,
-    747.9
+    67.5,
+    622.5,
+    322.5,
+    748.0
    ],
    "id": "0625_2016ON_21_q16_figB",
    "caption": null,
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A piece of melting ice at 0°C and a beaker of boiling water are both in a laboratory. The",
-   "text": "A piece of melting ice at 0°C and a beaker of boiling water are both in a laboratory. The"
+   "html": "A piece of melting ice at 0 °C and a beaker of boiling water are both in a laboratory. The laboratory is at 20 °C.",
+   "text": "A piece of melting ice at 0 °C and a beaker of boiling water are both in a laboratory. The laboratory is at 20 °C."
   },
   {
    "type": "figure",
@@ -126,40 +127,30 @@
    "text": "What is happening to the temperature of the melting ice and what is happening to the temperature of the boiling water?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "temperature of",
-     "temperature of"
-    ],
-    [
-     "",
-     "melting ice",
-     "boiling water"
-    ],
-    [
-     "<b>A</b>",
-     "constant",
-     "constant"
-    ],
-    [
-     "<b>B</b>",
-     "constant",
-     "increasing"
-    ],
-    [
-     "<b>C</b>",
-     "increasing",
-     "constant"
-    ],
-    [
-     "<b>D</b>",
-     "increasing",
-     "increasing"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_21_q16_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "constant constant"
+    },
+    {
+     "label": "B",
+     "html": "constant increasing"
+    },
+    {
+     "label": "C",
+     "html": "increasing constant"
+    },
+    {
+     "label": "D",
+     "html": "increasing increasing"
+    }
+   ]
   }
  ]
 }

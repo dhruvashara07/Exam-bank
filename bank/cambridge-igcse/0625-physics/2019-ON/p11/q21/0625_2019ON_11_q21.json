@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    160.3,
-    85.6,
+    160.0,
+    85.0,
     434.8,
-    247.6
+    247.5
    ],
    "id": "0625_2019ON_11_q21_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
-    279.6,
-    315.1,
-    419.3
+    67.5,
+    279.5,
+    315.5,
+    419.5
    ],
    "id": "0625_2019ON_11_q21_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p11/q21/figures/0625_2019ON_11_q21_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p11/q21/figures/0625_2019ON_11_q21_figB",
     "url": null,
-    "kb": 27.0
+    "kb": 26.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row is correct for the wavefronts moving from region 1 to region 2?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "name of process",
-     "the speeds of the wavefronts in regions 1 and 2 are"
-    ],
-    [
-     "<b>A</b>",
-     "diffraction",
-     "different"
-    ],
-    [
-     "<b>B</b>",
-     "diffraction",
-     "the same"
-    ],
-    [
-     "<b>C</b>",
-     "refraction",
-     "different"
-    ],
-    [
-     "<b>D</b>",
-     "refraction",
-     "the same"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019ON_11_q21_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "diffraction different"
+    },
+    {
+     "label": "B",
+     "html": "diffraction the same"
+    },
+    {
+     "label": "C",
+     "html": "refraction different"
+    },
+    {
+     "label": "D",
+     "html": "refraction the same"
+    }
+   ]
   }
  ]
 }

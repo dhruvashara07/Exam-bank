@@ -34,7 +34,7 @@
    "bbox": [
     143.7,
     87.0,
-    451.3,
+    451.0,
     237.2
    ],
    "id": "0625_2016ON_22_q01_figA",
@@ -51,10 +51,10 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
-    270.6,
-    348.1,
-    381.4
+    67.5,
+    270.5,
+    348.0,
+    381.5
    ],
    "id": "0625_2016ON_22_q01_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p22/q01/figures/0625_2016ON_22_q01_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p22/q01/figures/0625_2016ON_22_q01_figB",
     "url": null,
-    "kb": 25.2
+    "kb": 25.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row describes the speed of the vehicle in each section of the graph?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "P to Q",
-     "Q to R",
-     "R to S"
-    ],
-    [
-     "<b>A</b>",
-     "constant",
-     "zero",
-     "constant"
-    ],
-    [
-     "<b>B</b>",
-     "constant",
-     "zero",
-     "decreasing"
-    ],
-    [
-     "<b>C</b>",
-     "increasing",
-     "constant",
-     "decreasing"
-    ],
-    [
-     "<b>D</b>",
-     "increasing",
-     "zero",
-     "constant"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_22_q01_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "constant zero constant"
+    },
+    {
+     "label": "B",
+     "html": "constant zero decreasing"
+    },
+    {
+     "label": "C",
+     "html": "increasing constant decreasing"
+    },
+    {
+     "label": "D",
+     "html": "increasing zero constant"
+    }
+   ]
   }
  ]
 }

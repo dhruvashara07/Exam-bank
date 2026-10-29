@@ -39,9 +39,18 @@ Read this first in every session. Update it before ending a session.
 - Review page: https://claude.ai/artifact/LGic38rQwKjkZze9jL1zmq — round 1 feedback in collection
   `feedback`, round 2 (9 fixed + 15 new MCQ figure checks) in `feedback_r2`. Doc id = question id.
 
+- 2026-10-30: **Professional flow** (agreed with Dhruv, portal option A, twice-daily check, editable = text
+  only): `upload.yml` (PDFs on an upload branch → Releases → process → checks → batch → main), batch tracker
+  (`batch.py`, stages derived from files), automatic checks (`checks.py`: marks, coverage, page furniture,
+  figure crops, editable-text score; figure/text are warnings), golden set (20 papers, `golden.py`),
+  approvals and Claude checks tied to a cut hash (re-runs keep them when the cut is unchanged), review rounds
+  (`review_round.py` + `site/review/index.html` on the review page), website Batches tab, `docs/UPLOAD.md`.
+  Figure crops rebuilt from printed ink (tight ink + grow along lines); captions stay with their figure.
+  All 477 papers: marks match, coverage 0, 0 blocking problems; 46 crop + 58 text warnings (of 8,624 questions,
+  editable text mean 99.9% of printed words).
+
 ## Waiting on Dhruv
-1. OK to push the 2015–2024 PDFs (654 MB) to branch `incoming-raw` (→ Releases). Until then the PDFs
-   exist only on his laptop and in the 2026-10-29 session; the daily check cannot fetch them.
+1. (done 2026-10-29: all 983 PDFs in Releases.)
 2. Turn on GitHub Pages (Settings → Pages → Source: GitHub Actions) for the review website.
 3. Review round 2 (old artifact) / website reports.
 3. May/Jun 2026 variant 7: mark schemes 17 and 27 exist, question papers missing.
@@ -77,3 +86,5 @@ One line per run: date, pending papers checked/approved, feedback handled, fixes
   figure crops were cut); full re-run, all checks clean, 2025–26 re-approved (question pieces unchanged).
   2015–2024 PDFs pushed to branch `incoming-raw` → Releases. Daily check paused while Dhruv and Claude agree
   the batch/portal plan (portal A: Pages + Claude review page; twice-daily check; text-only editable layer).
+- 2026-10-30 00:xx IST (chat session): new flow built (see Done). 2025–26 re-approved (66, cut hash stored).
+  411 older papers at 'auto checked'; Claude-checking them via overview images, newest first.

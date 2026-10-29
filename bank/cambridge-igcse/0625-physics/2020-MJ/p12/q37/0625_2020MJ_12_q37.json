@@ -32,10 +32,10 @@
   {
    "page": 17,
    "bbox": [
-    67.7,
-    454.1,
-    286.7,
-    565.4
+    67.5,
+    454.0,
+    287.0,
+    565.5
    ],
    "id": "0625_2020MJ_12_q37_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p12/q37/figures/0625_2020MJ_12_q37_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p12/q37/figures/0625_2020MJ_12_q37_figA",
     "url": null,
-    "kb": 18.9
+    "kb": 18.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,40 +108,30 @@
    "text": "What does a neutral atom of this nuclide contain?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "protons",
-     "neutrons",
-     "electrons"
-    ],
-    [
-     "<b>A</b>",
-     "26",
-     "30",
-     "26"
-    ],
-    [
-     "<b>B</b>",
-     "26",
-     "56",
-     "30"
-    ],
-    [
-     "<b>C</b>",
-     "30",
-     "26",
-     "56"
-    ],
-    [
-     "<b>D</b>",
-     "56",
-     "26",
-     "30"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020MJ_12_q37_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "26 30 26"
+    },
+    {
+     "label": "B",
+     "html": "26 56 30"
+    },
+    {
+     "label": "C",
+     "html": "30 26 56"
+    },
+    {
+     "label": "D",
+     "html": "56 26 30"
+    }
+   ]
   }
  ]
 }

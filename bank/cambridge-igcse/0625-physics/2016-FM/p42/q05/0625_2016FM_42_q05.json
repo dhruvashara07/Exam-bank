@@ -204,14 +204,14 @@
      "type": "table",
      "rows": [
       [
-       "<i>p</i> /kPa",
+       "<i>p</i> / kPa",
        "250",
        "500",
        "750",
        "1000"
       ],
       [
-       "<sup>3</sup> <i>V</i> /cm",
+       "<sup>3</sup> <i>V</i> / cm",
        "30.0",
        "15.2",
        "9.8",
@@ -432,8 +432,8 @@
    "content": [
     {
      "type": "text",
-     "html": "A lake is 5.0m deep. The density of the water is 1000kg/m<sup>3</sup>.",
-     "text": "A lake is 5.0m deep. The density of the water is 1000kg/m3."
+     "html": "A lake is 5.0 m deep. The density of the water is 1000 kg / m<sup>3</sup>.",
+     "text": "A lake is 5.0 m deep. The density of the water is 1000 kg / m3."
     }
    ]
   }
@@ -454,5 +454,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

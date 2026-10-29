@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    85.1,
-    428.6,
-    345.3
+    67.5,
+    85.0,
+    428.5,
+    345.5
    ],
    "id": "0625_2022ON_12_q19_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p12/q19/figures/0625_2022ON_12_q19_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p12/q19/figures/0625_2022ON_12_q19_figA",
     "url": null,
-    "kb": 22.8
+    "kb": 22.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,25 @@
    "caption": null
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "object",
-     "image",
-     "principal focus"
-    ],
-    [
-     "<b>A</b>",
-     "W",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>B</b>",
-     "W",
-     "Z",
-     "Y"
-    ],
-    [
-     "<b>C</b>",
-     "X",
-     "Y",
-     "Z"
-    ],
-    [
-     "<b>D</b>",
-     "X",
-     "Z",
-     "W"
-    ]
-   ],
-   "options": true
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "W X Y"
+    },
+    {
+     "label": "B",
+     "html": "W Z Y"
+    },
+    {
+     "label": "C",
+     "html": "X Y Z"
+    },
+    {
+     "label": "D",
+     "html": "X Z W"
+    }
+   ]
   }
  ]
 }

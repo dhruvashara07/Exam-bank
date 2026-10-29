@@ -32,10 +32,10 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
-    655.9,
-    385.9,
-    767.3
+    67.5,
+    655.5,
+    386.0,
+    767.5
    ],
    "id": "0625_2025ON_11_q03_figA",
    "caption": null,
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A space station orbits above the Earth. There is an astronaut in the space station. In the space station, the acceleration of free fall is 7.5m/s<sup>2</sup>. On Earth, the acceleration of free fall is 9.8m/s<sup>2</sup>.",
-   "text": "A space station orbits above the Earth. There is an astronaut in the space station. In the space station, the acceleration of free fall is 7.5m/s2. On Earth, the acceleration of free fall is 9.8m/s2."
+   "html": "A space station orbits above the Earth. There is an astronaut in the space station. In the space station, the acceleration of free fall is 7.5 m / s<sup>2</sup>. On Earth, the acceleration of free fall is 9.8 m / s<sup>2</sup>.",
+   "text": "A space station orbits above the Earth. There is an astronaut in the space station. In the space station, the acceleration of free fall is 7.5 m / s2. On Earth, the acceleration of free fall is 9.8 m / s2."
   },
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row about the astronaut’s mass and weight in the space station is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass of astronaut",
-     "weight of astronaut"
-    ],
-    [
-     "<b>A</b>",
-     "same as on the Earth",
-     "less than on the Earth"
-    ],
-    [
-     "<b>B</b>",
-     "same as on the Earth",
-     "greater than on the Earth"
-    ],
-    [
-     "<b>C</b>",
-     "lower than on the Earth",
-     "less than on the Earth"
-    ],
-    [
-     "<b>D</b>",
-     "lower than on the Earth",
-     "greater than on the Earth"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025ON_11_q03_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "same as on the Earth less than on the Earth"
+    },
+    {
+     "label": "B",
+     "html": "same as on the Earth greater than on the Earth"
+    },
+    {
+     "label": "C",
+     "html": "lower than on the Earth less than on the Earth"
+    },
+    {
+     "label": "D",
+     "html": "lower than on the Earth greater than on the Earth"
+    }
+   ]
   }
  ]
 }

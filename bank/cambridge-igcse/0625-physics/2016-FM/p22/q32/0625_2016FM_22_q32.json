@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    67.6,
-    490.9,
-    351.9,
-    602.3
+    67.5,
+    490.5,
+    352.0,
+    602.5
    ],
    "id": "0625_2016FM_22_q32_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-FM/p22/q32/figures/0625_2016FM_22_q32_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-FM/p22/q32/figures/0625_2016FM_22_q32_figA",
     "url": null,
-    "kb": 30.2
+    "kb": 30.0
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A battery charger plugs into a 230V a.c. supply. The charger is used to charge a 6.0V d.c. battery.",
-   "text": "A battery charger plugs into a 230V a.c. supply. The charger is used to charge a 6.0V d.c. battery."
+   "html": "A battery charger plugs into a 230 V a.c. supply. The charger is used to charge a 6.0 V d.c. battery.",
+   "text": "A battery charger plugs into a 230 V a.c. supply. The charger is used to charge a 6.0 V d.c. battery."
   },
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "What is the purpose of these components?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "diodes",
-     "transformer"
-    ],
-    [
-     "A",
-     "rectify the a.c.",
-     "steps down the voltage"
-    ],
-    [
-     "B",
-     "rectify the a.c.",
-     "steps up the voltage"
-    ],
-    [
-     "C",
-     "step down the voltage",
-     "rectifies the a.c."
-    ],
-    [
-     "D",
-     "step up the voltage",
-     "rectifies the a.c."
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016FM_22_q32_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "rectify the a.c. steps down the voltage"
+    },
+    {
+     "label": "B",
+     "html": "rectify the a.c. steps up the voltage"
+    },
+    {
+     "label": "C",
+     "html": "step down the voltage rectifies the a.c."
+    },
+    {
+     "label": "D",
+     "html": "step up the voltage rectifies the a.c."
+    }
+   ]
   }
  ]
 }

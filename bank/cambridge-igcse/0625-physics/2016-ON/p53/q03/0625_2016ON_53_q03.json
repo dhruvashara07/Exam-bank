@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    60.9,
-    128.7,
-    531.2,
-    252.9
+    61.5,
+    128.5,
+    530.5,
+    253.0
    ],
    "id": "0625_2016ON_53_q03_fig3-1",
    "part": "",
@@ -144,7 +144,17 @@
       {
        "type": "list",
        "items": [
-        "Measure <i>h</i><sub>o</sub>, the height of the illuminated triangle, as indicated in Fig. 3.1.",
+        "Measure <i>h</i><sub>o</sub>, the height of the illuminated triangle, as indicated in Fig. 3.1."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "ho ="
+      },
+      {
+       "type": "list",
+       "items": [
         "Measure <i>h</i><sub>I</sub>, the height of the image on the screen."
        ]
       },
@@ -219,7 +229,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a value <i>M</i> for the magnification, using the equation <i>M</i> = \\(\\frac{<i>h</i><sub>I</sub>}{<i>h</i><sub>o</sub>}\\).",
+       "html": "Calculate a value <i>M</i> for the magnification, using the equation <i>M</i> = \\(\\frac{h_{I}}{h_{o}}\\).",
        "text": "Calculate a value M for the magnification, using the equation M = (hI)/(ho)."
       },
       {
@@ -292,7 +302,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a value <i>f</i><sub>1 </sub>for the focal length of the lens, using the equation <i>f</i><sub>1</sub> = \\(\\frac{<i>u M</i>}{(<i>M </i>+ 1)}\\).",
+       "html": "Calculate a value <i>f</i><sub>1 </sub>for the focal length of the lens, using the equation <i>f</i><sub>1</sub> = \\(\\frac{u M}{(M + 1)}\\).",
        "text": "Calculate a value f1 for the focal length of the lens, using the equation f1 = (u M)/((M + 1))."
       },
       {
@@ -377,7 +387,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "improvement",
+       "prefix": "difficulty"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "improvement"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -568,7 +587,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a second value <i>f</i><sub>2 </sub>for the focal length of the lens, using the equation <i>f</i><sub>2 </sub>= \\(\\frac{<i>u v</i>}{(<i>u </i>+ <i>v </i>)}\\) .",
+       "html": "Calculate a second value <i>f</i><sub>2 </sub>for the focal length of the lens, using the equation <i>f</i><sub>2 </sub>= \\(\\frac{u v}{(u + v )}\\) .",
        "text": "Calculate a second value f2 for the focal length of the lens, using the equation f2 = (u v)/((u + v )) ."
       },
       {
@@ -766,6 +785,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -70,6 +70,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -78,27 +79,27 @@
   },
   {
    "type": "text",
-   "html": "Which equation is used to calculate the time <i>t</i>?",
-   "text": "Which equation is used to calculate the time t?"
+   "html": "Which equation is used to calculate the time <i>t</i> ?",
+   "text": "Which equation is used to calculate the time t ?"
   },
   {
    "type": "options",
    "options": [
     {
      "label": "A",
-     "html": "<i>t</i> = \\(\\frac{<i>F</i>}{<i>Pd</i>}\\)"
+     "html": "<i>t</i> = \\(\\frac{F}{\\text{Pd}}\\)"
     },
     {
      "label": "B",
-     "html": "<i>t</i> = \\(\\frac{<i>Fd</i>}{<i>P</i>}\\)"
+     "html": "<i>t</i> = \\(\\frac{\\text{Fd}}{P}\\)"
     },
     {
      "label": "C",
-     "html": "<i>t</i> = \\(\\frac{<i>Pd</i>}{<i>F</i>}\\)"
+     "html": "<i>t</i> = \\(\\frac{\\text{Pd}}{F}\\)"
     },
     {
      "label": "D",
-     "html": "<i>t</i> = \\(\\frac{<i>P</i>}{<i>Fd</i>}\\)"
+     "html": "<i>t</i> = \\(\\frac{P}{\\text{Fd}}\\)"
     }
    ]
   }

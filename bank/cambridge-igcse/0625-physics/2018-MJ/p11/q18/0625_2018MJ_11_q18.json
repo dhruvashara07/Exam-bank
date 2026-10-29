@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
-    110.8,
-    392.3,
-    222.1
+    67.5,
+    110.5,
+    392.5,
+    222.5
    ],
    "id": "0625_2018MJ_11_q18_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which values should she use for the lower fixed point and for the upper fixed point?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "lower fixed point",
-     "upper fixed point"
-    ],
-    [
-     "<b>A</b>",
-     "melting point of ice",
-     "boiling point of mercury"
-    ],
-    [
-     "<b>B</b>",
-     "melting point of ice",
-     "boiling point of water"
-    ],
-    [
-     "<b>C</b>",
-     "melting point of mercury",
-     "boiling point of mercury"
-    ],
-    [
-     "<b>D</b>",
-     "melting point of mercury",
-     "boiling point of water"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_11_q18_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "melting point of ice boiling point of mercury"
+    },
+    {
+     "label": "B",
+     "html": "melting point of ice boiling point of water"
+    },
+    {
+     "label": "C",
+     "html": "melting point of mercury boiling point of mercury"
+    },
+    {
+     "label": "D",
+     "html": "melting point of mercury boiling point of water"
+    }
+   ]
   }
  ]
 }

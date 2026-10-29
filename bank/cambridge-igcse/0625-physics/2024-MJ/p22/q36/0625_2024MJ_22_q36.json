@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
+    67.5,
     668.5,
-    300.8,
-    779.8
+    301.0,
+    780.0
    ],
    "id": "0625_2024MJ_22_q36_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p22/q36/figures/0625_2024MJ_22_q36_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p22/q36/figures/0625_2024MJ_22_q36_figA",
     "url": null,
-    "kb": 19.2
+    "kb": 19.1
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which type of radioactive source is suitable for use in measuring and controlling the thickness of paper in a paper-manufacturing factory?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "type of emission",
-     "half-life"
-    ],
-    [
-     "<b>A</b>",
-     "alpha",
-     "long"
-    ],
-    [
-     "<b>B</b>",
-     "alpha",
-     "short"
-    ],
-    [
-     "<b>C</b>",
-     "beta",
-     "long"
-    ],
-    [
-     "<b>D</b>",
-     "beta",
-     "short"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_22_q36_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "alpha long"
+    },
+    {
+     "label": "B",
+     "html": "alpha short"
+    },
+    {
+     "label": "C",
+     "html": "beta long"
+    },
+    {
+     "label": "D",
+     "html": "beta short"
+    }
+   ]
   }
  ]
 }

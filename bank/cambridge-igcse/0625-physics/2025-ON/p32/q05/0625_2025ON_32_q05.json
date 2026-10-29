@@ -9,10 +9,10 @@
    "caption": "Fig. 5.1",
    "page": 8,
    "bbox": [
-    205.2,
-    85.5,
-    386.1,
-    195.1
+    205.5,
+    86.5,
+    386.5,
+    195.5
    ],
    "id": "0625_2025ON_32_q05a_fig5-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Table 5.1",
    "page": 8,
    "bbox": [
-    230.6,
-    230.1,
-    364.7,
-    342.5
+    230.5,
+    231.0,
+    365.0,
+    343.0
    ],
    "id": "0625_2025ON_32_q05a_table5-1",
    "part": "(a)",
@@ -40,17 +40,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p32/q05/figures/0625_2025ON_32_q05a_table5-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p32/q05/figures/0625_2025ON_32_q05a_table5-1",
     "url": null,
-    "kb": 21.0
+    "kb": 20.9
    }
   },
   {
    "caption": "Fig. 5.2",
    "page": 9,
    "bbox": [
-    120.1,
-    98.5,
-    475.3,
-    243.2
+    120.5,
+    99.0,
+    474.5,
+    243.5
    ],
    "id": "0625_2025ON_32_q05b_fig5-2",
    "part": "(b)",
@@ -232,8 +232,8 @@
      "content": [
       {
        "type": "text",
-       "html": "The volume of a cube of ice is 3.4cm<sup>3</sup>. Calculate the mass of a cube of ice.",
-       "text": "The volume of a cube of ice is 3.4cm3. Calculate the mass of a cube of ice."
+       "html": "The volume of a cube of ice is 3.4 cm<sup>3</sup>. Calculate the mass of a cube of ice.",
+       "text": "The volume of a cube of ice is 3.4 cm3. Calculate the mass of a cube of ice."
       },
       {
        "type": "answer",
@@ -269,31 +269,6 @@
      "type": "figure",
      "id": "0625_2025ON_32_q05a_table5-1",
      "caption": "Table 5.1"
-    },
-    {
-     "type": "table",
-     "rows": [
-      [
-       "",
-       "density"
-      ],
-      [
-       "",
-       "<sup>3</sup>"
-      ],
-      [
-       "",
-       "g/cm"
-      ],
-      [
-       "ice",
-       "0.92"
-      ],
-      [
-       "water",
-       "0.99"
-      ]
-     ]
     }
    ]
   },
@@ -465,7 +440,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "motion",
+       "prefix": "arrangement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "motion"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 4
       },
       {
@@ -579,5 +563,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

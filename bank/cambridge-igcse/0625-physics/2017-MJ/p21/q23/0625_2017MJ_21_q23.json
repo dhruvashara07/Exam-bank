@@ -32,9 +32,9 @@
   {
    "page": 12,
    "bbox": [
-    67.7,
-    624.7,
-    257.9,
+    67.5,
+    624.5,
+    258.0,
     736.0
    ],
    "id": "0625_2017MJ_21_q23_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-MJ/p21/q23/figures/0625_2017MJ_21_q23_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-MJ/p21/q23/figures/0625_2017MJ_21_q23_figA",
     "url": null,
-    "kb": 21.0
+    "kb": 20.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What effect does this have on the amplitude and on the frequency of the sound?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "amplitude",
-     "frequency"
-    ],
-    [
-     "<b>A</b>",
-     "larger",
-     "greater"
-    ],
-    [
-     "<b>B</b>",
-     "larger",
-     "smaller"
-    ],
-    [
-     "<b>C</b>",
-     "smaller",
-     "greater"
-    ],
-    [
-     "<b>D</b>",
-     "smaller",
-     "smaller"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017MJ_21_q23_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "larger greater"
+    },
+    {
+     "label": "B",
+     "html": "larger smaller"
+    },
+    {
+     "label": "C",
+     "html": "smaller greater"
+    },
+    {
+     "label": "D",
+     "html": "smaller smaller"
+    }
+   ]
   }
  ]
 }

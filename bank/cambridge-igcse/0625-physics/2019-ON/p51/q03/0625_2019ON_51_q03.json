@@ -33,10 +33,10 @@
    "caption": "Table 3.1",
    "page": 8,
    "bbox": [
-    172.3,
-    286.3,
-    394.6,
-    457.0
+    172.0,
+    291.0,
+    394.5,
+    457.5
    ],
    "id": "0625_2019ON_51_q03b_table3-1",
    "part": "(b)",
@@ -196,37 +196,9 @@
      ]
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>t</i> /",
-       "θ /"
-      ],
-      [
-       "0",
-       ""
-      ],
-      [
-       "",
-       ""
-      ],
-      [
-       "",
-       ""
-      ],
-      [
-       "",
-       ""
-      ],
-      [
-       "",
-       ""
-      ],
-      [
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2019ON_51_q03b_table3-1",
+     "caption": "Table 3.1"
     },
     {
      "type": "answer",
@@ -299,7 +271,17 @@
     {
      "type": "list",
      "items": [
-      "Calculate the decrease in temperature Δθ<sub>1</sub> during the<b> first</b> 120 s.",
+      "Calculate the decrease in temperature Δθ<sub>1</sub> during the<b> first</b> 120 s."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Δθ1 ="
+    },
+    {
+     "type": "list",
+     "items": [
       "Calculate the decrease in temperature Δθ<sub>2</sub> during the <b>last </b>120 s."
      ]
     },
@@ -535,7 +517,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -636,6 +627,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

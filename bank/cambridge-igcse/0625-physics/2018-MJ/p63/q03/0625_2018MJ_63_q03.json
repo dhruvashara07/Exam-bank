@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    85.5,
-    113.7,
-    521.1,
-    244.6
+    86.0,
+    120.0,
+    521.5,
+    242.0
    ],
    "id": "0625_2018MJ_63_q03_fig3-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p63/q03/figures/0625_2018MJ_63_q03_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p63/q03/figures/0625_2018MJ_63_q03_fig3-1",
     "url": null,
-    "kb": 19.8
+    "kb": 18.8
    }
   },
   {
    "caption": "Fig. 3.2",
    "page": 8,
    "bbox": [
-    147.2,
-    316.1,
+    147.5,
+    317.5,
     448.0,
-    540.4
+    537.5
    ],
    "id": "0625_2018MJ_63_q03a_fig3-2",
    "part": "(a)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 3.3",
    "page": 9,
    "bbox": [
-    139.0,
-    113.7,
-    449.2,
-    343.3
+    139.5,
+    120.0,
+    449.0,
+    340.5
    ],
    "id": "0625_2018MJ_63_q03b_fig3-3",
    "part": "(b)",
@@ -83,17 +83,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p63/q03/figures/0625_2018MJ_63_q03b_fig3-3.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p63/q03/figures/0625_2018MJ_63_q03b_fig3-3",
     "url": null,
-    "kb": 8.6
+    "kb": 5.4
    }
   },
   {
    "caption": "Table 3.1",
    "page": 9,
    "bbox": [
-    188.2,
-    455.0,
-    407.1,
-    613.1
+    188.0,
+    459.5,
+    407.0,
+    613.5
    ],
    "id": "0625_2018MJ_63_q03bii_table3-1",
    "part": "(b)(ii)",
@@ -174,15 +174,15 @@
      "text": "The illuminated object consists of a triangular-shaped hole in a piece of card. Fig. 3.2 shows, full size, the illuminated object. Measure and record the height ho of the triangular-shaped hole."
     },
     {
-     "type": "figure",
-     "id": "0625_2018MJ_63_q03a_fig3-2",
-     "caption": "Fig. 3.2"
-    },
-    {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "ho =",
      "unit": "cm"
+    },
+    {
+     "type": "figure",
+     "id": "0625_2018MJ_63_q03a_fig3-2",
+     "caption": "Fig. 3.2"
     },
     {
      "type": "marks",
@@ -347,43 +347,13 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate, and record in the table, a value <i>N</i> using your measurements for <i>h</i><sub>o</sub> and <i>h</i><sub>I</sub> and the equation <i>N</i> = \\(\\frac{<i>h</i><sub>o</sub>}{<i>h</i><sub>I</sub>}\\).",
+       "html": "Calculate, and record in the table, a value <i>N</i> using your measurements for <i>h</i><sub>o</sub> and <i>h</i><sub>I</sub> and the equation <i>N</i> = \\(\\frac{h_{o}}{h_{I}}\\).",
        "text": "Calculate, and record in the table, a value N using your measurements for ho and hI and the equation N = (ho)/(hI)."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>u</i> / cm",
-         "<i>h</i><sub>I</sub> / cm",
-         "<i>N</i>"
-        ],
-        [
-         "20.0",
-         "",
-         ""
-        ],
-        [
-         "30.0",
-         "1.5",
-         "0.93"
-        ],
-        [
-         "40.0",
-         "0.9",
-         "1.6"
-        ],
-        [
-         "50.0",
-         "0.6",
-         "2.3"
-        ],
-        [
-         "60.0",
-         "0.5",
-         "2.8"
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2018MJ_63_q03bii_table3-1",
+       "caption": "Table 3.1"
       },
       {
        "type": "marks",
@@ -627,7 +597,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "improvement",
+     "prefix": "difficulty"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "improvement"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -654,6 +633,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -33,7 +33,7 @@
    "page": 3,
    "bbox": [
     160.7,
-    388.6,
+    388.5,
     437.8,
     511.6
    ],
@@ -51,10 +51,10 @@
   {
    "page": 3,
    "bbox": [
-    69.4,
-    541.2,
-    274.3,
-    652.6
+    69.0,
+    541.0,
+    274.5,
+    652.5
    ],
    "id": "0625_2020FM_22_q04_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-FM/p22/q04/figures/0625_2020FM_22_q04_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-FM/p22/q04/figures/0625_2020FM_22_q04_figB",
     "url": null,
-    "kb": 19.8
+    "kb": 19.5
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "What happens to the mass and to the weight of the flexible material when it is compressed?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass",
-     "weight"
-    ],
-    [
-     "<b>A</b>",
-     "increases",
-     "increases"
-    ],
-    [
-     "<b>B</b>",
-     "increases",
-     "no change"
-    ],
-    [
-     "<b>C</b>",
-     "no change",
-     "increases"
-    ],
-    [
-     "<b>D</b>",
-     "no change",
-     "no change"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020FM_22_q04_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "increases increases"
+    },
+    {
+     "label": "B",
+     "html": "increases no change"
+    },
+    {
+     "label": "C",
+     "html": "no change increases"
+    },
+    {
+     "label": "D",
+     "html": "no change no change"
+    }
+   ]
   }
  ]
 }

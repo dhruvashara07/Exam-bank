@@ -32,7 +32,7 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
+    67.5,
     600.5,
     335.0,
     726.0
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A battery is connected to a circuit. It is switched on for 1.0 minute. During that time, there is a current of 0.40A in the circuit and the battery supplies a total of 48 J of energy.",
-   "text": "A battery is connected to a circuit. It is switched on for 1.0 minute. During that time, there is a current of 0.40A in the circuit and the battery supplies a total of 48 J of energy."
+   "html": "A battery is connected to a circuit. It is switched on for 1.0 minute. During that time, there is a current of 0.40 A in the circuit and the battery supplies a total of 48 J of energy.",
+   "text": "A battery is connected to a circuit. It is switched on for 1.0 minute. During that time, there is a current of 0.40 A in the circuit and the battery supplies a total of 48 J of energy."
   },
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which row gives the charge that passes and the electromotive force (e.m.f.) of the battery?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "charge that passes",
-     "e.m.f. of the"
-    ],
-    [
-     "",
-     "in 1.0 minute/C",
-     "battery/V"
-    ],
-    [
-     "<b>A</b>",
-     "0.40",
-     "2.0"
-    ],
-    [
-     "<b>B</b>",
-     "0.40",
-     "120"
-    ],
-    [
-     "<b>C</b>",
-     "24",
-     "2.0"
-    ],
-    [
-     "<b>D</b>",
-     "24",
-     "120"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_21_q27_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0.40 2.0"
+    },
+    {
+     "label": "B",
+     "html": "0.40 120"
+    },
+    {
+     "label": "C",
+     "html": "24 2.0"
+    },
+    {
+     "label": "D",
+     "html": "24 120"
+    }
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1 (not to scale)",
    "page": 9,
    "bbox": [
-    57.7,
-    111.5,
-    537.7,
-    267.1
+    57.5,
+    113.5,
+    538.0,
+    267.5
    ],
    "id": "0625_2025ON_63_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 9,
    "bbox": [
-    135.1,
-    469.6,
-    460.2,
-    785.8
+    134.5,
+    469.0,
+    461.0,
+    786.0
    ],
    "id": "0625_2025ON_63_q03bi_fig3-2",
    "part": "(b)(i)",
@@ -72,9 +72,9 @@
    "page": 10,
    "bbox": [
     181.0,
-    60.8,
-    414.3,
-    224.8
+    61.5,
+    414.5,
+    225.0
    ],
    "id": "0625_2025ON_63_q03bi_table3-1",
    "part": "(b)(i)",
@@ -90,10 +90,10 @@
    "caption": "Fig. 3.3",
    "page": 11,
    "bbox": [
-    220.9,
-    293.3,
-    374.9,
-    421.3
+    220.5,
+    292.5,
+    374.5,
+    421.5
    ],
    "id": "0625_2025ON_63_q03e_fig3-3",
    "part": "(e)",
@@ -170,8 +170,8 @@
    "content": [
     {
      "type": "text",
-     "html": "The student sets the distance u between the illuminated triangular object and the lens to 20.0cm. He moves the screen until a sharp image of the illuminated triangular object is seen on the screen.",
-     "text": "The student sets the distance u between the illuminated triangular object and the lens to 20.0cm. He moves the screen until a sharp image of the illuminated triangular object is seen on the screen."
+     "html": "The student sets the distance u between the illuminated triangular object and the lens to 20.0 cm. He moves the screen until a sharp image of the illuminated triangular object is seen on the screen.",
+     "text": "The student sets the distance u between the illuminated triangular object and the lens to 20.0 cm. He moves the screen until a sharp image of the illuminated triangular object is seen on the screen."
     },
     {
      "type": "text",
@@ -296,39 +296,9 @@
        "height_pt": 155.2
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "u/cm",
-         "h<sub>I</sub>/cm",
-         "1 D/ cm"
-        ],
-        [
-         "20.0",
-         "",
-         ""
-        ],
-        [
-         "25.0",
-         "2.8",
-         "0.36"
-        ],
-        [
-         "30.0",
-         "2.0",
-         "0.50"
-        ],
-        [
-         "35.0",
-         "1.6",
-         "0.63"
-        ],
-        [
-         "40.0",
-         "1.2",
-         "0.83"
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2025ON_63_q03bi_table3-1",
+       "caption": "Table 3.1"
       },
       {
        "type": "marks",
@@ -395,12 +365,12 @@
      "content": [
       {
        "type": "text",
-       "html": "For distance u = 20.0cm, calculate, and record in Table 3.1, a value D. Use your value of h<sub>I</sub> from Table 3.1 and the equation:",
-       "text": "For distance u = 20.0cm, calculate, and record in Table 3.1, a value D. Use your value of hI from Table 3.1 and the equation:"
+       "html": "For distance u = 20.0 cm, calculate, and record in Table 3.1, a value D. Use your value of h<sub>I</sub> from Table 3.1 and the equation:",
+       "text": "For distance u = 20.0 cm, calculate, and record in Table 3.1, a value D. Use your value of hI from Table 3.1 and the equation:"
       },
       {
        "type": "text",
-       "html": "D = \\(\\frac{1}{h<sub>I</sub>}\\) .",
+       "html": "D = \\(\\frac{1}{h_{I}}\\) .",
        "text": "D = (1)/(hI) ."
       },
       {
@@ -471,13 +441,13 @@
    "content": [
     {
      "type": "text",
-     "html": "The student repeats the procedure for u = 25.0cm, u = 30.0cm, u = 35.0cm and u = 40.0cm. His results <b>are</b> shown in Table 3.1.",
-     "text": "The student repeats the procedure for u = 25.0cm, u = 30.0cm, u = 35.0cm and u = 40.0cm. His results are shown in Table 3.1."
+     "html": "The student repeats the procedure for u = 25.0 cm, u = 30.0 cm, u = 35.0 cm and u = 40.0 cm. His results <b>are</b> shown in Table 3.1.",
+     "text": "The student repeats the procedure for u = 25.0 cm, u = 30.0 cm, u = 35.0 cm and u = 40.0 cm. His results are shown in Table 3.1."
     },
     {
      "type": "text",
-     "html": "Plot a graph of u /cm (y‑axis) against D/ \\(\\frac{1}{cm}\\) (x‑axis). Start the axes at the origin (0,0).",
-     "text": "Plot a graph of u /cm (y‑axis) against D/ (1)/(cm) (x‑axis). Start the axes at the origin (0,0)."
+     "html": "Plot a graph of u / cm (y‑axis) against D / \\(\\frac{1}{\\text{cm}}\\) (x‑axis). Start the axes at the origin (0,0).",
+     "text": "Plot a graph of u / cm (y‑axis) against D / (1)/(cm) (x‑axis). Start the axes at the origin (0,0)."
     },
     {
      "type": "text",
@@ -724,6 +694,12 @@
      "text": "Measure and record the height hO of the illuminated triangular object shown in Fig. 3.3."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "hO =",
+     "unit": "cm"
+    },
+    {
      "type": "figure",
      "id": "0625_2025ON_63_q03e_fig3-3",
      "caption": "Fig. 3.3"
@@ -735,8 +711,8 @@
     },
     {
      "type": "text",
-     "html": "f = \\(\\frac{G}{h<sub>O</sub>}\\) × k, where k = 1.0cm<sup>2</sup>.",
-     "text": "f = (G)/(hO) × k, where k = 1.0cm2."
+     "html": "f = \\(\\frac{G}{h_{O}}\\) × k, where k = 1.0 cm<sup>2</sup>.",
+     "text": "f = (G)/(hO) × k, where k = 1.0 cm2."
     },
     {
      "type": "answer",
@@ -820,7 +796,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "improvement",
+     "prefix": "difficulty"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "improvement"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -847,6 +832,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

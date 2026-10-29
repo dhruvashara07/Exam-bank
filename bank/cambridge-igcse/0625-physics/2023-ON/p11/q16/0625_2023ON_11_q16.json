@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    185.2,
+    184.5,
     431.2,
     409.9,
-    574.5
+    575.0
    ],
    "id": "0625_2023ON_11_q16_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
+    67.5,
     607.0,
-    314.6,
-    717.8
+    315.0,
+    718.0
    ],
    "id": "0625_2023ON_11_q16_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p11/q16/figures/0625_2023ON_11_q16_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p11/q16/figures/0625_2023ON_11_q16_figB",
     "url": null,
-    "kb": 23.0
+    "kb": 22.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row about the air temperature and the air density at X and at Y is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "air temperature",
-     "air density"
-    ],
-    [
-     "<b>A</b>",
-     "higher at X",
-     "higher at X"
-    ],
-    [
-     "<b>B</b>",
-     "higher at X",
-     "higher at Y"
-    ],
-    [
-     "<b>C</b>",
-     "higher at Y",
-     "higher at Y"
-    ],
-    [
-     "<b>D</b>",
-     "higher at Y",
-     "higher at X"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_11_q16_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "higher at X higher at X"
+    },
+    {
+     "label": "B",
+     "html": "higher at X higher at Y"
+    },
+    {
+     "label": "C",
+     "html": "higher at Y higher at Y"
+    },
+    {
+     "label": "D",
+     "html": "higher at Y higher at X"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 18,
    "bbox": [
-    67.6,
-    168.2,
-    215.9,
-    279.6
+    67.5,
+    168.0,
+    216.0,
+    279.5
    ],
    "id": "0625_2015ON_12_q38_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "What are the values of P and Q?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "P",
-     "Q"
-    ],
-    [
-     "A",
-     "6",
-     "1"
-    ],
-    [
-     "B",
-     "6",
-     "–1"
-    ],
-    [
-     "C",
-     "8",
-     "1"
-    ],
-    [
-     "D",
-     "8",
-     "–1"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015ON_12_q38_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "6 1"
+    },
+    {
+     "label": "B",
+     "html": "6 –1"
+    },
+    {
+     "label": "C",
+     "html": "8 1"
+    },
+    {
+     "label": "D",
+     "html": "8 –1"
+    }
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    60.9,
-    115.7,
-    531.2,
-    239.9
+    61.5,
+    115.5,
+    530.5,
+    240.0
    ],
    "id": "0625_2016ON_63_q02_fig2-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p63/q02/figures/0625_2016ON_63_q02_fig2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p63/q02/figures/0625_2016ON_63_q02_fig2-1",
     "url": null,
-    "kb": 14.7
+    "kb": 14.6
    }
   },
   {
    "caption": "Fig. 2.2",
    "page": 5,
    "bbox": [
-    134.1,
-    406.1,
-    461.1,
-    557.2
+    133.5,
+    405.5,
+    462.0,
+    557.5
    ],
    "id": "0625_2016ON_63_q02ai_fig2-2",
    "part": "(a)(i)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 2.3",
    "page": 5,
    "bbox": [
-    134.1,
-    406.1,
-    461.1,
-    557.2
+    133.5,
+    405.5,
+    462.0,
+    557.5
    ],
    "id": "0625_2016ON_63_q02ai_fig2-3",
    "part": "(a)(i)",
@@ -90,10 +90,10 @@
    "caption": "Fig. 2.4",
    "page": 6,
    "bbox": [
-    56.3,
-    286.9,
-    539.6,
-    401.2
+    57.0,
+    287.5,
+    539.0,
+    401.5
    ],
    "id": "0625_2016ON_63_q02b_fig2-4",
    "part": "(b)",
@@ -102,7 +102,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p63/q02/figures/0625_2016ON_63_q02b_fig2-4.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p63/q02/figures/0625_2016ON_63_q02b_fig2-4",
     "url": null,
-    "kb": 16.9
+    "kb": 16.8
    }
   }
  ],
@@ -202,9 +202,24 @@
       {
        "type": "list",
        "items": [
-        "Measure <i>h</i><sub>o</sub>, the height of the illuminated triangle, as shown in Fig. 2.2.",
+        "Measure <i>h</i><sub>o</sub>, the height of the illuminated triangle, as shown in Fig. 2.2."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "ho ="
+      },
+      {
+       "type": "list",
+       "items": [
         "Measure <i>h</i><sub>I</sub>, the height of the image on the screen, as shown in Fig. 2.3."
        ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "hI ="
       },
       {
        "type": "figure",
@@ -215,11 +230,6 @@
        "type": "figure",
        "id": "0625_2016ON_63_q02ai_fig2-3",
        "caption": "Fig. 2.3"
-      },
-      {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "hI ="
       },
       {
        "type": "marks",
@@ -286,7 +296,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a value <i>M</i> for the magnification, using the equation <i>M</i> = \\(\\frac{<i>h</i><sub>I</sub>}{<i>h</i><sub>o</sub>}\\).",
+       "html": "Calculate a value <i>M</i> for the magnification, using the equation <i>M</i> = \\(\\frac{h_{I}}{h_{o}}\\).",
        "text": "Calculate a value M for the magnification, using the equation M = (hI)/(ho)."
       },
       {
@@ -360,7 +370,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a value for the focal length <i>f</i><sub>1</sub> of the lens, using the equation <i>f</i><sub>1</sub> = \\(\\frac{<i>u M</i>}{(<i>M </i>+ 1)}\\) , where <i>u</i> = 20.0 cm.",
+       "html": "Calculate a value for the focal length <i>f</i><sub>1</sub> of the lens, using the equation <i>f</i><sub>1</sub> = \\(\\frac{u M}{(M + 1)}\\) , where <i>u</i> = 20.0 cm.",
        "text": "Calculate a value for the focal length f1 of the lens, using the equation f1 = (u M)/((M + 1)) , where u = 20.0 cm."
       },
       {
@@ -440,7 +450,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "improvement",
+       "prefix": "difficulty"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "improvement"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -549,7 +568,17 @@
       {
        "type": "list",
        "items": [
-        "On Fig. 2.4, measure the distance between the lens and the screen.",
+        "On Fig. 2.4, measure the distance between the lens and the screen."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "distance ="
+      },
+      {
+       "type": "list",
+       "items": [
         "Fig. 2.4 is drawn to 1/5<sup>th</sup> scale."
        ]
       },
@@ -635,8 +664,13 @@
       },
       {
        "type": "text",
-       "html": "<i>f</i><sub>2</sub> = \\(\\frac{<i>u v</i>}{(<i>u </i>+ <i>v </i>)}\\) , where <i>u</i> = 40.0 cm.",
+       "html": "<i>f</i><sub>2</sub> = \\(\\frac{u v}{(u + v )}\\) , where <i>u</i> = 40.0 cm.",
        "text": "f2 = (u v)/((u + v )) , where u = 40.0 cm."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "f2 ="
       },
       {
        "type": "list",
@@ -648,12 +682,6 @@
        "type": "text",
        "html": "State whether the results support this suggestion. Justify your statement with reference to the results.",
        "text": "State whether the results support this suggestion. Justify your statement with reference to the results."
-      },
-      {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "f2 =",
-       "lines": 3
       },
       {
        "type": "marks",
@@ -772,6 +800,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

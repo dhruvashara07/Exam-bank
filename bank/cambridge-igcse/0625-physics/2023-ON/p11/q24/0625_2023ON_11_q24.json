@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    97.3,
-    272.6,
-    222.8
+    67.5,
+    97.0,
+    273.0,
+    223.0
    ],
    "id": "0625_2023ON_11_q24_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p11/q24/figures/0625_2023ON_11_q24_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p11/q24/figures/0625_2023ON_11_q24_figA",
     "url": null,
-    "kb": 19.8
+    "kb": 19.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,40 +98,30 @@
    "text": "Which metal could be used for a permanent magnet and which metal could be used for the core of an electromagnet?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "permanent",
-     "core of"
-    ],
-    [
-     "",
-     "magnet",
-     "electromagnet"
-    ],
-    [
-     "<b>A</b>",
-     "iron",
-     "copper"
-    ],
-    [
-     "<b>B</b>",
-     "iron",
-     "steel"
-    ],
-    [
-     "<b>C</b>",
-     "steel",
-     "copper"
-    ],
-    [
-     "<b>D</b>",
-     "steel",
-     "iron"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_11_q24_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "iron copper"
+    },
+    {
+     "label": "B",
+     "html": "iron steel"
+    },
+    {
+     "label": "C",
+     "html": "steel copper"
+    },
+    {
+     "label": "D",
+     "html": "steel iron"
+    }
+   ]
   }
  ]
 }

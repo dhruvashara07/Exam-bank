@@ -51,10 +51,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    472.3,
+    67.5,
+    472.0,
     549.0,
-    583.7
+    584.0
    ],
    "id": "0625_2025FM_22_q11_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-FM/p22/q11/figures/0625_2025FM_22_q11_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-FM/p22/q11/figures/0625_2025FM_22_q11_figB",
     "url": null,
-    "kb": 45.1
+    "kb": 44.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Which row has the correct prediction and correct explanation?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "prediction",
-     "explanation"
-    ],
-    [
-     "<b>A</b>",
-     "The ice cube would melt more quickly on the metal spoon.",
-     "Metal is a good conductor."
-    ],
-    [
-     "<b>B</b>",
-     "The ice cube would melt more quickly on the metal spoon.",
-     "Plastic is a good conductor."
-    ],
-    [
-     "<b>C</b>",
-     "The ice cube would melt more quickly on the plastic spoon.",
-     "Metal is a poor conductor."
-    ],
-    [
-     "<b>D</b>",
-     "The ice cube would melt more quickly on the plastic spoon.",
-     "Plastic is a poor conductor."
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025FM_22_q11_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "The ice cube would melt more quickly on the metal spoon. Metal is a good conductor."
+    },
+    {
+     "label": "B",
+     "html": "The ice cube would melt more quickly on the metal spoon. Plastic is a good conductor."
+    },
+    {
+     "label": "C",
+     "html": "The ice cube would melt more quickly on the plastic spoon. Metal is a poor conductor."
+    },
+    {
+     "label": "D",
+     "html": "The ice cube would melt more quickly on the plastic spoon. Plastic is a poor conductor."
+    }
+   ]
   }
  ]
 }

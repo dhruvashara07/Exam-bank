@@ -33,9 +33,9 @@
    "page": 15,
    "bbox": [
     81.8,
-    174.1,
+    173.5,
     513.0,
-    294.8
+    295.5
    ],
    "id": "0625_2015MJ_14_q33_figA",
    "caption": null,
@@ -52,9 +52,9 @@
    "page": 15,
    "bbox": [
     86.7,
-    353.5,
-    508.2,
-    476.0
+    353.0,
+    508.5,
+    476.5
    ],
    "id": "0625_2015MJ_14_q33_figB",
    "caption": null,
@@ -70,8 +70,8 @@
   {
    "page": 15,
    "bbox": [
-    67.6,
-    521.2,
+    67.5,
+    521.0,
     265.5,
     632.5
    ],
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p14/q33/figures/0625_2015MJ_14_q33_figC.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p14/q33/figures/0625_2015MJ_14_q33_figC",
     "url": null,
-    "kb": 19.1
+    "kb": 18.9
    }
   }
  ],
@@ -128,6 +128,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -170,35 +171,30 @@
    "text": "Which row identifies whether the core metals are ferrous or non-ferrous?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "ferrous",
-     "non-ferrous"
-    ],
-    [
-     "A",
-     "P",
-     "Q and R"
-    ],
-    [
-     "B",
-     "P and Q",
-     "R"
-    ],
-    [
-     "C",
-     "Q and R",
-     "P"
-    ],
-    [
-     "D",
-     "R",
-     "P and Q"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_14_q33_figC",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "P Q and R"
+    },
+    {
+     "label": "B",
+     "html": "P and Q R"
+    },
+    {
+     "label": "C",
+     "html": "Q and R P"
+    },
+    {
+     "label": "D",
+     "html": "R P and Q"
+    }
+   ]
   }
  ]
 }

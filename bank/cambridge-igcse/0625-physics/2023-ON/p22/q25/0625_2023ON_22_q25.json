@@ -33,9 +33,9 @@
    "page": 9,
    "bbox": [
     252.7,
-    461.4,
+    460.5,
     342.3,
-    539.2
+    540.0
    ],
    "id": "0625_2023ON_22_q25_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    584.4,
-    278.9,
-    709.9
+    67.5,
+    584.0,
+    279.0,
+    710.0
    ],
    "id": "0625_2023ON_22_q25_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p22/q25/figures/0625_2023ON_22_q25_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p22/q25/figures/0625_2023ON_22_q25_figB",
     "url": null,
-    "kb": 17.3
+    "kb": 17.1
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "In which directions are the conventional current and the flow of free electrons through the resistor?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "conventional",
-     "free electron"
-    ],
-    [
-     "",
-     "current",
-     "flow"
-    ],
-    [
-     "<b>A</b>",
-     "X to Y",
-     "X to Y"
-    ],
-    [
-     "<b>B</b>",
-     "X to Y",
-     "Y to X"
-    ],
-    [
-     "<b>C</b>",
-     "Y to X",
-     "X to Y"
-    ],
-    [
-     "<b>D</b>",
-     "Y to X",
-     "Y to X"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_22_q25_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "X to Y X to Y"
+    },
+    {
+     "label": "B",
+     "html": "X to Y Y to X"
+    },
+    {
+     "label": "C",
+     "html": "Y to X X to Y"
+    },
+    {
+     "label": "D",
+     "html": "Y to X Y to X"
+    }
+   ]
   }
  ]
 }

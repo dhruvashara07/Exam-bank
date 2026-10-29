@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    153.7,
-    112.2,
-    436.6,
-    370.4
+    153.5,
+    116.5,
+    437.0,
+    367.5
    ],
    "id": "0625_2019MJ_62_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 8,
    "bbox": [
-    215.8,
-    468.3,
-    379.5,
-    616.3
+    215.0,
+    467.5,
+    380.0,
+    613.5
    ],
    "id": "0625_2019MJ_62_q03a_fig3-2",
    "part": "(a)",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-MJ/p62/q03/figures/0625_2019MJ_62_q03a_fig3-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-MJ/p62/q03/figures/0625_2019MJ_62_q03a_fig3-2",
     "url": null,
-    "kb": 25.2
+    "kb": 25.1
    }
   },
   {
    "caption": "Fig. 3.3",
    "page": 8,
    "bbox": [
-    215.8,
-    468.3,
-    379.5,
-    771.2
+    215.0,
+    467.5,
+    380.0,
+    768.5
    ],
    "id": "0625_2019MJ_62_q03a_fig3-3",
    "part": "(a)",
@@ -90,10 +90,10 @@
    "caption": "Fig. 3.4",
    "page": 10,
    "bbox": [
-    156.1,
-    361.1,
-    436.6,
-    620.9
+    155.5,
+    360.5,
+    437.0,
+    618.0
    ],
    "id": "0625_2019MJ_62_q03f_fig3-4",
    "part": "(f)",
@@ -175,6 +175,16 @@
      "text": "Write down the readings shown on the meters in Figs. 3.2 and 3.3."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V1 ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "I1 ="
+    },
+    {
      "type": "figure",
      "id": "0625_2019MJ_62_q03a_fig3-2",
      "caption": "Fig. 3.2"
@@ -183,11 +193,6 @@
      "type": "figure",
      "id": "0625_2019MJ_62_q03a_fig3-3",
      "caption": "Fig. 3.3"
-    },
-    {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "I1 ="
     },
     {
      "type": "marks",
@@ -254,7 +259,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate the resistance <i>R</i><sub>1</sub> of the resistor P using the equation <i>R</i><sub>1</sub> = \\(\\frac{<i>V</i><sub>1</sub>}{<i>I</i>}\\).",
+     "html": "Calculate the resistance <i>R</i><sub>1</sub> of the resistor P using the equation <i>R</i><sub>1</sub> = \\(\\frac{V_{1}}{I}\\).",
      "text": "Calculate the resistance R1 of the resistor P using the equation R1 = (V1)/(I)."
     },
     {
@@ -341,8 +346,13 @@
      "text": "2.4 V"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V2 ="
+    },
+    {
      "type": "text",
-     "html": "Calculate the resistance <i>R</i><sub>2</sub> of the lamp L using the equation <i>R</i><sub>2</sub> = \\(\\frac{<i>V</i><sub>2</sub>}{<i>I</i>}\\).",
+     "html": "Calculate the resistance <i>R</i><sub>2</sub> of the lamp L using the equation <i>R</i><sub>2</sub> = \\(\\frac{V_{2}}{I}\\).",
      "text": "Calculate the resistance R2 of the lamp L using the equation R2 = (V2)/(I)."
     },
     {
@@ -450,7 +460,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>3</sub> of the resistor Q using the equation <i>R</i><sub>3</sub> = \\(\\frac{<i>V</i><sub>3</sub>}{<i>I</i>}\\).",
+       "html": "Calculate the resistance <i>R</i><sub>3</sub> of the resistor Q using the equation <i>R</i><sub>3</sub> = \\(\\frac{V_{3}}{I}\\).",
        "text": "Calculate the resistance R3 of the resistor Q using the equation R3 = (V3)/(I)."
       },
       {
@@ -535,7 +545,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -556,6 +575,11 @@
      "type": "text",
      "html": "3.5 V",
      "text": "3.5 V"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V3 ="
     },
     {
      "type": "text",
@@ -637,6 +661,11 @@
      "text": "2.5 V"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V4 ="
+    },
+    {
      "type": "text",
      "html": "She calculates the resistance <i>R</i><sub>4</sub> of the lamp L.",
      "text": "She calculates the resistance R4 of the lamp L."
@@ -647,15 +676,14 @@
      "text": "8.1 Ω"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "R4 ="
+    },
+    {
      "type": "text",
      "html": "She suggests that the change in resistance of the lamp from part <b>(c)</b> is due to a change in temperature of the lamp filament. Suggest an observation that she could make to confirm that the temperature of the lamp filament changes.",
      "text": "She suggests that the change in resistance of the lamp from part (c) is due to a change in temperature of the lamp filament. Suggest an observation that she could make to confirm that the temperature of the lamp filament changes."
-    },
-    {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "R4 =",
-     "lines": 1
     },
     {
      "type": "marks",
@@ -840,6 +868,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

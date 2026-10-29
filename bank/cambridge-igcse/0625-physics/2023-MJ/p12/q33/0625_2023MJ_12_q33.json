@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    46.7,
+    46.5,
     99.8,
     548.1,
-    236.0
+    236.5
    ],
    "id": "0625_2023MJ_12_q33_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
-    268.3,
-    400.7,
-    379.1
+    67.5,
+    268.0,
+    401.0,
+    379.0
    ],
    "id": "0625_2023MJ_12_q33_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p12/q33/figures/0625_2023MJ_12_q33_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p12/q33/figures/0625_2023MJ_12_q33_figB",
     "url": null,
-    "kb": 28.3
+    "kb": 28.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "What type of transformers are X and Y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>A</b>",
-     "step-down transformer",
-     "step-down transformer"
-    ],
-    [
-     "<b>B</b>",
-     "step-down transformer",
-     "step-up transformer"
-    ],
-    [
-     "<b>C</b>",
-     "step-up transformer",
-     "step-down transformer"
-    ],
-    [
-     "<b>D</b>",
-     "step-up transformer",
-     "step-up transformer"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_12_q33_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "step-down transformer step-down transformer"
+    },
+    {
+     "label": "B",
+     "html": "step-down transformer step-up transformer"
+    },
+    {
+     "label": "C",
+     "html": "step-up transformer step-down transformer"
+    },
+    {
+     "label": "D",
+     "html": "step-up transformer step-up transformer"
+    }
+   ]
   }
  ]
 }

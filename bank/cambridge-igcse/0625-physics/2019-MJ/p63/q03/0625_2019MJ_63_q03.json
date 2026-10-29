@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    155.3,
-    113.2,
-    435.8,
-    374.4
+    154.5,
+    117.5,
+    436.5,
+    371.5
    ],
    "id": "0625_2019MJ_63_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 8,
    "bbox": [
-    67.0,
-    475.7,
-    528.2,
-    659.7
+    66.5,
+    475.0,
+    529.0,
+    657.0
    ],
    "id": "0625_2019MJ_63_q03b_fig3-2",
    "part": "(b)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 3.3",
    "page": 8,
    "bbox": [
-    67.0,
-    475.7,
-    528.2,
-    659.7
+    66.5,
+    475.0,
+    529.0,
+    657.0
    ],
    "id": "0625_2019MJ_63_q03b_fig3-3",
    "part": "(b)",
@@ -90,10 +90,10 @@
    "caption": "Table 3.1",
    "page": 9,
    "bbox": [
-    167.9,
-    87.0,
-    427.4,
-    190.1
+    167.5,
+    86.5,
+    427.5,
+    190.5
    ],
    "id": "0625_2019MJ_63_q03b_table3-1",
    "part": "(b)",
@@ -287,38 +287,9 @@
      "height_pt": 66.7
     },
     {
-     "type": "text",
-     "html": "<b>Table 3.1</b>",
-     "text": "Table 3.1"
-    },
-    {
-     "type": "table",
-     "rows": [
-      [
-       "resistor combination",
-       "<i>I</i>/",
-       "<i>V</i> /",
-       "<i>R</i> /"
-      ],
-      [
-       "X",
-       "",
-       "",
-       ""
-      ],
-      [
-       "X and Y",
-       "0.23",
-       "3.3",
-       ""
-      ],
-      [
-       "X, Y and Z",
-       "0.21",
-       "5.0",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2019MJ_63_q03b_table3-1",
+     "caption": "Table 3.1"
     },
     {
      "type": "text",
@@ -396,7 +367,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -481,7 +461,7 @@
       },
       {
        "type": "text",
-       "html": "\\(\\frac{<i>V</i>}{<i>I</i>}\\)",
+       "html": "\\(\\frac{V}{I}\\)",
        "text": "(V)/(I)"
       },
       {
@@ -556,6 +536,11 @@
        "type": "text",
        "html": "For resistors in series, the total resistance of the combination is the sum of the individual resistances. Use your results from Table 3.1 to calculate the resistances <i>R</i><sub>Y</sub> and <i>R</i><sub>Z</sub> of resistors Y and Z.",
        "text": "For resistors in series, the total resistance of the combination is the sum of the individual resistances. Use your results from Table 3.1 to calculate the resistances RY and RZ of resistors Y and Z."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "RY ="
       },
       {
        "type": "answer",
@@ -732,6 +717,12 @@
        "text": "2.31"
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "RP =",
+       "unit": "Ω"
+      },
+      {
        "type": "text",
        "html": "Use the student’s result and your result from Table 3.1 to compare <i>R</i><sub>P</sub> with the resistance <i>R</i><sub>S</sub> of the three resistors connected in series. Tick the box next to the description that most closely matches the results.",
        "text": "Use the student’s result and your result from Table 3.1 to compare RP with the resistance RS of the three resistors connected in series. Tick the box next to the description that most closely matches the results."
@@ -740,12 +731,6 @@
        "type": "text",
        "html": "<i>R</i><sub>P</sub> = <i>R</i><sub>S</sub> <i>R</i><sub>P</sub> = 10<i>R</i><sub>S</sub> 10<i>R</i><sub>P</sub> = <i>R</i><sub>S</sub> None of these descriptions apply",
        "text": "RP = RS RP = 10RS 10RP = RS None of these descriptions apply"
-      },
-      {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "RP =",
-       "unit": "Ω"
       },
       {
        "type": "marks",
@@ -774,6 +759,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

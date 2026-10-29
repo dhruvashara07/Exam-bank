@@ -70,35 +70,36 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "An athlete runs at a speed of 8m/s for 10s, and then at a speed of 6m/s for 12s.",
-   "text": "An athlete runs at a speed of 8m/s for 10s, and then at a speed of 6m/s for 12s."
+   "html": "An athlete runs at a speed of 8 m / s for 10 s, and then at a speed of 6 m / s for 12 s.",
+   "text": "An athlete runs at a speed of 8 m / s for 10 s, and then at a speed of 6 m / s for 12 s."
   },
   {
    "type": "text",
-   "html": "Which calculation gives the average speed of the athlete inm/s?",
-   "text": "Which calculation gives the average speed of the athlete inm/s?"
+   "html": "Which calculation gives the average speed of the athlete in m / s?",
+   "text": "Which calculation gives the average speed of the athlete in m / s?"
   },
   {
    "type": "options",
    "options": [
     {
      "label": "A",
-     "html": "\\(\\frac{8 +6}{2}\\)"
+     "html": "\\(\\frac{8 + 6}{2}\\)"
     },
     {
      "label": "B",
-     "html": "\\(\\frac{(8×10)+(6×12)}{22}\\)"
+     "html": "\\(\\frac{(8 \\times 10) + (6 \\times 12)}{22}\\)"
     },
     {
      "label": "C",
-     "html": "\\(\\frac{(8÷10)+(6÷12)}{22}\\)"
+     "html": "\\(\\frac{(8 \\div 10) + (6 \\div 12)}{22}\\)"
     },
     {
      "label": "D",
-     "html": "\\(\\frac{(10÷8)+(12÷6)}{22}\\)"
+     "html": "\\(\\frac{(10 \\div 8) + (12 \\div 6)}{22}\\)"
     }
    ]
   }

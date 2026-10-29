@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    87.8,
-    126.6,
-    505.9,
-    330.7
+    88.5,
+    126.0,
+    505.5,
+    328.0
    ],
    "id": "0625_2019MJ_53_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 6,
    "bbox": [
-    166.9,
-    87.0,
-    428.3,
-    297.1
+    167.0,
+    86.5,
+    428.5,
+    297.5
    ],
    "id": "0625_2019MJ_53_q02b_table2-1",
    "part": "(b)",
@@ -238,59 +238,9 @@
      "value": 3
     },
     {
-     "type": "text",
-     "html": "<b>Table 2.1</b>",
-     "text": "Table 2.1"
-    },
-    {
-     "type": "table",
-     "rows": [
-      [
-       "",
-       "glass tube",
-       "beaker"
-      ],
-      [
-       "<i>t</i> /",
-       "θ<sub>C</sub>/",
-       "θ<sub>H</sub>/"
-      ],
-      [
-       "0",
-       "",
-       ""
-      ],
-      [
-       "",
-       "",
-       ""
-      ],
-      [
-       "",
-       "",
-       ""
-      ],
-      [
-       "",
-       "",
-       ""
-      ],
-      [
-       "",
-       "",
-       ""
-      ],
-      [
-       "",
-       "",
-       ""
-      ],
-      [
-       "",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2019MJ_53_q02b_table2-1",
+     "caption": "Table 2.1"
     }
    ]
   },
@@ -440,7 +390,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -590,7 +549,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 4
     },
     {
@@ -617,6 +585,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

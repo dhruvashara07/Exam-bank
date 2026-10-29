@@ -32,10 +32,10 @@
   {
    "page": 16,
    "bbox": [
-    67.7,
-    638.8,
-    337.7,
-    764.2
+    67.5,
+    638.5,
+    338.0,
+    764.5
    ],
    "id": "0625_2016ON_12_q37_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p12/q37/figures/0625_2016ON_12_q37_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p12/q37/figures/0625_2016ON_12_q37_figA",
     "url": null,
-    "kb": 20.8
+    "kb": 20.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,46 +103,30 @@
    "text": "Which row gives the numbers of particles in a neutral sodium atom?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "number of",
-     "number of",
-     "number of"
-    ],
-    [
-     "",
-     "electrons",
-     "protons",
-     "neutrons"
-    ],
-    [
-     "<b>A</b>",
-     "11",
-     "11",
-     "12"
-    ],
-    [
-     "<b>B</b>",
-     "12",
-     "11",
-     "23"
-    ],
-    [
-     "<b>C</b>",
-     "12",
-     "12",
-     "11"
-    ],
-    [
-     "<b>D</b>",
-     "23",
-     "23",
-     "11"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_12_q37_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "11 11 12"
+    },
+    {
+     "label": "B",
+     "html": "12 11 23"
+    },
+    {
+     "label": "C",
+     "html": "12 12 11"
+    },
+    {
+     "label": "D",
+     "html": "23 23 11"
+    }
+   ]
   }
  ]
 }

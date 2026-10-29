@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
-    311.2,
-    234.2,
-    422.6
+    67.5,
+    311.0,
+    234.5,
+    422.5
    ],
    "id": "0625_2024FM_22_q30_figA",
    "caption": null,
@@ -90,42 +90,38 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "An isotope of strontium has the nuclide notation <sup>84</sup><sub>38</sub>Sr. How many protons and neutrons are there in a nucleus of this isotope?",
-   "text": "An isotope of strontium has the nuclide notation 8438Sr. How many protons and neutrons are there in a nucleus of this isotope?"
+   "html": "An isotope of strontium has the nuclide notation <sup>84</sup><sub>38</sub> Sr. How many protons and neutrons are there in a nucleus of this isotope?",
+   "text": "An isotope of strontium has the nuclide notation 8438 Sr. How many protons and neutrons are there in a nucleus of this isotope?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "protons",
-     "neutrons"
-    ],
-    [
-     "<b>A</b>",
-     "38",
-     "46"
-    ],
-    [
-     "<b>B</b>",
-     "38",
-     "84"
-    ],
-    [
-     "<b>C</b>",
-     "46",
-     "38"
-    ],
-    [
-     "<b>D</b>",
-     "46",
-     "84"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024FM_22_q30_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "38 46"
+    },
+    {
+     "label": "B",
+     "html": "38 84"
+    },
+    {
+     "label": "C",
+     "html": "46 38"
+    },
+    {
+     "label": "D",
+     "html": "46 84"
+    }
+   ]
   }
  ]
 }

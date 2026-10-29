@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
-    223.8,
-    259.3,
-    349.3
+    67.5,
+    223.5,
+    259.5,
+    349.5
    ],
    "id": "0625_2024MJ_21_q24_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,40 +98,30 @@
    "text": "Which row describes suitable materials for use in a temporary magnet and in a permanent magnet?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "temporary",
-     "permanent"
-    ],
-    [
-     "",
-     "magnet",
-     "magnet"
-    ],
-    [
-     "<b>A</b>",
-     "soft iron",
-     "soft iron"
-    ],
-    [
-     "<b>B</b>",
-     "soft iron",
-     "steel"
-    ],
-    [
-     "<b>C</b>",
-     "steel",
-     "soft iron"
-    ],
-    [
-     "<b>D</b>",
-     "steel",
-     "steel"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_21_q24_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "soft iron soft iron"
+    },
+    {
+     "label": "B",
+     "html": "soft iron steel"
+    },
+    {
+     "label": "C",
+     "html": "steel soft iron"
+    },
+    {
+     "label": "D",
+     "html": "steel steel"
+    }
+   ]
   }
  ]
 }

@@ -34,9 +34,9 @@
    "page": 2,
    "bbox": [
     109.5,
-    134.3,
-    487.5,
-    369.7
+    138.5,
+    487.0,
+    367.0
    ],
    "id": "0625_2019ON_53_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 1.1",
    "page": 2,
    "bbox": [
-    181.1,
-    553.7,
-    414.2,
-    715.8
+    181.0,
+    558.5,
+    414.5,
+    716.0
    ],
    "id": "0625_2019ON_53_q01a_table1-1",
    "part": "(a)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 1.2",
    "page": 4,
    "bbox": [
-    153.5,
-    124.6,
-    439.2,
-    468.5
+    154.0,
+    129.0,
+    440.0,
+    465.5
    ],
    "id": "0625_2019ON_53_q01e_fig1-2",
    "part": "(e)",
@@ -161,45 +161,9 @@
      ]
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>l</i> / cm",
-       "<i>V</i> / V",
-       "<i>I</i> / A",
-       "<i>R</i> / Ω"
-      ],
-      [
-       "20.0",
-       "",
-       "",
-       ""
-      ],
-      [
-       "40.0",
-       "",
-       "",
-       ""
-      ],
-      [
-       "60.0",
-       "",
-       "",
-       ""
-      ],
-      [
-       "80.0",
-       "",
-       "",
-       ""
-      ],
-      [
-       "100.0",
-       "",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2019ON_53_q01a_table1-1",
+     "caption": "Table 1.1"
     },
     {
      "type": "marks",
@@ -271,7 +235,7 @@
     },
     {
      "type": "text",
-     "html": "\\(\\frac{<i>V</i>}{<i>I</i>}\\)",
+     "html": "\\(\\frac{V}{I}\\)",
      "text": "(V)/(I)"
     },
     {
@@ -422,7 +386,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -528,6 +501,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

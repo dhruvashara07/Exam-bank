@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    69.6,
-    83.2,
-    525.7,
-    201.7
+    70.0,
+    85.5,
+    526.0,
+    200.0
    ],
    "id": "0625_2021ON_31_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 4,
    "bbox": [
-    120.4,
-    272.3,
-    474.9,
-    542.4
+    120.5,
+    271.5,
+    319.0,
+    541.0
    ],
    "id": "0625_2021ON_31_q02_fig2-2",
    "part": "",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p31/q02/figures/0625_2021ON_31_q02_fig2-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p31/q02/figures/0625_2021ON_31_q02_fig2-2",
     "url": null,
-    "kb": 40.3
+    "kb": 31.1
    }
   },
   {
    "caption": "Fig. 2.3",
    "page": 5,
    "bbox": [
-    147.6,
-    213.2,
-    447.6,
-    514.2
+    147.5,
+    216.5,
+    447.0,
+    512.5
    ],
    "id": "0625_2021ON_31_q02c_fig2-3",
    "part": "(c)",
@@ -497,6 +497,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -520,7 +521,15 @@
   },
   {
    "type": "answer",
-   "kind": "answer_line"
+   "kind": "answer_line",
+   "prefix": "time =",
+   "unit": "s"
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "time =",
+   "unit": "s"
   }
  ]
 }

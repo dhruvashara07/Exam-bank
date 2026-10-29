@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    218.2,
-    123.6,
-    377.1,
-    159.1
+    218.0,
+    123.5,
+    377.0,
+    159.5
    ],
    "id": "0625_2016ON_12_q31_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p12/q31/figures/0625_2016ON_12_q31_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p12/q31/figures/0625_2016ON_12_q31_figA",
     "url": null,
-    "kb": 5.3
+    "kb": 5.2
    }
   },
   {
    "page": 14,
    "bbox": [
-    67.7,
-    216.8,
+    67.5,
+    216.5,
     265.5,
-    328.2
+    328.5
    ],
    "id": "0625_2016ON_12_q31_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p12/q31/figures/0625_2016ON_12_q31_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p12/q31/figures/0625_2016ON_12_q31_figB",
     "url": null,
-    "kb": 19.4
+    "kb": 19.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,35 +137,30 @@
    "text": "Which row shows what happens to the resistance of the LDR and what happens to the current?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "resistance",
-     "current"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_12_q31_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

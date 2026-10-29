@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    111.1,
-    126.7,
-    470.9,
-    336.1
+    111.0,
+    127.0,
+    470.5,
+    336.5
    ],
    "id": "0625_2015ON_51_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 8,
    "bbox": [
-    181.1,
+    181.0,
     489.0,
-    414.2,
-    650.1
+    414.5,
+    650.5
    ],
    "id": "0625_2015ON_51_q03aiii_table3-1",
    "part": "(a)(iii)",
@@ -258,33 +258,9 @@
        "text": "Repeat the procedure in (ii) using l values of 40.0 cm, 60.0 cm, 80.0 cm and 100.0 cm. Switch off."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>l</i>/ cm",
-         "<i>V</i> / V"
-        ],
-        [
-         "20.0",
-         ""
-        ],
-        [
-         "40.0",
-         ""
-        ],
-        [
-         "60.0",
-         ""
-        ],
-        [
-         "80.0",
-         ""
-        ],
-        [
-         "100.0",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2015ON_51_q03aiii_table3-1",
+       "caption": "Table 3.1"
       },
       {
        "type": "marks",
@@ -358,8 +334,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of <i>V </i>/ V (<i>y</i>-axis) against <i>l</i>/ cm (<i>x</i>-axis). Start both axes at the origin (0, 0).",
-     "text": "Plot a graph of V / V (y-axis) against l/ cm (x-axis). Start both axes at the origin (0, 0)."
+     "html": "Plot a graph of <i>V </i>/ V (<i>y</i>-axis) against <i>l</i> / cm (<i>x</i>-axis). Start both axes at the origin (0, 0).",
+     "text": "Plot a graph of V / V (y-axis) against l / cm (x-axis). Start both axes at the origin (0, 0)."
     },
     {
      "type": "answer",
@@ -510,18 +486,18 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the ratio \\(\\frac{<i>Y</i>}{<i>I</i>}\\). The value of <i>I</i> is your answer to part <b>(a)</b><b>(i)</b>.",
-       "text": "Calculate the ratio (Y)/(I). The value of I is your answer to part (a)(i)."
-      },
-      {
-       "type": "text",
-       "html": "<i>Y</i>",
-       "text": "Y"
+       "html": "Calculate the ratio \\(\\frac{Y}{I}\\). The value of <i>I</i> is your answer to part <b>(a)</b> <b>(i)</b>.",
+       "text": "Calculate the ratio (Y)/(I). The value of I is your answer to part (a) (i)."
       },
       {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "(Y)/(I) ="
+      },
+      {
+       "type": "text",
+       "html": "<i>Y</i>",
+       "text": "Y"
       }
      ]
     },
@@ -624,6 +600,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

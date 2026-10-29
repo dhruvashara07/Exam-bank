@@ -32,9 +32,9 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
+    67.5,
     236.5,
-    365.6,
+    366.0,
     362.0
    ],
    "id": "0625_2026MJ_13_q08_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p13/q08/figures/0625_2026MJ_13_q08_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p13/q08/figures/0625_2026MJ_13_q08_figA",
     "url": null,
-    "kb": 32.5
+    "kb": 32.3
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,46 +103,30 @@
    "text": "Which row shows the energy changes that are taking place?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>energy store</b>",
-     "<b>transfer</b>",
-     "<b>energy store</b>"
-    ],
-    [
-     "",
-     "<b>decreasing</b>",
-     "<b>process</b>",
-     "<b>increasing</b>"
-    ],
-    [
-     "<b>A</b>",
-     "chemical",
-     "electrical",
-     "thermal"
-    ],
-    [
-     "<b>B</b>",
-     "chemical",
-     "electrical",
-     "kinetic"
-    ],
-    [
-     "<b>C</b>",
-     "electrical",
-     "mechanical",
-     "kinetic"
-    ],
-    [
-     "<b>D</b>",
-     "electrical",
-     "mechanical",
-     "thermal"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_13_q08_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "chemical electrical thermal"
+    },
+    {
+     "label": "B",
+     "html": "chemical electrical kinetic"
+    },
+    {
+     "label": "C",
+     "html": "electrical mechanical kinetic"
+    },
+    {
+     "label": "D",
+     "html": "electrical mechanical thermal"
+    }
+   ]
   }
  ]
 }

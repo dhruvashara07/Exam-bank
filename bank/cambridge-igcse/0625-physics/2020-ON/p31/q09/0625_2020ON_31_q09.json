@@ -33,10 +33,10 @@
    "caption": "Fig. 9.1",
    "page": 16,
    "bbox": [
-    78.1,
-    85.3,
-    517.1,
-    285.2
+    78.5,
+    84.5,
+    516.5,
+    283.5
    ],
    "id": "0625_2020ON_31_q09_fig9-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 9.1",
    "page": 16,
    "bbox": [
-    181.1,
-    328.4,
-    414.2,
-    480.0
+    181.0,
+    332.0,
+    414.5,
+    480.5
    ],
    "id": "0625_2020ON_31_q09_table9-1",
    "part": "",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p31/q09/figures/0625_2020ON_31_q09_table9-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p31/q09/figures/0625_2020ON_31_q09_table9-1",
     "url": null,
-    "kb": 28.5
+    "kb": 28.4
    }
   }
  ],
@@ -118,6 +118,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -135,29 +136,9 @@
    "text": "The student tests bar PQ and bar RS separately. He holds the N pole of the permanent bar magnet close to each end of each metal bar. Table 9.1 shows the results of the tests."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "end of metal bar",
-     "result of test with N pole"
-    ],
-    [
-     "P",
-     "attracted"
-    ],
-    [
-     "Q",
-     "repelled"
-    ],
-    [
-     "R",
-     "attracted"
-    ],
-    [
-     "S",
-     "attracted"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2020ON_31_q09_table9-1",
+   "caption": "Table 9.1"
   },
   {
    "type": "text",
@@ -167,7 +148,16 @@
   {
    "type": "answer",
    "kind": "answer_line",
-   "prefix": "2. metal bar RS",
+   "prefix": "1. metal bar PQ"
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "2. metal bar RS"
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
    "lines": 4
   },
   {

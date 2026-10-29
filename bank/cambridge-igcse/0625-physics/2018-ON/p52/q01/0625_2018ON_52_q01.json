@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    146.2,
-    113.7,
-    451.7,
-    369.0
+    146.5,
+    115.5,
+    451.0,
+    366.0
    ],
    "id": "0625_2018ON_52_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 1.1",
    "page": 3,
    "bbox": [
-    188.2,
-    85.9,
-    407.1,
-    238.9
+    188.0,
+    85.5,
+    407.0,
+    239.0
    ],
    "id": "0625_2018ON_52_q01aiii_table1-1",
    "part": "(a)(iii)",
@@ -168,7 +168,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "Record of readings taken",
+       "prefix": "Record of readings taken"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -335,49 +339,9 @@
        ]
       },
       {
-       "type": "text",
-       "html": "<b>Table 1.1</b>",
-       "text": "Table 1.1"
-      },
-      {
-       "type": "table",
-       "rows": [
-        [
-         "<i>L</i> / N",
-         "<i>l</i>/ mm",
-         "<i>e</i> / mm"
-        ],
-        [
-         "0.00",
-         "",
-         "0"
-        ],
-        [
-         "0.20",
-         "",
-         ""
-        ],
-        [
-         "0.40",
-         "",
-         ""
-        ],
-        [
-         "0.60",
-         "",
-         ""
-        ],
-        [
-         "0.80",
-         "",
-         ""
-        ],
-        [
-         "1.00",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2018ON_52_q01aiii_table1-1",
+       "caption": "Table 1.1"
       },
       {
        "type": "marks",
@@ -457,8 +421,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of <i>L </i>/ N (<i>y</i>-axis) against<i> e </i>/mm (<i>x</i>-axis).",
-     "text": "Plot a graph of L / N (y-axis) against e /mm (x-axis)."
+     "html": "Plot a graph of <i>L </i>/ N (<i>y</i>-axis) against<i> e </i>/ mm (<i>x</i>-axis).",
+     "text": "Plot a graph of L / N (y-axis) against e / mm (x-axis)."
     },
     {
      "type": "answer",
@@ -637,6 +601,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

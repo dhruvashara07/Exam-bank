@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
-    84.7,
-    370.0,
-    224.3
+    67.5,
+    84.5,
+    374.0,
+    224.5
    ],
    "id": "0625_2022FM_12_q14_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,25 @@
    "caption": null
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "definite shape",
-     "can be compressed easily"
-    ],
-    [
-     "<b>A</b>",
-     "\u0016",
-     "\u0016"
-    ],
-    [
-     "<b>B</b>",
-     "\u0016",
-     "\u001a"
-    ],
-    [
-     "<b>C</b>",
-     "\u001a",
-     "\u0016"
-    ],
-    [
-     "<b>D</b>",
-     "\u001a",
-     "\u001a"
-    ]
-   ],
-   "options": true
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "\u0016 \u0016 key"
+    },
+    {
+     "label": "B",
+     "html": "\u0016 \u001a \u0016= has this property"
+    },
+    {
+     "label": "C",
+     "html": "\u001a \u0016 \u001a = does not have this property"
+    },
+    {
+     "label": "D",
+     "html": "\u001a \u001a"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    153.6,
-    85.3,
+    153.0,
+    84.5,
     441.3,
-    201.2
+    202.0
    ],
    "id": "0625_2015MJ_12_q13_figA",
    "caption": null,
@@ -45,13 +45,13 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p12/q13/figures/0625_2015MJ_12_q13_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p12/q13/figures/0625_2015MJ_12_q13_figA",
     "url": null,
-    "kb": 16.0
+    "kb": 15.9
    }
   },
   {
    "page": 7,
    "bbox": [
-    69.3,
+    69.0,
     259.0,
     265.5,
     384.5
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p12/q13/figures/0625_2015MJ_12_q13_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p12/q13/figures/0625_2015MJ_12_q13_figB",
     "url": null,
-    "kb": 24.4
+    "kb": 24.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,40 +132,30 @@
    "text": "What happens to the pressure of the gas, and what happens to the speed of the gas molecules?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "pressure",
-     "speed of"
-    ],
-    [
-     "",
-     "of gas",
-     "molecules"
-    ],
-    [
-     "A",
-     "increases",
-     "increases"
-    ],
-    [
-     "B",
-     "increases",
-     "unchanged"
-    ],
-    [
-     "C",
-     "unchanged",
-     "increases"
-    ],
-    [
-     "D",
-     "unchanged",
-     "unchanged"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_12_q13_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "increases increases"
+    },
+    {
+     "label": "B",
+     "html": "increases unchanged"
+    },
+    {
+     "label": "C",
+     "html": "unchanged increases"
+    },
+    {
+     "label": "D",
+     "html": "unchanged unchanged"
+    }
+   ]
   }
  ]
 }

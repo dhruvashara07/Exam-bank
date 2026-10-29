@@ -32,8 +32,8 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    524.2,
+    67.5,
+    524.0,
     301.0,
     635.0
    ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row gives the correct material to use and the correct reason for choosing this material?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "material",
-     "reason"
-    ],
-    [
-     "<b>A</b>",
-     "soft iron",
-     "easy to demagnetise"
-    ],
-    [
-     "<b>B</b>",
-     "soft iron",
-     "hard to demagnetise"
-    ],
-    [
-     "<b>C</b>",
-     "steel",
-     "easy to demagnetise"
-    ],
-    [
-     "<b>D</b>",
-     "steel",
-     "hard to demagnetise"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020MJ_11_q27_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "soft iron easy to demagnetise"
+    },
+    {
+     "label": "B",
+     "html": "soft iron hard to demagnetise"
+    },
+    {
+     "label": "C",
+     "html": "steel easy to demagnetise"
+    },
+    {
+     "label": "D",
+     "html": "steel hard to demagnetise"
+    }
+   ]
   }
  ]
 }

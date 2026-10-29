@@ -9,10 +9,10 @@
    "caption": "Fig. 9.1",
    "page": 13,
    "bbox": [
-    134.9,
-    324.7,
-    525.6,
-    430.0
+    135.5,
+    324.0,
+    525.0,
+    428.5
    ],
    "id": "0625_2022ON_42_q09bi_fig9-1",
    "part": "(b)(i)",
@@ -28,10 +28,10 @@
    "caption": "Table 9.1",
    "page": 13,
    "bbox": [
-    114.6,
-    460.2,
+    114.5,
+    464.0,
     549.0,
-    604.4
+    604.5
    ],
    "id": "0625_2022ON_42_q09bi_table9-1",
    "part": "(b)(i)",
@@ -48,9 +48,9 @@
    "page": 14,
    "bbox": [
     92.0,
-    123.0,
+    126.5,
     549.0,
-    267.2
+    267.5
    ],
    "id": "0625_2022ON_42_q09c_table9-2",
    "part": "(c)",
@@ -334,39 +334,9 @@
        "text": "Complete the truth table shown in Table 9.1."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "I<sub>1</sub>",
-         "I<sub>2</sub>",
-         "Z",
-         "O"
-        ],
-        [
-         "0",
-         "0",
-         "",
-         ""
-        ],
-        [
-         "0",
-         "1",
-         "",
-         ""
-        ],
-        [
-         "1",
-         "0",
-         "",
-         ""
-        ],
-        [
-         "1",
-         "1",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2022ON_42_q09bi_table9-1",
+       "caption": "Table 9.1"
       },
       {
        "type": "marks",
@@ -514,39 +484,9 @@
      "text": "Using two logic gates, design and draw a digital circuit with two inputs and two outputs which has the truth table shown in Table 9.2. Use either the usual logic gate symbols or correctly labelled square boxes in your diagram."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "input 1",
-       "input 2",
-       "output 1",
-       "output 2"
-      ],
-      [
-       "0",
-       "0",
-       "0",
-       "1"
-      ],
-      [
-       "0",
-       "1",
-       "1",
-       "1"
-      ],
-      [
-       "1",
-       "0",
-       "1",
-       "1"
-      ],
-      [
-       "1",
-       "1",
-       "1",
-       "0"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2022ON_42_q09c_table9-2",
+     "caption": "Table 9.2"
     },
     {
      "type": "answer",
@@ -576,5 +516,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

@@ -98,9 +98,18 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "The movement of the particles in a gas is ……",
+       "text": "The movement of the particles in a gas is ……"
+      },
+      {
        "type": "answer",
        "kind": "answer_line",
        "unit": "."
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -166,9 +175,18 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "The forces between the particles in a gas are ……",
+       "text": "The forces between the particles in a gas are ……"
+      },
+      {
        "type": "answer",
        "kind": "answer_line",
        "unit": "."
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -234,9 +252,18 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "The gas exerts a pressure because the moving gas particles ……",
+       "text": "The gas exerts a pressure because the moving gas particles ……"
+      },
+      {
        "type": "answer",
        "kind": "answer_line",
        "unit": "."
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -310,6 +337,10 @@
        "type": "answer",
        "kind": "answer_line",
        "unit": "."
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -396,10 +427,9 @@
        "text": "State the value, in degrees Celsius, of the lowest possible temperature."
       },
       {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "lowest possible temperature =",
-       "unit": "°C"
+       "type": "text",
+       "html": "lowest possible temperature = ……°C",
+       "text": "lowest possible temperature = ……°C"
       },
       {
        "type": "marks",
@@ -500,5 +530,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    238.1,
-    110.4,
+    238.5,
+    110.5,
     356.5,
-    229.0
+    228.5
    ],
    "id": "0625_2025MJ_21_q16_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p21/q16/figures/0625_2025MJ_21_q16_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p21/q16/figures/0625_2025MJ_21_q16_figA",
     "url": null,
-    "kb": 2.8
+    "kb": 2.7
    }
   },
   {
    "page": 7,
    "bbox": [
-    67.7,
-    298.8,
-    308.3,
-    424.3
+    67.5,
+    298.5,
+    308.5,
+    424.5
    ],
    "id": "0625_2025MJ_21_q16_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,40 +137,30 @@
    "text": "Which row correctly compares object X with object Y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "rate of",
-     "rate of"
-    ],
-    [
-     "",
-     "absorption for X",
-     "emission for X"
-    ],
-    [
-     "<b>A</b>",
-     "higher",
-     "higher"
-    ],
-    [
-     "<b>B</b>",
-     "lower",
-     "higher"
-    ],
-    [
-     "<b>C</b>",
-     "higher",
-     "lower"
-    ],
-    [
-     "<b>D</b>",
-     "lower",
-     "lower"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_21_q16_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "higher higher"
+    },
+    {
+     "label": "B",
+     "html": "lower higher"
+    },
+    {
+     "label": "C",
+     "html": "higher lower"
+    },
+    {
+     "label": "D",
+     "html": "lower lower"
+    }
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 6,
    "bbox": [
-    168.4,
-    139.1,
-    427.0,
-    303.1
+    168.0,
+    140.0,
+    427.5,
+    303.5
    ],
    "id": "0625_2025ON_52_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 6,
    "bbox": [
-    52.7,
-    456.7,
-    542.7,
-    609.2
+    52.5,
+    457.5,
+    543.0,
+    609.5
    ],
    "id": "0625_2025ON_52_q02b_table2-1",
    "part": "(b)",
@@ -210,46 +210,16 @@
     {
      "type": "list",
      "items": [
-      "Connect the 10Ω resistor between points X and Y.",
+      "Connect the 10 Ω resistor between points X and Y.",
       "Close the switch.",
       "Record, in Table 2.1, the reading V on the voltmeter.",
       "Open the switch."
      ]
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "resistance R/Ω",
-       "voltmeter reading V/V",
-       "current I/A"
-      ],
-      [
-       "10",
-       "",
-       ""
-      ],
-      [
-       "22",
-       "",
-       ""
-      ],
-      [
-       "39",
-       "",
-       ""
-      ],
-      [
-       "47",
-       "",
-       ""
-      ],
-      [
-       "68",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2025ON_52_q02b_table2-1",
+     "caption": "Table 2.1"
     },
     {
      "type": "marks",
@@ -317,13 +287,13 @@
    "content": [
     {
      "type": "text",
-     "html": "Remove the 10Ω resistor from the circuit.",
-     "text": "Remove the 10Ω resistor from the circuit."
+     "html": "Remove the 10 Ω resistor from the circuit.",
+     "text": "Remove the 10 Ω resistor from the circuit."
     },
     {
      "type": "text",
-     "html": "Repeat part (b), by replacing the 10Ω resistor with resistors of 22Ω, 39Ω, 47Ω and 68Ω in turn.",
-     "text": "Repeat part (b), by replacing the 10Ω resistor with resistors of 22Ω, 39Ω, 47Ω and 68Ω in turn."
+     "html": "Repeat part (b), by replacing the 10 Ω resistor with resistors of 22 Ω, 39 Ω, 47 Ω and 68 Ω in turn.",
+     "text": "Repeat part (b), by replacing the 10 Ω resistor with resistors of 22 Ω, 39 Ω, 47 Ω and 68 Ω in turn."
     },
     {
      "type": "marks",
@@ -471,8 +441,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of V/V (y-axis) against I/A (x-axis). Start your axes at the origin (0, 0).",
-     "text": "Plot a graph of V/V (y-axis) against I/A (x-axis). Start your axes at the origin (0, 0)."
+     "html": "Plot a graph of V / V (y-axis) against I / A (x-axis). Start your axes at the origin (0, 0).",
+     "text": "Plot a graph of V / V (y-axis) against I / A (x-axis). Start your axes at the origin (0, 0)."
     },
     {
      "type": "text",
@@ -481,8 +451,8 @@
     },
     {
      "type": "text",
-     "html": "V/V",
-     "text": "V/V"
+     "html": "V / V",
+     "text": "V / V"
     },
     {
      "type": "text",
@@ -491,8 +461,8 @@
     },
     {
      "type": "text",
-     "html": "I/A",
-     "text": "I/A"
+     "html": "I / A",
+     "text": "I / A"
     },
     {
      "type": "answer",
@@ -680,6 +650,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

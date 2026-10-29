@@ -32,9 +32,9 @@
   {
    "page": 11,
    "bbox": [
-    67.6,
-    593.6,
-    286.6,
+    67.5,
+    593.5,
+    287.0,
     719.0
    ],
    "id": "0625_2016MJ_12_q28_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p12/q28/figures/0625_2016MJ_12_q28_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p12/q28/figures/0625_2016MJ_12_q28_figA",
     "url": null,
-    "kb": 20.9
+    "kb": 20.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which rod should she use to make the permanent magnet, and is this rod a hard magnetic material or a soft magnetic material?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "rod",
-     "type of magnetic material"
-    ],
-    [
-     "A",
-     "iron",
-     "hard"
-    ],
-    [
-     "B",
-     "iron",
-     "soft"
-    ],
-    [
-     "C",
-     "steel",
-     "hard"
-    ],
-    [
-     "D",
-     "steel",
-     "soft"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_12_q28_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "iron hard"
+    },
+    {
+     "label": "B",
+     "html": "iron soft"
+    },
+    {
+     "label": "C",
+     "html": "steel hard"
+    },
+    {
+     "label": "D",
+     "html": "steel soft"
+    }
+   ]
   }
  ]
 }

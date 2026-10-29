@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    503.2,
-    341.9,
-    628.7
+    67.5,
+    503.0,
+    342.0,
+    629.0
    ],
    "id": "0625_2021MJ_21_q14_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p21/q14/figures/0625_2021MJ_21_q14_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p21/q14/figures/0625_2021MJ_21_q14_figA",
     "url": null,
-    "kb": 25.8
+    "kb": 25.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which row describes a gas?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "force",
-     "distance"
-    ],
-    [
-     "",
-     "between molecules",
-     "between molecules"
-    ],
-    [
-     "<b>A</b>",
-     "strong",
-     "close together"
-    ],
-    [
-     "<b>B</b>",
-     "strong",
-     "far apart"
-    ],
-    [
-     "<b>C</b>",
-     "negligible",
-     "far apart"
-    ],
-    [
-     "<b>D</b>",
-     "negligible",
-     "close together"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_21_q14_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "strong close together"
+    },
+    {
+     "label": "B",
+     "html": "strong far apart"
+    },
+    {
+     "label": "C",
+     "html": "negligible far apart"
+    },
+    {
+     "label": "D",
+     "html": "negligible close together"
+    }
+   ]
   }
  ]
 }

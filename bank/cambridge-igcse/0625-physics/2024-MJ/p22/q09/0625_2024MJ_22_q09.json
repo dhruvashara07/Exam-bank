@@ -32,10 +32,10 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    623.3,
-    300.8,
-    734.7
+    67.5,
+    623.0,
+    301.0,
+    735.0
    ],
    "id": "0625_2024MJ_22_q09_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p22/q09/figures/0625_2024MJ_22_q09_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p22/q09/figures/0625_2024MJ_22_q09_figA",
     "url": null,
-    "kb": 24.7
+    "kb": 24.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "What are the correct terms for each change of state?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "liquid to solid",
-     "liquid to gas"
-    ],
-    [
-     "<b>A</b>",
-     "solidification",
-     "condensation"
-    ],
-    [
-     "<b>B</b>",
-     "melting",
-     "condensation"
-    ],
-    [
-     "<b>C</b>",
-     "solidification",
-     "evaporation"
-    ],
-    [
-     "<b>D</b>",
-     "melting",
-     "evaporation"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_22_q09_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "solidification condensation"
+    },
+    {
+     "label": "B",
+     "html": "melting condensation"
+    },
+    {
+     "label": "C",
+     "html": "solidification evaporation"
+    },
+    {
+     "label": "D",
+     "html": "melting evaporation"
+    }
+   ]
   }
  ]
 }

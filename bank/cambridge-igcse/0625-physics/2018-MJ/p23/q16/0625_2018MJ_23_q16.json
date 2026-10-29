@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    299.8,
-    238.6,
-    424.7
+    67.5,
+    299.5,
+    239.0,
+    425.0
    ],
    "id": "0625_2018MJ_23_q16_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p23/q16/figures/0625_2018MJ_23_q16_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p23/q16/figures/0625_2018MJ_23_q16_figA",
     "url": null,
-    "kb": 15.2
+    "kb": 15.1
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,40 +108,30 @@
    "text": "Which thermometer has the greater range and which has the greater sensitivity?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "greater",
-     "greater"
-    ],
-    [
-     "",
-     "range",
-     "sensitivity"
-    ],
-    [
-     "<b>A</b>",
-     "P",
-     "P"
-    ],
-    [
-     "<b>B</b>",
-     "P",
-     "Q"
-    ],
-    [
-     "<b>C</b>",
-     "Q",
-     "P"
-    ],
-    [
-     "<b>D</b>",
-     "Q",
-     "Q"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_23_q16_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "P P"
+    },
+    {
+     "label": "B",
+     "html": "P Q"
+    },
+    {
+     "label": "C",
+     "html": "Q P"
+    },
+    {
+     "label": "D",
+     "html": "Q Q"
+    }
+   ]
   }
  ]
 }

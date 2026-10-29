@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    185.8,
-    287.8,
-    297.2
+    67.5,
+    185.5,
+    288.0,
+    297.5
    ],
    "id": "0625_2025MJ_22_q12_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p22/q12/figures/0625_2025MJ_22_q12_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p22/q12/figures/0625_2025MJ_22_q12_figA",
     "url": null,
-    "kb": 19.6
+    "kb": 19.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -117,35 +118,30 @@
    "text": "Which row is not correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "pressure/kPa",
-     "<sup>3</sup> volume/cm"
-    ],
-    [
-     "<b>A</b>",
-     "360",
-     "2.4"
-    ],
-    [
-     "<b>B</b>",
-     "270",
-     "3.2"
-    ],
-    [
-     "<b>C</b>",
-     "160",
-     "4.6"
-    ],
-    [
-     "<b>D</b>",
-     "120",
-     "7.2"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_22_q12_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "360 2.4"
+    },
+    {
+     "label": "B",
+     "html": "270 3.2"
+    },
+    {
+     "label": "C",
+     "html": "160 4.6"
+    },
+    {
+     "label": "D",
+     "html": "120 7.2"
+    }
+   ]
   }
  ]
 }

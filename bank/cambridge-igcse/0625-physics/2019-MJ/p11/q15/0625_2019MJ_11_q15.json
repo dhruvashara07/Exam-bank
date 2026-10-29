@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
-    544.3,
-    420.4,
-    655.6
+    67.5,
+    544.0,
+    420.5,
+    656.0
    ],
    "id": "0625_2019MJ_11_q15_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-MJ/p11/q15/figures/0625_2019MJ_11_q15_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-MJ/p11/q15/figures/0625_2019MJ_11_q15_figA",
     "url": null,
-    "kb": 29.5
+    "kb": 29.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What is the effect on the temperature and from where do the molecules escape?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "temperature of liquid",
-     "molecules escape from"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "everywhere within the liquid"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "the surface only"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "everywhere within the liquid"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "the surface only"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019MJ_11_q15_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases everywhere within the liquid"
+    },
+    {
+     "label": "B",
+     "html": "decreases the surface only"
+    },
+    {
+     "label": "C",
+     "html": "increases everywhere within the liquid"
+    },
+    {
+     "label": "D",
+     "html": "increases the surface only"
+    }
+   ]
   }
  ]
 }

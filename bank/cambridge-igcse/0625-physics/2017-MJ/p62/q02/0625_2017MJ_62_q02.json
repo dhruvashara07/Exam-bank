@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    105.6,
-    127.1,
-    489.6,
-    678.7
+    105.0,
+    126.5,
+    490.0,
+    676.0
    ],
    "id": "0625_2017MJ_62_q02_fig2-1",
    "part": "",
@@ -256,7 +256,17 @@
     {
      "type": "list",
      "items": [
-      "Measure and record the angle α between the line joining the positions of P<sub>3</sub> and P<sub>4</sub> and the normal line.",
+      "Measure and record the angle α between the line joining the positions of P<sub>3</sub> and P<sub>4</sub> and the normal line."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "α ="
+    },
+    {
+     "type": "list",
+     "items": [
       "Measure and record the length <i>x</i> between points <b>M</b> and <b>K</b>."
      ]
     },
@@ -340,6 +350,11 @@
      "text": "41°"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "β ="
+    },
+    {
      "type": "text",
      "html": "He measures the length <i>y</i> between <b>M</b> and the new position of <b>K</b>.",
      "text": "He measures the length y between M and the new position of K."
@@ -350,6 +365,11 @@
      "text": "mm"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "y ="
+    },
+    {
      "type": "text",
      "html": "A student suggests that the results for α and <i>x</i> should be the same as the results for β and <i>y</i>. State whether the results support this suggestion. Justify your answer by reference to the results.",
      "text": "A student suggests that the results for α and x should be the same as the results for β and y. State whether the results support this suggestion. Justify your answer by reference to the results."
@@ -357,8 +377,12 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
-     "lines": 1
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
     },
     {
      "type": "marks",
@@ -458,6 +482,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

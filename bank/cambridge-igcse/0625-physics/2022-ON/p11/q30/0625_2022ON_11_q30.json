@@ -32,10 +32,10 @@
   {
    "page": 12,
    "bbox": [
-    222.0,
-    84.8,
+    221.5,
+    84.5,
     373.5,
-    237.2
+    238.0
    ],
    "id": "0625_2022ON_11_q30_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p11/q30/figures/0625_2022ON_11_q30_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p11/q30/figures/0625_2022ON_11_q30_figA",
     "url": null,
-    "kb": 11.7
+    "kb": 11.5
    }
   },
   {
    "page": 12,
    "bbox": [
-    67.7,
-    294.9,
-    271.9,
-    420.4
+    67.5,
+    294.5,
+    272.0,
+    420.5
    ],
    "id": "0625_2022ON_11_q30_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,40 +132,30 @@
    "text": "What happens to the reading on the voltmeter and to the brightness of the lamp?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "reading on",
-     "brightness"
-    ],
-    [
-     "",
-     "voltmeter",
-     "of lamp"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_11_q30_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

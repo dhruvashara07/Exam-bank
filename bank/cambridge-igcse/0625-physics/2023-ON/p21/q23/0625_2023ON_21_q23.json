@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
+    67.5,
     349.5,
     428.5,
-    488.7
+    489.0
    ],
    "id": "0625_2023ON_21_q23_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p21/q23/figures/0625_2023ON_21_q23_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p21/q23/figures/0625_2023ON_21_q23_figA",
     "url": null,
-    "kb": 31.6
+    "kb": 31.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,52 +103,30 @@
    "text": "Which row gives a possible set of values of the speeds of sound through mercury?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "speed of sound in",
-     "speed of sound in",
-     "speed of sound in"
-    ],
-    [
-     "",
-     "frozen mercury",
-     "liquid mercury",
-     "mercury vapour"
-    ],
-    [
-     "",
-     "m/s",
-     "m/s",
-     "m/s"
-    ],
-    [
-     "<b>A</b>",
-     "250",
-     "1500",
-     "2500"
-    ],
-    [
-     "<b>B</b>",
-     "250",
-     "2500",
-     "1500"
-    ],
-    [
-     "<b>C</b>",
-     "1500",
-     "250",
-     "2500"
-    ],
-    [
-     "<b>D</b>",
-     "2500",
-     "1500",
-     "250"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_21_q23_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "250 1500 2500"
+    },
+    {
+     "label": "B",
+     "html": "250 2500 1500"
+    },
+    {
+     "label": "C",
+     "html": "1500 250 2500"
+    },
+    {
+     "label": "D",
+     "html": "2500 1500 250"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    401.6,
-    250.9,
-    527.2
+    67.5,
+    401.5,
+    251.0,
+    527.5
    ],
    "id": "0625_2024MJ_21_q31_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p21/q31/figures/0625_2024MJ_21_q31_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p21/q31/figures/0625_2024MJ_21_q31_figA",
     "url": null,
-    "kb": 17.8
+    "kb": 17.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,40 +98,30 @@
    "text": "Which types of electric current are in the primary coil and the secondary coil of a step-up transformer?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "primary",
-     "secondary"
-    ],
-    [
-     "",
-     "coil",
-     "coil"
-    ],
-    [
-     "<b>A</b>",
-     "a.c.",
-     "a.c."
-    ],
-    [
-     "<b>B</b>",
-     "a.c.",
-     "d.c."
-    ],
-    [
-     "<b>C</b>",
-     "d.c.",
-     "a.c."
-    ],
-    [
-     "<b>D</b>",
-     "d.c.",
-     "d.c."
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_21_q31_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "a.c. a.c."
+    },
+    {
+     "label": "B",
+     "html": "a.c. d.c."
+    },
+    {
+     "label": "C",
+     "html": "d.c. a.c."
+    },
+    {
+     "label": "D",
+     "html": "d.c. d.c."
+    }
+   ]
   }
  ]
 }

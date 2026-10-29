@@ -32,8 +32,8 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    418.6,
+    67.5,
+    418.5,
     456.5,
     531.5
    ],
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p21/q17/figures/0625_2018MJ_21_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p21/q17/figures/0625_2018MJ_21_q17_figA",
     "url": null,
-    "kb": 37.4
+    "kb": 37.3
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which statements about boiling and about evaporation are both correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "boiling",
-     "evaporation"
-    ],
-    [
-     "<b>A</b>",
-     "takes place only at the surface",
-     "takes place only at the surface"
-    ],
-    [
-     "<b>B</b>",
-     "takes place only at the surface",
-     "takes place throughout the liquid"
-    ],
-    [
-     "<b>C</b>",
-     "takes place throughout the liquid",
-     "takes place only at the surface"
-    ],
-    [
-     "<b>D</b>",
-     "takes place throughout the liquid",
-     "takes place throughout the liquid"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_21_q17_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "takes place only at the surface takes place only at the surface"
+    },
+    {
+     "label": "B",
+     "html": "takes place only at the surface takes place throughout the liquid"
+    },
+    {
+     "label": "C",
+     "html": "takes place throughout the liquid takes place only at the surface"
+    },
+    {
+     "label": "D",
+     "html": "takes place throughout the liquid takes place throughout the liquid"
+    }
+   ]
   }
  ]
 }

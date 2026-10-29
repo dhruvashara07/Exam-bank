@@ -33,7 +33,7 @@
    "page": 12,
    "bbox": [
     231.2,
-    98.2,
+    98.0,
     363.9,
     229.0
    ],
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p21/q21/figures/0625_2017ON_21_q21_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p21/q21/figures/0625_2017ON_21_q21_figA",
     "url": null,
-    "kb": 15.0
+    "kb": 14.9
    }
   },
   {
    "page": 12,
    "bbox": [
-    67.7,
-    274.9,
-    412.3,
-    400.4
+    67.5,
+    274.5,
+    342.0,
+    400.5
    ],
    "id": "0625_2017ON_21_q21_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p21/q21/figures/0625_2017ON_21_q21_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p21/q21/figures/0625_2017ON_21_q21_figB",
     "url": null,
-    "kb": 23.7
+    "kb": 23.6
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,59 +127,30 @@
    "text": "Through which point does the reflected ray pass, and at which point is the image of the object formed?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "point through which",
-     "point at which",
-     "",
-     ""
-    ],
-    [
-     "",
-     "reflected ray passes",
-     "image is formed",
-     "",
-     ""
-    ],
-    [
-     "",
-     "",
-     "",
-     "",
-     ""
-    ],
-    [
-     "<b>A</b>",
-     "P",
-     "R",
-     "",
-     ""
-    ],
-    [
-     "<b>B</b>",
-     "P",
-     "S",
-     "",
-     ""
-    ],
-    [
-     "<b>C</b>",
-     "Q",
-     "R",
-     "",
-     ""
-    ],
-    [
-     "<b>D</b>",
-     "Q",
-     "S",
-     "",
-     ""
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017ON_21_q21_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "P R"
+    },
+    {
+     "label": "B",
+     "html": "P S"
+    },
+    {
+     "label": "C",
+     "html": "Q R"
+    },
+    {
+     "label": "D",
+     "html": "Q S"
+    }
+   ]
   }
  ]
 }

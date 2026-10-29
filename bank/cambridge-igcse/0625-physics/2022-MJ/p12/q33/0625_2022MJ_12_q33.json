@@ -32,9 +32,9 @@
   {
    "page": 14,
    "bbox": [
-    243.5,
-    380.8,
-    351.7,
+    243.0,
+    380.5,
+    352.0,
     558.8
    ],
    "id": "0625_2022MJ_12_q33_figA",
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p12/q33/figures/0625_2022MJ_12_q33_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p12/q33/figures/0625_2022MJ_12_q33_figA",
     "url": null,
-    "kb": 8.4
+    "kb": 8.2
    }
   },
   {
    "page": 14,
    "bbox": [
-    67.7,
-    617.4,
+    67.5,
+    617.0,
     302.0,
-    728.8
+    729.0
    ],
    "id": "0625_2022MJ_12_q33_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Which row shows the effect on the brightness of each lamp?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "brightness of P",
-     "brightness of Q"
-    ],
-    [
-     "<b>A</b>",
-     "brighter",
-     "brighter"
-    ],
-    [
-     "<b>B</b>",
-     "brighter",
-     "dimmer"
-    ],
-    [
-     "<b>C</b>",
-     "unchanged",
-     "brighter"
-    ],
-    [
-     "<b>D</b>",
-     "unchanged",
-     "dimmer"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_12_q33_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "brighter brighter"
+    },
+    {
+     "label": "B",
+     "html": "brighter dimmer"
+    },
+    {
+     "label": "C",
+     "html": "unchanged brighter"
+    },
+    {
+     "label": "D",
+     "html": "unchanged dimmer"
+    }
+   ]
   }
  ]
 }

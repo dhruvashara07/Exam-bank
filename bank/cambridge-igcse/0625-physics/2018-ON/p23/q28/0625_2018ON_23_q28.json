@@ -32,8 +32,8 @@
   {
    "page": 12,
    "bbox": [
-    67.7,
-    84.7,
+    67.5,
+    84.5,
     296.5,
     196.0
    ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row shows the meaning of the quantity e.m.f. and the unit in which it is measured?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "meaning",
-     "unit"
-    ],
-    [
-     "<b>A</b>",
-     "electromagnetic force",
-     "N"
-    ],
-    [
-     "<b>B</b>",
-     "electromagnetic force",
-     "V"
-    ],
-    [
-     "<b>C</b>",
-     "electromotive force",
-     "N"
-    ],
-    [
-     "<b>D</b>",
-     "electromotive force",
-     "V"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018ON_23_q28_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "electromagnetic force N"
+    },
+    {
+     "label": "B",
+     "html": "electromagnetic force V"
+    },
+    {
+     "label": "C",
+     "html": "electromotive force N"
+    },
+    {
+     "label": "D",
+     "html": "electromotive force V"
+    }
+   ]
   }
  ]
 }

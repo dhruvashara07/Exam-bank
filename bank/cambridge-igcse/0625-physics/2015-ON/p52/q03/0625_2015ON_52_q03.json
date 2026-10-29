@@ -34,7 +34,7 @@
    "page": 6,
    "bbox": [
     156.5,
-    130.9,
+    131.5,
     453.5,
     346.5
    ],
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 7,
    "bbox": [
-    150.8,
-    258.7,
-    447.7,
-    509.8
+    151.0,
+    258.5,
+    448.0,
+    510.0
    ],
    "id": "0625_2015ON_52_q03b_fig3-2",
    "part": "(b)",
@@ -150,6 +150,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "V1 ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "I1 ="
       },
       {
@@ -217,7 +222,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the combined resistance <i>R</i><sub>1</sub> of the resistors, using the equation <i>R</i><sub>1</sub> = \\(\\frac{<i>V</i><sub>1</sub>}{<i>I</i><sub>1</sub>}\\) .",
+       "html": "Calculate the combined resistance <i>R</i><sub>1</sub> of the resistors, using the equation <i>R</i><sub>1</sub> = \\(\\frac{V_{1}}{I_{1}}\\) .",
        "text": "Calculate the combined resistance R1 of the resistors, using the equation R1 = (V1)/(I1) ."
       },
       {
@@ -404,6 +409,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "V2 ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "I2 ="
       },
       {
@@ -471,7 +481,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the combined resistance <i>R</i><sub>2</sub> of the resistors using the equation <i>R</i><sub>2</sub> = \\(\\frac{<i>V</i><sub>2</sub>}{<i>I</i><sub>2</sub>}\\) .",
+       "html": "Calculate the combined resistance <i>R</i><sub>2</sub> of the resistors using the equation <i>R</i><sub>2</sub> = \\(\\frac{V_{2}}{I_{2}}\\) .",
        "text": "Calculate the combined resistance R2 of the resistors using the equation R2 = (V2)/(I2) ."
       },
       {
@@ -540,7 +550,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the ratio \\(\\frac{<i>R</i><sub>1</sub>}{<i>R</i><sub>2</sub>}\\) .",
+       "html": "Calculate the ratio \\(\\frac{R_{1}}{R_{2}}\\) .",
        "text": "Calculate the ratio (R1)/(R2) ."
       },
       {
@@ -628,7 +638,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -655,6 +674,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

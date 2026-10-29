@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    248.8,
-    274.7,
+    248.5,
+    274.5,
     346.1,
-    415.1
+    415.5
    ],
    "id": "0625_2023ON_23_q29_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p23/q29/figures/0625_2023ON_23_q29_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p23/q29/figures/0625_2023ON_23_q29_figA",
     "url": null,
-    "kb": 6.8
+    "kb": 6.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,19 +98,9 @@
    "text": "Two resistors, with resistances R1 and R2, are used as a potential divider."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "<i>R</i><sub>1</sub> <i>R</i><sub>2</sub>",
-     "",
-     "<i>V</i>"
-    ],
-    [
-     "",
-     "",
-     "<i>V</i>"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2023ON_23_q29_figA",
+   "caption": null
   },
   {
    "type": "text",
@@ -129,11 +120,11 @@
     },
     {
      "label": "C",
-     "html": "\\(\\frac{<i>R</i><sup>1</sup>}{<i>R</i>}\\) = <i>V</i><sub>1</sub> × <i>V</i><sub>2</sub> <sub>2</sub>"
+     "html": "\\(\\frac{R^{1}}{R}\\) = <i>V</i><sub>1</sub> × <i>V</i><sub>2</sub> <sub>2</sub>"
     },
     {
      "label": "D",
-     "html": "\\(\\frac{<i>R</i><sup>1</sup>}{<i>R</i>}\\) = \\(\\frac{<i>V</i><sup>1</sup>}{<i>V</i>}\\) <sub>2</sub> <sub>2</sub>"
+     "html": "\\(\\frac{R^{1}}{R}\\) = \\(\\frac{V ^{1}}{V}\\) <sub>2</sub> <sub>2</sub>"
     }
    ]
   }

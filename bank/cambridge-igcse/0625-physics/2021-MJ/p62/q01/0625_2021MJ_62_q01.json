@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    252.6,
-    111.3,
-    342.7,
-    237.4
+    252.5,
+    110.5,
+    343.0,
+    236.0
    ],
    "id": "0625_2021MJ_62_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2",
    "page": 3,
    "bbox": [
-    240.7,
-    108.3,
-    354.5,
-    218.2
+    240.0,
+    108.0,
+    355.0,
+    216.5
    ],
    "id": "0625_2021MJ_62_q01di_fig1-2",
    "part": "(d)(i)",
@@ -216,15 +216,14 @@
      "text": "21.3 cm"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "c ="
+    },
+    {
      "type": "text",
      "html": "Explain briefly how to use the string and the metre rule to determine the circumference <i>c</i> as accurately as possible. You may draw a diagram.",
      "text": "Explain briefly how to use the string and the metre rule to determine the circumference c as accurately as possible. You may draw a diagram."
-    },
-    {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "c =",
-     "lines": 4
     },
     {
      "type": "marks",
@@ -405,7 +404,7 @@
       },
       {
        "type": "text",
-       "html": "<i>V</i><sub>B</sub> = \\(\\frac{<i>hc </i><sup>2</sup>}{12.6}\\) .",
+       "html": "<i>V</i><sub>B</sub> = \\(\\frac{\\text{hc} ^{2}}{12.6}\\) .",
        "text": "VB = (hc 2)/(12.6) ."
       },
       {
@@ -526,6 +525,12 @@
        "type": "figure",
        "id": "0625_2021MJ_62_q01di_fig1-2",
        "caption": "Fig. 1.2"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "mB =",
+       "unit": "g"
       },
       {
        "type": "text",
@@ -687,7 +692,7 @@
       },
       {
        "type": "text",
-       "html": "ρ = \\(\\frac{<i>m</i><sub>S</sub>}{<i>V</i>}\\) . <sub>B</sub>",
+       "html": "ρ = \\(\\frac{m_{S}}{V}\\) . <sub>B</sub>",
        "text": "ρ = (mS)/(V) . B"
       },
       {
@@ -807,6 +812,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

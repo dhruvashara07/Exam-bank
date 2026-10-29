@@ -155,7 +155,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "2.",
+       "prefix": "1."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "2."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -259,5 +268,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

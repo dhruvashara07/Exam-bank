@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    294.0,
-    502.9,
-    432.0
+    67.5,
+    303.5,
+    503.0,
+    429.0
    ],
    "id": "0625_2020ON_23_q28_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p23/q28/figures/0625_2020ON_23_q28_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p23/q28/figures/0625_2020ON_23_q28_figA",
     "url": null,
-    "kb": 43.1
+    "kb": 43.0
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "What effect will this have on the steel?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "the steel is parallel to",
-     "the steel is at right-angles"
-    ],
-    [
-     "",
-     "a strong magnetic field",
-     "to a weak magnetic field"
-    ],
-    [
-     "<b>A</b>",
-     "it becomes magnetised more strongly",
-     "it becomes magnetised more strongly"
-    ],
-    [
-     "<b>B</b>",
-     "it becomes magnetised more strongly",
-     "it loses its magnetism"
-    ],
-    [
-     "<b>C</b>",
-     "it loses its magnetism",
-     "it becomes magnetised more strongly"
-    ],
-    [
-     "<b>D</b>",
-     "it loses its magnetism",
-     "it loses its magnetism"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020ON_23_q28_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "it becomes magnetised more strongly it becomes magnetised more strongly"
+    },
+    {
+     "label": "B",
+     "html": "it becomes magnetised more strongly it loses its magnetism"
+    },
+    {
+     "label": "C",
+     "html": "it loses its magnetism it becomes magnetised more strongly"
+    },
+    {
+     "label": "D",
+     "html": "it loses its magnetism it loses its magnetism"
+    }
+   ]
   }
  ]
 }

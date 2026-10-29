@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    477.7,
-    338.4,
-    602.7
+    67.5,
+    477.5,
+    338.5,
+    603.0
    ],
    "id": "0625_2021MJ_23_q18_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p23/q18/figures/0625_2021MJ_23_q18_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p23/q18/figures/0625_2021MJ_23_q18_figA",
     "url": null,
-    "kb": 24.7
+    "kb": 24.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row correctly describes a liquid that is boiling?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "bubbles seen",
-     "where it takes place in the liquid"
-    ],
-    [
-     "<b>A</b>",
-     "no",
-     "surface only"
-    ],
-    [
-     "<b>B</b>",
-     "no",
-     "throughout liquid"
-    ],
-    [
-     "<b>C</b>",
-     "yes",
-     "surface only"
-    ],
-    [
-     "<b>D</b>",
-     "yes",
-     "throughout liquid"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_23_q18_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "no surface only"
+    },
+    {
+     "label": "B",
+     "html": "no throughout liquid"
+    },
+    {
+     "label": "C",
+     "html": "yes surface only"
+    },
+    {
+     "label": "D",
+     "html": "yes throughout liquid"
+    }
+   ]
   }
  ]
 }

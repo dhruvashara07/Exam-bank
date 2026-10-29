@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    106.3,
-    121.3,
-    488.0,
-    554.3
+    107.0,
+    120.5,
+    488.5,
+    552.5
    ],
    "id": "0625_2021MJ_51_q03_fig3-1",
    "part": "",
@@ -430,7 +430,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate \\(\\frac{<i>b</i>}{<i>a</i>}\\).",
+       "html": "Calculate \\(\\frac{b}{a}\\).",
        "text": "Calculate (b)/(a)."
       },
       {
@@ -580,7 +580,7 @@
    "content": [
     {
      "type": "text",
-     "html": "A student plans to test the suggestion that, in this experiment, \\(\\frac{<i>b</i>}{<i>a</i>}\\) is a constant for all possible values of <i>i</i>. List suitable values of <i>i</i> that the student could use.",
+     "html": "A student plans to test the suggestion that, in this experiment, \\(\\frac{b}{a}\\) is a constant for all possible values of <i>i</i>. List suitable values of <i>i</i> that the student could use.",
      "text": "A student plans to test the suggestion that, in this experiment, (b)/(a) is a constant for all possible values of i. List suitable values of i that the student could use."
     },
     {
@@ -617,6 +617,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -624,49 +625,9 @@
    "text": "In this experiment, you will investigate the refraction of light in the material of a transparent block. Carry out the following instructions, using the separate ray-trace sheet provided. You may refer to Fig. 3.1 for guidance."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>P</b>"
-    ],
-    [
-     "",
-     "<b>N</b>"
-    ],
-    [
-     "",
-     "<i>i</i>"
-    ],
-    [
-     "",
-     "<b>A</b> <b>Q</b> <b>B</b>"
-    ],
-    [
-     "",
-     "<b>D</b> <b>C</b>"
-    ],
-    [
-     "",
-     "<b>J</b>"
-    ],
-    [
-     "",
-     "<b>E</b> <b>F</b>"
-    ],
-    [
-     "",
-     "<b>K</b>"
-    ],
-    [
-     "",
-     "<b>G</b> <b>H</b>"
-    ],
-    [
-     "",
-     "<b>L</b>"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2021MJ_51_q03_fig3-1",
+   "caption": "Fig. 3.1"
   }
  ]
 }

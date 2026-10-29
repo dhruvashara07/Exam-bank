@@ -32,10 +32,10 @@
   {
    "page": 17,
    "bbox": [
-    277.4,
-    97.7,
-    318.2,
-    135.5
+    201.0,
+    97.5,
+    394.0,
+    222.1
    ],
    "id": "0625_2020FM_22_q33_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-FM/p22/q33/figures/0625_2020FM_22_q33_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-FM/p22/q33/figures/0625_2020FM_22_q33_figA",
     "url": null,
-    "kb": 1.6
+    "kb": 5.5
    }
   },
   {
    "page": 17,
    "bbox": [
-    227.6,
-    179.5,
-    368.4,
-    222.1
+    67.5,
+    281.5,
+    242.5,
+    402.0
    ],
    "id": "0625_2020FM_22_q33_figB",
    "caption": null,
@@ -63,25 +63,6 @@
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2020-FM/p22/q33/figures/0625_2020FM_22_q33_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-FM/p22/q33/figures/0625_2020FM_22_q33_figB",
-    "url": null,
-    "kb": 3.6
-   }
-  },
-  {
-   "page": 17,
-   "bbox": [
-    67.7,
-    281.5,
-    242.5,
-    401.9
-   ],
-   "id": "0625_2020FM_22_q33_figC",
-   "caption": null,
-   "part": "",
-   "alt": "",
-   "svg": {
-    "file": "bank/cambridge-igcse/0625-physics/2020-FM/p22/q33/figures/0625_2020FM_22_q33_figC.svg",
-    "public_id": "question_bank/cambridge-igcse/0625-physics/2020-FM/p22/q33/figures/0625_2020FM_22_q33_figC",
     "url": null,
     "kb": 17.8
    }
@@ -128,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -141,18 +123,13 @@
   },
   {
    "type": "text",
-   "html": "M<sub>1</sub> A A M<sub>3</sub>",
-   "text": "M1 A A M3"
-  },
-  {
-   "type": "figure",
-   "id": "0625_2020FM_22_q33_figB",
-   "caption": null
+   "html": "M<sub>1</sub> M<sub>3</sub>",
+   "text": "M1 M3"
   },
   {
    "type": "text",
-   "html": "Ammeter M<sub>1</sub> reads 1.0A.",
-   "text": "Ammeter M1 reads 1.0A."
+   "html": "Ammeter M<sub>1</sub> reads 1.0 A.",
+   "text": "Ammeter M1 reads 1.0 A."
   },
   {
    "type": "text",
@@ -160,40 +137,30 @@
    "text": "What are the readings on M2 and on M3?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "reading on",
-     "reading on"
-    ],
-    [
-     "",
-     "M<sub>2</sub>/A",
-     "M<sub>3</sub>/A"
-    ],
-    [
-     "<b>A</b>",
-     "0.0",
-     "0.0"
-    ],
-    [
-     "<b>B</b>",
-     "0.5",
-     "0.5"
-    ],
-    [
-     "<b>C</b>",
-     "0.5",
-     "1.0"
-    ],
-    [
-     "<b>D</b>",
-     "1.0",
-     "1.0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020FM_22_q33_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0.0 0.0"
+    },
+    {
+     "label": "B",
+     "html": "0.5 0.5"
+    },
+    {
+     "label": "C",
+     "html": "0.5 1.0"
+    },
+    {
+     "label": "D",
+     "html": "1.0 1.0"
+    }
+   ]
   }
  ]
 }

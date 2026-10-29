@@ -32,10 +32,10 @@
   {
    "page": 16,
    "bbox": [
-    67.6,
-    122.7,
+    67.5,
+    122.5,
     386.0,
-    262.4
+    262.5
    ],
    "id": "0625_2017FM_22_q37_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-FM/p22/q37/figures/0625_2017FM_22_q37_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-FM/p22/q37/figures/0625_2017FM_22_q37_figA",
     "url": null,
-    "kb": 24.1
+    "kb": 24.0
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What is the half-life of the substance and what is the rate of emission after a further four hours?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "half-life/hours",
-     "rate of emission after a further four hours /emissions per second"
-    ],
-    [
-     "A",
-     "2",
-     "0"
-    ],
-    [
-     "B",
-     "2",
-     "150"
-    ],
-    [
-     "C",
-     "4",
-     "0"
-    ],
-    [
-     "D",
-     "4",
-     "150"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017FM_22_q37_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "2 0"
+    },
+    {
+     "label": "B",
+     "html": "2 150"
+    },
+    {
+     "label": "C",
+     "html": "4 0"
+    },
+    {
+     "label": "D",
+     "html": "4 150"
+    }
+   ]
   }
  ]
 }

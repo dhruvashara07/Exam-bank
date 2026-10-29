@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    333.1,
-    243.2,
-    444.4
+    67.5,
+    333.0,
+    243.5,
+    444.5
    ],
    "id": "0625_2021ON_12_q27_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p12/q27/figures/0625_2021ON_12_q27_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p12/q27/figures/0625_2021ON_12_q27_figA",
     "url": null,
-    "kb": 17.8
+    "kb": 17.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which wire has the lowest resistance?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "length",
-     "diameter"
-    ],
-    [
-     "<b>A</b>",
-     "long",
-     "large"
-    ],
-    [
-     "<b>B</b>",
-     "long",
-     "small"
-    ],
-    [
-     "<b>C</b>",
-     "short",
-     "large"
-    ],
-    [
-     "<b>D</b>",
-     "short",
-     "small"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_12_q27_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "long large"
+    },
+    {
+     "label": "B",
+     "html": "long small"
+    },
+    {
+     "label": "C",
+     "html": "short large"
+    },
+    {
+     "label": "D",
+     "html": "short small"
+    }
+   ]
   }
  ]
 }

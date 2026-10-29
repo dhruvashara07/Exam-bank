@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    241.2,
-    153.7,
-    353.8,
-    231.7
+    240.5,
+    153.5,
+    354.5,
+    232.5
    ],
    "id": "0625_2018FM_12_q29_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
-    264.2,
-    238.3,
-    375.1
+    67.5,
+    264.0,
+    238.5,
+    375.0
    ],
    "id": "0625_2018FM_12_q29_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-FM/p12/q29/figures/0625_2018FM_12_q29_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-FM/p12/q29/figures/0625_2018FM_12_q29_figB",
     "url": null,
-    "kb": 14.8
+    "kb": 14.7
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "How many ammeters and how many voltmeters are needed?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "ammeters",
-     "voltmeters"
-    ],
-    [
-     "<b>A</b>",
-     "0",
-     "3"
-    ],
-    [
-     "<b>B</b>",
-     "1",
-     "2"
-    ],
-    [
-     "<b>C</b>",
-     "2",
-     "1"
-    ],
-    [
-     "<b>D</b>",
-     "3",
-     "0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018FM_12_q29_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0 3"
+    },
+    {
+     "label": "B",
+     "html": "1 2"
+    },
+    {
+     "label": "C",
+     "html": "2 1"
+    },
+    {
+     "label": "D",
+     "html": "3 0"
+    }
+   ]
   }
  ]
 }

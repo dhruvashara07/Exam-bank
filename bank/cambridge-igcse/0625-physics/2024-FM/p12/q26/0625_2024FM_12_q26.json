@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    277.2,
+    214.5,
     85.5,
-    318.0,
-    123.2
+    380.5,
+    218.5
    ],
    "id": "0625_2024FM_12_q26_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-FM/p12/q26/figures/0625_2024FM_12_q26_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-FM/p12/q26/figures/0625_2024FM_12_q26_figA",
     "url": null,
-    "kb": 2.8
+    "kb": 10.3
    }
   },
   {
    "page": 10,
    "bbox": [
-    223.3,
-    145.4,
-    371.9,
-    218.1
+    67.5,
+    275.5,
+    269.5,
+    401.5
    ],
    "id": "0625_2024FM_12_q26_figB",
    "caption": null,
@@ -63,25 +63,6 @@
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2024-FM/p12/q26/figures/0625_2024FM_12_q26_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-FM/p12/q26/figures/0625_2024FM_12_q26_figB",
-    "url": null,
-    "kb": 9.1
-   }
-  },
-  {
-   "page": 10,
-   "bbox": [
-    67.7,
-    275.9,
-    269.2,
-    401.4
-   ],
-   "id": "0625_2024FM_12_q26_figC",
-   "caption": null,
-   "part": "",
-   "alt": "",
-   "svg": {
-    "file": "bank/cambridge-igcse/0625-physics/2024-FM/p12/q26/figures/0625_2024FM_12_q26_figC.svg",
-    "public_id": "question_bank/cambridge-igcse/0625-physics/2024-FM/p12/q26/figures/0625_2024FM_12_q26_figC",
     "url": null,
     "kb": 19.5
    }
@@ -128,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -141,18 +123,13 @@
   },
   {
    "type": "text",
-   "html": "ammeter 1 A A ammeter 3",
-   "text": "ammeter 1 A A ammeter 3"
-  },
-  {
-   "type": "figure",
-   "id": "0625_2024FM_12_q26_figB",
-   "caption": null
+   "html": "ammeter 1 ammeter 3",
+   "text": "ammeter 1 ammeter 3"
   },
   {
    "type": "text",
-   "html": "The current in ammeter 1 is 0.30A.",
-   "text": "The current in ammeter 1 is 0.30A."
+   "html": "The current in ammeter 1 is 0.30 A.",
+   "text": "The current in ammeter 1 is 0.30 A."
   },
   {
    "type": "text",
@@ -160,40 +137,30 @@
    "text": "Which row gives possible values for the currents in ammeters 2 and 3?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "current in",
-     "current in"
-    ],
-    [
-     "",
-     "ammeter 2/A",
-     "ammeter 3/A"
-    ],
-    [
-     "<b>A</b>",
-     "0.15",
-     "0.00"
-    ],
-    [
-     "<b>B</b>",
-     "0.15",
-     "0.30"
-    ],
-    [
-     "<b>C</b>",
-     "0.30",
-     "0.00"
-    ],
-    [
-     "<b>D</b>",
-     "0.30",
-     "0.30"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024FM_12_q26_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0.15 0.00"
+    },
+    {
+     "label": "B",
+     "html": "0.15 0.30"
+    },
+    {
+     "label": "C",
+     "html": "0.30 0.00"
+    },
+    {
+     "label": "D",
+     "html": "0.30 0.30"
+    }
+   ]
   }
  ]
 }

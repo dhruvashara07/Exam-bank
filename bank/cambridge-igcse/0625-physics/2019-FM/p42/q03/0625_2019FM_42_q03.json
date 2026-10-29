@@ -9,10 +9,10 @@
    "caption": "Fig. 3.1",
    "page": 4,
    "bbox": [
-    166.8,
-    241.1,
+    166.5,
+    241.0,
     428.5,
-    447.1
+    444.5
    ],
    "id": "0625_2019FM_42_q03b_fig3-1",
    "part": "(b)",
@@ -101,7 +101,21 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "3"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -176,30 +190,19 @@
      "text": "Fig. 3.1 shows an object suspended from two ropes. The weight of the object is 360 N. The magnitude of the tension in each rope is T."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>T</i> <i>T</i>",
-       ""
-      ],
-      [
-       "45° 45°",
-       ""
-      ],
-      [
-       "",
-       "object"
-      ],
-      [
-       "",
-       "360N"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2019FM_42_q03b_fig3-1",
+     "caption": "Fig. 3.1"
     },
     {
      "type": "text",
      "html": "In the space below, determine the tension <i>T</i> by drawing a vector diagram of the forces acting on the object. State the scale you have used.",
      "text": "In the space below, determine the tension T by drawing a vector diagram of the forces acting on the object. State the scale you have used."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "scale"
     },
     {
      "type": "answer",
@@ -229,5 +232,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

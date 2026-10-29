@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 6,
    "bbox": [
-    78.0,
-    111.3,
-    517.3,
-    403.0
+    78.5,
+    110.5,
+    516.5,
+    403.5
    ],
    "id": "0625_2025MJ_63_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 7,
    "bbox": [
-    232.1,
-    60.8,
-    363.3,
-    321.3
+    232.0,
+    61.5,
+    363.5,
+    321.5
    ],
    "id": "0625_2025MJ_63_q02b_table2-1",
    "part": "(b)",
@@ -228,8 +228,8 @@
    "content": [
     {
      "type": "text",
-     "html": "The student pours hot water into the beaker and records the initial temperature θin Table 2.1. She then records the temperature θevery 30s. Her values are shown in Table 2.1.",
-     "text": "The student pours hot water into the beaker and records the initial temperature θin Table 2.1. She then records the temperature θevery 30s. Her values are shown in Table 2.1."
+     "html": "The student pours hot water into the beaker and records the initial temperature θ in Table 2.1. She then records the temperature θ every 30 s. Her values are shown in Table 2.1.",
+     "text": "The student pours hot water into the beaker and records the initial temperature θ in Table 2.1. She then records the temperature θ every 30 s. Her values are shown in Table 2.1."
     },
     {
      "type": "text",
@@ -246,53 +246,9 @@
      "value": 1
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "t/s",
-       "θ/°C"
-      ],
-      [
-       "0",
-       "93.0"
-      ],
-      [
-       "30",
-       "90.5"
-      ],
-      [
-       "60",
-       "88.5"
-      ],
-      [
-       "90",
-       "87.0"
-      ],
-      [
-       "120",
-       "85.5"
-      ],
-      [
-       "150",
-       "84.0"
-      ],
-      [
-       "180",
-       "83.0"
-      ],
-      [
-       "210",
-       "82.0"
-      ],
-      [
-       "240",
-       "81.5"
-      ],
-      [
-       "270",
-       "81.0"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2025MJ_63_q02b_table2-1",
+     "caption": "Table 2.1"
     }
    ]
   },
@@ -355,8 +311,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Estimate what the temperature θ<sub>300</sub> is at 300s. Use the readings from Table 2.1 to guide you.",
-     "text": "Estimate what the temperature θ300 is at 300s. Use the readings from Table 2.1 to guide you."
+     "html": "Estimate what the temperature θ<sub>300</sub> is at 300 s. Use the readings from Table 2.1 to guide you.",
+     "text": "Estimate what the temperature θ300 is at 300 s. Use the readings from Table 2.1 to guide you."
     },
     {
      "type": "answer",
@@ -435,8 +391,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the average cooling rate x<sub>1</sub> during the first 90s of the experiment. Use the",
-       "text": "Calculate the average cooling rate x1 during the first 90s of the experiment. Use the"
+       "html": "Calculate the average cooling rate x<sub>1</sub> during the first 90 s of the experiment. Use the",
+       "text": "Calculate the average cooling rate x1 during the first 90 s of the experiment. Use the"
       },
       {
        "type": "text",
@@ -445,13 +401,13 @@
       },
       {
        "type": "text",
-       "html": "x<sub>1</sub> = \\(\\frac{θ<sub>0</sub>–θ<sub>90</sub>}{T}\\)",
+       "html": "x<sub>1</sub> = \\(\\frac{θ_{0} – θ_{90}}{T}\\)",
        "text": "x1 = (θ0–θ90)/(T)"
       },
       {
        "type": "text",
-       "html": "where T = 90s and θ<sub>0</sub> and θ<sub>90</sub> <b>are</b> the temperatures at t = 0 and t = 90s. Include the unit for the cooling rate.",
-       "text": "where T = 90s and θ0 and θ90 are the temperatures at t = 0 and t = 90s. Include the unit for the cooling rate."
+       "html": "where T = 90 s and θ<sub>0</sub> and θ<sub>90</sub> <b>are</b> the temperatures at t = 0 and t = 90 s. Include the unit for the cooling rate.",
+       "text": "where T = 90 s and θ0 and θ90 are the temperatures at t = 0 and t = 90 s. Include the unit for the cooling rate."
       },
       {
        "type": "answer",
@@ -523,18 +479,18 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the average cooling rate x<sub>2</sub> during the middle 90s of the experiment. Use the readings from Table 2.1 and the equation:",
-       "text": "Calculate the average cooling rate x2 during the middle 90s of the experiment. Use the readings from Table 2.1 and the equation:"
+       "html": "Calculate the average cooling rate x<sub>2</sub> during the middle 90 s of the experiment. Use the readings from Table 2.1 and the equation:",
+       "text": "Calculate the average cooling rate x2 during the middle 90 s of the experiment. Use the readings from Table 2.1 and the equation:"
       },
       {
        "type": "text",
-       "html": "x<sub>2</sub> = \\(\\frac{θ<sub>90</sub>–θ<sub>180</sub>}{T}\\)",
+       "html": "x<sub>2</sub> = \\(\\frac{θ_{90} – θ_{180}}{T}\\)",
        "text": "x2 = (θ90–θ180)/(T)"
       },
       {
        "type": "text",
-       "html": "where T = 90s and θ<sub>90</sub> and θ<sub>180</sub> are the temperatures at t = 90s and t = 180s.",
-       "text": "where T = 90s and θ90 and θ180 are the temperatures at t = 90s and t = 180s."
+       "html": "where T = 90 s and θ<sub>90</sub> and θ<sub>180</sub> are the temperatures at t = 90 s and t = 180 s.",
+       "text": "where T = 90 s and θ90 and θ180 are the temperatures at t = 90 s and t = 180 s."
       },
       {
        "type": "answer",
@@ -606,18 +562,18 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the average cooling rate x<sub>3</sub> during the last 90s of the experiment. Use the readings from Table 2.1 and the equation:",
-       "text": "Calculate the average cooling rate x3 during the last 90s of the experiment. Use the readings from Table 2.1 and the equation:"
+       "html": "Calculate the average cooling rate x<sub>3</sub> during the last 90 s of the experiment. Use the readings from Table 2.1 and the equation:",
+       "text": "Calculate the average cooling rate x3 during the last 90 s of the experiment. Use the readings from Table 2.1 and the equation:"
       },
       {
        "type": "text",
-       "html": "x<sub>3</sub> = \\(\\frac{θ<sub>180</sub>–θ<sub>270</sub>}{T}\\)",
+       "html": "x<sub>3</sub> = \\(\\frac{θ_{180} – θ_{270}}{T}\\)",
        "text": "x3 = (θ180–θ270)/(T)"
       },
       {
        "type": "text",
-       "html": "where T = 90s and θ<sub>180</sub> and θ<sub>270</sub> are the temperatures at t = 180s and t = 270s.",
-       "text": "where T = 90s and θ180 and θ270 are the temperatures at t = 180s and t = 270s."
+       "html": "where T = 90 s and θ<sub>180</sub> and θ<sub>270</sub> are the temperatures at t = 180 s and t = 270 s.",
+       "text": "where T = 90 s and θ180 and θ270 are the temperatures at t = 180 s and t = 270 s."
       },
       {
        "type": "answer",
@@ -875,7 +831,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "suggestion"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 3
       },
       {
@@ -978,6 +943,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    76.3,
-    108.0,
-    519.0,
-    259.4
+    76.0,
+    113.5,
+    518.5,
+    256.5
    ],
    "id": "0625_2017ON_52_q03_fig3-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p52/q03/figures/0625_2017ON_52_q03_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p52/q03/figures/0625_2017ON_52_q03_fig3-1",
     "url": null,
-    "kb": 22.1
+    "kb": 21.7
    }
   },
   {
    "caption": "Table 3.1",
    "page": 8,
    "bbox": [
-    209.4,
-    404.4,
-    385.8,
-    599.0
+    209.5,
+    409.0,
+    386.0,
+    599.5
    ],
    "id": "0625_2017ON_52_q03ai_table3-1",
    "part": "(a)(i)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p52/q03/figures/0625_2017ON_52_q03ai_table3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p52/q03/figures/0625_2017ON_52_q03ai_table3-1",
     "url": null,
-    "kb": 14.0
+    "kb": 13.9
    }
   }
  ],
@@ -445,7 +445,18 @@
       {
        "type": "list",
        "items": [
-        "Record <i>u</i><sub>1</sub>, the value of <i>u</i> at the point where the straight line crosses your graph line.",
+        "Record <i>u</i><sub>1</sub>, the value of <i>u</i> at the point where the straight line crosses your graph line."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "u1 =",
+       "unit": "cm"
+      },
+      {
+       "type": "list",
+       "items": [
         "Record <i>v</i><sub>1</sub>, the value of <i>v</i> at the point where the straight line crosses your graph line."
        ]
       },
@@ -521,7 +532,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the focal length <i>f </i>of the lens using the equation <i>f</i> = \\(\\frac{(<i>u</i><sub>1</sub> + <i>v</i><sub>1</sub>)}{4}\\).",
+       "html": "Calculate the focal length <i>f </i>of the lens using the equation <i>f</i> = \\(\\frac{(u_{1} + v_{1})}{4}\\).",
        "text": "Calculate the focal length f of the lens using the equation f = ((u1 + v1))/(4)."
       },
       {
@@ -557,6 +568,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

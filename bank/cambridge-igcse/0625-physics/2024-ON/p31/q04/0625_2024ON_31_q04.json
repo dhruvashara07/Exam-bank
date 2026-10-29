@@ -9,10 +9,10 @@
    "caption": "Fig. 4.1 (not to scale)",
    "page": 6,
    "bbox": [
-    149.7,
-    85.8,
-    445.3,
-    260.3
+    149.0,
+    85.0,
+    446.0,
+    260.5
    ],
    "id": "0625_2024ON_31_q04a_fig4-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 4.2",
    "page": 7,
    "bbox": [
-    142.6,
-    98.3,
-    452.3,
-    332.0
+    142.5,
+    97.5,
+    453.0,
+    332.5
    ],
    "id": "0625_2024ON_31_q04c_fig4-2",
    "part": "(c)",
@@ -303,8 +303,8 @@
    "content": [
     {
      "type": "text",
-     "html": "A 15W lamp is switched on for 5.0 minutes.",
-     "text": "A 15W lamp is switched on for 5.0 minutes."
+     "html": "A 15 W lamp is switched on for 5.0 minutes.",
+     "text": "A 15 W lamp is switched on for 5.0 minutes."
     },
     {
      "type": "text",
@@ -312,10 +312,9 @@
      "text": "Calculate the electrical work done in the lamp circuit during this time."
     },
     {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "electrical energy supplied =",
-     "unit": "J"
+     "type": "text",
+     "html": "electrical energy supplied = …… J",
+     "text": "electrical energy supplied = …… J"
     },
     {
      "type": "marks",
@@ -423,5 +422,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    66.9,
-    113.4,
+    67.0,
+    116.5,
     522.5,
-    275.0
+    273.5
    ],
    "id": "0625_2020MJ_61_q01_fig1-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p61/q01/figures/0625_2020MJ_61_q01_fig1-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p61/q01/figures/0625_2020MJ_61_q01_fig1-1",
     "url": null,
-    "kb": 25.0
+    "kb": 24.9
    }
   },
   {
    "caption": "Table 1.1",
    "page": 2,
    "bbox": [
-    174.3,
-    409.3,
+    174.0,
+    413.0,
     420.0,
-    599.8
+    600.0
    ],
    "id": "0625_2020MJ_61_q01a_table1-1",
    "part": "(a)",
@@ -137,44 +137,14 @@
      "text": "The student places the metre rule on the pivot at the 50.0 cm mark. He places an object Q on the metre rule with its centre at the 90.0 cm mark. He places a load of weight P = 2.0 N on the metre rule and adjusts the position of the load so that the metre rule is as near as possible to being balanced. He measures the distance x from the centre of the load to the pivot. He repeats the procedure using loads of weight P = 3.0 N, 4.0 N, 5.0 N and 6.0 N. All the values of P and x are recorded in Table 1.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>P</i> / N",
-       "<i>x</i> / cm",
-       "1 1 <i>x</i> cm"
-      ],
-      [
-       "2.0",
-       "40.0",
-       ""
-      ],
-      [
-       "3.0",
-       "27.0",
-       ""
-      ],
-      [
-       "4.0",
-       "20.0",
-       ""
-      ],
-      [
-       "5.0",
-       "15.9",
-       ""
-      ],
-      [
-       "6.0",
-       "13.3",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2020MJ_61_q01a_table1-1",
+     "caption": "Table 1.1"
     },
     {
      "type": "text",
-     "html": "Calculate, and record in Table 1.1, the values of \\(\\frac{1}{<i>x</i>}\\).",
-     "text": "Calculate, and record in Table 1.1, the values of (1)/(x)."
+     "html": "Calculate, and record in Table 1.1, the values of \\(\\frac{1}{x}\\) .",
+     "text": "Calculate, and record in Table 1.1, the values of (1)/(x) ."
     },
     {
      "type": "marks",
@@ -244,7 +214,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of <i>P</i> / N (<i>y</i>-axis) against \\(\\frac{1}{<i>x</i>}\\) 1 (<i>x</i>-axis). Start both axes at the origin (0,0).",
+     "html": "Plot a graph of <i>P</i> / N (<i>y</i>-axis) against \\(\\frac{1}{x}\\) 1 (<i>x</i>-axis). Start both axes at the origin (0,0).",
      "text": "Plot a graph of P / N (y-axis) against (1)/(x) 1 (x-axis). Start both axes at the origin (0,0)."
     },
     {
@@ -323,13 +293,19 @@
    "content": [
     {
      "type": "text",
-     "html": "In this experiment, <i>x</i><sub>max </sub>, the maximum possible value for <i>x</i> is 50.0 cm. Calculate \\(\\frac{1}{<i>x</i>}\\).",
+     "html": "In this experiment, <i>x</i><sub>max </sub>, the maximum possible value for <i>x</i> is 50.0 cm. Calculate \\(\\frac{1}{x}\\).",
      "text": "In this experiment, xmax , the maximum possible value for x is 50.0 cm. Calculate (1)/(x)."
     },
     {
      "type": "text",
      "html": "<sub>max</sub>",
      "text": "max"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "(1)/(x) =",
+     "unit": "(1)/(cm)"
     },
     {
      "type": "text",
@@ -629,6 +605,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

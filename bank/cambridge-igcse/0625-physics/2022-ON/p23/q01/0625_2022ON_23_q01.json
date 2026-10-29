@@ -32,10 +32,10 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
-    122.6,
-    346.8,
-    233.9
+    67.5,
+    122.5,
+    347.0,
+    234.0
    ],
    "id": "0625_2022ON_23_q01_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p23/q01/figures/0625_2022ON_23_q01_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p23/q01/figures/0625_2022ON_23_q01_figA",
     "url": null,
-    "kb": 25.5
+    "kb": 25.4
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A wire is approximately 48cm long and has an approximate diameter of 0.3mm.",
-   "text": "A wire is approximately 48cm long and has an approximate diameter of 0.3mm."
+   "html": "A wire is approximately 48 cm long and has an approximate diameter of 0.3 mm.",
+   "text": "A wire is approximately 48 cm long and has an approximate diameter of 0.3 mm."
   },
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which measuring instruments can be used to obtain more precise values of the dimensions of the wire?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "length of the wire",
-     "diameter of the wire"
-    ],
-    [
-     "<b>A</b>",
-     "30cm ruler",
-     "micrometer"
-    ],
-    [
-     "<b>B</b>",
-     "half-metre rule",
-     "30cm rule"
-    ],
-    [
-     "<b>C</b>",
-     "half-metre rule",
-     "micrometer"
-    ],
-    [
-     "<b>D</b>",
-     "micrometer",
-     "half-metre rule"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_23_q01_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "30cm ruler micrometer"
+    },
+    {
+     "label": "B",
+     "html": "half-metre rule 30cm rule"
+    },
+    {
+     "label": "C",
+     "html": "half-metre rule micrometer"
+    },
+    {
+     "label": "D",
+     "html": "micrometer half-metre rule"
+    }
+   ]
   }
  ]
 }

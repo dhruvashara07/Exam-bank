@@ -33,9 +33,9 @@
    "page": 7,
    "bbox": [
     204.7,
-    85.6,
+    85.0,
     390.1,
-    219.1
+    219.5
    ],
    "id": "0625_2018FM_12_q14_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    276.9,
-    286.4,
-    388.3
+    67.5,
+    276.5,
+    286.5,
+    388.5
    ],
    "id": "0625_2018FM_12_q14_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "What happens to the water level at P and what happens to the water level at Q?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "water level at P",
-     "water level at Q"
-    ],
-    [
-     "<b>A</b>",
-     "falls",
-     "falls"
-    ],
-    [
-     "<b>B</b>",
-     "falls",
-     "rises"
-    ],
-    [
-     "<b>C</b>",
-     "rises",
-     "falls"
-    ],
-    [
-     "<b>D</b>",
-     "rises",
-     "rises"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018FM_12_q14_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "falls falls"
+    },
+    {
+     "label": "B",
+     "html": "falls rises"
+    },
+    {
+     "label": "C",
+     "html": "rises falls"
+    },
+    {
+     "label": "D",
+     "html": "rises rises"
+    }
+   ]
   }
  ]
 }

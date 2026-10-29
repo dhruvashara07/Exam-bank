@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    636.2,
-    300.7,
-    747.6
+    67.5,
+    636.0,
+    301.0,
+    748.0
    ],
    "id": "0625_2024ON_12_q22_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p12/q22/figures/0625_2024ON_12_q22_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p12/q22/figures/0625_2024ON_12_q22_figA",
     "url": null,
-    "kb": 22.6
+    "kb": 22.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "How has this change affected the wavelength and speed of the radiation?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "wavelength",
-     "speed"
-    ],
-    [
-     "<b>A</b>",
-     "decreased",
-     "decreased"
-    ],
-    [
-     "<b>B</b>",
-     "decreased",
-     "stayed the same"
-    ],
-    [
-     "<b>C</b>",
-     "increased",
-     "decreased"
-    ],
-    [
-     "<b>D</b>",
-     "increased",
-     "stayed the same"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_12_q22_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreased decreased"
+    },
+    {
+     "label": "B",
+     "html": "decreased stayed the same"
+    },
+    {
+     "label": "C",
+     "html": "increased decreased"
+    },
+    {
+     "label": "D",
+     "html": "increased stayed the same"
+    }
+   ]
   }
  ]
 }

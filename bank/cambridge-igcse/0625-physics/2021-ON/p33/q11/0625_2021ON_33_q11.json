@@ -9,10 +9,10 @@
    "caption": "Table 11.1",
    "page": 19,
    "bbox": [
-    91.8,
-    97.0,
+    91.5,
+    100.5,
     503.5,
-    259.3
+    258.0
    ],
    "id": "0625_2021ON_33_q11a_table11-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Table 11.2",
    "page": 20,
    "bbox": [
-    195.3,
-    97.0,
+    195.0,
+    100.5,
     400.0,
-    327.7
+    328.0
    ],
    "id": "0625_2021ON_33_q11c_table11-2",
    "part": "(c)",
@@ -122,31 +122,6 @@
      "type": "figure",
      "id": "0625_2021ON_33_q11a_table11-1",
      "caption": "Table 11.1"
-    },
-    {
-     "type": "table",
-     "rows": [
-      [
-       "type of radioactive emission",
-       "nature",
-       "charge"
-      ],
-      [
-       "α (alpha)",
-       "helium nucleus",
-       ""
-      ],
-      [
-       "β (beta)",
-       "",
-       "negative"
-      ],
-      [
-       "γ (gamma)",
-       "",
-       ""
-      ]
-     ]
     },
     {
      "type": "marks",
@@ -403,10 +378,9 @@
        "text": "Determine the half-life of californium-241."
       },
       {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "half-life of californium-241 =",
-       "unit": "min"
+       "type": "text",
+       "html": "half-life of californium-241 = …… min",
+       "text": "half-life of californium-241 = …… min"
       },
       {
        "type": "marks",
@@ -497,45 +471,9 @@
      "text": "Californium-241 is a radioactive isotope. A scientist measures the count rate from a sample of californium-241 as it decays. Table 11.2 shows the results."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "time / min",
-       "count rate counts / s"
-      ],
-      [
-       "0",
-       "800"
-      ],
-      [
-       "2",
-       "560"
-      ],
-      [
-       "4",
-       "400"
-      ],
-      [
-       "6",
-       "280"
-      ],
-      [
-       "8",
-       "200"
-      ],
-      [
-       "10",
-       "140"
-      ],
-      [
-       "12",
-       "100"
-      ],
-      [
-       "14",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2021ON_33_q11c_table11-2",
+     "caption": "Table 11.2"
     }
    ]
   }
@@ -556,5 +494,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

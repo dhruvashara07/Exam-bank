@@ -32,9 +32,9 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    63.2,
-    473.1,
+    67.5,
+    85.5,
+    473.5,
     317.5
    ],
    "id": "0625_2020ON_13_q21_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p13/q21/figures/0625_2020ON_13_q21_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p13/q21/figures/0625_2020ON_13_q21_figA",
     "url": null,
-    "kb": 37.5
+    "kb": 31.9
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "<b>21</b>",
-   "text": "21"
+   "html": "The diagram shows a wave. It is not drawn to scale.",
+   "text": "The diagram shows a wave. It is not drawn to scale."
   },
   {
    "type": "figure",
@@ -102,35 +103,25 @@
    "caption": null
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "amplitude/m",
-     "wavelength/m"
-    ],
-    [
-     "<b>A</b>",
-     "1.0",
-     "1.0"
-    ],
-    [
-     "<b>B</b>",
-     "1.0",
-     "2.0"
-    ],
-    [
-     "<b>C</b>",
-     "2.0",
-     "2.0"
-    ],
-    [
-     "<b>D</b>",
-     "2.0",
-     "3.0"
-    ]
-   ],
-   "options": true
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "1.0 1.0"
+    },
+    {
+     "label": "B",
+     "html": "1.0 2.0"
+    },
+    {
+     "label": "C",
+     "html": "2.0 2.0"
+    },
+    {
+     "label": "D",
+     "html": "2.0 3.0"
+    }
+   ]
   }
  ]
 }

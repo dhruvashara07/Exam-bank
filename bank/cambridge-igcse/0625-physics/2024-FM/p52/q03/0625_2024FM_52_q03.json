@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    49.8,
-    109.2,
-    545.4,
-    227.4
+    50.5,
+    112.5,
+    545.0,
+    225.5
    ],
    "id": "0625_2024FM_52_q03_fig3-1",
    "part": "",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-FM/p52/q03/figures/0625_2024FM_52_q03_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-FM/p52/q03/figures/0625_2024FM_52_q03_fig3-1",
     "url": null,
-    "kb": 23.7
+    "kb": 23.6
    }
   }
  ],
@@ -221,9 +221,21 @@
        "text": "Measure v, the distance from the lens to the screen as indicated in Fig. 3.1."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "v =",
+       "unit": "cm"
+      },
+      {
        "type": "text",
        "html": "Measure <i>h</i><sub>O</sub>, the height of the illuminated object, indicated in Fig. 3.1.",
        "text": "Measure hO, the height of the illuminated object, indicated in Fig. 3.1."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "hO =",
+       "unit": "cm"
       },
       {
        "type": "text",
@@ -231,15 +243,15 @@
        "text": "Measure hI, the height of the image on the screen."
       },
       {
-       "type": "text",
-       "html": "Switch off the lamp.",
-       "text": "Switch off the lamp."
-      },
-      {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "hI =",
        "unit": "cm"
+      },
+      {
+       "type": "text",
+       "html": "Switch off the lamp.",
+       "text": "Switch off the lamp."
       },
       {
        "type": "marks",
@@ -306,7 +318,7 @@
      "content": [
       {
        "type": "text",
-       "html": "\\(\\frac{<i>h</i><sub>I</sub>}{<i>h</i>}\\)",
+       "html": "\\(\\frac{h_{I}}{h}\\)",
        "text": "(hI)/(h)"
       },
       {
@@ -395,7 +407,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate a value <i>f</i><sub>1</sub> for the focal length of the lens. Use your values from <b>(a)(ii)</b> and <b>(a)(iii)</b> and the equation <i>f</i><sub>1</sub> = \\(\\frac{<i>v</i>}{(<i>M</i> + 1)}\\).",
+     "html": "Calculate a value <i>f</i><sub>1</sub> for the focal length of the lens. Use your values from <b>(a)(ii)</b> and <b>(a)(iii)</b> and the equation <i>f</i><sub>1</sub> = \\(\\frac{v}{(M + 1)}\\).",
      "text": "Calculate a value f1 for the focal length of the lens. Use your values from (a)(ii) and (a)(iii) and the equation f1 = (v)/((M + 1))."
     },
     {
@@ -480,7 +492,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "improvement",
+     "prefix": "difficulty"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "improvement"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -552,15 +573,15 @@
      "text": "Adjust the position of the lens so that u = 40.0 cm. Switch on the lamp. Place the screen near the lens. Move the screen until a sharp image of the illuminated object is seen on the screen. Measure the distance v between the lens and the screen as indicated in Fig. 3.1."
     },
     {
-     "type": "text",
-     "html": "Switch off the lamp.",
-     "text": "Switch off the lamp."
-    },
-    {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "v =",
      "unit": "cm"
+    },
+    {
+     "type": "text",
+     "html": "Switch off the lamp.",
+     "text": "Switch off the lamp."
     },
     {
      "type": "marks",
@@ -627,7 +648,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate a second value <i>f</i><sub>2</sub> for the focal length of the lens. Use your values from <b>(d)</b> and the equation <i>f</i><sub>2</sub> = \\(\\frac{<i>uv</i>}{(<i>u</i> + <i>v</i>)}\\).",
+     "html": "Calculate a second value <i>f</i><sub>2</sub> for the focal length of the lens. Use your values from <b>(d)</b> and the equation <i>f</i><sub>2</sub> = \\(\\frac{\\text{uv}}{(u + v)}\\).",
      "text": "Calculate a second value f2 for the focal length of the lens. Use your values from (d) and the equation f2 = (uv)/((u + v))."
     },
     {
@@ -732,6 +753,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

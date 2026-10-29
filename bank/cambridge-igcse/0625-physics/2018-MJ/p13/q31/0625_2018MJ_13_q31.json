@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    151.2,
-    98.1,
-    444.1,
-    233.0
+    150.5,
+    98.0,
+    444.0,
+    233.5
    ],
    "id": "0625_2018MJ_13_q31_figA",
    "caption": null,
@@ -45,15 +45,15 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p13/q31/figures/0625_2018MJ_13_q31_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p13/q31/figures/0625_2018MJ_13_q31_figA",
     "url": null,
-    "kb": 8.6
+    "kb": 8.4
    }
   },
   {
    "page": 13,
    "bbox": [
-    67.7,
-    329.7,
-    304.9,
+    67.5,
+    329.5,
+    305.0,
     440.5
    ],
    "id": "0625_2018MJ_13_q31_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p13/q31/figures/0625_2018MJ_13_q31_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p13/q31/figures/0625_2018MJ_13_q31_figB",
     "url": null,
-    "kb": 21.5
+    "kb": 21.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,35 +137,30 @@
    "text": "Which row correctly compares the two currents and the two resistances in the circuits?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<i>I</i><sub>2</sub>",
-     "<i>R</i><sub>2</sub>"
-    ],
-    [
-     "<b>A</b>",
-     "greater than <i>I</i><sub>1</sub>",
-     "greater than <i>R</i><sub>1</sub>"
-    ],
-    [
-     "<b>B</b>",
-     "greater than <i>I</i><sub>1</sub>",
-     "less than <i>R</i><sub>1</sub>"
-    ],
-    [
-     "<b>C</b>",
-     "less than <i>I</i><sub>1</sub>",
-     "greater than <i>R</i><sub>1</sub>"
-    ],
-    [
-     "<b>D</b>",
-     "less than <i>I</i><sub>1</sub>",
-     "less than <i>R</i><sub>1</sub>"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_13_q31_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "greater than I1 greater than R1"
+    },
+    {
+     "label": "B",
+     "html": "greater than I1 less than R1"
+    },
+    {
+     "label": "C",
+     "html": "less than I1 greater than R1"
+    },
+    {
+     "label": "D",
+     "html": "less than I1 less than R1"
+    }
+   ]
   }
  ]
 }

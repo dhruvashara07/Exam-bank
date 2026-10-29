@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    85.6,
-    108.3,
-    510.0,
-    725.0
+    85.0,
+    107.5,
+    510.5,
+    725.5
    ],
    "id": "0625_2025MJ_61_q03_fig3-1",
    "part": "",
@@ -117,7 +117,7 @@
      "items": [
       "Draw a normal to the line MR that passes through the centre of MR. Label the normal NL.",
       "Label the point at which NL crosses MR with the letter B.",
-      "Draw a line 10.0cm long from B at an angle of incidence i = 40° to the normal below MR and to the left of the normal. Label the end of this line A."
+      "Draw a line 10.0 cm long from B at an angle of incidence i = 40° to the normal below MR and to the left of the normal. Label the end of this line A."
      ]
     },
     {
@@ -356,13 +356,13 @@
      "content": [
       {
        "type": "text",
-       "html": "Measure the acute angle αbetween this line and the horizontal line MR. An acute angle is an angle less than 90°.",
-       "text": "Measure the acute angle αbetween this line and the horizontal line MR. An acute angle is an angle less than 90°."
+       "html": "Measure the acute angle α between this line and the horizontal line MR. An acute angle is an angle less than 90°.",
+       "text": "Measure the acute angle α between this line and the horizontal line MR. An acute angle is an angle less than 90°."
       },
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "α=",
+       "prefix": "α =",
        "unit": "°"
       },
       {
@@ -456,8 +456,8 @@
     },
     {
      "type": "text",
-     "html": "On Fig. 3.1, draw a reflected ray 10.0cm long from B with an angle of reflection βequal to the angle of incidence. Label the end of the line D.",
-     "text": "On Fig. 3.1, draw a reflected ray 10.0cm long from B with an angle of reflection βequal to the angle of incidence. Label the end of the line D."
+     "html": "On Fig. 3.1, draw a reflected ray 10.0 cm long from B with an angle of reflection β equal to the angle of incidence. Label the end of the line D.",
+     "text": "On Fig. 3.1, draw a reflected ray 10.0 cm long from B with an angle of reflection β equal to the angle of incidence. Label the end of the line D."
     },
     {
      "type": "marks",
@@ -525,13 +525,22 @@
    "content": [
     {
      "type": "text",
-     "html": "Suggest a relationship between αand β. Justify your answer by reference to the results.",
-     "text": "Suggest a relationship between αand β. Justify your answer by reference to the results."
+     "html": "Suggest a relationship between α and β. Justify your answer by reference to the results.",
+     "text": "Suggest a relationship between α and β. Justify your answer by reference to the results."
     },
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "relationship"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -605,7 +614,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -632,6 +650,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -9,10 +9,10 @@
    "caption": "Fig. 6.1",
    "page": 10,
    "bbox": [
-    179.9,
-    85.3,
-    414.9,
-    241.2
+    180.5,
+    84.5,
+    415.5,
+    241.5
    ],
    "id": "0625_2025ON_43_q06a_fig6-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 6.2",
    "page": 11,
    "bbox": [
-    141.6,
-    118.3,
-    453.8,
-    279.6
+    142.0,
+    117.5,
+    450.5,
+    280.0
    ],
    "id": "0625_2025ON_43_q06b_fig6-2",
    "part": "(b)",
@@ -47,10 +47,10 @@
    "caption": "Fig. 6.3",
    "page": 11,
    "bbox": [
-    146.3,
-    309.2,
-    449.1,
-    616.6
+    146.5,
+    310.0,
+    448.5,
+    617.0
    ],
    "id": "0625_2025ON_43_q06bi_fig6-3",
    "part": "(b)(i)",
@@ -159,8 +159,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the current in the 400Ω resistor.",
-       "text": "Calculate the current in the 400Ω resistor."
+       "html": "Calculate the current in the 400 Ω resistor.",
+       "text": "Calculate the current in the 400 Ω resistor."
       },
       {
        "type": "answer",
@@ -245,7 +245,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 3
       },
       {
@@ -269,8 +278,8 @@
     },
     {
      "type": "text",
-     "html": "The LDR is in a brightly lit room. The voltmeter reads 1.8V.",
-     "text": "The LDR is in a brightly lit room. The voltmeter reads 1.8V."
+     "html": "The LDR is in a brightly lit room. The voltmeter reads 1.8 V.",
+     "text": "The LDR is in a brightly lit room. The voltmeter reads 1.8 V."
     }
    ]
   },
@@ -471,8 +480,8 @@
     },
     {
      "type": "text",
-     "html": "The voltmeter across the LEDs shows a potential difference (p.d.) of 2.0V.",
-     "text": "The voltmeter across the LEDs shows a potential difference (p.d.) of 2.0V."
+     "html": "The voltmeter across the LEDs shows a potential difference (p.d.) of 2.0 V.",
+     "text": "The voltmeter across the LEDs shows a potential difference (p.d.) of 2.0 V."
     },
     {
      "type": "figure",
@@ -498,5 +507,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

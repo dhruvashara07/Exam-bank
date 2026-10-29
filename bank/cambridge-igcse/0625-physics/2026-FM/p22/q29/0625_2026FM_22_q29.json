@@ -32,9 +32,9 @@
   {
    "page": 12,
    "bbox": [
-    68.4,
+    68.0,
     110.5,
-    255.9,
+    256.5,
     247.5
    ],
    "id": "0625_2026FM_22_q29_figA",
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-FM/p22/q29/figures/0625_2026FM_22_q29_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-FM/p22/q29/figures/0625_2026FM_22_q29_figA",
     "url": null,
-    "kb": 13.3
+    "kb": 13.2
    }
   },
   {
    "page": 12,
    "bbox": [
-    67.7,
-    306.2,
-    548.4,
-    417.6
+    67.5,
+    306.0,
+    548.5,
+    418.0
    ],
    "id": "0625_2026FM_22_q29_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-FM/p22/q29/figures/0625_2026FM_22_q29_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-FM/p22/q29/figures/0625_2026FM_22_q29_figB",
     "url": null,
-    "kb": 47.1
+    "kb": 46.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,35 +137,30 @@
    "text": "Which row about the current in the two resistors and the resistance of the two resistors is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>current</b>",
-     "<b>size of resistors</b>"
-    ],
-    [
-     "<b>A</b>",
-     "current is the same in both resistors",
-     "both resistors have the same resistance"
-    ],
-    [
-     "<b>B</b>",
-     "current is the same in both resistors",
-     "resistance of X is greater than resistance of Y"
-    ],
-    [
-     "<b>C</b>",
-     "current in X is greater than current in Y",
-     "both resistors have the same resistance"
-    ],
-    [
-     "<b>D</b>",
-     "current in X is greater than current in Y",
-     "resistance of X is greater than resistance of Y"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026FM_22_q29_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "current is the same in both resistors both resistors have the same resistance"
+    },
+    {
+     "label": "B",
+     "html": "current is the same in both resistors resistance of X is greater than resistance of Y"
+    },
+    {
+     "label": "C",
+     "html": "current in X is greater than current in Y both resistors have the same resistance"
+    },
+    {
+     "label": "D",
+     "html": "current in X is greater than current in Y resistance of X is greater than resistance of Y"
+    }
+   ]
   }
  ]
 }

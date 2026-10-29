@@ -51,10 +51,10 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    594.4,
-    293.9,
-    719.9
+    67.5,
+    594.0,
+    294.0,
+    720.0
    ],
    "id": "0625_2017ON_13_q05_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p13/q05/figures/0625_2017ON_13_q05_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p13/q05/figures/0625_2017ON_13_q05_figB",
     "url": null,
-    "kb": 23.8
+    "kb": 23.6
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -122,8 +123,8 @@
   },
   {
    "type": "text",
-   "html": "An object weighs 400N on planet P. The object is taken to planet Q.",
-   "text": "An object weighs 400N on planet P. The object is taken to planet Q."
+   "html": "An object weighs 400 N on planet P. The object is taken to planet Q.",
+   "text": "An object weighs 400 N on planet P. The object is taken to planet Q."
   },
   {
    "type": "text",
@@ -131,40 +132,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass of object",
-     "weight of object"
-    ],
-    [
-     "",
-     "on planet Q/kg",
-     "on planet Q/N"
-    ],
-    [
-     "<b>A</b>",
-     "40",
-     "200"
-    ],
-    [
-     "<b>B</b>",
-     "40",
-     "400"
-    ],
-    [
-     "<b>C</b>",
-     "80",
-     "200"
-    ],
-    [
-     "<b>D</b>",
-     "80",
-     "400"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017ON_13_q05_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "40 200"
+    },
+    {
+     "label": "B",
+     "html": "40 400"
+    },
+    {
+     "label": "C",
+     "html": "80 200"
+    },
+    {
+     "label": "D",
+     "html": "80 400"
+    }
+   ]
   }
  ]
 }

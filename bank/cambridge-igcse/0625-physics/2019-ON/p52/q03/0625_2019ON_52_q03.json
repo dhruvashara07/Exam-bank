@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 6,
    "bbox": [
-    74.1,
-    107.8,
-    493.5,
-    231.8
+    74.5,
+    108.5,
+    493.0,
+    229.5
    ],
    "id": "0625_2019ON_52_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 7,
    "bbox": [
-    179.1,
-    81.6,
-    387.9,
-    152.4
+    179.0,
+    81.5,
+    388.0,
+    152.5
    ],
    "id": "0625_2019ON_52_q03b_table3-1",
    "part": "(b)",
@@ -298,7 +298,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate, and record in Table 3.1, the focal length <i>f</i> of the lens using the equation <i>f</i> = \\(\\frac{<i>uv</i>}{<i>D</i>}\\) .",
+       "html": "Calculate, and record in Table 3.1, the focal length <i>f</i> of the lens using the equation <i>f</i> = \\(\\frac{\\text{uv}}{D}\\) .",
        "text": "Calculate, and record in Table 3.1, the focal length f of the lens using the equation f = (uv)/(D) ."
       },
       {
@@ -413,7 +413,7 @@
       "Continue to move the lens slowly further away from the screen until another clearly focused (and now magnified) image is formed on the screen.",
       "Measure, and record in Table 3.1, the distance <i>u</i> between the centre of the lens and the illuminated object.",
       "Measure, and record in Table 3.1, the distance <i>v</i> between the centre of the lens and the screen.",
-      "Calculate, and record in Table 3.1, the focal length <i>f</i> of the lens using the equation <i>f</i> = \\(\\frac{<i>uv</i>}{<i>D</i>}\\) ."
+      "Calculate, and record in Table 3.1, the focal length <i>f</i> of the lens using the equation <i>f</i> = \\(\\frac{\\text{uv}}{D}\\) ."
      ]
     },
     {
@@ -421,29 +421,9 @@
      "value": 2
     },
     {
-     "type": "text",
-     "html": "<b>Table 3.1</b>",
-     "text": "Table 3.1"
-    },
-    {
-     "type": "table",
-     "rows": [
-      [
-       "<i>u</i> / cm",
-       "<i>v</i> / cm",
-       "<i>f</i> / cm"
-      ],
-      [
-       "",
-       "",
-       ""
-      ],
-      [
-       "",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2019ON_52_q03b_table3-1",
+     "caption": "Table 3.1"
     }
    ]
   },
@@ -758,7 +738,7 @@
      "content": [
       {
        "type": "text",
-       "html": "The student moves the lens to a new position which is a distance from the object <i>u </i>= 22.2 cm. He observes the image on the screen and says it is clearly focussed at a distance <i>v</i> = 97.9 cm. Calculate the new value of the focal length <i>f</i> of the lens using <i>f</i> = \\(\\frac{<i>uv</i>}{<i>D</i>}\\) .",
+       "html": "The student moves the lens to a new position which is a distance from the object <i>u </i>= 22.2 cm. He observes the image on the screen and says it is clearly focussed at a distance <i>v</i> = 97.9 cm. Calculate the new value of the focal length <i>f</i> of the lens using <i>f</i> = \\(\\frac{\\text{uv}}{D}\\) .",
        "text": "The student moves the lens to a new position which is a distance from the object u = 22.2 cm. He observes the image on the screen and says it is clearly focussed at a distance v = 97.9 cm. Calculate the new value of the focal length f of the lens using f = (uv)/(D) ."
       },
       {
@@ -874,6 +854,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

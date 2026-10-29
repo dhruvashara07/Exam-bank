@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    231.7,
-    447.9,
-    363.5,
-    582.7
+    231.0,
+    447.5,
+    364.0,
+    583.5
    ],
    "id": "0625_2021ON_11_q31_figA",
    "caption": null,
@@ -45,15 +45,15 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p11/q31/figures/0625_2021ON_11_q31_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p11/q31/figures/0625_2021ON_11_q31_figA",
     "url": null,
-    "kb": 7.2
+    "kb": 7.0
    }
   },
   {
    "page": 14,
    "bbox": [
-    67.7,
-    615.2,
-    300.7,
+    67.5,
+    615.0,
+    301.0,
     726.5
    ],
    "id": "0625_2021ON_11_q31_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p11/q31/figures/0625_2021ON_11_q31_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p11/q31/figures/0625_2021ON_11_q31_figB",
     "url": null,
-    "kb": 15.9
+    "kb": 15.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row correctly shows the numbers of different components in the circuit?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "cells",
-     "lamps",
-     "switches"
-    ],
-    [
-     "<b>A</b>",
-     "1",
-     "1",
-     "4"
-    ],
-    [
-     "<b>B</b>",
-     "1",
-     "4",
-     "1"
-    ],
-    [
-     "<b>C</b>",
-     "3",
-     "1",
-     "4"
-    ],
-    [
-     "<b>D</b>",
-     "3",
-     "4",
-     "1"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_11_q31_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "1 1 4"
+    },
+    {
+     "label": "B",
+     "html": "1 4 1"
+    },
+    {
+     "label": "C",
+     "html": "3 1 4"
+    },
+    {
+     "label": "D",
+     "html": "3 4 1"
+    }
+   ]
   }
  ]
 }

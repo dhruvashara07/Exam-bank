@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    227.2,
+    226.5,
     336.0,
-    367.2,
-    413.1
+    368.0,
+    413.5
    ],
    "id": "0625_2016MJ_13_q30_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 13,
    "bbox": [
-    67.6,
-    508.9,
-    273.3,
-    620.2
+    67.5,
+    508.5,
+    273.5,
+    620.5
    ],
    "id": "0625_2016MJ_13_q30_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p13/q30/figures/0625_2016MJ_13_q30_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p13/q30/figures/0625_2016MJ_13_q30_figB",
     "url": null,
-    "kb": 22.0
+    "kb": 21.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,40 +137,30 @@
    "text": "Which row shows values with their correct units?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "e.m.f.",
-     "current",
-     "p.d."
-    ],
-    [
-     "A",
-     "3.0A",
-     "0.30V",
-     "1.5A"
-    ],
-    [
-     "B",
-     "3.0A",
-     "0.30A",
-     "1.5V"
-    ],
-    [
-     "C",
-     "3.0V",
-     "0.30V",
-     "1.5A"
-    ],
-    [
-     "D",
-     "3.0V",
-     "0.30A",
-     "1.5V"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_13_q30_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "3.0A 0.30V 1.5A"
+    },
+    {
+     "label": "B",
+     "html": "3.0A 0.30A 1.5V"
+    },
+    {
+     "label": "C",
+     "html": "3.0V 0.30V 1.5A"
+    },
+    {
+     "label": "D",
+     "html": "3.0V 0.30A 1.5V"
+    }
+   ]
   }
  ]
 }

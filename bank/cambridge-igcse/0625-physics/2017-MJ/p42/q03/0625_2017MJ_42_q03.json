@@ -10,9 +10,9 @@
    "page": 6,
    "bbox": [
     97.5,
-    165.0,
-    495.3,
-    271.0
+    168.0,
+    495.0,
+    269.5
    ],
    "id": "0625_2017MJ_42_q03b_fig3-1",
    "part": "(b)",
@@ -231,9 +231,19 @@
        "text": "Calculate 1. the momentum of block A before the collision,"
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "momentum ="
+      },
+      {
        "type": "text",
        "html": "<b>2. </b> the velocity <i>v</i>,",
        "text": "2. the velocity v,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "velocity ="
       },
       {
        "type": "text",
@@ -362,5 +372,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    161.8,
-    119.3,
-    447.9,
-    332.3
+    161.5,
+    122.5,
+    448.5,
+    330.5
    ],
    "id": "0625_2020MJ_61_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 5,
    "bbox": [
-    71.4,
-    378.5,
-    512.7,
-    552.1
+    70.5,
+    378.0,
+    513.5,
+    550.5
    ],
    "id": "0625_2020MJ_61_q02ai_fig2-2",
    "part": "(a)(i)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 2.3",
    "page": 5,
    "bbox": [
-    71.4,
-    378.5,
-    512.7,
-    552.1
+    70.5,
+    378.0,
+    513.5,
+    550.5
    ],
    "id": "0625_2020MJ_61_q02ai_fig2-3",
    "part": "(a)(i)",
@@ -321,7 +321,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>1</sub> of the filament of lamp L<sub>1</sub>. Use the equation <i>R</i><sub>1</sub> = \\(\\frac{<i>V</i><sub>1</sub>}{<i>I</i>}\\) . Include the unit.",
+       "html": "Calculate the resistance <i>R</i><sub>1</sub> of the filament of lamp L<sub>1</sub>. Use the equation <i>R</i><sub>1</sub> = \\(\\frac{V_{1}}{I}\\) . Include the unit.",
        "text": "Calculate the resistance R1 of the filament of lamp L1. Use the equation R1 = (V1)/(I) . Include the unit."
       },
       {
@@ -411,19 +411,34 @@
      "text": "0.30 A"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "I2 ="
+    },
+    {
      "type": "text",
      "html": "1.7 V",
      "text": "1.7 V"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V2 ="
+    },
+    {
      "type": "text",
-     "html": "Calculate the resistance <i>R</i><sub>2</sub> of the filament of lamp L<sub>2</sub>. Use the equation <i>R</i><sub>2</sub> = \\(\\frac{<i>V</i><sub>2</sub>}{<i>I</i>}\\) .",
+     "html": "Calculate the resistance <i>R</i><sub>2</sub> of the filament of lamp L<sub>2</sub>. Use the equation <i>R</i><sub>2</sub> = \\(\\frac{V_{2}}{I}\\) .",
      "text": "Calculate the resistance R2 of the filament of lamp L2. Use the equation R2 = (V2)/(I) ."
     },
     {
      "type": "text",
      "html": "<sub>2</sub>",
      "text": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "R2 ="
     },
     {
      "type": "text",
@@ -436,13 +451,23 @@
      "text": "0.26 A"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "I3 ="
+    },
+    {
      "type": "text",
      "html": "1.2 V",
      "text": "1.2 V"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V3 ="
+    },
+    {
      "type": "text",
-     "html": "Calculate the resistance <i>R</i><sub>3</sub> of the filament of lamp L<sub>3</sub>. Use the equation <i>R</i><sub>3</sub> = \\(\\frac{<i>V</i><sub>3</sub>}{<i>I</i>}\\) .",
+     "html": "Calculate the resistance <i>R</i><sub>3</sub> of the filament of lamp L<sub>3</sub>. Use the equation <i>R</i><sub>3</sub> = \\(\\frac{V_{3}}{I}\\) .",
      "text": "Calculate the resistance R3 of the filament of lamp L3. Use the equation R3 = (V3)/(I) ."
     },
     {
@@ -600,7 +625,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -702,6 +736,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

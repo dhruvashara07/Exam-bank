@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    380.3,
-    392.3,
-    491.6
+    67.5,
+    380.0,
+    392.5,
+    492.0
    ],
    "id": "0625_2018MJ_12_q17_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p12/q17/figures/0625_2018MJ_12_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p12/q17/figures/0625_2018MJ_12_q17_figA",
     "url": null,
-    "kb": 31.6
+    "kb": 31.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which values should she use for the lower fixed point and for the upper fixed point?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "lower fixed point",
-     "upper fixed point"
-    ],
-    [
-     "<b>A</b>",
-     "melting point of ice",
-     "boiling point of mercury"
-    ],
-    [
-     "<b>B</b>",
-     "melting point of ice",
-     "boiling point of water"
-    ],
-    [
-     "<b>C</b>",
-     "melting point of mercury",
-     "boiling point of mercury"
-    ],
-    [
-     "<b>D</b>",
-     "melting point of mercury",
-     "boiling point of water"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_12_q17_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "melting point of ice boiling point of mercury"
+    },
+    {
+     "label": "B",
+     "html": "melting point of ice boiling point of water"
+    },
+    {
+     "label": "C",
+     "html": "melting point of mercury boiling point of mercury"
+    },
+    {
+     "label": "D",
+     "html": "melting point of mercury boiling point of water"
+    }
+   ]
   }
  ]
 }

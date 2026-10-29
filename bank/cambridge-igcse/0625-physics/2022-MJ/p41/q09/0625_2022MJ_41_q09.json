@@ -33,10 +33,10 @@
    "caption": "Fig. 9.1",
    "page": 15,
    "bbox": [
-    188.2,
-    346.8,
-    407.1,
-    482.9
+    188.0,
+    346.5,
+    407.0,
+    481.5
    ],
    "id": "0625_2022MJ_41_q09b_fig9-1",
    "part": "(b)",
@@ -191,39 +191,19 @@
      "text": "Fig. 9.1 is the truth table for a logic gate X."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "input A",
-       "input B",
-       "output"
-      ],
-      [
-       "0",
-       "0",
-       "1"
-      ],
-      [
-       "0",
-       "1",
-       "0"
-      ],
-      [
-       "1",
-       "0",
-       "0"
-      ],
-      [
-       "1",
-       "1",
-       "0"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2022MJ_41_q09b_fig9-1",
+     "caption": "Fig. 9.1"
     },
     {
      "type": "text",
      "html": "State the name of logic gate X and draw the symbol that represents it.",
      "text": "State the name of logic gate X and draw the symbol that represents it."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "name"
     },
     {
      "type": "text",
@@ -232,8 +212,7 @@
     },
     {
      "type": "answer",
-     "kind": "answer_line",
-     "prefix": "name"
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -333,6 +312,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

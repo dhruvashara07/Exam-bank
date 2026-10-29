@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    276.1,
-    329.3,
-    401.6
+    67.5,
+    276.0,
+    329.5,
+    401.5
    ],
    "id": "0625_2021ON_12_q13_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p12/q13/figures/0625_2021ON_12_q13_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p12/q13/figures/0625_2021ON_12_q13_figA",
     "url": null,
-    "kb": 27.9
+    "kb": 27.7
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The temperature of the gas in a sealed container of constant volume decreases from 20°C to 12°C.",
-   "text": "The temperature of the gas in a sealed container of constant volume decreases from 20°C to 12°C."
+   "html": "The temperature of the gas in a sealed container of constant volume decreases from 20 °C to °C.",
+   "text": "The temperature of the gas in a sealed container of constant volume decreases from 20 °C to °C."
   },
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "pressure of the gas",
-     "average speed of"
-    ],
-    [
-     "",
-     "in the container",
-     "the molecules of gas"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "stays the same",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "stays the same"
-    ],
-    [
-     "<b>D</b>",
-     "stays the same",
-     "decreases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_12_q13_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "stays the same increases"
+    },
+    {
+     "label": "C",
+     "html": "increases stays the same"
+    },
+    {
+     "label": "D",
+     "html": "stays the same decreases"
+    }
+   ]
   }
  ]
 }

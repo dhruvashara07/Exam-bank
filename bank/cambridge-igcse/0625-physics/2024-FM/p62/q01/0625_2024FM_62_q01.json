@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    46.6,
-    109.3,
-    548.6,
-    244.5
+    47.0,
+    114.5,
+    548.0,
+    243.0
    ],
    "id": "0625_2024FM_62_q01_fig1-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-FM/p62/q01/figures/0625_2024FM_62_q01_fig1-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-FM/p62/q01/figures/0625_2024FM_62_q01_fig1-1",
     "url": null,
-    "kb": 21.7
+    "kb": 20.5
    }
   },
   {
    "caption": "Fig. 1.2 (not to scale)",
    "page": 2,
    "bbox": [
-    132.4,
-    273.5,
-    463.2,
-    443.3
+    132.0,
+    277.0,
+    463.5,
+    441.5
    ],
    "id": "0625_2024FM_62_q01a_fig1-2",
    "part": "(a)",
@@ -72,9 +72,9 @@
    "page": 4,
    "bbox": [
     103.0,
-    136.0,
-    492.2,
-    303.0
+    139.5,
+    492.5,
+    303.5
    ],
    "id": "0625_2024FM_62_q01c_table1-1",
    "part": "(c)",
@@ -158,26 +158,6 @@
      "type": "figure",
      "id": "0625_2024FM_62_q01a_fig1-2",
      "caption": "Fig. 1.2 (not to scale)"
-    },
-    {
-     "type": "table",
-     "rows": [
-      [
-       "25 26",
-       "",
-       "30 31"
-      ],
-      [
-       "",
-       "27 28 29",
-       ""
-      ],
-      [
-       "",
-       "",
-       ""
-      ]
-     ]
     },
     {
      "type": "text",
@@ -342,6 +322,12 @@
        "type": "text",
        "html": "The student finds that the ruler is as near as possible to being balanced when the pivot is at the 47.6 cm mark. Calculate the distance <i>a</i> of the centre of the load from the 50.0 cm mark, as shown in Fig. 1.1. Use your value of <i>d</i> from<b> (a)</b> and the equation <i>a</i> = (50.0 cm – <i>d </i>).",
        "text": "The student finds that the ruler is as near as possible to being balanced when the pivot is at the 47.6 cm mark. Calculate the distance a of the centre of the load from the 50.0 cm mark, as shown in Fig. 1.1. Use your value of d from (a) and the equation a = (50.0 cm – d )."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "a =",
+       "unit": "cm"
       },
       {
        "type": "text",
@@ -551,39 +537,9 @@
      "text": "The student moves the load so that its centre is above the 5.0 cm mark and balances the metre ruler. He repeats this procedure for the load at the 10.0 cm mark, 15.0 cm mark, 20.0 cm mark and 25.0 cm mark. His results are shown in Table 1.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "position of load / cm",
-       "<i>a</i> / cm",
-       "<i>b</i> / cm"
-      ],
-      [
-       "5.0",
-       "45.0",
-       "40.5"
-      ],
-      [
-       "10.0",
-       "40.0",
-       "35.2"
-      ],
-      [
-       "15.0",
-       "35.0",
-       "31.5"
-      ],
-      [
-       "20.0",
-       "30.0",
-       "26.0"
-      ],
-      [
-       "25.0",
-       "25.0",
-       "22.5"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2024FM_62_q01c_table1-1",
+     "caption": "Table 1.1"
     }
    ]
   },
@@ -646,8 +602,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate the mass <i>M</i> of the metre ruler using the equation <i>M</i> = \\(\\frac{<i>k</i>}{(<i>G</i>}\\),",
-     "text": "Calculate the mass M of the metre ruler using the equation M = (k)/((G),"
+     "html": "Calculate the mass <i>M</i> of the metre ruler using the equation <i>M</i> = \\(\\frac{k}{(G}\\) ,",
+     "text": "Calculate the mass M of the metre ruler using the equation M = (k)/((G) ,"
     },
     {
      "type": "text",
@@ -761,6 +717,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

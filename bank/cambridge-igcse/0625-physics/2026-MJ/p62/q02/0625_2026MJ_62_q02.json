@@ -33,10 +33,10 @@
    "caption": "Figure 2.1",
    "page": 6,
    "bbox": [
-    69.3,
-    228.3,
-    478.4,
-    462.8
+    69.0,
+    227.5,
+    478.5,
+    463.0
    ],
    "id": "0625_2026MJ_62_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Figure 2.2",
    "page": 7,
    "bbox": [
-    114.7,
-    189.5,
-    528.8,
-    394.1
+    114.5,
+    190.5,
+    528.0,
+    394.5
    ],
    "id": "0625_2026MJ_62_q02aii_fig2-2",
    "part": "(a)(ii)",
@@ -71,10 +71,10 @@
    "caption": "Table 2.1",
    "page": 7,
    "bbox": [
-    114.7,
-    429.1,
-    549.2,
-    551.6
+    114.5,
+    430.0,
+    549.5,
+    552.0
    ],
    "id": "0625_2026MJ_62_q02aii_table2-1",
    "part": "(a)(ii)",
@@ -271,8 +271,8 @@
       },
       {
        "type": "text",
-       "html": "The readings shown by the thermometers at t = 4.0min <b>are</b> shown in Figure 2.2.",
-       "text": "The readings shown by the thermometers at t = 4.0min are shown in Figure 2.2."
+       "html": "The readings shown by the thermometers at t = 4.0 min <b>are</b> shown in Figure 2.2.",
+       "text": "The readings shown by the thermometers at t = 4.0 min are shown in Figure 2.2."
       },
       {
        "type": "figure",
@@ -285,24 +285,9 @@
        "text": "Record the readings in Table 2.1."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<b>time</b> t/<b>min</b>",
-         "<b>temperature</b> <b>of</b> <b>white</b> <b>card</b> θ<sub>W</sub>/°C",
-         "<b>temperature</b> <b>of</b> <b>black</b> <b>card</b> θ<sub>B</sub>/°C"
-        ],
-        [
-         "0",
-         "20.0",
-         "20.5"
-        ],
-        [
-         "4.0",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2026MJ_62_q02aii_table2-1",
+       "caption": "Table 2.1"
       },
       {
        "type": "answer",
@@ -326,7 +311,7 @@
     {
      "type": "list",
      "items": [
-      "adjusts the distance d<sub>1</sub> between the lamp and the white card so that the card is 1.0cm from the lamp",
+      "adjusts the distance d<sub>1</sub> between the lamp and the white card so that the card is 1.0 cm from the lamp",
       "adjusts the distance d<sub>2</sub> between the lamp and the black card."
      ]
     }
@@ -397,14 +382,13 @@
      "content": [
       {
        "type": "text",
-       "html": "Determine the temperature increase Δθbetween t = 0 and t = 4.0min for each card.",
-       "text": "Determine the temperature increase Δθbetween t = 0 and t = 4.0min for each card."
+       "html": "Determine the temperature increase Δθ between t = 0 and t = 4.0 min for each card.",
+       "text": "Determine the temperature increase Δθ between t = 0 and t = 4.0 min for each card."
       },
       {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "temperature increase of black card ΔθB =",
-       "unit": "°C"
+       "type": "text",
+       "html": "temperature increase of white card Δθ<sub>W</sub> = …… °C temperature increase of black card Δθ<sub>B</sub> = …… °C",
+       "text": "temperature increase of white card ΔθW = …… °C temperature increase of black card ΔθB = …… °C"
       },
       {
        "type": "marks",
@@ -487,9 +471,14 @@
        "text": "Give your answers to 2 significant figures. Include the unit in your answer."
       },
       {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "rate of temperature increase of black card ="
+       "type": "text",
+       "html": "rate of temperature increase of white card = …… unit ……",
+       "text": "rate of temperature increase of white card = …… unit ……"
+      },
+      {
+       "type": "text",
+       "html": "rate of temperature increase of black card = …… unit ……",
+       "text": "rate of temperature increase of black card = …… unit ……"
       },
       {
        "type": "marks",
@@ -783,6 +772,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

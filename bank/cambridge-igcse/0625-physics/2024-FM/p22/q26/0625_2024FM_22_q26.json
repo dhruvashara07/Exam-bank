@@ -32,10 +32,10 @@
   {
    "page": 12,
    "bbox": [
-    242.6,
+    242.0,
     87.0,
-    436.4,
-    188.1
+    437.0,
+    188.5
    ],
    "id": "0625_2024FM_22_q26_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-FM/p22/q26/figures/0625_2024FM_22_q26_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-FM/p22/q26/figures/0625_2024FM_22_q26_figA",
     "url": null,
-    "kb": 6.7
+    "kb": 6.6
    }
   },
   {
    "page": 12,
    "bbox": [
-    67.7,
+    67.5,
     258.5,
-    283.9,
-    384.1
+    284.0,
+    384.0
    ],
    "id": "0625_2024FM_22_q26_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-FM/p22/q26/figures/0625_2024FM_22_q26_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-FM/p22/q26/figures/0625_2024FM_22_q26_figB",
     "url": null,
-    "kb": 19.7
+    "kb": 19.6
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -141,40 +142,30 @@
    "text": "At which point is the magnetic field due to the magnets weakest and at which point is it strongest?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "weakest",
-     "strongest"
-    ],
-    [
-     "",
-     "magnetic field",
-     "magnetic field"
-    ],
-    [
-     "<b>A</b>",
-     "P",
-     "Q"
-    ],
-    [
-     "<b>B</b>",
-     "P",
-     "R"
-    ],
-    [
-     "<b>C</b>",
-     "Q",
-     "P"
-    ],
-    [
-     "<b>D</b>",
-     "Q",
-     "R"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024FM_22_q26_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "P Q"
+    },
+    {
+     "label": "B",
+     "html": "P R"
+    },
+    {
+     "label": "C",
+     "html": "Q P"
+    },
+    {
+     "label": "D",
+     "html": "Q R"
+    }
+   ]
   }
  ]
 }

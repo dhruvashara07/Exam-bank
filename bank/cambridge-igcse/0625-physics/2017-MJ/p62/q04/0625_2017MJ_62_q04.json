@@ -33,10 +33,10 @@
    "caption": "Fig. 4.1",
    "page": 8,
    "bbox": [
-    93.3,
-    113.8,
-    498.0,
-    269.4
+    93.0,
+    118.5,
+    497.5,
+    266.5
    ],
    "id": "0625_2017MJ_62_q04_fig4-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-MJ/p62/q04/figures/0625_2017MJ_62_q04_fig4-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-MJ/p62/q04/figures/0625_2017MJ_62_q04_fig4-1",
     "url": null,
-    "kb": 21.4
+    "kb": 21.3
    }
   },
   {
    "caption": "Table 4.1",
    "page": 8,
    "bbox": [
-    223.6,
-    427.4,
-    371.7,
-    585.3
+    223.5,
+    432.0,
+    372.0,
+    585.5
    ],
    "id": "0625_2017MJ_62_q04a_table4-1",
    "part": "(a)",
@@ -245,33 +245,9 @@
      "text": "time. The readings are recorded in Table 4.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>a</i> / cm",
-       "<i>b</i> / cm"
-      ],
-      [
-       "40.0",
-       "42.5"
-      ],
-      [
-       "35.0",
-       "36.4"
-      ],
-      [
-       "30.0",
-       "30.1"
-      ],
-      [
-       "25.0",
-       "23.9"
-      ],
-      [
-       "20.0",
-       "17.5"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2017MJ_62_q04a_table4-1",
+     "caption": "Table 4.1"
     }
    ]
   },
@@ -417,10 +393,36 @@
      "text": "120 g"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "m ="
+    },
+    {
      "type": "list",
      "items": [
-      "Calculate the value of <i>mX</i>, where <i>X</i> = 0.05 N cm / g.",
-      "Use the value of <i>a</i> in the first row of Table 4.1 to calculate <i>Pa</i>, where <i>P</i> = 1.00 N. <i>P</i> is the weight of load <b>P</b>. Include the unit.",
+      "Calculate the value of <i>mX</i>, where <i>X</i> = 0.05 N cm / g."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "mX =",
+     "unit": "N cm"
+    },
+    {
+     "type": "list",
+     "items": [
+      "Use the value of <i>a</i> in the first row of Table 4.1 to calculate <i>Pa</i>, where <i>P</i> = 1.00 N. <i>P</i> is the weight of load <b>P</b>. Include the unit."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Pa ="
+    },
+    {
+     "type": "list",
+     "items": [
       "Use the value of <i>b</i> in the first row of Table 4.1 to calculate <i>Qb</i>, where <i>Q</i> = 0.80 N. <i>Q</i> is the weight of load <b>Q</b>."
      ]
     },
@@ -527,6 +529,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

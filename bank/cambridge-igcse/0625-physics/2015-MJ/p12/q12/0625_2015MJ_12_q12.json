@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.6,
-    502.9,
-    313.2,
-    642.1
+    67.5,
+    502.5,
+    313.5,
+    642.5
    ],
    "id": "0625_2015MJ_12_q12_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p12/q12/figures/0625_2015MJ_12_q12_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p12/q12/figures/0625_2015MJ_12_q12_figA",
     "url": null,
-    "kb": 27.9
+    "kb": 27.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "How does the evaporation affect the temperature of the water remaining in the puddle, and how does it affect the average speed of the remaining water molecules in the puddle?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "temperature of water in puddle",
-     "average speed of water molecules in puddle"
-    ],
-    [
-     "A",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "B",
-     "decreases",
-     "increases"
-    ],
-    [
-     "C",
-     "increases",
-     "decreases"
-    ],
-    [
-     "D",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_12_q12_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

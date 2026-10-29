@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    166.3,
-    103.1,
-    402.4,
-    311.3
+    165.5,
+    107.5,
+    403.0,
+    309.0
    ],
    "id": "0625_2019ON_51_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 6,
    "bbox": [
-    150.9,
-    403.5,
-    418.3,
-    715.0
+    150.5,
+    407.5,
+    419.0,
+    712.5
    ],
    "id": "0625_2019ON_51_q02e_fig2-2",
    "part": "(e)",
@@ -150,6 +150,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "V1 ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "I1 ="
       },
       {
@@ -217,7 +222,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>1</sub> of the lamp L<sub>1</sub> using the equation <i>R</i><sub>1</sub> = \\(\\frac{<i>V</i><sub>1</sub>}{<i>I</i><sub>1</sub>}\\).",
+       "html": "Calculate the resistance <i>R</i><sub>1</sub> of the lamp L<sub>1</sub> using the equation <i>R</i><sub>1</sub> = \\(\\frac{V_{1}}{I_{1}}\\).",
        "text": "Calculate the resistance R1 of the lamp L1 using the equation R1 = (V1)/(I1)."
       },
       {
@@ -299,8 +304,23 @@
     {
      "type": "list",
      "items": [
-      "Measure and record the p.d. <i>V</i><sub>2</sub> across lamps L<sub>1</sub> and L<sub>2</sub> and the current <i>I</i><sub>2</sub> in the circuit. Open the switch.",
-      "Calculate the combined resistance <i>R</i><sub>2</sub> of lamps L<sub>1</sub> and L<sub>2</sub> connected in series, using the equation <i>R</i><sub>2</sub> = \\(\\frac{<i>V</i><sub>2</sub>}{<i>I</i><sub>2</sub>}\\)."
+      "Measure and record the p.d. <i>V</i><sub>2</sub> across lamps L<sub>1</sub> and L<sub>2</sub> and the current <i>I</i><sub>2</sub> in the circuit. Open the switch."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V2 ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "I2 ="
+    },
+    {
+     "type": "list",
+     "items": [
+      "Calculate the combined resistance <i>R</i><sub>2</sub> of lamps L<sub>1</sub> and L<sub>2</sub> connected in series, using the equation <i>R</i><sub>2</sub> = \\(\\frac{V_{2}}{I_{2}}\\)."
      ]
     },
     {
@@ -380,8 +400,23 @@
     {
      "type": "list",
      "items": [
-      "Measure and record the potential difference <i>V</i><sub>3</sub> across the three lamps and the current <i>I</i><sub>3</sub> in the circuit. Open the switch.",
-      "Calculate the combined resistance <i>R</i><sub>3</sub> of lamps L<sub>1</sub>, L<sub>2</sub> and L<sub>3</sub> connected in series, using the equation <i>R</i><sub>3</sub> = \\(\\frac{<i>V</i><sub>3</sub>}{<i>I</i><sub>3</sub>}\\)."
+      "Measure and record the potential difference <i>V</i><sub>3</sub> across the three lamps and the current <i>I</i><sub>3</sub> in the circuit. Open the switch."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V3 ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "I3 ="
+    },
+    {
+     "type": "list",
+     "items": [
+      "Calculate the combined resistance <i>R</i><sub>3</sub> of lamps L<sub>1</sub>, L<sub>2</sub> and L<sub>3</sub> connected in series, using the equation <i>R</i><sub>3</sub> = \\(\\frac{V_{3}}{I_{3}}\\)."
      ]
     },
     {
@@ -461,7 +496,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -576,6 +620,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

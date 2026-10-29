@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    122.6,
-    255.2,
-    248.1
+    67.5,
+    122.5,
+    255.5,
+    248.0
    ],
    "id": "0625_2021MJ_21_q04_figA",
    "caption": null,
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "An object of mass 2.0kg is taken from the Earth, where the gravitational field strength is 10N/kg, to the Moon, where the gravitational field strength is 1.6N/kg.",
-   "text": "An object of mass 2.0kg is taken from the Earth, where the gravitational field strength is 10N/kg, to the Moon, where the gravitational field strength is 1.6N/kg."
+   "html": "An object of mass 2.0 kg is taken from the Earth, where the gravitational field strength is 10 N / kg, to the Moon, where the gravitational field strength is 1.6 N / kg.",
+   "text": "An object of mass 2.0 kg is taken from the Earth, where the gravitational field strength is 10 N / kg, to the Moon, where the gravitational field strength is 1.6 N / kg."
   },
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "weight on",
-     "weight on"
-    ],
-    [
-     "",
-     "the Earth/N",
-     "the Moon/N"
-    ],
-    [
-     "<b>A</b>",
-     "0.20",
-     "0.80"
-    ],
-    [
-     "<b>B</b>",
-     "0.20",
-     "3.2"
-    ],
-    [
-     "<b>C</b>",
-     "20",
-     "0.80"
-    ],
-    [
-     "<b>D</b>",
-     "20",
-     "3.2"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_21_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0.20 0.80"
+    },
+    {
+     "label": "B",
+     "html": "0.20 3.2"
+    },
+    {
+     "label": "C",
+     "html": "20 0.80"
+    },
+    {
+     "label": "D",
+     "html": "20 3.2"
+    }
+   ]
   }
  ]
 }

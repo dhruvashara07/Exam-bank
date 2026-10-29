@@ -32,9 +32,9 @@
   {
    "page": 17,
    "bbox": [
-    67.6,
-    225.6,
-    311.1,
+    67.5,
+    225.5,
+    311.5,
     337.0
    ],
    "id": "0625_2015FM_12_q38_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-FM/p12/q38/figures/0625_2015FM_12_q38_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-FM/p12/q38/figures/0625_2015FM_12_q38_figA",
     "url": null,
-    "kb": 28.2
+    "kb": 28.0
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row shows the relative ionising effects and penetrating abilities of α-particles and β-particles?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "ionising effect",
-     "penetrating ability"
-    ],
-    [
-     "A",
-     "α greater than β",
-     "α greater than β"
-    ],
-    [
-     "B",
-     "α greater than β",
-     "α less than β"
-    ],
-    [
-     "C",
-     "α less than β",
-     "α greater than β"
-    ],
-    [
-     "D",
-     "α less than β",
-     "α less than β"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015FM_12_q38_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "α greater than β α greater than β"
+    },
+    {
+     "label": "B",
+     "html": "α greater than β α less than β"
+    },
+    {
+     "label": "C",
+     "html": "α less than β α greater than β"
+    },
+    {
+     "label": "D",
+     "html": "α less than β α less than β"
+    }
+   ]
   }
  ]
 }

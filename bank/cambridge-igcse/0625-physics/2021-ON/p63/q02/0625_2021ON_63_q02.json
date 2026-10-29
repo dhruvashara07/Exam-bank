@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 6,
    "bbox": [
-    105.3,
-    111.3,
-    490.0,
-    356.5
+    105.5,
+    110.5,
+    489.5,
+    355.0
    ],
    "id": "0625_2021ON_63_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 6,
    "bbox": [
-    76.0,
-    453.0,
-    519.3,
-    625.6
+    75.5,
+    452.5,
+    520.0,
+    624.0
    ],
    "id": "0625_2021ON_63_q02b_fig2-2",
    "part": "(b)",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p63/q02/figures/0625_2021ON_63_q02b_fig2-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p63/q02/figures/0625_2021ON_63_q02b_fig2-2",
     "url": null,
-    "kb": 41.2
+    "kb": 41.3
    }
   },
   {
    "caption": "Fig. 2.3",
    "page": 6,
    "bbox": [
-    76.0,
-    453.0,
-    519.3,
-    625.6
+    75.5,
+    452.5,
+    520.0,
+    624.0
    ],
    "id": "0625_2021ON_63_q02b_fig2-3",
    "part": "(b)",
@@ -83,17 +83,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p63/q02/figures/0625_2021ON_63_q02b_fig2-3.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p63/q02/figures/0625_2021ON_63_q02b_fig2-3",
     "url": null,
-    "kb": 41.2
+    "kb": 41.3
    }
   },
   {
    "caption": "Table 2.1",
    "page": 7,
    "bbox": [
-    147.1,
-    58.0,
-    448.2,
-    206.2
+    147.0,
+    61.5,
+    448.5,
+    206.5
    ],
    "id": "0625_2021ON_63_q02bi_table2-1",
    "part": "(b)(i)",
@@ -301,44 +301,9 @@
        "value": 2
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "wire",
-         "<i>l</i> / cm",
-         "<i>V</i> /",
-         "<i>I</i> /",
-         "<i>R</i> /"
-        ],
-        [
-         "A",
-         "90.0",
-         "",
-         "",
-         ""
-        ],
-        [
-         "B",
-         "90.0",
-         "2.6",
-         "0.45",
-         ""
-        ],
-        [
-         "A",
-         "50.0",
-         "2.7",
-         "0.54",
-         ""
-        ],
-        [
-         "B",
-         "50.0",
-         "2.3",
-         "0.72",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2021ON_63_q02bi_table2-1",
+       "caption": "Table 2.1"
       }
      ]
     },
@@ -407,7 +372,7 @@
       },
       {
        "type": "text",
-       "html": "<i>R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\).",
+       "html": "<i>R</i> = \\(\\frac{V}{I}\\).",
        "text": "R = (V)/(I)."
       },
       {
@@ -579,8 +544,13 @@
       },
       {
        "type": "text",
-       "html": "<i>P</i> = \\(\\frac{<i>R</i> for 90.0 cm of wire A}{<i>R</i> for 90.0 cm of wire B}\\).",
+       "html": "<i>P</i> = \\(\\frac{R \\text{for} 90.0 \\text{cm of wire} A}{R \\text{for} 90.0 \\text{cm of wire} B}\\).",
        "text": "P = (R for 90.0 cm of wire A)/(R for 90.0 cm of wire B)."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "P ="
       },
       {
        "type": "text",
@@ -589,7 +559,7 @@
       },
       {
        "type": "text",
-       "html": "<i>Q</i> = \\(\\frac{<i>R</i> for 50.0 cm of wire A}{<i>R</i> for 50.0 cm of wire B}\\).",
+       "html": "<i>Q</i> = \\(\\frac{R \\text{for} 50.0 \\text{cm of wire} A}{R \\text{for} 50.0 \\text{cm of wire} B}\\).",
        "text": "Q = (R for 50.0 cm of wire A)/(R for 50.0 cm of wire B)."
       },
       {
@@ -669,7 +639,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -772,6 +751,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

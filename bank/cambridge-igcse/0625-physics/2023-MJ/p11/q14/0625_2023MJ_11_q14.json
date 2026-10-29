@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    366.3,
-    364.7,
-    477.7
+    67.5,
+    366.0,
+    365.0,
+    478.0
    ],
    "id": "0625_2023MJ_11_q14_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p11/q14/figures/0625_2023MJ_11_q14_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p11/q14/figures/0625_2023MJ_11_q14_figA",
     "url": null,
-    "kb": 26.7
+    "kb": 26.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which row gives the relative separation of the particles?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "gas",
-     "liquid",
-     "solid"
-    ],
-    [
-     "<b>A</b>",
-     "far apart",
-     "far apart",
-     "far apart"
-    ],
-    [
-     "<b>B</b>",
-     "far apart",
-     "far apart",
-     "close together"
-    ],
-    [
-     "<b>C</b>",
-     "far apart",
-     "close together",
-     "close together"
-    ],
-    [
-     "<b>D</b>",
-     "close together",
-     "close together",
-     "far apart"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_11_q14_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "far apart far apart far apart"
+    },
+    {
+     "label": "B",
+     "html": "far apart far apart close together"
+    },
+    {
+     "label": "C",
+     "html": "far apart close together close together"
+    },
+    {
+     "label": "D",
+     "html": "close together close together far apart"
+    }
+   ]
   }
  ]
 }

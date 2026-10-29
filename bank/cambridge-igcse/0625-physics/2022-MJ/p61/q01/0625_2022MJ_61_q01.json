@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    71.7,
-    110.9,
-    523.1,
-    378.9
+    72.0,
+    110.5,
+    523.5,
+    377.5
    ],
    "id": "0625_2022MJ_61_q01_fig1-1",
    "part": "",
@@ -128,6 +128,18 @@
        "type": "text",
        "html": "of the coiled part of the spring.",
        "text": "of the coiled part of the spring."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "reading 1",
+       "unit": "cm"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "reading 2",
+       "unit": "cm"
       },
       {
        "type": "answer",
@@ -286,9 +298,21 @@
      "text": "2.2"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "l 1 =",
+     "unit": "cm"
+    },
+    {
      "type": "text",
      "html": "Calculate the extension <i>e</i><sub>1</sub> using the equation <i>e</i><sub>1</sub> = (<i>l</i><sub> 1</sub> – <i>l</i><sub> 0</sub>).",
      "text": "Calculate the extension e1 using the equation e1 = (l 1 – l 0)."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "e1 =",
+     "unit": "cm"
     },
     {
      "type": "text",
@@ -297,7 +321,7 @@
     },
     {
      "type": "text",
-     "html": "<i>k</i> = \\(\\frac{<i>P</i>}{<i>e</i><sub>1</sub>}\\).",
+     "html": "<i>k</i> = \\(\\frac{P}{e_{1}}\\).",
      "text": "k = (P)/(e1)."
     },
     {
@@ -385,9 +409,21 @@
      "text": "6.3"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "l 5 =",
+     "unit": "cm"
+    },
+    {
      "type": "text",
      "html": "Calculate the extension <i>e</i><sub>5</sub> using the equation <i>e</i><sub>5</sub> = (<i>l</i><sub> 5</sub> – <i>l</i><sub> 0</sub>).",
      "text": "Calculate the extension e5 using the equation e5 = (l 5 – l 0)."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "e5 =",
+     "unit": "cm"
     },
     {
      "type": "text",
@@ -396,7 +432,7 @@
     },
     {
      "type": "text",
-     "html": "<i>k</i> = \\(\\frac{<i>P</i>}{<i>e</i><sub>5</sub>}\\).",
+     "html": "<i>k</i> = \\(\\frac{P}{e_{5}}\\).",
      "text": "k = (P)/(e5)."
     },
     {
@@ -480,7 +516,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -693,6 +738,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

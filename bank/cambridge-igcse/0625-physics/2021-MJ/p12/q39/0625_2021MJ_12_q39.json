@@ -32,10 +32,10 @@
   {
    "page": 20,
    "bbox": [
-    67.7,
-    110.8,
+    67.5,
+    110.5,
     513.5,
-    221.6
+    222.0
    ],
    "id": "0625_2021MJ_12_q39_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p12/q39/figures/0625_2021MJ_12_q39_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p12/q39/figures/0625_2021MJ_12_q39_figA",
     "url": null,
-    "kb": 38.5
+    "kb": 38.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "what decays",
-     "what happens to the atom"
-    ],
-    [
-     "<b>A</b>",
-     "the nucleus of the atom",
-     "it becomes a different element"
-    ],
-    [
-     "<b>B</b>",
-     "the nucleus of the atom",
-     "it becomes a lighter version of the same element"
-    ],
-    [
-     "<b>C</b>",
-     "the outer layers of the atom",
-     "it becomes a different element"
-    ],
-    [
-     "<b>D</b>",
-     "the outer layers of the atom",
-     "it becomes a lighter version of the same element"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_12_q39_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "the nucleus of the atom it becomes a different element"
+    },
+    {
+     "label": "B",
+     "html": "the nucleus of the atom it becomes a lighter version of the same element"
+    },
+    {
+     "label": "C",
+     "html": "the outer layers of the atom it becomes a different element"
+    },
+    {
+     "label": "D",
+     "html": "the outer layers of the atom it becomes a lighter version of the same element"
+    }
+   ]
   }
  ]
 }

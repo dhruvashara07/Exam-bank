@@ -32,9 +32,9 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    479.1,
-    482.6,
+    67.5,
+    479.0,
+    483.0,
     590.5
    ],
    "id": "0625_2024MJ_11_q06_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p11/q06/figures/0625_2024MJ_11_q06_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p11/q06/figures/0625_2024MJ_11_q06_figA",
     "url": null,
-    "kb": 36.7
+    "kb": 36.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row about energy stores is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>A</b>",
-     "kinetic energy store of bicycle",
-     "chemical energy store of brakes"
-    ],
-    [
-     "<b>B</b>",
-     "kinetic energy store of bicycle",
-     "thermal energy store of brakes"
-    ],
-    [
-     "<b>C</b>",
-     "thermal energy store of brakes",
-     "kinetic energy store of bicycle"
-    ],
-    [
-     "<b>D</b>",
-     "thermal energy store of brakes",
-     "chemical energy store of bicycle"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_11_q06_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "kinetic energy store of bicycle chemical energy store of brakes"
+    },
+    {
+     "label": "B",
+     "html": "kinetic energy store of bicycle thermal energy store of brakes"
+    },
+    {
+     "label": "C",
+     "html": "thermal energy store of brakes kinetic energy store of bicycle"
+    },
+    {
+     "label": "D",
+     "html": "thermal energy store of brakes chemical energy store of bicycle"
+    }
+   ]
   }
  ]
 }

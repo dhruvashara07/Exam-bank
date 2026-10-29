@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 6,
    "bbox": [
-    237.4,
-    86.9,
-    357.9,
-    220.4
+    237.0,
+    86.5,
+    358.0,
+    220.5
    ],
    "id": "0625_2015MJ_21_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 6,
    "bbox": [
-    179.4,
-    466.4,
+    179.0,
+    466.0,
     409.0,
-    627.1
+    627.5
    ],
    "id": "0625_2015MJ_21_q03b_fig3-2",
    "part": "(b)",
@@ -137,9 +137,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "Estimate the mass of the student. ……",
+       "text": "Estimate the mass of the student. ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(a) (i) Estimate the mass of the student."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -340,7 +344,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -456,6 +469,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

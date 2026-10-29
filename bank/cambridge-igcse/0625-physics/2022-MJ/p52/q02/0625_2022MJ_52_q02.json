@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    169.8,
-    111.3,
-    425.5,
-    285.5
+    169.5,
+    110.5,
+    426.0,
+    284.0
    ],
    "id": "0625_2022MJ_52_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 5,
    "bbox": [
-    169.9,
-    540.3,
-    425.6,
-    739.6
+    170.0,
+    539.5,
+    426.0,
+    738.0
    ],
    "id": "0625_2022MJ_52_q02c_fig2-2",
    "part": "(c)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p52/q02/figures/0625_2022MJ_52_q02c_fig2-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p52/q02/figures/0625_2022MJ_52_q02c_fig2-2",
     "url": null,
-    "kb": 11.7
+    "kb": 11.6
    }
   }
  ],
@@ -315,7 +315,7 @@
       },
       {
        "type": "text",
-       "html": "<i>R</i><sub>1</sub> = \\(\\frac{<i>V</i><sub>1</sub>}{<i>I</i><sub>1</sub>}\\).",
+       "html": "<i>R</i><sub>1</sub> = \\(\\frac{V_{1}}{I_{1}}\\).",
        "text": "R1 = (V1)/(I1)."
       },
       {
@@ -512,9 +512,21 @@
        "text": "Close the switch. Measure the current I2 in the circuit."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "I2 =",
+       "unit": "A"
+      },
+      {
        "type": "text",
        "html": "Measure the potential difference <i>V</i><sub>2</sub> across the combination of the three resistors.",
        "text": "Measure the potential difference V2 across the combination of the three resistors."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V2 =",
+       "unit": "V"
       },
       {
        "type": "text",
@@ -523,7 +535,7 @@
       },
       {
        "type": "text",
-       "html": "<i>R</i><sub>2</sub> = \\(\\frac{<i>V</i><sub>2</sub>}{<i>I</i><sub>2</sub>}\\).",
+       "html": "<i>R</i><sub>2</sub> = \\(\\frac{V_{2}}{I_{2}}\\).",
        "text": "R2 = (V2)/(I2)."
       },
       {
@@ -649,9 +661,21 @@
      "text": "Close the switch. Measure the current I3 in the circuit."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "I3 =",
+     "unit": "A"
+    },
+    {
      "type": "text",
      "html": "Measure the potential difference <i>V</i><sub>3</sub> across the combination of the three resistors.",
      "text": "Measure the potential difference V3 across the combination of the three resistors."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V3 =",
+     "unit": "V"
     },
     {
      "type": "text",
@@ -660,7 +684,7 @@
     },
     {
      "type": "text",
-     "html": "<i>R</i><sub>3</sub> = \\(\\frac{<i>V</i><sub>3</sub>}{<i>I</i><sub>3</sub>}\\).",
+     "html": "<i>R</i><sub>3</sub> = \\(\\frac{V_{3}}{I_{3}}\\).",
      "text": "R3 = (V3)/(I3)."
     },
     {
@@ -771,6 +795,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

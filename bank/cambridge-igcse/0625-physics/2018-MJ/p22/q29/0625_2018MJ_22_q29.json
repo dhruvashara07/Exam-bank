@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    544.3,
-    278.9,
-    655.7
+    67.5,
+    544.0,
+    279.0,
+    656.0
    ],
    "id": "0625_2018MJ_22_q29_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p22/q29/figures/0625_2018MJ_22_q29_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p22/q29/figures/0625_2018MJ_22_q29_figA",
     "url": null,
-    "kb": 17.4
+    "kb": 17.2
    }
   }
  ],
@@ -90,52 +90,48 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A piece of wire is 40cm long and has a diameter of 2.0mm.",
-   "text": "A piece of wire is 40cm long and has a diameter of 2.0mm."
+   "html": "A piece of wire is 40 cm long and has a diameter of 2.0 mm.",
+   "text": "A piece of wire is 40 cm long and has a diameter of 2.0 mm."
   },
   {
    "type": "text",
-   "html": "Its resistance is 0.30Ω.",
-   "text": "Its resistance is 0.30Ω."
+   "html": "Its resistance is 0.30 Ω.",
+   "text": "Its resistance is 0.30 Ω."
   },
   {
    "type": "text",
-   "html": "Which wire of the same material has a resistance of 0.15Ω?",
-   "text": "Which wire of the same material has a resistance of 0.15Ω?"
+   "html": "Which wire of the same material has a resistance of 0.15 Ω?",
+   "text": "Which wire of the same material has a resistance of 0.15 Ω?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "length/cm",
-     "diameter/mm"
-    ],
-    [
-     "<b>A</b>",
-     "20",
-     "1.0"
-    ],
-    [
-     "<b>B</b>",
-     "20",
-     "4.0"
-    ],
-    [
-     "<b>C</b>",
-     "80",
-     "1.0"
-    ],
-    [
-     "<b>D</b>",
-     "80",
-     "4.0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_22_q29_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "20 1.0"
+    },
+    {
+     "label": "B",
+     "html": "20 4.0"
+    },
+    {
+     "label": "C",
+     "html": "80 1.0"
+    },
+    {
+     "label": "D",
+     "html": "80 4.0"
+    }
+   ]
   }
  ]
 }

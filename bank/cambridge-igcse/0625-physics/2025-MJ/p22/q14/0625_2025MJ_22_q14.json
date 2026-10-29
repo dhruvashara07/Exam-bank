@@ -35,7 +35,7 @@
     154.7,
     138.2,
     440.4,
-    307.5
+    308.0
    ],
    "id": "0625_2025MJ_22_q14_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -98,8 +99,8 @@
   },
   {
    "type": "text",
-   "html": "In the experiment, a heater is switched on for <i>t</i>s and the increase in temperature Δθ of a block of the metal is measured in °C.",
-   "text": "In the experiment, a heater is switched on for ts and the increase in temperature Δθ of a block of the metal is measured in °C."
+   "html": "In the experiment, a heater is switched on for <i>t</i> s and the increase in temperature Δθ of a block of the metal is measured in °C.",
+   "text": "In the experiment, a heater is switched on for t s and the increase in temperature Δθ of a block of the metal is measured in °C."
   },
   {
    "type": "figure",
@@ -116,19 +117,19 @@
    "options": [
     {
      "label": "A",
-     "html": "<i>c</i> = \\(\\frac{<i>P</i>}{<i>tm</i>Δθ}\\)"
+     "html": "<i>c</i> = \\(\\frac{P}{\\text{tm}Δθ}\\)"
     },
     {
      "label": "B",
-     "html": "<i>c</i> = \\(\\frac{<i>P</i><i>t</i>}{<i>m</i>Δθ}\\)"
+     "html": "<i>c</i> = \\(\\frac{\\text{Pt}}{mΔθ}\\)"
     },
     {
      "label": "C",
-     "html": "<i>c</i> = \\(\\frac{<i>tm</i>Δθ}{<i>P</i>}\\)"
+     "html": "<i>c</i> = \\(\\frac{\\text{tm}Δθ}{P}\\)"
     },
     {
      "label": "D",
-     "html": "<i>c</i> = \\(\\frac{<i>m</i>Δθ}{<i>P</i><i>t</i>}\\)"
+     "html": "<i>c</i> = \\(\\frac{mΔθ}{\\text{Pt}}\\)"
     }
    ]
   }

@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    108.6,
-    95.2,
-    486.7,
-    303.4
+    109.0,
+    98.0,
+    486.0,
+    300.5
    ],
    "id": "0625_2018MJ_51_q01_fig1-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p51/q01/figures/0625_2018MJ_51_q01_fig1-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p51/q01/figures/0625_2018MJ_51_q01_fig1-1",
     "url": null,
-    "kb": 29.0
+    "kb": 28.9
    }
   },
   {
    "caption": "Fig. 1.2",
    "page": 2,
    "bbox": [
-    108.6,
-    95.2,
-    486.7,
-    303.4
+    109.0,
+    98.0,
+    486.0,
+    300.5
    ],
    "id": "0625_2018MJ_51_q01_fig1-2",
    "part": "",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p51/q01/figures/0625_2018MJ_51_q01_fig1-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p51/q01/figures/0625_2018MJ_51_q01_fig1-2",
     "url": null,
-    "kb": 29.0
+    "kb": 28.9
    }
   }
  ],
@@ -382,7 +382,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the acceleration of free fall <i>g</i> using the equation <i>g</i> = \\(\\frac{20}{<i>T </i><sup>2</sup>}\\).",
+       "html": "Calculate the acceleration of free fall <i>g</i> using the equation <i>g</i> = \\(\\frac{20}{T ^{2}}\\).",
        "text": "Calculate the acceleration of free fall g using the equation g = (20)/(T 2)."
       },
       {
@@ -501,6 +501,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "t ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "T ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "T 2 ="
       },
       {
@@ -569,7 +579,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the acceleration of free fall <i>g</i> using the equation <i>g</i> = \\(\\frac{40}{<i>T </i><sup>2</sup>}\\).",
+       "html": "Calculate the acceleration of free fall <i>g</i> using the equation <i>g</i> = \\(\\frac{40}{T ^{2}}\\).",
        "text": "Calculate the acceleration of free fall g using the equation g = (40)/(T 2)."
       },
       {
@@ -659,7 +669,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -759,6 +778,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

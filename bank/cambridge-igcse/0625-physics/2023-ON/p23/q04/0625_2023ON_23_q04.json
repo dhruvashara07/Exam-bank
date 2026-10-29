@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    259.1,
-    136.1,
-    336.3,
-    262.6
+    259.0,
+    136.5,
+    336.5,
+    263.0
    ],
    "id": "0625_2023ON_23_q04_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    307.7,
-    316.1,
-    433.1
+    67.5,
+    307.5,
+    316.0,
+    433.5
    ],
    "id": "0625_2023ON_23_q04_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p23/q04/figures/0625_2023ON_23_q04_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p23/q04/figures/0625_2023ON_23_q04_figB",
     "url": null,
-    "kb": 26.5
+    "kb": 26.4
    }
   }
  ],
@@ -109,16 +109,17 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The mass of air hitting the blades of a wind turbine each second is 1.5 × 10<sup>4</sup>kg.",
-   "text": "The mass of air hitting the blades of a wind turbine each second is 1.5 × 104kg."
+   "html": "The mass of air hitting the blades of a wind turbine each second is 1.5 × 10<sup>4</sup> kg.",
+   "text": "The mass of air hitting the blades of a wind turbine each second is 1.5 × 104 kg."
   },
   {
    "type": "text",
-   "html": "The speed of the air is 4.0m/s. The density of air is 1.2kg/m<sup>3</sup>.",
-   "text": "The speed of the air is 4.0m/s. The density of air is 1.2kg/m3."
+   "html": "The speed of the air is 4.0 m / s. The density of air is 1.2 kg / m<sup>3</sup>.",
+   "text": "The speed of the air is 4.0 m / s. The density of air is 1.2 kg / m3."
   },
   {
    "type": "figure",
@@ -131,35 +132,30 @@
    "text": "Which row gives the volume of the air hitting the blades each second and the kinetic energy of the air hitting the blades each second?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "volume of air <sup>3</sup> each second/m",
-     "kinetic energy each second/J"
-    ],
-    [
-     "<b>A</b>",
-     "13000",
-     "72000"
-    ],
-    [
-     "<b>B</b>",
-     "13000",
-     "120000"
-    ],
-    [
-     "<b>C</b>",
-     "18000",
-     "72000"
-    ],
-    [
-     "<b>D</b>",
-     "18000",
-     "120000"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_23_q04_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "13000 72000"
+    },
+    {
+     "label": "B",
+     "html": "13000 120000"
+    },
+    {
+     "label": "C",
+     "html": "18000 72000"
+    },
+    {
+     "label": "D",
+     "html": "18000 120000"
+    }
+   ]
   }
  ]
 }

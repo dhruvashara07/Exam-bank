@@ -26,6 +26,12 @@ BOARD = {'CAIE': 'cambridge', 'IB': 'ib'}
 KINDS = ('question', 'figures', 'markscheme')
 CLOUD_ROOT = 'question_bank'                 # top Cloudinary folder
 APPROVALS = os.path.join(ROOT, 'review', 'approvals')      # one <paper id>.json per approved paper
+CHECKS = os.path.join(ROOT, 'review', 'checks')            # automatic check result per paper (pipeline/checks.py)
+CLAUDE_CHECKS = os.path.join(ROOT, 'review', 'claude')     # Claude's visual check per paper
+BATCHES = os.path.join(ROOT, 'review', 'batches')          # one file per upload batch
+ROUNDS = os.path.join(ROOT, 'review', 'rounds')            # review rounds shown to Dhruv
+PUBLISHED = os.path.join(ROOT, 'review', 'published.json')  # what the last MongoDB sync put online
+PIPELINE_VERSION = '2.1'     # bump when the cutting/linking/editable rules change; stamped on every question
 
 
 def paper_dir(meta):

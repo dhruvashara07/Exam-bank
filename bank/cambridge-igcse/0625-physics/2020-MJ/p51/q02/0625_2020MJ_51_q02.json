@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    161.8,
-    110.8,
-    447.9,
-    319.9
+    161.5,
+    114.0,
+    448.5,
+    318.5
    ],
    "id": "0625_2020MJ_51_q02_fig2-1",
    "part": "",
@@ -221,15 +221,15 @@
        "text": "Measure the potential difference V1 across lamp L1."
       },
       {
-       "type": "text",
-       "html": "Switch off.",
-       "text": "Switch off."
-      },
-      {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "V1 =",
        "unit": "V"
+      },
+      {
+       "type": "text",
+       "html": "Switch off.",
+       "text": "Switch off."
       },
       {
        "type": "marks",
@@ -297,7 +297,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>1</sub> of the filament of lamp L<sub>1</sub>. Use the equation <i>R</i><sub>1</sub> = \\(\\frac{<i>V</i><sub>1</sub>}{<i>I</i>}\\). Include the unit.",
+       "html": "Calculate the resistance <i>R</i><sub>1</sub> of the filament of lamp L<sub>1</sub>. Use the equation <i>R</i><sub>1</sub> = \\(\\frac{V_{1}}{I}\\). Include the unit.",
        "text": "Calculate the resistance R1 of the filament of lamp L1. Use the equation R1 = (V1)/(I). Include the unit."
       },
       {
@@ -389,13 +389,25 @@
      "text": "Disconnect the voltmeter. Connect lamp L2 in series with lamp L1. Connect the voltmeter across lamp L2. Switch on. Measure the current I2 in the circuit."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "I2 =",
+     "unit": "A"
+    },
+    {
      "type": "text",
      "html": "Measure the potential difference <i>V</i><sub>2</sub> across lamp L<sub>2</sub>.",
      "text": "Measure the potential difference V2 across lamp L2."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V2 =",
+     "unit": "V"
+    },
+    {
      "type": "text",
-     "html": "Switch off. Calculate the resistance <i>R</i><sub>2</sub> of the filament of lamp L<sub>2</sub>. Use the equation <i>R</i><sub>2</sub> = \\(\\frac{<i>V</i><sub>2</sub>}{<i>I</i>}\\).",
+     "html": "Switch off. Calculate the resistance <i>R</i><sub>2</sub> of the filament of lamp L<sub>2</sub>. Use the equation <i>R</i><sub>2</sub> = \\(\\frac{V_{2}}{I}\\).",
      "text": "Switch off. Calculate the resistance R2 of the filament of lamp L2. Use the equation R2 = (V2)/(I)."
     },
     {
@@ -477,13 +489,25 @@
      "text": "Disconnect the voltmeter. Connect lamp L3 in series with lamps L1 and L2. Connect the voltmeter across lamp L3. Switch on. Measure the current I3 in the circuit."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "I3 =",
+     "unit": "A"
+    },
+    {
      "type": "text",
      "html": "Measure the potential difference <i>V</i><sub>3</sub> across lamp L<sub>3</sub>.",
      "text": "Measure the potential difference V3 across lamp L3."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V3 =",
+     "unit": "V"
+    },
+    {
      "type": "text",
-     "html": "Switch off. Calculate the resistance <i>R</i><sub>3</sub> of the filament of lamp L<sub>3</sub>. Use the equation <i>R</i><sub>3</sub> = \\(\\frac{<i>V</i><sub>3</sub>}{<i>I</i>}\\).",
+     "html": "Switch off. Calculate the resistance <i>R</i><sub>3</sub> of the filament of lamp L<sub>3</sub>. Use the equation <i>R</i><sub>3</sub> = \\(\\frac{V_{3}}{I}\\).",
      "text": "Switch off. Calculate the resistance R3 of the filament of lamp L3. Use the equation R3 = (V3)/(I)."
     },
     {
@@ -641,7 +665,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -716,7 +749,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "method of changing the variable",
+     "prefix": "variable to change"
+    },
+    {
+     "type": "text",
+     "html": "method of changing the variable ……",
+     "text": "method of changing the variable ……"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -743,6 +785,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

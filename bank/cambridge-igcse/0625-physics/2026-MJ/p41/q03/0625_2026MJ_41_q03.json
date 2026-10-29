@@ -10,9 +10,9 @@
    "page": 4,
    "bbox": [
     92.0,
-    98.5,
-    304.8,
-    241.7
+    101.0,
+    305.0,
+    242.0
    ],
    "id": "0625_2026MJ_41_q03a_fig3-1",
    "part": "(a)",
@@ -194,8 +194,8 @@
      "content": [
       {
        "type": "text",
-       "html": "The wavelength of the wave is 0.80m.",
-       "text": "The wavelength of the wave is 0.80m."
+       "html": "The wavelength of the wave is 0.80 m.",
+       "text": "The wavelength of the wave is 0.80 m."
       },
       {
        "type": "text",
@@ -331,7 +331,7 @@
        "type": "answer",
        "kind": "answer_line",
        "prefix": "speed =",
-       "unit": "m/s"
+       "unit": "m / s"
       },
       {
        "type": "marks",
@@ -477,10 +477,13 @@
        "text": "Complete the sentence."
       },
       {
+       "type": "text",
+       "html": "Light of a single frequency is described as …… light.",
+       "text": "Light of a single frequency is described as …… light."
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "Light of a single frequency is described as",
-       "unit": "light."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -493,8 +496,8 @@
    "content": [
     {
      "type": "text",
-     "html": "A laser produces a beam of red light with a wavelength of 670nm in air.",
-     "text": "A laser produces a beam of red light with a wavelength of 670nm in air."
+     "html": "A laser produces a beam of red light with a wavelength of 670 nm in air.",
+     "text": "A laser produces a beam of red light with a wavelength of 670 nm in air."
     }
    ]
   }
@@ -515,5 +518,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

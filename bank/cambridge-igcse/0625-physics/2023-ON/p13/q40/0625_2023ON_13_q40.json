@@ -32,10 +32,10 @@
   {
    "page": 15,
    "bbox": [
-    67.7,
-    303.4,
-    257.9,
-    414.7
+    67.5,
+    303.0,
+    258.0,
+    415.0
    ],
    "id": "0625_2023ON_13_q40_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p13/q40/figures/0625_2023ON_13_q40_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p13/q40/figures/0625_2023ON_13_q40_figA",
     "url": null,
-    "kb": 17.6
+    "kb": 17.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row shows one of the most common elements in the Sun and one of the regions in which the Sun radiates most of its energy?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "element",
-     "region"
-    ],
-    [
-     "<b>A</b>",
-     "iron",
-     "gamma"
-    ],
-    [
-     "<b>B</b>",
-     "iron",
-     "infrared"
-    ],
-    [
-     "<b>C</b>",
-     "hydrogen",
-     "gamma"
-    ],
-    [
-     "<b>D</b>",
-     "hydrogen",
-     "infrared"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_13_q40_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "iron gamma"
+    },
+    {
+     "label": "B",
+     "html": "iron infrared"
+    },
+    {
+     "label": "C",
+     "html": "hydrogen gamma"
+    },
+    {
+     "label": "D",
+     "html": "hydrogen infrared"
+    }
+   ]
   }
  ]
 }

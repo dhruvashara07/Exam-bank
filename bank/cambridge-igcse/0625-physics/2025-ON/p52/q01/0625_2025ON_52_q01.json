@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    132.5,
-    255.7,
-    462.3,
-    629.5
+    133.0,
+    255.0,
+    463.0,
+    630.0
    ],
    "id": "0625_2025ON_52_q01b_fig1-1",
    "part": "(b)",
@@ -52,10 +52,10 @@
    "caption": "Table 1.1",
    "page": 3,
    "bbox": [
-    56.3,
-    376.4,
+    56.0,
+    377.0,
     539.0,
-    499.1
+    499.5
    ],
    "id": "0625_2025ON_52_q01dii_table1-1",
    "part": "(d)(ii)",
@@ -133,9 +133,9 @@
     {
      "type": "list",
      "items": [
-      "Draw a line LN 12cm long across the ray-trace sheet supplied, near to the top of the sheet.",
+      "Draw a line LN 12 cm long across the ray-trace sheet supplied, near to the top of the sheet.",
       "Label the mid-point of the line with the letter M.",
-      "Draw a line PR parallel to line LN at a distance 12.0cm below it across the full width of the page.",
+      "Draw a line PR parallel to line LN at a distance 12.0 cm below it across the full width of the page.",
       "Draw a normal to LN at the point M.",
       "Extend the normal downwards to the bottom of the page and label the end of the line S.",
       "Label the point where the normal line crosses PR with the letter Q."
@@ -207,25 +207,13 @@
     {
      "type": "list",
      "items": [
-      "Draw a line from point M at an angle θ= 10°, as shown in Fig. 1.1."
+      "Draw a line from point M at an angle θ = 10°, as shown in Fig. 1.1."
      ]
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "",
-       "L M N"
-      ],
-      [
-       "",
-       "θ"
-      ],
-      [
-       "",
-       "O"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2025ON_52_q01b_fig1-1",
+     "caption": "Fig. 1.1"
     },
     {
      "type": "list",
@@ -411,6 +399,12 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "a =",
+       "unit": "cm"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "b =",
        "unit": "cm"
       },
@@ -489,33 +483,9 @@
        "text": "Give your answer to 2 significant figures."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "θ/°",
-         "a/cm",
-         "b/cm",
-         "a r = b"
-        ],
-        [
-         "10",
-         "",
-         "",
-         ""
-        ],
-        [
-         "20",
-         "",
-         "",
-         ""
-        ],
-        [
-         "30",
-         "",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2025ON_52_q01dii_table1-1",
+       "caption": "Table 1.1"
       },
       {
        "type": "marks",
@@ -595,8 +565,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Repeat (b), (c) and (d) for values of θ= 20° and θ= 30°.",
-     "text": "Repeat (b), (c) and (d) for values of θ= 20° and θ= 30°."
+     "html": "Repeat (b), (c) and (d) for values of θ = 20° and θ = 30°.",
+     "text": "Repeat (b), (c) and (d) for values of θ = 20° and θ = 30°."
     },
     {
      "type": "text",
@@ -669,8 +639,8 @@
    "content": [
     {
      "type": "text",
-     "html": "A student says that r is directly proportional to θ.",
-     "text": "A student says that r is directly proportional to θ."
+     "html": "A student says that r is directly proportional to θ .",
+     "text": "A student says that r is directly proportional to θ ."
     },
     {
      "type": "text",
@@ -685,7 +655,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -863,6 +842,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

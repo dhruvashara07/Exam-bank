@@ -35,7 +35,7 @@
     211.3,
     418.2,
     383.9,
-    578.3
+    579.0
    ],
    "id": "0625_2020MJ_13_q13_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    636.1,
-    241.9,
-    747.4
+    67.5,
+    636.0,
+    242.0,
+    747.5
    ],
    "id": "0625_2020MJ_13_q13_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p13/q13/figures/0625_2020MJ_13_q13_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p13/q13/figures/0625_2020MJ_13_q13_figB",
     "url": null,
-    "kb": 14.6
+    "kb": 14.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "What will happen to the levels X and Y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "level X",
-     "level Y"
-    ],
-    [
-     "<b>A</b>",
-     "higher",
-     "lower"
-    ],
-    [
-     "<b>B</b>",
-     "higher",
-     "higher"
-    ],
-    [
-     "<b>C</b>",
-     "lower",
-     "higher"
-    ],
-    [
-     "<b>D</b>",
-     "lower",
-     "lower"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020MJ_13_q13_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "higher lower"
+    },
+    {
+     "label": "B",
+     "html": "higher higher"
+    },
+    {
+     "label": "C",
+     "html": "lower higher"
+    },
+    {
+     "label": "D",
+     "html": "lower lower"
+    }
+   ]
   }
  ]
 }

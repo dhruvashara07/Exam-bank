@@ -7,7 +7,7 @@ layout, answer space included.
 """
 import re
 import pymupdf as fitz
-from layout import page_bounds, visible_lines, ink_boxes, label_tokens, ROMAN, LETTERS, CONTENT_X0, CONTENT_X1, row_ink, ink_extent, ZOOM
+from layout import page_bounds, visible_lines, ink_boxes, label_tokens, ROMAN, LETTERS, CONTENT_X0, CONTENT_X1, row_ink, ink_extent, ZOOM, tight_ink, grow_to_ink
 
 PAD_TOP, PAD_BOTTOM = 4.0, 5.0
 CAPTION = re.compile(r'^(Fig\.|Figure|Table)\s*\d+(\.\d+)?(\s*\(.*\))?$')
@@ -127,6 +127,16 @@ def raw_segments(doc, bnds):
         p = b['page']
         prev = [x['y'] for x in bnds[:i] if x['page'] == p]
         floor = (max(prev) + 2) if prev else bounds[p][0] - 6
+        # a figure/table caption just above a label belongs to the figure above it: never cut above it
+        caps = [l for l in visible_lines(doc[p], *bounds[p])
+                if CAPTION.match(l['text']) and b['y'] - 24 < l['y0'] < b['y'] - 4 and l['x0'] > 100]
+        if caps:                  # cut in the white row between the caption and the label line
+            rows = row_ink(doc[p])
+            lo, hi = max(c['y0'] for c in caps) + 6, b['y'] + 6
+            cands = [lo + 0.5 * k for k in range(int((hi - lo) * 2) + 1)]
+            cost = lambda c: int(rows[max(0, int(round(c * ZOOM)) - 1):int(round(c * ZOOM)) + 2].sum())
+            cuts.append(min(cands, key=lambda c: (cost(c), -c)) if cands else best_cut(doc[p], b['y'] - PAD_TOP, floor))
+            continue
         cuts.append(best_cut(doc[p], b['y'] - PAD_TOP, floor))
     for i, b in enumerate(bnds):
         nxt = bnds[i + 1] if i + 1 < len(bnds) else None
@@ -198,28 +208,48 @@ def find_figures(doc, seg, lines):
     figs = []
     caps = [l for l in lines if CAPTION.match(l['text'])]
     marks_text = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in lines
-                  if MARK.fullmatch(l['text'].strip()) or TOTAL.fullmatch(l['text'].strip())]
+                  if MARK.fullmatch(l['text'].strip()) or TOTAL.fullmatch(l['text'].strip()) or DOTS.search(l['text'])]
     drawings = [r for r in ink_boxes(page, top, bottom) if seg['y0'] <= r.y0 and r.y1 <= seg['y1'] + 1
                 and not any(abs(r.x0 - m.x0) < 1 and abs(r.y0 - m.y0) < 1 and abs(r.x1 - m.x1) < 1 for m in marks_text)]
     long_x0 = [l['x0'] for l in lines if len(l['text']) >= 25]
     para_x0 = [l['x0'] for l in lines if len(l['text']) >= 45]       # left edges of real paragraphs
+    text_boxes = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in lines]
+    frames = [r for r in drawings if r.width < 0.9 * page.rect.width and r.height > 18
+              and not any(abs(r.x0 - t.x0) < 1 and abs(r.y0 - t.y0) < 1 for t in text_boxes)]
     def prose_like(l):            # a sentence of the question, not an axis title or label inside a figure
-        return len(l['text']) >= 45 or (len(l['text']) >= 25 and any(abs(l['x0'] - x) < 2.5 for x in para_x0))
+        if DOTS.search(l['text']):
+            return False          # an answer line ('Vs = .........') can sit beside a figure
+        lr = fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1'])
+        if any(f.contains(lr) for f in frames):
+            return False          # text printed inside a drawn box (a notice, a label) is part of the figure
+        words = len(re.findall(r'[A-Za-z]{2,}', l['text']))
+        return len(l['text']) >= 45 or (len(l['text']) >= 25 and words >= 4 and any(abs(l['x0'] - x) < 2.5 for x in para_x0))
     for cap in caps:
         is_table = cap['text'].startswith('Table')
-        prose_above = [l for l in lines if l['y1'] <= cap['y0'] and (prose_like(l) or re.match(r'^(\d{1,2}|\([a-z]+\))\s', l['text'])
+        prose_above = [l for l in lines if l['y1'] <= cap['y0'] and not DOTS.search(l['text']) and (prose_like(l) or (re.match(r'^(\d{1,2}|\([a-z]+\))\s', l['text']) and l['x0'] < 110)
                                                                     or (l['x0'] <= 76 and l['text'].rstrip().endswith('.'))
                                                                     or (l['text'].rstrip().endswith(('.', ':')) and any(abs(l['x0'] - x) < 2 for x in long_x0)))]
+        for l in sorted(lines, key=lambda l: l['y0']):    # last line of a sentence ('Fig. 2.2.' after a long line)
+            if l['y1'] <= cap['y0'] and l not in prose_above and re.search(r'[a-z]', l['text']) and \
+                    l['text'].rstrip()[-1:] in '.:?' and any(0 < l['y0'] - p['y0'] < 1.6 * (l['y1'] - l['y0'])
+                                                             and p['x0'] - 3 <= l['x0'] <= p['x0'] + 70 for p in prose_above):
+                prose_above.append(l)
         if is_table:   # table caption sits above the table
             prose_below = [l for l in lines if l['y0'] > cap['y1'] + 4 and (len(l['text']) > 40 and not DOTS.search(l['text']))]
             band = (cap['y0'] - 2, (min(l['y0'] for l in prose_below) - 4) if prose_below else seg['y1'])
         else:
             band = ((max(l['y1'] for l in prose_above) + 2) if prose_above else seg['y0'], cap['y1'] + 2)
-        inside = [r for r in drawings if r.y0 >= band[0] - 1 and r.y1 <= band[1] + 1]
+        strip = fitz.Rect(0, band[0] - 1, page.rect.width, band[1] + 1)
+        grown = [fitz.Rect(r.x0 - 1, r.y0 - 1, r.x1 + 1, r.y1 + 1) for r in drawings]   # lines have zero height
+        inside = [tight_ink(page, g & strip, marks_text) for g in grown
+                  if g.y1 >= strip.y0 and g.y0 <= strip.y1 and not (g & strip).is_empty]
+        inside = [r for r in inside if r is not None]       # what is printed, inside the band
         if not inside:
             continue
         x0 = min(r.x0 for r in inside); x1 = max(r.x1 for r in inside)
         y0 = min(r.y0 for r in inside); y1 = max(r.y1 for r in inside)
+        g = grow_to_ink(page, fitz.Rect(x0, y0, x1, y1), fitz.Rect(CONTENT_X0, max(seg['y0'], band[0] - 1), CONTENT_X1, min(seg['y1'], band[1] + 1)))
+        x0, y0, x1, y1 = g.x0, g.y0, g.x1, g.y1
         figs.append({'caption': cap['text'], 'page': seg['page'],
                      'bbox': [round(x0 - 3, 1), round(y0 - 3, 1), round(x1 + 3, 1), round(y1 + 3, 1)]})
     return figs

@@ -70,6 +70,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -83,8 +84,8 @@
   },
   {
    "type": "text",
-   "html": "energy supplied = 12kJ initial temperature = 20°C final temperature = 45°C mass of metal block = 600g",
-   "text": "energy supplied = 12kJ initial temperature = 20°C final temperature = 45°C mass of metal block = 600g"
+   "html": "energy supplied = 12 kJ initial temperature = 20 °C final temperature = 45 °C mass of metal block = 600 g",
+   "text": "energy supplied = 12 kJ initial temperature = 20 °C final temperature = 45 °C mass of metal block = 600 g"
   },
   {
    "type": "text",
@@ -96,19 +97,19 @@
    "options": [
     {
      "label": "A",
-     "html": "8.0 × 10<sup>–</sup><sup>4</sup>J/(kg°C)"
+     "html": "8.0 × 10<sup>–</sup><sup>4</sup> J / (kg °C)"
     },
     {
      "label": "B",
-     "html": "0.80J/(kg°C)"
+     "html": "0.80 J / (kg °C)"
     },
     {
      "label": "C",
-     "html": "180J/(kg°C)"
+     "html": "180 J / (kg °C)"
     },
     {
      "label": "D",
-     "html": "800J/(kg°C)"
+     "html": "800 J / (kg °C)"
     }
    ]
   }

@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    203.2,
-    85.5,
-    391.7,
-    184.1
+    203.0,
+    85.0,
+    392.5,
+    184.5
    ],
    "id": "0625_2024ON_22_q31_figA",
    "caption": null,
@@ -45,15 +45,15 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p22/q31/figures/0625_2024ON_22_q31_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p22/q31/figures/0625_2024ON_22_q31_figA",
     "url": null,
-    "kb": 4.8
+    "kb": 4.7
    }
   },
   {
    "page": 14,
    "bbox": [
-    67.7,
+    67.5,
     292.5,
-    300.8,
+    301.0,
     418.0
    ],
    "id": "0625_2024ON_22_q31_figB",
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,40 +137,30 @@
    "text": "Which row gives the direction of the induced current and the direction of the force experienced by the wire XY?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "direction of",
-     "direction of"
-    ],
-    [
-     "",
-     "induced current",
-     "the force"
-    ],
-    [
-     "<b>A</b>",
-     "from X to Y",
-     "downwards"
-    ],
-    [
-     "<b>B</b>",
-     "from X to Y",
-     "upwards"
-    ],
-    [
-     "<b>C</b>",
-     "from Y to X",
-     "downwards"
-    ],
-    [
-     "<b>D</b>",
-     "from Y to X",
-     "upwards"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_22_q31_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "from X to Y downwards"
+    },
+    {
+     "label": "B",
+     "html": "from X to Y upwards"
+    },
+    {
+     "label": "C",
+     "html": "from Y to X downwards"
+    },
+    {
+     "label": "D",
+     "html": "from Y to X upwards"
+    }
+   ]
   }
  ]
 }

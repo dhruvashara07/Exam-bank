@@ -32,9 +32,9 @@
   {
    "page": 11,
    "bbox": [
-    128.2,
-    457.5,
-    466.5,
+    127.5,
+    457.0,
+    467.0,
     513.7
    ],
    "id": "0625_2015FM_12_q26_figA",
@@ -51,10 +51,10 @@
   {
    "page": 11,
    "bbox": [
-    67.6,
-    547.1,
-    261.4,
-    672.6
+    67.5,
+    547.0,
+    261.5,
+    673.0
    ],
    "id": "0625_2015FM_12_q26_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-FM/p12/q26/figures/0625_2015FM_12_q26_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-FM/p12/q26/figures/0625_2015FM_12_q26_figB",
     "url": null,
-    "kb": 17.8
+    "kb": 17.6
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which magnetic poles are induced at the ends J and K of the iron rods?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "pole induced",
-     "pole induced"
-    ],
-    [
-     "",
-     "at end J",
-     "at end K"
-    ],
-    [
-     "A",
-     "N",
-     "N"
-    ],
-    [
-     "B",
-     "N",
-     "S"
-    ],
-    [
-     "C",
-     "S",
-     "N"
-    ],
-    [
-     "D",
-     "S",
-     "S"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015FM_12_q26_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "N N"
+    },
+    {
+     "label": "B",
+     "html": "N S"
+    },
+    {
+     "label": "C",
+     "html": "S N"
+    },
+    {
+     "label": "D",
+     "html": "S S"
+    }
+   ]
   }
  ]
 }

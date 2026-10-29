@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    154.1,
-    113.6,
-    436.7,
-    315.2
+    153.5,
+    116.5,
+    437.0,
+    313.5
    ],
    "id": "0625_2020MJ_53_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 5,
    "bbox": [
-    197.2,
-    588.7,
-    398.1,
-    646.8
+    198.0,
+    588.0,
+    397.5,
+    645.0
    ],
    "id": "0625_2020MJ_53_q02bi_fig2-2",
    "part": "(b)(i)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 2.3",
    "page": 6,
    "bbox": [
-    197.9,
-    235.9,
-    398.8,
-    329.1
+    198.5,
+    235.5,
+    398.5,
+    327.5
    ],
    "id": "0625_2020MJ_53_q02ci_fig2-3",
    "part": "(c)(i)",
@@ -83,17 +83,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p53/q02/figures/0625_2020MJ_53_q02ci_fig2-3.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p53/q02/figures/0625_2020MJ_53_q02ci_fig2-3",
     "url": null,
-    "kb": 7.6
+    "kb": 7.5
    }
   },
   {
    "caption": "Fig. 2.4",
    "page": 7,
    "bbox": [
-    154.1,
-    111.6,
-    436.7,
-    431.6
+    153.5,
+    114.5,
+    437.0,
+    430.0
    ],
    "id": "0625_2020MJ_53_q02ei_fig2-4",
    "part": "(e)(i)",
@@ -185,14 +185,19 @@
        "text": "Measure the potential difference V1 and the current I1 in the circuit."
       },
       {
-       "type": "text",
-       "html": "Switch off.",
-       "text": "Switch off."
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V1 ="
       },
       {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "I1 ="
+      },
+      {
+       "type": "text",
+       "html": "Switch off.",
+       "text": "Switch off."
       },
       {
        "type": "marks",
@@ -259,7 +264,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a resistance <i>R</i><sub>1</sub> using your values from <b>(a)(i)</b> and the equation <i>R</i><sub>1</sub> = \\(\\frac{<i>V</i><sub>1</sub>}{<i>I</i><sub>1</sub>}\\) .",
+       "html": "Calculate a resistance <i>R</i><sub>1</sub> using your values from <b>(a)(i)</b> and the equation <i>R</i><sub>1</sub> = \\(\\frac{V_{1}}{I_{1}}\\) .",
        "text": "Calculate a resistance R1 using your values from (a)(i) and the equation R1 = (V1)/(I1) ."
       },
       {
@@ -360,14 +365,19 @@
        "text": "Measure the potential difference V2 and the current I2 in the circuit."
       },
       {
-       "type": "text",
-       "html": "Switch off.",
-       "text": "Switch off."
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V2 ="
       },
       {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "I2 ="
+      },
+      {
+       "type": "text",
+       "html": "Switch off.",
+       "text": "Switch off."
       },
       {
        "type": "marks",
@@ -434,7 +444,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a resistance <i>R</i><sub>2</sub> using your values from <b>(b)(i)</b> and the equation <i>R</i><sub>2</sub> = \\(\\frac{<i>V</i><sub>2</sub>}{<i>(I</i>× 2)}\\) .",
+       "html": "Calculate a resistance <i>R</i><sub>2</sub> using your values from <b>(b)(i)</b> and the equation <i>R</i><sub>2</sub> = \\(\\frac{V_{2}}{(I \\times 2)}\\) .",
        "text": "Calculate a resistance R2 using your values from (b)(i) and the equation R2 = (V2)/((I× 2)) ."
       },
       {
@@ -535,14 +545,19 @@
        "text": "Switch on. Measure the potential difference V3 and the current I3 in the circuit."
       },
       {
-       "type": "text",
-       "html": "Switch off.",
-       "text": "Switch off."
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V3 ="
       },
       {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "I3 ="
+      },
+      {
+       "type": "text",
+       "html": "Switch off.",
+       "text": "Switch off."
       },
       {
        "type": "marks",
@@ -609,7 +624,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a resistance <i>R</i><sub>3</sub> using your values from <b>(c)(i)</b> and the equation <i>R</i><sub>3</sub> = \\(\\frac{<i>(V</i><sub>3 </sub>× 2)}{<i>I</i>}\\) .",
+       "html": "Calculate a resistance <i>R</i><sub>3</sub> using your values from <b>(c)(i)</b> and the equation <i>R</i><sub>3</sub> = \\(\\frac{(V_{3} \\times 2)}{I}\\) .",
        "text": "Calculate a resistance R3 using your values from (c)(i) and the equation R3 = ((V3 × 2))/(I) ."
       },
       {
@@ -697,7 +712,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -890,6 +914,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

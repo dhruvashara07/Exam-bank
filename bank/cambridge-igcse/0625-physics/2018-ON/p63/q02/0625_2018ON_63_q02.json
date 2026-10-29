@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 6,
    "bbox": [
-    110.2,
-    113.7,
-    478.5,
-    418.3
+    110.5,
+    118.0,
+    478.0,
+    415.5
    ],
    "id": "0625_2018ON_63_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 6,
    "bbox": [
-    205.2,
-    555.2,
-    390.1,
-    709.3
+    204.5,
+    554.5,
+    390.5,
+    706.5
    ],
    "id": "0625_2018ON_63_q02b_fig2-2",
    "part": "(b)",
@@ -71,10 +71,10 @@
    "caption": "Table 2.1",
    "page": 7,
    "bbox": [
-    237.8,
-    83.1,
+    237.5,
+    88.0,
     357.5,
-    241.2
+    241.5
    ],
    "id": "0625_2018ON_63_q02c_table2-1",
    "part": "(c)",
@@ -90,10 +90,10 @@
    "caption": "Fig. 2.3",
    "page": 8,
    "bbox": [
-    225.6,
-    88.1,
-    369.6,
-    158.4
+    225.5,
+    88.0,
+    370.0,
+    155.5
    ],
    "id": "0625_2018ON_63_q02ciii_fig2-3",
    "part": "(c)(iii)",
@@ -506,7 +506,18 @@
       {
        "type": "list",
        "items": [
-        "On Fig. 2.3, measure the length <i>l</i>.",
+        "On Fig. 2.3, measure the length <i>l</i>."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "l =",
+       "unit": "cm"
+      },
+      {
+       "type": "list",
+       "items": [
         "The wire in Fig. 2.3 is shown to 1/3<sup>rd</sup> scale. Calculate the actual length <i>L</i> of wire <b>X</b>."
        ]
       },
@@ -587,7 +598,7 @@
       },
       {
        "type": "text",
-       "html": "<i>R</i> = \\(\\frac{<i>G</i> × <i>k</i>}{<i>L</i>}\\),",
+       "html": "<i>R</i> = \\(\\frac{G \\times k}{L}\\),",
        "text": "R = (G × k)/(L),"
       },
       {
@@ -615,33 +626,9 @@
      "text": "The student records the p.d. V for different currents, as shown in Table 2.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>I</i> / A",
-       "<i>V</i> / V"
-      ],
-      [
-       "0.80",
-       ""
-      ],
-      [
-       "0.70",
-       "1.58"
-      ],
-      [
-       "0.60",
-       "1.34"
-      ],
-      [
-       "0.50",
-       "1.03"
-      ],
-      [
-       "0.40",
-       "0.81"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2018ON_63_q02c_table2-1",
+     "caption": "Table 2.1"
     }
    ]
   },
@@ -736,6 +723,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

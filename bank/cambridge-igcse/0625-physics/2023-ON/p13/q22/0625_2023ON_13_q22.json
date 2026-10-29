@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    86.2,
+    86.0,
     549.0,
-    509.3,
-    584.3
+    509.5,
+    584.5
    ],
    "id": "0625_2023ON_13_q22_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    616.3,
-    353.9,
-    727.1
+    67.5,
+    616.0,
+    354.0,
+    727.5
    ],
    "id": "0625_2023ON_13_q22_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p13/q22/figures/0625_2023ON_13_q22_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p13/q22/figures/0625_2023ON_13_q22_figB",
     "url": null,
-    "kb": 23.5
+    "kb": 23.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which types of wave are E, F and G?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "E",
-     "F",
-     "G"
-    ],
-    [
-     "<b>A</b>",
-     "radio",
-     "visible light",
-     "X-rays"
-    ],
-    [
-     "<b>B</b>",
-     "radio",
-     "X-rays",
-     "ultrasound"
-    ],
-    [
-     "<b>C</b>",
-     "X-rays",
-     "radio",
-     "ultrasound"
-    ],
-    [
-     "<b>D</b>",
-     "X-rays",
-     "visible light",
-     "radio"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_13_q22_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "radio visible light X-rays"
+    },
+    {
+     "label": "B",
+     "html": "radio X-rays ultrasound"
+    },
+    {
+     "label": "C",
+     "html": "X-rays radio ultrasound"
+    },
+    {
+     "label": "D",
+     "html": "X-rays visible light radio"
+    }
+   ]
   }
  ]
 }

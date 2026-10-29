@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    160.6,
-    250.3,
-    271.9
+    67.5,
+    160.5,
+    250.5,
+    272.0
    ],
    "id": "0625_2017ON_11_q28_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p11/q28/figures/0625_2017ON_11_q28_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p11/q28/figures/0625_2017ON_11_q28_figA",
     "url": null,
-    "kb": 19.2
+    "kb": 19.0
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "From which materials could the rods X and Y be made?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "rod X",
-     "rod Y"
-    ],
-    [
-     "<b>A</b>",
-     "soft iron",
-     "copper"
-    ],
-    [
-     "<b>B</b>",
-     "soft iron",
-     "soft iron"
-    ],
-    [
-     "<b>C</b>",
-     "steel",
-     "copper"
-    ],
-    [
-     "<b>D</b>",
-     "steel",
-     "soft iron"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017ON_11_q28_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "soft iron copper"
+    },
+    {
+     "label": "B",
+     "html": "soft iron soft iron"
+    },
+    {
+     "label": "C",
+     "html": "steel copper"
+    },
+    {
+     "label": "D",
+     "html": "steel soft iron"
+    }
+   ]
   }
  ]
 }

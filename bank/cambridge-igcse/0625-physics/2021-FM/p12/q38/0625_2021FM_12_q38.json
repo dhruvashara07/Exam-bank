@@ -32,10 +32,10 @@
   {
    "page": 15,
    "bbox": [
-    281.2,
-    573.0,
-    313.6,
-    598.9
+    67.5,
+    631.0,
+    255.5,
+    756.5
    ],
    "id": "0625_2021FM_12_q38_figA",
    "caption": null,
@@ -44,25 +44,6 @@
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2021-FM/p12/q38/figures/0625_2021FM_12_q38_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-FM/p12/q38/figures/0625_2021FM_12_q38_figA",
-    "url": null,
-    "kb": 4.9
-   }
-  },
-  {
-   "page": 15,
-   "bbox": [
-    67.7,
-    631.0,
-    255.2,
-    756.5
-   ],
-   "id": "0625_2021FM_12_q38_figB",
-   "caption": null,
-   "part": "",
-   "alt": "",
-   "svg": {
-    "file": "bank/cambridge-igcse/0625-physics/2021-FM/p12/q38/figures/0625_2021FM_12_q38_figB.svg",
-    "public_id": "question_bank/cambridge-igcse/0625-physics/2021-FM/p12/q38/figures/0625_2021FM_12_q38_figB",
     "url": null,
     "kb": 16.7
    }
@@ -109,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -116,50 +98,35 @@
    "text": "The symbol below describes a nuclide."
   },
   {
-   "type": "figure",
-   "id": "0625_2021FM_12_q38_figA",
-   "caption": null
-  },
-  {
    "type": "text",
    "html": "Which row is correct?",
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "proton",
-     "nucleon"
-    ],
-    [
-     "",
-     "number (<i>Z</i>)",
-     "number (<i>A</i>)"
-    ],
-    [
-     "<b>A</b>",
-     "4",
-     "5"
-    ],
-    [
-     "<b>B</b>",
-     "4",
-     "9"
-    ],
-    [
-     "<b>C</b>",
-     "9",
-     "4"
-    ],
-    [
-     "<b>D</b>",
-     "9",
-     "5"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021FM_12_q38_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "4 5"
+    },
+    {
+     "label": "B",
+     "html": "4 9"
+    },
+    {
+     "label": "C",
+     "html": "9 4"
+    },
+    {
+     "label": "D",
+     "html": "9 5"
+    }
+   ]
   }
  ]
 }

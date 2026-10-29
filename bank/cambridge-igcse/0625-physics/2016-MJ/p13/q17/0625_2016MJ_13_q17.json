@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.4,
-    402.8,
-    332.3,
-    528.3
+    67.0,
+    402.5,
+    332.5,
+    528.5
    ],
    "id": "0625_2016MJ_13_q17_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p13/q17/figures/0625_2016MJ_13_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p13/q17/figures/0625_2016MJ_13_q17_figA",
     "url": null,
-    "kb": 27.8
+    "kb": 27.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -98,8 +99,8 @@
   },
   {
    "type": "text",
-   "html": "Several ice cubes at a temperature of 0°C are dropped into the water and they begin to melt immediately.",
-   "text": "Several ice cubes at a temperature of 0°C are dropped into the water and they begin to melt immediately."
+   "html": "Several ice cubes at a temperature of 0 °C are dropped into the water and they begin to melt immediately.",
+   "text": "Several ice cubes at a temperature of 0 °C are dropped into the water and they begin to melt immediately."
   },
   {
    "type": "text",
@@ -107,40 +108,30 @@
    "text": "What happens to the temperature of the water and what happens to the temperature of the ice cubes while they are melting?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "temperature of",
-     "temperature of"
-    ],
-    [
-     "",
-     "the water",
-     "the ice cubes"
-    ],
-    [
-     "A",
-     "decreases",
-     "increases"
-    ],
-    [
-     "B",
-     "decreases",
-     "stays constant"
-    ],
-    [
-     "C",
-     "stays constant",
-     "increases"
-    ],
-    [
-     "D",
-     "stays constant",
-     "stays constant"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_13_q17_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases increases"
+    },
+    {
+     "label": "B",
+     "html": "decreases stays constant"
+    },
+    {
+     "label": "C",
+     "html": "stays constant increases"
+    },
+    {
+     "label": "D",
+     "html": "stays constant stays constant"
+    }
+   ]
   }
  ]
 }

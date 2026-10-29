@@ -33,9 +33,9 @@
    "page": 9,
    "bbox": [
     189.8,
-    97.8,
+    97.5,
     404.9,
-    266.2
+    266.5
    ],
    "id": "0625_2015ON_13_q22_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 9,
    "bbox": [
-    67.6,
+    67.5,
     312.0,
     440.5,
-    423.4
+    423.5
    ],
    "id": "0625_2015ON_13_q22_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p13/q22/figures/0625_2015ON_13_q22_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p13/q22/figures/0625_2015ON_13_q22_figB",
     "url": null,
-    "kb": 37.0
+    "kb": 36.7
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row contains correct statements about angle X and about the optical density of substance Q?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "angle X",
-     "substance Q"
-    ],
-    [
-     "A",
-     "smaller than the critical angle",
-     "less dense than substance P"
-    ],
-    [
-     "B",
-     "smaller than the critical angle",
-     "more dense than substance P"
-    ],
-    [
-     "C",
-     "greater than the critical angle",
-     "less dense than substance P"
-    ],
-    [
-     "D",
-     "greater than the critical angle",
-     "more dense than substance P"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015ON_13_q22_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "smaller than the critical angle less dense than substance P"
+    },
+    {
+     "label": "B",
+     "html": "smaller than the critical angle more dense than substance P"
+    },
+    {
+     "label": "C",
+     "html": "greater than the critical angle less dense than substance P"
+    },
+    {
+     "label": "D",
+     "html": "greater than the critical angle more dense than substance P"
+    }
+   ]
   }
  ]
 }

@@ -33,7 +33,7 @@
    "page": 7,
    "bbox": [
     67.9,
-    148.4,
+    148.0,
     511.8,
     275.5
    ],
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p22/q15/figures/0625_2026MJ_22_q15_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p22/q15/figures/0625_2026MJ_22_q15_figA",
     "url": null,
-    "kb": 25.5
+    "kb": 25.4
    }
   },
   {
    "page": 7,
    "bbox": [
-    68.2,
-    309.9,
-    397.5,
-    663.6
+    68.0,
+    309.5,
+    398.0,
+    664.0
    ],
    "id": "0625_2026MJ_22_q15_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p22/q15/figures/0625_2026MJ_22_q15_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p22/q15/figures/0625_2026MJ_22_q15_figB",
     "url": null,
-    "kb": 30.7
+    "kb": 30.6
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,19 +137,9 @@
    "text": "Which row shows the correct graph for the mass of water remaining in each experiment?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>tall container</b>",
-     "<b>shallow dish</b>"
-    ],
-    [
-     "<b>A</b> <b>B</b> <b>C</b> <b>D</b>",
-     "mass 0 time 0 mass 0 time 0 mass 0 time 0 mass 0 time 0",
-     "mass 0 time 0 mass 0 time 0 mass 0 time 0 mass 0 time 0"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2026MJ_22_q15_figB",
+   "caption": null
   },
   {
    "type": "options",

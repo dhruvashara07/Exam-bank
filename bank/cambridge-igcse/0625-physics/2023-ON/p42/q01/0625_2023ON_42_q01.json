@@ -290,7 +290,7 @@
       },
       {
        "type": "text",
-       "html": "\\(\\frac{speed}{m/s}\\)",
+       "html": "\\(\\frac{\\text{speed}}{m / s}\\)",
        "text": "(speed)/(m/s)"
       },
       {
@@ -300,8 +300,8 @@
       },
       {
        "type": "text",
-       "html": "<i>t</i>/s",
-       "text": "t/s"
+       "html": "<i>t</i> / s",
+       "text": "t / s"
       },
       {
        "type": "marks",
@@ -535,7 +535,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "suggestion"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -562,6 +571,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

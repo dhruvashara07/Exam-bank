@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    533.9,
-    302.8,
-    645.3
+    67.5,
+    534.0,
+    303.0,
+    645.5
    ],
    "id": "0625_2020ON_11_q17_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p11/q17/figures/0625_2020ON_11_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p11/q17/figures/0625_2020ON_11_q17_figA",
     "url": null,
-    "kb": 19.9
+    "kb": 19.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which substance becomes a liquid when placed in a beaker of boiling water?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "melting point/°C",
-     "boiling point/°C"
-    ],
-    [
-     "<b>A</b>",
-     "10",
-     "90"
-    ],
-    [
-     "<b>B</b>",
-     "40",
-     "150"
-    ],
-    [
-     "<b>C</b>",
-     "105",
-     "230"
-    ],
-    [
-     "<b>D</b>",
-     "110",
-     "320"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020ON_11_q17_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "10 90"
+    },
+    {
+     "label": "B",
+     "html": "40 150"
+    },
+    {
+     "label": "C",
+     "html": "105 230"
+    },
+    {
+     "label": "D",
+     "html": "110 320"
+    }
+   ]
   }
  ]
 }

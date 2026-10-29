@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    490.4,
+    67.5,
+    490.0,
     265.0,
-    601.7
+    602.0
    ],
    "id": "0625_2021ON_13_q27_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p13/q27/figures/0625_2021ON_13_q27_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p13/q27/figures/0625_2021ON_13_q27_figA",
     "url": null,
-    "kb": 18.4
+    "kb": 18.2
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row correctly shows a conductor and an insulator?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "conductor",
-     "insulator"
-    ],
-    [
-     "<b>A</b>",
-     "rubber",
-     "plastic"
-    ],
-    [
-     "<b>B</b>",
-     "iron",
-     "nylon"
-    ],
-    [
-     "<b>C</b>",
-     "air",
-     "wood"
-    ],
-    [
-     "<b>D</b>",
-     "copper",
-     "steel"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_13_q27_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "rubber plastic"
+    },
+    {
+     "label": "B",
+     "html": "iron nylon"
+    },
+    {
+     "label": "C",
+     "html": "air wood"
+    },
+    {
+     "label": "D",
+     "html": "copper steel"
+    }
+   ]
   }
  ]
 }

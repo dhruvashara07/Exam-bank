@@ -32,10 +32,10 @@
   {
    "page": 17,
    "bbox": [
-    67.7,
-    115.3,
-    329.3,
-    240.8
+    67.5,
+    115.0,
+    329.5,
+    241.0
    ],
    "id": "0625_2018FM_12_q37_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-FM/p12/q37/figures/0625_2018FM_12_q37_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-FM/p12/q37/figures/0625_2018FM_12_q37_figA",
     "url": null,
-    "kb": 20.4
+    "kb": 20.3
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,46 +103,30 @@
    "text": "Which row gives the composition of a neutral atom of this isotope of sodium?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "number of",
-     "number of",
-     "number of"
-    ],
-    [
-     "",
-     "protons",
-     "neutrons",
-     "electrons"
-    ],
-    [
-     "<b>A</b>",
-     "11",
-     "12",
-     "11"
-    ],
-    [
-     "<b>B</b>",
-     "11",
-     "12",
-     "12"
-    ],
-    [
-     "<b>C</b>",
-     "11",
-     "23",
-     "11"
-    ],
-    [
-     "<b>D</b>",
-     "12",
-     "11",
-     "12"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018FM_12_q37_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "11 12 11"
+    },
+    {
+     "label": "B",
+     "html": "11 12 12"
+    },
+    {
+     "label": "C",
+     "html": "11 23 11"
+    },
+    {
+     "label": "D",
+     "html": "12 11 12"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    279.4,
-    306.8,
-    390.7
+    67.5,
+    279.0,
+    307.0,
+    391.0
    ],
    "id": "0625_2018ON_13_q17_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-ON/p13/q17/figures/0625_2018ON_13_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-ON/p13/q17/figures/0625_2018ON_13_q17_figA",
     "url": null,
-    "kb": 23.4
+    "kb": 23.2
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "Steam at 100°C condenses to form water at 100°C.",
-   "text": "Steam at 100°C condenses to form water at 100°C."
+   "html": "Steam at 100 °C condenses to form water at 100 °C.",
+   "text": "Steam at 100 °C condenses to form water at 100 °C."
   },
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What happens to the average separation and what happens to the average speed of the water molecules?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "separation",
-     "average speed"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "remains the same"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "remains the same"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018ON_13_q17_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases remains the same"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases remains the same"
+    }
+   ]
   }
  ]
 }

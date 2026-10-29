@@ -32,10 +32,10 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
-    109.9,
-    246.2,
-    256.4
+    67.5,
+    109.5,
+    246.5,
+    256.5
    ],
    "id": "0625_2026FM_12_q01_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,33 +103,9 @@
    "text": "The table shows the volume of water in the cylinder every minute for four minutes."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "<b>time</b><b>/</b><b>minutes</b>",
-     "<b>volume of</b> <b><sup>3</sup></b> <b>water</b><b>/</b><b>cm</b>"
-    ],
-    [
-     "0",
-     "0"
-    ],
-    [
-     "1.0",
-     "27"
-    ],
-    [
-     "2.0",
-     "57"
-    ],
-    [
-     "3.0",
-     "83"
-    ],
-    [
-     "4.0",
-     "112"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2026FM_12_q01_figA",
+   "caption": null
   },
   {
    "type": "text",
@@ -140,19 +117,19 @@
    "options": [
     {
      "label": "A",
-     "html": "22cm<sup>3</sup>"
+     "html": "22 cm<sup>3</sup>"
     },
     {
      "label": "B",
-     "html": "28cm<sup>3</sup>"
+     "html": "28 cm<sup>3</sup>"
     },
     {
      "label": "C",
-     "html": "56cm<sup>3</sup>"
+     "html": "56 cm<sup>3</sup>"
     },
     {
      "label": "D",
-     "html": "57cm<sup>3</sup>"
+     "html": "57 cm<sup>3</sup>"
     }
    ]
   }

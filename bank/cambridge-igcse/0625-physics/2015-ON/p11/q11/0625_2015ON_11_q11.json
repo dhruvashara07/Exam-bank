@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    67.6,
-    597.4,
-    271.9,
-    722.9
+    67.5,
+    597.0,
+    272.0,
+    723.0
    ],
    "id": "0625_2015ON_11_q11_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p11/q11/figures/0625_2015ON_11_q11_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p11/q11/figures/0625_2015ON_11_q11_figA",
     "url": null,
-    "kb": 23.8
+    "kb": 23.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "Which teacher experiences the least pressure from the nails?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "weight of teacher/N",
-     "total area of <sup>2</sup> contact/cm"
-    ],
-    [
-     "A",
-     "700",
-     "13"
-    ],
-    [
-     "B",
-     "800",
-     "20"
-    ],
-    [
-     "C",
-     "900",
-     "14"
-    ],
-    [
-     "D",
-     "1000",
-     "21"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015ON_11_q11_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "700 13"
+    },
+    {
+     "label": "B",
+     "html": "800 20"
+    },
+    {
+     "label": "C",
+     "html": "900 14"
+    },
+    {
+     "label": "D",
+     "html": "1000 21"
+    }
+   ]
   }
  ]
 }

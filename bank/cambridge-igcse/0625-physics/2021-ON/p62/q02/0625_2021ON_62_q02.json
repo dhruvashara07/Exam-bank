@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    163.4,
-    109.2,
-    431.8,
-    331.5
+    163.0,
+    112.5,
+    432.5,
+    330.0
    ],
    "id": "0625_2021ON_62_q02_fig2-1",
    "part": "",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p62/q02/figures/0625_2021ON_62_q02_fig2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p62/q02/figures/0625_2021ON_62_q02_fig2-1",
     "url": null,
-    "kb": 15.1
+    "kb": 15.0
    }
   }
  ],
@@ -170,6 +170,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "VS ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "IS ="
       },
       {
@@ -238,8 +243,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate <i>R</i><sub>S</sub>, the resistance of resistor R, using the equation <i>R</i><sub>S</sub> = \\(\\frac{<i>V</i><sub>S</sub>}{<i>I</i>}\\).",
-       "text": "Calculate RS, the resistance of resistor R, using the equation RS = (VS)/(I)."
+       "html": "Calculate <i>R</i><sub>S</sub>, the resistance of resistor R, using the equation <i>R</i><sub>S</sub> = \\(\\frac{V_{S}}{I}\\) .",
+       "text": "Calculate RS, the resistance of resistor R, using the equation RS = (VS)/(I) ."
       },
       {
        "type": "text",
@@ -336,13 +341,23 @@
      "text": "1.7"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "VL="
+    },
+    {
      "type": "text",
      "html": "0.35",
      "text": "0.35"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "IL ="
+    },
+    {
      "type": "text",
-     "html": "Calculate<i> R</i><sub>L</sub>, the resistance of the lamp, using the equation <i>R</i><sub>L</sub> = \\(\\frac{<i>V</i><sub>L</sub>}{<i>I</i>}\\) .",
+     "html": "Calculate<i> R</i><sub>L</sub>, the resistance of the lamp, using the equation <i>R</i><sub>L</sub> = \\(\\frac{V_{L}}{I}\\) .",
      "text": "Calculate RL, the resistance of the lamp, using the equation RL = (VL)/(I) ."
     },
     {
@@ -503,14 +518,24 @@
      "text": "1.7"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "VC ="
+    },
+    {
      "type": "text",
      "html": "0.21",
      "text": "0.21"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "IC ="
+    },
+    {
      "type": "text",
-     "html": "Calculate <i>R</i><sub>C</sub>, the combined resistance of the resistor and the lamp connected in series, using the equation <i>R</i><sub>C</sub> = \\(\\frac{<i>V</i><sub>C</sub>}{<i>I</i>}\\).",
-     "text": "Calculate RC, the combined resistance of the resistor and the lamp connected in series, using the equation RC = (VC)/(I)."
+     "html": "Calculate <i>R</i><sub>C</sub>, the combined resistance of the resistor and the lamp connected in series, using the equation <i>R</i><sub>C</sub> = \\(\\frac{V_{C}}{I}\\) .",
+     "text": "Calculate RC, the combined resistance of the resistor and the lamp connected in series, using the equation RC = (VC)/(I) ."
     },
     {
      "type": "text",
@@ -594,7 +619,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -621,6 +655,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

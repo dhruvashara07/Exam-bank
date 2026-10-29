@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    83.2,
-    113.1,
-    514.2,
-    227.3
+    83.5,
+    113.0,
+    513.5,
+    227.5
    ],
    "id": "0625_2015FM_52_q02_fig2-1",
    "part": "",
@@ -281,7 +281,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate a value <i>f</i><sub>1</sub> for the focal length of the lens, using the values from <b>(a) </b>and the equation <i>f</i><sub>1 </sub>= \\(\\frac{<i>u</i><sub>1</sub><i>v</i><sub>1</sub>}{(<i>u</i> + <i>v</i>)}\\) .",
+     "html": "Calculate a value <i>f</i><sub>1</sub> for the focal length of the lens, using the values from <b>(a) </b>and the equation <i>f</i><sub>1 </sub>= \\(\\frac{u_{1}v_{1}}{(u + v )}\\) .",
      "text": "Calculate a value f1 for the focal length of the lens, using the values from (a) and the equation f1 = (u1v1)/((u + v)) ."
     },
     {
@@ -390,6 +390,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "u2 ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "v2 ="
       },
       {
@@ -486,7 +491,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate another value <i>f</i><sub>2</sub> for the focal length of the lens, using your results from <b>(c)(ii)</b> and the equation <i>f</i><sub>2</sub> = \\(\\frac{<i>u</i><sub>2</sub><i>v</i><sub>2</sub>}{(<i>u</i> + <i>v</i>)}\\) .",
+     "html": "Calculate another value <i>f</i><sub>2</sub> for the focal length of the lens, using your results from <b>(c)(ii)</b> and the equation <i>f</i><sub>2</sub> = \\(\\frac{u_{2}v_{2}}{(u + v )}\\) .",
      "text": "Calculate another value f2 for the focal length of the lens, using your results from (c)(ii) and the equation f2 = (u2v2)/((u + v)) ."
     },
     {
@@ -576,7 +581,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -650,7 +664,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -677,6 +700,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

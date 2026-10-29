@@ -34,9 +34,9 @@
    "page": 4,
    "bbox": [
     191.5,
-    126.9,
-    405.0,
-    355.1
+    126.5,
+    405.5,
+    355.5
    ],
    "id": "0625_2015MJ_51_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 4,
    "bbox": [
-    209.4,
-    455.9,
-    385.8,
-    645.9
+    209.5,
+    456.0,
+    386.0,
+    646.0
    ],
    "id": "0625_2015MJ_51_q02aii_table2-1",
    "part": "(a)(ii)",
@@ -212,37 +212,9 @@
        "text": "In Table 2.1, record the temperature of the water at 30 s intervals until you have a total of six values up to time t = 150 s."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>t</i> / s",
-         "<i>θ</i> / °C"
-        ],
-        [
-         "0",
-         ""
-        ],
-        [
-         "30",
-         ""
-        ],
-        [
-         "60",
-         ""
-        ],
-        [
-         "90",
-         ""
-        ],
-        [
-         "120",
-         ""
-        ],
-        [
-         "150",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2015MJ_51_q02aii_table2-1",
+       "caption": "Table 2.1"
       },
       {
        "type": "marks",
@@ -404,9 +376,13 @@
        "text": "stays approximately constant during the period of cooling."
       },
       {
+       "type": "text",
+       "html": "The rate of cooling of the water ……",
+       "text": "The rate of cooling of the water ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "The rate of cooling of the water"
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -508,6 +484,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

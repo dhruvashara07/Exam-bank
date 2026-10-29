@@ -33,7 +33,7 @@
    "page": 10,
    "bbox": [
     148.7,
-    439.3,
+    438.5,
     446.4,
     559.1
    ],
@@ -51,9 +51,9 @@
   {
    "page": 10,
    "bbox": [
-    69.4,
-    605.1,
-    350.6,
+    69.0,
+    605.0,
+    350.5,
     716.5
    ],
    "id": "0625_2016ON_11_q23_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p11/q23/figures/0625_2016ON_11_q23_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p11/q23/figures/0625_2016ON_11_q23_figB",
     "url": null,
-    "kb": 28.3
+    "kb": 27.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row compares the refraction of violet light with the refraction of red light at the faces 1 and of the prism?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "face 1",
-     "face 2"
-    ],
-    [
-     "<b>A</b>",
-     "violet refracts less",
-     "violet refracts less"
-    ],
-    [
-     "<b>B</b>",
-     "violet refracts less",
-     "violet refracts more"
-    ],
-    [
-     "<b>C</b>",
-     "violet refracts more",
-     "violet refracts less"
-    ],
-    [
-     "<b>D</b>",
-     "violet refracts more",
-     "violet refracts more"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_11_q23_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "violet refracts less violet refracts less"
+    },
+    {
+     "label": "B",
+     "html": "violet refracts less violet refracts more"
+    },
+    {
+     "label": "C",
+     "html": "violet refracts more violet refracts less"
+    },
+    {
+     "label": "D",
+     "html": "violet refracts more violet refracts more"
+    }
+   ]
   }
  ]
 }

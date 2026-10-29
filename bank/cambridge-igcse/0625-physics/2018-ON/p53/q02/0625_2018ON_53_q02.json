@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 6,
    "bbox": [
-    107.0,
-    113.7,
-    482.6,
-    349.0
+    106.5,
+    118.0,
+    482.0,
+    346.0
    ],
    "id": "0625_2018ON_53_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 6,
    "bbox": [
-    237.8,
-    507.0,
+    237.5,
+    511.5,
     357.5,
-    665.1
+    665.5
    ],
    "id": "0625_2018ON_53_q02a_table2-1",
    "part": "(a)",
@@ -148,33 +148,9 @@
      ]
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>I</i> / A",
-       "<i>V</i> / V"
-      ],
-      [
-       "0.40",
-       ""
-      ],
-      [
-       "0.50",
-       ""
-      ],
-      [
-       "0.60",
-       ""
-      ],
-      [
-       "0.70",
-       ""
-      ],
-      [
-       "0.80",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2018ON_53_q02a_table2-1",
+     "caption": "Table 2.1"
     },
     {
      "type": "marks",
@@ -450,7 +426,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i> of each centimetre of wire <b>X</b>, using the equation <i>R</i> = \\(\\frac{<i>G</i> × <i>k</i>}{<i>l</i>}\\), where <i>k</i> = 1.0 Ω cm. Give the value for <i>R</i>, to a suitable number of significant figures for this experiment.",
+       "html": "Calculate the resistance <i>R</i> of each centimetre of wire <b>X</b>, using the equation <i>R</i> = \\(\\frac{G \\times k}{l}\\), where <i>k</i> = 1.0 Ω cm. Give the value for <i>R</i>, to a suitable number of significant figures for this experiment.",
        "text": "Calculate the resistance R of each centimetre of wire X, using the equation R = (G × k)/(l), where k = 1.0 Ω cm. Give the value for R, to a suitable number of significant figures for this experiment."
       },
       {
@@ -585,6 +561,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

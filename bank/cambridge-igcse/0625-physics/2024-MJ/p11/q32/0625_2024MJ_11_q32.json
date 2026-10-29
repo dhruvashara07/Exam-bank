@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    109.9,
-    301.4,
-    235.4
+    67.5,
+    109.5,
+    301.5,
+    235.5
    ],
    "id": "0625_2024MJ_11_q32_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "charge on",
-     "charge on"
-    ],
-    [
-     "",
-     "nucleus",
-     "orbiting particles"
-    ],
-    [
-     "<b>A</b>",
-     "negative",
-     "negative"
-    ],
-    [
-     "<b>B</b>",
-     "negative",
-     "positive"
-    ],
-    [
-     "<b>C</b>",
-     "positive",
-     "negative"
-    ],
-    [
-     "<b>D</b>",
-     "positive",
-     "positive"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_11_q32_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "negative negative"
+    },
+    {
+     "label": "B",
+     "html": "negative positive"
+    },
+    {
+     "label": "C",
+     "html": "positive negative"
+    },
+    {
+     "label": "D",
+     "html": "positive positive"
+    }
+   ]
   }
  ]
 }

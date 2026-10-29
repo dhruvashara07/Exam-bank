@@ -34,9 +34,9 @@
    "page": 5,
    "bbox": [
     118.5,
-    123.3,
-    476.8,
-    336.8
+    125.5,
+    476.5,
+    334.0
    ],
    "id": "0625_2017FM_62_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 6,
    "bbox": [
-    61.0,
-    98.7,
-    534.3,
-    278.1
+    60.5,
+    98.0,
+    535.0,
+    275.5
    ],
    "id": "0625_2017FM_62_q02b_fig2-2",
    "part": "(b)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 2.3",
    "page": 6,
    "bbox": [
-    61.0,
-    98.7,
-    534.3,
-    278.1
+    60.5,
+    98.0,
+    535.0,
+    275.5
    ],
    "id": "0625_2017FM_62_q02b_fig2-3",
    "part": "(b)",
@@ -90,10 +90,10 @@
    "caption": "Table 2.1",
    "page": 6,
    "bbox": [
-    117.3,
-    293.1,
+    117.0,
+    298.0,
     478.0,
-    415.7
+    416.0
    ],
    "id": "0625_2017FM_62_q02b_table2-1",
    "part": "(b)",
@@ -109,10 +109,10 @@
    "caption": "Fig. 2.4",
    "page": 7,
    "bbox": [
-    136.9,
-    515.5,
-    458.2,
-    641.7
+    137.0,
+    517.5,
+    458.5,
+    639.0
    ],
    "id": "0625_2017FM_62_q02e_fig2-4",
    "part": "(e)",
@@ -121,7 +121,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-FM/p62/q02/figures/0625_2017FM_62_q02e_fig2-4.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-FM/p62/q02/figures/0625_2017FM_62_q02e_fig2-4",
     "url": null,
-    "kb": 14.7
+    "kb": 14.6
    }
   }
  ],
@@ -272,37 +272,9 @@
      "caption": "Fig. 2.3"
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "wire",
-       "<i>l</i> / m",
-       "<i>V</i> / V",
-       "<i>I</i> / A",
-       "<i>R</i> / Ω"
-      ],
-      [
-       "<b>A</b>",
-       "0.900",
-       "",
-       "",
-       ""
-      ],
-      [
-       "<b>B</b>",
-       "0.500",
-       "2.4",
-       "0.75",
-       ""
-      ],
-      [
-       "<b>C</b>",
-       "0.400",
-       "2.2",
-       "0.85",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2017FM_62_q02b_table2-1",
+     "caption": "Table 2.1"
     },
     {
      "type": "answer",
@@ -375,7 +347,7 @@
    "content": [
     {
      "type": "text",
-     "html": "The student connects the crocodile clips to wire <b>B</b> and then wire <b>C</b> in turn. His readings of potential difference and current are shown in Table 2.1. Calculate, and record in Table 2.1, the resistance <i>R </i>of each wire. Use the equation <i>R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\).",
+     "html": "The student connects the crocodile clips to wire <b>B</b> and then wire <b>C</b> in turn. His readings of potential difference and current are shown in Table 2.1. Calculate, and record in Table 2.1, the resistance <i>R </i>of each wire. Use the equation <i>R</i> = \\(\\frac{V}{I}\\).",
      "text": "The student connects the crocodile clips to wire B and then wire C in turn. His readings of potential difference and current are shown in Table 2.1. Calculate, and record in Table 2.1, the resistance R of each wire. Use the equation R = (V)/(I)."
     },
     {
@@ -455,13 +427,23 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance per unit length <i>r</i> of each wire using the equation <i>r</i> = \\(\\frac{<i>R</i>}{<i>l</i>}\\).",
-       "text": "Calculate the resistance per unit length r of each wire using the equation r = (R)/(l)."
+       "html": "Calculate the resistance per unit length <i>r</i> of each wire using the equation <i>r</i> = \\(\\frac{R}{l}\\) .",
+       "text": "Calculate the resistance per unit length r of each wire using the equation r = (R)/(l) ."
       },
       {
        "type": "text",
        "html": "Include the unit.",
        "text": "Include the unit."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "r for wire A ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "r for wire B ="
       },
       {
        "type": "answer",
@@ -540,7 +522,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -721,6 +712,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

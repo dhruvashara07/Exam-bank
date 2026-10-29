@@ -34,9 +34,9 @@
    "page": 2,
    "bbox": [
     71.5,
-    152.1,
-    513.0,
-    361.4
+    155.5,
+    512.5,
+    360.0
    ],
    "id": "0625_2022MJ_53_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 1.1",
    "page": 2,
    "bbox": [
-    209.4,
-    495.6,
-    385.9,
-    655.0
+    209.5,
+    499.5,
+    386.0,
+    655.5
    ],
    "id": "0625_2022MJ_53_q01a_table1-1",
    "part": "(a)",
@@ -137,39 +137,9 @@
      "text": "Move the 1.00 N load to a distance d = 25.0 cm from the 0.0 cm end of the rule. Move one stand slightly, if necessary, so that the newton meters are as near to vertical as possible. Read, and record in Table 1.1, the value FP on newton meter P and the value FQ on newton meter Q. Repeat this procedure for d = 35.0 cm, d = 45.0 cm, d = 55.0 cm and d = 65.0 cm."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>d</i> / cm",
-       "<i>F</i><sub>P</sub> / N",
-       "<i>F</i><sub>Q</sub> / N"
-      ],
-      [
-       "25.0",
-       "",
-       ""
-      ],
-      [
-       "35.0",
-       "",
-       ""
-      ],
-      [
-       "45.0",
-       "",
-       ""
-      ],
-      [
-       "55.0",
-       "",
-       ""
-      ],
-      [
-       "65.0",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2022MJ_53_q01a_table1-1",
+     "caption": "Table 1.1"
     },
     {
      "type": "marks",
@@ -321,6 +291,11 @@
      "type": "text",
      "html": "From your graph, determine <i>F</i><sub>0</sub>, the value of <i>F</i><sub>P</sub> where the two best-fit lines cross.",
      "text": "From your graph, determine F0, the value of FP where the two best-fit lines cross."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "F0 ="
     },
     {
      "type": "text",
@@ -502,6 +477,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

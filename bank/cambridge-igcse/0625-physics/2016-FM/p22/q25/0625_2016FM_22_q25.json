@@ -32,10 +32,10 @@
   {
    "page": 12,
    "bbox": [
-    69.3,
-    279.3,
-    315.1,
-    404.8
+    69.0,
+    279.0,
+    315.5,
+    405.0
    ],
    "id": "0625_2016FM_22_q25_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-FM/p22/q25/figures/0625_2016FM_22_q25_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-FM/p22/q25/figures/0625_2016FM_22_q25_figA",
     "url": null,
-    "kb": 24.7
+    "kb": 24.5
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The speed of sound in air is 340m/s.",
-   "text": "The speed of sound in air is 340m/s."
+   "html": "The speed of sound in air is 340 m / s.",
+   "text": "The speed of sound in air is 340 m / s."
   },
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which row gives typical values for the speed of sound in a liquid and in a solid?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "speed of sound in",
-     "speed of sound in"
-    ],
-    [
-     "",
-     "a liquid/(m/s)",
-     "a solid/(m/s)"
-    ],
-    [
-     "A",
-     "250",
-     "180"
-    ],
-    [
-     "B",
-     "250",
-     "5000"
-    ],
-    [
-     "C",
-     "1500",
-     "180"
-    ],
-    [
-     "D",
-     "1500",
-     "5000"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016FM_22_q25_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "250 180"
+    },
+    {
+     "label": "B",
+     "html": "250 5000"
+    },
+    {
+     "label": "C",
+     "html": "1500 180"
+    },
+    {
+     "label": "D",
+     "html": "1500 5000"
+    }
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    107.4,
-    124.3,
-    488.4,
-    372.7
+    107.0,
+    123.5,
+    488.0,
+    371.0
    ],
    "id": "0625_2021ON_53_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 6,
    "bbox": [
-    147.1,
-    58.0,
-    448.2,
-    206.2
+    147.0,
+    61.5,
+    448.5,
+    206.5
    ],
    "id": "0625_2021ON_53_q02a_table2-1",
    "part": "(a)",
@@ -162,7 +162,7 @@
     },
     {
      "type": "text",
-     "html": "<i>R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\).",
+     "html": "<i>R</i> = \\(\\frac{V}{I}\\).",
      "text": "R = (V)/(I)."
     },
     {
@@ -175,44 +175,9 @@
      "value": 3
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "wire",
-       "<i>l</i> / cm",
-       "<i>V</i> /",
-       "<i>I</i> /",
-       "<i>R</i> /"
-      ],
-      [
-       "A",
-       "90.0",
-       "",
-       "",
-       ""
-      ],
-      [
-       "B",
-       "90.0",
-       "",
-       "",
-       ""
-      ],
-      [
-       "A",
-       "50.0",
-       "",
-       "",
-       ""
-      ],
-      [
-       "B",
-       "50.0",
-       "",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2021ON_53_q02a_table2-1",
+     "caption": "Table 2.1"
     }
    ]
   },
@@ -432,7 +397,7 @@
       },
       {
        "type": "text",
-       "html": "<i>P</i> = \\(\\frac{<i>R</i> for 90.0 cm of wire A}{<i>R</i> for 90.0 cm of wire B}\\).",
+       "html": "<i>P</i> = \\(\\frac{R \\text{for} 90.0 \\text{cm of wire} A}{R \\text{for} 90.0 \\text{cm of wire} B}\\).",
        "text": "P = (R for 90.0 cm of wire A)/(R for 90.0 cm of wire B)."
       },
       {
@@ -510,7 +475,7 @@
       },
       {
        "type": "text",
-       "html": "<i>Q</i> = \\(\\frac{<i>R</i> for 50.0 cm of wire A}{<i>R</i> for 50.0 cm of wire B}\\).",
+       "html": "<i>Q</i> = \\(\\frac{R \\text{for} 50.0 \\text{cm of wire} A}{R \\text{for} 50.0 \\text{cm of wire} B}\\).",
        "text": "Q = (R for 50.0 cm of wire A)/(R for 50.0 cm of wire B)."
       },
       {
@@ -590,7 +555,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -693,6 +667,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

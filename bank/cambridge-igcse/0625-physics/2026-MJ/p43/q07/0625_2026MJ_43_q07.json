@@ -33,10 +33,10 @@
    "caption": "Figure 7.1",
    "page": 11,
    "bbox": [
-    92.0,
-    85.3,
-    302.9,
-    293.5
+    93.0,
+    84.5,
+    303.5,
+    294.0
    ],
    "id": "0625_2026MJ_43_q07_fig7-1",
    "part": "",
@@ -296,8 +296,8 @@
      "content": [
       {
        "type": "text",
-       "html": "The resistance of component X is 400Ω when the light shines on it.",
-       "text": "The resistance of component X is 400Ω when the light shines on it."
+       "html": "The resistance of component X is 400 Ω when the light shines on it.",
+       "text": "The resistance of component X is 400 Ω when the light shines on it."
       },
       {
        "type": "text",
@@ -305,10 +305,9 @@
        "text": "Calculate the reading on the voltmeter."
       },
       {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "reading on the voltmeter =",
-       "unit": "V"
+       "type": "text",
+       "html": "reading on the voltmeter = …… V",
+       "text": "reading on the voltmeter = …… V"
       },
       {
        "type": "marks",
@@ -395,9 +394,18 @@
      "text": "State the effect of this change on:"
     },
     {
+     "type": "text",
+     "html": "the current in the fixed resistor ……",
+     "text": "the current in the fixed resistor ……"
+    },
+    {
+     "type": "text",
+     "html": "the reading on the voltmeter. ……",
+     "text": "the reading on the voltmeter. ……"
+    },
+    {
      "type": "answer",
-     "kind": "answer_line",
-     "prefix": "the reading on the voltmeter."
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -423,6 +431,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

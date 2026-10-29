@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    501.6,
+    182.2,
+    502.0,
     412.8,
-    776.6
+    633.5
    ],
    "id": "0625_2024MJ_22_q26_figA",
    "caption": null,
@@ -45,7 +45,26 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p22/q26/figures/0625_2024MJ_22_q26_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p22/q26/figures/0625_2024MJ_22_q26_figA",
     "url": null,
-    "kb": 30.9
+    "kb": 5.1
+   }
+  },
+  {
+   "page": 10,
+   "bbox": [
+    67.5,
+    665.0,
+    326.0,
+    777.0
+   ],
+   "id": "0625_2024MJ_22_q26_figB",
+   "caption": null,
+   "part": "",
+   "alt": "",
+   "svg": {
+    "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p22/q26/figures/0625_2024MJ_22_q26_figB.svg",
+    "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p22/q26/figures/0625_2024MJ_22_q26_figB",
+    "url": null,
+    "kb": 21.0
    }
   }
  ],
@@ -90,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +122,35 @@
    "caption": null
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "label of W",
-     "a.c. supply",
-     "d.c. supply"
-    ],
-    [
-     "<b>A</b>",
-     "time",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>B</b>",
-     "time",
-     "Y",
-     "X"
-    ],
-    [
-     "<b>C</b>",
-     "voltage",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>D</b>",
-     "voltage",
-     "Y",
-     "X"
-    ]
-   ],
-   "options": true
+   "type": "text",
+   "html": "Which row shows the correct labels for W, X and Y?",
+   "text": "Which row shows the correct labels for W, X and Y?"
+  },
+  {
+   "type": "figure",
+   "id": "0625_2024MJ_22_q26_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "time X Y"
+    },
+    {
+     "label": "B",
+     "html": "time Y X"
+    },
+    {
+     "label": "C",
+     "html": "voltage X Y"
+    },
+    {
+     "label": "D",
+     "html": "voltage Y X"
+    }
+   ]
   }
  ]
 }

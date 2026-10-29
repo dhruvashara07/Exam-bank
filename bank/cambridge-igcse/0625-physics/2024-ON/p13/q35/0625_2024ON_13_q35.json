@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
-    621.8,
-    253.4,
-    747.4
+    67.5,
+    621.5,
+    253.5,
+    747.5
    ],
    "id": "0625_2024ON_13_q35_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p13/q35/figures/0625_2024ON_13_q35_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p13/q35/figures/0625_2024ON_13_q35_figA",
     "url": null,
-    "kb": 20.8
+    "kb": 20.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,40 +98,30 @@
    "text": "How do the ionising effect and the penetrating ability of α-particles compare with those of β-particles and γ-rays?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "ionising",
-     "penetrating"
-    ],
-    [
-     "",
-     "effect",
-     "ability"
-    ],
-    [
-     "<b>A</b>",
-     "higher",
-     "lower"
-    ],
-    [
-     "<b>B</b>",
-     "higher",
-     "higher"
-    ],
-    [
-     "<b>C</b>",
-     "lower",
-     "lower"
-    ],
-    [
-     "<b>D</b>",
-     "lower",
-     "higher"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_13_q35_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "higher lower"
+    },
+    {
+     "label": "B",
+     "html": "higher higher"
+    },
+    {
+     "label": "C",
+     "html": "lower lower"
+    },
+    {
+     "label": "D",
+     "html": "lower higher"
+    }
+   ]
   }
  ]
 }

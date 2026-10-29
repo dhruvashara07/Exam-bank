@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 10,
    "bbox": [
-    68.4,
-    87.7,
-    538.2,
-    528.8
+    69.0,
+    92.0,
+    539.0,
+    526.0
    ],
    "id": "0625_2018ON_53_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 11,
    "bbox": [
-    203.8,
-    254.8,
+    203.5,
+    259.5,
     391.5,
-    349.7
+    350.0
    ],
    "id": "0625_2018ON_53_q03c_table3-1",
    "part": "(c)",
@@ -295,23 +295,6 @@
      "caption": "Table 3.1"
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "α / °",
-       "θ / °"
-      ],
-      [
-       "20",
-       ""
-      ],
-      [
-       "35",
-       ""
-      ]
-     ]
-    },
-    {
      "type": "marks",
      "value": 3
     }
@@ -476,7 +459,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -522,14 +514,23 @@
      "text": "Suggest two precautions that you took to ensure accurate results from this type of experiment."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
      "type": "text",
      "html": "<b>Tie your ray trace sheet between pages 10 and 11.</b>",
      "text": "Tie your ray trace sheet between pages 10 and 11."
     },
     {
      "type": "answer",
-     "kind": "answer_line",
-     "prefix": "2",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -556,6 +557,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -32,9 +32,9 @@
   {
    "page": 16,
    "bbox": [
-    69.3,
-    85.6,
-    387.4,
+    69.0,
+    85.5,
+    387.5,
     197.0
    ],
    "id": "0625_2016MJ_12_q39_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p12/q39/figures/0625_2016MJ_12_q39_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p12/q39/figures/0625_2016MJ_12_q39_figA",
     "url": null,
-    "kb": 30.9
+    "kb": 30.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row describes the nature and a property of all β-particles?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "nature",
-     "property"
-    ],
-    [
-     "A",
-     "electrons",
-     "can travel through a vacuum"
-    ],
-    [
-     "B",
-     "electrons",
-     "stopped by a thin sheet of paper"
-    ],
-    [
-     "C",
-     "helium nuclei",
-     "can travel through a vacuum"
-    ],
-    [
-     "D",
-     "helium nuclei",
-     "stopped by a thin sheet of paper"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_12_q39_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "electrons can travel through a vacuum"
+    },
+    {
+     "label": "B",
+     "html": "electrons stopped by a thin sheet of paper"
+    },
+    {
+     "label": "C",
+     "html": "helium nuclei can travel through a vacuum"
+    },
+    {
+     "label": "D",
+     "html": "helium nuclei stopped by a thin sheet of paper"
+    }
+   ]
   }
  ]
 }

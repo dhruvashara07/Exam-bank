@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
+    67.5,
     596.5,
-    440.6,
-    707.9
+    441.0,
+    708.0
    ],
    "id": "0625_2019MJ_22_q21_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-MJ/p22/q21/figures/0625_2019MJ_22_q21_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-MJ/p22/q21/figures/0625_2019MJ_22_q21_figA",
     "url": null,
-    "kb": 33.8
+    "kb": 33.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which conditions are necessary for light to be totally internally reflected?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "the incident light is in",
-     "angle of incidence"
-    ],
-    [
-     "<b>A</b>",
-     "the less dense medium",
-     "less than the critical angle"
-    ],
-    [
-     "<b>B</b>",
-     "the less dense medium",
-     "greater than the critical angle"
-    ],
-    [
-     "<b>C</b>",
-     "the more dense medium",
-     "less than the critical angle"
-    ],
-    [
-     "<b>D</b>",
-     "the more dense medium",
-     "greater than the critical angle"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019MJ_22_q21_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "the less dense medium less than the critical angle"
+    },
+    {
+     "label": "B",
+     "html": "the less dense medium greater than the critical angle"
+    },
+    {
+     "label": "C",
+     "html": "the more dense medium less than the critical angle"
+    },
+    {
+     "label": "D",
+     "html": "the more dense medium greater than the critical angle"
+    }
+   ]
   }
  ]
 }

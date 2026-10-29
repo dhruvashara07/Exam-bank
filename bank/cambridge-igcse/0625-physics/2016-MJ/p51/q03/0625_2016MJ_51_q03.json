@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 6,
    "bbox": [
-    63.7,
-    143.9,
-    532.1,
-    257.4
+    64.5,
+    144.5,
+    531.5,
+    257.5
    ],
    "id": "0625_2016MJ_51_q03a_fig3-1",
    "part": "(a)",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p51/q03/figures/0625_2016MJ_51_q03a_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p51/q03/figures/0625_2016MJ_51_q03a_fig3-1",
     "url": null,
-    "kb": 18.8
+    "kb": 18.7
    }
   },
   {
    "caption": "Fig. 3.2",
    "page": 7,
    "bbox": [
-    185.8,
-    294.0,
+    186.5,
+    294.5,
     408.5,
-    442.3
+    442.5
    ],
    "id": "0625_2016MJ_51_q03d_fig3-2",
    "part": "(d)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 3.3",
    "page": 7,
    "bbox": [
-    183.6,
-    491.3,
-    411.6,
-    624.2
+    184.0,
+    490.5,
+    411.0,
+    624.5
    ],
    "id": "0625_2016MJ_51_q03d_fig3-3",
    "part": "(d)",
@@ -258,7 +258,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a value <i>f</i><sub>1</sub> for the focal length of the lens, using the equation <i>f</i><sub>1</sub> = \\(\\frac{<i>uv</i>}{(<i>u</i> + <i>v</i>)}\\) .",
+       "html": "Calculate a value <i>f</i><sub>1</sub> for the focal length of the lens, using the equation <i>f</i><sub>1</sub> = \\(\\frac{\\text{uv}}{(u + v)}\\) .",
        "text": "Calculate a value f1 for the focal length of the lens, using the equation f1 = (uv)/((u + v)) ."
       },
       {
@@ -428,7 +428,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a value <i>f</i><sub>2</sub> for the focal length of the lens using the equation <i>f</i><sub>2</sub> = \\(\\frac{<i>uv</i>}{(<i>u</i> + <i>v</i>)}\\) .",
+       "html": "Calculate a value <i>f</i><sub>2</sub> for the focal length of the lens using the equation <i>f</i><sub>2</sub> = \\(\\frac{\\text{uv}}{(u + v)}\\) .",
        "text": "Calculate a value f2 for the focal length of the lens using the equation f2 = (uv)/((u + v)) ."
       },
       {
@@ -508,14 +508,14 @@
      "text": "Calculate the average value fA for the focal length of the lens. Show your working."
     },
     {
-     "type": "text",
-     "html": "<b>Method 2</b>",
-     "text": "Method 2"
-    },
-    {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "fA ="
+    },
+    {
+     "type": "text",
+     "html": "<b>Method 2</b>",
+     "text": "Method 2"
     },
     {
      "type": "marks",
@@ -689,8 +689,18 @@
        "type": "list",
        "items": [
         "Remove the mirror.",
-        "Place the lens a distance <i>x </i>= 2<i>f</i><sub>3</sub> from the illuminated object. Record the value of <i>x</i>.",
-        "Place the screen the same distance <i>x </i>= 2<i>f</i><sub>3 </sub>from the centre of the lens. The lens must be between the illuminated object and the screen.",
+        "Place the lens a distance <i>x </i>= 2<i>f</i><sub>3</sub> from the illuminated object. Record the value of <i>x</i>."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "x ="
+      },
+      {
+       "type": "list",
+       "items": [
+        "Place the screen the same distance <i>x </i> = 2<i>f</i><sub>3 </sub>from the centre of the lens. The lens must be between the illuminated object and the screen.",
         "Carefully adjust the position of the screen until a sharply focused image of the object is seen on the screen.",
         "Measure the distance <i>y</i> between the centre of the lens and the screen."
        ]
@@ -847,7 +857,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -874,6 +893,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

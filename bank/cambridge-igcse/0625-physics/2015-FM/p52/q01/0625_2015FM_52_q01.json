@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    65.3,
-    125.2,
-    530.1,
-    379.8
+    65.5,
+    125.5,
+    529.5,
+    380.0
    ],
    "id": "0625_2015FM_52_q01_fig1-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-FM/p52/q01/figures/0625_2015FM_52_q01_fig1-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-FM/p52/q01/figures/0625_2015FM_52_q01_fig1-1",
     "url": null,
-    "kb": 44.5
+    "kb": 44.4
    }
   },
   {
    "caption": "Table 1.1",
    "page": 2,
    "bbox": [
-    169.7,
-    519.6,
+    169.5,
+    519.5,
     425.5,
-    634.6
+    635.0
    ],
    "id": "0625_2015FM_52_q01bii_table1-1",
    "part": "(b)(ii)",
@@ -278,33 +278,9 @@
        "text": "Switch on. In Table 1.1, record the potential difference V and the current I for the lamp. Switch off."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>l</i> / cm",
-         "<i>V</i> / V",
-         "<i>I</i>/ A",
-         "<i>R</i> / Ω"
-        ],
-        [
-         "100",
-         "",
-         "",
-         ""
-        ],
-        [
-         "70",
-         "",
-         "",
-         ""
-        ],
-        [
-         "30",
-         "",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2015FM_52_q01bii_table1-1",
+       "caption": "Table 1.1"
       }
      ]
     },
@@ -441,7 +417,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate, and record in the table, the resistance <i>R</i> of the lamp for each value of<i> l</i>, using the equation <i>R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\).",
+     "html": "Calculate, and record in the table, the resistance <i>R</i> of the lamp for each value of<i> l</i>, using the equation <i>R</i> = \\(\\frac{V}{I}\\).",
      "text": "Calculate, and record in the table, the resistance R of the lamp for each value of l, using the equation R = (V)/(I)."
     },
     {
@@ -516,7 +492,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 3
     },
     {
@@ -628,6 +613,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

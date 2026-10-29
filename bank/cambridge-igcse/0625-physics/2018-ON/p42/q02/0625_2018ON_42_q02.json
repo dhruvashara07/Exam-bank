@@ -9,10 +9,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    182.3,
-    88.1,
-    360.3,
-    383.2
+    182.5,
+    87.5,
+    361.0,
+    380.5
    ],
    "id": "0625_2018ON_42_q02a_fig2-1",
    "part": "(a)",
@@ -28,10 +28,10 @@
    "caption": "Table 2.1",
    "page": 4,
    "bbox": [
-    181.1,
-    411.2,
-    414.2,
-    529.9
+    181.0,
+    416.0,
+    414.5,
+    530.0
    ],
    "id": "0625_2018ON_42_q02a_table2-1",
    "part": "(a)",
@@ -47,10 +47,10 @@
    "caption": "Fig. 2.2",
    "page": 5,
    "bbox": [
-    173.8,
-    81.8,
-    376.4,
-    267.0
+    174.0,
+    86.0,
+    376.0,
+    264.0
    ],
    "id": "0625_2018ON_42_q02b_fig2-2",
    "part": "(b)",
@@ -149,27 +149,6 @@
      "caption": "Table 2.1"
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "radius of cylinder",
-       "3.5 cm"
-      ],
-      [
-       "weight of empty cylinder",
-       "2.5 N"
-      ],
-      [
-       "depth of liquid",
-       "12.0 cm"
-      ],
-      [
-       "density of liquid",
-       "<sup>3</sup> 900 kg / m"
-      ]
-     ]
-    },
-    {
      "type": "text",
      "html": "The cylinder containing liquid is placed on a digital balance that displays the mass in kg. Calculate the reading shown on the balance.",
      "text": "The cylinder containing liquid is placed on a digital balance that displays the mass in kg. Calculate the reading shown on the balance."
@@ -179,6 +158,10 @@
      "kind": "answer_line",
      "prefix": "reading",
      "unit": "kg"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -274,9 +257,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "State the name of the device. ……",
+       "text": "State the name of the device. ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(i) State the name of the device."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -464,5 +451,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

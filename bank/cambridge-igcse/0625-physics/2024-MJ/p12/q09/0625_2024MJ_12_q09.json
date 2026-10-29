@@ -51,10 +51,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    160.6,
-    287.8,
-    271.9
+    67.5,
+    160.5,
+    288.0,
+    272.0
    ],
    "id": "0625_2024MJ_12_q09_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p12/q09/figures/0625_2024MJ_12_q09_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p12/q09/figures/0625_2024MJ_12_q09_figB",
     "url": null,
-    "kb": 22.3
+    "kb": 22.1
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "What are processes 2 and 3?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "2",
-     "3"
-    ],
-    [
-     "<b>A</b>",
-     "condensation",
-     "melting"
-    ],
-    [
-     "<b>B</b>",
-     "condensation",
-     "freezing"
-    ],
-    [
-     "<b>C</b>",
-     "evaporation",
-     "melting"
-    ],
-    [
-     "<b>D</b>",
-     "evaporation",
-     "freezing"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_12_q09_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "condensation melting"
+    },
+    {
+     "label": "B",
+     "html": "condensation freezing"
+    },
+    {
+     "label": "C",
+     "html": "evaporation melting"
+    },
+    {
+     "label": "D",
+     "html": "evaporation freezing"
+    }
+   ]
   }
  ]
 }

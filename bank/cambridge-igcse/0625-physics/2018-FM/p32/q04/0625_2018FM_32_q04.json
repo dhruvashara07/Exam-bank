@@ -33,10 +33,10 @@
    "caption": "Fig. 4.1",
    "page": 8,
    "bbox": [
-    67.8,
-    88.5,
-    527.2,
-    310.7
+    68.0,
+    88.0,
+    527.5,
+    308.0
    ],
    "id": "0625_2018FM_32_q04_fig4-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 4.2",
    "page": 9,
    "bbox": [
-    204.3,
+    204.0,
     86.0,
-    391.0,
-    265.1
+    391.5,
+    262.5
    ],
    "id": "0625_2018FM_32_q04c_fig4-2",
    "part": "(c)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-FM/p32/q04/figures/0625_2018FM_32_q04c_fig4-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-FM/p32/q04/figures/0625_2018FM_32_q04c_fig4-2",
     "url": null,
-    "kb": 46.7
+    "kb": 46.6
    }
   }
  ],
@@ -211,7 +211,21 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "3.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "3."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 3
     },
     {
@@ -308,10 +322,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "The electric drill <b>usefully </b>transforms electrical energy into …… energy.",
+       "text": "The electric drill usefully transforms electrical energy into …… energy."
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(i) The electric drill usefully transforms electrical energy into",
-       "unit": "energy."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -378,14 +395,12 @@
      "content": [
       {
        "type": "text",
-       "html": "A second electric drill transforms the same amount of electrical energy per second as the first one. It wastes more of this energy.",
-       "text": "A second electric drill transforms the same amount of electrical energy per second as the first one. It wastes more of this energy."
+       "html": "A second electric drill transforms the same amount of electrical energy per second as the first one. It wastes more of this energy. The second drill is <b>less</b> …… than the first drill.",
+       "text": "A second electric drill transforms the same amount of electrical energy per second as the first one. It wastes more of this energy. The second drill is less …… than the first drill."
       },
       {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "The second drill is less",
-       "unit": "than the first drill."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -436,6 +451,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    84.7,
-    316.9,
-    210.1
+    67.5,
+    84.5,
+    317.0,
+    210.5
    ],
    "id": "0625_2025MJ_23_q10_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,40 +98,30 @@
    "text": "Which row describes the particle structure of a gas?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "distance between",
-     "motion of"
-    ],
-    [
-     "",
-     "the particles",
-     "the particles"
-    ],
-    [
-     "<b>A</b>",
-     "close together",
-     "vibrating"
-    ],
-    [
-     "<b>B</b>",
-     "close together",
-     "random"
-    ],
-    [
-     "<b>C</b>",
-     "far apart",
-     "vibrating"
-    ],
-    [
-     "<b>D</b>",
-     "far apart",
-     "random"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_23_q10_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "close together vibrating"
+    },
+    {
+     "label": "B",
+     "html": "close together random"
+    },
+    {
+     "label": "C",
+     "html": "far apart vibrating"
+    },
+    {
+     "label": "D",
+     "html": "far apart random"
+    }
+   ]
   }
  ]
 }

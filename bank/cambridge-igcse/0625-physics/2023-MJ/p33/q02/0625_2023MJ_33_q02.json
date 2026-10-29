@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 3,
    "bbox": [
-    154.6,
-    81.8,
-    465.0,
-    286.9
+    158.5,
+    84.5,
+    436.5,
+    285.0
    ],
    "id": "0625_2023MJ_33_q02_fig2-1",
    "part": "",
@@ -142,10 +142,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "The source of the wind energy is …… .",
+       "text": "The source of the wind energy is …… ."
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(i) The source of the wind energy is",
-       "unit": "."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -211,10 +214,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "When the blades turn, electrical power is generated in the …… .",
+       "text": "When the blades turn, electrical power is generated in the …… ."
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(ii) When the blades turn, electrical power is generated in the",
-       "unit": "."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -297,7 +303,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -324,6 +339,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

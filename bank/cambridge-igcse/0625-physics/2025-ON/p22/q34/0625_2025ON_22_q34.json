@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
-    151.6,
+    67.5,
+    151.5,
     211.0,
-    262.9
+    263.0
    ],
    "id": "0625_2025ON_22_q34_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p22/q34/figures/0625_2025ON_22_q34_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p22/q34/figures/0625_2025ON_22_q34_figA",
     "url": null,
-    "kb": 10.0
+    "kb": 9.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "What is the missing number X and the missing element Q?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "X",
-     "Q"
-    ],
-    [
-     "<b>A</b>",
-     "2",
-     "H"
-    ],
-    [
-     "<b>B</b>",
-     "2",
-     "He"
-    ],
-    [
-     "<b>C</b>",
-     "3",
-     "H"
-    ],
-    [
-     "<b>D</b>",
-     "3",
-     "He"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025ON_22_q34_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "2 H"
+    },
+    {
+     "label": "B",
+     "html": "2 He"
+    },
+    {
+     "label": "C",
+     "html": "3 H"
+    },
+    {
+     "label": "D",
+     "html": "3 He"
+    }
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Figure 3.1",
    "page": 10,
    "bbox": [
-    235.3,
-    85.5,
-    360.6,
-    290.6
+    234.5,
+    88.0,
+    360.5,
+    291.0
    ],
    "id": "0625_2026MJ_63_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Figure 3.2",
    "page": 10,
    "bbox": [
-    92.5,
-    441.1,
-    318.4,
-    625.4
+    92.0,
+    440.5,
+    319.0,
+    625.5
    ],
    "id": "0625_2026MJ_63_q03b_fig3-2",
    "part": "(b)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q03/figures/0625_2026MJ_63_q03b_fig3-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p63/q03/figures/0625_2026MJ_63_q03b_fig3-2",
     "url": null,
-    "kb": 17.9
+    "kb": 17.8
    }
   },
   {
@@ -72,9 +72,9 @@
    "page": 11,
    "bbox": [
     92.0,
-    60.8,
-    438.7,
-    268.4
+    61.5,
+    439.0,
+    268.5
    ],
    "id": "0625_2026MJ_63_q03b_table3-1",
    "part": "(b)",
@@ -91,9 +91,9 @@
    "page": 12,
    "bbox": [
     92.0,
-    307.9,
-    438.7,
-    360.6
+    308.5,
+    439.0,
+    361.0
    ],
    "id": "0625_2026MJ_63_q03d_table3-2",
    "part": "(d)",
@@ -297,45 +297,9 @@
      "value": 1
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "number of resistors",
-       "V/",
-       "I/",
-       "R/"
-      ],
-      [
-       "1",
-       "0.75",
-       "",
-       ""
-      ],
-      [
-       "2",
-       "0.75",
-       "0.60",
-       "1.25"
-      ],
-      [
-       "3",
-       "0.75",
-       "0.85",
-       "0.88"
-      ],
-      [
-       "4",
-       "0.75",
-       "1.15",
-       "0.65"
-      ],
-      [
-       "5",
-       "0.75",
-       "1.45",
-       "0.52"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2026MJ_63_q03b_table3-1",
+     "caption": "Table 3.1"
     }
    ]
   },
@@ -506,8 +470,8 @@
       },
       {
        "type": "text",
-       "html": "R = \\(\\frac{V}{I}\\).",
-       "text": "R = (V)/(I)."
+       "html": "R = \\(\\frac{V}{I}\\) .",
+       "text": "R = (V)/(I) ."
       },
       {
        "type": "text",
@@ -670,7 +634,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "2",
+       "prefix": "1"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "2"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -788,8 +761,12 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "suggestion",
-     "lines": 2
+     "prefix": "anomalous reading ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "suggestion"
     },
     {
      "type": "marks",
@@ -815,6 +792,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

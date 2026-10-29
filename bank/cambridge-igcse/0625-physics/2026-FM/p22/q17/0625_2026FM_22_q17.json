@@ -33,9 +33,9 @@
    "page": 8,
    "bbox": [
     67.9,
-    339.2,
-    243.3,
-    458.1
+    351.3,
+    244.0,
+    448.9
    ],
    "id": "0625_2026FM_22_q17_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-FM/p22/q17/figures/0625_2026FM_22_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-FM/p22/q17/figures/0625_2026FM_22_q17_figA",
     "url": null,
-    "kb": 10.3
+    "kb": 10.2
    }
   },
   {
    "page": 8,
    "bbox": [
-    67.7,
+    67.5,
     482.0,
-    259.3,
-    593.4
+    259.5,
+    593.5
    ],
    "id": "0625_2026FM_22_q17_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-FM/p22/q17/figures/0625_2026FM_22_q17_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-FM/p22/q17/figures/0625_2026FM_22_q17_figB",
     "url": null,
-    "kb": 17.6
+    "kb": 17.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which letter represents the amplitude and which letter represents the wavelength of the wave?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>amplitude</b>",
-     "<b>wavelength</b>"
-    ],
-    [
-     "<b>A</b>",
-     "P",
-     "Q"
-    ],
-    [
-     "<b>B</b>",
-     "P",
-     "R"
-    ],
-    [
-     "<b>C</b>",
-     "S",
-     "Q"
-    ],
-    [
-     "<b>D</b>",
-     "S",
-     "R"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026FM_22_q17_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "P Q"
+    },
+    {
+     "label": "B",
+     "html": "P R"
+    },
+    {
+     "label": "C",
+     "html": "S Q"
+    },
+    {
+     "label": "D",
+     "html": "S R"
+    }
+   ]
   }
  ]
 }

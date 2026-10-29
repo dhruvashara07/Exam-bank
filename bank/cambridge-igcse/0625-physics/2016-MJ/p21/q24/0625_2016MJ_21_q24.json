@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    67.6,
-    122.7,
-    300.9,
-    248.2
+    67.5,
+    122.5,
+    301.0,
+    248.5
    ],
    "id": "0625_2016MJ_21_q24_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "Which row correctly compares the air pressure in a compression and the air pressure in a rarefaction to the air pressure nearby where there is no sound wave?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "air pressure in",
-     "air pressure in"
-    ],
-    [
-     "",
-     "a compression",
-     "a rarefaction"
-    ],
-    [
-     "A",
-     "higher",
-     "higher"
-    ],
-    [
-     "B",
-     "higher",
-     "lower"
-    ],
-    [
-     "C",
-     "lower",
-     "higher"
-    ],
-    [
-     "D",
-     "lower",
-     "lower"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_21_q24_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "higher higher"
+    },
+    {
+     "label": "B",
+     "html": "higher lower"
+    },
+    {
+     "label": "C",
+     "html": "lower higher"
+    },
+    {
+     "label": "D",
+     "html": "lower lower"
+    }
+   ]
   }
  ]
 }

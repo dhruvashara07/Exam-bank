@@ -32,9 +32,9 @@
   {
    "page": 10,
    "bbox": [
-    218.8,
+    218.5,
     268.1,
-    376.7,
+    377.0,
     425.0
    ],
    "id": "0625_2016MJ_21_q22_figA",
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,27 +108,6 @@
    "caption": null
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "<i>w</i>",
-     ""
-    ],
-    [
-     "<i>v</i>",
-     ""
-    ],
-    [
-     "",
-     "<i>y</i>"
-    ],
-    [
-     "",
-     "<i>x</i>"
-    ]
-   ]
-  },
-  {
    "type": "text",
    "html": "Which formula is used to calculate the refractive index n of the glass?",
    "text": "Which formula is used to calculate the refractive index n of the glass?"
@@ -137,19 +117,19 @@
    "options": [
     {
      "label": "A",
-     "html": "n = \\(\\frac{sinv}{siny}\\)"
+     "html": "n = \\(\\frac{\\sin v}{\\sin y}\\)"
     },
     {
      "label": "B",
-     "html": "n = \\(\\frac{sinv}{sinx}\\)"
+     "html": "n = \\(\\frac{\\sin v}{\\sin x}\\)"
     },
     {
      "label": "C",
-     "html": "n = \\(\\frac{sinw}{siny}\\)"
+     "html": "n = \\(\\frac{\\sin w}{\\sin y}\\)"
     },
     {
      "label": "D",
-     "html": "n = \\(\\frac{sinw}{sinx}\\)"
+     "html": "n = \\(\\frac{\\sin w}{\\sin x}\\)"
     }
    ]
   }

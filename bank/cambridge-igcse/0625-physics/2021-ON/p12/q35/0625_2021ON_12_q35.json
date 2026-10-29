@@ -32,9 +32,9 @@
   {
    "page": 14,
    "bbox": [
-    70.7,
+    70.5,
     99.7,
-    524.2,
+    524.5,
     208.7
    ],
    "id": "0625_2021ON_12_q35_figA",
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p12/q35/figures/0625_2021ON_12_q35_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p12/q35/figures/0625_2021ON_12_q35_figA",
     "url": null,
-    "kb": 13.6
+    "kb": 13.5
    }
   },
   {
    "page": 14,
    "bbox": [
-    67.7,
-    242.1,
-    400.1,
-    367.6
+    67.5,
+    242.0,
+    400.5,
+    367.5
    ],
    "id": "0625_2021ON_12_q35_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p12/q35/figures/0625_2021ON_12_q35_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p12/q35/figures/0625_2021ON_12_q35_figB",
     "url": null,
-    "kb": 28.2
+    "kb": 28.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "turning effect of the forces",
-     "turning effect of the forces"
-    ],
-    [
-     "",
-     "in positions 1 and 3",
-     "in positions 2 and 4"
-    ],
-    [
-     "<b>A</b>",
-     "different",
-     "different"
-    ],
-    [
-     "<b>B</b>",
-     "different",
-     "same"
-    ],
-    [
-     "<b>C</b>",
-     "same",
-     "different"
-    ],
-    [
-     "<b>D</b>",
-     "same",
-     "same"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_12_q35_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "different different"
+    },
+    {
+     "label": "B",
+     "html": "different same"
+    },
+    {
+     "label": "C",
+     "html": "same different"
+    },
+    {
+     "label": "D",
+     "html": "same same"
+    }
+   ]
   }
  ]
 }

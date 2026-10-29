@@ -32,10 +32,10 @@
   {
    "page": 12,
    "bbox": [
-    67.7,
-    388.3,
+    67.5,
+    388.0,
     272.0,
-    513.8
+    514.0
    ],
    "id": "0625_2017ON_13_q25_figA",
    "caption": null,
@@ -90,16 +90,17 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The speed of sound in air is 330m/s.",
-   "text": "The speed of sound in air is 330m/s."
+   "html": "The speed of sound in air is 330 m / s.",
+   "text": "The speed of sound in air is 330 m / s."
   },
   {
    "type": "text",
-   "html": "The speed of ultraviolet waves in air is 300000000m/s.",
-   "text": "The speed of ultraviolet waves in air is 300000000m/s."
+   "html": "The speed of ultraviolet waves in air is 300 000 000 m / s.",
+   "text": "The speed of ultraviolet waves in air is 300 000 000 m / s."
   },
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "Which row gives a possible frequency and speed of an ultrasound wave in air?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "frequency/Hz",
-     "speed m/s"
-    ],
-    [
-     "<b>A</b>",
-     "4000",
-     "330"
-    ],
-    [
-     "<b>B</b>",
-     "4000",
-     "300000000"
-    ],
-    [
-     "<b>C</b>",
-     "40000",
-     "330"
-    ],
-    [
-     "<b>D</b>",
-     "40000",
-     "300000000"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017ON_13_q25_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "4000 330"
+    },
+    {
+     "label": "B",
+     "html": "4000 300000000"
+    },
+    {
+     "label": "C",
+     "html": "40000 330"
+    },
+    {
+     "label": "D",
+     "html": "40000 300000000"
+    }
+   ]
   }
  ]
 }

@@ -33,9 +33,9 @@
    "page": 17,
    "bbox": [
     182.5,
-    122.6,
+    122.5,
     413.0,
-    240.8
+    241.0
    ],
    "id": "0625_2024ON_22_q36_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,33 +103,9 @@
    "text": "He uses a radiation detector and records the total counts in 5-minute intervals. He does this three times with the source present and three times with the source absent. Here are his results."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "total counts in",
-     "total counts in"
-    ],
-    [
-     "5 minutes",
-     "5 minutes"
-    ],
-    [
-     "with source present",
-     "with source absent"
-    ],
-    [
-     "68",
-     "25"
-    ],
-    [
-     "73",
-     "28"
-    ],
-    [
-     "69",
-     "22"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2024ON_22_q36_figA",
+   "caption": null
   },
   {
    "type": "text",
@@ -140,19 +117,19 @@
    "options": [
     {
      "label": "A",
-     "html": "5 counts/minute"
+     "html": "5 counts / minute"
     },
     {
      "label": "B",
-     "html": "9 counts/minute"
+     "html": "9 counts / minute"
     },
     {
      "label": "C",
-     "html": "25 counts/minute"
+     "html": "25 counts / minute"
     },
     {
      "label": "D",
-     "html": "45 counts/minute"
+     "html": "45 counts / minute"
     }
    ]
   }

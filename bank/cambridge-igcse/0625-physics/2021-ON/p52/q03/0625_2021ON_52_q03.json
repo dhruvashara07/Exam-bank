@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 7,
    "bbox": [
-    79.4,
-    109.2,
-    515.9,
-    262.6
+    80.0,
+    112.5,
+    516.0,
+    261.0
    ],
    "id": "0625_2021ON_52_q03_fig3-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p52/q03/figures/0625_2021ON_52_q03_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p52/q03/figures/0625_2021ON_52_q03_fig3-1",
     "url": null,
-    "kb": 22.9
+    "kb": 22.8
    }
   },
   {
    "caption": "Table 3.1",
    "page": 7,
    "bbox": [
-    199.1,
-    422.9,
-    396.2,
-    598.5
+    199.0,
+    426.5,
+    396.5,
+    599.0
    ],
    "id": "0625_2021ON_52_q03aiii_table3-1",
    "part": "(a)(iii)",
@@ -230,7 +230,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate, and record in Table 3.1, \\(\\frac{<i>u</i>}{<i>v</i>}\\) .",
+       "html": "Calculate, and record in Table 3.1, \\(\\frac{u}{v}\\) .",
        "text": "Calculate, and record in Table 3.1, (u)/(v) ."
       },
       {
@@ -302,39 +302,9 @@
        "text": "Repeat the procedure for u = 25.0 cm, u = 30.0 cm, u = 35.0 cm and u = 40.0 cm."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>u</i> / cm",
-         "<i>v</i> / cm",
-         "<i>u</i> <i>v</i>"
-        ],
-        [
-         "20.0",
-         "",
-         ""
-        ],
-        [
-         "25.0",
-         "",
-         ""
-        ],
-        [
-         "30.0",
-         "",
-         ""
-        ],
-        [
-         "35.0",
-         "",
-         ""
-        ],
-        [
-         "40.0",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2021ON_52_q03aiii_table3-1",
+       "caption": "Table 3.1"
       },
       {
        "type": "marks",
@@ -417,7 +387,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of <i>u</i> / cm (<i>y</i>-axis) against \\(\\frac{<i>u</i>}{<i>v</i>}\\) (<i>x</i>-axis). Start the <i>y</i>-axis at <i>u</i> = 15.0 cm.",
+     "html": "Plot a graph of <i>u</i> / cm (<i>y</i>-axis) against \\(\\frac{u}{v}\\) (<i>x</i>-axis). Start the <i>y</i>-axis at <i>u</i> = 15.0 cm.",
      "text": "Plot a graph of u / cm (y-axis) against (u)/(v) (x-axis). Start the y-axis at u = 15.0 cm."
     },
     {
@@ -491,7 +461,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Use your graph to find the value of <i>u</i> when \\(\\frac{<i>u</i>}{<i>v</i>}\\) = 1.0. Show clearly on the graph how you obtained the necessary information.",
+     "html": "Use your graph to find the value of <i>u</i> when \\(\\frac{u}{v}\\) = 1.0. Show clearly on the graph how you obtained the necessary information.",
      "text": "Use your graph to find the value of u when (u)/(v) = 1.0. Show clearly on the graph how you obtained the necessary information."
     },
     {
@@ -571,7 +541,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "suggestion"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 3
     },
     {
@@ -598,6 +577,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

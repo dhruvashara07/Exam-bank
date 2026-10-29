@@ -32,9 +32,9 @@
   {
    "page": 14,
    "bbox": [
-    69.4,
-    434.2,
-    302.6,
+    69.0,
+    434.0,
+    303.0,
     545.0
    ],
    "id": "0625_2018MJ_11_q38_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p11/q38/figures/0625_2018MJ_11_q38_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p11/q38/figures/0625_2018MJ_11_q38_figA",
     "url": null,
-    "kb": 20.2
+    "kb": 20.0
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A neutral atom of argon-40 (<sup>40</sup><sub>18</sub>A ) and a neutral atom of potassium-39 (<sup>39</sup><sub>19</sub>K ) are compared.",
-   "text": "A neutral atom of argon-40 (4018A ) and a neutral atom of potassium-39 (3919K ) are compared."
+   "html": "A neutral atom of argon-40 (<sup>40</sup><sub>18</sub> A ) and a neutral atom of potassium-39 (<sup>39</sup><sub>19</sub>K ) are compared.",
+   "text": "A neutral atom of argon-40 (4018 A ) and a neutral atom of potassium-39 (3919K ) are compared."
   },
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which atom has more electrons, and which atom has more protons?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "more electrons",
-     "more protons"
-    ],
-    [
-     "<b>A</b>",
-     "argon",
-     "argon"
-    ],
-    [
-     "<b>B</b>",
-     "argon",
-     "potassium"
-    ],
-    [
-     "<b>C</b>",
-     "potassium",
-     "argon"
-    ],
-    [
-     "<b>D</b>",
-     "potassium",
-     "potassium"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_11_q38_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "argon argon"
+    },
+    {
+     "label": "B",
+     "html": "argon potassium"
+    },
+    {
+     "label": "C",
+     "html": "potassium argon"
+    },
+    {
+     "label": "D",
+     "html": "potassium potassium"
+    }
+   ]
   }
  ]
 }

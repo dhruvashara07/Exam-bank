@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    69.4,
-    122.6,
-    371.9,
-    261.8
+    69.0,
+    122.5,
+    372.0,
+    262.0
    ],
    "id": "0625_2019ON_13_q11_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p13/q11/figures/0625_2019ON_13_q11_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p13/q11/figures/0625_2019ON_13_q11_figA",
     "url": null,
-    "kb": 25.4
+    "kb": 25.3
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A boy lifts a brick from the ground and places it at rest on a higher shelf. He does 30J of work against gravity.",
-   "text": "A boy lifts a brick from the ground and places it at rest on a higher shelf. He does 30J of work against gravity."
+   "html": "A boy lifts a brick from the ground and places it at rest on a higher shelf. He does 30 J of work against gravity.",
+   "text": "A boy lifts a brick from the ground and places it at rest on a higher shelf. He does 30 J of work against gravity."
   },
   {
    "type": "text",
@@ -102,45 +103,30 @@
    "text": "Which row correctly describes the final energies of the brick?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "gravitational potential",
-     "kinetic energy gained"
-    ],
-    [
-     "",
-     "energy gained by the brick",
-     "by the brick"
-    ],
-    [
-     "",
-     "/J",
-     "/J"
-    ],
-    [
-     "<b>A</b>",
-     "0",
-     "30"
-    ],
-    [
-     "<b>B</b>",
-     "15",
-     "15"
-    ],
-    [
-     "<b>C</b>",
-     "30",
-     "0"
-    ],
-    [
-     "<b>D</b>",
-     "27",
-     "3"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019ON_13_q11_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0 30"
+    },
+    {
+     "label": "B",
+     "html": "15 15"
+    },
+    {
+     "label": "C",
+     "html": "30 0"
+    },
+    {
+     "label": "D",
+     "html": "27 3"
+    }
+   ]
   }
  ]
 }

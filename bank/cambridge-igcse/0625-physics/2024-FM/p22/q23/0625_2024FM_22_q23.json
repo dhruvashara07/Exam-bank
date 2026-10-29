@@ -33,9 +33,9 @@
    "page": 11,
    "bbox": [
     79.3,
-    85.3,
-    515.1,
-    212.9
+    85.0,
+    515.0,
+    213.5
    ],
    "id": "0625_2024FM_22_q23_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-FM/p22/q23/figures/0625_2024FM_22_q23_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-FM/p22/q23/figures/0625_2024FM_22_q23_figA",
     "url": null,
-    "kb": 24.2
+    "kb": 24.0
    }
   },
   {
    "page": 11,
    "bbox": [
-    67.7,
-    245.6,
-    331.4,
-    356.9
+    67.5,
+    245.5,
+    331.5,
+    357.0
    ],
    "id": "0625_2024FM_22_q23_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-FM/p22/q23/figures/0625_2024FM_22_q23_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-FM/p22/q23/figures/0625_2024FM_22_q23_figB",
     "url": null,
-    "kb": 22.9
+    "kb": 22.7
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which combination of charges would cause the change in the balance reading shown?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>A</b>",
-     "negative charge",
-     "negative charge"
-    ],
-    [
-     "<b>B</b>",
-     "negative charge",
-     "positive charge"
-    ],
-    [
-     "<b>C</b>",
-     "negative charge",
-     "no charge"
-    ],
-    [
-     "<b>D</b>",
-     "positive charge",
-     "no charge"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024FM_22_q23_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "negative charge negative charge"
+    },
+    {
+     "label": "B",
+     "html": "negative charge positive charge"
+    },
+    {
+     "label": "C",
+     "html": "negative charge no charge"
+    },
+    {
+     "label": "D",
+     "html": "positive charge no charge"
+    }
+   ]
   }
  ]
 }

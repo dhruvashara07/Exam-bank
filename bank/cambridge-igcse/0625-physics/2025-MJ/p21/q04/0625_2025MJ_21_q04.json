@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
+    67.5,
     542.0,
     514.7,
-    667.1
+    667.0
    ],
    "id": "0625_2025MJ_21_q04_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p21/q04/figures/0625_2025MJ_21_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p21/q04/figures/0625_2025MJ_21_q04_figA",
     "url": null,
-    "kb": 26.8
+    "kb": 26.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,45 +103,30 @@
    "text": "Which apparatus does she need to find the density of the gold?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "balance",
-     "measuring cylinder",
-     "thermometer",
-     "ruler"
-    ],
-    [
-     "<b>A</b>",
-     "\u0016",
-     "\u0016",
-     "\u0016",
-     "\u0016"
-    ],
-    [
-     "<b>B</b>",
-     "\u0016",
-     "\u0016",
-     "\u0016",
-     "\u001a"
-    ],
-    [
-     "<b>C</b>",
-     "\u0016",
-     "\u0016",
-     "\u001a",
-     "\u001a"
-    ],
-    [
-     "<b>D</b>",
-     "\u0016",
-     "\u001a",
-     "\u001a",
-     "\u001a"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_21_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "\u0016 \u0016 \u0016 \u0016 key"
+    },
+    {
+     "label": "B",
+     "html": "\u0016 \u0016 \u0016 \u001a \u0016= needed"
+    },
+    {
+     "label": "C",
+     "html": "\u0016 \u0016 \u001a \u001a \u001a = not needed"
+    },
+    {
+     "label": "D",
+     "html": "\u0016 \u001a \u001a \u001a"
+    }
+   ]
   }
  ]
 }

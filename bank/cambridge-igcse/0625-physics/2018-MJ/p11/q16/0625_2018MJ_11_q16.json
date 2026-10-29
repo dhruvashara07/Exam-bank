@@ -32,9 +32,9 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
+    67.5,
     325.0,
-    316.9,
+    317.0,
     450.5
    ],
    "id": "0625_2018MJ_11_q16_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p11/q16/figures/0625_2018MJ_11_q16_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p11/q16/figures/0625_2018MJ_11_q16_figA",
     "url": null,
-    "kb": 26.6
+    "kb": 26.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -112,40 +113,30 @@
    "text": "Which row describes how the average speed of the air molecules and the average distance between them changes?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "average speed",
-     "average distance"
-    ],
-    [
-     "",
-     "of molecules",
-     "between molecules"
-    ],
-    [
-     "<b>A</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "increases",
-     "unchanged"
-    ],
-    [
-     "<b>C</b>",
-     "unchanged",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "unchanged",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018MJ_11_q16_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "increases decreases"
+    },
+    {
+     "label": "B",
+     "html": "increases unchanged"
+    },
+    {
+     "label": "C",
+     "html": "unchanged decreases"
+    },
+    {
+     "label": "D",
+     "html": "unchanged increases"
+    }
+   ]
   }
  ]
 }

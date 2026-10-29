@@ -70,6 +70,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -86,7 +87,7 @@
    "options": [
     {
      "label": "A",
-     "html": "<i>v</i> = \\(\\frac{<i>s</i>}{<i>t</i>}\\)"
+     "html": "<i>v</i> = \\(\\frac{s}{t}\\)"
     },
     {
      "label": "B",
@@ -94,11 +95,11 @@
     },
     {
      "label": "C",
-     "html": "<i>v</i> = \\(\\frac{<i>t</i>}{<i>s</i>}\\)"
+     "html": "<i>v</i> = \\(\\frac{t}{s}\\)"
     },
     {
      "label": "D",
-     "html": "<i>v</i> = <i>s</i> × <i>t</i><sup>2</sup>"
+     "html": "<i>v</i> = <i>s</i> × <i>t</i> <sup>2</sup>"
     }
    ]
   }

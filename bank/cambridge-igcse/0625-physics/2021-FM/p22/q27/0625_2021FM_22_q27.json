@@ -32,9 +32,9 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
+    67.5,
     594.0,
-    385.3,
+    385.5,
     719.5
    ],
    "id": "0625_2021FM_22_q27_figA",
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -98,8 +99,8 @@
   },
   {
    "type": "text",
-   "html": "The speed of sound in liquid water is 1500m/s.",
-   "text": "The speed of sound in liquid water is 1500m/s."
+   "html": "The speed of sound in liquid water is 1500 m / s.",
+   "text": "The speed of sound in liquid water is 1500 m / s."
   },
   {
    "type": "text",
@@ -107,40 +108,30 @@
    "text": "Which row correctly compares the speed of sound in ice and the speed of sound in water vapour with the speed of sound in water?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "speed of sound in ice",
-     "speed of sound in steam"
-    ],
-    [
-     "",
-     "m/s",
-     "m/s"
-    ],
-    [
-     "<b>A</b>",
-     "less than 1500",
-     "less than 1500"
-    ],
-    [
-     "<b>B</b>",
-     "less than 1500",
-     "more than 1500"
-    ],
-    [
-     "<b>C</b>",
-     "more than 1500",
-     "less than 1500"
-    ],
-    [
-     "<b>D</b>",
-     "more than 1500",
-     "more than 1500"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021FM_22_q27_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "less than 1500 less than 1500"
+    },
+    {
+     "label": "B",
+     "html": "less than 1500 more than 1500"
+    },
+    {
+     "label": "C",
+     "html": "more than 1500 less than 1500"
+    },
+    {
+     "label": "D",
+     "html": "more than 1500 more than 1500"
+    }
+   ]
   }
  ]
 }

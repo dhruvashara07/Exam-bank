@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,37 +103,9 @@
    "text": "The decay rate of a sample of this nuclide is measured at 1.0 hour intervals. The table shows the measurements, with one value shown as X."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "time/",
-     "decay rate"
-    ],
-    [
-     "hours",
-     "decays /s"
-    ],
-    [
-     "0",
-     "240"
-    ],
-    [
-     "1.0",
-     "170"
-    ],
-    [
-     "2.0",
-     "120"
-    ],
-    [
-     "3.0",
-     "85"
-    ],
-    [
-     "4.0",
-     "X"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2016ON_11_q40_figA",
+   "caption": null
   },
   {
    "type": "text",

@@ -71,13 +71,13 @@
    "content": [
     {
      "type": "text",
-     "html": "Atmospheric pressure is 1.0 × 10<sup>5</sup>Pa. A volume of 1.02m<sup>3</sup> of air at atmospheric pressure is",
-     "text": "Atmospheric pressure is 1.0 × 105Pa. A volume of 1.02m3 of air at atmospheric pressure is"
+     "html": "Atmospheric pressure is 1.0 × 10<sup>5</sup> Pa. A volume of 1.02 m<sup>3</sup> of air at atmospheric pressure is",
+     "text": "Atmospheric pressure is 1.0 × 105 Pa. A volume of 1.02 m3 of air at atmospheric pressure is"
     },
     {
      "type": "text",
-     "html": "pumped into a car tyre. The pressure of the air when it is inside the tyre is 2.6 × 10<sup>5</sup>Pa.",
-     "text": "pumped into a car tyre. The pressure of the air when it is inside the tyre is 2.6 × 105Pa."
+     "html": "pumped into a car tyre. The pressure of the air when it is inside the tyre is 2.6 × 10<sup>5</sup> Pa.",
+     "text": "pumped into a car tyre. The pressure of the air when it is inside the tyre is 2.6 × 105 Pa."
     },
     {
      "type": "text",
@@ -174,7 +174,21 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "motion",
+       "prefix": "separation"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "arrangement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "motion"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 3
       },
       {
@@ -277,5 +291,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

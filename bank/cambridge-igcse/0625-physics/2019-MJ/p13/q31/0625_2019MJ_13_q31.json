@@ -32,10 +32,10 @@
   {
    "page": 16,
    "bbox": [
-    67.7,
-    109.9,
-    493.2,
-    223.3
+    67.5,
+    109.5,
+    493.5,
+    223.5
    ],
    "id": "0625_2019MJ_13_q31_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "As the battery runs down, what happens to its chemical energy?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "The energy is transferred by",
-     "and ends up as"
-    ],
-    [
-     "<b>A</b>",
-     "electrical working",
-     "internal energy in the resistor"
-    ],
-    [
-     "<b>B</b>",
-     "electrical working",
-     "potential energy in the resistor"
-    ],
-    [
-     "<b>C</b>",
-     "mechanical working",
-     "internal energy in the resistor"
-    ],
-    [
-     "<b>D</b>",
-     "mechanical working",
-     "potential energy in the resistor"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019MJ_13_q31_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "electrical working internal energy in the resistor"
+    },
+    {
+     "label": "B",
+     "html": "electrical working potential energy in the resistor"
+    },
+    {
+     "label": "C",
+     "html": "mechanical working internal energy in the resistor"
+    },
+    {
+     "label": "D",
+     "html": "mechanical working potential energy in the resistor"
+    }
+   ]
   }
  ]
 }

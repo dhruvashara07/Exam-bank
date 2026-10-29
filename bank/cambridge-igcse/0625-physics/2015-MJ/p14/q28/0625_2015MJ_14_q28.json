@@ -32,9 +32,9 @@
   {
    "page": 13,
    "bbox": [
-    54.2,
-    280.8,
-    540.9,
+    53.5,
+    280.0,
+    541.5,
     353.1
    ],
    "id": "0625_2015MJ_14_q28_figA",
@@ -51,10 +51,10 @@
   {
    "page": 13,
    "bbox": [
-    69.3,
-    434.4,
-    330.9,
-    545.8
+    69.0,
+    434.0,
+    331.0,
+    546.0
    ],
    "id": "0625_2015MJ_14_q28_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p14/q28/figures/0625_2015MJ_14_q28_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p14/q28/figures/0625_2015MJ_14_q28_figB",
     "url": null,
-    "kb": 27.5
+    "kb": 27.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,35 +137,30 @@
    "text": "Which row shows what happens in the other two experiments?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "experiment 2",
-     "experiment 3"
-    ],
-    [
-     "A",
-     "magnet attracted",
-     "magnet attracted"
-    ],
-    [
-     "B",
-     "magnet attracted",
-     "magnet repelled"
-    ],
-    [
-     "C",
-     "magnet repelled",
-     "magnet attracted"
-    ],
-    [
-     "D",
-     "magnet repelled",
-     "magnet repelled"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_14_q28_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "magnet attracted magnet attracted"
+    },
+    {
+     "label": "B",
+     "html": "magnet attracted magnet repelled"
+    },
+    {
+     "label": "C",
+     "html": "magnet repelled magnet attracted"
+    },
+    {
+     "label": "D",
+     "html": "magnet repelled magnet repelled"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 16,
    "bbox": [
-    69.3,
-    605.9,
+    69.0,
+    605.5,
     455.5,
-    717.2
+    717.5
    ],
    "id": "0625_2016MJ_11_q39_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p11/q39/figures/0625_2016MJ_11_q39_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p11/q39/figures/0625_2016MJ_11_q39_figA",
     "url": null,
-    "kb": 40.2
+    "kb": 39.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What are the products of these two types of radioactive emission?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "product after α-emission",
-     "product after β-emission"
-    ],
-    [
-     "A",
-     "a nucleus of a different element",
-     "a nucleus of a different element"
-    ],
-    [
-     "B",
-     "a nucleus of a different element",
-     "a nucleus of the same element"
-    ],
-    [
-     "C",
-     "a nucleus of the same element",
-     "a nucleus of a different element"
-    ],
-    [
-     "D",
-     "a nucleus of the same element",
-     "a nucleus of the same element"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_11_q39_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "a nucleus of a different element a nucleus of a different element"
+    },
+    {
+     "label": "B",
+     "html": "a nucleus of a different element a nucleus of the same element"
+    },
+    {
+     "label": "C",
+     "html": "a nucleus of the same element a nucleus of a different element"
+    },
+    {
+     "label": "D",
+     "html": "a nucleus of the same element a nucleus of the same element"
+    }
+   ]
   }
  ]
 }

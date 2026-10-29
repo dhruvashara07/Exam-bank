@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    193.7,
-    84.7,
-    401.6,
-    209.6
+    193.5,
+    84.5,
+    402.0,
+    210.0
    ],
    "id": "0625_2020FM_22_q19_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-FM/p22/q19/figures/0625_2020FM_22_q19_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-FM/p22/q19/figures/0625_2020FM_22_q19_figA",
     "url": null,
-    "kb": 23.0
+    "kb": 22.9
    }
   },
   {
    "page": 10,
    "bbox": [
-    67.7,
+    67.5,
     293.0,
-    292.2,
-    403.9
+    292.5,
+    404.0
    ],
    "id": "0625_2020FM_22_q19_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-FM/p22/q19/figures/0625_2020FM_22_q19_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-FM/p22/q19/figures/0625_2020FM_22_q19_figB",
     "url": null,
-    "kb": 17.0
+    "kb": 16.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -116,39 +117,19 @@
    "text": "The specific heat capacities of aluminium, iron, ethanol and water are given."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "substance",
-     "specific heat capacity J/kg°C"
-    ],
-    [
-     "aluminium",
-     "900"
-    ],
-    [
-     "iron",
-     "450"
-    ],
-    [
-     "ethanol",
-     "2400"
-    ],
-    [
-     "water",
-     "4200"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2020FM_22_q19_figA",
+   "caption": null
   },
   {
    "type": "text",
-   "html": "1kg of each metal is put into 5kg of each liquid.",
-   "text": "1kg of each metal is put into 5kg of each liquid."
+   "html": "kg of each metal is put into 5 kg of each liquid.",
+   "text": "kg of each metal is put into 5 kg of each liquid."
   },
   {
    "type": "text",
-   "html": "The starting temperature of each metal is 60°C. The starting temperature of each liquid is 10°C.",
-   "text": "The starting temperature of each metal is 60°C. The starting temperature of each liquid is 10°C."
+   "html": "The starting temperature of each metal is 60 °C. The starting temperature of each liquid is 10 °C.",
+   "text": "The starting temperature of each metal is 60 °C. The starting temperature of each liquid is 10 °C."
   },
   {
    "type": "text",
@@ -156,35 +137,30 @@
    "text": "Which example has the highest final temperature?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "metal",
-     "liquid"
-    ],
-    [
-     "<b>A</b>",
-     "aluminium",
-     "ethanol"
-    ],
-    [
-     "<b>B</b>",
-     "iron",
-     "ethanol"
-    ],
-    [
-     "<b>C</b>",
-     "aluminium",
-     "water"
-    ],
-    [
-     "<b>D</b>",
-     "iron",
-     "water"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020FM_22_q19_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "aluminium ethanol"
+    },
+    {
+     "label": "B",
+     "html": "iron ethanol"
+    },
+    {
+     "label": "C",
+     "html": "aluminium water"
+    },
+    {
+     "label": "D",
+     "html": "iron water"
+    }
+   ]
   }
  ]
 }

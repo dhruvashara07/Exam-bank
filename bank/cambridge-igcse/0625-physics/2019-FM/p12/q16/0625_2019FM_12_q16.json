@@ -32,7 +32,7 @@
   {
    "page": 7,
    "bbox": [
-    139.7,
+    139.5,
     302.9,
     458.8,
     350.9
@@ -51,9 +51,9 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
+    67.5,
     380.5,
-    293.9,
+    294.0,
     506.0
    ],
    "id": "0625_2019FM_12_q16_figB",
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A thermometer has graduations which start at –10°C and end at 110°C.",
-   "text": "A thermometer has graduations which start at –10°C and end at 110°C."
+   "html": "A thermometer has graduations which start at –10 °C and end at 110 °C.",
+   "text": "A thermometer has graduations which start at –10 °C and end at 110 °C."
   },
   {
    "type": "figure",
@@ -126,40 +127,30 @@
    "text": "What is the lower fixed point and what is the upper fixed point of the Celsius scale?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "lower fixed point",
-     "upper fixed point"
-    ],
-    [
-     "",
-     "/°C",
-     "/°C"
-    ],
-    [
-     "<b>A</b>",
-     "–10",
-     "100"
-    ],
-    [
-     "<b>B</b>",
-     "–10",
-     "110"
-    ],
-    [
-     "<b>C</b>",
-     "0",
-     "100"
-    ],
-    [
-     "<b>D</b>",
-     "0",
-     "110"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019FM_12_q16_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "–10 100"
+    },
+    {
+     "label": "B",
+     "html": "–10 110"
+    },
+    {
+     "label": "C",
+     "html": "0 100"
+    },
+    {
+     "label": "D",
+     "html": "0 110"
+    }
+   ]
   }
  ]
 }

@@ -33,7 +33,7 @@
    "page": 11,
    "bbox": [
     164.2,
-    86.5,
+    85.5,
     431.2,
     191.4
    ],
@@ -51,10 +51,10 @@
   {
    "page": 11,
    "bbox": [
-    69.3,
-    224.7,
-    364.7,
-    336.1
+    69.0,
+    224.5,
+    365.0,
+    336.0
    ],
    "id": "0625_2016MJ_11_q24_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p11/q24/figures/0625_2016MJ_11_q24_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p11/q24/figures/0625_2016MJ_11_q24_figB",
     "url": null,
-    "kb": 21.7
+    "kb": 21.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row could be correct for the colours seen at X, at Y and at Z?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "colour at X",
-     "colour at Y",
-     "colour at Z"
-    ],
-    [
-     "A",
-     "red",
-     "violet",
-     "yellow"
-    ],
-    [
-     "B",
-     "red",
-     "yellow",
-     "violet"
-    ],
-    [
-     "C",
-     "violet",
-     "yellow",
-     "red"
-    ],
-    [
-     "D",
-     "yellow",
-     "red",
-     "violet"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_11_q24_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "red violet yellow"
+    },
+    {
+     "label": "B",
+     "html": "red yellow violet"
+    },
+    {
+     "label": "C",
+     "html": "violet yellow red"
+    },
+    {
+     "label": "D",
+     "html": "yellow red violet"
+    }
+   ]
   }
  ]
 }

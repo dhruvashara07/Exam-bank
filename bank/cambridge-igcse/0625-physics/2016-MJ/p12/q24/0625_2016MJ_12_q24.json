@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.6,
-    530.8,
+    67.5,
+    530.5,
     265.5,
-    642.1
+    642.5
    ],
    "id": "0625_2016MJ_12_q24_figA",
    "caption": null,
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "Visible light has a frequency of approximately 5.0 × 10<sup>14</sup>Hz.",
-   "text": "Visible light has a frequency of approximately 5.0 × 1014Hz."
+   "html": "Visible light has a frequency of approximately 5.0 × 10<sup>14</sup> Hz.",
+   "text": "Visible light has a frequency of approximately 5.0 × 1014 Hz."
   },
   {
    "type": "text",
@@ -103,13 +104,13 @@
   },
   {
    "type": "text",
-   "html": "The frequency of M is 5.0 × 10<sup>6</sup>Hz.",
-   "text": "The frequency of M is 5.0 × 106Hz."
+   "html": "The frequency of M is 5.0 × 10<sup>6</sup> Hz.",
+   "text": "The frequency of M is 5.0 × 106 Hz."
   },
   {
    "type": "text",
-   "html": "The frequency of N is 5.0 × 10<sup>15</sup>Hz.",
-   "text": "The frequency of N is 5.0 × 1015Hz."
+   "html": "The frequency of N is 5.0 × 10<sup>15</sup> Hz.",
+   "text": "The frequency of N is 5.0 × 1015 Hz."
   },
   {
    "type": "text",
@@ -117,35 +118,30 @@
    "text": "Which types of radiation are M and N?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "M",
-     "N"
-    ],
-    [
-     "A",
-     "radio waves",
-     "infra-red"
-    ],
-    [
-     "B",
-     "radio waves",
-     "ultraviolet"
-    ],
-    [
-     "C",
-     "ultraviolet",
-     "X-rays"
-    ],
-    [
-     "D",
-     "X-rays",
-     "infra-red"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_12_q24_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "radio waves infra-red"
+    },
+    {
+     "label": "B",
+     "html": "radio waves ultraviolet"
+    },
+    {
+     "label": "C",
+     "html": "ultraviolet X-rays"
+    },
+    {
+     "label": "D",
+     "html": "X-rays infra-red"
+    }
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 4.1",
    "page": 10,
    "bbox": [
-    117.5,
-    114.4,
-    474.4,
-    650.4
+    117.0,
+    114.0,
+    474.0,
+    650.5
    ],
    "id": "0625_2015ON_62_q04_fig4-1",
    "part": "",
@@ -52,9 +52,9 @@
    "caption": "Fig. 4.2",
    "page": 12,
    "bbox": [
-    93.5,
-    127.4,
-    498.9,
+    93.0,
+    127.0,
+    498.5,
     654.0
    ],
    "id": "0625_2015ON_62_q04e_fig4-2",
@@ -510,7 +510,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2. .",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2. ."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -587,41 +596,9 @@
      "text": "She repeats the procedure described in parts (b) and (c). Her ray-trace is shown in Fig. 4.2."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<b>L</b>",
-       ""
-      ],
-      [
-       "<b>B</b>",
-       ""
-      ],
-      [
-       "<b>R</b> <b>M</b>",
-       ""
-      ],
-      [
-       "<b>A</b>",
-       ""
-      ],
-      [
-       "reflecting",
-       ""
-      ],
-      [
-       "surface",
-       ""
-      ],
-      [
-       "<b>C</b>",
-       ""
-      ],
-      [
-       "<b>N</b>",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2015ON_62_q04e_fig4-2",
+     "caption": "Fig. 4.2"
     },
     {
      "type": "text",
@@ -690,6 +667,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

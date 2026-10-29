@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    384.7,
-    253.9,
-    495.6
+    67.5,
+    384.5,
+    254.0,
+    496.0
    ],
    "id": "0625_2022MJ_12_q10_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p12/q10/figures/0625_2022MJ_12_q10_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p12/q10/figures/0625_2022MJ_12_q10_figA",
     "url": null,
-    "kb": 18.5
+    "kb": 18.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which change in the force and distance always increases the work done?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "force",
-     "distance"
-    ],
-    [
-     "<b>A</b>",
-     "greater",
-     "same"
-    ],
-    [
-     "<b>B</b>",
-     "greater",
-     "smaller"
-    ],
-    [
-     "<b>C</b>",
-     "same",
-     "smaller"
-    ],
-    [
-     "<b>D</b>",
-     "smaller",
-     "smaller"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_12_q10_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "greater same"
+    },
+    {
+     "label": "B",
+     "html": "greater smaller"
+    },
+    {
+     "label": "C",
+     "html": "same smaller"
+    },
+    {
+     "label": "D",
+     "html": "smaller smaller"
+    }
+   ]
   }
  ]
 }

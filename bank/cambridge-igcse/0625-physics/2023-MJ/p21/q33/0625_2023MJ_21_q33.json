@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
-    565.9,
-    535.1,
-    677.3
+    67.5,
+    565.5,
+    535.5,
+    677.5
    ],
    "id": "0625_2023MJ_21_q33_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "How are positive and negative ions formed from atoms?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "positive ion",
-     "negative ion"
-    ],
-    [
-     "<b>A</b>",
-     "add positive charge to the nucleus",
-     "add an electron to the atom"
-    ],
-    [
-     "<b>B</b>",
-     "add positive charge to the nucleus",
-     "remove positive charge from the nucleus"
-    ],
-    [
-     "<b>C</b>",
-     "remove an electron from the atom",
-     "add an electron to the atom"
-    ],
-    [
-     "<b>D</b>",
-     "remove an electron from the atom",
-     "remove positive charge from the nucleus"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_21_q33_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "add positive charge to the nucleus add an electron to the atom"
+    },
+    {
+     "label": "B",
+     "html": "add positive charge to the nucleus remove positive charge from the nucleus"
+    },
+    {
+     "label": "C",
+     "html": "remove an electron from the atom add an electron to the atom"
+    },
+    {
+     "label": "D",
+     "html": "remove an electron from the atom remove positive charge from the nucleus"
+    }
+   ]
   }
  ]
 }

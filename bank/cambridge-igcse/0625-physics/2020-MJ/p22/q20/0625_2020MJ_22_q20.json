@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    152.8,
+    67.5,
     85.0,
     442.5,
-    259.3
+    404.0
    ],
    "id": "0625_2020MJ_22_q20_figA",
    "caption": null,
@@ -45,26 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p22/q20/figures/0625_2020MJ_22_q20_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p22/q20/figures/0625_2020MJ_22_q20_figA",
     "url": null,
-    "kb": 10.8
-   }
-  },
-  {
-   "page": 8,
-   "bbox": [
-    67.7,
-    292.6,
-    289.4,
-    403.9
-   ],
-   "id": "0625_2020MJ_22_q20_figB",
-   "caption": null,
-   "part": "",
-   "alt": "",
-   "svg": {
-    "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p22/q20/figures/0625_2020MJ_22_q20_figB.svg",
-    "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p22/q20/figures/0625_2020MJ_22_q20_figB",
-    "url": null,
-    "kb": 18.8
+    "kb": 35.4
    }
   }
  ],
@@ -109,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -121,40 +103,25 @@
    "caption": null
   },
   {
-   "type": "text",
-   "html": "What are the amplitude and the wavelength of this wave?",
-   "text": "What are the amplitude and the wavelength of this wave?"
-  },
-  {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "amplitude/cm",
-     "wavelength/cm"
-    ],
-    [
-     "<b>A</b>",
-     "3",
-     "4"
-    ],
-    [
-     "<b>B</b>",
-     "3",
-     "8"
-    ],
-    [
-     "<b>C</b>",
-     "6",
-     "4"
-    ],
-    [
-     "<b>D</b>",
-     "6",
-     "8"
-    ]
-   ],
-   "options": true
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "3 4"
+    },
+    {
+     "label": "B",
+     "html": "3 8"
+    },
+    {
+     "label": "C",
+     "html": "6 4"
+    },
+    {
+     "label": "D",
+     "html": "6 8"
+    }
+   ]
   }
  ]
 }

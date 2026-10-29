@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    179.7,
-    98.4,
-    415.4,
-    135.7
+    179.0,
+    97.5,
+    416.0,
+    136.5
    ],
    "id": "0625_2021MJ_12_q27_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p12/q27/figures/0625_2021MJ_12_q27_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p12/q27/figures/0625_2021MJ_12_q27_figA",
     "url": null,
-    "kb": 3.8
+    "kb": 3.7
    }
   },
   {
    "page": 14,
    "bbox": [
-    131.4,
-    168.2,
+    131.0,
+    168.0,
     464.0,
-    279.6
+    280.0
    ],
    "id": "0625_2021MJ_12_q27_figB",
    "caption": null,
@@ -64,16 +64,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p12/q27/figures/0625_2021MJ_12_q27_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p12/q27/figures/0625_2021MJ_12_q27_figB",
     "url": null,
-    "kb": 27.1
+    "kb": 26.9
    }
   },
   {
    "page": 14,
    "bbox": [
-    67.7,
+    67.5,
     311.5,
-    329.3,
-    422.9
+    329.5,
+    423.0
    ],
    "id": "0625_2021MJ_12_q27_figC",
    "caption": null,
@@ -128,6 +128,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -145,34 +146,9 @@
    "text": "The rods are made from iron, aluminium or magnetised steel."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "rod",
-     "placed next to",
-     "observation"
-    ],
-    [
-     "1",
-     "N pole of bar magnet",
-     "attracts"
-    ],
-    [
-     "1",
-     "S pole of bar magnet",
-     "attracts"
-    ],
-    [
-     "2",
-     "N pole of bar magnet",
-     "nothing happens"
-    ],
-    [
-     "2",
-     "S pole of bar magnet",
-     "nothing happens"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2021MJ_12_q27_figB",
+   "caption": null
   },
   {
    "type": "text",
@@ -180,35 +156,30 @@
    "text": "What are rod 1 and rod 2 made from?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "rod 1",
-     "rod 2"
-    ],
-    [
-     "<b>A</b>",
-     "magnetised steel",
-     "aluminium"
-    ],
-    [
-     "<b>B</b>",
-     "iron",
-     "magnetised steel"
-    ],
-    [
-     "<b>C</b>",
-     "aluminium",
-     "iron"
-    ],
-    [
-     "<b>D</b>",
-     "iron",
-     "aluminium"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_12_q27_figC",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "magnetised steel aluminium"
+    },
+    {
+     "label": "B",
+     "html": "iron magnetised steel"
+    },
+    {
+     "label": "C",
+     "html": "aluminium iron"
+    },
+    {
+     "label": "D",
+     "html": "iron aluminium"
+    }
+   ]
   }
  ]
 }

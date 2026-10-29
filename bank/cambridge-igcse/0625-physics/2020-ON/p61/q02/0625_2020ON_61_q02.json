@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    129.3,
-    111.3,
-    488.7,
-    345.5
+    129.0,
+    110.5,
+    488.0,
+    344.0
    ],
    "id": "0625_2020ON_61_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 5,
    "bbox": [
-    132.1,
-    388.2,
-    508.6,
-    452.7
+    131.5,
+    389.5,
+    509.0,
+    451.0
    ],
    "id": "0625_2020ON_61_q02a_fig2-2",
    "part": "(a)",
@@ -71,10 +71,10 @@
    "caption": "Table 2.1",
    "page": 6,
    "bbox": [
-    204.3,
-    162.0,
-    390.9,
-    259.1
+    204.0,
+    165.5,
+    391.0,
+    259.5
    ],
    "id": "0625_2020ON_61_q02b_table2-1",
    "part": "(b)",
@@ -83,17 +83,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p61/q02/figures/0625_2020ON_61_q02b_table2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p61/q02/figures/0625_2020ON_61_q02b_table2-1",
     "url": null,
-    "kb": 12.9
+    "kb": 12.8
    }
   },
   {
    "caption": "Table 2.2",
    "page": 6,
    "bbox": [
-    204.3,
-    520.6,
-    390.9,
-    617.7
+    204.0,
+    524.0,
+    391.0,
+    618.0
    ],
    "id": "0625_2020ON_61_q02c_table2-2",
    "part": "(c)",
@@ -419,7 +419,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the average rate of cooling <i>R</i><sub>1</sub> of the water using the equation <i>R</i><sub>1</sub> = \\(\\frac{Δθ <sup>1</sup>}{Δ<i>t</i>}\\), where Δ<i>t </i>= 180 s. Include the unit.",
+       "html": "Calculate the average rate of cooling <i>R</i><sub>1</sub> of the water using the equation <i>R</i><sub>1</sub> = \\(\\frac{Δθ ^{1}}{Δt}\\), where Δ<i>t </i>= 180 s. Include the unit.",
        "text": "Calculate the average rate of cooling R1 of the water using the equation R1 = (Δθ 1)/(Δt), where Δt = 180 s. Include the unit."
       },
       {
@@ -445,23 +445,6 @@
      "type": "figure",
      "id": "0625_2020ON_61_q02b_table2-1",
      "caption": "Table 2.1"
-    },
-    {
-     "type": "table",
-     "rows": [
-      [
-       "<i>t</i> /",
-       "θ<sub>1</sub> /"
-      ],
-      [
-       "",
-       "85"
-      ],
-      [
-       "",
-       "69"
-      ]
-     ]
     }
    ]
   },
@@ -655,7 +638,7 @@
       },
       {
        "type": "text",
-       "html": "Calculate the average rate of cooling <i>R</i><sub>2</sub> of the water using the equation <i>R</i><sub>2</sub> = \\(\\frac{Δθ <sup>2</sup>}{Δ<i>t</i>}\\), where Δ<i>t </i>= 180 s. Include the unit.",
+       "html": "Calculate the average rate of cooling <i>R</i><sub>2</sub> of the water using the equation <i>R</i><sub>2</sub> = \\(\\frac{Δθ ^{2}}{Δt}\\), where Δ<i>t </i>= 180 s. Include the unit.",
        "text": "Calculate the average rate of cooling R2 of the water using the equation R2 = (Δθ 2)/(Δt), where Δt = 180 s. Include the unit."
       },
       {
@@ -681,23 +664,6 @@
      "type": "figure",
      "id": "0625_2020ON_61_q02c_table2-2",
      "caption": "Table 2.2"
-    },
-    {
-     "type": "table",
-     "rows": [
-      [
-       "<i>t</i> /",
-       "θ<sub>2</sub> /"
-      ],
-      [
-       "",
-       "69"
-      ],
-      [
-       "",
-       "57"
-      ]
-     ]
     }
    ]
   },
@@ -794,6 +760,11 @@
        "text": "Calculate the difference D 1 using the readings in Table 2.1 and your answer to (a)."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "D 1 ="
+      },
+      {
        "type": "text",
        "html": "Calculate the difference <i>D </i><sub>2</sub> using the readings in Table 2.2 and your answer to <b>(a)</b>.",
        "text": "Calculate the difference D 2 using the readings in Table 2.2 and your answer to (a)."
@@ -875,7 +846,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "conclusion"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 3
       },
       {
@@ -1067,6 +1047,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

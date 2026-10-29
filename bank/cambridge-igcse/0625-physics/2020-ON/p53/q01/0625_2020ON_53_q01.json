@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    56.8,
-    137.3,
-    538.5,
-    364.6
+    57.5,
+    136.5,
+    538.0,
+    363.0
    ],
    "id": "0625_2020ON_53_q01_fig1-1",
    "part": "",
@@ -53,9 +53,9 @@
    "page": 3,
    "bbox": [
     152.0,
-    123.0,
-    443.3,
-    350.4
+    126.5,
+    443.5,
+    350.5
    ],
    "id": "0625_2020ON_53_q01bii_table1-1",
    "part": "(b)(ii)",
@@ -287,59 +287,9 @@
        "text": "Complete the headings and the values in the time t column in Table 1.1."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "",
-         "beaker A",
-         "beaker B"
-        ],
-        [
-         "",
-         "without a lid",
-         "with a lid"
-        ],
-        [
-         "<i>t</i> /",
-         "θ<sub>A</sub>/",
-         "θ<sub>B</sub>/"
-        ],
-        [
-         "0",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2020ON_53_q01bii_table1-1",
+       "caption": "Table 1.1"
       },
       {
        "type": "marks",
@@ -493,7 +443,7 @@
       },
       {
        "type": "text",
-       "html": "your values of θ<sub>A </sub>from Table 1.1 and the equation <i>x</i><sub>A</sub> = \\(\\frac{(θ<sub>0</sub> − θ<sub>180</sub>)}{<i>T</i>}\\) where θ<sub>0</sub> is the temperature of the water in beaker A at <i>t</i> = 0, θ<sub>180</sub> is the temperature of the water at <i>t</i> = 180 s, and <i>T</i> = 180 s. Include a unit.",
+       "html": "your values of θ<sub>A </sub>from Table 1.1 and the equation <i>x</i><sub>A</sub> = \\(\\frac{(θ_{0} − θ_{180})}{T}\\) where θ<sub>0</sub> is the temperature of the water in beaker A at <i>t</i> = 0, θ<sub>180</sub> is the temperature of the water at <i>t</i> = 180 s, and <i>T</i> = 180 s. Include a unit.",
        "text": "your values of θA from Table 1.1 and the equation xA = ((θ0 − θ180))/(T) where θ0 is the temperature of the water in beaker A at t = 0, θ180 is the temperature of the water at t = 180 s, and T = 180 s. Include a unit."
       },
       {
@@ -566,7 +516,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the average rate of change of temperature <i>x</i><sub>B</sub> of the water in beaker B. Use your values of θ<sub>B</sub> from Table 1.1 and the equation <i>x</i><sub>B</sub> = \\(\\frac{(θ<sub>0</sub> − θ<sub>180</sub>)}{<i>T</i>}\\) where θ<sub>0</sub> is the temperature of the water in beaker B at <i>t</i> = 0, θ<sub>180</sub> is the temperature of the water at <i>t</i> = 180 s, and <i>T</i> = 180 s. Include a unit.",
+       "html": "Calculate the average rate of change of temperature <i>x</i><sub>B</sub> of the water in beaker B. Use your values of θ<sub>B</sub> from Table 1.1 and the equation <i>x</i><sub>B</sub> = \\(\\frac{(θ_{0} − θ_{180})}{T}\\) where θ<sub>0</sub> is the temperature of the water in beaker B at <i>t</i> = 0, θ<sub>180</sub> is the temperature of the water at <i>t</i> = 180 s, and <i>T</i> = 180 s. Include a unit.",
        "text": "Calculate the average rate of change of temperature xB of the water in beaker B. Use your values of θB from Table 1.1 and the equation xB = ((θ0 − θ180))/(T) where θ0 is the temperature of the water in beaker B at t = 0, θ180 is the temperature of the water at t = 180 s, and T = 180 s. Include a unit."
       },
       {
@@ -619,7 +569,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -747,6 +706,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

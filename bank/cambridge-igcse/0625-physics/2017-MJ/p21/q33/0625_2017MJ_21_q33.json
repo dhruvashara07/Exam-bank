@@ -32,9 +32,9 @@
   {
    "page": 16,
    "bbox": [
-    228.7,
+    228.0,
     97.5,
-    366.7,
+    367.0,
     205.0
    ],
    "id": "0625_2017MJ_21_q33_figA",
@@ -45,15 +45,15 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-MJ/p21/q33/figures/0625_2017MJ_21_q33_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-MJ/p21/q33/figures/0625_2017MJ_21_q33_figA",
     "url": null,
-    "kb": 4.3
+    "kb": 4.2
    }
   },
   {
    "page": 16,
    "bbox": [
-    67.7,
+    67.5,
     263.5,
-    286.7,
+    287.0,
     389.0
    ],
    "id": "0625_2017MJ_21_q33_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-MJ/p21/q33/figures/0625_2017MJ_21_q33_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-MJ/p21/q33/figures/0625_2017MJ_21_q33_figB",
     "url": null,
-    "kb": 23.7
+    "kb": 23.6
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,40 +132,30 @@
    "text": "What happens to the resistance of the LDR and what happens to the reading on the ammeter?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "resistance",
-     "reading on"
-    ],
-    [
-     "",
-     "of LDR",
-     "ammeter"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017MJ_21_q33_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

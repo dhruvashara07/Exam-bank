@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
+    67.5,
     387.5,
-    498.7,
-    498.9
+    499.0,
+    499.0
    ],
    "id": "0625_2024MJ_11_q17_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p11/q17/figures/0625_2024MJ_11_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p11/q17/figures/0625_2024MJ_11_q17_figA",
     "url": null,
-    "kb": 39.6
+    "kb": 39.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row describes a seismic P-wave?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "type of wave",
-     "direction of vibration"
-    ],
-    [
-     "<b>A</b>",
-     "longitudinal",
-     "parallel to the direction of propagation of the wave"
-    ],
-    [
-     "<b>B</b>",
-     "longitudinal",
-     "perpendicular to the direction of propagation of the wave"
-    ],
-    [
-     "<b>C</b>",
-     "transverse",
-     "parallel to the direction of propagation of the wave"
-    ],
-    [
-     "<b>D</b>",
-     "transverse",
-     "perpendicular to the direction of propagation of the wave"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_11_q17_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "longitudinal parallel to the direction of propagation of the wave"
+    },
+    {
+     "label": "B",
+     "html": "longitudinal perpendicular to the direction of propagation of the wave"
+    },
+    {
+     "label": "C",
+     "html": "transverse parallel to the direction of propagation of the wave"
+    },
+    {
+     "label": "D",
+     "html": "transverse perpendicular to the direction of propagation of the wave"
+    }
+   ]
   }
  ]
 }

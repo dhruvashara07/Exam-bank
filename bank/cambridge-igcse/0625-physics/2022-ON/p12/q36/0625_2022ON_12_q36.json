@@ -34,8 +34,8 @@
    "bbox": [
     165.5,
     112.4,
-    429.3,
-    229.8
+    429.0,
+    230.0
    ],
    "id": "0625_2022ON_12_q36_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 17,
    "bbox": [
-    67.7,
-    261.9,
-    244.1,
-    372.8
+    67.5,
+    261.5,
+    244.0,
+    373.0
    ],
    "id": "0625_2022ON_12_q36_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "What produces the greatest turning effect?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "coil",
-     "current/A"
-    ],
-    [
-     "<b>A</b>",
-     "P",
-     "2"
-    ],
-    [
-     "<b>B</b>",
-     "P",
-     "4"
-    ],
-    [
-     "<b>C</b>",
-     "Q",
-     "2"
-    ],
-    [
-     "<b>D</b>",
-     "Q",
-     "4"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_12_q36_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "P 2"
+    },
+    {
+     "label": "B",
+     "html": "P 4"
+    },
+    {
+     "label": "C",
+     "html": "Q 2"
+    },
+    {
+     "label": "D",
+     "html": "Q 4"
+    }
+   ]
   }
  ]
 }

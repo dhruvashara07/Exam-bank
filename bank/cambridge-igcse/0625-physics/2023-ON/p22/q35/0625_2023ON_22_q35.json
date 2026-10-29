@@ -32,9 +32,9 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    236.5,
-    395.1,
+    67.5,
+    236.0,
+    395.5,
     362.0
    ],
    "id": "0625_2023ON_22_q35_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p22/q35/figures/0625_2023ON_22_q35_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p22/q35/figures/0625_2023ON_22_q35_figA",
     "url": null,
-    "kb": 30.1
+    "kb": 29.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,40 +98,30 @@
    "text": "Which row correctly describes an example of radioactive decay?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "original nucleus",
-     "emission",
-     "change or no change of element"
-    ],
-    [
-     "<b>A</b>",
-     "stable",
-     "γ",
-     "change of element"
-    ],
-    [
-     "<b>B</b>",
-     "unstable",
-     "α",
-     "change of element"
-    ],
-    [
-     "<b>C</b>",
-     "unstable",
-     "α",
-     "no change of element"
-    ],
-    [
-     "<b>D</b>",
-     "unstable",
-     "β",
-     "no change of element"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_22_q35_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "stable γ change of element"
+    },
+    {
+     "label": "B",
+     "html": "unstable α change of element"
+    },
+    {
+     "label": "C",
+     "html": "unstable α no change of element"
+    },
+    {
+     "label": "D",
+     "html": "unstable β no change of element"
+    }
+   ]
   }
  ]
 }

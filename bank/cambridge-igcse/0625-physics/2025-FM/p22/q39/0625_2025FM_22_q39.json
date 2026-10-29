@@ -33,7 +33,7 @@
    "page": 15,
    "bbox": [
     187.1,
-    295.4,
+    295.5,
     407.9,
     460.5
    ],
@@ -51,10 +51,10 @@
   {
    "page": 15,
    "bbox": [
-    67.7,
+    67.5,
     506.5,
-    303.7,
-    617.9
+    304.0,
+    618.0
    ],
    "id": "0625_2025FM_22_q39_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-FM/p22/q39/figures/0625_2025FM_22_q39_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-FM/p22/q39/figures/0625_2025FM_22_q39_figB",
     "url": null,
-    "kb": 23.4
+    "kb": 23.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row describes the effect that this has on the mass and on the weight of an object as it moves further away from the Earth’s surface?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass of object",
-     "weight of object"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "unchanged"
-    ],
-    [
-     "<b>C</b>",
-     "unchanged",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "unchanged",
-     "unchanged"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025FM_22_q39_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases unchanged"
+    },
+    {
+     "label": "C",
+     "html": "unchanged decreases"
+    },
+    {
+     "label": "D",
+     "html": "unchanged unchanged"
+    }
+   ]
   }
  ]
 }

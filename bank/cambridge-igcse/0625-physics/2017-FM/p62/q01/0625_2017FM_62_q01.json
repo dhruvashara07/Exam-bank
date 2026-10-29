@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    55.3,
-    140.0,
-    542.8,
-    440.5
+    61.0,
+    142.0,
+    539.5,
+    437.5
    ],
    "id": "0625_2017FM_62_q01_fig1-1",
    "part": "",
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-FM/p62/q01/figures/0625_2017FM_62_q01_fig1-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-FM/p62/q01/figures/0625_2017FM_62_q01_fig1-1",
     "url": null,
-    "kb": 83.8
+    "kb": 83.5
    }
   },
   {
    "caption": "Table 1.1",
    "page": 3,
    "bbox": [
-    124.4,
-    148.1,
-    470.9,
+    124.5,
+    153.0,
+    471.0,
     395.5
    ],
    "id": "0625_2017FM_62_q01b_table1-1",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-FM/p62/q01/figures/0625_2017FM_62_q01b_table1-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-FM/p62/q01/figures/0625_2017FM_62_q01b_table1-1",
     "url": null,
-    "kb": 41.6
+    "kb": 41.5
    }
   }
  ],
@@ -138,7 +138,17 @@
     {
      "type": "list",
      "items": [
-      "record the temperature θ<sub>A</sub> of the cold water in beaker <b>A</b>,",
+      "record the temperature θ<sub>A</sub> of the cold water in beaker <b>A</b>,"
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θA ="
+    },
+    {
+     "type": "list",
+     "items": [
       "record the temperature θ<sub>B</sub> of the warm water in beaker <b>B</b>."
      ]
     },
@@ -217,54 +227,9 @@
      "text": "The test-tubes of hot water are placed into beakers A and B. The students record the temperatures θ of the water in the test-tubes every 30 s. Their readings are shown in Table 1.1. Complete the units and the time column in Table 1.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "time",
-       "tube in beaker <b>A</b> with cold water",
-       "tube in beaker <b>B</b> with warm water"
-      ],
-      [
-       "<i>t</i> /",
-       "θ/",
-       "θ/"
-      ],
-      [
-       "0",
-       "80.5",
-       "81.0"
-      ],
-      [
-       "",
-       "52.5",
-       "64.5"
-      ],
-      [
-       "",
-       "42.0",
-       "55.0"
-      ],
-      [
-       "",
-       "36.0",
-       "50.5"
-      ],
-      [
-       "",
-       "32.5",
-       "48.0"
-      ],
-      [
-       "",
-       "30.5",
-       "46.5"
-      ],
-      [
-       "",
-       "29.0",
-       "45.5"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2017FM_62_q01b_table1-1",
+     "caption": "Table 1.1"
     },
     {
      "type": "marks",
@@ -337,7 +302,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -486,7 +460,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "change"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -587,6 +570,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

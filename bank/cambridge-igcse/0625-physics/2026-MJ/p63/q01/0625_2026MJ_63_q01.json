@@ -33,10 +33,10 @@
    "caption": "Figure 1.1",
    "page": 2,
    "bbox": [
-    114.3,
-    188.9,
-    261.0,
-    320.4
+    114.5,
+    188.5,
+    256.5,
+    320.5
    ],
    "id": "0625_2026MJ_63_q01ai_fig1-1",
    "part": "(a)(i)",
@@ -52,10 +52,10 @@
    "caption": "Figure 1.2",
    "page": 2,
    "bbox": [
-    184.7,
-    484.1,
-    411.6,
-    684.4
+    184.5,
+    485.0,
+    411.0,
+    684.5
    ],
    "id": "0625_2026MJ_63_q01aii_fig1-2",
    "part": "(a)(ii)",
@@ -71,10 +71,10 @@
    "caption": "Figure 1.3",
    "page": 2,
    "bbox": [
-    184.7,
-    484.1,
-    411.6,
-    684.4
+    184.5,
+    485.0,
+    411.0,
+    684.5
    ],
    "id": "0625_2026MJ_63_q01aii_fig1-3",
    "part": "(a)(ii)",
@@ -91,9 +91,9 @@
    "page": 4,
    "bbox": [
     92.0,
-    137.3,
-    227.3,
-    212.5
+    136.5,
+    227.5,
+    213.0
    ],
    "id": "0625_2026MJ_63_q01b_fig1-4",
    "part": "(b)",
@@ -296,6 +296,12 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "initial reading =",
+       "unit": "cm3"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "final reading =",
        "unit": "cm3"
       },
@@ -369,7 +375,7 @@
       },
       {
        "type": "text",
-       "html": "V<sub>1</sub> = \\(\\frac{finalreading–initialreading}{5}\\).",
+       "html": "V<sub>1</sub> = \\(\\frac{\\text{final reading} – \\text{initial reading}}{5}\\).",
        "text": "V1 = (finalreading–initialreading)/(5)."
       },
       {
@@ -551,7 +557,7 @@
       },
       {
        "type": "text",
-       "html": "ρ<sub>1</sub> = \\(\\frac{m<sub>1</sub>}{V}\\).",
+       "html": "ρ<sub>1</sub> = \\(\\frac{m_{1}}{V}\\).",
        "text": "ρ1 = (m1)/(V)."
       },
       {
@@ -746,8 +752,8 @@
      "content": [
       {
        "type": "text",
-       "html": "The radius r of each coin is 1.2cm.",
-       "text": "The radius r of each coin is 1.2cm."
+       "html": "The radius r of each coin is 1.2 cm.",
+       "text": "The radius r of each coin is 1.2 cm."
       },
       {
        "type": "text",
@@ -836,7 +842,7 @@
       },
       {
        "type": "text",
-       "html": "ρ<sub>2</sub> = \\(\\frac{m<sub>5</sub>}{V}\\).",
+       "html": "ρ<sub>2</sub> = \\(\\frac{m_{5}}{V}\\).",
        "text": "ρ2 = (m5)/(V)."
       },
       {
@@ -975,6 +981,10 @@
      "prefix": "statement"
     },
     {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
      "type": "marks",
      "value": 2
     }
@@ -998,6 +1008,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -32,10 +32,10 @@
   {
    "page": 17,
    "bbox": [
-    216.9,
-    97.4,
+    216.5,
+    97.0,
     378.5,
-    300.1
+    300.5
    ],
    "id": "0625_2016MJ_11_q40_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p11/q40/figures/0625_2016MJ_11_q40_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p11/q40/figures/0625_2016MJ_11_q40_figA",
     "url": null,
-    "kb": 22.2
+    "kb": 21.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,41 +98,9 @@
    "text": "A reading is taken every 10 minutes of the number of emissions per second from a radioactive source. The table shows the readings."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "time/min",
-     "number of emissions per second"
-    ],
-    [
-     "0",
-     "800"
-    ],
-    [
-     "10",
-     "560"
-    ],
-    [
-     "20",
-     "400"
-    ],
-    [
-     "30",
-     "280"
-    ],
-    [
-     "40",
-     "200"
-    ],
-    [
-     "50",
-     "140"
-    ],
-    [
-     "60",
-     "100"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2016MJ_11_q40_figA",
+   "caption": null
   },
   {
    "type": "text",
@@ -143,19 +112,19 @@
    "options": [
     {
      "label": "A",
-     "html": "10min"
+     "html": "10 min"
     },
     {
      "label": "B",
-     "html": "20min"
+     "html": "20 min"
     },
     {
      "label": "C",
-     "html": "40min"
+     "html": "40 min"
     },
     {
      "label": "D",
-     "html": "60min"
+     "html": "60 min"
     }
    ]
   }

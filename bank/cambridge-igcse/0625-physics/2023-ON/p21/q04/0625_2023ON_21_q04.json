@@ -32,9 +32,9 @@
   {
    "page": 3,
    "bbox": [
-    195.7,
-    84.7,
-    399.7,
+    195.5,
+    84.5,
+    400.0,
     175.0
    ],
    "id": "0625_2023ON_21_q04_figA",
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p21/q04/figures/0625_2023ON_21_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p21/q04/figures/0625_2023ON_21_q04_figA",
     "url": null,
-    "kb": 18.6
+    "kb": 18.5
    }
   },
   {
    "page": 3,
    "bbox": [
-    67.7,
-    232.3,
-    229.3,
-    357.7
+    67.5,
+    232.0,
+    229.5,
+    358.0
    ],
    "id": "0625_2023ON_21_q04_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p21/q04/figures/0625_2023ON_21_q04_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p21/q04/figures/0625_2023ON_21_q04_figB",
     "url": null,
-    "kb": 14.6
+    "kb": 14.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -116,29 +117,9 @@
    "text": "The table shows the mass and volume of three different liquids, X, Y and Z."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "liquid",
-     "mass/g",
-     "<sup>3</sup> volume/cm"
-    ],
-    [
-     "X",
-     "120",
-     "200"
-    ],
-    [
-     "Y",
-     "80",
-     "67"
-    ],
-    [
-     "Z",
-     "100",
-     "120"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2023ON_21_q04_figA",
+   "caption": null
   },
   {
    "type": "text",
@@ -151,40 +132,30 @@
    "text": "Which liquid is at the top of the container and which liquid is at the bottom?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "liquid at",
-     "liquid at"
-    ],
-    [
-     "",
-     "top",
-     "bottom"
-    ],
-    [
-     "<b>A</b>",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>B</b>",
-     "X",
-     "Z"
-    ],
-    [
-     "<b>C</b>",
-     "Y",
-     "X"
-    ],
-    [
-     "<b>D</b>",
-     "Y",
-     "Z"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_21_q04_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "X Y"
+    },
+    {
+     "label": "B",
+     "html": "X Z"
+    },
+    {
+     "label": "C",
+     "html": "Y X"
+    },
+    {
+     "label": "D",
+     "html": "Y Z"
+    }
+   ]
   }
  ]
 }

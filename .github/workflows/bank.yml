@@ -85,6 +85,8 @@ jobs:
         run: |
           if grep -qx ALL todo.txt; then python3 pipeline/raw_store.py fetch; else python3 pipeline/raw_store.py fetch $(cat todo.txt); fi
           if grep -qx ALL todo.txt; then python3 pipeline/run.py; else python3 pipeline/run.py $(cat todo.txt); fi
+          if grep -qx ALL todo.txt; then python3 pipeline/checks.py; else python3 pipeline/checks.py $(cat todo.txt); fi
+          if ! grep -qx ALL todo.txt; then python3 pipeline/batch.py new "Upload $(date -u +%Y-%m-%d) (main inbox)" $(cat todo.txt); fi
           git config user.name "exam-bank bot"
           git config user.email "actions@users.noreply.github.com"
           SKIP_WAIT=1 pipeline/push.sh "Process papers: $(tr '\n' ' ' < todo.txt)"
@@ -96,7 +98,12 @@ jobs:
 
       - name: Sync to MongoDB
         if: ${{ !cancelled() }}
-        run: python3 pipeline/sync_mongo.py
+        run: |
+          python3 pipeline/sync_mongo.py
+          if [ -n "$(git status --porcelain review/published.json)" ]; then   # tracker: 'published'
+            git config user.name "exam-bank bot"; git config user.email "actions@users.noreply.github.com"
+            SKIP_WAIT=1 pipeline/push.sh "Published to MongoDB: $(python3 -c 'import json;print(len(json.load(open("review/published.json"))))') papers"
+          fi
 
       - name: Papers waiting for Claude's check
         run: python3 pipeline/approve.py --pending

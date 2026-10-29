@@ -32,8 +32,8 @@
   {
    "page": 10,
    "bbox": [
-    133.8,
-    448.9,
+    133.0,
+    451.0,
     461.4,
     533.0
    ],
@@ -51,10 +51,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    591.6,
-    373.4,
-    717.1
+    67.5,
+    591.5,
+    373.5,
+    717.0
    ],
    "id": "0625_2019MJ_23_q26_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-MJ/p23/q26/figures/0625_2019MJ_23_q26_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-MJ/p23/q26/figures/0625_2019MJ_23_q26_figB",
     "url": null,
-    "kb": 29.6
+    "kb": 29.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,40 +137,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "metal from which",
-     "effect of a larger"
-    ],
-    [
-     "",
-     "the bar is made",
-     "current in the coil"
-    ],
-    [
-     "<b>A</b>",
-     "soft iron",
-     "it makes no difference"
-    ],
-    [
-     "<b>B</b>",
-     "soft iron",
-     "the bar holds more nails"
-    ],
-    [
-     "<b>C</b>",
-     "steel",
-     "it makes no difference"
-    ],
-    [
-     "<b>D</b>",
-     "steel",
-     "the bar holds more nails"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019MJ_23_q26_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "soft iron it makes no difference"
+    },
+    {
+     "label": "B",
+     "html": "soft iron the bar holds more nails"
+    },
+    {
+     "label": "C",
+     "html": "steel it makes no difference"
+    },
+    {
+     "label": "D",
+     "html": "steel the bar holds more nails"
+    }
+   ]
   }
  ]
 }

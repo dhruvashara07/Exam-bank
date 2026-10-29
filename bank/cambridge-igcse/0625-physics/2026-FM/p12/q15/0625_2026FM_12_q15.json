@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    544.3,
-    235.6,
-    655.7
+    67.5,
+    544.0,
+    235.5,
+    656.0
    ],
    "id": "0625_2026FM_12_q15_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-FM/p12/q15/figures/0625_2026FM_12_q15_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-FM/p12/q15/figures/0625_2026FM_12_q15_figA",
     "url": null,
-    "kb": 17.1
+    "kb": 16.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -112,35 +113,30 @@
    "text": "Which words complete gaps 1 and 2?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>1</b>",
-     "<b>2</b>"
-    ],
-    [
-     "<b>A</b>",
-     "least",
-     "decrease"
-    ],
-    [
-     "<b>B</b>",
-     "least",
-     "increase"
-    ],
-    [
-     "<b>C</b>",
-     "most",
-     "decrease"
-    ],
-    [
-     "<b>D</b>",
-     "most",
-     "increase"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026FM_12_q15_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "least decrease"
+    },
+    {
+     "label": "B",
+     "html": "least increase"
+    },
+    {
+     "label": "C",
+     "html": "most decrease"
+    },
+    {
+     "label": "D",
+     "html": "most increase"
+    }
+   ]
   }
  ]
 }

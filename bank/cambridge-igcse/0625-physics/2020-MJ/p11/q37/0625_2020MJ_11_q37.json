@@ -32,10 +32,10 @@
   {
    "page": 19,
    "bbox": [
-    67.7,
+    67.5,
     458.0,
-    286.7,
-    569.3
+    287.0,
+    569.5
    ],
    "id": "0625_2020MJ_11_q37_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,40 +108,30 @@
    "text": "What does a neutral atom of this nuclide contain?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "protons",
-     "neutrons",
-     "electrons"
-    ],
-    [
-     "<b>A</b>",
-     "26",
-     "30",
-     "26"
-    ],
-    [
-     "<b>B</b>",
-     "26",
-     "56",
-     "30"
-    ],
-    [
-     "<b>C</b>",
-     "30",
-     "26",
-     "56"
-    ],
-    [
-     "<b>D</b>",
-     "56",
-     "26",
-     "30"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020MJ_11_q37_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "26 30 26"
+    },
+    {
+     "label": "B",
+     "html": "26 56 30"
+    },
+    {
+     "label": "C",
+     "html": "30 26 56"
+    },
+    {
+     "label": "D",
+     "html": "56 26 30"
+    }
+   ]
   }
  ]
 }

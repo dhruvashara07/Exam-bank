@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    157.2,
-    124.5,
-    438.1,
-    285.0
+    157.0,
+    125.5,
+    438.5,
+    285.5
    ],
    "id": "0625_2025ON_62_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 5,
    "bbox": [
-    194.8,
-    409.5,
-    400.6,
-    580.1
+    194.0,
+    409.0,
+    401.0,
+    580.5
    ],
    "id": "0625_2025ON_62_q02a_fig2-2",
    "part": "(a)",
@@ -71,10 +71,10 @@
    "caption": "Table 2.1",
    "page": 6,
    "bbox": [
-    101.9,
-    164.8,
+    101.5,
+    165.5,
     493.5,
-    321.9
+    322.0
    ],
    "id": "0625_2025ON_62_q02b_table2-1",
    "part": "(b)",
@@ -273,8 +273,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Use the voltmeter reading in Table 2.1 when the 10Ω resistor is connected between X and Y to calculate the current I in the circuit. Use the equation:",
-       "text": "Use the voltmeter reading in Table 2.1 when the 10Ω resistor is connected between X and Y to calculate the current I in the circuit. Use the equation:"
+       "html": "Use the voltmeter reading in Table 2.1 when the 10 Ω resistor is connected between X and Y to calculate the current I in the circuit. Use the equation:",
+       "text": "Use the voltmeter reading in Table 2.1 when the 10 Ω resistor is connected between X and Y to calculate the current I in the circuit. Use the equation:"
       },
       {
        "type": "text",
@@ -351,19 +351,19 @@
      "content": [
       {
        "type": "text",
-       "html": "The voltmeter reading V for the 47Ω resistor is missing. Calculate V.",
-       "text": "The voltmeter reading V for the 47Ω resistor is missing. Calculate V."
-      },
-      {
-       "type": "text",
-       "html": "Add your answer to Table 2.1.",
-       "text": "Add your answer to Table 2.1."
+       "html": "The voltmeter reading V for the 47 Ω resistor is missing. Calculate V.",
+       "text": "The voltmeter reading V for the 47 Ω resistor is missing. Calculate V."
       },
       {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "V =",
        "unit": "V"
+      },
+      {
+       "type": "text",
+       "html": "Add your answer to Table 2.1.",
+       "text": "Add your answer to Table 2.1."
       },
       {
        "type": "marks",
@@ -382,47 +382,17 @@
     {
      "type": "list",
      "items": [
-      "connects a 10Ω resistor between points X and Y",
+      "connects a 10 Ω resistor between points X and Y",
       "closes the switch",
       "records, in Table 2.1, the reading V on the voltmeter",
       "opens the switch",
-      "repeats this procedure for resistors of resistances R = 22Ω, 39Ω, 47Ω and 68Ω."
+      "repeats this procedure for resistors of resistances R = 22 Ω, 39 Ω, 47 Ω and 68 Ω."
      ]
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "resistance R/Ω",
-       "voltmeter reading V/V",
-       "current I/A"
-      ],
-      [
-       "10",
-       "1.35",
-       ""
-      ],
-      [
-       "22",
-       "2.20",
-       "0.10"
-      ],
-      [
-       "39",
-       "2.85",
-       "0.073"
-      ],
-      [
-       "47",
-       "",
-       "0.064"
-      ],
-      [
-       "68",
-       "3.37",
-       "0.050"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2025ON_62_q02b_table2-1",
+     "caption": "Table 2.1"
     }
    ]
   },
@@ -485,8 +455,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of V/V (y-axis) against I/A (x-axis). Start your axes at the origin (0,0).",
-     "text": "Plot a graph of V/V (y-axis) against I/A (x-axis). Start your axes at the origin (0,0)."
+     "html": "Plot a graph of V / V (y-axis) against I / A (x-axis). Start your axes at the origin (0,0).",
+     "text": "Plot a graph of V / V (y-axis) against I / A (x-axis). Start your axes at the origin (0,0)."
     },
     {
      "type": "text",
@@ -674,6 +644,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

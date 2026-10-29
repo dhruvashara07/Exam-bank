@@ -9,10 +9,10 @@
    "caption": "Table 12.1",
    "page": 16,
    "bbox": [
-    79.1,
-    84.0,
-    516.2,
-    236.8
+    79.0,
+    87.5,
+    516.5,
+    237.0
    ],
    "id": "0625_2022FM_32_q12a_table12-1",
    "part": "(a)",
@@ -21,17 +21,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-FM/p32/q12/figures/0625_2022FM_32_q12a_table12-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-FM/p32/q12/figures/0625_2022FM_32_q12a_table12-1",
     "url": null,
-    "kb": 38.8
+    "kb": 38.7
    }
   },
   {
    "caption": "Fig. 12.1 (not to scale)",
    "page": 16,
    "bbox": [
-    148.3,
-    411.6,
-    446.9,
-    569.1
+    148.5,
+    415.0,
+    446.5,
+    567.5
    ],
    "id": "0625_2022FM_32_q12b_fig12-1",
    "part": "(b)",
@@ -40,7 +40,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-FM/p32/q12/figures/0625_2022FM_32_q12b_fig12-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-FM/p32/q12/figures/0625_2022FM_32_q12b_fig12-1",
     "url": null,
-    "kb": 21.7
+    "kb": 21.6
    }
   }
  ],
@@ -231,33 +231,9 @@
      "text": "Table 12.1 gives some properties of three different types of radiation."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "type of radiation",
-       "nature",
-       "relative charge",
-       "ionising ability"
-      ],
-      [
-       "gamma (γ)",
-       "electromagnetic wave",
-       "0",
-       "low"
-      ],
-      [
-       "beta (β)",
-       "",
-       "–1 (minus one)",
-       "medium"
-      ],
-      [
-       "alpha (α)",
-       "helium nucleus",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2022FM_32_q12a_table12-1",
+     "caption": "Table 12.1"
     }
    ]
   },
@@ -347,7 +323,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "X"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "Y"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -372,5 +357,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

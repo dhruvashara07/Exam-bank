@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    434.7,
-    299.9,
-    559.7
+    67.5,
+    434.5,
+    300.0,
+    560.0
    ],
    "id": "0625_2021MJ_22_q14_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,40 +98,30 @@
    "text": "Which row describes the forces between the molecules and the motion of the molecules in a gas?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "forces between",
-     "motion"
-    ],
-    [
-     "",
-     "molecules",
-     "of molecules"
-    ],
-    [
-     "<b>A</b>",
-     "strong",
-     "move freely"
-    ],
-    [
-     "<b>B</b>",
-     "strong",
-     "vibrate only"
-    ],
-    [
-     "<b>C</b>",
-     "weak",
-     "move freely"
-    ],
-    [
-     "<b>D</b>",
-     "weak",
-     "vibrate only"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_22_q14_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "strong move freely"
+    },
+    {
+     "label": "B",
+     "html": "strong vibrate only"
+    },
+    {
+     "label": "C",
+     "html": "weak move freely"
+    },
+    {
+     "label": "D",
+     "html": "weak vibrate only"
+    }
+   ]
   }
  ]
 }

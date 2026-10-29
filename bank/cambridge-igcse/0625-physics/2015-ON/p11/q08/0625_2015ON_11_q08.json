@@ -32,10 +32,10 @@
   {
    "page": 4,
    "bbox": [
-    67.6,
-    511.8,
+    67.5,
+    511.5,
     440.4,
-    665.6
+    666.0
    ],
    "id": "0625_2015ON_11_q08_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p11/q08/figures/0625_2015ON_11_q08_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p11/q08/figures/0625_2015ON_11_q08_figA",
     "url": null,
-    "kb": 28.7
+    "kb": 28.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,40 +98,30 @@
    "text": "What needs to be known to calculate the work done by a force acting on an object?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "the size of the force",
-     "the distance the force moves the object",
-     "the time for which the force acts"
-    ],
-    [
-     "A",
-     "\u0013",
-     "\u0013",
-     "\u0013"
-    ],
-    [
-     "B",
-     "\u0013",
-     "\u0013",
-     "\u0017"
-    ],
-    [
-     "C",
-     "\u0013",
-     "\u0017",
-     "\u0013"
-    ],
-    [
-     "D",
-     "\u0013",
-     "\u0017",
-     "\u0017"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015ON_11_q08_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "\u0013 \u0013 \u0013 key"
+    },
+    {
+     "label": "B",
+     "html": "\u0013 \u0013 \u0017 \u0013= needed"
+    },
+    {
+     "label": "C",
+     "html": "\u0013 \u0017 \u0013 \u0017= not needed"
+    },
+    {
+     "label": "D",
+     "html": "\u0013 \u0017 \u0017"
+    }
+   ]
   }
  ]
 }

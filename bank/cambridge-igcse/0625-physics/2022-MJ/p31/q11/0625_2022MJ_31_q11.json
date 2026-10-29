@@ -33,10 +33,10 @@
    "caption": "Fig. 11.1 (not to scale)",
    "page": 16,
    "bbox": [
-    116.2,
-    95.8,
-    478.6,
-    275.3
+    116.5,
+    99.5,
+    479.0,
+    273.5
    ],
    "id": "0625_2022MJ_31_q11_fig11-1",
    "part": "",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p31/q11/figures/0625_2022MJ_31_q11_fig11-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p31/q11/figures/0625_2022MJ_31_q11_fig11-1",
     "url": null,
-    "kb": 27.8
+    "kb": 27.7
    }
   },
   {
@@ -53,9 +53,9 @@
    "page": 16,
    "bbox": [
     177.5,
-    357.6,
-    417.7,
-    509.2
+    361.0,
+    418.0,
+    509.5
    ],
    "id": "0625_2022MJ_31_q11_table11-1",
    "part": "",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p31/q11/figures/0625_2022MJ_31_q11_table11-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p31/q11/figures/0625_2022MJ_31_q11_table11-1",
     "url": null,
-    "kb": 35.0
+    "kb": 34.9
    }
   }
  ],
@@ -239,6 +239,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -256,29 +257,9 @@
    "text": "The teacher places a material between the radioactive source and the detector. The counter shows the count rate for the emission that reaches the detector. The teacher records the count rate. He repeats the experiment for different materials. Table 11.1 shows the results."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "material being tested",
-     "count rate counts / s"
-    ],
-    [
-     "air (no object in gap)",
-     "480"
-    ],
-    [
-     "thin sheet of paper",
-     "481"
-    ],
-    [
-     "2 mm sheet of aluminium",
-     "479"
-    ],
-    [
-     "10 mm block of lead",
-     "120"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2022MJ_31_q11_table11-1",
+   "caption": "Table 11.1"
   }
  ]
 }

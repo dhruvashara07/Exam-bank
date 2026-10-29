@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    52.6,
-    124.3,
-    542.7,
-    328.2
+    53.0,
+    123.5,
+    542.0,
+    328.5
    ],
    "id": "0625_2025MJ_63_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2",
    "page": 2,
    "bbox": [
-    187.1,
-    621.8,
-    406.5,
-    788.4
+    190.0,
+    622.5,
+    405.0,
+    788.5
    ],
    "id": "0625_2025MJ_63_q01bi_fig1-2",
    "part": "(b)(i)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 1.3",
    "page": 3,
    "bbox": [
-    219.6,
-    163.3,
-    376.3,
-    507.9
+    219.0,
+    162.5,
+    376.0,
+    508.0
    ],
    "id": "0625_2025MJ_63_q01bii_fig1-3",
    "part": "(b)(ii)",
@@ -90,10 +90,10 @@
    "caption": "Table 1.1",
    "page": 4,
    "bbox": [
-    220.7,
-    125.8,
-    374.6,
-    282.5
+    220.5,
+    126.5,
+    374.5,
+    283.0
    ],
    "id": "0625_2025MJ_63_q01c_table1-1",
    "part": "(c)",
@@ -277,13 +277,13 @@
      "content": [
       {
        "type": "text",
-       "html": "The student adjusts distance d between the 0.0cm mark and the 1.50N load, as shown",
-       "text": "The student adjusts distance d between the 0.0cm mark and the 1.50N load, as shown"
+       "html": "The student adjusts distance d between the 0.0 cm mark and the 1.50 N load, as shown",
+       "text": "The student adjusts distance d between the 0.0 cm mark and the 1.50 N load, as shown"
       },
       {
        "type": "text",
-       "html": "in Fig. 1.1. He moves the thread supporting the 1.50N load so that it is at the mark on the metre ruler shown in Fig. 1.2.",
-       "text": "in Fig. 1.1. He moves the thread supporting the 1.50N load so that it is at the mark on the metre ruler shown in Fig. 1.2."
+       "html": "in Fig. 1.1. He moves the thread supporting the 1.50 N load so that it is at the mark on the metre ruler shown in Fig. 1.2.",
+       "text": "in Fig. 1.1. He moves the thread supporting the 1.50 N load so that it is at the mark on the metre ruler shown in Fig. 1.2."
       },
       {
        "type": "figure",
@@ -466,8 +466,8 @@
    "content": [
     {
      "type": "text",
-     "html": "The student moves the 1.50N load to distances d = 10.0cm, 30.0cm, 50.0cm, 70.0cm and 90.0cm. For each distance d, he reads the value F<sub>X</sub> on force meter X.",
-     "text": "The student moves the 1.50N load to distances d = 10.0cm, 30.0cm, 50.0cm, 70.0cm and 90.0cm. For each distance d, he reads the value FX on force meter X."
+     "html": "The student moves the 1.50 N load to distances d = 10.0 cm, 30.0 cm, 50.0 cm, 70.0 cm and 90.0 cm. For each distance d, he reads the value F<sub>X</sub> on force meter X.",
+     "text": "The student moves the 1.50 N load to distances d = 10.0 cm, 30.0 cm, 50.0 cm, 70.0 cm and 90.0 cm. For each distance d, he reads the value FX on force meter X."
     },
     {
      "type": "text",
@@ -475,38 +475,14 @@
      "text": "His readings are shown in Table 1.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "d/cm",
-       "F<sub>X</sub>/N"
-      ],
-      [
-       "10.0",
-       "1.17"
-      ],
-      [
-       "30.0",
-       "1.40"
-      ],
-      [
-       "50.0",
-       "1.82"
-      ],
-      [
-       "70.0",
-       "2.15"
-      ],
-      [
-       "90.0",
-       "2.35"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2025MJ_63_q01c_table1-1",
+     "caption": "Table 1.1"
     },
     {
      "type": "text",
-     "html": "Plot a graph of F<sub>X</sub>/N (y-axis) against d/cm (x-axis). Start the axes at the origin (0,0).",
-     "text": "Plot a graph of FX/N (y-axis) against d/cm (x-axis). Start the axes at the origin (0,0)."
+     "html": "Plot a graph of F<sub>X</sub> / N (y-axis) against d / cm (x-axis). Start the axes at the origin (0, 0).",
+     "text": "Plot a graph of FX / N (y-axis) against d / cm (x-axis). Start the axes at the origin (0, 0)."
     },
     {
      "type": "text",
@@ -589,8 +565,13 @@
    "content": [
     {
      "type": "text",
-     "html": "From your graph, determine F<sub>0</sub>, the value of F<sub>X</sub> when d = 0.0cm.",
-     "text": "From your graph, determine F0, the value of FX when d = 0.0cm."
+     "html": "From your graph, determine F<sub>0</sub>, the value of F<sub>X</sub> when d = 0.0 cm.",
+     "text": "From your graph, determine F0, the value of FX when d = 0.0 cm."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "F0 ="
     },
     {
      "type": "text",
@@ -674,7 +655,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -742,8 +732,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Another student does the experiment with the same equipment. He reads values of F<sub>X</sub> which are all higher than those in Table 1.1 by 0.05N.",
-     "text": "Another student does the experiment with the same equipment. He reads values of FX which are all higher than those in Table 1.1 by 0.05N."
+     "html": "Another student does the experiment with the same equipment. He reads values of F<sub>X</sub> which are all higher than those in Table 1.1 by 0.05 N.",
+     "text": "Another student does the experiment with the same equipment. He reads values of FX which are all higher than those in Table 1.1 by 0.05 N."
     },
     {
      "type": "text",
@@ -779,6 +769,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

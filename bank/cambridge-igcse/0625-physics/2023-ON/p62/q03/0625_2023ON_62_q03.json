@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 6,
    "bbox": [
-    149.5,
-    110.8,
-    445.8,
-    279.1
+    150.0,
+    110.5,
+    445.0,
+    277.5
    ],
    "id": "0625_2023ON_62_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 6,
    "bbox": [
-    109.1,
-    323.7,
-    486.1,
-    386.4
+    108.5,
+    323.0,
+    486.5,
+    385.0
    ],
    "id": "0625_2023ON_62_q03a_fig3-2",
    "part": "(a)",
@@ -71,10 +71,10 @@
    "caption": "Table 3.1",
    "page": 6,
    "bbox": [
-    185.4,
-    572.7,
-    409.8,
-    769.6
+    185.5,
+    576.5,
+    410.0,
+    770.0
    ],
    "id": "0625_2023ON_62_q03bii_table3-1",
    "part": "(b)(ii)",
@@ -175,14 +175,14 @@
      "caption": "Fig. 3.2"
     },
     {
-     "type": "text",
-     "html": "R",
-     "text": "R"
-    },
-    {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "θ ="
+    },
+    {
+     "type": "text",
+     "html": "R",
+     "text": "R"
     },
     {
      "type": "marks",
@@ -351,41 +351,9 @@
        "text": "Complete the column headings in Table 3.1."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>t</i> /",
-         "θ /"
-        ],
-        [
-         "",
-         "95"
-        ],
-        [
-         "",
-         "86"
-        ],
-        [
-         "",
-         "78"
-        ],
-        [
-         "",
-         "72"
-        ],
-        [
-         "",
-         "68"
-        ],
-        [
-         "",
-         "66"
-        ],
-        [
-         "",
-         "65"
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2023ON_62_q03bii_table3-1",
+       "caption": "Table 3.1"
       },
       {
        "type": "marks",
@@ -618,6 +586,11 @@
        "text": "Calculate the decrease in temperature Δθ2 between time t = 90 s and time t = 180 s."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Δθ2 ="
+      },
+      {
        "type": "text",
        "html": "Calculate the difference in temperature Δθ<sub>T</sub> between the temperature at time <i>t</i> = 90 s and room temperature θ<sub>R</sub>.",
        "text": "Calculate the difference in temperature ΔθT between the temperature at time t = 90 s and room temperature θR."
@@ -732,7 +705,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -916,6 +898,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

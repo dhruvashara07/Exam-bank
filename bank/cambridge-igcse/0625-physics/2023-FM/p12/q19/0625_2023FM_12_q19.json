@@ -33,9 +33,9 @@
    "page": 8,
    "bbox": [
     185.2,
-    85.1,
-    409.6,
-    208.0
+    85.0,
+    410.0,
+    208.5
    ],
    "id": "0625_2023FM_12_q19_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-FM/p12/q19/figures/0625_2023FM_12_q19_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-FM/p12/q19/figures/0625_2023FM_12_q19_figA",
     "url": null,
-    "kb": 10.5
+    "kb": 10.4
    }
   },
   {
    "page": 8,
    "bbox": [
-    67.7,
-    248.6,
-    244.7,
-    374.1
+    67.5,
+    248.5,
+    245.0,
+    374.5
    ],
    "id": "0625_2023FM_12_q19_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-FM/p12/q19/figures/0625_2023FM_12_q19_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-FM/p12/q19/figures/0625_2023FM_12_q19_figB",
     "url": null,
-    "kb": 15.9
+    "kb": 15.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row identifies the angles of incidence and reflection?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "angle of",
-     "angle of"
-    ],
-    [
-     "",
-     "incidence",
-     "reflection"
-    ],
-    [
-     "<b>A</b>",
-     "W",
-     "Y"
-    ],
-    [
-     "<b>B</b>",
-     "W",
-     "Z"
-    ],
-    [
-     "<b>C</b>",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>D</b>",
-     "X",
-     "Z"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023FM_12_q19_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "W Y"
+    },
+    {
+     "label": "B",
+     "html": "W Z"
+    },
+    {
+     "label": "C",
+     "html": "X Y"
+    },
+    {
+     "label": "D",
+     "html": "X Z"
+    }
+   ]
   }
  ]
 }

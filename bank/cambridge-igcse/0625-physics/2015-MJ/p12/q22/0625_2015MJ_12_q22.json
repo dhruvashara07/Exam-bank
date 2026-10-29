@@ -32,7 +32,7 @@
   {
    "page": 12,
    "bbox": [
-    157.7,
+    157.0,
     124.7,
     437.9,
     271.5
@@ -51,10 +51,10 @@
   {
    "page": 12,
    "bbox": [
-    67.4,
+    67.0,
     329.0,
-    391.9,
-    440.3
+    392.0,
+    440.5
    ],
    "id": "0625_2015MJ_12_q22_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p12/q22/figures/0625_2015MJ_12_q22_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p12/q22/figures/0625_2015MJ_12_q22_figB",
     "url": null,
-    "kb": 30.3
+    "kb": 30.1
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,35 +137,30 @@
    "text": "Which row in the table describes the change to angle X and the name of the effect produced?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "change to angle X",
-     "name of effect produced"
-    ],
-    [
-     "A",
-     "decrease",
-     "total internal reflection"
-    ],
-    [
-     "B",
-     "decrease",
-     "total internal refraction"
-    ],
-    [
-     "C",
-     "increase",
-     "total internal reflection"
-    ],
-    [
-     "D",
-     "increase",
-     "total internal refraction"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_12_q22_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decrease total internal reflection"
+    },
+    {
+     "label": "B",
+     "html": "decrease total internal refraction"
+    },
+    {
+     "label": "C",
+     "html": "increase total internal reflection"
+    },
+    {
+     "label": "D",
+     "html": "increase total internal refraction"
+    }
+   ]
   }
  ]
 }

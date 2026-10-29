@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    398.3,
-    258.4,
-    523.4
+    67.5,
+    398.0,
+    258.5,
+    523.5
    ],
    "id": "0625_2021MJ_22_q33_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p22/q33/figures/0625_2021MJ_22_q33_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p22/q33/figures/0625_2021MJ_22_q33_figA",
     "url": null,
-    "kb": 20.0
+    "kb": 19.8
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "Two 10Ω resistors are connected in series and then in parallel.",
-   "text": "Two 10Ω resistors are connected in series and then in parallel."
+   "html": "Two 10 Ω resistors are connected in series and then in parallel.",
+   "text": "Two 10 Ω resistors are connected in series and then in parallel."
   },
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "What is the combined resistance in each case?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "resistance in",
-     "resistance in"
-    ],
-    [
-     "",
-     "series/Ω",
-     "parallel/Ω"
-    ],
-    [
-     "<b>A</b>",
-     "10",
-     "5"
-    ],
-    [
-     "<b>B</b>",
-     "10",
-     "10"
-    ],
-    [
-     "<b>C</b>",
-     "20",
-     "5"
-    ],
-    [
-     "<b>D</b>",
-     "20",
-     "10"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_22_q33_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "10 5"
+    },
+    {
+     "label": "B",
+     "html": "10 10"
+    },
+    {
+     "label": "C",
+     "html": "20 5"
+    },
+    {
+     "label": "D",
+     "html": "20 10"
+    }
+   ]
   }
  ]
 }

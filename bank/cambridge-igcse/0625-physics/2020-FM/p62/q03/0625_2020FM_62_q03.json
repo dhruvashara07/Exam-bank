@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 11,
    "bbox": [
-    153.6,
-    96.2,
-    441.7,
-    271.8
+    154.5,
+    99.5,
+    441.5,
+    270.0
    ],
    "id": "0625_2020FM_62_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 11,
    "bbox": [
-    86.1,
-    329.4,
-    509.2,
-    498.4
+    85.5,
+    329.0,
+    510.0,
+    496.5
    ],
    "id": "0625_2020FM_62_q03a_fig3-2",
    "part": "(a)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 3.3",
    "page": 11,
    "bbox": [
-    86.1,
-    329.4,
-    509.2,
-    498.4
+    85.5,
+    329.0,
+    510.0,
+    496.5
    ],
    "id": "0625_2020FM_62_q03a_fig3-3",
    "part": "(a)",
@@ -90,10 +90,10 @@
    "caption": "Table 3.1",
    "page": 12,
    "bbox": [
-    209.4,
-    110.0,
-    385.8,
-    278.6
+    209.5,
+    113.5,
+    386.0,
+    279.0
    ],
    "id": "0625_2020FM_62_q03b_table3-1",
    "part": "(b)",
@@ -206,6 +206,12 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "V0 =",
+       "unit": "V"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "I0 =",
        "unit": "A"
       },
@@ -274,7 +280,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>0</sub> of 100.0 cm of the wire. Use your values of <i>V</i><sub>0</sub> and <i>I</i><sub>0</sub> and the equation <i>R</i><sub>0</sub> = \\(\\frac{<i>V</i><sub>0</sub>}{<i>I</i><sub>0</sub>}\\) .",
+       "html": "Calculate the resistance <i>R</i><sub>0</sub> of 100.0 cm of the wire. Use your values of <i>V</i><sub>0</sub> and <i>I</i><sub>0</sub> and the equation <i>R</i><sub>0</sub> = \\(\\frac{V_{0}}{I_{0}}\\) .",
        "text": "Calculate the resistance R0 of 100.0 cm of the wire. Use your values of V0 and I0 and the equation R0 = (V0)/(I0) ."
       },
       {
@@ -372,43 +378,13 @@
      "text": "The student then connects the crocodile clip to lengths l = 70.0 cm, 60.0 cm, 50.0 cm, 40.0 cm and 30.0 cm of the resistance wire. She measures the current I in the circuit for each length. Her readings are shown in Table 3.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>l</i> / cm",
-       "<i>I</i> / A",
-       "1 1 <i>I</i>/A"
-      ],
-      [
-       "70.0",
-       "0.35",
-       ""
-      ],
-      [
-       "60.0",
-       "0.40",
-       "2.50"
-      ],
-      [
-       "50.0",
-       "0.44",
-       "2.27"
-      ],
-      [
-       "40.0",
-       "0.53",
-       "1.89"
-      ],
-      [
-       "30.0",
-       "0.65",
-       "1.54"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2020FM_62_q03b_table3-1",
+     "caption": "Table 3.1"
     },
     {
      "type": "text",
-     "html": "Calculate, and record in Table 3.1, the value of \\(\\frac{1}{<i>I</i>}\\) for length <i>l</i> = 70.0 cm of the wire.",
+     "html": "Calculate, and record in Table 3.1, the value of \\(\\frac{1}{I}\\) for length <i>l</i> = 70.0 cm of the wire.",
      "text": "Calculate, and record in Table 3.1, the value of (1)/(I) for length l = 70.0 cm of the wire."
     },
     {
@@ -484,7 +460,7 @@
     },
     {
      "type": "text",
-     "html": "Plot a graph of <i>l</i> / cm (<i>y</i>-axis) against \\(\\frac{1}{<i>I</i>}\\) 1 (<i>x</i>-axis). You do <b>not</b> need to start your axes at the origin (0,0).",
+     "html": "Plot a graph of <i>l</i> / cm (<i>y</i>-axis) against \\(\\frac{1}{I}\\) 1 (<i>x</i>-axis). You do <b>not</b> need to start your axes at the origin (0,0).",
      "text": "Plot a graph of l / cm (y-axis) against (1)/(I) 1 (x-axis). You do not need to start your axes at the origin (0,0)."
     },
     {
@@ -641,7 +617,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the electromotive force (e.m.f.) <i>E</i> of the power supply. Use your value of <i>R</i><sub>0</sub> from <b>(a)(ii)</b> and the equation <i>E</i> = \\(\\frac{<i>G</i> × <i>R</i><sub>0</sub>}{<i>k</i>}\\) , where <i>k</i> = 100 cm.",
+       "html": "Calculate the electromotive force (e.m.f.) <i>E</i> of the power supply. Use your value of <i>R</i><sub>0</sub> from <b>(a)(ii)</b> and the equation <i>E</i> = \\(\\frac{G \\times R_{0}}{k}\\) , where <i>k</i> = 100 cm.",
        "text": "Calculate the electromotive force (e.m.f.) E of the power supply. Use your value of R0 from (a)(ii) and the equation E = (G × R0)/(k) , where k = 100 cm."
       },
       {
@@ -725,7 +701,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -752,6 +737,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

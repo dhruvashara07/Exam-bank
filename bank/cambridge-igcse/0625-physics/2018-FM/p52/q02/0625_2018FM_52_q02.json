@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    184.4,
-    139.7,
-    415.7,
-    382.4
+    183.5,
+    144.0,
+    416.5,
+    379.5
    ],
    "id": "0625_2018FM_52_q02_fig2-1",
    "part": "",
@@ -196,6 +196,11 @@
        "text": "Record the potential difference (p.d.) VX across lamp X."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "VX ="
+      },
+      {
        "type": "text",
        "html": "Disconnect the voltmeter. Connect the voltmeter to measure the p.d. <i>V</i><sub>Y</sub> across lamp <b>Y</b>. Record <i>V</i><sub>Y</sub> .",
        "text": "Disconnect the voltmeter. Connect the voltmeter to measure the p.d. VY across lamp Y. Record VY ."
@@ -274,14 +279,14 @@
        "text": "Disconnect the voltmeter. Connect the voltmeter to measure the p.d. VS across both lamps X and Y connected in series. Record VS."
       },
       {
-       "type": "text",
-       "html": "Switch off.",
-       "text": "Switch off."
-      },
-      {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "VS ="
+      },
+      {
+       "type": "text",
+       "html": "Switch off.",
+       "text": "Switch off."
       },
       {
        "type": "marks",
@@ -355,7 +360,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -427,7 +441,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate the resistance <i>R</i><sub>1</sub> of lamp <b>X</b>. Use your readings from <b>(a)(i)</b> and <b>(a)(ii)</b> and the equation <i>R</i><sub>1</sub> = \\(\\frac{<i>V</i><sub>X</sub>}{<i>I</i>}\\) . Record your answer to a suitable number of significant figures for your experiment.",
+     "html": "Calculate the resistance <i>R</i><sub>1</sub> of lamp <b>X</b>. Use your readings from <b>(a)(i)</b> and <b>(a)(ii)</b> and the equation <i>R</i><sub>1</sub> = \\(\\frac{V_{X}}{I}\\) . Record your answer to a suitable number of significant figures for your experiment.",
      "text": "Calculate the resistance R1 of lamp X. Use your readings from (a)(i) and (a)(ii) and the equation R1 = (VX)/(I) . Record your answer to a suitable number of significant figures for your experiment."
     },
     {
@@ -607,14 +621,19 @@
        "text": "Switch on. Measure and record the current IP in lamp X and the p.d. VP across the lamps."
       },
       {
-       "type": "text",
-       "html": "Switch off.",
-       "text": "Switch off."
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "IP ="
       },
       {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "VP ="
+      },
+      {
+       "type": "text",
+       "html": "Switch off.",
+       "text": "Switch off."
       },
       {
        "type": "marks",
@@ -681,7 +700,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the new resistance <i>R</i><sub>2</sub> of lamp <b>X</b>. Use your readings from <b>(d)(i)</b> and the equation <i>R</i><sub>2</sub> = \\(\\frac{<i>V</i><sub>P</sub>}{<i>I</i>}\\) .",
+       "html": "Calculate the new resistance <i>R</i><sub>2</sub> of lamp <b>X</b>. Use your readings from <b>(d)(i)</b> and the equation <i>R</i><sub>2</sub> = \\(\\frac{V_{P}}{I}\\) .",
        "text": "Calculate the new resistance R2 of lamp X. Use your readings from (d)(i) and the equation R2 = (VP)/(I) ."
       },
       {
@@ -721,6 +740,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

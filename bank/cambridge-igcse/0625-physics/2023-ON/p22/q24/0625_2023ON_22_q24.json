@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    304.9,
-    211.7,
-    416.2
+    67.5,
+    304.5,
+    212.0,
+    416.5
    ],
    "id": "0625_2023ON_22_q24_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "Which row shows whether iron and steel are hard or soft magnetic materials?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "iron",
-     "steel"
-    ],
-    [
-     "<b>A</b>",
-     "hard",
-     "hard"
-    ],
-    [
-     "<b>B</b>",
-     "hard",
-     "soft"
-    ],
-    [
-     "<b>C</b>",
-     "soft",
-     "hard"
-    ],
-    [
-     "<b>D</b>",
-     "soft",
-     "soft"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_22_q24_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "hard hard"
+    },
+    {
+     "label": "B",
+     "html": "hard soft"
+    },
+    {
+     "label": "C",
+     "html": "soft hard"
+    },
+    {
+     "label": "D",
+     "html": "soft soft"
+    }
+   ]
   }
  ]
 }

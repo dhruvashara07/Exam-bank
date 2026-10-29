@@ -51,10 +51,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    449.5,
-    225.1,
-    560.8
+    67.5,
+    449.0,
+    225.0,
+    561.0
    ],
    "id": "0625_2021ON_21_q05_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p21/q05/figures/0625_2021ON_21_q05_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p21/q05/figures/0625_2021ON_21_q05_figB",
     "url": null,
-    "kb": 14.4
+    "kb": 14.3
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A 20m long, uniform bridge of weight 100kN is supported at each end by pillars, as shown.",
-   "text": "A 20m long, uniform bridge of weight 100kN is supported at each end by pillars, as shown."
+   "html": "A 20 m long, uniform bridge of weight 100 kN is supported at each end by pillars, as shown.",
+   "text": "A 20 m long, uniform bridge of weight 100 kN is supported at each end by pillars, as shown."
   },
   {
    "type": "figure",
@@ -127,39 +128,34 @@
   },
   {
    "type": "text",
-   "html": "What are the values of <i>T</i><sub>1</sub> and <i>T</i><sub>2</sub> when a van of weight 24kN is on the bridge, 5m from the left-hand pillar?",
-   "text": "What are the values of T1 and T2 when a van of weight 24kN is on the bridge, 5m from the left-hand pillar?"
+   "html": "What are the values of <i>T</i><sub>1</sub> and <i>T</i><sub>2</sub> when a van of weight 24 kN is on the bridge, 5 m from the left-hand pillar?",
+   "text": "What are the values of T1 and T2 when a van of weight 24 kN is on the bridge, 5 m from the left-hand pillar?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<i>T</i><sub>1</sub>/kN",
-     "<i>T</i><sub>2</sub>/kN"
-    ],
-    [
-     "<b>A</b>",
-     "56",
-     "68"
-    ],
-    [
-     "<b>B</b>",
-     "62",
-     "62"
-    ],
-    [
-     "<b>C</b>",
-     "68",
-     "56"
-    ],
-    [
-     "<b>D</b>",
-     "74",
-     "50"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_21_q05_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "56 68"
+    },
+    {
+     "label": "B",
+     "html": "62 62"
+    },
+    {
+     "label": "C",
+     "html": "68 56"
+    },
+    {
+     "label": "D",
+     "html": "74 50"
+    }
+   ]
   }
  ]
 }

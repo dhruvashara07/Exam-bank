@@ -12,7 +12,8 @@ sys.path.insert(0, os.path.dirname(__file__))
 from clean import clean
 from extract import extract, segment_text_all
 import editable
-from layout import page_bounds, visible_lines, ink_boxes
+from golden import cut_hash
+from layout import page_bounds, visible_lines, ink_boxes, tight_ink, grow_to_ink, CONTENT_X0, CONTENT_X1
 from render import region_svg
 from ms import mcq_key, structured_rows
 import paths
@@ -107,15 +108,24 @@ def mcq_figures(doc, q):
         option_rows = [l['y0'] for l in lines if option_label(l)]
         def is_prose(l):
             t = l['text']
-            return (len(t) >= 25 and ' ' in t) or l['x0'] < 60 or t.rstrip().endswith('?') \
+            return (len(t) >= 25 and ' ' in t) or (l['x0'] < 60 and re.match(r'^\d{1,2}(\s|$)', t) is not None) \
+                or t.rstrip().endswith('?') \
                 or (any(abs(l['y0'] - y) < 4 for y in option_rows) and len(option_rows) >= 2)
-        prose = [l for l in lines if is_prose(l)]
-        labels = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in lines if not is_prose(l)]
+        prose_ids = {id(l) for l in lines if is_prose(l)}
+        for l in sorted(lines, key=lambda l: l['y0']):      # the short last line of a sentence ('colours.')
+            above = [p for p in lines if id(p) in prose_ids and 0 < l['y0'] - p['y0'] < 1.6 * (l['y1'] - l['y0'])
+                     and (abs(p['x0'] - l['x0']) < 3 or (re.match(r'^\d{1,2}\s', p['text']) and 0 < l['x0'] - p['x0'] < 28))]
+            if above and re.search(r'[a-z]', l['text']) and (l['text'].rstrip()[-1:] in '.?:' or len(l['text']) > 12):
+                prose_ids.add(id(l))
+        prose = [l for l in lines if id(l) in prose_ids]
+        labels = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in lines if id(l) not in prose_ids]
         prose_r = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in prose]
         draw = [r for r in ink_boxes(page, top, bottom) if r.y0 >= y0 - 1 and r.y1 <= y1 + 1]
         draw = [r for r in draw if not any(r in (p + (-1, -1, 1, 1)) for p in prose_r + labels)]   # text glyph boxes
-        draw = [r for r in draw if (r.width > 0.3 or r.height > 0.3) and not any(r.intersects(p) for p in prose_r)]
-        draw = [r for r in draw if visible_ink(page, r, prose_r + labels)]
+        draw = [r for r in draw if r.width > 0.3 or r.height > 0.3]     # prose ink is masked out just below
+        text_cover = [t + (-1.5, -1.5, 1.5, 1.5) for t in prose_r + labels]
+        draw = [tight_ink(page, r, text_cover) for r in draw]       # what each drawing actually prints
+        draw = [r for r in draw if r is not None]
         draw.sort(key=lambda r: r.y0)
 
         def union(a, b):                 # fitz '|' ignores zero-width rects (straight lines), so do it by hand
@@ -131,12 +141,15 @@ def mcq_figures(doc, q):
                 continue
             if all(m.height < 1.2 and m.width < 160 for m in mem):
                 continue                 # only fraction bars: an equation in the text/options, not a figure
+            if c.height < 22 and c.width < 60 and all(m.width < 20 and m.height < 20 for m in mem):
+                continue                 # a few small marks (nuclide notation, a symbol in the text), not a diagram
             for _ in range(3):           # labels hang off labels ("speed" over "m/s")
                 for t in labels:
-                    if t.intersects(c + (-14, -18, 14, 12)) and not any(c.y1 < p.y0 and p.y1 < t.y0 or t.y1 < p.y0 and p.y1 < c.y0 for p in prose_r):
+                    if t.intersects(c + (-30, -18, 30, 12)) and not any(c.y1 < p.y0 and p.y1 < t.y0 or t.y1 < p.y0 and p.y1 < c.y0 for p in prose_r):
                         c = union(c, t)
             if c.height < 10:            # a lone rule (e.g. end-of-paper line), not a figure
                 continue
+            c = grow_to_ink(page, c, fitz.Rect(CONTENT_X0, y0, CONTENT_X1, y1))
             figs.append({'page': s['page'], 'bbox': [round(c.x0 - 3, 1), round(c.y0 - 3, 1), round(c.x1 + 3, 1), round(c.y1 + 3, 1)]})
     return figs
 
@@ -228,6 +241,7 @@ def process(qp_path):
                                        'paper', 'variant', 'paper_code', 'paper_type')})
         q.setdefault('total_marks', q['marks'])
         q.update({'topic': None, 'subtopic': None, 'keywords': [], 'difficulty': None})
+        q['pipeline_version'] = paths.PIPELINE_VERSION
         try:                                   # editable copy: text with bold/italic/sub/sup/maths, tables, figure refs
             editable.build(doc, q)
         except Exception as e:                 # never lose a paper over it; the exact SVGs are the master copy
@@ -255,6 +269,7 @@ def process(qp_path):
     if found != meta['total_marks']:
         queue.append({'id': f'{syl}_{year}{session}_{pv}', 'reasons': [f"paper marks found {found}, cover says {meta['total_marks']}"]})
     meta['question_ids'] = [q['id'] for q in questions]
+    meta['pipeline_version'] = paths.PIPELINE_VERSION
     with open(os.path.join(w.pdir, 'paper.json'), 'w') as f:
         json.dump(meta, f, ensure_ascii=False, indent=1)
     return meta, queue
@@ -300,7 +315,9 @@ if __name__ == '__main__':
         try:
             meta, queue = process(p)
             all_queue += queue
-            appr.pop(paths.paper_id(meta), None)     # new output = pending until Claude checks it again
+            pid = paths.paper_id(meta)
+            if pid in appr and appr[pid].get('cut') != cut_hash(os.path.join(paths.paper_dir(meta), 'paper.json')):
+                appr.pop(pid)            # the cut changed: pending until Claude checks it again
             print(f"{meta['paper_code']} {meta['year']}-{meta['session']}: {meta['questions']} questions, "
                   f"marks {meta['marks_found']}/{meta['total_marks']}, flagged {len(queue)}")
         except Exception as e:  # keep going; record the failure for review

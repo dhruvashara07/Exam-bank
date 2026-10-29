@@ -32,10 +32,10 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    173.2,
+    67.5,
+    173.0,
     345.5,
-    298.7
+    299.0
    ],
    "id": "0625_2021MJ_12_q05_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p12/q05/figures/0625_2021MJ_12_q05_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p12/q05/figures/0625_2021MJ_12_q05_figA",
     "url": null,
-    "kb": 30.5
+    "kb": 30.3
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -98,8 +99,8 @@
   },
   {
    "type": "text",
-   "html": "She measures her mass on Earth to be 82kg. She researches the values of <i>g</i> on different moons and uses these values to calculate her weight.",
-   "text": "She measures her mass on Earth to be 82kg. She researches the values of g on different moons and uses these values to calculate her weight."
+   "html": "She measures her mass on Earth to be 82 kg. She researches the values of <i>g</i> on different moons and uses these values to calculate her weight.",
+   "text": "She measures her mass on Earth to be 82 kg. She researches the values of g on different moons and uses these values to calculate her weight."
   },
   {
    "type": "text",
@@ -112,46 +113,30 @@
    "text": "Which weight is calculated correctly?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "name",
-     "<i>g</i>",
-     "calculated"
-    ],
-    [
-     "",
-     "of moon",
-     "N/kg",
-     "weight/N"
-    ],
-    [
-     "<b>A</b>",
-     "Callisto",
-     "1.2",
-     "68"
-    ],
-    [
-     "<b>B</b>",
-     "Charon",
-     "0.28",
-     "23"
-    ],
-    [
-     "<b>C</b>",
-     "Dione",
-     "0.23",
-     "2.3"
-    ],
-    [
-     "<b>D</b>",
-     "Umbriel",
-     "0.23",
-     "0.0028"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_12_q05_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "Callisto 1.2 68"
+    },
+    {
+     "label": "B",
+     "html": "Charon 0.28 23"
+    },
+    {
+     "label": "C",
+     "html": "Dione 0.23 2.3"
+    },
+    {
+     "label": "D",
+     "html": "Umbriel 0.23 0.0028"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    374.9,
-    315.1,
-    486.2
+    67.5,
+    374.5,
+    315.5,
+    486.5
    ],
    "id": "0625_2024ON_11_q22_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p11/q22/figures/0625_2024ON_11_q22_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p11/q22/figures/0625_2024ON_11_q22_figA",
     "url": null,
-    "kb": 23.8
+    "kb": 23.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which regions of the electromagnetic spectrum are used for satellite television and for security marking?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "satellite television",
-     "security marking"
-    ],
-    [
-     "<b>A</b>",
-     "microwaves",
-     "infrared"
-    ],
-    [
-     "<b>B</b>",
-     "microwaves",
-     "ultraviolet"
-    ],
-    [
-     "<b>C</b>",
-     "X-rays",
-     "infrared"
-    ],
-    [
-     "<b>D</b>",
-     "X-rays",
-     "ultraviolet"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_11_q22_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "microwaves infrared"
+    },
+    {
+     "label": "B",
+     "html": "microwaves ultraviolet"
+    },
+    {
+     "label": "C",
+     "html": "X-rays infrared"
+    },
+    {
+     "label": "D",
+     "html": "X-rays ultraviolet"
+    }
+   ]
   }
  ]
 }

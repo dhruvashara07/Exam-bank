@@ -101,13 +101,22 @@
      "content": [
       {
        "type": "text",
-       "html": "household smoke alarm",
-       "text": "household smoke alarm"
+       "html": "household smoke alarm type of radioactive emission ……",
+       "text": "household smoke alarm type of radioactive emission ……"
       },
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "half-life",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "half-life"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -177,13 +186,22 @@
      "content": [
       {
        "type": "text",
-       "html": "measuring the thickness of aluminium strips produced in a factory",
-       "text": "measuring the thickness of aluminium strips produced in a factory"
+       "html": "measuring the thickness of aluminium strips produced in a factory type of radioactive emission ……",
+       "text": "measuring the thickness of aluminium strips produced in a factory type of radioactive emission ……"
       },
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "half-life",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "half-life"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -346,7 +364,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -371,5 +398,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

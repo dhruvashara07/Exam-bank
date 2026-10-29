@@ -32,10 +32,10 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    664.2,
-    356.3,
-    775.1
+    67.5,
+    664.0,
+    356.5,
+    775.0
    ],
    "id": "0625_2022MJ_12_q08_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p12/q08/figures/0625_2022MJ_12_q08_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p12/q08/figures/0625_2022MJ_12_q08_figA",
     "url": null,
-    "kb": 28.5
+    "kb": 28.3
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "What are the conditions for an object to be in equilibrium?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "forces on object",
-     "moment on object"
-    ],
-    [
-     "<b>A</b>",
-     "no resultant force",
-     "no resultant moment"
-    ],
-    [
-     "<b>B</b>",
-     "no resultant force",
-     "resultant moment"
-    ],
-    [
-     "<b>C</b>",
-     "resultant force",
-     "no resultant moment"
-    ],
-    [
-     "<b>D</b>",
-     "resultant force",
-     "resultant moment"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_12_q08_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "no resultant force no resultant moment"
+    },
+    {
+     "label": "B",
+     "html": "no resultant force resultant moment"
+    },
+    {
+     "label": "C",
+     "html": "resultant force no resultant moment"
+    },
+    {
+     "label": "D",
+     "html": "resultant force resultant moment"
+    }
+   ]
   }
  ]
 }

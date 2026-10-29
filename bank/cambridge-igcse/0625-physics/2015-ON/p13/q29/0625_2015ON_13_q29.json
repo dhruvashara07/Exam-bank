@@ -33,8 +33,8 @@
    "page": 11,
    "bbox": [
     210.2,
-    421.1,
-    384.6,
+    421.0,
+    385.0,
     575.4
    ],
    "id": "0625_2015ON_13_q29_figA",
@@ -51,9 +51,9 @@
   {
    "page": 11,
    "bbox": [
-    67.6,
-    608.6,
-    284.3,
+    67.5,
+    608.5,
+    284.5,
     720.0
    ],
    "id": "0625_2015ON_13_q29_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p13/q29/figures/0625_2015ON_13_q29_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p13/q29/figures/0625_2015ON_13_q29_figB",
     "url": null,
-    "kb": 14.8
+    "kb": 14.6
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The circuit shown contains a battery, a 6.0Ω resistor and two meters X and Y.",
-   "text": "The circuit shown contains a battery, a 6.0Ω resistor and two meters X and Y."
+   "html": "The circuit shown contains a battery, a 6.0 Ω resistor and two meters X and Y.",
+   "text": "The circuit shown contains a battery, a 6.0 Ω resistor and two meters X and Y."
   },
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Which row shows possible values for the readings on the meters?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "meter X",
-     "meter Y"
-    ],
-    [
-     "A",
-     "2.0A",
-     "12V"
-    ],
-    [
-     "B",
-     "2.0V",
-     "12A"
-    ],
-    [
-     "C",
-     "12A",
-     "2.0V"
-    ],
-    [
-     "D",
-     "12V",
-     "2.0A"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015ON_13_q29_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "2.0A 12V"
+    },
+    {
+     "label": "B",
+     "html": "2.0V 12A"
+    },
+    {
+     "label": "C",
+     "html": "12A 2.0V"
+    },
+    {
+     "label": "D",
+     "html": "12V 2.0A"
+    }
+   ]
   }
  ]
 }

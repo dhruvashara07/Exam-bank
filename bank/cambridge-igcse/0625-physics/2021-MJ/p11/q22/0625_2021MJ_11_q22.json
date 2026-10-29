@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.9,
-    380.2,
-    480.8,
-    540.9
+    113.5,
+    405.5,
+    480.5,
+    541.5
    ],
    "id": "0625_2021MJ_11_q22_figA",
    "caption": null,
@@ -45,14 +45,14 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p11/q22/figures/0625_2021MJ_11_q22_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p11/q22/figures/0625_2021MJ_11_q22_figA",
     "url": null,
-    "kb": 12.9
+    "kb": 6.4
    }
   },
   {
    "page": 9,
    "bbox": [
-    67.7,
-    597.1,
+    67.5,
+    597.0,
     366.5,
     708.0
    ],
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p11/q22/figures/0625_2021MJ_11_q22_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p11/q22/figures/0625_2021MJ_11_q22_figB",
     "url": null,
-    "kb": 25.1
+    "kb": 24.9
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The diagrams show water waves in three different situations. The arrows show the direction of",
-   "text": "The diagrams show water waves in three different situations. The arrows show the direction of"
+   "html": "The diagrams show water waves in three different situations. The arrows show the direction of travel of the waves.",
+   "text": "The diagrams show water waves in three different situations. The arrows show the direction of travel of the waves."
   },
   {
    "type": "figure",
@@ -131,40 +132,30 @@
    "text": "What does each diagram show?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "1",
-     "2",
-     "3"
-    ],
-    [
-     "<b>A</b>",
-     "diffraction",
-     "reflection",
-     "refraction"
-    ],
-    [
-     "<b>B</b>",
-     "diffraction",
-     "refraction",
-     "reflection"
-    ],
-    [
-     "<b>C</b>",
-     "reflection",
-     "diffraction",
-     "refraction"
-    ],
-    [
-     "<b>D</b>",
-     "reflection",
-     "refraction",
-     "diffraction"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_11_q22_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "diffraction reflection refraction"
+    },
+    {
+     "label": "B",
+     "html": "diffraction refraction reflection"
+    },
+    {
+     "label": "C",
+     "html": "reflection diffraction refraction"
+    },
+    {
+     "label": "D",
+     "html": "reflection refraction diffraction"
+    }
+   ]
   }
  ]
 }

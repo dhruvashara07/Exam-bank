@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    152.3,
-    93.6,
-    438.9,
-    305.5
+    152.5,
+    96.5,
+    438.0,
+    304.0
    ],
    "id": "0625_2020ON_32_q02_fig2-1",
    "part": "",
@@ -196,7 +196,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -275,24 +284,12 @@
     },
     {
      "type": "text",
-     "html": "Complete the sentences using the phrases in the box. Each phrase may be used once, more than once or not at all.",
-     "text": "Complete the sentences using the phrases in the box. Each phrase may be used once, more than once or not at all."
-    },
-    {
-     "type": "text",
-     "html": "done in releasing the first wheel nut.",
-     "text": "done in releasing the first wheel nut."
-    },
-    {
-     "type": "text",
-     "html": "power produced in releasing the first wheel nut.",
-     "text": "power produced in releasing the first wheel nut."
+     "html": "Complete the sentences using the phrases in the box. Each phrase may be used once, more than once or not at all. The work done in releasing the second wheel nut is …… the work done in releasing the first wheel nut. The power produced in releasing the second wheel nut is …… the power produced in releasing the first wheel nut.",
+     "text": "Complete the sentences using the phrases in the box. Each phrase may be used once, more than once or not at all. The work done in releasing the second wheel nut is …… the work done in releasing the first wheel nut. The power produced in releasing the second wheel nut is …… the power produced in releasing the first wheel nut."
     },
     {
      "type": "answer",
-     "kind": "answer_line",
-     "prefix": "The power produced in releasing the second wheel nut is",
-     "unit": "the"
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -318,6 +315,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

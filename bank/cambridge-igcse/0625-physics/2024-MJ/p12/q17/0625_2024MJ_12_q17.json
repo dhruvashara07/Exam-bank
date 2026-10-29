@@ -32,9 +32,9 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    341.8,
-    350.3,
+    67.5,
+    341.5,
+    350.5,
     481.5
    ],
    "id": "0625_2024MJ_12_q17_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p12/q17/figures/0625_2024MJ_12_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p12/q17/figures/0625_2024MJ_12_q17_figA",
     "url": null,
-    "kb": 30.6
+    "kb": 30.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "How does the direction of vibration of a longitudinal wave compare to its direction of propagation and which wave example is longitudinal?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "direction of vibration compared to direction of propagation",
-     "wave example"
-    ],
-    [
-     "<b>A</b>",
-     "at right angles",
-     "ultrasound waves"
-    ],
-    [
-     "<b>B</b>",
-     "at right angles",
-     "ultraviolet waves"
-    ],
-    [
-     "<b>C</b>",
-     "parallel",
-     "ultrasound waves"
-    ],
-    [
-     "<b>D</b>",
-     "parallel",
-     "ultraviolet waves"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_12_q17_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "at right angles ultrasound waves"
+    },
+    {
+     "label": "B",
+     "html": "at right angles ultraviolet waves"
+    },
+    {
+     "label": "C",
+     "html": "parallel ultrasound waves"
+    },
+    {
+     "label": "D",
+     "html": "parallel ultraviolet waves"
+    }
+   ]
   }
  ]
 }

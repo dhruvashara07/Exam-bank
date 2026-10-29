@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    73.6,
+    47.2,
+    86.8,
     547.7,
-    340.1
+    182.5
    ],
    "id": "0625_2024ON_13_q17_figA",
    "caption": null,
@@ -45,7 +45,26 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p13/q17/figures/0625_2024ON_13_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p13/q17/figures/0625_2024ON_13_q17_figA",
     "url": null,
-    "kb": 39.1
+    "kb": 17.3
+   }
+  },
+  {
+   "page": 7,
+   "bbox": [
+    67.5,
+    214.5,
+    322.0,
+    340.5
+   ],
+   "id": "0625_2024ON_13_q17_figB",
+   "caption": null,
+   "part": "",
+   "alt": "",
+   "svg": {
+    "file": "bank/cambridge-igcse/0625-physics/2024-ON/p13/q17/figures/0625_2024ON_13_q17_figB.svg",
+    "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p13/q17/figures/0625_2024ON_13_q17_figB",
+    "url": null,
+    "kb": 19.6
    }
   }
  ],
@@ -90,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +122,35 @@
    "caption": null
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "wave with the",
-     "wave with the"
-    ],
-    [
-     "",
-     "largest amplitude",
-     "largest wavelength"
-    ],
-    [
-     "<b>A</b>",
-     "X",
-     "X"
-    ],
-    [
-     "<b>B</b>",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>C</b>",
-     "Y",
-     "X"
-    ],
-    [
-     "<b>D</b>",
-     "Y",
-     "Y"
-    ]
-   ],
-   "options": true
+   "type": "text",
+   "html": "Which row is correct?",
+   "text": "Which row is correct?"
+  },
+  {
+   "type": "figure",
+   "id": "0625_2024ON_13_q17_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "X X"
+    },
+    {
+     "label": "B",
+     "html": "X Y"
+    },
+    {
+     "label": "C",
+     "html": "Y X"
+    },
+    {
+     "label": "D",
+     "html": "Y Y"
+    }
+   ]
   }
  ]
 }

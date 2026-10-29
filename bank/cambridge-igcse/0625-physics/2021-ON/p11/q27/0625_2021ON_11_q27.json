@@ -32,9 +32,9 @@
   {
    "page": 12,
    "bbox": [
-    160.8,
-    301.1,
-    434.5,
+    160.0,
+    301.0,
+    435.0,
     407.1
    ],
    "id": "0625_2021ON_11_q27_figA",
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p11/q27/figures/0625_2021ON_11_q27_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p11/q27/figures/0625_2021ON_11_q27_figA",
     "url": null,
-    "kb": 8.8
+    "kb": 8.7
    }
   },
   {
    "page": 12,
    "bbox": [
-    67.7,
-    440.5,
+    67.5,
+    440.0,
     293.0,
-    551.8
+    552.0
    ],
    "id": "0625_2021ON_11_q27_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p11/q27/figures/0625_2021ON_11_q27_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p11/q27/figures/0625_2021ON_11_q27_figB",
     "url": null,
-    "kb": 22.6
+    "kb": 22.5
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Which charge flows in circuit 2 and in which direction?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "charge",
-     "direction"
-    ],
-    [
-     "<b>A</b>",
-     "negative",
-     "anticlockwise"
-    ],
-    [
-     "<b>B</b>",
-     "negative",
-     "clockwise"
-    ],
-    [
-     "<b>C</b>",
-     "positive",
-     "anticlockwise"
-    ],
-    [
-     "<b>D</b>",
-     "positive",
-     "clockwise"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_11_q27_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "negative anticlockwise"
+    },
+    {
+     "label": "B",
+     "html": "negative clockwise"
+    },
+    {
+     "label": "C",
+     "html": "positive anticlockwise"
+    },
+    {
+     "label": "D",
+     "html": "positive clockwise"
+    }
+   ]
   }
  ]
 }

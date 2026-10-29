@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    240.3,
-    110.6,
-    354.3,
-    201.4
+    239.5,
+    110.0,
+    355.0,
+    202.0
    ],
    "id": "0625_2024ON_11_q13_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p11/q13/figures/0625_2024ON_11_q13_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p11/q13/figures/0625_2024ON_11_q13_figA",
     "url": null,
-    "kb": 7.5
+    "kb": 7.3
    }
   },
   {
    "page": 6,
    "bbox": [
-    67.7,
-    271.9,
+    67.5,
+    271.5,
     367.5,
-    397.3
+    397.5
    ],
    "id": "0625_2024ON_11_q13_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,40 +137,30 @@
    "text": "What happens to the average speed of the gas particles and what happens to the number of collisions by the gas particles with the walls of the container?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "average speed",
-     "the number of collisions with"
-    ],
-    [
-     "",
-     "of gas particles",
-     "the walls of the container"
-    ],
-    [
-     "<b>A</b>",
-     "increases",
-     "less frequent collisions"
-    ],
-    [
-     "<b>B</b>",
-     "increases",
-     "more frequent collisions"
-    ],
-    [
-     "<b>C</b>",
-     "stays the same",
-     "less frequent collisions"
-    ],
-    [
-     "<b>D</b>",
-     "stays the same",
-     "more frequent collisions"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_11_q13_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "increases less frequent collisions"
+    },
+    {
+     "label": "B",
+     "html": "increases more frequent collisions"
+    },
+    {
+     "label": "C",
+     "html": "stays the same less frequent collisions"
+    },
+    {
+     "label": "D",
+     "html": "stays the same more frequent collisions"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    248.7,
-    97.9,
-    346.3,
-    223.2
+    248.0,
+    97.5,
+    347.0,
+    223.5
    ],
    "id": "0625_2019MJ_13_q17_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    267.9,
-    336.4,
-    393.4
+    67.5,
+    267.5,
+    336.5,
+    393.5
    ],
    "id": "0625_2019MJ_13_q17_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which thermal capacity and which night-time temperature increase will cause the most energy to be stored by the block?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "thermal capacity",
-     "night-time"
-    ],
-    [
-     "",
-     "of block",
-     "temperature increase"
-    ],
-    [
-     "<b>A</b>",
-     "large",
-     "large"
-    ],
-    [
-     "<b>B</b>",
-     "large",
-     "small"
-    ],
-    [
-     "<b>C</b>",
-     "small",
-     "large"
-    ],
-    [
-     "<b>D</b>",
-     "small",
-     "small"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019MJ_13_q17_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "large large"
+    },
+    {
+     "label": "B",
+     "html": "large small"
+    },
+    {
+     "label": "C",
+     "html": "small large"
+    },
+    {
+     "label": "D",
+     "html": "small small"
+    }
+   ]
   }
  ]
 }

@@ -32,8 +32,8 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    397.0,
+    67.5,
+    396.5,
     413.0,
     522.5
    ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row correctly describes the arrangement and the motion of particles in a solid?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "arrangement of particles",
-     "motion of particles"
-    ],
-    [
-     "<b>A</b>",
-     "far apart",
-     "moving randomly from place to place"
-    ],
-    [
-     "<b>B</b>",
-     "far apart",
-     "vibrating about one position"
-    ],
-    [
-     "<b>C</b>",
-     "tightly packed",
-     "moving randomly from place to place"
-    ],
-    [
-     "<b>D</b>",
-     "tightly packed",
-     "vibrating about one position"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_11_q13_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "far apart moving randomly from place to place"
+    },
+    {
+     "label": "B",
+     "html": "far apart vibrating about one position"
+    },
+    {
+     "label": "C",
+     "html": "tightly packed moving randomly from place to place"
+    },
+    {
+     "label": "D",
+     "html": "tightly packed vibrating about one position"
+    }
+   ]
   }
  ]
 }

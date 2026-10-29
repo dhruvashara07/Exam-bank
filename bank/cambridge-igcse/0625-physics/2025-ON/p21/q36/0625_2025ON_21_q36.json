@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
-    597.7,
-    380.4,
-    709.1
+    67.5,
+    597.5,
+    380.5,
+    709.0
    ],
    "id": "0625_2025ON_21_q36_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p21/q36/figures/0625_2025ON_21_q36_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p21/q36/figures/0625_2025ON_21_q36_figA",
     "url": null,
-    "kb": 25.3
+    "kb": 25.2
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which properties must a radioisotope have for its radiation to make it suitable to kill bacteria in food?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "half-life",
-     "type of radiation emitted"
-    ],
-    [
-     "<b>A</b>",
-     "less than one minute",
-     "γ only"
-    ],
-    [
-     "<b>B</b>",
-     "several hours",
-     "α only"
-    ],
-    [
-     "<b>C</b>",
-     "several hours",
-     "γ only"
-    ],
-    [
-     "<b>D</b>",
-     "several thousand years",
-     "α only"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025ON_21_q36_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "less than one minute γ only"
+    },
+    {
+     "label": "B",
+     "html": "several hours α only"
+    },
+    {
+     "label": "C",
+     "html": "several hours γ only"
+    },
+    {
+     "label": "D",
+     "html": "several thousand years α only"
+    }
+   ]
   }
  ]
 }

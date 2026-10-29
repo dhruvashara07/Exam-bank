@@ -33,9 +33,9 @@
    "page": 15,
    "bbox": [
     157.7,
-    85.1,
+    85.0,
     437.4,
-    216.1
+    216.5
    ],
    "id": "0625_2016ON_11_q33_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p11/q33/figures/0625_2016ON_11_q33_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p11/q33/figures/0625_2016ON_11_q33_figA",
     "url": null,
-    "kb": 12.7
+    "kb": 12.6
    }
   },
   {
    "page": 15,
    "bbox": [
-    69.4,
-    273.9,
-    293.9,
-    399.4
+    69.0,
+    273.5,
+    294.0,
+    399.5
    ],
    "id": "0625_2016ON_11_q33_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p11/q33/figures/0625_2016ON_11_q33_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p11/q33/figures/0625_2016ON_11_q33_figB",
     "url": null,
-    "kb": 16.3
+    "kb": 16.1
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -122,8 +123,8 @@
   },
   {
    "type": "text",
-   "html": "The current in ammeter 1 is 0.30A.",
-   "text": "The current in ammeter 1 is 0.30A."
+   "html": "The current in ammeter 1 is 0.30 A.",
+   "text": "The current in ammeter 1 is 0.30 A."
   },
   {
    "type": "text",
@@ -131,40 +132,30 @@
    "text": "Which row gives possible values for the currents in ammeters 2 and 3?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "ammeter 2",
-     "ammeter 3"
-    ],
-    [
-     "",
-     "/A",
-     "/A"
-    ],
-    [
-     "<b>A</b>",
-     "0.15",
-     "0.00"
-    ],
-    [
-     "<b>B</b>",
-     "0.15",
-     "0.30"
-    ],
-    [
-     "<b>C</b>",
-     "0.30",
-     "0.00"
-    ],
-    [
-     "<b>D</b>",
-     "0.30",
-     "0.30"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_11_q33_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0.15 0.00"
+    },
+    {
+     "label": "B",
+     "html": "0.15 0.30"
+    },
+    {
+     "label": "C",
+     "html": "0.30 0.00"
+    },
+    {
+     "label": "D",
+     "html": "0.30 0.30"
+    }
+   ]
   }
  ]
 }

@@ -32,8 +32,8 @@
   {
    "page": 14,
    "bbox": [
-    67.9,
-    224.1,
+    169.3,
+    251.4,
     426.1,
     371.7
    ],
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-ON/p22/q34/figures/0625_2018ON_22_q34_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-ON/p22/q34/figures/0625_2018ON_22_q34_figA",
     "url": null,
-    "kb": 25.1
+    "kb": 15.9
    }
   },
   {
    "page": 14,
    "bbox": [
-    67.4,
-    417.7,
-    278.9,
-    543.2
+    67.0,
+    417.5,
+    279.0,
+    543.5
    ],
    "id": "0625_2018ON_22_q34_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-ON/p22/q34/figures/0625_2018ON_22_q34_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-ON/p22/q34/figures/0625_2018ON_22_q34_figB",
     "url": null,
-    "kb": 16.9
+    "kb": 16.8
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "Either a fuse or a circuit-breaker can be used to protect electrical cables from large currents that",
-   "text": "Either a fuse or a circuit-breaker can be used to protect electrical cables from large currents that"
+   "html": "Either a fuse or a circuit-breaker can be used to protect electrical cables from large currents that could cause overheating.",
+   "text": "Either a fuse or a circuit-breaker can be used to protect electrical cables from large currents that could cause overheating."
   },
   {
    "type": "figure",
@@ -121,90 +122,35 @@
    "caption": null
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "electrical",
-     "",
-     ""
-    ],
-    [
-     "Y",
-     "",
-     ""
-    ],
-    [
-     "supply",
-     "",
-     ""
-    ],
-    [
-     "electrical",
-     "",
-     ""
-    ],
-    [
-     "Y",
-     "",
-     ""
-    ],
-    [
-     "supply",
-     "",
-     ""
-    ],
-    [
-     "",
-     "",
-     ""
-    ],
-    [
-     "",
-     "",
-     ""
-    ]
-   ]
-  },
-  {
    "type": "text",
    "html": "When a fuse is used, where should it be connected, and when a circuit-breaker is used, where should it be connected?",
    "text": "When a fuse is used, where should it be connected, and when a circuit-breaker is used, where should it be connected?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "position",
-     "position of"
-    ],
-    [
-     "",
-     "of fuse",
-     "circuit-breaker"
-    ],
-    [
-     "<b>A</b>",
-     "X",
-     "X"
-    ],
-    [
-     "<b>B</b>",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>C</b>",
-     "Y",
-     "X"
-    ],
-    [
-     "<b>D</b>",
-     "Y",
-     "Y"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018ON_22_q34_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "X X"
+    },
+    {
+     "label": "B",
+     "html": "X Y"
+    },
+    {
+     "label": "C",
+     "html": "Y X"
+    },
+    {
+     "label": "D",
+     "html": "Y Y"
+    }
+   ]
   }
  ]
 }

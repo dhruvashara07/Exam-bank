@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 10,
    "bbox": [
-    168.7,
-    150.5,
-    426.6,
-    363.2
+    168.0,
+    151.5,
+    427.0,
+    363.5
    ],
    "id": "0625_2025MJ_53_q03_fig3-1",
    "part": "",
@@ -53,9 +53,9 @@
    "page": 10,
    "bbox": [
     134.0,
-    502.2,
-    461.3,
-    617.7
+    503.0,
+    461.5,
+    618.0
    ],
    "id": "0625_2025MJ_53_q03ai_table3-1",
    "part": "(a)(i)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 3.2",
    "page": 11,
    "bbox": [
-    147.4,
-    126.5,
-    447.9,
-    204.3
+    148.0,
+    127.5,
+    447.5,
+    204.5
    ],
    "id": "0625_2025MJ_53_q03b_fig3-2",
    "part": "(b)",
@@ -90,10 +90,10 @@
    "caption": "Fig. 3.3",
    "page": 11,
    "bbox": [
-    147.4,
-    303.0,
-    447.9,
-    380.7
+    148.0,
+    304.0,
+    447.5,
+    381.0
    ],
    "id": "0625_2025MJ_53_q03c_fig3-3",
    "part": "(c)",
@@ -198,33 +198,9 @@
        "text": "Open the switch."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "",
-         "V/V",
-         "I/A",
-         "R/Ω"
-        ],
-        [
-         "circuit A",
-         "",
-         "",
-         ""
-        ],
-        [
-         "circuit B",
-         "",
-         "",
-         ""
-        ],
-        [
-         "circuit C",
-         "",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2025MJ_53_q03ai_table3-1",
+       "caption": "Table 3.1"
       },
       {
        "type": "marks",
@@ -567,9 +543,21 @@
        "text": "RA = 2R."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "RA =",
+       "unit": "Ω"
+      },
+      {
        "type": "text",
        "html": "Record resistance R<sub>B</sub>. R<sub>B</sub> is equal to the value of R from circuit B.",
        "text": "Record resistance RB. RB is equal to the value of R from circuit B."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "RB =",
+       "unit": "Ω"
       },
       {
        "type": "text",
@@ -664,7 +652,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -735,13 +732,13 @@
    "content": [
     {
      "type": "text",
-     "html": "Briefly explain why resistor R<sub>P</sub>, shown in Fig. 3.1, must remain in place throughout the experiment.",
-     "text": "Briefly explain why resistor RP, shown in Fig. 3.1, must remain in place throughout the experiment."
+     "html": "Briefly explain why resistor R<sub>P</sub> , shown in Fig. 3.1, must remain in place throughout the experiment.",
+     "text": "Briefly explain why resistor RP , shown in Fig. 3.1, must remain in place throughout the experiment."
     },
     {
      "type": "text",
-     "html": "R<sub>P</sub> has a resistance of 3Ω. Use your values in Table 3.1 to support your answer.",
-     "text": "RP has a resistance of 3Ω. Use your values in Table 3.1 to support your answer."
+     "html": "R<sub>P</sub> has a resistance of 3 Ω. Use your values in Table 3.1 to support your answer.",
+     "text": "RP has a resistance of 3 Ω. Use your values in Table 3.1 to support your answer."
     },
     {
      "type": "answer",
@@ -850,6 +847,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

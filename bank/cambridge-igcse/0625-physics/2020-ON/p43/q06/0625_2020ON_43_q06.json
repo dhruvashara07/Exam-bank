@@ -82,7 +82,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "rarefaction",
+     "prefix": "compression"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "rarefaction"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -262,7 +271,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "2. the wavelength of the sound"
+       "prefix": "1. the speed of the sound"
+      },
+      {
+       "type": "text",
+       "html": "2. the wavelength of the sound ……",
+       "text": "2. the wavelength of the sound ……"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -297,5 +315,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

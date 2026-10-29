@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    84.7,
+    67.5,
+    84.5,
     403.0,
-    223.9
+    224.0
    ],
    "id": "0625_2019ON_22_q26_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p22/q26/figures/0625_2019ON_22_q26_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p22/q26/figures/0625_2019ON_22_q26_figA",
     "url": null,
-    "kb": 25.6
+    "kb": 25.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,52 +98,30 @@
    "text": "Which row gives a possible set of values for the speed of sound in ice, in water and in steam?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "speed of sound",
-     "speed of sound",
-     "speed of sound"
-    ],
-    [
-     "",
-     "in ice",
-     "in water",
-     "in steam"
-    ],
-    [
-     "",
-     "m/s",
-     "m/s",
-     "m/s"
-    ],
-    [
-     "<b>A</b>",
-     "500",
-     "1500",
-     "4000"
-    ],
-    [
-     "<b>B</b>",
-     "1500",
-     "4000",
-     "500"
-    ],
-    [
-     "<b>C</b>",
-     "4000",
-     "500",
-     "1500"
-    ],
-    [
-     "<b>D</b>",
-     "4000",
-     "1500",
-     "500"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019ON_22_q26_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "500 1500 4000"
+    },
+    {
+     "label": "B",
+     "html": "1500 4000 500"
+    },
+    {
+     "label": "C",
+     "html": "4000 500 1500"
+    },
+    {
+     "label": "D",
+     "html": "4000 1500 500"
+    }
+   ]
   }
  ]
 }

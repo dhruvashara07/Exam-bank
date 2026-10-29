@@ -32,7 +32,7 @@
   {
    "page": 3,
    "bbox": [
-    185.8,
+    185.5,
     384.8,
     409.0,
     509.5
@@ -90,31 +90,17 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A wheelbarrow has a weight <i>W</i> of 140N.",
-   "text": "A wheelbarrow has a weight W of 140N."
+   "html": "A wheelbarrow has a weight <i>W</i> of 140 N.",
+   "text": "A wheelbarrow has a weight W of 140 N."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "0.8m",
-     ""
-    ],
-    [
-     "",
-     "<i>W</i>",
-     ""
-    ],
-    [
-     "",
-     "1.4m",
-     ""
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2022ON_21_q05_figA",
+   "caption": null
   },
   {
    "type": "text",
@@ -126,19 +112,19 @@
    "options": [
     {
      "label": "A",
-     "html": "60N"
+     "html": "60 N"
     },
     {
      "label": "B",
-     "html": "80N"
+     "html": "80 N"
     },
     {
      "label": "C",
-     "html": "140N"
+     "html": "140 N"
     },
     {
      "label": "D",
-     "html": "245N"
+     "html": "245 N"
     }
    ]
   }

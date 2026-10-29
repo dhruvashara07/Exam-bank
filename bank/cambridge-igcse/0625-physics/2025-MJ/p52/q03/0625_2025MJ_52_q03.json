@@ -34,9 +34,9 @@
    "page": 10,
    "bbox": [
     103.0,
-    115.0,
-    507.9,
-    303.8
+    116.0,
+    493.0,
+    304.0
    ],
    "id": "0625_2025MJ_52_q03_fig3-1",
    "part": "",
@@ -121,7 +121,7 @@
        "type": "list",
        "items": [
         "Switch on the lamp.",
-        "Place the screen a distance D = 80.0cm from the illuminated object (the triangular hole in the card).",
+        "Place the screen a distance D = 80.0 cm from the illuminated object (the triangular hole in the card).",
         "Place the lens close to the illuminated object.",
         "Move the lens away from the illuminated object until a magnified, sharp image of the illuminated object is formed on the screen.",
         "Do <b>not</b> move the illuminated object, the lens or the screen after this image position is found."
@@ -129,8 +129,8 @@
       },
       {
        "type": "text",
-       "html": "Measure, to the nearest 0.1cm, the object distance x<sub>1</sub> from the centre of the lens to the illuminated object.",
-       "text": "Measure, to the nearest 0.1cm, the object distance x1 from the centre of the lens to the illuminated object."
+       "html": "Measure, to the nearest 0.1 cm, the object distance x<sub>1</sub> from the centre of the lens to the illuminated object.",
+       "text": "Measure, to the nearest 0.1 cm, the object distance x1 from the centre of the lens to the illuminated object."
       },
       {
        "type": "answer",
@@ -208,8 +208,8 @@
       },
       {
        "type": "text",
-       "html": "Measure, to the nearest 0.1cm, the object distance y<sub>1</sub> from the centre of the lens to the illuminated object.",
-       "text": "Measure, to the nearest 0.1cm, the object distance y1 from the centre of the lens to the illuminated object."
+       "html": "Measure, to the nearest 0.1 cm, the object distance y<sub>1</sub> from the centre of the lens to the illuminated object.",
+       "text": "Measure, to the nearest 0.1 cm, the object distance y1 from the centre of the lens to the illuminated object."
       },
       {
        "type": "answer",
@@ -365,8 +365,8 @@
     },
     {
      "type": "text",
-     "html": "<sup>2</sup><sup>2</sup> f = \\(\\frac{(D–d)}{4D}\\).",
-     "text": "22 f = ((D–d))/(4D)."
+     "html": "<sup>2</sup><sup>2</sup> f = \\(\\frac{(D – d )}{4D}\\) .",
+     "text": "22 f = ((D–d))/(4D) ."
     },
     {
      "type": "text",
@@ -460,13 +460,25 @@
       },
       {
        "type": "text",
-       "html": "distance D = 100.0cm.",
-       "text": "distance D = 100.0cm."
+       "html": "distance D = 100.0 cm.",
+       "text": "distance D = 100.0 cm."
       },
       {
        "type": "text",
        "html": "Record your values of x<sub>2</sub>, y<sub>2</sub> and d.",
        "text": "Record your values of x2, y2 and d."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "x2 =",
+       "unit": "cm"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "y2 =",
+       "unit": "cm"
       },
       {
        "type": "answer",
@@ -633,7 +645,11 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "statement",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -825,6 +841,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

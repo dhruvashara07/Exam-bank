@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 10,
    "bbox": [
-    158.5,
-    111.5,
-    436.9,
-    385.6
+    158.0,
+    112.5,
+    437.5,
+    386.0
    ],
    "id": "0625_2025MJ_63_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 11,
    "bbox": [
-    170.4,
-    60.8,
-    424.9,
-    216.1
+    170.5,
+    61.5,
+    425.0,
+    216.5
    ],
    "id": "0625_2025MJ_63_q03bi_table3-1",
    "part": "(b)(i)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 3.4",
    "page": 11,
    "bbox": [
-    171.7,
-    261.2,
-    423.6,
-    410.0
+    172.0,
+    262.0,
+    423.0,
+    410.5
    ],
    "id": "0625_2025MJ_63_q03bi_fig3-4",
    "part": "(b)(i)",
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p63/q03/figures/0625_2025MJ_63_q03bi_fig3-4.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p63/q03/figures/0625_2025MJ_63_q03bi_fig3-4",
     "url": null,
-    "kb": 17.0
+    "kb": 16.9
    }
   }
  ],
@@ -281,33 +281,9 @@
        "value": 2
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "",
-         "V/V",
-         "I/A",
-         "R/Ω"
-        ],
-        [
-         "circuit A",
-         "",
-         "",
-         ""
-        ],
-        [
-         "circuit B",
-         "1.4",
-         "0.46",
-         ""
-        ],
-        [
-         "circuit C",
-         "1.8",
-         "0.29",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2025MJ_63_q03bi_table3-1",
+       "caption": "Table 3.1"
       },
       {
        "type": "text",
@@ -385,8 +361,8 @@
       },
       {
        "type": "text",
-       "html": "R = \\(\\frac{V}{I}\\).",
-       "text": "R = (V)/(I)."
+       "html": "R = \\(\\frac{V}{I}\\) .",
+       "text": "R = (V)/(I) ."
       },
       {
        "type": "marks",
@@ -509,9 +485,21 @@
        "text": "RA = 2R."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "RA =",
+       "unit": "Ω"
+      },
+      {
        "type": "text",
        "html": "Record resistance R<sub>B</sub>. R<sub>B</sub> is equal to the value of R from circuit B.",
        "text": "Record resistance RB. RB is equal to the value of R from circuit B."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "RB =",
+       "unit": "Ω"
       },
       {
        "type": "text",
@@ -520,8 +508,8 @@
       },
       {
        "type": "text",
-       "html": "R<sub>C</sub> = \\(\\frac{R}{2}\\).",
-       "text": "RC = (R)/(2)."
+       "html": "R<sub>C</sub> = \\(\\frac{R}{2}\\) .",
+       "text": "RC = (R)/(2) ."
       },
       {
        "type": "answer",
@@ -606,7 +594,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -677,18 +674,18 @@
    "content": [
     {
      "type": "text",
-     "html": "The circuits use a 3V power supply.",
-     "text": "The circuits use a 3V power supply."
+     "html": "The circuits use a 3 V power supply.",
+     "text": "The circuits use a 3 V power supply."
     },
     {
      "type": "text",
-     "html": "Briefly explain why resistor R<sub>P</sub>, shown in Fig. 3.1, must remain in place throughout the experiment.",
-     "text": "Briefly explain why resistor RP, shown in Fig. 3.1, must remain in place throughout the experiment."
+     "html": "Briefly explain why resistor R<sub>P</sub> , shown in Fig. 3.1, must remain in place throughout the experiment.",
+     "text": "Briefly explain why resistor RP , shown in Fig. 3.1, must remain in place throughout the experiment."
     },
     {
      "type": "text",
-     "html": "R<sub>P</sub> has a resistance of 4.0Ω. Use Fig. 3.3 and the values in Table 3.1 to support your answer.",
-     "text": "RP has a resistance of 4.0Ω. Use Fig. 3.3 and the values in Table 3.1 to support your answer."
+     "html": "R<sub>P</sub> has a resistance of 4.0 Ω. Use Fig. 3.3 and the values in Table 3.1 to support your answer.",
+     "text": "RP has a resistance of 4.0 Ω. Use Fig. 3.3 and the values in Table 3.1 to support your answer."
     },
     {
      "type": "answer",
@@ -905,6 +902,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

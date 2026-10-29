@@ -32,10 +32,10 @@
   {
    "page": 15,
    "bbox": [
-    223.2,
-    391.9,
-    371.4,
-    510.6
+    222.5,
+    392.0,
+    372.0,
+    511.0
    ],
    "id": "0625_2021MJ_13_q33_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p13/q33/figures/0625_2021MJ_13_q33_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p13/q33/figures/0625_2021MJ_13_q33_figA",
     "url": null,
-    "kb": 5.9
+    "kb": 5.8
    }
   },
   {
    "page": 15,
    "bbox": [
-    67.7,
-    555.7,
-    288.8,
-    680.8
+    67.5,
+    555.5,
+    289.0,
+    681.0
    ],
    "id": "0625_2021MJ_13_q33_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p13/q33/figures/0625_2021MJ_13_q33_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p13/q33/figures/0625_2021MJ_13_q33_figB",
     "url": null,
-    "kb": 22.7
+    "kb": 22.5
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "What happens to the readings on the voltmeter and on the ammeter when the temperature of the thermistor increases?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "voltmeter",
-     "ammeter"
-    ],
-    [
-     "",
-     "reading",
-     "reading"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_13_q33_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

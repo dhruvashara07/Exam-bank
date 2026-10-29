@@ -32,9 +32,9 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
+    67.5,
     540.0,
-    303.8,
+    304.0,
     665.5
    ],
    "id": "0625_2021MJ_13_q05_figA",
@@ -90,47 +90,43 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The table shows the weight of a 15.0kg mass placed on different planets.",
-   "text": "The table shows the weight of a 15.0kg mass placed on different planets."
+   "html": "The table shows the weight of a 15.0 kg mass placed on different planets.",
+   "text": "The table shows the weight of a 15.0 kg mass placed on different planets."
   },
   {
    "type": "text",
-   "html": "Which planet has a gravitational field strength of 11.1N/kg?",
-   "text": "Which planet has a gravitational field strength of 11.1N/kg?"
+   "html": "Which planet has a gravitational field strength of 11.1 N / kg?",
+   "text": "Which planet has a gravitational field strength of 11.1 N / kg?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "planet",
-     "weight of 15.0kg mass/N"
-    ],
-    [
-     "<b>A</b>",
-     "Jupiter",
-     "389"
-    ],
-    [
-     "<b>B</b>",
-     "Saturn",
-     "167"
-    ],
-    [
-     "<b>C</b>",
-     "Uranus",
-     "160"
-    ],
-    [
-     "<b>D</b>",
-     "Neptune",
-     "211"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_13_q05_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "Jupiter 389"
+    },
+    {
+     "label": "B",
+     "html": "Saturn 167"
+    },
+    {
+     "label": "C",
+     "html": "Uranus 160"
+    },
+    {
+     "label": "D",
+     "html": "Neptune 211"
+    }
+   ]
   }
  ]
 }

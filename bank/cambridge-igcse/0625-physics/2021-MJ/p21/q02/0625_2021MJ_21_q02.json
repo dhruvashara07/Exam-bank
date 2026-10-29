@@ -32,10 +32,10 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
-    317.8,
-    252.1,
-    429.1
+    67.5,
+    317.5,
+    252.5,
+    429.5
    ],
    "id": "0625_2021MJ_21_q02_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p21/q02/figures/0625_2021MJ_21_q02_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p21/q02/figures/0625_2021MJ_21_q02_figA",
     "url": null,
-    "kb": 17.6
+    "kb": 17.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row describes speed and velocity?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "speed",
-     "velocity"
-    ],
-    [
-     "<b>A</b>",
-     "scalar",
-     "scalar"
-    ],
-    [
-     "<b>B</b>",
-     "scalar",
-     "vector"
-    ],
-    [
-     "<b>C</b>",
-     "vector",
-     "scalar"
-    ],
-    [
-     "<b>D</b>",
-     "vector",
-     "vector"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_21_q02_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "scalar scalar"
+    },
+    {
+     "label": "B",
+     "html": "scalar vector"
+    },
+    {
+     "label": "C",
+     "html": "vector scalar"
+    },
+    {
+     "label": "D",
+     "html": "vector vector"
+    }
+   ]
   }
  ]
 }

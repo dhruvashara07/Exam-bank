@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    180.2,
-    283.4,
-    427.7,
-    417.3
+    180.0,
+    301.0,
+    414.5,
+    416.0
    ],
    "id": "0625_2017ON_13_q15_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p13/q15/figures/0625_2017ON_13_q15_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p13/q15/figures/0625_2017ON_13_q15_figA",
     "url": null,
-    "kb": 199.7
+    "kb": 197.0
    }
   },
   {
    "page": 8,
    "bbox": [
-    67.7,
-    447.8,
-    421.1,
-    559.1
+    67.5,
+    447.5,
+    421.0,
+    559.5
    ],
    "id": "0625_2017ON_13_q15_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p13/q15/figures/0625_2017ON_13_q15_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p13/q15/figures/0625_2017ON_13_q15_figB",
     "url": null,
-    "kb": 45.9
+    "kb": 45.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "How does the air pressure in the toy change and why?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "pressure",
-     "reason"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "air molecules move more slowly"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "air molecules strike the rubber less frequently"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "air molecules move more quickly"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "air molecules strike the rubber more frequently"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017ON_13_q15_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases air molecules move more slowly"
+    },
+    {
+     "label": "B",
+     "html": "decreases air molecules strike the rubber less frequently"
+    },
+    {
+     "label": "C",
+     "html": "increases air molecules move more quickly"
+    },
+    {
+     "label": "D",
+     "html": "increases air molecules strike the rubber more frequently"
+    }
+   ]
   }
  ]
 }

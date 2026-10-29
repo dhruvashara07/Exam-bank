@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    495.4,
-    535.1,
-    606.8
+    67.5,
+    495.0,
+    535.5,
+    607.0
    ],
    "id": "0625_2023MJ_11_q34_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p11/q34/figures/0625_2023MJ_11_q34_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p11/q34/figures/0625_2023MJ_11_q34_figA",
     "url": null,
-    "kb": 37.5
+    "kb": 37.3
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "How are positive and negative ions formed from atoms?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "positive ion",
-     "negative ion"
-    ],
-    [
-     "<b>A</b>",
-     "add positive charge to the nucleus",
-     "add an electron to the atom"
-    ],
-    [
-     "<b>B</b>",
-     "add positive charge to the nucleus",
-     "remove positive charge from the nucleus"
-    ],
-    [
-     "<b>C</b>",
-     "remove an electron from the atom",
-     "add an electron to the atom"
-    ],
-    [
-     "<b>D</b>",
-     "remove an electron from the atom",
-     "remove positive charge from the nucleus"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_11_q34_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "add positive charge to the nucleus add an electron to the atom"
+    },
+    {
+     "label": "B",
+     "html": "add positive charge to the nucleus remove positive charge from the nucleus"
+    },
+    {
+     "label": "C",
+     "html": "remove an electron from the atom add an electron to the atom"
+    },
+    {
+     "label": "D",
+     "html": "remove an electron from the atom remove positive charge from the nucleus"
+    }
+   ]
   }
  ]
 }

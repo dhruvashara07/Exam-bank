@@ -32,10 +32,10 @@
   {
    "page": 2,
    "bbox": [
-    199.6,
-    110.5,
-    395.1,
-    262.4
+    199.5,
+    110.0,
+    396.0,
+    263.0
    ],
    "id": "0625_2024MJ_22_q01_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p22/q01/figures/0625_2024MJ_22_q01_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p22/q01/figures/0625_2024MJ_22_q01_figA",
     "url": null,
-    "kb": 11.7
+    "kb": 11.6
    }
   },
   {
    "page": 2,
    "bbox": [
-    67.7,
-    294.9,
-    323.8,
-    406.3
+    67.5,
+    294.5,
+    324.0,
+    406.5
    ],
    "id": "0625_2024MJ_22_q01_figB",
    "caption": null,
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A student wishes to measure accurately the volume of approximately 40cm<sup>3</sup> of water. She has two measuring cylinders, a larger one that can hold 100cm<sup>3</sup>, and a smaller one that can hold 50cm<sup>3</sup>. The water forms a meniscus where it touches the glass.",
-   "text": "A student wishes to measure accurately the volume of approximately 40cm3 of water. She has two measuring cylinders, a larger one that can hold 100cm3, and a smaller one that can hold 50cm3. The water forms a meniscus where it touches the glass."
+   "html": "A student wishes to measure accurately the volume of approximately 40 cm<sup>3</sup> of water. She has two measuring cylinders, a larger one that can hold 100 cm<sup>3</sup>, and a smaller one that can hold cm<sup>3</sup>. The water forms a meniscus where it touches the glass.",
+   "text": "A student wishes to measure accurately the volume of approximately 40 cm3 of water. She has two measuring cylinders, a larger one that can hold 100 cm3, and a smaller one that can hold cm3. The water forms a meniscus where it touches the glass."
   },
   {
    "type": "figure",
@@ -126,35 +127,30 @@
    "text": "Which cylinder and which water level does the student use to ensure an accurate result?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "cylinder",
-     "water level"
-    ],
-    [
-     "<b>A</b>",
-     "larger one",
-     "bottom of meniscus"
-    ],
-    [
-     "<b>B</b>",
-     "larger one",
-     "top of meniscus"
-    ],
-    [
-     "<b>C</b>",
-     "smaller one",
-     "bottom of meniscus"
-    ],
-    [
-     "<b>D</b>",
-     "smaller one",
-     "top of meniscus"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_22_q01_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "larger one bottom of meniscus"
+    },
+    {
+     "label": "B",
+     "html": "larger one top of meniscus"
+    },
+    {
+     "label": "C",
+     "html": "smaller one bottom of meniscus"
+    },
+    {
+     "label": "D",
+     "html": "smaller one top of meniscus"
+    }
+   ]
   }
  ]
 }

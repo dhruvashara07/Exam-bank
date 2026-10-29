@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    212.8,
-    108.9,
-    382.3,
-    301.1
+    212.0,
+    112.0,
+    383.0,
+    299.5
    ],
    "id": "0625_2021ON_62_q01a_fig1-1",
    "part": "(a)",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2",
    "page": 2,
    "bbox": [
-    240.7,
-    545.7,
-    354.5,
-    638.5
+    240.0,
+    545.0,
+    355.0,
+    637.0
    ],
    "id": "0625_2021ON_62_q01aiii_fig1-2",
    "part": "(a)(iii)",
@@ -72,9 +72,9 @@
    "page": 3,
    "bbox": [
     111.0,
-    206.6,
-    484.2,
-    357.7
+    209.5,
+    484.0,
+    356.0
    ],
    "id": "0625_2021ON_62_q01b_fig1-3",
    "part": "(b)",
@@ -187,6 +187,12 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "l =",
+       "unit": "cm"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "w =",
        "unit": "cm"
       },
@@ -262,6 +268,12 @@
        "type": "text",
        "html": "4.0",
        "text": "4.0"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "h =",
+       "unit": "cm"
       },
       {
        "type": "text",
@@ -424,7 +436,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the density ρ of the wood using the equation ρ = \\(\\frac{<i>m</i>}{<i>V</i>}\\). Give your answer to a suitable number of significant figures for this experiment and include the unit.",
+       "html": "Calculate the density ρ of the wood using the equation ρ = \\(\\frac{m}{V}\\). Give your answer to a suitable number of significant figures for this experiment and include the unit.",
        "text": "Calculate the density ρ of the wood using the equation ρ = (m)/(V). Give your answer to a suitable number of significant figures for this experiment and include the unit."
       },
       {
@@ -923,6 +935,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

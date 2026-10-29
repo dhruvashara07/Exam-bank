@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    112.6,
-    121.8,
-    483.2,
-    357.1
+    112.0,
+    125.5,
+    483.0,
+    355.5
    ],
    "id": "0625_2020FM_52_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 9,
    "bbox": [
-    213.7,
-    162.0,
-    381.6,
-    332.0
+    213.5,
+    165.5,
+    381.5,
+    332.5
    ],
    "id": "0625_2020FM_52_q03bi_table3-1",
    "part": "(b)(i)",
@@ -136,8 +136,20 @@
      "text": "Connect the crocodile clip to a length l = 100.0 cm of the resistance wire. Switch on. Measure the value of potential difference V0 and current I0 for the wire."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V0 =",
+     "unit": "V"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "I0 =",
+     "unit": "A"
+    },
+    {
      "type": "text",
-     "html": "Switch off. Calculate the resistance <i>R</i><sub>0</sub> of 100.0 cm of the wire. Use your values of <i>V</i><sub>0</sub> and <i>I</i><sub>0</sub> and the equation <i>R</i><sub>0</sub> = \\(\\frac{<i>V</i><sub>0</sub>}{<i>I</i><sub>0</sub>}\\).",
+     "html": "Switch off. Calculate the resistance <i>R</i><sub>0</sub> of 100.0 cm of the wire. Use your values of <i>V</i><sub>0</sub> and <i>I</i><sub>0</sub> and the equation <i>R</i><sub>0</sub> = \\(\\frac{V_{0}}{I_{0}}\\).",
      "text": "Switch off. Calculate the resistance R0 of 100.0 cm of the wire. Use your values of V0 and I0 and the equation R0 = (V0)/(I0)."
     },
     {
@@ -226,39 +238,9 @@
        "text": "Connect the crocodile clip to lengths l = 70.0 cm, 60.0 cm, 50.0 cm, 40.0 cm and 30.0 cm of the resistance wire in turn. For each length l measure the current I in the circuit. Record your readings in Table 3.1. Switch off."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>l</i> / cm",
-         "<i>I</i>/ A",
-         "1 1 <i>I</i> /A"
-        ],
-        [
-         "70.0",
-         "",
-         ""
-        ],
-        [
-         "60.0",
-         "",
-         ""
-        ],
-        [
-         "50.0",
-         "",
-         ""
-        ],
-        [
-         "40.0",
-         "",
-         ""
-        ],
-        [
-         "30.0",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2020FM_52_q03bi_table3-1",
+       "caption": "Table 3.1"
       },
       {
        "type": "marks",
@@ -325,7 +307,7 @@
      "content": [
       {
        "type": "text",
-       "html": "\\(\\frac{1}{<i>I</i>}\\)",
+       "html": "\\(\\frac{1}{I}\\)",
        "text": "(1)/(I)"
       },
       {
@@ -404,12 +386,12 @@
    "content": [
     {
      "type": "text",
-     "html": "/A 1",
-     "text": "/A 1"
+     "html": "/ A 1",
+     "text": "/ A 1"
     },
     {
      "type": "text",
-     "html": "Plot a graph of <i>l</i> / cm (<i>y</i>‑axis) against \\(\\frac{1}{<i>I</i>}\\) (<i>x</i>‑axis). You do <b>not</b> need to start your axes at the origin (0,0).",
+     "html": "Plot a graph of <i>l</i> / cm (<i>y</i>‑axis) against \\(\\frac{1}{I}\\) (<i>x</i>‑axis). You do <b>not</b> need to start your axes at the origin (0,0).",
      "text": "Plot a graph of l / cm (y‑axis) against (1)/(I) (x‑axis). You do not need to start your axes at the origin (0,0)."
     },
     {
@@ -566,7 +548,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the electromotive force (e.m.f.) <i>E</i> of the power supply. Use your value of <i>R</i><sub>0</sub> from <b>(a)</b> and the equation <i>E</i> = \\(\\frac{<i>G</i> × <i>R</i><sub>0</sub>}{<i>k</i>}\\), where <i>k</i> = 100 cm.",
+       "html": "Calculate the electromotive force (e.m.f.) <i>E</i> of the power supply. Use your value of <i>R</i><sub>0</sub> from <b>(a)</b> and the equation <i>E</i> = \\(\\frac{G \\times R_{0}}{k}\\), where <i>k</i> = 100 cm.",
        "text": "Calculate the electromotive force (e.m.f.) E of the power supply. Use your value of R0 from (a) and the equation E = (G × R0)/(k), where k = 100 cm."
       },
       {
@@ -650,7 +632,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -677,6 +668,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

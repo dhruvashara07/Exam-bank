@@ -32,10 +32,10 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
-    669.1,
-    314.6,
-    780.4
+    67.5,
+    669.0,
+    315.0,
+    780.5
    ],
    "id": "0625_2026MJ_21_q04_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p21/q04/figures/0625_2026MJ_21_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p21/q04/figures/0625_2026MJ_21_q04_figA",
     "url": null,
-    "kb": 24.2
+    "kb": 24.0
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -98,8 +99,8 @@
   },
   {
    "type": "text",
-   "html": "At the South Pole it is 9.86N/kg and in London it is 9.81N/kg.",
-   "text": "At the South Pole it is 9.86N/kg and in London it is 9.81N/kg."
+   "html": "At the South Pole it is 9.86 N / kg and in London it is 9.81 N / kg.",
+   "text": "At the South Pole it is 9.86 N / kg and in London it is 9.81 N / kg."
   },
   {
    "type": "text",
@@ -112,35 +113,30 @@
    "text": "How does moving the rock from the South Pole to London affect the mass and the weight of the rock?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>effect on mass</b>",
-     "<b>effect on weight</b>"
-    ],
-    [
-     "<b>A</b>",
-     "none",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "none",
-     "none"
-    ],
-    [
-     "<b>C</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "decreases",
-     "none"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_21_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "none decreases"
+    },
+    {
+     "label": "B",
+     "html": "none none"
+    },
+    {
+     "label": "C",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "D",
+     "html": "decreases none"
+    }
+   ]
   }
  ]
 }

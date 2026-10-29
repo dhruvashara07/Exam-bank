@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    128.2,
+    128.0,
     124.6,
-    466.8,
-    184.5
+    467.0,
+    169.0
    ],
    "id": "0625_2016ON_13_q20_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 11,
    "bbox": [
-    69.4,
+    69.0,
     216.5,
     308.0,
-    342.1
+    342.0
    ],
    "id": "0625_2016ON_13_q20_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p13/q20/figures/0625_2016ON_13_q20_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p13/q20/figures/0625_2016ON_13_q20_figB",
     "url": null,
-    "kb": 27.0
+    "kb": 26.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Which type of wave is produced by the stone, and in which direction does the ball move?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "type of wave",
-     "direction of movement of ball"
-    ],
-    [
-     "<b>A</b>",
-     "longitudinal",
-     "left and right"
-    ],
-    [
-     "<b>B</b>",
-     "longitudinal",
-     "up and down"
-    ],
-    [
-     "<b>C</b>",
-     "transverse",
-     "left and right"
-    ],
-    [
-     "<b>D</b>",
-     "transverse",
-     "up and down"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_13_q20_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "longitudinal left and right"
+    },
+    {
+     "label": "B",
+     "html": "longitudinal up and down"
+    },
+    {
+     "label": "C",
+     "html": "transverse left and right"
+    },
+    {
+     "label": "D",
+     "html": "transverse up and down"
+    }
+   ]
   }
  ]
 }

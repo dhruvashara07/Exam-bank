@@ -33,10 +33,10 @@
    "caption": "Figure 3.1",
    "page": 8,
    "bbox": [
-    69.3,
-    109.3,
-    539.5,
-    246.1
+    69.5,
+    110.0,
+    539.0,
+    246.5
    ],
    "id": "0625_2026MJ_51_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Figure 3.2",
    "page": 8,
    "bbox": [
-    69.3,
-    109.3,
-    539.5,
-    391.8
+    69.0,
+    110.0,
+    539.0,
+    392.0
    ],
    "id": "0625_2026MJ_51_q03_fig3-2",
    "part": "",
@@ -335,7 +335,7 @@
     {
      "type": "list",
      "items": [
-      "Place the lens a distance u = 20.0cm from the illuminated object.",
+      "Place the lens a distance u = 20.0 cm from the illuminated object.",
       "Adjust the position of the screen until a focused image is formed on the screen."
      ]
     }
@@ -405,7 +405,7 @@
     },
     {
      "type": "text",
-     "html": "m<sub>1</sub> = \\(\\frac{h<sub>1</sub>}{h}\\).",
+     "html": "m<sub>1</sub> = \\(\\frac{h_{1}}{h}\\).",
      "text": "m1 = (h1)/(h)."
     },
     {
@@ -567,13 +567,18 @@
      "text": "Measure the height h2 of the image."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "h2 ="
+    },
+    {
      "type": "text",
      "html": "Calculate the magnification m<sub>2</sub> using the equation:",
      "text": "Calculate the magnification m2 using the equation:"
     },
     {
      "type": "text",
-     "html": "m<sub>2</sub> = \\(\\frac{h<sub>2</sub>}{h}\\).",
+     "html": "m<sub>2</sub> = \\(\\frac{h_{2}}{h}\\).",
      "text": "m2 = (h2)/(h)."
     },
     {
@@ -663,7 +668,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -743,7 +757,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -770,6 +793,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

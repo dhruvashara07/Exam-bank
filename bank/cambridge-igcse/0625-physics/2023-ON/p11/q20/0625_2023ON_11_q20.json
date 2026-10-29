@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    208.3,
-    84.8,
-    386.9,
-    155.8
+    208.0,
+    84.5,
+    387.0,
+    156.5
    ],
    "id": "0625_2023ON_11_q20_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p11/q20/figures/0625_2023ON_11_q20_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p11/q20/figures/0625_2023ON_11_q20_figA",
     "url": null,
-    "kb": 7.2
+    "kb": 7.1
    }
   },
   {
    "page": 9,
    "bbox": [
-    67.7,
-    196.6,
-    246.1,
-    322.1
+    67.5,
+    196.5,
+    246.0,
+    322.5
    ],
    "id": "0625_2023ON_11_q20_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p11/q20/figures/0625_2023ON_11_q20_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p11/q20/figures/0625_2023ON_11_q20_figB",
     "url": null,
-    "kb": 17.8
+    "kb": 17.7
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row shows the angle of incidence and the angle of reflection?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "angle of",
-     "angle of"
-    ],
-    [
-     "",
-     "incidence",
-     "reflection"
-    ],
-    [
-     "<b>A</b>",
-     "P",
-     "Q"
-    ],
-    [
-     "<b>B</b>",
-     "P",
-     "S"
-    ],
-    [
-     "<b>C</b>",
-     "Q",
-     "R"
-    ],
-    [
-     "<b>D</b>",
-     "R",
-     "S"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_11_q20_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "P Q"
+    },
+    {
+     "label": "B",
+     "html": "P S"
+    },
+    {
+     "label": "C",
+     "html": "Q R"
+    },
+    {
+     "label": "D",
+     "html": "R S"
+    }
+   ]
   }
  ]
 }

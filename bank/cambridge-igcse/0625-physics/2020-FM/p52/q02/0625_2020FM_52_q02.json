@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    99.2,
-    111.3,
-    496.1,
-    302.4
+    99.0,
+    110.5,
+    495.5,
+    301.0
    ],
    "id": "0625_2020FM_52_q02_fig2-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-FM/p52/q02/figures/0625_2020FM_52_q02_fig2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-FM/p52/q02/figures/0625_2020FM_52_q02_fig2-1",
     "url": null,
-    "kb": 19.6
+    "kb": 19.5
    }
   },
   {
    "caption": "Table 2.1",
    "page": 5,
    "bbox": [
-    215.1,
-    501.6,
-    380.2,
-    760.8
+    215.0,
+    505.5,
+    380.5,
+    761.0
    ],
    "id": "0625_2020FM_52_q02b_table2-1",
    "part": "(b)",
@@ -286,53 +286,9 @@
      "text": "Complete the headings in Table 2.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>t</i> /",
-       "θ /"
-      ],
-      [
-       "0",
-       ""
-      ],
-      [
-       "30",
-       ""
-      ],
-      [
-       "60",
-       ""
-      ],
-      [
-       "90",
-       ""
-      ],
-      [
-       "120",
-       ""
-      ],
-      [
-       "150",
-       ""
-      ],
-      [
-       "180",
-       ""
-      ],
-      [
-       "210",
-       ""
-      ],
-      [
-       "240",
-       ""
-      ],
-      [
-       "270",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2020FM_52_q02b_table2-1",
+     "caption": "Table 2.1"
     },
     {
      "type": "marks",
@@ -415,7 +371,7 @@
       },
       {
        "type": "text",
-       "html": "<i>x</i><sub>1</sub> = \\(\\frac{θ<sub>0</sub> – θ<sub>90</sub>}{<i>T</i>}\\)",
+       "html": "<i>x</i><sub>1</sub> = \\(\\frac{θ_{0} – θ_{90}}{T}\\)",
        "text": "x1 = (θ0 – θ90)/(T)"
       },
       {
@@ -498,7 +454,7 @@
       },
       {
        "type": "text",
-       "html": "<i>x</i><sub>2</sub> = \\(\\frac{θ<sub>90</sub> – θ<sub>180</sub>}{<i>T</i>}\\)",
+       "html": "<i>x</i><sub>2</sub> = \\(\\frac{θ_{90} – θ_{180}}{T}\\)",
        "text": "x2 = (θ90 – θ180)/(T)"
       },
       {
@@ -581,7 +537,7 @@
       },
       {
        "type": "text",
-       "html": "<i>x</i><sub>3</sub> = \\(\\frac{θ<sub>180</sub> – θ<sub>270</sub>}{<i>T</i>}\\)",
+       "html": "<i>x</i><sub>3</sub> = \\(\\frac{θ_{180} – θ_{270}}{T}\\)",
        "text": "x3 = (θ180 – θ270)/(T)"
       },
       {
@@ -840,7 +796,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "suggestion"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 3
       },
       {
@@ -943,6 +908,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

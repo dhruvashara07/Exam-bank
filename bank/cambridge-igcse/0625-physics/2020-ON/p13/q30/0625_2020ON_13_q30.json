@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    143.7,
+    143.5,
     226.1,
-    451.3,
-    311.3
+    451.5,
+    312.0
    ],
    "id": "0625_2020ON_13_q30_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
-    343.8,
-    350.6,
-    468.8
+    67.5,
+    343.5,
+    350.5,
+    469.0
    ],
    "id": "0625_2020ON_13_q30_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p13/q30/figures/0625_2020ON_13_q30_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p13/q30/figures/0625_2020ON_13_q30_figB",
     "url": null,
-    "kb": 26.6
+    "kb": 26.5
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "the unit of p.d.",
-     "diagram which shows the meter correctly connected"
-    ],
-    [
-     "<b>A</b>",
-     "amperes",
-     "diagram 1"
-    ],
-    [
-     "<b>B</b>",
-     "amperes",
-     "diagram 2"
-    ],
-    [
-     "<b>C</b>",
-     "volts",
-     "diagram 1"
-    ],
-    [
-     "<b>D</b>",
-     "volts",
-     "diagram 2"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020ON_13_q30_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "amperes diagram 1"
+    },
+    {
+     "label": "B",
+     "html": "amperes diagram 2"
+    },
+    {
+     "label": "C",
+     "html": "volts diagram 1"
+    },
+    {
+     "label": "D",
+     "html": "volts diagram 2"
+    }
+   ]
   }
  ]
 }

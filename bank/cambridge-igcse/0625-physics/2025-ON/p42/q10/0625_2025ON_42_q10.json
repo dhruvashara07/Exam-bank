@@ -82,13 +82,27 @@
     },
     {
      "type": "text",
+     "html": "The planets nearest the Sun are small and ……",
+     "text": "The planets nearest the Sun are small and ……"
+    },
+    {
+     "type": "text",
+     "html": "The planets furthest from the Sun are large and ……",
+     "text": "The planets furthest from the Sun are large and ……"
+    },
+    {
+     "type": "text",
      "html": "All the planets were formed when a cloud of gas and dust collapsed due to",
      "text": "All the planets were formed when a cloud of gas and dust collapsed due to"
     },
     {
+     "type": "text",
+     "html": "The rotation of material in the cloud forms an ……",
+     "text": "The rotation of material in the cloud forms an ……"
+    },
+    {
      "type": "answer",
-     "kind": "answer_line",
-     "prefix": "The rotation of material in the cloud forms an",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -158,8 +172,8 @@
    "content": [
     {
      "type": "text",
-     "html": "The time taken for light to travel from the Moon to the Earth is 1.3s.",
-     "text": "The time taken for light to travel from the Moon to the Earth is 1.3s."
+     "html": "The time taken for light to travel from the Moon to the Earth is 1.3 s.",
+     "text": "The time taken for light to travel from the Moon to the Earth is 1.3 s."
     },
     {
      "type": "text",
@@ -275,5 +289,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

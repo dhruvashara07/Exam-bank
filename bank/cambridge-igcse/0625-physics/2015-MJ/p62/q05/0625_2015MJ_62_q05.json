@@ -33,10 +33,10 @@
    "caption": "Fig. 5.1",
    "page": 11,
    "bbox": [
-    69.8,
-    115.7,
-    522.3,
-    245.6
+    70.5,
+    115.5,
+    522.0,
+    246.0
    ],
    "id": "0625_2015MJ_62_q05_fig5-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 5.2",
    "page": 12,
    "bbox": [
-    263.4,
-    88.4,
-    331.8,
-    179.7
+    262.5,
+    87.5,
+    332.5,
+    180.0
    ],
    "id": "0625_2015MJ_62_q05c_fig5-2",
    "part": "(c)",
@@ -133,7 +133,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate the focal length <i>f</i> of the lens using the equation <i>f</i> = \\(\\frac{<i>uv</i>}{(<i>u</i> + <i>v</i>)}\\). Give your answer to a suitable number of significant figures for this experiment.",
+     "html": "Calculate the focal length <i>f</i> of the lens using the equation <i>f</i> = \\(\\frac{\\text{uv}}{(u + v)}\\). Give your answer to a suitable number of significant figures for this experiment.",
      "text": "Calculate the focal length f of the lens using the equation f = (uv)/((u + v)). Give your answer to a suitable number of significant figures for this experiment."
     },
     {
@@ -210,7 +210,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -291,7 +300,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -317,6 +335,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -347,6 +366,11 @@
    "type": "text",
    "html": "25.8 cm",
    "text": "25.8 cm"
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "u ="
   },
   {
    "type": "text",

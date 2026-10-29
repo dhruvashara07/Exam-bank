@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    129.5,
-    117.9,
-    454.5,
-    274.6
+    129.0,
+    118.5,
+    454.0,
+    275.0
    ],
    "id": "0625_2016FM_52_q01_fig1-1",
    "part": "",
@@ -120,7 +120,18 @@
       {
        "type": "list",
        "items": [
-        "Measure the length <i>l</i> of the boiling tube provided.",
+        "Measure the length <i>l</i> of the boiling tube provided."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "l =",
+       "unit": "cm"
+      },
+      {
+       "type": "list",
+       "items": [
         "Measure the external diameter <i>d</i> of the boiling tube. Use the wooden blocks to help you."
        ]
       },
@@ -269,7 +280,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Assuming that the boiling tube is an approximate cylinder, calculate a value for its external volume <i>V</i><sub>1</sub> using the equation <i>V</i><sub>1</sub> = \\(\\frac{π<i>d </i><sup>2</sup><i>l</i>}{4}\\).",
+       "html": "Assuming that the boiling tube is an approximate cylinder, calculate a value for its external volume <i>V</i><sub>1</sub> using the equation <i>V</i><sub>1</sub> = \\(\\frac{πd ^{2}l}{4}\\).",
        "text": "Assuming that the boiling tube is an approximate cylinder, calculate a value for its external volume V1 using the equation V1 = (πd 2l)/(4)."
       },
       {
@@ -581,8 +592,19 @@
     {
      "type": "list",
      "items": [
-      "<b></b> Use the balance to measure the mass <i>m</i> of the boiling tube.",
-      "<b></b> Calculate the density ρ of the glass, using the equation ρ = \\(\\frac{<i>m</i>}{<i>V</i>}\\). <sub>3</sub>"
+      "<b></b> Use the balance to measure the mass <i>m</i> of the boiling tube."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "m =",
+     "unit": "g"
+    },
+    {
+     "type": "list",
+     "items": [
+      "<b></b> Calculate the density ρ of the glass, using the equation ρ = \\(\\frac{m}{V}\\). <sub>3</sub>"
      ]
     },
     {
@@ -688,6 +710,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

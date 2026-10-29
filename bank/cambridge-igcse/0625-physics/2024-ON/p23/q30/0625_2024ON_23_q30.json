@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    222.1,
-    111.1,
+    222.0,
+    110.5,
     372.2,
-    257.5
+    258.0
    ],
    "id": "0625_2024ON_23_q30_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    315.2,
-    280.4,
-    440.2
+    67.5,
+    315.0,
+    280.5,
+    440.5
    ],
    "id": "0625_2024ON_23_q30_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p23/q30/figures/0625_2024ON_23_q30_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p23/q30/figures/0625_2024ON_23_q30_figB",
     "url": null,
-    "kb": 23.5
+    "kb": 23.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,40 +137,30 @@
    "text": "As the thermistor becomes warmer, what happens to the reading on each voltmeter?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "reading on",
-     "reading on"
-    ],
-    [
-     "",
-     "voltmeter X",
-     "voltmeter Y"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_23_q30_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "increases increases"
+    }
+   ]
   }
  ]
 }

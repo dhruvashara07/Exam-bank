@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    97.3,
-    334.3,
-    208.6
+    67.5,
+    97.0,
+    334.5,
+    209.0
    ],
    "id": "0625_2019ON_13_q14_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row compares the separation and the motion of the molecules of a hot gas with those of a cool liquid? (Both the gas and the liquid are at the same pressure.)"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "separation",
-     "motion"
-    ],
-    [
-     "<b>A</b>",
-     "greater for a gas",
-     "faster for a gas"
-    ],
-    [
-     "<b>B</b>",
-     "greater for a gas",
-     "slower for a gas"
-    ],
-    [
-     "<b>C</b>",
-     "smaller for a gas",
-     "faster for a gas"
-    ],
-    [
-     "<b>D</b>",
-     "smaller for a gas",
-     "slower for a gas"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019ON_13_q14_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "greater for a gas faster for a gas"
+    },
+    {
+     "label": "B",
+     "html": "greater for a gas slower for a gas"
+    },
+    {
+     "label": "C",
+     "html": "smaller for a gas faster for a gas"
+    },
+    {
+     "label": "D",
+     "html": "smaller for a gas slower for a gas"
+    }
+   ]
   }
  ]
 }

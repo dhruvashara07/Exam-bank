@@ -35,7 +35,7 @@
     181.3,
     339.9,
     414.1,
-    424.0
+    423.5
    ],
    "id": "0625_2016ON_11_q19_figA",
    "caption": null,
@@ -51,9 +51,9 @@
   {
    "page": 8,
    "bbox": [
-    69.4,
-    455.7,
-    414.4,
+    69.0,
+    455.5,
+    414.5,
     567.0
    ],
    "id": "0625_2016ON_11_q19_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p11/q19/figures/0625_2016ON_11_q19_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p11/q19/figures/0625_2016ON_11_q19_figB",
     "url": null,
-    "kb": 32.8
+    "kb": 32.7
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "From which type of materials should the pan and its handle be made?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "material for pan",
-     "material for handle"
-    ],
-    [
-     "<b>A</b>",
-     "good thermal conductor",
-     "good thermal conductor"
-    ],
-    [
-     "<b>B</b>",
-     "good thermal conductor",
-     "poor thermal conductor"
-    ],
-    [
-     "<b>C</b>",
-     "poor thermal conductor",
-     "good thermal conductor"
-    ],
-    [
-     "<b>D</b>",
-     "poor thermal conductor",
-     "poor thermal conductor"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_11_q19_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "good thermal conductor good thermal conductor"
+    },
+    {
+     "label": "B",
+     "html": "good thermal conductor poor thermal conductor"
+    },
+    {
+     "label": "C",
+     "html": "poor thermal conductor good thermal conductor"
+    },
+    {
+     "label": "D",
+     "html": "poor thermal conductor poor thermal conductor"
+    }
+   ]
   }
  ]
 }

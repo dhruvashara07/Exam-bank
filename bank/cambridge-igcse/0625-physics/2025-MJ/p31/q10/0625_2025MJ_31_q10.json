@@ -9,10 +9,10 @@
    "caption": "Table 10.1",
    "page": 14,
    "bbox": [
-    46.6,
-    86.8,
-    548.7,
-    201.1
+    46.5,
+    87.5,
+    549.0,
+    201.5
    ],
    "id": "0625_2025MJ_31_q10a_table10-1",
    "part": "(a)",
@@ -216,23 +216,9 @@
      "text": "Table 10.1 describes four nuclides."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "",
-       "americium-241",
-       "plutonium-239",
-       "plutonium-241",
-       "uranium-238"
-      ],
-      [
-       "nuclide notation",
-       "241 Am 95",
-       "239 Pu 94",
-       "241 Pu 94",
-       "238 U 92"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2025MJ_31_q10a_table10-1",
+     "caption": "Table 10.1"
     }
    ]
   },
@@ -302,8 +288,8 @@
     },
     {
      "type": "text",
-     "html": "A sample of radioactive material contains 72mg of plutonium-241.",
-     "text": "A sample of radioactive material contains 72mg of plutonium-241."
+     "html": "A sample of radioactive material contains 72 mg of plutonium-241.",
+     "text": "A sample of radioactive material contains 72 mg of plutonium-241."
     },
     {
      "type": "text",
@@ -311,10 +297,9 @@
      "text": "Calculate the mass of plutonium-241 remaining in the sample after 42 years."
     },
     {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "mass of plutonium-241 remaining =",
-     "unit": "mg"
+     "type": "text",
+     "html": "mass of plutonium-241 remaining = …… mg",
+     "text": "mass of plutonium-241 remaining = …… mg"
     },
     {
      "type": "marks",
@@ -339,5 +324,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

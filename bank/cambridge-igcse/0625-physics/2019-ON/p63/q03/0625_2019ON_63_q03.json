@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    188.0,
-    118.9,
-    379.3,
-    309.0
+    188.5,
+    123.0,
+    378.5,
+    306.5
    ],
    "id": "0625_2019ON_63_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 9,
    "bbox": [
-    199.3,
-    165.7,
-    367.6,
-    280.2
+    199.0,
+    170.5,
+    367.5,
+    280.5
    ],
    "id": "0625_2019ON_63_q03b_table3-1",
    "part": "(b)",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p63/q03/figures/0625_2019ON_63_q03b_table3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p63/q03/figures/0625_2019ON_63_q03b_table3-1",
     "url": null,
-    "kb": 20.3
+    "kb": 20.2
    }
   },
   {
    "caption": "Fig. 3.2",
    "page": 10,
    "bbox": [
-    184.0,
-    80.9,
-    385.4,
-    551.8
+    183.5,
+    80.5,
+    385.0,
+    549.0
    ],
    "id": "0625_2019ON_63_q03c_fig3-2",
    "part": "(c)",
@@ -157,7 +157,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2",
+     "prefix": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -235,6 +244,12 @@
      "text": "2.1"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "l0 =",
+     "unit": "cm"
+    },
+    {
      "type": "list",
      "items": [
       "Various loads <i>L</i> are hung on the spring. The stretched length <i>l</i> of the spring for each load is recorded in Table 3.1."
@@ -246,41 +261,10 @@
      "caption": "Table 3.1"
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>L</i> / N",
-       "<i>l</i> / cm",
-       "<i>e</i> / cm"
-      ],
-      [
-       "1.0",
-       "6.3",
-       ""
-      ],
-      [
-       "2.0",
-       "10.5",
-       ""
-      ],
-      [
-       "3.0",
-       "14.7",
-       ""
-      ]
-     ]
-    },
-    {
      "type": "list",
      "items": [
       "Calculate, and record in Table 3.1, the extension <i>e</i> of the spring for each load <i>L</i>. Use the equation <i>e</i> = (<i>l</i> – <i>l</i><sub>0</sub>)."
      ]
-    },
-    {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "l0 =",
-     "unit": "cm"
     },
     {
      "type": "marks",
@@ -458,7 +442,6 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "lines": 3,
        "prefix": "WX =",
        "unit": "N"
       },
@@ -633,7 +616,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -737,6 +729,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    48.3,
-    108.1,
-    523.4,
-    250.0
+    49.0,
+    114.5,
+    523.0,
+    247.5
    ],
    "id": "0625_2019ON_63_q02_fig2-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p63/q02/figures/0625_2019ON_63_q02_fig2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p63/q02/figures/0625_2019ON_63_q02_fig2-1",
     "url": null,
-    "kb": 20.7
+    "kb": 20.0
    }
   },
   {
    "caption": "Fig. 2.2",
    "page": 6,
    "bbox": [
-    139.3,
-    319.0,
-    441.4,
-    421.5
+    138.5,
+    318.5,
+    442.0,
+    419.0
    ],
    "id": "0625_2019ON_63_q02bi_fig2-2",
    "part": "(b)(i)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 2.3",
    "page": 6,
    "bbox": [
-    139.3,
-    319.0,
-    441.4,
-    421.5
+    138.5,
+    318.5,
+    442.0,
+    419.0
    ],
    "id": "0625_2019ON_63_q02bi_fig2-3",
    "part": "(b)(i)",
@@ -185,6 +185,11 @@
        "text": "On Fig. 2.1, measure the distance u between the illuminated triangle and the lens."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "u ="
+      },
+      {
        "type": "text",
        "html": "On Fig. 2.1, measure the distance <i>v</i> between the lens and the screen.",
        "text": "On Fig. 2.1, measure the distance v between the lens and the screen."
@@ -261,6 +266,11 @@
        "type": "text",
        "html": "Fig. 2.1 is drawn to 1/5<sup>th</sup> scale. Calculate the actual distance <i>U</i> between the illuminated triangle and the lens in the experiment.",
        "text": "Fig. 2.1 is drawn to 1/5th scale. Calculate the actual distance U between the illuminated triangle and the lens in the experiment."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "U ="
       },
       {
        "type": "text",
@@ -342,7 +352,7 @@
       },
       {
        "type": "text",
-       "html": "\\(\\frac{<i>UV</i>}{(<i>U</i> + <i>V</i>)}\\)",
+       "html": "\\(\\frac{\\text{UV}}{(U + V)}\\)",
        "text": "(UV)/((U + V))"
       },
       {
@@ -513,9 +523,19 @@
        "text": "On Fig. 2.2, measure hO, the height of the illuminated triangle."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "hO ="
+      },
+      {
        "type": "text",
        "html": "On Fig. 2.3, measure <i>h</i><sub>I</sub>, the height of the image on the screen.",
        "text": "On Fig. 2.3, measure hI, the height of the image on the screen."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "hI ="
       },
       {
        "type": "figure",
@@ -526,11 +546,6 @@
        "type": "figure",
        "id": "0625_2019ON_63_q02bi_fig2-3",
        "caption": "Fig. 2.3"
-      },
-      {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "hI ="
       },
       {
        "type": "marks",
@@ -602,7 +617,7 @@
       },
       {
        "type": "text",
-       "html": "\\(\\frac{<i>h</i><sub>I</sub>}{<i>h</i><sub>O</sub>}\\)",
+       "html": "\\(\\frac{h_{I}}{h_{O}}\\)",
        "text": "(hI)/(hO)"
       },
       {
@@ -675,7 +690,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a second value <i>f</i><sub>2</sub> for the focal length of the lens, using the equation <i>f</i><sub>2</sub> = \\(\\frac{<i>V</i>}{(<i>M</i> + 1)}\\) and the value of <i>V</i> from <b>(a)(ii)</b>.",
+       "html": "Calculate a second value <i>f</i><sub>2</sub> for the focal length of the lens, using the equation <i>f</i><sub>2</sub> = \\(\\frac{V}{(M + 1)}\\) and the value of <i>V</i> from <b>(a)(ii)</b>.",
        "text": "Calculate a second value f2 for the focal length of the lens, using the equation f2 = (V)/((M + 1)) and the value of V from (a)(ii)."
       },
       {
@@ -758,7 +773,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -905,7 +929,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "suggestion"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -932,6 +965,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

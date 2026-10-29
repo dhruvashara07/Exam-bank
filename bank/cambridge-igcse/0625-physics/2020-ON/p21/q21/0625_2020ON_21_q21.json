@@ -32,9 +32,9 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    84.7,
-    408.4,
+    67.5,
+    84.5,
+    408.5,
     196.0
    ],
    "id": "0625_2020ON_21_q21_figA",
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row correctly describes light waves?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "wave type",
-     "direction of vibrations"
-    ],
-    [
-     "<b>A</b>",
-     "longitudinal",
-     "parallel to direction of wave travel"
-    ],
-    [
-     "<b>B</b>",
-     "longitudinal",
-     "perpendicular to direction of wave travel"
-    ],
-    [
-     "<b>C</b>",
-     "transverse",
-     "parallel to direction of wave travel"
-    ],
-    [
-     "<b>D</b>",
-     "transverse",
-     "perpendicular to direction of wave travel"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020ON_21_q21_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "longitudinal parallel to direction of wave travel"
+    },
+    {
+     "label": "B",
+     "html": "longitudinal perpendicular to direction of wave travel"
+    },
+    {
+     "label": "C",
+     "html": "transverse parallel to direction of wave travel"
+    },
+    {
+     "label": "D",
+     "html": "transverse perpendicular to direction of wave travel"
+    }
+   ]
   }
  ]
 }

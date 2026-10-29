@@ -70,6 +70,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -91,19 +92,19 @@
    "options": [
     {
      "label": "A",
-     "html": "\\(\\frac{extension}{massoftheload}\\)"
+     "html": "\\(\\frac{\\text{extension}}{\\text{mass of the load}}\\)"
     },
     {
      "label": "B",
-     "html": "\\(\\frac{extension}{weightoftheload}\\)"
+     "html": "\\(\\frac{\\text{extension}}{\\text{weight of the load}}\\)"
     },
     {
      "label": "C",
-     "html": "\\(\\frac{mas softheload}{extension}\\)"
+     "html": "\\(\\frac{\\text{mas sof the load}}{\\text{extension}}\\)"
     },
     {
      "label": "D",
-     "html": "\\(\\frac{weightoftheload}{extension}\\)"
+     "html": "\\(\\frac{\\text{weight of the load}}{\\text{extension}}\\)"
     }
    ]
   }

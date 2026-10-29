@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    124.0,
-    85.3,
-    471.7,
-    251.8
+    123.5,
+    84.5,
+    471.5,
+    250.0
    ],
    "id": "0625_2022ON_61_q02_fig2-1",
    "part": "",
@@ -218,6 +218,12 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "V1 =",
+       "unit": "V"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "I1 =",
        "unit": "A"
       },
@@ -286,7 +292,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i><sub>1</sub> of lamp L. Use the equation <i>R</i><sub>1</sub> = \\(\\frac{<i>V</i><sub>1</sub>}{<i>I</i>}\\) . Include the unit.",
+       "html": "Calculate the resistance <i>R</i><sub>1</sub> of lamp L. Use the equation <i>R</i><sub>1</sub> = \\(\\frac{V_{1}}{I}\\) . Include the unit.",
        "text": "Calculate the resistance R1 of lamp L. Use the equation R1 = (V1)/(I) . Include the unit."
       },
       {
@@ -442,8 +448,14 @@
      "text": "0.24"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "I2 =",
+     "unit": "A"
+    },
+    {
      "type": "text",
-     "html": "Calculate the resistance <i>R</i><sub>2</sub> of lamp L. Use the equation <i>R</i><sub>2</sub> = \\(\\frac{<i>V</i><sub>2</sub>}{<i>I</i>}\\) . Include the unit. Give your",
+     "html": "Calculate the resistance <i>R</i><sub>2</sub> of lamp L. Use the equation <i>R</i><sub>2</sub> = \\(\\frac{V_{2}}{I}\\) . Include the unit. Give your",
      "text": "Calculate the resistance R2 of lamp L. Use the equation R2 = (V2)/(I) . Include the unit. Give your"
     },
     {
@@ -535,6 +547,12 @@
      "text": "0.9"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V3 =",
+     "unit": "V"
+    },
+    {
      "type": "text",
      "html": "She measures the current <i>I</i><sub>3</sub> in the circuit.",
      "text": "She measures the current I3 in the circuit."
@@ -545,8 +563,14 @@
      "text": "0.18"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "I3 =",
+     "unit": "A"
+    },
+    {
      "type": "text",
-     "html": "Calculate the resistance <i>R</i><sub>3</sub> of lamp L. Use the equation <i>R</i><sub>3</sub> = \\(\\frac{<i>V</i><sub>3</sub>}{<i>I</i>}\\) . Include the unit.",
+     "html": "Calculate the resistance <i>R</i><sub>3</sub> of lamp L. Use the equation <i>R</i><sub>3</sub> = \\(\\frac{V_{3}}{I}\\) . Include the unit.",
      "text": "Calculate the resistance R3 of lamp L. Use the equation R3 = (V3)/(I) . Include the unit."
     },
     {
@@ -629,6 +653,12 @@
      "text": "Complete the following statements, referring to your practical experience and the results. 1. As the length of resistance wire included in the circuit is increased, the brightness of the"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "lamp",
+     "unit": "."
+    },
+    {
      "type": "text",
      "html": "2. As the length of resistance wire included in the circuit is increased, the resistance of the",
      "text": "2. As the length of resistance wire included in the circuit is increased, the resistance of the"
@@ -638,6 +668,10 @@
      "kind": "answer_line",
      "prefix": "lamp",
      "unit": "."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -738,6 +772,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

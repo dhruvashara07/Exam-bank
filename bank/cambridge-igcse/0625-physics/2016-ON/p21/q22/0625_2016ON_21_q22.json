@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    69.4,
-    580.3,
-    305.4,
-    691.7
+    69.0,
+    580.0,
+    305.5,
+    692.0
    ],
    "id": "0625_2016ON_21_q22_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p21/q22/figures/0625_2016ON_21_q22_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p21/q22/figures/0625_2016ON_21_q22_figA",
     "url": null,
-    "kb": 20.1
+    "kb": 19.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row states the nature of each of these images?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "plane mirror",
-     "magnifying glass"
-    ],
-    [
-     "<b>A</b>",
-     "real",
-     "real"
-    ],
-    [
-     "<b>B</b>",
-     "real",
-     "virtual"
-    ],
-    [
-     "<b>C</b>",
-     "virtual",
-     "real"
-    ],
-    [
-     "<b>D</b>",
-     "virtual",
-     "virtual"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_21_q22_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "real real"
+    },
+    {
+     "label": "B",
+     "html": "real virtual"
+    },
+    {
+     "label": "C",
+     "html": "virtual real"
+    },
+    {
+     "label": "D",
+     "html": "virtual virtual"
+    }
+   ]
   }
  ]
 }

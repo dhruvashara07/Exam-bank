@@ -199,6 +199,11 @@
      "text": "Calculate the wavelength of the sound in sea-water."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "wavelength ="
+    },
+    {
      "type": "text",
      "html": "The sound wave passes from the sea-water into the air.",
      "text": "The sound wave passes from the sea-water into the air."
@@ -209,10 +214,11 @@
      "text": "State what happens, if anything, to"
     },
     {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "• the speed of the sound",
-     "lines": 2
+     "type": "list",
+     "items": [
+      "the frequency of the sound,……",
+      "the speed of the sound……"
+     ]
     },
     {
      "type": "marks",
@@ -237,5 +243,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

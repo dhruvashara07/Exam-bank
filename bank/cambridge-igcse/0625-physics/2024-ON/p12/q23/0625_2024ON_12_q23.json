@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    109.9,
+    67.5,
+    109.5,
     285.0,
-    235.4
+    235.5
    ],
    "id": "0625_2024ON_12_q23_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "What happens to sound waves to cause an echo and what is the nature of sound waves?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "what an echo",
-     "nature of"
-    ],
-    [
-     "",
-     "is caused by",
-     "sound waves"
-    ],
-    [
-     "<b>A</b>",
-     "reflection",
-     "longitudinal"
-    ],
-    [
-     "<b>B</b>",
-     "reflection",
-     "transverse"
-    ],
-    [
-     "<b>C</b>",
-     "refraction",
-     "longitudinal"
-    ],
-    [
-     "<b>D</b>",
-     "refraction",
-     "transverse"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_12_q23_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "reflection longitudinal"
+    },
+    {
+     "label": "B",
+     "html": "reflection transverse"
+    },
+    {
+     "label": "C",
+     "html": "refraction longitudinal"
+    },
+    {
+     "label": "D",
+     "html": "refraction transverse"
+    }
+   ]
   }
  ]
 }

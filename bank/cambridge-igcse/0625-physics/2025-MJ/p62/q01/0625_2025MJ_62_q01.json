@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    183.2,
-    124.6,
-    414.9,
-    340.6
+    183.0,
+    124.0,
+    415.0,
+    341.0
    ],
    "id": "0625_2025MJ_62_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2",
    "page": 2,
    "bbox": [
-    162.5,
-    442.9,
-    433.4,
-    622.0
+    162.0,
+    443.0,
+    434.0,
+    622.5
    ],
    "id": "0625_2025MJ_62_q01ai_fig1-2",
    "part": "(a)(i)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 1.3",
    "page": 3,
    "bbox": [
-    192.6,
-    88.9,
-    402.8,
-    276.0
+    192.5,
+    88.5,
+    403.0,
+    276.5
    ],
    "id": "0625_2025MJ_62_q01aii_fig1-3",
    "part": "(a)(ii)",
@@ -90,10 +90,10 @@
    "caption": "Table 1.1",
    "page": 4,
    "bbox": [
-    106.6,
-    60.8,
-    488.8,
-    263.0
+    106.5,
+    61.5,
+    489.0,
+    263.5
    ],
    "id": "0625_2025MJ_62_q01aiii_table1-1",
    "part": "(a)(iii)",
@@ -404,8 +404,8 @@
       },
       {
        "type": "text",
-       "html": "V = (100cm<sup>3</sup> – R).",
-       "text": "V = (100cm3 – R)."
+       "html": "V = (100 cm<sup>3</sup> – R) .",
+       "text": "V = (100 cm3 – R) ."
       },
       {
        "type": "text",
@@ -417,39 +417,9 @@
        "value": 1
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "h/cm",
-         "<sup>3</sup> R/cm",
-         "<sup>3</sup> V/cm"
-        ],
-        [
-         "",
-         "",
-         ""
-        ],
-        [
-         "5.0",
-         "84",
-         "16"
-        ],
-        [
-         "7.6",
-         "75",
-         "25"
-        ],
-        [
-         "10.3",
-         "64",
-         "36"
-        ],
-        [
-         "13.6",
-         "53",
-         "47"
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2025MJ_62_q01aiii_table1-1",
+       "caption": "Table 1.1"
       },
       {
        "type": "answer",
@@ -469,7 +439,7 @@
     {
      "type": "list",
      "items": [
-      "fills a measuring cylinder with water up to the 100cm<sup>3</sup> mark",
+      "fills a measuring cylinder with water up to the 100 cm<sup>3</sup> mark",
       "pours some water from the measuring cylinder into the test-tube."
      ]
     }
@@ -635,8 +605,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of V/cm<sup>3</sup> (y-axis) against h/cm (x-axis). Start your axes at the origin (0,0).",
-     "text": "Plot a graph of V/cm3 (y-axis) against h/cm (x-axis). Start your axes at the origin (0,0)."
+     "html": "Plot a graph of V / cm<sup>3</sup> (y-axis) against h / cm (x-axis). Start your axes at the origin (0, 0).",
+     "text": "Plot a graph of V / cm3 (y-axis) against h / cm (x-axis). Start your axes at the origin (0, 0)."
     },
     {
      "type": "text",
@@ -797,8 +767,8 @@
      "content": [
       {
        "type": "text",
-       "html": "The internal diameter d of a cylinder is given by the equation d = k G, where k = 1.13cm.",
-       "text": "The internal diameter d of a cylinder is given by the equation d = k G, where k = 1.13cm."
+       "html": "The internal diameter d of a cylinder is given by the equation d = k G, where k = 1.13 cm.",
+       "text": "The internal diameter d of a cylinder is given by the equation d = k G, where k = 1.13 cm."
       },
       {
        "type": "text",
@@ -911,6 +881,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

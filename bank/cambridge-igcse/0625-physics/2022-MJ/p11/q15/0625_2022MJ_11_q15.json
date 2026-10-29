@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
-    97.3,
+    67.5,
+    97.0,
     301.0,
-    222.3
+    222.5
    ],
    "id": "0625_2022MJ_11_q15_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p11/q15/figures/0625_2022MJ_11_q15_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p11/q15/figures/0625_2022MJ_11_q15_figA",
     "url": null,
-    "kb": 24.1
+    "kb": 24.0
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,40 +98,30 @@
    "text": "What happens to the volumes of liquid metal and of solid metal when heated at constant pressure?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "volume of",
-     "volume of"
-    ],
-    [
-     "",
-     "liquid metal",
-     "solid metal"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "increases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "no change"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "increases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "no change"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_11_q15_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases increases"
+    },
+    {
+     "label": "B",
+     "html": "decreases no change"
+    },
+    {
+     "label": "C",
+     "html": "increases increases"
+    },
+    {
+     "label": "D",
+     "html": "increases no change"
+    }
+   ]
   }
  ]
 }

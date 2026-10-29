@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.6,
-    84.8,
-    339.8,
-    196.1
+    67.5,
+    84.5,
+    340.0,
+    196.5
    ],
    "id": "0625_2016MJ_12_q21_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p12/q21/figures/0625_2016MJ_12_q21_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p12/q21/figures/0625_2016MJ_12_q21_figA",
     "url": null,
-    "kb": 30.7
+    "kb": 30.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,40 +98,30 @@
    "text": "Which row shows the natures of light waves, sound waves and X-rays?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "light waves",
-     "sound waves",
-     "X-rays"
-    ],
-    [
-     "A",
-     "longitudinal",
-     "longitudinal",
-     "transverse"
-    ],
-    [
-     "B",
-     "longitudinal",
-     "transverse",
-     "longitudinal"
-    ],
-    [
-     "C",
-     "transverse",
-     "longitudinal",
-     "transverse"
-    ],
-    [
-     "D",
-     "transverse",
-     "transverse",
-     "longitudinal"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_12_q21_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "longitudinal longitudinal transverse"
+    },
+    {
+     "label": "B",
+     "html": "longitudinal transverse longitudinal"
+    },
+    {
+     "label": "C",
+     "html": "transverse longitudinal transverse"
+    },
+    {
+     "label": "D",
+     "html": "transverse transverse longitudinal"
+    }
+   ]
   }
  ]
 }

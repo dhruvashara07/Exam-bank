@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    168.1,
+    168.5,
     86.5,
-    423.5,
-    219.6
+    423.0,
+    217.0
    ],
    "id": "0625_2016ON_33_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 5,
    "bbox": [
-    191.5,
-    302.9,
-    402.6,
-    432.7
+    192.5,
+    302.5,
+    402.0,
+    430.0
    ],
    "id": "0625_2016ON_33_q02b_fig2-2",
    "part": "(b)",
@@ -250,7 +250,13 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "direction of resultant force ="
+     "prefix": "size of resultant force =",
+     "unit": "N"
+    },
+    {
+     "type": "text",
+     "html": "direction of resultant force = ……",
+     "text": "direction of resultant force = ……"
     },
     {
      "type": "marks",
@@ -297,7 +303,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "description",
+     "prefix": "force"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "description"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -324,6 +339,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

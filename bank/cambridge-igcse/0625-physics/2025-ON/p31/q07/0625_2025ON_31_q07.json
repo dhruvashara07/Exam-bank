@@ -9,10 +9,10 @@
    "caption": "Fig. 7.1",
    "page": 11,
    "bbox": [
-    275.7,
-    397.8,
-    319.6,
-    414.8
+    78.5,
+    240.5,
+    318.0,
+    415.0
    ],
    "id": "0625_2025ON_31_q07a_fig7-1",
    "part": "(a)",
@@ -21,7 +21,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q07/figures/0625_2025ON_31_q07a_fig7-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p31/q07/figures/0625_2025ON_31_q07a_fig7-1",
     "url": null,
-    "kb": 3.1
+    "kb": 16.4
    }
   }
  ],
@@ -123,21 +123,6 @@
      "text": "For each pair of bars, write your answer on the dotted line."
     },
     {
-     "type": "text",
-     "html": "N S N S",
-     "text": "N S N S"
-    },
-    {
-     "type": "text",
-     "html": "N S unmagnetised steel",
-     "text": "N S unmagnetised steel"
-    },
-    {
-     "type": "text",
-     "html": "N S copper",
-     "text": "N S copper"
-    },
-    {
      "type": "figure",
      "id": "0625_2025ON_31_q07a_fig7-1",
      "caption": "Fig. 7.1"
@@ -145,7 +130,21 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "pair 1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "pair 2"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "pair 3"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -320,9 +319,18 @@
        "text": "State the name of one electrically conducting material and the name of one electrically insulating material."
       },
       {
+       "type": "text",
+       "html": "electrically conducting material ……",
+       "text": "electrically conducting material ……"
+      },
+      {
+       "type": "text",
+       "html": "electrically insulating material ……",
+       "text": "electrically insulating material ……"
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "electrically insulating material"
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -431,5 +439,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

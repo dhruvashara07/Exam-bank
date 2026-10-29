@@ -8,7 +8,7 @@
     30.0,
     56.1,
     570.0,
-    300.1
+    301.0
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 50.6,
-    "height_pt": 243.9
+    "height_pt": 244.9
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p61/q02/question/0625_2018MJ_61_q02_stem_s1.svg",
@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    147.6,
-    105.0,
-    444.7,
-    301.6
+    147.0,
+    109.5,
+    445.5,
+    299.0
    ],
    "id": "0625_2018MJ_61_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 4,
    "bbox": [
-    67.5,
-    451.0,
-    527.7,
-    624.4
+    67.0,
+    450.5,
+    528.5,
+    621.5
    ],
    "id": "0625_2018MJ_61_q02ai_fig2-2",
    "part": "(a)(i)",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p61/q02/figures/0625_2018MJ_61_q02ai_fig2-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p61/q02/figures/0625_2018MJ_61_q02ai_fig2-2",
     "url": null,
-    "kb": 57.1
+    "kb": 57.0
    }
   },
   {
    "caption": "Fig. 2.3",
    "page": 4,
    "bbox": [
-    67.5,
-    451.0,
-    527.7,
-    624.4
+    67.0,
+    450.5,
+    528.5,
+    621.5
    ],
    "id": "0625_2018MJ_61_q02ai_fig2-3",
    "part": "(a)(i)",
@@ -83,17 +83,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p61/q02/figures/0625_2018MJ_61_q02ai_fig2-3.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p61/q02/figures/0625_2018MJ_61_q02ai_fig2-3",
     "url": null,
-    "kb": 57.1
+    "kb": 57.0
    }
   },
   {
    "caption": "Fig. 2.4",
    "page": 6,
    "bbox": [
-    148.4,
-    178.7,
-    443.9,
-    494.2
+    147.5,
+    183.0,
+    444.5,
+    491.5
    ],
    "id": "0625_2018MJ_61_q02e_fig2-4",
    "part": "(e)",
@@ -118,7 +118,7 @@
      "page": 4,
      "bbox": [
       30.0,
-      300.1,
+      308.1,
       570.0,
       360.1
      ],
@@ -128,13 +128,13 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 6.4,
-      "height_pt": 60.0
+      "height_pt": 52.0
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2018-MJ/p61/q02/question/0625_2018MJ_61_q02_a_s1.svg",
       "public_id": "question_bank/cambridge-igcse/0625-physics/2018-MJ/p61/q02/question/0625_2018MJ_61_q02_a_s1",
       "url": null,
-      "kb": 29.5
+      "kb": 17.9
      }
     }
    ],
@@ -205,6 +205,16 @@
        "text": "Write down the readings shown on the meters in Figs. 2.2 and 2.3."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V1 ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "I ="
+      },
+      {
        "type": "figure",
        "id": "0625_2018MJ_61_q02ai_fig2-2",
        "caption": "Fig. 2.2"
@@ -213,11 +223,6 @@
        "type": "figure",
        "id": "0625_2018MJ_61_q02ai_fig2-3",
        "caption": "Fig. 2.3"
-      },
-      {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "I ="
       },
       {
        "type": "marks",
@@ -284,7 +289,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance of the resistor R<sub>1</sub> using the equation <i>R</i><sub>1</sub> = \\(\\frac{<i>V</i><sub>1</sub>}{<i>I</i>}\\).",
+       "html": "Calculate the resistance of the resistor R<sub>1</sub> using the equation <i>R</i><sub>1</sub> = \\(\\frac{V_{1}}{I}\\).",
        "text": "Calculate the resistance of the resistor R1 using the equation R1 = (V1)/(I)."
       },
       {
@@ -377,9 +382,19 @@
      "text": "4.75 Ω"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "R2 ="
+    },
+    {
      "type": "text",
      "html": "4.81 Ω",
      "text": "4.81 Ω"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "R3 ="
     },
     {
      "type": "text",
@@ -389,8 +404,12 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
-     "lines": 2
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
     },
     {
      "type": "marks",
@@ -536,7 +555,7 @@
     },
     {
      "type": "text",
-     "html": "\\(\\frac{<i>V</i><sub>1</sub>}{3}\\) <i>V</i><sub>1</sub> 3<i>V</i><sub>1</sub>",
+     "html": "\\(\\frac{V_{1}}{3}\\) <i>V</i><sub>1</sub> 3<i>V</i><sub>1</sub>",
      "text": "(V1)/(3) V1 3V1"
     },
     {
@@ -651,6 +670,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -33,7 +33,7 @@
    "page": 11,
    "bbox": [
     201.2,
-    86.0,
+    85.5,
     394.1,
     204.4
    ],
@@ -51,9 +51,9 @@
   {
    "page": 11,
    "bbox": [
-    67.6,
+    67.5,
     263.0,
-    247.9,
+    248.0,
     375.5
    ],
    "id": "0625_2015MJ_14_q22_figB",
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Which row correctly states if the light is refracted, and if the light is dispersed?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "refracted",
-     "dispersed"
-    ],
-    [
-     "A",
-     "no",
-     "no"
-    ],
-    [
-     "B",
-     "no",
-     "yes"
-    ],
-    [
-     "C",
-     "yes",
-     "no"
-    ],
-    [
-     "D",
-     "yes",
-     "yes"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_14_q22_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "no no"
+    },
+    {
+     "label": "B",
+     "html": "no yes"
+    },
+    {
+     "label": "C",
+     "html": "yes no"
+    },
+    {
+     "label": "D",
+     "html": "yes yes"
+    }
+   ]
   }
  ]
 }

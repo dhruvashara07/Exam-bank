@@ -32,10 +32,10 @@
   {
    "page": 18,
    "bbox": [
-    67.7,
-    452.2,
-    281.8,
-    577.7
+    67.5,
+    452.0,
+    282.0,
+    578.0
    ],
    "id": "0625_2019MJ_12_q35_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-MJ/p12/q35/figures/0625_2019MJ_12_q35_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-MJ/p12/q35/figures/0625_2019MJ_12_q35_figA",
     "url": null,
-    "kb": 18.0
+    "kb": 17.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,40 +98,30 @@
    "text": "Which components are designed to improve the safe working of a mains electrical supply?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "circuit breaker",
-     "earth wire",
-     "fuse"
-    ],
-    [
-     "<b>A</b>",
-     "\u0016",
-     "\u0016",
-     "\u001a"
-    ],
-    [
-     "<b>B</b>",
-     "\u0016",
-     "\u001a",
-     "\u0016"
-    ],
-    [
-     "<b>C</b>",
-     "\u001a",
-     "\u0016",
-     "\u0016"
-    ],
-    [
-     "<b>D</b>",
-     "\u0016",
-     "\u0016",
-     "\u0016"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019MJ_12_q35_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "\u0016 \u0016 \u001a"
+    },
+    {
+     "label": "B",
+     "html": "\u0016 \u001a \u0016"
+    },
+    {
+     "label": "C",
+     "html": "\u001a \u0016 \u0016"
+    },
+    {
+     "label": "D",
+     "html": "\u0016 \u0016 \u0016"
+    }
+   ]
   }
  ]
 }

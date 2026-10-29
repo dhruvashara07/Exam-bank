@@ -32,10 +32,10 @@
   {
    "page": 17,
    "bbox": [
-    165.7,
-    394.4,
+    165.5,
+    394.0,
     429.1,
-    543.7
+    544.0
    ],
    "id": "0625_2017ON_22_q38_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p22/q38/figures/0625_2017ON_22_q38_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p22/q38/figures/0625_2017ON_22_q38_figA",
     "url": null,
-    "kb": 15.2
+    "kb": 15.1
    }
   },
   {
    "page": 17,
    "bbox": [
-    69.4,
-    576.1,
-    315.7,
-    687.4
+    69.0,
+    576.0,
+    316.0,
+    687.5
    ],
    "id": "0625_2017ON_22_q38_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p22/q38/figures/0625_2017ON_22_q38_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p22/q38/figures/0625_2017ON_22_q38_figB",
     "url": null,
-    "kb": 25.2
+    "kb": 25.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "What is the nature and charge of the particle?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "nature of particle",
-     "charge of particle"
-    ],
-    [
-     "<b>A</b>",
-     "α-particle",
-     "negative"
-    ],
-    [
-     "<b>B</b>",
-     "α-particle",
-     "positive"
-    ],
-    [
-     "<b>C</b>",
-     "β-particle",
-     "negative"
-    ],
-    [
-     "<b>D</b>",
-     "β-particle",
-     "positive"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017ON_22_q38_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "α-particle negative"
+    },
+    {
+     "label": "B",
+     "html": "α-particle positive"
+    },
+    {
+     "label": "C",
+     "html": "β-particle negative"
+    },
+    {
+     "label": "D",
+     "html": "β-particle positive"
+    }
+   ]
   }
  ]
 }

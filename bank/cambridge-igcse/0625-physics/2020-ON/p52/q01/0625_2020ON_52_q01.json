@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    150.8,
-    111.3,
+    151.0,
+    110.5,
     444.5,
-    403.7
+    402.0
    ],
    "id": "0625_2020ON_52_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 1.1",
    "page": 3,
    "bbox": [
-    234.2,
-    123.8,
+    234.0,
+    127.5,
     361.0,
-    283.1
+    283.5
    ],
    "id": "0625_2020ON_52_q01b_table1-1",
    "part": "(b)",
@@ -326,33 +326,9 @@
      ]
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>P</i> / N",
-       "<i>l</i> / mm"
-      ],
-      [
-       "0.20",
-       ""
-      ],
-      [
-       "0.40",
-       ""
-      ],
-      [
-       "0.60",
-       ""
-      ],
-      [
-       "0.80",
-       ""
-      ],
-      [
-       "1.00",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2020ON_52_q01b_table1-1",
+     "caption": "Table 1.1"
     },
     {
      "type": "marks",
@@ -422,8 +398,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of <i>l</i>/ mm (<i>y</i>-axis) against <i>P </i>/ N (<i>x</i>-axis). Start both axes at the origin (0,0).",
-     "text": "Plot a graph of l/ mm (y-axis) against P / N (x-axis). Start both axes at the origin (0,0)."
+     "html": "Plot a graph of <i>l</i> / mm (<i>y</i>-axis) against <i>P </i>/ N (<i>x</i>-axis). Start both axes at the origin (0,0).",
+     "text": "Plot a graph of l / mm (y-axis) against P / N (x-axis). Start both axes at the origin (0,0)."
     },
     {
      "type": "answer",
@@ -601,6 +577,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

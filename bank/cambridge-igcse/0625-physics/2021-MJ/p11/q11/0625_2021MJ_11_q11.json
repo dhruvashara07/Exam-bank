@@ -33,7 +33,7 @@
    "page": 5,
    "bbox": [
     58.2,
-    316.8,
+    316.5,
     537.0,
     464.8
    ],
@@ -45,13 +45,13 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p11/q11/figures/0625_2021MJ_11_q11_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p11/q11/figures/0625_2021MJ_11_q11_figA",
     "url": null,
-    "kb": 40.7
+    "kb": 40.6
    }
   },
   {
    "page": 5,
    "bbox": [
-    67.7,
+    67.5,
     498.0,
     271.0,
     623.5
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,40 +137,30 @@
    "text": "Which man does the most work on their box, and which box gains the most energy?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "man doing",
-     "box gaining"
-    ],
-    [
-     "",
-     "most work",
-     "most energy"
-    ],
-    [
-     "<b>A</b>",
-     "X",
-     "P"
-    ],
-    [
-     "<b>B</b>",
-     "X",
-     "Q"
-    ],
-    [
-     "<b>C</b>",
-     "Y",
-     "P"
-    ],
-    [
-     "<b>D</b>",
-     "Y",
-     "Q"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021MJ_11_q11_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "X P"
+    },
+    {
+     "label": "B",
+     "html": "X Q"
+    },
+    {
+     "label": "C",
+     "html": "Y P"
+    },
+    {
+     "label": "D",
+     "html": "Y Q"
+    }
+   ]
   }
  ]
 }

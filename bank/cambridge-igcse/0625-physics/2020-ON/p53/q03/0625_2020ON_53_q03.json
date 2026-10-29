@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    54.9,
-    109.2,
-    540.3,
-    236.2
+    55.5,
+    112.5,
+    540.0,
+    234.5
    ],
    "id": "0625_2020ON_53_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 8,
    "bbox": [
-    188.2,
-    448.4,
-    407.1,
-    611.6
+    188.0,
+    452.0,
+    407.0,
+    612.0
    ],
    "id": "0625_2020ON_53_q03aii_table3-1",
    "part": "(a)(ii)",
@@ -216,39 +216,9 @@
        "text": "Place the lens a distance u = 20.0 cm from the illuminated object. Place the screen near the lens and switch on the lamp. Move the screen until a clear focused image of the illuminated object is seen. Measure, and record in Table 3.1, the height hI of the image. Repeat the procedure for u = 25.0 cm, 30.0 cm, 35.0 cm and 40.0 cm. Switch off the lamp."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>u</i> / cm",
-         "<i>h</i><sub>I</sub> / cm",
-         "<i>W</i>"
-        ],
-        [
-         "20.0",
-         "",
-         ""
-        ],
-        [
-         "25.0",
-         "",
-         ""
-        ],
-        [
-         "30.0",
-         "",
-         ""
-        ],
-        [
-         "35.0",
-         "",
-         ""
-        ],
-        [
-         "40.0",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2020ON_53_q03aii_table3-1",
+       "caption": "Table 3.1"
       },
       {
        "type": "marks",
@@ -318,7 +288,7 @@
    "content": [
     {
      "type": "text",
-     "html": "For each distance <i>u</i>, calculate, and record in Table 3.1, a value <i>W</i> using your results from <b>(a)</b> and the equation <i>W</i> = \\(\\frac{<i>h</i><sub>O</sub>}{<i>h</i><sub>I</sub>}\\).",
+     "html": "For each distance <i>u</i>, calculate, and record in Table 3.1, a value <i>W</i> using your results from <b>(a)</b> and the equation <i>W</i> = \\(\\frac{h_{O}}{h_{I}}\\).",
      "text": "For each distance u, calculate, and record in Table 3.1, a value W using your results from (a) and the equation W = (hO)/(hI)."
     },
     {
@@ -543,7 +513,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "improvement",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "improvement"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -570,6 +549,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

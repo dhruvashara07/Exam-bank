@@ -32,10 +32,10 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    547.4,
-    220.8,
-    658.8
+    67.5,
+    547.5,
+    221.0,
+    659.0
    ],
    "id": "0625_2026FM_12_q07_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which words complete gaps 1 and 2?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>1</b>",
-     "<b>2</b>"
-    ],
-    [
-     "<b>A</b>",
-     "centre",
-     "stability"
-    ],
-    [
-     "<b>B</b>",
-     "force",
-     "stability"
-    ],
-    [
-     "<b>C</b>",
-     "centre",
-     "weight"
-    ],
-    [
-     "<b>D</b>",
-     "force",
-     "weight"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026FM_12_q07_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "centre stability"
+    },
+    {
+     "label": "B",
+     "html": "force stability"
+    },
+    {
+     "label": "C",
+     "html": "centre weight"
+    },
+    {
+     "label": "D",
+     "html": "force weight"
+    }
+   ]
   }
  ]
 }

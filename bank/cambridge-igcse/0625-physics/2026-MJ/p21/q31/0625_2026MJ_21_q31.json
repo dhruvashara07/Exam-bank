@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    67.9,
-    332.2,
-    225.8,
-    462.5
+    68.0,
+    331.5,
+    226.5,
+    463.0
    ],
    "id": "0625_2026MJ_21_q31_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p21/q31/figures/0625_2026MJ_21_q31_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p21/q31/figures/0625_2026MJ_21_q31_figA",
     "url": null,
-    "kb": 8.5
+    "kb": 8.4
    }
   },
   {
    "page": 11,
    "bbox": [
-    67.7,
-    494.8,
+    67.5,
+    494.5,
     377.5,
-    606.1
+    606.5
    ],
    "id": "0625_2026MJ_21_q31_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "Which row shows the components X and Y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>X</b>",
-     "<b>Y</b>"
-    ],
-    [
-     "<b>A</b>",
-     "light-dependent resistor",
-     "resistor"
-    ],
-    [
-     "<b>B</b>",
-     "resistor",
-     "light-dependent resistor"
-    ],
-    [
-     "<b>C</b>",
-     "resistor",
-     "thermistor"
-    ],
-    [
-     "<b>D</b>",
-     "thermistor",
-     "resistor"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_21_q31_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "light-dependent resistor resistor"
+    },
+    {
+     "label": "B",
+     "html": "resistor light-dependent resistor"
+    },
+    {
+     "label": "C",
+     "html": "resistor thermistor"
+    },
+    {
+     "label": "D",
+     "html": "thermistor resistor"
+    }
+   ]
   }
  ]
 }

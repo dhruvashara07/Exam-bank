@@ -10,9 +10,9 @@
    "page": 10,
    "bbox": [
     237.0,
-    176.5,
-    358.3,
-    298.5
+    182.0,
+    358.5,
+    299.0
    ],
    "id": "0625_2026MJ_42_q08aii_fig8-1",
    "part": "(a)(ii)",
@@ -21,7 +21,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q08/figures/0625_2026MJ_42_q08aii_fig8-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p42/q08/figures/0625_2026MJ_42_q08aii_fig8-1",
     "url": null,
-    "kb": 7.6
+    "kb": 6.9
    }
   },
   {
@@ -29,9 +29,9 @@
    "page": 10,
    "bbox": [
     92.0,
-    372.5,
+    398.0,
     301.0,
-    605.8
+    606.0
    ],
    "id": "0625_2026MJ_42_q08b_fig8-2",
    "part": "(b)",
@@ -40,7 +40,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q08/figures/0625_2026MJ_42_q08b_fig8-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p42/q08/figures/0625_2026MJ_42_q08b_fig8-2",
     "url": null,
-    "kb": 21.6
+    "kb": 16.6
    }
   }
  ],
@@ -119,10 +119,19 @@
        "text": "Complete the definition of an ‘electric field’."
       },
       {
+       "type": "text",
+       "html": "An electric field is a region where ……",
+       "text": "An electric field is a region where ……"
+      },
+      {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "experiences",
        "unit": "."
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -391,14 +400,33 @@
       },
       {
        "type": "text",
-       "html": "which causes the lamp to light.",
-       "text": "which causes the lamp to light."
+       "html": "When the temperature of the thermistor increases, the ……",
+       "text": "When the temperature of the thermistor increases, the ……"
+      },
+      {
+       "type": "text",
+       "html": "of the thermistor …… . This causes the p.d. across the",
+       "text": "of the thermistor …… . This causes the p.d. across the"
+      },
+      {
+       "type": "text",
+       "html": "…… to increase. The magnetic field produced by the relay",
+       "text": "…… to increase. The magnetic field produced by the relay"
       },
       {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "coil",
        "unit": ","
+      },
+      {
+       "type": "text",
+       "html": "which causes the lamp to light.",
+       "text": "which causes the lamp to light."
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -481,13 +509,13 @@
      "content": [
       {
        "type": "text",
-       "html": "The current in the lamp is 3.2A.",
-       "text": "The current in the lamp is 3.2A."
+       "html": "The current in the lamp is 3.2 A.",
+       "text": "The current in the lamp is 3.2 A."
       },
       {
        "type": "text",
-       "html": "Calculate the charge that flows through the lamp in 120s.",
-       "text": "Calculate the charge that flows through the lamp in 120s."
+       "html": "Calculate the charge that flows through the lamp in 120 s.",
+       "text": "Calculate the charge that flows through the lamp in 120 s."
       },
       {
        "type": "answer",
@@ -506,8 +534,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Figure 8.2 shows an electric circuit that includes a thermistor, component X and a relay. The",
-     "text": "Figure 8.2 shows an electric circuit that includes a thermistor, component X and a relay. The"
+     "html": "Figure 8.2 shows an electric circuit that includes a thermistor, component X and a relay. The relay operates a lamp.",
+     "text": "Figure 8.2 shows an electric circuit that includes a thermistor, component X and a relay. The relay operates a lamp."
     },
     {
      "type": "figure",
@@ -533,5 +561,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

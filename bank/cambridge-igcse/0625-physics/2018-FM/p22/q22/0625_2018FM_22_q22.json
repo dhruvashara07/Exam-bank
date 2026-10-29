@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    575.2,
-    257.2,
-    686.6
+    67.5,
+    575.0,
+    257.5,
+    686.5
    ],
    "id": "0625_2018FM_22_q22_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-FM/p22/q22/figures/0625_2018FM_22_q22_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-FM/p22/q22/figures/0625_2018FM_22_q22_figA",
     "url": null,
-    "kb": 17.9
+    "kb": 17.8
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row shows an example of a transverse wave and an example of a longitudinal wave?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "transverse",
-     "longitudinal"
-    ],
-    [
-     "<b>A</b>",
-     "light",
-     "radio"
-    ],
-    [
-     "<b>B</b>",
-     "radio",
-     "sound"
-    ],
-    [
-     "<b>C</b>",
-     "sound",
-     "water"
-    ],
-    [
-     "<b>D</b>",
-     "water",
-     "light"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018FM_22_q22_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "light radio"
+    },
+    {
+     "label": "B",
+     "html": "radio sound"
+    },
+    {
+     "label": "C",
+     "html": "sound water"
+    },
+    {
+     "label": "D",
+     "html": "water light"
+    }
+   ]
   }
  ]
 }

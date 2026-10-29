@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    174.8,
-    110.4,
+    175.5,
+    113.0,
     420.5,
-    351.8
+    350.0
    ],
    "id": "0625_2020ON_32_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2",
    "page": 3,
    "bbox": [
-    133.7,
-    88.8,
-    461.4,
-    428.9
+    133.5,
+    88.5,
+    461.5,
+    427.5
    ],
    "id": "0625_2020ON_32_q01b_fig1-2",
    "part": "(b)",
@@ -170,6 +170,11 @@
        "text": "Calculate the resultant vertical force and state its direction."
       },
       {
+       "type": "text",
+       "html": "resultant vertical force = …… N",
+       "text": "resultant vertical force = …… N"
+      },
+      {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "direction"
@@ -246,7 +251,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "suggestion"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -404,13 +418,17 @@
      "content": [
       {
        "type": "text",
-       "html": "Deduce the size of the resultant vertical force on the box when the time is 35 s. Explain your answer.",
-       "text": "Deduce the size of the resultant vertical force on the box when the time is 35 s. Explain your answer."
+       "html": "Deduce the size of the resultant vertical force on the box when the time is 35 s. Explain your answer. size of resultant vertical force ……",
+       "text": "Deduce the size of the resultant vertical force on the box when the time is 35 s. Explain your answer. size of resultant vertical force ……"
       },
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -528,6 +546,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

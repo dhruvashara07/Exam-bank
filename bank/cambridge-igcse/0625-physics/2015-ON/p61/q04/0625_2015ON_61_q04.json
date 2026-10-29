@@ -33,10 +33,10 @@
    "caption": "Fig. 4.1",
    "page": 8,
    "bbox": [
-    202.7,
-    117.9,
-    404.4,
-    333.1
+    203.0,
+    118.5,
+    405.0,
+    333.5
    ],
    "id": "0625_2015ON_61_q04_fig4-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 4.2",
    "page": 8,
    "bbox": [
-    165.2,
-    369.8,
-    430.0,
-    725.8
+    165.0,
+    371.0,
+    428.5,
+    726.0
    ],
    "id": "0625_2015ON_61_q04a_fig4-2",
    "part": "(a)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 4.3",
    "page": 10,
    "bbox": [
-    103.3,
-    112.4,
-    342.5,
-    449.2
+    114.5,
+    112.5,
+    343.0,
+    449.5
    ],
    "id": "0625_2015ON_61_q04e_fig4-3",
    "part": "(e)",
@@ -322,13 +322,12 @@
     },
     {
      "type": "text",
-     "html": "Calculate the average temperature θ<sub>A</sub> of the hot water and the cold water using the equation θ<sub>A </sub>= \\(\\frac{(θ<sub>H </sub>+ θ<sub>C</sub>)}{2}\\).",
+     "html": "Calculate the average temperature θ<sub>A</sub> of the hot water and the cold water using the equation θ<sub>A </sub>= \\(\\frac{(θ_{H} + θ_{C})}{2}\\).",
      "text": "Calculate the average temperature θA of the hot water and the cold water using the equation θA = ((θH + θC))/(2)."
     },
     {
      "type": "answer",
      "kind": "answer_line",
-     "lines": 1,
      "prefix": "θA ="
     },
     {
@@ -412,7 +411,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -585,7 +593,11 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "Student",
+       "prefix": "Student"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -632,6 +644,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

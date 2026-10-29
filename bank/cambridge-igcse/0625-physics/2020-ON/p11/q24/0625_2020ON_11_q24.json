@@ -51,10 +51,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    226.3,
-    414.7,
-    337.1
+    67.5,
+    226.0,
+    415.0,
+    337.0
    ],
    "id": "0625_2020ON_11_q24_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p11/q24/figures/0625_2020ON_11_q24_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p11/q24/figures/0625_2020ON_11_q24_figB",
     "url": null,
-    "kb": 21.9
+    "kb": 21.7
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row correctly shows a wave property involved in producing the colours at X and Y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "wave property",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>A</b>",
-     "diffraction",
-     "red",
-     "violet"
-    ],
-    [
-     "<b>B</b>",
-     "dispersion",
-     "red",
-     "violet"
-    ],
-    [
-     "<b>C</b>",
-     "reflection",
-     "violet",
-     "red"
-    ],
-    [
-     "<b>D</b>",
-     "refraction",
-     "violet",
-     "red"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020ON_11_q24_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "diffraction red violet"
+    },
+    {
+     "label": "B",
+     "html": "dispersion red violet"
+    },
+    {
+     "label": "C",
+     "html": "reflection violet red"
+    },
+    {
+     "label": "D",
+     "html": "refraction violet red"
+    }
+   ]
   }
  ]
 }

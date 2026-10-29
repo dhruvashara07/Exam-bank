@@ -9,10 +9,10 @@
    "caption": "Fig. 1.1 (not to scale)",
    "page": 2,
    "bbox": [
-    94.5,
-    84.0,
-    492.2,
-    371.3
+    95.5,
+    96.0,
+    491.5,
+    369.5
    ],
    "id": "0625_2023MJ_42_q01a_fig1-1",
    "part": "(a)",
@@ -21,17 +21,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p42/q01/figures/0625_2023MJ_42_q01a_fig1-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p42/q01/figures/0625_2023MJ_42_q01a_fig1-1",
     "url": null,
-    "kb": 92.6
+    "kb": 92.4
    }
   },
   {
    "caption": "Fig. 1.2",
    "page": 3,
    "bbox": [
-    105.2,
-    97.8,
-    501.8,
-    316.8
+    105.5,
+    98.0,
+    501.5,
+    315.0
    ],
    "id": "0625_2023MJ_42_q01b_fig1-2",
    "part": "(b)",
@@ -145,7 +145,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "condition 2",
+       "prefix": "condition 1"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "condition 2"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -218,9 +227,9 @@
        "text": "The mass of the helicopter is 3200 kg. Calculate the change in the gravitational potential energy of the helicopter as it rises from the ground to 1500 m."
       },
       {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "change in gravitational potential energy ="
+       "type": "text",
+       "html": "change in gravitational potential energy = ……",
+       "text": "change in gravitational potential energy = ……"
       },
       {
        "type": "marks",
@@ -464,5 +473,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

@@ -32,10 +32,10 @@
   {
    "page": 4,
    "bbox": [
-    243.3,
-    463.3,
-    352.0,
-    549.2
+    242.5,
+    463.0,
+    352.5,
+    550.0
    ],
    "id": "0625_2021ON_11_q09_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p11/q09/figures/0625_2021ON_11_q09_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p11/q09/figures/0625_2021ON_11_q09_figA",
     "url": null,
-    "kb": 2.2
+    "kb": 2.1
    }
   },
   {
    "page": 4,
    "bbox": [
-    67.7,
-    594.3,
-    398.6,
-    719.8
+    67.5,
+    594.0,
+    399.0,
+    720.0
    ],
    "id": "0625_2021ON_11_q09_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p11/q09/figures/0625_2021ON_11_q09_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p11/q09/figures/0625_2021ON_11_q09_figB",
     "url": null,
-    "kb": 29.7
+    "kb": 29.6
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,40 +127,30 @@
    "text": "Which row states the type of energy stored in the cell and how this energy is usefully transferred to the lamp?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "type of energy",
-     "how this energy is usefully"
-    ],
-    [
-     "",
-     "stored in the cell",
-     "transferred to the lamp"
-    ],
-    [
-     "<b>A</b>",
-     "chemical",
-     "by electric current"
-    ],
-    [
-     "<b>B</b>",
-     "chemical",
-     "by light"
-    ],
-    [
-     "<b>C</b>",
-     "electrical",
-     "by electric current"
-    ],
-    [
-     "<b>D</b>",
-     "electrical",
-     "by light"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_11_q09_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "chemical by electric current"
+    },
+    {
+     "label": "B",
+     "html": "chemical by light"
+    },
+    {
+     "label": "C",
+     "html": "electrical by electric current"
+    },
+    {
+     "label": "D",
+     "html": "electrical by light"
+    }
+   ]
   }
  ]
 }

@@ -32,9 +32,9 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    480.1,
-    274.7,
+    67.5,
+    480.0,
+    275.0,
     591.5
    ],
    "id": "0625_2026MJ_11_q27_figA",
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row gives the metal used to make the core of an electromagnet and one property of the electromagnet?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>metal</b>",
-     "<b>property</b>"
-    ],
-    [
-     "<b>A</b>",
-     "iron",
-     "permanent magnet"
-    ],
-    [
-     "<b>B</b>",
-     "iron",
-     "temporary magnet"
-    ],
-    [
-     "<b>C</b>",
-     "steel",
-     "permanent magnet"
-    ],
-    [
-     "<b>D</b>",
-     "steel",
-     "temporary magnet"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_11_q27_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "iron permanent magnet"
+    },
+    {
+     "label": "B",
+     "html": "iron temporary magnet"
+    },
+    {
+     "label": "C",
+     "html": "steel permanent magnet"
+    },
+    {
+     "label": "D",
+     "html": "steel temporary magnet"
+    }
+   ]
   }
  ]
 }

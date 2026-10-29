@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 6,
    "bbox": [
-    45.8,
-    111.3,
-    549.5,
-    736.1
+    46.5,
+    110.5,
+    549.0,
+    736.5
    ],
    "id": "0625_2025ON_51_q03_fig3-1",
    "part": "",
@@ -116,7 +116,7 @@
      "items": [
       "Place the transparent block, largest face down, on the ray-trace sheet supplied. The block should be approximately in the middle of the paper.",
       "Draw and label the outline of the block <b>ABCD.</b>",
-      "Remove the block and draw the normal NL to the side AB at a distance 2.0cm from A. Continue the normal so that it passes through side CD of the block.",
+      "Remove the block and draw the normal NL to the side AB at a distance 2.0 cm from A. Continue the normal so that it passes through side CD of the block.",
       "Label the point Q where NL crosses AB."
      ]
     },
@@ -200,7 +200,7 @@
     {
      "type": "list",
      "items": [
-      "Place two pins P<sub>3</sub> and P<sub>4</sub> (at a suitable distance apart) between side CD of the block and your eye so that P<sub>3</sub>, P<sub>4</sub> and the images of P<sub>1</sub> and P<sub>2</sub> seen through the block appear"
+      "Place two pins P<sub>3</sub> and P<sub>4</sub> (at a suitable distance apart) between side CD of the block and your eye so that P<sub>3</sub> , P<sub>4</sub> and the images of P<sub>1</sub> and P<sub>2</sub> seen through the block appear"
      ]
     },
     {
@@ -211,7 +211,7 @@
     {
      "type": "list",
      "items": [
-      "Label the positions of P<sub>1</sub>, P<sub>2</sub>, P<sub>3</sub> and P<sub>4</sub>.",
+      "Label the positions of P<sub>1</sub> , P<sub>2</sub> , P<sub>3</sub> and P<sub>4</sub> .",
       "Remove the pins."
      ]
     },
@@ -281,15 +281,15 @@
     {
      "type": "list",
      "items": [
-      "Draw a line through the positions of P<sub>3</sub> and P<sub>4</sub>. Continue the line until it meets NL and label that point E.",
+      "Draw a line through the positions of P<sub>3</sub> and P<sub>4</sub> . Continue the line until it meets NL and label that point E.",
       "Label the other end of this line F.",
-      "Measure the acute angle θbetween EF and the normal. An acute angle is an angle less than 90°."
+      "Measure the acute angle θ between EF and the normal. An acute angle is an angle less than 90°."
      ]
     },
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "angle θ=",
+     "prefix": "angle θ =",
      "unit": ".."
     },
     {
@@ -363,7 +363,7 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "angle θ=",
+     "prefix": "angle θ =",
      "unit": ".."
     },
     {
@@ -441,18 +441,18 @@
     },
     {
      "type": "text",
-     "html": "exactly 5.0cm apart.",
-     "text": "exactly 5.0cm apart."
+     "html": "exactly 5.0 cm apart.",
+     "text": "exactly 5.0 cm apart."
     },
     {
      "type": "text",
-     "html": "less than 5.0cm apart.",
-     "text": "less than 5.0cm apart."
+     "html": "less than 5.0 cm apart.",
+     "text": "less than 5.0 cm apart."
     },
     {
      "type": "text",
-     "html": "more than 5.0cm apart.",
-     "text": "more than 5.0cm apart."
+     "html": "more than 5.0 cm apart.",
+     "text": "more than 5.0 cm apart."
     },
     {
      "type": "marks",
@@ -561,6 +561,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -573,33 +574,9 @@
    "text": "Use the separate ray-trace sheet provided. You may refer to Fig. 3.1 for guidance."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "N"
-    ],
-    [
-     "",
-     "P"
-    ],
-    [
-     "",
-     "i"
-    ],
-    [
-     "",
-     "A Q B"
-    ],
-    [
-     "",
-     "D C"
-    ],
-    [
-     "",
-     "L"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2025ON_51_q03_fig3-1",
+   "caption": "Fig. 3.1"
   }
  ]
 }

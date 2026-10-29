@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    112.3,
-    139.0,
-    467.9,
-    486.6
+    111.5,
+    142.0,
+    467.5,
+    485.0
    ],
    "id": "0625_2021FM_52_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 9,
    "bbox": [
-    124.8,
-    84.0,
+    124.5,
+    87.5,
     470.5,
-    198.2
+    198.5
    ],
    "id": "0625_2021FM_52_q03aii_table3-1",
    "part": "(a)(ii)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 3.2",
    "page": 10,
    "bbox": [
-    188.6,
-    152.0,
-    408.8,
-    470.3
+    188.0,
+    155.0,
+    409.5,
+    468.5
    ],
    "id": "0625_2021FM_52_q03e_fig3-2",
    "part": "(e)",
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-FM/p52/q03/figures/0625_2021FM_52_q03e_fig3-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-FM/p52/q03/figures/0625_2021FM_52_q03e_fig3-2",
     "url": null,
-    "kb": 14.7
+    "kb": 14.6
    }
   }
  ],
@@ -235,37 +235,9 @@
        "text": "Repeat the steps in (a)(i) for VL = 1.0 V and VL = 0.5 V."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>V</i><sub>L</sub> / V",
-         "<i>I</i> / A",
-         "<i>V</i><sub>R</sub> / V",
-         "<i>R</i><sub>L</sub> / Ω",
-         "<i>R</i><sub>R</sub> / Ω"
-        ],
-        [
-         "2.0",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "1.0",
-         "",
-         "",
-         "",
-         ""
-        ],
-        [
-         "0.5",
-         "",
-         "",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2021FM_52_q03aii_table3-1",
+       "caption": "Table 3.1"
       },
       {
        "type": "marks",
@@ -337,7 +309,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate, and record in Table 3.1, the resistance of the lamp <i>R</i><sub>L</sub> for each value of <i>V</i><sub>L</sub>. Use your values of <i>V</i><sub>L</sub> and <i>I</i> from Table 3.1 and the equation <i>R</i><sub>L</sub> = \\(\\frac{<i>V</i><sub>L</sub>}{<i>I</i>}\\). Calculate, and record in Table 3.1, the resistance of the resistor <i>R</i><sub>R</sub> for each value of <i>V</i><sub>L</sub>. Use your values of <i>V</i><sub>R</sub> and <i>I</i> from Table 3.1 and the equation <i>R</i><sub>R</sub> = \\(\\frac{<i>V</i><sub>R</sub>}{<i>I</i>}\\).",
+     "html": "Calculate, and record in Table 3.1, the resistance of the lamp <i>R</i><sub>L</sub> for each value of <i>V</i><sub>L</sub>. Use your values of <i>V</i><sub>L</sub> and <i>I</i> from Table 3.1 and the equation <i>R</i><sub>L</sub> = \\(\\frac{V_{L}}{I}\\). Calculate, and record in Table 3.1, the resistance of the resistor <i>R</i><sub>R</sub> for each value of <i>V</i><sub>L</sub>. Use your values of <i>V</i><sub>R</sub> and <i>I</i> from Table 3.1 and the equation <i>R</i><sub>R</sub> = \\(\\frac{V_{R}}{I}\\).",
      "text": "Calculate, and record in Table 3.1, the resistance of the lamp RL for each value of VL. Use your values of VL and I from Table 3.1 and the equation RL = (VL)/(I). Calculate, and record in Table 3.1, the resistance of the resistor RR for each value of VL. Use your values of VR and I from Table 3.1 and the equation RR = (VR)/(I)."
     },
     {
@@ -412,7 +384,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 3
     },
     {
@@ -591,6 +572,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

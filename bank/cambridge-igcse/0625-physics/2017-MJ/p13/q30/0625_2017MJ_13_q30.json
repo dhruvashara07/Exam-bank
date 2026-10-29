@@ -35,7 +35,7 @@
     168.1,
     403.0,
     426.1,
-    502.5
+    503.0
    ],
    "id": "0625_2017MJ_13_q30_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
-    535.1,
-    286.7,
-    660.7
+    67.5,
+    535.0,
+    287.0,
+    661.0
    ],
    "id": "0625_2017MJ_13_q30_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-MJ/p13/q30/figures/0625_2017MJ_13_q30_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-MJ/p13/q30/figures/0625_2017MJ_13_q30_figB",
     "url": null,
-    "kb": 20.3
+    "kb": 20.0
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The circuit diagram shows a simple circuit with a battery of electromotive force (e.m.f.) 6.0V and two bulbs each of resistance 2.0Ω.",
-   "text": "The circuit diagram shows a simple circuit with a battery of electromotive force (e.m.f.) 6.0V and two bulbs each of resistance 2.0Ω."
+   "html": "The circuit diagram shows a simple circuit with a battery of electromotive force (e.m.f.) 6.0 V and two bulbs each of resistance 2.0 Ω.",
+   "text": "The circuit diagram shows a simple circuit with a battery of electromotive force (e.m.f.) 6.0 V and two bulbs each of resistance 2.0 Ω."
   },
   {
    "type": "figure",
@@ -126,40 +127,30 @@
    "text": "Which row gives the readings on the ammeters?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "reading on",
-     "reading on"
-    ],
-    [
-     "",
-     "ammeter 1/A",
-     "ammeter 2/A"
-    ],
-    [
-     "<b>A</b>",
-     "1.5",
-     "0"
-    ],
-    [
-     "<b>B</b>",
-     "1.5",
-     "1.5"
-    ],
-    [
-     "<b>C</b>",
-     "3.0",
-     "0"
-    ],
-    [
-     "<b>D</b>",
-     "3.0",
-     "1.5"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017MJ_13_q30_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "1.5 0"
+    },
+    {
+     "label": "B",
+     "html": "1.5 1.5"
+    },
+    {
+     "label": "C",
+     "html": "3.0 0"
+    },
+    {
+     "label": "D",
+     "html": "3.0 1.5"
+    }
+   ]
   }
  ]
 }

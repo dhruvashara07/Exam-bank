@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 7,
    "bbox": [
-    200.3,
-    95.4,
-    394.9,
-    258.8
+    199.5,
+    97.5,
+    395.5,
+    259.0
    ],
    "id": "0625_2024MJ_62_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 7,
    "bbox": [
-    67.9,
-    409.3,
-    527.4,
-    580.0
+    67.0,
+    408.5,
+    528.0,
+    580.5
    ],
    "id": "0625_2024MJ_62_q02a_fig2-2",
    "part": "(a)",
@@ -71,10 +71,10 @@
    "caption": "Table 2.1",
    "page": 8,
    "bbox": [
-    46.6,
-    70.7,
-    547.9,
-    197.1
+    46.5,
+    71.5,
+    548.0,
+    197.5
    ],
    "id": "0625_2024MJ_62_q02a_table2-1",
    "part": "(a)",
@@ -90,10 +90,10 @@
    "caption": "Fig. 2.3",
    "page": 8,
    "bbox": [
-    167.3,
-    421.0,
-    427.9,
-    584.4
+    166.5,
+    423.5,
+    428.5,
+    584.5
    ],
    "id": "0625_2024MJ_62_q02c_fig2-3",
    "part": "(c)",
@@ -109,10 +109,10 @@
    "caption": "Fig. 2.4",
    "page": 8,
    "bbox": [
-    145.2,
-    625.1,
-    450.1,
-    782.5
+    144.5,
+    627.5,
+    450.5,
+    783.0
    ],
    "id": "0625_2024MJ_62_q02c_fig2-4",
    "part": "(c)",
@@ -246,33 +246,9 @@
      "height_pt": 66.6
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "resistance between X and Y / Ω",
-       "<i>V</i> / V",
-       "<i>I</i> / A",
-       "<i>R</i> / Ω"
-      ],
-      [
-       "10",
-       "",
-       "",
-       ""
-      ],
-      [
-       "13",
-       "0.83",
-       "0.27",
-       ""
-      ],
-      [
-       "20",
-       "0.81",
-       "",
-       "4.5"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2024MJ_62_q02a_table2-1",
+     "caption": "Table 2.1"
     },
     {
      "type": "marks",
@@ -345,8 +321,8 @@
     },
     {
      "type": "text",
-     "html": "Use the equation <i>R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\).",
-     "text": "Use the equation R = (V)/(I)."
+     "html": "Use the equation <i>R</i> = \\(\\frac{V}{I}\\) .",
+     "text": "Use the equation R = (V)/(I) ."
     },
     {
      "type": "text",
@@ -825,14 +801,18 @@
      "text": "Draw the electrical symbol for the device."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "name of device"
+    },
+    {
      "type": "text",
      "html": "electrical symbol",
      "text": "electrical symbol"
     },
     {
      "type": "answer",
-     "kind": "answer_line",
-     "prefix": "name of device"
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -858,6 +838,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

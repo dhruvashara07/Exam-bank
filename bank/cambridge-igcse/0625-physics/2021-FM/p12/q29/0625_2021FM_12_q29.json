@@ -33,9 +33,9 @@
    "page": 11,
    "bbox": [
     79.3,
-    443.2,
-    515.1,
-    570.9
+    442.5,
+    515.0,
+    571.5
    ],
    "id": "0625_2021FM_12_q29_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-FM/p12/q29/figures/0625_2021FM_12_q29_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-FM/p12/q29/figures/0625_2021FM_12_q29_figA",
     "url": null,
-    "kb": 23.7
+    "kb": 23.6
    }
   },
   {
    "page": 11,
    "bbox": [
-    67.7,
+    67.5,
     603.5,
-    331.4,
-    714.8
+    331.5,
+    715.0
    ],
    "id": "0625_2021FM_12_q29_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which combination of charges would cause the change in the balance reading shown?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>A</b>",
-     "negative charge",
-     "negative charge"
-    ],
-    [
-     "<b>B</b>",
-     "negative charge",
-     "positive charge"
-    ],
-    [
-     "<b>C</b>",
-     "negative charge",
-     "no charge"
-    ],
-    [
-     "<b>D</b>",
-     "positive charge",
-     "no charge"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021FM_12_q29_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "negative charge negative charge"
+    },
+    {
+     "label": "B",
+     "html": "negative charge positive charge"
+    },
+    {
+     "label": "C",
+     "html": "negative charge no charge"
+    },
+    {
+     "label": "D",
+     "html": "positive charge no charge"
+    }
+   ]
   }
  ]
 }

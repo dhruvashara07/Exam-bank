@@ -9,10 +9,10 @@
    "caption": "Fig. 4.1",
    "page": 7,
    "bbox": [
-    179.0,
-    176.3,
-    416.4,
-    361.9
+    179.5,
+    175.5,
+    415.5,
+    362.0
    ],
    "id": "0625_2024ON_33_q04b_fig4-1",
    "part": "(b)",
@@ -191,10 +191,13 @@
      ],
      "content": [
       {
+       "type": "text",
+       "html": "The type of energy stored in the battery is …… energy.",
+       "text": "The type of energy stored in the battery is …… energy."
+      },
+      {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(i) The type of energy stored in the battery is",
-       "unit": "energy."
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -261,13 +264,12 @@
      "content": [
       {
        "type": "text",
-       "html": "energy.",
-       "text": "energy."
+       "html": "The type of energy stored in the stop-watch’s second hand is …… energy.",
+       "text": "The type of energy stored in the stop-watch’s second hand is …… energy."
       },
       {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(ii) The type of energy stored in the stop-watch’s second hand is"
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -334,18 +336,12 @@
      "content": [
       {
        "type": "text",
-       "html": "The stop-watch has a bell.",
-       "text": "The stop-watch has a bell."
-      },
-      {
-       "type": "text",
-       "html": "energy.",
-       "text": "energy."
+       "html": "The stop-watch has a bell. When the bell rings, energy is transferred to the surroundings as …… energy.",
+       "text": "The stop-watch has a bell. When the bell rings, energy is transferred to the surroundings as …… energy."
       },
       {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "When the bell rings, energy is transferred to the surroundings as"
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -390,5 +386,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

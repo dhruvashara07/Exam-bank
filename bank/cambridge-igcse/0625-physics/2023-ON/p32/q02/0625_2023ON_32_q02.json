@@ -9,10 +9,10 @@
    "caption": "Fig. 2.1",
    "page": 3,
    "bbox": [
-    147.1,
-    133.8,
-    448.2,
-    321.2
+    146.5,
+    133.0,
+    449.0,
+    319.5
    ],
    "id": "0625_2023ON_32_q02b_fig2-1",
    "part": "(b)",
@@ -28,10 +28,10 @@
    "caption": "Fig. 2.2",
    "page": 3,
    "bbox": [
-    147.1,
-    438.8,
-    448.2,
-    626.2
+    146.5,
+    438.0,
+    449.0,
+    624.5
    ],
    "id": "0625_2023ON_32_q02bii_fig2-2",
    "part": "(b)(ii)",
@@ -40,7 +40,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p32/q02/figures/0625_2023ON_32_q02bii_fig2-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p32/q02/figures/0625_2023ON_32_q02bii_fig2-2",
     "url": null,
-    "kb": 24.3
+    "kb": 24.2
    }
   }
  ],
@@ -296,31 +296,6 @@
        "caption": "Fig. 2.2"
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "chemical",
-         "",
-         "kinetic"
-        ],
-        [
-         "energy",
-         "",
-         "energy"
-        ],
-        [
-         "store",
-         "",
-         "store"
-        ],
-        [
-         "100%",
-         "",
-         "70%"
-        ]
-       ]
-      },
-      {
        "type": "text",
        "html": "Using the information in Fig. 2.1 and Fig. 2.2, state which car is more efficient. Give a reason for your answer.",
        "text": "Using the information in Fig. 2.1 and Fig. 2.2, state which car is more efficient. Give a reason for your answer."
@@ -328,7 +303,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "reason",
+       "prefix": "car"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "reason"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -369,5 +353,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 10,
    "bbox": [
-    52.4,
-    111.7,
-    542.9,
-    267.7
+    52.5,
+    114.0,
+    542.5,
+    268.0
    ],
    "id": "0625_2025ON_53_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 3.1",
    "page": 10,
    "bbox": [
-    188.2,
-    562.9,
-    407.2,
-    725.1
+    188.0,
+    563.5,
+    407.5,
+    725.5
    ],
    "id": "0625_2025ON_53_q03aii_table3-1",
    "part": "(a)(ii)",
@@ -142,9 +142,15 @@
        "text": "Measure the height hO of the triangular object provided."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "hO =",
+       "unit": "cm"
+      },
+      {
        "type": "list",
        "items": [
-        "Place the lens a distance u = 20.0cm from the illuminated triangular object.",
+        "Place the lens a distance u = 20.0 cm from the illuminated triangular object.",
         "Place the screen close to the lens.",
         "Switch on the lamp.",
         "Move the screen away from the lens until a clear focused image of the triangular object is seen on the screen.",
@@ -155,13 +161,6 @@
        "type": "text",
        "html": "Describe <b>one</b> technique you used to produce an image on the screen which is as sharp as possible in this experiment.",
        "text": "Describe one technique you used to produce an image on the screen which is as sharp as possible in this experiment."
-      },
-      {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "hO =",
-       "unit": "cm",
-       "lines": 2
       },
       {
        "type": "marks",
@@ -228,43 +227,13 @@
      "content": [
       {
        "type": "text",
-       "html": "Repeat the procedure for u = 25.0cm, u = 30.0cm, u = 35.0cm and u = 40.0cm. Switch off the lamp.",
-       "text": "Repeat the procedure for u = 25.0cm, u = 30.0cm, u = 35.0cm and u = 40.0cm. Switch off the lamp."
+       "html": "Repeat the procedure for u = 25.0 cm, u = 30.0 cm, u = 35.0 cm and u = 40.0 cm. Switch off the lamp.",
+       "text": "Repeat the procedure for u = 25.0 cm, u = 30.0 cm, u = 35.0 cm and u = 40.0 cm. Switch off the lamp."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "u/cm",
-         "h<sub>I</sub>/cm",
-         "1 D/ cm"
-        ],
-        [
-         "20.0",
-         "",
-         ""
-        ],
-        [
-         "25.0",
-         "",
-         ""
-        ],
-        [
-         "30.0",
-         "",
-         ""
-        ],
-        [
-         "35.0",
-         "",
-         ""
-        ],
-        [
-         "40.0",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2025ON_53_q03aii_table3-1",
+       "caption": "Table 3.1"
       },
       {
        "type": "marks",
@@ -415,8 +384,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of u/cm (y-axis) against D/\\(\\frac{1}{cm}\\) (x-axis). Start the <b>axes</b> at the origin (0,0).",
-     "text": "Plot a graph of u/cm (y-axis) against D/(1)/(cm) (x-axis). Start the axes at the origin (0,0)."
+     "html": "Plot a graph of u / cm (y-axis) against D / \\(\\frac{1}{\\text{cm}}\\) (x-axis). Start the <b>axes</b> at the origin (0,0).",
+     "text": "Plot a graph of u / cm (y-axis) against D / (1)/(cm) (x-axis). Start the axes at the origin (0,0)."
     },
     {
      "type": "text",
@@ -656,8 +625,8 @@
       },
       {
        "type": "text",
-       "html": "f = \\(\\frac{G}{h<sub>O</sub>}\\) × k, where k = 1.0cm<sup>2</sup>.",
-       "text": "f = (G)/(hO) × k, where k = 1.0cm2."
+       "html": "f = \\(\\frac{G}{h_{O}}\\) × k, where k = 1.0 cm<sup>2</sup>.",
+       "text": "f = (G)/(hO) × k, where k = 1.0 cm2."
       },
       {
        "type": "answer",
@@ -744,7 +713,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "improvement",
+     "prefix": "difficulty"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "improvement"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -771,6 +749,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

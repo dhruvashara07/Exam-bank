@@ -32,10 +32,10 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    147.9,
-    367.8,
-    258.7
+    67.5,
+    147.5,
+    368.0,
+    259.0
    ],
    "id": "0625_2023MJ_11_q04_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p11/q04/figures/0625_2023MJ_11_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p11/q04/figures/0625_2023MJ_11_q04_figA",
     "url": null,
-    "kb": 27.6
+    "kb": 27.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "How do the mass and weight of the space rocket on the Moon compare with their values on the Earth?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass on the Moon",
-     "weight on the Moon"
-    ],
-    [
-     "<b>A</b>",
-     "less than on the Earth",
-     "same as on the Earth"
-    ],
-    [
-     "<b>B</b>",
-     "less than on the Earth",
-     "more than on the Earth"
-    ],
-    [
-     "<b>C</b>",
-     "same as on the Earth",
-     "less than on the Earth"
-    ],
-    [
-     "<b>D</b>",
-     "same as on the Earth",
-     "more than on the Earth"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_11_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "less than on the Earth same as on the Earth"
+    },
+    {
+     "label": "B",
+     "html": "less than on the Earth more than on the Earth"
+    },
+    {
+     "label": "C",
+     "html": "same as on the Earth less than on the Earth"
+    },
+    {
+     "label": "D",
+     "html": "same as on the Earth more than on the Earth"
+    }
+   ]
   }
  ]
 }

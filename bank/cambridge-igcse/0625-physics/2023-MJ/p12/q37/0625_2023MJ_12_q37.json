@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
+    67.5,
     198.5,
-    346.8,
-    309.8
+    347.0,
+    310.0
    ],
    "id": "0625_2023MJ_12_q37_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p12/q37/figures/0625_2023MJ_12_q37_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p12/q37/figures/0625_2023MJ_12_q37_figA",
     "url": null,
-    "kb": 28.4
+    "kb": 28.3
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row states a harmful effect and a beneficial effect of ionising radiation on living things?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "harmful effect",
-     "beneficial effect"
-    ],
-    [
-     "<b>A</b>",
-     "kills cancer cells",
-     "kills cancer cells"
-    ],
-    [
-     "<b>B</b>",
-     "kills cancer cells",
-     "mutates living cells"
-    ],
-    [
-     "<b>C</b>",
-     "mutates living cells",
-     "kills cancer cells"
-    ],
-    [
-     "<b>D</b>",
-     "mutates living cells",
-     "mutates living cells"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_12_q37_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "kills cancer cells kills cancer cells"
+    },
+    {
+     "label": "B",
+     "html": "kills cancer cells mutates living cells"
+    },
+    {
+     "label": "C",
+     "html": "mutates living cells kills cancer cells"
+    },
+    {
+     "label": "D",
+     "html": "mutates living cells mutates living cells"
+    }
+   ]
   }
  ]
 }

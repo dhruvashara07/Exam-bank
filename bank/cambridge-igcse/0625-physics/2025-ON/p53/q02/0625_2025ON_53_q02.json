@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 6,
    "bbox": [
-    67.9,
-    137.5,
-    527.9,
-    410.1
+    67.5,
+    137.0,
+    527.5,
+    410.5
    ],
    "id": "0625_2025ON_53_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 6,
    "bbox": [
-    160.3,
-    575.4,
-    435.1,
-    686.5
+    160.0,
+    576.0,
+    435.0,
+    687.0
    ],
    "id": "0625_2025ON_53_q02a_table2-1",
    "part": "(a)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p53/q02/figures/0625_2025ON_53_q02a_table2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p53/q02/figures/0625_2025ON_53_q02a_table2-1",
     "url": null,
-    "kb": 21.3
+    "kb": 21.2
    }
   }
  ],
@@ -175,35 +175,6 @@
      "caption": "Table 2.1"
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "circuit",
-       "V/V",
-       "I/A",
-       "R/Ω"
-      ],
-      [
-       "A",
-       "",
-       "",
-       ""
-      ],
-      [
-       "B",
-       "",
-       "",
-       ""
-      ],
-      [
-       "C",
-       "",
-       "",
-       ""
-      ]
-     ]
-    },
-    {
      "type": "marks",
      "value": 2
     },
@@ -219,8 +190,8 @@
     },
     {
      "type": "text",
-     "html": "Connect crocodile clip B to a length l = 95.0cm of resistance wire B. It does not matter if crocodile clip A and crocodile clip B touch. Wire A and wire B are now connected in parallel.",
-     "text": "Connect crocodile clip B to a length l = 95.0cm of resistance wire B. It does not matter if crocodile clip A and crocodile clip B touch. Wire A and wire B are now connected in parallel."
+     "html": "Connect crocodile clip B to a length l = 95.0 cm of resistance wire B. It does not matter if crocodile clip A and crocodile clip B touch. Wire A and wire B are now connected in parallel.",
+     "text": "Connect crocodile clip B to a length l = 95.0 cm of resistance wire B. It does not matter if crocodile clip A and crocodile clip B touch. Wire A and wire B are now connected in parallel."
     }
    ]
   },
@@ -298,8 +269,8 @@
     },
     {
      "type": "text",
-     "html": "Connect crocodile clip C to a length l = 95.0cm of resistance wire C. It does not matter if the crocodile clips touch. Wire A, wire B and wire C are now connected in parallel.",
-     "text": "Connect crocodile clip C to a length l = 95.0cm of resistance wire C. It does not matter if the crocodile clips touch. Wire A, wire B and wire C are now connected in parallel."
+     "html": "Connect crocodile clip C to a length l = 95.0 cm of resistance wire C. It does not matter if the crocodile clips touch. Wire A, wire B and wire C are now connected in parallel.",
+     "text": "Connect crocodile clip C to a length l = 95.0 cm of resistance wire C. It does not matter if the crocodile clips touch. Wire A, wire B and wire C are now connected in parallel."
     },
     {
      "type": "marks",
@@ -519,6 +490,12 @@
        "text": "Record a resistance RA. RA is the value of R from Circuit A."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "RA =",
+       "unit": "Ω"
+      },
+      {
        "type": "text",
        "html": "Calculate a resistance R<sub>B</sub>. Use the value of R from Circuit B and the equation:",
        "text": "Calculate a resistance RB. Use the value of R from Circuit B and the equation:"
@@ -527,6 +504,12 @@
        "type": "text",
        "html": "R<sub>B</sub> = R × 2",
        "text": "RB = R × 2"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "RB =",
+       "unit": "Ω"
       },
       {
        "type": "text",
@@ -621,7 +604,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -692,8 +684,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Briefly explain why resistor R<sub>P</sub>, shown in Fig. 2.1, must remain in place throughout the experiment.",
-     "text": "Briefly explain why resistor RP, shown in Fig. 2.1, must remain in place throughout the experiment."
+     "html": "Briefly explain why resistor R<sub>P</sub> , shown in Fig. 2.1, must remain in place throughout the experiment.",
+     "text": "Briefly explain why resistor RP , shown in Fig. 2.1, must remain in place throughout the experiment."
     },
     {
      "type": "answer",
@@ -724,6 +716,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -752,8 +745,8 @@
   },
   {
    "type": "text",
-   "html": "Move crocodile clip A to a length l = 95.0cm of resistance wire A.",
-   "text": "Move crocodile clip A to a length l = 95.0cm of resistance wire A."
+   "html": "Move crocodile clip A to a length l = 95.0 cm of resistance wire A.",
+   "text": "Move crocodile clip A to a length l = 95.0 cm of resistance wire A."
   }
  ]
 }

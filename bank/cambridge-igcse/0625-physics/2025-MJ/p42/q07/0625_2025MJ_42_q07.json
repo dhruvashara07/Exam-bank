@@ -340,8 +340,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Define the kilowatt-hour (kWh) in words.",
-       "text": "Define the kilowatt-hour (kWh) in words."
+       "html": "Define the kilowatt-hour (kW h) in words.",
+       "text": "Define the kilowatt-hour (kW h) in words."
       },
       {
        "type": "answer",
@@ -416,13 +416,19 @@
      "content": [
       {
        "type": "text",
-       "html": "A small lamp illuminates an electric oven. The lamp has an output power of 25W and operates for 220 hours in one year. The p.d. across the lamp is 230V.",
-       "text": "A small lamp illuminates an electric oven. The lamp has an output power of 25W and operates for 220 hours in one year. The p.d. across the lamp is 230V."
+       "html": "A small lamp illuminates an electric oven. The lamp has an output power of 25 W and operates for 220 hours in one year. The p.d. across the lamp is 230 V.",
+       "text": "A small lamp illuminates an electric oven. The lamp has an output power of 25 W and operates for 220 hours in one year. The p.d. across the lamp is 230 V."
       },
       {
        "type": "text",
-       "html": "1. Calculate the energy transferred by the lamp in one year. Give your answer in kWh.",
-       "text": "1. Calculate the energy transferred by the lamp in one year. Give your answer in kWh."
+       "html": "1. Calculate the energy transferred by the lamp in one year. Give your answer in kW h.",
+       "text": "1. Calculate the energy transferred by the lamp in one year. Give your answer in kW h."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "energy =",
+       "unit": "kW h"
       },
       {
        "type": "text",
@@ -460,5 +466,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

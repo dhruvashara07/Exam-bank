@@ -32,10 +32,10 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    577.9,
-    319.6,
-    703.3
+    67.5,
+    577.5,
+    319.5,
+    703.5
    ],
    "id": "0625_2025MJ_11_q10_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p11/q10/figures/0625_2025MJ_11_q10_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p11/q10/figures/0625_2025MJ_11_q10_figA",
     "url": null,
-    "kb": 23.6
+    "kb": 23.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which pair of changes, applied at the same time, always increases the pressure that a brick exerts on the ground?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "weight of brick",
-     "area of brick in contact with ground"
-    ],
-    [
-     "<b>A</b>",
-     "increase",
-     "increase"
-    ],
-    [
-     "<b>B</b>",
-     "increase",
-     "decrease"
-    ],
-    [
-     "<b>C</b>",
-     "decrease",
-     "increase"
-    ],
-    [
-     "<b>D</b>",
-     "decrease",
-     "decrease"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_11_q10_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "increase increase"
+    },
+    {
+     "label": "B",
+     "html": "increase decrease"
+    },
+    {
+     "label": "C",
+     "html": "decrease increase"
+    },
+    {
+     "label": "D",
+     "html": "decrease decrease"
+    }
+   ]
   }
  ]
 }

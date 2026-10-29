@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    400.1,
-    297.2,
-    525.1
+    67.5,
+    400.0,
+    297.5,
+    525.0
    ],
    "id": "0625_2022MJ_13_q08_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p13/q08/figures/0625_2022MJ_13_q08_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p13/q08/figures/0625_2022MJ_13_q08_figA",
     "url": null,
-    "kb": 19.5
+    "kb": 19.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which object is most stable?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "base area",
-     "position of centre of mass"
-    ],
-    [
-     "<b>A</b>",
-     "large",
-     "high"
-    ],
-    [
-     "<b>B</b>",
-     "large",
-     "low"
-    ],
-    [
-     "<b>C</b>",
-     "small",
-     "high"
-    ],
-    [
-     "<b>D</b>",
-     "small",
-     "low"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022MJ_13_q08_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "large high"
+    },
+    {
+     "label": "B",
+     "html": "large low"
+    },
+    {
+     "label": "C",
+     "html": "small high"
+    },
+    {
+     "label": "D",
+     "html": "small low"
+    }
+   ]
   }
  ]
 }

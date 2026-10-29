@@ -33,10 +33,10 @@
    "caption": "Figure 2.1",
    "page": 4,
    "bbox": [
-    69.3,
-    111.3,
-    475.6,
-    266.7
+    70.0,
+    110.5,
+    475.0,
+    267.0
    ],
    "id": "0625_2026MJ_51_q02_fig2-1",
    "part": "",
@@ -201,14 +201,14 @@
        "text": "Measure the potential difference (p.d.) V1 across the resistance wire connected between B and C. Include the unit."
       },
       {
-       "type": "text",
-       "html": "Open the switch.",
-       "text": "Open the switch."
-      },
-      {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "V1 ="
+      },
+      {
+       "type": "text",
+       "html": "Open the switch.",
+       "text": "Open the switch."
       },
       {
        "type": "marks",
@@ -280,7 +280,7 @@
       },
       {
        "type": "text",
-       "html": "R<sub>1</sub> = \\(\\frac{V<sub>1</sub>}{I}\\).",
+       "html": "R<sub>1</sub> = \\(\\frac{V_{1}}{I}\\).",
        "text": "R1 = (V1)/(I)."
       },
       {
@@ -359,8 +359,8 @@
      "content": [
       {
        "type": "text",
-       "html": "The length of the resistance wire is 50cm.",
-       "text": "The length of the resistance wire is 50cm."
+       "html": "The length of the resistance wire is 50 cm.",
+       "text": "The length of the resistance wire is 50 cm."
       },
       {
        "type": "text",
@@ -369,14 +369,14 @@
       },
       {
        "type": "text",
-       "html": "r = \\(\\frac{R<sub>1</sub>}{50cm}\\).",
+       "html": "r = \\(\\frac{R_{1}}{50 \\text{cm}}\\).",
        "text": "r = (R1)/(50cm)."
       },
       {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "r =",
-       "unit": "Ω/cm"
+       "unit": "Ω / cm"
       },
       {
        "type": "marks",
@@ -478,6 +478,11 @@
        "type": "text",
        "html": "Record the number of whole turns N of wire on the rod.",
        "text": "Record the number of whole turns N of wire on the rod."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "N ="
       },
       {
        "type": "text",
@@ -683,19 +688,24 @@
        "text": "Measure the current I2 in the circuit."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "I2 ="
+      },
+      {
        "type": "text",
        "html": "Measure the potential difference (p.d.) V<sub>2</sub> across the resistance wire on the rod.",
        "text": "Measure the potential difference (p.d.) V2 across the resistance wire on the rod."
       },
       {
-       "type": "text",
-       "html": "Open the switch.",
-       "text": "Open the switch."
-      },
-      {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "V2 ="
+      },
+      {
+       "type": "text",
+       "html": "Open the switch.",
+       "text": "Open the switch."
       },
       {
        "type": "marks",
@@ -767,7 +777,7 @@
       },
       {
        "type": "text",
-       "html": "R<sub>2</sub> = \\(\\frac{V<sub>2</sub>}{I}\\).",
+       "html": "R<sub>2</sub> = \\(\\frac{V_{2}}{I}\\).",
        "text": "R2 = (V2)/(I)."
       },
       {
@@ -876,7 +886,7 @@
     },
     {
      "type": "text",
-     "html": "l<sub>2</sub> = \\(\\frac{R<sub>2</sub>}{r}\\).",
+     "html": "l<sub>2</sub> = \\(\\frac{R_{2}}{r}\\).",
      "text": "l2 = (R2)/(r)."
     },
     {
@@ -972,7 +982,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "reason",
+     "prefix": "suggestion"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "reason"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -999,6 +1018,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

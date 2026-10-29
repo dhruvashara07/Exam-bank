@@ -118,6 +118,10 @@ def main():
                      ('paper', ASCENDING), ('variant', ASCENDING), ('number', ASCENDING)])
     qc.create_index('paper_id'); qc.create_index('type'); qc.create_index('topic'); qc.create_index('keywords')
     qc.create_index([('search', TEXT)])
+    stamp = now.strftime('%Y-%m-%dT%H:%MZ')
+    pub = {pid: {'approved_at': a.get('at'), 'synced_at': stamp} for pid, a in appr.items()}
+    with open(paths.PUBLISHED, 'w') as f:       # the tracker's 'published' stage (committed by the Action)
+        json.dump(dict(sorted(pub.items())), f, indent=1)
     msg = f'MongoDB: {len(papers)} papers, {n} questions synced, {gone} removed (database {db.name})'
     print(msg)
     if os.environ.get('GITHUB_ACTIONS'):

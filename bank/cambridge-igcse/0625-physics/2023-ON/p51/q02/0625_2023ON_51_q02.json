@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    106.3,
-    111.3,
-    489.0,
-    309.6
+    107.0,
+    110.5,
+    488.5,
+    308.0
    ],
    "id": "0625_2023ON_51_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 5,
    "bbox": [
-    115.1,
-    84.0,
-    480.2,
-    211.2
+    115.0,
+    87.5,
+    480.5,
+    211.5
    ],
    "id": "0625_2023ON_51_q02aiv_table2-1",
    "part": "(a)(iv)",
@@ -218,7 +218,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Place the sliding contact <b>C</b> at a distance <i>l</i> = 20.0 cm from <b>B</b>. Measure, and record in Table 2.1, the potential difference (p.d.) <i>V</i> across length <i>l</i> of the resistance wire. Calculate, and record in Table 2.1, the resistance <i>R</i> of 20.0 cm of the resistance wire. Use the equation <i>R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\) . Repeat the procedure using <i>l</i> = 60.0 cm and <i>l</i> = 100.0 cm. Open the switch.",
+       "html": "Place the sliding contact <b>C</b> at a distance <i>l</i> = 20.0 cm from <b>B</b>. Measure, and record in Table 2.1, the potential difference (p.d.) <i>V</i> across length <i>l</i> of the resistance wire. Calculate, and record in Table 2.1, the resistance <i>R</i> of 20.0 cm of the resistance wire. Use the equation <i>R</i> = \\(\\frac{V}{I}\\) . Repeat the procedure using <i>l</i> = 60.0 cm and <i>l</i> = 100.0 cm. Open the switch.",
        "text": "Place the sliding contact C at a distance l = 20.0 cm from B. Measure, and record in Table 2.1, the potential difference (p.d.) V across length l of the resistance wire. Calculate, and record in Table 2.1, the resistance R of 20.0 cm of the resistance wire. Use the equation R = (V)/(I) . Repeat the procedure using l = 60.0 cm and l = 100.0 cm. Open the switch."
       },
       {
@@ -286,7 +286,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate, and record in Table 2.1, \\(\\frac{<i>R</i>}{<i>l</i>}\\) for each value of <i>l</i>.",
+       "html": "Calculate, and record in Table 2.1, \\(\\frac{R}{l}\\) for each value of <i>l</i>.",
        "text": "Calculate, and record in Table 2.1, (R)/(l) for each value of l."
       },
       {
@@ -359,33 +359,9 @@
        "text": "Complete the column headings in Table 2.1."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>l</i> /",
-         "<i>V</i> /",
-         "<i>R</i> /",
-         "R / <i>l</i>"
-        ],
-        [
-         "20.0",
-         "",
-         "",
-         ""
-        ],
-        [
-         "60.0",
-         "",
-         "",
-         ""
-        ],
-        [
-         "100.0",
-         "",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2023ON_51_q02aiv_table2-1",
+       "caption": "Table 2.1"
       },
       {
        "type": "marks",
@@ -577,7 +553,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Look carefully at the values of \\(\\frac{<i>R</i>}{<i>l</i>}\\) in Table 2.1.",
+     "html": "Look carefully at the values of \\(\\frac{R}{l}\\) in Table 2.1.",
      "text": "Look carefully at the values of (R)/(l) in Table 2.1."
     }
    ]
@@ -674,6 +650,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

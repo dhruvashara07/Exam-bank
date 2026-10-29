@@ -9,10 +9,10 @@
    "caption": "Table 5.1",
    "page": 10,
    "bbox": [
-    100.3,
-    138.8,
-    495.1,
-    347.5
+    100.0,
+    139.5,
+    495.0,
+    348.0
    ],
    "id": "0625_2025ON_33_q05a_table5-1",
    "part": "(a)",
@@ -21,7 +21,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p33/q05/figures/0625_2025ON_33_q05a_table5-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p33/q05/figures/0625_2025ON_33_q05a_table5-1",
     "url": null,
-    "kb": 42.7
+    "kb": 42.6
    }
   }
  ],
@@ -106,39 +106,9 @@
      "text": "For each energy resource, complete Table 5.1 by writing yes or no in each space. The solar energy resource has been done for you."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "energy resource",
-       "is it renewable?",
-       "does it cause air pollution?"
-      ],
-      [
-       "solar",
-       "yes",
-       "no"
-      ],
-      [
-       "fossil fuels",
-       "",
-       ""
-      ],
-      [
-       "wind",
-       "",
-       ""
-      ],
-      [
-       "nuclear fuel",
-       "",
-       ""
-      ],
-      [
-       "tidal",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2025ON_33_q05a_table5-1",
+     "caption": "Table 5.1"
     },
     {
      "type": "marks",
@@ -310,13 +280,13 @@
      "content": [
       {
        "type": "text",
-       "html": "A frequency of visible light for a solar cell is 6.0 × 10<sup>14</sup>Hz.",
-       "text": "A frequency of visible light for a solar cell is 6.0 × 1014Hz."
+       "html": "A frequency of visible light for a solar cell is 6.0 × 10<sup>14</sup> Hz.",
+       "text": "A frequency of visible light for a solar cell is 6.0 × 1014 Hz."
       },
       {
        "type": "text",
-       "html": "The speed of visible light is 3.0 × 10<sup>8</sup>m/s.",
-       "text": "The speed of visible light is 3.0 × 108m/s."
+       "html": "The speed of visible light is 3.0 × 10<sup>8</sup> m / s.",
+       "text": "The speed of visible light is 3.0 × 108 m / s."
       },
       {
        "type": "text",
@@ -416,7 +386,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "region"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "use of the region"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -441,5 +420,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

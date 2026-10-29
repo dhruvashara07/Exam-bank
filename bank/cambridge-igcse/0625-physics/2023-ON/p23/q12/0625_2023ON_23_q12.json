@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
+    67.5,
     413.5,
-    299.3,
-    553.1
+    299.5,
+    553.5
    ],
    "id": "0625_2023ON_23_q12_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p23/q12/figures/0625_2023ON_23_q12_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p23/q12/figures/0625_2023ON_23_q12_figA",
     "url": null,
-    "kb": 27.7
+    "kb": 27.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "What is the effect on the average speed of the air particles in the bottle and the average distance between them?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "average speed of air particles",
-     "average distance between air particles"
-    ],
-    [
-     "<b>A</b>",
-     "decreases",
-     "decreases"
-    ],
-    [
-     "<b>B</b>",
-     "decreases",
-     "stays the same"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "increases"
-    ],
-    [
-     "<b>D</b>",
-     "increases",
-     "stays the same"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_23_q12_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases decreases"
+    },
+    {
+     "label": "B",
+     "html": "decreases stays the same"
+    },
+    {
+     "label": "C",
+     "html": "increases increases"
+    },
+    {
+     "label": "D",
+     "html": "increases stays the same"
+    }
+   ]
   }
  ]
 }

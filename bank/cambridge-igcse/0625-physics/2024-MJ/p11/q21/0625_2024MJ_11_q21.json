@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    122.6,
-    432.9,
-    233.9
+    67.5,
+    122.5,
+    433.0,
+    234.0
    ],
    "id": "0625_2024MJ_11_q21_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p11/q21/figures/0625_2024MJ_11_q21_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p11/q21/figures/0625_2024MJ_11_q21_figA",
     "url": null,
-    "kb": 27.4
+    "kb": 27.3
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row gives a use and a harmful effect for infrared?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "use",
-     "harmful effect"
-    ],
-    [
-     "<b>A</b>",
-     "detection of cancer",
-     "mutations"
-    ],
-    [
-     "<b>B</b>",
-     "intruder alarms",
-     "skin burns"
-    ],
-    [
-     "<b>C</b>",
-     "detection of fake bank notes",
-     "cell damage"
-    ],
-    [
-     "<b>D</b>",
-     "thermal imaging",
-     "internal heating of body cells"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_11_q21_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "detection of cancer mutations"
+    },
+    {
+     "label": "B",
+     "html": "intruder alarms skin burns"
+    },
+    {
+     "label": "C",
+     "html": "detection of fake bank notes cell damage"
+    },
+    {
+     "label": "D",
+     "html": "thermal imaging internal heating of body cells"
+    }
+   ]
   }
  ]
 }

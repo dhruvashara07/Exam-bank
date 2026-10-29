@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    116.1,
-    111.3,
-    479.1,
-    322.3
+    117.0,
+    110.5,
+    479.0,
+    320.5
    ],
    "id": "0625_2022MJ_61_q03_fig3-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p61/q03/figures/0625_2022MJ_61_q03_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p61/q03/figures/0625_2022MJ_61_q03_fig3-1",
     "url": null,
-    "kb": 23.3
+    "kb": 23.2
    }
   },
   {
    "caption": "Fig. 3.2",
    "page": 8,
    "bbox": [
-    130.6,
-    483.9,
-    464.6,
-    612.5
+    130.0,
+    483.0,
+    465.0,
+    611.0
    ],
    "id": "0625_2022MJ_61_q03b_fig3-2",
    "part": "(b)",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p61/q03/figures/0625_2022MJ_61_q03b_fig3-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p61/q03/figures/0625_2022MJ_61_q03b_fig3-2",
     "url": null,
-    "kb": 40.9
+    "kb": 40.8
    }
   },
   {
    "caption": "Fig. 3.3",
    "page": 8,
    "bbox": [
-    130.6,
-    483.9,
-    464.6,
-    612.5
+    130.0,
+    483.0,
+    465.0,
+    611.0
    ],
    "id": "0625_2022MJ_61_q03b_fig3-3",
    "part": "(b)",
@@ -83,17 +83,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-MJ/p61/q03/figures/0625_2022MJ_61_q03b_fig3-3.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-MJ/p61/q03/figures/0625_2022MJ_61_q03b_fig3-3",
     "url": null,
-    "kb": 40.9
+    "kb": 40.8
    }
   },
   {
    "caption": "Table 3.1",
    "page": 9,
    "bbox": [
-    166.9,
-    188.0,
-    428.3,
-    343.6
+    167.0,
+    191.5,
+    428.5,
+    344.0
    ],
    "id": "0625_2022MJ_61_q03dii_table3-1",
    "part": "(d)(ii)",
@@ -242,6 +242,11 @@
      "text": "The student measures the current I in the circuit. Record the current shown in Fig. 3.2."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "I ="
+    },
+    {
      "type": "figure",
      "id": "0625_2022MJ_61_q03b_fig3-2",
      "caption": "Fig. 3.2"
@@ -250,11 +255,6 @@
      "type": "figure",
      "id": "0625_2022MJ_61_q03b_fig3-3",
      "caption": "Fig. 3.3"
-    },
-    {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "I ="
     },
     {
      "type": "marks",
@@ -424,7 +424,7 @@
       },
       {
        "type": "text",
-       "html": "<i>R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\).",
+       "html": "<i>R</i> = \\(\\frac{V}{I}\\).",
        "text": "R = (V)/(I)."
       },
       {
@@ -496,39 +496,9 @@
        "text": "Complete the column headings in Table 3.1."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>l</i> / cm",
-         "<i>V</i> /",
-         "<i>R</i> /"
-        ],
-        [
-         "5.0",
-         "0.2",
-         "0.53"
-        ],
-        [
-         "25.0",
-         "0.8",
-         "2.11"
-        ],
-        [
-         "45.0",
-         "1.4",
-         "3.68"
-        ],
-        [
-         "65.0",
-         "2.0",
-         "5.26"
-        ],
-        [
-         "85.0",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2022MJ_61_q03dii_table3-1",
+       "caption": "Table 3.1"
       },
       {
        "type": "marks",
@@ -719,6 +689,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

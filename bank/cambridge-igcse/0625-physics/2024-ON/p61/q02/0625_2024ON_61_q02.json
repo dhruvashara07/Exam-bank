@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    69.2,
-    127.0,
-    526.2,
-    196.0
+    68.5,
+    126.5,
+    527.0,
+    196.5
    ],
    "id": "0625_2024ON_61_q02a_fig2-1",
    "part": "(a)",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 4,
    "bbox": [
-    83.5,
+    84.0,
     242.0,
-    511.9,
-    477.3
+    512.0,
+    477.5
    ],
    "id": "0625_2024ON_61_q02b_fig2-2",
    "part": "(b)",
@@ -71,10 +71,10 @@
    "caption": "Table 2.1",
    "page": 4,
    "bbox": [
-    166.9,
-    573.3,
+    166.5,
+    574.0,
     428.5,
-    785.8
+    786.0
    ],
    "id": "0625_2024ON_61_q02b_table2-1",
    "part": "(b)",
@@ -151,8 +151,8 @@
    "content": [
     {
      "type": "text",
-     "html": "The student uses a thermometer to measure room temperature θ<sub>R</sub>. Room temperature is 23°C. Show clearly, on Fig. 2.1, the reading θ<sub>R</sub>.",
-     "text": "The student uses a thermometer to measure room temperature θR. Room temperature is 23°C. Show clearly, on Fig. 2.1, the reading θR."
+     "html": "The student uses a thermometer to measure room temperature θ<sub>R</sub>. Room temperature is °C. Show clearly, on Fig. 2.1, the reading θ<sub>R</sub>.",
+     "text": "The student uses a thermometer to measure room temperature θR. Room temperature is °C. Show clearly, on Fig. 2.1, the reading θR."
     },
     {
      "type": "figure",
@@ -234,8 +234,8 @@
     },
     {
      "type": "text",
-     "html": "The student pours 200cm<sup>3</sup> of hot water into the metal container. She places the thermometer in the hot water in the container. She records the temperature at time t = 0. She immediately starts a stop-watch. She records the temperature in Table 2.1 at 30s intervals until she has seven sets of readings.",
-     "text": "The student pours 200cm3 of hot water into the metal container. She places the thermometer in the hot water in the container. She records the temperature at time t = 0. She immediately starts a stop-watch. She records the temperature in Table 2.1 at 30s intervals until she has seven sets of readings."
+     "html": "The student pours 200 cm<sup>3</sup> of hot water into the metal container. She places the thermometer in the hot water in the container. She records the temperature at time t = 0. She immediately starts a stop-watch. She records the temperature in Table 2.1 at 30 s intervals until she has seven sets of readings.",
+     "text": "The student pours 200 cm3 of hot water into the metal container. She places the thermometer in the hot water in the container. She records the temperature at time t = 0. She immediately starts a stop-watch. She records the temperature in Table 2.1 at 30 s intervals until she has seven sets of readings."
     },
     {
      "type": "text",
@@ -243,41 +243,9 @@
      "text": "Complete the column headings in Table 2.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "t/",
-       "θ/"
-      ],
-      [
-       "0",
-       "92"
-      ],
-      [
-       "0.5",
-       "86"
-      ],
-      [
-       "1.0",
-       "82"
-      ],
-      [
-       "1.5",
-       "79"
-      ],
-      [
-       "2.0",
-       "77"
-      ],
-      [
-       "2.5",
-       "75"
-      ],
-      [
-       "3.0",
-       "74"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2024ON_61_q02b_table2-1",
+     "caption": "Table 2.1"
     },
     {
      "type": "answer",
@@ -352,8 +320,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of temperature θ(y-axis) against time t (x-axis). Label your axes appropriately.",
-     "text": "Plot a graph of temperature θ(y-axis) against time t (x-axis). Label your axes appropriately."
+     "html": "Plot a graph of temperature θ (y-axis) against time t (x-axis). Label your axes appropriately.",
+     "text": "Plot a graph of temperature θ (y-axis) against time t (x-axis). Label your axes appropriately."
     },
     {
      "type": "text",
@@ -442,7 +410,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 3
     },
     {
@@ -616,6 +593,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

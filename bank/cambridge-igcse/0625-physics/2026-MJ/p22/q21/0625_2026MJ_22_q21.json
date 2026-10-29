@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    299.8,
-    327.2,
-    411.1
+    67.5,
+    299.5,
+    327.5,
+    411.5
    ],
    "id": "0625_2026MJ_22_q21_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p22/q21/figures/0625_2026MJ_22_q21_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p22/q21/figures/0625_2026MJ_22_q21_figA",
     "url": null,
-    "kb": 29.9
+    "kb": 29.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "Where, in relation to the retina, does the eye form an image of the tree, and which type of lens is used to correct the image?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b>location of image</b>",
-     "<b>type of lens</b>"
-    ],
-    [
-     "<b>A</b>",
-     "behind retina",
-     "converging"
-    ],
-    [
-     "<b>B</b>",
-     "behind retina",
-     "diverging"
-    ],
-    [
-     "<b>C</b>",
-     "in front of retina",
-     "converging"
-    ],
-    [
-     "<b>D</b>",
-     "in front of retina",
-     "diverging"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_22_q21_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "behind retina converging"
+    },
+    {
+     "label": "B",
+     "html": "behind retina diverging"
+    },
+    {
+     "label": "C",
+     "html": "in front of retina converging"
+    },
+    {
+     "label": "D",
+     "html": "in front of retina diverging"
+    }
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    153.9,
-    114.4,
+    154.0,
+    114.0,
     442.0,
-    528.8
+    529.0
    ],
    "id": "0625_2016ON_61_q02a_fig2-1",
    "part": "(a)",
@@ -225,8 +225,13 @@
        "text": "°C"
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "θC ="
+      },
+      {
        "type": "text",
-       "html": "Calculate the average temperature θ<sub>AV</sub> using the equation θ<sub>AV</sub> = \\(\\frac{θ<sub>H</sub> + θ<sub>C</sub>}{2}\\) .",
+       "html": "Calculate the average temperature θ<sub>AV</sub> using the equation θ<sub>AV</sub> = \\(\\frac{θ_{H} + θ_{C}}{2}\\) .",
        "text": "Calculate the average temperature θAV using the equation θAV = (θH + θC)/(2) ."
       },
       {
@@ -323,15 +328,14 @@
      "text": "°C"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θM ="
+    },
+    {
      "type": "text",
      "html": "State <b>one</b> precaution that you would take to ensure that the temperature readings are as reliable as possible.",
      "text": "State one precaution that you would take to ensure that the temperature readings are as reliable as possible."
-    },
-    {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "θM =",
-     "lines": 2
     },
     {
      "type": "marks",
@@ -494,9 +498,9 @@
      "text": "°C"
     },
     {
-     "type": "text",
-     "html": "°C",
-     "text": "°C"
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θH ="
     },
     {
      "type": "text",
@@ -504,20 +508,34 @@
      "text": "°C"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θC ="
+    },
+    {
      "type": "text",
      "html": "°C",
      "text": "°C"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θAV ="
+    },
+    {
+     "type": "text",
+     "html": "°C",
+     "text": "°C"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "θM ="
     },
     {
      "type": "text",
      "html": "Comment on whether the improvements made to the apparatus have significantly changed the value of the temperature θ<sub>M</sub>. Use the results to justify your answer.",
      "text": "Comment on whether the improvements made to the apparatus have significantly changed the value of the temperature θM. Use the results to justify your answer."
-    },
-    {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "θM =",
-     "lines": 3
     },
     {
      "type": "marks",
@@ -591,7 +609,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -617,6 +644,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

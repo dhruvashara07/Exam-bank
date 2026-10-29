@@ -32,9 +32,9 @@
   {
    "page": 14,
    "bbox": [
-    66.7,
-    240.9,
-    528.4,
+    66.5,
+    266.5,
+    528.5,
     383.4
    ],
    "id": "0625_2020FM_22_q28_figA",
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-FM/p22/q28/figures/0625_2020FM_22_q28_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-FM/p22/q28/figures/0625_2020FM_22_q28_figA",
     "url": null,
-    "kb": 357.3
+    "kb": 349.8
    }
   },
   {
    "page": 14,
    "bbox": [
-    67.7,
-    454.8,
+    67.5,
+    454.5,
     368.5,
-    579.8
+    580.0
    ],
    "id": "0625_2020FM_22_q28_figB",
    "caption": null,
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The diagram shows compressions and rarefactions in air as a sound wave moves from left to",
-   "text": "The diagram shows compressions and rarefactions in air as a sound wave moves from left to"
+   "html": "The diagram shows compressions and rarefactions in air as a sound wave moves from left to right.",
+   "text": "The diagram shows compressions and rarefactions in air as a sound wave moves from left to right."
   },
   {
    "type": "figure",
@@ -131,40 +132,30 @@
    "text": "What will happen to the number of particles in a region of rarefaction and in a region of compression?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "number of particles in",
-     "number of particles in"
-    ],
-    [
-     "",
-     "region of rarefaction",
-     "region of compression"
-    ],
-    [
-     "<b>A</b>",
-     "decrease",
-     "decrease"
-    ],
-    [
-     "<b>B</b>",
-     "decrease",
-     "increase"
-    ],
-    [
-     "<b>C</b>",
-     "increase",
-     "decrease"
-    ],
-    [
-     "<b>D</b>",
-     "increase",
-     "increase"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020FM_22_q28_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decrease decrease"
+    },
+    {
+     "label": "B",
+     "html": "decrease increase"
+    },
+    {
+     "label": "C",
+     "html": "increase decrease"
+    },
+    {
+     "label": "D",
+     "html": "increase increase"
+    }
+   ]
   }
  ]
 }

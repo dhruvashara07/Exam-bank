@@ -32,9 +32,9 @@
   {
    "page": 16,
    "bbox": [
-    186.4,
-    84.7,
-    409.1,
+    186.0,
+    84.5,
+    409.0,
     196.0
    ],
    "id": "0625_2017ON_22_q35_figA",
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-ON/p22/q35/figures/0625_2017ON_22_q35_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-ON/p22/q35/figures/0625_2017ON_22_q35_figA",
     "url": null,
-    "kb": 11.6
+    "kb": 11.4
    }
   },
   {
    "page": 16,
    "bbox": [
-    67.7,
-    227.9,
-    256.6,
-    339.3
+    67.5,
+    227.5,
+    256.5,
+    339.5
    ],
    "id": "0625_2017ON_22_q35_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -116,34 +117,9 @@
    "text": "An incomplete truth table for a NAND gate is shown."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "input P",
-     "input Q",
-     "output"
-    ],
-    [
-     "0",
-     "0",
-     "W"
-    ],
-    [
-     "0",
-     "1",
-     "X"
-    ],
-    [
-     "1",
-     "0",
-     "Y"
-    ],
-    [
-     "1",
-     "1",
-     "Z"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2017ON_22_q35_figA",
+   "caption": null
   },
   {
    "type": "text",
@@ -151,45 +127,30 @@
    "text": "What are the values of W, X, Y and Z?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "W",
-     "X",
-     "Y",
-     "Z"
-    ],
-    [
-     "<b>A</b>",
-     "0",
-     "0",
-     "0",
-     "1"
-    ],
-    [
-     "<b>B</b>",
-     "0",
-     "1",
-     "1",
-     "1"
-    ],
-    [
-     "<b>C</b>",
-     "1",
-     "0",
-     "0",
-     "0"
-    ],
-    [
-     "<b>D</b>",
-     "1",
-     "1",
-     "1",
-     "0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017ON_22_q35_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "0 0 0 1"
+    },
+    {
+     "label": "B",
+     "html": "0 1 1 1"
+    },
+    {
+     "label": "C",
+     "html": "1 0 0 0"
+    },
+    {
+     "label": "D",
+     "html": "1 1 1 0"
+    }
+   ]
   }
  ]
 }

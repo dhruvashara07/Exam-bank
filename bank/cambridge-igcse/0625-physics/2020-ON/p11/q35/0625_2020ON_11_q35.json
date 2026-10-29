@@ -35,7 +35,7 @@
     209.7,
     551.9,
     385.6,
-    614.1
+    614.0
    ],
    "id": "0625_2020ON_11_q35_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    646.1,
-    346.8,
-    771.6
+    67.5,
+    646.0,
+    347.0,
+    772.0
    ],
    "id": "0625_2020ON_11_q35_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p11/q35/figures/0625_2020ON_11_q35_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p11/q35/figures/0625_2020ON_11_q35_figB",
     "url": null,
-    "kb": 26.9
+    "kb": 26.7
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A transformer is needed to convert a supply of 240Va.c. into 4800Va.c..",
-   "text": "A transformer is needed to convert a supply of 240Va.c. into 4800Va.c.."
+   "html": "A transformer is needed to convert a supply of 240 V a.c. into 4800 V a.c..",
+   "text": "A transformer is needed to convert a supply of 240 V a.c. into 4800 V a.c.."
   },
   {
    "type": "figure",
@@ -126,40 +127,30 @@
    "text": "Which pair of coils would be suitable for this transformer?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "number of turns",
-     "number of turns"
-    ],
-    [
-     "",
-     "on primary coil <i>N</i><b><sub>P</sub></b>",
-     "on secondary coil <i>N</i><b><sub>S</sub></b>"
-    ],
-    [
-     "<b>A</b>",
-     "50",
-     "1000"
-    ],
-    [
-     "<b>B</b>",
-     "240",
-     "48000"
-    ],
-    [
-     "<b>C</b>",
-     "480",
-     "24"
-    ],
-    [
-     "<b>D</b>",
-     "2000",
-     "100"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020ON_11_q35_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "50 1000"
+    },
+    {
+     "label": "B",
+     "html": "240 48000"
+    },
+    {
+     "label": "C",
+     "html": "480 24"
+    },
+    {
+     "label": "D",
+     "html": "2000 100"
+    }
+   ]
   }
  ]
 }

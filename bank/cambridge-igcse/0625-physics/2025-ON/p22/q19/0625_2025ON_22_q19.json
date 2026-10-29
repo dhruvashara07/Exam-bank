@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
+    67.5,
     287.0,
-    315.4,
-    426.8
+    315.5,
+    427.0
    ],
    "id": "0625_2025ON_22_q19_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p22/q19/figures/0625_2025ON_22_q19_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p22/q19/figures/0625_2025ON_22_q19_figA",
     "url": null,
-    "kb": 24.3
+    "kb": 24.2
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -98,8 +99,8 @@
   },
   {
    "type": "text",
-   "html": "At one moment, the droplet is a distance of 1.5m above the mirror and falling at a speed of 2.0m/s.",
-   "text": "At one moment, the droplet is a distance of 1.5m above the mirror and falling at a speed of 2.0m/s."
+   "html": "At one moment, the droplet is a distance of 1.5 m above the mirror and falling at a speed of 2.0 m / s.",
+   "text": "At one moment, the droplet is a distance of 1.5 m above the mirror and falling at a speed of 2.0 m / s."
   },
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "What is the distance between the droplet and its image and what is the speed of the image at this moment?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "distance between water droplet and its image/m",
-     "speed of image m/s"
-    ],
-    [
-     "<b>A</b>",
-     "1.5",
-     "2.0"
-    ],
-    [
-     "<b>B</b>",
-     "1.5",
-     "4.0"
-    ],
-    [
-     "<b>C</b>",
-     "3.0",
-     "2.0"
-    ],
-    [
-     "<b>D</b>",
-     "3.0",
-     "4.0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025ON_22_q19_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "1.5 2.0"
+    },
+    {
+     "label": "B",
+     "html": "1.5 4.0"
+    },
+    {
+     "label": "C",
+     "html": "3.0 2.0"
+    },
+    {
+     "label": "D",
+     "html": "3.0 4.0"
+    }
+   ]
   }
  ]
 }

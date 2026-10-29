@@ -9,10 +9,10 @@
    "caption": "Fig. 4.1",
    "page": 6,
    "bbox": [
-    78.9,
-    83.2,
-    515.9,
-    210.9
+    79.5,
+    86.5,
+    516.5,
+    209.0
    ],
    "id": "0625_2022ON_43_q04a_fig4-1",
    "part": "(a)",
@@ -199,7 +199,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -280,7 +289,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -393,5 +411,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

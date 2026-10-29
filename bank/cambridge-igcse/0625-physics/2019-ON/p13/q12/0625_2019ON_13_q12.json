@@ -33,9 +33,9 @@
    "page": 5,
    "bbox": [
     190.3,
-    307.0,
+    306.5,
     404.2,
-    385.0
+    385.5
    ],
    "id": "0625_2019ON_13_q12_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p13/q12/figures/0625_2019ON_13_q12_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p13/q12/figures/0625_2019ON_13_q12_figA",
     "url": null,
-    "kb": 12.4
+    "kb": 12.5
    }
   },
   {
    "page": 5,
    "bbox": [
-    67.7,
-    455.3,
-    435.6,
-    566.2
+    67.5,
+    455.0,
+    436.0,
+    566.5
    ],
    "id": "0625_2019ON_13_q12_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p13/q12/figures/0625_2019ON_13_q12_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p13/q12/figures/0625_2019ON_13_q12_figB",
     "url": null,
-    "kb": 37.6
+    "kb": 37.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "How do the pressure and the force at the sharp point compare with the pressure and the force on the flat surface?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "force at the sharp point",
-     "pressure at the sharp point"
-    ],
-    [
-     "<b>A</b>",
-     "greater than on the flat surface",
-     "greater than on the flat surface"
-    ],
-    [
-     "<b>B</b>",
-     "greater than on the flat surface",
-     "less than on the flat surface"
-    ],
-    [
-     "<b>C</b>",
-     "the same as on the flat surface",
-     "greater than on the flat surface"
-    ],
-    [
-     "<b>D</b>",
-     "the same as on the flat surface",
-     "less than on the flat surface"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019ON_13_q12_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "greater than on the flat surface greater than on the flat surface"
+    },
+    {
+     "label": "B",
+     "html": "greater than on the flat surface less than on the flat surface"
+    },
+    {
+     "label": "C",
+     "html": "the same as on the flat surface greater than on the flat surface"
+    },
+    {
+     "label": "D",
+     "html": "the same as on the flat surface less than on the flat surface"
+    }
+   ]
   }
  ]
 }

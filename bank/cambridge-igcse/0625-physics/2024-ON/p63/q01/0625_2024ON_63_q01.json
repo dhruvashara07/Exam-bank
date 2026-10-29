@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    76.7,
-    124.3,
-    518.6,
-    421.3
+    77.5,
+    123.5,
+    518.0,
+    421.5
    ],
    "id": "0625_2024ON_63_q01_fig1-1",
    "part": "",
@@ -53,9 +53,9 @@
    "page": 3,
    "bbox": [
     173.5,
-    294.9,
-    421.9,
-    513.8
+    295.5,
+    422.0,
+    514.0
    ],
    "id": "0625_2024ON_63_q01b_table1-1",
    "part": "(b)",
@@ -288,18 +288,18 @@
    "content": [
     {
      "type": "text",
-     "html": "The student pours an estimated volume of 75cm<sup>3</sup> of hot water into beaker A. He uses the scale on the beaker as a guide.",
-     "text": "The student pours an estimated volume of 75cm3 of hot water into beaker A. He uses the scale on the beaker as a guide."
+     "html": "The student pours an estimated volume of 75 cm<sup>3</sup> of hot water into beaker A. He uses the scale on the beaker as a guide.",
+     "text": "The student pours an estimated volume of 75 cm3 of hot water into beaker A. He uses the scale on the beaker as a guide."
     },
     {
      "type": "text",
-     "html": "He puts the thermometer into the water in beaker A and records, in Table 1.1, the temperature θat time t = 0.",
-     "text": "He puts the thermometer into the water in beaker A and records, in Table 1.1, the temperature θat time t = 0."
+     "html": "He puts the thermometer into the water in beaker A and records, in Table 1.1, the temperature θ at time t = 0.",
+     "text": "He puts the thermometer into the water in beaker A and records, in Table 1.1, the temperature θ at time t = 0."
     },
     {
      "type": "text",
-     "html": "He records, in Table 1.1, the temperature of the water in beaker A every 30s.",
-     "text": "He records, in Table 1.1, the temperature of the water in beaker A every 30s."
+     "html": "He records, in Table 1.1, the temperature of the water in beaker A every 30 s.",
+     "text": "He records, in Table 1.1, the temperature of the water in beaker A every 30 s."
     },
     {
      "type": "text",
@@ -317,54 +317,9 @@
      "text": "Suggest one possible source of inaccuracy in the procedure, even if it is carried out carefully."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "",
-       "beaker A",
-       "beaker B"
-      ],
-      [
-       "t/s",
-       "θ/°C",
-       "θ/°C"
-      ],
-      [
-       "0",
-       "82.5",
-       "80.0"
-      ],
-      [
-       "30",
-       "80.0",
-       "75.0"
-      ],
-      [
-       "60",
-       "78.0",
-       "72.0"
-      ],
-      [
-       "90",
-       "76.5",
-       "69.5"
-      ],
-      [
-       "120",
-       "75.0",
-       "67.0"
-      ],
-      [
-       "150",
-       "74.0",
-       "65.0"
-      ],
-      [
-       "180",
-       "73.0",
-       "63.5"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2024ON_63_q01b_table1-1",
+     "caption": "Table 1.1"
     },
     {
      "type": "answer",
@@ -594,13 +549,13 @@
     },
     {
      "type": "text",
-     "html": "x = \\(\\frac{θ<sub>0</sub>–θ<sub>180</sub>}{T}\\)",
+     "html": "x = \\(\\frac{θ_{0} – θ_{180}}{T}\\)",
      "text": "x = (θ0–θ180)/(T)"
     },
     {
      "type": "text",
-     "html": "where T = 180s and θ<sub>0</sub> and θ<sub>180</sub> are the temperatures of the water in beaker B at t = 0 and t = 180s.",
-     "text": "where T = 180s and θ0 and θ180 are the temperatures of the water in beaker B at t = 0 and t = 180s."
+     "html": "where T = 180 s and θ<sub>0</sub> and θ<sub>180</sub> are the temperatures of the water in beaker B at t = 0 and t = 180 s.",
+     "text": "where T = 180 s and θ0 and θ180 are the temperatures of the water in beaker B at t = 0 and t = 180 s."
     },
     {
      "type": "text",
@@ -797,6 +752,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

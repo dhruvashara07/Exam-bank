@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 4,
    "bbox": [
-    153.1,
-    110.6,
-    442.1,
-    349.3
+    153.0,
+    110.0,
+    442.5,
+    348.0
    ],
    "id": "0625_2020ON_51_q01d_fig1-1",
    "part": "(d)",
@@ -126,6 +126,18 @@
        "type": "text",
        "html": "change the shape of the sample.",
        "text": "change the shape of the sample."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "l =",
+       "unit": "cm"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "w =",
+       "unit": "cm"
       },
       {
        "type": "answer",
@@ -347,7 +359,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the density ρ<sub>A</sub> of sample A using the equation ρ<sub>A</sub> = \\(\\frac{<i>m</i><sub>A</sub>}{<i>V</i>}\\).",
+       "html": "Calculate the density ρ<sub>A</sub> of sample A using the equation ρ<sub>A</sub> = \\(\\frac{m_{A}}{V}\\).",
        "text": "Calculate the density ρA of sample A using the equation ρA = (mA)/(V)."
       },
       {
@@ -361,14 +373,14 @@
        "text": "Give your answer to a suitable number of significant figures for this method and include the unit."
       },
       {
-       "type": "text",
-       "html": "<b>Method 2</b>",
-       "text": "Method 2"
-      },
-      {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "ρA ="
+      },
+      {
+       "type": "text",
+       "html": "<b>Method 2</b>",
+       "text": "Method 2"
       },
       {
        "type": "marks",
@@ -472,9 +484,21 @@
        "text": "Record the volume V1 of water in the measuring cylinder."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V1 =",
+       "unit": "cm3"
+      },
+      {
        "type": "text",
        "html": "Carefully lower sample B of the same modelling clay into the measuring cylinder until it is completely covered with water. Record the new reading <i>V</i><sub>2</sub> of the water level in the measuring cylinder.",
        "text": "Carefully lower sample B of the same modelling clay into the measuring cylinder until it is completely covered with water. Record the new reading V2 of the water level in the measuring cylinder."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V2 =",
+       "unit": "cm3"
       },
       {
        "type": "text",
@@ -556,8 +580,14 @@
        "text": "Measure and record the mass mB of sample B of measuring clay using the balance provided."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "mB =",
+       "unit": "g"
+      },
+      {
        "type": "text",
-       "html": "Calculate the density ρ<sub>B</sub> of sample B using the equation ρ<sub>B</sub> = \\(\\frac{<i>m</i><sub>B</sub>}{<i>V</i>}\\).",
+       "html": "Calculate the density ρ<sub>B</sub> of sample B using the equation ρ<sub>B</sub> = \\(\\frac{m_{B}}{V}\\).",
        "text": "Calculate the density ρB of sample B using the equation ρB = (mB)/(V)."
       },
       {
@@ -657,7 +687,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "justification",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -773,6 +812,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

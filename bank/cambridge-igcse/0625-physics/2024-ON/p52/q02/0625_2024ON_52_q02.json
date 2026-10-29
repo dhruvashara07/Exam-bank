@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    192.0,
-    124.5,
-    403.3,
-    307.5
+    191.5,
+    128.0,
+    404.0,
+    308.0
    ],
    "id": "0625_2024ON_52_q02_fig2-1",
    "part": "",
@@ -53,9 +53,9 @@
    "page": 4,
    "bbox": [
     92.0,
-    394.5,
-    520.8,
-    519.1
+    395.5,
+    521.0,
+    519.5
    ],
    "id": "0625_2024ON_52_q02a_table2-1",
    "part": "(a)",
@@ -138,8 +138,8 @@
     },
     {
      "type": "text",
-     "html": "Record the voltmeter reading V<sub>PQ</sub> across the 220Ω resistor in the top row of Table 2.1.",
-     "text": "Record the voltmeter reading VPQ across the 220Ω resistor in the top row of Table 2.1."
+     "html": "Record the voltmeter reading V<sub>PQ</sub> across the 220 Ω resistor in the top row of Table 2.1.",
+     "text": "Record the voltmeter reading VPQ across the 220 Ω resistor in the top row of Table 2.1."
     },
     {
      "type": "list",
@@ -148,30 +148,9 @@
      ]
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "resistance between P and Q /Ω",
-       "V<sub>PQ</sub>/.....",
-       "V<sub>QR</sub>/.....",
-       "I/.....",
-       "R<sub>LED</sub> /Ω"
-      ],
-      [
-       "220",
-       "",
-       "",
-       "",
-       ""
-      ],
-      [
-       "330",
-       "",
-       "",
-       "",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2024ON_52_q02a_table2-1",
+     "caption": "Table 2.1"
     },
     {
      "type": "marks",
@@ -326,13 +305,13 @@
     },
     {
      "type": "text",
-     "html": "I = \\(\\frac{V<sub>PQ</sub>}{R}\\)",
+     "html": "I = \\(\\frac{V_{\\text{PQ}}}{R}\\)",
      "text": "I = (VPQ)/(R)"
     },
     {
      "type": "text",
-     "html": "where R = 220Ω.",
-     "text": "where R = 220Ω."
+     "html": "where R = 220 Ω.",
+     "text": "where R = 220 Ω."
     },
     {
      "type": "text",
@@ -421,7 +400,7 @@
       },
       {
        "type": "text",
-       "html": "R<sub>LED</sub> = \\(\\frac{V<sub>QR</sub>}{I}\\)",
+       "html": "R<sub>LED</sub> = \\(\\frac{V_{\\text{QR}}}{I}\\)",
        "text": "RLED = (VQR)/(I)"
       },
       {
@@ -572,14 +551,14 @@
     {
      "type": "list",
      "items": [
-      "Remove the 220Ω resistor from the circuit and replace it with the 330Ω resistor.",
+      "Remove the 220 Ω resistor from the circuit and replace it with the 330 Ω resistor.",
       "Reconnect the voltmeter across the resistor between points P and Q. Ensure that the positive terminal is connected to P."
      ]
     },
     {
      "type": "text",
-     "html": "Repeat parts (a) to (d) for the 330Ω resistor.",
-     "text": "Repeat parts (a) to (d) for the 330Ω resistor."
+     "html": "Repeat parts (a) to (d) for the 330 Ω resistor.",
+     "text": "Repeat parts (a) to (d) for the 330 Ω resistor."
     },
     {
      "type": "marks",
@@ -762,6 +741,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

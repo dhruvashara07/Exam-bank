@@ -33,8 +33,8 @@
    "page": 2,
    "bbox": [
     197.6,
-    445.0,
-    396.6,
+    445.5,
+    396.5,
     561.8
    ],
    "id": "0625_2023FM_12_q02_figA",
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-FM/p12/q02/figures/0625_2023FM_12_q02_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-FM/p12/q02/figures/0625_2023FM_12_q02_figA",
     "url": null,
-    "kb": 8.3
+    "kb": 8.4
    }
   },
   {
    "page": 2,
    "bbox": [
-    67.7,
-    595.1,
-    442.7,
-    706.4
+    67.5,
+    595.0,
+    443.0,
+    706.5
    ],
    "id": "0625_2023FM_12_q02_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-FM/p12/q02/figures/0625_2023FM_12_q02_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-FM/p12/q02/figures/0625_2023FM_12_q02_figB",
     "url": null,
-    "kb": 27.8
+    "kb": 27.6
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row describes the motion of the car at point X and at point Y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "point X",
-     "point Y"
-    ],
-    [
-     "<b>A</b>",
-     "at rest",
-     "moving with constant speed"
-    ],
-    [
-     "<b>B</b>",
-     "moving with constant speed",
-     "at rest"
-    ],
-    [
-     "<b>C</b>",
-     "moving with changing speed",
-     "at rest"
-    ],
-    [
-     "<b>D</b>",
-     "moving with changing speed",
-     "moving with constant speed"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023FM_12_q02_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "at rest moving with constant speed"
+    },
+    {
+     "label": "B",
+     "html": "moving with constant speed at rest"
+    },
+    {
+     "label": "C",
+     "html": "moving with changing speed at rest"
+    },
+    {
+     "label": "D",
+     "html": "moving with changing speed moving with constant speed"
+    }
+   ]
   }
  ]
 }

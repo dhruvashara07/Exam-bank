@@ -32,9 +32,9 @@
   {
    "page": 15,
    "bbox": [
-    67.9,
-    72.3,
-    519.3,
+    75.7,
+    98.0,
+    519.0,
     326.8
    ],
    "id": "0625_2024ON_22_q32_figA",
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p22/q32/figures/0625_2024ON_22_q32_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p22/q32/figures/0625_2024ON_22_q32_figA",
     "url": null,
-    "kb": 36.3
+    "kb": 32.8
    }
   },
   {
    "page": 15,
    "bbox": [
-    67.7,
-    372.9,
-    256.7,
-    581.6
+    67.5,
+    372.5,
+    257.0,
+    582.0
    ],
    "id": "0625_2024ON_22_q32_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p22/q32/figures/0625_2024ON_22_q32_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p22/q32/figures/0625_2024ON_22_q32_figB",
     "url": null,
-    "kb": 22.1
+    "kb": 21.9
    }
   }
  ],
@@ -109,11 +109,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "Diagram 1 shows a magnet being pushed into a coil that is connected to a centre-zero sensitive",
-   "text": "Diagram 1 shows a magnet being pushed into a coil that is connected to a centre-zero sensitive"
+   "html": "Diagram 1 shows a magnet being pushed into a coil that is connected to a centre-zero sensitive voltmeter.",
+   "text": "Diagram 1 shows a magnet being pushed into a coil that is connected to a centre-zero sensitive voltmeter."
   },
   {
    "type": "figure",
@@ -126,35 +127,31 @@
    "text": "Which row shows the directions of the pointer on the voltmeter when the magnet is as shown in diagrams 2 and 3?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "diagram 2",
-     "diagram 3"
-    ],
-    [
-     "<b>A</b>",
-     "",
-     ""
-    ],
-    [
-     "<b>B</b>",
-     "",
-     ""
-    ],
-    [
-     "<b>C</b>",
-     "",
-     ""
-    ],
-    [
-     "<b>D</b>",
-     "",
-     ""
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024ON_22_q32_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "in_figure": true,
+   "options": [
+    {
+     "label": "A",
+     "html": ""
+    },
+    {
+     "label": "B",
+     "html": ""
+    },
+    {
+     "label": "C",
+     "html": ""
+    },
+    {
+     "label": "D",
+     "html": ""
+    }
+   ]
   }
  ]
 }

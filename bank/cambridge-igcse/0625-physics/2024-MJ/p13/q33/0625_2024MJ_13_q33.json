@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
-    411.7,
-    325.9,
-    537.2
+    67.5,
+    411.5,
+    326.0,
+    537.5
    ],
    "id": "0625_2024MJ_13_q33_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p13/q33/figures/0625_2024MJ_13_q33_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p13/q33/figures/0625_2024MJ_13_q33_figA",
     "url": null,
-    "kb": 27.0
+    "kb": 26.9
    }
   }
  ],
@@ -90,42 +90,38 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A nuclide of strontium is represented by <sup>90</sup><sub>38</sub>Sr. Which row gives the number and location of the electrons in an atom of <sup>90</sup><sub>38</sub>Sr?",
-   "text": "A nuclide of strontium is represented by 9038Sr. Which row gives the number and location of the electrons in an atom of 9038Sr?"
+   "html": "A nuclide of strontium is represented by <sup>90</sup><sub>38</sub> Sr. Which row gives the number and location of the electrons in an atom of <sup>90</sup><sub>38</sub> Sr?",
+   "text": "A nuclide of strontium is represented by 9038 Sr. Which row gives the number and location of the electrons in an atom of 9038 Sr?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "number of electrons",
-     "location of electrons"
-    ],
-    [
-     "<b>A</b>",
-     "38",
-     "in the nucleus"
-    ],
-    [
-     "<b>B</b>",
-     "38",
-     "surrounding the nucleus"
-    ],
-    [
-     "<b>C</b>",
-     "52",
-     "in the nucleus"
-    ],
-    [
-     "<b>D</b>",
-     "52",
-     "surrounding the nucleus"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_13_q33_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "38 in the nucleus"
+    },
+    {
+     "label": "B",
+     "html": "38 surrounding the nucleus"
+    },
+    {
+     "label": "C",
+     "html": "52 in the nucleus"
+    },
+    {
+     "label": "D",
+     "html": "52 surrounding the nucleus"
+    }
+   ]
   }
  ]
 }

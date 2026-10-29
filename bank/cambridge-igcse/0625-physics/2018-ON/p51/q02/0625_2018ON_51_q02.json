@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 6,
    "bbox": [
-    152.4,
-    82.0,
-    445.2,
-    289.3
+    153.0,
+    86.5,
+    444.5,
+    286.5
    ],
    "id": "0625_2018ON_51_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 6,
    "bbox": [
-    195.3,
-    499.2,
+    195.0,
+    504.0,
     400.0,
-    660.0
+    660.5
    ],
    "id": "0625_2018ON_51_q02aii_table2-1",
    "part": "(a)(ii)",
@@ -231,33 +231,9 @@
        ]
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>l</i>/ cm",
-         "<i>V</i> / V"
-        ],
-        [
-         "20.0",
-         ""
-        ],
-        [
-         "40.0",
-         ""
-        ],
-        [
-         "60.0",
-         ""
-        ],
-        [
-         "80.0",
-         ""
-        ],
-        [
-         "100.0",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2018ON_51_q02aii_table2-1",
+       "caption": "Table 2.1"
       },
       {
        "type": "marks",
@@ -330,8 +306,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Plot a graph of <i>V </i>/ V (<i>y</i>-axis) against <i>l</i>/ cm (<i>x</i>-axis). Start both axes at the origin (0,0).",
-     "text": "Plot a graph of V / V (y-axis) against l/ cm (x-axis). Start both axes at the origin (0,0)."
+     "html": "Plot a graph of <i>V </i>/ V (<i>y</i>-axis) against <i>l</i> / cm (<i>x</i>-axis). Start both axes at the origin (0,0).",
+     "text": "Plot a graph of V / V (y-axis) against l / cm (x-axis). Start both axes at the origin (0,0)."
     },
     {
      "type": "answer",
@@ -489,7 +465,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the resistance <i>R</i> of each centimetre of the wire. Use the equation <i>R</i> = \\(\\frac{<i>G k</i>}{<i>I</i>}\\), where<i> k</i> = 1.0 V / cm and <i>I</i> is the current recorded in <b>(a)(i)</b>. Include the unit.",
+       "html": "Calculate the resistance <i>R</i> of each centimetre of the wire. Use the equation <i>R</i> = \\(\\frac{G k}{I}\\), where<i> k</i> = 1.0 V / cm and <i>I</i> is the current recorded in <b>(a)(i)</b>. Include the unit.",
        "text": "Calculate the resistance R of each centimetre of the wire. Use the equation R = (G k)/(I), where k = 1.0 V / cm and I is the current recorded in (a)(i). Include the unit."
       },
       {
@@ -524,6 +500,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

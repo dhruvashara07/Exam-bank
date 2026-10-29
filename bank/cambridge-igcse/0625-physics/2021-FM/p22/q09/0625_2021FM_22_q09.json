@@ -33,9 +33,9 @@
    "page": 4,
    "bbox": [
     127.3,
-    86.4,
+    86.0,
     468.0,
-    181.9
+    182.5
    ],
    "id": "0625_2021FM_22_q09_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 4,
    "bbox": [
-    67.7,
-    238.6,
-    311.9,
-    349.9
+    67.5,
+    238.5,
+    312.0,
+    350.0
    ],
    "id": "0625_2021FM_22_q09_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-FM/p22/q09/figures/0625_2021FM_22_q09_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-FM/p22/q09/figures/0625_2021FM_22_q09_figB",
     "url": null,
-    "kb": 22.2
+    "kb": 22.1
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "What happens to the kinetic energy and what happens to the momentum of the molecule?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "kinetic energy",
-     "momentum"
-    ],
-    [
-     "<b>A</b>",
-     "changes",
-     "changes"
-    ],
-    [
-     "<b>B</b>",
-     "changes",
-     "stays the same"
-    ],
-    [
-     "<b>C</b>",
-     "stays the same",
-     "changes"
-    ],
-    [
-     "<b>D</b>",
-     "stays the same",
-     "stays the same"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021FM_22_q09_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "changes changes"
+    },
+    {
+     "label": "B",
+     "html": "changes stays the same"
+    },
+    {
+     "label": "C",
+     "html": "stays the same changes"
+    },
+    {
+     "label": "D",
+     "html": "stays the same stays the same"
+    }
+   ]
   }
  ]
 }

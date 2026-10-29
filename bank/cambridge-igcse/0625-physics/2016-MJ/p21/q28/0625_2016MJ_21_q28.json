@@ -32,10 +32,10 @@
   {
    "page": 12,
    "bbox": [
-    248.7,
+    248.0,
     409.9,
-    346.0,
-    500.8
+    346.5,
+    501.5
    ],
    "id": "0625_2016MJ_21_q28_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 12,
    "bbox": [
-    67.6,
-    558.6,
+    67.5,
+    558.5,
     354.5,
-    684.1
+    684.0
    ],
    "id": "0625_2016MJ_21_q28_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p21/q28/figures/0625_2016MJ_21_q28_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p21/q28/figures/0625_2016MJ_21_q28_figB",
     "url": null,
-    "kb": 28.2
+    "kb": 28.0
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -122,8 +123,8 @@
   },
   {
    "type": "text",
-   "html": "A charge of 4.0C flows through the lamp in 2.0s.",
-   "text": "A charge of 4.0C flows through the lamp in 2.0s."
+   "html": "A charge of 4.0 C flows through the lamp in 2.0 s.",
+   "text": "A charge of 4.0 C flows through the lamp in 2.0 s."
   },
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "What is the direction of the electron flow in the lamp and what is the current in the lamp?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "direction of electron flow in lamp",
-     "current/A"
-    ],
-    [
-     "A",
-     "from left to right",
-     "2.0"
-    ],
-    [
-     "B",
-     "from left to right",
-     "8.0"
-    ],
-    [
-     "C",
-     "from right to left",
-     "2.0"
-    ],
-    [
-     "D",
-     "from right to left",
-     "8.0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_21_q28_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "from left to right 2.0"
+    },
+    {
+     "label": "B",
+     "html": "from left to right 8.0"
+    },
+    {
+     "label": "C",
+     "html": "from right to left 2.0"
+    },
+    {
+     "label": "D",
+     "html": "from right to left 8.0"
+    }
+   ]
   }
  ]
 }

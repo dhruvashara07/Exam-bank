@@ -100,7 +100,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "Jupiter"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "the Earth"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -290,8 +299,8 @@
    "content": [
     {
      "type": "text",
-     "html": "The gravitational field strength at the surface of the Earth is approximately 9.8N/kg. The gravitational field strength at the surface of Jupiter is approximately 23N/kg.",
-     "text": "The gravitational field strength at the surface of the Earth is approximately 9.8N/kg. The gravitational field strength at the surface of Jupiter is approximately 23N/kg."
+     "html": "The gravitational field strength at the surface of the Earth is approximately 9.8 N / kg. The gravitational field strength at the surface of Jupiter is approximately 23 N / kg.",
+     "text": "The gravitational field strength at the surface of the Earth is approximately 9.8 N / kg. The gravitational field strength at the surface of Jupiter is approximately 23 N / kg."
     }
    ]
   },
@@ -362,7 +371,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "explanation",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 1
     },
     {
@@ -389,6 +407,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    156.0,
-    131.0,
-    438.8,
-    332.4
+    157.0,
+    134.0,
+    439.5,
+    331.0
    ],
    "id": "0625_2022FM_52_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 1.2",
    "page": 2,
    "bbox": [
-    156.0,
-    131.0,
-    438.8,
-    332.4
+    157.0,
+    134.0,
+    439.5,
+    331.0
    ],
    "id": "0625_2022FM_52_q01_fig1-2",
    "part": "",
@@ -71,10 +71,10 @@
    "caption": "Fig. 1.3",
    "page": 2,
    "bbox": [
-    42.2,
-    591.8,
-    553.1,
-    796.1
+    42.5,
+    591.5,
+    553.0,
+    794.5
    ],
    "id": "0625_2022FM_52_q01b_fig1-3",
    "part": "(b)",
@@ -91,9 +91,9 @@
    "page": 3,
    "bbox": [
     236.5,
-    123.0,
-    358.8,
-    289.9
+    126.5,
+    359.0,
+    290.0
    ],
    "id": "0625_2022FM_52_q01b_table1-1",
    "part": "(b)",
@@ -172,6 +172,12 @@
      "type": "text",
      "html": "Measure and record the unstretched length <i>l</i><sub> 0</sub> of the spring, as shown in Fig. 1.1.",
      "text": "Measure and record the unstretched length l 0 of the spring, as shown in Fig. 1.1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "l 0 =",
+     "unit": "cm"
     },
     {
      "type": "text",
@@ -287,33 +293,9 @@
      "text": "Measure, and record in Table 1.1, the stretched length l of the spring, as shown in Fig. 1.3. Repeat this procedure for distances d = 30.0 cm, d = 40.0 cm, d = 50.0 cm and d = 60.0 cm from the pivot."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>d</i> / cm",
-       "<i>l</i> / cm"
-      ],
-      [
-       "20.0",
-       ""
-      ],
-      [
-       "30.0",
-       ""
-      ],
-      [
-       "40.0",
-       ""
-      ],
-      [
-       "50.0",
-       ""
-      ],
-      [
-       "60.0",
-       ""
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2022FM_52_q01b_table1-1",
+     "caption": "Table 1.1"
     },
     {
      "type": "marks",
@@ -545,7 +527,7 @@
       },
       {
        "type": "text",
-       "html": "<i>W</i><sub>R</sub> = \\(\\frac{2(<i>L</i> – <i>l</i><sub>0</sub>)}{(<i>l</i>– <i>l</i>)}\\) × <i>k</i>",
+       "html": "<i>W</i><sub>R</sub> = \\(\\frac{2(L – l_{0})}{(l – l )}\\) × <i>k</i>",
        "text": "WR = (2(L – l0))/((l– l)) × k"
       },
       {
@@ -750,6 +732,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

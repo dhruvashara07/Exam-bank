@@ -32,8 +32,8 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    84.7,
+    67.5,
+    84.5,
     275.5,
     196.0
    ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row is not correct for a wave on the surface of water?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "quantity",
-     "usual unit"
-    ],
-    [
-     "<b>A</b>",
-     "amplitude",
-     "m"
-    ],
-    [
-     "<b>B</b>",
-     "frequency",
-     "Hz"
-    ],
-    [
-     "<b>C</b>",
-     "wavelength",
-     "λ"
-    ],
-    [
-     "<b>D</b>",
-     "speed",
-     "m/s"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_22_q18_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "amplitude m"
+    },
+    {
+     "label": "B",
+     "html": "frequency Hz"
+    },
+    {
+     "label": "C",
+     "html": "wavelength λ"
+    },
+    {
+     "label": "D",
+     "html": "speed m/s"
+    }
+   ]
   }
  ]
 }

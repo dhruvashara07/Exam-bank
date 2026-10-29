@@ -33,7 +33,7 @@
    "page": 11,
    "bbox": [
     197.3,
-    81.3,
+    81.0,
     369.7,
     198.7
    ],
@@ -51,10 +51,10 @@
   {
    "page": 11,
    "bbox": [
-    64.3,
-    254.2,
-    319.8,
-    373.6
+    64.0,
+    254.0,
+    320.0,
+    373.5
    ],
    "id": "0625_2019ON_12_q28_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p12/q28/figures/0625_2019ON_12_q28_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p12/q28/figures/0625_2019ON_12_q28_figB",
     "url": null,
-    "kb": 26.0
+    "kb": 25.9
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,40 +132,30 @@
    "text": "What happens to the soft-iron rods in each case?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "battery connections",
-     "battery connections"
-    ],
-    [
-     "",
-     "as shown",
-     "reversed"
-    ],
-    [
-     "<b>A</b>",
-     "rods attract",
-     "rods attract"
-    ],
-    [
-     "<b>B</b>",
-     "rods attract",
-     "rods repel"
-    ],
-    [
-     "<b>C</b>",
-     "rods repel",
-     "rods attract"
-    ],
-    [
-     "<b>D</b>",
-     "rods repel",
-     "rods repel"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019ON_12_q28_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "rods attract rods attract"
+    },
+    {
+     "label": "B",
+     "html": "rods attract rods repel"
+    },
+    {
+     "label": "C",
+     "html": "rods repel rods attract"
+    },
+    {
+     "label": "D",
+     "html": "rods repel rods repel"
+    }
+   ]
   }
  ]
 }

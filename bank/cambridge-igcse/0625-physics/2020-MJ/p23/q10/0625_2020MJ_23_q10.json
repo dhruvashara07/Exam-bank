@@ -33,8 +33,8 @@
    "page": 5,
    "bbox": [
     109.3,
-    332.5,
-    485.7,
+    331.5,
+    486.0,
     502.7
    ],
    "id": "0625_2020MJ_23_q10_figA",
@@ -51,10 +51,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    548.6,
-    355.6,
-    688.3
+    67.5,
+    548.5,
+    356.0,
+    688.5
    ],
    "id": "0625_2020MJ_23_q10_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p23/q10/figures/0625_2020MJ_23_q10_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p23/q10/figures/0625_2020MJ_23_q10_figB",
     "url": null,
-    "kb": 30.3
+    "kb": 30.1
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "At which point does the mass have the least gravitational potential energy and at which point is the most elastic energy stored in the spring?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "least amount of gravitational potential energy",
-     "most elastic energy stored in spring"
-    ],
-    [
-     "<b>A</b>",
-     "mass moving down",
-     "mass moving up"
-    ],
-    [
-     "<b>B</b>",
-     "mass moving down",
-     "lowest point"
-    ],
-    [
-     "<b>C</b>",
-     "lowest point",
-     "mass moving up"
-    ],
-    [
-     "<b>D</b>",
-     "lowest point",
-     "lowest point"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020MJ_23_q10_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "mass moving down mass moving up"
+    },
+    {
+     "label": "B",
+     "html": "mass moving down lowest point"
+    },
+    {
+     "label": "C",
+     "html": "lowest point mass moving up"
+    },
+    {
+     "label": "D",
+     "html": "lowest point lowest point"
+    }
+   ]
   }
  ]
 }

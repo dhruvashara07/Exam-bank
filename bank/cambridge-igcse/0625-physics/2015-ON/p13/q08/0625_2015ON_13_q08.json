@@ -32,10 +32,10 @@
   {
    "page": 4,
    "bbox": [
-    67.6,
-    409.9,
-    371.8,
-    521.3
+    67.5,
+    409.5,
+    372.0,
+    521.5
    ],
    "id": "0625_2015ON_13_q08_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-ON/p13/q08/figures/0625_2015ON_13_q08_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-ON/p13/q08/figures/0625_2015ON_13_q08_figA",
     "url": null,
-    "kb": 33.0
+    "kb": 32.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row gives the energy change in a battery and the energy change in a solar cell?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "battery",
-     "solar cell"
-    ],
-    [
-     "A",
-     "chemical to electrical",
-     "electrical to light"
-    ],
-    [
-     "B",
-     "chemical to electrical",
-     "light to electrical"
-    ],
-    [
-     "C",
-     "electrical to chemical",
-     "electrical to light"
-    ],
-    [
-     "D",
-     "electrical to chemical",
-     "light to electrical"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015ON_13_q08_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "chemical to electrical electrical to light"
+    },
+    {
+     "label": "B",
+     "html": "chemical to electrical light to electrical"
+    },
+    {
+     "label": "C",
+     "html": "electrical to chemical electrical to light"
+    },
+    {
+     "label": "D",
+     "html": "electrical to chemical light to electrical"
+    }
+   ]
   }
  ]
 }

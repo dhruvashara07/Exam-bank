@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
+    67.5,
     633.5,
     328.0,
-    744.9
+    745.0
    ],
    "id": "0625_2023MJ_13_q10_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p13/q10/figures/0625_2023MJ_13_q10_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p13/q10/figures/0625_2023MJ_13_q10_figA",
     "url": null,
-    "kb": 25.6
+    "kb": 25.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "What enables these energy transfers?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "braking system",
-     "motor"
-    ],
-    [
-     "<b>A</b>",
-     "electrical work",
-     "mechanical work"
-    ],
-    [
-     "<b>B</b>",
-     "electrical work",
-     "electrical work"
-    ],
-    [
-     "<b>C</b>",
-     "mechanical work",
-     "mechanical work"
-    ],
-    [
-     "<b>D</b>",
-     "mechanical work",
-     "electrical work"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_13_q10_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "electrical work mechanical work"
+    },
+    {
+     "label": "B",
+     "html": "electrical work electrical work"
+    },
+    {
+     "label": "C",
+     "html": "mechanical work mechanical work"
+    },
+    {
+     "label": "D",
+     "html": "mechanical work electrical work"
+    }
+   ]
   }
  ]
 }

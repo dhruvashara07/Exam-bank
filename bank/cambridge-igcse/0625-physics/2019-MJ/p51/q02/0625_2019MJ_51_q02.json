@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    121.9,
-    108.2,
-    473.4,
-    311.9
+    122.5,
+    112.5,
+    473.0,
+    309.0
    ],
    "id": "0625_2019MJ_51_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Table 2.1",
    "page": 4,
    "bbox": [
-    138.6,
-    534.9,
-    456.7,
-    712.7
+    138.5,
+    539.5,
+    457.0,
+    713.0
    ],
    "id": "0625_2019MJ_51_q02aii_table2-1",
    "part": "(a)(ii)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-MJ/p51/q02/figures/0625_2019MJ_51_q02aii_table2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-MJ/p51/q02/figures/0625_2019MJ_51_q02aii_table2-1",
     "url": null,
-    "kb": 22.3
+    "kb": 22.2
    }
   }
  ],
@@ -219,43 +219,13 @@
      "content": [
       {
        "type": "text",
-       "html": "Place the sliding contact C at a distance <i>l</i> = 20.0 cm from B. Measure, and record in Table 2.1, the potential difference <i>V</i> across the length <i>l</i> of the resistance wire. Calculate, and record in Table 2.1, \\(\\frac{<i>V</i>}{<i>l</i>}\\) . Repeat the procedure using <i>l</i> values of 40.0 cm, 60.0 cm, 80.0 cm and 100.0 cm. Switch off.",
+       "html": "Place the sliding contact C at a distance <i>l</i> = 20.0 cm from B. Measure, and record in Table 2.1, the potential difference <i>V</i> across the length <i>l</i> of the resistance wire. Calculate, and record in Table 2.1, \\(\\frac{V}{l}\\) . Repeat the procedure using <i>l</i> values of 40.0 cm, 60.0 cm, 80.0 cm and 100.0 cm. Switch off.",
        "text": "Place the sliding contact C at a distance l = 20.0 cm from B. Measure, and record in Table 2.1, the potential difference V across the length l of the resistance wire. Calculate, and record in Table 2.1, (V)/(l) . Repeat the procedure using l values of 40.0 cm, 60.0 cm, 80.0 cm and 100.0 cm. Switch off."
       },
       {
-       "type": "table",
-       "rows": [
-        [
-         "<i>l</i> / cm",
-         "<i>V</i> / V",
-         "<i>V</i> V <i>l</i> cm"
-        ],
-        [
-         "20.0",
-         "",
-         ""
-        ],
-        [
-         "40.0",
-         "",
-         ""
-        ],
-        [
-         "60.0",
-         "",
-         ""
-        ],
-        [
-         "80.0",
-         "",
-         ""
-        ],
-        [
-         "100.0",
-         "",
-         ""
-        ]
-       ]
+       "type": "figure",
+       "id": "0625_2019MJ_51_q02aii_table2-1",
+       "caption": "Table 2.1"
       },
       {
        "type": "marks",
@@ -360,7 +330,7 @@
       },
       {
        "type": "text",
-       "html": "\\(\\frac{<i>V</i>}{<i>l</i>}\\) is approximately constant. \\(\\frac{<i>V</i>}{<i>l</i>}\\) is decreasing as <i>V</i> increases. \\(\\frac{<i>V</i>}{<i>l</i>}\\) is increasing as <i>V</i> increases. There is no simple pattern for \\(\\frac{<i>V</i>}{<i>l</i>}\\) in the results.",
+       "html": "\\(\\frac{V}{l}\\) is approximately constant. \\(\\frac{V}{l}\\) is decreasing as <i>V</i> increases. \\(\\frac{V}{l}\\) is increasing as <i>V</i> increases. There is no simple pattern for \\(\\frac{V}{l}\\) in the results.",
        "text": "(V)/(l) is approximately constant. (V)/(l) is decreasing as V increases. (V)/(l) is increasing as V increases. There is no simple pattern for (V)/(l) in the results."
       },
       {
@@ -447,7 +417,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Look carefully at the values of \\(\\frac{<i>V</i>}{<i>l</i>}\\) in Table 2.1.",
+     "html": "Look carefully at the values of \\(\\frac{V}{l}\\) in Table 2.1.",
      "text": "Look carefully at the values of (V)/(l) in Table 2.1."
     }
    ]
@@ -513,7 +483,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate the resistance of 100 cm of the resistance wire using the equation <i>R</i> = \\(\\frac{<i>V</i>}{<i>I</i>}\\) , where <i>V</i> is the potential difference across 100 cm of the resistance wire. Use the value of current <i>I</i> from part <b>(a)(i)</b>. Give your answer to a suitable number of significant figures for this experiment and include the unit.",
+     "html": "Calculate the resistance of 100 cm of the resistance wire using the equation <i>R</i> = \\(\\frac{V}{I}\\) , where <i>V</i> is the potential difference across 100 cm of the resistance wire. Use the value of current <i>I</i> from part <b>(a)(i)</b>. Give your answer to a suitable number of significant figures for this experiment and include the unit.",
      "text": "Calculate the resistance of 100 cm of the resistance wire using the equation R = (V)/(I) , where V is the potential difference across 100 cm of the resistance wire. Use the value of current I from part (a)(i). Give your answer to a suitable number of significant figures for this experiment and include the unit."
     },
     {
@@ -618,6 +588,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

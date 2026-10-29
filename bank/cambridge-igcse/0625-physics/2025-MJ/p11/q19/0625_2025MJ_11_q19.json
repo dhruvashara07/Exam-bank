@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
+    67.5,
     209.5,
-    399.1,
-    334.4
+    399.5,
+    334.5
    ],
    "id": "0625_2025MJ_11_q19_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p11/q19/figures/0625_2025MJ_11_q19_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p11/q19/figures/0625_2025MJ_11_q19_figA",
     "url": null,
-    "kb": 32.8
+    "kb": 32.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row correctly describes the vibrations of a transverse wave and also gives a correct example of a transverse wave?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "description of vibrations",
-     "example of a transverse wave"
-    ],
-    [
-     "<b>A</b>",
-     "at right angles to the wave direction",
-     "sound"
-    ],
-    [
-     "<b>B</b>",
-     "at right angles to the wave direction",
-     "water wave"
-    ],
-    [
-     "<b>C</b>",
-     "parallel to the wave direction",
-     "sound"
-    ],
-    [
-     "<b>D</b>",
-     "parallel to the wave direction",
-     "water wave"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_11_q19_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "at right angles to the wave direction sound"
+    },
+    {
+     "label": "B",
+     "html": "at right angles to the wave direction water wave"
+    },
+    {
+     "label": "C",
+     "html": "parallel to the wave direction sound"
+    },
+    {
+     "label": "D",
+     "html": "parallel to the wave direction water wave"
+    }
+   ]
   }
  ]
 }

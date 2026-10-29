@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    69.3,
-    424.1,
-    306.2,
-    535.4
+    69.0,
+    424.0,
+    306.5,
+    535.5
    ],
    "id": "0625_2016FM_12_q14_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-FM/p12/q14/figures/0625_2016FM_12_q14_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-FM/p12/q14/figures/0625_2016FM_12_q14_figA",
     "url": null,
-    "kb": 22.9
+    "kb": 22.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -98,39 +99,34 @@
   },
   {
    "type": "text",
-   "html": "Which substance is a liquid at 0°C?",
-   "text": "Which substance is a liquid at 0°C?"
+   "html": "Which substance is a liquid at 0 °C?",
+   "text": "Which substance is a liquid at 0 °C?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "melting point/°C",
-     "boiling point/°C"
-    ],
-    [
-     "A",
-     "–219",
-     "–183"
-    ],
-    [
-     "B",
-     "–7",
-     "58"
-    ],
-    [
-     "C",
-     "98",
-     "890"
-    ],
-    [
-     "D",
-     "1083",
-     "2582"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016FM_12_q14_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "–219 –183"
+    },
+    {
+     "label": "B",
+     "html": "–7 58"
+    },
+    {
+     "label": "C",
+     "html": "98 890"
+    },
+    {
+     "label": "D",
+     "html": "1083 2582"
+    }
+   ]
   }
  ]
 }

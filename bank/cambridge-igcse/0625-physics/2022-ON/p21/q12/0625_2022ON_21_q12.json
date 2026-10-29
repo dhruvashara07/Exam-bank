@@ -34,8 +34,8 @@
    "bbox": [
     219.7,
     99.1,
-    374.5,
-    181.8
+    375.0,
+    182.5
    ],
    "id": "0625_2022ON_21_q12_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 6,
    "bbox": [
-    67.7,
-    226.9,
-    303.8,
-    352.4
+    67.5,
+    226.5,
+    304.0,
+    352.5
    ],
    "id": "0625_2022ON_21_q12_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-ON/p21/q12/figures/0625_2022ON_21_q12_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p21/q12/figures/0625_2022ON_21_q12_figB",
     "url": null,
-    "kb": 23.5
+    "kb": 23.4
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "How does this change affect the average kinetic energy of the molecules and the pressure on the walls of the container?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "average kinetic energy",
-     "pressure"
-    ],
-    [
-     "<b>A</b>",
-     "increases",
-     "increases"
-    ],
-    [
-     "<b>B</b>",
-     "stays the same",
-     "increases"
-    ],
-    [
-     "<b>C</b>",
-     "increases",
-     "decreases"
-    ],
-    [
-     "<b>D</b>",
-     "decreases",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022ON_21_q12_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "increases increases"
+    },
+    {
+     "label": "B",
+     "html": "stays the same increases"
+    },
+    {
+     "label": "C",
+     "html": "increases decreases"
+    },
+    {
+     "label": "D",
+     "html": "decreases increases"
+    }
+   ]
   }
  ]
 }

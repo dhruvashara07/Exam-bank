@@ -32,9 +32,9 @@
   {
    "page": 9,
    "bbox": [
-    196.4,
-    371.9,
-    399.1,
+    196.0,
+    371.5,
+    399.0,
     476.5
    ],
    "id": "0625_2024MJ_13_q21_figA",
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p13/q21/figures/0625_2024MJ_13_q21_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p13/q21/figures/0625_2024MJ_13_q21_figA",
     "url": null,
-    "kb": 20.2
+    "kb": 20.0
    }
   },
   {
    "page": 9,
    "bbox": [
-    67.7,
-    508.4,
-    356.6,
-    619.7
+    67.5,
+    508.0,
+    357.0,
+    620.0
    ],
    "id": "0625_2024MJ_13_q21_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p13/q21/figures/0625_2024MJ_13_q21_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p13/q21/figures/0625_2024MJ_13_q21_figB",
     "url": null,
-    "kb": 22.0
+    "kb": 21.8
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -116,17 +117,9 @@
    "text": "The table gives the wavelengths of three electromagnetic waves."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "electromagnetic wave",
-     "wavelength/m"
-    ],
-    [
-     "P Q R",
-     "<sup>–3</sup> 3.2 × 10 <sup>–9</sup> 5.0 × 10 <sup>3</sup> 2.6 × 10"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2024MJ_13_q21_figA",
+   "caption": null
   },
   {
    "type": "text",
@@ -134,40 +127,30 @@
    "text": "Which row correctly identifies P, Q and R?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "P",
-     "Q",
-     "R"
-    ],
-    [
-     "<b>A</b>",
-     "microwave",
-     "radio wave",
-     "X-ray"
-    ],
-    [
-     "<b>B</b>",
-     "microwave",
-     "X-ray",
-     "radio wave"
-    ],
-    [
-     "<b>C</b>",
-     "radio wave",
-     "microwave",
-     "X-ray"
-    ],
-    [
-     "<b>D</b>",
-     "radio wave",
-     "X-ray",
-     "microwave"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_13_q21_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "microwave radio wave X-ray"
+    },
+    {
+     "label": "B",
+     "html": "microwave X-ray radio wave"
+    },
+    {
+     "label": "C",
+     "html": "radio wave microwave X-ray"
+    },
+    {
+     "label": "D",
+     "html": "radio wave X-ray microwave"
+    }
+   ]
   }
  ]
 }

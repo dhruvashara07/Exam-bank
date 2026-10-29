@@ -32,9 +32,9 @@
   {
    "page": 3,
    "bbox": [
-    67.7,
-    400.1,
-    232.9,
+    67.5,
+    400.0,
+    233.0,
     511.0
    ],
    "id": "0625_2023ON_12_q04_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p12/q04/figures/0625_2023ON_12_q04_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p12/q04/figures/0625_2023ON_12_q04_figA",
     "url": null,
-    "kb": 17.5
+    "kb": 17.3
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "Which row shows the readings on the bathroom scale?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "mass",
-     "weight"
-    ],
-    [
-     "<b>A</b>",
-     "60N",
-     "590kg"
-    ],
-    [
-     "<b>B</b>",
-     "60kg",
-     "590N"
-    ],
-    [
-     "<b>C</b>",
-     "590kg",
-     "60N"
-    ],
-    [
-     "<b>D</b>",
-     "590N",
-     "60kg"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_12_q04_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "60N 590kg"
+    },
+    {
+     "label": "B",
+     "html": "60kg 590N"
+    },
+    {
+     "label": "C",
+     "html": "590kg 60N"
+    },
+    {
+     "label": "D",
+     "html": "590N 60kg"
+    }
+   ]
   }
  ]
 }

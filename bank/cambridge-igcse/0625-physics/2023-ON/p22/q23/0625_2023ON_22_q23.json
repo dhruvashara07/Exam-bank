@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    84.7,
-    406.3,
-    209.6
+    67.5,
+    84.5,
+    406.5,
+    210.0
    ],
    "id": "0625_2023ON_22_q23_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,40 +98,30 @@
    "text": "Which row gives typical values for the speed of sound in a solid and in a gas?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "speed of sound in a solid",
-     "speed of sound in a gas"
-    ],
-    [
-     "",
-     "m/s",
-     "m/s"
-    ],
-    [
-     "<b>A</b>",
-     "3",
-     "30"
-    ],
-    [
-     "<b>B</b>",
-     "30",
-     "3"
-    ],
-    [
-     "<b>C</b>",
-     "300",
-     "3000"
-    ],
-    [
-     "<b>D</b>",
-     "3000",
-     "300"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_22_q23_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "3 30"
+    },
+    {
+     "label": "B",
+     "html": "30 3"
+    },
+    {
+     "label": "C",
+     "html": "300 3000"
+    },
+    {
+     "label": "D",
+     "html": "3000 300"
+    }
+   ]
   }
  ]
 }

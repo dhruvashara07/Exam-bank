@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 4,
    "bbox": [
-    101.1,
-    143.9,
-    494.1,
-    525.7
+    101.5,
+    144.5,
+    494.0,
+    526.0
    ],
    "id": "0625_2015ON_53_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 6,
    "bbox": [
-    122.8,
-    88.4,
-    468.6,
-    409.2
+    122.0,
+    88.0,
+    468.5,
+    409.5
    ],
    "id": "0625_2015ON_53_q02ei_fig2-2",
    "part": "(e)(i)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 2.3",
    "page": 7,
    "bbox": [
-    122.8,
-    127.4,
-    468.6,
-    448.2
+    122.0,
+    127.0,
+    468.5,
+    448.5
    ],
    "id": "0625_2015ON_53_q02g_fig2-3",
    "part": "(g)",
@@ -555,7 +555,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a value <i>n</i><sub>1</sub> for the refractive index of the block, using your values from <b>(d)(i) </b>and and the equation <i>n</i><sub>1</sub> = \\(\\frac{<i>a</i>}{<i>b</i>}\\) .",
+       "html": "Calculate a value <i>n</i><sub>1</sub> for the refractive index of the block, using your values from <b>(d)(i) </b>and and the equation <i>n</i><sub>1</sub> = \\(\\frac{a}{b}\\) .",
        "text": "Calculate a value n1 for the refractive index of the block, using your values from (d)(i) and and the equation n1 = (a)/(b) ."
       },
       {
@@ -875,7 +875,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a second value <i>n </i><sub>2</sub> for the refractive index of the block, using your values from and <b>(f)(ii)</b> and the equation <i>n</i><sub>2</sub> = \\(\\frac{<i>c</i>}{<i>d</i>}\\) .",
+       "html": "Calculate a second value <i>n </i><sub>2</sub> for the refractive index of the block, using your values from and <b>(f)(ii)</b> and the equation <i>n</i><sub>2</sub> = \\(\\frac{c}{d}\\) .",
        "text": "Calculate a second value n 2 for the refractive index of the block, using your values from and (f)(ii) and the equation n2 = (c)/(d) ."
       },
       {
@@ -992,30 +992,19 @@
      "caption": "Fig. 2.3"
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<b>1</b>",
-       ""
-      ],
-      [
-       "<b>$</b> <b>%</b>",
-       ""
-      ],
-      [
-       "<b>&amp;</b>",
-       ""
-      ],
-      [
-       "<b>/</b>",
-       ""
-      ]
-     ]
-    },
-    {
      "type": "text",
      "html": "State and explain whether this third value for the refractive index is likely to be more or less reliable than the other two values for the refractive index.",
      "text": "State and explain whether this third value for the refractive index is likely to be more or less reliable than the other two values for the refractive index."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
     },
     {
      "type": "text",
@@ -1024,8 +1013,7 @@
     },
     {
      "type": "answer",
-     "kind": "answer_line",
-     "prefix": "explanation",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -1084,6 +1072,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -1099,41 +1088,6 @@
    "type": "figure",
    "id": "0625_2015ON_53_q02_fig2-1",
    "caption": "Fig. 2.1"
-  },
-  {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "H\\H",
-     ""
-    ],
-    [
-     "",
-     "<b>1</b>",
-     ""
-    ],
-    [
-     "",
-     "<b>&#x27;</b>",
-     ""
-    ],
-    [
-     "",
-     "<b>$</b> <b>%</b>",
-     ""
-    ],
-    [
-     "",
-     "<b>&amp;</b>",
-     ""
-    ],
-    [
-     "",
-     "<b>/</b>",
-     ""
-    ]
-   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    67.6,
-    299.9,
-    283.9,
-    411.2
+    67.5,
+    299.5,
+    284.0,
+    411.5
    ],
    "id": "0625_2015ON_13_q11_figA",
    "caption": null,
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "The water in a lake is at 5°C. A diver measures the pressure of the water at two different depths in the lake. He repeats the measurements on a different day when the water is at 15°C.",
-   "text": "The water in a lake is at 5°C. A diver measures the pressure of the water at two different depths in the lake. He repeats the measurements on a different day when the water is at 15°C."
+   "html": "The water in a lake is at 5 °C. A diver measures the pressure of the water at two different depths in the lake. He repeats the measurements on a different day when the water is at 15 °C.",
+   "text": "The water in a lake is at 5 °C. A diver measures the pressure of the water at two different depths in the lake. He repeats the measurements on a different day when the water is at 15 °C."
   },
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "Which combination of depth and temperature produces the greatest water pressure?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "depth/m",
-     "temperature/°C"
-    ],
-    [
-     "A",
-     "10",
-     "5"
-    ],
-    [
-     "B",
-     "10",
-     "15"
-    ],
-    [
-     "C",
-     "20",
-     "5"
-    ],
-    [
-     "D",
-     "20",
-     "15"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015ON_13_q11_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "10 5"
+    },
+    {
+     "label": "B",
+     "html": "10 15"
+    },
+    {
+     "label": "C",
+     "html": "20 5"
+    },
+    {
+     "label": "D",
+     "html": "20 15"
+    }
+   ]
   }
  ]
 }

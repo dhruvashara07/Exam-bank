@@ -33,10 +33,10 @@
    "caption": "Fig. 8.1",
    "page": 12,
    "bbox": [
-    165.7,
-    85.3,
-    430.7,
-    240.9
+    165.0,
+    84.5,
+    430.5,
+    241.0
    ],
    "id": "0625_2025MJ_41_q08_fig8-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 8.2",
    "page": 13,
    "bbox": [
-    133.3,
-    108.8,
-    462.1,
-    275.8
+    133.5,
+    109.0,
+    462.0,
+    276.0
    ],
    "id": "0625_2025MJ_41_q08b_fig8-2",
    "part": "(b)",
@@ -145,7 +145,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "A"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "B"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -302,23 +311,6 @@
      "type": "figure",
      "id": "0625_2025MJ_41_q08b_fig8-2",
      "caption": "Fig. 8.2"
-    },
-    {
-     "type": "table",
-     "rows": [
-      [
-       "",
-       "",
-       "",
-       ""
-      ],
-      [
-       "0.00 0.25",
-       "0.25 0.50",
-       "0.50 0.75",
-       "0.75 1.00"
-      ]
-     ]
     },
     {
      "type": "answer",
@@ -495,8 +487,8 @@
      "content": [
       {
        "type": "text",
-       "html": "A power station generates electricity at 25000V. A transformer steps up the voltage to 300000V. The primary coil of the step-up transformer has 450 turns. Calculate the number of turns N<sub>s</sub> on the secondary coil of the transformer.",
-       "text": "A power station generates electricity at 25000V. A transformer steps up the voltage to 300000V. The primary coil of the step-up transformer has 450 turns. Calculate the number of turns Ns on the secondary coil of the transformer."
+       "html": "A power station generates electricity at 25 000 V. A transformer steps up the voltage to 300 000 V. The primary coil of the step-up transformer has 450 turns. Calculate the number of turns N<sub>s</sub> on the secondary coil of the transformer.",
+       "text": "A power station generates electricity at 25 000 V. A transformer steps up the voltage to 300 000 V. The primary coil of the step-up transformer has 450 turns. Calculate the number of turns Ns on the secondary coil of the transformer."
       },
       {
        "type": "answer",
@@ -537,6 +529,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

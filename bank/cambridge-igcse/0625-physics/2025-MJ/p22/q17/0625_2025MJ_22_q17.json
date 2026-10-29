@@ -32,10 +32,10 @@
   {
    "page": 9,
    "bbox": [
-    67.7,
-    84.7,
+    67.5,
+    84.5,
     312.5,
-    210.1
+    210.5
    ],
    "id": "0625_2025MJ_22_q17_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p22/q17/figures/0625_2025MJ_22_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p22/q17/figures/0625_2025MJ_22_q17_figA",
     "url": null,
-    "kb": 22.4
+    "kb": 22.3
    }
   }
  ],
@@ -90,42 +90,38 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "Which wave will diffract the most when passing through a gap that is 0.85m wide?",
-   "text": "Which wave will diffract the most when passing through a gap that is 0.85m wide?"
+   "html": "Which wave will diffract the most when passing through a gap that is 0.85 m wide?",
+   "text": "Which wave will diffract the most when passing through a gap that is 0.85 m wide?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "wave speed m/s",
-     "wave frequency/Hz"
-    ],
-    [
-     "<b>A</b>",
-     "300",
-     "280"
-    ],
-    [
-     "<b>B</b>",
-     "300",
-     "400"
-    ],
-    [
-     "<b>C</b>",
-     "350",
-     "280"
-    ],
-    [
-     "<b>D</b>",
-     "350",
-     "400"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_22_q17_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "300 280"
+    },
+    {
+     "label": "B",
+     "html": "300 400"
+    },
+    {
+     "label": "C",
+     "html": "350 280"
+    },
+    {
+     "label": "D",
+     "html": "350 400"
+    }
+   ]
   }
  ]
 }

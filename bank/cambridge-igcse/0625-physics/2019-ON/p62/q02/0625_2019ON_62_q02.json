@@ -33,10 +33,10 @@
    "caption": "Fig. 2.1",
    "page": 5,
    "bbox": [
-    97.4,
-    104.4,
-    472.1,
-    313.8
+    98.0,
+    108.5,
+    471.5,
+    311.0
    ],
    "id": "0625_2019ON_62_q02_fig2-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 2.2",
    "page": 5,
    "bbox": [
-    182.6,
-    382.0,
-    384.3,
-    554.2
+    182.0,
+    381.5,
+    385.0,
+    551.5
    ],
    "id": "0625_2019ON_62_q02a_fig2-2",
    "part": "(a)",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p62/q02/figures/0625_2019ON_62_q02a_fig2-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p62/q02/figures/0625_2019ON_62_q02a_fig2-2",
     "url": null,
-    "kb": 23.6
+    "kb": 23.5
    }
   },
   {
    "caption": "Table 2.1",
    "page": 6,
    "bbox": [
-    179.1,
-    153.3,
-    387.9,
-    316.3
+    179.0,
+    158.0,
+    388.0,
+    316.5
    ],
    "id": "0625_2019ON_62_q02b_table2-1",
    "part": "(b)",
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2019-ON/p62/q02/figures/0625_2019ON_62_q02b_table2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2019-ON/p62/q02/figures/0625_2019ON_62_q02b_table2-1",
     "url": null,
-    "kb": 28.0
+    "kb": 27.9
    }
   }
  ],
@@ -156,14 +156,14 @@
      "text": "She measures the current I in the circuit. Write down the current reading shown in Fig. 2.2."
     },
     {
-     "type": "figure",
-     "id": "0625_2019ON_62_q02a_fig2-2",
-     "caption": "Fig. 2.2"
-    },
-    {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "I ="
+    },
+    {
+     "type": "figure",
+     "id": "0625_2019ON_62_q02a_fig2-2",
+     "caption": "Fig. 2.2"
     },
     {
      "type": "marks",
@@ -266,7 +266,7 @@
       },
       {
        "type": "text",
-       "html": "\\(\\frac{<i>V</i>}{<i>I</i>}\\)",
+       "html": "\\(\\frac{V}{I}\\)",
        "text": "(V)/(I)"
       },
       {
@@ -357,39 +357,9 @@
      "text": "She places the sliding contact C at a distance l = 20.0 cm from P. She records the potential difference V across the length l of the resistance wire. She repeats the procedure using l values of 40.0 cm, 60.0 cm, 80.0 cm and 100.0 cm. The readings are shown in Table 2.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>l</i>/ cm",
-       "<i>V</i> /",
-       "<i>R</i> /"
-      ],
-      [
-       "20.0",
-       "0.60",
-       ""
-      ],
-      [
-       "40.0",
-       "1.10",
-       "1.96"
-      ],
-      [
-       "60.0",
-       "1.71",
-       "3.05"
-      ],
-      [
-       "80.0",
-       "2.30",
-       "4.11"
-      ],
-      [
-       "100.0",
-       "2.78",
-       "4.96"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2019ON_62_q02b_table2-1",
+     "caption": "Table 2.1"
     }
    ]
   },
@@ -728,7 +698,7 @@
       },
       {
        "type": "text",
-       "html": "\\(\\frac{<i>V</i><sub>e</sub>}{<i>I</i>}\\)",
+       "html": "\\(\\frac{V_{e}}{I}\\)",
        "text": "(Ve)/(I)"
       },
       {
@@ -841,6 +811,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

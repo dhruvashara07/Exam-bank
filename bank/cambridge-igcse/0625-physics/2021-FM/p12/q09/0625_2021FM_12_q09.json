@@ -32,7 +32,7 @@
   {
    "page": 4,
    "bbox": [
-    112.3,
+    112.0,
     86.7,
     483.0,
     235.3
@@ -45,15 +45,15 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-FM/p12/q09/figures/0625_2021FM_12_q09_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-FM/p12/q09/figures/0625_2021FM_12_q09_figA",
     "url": null,
-    "kb": 47.6
+    "kb": 47.4
    }
   },
   {
    "page": 4,
    "bbox": [
-    67.7,
+    67.5,
     344.5,
-    275.2,
+    275.5,
     470.0
    ],
    "id": "0625_2021FM_12_q09_figB",
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -122,18 +123,18 @@
   },
   {
    "type": "text",
-   "html": "X weighs 400N and sits 1.5m from the pivot.",
-   "text": "X weighs 400N and sits 1.5m from the pivot."
+   "html": "X weighs 400 N and sits 1.5 m from the pivot.",
+   "text": "X weighs 400 N and sits 1.5 m from the pivot."
   },
   {
    "type": "text",
-   "html": "The weight of the see-saw is 300N and acts through the pivot.",
-   "text": "The weight of the see-saw is 300N and acts through the pivot."
+   "html": "The weight of the see-saw is 300 N and acts through the pivot.",
+   "text": "The weight of the see-saw is 300 N and acts through the pivot."
   },
   {
    "type": "text",
-   "html": "When the see-saw is balanced, the pivot pushes up on the see-saw with a force of 900N.",
-   "text": "When the see-saw is balanced, the pivot pushes up on the see-saw with a force of 900N."
+   "html": "When the see-saw is balanced, the pivot pushes up on the see-saw with a force of 900 N.",
+   "text": "When the see-saw is balanced, the pivot pushes up on the see-saw with a force of 900 N."
   },
   {
    "type": "text",
@@ -141,40 +142,30 @@
    "text": "What is the weight of person Y and how far from the pivot is he sitting?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "weight of Y",
-     "distance from"
-    ],
-    [
-     "",
-     "/N",
-     "pivot/m"
-    ],
-    [
-     "<b>A</b>",
-     "200",
-     "1.5"
-    ],
-    [
-     "<b>B</b>",
-     "200",
-     "3.0"
-    ],
-    [
-     "<b>C</b>",
-     "400",
-     "1.5"
-    ],
-    [
-     "<b>D</b>",
-     "400",
-     "3.0"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021FM_12_q09_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "200 1.5"
+    },
+    {
+     "label": "B",
+     "html": "200 3.0"
+    },
+    {
+     "label": "C",
+     "html": "400 1.5"
+    },
+    {
+     "label": "D",
+     "html": "400 3.0"
+    }
+   ]
   }
  ]
 }

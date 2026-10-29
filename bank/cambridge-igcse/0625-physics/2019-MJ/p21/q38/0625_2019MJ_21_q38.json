@@ -32,9 +32,9 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    485.7,
-    215.3,
+    67.5,
+    485.5,
+    215.5,
     597.0
    ],
    "id": "0625_2019MJ_21_q38_figA",
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "What are the numbers x and y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "x",
-     "y"
-    ],
-    [
-     "<b>A</b>",
-     "10",
-     "0"
-    ],
-    [
-     "<b>B</b>",
-     "10",
-     "1"
-    ],
-    [
-     "<b>C</b>",
-     "12",
-     "0"
-    ],
-    [
-     "<b>D</b>",
-     "12",
-     "1"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2019MJ_21_q38_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "10 0"
+    },
+    {
+     "label": "B",
+     "html": "10 1"
+    },
+    {
+     "label": "C",
+     "html": "12 0"
+    },
+    {
+     "label": "D",
+     "html": "12 1"
+    }
+   ]
   }
  ]
 }

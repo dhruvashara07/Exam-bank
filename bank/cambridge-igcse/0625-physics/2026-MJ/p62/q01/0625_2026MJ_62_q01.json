@@ -33,10 +33,10 @@
    "caption": "Figure 1.1",
    "page": 2,
    "bbox": [
-    69.3,
-    111.5,
-    498.8,
-    304.6
+    69.5,
+    112.5,
+    498.5,
+    305.0
    ],
    "id": "0625_2026MJ_62_q01_fig1-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Figure 1.2",
    "page": 3,
    "bbox": [
-    115.2,
-    105.3,
-    285.7,
-    209.9
+    114.5,
+    106.0,
+    285.5,
+    210.0
    ],
    "id": "0625_2026MJ_62_q01bi_fig1-2",
    "part": "(b)(i)",
@@ -71,10 +71,10 @@
    "caption": "Figure 1.3",
    "page": 3,
    "bbox": [
-    69.8,
-    519.2,
+    69.0,
+    520.0,
     226.0,
-    722.4
+    722.5
    ],
    "id": "0625_2026MJ_62_q01bii_fig1-3",
    "part": "(b)(ii)",
@@ -90,10 +90,10 @@
    "caption": "Figure 1.4",
    "page": 4,
    "bbox": [
-    92.0,
-    137.5,
-    381.7,
-    269.7
+    92.5,
+    138.5,
+    381.5,
+    270.0
    ],
    "id": "0625_2026MJ_62_q01d_fig1-4",
    "part": "(d)",
@@ -109,10 +109,10 @@
    "caption": "Figure 1.5",
    "page": 4,
    "bbox": [
-    92.5,
-    357.5,
-    248.7,
-    563.8
+    92.0,
+    358.0,
+    249.0,
+    564.0
    ],
    "id": "0625_2026MJ_62_q01d_fig1-5",
    "part": "(d)",
@@ -203,6 +203,18 @@
        "type": "text",
        "html": "the nearest millimetre.",
        "text": "the nearest millimetre."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "l =",
+       "unit": "cm"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "w =",
+       "unit": "cm"
       },
       {
        "type": "answer",
@@ -469,9 +481,15 @@
        "text": "B"
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "ρ1 =",
+       "unit": "g / cm3"
+      },
+      {
        "type": "text",
-       "html": "<b>Method</b> <b>2</b> The student is provided with two beakers, X and Y. Each beaker contains 200cm<sup>3</sup> of water.",
-       "text": "Method 2 The student is provided with two beakers, X and Y. Each beaker contains 200cm3 of water."
+       "html": "<b>Method</b> <b>2</b> The student is provided with two beakers, X and Y. Each beaker contains 200 cm<sup>3</sup> of water.",
+       "text": "Method 2 The student is provided with two beakers, X and Y. Each beaker contains 200 cm3 of water."
       },
       {
        "type": "text",
@@ -487,33 +505,6 @@
        "type": "figure",
        "id": "0625_2026MJ_62_q01bii_fig1-3",
        "caption": "Figure 1.3"
-      },
-      {
-       "type": "table",
-       "rows": [
-        [
-         "80",
-         ""
-        ],
-        [
-         "70",
-         ""
-        ],
-        [
-         "60",
-         ""
-        ],
-        [
-         "50",
-         ""
-        ]
-       ]
-      },
-      {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "ρ1 =",
-       "unit": "g/cm3"
       },
       {
        "type": "marks",
@@ -691,30 +682,15 @@
      "caption": "Figure 1.5"
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "80",
-       ""
-      ],
-      [
-       "70",
-       ""
-      ],
-      [
-       "60",
-       ""
-      ],
-      [
-       "50",
-       ""
-      ]
-     ]
-    },
-    {
      "type": "text",
      "html": "Record the volume V<sub>2</sub> of water remaining in the measuring cylinder.",
      "text": "Record the volume V2 of water remaining in the measuring cylinder."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V2 =",
+     "unit": "cm3"
     },
     {
      "type": "text",
@@ -802,7 +778,7 @@
     },
     {
      "type": "text",
-     "html": "ρ<sub>2</sub> = \\(\\frac{kV}{V}\\)",
+     "html": "ρ<sub>2</sub> = \\(\\frac{\\text{kV}}{V}\\)",
      "text": "ρ2 = (kV)/(V)"
     },
     {
@@ -812,8 +788,8 @@
     },
     {
      "type": "text",
-     "html": "where k = 1.0g/cm<sup>3</sup>.",
-     "text": "where k = 1.0g/cm3."
+     "html": "where k = 1.0 g / cm<sup>3</sup>.",
+     "text": "where k = 1.0 g / cm3."
     },
     {
      "type": "text",
@@ -824,7 +800,7 @@
      "type": "answer",
      "kind": "answer_line",
      "prefix": "ρ2 =",
-     "unit": "g/cm3"
+     "unit": "g / cm3"
     },
     {
      "type": "marks",
@@ -914,6 +890,10 @@
      "type": "answer",
      "kind": "answer_line",
      "prefix": "statement"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -1012,6 +992,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

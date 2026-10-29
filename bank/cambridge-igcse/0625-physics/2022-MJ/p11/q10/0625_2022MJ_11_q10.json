@@ -70,6 +70,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -86,11 +87,11 @@
    "options": [
     {
      "label": "A",
-     "html": "\\(\\frac{<i>F</i>}{<i>d</i>}\\)"
+     "html": "\\(\\frac{F}{d}\\)"
     },
     {
      "label": "B",
-     "html": "\\(\\frac{<i>d</i>}{<i>F</i>}\\)"
+     "html": "\\(\\frac{d}{F}\\)"
     },
     {
      "label": "C",
@@ -98,7 +99,7 @@
     },
     {
      "label": "D",
-     "html": "\\(\\frac{1}{(<i>F</i> ×<i>d</i>)}\\)"
+     "html": "\\(\\frac{1}{(F \\times d )}\\)"
     }
    ]
   }

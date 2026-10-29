@@ -32,10 +32,10 @@
   {
    "page": 11,
    "bbox": [
-    217.9,
-    375.1,
-    476.9,
-    477.1
+    217.5,
+    374.5,
+    477.5,
+    477.0
    ],
    "id": "0625_2016ON_23_q27_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 11,
    "bbox": [
-    67.7,
-    509.3,
+    67.5,
+    509.0,
     301.0,
-    620.6
+    621.0
    ],
    "id": "0625_2016ON_23_q27_figB",
    "caption": null,
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,35 +137,30 @@
    "text": "Which magnetic pole is induced at X and at Y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "pole induced at X",
-     "pole induced at Y"
-    ],
-    [
-     "<b>A</b>",
-     "N",
-     "N"
-    ],
-    [
-     "<b>B</b>",
-     "N",
-     "S"
-    ],
-    [
-     "<b>C</b>",
-     "S",
-     "N"
-    ],
-    [
-     "<b>D</b>",
-     "S",
-     "S"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_23_q27_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "N N"
+    },
+    {
+     "label": "B",
+     "html": "N S"
+    },
+    {
+     "label": "C",
+     "html": "S N"
+    },
+    {
+     "label": "D",
+     "html": "S S"
+    }
+   ]
   }
  ]
 }

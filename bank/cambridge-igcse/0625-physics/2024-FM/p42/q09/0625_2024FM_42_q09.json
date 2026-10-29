@@ -179,7 +179,26 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation 2",
+       "prefix": "conclusion 1"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation 1"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "conclusion 2"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation 2"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -404,5 +423,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

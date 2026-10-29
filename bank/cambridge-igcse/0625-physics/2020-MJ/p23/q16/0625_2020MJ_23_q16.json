@@ -32,10 +32,10 @@
   {
    "page": 7,
    "bbox": [
-    147.3,
+    146.5,
     420.1,
-    447.9,
-    470.0
+    448.5,
+    470.5
    ],
    "id": "0625_2020MJ_23_q16_figA",
    "caption": null,
@@ -51,9 +51,9 @@
   {
    "page": 7,
    "bbox": [
-    67.7,
-    502.7,
-    468.1,
+    67.5,
+    502.5,
+    468.5,
     613.5
    ],
    "id": "0625_2020MJ_23_q16_figB",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p23/q16/figures/0625_2020MJ_23_q16_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p23/q16/figures/0625_2020MJ_23_q16_figB",
     "url": null,
-    "kb": 28.4
+    "kb": 28.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row gives the correct labels for the thermometer?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>A</b>",
-     "water",
-     "narrow tube of uniform diameter"
-    ],
-    [
-     "<b>B</b>",
-     "alcohol",
-     "narrow tube of uniform diameter"
-    ],
-    [
-     "<b>C</b>",
-     "water",
-     "this end immersed in substance to be measured"
-    ],
-    [
-     "<b>D</b>",
-     "alcohol",
-     "this end immersed in substance to be measured"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020MJ_23_q16_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "water narrow tube of uniform diameter"
+    },
+    {
+     "label": "B",
+     "html": "alcohol narrow tube of uniform diameter"
+    },
+    {
+     "label": "C",
+     "html": "water this end immersed in substance to be measured"
+    },
+    {
+     "label": "D",
+     "html": "alcohol this end immersed in substance to be measured"
+    }
+   ]
   }
  ]
 }

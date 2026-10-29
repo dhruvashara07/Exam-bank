@@ -33,9 +33,9 @@
    "page": 8,
    "bbox": [
     177.0,
-    510.1,
+    510.0,
     418.5,
-    600.4
+    600.5
    ],
    "id": "0625_2025MJ_22_q16_figA",
    "caption": null,
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p22/q16/figures/0625_2025MJ_22_q16_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p22/q16/figures/0625_2025MJ_22_q16_figA",
     "url": null,
-    "kb": 17.4
+    "kb": 17.1
    }
   },
   {
    "page": 8,
    "bbox": [
-    67.7,
-    632.3,
-    399.9,
-    757.8
+    67.5,
+    632.0,
+    400.0,
+    758.0
    ],
    "id": "0625_2025MJ_22_q16_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p22/q16/figures/0625_2025MJ_22_q16_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p22/q16/figures/0625_2025MJ_22_q16_figB",
     "url": null,
-    "kb": 21.6
+    "kb": 21.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -116,29 +117,9 @@
    "text": "Three solid copper spheres, X, Y and Z, are heated to the same temperature."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "sphere",
-     "diameter",
-     "colour of surface"
-    ],
-    [
-     "X",
-     "2<i>d</i>",
-     "black"
-    ],
-    [
-     "Y",
-     "<i>d</i>",
-     "white"
-    ],
-    [
-     "Z",
-     "2<i>d</i>",
-     "white"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2025MJ_22_q16_figA",
+   "caption": null
   },
   {
    "type": "text",
@@ -146,46 +127,30 @@
    "text": "Which row gives the order for the rate of emission of radiation?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "highest rate",
-     "second highest",
-     "lowest rate"
-    ],
-    [
-     "",
-     "of emission",
-     "rate of emission",
-     "of emission"
-    ],
-    [
-     "<b>A</b>",
-     "X",
-     "Y",
-     "Z"
-    ],
-    [
-     "<b>B</b>",
-     "X",
-     "Z",
-     "Y"
-    ],
-    [
-     "<b>C</b>",
-     "Z",
-     "X",
-     "Y"
-    ],
-    [
-     "<b>D</b>",
-     "Z",
-     "Y",
-     "X"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025MJ_22_q16_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "X Y Z"
+    },
+    {
+     "label": "B",
+     "html": "X Z Y"
+    },
+    {
+     "label": "C",
+     "html": "Z X Y"
+    },
+    {
+     "label": "D",
+     "html": "Z Y X"
+    }
+   ]
   }
  ]
 }

@@ -33,10 +33,10 @@
    "caption": "Figure 9.1",
    "page": 17,
    "bbox": [
-    69.3,
-    85.5,
-    414.6,
-    326.8
+    69.5,
+    86.5,
+    414.5,
+    327.0
    ],
    "id": "0625_2026FM_32_q09_fig9-1",
    "part": "",
@@ -202,9 +202,18 @@
        "text": "State and explain in which wire in the mains electricity supply the switch is connected."
       },
       {
+       "type": "text",
+       "html": "switch is connected in the …… .",
+       "text": "switch is connected in the …… ."
+      },
+      {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -276,13 +285,13 @@
    "content": [
     {
      "type": "text",
-     "html": "The charger includes a transformer. The voltage to the primary coil of the transformer V<sub>p</sub> is 240V. The secondary voltage V<sub>s</sub> for the transformer is 16V. The number of turns on the primary coil N<sub>p</sub> is 900. Calculate the number of turns on the secondary coil N<sub>s</sub> for the transformer.",
-     "text": "The charger includes a transformer. The voltage to the primary coil of the transformer Vp is 240V. The secondary voltage Vs for the transformer is 16V. The number of turns on the primary coil Np is 900. Calculate the number of turns on the secondary coil Ns for the transformer."
+     "html": "The charger includes a transformer. The voltage to the primary coil of the transformer V<sub>p</sub> is 240 V. The secondary voltage V<sub>s</sub> for the transformer is 16 V. The number of turns on the primary coil N<sub>p</sub> is 900. Calculate the number of turns on the secondary coil N<sub>s</sub> for the transformer.",
+     "text": "The charger includes a transformer. The voltage to the primary coil of the transformer Vp is 240 V. The secondary voltage Vs for the transformer is 16 V. The number of turns on the primary coil Np is 900. Calculate the number of turns on the secondary coil Ns for the transformer."
     },
     {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "number of turns on secondary coil ="
+     "type": "text",
+     "html": "number of turns on secondary coil = ……",
+     "text": "number of turns on secondary coil = ……"
     },
     {
      "type": "marks",
@@ -308,6 +317,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

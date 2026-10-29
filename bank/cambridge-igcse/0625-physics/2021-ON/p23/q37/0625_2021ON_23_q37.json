@@ -32,9 +32,9 @@
   {
    "page": 15,
    "bbox": [
-    69.4,
+    69.0,
     541.5,
-    322.7,
+    323.0,
     667.0
    ],
    "id": "0625_2021ON_23_q37_figA",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p23/q37/figures/0625_2021ON_23_q37_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p23/q37/figures/0625_2021ON_23_q37_figA",
     "url": null,
-    "kb": 22.7
+    "kb": 22.6
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,40 +103,30 @@
    "text": "How many neutrons and how many protons remain in the nucleus when this form of americium decays?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "number of neutrons",
-     "number of protons"
-    ],
-    [
-     "",
-     "remaining",
-     "remaining"
-    ],
-    [
-     "<b>A</b>",
-     "142",
-     "93"
-    ],
-    [
-     "<b>B</b>",
-     "142",
-     "95"
-    ],
-    [
-     "<b>C</b>",
-     "144",
-     "93"
-    ],
-    [
-     "<b>D</b>",
-     "144",
-     "95"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2021ON_23_q37_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "142 93"
+    },
+    {
+     "label": "B",
+     "html": "142 95"
+    },
+    {
+     "label": "C",
+     "html": "144 93"
+    },
+    {
+     "label": "D",
+     "html": "144 95"
+    }
+   ]
   }
  ]
 }

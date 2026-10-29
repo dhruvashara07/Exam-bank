@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 6,
    "bbox": [
-    191.7,
-    111.5,
-    403.2,
-    360.7
+    191.5,
+    111.0,
+    403.5,
+    358.0
    ],
    "id": "0625_2017MJ_61_q03_fig3-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-MJ/p61/q03/figures/0625_2017MJ_61_q03_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-MJ/p61/q03/figures/0625_2017MJ_61_q03_fig3-1",
     "url": null,
-    "kb": 16.8
+    "kb": 16.7
    }
   },
   {
    "caption": "Fig. 3.2",
    "page": 6,
    "bbox": [
-    77.6,
-    402.1,
-    548.2,
-    518.9
+    77.0,
+    442.5,
+    549.0,
+    516.0
    ],
    "id": "0625_2017MJ_61_q03a_fig3-2",
    "part": "(a)",
@@ -64,17 +64,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-MJ/p61/q03/figures/0625_2017MJ_61_q03a_fig3-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-MJ/p61/q03/figures/0625_2017MJ_61_q03a_fig3-2",
     "url": null,
-    "kb": 43.0
+    "kb": 37.5
    }
   },
   {
    "caption": "Table 3.1",
    "page": 7,
    "bbox": [
-    223.6,
-    215.1,
-    371.7,
-    337.7
+    223.5,
+    220.0,
+    372.0,
+    338.0
    ],
    "id": "0625_2017MJ_61_q03b_table3-1",
    "part": "(b)",
@@ -90,10 +90,10 @@
    "caption": "Fig. 3.3",
    "page": 8,
    "bbox": [
-    195.8,
-    137.6,
+    196.0,
+    137.0,
     399.5,
-    487.2
+    484.5
    ],
    "id": "0625_2017MJ_61_q03d_fig3-3",
    "part": "(d)",
@@ -180,13 +180,8 @@
     },
     {
      "type": "text",
-     "html": "experiment.",
-     "text": "experiment."
-    },
-    {
-     "type": "figure",
-     "id": "0625_2017MJ_61_q03a_fig3-2",
-     "caption": "Fig. 3.2"
+     "html": "experiment. Record θ .",
+     "text": "experiment. Record θ ."
     },
     {
      "type": "text",
@@ -194,9 +189,19 @@
      "text": "R"
     },
     {
+     "type": "figure",
+     "id": "0625_2017MJ_61_q03a_fig3-2",
+     "caption": "Fig. 3.2"
+    },
+    {
      "type": "answer",
      "kind": "answer_line",
      "prefix": "θ ="
+    },
+    {
+     "type": "text",
+     "html": "R",
+     "text": "R"
     },
     {
      "type": "marks",
@@ -294,7 +299,17 @@
       {
        "type": "list",
        "items": [
-        "Calculate the temperature fall Δθ<sub>1</sub> during the first 180 s.",
+        "Calculate the temperature fall Δθ<sub>1</sub> during the first 180 s."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Δθ1 ="
+      },
+      {
+       "type": "list",
+       "items": [
         "Calculate the temperature fall Δθ<sub>2</sub> during the next 180 s."
        ]
       },
@@ -401,25 +416,9 @@
      "text": "The readings are shown in Table 3.1."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "<i>t</i> / s",
-       "θ / °C"
-      ],
-      [
-       "0",
-       "85"
-      ],
-      [
-       "180",
-       "74"
-      ],
-      [
-       "360",
-       "66"
-      ]
-     ]
+     "type": "figure",
+     "id": "0625_2017MJ_61_q03b_table3-1",
+     "caption": "Table 3.1"
     }
    ]
   },
@@ -488,7 +487,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -572,7 +580,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "2.",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -599,6 +616,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

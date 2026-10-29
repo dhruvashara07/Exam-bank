@@ -32,9 +32,9 @@
   {
    "page": 8,
    "bbox": [
-    143.8,
+    65.7,
     125.1,
-    529.3,
+    529.0,
     352.1
    ],
    "id": "0625_2017MJ_13_q17_figA",
@@ -45,15 +45,15 @@
     "file": "bank/cambridge-igcse/0625-physics/2017-MJ/p13/q17/figures/0625_2017MJ_13_q17_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2017-MJ/p13/q17/figures/0625_2017MJ_13_q17_figA",
     "url": null,
-    "kb": 20.4
+    "kb": 25.4
    }
   },
   {
    "page": 8,
    "bbox": [
-    67.7,
-    385.6,
-    263.9,
+    67.5,
+    385.5,
+    264.0,
     511.0
    ],
    "id": "0625_2017MJ_13_q17_figB",
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -127,49 +128,34 @@
   },
   {
    "type": "text",
-   "html": "temperature /°C",
-   "text": "temperature /°C"
-  },
-  {
-   "type": "text",
    "html": "What is the melting point and what is the boiling point of the substance?",
    "text": "What is the melting point and what is the boiling point of the substance?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "melting",
-     "boiling"
-    ],
-    [
-     "",
-     "point/°C",
-     "point/°C"
-    ],
-    [
-     "<b>A</b>",
-     "200",
-     "300"
-    ],
-    [
-     "<b>B</b>",
-     "200",
-     "500"
-    ],
-    [
-     "<b>C</b>",
-     "300",
-     "500"
-    ],
-    [
-     "<b>D</b>",
-     "300",
-     "700"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2017MJ_13_q17_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "200 300"
+    },
+    {
+     "label": "B",
+     "html": "200 500"
+    },
+    {
+     "label": "C",
+     "html": "300 500"
+    },
+    {
+     "label": "D",
+     "html": "300 700"
+    }
+   ]
   }
  ]
 }

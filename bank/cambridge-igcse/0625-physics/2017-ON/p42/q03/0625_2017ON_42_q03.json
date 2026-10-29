@@ -81,7 +81,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
-     "prefix": "Description of process:",
+     "prefix": "Name of fuel:"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Description of process:"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
      "lines": 4
     },
     {
@@ -255,5 +264,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

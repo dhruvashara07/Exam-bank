@@ -32,10 +32,10 @@
   {
    "page": 17,
    "bbox": [
-    67.6,
-    282.6,
-    291.8,
-    393.9
+    67.5,
+    282.5,
+    292.0,
+    394.0
    ],
    "id": "0625_2016FM_22_q38_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-FM/p22/q38/figures/0625_2016FM_22_q38_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-FM/p22/q38/figures/0625_2016FM_22_q38_figA",
     "url": null,
-    "kb": 19.8
+    "kb": 19.6
    }
   }
  ],
@@ -90,11 +90,12 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A nucleus of a radioactive substance<sup>218</sup><sub>84</sub>Po undergoes an α-decay followed by a β-decay.",
-   "text": "A nucleus of a radioactive substance21884Po undergoes an α-decay followed by a β-decay."
+   "html": "A nucleus of a radioactive substance<sup>218</sup><sub>84</sub> Po undergoes an α-decay followed by a β-decay.",
+   "text": "A nucleus of a radioactive substance21884 Po undergoes an α-decay followed by a β-decay."
   },
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What are the nucleon (mass) number and proton (atomic) number of the nuclide formed after both decays have happened?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "nucleon number",
-     "proton number"
-    ],
-    [
-     "A",
-     "214",
-     "85"
-    ],
-    [
-     "B",
-     "216",
-     "85"
-    ],
-    [
-     "C",
-     "214",
-     "83"
-    ],
-    [
-     "D",
-     "216",
-     "83"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016FM_22_q38_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "214 85"
+    },
+    {
+     "label": "B",
+     "html": "216 85"
+    },
+    {
+     "label": "C",
+     "html": "214 83"
+    },
+    {
+     "label": "D",
+     "html": "216 83"
+    }
+   ]
   }
  ]
 }

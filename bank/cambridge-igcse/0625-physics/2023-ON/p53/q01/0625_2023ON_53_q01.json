@@ -33,10 +33,10 @@
    "caption": "Fig. 1.3",
    "page": 3,
    "bbox": [
-    69.3,
-    58.0,
+    70.0,
+    61.5,
     397.5,
-    302.4
+    301.0
    ],
    "id": "0625_2023ON_53_q01aiii_fig1-3",
    "part": "(a)(iii)",
@@ -129,14 +129,32 @@
        "text": "Fig. 1.1."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "m1 =",
+       "unit": "g"
+      },
+      {
        "type": "text",
        "html": "Pour approximately 100 cm<sup>3</sup> of sand into <b>measuring cylinder A</b>. <b> The sand is to remain in the measuring cylinder for the rest of the experiment.</b> Measure the volume <i>V</i><sub>1</sub> of sand in measuring cylinder A.",
        "text": "Pour approximately 100 cm3 of sand into measuring cylinder A. The sand is to remain in the measuring cylinder for the rest of the experiment. Measure the volume V1 of sand in measuring cylinder A."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V1 =",
+       "unit": "cm3"
+      },
+      {
        "type": "text",
        "html": "Measure the mass <i>m</i><sub>2</sub> of measuring cylinder A and the sand using the top-pan balance, as shown in Fig. 1.2.",
        "text": "Measure the mass m2 of measuring cylinder A and the sand using the top-pan balance, as shown in Fig. 1.2."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "m2 =",
+       "unit": "g"
       },
       {
        "type": "text",
@@ -215,7 +233,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a value for the density ρ<sub>1</sub> of the sand. Use your values from <b>(a)(i)</b> and the equation ρ<sub>1</sub> = \\(\\frac{<i>m</i><sub>3</sub>}{<i>V</i><sub>1</sub>}\\). Include a unit.",
+       "html": "Calculate a value for the density ρ<sub>1</sub> of the sand. Use your values from <b>(a)(i)</b> and the equation ρ<sub>1</sub> = \\(\\frac{m_{3}}{V_{1}}\\). Include a unit.",
        "text": "Calculate a value for the density ρ1 of the sand. Use your values from (a)(i) and the equation ρ1 = (m3)/(V1). Include a unit."
       },
       {
@@ -551,8 +569,8 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate another value for the density ρ<sub>2</sub> of the sand. Use your values from <b>(a)(i)</b> and <b>(b)(i)</b> and the equation ρ<sub>2</sub> = \\(\\frac{<i>m</i><sup>3</sup>}{(<i>V</i><sub>2</sub>-<i>k</i>)}\\), where <i>k</i> = 100 cm<sup>3</sup>.",
-       "text": "Calculate another value for the density ρ2 of the sand. Use your values from (a)(i) and (b)(i) and the equation ρ2 = (m3)/((V2-k)), where k = 100 cm3."
+       "html": "Calculate another value for the density ρ<sub>2</sub> of the sand. Use your values from <b>(a)(i)</b> and <b>(b)(i)</b> and the equation ρ<sub>2</sub> = \\(\\frac{m^{3}}{(V_{2} - k)}\\) , where <i>k</i> = 100 cm<sup>3</sup>.",
+       "text": "Calculate another value for the density ρ2 of the sand. Use your values from (a)(i) and (b)(i) and the equation ρ2 = (m3)/((V2-k)) , where k = 100 cm3."
       },
       {
        "type": "answer",
@@ -772,6 +790,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

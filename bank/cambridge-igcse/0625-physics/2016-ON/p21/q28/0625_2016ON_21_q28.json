@@ -32,10 +32,10 @@
   {
    "page": 12,
    "bbox": [
-    217.9,
-    98.1,
-    476.9,
-    200.2
+    217.5,
+    97.5,
+    477.5,
+    200.0
    ],
    "id": "0625_2016ON_21_q28_figA",
    "caption": null,
@@ -51,10 +51,10 @@
   {
    "page": 12,
    "bbox": [
-    67.7,
-    232.3,
+    67.5,
+    232.0,
     301.0,
-    343.6
+    344.0
    ],
    "id": "0625_2016ON_21_q28_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-ON/p21/q28/figures/0625_2016ON_21_q28_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-ON/p21/q28/figures/0625_2016ON_21_q28_figB",
     "url": null,
-    "kb": 15.9
+    "kb": 15.7
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -136,35 +137,30 @@
    "text": "Which magnetic pole is induced at X and at Y?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "pole induced at X",
-     "pole induced at Y"
-    ],
-    [
-     "<b>A</b>",
-     "N",
-     "N"
-    ],
-    [
-     "<b>B</b>",
-     "N",
-     "S"
-    ],
-    [
-     "<b>C</b>",
-     "S",
-     "N"
-    ],
-    [
-     "<b>D</b>",
-     "S",
-     "S"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016ON_21_q28_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "N N"
+    },
+    {
+     "label": "B",
+     "html": "N S"
+    },
+    {
+     "label": "C",
+     "html": "S N"
+    },
+    {
+     "label": "D",
+     "html": "S S"
+    }
+   ]
   }
  ]
 }

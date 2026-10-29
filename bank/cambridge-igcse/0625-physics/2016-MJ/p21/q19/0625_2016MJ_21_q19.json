@@ -32,8 +32,8 @@
   {
    "page": 9,
    "bbox": [
-    248.7,
-    333.4,
+    248.5,
+    333.0,
     345.8,
     443.0
    ],
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p21/q19/figures/0625_2016MJ_21_q19_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p21/q19/figures/0625_2016MJ_21_q19_figA",
     "url": null,
-    "kb": 8.7
+    "kb": 8.6
    }
   },
   {
    "page": 9,
    "bbox": [
-    67.6,
-    514.2,
-    286.7,
-    639.7
+    67.5,
+    514.0,
+    287.0,
+    640.0
    ],
    "id": "0625_2016MJ_21_q19_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2016-MJ/p21/q19/figures/0625_2016MJ_21_q19_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2016-MJ/p21/q19/figures/0625_2016MJ_21_q19_figB",
     "url": null,
-    "kb": 24.6
+    "kb": 24.3
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,35 +132,30 @@
    "text": "How does the density change and what is this energy transfer process?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "density",
-     "energy transfer process"
-    ],
-    [
-     "A",
-     "decreases",
-     "conduction"
-    ],
-    [
-     "B",
-     "decreases",
-     "convection"
-    ],
-    [
-     "C",
-     "increases",
-     "conduction"
-    ],
-    [
-     "D",
-     "increases",
-     "convection"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2016MJ_21_q19_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "decreases conduction"
+    },
+    {
+     "label": "B",
+     "html": "decreases convection"
+    },
+    {
+     "label": "C",
+     "html": "increases conduction"
+    },
+    {
+     "label": "D",
+     "html": "increases convection"
+    }
+   ]
   }
  ]
 }

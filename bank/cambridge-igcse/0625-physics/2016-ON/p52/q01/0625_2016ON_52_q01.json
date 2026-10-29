@@ -33,10 +33,10 @@
    "caption": "Fig. 1.1",
    "page": 2,
    "bbox": [
-    103.2,
-    112.7,
-    492.3,
-    242.9
+    103.0,
+    112.5,
+    492.0,
+    243.0
    ],
    "id": "0625_2016ON_52_q01_fig1-1",
    "part": "",
@@ -361,7 +361,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate the weight <i>W</i> of the load <b>Q</b> using the equation <i>W</i> = \\(\\frac{<i>kx</i>}{<i>y</i>}\\), where <i>k</i> = 1.0 N.",
+       "html": "Calculate the weight <i>W</i> of the load <b>Q</b> using the equation <i>W</i> = \\(\\frac{\\text{kx}}{y}\\), where <i>k</i> = 1.0 N.",
        "text": "Calculate the weight W of the load Q using the equation W = (kx)/(y), where k = 1.0 N."
       },
       {
@@ -445,6 +445,18 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "x =",
+     "unit": "cm"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "y =",
+     "unit": "cm"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "W ="
     },
     {
@@ -516,7 +528,16 @@
     {
      "type": "answer",
      "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
      "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -616,6 +637,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

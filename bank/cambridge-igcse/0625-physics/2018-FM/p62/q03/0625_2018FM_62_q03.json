@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 11,
    "bbox": [
-    205.7,
-    111.3,
-    394.9,
-    380.8
+    205.0,
+    115.5,
+    395.5,
+    378.0
    ],
    "id": "0625_2018FM_62_q03_fig3-1",
    "part": "",
@@ -52,10 +52,10 @@
    "caption": "Fig. 3.2",
    "page": 11,
    "bbox": [
-    190.5,
-    465.7,
-    404.7,
-    645.6
+    190.0,
+    465.0,
+    405.5,
+    643.0
    ],
    "id": "0625_2018FM_62_q03b_fig3-2",
    "part": "(b)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 3.3",
    "page": 12,
    "bbox": [
-    86.1,
-    101.1,
-    509.2,
-    273.7
+    85.5,
+    100.5,
+    510.0,
+    271.0
    ],
    "id": "0625_2018FM_62_q03ci_fig3-3",
    "part": "(c)(i)",
@@ -90,10 +90,10 @@
    "caption": "Fig. 3.4",
    "page": 12,
    "bbox": [
-    86.1,
-    101.1,
-    509.2,
-    273.7
+    85.5,
+    100.5,
+    510.0,
+    271.0
    ],
    "id": "0625_2018FM_62_q03ci_fig3-4",
    "part": "(c)(i)",
@@ -109,10 +109,10 @@
    "caption": "Fig. 3.5",
    "page": 12,
    "bbox": [
-    196.0,
-    423.6,
-    399.3,
-    596.2
+    195.5,
+    423.0,
+    400.0,
+    593.5
    ],
    "id": "0625_2018FM_62_q03cii_fig3-5",
    "part": "(c)(ii)",
@@ -370,6 +370,11 @@
        "text": "Record the value of the p.d. VX across lamp X, shown in Fig. 3.3."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "VX ="
+      },
+      {
        "type": "text",
        "html": "Record the value of the p.d. <i>V</i><sub>Y</sub> across lamp <b>Y</b>, shown in Fig. 3.4.",
        "text": "Record the value of the p.d. VY across lamp Y, shown in Fig. 3.4."
@@ -534,7 +539,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 2
       },
       {
@@ -605,7 +619,7 @@
    "content": [
     {
      "type": "text",
-     "html": "Calculate the resistance <i>R</i><sub>1</sub> of lamp <b>X</b>. Use the readings from <b>(b) </b> and<b> (c)(i)</b> and the equation <i>R</i><sub>1</sub> = \\(\\frac{<i>V</i><sub>X</sub>}{<i>I</i>}\\) .",
+     "html": "Calculate the resistance <i>R</i><sub>1</sub> of lamp <b>X</b>. Use the readings from <b>(b) </b> and<b> (c)(i)</b> and the equation <i>R</i><sub>1</sub> = \\(\\frac{V_{X}}{I}\\) .",
      "text": "Calculate the resistance R1 of lamp X. Use the readings from (b) and (c)(i) and the equation R1 = (VX)/(I) ."
     },
     {
@@ -787,15 +801,14 @@
        "text": "8.3 Ω"
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "R2 ="
+      },
+      {
        "type": "text",
        "html": "The student notices that lamp <b>X</b> is very bright in this parallel circuit, but it was dim in the series circuit in <b>(a)</b>. Suggest how temperature affects the resistance of a lamp. Justify your suggestion by reference to the value of <i>R</i><sub>1</sub> from <b>(d)</b> and the value of <i>R</i><sub>2</sub>.",
        "text": "The student notices that lamp X is very bright in this parallel circuit, but it was dim in the series circuit in (a). Suggest how temperature affects the resistance of a lamp. Justify your suggestion by reference to the value of R1 from (d) and the value of R2."
-      },
-      {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "R2 =",
-       "lines": 4
       },
       {
        "type": "marks",
@@ -824,6 +837,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

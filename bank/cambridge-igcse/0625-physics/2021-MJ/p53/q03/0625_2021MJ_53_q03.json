@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 10,
    "bbox": [
-    56.1,
-    136.4,
-    540.6,
-    579.8
+    56.5,
+    139.5,
+    540.5,
+    578.0
    ],
    "id": "0625_2021MJ_53_q03_fig3-1",
    "part": "",
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-MJ/p53/q03/figures/0625_2021MJ_53_q03_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-MJ/p53/q03/figures/0625_2021MJ_53_q03_fig3-1",
     "url": null,
-    "kb": 19.7
+    "kb": 19.6
    }
   }
  ],
@@ -279,13 +279,25 @@
      "text": "Measure the length a of line NH."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "a =",
+     "unit": "cm"
+    },
+    {
      "type": "text",
      "html": "Measure the length <i>b</i> of line <b>GH</b>.",
      "text": "Measure the length b of line GH."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "b =",
+     "unit": "cm"
+    },
+    {
      "type": "text",
-     "html": "Calculate a value <i>n</i><sub>1</sub> for the refractive index, using the equation <i>n</i><sub>1</sub>= \\(\\frac{<i>a</i>}{<i>b</i>}\\).",
+     "html": "Calculate a value <i>n</i><sub>1</sub> for the refractive index, using the equation <i>n</i><sub>1</sub>= \\(\\frac{a}{b}\\).",
      "text": "Calculate a value n1 for the refractive index, using the equation n1= (a)/(b)."
     },
     {
@@ -392,13 +404,25 @@
        "text": "Measure the length c of the new line NH."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "c =",
+       "unit": "cm"
+      },
+      {
        "type": "text",
        "html": "Measure the length <i>d</i> of the new line <b>GH</b>.",
        "text": "Measure the length d of the new line GH."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "d =",
+       "unit": "cm"
+      },
+      {
        "type": "text",
-       "html": "Calculate a second value <i>n</i><sub>2</sub> for the refractive index, using the equation <i>n</i><sub>2</sub> = \\(\\frac{<i>c</i>}{<i>d</i>}\\).",
+       "html": "Calculate a second value <i>n</i><sub>2</sub> for the refractive index, using the equation <i>n</i><sub>2</sub> = \\(\\frac{c}{d}\\).",
        "text": "Calculate a second value n2 for the refractive index, using the equation n2 = (c)/(d)."
       },
       {
@@ -477,7 +501,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "explanation",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -645,7 +678,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
-       "prefix": "justification",
+       "prefix": "statement"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "justification"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
        "lines": 1
       },
       {
@@ -753,6 +795,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

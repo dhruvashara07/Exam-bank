@@ -35,7 +35,7 @@
     167.2,
     86.4,
     427.9,
-    220.1
+    220.5
    ],
    "id": "0625_2025ON_13_q16_figA",
    "caption": null,
@@ -45,13 +45,13 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p13/q16/figures/0625_2025ON_13_q16_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p13/q16/figures/0625_2025ON_13_q16_figA",
     "url": null,
-    "kb": 11.3
+    "kb": 11.2
    }
   },
   {
    "page": 7,
    "bbox": [
-    67.7,
+    67.5,
     290.5,
     421.0,
     416.0
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -131,40 +132,30 @@
    "text": "Which row states the main processes by which thermal energy is transferred to the water above the heater and to the water below the heater?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "thermal energy transfer to",
-     "thermal energy transfer to"
-    ],
-    [
-     "",
-     "the water above the heater",
-     "the water below the heater"
-    ],
-    [
-     "<b>A</b>",
-     "conduction",
-     "conduction"
-    ],
-    [
-     "<b>B</b>",
-     "conduction",
-     "convection"
-    ],
-    [
-     "<b>C</b>",
-     "convection",
-     "conduction"
-    ],
-    [
-     "<b>D</b>",
-     "convection",
-     "convection"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025ON_13_q16_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "conduction conduction"
+    },
+    {
+     "label": "B",
+     "html": "conduction convection"
+    },
+    {
+     "label": "C",
+     "html": "convection conduction"
+    },
+    {
+     "label": "D",
+     "html": "convection convection"
+    }
+   ]
   }
  ]
 }

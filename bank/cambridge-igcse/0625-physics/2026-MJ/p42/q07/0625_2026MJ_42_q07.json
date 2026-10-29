@@ -9,10 +9,10 @@
    "caption": "Figure 7.1",
    "page": 9,
    "bbox": [
-    92.0,
-    85.3,
-    378.5,
-    301.3
+    92.5,
+    85.0,
+    378.0,
+    301.5
    ],
    "id": "0625_2026MJ_42_q07a_fig7-1",
    "part": "(a)",
@@ -126,8 +126,24 @@
       },
       {
        "type": "text",
+       "html": "A changing magnetic field is produced by the …… in the coil.",
+       "text": "A changing magnetic field is produced by the …… in the coil."
+      },
+      {
+       "type": "text",
        "html": "This magnetic field interacts with the magnetic field due to",
        "text": "This magnetic field interacts with the magnetic field due to"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "the",
+       "unit": "."
+      },
+      {
+       "type": "text",
+       "html": "This causes the cone to vibrate. The vibration of the ……",
+       "text": "This causes the cone to vibrate. The vibration of the ……"
       },
       {
        "type": "text",
@@ -136,8 +152,7 @@
       },
       {
        "type": "answer",
-       "kind": "answer_line",
-       "prefix": "This causes the cone to vibrate. The vibration of the"
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -220,8 +235,8 @@
      "content": [
       {
        "type": "text",
-       "html": "A sound of frequency 440Hz is produced by the loudspeaker. The speed of the sound is 340m/s.",
-       "text": "A sound of frequency 440Hz is produced by the loudspeaker. The speed of the sound is 340m/s."
+       "html": "A sound of frequency 440 Hz is produced by the loudspeaker. The speed of the sound is 340 m / s.",
+       "text": "A sound of frequency 440 Hz is produced by the loudspeaker. The speed of the sound is 340 m / s."
       },
       {
        "type": "text",
@@ -344,5 +359,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

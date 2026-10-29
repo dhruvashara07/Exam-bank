@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    312.4,
-    357.7,
-    437.4
+    67.5,
+    312.0,
+    358.0,
+    437.5
    ],
    "id": "0625_2022FM_22_q12_figA",
    "caption": null,
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -103,44 +104,34 @@
   },
   {
    "type": "text",
-   "html": "What happens to the total kinetic energy and the total momentum of the cannon and the cannonball between time = 0 and time = <i>t</i>?",
-   "text": "What happens to the total kinetic energy and the total momentum of the cannon and the cannonball between time = 0 and time = t?"
+   "html": "What happens to the total kinetic energy and the total momentum of the cannon and the cannonball between time = 0 and time = <i>t</i> ?",
+   "text": "What happens to the total kinetic energy and the total momentum of the cannon and the cannonball between time = 0 and time = t ?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "total kinetic energy of",
-     "total momentum of"
-    ],
-    [
-     "",
-     "cannon and cannonball",
-     "cannon and cannonball"
-    ],
-    [
-     "<b>A</b>",
-     "changes",
-     "changes"
-    ],
-    [
-     "<b>B</b>",
-     "changes",
-     "remains the same"
-    ],
-    [
-     "<b>C</b>",
-     "remains the same",
-     "changes"
-    ],
-    [
-     "<b>D</b>",
-     "remains the same",
-     "remains the same"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022FM_22_q12_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "changes changes"
+    },
+    {
+     "label": "B",
+     "html": "changes remains the same"
+    },
+    {
+     "label": "C",
+     "html": "remains the same changes"
+    },
+    {
+     "label": "D",
+     "html": "remains the same remains the same"
+    }
+   ]
   }
  ]
 }

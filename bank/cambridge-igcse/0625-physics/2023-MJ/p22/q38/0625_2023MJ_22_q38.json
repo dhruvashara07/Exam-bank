@@ -32,10 +32,10 @@
   {
    "page": 13,
    "bbox": [
-    67.7,
-    438.9,
-    333.2,
-    550.3
+    67.5,
+    438.5,
+    333.5,
+    550.5
    ],
    "id": "0625_2023MJ_22_q38_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-MJ/p22/q38/figures/0625_2023MJ_22_q38_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-MJ/p22/q38/figures/0625_2023MJ_22_q38_figA",
     "url": null,
-    "kb": 26.6
+    "kb": 26.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "What is the shape of the orbit and how is the Sun positioned within the orbit?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "shape of orbit",
-     "position of the Sun"
-    ],
-    [
-     "<b>A</b>",
-     "circular",
-     "centre of orbit"
-    ],
-    [
-     "<b>B</b>",
-     "circular",
-     "<b>not</b> at centre of orbit"
-    ],
-    [
-     "<b>C</b>",
-     "elliptical",
-     "centre of orbit"
-    ],
-    [
-     "<b>D</b>",
-     "elliptical",
-     "<b>not</b> at centre of orbit"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023MJ_22_q38_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "circular centre of orbit"
+    },
+    {
+     "label": "B",
+     "html": "circular not at centre of orbit"
+    },
+    {
+     "label": "C",
+     "html": "elliptical centre of orbit"
+    },
+    {
+     "label": "D",
+     "html": "elliptical not at centre of orbit"
+    }
+   ]
   }
  ]
 }

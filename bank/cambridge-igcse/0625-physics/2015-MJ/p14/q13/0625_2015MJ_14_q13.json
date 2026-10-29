@@ -32,10 +32,10 @@
   {
    "page": 6,
    "bbox": [
-    69.3,
-    236.6,
-    357.6,
-    376.3
+    69.0,
+    236.5,
+    358.0,
+    376.5
    ],
    "id": "0625_2015MJ_14_q13_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2015-MJ/p14/q13/figures/0625_2015MJ_14_q13_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2015-MJ/p14/q13/figures/0625_2015MJ_14_q13_figA",
     "url": null,
-    "kb": 35.7
+    "kb": 35.4
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,45 +98,30 @@
    "text": "Which row is correct for the evaporation of a liquid?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "the particles escaping",
-     "the average kinetic"
-    ],
-    [
-     "",
-     "from the liquid are on",
-     "energy of particles"
-    ],
-    [
-     "",
-     "average",
-     "remaining in the liquid"
-    ],
-    [
-     "A",
-     "the least energetic",
-     "decreases"
-    ],
-    [
-     "B",
-     "the least energetic",
-     "increases"
-    ],
-    [
-     "C",
-     "the most energetic",
-     "decreases"
-    ],
-    [
-     "D",
-     "the most energetic",
-     "increases"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2015MJ_14_q13_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "the least energetic decreases"
+    },
+    {
+     "label": "B",
+     "html": "the least energetic increases"
+    },
+    {
+     "label": "C",
+     "html": "the most energetic decreases"
+    },
+    {
+     "label": "D",
+     "html": "the most energetic increases"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 8,
    "bbox": [
-    67.7,
-    109.9,
-    479.1,
-    221.3
+    67.5,
+    109.5,
+    479.5,
+    221.5
    ],
    "id": "0625_2022FM_22_q19_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2022-FM/p22/q19/figures/0625_2022FM_22_q19_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2022-FM/p22/q19/figures/0625_2022FM_22_q19_figA",
     "url": null,
-    "kb": 34.4
+    "kb": 34.3
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row gives the correct difference between boiling and evaporation?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "boiling",
-     "evaporation"
-    ],
-    [
-     "<b>A</b>",
-     "no bubbles are formed",
-     "bubbles are formed"
-    ],
-    [
-     "<b>B</b>",
-     "occurs at all temperatures",
-     "occurs at a definite temperature"
-    ],
-    [
-     "<b>C</b>",
-     "occurs throughout the liquid",
-     "occurs at the surface only"
-    ],
-    [
-     "<b>D</b>",
-     "the temperature falls",
-     "the temperature remains constant"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2022FM_22_q19_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "no bubbles are formed bubbles are formed"
+    },
+    {
+     "label": "B",
+     "html": "occurs at all temperatures occurs at a definite temperature"
+    },
+    {
+     "label": "C",
+     "html": "occurs throughout the liquid occurs at the surface only"
+    },
+    {
+     "label": "D",
+     "html": "the temperature falls the temperature remains constant"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    303.8,
-    316.9,
-    415.2
+    67.5,
+    303.5,
+    317.0,
+    415.5
    ],
    "id": "0625_2024MJ_11_q22_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-MJ/p11/q22/figures/0625_2024MJ_11_q22_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-MJ/p11/q22/figures/0625_2024MJ_11_q22_figA",
     "url": null,
-    "kb": 23.7
+    "kb": 23.5
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which animal has the most similar hearing range to a human?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "animal",
-     "hearing range/Hz"
-    ],
-    [
-     "<b>A</b>",
-     "turtle",
-     "20–1000"
-    ],
-    [
-     "<b>B</b>",
-     "mouse",
-     "1000–1000000"
-    ],
-    [
-     "<b>C</b>",
-     "moth",
-     "20000–300000"
-    ],
-    [
-     "<b>D</b>",
-     "elephant",
-     "16–12000"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2024MJ_11_q22_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "turtle 20–1000"
+    },
+    {
+     "label": "B",
+     "html": "mouse 1000–1000000"
+    },
+    {
+     "label": "C",
+     "html": "moth 20000–300000"
+    },
+    {
+     "label": "D",
+     "html": "elephant 16–12000"
+    }
+   ]
   }
  ]
 }

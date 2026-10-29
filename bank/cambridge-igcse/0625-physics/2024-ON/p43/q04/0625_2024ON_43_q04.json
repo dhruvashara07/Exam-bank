@@ -9,10 +9,10 @@
    "caption": "Fig. 4.1",
    "page": 9,
    "bbox": [
-    133.4,
-    98.5,
-    461.9,
-    235.2
+    134.0,
+    99.5,
+    462.0,
+    235.5
    ],
    "id": "0625_2024ON_43_q04a_fig4-1",
    "part": "(a)",
@@ -21,17 +21,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p43/q04/figures/0625_2024ON_43_q04a_fig4-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p43/q04/figures/0625_2024ON_43_q04a_fig4-1",
     "url": null,
-    "kb": 20.9
+    "kb": 20.8
    }
   },
   {
    "caption": "Fig. 4.2",
    "page": 10,
    "bbox": [
-    92.0,
-    73.8,
-    477.1,
-    187.9
+    118.5,
+    97.5,
+    477.5,
+    188.0
    ],
    "id": "0625_2024ON_43_q04b_fig4-2",
    "part": "(b)",
@@ -40,7 +40,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2024-ON/p43/q04/figures/0625_2024ON_43_q04b_fig4-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2024-ON/p43/q04/figures/0625_2024ON_43_q04b_fig4-2",
     "url": null,
-    "kb": 12.1
+    "kb": 5.4
    }
   }
  ],
@@ -144,7 +144,21 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "speed:"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "wavelength:"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "frequency:"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -488,7 +502,16 @@
       {
        "type": "answer",
        "kind": "answer_line",
+       "prefix": "1"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
        "prefix": "2"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -501,8 +524,8 @@
    "content": [
     {
      "type": "text",
-     "html": "Fig. 4.2 shows the same plastic as in (a) used to make an optical fibre. A ray of light is passing",
-     "text": "Fig. 4.2 shows the same plastic as in (a) used to make an optical fibre. A ray of light is passing"
+     "html": "Fig. 4.2 shows the same plastic as in (a) used to make an optical fibre. A ray of light is passing along the fibre.",
+     "text": "Fig. 4.2 shows the same plastic as in (a) used to make an optical fibre. A ray of light is passing along the fibre."
     },
     {
      "type": "figure",
@@ -528,5 +551,6 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "pipeline_version": "2.1"
 }

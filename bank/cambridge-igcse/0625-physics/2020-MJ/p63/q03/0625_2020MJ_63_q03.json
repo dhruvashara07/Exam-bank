@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 9,
    "bbox": [
-    51.5,
-    99.9,
-    538.6,
-    226.1
+    52.0,
+    104.0,
+    538.0,
+    224.5
    ],
    "id": "0625_2020MJ_63_q03_fig3-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p63/q03/figures/0625_2020MJ_63_q03_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p63/q03/figures/0625_2020MJ_63_q03_fig3-1",
     "url": null,
-    "kb": 21.6
+    "kb": 21.5
    }
   },
   {
    "caption": "Fig. 3.2",
    "page": 10,
    "bbox": [
-    101.6,
-    175.5,
-    497.2,
-    306.7
+    70.0,
+    180.0,
+    497.5,
+    310.5
    ],
    "id": "0625_2020MJ_63_q03aiv_fig3-2",
    "part": "(a)(iv)",
@@ -71,10 +71,10 @@
    "caption": "Fig. 3.3",
    "page": 11,
    "bbox": [
-    117.9,
-    89.5,
-    422.1,
-    186.5
+    118.0,
+    88.5,
+    422.0,
+    185.0
    ],
    "id": "0625_2020MJ_63_q03bii_fig3-3",
    "part": "(b)(ii)",
@@ -90,10 +90,10 @@
    "caption": "Fig. 3.4",
    "page": 11,
    "bbox": [
-    117.9,
-    89.5,
-    422.1,
-    186.5
+    118.0,
+    88.5,
+    422.0,
+    185.0
    ],
    "id": "0625_2020MJ_63_q03bii_fig3-4",
    "part": "(b)(ii)",
@@ -204,6 +204,11 @@
        "text": "On Fig. 3.1, measure the distance u between the illuminated triangle and the lens."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "u ="
+      },
+      {
        "type": "text",
        "html": "On Fig. 3.1, measure the distance <i>v</i> between the lens and the screen.",
        "text": "On Fig. 3.1, measure the distance v between the lens and the screen."
@@ -280,6 +285,11 @@
        "type": "text",
        "html": "Fig. 3.1 is drawn to 1/5<sup>th</sup> scale. Calculate the actual distance <i>U</i> between the illuminated triangle and the lens in the experiment.",
        "text": "Fig. 3.1 is drawn to 1/5th scale. Calculate the actual distance U between the illuminated triangle and the lens in the experiment."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "U ="
       },
       {
        "type": "text",
@@ -361,7 +371,7 @@
       },
       {
        "type": "text",
-       "html": "<i>f</i><sub>1</sub> = \\(\\frac{<i>UV</i>}{(<i>U</i> + <i>V</i>)}\\) .",
+       "html": "<i>f</i><sub>1</sub> = \\(\\frac{\\text{UV}}{(U + V)}\\) .",
        "text": "f1 = (UV)/((U + V)) ."
       },
       {
@@ -441,11 +451,6 @@
        "type": "figure",
        "id": "0625_2020MJ_63_q03aiv_fig3-2",
        "caption": "Fig. 3.2"
-      },
-      {
-       "type": "text",
-       "html": "<b>Method 2</b>",
-       "text": "Method 2"
       },
       {
        "type": "answer",
@@ -561,6 +566,11 @@
        "text": "Measure the distance v between the lens and the screen as indicated in Fig. 3.2."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "v ="
+      },
+      {
        "type": "text",
        "html": "Fig. 3.2 is drawn to 1/5<sup>th</sup> scale. Calculate the actual distance <i>V</i> between the lens and the screen in the experiment.",
        "text": "Fig. 3.2 is drawn to 1/5th scale. Calculate the actual distance V between the lens and the screen in the experiment."
@@ -654,6 +664,11 @@
        "text": "Measure hO, the height of the illuminated triangle, as shown in Fig. 3.3."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "hO ="
+      },
+      {
        "type": "text",
        "html": "Measure <i>h</i><sub>I</sub>, the height of the image on the screen, as shown in Fig. 3.4.",
        "text": "Measure hI, the height of the image on the screen, as shown in Fig. 3.4."
@@ -728,7 +743,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a value for the magnification <i>M</i> using the equation <i>M</i> = \\(\\frac{<i>h</i><sub>I</sub>}{<i>h</i>}\\) .",
+       "html": "Calculate a value for the magnification <i>M</i> using the equation <i>M</i> = \\(\\frac{h_{I}}{h}\\) .",
        "text": "Calculate a value for the magnification M using the equation M = (hI)/(h) ."
       },
       {
@@ -806,7 +821,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a second value <i>f</i><sub>2</sub> for the focal length of the lens using the equation <i>f</i><sub>2</sub> = \\(\\frac{<i>V</i>}{(<i>M</i> + 1)}\\) and the value of <i>V</i> from <b>(b)(i)</b>.",
+       "html": "Calculate a second value <i>f</i><sub>2</sub> for the focal length of the lens using the equation <i>f</i><sub>2</sub> = \\(\\frac{V}{(M + 1)}\\) and the value of <i>V</i> from <b>(b)(i)</b>.",
        "text": "Calculate a second value f2 for the focal length of the lens using the equation f2 = (V)/((M + 1)) and the value of V from (b)(i)."
       },
       {
@@ -1081,6 +1096,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

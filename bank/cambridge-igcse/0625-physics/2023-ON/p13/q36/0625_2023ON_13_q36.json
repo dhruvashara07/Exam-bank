@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    334.1,
-    389.8,
-    459.7
+    67.5,
+    334.0,
+    390.0,
+    460.0
    ],
    "id": "0625_2023ON_13_q36_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2023-ON/p13/q36/figures/0625_2023ON_13_q36_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2023-ON/p13/q36/figures/0625_2023ON_13_q36_figA",
     "url": null,
-    "kb": 24.4
+    "kb": 24.2
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,46 +98,30 @@
    "text": "Which type of radioactive decay causes the nucleus of one element to change into the nucleus of another element?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "emission of an",
-     "emission of a",
-     "emission of a"
-    ],
-    [
-     "",
-     "alpha-particle",
-     "beta-particle",
-     "gamma ray"
-    ],
-    [
-     "<b>A</b>",
-     "\u0016",
-     "\u0016",
-     "\u001a"
-    ],
-    [
-     "<b>B</b>",
-     "\u0016",
-     "\u001a",
-     "\u001a"
-    ],
-    [
-     "<b>C</b>",
-     "\u001a",
-     "\u0016",
-     "\u0016"
-    ],
-    [
-     "<b>D</b>",
-     "\u001a",
-     "\u0016",
-     "\u001a"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2023ON_13_q36_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "\u0016 \u0016 \u001a"
+    },
+    {
+     "label": "B",
+     "html": "\u0016 \u001a \u001a"
+    },
+    {
+     "label": "C",
+     "html": "\u001a \u0016 \u0016"
+    },
+    {
+     "label": "D",
+     "html": "\u001a \u0016 \u001a"
+    }
+   ]
   }
  ]
 }

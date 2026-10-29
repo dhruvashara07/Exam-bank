@@ -33,10 +33,10 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    54.0,
-    101.9,
-    541.1,
-    227.3
+    54.5,
+    106.0,
+    540.5,
+    231.0
    ],
    "id": "0625_2020MJ_53_q03_fig3-1",
    "part": "",
@@ -45,17 +45,17 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-MJ/p53/q03/figures/0625_2020MJ_53_q03_fig3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-MJ/p53/q03/figures/0625_2020MJ_53_q03_fig3-1",
     "url": null,
-    "kb": 21.6
+    "kb": 21.5
    }
   },
   {
    "caption": "Fig. 3.2",
    "page": 9,
    "bbox": [
-    94.8,
-    163.5,
-    501.1,
-    302.6
+    95.0,
+    168.0,
+    501.0,
+    301.0
    ],
    "id": "0625_2020MJ_53_q03bi_fig3-2",
    "part": "(b)(i)",
@@ -263,7 +263,7 @@
       },
       {
        "type": "text",
-       "html": "<i>f</i><sub>1</sub> = \\(\\frac{<i>uv</i>}{(<i>u</i> + <i>v</i>)}\\) .",
+       "html": "<i>f</i><sub>1</sub> = \\(\\frac{\\text{uv}}{(u + v)}\\) .",
        "text": "f1 = (uv)/((u + v)) ."
       },
       {
@@ -396,6 +396,11 @@
        "text": "Measure the new distance u between the illuminated triangle and the lens as indicated in Fig. 3.2."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "u ="
+      },
+      {
        "type": "text",
        "html": "Measure the new distance <i>v</i> between the lens and the screen.",
        "text": "Measure the new distance v between the lens and the screen."
@@ -471,18 +476,18 @@
       },
       {
        "type": "text",
-       "html": "<i>f</i><sub>2</sub> = \\(\\frac{<i>uv</i>}{(<i>u</i> + <i>v</i>)}\\) .",
+       "html": "<i>f</i><sub>2</sub> = \\(\\frac{\\text{uv}}{(u + v)}\\) .",
        "text": "f2 = (uv)/((u + v)) ."
-      },
-      {
-       "type": "text",
-       "html": "<b>Method 3</b>",
-       "text": "Method 3"
       },
       {
        "type": "answer",
        "kind": "answer_line",
        "prefix": "f2 ="
+      },
+      {
+       "type": "text",
+       "html": "<b>Method 3</b>",
+       "text": "Method 3"
       },
       {
        "type": "marks",
@@ -593,6 +598,11 @@
        "text": "Measure hO, the height of the illuminated triangle, as indicated in Fig. 3.2."
       },
       {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "hO="
+      },
+      {
        "type": "text",
        "html": "Measure <i>h</i><sub>I</sub>, the height of the image of the triangle on the screen.",
        "text": "Measure hI, the height of the image of the triangle on the screen."
@@ -667,7 +677,7 @@
      "content": [
       {
        "type": "text",
-       "html": "Calculate a value <i>M</i> for the magnification, using the equation <i>M</i> = \\(\\frac{<i>h</i><sub>I</sub>}{<i>h</i>}\\) .",
+       "html": "Calculate a value <i>M</i> for the magnification, using the equation <i>M</i> = \\(\\frac{h_{I}}{h}\\) .",
        "text": "Calculate a value M for the magnification, using the equation M = (hI)/(h) ."
       },
       {
@@ -750,7 +760,7 @@
       },
       {
        "type": "text",
-       "html": "<i>f</i><sub>3</sub> = \\(\\frac{<i>v</i>}{(<i>M</i> + 1)}\\) .",
+       "html": "<i>f</i><sub>3</sub> = \\(\\frac{v}{(M + 1)}\\) .",
        "text": "f3 = (v)/((M + 1)) ."
       },
       {
@@ -1025,6 +1035,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

@@ -32,10 +32,10 @@
   {
    "page": 10,
    "bbox": [
-    67.7,
-    619.8,
-    260.2,
-    731.1
+    67.5,
+    619.5,
+    260.5,
+    731.5
    ],
    "id": "0625_2020ON_21_q26_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p21/q26/figures/0625_2020ON_21_q26_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p21/q26/figures/0625_2020ON_21_q26_figA",
     "url": null,
-    "kb": 22.0
+    "kb": 21.9
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -102,35 +103,30 @@
    "text": "Which row describes the amplitude and the frequency of the sound?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "amplitude",
-     "frequency"
-    ],
-    [
-     "<b>A</b>",
-     "constant",
-     "constant"
-    ],
-    [
-     "<b>B</b>",
-     "constant",
-     "varying"
-    ],
-    [
-     "<b>C</b>",
-     "varying",
-     "constant"
-    ],
-    [
-     "<b>D</b>",
-     "varying",
-     "varying"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020ON_21_q26_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "constant constant"
+    },
+    {
+     "label": "B",
+     "html": "constant varying"
+    },
+    {
+     "label": "C",
+     "html": "varying constant"
+    },
+    {
+     "label": "D",
+     "html": "varying varying"
+    }
+   ]
   }
  ]
 }

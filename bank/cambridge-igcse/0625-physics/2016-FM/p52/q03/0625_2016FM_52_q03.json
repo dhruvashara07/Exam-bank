@@ -33,9 +33,9 @@
    "caption": "Fig. 3.1",
    "page": 8,
    "bbox": [
-    54.4,
-    143.9,
-    539.2,
+    55.0,
+    144.5,
+    539.0,
     566.0
    ],
    "id": "0625_2016FM_52_q03_fig3-1",
@@ -421,9 +421,29 @@
       {
        "type": "list",
        "items": [
-        "Measure the length <i>a</i> of line <b>NE</b>.",
-        "Measure the length <i>b</i> of line <b>FE</b>.",
-        "Calculate a value <i>n</i><sub>1</sub> for the refractive index, using the equation <i>n</i><sub>1</sub> = \\(\\frac{<i>a</i>}{<i>b</i>}\\)."
+        "Measure the length <i>a</i> of line <b>NE</b>."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "a ="
+      },
+      {
+       "type": "list",
+       "items": [
+        "Measure the length <i>b</i> of line <b>FE</b>."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "b ="
+      },
+      {
+       "type": "list",
+       "items": [
+        "Calculate a value <i>n</i><sub>1</sub> for the refractive index, using the equation <i>n</i><sub>1</sub> = \\(\\frac{a}{b}\\)."
        ]
       },
       {
@@ -578,9 +598,29 @@
       {
        "type": "list",
        "items": [
-        "Measure the length <i>c</i> of line <b>NG</b>.",
-        "Measure the length <i>d</i> of line <b>HG</b>.",
-        "Calculate a second value <i>n</i><sub>2</sub> for the refractive index, using the equation <i>n</i><sub>2</sub> = \\(\\frac{<i>c</i>}{<i>d</i>}\\) ."
+        "Measure the length <i>c</i> of line <b>NG</b>."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "c ="
+      },
+      {
+       "type": "list",
+       "items": [
+        "Measure the length <i>d</i> of line <b>HG</b>."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "d ="
+      },
+      {
+       "type": "list",
+       "items": [
+        "Calculate a second value <i>n</i><sub>2</sub> for the refractive index, using the equation <i>n</i><sub>2</sub> = \\(\\frac{c}{d}\\) ."
        ]
       },
       {
@@ -660,14 +700,23 @@
      "text": "Describe two precautions you took in order to obtain reliable results in this experiment."
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
      "type": "text",
      "html": "<b>Tie your ray-trace sheet into this Booklet between pages 10 and 11.</b>",
      "text": "Tie your ray-trace sheet into this Booklet between pages 10 and 11."
     },
     {
      "type": "answer",
-     "kind": "answer_line",
-     "prefix": "2.",
+     "kind": "lines",
      "lines": 2
     },
     {
@@ -694,6 +743,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",

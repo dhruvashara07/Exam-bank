@@ -32,10 +32,10 @@
   {
    "page": 5,
    "bbox": [
-    67.7,
-    487.9,
-    404.9,
-    599.3
+    67.5,
+    487.5,
+    405.0,
+    599.5
    ],
    "id": "0625_2025ON_23_q15_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p23/q15/figures/0625_2025ON_23_q15_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p23/q15/figures/0625_2025ON_23_q15_figA",
     "url": null,
-    "kb": 30.8
+    "kb": 30.7
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -97,35 +98,30 @@
    "text": "Which row about the movement of electrons and ions during conduction of thermal energy through a metal is correct?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "electrons",
-     "ions"
-    ],
-    [
-     "<b>A</b>",
-     "move through metal",
-     "vibrate about fixed points"
-    ],
-    [
-     "<b>B</b>",
-     "vibrate about fixed points",
-     "move through metal"
-    ],
-    [
-     "<b>C</b>",
-     "vibrate about fixed points",
-     "vibrate about fixed points"
-    ],
-    [
-     "<b>D</b>",
-     "move through metal",
-     "move through metal"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2025ON_23_q15_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "move through metal vibrate about fixed points"
+    },
+    {
+     "label": "B",
+     "html": "vibrate about fixed points move through metal"
+    },
+    {
+     "label": "C",
+     "html": "vibrate about fixed points vibrate about fixed points"
+    },
+    {
+     "label": "D",
+     "html": "move through metal move through metal"
+    }
+   ]
   }
  ]
 }

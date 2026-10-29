@@ -32,8 +32,8 @@
   {
    "page": 10,
    "bbox": [
-    256.8,
-    98.8,
+    256.0,
+    98.0,
     342.3,
     173.6
    ],
@@ -45,16 +45,16 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p21/q25/figures/0625_2021ON_21_q25_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p21/q25/figures/0625_2021ON_21_q25_figA",
     "url": null,
-    "kb": 4.3
+    "kb": 4.4
    }
   },
   {
    "page": 10,
    "bbox": [
-    67.7,
-    203.2,
-    378.9,
-    366.6
+    67.5,
+    203.0,
+    379.0,
+    367.0
    ],
    "id": "0625_2021ON_21_q25_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2021-ON/p21/q25/figures/0625_2021ON_21_q25_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2021-ON/p21/q25/figures/0625_2021ON_21_q25_figB",
     "url": null,
-    "kb": 35.8
+    "kb": 35.5
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,19 +127,9 @@
    "text": "How do the charges in the sphere move and what is now the charge on the sphere?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "movement of charges",
-     "charge on sphere"
-    ],
-    [
-     "<b>A</b> <b>B</b> <b>C</b> <b>D</b>",
-     "negative charges move to the right of the sphere negative charges move to the right of the sphere positive charges move to the left of the sphere positive charges move to the left of the sphere",
-     "positive neutral positive neutral"
-    ]
-   ]
+   "type": "figure",
+   "id": "0625_2021ON_21_q25_figB",
+   "caption": null
   },
   {
    "type": "options",

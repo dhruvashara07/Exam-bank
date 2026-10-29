@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    466.6,
-    218.8,
-    577.9
+    67.5,
+    466.5,
+    219.0,
+    578.0
    ],
    "id": "0625_2026MJ_22_q36_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p22/q36/figures/0625_2026MJ_22_q36_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p22/q36/figures/0625_2026MJ_22_q36_figA",
     "url": null,
-    "kb": 12.2
+    "kb": 12.0
    }
   }
  ],
@@ -90,6 +90,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -107,35 +108,30 @@
    "text": "What are the values of a and b?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "<b><i>a</i> </b>",
-     "<b><i>b</i> </b>"
-    ],
-    [
-     "<b>A</b>",
-     "210",
-     "84"
-    ],
-    [
-     "<b>B</b>",
-     "210",
-     "88"
-    ],
-    [
-     "<b>C</b>",
-     "218",
-     "84"
-    ],
-    [
-     "<b>D</b>",
-     "218",
-     "88"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2026MJ_22_q36_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "210 84"
+    },
+    {
+     "label": "B",
+     "html": "210 88"
+    },
+    {
+     "label": "C",
+     "html": "218 84"
+    },
+    {
+     "label": "D",
+     "html": "218 88"
+    }
+   ]
   }
  ]
 }

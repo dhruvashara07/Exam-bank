@@ -33,8 +33,8 @@
    "page": 2,
    "bbox": [
     186.2,
-    398.4,
-    408.9,
+    398.5,
+    408.5,
     539.8
    ],
    "id": "0625_2020ON_22_q02_figA",
@@ -51,10 +51,10 @@
   {
    "page": 2,
    "bbox": [
-    67.7,
-    573.1,
-    390.9,
-    684.4
+    67.5,
+    573.0,
+    391.0,
+    684.5
    ],
    "id": "0625_2020ON_22_q02_figB",
    "caption": null,
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2020-ON/p22/q02/figures/0625_2020ON_22_q02_figB.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2020-ON/p22/q02/figures/0625_2020ON_22_q02_figB",
     "url": null,
-    "kb": 25.3
+    "kb": 25.1
    }
   }
  ],
@@ -109,6 +109,7 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
@@ -126,35 +127,30 @@
    "text": "Which row describes the motion of the object at times P and Q?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "P",
-     "Q"
-    ],
-    [
-     "<b>A</b>",
-     "at rest",
-     "accelerating"
-    ],
-    [
-     "<b>B</b>",
-     "at rest",
-     "decelerating"
-    ],
-    [
-     "<b>C</b>",
-     "moving with constant speed",
-     "accelerating"
-    ],
-    [
-     "<b>D</b>",
-     "moving with constant speed",
-     "decelerating"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2020ON_22_q02_figB",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "at rest accelerating"
+    },
+    {
+     "label": "B",
+     "html": "at rest decelerating"
+    },
+    {
+     "label": "C",
+     "html": "moving with constant speed accelerating"
+    },
+    {
+     "label": "D",
+     "html": "moving with constant speed decelerating"
+    }
+   ]
   }
  ]
 }

@@ -32,10 +32,10 @@
   {
    "page": 14,
    "bbox": [
-    67.7,
-    650.6,
-    318.8,
-    761.6
+    67.5,
+    650.5,
+    319.0,
+    761.5
    ],
    "id": "0625_2018ON_23_q35_figA",
    "caption": null,
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2018-ON/p23/q35/figures/0625_2018ON_23_q35_figA.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2018-ON/p23/q35/figures/0625_2018ON_23_q35_figA",
     "url": null,
-    "kb": 26.7
+    "kb": 26.6
    }
   }
  ],
@@ -90,42 +90,38 @@
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
+ "pipeline_version": "2.1",
  "content": [
   {
    "type": "text",
-   "html": "A 100% efficient step-down transformer has primary voltage<i>V</i><sub>p</sub> and primary current <i>I</i><sub>p</sub><i>.</i> Which row compares the secondary voltage with <i>V</i><sub>p</sub> and the secondary current with <i>I</i><sub>p</sub>?",
-   "text": "A 100% efficient step-down transformer has primary voltageVp and primary current Ip. Which row compares the secondary voltage with Vp and the secondary current with Ip?"
+   "html": "A 100% efficient step-down transformer has primary voltage <i>V</i><sub>p</sub> and primary current <i>I</i><sub>p</sub><i>.</i> Which row compares the secondary voltage with <i>V</i><sub>p</sub> and the secondary current with <i>I</i><sub>p</sub>?",
+   "text": "A 100% efficient step-down transformer has primary voltage Vp and primary current Ip. Which row compares the secondary voltage with Vp and the secondary current with Ip?"
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "",
-     "secondary voltage",
-     "secondary current"
-    ],
-    [
-     "<b>A</b>",
-     "greater than <i>V</i><sub>p</sub>",
-     "greater than <i>I</i><sub>p</sub>"
-    ],
-    [
-     "<b>B</b>",
-     "greater than <i>V</i><sub>p</sub>",
-     "less than <i>I</i><sub>p</sub>"
-    ],
-    [
-     "<b>C</b>",
-     "less than <i>V</i><sub>p</sub>",
-     "greater than <i>I</i><sub>p</sub>"
-    ],
-    [
-     "<b>D</b>",
-     "less than <i>V</i><sub>p</sub>",
-     "less than <i>I</i><sub>p</sub>"
-    ]
-   ],
-   "options": true
+   "type": "figure",
+   "id": "0625_2018ON_23_q35_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "greater than Vp greater than Ip"
+    },
+    {
+     "label": "B",
+     "html": "greater than Vp less than Ip"
+    },
+    {
+     "label": "C",
+     "html": "less than Vp greater than Ip"
+    },
+    {
+     "label": "D",
+     "html": "less than Vp less than Ip"
+    }
+   ]
   }
  ]
 }
