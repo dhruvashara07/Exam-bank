@@ -67,6 +67,12 @@ jobs:
         run: |
           python3 pipeline/inbox.py > todo.txt
           python3 pipeline/raw_store.py upload
+          if [ -n "$(git status --porcelain raw/manifest.json)" ]; then   # keep the list of stored PDFs in git
+            git config user.name "exam-bank bot"; git config user.email "actions@users.noreply.github.com"
+            cp todo.txt /tmp/todo.txt
+            SKIP_WAIT=1 pipeline/push.sh "Store original PDFs in GitHub Releases (raw/manifest.json)"
+            cp /tmp/todo.txt todo.txt
+          fi
           sort -u todo.txt -o todo.txt
           if [ "$REPROCESS" = "true" ]; then echo "ALL" > todo.txt; fi
           echo "papers: $(tr '\n' ' ' < todo.txt)"
