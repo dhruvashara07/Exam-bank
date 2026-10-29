@@ -21,8 +21,10 @@ import paths
 
 
 def cloud_name():
-    u = os.environ.get('CLOUDINARY_URL')
-    return urlparse(u).hostname if u else 'CLOUD_NAME'
+    u = os.environ.get('CLOUDINARY_URL', '').strip()
+    if u.startswith('cloudinary://'):
+        return urlparse(u).hostname
+    return os.environ.get('CLOUDINARY_CLOUD_NAME', '').strip() or 'CLOUD_NAME'
 
 
 def fill_urls(node, cloud):
@@ -81,7 +83,9 @@ if __name__ == '__main__':
     from datetime import datetime, timezone
     uri = (os.environ.get('MONGODB_URI') or os.environ.get('MONGO_URI') or '').strip()
     if not uri.startswith('mongodb'):
-        sys.exit('MONGODB_URI secret is missing or not a mongodb:// / mongodb+srv:// address (see docs/SETUP.md)')
+        sys.exit('MONGO_URI secret is missing or not a mongodb:// / mongodb+srv:// Atlas address (localhost cannot work from GitHub)')
+    if cloud == 'CLOUD_NAME':
+        sys.exit('Cloudinary cloud name missing (CLOUDINARY_CLOUD_NAME secret): image links would be wrong')
     db = MongoClient(uri)[DB_NAME]
     now = datetime.now(timezone.utc)
 

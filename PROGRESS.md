@@ -24,7 +24,7 @@ Read this first in every session. Update it before ending a session.
   `feedback`, round 2 (9 fixed + 15 new MCQ figure checks) in `feedback_r2`. Doc id = question id.
 
 ## Waiting on Dhruv
-1. GitHub secrets `CLOUDINARY_URL`, `MONGODB_URI`; Atlas network access; first run of "Question bank"
+1. GitHub secrets `MONGO_URI`, `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET`; Atlas network access; first run of "Question bank"
    with "Upload every SVG again" ticked (docs/SETUP.md).
 2. Review round 2.
 3. May/Jun 2026 variant 7: mark schemes 17 and 27 exist, question papers missing.

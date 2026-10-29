@@ -19,11 +19,17 @@ ROOT = paths.ROOT
 
 
 def creds():
+    """CLOUDINARY_URL (cloudinary://KEY:SECRET@CLOUD) or the three separate secrets
+    CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET."""
     raw = os.environ.get('CLOUDINARY_URL', '').strip()
-    if not raw.startswith('cloudinary://'):
-        sys.exit('CLOUDINARY_URL secret is missing or not in the form cloudinary://KEY:SECRET@CLOUD (see docs/SETUP.md)')
-    u = urlparse(raw)
-    return u.hostname, u.username, u.password
+    if raw.startswith('cloudinary://'):
+        u = urlparse(raw)
+        return u.hostname, u.username, u.password
+    c, k, s = (os.environ.get(n, '').strip() for n in ('CLOUDINARY_CLOUD_NAME', 'CLOUDINARY_API_KEY', 'CLOUDINARY_API_SECRET'))
+    if c and k and s:
+        return c, k, s
+    sys.exit('Cloudinary secrets missing: add CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET '
+             '(or one CLOUDINARY_URL) in GitHub -> Settings -> Secrets and variables -> Actions')
 
 
 def public_id(path):

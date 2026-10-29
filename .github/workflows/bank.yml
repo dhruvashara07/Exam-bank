@@ -4,9 +4,16 @@ name: Question bank
 #   1. PDFs in inbox/ (any Cambridge name, e.g. 0625_s25_qp_41.pdf) are filed into raw/
 #   2. changed papers in raw/ are processed into bank/ and committed
 #   3. new/changed SVGs go to Cloudinary (folder question_bank/)
-#   4. papers Claude has approved (review/approvals/) are synced to MongoDB.
+#   4. papers Claude has approved (review/approvals/) are synced to MongoDB (database question_bank).
 #      New or re-cut papers wait as 'pending' until the daily Claude check approves them.
 # Can also be started by hand: Actions -> Question bank -> Run workflow.
+#
+# Keys are NOT written in this file. They are GitHub Secrets
+# (Settings -> Secrets and variables -> Actions), read below by name:
+#   MONGO_URI               mongodb+srv://USER:PASSWORD@CLUSTER.mongodb.net/?retryWrites=true&w=majority
+#   CLOUDINARY_CLOUD_NAME   e.g. dv7rn244s
+#   CLOUDINARY_API_KEY
+#   CLOUDINARY_API_SECRET
 on:
   push:
     branches: [main]
@@ -33,6 +40,14 @@ jobs:
   bank:
     runs-on: ubuntu-latest
     timeout-minutes: 120
+    env:
+      MONGO_URI: ${{ secrets.MONGO_URI }}
+      MONGODB_URI: ${{ secrets.MONGODB_URI }}
+      MONGO_DB: question_bank
+      CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
+      CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+      CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+      CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
     steps:
       - uses: actions/checkout@v5
         with:
@@ -64,19 +79,14 @@ jobs:
           if grep -qx ALL todo.txt; then python3 pipeline/run.py; else python3 pipeline/run.py $(cat todo.txt); fi
           git config user.name "exam-bank bot"
           git config user.email "actions@users.noreply.github.com"
-          SKIP_WAIT=1 pipeline/push.sh "Process papers: $(tr '\n' ' ' < todo.txt)" 
+          SKIP_WAIT=1 pipeline/push.sh "Process papers: $(tr '\n' ' ' < todo.txt)"
 
       - name: Upload SVGs to Cloudinary
         env:
-          CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
           BEFORE_SHA: ${{ github.event_name == 'push' && github.event.before || '' }}
         run: python3 pipeline/sync_cloudinary.py ${{ (github.event_name == 'workflow_dispatch' && (inputs.all || inputs.reprocess)) && '--all' || '' }}
 
       - name: Sync to MongoDB
-        env:
-          CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
-          MONGODB_URI: ${{ secrets.MONGODB_URI }}
-          MONGO_DB: question_bank
         run: python3 pipeline/sync_mongo.py
 
       - name: Papers waiting for Claude's check
