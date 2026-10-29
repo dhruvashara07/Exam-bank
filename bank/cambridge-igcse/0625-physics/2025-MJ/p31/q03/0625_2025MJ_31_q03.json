@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    79.8
+    77.5
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 4.0,
-    "height_pt": 20.0
+    "height_pt": 17.7
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p31/q03/question/0625_2025MJ_31_q03_stem_s1.svg",
@@ -63,7 +63,7 @@
       30.0,
       85.8,
       570.0,
-      209.8
+      210.0
      ],
      "continued": false,
      "answer_space": {
@@ -71,13 +71,13 @@
       "dotted_lines": 1,
       "answer_line": "weight of beam =  …… N [2]",
       "working_gap_pt": 67.0,
-      "height_pt": 124.0
+      "height_pt": 124.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p31/q03/question/0625_2025MJ_31_q03_a_s1.svg",
       "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p31/q03/question/0625_2025MJ_31_q03_a_s1",
       "url": null,
-      "kb": 27.9
+      "kb": 28.0
      }
     }
    ],
@@ -87,7 +87,7 @@
    "mark_scheme": [
     {
      "label": "3(a)",
-     "text": "390 (N)\n(weight =) mass × g OR (weight =) 40 × 9.8",
+     "text": "390 (N)\n(weight =) mass × g OR (weight =) 40 × 9.8",
      "codes": [
       "A2",
       "C1"
@@ -110,6 +110,28 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The mass of the wooden beam is 40kg.",
+     "text": "The mass of the wooden beam is 40kg."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the weight of the wooden beam.",
+     "text": "Calculate the weight of the wooden beam."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "weight of beam =",
+     "unit": "N"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   },
   {
@@ -121,7 +143,7 @@
       30.0,
       215.8,
       570.0,
-      710.2
+      710.5
      ],
      "continued": false,
      "answer_space": {
@@ -129,7 +151,7 @@
       "dotted_lines": 1,
       "answer_line": "weight W of child A =  …… N [4]",
       "working_gap_pt": 132.0,
-      "height_pt": 494.4
+      "height_pt": 494.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p31/q03/question/0625_2025MJ_31_q03_b_s1.svg",
@@ -145,7 +167,7 @@
    "mark_scheme": [
     {
      "label": "3(b)",
-     "text": "270 (N)\nW × 1.6 = 360 × 1.2 OR (W =) 432 ÷ 1.6 OR (W =) {360 × 1.2} ÷ 1.6\n(clockwise moment OR moment of child B =) 360 × 1.2 OR 430 OR 432 seen\n(total) clockwise moment = (total) anticlockwise moment",
+     "text": "270 (N)\nW × 1.6 = 360 × 1.2 OR (W =) 432 ÷ 1.6 OR (W =) {360 × 1.2} ÷ 1.6\n(clockwise moment OR moment of child B =) 360 × 1.2 OR 430 OR 432 seen\n(total) clockwise moment = (total) anticlockwise moment",
      "codes": [
       "A4",
       "C3",
@@ -170,6 +192,43 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Two children balance the wooden beam horizontally on a log. The wooden beam pivots on the log to make the see-saw. Fig. 3.1 shows the children on the see-saw.",
+     "text": "Two children balance the wooden beam horizontally on a log. The wooden beam pivots on the log to make the see-saw. Fig. 3.1 shows the children on the see-saw."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2025MJ_31_q03b_fig3-1",
+     "caption": "Fig. 3.1 (not to scale)"
+    },
+    {
+     "type": "text",
+     "html": "The see-saw balances horizontally, as shown in Fig. 3.1. The weight of child B is 360N.",
+     "text": "The see-saw balances horizontally, as shown in Fig. 3.1. The weight of child B is 360N."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the weight W of child A.",
+     "text": "Calculate the weight W of child A."
+    },
+    {
+     "type": "text",
+     "html": "<b>State</b> and use the principle of moments in your answer.",
+     "text": "State and use the principle of moments in your answer."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "weight W of child A =",
+     "unit": "N"
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
    ]
   }
  ],
@@ -189,5 +248,12 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "A wooden beam is used in a see-saw.",
+   "text": "A wooden beam is used in a see-saw."
+  }
+ ]
 }

@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    344.8
+    345.0
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 106.4,
-    "height_pt": 284.9
+    "height_pt": 285.2
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q03/question/0625_2026MJ_62_q03_stem_s1.svg",
@@ -73,8 +73,8 @@
    "bbox": [
     114.7,
     282.2,
-    548.7,
-    502.9
+    503.9,
+    491.4
    ],
    "id": "0625_2026MJ_62_q03aii_table3-1",
    "part": "(a)(ii)",
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q03/figures/0625_2026MJ_62_q03aii_table3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p62/q03/figures/0625_2026MJ_62_q03aii_table3-1",
     "url": null,
-    "kb": 29.9
+    "kb": 29.4
    }
   }
  ],
@@ -131,7 +131,7 @@
         30.0,
         441.8,
         570.0,
-        461.8
+        462.0
        ],
        "continued": false,
        "answer_space": {
@@ -139,7 +139,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 4.0,
-        "height_pt": 20.0
+        "height_pt": 20.2
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q03/question/0625_2026MJ_62_q03_a-i_s1.svg",
@@ -155,8 +155,10 @@
      "mark_scheme": [
       {
        "label": "3(a)(i)",
-       "text": "voltmeter connected in parallel with X\n1 standard symbol only, no line through the meter\naccept small gaps\nignore symbol for junction of conductors",
-       "codes": [],
+       "text": "voltmeter connected in parallel with X",
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 11,
@@ -175,6 +177,17 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "On Figure 3.1, draw the voltmeter connected to measure the p.d. across resistor X.",
+       "text": "On Figure 3.1, draw the voltmeter connected to measure the p.d. across resistor X."
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -186,7 +199,7 @@
         30.0,
         59.8,
         570.0,
-        504.9
+        505.0
        ],
        "continued": false,
        "answer_space": {
@@ -194,7 +207,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 61.9,
-        "height_pt": 445.1
+        "height_pt": 445.2
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q03/question/0625_2026MJ_62_q03_a-ii_s1.svg",
@@ -210,8 +223,10 @@
      "mark_scheme": [
       {
        "label": "3(a)(ii)",
-       "text": "1.9 (V)\n1 correct answer only, not 1.90",
-       "codes": [],
+       "text": "1.9 (V)",
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 11,
@@ -230,10 +245,87 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The voltmeter reading is shown in Figure 3.2.",
+       "text": "The voltmeter reading is shown in Figure 3.2."
+      },
+      {
+       "type": "figure",
+       "id": "0625_2026MJ_62_q03aii_fig3-2",
+       "caption": "Figure 3.2"
+      },
+      {
+       "type": "text",
+       "html": "Record the voltmeter reading V in the second column of Table 3.1 for R = 10Ω.",
+       "text": "Record the voltmeter reading V in the second column of Table 3.1 for R = 10Ω."
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "<b>resistance</b> R/Ω",
+         "p.d. V/V",
+         "1 1 V /V"
+        ],
+        [
+         "10",
+         "",
+         ""
+        ],
+        [
+         "15",
+         "1.6",
+         ""
+        ],
+        [
+         "18",
+         "1.5",
+         ""
+        ],
+        [
+         "22",
+         "1.3",
+         ""
+        ],
+        [
+         "33",
+         "1.0",
+         ""
+        ]
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 61.9
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     }
    ],
-   "path": "3(a)"
+   "path": "3(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "The student:",
+     "text": "The student:"
+    },
+    {
+     "type": "list",
+     "items": [
+      "closes the switch",
+      "connects a voltmeter in parallel with resistor X",
+      "measures the potential difference (p.d.) V across resistor X",
+      "opens the switch."
+     ]
+    }
+   ]
   },
   {
    "label": "b",
@@ -244,7 +336,7 @@
       30.0,
       523.9,
       570.0,
-      615.1
+      613.0
      ],
      "continued": false,
      "answer_space": {
@@ -252,7 +344,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 8.2,
-      "height_pt": 91.2
+      "height_pt": 89.1
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q03/question/0625_2026MJ_62_q03_b_s1.svg",
@@ -268,8 +360,11 @@
    "mark_scheme": [
     {
      "label": "3(b)",
-     "text": "0.53, 0.63, 0.67, 0.77, 1.0\n1 error carried forward 3(a)(ii)\naccept any significant figures, correctly rounded\nall values to 2 significant figures\n1",
-     "codes": [],
+     "text": "0.53, 0.63, 0.67, 0.77, 1.0\nall values to 2 significant figures",
+     "codes": [
+      "1",
+      "1"
+     ],
      "segments": [
       {
        "page": 11,
@@ -288,6 +383,27 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The student repeats 3(a) by replacing the 10Ω resistor with resistors of resistance R = 15Ω, 18Ω, 22Ω and 33Ω in turn. The student records the values of V in Table 3.1.",
+     "text": "The student repeats 3(a) by replacing the 10Ω resistor with resistors of resistance R = 15Ω, 18Ω, 22Ω and 33Ω in turn. The student records the values of V in Table 3.1."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the value of \\(\\frac{1}{V}\\) for each value of V.",
+     "text": "Calculate the value of (1)/(V) for each value of V."
+    },
+    {
+     "type": "text",
+     "html": "Record your values of \\(\\frac{1}{V}\\) in Table 3.1 to 2 significant figures.",
+     "text": "Record your values of (1)/(V) in Table 3.1 to 2 significant figures."
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   },
   {
@@ -297,9 +413,9 @@
      "page": 11,
      "bbox": [
       30.0,
-      62.5,
+      63.0,
       570.0,
-      469.0
+      469.5
      ],
      "continued": false,
      "answer_space": {
@@ -323,8 +439,13 @@
    "mark_scheme": [
     {
      "label": "3(c)",
-     "text": "axes labelled, quantity and unit\n1 reversed axes lose this mark only\n1 no awkward scales e.g. ×3, ×7, ×9 etc.\nsuitable linear scales (occupying at least ½ the grid)\naccept a scale of 2 cm represents 0.25\nplots correct to ± ½ small square and precise plots\n1 reject large ‘blobs’ bigger than half a square\nbased on all the plots\ngood best-fit line judgement, thin, continuous line\n1 accept a line through 4 points and just one point below the line\nif incorrect quantities are plotted, only the best-fit line can be\nawarded",
-     "codes": [],
+     "text": "axes labelled, quantity and unit\nsuitable linear scales (occupying at least ½ the grid)\nplots correct to ± ½ small square and precise plots\ngood best-fit line judgement, thin, continuous line",
+     "codes": [
+      "1",
+      "1",
+      "1",
+      "1"
+     ],
      "segments": [
       {
        "page": 11,
@@ -343,6 +464,37 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "/",
+     "text": "/"
+    },
+    {
+     "type": "text",
+     "html": "Plot a graph of \\(\\frac{1}{V}\\) \\(\\frac{1}{V}\\) (y-axis) against R/Ω (x-axis). Start your axes at the origin (0,0).",
+     "text": "Plot a graph of (1)/(V) (1)/(V) (y-axis) against R/Ω (x-axis). Start your axes at the origin (0,0)."
+    },
+    {
+     "type": "text",
+     "html": "Draw a best-fit straight line.",
+     "text": "Draw a best-fit straight line."
+    },
+    {
+     "type": "text",
+     "html": "0 0",
+     "text": "0 0"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 291.9
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
    ]
   },
   {
@@ -354,7 +506,7 @@
       30.0,
       488.0,
       570.0,
-      597.8
+      598.0
      ],
      "continued": false,
      "answer_space": {
@@ -362,7 +514,7 @@
       "dotted_lines": 1,
       "answer_line": "G =  …… [1]",
       "working_gap_pt": 65.8,
-      "height_pt": 109.8
+      "height_pt": 110.0
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q03/question/0625_2026MJ_62_q03_d_s1.svg",
@@ -378,8 +530,10 @@
    "mark_scheme": [
     {
      "label": "3(d)",
-     "text": "some indication on the graph as to how gradient found\n1 no need to check actual value\nand correct method of calculation of gradient i.e. Δy / Δx\nignore negative sign",
-     "codes": [],
+     "text": "some indication on the graph as to how gradient found\nand correct method of calculation of gradient i.e. Δy / Δx",
+     "codes": [
+      "1"
+     ],
      "segments": [
       {
        "page": 11,
@@ -398,6 +552,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Determine the gradient G of your line. Show all your working and indicate on the graph the values you use.",
+     "text": "Determine the gradient G of your line. Show all your working and indicate on the graph the values you use."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "G ="
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -409,7 +579,7 @@
       30.0,
       616.8,
       570.0,
-      688.8
+      689.0
      ],
      "continued": false,
      "answer_space": {
@@ -417,13 +587,13 @@
       "dotted_lines": 1,
       "answer_line": "c =  …… [1]",
       "working_gap_pt": 15.0,
-      "height_pt": 72.0
+      "height_pt": 72.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q03/question/0625_2026MJ_62_q03_e_s1.svg",
       "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p62/q03/question/0625_2026MJ_62_q03_e_s1",
       "url": null,
-      "kb": 29.7
+      "kb": 29.8
      }
     }
    ],
@@ -433,8 +603,10 @@
    "mark_scheme": [
     {
      "label": "3(e)",
-     "text": "c correct to ± ½ small square\n1 accept 1 significant figure\nignore any unit given",
-     "codes": [],
+     "text": "c correct to ± ½ small square",
+     "codes": [
+      "1"
+     ],
      "segments": [
       {
        "page": 11,
@@ -453,6 +625,27 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Extend your line so that it meets the y-axis.",
+     "text": "Extend your line so that it meets the y-axis."
+    },
+    {
+     "type": "text",
+     "html": "Record the intercept c that your line makes with the y-axis.",
+     "text": "Record the intercept c that your line makes with the y-axis."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "c ="
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -464,7 +657,7 @@
       30.0,
       59.8,
       570.0,
-      266.0
+      266.5
      ],
      "continued": false,
      "answer_space": {
@@ -472,7 +665,7 @@
       "dotted_lines": 1,
       "answer_line": "RX =  …… Ω [1]",
       "working_gap_pt": 67.2,
-      "height_pt": 206.2
+      "height_pt": 206.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q03/question/0625_2026MJ_62_q03_f_s1.svg",
@@ -480,39 +673,18 @@
       "url": null,
       "kb": 39.5
      }
-    },
-    {
-     "page": 13,
-     "bbox": [
-      30.0,
-      413.3,
-      570.0,
-      433.3
-     ],
-     "continued": true,
-     "answer_space": {
-      "kind": "none",
-      "dotted_lines": 0,
-      "answer_line": null,
-      "working_gap_pt": 4.0,
-      "height_pt": 20.0
-     },
-     "svg": {
-      "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q03/question/0625_2026MJ_62_q03_f_s2.svg",
-      "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p62/q03/question/0625_2026MJ_62_q03_f_s2",
-      "url": null,
-      "kb": 4.4
-     }
     }
    ],
-   "text": "The resistance RX of resistor X can be calculated using the equation:\nRX = c\nG.\nUse your answers to 3(d) and 3(e) to calculate RX.\nRecord your answer to the nearest ohm.\nRX =  ...................................................... Ω [1]\n[Total: 11]\nTurn over",
+   "text": "The resistance RX of resistor X can be calculated using the equation:\nRX = c\nG.\nUse your answers to 3(d) and 3(e) to calculate RX.\nRecord your answer to the nearest ohm.\nRX =  ...................................................... Ω [1]\n[Total: 11]",
    "marks": 1,
    "path": "3(f)",
    "mark_scheme": [
     {
      "label": "3(f)",
-     "text": "RX = 14 – 18 (Ω) inclusive, given to the nearest Ω\n1 accuracy mark",
-     "codes": [],
+     "text": "R = 14 – 18 (Ω) inclusive, given to the nearest Ω\nX",
+     "codes": [
+      "1"
+     ],
      "segments": [
       {
        "page": 11,
@@ -530,6 +702,38 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The resistance R<sub>X</sub> of resistor X can be calculated using the equation:",
+     "text": "The resistance RX of resistor X can be calculated using the equation:"
+    },
+    {
+     "type": "text",
+     "html": "R<sub>X</sub> = \\(\\frac{c}{G}\\).",
+     "text": "RX = (c)/(G)."
+    },
+    {
+     "type": "text",
+     "html": "Use your answers to 3(d) and 3(e) to calculate R<sub>X</sub>.",
+     "text": "Use your answers to 3(d) and 3(e) to calculate RX."
+    },
+    {
+     "type": "text",
+     "html": "Record your answer to the nearest ohm.",
+     "text": "Record your answer to the nearest ohm."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "RX =",
+     "unit": "Ω"
+    },
+    {
+     "type": "marks",
+     "value": 1
     }
    ]
   }
@@ -550,5 +754,22 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "A student investigates potential difference in an electric circuit and determines the resistance of an unknown resistor X.",
+   "text": "A student investigates potential difference in an electric circuit and determines the resistance of an unknown resistor X."
+  },
+  {
+   "type": "text",
+   "html": "The student assembles the circuit shown in Figure 3.1. The circuit consists of a resistor X connected in series with a resistor of resistance R = 10Ω.",
+   "text": "The student assembles the circuit shown in Figure 3.1. The circuit consists of a resistor X connected in series with a resistor of resistance R = 10Ω."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2026MJ_62_q03_fig3-1",
+   "caption": "Figure 3.1"
+  }
+ ]
 }

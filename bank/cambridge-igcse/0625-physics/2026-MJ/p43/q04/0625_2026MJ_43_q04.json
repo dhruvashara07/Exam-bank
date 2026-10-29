@@ -39,7 +39,7 @@
       30.0,
       59.8,
       570.0,
-      244.3
+      244.5
      ],
      "continued": false,
      "answer_space": {
@@ -47,7 +47,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 24.7,
-      "height_pt": 184.5
+      "height_pt": 184.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q04/question/0625_2026MJ_43_q04_a_s1.svg",
@@ -69,7 +69,7 @@
         30.0,
         250.3,
         570.0,
-        379.6
+        380.0
        ],
        "continued": false,
        "answer_space": {
@@ -77,7 +77,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 72.2,
-        "height_pt": 129.2
+        "height_pt": 129.7
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q04/question/0625_2026MJ_43_q04_a-i_s1.svg",
@@ -93,8 +93,11 @@
      "mark_scheme": [
       {
        "label": "4(a)(i)",
-       "text": "(ΔE =) mcΔѲ\nM1 must be in words or symbols\nA T for Ѳ\nI t for Ѳ\nI Q for E\n200 × 4.2 × 58 OR 48 720 (J)\nA1 A 200 × 4.2 × (80 – 22)\nA 0.2 × 4200 × 58\nTV 0.2 × 4.2 × 58",
-       "codes": [],
+       "text": "(ΔE =) mcΔѲ\n200 × 4.2 × 58 OR 48 720 (J)",
+       "codes": [
+        "M1",
+        "A1"
+       ],
        "segments": [
         {
          "page": 10,
@@ -113,6 +116,27 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The temperature of the water increases from 22°C to 80°C.",
+       "text": "The temperature of the water increases from 22°C to 80°C."
+      },
+      {
+       "type": "text",
+       "html": "Show that the energy transferred to the water is approximately 49kJ.",
+       "text": "Show that the energy transferred to the water is approximately 49kJ."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 72.2
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     },
     {
@@ -124,7 +148,7 @@
         30.0,
         385.6,
         570.0,
-        516.5
+        517.0
        ],
        "continued": false,
        "answer_space": {
@@ -132,7 +156,7 @@
         "dotted_lines": 1,
         "answer_line": "power =  …… W [2]",
         "working_gap_pt": 73.9,
-        "height_pt": 130.9
+        "height_pt": 131.4
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q04/question/0625_2026MJ_43_q04_a-ii_s1.svg",
@@ -148,8 +172,11 @@
      "mark_scheme": [
       {
        "label": "4(a)(ii)",
-       "text": "1200 (W)\nA2\n(P =) (Δ)E / t OR 49 000 / 41 OR 48 720 / 41 OR 1.2 × 10N\nC1\nA W for E\nI T for t\nI Q for E\nI W = (Δ)E / t",
-       "codes": [],
+       "text": "1200 (W)\n(P =) (Δ)E / t OR 49 000 / 41 OR 48 720 / 41 OR 1.2 × 10\nN",
+       "codes": [
+        "A2",
+        "C1"
+       ],
        "segments": [
         {
          "page": 10,
@@ -168,6 +195,28 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The time taken for the temperature of the water to increase from 22°C to 80°C is 41s.",
+       "text": "The time taken for the temperature of the water to increase from 22°C to 80°C is 41s."
+      },
+      {
+       "type": "text",
+       "html": "Calculate the minimum power of the hotplate.",
+       "text": "Calculate the minimum power of the hotplate."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "power =",
+       "unit": "W"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     },
     {
@@ -179,7 +228,7 @@
         30.0,
         522.5,
         570.0,
-        607.5
+        608.0
        ],
        "continued": false,
        "answer_space": {
@@ -187,7 +236,7 @@
         "dotted_lines": 2,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 85.0
+        "height_pt": 85.5
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q04/question/0625_2026MJ_43_q04_a-iii_s1.svg",
@@ -203,8 +252,10 @@
      "mark_scheme": [
       {
        "label": "4(a)(iii)",
-       "text": "any one from:\nB1 A heat for energy\nsome energy is transferred to the pan / air / surroundings\nA energy dissipates to the surroundings\nnot 100% efficient transfer from hotplate to pan / water\nA energy is used for evaporation\nTV some energy is transferred to the hotplate",
-       "codes": [],
+       "text": "any one from:\nsome energy is transferred to the pan / air / surroundings\nnot 100% efficient transfer from hotplate to pan / water",
+       "codes": [
+        "B1"
+       ],
        "segments": [
         {
          "page": 10,
@@ -223,10 +274,43 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "State <b>one</b> reason why the power of the hotplate must be greater than the value calculated in 4(a)(ii).",
+       "text": "State one reason why the power of the hotplate must be greater than the value calculated in 4(a)(ii)."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     }
    ],
-   "path": "4(a)"
+   "path": "4(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Figure 4.1 shows a pan of water on a hotplate.",
+     "text": "Figure 4.1 shows a pan of water on a hotplate."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_43_q04a_fig4-1",
+     "caption": "Figure 4.1"
+    },
+    {
+     "type": "text",
+     "html": "The mass of water in the pan is 200g. The specific heat capacity of water is 4.2J/(g°C).",
+     "text": "The mass of water in the pan is 200g. The specific heat capacity of water is 4.2J/(g°C)."
+    }
+   ]
   },
   {
    "label": "b",
@@ -237,7 +321,7 @@
       30.0,
       59.8,
       570.0,
-      235.8
+      236.0
      ],
      "continued": false,
      "answer_space": {
@@ -245,7 +329,7 @@
       "dotted_lines": 4,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 176.0
+      "height_pt": 176.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q04/question/0625_2026MJ_43_q04_b_s1.svg",
@@ -261,8 +345,10 @@
    "mark_scheme": [
     {
      "label": "4(b)",
-     "text": "any two from:\nB2 A atoms or molecules for particles\n(gas particles are) further apart OR (particles) fill the\nTV particles are not in contact\ncontainer\nTV particles have more space to move\nCON take the shape of the container\nA higher speed / fast\n(gas particles have) greater kinetic energy\nA no / weak bonds between particles\nno/less force between (gas) particles\nI collide less frequently / with less force\nI collide rather than slide pass each other\nA clear reverse argument throughout",
-     "codes": [],
+     "text": "any two from:\n(gas particles are) further apart OR (particles) fill the\ncontainer\n(gas particles have) greater kinetic energy\nno/less force between (gas) particles",
+     "codes": [
+      "B2"
+     ],
      "segments": [
       {
        "page": 10,
@@ -280,6 +366,23 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Describe, in terms of particles and their motion, <b>two</b> ways in which a gas differs from a liquid.",
+     "text": "Describe, in terms of particles and their motion, two ways in which a gas differs from a liquid."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 2
     }
    ]
   }

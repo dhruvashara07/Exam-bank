@@ -39,7 +39,7 @@
       30.0,
       59.8,
       570.0,
-      105.8
+      106.0
      ],
      "continued": false,
      "answer_space": {
@@ -47,7 +47,7 @@
       "dotted_lines": 1,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 46.0
+      "height_pt": 46.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p42/q03/question/0625_2025MJ_42_q03_a_s1.svg",
@@ -63,7 +63,7 @@
    "mark_scheme": [
     {
      "label": "3(a)",
-     "text": "(momentum =) mass × velocity OR (p =) mv",
+     "text": "(momentum =) mass × velocity OR (p =) mv",
      "codes": [
       "B1"
      ],
@@ -85,6 +85,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Define momentum.",
+     "text": "Define momentum."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -96,7 +112,7 @@
       30.0,
       111.8,
       570.0,
-      656.0
+      656.5
      ],
      "continued": false,
      "answer_space": {
@@ -104,7 +120,7 @@
       "dotted_lines": 2,
       "answer_line": "velocity =  ……",
       "working_gap_pt": 172.1,
-      "height_pt": 544.2
+      "height_pt": 544.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p42/q03/question/0625_2025MJ_42_q03_b_s1.svg",
@@ -120,7 +136,7 @@
    "mark_scheme": [
     {
      "label": "3(b)",
-     "text": "(velocity =) 0.19 m / s AND (direction) to the right\n(momentum before collision) = {0.45 × 0.34} – {0.21 × 0.12} OR 0.1278\n(momentum after collision) = 0.66 × v\nmomentum before collision = momentum after collision\nOR {0.45 × 0.34} – {0.21 × 0.12} = 0.66 × v OR 0.153 – 0.0252 = 0.66 × v",
+     "text": "(velocity =) 0.19 m / s AND (direction) to the right\n(momentum before collision) = {0.45 × 0.34} – {0.21 × 0.12} OR 0.1278\n(momentum after collision) = 0.66 × v\nmomentum before collision = momentum after collision\nOR {0.45 × 0.34} – {0.21 × 0.12} = 0.66 × v OR 0.153 – 0.0252 = 0.66 × v",
      "codes": [
       "A4",
       "C1",
@@ -145,6 +161,59 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Fig. 3.1 shows two toy trains, A and B, on a track.",
+     "text": "Fig. 3.1 shows two toy trains, A and B, on a track."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2025MJ_42_q03b_fig3-1",
+     "caption": "Fig. 3.1"
+    },
+    {
+     "type": "text",
+     "html": "The mass of train A is 0.45kg and the mass of train B is 0.21kg. The trains do <b>not</b> have motors.",
+     "text": "The mass of train A is 0.45kg and the mass of train B is 0.21kg. The trains do not have motors."
+    },
+    {
+     "type": "text",
+     "html": "Train A travels towards train B and they collide.",
+     "text": "Train A travels towards train B and they collide."
+    },
+    {
+     "type": "text",
+     "html": "Immediately before the collision:",
+     "text": "Immediately before the collision:"
+    },
+    {
+     "type": "list",
+     "items": [
+      "the velocity of train A is 0.34m/s to the right",
+      "the velocity of train B is 0.12m/s to the left."
+     ]
+    },
+    {
+     "type": "text",
+     "html": "The trains stick together when they collide.",
+     "text": "The trains stick together when they collide."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the velocity of the trains immediately after the collision.",
+     "text": "Calculate the velocity of the trains immediately after the collision."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "direction"
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
    ]
   },
   {
@@ -156,7 +225,7 @@
       30.0,
       59.8,
       570.0,
-      284.2
+      284.5
      ],
      "continued": false,
      "answer_space": {
@@ -164,7 +233,7 @@
       "dotted_lines": 1,
       "answer_line": "average force =  …… [2]",
       "working_gap_pt": 115.4,
-      "height_pt": 224.4
+      "height_pt": 224.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p42/q03/question/0625_2025MJ_42_q03_c_s1.svg",
@@ -180,7 +249,7 @@
    "mark_scheme": [
     {
      "label": "3(c)",
-     "text": "(–) 0.12 N\nF∆t = ∆{mv} OR (F =) ∆p ÷ (∆)t OR (F =) ∆{mv} ÷ (∆)t OR (F =) 0.26 ÷ 2.1",
+     "text": "(–) 0.12 N\nF∆t = ∆{mv} OR (F =) ∆p ÷ (∆)t OR (F =) ∆{mv} ÷ (∆)t OR (F =) 0.26 ÷ 2.1",
      "codes": [
       "A2",
       "C1"
@@ -202,6 +271,32 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A different train is travelling with a momentum of 0.26kgm/s.",
+     "text": "A different train is travelling with a momentum of 0.26kgm/s."
+    },
+    {
+     "type": "text",
+     "html": "The train slows down and stops after 2.1s.",
+     "text": "The train slows down and stops after 2.1s."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the average force acting on the train during this time.",
+     "text": "Calculate the average force acting on the train during this time."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "average force ="
+    },
+    {
+     "type": "marks",
+     "value": 2
     }
    ]
   }

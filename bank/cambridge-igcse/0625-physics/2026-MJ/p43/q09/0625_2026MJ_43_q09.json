@@ -58,7 +58,7 @@
       30.0,
       59.8,
       570.0,
-      316.1
+      314.0
      ],
      "continued": false,
      "answer_space": {
@@ -66,13 +66,13 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 43.2,
-      "height_pt": 256.3
+      "height_pt": 254.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q09/question/0625_2026MJ_43_q09_a_s1.svg",
       "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p43/q09/question/0625_2026MJ_43_q09_a_s1",
       "url": null,
-      "kb": 40.8
+      "kb": 40.9
      }
     }
    ],
@@ -88,7 +88,7 @@
         30.0,
         322.1,
         570.0,
-        342.1
+        342.5
        ],
        "continued": false,
        "answer_space": {
@@ -96,7 +96,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 4.0,
-        "height_pt": 20.0
+        "height_pt": 20.4
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q09/question/0625_2026MJ_43_q09_a-i_s1.svg",
@@ -112,8 +112,10 @@
      "mark_scheme": [
       {
        "label": "9(a)(i)",
-       "text": "arrow indicating clockwise direction\nB1",
-       "codes": [],
+       "text": "arrow indicating clockwise direction",
+       "codes": [
+        "B1"
+       ],
        "segments": [
         {
          "page": 14,
@@ -132,6 +134,17 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "On Figure 9.1, mark with an arrow the direction of the current in the copper cylinder.",
+       "text": "On Figure 9.1, mark with an arrow the direction of the current in the copper cylinder."
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -143,7 +156,7 @@
         30.0,
         348.1,
         570.0,
-        459.1
+        459.5
        ],
        "continued": false,
        "answer_space": {
@@ -151,7 +164,7 @@
         "dotted_lines": 2,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 111.0
+        "height_pt": 111.4
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q09/question/0625_2026MJ_43_q09_a-ii_s1.svg",
@@ -167,8 +180,10 @@
      "mark_scheme": [
       {
        "label": "9(a)(ii)",
-       "text": "poles consistent with current direction\nB1 clockwise expect X – S / south and Y – N / north\nanticlockwise expect X – N / north and Y – S / south\nif 9(a)(i) blank or current direction other than clockwise or\nanticlockwise accept X – S / south and Y – N / north\nCON positive / negative",
-       "codes": [],
+       "text": "poles consistent with current direction",
+       "codes": [
+        "B1"
+       ],
        "segments": [
         {
          "page": 14,
@@ -187,6 +202,28 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The copper cylinder moves to the left along the horizontal metal rods.",
+       "text": "The copper cylinder moves to the left along the horizontal metal rods."
+      },
+      {
+       "type": "text",
+       "html": "Complete the sentences about pole X and pole Y.",
+       "text": "Complete the sentences about pole X and pole Y."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Pole Y is a",
+       "unit": "pole."
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -198,7 +235,7 @@
         30.0,
         465.1,
         570.0,
-        550.1
+        550.5
        ],
        "continued": false,
        "answer_space": {
@@ -206,7 +243,7 @@
         "dotted_lines": 2,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 85.0
+        "height_pt": 85.4
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q09/question/0625_2026MJ_43_q09_a-iii_s1.svg",
@@ -222,8 +259,10 @@
      "mark_scheme": [
       {
        "label": "9(a)(iii)",
-       "text": "increase current\nB2 A increase voltage (across cylinder)\nincrease magnetic field strength\nA decrease gap between poles\nA stronger magnet",
-       "codes": [],
+       "text": "increase current\nincrease magnetic field strength",
+       "codes": [
+        "B2"
+       ],
        "segments": [
         {
          "page": 14,
@@ -242,10 +281,43 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Suggest <b>two</b> changes that each increase the force on the copper cylinder.",
+       "text": "Suggest two changes that each increase the force on the copper cylinder."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "2"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     }
    ],
-   "path": "9(a)"
+   "path": "9(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Figure 9.1 shows a copper cylinder placed on two metal rods in the magnetic field between",
+     "text": "Figure 9.1 shows a copper cylinder placed on two metal rods in the magnetic field between"
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_43_q09a_fig9-1",
+     "caption": "Figure 9.1"
+    },
+    {
+     "type": "text",
+     "html": "The switch is closed.",
+     "text": "The switch is closed."
+    }
+   ]
   },
   {
    "label": "b",
@@ -256,7 +328,7 @@
       30.0,
       59.8,
       570.0,
-      308.8
+      309.0
      ],
      "continued": false,
      "answer_space": {
@@ -264,7 +336,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 42.6,
-      "height_pt": 249.0
+      "height_pt": 249.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q09/question/0625_2026MJ_43_q09_b_s1.svg",
@@ -286,7 +358,7 @@
         30.0,
         314.8,
         570.0,
-        412.8
+        413.0
        ],
        "continued": false,
        "answer_space": {
@@ -294,7 +366,7 @@
         "dotted_lines": 3,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 98.0
+        "height_pt": 98.2
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q09/question/0625_2026MJ_43_q09_b-i_s1.svg",
@@ -310,8 +382,10 @@
      "mark_scheme": [
       {
        "label": "9(b)(i)",
-       "text": "(allows) current in the coil to change direction\nB2\n(reverses the current) every half turn / 180 degrees\nOR when the coil is vertical/at right angles to the magnetic\nfield",
-       "codes": [],
+       "text": "(allows) current in the coil to change direction\n(reverses the current) every half turn / 180 degrees\nOR when the coil is vertical/at right angles to the magnetic\nfield",
+       "codes": [
+        "B2"
+       ],
        "segments": [
         {
          "page": 14,
@@ -330,6 +404,22 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Explain how the split-ring commutator allows the coil to rotate continuously.",
+       "text": "Explain how the split-ring commutator allows the coil to rotate continuously."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 3
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     },
     {
@@ -341,7 +431,7 @@
         30.0,
         418.8,
         570.0,
-        516.8
+        517.0
        ],
        "continued": false,
        "answer_space": {
@@ -349,7 +439,7 @@
         "dotted_lines": 2,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 98.0
+        "height_pt": 98.2
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q09/question/0625_2026MJ_43_q09_b-ii_s1.svg",
@@ -365,8 +455,10 @@
      "mark_scheme": [
       {
        "label": "9(b)(ii)",
-       "text": "any one from:\nB1\ntransfer current to the coil (from circuit)\nprovide continuous contact (between split ring commutator\nand circuit) owtte\nprevent wires tangling",
-       "codes": [],
+       "text": "any one from:\ntransfer current to the coil (from circuit)\nprovide continuous contact (between split ring commutator\nand circuit) owtte\nprevent wires tangling",
+       "codes": [
+        "B1"
+       ],
        "segments": [
         {
          "page": 14,
@@ -385,10 +477,38 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Explain the purpose of the brushes.",
+       "text": "Explain the purpose of the brushes."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     }
    ],
-   "path": "9(b)"
+   "path": "9(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Figure 9.2 shows a d.c. motor.",
+     "text": "Figure 9.2 shows a d.c. motor."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_43_q09b_fig9-2",
+     "caption": "Figure 9.2"
+    }
+   ]
   }
  ],
  "total_marks": 7,

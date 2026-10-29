@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    305.1
+    305.5
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 49.9,
-    "height_pt": 245.3
+    "height_pt": 245.7
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p52/q02/question/0625_2025ON_52_q02_stem_s1.svg",
@@ -33,8 +33,8 @@
    "caption": "Fig. 2.1",
    "page": 6,
    "bbox": [
-    69.3,
-    114.2,
+    168.4,
+    139.1,
     427.0,
     303.1
    ],
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p52/q02/figures/0625_2025ON_52_q02_fig2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p52/q02/figures/0625_2025ON_52_q02_fig2-1",
     "url": null,
-    "kb": 18.7
+    "kb": 11.0
    }
   },
   {
@@ -54,8 +54,8 @@
    "bbox": [
     52.7,
     456.7,
-    548.7,
-    636.7
+    542.7,
+    609.2
    ],
    "id": "0625_2025ON_52_q02b_table2-1",
    "part": "(b)",
@@ -64,7 +64,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p52/q02/figures/0625_2025ON_52_q02b_table2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p52/q02/figures/0625_2025ON_52_q02b_table2-1",
     "url": null,
-    "kb": 34.0
+    "kb": 33.6
    }
   }
  ],
@@ -82,7 +82,7 @@
       30.0,
       311.1,
       570.0,
-      386.4
+      385.0
      ],
      "continued": false,
      "answer_space": {
@@ -90,7 +90,7 @@
       "dotted_lines": 1,
       "answer_line": "V0 = ……V [1]",
       "working_gap_pt": 14.8,
-      "height_pt": 75.3
+      "height_pt": 73.9
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p52/q02/question/0625_2025ON_52_q02_a_s1.svg",
@@ -106,7 +106,7 @@
    "mark_scheme": [
     {
      "label": "2(a)",
-     "text": "V0 present and recorded to 0.1 V or better",
+     "text": "V0 present and recorded to 0.1 V or better",
      "codes": [
       "1"
      ],
@@ -128,6 +128,26 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "list",
+     "items": [
+      "Close the switch.",
+      "Without making any changes to the circuit, record the voltmeter reading V<sub>0</sub>.",
+      "Open the switch."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V0 =",
+     "unit": "V"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -139,7 +159,7 @@
       30.0,
       389.1,
       570.0,
-      638.7
+      639.0
      ],
      "continued": false,
      "answer_space": {
@@ -147,7 +167,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 21.6,
-      "height_pt": 249.6
+      "height_pt": 249.9
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p52/q02/question/0625_2025ON_52_q02_b_s1.svg",
@@ -163,7 +183,7 @@
    "mark_scheme": [
     {
      "label": "2(b)",
-     "text": "V for 10 Ω present and < V0",
+     "text": "V for 10 Ω present and < V0",
      "codes": [
       "1"
      ],
@@ -185,6 +205,56 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "list",
+     "items": [
+      "Connect the 10Ω resistor between points X and Y.",
+      "Close the switch.",
+      "Record, in Table 2.1, the reading V on the voltmeter.",
+      "Open the switch."
+     ]
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "resistance R/Ω",
+       "voltmeter reading V/V",
+       "current I/A"
+      ],
+      [
+       "10",
+       "",
+       ""
+      ],
+      [
+       "22",
+       "",
+       ""
+      ],
+      [
+       "39",
+       "",
+       ""
+      ],
+      [
+       "47",
+       "",
+       ""
+      ],
+      [
+       "68",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -196,7 +266,7 @@
       30.0,
       59.8,
       570.0,
-      118.8
+      119.0
      ],
      "continued": false,
      "answer_space": {
@@ -204,13 +274,13 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 59.0
+      "height_pt": 59.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p52/q02/question/0625_2025ON_52_q02_c_s1.svg",
       "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p52/q02/question/0625_2025ON_52_q02_c_s1",
       "url": null,
-      "kb": 32.3
+      "kb": 32.4
      }
     }
    ],
@@ -243,6 +313,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Remove the 10Ω resistor from the circuit.",
+     "text": "Remove the 10Ω resistor from the circuit."
+    },
+    {
+     "type": "text",
+     "html": "Repeat part (b), by replacing the 10Ω resistor with resistors of 22Ω, 39Ω, 47Ω and 68Ω in turn.",
+     "text": "Repeat part (b), by replacing the 10Ω resistor with resistors of 22Ω, 39Ω, 47Ω and 68Ω in turn."
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   },
   {
@@ -254,7 +340,7 @@
       30.0,
       124.8,
       570.0,
-      212.8
+      213.0
      ],
      "continued": false,
      "answer_space": {
@@ -262,7 +348,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 10.1,
-      "height_pt": 88.0
+      "height_pt": 88.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p52/q02/question/0625_2025ON_52_q02_d_s1.svg",
@@ -301,6 +387,27 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "For each pair of values of R and V in Table 2.1, calculate the current I in the circuit. Use the equation:",
+     "text": "For each pair of values of R and V in Table 2.1, calculate the current I in the circuit. Use the equation:"
+    },
+    {
+     "type": "text",
+     "html": "I = \\(\\frac{V}{R}\\)",
+     "text": "I = (V)/(R)"
+    },
+    {
+     "type": "text",
+     "html": "Record your values of I in Table 2.1 to 2 significant figures.",
+     "text": "Record your values of I in Table 2.1 to 2 significant figures."
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   },
   {
@@ -312,7 +419,7 @@
       30.0,
       218.8,
       570.0,
-      794.8
+      795.0
      ],
      "continued": false,
      "answer_space": {
@@ -320,7 +427,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 355.6,
-      "height_pt": 576.0
+      "height_pt": 576.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p52/q02/question/0625_2025ON_52_q02_e_s1.svg",
@@ -360,6 +467,42 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Plot a graph of V/V (y-axis) against I/A (x-axis). Start your axes at the origin (0, 0).",
+     "text": "Plot a graph of V/V (y-axis) against I/A (x-axis). Start your axes at the origin (0, 0)."
+    },
+    {
+     "type": "text",
+     "html": "Draw a best-fit straight line.",
+     "text": "Draw a best-fit straight line."
+    },
+    {
+     "type": "text",
+     "html": "V/V",
+     "text": "V/V"
+    },
+    {
+     "type": "text",
+     "html": "0 0",
+     "text": "0 0"
+    },
+    {
+     "type": "text",
+     "html": "I/A",
+     "text": "I/A"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 355.6
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   },
   {
@@ -371,7 +514,7 @@
       30.0,
       59.8,
       570.0,
-      146.2
+      146.5
      ],
      "continued": false,
      "answer_space": {
@@ -379,7 +522,7 @@
       "dotted_lines": 1,
       "answer_line": "G = …… [1]",
       "working_gap_pt": 42.4,
-      "height_pt": 86.4
+      "height_pt": 86.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p52/q02/question/0625_2025ON_52_q02_f_s1.svg",
@@ -395,7 +538,7 @@
    "mark_scheme": [
     {
      "label": "2(f)",
-     "text": "indication on the graph as to how gradient found and correct method of calculation of gradient i.e. Δy / Δx\nat least ½ the distance between the extreme plotted points used",
+     "text": "indication on the graph as to how gradient found and correct method of calculation of gradient i.e. Δy / Δx\nat least ½ the distance between the extreme plotted points used",
      "codes": [
       "1"
      ],
@@ -417,6 +560,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Determine the gradient G of your line. Show all working and indicate on the graph the values you use.",
+     "text": "Determine the gradient G of your line. Show all working and indicate on the graph the values you use."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "G ="
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -428,7 +587,7 @@
       30.0,
       152.2,
       570.0,
-      283.4
+      283.5
      ],
      "continued": false,
      "answer_space": {
@@ -436,7 +595,7 @@
       "dotted_lines": 1,
       "answer_line": "RZ = …… Ω [1]",
       "working_gap_pt": 16.4,
-      "height_pt": 131.2
+      "height_pt": 131.3
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p52/q02/question/0625_2025ON_52_q02_g_s1.svg",
@@ -474,6 +633,33 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The gradient of your line is numerically equal to the resistance R<sub>Z</sub> of the unknown resistor Z.",
+     "text": "The gradient of your line is numerically equal to the resistance RZ of the unknown resistor Z."
+    },
+    {
+     "type": "text",
+     "html": "Write down the value of the resistance R<sub>Z</sub>.",
+     "text": "Write down the value of the resistance RZ."
+    },
+    {
+     "type": "text",
+     "html": "Record your answer to the nearest ohm.",
+     "text": "Record your answer to the nearest ohm."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "RZ =",
+     "unit": "Ω"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   }
  ],
@@ -493,5 +679,22 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "In this experiment, you will investigate an electric circuit and find the resistance of an unknown resistor Z.",
+   "text": "In this experiment, you will investigate an electric circuit and find the resistance of an unknown resistor Z."
+  },
+  {
+   "type": "text",
+   "html": "The incomplete circuit shown in Fig. 2.1 has been set up for you. There is a gap between the points labelled X and Y.",
+   "text": "The incomplete circuit shown in Fig. 2.1 has been set up for you. There is a gap between the points labelled X and Y."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2025ON_52_q02_fig2-1",
+   "caption": "Fig. 2.1"
+  }
+ ]
 }

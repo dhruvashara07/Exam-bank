@@ -39,7 +39,7 @@
       30.0,
       59.8,
       570.0,
-      303.3
+      303.5
      ],
      "continued": false,
      "answer_space": {
@@ -47,7 +47,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 47.0,
-      "height_pt": 243.5
+      "height_pt": 243.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q07/question/0625_2026MJ_42_q07_a_s1.svg",
@@ -69,7 +69,7 @@
         30.0,
         309.3,
         570.0,
-        472.3
+        472.5
        ],
        "continued": false,
        "answer_space": {
@@ -77,13 +77,13 @@
         "dotted_lines": 3,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 163.0
+        "height_pt": 163.2
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q07/question/0625_2026MJ_42_q07_a-i_s1.svg",
         "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p42/q07/question/0625_2026MJ_42_q07_a-i_s1",
         "url": null,
-        "kb": 53.8
+        "kb": 53.9
        }
       }
      ],
@@ -93,8 +93,12 @@
      "mark_scheme": [
       {
        "label": "7(a)(i)",
-       "text": "(alternating) current / a.c.\nB1 A flow of charge or moving electrons\nCON induced current\n(permanent) magnet\nB1\nair (particles)\nB1",
-       "codes": [],
+       "text": "(alternating) current / a.c.\n(permanent) magnet\nair (particles)",
+       "codes": [
+        "B1",
+        "B1",
+        "B1"
+       ],
        "segments": [
         {
          "page": 14,
@@ -113,6 +117,32 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the sentences to describe and explain how a loudspeaker produces sound.",
+       "text": "Complete the sentences to describe and explain how a loudspeaker produces sound."
+      },
+      {
+       "type": "text",
+       "html": "This magnetic field interacts with the magnetic field due to",
+       "text": "This magnetic field interacts with the magnetic field due to"
+      },
+      {
+       "type": "text",
+       "html": "transfers energy to a student as sound.",
+       "text": "transfers energy to a student as sound."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "This causes the cone to vibrate. The vibration of the"
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
      ]
     },
     {
@@ -124,7 +154,7 @@
         30.0,
         478.3,
         570.0,
-        663.7
+        664.0
        ],
        "continued": false,
        "answer_space": {
@@ -132,7 +162,7 @@
         "dotted_lines": 1,
         "answer_line": "wavelength =  …… unit …… [2]",
         "working_gap_pt": 115.4,
-        "height_pt": 185.4
+        "height_pt": 185.7
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q07/question/0625_2026MJ_42_q07_a-ii_s1.svg",
@@ -148,8 +178,11 @@
      "mark_scheme": [
       {
        "label": "7(a)(ii)",
-       "text": "0.77 m\nA2\n(λ =) v / f OR (λ =) 340 / 440\nC1",
-       "codes": [],
+       "text": "0.77 m\n(λ =) v / f OR (λ =) 340 / 440",
+       "codes": [
+        "A2",
+        "C1"
+       ],
        "segments": [
         {
          "page": 14,
@@ -183,10 +216,43 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "A sound of frequency 440Hz is produced by the loudspeaker. The speed of the sound is 340m/s.",
+       "text": "A sound of frequency 440Hz is produced by the loudspeaker. The speed of the sound is 340m/s."
+      },
+      {
+       "type": "text",
+       "html": "Calculate the wavelength of this sound. State the unit.",
+       "text": "Calculate the wavelength of this sound. State the unit."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "wavelength ="
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     }
    ],
-   "path": "7(a)"
+   "path": "7(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Figure 7.1 shows a simplified diagram of a loudspeaker.",
+     "text": "Figure 7.1 shows a simplified diagram of a loudspeaker."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_42_q07a_fig7-1",
+     "caption": "Figure 7.1"
+    }
+   ]
   },
   {
    "label": "b",
@@ -197,7 +263,7 @@
       30.0,
       682.7,
       570.0,
-      780.7
+      781.0
      ],
      "continued": false,
      "answer_space": {
@@ -205,7 +271,7 @@
       "dotted_lines": 2,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 98.0
+      "height_pt": 98.3
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q07/question/0625_2026MJ_42_q07_b_s1.svg",
@@ -221,8 +287,10 @@
    "mark_scheme": [
     {
      "label": "7(b)",
-     "text": "(sound with frequency) above 20 kHz\nB1 A sound with frequencies above the\n(normal) range of audible hearing for\nhumans",
-     "codes": [],
+     "text": "(sound with frequency) above 20 kHz",
+     "codes": [
+      "B1"
+     ],
      "segments": [
       {
        "page": 15,
@@ -240,6 +308,22 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Define ‘ultrasound’.",
+     "text": "Define ‘ultrasound’."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 1
     }
    ]
   }

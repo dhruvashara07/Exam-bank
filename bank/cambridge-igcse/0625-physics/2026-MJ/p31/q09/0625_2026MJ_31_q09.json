@@ -9,8 +9,8 @@
    "caption": "Figure 9.1",
    "page": 12,
    "bbox": [
-    92.0,
-    73.8,
+    188.5,
+    98.1,
     406.9,
     228.1
    ],
@@ -21,7 +21,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p31/q09/figures/0625_2026MJ_31_q09a_fig9-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p31/q09/figures/0625_2026MJ_31_q09a_fig9-1",
     "url": null,
-    "kb": 20.5
+    "kb": 15.0
    }
   },
   {
@@ -47,8 +47,8 @@
    "caption": "Figure 9.3",
    "page": 13,
    "bbox": [
-    92.0,
-    73.8,
+    93.6,
+    99.3,
     419.8,
     248.9
    ],
@@ -59,7 +59,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p31/q09/figures/0625_2026MJ_31_q09c_fig9-3.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p31/q09/figures/0625_2026MJ_31_q09c_fig9-3",
     "url": null,
-    "kb": 35.0
+    "kb": 31.5
    }
   }
  ],
@@ -77,7 +77,7 @@
       30.0,
       59.8,
       570.0,
-      256.1
+      256.5
      ],
      "continued": false,
      "answer_space": {
@@ -85,7 +85,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 126.3,
-      "height_pt": 196.3
+      "height_pt": 196.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p31/q09/question/0625_2026MJ_31_q09_a_s1.svg",
@@ -101,8 +101,10 @@
    "mark_scheme": [
     {
      "label": "9(a)",
-     "text": "left side of magnet labelled N OR right side labelled S\nB1 two N’s OR 2 S’s is CON\ncondone N and S near horizontal arrows",
-     "codes": [],
+     "text": "left side of magnet labelled N OR right side labelled S",
+     "codes": [
+      "B1"
+     ],
      "segments": [
       {
        "page": 15,
@@ -121,6 +123,37 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A student experiments with bar magnets. Figure 9.1 shows the magnetic field around a",
+     "text": "A student experiments with bar magnets. Figure 9.1 shows the magnetic field around a"
+    },
+    {
+     "type": "text",
+     "html": "bar magnet.",
+     "text": "bar magnet."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_31_q09a_fig9-1",
+     "caption": "Figure 9.1"
+    },
+    {
+     "type": "text",
+     "html": "On Figure 9.1, label the N (north) pole and S (south) pole of the bar magnet.",
+     "text": "On Figure 9.1, label the N (north) pole and S (south) pole of the bar magnet."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 126.3
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -132,7 +165,7 @@
       30.0,
       275.1,
       570.0,
-      474.4
+      474.5
      ],
      "continued": false,
      "answer_space": {
@@ -140,7 +173,7 @@
       "dotted_lines": 3,
       "answer_line": null,
       "working_gap_pt": 23.6,
-      "height_pt": 199.2
+      "height_pt": 199.4
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p31/q09/question/0625_2026MJ_31_q09_b_s1.svg",
@@ -156,8 +189,10 @@
    "mark_scheme": [
     {
      "label": "9(b)",
-     "text": "any two from:\nB2\n(soft-iron) bar becomes an induced magnet\naccept becomes magnet(ised) OR becomes a temporary\nmagnet\nignore iron is a magnetic material\nwith S pole / opposite pole on side nearest N pole / left side\naccept P becomes a S (pole)\nunlike poles attract\naccept opposite poles attract\nCON references to charges for this mark\nopposite sides attract owtte is TV",
-     "codes": [],
+     "text": "any two from:\n(soft-iron) bar becomes an induced magnet\nwith S pole / opposite pole on side nearest N pole / left side\nunlike poles attract",
+     "codes": [
+      "B2"
+     ],
      "segments": [
       {
        "page": 15,
@@ -176,6 +211,32 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The student places a bar magnet near to a soft‑iron bar PQ, as shown in Figure 9.2.",
+     "text": "The student places a bar magnet near to a soft‑iron bar PQ, as shown in Figure 9.2."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_31_q09b_fig9-2",
+     "caption": "Figure 9.2"
+    },
+    {
+     "type": "text",
+     "html": "Explain why the bar magnet and the soft‑iron bar move towards each other.",
+     "text": "Explain why the bar magnet and the soft‑iron bar move towards each other."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 3
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   },
   {
@@ -187,7 +248,7 @@
       30.0,
       59.8,
       570.0,
-      289.9
+      287.5
      ],
      "continued": false,
      "answer_space": {
@@ -195,7 +256,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 55.2,
-      "height_pt": 230.1
+      "height_pt": 227.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p31/q09/question/0625_2026MJ_31_q09_c_s1.svg",
@@ -217,7 +278,7 @@
         30.0,
         295.9,
         570.0,
-        380.9
+        381.0
        ],
        "continued": false,
        "answer_space": {
@@ -225,7 +286,7 @@
         "dotted_lines": 2,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 85.0
+        "height_pt": 85.1
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p31/q09/question/0625_2026MJ_31_q09_c-i_s1.svg",
@@ -241,8 +302,10 @@
      "mark_scheme": [
       {
        "label": "9(c)(i)",
-       "text": "any two from:\nB2\nincrease speed of magnet\nuse a stronger magnet / magnetic field\naccept use more magnets\nignore bigger magnet OR bring magnet closer\nincrease the number of turns (on the coil)\naccept use more coils\nignore longer coil (of wire) OR thicker / thinner wire",
-       "codes": [],
+       "text": "any two from:\nincrease speed of magnet\nuse a stronger magnet / magnetic field\nincrease the number of turns (on the coil)",
+       "codes": [
+        "B2"
+       ],
        "segments": [
         {
          "page": 15,
@@ -261,6 +324,22 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Describe <b>two</b> ways by which the student can increase the deflection to the left.",
+       "text": "Describe two ways by which the student can increase the deflection to the left."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "2"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     },
     {
@@ -272,7 +351,7 @@
         30.0,
         386.9,
         570.0,
-        494.1
+        494.5
        ],
        "continued": false,
        "answer_space": {
@@ -280,7 +359,7 @@
         "dotted_lines": 2,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 107.2
+        "height_pt": 107.6
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p31/q09/question/0625_2026MJ_31_q09_c-ii_s1.svg",
@@ -296,8 +375,10 @@
      "mark_scheme": [
       {
        "label": "9(c)(ii)",
-       "text": "any two from:\nB2\nmove S pole out from coil\naccept idea of move the magnet up / the opposite direction\nOR move the magnet the other way\naccept idea of turning the magnet / coil round (and then\nmove N pole into coil\ninserting into coil) e.g. move S pole into coil from below OR\nmove S pole into the other side of coil\nreverse connections on (sensitive) ammeter OR reverse coil\naccept change connections on meter\nconnections\nBUT invert the ammeter is TV",
-       "codes": [],
+       "text": "any two from:\nmove S pole out from coil\nmove N pole into coil\nreverse connections on (sensitive) ammeter OR reverse coil\nconnections",
+       "codes": [
+        "B2"
+       ],
        "segments": [
         {
          "page": 15,
@@ -316,10 +397,43 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Describe <b>two</b> ways by which the student can make the pointer deflect to the right.",
+       "text": "Describe two ways by which the student can make the pointer deflect to the right."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "2"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     }
    ],
-   "path": "9(c)"
+   "path": "9(c)",
+   "content": [
+    {
+     "type": "text",
+     "html": "The student uses a bar magnet to demonstrate electromagnetic induction as shown in Figure 9.3.",
+     "text": "The student uses a bar magnet to demonstrate electromagnetic induction as shown in Figure 9.3."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_31_q09c_fig9-3",
+     "caption": "Figure 9.3"
+    },
+    {
+     "type": "text",
+     "html": "When the S pole of the bar magnet is moved into the coil of wire, the pointer on the sensitive ammeter deflects to the left.",
+     "text": "When the S pole of the bar magnet is moved into the coil of wire, the pointer on the sensitive ammeter deflects to the left."
+    }
+   ]
   }
  ],
  "total_marks": 7,

@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Exam Bank Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<script src="config.js"></script>
+<style>
+/* Layout: a reviewer's desk. Sticky bar on top, papers as a grid of index cards, questions as
+   printed sheets (always white, like the paper) on a cool grey desk. */
+:root {
+  --desk: #e9edf1; --panel: #f7f9fb; --line: #cfd6de; --ink: #16202b; --muted: #5a6876;
+  --sheet: #ffffff; --red: #b3261e; --red-soft: #f6dcd9; --ok: #1f7a4a; --ok-soft: #d8efe2;
+  --wait: #8a5a00; --wait-soft: #f6e8c8; --focus: #2b5fd9;
+  --ui: "Instrument Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --desk: #11161c; --panel: #19212a; --line: #2c3743; --ink: #e4e9ef; --muted: #98a6b5;
+  --red: #ff8a80; --red-soft: #4a201d; --ok: #7fd3a4; --ok-soft: #173a29; --wait: #f0c46a; --wait-soft: #3d3016;
+  --focus: #8ab0ff; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --desk: #11161c; --panel: #19212a; --line: #2c3743; --ink: #e4e9ef; --muted: #98a6b5;
+  --red: #ff8a80; --red-soft: #4a201d; --ok: #7fd3a4; --ok-soft: #173a29; --wait: #f0c46a; --wait-soft: #3d3016;
+  --focus: #8ab0ff; color-scheme: dark }
+* { box-sizing: border-box }
+html, body { margin: 0 }
+body { background: var(--desk); color: var(--ink); font: 15px/1.5 var(--ui);
+  padding-bottom: env(safe-area-inset-bottom, 0px) }
+a { color: inherit }
+button, select { font: inherit; color: inherit }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px }
+.wrap { max-width: 1100px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px)) }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--panel) }
+header.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--panel);
+  border-bottom: 1px solid var(--line) }
+header.bar .wrap { display: flex; align-items: center; gap: 16px; padding-block: 10px; flex-wrap: wrap }
+.brand { font-weight: 700; letter-spacing: -.01em; font-size: 17px; text-decoration: none; display: flex; gap: 8px; align-items: baseline }
+.brand small { font: 500 12px var(--mono); color: var(--muted) }
+nav.tabs { display: flex; gap: 4px; margin-left: auto }
+nav.tabs a { text-decoration: none; padding: 6px 12px; border-radius: 6px; color: var(--muted); font-weight: 500 }
+nav.tabs a[aria-current="page"] { background: var(--desk); color: var(--ink) }
+.count { font: 500 12px var(--mono); background: var(--red-soft); color: var(--red); padding: 1px 6px; border-radius: 9px; margin-left: 4px }
+main { padding-block: 20px 60px }
+h1 { font-size: 24px; line-height: 1.2; margin: 0; letter-spacing: -.015em; text-wrap: balance }
+h2 { font-size: 15px; margin: 0; letter-spacing: .02em }
+.mono { font-family: var(--mono) }
+.muted { color: var(--muted) }
+.stats { display: flex; gap: 20px; flex-wrap: wrap; margin: 6px 0 18px; color: var(--muted); font-size: 14px }
+.stats b { color: var(--ink); font-variant-numeric: tabular-nums }
+
+/* filters */
+.filters { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-bottom: 18px }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 7px; overflow: hidden; background: var(--panel) }
+.seg button { border: 0; background: none; padding: 5px 10px; cursor: pointer; font-size: 13px; border-right: 1px solid var(--line) }
+.seg button:last-child { border-right: 0 }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--panel) }
+.filters label { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted) }
+select { background: var(--panel); border: 1px solid var(--line); border-radius: 7px; padding: 5px 8px }
+
+/* paper grid */
+.year { margin-bottom: 26px }
+.year > h2 { font: 600 13px var(--mono); color: var(--muted); margin-bottom: 8px; letter-spacing: .04em }
+.session { display: grid; grid-template-columns: 110px 1fr; gap: 12px; align-items: start; padding: 10px 0; border-top: 1px solid var(--line) }
+.session .sname { font-weight: 600; font-size: 14px }
+.session .sname span { display: block; font-weight: 400; color: var(--muted); font-size: 12px }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 8px; min-width: 0 }
+.card { display: grid; gap: 2px; text-decoration: none; background: var(--panel); border: 1px solid var(--line);
+  border-radius: 8px; padding: 8px 10px; position: relative }
+.card:hover { border-color: var(--muted) }
+.card .code { font: 500 14px var(--mono) }
+.card .sub { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums }
+.card.bad .sub { color: var(--red) }
+.pill { display: inline-block; font: 500 11px var(--mono); padding: 1px 6px; border-radius: 9px; white-space: nowrap }
+.pill.approved { background: var(--ok-soft); color: var(--ok) }
+.pill.pending { background: var(--wait-soft); color: var(--wait) }
+.pill.flag { background: var(--red-soft); color: var(--red) }
+.card .pills { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px }
+@media (max-width: 560px) { .session { grid-template-columns: 1fr; gap: 6px } }
+
+/* paper view */
+.back { text-decoration: none; color: var(--muted); font-size: 14px }
+.phead { display: grid; gap: 6px; margin: 8px 0 14px }
+.toolbar { position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--hdr, 53px)); z-index: 4; background: var(--desk);
+  padding-block: 8px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; border-bottom: 1px solid var(--line); margin-bottom: 16px }
+.qnav { display: flex; gap: 4px; flex-wrap: wrap; overflow: hidden; min-width: 0 }
+.qnav a { font: 500 12px var(--mono); text-decoration: none; padding: 2px 6px; border-radius: 5px; background: var(--panel); border: 1px solid var(--line) }
+.qnav a.f { border-color: var(--red); color: var(--red) }
+.notice { background: var(--red-soft); color: var(--red); border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; font-size: 14px }
+.notice.ok { background: var(--ok-soft); color: var(--ok) }
+.notice.wait { background: var(--wait-soft); color: var(--wait) }
+
+.q { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; margin-bottom: 18px; scroll-margin-top: 120px; min-width: 0 }
+.q.flagged { border-color: var(--red) }
+.qhead { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: baseline; padding: 10px 14px; border-bottom: 1px solid var(--line) }
+.qhead h3 { margin: 0; font-size: 16px }
+.qhead .id { font: 400 12px var(--mono); color: var(--muted) }
+.qhead .marks { font: 500 13px var(--mono); color: var(--red) }
+.qhead .acts { margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap }
+.btn { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-size: 13px; padding: 4px 10px;
+  border-radius: 6px; border: 1px solid var(--line); background: var(--desk); cursor: pointer }
+.btn.report { border-color: var(--red); color: var(--red); background: none }
+.reasons { margin: 0; padding: 8px 14px 8px 32px; background: var(--red-soft); color: var(--red); font-size: 14px }
+.cols { display: grid; gap: 14px; padding: 14px; grid-template-columns: 1fr }
+.cols.both { grid-template-columns: 1fr 1fr }
+@media (max-width: 860px) { .cols.both { grid-template-columns: 1fr } }
+.colname { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 6px }
+.sheet { background: var(--sheet); border-radius: 4px; box-shadow: 0 0 0 1px var(--line); padding: 6px 0; min-width: 0 }
+.sheet img { display: block; width: 100%; height: auto }
+.sheet .cut { border-top: 1px dashed #c9d1da; }
+.pg { font: 400 10px var(--mono); color: #7b8794; padding: 0 8px; text-align: right }
+.ms { margin-top: 10px }
+.ms .row { margin-top: 8px }
+.ms .lab { font: 500 12px var(--mono); color: var(--muted); display: flex; gap: 8px; margin-bottom: 3px }
+.answer { font: 500 14px var(--mono); padding: 8px 12px; background: var(--ok-soft); color: var(--ok); border-radius: 6px; margin-top: 10px }
+
+/* editable view: rebuilt from the text, printed-paper look */
+.ed { background: var(--sheet); color: #111; border-radius: 4px; box-shadow: 0 0 0 1px var(--line);
+  padding: 14px 18px; font: 14px/1.55 Arial, "Helvetica Neue", Helvetica, sans-serif; min-width: 0; overflow-x: auto }
+.ed p { margin: 0 0 8px; max-width: 68ch }
+.ed ul { margin: 0 0 8px; padding-left: 22px }
+.ed .lab { font-weight: 700; margin: 10px 0 4px }
+.ed .part { margin-left: 18px }
+.ed .fig img { max-width: 100%; height: auto; display: block; margin: 6px 0 }
+.ed .fig .cap { font-weight: 700; font-size: 13px }
+.ed .tw { overflow-x: auto; max-width: 100% }
+.ed table { border-collapse: collapse; margin: 6px 0 10px }
+.ed table.otab td:first-child { border: 0; font-weight: 700 }
+.ed td { border: 1px solid #555; padding: 3px 8px }
+.ed .ans { color: #777; font-size: 13px; margin: 2px 0 8px }
+.ed .ans.space { border: 1px dashed #ccd; color: #99a; padding: 4px 6px; font-size: 11px }
+.ed .mk { text-align: right; font-weight: 700; color: #b3261e }
+.ed ol.opts { list-style: none; padding: 0; display: grid; gap: 4px }
+.ed .empty { color: #888; font-style: italic }
+
+/* to-check */
+.tc { display: grid; gap: 10px }
+.tc .item { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; display: grid; gap: 4px; text-decoration: none }
+.tc .item:hover { border-color: var(--muted) }
+.tc .item .t { display: flex; gap: 10px; flex-wrap: wrap; align-items: baseline }
+.tc .item ul { margin: 0; padding-left: 18px; color: var(--red); font-size: 14px }
+.empty-state { padding: 40px 0; text-align: center; color: var(--muted) }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important } }
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+  <a class="brand" href="#papers">Exam Bank Review <small>0625 Physics</small></a>
+  <nav class="tabs">
+    <a href="#papers" id="tab-papers">Papers</a>
+    <a href="#check" id="tab-check">To check <span class="count" id="ncheck">…</span></a>
+  </nav>
+</div></header>
+<main class="wrap" id="app"><p class="muted">Loading the bank…</p></main>
+
+<script>
+const CFG = window.BANK || { img: './', repo: 'dhruvashara07/Exam-bank' };
+const SESS = { FM: ['Feb/March', 'm'], MJ: ['May/June', 's'], ON: ['Oct/Nov', 'w'] };
+const SORDER = { FM: 0, MJ: 1, ON: 2 };
+const app = document.getElementById('app');
+new ResizeObserver(([e]) => document.documentElement.style.setProperty('--hdr', e.target.offsetHeight + 'px')).observe(document.querySelector('header.bar'));
+let PAPERS = [], QUEUE = [];
+const cache = {};
+const store = {
+  get(k, d) { try { const v = localStorage.getItem('eb.' + k); return v === null ? d : JSON.parse(v) } catch (e) { return d } },
+  set(k, v) { try { localStorage.setItem('eb.' + k, JSON.stringify(v)) } catch (e) {} }
+};
+let view = store.get('view', 'exact');      // exact | editable | both
+let showMs = store.get('ms', true);
+let filt = store.get('filt', { status: 'all', paper: 'all', year: 'all' });
+
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const img = svg => svg && svg.public_id ? CFG.img + svg.public_id + '.svg' : '';
+const ratio = b => b ? `aspect-ratio:${(b[2] - b[0]).toFixed(1)}/${(b[3] - b[1]).toFixed(1)}` : '';
+const paperName = p => `${p.code} ${SESS[p.session][0]} ${p.year}`;
+const cambridgeName = (p, kind) => `${p.code.split('/')[0]}_${SESS[p.session][1]}${String(p.year).slice(2)}_${kind}_${p.code.split('/')[1]}`;
+
+async function getJSON(u) { const r = await fetch(u); if (!r.ok) throw new Error(u + ': ' + r.status); return r.json() }
+
+function issueUrl(title, lines) {
+  const body = lines.join('\n');
+  return `https://github.com/${CFG.repo}/issues/new?labels=review&title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
+}
+
+/* ---------------- papers list ---------------- */
+function renderPapers() {
+  const years = [...new Set(PAPERS.map(p => p.year))].sort((a, b) => b - a);
+  const ok = p => (filt.year === 'all' || p.year == filt.year) && (filt.paper === 'all' || p.paper == filt.paper)
+    && (filt.status === 'all' || (filt.status === 'flagged' ? p.flagged > 0 : p.status === filt.status));
+  const shown = PAPERS.filter(ok);
+  const tot = PAPERS.length, appr = PAPERS.filter(p => p.status === 'approved').length;
+  const qn = PAPERS.reduce((s, p) => s + p.questions, 0);
+  const mism = PAPERS.filter(p => p.marks !== p.total).length;
+  let h = `<h1>Papers</h1>
+  <div class="stats"><span><b>${tot}</b> papers</span><span><b>${qn.toLocaleString()}</b> questions</span>
+  <span><b>${appr}</b> approved</span><span><b>${tot - appr}</b> waiting</span>
+  <span><b>${PAPERS.filter(p => p.flagged).length}</b> with something to check</span>
+  <span><b>${mism}</b> marks not matching the cover</span></div>
+  <div class="filters">
+    <label for="f-status">Status</label>
+    <span class="seg" id="f-status">${['all', 'flagged', 'pending', 'approved'].map(s => `<button data-v="${s}" aria-pressed="${filt.status === s}">${s === 'all' ? 'All' : s === 'flagged' ? 'To check' : s[0].toUpperCase() + s.slice(1)}</button>`).join('')}</span>
+    <label for="f-year">Year</label>
+    <select id="f-year"><option value="all">All years</option>${years.map(y => `<option ${filt.year == y ? 'selected' : ''}>${y}</option>`).join('')}</select>
+    <label for="f-paper">Paper</label>
+    <select id="f-paper"><option value="all">All papers</option>${[1, 2, 3, 4, 5, 6].map(n => `<option value="${n}" ${filt.paper == n ? 'selected' : ''}>Paper ${n}</option>`).join('')}</select>
+  </div>`;
+  if (!shown.length) h += `<div class="empty-state">No papers match these filters.</div>`;
+  for (const y of years) {
+    const py = shown.filter(p => p.year === y);
+    if (!py.length) continue;
+    h += `<section class="year"><h2>${y}</h2>`;
+    for (const s of ['FM', 'MJ', 'ON']) {
+      const ps = py.filter(p => p.session === s);
+      if (!ps.length) continue;
+      h += `<div class="session"><div class="sname">${SESS[s][0]}<span>${ps.length} papers</span></div><div class="cards">`;
+      for (const p of ps) {
+        const bad = p.marks !== p.total || !p.questions;
+        h += `<a class="card ${bad ? 'bad' : ''}" href="#paper-${p.id}">
+          <span class="code">${p.code}</span>
+          <span class="sub">${p.questions} q · ${p.marks}/${p.total}</span>
+          <span class="pills"><span class="pill ${p.status}">${p.status}</span>${p.flagged ? `<span class="pill flag">${p.flagged} to check</span>` : ''}</span></a>`;
+      }
+      h += `</div></div>`;
+    }
+    h += `</section>`;
+  }
+  app.innerHTML = h;
+  app.querySelectorAll('#f-status button').forEach(b => b.onclick = () => { filt.status = b.dataset.v; store.set('filt', filt); renderPapers() });
+  app.querySelector('#f-year').onchange = e => { filt.year = e.target.value; store.set('filt', filt); renderPapers() };
+  app.querySelector('#f-paper').onchange = e => { filt.paper = e.target.value; store.set('filt', filt); renderPapers() };
+}
+
+/* ---------------- one paper ---------------- */
+function nodes(n, depth = 0, out = []) {     // question tree in reading order
+  out.push([n, depth]);
+  for (const k of n.parts || []) nodes(k, depth + 1, out);
+  return out;
+}
+function exactHtml(q) {
+  let h = '', last = null;
+  for (const [n] of nodes(q)) for (const s of n.segments || []) {
+    if (!s.svg) continue;
+    const brk = last !== null && last !== s.page;
+    h += `${brk ? '<div class="cut"></div>' : ''}<img loading="lazy" alt="Question ${q.number}${n.path ? ' ' + esc(n.path) : ''}, page ${s.page}" style="${ratio(s.bbox)}" src="${img(s.svg)}">`;
+    last = s.page;
+  }
+  return h ? `<div class="sheet">${h}<div class="pg">page${new Set(nodes(q).flatMap(([n]) => (n.segments || []).map(s => s.page))).size > 1 ? 's' : ''} ${[...new Set(nodes(q).flatMap(([n]) => (n.segments || []).map(s => s.page)))].join(', ')}</div></div>` : '<div class="sheet"><p class="pg">no pieces</p></div>';
+}
+function msHtml(q) {
+  if (q.type === 'mcq') return q.discounted ? `<div class="answer">Question discounted by Cambridge (not marked)</div>` : `<div class="answer">Answer: ${esc(q.answer || '—')}</div>`;
+  let h = '';
+  for (const [n] of nodes(q)) for (const r of n.mark_scheme || []) {
+    h += `<div class="row"><div class="lab"><span>${esc(r.label)}</span><span>${esc((r.codes || []).join(' '))}</span>${r.shared_with ? `<span>(same row as ${esc(r.shared_with)})</span>` : ''}</div>
+      <div class="sheet">${(r.segments || []).map(s => `<img loading="lazy" alt="Mark scheme ${esc(r.label)}" style="${ratio(s.bbox)}" src="${img(s.svg)}">`).join('')}</div></div>`;
+  }
+  return h ? `<div class="ms"><div class="colname">Mark scheme</div>${h}</div>` : `<div class="ms muted">No mark scheme rows.</div>`;
+}
+function editHtml(n, q, depth = 0) {
+  const figs = Object.fromEntries((q.figures || []).map(f => [f.id, f]));
+  let h = n.label ? `<div class="lab">(${esc(n.label)})</div>` : '';
+  for (const b of n.content || []) {
+    if (b.type === 'text') h += `<p>${b.html}</p>`;
+    else if (b.type === 'list') h += `<ul>${b.items.map(x => `<li>${x}</li>`).join('')}</ul>`;
+    else if (b.type === 'figure') { const f = figs[b.id]; h += `<div class="fig">${f && f.svg ? `<img loading="lazy" alt="${esc(b.caption || 'figure')}" style="${ratio(f.bbox)}" src="${img(f.svg)}">` : ''}${b.caption ? `<div class="cap">${esc(b.caption)}</div>` : ''}</div>` }
+    else if (b.type === 'table') h += `<div class="tw"><table class="${b.options ? 'otab' : ''}">${b.rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join('')}</tr>`).join('')}</table></div>`;
+    else if (b.type === 'answer') {
+      if (b.kind === 'answer_line') h += `<div class="ans">${esc(b.prefix || '')} ………… ${esc(b.unit || '')}</div>`;
+      else if (b.kind === 'lines') h += `<div class="ans">${'…………………………………………<br>'.repeat(b.lines || 1)}</div>`;
+      else if (b.kind === 'space') h += `<div class="ans space" style="height:${Math.min(160, b.height_pt || 40)}px">working space</div>`;
+    }
+    else if (b.type === 'marks') h += `<div class="mk">[${b.value}]</div>`;
+    else if (b.type === 'options' && b.in_figure) h += `<p class="empty">Options ${b.options.map(o => esc(o.label)).join(', ')} are drawn in the diagram.</p>`;
+    else if (b.type === 'options') h += `<ol class="opts">${b.options.map(o => `<li><b>${esc(o.label)}</b> ${o.html}</li>`).join('')}</ol>`;
+  }
+  for (const k of n.parts || []) h += `<div class="part">${editHtml(k, q, depth + 1)}</div>`;
+  return h;
+}
+function qCard(q, p) {
+  const reasons = (q.review && q.review.reasons) || [];
+  const num = String(q.number).padStart(2, '0');
+  const title = `Check ${q.id}`;
+  const rep = issueUrl(title, [
+    `Question: ${q.id} (${p.code} ${SESS[p.session][0]} ${p.year}, question ${q.number})`,
+    `Page: ${location.origin}${location.pathname}#paper-${p.id}-q${num}`, '',
+    'What is wrong? (tick and/or describe)',
+    '- [ ] part of the question is cut off or missing', '- [ ] a diagram or table is wrong', '- [ ] mark scheme is wrong or attached to the wrong part',
+    '- [ ] marks are wrong', '- [ ] text in the editable view is wrong', '', 'Details:', '']);
+  const edit = (q.content || (q.parts || []).some(k => k.content)) ? editHtml(q, q) : '<p class="empty">No editable text for this question yet.</p>';
+  const cols = view === 'both' ? `<div><div class="colname">Exact (from the paper)</div>${exactHtml(q)}</div><div><div class="colname">Editable</div><div class="ed">${edit}</div></div>`
+    : view === 'editable' ? `<div><div class="ed">${edit}</div></div>` : `<div>${exactHtml(q)}</div>`;
+  return `<article class="q ${reasons.length ? 'flagged' : ''}" id="q${num}">
+    <div class="qhead"><h3>Question ${q.number}</h3><span class="marks">[${q.marks}]</span><span class="id">${q.id}</span>
+      <span class="acts"><a class="btn report" href="${rep}" target="_blank" rel="noopener">Report a problem</a></span></div>
+    ${reasons.length ? `<ul class="reasons">${reasons.map(r => `<li>${esc(r)}</li>`).join('')}</ul>` : ''}
+    <div class="cols ${view === 'both' ? 'both' : ''}">${cols}${showMs ? `<div>${msHtml(q)}</div>` : ''}</div>
+  </article>`;
+}
+async function renderPaper(pid, qanchor) {
+  const p = PAPERS.find(x => x.id === pid);
+  if (!p) { app.innerHTML = `<div class="empty-state">Paper ${esc(pid)} is not in the bank. <a href="#papers">All papers</a></div>`; return }
+  app.innerHTML = `<p class="muted">Loading ${esc(p.code)}…</p>`;
+  const d = cache[pid] || (cache[pid] = await getJSON(`data/p/${pid}.json`));
+  const m = d.meta, qs = d.questions;
+  const nflag = qs.filter(q => q.review && q.review.reasons && q.review.reasons.length).length;
+  let h = `<a class="back" href="#papers">← All papers</a>
+  <div class="phead"><h1>${esc(paperName(p))}</h1>
+  <div class="stats"><span>${esc((m.paper_type || '').replace(/_/g, ' '))}</span><span><b>${qs.length}</b> questions</span>
+    <span>marks <b>${m.marks_found}/${m.total_marks}</b>${m.total_marks_source && m.total_marks_source !== 'cover' ? ' (standard total)' : ''}</span>
+    <span><span class="pill ${p.status}">${p.status}</span></span>
+    <span class="mono">${cambridgeName(p, 'qp')}.pdf · ${cambridgeName(p, 'ms')}.pdf</span></div></div>`;
+  if (d.approval) h += `<div class="notice ok">Approved by ${esc(d.approval.by)} on ${esc((d.approval.at || '').slice(0, 10))}${d.approval.note ? ': ' + esc(d.approval.note) : ''}</div>`;
+  else h += `<div class="notice wait">Waiting for approval. It goes to the database after the daily check approves it.</div>`;
+  for (const f of d.paper_flags || []) h += `<div class="notice">${f.reasons.map(esc).join('<br>')}</div>`;
+  if (m.mark_scheme === 'missing') h += `<div class="notice">No mark scheme PDF for this paper.</div>`;
+  h += `<div class="toolbar">
+    <span class="seg" id="v-mode">${[['exact', 'Exact'], ['editable', 'Editable'], ['both', 'Side by side']].map(([k, l]) => `<button data-v="${k}" aria-pressed="${view === k}">${l}</button>`).join('')}</span>
+    <span class="seg" id="v-ms"><button aria-pressed="${showMs}">Mark scheme</button></span>
+    <nav class="qnav" aria-label="Questions">${qs.map(q => `<a class="${q.review && q.review.reasons && q.review.reasons.length ? 'f' : ''}" href="#paper-${pid}-q${String(q.number).padStart(2, '0')}">${q.number}</a>`).join('')}</nav>
+  </div>`;
+  if (nflag) h += `<p class="muted">${nflag} question${nflag > 1 ? 's are' : ' is'} marked in red: the pipeline wants a person to look.</p>`;
+  h += qs.map(q => qCard(q, p)).join('');
+  app.innerHTML = h;
+  app.querySelectorAll('#v-mode button').forEach(b => b.onclick = () => { view = b.dataset.v; store.set('view', view); rerender() });
+  app.querySelector('#v-ms button').onclick = () => { showMs = !showMs; store.set('ms', showMs); rerender() };
+  math();
+  if (qanchor) { const el = document.getElementById(qanchor); if (el) el.scrollIntoView() } else window.scrollTo(0, 0);
+}
+function rerender() { const y = window.scrollY; route(true).then(() => window.scrollTo(0, y)) }
+function math() {
+  if (window.renderMathInElement) renderMathInElement(app, { delimiters: [{ left: '\\(', right: '\\)', display: false }], throwOnError: false });
+}
+
+/* ---------------- to check ---------------- */
+function renderCheck() {
+  const byPaper = {};
+  for (const x of QUEUE) {
+    const pid = x.id.split('_').slice(0, 3).join('_');
+    (byPaper[pid] = byPaper[pid] || []).push(x);
+  }
+  const pend = PAPERS.filter(p => p.status === 'pending');
+  let h = `<h1>To check</h1><div class="stats"><span><b>${QUEUE.length}</b> items the pipeline flagged</span><span><b>${pend.length}</b> papers waiting for approval</span></div>`;
+  const pids = Object.keys(byPaper).sort();
+  if (!pids.length) h += `<div class="empty-state">Nothing flagged.</div>`;
+  h += `<div class="tc">`;
+  for (const pid of pids) {
+    const p = PAPERS.find(x => x.id === pid);
+    for (const x of byPaper[pid]) {
+      const qn = x.id.match(/_q(\d+)$/);
+      h += `<a class="item" href="#paper-${pid}${qn ? '-q' + qn[1] : ''}"><span class="t"><span class="mono">${esc(x.id)}</span><span class="muted">${p ? esc(paperName(p)) : ''}</span></span>
+        <ul>${x.reasons.map(r => `<li>${esc(r)}</li>`).join('')}</ul></a>`;
+    }
+  }
+  h += `</div>`;
+  app.innerHTML = h;
+  window.scrollTo(0, 0);
+}
+
+/* ---------------- routing ---------------- */
+async function route(keep) {
+  const hsh = location.hash.slice(1) || 'papers';
+  document.getElementById('tab-papers').setAttribute('aria-current', hsh === 'check' ? 'false' : 'page');
+  document.getElementById('tab-check').setAttribute('aria-current', hsh === 'check' ? 'page' : 'false');
+  const m = hsh.match(/^paper-(\w+?_\d{4}[A-Z]{2}_\d\d)(?:-(q\d+))?$/);
+  try {
+    if (m) await renderPaper(m[1], keep ? null : m[2]);
+    else if (hsh === 'check') renderCheck();
+    else renderPapers();
+  } catch (e) { app.innerHTML = `<div class="notice">Could not load: ${esc(e.message)}. Reload the page to try again.</div>` }
+}
+(async () => {
+  try { [PAPERS, QUEUE] = await Promise.all([getJSON('data/papers.json'), getJSON('data/queue.json')]) }
+  catch (e) { app.innerHTML = `<div class="notice">Could not load the bank index (${esc(e.message)}).</div>`; return }
+  document.getElementById('ncheck').textContent = QUEUE.length;
+  window.addEventListener('hashchange', () => route(false));
+  window.addEventListener('load', math);
+  route(false);
+})();
+</script>
+</body>
+</html>

@@ -28,8 +28,8 @@
    "caption": "Fig. 7.2",
    "page": 10,
    "bbox": [
-    92.0,
-    519.2,
+    215.7,
+    548.1,
     369.5,
     695.5
    ],
@@ -40,7 +40,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p41/q07/figures/0625_2025MJ_41_q07b_fig7-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p41/q07/figures/0625_2025MJ_41_q07b_fig7-2",
     "url": null,
-    "kb": 26.5
+    "kb": 17.1
    }
   }
  ],
@@ -58,7 +58,7 @@
       30.0,
       59.8,
       570.0,
-      232.1
+      232.5
      ],
      "continued": false,
      "answer_space": {
@@ -66,7 +66,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 54.1,
-      "height_pt": 172.3
+      "height_pt": 172.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p41/q07/question/0625_2025MJ_41_q07_a_s1.svg",
@@ -88,7 +88,7 @@
         30.0,
         238.1,
         570.0,
-        375.2
+        375.5
        ],
        "continued": false,
        "answer_space": {
@@ -96,7 +96,7 @@
         "dotted_lines": 3,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 137.0
+        "height_pt": 137.4
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p41/q07/question/0625_2025MJ_41_q07_a-i_s1.svg",
@@ -135,6 +135,28 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Name the electrical component.",
+       "text": "Name the electrical component."
+      },
+      {
+       "type": "text",
+       "html": "Explain how you identified the component from the graph in Fig. 7.1.",
+       "text": "Explain how you identified the component from the graph in Fig. 7.1."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "explanation",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     },
     {
@@ -146,7 +168,7 @@
         30.0,
         381.2,
         570.0,
-        499.2
+        499.5
        ],
        "continued": false,
        "answer_space": {
@@ -154,7 +176,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 87.0,
-        "height_pt": 118.0
+        "height_pt": 118.3
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p41/q07/question/0625_2025MJ_41_q07_a-ii_s1.svg",
@@ -192,10 +214,38 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Draw the circuit symbol for this component.",
+       "text": "Draw the circuit symbol for this component."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 87.0
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     }
    ],
-   "path": "7(a)"
+   "path": "7(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Fig. 7.1 shows a sketch of the current–voltage graph for an electrical component.",
+     "text": "Fig. 7.1 shows a sketch of the current–voltage graph for an electrical component."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2025MJ_41_q07a_fig7-1",
+     "caption": "Fig. 7.1"
+    }
+   ]
   },
   {
    "label": "b",
@@ -206,7 +256,7 @@
       30.0,
       505.2,
       570.0,
-      726.8
+      725.0
      ],
      "continued": false,
      "answer_space": {
@@ -214,7 +264,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 43.0,
-      "height_pt": 221.6
+      "height_pt": 219.8
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p41/q07/question/0625_2025MJ_41_q07_b_s1.svg",
@@ -236,7 +286,7 @@
         30.0,
         59.8,
         570.0,
-        177.9
+        178.0
        ],
        "continued": false,
        "answer_space": {
@@ -244,7 +294,7 @@
         "dotted_lines": 1,
         "answer_line": "resistance =  …… [2]",
         "working_gap_pt": 87.0,
-        "height_pt": 118.0
+        "height_pt": 118.2
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p41/q07/question/0625_2025MJ_41_q07_b-i_s1.svg",
@@ -260,7 +310,7 @@
      "mark_scheme": [
       {
        "label": "7(b)(i)",
-       "text": "59 Ω\nV = IR OR (R =)\n÷\nI OR (R =)\n230  3.9\n÷\nV",
+       "text": "59 Ω\nV = IR OR (R =) V ÷I OR (R =) 230 ÷ 3.9",
        "codes": [
         "A2",
         "C1"
@@ -283,6 +333,22 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the resistance of heater A.",
+       "text": "Calculate the resistance of heater A."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "resistance ="
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     },
     {
@@ -294,7 +360,7 @@
         30.0,
         183.9,
         570.0,
-        301.9
+        302.0
        ],
        "continued": false,
        "answer_space": {
@@ -302,7 +368,7 @@
         "dotted_lines": 1,
         "answer_line": "energy =  …… [3]",
         "working_gap_pt": 87.0,
-        "height_pt": 118.0
+        "height_pt": 118.1
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p41/q07/question/0625_2025MJ_41_q07_b-ii_s1.svg",
@@ -318,7 +384,7 @@
      "mark_scheme": [
       {
        "label": "7(b)(ii)",
-       "text": "270 000 J OR 2.7 × 105 J\n(E =) IVt\n(t =)\n5 60 seen\n×",
+       "text": "270 000 J OR 2.7 × 10 J\n5\n(E =) IVt\n(t =) 5 ×60 seen",
        "codes": [
         "A3",
         "C1",
@@ -342,6 +408,22 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the energy transferred by heater A in 5.0 minutes.",
+       "text": "Calculate the energy transferred by heater A in 5.0 minutes."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "energy ="
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
      ]
     },
     {
@@ -353,7 +435,7 @@
         30.0,
         307.9,
         570.0,
-        478.0
+        478.5
        ],
        "continued": false,
        "answer_space": {
@@ -361,7 +443,7 @@
         "dotted_lines": 1,
         "answer_line": "ammeter reading =  …… [2]",
         "working_gap_pt": 87.0,
-        "height_pt": 170.0
+        "height_pt": 170.6
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p41/q07/question/0625_2025MJ_41_q07_b-iii_s1.svg",
@@ -377,7 +459,7 @@
      "mark_scheme": [
       {
        "label": "7(b)(iii)",
-       "text": "7.8 A\nany one from:\n•\nidentical heaters (each with p.d. of 230 V) so 3.9 A in each branch\n•\nI = I1 + I2\n1\n1\n1\n•\nR in any form\n=\n+\nR\nR\n1\n2",
+       "text": "7.8 A\nany one from:\n•\nidentical heaters (each with p.d. of 230 V) so 3.9 A in each branch\n•\nI = I1 + I2\n1\n1\n1\n•\n+\nin any form\n=\nR\nR\nR\n1\n2",
        "codes": [
         "B1",
         "B1"
@@ -400,10 +482,48 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "S<sub>1</sub> remains closed and S<sub>2</sub> is closed.",
+       "text": "S1 remains closed and S2 is closed."
+      },
+      {
+       "type": "text",
+       "html": "Determine the reading on the ammeter. Show your working.",
+       "text": "Determine the reading on the ammeter. Show your working."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "ammeter reading ="
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     }
    ],
-   "path": "7(b)"
+   "path": "7(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Fig. 7.2 shows an electric circuit for two identical electric heaters, A and B, connected to a mains supply of 230V.",
+     "text": "Fig. 7.2 shows an electric circuit for two identical electric heaters, A and B, connected to a mains supply of 230V."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2025MJ_41_q07b_fig7-2",
+     "caption": "Fig. 7.2"
+    },
+    {
+     "type": "text",
+     "html": "S<sub>1</sub> is closed. S<sub>2</sub> is open. The reading on the ammeter is 3.9A.",
+     "text": "S1 is closed. S2 is open. The reading on the ammeter is 3.9A."
+    }
+   ]
   }
  ],
  "total_marks": 10,

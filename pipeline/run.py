@@ -11,6 +11,7 @@ import pymupdf as fitz
 sys.path.insert(0, os.path.dirname(__file__))
 from clean import clean
 from extract import extract, segment_text_all
+import editable
 from layout import page_bounds, visible_lines, ink_boxes
 from render import region_svg
 from ms import mcq_key, structured_rows
@@ -23,7 +24,8 @@ CACHE = os.path.join(ROOT, 'out', 'clean')
 def cleaned(path):
     rel = os.path.relpath(path, os.path.join(ROOT, 'raw'))
     dst = os.path.join(CACHE, rel)
-    if not os.path.exists(dst) or os.path.getmtime(dst) < os.path.getmtime(path):
+    code = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'clean.py')
+    if not os.path.exists(dst) or os.path.getmtime(dst) < max(os.path.getmtime(path), os.path.getmtime(code)):
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         clean(path, dst)
     return dst
@@ -160,8 +162,8 @@ def process(qp_path):
     doc = fitz.open(qp)
     msdoc = fitz.open(ms) if ms else None
     w = Writer(meta)
-    key = mcq_key(msdoc) if (msdoc and meta['paper'] in (1, 2)) else {}
-    ms_rows = structured_rows(msdoc) if (msdoc and meta['paper'] >= 3) else []
+    key = mcq_key(msdoc) if (msdoc and meta['is_mcq']) else {}
+    ms_rows = structured_rows(msdoc) if (msdoc and not meta['is_mcq']) else []
     if not msdoc:
         meta['mark_scheme'] = 'missing'
 
@@ -186,7 +188,9 @@ def process(qp_path):
                 f['svg'] = w.svg(doc, f['page'], f['bbox'], f['id'], 'figures')
                 q['figures'].append(f)
             q['answer'] = key.get(q['number'])
-            if not q['answer'] and msdoc:
+            if q['answer'] == 'DISCOUNTED':        # Cambridge removed this question from the marking
+                q['answer'], q['discounted'] = None, True
+            elif not q['answer'] and msdoc:
                 q['review']['reasons'].append('answer key not found in mark scheme')
         else:
             for row in [r for r in ms_rows if r['path'][0] == q['number']]:
@@ -196,8 +200,14 @@ def process(qp_path):
                     s = dict(s); s['svg'] = w.svg(msdoc, s['page'], s['bbox'], f"{qid}_{label_of(row['path'])}_ms{j}", 'markscheme')
                     segs.append(s)
                 entry = {'label': row['label'], 'text': row['text'], 'codes': row['marks_codes'], 'segments': segs}
+                if row.get('shared_with'):
+                    entry['shared_with'] = row['shared_with']
                 node.setdefault('mark_scheme', []).append(entry)
-                if not exact:
+                # A row nested deeper than the paper goes (MS numbers the bullets of a part, e.g. 6(a)(ii)
+                # when the paper's 6(a) has no sub-parts) belongs to that part: fine. Anything else is a mismatch.
+                deeper_ok = (not exact and not node.get('parts') and node is not q
+                             and len(row['path']) == len(tuple(x for x in (node.get('path') or '') if x == '(')) + 2)
+                if not exact and not deeper_ok:
                     q['review']['reasons'].append(f"mark scheme row {row['label']} has no matching part in the paper")
             with_ms = {str(q['number'])} if q.get('mark_scheme') else set()
             def collect(n):
@@ -218,12 +228,26 @@ def process(qp_path):
                                        'paper', 'variant', 'paper_code', 'paper_type')})
         q.setdefault('total_marks', q['marks'])
         q.update({'topic': None, 'subtopic': None, 'keywords': [], 'difficulty': None})
+        try:                                   # editable copy: text with bold/italic/sub/sup/maths, tables, figure refs
+            editable.build(doc, q)
+        except Exception as e:                 # never lose a paper over it; the exact SVGs are the master copy
+            q['review']['reasons'].append(f'editable content failed: {type(e).__name__}: {e}')
+        OPT = 'options not found as text (likely in a table or diagrams)'
+        if q['type'] == 'mcq' and OPT in q['review']['reasons']:
+            blocks = q.get('content', [])
+            if any(b.get('type') == 'table' and b.get('options') for b in blocks) or \
+               any(b.get('type') == 'options' and (b.get('in_figure') or (len(b['options']) == 4 and all(o['html'] for o in b['options'])))
+                   for b in blocks):
+                q['review']['reasons'].remove(OPT)   # the editable layer found them (options table / drawn options / text)
         q['review']['status'] = 'flagged' if q['review']['reasons'] else 'auto'
         with open(os.path.join(w.qdir(qid), f"{qid}.json"), 'w') as f:
             json.dump(q, f, ensure_ascii=False, indent=1)
         if q['review']['reasons']:
             queue.append({'id': qid, 'reasons': q['review']['reasons']})
 
+    if meta.get('erratum'):
+        queue.append({'id': f'{syl}_{year}{session}_{pv}', 'reasons': ['paper has an erratum notice (page '
+                      + ', '.join(str(e['page']) for e in meta['erratum']) + '): check the corrected question(s)']})
     found = sum(q['marks'] for q in questions)
     meta['questions'] = len(questions)
     meta['marks_found'] = found

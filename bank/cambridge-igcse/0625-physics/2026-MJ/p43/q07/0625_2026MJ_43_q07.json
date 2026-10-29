@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    295.5
+    296.0
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 54.9,
-    "height_pt": 235.7
+    "height_pt": 236.2
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q07/question/0625_2026MJ_43_q07_stem_s1.svg",
@@ -63,7 +63,7 @@
       30.0,
       301.0,
       570.0,
-      372.0
+      372.5
      ],
      "continued": false,
      "answer_space": {
@@ -71,7 +71,7 @@
       "dotted_lines": 1,
       "answer_line": null,
       "working_gap_pt": 14.5,
-      "height_pt": 71.0
+      "height_pt": 71.5
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q07/question/0625_2026MJ_43_q07_a_s1.svg",
@@ -87,8 +87,10 @@
    "mark_scheme": [
     {
      "label": "7(a)",
-     "text": "electron(s)\nB1",
-     "codes": [],
+     "text": "electron(s)",
+     "codes": [
+      "B1"
+     ],
      "segments": [
       {
        "page": 12,
@@ -107,6 +109,27 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The connecting wires in the circuit are made of metal.",
+     "text": "The connecting wires in the circuit are made of metal."
+    },
+    {
+     "type": "text",
+     "html": "State the name of the particles that flow in the metal wires.",
+     "text": "State the name of the particles that flow in the metal wires."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -118,7 +141,7 @@
       30.0,
       390.5,
       570.0,
-      410.5
+      411.0
      ],
      "continued": false,
      "answer_space": {
@@ -126,7 +149,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 4.0,
-      "height_pt": 20.0
+      "height_pt": 20.5
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q07/question/0625_2026MJ_43_q07_b_s1.svg",
@@ -148,7 +171,7 @@
         30.0,
         416.0,
         570.0,
-        461.5
+        462.0
        ],
        "continued": false,
        "answer_space": {
@@ -156,7 +179,7 @@
         "dotted_lines": 1,
         "answer_line": null,
         "working_gap_pt": 14.5,
-        "height_pt": 45.5
+        "height_pt": 46.0
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q07/question/0625_2026MJ_43_q07_b-i_s1.svg",
@@ -172,8 +195,10 @@
      "mark_scheme": [
       {
        "label": "7(b)(i)",
-       "text": "light-dependent resistor / LDR\nB1",
-       "codes": [],
+       "text": "light-dependent resistor / LDR",
+       "codes": [
+        "B1"
+       ],
        "segments": [
         {
          "page": 12,
@@ -192,6 +217,22 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "State the name of component X.",
+       "text": "State the name of component X."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -203,7 +244,7 @@
         30.0,
         467.0,
         570.0,
-        619.6
+        620.0
        ],
        "continued": false,
        "answer_space": {
@@ -211,7 +252,7 @@
         "dotted_lines": 1,
         "answer_line": "reading on the voltmeter =  …… V [3]",
         "working_gap_pt": 96.1,
-        "height_pt": 152.6
+        "height_pt": 153.0
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q07/question/0625_2026MJ_43_q07_b-ii_s1.svg",
@@ -227,8 +268,12 @@
      "mark_scheme": [
       {
        "label": "7(b)(ii)",
-       "text": "4.5 (V)\nA3\nR = V / I OR (I =) 12 / 640 OR (I =) 0.01875\nC1\nA (V2 =) Vs R2 / {R1 + R2}\n(V =) 0.01875 × 240\nA {12 × 240} / {240 + 400}\nC1",
-       "codes": [],
+       "text": "4.5 (V)\nR = V / I OR (I =) 12 / 640 OR (I =) 0.01875\n(V =) 0.01875 × 240",
+       "codes": [
+        "A3",
+        "C1",
+        "C1"
+       ],
        "segments": [
         {
          "page": 12,
@@ -247,10 +292,39 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The resistance of component X is 400Ω when the light shines on it.",
+       "text": "The resistance of component X is 400Ω when the light shines on it."
+      },
+      {
+       "type": "text",
+       "html": "Calculate the reading on the voltmeter.",
+       "text": "Calculate the reading on the voltmeter."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "reading on the voltmeter =",
+       "unit": "V"
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
      ]
     }
    ],
-   "path": "7(b)"
+   "path": "7(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "A bright light shines on component X.",
+     "text": "A bright light shines on component X."
+    }
+   ]
   },
   {
    "label": "c",
@@ -261,7 +335,7 @@
       30.0,
       638.1,
       570.0,
-      783.1
+      781.8
      ],
      "continued": false,
      "answer_space": {
@@ -269,13 +343,13 @@
       "dotted_lines": 2,
       "answer_line": null,
       "working_gap_pt": 14.5,
-      "height_pt": 145.0
+      "height_pt": 143.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q07/question/0625_2026MJ_43_q07_c_s1.svg",
       "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p43/q07/question/0625_2026MJ_43_q07_c_s1",
       "url": null,
-      "kb": 54.1
+      "kb": 54.2
      }
     }
    ],
@@ -285,8 +359,11 @@
    "mark_scheme": [
     {
      "label": "7(c)",
-     "text": "decreases\nA2\ndecreases\n(current) decreases\nC1",
-     "codes": [],
+     "text": "decreases\ndecreases\n(current) decreases",
+     "codes": [
+      "A2",
+      "C1"
+     ],
      "segments": [
       {
        "page": 12,
@@ -304,6 +381,27 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The brightness of the light shining on component X is reduced. The resistance of component X increases.",
+     "text": "The brightness of the light shining on component X is reduced. The resistance of component X increases."
+    },
+    {
+     "type": "text",
+     "html": "State the effect of this change on:",
+     "text": "State the effect of this change on:"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "the reading on the voltmeter."
+    },
+    {
+     "type": "marks",
+     "value": 2
     }
    ]
   }
@@ -324,5 +422,17 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "A student connects the circuit shown in Figure 7.1.",
+   "text": "A student connects the circuit shown in Figure 7.1."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2026MJ_43_q07_fig7-1",
+   "caption": "Figure 7.1"
+  }
+ ]
 }

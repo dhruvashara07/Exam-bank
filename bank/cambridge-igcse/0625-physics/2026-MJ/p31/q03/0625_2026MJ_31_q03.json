@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    231.1
+    231.5
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 57.9,
-    "height_pt": 171.3
+    "height_pt": 171.7
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p31/q03/question/0625_2026MJ_31_q03_stem_s1.svg",
@@ -82,7 +82,7 @@
       30.0,
       236.6,
       570.0,
-      307.6
+      308.0
      ],
      "continued": false,
      "answer_space": {
@@ -90,13 +90,13 @@
       "dotted_lines": 2,
       "answer_line": null,
       "working_gap_pt": 14.5,
-      "height_pt": 71.0
+      "height_pt": 71.4
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p31/q03/question/0625_2026MJ_31_q03_a_s1.svg",
       "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p31/q03/question/0625_2026MJ_31_q03_a_s1",
       "url": null,
-      "kb": 48.7
+      "kb": 48.8
      }
     }
    ],
@@ -106,8 +106,10 @@
    "mark_scheme": [
     {
      "label": "3(a)",
-     "text": "any two from:\nB2 assume that the answer is about container A unless stated\notherwise.\n(for container A) centre of gravity/mass is low(er)\ncondone base (of A) is big(ger) OR base is wide(r)\nidea that area of base (of A) is big(ger)\nonly award mark if clear that candidate is referring to area in\ncontact with the table\nidea that a larger (angle of) tilt is needed for (vertical line\ne.g. container A is wider is TV\nthrough centre of gravity to fall outside area of base)\n(container A) has a larger surface area is TV\n(container A) has a higher base is TV\naccept idea of a larger tilt / push (is needed) for container to\ntopple",
-     "codes": [],
+     "text": "any two from:\n(for container A) centre of gravity/mass is low(er)\nidea that area of base (of A) is big(ger)\nidea that a larger (angle of) tilt is needed for (vertical line\nthrough centre of gravity to fall outside area of base)",
+     "codes": [
+      "B2"
+     ],
      "segments": [
       {
        "page": 8,
@@ -126,6 +128,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Explain why container A is <b>more</b> stable than container B.",
+     "text": "Explain why container A is more stable than container B."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   },
   {
@@ -137,7 +155,7 @@
       30.0,
       326.1,
       570.0,
-      464.6
+      465.0
      ],
      "continued": false,
      "answer_space": {
@@ -145,7 +163,7 @@
       "dotted_lines": 1,
       "answer_line": "pressure =  …… N / cm2 [3]",
       "working_gap_pt": 67.9,
-      "height_pt": 138.5
+      "height_pt": 138.9
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p31/q03/question/0625_2026MJ_31_q03_b_s1.svg",
@@ -161,8 +179,12 @@
    "mark_scheme": [
     {
      "label": "3(b)",
-     "text": "(pressure =) 5.3 (N / cm2)\nA3 accept any rounding to at least 2 sf of 5.333333\n(pressure =) 64 ÷ 12\nC2\n(pressure =) force ÷ area\nC1\nin any form words or symbols",
-     "codes": [],
+     "text": "(pressure =) 5.3 (N / cm )\n2\n(pressure =) 64 ÷ 12\n(pressure =) force ÷ area",
+     "codes": [
+      "A3",
+      "C2",
+      "C1"
+     ],
      "segments": [
       {
        "page": 8,
@@ -181,6 +203,28 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The force on the table from container B is 64N. The area of container B in contact with the table is 12cm<sup>2</sup>.",
+     "text": "The force on the table from container B is 64N. The area of container B in contact with the table is 12cm2."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the pressure on the table produced by container B.",
+     "text": "Calculate the pressure on the table produced by container B."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "pressure =",
+     "unit": "N/cm2"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   },
   {
@@ -192,7 +236,7 @@
       30.0,
       483.1,
       570.0,
-      774.3
+      774.5
      ],
      "continued": false,
      "answer_space": {
@@ -200,7 +244,7 @@
       "dotted_lines": 1,
       "answer_line": "…… force = ……N",
       "working_gap_pt": 63.8,
-      "height_pt": 291.2
+      "height_pt": 291.4
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p31/q03/question/0625_2026MJ_31_q03_c_s1.svg",
@@ -216,8 +260,11 @@
    "mark_scheme": [
     {
      "label": "3(c)",
-     "text": "arrow (vertically) upward labelled drag force\nB1 accept friction(al) OR resistive OR resistance\ncondone viscous OR upthrust OR air resistance\nignore buoyant/upward as TV\narrow (vertically) upward labelled 1.2 N\nB1 ignore any ± signs",
-     "codes": [],
+     "text": "arrow (vertically) upward labelled drag force\narrow (vertically) upward labelled 1.2 N",
+     "codes": [
+      "B1",
+      "B1"
+     ],
      "segments": [
       {
        "page": 8,
@@ -235,6 +282,42 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Figure 3.2 shows a metal ball. The gravitational force on the ball is 1.2N. The metal ball falls into a container of oil.",
+     "text": "Figure 3.2 shows a metal ball. The gravitational force on the ball is 1.2N. The metal ball falls into a container of oil."
+    },
+    {
+     "type": "text",
+     "html": "NOT TO SCALE gravitational force = 1.2N",
+     "text": "NOT TO SCALE gravitational force = 1.2N"
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_31_q03c_fig3-2",
+     "caption": "Figure 3.2"
+    },
+    {
+     "type": "text",
+     "html": "After a short time, the metal ball is falling through the oil at a constant speed.",
+     "text": "After a short time, the metal ball is falling through the oil at a constant speed."
+    },
+    {
+     "type": "text",
+     "html": "Complete the labels on Figure 3.2 to show the forces on the metal ball as it falls at a constant speed.",
+     "text": "Complete the labels on Figure 3.2 to show the forces on the metal ball as it falls at a constant speed."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "N"
+    },
+    {
+     "type": "marks",
+     "value": 2
     }
    ]
   }
@@ -255,5 +338,17 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "Figure 3.1 shows two containers, A and B, partly filled with water.",
+   "text": "Figure 3.1 shows two containers, A and B, partly filled with water."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2026MJ_31_q03_fig3-1",
+   "caption": "Figure 3.1"
+  }
+ ]
 }

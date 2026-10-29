@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    284.1
+    284.5
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 75.6,
-    "height_pt": 224.3
+    "height_pt": 224.7
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q05/question/0625_2025ON_31_q05_stem_s1.svg",
@@ -63,7 +63,7 @@
       30.0,
       290.1,
       570.0,
-      440.1
+      440.5
      ],
      "continued": false,
      "answer_space": {
@@ -71,7 +71,7 @@
       "dotted_lines": 5,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 150.0
+      "height_pt": 150.4
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q05/question/0625_2025ON_31_q05_a_s1.svg",
@@ -111,6 +111,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Describe the arrangement, separation and motion of the metal particles.",
+     "text": "Describe the arrangement, separation and motion of the metal particles."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 5
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   },
   {
@@ -122,7 +138,7 @@
       30.0,
       446.1,
       570.0,
-      609.2
+      609.5
      ],
      "continued": false,
      "answer_space": {
@@ -130,7 +146,7 @@
       "dotted_lines": 5,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 163.0
+      "height_pt": 163.4
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q05/question/0625_2025ON_31_q05_b_s1.svg",
@@ -168,6 +184,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The cylinder is filled with a gas. Describe how particles of the gas exert a pressure on the inside surface of the metal cylinder.",
+     "text": "The cylinder is filled with a gas. Describe how particles of the gas exert a pressure on the inside surface of the metal cylinder."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 5
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   },
   {
@@ -179,7 +211,7 @@
       30.0,
       615.2,
       570.0,
-      797.2
+      796.2
      ],
      "continued": false,
      "answer_space": {
@@ -187,13 +219,13 @@
       "dotted_lines": 1,
       "answer_line": "pressure =  …… N / cm2 [3]",
       "working_gap_pt": 91.3,
-      "height_pt": 182.0
+      "height_pt": 181.0
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q05/question/0625_2025ON_31_q05_c_s1.svg",
       "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p31/q05/question/0625_2025ON_31_q05_c_s1",
       "url": null,
-      "kb": 42.5
+      "kb": 39.3
      }
     }
    ],
@@ -203,9 +235,11 @@
    "mark_scheme": [
     {
      "label": "5(c)",
-     "text": "(P = ) 1.4 (N/cm2)\n(P = ) 420 ÷ 300\n(P = ) F ÷ A",
+     "text": "(P = ) 1.4 (N/cm )\n2\n(P = ) 420 ÷ 300\n(P = ) F ÷ A",
      "codes": [
-      "A3"
+      "A3",
+      "(C2)",
+      "(C1)"
      ],
      "segments": [
       {
@@ -224,6 +258,28 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The weight of the metal cylinder is 420N. The <b>area</b> of the metal cylinder in contact with the ground is 300cm<sup>2</sup>.",
+     "text": "The weight of the metal cylinder is 420N. The area of the metal cylinder in contact with the ground is 300cm2."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the pressure on the ground due to the metal cylinder.",
+     "text": "Calculate the pressure on the ground due to the metal cylinder."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "pressure =",
+     "unit": "N/cm2"
+    },
+    {
+     "type": "marks",
+     "value": 3
     }
    ]
   }
@@ -244,5 +300,17 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "Fig. 5.1 shows an empty metal cylinder.",
+   "text": "Fig. 5.1 shows an empty metal cylinder."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2025ON_31_q05_fig5-1",
+   "caption": "Fig. 5.1"
+  }
+ ]
 }

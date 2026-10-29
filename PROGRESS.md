@@ -20,24 +20,43 @@ Read this first in every session. Update it before ending a session.
   `pipeline/approve.py`). All 66 current papers approved.
 - 2026-10-29: `.github/workflows/bank.yml`: upload PDFs to `inbox/` from phone → filed to `raw/` →
   processed → committed → Cloudinary + MongoDB. Full re-run takes ~3.5 min.
+- 2026-10-29: **2015–2024 added**: 477 papers (Feb/Mar 2015 – May/Jun 2026), 8,624 questions. Every
+  paper's marks match its cover; pixel coverage 0 lost ink on 6,545 pages; no footer/barcode/notice text
+  inside any piece; no overlapping pieces; 59 papers (one per year x paper number) sampled visually.
+  Old-paper support: 2015 numbering, standard totals (no cover total before 2020), rotated/landscape and
+  column-format mark schemes, two-column MCQ keys, erratum pages, A3 and 612x859 pages scaled to A4,
+  mark schemes drawn in clipped pieces (text rebuilt from characters), MS label typos ('9b(i)',
+  '(b)(ii)', '7(a)((i)', '3(b)(i)1.', '(h)(l)' ranges), centred 'Question N is on the back page.' notices.
+  Review queue: 34 items, all genuine Cambridge labelling differences between paper and mark scheme
+  (e.g. paper 2(b)/(c) = MS 2(b)(i)/(ii)), 1 erratum, 1 question removed by Cambridge (2024MJ_21 q14).
+- 2026-10-29: **Editable layer** (`pipeline/editable.py`, run by run.py): `content` blocks per node:
+  text (HTML b/i/sub/sup, LaTeX `\(\frac{}{}\)`), lists, tables (real cells), figure refs, answer
+  space, marks, MCQ options (text, options table, or "drawn in the diagram"). Exact SVGs stay the master.
+- 2026-10-29: **Review website** `site/` → GitHub Pages (`.github/workflows/site.yml`), pictures from
+  Cloudinary; "Report a problem" opens a GitHub issue labelled `review`.
+- 2026-10-29: **PDFs to GitHub Releases** prepared (`pipeline/raw_store.py`, `.github/workflows/raw.yml`,
+  branch `incoming-raw`); new PDFs are git-ignored in main.
 - Review page: https://claude.ai/artifact/LGic38rQwKjkZze9jL1zmq — round 1 feedback in collection
   `feedback`, round 2 (9 fixed + 15 new MCQ figure checks) in `feedback_r2`. Doc id = question id.
 
 ## Waiting on Dhruv
-1. GitHub secrets `MONGO_URI`, `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET`; Atlas network access; first run of "Question bank"
-   with "Upload every SVG again" ticked (docs/SETUP.md).
-2. Review round 2.
+1. OK to push the 2015–2024 PDFs (654 MB) to branch `incoming-raw` (→ Releases). Until then the PDFs
+   exist only on his laptop and in the 2026-10-29 session; the daily check cannot fetch them.
+2. Turn on GitHub Pages (Settings → Pages → Source: GitHub Actions) for the review website.
+3. Review round 2 (old artifact) / website reports.
 3. May/Jun 2026 variant 7: mark schemes 17 and 27 exist, question papers missing.
 
 ## Next
-1. Read `feedback_r2`, fix anything wrong (the daily check does this too).
+1. Daily check: approve the 2015–2024 backlog (411 papers pending), up to 40 per run, oldest first.
+2. Read `feedback_r2` and website issues, fix anything wrong.
 2. Topics/subtopics/keywords from the 0625 syllabus; alt text for figures.
 3. Other subjects (Chemistry, Biology, Maths), then AS/A level, IB.
 4. Test-paper builder on the website (reads MongoDB `question_bank.questions`).
 
 ## How to run
     pip install -r requirements.txt
-    python3 pipeline/run.py                          # all papers (~3.5 min)
+    python3 pipeline/raw_store.py fetch               # original PDFs from Releases
+    python3 pipeline/run.py                          # all papers (~27 min for 477)
     python3 pipeline/run.py 2025-MJ/41               # one paper
     python3 pipeline/build_test.py out.pdf 0625_2025MJ_41_q01 0625_2025MJ_41_q05:c --ms
     python3 pipeline/coverage.py                     # check nothing on the pages was missed
@@ -51,3 +70,6 @@ One line per run: date, pending papers checked/approved, feedback handled, fixes
   >=1000 <use> (one per glyph). render.limit_uses: drop empty-glyph uses, inline glyph paths above 900.
   Pixel-identical (Chromium, 122 files). All 66 re-approved. Run logs are not readable from Claude's
   workspace: scripts report via GitHub annotations (gh api .../check-runs/<job>/annotations).
+- 2026-10-29 14:xx IST (chat session): 2015–2024 processed (see Done). 2025–26 re-approved (66): only
+  whitespace at cut edges, notices/barcodes excluded, better MS codes, tighter figures, editable layer.
+  411 older papers pending for the daily check. Cleaned-PDF cache now also rebuilds when clean.py changes.

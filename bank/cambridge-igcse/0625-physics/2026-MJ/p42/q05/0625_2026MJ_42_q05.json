@@ -39,7 +39,7 @@
       30.0,
       59.8,
       570.0,
-      274.9
+      275.0
      ],
      "continued": false,
      "answer_space": {
@@ -47,7 +47,7 @@
       "dotted_lines": 6,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 215.0
+      "height_pt": 215.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q05/question/0625_2026MJ_42_q05_a_s1.svg",
@@ -63,8 +63,12 @@
    "mark_scheme": [
     {
      "label": "5(a)",
-     "text": "(thermal) energy is transferred from the skin to the water\nB1 A heat for thermal energy\nmore energetic particles escape from surface of water owtte\nB1 A fast(er) moving particles escape from\nsurface of water\nA atoms or molecules for particles\nI particles vibrate\nremaining particles (in water) have low(er) (average kinetic) energy (and hence\nB1 A slow(er) moving particles (in water)\nlower temperature)\nremain\nA atoms or molecules for particles",
-     "codes": [],
+     "text": "(thermal) energy is transferred from the skin to the water\nmore energetic particles escape from surface of water owtte\nremaining particles (in water) have low(er) (average kinetic) energy (and hence\nlower temperature)",
+     "codes": [
+      "B1",
+      "B1",
+      "B1"
+     ],
      "segments": [
       {
        "page": 13,
@@ -83,6 +87,32 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On a hot day, a student wets his skin with cold water. The water on the student’s",
+     "text": "On a hot day, a student wets his skin with cold water. The water on the student’s"
+    },
+    {
+     "type": "text",
+     "html": "skin evaporates.",
+     "text": "skin evaporates."
+    },
+    {
+     "type": "text",
+     "html": "Explain, in terms of particles, why the student’s skin temperature decreases.",
+     "text": "Explain, in terms of particles, why the student’s skin temperature decreases."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 6
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   },
   {
@@ -94,7 +124,7 @@
       30.0,
       293.8,
       570.0,
-      609.8
+      610.0
      ],
      "continued": false,
      "answer_space": {
@@ -102,7 +132,7 @@
       "dotted_lines": 2,
       "answer_line": null,
       "working_gap_pt": 141.9,
-      "height_pt": 315.9
+      "height_pt": 316.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q05/question/0625_2026MJ_42_q05_b_s1.svg",
@@ -118,8 +148,10 @@
    "mark_scheme": [
     {
      "label": "5(b)",
-     "text": "any two from:\nB2\n(air) temperature\nA Sun shines OR cloud cover owtte\n(amount of) wind owtte\nsurface area (of clothes)\nA humidity\nA colour of clothes",
-     "codes": [],
+     "text": "any two from:\n(air) temperature\n(amount of) wind owtte\nsurface area (of clothes)",
+     "codes": [
+      "B2"
+     ],
      "segments": [
       {
        "page": 13,
@@ -137,6 +169,37 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Figure 5.1 shows wet clothes on a line in the open air.",
+     "text": "Figure 5.1 shows wet clothes on a line in the open air."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_42_q05b_fig5-1",
+     "caption": "Figure 5.1"
+    },
+    {
+     "type": "text",
+     "html": "Water evaporates from the clothes.",
+     "text": "Water evaporates from the clothes."
+    },
+    {
+     "type": "text",
+     "html": "State <b>two</b> factors which affect the rate of evaporation of the water.",
+     "text": "State two factors which affect the rate of evaporation of the water."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2"
+    },
+    {
+     "type": "marks",
+     "value": 2
     }
    ]
   }

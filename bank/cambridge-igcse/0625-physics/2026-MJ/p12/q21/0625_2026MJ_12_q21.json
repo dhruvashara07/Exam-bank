@@ -50,10 +50,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "options not found as text (likely in a table or diagrams)"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "type": "mcq",
  "options": [
@@ -87,5 +85,44 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "A narrow beam of light travels through glass. It reaches the edge of the glass and refracts into the air.",
+   "text": "A narrow beam of light travels through glass. It reaches the edge of the glass and refracts into the air."
+  },
+  {
+   "type": "text",
+   "html": "What is the angle of refraction?",
+   "text": "What is the angle of refraction?"
+  },
+  {
+   "type": "figure",
+   "id": "0625_2026MJ_12_q21_figA",
+   "caption": null
+  },
+  {
+   "type": "options",
+   "in_figure": true,
+   "options": [
+    {
+     "label": "A",
+     "html": ""
+    },
+    {
+     "label": "B",
+     "html": ""
+    },
+    {
+     "label": "C",
+     "html": ""
+    },
+    {
+     "label": "D",
+     "html": ""
+    }
+   ]
+  }
+ ]
 }

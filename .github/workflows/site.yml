@@ -1,0 +1,68 @@
+name: Review website
+
+# Builds the review website (site/) from bank/ and review/ and publishes it on GitHub Pages:
+# https://dhruvashara07.github.io/Exam-bank/
+# Pictures load from Cloudinary, so the site itself is small. Runs after every "Question bank" run
+# (its bot commits do not trigger other workflows by themselves) and on pushes that change the bank,
+# the review files or the site.
+# One-time setup by the repo owner: Settings > Pages > Build and deployment > Source: GitHub Actions.
+on:
+  push:
+    branches: [main]
+    paths: ['bank/**', 'review/**', 'site/**']
+  workflow_run:
+    workflows: ['Question bank']
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
+      CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+    steps:
+      - name: Is GitHub Pages switched on?
+        id: pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh api "repos/${{ github.repository }}/pages" >/dev/null 2>&1; then echo "on=true" >> "$GITHUB_OUTPUT"
+          else echo "::warning::GitHub Pages is off. Turn it on once: Settings > Pages > Source: GitHub Actions"; echo "on=false" >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/checkout@v5
+        if: steps.pages.outputs.on == 'true'
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        if: steps.pages.outputs.on == 'true'
+        with:
+          python-version: '3.12'
+      - name: Build
+        if: steps.pages.outputs.on == 'true'
+        run: python3 site/build.py _site
+      - uses: actions/upload-pages-artifact@v4
+        if: steps.pages.outputs.on == 'true'
+        with:
+          path: _site
+    outputs:
+      on: ${{ steps.pages.outputs.on }}
+
+  deploy:
+    needs: build
+    if: needs.build.outputs.on == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -8,7 +8,7 @@
     30.0,
     197.8,
     570.0,
-    332.9
+    333.0
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 13.1,
-    "height_pt": 135.1
+    "height_pt": 135.2
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p13/q40/question/0625_2025ON_13_q40_stem_s1.svg",
@@ -24,32 +24,9 @@
     "url": null,
     "kb": 29.4
    }
-  },
-  {
-   "page": 16,
-   "bbox": [
-    30.0,
-    58.7,
-    570.0,
-    700.1
-   ],
-   "continued": true,
-   "answer_space": {
-    "kind": "none",
-    "dotted_lines": 0,
-    "answer_line": null,
-    "working_gap_pt": 4.0,
-    "height_pt": 641.4
-   },
-   "svg": {
-    "file": "bank/cambridge-igcse/0625-physics/2025-ON/p13/q40/question/0625_2025ON_13_q40_stem_s2.svg",
-    "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p13/q40/question/0625_2025ON_13_q40_stem_s2",
-    "url": null,
-    "kb": 3.8
-   }
   }
  ],
- "text": "Light from distant galaxies is redshifted when it is observed from Earth.\nWhich property of the light increases when light is redshifted?\nA\namplitude\nB\nfrequency\nC\nspeed\nD\nwavelength\nBLANK PAGE",
+ "text": "Light from distant galaxies is redshifted when it is observed from Earth.\nWhich property of the light increases when light is redshifted?\nA\namplitude\nB\nfrequency\nC\nspeed\nD\nwavelength",
  "marks": 1,
  "figures": [],
  "review": {
@@ -75,7 +52,7 @@
    "text": "wavelength"
   }
  ],
- "has_diagram": true,
+ "has_diagram": false,
  "answer": "D",
  "syllabus": "0625",
  "subject": "Physics",
@@ -92,5 +69,38 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "Light from distant galaxies is redshifted when it is observed from Earth.",
+   "text": "Light from distant galaxies is redshifted when it is observed from Earth."
+  },
+  {
+   "type": "text",
+   "html": "Which property of the light increases when light is redshifted?",
+   "text": "Which property of the light increases when light is redshifted?"
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "amplitude"
+    },
+    {
+     "label": "B",
+     "html": "frequency"
+    },
+    {
+     "label": "C",
+     "html": "speed"
+    },
+    {
+     "label": "D",
+     "html": "wavelength"
+    }
+   ]
+  }
+ ]
 }

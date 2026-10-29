@@ -1,0 +1,170 @@
+{
+ "id": "0625_2022ON_23_q33",
+ "number": 33,
+ "segments": [
+  {
+   "page": 15,
+   "bbox": [
+    30.0,
+    58.6,
+    570.0,
+    493.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 24.9,
+    "height_pt": 434.4
+   },
+   "svg": {
+    "file": "bank/cambridge-igcse/0625-physics/2022-ON/p23/q33/question/0625_2022ON_23_q33_stem_s1.svg",
+    "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p23/q33/question/0625_2022ON_23_q33_stem_s1",
+    "url": null,
+    "kb": 78.0
+   }
+  }
+ ],
+ "text": "The diagram shows how logic gates can be used to monitor the temperature in a refrigerator.\nmagnetic\nclosed = 1\nR\nswitch\nNOT\nW\nopen = 0\non door\nOR\ncold = 1\nS\ntemperature\nX\nNOT\nsensor\nhot = 0\nY\nZ\nwarning\nmain\nAND\non = 1\nT\nlight\nsystem\noff = 0\nswitch\nThe warning light will come on if the output at Z is 1.\nThe door R is open, the temperature sensor S is cold and the main system switch T is on.\nWhat is the logic state at Y and what is the state of the warning light?\nlogic state at Y\nwarning light\nA\n0\noff\nB\n0\non\nC\n1\noff\nD\n1\non",
+ "marks": 1,
+ "figures": [
+  {
+   "page": 15,
+   "bbox": [
+    50.2,
+    86.5,
+    544.7,
+    297.2
+   ],
+   "id": "0625_2022ON_23_q33_figA",
+   "caption": null,
+   "part": "",
+   "alt": "",
+   "svg": {
+    "file": "bank/cambridge-igcse/0625-physics/2022-ON/p23/q33/figures/0625_2022ON_23_q33_figA.svg",
+    "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p23/q33/figures/0625_2022ON_23_q33_figA",
+    "url": null,
+    "kb": 31.6
+   }
+  },
+  {
+   "page": 15,
+   "bbox": [
+    67.7,
+    380.2,
+    297.8,
+    491.0
+   ],
+   "id": "0625_2022ON_23_q33_figB",
+   "caption": null,
+   "part": "",
+   "alt": "",
+   "svg": {
+    "file": "bank/cambridge-igcse/0625-physics/2022-ON/p23/q33/figures/0625_2022ON_23_q33_figB.svg",
+    "public_id": "question_bank/cambridge-igcse/0625-physics/2022-ON/p23/q33/figures/0625_2022ON_23_q33_figB",
+    "url": null,
+    "kb": 17.2
+   }
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "mcq",
+ "options": [
+  {
+   "label": "A",
+   "text": "0 off"
+  },
+  {
+   "label": "B",
+   "text": "0 on"
+  },
+  {
+   "label": "C",
+   "text": "1 off"
+  },
+  {
+   "label": "D",
+   "text": "1 on"
+  }
+ ],
+ "has_diagram": true,
+ "answer": "D",
+ "syllabus": "0625",
+ "subject": "Physics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 2,
+ "variant": 3,
+ "paper_code": "0625/23",
+ "paper_type": "mcq_extended",
+ "total_marks": 1,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "The diagram shows how logic gates can be used to monitor the temperature in a refrigerator.",
+   "text": "The diagram shows how logic gates can be used to monitor the temperature in a refrigerator."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2022ON_23_q33_figA",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The warning light will come on if the output at Z is 1.",
+   "text": "The warning light will come on if the output at Z is 1."
+  },
+  {
+   "type": "text",
+   "html": "The door R is open, the temperature sensor S is cold and the main system switch T is on.",
+   "text": "The door R is open, the temperature sensor S is cold and the main system switch T is on."
+  },
+  {
+   "type": "text",
+   "html": "What is the logic state at Y and what is the state of the warning light?",
+   "text": "What is the logic state at Y and what is the state of the warning light?"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "",
+     "logic state at Y",
+     "warning light"
+    ],
+    [
+     "<b>A</b>",
+     "0",
+     "off"
+    ],
+    [
+     "<b>B</b>",
+     "0",
+     "on"
+    ],
+    [
+     "<b>C</b>",
+     "1",
+     "off"
+    ],
+    [
+     "<b>D</b>",
+     "1",
+     "on"
+    ]
+   ],
+   "options": true
+  }
+ ]
+}

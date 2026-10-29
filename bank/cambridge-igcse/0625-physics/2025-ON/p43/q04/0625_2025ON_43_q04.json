@@ -83,7 +83,7 @@
         30.0,
         59.8,
         570.0,
-        162.5
+        163.0
        ],
        "continued": false,
        "answer_space": {
@@ -91,7 +91,7 @@
         "dotted_lines": 1,
         "answer_line": "density =  …… [1]",
         "working_gap_pt": 58.7,
-        "height_pt": 102.7
+        "height_pt": 103.2
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-ON/p43/q04/question/0625_2025ON_43_q04_a-i_s1.svg",
@@ -107,7 +107,7 @@
      "mark_scheme": [
       {
        "label": "4(a)(i)",
-       "text": "930 kg / m3",
+       "text": "930 kg / m\n3",
        "codes": [
         "A1"
        ],
@@ -129,6 +129,27 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "A rectangular glass tank contains 3.0m<sup>3</sup> of liquid. The mass of the liquid is 2800kg.",
+       "text": "A rectangular glass tank contains 3.0m3 of liquid. The mass of the liquid is 2800kg."
+      },
+      {
+       "type": "text",
+       "html": "Calculate the density of the liquid.",
+       "text": "Calculate the density of the liquid."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "density ="
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -140,7 +161,7 @@
         30.0,
         168.5,
         570.0,
-        713.4
+        713.5
        ],
        "continued": false,
        "answer_space": {
@@ -148,7 +169,7 @@
         "dotted_lines": 1,
         "answer_line": "force on top of the block =  …… [4]",
         "working_gap_pt": 200.4,
-        "height_pt": 544.9
+        "height_pt": 545.0
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-ON/p43/q04/question/0625_2025ON_43_q04_a-ii_s1.svg",
@@ -164,7 +185,7 @@
      "mark_scheme": [
       {
        "label": "4(a)(ii)",
-       "text": "1400 N\n(∆)p = ρg(∆)h OR 930 × 9.8 × 1.1 OR 10 000 (N / m2)\narea = length × width OR 0.45 × 0.30 OR 0.14 (m2)\n(F=) p × A OR 10 000 × 0.14\nAlternative method:\n1400 N\nvolume (of liquid above block) = length × width × height OR 0.45 × 0.30 × 1.1 OR 0.15 (m3)\nmass (of liquid above block) = ρ × v OR 930 × 0.15 OR 140 (kg)\n(F =) mg OR 140 × 9.8",
+       "text": "1400 N\n(∆)p = ρg(∆)h OR 930 × 9.8 × 1.1 OR 10 000 (N / m )\n2\narea = length × width OR 0.45 × 0.30 OR 0.14 (m )\n2\n(F=) p × A OR 10 000 × 0.14\nAlternative method:\n1400 N\nvolume (of liquid above block) = length × width × height OR 0.45 × 0.30 × 1.1 OR 0.15 (m )\n3\nmass (of liquid above block) = ρ × v OR 930 × 0.15 OR 140 (kg)\n(F =) mg OR 140 × 9.8",
        "codes": [
         "A4",
         "C1",
@@ -193,6 +214,91 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "A metal block is placed in the tank and it sinks to the bottom. The top surface of the block is 1.1m below the surface of the liquid.",
+       "text": "A metal block is placed in the tank and it sinks to the bottom. The top surface of the block is 1.1m below the surface of the liquid."
+      },
+      {
+       "type": "text",
+       "html": "Fig. 4.1 shows the block on the bottom of the tank.",
+       "text": "Fig. 4.1 shows the block on the bottom of the tank."
+      },
+      {
+       "type": "figure",
+       "id": "0625_2025ON_43_q04aii_fig4-1",
+       "caption": "Fig. 4.1"
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "1.1m",
+         "",
+         "",
+         "",
+         ""
+        ],
+        [
+         "0.30m",
+         "",
+         "",
+         "",
+         ""
+        ],
+        [
+         "",
+         "",
+         "m",
+         "",
+         ""
+        ],
+        [
+         "",
+         "",
+         "",
+         "",
+         ""
+        ],
+        [
+         "",
+         "1.1m",
+         "m",
+         "",
+         ""
+        ],
+        [
+         "",
+         "",
+         "",
+         "0.30m",
+         ""
+        ],
+        [
+         "",
+         "",
+         "",
+         "",
+         ""
+        ]
+       ]
+      },
+      {
+       "type": "text",
+       "html": "Calculate the force exerted by the liquid on the top of the block.",
+       "text": "Calculate the force exerted by the liquid on the top of the block."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "force on top of the block ="
+      },
+      {
+       "type": "marks",
+       "value": 4
+      }
      ]
     }
    ],
@@ -207,7 +313,7 @@
       30.0,
       59.8,
       570.0,
-      394.5
+      395.0
      ],
      "continued": false,
      "answer_space": {
@@ -215,7 +321,7 @@
       "dotted_lines": 3,
       "answer_line": null,
       "working_gap_pt": 66.6,
-      "height_pt": 334.7
+      "height_pt": 335.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p43/q04/question/0625_2025ON_43_q04_b_s1.svg",
@@ -231,7 +337,7 @@
    "mark_scheme": [
     {
      "label": "4(b)",
-     "text": "thermal expansion\nOR to prevent buckling / bending when heated\nany one from:\n•\nparticles vibrate faster\n•\nparticles have greater speed / kinetic energy / momentum\n•\nvibrations (of particles) take up more space\n•\n(average) space / separation between particles increases",
+     "text": "thermal expansion\nOR to prevent buckling / bending when heated\nany one from:\n•\nparticles vibrate faster\n•\nparticles have greater speed / kinetic energy / momentum\n•\nvibrations (of particles) take up more space\n•\n(average) space / separation between particles increases",
      "codes": [
       "B1",
       "B1"
@@ -254,6 +360,33 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Fig. 4.2 shows part of a steel railway track. There are small gaps between sections of the rail.",
+     "text": "Fig. 4.2 shows part of a steel railway track. There are small gaps between sections of the rail."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2025ON_43_q04b_fig4-2",
+     "caption": "Fig. 4.2"
+    },
+    {
+     "type": "text",
+     "html": "State why gaps <b>are</b> needed between the sections of rail. Explain your answer in terms of particles.",
+     "text": "State why gaps are needed between the sections of rail. Explain your answer in terms of particles."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   },
   {
@@ -265,7 +398,7 @@
       30.0,
       400.5,
       570.0,
-      712.3
+      712.5
      ],
      "continued": false,
      "answer_space": {
@@ -273,7 +406,7 @@
       "dotted_lines": 3,
       "answer_line": null,
       "working_gap_pt": 34.5,
-      "height_pt": 311.8
+      "height_pt": 312.0
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p43/q04/question/0625_2025ON_43_q04_c_s1.svg",
@@ -289,7 +422,7 @@
    "mark_scheme": [
     {
      "label": "4(c)",
-     "text": "(plastic is a good) insulator / poor conductor\n(handle) will not get too hot to touch\nOR reduces heat flow to hand",
+     "text": "(plastic is a good) insulator / poor conductor\n(handle) will not get too hot to touch\nOR reduces heat flow to hand",
      "codes": [
       "B1",
       "B1"
@@ -311,6 +444,32 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Fig. 4.3 shows a saucepan of boiling water on the heating ring of an electric cooker.",
+     "text": "Fig. 4.3 shows a saucepan of boiling water on the heating ring of an electric cooker."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2025ON_43_q04c_fig4-3",
+     "caption": "Fig. 4.3"
+    },
+    {
+     "type": "text",
+     "html": "The handle is made from plastic. Explain why this material is suitable.",
+     "text": "The handle is made from plastic. Explain why this material is suitable."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 3
+    },
+    {
+     "type": "marks",
+     "value": 2
     }
    ]
   }

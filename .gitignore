@@ -4,3 +4,6 @@ __pycache__/
 *.pyc
 out/
 todo.txt
+
+# original PDFs live in GitHub Releases (raw/manifest.json); never commit new ones to main
+raw/**/*.pdf

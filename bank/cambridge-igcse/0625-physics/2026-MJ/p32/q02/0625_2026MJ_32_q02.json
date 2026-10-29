@@ -58,7 +58,7 @@
       30.0,
       59.8,
       570.0,
-      306.1
+      306.5
      ],
      "continued": false,
      "answer_space": {
@@ -66,13 +66,13 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 96.0,
-      "height_pt": 246.2
+      "height_pt": 246.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p32/q02/question/0625_2026MJ_32_q02_a_s1.svg",
       "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p32/q02/question/0625_2026MJ_32_q02_a_s1",
       "url": null,
-      "kb": 78.4
+      "kb": 78.5
      }
     }
    ],
@@ -88,7 +88,7 @@
         30.0,
         312.1,
         570.0,
-        440.1
+        440.5
        ],
        "continued": false,
        "answer_space": {
@@ -96,7 +96,7 @@
         "dotted_lines": 1,
         "answer_line": "work done =  …… unit  …… [4]",
         "working_gap_pt": 71.1,
-        "height_pt": 128.1
+        "height_pt": 128.4
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p32/q02/question/0625_2026MJ_32_q02_a-i_s1.svg",
@@ -112,8 +112,13 @@
      "mark_scheme": [
       {
        "label": "2(a)(i)",
-       "text": "780\nA3 accept 0.78 kJ for 4 marks\n650 × 1.2\nC2\naccept in any form, words or symbols\naccept Nm condone mN\n(work done =) force × distance\nC1\naccept kJ if answer incorrect / missing\nJ / joule\nB1",
-       "codes": [],
+       "text": "780\n650 × 1.2\n(work done =) force × distance\nJ / joule",
+       "codes": [
+        "A3",
+        "C2",
+        "C1",
+        "B1"
+       ],
        "segments": [
         {
          "page": 9,
@@ -132,6 +137,27 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The machine lifts the block of ice a vertical height of 1.2m.",
+       "text": "The machine lifts the block of ice a vertical height of 1.2m."
+      },
+      {
+       "type": "text",
+       "html": "Calculate the work done on the block of ice. Include the unit.",
+       "text": "Calculate the work done on the block of ice. Include the unit."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "work done ="
+      },
+      {
+       "type": "marks",
+       "value": 4
+      }
      ]
     },
     {
@@ -143,7 +169,7 @@
         30.0,
         446.1,
         570.0,
-        538.5
+        539.0
        ],
        "continued": false,
        "answer_space": {
@@ -151,7 +177,7 @@
         "dotted_lines": 1,
         "answer_line": "mass =  …… kg [3]",
         "working_gap_pt": 61.4,
-        "height_pt": 92.4
+        "height_pt": 92.9
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p32/q02/question/0625_2026MJ_32_q02_a-ii_s1.svg",
@@ -167,8 +193,12 @@
      "mark_scheme": [
       {
        "label": "2(a)(ii)",
-       "text": "66 (kg)\nA3 accept any rounding of 66.3265 > 2 sf\n650 ÷ 9.8\nC2\n(mass =) weight / gravitational field strength or W / g or\nC1\naccept words or symbols or W = m × g\nnote: 65 (kg) or 650 /10 or W / 10 scores 1 mark\nW / 9.8 in any form",
-       "codes": [],
+       "text": "66 (kg)\n650 ÷ 9.8\n(mass =) weight / gravitational field strength or W / g or\nW / 9.8 in any form",
+       "codes": [
+        "A3",
+        "C2",
+        "C1"
+       ],
        "segments": [
         {
          "page": 9,
@@ -187,10 +217,44 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the mass of the block of ice.",
+       "text": "Calculate the mass of the block of ice."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "mass =",
+       "unit": "kg"
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
      ]
     }
    ],
-   "path": "2(a)"
+   "path": "2(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "A machine lifts a block of ice as shown in Figure 2.1.",
+     "text": "A machine lifts a block of ice as shown in Figure 2.1."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_32_q02a_fig2-1",
+     "caption": "Figure 2.1"
+    },
+    {
+     "type": "text",
+     "html": "The weight of the block of ice is 650N.",
+     "text": "The weight of the block of ice is 650N."
+    }
+   ]
   },
   {
    "label": "b",
@@ -201,7 +265,7 @@
       30.0,
       59.8,
       570.0,
-      420.3
+      420.5
      ],
      "continued": false,
      "answer_space": {
@@ -209,7 +273,7 @@
       "dotted_lines": 1,
       "answer_line": "pressure =  …… N / m2 [4]",
       "working_gap_pt": 66.6,
-      "height_pt": 360.4
+      "height_pt": 360.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p32/q02/question/0625_2026MJ_32_q02_b_s1.svg",
@@ -225,8 +289,13 @@
    "mark_scheme": [
     {
      "label": "2(b)",
-     "text": "2200 (N / m2)\nA4 accept any rounding of 2201.89... > 2 sf\n650 ÷ {0.82 × 0.36} or 650 ÷ 0.2952 or 650 ÷ 0.3(0)\nC3\nnote: 650 ÷ {their area} if seen or evaluated scores 2 marks\n(pressure =) force / area\nC1\naccept in any form, words or symbols\n(area =) 0.82 × 0.36 or 0.2952 (m2) or 0.3(0) (m2) seen or\nC1\nused",
-     "codes": [],
+     "text": "2\n2200 (N / m )\n650 ÷ {0.82 × 0.36} or 650 ÷ 0.2952 or 650 ÷ 0.3(0)\n(pressure =) force / area\n(area =) 0.82 × 0.36 or 0.2952 (m ) or 0.3(0) (m ) seen or\n2\n2\nused",
+     "codes": [
+      "A4",
+      "C3",
+      "C1",
+      "C1"
+     ],
      "segments": [
       {
        "page": 10,
@@ -244,6 +313,38 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Another block of ice is lying on the ground, as shown in Figure 2.2.",
+     "text": "Another block of ice is lying on the ground, as shown in Figure 2.2."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_32_q02b_fig2-2",
+     "caption": "Figure 2.2"
+    },
+    {
+     "type": "text",
+     "html": "The weight of the block of ice is 650N.",
+     "text": "The weight of the block of ice is 650N."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the pressure on the ground caused by the block of ice in the position shown in Figure 2.2.",
+     "text": "Calculate the pressure on the ground caused by the block of ice in the position shown in Figure 2.2."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "pressure =",
+     "unit": "N/m2"
+    },
+    {
+     "type": "marks",
+     "value": 4
     }
    ]
   }

@@ -39,6 +39,11 @@ About 5,100 SVGs; expect 10–20 minutes. After that it runs by itself on every 
     Indexed by syllabus/year/session/paper/variant/number, type, topic, keywords, and full text.
   The website adapts to this format, not the other way round.
 
+## 4. Review website (GitHub Pages)
+GitHub → Exam-bank → Settings → Pages → Build and deployment → Source: **GitHub Actions**. Then
+Actions → "Review website" → Run workflow (later it runs by itself). Site:
+https://dhruvashara07.github.io/Exam-bank/ . It loads the pictures from Cloudinary.
+
 ## If images do not show
 Open one `svg.url` from MongoDB. If Cloudinary refuses SVGs: Cloudinary → Settings → Security →
 restricted media types → allow SVG delivery.

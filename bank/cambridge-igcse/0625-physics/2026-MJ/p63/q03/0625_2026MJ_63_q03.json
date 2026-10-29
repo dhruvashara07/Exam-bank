@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    292.6
+    293.0
    ],
    "continued": false,
    "answer_space": {
@@ -16,13 +16,13 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 177.1,
-    "height_pt": 232.8
+    "height_pt": 233.2
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q03/question/0625_2026MJ_63_q03_stem_s1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p63/q03/question/0625_2026MJ_63_q03_stem_s1",
     "url": null,
-    "kb": 25.1
+    "kb": 25.2
    }
   }
  ],
@@ -120,7 +120,7 @@
       30.0,
       298.6,
       570.0,
-      370.6
+      371.0
      ],
      "continued": false,
      "answer_space": {
@@ -128,7 +128,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 14.2,
-      "height_pt": 72.0
+      "height_pt": 72.4
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q03/question/0625_2026MJ_63_q03_a_s1.svg",
@@ -144,8 +144,11 @@
    "mark_scheme": [
     {
      "label": "3(a)",
-     "text": "correct symbol for voltmeter connected in parallel with the\n1 accept voltmeter connected across supply\nresistor\nignore small gaps\nignore symbol for junction of conductors\ndo not accept line through voltmeter\ncorrect symbol for ammeter connected in gap in circuit\n1 accept ammeter anywhere in series if the gap is closed\nignore small gaps",
-     "codes": [],
+     "text": "correct symbol for voltmeter connected in parallel with the\nresistor\ncorrect symbol for ammeter connected in gap in circuit",
+     "codes": [
+      "1",
+      "1"
+     ],
      "segments": [
       {
        "page": 11,
@@ -164,6 +167,24 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On Figure 3.1, complete the circuit to show:",
+     "text": "On Figure 3.1, complete the circuit to show:"
+    },
+    {
+     "type": "list",
+     "items": [
+      "a voltmeter connected to measure the potential difference (p.d.) across the resistor",
+      "an ammeter connected to measure the current in the circuit."
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   },
   {
@@ -175,7 +196,7 @@
       30.0,
       389.6,
       570.0,
-      653.4
+      653.5
      ],
      "continued": false,
      "answer_space": {
@@ -183,22 +204,22 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 71.7,
-      "height_pt": 263.8
+      "height_pt": 263.9
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q03/question/0625_2026MJ_63_q03_b_s1.svg",
       "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p63/q03/question/0625_2026MJ_63_q03_b_s1",
       "url": null,
-      "kb": 48.5
+      "kb": 48.4
      }
     },
     {
      "page": 11,
      "bbox": [
       30.0,
-      59.8,
+      60.5,
       570.0,
-      270.4
+      270.5
      ],
      "continued": true,
      "answer_space": {
@@ -206,13 +227,13 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 19.9,
-      "height_pt": 210.5
+      "height_pt": 210.0
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q03/question/0625_2026MJ_63_q03_b_s2.svg",
       "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p63/q03/question/0625_2026MJ_63_q03_b_s2",
       "url": null,
-      "kb": 34.2
+      "kb": 34.1
      }
     }
    ],
@@ -222,8 +243,10 @@
    "mark_scheme": [
     {
      "label": "3(b)",
-     "text": "0.3(0) (A)\n1 cao",
-     "codes": [],
+     "text": "0.3(0) (A)",
+     "codes": [
+      "1"
+     ],
      "segments": [
       {
        "page": 11,
@@ -242,6 +265,78 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The student measures the p.d. V across the resistor and the current I in the circuit.",
+     "text": "The student measures the p.d. V across the resistor and the current I in the circuit."
+    },
+    {
+     "type": "text",
+     "html": "The ammeter reading is shown in Figure 3.2.",
+     "text": "The ammeter reading is shown in Figure 3.2."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_63_q03b_fig3-2",
+     "caption": "Figure 3.2"
+    },
+    {
+     "type": "text",
+     "html": "Record, in Table 3.1, the value of I shown on the ammeter in Figure 3.2.",
+     "text": "Record, in Table 3.1, the value of I shown on the ammeter in Figure 3.2."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 71.7
+    },
+    {
+     "type": "marks",
+     "value": 1
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "number of resistors",
+       "V/",
+       "I/",
+       "R/"
+      ],
+      [
+       "1",
+       "0.75",
+       "",
+       ""
+      ],
+      [
+       "2",
+       "0.75",
+       "0.60",
+       "1.25"
+      ],
+      [
+       "3",
+       "0.75",
+       "0.85",
+       "0.88"
+      ],
+      [
+       "4",
+       "0.75",
+       "1.15",
+       "0.65"
+      ],
+      [
+       "5",
+       "0.75",
+       "1.45",
+       "0.52"
+      ]
+     ]
+    }
    ]
   },
   {
@@ -253,7 +348,7 @@
       30.0,
       287.8,
       570.0,
-      424.8
+      425.0
      ],
      "continued": false,
      "answer_space": {
@@ -261,7 +356,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 137.0
+      "height_pt": 137.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q03/question/0625_2026MJ_63_q03_c_s1.svg",
@@ -283,7 +378,7 @@
         30.0,
         430.8,
         570.0,
-        450.8
+        451.0
        ],
        "continued": false,
        "answer_space": {
@@ -291,7 +386,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 4.0,
-        "height_pt": 20.0
+        "height_pt": 20.2
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q03/question/0625_2026MJ_63_q03_c-i_s1.svg",
@@ -307,8 +402,10 @@
      "mark_scheme": [
       {
        "label": "3(c)(i)",
-       "text": "V, A, Ω\n1 accept units written in words",
-       "codes": [],
+       "text": "V, A, Ω",
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 11,
@@ -327,6 +424,17 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the column headings in Table 3.1.",
+       "text": "Complete the column headings in Table 3.1."
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -338,7 +446,7 @@
         30.0,
         456.8,
         570.0,
-        559.0
+        559.5
        ],
        "continued": false,
        "answer_space": {
@@ -346,7 +454,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 102.2
+        "height_pt": 102.7
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q03/question/0625_2026MJ_63_q03_c-ii_s1.svg",
@@ -362,8 +470,10 @@
      "mark_scheme": [
       {
        "label": "3(c)(ii)",
-       "text": "2.5 (Ω) or 2.50 (Ω)\n1 accept 2 or 3 significant figures only, correctly rounded\necf 3(b)",
-       "codes": [],
+       "text": "2.5 (Ω) or 2.50 (Ω)",
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 11,
@@ -382,6 +492,32 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the value of the resistance R when there is <b>one</b> resistor in the circuit.",
+       "text": "Calculate the value of the resistance R when there is one resistor in the circuit."
+      },
+      {
+       "type": "text",
+       "html": "Use the equation:",
+       "text": "Use the equation:"
+      },
+      {
+       "type": "text",
+       "html": "R = \\(\\frac{V}{I}\\).",
+       "text": "R = (V)/(I)."
+      },
+      {
+       "type": "text",
+       "html": "Record your value in Table 3.1.",
+       "text": "Record your value in Table 3.1."
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -393,7 +529,7 @@
         30.0,
         565.0,
         570.0,
-        702.1
+        702.5
        ],
        "continued": false,
        "answer_space": {
@@ -401,7 +537,7 @@
         "dotted_lines": 3,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 137.0
+        "height_pt": 137.5
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q03/question/0625_2026MJ_63_q03_c-iii_s1.svg",
@@ -417,8 +553,11 @@
      "mark_scheme": [
       {
        "label": "3(c)(iii)",
-       "text": "as the number of resistors (in parallel) increases, the lower\n1 accept number of resistors is inversely proportional to the\nthe resistance / ORA\nresistance\nuse of data from Table 3.1 to justify the conclusion\n1\nignore negative correlation",
-       "codes": [],
+       "text": "as the number of resistors (in parallel) increases, the lower\nthe resistance / ORA\nuse of data from Table 3.1 to justify the conclusion",
+       "codes": [
+        "1",
+        "1"
+       ],
        "segments": [
         {
          "page": 11,
@@ -437,6 +576,27 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Describe the relationship between the number of resistors in the circuit and the resistance R in the circuit.",
+       "text": "Describe the relationship between the number of resistors in the circuit and the resistance R in the circuit."
+      },
+      {
+       "type": "text",
+       "html": "Justify your answer using values from Table 3.1.",
+       "text": "Justify your answer using values from Table 3.1."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 3
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     },
     {
@@ -448,7 +608,7 @@
         30.0,
         59.8,
         570.0,
-        235.8
+        236.0
        ],
        "continued": false,
        "answer_space": {
@@ -456,7 +616,7 @@
         "dotted_lines": 4,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 176.0
+        "height_pt": 176.2
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q03/question/0625_2026MJ_63_q03_c-iv_s1.svg",
@@ -472,8 +632,11 @@
      "mark_scheme": [
       {
        "label": "3(c)(iv)",
-       "text": "(add switch to) turn circuit off between readings\n1\nuse lower current / supply p.d.\n1 accept use resistors of a higher value to reduce current",
-       "codes": [],
+       "text": "(add switch to) turn circuit off between readings\nuse lower current / supply p.d.",
+       "codes": [
+        "1",
+        "1"
+       ],
        "segments": [
         {
          "page": 11,
@@ -492,10 +655,57 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The resistors heat up during the investigation and this affects the values for the resistance R.",
+       "text": "The resistors heat up during the investigation and this affects the values for the resistance R."
+      },
+      {
+       "type": "text",
+       "html": "Suggest <b>two</b> improvements to reduce this heating effect.",
+       "text": "Suggest two improvements to reduce this heating effect."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "2",
+       "lines": 2
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     }
    ],
-   "path": "3(c)"
+   "path": "3(c)",
+   "content": [
+    {
+     "type": "text",
+     "html": "The student connects resistors, one at a time, in parallel with the resistor in the circuit in Figure 3.1 until there <b>are</b> five resistors in parallel.",
+     "text": "The student connects resistors, one at a time, in parallel with the resistor in the circuit in Figure 3.1 until there are five resistors in parallel."
+    },
+    {
+     "type": "text",
+     "html": "The student:",
+     "text": "The student:"
+    },
+    {
+     "type": "list",
+     "items": [
+      "measures the p.d. V across the resistors in parallel",
+      "measures the current I in the circuit for each combination of resistors",
+      "calculates the resistance R of each combination of resistors."
+     ]
+    },
+    {
+     "type": "text",
+     "html": "The student’s readings are shown in Table 3.1.",
+     "text": "The student’s readings are shown in Table 3.1."
+    }
+   ]
   },
   {
    "label": "d",
@@ -506,7 +716,7 @@
       30.0,
       254.8,
       570.0,
-      530.1
+      530.5
      ],
      "continued": false,
      "answer_space": {
@@ -514,7 +724,7 @@
       "dotted_lines": 4,
       "answer_line": "anomalous reading =  ……",
       "working_gap_pt": 19.9,
-      "height_pt": 275.3
+      "height_pt": 275.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q03/question/0625_2026MJ_63_q03_d_s1.svg",
@@ -522,39 +732,19 @@
       "url": null,
       "kb": 101.7
      }
-    },
-    {
-     "page": 13,
-     "bbox": [
-      30.0,
-      413.3,
-      570.0,
-      433.3
-     ],
-     "continued": true,
-     "answer_space": {
-      "kind": "none",
-      "dotted_lines": 0,
-      "answer_line": null,
-      "working_gap_pt": 4.0,
-      "height_pt": 20.0
-     },
-     "svg": {
-      "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q03/question/0625_2026MJ_63_q03_d_s2.svg",
-      "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p63/q03/question/0625_2026MJ_63_q03_d_s2",
-      "url": null,
-      "kb": 4.4
-     }
     }
    ],
-   "text": "The student takes repeat readings.\nTable 3.2 shows the ammeter readings for three resistors in parallel.\n0.85\n0.58\n0.90\n0.80\nIdentify the anomalous reading. Suggest one reason for this anomaly.\nanomalous reading =  ................................................................................................................\nsuggestion  ................................................................................................................................\n...................................................................................................................................................\n...................................................................................................................................................\n[2]\n[Total: 11]\nTurn over",
+   "text": "The student takes repeat readings.\nTable 3.2 shows the ammeter readings for three resistors in parallel.\n0.85\n0.58\n0.90\n0.80\nIdentify the anomalous reading. Suggest one reason for this anomaly.\nanomalous reading =  ................................................................................................................\nsuggestion  ................................................................................................................................\n...................................................................................................................................................\n...................................................................................................................................................\n[2]\n[Total: 11]",
    "marks": 2,
    "path": "3(d)",
    "mark_scheme": [
     {
      "label": "3(d)",
-     "text": "0.58\n1\nappropriate reason e.g. transposed digits (when recorded),\n1 accept it should be 0.85\nresistor disconnected, only 2 resistors connected in parallel\naccept temperature increased (so resistance increased and\ncurrent decreased)\nignore misread ammeter",
-     "codes": [],
+     "text": "0.58\nappropriate reason e.g. transposed digits (when recorded),\nresistor disconnected, only 2 resistors connected in parallel",
+     "codes": [
+      "1",
+      "1"
+     ],
      "segments": [
       {
        "page": 11,
@@ -572,6 +762,38 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The student takes repeat readings.",
+     "text": "The student takes repeat readings."
+    },
+    {
+     "type": "text",
+     "html": "Table 3.2 shows the ammeter readings for three resistors in parallel.",
+     "text": "Table 3.2 shows the ammeter readings for three resistors in parallel."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_63_q03d_table3-2",
+     "caption": "Table 3.2"
+    },
+    {
+     "type": "text",
+     "html": "Identify the anomalous reading. Suggest <b>one</b> reason for this anomaly.",
+     "text": "Identify the anomalous reading. Suggest one reason for this anomaly."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "suggestion",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 2
     }
    ]
   }
@@ -592,5 +814,17 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "A student investigates an electric circuit containing different combinations of resistors.",
+   "text": "A student investigates an electric circuit containing different combinations of resistors."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2026MJ_63_q03_fig3-1",
+   "caption": "Figure 3.1"
+  }
+ ]
 }

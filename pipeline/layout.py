@@ -6,11 +6,11 @@ import re
 import pymupdf as fitz
 
 CONTENT_X0, CONTENT_X1 = 30.0, 570.0      # outside this: margin strips (corner marks are filtered by shape)
-QNUM_X = (44.0, 56.0)                     # question numbers
+QNUM_X = (44.0, 58.0)                     # question numbers
 LETTER_X = (64.0, 80.0)                   # (a) (b) ...
 ROMAN_X = (84.0, 104.0)                   # (i) (ii) ...
 ROMAN = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x']
-LETTERS = 'abcdefghjklmnop'
+LETTERS = 'abcdefghijklmnop'           # (i) after (h) is a letter part; x position tells it from roman (i)
 
 # Symbol-font characters that arrive as private-use code points
 SYMBOL_MAP = {0xf0ae: '→', 0xf0ac: '←', 0xf0ad: '↑', 0xf0af: '↓', 0xf0b0: '°', 0xf0b1: '±', 0xf0b4: '×',
@@ -25,8 +25,37 @@ def norm(text):
     return ''.join(SYMBOL_MAP.get(ord(c), c) for c in text)
 
 
+_BOUNDS = {}
+
+
+def footer_ink_top(page, line):
+    """Top of the printed glyphs of a footer line, measured on the rendered page (its text box starts
+    higher than its ink, and the last answer line or a subscript can sit inside that box)."""
+    import numpy as np
+    sp = [s for s in line['spans'] if s['text'].strip()]
+    base = max(s['origin'][1] for s in sp)
+    clip = fitz.Rect(sp[0]['bbox'][0], line['bbox'][1] - 4, sp[-1]['bbox'][2], base)
+    Z = 4.0
+    pix = page.get_pixmap(matrix=fitz.Matrix(Z, Z), clip=clip, colorspace=fitz.csGRAY)
+    a = (np.frombuffer(pix.samples, np.uint8).reshape(pix.height, pix.width) < 170).any(1)
+    r = len(a) - 1
+    while r > 0 and not a[r]:        # the baseline row itself can be blank
+        r -= 1
+    if not a[r]:
+        return min(s['origin'][1] - 0.8 * s['size'] for s in sp)
+    while r > 0 and a[r]:            # walk up from the baseline through the footer's own ink
+        r -= 1
+    top = clip.y0 + (r + 1) / Z
+    if top < line['bbox'][1] - 0.5:  # ran into content touching the footer: estimate from the font size
+        return max(line['bbox'][1] + 1.0, min(s['origin'][1] - 0.8 * s['size'] for s in sp) + 1.0)
+    return top
+
+
 def page_bounds(page):
     """Return (top, bottom) of the question content area on a page."""
+    key = (page.parent.name, page.number)
+    if key in _BOUNDS:
+        return _BOUNDS[key]
     top, bottom = 50.0, page.rect.height - 40
     for b in page.get_text('dict')['blocks']:
         if b['type'] != 0:
@@ -35,9 +64,21 @@ def page_bounds(page):
             t = ''.join(s['text'] for s in l['spans']).strip()
             y0, y1 = l['bbox'][1], l['bbox'][3]
             if y0 > 700 and ('©' in t or 'UCLES' in t or 'Turn over' in t or re.search(r'\d{4}/\d\d/[A-Z]/[A-Z]/\d\d', t)):
-                bottom = min(bottom, y0 + 1.0)
-            if y1 < 56 and re.fullmatch(r'\d{1,2}', t):          # page number
+                bottom = min(bottom, footer_ink_top(page, l) - 1.0)
+            if y0 > 560 and re.match(r'(Permission to reproduce|To avoid the issue of disclosure|Copyright Acknowledgements)', t):
+                rules = [d['rect'].y0 for d in page.get_drawings()
+                         if d['rect'].width > 300 and d['rect'].height < 2 and y0 - 30 < d['rect'].y0 < y0]
+                bottom = min(bottom, min(rules) - 3.0 if rules else y0 - 6.0)   # copyright notice (and its rule) on the last page
+            if y0 > 100 and 150 < l['bbox'][0] < 330 and re.fullmatch(
+                    r'(Turn over( for (the next )?(question|page) ?\d*)?|Question \d+ (is|continues|begins|starts) on '
+                    r'(the next page|the back page|page \d+))\.?', ' '.join(t.split())):
+                bottom = min(bottom, y0 - 3.0)          # centred notice: 'Turn over', 'Question 10 is on the back page.'
+            x0 = l['bbox'][0]
+            if y0 < 58 and y1 < 72 and re.fullmatch(r'\d{1,2}', t) and 240 < x0 < 360:   # page number (lower when a barcode sits above it)
                 top = max(top, y1 + 4)
+    if len(_BOUNDS) > 4000:
+        _BOUNDS.clear()
+    _BOUNDS[key] = (top, bottom)
     return top, bottom
 
 
@@ -54,7 +95,8 @@ def visible_lines(page, top, bottom):
             if not spans:
                 continue
             x0, y0, x1, y1 = l['bbox']
-            if y0 < top - 2 or y1 > bottom + 2 or x1 < CONTENT_X0 or x0 > CONTENT_X1:
+            base = min(s['origin'][1] for s in spans)          # main baseline (subscripts sit lower)
+            if y0 < top - 2 or (y1 > bottom + 2 and base > bottom + 0.5) or x1 < CONTENT_X0 or x0 > CONTENT_X1:
                 continue
             out.append({'x0': x0, 'y0': y0, 'x1': x1, 'y1': y1,
                         'text': norm(''.join(s['text'] for s in spans)).strip(),
@@ -116,3 +158,42 @@ def label_tokens(page, top, bottom):
                 toks.append({'kind': 'r', 'val': v, 'x0': x0, 'y0': y0, 'y1': y1})
     toks.sort(key=lambda t: (round(t['y0']), t['x0']))
     return toks
+
+
+# --- what is actually printed: the rendered page -------------------------------------------------
+ZOOM = 2.0                                 # 144 dpi: 0.5 pt per pixel row
+_RASTER = {}
+
+
+def dark_mask(page):
+    """Boolean array (rows x cols) of printed ink at 144 dpi for the content columns, cached per page.
+    Invisible geometry (pattern cells, white masks, clip paths) is not ink, by construction."""
+    import numpy as np
+    key = (page.parent.name, page.number)
+    if key not in _RASTER:
+        if len(_RASTER) > 64:
+            _RASTER.clear()
+        pix = page.get_pixmap(matrix=fitz.Matrix(ZOOM, ZOOM), colorspace=fitz.csGRAY)
+        img = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.height, pix.width)
+        mask = img < 200
+        x0, x1 = int(CONTENT_X0 * ZOOM), int(CONTENT_X1 * ZOOM)
+        mask[:, :x0] = False
+        mask[:, x1:] = False
+        _RASTER[key] = mask
+    return _RASTER[key]
+
+
+def row_ink(page):
+    """Dark pixels per pixel row (index = y_pt * ZOOM)."""
+    return dark_mask(page).sum(axis=1)
+
+
+def ink_extent(page, y0, y1):
+    """(top, bottom) in pt of printed ink between y0 and y1, or None if the strip is empty."""
+    import numpy as np
+    rows = row_ink(page)
+    a, b = max(0, int(y0 * ZOOM)), min(len(rows), int(y1 * ZOOM) + 1)
+    hit = np.nonzero(rows[a:b] > 0)[0]
+    if not len(hit):
+        return None
+    return (a + hit[0]) / ZOOM, (a + hit[-1] + 1) / ZOOM

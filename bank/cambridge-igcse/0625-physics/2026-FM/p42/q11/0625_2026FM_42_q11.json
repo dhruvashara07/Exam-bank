@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    112.2
+    110.0
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 8.3,
-    "height_pt": 52.3
+    "height_pt": 50.2
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2026-FM/p42/q11/question/0625_2026FM_42_q11_stem_s1.svg",
@@ -43,7 +43,7 @@
       30.0,
       124.8,
       570.0,
-      209.8
+      210.0
      ],
      "continued": false,
      "answer_space": {
@@ -51,7 +51,7 @@
       "dotted_lines": 2,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 85.0
+      "height_pt": 85.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-FM/p42/q11/question/0625_2026FM_42_q11_a_s1.svg",
@@ -90,6 +90,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Define the terms r and T in this equation.",
+     "text": "Define the terms r and T in this equation."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "T is"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   },
   {
@@ -101,7 +117,7 @@
       30.0,
       228.8,
       570.0,
-      248.8
+      249.0
      ],
      "continued": false,
      "answer_space": {
@@ -109,7 +125,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 4.0,
-      "height_pt": 20.0
+      "height_pt": 20.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-FM/p42/q11/question/0625_2026FM_42_q11_b_s1.svg",
@@ -131,7 +147,7 @@
         30.0,
         254.8,
         570.0,
-        352.8
+        353.0
        ],
        "continued": false,
        "answer_space": {
@@ -139,13 +155,13 @@
         "dotted_lines": 3,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 98.0
+        "height_pt": 98.2
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-FM/p42/q11/question/0625_2026FM_42_q11_b-i_s1.svg",
         "public_id": "question_bank/cambridge-igcse/0625-physics/2026-FM/p42/q11/question/0625_2026FM_42_q11_b-i_s1",
         "url": null,
-        "kb": 58.0
+        "kb": 58.1
        }
       }
      ],
@@ -177,6 +193,22 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Explain why the orbital speed is an average value.",
+       "text": "Explain why the orbital speed is an average value."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 3
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     },
     {
@@ -188,7 +220,7 @@
         30.0,
         358.9,
         570.0,
-        586.9
+        587.0
        ],
        "continued": false,
        "answer_space": {
@@ -196,7 +228,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 145.1,
-        "height_pt": 228.0
+        "height_pt": 228.1
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-FM/p42/q11/question/0625_2026FM_42_q11_b-ii_s1.svg",
@@ -212,7 +244,7 @@
      "mark_scheme": [
       {
        "label": "11(b)(ii)",
-       "text": "(TSaturn =) 9.16 × 108 (s)\nOR\n(TSaturn =) (2π x 1.4 x 1012) / (9600)\n(T =)2π r / v\n(TEarth =) 3.15 × 107 (s)\nOR\n(Tearth =) 365 × 24 × 60 × 60 (s)\n((Tsaturn =) 29 (Earth) years",
+       "text": "=) 9.16 × 10 (s)\n(T\n8\nSaturn\nOR\n(TSaturn =) (2π x 1.4 x 10 ) / (9600)\n12\n(T =)2π r / v\n=) 3.15 × 10 (s)\n(T\n7\nEarth\nOR\n(Tearth =) 365 × 24 × 60 × 60 (s)\n((Tsaturn =) 29 (Earth) years",
        "codes": [
         "A2",
         "C1",
@@ -237,10 +269,38 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Saturn is 1.4 × 10<sup>12</sup> m from the Sun.",
+       "text": "Saturn is 1.4 × 1012 m from the Sun."
+      },
+      {
+       "type": "text",
+       "html": "Show that one Saturn year is approximately equal to 30 Earth years.",
+       "text": "Show that one Saturn year is approximately equal to 30 Earth years."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 145.1
+      },
+      {
+       "type": "marks",
+       "value": 4
+      }
      ]
     }
    ],
-   "path": "11(b)"
+   "path": "11(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "The average orbital speed of Saturn is 9600m/s.",
+     "text": "The average orbital speed of Saturn is 9600m/s."
+    }
+   ]
   }
  ],
  "total_marks": 8,
@@ -259,5 +319,17 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "The average orbital speed ν of an object in the Solar System is defined by the equation",
+   "text": "The average orbital speed ν of an object in the Solar System is defined by the equation"
+  },
+  {
+   "type": "text",
+   "html": "ν = \\(\\frac{2πr}{T}\\)",
+   "text": "ν = (2πr)/(T)"
+  }
+ ]
 }

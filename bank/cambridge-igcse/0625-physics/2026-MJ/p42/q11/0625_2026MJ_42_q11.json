@@ -39,7 +39,7 @@
       30.0,
       59.8,
       570.0,
-      285.0
+      285.5
      ],
      "continued": false,
      "answer_space": {
@@ -47,7 +47,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 225.2
+      "height_pt": 225.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q11/question/0625_2026MJ_42_q11_a_s1.svg",
@@ -63,8 +63,10 @@
    "mark_scheme": [
     {
      "label": "11(a)",
-     "text": "statement\napproximate time taken\nB2\nThe Earth orbits the Sun once.\n8.3 min\nThe Earth rotates once on its axis.\n24 hours\nLight travels from the Sun to the Earth.\n1 month\nThe Moon orbits the Earth once.\n365 days\nall correct – 2 marks\n1 or 2 correct – 1 mark",
-     "codes": [],
+     "text": "statement\napproximate time taken\nThe Earth orbits the Sun once.\n8.3 min\nThe Earth rotates once on its axis.\n24 hours\nLight travels from the Sun to the Earth.\n1 month\nThe Moon orbits the Earth once.\n365 days\nall correct – 2 marks\n1 or 2 correct – 1 mark",
+     "codes": [
+      "B2"
+     ],
      "segments": [
       {
        "page": 18,
@@ -83,6 +85,57 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Figure 11.1 shows some statements about the Earth and the approximate time taken for the",
+     "text": "Figure 11.1 shows some statements about the Earth and the approximate time taken for the"
+    },
+    {
+     "type": "text",
+     "html": "events described in these statements to take place.",
+     "text": "events described in these statements to take place."
+    },
+    {
+     "type": "text",
+     "html": "<b>statement</b> <b>approximate</b> <b>time</b> <b>taken</b>",
+     "text": "statement approximate time taken"
+    },
+    {
+     "type": "text",
+     "html": "The Earth orbits the Sun once. 8.3 minutes",
+     "text": "The Earth orbits the Sun once. 8.3 minutes"
+    },
+    {
+     "type": "text",
+     "html": "The Earth rotates once on its axis. 24 hours",
+     "text": "The Earth rotates once on its axis. 24 hours"
+    },
+    {
+     "type": "text",
+     "html": "Light travels from the Sun to the Earth. 1 month",
+     "text": "Light travels from the Sun to the Earth. 1 month"
+    },
+    {
+     "type": "text",
+     "html": "The Moon orbits the Earth once. 365 days",
+     "text": "The Moon orbits the Earth once. 365 days"
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_42_q11a_fig11-1",
+     "caption": "Figure 11.1"
+    },
+    {
+     "type": "text",
+     "html": "Draw a line from each statement to the correct time taken. One has been completed for you.",
+     "text": "Draw a line from each statement to the correct time taken. One has been completed for you."
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   },
   {
@@ -94,7 +147,7 @@
       30.0,
       304.0,
       570.0,
-      489.4
+      489.5
      ],
      "continued": false,
      "answer_space": {
@@ -102,7 +155,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 115.4,
-      "height_pt": 185.4
+      "height_pt": 185.5
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q11/question/0625_2026MJ_42_q11_b_s1.svg",
@@ -118,8 +171,16 @@
    "mark_scheme": [
     {
      "label": "11(b)",
-     "text": "(T =) 2πr / v\nB1 must be in words or symbols\nA s for v\nA t for T\nA (T =) πd / v\n(T =) {2π × 7.78 × 108} / {4.7(0) × 104 × 24 × 365} OR (T =) 104 000 (hours)\nB1 A (T =) {2π × 7.78 × 108} / {4.7(0) × 104}\nA (T =) {2π × 7.78 × 108}÷{4.7(0) × 104 ×\nincorrect time conversion}\nB1 e.g. 4.7(0) × 104 × 24 × 365\ncorrect conversion from hours to years OR 11.87 SEEN OR 11.88 SEEN\nOR 411 720 000 SEEN\nOR candidate’s time in hours / {24 × 365}\nOR 1 year = 24 × 365 (hours)\nOR 1 year = 8760 (hours)",
-     "codes": [],
+     "text": "(T =) 2πr / v\n(T =) {2π × 7.78 × 10 } / {4.7(0) × 10 × 24 × 365} OR (T =) 104 000 (hours)\n8\n4\ncorrect conversion from hours to years OR 11.87 SEEN OR 11.88 SEEN",
+     "codes": [
+      "B1",
+      "B1",
+      "8",
+      "8",
+      "4",
+      "B1",
+      "4"
+     ],
      "segments": [
       {
        "page": 18,
@@ -138,6 +199,27 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The planet Jupiter orbits the Sun. The average radius of the orbit of Jupiter is 7.78 × 10<sup>8</sup>km. The average orbital speed of Jupiter is 4.70 × 10<sup>4</sup>km/h.",
+     "text": "The planet Jupiter orbits the Sun. The average radius of the orbit of Jupiter is 7.78 × 108km. The average orbital speed of Jupiter is 4.70 × 104km/h."
+    },
+    {
+     "type": "text",
+     "html": "Show that the orbital period of Jupiter is 11.9 years.",
+     "text": "Show that the orbital period of Jupiter is 11.9 years."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 115.4
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   },
   {
@@ -155,7 +237,7 @@
         30.0,
         59.8,
         570.0,
-        131.8
+        132.0
        ],
        "continued": false,
        "answer_space": {
@@ -163,7 +245,7 @@
         "dotted_lines": 2,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 72.0
+        "height_pt": 72.2
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q11/question/0625_2026MJ_42_q11_c-i_s1.svg",
@@ -179,8 +261,10 @@
      "mark_scheme": [
       {
        "label": "11(c)(i)",
-       "text": "distance travelled (in a vacuum) by light in one year\nB1 A distance travelled (in space) by light in\none year",
-       "codes": [],
+       "text": "distance travelled (in a vacuum) by light in one year",
+       "codes": [
+        "B1"
+       ],
        "segments": [
         {
          "page": 18,
@@ -199,6 +283,22 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Define a ‘light-year’ in words.",
+       "text": "Define a ‘light-year’ in words."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -210,7 +310,7 @@
         30.0,
         137.8,
         570.0,
-        388.2
+        388.5
        ],
        "continued": false,
        "answer_space": {
@@ -218,7 +318,7 @@
         "dotted_lines": 1,
         "answer_line": "speed =  …… m / s [2]",
         "working_gap_pt": 115.4,
-        "height_pt": 250.4
+        "height_pt": 250.7
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q11/question/0625_2026MJ_42_q11_c-ii_s1.svg",
@@ -226,39 +326,18 @@
         "url": null,
         "kb": 44.2
        }
-      },
-      {
-       "page": 16,
-       "bbox": [
-        30.0,
-        59.8,
-        570.0,
-        79.8
-       ],
-       "continued": true,
-       "answer_space": {
-        "kind": "none",
-        "dotted_lines": 0,
-        "answer_line": null,
-        "working_gap_pt": 4.0,
-        "height_pt": 20.0
-       },
-       "svg": {
-        "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q11/question/0625_2026MJ_42_q11_c-ii_s2.svg",
-        "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p42/q11/question/0625_2026MJ_42_q11_c-ii_s2",
-        "url": null,
-        "kb": 4.3
-       }
       }
      ],
-     "text": "A distant galaxy is 1.6 × 108 light-years away from the Earth.\nThe current estimate for the Hubble constant is 2.2 × 10–18 per second.\nCalculate the speed at which this galaxy moves away from the Earth.\nGive your answer in m / s.\nspeed =  .................................................. m / s [2]\n[Total: 8]\nBLANK PAGE",
+     "text": "A distant galaxy is 1.6 × 108 light-years away from the Earth.\nThe current estimate for the Hubble constant is 2.2 × 10–18 per second.\nCalculate the speed at which this galaxy moves away from the Earth.\nGive your answer in m / s.\nspeed =  .................................................. m / s [2]\n[Total: 8]",
      "marks": 2,
      "path": "11(c)(ii)",
      "mark_scheme": [
       {
        "label": "11(c)(ii)",
-       "text": "3.3 × 106 (m / s)\nA2",
-       "codes": [],
+       "text": "3.3 × 10 (m / s)\n6",
+       "codes": [
+        "A2"
+       ],
        "segments": [
         {
          "page": 18,
@@ -279,8 +358,11 @@
       },
       {
        "label": "11(c)(ii)",
-       "text": "(v =) H0d\nC1 must be in words or symbols in any form\nOR (v =) 2.2 × 10–18 × 1.6 × 108 × 9.5 × 1015\nA 2.2 × 10–18 × 1.6 × 108 × candidate’s\nOR (v =) 2.2 × 10–18 × 1.6 × 108 × 3.0 × 108 × 3600 × 24 × 365\nincorrect value for conversion from light\nyears to metres",
-       "codes": [],
+       "text": "(v =) H0d\nOR (v =) 2.2 × 10\n× 1.6 × 10 × 9.5 × 10\n–18\n8\n15\nOR (v =) 2.2 × 10\n× 1.6 × 10 × 3.0 × 10 × 3600 × 24 × 365\n–18\n8\n8",
+       "codes": [
+        "C1",
+        "8"
+       ],
        "segments": [
         {
          "page": 19,
@@ -298,6 +380,38 @@
          }
         }
        ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "A distant galaxy is 1.6 × 10<sup>8</sup> light-years away from the Earth.",
+       "text": "A distant galaxy is 1.6 × 108 light-years away from the Earth."
+      },
+      {
+       "type": "text",
+       "html": "The current estimate for the Hubble constant is 2.2 × 10<sup>–18</sup> per second.",
+       "text": "The current estimate for the Hubble constant is 2.2 × 10–18 per second."
+      },
+      {
+       "type": "text",
+       "html": "Calculate the speed at which this galaxy moves away from the Earth.",
+       "text": "Calculate the speed at which this galaxy moves away from the Earth."
+      },
+      {
+       "type": "text",
+       "html": "Give your answer in m/s.",
+       "text": "Give your answer in m/s."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "speed =",
+       "unit": "m/s"
+      },
+      {
+       "type": "marks",
+       "value": 2
       }
      ]
     }

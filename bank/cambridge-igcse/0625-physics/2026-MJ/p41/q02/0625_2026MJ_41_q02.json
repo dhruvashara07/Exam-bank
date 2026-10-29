@@ -8,7 +8,7 @@
     30.0,
     394.2,
     570.0,
-    414.2
+    414.5
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 2.3,
-    "height_pt": 20.0
+    "height_pt": 20.3
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p41/q02/question/0625_2026MJ_41_q02_stem_s1.svg",
@@ -43,7 +43,7 @@
       30.0,
       420.2,
       570.0,
-      564.3
+      564.5
      ],
      "continued": false,
      "answer_space": {
@@ -51,7 +51,7 @@
       "dotted_lines": 1,
       "answer_line": "density =  …… unit …… [3]",
       "working_gap_pt": 87.0,
-      "height_pt": 144.0
+      "height_pt": 144.3
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p41/q02/question/0625_2026MJ_41_q02_a_s1.svg",
@@ -67,8 +67,13 @@
    "mark_scheme": [
     {
      "label": "2(a)",
-     "text": "2.8 g / cm3 OR 2800 kg / m3\nA3 A any correct value of density with its\ncorrect unit e.g. 0.0028 kg / cm3\nC1\n×\nN\n8.7 10\nm\n) 87\nOR (\n)\n(\n)\nOR (\nOR (\n)\nρ\n=\nρ=\nρ=\nρ=\n×\nN\n31\n2.8\n10\n×\nN\nV\n3.1 10\ng / cm3 OR kg / m3\nC1\nA any correct unit of density",
-     "codes": [],
+     "text": "3\n3\n2.8 g / cm OR 2800 kg / m\n8.7 ×10\nN\nm\nOR (ρ =)\n87\nOR (ρ =)\n(ρ =)\nOR (ρ =)2.8×10\nN\n3.1 ×10\nN\nV\n31\ng / cm OR kg / m\n3\n3",
+     "codes": [
+      "A3",
+      "3",
+      "C1",
+      "C1"
+     ],
      "segments": [
       {
        "page": 12,
@@ -87,6 +92,27 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The mass of the metal sphere is 87g.",
+     "text": "The mass of the metal sphere is 87g."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the density of the metal. State the unit.",
+     "text": "Calculate the density of the metal. State the unit."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "density ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   },
   {
@@ -98,7 +124,7 @@
       30.0,
       583.3,
       570.0,
-      733.3
+      733.5
      ],
      "continued": false,
      "answer_space": {
@@ -106,7 +132,7 @@
       "dotted_lines": 4,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 150.0
+      "height_pt": 150.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p41/q02/question/0625_2026MJ_41_q02_b_s1.svg",
@@ -122,8 +148,15 @@
    "mark_scheme": [
     {
      "label": "2(b)",
-     "text": "B1 mark the answer as a whole\nadd water to the measuring cylinder AND measure the volume (of water)\nA add a known volume of water to\nmeasuring cylinder\nA fill for add water\nA record for measure\nBOD take the reading for measure the\nvolume\nmeasure (water) volume (in the measuring cylinder) after sphere is added\nB1 A record for measure\nBOD take the reading for measure the\nvolume\nAny one from:\nB1\n•\nvolume (of sphere) = difference in (water) volume\nA e.g. change for difference\n•\nCON V= Vwater – V(water+sphere)\nV= V2-V1\nFill a (eureka) can to the top with water AND add sphere\nB1\nUse this alternative mark scheme if\ncandidates use a displacement method\ncollect and measure displaced water (in a measuring cylinder)\nB1\nto answer the question, e.g. eureka can\nvolume of displaced water = volume (of sphere)\nB1",
-     "codes": [],
+     "text": "add water to the measuring cylinder AND measure the volume (of water)\nmeasure (water) volume (in the measuring cylinder) after sphere is added\nAny one from:\n•\nvolume (of sphere) = difference in (water) volume\n•\nV= V2-V1\nFill a (eureka) can to the top with water AND add sphere\ncollect and measure displaced water (in a measuring cylinder)\nvolume of displaced water = volume (of sphere)",
+     "codes": [
+      "B1",
+      "B1",
+      "B1",
+      "B1",
+      "B1",
+      "B1"
+     ],
      "segments": [
       {
        "page": 12,
@@ -141,6 +174,22 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Describe how a student determines the volume of the sphere using a measuring cylinder.",
+     "text": "Describe how a student determines the volume of the sphere using a measuring cylinder."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 4
+    },
+    {
+     "type": "marks",
+     "value": 3
     }
    ]
   }
@@ -161,5 +210,12 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "A solid metal sphere has a volume of 31cm<sup>3</sup>.",
+   "text": "A solid metal sphere has a volume of 31cm3."
+  }
+ ]
 }

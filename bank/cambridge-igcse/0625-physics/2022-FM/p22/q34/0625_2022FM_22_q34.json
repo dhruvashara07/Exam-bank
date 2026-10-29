@@ -1,0 +1,165 @@
+{
+ "id": "0625_2022FM_22_q34",
+ "number": 34,
+ "segments": [
+  {
+   "page": 13,
+   "bbox": [
+    30.0,
+    58.6,
+    570.0,
+    489.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 60.4,
+    "height_pt": 430.9
+   },
+   "svg": {
+    "file": "bank/cambridge-igcse/0625-physics/2022-FM/p22/q34/question/0625_2022FM_22_q34_stem_s1.svg",
+    "public_id": "question_bank/cambridge-igcse/0625-physics/2022-FM/p22/q34/question/0625_2022FM_22_q34_stem_s1",
+    "url": null,
+    "kb": 90.2
+   }
+  }
+ ],
+ "text": "The diagram shows an electric drill and safety guard.\nelectric motor\nsafety guard in\nclosed position\ndrill\nThe drill requires the logic circuit shown.\nstarting switch\non\n1\nA\noff\n0\nmotor on1\nmotor\nmotor off0\nsafety guard\nopen\n0\nB\nclosed1\nalarm on1\n?\nalarm\nalarm off0\nThe circuit must only allow the motor to start when the safety guard is closed. If the safety guard\nis not closed when the starting switch is on, the alarm must sound.\nWhich logic gate is missing from the circuit?\nA\nNOT\nB\nNAND\nC\nAND\nD\nNOR",
+ "marks": 1,
+ "figures": [
+  {
+   "page": 13,
+   "bbox": [
+    152.8,
+    85.6,
+    442.0,
+    216.8
+   ],
+   "id": "0625_2022FM_22_q34_figA",
+   "caption": null,
+   "part": "",
+   "alt": "",
+   "svg": {
+    "file": "bank/cambridge-igcse/0625-physics/2022-FM/p22/q34/figures/0625_2022FM_22_q34_figA.svg",
+    "public_id": "question_bank/cambridge-igcse/0625-physics/2022-FM/p22/q34/figures/0625_2022FM_22_q34_figA",
+    "url": null,
+    "kb": 33.0
+   }
+  },
+  {
+   "page": 13,
+   "bbox": [
+    101.8,
+    249.7,
+    492.8,
+    401.6
+   ],
+   "id": "0625_2022FM_22_q34_figB",
+   "caption": null,
+   "part": "",
+   "alt": "",
+   "svg": {
+    "file": "bank/cambridge-igcse/0625-physics/2022-FM/p22/q34/figures/0625_2022FM_22_q34_figB.svg",
+    "public_id": "question_bank/cambridge-igcse/0625-physics/2022-FM/p22/q34/figures/0625_2022FM_22_q34_figB",
+    "url": null,
+    "kb": 25.8
+   }
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "mcq",
+ "options": [
+  {
+   "label": "A",
+   "text": "NOT"
+  },
+  {
+   "label": "B",
+   "text": "NAND"
+  },
+  {
+   "label": "C",
+   "text": "AND"
+  },
+  {
+   "label": "D",
+   "text": "NOR"
+  }
+ ],
+ "has_diagram": true,
+ "answer": "C",
+ "syllabus": "0625",
+ "subject": "Physics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 2,
+ "variant": 2,
+ "paper_code": "0625/22",
+ "paper_type": "mcq_extended",
+ "total_marks": 1,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "The diagram shows an electric drill and safety guard.",
+   "text": "The diagram shows an electric drill and safety guard."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2022FM_22_q34_figA",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The drill requires the logic circuit shown.",
+   "text": "The drill requires the logic circuit shown."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2022FM_22_q34_figB",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The circuit must only allow the motor to start when the safety guard is closed. If the safety guard is not closed when the starting switch is on, the alarm must sound.",
+   "text": "The circuit must only allow the motor to start when the safety guard is closed. If the safety guard is not closed when the starting switch is on, the alarm must sound."
+  },
+  {
+   "type": "text",
+   "html": "Which logic gate is missing from the circuit?",
+   "text": "Which logic gate is missing from the circuit?"
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "NOT"
+    },
+    {
+     "label": "B",
+     "html": "NAND"
+    },
+    {
+     "label": "C",
+     "html": "AND"
+    },
+    {
+     "label": "D",
+     "html": "NOR"
+    }
+   ]
+  }
+ ]
+}

@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    464.8
+    465.0
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 70.8,
-    "height_pt": 405.0
+    "height_pt": 405.2
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q02/question/0625_2026MJ_62_q02_stem_s1.svg",
@@ -74,7 +74,7 @@
     114.7,
     429.1,
     549.2,
-    568.1
+    551.6
    ],
    "id": "0625_2026MJ_62_q02aii_table2-1",
    "part": "(a)(ii)",
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q02/figures/0625_2026MJ_62_q02aii_table2-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p62/q02/figures/0625_2026MJ_62_q02aii_table2-1",
     "url": null,
-    "kb": 29.0
+    "kb": 28.6
    }
   }
  ],
@@ -101,7 +101,7 @@
       30.0,
       470.8,
       570.0,
-      546.1
+      544.5
      ],
      "continued": false,
      "answer_space": {
@@ -109,7 +109,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 14.2,
-      "height_pt": 75.3
+      "height_pt": 73.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q02/question/0625_2026MJ_62_q02_a_s1.svg",
@@ -131,7 +131,7 @@
         30.0,
         548.8,
         570.0,
-        598.1
+        596.5
        ],
        "continued": false,
        "answer_space": {
@@ -139,7 +139,7 @@
         "dotted_lines": 1,
         "answer_line": "d2 =  …… cm [1]",
         "working_gap_pt": 11.7,
-        "height_pt": 49.3
+        "height_pt": 47.7
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q02/question/0625_2026MJ_62_q02_a-i_s1.svg",
@@ -155,8 +155,10 @@
      "mark_scheme": [
       {
        "label": "2(a)(i)",
-       "text": "d2 = 2.0 (cm)\n1 correct answer only",
-       "codes": [],
+       "text": "d2 = 2.0 (cm)",
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 10,
@@ -175,6 +177,23 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Measure, on Figure 2.1, the distance d<sub>2</sub> in centimetres to the nearest millimetre.",
+       "text": "Measure, on Figure 2.1, the distance d2 in centimetres to the nearest millimetre."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "d2 =",
+       "unit": "cm"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -186,7 +205,7 @@
         30.0,
         59.8,
         570.0,
-        570.1
+        570.5
        ],
        "continued": false,
        "answer_space": {
@@ -194,7 +213,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 41.0,
-        "height_pt": 510.2
+        "height_pt": 510.7
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q02/question/0625_2026MJ_62_q02_a-ii_s1.svg",
@@ -210,8 +229,11 @@
      "mark_scheme": [
       {
        "label": "2(a)(ii)",
-       "text": "θW = 27.5 (°C)\n1 correct answers only\nθB = 34(.0) (°C)\n1",
-       "codes": [],
+       "text": "θ = 27.5 (°C)\nW\nθ = 34(.0) (°C)\nB",
+       "codes": [
+        "1",
+        "1"
+       ],
        "segments": [
         {
          "page": 10,
@@ -230,10 +252,85 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The student:",
+       "text": "The student:"
+      },
+      {
+       "type": "list",
+       "items": [
+        "records, in Table 2.1, the temperature shown by each thermometer at time t = 0",
+        "switches on the lamp, and at the same time starts a stopwatch",
+        "waits for 4.0 minutes",
+        "switches off the lamp",
+        "takes the reading on each thermometer."
+       ]
+      },
+      {
+       "type": "text",
+       "html": "The readings shown by the thermometers at t = 4.0min <b>are</b> shown in Figure 2.2.",
+       "text": "The readings shown by the thermometers at t = 4.0min are shown in Figure 2.2."
+      },
+      {
+       "type": "figure",
+       "id": "0625_2026MJ_62_q02aii_fig2-2",
+       "caption": "Figure 2.2"
+      },
+      {
+       "type": "text",
+       "html": "Record the readings in Table 2.1.",
+       "text": "Record the readings in Table 2.1."
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "<b>time</b> t/<b>min</b>",
+         "<b>temperature</b> <b>of</b> <b>white</b> <b>card</b> θ<sub>W</sub>/°C",
+         "<b>temperature</b> <b>of</b> <b>black</b> <b>card</b> θ<sub>B</sub>/°C"
+        ],
+        [
+         "0",
+         "20.0",
+         "20.5"
+        ],
+        [
+         "4.0",
+         "",
+         ""
+        ]
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 41.0
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     }
    ],
-   "path": "2(a)"
+   "path": "2(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "The student:",
+     "text": "The student:"
+    },
+    {
+     "type": "list",
+     "items": [
+      "adjusts the distance d<sub>1</sub> between the lamp and the white card so that the card is 1.0cm from the lamp",
+      "adjusts the distance d<sub>2</sub> between the lamp and the black card."
+     ]
+    }
+   ]
   },
   {
    "label": "b",
@@ -250,7 +347,7 @@
         30.0,
         59.8,
         570.0,
-        144.8
+        145.0
        ],
        "continued": false,
        "answer_space": {
@@ -258,7 +355,7 @@
         "dotted_lines": 2,
         "answer_line": "temperature increase of white card ΔθW =  …… °C",
         "working_gap_pt": 15.0,
-        "height_pt": 85.0
+        "height_pt": 85.2
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q02/question/0625_2026MJ_62_q02_b-i_s1.svg",
@@ -274,8 +371,10 @@
      "mark_scheme": [
       {
        "label": "2(b)(i)",
-       "text": "ΔθW = 7.5 (°C) and ΔθB = 13.5 (°C)\n1 error carried forward from 2(a)(ii)\nallow 7.50 and 13.50",
-       "codes": [],
+       "text": "Δθ = 7.5 (°C) and Δθ = 13.5 (°C)\nW\nB",
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 10,
@@ -294,6 +393,23 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Determine the temperature increase Δθbetween t = 0 and t = 4.0min for each card.",
+       "text": "Determine the temperature increase Δθbetween t = 0 and t = 4.0min for each card."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "temperature increase of black card ΔθB =",
+       "unit": "°C"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -305,7 +421,7 @@
         30.0,
         150.8,
         570.0,
-        346.7
+        347.0
        ],
        "continued": false,
        "answer_space": {
@@ -313,7 +429,7 @@
         "dotted_lines": 2,
         "answer_line": "rate of temperature increase of white card =  …… unit ……",
         "working_gap_pt": 72.9,
-        "height_pt": 195.8
+        "height_pt": 196.2
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q02/question/0625_2026MJ_62_q02_b-ii_s1.svg",
@@ -329,8 +445,12 @@
      "mark_scheme": [
       {
        "label": "2(b)(ii)",
-       "text": "1.875 and 3.375\n1 error carried forward from 2(b)(i)\nany significant figures, correctly rounded\naccept 0.03125 and 0.05625 (°C / s)\nboth rates to 2 significant figures\n1 accept any numbers to 2 significant figures\n°C / min\n1 accept °C / s not C° / min or C° / s\naccept minute not m or mins or sec or secs",
-       "codes": [],
+       "text": "1.875 and 3.375\nboth rates to 2 significant figures\n°C / min",
+       "codes": [
+        "1",
+        "1",
+        "1"
+       ],
        "segments": [
         {
          "page": 10,
@@ -349,6 +469,32 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the rate of temperature increase of each card. Use the equation:",
+       "text": "Calculate the rate of temperature increase of each card. Use the equation:"
+      },
+      {
+       "type": "text",
+       "html": "rate of temperature increase = \\(\\frac{Δθ}{t}\\).",
+       "text": "rate of temperature increase = (Δθ)/(t)."
+      },
+      {
+       "type": "text",
+       "html": "Give your answers to 2 significant figures. Include the unit in your answer.",
+       "text": "Give your answers to 2 significant figures. Include the unit in your answer."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "rate of temperature increase of black card ="
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
      ]
     }
    ],
@@ -363,7 +509,7 @@
       30.0,
       365.7,
       570.0,
-      476.7
+      477.0
      ],
      "continued": false,
      "answer_space": {
@@ -371,7 +517,7 @@
       "dotted_lines": 3,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 111.0
+      "height_pt": 111.3
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q02/question/0625_2026MJ_62_q02_c_s1.svg",
@@ -387,8 +533,11 @@
    "mark_scheme": [
     {
      "label": "2(c)",
-     "text": "temperature of black card increases more\n1 comment must match candidate’s values from 2(b)(ii)\n(quickly) / black (card) is a better absorber (than white\naccept black card has larger temperature change\ncard)\nignore reference to emission\nvalues from table or rates quoted in the comparison\n1",
-     "codes": [],
+     "text": "temperature of black card increases more\n(quickly) / black (card) is a better absorber (than white\ncard)\nvalues from table or rates quoted in the comparison",
+     "codes": [
+      "1",
+      "1"
+     ],
      "segments": [
       {
        "page": 10,
@@ -407,6 +556,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write a conclusion which compares the <b>rates</b> of temperature increase of the two different coloured cards. Justify your answer using your values from 2(b)(ii).",
+     "text": "Write a conclusion which compares the rates of temperature increase of the two different coloured cards. Justify your answer using your values from 2(b)(ii)."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 3
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   },
   {
@@ -418,7 +583,7 @@
       30.0,
       495.7,
       570.0,
-      553.0
+      551.0
      ],
      "continued": false,
      "answer_space": {
@@ -426,7 +591,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 13.3,
-      "height_pt": 57.3
+      "height_pt": 55.3
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q02/question/0625_2026MJ_62_q02_d_s1.svg",
@@ -448,7 +613,7 @@
         30.0,
         559.0,
         570.0,
-        657.0
+        657.5
        ],
        "continued": false,
        "answer_space": {
@@ -456,7 +621,7 @@
         "dotted_lines": 3,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 98.0
+        "height_pt": 98.5
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q02/question/0625_2026MJ_62_q02_d-i_s1.svg",
@@ -472,8 +637,10 @@
      "mark_scheme": [
       {
        "label": "2(d)(i)",
-       "text": "the distance of each card from the lamp is not the same\n1 ignore starting temperatures are different",
-       "codes": [],
+       "text": "the distance of each card from the lamp is not the same",
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 10,
@@ -492,6 +659,22 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Suggest why the procedure does <b>not</b> produce a fair comparison.",
+       "text": "Suggest why the procedure does not produce a fair comparison."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 3
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -503,7 +686,7 @@
         30.0,
         663.0,
         570.0,
-        785.4
+        784.2
        ],
        "continued": false,
        "answer_space": {
@@ -511,7 +694,7 @@
         "dotted_lines": 3,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 122.4
+        "height_pt": 121.2
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p62/q02/question/0625_2026MJ_62_q02_d-ii_s1.svg",
@@ -527,8 +710,10 @@
      "mark_scheme": [
       {
        "label": "2(d)(ii)",
-       "text": "the black card was further away, but the temperature\n1\nincrease / rate of absorption was still greater / or reverse\nargument",
-       "codes": [],
+       "text": "the black card was further away, but the temperature\nincrease / rate of absorption was still greater / or reverse\nargument",
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 10,
@@ -547,10 +732,38 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "State why your conclusion in 2(c) would be the same, even if the comparison were fair.",
+       "text": "State why your conclusion in 2(c) would be the same, even if the comparison were fair."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 3
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     }
    ],
-   "path": "2(d)"
+   "path": "2(d)",
+   "content": [
+    {
+     "type": "text",
+     "html": "The temperature of each card increases as it absorbs thermal radiation.",
+     "text": "The temperature of each card increases as it absorbs thermal radiation."
+    },
+    {
+     "type": "text",
+     "html": "The procedure used does <b>not</b> produce a fair comparison of the absorbing properties of the two different coloured cards.",
+     "text": "The procedure used does not produce a fair comparison of the absorbing properties of the two different coloured cards."
+    }
+   ]
   }
  ],
  "total_marks": 11,
@@ -569,5 +782,37 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "A student compares the rates of temperature increase of two different coloured surfaces.",
+   "text": "A student compares the rates of temperature increase of two different coloured surfaces."
+  },
+  {
+   "type": "text",
+   "html": "The student uses two thermometers, one of which has a piece of white card attached to its bulb, and one of which has a piece of black card attached to its bulb. Both pieces of card <b>are</b> identical, except for the colour of their surfaces.",
+   "text": "The student uses two thermometers, one of which has a piece of white card attached to its bulb, and one of which has a piece of black card attached to its bulb. Both pieces of card are identical, except for the colour of their surfaces."
+  },
+  {
+   "type": "text",
+   "html": "The student clamps the thermometers so that the bulb of each thermometer is level with the filament of a lamp.",
+   "text": "The student clamps the thermometers so that the bulb of each thermometer is level with the filament of a lamp."
+  },
+  {
+   "type": "text",
+   "html": "The lamp is switched off.",
+   "text": "The lamp is switched off."
+  },
+  {
+   "type": "text",
+   "html": "Figure 2.1 shows the apparatus.",
+   "text": "Figure 2.1 shows the apparatus."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2026MJ_62_q02_fig2-1",
+   "caption": "Figure 2.1"
+  }
+ ]
 }

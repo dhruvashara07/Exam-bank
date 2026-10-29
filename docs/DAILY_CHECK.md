@@ -15,13 +15,20 @@ cd exam-bank && git pull -q --rebase
 python3 -c "import pymupdf, pikepdf, playwright" || pip install -r requirements.txt --break-system-packages
 ```
 Read `CLAUDE.md` and `PROGRESS.md` (especially "Daily check log" at the end: what was last checked).
+Original PDFs are not in git; they live in GitHub Releases (listed in `raw/manifest.json`). Fetch the ones
+you need before checking or re-cutting: `python3 pipeline/raw_store.py fetch 0625/2025-MJ/41 ...`
+(papers), `... fetch 2025` (a year) or `... fetch` (all, ~650 MB).
 If git clone/pull fails for access reasons, attach the repo (add_repo dhruvashara07/Exam-bank, push access).
 
 ## 2. What is new
 - `python3 pipeline/approve.py --pending` → papers waiting for a check.
 - `gh run list --limit 5` (or the GitHub API) → did the last "Question bank" Action runs succeed? A failure
   in the Cloudinary/MongoDB steps right after setup usually means a missing secret; report it, don't guess.
-- Review page https://claude.ai/artifact/LGic38rQwKjkZze9jL1zmq: read the newest feedback collection
+- Dhruv's reports from the review website (https://dhruvashara07.github.io/Exam-bank/, "Report a problem"):
+  open issues labelled `review`: `gh api "repos/dhruvashara07/Exam-bank/issues?labels=review&state=open"`
+  (REST only; `gh issue list` uses GraphQL, which is blocked). Each names a question id and what is wrong.
+  When fixed, say so in the log; Dhruv closes the issue (or ask him to).
+- Old review page https://claude.ai/artifact/LGic38rQwKjkZze9jL1zmq: read the newest feedback collection
   (`feedback`, `feedback_r2`, ... — doc id = question id, fields verdict/note) with ArtifactData. Anything
   marked wrong since the last log entry is work to do.
 - `ls inbox/` — files left there have names the filer did not understand: rename them in raw/ by hand
@@ -30,6 +37,9 @@ If git clone/pull fails for access reasons, attach the repo (add_repo dhruvashar
 If nothing is pending, no feedback is new and the Action is fine: add one log line, `pipeline/push.sh`, stop. No notification.
 
 ## 3. Check each pending paper
+Backlog (2015–2024, ~410 papers, all automatic checks clean on 2026-10-29): check and approve **up to 40
+papers per run**, oldest year first, after the new uploads. Fetch their PDFs first (`raw_store.py fetch`).
+
 `python3 pipeline/check.py` (or with paper ids). It prints, per paper: marks found vs cover total, flagged
 items, uncovered ink, and writes contact sheets `out/check/<paper>/sheet_NN.jpg`.
 Each sheet row = original page (uncleaned, so barcodes appear there; boxes = how it was cut) | rebuilt
@@ -44,7 +54,11 @@ question | figures. **Open and look at every sheet** (Read the jpg). Check:
 
 ## 4. Fix, don't patch
 - Fix problems in the pipeline so they are fixed for every paper, not by editing one JSON.
-- After a pipeline change: re-run **all** papers (`python3 pipeline/run.py`, ~3.5 min for 66), then
+- Each question has two copies: the exact SVG pieces (the master, what students see) and an editable
+  `content` layer (text with bold/italic/sub/sup/LaTeX fractions, tables, figure references, answer
+  space, options) built by `pipeline/editable.py`. Check the editable view on the website (Side by side)
+  for a few questions per paper; `python3 pipeline/editable.py <paper ids>` rebuilds only that layer.
+- After a pipeline change: re-run **all** papers (`python3 pipeline/run.py`, ~25 min for 477 papers; fetch all PDFs first), then
   compare with before: marks still match everywhere (`grep -v` the run log), `python3 pipeline/coverage.py`,
   and look at sheets of a sample of changed questions (figure counts, sizes). A full re-run makes every
   paper pending: re-approve the ones whose output did not change in substance, with a note.

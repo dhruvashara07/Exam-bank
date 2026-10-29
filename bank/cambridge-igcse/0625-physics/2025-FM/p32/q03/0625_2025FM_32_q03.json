@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    252.9
+    253.0
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 84.3,
-    "height_pt": 193.1
+    "height_pt": 193.2
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2025-FM/p32/q03/question/0625_2025FM_32_q03_stem_s1.svg",
@@ -82,7 +82,7 @@
       30.0,
       258.9,
       570.0,
-      330.9
+      331.0
      ],
      "continued": false,
      "answer_space": {
@@ -90,7 +90,7 @@
       "dotted_lines": 2,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 72.0
+      "height_pt": 72.1
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-FM/p32/q03/question/0625_2025FM_32_q03_a_s1.svg",
@@ -128,6 +128,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Explain why the solid cone in Fig. 3.1 is more stable than the solid cuboid.",
+     "text": "Explain why the solid cone in Fig. 3.1 is more stable than the solid cuboid."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -139,7 +155,7 @@
       30.0,
       336.9,
       570.0,
-      486.9
+      487.0
      ],
      "continued": false,
      "answer_space": {
@@ -147,7 +163,7 @@
       "dotted_lines": 1,
       "answer_line": "pressure on ground =  …… N / cm2 [3]",
       "working_gap_pt": 78.3,
-      "height_pt": 150.0
+      "height_pt": 150.1
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-FM/p32/q03/question/0625_2025FM_32_q03_b_s1.svg",
@@ -163,9 +179,11 @@
    "mark_scheme": [
     {
      "label": "3(b)",
-     "text": "(P =) 1.5 (N / cm2)\n(P =) 48 ÷ 32\n(P =) F ÷ A",
+     "text": "(P =) 1.5 (N / cm )\n2\n(P =) 48 ÷ 32\n(P =) F ÷ A",
      "codes": [
-      "A3"
+      "A3",
+      "(C2)",
+      "(C1)"
      ],
      "segments": [
       {
@@ -185,6 +203,28 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The weight of the solid cuboid is 48N. The area of the solid cuboid in contact with the ground is 32cm<sup>2</sup>.",
+     "text": "The weight of the solid cuboid is 48N. The area of the solid cuboid in contact with the ground is 32cm2."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the pressure exerted by the solid cuboid on the ground.",
+     "text": "Calculate the pressure exerted by the solid cuboid on the ground."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "pressure on ground =",
+     "unit": "N/cm2"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   },
   {
@@ -196,7 +236,7 @@
       30.0,
       492.9,
       570.0,
-      788.6
+      789.0
      ],
      "continued": false,
      "answer_space": {
@@ -204,7 +244,7 @@
       "dotted_lines": 1,
       "answer_line": "moment =  …… N cm [3]",
       "working_gap_pt": 67.0,
-      "height_pt": 295.7
+      "height_pt": 296.1
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-FM/p32/q03/question/0625_2025FM_32_q03_c_s1.svg",
@@ -220,9 +260,11 @@
    "mark_scheme": [
     {
      "label": "3(c)",
-     "text": "(moment =) 270 (Ncm)\n(moment =) 15 × 18\nmoment = force × (perp.) distance (from pivot)",
+     "text": "(moment =) 270 (Ncm)\n(moment =) 15 × 18\nmoment = force × (perp.) distance (from pivot)",
      "codes": [
-      "A3"
+      "A3",
+      "(C2)",
+      "(C1)"
      ],
      "segments": [
       {
@@ -241,6 +283,33 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A horizontal force of 15N tilts the solid cone, as shown in Fig. 3.2.",
+     "text": "A horizontal force of 15N tilts the solid cone, as shown in Fig. 3.2."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2025FM_32_q03c_fig3-2",
+     "caption": "Fig. 3.2"
+    },
+    {
+     "type": "text",
+     "html": "Calculate the moment of the 15N force about the pivot.",
+     "text": "Calculate the moment of the 15N force about the pivot."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "moment =",
+     "unit": "Ncm"
+    },
+    {
+     "type": "marks",
+     "value": 3
     }
    ]
   }
@@ -261,5 +330,17 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "Fig. 3.1 shows a cross-section through the centre of a solid cone and a cross-section through the centre of a solid cuboid. The cone and the cuboid are placed on the ground as shown in Fig. 3.1. The solid cone is more stable than the solid cuboid. The symbol × indicates the position of the centre of gravity of each object.",
+   "text": "Fig. 3.1 shows a cross-section through the centre of a solid cone and a cross-section through the centre of a solid cuboid. The cone and the cuboid are placed on the ground as shown in Fig. 3.1. The solid cone is more stable than the solid cuboid. The symbol × indicates the position of the centre of gravity of each object."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2025FM_32_q03_fig3-1",
+   "caption": "Fig. 3.1"
+  }
+ ]
 }

@@ -58,7 +58,7 @@
       30.0,
       59.8,
       570.0,
-      441.6
+      442.0
      ],
      "continued": false,
      "answer_space": {
@@ -66,7 +66,7 @@
       "dotted_lines": 6,
       "answer_line": null,
       "working_gap_pt": 72.3,
-      "height_pt": 381.8
+      "height_pt": 382.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-FM/p32/q02/question/0625_2025FM_32_q02_a_s1.svg",
@@ -82,7 +82,7 @@
    "mark_scheme": [
     {
      "label": "2(a)",
-     "text": "Any two from:\nidea of using measuring cylinder to measure (liquid) volume\nmeasure mass of cylinder / beaker empty / with liquid\nmeasure (any) mass with balance\nAny one from:\nidea of subtracting mass of empty beaker\nuse of density = mass ÷ volume",
+     "text": "Any two from:\nidea of using measuring cylinder to measure (liquid) volume\nmeasure mass of cylinder / beaker empty / with liquid\nmeasure (any) mass with balance\nAny one from:\nidea of subtracting mass of empty beaker\nuse of density = mass ÷ volume",
      "codes": [
       "B2",
       "B1"
@@ -105,6 +105,32 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A student determines the density of a liquid, by using the equipment shown in Fig. 2.1.",
+     "text": "A student determines the density of a liquid, by using the equipment shown in Fig. 2.1."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2025FM_32_q02a_fig2-1",
+     "caption": "Fig. 2.1"
+    },
+    {
+     "type": "text",
+     "html": "Describe how the student uses the equipment to determine the density of the liquid.",
+     "text": "Describe how the student uses the equipment to determine the density of the liquid."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 6
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   },
   {
@@ -116,7 +142,7 @@
       30.0,
       447.6,
       570.0,
-      778.4
+      778.5
      ],
      "continued": false,
      "answer_space": {
@@ -124,7 +150,7 @@
       "dotted_lines": 1,
       "answer_line": "mass =  …… g [4]",
       "working_gap_pt": 106.0,
-      "height_pt": 330.8
+      "height_pt": 330.9
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-FM/p32/q02/question/0625_2025FM_32_q02_b_s1.svg",
@@ -140,9 +166,12 @@
    "mark_scheme": [
     {
      "label": "2(b)",
-     "text": "(mass =) 96 (g)\n(mass =) 8(.0) × 12\n(mass =) density × volume\n(volume of block =) 2 × 2 × 3 OR 12 (cm3)",
+     "text": "(mass =) 96 (g)\n(mass =) 8(.0) × 12\n(mass =) density × volume\n(volume of block =) 2 × 2 × 3 OR 12 (cm )\n3",
      "codes": [
-      "A4"
+      "A4",
+      "(C3)",
+      "(C1)",
+      "(C1)"
      ],
      "segments": [
       {
@@ -161,6 +190,38 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Fig. 2.2 shows a metal block.",
+     "text": "Fig. 2.2 shows a metal block."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2025FM_32_q02b_fig2-2",
+     "caption": "Fig. 2.2"
+    },
+    {
+     "type": "text",
+     "html": "The density of the metal is 8.0g/cm<sup>3</sup>.",
+     "text": "The density of the metal is 8.0g/cm3."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the mass of the metal block.",
+     "text": "Calculate the mass of the metal block."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "mass =",
+     "unit": "g"
+    },
+    {
+     "type": "marks",
+     "value": 4
     }
    ]
   }

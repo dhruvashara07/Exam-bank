@@ -89,5 +89,53 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "Two rays of light are different colours.",
+   "text": "Two rays of light are different colours."
+  },
+  {
+   "type": "text",
+   "html": "Which row is correct?",
+   "text": "Which row is correct?"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "",
+     "<b>speeds of the two</b>",
+     "<b>wavelengths of the two</b>"
+    ],
+    [
+     "",
+     "<b>colours in a vacuum</b>",
+     "<b>colours in a vacuum</b>"
+    ],
+    [
+     "<b>A</b>",
+     "different",
+     "different"
+    ],
+    [
+     "<b>B</b>",
+     "different",
+     "the same"
+    ],
+    [
+     "<b>C</b>",
+     "the same",
+     "different"
+    ],
+    [
+     "<b>D</b>",
+     "the same",
+     "the same"
+    ]
+   ],
+   "options": true
+  }
+ ]
 }

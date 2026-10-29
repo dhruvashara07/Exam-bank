@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    292.1
+    290.0
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 76.4,
-    "height_pt": 232.3
+    "height_pt": 230.2
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p53/q01/question/0625_2026MJ_53_q01_stem_s1.svg",
@@ -33,8 +33,8 @@
    "caption": "Figure 1.1",
    "page": 2,
    "bbox": [
-    69.3,
-    86.8,
+    69.5,
+    111.3,
     276.1,
     264.1
    ],
@@ -45,7 +45,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p53/q01/figures/0625_2026MJ_53_q01_fig1-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p53/q01/figures/0625_2026MJ_53_q01_fig1-1",
     "url": null,
-    "kb": 18.0
+    "kb": 12.0
    }
   }
  ],
@@ -69,7 +69,7 @@
         30.0,
         298.1,
         570.0,
-        422.1
+        422.5
        ],
        "continued": false,
        "answer_space": {
@@ -77,7 +77,7 @@
         "dotted_lines": 3,
         "answer_line": "l =  …… cm",
         "working_gap_pt": 15.0,
-        "height_pt": 124.0
+        "height_pt": 124.4
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p53/q01/question/0625_2026MJ_53_q01_a-i_s1.svg",
@@ -93,8 +93,11 @@
      "mark_scheme": [
       {
        "label": "1(a)(i)",
-       "text": "all dimensions present\n1 any three numbers\nall values recorded to the nearest millimetre\n1",
-       "codes": [],
+       "text": "all dimensions present\nall values recorded to the nearest millimetre",
+       "codes": [
+        "1",
+        "1"
+       ],
        "segments": [
         {
          "page": 8,
@@ -113,6 +116,28 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Measure the length l, the width w and the height h of your wooden block in centimetres",
+       "text": "Measure the length l, the width w and the height h of your wooden block in centimetres"
+      },
+      {
+       "type": "text",
+       "html": "to the nearest millimetre.",
+       "text": "to the nearest millimetre."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "h =",
+       "unit": "cm"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     },
     {
@@ -124,7 +149,7 @@
         30.0,
         428.1,
         570.0,
-        536.8
+        535.0
        ],
        "continued": false,
        "answer_space": {
@@ -132,7 +157,7 @@
         "dotted_lines": 1,
         "answer_line": "VB =  …… cm3 [1]",
         "working_gap_pt": 43.4,
-        "height_pt": 108.7
+        "height_pt": 106.9
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p53/q01/question/0625_2026MJ_53_q01_a-ii_s1.svg",
@@ -148,8 +173,10 @@
      "mark_scheme": [
       {
        "label": "1(a)(ii)",
-       "text": "VB calculation correct\n1 any significant figures > 1, ignore rounding",
-       "codes": [],
+       "text": "VB calculation correct",
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 8,
@@ -167,6 +194,28 @@
          }
         }
        ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the volume V<sub>B</sub> of the wooden block. Use the equation:",
+       "text": "Calculate the volume VB of the wooden block. Use the equation:"
+      },
+      {
+       "type": "text",
+       "html": "V<sub>B</sub> = l × w × h.",
+       "text": "VB = l × w × h."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "VB =",
+       "unit": "cm3"
+      },
+      {
+       "type": "marks",
+       "value": 1
       }
      ]
     }
@@ -188,7 +237,7 @@
         30.0,
         552.5,
         570.0,
-        598.5
+        599.0
        ],
        "continued": false,
        "answer_space": {
@@ -196,7 +245,7 @@
         "dotted_lines": 1,
         "answer_line": "M =  …… g [1]",
         "working_gap_pt": 15.0,
-        "height_pt": 46.0
+        "height_pt": 46.5
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p53/q01/question/0625_2026MJ_53_q01_b-i_s1.svg",
@@ -212,8 +261,10 @@
      "mark_scheme": [
       {
        "label": "1(b)(i)",
-       "text": "M recorded to the nearest g\n1",
-       "codes": [],
+       "text": "M recorded to the nearest g",
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 8,
@@ -232,6 +283,23 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use the balance provided to measure the mass M of the block to the nearest gram.",
+       "text": "Use the balance provided to measure the mass M of the block to the nearest gram."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "M =",
+       "unit": "g"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -243,7 +311,7 @@
         30.0,
         604.5,
         570.0,
-        754.5
+        753.0
        ],
        "continued": false,
        "answer_space": {
@@ -251,7 +319,7 @@
         "dotted_lines": 1,
         "answer_line": "ρ1 =  …… g / cm3 [1]",
         "working_gap_pt": 66.4,
-        "height_pt": 150.0
+        "height_pt": 148.5
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p53/q01/question/0625_2026MJ_53_q01_b-ii_s1.svg",
@@ -264,9 +332,9 @@
        "page": 3,
        "bbox": [
         30.0,
-        59.8,
+        60.5,
         570.0,
-        131.8
+        132.0
        ],
        "continued": true,
        "answer_space": {
@@ -274,7 +342,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 72.0
+        "height_pt": 71.5
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p53/q01/question/0625_2026MJ_53_q01_b-ii_s2.svg",
@@ -290,8 +358,10 @@
      "mark_scheme": [
       {
        "label": "1(b)(ii)",
-       "text": "ρ1 calculation correct\n1 any significant figures > 1, ignore rounding",
-       "codes": [],
+       "text": "ρ calculation correct\n1",
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 8,
@@ -309,6 +379,43 @@
          }
         }
        ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate a value ρ<sub>1</sub> for the density of the block. Use your results from 1(a)(ii) and 1(b)(i) and the equation:",
+       "text": "Calculate a value ρ1 for the density of the block. Use your results from 1(a)(ii) and 1(b)(i) and the equation:"
+      },
+      {
+       "type": "text",
+       "html": "\\(\\frac{M}{V}\\) ρ<sub>1</sub> = . <sub>B</sub>",
+       "text": "(M)/(V) ρ1 = . B"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "ρ1 =",
+       "unit": "g/cm3"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      },
+      {
+       "type": "text",
+       "html": "<b>Method</b> <b>2</b>",
+       "text": "Method 2"
+      },
+      {
+       "type": "text",
+       "html": "You <b>are</b> provided with two beakers, X and Y. Each beaker contains 200cm<sup>3</sup> of water.",
+       "text": "You are provided with two beakers, X and Y. Each beaker contains 200cm3 of water."
+      },
+      {
+       "type": "text",
+       "html": "You <b>are</b> also provided with a measuring cylinder containing water.",
+       "text": "You are also provided with a measuring cylinder containing water."
       }
      ]
     }
@@ -330,7 +437,7 @@
         30.0,
         150.8,
         570.0,
-        200.1
+        198.5
        ],
        "continued": false,
        "answer_space": {
@@ -338,13 +445,13 @@
         "dotted_lines": 1,
         "answer_line": "V1 =  …… cm3 [1]",
         "working_gap_pt": 10.1,
-        "height_pt": 49.3
+        "height_pt": 47.7
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p53/q01/question/0625_2026MJ_53_q01_c-i_s1.svg",
         "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p53/q01/question/0625_2026MJ_53_q01_c-i_s1",
         "url": null,
-        "kb": 28.7
+        "kb": 28.8
        }
       }
      ],
@@ -354,8 +461,10 @@
      "mark_scheme": [
       {
        "label": "1(c)(i)",
-       "text": "V1 = (80 ± 2) cm3\n1 accept 80.0 etc.",
-       "codes": [],
+       "text": "V1 = (80 ± 2) cm\n3",
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 8,
@@ -374,6 +483,23 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Measure the initial volume V<sub>1</sub> of water in the <b>measuring</b> cylinder.",
+       "text": "Measure the initial volume V1 of water in the measuring cylinder."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V1 =",
+       "unit": "cm3"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -385,7 +511,7 @@
         30.0,
         202.8,
         570.0,
-        437.0
+        437.5
        ],
        "continued": false,
        "answer_space": {
@@ -393,7 +519,7 @@
         "dotted_lines": 2,
         "answer_line": "V2 =  …… cm3",
         "working_gap_pt": 29.3,
-        "height_pt": 234.2
+        "height_pt": 234.7
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p53/q01/question/0625_2026MJ_53_q01_c-ii_s1.svg",
@@ -409,8 +535,10 @@
      "mark_scheme": [
       {
        "label": "1(c)(ii)",
-       "text": "V2 present and V calculation correct\n1 accept 1 significant figure",
-       "codes": [],
+       "text": "V2 present and V calculation correct",
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 8,
@@ -429,6 +557,41 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "list",
+       "items": [
+        "Place the wooden block onto the surface of the water in beaker X. The level of the water in beaker X rises as the wooden block displaces water and floats.",
+        "Place beaker Y as close as possible to beaker X.",
+        "Slowly pour water from the measuring cylinder into beaker Y until the level of the water in beaker Y is the same as the level of the water in beaker X."
+       ]
+      },
+      {
+       "type": "text",
+       "html": "Measure the volume V<sub>2</sub> of water remaining in the measuring cylinder.",
+       "text": "Measure the volume V2 of water remaining in the measuring cylinder."
+      },
+      {
+       "type": "text",
+       "html": "Determine a value for the volume V of water displaced by the block. Use the equation:",
+       "text": "Determine a value for the volume V of water displaced by the block. Use the equation:"
+      },
+      {
+       "type": "text",
+       "html": "V = V<sub>1</sub> – V<sub>2</sub>.",
+       "text": "V = V1 – V2."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V =",
+       "unit": "cm3"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     }
    ],
@@ -443,7 +606,7 @@
       30.0,
       456.0,
       570.0,
-      659.2
+      657.5
      ],
      "continued": false,
      "answer_space": {
@@ -451,7 +614,7 @@
       "dotted_lines": 1,
       "answer_line": "ρ2 =  …… g / cm3 [1]",
       "working_gap_pt": 86.0,
-      "height_pt": 203.2
+      "height_pt": 201.5
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p53/q01/question/0625_2026MJ_53_q01_d_s1.svg",
@@ -467,8 +630,10 @@
    "mark_scheme": [
     {
      "label": "1(d)",
-     "text": "ρ2 calculation correct\n1 any significant figures, ignore rounding",
-     "codes": [],
+     "text": "ρ calculation correct\n2",
+     "codes": [
+      "1"
+     ],
      "segments": [
       {
        "page": 8,
@@ -487,6 +652,38 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A second value ρ<sub>2</sub> for the density of the block can be calculated using the equation:",
+     "text": "A second value ρ2 for the density of the block can be calculated using the equation:"
+    },
+    {
+     "type": "text",
+     "html": "\\(\\frac{kV}{V}\\) ρ<sub>2</sub> = <sub>B</sub>",
+     "text": "(kV)/(V) ρ2 = B"
+    },
+    {
+     "type": "text",
+     "html": "where k = 1.0g/cm<sup>3</sup>.",
+     "text": "where k = 1.0g/cm3."
+    },
+    {
+     "type": "text",
+     "html": "Use your answers to 1(c)(ii) and 1(a)(ii) to calculate ρ<sub>2</sub>.",
+     "text": "Use your answers to 1(c)(ii) and 1(a)(ii) to calculate ρ2."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "ρ2 =",
+     "unit": "g/cm3"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -498,7 +695,7 @@
       30.0,
       59.8,
       570.0,
-      292.5
+      293.0
      ],
      "continued": false,
      "answer_space": {
@@ -506,7 +703,7 @@
       "dotted_lines": 1,
       "answer_line": null,
       "working_gap_pt": 84.7,
-      "height_pt": 232.7
+      "height_pt": 233.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p53/q01/question/0625_2026MJ_53_q01_e_s1.svg",
@@ -522,8 +719,11 @@
    "mark_scheme": [
     {
      "label": "1(e)",
-     "text": "statement matches results\n1\ncorrect calculation to support the statement using both\n1 i.e., values used to show that the difference between the\nvalues of ρ\nvalues is < 10% of either, or the ratio of the values is ⩾ 0.9\n(90%)\na correct calculation, but an incorrect statement can get the\nsecond mark\nif both values are identical then the statement ‘the values\nare the same’ scores both marks, without the need for a\ncalculation",
-     "codes": [],
+     "text": "statement matches results\ncorrect calculation to support the statement using both\nvalues of ρ",
+     "codes": [
+      "1",
+      "1"
+     ],
      "segments": [
       {
        "page": 8,
@@ -542,6 +742,37 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Two quantities can be considered to be equal within the limits of experimental accuracy if their values are within 10% of each other.",
+     "text": "Two quantities can be considered to be equal within the limits of experimental accuracy if their values are within 10% of each other."
+    },
+    {
+     "type": "text",
+     "html": "State whether your values of ρ<sub>1</sub> from method 1 and ρ<sub>2</sub> from method 2 can be considered equal.",
+     "text": "State whether your values of ρ1 from method 1 and ρ2 from method 2 can be considered equal."
+    },
+    {
+     "type": "text",
+     "html": "Support your statement with a calculation.",
+     "text": "Support your statement with a calculation."
+    },
+    {
+     "type": "text",
+     "html": "calculation",
+     "text": "calculation"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "statement"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   },
   {
@@ -553,7 +784,7 @@
       30.0,
       311.5,
       570.0,
-      422.5
+      423.0
      ],
      "continued": false,
      "answer_space": {
@@ -561,7 +792,7 @@
       "dotted_lines": 2,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 111.0
+      "height_pt": 111.5
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p53/q01/question/0625_2026MJ_53_q01_f_s1.svg",
@@ -577,8 +808,10 @@
    "mark_scheme": [
     {
      "label": "1(f)",
-     "text": "(lowered head and) observes both surfaces at eye\n1 accept lowers head and looks at (both) surfaces\nlevel / perpendicularly\n(there must be an indication of both surfaces being\nobserved)\naccept uses a pipette to add a small volume of water (at a\ntime)\naccept uses a ruler and set square\naccept uses a ruler to measure height of water in both\nbeakers\naccept uses a fiducial aid if explained\nignore pours water (into beaker) slowly\nignore puts beakers close together\nignore references to meniscus / scale",
-     "codes": [],
+     "text": "(lowered head and) observes both surfaces at eye\nlevel / perpendicularly",
+     "codes": [
+      "1"
+     ],
      "segments": [
       {
        "page": 9,
@@ -596,6 +829,22 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "State <b>one</b> technique that you use in 1(c)(ii) of method 2 to ensure that the levels of the water in beakers X and Y are the same.",
+     "text": "State one technique that you use in 1(c)(ii) of method 2 to ensure that the levels of the water in beakers X and Y are the same."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 1
     }
    ]
   }
@@ -616,5 +865,27 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "In this experiment, you will determine the density of a wooden block by two different methods.",
+   "text": "In this experiment, you will determine the density of a wooden block by two different methods."
+  },
+  {
+   "type": "text",
+   "html": "<b>Refer</b> to Figure 1.1.",
+   "text": "Refer to Figure 1.1."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2026MJ_53_q01_fig1-1",
+   "caption": "Figure 1.1"
+  },
+  {
+   "type": "text",
+   "html": "<b>Method</b> <b>1</b>",
+   "text": "Method 1"
+  }
+ ]
 }

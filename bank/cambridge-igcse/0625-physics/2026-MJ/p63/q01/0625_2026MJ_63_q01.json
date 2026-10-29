@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    131.8
+    129.5
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 15.0,
-    "height_pt": 72.0
+    "height_pt": 69.7
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q01/question/0625_2026MJ_63_q01_stem_s1.svg",
@@ -52,8 +52,8 @@
    "caption": "Figure 1.2",
    "page": 2,
    "bbox": [
-    114.7,
-    459.5,
+    184.7,
+    484.1,
     411.6,
     684.4
    ],
@@ -64,15 +64,15 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q01/figures/0625_2026MJ_63_q01aii_fig1-2.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p63/q01/figures/0625_2026MJ_63_q01aii_fig1-2",
     "url": null,
-    "kb": 355.5
+    "kb": 351.9
    }
   },
   {
    "caption": "Figure 1.3",
    "page": 2,
    "bbox": [
-    114.7,
-    459.5,
+    184.7,
+    484.1,
     411.6,
     684.4
    ],
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q01/figures/0625_2026MJ_63_q01aii_fig1-3.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p63/q01/figures/0625_2026MJ_63_q01aii_fig1-3",
     "url": null,
-    "kb": 355.5
+    "kb": 351.9
    }
   },
   {
@@ -126,7 +126,7 @@
         30.0,
         137.8,
         570.0,
-        377.7
+        376.0
        ],
        "continued": false,
        "answer_space": {
@@ -134,7 +134,7 @@
         "dotted_lines": 1,
         "answer_line": "m1 =  …… g [1]",
         "working_gap_pt": 127.6,
-        "height_pt": 239.9
+        "height_pt": 238.2
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q01/question/0625_2026MJ_63_q01_a-i_s1.svg",
@@ -150,8 +150,10 @@
      "mark_scheme": [
       {
        "label": "1(a)(i)",
-       "text": "(m1 =) 8.9 (g)\n1 cao",
-       "codes": [],
+       "text": "(m1 =) 8.9 (g)",
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 8,
@@ -170,6 +172,38 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The student measures the mass m<sub>1</sub> of <b>one</b> coin.",
+       "text": "The student measures the mass m1 of one coin."
+      },
+      {
+       "type": "text",
+       "html": "The reading on the balance is shown in Figure 1.1.",
+       "text": "The reading on the balance is shown in Figure 1.1."
+      },
+      {
+       "type": "figure",
+       "id": "0625_2026MJ_63_q01ai_fig1-1",
+       "caption": "Figure 1.1"
+      },
+      {
+       "type": "text",
+       "html": "Record the mass of the coin to <b>two</b> significant figures.",
+       "text": "Record the mass of the coin to two significant figures."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "m1 =",
+       "unit": "g"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -181,7 +215,7 @@
         30.0,
         380.4,
         570.0,
-        777.4
+        777.5
        ],
        "continued": false,
        "answer_space": {
@@ -189,7 +223,7 @@
         "dotted_lines": 2,
         "answer_line": "initial reading =  …… cm3",
         "working_gap_pt": 32.9,
-        "height_pt": 397.0
+        "height_pt": 397.1
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q01/question/0625_2026MJ_63_q01_a-ii_s1.svg",
@@ -205,8 +239,10 @@
      "mark_scheme": [
       {
        "label": "1(a)(ii)",
-       "text": "(initial reading =) 11(.0) (cm3) and (final reading =) 17(.0)\n1 cao\n(cm3)",
-       "codes": [],
+       "text": "(initial reading =) 11(.0) (cm ) and (final reading =) 17(.0)\n3\n3\n(cm )",
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 8,
@@ -225,6 +261,48 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The student slowly lowers the five coins into a measuring cylinder until they <b>are</b> completely covered with water.",
+       "text": "The student slowly lowers the five coins into a measuring cylinder until they are completely covered with water."
+      },
+      {
+       "type": "text",
+       "html": "Figure 1.2 shows the initial volume of water in the measuring cylinder.",
+       "text": "Figure 1.2 shows the initial volume of water in the measuring cylinder."
+      },
+      {
+       "type": "text",
+       "html": "Figure 1.3 shows the final reading on the measuring cylinder after the coins have been lowered in.",
+       "text": "Figure 1.3 shows the final reading on the measuring cylinder after the coins have been lowered in."
+      },
+      {
+       "type": "figure",
+       "id": "0625_2026MJ_63_q01aii_fig1-2",
+       "caption": "Figure 1.2"
+      },
+      {
+       "type": "figure",
+       "id": "0625_2026MJ_63_q01aii_fig1-3",
+       "caption": "Figure 1.3"
+      },
+      {
+       "type": "text",
+       "html": "Record the initial and final readings on the measuring cylinder.",
+       "text": "Record the initial and final readings on the measuring cylinder."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "final reading =",
+       "unit": "cm3"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -236,7 +314,7 @@
         30.0,
         59.8,
         570.0,
-        194.4
+        192.5
        ],
        "continued": false,
        "answer_space": {
@@ -244,7 +322,7 @@
         "dotted_lines": 1,
         "answer_line": "V1 =  …… cm3 [1]",
         "working_gap_pt": 62.4,
-        "height_pt": 134.5
+        "height_pt": 132.7
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q01/question/0625_2026MJ_63_q01_a-iii_s1.svg",
@@ -260,8 +338,10 @@
      "mark_scheme": [
       {
        "label": "1(a)(iii)",
-       "text": "(V1 =) 1.2 (cm3)\n1 ecf 1(a)(ii), any significant figures > 1, ignore rounding",
-       "codes": [],
+       "text": "(V1 =) 1.2 (cm )\n3",
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 8,
@@ -280,6 +360,28 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the volume V<sub>1</sub> of <b>one</b> coin. Use your values from 1(a)(ii) and the equation:",
+       "text": "Calculate the volume V1 of one coin. Use your values from 1(a)(ii) and the equation:"
+      },
+      {
+       "type": "text",
+       "html": "V<sub>1</sub> = \\(\\frac{finalreading–initialreading}{5}\\).",
+       "text": "V1 = (finalreading–initialreading)/(5)."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V1 =",
+       "unit": "cm3"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -291,7 +393,7 @@
         30.0,
         197.1,
         570.0,
-        308.1
+        308.5
        ],
        "continued": false,
        "answer_space": {
@@ -299,7 +401,7 @@
         "dotted_lines": 2,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 111.0
+        "height_pt": 111.4
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q01/question/0625_2026MJ_63_q01_a-iv_s1.svg",
@@ -315,8 +417,10 @@
      "mark_scheme": [
       {
        "label": "1(a)(iv)",
-       "text": "view scale perpendicularly / view bottom of meniscus\n1 accept view scale at eye level",
-       "codes": [],
+       "text": "view scale perpendicularly / view bottom of meniscus",
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 8,
@@ -335,6 +439,27 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Describe <b>one</b> technique for measuring the volume of water in the measuring cylinder to ensure an accurate reading.",
+       "text": "Describe one technique for measuring the volume of water in the measuring cylinder to ensure an accurate reading."
+      },
+      {
+       "type": "text",
+       "html": "You may draw on Figure 1.2.",
+       "text": "You may draw on Figure 1.2."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -346,7 +471,7 @@
         30.0,
         314.1,
         570.0,
-        487.6
+        486.0
        ],
        "continued": false,
        "answer_space": {
@@ -354,7 +479,7 @@
         "dotted_lines": 1,
         "answer_line": "ρ1 =  …… unit …… [2]",
         "working_gap_pt": 70.0,
-        "height_pt": 173.5
+        "height_pt": 171.9
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q01/question/0625_2026MJ_63_q01_a-v_s1.svg",
@@ -367,17 +492,17 @@
        "page": 4,
        "bbox": [
         30.0,
-        59.8,
+        60.5,
         570.0,
-        79.8
+        77.5
        ],
        "continued": true,
        "answer_space": {
         "kind": "none",
         "dotted_lines": 0,
         "answer_line": null,
-        "working_gap_pt": 4.0,
-        "height_pt": 20.0
+        "working_gap_pt": 3.3,
+        "height_pt": 17.0
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q01/question/0625_2026MJ_63_q01_a-v_s2.svg",
@@ -393,8 +518,12 @@
      "mark_scheme": [
       {
        "label": "1(a)(v)",
-       "text": "(ρ1 =) 7.4\n1 ecf 1(a)(i) and 1(a)(ii), accept use of 8.89 for m1\nany significant figures > 1, ignore rounding\ng / cm3\n1\naccept correct conversion to kg / m3",
-       "codes": [],
+       "text": "(ρ1 =) 7.4\ng / cm\n3",
+       "codes": [
+        "1",
+        "1",
+        "3"
+       ],
        "segments": [
         {
          "page": 8,
@@ -413,6 +542,42 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the density ρ<sub>1</sub> of one coin. Use your values from 1(a)(i) and 1(a)(iii) and the equation:",
+       "text": "Calculate the density ρ1 of one coin. Use your values from 1(a)(i) and 1(a)(iii) and the equation:"
+      },
+      {
+       "type": "text",
+       "html": "ρ<sub>1</sub> = \\(\\frac{m<sub>1</sub>}{V}\\).",
+       "text": "ρ1 = (m1)/(V)."
+      },
+      {
+       "type": "text",
+       "html": "<sub>1</sub>",
+       "text": "1"
+      },
+      {
+       "type": "text",
+       "html": "Include the unit.",
+       "text": "Include the unit."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "ρ1 ="
+      },
+      {
+       "type": "marks",
+       "value": 2
+      },
+      {
+       "type": "text",
+       "html": "Method 2",
+       "text": "Method 2"
+      }
      ]
     }
    ],
@@ -427,7 +592,7 @@
       30.0,
       85.8,
       570.0,
-      269.8
+      268.0
      ],
      "continued": false,
      "answer_space": {
@@ -435,7 +600,7 @@
       "dotted_lines": 1,
       "answer_line": "m5 =  …… g",
       "working_gap_pt": 28.8,
-      "height_pt": 183.9
+      "height_pt": 182.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q01/question/0625_2026MJ_63_q01_b_s1.svg",
@@ -457,7 +622,7 @@
         30.0,
         272.5,
         570.0,
-        321.8
+        320.0
        ],
        "continued": false,
        "answer_space": {
@@ -465,7 +630,7 @@
         "dotted_lines": 1,
         "answer_line": "h5 =  …… cm [1]",
         "working_gap_pt": 11.7,
-        "height_pt": 49.3
+        "height_pt": 47.5
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q01/question/0625_2026MJ_63_q01_b-i_s1.svg",
@@ -481,8 +646,10 @@
      "mark_scheme": [
       {
        "label": "1(b)(i)",
-       "text": "(h5 =) 1.4 (cm)\n1 accept 14 mm\ndo not accept 1.40 (cm) or 14.0 (mm)",
-       "codes": [],
+       "text": "(h5 =) 1.4 (cm)",
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 8,
@@ -501,6 +668,23 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Measure the height h<sub>5</sub> of the five coins in Figure 1.4.",
+       "text": "Measure the height h5 of the five coins in Figure 1.4."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "h5 =",
+       "unit": "cm"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -512,7 +696,7 @@
         30.0,
         324.5,
         570.0,
-        475.3
+        473.5
        ],
        "continued": false,
        "answer_space": {
@@ -520,7 +704,7 @@
         "dotted_lines": 1,
         "answer_line": "V5 =  …… cm3 [1]",
         "working_gap_pt": 59.4,
-        "height_pt": 150.9
+        "height_pt": 149.0
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q01/question/0625_2026MJ_63_q01_b-ii_s1.svg",
@@ -536,8 +720,10 @@
      "mark_scheme": [
       {
        "label": "1(b)(ii)",
-       "text": "6.3 (cm3)\n1 ecf 1(b)(ii), any significant figures > 1, correctly rounded",
-       "codes": [],
+       "text": "6.3 (cm )\n3",
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 8,
@@ -556,6 +742,33 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The radius r of each coin is 1.2cm.",
+       "text": "The radius r of each coin is 1.2cm."
+      },
+      {
+       "type": "text",
+       "html": "Calculate the volume V<sub>5</sub> of the five coins. Use your value from 1(b)(i) and the equation:",
+       "text": "Calculate the volume V5 of the five coins. Use your value from 1(b)(i) and the equation:"
+      },
+      {
+       "type": "text",
+       "html": "V<sub>5</sub> = π × r<sup>2</sup> × h<sub>5</sub>.",
+       "text": "V5 = π × r2 × h5."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "V5 =",
+       "unit": "cm3"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -567,7 +780,7 @@
         30.0,
         478.2,
         570.0,
-        625.8
+        624.0
        ],
        "continued": false,
        "answer_space": {
@@ -575,7 +788,7 @@
         "dotted_lines": 1,
         "answer_line": "ρ 2 =  …… [1]",
         "working_gap_pt": 60.7,
-        "height_pt": 147.5
+        "height_pt": 145.8
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q01/question/0625_2026MJ_63_q01_b-iii_s1.svg",
@@ -591,8 +804,11 @@
      "mark_scheme": [
       {
        "label": "1(b)(iii)",
-       "text": "(ρ2 =) 6.9 (g / cm3)\n1 ecf 1(b)(ii), any significant figures > 1\nignore unit, ignore rounding\naccept correct conversion to kg / m3 if unit is stated",
-       "codes": [],
+       "text": "(ρ2 =) 6.9 (g / cm )\n3",
+       "codes": [
+        "1",
+        "3"
+       ],
        "segments": [
         {
          "page": 8,
@@ -611,10 +827,69 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate another value ρ<sub>2</sub> for the density of one coin. Use the values from 1(b) and the equation:",
+       "text": "Calculate another value ρ2 for the density of one coin. Use the values from 1(b) and the equation:"
+      },
+      {
+       "type": "text",
+       "html": "ρ<sub>2</sub> = \\(\\frac{m<sub>5</sub>}{V}\\).",
+       "text": "ρ2 = (m5)/(V)."
+      },
+      {
+       "type": "text",
+       "html": "<sub>5</sub>",
+       "text": "5"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "ρ2 ="
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     }
    ],
-   "path": "1(b)"
+   "path": "1(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "The student makes a stack of the five coins, as shown in Figure 1.4.",
+     "text": "The student makes a stack of the five coins, as shown in Figure 1.4."
+    },
+    {
+     "type": "text",
+     "html": "The coins are drawn full size.",
+     "text": "The coins are drawn full size."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_63_q01b_fig1-4",
+     "caption": "Figure 1.4"
+    },
+    {
+     "type": "text",
+     "html": "The student records the mass m<sub>5</sub> of the five coins.",
+     "text": "The student records the mass m5 of the five coins."
+    },
+    {
+     "type": "text",
+     "html": "43.6",
+     "text": "43.6"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "m5 =",
+     "unit": "g"
+    }
+   ]
   },
   {
    "label": "c",
@@ -625,7 +900,7 @@
       30.0,
       59.8,
       570.0,
-      303.9
+      304.0
      ],
      "continued": false,
      "answer_space": {
@@ -633,7 +908,7 @@
       "dotted_lines": 1,
       "answer_line": null,
       "working_gap_pt": 70.0,
-      "height_pt": 244.0
+      "height_pt": 244.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p63/q01/question/0625_2026MJ_63_q01_c_s1.svg",
@@ -649,8 +924,11 @@
    "mark_scheme": [
     {
      "label": "1(c)",
-     "text": "statement to match candidate’s values of ρ1 and ρ2\n1 10% or less must state YES\n> 10% must state NO\nvalues used in a calculation to justify the statement\n1\ne.g., difference calculated, and correct percentage\ncalculation / ratio of values shown to be > 0.9 / 90% (YES) or\n< 0.9 / 90% (NO)\nif both values are exactly the same, it is sufficient to say ‘the\nvalues are the same’ with no calculation required, for 2\nmarks",
-     "codes": [],
+     "text": "statement to match candidate’s values of ρ1 and ρ2\nvalues used in a calculation to justify the statement",
+     "codes": [
+      "1",
+      "1"
+     ],
      "segments": [
       {
        "page": 8,
@@ -668,6 +946,37 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Two quantities can be considered to be equal within the limits of experimental accuracy if their values are within 10% of each other.",
+     "text": "Two quantities can be considered to be equal within the limits of experimental accuracy if their values are within 10% of each other."
+    },
+    {
+     "type": "text",
+     "html": "State whether your values of ρ<sub>1</sub> from method 1 and ρ<sub>2</sub> from method 2 can be considered equal.",
+     "text": "State whether your values of ρ1 from method 1 and ρ2 from method 2 can be considered equal."
+    },
+    {
+     "type": "text",
+     "html": "Support your statement with a calculation.",
+     "text": "Support your statement with a calculation."
+    },
+    {
+     "type": "text",
+     "html": "calculation",
+     "text": "calculation"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "statement"
+    },
+    {
+     "type": "marks",
+     "value": 2
     }
    ]
   }
@@ -688,5 +997,22 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "A student has five identical coins.",
+   "text": "A student has five identical coins."
+  },
+  {
+   "type": "text",
+   "html": "The student measures the density of one of these coins by two different methods.",
+   "text": "The student measures the density of one of these coins by two different methods."
+  },
+  {
+   "type": "text",
+   "html": "<b>Method</b> <b>1</b>",
+   "text": "Method 1"
+  }
+ ]
 }

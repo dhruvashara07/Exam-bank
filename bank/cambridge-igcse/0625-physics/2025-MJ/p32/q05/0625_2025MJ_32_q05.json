@@ -58,7 +58,7 @@
       30.0,
       59.8,
       570.0,
-      222.8
+      223.0
      ],
      "continued": false,
      "answer_space": {
@@ -66,7 +66,7 @@
       "dotted_lines": 1,
       "answer_line": "frequency =  …… Hz [3]",
       "working_gap_pt": 80.0,
-      "height_pt": 163.0
+      "height_pt": 163.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p32/q05/question/0625_2025MJ_32_q05_a_s1.svg",
@@ -82,7 +82,7 @@
    "mark_scheme": [
     {
      "label": "5(a)",
-     "text": "15 (Hz)\n18 ÷ 1.2\n(frequency =) speed ÷ wavelength",
+     "text": "15 (Hz)\n18 ÷ 1.2\n(frequency =) speed ÷ wavelength",
      "codes": [
       "A3",
       "C2",
@@ -106,6 +106,33 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A teacher produces a water wave in a ripple tank.",
+     "text": "A teacher produces a water wave in a ripple tank."
+    },
+    {
+     "type": "text",
+     "html": "The wavelength of the water wave is 1.2cm. The speed of the water wave is 18cm/s.",
+     "text": "The wavelength of the water wave is 1.2cm. The speed of the water wave is 18cm/s."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the frequency of the water wave.",
+     "text": "Calculate the frequency of the water wave."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "frequency =",
+     "unit": "Hz"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   },
   {
@@ -117,7 +144,7 @@
       30.0,
       228.8,
       570.0,
-      401.2
+      401.5
      ],
      "continued": false,
      "answer_space": {
@@ -125,7 +152,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 66.5,
-      "height_pt": 172.3
+      "height_pt": 172.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p32/q05/question/0625_2025MJ_32_q05_b_s1.svg",
@@ -147,7 +174,7 @@
         30.0,
         407.2,
         570.0,
-        466.2
+        466.5
        ],
        "continued": false,
        "answer_space": {
@@ -155,7 +182,7 @@
         "dotted_lines": 1,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 59.0
+        "height_pt": 59.3
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p32/q05/question/0625_2025MJ_32_q05_b-i_s1.svg",
@@ -193,6 +220,22 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "State the name of the process shown in Fig. 5.1 that occurs at the boundaries between air and glass.",
+       "text": "State the name of the process shown in Fig. 5.1 that occurs at the boundaries between air and glass."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -204,7 +247,7 @@
         30.0,
         472.2,
         570.0,
-        722.5
+        723.0
        ],
        "continued": false,
        "answer_space": {
@@ -212,7 +255,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 41.1,
-        "height_pt": 250.3
+        "height_pt": 250.8
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p32/q05/question/0625_2025MJ_32_q05_b-ii_s1.svg",
@@ -228,7 +271,7 @@
      "mark_scheme": [
       {
        "label": "5(b)(ii)",
-       "text": "dispersion at air-glass boundary AND rays continue to screen\ndispersion / ray broadens seen at either boundary\nred (at top) and violet / purple (at bottom)",
+       "text": "dispersion at air-glass boundary AND rays continue to screen\ndispersion / ray broadens seen at either boundary\nred (at top) and violet / purple (at bottom)",
        "codes": [
         "A2",
         "C1",
@@ -252,10 +295,48 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "A ray of <b>white</b> light replaces the ray of red light, as shown in Fig. 5.2. The ray of <b>white</b> light splits into different colours.",
+       "text": "A ray of white light replaces the ray of red light, as shown in Fig. 5.2. The ray of white light splits into different colours."
+      },
+      {
+       "type": "figure",
+       "id": "0625_2025MJ_32_q05bii_fig5-2",
+       "caption": "Fig. 5.2"
+      },
+      {
+       "type": "text",
+       "html": "Draw on Fig. 5.2 to show the dispersion of white light to produce a coloured spectrum on a screen. Label the red and violet (purple) parts of the spectrum.",
+       "text": "Draw on Fig. 5.2 to show the dispersion of white light to produce a coloured spectrum on a screen. Label the red and violet (purple) parts of the spectrum."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 41.1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
      ]
     }
    ],
-   "path": "5(b)"
+   "path": "5(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Fig. 5.1 shows a ray of red light passing through a prism and emerging into the air.",
+     "text": "Fig. 5.1 shows a ray of red light passing through a prism and emerging into the air."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2025MJ_32_q05b_fig5-1",
+     "caption": "Fig. 5.1"
+    }
+   ]
   }
  ],
  "total_marks": 7,

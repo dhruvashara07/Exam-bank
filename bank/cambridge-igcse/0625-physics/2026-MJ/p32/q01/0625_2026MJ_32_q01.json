@@ -39,7 +39,7 @@
       30.0,
       59.8,
       570.0,
-      446.9
+      447.0
      ],
      "continued": false,
      "answer_space": {
@@ -47,7 +47,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 20.8,
-      "height_pt": 387.1
+      "height_pt": 387.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p32/q01/question/0625_2026MJ_32_q01_a_s1.svg",
@@ -69,7 +69,7 @@
         30.0,
         452.9,
         570.0,
-        498.9
+        499.0
        ],
        "continued": false,
        "answer_space": {
@@ -77,7 +77,7 @@
         "dotted_lines": 1,
         "answer_line": "speed =  …… m / s [1]",
         "working_gap_pt": 15.0,
-        "height_pt": 46.0
+        "height_pt": 46.1
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p32/q01/question/0625_2026MJ_32_q01_a-i_s1.svg",
@@ -93,8 +93,10 @@
      "mark_scheme": [
       {
        "label": "1(a)(i)",
-       "text": "4.5 (m / s)\nB1 accept 4.4 (m / s)–4.6 (m / s) inc.\nignore values that roundup to 4.4 e.g. 4.38 or down to 4.6\ne.g. 4.62",
-       "codes": [],
+       "text": "4.5 (m / s)",
+       "codes": [
+        "B1"
+       ],
        "segments": [
         {
          "page": 8,
@@ -113,6 +115,23 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Determine the speed of the student at time = 1.0s.",
+       "text": "Determine the speed of the student at time = 1.0s."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "speed =",
+       "unit": "m/s"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -124,7 +143,7 @@
         30.0,
         504.9,
         570.0,
-        589.9
+        590.0
        ],
        "continued": false,
        "answer_space": {
@@ -132,7 +151,7 @@
         "dotted_lines": 2,
         "answer_line": "• time = 2.0 s and time = 8.0 s  ……",
         "working_gap_pt": 14.2,
-        "height_pt": 85.0
+        "height_pt": 85.1
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p32/q01/question/0625_2026MJ_32_q01_a-ii_s1.svg",
@@ -148,8 +167,11 @@
      "mark_scheme": [
       {
        "label": "1(a)(ii)",
-       "text": "constant/uniform (speed)\nB1 accept moving with no acceleration\n1\ncondone constant / uniform motion\ncondone 9(.0) m / s\nCON at rest / stationary\n(speed) decreasing / reducing owtte\nB1 accept (constant) deceleration or (constant) negative\n2\nacceleration\ncondone decreasing motion\ncondone 9(.0) to 0 m / s\ncondone increasing / decreasing / changing deceleration\nignore speed / velocity changing TV\nNOT unqualified or increasing / decreasing / changing\nacceleration",
-       "codes": [],
+       "text": "constant/uniform (speed)\n1\n(speed) decreasing / reducing owtte\n2",
+       "codes": [
+        "B1",
+        "B1"
+       ],
        "segments": [
         {
          "page": 8,
@@ -168,6 +190,22 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Describe the speed of the student between:",
+       "text": "Describe the speed of the student between:"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "• time = 8.0s and time = 11s"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     },
     {
@@ -179,7 +217,7 @@
         30.0,
         595.9,
         570.0,
-        712.1
+        712.5
        ],
        "continued": false,
        "answer_space": {
@@ -187,7 +225,7 @@
         "dotted_lines": 1,
         "answer_line": "distance =  …… m [3]",
         "working_gap_pt": 85.2,
-        "height_pt": 116.2
+        "height_pt": 116.6
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p32/q01/question/0625_2026MJ_32_q01_a-iii_s1.svg",
@@ -203,8 +241,12 @@
      "mark_scheme": [
       {
        "label": "1(a)(iii)",
-       "text": "54 (m)\nA3\n6(.0) × 9(.0)\nC2\ncondone ½ × 6(.0) × 9(.0) or 27\n(distance =) area under graph\nC1\ncondone (distance =) (a) speed × (a) time e.g. 2(.0) × 8(.0)\nor b × h\ncondone ½ × b × h\nignore s = d ÷ t or v = s ÷ t",
-       "codes": [],
+       "text": "54 (m)\n6(.0) × 9(.0)\n(distance =) area under graph",
+       "codes": [
+        "A3",
+        "C2",
+        "C1"
+       ],
        "segments": [
         {
          "page": 8,
@@ -223,10 +265,39 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the distance travelled by the student between time = 2.0s and time = 8.0s.",
+       "text": "Calculate the distance travelled by the student between time = 2.0s and time = 8.0s."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "distance =",
+       "unit": "m"
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
      ]
     }
    ],
-   "path": "1(a)"
+   "path": "1(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Figure 1.1 shows the speed–time graph for a student in a race.",
+     "text": "Figure 1.1 shows the speed–time graph for a student in a race."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_32_q01a_fig1-1",
+     "caption": "Figure 1.1"
+    }
+   ]
   },
   {
    "label": "b",
@@ -237,7 +308,7 @@
       30.0,
       59.8,
       570.0,
-      236.6
+      237.0
      ],
      "continued": false,
      "answer_space": {
@@ -245,7 +316,7 @@
       "dotted_lines": 1,
       "answer_line": "average speed =  …… m / s [4]",
       "working_gap_pt": 93.7,
-      "height_pt": 176.7
+      "height_pt": 177.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p32/q01/question/0625_2026MJ_32_q01_b_s1.svg",
@@ -261,8 +332,13 @@
    "mark_scheme": [
     {
      "label": "1(b)",
-     "text": "3.3 (m / s)\nA4 accept 3.3 (m / s) rounded to > 2 sf\naccept 3 (m / s) for 4 marks\n400 ÷ 120\nC3\naccept 200 (m / s)\n(average speed =) (total) distance ÷ time (taken)\nC1\naccept 400 ÷ 2(.0) for 2 marks\nnote: (speed =) distance ÷ time or (s =) d ÷ t or v = s ÷ t in\nthis form only\n(time =) {2 × 60} (s) or 120 (s)\nC1",
-     "codes": [],
+     "text": "3.3 (m / s)\n400 ÷ 120\n(average speed =) (total) distance ÷ time (taken)\n(time =) {2 × 60} (s) or 120 (s)",
+     "codes": [
+      "A4",
+      "C3",
+      "C1",
+      "C1"
+     ],
      "segments": [
       {
        "page": 9,
@@ -280,6 +356,28 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "In a different race, the student runs a distance of 400m in a time of 2.0 minutes.",
+     "text": "In a different race, the student runs a distance of 400m in a time of 2.0 minutes."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the average speed of the student. Give your answer in m/s.",
+     "text": "Calculate the average speed of the student. Give your answer in m/s."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "average speed =",
+     "unit": "m/s"
+    },
+    {
+     "type": "marks",
+     "value": 4
     }
    ]
   }

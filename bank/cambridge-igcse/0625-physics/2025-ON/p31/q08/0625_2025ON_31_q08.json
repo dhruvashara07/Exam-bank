@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    79.8
+    80.0
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 4.0,
-    "height_pt": 20.0
+    "height_pt": 20.2
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q08/question/0625_2025ON_31_q08_stem_s1.svg",
@@ -43,7 +43,7 @@
       30.0,
       85.8,
       570.0,
-      222.8
+      223.0
      ],
      "continued": false,
      "answer_space": {
@@ -51,7 +51,7 @@
       "dotted_lines": 1,
       "answer_line": "resistance =  …… Ω [3]",
       "working_gap_pt": 67.0,
-      "height_pt": 137.0
+      "height_pt": 137.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q08/question/0625_2025ON_31_q08_a_s1.svg",
@@ -67,9 +67,11 @@
    "mark_scheme": [
     {
      "label": "8(a)",
-     "text": "3000 (Ω)\n72 / 0.024\nV = I R  OR  (R = )V / I",
+     "text": "3000 (Ω)\n72 / 0.024\nV = I R OR (R = )V / I",
      "codes": [
-      "A3"
+      "A3",
+      "(C2)",
+      "(C1)"
      ],
      "segments": [
       {
@@ -89,6 +91,28 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The potential difference (voltage) across a component is 72V. The current in the component is 0.024A.",
+     "text": "The potential difference (voltage) across a component is 72V. The current in the component is 0.024A."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the resistance of the component.",
+     "text": "Calculate the resistance of the component."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "resistance =",
+     "unit": "Ω"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   },
   {
@@ -100,7 +124,7 @@
       30.0,
       228.8,
       570.0,
-      367.8
+      368.0
      ],
      "continued": false,
      "answer_space": {
@@ -108,7 +132,7 @@
       "dotted_lines": 1,
       "answer_line": "output voltage =  …… V [3]",
       "working_gap_pt": 63.7,
-      "height_pt": 139.0
+      "height_pt": 139.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q08/question/0625_2025ON_31_q08_b_s1.svg",
@@ -124,9 +148,11 @@
    "mark_scheme": [
     {
      "label": "8(b)",
-     "text": "(output voltage Vs =) 15 (V)\nVs / 120 = 70 / 560 OR (Vs =) (70 / 560) × 120\nVs / Vp = Ns / Np in any form",
+     "text": "(output voltage Vs =) 15 (V)\nVs / 120 = 70 / 560 OR (Vs =) (70 / 560) × 120\nVs / Vp = Ns / Np in any form",
      "codes": [
-      "A3"
+      "A3",
+      "(C2)",
+      "(C1)"
      ],
      "segments": [
       {
@@ -146,6 +172,23 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The television uses a transformer. The input voltage (V<sub>p</sub>) to the transformer is 120V. The number of turns (N<sub>p</sub>) on the input coil is 560. The number of turns (N<sub>s</sub>) on the output coil is 70. Calculate the output voltage (V<sub>s</sub>) of the transformer.",
+     "text": "The television uses a transformer. The input voltage (Vp) to the transformer is 120V. The number of turns (Np) on the input coil is 560. The number of turns (Ns) on the output coil is 70. Calculate the output voltage (Vs) of the transformer."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "output voltage =",
+     "unit": "V"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   },
   {
@@ -157,7 +200,7 @@
       30.0,
       373.8,
       570.0,
-      523.8
+      524.0
      ],
      "continued": false,
      "answer_space": {
@@ -165,7 +208,7 @@
       "dotted_lines": 1,
       "answer_line": "power =  …… W [4]",
       "working_gap_pt": 93.0,
-      "height_pt": 150.0
+      "height_pt": 150.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q08/question/0625_2025ON_31_q08_c_s1.svg",
@@ -181,9 +224,12 @@
    "mark_scheme": [
     {
      "label": "8(c)",
-     "text": "(power = ) 0.14 (W)\n(power = ) 2.2 × 10-3 × 64\n(power = ) I × V\n2.2 (mA) = 0. 0022 (A) OR 2.2 x 10-3 (A)",
+     "text": "(power = ) 0.14 (W)\n(power = ) 2.2 × 10 × 64\n-3\n(power = ) I × V\n2.2 (mA) = 0. 0022 (A) OR 2.2 x 10 (A)\n-3",
      "codes": [
-      "A4"
+      "A4",
+      "(C3)",
+      "(C1)",
+      "(C1)"
      ],
      "segments": [
       {
@@ -203,6 +249,28 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The potential difference (voltage) across a resistor is 64V. The current in the resistor is 2.2mA.",
+     "text": "The potential difference (voltage) across a resistor is 64V. The current in the resistor is 2.2mA."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the power of the resistor.",
+     "text": "Calculate the power of the resistor."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "power =",
+     "unit": "W"
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
    ]
   },
   {
@@ -214,7 +282,7 @@
       30.0,
       529.8,
       570.0,
-      744.8
+      745.0
      ],
      "continued": false,
      "answer_space": {
@@ -222,7 +290,7 @@
       "dotted_lines": 1,
       "answer_line": "cost for 6 hours =  …… cents [3]",
       "working_gap_pt": 119.0,
-      "height_pt": 215.0
+      "height_pt": 215.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q08/question/0625_2025ON_31_q08_d_s1.svg",
@@ -238,9 +306,11 @@
    "mark_scheme": [
     {
      "label": "8(d)",
-     "text": "30 (cents)\n(cost = ) 0.14 × 6(.0) × 36 OR 0.84 × 36 OR 0.14 × 216 OR 5.04 × 6\n(cost = ) (energy in) kW h × (number of) hours × cost (of one unit)",
+     "text": "30 (cents)\n(cost = ) 0.14 × 6(.0) × 36 OR 0.84 × 36 OR 0.14 × 216 OR 5.04 × 6\n(cost = ) (energy in) kW h × (number of) hours × cost (of one unit)",
      "codes": [
-      "A3"
+      "A3",
+      "(C2)",
+      "(C1)"
      ],
      "segments": [
       {
@@ -259,6 +329,28 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The energy used by the television in one hour is 0.14kWh. The cost of one kWh of energy is 36 cents.",
+     "text": "The energy used by the television in one hour is 0.14kWh. The cost of one kWh of energy is 36 cents."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the cost of using the television for 6.0 hours.",
+     "text": "Calculate the cost of using the television for 6.0 hours."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "cost for 6 hours =",
+     "unit": "cents"
+    },
+    {
+     "type": "marks",
+     "value": 3
     }
    ]
   }
@@ -279,5 +371,12 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "A television <b>uses</b> many electrical components.",
+   "text": "A television uses many electrical components."
+  }
+ ]
 }

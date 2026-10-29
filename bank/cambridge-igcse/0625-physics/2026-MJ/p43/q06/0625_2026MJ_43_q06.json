@@ -58,7 +58,7 @@
       30.0,
       59.8,
       570.0,
-      288.1
+      288.5
      ],
      "continued": false,
      "answer_space": {
@@ -66,7 +66,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 94.4,
-      "height_pt": 228.3
+      "height_pt": 228.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q06/question/0625_2026MJ_43_q06_a_s1.svg",
@@ -88,7 +88,7 @@
         30.0,
         294.1,
         570.0,
-        314.1
+        314.5
        ],
        "continued": false,
        "answer_space": {
@@ -96,7 +96,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 4.0,
-        "height_pt": 20.0
+        "height_pt": 20.4
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q06/question/0625_2026MJ_43_q06_a-i_s1.svg",
@@ -112,8 +112,10 @@
      "mark_scheme": [
       {
        "label": "6(a)(i)",
-       "text": "correct location indicated (and labelled I)\nB1",
-       "codes": [],
+       "text": "correct location indicated (and labelled I)",
+       "codes": [
+        "B1"
+       ],
        "segments": [
         {
          "page": 12,
@@ -132,6 +134,17 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Mark the position of the image. Label it I.",
+       "text": "Mark the position of the image. Label it I."
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -143,7 +156,7 @@
         30.0,
         318.5,
         570.0,
-        338.5
+        339.0
        ],
        "continued": false,
        "answer_space": {
@@ -151,7 +164,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 4.0,
-        "height_pt": 20.0
+        "height_pt": 20.5
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q06/question/0625_2026MJ_43_q06_a-ii_s1.svg",
@@ -167,8 +180,11 @@
      "mark_scheme": [
       {
        "label": "6(a)(ii)",
-       "text": "ray from O reflected at the mirror and goes to eye\nB1 I arrow direction\nangle of reflection = angle of incidence\nB1 A mark intent approximately equal angles",
-       "codes": [],
+       "text": "ray from O reflected at the mirror and goes to eye\nangle of reflection = angle of incidence",
+       "codes": [
+        "B1",
+        "B1"
+       ],
        "segments": [
         {
          "page": 12,
@@ -187,10 +203,38 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Draw on Figure 6.1 to show the path of the light from object O to the person’s eye.",
+       "text": "Draw on Figure 6.1 to show the path of the light from object O to the person’s eye."
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     }
    ],
-   "path": "6(a)"
+   "path": "6(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "An image of object O is formed by a plane mirror.",
+     "text": "An image of object O is formed by a plane mirror."
+    },
+    {
+     "type": "text",
+     "html": "A person views the image. Figure 6.1 shows a scale diagram of the arrangement.",
+     "text": "A person views the image. Figure 6.1 shows a scale diagram of the arrangement."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_43_q06a_fig6-1",
+     "caption": "Figure 6.1"
+    }
+   ]
   },
   {
    "label": "b",
@@ -201,7 +245,7 @@
       30.0,
       357.4,
       570.0,
-      601.4
+      601.5
      ],
      "continued": false,
      "answer_space": {
@@ -209,7 +253,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 36.4,
-      "height_pt": 244.0
+      "height_pt": 244.1
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q06/question/0625_2026MJ_43_q06_b_s1.svg",
@@ -231,7 +275,7 @@
         30.0,
         607.4,
         570.0,
-        709.5
+        710.0
        ],
        "continued": false,
        "answer_space": {
@@ -239,7 +283,7 @@
         "dotted_lines": 1,
         "answer_line": "refractive index =  …… [2]",
         "working_gap_pt": 58.1,
-        "height_pt": 102.1
+        "height_pt": 102.6
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q06/question/0625_2026MJ_43_q06_b-i_s1.svg",
@@ -255,8 +299,11 @@
      "mark_scheme": [
       {
        "label": "6(b)(i)",
-       "text": "0.9(0)\nA2\n(n =) sini / sinr OR sin 25 / sin 28\nC1\nA n1sin1 = n2sin2",
-       "codes": [],
+       "text": "0.9(0)\n(n =) sini / sinr OR sin 25 / sin 28",
+       "codes": [
+        "A2",
+        "C1"
+       ],
        "segments": [
         {
          "page": 12,
@@ -275,6 +322,22 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the refractive index for the glass–water boundary. Use information from Figure 6.2.",
+       "text": "Calculate the refractive index for the glass–water boundary. Use information from Figure 6.2."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "refractive index ="
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     },
     {
@@ -286,7 +349,7 @@
         30.0,
         715.5,
         570.0,
-        735.5
+        736.0
        ],
        "continued": false,
        "answer_space": {
@@ -294,7 +357,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 4.0,
-        "height_pt": 20.0
+        "height_pt": 20.5
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q06/question/0625_2026MJ_43_q06_b-ii_s1.svg",
@@ -310,8 +373,10 @@
      "mark_scheme": [
       {
        "label": "6(b)(ii)",
-       "text": "correct angle indicated and labelled c\nB1",
-       "codes": [],
+       "text": "correct angle indicated and labelled c",
+       "codes": [
+        "B1"
+       ],
        "segments": [
         {
          "page": 12,
@@ -329,6 +394,17 @@
          }
         }
        ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "On Figure 6.2, label the critical angle c.",
+       "text": "On Figure 6.2, label the critical angle c."
+      },
+      {
+       "type": "marks",
+       "value": 1
       }
      ]
     },
@@ -349,7 +425,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 13.3,
-        "height_pt": 44.3
+        "height_pt": 44.4
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q06/question/0625_2026MJ_43_q06_b-iii_s1.svg",
@@ -365,8 +441,10 @@
      "mark_scheme": [
       {
        "label": "6(b)(iii)",
-       "text": "ray reflected in glass\nB1 I arrow direction\nCON any ray leaving the glass",
-       "codes": [],
+       "text": "ray reflected in glass",
+       "codes": [
+        "B1"
+       ],
        "segments": [
         {
          "page": 12,
@@ -385,10 +463,68 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "On Figure 6.2, continue the path of ray X after it reaches the glass–water boundary.",
+       "text": "On Figure 6.2, continue the path of ray X after it reaches the glass–water boundary."
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     }
    ],
-   "path": "6(b)"
+   "path": "6(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Figure 6.2 shows three rays of light travelling from a light source S. The rays travel in glass towards a glass–water boundary.",
+     "text": "Figure 6.2 shows three rays of light travelling from a light source S. The rays travel in glass towards a glass–water boundary."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_43_q06b_fig6-2",
+     "caption": "Figure 6.2"
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "water",
+       "28°",
+       "",
+       ""
+      ],
+      [
+       "glass",
+       "",
+       "",
+       ""
+      ],
+      [
+       "25°",
+       "",
+       "",
+       ""
+      ],
+      [
+       "ray X",
+       "",
+       "",
+       ""
+      ],
+      [
+       "S",
+       "",
+       "",
+       ""
+      ]
+     ]
+    }
+   ]
   }
  ],
  "total_marks": 7,

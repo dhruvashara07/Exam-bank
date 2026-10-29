@@ -39,7 +39,7 @@
       30.0,
       59.8,
       570.0,
-      307.2
+      307.5
      ],
      "continued": false,
      "answer_space": {
@@ -47,7 +47,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 40.4,
-      "height_pt": 247.4
+      "height_pt": 247.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q01/question/0625_2026MJ_42_q01_a_s1.svg",
@@ -69,7 +69,7 @@
         30.0,
         313.2,
         570.0,
-        424.2
+        424.5
        ],
        "continued": false,
        "answer_space": {
@@ -77,7 +77,7 @@
         "dotted_lines": 3,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 111.0
+        "height_pt": 111.3
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q01/question/0625_2026MJ_42_q01_a-i_s1.svg",
@@ -93,8 +93,12 @@
      "mark_scheme": [
       {
        "label": "1(a)(i)",
-       "text": "(constant) acceleration\nB1\nconstant speed OR constant velocity\nB1 TV zero acceleration\nA steady speed OR stable speed\nincreasing deceleration\nB1 A increasing negative acceleration\nA non-uniform or changing deceleration\nCON decreasing acceleration",
-       "codes": [],
+       "text": "(constant) acceleration\nconstant speed OR constant velocity\nincreasing deceleration",
+       "codes": [
+        "B1",
+        "B1",
+        "B1"
+       ],
        "segments": [
         {
          "page": 10,
@@ -113,6 +117,22 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "State the motion of the car between:",
+       "text": "State the motion of the car between:"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "D and E"
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
      ]
     },
     {
@@ -124,7 +144,7 @@
         30.0,
         430.2,
         570.0,
-        576.6
+        577.0
        ],
        "continued": false,
        "answer_space": {
@@ -132,7 +152,7 @@
         "dotted_lines": 1,
         "answer_line": "distance =  …… m [2]",
         "working_gap_pt": 115.4,
-        "height_pt": 146.4
+        "height_pt": 146.8
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q01/question/0625_2026MJ_42_q01_a-ii_s1.svg",
@@ -148,8 +168,11 @@
      "mark_scheme": [
       {
        "label": "1(a)(ii)",
-       "text": "130 (m)\nA2\narea under graph OR ½ × 18 ×14 OR ½bh\nC1",
-       "codes": [],
+       "text": "130 (m)\narea under graph OR ½ × 18 ×14 OR ½bh",
+       "codes": [
+        "A2",
+        "C1"
+       ],
        "segments": [
         {
          "page": 10,
@@ -168,10 +191,39 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the distance travelled between time = 0 and time = 18s.",
+       "text": "Calculate the distance travelled between time = 0 and time = 18s."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "distance =",
+       "unit": "m"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     }
    ],
-   "path": "1(a)"
+   "path": "1(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Figure 1.1 shows a speed–time graph for a car journey.",
+     "text": "Figure 1.1 shows a speed–time graph for a car journey."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_42_q01a_fig1-1",
+     "caption": "Figure 1.1"
+    }
+   ]
   },
   {
    "label": "b",
@@ -182,7 +234,7 @@
       30.0,
       595.6,
       570.0,
-      615.6
+      616.0
      ],
      "continued": false,
      "answer_space": {
@@ -190,7 +242,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 4.0,
-      "height_pt": 20.0
+      "height_pt": 20.4
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q01/question/0625_2026MJ_42_q01_b_s1.svg",
@@ -212,7 +264,7 @@
         30.0,
         621.6,
         570.0,
-        667.6
+        668.0
        ],
        "continued": false,
        "answer_space": {
@@ -220,7 +272,7 @@
         "dotted_lines": 1,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 46.0
+        "height_pt": 46.4
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q01/question/0625_2026MJ_42_q01_b-i_s1.svg",
@@ -236,8 +288,10 @@
      "mark_scheme": [
       {
        "label": "1(b)(i)",
-       "text": "direction\nB1 I unit",
-       "codes": [],
+       "text": "direction",
+       "codes": [
+        "B1"
+       ],
        "segments": [
         {
          "page": 10,
@@ -256,6 +310,23 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the sentence.",
+       "text": "Complete the sentence."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "A vector quantity has magnitude (size) and",
+       "unit": "."
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -267,7 +338,7 @@
         30.0,
         673.6,
         570.0,
-        784.6
+        784.2
        ],
        "continued": false,
        "answer_space": {
@@ -275,7 +346,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 111.0
+        "height_pt": 110.6
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q01/question/0625_2026MJ_42_q01_b-ii_s1.svg",
@@ -291,8 +362,10 @@
      "mark_scheme": [
       {
        "label": "1(b)(ii)",
-       "text": "acceleration, electric field strength AND weight\nB2 CON additional incorrect quantities\n3 correct – 2 marks\ni.e. apply ‘list rule’\n2 correct – 1 mark",
-       "codes": [],
+       "text": "acceleration, electric field strength AND weight\n3 correct – 2 marks\n2 correct – 1 mark",
+       "codes": [
+        "B2"
+       ],
        "segments": [
         {
          "page": 10,
@@ -311,10 +384,38 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Draw a line under each of the quantities in the list that is a vector quantity.",
+       "text": "Draw a line under each of the quantities in the list that is a vector quantity."
+      },
+      {
+       "type": "text",
+       "html": "<b>acceleration</b> <b>electric</b> <b>field</b> <b>strength</b> <b>energy</b>",
+       "text": "acceleration electric field strength energy"
+      },
+      {
+       "type": "text",
+       "html": "<b>mass</b> <b>time</b> <b>weight</b>",
+       "text": "mass time weight"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     }
    ],
-   "path": "1(b)"
+   "path": "1(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Velocity is a vector quantity.",
+     "text": "Velocity is a vector quantity."
+    }
+   ]
   }
  ],
  "total_marks": 8,

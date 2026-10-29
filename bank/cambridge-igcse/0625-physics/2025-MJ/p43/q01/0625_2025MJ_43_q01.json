@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    321.8
+    322.0
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 18.6,
-    "height_pt": 262.0
+    "height_pt": 262.2
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p43/q01/question/0625_2025MJ_43_q01_stem_s1.svg",
@@ -63,7 +63,7 @@
       30.0,
       327.8,
       570.0,
-      386.8
+      387.0
      ],
      "continued": false,
      "answer_space": {
@@ -71,7 +71,7 @@
       "dotted_lines": 1,
       "answer_line": "speed of the car =  …… [1]",
       "working_gap_pt": 28.0,
-      "height_pt": 59.0
+      "height_pt": 59.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p43/q01/question/0625_2025MJ_43_q01_a_s1.svg",
@@ -87,7 +87,7 @@
    "mark_scheme": [
     {
      "label": "1(a)",
-     "text": "11.5 m / s",
+     "text": "11.5 m / s",
      "codes": [
       "B1"
      ],
@@ -109,6 +109,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Determine the speed of the car at time = 2.0s.",
+     "text": "Determine the speed of the car at time = 2.0s."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "speed of the car ="
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -120,7 +136,7 @@
       30.0,
       392.8,
       570.0,
-      539.2
+      539.5
      ],
      "continued": false,
      "answer_space": {
@@ -128,7 +144,7 @@
       "dotted_lines": 1,
       "answer_line": "distance travelled =  …… [3]",
       "working_gap_pt": 115.4,
-      "height_pt": 146.4
+      "height_pt": 146.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p43/q01/question/0625_2025MJ_43_q01_b_s1.svg",
@@ -168,6 +184,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the distance travelled by the car between time = 0 and time = 4.0s.",
+     "text": "Calculate the distance travelled by the car between time = 0 and time = 4.0s."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "distance travelled ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   },
   {
@@ -179,7 +211,7 @@
       30.0,
       545.2,
       570.0,
-      717.6
+      718.0
      ],
      "continued": false,
      "answer_space": {
@@ -187,7 +219,7 @@
       "dotted_lines": 1,
       "answer_line": "deceleration =  …… [3]",
       "working_gap_pt": 115.4,
-      "height_pt": 172.4
+      "height_pt": 172.8
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p43/q01/question/0625_2025MJ_43_q01_c_s1.svg",
@@ -203,7 +235,7 @@
    "mark_scheme": [
     {
      "label": "1(c)",
-     "text": "5.7 m / s2\n(deceleration =) (Δ)v ÷ Δt OR deceleration = gradient\n(0 –) 20 ÷ {4(.0) - 0.5} OR 20 ÷ 3.5",
+     "text": "5.7 m / s\n2\n(deceleration =) (Δ)v ÷ Δt OR deceleration = gradient\n(0 –) 20 ÷ {4(.0) - 0.5} OR 20 ÷ 3.5",
      "codes": [
       "A3",
       "C1",
@@ -227,6 +259,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the deceleration of the car between time = 0.5s and time = 4.0s.",
+     "text": "Calculate the deceleration of the car between time = 0.5s and time = 4.0s."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "deceleration ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   }
  ],
@@ -246,5 +294,22 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "A car travels at a speed of 20m/s. The driver applies the brakes when he <b>sees</b> a red traffic light.",
+   "text": "A car travels at a speed of 20m/s. The driver applies the brakes when he sees a red traffic light."
+  },
+  {
+   "type": "text",
+   "html": "Fig. 1.1 shows the speed–time graph for the car.",
+   "text": "Fig. 1.1 shows the speed–time graph for the car."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2025MJ_43_q01_fig1-1",
+   "caption": "Fig. 1.1"
+  }
+ ]
 }

@@ -58,7 +58,7 @@
       30.0,
       59.8,
       570.0,
-      79.8
+      80.0
      ],
      "continued": false,
      "answer_space": {
@@ -66,7 +66,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 4.0,
-      "height_pt": 20.0
+      "height_pt": 20.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q02/question/0625_2025ON_31_q02_a_s1.svg",
@@ -88,7 +88,7 @@
         30.0,
         85.8,
         570.0,
-        350.1
+        350.5
        ],
        "continued": false,
        "answer_space": {
@@ -96,7 +96,7 @@
         "dotted_lines": 1,
         "answer_line": "volume of water =  …… cm3 [1]",
         "working_gap_pt": 38.7,
-        "height_pt": 264.3
+        "height_pt": 264.7
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q02/question/0625_2025ON_31_q02_a-i_s1.svg",
@@ -112,7 +112,7 @@
      "mark_scheme": [
       {
        "label": "2(a)(i)",
-       "text": "20 (cm3)",
+       "text": "20 (cm )\n3",
        "codes": [
         "B1"
        ],
@@ -134,6 +134,33 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "A student collects some drops in a measuring cylinder. Fig. 2.1 shows the water collected",
+       "text": "A student collects some drops in a measuring cylinder. Fig. 2.1 shows the water collected"
+      },
+      {
+       "type": "figure",
+       "id": "0625_2025ON_31_q02ai_fig2-1",
+       "caption": "Fig. 2.1"
+      },
+      {
+       "type": "text",
+       "html": "Determine the volume of water in the measuring cylinder.",
+       "text": "Determine the volume of water in the measuring cylinder."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "volume of water =",
+       "unit": "cm3"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -145,7 +172,7 @@
         30.0,
         356.1,
         570.0,
-        584.1
+        584.5
        ],
        "continued": false,
        "answer_space": {
@@ -153,7 +180,7 @@
         "dotted_lines": 1,
         "answer_line": "volume of one drop of water =  …… cm3 [3]",
         "working_gap_pt": 65.3,
-        "height_pt": 228.0
+        "height_pt": 228.4
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q02/question/0625_2025ON_31_q02_a-ii_s1.svg",
@@ -169,9 +196,11 @@
      "mark_scheme": [
       {
        "label": "2(a)(ii)",
-       "text": "(volume of one drop =) 0.20 (cm3)\n(volume of one drop =) 24 ÷ 120\n(volume of one drop =) volume of water ÷ number of drops",
+       "text": "(volume of one drop =) 0.20 (cm )\n3\n(volume of one drop =) 24 ÷ 120\n(volume of one drop =) volume of water ÷ number of drops",
        "codes": [
-        "A3"
+        "A3",
+        "(C2)",
+        "(C1)"
        ],
        "segments": [
         {
@@ -191,10 +220,54 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "A teacher plans to measure the average volume of one drop of water. The teacher collects some drops of water as they fall into a different measuring cylinder. All the drops of water <b>are</b> the same volume.",
+       "text": "A teacher plans to measure the average volume of one drop of water. The teacher collects some drops of water as they fall into a different measuring cylinder. All the drops of water are the same volume."
+      },
+      {
+       "type": "text",
+       "html": "Here is the teacher’s data:",
+       "text": "Here is the teacher’s data:"
+      },
+      {
+       "type": "text",
+       "html": "number of drops of water = 120",
+       "text": "number of drops of water = 120"
+      },
+      {
+       "type": "text",
+       "html": "volume of water in the measuring cylinder = 24cm<sup>3</sup>",
+       "text": "volume of water in the measuring cylinder = 24cm3"
+      },
+      {
+       "type": "text",
+       "html": "Calculate the volume of <b>one</b> drop of water.",
+       "text": "Calculate the volume of one drop of water."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "volume of one drop of water =",
+       "unit": "cm3"
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
      ]
     }
    ],
-   "path": "2(a)"
+   "path": "2(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Water is dripping slowly from a pipe.",
+     "text": "Water is dripping slowly from a pipe."
+    }
+   ]
   },
   {
    "label": "b",
@@ -205,7 +278,7 @@
       30.0,
       59.8,
       570.0,
-      424.3
+      424.5
      ],
      "continued": false,
      "answer_space": {
@@ -213,7 +286,7 @@
       "dotted_lines": 2,
       "answer_line": null,
       "working_gap_pt": 60.2,
-      "height_pt": 364.5
+      "height_pt": 364.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q02/question/0625_2025ON_31_q02_b_s1.svg",
@@ -251,6 +324,37 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A scientist places a piece of plastic in some water in a measuring cylinder. Fig. 2.2 shows the result.",
+     "text": "A scientist places a piece of plastic in some water in a measuring cylinder. Fig. 2.2 shows the result."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2025ON_31_q02b_fig2-2",
+     "caption": "Fig. 2.2"
+    },
+    {
+     "type": "text",
+     "html": "Compare the density of the plastic with the density of the water in Fig. 2.2.",
+     "text": "Compare the density of the plastic with the density of the water in Fig. 2.2."
+    },
+    {
+     "type": "text",
+     "html": "State the evidence that supports your answer.",
+     "text": "State the evidence that supports your answer."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "evidence"
+    },
+    {
+     "type": "marks",
+     "value": 2
     }
    ]
   }

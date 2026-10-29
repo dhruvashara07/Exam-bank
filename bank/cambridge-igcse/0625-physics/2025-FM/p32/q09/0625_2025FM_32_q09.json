@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    328.4
+    328.5
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 48.6,
-    "height_pt": 268.6
+    "height_pt": 268.7
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2025-FM/p32/q09/question/0625_2025FM_32_q09_stem_s1.svg",
@@ -101,7 +101,7 @@
       30.0,
       334.4,
       570.0,
-      654.4
+      654.5
      ],
      "continued": false,
      "answer_space": {
@@ -109,7 +109,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 185.7,
-      "height_pt": 320.0
+      "height_pt": 320.1
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-FM/p32/q09/question/0625_2025FM_32_q09_a_s1.svg",
@@ -150,6 +150,32 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Fig. 9.2 shows part of the circuit diagram for the circuit in Fig. 9.1.",
+     "text": "Fig. 9.2 shows part of the circuit diagram for the circuit in Fig. 9.1."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2025FM_32_q09a_fig9-2",
+     "caption": "Fig. 9.2"
+    },
+    {
+     "type": "text",
+     "html": "Complete the circuit diagram in Fig. 9.2 to represent the circuit in Fig. 9.1. Use standard circuit symbols.",
+     "text": "Complete the circuit diagram in Fig. 9.2 to represent the circuit in Fig. 9.1. Use standard circuit symbols."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 185.7
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
    ]
   },
   {
@@ -161,7 +187,7 @@
       30.0,
       59.8,
       570.0,
-      235.8
+      236.0
      ],
      "continued": false,
      "answer_space": {
@@ -169,7 +195,7 @@
       "dotted_lines": 1,
       "answer_line": "resistance =  …… Ω [3]",
       "working_gap_pt": 119.0,
-      "height_pt": 176.0
+      "height_pt": 176.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-FM/p32/q09/question/0625_2025FM_32_q09_b_s1.svg",
@@ -185,9 +211,11 @@
    "mark_scheme": [
     {
      "label": "9(b)",
-     "text": "25 (Ω)\n11 ÷ 0.44\n(R =) V ÷ I or V = I × R or in any form",
+     "text": "25 (Ω)\n11 ÷ 0.44\n(R =) V ÷ I or V = I × R or in any form",
      "codes": [
-      "A3"
+      "A3",
+      "(C2)",
+      "(C1)"
      ],
      "segments": [
       {
@@ -207,6 +235,28 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The potential difference (p.d.) across the lamp is 11V and the current in the lamp is 0.44A.",
+     "text": "The potential difference (p.d.) across the lamp is 11V and the current in the lamp is 0.44A."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the resistance of the lamp.",
+     "text": "Calculate the resistance of the lamp."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "resistance =",
+     "unit": "Ω"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   },
   {
@@ -218,7 +268,7 @@
       30.0,
       241.8,
       570.0,
-      731.7
+      732.0
      ],
      "continued": false,
      "answer_space": {
@@ -226,7 +276,7 @@
       "dotted_lines": 4,
       "answer_line": null,
       "working_gap_pt": 27.2,
-      "height_pt": 489.9
+      "height_pt": 490.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-FM/p32/q09/question/0625_2025FM_32_q09_c_s1.svg",
@@ -242,7 +292,7 @@
    "mark_scheme": [
     {
      "label": "9(c)",
-     "text": "current increases\n(because) resistance (of variable resistor) decreases OR there is less resistance wire (in the circuit / for current to move\nthrough)",
+     "text": "current increases\n(because) resistance (of variable resistor) decreases OR there is less resistance wire (in the circuit / for current to move\nthrough)",
      "codes": [
       "B1",
       "B1"
@@ -265,6 +315,67 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The student moves the sliding contact from position A to position B, as shown in Fig. 9.3.",
+     "text": "The student moves the sliding contact from position A to position B, as shown in Fig. 9.3."
+    },
+    {
+     "type": "text",
+     "html": "metal bar",
+     "text": "metal bar"
+    },
+    {
+     "type": "text",
+     "html": "sliding contact in position A",
+     "text": "sliding contact in position A"
+    },
+    {
+     "type": "text",
+     "html": "connection to lamp",
+     "text": "connection to lamp"
+    },
+    {
+     "type": "text",
+     "html": "connection to battery",
+     "text": "connection to battery"
+    },
+    {
+     "type": "text",
+     "html": "coil of resistance wire",
+     "text": "coil of resistance wire"
+    },
+    {
+     "type": "text",
+     "html": "metal bar",
+     "text": "metal bar"
+    },
+    {
+     "type": "text",
+     "html": "sliding contact in position B",
+     "text": "sliding contact in position B"
+    },
+    {
+     "type": "figure",
+     "id": "0625_2025FM_32_q09c_fig9-3",
+     "caption": "Fig. 9.3"
+    },
+    {
+     "type": "text",
+     "html": "<b>State</b> and explain any effect on the current in the circuit when the sliding contact is moved from position A to position B.",
+     "text": "State and explain any effect on the current in the circuit when the sliding contact is moved from position A to position B."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 4
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   }
  ],
@@ -284,5 +395,17 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "A student <b>set</b> up the electrical circuit that is shown in Fig. 9.1.",
+   "text": "A student set up the electrical circuit that is shown in Fig. 9.1."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2025FM_32_q09_fig9-1",
+   "caption": "Fig. 9.1"
+  }
+ ]
 }

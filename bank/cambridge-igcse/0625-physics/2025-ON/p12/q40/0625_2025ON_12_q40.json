@@ -8,7 +8,7 @@
     30.0,
     223.1,
     570.0,
-    370.9
+    371.0
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 13.1,
-    "height_pt": 147.8
+    "height_pt": 147.9
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p12/q40/question/0625_2025ON_12_q40_stem_s1.svg",
@@ -24,32 +24,9 @@
     "url": null,
     "kb": 44.5
    }
-  },
-  {
-   "page": 16,
-   "bbox": [
-    30.0,
-    58.7,
-    570.0,
-    698.9
-   ],
-   "continued": true,
-   "answer_space": {
-    "kind": "none",
-    "dotted_lines": 0,
-    "answer_line": null,
-    "working_gap_pt": 4.0,
-    "height_pt": 640.3
-   },
-   "svg": {
-    "file": "bank/cambridge-igcse/0625-physics/2025-ON/p12/q40/question/0625_2025ON_12_q40_stem_s2.svg",
-    "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p12/q40/question/0625_2025ON_12_q40_stem_s2",
-    "url": null,
-    "kb": 3.8
-   }
   }
  ],
- "text": "Light received from distant galaxies is observed to have a longer wavelength than the light\noriginally emitted. This is called redshift.\nWhich conclusion do astronomers form about distant galaxies from this observation?\nA\nThey are all moving around each other.\nB\nThey are all moving away from each other.\nC\nThey are all moving in circular orbits.\nD\nThey are all moving towards each other.\nBLANK PAGE",
+ "text": "Light received from distant galaxies is observed to have a longer wavelength than the light\noriginally emitted. This is called redshift.\nWhich conclusion do astronomers form about distant galaxies from this observation?\nA\nThey are all moving around each other.\nB\nThey are all moving away from each other.\nC\nThey are all moving in circular orbits.\nD\nThey are all moving towards each other.",
  "marks": 1,
  "figures": [],
  "review": {
@@ -75,7 +52,7 @@
    "text": "They are all moving towards each other."
   }
  ],
- "has_diagram": true,
+ "has_diagram": false,
  "answer": "B",
  "syllabus": "0625",
  "subject": "Physics",
@@ -92,5 +69,38 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "Light received from distant galaxies is observed to have a longer wavelength than the light originally emitted. This is called redshift.",
+   "text": "Light received from distant galaxies is observed to have a longer wavelength than the light originally emitted. This is called redshift."
+  },
+  {
+   "type": "text",
+   "html": "Which conclusion do astronomers form about distant galaxies from this observation?",
+   "text": "Which conclusion do astronomers form about distant galaxies from this observation?"
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "They are all moving around each other."
+    },
+    {
+     "label": "B",
+     "html": "They are all moving away from each other."
+    },
+    {
+     "label": "C",
+     "html": "They are all moving in circular orbits."
+    },
+    {
+     "label": "D",
+     "html": "They are all moving towards each other."
+    }
+   ]
+  }
+ ]
 }

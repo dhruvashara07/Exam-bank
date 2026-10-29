@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    305.0
+    305.5
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 103.5,
-    "height_pt": 245.2
+    "height_pt": 245.7
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2025-FM/p32/q12/question/0625_2025FM_32_q12_stem_s1.svg",
@@ -63,7 +63,7 @@
       30.0,
       311.0,
       570.0,
-      357.1
+      357.5
      ],
      "continued": false,
      "answer_space": {
@@ -71,7 +71,7 @@
       "dotted_lines": 1,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 46.0
+      "height_pt": 46.5
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-FM/p32/q12/question/0625_2025FM_32_q12_a_s1.svg",
@@ -109,6 +109,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "State the term used to describe the force that keeps the Earth in orbit around the Sun.",
+     "text": "State the term used to describe the force that keeps the Earth in orbit around the Sun."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -120,7 +136,7 @@
       30.0,
       363.1,
       570.0,
-      461.1
+      461.5
      ],
      "continued": false,
      "answer_space": {
@@ -128,13 +144,13 @@
       "dotted_lines": 3,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 98.0
+      "height_pt": 98.4
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-FM/p32/q12/question/0625_2025FM_32_q12_b_s1.svg",
       "public_id": "question_bank/cambridge-igcse/0625-physics/2025-FM/p32/q12/question/0625_2025FM_32_q12_b_s1",
       "url": null,
-      "kb": 59.8
+      "kb": 59.9
      }
     }
    ],
@@ -166,6 +182,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Explain why the Earth has an annual cycle of seasons.",
+     "text": "Explain why the Earth has an annual cycle of seasons."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 3
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -177,7 +209,7 @@
       30.0,
       467.1,
       570.0,
-      643.1
+      643.5
      ],
      "continued": false,
      "answer_space": {
@@ -185,7 +217,7 @@
       "dotted_lines": 1,
       "answer_line": "time taken to reach Earth =  …… s [3]",
       "working_gap_pt": 93.0,
-      "height_pt": 176.0
+      "height_pt": 176.4
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-FM/p32/q12/question/0625_2025FM_32_q12_c_s1.svg",
@@ -201,9 +233,11 @@
    "mark_scheme": [
     {
      "label": "12(c)",
-     "text": "490 (s)\n1.48 × 1011 ÷ 3(.0) × 108\nspeed = distance ÷ time OR (t =) d ÷ s",
+     "text": "490 (s)\n1.48 × 10\n÷ 3(.0) × 10\n11\n8\nspeed = distance ÷ time OR (t =) d ÷ s",
      "codes": [
-      "A3"
+      "A3",
+      "(C2)",
+      "(C1)"
      ],
      "segments": [
       {
@@ -222,6 +256,28 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The distance of the Earth from the Sun is 1.48 × 10<sup>11</sup>m. The speed of light is 3.0 × 10<sup>8</sup>m/s.",
+     "text": "The distance of the Earth from the Sun is 1.48 × 1011m. The speed of light is 3.0 × 108m/s."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the time it takes light from the Sun to reach the Earth.",
+     "text": "Calculate the time it takes light from the Sun to reach the Earth."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "time taken to reach Earth =",
+     "unit": "s"
+    },
+    {
+     "type": "marks",
+     "value": 3
     }
    ]
   }
@@ -242,5 +298,17 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "Fig. 12.1 represents the Earth’s orbit of the Sun.",
+   "text": "Fig. 12.1 represents the Earth’s orbit of the Sun."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2025FM_32_q12_fig12-1",
+   "caption": "Fig. 12.1 (Not to scale)"
+  }
+ ]
 }

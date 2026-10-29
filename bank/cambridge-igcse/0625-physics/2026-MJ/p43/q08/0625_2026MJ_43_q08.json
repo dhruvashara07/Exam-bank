@@ -10,7 +10,7 @@
    "page": 12,
    "bbox": [
     58.8,
-    73.8,
+    98.5,
     536.6,
     352.0
    ],
@@ -21,7 +21,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q08/figures/0625_2026MJ_43_q08a_fig8-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p43/q08/figures/0625_2026MJ_43_q08a_fig8-1",
     "url": null,
-    "kb": 38.1
+    "kb": 36.8
    }
   },
   {
@@ -58,7 +58,7 @@
       30.0,
       59.8,
       570.0,
-      562.0
+      562.5
      ],
      "continued": false,
      "answer_space": {
@@ -66,7 +66,7 @@
       "dotted_lines": 3,
       "answer_line": null,
       "working_gap_pt": 41.9,
-      "height_pt": 502.2
+      "height_pt": 502.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q08/question/0625_2026MJ_43_q08_a_s1.svg",
@@ -82,8 +82,12 @@
    "mark_scheme": [
     {
      "label": "8(a)",
-     "text": "current\nB1 A voltage / p.d.\nA flow of charge / moving electrons\nI electricity\nmagnetised OR an electromagnet\nB1 TV magnet\nTV magnetic\nTV ferromagnetic\nCON electromagnetic\ncompletes owtte\nB1 A e.g. switches on",
-     "codes": [],
+     "text": "current\nmagnetised OR an electromagnet\ncompletes owtte",
+     "codes": [
+      "B1",
+      "B1",
+      "B1"
+     ],
      "segments": [
       {
        "page": 13,
@@ -102,6 +106,52 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A teacher uses the arrangement shown in Figure 8.1 to demonstrate how an intruder",
+     "text": "A teacher uses the arrangement shown in Figure 8.1 to demonstrate how an intruder"
+    },
+    {
+     "type": "text",
+     "html": "alarm works.",
+     "text": "alarm works."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_43_q08a_fig8-1",
+     "caption": "Figure 8.1"
+    },
+    {
+     "type": "text",
+     "html": "Switch S is connected to a door. When the door is open, switch S is open. When the door is closed, switch S is closed.",
+     "text": "Switch S is connected to a door. When the door is open, switch S is open. When the door is closed, switch S is closed."
+    },
+    {
+     "type": "text",
+     "html": "Complete the sentences to explain how the arrangement can be used as an intruder alarm.",
+     "text": "Complete the sentences to explain how the arrangement can be used as an intruder alarm."
+    },
+    {
+     "type": "text",
+     "html": "in the coil of wire.",
+     "text": "in the coil of wire."
+    },
+    {
+     "type": "text",
+     "html": "the bell circuit, causing the bell to ring.",
+     "text": "the bell circuit, causing the bell to ring."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "When the door is opened, the contacts touch and this"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   },
   {
@@ -113,7 +163,7 @@
       30.0,
       59.8,
       570.0,
-      250.5
+      251.0
      ],
      "continued": false,
      "answer_space": {
@@ -121,7 +171,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 61.6,
-      "height_pt": 190.7
+      "height_pt": 191.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q08/question/0625_2026MJ_43_q08_b_s1.svg",
@@ -143,7 +193,7 @@
         30.0,
         256.5,
         570.0,
-        364.7
+        363.0
        ],
        "continued": false,
        "answer_space": {
@@ -151,7 +201,7 @@
         "dotted_lines": 1,
         "answer_line": "Vs =  …… V [2]",
         "working_gap_pt": 70.6,
-        "height_pt": 108.2
+        "height_pt": 106.5
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q08/question/0625_2026MJ_43_q08_b-i_s1.svg",
@@ -167,8 +217,11 @@
      "mark_scheme": [
       {
        "label": "8(b)(i)",
-       "text": "27 (V)\nA2\n(Vs =) {Vp × Ns} / Np OR {240 / Vs} = {360 / 40}\nA {40 / 360} × 240\nC1",
-       "codes": [],
+       "text": "27 (V)\n(V =) {V × N } / N OR {240 / V } = {360 / 40}\ns\np\ns\np\ns",
+       "codes": [
+        "A2",
+        "C1"
+       ],
        "segments": [
         {
          "page": 13,
@@ -187,6 +240,23 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the voltage V<sub>s</sub> across the secondary coil.",
+       "text": "Calculate the voltage Vs across the secondary coil."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Vs =",
+       "unit": "V"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     },
     {
@@ -198,7 +268,7 @@
         30.0,
         367.4,
         570.0,
-        517.4
+        517.5
        ],
        "continued": false,
        "answer_space": {
@@ -206,7 +276,7 @@
         "dotted_lines": 3,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 150.0
+        "height_pt": 150.1
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p43/q08/question/0625_2026MJ_43_q08_b-ii_s1.svg",
@@ -222,8 +292,11 @@
      "mark_scheme": [
       {
        "label": "8(b)(ii)",
-       "text": "d.c. does not produce the changing magnetic field needed\nA2\nfor electromagnetic induction\nOR\na.c. required to produce changing magnetic field needed for\nelectromagnetic induction\nthere is no changing magnetic field\nC1",
-       "codes": [],
+       "text": "d.c. does not produce the changing magnetic field needed\nfor electromagnetic induction\nOR\na.c. required to produce changing magnetic field needed for\nelectromagnetic induction\nthere is no changing magnetic field",
+       "codes": [
+        "A2",
+        "C1"
+       ],
        "segments": [
         {
          "page": 13,
@@ -242,10 +315,48 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "A student connects the primary coil of the transformer to a d.c. supply.",
+       "text": "A student connects the primary coil of the transformer to a d.c. supply."
+      },
+      {
+       "type": "text",
+       "html": "Explain why there is no voltage across the secondary coil.",
+       "text": "Explain why there is no voltage across the secondary coil."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 3
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     }
    ],
-   "path": "8(b)"
+   "path": "8(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Figure 8.2 shows a transformer that is 100% efficient.",
+     "text": "Figure 8.2 shows a transformer that is 100% efficient."
+    },
+    {
+     "type": "text",
+     "html": "primary coil core secondary coil 360 turns 40 turns",
+     "text": "primary coil core secondary coil 360 turns 40 turns"
+    },
+    {
+     "type": "figure",
+     "id": "0625_2026MJ_43_q08b_fig8-2",
+     "caption": "Figure 8.2"
+    }
+   ]
   }
  ],
  "total_marks": 7,

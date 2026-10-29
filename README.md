@@ -1,15 +1,18 @@
 # exam-bank
 
-Private question bank for Dhruv's classes. Phase 1: Cambridge IGCSE Physics 0625, 2025–2026.
+Private question bank for Dhruv's classes. Phase 1: Cambridge IGCSE Physics 0625, 2015–2026.
 Every question is cut from the original papers as exact vector SVGs (original layout and answer
-space), with its structure, marks and mark scheme in JSON. Git is the master copy; Cloudinary holds
+space), with its structure, marks and mark scheme in JSON, plus an editable copy (`content`: text with
+bold/italic/sub/sup/maths, tables, figure references, answer space, options). Git is the master copy; Cloudinary holds
 the images and MongoDB a searchable copy for the website.
 
 ## Where things are
 
 ```
 inbox/                 drop new PDFs here from your phone (any Cambridge name, e.g. 0625_s25_qp_41.pdf)
-raw/0625/2025-MJ/      original PDFs, renamed qp_41.pdf / ms_41.pdf   (FM = Feb/Mar, MJ = May/Jun, ON = Oct/Nov)
+raw/manifest.json      the original PDFs, stored in GitHub Releases (raw-0625-2015, ...), not in git;
+                       `pipeline/raw_store.py fetch` puts them in raw/0625/2025-MJ/qp_41.pdf etc.
+                       (FM = Feb/Mar, MJ = May/Jun, ON = Oct/Nov)
 bank/
   index.json           one row per question: id, file, type, marks, parts, answer, topic, review status
   cambridge-igcse/
@@ -25,7 +28,8 @@ bank/
 review/queue.json      items the pipeline is unsure about
 review/approvals/      one file per paper Claude has checked (only these go to MongoDB)
 pipeline/              the scripts (see pipeline/README.md)
-docs/SETUP.md          one-time Cloudinary + MongoDB setup
+site/                  the review website (GitHub Pages): browse every paper, exact vs editable, report problems
+docs/SETUP.md          one-time Cloudinary + MongoDB + Pages setup
 docs/DAILY_CHECK.md    what the daily Claude check does
 CLAUDE.md              rules for every Claude session (safe push etc.)
 ```
@@ -39,3 +43,8 @@ Upload PDFs into `inbox/` with the GitHub app → the **Question bank** Action f
 questions, commits them to `bank/` and uploads SVGs to Cloudinary (`question_bank/` folder). The paper is
 then *pending*: a daily scheduled Claude session checks it (docs/DAILY_CHECK.md) and approves it in
 `review/approvals/`; only then does the Action put it in MongoDB (database `question_bank`).
+
+## Review website
+https://dhruvashara07.github.io/Exam-bank/ (rebuilt after every Action run by `.github/workflows/site.yml`).
+Papers by year and session, each question exact / editable / side by side with its mark scheme, a
+"To check" list, and "Report a problem" (opens a GitHub issue labelled `review` that the daily check reads).

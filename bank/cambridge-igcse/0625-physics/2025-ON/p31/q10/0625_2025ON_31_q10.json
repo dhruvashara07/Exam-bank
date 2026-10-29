@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    92.8
+    93.0
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 4.0,
-    "height_pt": 33.0
+    "height_pt": 33.2
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q10/question/0625_2025ON_31_q10_stem_s1.svg",
@@ -43,7 +43,7 @@
       30.0,
       98.8,
       570.0,
-      196.8
+      197.0
      ],
      "continued": false,
      "answer_space": {
@@ -51,7 +51,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 67.0,
-      "height_pt": 98.0
+      "height_pt": 98.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q10/question/0625_2025ON_31_q10_a_s1.svg",
@@ -90,6 +90,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write the nuclide notation for radium-223.",
+     "text": "Write the nuclide notation for radium-223."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 67.0
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   },
   {
@@ -101,7 +117,7 @@
       30.0,
       202.8,
       570.0,
-      274.8
+      275.0
      ],
      "continued": false,
      "answer_space": {
@@ -109,7 +125,7 @@
       "dotted_lines": 1,
       "answer_line": "number of neutrons =  …… [1]",
       "working_gap_pt": 41.0,
-      "height_pt": 72.0
+      "height_pt": 72.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q10/question/0625_2025ON_31_q10_b_s1.svg",
@@ -147,6 +163,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Determine the number of neutrons in one nucleus of radium-223.",
+     "text": "Determine the number of neutrons in one nucleus of radium-223."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "number of neutrons ="
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -158,7 +190,7 @@
       30.0,
       280.8,
       570.0,
-      469.8
+      470.0
      ],
      "continued": false,
      "answer_space": {
@@ -166,7 +198,7 @@
       "dotted_lines": 1,
       "answer_line": "number of days =  …… [3]",
       "working_gap_pt": 106.0,
-      "height_pt": 189.0
+      "height_pt": 189.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q10/question/0625_2025ON_31_q10_c_s1.svg",
@@ -182,9 +214,11 @@
    "mark_scheme": [
     {
      "label": "10(c)",
-     "text": "(3 × 11 =) 33 (days)\n(change in mass takes place over / decay takes) 3 half-lives\n8(.0) 4(.0)  OR  32 × ½ × ½ × ½  OR 32 × 1/8\n32\n16",
+     "text": "(3 × 11 =) 33 (days)\n(change in mass takes place over / decay takes) 3 half-lives\n4(.0) OR 32 × ½ × ½ × ½ OR 32 × 1/8\n32\n16\n8(.0)",
      "codes": [
-      "A3"
+      "A3",
+      "(C2)",
+      "(C1)"
      ],
      "segments": [
       {
@@ -203,6 +237,27 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The half-life of radium-223 is 11 days. A sample contains 32mg of radium-223.",
+     "text": "The half-life of radium-223 is 11 days. A sample contains 32mg of radium-223."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the time taken for the mass of radium-223 in the sample to decay from 32mg to 4mg.",
+     "text": "Calculate the time taken for the mass of radium-223 in the sample to decay from 32mg to 4mg."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "number of days ="
+    },
+    {
+     "type": "marks",
+     "value": 3
     }
    ]
   }
@@ -223,5 +278,12 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "Radium is a radioactive element with the chemical symbol Ra. The proton number for radium is 88. Radium-223 is an isotope of radium that has a nucleon number of 223.",
+   "text": "Radium is a radioactive element with the chemical symbol Ra. The proton number for radium is 88. Radium-223 is an isotope of radium that has a nucleon number of 223."
+  }
+ ]
 }

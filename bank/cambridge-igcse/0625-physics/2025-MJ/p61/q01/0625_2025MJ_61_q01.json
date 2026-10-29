@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    79.8
+    80.0
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 4.0,
-    "height_pt": 20.0
+    "height_pt": 20.2
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p61/q01/question/0625_2025MJ_61_q01_stem_s1.svg",
@@ -82,7 +82,7 @@
       30.0,
       86.0,
       570.0,
-      385.8
+      386.0
      ],
      "continued": false,
      "answer_space": {
@@ -90,7 +90,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 180.9,
-      "height_pt": 299.8
+      "height_pt": 300.0
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p61/q01/question/0625_2025MJ_61_q01_a_s1.svg",
@@ -112,7 +112,7 @@
         30.0,
         392.0,
         570.0,
-        477.2
+        477.5
        ],
        "continued": false,
        "answer_space": {
@@ -120,7 +120,7 @@
         "dotted_lines": 2,
         "answer_line": "d1 =  …… cm",
         "working_gap_pt": 11.7,
-        "height_pt": 85.2
+        "height_pt": 85.5
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p61/q01/question/0625_2025MJ_61_q01_a-i_s1.svg",
@@ -136,7 +136,7 @@
      "mark_scheme": [
       {
        "label": "1(a)(i)",
-       "text": "two measurements in cm 2.7 and 2.5, both given to nearest mm",
+       "text": "two measurements in cm 2.7 and 2.5, both given to nearest mm",
        "codes": [
         "1"
        ],
@@ -158,6 +158,23 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "On Fig. 1.1, measure the lengths d<sub>1</sub> and d<sub>2</sub>.",
+       "text": "On Fig. 1.1, measure the lengths d1 and d2."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "d2 =",
+       "unit": "cm"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -169,7 +186,7 @@
         30.0,
         483.4,
         570.0,
-        573.1
+        573.5
        ],
        "continued": false,
        "answer_space": {
@@ -177,7 +194,7 @@
         "dotted_lines": 1,
         "answer_line": "d =  …… cm [1]",
         "working_gap_pt": 58.7,
-        "height_pt": 89.7
+        "height_pt": 90.1
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p61/q01/question/0625_2025MJ_61_q01_a-ii_s1.svg",
@@ -193,7 +210,7 @@
      "mark_scheme": [
       {
        "label": "1(a)(ii)",
-       "text": "correct average: expect 2.6 (cm)",
+       "text": "correct average: expect 2.6 (cm)",
        "codes": [
         "1"
        ],
@@ -215,6 +232,23 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Using your measurements, calculate the diameter d of the ball. Show your working.",
+       "text": "Using your measurements, calculate the diameter d of the ball. Show your working."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "d =",
+       "unit": "cm"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -226,7 +260,7 @@
         30.0,
         579.3,
         570.0,
-        651.4
+        651.5
        ],
        "continued": false,
        "answer_space": {
@@ -234,7 +268,7 @@
         "dotted_lines": 2,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 72.0
+        "height_pt": 72.2
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p61/q01/question/0625_2025MJ_61_q01_a-iii_s1.svg",
@@ -250,7 +284,7 @@
      "mark_scheme": [
       {
        "label": "1(a)(iii)",
-       "text": "any reasonable advantage for the method in the question given OR it is difficult to measure the diameter directly OR hard to\nfind centre of ball\na ruler for measuring the diameter directly would give rise to parallax errors",
+       "text": "any reasonable advantage for the method in the question given OR it is difficult to measure the diameter directly OR hard to\nfind centre of ball\na ruler for measuring the diameter directly would give rise to parallax errors",
        "codes": [
         "1",
         "1"
@@ -273,10 +307,43 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Explain why this method is used to measure the diameter of the ball.",
+       "text": "Explain why this method is used to measure the diameter of the ball."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     }
    ],
-   "path": "1(a)"
+   "path": "1(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "He places the ball between two wooden blocks, as seen from above in Fig. 1.1.",
+     "text": "He places the ball between two wooden blocks, as seen from above in Fig. 1.1."
+    },
+    {
+     "type": "text",
+     "html": "He takes two measurements, d<sub>1</sub> and d<sub>2</sub>.",
+     "text": "He takes two measurements, d1 and d2."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2025MJ_61_q01a_fig1-1",
+     "caption": "Fig. 1.1"
+    }
+   ]
   },
   {
    "label": "b",
@@ -287,7 +354,7 @@
       30.0,
       657.6,
       570.0,
-      786.2
+      786.5
      ],
      "continued": false,
      "answer_space": {
@@ -295,7 +362,7 @@
       "dotted_lines": 1,
       "answer_line": "V =  …… [2]",
       "working_gap_pt": 71.7,
-      "height_pt": 128.7
+      "height_pt": 128.9
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p61/q01/question/0625_2025MJ_61_q01_b_s1.svg",
@@ -311,7 +378,7 @@
    "mark_scheme": [
     {
      "label": "1(b)",
-     "text": "V = 9.1(4)\nunit: cm3",
+     "text": "V = 9.1(4)\nunit: cm\n3",
      "codes": [
       "1",
       "1"
@@ -334,6 +401,27 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the volume V of the ball using the equation V = 0.52d<sup>3</sup>.",
+     "text": "Calculate the volume V of the ball using the equation V = 0.52d3."
+    },
+    {
+     "type": "text",
+     "html": "Include the unit.",
+     "text": "Include the unit."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V ="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   },
   {
@@ -345,7 +433,7 @@
       30.0,
       59.8,
       570.0,
-      440.3
+      440.5
      ],
      "continued": false,
      "answer_space": {
@@ -353,7 +441,7 @@
       "dotted_lines": 3,
       "answer_line": "mD =  …… g",
       "working_gap_pt": 87.2,
-      "height_pt": 380.4
+      "height_pt": 380.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p61/q01/question/0625_2025MJ_61_q01_c_s1.svg",
@@ -369,7 +457,7 @@
    "mark_scheme": [
     {
      "label": "1(c)",
-     "text": "correct method for calculation of mB shown\nmB = 11.6 (g)",
+     "text": "correct method for calculation of mB shown\nmB = 11.6 (g)",
      "codes": [
       "1",
       "1"
@@ -392,6 +480,53 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The student measures the mass m<sub>D</sub> of a dish.",
+     "text": "The student measures the mass mD of a dish."
+    },
+    {
+     "type": "text",
+     "html": "102.5",
+     "text": "102.5"
+    },
+    {
+     "type": "text",
+     "html": "He places the ball in the dish and measures the combined mass m<sub>C</sub> of the dish and the ball.",
+     "text": "He places the ball in the dish and measures the combined mass mC of the dish and the ball."
+    },
+    {
+     "type": "text",
+     "html": "Fig. 1.2 shows the dish and the ball on a balance.",
+     "text": "Fig. 1.2 shows the dish and the ball on a balance."
+    },
+    {
+     "type": "text",
+     "html": "Record the reading shown on the balance.",
+     "text": "Record the reading shown on the balance."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2025MJ_61_q01c_fig1-2",
+     "caption": "Fig. 1.2"
+    },
+    {
+     "type": "text",
+     "html": "Calculate the mass m<sub>B</sub> of the ball. Show your working.",
+     "text": "Calculate the mass mB of the ball. Show your working."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "mB =",
+     "unit": "g"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   },
   {
@@ -403,7 +538,7 @@
       30.0,
       446.3,
       570.0,
-      665.6
+      666.0
      ],
      "continued": false,
      "answer_space": {
@@ -411,7 +546,7 @@
       "dotted_lines": 1,
       "answer_line": "ρ =  …… [3]",
       "working_gap_pt": 87.0,
-      "height_pt": 219.3
+      "height_pt": 219.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p61/q01/question/0625_2025MJ_61_q01_d_s1.svg",
@@ -427,7 +562,7 @@
    "mark_scheme": [
     {
      "label": "1(d)",
-     "text": "ρ on answer line correctly calculated to 2 or more significant figures\nunit: g / cm3\nanswer given to 2 or 3 significant figures",
+     "text": "ρ on answer line correctly calculated to 2 or more significant figures\nunit: g / cm\n3\nanswer given to 2 or 3 significant figures",
      "codes": [
       "1",
       "1",
@@ -451,6 +586,32 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the density ρof the ball using the equation:",
+     "text": "Calculate the density ρof the ball using the equation:"
+    },
+    {
+     "type": "text",
+     "html": "\\(\\frac{m<sub>B</sub>}{V}\\) ρ= .",
+     "text": "(mB)/(V) ρ= ."
+    },
+    {
+     "type": "text",
+     "html": "Give your answer to a suitable number of significant figures for this experiment. Include the unit.",
+     "text": "Give your answer to a suitable number of significant figures for this experiment. Include the unit."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "ρ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   }
  ],
@@ -470,5 +631,12 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "A student determines the density of a ball.",
+   "text": "A student determines the density of a ball."
+  }
+ ]
 }

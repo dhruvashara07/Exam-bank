@@ -7,12 +7,12 @@ layout, answer space included.
 """
 import re
 import pymupdf as fitz
-from layout import page_bounds, visible_lines, ink_boxes, label_tokens, ROMAN, LETTERS, CONTENT_X0, CONTENT_X1
+from layout import page_bounds, visible_lines, ink_boxes, label_tokens, ROMAN, LETTERS, CONTENT_X0, CONTENT_X1, row_ink, ink_extent, ZOOM
 
 PAD_TOP, PAD_BOTTOM = 4.0, 5.0
 CAPTION = re.compile(r'^(Fig\.|Figure|Table)\s*\d+(\.\d+)?(\s*\(.*\))?$')
-MARK = re.compile(r'\[(\d{1,2})\]')
-TOTAL = re.compile(r'\[Total:\s*(\d{1,3})\]')
+MARK = re.compile(r'\[\s*(\d{1,2})\s*\]')
+TOTAL = re.compile(r'\[\s*Total\s*:\s*(\d{1,3})\s*\]')
 DOTS = re.compile(r'\.{12,}')
 
 SESSION_NAMES = {'FM': 'February-March', 'MJ': 'May-June', 'ON': 'October-November'}
@@ -20,24 +20,59 @@ PAPER_TYPES = {1: 'mcq_core', 2: 'mcq_extended', 3: 'theory_core', 4: 'theory_ex
                5: 'practical_test', 6: 'alternative_to_practical'}
 
 
+# Standard totals, used when the cover does not print one (covers before 2020).
+STANDARD_TOTAL = {'mcq_core': 40, 'mcq_extended': 40, 'mcq': 40, 'theory_core': 80, 'theory_extended': 80,
+                  'practical_test': 40, 'alternative_to_practical': 40}
+
+
+def paper_type_from_cover(cover, paper):
+    """Read the paper type from the cover ('Paper 2 Core' in 2015 is theory, 'Paper 2 Multiple Choice
+    (Extended)' from 2016 is MCQ); fall back to the current numbering."""
+    m = re.search(r'Paper\s+\d\s+([^\n]+)', cover)
+    title = (m.group(1) if m else '').lower()
+    if 'multiple choice' in title:
+        return 'mcq_extended' if 'extended' in title else ('mcq_core' if 'core' in title else 'mcq')
+    if 'alternative to practical' in title:
+        return 'alternative_to_practical'
+    if 'practical' in title:
+        return 'practical_test'
+    if 'extended' in title:
+        return 'theory_extended'
+    if 'core' in title or 'theory' in title:
+        return 'theory_core'
+    return PAPER_TYPES[paper]
+
+
 def paper_meta(doc, syllabus, year, session, pv):
     cover = doc[0].get_text()
     m = re.search(r'total mark for this paper is (\d+)', cover)
     dur = re.search(r'\n\s*(\d+ hours?(?: \d+ minutes)?|\d+ minutes)\s*\n', cover)
+    ptype = paper_type_from_cover(cover, int(pv[0]))
     return {
         'syllabus': syllabus, 'subject': 'Physics', 'board': 'CAIE', 'exam': 'IGCSE',
         'year': year, 'session': session, 'season': SESSION_NAMES[session],
         'paper': int(pv[0]), 'variant': int(pv[1]), 'paper_code': f'{syllabus}/{pv}',
-        'paper_type': PAPER_TYPES[int(pv[0])],
-        'total_marks': int(m.group(1)) if m else None,
+        'paper_type': ptype, 'is_mcq': ptype.startswith('mcq'),
+        'total_marks': int(m.group(1)) if m else STANDARD_TOTAL.get(ptype),
+        'total_marks_source': 'cover' if m else 'standard',
         'duration': dur.group(1) if dur else None,
         'pages': len(doc),
+        'erratum': [{'page': i + 1, 'text': doc[i].get_text().strip()} for i in range(len(doc)) if is_erratum_page(doc[i])],
     }
+
+
+def is_erratum_page(page):
+    """An erratum notice Cambridge inserted into the paper (it is not a question page)."""
+    return 'ERRATUM NOTICE' in page.get_text().upper()
 
 
 def is_blank_page(page):
     t = page.get_text()
-    return 'BLANK PAGE' in t and len(t.strip()) < 400
+    if not re.search(r'BLANK\s+PAGE', t):
+        return False
+    top, bottom = page_bounds(page)
+    rest = [l for l in visible_lines(page, top, bottom) if not re.search(r'BLANK\s+PAGE', l['text'])]
+    return len(rest) == 0
 
 
 def boundaries(doc):
@@ -45,7 +80,7 @@ def boundaries(doc):
     out, q, letter, roman = [], 0, None, None
     for pno in range(1, len(doc)):
         page = doc[pno]
-        if is_blank_page(page):
+        if is_blank_page(page) or is_erratum_page(page):
             continue
         top, bottom = page_bounds(page)
         for t in label_tokens(page, top, bottom):
@@ -69,34 +104,30 @@ def end_of_paper(page, top, bottom):
     return bottom
 
 
-def best_cut(boxes, y, floor):
-    """A cut line at or a little above y that slices through as little ink as possible.
-
-    Tall glyphs on a label's line (fractions, superscripts) can start above the label word,
-    so the default cut (label top minus padding) is moved up when it would split them.
-    """
-    cands = [y - k * 0.5 for k in range(0, 29) if y - k * 0.5 > floor]
-    if not cands:
-        return y
+def best_cut(page, y, floor):
+    """A cut line near y that crosses as little printed ink as possible (rendered pixels, so line
+    spacing, tall glyphs and invisible geometry are all handled exactly). Candidates run from just
+    above the label (y + PAD_TOP) up to 14 pt above the default cut; ties go to the one nearest y."""
+    rows = row_ink(page)
+    cands = [y + PAD_TOP - 0.5 - k * 0.5 for k in range(0, 29 + int(2 * PAD_TOP))]
+    cands = [c for c in cands if c > floor] or [y]
     def cost(c):
-        return sum(1 for r in boxes if r.y0 < c - 0.3 and r.y1 > c + 0.3 and r.height < 80)
+        i = int(round(c * ZOOM))
+        return int(rows[max(0, i - 1):i + 2].sum())
     return min(cands, key=lambda c: (cost(c), abs(c - y)))
 
 
 def raw_segments(doc, bnds):
     """Strips of pages between consecutive boundaries, continuing across page breaks."""
     segs = []
-    pages = [p for p in range(1, len(doc)) if not is_blank_page(doc[p])]
+    pages = [p for p in range(1, len(doc)) if not is_blank_page(doc[p]) and not is_erratum_page(doc[p])]
     bounds = {p: page_bounds(doc[p]) for p in pages}
-    boxes = {}
     cuts = []
     for i, b in enumerate(bnds):
         p = b['page']
-        if p not in boxes:
-            boxes[p] = ink_boxes(doc[p], *bounds[p])
         prev = [x['y'] for x in bnds[:i] if x['page'] == p]
         floor = (max(prev) + 2) if prev else bounds[p][0] - 6
-        cuts.append(best_cut(boxes[p], b['y'] - PAD_TOP, floor))
+        cuts.append(best_cut(doc[p], b['y'] - PAD_TOP, floor))
     for i, b in enumerate(bnds):
         nxt = bnds[i + 1] if i + 1 < len(bnds) else None
         start_page = b['page']
@@ -116,12 +147,10 @@ def raw_segments(doc, bnds):
 def trim(doc, seg):
     """Shrink a strip to the ink it contains; drop strips with no ink."""
     page = doc[seg['page']]
-    top, bottom = page_bounds(page)
-    boxes = [r for r in ink_boxes(page, top, bottom) if seg['y0'] <= (r.y0 + r.y1) / 2 <= seg['y1']]
-    if not boxes:
+    ext = ink_extent(page, seg['y0'], seg['y1'])        # printed ink only
+    if not ext:
         return None
-    ink_top = min(r.y0 for r in boxes)
-    ink_bottom = max(r.y1 for r in boxes)
+    ink_top, ink_bottom = ext
     seg = dict(seg)
     if seg['continued']:
         seg['y0'] = max(seg['y0'], ink_top - PAD_TOP)
@@ -168,10 +197,16 @@ def find_figures(doc, seg, lines):
     top, bottom = page_bounds(page)
     figs = []
     caps = [l for l in lines if CAPTION.match(l['text'])]
-    drawings = [r for r in ink_boxes(page, top, bottom) if seg['y0'] <= r.y0 and r.y1 <= seg['y1'] + 1]
+    marks_text = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in lines
+                  if MARK.fullmatch(l['text'].strip()) or TOTAL.fullmatch(l['text'].strip())]
+    drawings = [r for r in ink_boxes(page, top, bottom) if seg['y0'] <= r.y0 and r.y1 <= seg['y1'] + 1
+                and not any(abs(r.x0 - m.x0) < 1 and abs(r.y0 - m.y0) < 1 and abs(r.x1 - m.x1) < 1 for m in marks_text)]
+    long_x0 = [l['x0'] for l in lines if len(l['text']) >= 25]
     for cap in caps:
         is_table = cap['text'].startswith('Table')
-        prose_above = [l for l in lines if l['y1'] <= cap['y0'] and (len(l['text']) >= 25 or re.match(r'^(\d{1,2}|\([a-z]+\))\s', l['text']))]
+        prose_above = [l for l in lines if l['y1'] <= cap['y0'] and (len(l['text']) >= 25 or re.match(r'^(\d{1,2}|\([a-z]+\))\s', l['text'])
+                                                                    or (l['x0'] <= 76 and l['text'].rstrip().endswith('.'))
+                                                                    or (l['text'].rstrip().endswith(('.', ':')) and any(abs(l['x0'] - x) < 2 for x in long_x0)))]
         if is_table:   # table caption sits above the table
             prose_below = [l for l in lines if l['y0'] > cap['y1'] + 4 and (len(l['text']) > 40 and not DOTS.search(l['text']))]
             band = (cap['y0'] - 2, (min(l['y0'] for l in prose_below) - 4) if prose_below else seg['y1'])
@@ -259,7 +294,7 @@ def extract(pdf_path, syllabus, year, session, pv):
     out = []
     for qn in sorted(questions):
         q = questions[qn]
-        if meta['paper'] in (1, 2):
+        if meta['is_mcq']:
             q['type'] = 'mcq'
             q['marks'] = 1
             q['options'] = mcq_options(segment_text_all(doc, q))
@@ -269,6 +304,8 @@ def extract(pdf_path, syllabus, year, session, pv):
         else:
             q['type'] = 'structured'
             q['marks'] = sum_marks(q)
+            if q['marks'] == 0 and not q.get('parts') and q.get('total_marks'):
+                q['marks'] = q['total_marks']        # single-part question marked only by '[Total: n]'
             if 'total_marks' in q and q['total_marks'] != q['marks']:
                 q['review']['reasons'].append(f"marks found {q['marks']} but [Total: {q['total_marks']}]")
         if len(q['segments']) == 0 and not q.get('parts'):

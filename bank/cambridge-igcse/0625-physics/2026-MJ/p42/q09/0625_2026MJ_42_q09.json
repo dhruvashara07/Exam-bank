@@ -39,7 +39,7 @@
       30.0,
       59.8,
       570.0,
-      79.8
+      80.0
      ],
      "continued": false,
      "answer_space": {
@@ -47,13 +47,13 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 4.0,
-      "height_pt": 20.0
+      "height_pt": 20.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q09/question/0625_2026MJ_42_q09_a_s1.svg",
       "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p42/q09/question/0625_2026MJ_42_q09_a_s1",
       "url": null,
-      "kb": 19.3
+      "kb": 19.4
      }
     }
    ],
@@ -69,7 +69,7 @@
         30.0,
         85.8,
         570.0,
-        183.8
+        184.0
        ],
        "continued": false,
        "answer_space": {
@@ -77,7 +77,7 @@
         "dotted_lines": 2,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 98.0
+        "height_pt": 98.2
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q09/question/0625_2026MJ_42_q09_a-i_s1.svg",
@@ -93,8 +93,10 @@
      "mark_scheme": [
       {
        "label": "9(a)(i)",
-       "text": "similarity: (same) number of protons AND difference: (different) number of\nB1 I same atomic number\nneutrons / nucleons\nI different mass number\nCON number of electrons",
-       "codes": [],
+       "text": "similarity: (same) number of protons AND difference: (different) number of\nneutrons / nucleons",
+       "codes": [
+        "B1"
+       ],
        "segments": [
         {
          "page": 16,
@@ -113,6 +115,22 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "State <b>one</b> similarity and <b>one</b> difference in the composition of the nuclei of atoms of different isotopes of the same element.",
+       "text": "State one similarity and one difference in the composition of the nuclei of atoms of different isotopes of the same element."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "difference"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -124,7 +142,7 @@
         30.0,
         189.8,
         570.0,
-        578.4
+        578.5
        ],
        "continued": false,
        "answer_space": {
@@ -132,7 +150,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 55.2,
-        "height_pt": 388.6
+        "height_pt": 388.7
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q09/question/0625_2026MJ_42_q09_a-ii_s1.svg",
@@ -148,8 +166,12 @@
      "mark_scheme": [
       {
        "label": "9(a)(ii)",
-       "text": "smooth curve, with negative gradient of decreasing magnitude, starting from\nB1 A small gap at starting point\n16 μg on mass axis\ncurve, with negative gradient of decreasing magnitude, which does not reach\nB1\ntime axis\nvalue of 8 μg corresponding to 5700 years on the graph OR value of 4 μg\nB1 A any correct corresponding point e.g.\ncorresponding to 11 400 years on the graph\n2.58 μg at 15 000 years\nCON 2.6 μg at 15 000 years if obtained\nfrom 15 000 / 5700",
-       "codes": [],
+       "text": "smooth curve, with negative gradient of decreasing magnitude, starting from\n16 μg on mass axis\ncurve, with negative gradient of decreasing magnitude, which does not reach\ntime axis\nvalue of 8 μg corresponding to 5700 years on the graph OR value of 4 μg\ncorresponding to 11 400 years on the graph",
+       "codes": [
+        "B1",
+        "B1",
+        "B1"
+       ],
        "segments": [
         {
          "page": 16,
@@ -168,10 +190,58 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "When a tree dies, no new carbon-14 is absorbed by the tree.",
+       "text": "When a tree dies, no new carbon-14 is absorbed by the tree."
+      },
+      {
+       "type": "text",
+       "html": "A tree contains 16μg of carbon-14 when it dies.",
+       "text": "A tree contains 16μg of carbon-14 when it dies."
+      },
+      {
+       "type": "text",
+       "html": "Carbon-14 has a half-life of 5700 years.",
+       "text": "Carbon-14 has a half-life of 5700 years."
+      },
+      {
+       "type": "text",
+       "html": "On Figure 9.1, sketch a graph to show how the mass of carbon-14 in the tree decreases during the first 15000 years after the tree dies.",
+       "text": "On Figure 9.1, sketch a graph to show how the mass of carbon-14 in the tree decreases during the first 15000 years after the tree dies."
+      },
+      {
+       "type": "text",
+       "html": "Show your working and label the axes with suitable values for <b>one</b> point on the graph.",
+       "text": "Show your working and label the axes with suitable values for one point on the graph."
+      },
+      {
+       "type": "figure",
+       "id": "0625_2026MJ_42_q09aii_fig9-1",
+       "caption": "Figure 9.1"
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 55.2
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
      ]
     }
    ],
-   "path": "9(a)"
+   "path": "9(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Carbon-14 is the only radioactive isotope of carbon that occurs naturally.",
+     "text": "Carbon-14 is the only radioactive isotope of carbon that occurs naturally."
+    }
+   ]
   },
   {
    "label": "b",
@@ -182,7 +252,7 @@
       30.0,
       597.4,
       570.0,
-      682.4
+      682.5
      ],
      "continued": false,
      "answer_space": {
@@ -190,7 +260,7 @@
       "dotted_lines": 1,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 85.0
+      "height_pt": 85.1
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q09/question/0625_2026MJ_42_q09_b_s1.svg",
@@ -206,8 +276,10 @@
    "mark_scheme": [
     {
      "label": "9(b)",
-     "text": "background\nB1",
-     "codes": [],
+     "text": "background",
+     "codes": [
+      "B1"
+     ],
      "segments": [
       {
        "page": 16,
@@ -226,6 +298,28 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the sentence about radiation.",
+     "text": "Complete the sentence about radiation."
+    },
+    {
+     "type": "text",
+     "html": "Ionising nuclear radiation that is always present in the environment is known",
+     "text": "Ionising nuclear radiation that is always present in the environment is known"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "as",
+     "unit": "radiation."
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -237,7 +331,7 @@
       30.0,
       701.4,
       570.0,
-      785.5
+      784.2
      ],
      "continued": false,
      "answer_space": {
@@ -245,7 +339,7 @@
       "dotted_lines": 1,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 84.0
+      "height_pt": 82.8
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p42/q09/question/0625_2026MJ_42_q09_c_s1.svg",
@@ -261,8 +355,10 @@
    "mark_scheme": [
     {
      "label": "9(c)",
-     "text": "any one from:\nB1\nradon (gas)\nrocks / buildings\nA soil / ground\nfood / drink\nA fruit\ncosmic rays\nI nuclear weapons testing\nI medical procedures\nI emissions from uranium\nCON CMBR",
-     "codes": [],
+     "text": "any one from:\nradon (gas)\nrocks / buildings\nfood / drink\ncosmic rays",
+     "codes": [
+      "B1"
+     ],
      "segments": [
       {
        "page": 16,
@@ -280,6 +376,22 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "State <b>one</b> source that makes a significant contribution to the ionising nuclear radiation that is always present in the environment.",
+     "text": "State one source that makes a significant contribution to the ionising nuclear radiation that is always present in the environment."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
     }
    ]
   }

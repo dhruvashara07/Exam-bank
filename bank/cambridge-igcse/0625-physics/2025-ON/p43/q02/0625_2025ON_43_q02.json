@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    118.8
+    119.0
    ],
    "continued": false,
    "answer_space": {
@@ -16,13 +16,13 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 15.0,
-    "height_pt": 59.0
+    "height_pt": 59.2
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p43/q02/question/0625_2025ON_43_q02_stem_s1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p43/q02/question/0625_2025ON_43_q02_stem_s1",
     "url": null,
-    "kb": 27.2
+    "kb": 27.3
    }
   }
  ],
@@ -43,7 +43,7 @@
       30.0,
       124.8,
       570.0,
-      227.5
+      228.0
      ],
      "continued": false,
      "answer_space": {
@@ -51,7 +51,7 @@
       "dotted_lines": 1,
       "answer_line": "change in momentum =  …… [2]",
       "working_gap_pt": 71.7,
-      "height_pt": 102.7
+      "height_pt": 103.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p43/q02/question/0625_2025ON_43_q02_a_s1.svg",
@@ -67,7 +67,7 @@
    "mark_scheme": [
     {
      "label": "2(a)",
-     "text": "(–) 3.5 kgm / s\n(Δp =) m(Δ)u OR m{v – u} OR 0.14 × {25 (– 0)}",
+     "text": "(–) 3.5 kgm / s\n(Δp =) m(Δ)u OR m{v – u} OR 0.14 × {25 (– 0)}",
      "codes": [
       "A2",
       "C1"
@@ -90,6 +90,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the change in momentum of the ball during the catch.",
+     "text": "Calculate the change in momentum of the ball during the catch."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "change in momentum ="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   },
   {
@@ -101,7 +117,7 @@
       30.0,
       233.5,
       570.0,
-      460.3
+      460.5
      ],
      "continued": false,
      "answer_space": {
@@ -109,7 +125,7 @@
       "dotted_lines": 1,
       "answer_line": "force =  …… [3]",
       "working_gap_pt": 143.7,
-      "height_pt": 226.7
+      "height_pt": 227.0
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p43/q02/question/0625_2025ON_43_q02_b_s1.svg",
@@ -125,7 +141,7 @@
    "mark_scheme": [
     {
      "label": "2(b)",
-     "text": "360 N\n0.0097 (s) OR 9.7 × 10–3 (s) OR 3.6 × 10n\n(F =) (Δ)p / t OR 3.5 / 0.0097",
+     "text": "360 N\n0.0097 (s) OR 9.7 × 10\n(s) OR 3.6 × 10\n–3\nn\n(F =) (Δ)p / t OR 3.5 / 0.0097",
      "codes": [
       "A3",
       "C1",
@@ -149,6 +165,27 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The player’s hands are in contact with the moving ball for 9.7ms.",
+     "text": "The player’s hands are in contact with the moving ball for 9.7ms."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the horizontal force exerted by her hands to bring the ball to rest.",
+     "text": "Calculate the horizontal force exerted by her hands to bring the ball to rest."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "force ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   }
  ],
@@ -168,5 +205,17 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "A cricket ball is travelling at a speed of 25m/s horizontally through the air. The mass of the ball is 0.14kg.",
+   "text": "A cricket ball is travelling at a speed of 25m/s horizontally through the air. The mass of the ball is 0.14kg."
+  },
+  {
+   "type": "text",
+   "html": "A player catches the ball and the ball comes to rest.",
+   "text": "A player catches the ball and the ball comes to rest."
+  }
+ ]
 }

@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    279.1
+    279.5
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 42.0,
-    "height_pt": 219.3
+    "height_pt": 219.7
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p41/q07/question/0625_2025ON_41_q07_stem_s1.svg",
@@ -63,7 +63,7 @@
       30.0,
       285.1,
       570.0,
-      429.2
+      429.5
      ],
      "continued": false,
      "answer_space": {
@@ -71,7 +71,7 @@
       "dotted_lines": 1,
       "answer_line": "resistance =  …… [2]",
       "working_gap_pt": 83.7,
-      "height_pt": 144.0
+      "height_pt": 144.4
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p41/q07/question/0625_2025ON_41_q07_a_s1.svg",
@@ -87,7 +87,7 @@
    "mark_scheme": [
     {
      "label": "7(a)",
-     "text": "38 Ω\n(R =) V ÷ I OR (R =) 3 ÷ 0.08(0)",
+     "text": "38 Ω\n(R =) V ÷ I OR (R =) 3 ÷ 0.08(0)",
      "codes": [
       "A2",
       "C1"
@@ -110,6 +110,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "S<sub>1</sub> is closed and S<sub>2</sub> is open. The current in the ammeter is 0.080A. Calculate the resistance of R<sub>1</sub>.",
+     "text": "S1 is closed and S2 is open. The current in the ammeter is 0.080A. Calculate the resistance of R1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "resistance ="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   },
   {
@@ -121,7 +137,7 @@
       30.0,
       435.2,
       570.0,
-      458.5
+      457.0
      ],
      "continued": false,
      "answer_space": {
@@ -129,7 +145,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 4.0,
-      "height_pt": 23.3
+      "height_pt": 21.8
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p41/q07/question/0625_2025ON_41_q07_b_s1.svg",
@@ -151,7 +167,7 @@
         30.0,
         461.2,
         570.0,
-        635.9
+        636.0
        ],
        "continued": false,
        "answer_space": {
@@ -159,13 +175,13 @@
         "dotted_lines": 1,
         "answer_line": "ammeter reading =  …… [3]",
         "working_gap_pt": 143.7,
-        "height_pt": 174.7
+        "height_pt": 174.8
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-ON/p41/q07/question/0625_2025ON_41_q07_b-i_s1.svg",
         "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p41/q07/question/0625_2025ON_41_q07_b-i_s1",
         "url": null,
-        "kb": 24.6
+        "kb": 24.5
        }
       }
      ],
@@ -175,7 +191,7 @@
      "mark_scheme": [
       {
        "label": "7(b)(i)",
-       "text": "Current in lower branch is 0.16(0) A\nammeter reading is sum of currents in each branch\n(ammeter reading =) 0.24 A\nOR\nresistance in top branch = twice value in 7(a)\nformula for combined resistance of resistors in parallel\nCorrect current calculated from candidate’s R1 in 7(a)",
+       "text": "Current in lower branch is 0.16(0) A\nammeter reading is sum of currents in each branch\n(ammeter reading =) 0.24 A\nOR\nresistance in top branch = twice value in 7(a)\nformula for combined resistance of resistors in parallel\nCorrect current calculated from candidate’s R1 in 7(a)",
        "codes": [
         "B1",
         "M1",
@@ -202,6 +218,22 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Determine the reading on the ammeter. Show your working.",
+       "text": "Determine the reading on the ammeter. Show your working."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "ammeter reading ="
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
      ]
     },
     {
@@ -213,7 +245,7 @@
         30.0,
         641.9,
         570.0,
-        778.9
+        779.0
        ],
        "continued": false,
        "answer_space": {
@@ -221,7 +253,7 @@
         "dotted_lines": 3,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 137.0
+        "height_pt": 137.1
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-ON/p41/q07/question/0625_2025ON_41_q07_b-ii_s1.svg",
@@ -260,10 +292,33 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Explain in terms of work done and potential difference why there is a larger heating effect in R<sub>3</sub> than in R<sub>1</sub>.",
+       "text": "Explain in terms of work done and potential difference why there is a larger heating effect in R3 than in R1."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 3
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
      ]
     }
    ],
-   "path": "7(b)"
+   "path": "7(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "S<sub>1</sub> and S<sub>2</sub> are both closed.",
+     "text": "S1 and S2 are both closed."
+    }
+   ]
   }
  ],
  "total_marks": 7,
@@ -282,5 +337,17 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "Fig. 7.1 shows a circuit containing a 6.0V battery of cells and three identical resistors.",
+   "text": "Fig. 7.1 shows a circuit containing a 6.0V battery of cells and three identical resistors."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2025ON_41_q07_fig7-1",
+   "caption": "Fig. 7.1"
+  }
+ ]
 }

@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    251.0
+    251.5
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 54.2,
-    "height_pt": 191.2
+    "height_pt": 191.7
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p32/q08/question/0625_2025MJ_32_q08_stem_s1.svg",
@@ -101,7 +101,7 @@
       30.0,
       255.0,
       570.0,
-      323.0
+      323.5
      ],
      "continued": false,
      "answer_space": {
@@ -109,7 +109,7 @@
       "dotted_lines": 2,
       "answer_line": null,
       "working_gap_pt": 13.0,
-      "height_pt": 68.0
+      "height_pt": 68.5
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p32/q08/question/0625_2025MJ_32_q08_a_s1.svg",
@@ -125,7 +125,7 @@
    "mark_scheme": [
     {
      "label": "8(a)",
-     "text": "reduces risk of electric shock / electrocution OR reference to damp conditions",
+     "text": "reduces risk of electric shock / electrocution OR reference to damp conditions",
      "codes": [
       "B1"
      ],
@@ -147,6 +147,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Suggest why a pull cord is safer than a push switch for a fan heater in a bathroom.",
+     "text": "Suggest why a pull cord is safer than a push switch for a fan heater in a bathroom."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -158,7 +174,7 @@
       30.0,
       328.0,
       570.0,
-      597.6
+      598.0
      ],
      "continued": false,
      "answer_space": {
@@ -166,7 +182,7 @@
       "dotted_lines": 2,
       "answer_line": null,
       "working_gap_pt": 40.5,
-      "height_pt": 269.6
+      "height_pt": 270.0
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p32/q08/question/0625_2025MJ_32_q08_b_s1.svg",
@@ -205,6 +221,32 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Fig. 8.2 shows the electric circuit for the fan heater.",
+     "text": "Fig. 8.2 shows the electric circuit for the fan heater."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2025MJ_32_q08b_fig8-2",
+     "caption": "Fig. 8.2"
+    },
+    {
+     "type": "text",
+     "html": "<b>State</b> the name for component X and for component Y.",
+     "text": "State the name for component X and for component Y."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Y"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   },
   {
@@ -216,7 +258,7 @@
       30.0,
       599.6,
       570.0,
-      797.2
+      796.2
      ],
      "continued": false,
      "answer_space": {
@@ -224,13 +266,13 @@
       "dotted_lines": 1,
       "answer_line": "current =  …… A [3]",
       "working_gap_pt": 41.0,
-      "height_pt": 197.6
+      "height_pt": 196.6
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p32/q08/question/0625_2025MJ_32_q08_c_s1.svg",
       "public_id": "question_bank/cambridge-igcse/0625-physics/2025-MJ/p32/q08/question/0625_2025MJ_32_q08_c_s1",
       "url": null,
-      "kb": 45.3
+      "kb": 42.0
      }
     }
    ],
@@ -240,7 +282,7 @@
    "mark_scheme": [
     {
      "label": "8(c)",
-     "text": "8.7 (A)\n2000 ÷ 230\npower = current × voltage OR (current =) power ÷ voltage",
+     "text": "8.7 (A)\n2000 ÷ 230\npower = current × voltage OR (current =) power ÷ voltage",
      "codes": [
       "A3",
       "C2",
@@ -264,6 +306,33 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Fig. 8.3 shows the information label on the fan heater.",
+     "text": "Fig. 8.3 shows the information label on the fan heater."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2025MJ_32_q08c_fig8-3",
+     "caption": "Fig. 8.3"
+    },
+    {
+     "type": "text",
+     "html": "Calculate the current supplied to the fan heater.",
+     "text": "Calculate the current supplied to the fan heater."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "current =",
+     "unit": "A"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   }
  ],
@@ -283,5 +352,22 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "Fig. 8.1 shows a mains-powered electric fan heater fixed on a bathroom wall.",
+   "text": "Fig. 8.1 shows a mains-powered electric fan heater fixed on a bathroom wall."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2025MJ_32_q08_fig8-1",
+   "caption": "Fig. 8.1"
+  },
+  {
+   "type": "text",
+   "html": "The pull cord switches the fan heater on and off.",
+   "text": "The pull cord switches the fan heater on and off."
+  }
+ ]
 }

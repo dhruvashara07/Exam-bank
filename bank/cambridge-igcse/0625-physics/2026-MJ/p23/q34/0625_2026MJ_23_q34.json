@@ -89,5 +89,58 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "In a nuclear fusion reaction, a hydrogen-2 nucleus joins with a hydrogen-3 nucleus to produce nucleus X and particle Y.",
+   "text": "In a nuclear fusion reaction, a hydrogen-2 nucleus joins with a hydrogen-3 nucleus to produce nucleus X and particle Y."
+  },
+  {
+   "type": "text",
+   "html": "<sup>2</sup><sub>1</sub>H + <sup>3</sup><sub>1</sub>H → X + Y",
+   "text": "21H + 31H → X + Y"
+  },
+  {
+   "type": "text",
+   "html": "Which row identifies nucleus X and particle Y?",
+   "text": "Which row identifies nucleus X and particle Y?"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "",
+     "<b>nucleus X</b>",
+     "<b>particle Y</b>"
+    ],
+    [
+     "<b>A</b> <b>B</b> <b>C</b> <b>D</b>",
+     "<sup>5</sup> <sub>1</sub>He <sup>5</sup> <sub>2</sub>He <sup>4</sup> <sub>2</sub>He <sup>5</sup> <sub>1</sub>He",
+     "<sup>0</sup> <sub>1</sub>β – <sup>0</sup> <sub>1</sub>β – <sup>1</sup> <sub>0</sub>n <sup>1</sup> <sub>0</sub>n"
+    ]
+   ]
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "5 He 0 β"
+    },
+    {
+     "label": "B",
+     "html": "5 He 0 β"
+    },
+    {
+     "label": "C",
+     "html": "4 He 0 1 n"
+    },
+    {
+     "label": "D",
+     "html": "5 He 0 1 n"
+    }
+   ]
+  }
+ ]
 }

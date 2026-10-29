@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    448.2
+    448.5
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 45.8,
-    "height_pt": 388.4
+    "height_pt": 388.7
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q01/question/0625_2025ON_31_q01_stem_s1.svg",
@@ -63,7 +63,7 @@
       30.0,
       454.2,
       570.0,
-      565.2
+      565.5
      ],
      "continued": false,
      "answer_space": {
@@ -71,7 +71,7 @@
       "dotted_lines": 1,
       "answer_line": "speed =  …… m / s [3]",
       "working_gap_pt": 80.0,
-      "height_pt": 111.0
+      "height_pt": 111.3
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q01/question/0625_2025ON_31_q01_a_s1.svg",
@@ -87,9 +87,11 @@
    "mark_scheme": [
     {
      "label": "1(a)",
-     "text": "(speed = ) 10 (m/s)\n(speed = ) 100 ÷ 10\n(speed = ) gradient of line (between 0 and 10 s)",
+     "text": "(speed = ) 10 (m/s)\n(speed = ) 100 ÷ 10\n(speed = ) gradient of line (between 0 and 10 s)",
      "codes": [
-      "A3"
+      "A3",
+      "(C2)",
+      "(C1)"
      ],
      "segments": [
       {
@@ -109,6 +111,23 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the speed of the cyclist between time = 0 and time = 10s.",
+     "text": "Calculate the speed of the cyclist between time = 0 and time = 10s."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "speed =",
+     "unit": "m/s"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   },
   {
@@ -120,7 +139,7 @@
       30.0,
       571.2,
       570.0,
-      591.2
+      591.5
      ],
      "continued": false,
      "answer_space": {
@@ -128,7 +147,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 4.0,
-      "height_pt": 20.0
+      "height_pt": 20.3
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q01/question/0625_2025ON_31_q01_b_s1.svg",
@@ -150,7 +169,7 @@
         30.0,
         597.2,
         570.0,
-        643.2
+        643.5
        ],
        "continued": false,
        "answer_space": {
@@ -158,7 +177,7 @@
         "dotted_lines": 1,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 46.0
+        "height_pt": 46.3
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q01/question/0625_2025ON_31_q01_b-i_s1.svg",
@@ -196,6 +215,22 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "between time = 0 and time = 20s",
+       "text": "between time = 0 and time = 20s"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -207,7 +242,7 @@
         30.0,
         649.2,
         570.0,
-        721.3
+        721.5
        ],
        "continued": false,
        "answer_space": {
@@ -215,7 +250,7 @@
         "dotted_lines": 1,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 72.0
+        "height_pt": 72.3
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-ON/p31/q01/question/0625_2025ON_31_q01_b-ii_s1.svg",
@@ -253,10 +288,33 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "between time = 20s and time = 40s.",
+       "text": "between time = 20s and time = 40s."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     }
    ],
-   "path": "1(b)"
+   "path": "1(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Describe the motion of the cyclist:",
+     "text": "Describe the motion of the cyclist:"
+    }
+   ]
   }
  ],
  "total_marks": 5,
@@ -275,5 +333,17 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "Fig. 1.1 shows the distance-time graph for a cyclist travelling along a flat, straight road.",
+   "text": "Fig. 1.1 shows the distance-time graph for a cyclist travelling along a flat, straight road."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2025ON_31_q01_fig1-1",
+   "caption": "Fig. 1.1"
+  }
+ ]
 }

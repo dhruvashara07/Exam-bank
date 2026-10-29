@@ -19,7 +19,7 @@
       30.0,
       59.8,
       570.0,
-      105.8
+      106.0
      ],
      "continued": false,
      "answer_space": {
@@ -27,7 +27,7 @@
       "dotted_lines": 1,
       "answer_line": "time =  …… unit  …… [1]",
       "working_gap_pt": 15.0,
-      "height_pt": 46.0
+      "height_pt": 46.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p32/q10/question/0625_2026MJ_32_q10_a_s1.svg",
@@ -43,8 +43,10 @@
    "mark_scheme": [
     {
      "label": "10(a)",
-     "text": "1 month\nB1 accept 27–30 days or 4 weeks",
-     "codes": [],
+     "text": "1 month",
+     "codes": [
+      "B1"
+     ],
      "segments": [
       {
        "page": 18,
@@ -63,6 +65,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>State</b> the approximate time taken for the Moon to orbit the <b>Earth.</b> Include the unit.",
+     "text": "State the approximate time taken for the Moon to orbit the Earth. Include the unit."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "time ="
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -74,7 +92,7 @@
       30.0,
       124.8,
       570.0,
-      170.8
+      171.0
      ],
      "continued": false,
      "answer_space": {
@@ -82,7 +100,7 @@
       "dotted_lines": 1,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 46.0
+      "height_pt": 46.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p32/q10/question/0625_2026MJ_32_q10_b_s1.svg",
@@ -98,8 +116,10 @@
    "mark_scheme": [
     {
      "label": "10(b)",
-     "text": "gravitational (force / attraction)\nB1 accept gravity\ncondone gravitational field or gravitational field strength\nignore centripetal force\nNOT GPE",
-     "codes": [],
+     "text": "gravitational (force / attraction)",
+     "codes": [
+      "B1"
+     ],
      "segments": [
       {
        "page": 18,
@@ -118,6 +138,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Name the force that keeps the Moon in orbit around the Earth.",
+     "text": "Name the force that keeps the Moon in orbit around the Earth."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -129,7 +165,7 @@
       30.0,
       189.8,
       570.0,
-      367.1
+      367.5
      ],
      "continued": false,
      "answer_space": {
@@ -137,7 +173,7 @@
       "dotted_lines": 1,
       "answer_line": "distance =  …… m [3]",
       "working_gap_pt": 68.2,
-      "height_pt": 177.2
+      "height_pt": 177.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p32/q10/question/0625_2026MJ_32_q10_c_s1.svg",
@@ -145,39 +181,21 @@
       "url": null,
       "kb": 42.9
      }
-    },
-    {
-     "page": 16,
-     "bbox": [
-      30.0,
-      59.8,
-      570.0,
-      79.8
-     ],
-     "continued": true,
-     "answer_space": {
-      "kind": "none",
-      "dotted_lines": 0,
-      "answer_line": null,
-      "working_gap_pt": 4.0,
-      "height_pt": 20.0
-     },
-     "svg": {
-      "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p32/q10/question/0625_2026MJ_32_q10_c_s2.svg",
-      "public_id": "question_bank/cambridge-igcse/0625-physics/2026-MJ/p32/q10/question/0625_2026MJ_32_q10_c_s2",
-      "url": null,
-      "kb": 4.3
-     }
     }
    ],
-   "text": "A spacecraft on the Moon sends a radio signal to the Earth.\nThe radio signal takes 1.28 s to travel from the Moon to the Earth.\nThe speed of the radio signal is 3.0 × 108 m / s.\nCalculate the distance from the Moon to the Earth.\ndistance =  ..................................................... m [3]\n[Total: 5]\nBLANK PAGE",
+   "text": "A spacecraft on the Moon sends a radio signal to the Earth.\nThe radio signal takes 1.28 s to travel from the Moon to the Earth.\nThe speed of the radio signal is 3.0 × 108 m / s.\nCalculate the distance from the Moon to the Earth.\ndistance =  ..................................................... m [3]\n[Total: 5]",
    "marks": 3,
    "path": "10(c)",
    "mark_scheme": [
     {
      "label": "10(c)",
-     "text": "3.8 × 108 (m)\nA3 accept 3.8(4) × 108 (m) or 384 000 000 (m)\n3.0 × 108 × 1.28\nC2\naccept 3.8(4) × 10N\n(distance =) speed × time\nC1\nnote: (distance =) speed × time or (d =) s × t\nor s = v × t in these forms only",
-     "codes": [],
+     "text": "3.8 × 10 (m)\n8\n3.0 × 10 × 1.28\n8\n(distance =) speed × time",
+     "codes": [
+      "A3",
+      "8",
+      "C2",
+      "C1"
+     ],
      "segments": [
       {
        "page": 18,
@@ -195,6 +213,28 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A spacecraft on the Moon sends a radio signal to the Earth. The radio signal takes 1.28s to travel from the Moon to the Earth. The speed of the radio signal is 3.0 × 10<sup>8</sup>m/s.",
+     "text": "A spacecraft on the Moon sends a radio signal to the Earth. The radio signal takes 1.28s to travel from the Moon to the Earth. The speed of the radio signal is 3.0 × 108m/s."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the distance from the Moon to the Earth.",
+     "text": "Calculate the distance from the Moon to the Earth."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "distance =",
+     "unit": "m"
+    },
+    {
+     "type": "marks",
+     "value": 3
     }
    ]
   }

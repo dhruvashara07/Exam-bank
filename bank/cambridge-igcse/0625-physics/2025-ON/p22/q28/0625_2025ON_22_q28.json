@@ -8,7 +8,7 @@
     30.0,
     58.5,
     570.0,
-    359.3
+    359.5
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 57.9,
-    "height_pt": 300.8
+    "height_pt": 301.0
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p22/q28/question/0625_2025ON_22_q28_stem_s1.svg",
@@ -89,5 +89,58 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "A teacher asks three students to write down an equation to determine the combined resistance <i>R</i><sub>C</sub> of resistors with resistances <i>R</i><sub>Y</sub> and <i>R</i><sub>Z</sub>.",
+   "text": "A teacher asks three students to write down an equation to determine the combined resistance RC of resistors with resistances RY and RZ."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2025ON_22_q28_figA",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "Which students are correct?",
+   "text": "Which students are correct?"
+  },
+  {
+   "type": "text",
+   "html": "student 1 \\(\\frac{1}{<i>R</i><sub>C</sub>}\\) = \\(\\frac{1}{<i>R</i><sub>Y</sub>}\\) + \\(\\frac{1}{<i>R</i><sub>Z</sub>}\\)",
+   "text": "student 1 (1)/(RC) = (1)/(RY) + (1)/(RZ)"
+  },
+  {
+   "type": "text",
+   "html": "student 2 \\(\\frac{1}{<i>R</i><sub>C</sub>}\\) = \\(\\frac{1}{<i>R</i><sub>Y</sub>+<i>R</i><sub>Z</sub>}\\)",
+   "text": "student 2 (1)/(RC) = (1)/(RY+RZ)"
+  },
+  {
+   "type": "text",
+   "html": "student 3 <i>R</i><sub>C</sub> = \\(\\frac{1}{<i>R</i><sub>Y</sub>}\\) + \\(\\frac{1}{<i>R</i><sub>Z</sub>}\\)",
+   "text": "student 3 RC = (1)/(RY) + (1)/(RZ)"
+  },
+  {
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "1 and 2"
+    },
+    {
+     "label": "B",
+     "html": "1 only"
+    },
+    {
+     "label": "C",
+     "html": "2 and 3"
+    },
+    {
+     "label": "D",
+     "html": "3 only"
+    }
+   ]
+  }
+ ]
 }

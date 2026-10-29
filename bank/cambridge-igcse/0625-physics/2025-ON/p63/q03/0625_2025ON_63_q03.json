@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    269.1
+    269.5
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 45.4,
-    "height_pt": 209.3
+    "height_pt": 209.7
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p63/q03/question/0625_2025ON_63_q03_stem_s1.svg",
@@ -73,8 +73,8 @@
    "bbox": [
     181.0,
     60.8,
-    548.7,
-    236.2
+    414.3,
+    224.8
    ],
    "id": "0625_2025ON_63_q03bi_table3-1",
    "part": "(b)(i)",
@@ -83,7 +83,7 @@
     "file": "bank/cambridge-igcse/0625-physics/2025-ON/p63/q03/figures/0625_2025ON_63_q03bi_table3-1.svg",
     "public_id": "question_bank/cambridge-igcse/0625-physics/2025-ON/p63/q03/figures/0625_2025ON_63_q03bi_table3-1",
     "url": null,
-    "kb": 28.5
+    "kb": 28.0
    }
   },
   {
@@ -120,7 +120,7 @@
       30.0,
       275.1,
       570.0,
-      412.1
+      412.5
      ],
      "continued": false,
      "answer_space": {
@@ -128,7 +128,7 @@
       "dotted_lines": 2,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 137.0
+      "height_pt": 137.4
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p63/q03/question/0625_2025ON_63_q03_a_s1.svg",
@@ -144,7 +144,7 @@
    "mark_scheme": [
     {
      "label": "3(a)",
-     "text": "move screen backwards and forwards / move screen slowly",
+     "text": "move screen backwards and forwards / move screen slowly",
      "codes": [
       "1"
      ],
@@ -166,6 +166,27 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The student sets the distance u between the illuminated triangular object and the lens to 20.0cm. He moves the screen until a sharp image of the illuminated triangular object is seen on the screen.",
+     "text": "The student sets the distance u between the illuminated triangular object and the lens to 20.0cm. He moves the screen until a sharp image of the illuminated triangular object is seen on the screen."
+    },
+    {
+     "type": "text",
+     "html": "Briefly describe <b>one</b> technique to obtain an image on the screen which is as sharp as possible in this experiment.",
+     "text": "Briefly describe one technique to obtain an image on the screen which is as sharp as possible in this experiment."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -183,7 +204,7 @@
         30.0,
         418.1,
         570.0,
-        787.8
+        788.0
        ],
        "continued": false,
        "answer_space": {
@@ -191,7 +212,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 155.2,
-        "height_pt": 369.6
+        "height_pt": 369.9
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-ON/p63/q03/question/0625_2025ON_63_q03_b-i_s1.svg",
@@ -204,9 +225,9 @@
        "page": 10,
        "bbox": [
         30.0,
-        59.8,
+        60.5,
         570.0,
-        238.2
+        238.5
        ],
        "continued": true,
        "answer_space": {
@@ -214,7 +235,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 19.9,
-        "height_pt": 178.4
+        "height_pt": 178.0
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-ON/p63/q03/question/0625_2025ON_63_q03_b-i_s2.svg",
@@ -230,7 +251,7 @@
      "mark_scheme": [
       {
        "label": "3(b)(i)",
-       "text": "hI = 6.0 (cm)",
+       "text": "hI = 6.0 (cm)",
        "codes": [
         "1"
        ],
@@ -252,6 +273,67 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The screen is shown full size in Fig. 3.2.",
+       "text": "The screen is shown full size in Fig. 3.2."
+      },
+      {
+       "type": "text",
+       "html": "Measure, and record in the first line of Table 3.1, the height h<sub>I</sub> of the image on the screen, as shown in Fig. 3.2.",
+       "text": "Measure, and record in the first line of Table 3.1, the height hI of the image on the screen, as shown in Fig. 3.2."
+      },
+      {
+       "type": "figure",
+       "id": "0625_2025ON_63_q03bi_fig3-2",
+       "caption": "Fig. 3.2"
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 155.2
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "u/cm",
+         "h<sub>I</sub>/cm",
+         "1 D/ cm"
+        ],
+        [
+         "20.0",
+         "",
+         ""
+        ],
+        [
+         "25.0",
+         "2.8",
+         "0.36"
+        ],
+        [
+         "30.0",
+         "2.0",
+         "0.50"
+        ],
+        [
+         "35.0",
+         "1.6",
+         "0.63"
+        ],
+        [
+         "40.0",
+         "1.2",
+         "0.83"
+        ]
+       ]
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -263,7 +345,7 @@
         30.0,
         244.2,
         570.0,
-        321.1
+        321.5
        ],
        "continued": false,
        "answer_space": {
@@ -271,7 +353,7 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 8.9,
-        "height_pt": 76.9
+        "height_pt": 77.3
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-ON/p63/q03/question/0625_2025ON_63_q03_b-ii_s1.svg",
@@ -287,7 +369,7 @@
      "mark_scheme": [
       {
        "label": "3(b)(ii)",
-       "text": "D = 0.17 (cm-1)",
+       "text": "D = 0.17 (cm )\n-1",
        "codes": [
         "1"
        ],
@@ -309,6 +391,22 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "For distance u = 20.0cm, calculate, and record in Table 3.1, a value D. Use your value of h<sub>I</sub> from Table 3.1 and the equation:",
+       "text": "For distance u = 20.0cm, calculate, and record in Table 3.1, a value D. Use your value of hI from Table 3.1 and the equation:"
+      },
+      {
+       "type": "text",
+       "html": "D = \\(\\frac{1}{h<sub>I</sub>}\\) .",
+       "text": "D = (1)/(hI) ."
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     }
    ],
@@ -323,7 +421,7 @@
       30.0,
       327.1,
       570.0,
-      701.0
+      701.5
      ],
      "continued": false,
      "answer_space": {
@@ -331,7 +429,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 273.0,
-      "height_pt": 373.9
+      "height_pt": 374.4
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p63/q03/question/0625_2025ON_63_q03_c_s1.svg",
@@ -369,6 +467,32 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The student repeats the procedure for u = 25.0cm, u = 30.0cm, u = 35.0cm and u = 40.0cm. His results <b>are</b> shown in Table 3.1.",
+     "text": "The student repeats the procedure for u = 25.0cm, u = 30.0cm, u = 35.0cm and u = 40.0cm. His results are shown in Table 3.1."
+    },
+    {
+     "type": "text",
+     "html": "Plot a graph of u /cm (y‑axis) against D/ \\(\\frac{1}{cm}\\) (x‑axis). Start the axes at the origin (0,0).",
+     "text": "Plot a graph of u /cm (y‑axis) against D/ (1)/(cm) (x‑axis). Start the axes at the origin (0,0)."
+    },
+    {
+     "type": "text",
+     "html": "Draw a best‑fit straight line.",
+     "text": "Draw a best‑fit straight line."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 273.0
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
    ]
   },
   {
@@ -386,7 +510,7 @@
         30.0,
         59.8,
         570.0,
-        109.1
+        107.5
        ],
        "continued": false,
        "answer_space": {
@@ -394,7 +518,7 @@
         "dotted_lines": 1,
         "answer_line": "u0 =  …… cm [1]",
         "working_gap_pt": 11.7,
-        "height_pt": 49.3
+        "height_pt": 47.7
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-ON/p63/q03/question/0625_2025ON_63_q03_d-i_s1.svg",
@@ -432,6 +556,23 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "From your graph, determine u<sub>0</sub>, the value of u when D is zero.",
+       "text": "From your graph, determine u0, the value of u when D is zero."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "u0 =",
+       "unit": "cm"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -443,7 +584,7 @@
         30.0,
         111.8,
         570.0,
-        209.8
+        210.0
        ],
        "continued": false,
        "answer_space": {
@@ -451,7 +592,7 @@
         "dotted_lines": 1,
         "answer_line": "G =  …… [1]",
         "working_gap_pt": 41.0,
-        "height_pt": 98.0
+        "height_pt": 98.2
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2025-ON/p63/q03/question/0625_2025ON_63_q03_d-ii_s1.svg",
@@ -489,6 +630,27 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Determine the gradient G of the graph.",
+       "text": "Determine the gradient G of the graph."
+      },
+      {
+       "type": "text",
+       "html": "Show clearly on the graph how you obtained the necessary information.",
+       "text": "Show clearly on the graph how you obtained the necessary information."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "G ="
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     }
    ],
@@ -503,7 +665,7 @@
       30.0,
       215.8,
       570.0,
-      584.2
+      584.5
      ],
      "continued": false,
      "answer_space": {
@@ -511,7 +673,7 @@
       "dotted_lines": 2,
       "answer_line": "hO =  …… cm",
       "working_gap_pt": 58.4,
-      "height_pt": 368.4
+      "height_pt": 368.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p63/q03/question/0625_2025ON_63_q03_e_s1.svg",
@@ -527,7 +689,7 @@
    "mark_scheme": [
     {
      "label": "3(e)",
-     "text": "hO present and\nf in range 13.5 to 16.5 (cm)",
+     "text": "hO present and\nf in range 13.5 to 16.5 (cm)",
      "codes": [
       "1"
      ],
@@ -549,6 +711,43 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The illuminated object is shown full size in Fig. 3.3.",
+     "text": "The illuminated object is shown full size in Fig. 3.3."
+    },
+    {
+     "type": "text",
+     "html": "Measure and record the height h<sub>O</sub> of the illuminated triangular object shown in Fig. 3.3.",
+     "text": "Measure and record the height hO of the illuminated triangular object shown in Fig. 3.3."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2025ON_63_q03e_fig3-3",
+     "caption": "Fig. 3.3"
+    },
+    {
+     "type": "text",
+     "html": "Calculate the focal length f of the lens. Use your value of h<sub>O</sub>, your value of G from (d)(ii) and the equation:",
+     "text": "Calculate the focal length f of the lens. Use your value of hO, your value of G from (d)(ii) and the equation:"
+    },
+    {
+     "type": "text",
+     "html": "f = \\(\\frac{G}{h<sub>O</sub>}\\) × k, where k = 1.0cm<sup>2</sup>.",
+     "text": "f = (G)/(hO) × k, where k = 1.0cm2."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "f =",
+     "unit": "cm"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -560,7 +759,7 @@
       30.0,
       59.8,
       570.0,
-      261.9
+      262.0
      ],
      "continued": false,
      "answer_space": {
@@ -568,7 +767,7 @@
       "dotted_lines": 4,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 202.0
+      "height_pt": 202.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-ON/p63/q03/question/0625_2025ON_63_q03_f_s1.svg",
@@ -584,7 +783,7 @@
    "mark_scheme": [
     {
      "label": "3(f)",
-     "text": "any appropriate difficulty:\ne.g. hand/ruler in way of image / person creating a shadow\nand matching improvement:\ne.g. use translucent screen and view from behind /\nfix ruler or grid to screen / mark image on screen before measuring / take a photo with ruler in view",
+     "text": "any appropriate difficulty:\ne.g. hand/ruler in way of image / person creating a shadow\nand matching improvement:\ne.g. use translucent screen and view from behind /\nfix ruler or grid to screen / mark image on screen before measuring / take a photo with ruler in view",
      "codes": [
       "1"
      ],
@@ -606,6 +805,28 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Describe <b>one</b> difficulty that can be experienced when measuring the height of the image in this experiment.",
+     "text": "Describe one difficulty that can be experienced when measuring the height of the image in this experiment."
+    },
+    {
+     "type": "text",
+     "html": "Suggest an improvement to overcome this difficulty.",
+     "text": "Suggest an improvement to overcome this difficulty."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "improvement",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   }
  ],
@@ -625,5 +846,22 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "A student investigates the image produced by a converging lens.",
+   "text": "A student investigates the image produced by a converging lens."
+  },
+  {
+   "type": "text",
+   "html": "He uses the equipment shown in Fig. 3.1.",
+   "text": "He uses the equipment shown in Fig. 3.1."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2025ON_63_q03_fig3-1",
+   "caption": "Fig. 3.1 (not to scale)"
+  }
+ ]
 }

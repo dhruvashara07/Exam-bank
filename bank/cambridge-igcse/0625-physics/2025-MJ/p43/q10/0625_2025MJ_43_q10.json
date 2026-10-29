@@ -39,7 +39,7 @@
       30.0,
       59.8,
       570.0,
-      105.8
+      106.0
      ],
      "continued": false,
      "answer_space": {
@@ -47,7 +47,7 @@
       "dotted_lines": 1,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 46.0
+      "height_pt": 46.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p43/q10/question/0625_2025MJ_43_q10_a_s1.svg",
@@ -85,6 +85,22 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Define a light-year in words.",
+     "text": "Define a light-year in words."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
    ]
   },
   {
@@ -96,7 +112,7 @@
       30.0,
       111.8,
       570.0,
-      284.2
+      284.5
      ],
      "continued": false,
      "answer_space": {
@@ -104,7 +120,7 @@
       "dotted_lines": 1,
       "answer_line": "distance =  …… [2]",
       "working_gap_pt": 115.4,
-      "height_pt": 172.4
+      "height_pt": 172.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p43/q10/question/0625_2025MJ_43_q10_b_s1.svg",
@@ -120,7 +136,7 @@
    "mark_scheme": [
     {
      "label": "10(b)",
-     "text": "1.5 × 1011 m\n9.5 × 1015 (m) OR (c =) 3(.0) × 108 (m / s) OR 3(.0) × 10N × 490",
+     "text": "1.5 × 10\n11\nm\n9.5 × 10\n(m) OR (c =) 3(.0) × 10 (m / s) OR 3(.0) × 10 × 490\n15\n8\nN",
      "codes": [
       "A2",
       "C1"
@@ -143,6 +159,27 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "It takes light 490s to travel from the Sun to the Earth.",
+     "text": "It takes light 490s to travel from the Sun to the Earth."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the distance from the Sun to the Earth.",
+     "text": "Calculate the distance from the Sun to the Earth."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "distance ="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
    ]
   },
   {
@@ -154,7 +191,7 @@
       30.0,
       290.2,
       570.0,
-      784.6
+      785.0
      ],
      "continued": false,
      "answer_space": {
@@ -162,7 +199,7 @@
       "dotted_lines": 1,
       "answer_line": "Hubble constant =  …… [3]",
       "working_gap_pt": 143.7,
-      "height_pt": 494.3
+      "height_pt": 494.8
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p43/q10/question/0625_2025MJ_43_q10_c_s1.svg",
@@ -178,7 +215,7 @@
    "mark_scheme": [
     {
      "label": "10(c)",
-     "text": "2.5 × 10–18 per second\n(Hubble’s constant =) gradient OR (H0 =) v ÷ d\n2.5 × 104(– 0) ÷ {100 × 1020 (– 0)}",
+     "text": "2.5 × 10\nper second\n–18\n(Hubble’s constant =) gradient OR (H0 =) v ÷ d\n2.5 × 10 (– 0) ÷ {100 × 10\n(– 0)}\n4\n20",
      "codes": [
       "A3",
       "C1",
@@ -202,6 +239,72 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Fig. 10.1 is a scatter graph showing how the speed of galaxies moving away from the Earth varies with their distances from the Earth.",
+     "text": "Fig. 10.1 is a scatter graph showing how the speed of galaxies moving away from the Earth varies with their distances from the Earth."
+    },
+    {
+     "type": "text",
+     "html": "3",
+     "text": "3"
+    },
+    {
+     "type": "text",
+     "html": "best-fit line",
+     "text": "best-fit line"
+    },
+    {
+     "type": "text",
+     "html": "\\(\\frac{speedofgalaxy}{10<sup>4</sup>km/s}\\)",
+     "text": "(speedofgalaxy)/(104km/s)"
+    },
+    {
+     "type": "text",
+     "html": "2",
+     "text": "2"
+    },
+    {
+     "type": "text",
+     "html": "1",
+     "text": "1"
+    },
+    {
+     "type": "text",
+     "html": "0 20 40 60 80 100 120",
+     "text": "0 20 40 60 80 100 120"
+    },
+    {
+     "type": "text",
+     "html": "distance of galaxy from Earth/10<sup>20</sup>km",
+     "text": "distance of galaxy from Earth/1020km"
+    },
+    {
+     "type": "figure",
+     "id": "0625_2025MJ_43_q10c_fig10-1",
+     "caption": "Fig. 10.1"
+    },
+    {
+     "type": "text",
+     "html": "A scientist draws a best-fit line on the scatter graph.",
+     "text": "A scientist draws a best-fit line on the scatter graph."
+    },
+    {
+     "type": "text",
+     "html": "Use this best-fit line to determine a value for the Hubble constant.",
+     "text": "Use this best-fit line to determine a value for the Hubble constant."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Hubble constant ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   },
   {
@@ -213,7 +316,7 @@
       30.0,
       59.8,
       570.0,
-      235.8
+      236.0
      ],
      "continued": false,
      "answer_space": {
@@ -221,7 +324,7 @@
       "dotted_lines": 4,
       "answer_line": null,
       "working_gap_pt": 15.0,
-      "height_pt": 176.0
+      "height_pt": 176.2
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2025-MJ/p43/q10/question/0625_2025MJ_43_q10_d_s1.svg",
@@ -237,7 +340,7 @@
    "mark_scheme": [
     {
      "label": "10(d)",
-     "text": "electromagnetic radiation / light from (distant) galaxies\n(observed) increase in wavelength (compared to wavelength measured on the Earth)",
+     "text": "electromagnetic radiation / light from (distant) galaxies\n(observed) increase in wavelength (compared to wavelength measured on the Earth)",
      "codes": [
       "B1",
       "B1"
@@ -259,6 +362,27 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The speed of a receding galaxy can be estimated using redshift.",
+     "text": "The speed of a receding galaxy can be estimated using redshift."
+    },
+    {
+     "type": "text",
+     "html": "Describe what is meant by redshift.",
+     "text": "Describe what is meant by redshift."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 4
+    },
+    {
+     "type": "marks",
+     "value": 2
     }
    ]
   }

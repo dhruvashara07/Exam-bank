@@ -8,7 +8,7 @@
     30.0,
     59.8,
     570.0,
-    288.3
+    288.5
    ],
    "continued": false,
    "answer_space": {
@@ -16,7 +16,7 @@
     "dotted_lines": 0,
     "answer_line": null,
     "working_gap_pt": 28.5,
-    "height_pt": 228.5
+    "height_pt": 228.7
    },
    "svg": {
     "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p31/q01/question/0625_2026MJ_31_q01_stem_s1.svg",
@@ -63,7 +63,7 @@
       30.0,
       294.3,
       570.0,
-      406.7
+      407.0
      ],
      "continued": false,
      "answer_space": {
@@ -71,7 +71,7 @@
       "dotted_lines": 1,
       "answer_line": "distance travelled =  …… m [3]",
       "working_gap_pt": 81.4,
-      "height_pt": 112.4
+      "height_pt": 112.7
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p31/q01/question/0625_2026MJ_31_q01_a_s1.svg",
@@ -87,8 +87,12 @@
    "mark_scheme": [
     {
      "label": "1(a)",
-     "text": "(distance travelled =) 16 (m)\nA3\n(distance travelled =) ½ × 4(.0) × 8(.0)\nC2\n(distance travelled =) area under graph OR ½ × b × h\nC1\nin any form words or symbols\naccept (d =) s × t OR b × h\nignore distance = speed ÷ time\n32 (m) scores 1 mark",
-     "codes": [],
+     "text": "(distance travelled =) 16 (m)\n(distance travelled =) ½ × 4(.0) × 8(.0)\n(distance travelled =) area under graph OR ½ × b × h",
+     "codes": [
+      "A3",
+      "C2",
+      "C1"
+     ],
      "segments": [
       {
        "page": 6,
@@ -107,6 +111,23 @@
       }
      ]
     }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the distance travelled between time = 0 and time = 4.0s by the person skiing.",
+     "text": "Calculate the distance travelled between time = 0 and time = 4.0s by the person skiing."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "distance travelled =",
+     "unit": "m"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
    ]
   },
   {
@@ -118,7 +139,7 @@
       30.0,
       425.7,
       570.0,
-      445.7
+      446.0
      ],
      "continued": false,
      "answer_space": {
@@ -126,7 +147,7 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 4.0,
-      "height_pt": 20.0
+      "height_pt": 20.3
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p31/q01/question/0625_2026MJ_31_q01_b_s1.svg",
@@ -148,7 +169,7 @@
         30.0,
         451.7,
         570.0,
-        497.7
+        498.0
        ],
        "continued": false,
        "answer_space": {
@@ -156,7 +177,7 @@
         "dotted_lines": 1,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 46.0
+        "height_pt": 46.3
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p31/q01/question/0625_2026MJ_31_q01_b-i_s1.svg",
@@ -172,8 +193,10 @@
      "mark_scheme": [
       {
        "label": "1(b)(i)",
-       "text": "(from time = 0 s to time = 4.0 s) (speed) increasing\nB1 accept accelerating OR acceleration OR velocity increasing\ncondone increasing / changing / decreasing acceleration\nCON deceleration\nspeed / velocity changing is too vague",
-       "codes": [],
+       "text": "(from time = 0 s to time = 4.0 s) (speed) increasing",
+       "codes": [
+        "B1"
+       ],
        "segments": [
         {
          "page": 6,
@@ -192,6 +215,22 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "between time = 0 and time = 4.0s",
+       "text": "between time = 0 and time = 4.0s"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     },
     {
@@ -203,7 +242,7 @@
         30.0,
         503.7,
         570.0,
-        549.7
+        550.0
        ],
        "continued": false,
        "answer_space": {
@@ -211,7 +250,7 @@
         "dotted_lines": 1,
         "answer_line": null,
         "working_gap_pt": 15.0,
-        "height_pt": 46.0
+        "height_pt": 46.3
        },
        "svg": {
         "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p31/q01/question/0625_2026MJ_31_q01_b-ii_s1.svg",
@@ -227,8 +266,10 @@
      "mark_scheme": [
       {
        "label": "1(b)(ii)",
-       "text": "(from time = 4.0 s to time = 12 s) (speed is)\nB1 accept velocity for speed accept 8(.0) m / s\nconstant OR steady OR not changing OR the same\naccept moving with zero acceleration\ncondone constant motion\nat rest or stationary is CON for correct answer",
-       "codes": [],
+       "text": "(from time = 4.0 s to time = 12 s) (speed is)\nconstant OR steady OR not changing OR the same",
+       "codes": [
+        "B1"
+       ],
        "segments": [
         {
          "page": 6,
@@ -247,10 +288,33 @@
         }
        ]
       }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "between time = 4.0s and time = 12s.",
+       "text": "between time = 4.0s and time = 12s."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
      ]
     }
    ],
-   "path": "1(b)"
+   "path": "1(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Use information from the graph in Figure 1.1 to describe the speed of the person skiing:",
+     "text": "Use information from the graph in Figure 1.1 to describe the speed of the person skiing:"
+    }
+   ]
   },
   {
    "label": "c",
@@ -261,7 +325,7 @@
       30.0,
       568.7,
       570.0,
-      740.6
+      741.0
      ],
      "continued": false,
      "answer_space": {
@@ -269,7 +333,7 @@
       "dotted_lines": 1,
       "answer_line": "average speed =  …… m / s [3]",
       "working_gap_pt": 92.7,
-      "height_pt": 171.9
+      "height_pt": 172.3
      },
      "svg": {
       "file": "bank/cambridge-igcse/0625-physics/2026-MJ/p31/q01/question/0625_2026MJ_31_q01_c_s1.svg",
@@ -285,8 +349,12 @@
    "mark_scheme": [
     {
      "label": "1(c)",
-     "text": "(average speed =) 11 (m / s)\nA3 accept answer to 1 SF 10 (m / s)\nC2\n(average speed =) 220 ÷ 20\n(average speed =)\nC1\nin any form words or symbols\n(total) distance (travelled) ÷ (total) time\ncondone (s =) d ÷ t",
-     "codes": [],
+     "text": "(average speed =) 11 (m / s)\n(average speed =) 220 ÷ 20\n(average speed =)\n(total) distance (travelled) ÷ (total) time",
+     "codes": [
+      "A3",
+      "C2",
+      "C1"
+     ],
      "segments": [
       {
        "page": 6,
@@ -304,6 +372,28 @@
        }
       }
      ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Another person skiing travels a distance of 220m in a time of 20s.",
+     "text": "Another person skiing travels a distance of 220m in a time of 20s."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the average speed of this person.",
+     "text": "Calculate the average speed of this person."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "average speed =",
+     "unit": "m/s"
+    },
+    {
+     "type": "marks",
+     "value": 3
     }
    ]
   }
@@ -324,5 +414,17 @@
  "topic": null,
  "subtopic": null,
  "keywords": [],
- "difficulty": null
+ "difficulty": null,
+ "content": [
+  {
+   "type": "text",
+   "html": "Figure 1.1 shows the speed–time graph for a person skiing.",
+   "text": "Figure 1.1 shows the speed–time graph for a person skiing."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2026MJ_31_q01_fig1-1",
+   "caption": "Figure 1.1"
+  }
+ ]
 }
