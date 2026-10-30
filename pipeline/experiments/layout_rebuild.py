@@ -43,6 +43,15 @@ def unpua(ch):
     return ch
 
 
+DINGBAT = ('sorts', 'dingbat', 'wingding', 'webding')
+
+
+def odd(ch, font):
+    """A character we cannot write as text: control codes, unmapped private-use codes, dingbat fonts."""
+    o = ord(ch[0])
+    return o < 32 or any(k in font.lower() for k in DINGBAT) or (0xE000 <= o <= 0xF8FF and unpua(ch) == ch)
+
+
 def family(font):
     f = font.lower()
     for k, v in FAMILY:
@@ -125,6 +134,20 @@ def extract_page(page, fig_boxes, img_dir, tag):
                 bold = bool(s['flags'] & 16) or 'bold' in font.lower()
                 italic = bool(s['flags'] & 2) or 'italic' in font.lower() or 'oblique' in font.lower()
                 col = hexcol(s['color'])
+                if any(odd(c['c'], font) for c in s['chars']):     # dingbats / unmapped symbols: keep the drawn glyph
+                    for c in s['chars']:
+                        if not c['c'].strip() and ord(c['c'][0]) >= 32:
+                            continue
+                        r = fitz.Rect(c['bbox'])
+                        if inside(r, fig_boxes) or r.is_empty:
+                            continue
+                        key = f"g_{re.sub('[^A-Za-z0-9]', '', font)[:20]}_{ord(c['c']):x}_{round(s['size'] * 10)}.svg"
+                        gp = os.path.join(img_dir, key)
+                        if not os.path.exists(gp):
+                            from render import region_svg
+                            open(gp, 'w').write(region_svg(page.parent, page.number, [r.x0 - .5, r.y0 - .5, r.x1 + .5, r.y1 + .5]))
+                        out['images'].append({'file': key, 'bbox': [round(r.x0 - .5, 2), round(r.y0 - .5, 2), round(r.x1 + .5, 2), round(r.y1 + .5, 2)]})
+                    continue
                 for chars in runs:                 # one record per word: spacing between words stays exact
                     r = fitz.Rect(chars[0]['bbox'][0], s['bbox'][1], chars[-1]['bbox'][2], s['bbox'][3])
                     if vert:
@@ -167,8 +190,8 @@ def extract_page(page, fig_boxes, img_dir, tag):
     # raster images (logos etc.)
     for k, info in enumerate(page.get_image_info(xrefs=True)):
         r = fitz.Rect(info['bbox'])
-        if inside(r, fig_boxes) or not info.get('xref'):
-            continue
+        if inside(r, fig_boxes) or any((r & b).get_area() > 0.3 * min(r.get_area(), b.get_area()) for b in fig_boxes) or not info.get('xref'):
+            continue                      # an image behind a figure is part of that figure's SVG
         pix = fitz.Pixmap(page.parent, info['xref'])
         if pix.n - pix.alpha > 3:
             pix = fitz.Pixmap(fitz.csRGB, pix)
@@ -305,7 +328,7 @@ def main():
     js = json.dumps(layout, ensure_ascii=False, separators=(',', ':'))
     open(os.path.join(out, 'layout.json'), 'w').write(js)
     sizes['layout_json'] = len(js.encode()); sizes['layout_json_gz'] = len(gzip.compress(js.encode()))
-    sizes['images'] = sum(os.path.getsize(f) for f in glob.glob(os.path.join(out, '*.png')))
+    sizes['images'] = sum(os.path.getsize(f) for f in glob.glob(os.path.join(out, '*.png')) + glob.glob(os.path.join(out, 'g_*.svg')))
     sizes['figures'] = sum(os.path.getsize(f) for f in glob.glob(os.path.join(out, 'figures', '*.svg')))
     sizes['figures_gz'] = sum(len(gzip.compress(open(f, 'rb').read())) for f in glob.glob(os.path.join(out, 'figures', '*.svg')))
     cur = [f for f in glob.glob(os.path.join(pdir, 'q*', '*', '*.svg'))]
