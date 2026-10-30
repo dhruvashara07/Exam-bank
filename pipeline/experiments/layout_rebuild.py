@@ -18,7 +18,8 @@ from PIL import Image
 import paths
 from run import cleaned
 
-FAMILY = [('symbol', 'DejaVu Sans'), ('times', 'Liberation Serif'), ('serif', 'Liberation Serif'),
+FAMILY = [('symbol', 'DejaVu Sans'), ('cambriamath', 'DejaVu Sans'), ('times', 'Liberation Serif'), ('serif', 'Liberation Serif'),
+          ('bookman', 'Liberation Serif'), ('cambria', 'Liberation Serif'), ('georgia', 'Liberation Serif'), ('garamond', 'Liberation Serif'),
           ('courier', 'Liberation Mono'), ('mono', 'Liberation Mono')]
 
 
@@ -28,7 +29,11 @@ SYMBOL = dict(zip(
 SYMBOL.update({'G': 'Γ', 'C': 'Χ', 'c': 'χ', 'g': 'γ'})
 SYMBOL_HI = {0xB0: '°', 0xB1: '±', 0xB4: '×', 0xB8: '÷', 0xB9: '≠', 0xBA: '≡', 0xBB: '≈', 0xA3: '≤', 0xB3: '≥',
              0xAE: '→', 0xAC: '←', 0xAD: '↑', 0xAF: '↓', 0xAB: '↔', 0xD6: '√', 0xB5: '∝', 0xA5: '∞', 0x2D: '−',
-             0xD7: '·', 0xA2: '′', 0xB2: '″', 0xE5: '∑', 0xF2: '∫', 0xB6: '∂', 0x27: '∋', 0x60: '‾', 0xBC: '…'}
+             0xD7: '·', 0xA2: '′', 0xB2: '″', 0xE5: '∑', 0xF2: '∫', 0xB6: '∂', 0x27: '∋', 0x60: '‾', 0xBC: '…',
+             0xB7: '•', 0xD0: '∠', 0xC5: '⊕', 0xC6: '∅', 0xA4: '⁄', 0xBE: '⎯', 0xD5: '∏', 0xD8: '¬', 0xD9: '∧', 0xDA: '∨',
+             0xDE: '⇒', 0xDB: '⇔', 0xE0: '◊', 0xE1: '〈', 0xF1: '〉', 0xC0: 'ℵ', 0xC4: '⊗', 0xC7: '∩', 0xC8: '∪', 0xCE: '∈',
+             0xCF: '∉', 0xD1: '∇', 0x22: '∀', 0x24: '∃', 0x40: '≅', 0x5E: '⊥', 0x5C: '∴', 0x7E: '∼', 0xA6: 'ƒ', 0xBD: '|',
+             0xDC: '⇐', 0xDD: '⇑', 0xDF: '⇓', 0xA7: '♣', 0xA8: '♦', 0xA9: '♥', 0xAA: '♠'}
 
 
 def unpua(ch):

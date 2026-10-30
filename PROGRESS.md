@@ -100,3 +100,10 @@ One line per run: date, pending papers checked/approved, feedback handled, fixes
   each looked at again), 2025 MJ 42 re-approved (0.3 pt shift). 411 papers recorded `claude_checked`.
   Review round 3 published (90 items: 72 flagged + 18 spot checks; `--max 90` keeps a page version under 511 files).
 
+- 2026-10-30 22:xx IST (chat session): question-store experiment (`docs/STORE_DESIGN.md`,
+  `pipeline/experiments/qstore.py`): per-part layout units + figure files, MS rows as text, duplicates stored
+  once. Bank fixes found by it: glyphs crossing a piece edge were cut away (render.py, 687 SVGs better, cut
+  hashes unchanged); side-by-side figures split by caption; 'Fig. n' inside a table cell is not a caption.
+  Full re-run: 477 papers, 0 errors, golden 0 changed cuts. Critical store test: 23 papers, 1,612 units,
+  9 above 1% pixel difference (all explained: font-width '1', one italic letter, one MS tick past its row).
+  Waiting for Dhruv's go-ahead before the pipeline switch-over. Cloudinary upload paused (over credits).

@@ -1,10 +1,23 @@
 {
  "paper": "0625_2018MJ_53",
  "pipeline_version": "2.1",
- "checked_at": "2026-10-30T09:47Z",
+ "checked_at": "2026-10-30T17:01Z",
  "clean": true,
- "warnings": 0,
- "problems": [],
+ "warnings": 2,
+ "problems": [
+  {
+   "id": "0625_2018MJ_53_q01",
+   "kind": "figure",
+   "detail": "0625_2018MJ_53_q01_fig1-2: crop cut: ink crosses the right edge, 1 text line(s) half inside",
+   "blocking": false
+  },
+  {
+   "id": "0625_2018MJ_53_q01",
+   "kind": "figure",
+   "detail": "0625_2018MJ_53_q01_fig1-3: crop cut: ink crosses the left edge, 1 text line(s) half inside",
+   "blocking": false
+  }
+ ],
  "flags": [],
  "text_score_min": 0.99,
  "text_scores": {

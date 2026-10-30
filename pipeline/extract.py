@@ -255,6 +255,7 @@ def find_figures(doc, seg, lines):
                and not any(f.contains(fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1'])) for f in frames)]
     def bullet_item(l):           # '• metre ruler': a list item of the question, never part of a figure
         return l in bullets or any(abs(l['y0'] - b['y0']) < 2.5 and 0 < l['x0'] - b['x0'] < 40 for b in bullets)
+    caps = [c for c in caps if not in_grid(c)]       # 'Fig. 5.2' written in a table cell is a reference, not a caption
     for cap in caps:
         is_table = cap['text'].startswith('Table')
         prose_above = [l for l in lines if l['y1'] <= cap['y0'] and not DOTS.search(l['text']) and (prose_like(l) or bullet_item(l) or (re.match(r'^(\d{1,2}|\([a-z]+\))\s', l['text']) and l['x0'] < 110)
@@ -282,18 +283,77 @@ def find_figures(doc, seg, lines):
             prev = [c['y1'] for c in caps if c is not cap and c['y1'] <= cap['y0'] and not c['text'].startswith('Table')]
             if prev and max(prev) + 2 > band[0]:
                 band = (max(prev) + 2, band[1])
+        # figures side by side, each with its own caption on the same row: one caption = one figure, so
+        # split the row halfway between neighbouring captions (one caption under several drawings = one figure)
+        cx = (cap['x0'] + cap['x1']) / 2
+        row = sorted((c['x0'] + c['x1']) / 2 for c in caps if abs(c['y0'] - cap['y0']) < 4)
+        k = row.index(cx) if cx in row else 0
+        def gap(a, b):
+            """Where to split two side-by-side figures whose captions are centred at a and b: among the empty
+            columns between them, the one that leaves each caption best centred under its own drawing."""
+            from layout import dark_mask
+            mk = dark_mask(page)
+            ya, yb = int(max(0, band[0]) * ZOOM), int(band[1] * ZOOM)
+            colsum = mk[ya:yb].sum(axis=0)
+            lo, hi = int(a * ZOOM), int(b * ZOOM)
+            cols = colsum[lo:hi]
+            if not len(cols):
+                return (a + b) / 2
+            m = cols.min()
+            runs, start = [], None
+            for i, v in enumerate(list(cols) + [m + 1]):
+                if v == m and start is None:
+                    start = i
+                elif v != m and start is not None:
+                    runs.append((start + i - 1) / 2); start = None
+            inked = [i for i, v in enumerate(colsum) if v]
+            def score(c):
+                x = lo + c
+                left = [i for i in inked if int(CONTENT_X0 * ZOOM) <= i < x]
+                right = [i for i in inked if x <= i < int(CONTENT_X1 * ZOOM)]
+                if not left or not right:
+                    return 1e9
+                # only the ink between the neighbouring captions' outer limits counts
+                lc = (max(left[0], int((2 * a - b) * ZOOM)) + left[-1]) / 2
+                rc = (right[0] + min(right[-1], int((2 * b - a) * ZOOM))) / 2
+                return abs(lc - a * ZOOM) + abs(rc - b * ZOOM)
+            best = min(runs, key=score)
+            return (lo + best) / ZOOM
+        xa = gap(row[k - 1], cx) if k > 0 else 0
+        xb = gap(cx, row[k + 1]) if k + 1 < len(row) else page.rect.width
         strip = fitz.Rect(0, band[0] - 1, page.rect.width, band[1] + 1)
         grown = [fitz.Rect(r.x0 - 1, r.y0 - 1, r.x1 + 1, r.y1 + 1) for r in drawings]   # lines have zero height
+        # a drawing belongs to the caption whose column holds its centre and is kept whole (side-by-side
+        # figures may overlap a little; cutting a drawing in two would be worse)
         inside = [tight_ink(page, g & strip, marks_text) for g in grown
-                  if g.y1 >= strip.y0 and g.y0 <= strip.y1 and not (g & strip).is_empty]
+                  if g.y1 >= strip.y0 and g.y0 <= strip.y1 and not (g & strip).is_empty and xa <= (g.x0 + g.x1) / 2 <= xb]
         inside = [r for r in inside if r is not None]       # what is printed, inside the band
         if not inside:
             continue
+        if xa > 0 or xb < page.rect.width:
+            # side by side: also take drawings joined to this figure (a leader line reaching across the split)
+            # and the labels at the end of those lines ('measuring cylinder' printed beside the next figure)
+            for _ in range(3):
+                more = [tight_ink(page, g & strip, marks_text) for g in grown
+                        if not (g & strip).is_empty and not (xa <= (g.x0 + g.x1) / 2 <= xb)
+                        and any((g + (-.5, -.5, .5, .5)).intersects(r) for r in inside)]
+                more = [r for r in more if r is not None and not any(abs(r.x0 - o.x0) < .1 and abs(r.y0 - o.y0) < .1 for o in inside)]
+                if not more:
+                    break
+                inside += more
+            for l in lines:
+                lr = fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1'])
+                if band[0] <= lr.y0 and lr.y1 <= band[1] + 1 and l is not cap and not CAPTION.match(l['text']) \
+                        and not (xa <= (lr.x0 + lr.x1) / 2 <= xb) and any((lr + (-3, -3, 3, 3)).intersects(r) and min(r.width, r.height) < 3 for r in inside):
+                    inside.append(lr)
         x0 = min(r.x0 for r in inside); x1 = max(r.x1 for r in inside)
         y0 = min(r.y0 for r in inside); y1 = max(r.y1 for r in inside)
-        g = grow_to_ink(page, fitz.Rect(x0, y0, x1, y1), fitz.Rect(CONTENT_X0, max(seg['y0'], band[0] - 1), CONTENT_X1, min(seg['y1'], band[1] + 1)),
+        g = grow_to_ink(page, fitz.Rect(x0, y0, x1, y1), fitz.Rect(max(CONTENT_X0, min(xa, x0)), max(seg['y0'], band[0] - 1), min(CONTENT_X1, max(xb, x1)), min(seg['y1'], band[1] + 1)),
                         exclude=[fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in prose_above])
         x0, y0, x1, y1 = g.x0, g.y0, g.x1, g.y1
+        for l in lines:                 # answer lines printed inside the figure ('nebula which contains .......')
+            if DOTS.search(l['text']) and l['y0'] >= y0 - 2 and l['y1'] <= y1 + 2 and l['x0'] < x1 and l['x1'] > x0:
+                x0, x1 = min(x0, l['x0']), max(x1, l['x1'])
         figs.append({'caption': cap['text'], 'page': seg['page'],
                      'bbox': [round(x0 - 3, 1), round(max(y0 - 3, seg['y0']), 1), round(x1 + 3, 1),
                               round(min(y1 + 3, seg['y1']), 1)]})    # a crop never reaches past its piece

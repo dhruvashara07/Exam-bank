@@ -30,6 +30,14 @@ VARIANT = {'r': 'Regular', 'b': 'Bold', 'i': 'Italic', 'bi': 'BoldItalic'}
 
 
 # ---------------------------------------------------------------- bold/italic for PDFs that hide font names
+KNOWN = re.compile(r'arial|helvetica|times|courier|symbol|verdana|calibri|cambria|bold|italic|oblique|dingbat|sorts|wingding', re.I)
+
+
+def anonymous(font):
+    """A font whose name says nothing about its style (subset names like 'AllAndNone', 'TT7774o00')."""
+    return not KNOWN.search(font)
+
+
 def glyph_styles(doc, pages):
     """2025+ Cambridge PDFs merge regular/bold/italic glyphs into one nameless font ('AllAndNone'), so
     text extraction says 'regular' for everything. Each style still has its own glyph id. For every glyph id
@@ -40,7 +48,7 @@ def glyph_styles(doc, pages):
     count = collections.Counter()
     for pno in pages:
         for sp in doc[pno].get_texttrace():
-            if 'allandnone' not in sp['font'].lower():
+            if not anonymous(sp['font']):
                 continue
             for c in sp['chars']:
                 ch = chr(c[0])
@@ -61,7 +69,10 @@ def glyph_styles(doc, pages):
     def measure(o):
         h = o.shape[0]
         ys, xs = np.nonzero(o)
-        weight = o.sum() / max(1, h * h)          # ink relative to glyph height^2 (size-independent)
+        # stroke thickness relative to glyph height: ink area / half its outline length (bold ≈ 1.5× regular)
+        inner = o[1:-1, 1:-1] & o[:-2, 1:-1] & o[2:, 1:-1] & o[1:-1, :-2] & o[1:-1, 2:]
+        edge = max(1, int(o.sum()) - int(inner.sum()))
+        weight = (2 * o.sum() / edge) / max(1, h)
         rows = [(y, xs[ys == y].mean()) for y in range(h) if (ys == y).any()]
         if len(rows) > 3:
             yy = np.array([r[0] for r in rows]); xx = np.array([r[1] for r in rows])
@@ -97,7 +108,23 @@ def glyph_styles(doc, pages):
     for key, (ch, w, sl) in feats.items():
         bychar[(key[0], ch)].append((count[(key[0], key[1], ch)], key, w, sl))
     style = {}
+    # fonts that draw every character with one glyph (a separate subset font per style, e.g. 'TT1DB1Bo00'):
+    # the whole font is one style, so decide it once from all its characters together
+    multi = {font for (font, ch), lst in bychar.items() if len(lst) > 1}
+    perfont = collections.defaultdict(list)
     for (font, ch), lst in bychar.items():
+        if font not in multi:
+            rw, rs = lib(ch, 'r')
+            perfont[font].append((lst[0][2] / max(rw, 1e-6), lst[0][3] - rs, lst[0][1]))
+    for font, vals in perfont.items():
+        ratio = float(np.median([v[0] for v in vals])); sl = float(np.median([v[1] for v in vals]))
+        b, i = ratio > 1.15, sl > 0.15 and len(vals) >= 3
+        st = 'bi' if (b and i) else 'b' if b else 'i' if i else 'r'
+        for v in vals:
+            style[v[2]] = st
+    for (font, ch), lst in bychar.items():
+        if font not in multi:
+            continue
         lst.sort(key=lambda t: -t[0])
         base_w, base_s = lst[0][2], lst[0][3]
         if len(lst) == 1:                         # only one shape: compare with the reference fonts
@@ -155,13 +182,21 @@ def drawing_d(dr, m, clip, ox, oy):
     Straight lines and rectangles are clipped exactly; curves are kept when their box touches the clip."""
     out = []
     f = lambda x, y: f'{x - ox:.2f} {y - oy:.2f}'
-    for it in dr['items']:
+    cur = None                                   # current point: connected segments stay one sub-path,
+    for it in dr['items']:                       # so a filled outline made of lines fills correctly
         k = it[0]
         if k == 'l':
             s = clip_seg(tp(m, it[1].x, it[1].y), tp(m, it[2].x, it[2].y), clip)
             if s and (abs(s[0][0] - s[1][0]) > .01 or abs(s[0][1] - s[1][1]) > .01):
-                out.append(f'M{f(*s[0])}L{f(*s[1])}')
-        elif k == 're':
+                if cur is None or abs(cur[0] - s[0][0]) > .01 or abs(cur[1] - s[0][1]) > .01:
+                    out.append(f'M{f(*s[0])}')
+                out.append(f'L{f(*s[1])}')
+                cur = s[1]
+            else:
+                cur = None
+            continue
+        if k == 're':
+            cur = None
             q = fitz.Rect(it[1]).quad * m
             r = q.rect & clip
             if not r.is_empty or (q.rect.width < .01 or q.rect.height < .01):
@@ -169,6 +204,7 @@ def drawing_d(dr, m, clip, ox, oy):
                 if r.x1 >= r.x0 and r.y1 >= r.y0:
                     out.append(f'M{f(r.x0, r.y0)}H{r.x1 - ox:.2f}V{r.y1 - oy:.2f}H{r.x0 - ox:.2f}Z')
         elif k == 'qu':
+            cur = None
             q = it[1] * m
             if q.rect.intersects(clip):
                 out.append(f'M{f(q.ul.x, q.ul.y)}L{f(q.ur.x, q.ur.y)}L{f(q.lr.x, q.lr.y)}L{f(q.ll.x, q.ll.y)}Z')
@@ -176,7 +212,12 @@ def drawing_d(dr, m, clip, ox, oy):
             pts = [tp(m, p.x, p.y) for p in it[1:5]]
             box = fitz.Rect(min(p[0] for p in pts), min(p[1] for p in pts), max(p[0] for p in pts), max(p[1] for p in pts))
             if box.intersects(clip):
-                out.append(f'M{f(*pts[0])}C{f(*pts[1])} {f(*pts[2])} {f(*pts[3])}')
+                if cur is None or abs(cur[0] - pts[0][0]) > .01 or abs(cur[1] - pts[0][1]) > .01:
+                    out.append(f'M{f(*pts[0])}')
+                out.append(f'C{f(*pts[1])} {f(*pts[2])} {f(*pts[3])}')
+                cur = pts[3]
+            else:
+                cur = None
     return ''.join(out)
 
 
