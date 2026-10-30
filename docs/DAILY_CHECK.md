@@ -65,8 +65,10 @@ After any pipeline change re-run the affected papers and the golden check before
 
 ## 5. Review round for Dhruv (when papers are Claude-checked and no round is open)
 ```
-python3 pipeline/review_round.py new <n> <claude-checked paper ids> --sample 2
+python3 pipeline/review_round.py new <n> <claude-checked paper ids> --sample 1 --max 90
 ```
+(`--max 90` keeps one page version under its 511-file limit: flagged items come first — Cambridge flags,
+then figure crops, then editable text — and the rest are random spot checks spread over the papers.)
 (n = last round + 1). Publish `out/review/round_<n>/` to the review page with the Artifact tool:
 `file_path` = `site/review/index.html`, `url` = review_url from `review/portal.json`, `files` = every file
 under `out/review/round_<n>/` at its relative path (round.json, items.json, <qid>/*.jpg), and `null` for
@@ -74,7 +76,9 @@ the previous round's image paths (one version holds at most 511 files). Keep cap
 
 ## 6. Approve
 A paper is approved when: Claude result `ok`, no blocking automatic problem, and its items in the review round are
-answered ✓ — or the round has been open 3 days and the paper had only random-sample items (no flags).
+answered ✓ — or the round is closed (all answered, or open 3 days) and the paper had no flagged item (only
+random spot checks or none). A spot check answered ✗ means a pipeline defect: fix it, re-run, and every paper
+it re-cuts goes back through the Claude check before approval.
 ```
 python3 pipeline/approve.py <ids> --note "overview checked; checks clean; round <n> ✓ (k items)"
 ```

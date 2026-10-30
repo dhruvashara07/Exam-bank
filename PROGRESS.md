@@ -51,13 +51,15 @@ Read this first in every session. Update it before ending a session.
 
 ## Waiting on Dhruv
 1. (done 2026-10-29: all 983 PDFs in Releases.)
-2. Turn on GitHub Pages (Settings → Pages → Source: GitHub Actions) for the review website.
-3. Review round 2 (old artifact) / website reports.
-3. May/Jun 2026 variant 7: mark schemes 17 and 27 exist, question papers missing.
+2. Turn on GitHub Pages (Settings → Pages → Source: GitHub Actions) for the website.
+3. Review round 3 (90 questions, review page link in review/portal.json). Round 2 was replaced by it.
+4. May/Jun 2026 variant 7: mark schemes 17 and 27 exist, question papers missing.
 
 ## Next
-1. Daily check: approve the 2015–2024 backlog (411 papers pending), up to 40 per run, oldest first.
-2. Read `feedback_r2` and website issues, fix anything wrong.
+1. Daily check: read Dhruv's round 3 answers (`feedback_r3`), fix anything marked wrong, approve the 2015–2024
+   backlog by the rule in docs/DAILY_CHECK.md §6. 40 flagged questions did not fit round 3 (mostly editable-text
+   warnings): they go into round 4 once round 3 is closed.
+2. Website issues (label `review`), fix anything wrong.
 2. Topics/subtopics/keywords from the 0625 syllabus; alt text for figures.
 3. Other subjects (Chemistry, Biology, Maths), then AS/A level, IB.
 4. Test-paper builder on the website (reads MongoDB `question_bank.questions`).
@@ -88,3 +90,13 @@ One line per run: date, pending papers checked/approved, feedback handled, fixes
   the batch/portal plan (portal A: Pages + Claude review page; twice-daily check; text-only editable layer).
 - 2026-10-30 00:xx IST (chat session): new flow built (see Done). 2025–26 re-approved (66, cut hash stored).
   411 older papers at 'auto checked'; Claude-checking them via overview images, newest first.
+- 2026-10-30 12:xx IST (chat session): Claude check of all 411 backlog papers (overview of every page, newest
+  first). Pipeline fixes found by it: a lone '[n]' printed level with the next label is now cut below the mark
+  (+ check `piece: mark at the top`); 'Question continued on next side' is page furniture; a part label printed
+  in the question-number column ('(e)' on 2020 FM 52 p4) is accepted when it is the next letter; figure crops:
+  bullet lists, table captions under the table, key text ('= positive particles'), cells of ruled tables,
+  split prose rows ('… × 10⁶' + 'km.') and caption-only crops fixed; crops never reach past their piece.
+  Full re-run (JOBS=2, ~23 min): 477 papers, 0 blocking, golden 0 changed cuts; 21 papers re-cut (11 visibly,
+  each looked at again), 2025 MJ 42 re-approved (0.3 pt shift). 411 papers recorded `claude_checked`.
+  Review round 3 published (90 items: 72 flagged + 18 spot checks; `--max 90` keeps a page version under 511 files).
+

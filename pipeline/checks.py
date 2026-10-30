@@ -27,7 +27,8 @@ from coverage import paper_problems
 from clean import is_barcode_span
 
 TEXT_MIN = 0.97
-NOTICE = re.compile(r'UCLES|Turn over|is on the (?:next|back) page|continues on the next page|'
+MARKW = re.compile(r'\[\s*\d{1,2}\s*\]')
+NOTICE = re.compile(r'UCLES|Turn over|is on the (?:next|back) page|continues on the next (?:page|side)|continued on (?:the )?(?:next|following) (?:page|side)|'
                     r'(?:begins|starts) on the next page|BLANK\s+PAGE|Permission to reproduce|'
                     r'Cambridge Assessment International|\*\s*\d{8,}\s*\*')
 WORD = re.compile(r"[A-Za-z]+|\d+(?:\.\d+)?")
@@ -131,6 +132,11 @@ def check_paper(pj):
             t, b = page_bounds(p)
             lines[pno] = [x for x in (tight_ink(p, fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1'])) for l in visible_lines(p, t, b)) if x]
         return spans[pno], drawn[pno], lines[pno]
+    words = {}
+    def page_words(pno):
+        if pno not in words:
+            words[pno] = doc[pno - 1].get_text('words')
+        return words[pno]
     pieces = []
     for qf in sorted(glob.glob(os.path.join(os.path.dirname(pj), 'q*', '*.json'))):
         q = json.load(open(qf))
@@ -147,6 +153,13 @@ def check_paper(pj):
                     problems.append({'id': qid, 'kind': 'piece', 'detail': f"{where}: page furniture '{m.group(0)}' inside"})
                 if any(is_barcode_span(x) and (fitz.Rect(x['bbox']) & r).height > 0.3 for x in sp):
                     problems.append({'id': qid, 'kind': 'piece', 'detail': f'{where}: barcode inside'})
+                if not s.get('continued'):      # a lone '[n]' at the very top belongs to the part above
+                    ws = page_words(s['page'])
+                    for w in ws:
+                        cy = (w[1] + w[3]) / 2
+                        if w[0] > 400 and MARKW.fullmatch(w[4]) and r.y0 <= cy < r.y0 + 8 and r.x0 <= w[0] <= r.x1 \
+                                and not any(o[0] < 400 and abs((o[1] + o[3]) / 2 - cy) < 4 for o in ws):
+                            problems.append({'id': qid, 'kind': 'piece', 'detail': f"{where}: mark {w[4]} at the top belongs to the part above"})
                 if r.height < 8:
                     problems.append({'id': qid, 'kind': 'piece', 'detail': f'{where}: sliver piece {r.height:.1f} pt'})
                 pieces.append((qid, where, s['page'], r))

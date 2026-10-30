@@ -1,23 +1,29 @@
 {
  "paper": "0625_2021ON_63",
  "pipeline_version": "2.1",
- "checked_at": "2026-10-29T18:49Z",
+ "checked_at": "2026-10-30T06:53Z",
  "clean": true,
- "warnings": 1,
+ "warnings": 2,
  "problems": [
   {
    "id": "0625_2021ON_63_q01",
    "kind": "figure",
    "detail": "0625_2021ON_63_q01_fig1-1: crop cut: ink crosses the bottom edge, 1 text line(s) half inside",
    "blocking": false
+  },
+  {
+   "id": "0625_2021ON_63_q03",
+   "kind": "figure",
+   "detail": "0625_2021ON_63_q03c_table3-1: crop cut: 1 text line(s) half inside",
+   "blocking": false
   }
  ],
  "flags": [],
- "text_score_min": 0.988,
+ "text_score_min": 0.992,
  "text_scores": {
   "0625_2021ON_63_q01": 1.0,
   "0625_2021ON_63_q02": 1.0,
-  "0625_2021ON_63_q03": 0.988,
+  "0625_2021ON_63_q03": 0.992,
   "0625_2021ON_63_q04": 1.0
  }
 }

@@ -137,6 +137,26 @@ def raw_segments(doc, bnds):
             cost = lambda c: int(rows[max(0, int(round(c * ZOOM)) - 1):int(round(c * ZOOM)) + 2].sum())
             cuts.append(min(cands, key=lambda c: (cost(c), -c)) if cands else best_cut(doc[p], b['y'] - PAD_TOP, floor))
             continue
+        # a lone mark '[1]' of the part above printed level with the top of this label: cut below it
+        mk = [l for l in visible_lines(doc[p], *bounds[p]) if MARK.fullmatch(l['text'].strip()) and l['x0'] > 400
+              and b['y'] - 20 < l['y0'] < b['y'] - 1 and l['y1'] > b['y'] - 6]
+        if mk:
+            from layout import dark_mask
+            m = dark_mask(doc[p]); Z = ZOOM
+            a0, a1 = int((min(l['x0'] for l in mk) - 2) * Z), int((max(l['x1'] for l in mk) + 2) * Z)
+            col = m[:, a0:a1].any(axis=1)
+            other = m[:, :a0].any(axis=1) | m[:, a1:].any(axis=1)
+            i = int(max(l['y0'] for l in mk) * Z)
+            while i < len(col) and not col[i]:
+                i += 1                        # top of the mark's ink
+            while i < len(col) and col[i]:
+                i += 1                        # first row below the mark's ink
+            top_i = int((b['y'] - 2) * Z)
+            if i < len(col) and i / Z < b['y'] + 10 and not other[min(top_i, i):i].any():
+                cuts.append(i / Z)
+            else:
+                cuts.append(best_cut(doc[p], b['y'] - PAD_TOP, floor))
+            continue
         cuts.append(best_cut(doc[p], b['y'] - PAD_TOP, floor))
     for i, b in enumerate(bnds):
         nxt = bnds[i + 1] if i + 1 < len(bnds) else None
@@ -211,12 +231,19 @@ def find_figures(doc, seg, lines):
                   if MARK.fullmatch(l['text'].strip()) or TOTAL.fullmatch(l['text'].strip()) or DOTS.search(l['text'])]
     drawings = [r for r in ink_boxes(page, top, bottom) if seg['y0'] <= r.y0 and r.y1 <= seg['y1'] + 1
                 and not any(abs(r.x0 - m.x0) < 1 and abs(r.y0 - m.y0) < 1 and abs(r.x1 - m.x1) < 1 for m in marks_text)]
-    long_x0 = [l['x0'] for l in lines if len(l['text']) >= 25]
+    long_lines = [l for l in lines if len(l['text']) >= 25]
     para_x0 = [l['x0'] for l in lines if len(l['text']) >= 45]       # left edges of real paragraphs
     text_boxes = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in lines]
     frames = [r for r in drawings if r.width < 0.9 * page.rect.width and r.height > 18
               and not any(abs(r.x0 - t.x0) < 1 and abs(r.y0 - t.y0) < 1 for t in text_boxes)]
+    vrules = [r for r in drawings if r.width <= 1.5 and r.height > 5]
+    def in_grid(l):               # a cell of a ruled table: vertical rules on both sides at that height
+        ym = (l['y0'] + l['y1']) / 2
+        span = [r for r in vrules if r.y0 - 1 <= ym <= r.y1 + 1]
+        return any(r.x0 <= l['x0'] + 1 for r in span) and any(r.x0 >= l['x1'] - 1 for r in span)
     def prose_like(l):            # a sentence of the question, not an axis title or label inside a figure
+        if in_grid(l):
+            return False
         if DOTS.search(l['text']):
             return False          # an answer line ('Vs = .........') can sit beside a figure
         lr = fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1'])
@@ -224,20 +251,31 @@ def find_figures(doc, seg, lines):
             return False          # text printed inside a drawn box (a notice, a label) is part of the figure
         words = len(re.findall(r'[A-Za-z]{2,}', l['text']))
         return len(l['text']) >= 45 or (len(l['text']) >= 25 and words >= 4 and any(abs(l['x0'] - x) < 2.5 for x in para_x0))
+    bullets = [l for l in lines if l['text'].lstrip().startswith('•')
+               and not any(f.contains(fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1'])) for f in frames)]
+    def bullet_item(l):           # '• metre ruler': a list item of the question, never part of a figure
+        return l in bullets or any(abs(l['y0'] - b['y0']) < 2.5 and 0 < l['x0'] - b['x0'] < 40 for b in bullets)
     for cap in caps:
         is_table = cap['text'].startswith('Table')
-        prose_above = [l for l in lines if l['y1'] <= cap['y0'] and not DOTS.search(l['text']) and (prose_like(l) or (re.match(r'^(\d{1,2}|\([a-z]+\))\s', l['text']) and l['x0'] < 110)
+        prose_above = [l for l in lines if l['y1'] <= cap['y0'] and not DOTS.search(l['text']) and (prose_like(l) or bullet_item(l) or (re.match(r'^(\d{1,2}|\([a-z]+\))\s', l['text']) and l['x0'] < 110)
+                                                                    or (re.fullmatch(r'\([a-z]+\)', l['text'].strip()) and l['x0'] < 110)
+                                                                    or re.fullmatch(r'Method \d', l['text'].strip())
                                                                     or (l['x0'] <= 76 and l['text'].rstrip().endswith('.'))
-                                                                    or (l['text'].rstrip().endswith(('.', ':')) and any(abs(l['x0'] - x) < 2 for x in long_x0)))]
+                                                                    or (l['text'].rstrip().endswith(('.', ':')) and l['x0'] < 130 and any(abs(l['x0'] - o['x0']) < 2 for o in long_lines if o is not l)))]
         for l in sorted(lines, key=lambda l: l['y0']):    # last line of a sentence ('Fig. 2.2.' after a long line)
             if l['y1'] <= cap['y0'] and l not in prose_above and re.search(r'[a-z]', l['text']) and \
                     l['text'].rstrip()[-1:] in '.:?' and any(0 < l['y0'] - p['y0'] < 1.6 * (l['y1'] - l['y0'])
                                                              and p['x0'] - 3 <= l['x0'] <= p['x0'] + 70 for p in prose_above):
                 prose_above.append(l)
-        if is_table:   # table caption sits above the table
-            prose_below = [l for l in lines if l['y0'] > cap['y1'] + 4 and (len(l['text']) > 40 and not DOTS.search(l['text']))]
+        rules = [r for r in drawings if not any(abs(r.x0 - t.x0) < 1 and abs(r.y0 - t.y0) < 1 for t in text_boxes)]
+        grid_below = [r for r in rules if cap['y1'] - 1 <= r.y0 <= cap['y1'] + 12]
+        grid_above = [r for r in rules if cap['y0'] - 30 <= r.y1 <= cap['y0'] + 1]
+        if is_table and (grid_below or not grid_above):
+            # table caption sits above the table (the usual case)
+            prose_below = [l for l in lines if l['y0'] > cap['y1'] + 4 and len(l['text']) > 40
+                           and not DOTS.search(l['text']) and not in_grid(l)]
             band = (cap['y0'] - 2, (min(l['y0'] for l in prose_below) - 4) if prose_below else seg['y1'])
-        else:
+        else:          # figure caption, or a table captioned underneath (table drawn just above, nothing below)
             band = ((max(l['y1'] for l in prose_above) + 2) if prose_above else seg['y0'], cap['y1'] + 2)
         strip = fitz.Rect(0, band[0] - 1, page.rect.width, band[1] + 1)
         grown = [fitz.Rect(r.x0 - 1, r.y0 - 1, r.x1 + 1, r.y1 + 1) for r in drawings]   # lines have zero height
@@ -248,10 +286,12 @@ def find_figures(doc, seg, lines):
             continue
         x0 = min(r.x0 for r in inside); x1 = max(r.x1 for r in inside)
         y0 = min(r.y0 for r in inside); y1 = max(r.y1 for r in inside)
-        g = grow_to_ink(page, fitz.Rect(x0, y0, x1, y1), fitz.Rect(CONTENT_X0, max(seg['y0'], band[0] - 1), CONTENT_X1, min(seg['y1'], band[1] + 1)))
+        g = grow_to_ink(page, fitz.Rect(x0, y0, x1, y1), fitz.Rect(CONTENT_X0, max(seg['y0'], band[0] - 1), CONTENT_X1, min(seg['y1'], band[1] + 1)),
+                        exclude=[fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in prose_above])
         x0, y0, x1, y1 = g.x0, g.y0, g.x1, g.y1
         figs.append({'caption': cap['text'], 'page': seg['page'],
-                     'bbox': [round(x0 - 3, 1), round(y0 - 3, 1), round(x1 + 3, 1), round(y1 + 3, 1)]})
+                     'bbox': [round(x0 - 3, 1), round(max(y0 - 3, seg['y0']), 1), round(x1 + 3, 1),
+                              round(min(y1 + 3, seg['y1']), 1)]})    # a crop never reaches past its piece
     return figs
 
 

@@ -1,6 +1,6 @@
 """Build a review round for Dhruv: flagged questions + a random sample, as files for the review page.
 
-    python3 pipeline/review_round.py new <round no> <paper ids...> [--sample 3] [--title "..."] [--intro "..."]
+    python3 pipeline/review_round.py new <round no> <paper ids...> [--sample 3] [--max 100] [--title "..."] [--intro "..."]
     python3 pipeline/review_round.py close <round no> <answers.json>   # after reading the page's feedback
 
 `new` writes
@@ -43,10 +43,14 @@ def editable_payload(q, d, qid):
     return out, figs
 
 
-def new(rnd, pids, sample=3, title=None, intro=None):
+def new(rnd, pids, sample=3, title=None, intro=None, max_items=None):
+    """max_items caps the round (one page version holds ~100 items): flagged items first (Cambridge
+    flags, then figure crops, then editable text) up to four fifths, then random spot checks spread over
+    the papers. Flags that did not fit go into the next round (the paper waits for them)."""
     byid = {os.path.basename(f)[:-5]: f for f in paths.question_files()}
     rng = random.Random(rnd)
-    items, reasons = [], {}
+    reasons, prio, samples = {}, {}, []
+    rank = {'flag': 0, 'figure': 1, 'text': 2}
     for pid in pids:
         qids = sorted(q for q in byid if q.startswith(pid + '_'))
         chk = json.load(open(os.path.join(paths.CHECKS, pid + '.json'))) if os.path.exists(os.path.join(paths.CHECKS, pid + '.json')) else {}
@@ -54,9 +58,15 @@ def new(rnd, pids, sample=3, title=None, intro=None):
             qid = p['id'] if p['id'] in byid else None
             if qid:
                 reasons.setdefault(qid, []).append(p['detail'] if p['kind'] == 'flag' else f"{p['kind']}: {p['detail']}")
-        flagged = [q for q in qids if q in reasons]
+                prio[qid] = min(prio.get(qid, 9), rank.get(p['kind'], 3))
         rest = [q for q in qids if q not in reasons]
-        items += [(q, 'flagged') for q in flagged] + [(q, 'sample') for q in rng.sample(rest, min(sample, len(rest)))]
+        samples.append(rng.sample(rest, min(sample, len(rest))))
+    flagged = sorted(prio, key=lambda q: (prio[q], q))
+    sampled = [q for k in range(sample) for lst in rng.sample(samples, len(samples)) for q in lst[k:k + 1]]
+    if max_items is not None:            # keep a fifth of the round for spot checks; left-over flags wait for the next round
+        flagged = flagged[:max_items - min(len(sampled), max_items // 5)]
+        sampled = sampled[:max(0, max_items - len(flagged))]
+    items = [(q, 'flagged') for q in flagged] + [(q, 'sample') for q in sampled]
     out_dir = os.path.join(paths.ROOT, 'out', 'review', f'round_{rnd}')
     built = ra.render_items(out_dir, items, reasons, byid)
     for it in built:
@@ -97,7 +107,8 @@ if __name__ == '__main__':
         return default
     if a and a[0] == 'new':
         sample = int(opt('--sample', 3)); title = opt('--title'); intro = opt('--intro')
-        new(int(a[1]), a[2:], sample, title, intro)
+        mx = opt('--max'); mx = int(mx) if mx else None
+        new(int(a[1]), a[2:], sample, title, intro, mx)
     elif a and a[0] == 'close':
         close(int(a[1]), a[2])
     else:

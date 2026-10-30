@@ -71,7 +71,7 @@ def page_bounds(page):
                 bottom = min(bottom, min(rules) - 3.0 if rules else y0 - 6.0)   # copyright notice (and its rule) on the last page
             if y0 > 100 and 150 < l['bbox'][0] < 330 and re.fullmatch(
                     r'(Turn over( for (the next )?(question|page) ?\d*)?|Question \d+ (is|continues|begins|starts) on '
-                    r'(the next page|the back page|page \d+))\.?', ' '.join(t.split())):
+                    r'(the next (page|side)|the back page|page \d+)|Question continued on (the )?(next|following) (page|side))\.?', ' '.join(t.split())):
                 bottom = min(bottom, y0 - 3.0)          # centred notice: 'Turn over', 'Question 10 is on the back page.'
             x0 = l['bbox'][0]
             if y0 < 58 and y1 < 72 and re.fullmatch(r'\d{1,2}', t) and 240 < x0 < 360:   # page number (lower when a barcode sits above it)
@@ -154,6 +154,10 @@ def label_tokens(page, top, bottom):
             v = m.group(1)
             if LETTER_X[0] <= x0 <= LETTER_X[1] and v in LETTERS:
                 toks.append({'kind': 'l', 'val': v, 'x0': x0, 'y0': y0, 'y1': y1})
+            elif QNUM_X[0] <= x0 <= QNUM_X[1] and v in LETTERS and v not in ROMAN and w.startswith('('):
+                # a part label printed in the number column (a page that opens with '(e)' beside a figure);
+                # boundaries() only takes it when it is the next letter of the current question
+                toks.append({'kind': 'l', 'val': v, 'x0': x0, 'y0': y0, 'y1': y1, 'wide': True})
             elif ROMAN_X[0] <= x0 <= ROMAN_X[1] and v in ROMAN:
                 toks.append({'kind': 'r', 'val': v, 'x0': x0, 'y0': y0, 'y1': y1})
     toks.sort(key=lambda t: (round(t['y0']), t['x0']))
@@ -206,10 +210,15 @@ def tight_ink(page, r, exclude=()):
     return fitz.Rect((x0 + xs.min()) / ZOOM, (y0 + ys.min()) / ZOOM, (x0 + xs.max() + 1) / ZOOM, (y0 + ys.max() + 1) / ZOOM)
 
 
-def grow_to_ink(page, r, limit, step=1.0, max_grow=80):
+def grow_to_ink(page, r, limit, step=1.0, max_grow=80, exclude=()):
     """Grow r while printed ink runs across one of its edges (a line, curve or label that continues
-    outside), staying inside `limit`. Fixes crops that end in the middle of a wire or an axis."""
+    outside), staying inside `limit`. Fixes crops that end in the middle of a wire or an axis.
+    Ink inside `exclude` (the question's sentences) never pulls the crop in."""
     m = dark_mask(page); H, W = m.shape; Z = ZOOM
+    if exclude:
+        m = m.copy()
+        for e in exclude:
+            m[max(0, int((e.y0 - 1) * Z)):max(0, int((e.y1 + 1) * Z) + 1), max(0, int((e.x0 - 1) * Z)):max(0, int((e.x1 + 1) * Z) + 1)] = False
     r = fitz.Rect(r)
     def crosses(edge):
         y0, y1 = max(0, int(r.y0 * Z)), min(H, int(r.y1 * Z) + 1)

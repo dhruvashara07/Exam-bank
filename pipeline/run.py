@@ -108,6 +108,8 @@ def mcq_figures(doc, q):
         option_rows = [l['y0'] for l in lines if option_label(l)]
         def is_prose(l):
             t = l['text']
+            if t.lstrip().startswith('='):
+                return False         # a key entry ('= positive subatomic particles') belongs to the diagram
             return (len(t) >= 25 and ' ' in t) or (l['x0'] < 60 and re.match(r'^\d{1,2}(\s|$)', t) is not None) \
                 or t.rstrip().endswith('?') \
                 or (any(abs(l['y0'] - y) < 4 for y in option_rows) and len(option_rows) >= 2)
@@ -117,6 +119,11 @@ def mcq_figures(doc, q):
                      and (abs(p['x0'] - l['x0']) < 3 or (re.match(r'^\d{1,2}\s', p['text']) and 0 < l['x0'] - p['x0'] < 28))]
             if above and re.search(r'[a-z]', l['text']) and (l['text'].rstrip()[-1:] in '.?:' or len(l['text']) > 12):
                 prose_ids.add(id(l))
+        for _ in range(2):           # the rest of a prose row split off by a superscript ('… 110 × 10⁶' + 'km.')
+            for l in lines:
+                if id(l) not in prose_ids and any(id(p) in prose_ids and abs(p['y0'] - l['y0']) < 3 and -1 < l['x0'] - p['x1'] < 8
+                                                  for p in lines):
+                    prose_ids.add(id(l))
         prose = [l for l in lines if id(l) in prose_ids]
         labels = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in lines if id(l) not in prose_ids]
         prose_r = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in prose]
@@ -149,7 +156,7 @@ def mcq_figures(doc, q):
                         c = union(c, t)
             if c.height < 10:            # a lone rule (e.g. end-of-paper line), not a figure
                 continue
-            c = grow_to_ink(page, c, fitz.Rect(CONTENT_X0, y0, CONTENT_X1, y1))
+            c = grow_to_ink(page, c, fitz.Rect(CONTENT_X0, y0, CONTENT_X1, y1), exclude=prose_r)
             figs.append({'page': s['page'], 'bbox': [round(c.x0 - 3, 1), round(c.y0 - 3, 1), round(c.x1 + 3, 1), round(c.y1 + 3, 1)]})
     return figs
 
@@ -300,6 +307,13 @@ def write_index():
         json.dump(rows, fh, ensure_ascii=False, indent=0)
 
 
+def _safe_process(p):
+    try:
+        return process(p)
+    except Exception as e:  # keep going; record the failure for review
+        return e
+
+
 if __name__ == '__main__':
     sels = sys.argv[1:]              # '2025-MJ/41' or '0625/2025-MJ/41'; none = every paper
     sel = bool(sels)
@@ -311,9 +325,18 @@ if __name__ == '__main__':
         papers = [p for p in papers if wanted(p)]
     all_queue = []
     appr = paths.approvals()
-    for p in papers:
+    jobs = int(os.environ.get('JOBS', '0')) or min(4, os.cpu_count() or 1)
+    if jobs > 1 and len(papers) > 1:
+        import multiprocessing
+        with multiprocessing.Pool(jobs) as pool:
+            results = pool.map(_safe_process, papers, chunksize=1)
+    else:
+        results = [_safe_process(p) for p in papers]
+    for p, res in zip(papers, results):
         try:
-            meta, queue = process(p)
+            if isinstance(res, Exception):
+                raise res
+            meta, queue = res
             all_queue += queue
             pid = paths.paper_id(meta)
             if pid in appr and appr[pid].get('cut') != cut_hash(os.path.join(paths.paper_dir(meta), 'paper.json')):
