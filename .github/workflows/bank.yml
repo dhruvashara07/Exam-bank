@@ -92,6 +92,9 @@ jobs:
           SKIP_WAIT=1 pipeline/push.sh "Process papers: $(tr '\n' ' ' < todo.txt)"
 
       - name: Upload SVGs to Cloudinary
+        # PAUSED 2026-10-30: free plan over its credits; SVGs stay in git. Hosting is being re-decided
+        # (layout-data test, then Cloudflare R2 or similar). Remove this `if` to resume.
+        if: ${{ false }}
         env:
           CLOUDINARY_MINUTES: '240'      # stop uploading after 4 h; the next run continues where it stopped
         run: python3 pipeline/sync_cloudinary.py
