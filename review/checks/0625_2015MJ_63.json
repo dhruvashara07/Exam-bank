@@ -1,14 +1,20 @@
 {
  "paper": "0625_2015MJ_63",
  "pipeline_version": "2.1",
- "checked_at": "2026-10-30T06:51Z",
+ "checked_at": "2026-10-30T09:45Z",
  "clean": true,
- "warnings": 1,
+ "warnings": 2,
  "problems": [
   {
    "id": "0625_2015MJ_63_q05",
    "kind": "figure",
    "detail": "0625_2015MJ_63_q05ai_fig5-2: crop cut: ink crosses the bottom edge",
+   "blocking": false
+  },
+  {
+   "id": "0625_2015MJ_63_q05",
+   "kind": "figure",
+   "detail": "0625_2015MJ_63_q05ai_fig5-3: crop cut: ink crosses the top edge, 1 text line(s) half inside",
    "blocking": false
   }
  ],

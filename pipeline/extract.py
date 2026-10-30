@@ -277,6 +277,11 @@ def find_figures(doc, seg, lines):
             band = (cap['y0'] - 2, (min(l['y0'] for l in prose_below) - 4) if prose_below else seg['y1'])
         else:          # figure caption, or a table captioned underneath (table drawn just above, nothing below)
             band = ((max(l['y1'] for l in prose_above) + 2) if prose_above else seg['y0'], cap['y1'] + 2)
+            # figures stacked with no sentence between them: each caption closes its own figure, so this
+            # figure starts below the previous 'Fig.' caption (one caption = one figure, however many drawings)
+            prev = [c['y1'] for c in caps if c is not cap and c['y1'] <= cap['y0'] and not c['text'].startswith('Table')]
+            if prev and max(prev) + 2 > band[0]:
+                band = (max(prev) + 2, band[1])
         strip = fitz.Rect(0, band[0] - 1, page.rect.width, band[1] + 1)
         grown = [fitz.Rect(r.x0 - 1, r.y0 - 1, r.x1 + 1, r.y1 + 1) for r in drawings]   # lines have zero height
         inside = [tight_ink(page, g & strip, marks_text) for g in grown
