@@ -139,3 +139,9 @@ One line per run: date, pending papers checked/approved, feedback handled, fixes
   'Table 3.1' crops no longer take the 'hO' denominator); mcq rule: 2014 ON 11 q32 = ON 12 q24, and 2018 FM 12 q38 (stem was
   inside the option drawings; now the stem is text and the options are one figure, options_on_figure). Golden 0 changed cuts.
   2014: all 30 Claude-checked ok -> round 4 published (70 items, 40 flagged), state your_review. 2013 processed (30 papers, 0 blocking, batch b20261102-1539; 86 figure warnings to look at), state claude_check.
+- 2026-11-02 16:00-16:45 UTC (hourly backlog run): round 4 has no answers yet. 2013: older papers have a 'For Examiner's Use'
+  column (long vertical rule + heading at the right edge) that figure crops took as drawing ink (crops grew up to the stem line and
+  out to the margin): clean.strip_examiner_column removes it (only where the rule and the heading are both found). Scanned all 477
+  2014-2026 question papers: none has the column, so their cleaned PDFs are unchanged; golden 0 changed cuts. 2013 re-run: 0 blocking,
+  figure warnings 86 -> 1. Claude check of 2013 started: 6 ok, ON 13 needs_fix (q34 MCQ figure crop leaves out the 'insulated
+  connecting wire' labels above/below the drawing). Next run: fix that crop, overviews of the remaining 23 2013 papers.

@@ -117,6 +117,46 @@ def strip_stamp_images(path):
     return len(stamps)
 
 
+def strip_examiner_column(path):
+    """Older question papers (2013 and before) have a 'For Examiner's Use' column: a thin vertical rule
+    near the page edge running down most of the page, headed by 'For / Examiner's / Use'. It is page
+    furniture, not part of any question (figure crops took the rule as drawing ink). Removed only where
+    both the long rule and the heading next to it are found; returns the number of pages changed."""
+    import pymupdf as fitz
+    doc = fitz.open(path)
+    n = 0
+    for page in doc:
+        W, H = page.rect.width, page.rect.height
+        rules = [d['rect'] for d in page.get_drawings()
+                 if d['rect'].width < 1.5 and d['rect'].height > 0.6 * H
+                 and (d['rect'].x0 > 0.8 * W or d['rect'].x1 < 0.2 * W)]
+        if not rules:
+            continue
+        words = page.get_text('words')
+        hits = []
+        for r in rules:
+            near = [w for w in words if w[1] < r.y0 + 40 and w[3] > r.y0 - 15
+                    and min(abs(w[0] - r.x0), abs(w[2] - r.x0)) < 45]
+            head = [w for w in near if w[4].replace('’', "'") in ('For', "Examiner's", 'Use', "Examiners'")]
+            if not any(w[4].startswith('Examiner') for w in head):
+                continue
+            hits.append(('rule', fitz.Rect(r.x0 - 1, r.y0 - 1, r.x1 + 1, r.y1 + 1)))
+            hits += [('text', fitz.Rect(w[:4])) for w in head]
+        if not hits:
+            continue
+        # two passes so the rule's strip never removes text and the heading's boxes never remove line art
+        for want, graphics, text in (('text', fitz.PDF_REDACT_LINE_ART_NONE, fitz.PDF_REDACT_TEXT_REMOVE),
+                                     ('rule', fitz.PDF_REDACT_LINE_ART_REMOVE_IF_COVERED, fitz.PDF_REDACT_TEXT_NONE)):
+            for kind, r in hits:
+                if kind == want:
+                    page.add_redact_annot(r, fill=False)
+            page.apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE, graphics=graphics, text=text)
+        n += 1
+    if n:
+        doc.save(path, incremental=True, encryption=fitz.PDF_ENCRYPT_KEEP)
+    return n
+
+
 def unrotate(path):
     """Pages stored with /Rotate (many mark schemes before 2020 are landscape this way): bake the
     rotation into the content so text runs left-to-right in page coordinates. Looks identical."""
@@ -164,6 +204,7 @@ def clean(src, dst):
     strip_stamp_images(dst)
     if '/qp_' in src.replace('\\', '/'):
         strip_corner_marks(dst)
+        strip_examiner_column(dst)
     return n
 
 if __name__ == '__main__':
