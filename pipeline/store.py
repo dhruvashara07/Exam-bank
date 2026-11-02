@@ -23,6 +23,7 @@ from run import cleaned
 from store_text import family, unpua, hexcol, span_len, odd
 from store_units import glyph_styles, char_styles, tp, drawing_d, nodes, scale_note
 import store_options as OPT
+import store_v5 as V5
 
 OUT = os.path.join(paths.ROOT, 'out', 'store')          # scratch: verify renders, print helpers
 PT2MM = 25.4 / 72
@@ -40,22 +41,28 @@ SCHEMA = {
     'unit': 'src{doc qp|ms, page, box[x0,y0,x1,y1] pt}, w, h, text[word], lines[path], figs[{id,x,y}], glyphs[{file,x,y,w,h}], '
             'exact (rare: the piece kept as the exact page picture glyphs/<file>, its words still listed for search)',
     'word': 't text, x, y (baseline), w (width), s (size), f (sans|serif|mono|symbol), b/i (1 = bold/italic), '
-            'c (colour if not black), dir (writing direction if rotated), role (qnum|total|mslabel)',
+            'c (colour if not black), dir (writing direction if rotated), hide (1: dots of an answer line, hidden in the '
+            'question-bank view), role (qnum|total|mslabel|caption|figref|partlabel|partref; see store_v5.py) with ref {kind,q,n[,other]} / path',
+    'unit.answer': 'bands [{y0,y1,kind dots|work}] removed in the question-bank view (working space, full dotted answer lines)',
+    'table': 'id, caption, ref, page, box, rows[[cell text]]  (the table itself is text + rules in the layout)',
     'figure': 'id, file, kind (vector|raster), caption, size_pt[w,h], size_mm[w,h], measure (bool), scale_note, '
-              'source{page, box}',
+              'source{page, box}, caption_masked/caption_box (caption blanked in the file, drawn as layout text)',
 }
 
 
 # ---------------------------------------------------------------- one exact piece of a page
-def unit(doc, pno, clip, figs, cstyle, store, docname):
+def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
     page = doc[pno]
     m = page.rotation_matrix
     ox, oy = clip.x0, clip.y0
     boxes = [fitz.Rect(f['source']['box']) for f in figs]
+    capboxes = [fitz.Rect(f['caption_box']) for f in figs if f.get('caption_box') and f['source']['page'] == pno + 1]
     def in_fig(r):
         return any(r.x0 >= b.x0 - 1.5 and r.y0 >= b.y0 - 1.5 and r.x1 <= b.x1 + 1.5 and r.y1 <= b.y1 + 1.5 for b in boxes)
     def in_fig_c(r):                       # text: its centre inside a figure = printed in the figure
         cx, cy = (r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2
+        if any(c.x0 - 1 <= cx <= c.x1 + 1 and c.y0 - 1 <= cy <= c.y1 + 1 for c in capboxes):
+            return False                    # the caption of a figure whose crop has it blanked: layout text
         return any(b.x0 - 1 <= cx <= b.x1 + 1 and b.y0 - 1 <= cy <= b.y1 + 1 for b in boxes)
     def inside(r):
         cx, cy = (r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2
@@ -199,6 +206,13 @@ def unit(doc, pno, clip, figs, cstyle, store, docname):
             t['role'] = 'mslabel'
     if not u['glyphs']:
         del u['glyphs']
+    ctx = ctx or {}
+    caps = [c for c in ctx.get('captions', []) if c['page'] == pno + 1]
+    V5.tag_unit(u, ox, oy, ctx.get('qnum', 0), caps, ctx.get('path', ''), docname, ctx.get('first', False), ctx.get('ms_label'))
+    if docname == 'qp':
+        bands = V5.answer_bands(u, {f['id']: f['size_pt'] for f in figs})
+        if bands:
+            u['answer'] = bands
     right = max([t['x'] + t['w'] for t in u['text'] if not t.get('dir')] + [u['w']])
     if right > u['w']:                     # text running past the cut's edge: widen the piece to hold it
         u['w'] = round(right + 1, 2)
@@ -209,13 +223,27 @@ def unit(doc, pno, clip, figs, cstyle, store, docname):
 def save_figure(f, q, meta, qdoc, store):
     b = fitz.Rect(f['bbox'])
     pg = qdoc[f['page'] - 1]
+    cap, cap_in, masked = None, False, False
+    if f.get('caption'):                      # v5: the figure file holds the drawing only; the caption is layout text
+        cap = V5.caption_rects(pg, b, f['caption'])
+        if cap is not None:
+            nb, ok = V5.drawing_box(pg, b, cap)
+            if ok:
+                f = dict(f, bbox=list(nb), svg=None)      # a fresh crop: the stored one still holds the caption
+                b = nb
+            else:                                        # drawing ink shares the caption's row: keep the box, blank only the
+                pg = V5.without_caption(pg, cap)         # caption words (temporary copy of the page; graphics untouched)
+                qdoc = pg.parent
+                f = dict(f, svg=None)
+                masked = True
     # raster figure (photo, shaded drawing): any image under it -> 300 dpi PNG of the region (an SVG of a
     # soft-masked image loses parts of its shading in browsers)
     imgs = [fitz.Rect(i['bbox']) for i in pg.get_image_info() if (fitz.Rect(i['bbox']) & b).get_area() > 0.2 * b.get_area()]
     text_all = ' '.join(n.get('text', '') for n in nodes(q))
-    fignum = re.search(r'(?:Fig\.|Table)\s*[\d.]+', f.get('caption') or '')
+    fignum = re.search(r'(?:Fig\.?|Table)\s*[\d.]+', f.get('caption') or '')
     measure = bool(fignum and re.search(r'(measure|ruler|protractor)[^.]{0,80}' + re.escape(fignum.group(0)) + r'|'
                                         + re.escape(fignum.group(0)) + r'[^.]{0,40}measure', text_all, re.I))
+    pc = V5.caption_prefix(f.get('caption'))
     label = {'id': f['id'], 'kind': 'raster' if imgs else 'vector', 'caption': f.get('caption'),
              'size_pt': [round(b.width, 2), round(b.height, 2)], 'size_mm': [round(b.width * PT2MM, 2), round(b.height * PT2MM, 2)],
              'measure': measure, 'scale_note': scale_note(pg, b),
@@ -229,13 +257,22 @@ def save_figure(f, q, meta, qdoc, store):
             svg = open(os.path.join(paths.ROOT, f['svg']['file'])).read()
         else:                                   # an option drawing cut out of a multiple-choice figure
             from render import region_svg
-            svg = region_svg(qdoc, f['page'] - 1, list(b))
+            svg = region_svg(qdoc, (0 if masked else f['page'] - 1), list(b))
         attrs = (f' data-id="{f["id"]}" data-width-mm="{label["size_mm"][0]}" data-height-mm="{label["size_mm"][1]}"'
                  f' data-measure="{str(measure).lower()}" data-source="{label["source"]["paper"]} {label["source"]["session"]} p{f["page"]}"')
         svg = re.sub(r'<svg ', '<svg' + attrs + ' ', svg, count=1)
         svg = re.sub(r'(<svg[^>]*>)', r'\1' + f'<title>{f["id"]}</title><desc>{json.dumps(label)}</desc>', svg, count=1)
         open(os.path.join(store, 'figures', name), 'w').write(svg)
     label['file'] = name
+    if pc:
+        label['ref'] = {'kind': pc[0], 'q': pc[1], 'n': pc[2]}
+    if (f.get('caption') or '').startswith('Table'):
+        label['table_as_picture'] = OPT.table_picture_reason(pg, b) or 'table not recognised as text'
+    if masked:
+        label['caption_masked'] = True
+        label['caption_box'] = [round(v, 2) for v in cap]
+    if cap is not None:
+        label['_cap'] = [round(v, 2) for v in cap]
     return label
 
 
@@ -278,10 +315,32 @@ def build(pid):
     for qf in sorted(glob.glob(os.path.join(os.path.dirname(pj), 'q*', '*.json'))):
         q = json.load(open(qf))
         figs, opts, cols = [], None, None
+        captions, tables = [], []                   # v5: caption lines (layout words) and the tables' cells
         for f in q.get('figures', []):
             pg, b = qdoc[f['page'] - 1], fitz.Rect(f['bbox'])
-            g = OPT.grid(pg, b)
+            is_tab = (f.get('caption') or '').startswith('Table')
+            g = OPT.grid(pg, b, table=is_tab)
+            tt = None
+            if not g and is_tab:                    # no closed grid: a borderless table is text too; a caption-only crop is no figure
+                cr0 = V5.caption_rects(pg, b, f['caption'])
+                tt = OPT.text_table(pg, b, cr0)
+            if tt and not g:
+                pc = V5.caption_prefix(f.get('caption'))
+                if cr0 is not None and pc:
+                    captions.append({'rect': cr0, 'kind': pc[0], 'q': pc[1], 'n': pc[2], 'page': f['page']})
+                if tt == 'text' and pc:
+                    tables.append({'id': f['id'], 'caption': f['caption'], 'ref': {'kind': pc[0], 'q': pc[1], 'n': pc[2]},
+                                   'page': f['page'], 'box': [round(v, 2) for v in b], 'rows': None})
+                continue
             if g:                                   # a ruled table: stays text + rules in the layout
+                pc = V5.caption_prefix(f.get('caption'))
+                if pc:
+                    cr = V5.caption_rects(pg, b, f['caption'])
+                    if cr is not None:
+                        captions.append({'rect': cr, 'kind': pc[0], 'q': pc[1], 'n': pc[2], 'page': f['page']})
+                    tables.append({'id': f['id'], 'caption': f['caption'], 'ref': {'kind': pc[0], 'q': pc[1], 'n': pc[2]},
+                                   'page': f['page'], 'box': [round(v, 2) for v in g['rect']],
+                                   'rows': [[c for c in r] for r in OPT.table_rows(pg, g)]})
                 if meta.get('is_mcq') and opts is None:
                     t = OPT.table_options(OPT.table_rows(pg, g)) or OPT.table_options(OPT._row_lines(pg, g, None) or [])
                     if t:
@@ -305,7 +364,12 @@ def build(pid):
                     opts.append({'label': L, 'figure': sub['id'], 'text': ''})
                 continue
             figs.append(save_figure(f, q, meta, qdoc, store))
-        rec = {'schema': 4, 'id': q['id'],
+        for lab in figs:                            # the caption line of each figure: layout words, tagged for renumbering
+            cr = lab.pop('_cap', None)
+            if cr is not None and lab.get('ref'):
+                captions.append({'rect': fitz.Rect(cr), 'kind': lab['ref']['kind'], 'q': lab['ref']['q'], 'n': lab['ref']['n'],
+                                 'page': lab['source']['page']})
+        rec = {'schema': 5, 'id': q['id'],
                'paper': {'syllabus': meta['syllabus'], 'session': f"{meta['year']}-{meta['session']}", 'code': meta['paper_code'],
                          'paper': meta['paper'], 'variant': meta['variant']},
                'number': q['number'], 'type': 'mcq' if meta.get('is_mcq') else 'structured', 'marks': q['marks'],
@@ -313,16 +377,18 @@ def build(pid):
         for n in nodes(q):
             path = n.get('path') or str(q['number'])
             lay = []
-            for s in n.get('segments', []):
+            for k, s in enumerate(n.get('segments', [])):
                 pno = s['page'] - 1
                 lay.append(unit(qdoc, pno, fitz.Rect(s['bbox']), [f for f in figs if f['source']['page'] == s['page']],
-                                styles(qdoc, 'qp', pno, qstyle), store, 'qp'))
+                                styles(qdoc, 'qp', pno, qstyle), store, 'qp',
+                                {'captions': captions, 'qnum': q['number'], 'path': path, 'first': k == 0}))
             ms = []
             for r in n.get('mark_scheme', []):
                 ms.append({'label': r['label'], 'codes': r.get('codes', []),
                            'marks': row_marks(r.get('codes', [])),
                            'text': r.get('text', ''),
-                           'layout': [unit(mdoc, s['page'] - 1, fitz.Rect(s['bbox']), [], styles(mdoc, 'ms', s['page'] - 1, mstyle), store, 'ms')
+                           'layout': [unit(mdoc, s['page'] - 1, fitz.Rect(s['bbox']), [], styles(mdoc, 'ms', s['page'] - 1, mstyle), store, 'ms',
+                                           {'qnum': q['number'], 'ms_label': r['label']})
                                       for s in r['segments']]})
             parent = re.sub(r'\([^()]*\)$', '', path) if '(' in path else None
             rec['parts'].append({'path': path, 'label': n.get('label'), 'parent': parent, 'marks': n['marks'],
@@ -338,6 +404,8 @@ def build(pid):
                 rec['options'] = [{'label': L, 'text': ''} for L in OPT.LETTERS]
                 rec['options_on_figure'] = True
                 print(f"  {q['id']}: options A-D are marks on a figure", file=sys.stderr)
+        if tables:
+            rec['tables'] = tables
         if scan:
             rec['ms_scan'] = scan                 # the mark scheme exists only as scanned pages (Nov 2002)
         json.dump(rec, open(os.path.join(store, f"q{q['number']:02d}.json"), 'w'), ensure_ascii=False, separators=(',', ':'))
@@ -416,43 +484,81 @@ def dupes(session):
 
 
 # ---------------------------------------------------------------- drawing units
-def unit_svg(u, base, dx=0, dy=0, renumber=None, drop_total=False, figs=None):
+def bands_of(u, view):
+    """Answer bands removed in the question-bank view (none in the print view)."""
+    return sorted(u.get('answer', []), key=lambda b: b['y0']) if view == 'bank' and not u.get('exact') else []
+
+
+def _mark_w(txt, t):
+    import renumber as RN
+    return RN.text_w(txt, t)
+
+
+def view_height(u, view='print'):
+    return round(u['h'] - sum(b['y1'] - b['y0'] for b in bands_of(u, view)), 2)
+
+
+def unit_svg(u, base, dx=0, dy=0, renumber=None, drop_total=False, figs=None, view='print', plan=None, doc='qp', meta=None):
+    """One unit as SVG. view='bank': answer bands removed and the gaps closed (working space, full dotted lines).
+    plan: a renumber.make_plan() result (new question number, Fig/Table numbers, part labels)."""
     if u.get('exact'):                     # kept as the exact picture of the printed piece
         return (f'<g transform="translate({dx:.2f} {dy:.2f})"><image href="{base}/glyphs/{u["exact"]}" x="0" y="0" '
                 f'width="{u["src"]["box"][2] - u["src"]["box"][0]:.2f}" height="{u["h"]}" preserveAspectRatio="none"/></g>')
+    if plan:
+        import renumber as RN
+        u = RN.apply_plan(u, plan, doc, meta)
+    bands = bands_of(u, view)
+    def shift(y):                          # how far content at y moves up: the bands above it
+        return sum(b['y1'] - b['y0'] for b in bands if b['y1'] <= y + 0.01)
+    def hidden(y0, y1=None):
+        y1 = y0 if y1 is None else y1
+        return any(b['y0'] - 0.01 <= y0 and y1 <= b['y1'] + 0.01 and b['y1'] > b['y0'] for b in bands)
     o = [f'<g transform="translate({dx:.2f} {dy:.2f})">']
     for p in u['lines']:
+        bb = V5.path_bbox(p['d']) if bands else None
+        if bb and hidden(bb[1], bb[3]):
+            continue
         a = [f'd="{p["d"]}"', f'fill="{p.get("fill", "none")}"']
         if p.get('eo'): a.append('fill-rule="evenodd"')
         if p.get('stroke'):
             a += [f'stroke="{p["stroke"]}"', f'stroke-width="{p["sw"]}"']
             if p.get('dash'): a.append(f'stroke-dasharray="{p["dash"]}"')
-        o.append(f'<path {" ".join(a)}/>')
+        sh = shift(bb[1]) if bb else 0
+        tr = f' transform="translate(0 {-sh:.2f})"' if sh else ''
+        o.append(f'<path {" ".join(a)}{tr}/>')
     for im in u.get('images', []):
-        o.append(f'<image href="{base}/figures/{im["file"]}" x="{im["x"]}" y="{im["y"]}" width="{im["w"]}" height="{im["h"]}" preserveAspectRatio="none"/>')
+        o.append(f'<image href="{base}/figures/{im["file"]}" x="{im["x"]}" y="{im["y"] - shift(im["y"]):.2f}" width="{im["w"]}" height="{im["h"]}" preserveAspectRatio="none"/>')
     for g in u.get('glyphs', []):
-        o.append(f'<image href="{base}/glyphs/{g["file"]}" x="{g["x"]}" y="{g["y"]}" width="{g["w"]}" height="{g["h"]}" preserveAspectRatio="none"/>')
+        o.append(f'<image href="{base}/glyphs/{g["file"]}" x="{g["x"]}" y="{g["y"] - shift(g["y"]):.2f}" width="{g["w"]}" height="{g["h"]}" preserveAspectRatio="none"/>')
     for f in u['figs']:
         fl = figs[f['id']]
-        o.append(f'<image href="{base}/figures/{fl["file"]}" x="{f["x"]}" y="{f["y"]}" width="{fl["size_pt"][0]}" '
+        o.append(f'<image href="{base}/figures/{fl["file"]}" x="{f["x"]}" y="{f["y"] - shift(f["y"]):.2f}" width="{fl["size_pt"][0]}" '
                  f'height="{fl["size_pt"][1]}" preserveAspectRatio="none"/>')
     for t in u['text']:
         if drop_total and t.get('role') == 'total':
             continue
         txt = t['t']
+        if view == 'bank' and t.get('hide'):
+            mk = re.search(r'\[\s*\d+\s*\]$', txt)
+            if not mk:
+                continue
+            txt, t = mk.group(0), dict(t, x=round(t['x'] + t['w'] - _mark_w(mk.group(0), t), 2), w=0)   # keep only the mark
+        elif view == 'bank' and hidden(t['y'] - t['s'] * 0.8, t['y'] + t['s'] * 0.2):
+            continue
         if renumber and t.get('role') == 'qnum':
             txt = renumber
         if renumber and t.get('role') == 'mslabel':
             txt = re.sub(r'^\d+', renumber, t['t'])
         esc = txt.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
-        a = [f'x="{t["x"]}"', f'y="{t["y"]}"', f'font-family="{CSS_FAM[t["f"]]}"', f'font-size="{t["s"]}"']
+        y = t['y'] - shift(t['y'])
+        a = [f'x="{t["x"]}"', f'y="{y:.2f}"', f'font-family="{CSS_FAM[t["f"]]}"', f'font-size="{t["s"]}"']
         if t.get('b'): a.append('font-weight="bold"')
         if t.get('i'): a.append('font-style="italic"')
         if t.get('c'): a.append(f'fill="{t["c"]}"')
         if len(txt) > 1 and t['w'] > 0 and txt == t['t']:
             a.append(f'textLength="{t["w"]}" lengthAdjust="spacingAndGlyphs"')
         if t.get('dir'):
-            a.append(f'transform="rotate({math.degrees(math.atan2(t["dir"][1], t["dir"][0])):.1f} {t["x"]} {t["y"]})"')
+            a.append(f'transform="rotate({math.degrees(math.atan2(t["dir"][1], t["dir"][0])):.1f} {t["x"]} {y:.2f})"')
         o.append(f'<text {" ".join(a)}>{esc}</text>')
     o.append('</g>')
     return '\n'.join(o)
@@ -506,23 +612,25 @@ def sheet(out_pdf, selections, title='Homework'):
         leaves = [p for p in parts if not any(o['path'].startswith(p['path'] + '(') for o in parts)]
         marks = q['marks'] if not ps else sum(p['marks'] for p in leaves)
         total += marks
+        import renumber as RN
+        plan = RN.make_plan(q, parts, n, relabel_parts=True)       # v5: questions 1..n, parts relabelled in print order
         has_num = any(t.get('role') == 'qnum' for p in parts for u in p['layout'] for t in u['text'])
         first = True
         src = f"{q['paper']['code']} {q['paper']['session']} Q{q['number']}" + (f" {ps}" if ps else '')
         for p in parts:
-            for u in p['layout']:
+            for ui, u in enumerate(p['layout']):
                 if y + u['h'] > BOT:
                     flush_q()
                 ox = u['src']['box'][0]
-                cur.append(unit_svg(u, base, ox, y, drop_total=bool(ps), figs=figs))
+                cur.append(unit_svg(u, base, ox, y, drop_total=bool(ps), figs=figs, plan=plan, meta={'path': p['path'], 'first': ui == 0}))
                 if first:
                     if not has_num and u['text']:   # stem not selected: print the question's own number where Cambridge does
                         t0 = min(u['text'], key=lambda t: (round(t['y']), t['x']))
-                        cur.append(f'<text x="49.6" y="{y + t0["y"]:.2f}" font-family="{CSS_FAM["sans"]}" font-size="{t0["s"]}" font-weight="bold">{q["number"]}</text>')
+                        cur.append(f'<text x="49.6" y="{y + t0["y"]:.2f}" font-family="{CSS_FAM["sans"]}" font-size="{t0["s"]}" font-weight="bold">{n}</text>')
                     cur.append(f'<text x="570" y="{y - 2:.1f}" font-family="{CSS_FAM["sans"]}" font-size="6" fill="#999" text-anchor="end">{src}</text>')
                 first = False
                 y += u['h']
-        if ps:
+        if ps and marks > 0:
             if y + 16 > BOT:
                 flush_q()
             cur.append(f'<text x="546" y="{y + 11:.1f}" font-family="{CSS_FAM["sans"]}" font-size="11" text-anchor="end">[Total: {marks}]</text>')
@@ -533,21 +641,26 @@ def sheet(out_pdf, selections, title='Homework'):
             if my + 20 > 560:
                 mpages.append(mcur); mcur = []; my = 50
             mcur.append(f'<text x="58" y="{my + 14:.1f}" font-family="{CSS_FAM["sans"]}" font-size="11">{q["paper"]["code"]} {q["paper"]["session"]} '
-                        f'Question {q["number"]}:  <tspan font-weight="bold">{q["answer"]}</tspan></text>')
+                        f'Question {n}:  <tspan font-weight="bold">{q["answer"]}</tspan></text>')
             my += 20
             continue
         hpath = os.path.join(store, 'ms_header.json')
         hdr = json.load(open(hpath)) if os.path.exists(hpath) else None
+        done_rows = set()
         for p in parts:
             for r in p['ms']:
                 for u in r['layout']:
+                    key = (u['src']['page'], tuple(u['src']['box']))
+                    if key in done_rows:               # one mark-scheme row can belong to several parts: print it once
+                        continue
+                    done_rows.add(key)
                     if my + u['h'] + (hdr['h'] + 8 if hdr and last_hdr[0] != store else 0) > 560:
                         mpages.append(mcur); mcur = []; my = 50
                     if hdr and (not mcur or last_hdr[0] != store):   # each paper's rows under its own header row
                         if mcur:
                             my += 8
                         mcur.append(unit_svg(hdr, base, hdr['src']['box'][0], my)); my += hdr['h']; last_hdr[0] = store
-                    mcur.append(unit_svg(u, base, u['src']['box'][0], my))
+                    mcur.append(unit_svg(u, base, u['src']['box'][0], my, plan=plan, doc='ms'))
                     my += u['h']
     qpages.append(cur)
     if mcur:

@@ -10,7 +10,7 @@ import pymupdf as fitz
 from layout import page_bounds, visible_lines, ink_boxes, label_tokens, ROMAN, LETTERS, CONTENT_X0, CONTENT_X1, row_ink, ink_extent, ZOOM, tight_ink, grow_to_ink
 
 PAD_TOP, PAD_BOTTOM = 4.0, 5.0
-CAPTION = re.compile(r'^(Fig\.|Figure|Table)\s*\d+(\.\d+)?(\s*\(.*\))?$')
+CAPTION = re.compile(r'^(Fig\.?|Figure|Table)\s*\d+(\.\d+)?(\s*\(.*\))?$')   # 'Fig 4.1' (no full stop) too
 MARK = re.compile(r'\[\s*(\d{1,2})\s*\]')
 TOTAL = re.compile(r'\[\s*Total\s*:\s*(\d{1,3})\s*\]')
 DOTS = re.compile(r'\.{12,}')
@@ -197,7 +197,7 @@ def trim(doc, seg):
     return seg
 
 
-MULTI_CAPTION = re.compile(r'(?:Fig\.|Figure|Table)\s*\d+(?:\.\d+)?')
+MULTI_CAPTION = re.compile(r'(?:Fig\.?|Figure|Table)\s*\d+(?:\.\d+)?')
 
 
 def split_captions(page, lines):
@@ -494,7 +494,7 @@ def extract(pdf_path, syllabus, year, session, pv):
                    'answer_space': answer_space(lines, s)}
         node['segments'].append(seg_rec)
         for f in find_figures(doc, s, lines):
-            num = re.match(r'^(?:Fig\.|Figure|Table)\s*([\d.]+)', f['caption']).group(1).replace('.', '-')
+            num = re.match(r'^(?:Fig\.?|Figure|Table)\s*([\d.]+)', f['caption']).group(1).replace('.', '-')
             kind = 'table' if f['caption'].startswith('Table') else 'fig'
             label = ''.join(str(x) for x in s['path'][1:])
             f['id'] = f"{q['id']}{label}_{kind}{num}"

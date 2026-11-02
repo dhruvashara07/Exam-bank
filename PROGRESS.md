@@ -2,6 +2,19 @@
 
 Read this first in every session. Update it before ending a session.
 
+## v5 prototype (2026-11-03) — waiting for Dhruv's approval
+- Hourly task `trig_0173DCrQWm76nnTXrW52TPjC` stays OFF. `review/backlog.json` `running_since` is a stale lock from a
+  crashed run (00:06 IST); not cleared yet (Dhruv asked to have it explained first).
+- Built on the pilot papers only (2014 MJ 21/51/52/53/61/62/63, 2014 ON 31/51, ...): new `pipeline/store_v5.py`,
+  `renumber.py`, `store_view.py`; `store.py` schema 5 (caption = layout text, tagged numbering roles, answer bands,
+  tables as text via `store_options.table_picture_reason`, `caption_masked` when drawing ink shares the caption row).
+  Question-bank view / print view / renumbered worksheet work. `golden.py check`: 0 changed cuts (2014 MJ 52 q04 now cuts Fig 4.1).
+- Rules from Dhruv for the bank view: remove working space and full dotted lines; keep dots inside a sentence, the last
+  answer line with label/unit, tables to complete, grids.
+- NOT done until approval: rebuild of the other years, review page upgrade (H), BACKLOG.md update, hourly task back on.
+- Known gaps: practical mark schemes are one block per question; MS row labels like "(a)(i)(ii)" not relabelled; "°C" glyph in
+  some 2014 mark schemes looks odd; 63 q02 Fig 2.1 crop edge includes the neighbour's label leader (cut issue).
+
 ## Done
 - 2026-10-29: 134 PDFs (0625 Physics, Feb/Mar 2025 to May/Jun 2026) in `raw/`.
 - 2026-10-29: Pipeline v1: watermark removal, question/part splitting, exact SVG pieces, figures,

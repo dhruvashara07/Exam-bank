@@ -65,10 +65,12 @@ def labels(page, box, reach=30):
     return {k: [r for r, b in v] for k, v in out.items()}
 
 
-def _segments(page, box):
+def _segments(page, box, detail=False):
     """Straight axis-aligned rule segments inside box, and whether anything else (curves, slanted lines,
-    filled shapes that are not thin rules) is drawn there."""
+    filled shapes that are not thin rules) is drawn there. detail=True: the third value is a dict
+    {'curve': n, 'slant': n, 'shade': n} instead of their sum."""
     hs, vs, other = [], [], 0
+    cnt = {'curve': 0, 'slant': 0, 'shade': 0}
     for dr in page.get_drawings():
         r = dr['rect']
         if not (box + (-1, -1, 1, 1)).contains(fitz.Point((r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2)):
@@ -84,7 +86,7 @@ def _segments(page, box):
                 elif abs(a.x - b.x) < .3:
                     vs.append((min(a.y, b.y), max(a.y, b.y), a.x))
                 else:
-                    other += 1
+                    other += 1; cnt['slant'] += 1
             elif k == 're':
                 q = it[1]
                 if q.height < 1.6:                       # thin filled rect = horizontal rule
@@ -92,7 +94,7 @@ def _segments(page, box):
                 elif q.width < 1.6:
                     vs.append((q.y0, q.y1, (q.x0 + q.x1) / 2))
                 elif dr.get('fill') is not None and dr.get('fill') not in ((1, 1, 1), [1, 1, 1]):
-                    other += 1                           # a shaded block: part of a drawing
+                    other += 1; cnt['shade'] += 1        # a shaded block: part of a drawing (or a shaded header cell)
                 else:
                     hs += [(q.x0, q.x1, q.y0), (q.x0, q.x1, q.y1)]
                     vs += [(q.y0, q.y1, q.x0), (q.y0, q.y1, q.x1)]
@@ -101,8 +103,8 @@ def _segments(page, box):
                 hs += [(q.x0, q.x1, q.y0), (q.x0, q.x1, q.y1)]
                 vs += [(q.y0, q.y1, q.x0), (q.y0, q.y1, q.x1)]
             else:
-                other += 1
-    return hs, vs, other
+                other += 1; cnt['curve'] += 1
+    return (hs, vs, cnt) if detail else (hs, vs, other)
 
 
 def _merge(lines, tol=.8):
@@ -117,10 +119,20 @@ def _merge(lines, tol=.8):
     return out
 
 
-def grid(page, box):
-    """The table grid inside box, or None: {'rows': [y...], 'cols': [x...], 'rect': Rect}."""
-    hs, vs, other = _segments(page, box)
-    if other:
+def has_picture(page, box):
+    return any(fitz.Rect(i['bbox']).intersects(box) and fitz.Rect(i['bbox']).width > 8 and fitz.Rect(i['bbox']).height > 8
+               for i in page.get_image_info())
+
+
+def grid(page, box, table=False):
+    """The table grid inside box, or None: {'rows': [y...], 'cols': [x...], 'rect': Rect}.
+    table=True (the crop is captioned 'Table n.n'): shaded cells and up to 3 slanted lines/curves (a split corner
+    cell) are fine - the layout draws them; an embedded picture or a real drawing (more curves) makes it a figure."""
+    hs, vs, other = _segments(page, box, detail=True)
+    if table:
+        if has_picture(page, box) or other['curve'] + other['slant'] > 3:
+            return None
+    elif sum(other.values()):
         return None
     hs, vs = _merge(hs), _merge(vs)
     if not hs or not vs:
@@ -135,7 +147,9 @@ def grid(page, box):
     rows = sorted({round(h[2], 1) for h in hs})
     if len(full_h) < 2 or len(full_v) < 2 or len(rows) > 30:   # 30+ rules = graph paper, not a table
         return None
-    if abs(full_h[0] - y0) > 2 or abs(full_h[-1] - y1) > 2:      # a table is closed top and bottom
+    # a table is closed top and bottom; its top rule may start at the second column (an open top-left header cell)
+    top_ok = abs(full_h[0] - y0) <= 2 or any(abs(h[2] - y0) <= 2 and h[1] - h[0] >= 0.4 * W for h in hs)
+    if not top_ok or abs(full_h[-1] - y1) > 2:
         return None
     words_ = [w for w in words(page) if fitz.Rect(w[:4]).intersects(box)]
     inside = [w for w in words_ if x0 - 1 <= (w[0] + w[2]) / 2 <= x1 + 1 and y0 - 1 <= (w[1] + w[3]) / 2 <= y1 + 1]
@@ -504,3 +518,29 @@ def table_inside(page, box):
         if rest.contains(fitz.Point((wr.x0 + wr.x1) / 2, (wr.y0 + wr.y1) / 2)) and wr.intersects(d + (-12, -12, 12, 12)):
             d |= wr
     return g, (d + (-2, -2, 2, 2)) & rest
+
+
+def table_picture_reason(page, box):
+    """Why a captioned table has to stay a picture (listed in the review), or None when it can be text."""
+    hs, vs, o = _segments(page, box, detail=True)
+    bits = []
+    if has_picture(page, box):
+        bits.append('a cell holds an embedded picture')
+    if o['curve'] + o['slant'] > 3:
+        bits.append(f"{o['curve'] + o['slant']} curves/slanted lines (a drawing or graph in the table)")
+    return '; '.join(bits) or None
+
+
+def text_table(page, box, cap):
+    """A captioned table without a closed grid of rules (borderless / open table): words in columns, maybe a few
+    rules. Returns 'caption-only' (the crop holds only its caption: no table here), 'text' (store it as layout text)
+    or None (it holds a picture / drawing)."""
+    if table_picture_reason(page, box):
+        return None
+    ws = [w for w in words(page) if fitz.Rect(w[:4]).intersects(box)]
+    own = [w for w in ws if cap is not None and fitz.Rect(w[:4]).intersects(cap + (-.5, -.5, .5, .5))]
+    rest = [w for w in ws if w not in own]
+    hs, vs, _ = _segments(page, box)
+    if len(rest) < 2 and not hs and not vs:
+        return 'caption-only'
+    return 'text' if len(rest) >= 2 else None

@@ -353,7 +353,7 @@ def build(pid):
             pg = qdoc[f['page'] - 1]
             b = fitz.Rect(f['bbox'])
             text_all = ' '.join(n.get('text', '') for n in nodes(q))
-            fignum = re.search(r'(?:Fig\.|Table)\s*[\d.]+', f.get('caption') or '') or None
+            fignum = re.search(r'(?:Fig\.?|Table)\s*[\d.]+', f.get('caption') or '') or None
             measure = bool(fignum and re.search(r'(measure|ruler|protractor)[^.]{0,80}' + re.escape(fignum.group(0)) + r'|'
                                                 + re.escape(fignum.group(0)) + r'[^.]{0,40}measure', text_all, re.I))
             label = {'id': f['id'], 'source': f"{meta['paper_code']} {meta['session']} {meta['year']} page {f['page']}",

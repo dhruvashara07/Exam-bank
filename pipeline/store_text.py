@@ -48,7 +48,7 @@ def unpua(ch):
     return ch
 
 
-DINGBAT = ('sorts', 'dingbat', 'wingding', 'webding')
+DINGBAT = ('sorts', 'dingbat', 'wingding', 'webding', 'mmvariable')   # MMVariable: big brackets of an equation editor, drawn in pieces
 
 
 def odd(ch, font):
