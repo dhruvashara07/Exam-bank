@@ -302,12 +302,19 @@ def find_figures(doc, seg, lines):
             if not len(cols):
                 return (a + b) / 2
             m = cols.min()
+            # never split inside a printed word: the gaps between letters of a label ('clamp') are empty
+            # columns too, and a split there hands the label to the wrong figure
+            words = [(l['x0'] * ZOOM, l['x1'] * ZOOM) for l in lines
+                     if l['y1'] >= band[0] and l['y0'] <= band[1] and l is not cap and not CAPTION.match(l['text'])]
+            def in_word(x):
+                return any(w0 < x < w1 for w0, w1 in words)
             runs, start = [], None
             for i, v in enumerate(list(cols) + [m + 1]):
                 if v == m and start is None:
                     start = i
                 elif v != m and start is not None:
                     runs.append((start + i - 1) / 2); start = None
+            runs = [r for r in runs if not in_word(lo + r)] or runs
             inked = [i for i, v in enumerate(colsum) if v]
             def score(c):
                 x = lo + c
@@ -315,9 +322,15 @@ def find_figures(doc, seg, lines):
                 right = [i for i in inked if x <= i < int(CONTENT_X1 * ZOOM)]
                 if not left or not right:
                     return 1e9
-                # only the ink between the neighbouring captions' outer limits counts
-                lc = (max(left[0], int((2 * a - b) * ZOOM)) + left[-1]) / 2
-                rc = (right[0] + min(right[-1], int((2 * b - a) * ZOOM))) / 2
+                # only the ink between the neighbouring captions' outer limits counts (with a third figure
+                # beside them, halfway to its caption: its ink must not pull this figure's centre)
+                ia, ib = row.index(a), row.index(b)
+                la = (row[ia - 1] + a) / 2 if ia > 0 else 2 * a - b
+                rb = (b + row[ib + 1]) / 2 if ib + 1 < len(row) else 2 * b - a
+                left_in = [i for i in left if i >= int(la * ZOOM)] or left
+                right_in = [i for i in right if i <= int(rb * ZOOM)] or right
+                lc = (left_in[0] + left_in[-1]) / 2
+                rc = (right_in[0] + right_in[-1]) / 2
                 return abs(lc - a * ZOOM) + abs(rc - b * ZOOM)
             best = min(runs, key=score)
             return (lo + best) / ZOOM

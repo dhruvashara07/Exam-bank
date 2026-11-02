@@ -417,7 +417,7 @@
   "0625_2024ON_62",
   "0625_2024ON_63"
  ],
- "status": "open",
+ "status": "closed",
  "items": [
   {
    "id": "0625_2015MJ_61_q03",
@@ -1019,5 +1019,112 @@
    "group": "sample",
    "reasons": []
   }
- ]
+ ],
+ "answers": {
+  "0625_2017MJ_43_q01": {
+   "at": "2026-10-30T08:22:32.815Z",
+   "issues": [],
+   "note": "",
+   "verdict": "ok"
+  },
+  "0625_2016FM_32_q11": {
+   "at": "2026-10-30T08:03:52.350Z",
+   "issues": [],
+   "note": "",
+   "verdict": "ok"
+  },
+  "0625_2015ON_52_q02": {
+   "at": "2026-10-30T08:02:31.609Z",
+   "issues": [],
+   "note": "",
+   "verdict": "ok"
+  },
+  "0625_2016MJ_52_q03": {
+   "at": "2026-10-30T08:21:43.242Z",
+   "issues": [],
+   "note": "",
+   "verdict": "ok"
+  },
+  "0625_2016ON_31_q11": {
+   "at": "2026-10-30T08:22:03.844Z",
+   "issues": [],
+   "note": "",
+   "verdict": "ok"
+  },
+  "0625_2017MJ_33_q03": {
+   "at": "2026-10-30T08:22:23.278Z",
+   "issues": [],
+   "note": "",
+   "verdict": "ok"
+  },
+  "0625_2016FM_42_q11": {
+   "at": "2026-10-30T08:21:36.584Z",
+   "issues": [],
+   "note": "",
+   "verdict": "ok"
+  },
+  "0625_2015ON_63_q05": {
+   "at": "2026-10-30T08:03:22.773Z",
+   "issues": [],
+   "note": "",
+   "verdict": "ok"
+  },
+  "0625_2016MJ_53_q03": {
+   "at": "2026-10-30T08:21:49.856Z",
+   "issues": [],
+   "note": "",
+   "verdict": "ok"
+  },
+  "0625_2015MJ_61_q03": {
+   "at": "2026-10-30T07:59:36.156Z",
+   "issues": [],
+   "note": "",
+   "verdict": "ok"
+  },
+  "0625_2015ON_51_q01": {
+   "at": "2026-10-30T08:00:55.937Z",
+   "issues": [],
+   "note": "why did you take 3 same image",
+   "verdict": "wrong",
+   "fix": "fixed: side-by-side figure split now ignores the ink of a third figure; Fig. 1.1 keeps its clamp label (also 2017 MJ 53 q2, 2022 FM 42 q3)"
+  },
+  "0625_2015ON_62_q02": {
+   "at": "2026-10-30T08:03:03.260Z",
+   "issues": [],
+   "note": "",
+   "verdict": "ok"
+  },
+  "0625_2017ON_33_q09": {
+   "at": "2026-10-30T08:25:03.440Z",
+   "issues": [],
+   "note": "",
+   "verdict": "ok"
+  },
+  "0625_2016ON_33_q02": {
+   "at": "2026-10-30T08:22:14.998Z",
+   "issues": [],
+   "note": "",
+   "verdict": "ok"
+  },
+  "0625_2015ON_53_q03": {
+   "at": "2026-10-30T08:02:43.841Z",
+   "issues": [],
+   "note": "",
+   "verdict": "ok"
+  },
+  "0625_2015ON_51_q04": {
+   "at": "2026-10-30T08:02:18.203Z",
+   "issues": [],
+   "note": "why table is in image we can create with html exactly like that",
+   "verdict": "wrong",
+   "fix": "fixed by the question store (2026-11-02): Table 4.1 is now text + rules, not a picture"
+  },
+  "0625_2017ON_31_q12": {
+   "at": "2026-10-30T08:24:56.456Z",
+   "issues": [],
+   "note": "",
+   "verdict": "ok"
+  }
+ },
+ "closed": "2026-11-02T12:28Z"
 }
