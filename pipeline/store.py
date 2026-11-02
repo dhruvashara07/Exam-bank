@@ -37,7 +37,8 @@ SCHEMA = {
     'ms_scan': 'only when the mark scheme is a scan without text: its pages as pictures',
     'part': 'path "2(b)(i)", label "(i)", parent "2(b)", marks, text (plain, for search), layout[unit], ms[row]',
     'ms row': 'label "2(b)(i)", marks, codes ["B1",...], text, layout[unit]',
-    'unit': 'src{doc qp|ms, page, box[x0,y0,x1,y1] pt}, w, h, text[word], lines[path], figs[{id,x,y}], glyphs[{file,x,y,w,h}]',
+    'unit': 'src{doc qp|ms, page, box[x0,y0,x1,y1] pt}, w, h, text[word], lines[path], figs[{id,x,y}], glyphs[{file,x,y,w,h}], '
+            'exact (rare: the piece kept as the exact page picture glyphs/<file>, its words still listed for search)',
     'word': 't text, x, y (baseline), w (width), s (size), f (sans|serif|mono|symbol), b/i (1 = bold/italic), '
             'c (colour if not black), dir (writing direction if rotated), role (qnum|total|mslabel)',
     'figure': 'id, file, kind (vector|raster), caption, size_pt[w,h], size_mm[w,h], measure (bool), scale_note, '
@@ -416,6 +417,9 @@ def dupes(session):
 
 # ---------------------------------------------------------------- drawing units
 def unit_svg(u, base, dx=0, dy=0, renumber=None, drop_total=False, figs=None):
+    if u.get('exact'):                     # kept as the exact picture of the printed piece
+        return (f'<g transform="translate({dx:.2f} {dy:.2f})"><image href="{base}/glyphs/{u["exact"]}" x="0" y="0" '
+                f'width="{u["src"]["box"][2] - u["src"]["box"][0]:.2f}" height="{u["h"]}" preserveAspectRatio="none"/></g>')
     o = [f'<g transform="translate({dx:.2f} {dy:.2f})">']
     for p in u['lines']:
         a = [f'd="{p["d"]}"', f'fill="{p.get("fill", "none")}"']
@@ -698,7 +702,15 @@ def verify(pids, show=12, repair=True):
             ink_edge = 0
             Emask = opening(B & ~dil(A)); Emask[:9] = False; Emask[-9:] = False
             miss, extra = int(Mmask.sum()), int(Emask.sum())
-            if repair and miss > 0.01 * max(ink, 1) and not any(g.get('patch') for g in u.get('glyphs', [])):
+            if repair and extra > 0.03 * max(ink, 1) and not u.get('exact'):
+                # the layout draws something the page does not show (a clip path it cannot follow): this
+                # piece is kept as the exact picture of the page instead; its words stay for search
+                from render import region_svg
+                name = f'exact_{key}.svg'
+                open(os.path.join(store, 'glyphs', name), 'w').write(region_svg(docs[u['src']['doc']], u['src']['page'] - 1, u['src']['box']))
+                u['exact'] = name
+                patched.add(qid)
+            elif repair and miss > 0.01 * max(ink, 1) and not any(g.get('patch') for g in u.get('glyphs', [])):
                 if patch(u, Mmask, docs, store, key):     # A (the page) was never shifted: page frame
                     patched.add(qid)
             rows.append({'paper': pid_, 'q': qid, 'unit': name, 'ink': ink, 'missing': round(100 * miss / max(ink, 1), 2),
