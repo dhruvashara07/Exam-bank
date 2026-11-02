@@ -1,6 +1,6 @@
 {
  "about": "Backlog of older years, processed one batch at a time by the hourly Claude run (docs/BACKLOG.md).",
- "running_since": "2026-11-02T13:40Z",
+ "running_since": null,
  "items": [
   {
    "name": "2014",
@@ -40,7 +40,7 @@
    "batch": "b20261102-1259",
    "round": null,
    "attempts": 0,
-   "note": "processed 2026-11-02; next: Claude check (overview of every page)"
+   "note": "Claude check 2026-11-02 14:2x UTC: 27 ok; needs_fix 2014 ON 11 q32, ON 12 q24, ON 62 q1(a)(iv) (figure crop starts on a prose row split by an inline fraction). Next: finish pipeline/experiments/prose_rows_wip.patch, re-run those 3, then round 4."
   },
   {
    "name": "2026 + 2025 (new format review)",

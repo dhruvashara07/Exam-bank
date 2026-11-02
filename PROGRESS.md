@@ -124,4 +124,11 @@ One line per run: date, pending papers checked/approved, feedback handled, fixes
   (30 papers, batch b20261102-1259, state claude_check): fixes 'Turn over for Question n' = page furniture,
   '(b) (i)' on one line with a tall fraction = one cut (no sliver). 2015-2026 extract output unchanged
   (all 477 compared), golden 0 changed cuts. Next run: overviews of the 30 2014 papers, then round 4.
-
+- 2026-11-02 13:39-14:25 UTC (hourly backlog run): 2014 Claude check: overview of all 30 papers looked at; 27 ok, 3 needs_fix:
+  figure crop starts on a prose row that an inline fraction splits ('one tenth (1/10) of …' in 2014 ON 11 q32 = ON 12 q24;
+  'ρ = m/VA' with VA hanging below the line in ON 62 q1(a)(iv)). Fix drafted, not committed to the pipeline:
+  pipeline/experiments/prose_rows_wip.patch (layout.split_prose_rows; mcq_figures with ends=False). Compared over all 514 papers:
+  pair rule (mcq) changes only the two 2014 crops + 2018 FM 12 q38 (crop no longer includes the stem, but the store then keeps
+  q38's options as one figure instead of optA-D: check before accepting). The 'end piece' rule cut option D off 2024 ON 22 q1 and
+  the find_figures use changed 3 caption-only crops (2021 ON 63, 2023 ON 61, 2020 MJ 51): not used. Round 4 not made yet.
+  Store 'differ' items in 2014 are MS rows with 1-2.6% extra ink (0 missing).
