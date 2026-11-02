@@ -1,6 +1,6 @@
 {
  "about": "Backlog of older years, processed one batch at a time by the hourly Claude run (docs/BACKLOG.md).",
- "running_since": "2026-11-02T14:46:00Z",
+ "running_since": null,
  "items": [
   {
    "name": "2014",
@@ -152,11 +152,11 @@
     "0625/2013-ON/62",
     "0625/2013-ON/63"
    ],
-   "state": "waiting",
-   "batch": null,
+   "state": "claude_check",
+   "batch": "b20261102-1539",
    "round": null,
    "attempts": 0,
-   "note": ""
+   "note": "processed 2026-11-02 15:39 UTC: 30 papers, 0 blocking; checks: 86 figure + 3 text warnings, 12 flags. Next: overviews (waits for round 4 before its own round)."
   },
   {
    "name": "2024 + 2023 (new format review)",

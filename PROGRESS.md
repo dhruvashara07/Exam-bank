@@ -132,3 +132,10 @@ One line per run: date, pending papers checked/approved, feedback handled, fixes
   q38's options as one figure instead of optA-D: check before accepting). The 'end piece' rule cut option D off 2024 ON 22 q1 and
   the find_figures use changed 3 caption-only crops (2021 ON 63, 2023 ON 61, 2020 MJ 51): not used. Round 4 not made yet.
   Store 'differ' items in 2014 are MS rows with 1-2.6% extra ink (0 missing).
+- 2026-11-02 14:44-15:40 UTC (hourly backlog run): 2014 crop fix finished and in the pipeline: MCQ figures use
+  layout.split_prose_rows (pairs only: 'one tenth (1/10) of …' printed in pieces is prose); find_figures counts a short
+  denominator hanging below the end of a prose line ('ρ = m/VA') as prose. Compared find_figures over all 2014-2026 question
+  papers: only 3 crops change, all better (2014 ON 62 q1(a)(iv); 2021 ON 63 q3(c) and 2023 ON 61 q3(b)(iv) caption-only
+  'Table 3.1' crops no longer take the 'hO' denominator); mcq rule: 2014 ON 11 q32 = ON 12 q24, and 2018 FM 12 q38 (stem was
+  inside the option drawings; now the stem is text and the options are one figure, options_on_figure). Golden 0 changed cuts.
+  2014: all 30 Claude-checked ok -> round 4 published (70 items, 40 flagged), state your_review. 2013 processed (30 papers, 0 blocking, batch b20261102-1539; 86 figure warnings to look at), state claude_check.
