@@ -117,3 +117,11 @@ One line per run: date, pending papers checked/approved, feedback handled, fixes
   review/backlog.json, hourly run docs/BACKLOG.md (scheduled task trig_0173DCrQWm76nnTXrW52TPjC, enabled
   after the first full verify). Older-paper fixes: component ids 0625_2005MJ_03, old MS label columns,
   stamp images removed (clean.py), scanned MS kept as page pictures (ms_scan).
+- 2026-11-02 12:05-13:00 UTC (hourly backlog run): round 3 closed (17 of 90 answered, open >3 days; 2 wrong,
+  both fixed: 2015 ON 51 q1 side-by-side figure split now ignores a third figure's ink (also better crops for
+  2017 MJ 53 q2, 2022 FM 42 q3); 2015 ON 51 q4 Table 4.1 is already text in the store). 2015-2024 papers can now
+  be approved by DAILY_CHECK §6; round 4 (40 leftover flagged + fixed items) not yet made. Backlog 2014 processed
+  (30 papers, batch b20261102-1259, state claude_check): fixes 'Turn over for Question n' = page furniture,
+  '(b) (i)' on one line with a tall fraction = one cut (no sliver). 2015-2026 extract output unchanged
+  (all 477 compared), golden 0 changed cuts. Next run: overviews of the 30 2014 papers, then round 4.
+
