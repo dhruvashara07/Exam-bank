@@ -1,0 +1,275 @@
+{
+ "id": "0625_2014MJ_32_q10",
+ "number": 10,
+ "segments": [],
+ "text": "",
+ "marks": 6,
+ "figures": [
+  {
+   "caption": "Fig. 10.1",
+   "page": 17,
+   "bbox": [
+    109.5,
+    94.5,
+    484.0,
+    225.0
+   ],
+   "id": "0625_2014MJ_32_q10a_fig10-1",
+   "part": "(a)",
+   "alt": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      61.3,
+      570.0,
+      405.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 27.6,
+      "height_pt": 343.7
+     }
+    }
+   ],
+   "text": "Fig. 10.1 shows a digital logic circuit, not using the recognised symbols.\nAND gate\ninput A\nD\ninput B\nOR gate\noutput E\ninput C\nComplete the table below to indicate the logic levels of points D and E in the circuit, when\npoints A, B and C are at the logic levels indicated.\n0 represents low or off. 1 represents high or on.\nA\nB\nC\nD\nE\n0\n0\n0\n0\n0\n1\n1\n1\n1\n[3]",
+   "marks": 3,
+   "path": "10(a)",
+   "mark_scheme": [
+    {
+     "label": "10(a)",
+     "text": "0\n0\naccept low / off\n0\n1\naccept low / off and high / on\n1\n1\naccept high / on",
+     "codes": [
+      "B1",
+      "B1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        36.0,
+        618.6,
+        559.0,
+        690.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Fig. 10.1 shows a digital logic circuit, not using the recognised symbols.",
+     "text": "Fig. 10.1 shows a digital logic circuit, not using the recognised symbols."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2014MJ_32_q10a_fig10-1",
+     "caption": "Fig. 10.1"
+    },
+    {
+     "type": "text",
+     "html": "Complete the table below to indicate the logic levels of points D and E in the circuit, when points A, B and C are at the logic levels indicated. represents low or off. 1 represents high or on.",
+     "text": "Complete the table below to indicate the logic levels of points D and E in the circuit, when points A, B and C are at the logic levels indicated. represents low or off. 1 represents high or on."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "A",
+       "B",
+       "C",
+       "D",
+       "E"
+      ],
+      [
+       "0",
+       "0",
+       "0",
+       "",
+       ""
+      ],
+      [
+       "0",
+       "0",
+       "1",
+       "",
+       ""
+      ],
+      [
+       "1",
+       "1",
+       "1",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      411.7,
+      570.0,
+      509.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 67.8,
+      "height_pt": 97.3
+     }
+    }
+   ],
+   "text": "Draw the recognised symbol for an AND gate.\n[1]",
+   "marks": 1,
+   "path": "10(b)",
+   "mark_scheme": [
+    {
+     "label": "10(b)",
+     "text": "",
+     "codes": [
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        36.0,
+        72.4,
+        559.0,
+        105.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Draw the recognised symbol for an AND gate.",
+     "text": "Draw the recognised symbol for an AND gate."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 67.8
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      515.7,
+      570.0,
+      755.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 144.6,
+      "height_pt": 239.3
+     }
+    }
+   ],
+   "text": "A NAND gate can be replaced by an AND gate and a NOT gate.\nDraw a diagram to show how the AND gate and the NOT gate should be connected. Label\nclearly the logic gates and any input or output.\n[2]\n[Total: 6]",
+   "marks": 2,
+   "path": "10(c)",
+   "mark_scheme": [
+    {
+     "label": "10(c)",
+     "text": "",
+     "codes": [
+      "M1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        36.0,
+        123.0,
+        559.0,
+        232.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A NAND gate can be replaced by an AND gate and a NOT gate.",
+     "text": "A NAND gate can be replaced by an AND gate and a NOT gate."
+    },
+    {
+     "type": "text",
+     "html": "Draw a diagram to show how the AND gate and the NOT gate should be connected. Label clearly the logic gates and any input or output.",
+     "text": "Draw a diagram to show how the AND gate and the NOT gate should be connected. Label clearly the logic gates and any input or output."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 144.6
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "total_marks": 6,
+ "type": "structured",
+ "syllabus": "0625",
+ "subject": "Physics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2014,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 3,
+ "variant": 2,
+ "paper_code": "0625/32",
+ "paper_type": "theory_extended",
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

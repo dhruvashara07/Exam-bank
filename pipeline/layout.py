@@ -70,7 +70,7 @@ def page_bounds(page):
                          if d['rect'].width > 300 and d['rect'].height < 2 and y0 - 30 < d['rect'].y0 < y0]
                 bottom = min(bottom, min(rules) - 3.0 if rules else y0 - 6.0)   # copyright notice (and its rule) on the last page
             if y0 > 100 and 150 < l['bbox'][0] < 330 and re.fullmatch(
-                    r'(Turn over( for (the next )?(question|page) ?\d*)?|Question \d+ (is|continues|begins|starts) on '
+                    r'(Turn over( for (the next )?([Qq]uestion|[Pp]age) ?\d*)?|Question \d+ (is|continues|begins|starts) on '
                     r'(the next (page|side)|the back page|page \d+)|Question continued on (the )?(next|following) (page|side))\.?', ' '.join(t.split())):
                 bottom = min(bottom, y0 - 3.0)          # centred notice: 'Turn over', 'Question 10 is on the back page.'
             x0 = l['bbox'][0]

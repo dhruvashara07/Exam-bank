@@ -160,6 +160,12 @@ def raw_segments(doc, bnds):
                 cuts.append(best_cut(doc[p], b['y'] - PAD_TOP, floor))
             continue
         cuts.append(best_cut(doc[p], b['y'] - PAD_TOP, floor))
+    for i in range(1, len(bnds)):
+        # '(b) (i)' on one line: one cut. A tall glyph on that line (a fraction 'h/x') can push the two
+        # cuts apart and leave a sliver piece for '(b)' (a gap of 3 pt or less is dropped anyway)
+        if bnds[i - 1]['page'] == bnds[i]['page'] and abs(bnds[i - 1]['y'] - bnds[i]['y']) < 1 \
+                and cuts[i] - cuts[i - 1] > 3:
+            cuts[i] = cuts[i - 1]
     for i, b in enumerate(bnds):
         nxt = bnds[i + 1] if i + 1 < len(bnds) else None
         start_page = b['page']
