@@ -1,6 +1,6 @@
 {
  "about": "Backlog of older years, processed one batch at a time by the hourly Claude run (docs/BACKLOG.md).",
- "running_since": "2026-11-02T17:15:33Z",
+ "running_since": null,
  "items": [
   {
    "name": "2014",
@@ -40,7 +40,7 @@
    "batch": "b20261102-1259",
    "round": 4,
    "attempts": 0,
-   "note": "Claude check done 2026-11-02 15:1x UTC: all 30 ok (3 crops fixed in the pipeline). Round 4 published (70 items, 40 flagged)."
+   "note": "Claude check done 2026-11-02 15:1x UTC: all 30 ok (3 crops fixed in the pipeline). Round 4 published (70 items, 40 flagged). 2026-11-02 17:4x UTC: round 4 being answered (2 of 70 so far); 2014 MJ 51 q1 'wrong' (Figs 1.1/1.2 missing) fixed in the pipeline: side-by-side captions printed as one text line are split (28 papers 2013-2025 gained their missing figures)."
   },
   {
    "name": "2026 + 2025 (new format review)",
@@ -156,7 +156,7 @@
    "batch": "b20261102-1539",
    "round": null,
    "attempts": 0,
-   "note": "2026-11-02 16:xx UTC: 'For Examiner's Use' column (rule + heading) removed in clean.py; 30 papers re-run (figure warnings 86 -> 1). Claude check: 6 ok (MJ 11, 23, 31, 52; ON 21, 61), ON 13 needs_fix (q34 MCQ figure leaves out labels above/below the circuit). Next: fix that crop, overviews of the other 23. Waits for round 4 before its own round."
+   "note": "2026-11-02 16:xx UTC: 'For Examiner's Use' column (rule + heading) removed in clean.py; 30 papers re-run (figure warnings 86 -> 1). Claude check: 6 ok (MJ 11, 23, 31, 52; ON 21, 61), ON 13 needs_fix (q34 MCQ figure leaves out labels above/below the circuit). Next: fix that crop, overviews of the other 23. Waits for round 4 before its own round. 17:4x UTC: MJ 53, MJ 63, ON 51 re-run with the split-caption fix (their side-by-side figures now found). Still next: ON 13 q34 crop, overviews of the other 23."
   },
   {
    "name": "2024 + 2023 (new format review)",

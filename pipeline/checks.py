@@ -25,6 +25,7 @@ from run import cleaned
 from layout import page_bounds, visible_lines, dark_mask, ZOOM, tight_ink
 from coverage import paper_problems
 from clean import is_barcode_span
+from extract import split_captions
 
 TEXT_MIN = 0.97
 MARKW = re.compile(r'\[\s*\d{1,2}\s*\]')
@@ -130,7 +131,7 @@ def check_paper(pj):
             drawn[pno] = [d['rect'] for d in p.get_drawings()
                           if not (d.get('fill') in ((1.0, 1.0, 1.0),) and not d.get('color')) and d['rect'].width < 0.9 * p.rect.width]
             t, b = page_bounds(p)
-            lines[pno] = [x for x in (tight_ink(p, fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1'])) for l in visible_lines(p, t, b)) if x]
+            lines[pno] = [x for x in (tight_ink(p, fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1'])) for l in split_captions(p, visible_lines(p, t, b))) if x]
         return spans[pno], drawn[pno], lines[pno]
     words = {}
     def page_words(pno):

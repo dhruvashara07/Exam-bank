@@ -197,10 +197,33 @@ def trim(doc, seg):
     return seg
 
 
+MULTI_CAPTION = re.compile(r'(?:Fig\.|Figure|Table)\s*\d+(?:\.\d+)?')
+
+
+def split_captions(page, lines):
+    """Captions of side-by-side figures printed as ONE text line ('Fig. 1.1      Fig. 1.2'): one line per
+    caption, each at its own place, so every caption closes its own figure."""
+    out = []
+    for l in lines:
+        caps = MULTI_CAPTION.findall(l['text'])
+        if len(caps) < 2 or MULTI_CAPTION.sub('', l['text']).strip():
+            out.append(l); continue
+        clip = fitz.Rect(l['x0'] - 1, l['y0'] - 1, l['x1'] + 1, l['y1'] + 1)
+        parts, used = [], []
+        for c in caps:
+            hits = [r for r in page.search_for(c, clip=clip) if not any(abs(r.x0 - u.x0) < 1 for u in used)]
+            if not hits:
+                break
+            r = min(hits, key=lambda r: r.x0); used.append(r)
+            parts.append(dict(l, x0=r.x0, x1=r.x1, text=c, split=True))
+        out += parts if len(parts) == len(caps) else [l]
+    return out
+
+
 def segment_text(doc, seg):
     page = doc[seg['page']]
     top, bottom = page_bounds(page)
-    return [l for l in visible_lines(page, top, bottom) if seg['y0'] - 1 <= (l['y0'] + l['y1']) / 2 <= seg['y1'] + 1]
+    return split_captions(page, [l for l in visible_lines(page, top, bottom) if seg['y0'] - 1 <= (l['y0'] + l['y1']) / 2 <= seg['y1'] + 1])
 
 
 def strip_label(text, path):
@@ -239,6 +262,13 @@ def find_figures(doc, seg, lines):
                   if MARK.fullmatch(l['text'].strip()) or TOTAL.fullmatch(l['text'].strip()) or DOTS.search(l['text'])]
     drawings = [r for r in ink_boxes(page, top, bottom) if seg['y0'] <= r.y0 and r.y1 <= seg['y1'] + 1
                 and not any(abs(r.x0 - m.x0) < 1 and abs(r.y0 - m.y0) < 1 and abs(r.x1 - m.x1) < 1 for m in marks_text)]
+    # side-by-side captions printed as one text line were split by segment_text: split their ink box too
+    split = []
+    for r in drawings:
+        parts = [fitz.Rect(c['x0'], c['y0'], c['x1'], c['y1']) for c in caps
+                 if abs(c['y0'] - r.y0) < 1.5 and r.x0 - 1 <= c['x0'] and c['x1'] <= r.x1 + 1]
+        split += parts if len(parts) >= 2 else [r]
+    drawings = split
     long_lines = [l for l in lines if len(l['text']) >= 25]
     para_x0 = [l['x0'] for l in lines if len(l['text']) >= 45]       # left edges of real paragraphs
     text_boxes = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in lines]
@@ -384,6 +414,22 @@ def find_figures(doc, seg, lines):
         figs.append({'caption': cap['text'], 'page': seg['page'],
                      'bbox': [round(x0 - 3, 1), round(max(y0 - 3, seg['y0']), 1), round(x1 + 3, 1),
                               round(min(y1 + 3, seg['y1']), 1)]})    # a crop never reaches past its piece
+        if cap.get('split'):
+            figs[-1]['_row'] = round(cap['y0'])
+    # captions split from one printed line: when the drawings are joined (a bench line under both, labels
+    # printed between them) the crops run into each other; then each caption gets the whole row of figures
+    # rather than a crop that cuts the neighbour (or a label) in two
+    rows = {}
+    for f in figs:
+        if '_row' in f:
+            rows.setdefault(f.pop('_row'), []).append(f)
+    for row in rows.values():
+        row.sort(key=lambda f: f['bbox'][0])
+        if any(p['bbox'][2] - q['bbox'][0] > 12 for p, q in zip(row, row[1:])):
+            u = [min(f['bbox'][0] for f in row), min(f['bbox'][1] for f in row),
+                 max(f['bbox'][2] for f in row), max(f['bbox'][3] for f in row)]
+            for f in row:
+                f['bbox'] = list(u)
     return figs
 
 

@@ -145,3 +145,11 @@ One line per run: date, pending papers checked/approved, feedback handled, fixes
   2014-2026 question papers: none has the column, so their cleaned PDFs are unchanged; golden 0 changed cuts. 2013 re-run: 0 blocking,
   figure warnings 86 -> 1. Claude check of 2013 started: 6 ok, ON 13 needs_fix (q34 MCQ figure crop leaves out the 'insulated
   connecting wire' labels above/below the drawing). Next run: fix that crop, overviews of the remaining 23 2013 papers.
+- 2026-11-02 17:13-17:50 UTC (hourly backlog run): round 4 is being answered (2 of 70: 2014 MJ 62 q1 ok; 2014 MJ 51 q1 wrong:
+  "Figs 1.1 and 1.2 missing from the figure section"). Cause: side-by-side captions printed as ONE text line ('Fig. 1.1      Fig. 1.2')
+  never matched as captions, so those figures were never cropped. Fix: extract.split_captions (one line per caption, placed by
+  search_for; also splits the line's ink box in find_figures); when the split figures' drawings are joined (bench line, labels between)
+  each caption gets the whole row. checks.py uses the same split. Scanned all 537 2013-2026 question papers: 28 papers have such lines
+  (3 in 2013, 3 in 2014, 22 in 2015-2025); all 67 new figure crops looked at (contact sheet + store SVGs in Chromium). Only those 28
+  papers changed in bank/ (figures added, caption line left out of question text); golden 0 changed cuts; checks 0 blocking.
+  2013 Claude check not continued this run (raw PDF fetch took 9 min). Next: rest of round 4 answers, ON 13 q34 crop, 2013 overviews.
