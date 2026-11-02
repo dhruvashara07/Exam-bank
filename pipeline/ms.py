@@ -214,7 +214,9 @@ def _label_columns(doc):
 
 def structured_rows_columns(doc):
     """Rows for the old column layout: label tokens start rows; a row runs down to the next label."""
-    OLD_Q, OLD_L, OLD_R = _label_columns(doc)
+    cols = _label_columns(doc)
+    OLD_Q, OLD_L, OLD_R = cols
+    CODE_X = 480 if cols == (globals()['OLD_Q'], globals()['OLD_L'], globals()['OLD_R']) else 420   # 2005: codes at 470
     rows, current, cur = [], None, [0, None, None]
     for pno, page in enumerate(doc):
         lines = _lines(page)
@@ -295,7 +297,7 @@ def structured_rows_columns(doc):
             if not band:
                 continue
             body = [l for l in band if 100 <= l['x0'] < 480]
-            codes = [l['text'] for l in band if l['x0'] >= 420 and re.fullmatch(r'\(?[ABCM]\d\)?|\d|\[\d\]', l['text'])]
+            codes = [l['text'] for l in band if l['x0'] >= CODE_X and re.fullmatch(r'\(?[ABCM]\d\)?|\d|\[\d\]', l['text'])]
             seg_bottom = min(y_end, max(l['y1'] for l in band) + 6)
             current['segments'].append({'page': pno + 1, 'bbox': [36.0, round(y, 1), page.rect.width - 36.0, round(seg_bottom, 1)]})
             current['text'] = (current['text'] + '\n' + '\n'.join(l['text'] for l in body)).strip()

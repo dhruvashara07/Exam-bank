@@ -110,7 +110,8 @@ def unit(doc, pno, clip, figs, cstyle, store, docname):
                 for chars in runs:
                     corners = [tp(m, x, y) for c in (chars[0], chars[-1]) for x in (c['bbox'][0], c['bbox'][2]) for y in (c['bbox'][1], c['bbox'][3])]
                     r = fitz.Rect(min(p[0] for p in corners), min(p[1] for p in corners), max(p[0] for p in corners), max(p[1] for p in corners))
-                    if not inside(r) or in_fig_c(r):
+                    c0 = fitz.Rect(chars[0]['bbox']).quad * m        # a word belongs where it starts: 'B1' whose '1'
+                    if not inside(c0.rect) or in_fig_c(r):              # crosses the piece's right edge stays
                         continue
                     x, y = tp(m, *chars[0]['origin'])
                     w = {'t': ''.join(unpua(c['c']) for c in chars), 'x': round(x - ox, 2), 'y': round(y - oy, 2),
@@ -197,6 +198,9 @@ def unit(doc, pno, clip, figs, cstyle, store, docname):
             t['role'] = 'mslabel'
     if not u['glyphs']:
         del u['glyphs']
+    right = max([t['x'] + t['w'] for t in u['text'] if not t.get('dir')] + [u['w']])
+    if right > u['w']:                     # text running past the cut's edge: widen the piece to hold it
+        u['w'] = round(right + 1, 2)
     return u
 
 
@@ -595,7 +599,32 @@ def shoot(jobs):
         pg.screenshot(path=png, clip={'x': 0, 'y': 0, 'width': w, 'height': h})
 
 
-def verify(pids, show=12):
+def patch(u, M, docs, store, key):
+    """Self-repair: printed ink the layout data does not draw (pattern fills, shadings, unusual PDF
+    constructs) is cut out of the page as small exact SVG patches placed over the piece. M = missing-ink
+    mask in the verify frame (3 px per pt, origin 1 pt left/above the piece)."""
+    import scipy.ndimage as ndi
+    from render import region_svg
+    lab, n = ndi.label(ndi.binary_dilation(M, iterations=6))
+    box = fitz.Rect(u['src']['box'])
+    doc = docs[u['src']['doc']]
+    added = 0
+    for i, sl in enumerate(ndi.find_objects(lab)):
+        if sl is None or M[sl].sum() < 30:
+            continue
+        y0, y1, x0, x1 = sl[0].start, sl[0].stop, sl[1].start, sl[1].stop
+        r = fitz.Rect(box.x0 - 1 + x0 / 3 - 1, box.y0 - 1 + y0 / 3 - 1, box.x0 - 1 + x1 / 3 + 1, box.y0 - 1 + y1 / 3 + 1) & box
+        if r.is_empty or r.width < 2 or r.height < 2:
+            continue
+        name = f'patch_{key}_{i}.svg'
+        open(os.path.join(store, 'glyphs', name), 'w').write(region_svg(doc, u['src']['page'] - 1, list(r)))
+        u.setdefault('glyphs', []).append({'file': name, 'x': round(r.x0 - box.x0, 2), 'y': round(r.y0 - box.y0, 2),
+                                           'w': round(r.width, 2), 'h': round(r.height, 2), 'patch': 1})
+        added += 1
+    return added
+
+
+def verify(pids, show=12, repair=True):
     """Redraw every unit on its own (Chromium) and compare with the same region of the original page
     (MuPDF, 216 dpi): 'missing' = printed ink with nothing drawn within 1 pt, 'extra' the reverse."""
     rows = []
@@ -610,10 +639,12 @@ def verify(pids, show=12):
         docs = {'qp': fitz.open(cleaned(os.path.join(raw, f'qp_{pv}.pdf'))), 'ms': fitz.open(cleaned(os.path.join(raw, f'ms_{pv}.pdf'))) if os.path.exists(os.path.join(raw, f'ms_{pv}.pdf')) else None}
         vdir = os.path.join(OUT, '_verify', pid); shutil.rmtree(vdir, ignore_errors=True); os.makedirs(vdir)
         jobs, meta_rows = [], []
+        qdocs = {}
         for qf in sorted(glob.glob(os.path.join(store, 'q*.json'))):
             q = json.load(open(qf))
             if q.get('stub'):
                 continue
+            qdocs[q['id']] = (qf, q)
             figs = {f['id']: f for f in q['figures']}
             us = [(p['path'], u) for p in q['parts'] for u in p['layout']] + [(r['label'] + ' ms', u) for p in q['parts'] for r in p['ms'] for u in r['layout']]
             for k, (name, u) in enumerate(us):
@@ -623,9 +654,10 @@ def verify(pids, show=12):
                 open(svg, 'w').write(f'<svg xmlns="http://www.w3.org/2000/svg" width="{u["w"] + 2 * M}" height="{u["h"] + 2 * M}" viewBox="{-M} {-M} {u["w"] + 2 * M} {u["h"] + 2 * M}">'
                                      f'<rect width="100%" height="100%" fill="#fff"/>' + unit_svg(u, 'file://' + store, figs=figs) + '</svg>')
                 jobs.append([svg, svg[:-4] + '.png', u['w'] + 2 * M, u['h'] + 2 * M])
-                meta_rows.append((pid, q['id'], name, u, svg[:-4] + '.png'))
+                meta_rows.append((pid, q['id'], name, u, svg[:-4] + '.png', key))
         shoot(jobs)
-        for pid_, qid, name, u, png in meta_rows:
+        patched = set()
+        for pid_, qid, name, u, png, key in meta_rows:
             doc = docs[u['src']['doc']]
             page = doc[u['src']['page'] - 1]
             clip = fitz.Rect(u['src']['box']) + (-3, -3, 3, 3)
@@ -661,12 +693,26 @@ def verify(pids, show=12):
                     for dx_ in (-1, 0, 1):
                         er &= np.roll(np.roll(mk, dy_, 0), dx_, 1)
                 return dil(er, 1)
-            miss, extra = int(opening(A & ~dil(B)).sum()), int(opening(B & ~dil(A)).sum())
+            Mmask = opening(A & ~dil(B))
+            Mmask[:9] = False; Mmask[-9:] = False     # 1 pt either side of the cut line: neighbouring rows' ascenders
+            ink_edge = 0
+            Emask = opening(B & ~dil(A)); Emask[:9] = False; Emask[-9:] = False
+            miss, extra = int(Mmask.sum()), int(Emask.sum())
+            if repair and miss > 0.01 * max(ink, 1) and not any(g.get('patch') for g in u.get('glyphs', [])):
+                if patch(u, Mmask, docs, store, key):     # A (the page) was never shifted: page frame
+                    patched.add(qid)
             rows.append({'paper': pid_, 'q': qid, 'unit': name, 'ink': ink, 'missing': round(100 * miss / max(ink, 1), 2),
                          'extra': round(100 * extra / max(ink, 1), 2), 'png': png,
                          'shift': best[1:]})
             if rows[-1]['missing'] + rows[-1]['extra'] > 0.3:     # keep pictures only of the ones worth showing
                 rows[-1]['orig'] = (a, b, A, B)
+        if patched:                        # save the repaired questions and check this paper again
+            for qid in patched:
+                qf, q = qdocs[qid]
+                json.dump(q, open(qf, 'w'), ensure_ascii=False, separators=(',', ':'))
+            rows[:] = [r for r in rows if r['paper'] != pid]
+            rows += verify([pid], show=0, repair=False)
+            continue
         os.makedirs(paths.STORE_CHECKS, exist_ok=True)
         mine = [r for r in rows if r['paper'] == pid]
         json.dump({'paper': pid, 'units': len(mine),
