@@ -1,25 +1,12 @@
 {
  "paper": "0625_2018FM_12",
  "pipeline_version": "2.1",
- "checked_at": "2026-10-30T17:01Z",
+ "checked_at": "2026-11-02T14:47Z",
  "clean": true,
- "warnings": 2,
- "problems": [
-  {
-   "id": "0625_2018FM_12_q38",
-   "kind": "figure",
-   "detail": "0625_2018FM_12_q38_figA: crop cut: 1 text line(s) half inside",
-   "blocking": false
-  },
-  {
-   "id": "0625_2018FM_12_q38",
-   "kind": "text",
-   "detail": "editable text has 0% of the printed words",
-   "blocking": false
-  }
- ],
+ "warnings": 0,
+ "problems": [],
  "flags": [],
- "text_score_min": 0.0,
+ "text_score_min": 1.0,
  "text_scores": {
   "0625_2018FM_12_q01": 1.0,
   "0625_2018FM_12_q02": 1.0,
@@ -58,7 +45,7 @@
   "0625_2018FM_12_q35": 1.0,
   "0625_2018FM_12_q36": 1.0,
   "0625_2018FM_12_q37": 1.0,
-  "0625_2018FM_12_q38": 0.0,
+  "0625_2018FM_12_q38": 1.0,
   "0625_2018FM_12_q39": 1.0,
   "0625_2018FM_12_q40": 1.0
  }

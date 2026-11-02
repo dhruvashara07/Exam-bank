@@ -13,7 +13,7 @@ from clean import clean
 from extract import extract, segment_text_all
 import editable
 from golden import cut_hash
-from layout import page_bounds, visible_lines, ink_boxes, tight_ink, grow_to_ink, CONTENT_X0, CONTENT_X1
+from layout import page_bounds, visible_lines, ink_boxes, tight_ink, grow_to_ink, split_prose_rows, CONTENT_X0, CONTENT_X1
 from ms import mcq_key, structured_rows
 import paths
 
@@ -113,9 +113,10 @@ def mcq_figures(doc, q):
                 if id(l) not in prose_ids and any(id(p) in prose_ids and abs(p['y0'] - l['y0']) < 3 and -1 < l['x0'] - p['x1'] < 8
                                                   for p in lines):
                     prose_ids.add(id(l))
+        split_rows = split_prose_rows(lines, prose_ids, ends=False)      # 'one tenth (1/10) of …' printed in pieces
         prose = [l for l in lines if id(l) in prose_ids]
         labels = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in lines if id(l) not in prose_ids]
-        prose_r = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in prose]
+        prose_r = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in prose] + split_rows
         draw = [r for r in ink_boxes(page, top, bottom) if r.y0 >= y0 - 1 and r.y1 <= y1 + 1]
         draw = [r for r in draw if not any(r in (p + (-1, -1, 1, 1)) for p in prose_r + labels)]   # text glyph boxes
         draw = [r for r in draw if r.width > 0.3 or r.height > 0.3]     # prose ink is masked out just below

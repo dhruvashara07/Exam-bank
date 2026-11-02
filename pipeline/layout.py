@@ -264,3 +264,33 @@ def ink_extent(page, y0, y1):
     if not len(hit):
         return None
     return (a + hit[0]) / ZOOM, (a + hit[-1] + 1) / ZOOM
+
+
+def split_prose_rows(lines, prose_ids, pairs=True, ends=True):
+    """A sentence with an inline fraction comes out of the PDF in pieces: 'one tenth (10' + '1) of the input
+    voltage.' (neither long enough to count as prose on its own), or a long line with the denominator 'VA'
+    and a full stop hanging just below/after it. These pieces are prose too: never part of a figure.
+    pairs / ends switch the two kinds on and off (ends also caught option rows like '√(F1 + F2)').
+    Adds their ids to prose_ids; returns the rectangles of the joined rows (their fraction bars lie inside)."""
+    def vov(a, b):
+        return min(a['y1'], b['y1']) - max(a['y0'], b['y0'])
+    rows = []
+    rest = [l for l in lines if id(l) not in prose_ids] if pairs else []
+    for i, a in enumerate(rest):
+        for b in rest[i + 1:] + [l for l in lines if id(l) in prose_ids]:
+            if vov(a, b) > 0.4 * min(a['y1'] - a['y0'], b['y1'] - b['y0']) and \
+                    abs(max(a['x0'], b['x0']) - min(a['x1'], b['x1'])) < 8:     # side by side, not stacked copies
+                t = ' '.join(l['text'] for l in sorted((a, b), key=lambda l: l['x0']))
+                if len(t) >= 25 and len(re.findall(r'[A-Za-z]{2,}', t)) >= 4:
+                    prose_ids.update((id(a), id(b)))
+                    rows.append(fitz.Rect(min(a['x0'], b['x0']), min(a['y0'], b['y0']), max(a['x1'], b['x1']), max(a['y1'], b['y1'])))
+    for l in (lines if ends else []):   # short pieces at the end of a prose row: a denominator, a full stop
+        if id(l) in prose_ids or len(l['text'].replace(' ', '')) > 4:
+            continue
+        for p in lines:
+            if id(p) in prose_ids and p is not l and vov(l, p) > 0.15 * (l['y1'] - l['y0']) and \
+                    p['x0'] <= l['x0'] <= p['x1'] + 8 and p['x1'] - 15 <= l['x1'] <= p['x1'] + 20:
+                prose_ids.add(id(l))
+                rows.append(fitz.Rect(p['x0'], min(l['y0'], p['y0']), max(l['x1'], p['x1']), max(l['y1'], p['y1'])))
+                break
+    return rows

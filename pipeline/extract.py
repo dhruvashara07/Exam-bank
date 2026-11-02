@@ -276,6 +276,12 @@ def find_figures(doc, seg, lines):
                     l['text'].rstrip()[-1:] in '.:?' and any(0 < l['y0'] - p['y0'] < 1.6 * (l['y1'] - l['y0'])
                                                              and p['x0'] - 3 <= l['x0'] <= p['x0'] + 70 for p in prose_above):
                 prose_above.append(l)
+        for l in lines:   # the denominator of an inline fraction at the end of a sentence ('ρ = m/VA'), hanging below it
+            if l['y1'] <= cap['y0'] and l not in prose_above and 0 < len(l['text'].replace(' ', '')) <= 4 and \
+                    re.search(r'[A-Za-z0-9]', l['text']) and any(
+                        p['y0'] < l['y0'] < p['y1'] < l['y1'] and len(p['text']) >= 45
+                        and p['x1'] - 15 <= l['x0'] <= p['x1'] + 2 and l['x1'] <= p['x1'] + 8 for p in prose_above):
+                prose_above.append(l)
         rules = [r for r in drawings if not any(abs(r.x0 - t.x0) < 1 and abs(r.y0 - t.y0) < 1 for t in text_boxes)]
         grid_below = [r for r in rules if cap['y1'] - 1 <= r.y0 <= cap['y1'] + 12]
         grid_above = [r for r in rules if cap['y0'] - 30 <= r.y1 <= cap['y0'] + 1]
