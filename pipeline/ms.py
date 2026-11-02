@@ -187,8 +187,34 @@ OLD_Q, OLD_L, OLD_R = (30, 58), (60, 80), (82, 100)
 ROMANS = {'i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x'}
 
 
+def _label_columns(doc):
+    """x ranges of the number / letter / roman label columns: they moved between years (2005 tables sit
+    20 pt further right than 2015). Taken from where '(a)' and '(i)' tokens are printed most often."""
+    import collections
+    let, rom, num = collections.Counter(), collections.Counter(), collections.Counter()
+    for page in doc:
+        for x0, y0, x1, y1, w, *_ in page.get_text('words'):
+            if x0 > 200:
+                continue
+            if re.fullmatch(r'\([a-h]\)', w) and w != '(i)':
+                let[round(x0 / 4)] += 1
+            elif re.fullmatch(r'\((?:i|ii|iii|iv)\)', w):
+                rom[round(x0 / 4)] += 1
+            elif re.fullmatch(r'\d{1,2}', w):
+                num[round(x0 / 4)] += 1
+    if not let:
+        return OLD_Q, OLD_L, OLD_R
+    lx = let.most_common(1)[0][0] * 4
+    if abs(lx - 66) < 8:                      # the 2015-16 layout: keep the tuned ranges
+        return OLD_Q, OLD_L, OLD_R
+    nx = max([k * 4 for k, n in num.items() if k * 4 < lx - 4] or [lx - 20], key=lambda x: num[round(x / 4)])
+    rx = rom.most_common(1)[0][0] * 4 if rom else lx + 16
+    return (nx - 8, lx - 4), (lx - 6, lx + 14), (rx - 6, rx + 14)
+
+
 def structured_rows_columns(doc):
     """Rows for the old column layout: label tokens start rows; a row runs down to the next label."""
+    OLD_Q, OLD_L, OLD_R = _label_columns(doc)
     rows, current, cur = [], None, [0, None, None]
     for pno, page in enumerate(doc):
         lines = _lines(page)
@@ -269,7 +295,7 @@ def structured_rows_columns(doc):
             if not band:
                 continue
             body = [l for l in band if 100 <= l['x0'] < 480]
-            codes = [l['text'] for l in band if l['x0'] >= 480 and re.fullmatch(r'\(?[ABCM]\d\)?|\d|\[\d\]', l['text'])]
+            codes = [l['text'] for l in band if l['x0'] >= 420 and re.fullmatch(r'\(?[ABCM]\d\)?|\d|\[\d\]', l['text'])]
             seg_bottom = min(y_end, max(l['y1'] for l in band) + 6)
             current['segments'].append({'page': pno + 1, 'bbox': [36.0, round(y, 1), page.rect.width - 36.0, round(seg_bottom, 1)]})
             current['text'] = (current['text'] + '\n' + '\n'.join(l['text'] for l in body)).strip()

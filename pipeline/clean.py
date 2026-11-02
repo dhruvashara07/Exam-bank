@@ -89,6 +89,34 @@ def strip_corner_marks(path):
     doc.save(path, incremental=True, encryption=fitz.PDF_ENCRYPT_KEEP)
 
 
+def strip_stamp_images(path):
+    """A download site's stamp (older PDFs: a 'www.PapaCambridge.com' banner in the top corner and a strip
+    along the bottom) is a picture placed at the same spot on (nearly) every page: not part of the paper.
+    Pictures that repeat at one position on 60 % or more of the pages (at least 3) are removed there."""
+    import pymupdf as fitz, collections
+    doc = fitz.open(path)
+    if len(doc) < 3:
+        return 0
+    seen = collections.Counter()
+    for page in doc:
+        for b in {tuple(round(v) for v in i['bbox']) for i in page.get_image_info()}:
+            seen[b] += 1
+    stamps = [fitz.Rect(b) for b, n in seen.items() if n >= max(3, 0.6 * len(doc))]
+    if not stamps:
+        return 0
+    for page in doc:
+        hit = False
+        for i in page.get_image_info():
+            r = fitz.Rect(i['bbox'])
+            if any(abs(r.x0 - s.x0) < 1.5 and abs(r.y0 - s.y0) < 1.5 and abs(r.x1 - s.x1) < 1.5 and abs(r.y1 - s.y1) < 1.5 for s in stamps):
+                page.add_redact_annot(r, fill=False); hit = True
+        if hit:
+            page.apply_redactions(images=fitz.PDF_REDACT_IMAGE_REMOVE, graphics=fitz.PDF_REDACT_LINE_ART_NONE,
+                                  text=fitz.PDF_REDACT_TEXT_NONE)
+    doc.save(path, incremental=True, encryption=fitz.PDF_ENCRYPT_KEEP)
+    return len(stamps)
+
+
 def unrotate(path):
     """Pages stored with /Rotate (many mark schemes before 2020 are landscape this way): bake the
     rotation into the content so text runs left-to-right in page coordinates. Looks identical."""
@@ -133,6 +161,7 @@ def clean(src, dst):
                 to_a4(pdf, p)
     pdf.save(dst)
     unrotate(dst)
+    strip_stamp_images(dst)
     if '/qp_' in src.replace('\\', '/'):
         strip_corner_marks(dst)
     return n

@@ -47,11 +47,13 @@ def paper_meta(doc, syllabus, year, session, pv):
     cover = doc[0].get_text()
     m = re.search(r'total mark for this paper is (\d+)', cover)
     dur = re.search(r'\n\s*(\d+ hours?(?: \d+ minutes)?|\d+ minutes)\s*\n', cover)
-    ptype = paper_type_from_cover(cover, int(pv[0]))
+    old = pv[0] == '0'                     # before 2009 one paper per component: 0625/03 (no variant)
+    paper, variant = (int(pv[1]), 0) if old else (int(pv[0]), int(pv[1]))
+    ptype = paper_type_from_cover(cover, paper)
     return {
         'syllabus': syllabus, 'subject': 'Physics', 'board': 'CAIE', 'exam': 'IGCSE',
         'year': year, 'session': session, 'season': SESSION_NAMES[session],
-        'paper': int(pv[0]), 'variant': int(pv[1]), 'paper_code': f'{syllabus}/{pv}',
+        'paper': paper, 'variant': variant, 'paper_code': f'{syllabus}/{pv}',
         'paper_type': ptype, 'is_mcq': ptype.startswith('mcq'),
         'total_marks': int(m.group(1)) if m else STANDARD_TOTAL.get(ptype),
         'total_marks_source': 'cover' if m else 'standard',

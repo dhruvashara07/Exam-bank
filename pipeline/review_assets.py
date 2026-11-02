@@ -43,6 +43,12 @@ def svg_img(path, dpi=96):
     return Image.open(io.BytesIO(pg.screenshot())).convert('RGB')
 
 
+def fig_img(path):
+    if path.endswith('.png'):
+        return Image.open(path).convert('RGB')
+    return svg_img(path)
+
+
 def stack(imgs, sep=(225, 70, 70), gap=5):
     imgs = [i for i in imgs if i]
     if not imgs:
@@ -138,17 +144,20 @@ def render_items(out_dir, items, reasons, byid=None):
                 im = im.resize((width, round(im.height * width / im.width)), Image.LANCZOS)
             im.save(os.path.join(d, name), quality=72, optimize=True)
             imgs[name.split('.')[0]] = f'{qid}/{name}'
-        save('q.jpg', stack([svg_img(s['svg']['file']) for _, s in walk(q)]))
+        import store                   # what is checked is what students get: the stored question, redrawn
+        sv = store.review_svgs(qid, os.path.join(ROOT, 'out', 'review_tmp'))
+        save('q.jpg', svg_img(sv['q']))
         save('orig.jpg', original(q, qp_path))
-        if q['type'] != 'mcq':
-            save('ms.jpg', stack([svg_img(s['svg']['file'], 72) for s in ms_segs(q)]), width=1000)
-        if q['figures']:
-            save('figs.jpg', stack([svg_img(f['svg']['file']) for f in q['figures']], sep=(230, 160, 0), gap=6))
+        if 'ms' in sv:
+            save('ms.jpg', svg_img(sv['ms'], 72), width=1000)
+        imgs_f = [fig_img(f) for f in sv['figs']]
+        if imgs_f:
+            save('figs.jpg', stack(imgs_f, sep=(230, 160, 0), gap=6))
         out.append({
             'id': qid, 'group': group, 'reasons': flagged.get(qid, []),
             'paper': q['paper_code'], 'session': f"{q['season']} {q['year']}", 'number': q['number'],
             'type': q['type'], 'marks': q['marks'], 'answer': q.get('answer'),
-            'options': q.get('options', []), 'parts': outline(q),
+            'options': sv['options'] or q.get('options', []), 'parts': outline(q),
             'figures': [{'id': f['id'], 'caption': f.get('caption')} for f in q['figures']],
             'images': imgs,
         })

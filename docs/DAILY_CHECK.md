@@ -8,8 +8,11 @@ whenever something is wrong.
 ```
 upload (Dhruv) -> Action: store PDFs, process, auto-check, batch record      [docs/UPLOAD.md]
    -> THIS CHECK: Claude-check papers -> review round -> read answers -> fix -> approve
-   -> Action: Cloudinary + MongoDB -> 'published'
+   -> finalised in git (MongoDB / file hosting are loaded once, at the end: paused since 2026-11)
 ```
+Older years (2014 → 2002) run through the hourly backlog run: docs/BACKLOG.md.
+What students get is the question store (`store/`, docs/STORE_DESIGN.md); `review/store/<paper>.json` lists
+stored pieces that do not redraw like the paper (they go into the review round as flagged items).
 Stages are worked out from files (`pipeline/batch.py`): processed (bank/), auto_checked (review/checks/),
 claude_checked / needs_fix (review/claude/), your_review (open round in review/rounds/), approved
 (review/approvals/), published (review/published.json).
@@ -85,8 +88,8 @@ python3 pipeline/approve.py <ids> --note "overview checked; checks clean; round 
 (`approve.py` stores the cut hash too: re-running the pipeline keeps an approval when the pieces, marks,
 answers and mark-scheme rows did not change; a changed cut makes the paper pending again.)
 Then log one line in `PROGRESS.md` ("Daily check log") and push with `pipeline/push.sh "message"`
-(never plain `git push`; end the message with the Co-Authored-By / Claude-Session lines). The push runs
-the Action → Cloudinary + MongoDB → `review/published.json` → stage 'published'.
+(never plain `git push`; end the message with the Co-Authored-By / Claude-Session lines). An approved paper
+is 'Finalised' on the tracker; the database load comes later, for everything at once.
 
 ## 7. Tell Dhruv (only if something happened)
 A short push notification, plain words, for his phone: what came in, what was approved/published,

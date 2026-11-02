@@ -1,0 +1,232 @@
+{
+ "id": "0625_2003ON_03_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    57.1,
+    570.0,
+    481.1
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 256.3,
+    "height_pt": 424.0
+   }
+  }
+ ],
+ "text": "Use\n2\nFig. 2.1 shows a diver 50 m below the surface of the water.\nwater surface\n50m",
+ "marks": 6,
+ "figures": [
+  {
+   "caption": "Fig. 2.1",
+   "page": 4,
+   "bbox": [
+    186.5,
+    94.5,
+    427.0,
+    465.5
+   ],
+   "id": "0625_2003ON_03_q02_fig2-1",
+   "part": "",
+   "alt": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      481.1,
+      570.0,
+      608.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "pressure = ……[3]",
+      "working_gap_pt": 78.2,
+      "height_pt": 127.4
+     }
+    }
+   ],
+   "text": "The density of water is 1000 kg/m3and the acceleration of free fall is 10 m/s2.\n(a)\nCalculate the pressure that the water exerts on the diver.\npressure = ....................................[3]",
+   "marks": 3,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "pressure = depth x g x density of water\npressure = 50 x 10 x 1000\n2\nso value is 500 000 Pa or N/m",
+     "codes": [
+      "C1",
+      "C1",
+      "A1",
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        303.4,
+        559.0,
+        355.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The density of water is 1000 kg/m<sup>3</sup> and the acceleration of free fall is 10 m/s<sup>2</sup>. Calculate the pressure that the water exerts on the diver.",
+     "text": "The density of water is 1000 kg/m3 and the acceleration of free fall is 10 m/s2. Calculate the pressure that the water exerts on the diver."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "pressure ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      608.5,
+      570.0,
+      795.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "force = ……[3]",
+      "working_gap_pt": 78.2,
+      "height_pt": 186.5
+     }
+    },
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      52.4,
+      570.0,
+      57.1
+     ],
+     "continued": true,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 0,
+      "height_pt": 4.7
+     }
+    }
+   ],
+   "text": "The window in the diver’s helmet is 150 mm wide and 70 mm from top to bottom.\nCalculate the force that the water exerts on this window.\nforce = ..........................................[3]",
+   "marks": 3,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "force = pressure x area\nin any form\nforce = 500 000 x 0.15 x 0.07\nforce = 5250 N",
+     "codes": [
+      "C1",
+      "C1",
+      "A1",
+      "3",
+      "[6]"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        355.9,
+        559.0,
+        426.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The window in the diver’s helmet is 150 mm wide and 70 mm from top to bottom.",
+     "text": "The window in the diver’s helmet is 150 mm wide and 70 mm from top to bottom."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the force that the water exerts on this window.",
+     "text": "Calculate the force that the water exerts on this window."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "force ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0625",
+ "subject": "Physics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2003,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 3,
+ "variant": 0,
+ "paper_code": "0625/03",
+ "paper_type": "theory_core",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<i>Use</i>",
+   "text": "Use"
+  },
+  {
+   "type": "text",
+   "html": "Fig. 2.1 shows a diver 50 m below the surface of the water.",
+   "text": "Fig. 2.1 shows a diver 50 m below the surface of the water."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2003ON_03_q02_fig2-1",
+   "caption": "Fig. 2.1"
+  }
+ ]
+}

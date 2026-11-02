@@ -14,7 +14,6 @@ from extract import extract, segment_text_all
 import editable
 from golden import cut_hash
 from layout import page_bounds, visible_lines, ink_boxes, tight_ink, grow_to_ink, CONTENT_X0, CONTENT_X1
-from render import region_svg
 from ms import mcq_key, structured_rows
 import paths
 
@@ -49,16 +48,6 @@ class Writer:
 
     def qdir(self, qid):
         return os.path.join(self.pdir, qid.split('_')[3][:3])      # 'q01' from 'q01', 'q01b', ...
-
-    def svg(self, doc, page, bbox, name, kind):
-        d = os.path.join(self.qdir(name), kind)
-        os.makedirs(d, exist_ok=True)
-        path = os.path.join(d, name + '.svg')
-        svg = region_svg(doc, page - 1, bbox)
-        with open(path, 'w') as f:
-            f.write(svg)
-        return {'file': os.path.relpath(path, ROOT), 'public_id': paths.public_id(path), 'url': None,
-                'kb': round(len(svg) / 1024, 1)}
 
 
 _PIX = {}
@@ -188,8 +177,6 @@ def process(qp_path):
         meta['mark_scheme'] = 'missing'
 
     def export_segments(node, path, qid):
-        for i, s in enumerate(node.get('segments', []), 1):
-            s['svg'] = w.svg(doc, s['page'], s['bbox'], f'{qid}_{label_of(path)}_s{i}', 'question')
         for k in node.get('parts', []):
             k['path'] = paren(path + (k['label'],))
             export_segments(k, path + (k['label'],), qid)
@@ -199,13 +186,10 @@ def process(qp_path):
         qid = q['id']
         path = (q['number'],)
         export_segments(q, path, qid)
-        for f in q['figures']:
-            f['svg'] = w.svg(doc, f['page'], f['bbox'], f['id'], 'figures')
         if q['type'] == 'mcq':
             for i, f in enumerate(mcq_figures(doc, q)):
                 f['id'] = f'{qid}_fig{chr(65 + i)}'
                 f['caption'] = None; f['part'] = ''; f['alt'] = ''
-                f['svg'] = w.svg(doc, f['page'], f['bbox'], f['id'], 'figures')
                 q['figures'].append(f)
             q['answer'] = key.get(q['number'])
             if q['answer'] == 'DISCOUNTED':        # Cambridge removed this question from the marking
@@ -217,7 +201,7 @@ def process(qp_path):
                 node, exact = find_node(q, row['path'])
                 segs = []
                 for j, s in enumerate(row['segments'], 1):
-                    s = dict(s); s['svg'] = w.svg(msdoc, s['page'], s['bbox'], f"{qid}_{label_of(row['path'])}_ms{j}", 'markscheme')
+                    s = dict(s)
                     segs.append(s)
                 entry = {'label': row['label'], 'text': row['text'], 'codes': row['marks_codes'], 'segments': segs}
                 if row.get('shared_with'):
@@ -261,6 +245,7 @@ def process(qp_path):
                    for b in blocks):
                 q['review']['reasons'].remove(OPT)   # the editable layer found them (options table / drawn options / text)
         q['review']['status'] = 'flagged' if q['review']['reasons'] else 'auto'
+        os.makedirs(w.qdir(qid), exist_ok=True)
         with open(os.path.join(w.qdir(qid), f"{qid}.json"), 'w') as f:
             json.dump(q, f, ensure_ascii=False, indent=1)
         if q['review']['reasons']:
@@ -309,9 +294,15 @@ def write_index():
 
 def _safe_process(p):
     try:
-        return process(p)
+        meta, queue = process(p)
     except Exception as e:  # keep going; record the failure for review
         return e
+    try:                    # the finished question store (layout + figures + mark scheme), docs/STORE_DESIGN.md
+        import store
+        store.build(paths.paper_id(meta))
+    except Exception as e:
+        queue.append({'id': paths.paper_id(meta), 'reasons': [f'store build failed: {e!r}']})
+    return meta, queue
 
 
 if __name__ == '__main__':
@@ -358,4 +349,7 @@ if __name__ == '__main__':
     print('review queue:', len(merged))
     paths.save_approvals(appr)
     write_index()
+    import store                     # a question printed in two variants of one session is stored once
+    for ses in sorted({os.path.basename(os.path.dirname(p)) for p in papers}):
+        store.dupes(ses)
 

@@ -58,6 +58,10 @@ jobs:
           python-version: '3.12'
           cache: pip
       - run: pip install -r requirements.txt
+      - name: Browser and fonts (the stored questions are redrawn and compared with the paper)
+        run: |
+          sudo apt-get install -y -qq fonts-liberation fonts-dejavu-core >/dev/null
+          python3 -m playwright install --with-deps chromium >/dev/null
 
       - name: File inbox PDFs, store them in Releases, find papers to process
         id: todo
@@ -86,6 +90,7 @@ jobs:
           if grep -qx ALL todo.txt; then python3 pipeline/raw_store.py fetch; else python3 pipeline/raw_store.py fetch $(cat todo.txt); fi
           if grep -qx ALL todo.txt; then python3 pipeline/run.py; else python3 pipeline/run.py $(cat todo.txt); fi
           if grep -qx ALL todo.txt; then python3 pipeline/checks.py; else python3 pipeline/checks.py $(cat todo.txt); fi
+          python3 pipeline/store.py verify $(cat todo.txt)       # every stored piece vs. the page -> review/store/
           if ! grep -qx ALL todo.txt; then python3 pipeline/batch.py new "Upload $(date -u +%Y-%m-%d) (main inbox)" $(cat todo.txt); fi
           git config user.name "exam-bank bot"
           git config user.email "actions@users.noreply.github.com"

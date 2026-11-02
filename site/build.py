@@ -67,9 +67,28 @@ def main():
             'approved_at': ap_.get('at') if ap_ else None,
             'flagged': sum(1 for q in qs if flags(q)) + len(paper_flags),
         })
+        try:                          # the stored questions (layout data), drawn in the browser
+            sdir = paths.store_dir(pid)
+        except FileNotFoundError:
+            sdir = None
+        sqs = {}
+        if sdir and os.path.isdir(sdir):
+            for f in sorted(glob.glob(os.path.join(sdir, 'q*.json'))):
+                d = json.load(open(f))
+                if d.get('stub'):
+                    other = d['same_as'][0]
+                    of = os.path.join(paths.store_dir('_'.join(other.split('_')[:3])), f"q{int(other.split('_q')[1]):02d}.json")
+                    if os.path.exists(of):
+                        d = dict(json.load(open(of)), stub_of=other, base='store/' + os.path.relpath(os.path.dirname(of), paths.STORE))
+                sqs[d.get('stub_of') and f"{pid}_q{int(os.path.basename(f)[1:3]):02d}" or d['id']] = d
+            dst = os.path.join(out, 'store', os.path.relpath(sdir, paths.STORE))
+            shutil.copytree(sdir, dst, dirs_exist_ok=True)
+        store_base = 'store/' + os.path.relpath(sdir, paths.STORE) if sdir else None
+        sv = batches.load_json(os.path.join(paths.STORE_CHECKS, pid + '.json'), None)
         with open(os.path.join(out, 'data', 'p', pid + '.json'), 'w') as f:
             json.dump({'meta': meta, 'approval': ap_, 'paper_flags': paper_flags, 'questions': qs,
-                       'stage': stage, 'checks': chk, 'claude': claude},
+                       'stage': stage, 'checks': chk, 'claude': claude, 'store': sqs, 'store_base': store_base,
+                       'store_check': sv},
                       f, ensure_ascii=False, separators=(',', ':'))
     rows.sort(key=lambda r: (-r['year'], r['session'], r['code']))
     with open(os.path.join(out, 'data', 'papers.json'), 'w') as f:

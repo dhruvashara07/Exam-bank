@@ -38,6 +38,10 @@ jobs:
           python-version: '3.12'
           cache: pip
       - run: pip install -r requirements.txt
+      - name: Browser and fonts (the stored questions are redrawn and compared with the paper)
+        run: |
+          sudo apt-get install -y -qq fonts-liberation fonts-dejavu-core >/dev/null
+          python3 -m playwright install --with-deps chromium >/dev/null
 
       - name: File the PDFs and store them in Releases
         run: |
@@ -70,6 +74,7 @@ jobs:
           python3 pipeline/raw_store.py fetch $(cat /tmp/todo.txt)
           python3 pipeline/run.py $(cat /tmp/todo.txt)
           python3 pipeline/checks.py $(cat /tmp/todo.txt)
+          python3 pipeline/store.py verify $(cat /tmp/todo.txt)
           python3 pipeline/batch.py new "Upload ${GITHUB_REF_NAME} $(date -u +%Y-%m-%d)" $(cat /tmp/todo.txt)
           python3 pipeline/batch.py status | tail -3
           SKIP_WAIT=1 pipeline/push.sh "Batch from ${GITHUB_REF_NAME}: $(tr '\n' ' ' < /tmp/todo.txt)"

@@ -132,6 +132,7 @@ select { background: var(--panel); border: 1px solid var(--line); border-radius:
 .colname { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 6px }
 .sheet { background: var(--sheet); border-radius: 4px; box-shadow: 0 0 0 1px var(--line); padding: 6px 0; min-width: 0 }
 .sheet img { display: block; width: 100%; height: auto }
+.sheet svg.unit { display: block; width: 100%; height: auto; background: #fff }
 .sheet .cut { border-top: 1px dashed #c9d1da; }
 .pg { font: 400 10px var(--mono); color: #7b8794; padding: 0 8px; text-align: right }
 .ms { margin-top: 10px }
@@ -187,7 +188,7 @@ const app = document.getElementById('app');
 new ResizeObserver(([e]) => document.documentElement.style.setProperty('--hdr', e.target.offsetHeight + 'px')).observe(document.querySelector('header.bar'));
 let PAPERS = [], QUEUE = [], BATCHES = [];
 const STAGES = [['uploaded', 'Uploaded'], ['processed', 'Processed'], ['auto_checked', 'Auto-checked'], ['claude_checked', 'Claude checked'],
-                ['your_review', 'Your review'], ['approved', 'Approved'], ['published', 'Published']];
+                ['your_review', 'Your review'], ['approved', 'Finalised'], ['published', 'In database']];
 const STAGE_NAME = Object.fromEntries(STAGES.concat([['needs_fix', 'Needs fix']]));
 const stagePill = s => `<span class="pill st-${s}">${STAGE_NAME[s] || s}</span>`;
 const cache = {};
@@ -276,6 +277,35 @@ function exactHtml(q) {
   }
   return h ? `<div class="sheet">${h}<div class="pg">page${new Set(nodes(q).flatMap(([n]) => (n.segments || []).map(s => s.page))).size > 1 ? 's' : ''} ${[...new Set(nodes(q).flatMap(([n]) => (n.segments || []).map(s => s.page)))].join(', ')}</div></div>` : '<div class="sheet"><p class="pg">no pieces</p></div>';
 }
+/* the stored question (store/…/qNN.json) drawn as SVG, exactly as a worksheet prints it */
+const FAM = { sans: 'Liberation Sans, Arial, Helvetica, sans-serif', serif: 'Liberation Serif, Times New Roman, serif',
+  mono: 'Liberation Mono, Courier New, monospace', symbol: 'DejaVu Sans, sans-serif' };
+function unitSvg(u, base, figs) {
+  let o = '';
+  for (const p of u.lines) o += `<path d="${p.d}" fill="${p.fill || 'none'}"${p.eo ? ' fill-rule="evenodd"' : ''}${p.stroke ? ` stroke="${p.stroke}" stroke-width="${p.sw}"${p.dash ? ` stroke-dasharray="${p.dash}"` : ''}` : ''}/>`;
+  for (const im of u.images || []) o += `<image href="${base}/figures/${im.file}" x="${im.x}" y="${im.y}" width="${im.w}" height="${im.h}" preserveAspectRatio="none"/>`;
+  for (const g of u.glyphs || []) o += `<image href="${base}/glyphs/${g.file}" x="${g.x}" y="${g.y}" width="${g.w}" height="${g.h}" preserveAspectRatio="none"/>`;
+  for (const f of u.figs) { const fl = figs[f.id]; if (fl) o += `<image href="${base}/figures/${fl.file}" x="${f.x}" y="${f.y}" width="${fl.size_pt[0]}" height="${fl.size_pt[1]}" preserveAspectRatio="none"/>`; }
+  for (const t of u.text) {
+    const rot = t.dir ? ` transform="rotate(${(Math.atan2(t.dir[1], t.dir[0]) * 180 / Math.PI).toFixed(1)} ${t.x} ${t.y})"` : '';
+    o += `<text x="${t.x}" y="${t.y}" font-family="${FAM[t.f]}" font-size="${t.s}"${t.b ? ' font-weight="bold"' : ''}${t.i ? ' font-style="italic"' : ''}${t.c ? ` fill="${t.c}"` : ''}${t.t.length > 1 && t.w > 0 ? ` textLength="${t.w}" lengthAdjust="spacingAndGlyphs"` : ''}${rot}>${esc(t.t)}</text>`;
+  }
+  return `<svg class="unit" viewBox="0 0 ${u.w} ${u.h}" style="aspect-ratio:${u.w}/${u.h}" xmlns="http://www.w3.org/2000/svg">${o}</svg>`;
+}
+function storeHtml(sq, base) {
+  const figs = Object.fromEntries(sq.figures.map(f => [f.id, f]));
+  const b = sq.base || base;
+  let h = sq.stub_of ? `<p class="pg">Same question as ${esc(sq.stub_of)} (stored once)</p>` : '';
+  for (const p of sq.parts) for (const u of p.layout) h += unitSvg(u, b, figs);
+  return `<div class="sheet">${h}</div>`;
+}
+function storeMsHtml(sq, base) {
+  const figs = Object.fromEntries(sq.figures.map(f => [f.id, f]));
+  const b = sq.base || base;
+  let h = '';
+  for (const p of sq.parts) for (const r of p.ms) h += `<div class="row"><div class="lab"><span>${esc(r.label)}</span><span>${esc((r.codes || []).join(' '))}</span></div><div class="sheet">${r.layout.map(u => unitSvg(u, b, figs)).join('')}</div></div>`;
+  return h ? `<div class="ms"><div class="colname">Mark scheme</div>${h}</div>` : '';
+}
 function msHtml(q) {
   if (q.type === 'mcq') return q.discounted ? `<div class="answer">Question discounted by Cambridge (not marked)</div>` : `<div class="answer">Answer: ${esc(q.answer || '—')}</div>`;
   let h = '';
@@ -305,7 +335,8 @@ function editHtml(n, q, depth = 0) {
   for (const k of n.parts || []) h += `<div class="part">${editHtml(k, q, depth + 1)}</div>`;
   return h;
 }
-function qCard(q, p) {
+function qCard(q, p, d) {
+  const sq = d && d.store && d.store[q.id];
   const reasons = (q.review && q.review.reasons) || [];
   const num = String(q.number).padStart(2, '0');
   const title = `Check ${q.id}`;
@@ -316,13 +347,14 @@ function qCard(q, p) {
     '- [ ] part of the question is cut off or missing', '- [ ] a diagram or table is wrong', '- [ ] mark scheme is wrong or attached to the wrong part',
     '- [ ] marks are wrong', '- [ ] text in the editable view is wrong', '', 'Details:', '']);
   const edit = (q.content || (q.parts || []).some(k => k.content)) ? editHtml(q, q) : '<p class="empty">No editable text for this question yet.</p>';
-  const cols = view === 'both' ? `<div><div class="colname">Exact (from the paper)</div>${exactHtml(q)}</div><div><div class="colname">Editable</div><div class="ed">${edit}</div></div>`
+  const opts = sq && sq.options && !sq.options_on_figure && sq.options.some(o => o.text) ? `<ol class="opts">${sq.options.map(o => `<li><b>${esc(o.label)}</b> ${esc(o.text)}</li>`).join('')}</ol>` : '';
+  const cols = sq ? `<div>${storeHtml(sq, d.store_base)}</div>` : view === 'both' ? `<div><div class="colname">Exact (from the paper)</div>${exactHtml(q)}</div><div><div class="colname">Editable</div><div class="ed">${edit}</div></div>`
     : view === 'editable' ? `<div><div class="ed">${edit}</div></div>` : `<div>${exactHtml(q)}</div>`;
   return `<article class="q ${reasons.length ? 'flagged' : ''}" id="q${num}">
     <div class="qhead"><h3>Question ${q.number}</h3><span class="marks">[${q.marks}]</span><span class="id">${q.id}</span>
       <span class="acts"><a class="btn report" href="${rep}" target="_blank" rel="noopener">Report a problem</a></span></div>
     ${reasons.length ? `<ul class="reasons">${reasons.map(r => `<li>${esc(r)}</li>`).join('')}</ul>` : ''}
-    <div class="cols ${view === 'both' ? 'both' : ''}">${cols}${showMs ? `<div>${msHtml(q)}</div>` : ''}</div>
+    <div class="cols ${view === 'both' ? 'both' : ''}">${cols}${showMs ? `<div>${sq && q.type !== 'mcq' ? storeMsHtml(sq, d.store_base) : msHtml(q)}${opts}</div>` : ''}</div>
   </article>`;
 }
 async function renderPaper(pid, qanchor) {
@@ -347,6 +379,7 @@ async function renderPaper(pid, qanchor) {
       `, editable text ${c.text_score_min != null ? Math.round(c.text_score_min * 100) + '% or better' : 'n/a'}` +
       (c.problems.length ? `<ul>${c.problems.map(x => `<li><span class="mono">${esc(x.id)}</span> ${esc(x.kind)}: ${esc(x.detail)}</li>`).join('')}</ul>` : '') + `</div>`;
   }
+  if (d.store_check) h += `<div class="checks"><b>Stored version vs. the paper</b>: ${d.store_check.units} pieces redrawn and compared, ${d.store_check.differ.length ? d.store_check.differ.length + ' differ by more than 1%' : 'all match'}${d.store_check.differ.length ? `<ul>${d.store_check.differ.map(x => `<li><span class="mono">${esc(x.q)}</span> ${esc(x.unit)}: ${x.missing}% missing, ${x.extra}% extra</li>`).join('')}</ul>` : ''}</div>`;
   if (d.claude) h += `<div class="checks"><b>Claude's check</b> (${esc(d.claude.checked_at || '')}): ${esc(d.claude.result)}${d.claude.note ? ' – ' + esc(d.claude.note) : ''}</div>`;
   if (m.mark_scheme === 'missing') h += `<div class="notice">No mark scheme PDF for this paper.</div>`;
   h += `<div class="toolbar">
@@ -355,7 +388,7 @@ async function renderPaper(pid, qanchor) {
     <nav class="qnav" aria-label="Questions">${qs.map(q => `<a class="${q.review && q.review.reasons && q.review.reasons.length ? 'f' : ''}" href="#paper-${pid}-q${String(q.number).padStart(2, '0')}">${q.number}</a>`).join('')}</nav>
   </div>`;
   if (nflag) h += `<p class="muted">${nflag} question${nflag > 1 ? 's are' : ' is'} marked in red: the pipeline wants a person to look.</p>`;
-  h += qs.map(q => qCard(q, p)).join('');
+  h += qs.map(q => qCard(q, p, d)).join('');
   app.innerHTML = h;
   app.querySelectorAll('#v-mode button').forEach(b => b.onclick = () => { view = b.dataset.v; store.set('view', view); rerender() });
   app.querySelector('#v-ms button').onclick = () => { showMs = !showMs; store.set('ms', showMs); rerender() };

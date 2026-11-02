@@ -107,3 +107,13 @@ One line per run: date, pending papers checked/approved, feedback handled, fixes
   Full re-run: 477 papers, 0 errors, golden 0 changed cuts. Critical store test: 23 papers, 1,612 units,
   9 above 1% pixel difference (all explained: font-width '1', one italic letter, one MS tick past its row).
   Waiting for Dhruv's go-ahead before the pipeline switch-over. Cloudinary upload paused (over credits).
+- 2026-11-02 (chat session): question store is now the pipeline. `pipeline/store.py` (+ store_units, store_options,
+  store_text) builds `store/` from every cut: layout units, figures per label at true size, MS rows, MCQ options
+  (table rows / one figure per option / text), tables as text, duplicates once, no empty meta. run.py builds it;
+  the Actions verify it (review/store/<paper>.json) and feed differing pieces into review rounds. SVG pieces
+  removed from bank/ (1.8 GB -> 94 MB, `strip_svgs.py`), cut hashes unchanged (golden 0). MongoDB and
+  Cloudinary steps paused until all years are finalised. Site and review pictures draw from store/.
+  2002-2014 PDFs (qp+ms, 434 + 153 renamed/split by `old_papers.py`) in Releases; backlog in
+  review/backlog.json, hourly run docs/BACKLOG.md (scheduled task trig_0173DCrQWm76nnTXrW52TPjC, enabled
+  after the first full verify). Older-paper fixes: component ids 0625_2005MJ_03, old MS label columns,
+  stamp images removed (clean.py), scanned MS kept as page pictures (ms_scan).

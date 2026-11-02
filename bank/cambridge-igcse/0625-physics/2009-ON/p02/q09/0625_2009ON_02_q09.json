@@ -1,0 +1,440 @@
+{
+ "id": "0625_2009ON_02_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 14,
+   "bbox": [
+    30.0,
+    53.8,
+    570.0,
+    61.3
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 0,
+    "height_pt": 7.5
+   }
+  }
+ ],
+ "text": "",
+ "marks": 11,
+ "figures": [
+  {
+   "caption": "Fig. 9.1",
+   "page": 14,
+   "bbox": [
+    92.0,
+    72.5,
+    572.0,
+    360.0
+   ],
+   "id": "0625_2009ON_02_q09a_fig9-1",
+   "part": "(a)",
+   "alt": ""
+  },
+  {
+   "caption": "Fig. 9.2",
+   "page": 14,
+   "bbox": [
+    183.5,
+    410.5,
+    385.5,
+    651.0
+   ],
+   "id": "0625_2009ON_02_q09b_fig9-2",
+   "part": "(b)",
+   "alt": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      61.3,
+      570.0,
+      366.7
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 58.2,
+      "height_pt": 305.3
+     }
+    }
+   ],
+   "text": "9\n(a) The two circuits shown in Fig. 9.1 each contain two resistors and a battery.\nFor\nExaminer’s\nUse\nComplete the statement under each circuit.\nR1\nR3\nR2\nR4\nResistors R1 and R2 are\nResistors R3 and R4 are\nconnected in …………………………\nconnected in …………………………\n[1]",
+   "marks": 1,
+   "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "",
+     "codes": [
+      "B1",
+      "[1]"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        36.0,
+        299.5,
+        559.0,
+        320.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> The two circuits shown in Fig. 9.1 each contain two resistors and a battery.",
+     "text": "The two circuits shown in Fig. 9.1 each contain two resistors and a battery."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2009ON_02_q09a_fig9-1",
+     "caption": "Fig. 9.1"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 58.2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      366.7,
+      570.0,
+      659.8
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 59.4,
+      "height_pt": 293.2
+     }
+    }
+   ],
+   "text": "A student connects the circuit shown in Fig. 9.2. The resistance of the 12 V battery is so\nlow that it can be ignored.\n280Ω\n12V\nA\n200Ω\nB",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 14,
+       "bbox": [
+        30.0,
+        659.8,
+        570.0,
+        787.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 1,
+        "answer_line": "resistance =  …… Ω [2]",
+        "working_gap_pt": 72.0,
+        "height_pt": 127.2
+       }
+      }
+     ],
+     "text": "Calculate the total resistance in the circuit.\nresistance =  ............................................ Ω [2]",
+     "marks": 2,
+     "path": "9(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "9(b)(i)",
+       "text": "480 (Ω)",
+       "codes": [
+        "C1",
+        "A1",
+        "[2]"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          337.4,
+          559.0,
+          370.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the total resistance in the circuit.",
+       "text": "Calculate the total resistance in the circuit."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "resistance =",
+       "unit": "Ω"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 15,
+       "bbox": [
+        30.0,
+        53.8,
+        570.0,
+        170.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 1,
+        "answer_line": "current =  …… [4]",
+        "working_gap_pt": 50.2,
+        "height_pt": 116.2
+       }
+      }
+     ],
+     "text": "Calculate the current delivered by the battery.\nFor\nExaminer’s\nUse\ncurrent =  ................................................ [4]",
+     "marks": 4,
+     "path": "9(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "9(b)(ii)",
+       "text": "12/his (i) seen or 12/480 need not be seen\n0.025 or 25 or 1/40 c.a.o.\nA or mA as appropriate",
+       "codes": [
+        "C1",
+        "C1",
+        "A1",
+        "B1",
+        "[4]"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          375.4,
+          559.0,
+          434.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the current delivered by the battery.",
+       "text": "Calculate the current delivered by the battery."
+      },
+      {
+       "type": "text",
+       "html": "<i>For</i> <i>Examiner’s</i> <i>Use</i>",
+       "text": "For Examiner’s Use"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "current ="
+      },
+      {
+       "type": "marks",
+       "value": 4
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 15,
+       "bbox": [
+        30.0,
+        170.0,
+        570.0,
+        278.7
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 1,
+        "answer_line": "p.d. =  …… V [2]",
+        "working_gap_pt": 71.2,
+        "height_pt": 108.7
+       }
+      }
+     ],
+     "text": "Calculate the potential difference (p.d.) across the 200 Ω resistor.\np.d. =  ............................................. V [2]",
+     "marks": 2,
+     "path": "9(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "9(b)(iii)",
+       "text": "5 (V) e.c.f.",
+       "codes": [
+        "C1",
+        "A1",
+        "[2]"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          438.6,
+          559.0,
+          472.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the potential difference (p.d.) across the 200 Ω resistor.",
+       "text": "Calculate the potential difference (p.d.) across the 200 Ω resistor."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "p.d. =",
+       "unit": "V"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "iv",
+     "segments": [
+      {
+       "page": 15,
+       "bbox": [
+        30.0,
+        278.7,
+        570.0,
+        787.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 3,
+        "answer_line": null,
+        "working_gap_pt": 15.8,
+        "height_pt": 508.3
+       }
+      }
+     ],
+     "text": "Describe how the student could check whether the p.d. across the 200 Ω resistor is\nthe same as you have calculated. Include the name of the instrument he would use\nfor this.\n..................................................................................................................................\n..................................................................................................................................\n............................................................................................................................ [2]\n[Total: 11]",
+     "marks": 2,
+     "path": "9(b)(iv)",
+     "mark_scheme": [
+      {
+       "label": "9(b)(iv)",
+       "text": ") (could be shown on diag)\nbetween A and B )",
+       "codes": [
+        "M1",
+        "A1",
+        "[2]"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          476.5,
+          559.0,
+          547.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Describe how the student could check whether the p.d. across the 200 Ω resistor is the same as you have calculated. Include the name of the instrument he would use for this.",
+       "text": "Describe how the student could check whether the p.d. across the 200 Ω resistor is the same as you have calculated. Include the name of the instrument he would use for this."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 3
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "9(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "A student connects the circuit shown in Fig. 9.2. The resistance of the 12 V battery is so low that it can be ignored.",
+     "text": "A student connects the circuit shown in Fig. 9.2. The resistance of the 12 V battery is so low that it can be ignored."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2009ON_02_q09b_fig9-2",
+     "caption": "Fig. 9.2"
+    }
+   ]
+  }
+ ],
+ "total_marks": 11,
+ "type": "structured",
+ "syllabus": "0625",
+ "subject": "Physics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2009,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 2,
+ "variant": 0,
+ "paper_code": "0625/02",
+ "paper_type": "theory_core",
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

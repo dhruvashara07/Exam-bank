@@ -7,7 +7,8 @@
     out/review/round_<n>/round.json, items.json, <qid>/*.jpg     -> publish with the Artifact tool to the
                                                                   review page (review/portal.json review_url)
     review/rounds/<n>.json  {round, status: open, collection, items}   (the tracker's 'your review' stage)
-Items: every question with a flag or an automatic-check problem in those papers, plus `--sample`
+Items: every question with a flag, an automatic-check problem or a stored piece that differs from the page
+(review/store/<paper>.json, pipeline/store.py verify) in those papers, plus `--sample`
 random questions per paper (seeded by the round number, so the choice is repeatable).
 The page stores answers in its database, collection feedback_r<n>, doc id = question id:
     {verdict: ok|wrong, issues: [...], note, at}
@@ -29,10 +30,14 @@ def nodes(n, depth=0):
 
 def editable_payload(q, d, qid):
     """Content blocks for the page's 'Editable' tab, with each figure saved as its own image."""
+    import store
+    sq, sdir = store.load(qid)
+    if sq.get('stub'):
+        sq, sdir = store.load(sq['same_as'][0])
     figs = {}
-    for i, f in enumerate(q.get('figures', [])):
+    for i, f in enumerate(sq.get('figures', [])):
         name = f'fig{i + 1}.jpg'
-        im = ra.svg_img(f['svg']['file'])
+        im = ra.fig_img(os.path.join(sdir, 'figures', f['file']))
         if im.width > 700:
             im = im.resize((700, round(im.height * 700 / im.width)), Image.LANCZOS)
         im.save(os.path.join(d, name), quality=75, optimize=True)
@@ -56,9 +61,17 @@ def new(rnd, pids, sample=3, title=None, intro=None, max_items=None):
         chk = json.load(open(os.path.join(paths.CHECKS, pid + '.json'))) if os.path.exists(os.path.join(paths.CHECKS, pid + '.json')) else {}
         for p in chk.get('problems', []) + chk.get('flags', []):
             qid = p['id'] if p['id'] in byid else None
+            if p['kind'] == 'text':      # the old editable layer: replaced by the store check below
+                continue
             if qid:
                 reasons.setdefault(qid, []).append(p['detail'] if p['kind'] == 'flag' else f"{p['kind']}: {p['detail']}")
                 prio[qid] = min(prio.get(qid, 9), rank.get(p['kind'], 3))
+        sv = os.path.join(paths.STORE_CHECKS, pid + '.json')
+        for d in (json.load(open(sv)).get('differ', []) if os.path.exists(sv) else []):
+            if d['q'] in byid:            # a stored piece that does not redraw like the paper
+                reasons.setdefault(d['q'], []).append(f"stored copy differs from the paper in {d['unit']}: "
+                                                      f"{d['missing']}% missing, {d['extra']}% extra")
+                prio[d['q']] = min(prio.get(d['q'], 9), 1)
         rest = [q for q in qids if q not in reasons]
         samples.append(rng.sample(rest, min(sample, len(rest))))
     flagged = sorted(prio, key=lambda q: (prio[q], q))

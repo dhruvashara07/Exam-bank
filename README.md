@@ -1,10 +1,9 @@
 # exam-bank
 
-Private question bank for Dhruv's classes. Phase 1: Cambridge IGCSE Physics 0625, 2015–2026.
-Every question is cut from the original papers as exact vector SVGs (original layout and answer
-space), with its structure, marks and mark scheme in JSON, plus an editable copy (`content`: text with
-bold/italic/sub/sup/maths, tables, figure references, answer space, options). Git is the master copy; Cloudinary holds
-the images and MongoDB a searchable copy for the website.
+Private question bank for Dhruv's classes. Phase 1: Cambridge IGCSE Physics 0625, 2002–2026.
+Every question is stored as data that redraws it exactly as printed (`store/`, docs/STORE_DESIGN.md):
+words with position/size/style, lines, figures as separate files at true size, the mark-scheme rows of
+each part, MCQ options. Git is the master copy; the database and file host are loaded at the end.
 
 ## Where things are
 
@@ -12,37 +11,25 @@ the images and MongoDB a searchable copy for the website.
 inbox/                 drop new PDFs here from your phone (any Cambridge name, e.g. 0625_s25_qp_41.pdf)
 raw/manifest.json      the original PDFs, stored in GitHub Releases (raw-0625-2015, ...), not in git;
                        `pipeline/raw_store.py fetch` puts them in raw/0625/2025-MJ/qp_41.pdf etc.
-                       (FM = Feb/Mar, MJ = May/Jun, ON = Oct/Nov)
-bank/
-  index.json           one row per question: id, file, type, marks, parts, answer, topic, review status
-  cambridge-igcse/
-    0625-physics/
-      2025-MJ/
-        p41/                         paper 4, variant 1
-          paper.json                 paper details + list of question ids
-          q01/
-            0625_2025MJ_41_q01.json  the question
-            question/                exact printed pieces:   0625_2025MJ_41_q01_a-ii_s1.svg
-            figures/                 diagrams/tables alone:  0625_2025MJ_41_q01a_fig1-1.svg
-            markscheme/              mark-scheme rows:       0625_2025MJ_41_q01_a-ii_ms1.svg
-review/queue.json      items the pipeline is unsure about
-review/approvals/      one file per paper Claude has checked (only these go to MongoDB)
+                       (FM = Feb/Mar, MJ = May/Jun, ON = Oct/Nov; before 2009: qp_03 = component 3)
+store/                 THE DATA SET: store/cambridge-igcse/0625-physics/2025-MJ/p41/
+                         q01.json ... one per question (layout, mark scheme, options, figures' labels)
+                         figures/  one file per figure label (SVG, photos as PNG), glyphs/ odd symbols
+bank/                  the pipeline's cut records (where each piece is on the page, checks, links)
+  index.json           one row per question
+  cambridge-igcse/0625-physics/2025-MJ/p41/paper.json, q01/0625_2025MJ_41_q01.json
+review/                checks (checks/, store/), Claude checks, approvals (= finalised), rounds, batches,
+                       backlog.json (older years, docs/BACKLOG.md)
 pipeline/              the scripts (see pipeline/README.md)
-site/                  the review website (GitHub Pages): browse every paper, exact vs editable, report problems
-docs/SETUP.md          one-time Cloudinary + MongoDB + Pages setup
-docs/DAILY_CHECK.md    what the daily Claude check does
+site/                  the tracker website (GitHub Pages): batches, papers drawn from store/, report problems
+docs/                  STORE_DESIGN.md, DAILY_CHECK.md, BACKLOG.md, UPLOAD.md, SETUP.md
 CLAUDE.md              rules for every Claude session (safe push etc.)
 ```
 
-File names always start with the question id (`syllabus_yearSession_paperVariant_qNN`), so a
-single SVG is identifiable on its own. Cloudinary uses the same path as the public id, so its
-folders mirror `bank/`.
-
 ## How it runs (no laptop needed)
 Upload PDFs into `inbox/` with the GitHub app → the **Question bank** Action files them, cuts the
-questions, commits them to `bank/` and uploads SVGs to Cloudinary (`question_bank/` folder). The paper is
-then *pending*: a daily scheduled Claude session checks it (docs/DAILY_CHECK.md) and approves it in
-`review/approvals/`; only then does the Action put it in MongoDB (database `question_bank`).
+questions, builds `store/`, checks every stored piece against the page and commits. A scheduled Claude
+session looks at every page, builds a review round for Dhruv and approves (finalises) the paper.
 
 ## Review website
 https://dhruvashara07.github.io/Exam-bank/ (rebuilt after every Action run by `.github/workflows/site.yml`).

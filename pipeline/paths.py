@@ -22,6 +22,8 @@ import glob, os
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 BANK = os.path.join(ROOT, 'bank')
+STORE = os.path.join(ROOT, 'store')          # the finished data set: question JSON + figures (pipeline/store.py)
+STORE_CHECKS = os.path.join(ROOT, 'review', 'store')      # per paper: units whose rebuild differs from the page
 BOARD = {'CAIE': 'cambridge', 'IB': 'ib'}
 KINDS = ('question', 'figures', 'markscheme')
 CLOUD_ROOT = 'question_bank'                 # top Cloudinary folder
@@ -37,7 +39,16 @@ PIPELINE_VERSION = '2.1'     # bump when the cutting/linking/editable rules chan
 def paper_dir(meta):
     group = f"{BOARD.get(meta['board'], meta['board'].lower())}-{meta['exam'].lower()}"
     subject = f"{meta['syllabus']}-{meta['subject'].lower().replace(' ', '-')}"
-    return os.path.join(BANK, group, subject, f"{meta['year']}-{meta['session']}", f"p{meta['paper']}{meta['variant']}")
+    return os.path.join(BANK, group, subject, f"{meta['year']}-{meta['session']}", f"p{meta['paper_code'].split('/')[1]}")
+
+
+def store_dir(pid):
+    """'0625_2024MJ_12' -> store/cambridge-igcse/0625-physics/2024-MJ/p12 (same tree as bank/)."""
+    syl, ses, pv = pid.split('_')[:3]
+    hits = glob.glob(os.path.join(BANK, '*', f'{syl}-*', f'{ses[:4]}-{ses[4:]}', f'p{pv}'))
+    if not hits:
+        raise FileNotFoundError(pid)
+    return os.path.join(STORE, os.path.relpath(hits[0], BANK))
 
 
 def split_id(qid):
@@ -82,7 +93,7 @@ def public_id(path):
 
 
 def paper_id(meta):
-    return f"{meta['syllabus']}_{meta['year']}{meta['session']}_{meta['paper']}{meta['variant']}"
+    return f"{meta['syllabus']}_{meta['year']}{meta['session']}_{meta['paper_code'].split('/')[1]}"
 
 
 def approvals():
