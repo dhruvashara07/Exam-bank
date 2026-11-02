@@ -6,7 +6,7 @@ itself off. Dhruv only answers the review rounds (flagged questions + a few spot
 Read `CLAUDE.md` first: its rules (push.sh, never force-push, never delete originals, fix the pipeline not
 single files, golden check) apply here too. Nothing goes to MongoDB or a file host in this phase.
 
-States of a batch: `waiting` → `processing` → `claude_check` → `your_review` → `finalised`
+States of a batch: `waiting` → `processing` → `claude_check` → `your_review` → `finalised`; `recheck` (2015-2026)
 (or `stuck`: needs Dhruv or a bigger fix; later runs skip it).
 
 ## Every run
@@ -39,6 +39,13 @@ States of a batch: `waiting` → `processing` → `claude_check` → `your_revie
       Then state `claude_check`. If processing does not finish in this run, leave it at `processing`:
       the next run re-runs only the papers without `review/store/<id>.json`.
    If a year is fast and the run has time left, start the next `waiting` batch too (at most two per run).
+   e. `recheck` items (2015-2026, already cut and checked in the old format): Dhruv reviews them again in
+      the new stored format. Handle one like `claude_check` without re-processing: look at the overview of
+      every paper whose `review/store/<id>.json` lists differing pieces (and fix the store if you can), then
+      when no round is open and the batch before it in the list is at `your_review` or later:
+      `review_round.py new <n> <ids> --sample 1 --max 90` (flagged store pieces + one spot check per paper),
+      publish, state `your_review`. Approve as in b (papers approved earlier keep their approval when the
+      round shows no problem in them). Rounds alternate: old year, new-format review, old year, ...
 5. **Errors.** Every failed attempt at a step adds 1 to `attempts`. At 2 failed attempts of the same step:
    state `stuck`, write the reason in `note`, notify Dhruv, continue with the next batch. Never loop on it.
    A decision only Dhruv can make (a scanned paper without text, a missing mark scheme, a paper type the
