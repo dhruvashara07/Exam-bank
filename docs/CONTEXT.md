@@ -1,4 +1,7 @@
-# Context for a new Claude chat (read this first, then CLAUDE.md, PROGRESS.md, docs/NEXT.md)
+# Context for a new Claude chat (read this first, then CLAUDE.md, PROGRESS.md, docs/V5_SPEC.md, docs/NEXT.md)
+
+STATUS 2026-11-03: the hourly backlog task is switched OFF (paused by Dhruv) until format v5
+(docs/V5_SPEC.md) is approved and every year rebuilt. Its last run's work is in git.
 
 ## Who and what
 Dhruv (teacher, India, IST; reads on his phone) is building a question bank of Cambridge IGCSE Physics 0625
