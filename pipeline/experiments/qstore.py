@@ -6,9 +6,10 @@
     python3 pipeline/experiments/qstore.py sheet out.pdf <selections>  # homework PDF + mark scheme
         selection = <question id>[:<part>[,<part>]]   e.g. 0625_2024MJ_42_q02:b-ii
 
-Question JSON (schema 3, see SCHEMA below): print layout per part ("layout" units) + mark scheme per part
-("ms" rows, each with its own layout unit) + figures with true-size labels. Room for later phases under "meta"
-(topics, keywords, solutions) without changing anything else.
+Question JSON (schema 4, see SCHEMA below): print layout per part ("layout" units) + mark scheme per part
+("ms" rows, each with its own layout unit) + figures with true-size labels. Ruled tables are layout text, not
+figures. Multiple choice: `options` A-D (text, table cells, or one figure per option). Later phases (topics,
+keywords, solutions) add their own fields; `schema` says which version a document follows.
 """
 import glob, gzip, hashlib, json, math, os, re, shutil, subprocess, sys, collections
 
@@ -21,6 +22,7 @@ import paths
 from run import cleaned
 from layout_rebuild import family, unpua, hexcol, span_len, odd
 from units import glyph_styles, char_styles, tp, drawing_d, nodes, scale_note
+import options as OPT
 
 OUT = os.path.join(paths.ROOT, 'out', 'store')
 PT2MM = 25.4 / 72
@@ -30,8 +32,9 @@ CSS_FAM = {'sans': 'Liberation Sans, Arial, Helvetica, sans-serif', 'serif': 'Li
 
 SCHEMA = {
     'question': 'schema, id, paper{syllabus,session,code,paper,variant}, number, type, marks, answer, same_as, '
-                'parts[], figures[], meta{topics,keywords,difficulty,solution}',
-    'part': 'path "2(b)(i)", label "(i)", parent "2(b)", marks, text (plain, for search), layout[unit], ms[row], meta{}',
+                'parts[], figures[], options[] (mcq), option_columns[] (mcq options in a table)',
+    'option': 'label A-D, text, cells[] (table row), figure (id of its own drawing)',
+    'part': 'path "2(b)(i)", label "(i)", parent "2(b)", marks, text (plain, for search), layout[unit], ms[row]',
     'ms row': 'label "2(b)(i)", marks, codes ["B1",...], text, layout[unit]',
     'unit': 'src{doc qp|ms, page, box[x0,y0,x1,y1] pt}, w, h, text[word], lines[path], figs[{id,x,y}], glyphs[{file,x,y,w,h}]',
     'word': 't text, x, y (baseline), w (width), s (size), f (sans|serif|mono|symbol), b/i (1 = bold/italic), '
@@ -216,7 +219,11 @@ def save_figure(f, q, meta, qdoc, store):
         pg.get_pixmap(clip=b, dpi=300).save(os.path.join(store, 'figures', name))
     else:
         name = f['id'] + '.svg'
-        svg = open(os.path.join(paths.ROOT, f['svg']['file'])).read()
+        if f.get('svg'):
+            svg = open(os.path.join(paths.ROOT, f['svg']['file'])).read()
+        else:                                   # an option drawing cut out of a multiple-choice figure
+            from render import region_svg
+            svg = region_svg(qdoc, f['page'] - 1, list(b))
         attrs = (f' data-id="{f["id"]}" data-width-mm="{label["size_mm"][0]}" data-height-mm="{label["size_mm"][1]}"'
                  f' data-measure="{str(measure).lower()}" data-source="{label["source"]["paper"]} {label["source"]["session"]} p{f["page"]}"')
         svg = re.sub(r'<svg ', '<svg' + attrs + ' ', svg, count=1)
@@ -250,13 +257,39 @@ def build(pid):
         return cst[(name, pno)]
     for qf in sorted(glob.glob(os.path.join(os.path.dirname(pj), 'q*', '*.json'))):
         q = json.load(open(qf))
-        figs = [save_figure(f, q, meta, qdoc, store) for f in q.get('figures', [])]
-        rec = {'schema': 3, 'id': q['id'],
+        figs, opts, cols = [], None, None
+        for f in q.get('figures', []):
+            pg, b = qdoc[f['page'] - 1], fitz.Rect(f['bbox'])
+            g = OPT.grid(pg, b)
+            if g:                                   # a ruled table: stays text + rules in the layout
+                if meta.get('is_mcq') and opts is None:
+                    t = OPT.table_options(OPT.table_rows(pg, g)) or OPT.table_options(OPT._row_lines(pg, g, None) or [])
+                    if t:
+                        cols, opts = t
+                continue
+            if meta.get('is_mcq') and opts is None:
+                ti = OPT.table_inside(pg, b)
+                if ti:                              # options table printed inside the drawing's crop
+                    t = OPT.table_options(OPT.table_rows(pg, ti[0])) or OPT.table_options(OPT._row_lines(pg, ti[0], None) or [])
+                    if t:
+                        cols, opts = t
+                        f = dict(f, bbox=list(ti[1]), svg=None)
+                        figs.append(save_figure(f, q, meta, qdoc, store))
+                        continue
+            regions = OPT.diagram_options(pg, b) if meta.get('is_mcq') and opts is None else None
+            if regions:                             # four option drawings: one figure each
+                opts = []
+                for L, r in regions.items():
+                    sub = {'id': f"{q['id']}_opt{L}", 'page': f['page'], 'bbox': list(r), 'caption': None}
+                    figs.append(save_figure(sub, q, meta, qdoc, store))
+                    opts.append({'label': L, 'figure': sub['id'], 'text': ''})
+                continue
+            figs.append(save_figure(f, q, meta, qdoc, store))
+        rec = {'schema': 4, 'id': q['id'],
                'paper': {'syllabus': meta['syllabus'], 'session': f"{meta['year']}-{meta['session']}", 'code': meta['paper_code'],
                          'paper': meta['paper'], 'variant': meta['variant']},
                'number': q['number'], 'type': 'mcq' if meta.get('is_mcq') else 'structured', 'marks': q['marks'],
-               'answer': q.get('answer'), 'same_as': [], 'parts': [], 'figures': figs,
-               'meta': {'topics': [], 'keywords': [], 'difficulty': None, 'solution': None}}
+               'answer': q.get('answer'), 'same_as': [], 'parts': [], 'figures': figs}
         for n in nodes(q):
             path = n.get('path') or str(q['number'])
             lay = []
@@ -273,7 +306,18 @@ def build(pid):
                                       for s in r['segments']]})
             parent = re.sub(r'\([^()]*\)$', '', path) if '(' in path else None
             rec['parts'].append({'path': path, 'label': n.get('label'), 'parent': parent, 'marks': n['marks'],
-                                 'text': plain(lay), 'layout': lay, 'ms': ms, 'meta': {}})
+                                 'text': plain(lay), 'layout': lay, 'ms': ms})
+        if meta.get('is_mcq'):
+            if opts is None:
+                opts = OPT.text_options([u for p in rec['parts'] for u in p['layout']])
+            if opts:
+                rec['options'] = opts
+                if cols:
+                    rec['option_columns'] = cols
+            else:                                    # letters printed on one drawing (points A-D on a diagram)
+                rec['options'] = [{'label': L, 'text': ''} for L in OPT.LETTERS]
+                rec['options_on_figure'] = True
+                print(f"  {q['id']}: options A-D are marks on a figure", file=sys.stderr)
         json.dump(rec, open(os.path.join(store, f"q{q['number']:02d}.json"), 'w'), ensure_ascii=False, separators=(',', ':'))
     # the mark-scheme table header row (Question | Answer | Marks), stored once per paper
     for pno in range(1, len(mdoc)):
@@ -328,7 +372,7 @@ def dupes(session):
             q['same_as'] = [i for i, _, _ in g if i != qid]
             if qid != canon and msig == g[0][1]:
                 stub = {k: q[k] for k in ('schema', 'id', 'paper', 'number', 'type', 'marks', 'answer')}
-                stub.update({'stub': True, 'same_as': [canon], 'meta': q['meta']})
+                stub.update({'stub': True, 'same_as': [canon]})
                 json.dump(stub, open(f, 'w'), ensure_ascii=False, separators=(',', ':'))
                 for fg in q.get('figures', []):          # its figures live with the canonical copy
                     fp = os.path.join(os.path.dirname(f), 'figures', fg['file'])

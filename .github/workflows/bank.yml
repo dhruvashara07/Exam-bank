@@ -100,7 +100,9 @@ jobs:
         run: python3 pipeline/sync_cloudinary.py
 
       - name: Sync to MongoDB
-        if: ${{ !cancelled() }}
+        # PAUSED 2026-10-30: everything is finalised in git first (new store format, all years);
+        # MongoDB and file hosting are loaded together at the end. Restore `!cancelled()` to resume.
+        if: ${{ false }}
         run: |
           python3 pipeline/sync_mongo.py
           if [ -n "$(git status --porcelain review/published.json)" ]; then   # tracker: 'published'

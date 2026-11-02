@@ -75,6 +75,8 @@ jobs:
           SKIP_WAIT=1 pipeline/push.sh "Batch from ${GITHUB_REF_NAME}: $(tr '\n' ' ' < /tmp/todo.txt)"
 
       - name: Upload SVGs to Cloudinary
+        # PAUSED 2026-10-30 (see bank.yml): hosting is loaded once at the end.
+        if: ${{ false }}
         env:
           CLOUDINARY_MINUTES: '240'
         run: python3 pipeline/sync_cloudinary.py
