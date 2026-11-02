@@ -71,6 +71,9 @@
      "label": "4(a)",
      "text": "start temp. and final temp. or change in temperature\nB1\nmass of iron\nB1\ntime heater on\nB1",
      "codes": [
+      "B1",
+      "B1",
+      "B1",
       "3"
      ],
      "segments": [
@@ -151,6 +154,8 @@
      "label": "4(b)",
      "text": "P x t, VIt or in words\nB1\n= m x shc x cit or words\nB1",
      "codes": [
+      "B1",
+      "B1",
       "2"
      ],
      "segments": [
@@ -217,7 +222,9 @@
       {
        "label": "4(c)(i)",
        "text": "heat lost to surroundings/air\nB1",
-       "codes": [],
+       "codes": [
+        "B1"
+       ],
        "segments": [
         {
          "page": 4,
@@ -287,6 +294,7 @@
        "label": "4(c)(ii)",
        "text": "(ii)\nadd lagging/insulate\nB1",
        "codes": [
+        "B1",
         "2",
         "[7]"
        ],

@@ -71,6 +71,9 @@
      "label": "8(a)",
      "text": "circuit which would work with supply and resistor\nB1\nvoltmeter in parallel and ammeter in series with resistor\nB1\nvariable resistor in series or means of changing p.d. across\nresistor\nB1",
      "codes": [
+      "B1",
+      "B1",
+      "B1",
       "3"
      ],
      "segments": [
@@ -137,6 +140,8 @@
      "label": "8(b)",
      "text": "read ammeter and voltmeter\nB1\nadjust rheostat/supply\nB1",
      "codes": [
+      "B1",
+      "B1",
       "2"
      ],
      "segments": [
@@ -221,7 +226,10 @@
       {
        "label": "8(c)(i)",
        "text": "I = V/R or V = IR or R = V/I or 0.5 = 6.0/3.0 + R\nC1\nR = 9(.0) Ω\nA1",
-       "codes": [],
+       "codes": [
+        "C1",
+        "A1"
+       ],
        "segments": [
         {
          "page": 5,
@@ -281,7 +289,9 @@
       {
        "label": "8(c)(ii)",
        "text": "(ii)\n60 C\nB1",
-       "codes": [],
+       "codes": [
+        "B1"
+       ],
        "segments": [
         {
          "page": 5,
@@ -347,6 +357,8 @@
        "label": "8(c)(iii)",
        "text": "2\n2\n(iii)\nP = VI or = I R or P = v /R or (0.5 x 3.0) x 0.5\nC1\n= 0.75 W\nA1",
        "codes": [
+        "C1",
+        "A1",
         "5"
        ],
        "segments": [
