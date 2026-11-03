@@ -15,6 +15,10 @@ Read this first in every session. Update it before ending a session.
 - Known gaps: practical mark schemes are one block per question; MS row labels like "(a)(i)(ii)" not relabelled; "°C" glyph in
   some 2014 mark schemes looks odd; 63 q02 Fig 2.1 crop edge includes the neighbour's label leader (cut issue).
 
+## Portrait mark schemes (2026-11-03) — samples sent to Dhruv, waiting for his OK
+- `pipeline/ms_portrait.py`: re-wraps landscape MS rows (2016 MJ+) to 523 pt portrait; 97.2% of 9,007 rows wrap, 2.8% scale to fit.
+  Not yet in `store.py build`. Details and next steps: docs/CONVERSATION_LOG.md (last entry).
+
 ## Done
 - 2026-10-29: 134 PDFs (0625 Physics, Feb/Mar 2025 to May/Jun 2026) in `raw/`.
 - 2026-10-29: Pipeline v1: watermark removal, question/part splitting, exact SVG pieces, figures,

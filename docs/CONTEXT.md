@@ -1,4 +1,6 @@
-# Context for a new Claude chat (read this first, then CLAUDE.md, PROGRESS.md, docs/V5_SPEC.md, docs/NEXT.md)
+# Context for a new Claude chat (read this first, then docs/CONVERSATION_LOG.md, CLAUDE.md, PROGRESS.md, docs/V5_SPEC.md, docs/NEXT.md)
+
+IMPORTANT: docs/CONVERSATION_LOG.md holds the dated record of what Dhruv said and decided in each session. Read it, and append to it at the end of every session.
 
 STATUS 2026-11-03: the hourly backlog task is switched OFF (paused by Dhruv) until format v5
 (docs/V5_SPEC.md) is approved and every year rebuilt. Its last run's work is in git.
@@ -38,7 +40,9 @@ builder (pick questions or parts → exam-style A4 PDF + mark scheme), full past
    question stay as printed and are flagged.
 6. Question-bank prototype v1 (docs/NEXT.md §2) after the numbering work: Next.js static on GitHub
    Pages, modes "question bank" (answer space removed) and "print" (full layout).
-7. Later: phone reading mode (reflow), topics/units/keywords ("talk later").
+7. 2026-11-03: question-bank view keeps only fill-in dots, labelled last answer lines, tables and grids; mark schemes are
+   re-laid-out in PORTRAIT (landscape 2016-2026 tables re-wrapped at question-paper font size). Details: docs/CONVERSATION_LOG.md.
+8. Later: phone reading mode (reflow), topics/units/keywords ("talk later").
 
 ## Open feedback from review round 4 (2014), to handle
 - "Table concern" on many P5/P6 questions: he could not tell tables (now layout text) from figures on the
