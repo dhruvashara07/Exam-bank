@@ -532,8 +532,8 @@ def unit_svg(u, base, dx=0, dy=0, renumber=None, drop_total=False, figs=None, vi
         o.append(f'<image href="{base}/glyphs/{g["file"]}" x="{g["x"]}" y="{g["y"] - shift(g["y"]):.2f}" width="{g["w"]}" height="{g["h"]}" preserveAspectRatio="none"/>')
     for f in u['figs']:
         fl = figs[f['id']]
-        o.append(f'<image href="{base}/figures/{fl["file"]}" x="{f["x"]}" y="{f["y"] - shift(f["y"]):.2f}" width="{fl["size_pt"][0]}" '
-                 f'height="{fl["size_pt"][1]}" preserveAspectRatio="none"/>')
+        o.append(f'<image href="{base}/figures/{fl["file"]}" x="{f["x"]}" y="{f["y"] - shift(f["y"]):.2f}" width="{fl["size_pt"][0] * f.get("k", 1):.2f}" '
+                 f'height="{fl["size_pt"][1] * f.get("k", 1):.2f}" preserveAspectRatio="none"/>')
     for t in u['text']:
         if drop_total and t.get('role') == 'total':
             continue

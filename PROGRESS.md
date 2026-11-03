@@ -16,7 +16,7 @@ Read this first in every session. Update it before ending a session.
   some 2014 mark schemes looks odd; 63 q02 Fig 2.1 crop edge includes the neighbour's label leader (cut issue).
 
 ## Portrait mark schemes (2026-11-03) — samples sent to Dhruv, waiting for his OK
-- `pipeline/ms_portrait.py`: re-wraps landscape MS rows (2016 MJ+) to 523 pt portrait; 97.2% of 9,007 rows wrap, 2.8% scale to fit.
+- `pipeline/ms_portrait.py`: re-wraps landscape MS rows (2016 MJ+) to 523 pt portrait, column widths by content, header once, picture rows natural size; 97.5% of 9,007 rows wrap, 2.5% scale to fit. Rules: docs/MS_TABLE_RULES.md.
   Not yet in `store.py build`. Details and next steps: docs/CONVERSATION_LOG.md (last entry).
 
 ## Done

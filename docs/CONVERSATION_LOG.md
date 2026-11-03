@@ -57,3 +57,14 @@ Handled: 3-, 4- and 5-column tables, marks column kept at its width and aligned 
 bullets with hanging indent, sub/superscripts, underlines follow their words, right-aligned "Total:", grey rule colours.
 Next (needs his OK on the samples): store the portrait layout as `layout_p` per row in store.build, verify (word check + spot pictures),
 improve picture rows (keep the picture at natural size, wrap the text), then year by year.
+
+## 2026-11-03 (13:15 - 14:00 IST) — mark-scheme table analysis, rules, narrower columns
+Dhruv: question-number and marks columns are too wide; widths must follow content; first analyse the table types, then make rules and a report; ask if needed.
+Done: scan of every stored MS row -> docs/MS_TABLE_RULES.md (types T1-T8, content widths: question label typically 32 pt (99% <= 43), marks about 14 pt;
+printed columns were 58-64 and 45-50). Report sent to him.
+His answers: header row ONCE AT THE TOP (short names Q / Answer / Marks); old portrait years 2013-2016 FM KEEP AS PRINTED; rows with a picture NATURAL SIZE.
+Also: he does NOT want side-by-side pictures of two tables - the final MS is ONE portrait table, question after question (the side-by-side was only my comparison).
+Built: widths by content (per mark scheme, same for all rows), label centred / marks right-aligned, picture rows at natural size, header row, glue of
+unspaced words ("30 s"). Result: 97.5% of 9,007 rows re-wrapped, 2.5% scale-to-fit, 0 word-check problems.
+Open: his OK on the new sample pictures; then store `layout_p` per row (+ header) in store.build, verify, year by year from 2016 MJ. The v5 rebuild of all years and
+the other open items (see earlier entries) still wait for approval; hourly task still OFF, stale lock untouched.

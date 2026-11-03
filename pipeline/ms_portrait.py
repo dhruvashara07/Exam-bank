@@ -139,14 +139,27 @@ def _wrap(par, x1):
             prevend = g['x'] + g['w']
     if cont_x is None:
         cont_x = par['lines'][0][1]['x'] if len(par['lines'][0]) > 1 and BULLET.match(par['lines'][0][0]['ws'][0]['t']) else first_x
-    out, cur, x = [], [], first_x
+    chains = []                                   # words with no real space between them ("30" + thin space + "s") never split
     for g, gap in flat:
-        sp = 0 if not cur else (3.0 if gap is None else gap)
-        if cur and x + sp + g['w'] > x1 - 3:
+        if chains and gap is not None and gap < 2.0:
+            chains[-1].append((g, gap))
+        else:
+            chains.append([(g, gap)])
+    out, cur, x = [], [], first_x
+    for ch in chains:
+        cw = sum(g['w'] for g, _ in ch) + sum(gp for _, gp in ch[1:])
+        gap0 = ch[0][1]
+        sp = 0 if not cur else (3.0 if gap0 is None else gap0)
+        if cur and x + sp + cw > x1 - 3:
             out.append(cur)
             cur, x, sp = [], cont_x, 0
-        cur.append((g, x + sp))
-        x = x + sp + g['w']
+        xx = x + sp
+        for i, (g, gp) in enumerate(ch):
+            if i:
+                xx += gp
+            cur.append((g, xx))
+            xx += g['w']
+        x = xx
     if cur:
         out.append(cur)
     return out
@@ -156,11 +169,28 @@ def _scaled(u, W, why):
     return _scale_unit(u, W), {'mode': 'scale', 'why': why, 'extra_lines': 0}
 
 
-def portrait_unit(u, W=523.0):
+def _line_w(ws):
+    """width of the widest line of a cell."""
+    out = []
+    for y in sorted({round(t['y'] / 3) for t in ws}):
+        ln = [t for t in ws if round(t['y'] / 3) == y and t['s'] >= 8]
+        if ln:
+            out.append(max(t['x'] + t['w'] for t in ln) - min(t['x'] for t in ln))
+    return max(out) if out else 0.0
+
+
+def portrait_unit(u, W=523.0, widths=None, sizes=None, probe=False):
+    """widths: {(ncol, column): width} for the fixed columns (see column_widths); sizes: {figure id: (w, h)};
+    probe=True: only report the content width of the fixed columns -> (None, {'probe': {(ncol, c): width}, ...})."""
     if u['w'] <= W + 2:
         return u, {'mode': 'same', 'why': 'portrait era', 'extra_lines': 0}
-    if u.get('figs') or u.get('images') or u.get('glyphs'):
-        return _scaled(u, W, 'picture or drawn symbol in the row')
+    if u.get('glyphs'):
+        return _scaled(u, W, 'drawn symbol in the row')
+    pics = [dict(kind='image', x=i['x'], y=i['y'], w=i['w'], h=i['h'], ref=i) for i in u.get('images', [])]
+    for f in u.get('figs', []):
+        if not sizes or f['id'] not in sizes:
+            return _scaled(u, W, 'picture of unknown size')
+        pics.append(dict(kind='fig', x=f['x'], y=f['y'], w=sizes[f['id']][0], h=sizes[f['id']][1], ref=f))
     rr = _rules(u)
     if not rr:
         return _scaled(u, W, 'unknown rules')
@@ -208,13 +238,17 @@ def portrait_unit(u, W=523.0):
         ws = [t for (b, cc), v in cells.items() if cc == c for t in v]
         return bool(ws) and all(len(t['t']) <= 6 for t in ws) and len({round(t['y']) for t in ws}) >= len(ws) * 0.5
     fixed = [c == 0 or old_w[c] <= 75 or (old_w[c] <= 120 and short(c)) for c in range(ncol)]
+    if probe:
+        content = {(ncol, c): max([_line_w(ws) for (b, cc), ws in cells.items() if cc == c] or [0.0]) for c in range(ncol) if fixed[c]}
+        return None, {'probe': content, 'ncol': ncol, 'old_w': old_w, 'fixed': fixed}
+    fixed_w = [(widths or {}).get((ncol, c), old_w[c]) if fixed[c] else None for c in range(ncol)]
     flex = sum(w for w, f in zip(old_w, fixed) if not f)
     if flex <= 0:
         return _scaled(u, W, 'columns not recognised')
-    k = (W - sum(w for w, f in zip(old_w, fixed) if f)) / flex
+    k = (W - sum(w for w in fixed_w if w is not None)) / flex
     if k < 0.3:
         return _scaled(u, W, 'columns too narrow')
-    new_w = [w if f else w * k for w, f in zip(old_w, fixed)]
+    new_w = [fw if fw is not None else w * k for fw, w in zip(fixed_w, old_w)]
     new_edges = [sum(new_w[:i + 1]) for i in range(ncol - 1)]
     def nx_start(c): return 0 if c == 0 else new_edges[c - 1]
     # line pitch of this row
@@ -258,7 +292,17 @@ def portrait_unit(u, W=523.0):
         if fixed[c]:
             for t in ws:
                 nt = dict(t)
-                nt['x'] = round(t['x'] - cx0(c) + nx_start(c), 2)
+                lo = min([0.0] + [r[0] for r in rl if r[0] > -5]) if c == 0 else cx0(c)    # the label column starts at the table's left border (or the page edge)
+                ow = (edges[0] - lo) if c == 0 else old_w[c]
+                nw = (new_edges[0] - lo) if c == 0 else new_w[c]
+                ns = lo if c == 0 else nx_start(c)
+                lg, rg = t['x'] - lo, lo + ow - (t['x'] + t['w'])                       # gaps to the column's left / right edge
+                if c != 0 and lg < rg - 3:
+                    nt['x'] = round(ns + lg, 2)                                           # left-aligned
+                elif c != 0 and rg < lg - 3:
+                    nt['x'] = round(ns + nw - rg - t['w'], 2)                             # right-aligned (marks)
+                else:
+                    nt['x'] = round(ns + (nw - t['w']) / 2, 2)                            # centred (question label)
                 nt['y'] = round(t['y'] + shift[b] + pitch * cum_above(b, t['y']), 2)
                 v['text'].append(nt); moved.append((t, nt))
     for (b, c), ps_ in paras_of.items():
@@ -271,13 +315,32 @@ def portrait_unit(u, W=523.0):
                         nt['x'] = round(nx_start(c) + gx + (w['x'] - m['x']), 2)
                         nt['y'] = round(p['y'] + (j + p['cum']) * pitch + (w['y'] - m['y']) + shift[b], 2)
                         v['text'].append(nt); moved.append((w, nt))
+    # pictures keep their size (shrunk only if wider than their column); text must not sit beside them
+    for pc in pics:
+        c = col_of(pc['x'])
+        if fixed[c]:
+            return _scaled(u, W, 'picture in a narrow column')
+        b = next((i for i in range(nb) if bounds[i] <= pc['y'] + 1 < bounds[i + 1]), nb - 1)
+        if any(t['x'] < pc['x'] + pc['w'] and t['x'] + t['w'] > pc['x'] and t['y'] > pc['y'] - 2 and t['y'] - t['s'] < pc['y'] + pc['h']
+               for (bb, cc), ws in cells.items() if cc == c for t in ws):
+            return _scaled(u, W, 'picture with text beside it')
+        rel = pc['x'] - cx0(c)
+        room = new_w[c] - rel - 6
+        kk = min(1.0, room / pc['w']) if room > 0 else 0
+        if kk < 0.4:
+            return _scaled(u, W, 'picture too wide')
+        ny = pc['y'] + shift[b] + pitch * cum_above(b, pc['y'])
+        if pc['kind'] == 'image':
+            v.setdefault('images', []).append(dict(pc['ref'], x=round(nx_start(c) + rel, 2), y=round(ny, 2), w=round(pc['w'] * kk, 2), h=round(pc['h'] * kk, 2)))
+        else:
+            v['figs'].append(dict(pc['ref'], x=round(nx_start(c) + rel, 2), y=round(ny, 2), k=round(kk, 4)))
     # rules, redrawn at the new size
     T = 0.48
     def rect(x0, y0, x1, y1):
         return {'d': f'M{x0:.2f} {y0:.2f}L{x1:.2f} {y0:.2f}L{x1:.2f} {y1:.2f}L{x0:.2f} {y1:.2f}Z', 'fill': rfill}
     bnew = [b0 + shift[i] for i, b0 in enumerate(bounds[:-1])] + [v['h']]
-    left = min([r[0] for r in hs] + [edges[0]])
-    xr = W - (Wo - max([r[2] for r in hs] + [edges[-1]]))          # the table's right end (rules stop at the right border)
+    left = min([0.0] + [r[0] for r in hs if r[0] > -5])
+    xr = min(W, W - (Wo - max([r[2] for r in hs] + [edges[-1]])))          # the table's right end (rules stop at the right border)
     for i in range(nb):
         y0 = 0 if i == 0 else bnew[i] + T
         for e in new_edges + outer:
@@ -294,7 +357,7 @@ def portrait_unit(u, W=523.0):
         if not under or below:
             return _scaled(u, W, 'fraction bar or unknown mark')
         for o, n in under:
-            segs[round(n['y'] - o['y'] + r[1], 1) if False else (round(n['y'] / 2), round(r[3] - r[1], 2), round(r[1] - o['y'], 2))].append([n['x'], n['x'] + o['w'], n['y'] + (r[1] - o['y']), r[3] - r[1]])
+            segs[(round(n['y'] / 2), round(r[3] - r[1], 2), round(r[1] - o['y'], 2))].append([n['x'], n['x'] + o['w'], n['y'] + (r[1] - o['y']), r[3] - r[1]])
     for sg in segs.values():
         sg.sort()
         cur = sg[0][:]
@@ -304,7 +367,8 @@ def portrait_unit(u, W=523.0):
             else:
                 v['lines'].append(rect(cur[0], cur[2], cur[1], cur[2] + cur[3])); cur = a[:]
         v['lines'].append(rect(cur[0], cur[2], cur[1], cur[2] + cur[3]))
-    return v, {'mode': 'wrap', 'why': '', 'extra_lines': int(sum(band_extra)), 'cols': ncol, 'bands': nb}
+    return v, {'mode': 'wrap', 'why': '', 'extra_lines': int(sum(band_extra)), 'cols': ncol, 'bands': nb,
+               'edges': edges, 'new_edges': new_edges, 'new_w': new_w, 'old_w': old_w}
 
 
 def check(u, v):
@@ -316,3 +380,51 @@ def check(u, v):
     if over:
         problems.append('overflow: ' + ' '.join(over[:4]))
     return problems
+
+
+MIN_LABEL, MIN_MARKS, PAD = 40.0, 34.0, 12.0
+
+
+def column_widths(units, W=523.0):
+    """Widths of the fixed columns (question label, marks ...) for ONE mark scheme: the widest content of any of its rows
+    + 12 pt padding (label >= 40 pt, other fixed columns >= 34 pt). Columns without text keep their printed width."""
+    need = collections.defaultdict(float)
+    old = {}
+    for u in units:
+        if u['w'] <= W + 2:
+            continue
+        _, info = portrait_unit(u, W, probe=True)
+        if not info.get('probe'):
+            continue
+        for key, wd in info['probe'].items():
+            need[key] = max(need[key], wd)
+            old[key] = info['old_w'][key[1]]
+    out = {}
+    for (ncol, c), wd in need.items():
+        out[(ncol, c)] = old[(ncol, c)] if wd < 1 and old[(ncol, c)] < 20 else max(MIN_LABEL if c == 0 else MIN_MARKS, wd + PAD)
+    return out
+
+
+def portrait_header(hdr, info, W=523.0, short_q=True):
+    """Header row (Question | Answer | Marks ...) drawn once at the top, in the same columns as the rows (info from portrait_unit)."""
+    edges, new_edges, new_w = info['edges'], info['new_edges'], info['new_w']
+    def col_of(x): return sum(1 for e in edges if e <= x + 0.5)
+    nstart = lambda c: 0 if c == 0 else new_edges[c - 1]
+    v = {'src': hdr['src'], 'w': round(W, 2), 'h': hdr['h'], 'text': [], 'lines': [], 'figs': [], 'glyphs': []}
+    v['lines'].append({'d': f'M0 0L{W:.2f} 0L{W:.2f} {hdr["h"] - 0.5:.2f}L0 {hdr["h"] - 0.5:.2f}Z', 'fill': '#f2f2f2'})
+    v['lines'].append({'d': f'M0 {hdr["h"] - 0.48:.2f}L{W:.2f} {hdr["h"] - 0.48:.2f}L{W:.2f} {hdr["h"]:.2f}L0 {hdr["h"]:.2f}Z', 'fill': '#000000'})
+    bycol = collections.defaultdict(list)
+    for t in sorted(hdr['text'], key=lambda t: t['x']):
+        bycol[col_of(t['x'] + t['w'] / 2)].append(dict(t))
+    for c, ws in bycol.items():
+        if c >= len(new_w):
+            continue
+        for t in ws:
+            if short_q and c == 0 and t['t'] == 'Question' and new_w[0] < t['w'] + 8:
+                t['t'], t['w'] = 'Q', round(t['s'] * 0.78, 2)
+        total = ws[-1]['x'] + ws[-1]['w'] - ws[0]['x']
+        x0 = nstart(c) + (new_w[c] - total) / 2
+        for t in ws:
+            t['x'] = round(x0 + (t['x'] - ws[0]['x']), 2)
+            v['text'].append(t)
+    return v
