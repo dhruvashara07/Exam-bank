@@ -170,3 +170,7 @@ One line per run: date, pending papers checked/approved, feedback handled, fixes
   (3 in 2013, 3 in 2014, 22 in 2015-2025); all 67 new figure crops looked at (contact sheet + store SVGs in Chromium). Only those 28
   papers changed in bank/ (figures added, caption line left out of question text); golden 0 changed cuts; checks 0 blocking.
   2013 Claude check not continued this run (raw PDF fetch took 9 min). Next: rest of round 4 answers, ON 13 q34 crop, 2013 overviews.
+
+## Own consistent MS layout, year by year (2026-11-03)
+- Done: MS cut widened to the real table edge (ms.py); golden 0 changed cuts.
+- Next: re-run 2016 MJ, build portrait rows with own frame + Total row, review page + tracker, Dhruv ticks year, then 2016 ON.

@@ -68,3 +68,12 @@ Built: widths by content (per mark scheme, same for all rows), label centred / m
 unspaced words ("30 s"). Result: 97.5% of 9,007 rows re-wrapped, 2.5% scale-to-fit, 0 word-check problems.
 Open: his OK on the new sample pictures; then store `layout_p` per row (+ header) in store.build, verify, year by year from 2016 MJ. The v5 rebuild of all years and
 the other open items (see earlier entries) still wait for approval; hourly task still OFF, stale lock untouched.
+
+## 2026-11-03 ~15:00 IST — cropped table (2016 MJ 41 q10), own consistent layout, year by year
+- Dhruv saw picture 4 (diode row): right/left borders cut, "Total" without number.
+- Cause: MS cut box was always x 58 – 784 (page width − 58). Some papers print the table wider (2016 MJ 41/42/62/63: words to x 791–798, border to 803), so marks digits, totals and the right border were lost in the STORED data (not a portrait problem). 2016 MJ papers 31–33, 43, 51–53, 61 fit. Other years not yet measured.
+- Fix (pipeline/ms.py): cut right edge = max(784, real text/vertical-rule extent + 3). `golden.py check`: 0 changed cuts. Needs re-run of the year to refresh stored rows.
+- Dhruv: not strict about the original layout; wants ONE consistent layout of our own.
+- His answers: Total = own last row of the question's table; frame = full black frame (left/right borders, lines between rows), same every year; first year = 2016 MJ; review = review page + tracker, next year only after he ticks the year.
+- Plan per year: (1) re-cut with the wider box, (2) rebuild rows in portrait with own frame + Total row, (3) check (all words, marks total, nothing past edge), (4) put on review page + tracker, (5) Dhruv ticks, (6) next year.
+- Not touched: hourly task stays OFF; stale lock not cleared.
