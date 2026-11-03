@@ -24,6 +24,7 @@ from store_text import family, unpua, hexcol, span_len, odd
 from store_units import glyph_styles, char_styles, tp, drawing_d, nodes, scale_note
 import store_options as OPT
 import store_v5 as V5
+import ms_layout as ML
 
 OUT = os.path.join(paths.ROOT, 'out', 'store')          # scratch: verify renders, print helpers
 PT2MM = 25.4 / 72
@@ -408,6 +409,14 @@ def build(pid):
             rec['tables'] = tables
         if scan:
             rec['ms_scan'] = scan                 # the mark scheme exists only as scanned pages (Nov 2002)
+        if not meta.get('is_mcq') and not scan:
+            try:                                  # portrait mark scheme in our own frame (docs/MS_TABLE_RULES.md)
+                mp = ML.build(rec, store)
+                if mp:
+                    rec['ms_p'] = {'w': mp['w'], 'h': mp['h'], 'rows': mp['rows'], 'modes': mp['modes'], 'info': mp['info'], 'has_header': mp['has_header'],
+                                   'problems': [list(x) for x in mp['problems']]}
+            except Exception as e:
+                print(f"  {q['id']}: portrait mark scheme failed: {e}", file=sys.stderr)
         json.dump(rec, open(os.path.join(store, f"q{q['number']:02d}.json"), 'w'), ensure_ascii=False, separators=(',', ':'))
     # the mark-scheme table header row (Question | Answer | Marks), stored once per paper
     for pno in range(1, len(mdoc)):
@@ -423,6 +432,10 @@ def build(pid):
                 hdr = unit(mdoc, pno, fitz.Rect(first.x0, top, first.x1, first.y0), [], styles(mdoc, 'ms', pno, mstyle), store, 'ms')
                 json.dump(hdr, open(os.path.join(store, 'ms_header.json'), 'w'), separators=(',', ':'))
                 break
+    for qf in glob.glob(os.path.join(store, 'q*.json')):         # the header file exists only now: add the header row
+        rec = json.load(open(qf))
+        if ML.attach_header(rec, store):
+            json.dump(rec, open(qf, 'w'), ensure_ascii=False, separators=(',', ':'))
     size = lambda pat: sum(os.path.getsize(f) for f in glob.glob(os.path.join(store, pat)))
     js = b''.join(open(f, 'rb').read() for f in glob.glob(os.path.join(store, 'q*.json')))
     print(f'{pid}: {len(glob.glob(os.path.join(store, "q*.json")))} question files {size("q*.json") // 1024} KB '
@@ -915,9 +928,9 @@ def review_svgs(qid, tmp):
     figs = {f['id']: f for f in q['figures']}
     os.makedirs(tmp, exist_ok=True)
     out = {'q': stacked_svg([u for p in q['parts'] for u in p['layout']], store, figs, os.path.join(tmp, qid + '_q.svg'))}
-    ms = [u for p in q['parts'] for r in p['ms'] for u in r['layout']]
+    ms = q['ms_p']['rows'] if q.get('ms_p') else [u for p in q['parts'] for r in p['ms'] for u in r['layout']]
     if ms:
-        out['ms'] = stacked_svg(ms, store, figs, os.path.join(tmp, qid + '_ms.svg'))
+        out['ms'] = stacked_svg(ms, store, figs, os.path.join(tmp, qid + '_ms.svg'), gap=0 if q.get('ms_p') else 6)
     out['figs'] = [os.path.join(store, 'figures', f['file']) for f in q['figures']]
     out['options'] = q.get('options', [])
     return out

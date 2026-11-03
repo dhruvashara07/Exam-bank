@@ -173,4 +173,5 @@ One line per run: date, pending papers checked/approved, feedback handled, fixes
 
 ## Own consistent MS layout, year by year (2026-11-03)
 - Done: MS cut widened to the real table edge (ms.py); golden 0 changed cuts.
-- Next: re-run 2016 MJ, build portrait rows with own frame + Total row, review page + tracker, Dhruv ticks year, then 2016 ON.
+- Done: 2016 MJ re-run, `ms_layout.py` (own frame, header once, Total row), `ms_p` stored, review round 5 published (41 items).
+- Next: Dhruv reviews round 5; fix his findings; Claude check; tracker/approve; then 2016 ON (one year at a time).

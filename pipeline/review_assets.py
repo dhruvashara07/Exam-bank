@@ -149,7 +149,7 @@ def render_items(out_dir, items, reasons, byid=None):
         save('q.jpg', svg_img(sv['q']))
         save('orig.jpg', original(q, qp_path))
         if 'ms' in sv:
-            save('ms.jpg', svg_img(sv['ms'], 72), width=1000)
+            save('ms.jpg', svg_img(sv['ms'], 110), width=1000)
         imgs_f = [fig_img(f) for f in sv['figs']]
         if imgs_f:
             save('figs.jpg', stack(imgs_f, sep=(230, 160, 0), gap=6))

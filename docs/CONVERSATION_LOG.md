@@ -77,3 +77,10 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - His answers: Total = own last row of the question's table; frame = full black frame (left/right borders, lines between rows), same every year; first year = 2016 MJ; review = review page + tracker, next year only after he ticks the year.
 - Plan per year: (1) re-cut with the wider box, (2) rebuild rows in portrait with own frame + Total row, (3) check (all words, marks total, nothing past edge), (4) put on review page + tracker, (5) Dhruv ticks, (6) next year.
 - Not touched: hourly task stays OFF; stale lock not cleared.
+
+## 2026-11-03 ~16:30 IST — Year 1 (2016 MJ) built in the new layout, review round 5
+- Dhruv: "do 1 year, we check at the end, give me the review link"; new qp + ms layout (figure labels as text, portrait MS).
+- Done for 2016 MJ (18 papers): re-run with the wider MS cut (ms.py), v5 store (captions as text), NEW `pipeline/ms_layout.py`: portrait MS per question with our own frame (black left/right border, line under every row), header once (Q | Answer | Marks, "Mark" -> "Marks"), "Total" as its own last row (Total left of the marks column, number under Marks), stray narrow columns/borders dropped. Stored as `ms_p` in each question JSON (store.build; header attached after the header file exists). Review pictures use `ms_p`.
+- 78 non-MCQ questions: 295 rows wrapped, 18 rows scaled (fallback, e.g. 41 q01 one row), 0 word-check problems.
+- Review round 5 (41 items, 5 flagged) published on the review page; round 4 (2014) was replaced. Needs: Dhruv's look, then Claude check, then tracker/approval, then 2016 ON.
+- Known: a row scaled to fit looks smaller inside a wrapped table (fallback); tiny border nub at the right edge on the last row before Total.
