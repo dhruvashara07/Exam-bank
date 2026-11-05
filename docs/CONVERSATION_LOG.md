@@ -177,3 +177,8 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   15 'stored differs' (photos/anti-aliasing, checked the two biggest side by side).
 - Round 13 "2016-2019 final" on the one review page: 5 items (2017 ON 41 q8 table, 2019 MJ 62 q4 formula, 3 samples of the new fraction/table rows).
   Rounds 8-11 taken off the page (r11 = 2020, unanswered, to be redone under the new plan).
+- 21:46 Round 13: all 5 wrong. Dhruv: MS rows with fractions/tables must use the NORMAL font size and grow taller ("do that for others also");
+  make a guideline; inner tables recreated at that size; 2017 ON 41 q8 rows messed/repeated; 2019 MJ 62 q4 formula as text, not image.
+  Fixed in the pipeline (docs/MS_TABLE_RULES.md section 9): band-by-band cell rows at normal size, narrower inner-table columns,
+  re-wrap of too-wide text bands, MS rows in printed order, heading rows, grand-total cell dropped, formula rows beside a figure cut out of it.
+  2016-2019 rebuilt; audit clean (only kinds I clear). Round 14 (7 items: his 5 + 2 of the same kind) on the page, round 13 closed and removed.
