@@ -85,3 +85,14 @@ So about 35 pt of the 523 pt page is wasted by the two narrow columns; the answe
 - Cut: the mark-scheme row cut follows the real table edges left and right (ms.py), so nothing printed is lost.
 - Ignored when recognising the table: the sliver of the grey header row above the first row on a page, white cell backgrounds.
 - MCQ options that are separate drawings: the printed letter A–D is not part of the picture (the page shows the letter).
+
+## 9. Rows the re-wrap cannot handle (Dhruv, round 13, 2026-11-05)
+Fractions, inner tables, drawn symbols: the row is laid out cell by cell, but it must look like every other row.
+- Font size stays the normal size of the mark scheme (never shrunk); the row grows taller instead.
+- The answer cell is handled band by band (its sub-rows): sub-row lines run across Answer (and Marks where printed), never past the frame.
+- An inner table is redrawn at the normal font size with narrower columns (each column at least as wide as its content).
+- A text-only band that is too wide is re-wrapped into the Answer column.
+- Only a band with a drawing/fraction that still cannot fit is shrunk (none left in 2016-2019).
+- Rows keep the mark scheme's printed order (2017 ON 41 Q8: 8 Hydroelectric (a)(b)(c), 8 Tidal flow (a)(b)(c) ...); heading rows like
+  "8  Hydroelectric" put the number in the Q column and the text in the Answer column.
+- A formula printed in the question text beside a figure (2019 MJ 62 Q4 "The equation is: f = uv/(u+v)") is text, never part of the figure.

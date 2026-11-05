@@ -294,8 +294,22 @@ def fit_crop(pg, b, max_grow=40.0):
                     b = nb; changed = True
         if not changed:
             break
-    ink = [d['rect'] for d in pg.get_drawings() if d['rect'].intersects(b) and d['rect'].width < 0.9 * pg.rect.width]
+    def text_bar(r):                                   # a fraction bar inside a text row ('f = uv / (u + v)'): text, not drawing
+        return r.height < 1.2 and any(l.y0 - 3 <= r.y0 <= l.y1 + 3 and r.x0 < l.x1 and r.x1 > l.x0 for l in lines)
+    ink = [d['rect'] for d in pg.get_drawings() if d['rect'].intersects(b) and d['rect'].width < 0.9 * pg.rect.width and not text_bar(d['rect'])]
     top, bot = (min(r.y0 for r in ink), max(r.y1 for r in ink)) if ink else (b.y0, b.y1)
+    for l in lines:                                    # the rest of a text row whose start lies outside the crop (2019 MJ 62 q4:
+        if (l & b).get_area() < 0.15 * max(l.get_area(), 1):   # 'The equation is:' outside, 'f = uv/(u+v)' inside) is text too
+            continue
+        if not (l.y1 <= top + 1 or l.y0 >= bot - 1):
+            continue
+        row = any(not o.intersects(b) and min(o.y1, l.y1) - max(o.y0, l.y0) > 0.4 * min(o.height, l.height) and 0 <= b.x0 - o.x1 < 40
+                  and len([w for w in words_of(o) if REALW.fullmatch(w[4])]) >= 2 for o in lines)
+        if row:
+            if (l.y0 + l.y1) / 2 < (top + bot) / 2:
+                b.y0 = max(b.y0, l.y1 + 0.5)
+            else:
+                b.y1 = min(b.y1, l.y0 - 0.5)
     for l in sorted(lines, key=lambda l: l.y0):
         ov = (l & b).get_area() / max(l.get_area(), 1)
         if ov <= 0.15 or not sentence(words_of(l), l):

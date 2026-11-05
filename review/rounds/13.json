@@ -11,7 +11,7 @@
   "0625_2017MJ_32",
   "0625_2017ON_42"
  ],
- "status": "open",
+ "status": "closed",
  "items": [
   {
    "id": "0625_2017MJ_32_q11",
@@ -49,5 +49,28 @@
     "New: fractions in the mark scheme (5(b), 5(c)) now keep their fraction line, so the row is drawn as a picture at smaller size. OK?"
    ]
   }
- ]
+ ],
+ "answers": {
+  "0625_2017MJ_32_q11": {
+   "verdict": "wrong",
+   "note": "wrong: normal font size, row grows"
+  },
+  "0625_2017ON_41_q08": {
+   "verdict": "wrong",
+   "note": "wrong: first 3 rows messed up, repeated 8(a)/8(b)/8(c)"
+  },
+  "0625_2017ON_42_q09": {
+   "verdict": "wrong",
+   "note": "wrong: normal size; last 3 row lines overflow; recreate table at that size"
+  },
+  "0625_2019MJ_62_q04": {
+   "verdict": "wrong",
+   "note": "wrong: formula as text, not in image"
+  },
+  "0625_2019ON_43_q05": {
+   "verdict": "wrong",
+   "note": "wrong: regular font size, rows grow; for others too"
+  }
+ },
+ "closed": "2026-11-05T16:23Z"
 }

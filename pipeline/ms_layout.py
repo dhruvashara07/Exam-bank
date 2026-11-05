@@ -245,77 +245,227 @@ def _cell_fallback(u, first):
         if hy[y] > 0.9 * u['w'] and 4 < y < h - 4 and ink_y and max(ink_y) < y:
             h = float(y); break
     full = sorted(x for x, c in cov.items() if c >= 0.6 * h and 20 < x < u['w'] - 8)
-    if len(full) < 2:
-        return None
-    e1, e2 = full[0], full[-1]                        # label | answer ... answer | marks
+    cx_ = [t['x'] + t['w'] / 2 for t in u['text']]
+    while len(full) >= 2 and not any(c > full[-1] for c in cx_):
+        full.pop()                                    # the table's own right border (2016 MJ 43: 9 pt inside the cut)
+    outer = [x for x in cov if x <= 20 or x >= u['w'] - 8 or (full and x > full[-1] + 2)]
+    if len(full) >= 2:                                # the paper's grand total in a grey cell under the last question (2016 ON 43 q11)
+        e2_ = full[-1]
+        ink2 = [t['y'] for t in u['text'] if not any(abs(t['y'] - y) < 2.5 for y in tot_y)
+                and not (t['x'] + t['w'] / 2 > e2_ and re.fullmatch(r'\d+', t['t']))] + \
+               [f['y'] + f.get('h', 0) for k_ in ('figs', 'images', 'glyphs') for f in u.get(k_) or []]
+        for y in sorted(hy):
+            if hy[y] > 0.6 * u['w'] and 4 < y < h - 4 and ink2 and max(ink2) < y:
+                h = float(y); break
     if first:
         nw = [w for w in first['new_w'] if w >= 20]
         L = first['new_edges'][0]; M = first['new_edges'][len(nw) - 2]
     else:
         L, M = 44.0, W - 44.0
-    k = min(1.0, (M - L - 10) / max(e2 - e1 - 10, 1))
-    v = {'src': u['src'], 'w': W, 'h': 0, 'text': [], 'lines': [], 'figs': [], 'glyphs': [], 'cell_scaled': round(k, 3)}
-    lines_l, lines_m = {}, {}
-    for t in u['text']:
-        c = t['x'] + t['w'] / 2
-        if c < e1:
-            lines_l.setdefault(round(t['y']), []).append(t)
-        elif c > e2:
-            lines_m.setdefault(round(t['y']), []).append(t)
-    def span(ws):
-        return min(w['x'] for w in ws), max(w['x'] + w['w'] for w in ws)
-    for t in u['text']:
-        c = t['x'] + t['w'] / 2
-        n = dict(t)
-        n['y'] = round(t['y'] * k + (1 - k) * 4, 2)
-        if c < e1:                                    # label: its line centred in our label column, normal size
-            a, b = span(lines_l[round(t['y'])])
-            n['x'] = round((L - (b - a)) / 2 + (t['x'] - a), 2)
-        elif c > e2:                                  # marks: its line right-aligned in our marks column, normal size
-            a, b = span(lines_m[round(t['y'])])
-            n['x'] = round(W - 6 - (b - a) + (t['x'] - a), 2)
-        else:
-            n['x'] = round(L + 5 + (t['x'] - e1) * k, 2); n['w'] = round(t['w'] * k, 2)
-            n['s'] = round(t['s'] * k, 2)
-            n['y'] = round(t['y'] * k, 2)
-        v['text'].append(n)
-    def mx(x):
-        return L + 5 + (x - e1) * k
+    has_marks = True
+    if len(full) >= 2:
+        e1, e2 = full[0], full[-1]                    # label | answer ... answer | marks
+    elif first and u['text'] and not u.get('figs') and not u.get('images') and not u.get('glyphs') and len({round(t['y']) for t in u['text']}) == 1:
+        return _heading_row(u, L)                     # a heading row across answer and marks ('8  Hydroelectric', 2017 ON 41)
+    else:
+        return None
+    return _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr)
+
+
+def _heading_row(u, L):
+    ws = sorted(u['text'], key=lambda t: t['x'])
+    lab = ws[0] if re.fullmatch(r'\d{1,2}(\([a-z]+\))*(\([ivx]+\))*', ws[0]['t']) else None
+    rest = [t for t in ws if t is not lab]
+    v = {'src': u['src'], 'w': W, 'h': 20.0, 'text': [], 'lines': [_rect(L - 0.3, 0, L + 0.3, 20.0)], 'figs': [], 'glyphs': [], 'heading': True}
+    if lab is not None:
+        n = dict(lab); n['x'] = round((L - lab['w']) / 2, 2); n['y'] = 14.0; v['text'].append(n)
+    if rest:
+        x0 = rest[0]['x']
+        for t in rest:
+            n = dict(t); n['x'] = round(L + 5 + (t['x'] - x0), 2); n['y'] = 14.0; v['text'].append(n)
+    return v
+
+
+def _map_path(d, fx, fy):
+    out = []
+    for cmd, args in re.findall(r'([A-Za-z])([^A-Za-z]*)', d):
+        n = [float(x) for x in MP.NUM.findall(args)]
+        if cmd in 'MLCSQT':
+            n = [fx(a) if i % 2 == 0 else fy(a) for i, a in enumerate(n)]
+        elif cmd == 'H':
+            n = [fx(a) for a in n]
+        elif cmd == 'V':
+            n = [fy(a) for a in n]
+        out.append(cmd + ' '.join(f'{a:.2f}' for a in n))
+    return ''.join(out)
+
+
+def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr):
+    """Dhruv 2026-11-05 (round 13): rows drawn cell-wise keep the NORMAL font size; the row grows instead.
+    The answer cell is laid out band by band (bands = its sub-rows): an inner table gets narrower columns to fit its
+    content; a text-only band that is too wide is re-wrapped; only a band with fractions/drawings that still does not
+    fit is shrunk (just that band)."""
+    T_ = 0.6
+    A = M - L - 10                                    # room in our answer column
+    v = {'src': u['src'], 'w': W, 'h': 0, 'text': [], 'lines': [], 'figs': [], 'glyphs': [], 'cell_scaled': 1.0}
+    cy = lambda t: t['y'] - 0.35 * t.get('s', 10)
+    ans_t = [t for t in u['text'] if e1 < t['x'] + t['w'] / 2 < e2 and t['y'] < h - 1]
+    lab_t = [t for t in u['text'] if t['x'] + t['w'] / 2 < e1 and t['y'] < h - 1]
+    mrk_t = [t for t in u['text'] if t['x'] + t['w'] / 2 > e2 and t['y'] < h - 1]
+    ans_l = []
     for l in u['lines']:
         b = MP._bbox(l['d'])
         if b is None:
+            bb = [MP._bbox(sub) for sub in re.findall(r'M[^M]+', l['d'])]
+            b = None if any(x is None for x in bb) or not bb else (min(x[0] for x in bb), min(x[1] for x in bb), max(x[2] for x in bb), max(x[3] for x in bb))
+        if b is None:                                 # a curve (brace, arc): keep it, place it by its first point
+            pts = [float(x) for x in MP.NUM.findall(l['d'])[:2]]
+            if len(pts) == 2 and e1 < pts[0] < e2 and pts[1] < h:
+                ans_l.append((l, (pts[0], pts[1], pts[0], pts[1]))); continue
             continue
-        if b[2] - b[0] < 1.3 and any(abs((b[0] + b[2]) / 2 - e) < 2 for e in [e1, e2] + [x for x in cov if x <= 20]):  # inner-table rules stay (2017 ON 42 q9(b))
+        if b[2] - b[0] < 1.3 and any(abs((b[0] + b[2]) / 2 - e) < 2 for e in [e1, e2] + outer):
             continue                                  # a column rule: ours are drawn instead
-        if b[0] < e1 - 2 or b[2] > e2 + 2:
-            continue                                  # rules outside the answer cell (row separators): ours instead
-        if b[1] >= h - 1.5:
-            continue                                  # below the row (the empty band cut off above)
+        if b[0] < e1 - 2 or b[2] > e2 + 2 or b[1] >= h - 1.5:
+            continue
         if b[3] - b[1] < 1.3 and (b[1] <= 1.5 or b[3] >= h - 1.5):
-            continue                                  # the row's own top/bottom border inside the answer cell: ours instead
-        d = []
-        for cmd, args in re.findall(r'([A-Za-z])([^A-Za-z]*)', l['d']):
-            n = [float(x) for x in MP.NUM.findall(args)]
-            if cmd in 'MLCSQT':
-                n = [mx(a) if i % 2 == 0 else a * k for i, a in enumerate(n)]
-            elif cmd == 'H':
-                n = [mx(a) for a in n]
-            elif cmd == 'V':
-                n = [a * k for a in n]
-            d.append(cmd + ' '.join(f'{a:.2f}' for a in n))
-        v['lines'].append({**l, 'd': ''.join(d)})
-    for key in ('figs', 'images', 'glyphs'):
-        for f in u.get(key) or []:
-            g = dict(f); g['x'] = round(mx(f['x']), 2); g['y'] = round(f['y'] * k, 2)
-            if 'w' in g: g['w'] = round(g['w'] * k, 2)
-            if 'h' in g: g['h'] = round(g['h'] * k, 2)
-            if key == 'figs': g['k'] = round(f.get('k', 1) * k, 4)
-            v.setdefault(key, []).append(g)
-    if h < u['h']:                                    # the band was cut: its printed Total goes too (ours is drawn instead)
-        v['text'] = [t for t in v['text'] if not any(abs(t['y'] - (y * k)) < 2.5 or abs(t['y'] - round(y * k + (1 - k) * 4, 2)) < 2.5 for y in tot_y)]
-    hh = max([t['y'] + 6 for t in v['text']] + [h * k + 2])
-    v['h'] = round(hh, 2)
-    v['lines'] += [_rect(L - 0.3, 0, L + 0.3, v['h']), _rect(M - 0.3, 0, M + 0.3, v['h'])]
+            continue                                  # the row's own top/bottom border: ours instead
+        ans_l.append((l, b))
+    seps = MP._cluster([(b[1] + b[3]) / 2 for l, b in ans_l if b[3] - b[1] < 1.3 and b[2] - b[0] >= 0.85 * (e2 - e1)])
+    sep_m = {y: any(r[3] - r[1] < 1.3 and abs((r[1] + r[3]) / 2 - y) < 1.5 and r[2] > e2 + 5 for r in rr) for y in seps}
+    ans_l = [(l, b) for l, b in ans_l if not (b[3] - b[1] < 1.3 and b[2] - b[0] >= 0.85 * (e2 - e1))]
+    pics = [(key, f) for key in ('figs', 'images', 'glyphs') for f in (u.get(key) or [])]
+    bounds = [0.0] + seps + [h]
+    lines_m = {}
+    for t in mrk_t:
+        lines_m.setdefault(round(t['y']), []).append(t)
+    lines_l = {}
+    for t in lab_t:
+        lines_l.setdefault(round(t['y']), []).append(t)
+    span = lambda ws: (min(w['x'] for w in ws), max(w['x'] + w['w'] for w in ws))
+    cum, sep_new, kmin = 0.0, [], 1.0
+    for i in range(len(bounds) - 1):
+        b0, b1 = bounds[i], bounds[i + 1]
+        inb = lambda y: b0 <= y < b1 or (i == len(bounds) - 2 and y >= b1)
+        TT = [t for t in ans_t if inb(cy(t))]
+        LL = [(l, b) for l, b in ans_l if inb((b[1] + b[3]) / 2)]
+        PP = [(k_, f) for k_, f in pics if inb(f['y'] + f.get('h', 0) / 2)]
+        # an inner table: narrower columns, just wide enough for their content
+        vx = MP._cluster([(b[0] + b[2]) / 2 for l, b in LL if b[2] - b[0] < 1.3 and b[3] - b[1] >= 6])
+        cols, chunk = [], {}
+        if len(vx) >= 2:
+            needs = []
+            for a_, c_ in zip(vx, vx[1:]):
+                ws = [t for t in TT if a_ < t['x'] + t['w'] / 2 < c_]
+                byl = {}
+                for t in ws:
+                    byl.setdefault(round(t['y']), []).append(t)
+                wmax = 0.0
+                for g in byl.values():                # a cell's line ('(output of AND)') moves as one piece
+                    ga, gb = min(t['x'] for t in g), max(t['x'] + t['w'] for t in g)
+                    for t in g:
+                        chunk[id(t)] = (ga, gb)
+                    wmax = max(wmax, gb - ga)
+                needs.append((a_, c_, wmax + 12))
+            tw_old = vx[-1] - vx[0]
+            room = A - (vx[0] - e1) - max(0.0, max([t['x'] + t['w'] for t in TT] + [vx[-1]]) - vx[-1]) - 4
+            f = 1.0
+            if tw_old > room:                         # shrink the columns only as much as needed, never below their content
+                lo, hi = 0.0, 1.0
+                for _ in range(30):
+                    m_ = (lo + hi) / 2
+                    if sum(max(nd, (c_ - a_) * m_) for a_, c_, nd in needs) > room: hi = m_
+                    else: lo = m_
+                f = lo
+            cols = [(a_, c_, min(c_ - a_, max(nd, (c_ - a_) * f))) for a_, c_, nd in needs]
+        def fxc(x, cols=cols):
+            if not cols or x <= cols[0][0]:
+                return x
+            na = cols[0][0]
+            for a_, c_, nwid in cols:
+                if x <= c_:
+                    return na + (x - a_) * nwid / (c_ - a_)
+                na += nwid
+            return x - (cols[-1][1] - na)
+        def tx(t, cols=cols):                         # a table cell's text keeps its alignment inside the narrower column
+            c = t['x'] + t['w'] / 2
+            ga, gb = chunk.get(id(t), (t['x'], t['x'] + t['w']))
+            gc = (ga + gb) / 2
+            for j, (a_, c_, nwid) in enumerate(cols):
+                if a_ < c < c_:
+                    na = fxc(a_); nc = fxc(gc)
+                    nx = max(na + 3, min(nc - (gb - ga) / 2, na + nwid - (gb - ga) - 3))
+                    return nx + (t['x'] - ga)
+            return fxc(t['x'])
+        R = max([tx(t) + t['w'] for t in TT] + [fxc(b[2]) for l, b in LL] + [fxc(f['x']) + f.get('w', 0) for k_, f in PP] + [e1])
+        need = R - e1
+        X = lambda x: L + 5 + (x - e1)
+        decor = [(l, b) for l, b in LL]
+        under = {}
+        for l, b in decor:                            # underlines: they move with their word
+            o = next((t for t in TT if 0.3 <= b[1] - t['y'] <= 5 and b[0] < t['x'] + t['w'] and b[2] > t['x'] and b[3] - b[1] < 1.3), None)
+            under[id(l)] = o
+        pure = not PP and not cols and all(under[id(l)] is not None for l, b in decor)
+        kb, moves, extra = 1.0, {}, 0.0
+        if need > A + 0.5 and pure and TT:            # re-wrap the text lines of this band
+            rows_ = collections.OrderedDict()
+            for t in sorted(TT, key=lambda t: (round(t['y']), t['x'])):
+                rows_.setdefault(round(t['y']), []).append(t)
+            for y_, ws in rows_.items():
+                start = X(ws[0]['x']); dx = 0.0; lh = max(t.get('s', 10) for t in ws) * 1.25
+                for t in ws:
+                    if X(t['x']) + dx + t['w'] > L + 5 + A and X(t['x']) + dx > start + 1:
+                        dx = start - X(t['x']); extra += lh
+                    moves[id(t)] = (dx, extra)
+                # following lines move down by the extra lines so far (applied via moves of later words)
+            for t in TT:
+                if id(t) not in moves:
+                    moves[id(t)] = (0.0, 0.0)
+        elif need > A + 0.5:
+            kb = A / need
+        kmin = min(kmin, kb)
+        def fy(y, dy=0.0):
+            return cum + (y - b0) * kb + dy
+        for t in TT:
+            n = dict(t); dx, dy = moves.get(id(t), (0.0, 0.0))
+            n['x'] = round(L + 5 + (tx(t) - e1) * kb + dx, 2); n['y'] = round(fy(t['y'], dy), 2)
+            if kb < 1:
+                n['s'] = round(t['s'] * kb, 2); n['w'] = round(t['w'] * kb, 2)
+            v['text'].append(n)
+        for l, b in LL:
+            o = under.get(id(l)); dx, dy = moves.get(id(o), (0.0, 0.0)) if o is not None else (0.0, 0.0)
+            v['lines'].append({**l, 'd': _map_path(l['d'], lambda x: L + 5 + (fxc(x) - e1) * kb + dx, lambda y: fy(y, dy))})
+        for k_, f in PP:
+            g = dict(f); g['x'] = round(L + 5 + (fxc(f['x']) - e1) * kb, 2); g['y'] = round(fy(f['y']), 2)
+            if kb < 1:
+                if 'w' in g: g['w'] = round(g['w'] * kb, 2)
+                if 'h' in g: g['h'] = round(g['h'] * kb, 2)
+                if k_ == 'figs': g['k'] = round(f.get('k', 1) * kb, 4)
+            v.setdefault(k_, []).append(g)
+        for y_, ws in lines_m.items():                # marks: right-aligned in our marks column, at the band's top offset
+            if not inb(y_ - 3):
+                continue
+            a_, c_ = span(ws)
+            for t in ws:
+                n = dict(t); n['x'] = round(W - 6 - (c_ - a_) + (t['x'] - a_), 2); n['y'] = round(cum + (t['y'] - b0), 2)
+                v['text'].append(n)
+        for y_, ws in lines_l.items():                # question label: centred in our label column
+            if not inb(y_ - 3):
+                continue
+            a_, c_ = span(ws)
+            for t in ws:
+                n = dict(t); n['x'] = round((L - (c_ - a_)) / 2 + (t['x'] - a_), 2); n['y'] = round(cum + (t['y'] - b0), 2)
+                v['text'].append(n)
+        bot = [n['y'] + 5 for n in v['text']]
+        cum = max([(b1 - b0) * kb + extra + cum] + [y for y in bot])
+        if i < len(bounds) - 2:
+            sep_new.append((cum, sep_m.get(bounds[i + 1], False)))
+    v['h'] = round(cum + 2, 2)
+    v['cell_scaled'] = round(kmin, 3)
+    for y, into_m in sep_new:
+        v['lines'].append(_rect(L, y, W if into_m else M, y + T_ * 0.8))
+    v['lines'].append(_rect(L - 0.3, 0, L + 0.3, v['h']))
+    if has_marks:
+        v['lines'].append(_rect(M - 0.3, 0, M + 0.3, v['h']))
     return v
 
 
@@ -329,6 +479,7 @@ def build(q, store):
             seen.add(k); uniq.append((r, u))
     if not uniq:
         return None
+    uniq.sort(key=lambda ru: (ru[1]['src']['page'], ru[1]['src']['box'][1]))   # the mark scheme's own order (2017 ON 41 q8: 8 Hydroelectric (a)(b)(c), 8 Tidal flow (a)(b)(c) ...)
     uniq = [(r, _tighten(_dedupe(_unshrink(u)))) for r, u in uniq]
     units = [u for _, u in uniq]
     widths = MP.column_widths(units)
