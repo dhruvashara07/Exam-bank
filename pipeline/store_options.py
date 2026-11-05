@@ -428,7 +428,7 @@ def _free_cut(lo, hi, spans, mid):
     free = [f for f in free if f[1] - f[0] >= 1.5]
     if not free:
         return None
-    a, b = min(free, key=lambda f: abs((f[0] + f[1]) / 2 - mid) - 0.01 * (f[1] - f[0]))
+    a, b = max(free, key=lambda f: (f[1] - f[0]) - 0.05 * abs((f[0] + f[1]) / 2 - mid))   # the widest white column (2026-11-05)
     return (a + b) / 2
 
 

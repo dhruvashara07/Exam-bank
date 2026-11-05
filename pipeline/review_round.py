@@ -48,7 +48,40 @@ def editable_payload(q, d, qid):
     return out, figs
 
 
-def new(rnd, pids, sample=3, title=None, intro=None, max_items=None, recheck=None):
+def risk_reasons(qid):
+    """Why a question needs Dhruv's eyes even when every automatic check passed. Built from what his
+    rounds 5-7 found wrong: option pictures and mark-scheme layout, never plain text questions."""
+    import store as S
+    try:
+        q, st = S.load(qid)
+        if q.get('stub'):
+            return []
+    except Exception:
+        return []
+    out = []
+    mp = q.get('ms_p')
+    if mp:
+        if mp.get('modes', {}).get('scale'):
+            out.append('mark scheme: a row could not be re-wrapped and is shrunk to fit')
+        last = mp['rows'][-1]['text']
+        if not (len(last) == 2 and last[0]['t'] == 'Total'):
+            out.append('mark scheme: no Total row of our own')
+        elif last[1]['t'] != str(q.get('marks')):
+            out.append(f"mark scheme: Total {last[1]['t']} but the question has {q.get('marks')} marks")
+        if mp.get('problems'):
+            out.append('mark scheme: a word check failed')
+        if [t['t'] for t in mp['rows'][0]['text']][:1] != ['Q']:
+            out.append('mark scheme: header row is not Q | Answer | Marks')
+    if q.get('options') and any('figure' in o for o in q['options']):
+        out.append('options split into separate pictures')
+    for f in q.get('figures', []):
+        if f.get('table_as_picture'):
+            out.append(f"table kept as a picture ({f['table_as_picture']})")
+            break
+    return out
+
+
+def new(rnd, pids, sample=3, title=None, intro=None, max_items=None, recheck=None, risk=False, spot=0):
     """max_items caps the round (one page version holds ~100 items): flagged items first (Cambridge
     flags, then figure crops, then editable text) up to four fifths, then random spot checks spread over
     the papers. Flags that did not fit go into the next round (the paper waits for them)."""
@@ -74,6 +107,15 @@ def new(rnd, pids, sample=3, title=None, intro=None, max_items=None, recheck=Non
                 prio[d['q']] = min(prio.get(d['q'], 9), 1)
         rest = [q for q in qids if q not in reasons]
         samples.append(rng.sample(rest, min(sample, len(rest))))
+    if risk:                                   # strict mode (Dhruv 2026-11-05): only what can go wrong, see risk_reasons()
+        for pid in pids:
+            for qid in sorted(q for q in byid if q.startswith(pid + '_')):
+                for why in risk_reasons(qid):
+                    reasons.setdefault(qid, []).append(why); prio[qid] = min(prio.get(qid, 9), 1)
+        rest = [q for pid in pids for q in sorted(byid) if q.startswith(pid + '_') and q not in reasons]
+        samples = [rng.sample(rest, min(spot, len(rest)))]
+        sample = 1 if spot else 0
+        samples = [[q] for q in samples[0]]
     for qid, why in (recheck or {}).items():    # items fixed after an earlier round: shown again first
         if qid in byid:
             reasons.setdefault(qid, []).insert(0, why); prio[qid] = -1
@@ -126,7 +168,11 @@ if __name__ == '__main__':
         mx = opt('--max'); mx = int(mx) if mx else None
         rc = opt('--recheck')                      # "qid=why;qid=why"
         rc = dict(x.split('=', 1) for x in rc.split(';') if '=' in x) if rc else None
-        new(int(a[1]), a[2:], sample, title, intro, mx, rc)
+        risk = '--risk' in a
+        if risk:
+            a.remove('--risk')
+        spot = int(opt('--spot', 0))
+        new(int(a[1]), a[2:], sample, title, intro, mx, rc, risk, spot)
     elif a and a[0] == 'close':
         close(int(a[1]), a[2])
     else:
