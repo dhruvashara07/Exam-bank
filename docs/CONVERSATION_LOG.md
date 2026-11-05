@@ -164,3 +164,16 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   cut question sentences half/fully inside above/below the drawing, take in drawings crossing an edge (<=40 pt), never past the caption,
   never answer lines or part labels. Dry run 2016-2019: 147 of 2822 figures change, sheets checked.
 - Asked him: when I am sure a fix is right, show it once or approve directly?
+
+## 2026-11-05 — full check-up of 2016-2019 (Dhruv: "do full check up of 2016 to 2019 so we are assured that that is fully approved")
+- His accidental "retry" started a parallel branch (commit 8e92e514, pipeline/audit.py); kept it, only one session now.
+- Audit of 2292 questions: 60 flags. Real problems fixed in the pipeline (all years):
+  fraction bars lost in re-wrapped MS rows (about 20 rows, incl. approved years) -> such rows are drawn cell-wise and keep the bar;
+  inner-table vertical rules dropped in cell rows (2017 ON 42 q9b); stroked zero-height underlines had no ink;
+  short underline pieces / underlined words no longer make a row fall back; empty band + printed Total cut from cell rows;
+  figure crops took in the tail line of a wrapped question sentence ('pattern.', 'provided.') -> cut out;
+  own Total added unless a real 'Total: n' is printed (2018 FM 42 q9, 2019 FM 42 q1).
+- Cleared myself: 9 'no MS row' (Cambridge numbers MS parts differently from the QP, content complete), 9 marks sums (OR / 3 x B1),
+  15 'stored differs' (photos/anti-aliasing, checked the two biggest side by side).
+- Round 13 "2016-2019 final" on the one review page: 5 items (2017 ON 41 q8 table, 2019 MJ 62 q4 formula, 3 samples of the new fraction/table rows).
+  Rounds 8-11 taken off the page (r11 = 2020, unanswered, to be redone under the new plan).
