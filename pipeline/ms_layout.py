@@ -73,6 +73,34 @@ def _unshrink(u):
     return v
 
 
+def _dedupe(u):
+    """Some mark schemes draw each cell's text in clipped pieces that repeat a letter where they overlap
+    ('ci' + 'ircuit', '1' + '0(a)'): join overlapping pieces on one baseline and drop the repeated letters."""
+    ws = sorted(u['text'], key=lambda t: (round(t['y'], 1), t['x']))
+    out = []
+    for t in ws:
+        p = out[-1] if out else None
+        if p and abs(p['y'] - t['y']) < 0.6 and p.get('s') == t.get('s') and t['x'] < p['x'] + p['w'] - 0.8 and t['x'] > p['x']:
+            if t['x'] + t['w'] <= p['x'] + p['w'] + 0.6 and t['t'] in p['t']:
+                continue                              # a repeated piece printed inside the word ('acceptable' + 'a')
+            over = max([m for m in range(1, len(t['t']) + 1) if p['t'].endswith(t['t'][:m])] + [0])
+            rest = t['t'][over:]
+            p = dict(p); p['t'] = p['t'] + rest; p['w'] = round(max(p['x'] + p['w'], t['x'] + t['w']) - p['x'], 2)
+            out[-1] = p
+            continue
+        if p and abs(p['y'] - t['y']) < 0.6 and p.get('s') == t.get('s') and abs(t['x'] - (p['x'] + p['w'])) < 0.4 \
+                and not p['t'][-1:] in ',;' and t['t'][:1].isalnum() and p['t'][-1:].isalnum() \
+                and p.get('b') == t.get('b') and p.get('i') == t.get('i'):
+            p = dict(p); p['t'] = p['t'] + t['t']; p['w'] = round(t['x'] + t['w'] - p['x'], 2)
+            out[-1] = p                               # a word split into touching pieces ('a' + 'rrows')
+            continue
+        out.append(dict(t))
+    if len(out) == len(u['text']):
+        return u
+    v = dict(u); v['text'] = out
+    return v
+
+
 def _tighten(u):
     """Cut a row unit down to its table: some years print the table narrower than the cut (2016 ON: empty margins
     left and right of the borders). Without this the margins become empty 'columns'."""
@@ -189,6 +217,85 @@ def _own_total(marks, info, rows):
             'figs': [], 'glyphs': [], 'own_total': True}
 
 
+def _cell_fallback(u, first):
+    """A row the re-wrap cannot handle (inner table, drawn symbol, fraction bars ...): keep OUR columns and sizes.
+    Question label and marks stay 11 pt in our columns; only the answer cell's content is scaled to fit the Answer
+    column (inner tables, diodes and fractions keep their drawing). Dhruv 2026-11-05: rows must look like the others."""
+    rr = MP._rules(u)
+    vs = [r for r in (rr[0] if rr else []) if r[2] - r[0] < 1.3 and r[3] - r[1] > 1.5]
+    cov = {}
+    for x in MP._cluster([(r[0] + r[2]) / 2 for r in vs]):
+        cov[x] = sum(r[3] - r[1] for r in vs if abs((r[0] + r[2]) / 2 - x) < 1.5)
+    h = u['h']
+    full = sorted(x for x, c in cov.items() if c >= 0.6 * h and 20 < x < u['w'] - 8)
+    if len(full) < 2:
+        return None
+    e1, e2 = full[0], full[-1]                        # label | answer ... answer | marks
+    if first:
+        nw = [w for w in first['new_w'] if w >= 20]
+        L = first['new_edges'][0]; M = first['new_edges'][len(nw) - 2]
+    else:
+        L, M = 44.0, W - 44.0
+    k = min(1.0, (M - L - 10) / max(e2 - e1 - 10, 1))
+    v = {'src': u['src'], 'w': W, 'h': 0, 'text': [], 'lines': [], 'figs': [], 'glyphs': [], 'cell_scaled': round(k, 3)}
+    lines_l, lines_m = {}, {}
+    for t in u['text']:
+        c = t['x'] + t['w'] / 2
+        if c < e1:
+            lines_l.setdefault(round(t['y']), []).append(t)
+        elif c > e2:
+            lines_m.setdefault(round(t['y']), []).append(t)
+    def span(ws):
+        return min(w['x'] for w in ws), max(w['x'] + w['w'] for w in ws)
+    for t in u['text']:
+        c = t['x'] + t['w'] / 2
+        n = dict(t)
+        n['y'] = round(t['y'] * k + (1 - k) * 4, 2)
+        if c < e1:                                    # label: its line centred in our label column, normal size
+            a, b = span(lines_l[round(t['y'])])
+            n['x'] = round((L - (b - a)) / 2 + (t['x'] - a), 2)
+        elif c > e2:                                  # marks: its line right-aligned in our marks column, normal size
+            a, b = span(lines_m[round(t['y'])])
+            n['x'] = round(W - 6 - (b - a) + (t['x'] - a), 2)
+        else:
+            n['x'] = round(L + 5 + (t['x'] - e1) * k, 2); n['w'] = round(t['w'] * k, 2)
+            n['s'] = round(t['s'] * k, 2)
+            n['y'] = round(t['y'] * k, 2)
+        v['text'].append(n)
+    def mx(x):
+        return L + 5 + (x - e1) * k
+    for l in u['lines']:
+        b = MP._bbox(l['d'])
+        if b is None:
+            continue
+        if b[2] - b[0] < 1.3 and any(abs((b[0] + b[2]) / 2 - e) < 2 for e in full + [x for x in cov if x <= 20]):
+            continue                                  # a column rule: ours are drawn instead
+        if b[0] < e1 - 2 or b[2] > e2 + 2:
+            continue                                  # rules outside the answer cell (row separators): ours instead
+        d = []
+        for cmd, args in re.findall(r'([A-Za-z])([^A-Za-z]*)', l['d']):
+            n = [float(x) for x in MP.NUM.findall(args)]
+            if cmd in 'MLCSQT':
+                n = [mx(a) if i % 2 == 0 else a * k for i, a in enumerate(n)]
+            elif cmd == 'H':
+                n = [mx(a) for a in n]
+            elif cmd == 'V':
+                n = [a * k for a in n]
+            d.append(cmd + ' '.join(f'{a:.2f}' for a in n))
+        v['lines'].append({**l, 'd': ''.join(d)})
+    for key in ('figs', 'images', 'glyphs'):
+        for f in u.get(key) or []:
+            g = dict(f); g['x'] = round(mx(f['x']), 2); g['y'] = round(f['y'] * k, 2)
+            if 'w' in g: g['w'] = round(g['w'] * k, 2)
+            if 'h' in g: g['h'] = round(g['h'] * k, 2)
+            if key == 'figs': g['k'] = round(f.get('k', 1) * k, 4)
+            v.setdefault(key, []).append(g)
+    hh = max([t['y'] + 6 for t in v['text']] + [h * k + 2])
+    v['h'] = round(hh, 2)
+    v['lines'] += [_rect(L - 0.3, 0, L + 0.3, v['h']), _rect(M - 0.3, 0, M + 0.3, v['h'])]
+    return v
+
+
 def build(q, store):
     sizes = {f['id']: tuple(f['size_pt']) for f in q.get('figures', [])}
     rows = [(r, u) for p in q['parts'] for r in p['ms'] for u in r['layout']]
@@ -199,7 +306,7 @@ def build(q, store):
             seen.add(k); uniq.append((r, u))
     if not uniq:
         return None
-    uniq = [(r, _tighten(_unshrink(u))) for r, u in uniq]
+    uniq = [(r, _tighten(_dedupe(_unshrink(u)))) for r, u in uniq]
     units = [u for _, u in uniq]
     widths = MP.column_widths(units)
     out, modes, problems, first = [], {}, [], None
@@ -213,7 +320,15 @@ def build(q, store):
         if total_row is None and info['mode'] == 'wrap' and any(re.fullmatch(r'Total:?', t['t']) for t in v['text']):
             v, total_row = _split_total(v, info)      # the printed Total can sit in any row (rows follow the parts' order)
         if v is not None:
-            out.append(v)
+            out.append((v, info, u))
+    fixed = []
+    for v, info, u in out:
+        if info['mode'] == 'scale':
+            c = _cell_fallback(u, first)
+            if c is not None:
+                v = c; modes['scale'] -= 1; modes['cell'] = modes.get('cell', 0) + 1
+        fixed.append(v)
+    out = fixed
     hdr_p = os.path.join(store, 'ms_header.json')
     if first and os.path.exists(hdr_p):
         out.insert(0, _header_unit(json.load(open(hdr_p)), first))

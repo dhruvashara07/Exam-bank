@@ -221,6 +221,35 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
 
 
 # ---------------------------------------------------------------- figures
+def merge_contained(figs, qid, store):
+    """Two captioned figures printed side by side whose crops overlap (one inside the other, 2018 MJ 53 q1 Fig. 1.2 / 1.3):
+    keep ONE picture (the larger crop) named after both, e.g. id ..._fig1-2+1-3, caption 'Fig. 1.2 and Fig. 1.3'."""
+    out = list(figs)
+    for big in sorted(figs, key=lambda f: -f['size_pt'][0] * f['size_pt'][1]):
+        if big not in out or not big.get('caption'):
+            continue
+        B = fitz.Rect(big['source']['box'])
+        inner = [f for f in out if f is not big and f.get('caption') and f['source']['page'] == big['source']['page']
+                 and (fitz.Rect(f['source']['box']) & B).get_area() > 0.8 * fitz.Rect(f['source']['box']).get_area()]
+        if not inner:
+            continue
+        group = sorted(inner + [big], key=lambda f: f['id'])
+        nums = [g['id'].split('_fig')[-1] for g in group]
+        new_id = f"{qid}_fig" + '+'.join(nums)
+        ext = os.path.splitext(big['file'])[1]
+        os.replace(os.path.join(store, 'figures', big['file']), os.path.join(store, 'figures', new_id + ext))
+        for g in inner:
+            try:
+                os.remove(os.path.join(store, 'figures', g['file']))
+            except OSError:
+                pass
+            out.remove(g)
+        big['merged'] = [g['id'] for g in group]
+        big['id'], big['file'] = new_id, new_id + ext
+        big['caption'] = ' and '.join(g['caption'] for g in group)
+    return out
+
+
 def save_figure(f, q, meta, qdoc, store):
     b = fitz.Rect(f['bbox'])
     pg = qdoc[f['page'] - 1]
@@ -374,6 +403,7 @@ def build(pid):
                     opts.append({'label': L, 'figure': sub['id'], 'text': ''})
                 continue
             figs.append(save_figure(f, q, meta, qdoc, store))
+        figs = merge_contained(figs, q['id'], store)   # Fig. 1.2 printed inside Fig. 1.3's crop: one picture, both names (Dhruv)
         for lab in figs:                            # the caption line of each figure: layout words, tagged for renumbering
             cr = lab.pop('_cap', None)
             if cr is not None and lab.get('ref'):
