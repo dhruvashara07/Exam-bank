@@ -311,24 +311,41 @@ def diagram_options(page, box, with_labels=False):
     regions = {k: fitz.Rect(lab[k]) for k in LETTERS}
     ink = {k: fitz.Rect() for k in LETTERS}           # the drawing alone (no letter): what the option figure shows
     filled = {k: 0 for k in LETTERS}
+    items = []                                        # (option, rect) of every piece / phrase: for the clean-cut test
+    def inside(r, k):
+        return (cell.rect[k] + (-2, -2, 2, 2)).contains(r)
     for r in _pieces(page, box):
         k = cell(fitz.Point((r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2))
         if k:
-            regions[k] |= r & (cell.rect[k] + (-1, -1, 1, 1)); ink[k] |= r & (cell.rect[k] + (-1, -1, 1, 1)); filled[k] += 1
+            if not inside(r, k):
+                return None                           # a drawing crosses into the next option: no clean cut (Dhruv 2026-11-05)
+            regions[k] |= r; ink[k] |= r; filled[k] += 1; items.append((k, fitz.Rect(r)))
     ws = [w for w in words(page) if not (w[4] in LETTERS and any(fitz.Rect(w[:4]) == lab[k] for k in LETTERS))]
     phrase = {}                                   # "1.0 cm": a unit goes with its number (same line, small gap)
     for w in sorted(ws, key=lambda w: (round((w[1] + w[3]) / 2), w[0])):
         prev = [p for p in phrase if abs((p[1] + p[3]) / 2 - (w[1] + w[3]) / 2) < 2 and 0 <= w[0] - p[2] < 4]
         phrase[w] = phrase[prev[-1]] if prev else w
+    members = {}
     for w in ws:
-        wr = fitz.Rect(w[:4])
-        h = fitz.Rect(phrase[w][:4])
+        members.setdefault(phrase[w], []).append(w)
+    for head, mw in members.items():
+        h = fitz.Rect(mw[0][:4])
+        for w in mw[1:]:
+            h |= fitz.Rect(w[:4])
+        if len(mw) >= 5 or mw[-1][4].endswith('?'):
+            continue                                  # a sentence of the question (not an option label)
         c = fitz.Point((h.x0 + h.x1) / 2, (h.y0 + h.y1) / 2)
         if not (box + (0, -12, 0, 12)).contains(c):
             continue
         k = cell(c)
         if k:
-            regions[k] |= wr; ink[k] |= wr; filled[k] += 1
+            if not inside(h, k):
+                return None                           # a label crosses into the next option: keep one whole figure
+            regions[k] |= h; ink[k] |= h; filled[k] += 1; items.append((k, h))
+    for k in LETTERS:                                 # nothing of another option may show inside this option's crop
+        R = ink[k] + (-1.5, -1.5, 1.5, 1.5)
+        if any(o != k and (R & r).get_area() > 0 for o, r in items):
+            return None
     if any(v == 0 for v in filled.values()):
         return None
     regions = {k: r + (-1.5, -1.5, 1.5, 1.5) for k, r in regions.items()}

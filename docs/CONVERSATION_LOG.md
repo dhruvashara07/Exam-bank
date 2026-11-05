@@ -102,3 +102,12 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - Option pictures still wrong (flagged in round 6, not fixed yet): 2016 ON 12 q21 (option A has part of the question sentence), 23 q15 (table-row options),
   11 q06 (check B), 2016 MJ 12 q06 (piece of next option's label).
 - Review round 6 = NEW review page (old one full: 511-file limit): review/portal.json review_url updated. 47 items (8 rechecks/known issues first).
+
+## 2026-11-05 13:10 IST — round 6 answered, 2016 MJ approved
+- Round 6: 43 ok, 3 wrong (all option pictures). Dhruv's rule: split MCQ options into separate pictures ONLY when a clean cut is possible;
+  otherwise keep ONE whole figure (with its letters). Done in store_options.diagram_options: no drawing piece or label may cross into
+  another option's cell, nothing of another option may show inside an option's crop, question sentences (>=5 words or ending "?") are not labels.
+  2016 MJ 12 q06, 2016 ON 12 q21, 23 q15, 11 q06 are now one whole figure each (checked: no sentence, all labels whole).
+- 23 q15: options are a table of drawn ✓/✗ (not text) -> whole figure for now; turning drawn ✓/✗ into text goes with the symbol library.
+- Dhruv: "approve 2016 MJ" -> claude_check ok + approve.py for the 18 papers. "symbol library later" (after all years).
+- 2016 ON not approved yet (needs his word). Next: 2017 FM.
