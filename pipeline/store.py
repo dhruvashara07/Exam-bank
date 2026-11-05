@@ -221,6 +221,73 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
 
 
 # ---------------------------------------------------------------- figures
+def fit_crop(pg, b, max_grow=40.0):
+    """Mend a figure crop that cuts through ink or a label (review rounds: 80% of 'crop cut' flags were real).
+    1. a drawing crossing an edge is taken in (at most max_grow pt per side);
+    2. short label lines half inside or just outside (axis label 'day of the month', a row of axis numbers,
+       'liquid density = 3.1 g/cm3', 'diagram 1') are taken in, never a caption 'Fig. 1.1', a part '(a) ...' or a question line;
+    3. last word: a question sentence half inside, or fully inside above/below the drawing, is cut off."""
+    from checks import cut_edges
+    from layout import page_bounds, visible_lines, tight_ink
+    from extract import split_captions
+    t, bt = page_bounds(pg)
+    lines = [x for x in (tight_ink(pg, fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1'])) for l in split_captions(pg, visible_lines(pg, t, bt))) if x]
+    ws = pg.get_text('words')
+    words_of = lambda l: [w for w in ws if l.contains(fitz.Point((w[0] + w[2]) / 2, (w[1] + w[3]) / 2))]
+    NUM_ = re.compile(r'[\d.,\u2212-]+')
+    def numeric(lw):
+        return bool(lw) and sum(1 for w in lw if NUM_.fullmatch(w[4])) >= 0.7 * len(lw)
+    def sentence(lw):
+        return not numeric(lw) and (len(lw) >= 6 or (len(lw) >= 4 and lw[-1][4][-1:] in '.?:'))
+    def bad_label(lw):
+        txt = ' '.join(w[4] for w in lw)
+        return (not lw or sentence(lw) or re.match(r'(Fig|Table)\.?\s', txt + ' ') or re.search(r'\b(Fig|Table)\.', txt)
+                or re.match(r'^\(?([a-h]|[ivx]{1,4})\)|^[•\u2022]', txt) or re.fullmatch(r'\[\d+\]|\d{1,2}', txt.strip())
+                or re.search(r'\.{4,}|…|\[\d+\]', txt))             # an answer line '..........[1]'
+    caps = [l for l in lines if re.match(r'(Fig|Table)\.?\s*\d', ' '.join(w[4] for w in words_of(l)))]
+    b0 = fitz.Rect(b)
+    def ok(nb):
+        if nb.width - b0.width > 2 * max_grow or nb.height - b0.height > 2 * max_grow:
+            return False
+        return not any(c.y0 >= (b0.y0 + b0.y1) / 2 and nb.y1 > c.y1 + 1 and c.x0 < nb.x1 and c.x1 > nb.x0
+                       for c in caps)                    # never grow past the figure's caption
+    for _ in range(3):
+        changed = False
+        if cut_edges(pg, b):
+            for d in pg.get_drawings():
+                r = d['rect']
+                if r.width > 0.9 * pg.rect.width or not r.intersects(b) or b.contains(r):
+                    continue
+                nb = b | r
+                if ok(nb):
+                    b = nb; changed = True
+        for l in lines:
+            if b.contains(l):
+                continue
+            lw = words_of(l)
+            ov = (l & b).get_area() / max(l.get_area(), 1)
+            gap = max(l.y0 - b.y1, b.y0 - l.y1, l.x0 - b.x1, b.x0 - l.x1)
+            near = ov > 0.15 or (ov == 0 and 0 <= gap < 14 and l.x0 >= b.x0 - 10 and l.x1 <= b.x1 + 10)
+            if near and not bad_label(lw) and (len(lw) <= 4 or numeric(lw) or ov > 0.15):
+                nb = b | l
+                if ok(nb):
+                    b = nb; changed = True
+        if not changed:
+            break
+    ink = [d['rect'] for d in pg.get_drawings() if d['rect'].intersects(b) and d['rect'].width < 0.9 * pg.rect.width]
+    top, bot = (min(r.y0 for r in ink), max(r.y1 for r in ink)) if ink else (b.y0, b.y1)
+    for l in sorted(lines, key=lambda l: l.y0):
+        ov = (l & b).get_area() / max(l.get_area(), 1)
+        if ov <= 0.15 or not sentence(words_of(l)):
+            continue
+        if ov < 0.85 or l.y1 <= top + 1 or l.y0 >= bot - 1:
+            if (l.y0 + l.y1) / 2 < (top + bot) / 2:
+                b.y0 = max(b.y0, l.y1 + 0.5)
+            else:
+                b.y1 = min(b.y1, l.y0 - 0.5)
+    return b
+
+
 def merge_contained(figs, qid, store):
     """Two captioned figures printed side by side whose crops overlap (one inside the other, 2018 MJ 53 q1 Fig. 1.2 / 1.3):
     keep ONE picture (the larger crop) named after both, e.g. id ..._fig1-2+1-3, caption 'Fig. 1.2 and Fig. 1.3'."""
@@ -253,6 +320,10 @@ def merge_contained(figs, qid, store):
 def save_figure(f, q, meta, qdoc, store):
     b = fitz.Rect(f['bbox'])
     pg = qdoc[f['page'] - 1]
+    if not f.get('mask'):
+        nb = fit_crop(pg, b)
+        if nb != b:
+            f = dict(f, bbox=list(nb), svg=None); b = nb
     cap, cap_in, masked = None, False, False
     if f.get('mask'):                         # a printed option letter inside the drawing's box: blank it
         pg = V5.without_caption(pg, fitz.Rect(f['mask']))

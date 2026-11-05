@@ -152,3 +152,15 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - 17:37 Dhruv: keep adding rounds to the one link as years are done; take a round off when he finishes it; he starts at round 8; go on up to 2021.
   New pipeline/review_page.py (add/drop/files) keeps out/review/page/ = the published page. The "wait for 2019 run" task that ran 47 min
   was my waiting loop matching its own command line (pgrep -f): stopped; no more waiting loops.
+
+## 2026-11-05 18:44 IST — new review plan: I check flags first, pattern by flag type, one year at a time
+- Dhruv: pause 2020/2021. He had not noticed the flag reasons before 2019 and may have missed some; most flags turned out correct.
+  New loop per YEAR: build -> I check every flagged item myself and improve the pipeline -> only items I am unsure of go to his round
+  -> his corrections -> approve. Be pattern-aware: learn which flag types are really wrong.
+- Precision of flag types (rounds 5-10, his answers): MS row shrunk 95% wrong, figure crop cut 80%, MS no Total 80%,
+  stored copy differs 11%, option split 10%, random 4%. So: fix the first three myself; check the others myself, show only doubtful ones.
+- Round 10 (2019): 20 wrong. Decisions: truth-table options stay pictures (my choice, he said "you choose"); "no MS in pdf" flags are not shown.
+- Figure crop mend (store.fit_crop): take in short labels half inside / just outside (axis labels, axis-number rows, "diagram 1"),
+  cut question sentences half/fully inside above/below the drawing, take in drawings crossing an edge (<=40 pt), never past the caption,
+  never answer lines or part labels. Dry run 2016-2019: 147 of 2822 figures change, sheets checked.
+- Asked him: when I am sure a fix is right, show it once or approve directly?
