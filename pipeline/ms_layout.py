@@ -321,18 +321,29 @@ def build(q, store):
             v, total_row = _split_total(v, info)      # the printed Total can sit in any row (rows follow the parts' order)
         if v is not None:
             out.append((v, info, u))
+    if first is None:                                 # no row could be re-wrapped: our default columns (Q 44 | Answer | Marks 44)
+        first = {'edges': [], 'new_edges': [44.0, W - 44.0], 'new_w': [44.0, W - 88.0, 44.0], 'default': True}
     fixed = []
     for v, info, u in out:
         if info['mode'] == 'scale':
             c = _cell_fallback(u, first)
             if c is not None:
                 v = c; modes['scale'] -= 1; modes['cell'] = modes.get('cell', 0) + 1
+        if total_row is None and info['mode'] != 'wrap':   # a printed 'Total: n' inside a fallback row: take it out, ours instead
+            tw = [t for t in v['text'] if re.fullmatch(r'Total:?', t['t'])]
+            if len(tw) == 1:
+                T = tw[0]
+                same = [t for t in v['text'] if abs(t['y'] - T['y']) < 2.5 and t['x'] > T['x'] and re.fullmatch(r'[\d.,]+', t['t'])]
+                v = dict(v); v['text'] = [t for t in v['text'] if t is not T and t not in same[:1]]
+                total_row = _own_total(q['marks'], first, [v]) if q.get('marks') else None
+                if not v['text'] and not v.get('figs') and not v.get('images') and not v.get('glyphs'):
+                    continue                          # the row held only the printed total
         fixed.append(v)
     out = fixed
     hdr_p = os.path.join(store, 'ms_header.json')
     if first and os.path.exists(hdr_p):
         out.insert(0, _header_unit(json.load(open(hdr_p)), first))
-    if total_row is None and first and q.get('marks') and not any(re.match(r'Total', t['t']) for v in out for t in v['text']):
+    if total_row is None and first and q.get('marks') and not any(re.fullmatch(r'Total:?', t['t']) for v in out for t in v['text']):
         total_row = _own_total(q['marks'], first, out)      # the mark scheme prints no total (e.g. 2016 MJ 43): add ours
     printed_total = None
     if total_row and q.get('marks') and total_row['text'][1]['t'] != str(q['marks']):
