@@ -309,6 +309,9 @@ def diagram_options(page, box, with_labels=False):
         box = box | r
     if any(w[4].strip(':').lower() == 'key' and box.intersects(fitz.Rect(w[:4])) for w in words(page)):
         return None                                   # a key shared by all options: keep one whole figure
+    inbox = {w[4] for w in words(page) if box.intersects(fitz.Rect(w[:4]))}
+    if {'N', 'E', 'S', 'W'} <= inbox:
+        return None                                   # a compass rose (N E S W) shared by all options (2019 ON 22 q08)
     cell = _cells(lab, box, page)
     if cell is None:
         return None

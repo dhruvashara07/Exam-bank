@@ -39,6 +39,40 @@ def _shift_path(d, dx):
     return ''.join(out)
 
 
+def _scale_path(d, k):
+    out = []
+    for cmd, args in re.findall(r'([A-Za-z])([^A-Za-z]*)', d):
+        n = [float(x) * k for x in MP.NUM.findall(args)]
+        out.append(cmd + ' '.join(f'{v:.2f}' for v in n))
+    return ''.join(out)
+
+
+def _unshrink(u):
+    """A landscape mark scheme printed shrunk onto portrait paper (2019 ON 42: 8 pt text): scale the row back up to the
+    usual 11 pt so it is laid out like every other year (otherwise it would be kept as printed, tiny and without our frame)."""
+    ss = sorted(t['s'] for t in u['text'] if t.get('s'))
+    if not ss:
+        return u
+    med = ss[len(ss) // 2]
+    if med >= 9.5 or u['w'] < 400:
+        return u
+    k = 11.0 / med
+    v = copy.deepcopy(u)
+    for t in v['text']:
+        for key in ('x', 'y', 'w', 's'):
+            if key in t:
+                t[key] = round(t[key] * k, 2)
+    for f in v.get('figs', []) + (v.get('images') or []) + (v.get('glyphs') or []):
+        for key in ('x', 'y', 'w', 'h'):
+            if key in f:
+                f[key] = round(f[key] * k, 2)
+        if 'k' in f or f in v.get('figs', []):
+            f['k'] = round(f.get('k', 1) * k, 4)
+    v['lines'] = [{**l, 'd': _scale_path(l['d'], k)} for l in v['lines']]
+    v['w'] = round(u['w'] * k, 2); v['h'] = round(u['h'] * k, 2)
+    return v
+
+
 def _tighten(u):
     """Cut a row unit down to its table: some years print the table narrower than the cut (2016 ON: empty margins
     left and right of the borders). Without this the margins become empty 'columns'."""
@@ -165,7 +199,7 @@ def build(q, store):
             seen.add(k); uniq.append((r, u))
     if not uniq:
         return None
-    uniq = [(r, _tighten(u)) for r, u in uniq]
+    uniq = [(r, _tighten(_unshrink(u))) for r, u in uniq]
     units = [u for _, u in uniq]
     widths = MP.column_widths(units)
     out, modes, problems, first = [], {}, [], None

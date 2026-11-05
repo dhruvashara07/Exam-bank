@@ -139,3 +139,6 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - (17:45) 2018 (FM+MJ+ON, 42 papers) processed and pre-checked: 0 blocking; all 33 split option sets looked at. Fixed: options sharing a
   "key" legend are never split (2018 MJ 12 q36, 2018 ON 11 q37 -> one whole figure). MCQ 2016-2018 rebuilt, golden 0 changed cuts.
   Round 9 (2018, 50 items: 45 risk + 5 random) on its own page (portal.json "pages").
+- (18:15) 2019 processed + pre-checked (42 papers, 0 blocking). Fixed: 2019 ON 42 mark scheme is a landscape page printed shrunk on
+  portrait paper -> footer found higher up (ms.py) and rows scaled back to 11 pt (ms_layout._unshrink) so it gets our layout;
+  options sharing a compass rose (N E S W) stay whole. Golden 0. Round 10 (2019, 64 items) on its own page.

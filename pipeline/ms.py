@@ -101,6 +101,8 @@ def _table_area(page, lines):
         return None
     top = header[0]['y1'] + 3
     foot = [l['y0'] for l in lines if l['y0'] > page.rect.height - 80 and ('©' in l['text'] or 'Page ' in l['text'])]
+    if not foot:                       # a landscape page printed shrunk onto portrait paper (2019 ON 42): footer higher up
+        foot = [l['y0'] for l in lines if l['y0'] > top + 20 and ('©' in l['text'] or re.search(r'Page \d+ of \d+', l['text']))]
     bottom = (min(foot) if foot else page.rect.height - 40) - 6
     return top, bottom
 
