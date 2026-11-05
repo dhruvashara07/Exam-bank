@@ -111,3 +111,12 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - 23 q15: options are a table of drawn ✓/✗ (not text) -> whole figure for now; turning drawn ✓/✗ into text goes with the symbol library.
 - Dhruv: "approve 2016 MJ" -> claude_check ok + approve.py for the 18 papers. "symbol library later" (after all years).
 - 2016 ON not approved yet (needs his word). Next: 2017 FM.
+
+## 2026-11-05 ~14:30 IST — 2017 FM built, option-picture split made safe, round 7
+- 2017 FM processed (6 papers; 125 MS rows all re-wrapped, 0 problems, every question with header + Total row).
+- While checking option pictures found real defects in the split (also in 2016): straight lines have no area so they were dropped from
+  option crops (wires/wave lines missing); a PDF path holding many lines was skipped as a "frame"; a cell split could give one option
+  lines of its neighbour. Fixes (store_options): pieces get their stroke width; only a single-rectangle path is a frame; an option
+  whose pieces have a >30 pt empty gap is not split; FINAL TEST: every drawn piece and label near the options must appear WHOLE in
+  exactly one option picture, otherwise ONE whole figure. 2016 MJ/ON + 2017 FM MCQ papers rebuilt: 32 split sets (all looked at), 24 whole.
+- Round 7 published on the review page (27 items: 3 rechecks + 2017 FM). 2016 ON still waits for Dhruv's "approve".

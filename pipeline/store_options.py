@@ -263,7 +263,7 @@ def _components(page, box, gap=4.0):
     return comps
 
 
-def _pieces(page, box):
+def _pieces(page, box, touching=False):
     """Rects of every drawn piece (line, curve, box, picture) whose centre is in box; a PDF path often holds
     the lines of several drawings, so paths are split into their pieces."""
     rects = []
@@ -271,8 +271,8 @@ def _pieces(page, box):
         r = dr['rect']
         if dr['type'] == 'f' and dr.get('fill') in ((1, 1, 1), [1, 1, 1], (1.0, 1.0, 1.0)):
             continue                                  # white background box
-        if r.width > .8 * box.width and r.height > .5 * box.height:
-            continue                                  # a frame around everything
+        if r.width > .8 * box.width and r.height > .5 * box.height and len(dr['items']) <= 4:
+            continue                                  # a frame around everything (one rectangle), not a path holding many lines
         for it in dr['items']:
             pts = [p for p in it[1:] if isinstance(p, fitz.Point)]
             if it[0] == 're':
@@ -283,7 +283,9 @@ def _pieces(page, box):
                 ir = fitz.Rect(min(p.x for p in pts), min(p.y for p in pts), max(p.x for p in pts), max(p.y for p in pts))
             else:
                 continue
-            if box.contains(fitz.Point((ir.x0 + ir.x1) / 2, (ir.y0 + ir.y1) / 2)):
+            hw = max(0.4, (dr.get('width') or 0.5) / 2)       # a straight line has no area: give it its stroke width
+            ir = ir + (-hw, -hw, hw, hw)
+            if (box.intersects(ir) if touching else box.contains(fitz.Point((ir.x0 + ir.x1) / 2, (ir.y0 + ir.y1) / 2))):
                 rects.append(ir)
     for b in page.get_image_info():
         r = fitz.Rect(b['bbox'])
@@ -312,8 +314,21 @@ def diagram_options(page, box, with_labels=False):
     ink = {k: fitz.Rect() for k in LETTERS}           # the drawing alone (no letter): what the option figure shows
     filled = {k: 0 for k in LETTERS}
     items = []                                        # (option, rect) of every piece / phrase: for the clean-cut test
+    safe = {}
+    for k in LETTERS:                                 # a drawing touching the border it shares with another option = no clean cut
+        R = fitz.Rect(cell.rect[k]); d = [-2.0, -2.0, 2.0, 2.0]
+        for o in LETTERS:
+            if o == k:
+                continue
+            O = cell.rect[o]
+            ov_y = min(R.y1, O.y1) - max(R.y0, O.y0) > 1; ov_x = min(R.x1, O.x1) - max(R.x0, O.x0) > 1
+            if ov_y and abs(O.x0 - R.x1) < 3: d[2] = -2.0
+            if ov_y and abs(O.x1 - R.x0) < 3: d[0] = 2.0
+            if ov_x and abs(O.y0 - R.y1) < 3: d[3] = -2.0
+            if ov_x and abs(O.y1 - R.y0) < 3: d[1] = 2.0
+        safe[k] = R + d
     def inside(r, k):
-        return (cell.rect[k] + (-2, -2, 2, 2)).contains(r)
+        return safe[k].contains(r)
     for r in _pieces(page, box):
         k = cell(fitz.Point((r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2))
         if k:
@@ -342,6 +357,18 @@ def diagram_options(page, box, with_labels=False):
             if not inside(h, k):
                 return None                           # a label crosses into the next option: keep one whole figure
             regions[k] |= h; ink[k] |= h; filled[k] += 1; items.append((k, h))
+    def big_gap(rs, axis, limit=30.0):
+        iv = sorted((r.x0, r.x1) if axis == 0 else (r.y0, r.y1) for r in rs)
+        end = iv[0][1] if iv else 0
+        for a, b in iv[1:]:
+            if a - end > limit:
+                return True
+            end = max(end, b)
+        return False
+    for k in LETTERS:                                 # a piece far away from the rest of its option: the cell split is wrong
+        rs = [r for o, r in items if o == k]
+        if big_gap(rs, 0) or big_gap(rs, 1):
+            return None
     for k in LETTERS:                                 # nothing of another option may show inside this option's crop
         R = ink[k] + (-1.5, -1.5, 1.5, 1.5)
         if any(o != k and (R & r).get_area() > 0 for o, r in items):
@@ -357,8 +384,18 @@ def diagram_options(page, box, with_labels=False):
     areas = sorted(r.get_area() for r in regions.values())
     if areas[0] < 0.2 * areas[-1]:             # four options are drawings of about the same size
         return None
+    crops = {k: (ink[k] + (-1.5, -1.5, 1.5, 1.5)) if not ink[k].is_empty else regions[k] for k in LETTERS}
+    # final test: every drawn piece and label near the options is shown WHOLE in exactly one option picture
+    # (nothing cut at a crop edge, nothing lost between pictures, nothing shown twice)
+    others = [fitz.Rect(w[:4]) for w in ws if not any((fitz.Rect(w[:4]) & lab[k]).get_area() > 0 for k in LETTERS)]
+    sentence = [fitz.Rect(w[:4]) for head, mw in members.items() if len(mw) >= 5 or mw[-1][4].endswith('?') for w in mw]
+    for r in _pieces(page, box, touching=True) + [o for o in others if box.intersects(o) and o not in sentence]:
+        hit = [k for k in LETTERS if crops[k].intersects(r)]
+        full = [k for k in hit if (crops[k] + (-1, -1, 1, 1)).contains(r)]
+        if len(hit) > 1 or (hit and not full) or (not hit and (box + (-1, -1, 1, 1)).contains(r) and r.get_area() < 0.3 * box.get_area()):
+            return None
     if with_labels:
-        return {k: (ink[k] + (-1.5, -1.5, 1.5, 1.5)) if not ink[k].is_empty else regions[k] for k in LETTERS}, lab
+        return crops, lab
     return regions
 
 
