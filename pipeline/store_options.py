@@ -294,6 +294,34 @@ def _pieces(page, box, touching=False):
     return rects
 
 
+def _grow_labels(page, box, gap=16.0):
+    """Extend the figure box down over lines of short labels directly under it ("weight of / athlete = 700 N",
+    "distance / lifted = 0.50 m" under each option). A line is a label line when every phrase on it is short
+    (< 45% of the box width); a question sentence is one long phrase and stops the growth."""
+    ws = [w for w in words(page) if w[0] >= box.x0 - 6 and w[2] <= box.x1 + 6 and w[1] > box.y1 - 2]
+    lines = {}
+    for w in ws:
+        lines.setdefault(round((w[1] + w[3]) / 2 / 3), []).append(w)
+    b = fitz.Rect(box)
+    for key in sorted(lines):
+        ln = sorted(lines[key], key=lambda w: w[0])
+        top = min(w[1] for w in ln)
+        if top - b.y1 > gap:
+            break
+        phrases, cur = [], [ln[0]]
+        for w in ln[1:]:
+            if w[0] - cur[-1][2] < 6:
+                cur.append(w)
+            else:
+                phrases.append(cur); cur = [w]
+        phrases.append(cur)
+        if len(phrases) < 2 or any(p[-1][2] - p[0][0] > 0.45 * box.width for p in phrases):
+            break
+        for w in ln:
+            b |= fitz.Rect(w[:4])
+    return b
+
+
 def diagram_options(page, box, with_labels=False):
     """with_labels=True -> (regions without the printed letters, {letter: Rect of the letter}).
     Four option drawings A-D side by side / in a grid -> {letter: Rect}, or None (one drawing).
@@ -307,6 +335,7 @@ def diagram_options(page, box, with_labels=False):
         return None
     for r in lab.values():
         box = box | r
+    box = _grow_labels(page, box)                     # option labels printed under the drawings (2017 MJ 13 q10)
     if any(w[4].strip(':').lower() == 'key' and box.intersects(fitz.Rect(w[:4])) for w in words(page)):
         return None                                   # a key shared by all options: keep one whole figure
     inbox = {w[4] for w in words(page) if box.intersects(fitz.Rect(w[:4]))}
