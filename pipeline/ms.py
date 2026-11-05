@@ -15,6 +15,7 @@ def label_text(t):
     """A label cell as printed, tidied: no spaces, Cambridge typos '7(a)((i)' / '3(b((i)' fixed,
     '2(d)(i)&(ii)' read like '2(d)(i),(ii)'."""
     t = t.replace(' ', '').replace('&', ',')
+    t = re.sub(r'(?<=\d)MP\d+$', '', t)                              # '4 MP1' (practical marking points, 2017 MJ 53)
     t = re.sub(r'\(\(+', '(', t)
     t = re.sub(r'^(\d{1,2})([a-z])(?=\(|$)', r'\1(\2)', t)          # '9b(i)'
     return re.sub(r'\(([a-z]+)\(', r'(\1)(', t)

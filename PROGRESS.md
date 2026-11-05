@@ -176,4 +176,4 @@ One line per run: date, pending papers checked/approved, feedback handled, fixes
 - Done: 2016 MJ re-run, `ms_layout.py` (own frame, header once, Total row), `ms_p` stored, review round 5 published (41 items).
 - 2026-11-05: round 5 closed (37 ok, 4 wrong -> fixed). 2016 ON built; round 6 on the NEW review page (portal.json).
 - 2026-11-05 13:10: round 6 closed (43 ok, 3 wrong -> option clean-cut rule). 2016 MJ APPROVED (Dhruv). Symbol library: later, after all years (also: drawn ✓/✗ -> text).
-- Waiting: Dhruv's OK to approve 2016 ON; round 7 (2017 FM) published. Next: 2017 MJ, ...
+- 2016 ON APPROVED. Round 8 = 2017 MJ+ON (strict, risk-based) on review page 2017. Waiting: his round 8 answers, approval of 2017 (FM+MJ+ON), his answer on a standing approval rule. 2017 MJ qp_11 missing. Next: 2018 (FM+MJ+ON in one go).

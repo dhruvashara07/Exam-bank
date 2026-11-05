@@ -130,3 +130,9 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   MS word-check, table as picture) + N random per round. Year = one round.
 - Asked him for a standing approval rule ("approve a year when its round has no wrong items left after the fix"); until then he says "approve <year>".
 - 2017 MJ + ON processing; round 8 = all of 2017.
+- (16:30-17:30) 2017 MJ+ON processed. My pre-check found + fixed: long option labels treated as question text (only "?" sentences or text
+  outside every option cell are sentences); practical MS label "4 MP1" not recognised -> Q4 rows under Q3 (ms.label_text strips MPn;
+  2016-2017 practical papers re-run; golden 0); printed Total that disagrees with the marks -> we show the question's marks, flagged.
+  New strict checks in risk_reasons: MS rows of another question, more than one Total row. Rounds keep only figs.jpg per question.
+  2017 MJ qp_11 is missing from raw/ and Releases (told Dhruv).
+- Round 8 (all of 2017 MJ+ON, 54 items, 49 risk items + 5 random) on a NEW page per year: review/portal.json updated.

@@ -14,7 +14,7 @@ The page stores answers in its database, collection feedback_r<n>, doc id = ques
     {verdict: ok|wrong, issues: [...], note, at}
 `close` stores those answers in review/rounds/<n>.json (status closed) for the record.
 """
-import datetime, json, os, random, sys
+import datetime, json, os, random, re, sys
 
 sys.path.insert(0, os.path.dirname(__file__))
 import paths
@@ -68,10 +68,17 @@ def risk_reasons(qid):
             out.append('mark scheme: no Total row of our own')
         elif last[1]['t'] != str(q.get('marks')):
             out.append(f"mark scheme: Total {last[1]['t']} but the question has {q.get('marks')} marks")
+        if mp.get('printed_total'):
+            out.append(f"mark scheme prints Total {mp['printed_total']}, the question has {q.get('marks')} marks: we show {q.get('marks')}")
         if mp.get('problems'):
             out.append('mark scheme: a word check failed')
         if [t['t'] for t in mp['rows'][0]['text']][:1] != ['Q']:
             out.append('mark scheme: header row is not Q | Answer | Marks')
+    labs = {r['label'].split('(')[0] for p in q.get('parts', []) for r in p.get('ms', [])}
+    if labs - {str(q.get('number'))}:
+        out.append(f"mark scheme rows of another question attached ({', '.join(sorted(labs))})")
+    if mp and sum(1 for v in mp['rows'] if len(v['text']) == 2 and v['text'][0]['t'] == 'Total') > 1:
+        out.append('mark scheme: more than one Total row')
     if q.get('options') and any('figure' in o for o in q['options']):
         out.append('options split into separate pictures')
     for f in q.get('figures', []):
@@ -130,6 +137,10 @@ def new(rnd, pids, sample=3, title=None, intro=None, max_items=None, recheck=Non
     for it in built:
         q = json.load(open(byid[it['id']]))
         it['editable'], it['figure_images'] = editable_payload(q, os.path.join(out_dir, it['id']), it['id'])
+        for fn in os.listdir(os.path.join(out_dir, it['id'])):     # one page version holds max 511 files: keep figs.jpg only
+            if re.fullmatch(r'fig\d+\.jpg', fn):
+                os.remove(os.path.join(out_dir, it['id'], fn))
+        it['figure_images'] = {}
     json.dump(built, open(os.path.join(out_dir, 'items.json'), 'w'), ensure_ascii=False)
     now = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%MZ')
     meta = {'round': rnd, 'collection': f'feedback_r{rnd}', 'created': now,

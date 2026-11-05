@@ -422,7 +422,7 @@ def build(pid):
             try:                                  # portrait mark scheme in our own frame (docs/MS_TABLE_RULES.md)
                 mp = ML.build(rec, store)
                 if mp:
-                    rec['ms_p'] = {'w': mp['w'], 'h': mp['h'], 'rows': mp['rows'], 'modes': mp['modes'], 'info': mp['info'], 'has_header': mp['has_header'],
+                    rec['ms_p'] = {'w': mp['w'], 'h': mp['h'], 'rows': mp['rows'], 'modes': mp['modes'], 'info': mp['info'], 'has_header': mp['has_header'], 'printed_total': mp.get('printed_total'),
                                    'problems': [list(x) for x in mp['problems']]}
             except Exception as e:
                 print(f"  {q['id']}: portrait mark scheme failed: {e}", file=sys.stderr)

@@ -176,8 +176,8 @@ def build(q, store):
         if info['mode'] == 'wrap':
             first = first or info
             problems += [(r['label'], p) for p in MP.check(u, v)]
-        if i == len(uniq) - 1:
-            v, total_row = _split_total(v, info) if info['mode'] == 'wrap' else (v, None)
+        if total_row is None and info['mode'] == 'wrap' and any(re.fullmatch(r'Total:?', t['t']) for t in v['text']):
+            v, total_row = _split_total(v, info)      # the printed Total can sit in any row (rows follow the parts' order)
         if v is not None:
             out.append(v)
     hdr_p = os.path.join(store, 'ms_header.json')
@@ -185,6 +185,11 @@ def build(q, store):
         out.insert(0, _header_unit(json.load(open(hdr_p)), first))
     if total_row is None and first and q.get('marks') and not any(re.match(r'Total', t['t']) for v in out for t in v['text']):
         total_row = _own_total(q['marks'], first, out)      # the mark scheme prints no total (e.g. 2016 MJ 43): add ours
+    printed_total = None
+    if total_row and q.get('marks') and total_row['text'][1]['t'] != str(q['marks']):
+        printed_total = total_row['text'][1]['t']     # Cambridge misprint (2016 ON 43 q04 prints 5 for 7 marks): show the question's marks
+        total_row['text'][1]['t'] = str(q['marks'])
+        total_row['text'][1]['w'] = round(6.1 * len(str(q['marks'])), 2)
     if total_row:
         out.append(total_row)
     for i, v in enumerate(out):
@@ -193,6 +198,7 @@ def build(q, store):
             _frame(v, top=(i == 0))
 
     return {'w': W, 'h': round(sum(v['h'] for v in out), 2), 'rows': out, 'problems': problems, 'modes': modes,
+            'printed_total': printed_total,
             'info': {k: first[k] for k in ('edges', 'new_edges', 'new_w')} if first else None,
             'has_header': bool(first and os.path.exists(hdr_p))}
 

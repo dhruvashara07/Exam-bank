@@ -347,7 +347,7 @@ def diagram_options(page, box, with_labels=False):
         h = fitz.Rect(mw[0][:4])
         for w in mw[1:]:
             h |= fitz.Rect(w[:4])
-        if len(mw) >= 5 or mw[-1][4].endswith('?'):
+        if mw[-1][4].endswith('?') or (len(mw) >= 5 and not any(safe[k].contains(h) for k in LETTERS)):
             continue                                  # a sentence of the question (not an option label)
         c = fitz.Point((h.x0 + h.x1) / 2, (h.y0 + h.y1) / 2)
         if not (box + (0, -12, 0, 12)).contains(c):
@@ -388,7 +388,13 @@ def diagram_options(page, box, with_labels=False):
     # final test: every drawn piece and label near the options is shown WHOLE in exactly one option picture
     # (nothing cut at a crop edge, nothing lost between pictures, nothing shown twice)
     others = [fitz.Rect(w[:4]) for w in ws if not any((fitz.Rect(w[:4]) & lab[k]).get_area() > 0 for k in LETTERS)]
-    sentence = [fitz.Rect(w[:4]) for head, mw in members.items() if len(mw) >= 5 or mw[-1][4].endswith('?') for w in mw]
+    def _ph(mw):
+        h = fitz.Rect(mw[0][:4])
+        for w in mw[1:]:
+            h |= fitz.Rect(w[:4])
+        return h
+    sentence = [fitz.Rect(w[:4]) for head, mw in members.items()
+                if mw[-1][4].endswith('?') or (len(mw) >= 5 and not any(safe[k].contains(_ph(mw)) for k in LETTERS)) for w in mw]
     for r in _pieces(page, box, touching=True) + [o for o in others if box.intersects(o) and o not in sentence]:
         hit = [k for k in LETTERS if crops[k].intersects(r)]
         full = [k for k in hit if (crops[k] + (-1, -1, 1, 1)).contains(r)]
