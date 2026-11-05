@@ -355,16 +355,31 @@ def portrait_unit(u, W=523.0, widths=None, sizes=None, probe=False):
     v['lines'].append(rect(left, v['h'] - T, xr, v['h']))
     segs = collections.defaultdict(list)                       # new line (rounded y) -> [x0, x1, y, rect-thickness]
     for r in decor:
-        under = [(o, n) for o, n in moved if o['s'] >= 5 and 0.5 <= r[1] - o['y'] <= 4.5 and (
+        under = [(o, n) for o, n in moved if o['s'] >= 5 and 0.5 <= r[1] - o['y'] <= max(4.5, 0.6 * o['s']) and (
                  (r[0] - 1.5 <= o['x'] + 0.2 * o['w'] and o['x'] + 0.8 * o['w'] <= r[2] + 1.5)
-                 or (r[0] >= o['x'] - 1.5 and r[2] <= o['x'] + o['w'] + 1.5 and r[2] - r[0] > 4))]   # part of one word ("evaporation/evaporated")
+                 or (r[0] >= o['x'] - 2 and r[2] <= o['x'] + o['w'] + 2 and r[2] - r[0] > 4)   # part of one word ("evaporation/evaporated", '4.0')
+                 or (r[2] - r[0] <= 5 and (abs(r[0] - o['x'] - o['w']) <= 2.5 or abs(r[2] - o['x']) <= 2.5
+                                           or o['x'] - 1 <= r[0] and r[2] <= o['x'] + o['w'] + 1)))]   # the underline's bit under a space or ')'
         below = [o for o, n in moved if r[0] <= o['x'] + o['w'] / 2 <= r[2] and 0 < o['y'] - r[3] < 9 and o['y'] - 0.75 * o['s'] < r[3] + 1.5 and o['s'] >= 5]
+        if not below:                                  # a denominator one line down, wholly under the bar (2019 ON 43 q5 '1700 / 1000')
+            dn = [o for o, n in moved if o['s'] >= 5 and 0 < o['y'] - r[3] < 14 and r[0] - 2 <= o['x'] and o['x'] + o['w'] <= r[2] + 2]
+            def chunk(seed):                           # the run of words on seed's baseline joined by normal word gaps
+                same = sorted((o for o, n in moved if abs(o['y'] - seed['y']) < 1.5), key=lambda o: o['x'])
+                i = same.index(seed); a = b_ = i
+                while a > 0 and same[a]['x'] - (same[a - 1]['x'] + same[a - 1]['w']) < 6: a -= 1
+                while b_ < len(same) - 1 and same[b_ + 1]['x'] - (same[b_]['x'] + same[b_]['w']) < 6: b_ += 1
+                return same[a]['x'], same[b_]['x'] + same[b_]['w']
+            inside = lambda ab: ab[0] >= r[0] - 3 and ab[1] <= r[2] + 3
+            if dn and under and inside(chunk(dn[0])) and inside(chunk(under[0][0])):
+                below = dn                                 # numerator and denominator both fit the bar: a fraction
+        if below and any(re.fullmatch(r'[A-Za-z]{3,}', o['t']) and o['w'] >= 0.85 * (r[2] - r[0]) for o, n in under):
+            below = []                                 # an underlined word ('area under graph'), not a fraction bar
         if not under or below:
             return _scaled(u, W, 'fraction bar or unknown mark')
         for o, n in under:
             a0 = max(0.0, r[0] - o['x']) if r[0] > o['x'] + 0.2 * o['w'] else 0.0
             a1 = min(o['w'], r[2] - o['x']) if r[2] < o['x'] + 0.8 * o['w'] else o['w']
-            segs[(round(n['y'] / 2), round(r[3] - r[1], 2), round(r[1] - o['y'], 2))].append([n['x'] + a0, n['x'] + a1, n['y'] + (r[1] - o['y']), r[3] - r[1]])
+            segs[(round(n['y'] / 2), round(r[3] - r[1], 2), round(r[1] - o['y'], 2))].append([n['x'] + a0, n['x'] + a1, n['y'] + (r[1] - o['y']), max(r[3] - r[1], 0.5)])  # a stroked zero-height line: give it ink
     for sg in segs.values():
         sg.sort()
         cur = sg[0][:]

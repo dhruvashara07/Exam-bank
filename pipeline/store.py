@@ -245,10 +245,19 @@ def fit_crop(pg, b, max_grow=40.0):
         real = [w for w in lw if REALW.fullmatch(w[4])]
         long_ = len(real) >= 5 or (len(real) >= 3 and lw and lw[-1][4][-1:] in '.?:')
         at_margin = l is None or l.x0 <= body_x0 + 25
-        return not numeric(lw) and long_ and at_margin
-    def bad_label(lw):
+        return (not numeric(lw) and long_ and at_margin) or (l is not None and continues(l))
+    def continues(l):
+        # the last line of a wrapped question sentence ('pattern.', 'provided.': 2019 MJ 31 q11, 2019 ON 41 q9):
+        # directly under a long text line that starts at or left of it
+        for o in lines:
+            if o is not l and o.y0 < l.y0 - 3 and l.y0 - o.y1 < 5 and o.x0 <= l.x0 + 3 and o.x1 > l.x0 + 20:
+                ow = [w for w in words_of(o) if REALW.fullmatch(w[4])]
+                if len(ow) >= 5 and not numeric(words_of(o)):
+                    return True
+        return False
+    def bad_label(lw, l=None):
         txt = ' '.join(w[4] for w in lw)
-        return (not lw or sentence(lw, None) or re.match(r'(Fig|Table)\.?\s', txt + ' ') or re.search(r'\b(Fig|Table)\.', txt)
+        return (not lw or sentence(lw, None) or (l is not None and continues(l)) or re.match(r'(Fig|Table)\.?\s', txt + ' ') or re.search(r'\b(Fig|Table)\.', txt)
                 or re.match(r'^\(?([a-h]|[ivx]{1,4})\)|^[•\u2022]', txt) or re.fullmatch(r'\[\d+\]|\d{1,2}', txt.strip())
                 or re.search(r'\.{4,}|…|\[\d+\]', txt))             # an answer line '..........[1]'
     caps = [l for l in lines if re.match(r'(Fig|Table)\.?\s*\d', ' '.join(w[4] for w in words_of(l)))]
@@ -276,7 +285,7 @@ def fit_crop(pg, b, max_grow=40.0):
             gap = max(l.y0 - b.y1, b.y0 - l.y1, l.x0 - b.x1, b.x0 - l.x1)
             near = ov > 0.15 or (ov == 0 and 0 <= gap < 14 and l.x0 >= b.x0 - 10 and l.x1 <= b.x1 + 10)
             half = ov > 0.15
-            label_ok = (not sentence(lw, l)) if half else not bad_label(lw)
+            label_ok = (not sentence(lw, l)) if half else not bad_label(lw, l)
             if half and re.match(r'(Fig|Table)\.?\s*\d', ' '.join(w[4] for w in lw)):
                 label_ok = False
             if near and label_ok and (len(lw) <= 4 or numeric(lw) or half):

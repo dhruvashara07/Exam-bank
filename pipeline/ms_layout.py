@@ -8,6 +8,7 @@
 - 'Total: n' is its own last row (label "Total" in the answer column, number under Marks).
 Units are the same layout units as everywhere else (draw with store.unit_svg).
 """
+import collections
 import os, json, copy, re
 import ms_portrait as MP
 
@@ -234,6 +235,15 @@ def _cell_fallback(u, first):
     for x in MP._cluster([(r[0] + r[2]) / 2 for r in vs]):
         cov[x] = sum(r[3] - r[1] for r in vs if abs((r[0] + r[2]) / 2 - x) < 1.5)
     h = u['h']
+    tot_y = [t['y'] for t in u['text'] if re.fullmatch(r'Total:?', t['t'])]
+    ink_y = [t['y'] for t in u['text'] if not any(abs(t['y'] - y) < 2.5 for y in tot_y)] + [f['y'] + f.get('h', 0) for k_ in ('figs', 'images', 'glyphs') for f in u.get(k_) or []]
+    hy = collections.defaultdict(float)
+    for r in rr:
+        if r[3] - r[1] < 1.3 and r[2] - r[0] > 1.3:
+            hy[round(r[1])] += r[2] - r[0]
+    for y in sorted(hy):                               # an empty band under a full-width rule (2017 MJ 32 q11): not part of the row
+        if hy[y] > 0.9 * u['w'] and 4 < y < h - 4 and ink_y and max(ink_y) < y:
+            h = float(y); break
     full = sorted(x for x, c in cov.items() if c >= 0.6 * h and 20 < x < u['w'] - 8)
     if len(full) < 2:
         return None
@@ -275,10 +285,14 @@ def _cell_fallback(u, first):
         b = MP._bbox(l['d'])
         if b is None:
             continue
-        if b[2] - b[0] < 1.3 and any(abs((b[0] + b[2]) / 2 - e) < 2 for e in full + [x for x in cov if x <= 20]):
+        if b[2] - b[0] < 1.3 and any(abs((b[0] + b[2]) / 2 - e) < 2 for e in [e1, e2] + [x for x in cov if x <= 20]):  # inner-table rules stay (2017 ON 42 q9(b))
             continue                                  # a column rule: ours are drawn instead
         if b[0] < e1 - 2 or b[2] > e2 + 2:
             continue                                  # rules outside the answer cell (row separators): ours instead
+        if b[1] >= h - 1.5:
+            continue                                  # below the row (the empty band cut off above)
+        if b[3] - b[1] < 1.3 and (b[1] <= 1.5 or b[3] >= h - 1.5):
+            continue                                  # the row's own top/bottom border inside the answer cell: ours instead
         d = []
         for cmd, args in re.findall(r'([A-Za-z])([^A-Za-z]*)', l['d']):
             n = [float(x) for x in MP.NUM.findall(args)]
@@ -297,6 +311,8 @@ def _cell_fallback(u, first):
             if 'h' in g: g['h'] = round(g['h'] * k, 2)
             if key == 'figs': g['k'] = round(f.get('k', 1) * k, 4)
             v.setdefault(key, []).append(g)
+    if h < u['h']:                                    # the band was cut: its printed Total goes too (ours is drawn instead)
+        v['text'] = [t for t in v['text'] if not any(abs(t['y'] - (y * k)) < 2.5 or abs(t['y'] - round(y * k + (1 - k) * 4, 2)) < 2.5 for y in tot_y)]
     hh = max([t['y'] + 6 for t in v['text']] + [h * k + 2])
     v['h'] = round(hh, 2)
     v['lines'] += [_rect(L - 0.3, 0, L + 0.3, v['h']), _rect(M - 0.3, 0, M + 0.3, v['h'])]
