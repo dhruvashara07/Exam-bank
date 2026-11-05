@@ -221,8 +221,15 @@ def _cell_fallback(u, first):
     """A row the re-wrap cannot handle (inner table, drawn symbol, fraction bars ...): keep OUR columns and sizes.
     Question label and marks stay 11 pt in our columns; only the answer cell's content is scaled to fit the Answer
     column (inner tables, diodes and fractions keep their drawing). Dhruv 2026-11-05: rows must look like the others."""
-    rr = MP._rules(u)
-    vs = [r for r in (rr[0] if rr else []) if r[2] - r[0] < 1.3 and r[3] - r[1] > 1.5]
+    rr = []                                           # thin rules only: other drawings (arrowheads, circles) stay as content
+    for l in u['lines']:
+        if l.get('fill', '#000000').lower() == '#ffffff' and 'stroke' not in l:
+            continue
+        for sub in re.findall(r'M[^M]+', l['d']):
+            bb = MP._bbox(sub)
+            if bb is not None and bb[3] > 0.6 and min(bb[2] - bb[0], bb[3] - bb[1]) <= 1.3:
+                rr.append(bb)
+    vs = [r for r in rr if r[2] - r[0] < 1.3 and r[3] - r[1] > 1.5]
     cov = {}
     for x in MP._cluster([(r[0] + r[2]) / 2 for r in vs]):
         cov[x] = sum(r[3] - r[1] for r in vs if abs((r[0] + r[2]) / 2 - x) < 1.5)
@@ -343,7 +350,14 @@ def build(q, store):
     hdr_p = os.path.join(store, 'ms_header.json')
     if first and os.path.exists(hdr_p):
         out.insert(0, _header_unit(json.load(open(hdr_p)), first))
-    if total_row is None and first and q.get('marks') and not any(re.fullmatch(r'Total:?', t['t']) for v in out for t in v['text']):
+    def printed_total(v):                             # 'Total: 6' on its own (not 'Total p.d. = ...' inside an answer)
+        for t in v['text']:
+            if re.fullmatch(r'Total:?', t['t']):
+                after = sorted((o for o in v['text'] if abs(o['y'] - t['y']) < 2.5 and o['x'] > t['x']), key=lambda o: o['x'])
+                if len(after) == 1 and re.fullmatch(r'\d+', after[0]['t']):
+                    return True
+        return False
+    if total_row is None and first and q.get('marks') and not any(printed_total(v) for v in out):
         total_row = _own_total(q['marks'], first, out)      # the mark scheme prints no total (e.g. 2016 MJ 43): add ours
     printed_total = None
     if total_row and q.get('marks') and total_row['text'][1]['t'] != str(q['marks']):

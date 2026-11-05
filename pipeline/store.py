@@ -237,11 +237,18 @@ def fit_crop(pg, b, max_grow=40.0):
     NUM_ = re.compile(r'[\d.,\u2212-]+')
     def numeric(lw):
         return bool(lw) and sum(1 for w in lw if NUM_.fullmatch(w[4])) >= 0.7 * len(lw)
-    def sentence(lw):
-        return not numeric(lw) and (len(lw) >= 6 or (len(lw) >= 4 and lw[-1][4][-1:] in '.?:'))
+    body_x0 = min([l.x0 for l in lines] + [pg.rect.width])
+    REALW = re.compile(r"[A-Za-z][A-Za-z'\u2019-]{2,}[.,:;?]?")
+    def sentence(lw, l=None):
+        # a line of the question's text: real words, and it starts at the text column's left margin (2017 ON 33 q7:
+        # 'direction of travel of the water wave' is a label inside the drawing; 'R O Y _ B _ V' is no sentence at all)
+        real = [w for w in lw if REALW.fullmatch(w[4])]
+        long_ = len(real) >= 5 or (len(real) >= 3 and lw and lw[-1][4][-1:] in '.?:')
+        at_margin = l is None or l.x0 <= body_x0 + 25
+        return not numeric(lw) and long_ and at_margin
     def bad_label(lw):
         txt = ' '.join(w[4] for w in lw)
-        return (not lw or sentence(lw) or re.match(r'(Fig|Table)\.?\s', txt + ' ') or re.search(r'\b(Fig|Table)\.', txt)
+        return (not lw or sentence(lw, None) or re.match(r'(Fig|Table)\.?\s', txt + ' ') or re.search(r'\b(Fig|Table)\.', txt)
                 or re.match(r'^\(?([a-h]|[ivx]{1,4})\)|^[•\u2022]', txt) or re.fullmatch(r'\[\d+\]|\d{1,2}', txt.strip())
                 or re.search(r'\.{4,}|…|\[\d+\]', txt))             # an answer line '..........[1]'
     caps = [l for l in lines if re.match(r'(Fig|Table)\.?\s*\d', ' '.join(w[4] for w in words_of(l)))]
@@ -249,7 +256,7 @@ def fit_crop(pg, b, max_grow=40.0):
     def ok(nb):
         if nb.width - b0.width > 2 * max_grow or nb.height - b0.height > 2 * max_grow:
             return False
-        return not any(c.y0 >= (b0.y0 + b0.y1) / 2 and nb.y1 > c.y1 + 1 and c.x0 < nb.x1 and c.x1 > nb.x0
+        return not any(c.y0 >= (b0.y0 + b0.y1) / 2 and nb.y1 > max(b0.y1, c.y1 + 1) and c.x0 < nb.x1 and c.x1 > nb.x0
                        for c in caps)                    # never grow past the figure's caption
     for _ in range(3):
         changed = False
@@ -268,7 +275,11 @@ def fit_crop(pg, b, max_grow=40.0):
             ov = (l & b).get_area() / max(l.get_area(), 1)
             gap = max(l.y0 - b.y1, b.y0 - l.y1, l.x0 - b.x1, b.x0 - l.x1)
             near = ov > 0.15 or (ov == 0 and 0 <= gap < 14 and l.x0 >= b.x0 - 10 and l.x1 <= b.x1 + 10)
-            if near and not bad_label(lw) and (len(lw) <= 4 or numeric(lw) or ov > 0.15):
+            half = ov > 0.15
+            label_ok = (not sentence(lw, l)) if half else not bad_label(lw)
+            if half and re.match(r'(Fig|Table)\.?\s*\d', ' '.join(w[4] for w in lw)):
+                label_ok = False
+            if near and label_ok and (len(lw) <= 4 or numeric(lw) or half):
                 nb = b | l
                 if ok(nb):
                     b = nb; changed = True
@@ -278,7 +289,7 @@ def fit_crop(pg, b, max_grow=40.0):
     top, bot = (min(r.y0 for r in ink), max(r.y1 for r in ink)) if ink else (b.y0, b.y1)
     for l in sorted(lines, key=lambda l: l.y0):
         ov = (l & b).get_area() / max(l.get_area(), 1)
-        if ov <= 0.15 or not sentence(words_of(l)):
+        if ov <= 0.15 or not sentence(words_of(l), l):
             continue
         if ov < 0.85 or l.y1 <= top + 1 or l.y0 >= bot - 1:
             if (l.y0 + l.y1) / 2 < (top + bot) / 2:
@@ -288,7 +299,7 @@ def fit_crop(pg, b, max_grow=40.0):
     return b
 
 
-def merge_contained(figs, qid, store):
+def merge_contained(figs, qid, store, resave=None):
     """Two captioned figures printed side by side whose crops overlap (one inside the other, 2018 MJ 53 q1 Fig. 1.2 / 1.3):
     keep ONE picture (the larger crop) named after both, e.g. id ..._fig1-2+1-3, caption 'Fig. 1.2 and Fig. 1.3'."""
     out = list(figs)
@@ -311,9 +322,20 @@ def merge_contained(figs, qid, store):
             except OSError:
                 pass
             out.remove(g)
+        U = fitz.Rect(B)
+        for g in inner:
+            U |= fitz.Rect(g['source']['box'])
+        cap = ' and '.join(g['caption'] for g in group)
+        if resave and (U.x0 < B.x0 - 0.5 or U.y0 < B.y0 - 0.5 or U.x1 > B.x1 + 0.5 or U.y1 > B.y1 + 0.5):
+            os.remove(os.path.join(store, 'figures', new_id + ext))   # one picture over both crops (labels of both)
+            lab = resave({'id': new_id, 'page': big['source']['page'], 'bbox': list(U), 'caption': None})
+            for k in ('kind', 'size_pt', 'size_mm', 'source', 'file', 'scale_note'):
+                if k in lab:
+                    big[k] = lab[k]
         big['merged'] = [g['id'] for g in group]
-        big['id'], big['file'] = new_id, new_id + ext
-        big['caption'] = ' and '.join(g['caption'] for g in group)
+        big['id'] = new_id
+        big['file'] = big['file'] if big['file'].startswith(new_id) else new_id + ext
+        big['caption'] = cap
     return out
 
 
@@ -474,7 +496,7 @@ def build(pid):
                     opts.append({'label': L, 'figure': sub['id'], 'text': ''})
                 continue
             figs.append(save_figure(f, q, meta, qdoc, store))
-        figs = merge_contained(figs, q['id'], store)   # Fig. 1.2 printed inside Fig. 1.3's crop: one picture, both names (Dhruv)
+        figs = merge_contained(figs, q['id'], store, lambda f: save_figure(f, q, meta, qdoc, store))   # Fig. 1.2 printed inside Fig. 1.3's crop: one picture, both names (Dhruv)
         for lab in figs:                            # the caption line of each figure: layout words, tagged for renumbering
             cr = lab.pop('_cap', None)
             if cr is not None and lab.get('ref'):
