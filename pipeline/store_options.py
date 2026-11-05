@@ -307,6 +307,8 @@ def diagram_options(page, box, with_labels=False):
         return None
     for r in lab.values():
         box = box | r
+    if any(w[4].strip(':').lower() == 'key' and box.intersects(fitz.Rect(w[:4])) for w in words(page)):
+        return None                                   # a key shared by all options: keep one whole figure
     cell = _cells(lab, box, page)
     if cell is None:
         return None

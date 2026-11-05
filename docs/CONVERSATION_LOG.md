@@ -136,3 +136,6 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   New strict checks in risk_reasons: MS rows of another question, more than one Total row. Rounds keep only figs.jpg per question.
   2017 MJ qp_11 is missing from raw/ and Releases (told Dhruv).
 - Round 8 (all of 2017 MJ+ON, 54 items, 49 risk items + 5 random) on a NEW page per year: review/portal.json updated.
+- (17:45) 2018 (FM+MJ+ON, 42 papers) processed and pre-checked: 0 blocking; all 33 split option sets looked at. Fixed: options sharing a
+  "key" legend are never split (2018 MJ 12 q36, 2018 ON 11 q37 -> one whole figure). MCQ 2016-2018 rebuilt, golden 0 changed cuts.
+  Round 9 (2018, 50 items: 45 risk + 5 random) on its own page (portal.json "pages").
