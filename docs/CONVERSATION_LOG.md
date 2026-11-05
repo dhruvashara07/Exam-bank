@@ -120,3 +120,13 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   whose pieces have a >30 pt empty gap is not split; FINAL TEST: every drawn piece and label near the options must appear WHOLE in
   exactly one option picture, otherwise ONE whole figure. 2016 MJ/ON + 2017 FM MCQ papers rebuilt: 32 split sets (all looked at), 24 whole.
 - Round 7 published on the review page (27 items: 3 rechecks + 2017 FM). 2016 ON still waits for Dhruv's "approve".
+
+## 2026-11-05 15:52 IST — speed-up: one year per round, risk-based review
+- Dhruv: approve 2016 ON (done); round 7: 26 ok, 1 wrong (2017 FM 12 q20: wanted 5 pictures = question drawing + 4 clean options)
+  -> option columns are now cut at the WIDEST white gap between letters (_free_cut), all splits re-checked.
+- Dhruv: do a whole YEAR at a time, faster; stricter tests; show him only flagged items and those I think need him; check whether random samples are worth it.
+- Trend rounds 5-7: random samples 96 -> 4 wrong (all round 5, MS layout, fixed globally); rounds 6-7 0/60 wrong. All wrong answers ever: option pictures or MS layout.
+- New: review_round.py --risk --spot N: items = automatic flags + risk_reasons() (option splits, shrunk MS row, missing/incorrect own Total, header,
+  MS word-check, table as picture) + N random per round. Year = one round.
+- Asked him for a standing approval rule ("approve a year when its round has no wrong items left after the fix"); until then he says "approve <year>".
+- 2017 MJ + ON processing; round 8 = all of 2017.
