@@ -149,3 +149,6 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   supports this). Old per-year pages are no longer used (none had answers). Figures merged into the "Rebuilt" picture to stay under 511 files.
 - STANDING RULE (Dhruv): a year is approved after its review round once the wrong items are fixed: no separate "approve" message needed.
   Applied: 2017 FM approved (round 7 done, its wrong item fixed). 2017 MJ/ON, 2018, 2019 get approved when rounds 8/9/10 are answered and fixed.
+- 17:37 Dhruv: keep adding rounds to the one link as years are done; take a round off when he finishes it; he starts at round 8; go on up to 2021.
+  New pipeline/review_page.py (add/drop/files) keeps out/review/page/ = the published page. The "wait for 2019 run" task that ran 47 min
+  was my waiting loop matching its own command line (pgrep -f): stopped; no more waiting loops.
