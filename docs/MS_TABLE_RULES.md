@@ -73,3 +73,15 @@ So about 35 pt of the 523 pt page is wasted by the two narrow columns; the answe
 
 ## 7. Plan
 1. (done) Dhruv's answers. 2. (done) `ms_portrait.py` updated: widths by content, picture rows, header once. 3. Sample pictures sent; on approval store the portrait layout (`layout_p`) per row in `store.py build`; verify; year by year from 2016 MJ.
+
+## 8. Our own consistent layout (Dhruv 2026-11-03/05) — `pipeline/ms_layout.py`, stored as `ms_p` per question
+- Not a copy of the printed table: every year looks the same.
+- Header: built by us, grey, once at the top: **Q | Answer | Marks** (| **Guidance** when the paper has that column).
+  Printed names ("Question", "Expected answer", "Mark") are mapped; only their order is used.
+- Frame: black left and right border on every row, a line under every row.
+- Rows are first trimmed to their own table (empty page margins beside the printed table are dropped), then re-wrapped.
+- Total: its own last row, "Total" right-aligned next to the Marks column, the number in the Marks column.
+  If the mark scheme prints no total (2016 MJ 43), our Total row uses the question's marks.
+- Cut: the mark-scheme row cut follows the real table edges left and right (ms.py), so nothing printed is lost.
+- Ignored when recognising the table: the sliver of the grey header row above the first row on a page, white cell backgrounds.
+- MCQ options that are separate drawings: the printed letter A–D is not part of the picture (the page shows the letter).

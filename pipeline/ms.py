@@ -143,12 +143,15 @@ def structured_rows_table(doc):
         x0, x1 = 58.0, page.rect.width - 58.0
         # some papers (2016 MJ 41/42/62/63 ...) print the table wider than the usual cut: keep marks, totals and the right border
         xr = max([l['x1'] for l in lines if top <= l['y0'] <= bottom] + [0])
+        xl = min([l['x0'] for l in lines if top <= l['y0'] <= bottom] + [page.rect.width])
         for d in page.get_drawings():
             r = d['rect']
             if r.height > 3 and r.width < 2 and top - 20 <= r.y0 <= bottom:
-                xr = max(xr, r.x1)
+                xr = max(xr, r.x1); xl = min(xl, r.x0)
         if xr > x1 - 1:
             x1 = min(page.rect.width, xr + 3)
+        if xl < x0 + 1:                          # ... and wider on the left (2016 ON 43: labels at x 56)
+            x0 = max(0.0, xl - 3)
         cuts = [(l['y0'] - 4, l) for l in labels]
         if current and (not cuts or cuts[0][0] > top + 4):
             cuts.insert(0, (top, None))          # continuation of the previous label

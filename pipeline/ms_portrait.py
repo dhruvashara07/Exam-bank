@@ -46,6 +46,10 @@ def _rules(u):
             return None
         for sub in re.findall(r'M[^M]+', l['d']):
             bb = _bbox(sub)
+            if l.get('fill', '#000000').lower() == '#ffffff' and 'stroke' not in l:
+                continue                                 # white cell background: the page is white anyway
+            if bb is not None and bb[3] <= 0.6:          # the bottom edge of the header row above (grey fill cut by the box): not part of this row
+                continue
             if bb is None or min(bb[2] - bb[0], bb[3] - bb[1]) > 1.3 or l.get('fill', '#000000').lower() == '#ffffff':
                 return None
             out.append(bb)
@@ -351,13 +355,16 @@ def portrait_unit(u, W=523.0, widths=None, sizes=None, probe=False):
     v['lines'].append(rect(left, v['h'] - T, xr, v['h']))
     segs = collections.defaultdict(list)                       # new line (rounded y) -> [x0, x1, y, rect-thickness]
     for r in decor:
-        under = [(o, n) for o, n in moved if o['s'] >= 5 and r[0] - 1.5 <= o['x'] + 0.2 * o['w'] and o['x'] + 0.8 * o['w'] <= r[2] + 1.5
-                 and 0.5 <= r[1] - o['y'] <= 4.5]
+        under = [(o, n) for o, n in moved if o['s'] >= 5 and 0.5 <= r[1] - o['y'] <= 4.5 and (
+                 (r[0] - 1.5 <= o['x'] + 0.2 * o['w'] and o['x'] + 0.8 * o['w'] <= r[2] + 1.5)
+                 or (r[0] >= o['x'] - 1.5 and r[2] <= o['x'] + o['w'] + 1.5 and r[2] - r[0] > 4))]   # part of one word ("evaporation/evaporated")
         below = [o for o, n in moved if r[0] <= o['x'] + o['w'] / 2 <= r[2] and 0 < o['y'] - r[3] < 9 and o['y'] - 0.75 * o['s'] < r[3] + 1.5 and o['s'] >= 5]
         if not under or below:
             return _scaled(u, W, 'fraction bar or unknown mark')
         for o, n in under:
-            segs[(round(n['y'] / 2), round(r[3] - r[1], 2), round(r[1] - o['y'], 2))].append([n['x'], n['x'] + o['w'], n['y'] + (r[1] - o['y']), r[3] - r[1]])
+            a0 = max(0.0, r[0] - o['x']) if r[0] > o['x'] + 0.2 * o['w'] else 0.0
+            a1 = min(o['w'], r[2] - o['x']) if r[2] < o['x'] + 0.8 * o['w'] else o['w']
+            segs[(round(n['y'] / 2), round(r[3] - r[1], 2), round(r[1] - o['y'], 2))].append([n['x'] + a0, n['x'] + a1, n['y'] + (r[1] - o['y']), r[3] - r[1]])
     for sg in segs.values():
         sg.sort()
         cur = sg[0][:]
@@ -382,7 +389,7 @@ def check(u, v):
     return problems
 
 
-MIN_LABEL, MIN_MARKS, PAD = 40.0, 34.0, 12.0
+MIN_LABEL, MIN_MARKS, PAD = 40.0, 40.0, 12.0
 
 
 def column_widths(units, W=523.0):

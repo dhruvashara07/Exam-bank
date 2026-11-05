@@ -158,7 +158,7 @@ def render_items(out_dir, items, reasons, byid=None):
             'paper': q['paper_code'], 'session': f"{q['season']} {q['year']}", 'number': q['number'],
             'type': q['type'], 'marks': q['marks'], 'answer': q.get('answer'),
             'options': sv['options'] or q.get('options', []), 'parts': outline(q),
-            'figures': [{'id': f['id'], 'caption': f.get('caption')} for f in q['figures']],
+            'figures': sv.get('fig_ids', [{'id': f['id'], 'caption': f.get('caption')} for f in q['figures']]),
             'images': imgs,
         })
         print(qid, group, list(imgs))

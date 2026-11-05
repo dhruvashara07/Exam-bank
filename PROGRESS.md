@@ -174,4 +174,6 @@ One line per run: date, pending papers checked/approved, feedback handled, fixes
 ## Own consistent MS layout, year by year (2026-11-03)
 - Done: MS cut widened to the real table edge (ms.py); golden 0 changed cuts.
 - Done: 2016 MJ re-run, `ms_layout.py` (own frame, header once, Total row), `ms_p` stored, review round 5 published (41 items).
-- Next: Dhruv reviews round 5; fix his findings; Claude check; tracker/approve; then 2016 ON (one year at a time).
+- 2026-11-05: round 5 closed (37 ok, 4 wrong -> fixed). 2016 ON built; round 6 on the NEW review page (portal.json).
+- Waiting: Dhruv's round 6 answers; his OK to approve 2016 MJ (approve.py was blocked by the permission check); his choice on the symbol library (later step).
+- Next: fix the 4 option-picture issues; approve 2016 MJ+ON after his OK; then 2017 FM.

@@ -225,6 +225,11 @@ def save_figure(f, q, meta, qdoc, store):
     b = fitz.Rect(f['bbox'])
     pg = qdoc[f['page'] - 1]
     cap, cap_in, masked = None, False, False
+    if f.get('mask'):                         # a printed option letter inside the drawing's box: blank it
+        pg = V5.without_caption(pg, fitz.Rect(f['mask']))
+        qdoc = pg.parent
+        f = dict(f, svg=None)
+        masked = True
     if f.get('caption'):                      # v5: the figure file holds the drawing only; the caption is layout text
         cap = V5.caption_rects(pg, b, f['caption'])
         if cap is not None:
@@ -269,9 +274,11 @@ def save_figure(f, q, meta, qdoc, store):
         label['ref'] = {'kind': pc[0], 'q': pc[1], 'n': pc[2]}
     if (f.get('caption') or '').startswith('Table'):
         label['table_as_picture'] = OPT.table_picture_reason(pg, b) or 'table not recognised as text'
-    if masked:
+    if masked and cap is not None:
         label['caption_masked'] = True
         label['caption_box'] = [round(v, 2) for v in cap]
+    if f.get('mask'):
+        label['letter_masked'] = True             # option figure: the printed letter A-D was blanked
     if cap is not None:
         label['_cap'] = [round(v, 2) for v in cap]
     return label
@@ -356,11 +363,13 @@ def build(pid):
                         f = dict(f, bbox=list(ti[1]), svg=None)
                         figs.append(save_figure(f, q, meta, qdoc, store))
                         continue
-            regions = OPT.diagram_options(pg, b) if meta.get('is_mcq') and opts is None else None
-            if regions:                             # four option drawings: one figure each
-                opts = []
+            got = OPT.diagram_options(pg, b, with_labels=True) if meta.get('is_mcq') and opts is None else None
+            regions, letters = got if got else (None, {})
+            if regions:                             # four option drawings: one figure each, WITHOUT the printed letter A-D
+                opts = []                           # (the site shows the letter; Dhruv 2026-11-05)
                 for L, r in regions.items():
-                    sub = {'id': f"{q['id']}_opt{L}", 'page': f['page'], 'bbox': list(r), 'caption': None}
+                    sub = {'id': f"{q['id']}_opt{L}", 'page': f['page'], 'bbox': list(r), 'caption': None,
+                           'mask': list(letters[L]) if L in letters and (fitz.Rect(letters[L]) & r).get_area() > 0 else None}
                     figs.append(save_figure(sub, q, meta, qdoc, store))
                     opts.append({'label': L, 'figure': sub['id'], 'text': ''})
                 continue
@@ -932,5 +941,6 @@ def review_svgs(qid, tmp):
     if ms:
         out['ms'] = stacked_svg(ms, store, figs, os.path.join(tmp, qid + '_ms.svg'), gap=0 if q.get('ms_p') else 6)
     out['figs'] = [os.path.join(store, 'figures', f['file']) for f in q['figures']]
+    out['fig_ids'] = [{'id': f['id'], 'caption': f.get('caption')} for f in q['figures']]   # what is stored (the review legend)
     out['options'] = q.get('options', [])
     return out

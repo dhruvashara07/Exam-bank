@@ -84,3 +84,21 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - 78 non-MCQ questions: 295 rows wrapped, 18 rows scaled (fallback, e.g. 41 q01 one row), 0 word-check problems.
 - Review round 5 (41 items, 5 flagged) published on the review page; round 4 (2014) was replaced. Needs: Dhruv's look, then Claude check, then tracker/approval, then 2016 ON.
 - Known: a row scaled to fit looks smaller inside a wrapped table (fallback); tiny border nub at the right edge on the last row before Total.
+
+## 2026-11-05 12:10 IST — round 5 answered, fixes, 2016 ON started
+- Round 5 (2016 MJ): 37 ok, 4 wrong; closed (review/rounds/5.json). Fixes (pipeline, not single files):
+  23 q31 review legend listed the bank's 2 figures, store has 1 -> legend from the store (review_svgs fig_ids);
+  33 q10 header "Expected answer" -> own header names always Q | Answer | Marks (| Guidance) (ms_layout._header_unit);
+  41 q01/q04 rows scaled: grey header remnant (y<=0.6) and white cell backgrounds made `_rules` fail -> ignored (2016 MJ fallback rows 18 -> 4);
+  paper 43 prints no Total -> own Total row from the question's marks (ms_layout._own_total).
+- Dhruv: MCQ options that are separate pictures must NOT carry the printed A-D letter -> diagram_options(with_labels) crops the drawing only, letter blanked if inside (letter_masked). Units stay with their number ("1.0 cm").
+- Dhruv asked about a reusable symbol/notation library (voltmeter etc.). Answer: rendering stays exact vectors (best fidelity); library = later separate step (find repeated small drawings, store once as symbols, tag questions; notation list for the editor). Waiting for his choice.
+- approve.py for 2016 MJ was blocked by the permission check: needs Dhruv's explicit "approve 2016 MJ".
+- 2016 ON processing in the new layout -> round 6 (2016 ON + the 4 fixed items).
+- (later, same day) 2016 ON built. New fixes found while checking it (pipeline): MS cut also widened to the LEFT (2016 ON 43 labels at x 56 were cut off);
+  rows trimmed to their own table (`ms_layout._tighten`: empty page margins were becoming blank columns); header built entirely by us from the
+  columns (Q | Answer | Marks [| Guidance]); Marks column min 40 pt; underline on part of one word ("evaporation/evaporated") kept instead of scaling.
+  2016 MJ + ON re-run (cut change; golden 0 changed cuts). Scaled rows: MJ 2, ON 3. Every question ends with a Total row except 3 (Total inside a scaled row).
+- Option pictures still wrong (flagged in round 6, not fixed yet): 2016 ON 12 q21 (option A has part of the question sentence), 23 q15 (table-row options),
+  11 q06 (check B), 2016 MJ 12 q06 (piece of next option's label).
+- Review round 6 = NEW review page (old one full: 511-file limit): review/portal.json review_url updated. 47 items (8 rechecks/known issues first).

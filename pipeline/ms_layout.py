@@ -26,6 +26,59 @@ def _frame(v, top=False, t=0.6):
         v['lines'].append(_rect(0, 0, W, t))
 
 
+def _shift_path(d, dx):
+    """Move an absolute M/L/H/V/C/Z path by dx (x only)."""
+    out = []
+    for cmd, args in re.findall(r'([A-Za-z])([^A-Za-z]*)', d):
+        n = [float(x) for x in MP.NUM.findall(args)]
+        if cmd in 'MLCSQT':
+            n = [v + dx if i % 2 == 0 else v for i, v in enumerate(n)]
+        elif cmd == 'H':
+            n = [v + dx for v in n]
+        out.append(cmd + ' '.join(f'{v:.2f}' for v in n))
+    return ''.join(out)
+
+
+def _tighten(u):
+    """Cut a row unit down to its table: some years print the table narrower than the cut (2016 ON: empty margins
+    left and right of the borders). Without this the margins become empty 'columns'."""
+    rr = MP._rules(u)
+    if not rr or not u['text']:
+        return u
+    h = u['h']
+    vs = [r for r in rr[0] if r[2] - r[0] < 1.3 and r[3] - r[1] > 1.5]
+    cov = {}
+    for x in MP._cluster([(r[0] + r[2]) / 2 for r in vs]):
+        cov[x] = sum(r[3] - r[1] for r in vs if abs((r[0] + r[2]) / 2 - x) < 1.5)
+    full = [x for x, c in cov.items() if c >= 0.7 * h]
+    tmin = min(t['x'] for t in u['text']); tmax = max(t['x'] + t['w'] for t in u['text'])
+    for f in u.get('figs', []) + (u.get('images') or []):
+        tmin = min(tmin, f['x'])
+    left = max([x for x in full if x < tmin - 1] + [None], key=lambda v: -1e9 if v is None else v)
+    right = min([x for x in full if x > tmax + 1] + [None], key=lambda v: 1e9 if v is None else v)
+    if left is None or left < 4:
+        left = 0.0
+    if right is None or u['w'] - right < 4:
+        right = u['w']
+    if left == 0.0 and right == u['w']:
+        return u
+    v = copy.deepcopy(u)
+    dx = -left + 0.5 if left else 0.0
+    for t in v['text']:
+        t['x'] = round(t['x'] + dx, 2)
+    for f in v.get('figs', []) + (v.get('images') or []) + (v.get('glyphs') or []):
+        f['x'] = round(f['x'] + dx, 2)
+    keep = []
+    for l in v['lines']:
+        b = MP._bbox(l['d'])
+        if b is not None and (b[2] < left - 1 or b[0] > right + 1):
+            continue                                  # outside the table
+        keep.append({**l, 'd': _shift_path(l['d'], dx)})
+    v['lines'] = keep
+    v['w'] = round(right - left + 1.0, 2)
+    return v
+
+
 def _clip_lines(lines, h):
     """Drop rules that lie below h, cut those that cross it (the row is now shorter)."""
     out = []
@@ -87,6 +140,21 @@ def _split_total(v, info):
     return v2, row
 
 
+def _own_total(marks, info, rows):
+    nw = [w for w in info['new_w'] if w >= 20]
+    if len(nw) != 3:
+        return None
+    ms0 = info['new_edges'][len(nw) - 2]
+    tpl = next((dict(t) for v in rows for t in v['text'] if t.get('f')), {'s': 11.0, 'f': 'sans'})
+    for k in ('i', 'c', 'role', 'u', 'dir'):
+        tpl.pop(k, None)
+    a = dict(tpl, t='Total', b=1, w=29.3, y=14.0); a['x'] = round(ms0 - 8 - a['w'], 2)
+    num = str(marks)
+    b = dict(tpl, t=num, b=1, w=round(6.1 * len(num), 2), y=14.0); b['x'] = round(ms0 + (nw[-1] - b['w']) / 2, 2)
+    return {'src': rows[-1]['src'], 'w': W, 'h': 20.0, 'text': [a, b], 'lines': [_rect(ms0 - 0.3, 0, ms0 + 0.3, 20.0)],
+            'figs': [], 'glyphs': [], 'own_total': True}
+
+
 def build(q, store):
     sizes = {f['id']: tuple(f['size_pt']) for f in q.get('figures', [])}
     rows = [(r, u) for p in q['parts'] for r in p['ms'] for u in r['layout']]
@@ -97,6 +165,7 @@ def build(q, store):
             seen.add(k); uniq.append((r, u))
     if not uniq:
         return None
+    uniq = [(r, _tighten(u)) for r, u in uniq]
     units = [u for _, u in uniq]
     widths = MP.column_widths(units)
     out, modes, problems, first = [], {}, [], None
@@ -114,6 +183,8 @@ def build(q, store):
     hdr_p = os.path.join(store, 'ms_header.json')
     if first and os.path.exists(hdr_p):
         out.insert(0, _header_unit(json.load(open(hdr_p)), first))
+    if total_row is None and first and q.get('marks') and not any(re.match(r'Total', t['t']) for v in out for t in v['text']):
+        total_row = _own_total(q['marks'], first, out)      # the mark scheme prints no total (e.g. 2016 MJ 43): add ours
     if total_row:
         out.append(total_row)
     for i, v in enumerate(out):
@@ -126,11 +197,41 @@ def build(q, store):
             'has_header': bool(first and os.path.exists(hdr_p))}
 
 
+NAMES = [(r'^(question|q)$', 'Q'), (r'answer', 'Answer'), (r'^marks?$', 'Marks'), (r'guidance|notes?|additional', 'Guidance')]
+
+
 def _header_unit(hdr, info):
-    v = MP.portrait_header(hdr, info)
-    for t in v['text']:
-        if t['t'] == 'Mark':
-            t['t'] = 'Marks'; t['w'] = round(t['w'] * 1.22, 2); t['x'] = round(t['x'] - 3, 2)
+    """Our own header row: the same short names in every year (Q | Answer | Marks | Guidance), centred in the
+    columns of the rows below. Only the ORDER of the printed header words is used, not their positions."""
+    nw = list(info['new_w']); starts = [0.0] + list(info['new_edges'])
+    real = [i for i, w in enumerate(nw) if w >= 20]
+    ws = sorted(hdr['text'], key=lambda t: t['x'])
+    phrases = []
+    for t in ws:
+        if phrases and t['x'] - (phrases[-1][-1]['x'] + phrases[-1][-1]['w']) < 12:
+            phrases[-1].append(t)
+        else:
+            phrases.append([t])
+    def norm(ph):
+        txt = ' '.join(t['t'] for t in ph).strip()
+        return next((n for pat, n in NAMES if re.search(pat, txt.lower())), txt)
+    names = [norm(p) for p in phrases]
+    if len(names) != len(real):
+        names = ['Q', 'Answer', 'Marks'] if len(real) == 3 else (names + [''] * len(real))[:len(real)]
+    tpl = dict(ws[0]) if ws else {'s': 11.0, 'f': 'sans'}
+    for k in ('i', 'c', 'role', 'u', 'dir'):
+        tpl.pop(k, None)
+    H = 22.0
+    v = {'src': hdr['src'], 'w': W, 'h': H, 'text': [], 'lines': [_rect(0, 0, W, H, '#f2f2f2')], 'figs': [], 'glyphs': []}
+    for k, (c, name) in enumerate(zip(real, names)):
+        x0 = starts[c]
+        x1 = W if k == len(real) - 1 else starts[c] + nw[c]
+        if k < len(real) - 1:
+            v['lines'].append(_rect(x1 - 0.3, 0, x1 + 0.3, H))
+        t = dict(tpl, t=name, b=1, s=11.0, y=15.0)
+        t['w'] = round(len(name) * 6.4, 2)
+        t['x'] = round(x0 + (x1 - x0 - t['w']) / 2, 2)
+        v['text'].append(t)
     _frame(v, top=True)
     return v
 

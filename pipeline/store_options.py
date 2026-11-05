@@ -292,8 +292,9 @@ def _pieces(page, box):
     return rects
 
 
-def diagram_options(page, box):
-    """Four option drawings A-D side by side / in a grid -> {letter: Rect}, or None (one drawing).
+def diagram_options(page, box, with_labels=False):
+    """with_labels=True -> (regions without the printed letters, {letter: Rect of the letter}).
+    Four option drawings A-D side by side / in a grid -> {letter: Rect}, or None (one drawing).
     The crop is cut into the grid the letters are printed in; every drawn piece and word goes to the
     option whose cell holds its centre."""
     lab = labels(page, box)
@@ -308,21 +309,26 @@ def diagram_options(page, box):
     if cell is None:
         return None
     regions = {k: fitz.Rect(lab[k]) for k in LETTERS}
+    ink = {k: fitz.Rect() for k in LETTERS}           # the drawing alone (no letter): what the option figure shows
     filled = {k: 0 for k in LETTERS}
     for r in _pieces(page, box):
         k = cell(fitz.Point((r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2))
         if k:
-            regions[k] |= r & (cell.rect[k] + (-1, -1, 1, 1)); filled[k] += 1
-    for w in words(page):
-        if w[4] in LETTERS and any(fitz.Rect(w[:4]) == lab[k] for k in LETTERS):
-            continue
+            regions[k] |= r & (cell.rect[k] + (-1, -1, 1, 1)); ink[k] |= r & (cell.rect[k] + (-1, -1, 1, 1)); filled[k] += 1
+    ws = [w for w in words(page) if not (w[4] in LETTERS and any(fitz.Rect(w[:4]) == lab[k] for k in LETTERS))]
+    phrase = {}                                   # "1.0 cm": a unit goes with its number (same line, small gap)
+    for w in sorted(ws, key=lambda w: (round((w[1] + w[3]) / 2), w[0])):
+        prev = [p for p in phrase if abs((p[1] + p[3]) / 2 - (w[1] + w[3]) / 2) < 2 and 0 <= w[0] - p[2] < 4]
+        phrase[w] = phrase[prev[-1]] if prev else w
+    for w in ws:
         wr = fitz.Rect(w[:4])
-        c = fitz.Point((wr.x0 + wr.x1) / 2, (wr.y0 + wr.y1) / 2)
+        h = fitz.Rect(phrase[w][:4])
+        c = fitz.Point((h.x0 + h.x1) / 2, (h.y0 + h.y1) / 2)
         if not (box + (0, -12, 0, 12)).contains(c):
             continue
         k = cell(c)
         if k:
-            regions[k] |= wr; filled[k] += 1
+            regions[k] |= wr; ink[k] |= wr; filled[k] += 1
     if any(v == 0 for v in filled.values()):
         return None
     regions = {k: r + (-1.5, -1.5, 1.5, 1.5) for k, r in regions.items()}
@@ -334,6 +340,8 @@ def diagram_options(page, box):
     areas = sorted(r.get_area() for r in regions.values())
     if areas[0] < 0.2 * areas[-1]:             # four options are drawings of about the same size
         return None
+    if with_labels:
+        return {k: (ink[k] + (-1.5, -1.5, 1.5, 1.5)) if not ink[k].is_empty else regions[k] for k in LETTERS}, lab
     return regions
 
 

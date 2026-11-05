@@ -48,7 +48,7 @@ def editable_payload(q, d, qid):
     return out, figs
 
 
-def new(rnd, pids, sample=3, title=None, intro=None, max_items=None):
+def new(rnd, pids, sample=3, title=None, intro=None, max_items=None, recheck=None):
     """max_items caps the round (one page version holds ~100 items): flagged items first (Cambridge
     flags, then figure crops, then editable text) up to four fifths, then random spot checks spread over
     the papers. Flags that did not fit go into the next round (the paper waits for them)."""
@@ -74,6 +74,9 @@ def new(rnd, pids, sample=3, title=None, intro=None, max_items=None):
                 prio[d['q']] = min(prio.get(d['q'], 9), 1)
         rest = [q for q in qids if q not in reasons]
         samples.append(rng.sample(rest, min(sample, len(rest))))
+    for qid, why in (recheck or {}).items():    # items fixed after an earlier round: shown again first
+        if qid in byid:
+            reasons.setdefault(qid, []).insert(0, why); prio[qid] = -1
     flagged = sorted(prio, key=lambda q: (prio[q], q))
     sampled = [q for k in range(sample) for lst in rng.sample(samples, len(samples)) for q in lst[k:k + 1]]
     if max_items is not None:            # keep a fifth of the round for spot checks; left-over flags wait for the next round
@@ -121,7 +124,9 @@ if __name__ == '__main__':
     if a and a[0] == 'new':
         sample = int(opt('--sample', 3)); title = opt('--title'); intro = opt('--intro')
         mx = opt('--max'); mx = int(mx) if mx else None
-        new(int(a[1]), a[2:], sample, title, intro, mx)
+        rc = opt('--recheck')                      # "qid=why;qid=why"
+        rc = dict(x.split('=', 1) for x in rc.split(';') if '=' in x) if rc else None
+        new(int(a[1]), a[2:], sample, title, intro, mx, rc)
     elif a and a[0] == 'close':
         close(int(a[1]), a[2])
     else:
