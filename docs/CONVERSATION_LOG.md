@@ -142,3 +142,10 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - (18:15) 2019 processed + pre-checked (42 papers, 0 blocking). Fixed: 2019 ON 42 mark scheme is a landscape page printed shrunk on
   portrait paper -> footer found higher up (ms.py) and rows scaled back to 11 pt (ms_layout._unshrink) so it gets our layout;
   options sharing a compass rose (N E S W) stay whole. Golden 0. Round 10 (2019, 64 items) on its own page.
+
+## 2026-11-05 17:29 IST — one review link; standing approval rule
+- Dhruv was confused by 3 separate pages (rounds 8, 9, 10). Now ONE page (review_url in portal.json) with a button per round/year
+  (2017 | 2018 | 2019), progress shown on each button; rounds live in r<n>/ folders listed in rounds.json (site/review/index.html
+  supports this). Old per-year pages are no longer used (none had answers). Figures merged into the "Rebuilt" picture to stay under 511 files.
+- STANDING RULE (Dhruv): a year is approved after its review round once the wrong items are fixed: no separate "approve" message needed.
+  Applied: 2017 FM approved (round 7 done, its wrong item fixed). 2017 MJ/ON, 2018, 2019 get approved when rounds 8/9/10 are answered and fixed.
