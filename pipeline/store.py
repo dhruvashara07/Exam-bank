@@ -221,6 +221,9 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
 
 
 # ---------------------------------------------------------------- figures
+FOREIGN = []                                   # words of a neighbouring figure inside the last fit_crop box
+
+
 def fit_crop(pg, b, max_grow=50.0):
     """Mend a figure crop that cuts through ink or a label (review rounds: 80% of 'crop cut' flags were real).
     1. a drawing crossing an edge is taken in (at most max_grow pt per side);
@@ -330,6 +333,42 @@ def fit_crop(pg, b, max_grow=50.0):
                 b.y0 = max(b.y0, l.y1 + 0.5)
             else:
                 b.y1 = min(b.y1, l.y0 - 0.5)
+    # side-by-side figures (2022 FM 62 Fig. 2.2 | 2.3, 2022 ON 31 Fig. 7.1 | 7.2): when the crop reaches over the neighbour's
+    # drawing, keep only the ink that belongs to OUR caption (ink grouped by touching pieces, each group to the nearest caption)
+    below = [c for c in caps if b.y1 - 40 <= c.y0 <= b.y1 + 45 and c.x1 > b.x0 - 150 and c.x0 < b.x1 + 150]
+    below = sorted(below, key=lambda c: c.x0)
+    if len(below) >= 2 and any(abs((c2.x0 + c2.x1) / 2 - (c1.x0 + c1.x1) / 2) > 80 for c1, c2 in zip(below, below[1:])):
+        own = min(below, key=lambda c: abs((c.x0 + c.x1) / 2 - (b.x0 + b.x1) / 2))
+        items = [fitz.Rect(d_['rect']) for d_ in pg.get_drawings() if d_['rect'].intersects(b) and d_['rect'].width < 0.9 * pg.rect.width]
+        items = [r for r in items if (r & b).get_area() > 0 or r.width < 1 or r.height < 1]
+        n_draw = len(items)
+        items += [fitz.Rect(w[:4]) for w in pg.get_text('words') if fitz.Rect(w[:4]).intersects(b)
+                  and not any(fitz.Rect(w[:4]).intersects(c) for c in below)]
+        par = list(range(len(items)))
+        def find(a):
+            while par[a] != a:
+                par[a] = par[par[a]]; a = par[a]
+            return a
+        for a_ in range(len(items)):
+            ga = fitz.Rect(items[a_].x0 - 5, items[a_].y0 - 3, items[a_].x1 + 5, items[a_].y1 + 3)   # words of one label stay together
+            for c_ in range(a_ + 1, len(items)):
+                if ga.intersects(items[c_]):
+                    par[find(a_)] = find(c_)
+        groups = {}
+        for k, r in enumerate(items):
+            groups.setdefault(find(k), fitz.Rect(r)).include_rect(r)
+        mine_roots = {k for k, g in groups.items() if min(below, key=lambda c: abs((c.x0 + c.x1) / 2 - (g.x0 + g.x1) / 2)) is own}
+        mine = [groups[k] for k in mine_roots]
+        others = [g for g in groups.values() if g not in mine]
+        if mine and others:
+            u = fitz.Rect(mine[0])
+            for g in mine[1:]:
+                u.include_rect(g)
+            nb = fitz.Rect(max(b.x0, u.x0 - 2), b.y0, min(b.x1, u.x1 + 2), b.y1)
+            if not any((g & nb).get_area() > 0.5 * max(g.get_area(), 1) for g in others) and nb.width > 0.3 * b.width:
+                b = nb
+                # the neighbour's label words that still reach into our crop ('beaker A with lid' over Fig. 2.2): blanked
+                FOREIGN.extend(r for k, r in enumerate(items) if k >= n_draw and r.intersects(b) and find(k) not in mine_roots)
     return b
 
 
@@ -376,11 +415,18 @@ def merge_contained(figs, qid, store, resave=None):
 def save_figure(f, q, meta, qdoc, store):
     b = fitz.Rect(f['bbox'])
     pg = qdoc[f['page'] - 1]
+    cap, cap_in, masked = None, False, False
     if not f.get('mask'):
+        FOREIGN.clear()
         nb = fit_crop(pg, b)
         if nb != b:
             f = dict(f, bbox=list(nb), svg=None); b = nb
-    cap, cap_in, masked = None, False, False
+        if FOREIGN:                               # blank the neighbour figure's words (graphics untouched)
+            d_ = fitz.open(); d_.insert_pdf(pg.parent, from_page=pg.number, to_page=pg.number); p_ = d_[0]
+            for r in FOREIGN:
+                p_.add_redact_annot(r + (-0.3, -0.3, 0.3, 0.3), fill=False)
+            p_.apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE, graphics=fitz.PDF_REDACT_LINE_ART_NONE)
+            pg = p_; qdoc = d_; f = dict(f, svg=None); masked = True
     if f.get('mask'):                         # a printed option letter inside the drawing's box: blank it
         pg = V5.without_caption(pg, fitz.Rect(f['mask']))
         qdoc = pg.parent

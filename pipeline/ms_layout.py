@@ -102,6 +102,20 @@ def _dedupe(u):
     return v
 
 
+def _under_images(u):
+    """Words lying inside a small picture of the same label (2022 ON 41 q7, 2022 MJ 41 q9: the labels are printed as
+    pictures with a hidden text copy underneath): the picture shows them, the copy would print them a second time."""
+    ims = [im for im in (u.get('images') or []) if im.get('w', 0) * im.get('h', 0) < 4000]
+    if not ims:
+        return u
+    inside = lambda t: any(im['x'] - 1 <= t['x'] and t['x'] + t['w'] <= im['x'] + im['w'] + 1
+                           and im['y'] - 1 <= t['y'] - 0.7 * t.get('s', 10) and t['y'] <= im['y'] + im['h'] + 1 for im in ims)
+    keep = [t for t in u['text'] if not inside(t)]
+    if len(keep) == len(u['text']):
+        return u
+    return dict(u, text=keep)
+
+
 def _tighten(u):
     """Cut a row unit down to its table: some years print the table narrower than the cut (2016 ON: empty margins
     left and right of the borders). Without this the margins become empty 'columns'."""
@@ -551,6 +565,8 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
     mrk_t = [t for t in u['text'] if t['x'] + t['w'] / 2 > e2 and t['y'] < h - 1]
     ans_l = []
     for l in u['lines']:
+        if (l.get('fill') or '').lower() in ('#ffffff', '#fff') and not l.get('stroke') or (l.get('stroke') or '').lower() in ('#ffffff', '#fff'):
+            continue                                  # white paint (a hidden line, 2022 MJ 41 q9): nothing to draw
         b = MP._bbox(l['d'])
         if b is None:
             bb = [MP._bbox(sub) for sub in re.findall(r'M[^M]+', l['d'])]
@@ -663,21 +679,45 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
         pure = not PP and not cols and all(under[id(l)] is not None for l, b in decor)
         kb, moves, extra = 1.0, {}, 0.0
         if (need > A + 0.5 or spanning) and pure and TT:   # re-wrap the text lines of this band (wide gaps closed up)
+            # a fraction (numerator / bar / denominator) belongs to the text line it sits in (2022 FM 32 q11 '... OR 240×48/590')
+            line_of = {id(t): round(t['y']) for t in TT}
+            for l, b in decor:
+                num = [t for t in TT if 0.3 <= b[1] - t['y'] <= 5 and b[0] - 1 <= t['x'] + t['w'] / 2 <= b[2] + 1]
+                den = [t for t in TT if 0 < t['y'] - b[3] <= 13 and b[0] - 1 <= t['x'] + t['w'] / 2 <= b[2] + 1]
+                if num and den:
+                    yn, yd = min(t['y'] for t in num), max(t['y'] for t in den)
+                    host = [t for t in TT if yn + 1 < t['y'] < yd - 1 and t not in num + den]
+                    if host:
+                        hy = round(min(host, key=lambda t: abs(t['y'] - (b[1] + 3)))['y'])
+                        for t in num + den:
+                            line_of[id(t)] = hy
             rows_ = collections.OrderedDict()
-            for t in sorted(TT, key=lambda t: (round(t['y']), t['x'])):
-                rows_.setdefault(round(t['y']), []).append(t)
+            for t in sorted(TT, key=lambda t: (line_of[id(t)], t['x'])):
+                rows_.setdefault(line_of[id(t)], []).append(t)
+            rows_ = collections.OrderedDict(sorted(rows_.items()))
             for y_, ws in rows_.items():
-                start = X(ws[0]['x']); dx = 0.0; lh = max(t.get('s', 10) for t in ws) * 1.25; prev = None; hang = None
-                for t in ws:
+                # pieces stacked over each other (a fraction) move as one token
+                toks = []
+                for t in sorted(ws, key=lambda t: t['x']):
+                    if toks and t['x'] < max(o['x'] + o['w'] for o in toks[-1]) - 0.5 and abs(t['y'] - toks[-1][0]['y']) > 2:
+                        toks[-1].append(t)
+                    else:
+                        toks.append([t])
+                tx0 = lambda tk: min(o['x'] for o in tk); tw_ = lambda tk: max(o['x'] + o['w'] for o in tk) - tx0(tk)
+                span_y = max(t['y'] for t in ws) - min(t['y'] for t in ws)
+                start = X(tx0(toks[0])); dx = 0.0; lh = max(t.get('s', 10) for t in ws) * 1.25 + span_y; prev = None; hang = None
+                for tk in toks:
                     if prev is not None:
-                        gap = (X(t['x']) + dx) - (X(prev['x']) + moves[id(prev)][0] + prev['w'])
-                        if gap > 12 and (spanning or X(t["x"]) + dx + t["w"] > L + 5 + A):
+                        gap = (X(tx0(tk)) + dx) - (X(tx0(prev)) + moves[id(prev[0])][0] + tw_(prev))
+                        if gap > 12 and (spanning or X(tx0(tk)) + dx + tw_(tk) > L + 5 + A):
                             dx -= gap - 3.5                # a wide gap (justified or column text): one space
                         elif gap > 12 and hang is None and not spanning:
-                            hang = X(t['x']) + dx          # 'MP2   Correct circuit ...': wrapped lines hang under 'Correct'
-                    if X(t['x']) + dx + t['w'] > L + 5 + A and X(t['x']) + dx > start + 1:
-                        dx = (hang if hang is not None and hang < L + 5 + A / 2 else start) - X(t['x']); extra += lh
-                    moves[id(t)] = (dx, extra); prev = t
+                            hang = X(tx0(tk)) + dx         # 'MP2   Correct circuit ...': wrapped lines hang under 'Correct'
+                    if X(tx0(tk)) + dx + tw_(tk) > L + 5 + A and X(tx0(tk)) + dx > start + 1:
+                        dx = (hang if hang is not None and hang < L + 5 + A / 2 else start) - X(tx0(tk)); extra += lh
+                    for t in tk:
+                        moves[id(t)] = (dx, extra)
+                    prev = tk
                 # following lines move down by the extra lines so far (applied via moves of later words)
             for t in TT:
                 if id(t) not in moves:
@@ -813,7 +853,7 @@ def build(q, store):
     if not uniq:
         return None
     uniq.sort(key=lambda ru: (ru[1]['src']['page'], ru[1]['src']['box'][1]))   # the mark scheme's own order (2017 ON 41 q8: 8 Hydroelectric (a)(b)(c), 8 Tidal flow (a)(b)(c) ...)
-    uniq = [(r, _tighten(_dedupe(_unshrink(u)))) for r, u in uniq]
+    uniq = [(r, _tighten(_under_images(_dedupe(_unshrink(u))))) for r, u in uniq]
     units = [u for _, u in uniq]
     if all(u['w'] <= W + 2 for u in units):          # the old portrait era: our table too (no printed one to follow)
         first = {'edges': [], 'new_edges': [44.0, W - 44.0], 'new_w': [44.0, W - 88.0, 44.0], 'default': True}
