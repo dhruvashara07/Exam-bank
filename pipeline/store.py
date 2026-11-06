@@ -600,6 +600,16 @@ def build(pid):
                 break
     for qf in glob.glob(os.path.join(store, 'q*.json')):         # the header file exists only now: add the header row
         rec = json.load(open(qf))
+        if rec.get('ms_p') and os.path.exists(os.path.join(store, 'ms_header.json')):
+            try:                                  # built again now that the header is known: its column count decides
+                mp = ML.build(rec, store)         # which rows are inner tables (2021 FM 32 q11)
+                if mp:
+                    rec['ms_p'] = {'w': mp['w'], 'h': mp['h'], 'rows': mp['rows'], 'modes': mp['modes'], 'info': mp['info'], 'has_header': mp['has_header'], 'printed_total': mp.get('printed_total'),
+                                   'problems': [list(x) for x in mp['problems']]}
+                    json.dump(rec, open(qf, 'w'), ensure_ascii=False, separators=(',', ':'))
+                    continue
+            except Exception as e:
+                print(f"  {rec['id']}: portrait mark scheme failed: {e}", file=sys.stderr)
         if ML.attach_header(rec, store):
             json.dump(rec, open(qf, 'w'), ensure_ascii=False, separators=(',', ':'))
     size = lambda pat: sum(os.path.getsize(f) for f in glob.glob(os.path.join(store, pat)))
