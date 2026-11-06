@@ -195,3 +195,13 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   at their caption, inner-table edges at the row bottom kept, indented tables use their blank space before any shrink.
   Cleared myself: Cambridge numbering slips (2020 ON 41 "7(b)" twice), printed mark codes (2020 ON 42 1(b) B1), OR routes.
   2016-2020 rebuilt: no figure flags, no shrunk MS rows. Round 15 "2020" (4 items, new row kinds only) on the page; round 14 removed.
+- 12:36 Dhruv: EVERY mark scheme in our guideline layout, all years (consistency) - also the old portrait ones (overrides the
+  earlier "2013 - 2016 FM keep as printed"). Approve = final check in git; MongoDB stays paused until everything is done.
+  For a layout decision I make: send a side-by-side picture (original | ours) in the message instead of review items.
+  Round 15 answers: 2020 FM 32 q6 centre the inner table in its cell + bottom edge ("responsive": landscape original -> portrait ours);
+  2020 MJ 31 q11 page split = one cell, one Q label, no line across the Q column; 2020 ON 51 q4 only MP1-MP7 (notes under the table
+  are not this question's MS); 2020 MJ 53 q3 'Method' is question text (already so).
+- Done: old portrait MS -> our table (ms_layout._old_rows: one row per part, labels n(a)(i), marks bold, our Total, printed
+  [Total] dropped, superscripts kept on their line); centred inner tables with their bottom edge; one Q cell across page splits;
+  notes printed under the table dropped. 2016 FM - 2020 ON rebuilt, audit clean (only kinds I clear), 90 papers approved
+  (final check in git; MongoDB sync is paused in bank.yml). 2016-2020 complete. Next: 2021 under the new plan.
