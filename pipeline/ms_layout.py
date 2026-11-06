@@ -20,9 +20,9 @@ def _rect(x0, y0, x1, y1, fill=FRAME):
     return {'d': f'M{x0:.2f} {y0:.2f}L{x1:.2f} {y0:.2f}L{x1:.2f} {y1:.2f}L{x0:.2f} {y1:.2f}Z', 'fill': fill}
 
 
-def _frame(v, top=False, t=0.6):
+def _frame(v, top=False, t=0.6, bottom_from=0.0):
     h = v['h']
-    v['lines'] += [_rect(0, 0, t, h), _rect(W - t, 0, W, h), _rect(0, h - t, W, h)]
+    v['lines'] += [_rect(0, 0, t, h), _rect(W - t, 0, W, h), _rect(bottom_from, h - t, W, h)]
     if top:
         v['lines'].append(_rect(0, 0, W, t))
 
@@ -218,6 +218,114 @@ def _own_total(marks, info, rows):
             'figs': [], 'glyphs': [], 'own_total': True}
 
 
+LABEL_RE = re.compile(r'^(\d{1,2})$|^\(([a-h])\)$|^\(([ivx]{1,4})\)$')
+MARK_RE = re.compile(r'^\(?(?:[ABCMP]\d{1,2}|B\d|\d)\)?$|^\[\d{1,2}\]$')
+
+
+def _old_rows(units, q, L=44.0, M=W - 44.0):
+    """Old portrait mark schemes (up to 2016 FM: no table, 'n (a) answer ... B1'): put them in OUR table, like every
+    other year (Dhruv 2026-11-06: 'we want each ms in our guideline layout, consistency in all ms').
+    One row per question part; label 'n(a)(i)' in the Q column, answer at the normal size in the Answer column
+    (re-wrapped when too wide), marks right-aligned in the Marks column; the printed '[Total: n]' goes (ours is drawn)."""
+    A = M - L - 10
+    qn = str(int(q['id'].rsplit('_q', 1)[1]))
+    state = {'l': None, 'r': None}
+    rows = []
+    for u in units:
+        ws = [t for t in u['text'] if t.get('s', 10) >= 5]
+        # the printed total '[Total: 5]'
+        drop = set()
+        for t in ws:
+            if re.fullmatch(r'\[?Total:?', t['t']):
+                drop.add(id(t))
+                for o in ws:
+                    if abs(o['y'] - t['y']) < 2.5 and o['x'] > t['x'] and re.fullmatch(r'[\d\]\[]+', o['t']):
+                        drop.add(id(o))
+        ws = [t for t in ws if id(t) not in drop]
+        if not ws:
+            continue
+        lines = collections.OrderedDict()
+        for t in sorted(ws, key=lambda t: (round(t['y']), t['x'])):
+            lines.setdefault(round(t['y']), []).append(t)
+        def lead_labels(lw):                          # bold 'n', '(a)', '(i)' at the start of a line
+            out_ = []
+            for t in lw:
+                if t.get('b') and LABEL_RE.match(t['t']) and t['x'] < 0.3 * u['w']:
+                    out_.append(t)
+                else:
+                    break
+            return out_
+        all_labs = {id(t) for lw in lines.values() for t in lead_labels(lw)}
+        body = [t for t in ws if id(t) not in all_labs and not (t['x'] > 0.82 * u['w'] and MARK_RE.match(t['t']))]
+        ax0 = min([t['x'] for t in body]) if body else 56.0
+        # split the unit at lines that start with a part label
+        segs = []
+        for y, lw in lines.items():
+            labs = lead_labels(lw)
+            if labs or not segs:
+                segs.append({'y0': y, 'labs': labs, 'lines': []})
+            segs[-1]['lines'].append(lw)
+        for sg in segs:
+            for t in sg['labs']:
+                m_ = LABEL_RE.match(t['t'])
+                if m_.group(2):
+                    state['l'], state['r'] = m_.group(2), None
+                elif m_.group(3):
+                    state['r'] = m_.group(3)
+            label = qn + (f"({state['l']})" if state['l'] else '') + (f"({state['r']})" if state['r'] else '')
+            tpl = dict(next((t for lw in sg['lines'] for t in lw if not t.get('b')), sg['lines'][0][0]))
+            for k in ('i', 'c', 'role', 'u', 'dir'):
+                tpl.pop(k, None)
+            v = {'src': u['src'], 'w': W, 'h': 0.0, 'text': [], 'lines': [], 'figs': [], 'glyphs': [], 'old_portrait': True}
+            top = sg['lines'][0][0]['y'] - 14.0
+            extra = 0.0; cur_y = None
+            for lw in sg['lines']:
+                body_l = [t for t in lw if t not in sg['labs'] and not (t['x'] > 0.82 * u['w'] and MARK_RE.match(t['t']))]
+                marks_l = [t for t in lw if t['x'] > 0.82 * u['w'] and MARK_RE.match(t['t'])]
+                y = lw[0]['y'] - top + extra
+                dx = 0.0; start = None
+                for t in body_l:
+                    n = dict(t); x = L + 5 + (t['x'] - ax0) + dx
+                    if start is None:
+                        start = x
+                    if x + t['w'] > L + 5 + A and x > start + 1:
+                        dx = start - (L + 5 + (t['x'] - ax0)); extra += t.get('s', 11) * 1.25; y += t.get('s', 11) * 1.25
+                        x = start
+                    n['x'] = round(x, 2); n['y'] = round(y, 2); v['text'].append(n)
+                if marks_l:
+                    a_ = min(t['x'] for t in marks_l); c_ = max(t['x'] + t['w'] for t in marks_l)
+                    for t in marks_l:
+                        n = dict(t, b=1); n['x'] = round(W - 6 - (c_ - a_) + (t['x'] - a_), 2); n['y'] = round(lw[0]['y'] - top, 2)
+                        v['text'].append(n)                   # marks in bold, like the later years
+            # drawings and pictures of the unit (fraction bars, symbols) move with the answer text of the first segment
+            if sg is segs[0]:
+                for l in u['lines']:
+                    bb = MP._bbox(l['d'])
+                    if bb is None or (min(bb[2] - bb[0], bb[3] - bb[1]) <= 1.0 and (bb[2] - bb[0] > 0.8 * u['w'] or bb[3] - bb[1] > 0.8 * u['h'])):
+                        continue                      # the old frame of the row: ours instead
+                    v['lines'].append({**l, 'd': _map_path(l['d'], lambda x: L + 5 + (x - ax0), lambda y: y - top)})
+                for k_ in ('figs', 'images', 'glyphs'):
+                    for f in u.get(k_) or []:
+                        g = dict(f); g['x'] = round(L + 5 + (f['x'] - ax0), 2); g['y'] = round(f['y'] - top, 2)
+                        v.setdefault(k_, []).append(g)
+            cw = sum(3.7 if c in '()' else 2.4 if c == 'i' else 5.5 if c in 'vx' else 6.1 for c in label)
+            lab = dict(tpl, t=label, b=0, s=11.0, w=round(cw, 2))
+            lab['x'] = round((L - lab['w']) / 2, 2); lab['y'] = 14.0
+            v['text'].append(lab)
+            bot = [t['y'] + 6 for t in v['text']] + [f['y'] + f.get('h', 0) + 4 for k_ in ('figs', 'images', 'glyphs') for f in v.get(k_) or []]
+            v['h'] = round(max(bot + [20.0]), 2)
+            v['lines'] += [_rect(L - 0.3, 0, L + 0.3, v['h']), _rect(M - 0.3, 0, M + 0.3, v['h'])]
+            rows.append(v)
+    # one part printed in several units ('(c)' continued): no new label for a row that repeats the previous label
+    for a_, b_ in zip(rows, rows[1:]):
+        la = [t for t in a_['text'] if t.get('s') == 11.0 and t['x'] < L and t['y'] == 14.0]
+        lb = [t for t in b_['text'] if t.get('s') == 11.0 and t['x'] < L and t['y'] == 14.0]
+        if la and lb and la[0]['t'] == lb[0]['t']:
+            b_['text'] = [t for t in b_['text'] if t is not lb[0]]
+            b_['cont'] = True
+    return rows
+
+
 def _cell_fallback(u, first):
     """A row the re-wrap cannot handle (inner table, drawn symbol, fraction bars ...): keep OUR columns and sizes.
     Question label and marks stay 11 pt in our columns; only the answer cell's content is scaled to fit the Answer
@@ -273,7 +381,7 @@ def _cell_fallback(u, first):
         return _heading_row(u, L)                     # a heading row across answer and marks ('8  Hydroelectric', 2017 ON 41)
     else:
         return None
-    return _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr)
+    return _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov)
 
 
 def _heading_row(u, L):
@@ -304,7 +412,7 @@ def _map_path(d, fx, fy):
     return ''.join(out)
 
 
-def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr):
+def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
     """Dhruv 2026-11-05 (round 13): rows drawn cell-wise keep the NORMAL font size; the row grows instead.
     The answer cell is laid out band by band (bands = its sub-rows): an inner table gets narrower columns to fit its
     content; a text-only band that is too wide is re-wrapped; only a band with fractions/drawings that still does not
@@ -354,6 +462,10 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr):
         inb = lambda y: b0 <= y < b1 or (i == len(bounds) - 2 and y >= b1)
         cut_ = sum(min(r[3], b1) - max(r[1], b0) for r in rr if r[2] - r[0] < 1.3 and abs((r[0] + r[2]) / 2 - e1) < 2 and r[3] > b0 and r[1] < b1)
         spanning = cut_ < 0.4 * (b1 - b0)            # a band across all columns ('Additional graph notes', 2020 ON 51 q4)
+        if spanning and not any(sum(min(r[3], b1) - max(r[1], b0) for r in rr if r[2] - r[0] < 1.3 and abs((r[0] + r[2]) / 2 - x_) < 2
+                                    and r[3] > b0 and r[1] < b1) >= 0.4 * (b1 - b0) for x_ in cov):
+            continue                                  # text under the table, outside every cell ('Additional graph notes' below
+                                                      # the table, 2020 ON 51 q4): general notes, not this question's answer
         if spanning:
             TT = [t for t in u['text'] if inb(cy(t)) and t['y'] < h - 1]
             e1b = min([t['x'] for t in TT] + [e1]) - 0.5
@@ -446,19 +558,35 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr):
         elif need > A + 0.5:
             kb = A / need
         kmin = min(kmin, kb)
+        cxs = 0.0                                     # an inner table on its own is centred in our Answer column (Dhruv, round 15)
+        if cols and not spanning and all(vx[0] - 3 <= t['x'] + t['w'] / 2 <= vx[-1] + 3 for t in TT) and all(vx[0] - 3 <= f['x'] <= vx[-1] + 3 for k_, f in PP):
+            left = L + 5 + (fxc(vx[0]) - e1b) * kb; tw = (fxc(vx[-1]) - fxc(vx[0])) * kb
+            cxs = (L + 5 + (A - tw) / 2) - left
         def fy(y, dy=0.0):
             return cum + (y - b0) * kb + dy
         for t in TT:
             n = dict(t); dx, dy = moves.get(id(t), (0.0, 0.0))
-            n['x'] = round(L + 5 + (tx(t) - e1b) * kb + dx, 2); n['y'] = round(fy(t['y'], dy), 2)
+            n['x'] = round(L + 5 + (tx(t) - e1b) * kb + dx + cxs, 2); n['y'] = round(fy(t['y'], dy), 2)
             if kb < 1:
                 n['s'] = round(t['s'] * kb, 2); n['w'] = round(t['w'] * kb, 2)
             v['text'].append(n)
+        lbot = 0.0
         for l, b in LL:
             o = under.get(id(l)); dx, dy = moves.get(id(o), (0.0, 0.0)) if o is not None else (0.0, 0.0)
-            v['lines'].append({**l, 'd': _map_path(l['d'], lambda x: L + 5 + (fxc(x) - e1b) * kb + dx, lambda y: fy(y, dy))})
+            d_ = _map_path(l['d'], lambda x: L + 5 + (fxc(x) - e1b) * kb + dx + cxs, lambda y: fy(y, dy))
+            v['lines'].append({**l, 'd': d_})
+            bb_ = MP._bbox(d_)
+            if bb_ is not None:
+                lbot = max(lbot, bb_[3])
+        if cols:                                      # the table's bottom edge was the row's own border: draw it (round 15)
+            vb = max(b[3] for l, b in LL if b[2] - b[0] < 1.3 and b[3] - b[1] >= 6)
+            has_bottom = any(b[3] - b[1] < 1.3 and abs(b[1] - vb) < 2 and b[0] <= vx[0] + 2 and b[2] >= vx[-1] - 2 for l, b in LL)
+            if not has_bottom:
+                x0_ = L + 5 + (fxc(vx[0]) - e1b) * kb + cxs; x1_ = L + 5 + (fxc(vx[-1]) - e1b) * kb + cxs
+                v['lines'].append(_rect(x0_ - 0.25, fy(vb) - 0.5, x1_ + 0.25, fy(vb)))
+                lbot = max(lbot, fy(vb))
         for k_, f in PP:
-            g = dict(f); g['x'] = round(L + 5 + (fxc(f['x']) - e1b) * kb, 2); g['y'] = round(fy(f['y']), 2)
+            g = dict(f); g['x'] = round(L + 5 + (fxc(f['x']) - e1b) * kb + cxs, 2); g['y'] = round(fy(f['y']), 2)
             if kb < 1:
                 if 'w' in g: g['w'] = round(g['w'] * kb, 2)
                 if 'h' in g: g['h'] = round(g['h'] * kb, 2)
@@ -479,12 +607,14 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr):
                 n = dict(t); n['x'] = round((L - (c_ - a_)) / 2 + (t['x'] - a_), 2); n['y'] = round(cum + (t['y'] - b0), 2)
                 v['text'].append(n)
         bot = [n['y'] + 5 for n in v['text']]
-        cum = max([(b1 - b0) * kb + extra + cum] + [y for y in bot])
+        cum = max([(b1 - b0) * kb + extra + cum] + [y for y in bot] + ([lbot + 6] if cols else []))   # room under an inner table's edge
         if i < len(bounds) - 2:
             sep_new.append((cum, sep_m.get(bounds[i + 1], False)))
     v['h'] = round(cum + 2, 2)
     v['cell_scaled'] = round(kmin, 3)
     for y, into_m in sep_new:
+        if y >= cum - 0.5:
+            continue                                  # the bands below were dropped: the row's own bottom border is enough
         v['lines'].append(_rect(L, y, W if into_m else M, y + T_ * 0.8))
     v['lines'].append(_rect(L - 0.3, 0, L + 0.3, v['h']))
     if has_marks:
@@ -505,6 +635,19 @@ def build(q, store):
     uniq.sort(key=lambda ru: (ru[1]['src']['page'], ru[1]['src']['box'][1]))   # the mark scheme's own order (2017 ON 41 q8: 8 Hydroelectric (a)(b)(c), 8 Tidal flow (a)(b)(c) ...)
     uniq = [(r, _tighten(_dedupe(_unshrink(u)))) for r, u in uniq]
     units = [u for _, u in uniq]
+    if all(u['w'] <= W + 2 for u in units):          # the old portrait era: our table too (no printed one to follow)
+        first = {'edges': [], 'new_edges': [44.0, W - 44.0], 'new_w': [44.0, W - 88.0, 44.0], 'default': True}
+        out = _old_rows(units, q)
+        modes = {'old': len(out)}
+        hdr = _header_unit({'src': units[0]['src'], 'text': []}, first)
+        total_row = _own_total(q['marks'], first, out) if q.get('marks') else None
+        out = [hdr] + out + ([total_row] if total_row else [])
+        for i, v in enumerate(out[1:], 1):
+            _drop_slivers(v)
+            nxt = out[i + 1] if i + 1 < len(out) else None
+            _frame(v, bottom_from=44.0 if nxt is not None and nxt.get('cont') else 0.0)
+        return {'w': W, 'h': round(sum(v['h'] for v in out), 2), 'rows': out, 'problems': [], 'modes': modes,
+                'printed_total': None, 'info': {k: first[k] for k in ('edges', 'new_edges', 'new_w')}, 'has_header': True}
     widths = MP.column_widths(units)
     out, modes, problems, first = [], {}, [], None
     total_row = None
@@ -556,10 +699,27 @@ def build(q, store):
         total_row['text'][1]['w'] = round(6.1 * len(str(q['marks'])), 2)
     if total_row:
         out.append(total_row)
+    Lq = first['new_edges'][0] if first else 44.0
+    def continues(v, prev):                           # the same cell carried over to the next page (2020 MJ 31 q11): one Q cell
+        return ('src' in v and 'src' in prev and v['src']['page'] != prev['src']['page'] and v['text']
+                and not v.get('heading') and not any(t['x'] + t['w'] / 2 < Lq for t in v['text']))
     for i, v in enumerate(out):
         _drop_slivers(v)
         if not (i == 0 and first and os.path.exists(hdr_p)):
-            _frame(v, top=(i == 0))
+            nxt = out[i + 1] if i + 1 < len(out) else None
+            cont = nxt is not None and continues(nxt, v)
+            if cont:                                  # the row's own bottom rule stops at the Q column too
+                keep = []
+                for l in v['lines']:
+                    bb = MP._bbox(l['d'])
+                    if bb is not None and bb[3] - bb[1] < 1.5 and bb[1] >= v['h'] - 2.5 and bb[0] < Lq - 1 and bb[2] > Lq:
+                        keep.append({**l, 'd': f'M{Lq:.2f} {bb[1]:.2f}L{bb[2]:.2f} {bb[1]:.2f}L{bb[2]:.2f} {bb[3]:.2f}L{Lq:.2f} {bb[3]:.2f}Z'})
+                    elif bb is not None and bb[3] - bb[1] < 1.5 and bb[1] >= v['h'] - 2.5 and bb[2] <= Lq + 1:
+                        continue
+                    else:
+                        keep.append(l)
+                v['lines'] = keep
+            _frame(v, top=(i == 0), bottom_from=Lq if cont else 0.0)
 
     return {'w': W, 'h': round(sum(v['h'] for v in out), 2), 'rows': out, 'problems': problems, 'modes': modes,
             'printed_total': printed_total,
