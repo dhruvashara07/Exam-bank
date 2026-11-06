@@ -1,0 +1,46 @@
+{
+ "round": 17,
+ "collection": "feedback_r17",
+ "created": "2026-11-06T14:32Z",
+ "title": "2022",
+ "intro": "2022: I checked all flags and fixed them. These 4 are the fixes worth a look.",
+ "papers": [
+  "0625_2022FM_62",
+  "0625_2022ON_41",
+  "0625_2022FM_32",
+  "0625_2022MJ_41"
+ ],
+ "status": "open",
+ "items": [
+  {
+   "id": "0625_2022FM_32_q11",
+   "group": "flagged",
+   "reasons": [
+    "Fraction 240x48/590 at the end of a long line was pushed into the Marks column: now wraps with its line, normal size"
+   ]
+  },
+  {
+   "id": "0625_2022FM_62_q02",
+   "group": "flagged",
+   "reasons": [
+    "Fig. 2.2 and Fig. 2.3 side by side: each picture now has only its own drawing and labels",
+    "figure: 0625_2022FM_62_q02b_fig2-2: crop cut: ink crosses the right edge, 1 text line(s) half inside",
+    "figure: 0625_2022FM_62_q02b_fig2-3: crop cut: 1 text line(s) half inside"
+   ]
+  },
+  {
+   "id": "0625_2022MJ_41_q09",
+   "group": "flagged",
+   "reasons": [
+    "Gate labels A, B, Q were doubled and a hidden white line was drawn: fixed"
+   ]
+  },
+  {
+   "id": "0625_2022ON_41_q07",
+   "group": "flagged",
+   "reasons": [
+    "MS diagram labels were printed twice (picture + hidden text copy): now once"
+   ]
+  }
+ ]
+}

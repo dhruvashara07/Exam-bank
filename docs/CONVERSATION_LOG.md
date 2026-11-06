@@ -217,3 +217,9 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   reflowed at the normal size (text wraps inside each cell, underlines and subscripts kept) instead of being shrunk.
   This also improved 8 mark schemes in 2016-2021 (incl. approved years): side-by-side pictures sent.
 - Round 16 "2021" (4 items) on the review page.
+- 18:56 Round 16: 2021 FM 32 q11 inner table must keep the ORIGINAL alignment (centred) - general rule "horizontal responsiveness";
+  2021 ON 32 q6(a) marks column has sub-row lines; lines of the 9(b)/6(c)(i) tables stopped short. All fixed (MS rules section 10).
+  2021 approved (final check in git). He: "2016-2021 full and final after review fix, now next".
+- 2022 check: side-by-side figures keep only their own ink (only when a neighbour figure's box overlaps beside ours; the
+  neighbour's words inside our crop are blanked); hidden text under MS label pictures dropped; white lines skipped;
+  a fraction wraps with its text line. Round 17 "2022" (4 items) on the page.
