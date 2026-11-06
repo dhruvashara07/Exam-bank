@@ -249,7 +249,11 @@ def fit_crop(pg, b, max_grow=50.0):
         real = [w for w in lw if REALW.fullmatch(w[4])]
         long_ = len(real) >= 5 or (len(real) >= 3 and lw and lw[-1][4][-1:] in '.?:')
         at_margin = l is None or l.x0 <= body_x0 + 25
-        return (not numeric(lw) and long_ and at_margin) or (l is not None and continues(l))
+        return (not numeric(lw) and long_ and at_margin) or (l is not None and (continues(l) or bulleted(l)))
+    def bulleted(l):
+        # a bullet-list item of the question ('•  metre ruler.', 2023 ON 51 q4): text, however short
+        return any(w[4] in ('•', '\u2022') and abs((w[1] + w[3]) / 2 - (l.y0 + l.y1) / 2) < 4 and 0 < l.x0 - w[2] < 40
+                   for w in pg.get_text('words'))
     def continues(l):
         # the last line of a wrapped question sentence ('pattern.', 'provided.': 2019 MJ 31 q11, 2019 ON 41 q9):
         # directly under a long text line that starts at or left of it

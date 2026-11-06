@@ -181,7 +181,11 @@ def structured_rows_table(doc):
             ink = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in lines if y - 1 <= l['y0'] < y_end - 1]
             if not ink:
                 continue
-            seg_bottom = min(y_end, max(r.y1 for r in ink) + 6)
+            # pictures in the answer cell count too (2023 MJ 33 q8: the symbol-matching picture under the
+            # column headings was cut off at the last text line)
+            pics = [fitz.Rect(i['bbox']) for i in page.get_image_info()
+                    if y - 1 <= i['bbox'][1] < y_end - 1 and i['bbox'][0] >= QX - 2 and i['bbox'][2] <= CX + 2]
+            seg_bottom = min(y_end, max([r.y1 for r in ink] + [r.y1 for r in pics]) + 6)
             current['segments'].append({'page': pno + 1, 'bbox': [x0, round(y, 1), x1, round(seg_bottom, 1)]})
             current['text'] = (current['text'] + '\n' + '\n'.join(l['text'] for l in body)).strip()
             current['marks_codes'] += codes

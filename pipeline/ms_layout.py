@@ -367,7 +367,15 @@ def _cell_fallback(u, first):
         cov[x] = sum(r[3] - r[1] for r in vs if abs((r[0] + r[2]) / 2 - x) < 1.5)
     h = u['h']
     tot_y = [t['y'] for t in u['text'] if re.fullmatch(r'Total:?', t['t'])]
-    ink_y = [t['y'] for t in u['text'] if not any(abs(t['y'] - y) < 2.5 for y in tot_y)] + [f['y'] + f.get('h', 0) for k_ in ('figs', 'images', 'glyphs') for f in u.get(k_) or []]
+    draw_y = []                                       # drawings count as content too (2023 MJ 33 q8: symbol boxes and matching lines)
+    for l in u['lines']:
+        bb_ = MP._bbox(l['d'])
+        if bb_ is None:
+            pts_ = [float(x) for x in MP.NUM.findall(l['d'])]
+            bb_ = (min(pts_[0::2]), min(pts_[1::2]), max(pts_[0::2]), max(pts_[1::2])) if len(pts_) >= 4 else None
+        if bb_ is not None and not (bb_[3] - bb_[1] < 1.3 and bb_[2] - bb_[0] > 0.5 * u['w']) and not (bb_[2] - bb_[0] < 1.3 and bb_[3] - bb_[1] > 0.5 * u['h']):
+            draw_y.append(bb_[3])
+    ink_y = [t['y'] for t in u['text'] if not any(abs(t['y'] - y) < 2.5 for y in tot_y)] + [f['y'] + f.get('h', 0) for k_ in ('figs', 'images', 'glyphs') for f in u.get(k_) or []] + draw_y
     hy = collections.defaultdict(float)
     for r in rr:
         if r[3] - r[1] < 1.3 and r[2] - r[0] > 1.3:
@@ -388,7 +396,7 @@ def _cell_fallback(u, first):
         e2_ = full[-1]
         ink2 = [t['y'] for t in u['text'] if not any(abs(t['y'] - y) < 2.5 for y in tot_y)
                 and not (t['x'] + t['w'] / 2 > e2_ and re.fullmatch(r'\d+', t['t']))] + \
-               [f['y'] + f.get('h', 0) for k_ in ('figs', 'images', 'glyphs') for f in u.get(k_) or []]
+               [f['y'] + f.get('h', 0) for k_ in ('figs', 'images', 'glyphs') for f in u.get(k_) or []] + draw_y
         for y in sorted(hy):
             if hy[y] > 0.6 * u['w'] and 4 < y < h - 4 and ink2 and max(ink2) < y:
                 h = float(y); break
@@ -473,12 +481,15 @@ def _reflow_table(TT, LL, PP, vx, A):
     placed, need_h = [], {}
     for (i, j), ws in cells.items():
         a, c = cols[j]; x0 = nx[j] + 4; x1 = nx[j + 1] - 4
-        anch = sorted({round(t['y']) for t in ws if t.get('s', 11) >= 9})
+        anch = []
+        for y0 in sorted(t['y'] for t in ws if t.get('s', 11) >= 9):   # baselines within 3 pt are one line (big brackets)
+            if not anch or y0 - anch[-1] > 3:
+                anch.append(round(y0))
         def key(t):                                    # sub/superscripts (R₁, cm³) stay on their line
-            if t.get('s', 11) >= 9 or not anch:
+            if not anch:
                 return round(t['y'])
             a_ = min(anch, key=lambda a: abs(a - t['y']))
-            return a_ if abs(a_ - t['y']) <= 7 else round(t['y'])
+            return a_ if abs(a_ - t['y']) <= (3.5 if t.get('s', 11) >= 9 else 7) else round(t['y'])
         lines_ = {}
         for t in sorted(ws, key=lambda t: (key(t), t['x'])):
             lines_.setdefault(key(t), []).append(t)
@@ -677,6 +688,9 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
             o = next((t for t in TT if 0.3 <= b[1] - t['y'] <= 5 and b[0] < t['x'] + t['w'] and b[2] > t['x'] and b[3] - b[1] < 1.3), None)
             under[id(l)] = o
         pure = not PP and not cols and all(under[id(l)] is not None for l, b in decor)
+        vys = [b for l, b in LL if b[2] - b[0] < 1.3 and b[3] - b[1] >= 6]
+        tab_y0 = min([b[1] for b in vys] + [1e9]); tab_y1 = max([b[3] for b in vys] + [-1e9])
+        tab_rows = lambda t: tab_y0 - 2 <= t['y'] - 0.35 * t.get('s', 10) <= tab_y1 + 2
         kb, moves, extra = 1.0, {}, 0.0
         if (need > A + 0.5 or spanning) and pure and TT:   # re-wrap the text lines of this band (wide gaps closed up)
             # a fraction (numerator / bar / denominator) belongs to the text line it sits in (2022 FM 32 q11 '... OR 240×48/590')
@@ -722,9 +736,10 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
             for t in TT:
                 if id(t) not in moves:
                     moves[id(t)] = (0.0, 0.0)
-        elif need > A + 0.5 and cols and not spanning and all(vx[0] - 3 <= t['x'] + t['w'] / 2 <= vx[-1] + 3 for t in TT):
+        elif need > A + 0.5 and cols and not spanning and all(vx[0] - 3 <= t['x'] + t['w'] / 2 <= vx[-1] + 3 or not tab_rows(t) for t in TT):
             full_ = abs(vx[0] - (e1b + 0.5)) < 0.01 and abs(vx[-1] - (e2 - 0.5)) < 0.01
-            rf = _reflow_table(TT, LL, PP, vx, (M - L + 4) if full_ else A)
+            TT_out = [t for t in TT if not tab_rows(t)]   # a note under/over the table ('1 mark for each correct column')
+            rf = _reflow_table([t for t in TT if tab_rows(t)], LL, PP, vx, (M - L + 4) if full_ else A)
             if rf is not None:                        # the table at the normal size, text wrapped inside its cells
                 texts_, lines_, pics_, tw_, ymap_ = rf
                 ox = L if full_ else L + 5 + (A - tw_) / 2   # a table filling the cell meets our column rules (round 16)
@@ -756,6 +771,10 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
                         n = dict(t); n['x'] = round((L - (c_ - a_)) / 2 + (t['x'] - a_), 2); n['y'] = round(cum + (t['y'] - b0), 2)
                         v['text'].append(n)
                 tb = max([MP._bbox(l['d'])[3] for l in v['lines'][-len(lines_):] if MP._bbox(l['d'])] + [oy]) if lines_ else oy
+                for t in TT_out:                      # notes keep their place above/below the table, left-aligned
+                    n = dict(t); n['x'] = round(L + 5 + (t['x'] - e1b), 2)
+                    n['y'] = round(cum + (t['y'] - b0) if t['y'] < tab_y0 else tb + (t['y'] - tab_y1), 2)
+                    v['text'].append(n)
                 cum = max([tb + (0 if full_ else 6)] + [n['y'] + 5 for n in v['text']])   # a full-cell table ends on the row line
                 if full_ and cum > tb + 0.5:              # its column lines run on to the row line
                     for l in list(v['lines'][-len(lines_):]):
