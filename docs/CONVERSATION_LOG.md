@@ -205,3 +205,15 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   [Total] dropped, superscripts kept on their line); centred inner tables with their bottom edge; one Q cell across page splits;
   notes printed under the table dropped. 2016 FM - 2020 ON rebuilt, audit clean (only kinds I clear), 90 papers approved
   (final check in git; MongoDB sync is paused in bank.yml). 2016-2020 complete. Next: 2021 under the new plan.
+
+## 2026-11-06 afternoon — build ahead on GitHub, 2021
+- 13:36-13:40 Dhruv agreed: GitHub builds the coming years in the background (bank.yml workflow_dispatch input 'sessions',
+  pipeline/session_papers.py); I check one year at a time; he can chat meanwhile. 2022-FM .. 2026-MJ built in 9 minutes
+  (about 45 s per session on GitHub; my earlier "45 min per year" estimate was this container). My pushes use SKIP_WAIT=1
+  while a long build runs. 2025/2026 were approved long ago in the old layout: re-check them like every other year.
+- 2021 check (all flags looked at): inner tables read as extra MS columns -> drawn inside the answer (expected column count
+  from the printed header names); store.py builds every MS again once the paper's header file exists; figure crops may follow
+  their drawing past the caption (2021 ON 63 q1 magnified scale, growth limit 50 pt); side-by-side 'or' alternative tables are
+  reflowed at the normal size (text wraps inside each cell, underlines and subscripts kept) instead of being shrunk.
+  This also improved 8 mark schemes in 2016-2021 (incl. approved years): side-by-side pictures sent.
+- Round 16 "2021" (4 items) on the review page.

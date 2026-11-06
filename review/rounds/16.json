@@ -1,0 +1,45 @@
+{
+ "round": 16,
+ "collection": "feedback_r16",
+ "created": "2026-11-06T09:34Z",
+ "title": "2021",
+ "intro": "2021: I checked all flags and fixed them. These 4 are the fixes worth a look.",
+ "papers": [
+  "0625_2021FM_32",
+  "0625_2021ON_32",
+  "0625_2021ON_63",
+  "0625_2021ON_41"
+ ],
+ "status": "open",
+ "items": [
+  {
+   "id": "0625_2021FM_32_q11",
+   "group": "flagged",
+   "reasons": [
+    "Small table inside 11(a) was read as extra columns (header showed 5 columns, no Total): now our 3 columns with the table inside"
+   ]
+  },
+  {
+   "id": "0625_2021ON_32_q06",
+   "group": "flagged",
+   "reasons": [
+    "Same fix: property/object table inside 6(a)"
+   ]
+  },
+  {
+   "id": "0625_2021ON_41_q07",
+   "group": "flagged",
+   "reasons": [
+    "Side-by-side 'or' alternatives kept as small tables inside the answer"
+   ]
+  },
+  {
+   "id": "0625_2021ON_63_q01",
+   "group": "flagged",
+   "reasons": [
+    "Fig. 1.1 now includes the magnified thermometer scale below the caption (q(a) asks to read it)",
+    "figure: 0625_2021ON_63_q01_fig1-1: crop cut: ink crosses the bottom edge, 1 text line(s) half inside"
+   ]
+  }
+ ]
+}
