@@ -421,6 +421,122 @@ def _map_path(d, fx, fy):
     return ''.join(out)
 
 
+def _reflow_table(TT, LL, PP, vx, A):
+    """An inner table too wide for our Answer column even with narrow columns (side-by-side 'OR' alternatives,
+    2019 ON 43 q9): keep the normal font size and wrap each cell's text inside its column; rows grow taller.
+    Returns (texts, lines, pics, width, ymap) in table coordinates (x from 0, y = mapped source y)."""
+    cw_ = lambda x: next((c - a for a, c in zip(vx, vx[1:]) if a - 1 <= x <= c + 1), 1e9)
+    hz = [b for l, b in LL if b[3] - b[1] < 1.3 and b[0] < vx[-1] - 2 and b[2] > vx[0] + 2
+          and b[2] - b[0] >= 0.6 * cw_((b[0] + b[2]) / 2)]        # (an underline is not a row rule: 2019 ON 41 q6 'joined')
+    vt = [b for l, b in LL if b[2] - b[0] < 1.3 and b[3] - b[1] >= 4 and vx[0] - 2 <= (b[0] + b[2]) / 2 <= vx[-1] + 2]
+    ytop = min([b[1] for b in vt] + [b[1] for b in hz]); ybot = max([b[3] for b in vt] + [b[3] for b in hz])
+    ys = MP._cluster([(b[1] + b[3]) / 2 for b in hz if ytop - 1 <= b[1] <= ybot + 1])
+    ys = sorted(set([round(ytop, 2)] + [y for y in ys if ytop + 2 < y < ybot - 2] + [round(ybot, 2)]))
+    cols = list(zip(vx, vx[1:]))
+    colof = lambda x: next((j for j, (a, c) in enumerate(cols) if a - 1 <= x <= c + 1), None)
+    rowof = lambda y: next((i for i, (a, c) in enumerate(zip(ys, ys[1:])) if a - 1 <= y <= c + 1), None)
+    cells = {}
+    for t in TT:
+        j = colof(t['x'] + t['w'] / 2); i = rowof(t['y'] - 0.35 * t.get('s', 10))
+        if j is None or i is None:
+            return None
+        cells.setdefault((i, j), []).append(t)
+    old = [c - a for a, c in cols]
+    mins = [max([t['w'] for (i, j), ws in cells.items() if j == jj for t in ws] + [10]) + 10 for jj in range(len(cols))]
+    avail = A - 4
+    f = avail / sum(old)
+    new = [max(m, w * f) for m, w in zip(mins, old)]
+    over = sum(new) - avail
+    if over > 0:
+        flex = [n - m for n, m in zip(new, mins)]
+        if sum(flex) < over:
+            return None
+        new = [n - over * fl / sum(flex) for n, fl in zip(new, flex)]
+    nx = [0.0]
+    for w in new:
+        nx.append(nx[-1] + w)
+    # reflow every cell; row heights from the tallest cell
+    placed, need_h = [], {}
+    for (i, j), ws in cells.items():
+        a, c = cols[j]; x0 = nx[j] + 4; x1 = nx[j + 1] - 4
+        anch = sorted({round(t['y']) for t in ws if t.get('s', 11) >= 9})
+        def key(t):                                    # sub/superscripts (R₁, cm³) stay on their line
+            if t.get('s', 11) >= 9 or not anch:
+                return round(t['y'])
+            a_ = min(anch, key=lambda a: abs(a - t['y']))
+            return a_ if abs(a_ - t['y']) <= 7 else round(t['y'])
+        lines_ = {}
+        for t in sorted(ws, key=lambda t: (key(t), t['x'])):
+            lines_.setdefault(key(t), []).append(t)
+        lines_ = dict(sorted(lines_.items()))
+        first = min(t['y'] for t in ws) - ys[i]
+        lh = max(t.get('s', 10) for t in ws) * 1.2
+        y = first; out = []
+        centred = all(abs((min(t['x'] for t in lw) + max(t['x'] + t['w'] for t in lw)) / 2 - (a + c) / 2) < 4 for lw in lines_.values())
+        for k, lw in enumerate(lines_.values()):
+            if k:
+                y += lh
+            cur, row_ = x0, []
+            prev = None
+            for t in lw:
+                gap = 0 if prev is None else min(max(t['x'] - (prev['x'] + prev['w']), 2.0), 6.0)
+                if row_ and cur + gap + t['w'] > x1:
+                    out.append(row_); row_ = []; y += lh; cur = x0; gap = 0
+                n = dict(t, _sx=t['x']); n['x'] = cur + gap; n['y'] = y + (t['y'] - max(lw, key=lambda o: o.get('s', 11))['y'])
+                row_.append(n); cur = n['x'] + t['w']; prev = t
+            out.append(row_)
+        for row_ in out:
+            if centred and row_:
+                w_ = row_[-1]['x'] + row_[-1]['w'] - row_[0]['x']; sh = (x0 + x1) / 2 - w_ / 2 - row_[0]['x']
+                for n in row_:
+                    n['x'] += sh
+            placed += [(i, n) for n in row_]
+        need_h[i] = max(need_h.get(i, 0), y + 5)
+    heights = [max(need_h.get(i, 0), 14.0) for i in range(len(ys) - 1)]
+    Y = [0.0]
+    for hgt in heights:
+        Y.append(Y[-1] + hgt)
+    def ymap(y):
+        if y <= ys[0]:
+            return y - ys[0]
+        for i, (a, c) in enumerate(zip(ys, ys[1:])):
+            if y <= c:
+                return Y[i] + (y - a) / max(c - a, 1) * (Y[i + 1] - Y[i])
+        return Y[-1] + (y - ys[-1])
+    texts = [dict(n, y=round(Y[i] + n['y'], 2), x=round(n['x'], 2)) for i, n in placed]
+    unders = []                                       # underlines ('joined', 'and') move with their word
+    src_of = {}
+    for (i, n), m in zip(placed, texts):
+        src_of[(n['t'], n.get('_sx'))] = m
+    for l, b in LL:
+        if b[3] - b[1] < 1.3 and not any(b is h for h in hz) and b[2] - b[0] > 1:
+            o = next((t for t in TT if 0.3 <= b[1] - t['y'] <= 5 and b[0] < t['x'] + t['w'] and b[2] > t['x']), None)
+            m = src_of.get((o['t'], o['x'])) if o is not None else None
+            if m is not None:
+                unders.append(_rect(m['x'] + (b[0] - o['x']), m['y'] + (b[1] - o['y']), m['x'] + (b[2] - o['x']), m['y'] + (b[1] - o['y']) + max(b[3] - b[1], 0.5)))
+    lines = []
+    for k, y in enumerate(ys):                        # row rules where the source drew them (per column)
+        for j, (a, c) in enumerate(cols):
+            mid = (a + c) / 2
+            if any(abs((b[1] + b[3]) / 2 - y) < 1.5 and b[0] <= mid <= b[2] for b in hz):
+                lines.append(_rect(nx[j], Y[k] - 0.25, nx[j + 1], Y[k] + 0.25))
+    for j, x in enumerate(vx):                        # column rules where the source drew them (per row)
+        for i, (a, c) in enumerate(zip(ys, ys[1:])):
+            mid = (a + c) / 2
+            if any(abs((b[0] + b[2]) / 2 - x) < 1.5 and b[1] <= mid <= b[3] for b in vt):
+                lines.append(_rect(nx[j] - 0.25, Y[i], nx[j] + 0.25, Y[i + 1]))
+    pics = []
+    for k_, f_ in PP:
+        j = colof(f_['x']); i = rowof(f_['y'])
+        if j is None or i is None:
+            return None
+        g = dict(f_); g['x'] = round(nx[j] + (f_['x'] - cols[j][0]) * new[j] / old[j], 2); g['y'] = round(ymap(f_['y']), 2)
+        pics.append((k_, g))
+    for m in texts:
+        m.pop('_sx', None)
+    return texts, lines + unders, pics, nx[-1], ymap
+
+
 def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
     """Dhruv 2026-11-05 (round 13): rows drawn cell-wise keep the NORMAL font size; the row grows instead.
     The answer cell is laid out band by band (bands = its sub-rows): an inner table gets narrower columns to fit its
@@ -485,6 +601,8 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
         PP = [(k_, f) for k_, f in pics if inb(f['y'] + f.get('h', 0) / 2)]
         # an inner table: narrower columns, just wide enough for their content
         vx = MP._cluster([(b[0] + b[2]) / 2 for l, b in LL if b[2] - b[0] < 1.3 and b[3] - b[1] >= 6])
+        if vx and not spanning and any(t['x'] + t['w'] / 2 < vx[0] for t in TT) and any(t['x'] + t['w'] / 2 > vx[-1] for t in TT):
+            vx = [e1b + 0.5] + vx + [e2 - 0.5]          # columns filling the answer cell ('A ... | or | ... B', 2019 ON 43 q9, 41 q6)
         cols, chunk = [], {}
         if len(vx) >= 2:
             needs = []
@@ -564,6 +682,40 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
             for t in TT:
                 if id(t) not in moves:
                     moves[id(t)] = (0.0, 0.0)
+        elif need > A + 0.5 and cols and not spanning and all(vx[0] - 3 <= t['x'] + t['w'] / 2 <= vx[-1] + 3 for t in TT):
+            rf = _reflow_table(TT, LL, PP, vx, A)
+            if rf is not None:                        # the table at the normal size, text wrapped inside its cells
+                texts_, lines_, pics_, tw_, ymap_ = rf
+                ox = L + 5 + (A - tw_) / 2
+                ytab = min([b[1] for l, b in LL if b[2] - b[0] < 1.3] + [b0])
+                oy = cum + (ytab - b0)
+                for n in texts_:
+                    n['x'] = round(n['x'] + ox, 2); n['y'] = round(n['y'] + oy, 2); v['text'].append(n)
+                for l in lines_:
+                    v['lines'].append({**l, 'd': _map_path(l['d'], lambda x: x + ox, lambda y: y + oy)})
+                for k_, g in pics_:
+                    g['x'] = round(g['x'] + ox, 2); g['y'] = round(g['y'] + oy, 2); v.setdefault(k_, []).append(g)
+                Ymap = lambda y: oy + ymap_(y)
+                for y_, ws in lines_m.items():
+                    if not inb(y_ - 3):
+                        continue
+                    a_, c_ = span(ws)
+                    for t in ws:
+                        n = dict(t); n['x'] = round(W - 6 - (c_ - a_) + (t['x'] - a_), 2); n['y'] = round(Ymap(t['y']), 2)
+                        v['text'].append(n)
+                for y_, ws in lines_l.items():
+                    if not inb(y_ - 3):
+                        continue
+                    a_, c_ = span(ws)
+                    for t in ws:
+                        n = dict(t); n['x'] = round((L - (c_ - a_)) / 2 + (t['x'] - a_), 2); n['y'] = round(cum + (t['y'] - b0), 2)
+                        v['text'].append(n)
+                tb = max([MP._bbox(l['d'])[3] for l in v['lines'][-len(lines_):] if MP._bbox(l['d'])] + [oy]) if lines_ else oy
+                cum = max([tb + 6] + [n['y'] + 5 for n in v['text']])
+                if i < len(bounds) - 2:
+                    sep_new.append((cum, sep_m.get(bounds[i + 1], False)))
+                continue
+            kb = A / need
         elif need > A + 0.5:
             kb = A / need
         kmin = min(kmin, kb)
@@ -664,16 +816,12 @@ def build(q, store):
     ncol = lambda info: len([w for w in info['new_w'] if w >= 20])
     expected = None
     if os.path.exists(hdr_p):                         # the printed header says how many columns the table has
-        ws_ = sorted(json.load(open(hdr_p))['text'], key=lambda t: t['x']); ph = []
-        for t in ws_:
-            if ph and t['x'] - (ph[-1]['x'] + ph[-1]['w']) < 12:
-                ph[-1] = {'x': ph[-1]['x'], 'w': t['x'] + t['w'] - ph[-1]['x']}
-            else:
-                ph.append({'x': t['x'], 'w': t['w']})
-        expected = len(ph) or None
+        names_ = [n for t in json.load(open(hdr_p))['text']
+                  for pat, n in NAMES if re.search(pat, t['t'].strip().lower())]
+        expected = len(names_) if len(names_) >= 3 else None   # Question | Answer | Marks (| Guidance)
     for i, (r, u) in enumerate(uniq):
         v, info = MP.portrait_unit(u, widths=widths, sizes=sizes)
-        if info['mode'] == 'wrap' and expected and ncol(info) != expected:
+        if info['mode'] == 'wrap' and expected and ncol(info) > expected:
             # an inner table's lines read as extra columns (2021 FM 32 q11 carbon-12/14 table): drawn cell-wise instead
             v, info = MP._scaled(u, W, 'inner table read as columns') if hasattr(MP, '_scaled') else (u, {'mode': 'scale'})
             info = dict(info, mode='scale')
