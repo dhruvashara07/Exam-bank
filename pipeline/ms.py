@@ -183,8 +183,9 @@ def structured_rows_table(doc):
                 continue
             # pictures in the answer cell count too (2023 MJ 33 q8: the symbol-matching picture under the
             # column headings was cut off at the last text line)
-            pics = [fitz.Rect(i['bbox']) for i in page.get_image_info()
-                    if y - 1 <= i['bbox'][1] < y_end - 1 and i['bbox'][0] >= QX - 2 and i['bbox'][2] <= CX + 2]
+            rot = page.rotation_matrix                # image boxes are unrotated; text is as displayed (landscape pages)
+            pics = [r for r in ((fitz.Rect(i['bbox']).quad * rot).rect for i in page.get_image_info())
+                    if y - 1 <= r.y0 < y_end - 1 and r.x0 >= QX - 2 and r.x1 <= CX + 2 and r.width >= 12 and r.height >= 12]
             seg_bottom = min(y_end, max([r.y1 for r in ink] + [r.y1 for r in pics]) + 6)
             current['segments'].append({'page': pno + 1, 'bbox': [x0, round(y, 1), x1, round(seg_bottom, 1)]})
             current['text'] = (current['text'] + '\n' + '\n'.join(l['text'] for l in body)).strip()
