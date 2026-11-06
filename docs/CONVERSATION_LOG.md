@@ -226,3 +226,9 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - 20:26 Round 17: 3 ok; 2022 FM 62 q2 -> his rule: side-by-side figures that cannot be cut without overlap = ONE whole picture
   of both (nothing blanked) (MS rules section 11). 9(b) middle line now starts/ends on the row lines. Rebuilt 2016-2022 (this also
   merged 2018 MJ 63 Fig 1.3+1.4, 2020 ON 33 and 41 Fig 3.1+3.2: labels intertwined; checked). 2022 approved (final in git). Next: 2023.
+- 2023 check: MS rows were cut at the last text line when the answer is a PICTURE (ms.py row extent now includes pictures,
+  rotation-aware, no 6 pt specks): 25 rows in 2016-2026 re-cut (incl. approved years; all checked side by side, fixed);
+  bullet-list lines above a figure stay question text (fit_crop); a table with a note under it reflows at normal size;
+  baselines within 3 pt are one line in reflowed cells. Round 18 "2023" (4 items) on the page.
+- KNOWN, not fixed: 2019 ON 41 q9(a)(ii) MS - the hatched circles (protons) show as plain circles (the hatching is a pattern of
+  tiny images we cannot place); told Dhruv.
