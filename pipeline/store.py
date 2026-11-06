@@ -298,6 +298,11 @@ def fit_crop(pg, b, max_grow=40.0):
         return r.height < 1.2 and any(l.y0 - 3 <= r.y0 <= l.y1 + 3 and r.x0 < l.x1 and r.x1 > l.x0 for l in lines)
     ink = [d['rect'] for d in pg.get_drawings() if d['rect'].intersects(b) and d['rect'].width < 0.9 * pg.rect.width and not text_bar(d['rect'])]
     top, bot = (min(r.y0 for r in ink), max(r.y1 for r in ink)) if ink else (b.y0, b.y1)
+    for c in caps:                                     # nothing under the figure's caption ('Method 1' heading, 2020 MJ 53 q3)
+        if c.y0 >= (b.y0 + b.y1) / 2 and c.x0 < b.x1 and c.x1 > b.x0 and c.y1 <= b.y1 + 1:
+            for l in lines:
+                if l is not c and l.y0 >= c.y1 - 1 and l.intersects(b):
+                    b.y1 = min(b.y1, max(c.y1 + 0.5, l.y0 - 0.5))
     for l in lines:                                    # the rest of a text row whose start lies outside the crop (2019 MJ 62 q4:
         if (l & b).get_area() < 0.15 * max(l.get_area(), 1):   # 'The equation is:' outside, 'f = uv/(u+v)' inside) is text too
             continue

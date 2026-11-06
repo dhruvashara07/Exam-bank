@@ -48,7 +48,7 @@ def _rules(u):
             bb = _bbox(sub)
             if l.get('fill', '#000000').lower() == '#ffffff' and 'stroke' not in l:
                 continue                                 # white cell background: the page is white anyway
-            if bb is not None and bb[3] <= 0.6:          # the bottom edge of the header row above (grey fill cut by the box): not part of this row
+            if bb is not None and (bb[3] <= 0.6 or (bb[1] < -0.5 and bb[3] <= 3.2)):   # (or a header strip of up to 3 pt, 2020 MJ 31 q11) the bottom edge of the header row above (grey fill cut by the box): not part of this row
                 continue
             if bb is None or min(bb[2] - bb[0], bb[3] - bb[1]) > 1.3 or l.get('fill', '#000000').lower() == '#ffffff':
                 return None

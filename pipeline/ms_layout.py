@@ -248,7 +248,11 @@ def _cell_fallback(u, first):
     cx_ = [t['x'] + t['w'] / 2 for t in u['text']]
     while len(full) >= 2 and not any(c > full[-1] for c in cx_):
         full.pop()                                    # the table's own right border (2016 MJ 43: 9 pt inside the cut)
+    left = [x for x, c in cov.items() if x <= 20 and c >= 0.6 * h]
+    if len(full) == 1 and left and any(c > full[0] for c in cx_):
+        full = [max(left)] + full                     # a continuation row with an empty question column (2020 MJ 31 q11, page 2)
     outer = [x for x in cov if x <= 20 or x >= u['w'] - 8 or (full and x > full[-1] + 2)]
+    outer = [x for x in outer if x not in full]
     if len(full) >= 2:                                # the paper's grand total in a grey cell under the last question (2016 ON 43 q11)
         e2_ = full[-1]
         ink2 = [t['y'] for t in u['text'] if not any(abs(t['y'] - y) < 2.5 for y in tot_y)
@@ -327,8 +331,10 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr):
             continue                                  # a column rule: ours are drawn instead
         if b[0] < e1 - 2 or b[2] > e2 + 2 or b[1] >= h - 1.5:
             continue
-        if b[3] - b[1] < 1.3 and (b[1] <= 1.5 or b[3] >= h - 1.5):
-            continue                                  # the row's own top/bottom border: ours instead
+        if b[3] - b[1] < 1.3 and (b[1] <= 3.5 or b[3] >= h - 1.5) and b[2] - b[0] >= 0.85 * (e2 - e1):
+            continue                                  # the row's own top/bottom border: ours instead (an inner table's own edge stays)
+        if b[1] < -0.5 and b[3] <= 3.2:
+            continue                                  # a strip of the header row above (grey, 2020 MJ 31 q11)
         ans_l.append((l, b))
     seps = MP._cluster([(b[1] + b[3]) / 2 for l, b in ans_l if b[3] - b[1] < 1.3 and b[2] - b[0] >= 0.85 * (e2 - e1)])
     sep_m = {y: any(r[3] - r[1] < 1.3 and abs((r[1] + r[3]) / 2 - y) < 1.5 and r[2] > e2 + 5 for r in rr) for y in seps}
@@ -346,7 +352,14 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr):
     for i in range(len(bounds) - 1):
         b0, b1 = bounds[i], bounds[i + 1]
         inb = lambda y: b0 <= y < b1 or (i == len(bounds) - 2 and y >= b1)
-        TT = [t for t in ans_t if inb(cy(t))]
+        cut_ = sum(min(r[3], b1) - max(r[1], b0) for r in rr if r[2] - r[0] < 1.3 and abs((r[0] + r[2]) / 2 - e1) < 2 and r[3] > b0 and r[1] < b1)
+        spanning = cut_ < 0.4 * (b1 - b0)            # a band across all columns ('Additional graph notes', 2020 ON 51 q4)
+        if spanning:
+            TT = [t for t in u['text'] if inb(cy(t)) and t['y'] < h - 1]
+            e1b = min([t['x'] for t in TT] + [e1]) - 0.5
+        else:
+            TT = [t for t in ans_t if inb(cy(t))]
+            e1b = e1
         LL = [(l, b) for l, b in ans_l if inb((b[1] + b[3]) / 2)]
         PP = [(k_, f) for k_, f in pics if inb(f['y'] + f.get('h', 0) / 2)]
         # an inner table: narrower columns, just wide enough for their content
@@ -367,7 +380,7 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr):
                     wmax = max(wmax, gb - ga)
                 needs.append((a_, c_, wmax + 12))
             tw_old = vx[-1] - vx[0]
-            room = A - (vx[0] - e1) - max(0.0, max([t['x'] + t['w'] for t in TT] + [vx[-1]]) - vx[-1]) - 4
+            room = A - (vx[0] - e1b) - max(0.0, max([t['x'] + t['w'] for t in TT] + [vx[-1]]) - vx[-1]) - 4
             f = 1.0
             if tw_old > room:                         # shrink the columns only as much as needed, never below their content
                 lo, hi = 0.0, 1.0
@@ -396,9 +409,13 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr):
                     nx = max(na + 3, min(nc - (gb - ga) / 2, na + nwid - (gb - ga) - 3))
                     return nx + (t['x'] - ga)
             return fxc(t['x'])
-        R = max([tx(t) + t['w'] for t in TT] + [fxc(b[2]) for l, b in LL] + [fxc(f['x']) + f.get('w', 0) for k_, f in PP] + [e1])
-        need = R - e1
-        X = lambda x: L + 5 + (x - e1)
+        R = max([tx(t) + t['w'] for t in TT] + [fxc(b[2]) for l, b in LL] + [fxc(f['x']) + f.get('w', 0) for k_, f in PP] + [e1b])
+        need = R - e1b
+        if need > A + 0.5:                            # blank space left of the content (an indented table, 2020 FM 32 q6): use it first
+            lead = min([tx(t) for t in TT] + [fxc(b[0]) for l, b in LL] + [fxc(f['x']) for k_, f in PP] + [R]) - e1b
+            sh = min(need - A, max(0.0, lead - 6))
+            e1b += sh; need -= sh
+        X = lambda x: L + 5 + (x - e1b)
         decor = [(l, b) for l, b in LL]
         under = {}
         for l, b in decor:                            # underlines: they move with their word
@@ -406,16 +423,22 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr):
             under[id(l)] = o
         pure = not PP and not cols and all(under[id(l)] is not None for l, b in decor)
         kb, moves, extra = 1.0, {}, 0.0
-        if need > A + 0.5 and pure and TT:            # re-wrap the text lines of this band
+        if (need > A + 0.5 or spanning) and pure and TT:   # re-wrap the text lines of this band (wide gaps closed up)
             rows_ = collections.OrderedDict()
             for t in sorted(TT, key=lambda t: (round(t['y']), t['x'])):
                 rows_.setdefault(round(t['y']), []).append(t)
             for y_, ws in rows_.items():
-                start = X(ws[0]['x']); dx = 0.0; lh = max(t.get('s', 10) for t in ws) * 1.25
+                start = X(ws[0]['x']); dx = 0.0; lh = max(t.get('s', 10) for t in ws) * 1.25; prev = None; hang = None
                 for t in ws:
+                    if prev is not None:
+                        gap = (X(t['x']) + dx) - (X(prev['x']) + moves[id(prev)][0] + prev['w'])
+                        if gap > 12 and (spanning or X(t["x"]) + dx + t["w"] > L + 5 + A):
+                            dx -= gap - 3.5                # a wide gap (justified or column text): one space
+                        elif gap > 12 and hang is None and not spanning:
+                            hang = X(t['x']) + dx          # 'MP2   Correct circuit ...': wrapped lines hang under 'Correct'
                     if X(t['x']) + dx + t['w'] > L + 5 + A and X(t['x']) + dx > start + 1:
-                        dx = start - X(t['x']); extra += lh
-                    moves[id(t)] = (dx, extra)
+                        dx = (hang if hang is not None and hang < L + 5 + A / 2 else start) - X(t['x']); extra += lh
+                    moves[id(t)] = (dx, extra); prev = t
                 # following lines move down by the extra lines so far (applied via moves of later words)
             for t in TT:
                 if id(t) not in moves:
@@ -427,29 +450,29 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr):
             return cum + (y - b0) * kb + dy
         for t in TT:
             n = dict(t); dx, dy = moves.get(id(t), (0.0, 0.0))
-            n['x'] = round(L + 5 + (tx(t) - e1) * kb + dx, 2); n['y'] = round(fy(t['y'], dy), 2)
+            n['x'] = round(L + 5 + (tx(t) - e1b) * kb + dx, 2); n['y'] = round(fy(t['y'], dy), 2)
             if kb < 1:
                 n['s'] = round(t['s'] * kb, 2); n['w'] = round(t['w'] * kb, 2)
             v['text'].append(n)
         for l, b in LL:
             o = under.get(id(l)); dx, dy = moves.get(id(o), (0.0, 0.0)) if o is not None else (0.0, 0.0)
-            v['lines'].append({**l, 'd': _map_path(l['d'], lambda x: L + 5 + (fxc(x) - e1) * kb + dx, lambda y: fy(y, dy))})
+            v['lines'].append({**l, 'd': _map_path(l['d'], lambda x: L + 5 + (fxc(x) - e1b) * kb + dx, lambda y: fy(y, dy))})
         for k_, f in PP:
-            g = dict(f); g['x'] = round(L + 5 + (fxc(f['x']) - e1) * kb, 2); g['y'] = round(fy(f['y']), 2)
+            g = dict(f); g['x'] = round(L + 5 + (fxc(f['x']) - e1b) * kb, 2); g['y'] = round(fy(f['y']), 2)
             if kb < 1:
                 if 'w' in g: g['w'] = round(g['w'] * kb, 2)
                 if 'h' in g: g['h'] = round(g['h'] * kb, 2)
                 if k_ == 'figs': g['k'] = round(f.get('k', 1) * kb, 4)
             v.setdefault(k_, []).append(g)
         for y_, ws in lines_m.items():                # marks: right-aligned in our marks column, at the band's top offset
-            if not inb(y_ - 3):
+            if spanning or not inb(y_ - 3):
                 continue
             a_, c_ = span(ws)
             for t in ws:
                 n = dict(t); n['x'] = round(W - 6 - (c_ - a_) + (t['x'] - a_), 2); n['y'] = round(cum + (t['y'] - b0), 2)
                 v['text'].append(n)
         for y_, ws in lines_l.items():                # question label: centred in our label column
-            if not inb(y_ - 3):
+            if spanning or not inb(y_ - 3):
                 continue
             a_, c_ = span(ws)
             for t in ws:
