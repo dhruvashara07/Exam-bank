@@ -10,7 +10,7 @@
   "0625_2021ON_63",
   "0625_2021ON_41"
  ],
- "status": "open",
+ "status": "closed",
  "items": [
   {
    "id": "0625_2021FM_32_q11",
@@ -41,5 +41,24 @@
     "figure: 0625_2021ON_63_q01_fig1-1: crop cut: ink crosses the bottom edge, 1 text line(s) half inside"
    ]
   }
- ]
+ ],
+ "answers": {
+  "0625_2021FM_32_q11": {
+   "verdict": "wrong",
+   "note": "inner table keeps its original alignment (centred) - general rule: horizontal responsiveness, original alignment/design in our portrait layout"
+  },
+  "0625_2021ON_32_q06": {
+   "verdict": "wrong",
+   "note": "marks column has sub-row partitions in 6(a) as in the original"
+  },
+  "0625_2021ON_41_q07": {
+   "verdict": "ok",
+   "note": ""
+  },
+  "0625_2021ON_63_q01": {
+   "verdict": "ok",
+   "note": "no error found (marked wrong by mistake; magnified scale now included)"
+  }
+ },
+ "closed": "2026-11-06T13:28Z"
 }

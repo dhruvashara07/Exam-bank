@@ -683,10 +683,11 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
                 if id(t) not in moves:
                     moves[id(t)] = (0.0, 0.0)
         elif need > A + 0.5 and cols and not spanning and all(vx[0] - 3 <= t['x'] + t['w'] / 2 <= vx[-1] + 3 for t in TT):
-            rf = _reflow_table(TT, LL, PP, vx, A)
+            full_ = abs(vx[0] - (e1b + 0.5)) < 0.01 and abs(vx[-1] - (e2 - 0.5)) < 0.01
+            rf = _reflow_table(TT, LL, PP, vx, (M - L + 4) if full_ else A)
             if rf is not None:                        # the table at the normal size, text wrapped inside its cells
                 texts_, lines_, pics_, tw_, ymap_ = rf
-                ox = L + 5 + (A - tw_) / 2
+                ox = L if full_ else L + 5 + (A - tw_) / 2   # a table filling the cell meets our column rules (round 16)
                 ytab = min([b[1] for l, b in LL if b[2] - b[0] < 1.3] + [b0])
                 oy = cum + (ytab - b0)
                 for n in texts_:
@@ -711,7 +712,12 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
                         n = dict(t); n['x'] = round((L - (c_ - a_)) / 2 + (t['x'] - a_), 2); n['y'] = round(cum + (t['y'] - b0), 2)
                         v['text'].append(n)
                 tb = max([MP._bbox(l['d'])[3] for l in v['lines'][-len(lines_):] if MP._bbox(l['d'])] + [oy]) if lines_ else oy
-                cum = max([tb + 6] + [n['y'] + 5 for n in v['text']])
+                cum = max([tb + (0 if full_ else 6)] + [n['y'] + 5 for n in v['text']])   # a full-cell table ends on the row line
+                if full_ and cum > tb + 0.5:              # its column lines run on to the row line
+                    for l in list(v['lines'][-len(lines_):]):
+                        bb_ = MP._bbox(l['d'])
+                        if bb_ and bb_[2] - bb_[0] < 1.3 and abs(bb_[3] - tb) < 0.6:
+                            v['lines'].append(_rect(bb_[0], tb, bb_[2], cum))
                 if i < len(bounds) - 2:
                     sep_new.append((cum, sep_m.get(bounds[i + 1], False)))
                 continue
@@ -719,10 +725,19 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
         elif need > A + 0.5:
             kb = A / need
         kmin = min(kmin, kb)
-        cxs = 0.0                                     # an inner table on its own is centred in our Answer column (Dhruv, round 15)
-        if cols and not spanning and all(vx[0] - 3 <= t['x'] + t['w'] / 2 <= vx[-1] + 3 for t in TT) and all(vx[0] - 3 <= f['x'] <= vx[-1] + 3 for k_, f in PP):
-            left = L + 5 + (fxc(vx[0]) - e1b) * kb; tw = (fxc(vx[-1]) - fxc(vx[0])) * kb
-            cxs = (L + 5 + (A - tw) / 2) - left
+        cxs = 0.0
+        if (cols or PP) and not spanning and (TT or PP):
+            # Dhruv, rounds 15-16: 'horizontal responsiveness' - a table or drawing keeps its ORIGINAL alignment in the answer
+            # cell (centred stays centred, left stays left, right stays right), only fitted to our portrait column
+            sx0 = min([t['x'] for t in TT] + [b[0] for l, b in LL] + [f['x'] for k_, f in PP])
+            sx1 = max([t['x'] + t['w'] for t in TT] + [b[2] for l, b in LL] + [f['x'] + f.get('w', 0) for k_, f in PP])
+            ml, mr = sx0 - e1, e2 - sx1
+            nx0 = L + 5 + (fxc(sx0) - e1b) * kb; nx1 = L + 5 + (fxc(sx1) - e1b) * kb; bw = nx1 - nx0
+            if abs(ml - mr) <= 0.25 * max(ml + mr, 1) + 6:
+                cxs = (L + 5 + (A - bw) / 2) - nx0
+            elif mr < ml:
+                cxs = (L + 5 + A - bw - min(mr, 6)) - nx0
+            cxs = max(L + 5 - nx0, min(cxs, L + 5 + A - nx1))
         def fy(y, dy=0.0):
             return cum + (y - b0) * kb + dy
         for t in TT:
@@ -753,6 +768,10 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
                 if 'h' in g: g['h'] = round(g['h'] * kb, 2)
                 if k_ == 'figs': g['k'] = round(f.get('k', 1) * kb, 4)
             v.setdefault(k_, []).append(g)
+        if has_marks and not spanning:               # the marks column's own sub-row lines (2021 ON 32 q6(a))
+            for y_m in MP._cluster([(r[1] + r[3]) / 2 for r in rr if r[3] - r[1] < 1.3 and r[0] >= e2 - 2 and r[2] - r[0] > 5
+                                    and b0 + 2 < (r[1] + r[3]) / 2 < b1 - 2 and (r[1] + r[3]) / 2 < h - 2]):
+                v['lines'].append(_rect(M, fy(y_m) - 0.25, W, fy(y_m) + 0.25))
         for y_, ws in lines_m.items():                # marks: right-aligned in our marks column, at the band's top offset
             if spanning or not inb(y_ - 3):
                 continue

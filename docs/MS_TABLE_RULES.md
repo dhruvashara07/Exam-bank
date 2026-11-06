@@ -96,3 +96,11 @@ Fractions, inner tables, drawn symbols: the row is laid out cell by cell, but it
 - Rows keep the mark scheme's printed order (2017 ON 41 Q8: 8 Hydroelectric (a)(b)(c), 8 Tidal flow (a)(b)(c) ...); heading rows like
   "8  Hydroelectric" put the number in the Q column and the text in the Answer column.
 - A formula printed in the question text beside a figure (2019 MJ 62 Q4 "The equation is: f = uv/(u+v)") is text, never part of the figure.
+
+## 10. Horizontal responsiveness (Dhruv, rounds 15-16, 2026-11-06)
+Our mark scheme is the original's landscape table made portrait ("responsive"): keep the original's alignment and design.
+- A table or drawing inside an answer cell keeps its original alignment: centred stays centred, left stays left, right stays right.
+- Inner tables keep their bottom edge; tables that fill the answer cell meet our column rules (no short lines).
+- Side-by-side alternatives ("A | or | B") stay a table at the normal font size; text wraps inside the cells.
+- Sub-row lines in the Marks column are kept where the original has them.
+- A cell split by a page break is one cell (one Q label, no line across the Q column).
