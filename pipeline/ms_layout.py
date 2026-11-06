@@ -660,8 +660,23 @@ def build(q, store):
     widths = MP.column_widths(units)
     out, modes, problems, first = [], {}, [], None
     total_row = None
+    hdr_p = os.path.join(store, 'ms_header.json')
+    ncol = lambda info: len([w for w in info['new_w'] if w >= 20])
+    expected = None
+    if os.path.exists(hdr_p):                         # the printed header says how many columns the table has
+        ws_ = sorted(json.load(open(hdr_p))['text'], key=lambda t: t['x']); ph = []
+        for t in ws_:
+            if ph and t['x'] - (ph[-1]['x'] + ph[-1]['w']) < 12:
+                ph[-1] = {'x': ph[-1]['x'], 'w': t['x'] + t['w'] - ph[-1]['x']}
+            else:
+                ph.append({'x': t['x'], 'w': t['w']})
+        expected = len(ph) or None
     for i, (r, u) in enumerate(uniq):
         v, info = MP.portrait_unit(u, widths=widths, sizes=sizes)
+        if info['mode'] == 'wrap' and expected and ncol(info) != expected:
+            # an inner table's lines read as extra columns (2021 FM 32 q11 carbon-12/14 table): drawn cell-wise instead
+            v, info = MP._scaled(u, W, 'inner table read as columns') if hasattr(MP, '_scaled') else (u, {'mode': 'scale'})
+            info = dict(info, mode='scale')
         modes[info['mode']] = modes.get(info['mode'], 0) + 1
         if info['mode'] == 'wrap':
             first = first or info
@@ -689,7 +704,6 @@ def build(q, store):
                     continue                          # the row held only the printed total
         fixed.append(v)
     out = fixed
-    hdr_p = os.path.join(store, 'ms_header.json')
     if first and os.path.exists(hdr_p):
         out.insert(0, _header_unit(json.load(open(hdr_p)), first))
     def printed_total(v):                             # 'Total: 6' on its own (not 'Total p.d. = ...' inside an answer)

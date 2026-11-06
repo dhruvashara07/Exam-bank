@@ -221,7 +221,7 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
 
 
 # ---------------------------------------------------------------- figures
-def fit_crop(pg, b, max_grow=40.0):
+def fit_crop(pg, b, max_grow=50.0):
     """Mend a figure crop that cuts through ink or a label (review rounds: 80% of 'crop cut' flags were real).
     1. a drawing crossing an edge is taken in (at most max_grow pt per side);
     2. short label lines half inside or just outside (axis label 'day of the month', a row of axis numbers,
@@ -262,11 +262,15 @@ def fit_crop(pg, b, max_grow=40.0):
                 or re.search(r'\.{4,}|…|\[\d+\]', txt))             # an answer line '..........[1]'
     caps = [l for l in lines if re.match(r'(Fig|Table)\.?\s*\d', ' '.join(w[4] for w in words_of(l)))]
     b0 = fitz.Rect(b)
+    drw = [d_['rect'] for d_ in pg.get_drawings()]
     def ok(nb):
         if nb.width - b0.width > 2 * max_grow or nb.height - b0.height > 2 * max_grow:
             return False
         return not any(c.y0 >= (b0.y0 + b0.y1) / 2 and nb.y1 > max(b0.y1, c.y1 + 1) and c.x0 < nb.x1 and c.x1 > nb.x0
-                       for c in caps)                    # never grow past the figure's caption
+                       and not any(r.y0 < c.y0 and r.y1 > c.y1 + 3 and (r.x1 < c.x0 - 2 or r.x0 > c.x1 + 2) and r.intersects(nb)
+                                   and r.width < 0.9 * pg.rect.width for r in drw)
+                       for c in caps)                    # never grow past the figure's caption (unless the drawing itself goes
+                                                         # on beside and below it: 2021 ON 63 q1 magnified scale)
     for _ in range(3):
         changed = False
         if cut_edges(pg, b):
@@ -299,7 +303,9 @@ def fit_crop(pg, b, max_grow=40.0):
     ink = [d['rect'] for d in pg.get_drawings() if d['rect'].intersects(b) and d['rect'].width < 0.9 * pg.rect.width and not text_bar(d['rect'])]
     top, bot = (min(r.y0 for r in ink), max(r.y1 for r in ink)) if ink else (b.y0, b.y1)
     for c in caps:                                     # nothing under the figure's caption ('Method 1' heading, 2020 MJ 53 q3)
-        if c.y0 >= (b.y0 + b.y1) / 2 and c.x0 < b.x1 and c.x1 > b.x0 and c.y1 <= b.y1 + 1:
+        if c.y0 >= (b.y0 + b.y1) / 2 and c.x0 < b.x1 and c.x1 > b.x0 and c.y1 <= b.y1 + 1 and not any(
+                r.y1 > c.y1 + 3 and r.intersects(b) and r.width < 0.9 * pg.rect.width for r in (d_['rect'] for d_ in pg.get_drawings())):
+            # (only when no drawing goes on under the caption: 2021 ON 63 q1 has the magnified scale below 'Fig. 1.1')
             for l in lines:
                 if l is not c and l.y0 >= c.y1 - 1 and l.intersects(b):
                     b.y1 = min(b.y1, max(c.y1 + 0.5, l.y0 - 0.5))
