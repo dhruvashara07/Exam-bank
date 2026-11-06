@@ -244,9 +244,17 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
         ws = [t for t in ws if id(t) not in drop]
         if not ws:
             continue
+        # lines by baseline; small raised/lowered pieces (cm³, ½mv², ¹³¹₅₄Xe) join the nearest normal line
+        anch = sorted({round(t['y']) for t in ws if t.get('s', 11) >= 9})
+        def key(t):
+            y = round(t['y'])
+            if t.get('s', 11) >= 9 or not anch:
+                return y
+            return min(anch, key=lambda a: abs(a - t['y'])) if min(abs(a - t['y']) for a in anch) <= 7 else y
         lines = collections.OrderedDict()
-        for t in sorted(ws, key=lambda t: (round(t['y']), t['x'])):
-            lines.setdefault(round(t['y']), []).append(t)
+        for t in sorted(ws, key=lambda t: (key(t), t['x'])):
+            lines.setdefault(key(t), []).append(t)
+        lines = collections.OrderedDict(sorted(lines.items()))
         def lead_labels(lw):                          # bold 'n', '(a)', '(i)' at the start of a line
             out_ = []
             for t in lw:
@@ -277,12 +285,13 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
             for k in ('i', 'c', 'role', 'u', 'dir'):
                 tpl.pop(k, None)
             v = {'src': u['src'], 'w': W, 'h': 0.0, 'text': [], 'lines': [], 'figs': [], 'glyphs': [], 'old_portrait': True}
-            top = sg['lines'][0][0]['y'] - 14.0
+            top = max(sg['lines'][0], key=lambda t: t.get('s', 11))['y'] - 14.0
             extra = 0.0; cur_y = None
             for lw in sg['lines']:
                 body_l = [t for t in lw if t not in sg['labs'] and not (t['x'] > 0.82 * u['w'] and MARK_RE.match(t['t']))]
                 marks_l = [t for t in lw if t['x'] > 0.82 * u['w'] and MARK_RE.match(t['t'])]
-                y = lw[0]['y'] - top + extra
+                ly = max(lw, key=lambda t: t.get('s', 11))['y']
+                y = ly - top + extra
                 dx = 0.0; start = None
                 for t in body_l:
                     n = dict(t); x = L + 5 + (t['x'] - ax0) + dx
@@ -291,11 +300,11 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                     if x + t['w'] > L + 5 + A and x > start + 1:
                         dx = start - (L + 5 + (t['x'] - ax0)); extra += t.get('s', 11) * 1.25; y += t.get('s', 11) * 1.25
                         x = start
-                    n['x'] = round(x, 2); n['y'] = round(y, 2); v['text'].append(n)
+                    n['x'] = round(x, 2); n['y'] = round(y + (t['y'] - ly), 2); v['text'].append(n)
                 if marks_l:
                     a_ = min(t['x'] for t in marks_l); c_ = max(t['x'] + t['w'] for t in marks_l)
                     for t in marks_l:
-                        n = dict(t, b=1); n['x'] = round(W - 6 - (c_ - a_) + (t['x'] - a_), 2); n['y'] = round(lw[0]['y'] - top, 2)
+                        n = dict(t, b=1); n['x'] = round(W - 6 - (c_ - a_) + (t['x'] - a_), 2); n['y'] = round(max(lw, key=lambda t: t.get('s', 11))['y'] - top, 2)
                         v['text'].append(n)                   # marks in bold, like the later years
             # drawings and pictures of the unit (fraction bars, symbols) move with the answer text of the first segment
             if sg is segs[0]:
