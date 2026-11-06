@@ -222,6 +222,7 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
 
 # ---------------------------------------------------------------- figures
 FOREIGN = []                                   # words of a neighbouring figure inside the last fit_crop box
+SIBLINGS = []                                  # the other figures' boxes on the page (same question), set by build
 
 
 def fit_crop(pg, b, max_grow=50.0):
@@ -337,7 +338,9 @@ def fit_crop(pg, b, max_grow=50.0):
     # drawing, keep only the ink that belongs to OUR caption (ink grouped by touching pieces, each group to the nearest caption)
     below = [c for c in caps if b.y1 - 40 <= c.y0 <= b.y1 + 45 and c.x1 > b.x0 - 150 and c.x0 < b.x1 + 150]
     below = sorted(below, key=lambda c: c.x0)
-    if len(below) >= 2 and any(abs((c2.x0 + c2.x1) / 2 - (c1.x0 + c1.x1) / 2) > 80 for c1, c2 in zip(below, below[1:])):
+    side = [o for o in SIBLINGS if (o & b0).get_area() > 0 and min(o.y1, b0.y1) - max(o.y0, b0.y0) > 0.5 * min(o.height, b0.height)
+            and abs((o.x0 + o.x1) / 2 - (b0.x0 + b0.x1) / 2) > 60]    # a neighbour figure BESIDE ours whose box overlaps ours
+    if side and len(below) >= 2 and any(abs((c2.x0 + c2.x1) / 2 - (c1.x0 + c1.x1) / 2) > 80 for c1, c2 in zip(below, below[1:])):
         own = min(below, key=lambda c: abs((c.x0 + c.x1) / 2 - (b.x0 + b.x1) / 2))
         items = [fitz.Rect(d_['rect']) for d_ in pg.get_drawings() if d_['rect'].intersects(b) and d_['rect'].width < 0.9 * pg.rect.width]
         items = [r for r in items if (r & b).get_area() > 0 or r.width < 1 or r.height < 1]
@@ -528,6 +531,7 @@ def build(pid):
         captions, tables = [], []                   # v5: caption lines (layout words) and the tables' cells
         for f in q.get('figures', []):
             pg, b = qdoc[f['page'] - 1], fitz.Rect(f['bbox'])
+            SIBLINGS[:] = [fitz.Rect(o['bbox']) for o in q.get('figures', []) if o is not f and o['page'] == f['page']]
             is_tab = (f.get('caption') or '').startswith('Table')
             g = OPT.grid(pg, b, table=is_tab)
             tt = None
@@ -576,6 +580,7 @@ def build(pid):
                     opts.append({'label': L, 'figure': sub['id'], 'text': ''})
                 continue
             figs.append(save_figure(f, q, meta, qdoc, store))
+        SIBLINGS[:] = []
         figs = merge_contained(figs, q['id'], store, lambda f: save_figure(f, q, meta, qdoc, store))   # Fig. 1.2 printed inside Fig. 1.3's crop: one picture, both names (Dhruv)
         for lab in figs:                            # the caption line of each figure: layout words, tagged for renumbering
             cr = lab.pop('_cap', None)
