@@ -29,6 +29,10 @@ on:
         description: 'Re-process every paper (after a pipeline change)'
         type: boolean
         default: false
+      sessions:
+        description: 'Build these sessions one after another, pushing after each (e.g. "2021-FM 2021-MJ 2021-ON")'
+        type: string
+        default: ''
 
 permissions:
   contents: write
@@ -62,6 +66,24 @@ jobs:
         run: |
           sudo apt-get install -y -qq fonts-liberation fonts-dejavu-core >/dev/null
           python3 -m playwright install --with-deps chromium >/dev/null
+
+      - name: Build sessions ahead (GitHub builds the coming years, Claude checks one year at a time)
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.sessions != '' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SESSIONS: ${{ inputs.sessions }}
+        run: |
+          git config user.name "exam-bank bot"; git config user.email "actions@users.noreply.github.com"
+          for ses in $SESSIONS; do
+            sels=$(python3 pipeline/session_papers.py "$ses")
+            [ -z "$sels" ] && { echo "no papers for $ses"; continue; }
+            echo "== $ses: $sels"
+            python3 pipeline/raw_store.py fetch $sels
+            python3 pipeline/run.py $sels
+            python3 pipeline/checks.py $sels || true
+            python3 pipeline/store.py dupes $ses || true
+            SKIP_WAIT=1 pipeline/push.sh "Built ahead: $ses (waits for Claude's check)"
+          done
 
       - name: File inbox PDFs, store them in Releases, find papers to process
         id: todo
