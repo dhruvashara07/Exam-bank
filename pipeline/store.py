@@ -371,12 +371,14 @@ def fit_crop(pg, b, max_grow=50.0):
             if not any((g & nb).get_area() > 0.5 * max(g.get_area(), 1) for g in others) and nb.width > 0.3 * b.width:
                 b = nb
                 # the neighbour's label words that still reach into our crop ('beaker A with lid' over Fig. 2.2): blanked
-                FOREIGN.extend(r for k, r in enumerate(items) if k >= n_draw and r.intersects(b) and find(k) not in mine_roots)
+                FOREIGN.extend(r for k, r in enumerate(items) if find(k) not in mine_roots and r.intersects(b)
+                               and (k >= n_draw or (r & b).get_area() > 4 or (r.width < 1 or r.height < 1)))
     return b
 
 
 def merge_contained(figs, qid, store, resave=None):
-    """Two captioned figures printed side by side whose crops overlap (one inside the other, 2018 MJ 53 q1 Fig. 1.2 / 1.3):
+    """Two captioned figures printed side by side whose crops overlap (one inside the other, 2018 MJ 53 q1 Fig. 1.2 / 1.3),
+    or that cannot be cut apart without the other's ink (2022 FM 62 Fig. 2.2 / 2.3, 'clash'):
     keep ONE picture (the larger crop) named after both, e.g. id ..._fig1-2+1-3, caption 'Fig. 1.2 and Fig. 1.3'."""
     out = list(figs)
     for big in sorted(figs, key=lambda f: -f['size_pt'][0] * f['size_pt'][1]):
@@ -384,7 +386,8 @@ def merge_contained(figs, qid, store, resave=None):
             continue
         B = fitz.Rect(big['source']['box'])
         inner = [f for f in out if f is not big and f.get('caption') and f['source']['page'] == big['source']['page']
-                 and (fitz.Rect(f['source']['box']) & B).get_area() > 0.8 * fitz.Rect(f['source']['box']).get_area()]
+                 and ((fitz.Rect(f['source']['box']) & B).get_area() > 0.8 * fitz.Rect(f['source']['box']).get_area()
+                      or ((big.get('clash') or f.get('clash')) and (fitz.Rect(f['source']['box']) & B).get_area() > 0))]
         if not inner:
             continue
         group = sorted(inner + [big], key=lambda f: f['id'])
@@ -409,6 +412,7 @@ def merge_contained(figs, qid, store, resave=None):
                 if k in lab:
                     big[k] = lab[k]
         big['merged'] = [g['id'] for g in group]
+        big.pop('clash', None)
         big['id'] = new_id
         big['file'] = big['file'] if big['file'].startswith(new_id) else new_id + ext
         big['caption'] = cap
@@ -418,18 +422,14 @@ def merge_contained(figs, qid, store, resave=None):
 def save_figure(f, q, meta, qdoc, store):
     b = fitz.Rect(f['bbox'])
     pg = qdoc[f['page'] - 1]
-    cap, cap_in, masked = None, False, False
+    cap, cap_in, masked, clash = None, False, False, False
     if not f.get('mask'):
         FOREIGN.clear()
         nb = fit_crop(pg, b)
         if nb != b:
             f = dict(f, bbox=list(nb), svg=None); b = nb
-        if FOREIGN:                               # blank the neighbour figure's words (graphics untouched)
-            d_ = fitz.open(); d_.insert_pdf(pg.parent, from_page=pg.number, to_page=pg.number); p_ = d_[0]
-            for r in FOREIGN:
-                p_.add_redact_annot(r + (-0.3, -0.3, 0.3, 0.3), fill=False)
-            p_.apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE, graphics=fitz.PDF_REDACT_LINE_ART_NONE)
-            pg = p_; qdoc = d_; f = dict(f, svg=None); masked = True
+        clash = bool(FOREIGN)                     # Dhruv, round 17: no clean cut without the neighbour's ink -> nothing is
+                                                  # blanked; the two figures become ONE picture named after both (merge_contained)
     if f.get('mask'):                         # a printed option letter inside the drawing's box: blank it
         pg = V5.without_caption(pg, fitz.Rect(f['mask']))
         qdoc = pg.parent
@@ -475,6 +475,8 @@ def save_figure(f, q, meta, qdoc, store):
         svg = re.sub(r'(<svg[^>]*>)', r'\1' + f'<title>{f["id"]}</title><desc>{json.dumps(label)}</desc>', svg, count=1)
         open(os.path.join(store, 'figures', name), 'w').write(svg)
     label['file'] = name
+    if clash:
+        label['clash'] = True
     if pc:
         label['ref'] = {'kind': pc[0], 'q': pc[1], 'n': pc[2]}
     if (f.get('caption') or '').startswith('Table'):

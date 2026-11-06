@@ -104,3 +104,8 @@ Our mark scheme is the original's landscape table made portrait ("responsive"): 
 - Side-by-side alternatives ("A | or | B") stay a table at the normal font size; text wraps inside the cells.
 - Sub-row lines in the Marks column are kept where the original has them.
 - A cell split by a page break is one cell (one Q label, no line across the Q column).
+
+## 11. Figures printed side by side (Dhruv, round 17, 2026-11-06)
+- If each figure can be cut out cleanly (its rectangle holds none of the neighbour's drawing or labels): one picture each.
+- If not (labels or drawings reach into each other's rectangle): ONE picture of both, named after both ("Fig. 2.2 and Fig. 2.3").
+  Nothing printed is ever blanked or removed from a picture.

@@ -597,7 +597,7 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
     for t in lab_t:
         lines_l.setdefault(round(t['y']), []).append(t)
     span = lambda ws: (min(w['x'] for w in ws), max(w['x'] + w['w'] for w in ws))
-    cum, sep_new, kmin = 0.0, [], 1.0
+    cum, sep_new, kmin, end_full = 0.0, [], 1.0, None
     for i in range(len(bounds) - 1):
         b0, b1 = bounds[i], bounds[i + 1]
         inb = lambda y: b0 <= y < b1 or (i == len(bounds) - 2 and y >= b1)
@@ -729,7 +729,7 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
                 texts_, lines_, pics_, tw_, ymap_ = rf
                 ox = L if full_ else L + 5 + (A - tw_) / 2   # a table filling the cell meets our column rules (round 16)
                 ytab = min([b[1] for l, b in LL if b[2] - b[0] < 1.3] + [b0])
-                oy = cum + (ytab - b0)
+                oy = cum if full_ else cum + max(0.0, ytab - b0)   # a full-cell table starts on the row line (round 17)
                 for n in texts_:
                     n['x'] = round(n['x'] + ox, 2); n['y'] = round(n['y'] + oy, 2); v['text'].append(n)
                 for l in lines_:
@@ -737,6 +737,10 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
                 for k_, g in pics_:
                     g['x'] = round(g['x'] + ox, 2); g['y'] = round(g['y'] + oy, 2); v.setdefault(k_, []).append(g)
                 Ymap = lambda y: oy + ymap_(y)
+                if has_marks:                         # the marks column's own sub-row lines, at the table's new row heights
+                    for y_m in MP._cluster([(r[1] + r[3]) / 2 for r in rr if r[3] - r[1] < 1.3 and r[0] >= e2 - 2 and r[2] - r[0] > 5
+                                            and b0 + 2 < (r[1] + r[3]) / 2 < b1 - 2 and (r[1] + r[3]) / 2 < h - 2]):
+                        v['lines'].append(_rect(M, Ymap(y_m) - 0.25, W, Ymap(y_m) + 0.25))
                 for y_, ws in lines_m.items():
                     if not inb(y_ - 3):
                         continue
@@ -760,6 +764,8 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
                             v['lines'].append(_rect(bb_[0], tb, bb_[2], cum))
                 if i < len(bounds) - 2:
                     sep_new.append((cum, sep_m.get(bounds[i + 1], False)))
+                elif full_:
+                    end_full = cum                    # the row ends on the table's last line (no 2 pt gap under it)
                 continue
             kb = A / need
         elif need > A + 0.5:
@@ -830,7 +836,7 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
         cum = max([(b1 - b0) * kb + extra + cum] + [y for y in bot] + ([lbot + 6] if cols else []))   # room under an inner table's edge
         if i < len(bounds) - 2:
             sep_new.append((cum, sep_m.get(bounds[i + 1], False)))
-    v['h'] = round(cum + 2, 2)
+    v['h'] = round(cum if end_full is not None and abs(end_full - cum) < 0.01 else cum + 2, 2)
     v['cell_scaled'] = round(kmin, 3)
     for y, into_m in sep_new:
         if y >= cum - 0.5:
