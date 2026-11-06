@@ -190,3 +190,8 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - 2016-2019 approval: approve.py was blocked by the permission check (needs his explicit "approve"); asked him.
   2016 FM is not part of this: it belongs to the old portrait-MS era (2013 - 2016 FM, kept as printed, no own header).
 - 2020 started under the new plan: rebuild with all fixes -> audit -> I check every flag -> short round with only doubtful items.
+- 2020 (new plan): rebuild + audit, 33 flags, all checked by me. Fixed in the pipeline: page-split continuation rows (empty Q column, header
+  strip), bands spanning all columns ("Additional graph notes") re-flowed into the Answer column with hanging indents, figure crops end
+  at their caption, inner-table edges at the row bottom kept, indented tables use their blank space before any shrink.
+  Cleared myself: Cambridge numbering slips (2020 ON 41 "7(b)" twice), printed mark codes (2020 ON 42 1(b) B1), OR routes.
+  2016-2020 rebuilt: no figure flags, no shrunk MS rows. Round 15 "2020" (4 items, new row kinds only) on the page; round 14 removed.

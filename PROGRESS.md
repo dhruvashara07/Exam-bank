@@ -73,7 +73,7 @@ Read this first in every session. Update it before ending a session.
 4. May/Jun 2026 variant 7: mark schemes 17 and 27 exist, question papers missing.
 
 ## Next
-- 2016-2019 full check-up done (2026-11-05): rounds 13-14 closed; 2016-2019 ready to approve (needs Dhruv's explicit 'approve' for approve.py); 2016 FM belongs to the old portrait era. 2020 in progress under the new plan; after his answers + fixes approve the remaining 2016-2019 papers, then 2020 under the new plan (build -> I check flags -> short round -> approve).
+- 2016-2019 full check-up done (2026-11-05): rounds 13-14 closed; 2016-2019 ready to approve (needs Dhruv's explicit 'approve' for approve.py); 2016 FM belongs to the old portrait era. 2020 checked (round 15, 4 items, open); after his answers + fixes approve the remaining 2016-2019 papers, then 2020 under the new plan (build -> I check flags -> short round -> approve).
 
 1. Daily check: read Dhruv's round 3 answers (`feedback_r3`), fix anything marked wrong, approve the 2015–2024
    backlog by the rule in docs/DAILY_CHECK.md §6. 40 flagged questions did not fit round 3 (mostly editable-text
