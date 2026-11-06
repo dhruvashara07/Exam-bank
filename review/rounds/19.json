@@ -1,0 +1,52 @@
+{
+ "round": 19,
+ "collection": "feedback_r19",
+ "created": "2026-11-06T18:03Z",
+ "title": "2024",
+ "intro": "2024: I checked every flag and fixed what was wrong in the pipeline. These 5 are the fixes worth a look.",
+ "papers": [
+  "0625_2024MJ_42",
+  "0625_2024MJ_43",
+  "0625_2024ON_31",
+  "0625_2024ON_43",
+  "0625_2024FM_42"
+ ],
+ "status": "open",
+ "items": [
+  {
+   "id": "0625_2024FM_42_q05",
+   "group": "flagged",
+   "reasons": [
+    "Grey (given) text in the inner table kept grey, table at normal size"
+   ]
+  },
+  {
+   "id": "0625_2024MJ_42_q01",
+   "group": "flagged",
+   "reasons": [
+    "Superscripts (a², b²) and the underline under 'vectors' moved with their words"
+   ]
+  },
+  {
+   "id": "0625_2024MJ_43_q10",
+   "group": "flagged",
+   "reasons": [
+    "Lines Cambridge wrapped inside a table cell are joined again before re-wrapping"
+   ]
+  },
+  {
+   "id": "0625_2024ON_31_q07",
+   "group": "flagged",
+   "reasons": [
+    "Double line under 7(c) removed"
+   ]
+  },
+  {
+   "id": "0625_2024ON_43_q03",
+   "group": "flagged",
+   "reasons": [
+    "Symbol characters (×, Δθ) drawn at the printed width so they no longer run into the next word"
+   ]
+  }
+ ]
+}

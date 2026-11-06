@@ -24,7 +24,7 @@ import paths
 ROOT = paths.ROOT
 STORE = os.path.join(ROOT, 'store', 'cambridge-igcse', '0625-physics')
 CODE = re.compile(r'^\(?([ABCM])(\d)\)?$')
-BAD = re.compile(r'Ã.|â€|�|[-]')
+BAD = re.compile(r'(?<![A-Za-z])[æçèöø](?![A-Za-z])|Ã.|â€|�|[-]')
 DOUBLE = re.compile(r'([a-z])\1\1|(?<![a-z])([b-df-hj-np-tv-z])\2(?=[a-z]{3})')   # 'ciir..'-like repeats are caught below
 
 
@@ -140,6 +140,17 @@ def loose_rules(v):
     for b in hz:                                       # a row line a few pt short of the right frame
         if b[2] - b[0] > 40 and W_ - 8 < b[2] < W_ - 0.7 and not any(o[0] <= b[2] + 0.5 and o[2] >= W_ - 0.3 and abs(o[1] - b[1]) < 1 for o in hz):
             out.append(f"row line at y {b[1]:.0f} stops {W_ - b[2]:.1f} pt short of the frame")
+    full = sorted(b[1] for b in hz if b[2] - b[0] > 0.6 * W_)
+    for a, b in zip(full, full[1:]):                   # two row lines 1-6 pt apart: a doubled line (2024 ON 31 q7(c))
+        if 1.2 < b - a < 6:
+            out.append(f"double row line at y {a:.0f}/{b:.0f}"); break
+    for b in hz:                                       # an underline with no word on it (moved apart: 2024 MJ 42 q1 'vectors')
+        if b[2] - b[0] < 0.5 * W_ and b[3] - b[1] < 1.3 and not any(
+                -1 <= b[1] - t['y'] <= 5 and (abs(t['x'] - b[0]) < 2.5 or (t['x'] - 1 <= b[0] and b[2] <= t['x'] + t['w'] + 1))
+                for t in v['text']) and not any(
+                0 < t['y'] - b[3] <= 13 and t['x'] < b[2] and t['x'] + t['w'] > b[0] for t in v['text']) and not any(
+                o[2] - o[0] < 1.5 and o[1] - 1 <= b[1] <= o[3] + 1 and (abs(o[0] - b[0]) < 1.5 or abs(o[2] - b[2]) < 1.5) for o in bx) and any(-1 <= b[1] - t['y'] <= 5 and t['x'] < b[2] and t['x'] + t['w'] > b[0] for t in v['text']):
+            out.append(f"underline at y {b[1]:.0f} not under its word"); break
     for b in vt:
         x = (b[0] + b[2]) / 2
         ends = [touch(x, b[1]), touch(x, b[3])]

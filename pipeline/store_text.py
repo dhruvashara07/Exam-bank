@@ -27,7 +27,9 @@ SYMBOL = dict(zip(
     'ABGDEFHIJKLMNOPQRSTUVWXYZabgdefhijklmnopqrstuvwxyz',
     'ΑΒΓΔΕΦΗΙϑΚΛΜΝΟΠΘΡΣΤΥςΩΞΨΖαβγδεφηιϕκλμνοπθρστυϖωξψζ'))
 SYMBOL.update({'G': 'Γ', 'C': 'Χ', 'c': 'χ', 'g': 'γ'})
-SYMBOL_HI = {0xB0: '°', 0xB1: '±', 0xB4: '×', 0xB8: '÷', 0xB9: '≠', 0xBA: '≡', 0xBB: '≈', 0xA3: '≤', 0xB3: '≥',
+SYMBOL_HI = {0xE6: '⎛', 0xE7: '⎜', 0xE8: '⎝', 0xF6: '⎞', 0xF7: '⎟', 0xF8: '⎠', 0xE9: '⎡', 0xEA: '⎢', 0xEB: '⎣', 0xF9: '⎤', 0xFA: '⎥',
+             0xFB: '⎦', 0xEC: '⎧', 0xED: '⎨', 0xEE: '⎩', 0xEF: '⎪', 0xFC: '⎫', 0xFD: '⎬', 0xFE: '⎭',   # big-bracket pieces (2023 MJ 43 q1)
+             0xB0: '°', 0xB1: '±', 0xB4: '×', 0xB8: '÷', 0xB9: '≠', 0xBA: '≡', 0xBB: '≈', 0xA3: '≤', 0xB3: '≥',
              0xAE: '→', 0xAC: '←', 0xAD: '↑', 0xAF: '↓', 0xAB: '↔', 0xD6: '√', 0xB5: '∝', 0xA5: '∞', 0x2D: '−',
              0xD7: '·', 0xA2: '′', 0xB2: '″', 0xE5: '∑', 0xF2: '∫', 0xB6: '∂', 0x27: '∋', 0x60: '‾', 0xBC: '…',
              0xB7: '•', 0xD0: '∠', 0xC5: '⊕', 0xC6: '∅', 0xA4: '⁄', 0xBE: '⎯', 0xD5: '∏', 0xD8: '¬', 0xD9: '∧', 0xDA: '∨',
@@ -384,7 +386,8 @@ def symbol_family(text, size, w):
         lib = _width('/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf', text, size)
         dej = _width('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', text, size)
     except Exception:
-        return 'symbol'
-    if lib is not None and (dej is None or abs(lib - w) < abs(dej - w)):
-        return 'sans'
-    return 'symbol'
+        return 'symbol', size
+    fam, nat = ('sans', lib) if lib is not None and (dej is None or abs(lib - w) < abs(dej - w)) else ('symbol', dej)
+    if nat and nat > w + 0.5 and w > 0:               # still wider than printed ('Δθ OR', 2024 ON 43 q3): a little smaller
+        size = round(size * max(0.8, w / nat), 2)
+    return fam, size

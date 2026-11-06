@@ -116,6 +116,27 @@ def _under_images(u):
     return dict(u, text=keep)
 
 
+def _bottom_rule(u):
+    """A row cut a few pt below its own bottom rule (2024 ON 31 q7(c): the cut ends 2.5 pt under it) would get our frame line
+    too: two lines. The row ends on that rule when nothing is printed below it."""
+    h = u['h']
+    segs = collections.defaultdict(float)
+    for l in u['lines']:
+        b = MP._bbox(l['d'])
+        if b is not None and b[3] - b[1] < 1.3 and h - 6 <= b[1] < h - 1.5:
+            segs[round(b[1], 1)] += b[2] - b[0]
+    ys_ = [y for y, wsum in segs.items() if wsum >= 0.85 * u['w']]
+    if not ys_:
+        return u
+    y = max(ys_)
+    below = [t for t in u['text'] if t['y'] - 0.7 * t.get('s', 10) > y] + \
+            [f for k_ in ('figs', 'images', 'glyphs') for f in u.get(k_) or [] if f['y'] + f.get('h', 0) > y + 1]
+    if below:
+        return u
+    v = dict(u); v['h'] = round(y + 0.5, 2); v['lines'] = _clip_lines(u['lines'], v['h'])
+    return v
+
+
 def _tighten(u):
     """Cut a row unit down to its table: some years print the table narrower than the cut (2016 ON: empty margins
     left and right of the borders). Without this the margins become empty 'columns'."""
@@ -500,6 +521,24 @@ def _reflow_table(TT, LL, PP, vx, A, mins_in=None, rec=None):
         for t in sorted(ws, key=lambda t: (key(t), t['x'])):
             lines_.setdefault(key(t), []).append(t)
         lines_ = dict(sorted(lines_.items()))
+        # a line that ran to the cell's right edge was wrapped by the printer: it goes on in the next line (2024 MJ 43 q10
+        # '... intact / pipe as well cracked'); a line starting 'OR' / 'AND' / a bullet is a new line
+        mer = []
+        base_of, joined = {}, set()
+        for lw in lines_.values():
+            b_ = max(lw, key=lambda o: o.get('s', 11))['y']
+            for t in lw:
+                base_of[id(t)] = b_
+        for k_, lw in lines_.items():
+            body_ = [t for t in lw if t.get('s', 11) >= 9] or lw
+            w0 = min(body_, key=lambda t: t['x'])
+            if (mer and max(t['x'] + t['w'] for t in mer[-1][1]) + 3 + w0['w'] >= c - 4 and min(t['x'] for t in body_) <= a + 12
+                    and not re.match(r'(OR|AND|or|and)$|[•▪–-]$', min(body_, key=lambda t: t['x'])['t'].strip())):
+                joined.add(id(min(body_, key=lambda t: t['x'])))
+                mer[-1] = (mer[-1][0], mer[-1][1] + list(lw))
+                continue
+            mer.append((k_, list(lw)))
+        lines_ = dict(mer)
         first = min(t['y'] for t in ws) - ys[i]
         lh = max(t.get('s', 10) for t in ws) * 1.2
         y = first; out = []
@@ -511,10 +550,10 @@ def _reflow_table(TT, LL, PP, vx, A, mins_in=None, rec=None):
             cur, row_ = x0, []
             prev = None
             for t in lw:
-                gap = 0 if prev is None else min(max(t['x'] - (prev['x'] + prev['w']), 2.0), 6.0)
+                gap = 0 if prev is None else (3.0 if id(t) in joined else min(max(t['x'] - (prev['x'] + prev['w']), 2.0), 6.0))
                 if row_ and cur + gap + t['w'] > x1:
                     out.append(row_); row_ = []; y += lh; cur = x0; gap = 0
-                n = dict(t, _sx=t['x']); n['x'] = cur + gap; n['y'] = y + (t['y'] - max(lw, key=lambda o: o.get('s', 11))['y'])
+                n = dict(t, _sx=t['x']); n['x'] = cur + gap; n['y'] = y + (t['y'] - base_of.get(id(t), t['y']))
                 row_.append(n); cur = n['x'] + t['w']; prev = t
             out.append(row_)
         for row_ in out:
@@ -650,8 +689,14 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None):
             for a_, c_ in zip(vx, vx[1:]):
                 ws = [t for t in TT if a_ < t['x'] + t['w'] / 2 < c_]
                 byl = {}
-                for t in ws:
-                    byl.setdefault(round(t['y']), []).append(t)
+                big = sorted({round(t['y']) for t in ws if t.get('s', 11) >= 9})
+                for t in ws:                          # a sub/superscript belongs to its line ('a²', 2024 MJ 42 q1)
+                    k_ = round(t['y'])
+                    if t.get('s', 11) < 9 and big:
+                        a_k = min(big, key=lambda b_: abs(b_ - t['y']))
+                        if abs(a_k - t['y']) <= 7:
+                            k_ = a_k
+                    byl.setdefault(k_, []).append(t)
                 wmax = 0.0
                 for g in byl.values():                # a cell's line ('(output of AND)') moves as one piece
                     ga, gb = min(t['x'] for t in g), max(t['x'] + t['w'] for t in g)
@@ -841,7 +886,10 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None):
         lbot = 0.0
         for l, b in LL:
             o = under.get(id(l)); dx, dy = moves.get(id(o), (0.0, 0.0)) if o is not None else (0.0, 0.0)
-            d_ = _map_path(l['d'], lambda x: L + 5 + (fxc(x) - e1b) * kb + dx + cxs, lambda y: fy(y, dy))
+            if o is not None and cols and not note(o):   # an underline moves with its word (2024 MJ 42 q1 'vectors')
+                d_ = _map_path(l['d'], lambda x, o=o: L + 5 + (tx(o) + (x - o['x']) - e1b) * kb + dx + cxs, lambda y: fy(y, dy))
+            else:
+                d_ = _map_path(l['d'], lambda x: L + 5 + (fxc(x) - e1b) * kb + dx + cxs, lambda y: fy(y, dy))
             v['lines'].append({**l, 'd': d_})
             bb_ = MP._bbox(d_)
             if bb_ is not None:
@@ -911,7 +959,7 @@ def build(q, store):
     if not uniq:
         return None
     uniq.sort(key=lambda ru: (ru[1]['src']['page'], ru[1]['src']['box'][1]))   # the mark scheme's own order (2017 ON 41 q8: 8 Hydroelectric (a)(b)(c), 8 Tidal flow (a)(b)(c) ...)
-    uniq = [(r, _tighten(_under_images(_dedupe(_unshrink(u))))) for r, u in uniq]
+    uniq = [(r, _tighten(_under_images(_dedupe(_unshrink(_bottom_rule(u)))))) for r, u in uniq]
     units = [u for _, u in uniq]
     if all(u['w'] <= W + 2 for u in units):          # the old portrait era: our table too (no printed one to follow)
         first = {'edges': [], 'new_edges': [44.0, W - 44.0], 'new_w': [44.0, W - 88.0, 44.0], 'default': True}

@@ -126,7 +126,7 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
                     w = {'t': ''.join(unpua(c['c']) for c in chars), 'x': round(x - ox, 2), 'y': round(y - oy, 2),
                          'w': round(span_len(chars, l['dir']), 2), 's': round(s['size'], 2), 'f': FAM[family(font)]}
                     if w['f'] == 'symbol':
-                        w['f'] = symbol_family(w['t'], w['s'], w['w'])
+                        w['f'], w['s'] = symbol_family(w['t'], w['s'], w['w'])
                     st = collections.Counter(cstyle.get((round(c['origin'][0], 1), round(c['origin'][1], 1)), 'r')
                                              for c in chars if c['c'].isalnum()) or collections.Counter('r')
                     st = st.most_common(1)[0][0]

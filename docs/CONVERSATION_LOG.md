@@ -247,3 +247,13 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - Answered him: shared code = the pipeline makes every JSON, so a fix is made once and the years are rebuilt; only changed
   questions are committed and checked. Unflagged questions pass the audit but are not all looked at by eye (honest).
 - 2023 approved (final in git). Next: 2024.
+- 22:01 Dhruv: "all images are good"; asked what "shared code" means (answered: the pipeline makes every JSON); "continue, give me
+  2024, don't leave any error unresolved".
+- 2024 check (and every changed question 2016-2024 looked at side by side, ~110): fixed in the pipeline: sub/superscripts stay with
+  their line in an inner table (a² b², 2024 MJ 42 q1); an underline moves with its word in a narrowed table; lines Cambridge
+  wrapped inside a reflowed table cell are joined before re-wrapping (2024 MJ 43 q10); a row cut a few pt below its own bottom
+  rule ends on it (double line, 2024 ON 31 q7(c)); symbol characters still wider than printed are drawn a little smaller
+  ('ΔθOR'); Symbol-font big-bracket pieces mapped to real bracket pieces (2023 MJ 43 q1 showed 'æ ö ç è ø').
+  New audit checks: double row line, underline not under its word, bracket letters. All 2016-2024: 0 of these.
+  Not fixed (Cambridge): 2024 MJ 21 q14 "Question Discounted" in the MS (no answer key - correct as printed).
+- Round 19 "2024" (5 fixes worth a look) on the review page; round 18 removed.
