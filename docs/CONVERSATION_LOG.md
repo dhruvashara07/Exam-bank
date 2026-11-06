@@ -223,3 +223,6 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - 2022 check: side-by-side figures keep only their own ink (only when a neighbour figure's box overlaps beside ours; the
   neighbour's words inside our crop are blanked); hidden text under MS label pictures dropped; white lines skipped;
   a fraction wraps with its text line. Round 17 "2022" (4 items) on the page.
+- 20:26 Round 17: 3 ok; 2022 FM 62 q2 -> his rule: side-by-side figures that cannot be cut without overlap = ONE whole picture
+  of both (nothing blanked) (MS rules section 11). 9(b) middle line now starts/ends on the row lines. Rebuilt 2016-2022 (this also
+  merged 2018 MJ 63 Fig 1.3+1.4, 2020 ON 33 and 41 Fig 3.1+3.2: labels intertwined; checked). 2022 approved (final in git). Next: 2023.
