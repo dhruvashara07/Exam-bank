@@ -182,3 +182,11 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   Fixed in the pipeline (docs/MS_TABLE_RULES.md section 9): band-by-band cell rows at normal size, narrower inner-table columns,
   re-wrap of too-wide text bands, MS rows in printed order, heading rows, grand-total cell dropped, formula rows beside a figure cut out of it.
   2016-2019 rebuilt; audit clean (only kinds I clear). Round 14 (7 items: his 5 + 2 of the same kind) on the page, round 13 closed and removed.
+
+## 2026-11-06 — round 14, then 2020
+- 11:26 Round 14: 6 ok, 1 wrong: 2017 ON 41 Q8 "why numbering is weird please check original". Checked: our MS matches the printed MS
+  exactly (the MS gives one full (a)(b)(c) answer set per process: 8 Hydroelectric, 8 Tidal flow, 8 Waves); kept as printed, told Dhruv.
+- He: "update our convo and context, and if that que fixed then move to 2020".
+- 2016-2019 approval: approve.py was blocked by the permission check (needs his explicit "approve"); asked him.
+  2016 FM is not part of this: it belongs to the old portrait-MS era (2013 - 2016 FM, kept as printed, no own header).
+- 2020 started under the new plan: rebuild with all fixes -> audit -> I check every flag -> short round with only doubtful items.
