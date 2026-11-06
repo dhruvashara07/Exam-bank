@@ -15,7 +15,7 @@ Portrait-era rows (w <= W + 2) are returned unchanged.
 import re, copy, statistics, collections
 
 NUM = re.compile(r'-?\d+\.?\d*')
-BULLET = re.compile(r'^(•|·|–|-|▪|\([a-zA-Z0-9]{1,4}\)|[a-zA-Z0-9]{1,2}[.)])$')
+BULLET = re.compile(r'^(•|·|–|-|▪|\([a-zA-Z0-9]{1,4}\)|[a-zA-Z0-9]{1,2}[.)])\s*$')   # ('• ' with its space: 2023 MJ 41 q7)
 PITCH = 13.2          # default line pitch of 11 pt mark-scheme text
 
 
@@ -143,6 +143,10 @@ def _wrap(par, x1):
             prevend = g['x'] + g['w']
     if cont_x is None:
         cont_x = par['lines'][0][1]['x'] if len(par['lines'][0]) > 1 and BULLET.match(par['lines'][0][0]['ws'][0]['t']) else first_x
+        l0 = par['lines'][0]
+        if (cont_x == first_x and len(l0) > 1 and l0[1]['x'] - (l0[0]['x'] + l0[0]['w']) > 12
+                and l0[1]['x'] - first_x < 0.4 * (x1 - first_x)):
+            cont_x = l0[1]['x']                   # 'MP2   Measure ...': a wrapped line hangs under 'Measure' (2023 ON 51 q4)
     chains = []                                   # words with no real space between them ("30" + thin space + "s") never split
     for g, gap in flat:
         if chains and gap is not None and gap < 2.0:
@@ -300,13 +304,17 @@ def portrait_unit(u, W=523.0, widths=None, sizes=None, probe=False):
                 ow = (edges[0] - lo) if c == 0 else old_w[c]
                 nw = (new_edges[0] - lo) if c == 0 else new_w[c]
                 ns = lo if c == 0 else nx_start(c)
-                lg, rg = t['x'] - lo, lo + ow - (t['x'] + t['w'])                       # gaps to the column's left / right edge
+                # the words of one line move as ONE piece ('8 (a)(ii)' label 2019 MJ 32 q8, '2 × 1' marks 2016 ON 62 q5)
+                grp = [o for o in ws if abs(o['y'] - t['y']) < 2]
+                gx0 = min(o['x'] for o in grp); gw = max(o['x'] + o['w'] for o in grp) - gx0
+                lg, rg = gx0 - lo, lo + ow - (gx0 + gw)                                 # gaps to the column's left / right edge
                 if c != 0 and lg < rg - 3:
-                    nt['x'] = round(ns + lg, 2)                                           # left-aligned
+                    gx = ns + lg                                                          # left-aligned
                 elif c != 0 and rg < lg - 3:
-                    nt['x'] = round(ns + nw - rg - t['w'], 2)                             # right-aligned (marks)
+                    gx = ns + nw - rg - gw                                                # right-aligned (marks)
                 else:
-                    nt['x'] = round(ns + (nw - t['w']) / 2, 2)                            # centred (question label)
+                    gx = ns + max(0.0, (nw - gw) / 2)                                     # centred (question label)
+                nt['x'] = round(gx + (t['x'] - gx0), 2)
                 nt['y'] = round(t['y'] + shift[b] + pitch * cum_above(b, t['y']), 2)
                 v['text'].append(nt); moved.append((t, nt))
     for (b, c), ps_ in paras_of.items():

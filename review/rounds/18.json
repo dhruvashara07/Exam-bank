@@ -10,7 +10,7 @@
   "0625_2023ON_51",
   "0625_2023FM_42"
  ],
- "status": "open",
+ "status": "closed",
  "items": [
   {
    "id": "0625_2023FM_42_q01",
@@ -40,5 +40,24 @@
     "Fig. 4.1 crop cut through the bullet line 'metre ruler.' above it"
    ]
   }
- ]
+ ],
+ "answers": {
+  "0625_2023FM_42_q01": {
+   "verdict": "wrong",
+   "note": "inner table top edge merged with the sub-row line; tables of one design had different widths. Fixed in the pipeline: inner-table top kept apart from the row line, lost top/bottom edge drawn, same table design in several sub-rows gets one set of column widths"
+  },
+  "0625_2023MJ_31_q11": {
+   "verdict": "wrong",
+   "note": "top edge of the inner table lost (same cause). Fixed in the pipeline"
+  },
+  "0625_2023MJ_33_q08": {
+   "verdict": "ok",
+   "note": ""
+  },
+  "0625_2023ON_51_q04": {
+   "verdict": "wrong",
+   "note": "'Additional graph notes' printed under the table leaked into the row and widened the Q column. Fixed: a row ends where the table's column rules end (general notes under the table are not the question's answer)"
+  }
+ },
+ "closed": "2026-11-06T17:32Z"
 }

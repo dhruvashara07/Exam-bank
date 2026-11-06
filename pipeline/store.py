@@ -20,7 +20,7 @@ import numpy as np
 from PIL import Image
 import paths
 from run import cleaned
-from store_text import family, unpua, hexcol, span_len, odd
+from store_text import family, unpua, hexcol, span_len, odd, symbol_family
 from store_units import glyph_styles, char_styles, tp, drawing_d, nodes, scale_note
 import store_options as OPT
 import store_v5 as V5
@@ -125,6 +125,8 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
                     x, y = tp(m, *chars[0]['origin'])
                     w = {'t': ''.join(unpua(c['c']) for c in chars), 'x': round(x - ox, 2), 'y': round(y - oy, 2),
                          'w': round(span_len(chars, l['dir']), 2), 's': round(s['size'], 2), 'f': FAM[family(font)]}
+                    if w['f'] == 'symbol':
+                        w['f'] = symbol_family(w['t'], w['s'], w['w'])
                     st = collections.Counter(cstyle.get((round(c['origin'][0], 1), round(c['origin'][1], 1)), 'r')
                                              for c in chars if c['c'].isalnum()) or collections.Counter('r')
                     st = st.most_common(1)[0][0]
@@ -189,10 +191,31 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
         r = (fitz.Rect(info['bbox']).quad * m).rect & clip
         if r.is_empty or r.width < 8 or r.height < 8 or not inside(r) or in_fig(r):
             continue
+        if docname == 'ms':                   # a picture filling its table cell: keep it off the cell's rules (2016 MJ 41 q10)
+            r = fitz.Rect(r.x0, r.y0 + (1.5 if r.y0 <= clip.y0 + 1 else 0), r.x1, r.y1 - (1.5 if r.y1 >= clip.y1 - 1 else 0))
         name = f"img_{docname}{pno + 1}_{int(r.x0)}_{int(r.y0)}.png"
-        page.get_pixmap(clip=r, dpi=300).save(os.path.join(store, 'figures', name))
+        pix = page.get_pixmap(clip=r, dpi=300)
+        if docname == 'ms':                   # white paper is transparent, so our lines stay visible around the picture
+            from PIL import Image as _I
+            im_ = _I.frombytes('RGB', (pix.width, pix.height), pix.samples).convert('RGBA')
+            px = [(rr, gg, bb, 0 if rr > 245 and gg > 245 and bb > 245 else 255) for rr, gg, bb, aa in im_.getdata()]
+            im_.putdata(px); im_.save(os.path.join(store, 'figures', name))
+        else:
+            pix.save(os.path.join(store, 'figures', name))
         u.setdefault('images', []).append({'file': name, 'x': round(r.x0 - ox, 2), 'y': round(r.y0 - oy, 2),
                                             'w': round(r.width, 2), 'h': round(r.height, 2)})
+    # shapes filled with a tiled picture (hatched circles = protons, 2019 ON 41 q9): the tiles cannot be placed, so each such
+    # small filled shape is kept as a picture of itself (ring + hatching), drawn over its outline
+    if any(i['bbox'][2] - i['bbox'][0] < 8 and i['bbox'][3] - i['bbox'][1] < 8 for i in page.get_image_info()):
+        for dr in page.get_drawings():
+            r = (fitz.Rect(dr['rect']).quad * m).rect
+            if dr.get('type') in ('f', 'fs') and len(dr.get('items') or []) >= 40 and 5 < r.width < 40 and 5 < r.height < 40 \
+                    and not (r & clip).is_empty and inside(r) and not in_fig(r):
+                r = r + (-0.6, -0.6, 0.6, 0.6)
+                name = f"img_{docname}{pno + 1}_{int(r.x0)}_{int(r.y0)}.png"
+                page.get_pixmap(clip=r, dpi=300).save(os.path.join(store, 'figures', name))
+                u.setdefault('images', []).append({'file': name, 'x': round(r.x0 - ox, 2), 'y': round(r.y0 - oy, 2),
+                                                    'w': round(r.width, 2), 'h': round(r.height, 2)})
     for f in figs:
         b = fitz.Rect(f['source']['box'])
         if inside(b):

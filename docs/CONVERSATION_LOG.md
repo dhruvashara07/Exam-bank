@@ -232,3 +232,18 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   baselines within 3 pt are one line in reflowed cells. Round 18 "2023" (4 items) on the page.
 - KNOWN, not fixed: 2019 ON 41 q9(a)(ii) MS - the hatched circles (protons) show as plain circles (the hatching is a pattern of
   tiny images we cannot place); told Dhruv.
+- 21:44 Round 18 (2023): 1 ok, 3 wrong + his notes. Fixed in the pipeline (all years rebuilt, every changed question checked side by side):
+  inner-table top edge kept apart from the sub-row line (a sub-row rule must run across the whole answer cell); a lost table
+  top/bottom edge drawn; the same inner-table design in several sub-rows = ONE set of column widths (his rule: max needed);
+  notes printed UNDER the table ("Additional graph notes") are not the last question's row (ms.py: row ends where the column
+  rules end; 2020-2023 ON 51/52 q4); diode row no longer swallows the next row's picture; MS pictures off the cell rules;
+  hatched shapes (tile patterns) rasterized; row lines that stopped 1-4 pt short of the frame now meet it (1000+ rows, all
+  years); a one-line 'MP2   text' wraps under its text; label/marks words move as one piece ('8 (a)(ii)', '2 × 1');
+  '• ' bullets with a space recognised (2023 MJ 41 q7 bullets had run together); a line filling its cell is not 'centred';
+  a note under an inner table no longer blocks the table's own indent (2022 ON 42 q2 table back to its printed width);
+  the PAPER total '[Total: 80]' dropped from the last row (2016 MJ 43); symbol-font characters (× ± ° • γ ...) drawn in
+  Liberation Sans = printed width (DejaVu was a third wider and ran into the next word: '±1°', '×10').
+  New audit checks: ms_edges (line in the air / short of the frame), ms_bullet, ms_overlap. 2016-2024: 0 of these.
+- Answered him: shared code = the pipeline makes every JSON, so a fix is made once and the years are rebuilt; only changed
+  questions are committed and checked. Unflagged questions pass the audit but are not all looked at by eye (honest).
+- 2023 approved (final in git). Next: 2024.

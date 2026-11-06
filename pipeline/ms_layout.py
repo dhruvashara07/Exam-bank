@@ -179,6 +179,8 @@ def _drop_slivers(v):
         b = MP._bbox(l['d'])
         if b and b[2] - b[0] < 3 and (0.8 < b[0] < 20 or W - 20 < b[0] < W - 0.8):
             continue
+        if b and b[3] - b[1] < 1.3 and b[2] - b[0] > 40 and W - 8 < b[2] < W - 0.7 and MP._bbox(l['d']) and re.fullmatch(r'M[^M]*Z?', l['d'].strip()):
+            l = {**l, 'd': _rect(b[0], b[1], W, b[3])['d']}   # a row line that stops a few pt short of the frame (2023 ON 51 q4)
         keep.append(l)
     v['lines'] = keep
 
@@ -443,7 +445,7 @@ def _map_path(d, fx, fy):
     return ''.join(out)
 
 
-def _reflow_table(TT, LL, PP, vx, A):
+def _reflow_table(TT, LL, PP, vx, A, mins_in=None, rec=None):
     """An inner table too wide for our Answer column even with narrow columns (side-by-side 'OR' alternatives,
     2019 ON 43 q9): keep the normal font size and wrap each cell's text inside its column; rows grow taller.
     Returns (texts, lines, pics, width, ymap) in table coordinates (x from 0, y = mapped source y)."""
@@ -465,6 +467,10 @@ def _reflow_table(TT, LL, PP, vx, A):
         cells.setdefault((i, j), []).append(t)
     old = [c - a for a, c in cols]
     mins = [max([t['w'] for (i, j), ws in cells.items() if j == jj for t in ws] + [10]) + 10 for jj in range(len(cols))]
+    if rec is not None:
+        rec.append(mins)
+    if mins_in is not None:                            # the same table design in other sub-rows: same column widths (round 18)
+        mins = [max(a, b) for a, b in zip(mins, mins_in)]
     avail = A - 4
     f = avail / sum(old)
     new = [max(m, w * f) for m, w in zip(mins, old)]
@@ -497,7 +503,8 @@ def _reflow_table(TT, LL, PP, vx, A):
         first = min(t['y'] for t in ws) - ys[i]
         lh = max(t.get('s', 10) for t in ws) * 1.2
         y = first; out = []
-        centred = all(abs((min(t['x'] for t in lw) + max(t['x'] + t['w'] for t in lw)) / 2 - (a + c) / 2) < 4 for lw in lines_.values())
+        centred = all(abs((min(t['x'] for t in lw) + max(t['x'] + t['w'] for t in lw)) / 2 - (a + c) / 2) < 4 for lw in lines_.values()) \
+            and any(min(t['x'] for t in lw) - a > 8 for lw in lines_.values())   # (a line filling its cell is not centred: 2022 ON 42 q2)
         for k, lw in enumerate(lines_.values()):
             if k:
                 y += lh
@@ -545,6 +552,10 @@ def _reflow_table(TT, LL, PP, vx, A):
             mid = (a + c) / 2
             if any(abs((b[1] + b[3]) / 2 - y) < 1.5 and b[0] <= mid <= b[2] for b in hz):
                 lines.append(_rect(nx[j], Y[k] - 0.25, nx[j + 1], Y[k] + 0.25))
+    for k in (0, len(ys) - 1):                        # the table's top/bottom edge lost with the row's own border (2023 FM 42 q1)
+        y = ys[k]
+        if not any(abs((b[1] + b[3]) / 2 - y) < 1.5 for b in hz) and any(b[1] - 1 <= y <= b[3] + 1 for b in vt):
+            lines.append(_rect(nx[0], Y[k] - 0.25, nx[-1], Y[k] + 0.25))
     for j, x in enumerate(vx):                        # column rules where the source drew them (per row)
         for i, (a, c) in enumerate(zip(ys, ys[1:])):
             mid = (a + c) / 2
@@ -562,7 +573,7 @@ def _reflow_table(TT, LL, PP, vx, A):
     return texts, lines + unders, pics, nx[-1], ymap
 
 
-def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
+def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None):
     """Dhruv 2026-11-05 (round 13): rows drawn cell-wise keep the NORMAL font size; the row grows instead.
     The answer cell is laid out band by band (bands = its sub-rows): an inner table gets narrower columns to fit its
     content; a text-only band that is too wide is re-wrapped; only a band with fractions/drawings that still does not
@@ -596,9 +607,11 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
         if b[1] < -0.5 and b[3] <= 3.2:
             continue                                  # a strip of the header row above (grey, 2020 MJ 31 q11)
         ans_l.append((l, b))
-    seps = MP._cluster([(b[1] + b[3]) / 2 for l, b in ans_l if b[3] - b[1] < 1.3 and b[2] - b[0] >= 0.85 * (e2 - e1)])
+    # a sub-row rule runs across the whole answer cell; an inner table's own edge stops short of it (2023 FM 42 q1)
+    is_sep = lambda b: b[3] - b[1] < 1.3 and b[0] <= e1 + 4 and b[2] >= e2 - 4
+    seps = MP._cluster([(b[1] + b[3]) / 2 for l, b in ans_l if is_sep(b)])
     sep_m = {y: any(r[3] - r[1] < 1.3 and abs((r[1] + r[3]) / 2 - y) < 1.5 and r[2] > e2 + 5 for r in rr) for y in seps}
-    ans_l = [(l, b) for l, b in ans_l if not (b[3] - b[1] < 1.3 and b[2] - b[0] >= 0.85 * (e2 - e1))]
+    ans_l = [(l, b) for l, b in ans_l if not is_sep(b)]
     pics = [(key, f) for key in ('figs', 'images', 'glyphs') for f in (u.get(key) or [])]
     bounds = [0.0] + seps + [h]
     lines_m = {}
@@ -609,6 +622,7 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
         lines_l.setdefault(round(t['y']), []).append(t)
     span = lambda ws: (min(w['x'] for w in ws), max(w['x'] + w['w'] for w in ws))
     cum, sep_new, kmin, end_full = 0.0, [], 1.0, None
+    tabs = {}                                          # inner-table design (its column rules) -> [mins per band], reflowed?
     for i in range(len(bounds) - 1):
         b0, b1 = bounds[i], bounds[i + 1]
         inb = lambda y: b0 <= y < b1 or (i == len(bounds) - 2 and y >= b1)
@@ -675,10 +689,15 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
                     nx = max(na + 3, min(nc - (gb - ga) / 2, na + nwid - (gb - ga) - 3))
                     return nx + (t['x'] - ga)
             return fxc(t['x'])
+        vys = [b for l, b in LL if b[2] - b[0] < 1.3 and b[3] - b[1] >= 6]
+        tab_y0 = min([b[1] for b in vys] + [1e9]); tab_y1 = max([b[3] for b in vys] + [-1e9])
+        tab_rows = lambda t: tab_y0 - 2 <= t['y'] - 0.35 * t.get('s', 10) <= tab_y1 + 2
+        note = lambda t: bool(cols) and not tab_rows(t)   # a note above/below an inner table ('1 mark for each correct response')
         R = max([tx(t) + t['w'] for t in TT] + [fxc(b[2]) for l, b in LL] + [fxc(f['x']) + f.get('w', 0) for k_, f in PP] + [e1b])
         need = R - e1b
+        e1b0 = e1b
         if need > A + 0.5:                            # blank space left of the content (an indented table, 2020 FM 32 q6): use it first
-            lead = min([tx(t) for t in TT] + [fxc(b[0]) for l, b in LL] + [fxc(f['x']) for k_, f in PP] + [R]) - e1b
+            lead = min([tx(t) for t in TT if not note(t)] + [fxc(b[0]) for l, b in LL] + [fxc(f['x']) for k_, f in PP] + [R]) - e1b
             sh = min(need - A, max(0.0, lead - 6))
             e1b += sh; need -= sh
         X = lambda x: L + 5 + (x - e1b)
@@ -688,10 +707,13 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
             o = next((t for t in TT if 0.3 <= b[1] - t['y'] <= 5 and b[0] < t['x'] + t['w'] and b[2] > t['x'] and b[3] - b[1] < 1.3), None)
             under[id(l)] = o
         pure = not PP and not cols and all(under[id(l)] is not None for l, b in decor)
-        vys = [b for l, b in LL if b[2] - b[0] < 1.3 and b[3] - b[1] >= 6]
-        tab_y0 = min([b[1] for b in vys] + [1e9]); tab_y1 = max([b[3] for b in vys] + [-1e9])
-        tab_rows = lambda t: tab_y0 - 2 <= t['y'] - 0.35 * t.get('s', 10) <= tab_y1 + 2
         kb, moves, extra = 1.0, {}, 0.0
+        tkey = tuple(round(x) for x in vx) if cols else None
+        if tkey and not spanning:                      # remember each band's table needs (same design in several sub-rows)
+            rm = []
+            _reflow_table([t for t in TT if tab_rows(t)], LL, PP, vx, A, rec=rm)
+            if rm:
+                tabs.setdefault(tkey, [[], False])[0].append(rm[0])
         if (need > A + 0.5 or spanning) and pure and TT:   # re-wrap the text lines of this band (wide gaps closed up)
             # a fraction (numerator / bar / denominator) belongs to the text line it sits in (2022 FM 32 q11 '... OR 240×48/590')
             line_of = {id(t): round(t['y']) for t in TT}
@@ -736,14 +758,17 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
             for t in TT:
                 if id(t) not in moves:
                     moves[id(t)] = (0.0, 0.0)
-        elif need > A + 0.5 and cols and not spanning and all(vx[0] - 3 <= t['x'] + t['w'] / 2 <= vx[-1] + 3 or not tab_rows(t) for t in TT):
+        elif (need > A + 0.5 or (force and tkey in force)) and cols and not spanning and all(vx[0] - 3 <= t['x'] + t['w'] / 2 <= vx[-1] + 3 or not tab_rows(t) for t in TT):
             full_ = abs(vx[0] - (e1b + 0.5)) < 0.01 and abs(vx[-1] - (e2 - 0.5)) < 0.01
             TT_out = [t for t in TT if not tab_rows(t)]   # a note under/over the table ('1 mark for each correct column')
-            rf = _reflow_table([t for t in TT if tab_rows(t)], LL, PP, vx, (M - L + 4) if full_ else A)
+            rf = _reflow_table([t for t in TT if tab_rows(t)], LL, PP, vx, (M - L + 4) if full_ else A,
+                               mins_in=(force or {}).get(tkey))
+            if rf is not None:
+                tabs.setdefault(tkey, [[], False])[1] = True
             if rf is not None:                        # the table at the normal size, text wrapped inside its cells
                 texts_, lines_, pics_, tw_, ymap_ = rf
                 ox = L if full_ else L + 5 + (A - tw_) / 2   # a table filling the cell meets our column rules (round 16)
-                ytab = min([b[1] for l, b in LL if b[2] - b[0] < 1.3] + [b0])
+                ytab = min([b[1] for l, b in LL if b[2] - b[0] < 1.3 and b[3] - b[1] >= 4] or [b0])   # the table's top
                 oy = cum if full_ else cum + max(0.0, ytab - b0)   # a full-cell table starts on the row line (round 17)
                 for n in texts_:
                     n['x'] = round(n['x'] + ox, 2); n['y'] = round(n['y'] + oy, 2); v['text'].append(n)
@@ -761,7 +786,8 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
                         continue
                     a_, c_ = span(ws)
                     for t in ws:
-                        n = dict(t); n['x'] = round(W - 6 - (c_ - a_) + (t['x'] - a_), 2); n['y'] = round(Ymap(t['y']), 2)
+                        n = dict(t); n['x'] = round(W - 6 - (c_ - a_) + (t['x'] - a_), 2)
+                        n['y'] = round(cum + (t['y'] - b0) if t['y'] - 0.7 * t.get('s', 10) < ytab + 2 else Ymap(t['y']), 2)   # level with the label
                         v['text'].append(n)
                 for y_, ws in lines_l.items():
                     if not inb(y_ - 3):
@@ -794,8 +820,8 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
         if (cols or PP) and not spanning and (TT or PP):
             # Dhruv, rounds 15-16: 'horizontal responsiveness' - a table or drawing keeps its ORIGINAL alignment in the answer
             # cell (centred stays centred, left stays left, right stays right), only fitted to our portrait column
-            sx0 = min([t['x'] for t in TT] + [b[0] for l, b in LL] + [f['x'] for k_, f in PP])
-            sx1 = max([t['x'] + t['w'] for t in TT] + [b[2] for l, b in LL] + [f['x'] + f.get('w', 0) for k_, f in PP])
+            sx0 = min([t['x'] for t in TT if not note(t)] + [b[0] for l, b in LL] + [f['x'] for k_, f in PP])
+            sx1 = max([t['x'] + t['w'] for t in TT if not note(t)] + [b[2] for l, b in LL] + [f['x'] + f.get('w', 0) for k_, f in PP])
             ml, mr = sx0 - e1, e2 - sx1
             nx0 = L + 5 + (fxc(sx0) - e1b) * kb; nx1 = L + 5 + (fxc(sx1) - e1b) * kb; bw = nx1 - nx0
             if abs(ml - mr) <= 0.25 * max(ml + mr, 1) + 6:
@@ -807,7 +833,8 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
             return cum + (y - b0) * kb + dy
         for t in TT:
             n = dict(t); dx, dy = moves.get(id(t), (0.0, 0.0))
-            n['x'] = round(L + 5 + (tx(t) - e1b) * kb + dx + cxs, 2); n['y'] = round(fy(t['y'], dy), 2)
+            n['x'] = round(L + 5 + (tx(t) - e1b) * kb + dx + cxs, 2) if not note(t) else round(L + 5 + (t['x'] - e1b0) * kb + dx, 2)
+            n['y'] = round(fy(t['y'], dy), 2)
             if kb < 1:
                 n['s'] = round(t['s'] * kb, 2); n['w'] = round(t['w'] * kb, 2)
             v['text'].append(n)
@@ -855,6 +882,12 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=()):
         cum = max([(b1 - b0) * kb + extra + cum] + [y for y in bot] + ([lbot + 6] if cols else []))   # room under an inner table's edge
         if i < len(bounds) - 2:
             sep_new.append((cum, sep_m.get(bounds[i + 1], False)))
+    if force is None:
+        # Dhruv, round 18 (2023 FM 42 q1): the same inner table in several sub-rows keeps ONE design - if one of them has
+        # to be re-wrapped, all of them are, with the same column widths (the widest each column needs)
+        f_ = {k: [max(c) for c in zip(*ms_)] for k, (ms_, rfl) in tabs.items() if rfl and len(ms_) >= 2}
+        if f_:
+            return _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov, force=f_)
     v['h'] = round(cum if end_full is not None and abs(end_full - cum) < 0.01 else cum + 2, 2)
     v['cell_scaled'] = round(kmin, 3)
     for y, into_m in sep_new:
@@ -935,7 +968,22 @@ def build(q, store):
                 if not v['text'] and not v.get('figs') and not v.get('images') and not v.get('glyphs'):
                     continue                          # the row held only the printed total
         fixed.append(v)
-    out = fixed
+    out = []
+    for v in fixed:                                   # the PAPER's total ('[Total: 80]' under the last question, 2016 MJ 43): not ours
+        pt = [t for t in v['text'] if re.fullmatch(r'\[Total:?', t['t'])]
+        if pt:
+            drop = {id(t) for T in pt for t in v['text'] if abs(t['y'] - T['y']) < 2.5 and t['x'] >= T['x'] - 1 and re.fullmatch(r'\[Total:?|\d+\]', t['t'])}
+            v = dict(v); v['text'] = [t for t in v['text'] if id(t) not in drop]
+            ty = min(T['y'] - 0.8 * T.get('s', 10) for T in pt)
+            above = [t['y'] + 3 for t in v['text'] if t['y'] < ty] + [f['y'] + f.get('h', 0) for k_ in ('figs', 'images', 'glyphs') for f in v.get(k_) or []]
+            if above:                                 # its own strip of the row goes too: the row ends on the rule above it
+                rl_ = [b[1] for b in (MP._bbox(l['d']) for l in v['lines']) if b and b[3] - b[1] < 1.5 and b[2] - b[0] > 0.5 * v['w']
+                       and max(above) - 1 <= b[1] <= ty]
+                if rl_:
+                    v['h'] = round(min(rl_) + 0.6, 2); v['lines'] = _clip_lines(v['lines'], v['h'])
+            if not any(t['t'].strip() for t in v['text']) and not v.get('figs') and not v.get('images') and not v.get('glyphs'):
+                continue
+        out.append(v)
     if first and os.path.exists(hdr_p):
         out.insert(0, _header_unit(json.load(open(hdr_p)), first))
     def printed_total(v):                             # 'Total: 6' on its own (not 'Total p.d. = ...' inside an answer)

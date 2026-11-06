@@ -12,6 +12,9 @@ Checks per question (problem kinds):
   text        doubled letters / broken characters (mojibake, private-use)
   figure      figure crop still cuts ink or a text line (on the stored, mended crop)
   options     MCQ without 4 options or without an answer
+  ms_overlap  two words printed over each other
+  ms_bullet   a bullet point run into the line before it
+  ms_edges    a table line that ends in the air (lost inner-table edge, line short of the frame)
   differs     stored copy differs from the page (review/store/<paper>.json)
 """
 import collections, glob, json, os, re, sys
@@ -88,6 +91,19 @@ def audit_question(q, verify):
                 probs.append(('ms_layout', f"{mp['modes'][k]} row(s) {'shrunk to fit' if k == 'scale' else 'drawn cell-wise (answer cell scaled)'}"))
         if mp.get('problems'):
             probs.append(('ms_words', f"{len(mp['problems'])} word problem(s): {mp['problems'][:1]}"))
+        for v in rows:                                 # a bullet in the middle of a line: two bullet points run together (2023 MJ 41 q7)
+            for t in v['text']:
+                if t['t'].strip() in ('•', '▪') and any(abs(o['y'] - t['y']) < 2 and 50 < o['x'] < t['x'] - 3 for o in v['text']):
+                    probs.append(('ms_bullet', f"bullet run into the line before it at y {t['y']:.0f}")); break
+        for v in rows:                                 # words printed over each other ('8 (a)(ii)' -> '(a8)(ii)', 2019 MJ 32 q8)
+            ws = sorted((t for t in v['text'] if t['t'].strip() and t.get('s', 11) >= 8), key=lambda t: (round(t['y']), t['x']))
+            hit = next((f"'{a['t']}' / '{b['t']}'" for i, a in enumerate(ws) for b in ws[i + 1:] if abs(a['y'] - b['y']) < 1.5
+                        and min(a['x'] + a['w'], b['x'] + b['w']) - max(a['x'], b['x']) > 2.5), None)
+            if hit:
+                probs.append(('ms_overlap', f'words over each other: {hit}')); break
+        for v in rows:
+            for e in loose_rules(v):
+                probs.append(('ms_edges', e)); break
         txt = ' '.join(t['t'] for v in rows for t in v['text'])
         bad = BAD.findall(txt)
         if bad:
@@ -107,6 +123,32 @@ def audit_question(q, verify):
 
 
 KNOWN = set()
+
+
+def loose_rules(v):
+    """Dhruv, rounds 17-18: table lines must meet - a column rule with one end on a row rule and the other end in the
+    air (an inner table's lost top/bottom edge, a column rule short of the frame)."""
+    import ms_portrait as MP
+    bx = [b for b in (MP._bbox(l['d']) for l in v.get('lines', [])) if b]
+    hz = [b for b in bx if b[3] - b[1] < 1.5 and b[2] - b[0] > 4]
+    vt = [b for b in bx if b[2] - b[0] < 1.5 and b[3] - b[1] >= 8]
+    touch = lambda x, y: (y <= 1.0 or y >= v['h'] - 1.0 or
+                          any(b[0] - 1.2 <= x <= b[2] + 1.2 and b[1] - 1.2 <= y <= b[3] + 1.2 for b in hz) or
+                          any(abs((b[0] + b[2]) / 2 - x) < 1.2 and b[1] - 1.2 <= y <= b[3] + 1.2 and b is not o for b in vt for o in [None]))
+    out = []
+    W_ = v.get('w', 523.0)
+    for b in hz:                                       # a row line a few pt short of the right frame
+        if b[2] - b[0] > 40 and W_ - 8 < b[2] < W_ - 0.7 and not any(o[0] <= b[2] + 0.5 and o[2] >= W_ - 0.3 and abs(o[1] - b[1]) < 1 for o in hz):
+            out.append(f"row line at y {b[1]:.0f} stops {W_ - b[2]:.1f} pt short of the frame")
+    for b in vt:
+        x = (b[0] + b[2]) / 2
+        ends = [touch(x, b[1]), touch(x, b[3])]
+        others = [o for o in vt if o is not b]
+        ends = [e or any(abs((o[0] + o[2]) / 2 - x) < 1.2 and o[1] - 1.2 <= y <= o[3] + 1.2 for o in others)
+                for e, y in zip(ends, (b[1], b[3]))]
+        if ends.count(True) == 1:
+            out.append(f"line at x {x:.0f}, y {b[1]:.0f}-{b[3]:.0f} ends in the air (row {v.get('src', {}).get('page')})")
+    return out
 
 
 _PG = {}

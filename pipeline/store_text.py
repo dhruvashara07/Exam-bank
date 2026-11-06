@@ -357,3 +357,34 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+_FONTS = {}
+
+
+def _font(path):
+    if path not in _FONTS:
+        from fontTools.ttLib import TTFont
+        f = TTFont(path)
+        _FONTS[path] = (f.getBestCmap(), f['hmtx'], f['head'].unitsPerEm)
+    return _FONTS[path]
+
+
+def _width(path, text, size):
+    cmap, hmtx, upm = _font(path)
+    if not all(ord(c) in cmap for c in text):
+        return None
+    return sum(hmtx[cmap[ord(c)]][0] for c in text) / upm * size
+
+
+def symbol_family(text, size, w):
+    """A symbol-font character (×, ±, °, •, γ ...) drawn in DejaVu Sans is a third wider than in the printed paper, so it
+    runs into the next word ('±1°' 2016 ON 62 q5). Liberation Sans (= Arial metrics) has most of them at the printed width."""
+    try:
+        lib = _width('/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf', text, size)
+        dej = _width('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', text, size)
+    except Exception:
+        return 'symbol'
+    if lib is not None and (dej is None or abs(lib - w) < abs(dej - w)):
+        return 'sans'
+    return 'symbol'

@@ -139,6 +139,12 @@ def structured_rows_table(doc):
             continue
         top, bottom = area
         QX, CX = _columns(lines)
+        # notes printed UNDER the table, outside every cell ('Additional graph notes', 2023 ON 51 / 2020 ON 51 q4): general
+        # marking notes, not the last question's answer - the row ends where the table's column rules end
+        vb = [d['rect'].y1 for d in page.get_drawings() if d['rect'].height > 3 and d['rect'].width < 2 and d['rect'].y1 > top + 10]
+        if vb and any(max(vb) + 4 < l['y0'] < bottom and l['x0'] < QX - 10 and not LABEL.match(label_text(l['text']))
+                      for l in lines):
+            bottom = min(bottom, max(vb) + 1)
         qcol = [l for l in lines if l['x0'] < QX and top <= l['y0'] <= bottom]
         labels = [l for l in qcol if LABEL.match(label_text(l['text'])) or (rows and NONUM.match(label_text(l['text'])))]
         if not labels and not current:
@@ -155,6 +161,8 @@ def structured_rows_table(doc):
             x1 = min(page.rect.width, xr + 3)
         if xl < x0 + 1:                          # ... and wider on the left (2016 ON 43: labels at x 56)
             x0 = max(0.0, xl - 3)
+        hrules = [d['rect'].y0 for d in page.get_drawings()
+                  if d['rect'].height < 2 and d['rect'].width > 0.5 * (x1 - x0)]   # full-width row rules
         cuts = [(l['y0'] - 4, l) for l in labels]
         if current and (not cuts or cuts[0][0] > top + 4):
             cuts.insert(0, (top, None))          # continuation of the previous label
@@ -186,6 +194,9 @@ def structured_rows_table(doc):
             rot = page.rotation_matrix                # image boxes are unrotated; text is as displayed (landscape pages)
             pics = [r for r in ((fitz.Rect(i['bbox']).quad * rot).rect for i in page.get_image_info())
                     if y - 1 <= r.y0 < y_end - 1 and r.x0 >= QX - 2 and r.x1 <= CX + 2 and r.width >= 12 and r.height >= 12]
+            # ... but not a picture of the next row (2016 MJ 41 q10: the diode starts above the next label)
+            ink_y1 = max(r.y1 for r in ink)
+            pics = [r for r in pics if not any(ink_y1 - 1 <= ry <= r.y0 + 1 for ry in hrules)]
             seg_bottom = min(y_end, max([r.y1 for r in ink] + [r.y1 for r in pics]) + 6)
             current['segments'].append({'page': pno + 1, 'bbox': [x0, round(y, 1), x1, round(seg_bottom, 1)]})
             current['text'] = (current['text'] + '\n' + '\n'.join(l['text'] for l in body)).strip()
