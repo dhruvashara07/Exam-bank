@@ -20,9 +20,9 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: pages
-  cancel-in-progress: true
+concurrency:            # deploys wait for each other: cancelling one mid-deploy made the next fail ('Deployment failed,
+  group: pages          # try again later', 2026-11-06, a push and the Question bank run starting two deploys at once)
+  cancel-in-progress: false
 
 jobs:
   build:

@@ -116,6 +116,89 @@ def _under_images(u):
     return dict(u, text=keep)
 
 
+TICK_GLYPH = re.compile(r'_(2713|2714|221a|f0fc|fc)_', re.I)
+
+
+def _tidy_boxes(v):
+    """Dhruv, round 19 (2024 ON 31 q7(c)): tick boxes look tidy - the tick sits in the exact centre of its box, and the
+    words that label the box start a small space after it, on the box's middle line."""
+    boxes = []
+    for l in v.get('lines', []):
+        b = MP._bbox(l['d'])
+        if (b and l.get('stroke') and 8 <= b[2] - b[0] <= 26 and 8 <= b[3] - b[1] <= 26
+                and abs((b[2] - b[0]) - (b[3] - b[1])) <= 4):
+            boxes.append(b)
+    if not boxes:
+        return
+    keep = []
+    for g in v.get('glyphs') or []:
+        b = None
+        if TICK_GLYPH.search(g.get('file', '')):
+            cx, cy = g['x'] + g['w'] / 2, g['y'] + g['h'] / 2
+            b = next((b for b in boxes if b[0] - 4 <= cx <= b[2] + 4 and b[1] - 4 <= cy <= b[3] + 4), None)
+        if b is None:
+            keep.append(g); continue
+        # the tick picture also caught bits of its box: drawn as a real tick character instead
+        import store_text as ST
+        sz = round(min(b[3] - b[1], b[2] - b[0]) * 0.75, 2)
+        tw = ST._width('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', '✓', sz) or sz * 0.78
+        v['text'].append({'t': '✓', 'x': round((b[0] + b[2]) / 2 - tw / 2, 2), 'y': round((b[1] + b[3]) / 2 + 0.36 * sz, 2),
+                          'w': round(tw, 2), 's': sz, 'f': 'symbol'})
+    if v.get('glyphs'):
+        v['glyphs'] = keep
+    for t in v['text']:                               # ticks drawn as text
+        if t['t'].strip() in ('✓', '✔', '√'):
+            b = next((b for b in boxes if b[0] - 4 <= t['x'] + t['w'] / 2 <= b[2] + 4 and b[1] - 4 <= t['y'] - 0.35 * t['s'] <= b[3] + 4), None)
+            if b is not None:
+                t['x'] = round((b[0] + b[2]) / 2 - t['w'] / 2, 2); t['y'] = round((b[1] + b[3]) / 2 + 0.35 * t['s'], 2)
+    for b in boxes:                                   # the label beside the box
+        line = [t for t in v['text'] if b[2] - 3 <= t['x'] <= b[2] + 20 and b[1] - 2 <= t['y'] <= b[3] + 6]
+        if not line:
+            continue
+        y0 = line[0]['y']
+        words = sorted([t for t in v['text'] if abs(t['y'] - y0) < 1.5 and t['x'] >= b[2] - 3], key=lambda t: t['x'])
+        dx = b[2] + 5 - words[0]['x']
+        ny = round((b[1] + b[3]) / 2 + 0.35 * max(t['s'] for t in words), 2)
+        for t in words:
+            t['x'] = round(t['x'] + dx, 2); t['y'] = ny
+
+
+def _full_edges(u):
+    rr = MP._rules(u)
+    if not rr:
+        return None
+    vs = [r for r in rr[0] if r[2] - r[0] < 1.3 and r[3] - r[1] > 1.5]
+    cov = collections.defaultdict(float)
+    xs = MP._cluster([(r[0] + r[2]) / 2 for r in vs])
+    for r in vs:
+        cov[min(xs, key=lambda e: abs(e - (r[0] + r[2]) / 2))] += r[3] - r[1]
+    return sorted(x for x in xs if cov[x] >= 0.7 * u['h'] and x > 20)
+
+
+def _common_columns(uniq):
+    """A row whose printed table lost a column rule (an empty Marks cell drawn without its left line, 2024 MJ 43 q10(c))
+    would be laid out with fewer columns: Q column a different width, no Marks column. It gets the missing rule back
+    when the other rows of the question all have it and no word crosses it."""
+    eds = [_full_edges(u) for _, u in uniq]
+    common = collections.Counter(tuple(round(x) for x in e) for e in eds if e)
+    if not common:
+        return uniq
+    std, n = common.most_common(1)[0]
+    if n < 2:
+        return uniq
+    out = []
+    for (r, u), e in zip(uniq, eds):
+        if e and len(e) < len(std) and all(any(abs(x - s_) < 2 for s_ in std) for x in e):
+            miss = [s_ for s_ in std if not any(abs(x - s_) < 2 for x in e)]
+            if miss and not any(t['x'] < m_ < t['x'] + t['w'] for m_ in miss for t in u['text']):
+                u = dict(u); u['w'] = max(u['w'], max(o_['w'] for _, o_ in uniq))   # (the cut stopped at the lost rule)
+                u['lines'] = list(u['lines']) + [
+                    {'d': f'M{m_ - 0.24:.2f} 0.00L{m_ + 0.24:.2f} 0.00L{m_ + 0.24:.2f} {u["h"]:.2f}L{m_ - 0.24:.2f} {u["h"]:.2f}Z',
+                     'fill': '#000000'} for m_ in miss]
+        out.append((r, u))
+    return out
+
+
 def _bottom_rule(u):
     """A row cut a few pt below its own bottom rule (2024 ON 31 q7(c): the cut ends 2.5 pt under it) would get our frame line
     too: two lines. The row ends on that rule when nothing is printed below it."""
@@ -960,6 +1043,7 @@ def build(q, store):
         return None
     uniq.sort(key=lambda ru: (ru[1]['src']['page'], ru[1]['src']['box'][1]))   # the mark scheme's own order (2017 ON 41 q8: 8 Hydroelectric (a)(b)(c), 8 Tidal flow (a)(b)(c) ...)
     uniq = [(r, _tighten(_under_images(_dedupe(_unshrink(_bottom_rule(u)))))) for r, u in uniq]
+    uniq = _common_columns(uniq)
     units = [u for _, u in uniq]
     if all(u['w'] <= W + 2 for u in units):          # the old portrait era: our table too (no printed one to follow)
         first = {'edges': [], 'new_edges': [44.0, W - 44.0], 'new_w': [44.0, W - 88.0, 44.0], 'default': True}
@@ -970,6 +1054,7 @@ def build(q, store):
         out = [hdr] + out + ([total_row] if total_row else [])
         for i, v in enumerate(out[1:], 1):
             _drop_slivers(v)
+            _tidy_boxes(v)
             nxt = out[i + 1] if i + 1 < len(out) else None
             _frame(v, bottom_from=44.0 if nxt is not None and nxt.get('cont') else 0.0)
         return {'w': W, 'h': round(sum(v['h'] for v in out), 2), 'rows': out, 'problems': [], 'modes': modes,
@@ -1056,6 +1141,7 @@ def build(q, store):
                 and not v.get('heading') and not any(t['x'] + t['w'] / 2 < Lq for t in v['text']))
     for i, v in enumerate(out):
         _drop_slivers(v)
+        _tidy_boxes(v)
         if not (i == 0 and first and os.path.exists(hdr_p)):
             nxt = out[i + 1] if i + 1 < len(out) else None
             cont = nxt is not None and continues(nxt, v)

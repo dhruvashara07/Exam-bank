@@ -109,3 +109,7 @@ Our mark scheme is the original's landscape table made portrait ("responsive"): 
 - If each figure can be cut out cleanly (its rectangle holds none of the neighbour's drawing or labels): one picture each.
 - If not (labels or drawings reach into each other's rectangle): ONE picture of both, named after both ("Fig. 2.2 and Fig. 2.3").
   Nothing printed is ever blanked or removed from a picture.
+
+## 12. Tick boxes (Dhruv, round 19)
+A tick sits in the exact centre of its box (drawn as a real ✓, not a picture); the words that label the box start a small
+space after it, on the box's middle line. `ms_layout._tidy_boxes`.

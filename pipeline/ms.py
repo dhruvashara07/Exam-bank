@@ -163,7 +163,17 @@ def structured_rows_table(doc):
             x0 = max(0.0, xl - 3)
         hrules = [d['rect'].y0 for d in page.get_drawings()
                   if d['rect'].height < 2 and d['rect'].width > 0.5 * (x1 - x0)]   # full-width row rules
-        cuts = [(l['y0'] - 4, l) for l in labels]
+        # a label printed in the MIDDLE of its cell (2019 ON 33 q11): the row starts at the rule above it, not 4 pt above the label
+        qrules = sorted(d['rect'].y0 for d in page.get_drawings()   # rules across the Q column = Q-cell boundaries
+                        if d['rect'].height < 2 and d['rect'].x0 < QX - 10 and d['rect'].x1 > QX - 15 and d['rect'].width > 20)
+        cuts = []
+        for k, l in enumerate(labels):
+            y_ = l['y0'] - 4
+            prev = labels[k - 1]['y1'] if k else top
+            above = [ry for ry in qrules if prev + 1 < ry < l['y0'] - 1]
+            if above and y_ - max(above) > 4:
+                y_ = max(above) + 1
+            cuts.append((y_, l))
         if current and (not cuts or cuts[0][0] > top + 4):
             cuts.insert(0, (top, None))          # continuation of the previous label
         headers = [l['y0'] for l in lines if re.match(r'Question\b', l['text']) and l['x0'] < 130]

@@ -257,3 +257,12 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   New audit checks: double row line, underline not under its word, bracket letters. All 2016-2024: 0 of these.
   Not fixed (Cambridge): 2024 MJ 21 q14 "Question Discounted" in the MS (no answer key - correct as printed).
 - Round 19 "2024" (5 fixes worth a look) on the review page; round 18 removed.
+## 2026-11-07 — round 19, 2024 approved
+- 20:17 Round 19: 3 ok, 2 wrong. 2024 MJ 43 q10(c): Cambridge drew no rule before the empty Marks cell -> the row got 2 columns;
+  fixed (a row that lost a column rule gets it back from the other rows of the question, `_common_columns`). 2024 ON 31 q7(c):
+  his rule = tick in the exact centre of its box, label a small space after it on the box's middle line (MS rules 12).
+  Found while checking: labels printed in the MIDDLE of their cell (2019 ON 33 q11, 2016 MJ 41 q10(a)(ii)) were cut 4 pt above
+  the label, splitting cells; ms.py now starts such a row at the Q-column rule above (scanned all 2016+ MS: only these 2 papers).
+- He asked why the build took > 1 hour (my full local re-cut of 2016-2024, not GitHub) and about "Review website" failure emails
+  (two Pages deploys at once cancelled each other; site.yml now queues deploys: cancel-in-progress false).
+- 2024 approved (final in git). Next: 2025 (re-check in the new layout), then 2026.

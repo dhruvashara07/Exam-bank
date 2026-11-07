@@ -11,7 +11,7 @@
   "0625_2024ON_43",
   "0625_2024FM_42"
  ],
- "status": "open",
+ "status": "closed",
  "items": [
   {
    "id": "0625_2024FM_42_q05",
@@ -48,5 +48,28 @@
     "Symbol characters (×, Δθ) drawn at the printed width so they no longer run into the next word"
    ]
   }
- ]
+ ],
+ "answers": {
+  "0625_2024FM_42_q05": {
+   "verdict": "ok",
+   "note": ""
+  },
+  "0625_2024MJ_42_q01": {
+   "verdict": "ok",
+   "note": ""
+  },
+  "0625_2024MJ_43_q10": {
+   "verdict": "wrong",
+   "note": "10(c) rows: Cambridge drew no line before the empty Marks cell, so the row had 2 columns. Fixed: a row that lost a column rule gets it back from the other rows of the question"
+  },
+  "0625_2024ON_31_q07": {
+   "verdict": "wrong",
+   "note": "his rule: tick drawn in the exact centre of its box, label a small space after the box on its middle line. Fixed for all tick boxes (tick picture replaced by a drawn tick)"
+  },
+  "0625_2024ON_43_q03": {
+   "verdict": "ok",
+   "note": ""
+  }
+ },
+ "closed": "2026-11-07T15:06Z"
 }
