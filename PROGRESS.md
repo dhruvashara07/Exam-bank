@@ -73,7 +73,7 @@ Read this first in every session. Update it before ending a session.
 4. May/Jun 2026 variant 7: mark schemes 17 and 27 exist, question papers missing.
 
 ## Next
-- 2016-2019 full check-up done (2026-11-05): 2016 FM - 2020 ON COMPLETE (2026-11-06): all MS in our table (old portrait ones too), all approved = final check in git (MongoDB paused until everything is done). 2022-2026 built ahead on GitHub. 2021, 2022 and 2023 approved (round 18 closed, fixes in all years). 2016 FM - 2026 MJ ALL FINAL in git (round 20 closed 2026-11-09). 2013-2015 checked, round 21 open (old MS in our table). 2002-2012: not started (scope to confirm with Dhruv). Then cleanup, MongoDB push of everything. Known: 2019 ON 41 q9(a)(ii) hatched circles plain. Then 2022, 2023 ...; the older years 2013-2015 FM also need the old-portrait MS conversion (ms_layout._old_rows) when they are done; after his answers + fixes approve the remaining 2016-2019 papers, then 2020 under the new plan (build -> I check flags -> short round -> approve).
+- 2016-2019 full check-up done (2026-11-05): 2016 FM - 2020 ON COMPLETE (2026-11-06): all MS in our table (old portrait ones too), all approved = final check in git (MongoDB paused until everything is done). 2022-2026 built ahead on GitHub. 2021, 2022 and 2023 approved (round 18 closed, fixes in all years). 2013 MJ - 2026 MJ ALL FINAL in git (round 21 closed 2026-11-09; 2013-2016 FM old MS in our table). Not done: 2002-2012 (scope to confirm with Dhruv: only 7 test papers built), then cleanup (old figures in git/Cloudinary), MongoDB push of everything (sync is paused in bank.yml), symbol library, 2017 MJ qp_11 missing. New chat: start from docs/NEXT_CHAT.md. Known: 2019 ON 41 q9(a)(ii) hatched circles plain. Then 2022, 2023 ...; the older years 2013-2015 FM also need the old-portrait MS conversion (ms_layout._old_rows) when they are done; after his answers + fixes approve the remaining 2016-2019 papers, then 2020 under the new plan (build -> I check flags -> short round -> approve).
 
 1. Daily check: read Dhruv's round 3 answers (`feedback_r3`), fix anything marked wrong, approve the 2015–2024
    backlog by the rule in docs/DAILY_CHECK.md §6. 40 flagged questions did not fit round 3 (mostly editable-text
@@ -190,3 +190,4 @@ reads it in Settings > Usage before/after a year (I cannot see it).
 | 2021-2023 | 2026-11-06 | 8.2 | 34 % | - |
 | 2024 (+ start 2025-26) | 2026-11-07 | 9.5 | 39 % | - |
 | 2025-2026 + round 20 | 2026-11-09 | 6.6 (to 14:00) + round 20 fixes | 27 % | - |
+| round 20 fixes + 2013-2015 + round 21 | 2026-11-09 12:30-18:30 | - | - | 15 % (Dhruv) |

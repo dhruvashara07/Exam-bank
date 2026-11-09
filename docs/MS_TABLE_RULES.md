@@ -147,3 +147,5 @@ Our table is Q | Answer | Marks | Guidance.
 - Marks column: codes bold, '[1]' plain; 'B1 [4]' closed up to fit; 'max.' above its code.
 - Underlines, braces, fraction bars stay with their own part's row.
 - Symbols drawn with re-encoded fonts ('R' drawn as '=', 'U' as '°') are read by their shape.
+- (Round 21) Marks column of old layouts: no brackets ('[1]' -> '1'); a part total printed after the codes ('B1 + B1 [5]')
+  is dropped (our Total row has it). Braces are redrawn clean, one per group, never past their own last line.

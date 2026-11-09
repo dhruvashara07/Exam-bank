@@ -347,6 +347,15 @@ MARK_RE = re.compile(r'^\(?(?:[ABCMP]\d{1,2}|B\d|\d)\)?$|^\[\d{1,2}\]$')
 MARKISH = lambda x: bool(MARK_RE.match(x) or re.fullmatch(r'[\[\]\s]+|max\.?|\+', x))
 
 
+def _brace_path(x0, y0, x1, y1, right=True):
+    """A clean curly brace from y0 to y1 between x0 and x1 ('}' when right, else '{')."""
+    w = max(4.0, min(x1 - x0, 8.0)); m = (y0 + y1) / 2; r = min(4.0, (y1 - y0) / 6)
+    a, c = (x0, x0 + w / 2) if right else (x0 + w, x0 + w / 2)
+    tip = x0 + w if right else x0
+    return (f'M{a:.2f} {y0:.2f}Q{c:.2f} {y0:.2f} {c:.2f} {y0 + r:.2f}L{c:.2f} {m - r:.2f}Q{c:.2f} {m:.2f} {tip:.2f} {m:.2f}'
+            f'Q{c:.2f} {m:.2f} {c:.2f} {m + r:.2f}L{c:.2f} {y1 - r:.2f}Q{c:.2f} {y1:.2f} {a:.2f} {y1:.2f}')
+
+
 def _old_rows(units, q, L=44.0, M=W - 44.0):
     """Old portrait mark schemes (up to 2016 FM: no table, 'n (a) answer ... B1'): put them in OUR table, like every
     other year (Dhruv 2026-11-06: 'we want each ms in our guideline layout, consistency in all ms').
@@ -443,6 +452,12 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
             else:
                 braces.append(b_)
         braces = [b_ for b_ in braces if b_[3] - b_[1] > 20]
+        b_side = {}                                   # '}' when the point in the middle sticks out to the right
+        for b_ in braces:
+            mid_ = (b_[1] + b_[3]) / 2
+            xs_ = [float(a_) for l in u['lines'] for a_, c_ in zip(MP.NUM.findall(l['d'])[0::2], MP.NUM.findall(l['d'])[1::2])
+                   if b_[0] - 1 <= float(a_) <= b_[2] + 1 and abs(float(c_) - mid_) < 2]
+            b_side[b_] = (sum(xs_) / len(xs_) > (b_[0] + b_[2]) / 2) if xs_ else True
         for y, lw in lines.items():
             labs = lead_labels(lw)
             # parts joined by one brace share one answer and one mark ('(d)(i) ... } both B1 (ii)', 2014 ON 21 q10): one row
@@ -499,6 +514,15 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
             for lw in sg['lines']:
                 body_l = [t for t in lw if t not in sg['labs'] and not (t['x'] > 0.82 * u['w'] and MARKISH(t['t']))]
                 marks_l = [t for t in lw if t['x'] > 0.82 * u['w'] and MARKISH(t['t'])]
+                # Dhruv, round 21: no brackets in our Marks column - '[1]' is shown as '1'; a part total '[5]' printed after
+                # the codes ('B1 + B1 [5]') goes (our Total row has it)
+                if any(re.fullmatch(r'\(?[ABCMP]\d{1,2}\)?', t['t']) for t in marks_l):
+                    marks_l = [t for t in marks_l if not re.fullmatch(r'\[\d{1,2}\]|[\[\]\s]+', t['t'])]
+                else:
+                    nums_ = [dict(t, t=re.sub(r'[\[\]\s]', '', t['t'])) for t in marks_l if re.sub(r'[\[\]\s]', '', t['t'])]
+                    for n_ in nums_:
+                        n_['w'] = round(6.1 * len(n_['t']), 2)
+                    marks_l = nums_
                 ly = max(lw, key=lambda t: t.get('s', 11))['y']
                 y = ly - top + extra
                 dx = 0.0; start = None
@@ -526,8 +550,11 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                         xx = 0.0; pos = {}
                         for t in sorted(marks_l, key=lambda t: t['x']):
                             br = re.fullmatch(r'[\[\]\s]+', t['t'])
-                            pos[id(t)] = xx; xx += t['w'] + (0.5 if br else 3.0)
-                        c_ = a_ + xx - 3.0
+                            pos[id(t)] = xx; xx += t['w'] + (0.5 if br else 2.0)
+                        c_ = a_ + xx - 2.0
+                        if c_ - a_ > (W - M) - 8:               # ('B1 + B1' still touching the column line): closer to the edge
+                            for k_ in pos:
+                                pos[k_] += 2.0
                     for t in marks_l:
                         n = dict(t, b=1 if re.fullmatch(r'\(?[ABCMP]\d{1,2}\)?', t['t']) else 0)   # only mark codes bold
                         n['x'] = round(W - 6 - (c_ - a_) + pos[id(t)], 2); n['y'] = round(max(lw, key=lambda t: t.get('s', 11))['y'] - top, 2)
@@ -546,7 +573,19 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                     continue                          # the old frame of the row: ours instead
                 if not mine(bb[1], bb[3]):
                     continue
+                if any(b_[0] - 1 <= bb[0] and bb[2] <= b_[2] + 1 and b_[1] - 1 <= bb[1] and bb[3] <= b_[3] + 1 for b_ in braces):
+                    continue                          # a piece of a brace: ours is drawn instead (below)
                 v['lines'].append({**l, 'd': _map_path(l['d'], lambda x: L + 5 + (x - ax0), lambda y: y - top)})
+            # Dhruv, round 21: braces drawn clean - one '}' (or '{') from the first to the last line it groups, inside the row
+            for b_ in braces:
+                if not mine(b_[1], b_[3]):
+                    continue
+                cusp_right = b_side.get(b_, True)
+                x0b = L + 5 + (b_[0] - ax0); x1b = L + 5 + (b_[2] - ax0)
+                y0b = max(2.0, b_[1] - top)
+                txt_bot = max([t['y'] + 3 for t in v['text']] + [y0b + 10])
+                y1b = min(b_[3] - top, txt_bot)          # never past its own last line (it crossed the row line, round 21)
+                v['lines'].append({'d': _brace_path(x0b, y0b, x1b, y1b, cusp_right), 'stroke': '#000000', 'sw': 0.6, 'fill': 'none'})
             for k_ in ('figs', 'images', 'glyphs'):
                 for f in u.get(k_) or []:
                     if not mine(f['y'], f['y'] + f.get('h', 0)):

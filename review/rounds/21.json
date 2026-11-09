@@ -102,7 +102,7 @@
   "0625_2015ON_62",
   "0625_2015ON_63"
  ],
- "status": "open",
+ "status": "closed",
  "items": [
   {
    "id": "0625_2013ON_22_q03",
@@ -162,5 +162,40 @@
    "group": "sample",
    "reasons": []
   }
- ]
+ ],
+ "answers": {
+  "0625_2013MJ_51_q02": {
+   "verdict": "ok",
+   "note": ""
+  },
+  "0625_2013ON_22_q03": {
+   "verdict": "wrong",
+   "note": "brace crossed the row line; [5] is the part total. Fixed: braces redrawn clean inside their own lines; part totals after codes dropped"
+  },
+  "0625_2013ON_31_q11": {
+   "verdict": "ok",
+   "note": ""
+  },
+  "0625_2013ON_61_q03": {
+   "verdict": "wrong",
+   "note": "no [] in marks. Fixed for all old-layout MS: [1] shown as 1"
+  },
+  "0625_2014MJ_63_q01": {
+   "verdict": "ok",
+   "note": ""
+  },
+  "0625_2014ON_13_q10": {
+   "verdict": "ok",
+   "note": ""
+  },
+  "0625_2014ON_21_q10": {
+   "verdict": "wrong",
+   "note": "brace looked odd (drawn from two pieces). Fixed: one clean brace"
+  },
+  "0625_2015MJ_23_q03": {
+   "verdict": "ok",
+   "note": ""
+  }
+ },
+ "closed": "2026-11-09T13:05Z"
 }

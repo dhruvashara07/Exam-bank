@@ -297,3 +297,7 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   'max. B2'); Q column widens for long labels (MS rules 14). Memory: a full-page 8x render took 3 GB (machine ran out and the
   build hung) -> rendered in strips, pixel-identical; 2016 MJ - 2026 unchanged (checked), golden 0 changed.
 - Round 21 "2013-2015" (8 items) on the page; round 20 removed.
+- 18:26 Round 21: 5 ok, 3 wrong (braces odd / over the row line; no [] in marks; '[5]' is a part total). Fixed for all
+  old-layout MS (2013-2016 FM). 2013-2015 approved (96 papers, final in git). 2013 - 2026 ALL FINAL.
+- He: usage today 15 % of the weekly limit (12:30 - 18:26). Asked how to use less and to prepare a new chat:
+  docs/NEXT_CHAT.md written (start prompt + how to work cheaply).
