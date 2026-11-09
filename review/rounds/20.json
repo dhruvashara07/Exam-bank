@@ -11,7 +11,7 @@
   "0625_2026MJ_43",
   "0625_2026MJ_32"
  ],
- "status": "open",
+ "status": "closed",
  "items": [
   {
    "id": "0625_2025FM_42_q06",
@@ -63,5 +63,36 @@
     "Doubtful: 5(b)(ii) small table inside the answer is still drawn smaller than normal"
    ]
   }
- ]
+ ],
+ "answers": {
+  "0625_2025FM_42_q06": {
+   "verdict": "wrong",
+   "note": "ticks: draw a real tick. Fixed: ticks/crosses (dingbat or colour emoji) drawn as real ✓/✗/✔ in their colour"
+  },
+  "0625_2026MJ_31_q07": {
+   "verdict": "wrong",
+   "note": "7(a)(ii) is one whole picture; keep pictures readable. Fixed: touching pictures = one picture; never below 60 %, else own full-width line (MS rules 13)"
+  },
+  "0625_2026MJ_32_q03": {
+   "verdict": "wrong",
+   "note": "3(b) font size; guidance aligned with its answer line. Fixed: normal size (brace list re-wrapped, brace stretched), Guidance anchored to its Answer line"
+  },
+  "0625_2026MJ_41_q01": {
+   "verdict": "wrong",
+   "note": "1(b)(iv) (v =) root sign. Fixed: drawn signs move with the following word"
+  },
+  "0625_2026MJ_41_q02": {
+   "verdict": "ok",
+   "note": ""
+  },
+  "0625_2026MJ_41_q07": {
+   "verdict": "wrong",
+   "note": "fractions in Guidance. Fixed: fraction pieces stay stacked on their line with room above/below"
+  },
+  "0625_2026MJ_43_q05": {
+   "verdict": "wrong",
+   "note": "inner table font size. Fixed: normal size, may use the whole Answer cell with slimmer padding"
+  }
+ },
+ "closed": "2026-11-09T09:18Z"
 }

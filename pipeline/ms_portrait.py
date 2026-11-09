@@ -91,10 +91,21 @@ def _groups(words):
     """words of one cell -> lines of groups; a group = a word with its sub/superscripts."""
     if not words:
         return []
-    ref = max(w['s'] for w in words)
+    stacks = collections.defaultdict(list)            # fraction pieces (numerator + denominator) marked '_stack': ONE group
+    for w in words:
+        if w.get('_stack') is not None:
+            stacks[w['_stack']].append(w)
+    words = [w for w in words if w.get('_stack') is None]
+    if not words and not stacks:
+        return []
+    ref = max([w['s'] for w in words] + [w['s'] for ws_ in stacks.values() for w in ws_])
     main = [w for w in words if w['s'] >= 0.85 * ref or w.get('dir')]
     subs = [w for w in words if w not in main]
     G = [{'ws': [w], 'x': w['x'], 'w': w['w'], 'y': w['y']} for w in sorted(main, key=lambda w: (w['y'], w['x']))]
+    for ws_ in stacks.values():
+        x0_ = min(w['x'] for w in ws_)
+        G.append({'ws': sorted(ws_, key=lambda w: w['x']), 'x': x0_, 'w': max(w['x'] + w['w'] for w in ws_) - x0_,   # placed by its left-most piece
+                  'y': ws_[0]['_hy'], 'ref_y': ws_[0]['_hy']})
     for s in subs:
         best = None
         for g in G:
@@ -449,13 +460,20 @@ def portrait_unit(u, W=523.0, widths=None, sizes=None, probe=False):
         rel = pc['x'] - cx0(c)
         room = new_w[c] - rel - 6
         kk = min(1.0, room / pc['w']) if room > 0 else 0
-        if kk < 0.4:
+        if kk < 0.6:                              # (MS rules 13: never below 60 % - the cell layout gives it a line of its own)
             return _scaled(u, W, 'picture too wide')
+        if any(o is not pc and col_of(o['x']) == c and o['y'] < pc['y'] + pc['h'] and o['y'] + o['h'] > pc['y']
+               for o in pics):                    # pictures side by side are laid out together (one picture if they touch)
+            return _scaled(u, W, 'pictures side by side')
         ny = pc['y'] + shift[b] + pitch * cum_above(b, pc['y'])
         if pc['kind'] == 'image':
             v.setdefault('images', []).append(dict(pc['ref'], x=round(nx_start(c) + rel, 2), y=round(ny, 2), w=round(pc['w'] * kk, 2), h=round(pc['h'] * kk, 2)))
         else:
             v['figs'].append(dict(pc['ref'], x=round(nx_start(c) + rel, 2), y=round(ny, 2), k=round(kk, 4)))
+    # a word printed across the row's bottom line (Cambridge overflow, 'NOT -4' 2026 MJ 32 q9(b)(i)): the row grows to hold it
+    low = max([n['y'] + 0.3 * n.get('s', 10) for n in v['text']] + [0])
+    if low > v['h'] - 2:
+        v['h'] = round(low + 4, 2)
     # rules, redrawn at the new size
     T = 0.48
     def rect(x0, y0, x1, y1):

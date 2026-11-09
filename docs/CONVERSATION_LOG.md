@@ -278,3 +278,14 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   Guidance paragraphs split at bold keywords and blank lines.
 - Round 20 "2025-2026" (7 items, 2 marked doubtful: small inner table 2026 MJ 43 q5, bracket list 2026 MJ 32 q3) on the page;
   round 19 removed.
+## 2026-11-09 — round 20 closed, 2025-2026 final
+- 14:05 Round 20: 1 ok, 6 wrong. His asks: a consistent guideline for the Guidance column (column widths in proportion,
+  pictures: readable size, move to their own line rather than shrink) - written as MS rules 13; ticks drawn as real ticks;
+  normal font size for inner tables; Guidance lined up with its Answer line; fractions/roots in Guidance tidy.
+  All fixed in the pipeline (ticks: dingbat + colour emoji -> ✓/✗/✔; touching pictures (>= 50 pt) = one picture; >= 60 %
+  or own full-width line; inner table may use the whole Answer cell with slimmer padding before any shrink; brace lists
+  re-wrapped at normal size with the brace stretched; Guidance anchored to Answer lines; a word printed across the row's
+  bottom line makes the row grow). Every changed MS 2016-2026 checked side by side (one bug of mine found and fixed: small
+  pieces of one drawing were merged, 2025 ON 43 q7). 2025-2026 final (approvals kept: cuts unchanged).
+- He asked to track usage per year (tokens and weekly %): PROGRESS.md has a usage table; I can count tokens, he reads the
+  weekly % in Settings > Usage.

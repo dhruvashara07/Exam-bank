@@ -114,7 +114,26 @@ Our mark scheme is the original's landscape table made portrait ("responsive"): 
 A tick sits in the exact centre of its box (drawn as a real ✓, not a picture); the words that label the box start a small
 space after it, on the box's middle line. `ms_layout._tidy_boxes`.
 
-## 13. Guidance column (2026 May/June mark schemes)
-Our table is Q | Answer | Marks | Guidance. A Guidance (or any) cell that spans several Answer sub-rows stays one cell (the
-sub-row line is drawn only across the columns it crosses in the print). Pictures in the Guidance cell are kept, side by side
-when printed side by side, shrunk only to fit the column; drawn marks (root signs, fraction bars) move with their words.
+## 13. Guidance column (2026 May/June mark schemes; Dhruv, round 20)
+Our table is Q | Answer | Marks | Guidance.
+- **Column widths.** Q and Marks keep the same fixed widths as in every other year (Q just wide enough for the paper's longest
+  label, Marks 40 pt). Answer and Guidance share the rest **in the printed proportion** (printed 306 : 306 -> ours 1 : 1,
+  printed 386 : 227 -> ours 270 : 159). Same rule for every paper.
+- **Normal font size always.** Text in every column is 11 pt; rows grow instead. An inner table is re-wrapped at normal size;
+  if it does not fit the Answer column it may use the whole Answer cell with slimmer cell padding; it is never shrunk below.
+- **One cell stays one cell.** A Guidance (or any) cell that spans several Answer sub-rows in the print stays one cell; the
+  sub-row line is drawn only across the columns it crosses in the print.
+- **Guidance lines up with its Answer line.** Each Guidance paragraph starts level with the Answer line it stood beside in
+  the print (or lower, never overlapping the paragraph above).
+- **Fractions, roots, brackets.** A fraction (numerator / bar / denominator) is one piece on its line, with room above and
+  below; root signs, braces and bracket pieces move with the words they belong to; a tall brace beside a list is stretched
+  to the re-wrapped list.
+- **Pictures in the Guidance column.**
+  1. Pictures printed touching side by side are ONE picture.
+  2. A picture keeps its printed size; if wider than the Guidance column it is shrunk to fit, but never below 60 % (so it
+     stays readable).
+  3. A picture that would need more shrinking than that goes to its own full-width line under the row (below Answer, Marks
+     and Guidance), at up to its printed size.
+  4. Text printed under a picture follows it directly; nothing overlaps.
+- **Ticks.** A tick or cross (dingbat font or colour emoji) is drawn as a real ✓ / ✗ / ✔ in its printed colour, centred where
+  it was (rule 12 for tick boxes).

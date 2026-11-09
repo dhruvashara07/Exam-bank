@@ -28,6 +28,22 @@ import ms_layout as ML
 
 OUT = os.path.join(paths.ROOT, 'out', 'store')          # scratch: verify renders, print helpers
 PT2MM = 25.4 / 72
+TICKS = {('wingdings', 0xFC): '✓', ('wingdings', 0xF0FC): '✓', ('wingdings', 0x2713): '✓', ('wingdings', 0x2714): '✓',
+         ('zapf', 0x33): '✓', ('zapf', 0x34): '✓', ('zapf', 0x2713): '✓', ('zapf', 0x2714): '✓',
+         ('wingdings', 0xFB): '✗', ('wingdings', 0xF0FB): '✗', ('wingdings', 0x2717): '✗', ('wingdings', 0x2718): '✗',
+         ('zapf', 0x37): '✗', ('zapf', 0x38): '✗', ('zapf', 0x2717): '✗', ('zapf', 0x2718): '✗'}
+
+
+def dingbat_family(font):
+    f = font.lower()
+    return 'wingdings' if 'wingding' in f else 'zapf' if ('zapf' in f or 'dingbat' in f) else None
+
+
+def symbol_width(t, sz):
+    from store_text import _width
+    return _width('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', t, sz) or sz * 0.8
+
+
 FAM = {'Liberation Sans': 'sans', 'Liberation Serif': 'serif', 'Liberation Mono': 'mono', 'DejaVu Sans': 'symbol'}
 CSS_FAM = {'sans': 'Liberation Sans, Arial, Helvetica, sans-serif', 'serif': 'Liberation Serif, Times New Roman, serif',
            'mono': 'Liberation Mono, Courier New, monospace', 'symbol': 'DejaVu Sans, sans-serif'}
@@ -85,6 +101,14 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
                         q = fitz.Rect(c['bbox']).quad * m
                         r = q.rect
                         if r.is_empty or not inside(r) or in_fig(r):
+                            continue
+                        mark = TICKS.get((dingbat_family(font), ord(c['c'][0])))
+                        if mark:                      # Dhruv, rounds 19-20: a tick/cross is drawn as a real ✓ / ✗, centred where it was
+                            sz = round(s['size'], 2)
+                            tw_ = symbol_width(mark, sz)
+                            u['text'].append({'t': mark, 'x': round((r.x0 + r.x1) / 2 - tw_ / 2 - ox, 2),
+                                              'y': round((r.y0 + r.y1) / 2 + 0.36 * sz - oy, 2), 'w': round(tw_, 2), 's': sz,
+                                              'f': 'symbol', **({'c': hexcol(s['color'])} if hexcol(s['color']) != '#000000' else {})})
                             continue
                         key = f"g_{re.sub('[^A-Za-z0-9]', '', font)[:24]}_{ord(c['c'][0]):x}_{round(s['size'] * 10)}_{page.rotation}"
                         gfile = os.path.join(store, 'glyphs', key + '.svg')
@@ -191,10 +215,25 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
                 rec['dash'] = mm.group(1).strip()
         u['lines'].append(rec)
     # pictures that are not part of a figure crop (a photo or sketch inside a mark-scheme cell): 300 dpi PNG
+    rects_ = []
     for k, info in enumerate(page.get_image_info()):
         r = (fitz.Rect(info['bbox']).quad * m).rect & clip
         if r.is_empty or r.width < 8 or r.height < 8 or not inside(r) or in_fig(r):
             continue
+        rects_.append(r)
+    merged_ = True                                # pictures that touch side by side are ONE picture (Dhruv, round 20: 2026 MJ 31 q7(a)(ii))
+    while merged_:
+        merged_ = False
+        for i_ in range(len(rects_)):
+            for j_ in range(i_ + 1, len(rects_)):
+                a_, b_ = rects_[i_], rects_[j_]
+                if min(a_.width, b_.width) >= 50 and min(a_.height, b_.height) >= 40 and \
+                        min(a_.y1, b_.y1) - max(a_.y0, b_.y0) > 0.6 * min(a_.height, b_.height) and \
+                        max(a_.x0, b_.x0) - min(a_.x1, b_.x1) < 4:   # (not the small pieces of one drawing, 2025 ON 43 q7)
+                    rects_[i_] = a_ | b_; del rects_[j_]; merged_ = True; break
+            if merged_:
+                break
+    for r in rects_:
         if docname == 'ms':                   # a picture filling its table cell: keep it off the cell's rules (2016 MJ 41 q10)
             r = fitz.Rect(r.x0, r.y0 + (1.5 if r.y0 <= clip.y0 + 1 else 0), r.x1, r.y1 - (1.5 if r.y1 >= clip.y1 - 1 else 0))
         name = f"img_{docname}{pno + 1}_{int(r.x0)}_{int(r.y0)}.png"
@@ -238,6 +277,15 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
         pix = page.get_pixmap(clip=r, dpi=300)
         from PIL import Image as _I
         im_ = _I.frombytes('RGB', (pix.width, pix.height), pix.samples).convert('RGBA')
+        ink_ = [(rr, gg, bb) for rr, gg, bb, aa in im_.getdata() if not (rr > 200 and gg > 200 and bb > 200)]
+        if ink_:
+            ar, ag, ab = (sum(p_[i] for p_ in ink_) / len(ink_) for i in range(3))
+            if ag > ar + 40 and ag > ab + 40:        # a green tick emoji (2025 FM 42 q6): drawn as a real ✓ in its colour (round 20)
+                sz = round(min(r.height, 14.0), 2)
+                tw_ = symbol_width('✔', sz)
+                u['text'].append({'t': '✔', 'x': round((r.x0 + r.x1) / 2 - tw_ / 2 - ox, 2), 'y': round((r.y0 + r.y1) / 2 + 0.36 * sz - oy, 2),
+                                  'w': round(tw_, 2), 's': sz, 'f': 'symbol', 'b': 1, 'c': '#%02x%02x%02x' % (int(ar), int(ag), int(ab))})
+                continue
         im_.putdata([(rr, gg, bb, 0 if rr > 245 and gg > 245 and bb > 245 else 255) for rr, gg, bb, aa in im_.getdata()])
         im_.save(os.path.join(store, 'figures', name))
         u.setdefault('images', []).append({'file': name, 'x': round(r.x0 - ox, 2), 'y': round(r.y0 - oy, 2),

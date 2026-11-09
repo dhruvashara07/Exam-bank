@@ -558,7 +558,7 @@ def _map_path(d, fx, fy):
     return ''.join(out)
 
 
-def _reflow_table(TT, LL, PP, vx, A, mins_in=None, rec=None):
+def _reflow_table(TT, LL, PP, vx, A, mins_in=None, rec=None, pad=10):
     """An inner table too wide for our Answer column even with narrow columns (side-by-side 'OR' alternatives,
     2019 ON 43 q9): keep the normal font size and wrap each cell's text inside its column; rows grow taller.
     Returns (texts, lines, pics, width, ymap) in table coordinates (x from 0, y = mapped source y)."""
@@ -579,7 +579,7 @@ def _reflow_table(TT, LL, PP, vx, A, mins_in=None, rec=None):
             return None
         cells.setdefault((i, j), []).append(t)
     old = [c - a for a, c in cols]
-    mins = [max([t['w'] for (i, j), ws in cells.items() if j == jj for t in ws] + [10]) + 10 for jj in range(len(cols))]
+    mins = [max([t['w'] for (i, j), ws in cells.items() if j == jj for t in ws] + [10]) + pad for jj in range(len(cols))]
     if rec is not None:
         rec.append(mins)
     if mins_in is not None:                            # the same table design in other sub-rows: same column widths (round 18)
@@ -599,7 +599,7 @@ def _reflow_table(TT, LL, PP, vx, A, mins_in=None, rec=None):
     # reflow every cell; row heights from the tallest cell
     placed, need_h = [], {}
     for (i, j), ws in cells.items():
-        a, c = cols[j]; x0 = nx[j] + 4; x1 = nx[j + 1] - 4
+        a, c = cols[j]; x0 = nx[j] + pad / 2.5; x1 = nx[j + 1] - pad / 2.5
         anch = []
         for y0 in sorted(t['y'] for t in ws if t.get('s', 11) >= 9):   # baselines within 3 pt are one line (big brackets)
             if not anch or y0 - anch[-1] > 3:
@@ -705,15 +705,40 @@ def _reflow_table(TT, LL, PP, vx, A, mins_in=None, rec=None):
 
 
 def _guide_band(v, gd_t, inb, b0, band0, guide):
-    """The Guidance column of one band (2026 MJ): paragraphs re-wrapped to our Guidance column and pictures (prism diagrams,
-    2026 MJ 31 q7), placed top to bottom in their printed order - nothing overlaps; pictures printed in one row stay side
-    by side (shrunk together only if the row is wider than our column). Returns the bottom of the column's content."""
+    """The Guidance column of one cell (2026 MJ; MS rules 13). Paragraphs are re-wrapped to our Guidance column and start
+    level with the Answer line they stood beside in the print (guide['anchors']: printed y -> our y). Fractions stay stacked
+    on their line. Pictures: pictures that touch count as ONE picture; a picture keeps its printed size, shrunk only to fit
+    the column and never below 60 %; a picture that would have to shrink more goes to its own full-width line under the
+    row (guide['wide']). Nothing overlaps. Returns the bottom of the column's content."""
     ws = [t for t in gd_t if inb(t['y'] - 0.35 * t.get('s', 10))]
     G, e3, xr = guide['G'], guide['e3'], guide['xr']
     nw = W - G
     pics = guide.get('pics') or []
     if not ws and not pics:
         return band0
+    by_line = {}
+    for sy, ny in guide.get('anchors') or [(b0, band0)]:
+        k_ = round(sy)                                 # one anchor per printed line: the line's first (left-most) word
+        if k_ not in by_line or ny < by_line[k_][1]:
+            by_line[k_] = (sy, ny)
+    anchors = sorted(by_line.values())
+    def ymap(y):                                       # our y for a printed y: from the last Answer line at or above it
+        a_ = [p_ for p_ in anchors if p_[0] <= y + 1]
+        sy, ny = a_[-1] if a_ else anchors[0]
+        return ny + (y - sy)
+    # fractions: numerator + denominator over a bar move as one piece on their host line
+    ws = [dict(t) for t in ws]
+    for k, (l, bb) in enumerate(guide.get('lines') or []):
+        if bb[3] - bb[1] > 1.3 or bb[2] - bb[0] > 90:
+            continue
+        num = [t for t in ws if 0.3 <= bb[1] - t['y'] <= 5 and bb[0] - 1 <= t['x'] + t['w'] / 2 <= bb[2] + 1]
+        den = [t for t in ws if 0 < t['y'] - bb[3] <= 13 and bb[0] - 1 <= t['x'] + t['w'] / 2 <= bb[2] + 1]
+        host = [t for t in ws if num and den and min(o['y'] for o in num) + 1 < t['y'] < max(o['y'] for o in den) - 1
+                and t not in num + den]
+        if num and den and host:
+            hy = min(host, key=lambda t: abs(t['y'] - (bb[1] + 3)))['y']
+            for t in num + den:
+                t['_stack'] = k; t['_hy'] = hy
     s_ = max([t.get('s', 10) for t in ws] + [10])
     pitch = round(s_ * 1.18, 2)
     items = []
@@ -729,45 +754,54 @@ def _guide_band(v, gd_t, inb, b0, band0, guide):
     for r in rows:
         items.append((min(f['y'] for _, f in r), 'r', r))
     items.sort(key=lambda it: it[0])
-    bot, delta, out_bot = band0, 0.0, band0
-    moved = []
+    bot, moved, prev = band0, [], None
     for y_src, kind, it in items:
-        y = max(band0 + (y_src - b0) + delta, bot + (2 if kind == 'r' else 0))
+        y = max(ymap(y_src), bot + (2 if kind == 'r' else 0))
+        if prev is not None and prev[0] == 'r':      # text printed right under a picture follows it (the picture may be smaller)
+            y = bot + max(2.0, min(y_src - prev[1], 6.0))
         if kind == 'r':
-            tw = sum(f.get('w') or 0 for _, f in it) + 6 * (len(it) - 1)
+            it = sorted(it, key=lambda kf: kf[1]['x'])
+            tw = (max(f['x'] + (f.get('w') or 0) for _, f in it) - min(f['x'] for _, f in it))   # touching = one picture
             k = min(1.0, (nw - 6) / tw) if tw else 1.0
+            if k < 0.6:
+                guide.setdefault('wide', []).append(it)      # too small in the column: a line of its own under the row
+                continue
+            x_base = min(f['x'] for _, f in it)
             x = G + 3 + max(0.0, (nw - 6 - tw * k) / 2)
             hmax = 0.0
-            for k_, f in sorted(it, key=lambda kf: kf[1]['x']):
-                g = dict(f); g['x'] = round(x, 2); g['y'] = round(y + (f['y'] - y_src) * k, 2)
+            for k_, f in it:
+                g = dict(f); g['x'] = round(x + (f['x'] - x_base) * k, 2); g['y'] = round(y + (f['y'] - y_src) * k, 2)
                 if 'w' in g: g['w'] = round(g['w'] * k, 2)
                 if 'h' in g: g['h'] = round(g['h'] * k, 2)
                 if k_ == 'figs': g['k'] = round(f.get('k', 1) * k, 4)
                 v.setdefault(k_, []).append(g)
-                x += (g.get('w') or 0) + 6 * k
                 hmax = max(hmax, (g['y'] - y) + (g.get('h') or 0))
-            src_bot = max(f['y'] + (f.get('h') or 0) for _, f in it)
             bot = y + hmax + 2
-            delta = bot - (band0 + (src_bot - b0))
+            prev = ('r', max(f['y'] + (f.get('h') or 0) for _, f in it))
         else:
+            prev = ('p', 0)
             rel = {'lines': [[dict(g, x=g['x'] - e3) for g in ln] for ln in it['lines']]}
             wl = MP._wrap(rel, nw - 2)
-            m0 = it['lines'][0][0]['ws'][0]
-            base = y + 0.8 * m0.get('s', 10)
+            g0 = it['lines'][0][0]; m0 = g0['ws'][0]
+            base = y + 0.8 * m0.get('s', 10) if 'ref_y' not in g0 else y + 0.8 * s_
+            first_ref = g0.get('ref_y', m0['y'])
             for j, ln in enumerate(wl):
+                stacked = any('ref_y' in g for g, gx in ln)
+                if stacked:
+                    base += 0.45 * s_                  # room for a fraction's numerator
                 for g, gx in ln:
-                    m = g['ws'][0]
+                    m = g['ws'][0]; ref = g.get('ref_y', m['y'])
                     for w in g['ws']:
                         n = dict(w); n['x'] = round(G + gx + (w['x'] - m['x']), 2)
-                        n['y'] = round(base + j * pitch + (w['y'] - m['y']), 2)
+                        n['y'] = round(base + j * pitch + (w['y'] - ref), 2)
+                        for k2 in ('_stack', '_hy'):
+                            n.pop(k2, None)
                         v['text'].append(n); bot = max(bot, n['y'] + 4); moved.append((w, n))
-            src_last = max(w['y'] for ln in it['lines'] for g in ln for w in g['ws'])
-            delta = (base + (len(wl) - 1) * pitch) - (band0 + (src_last - b0))
-        out_bot = max(out_bot, bot)
+                if stacked:
+                    base += 0.45 * s_                  # ... and for its denominator
     for l, bb in guide.get('lines') or []:            # each drawing moves with the word it touches (or the nearest one)
         if not moved:
             break
-        cx, cy = (bb[0] + bb[2]) / 2, (bb[1] + bb[3]) / 2
         def dist(w):
             dx_ = max(w['x'] - bb[2], bb[0] - (w['x'] + w['w']), 0)
             dy_ = max((w['y'] - 0.8 * w.get('s', 10)) - bb[3], bb[1] - (w['y'] + 0.25 * w.get('s', 10)), 0)
@@ -777,7 +811,7 @@ def _guide_band(v, gd_t, inb, b0, band0, guide):
             continue
         ddx, ddy = n['x'] - w['x'], n['y'] - w['y']
         v['lines'].append({**l, 'd': _map_path(l['d'], lambda x: x + ddx, lambda y: y + ddy)})
-    return out_bot + 1
+    return bot + 1
 
 
 def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None, guide=None):
@@ -804,8 +838,12 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None, g
             bb = [MP._bbox(sub) for sub in re.findall(r'M[^M]+', l['d'])]
             b = None if any(x is None for x in bb) or not bb else (min(x[0] for x in bb), min(x[1] for x in bb), max(x[2] for x in bb), max(x[3] for x in bb))
         if b is None:                                 # a curve (brace, arc): keep it, place it by its first point
-            pts = [float(x) for x in MP.NUM.findall(l['d'])[:2]]
+            allp = [float(x) for x in MP.NUM.findall(l['d'])]
+            pts = allp[:2]
             if len(pts) == 2 and e1 < pts[0] < e2 and pts[1] < h:
+                cb = (min(allp[0::2]), min(allp[1::2]), max(allp[0::2]), max(allp[1::2]))
+                if cb[3] - cb[1] > 20 and cb[2] - cb[0] < 14:   # a tall brace: its whole box (it is stretched to its lines)
+                    ans_l.append((l, cb)); continue
                 ans_l.append((l, (pts[0], pts[1], pts[0], pts[1]))); continue
             continue
         if b[2] - b[0] < 1.3 and any(abs((b[0] + b[2]) / 2 - e) < 2 for e in [e1, e2] + outer):
@@ -824,22 +862,29 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None, g
     sep_g = {y: any(r[3] - r[1] < 1.3 and abs((r[1] + r[3]) / 2 - y) < 1.5 and r[2] > e3 + 5 for r in rr) for y in seps}
     gstate = {'start': None, 'y0': 0.0, 'bot': 0.0}   # a Guidance cell spanning several Answer sub-rows (no rule across it)
     def g_open(i, band0, b0):
-        if not guide or gstate['start'] is not None:
+        if not guide:
+            return
+        guide.setdefault('anchors', []).append((b0 - 0.01, band0))   # (the band's top; its lines' own anchors come first)
+        if gstate['start'] is not None:
             return
         j = i
         while j < len(seps) and not sep_g.get(seps[j], True):
             j += 1                                    # bands i..j share one Guidance cell
-        lo, hi = bounds[i], bounds[j + 1]
-        last = j + 1 == len(bounds) - 1
-        inb_g = lambda y: lo <= y < hi or (last and y >= hi)
-        guide['pics'] = [(k_, f) for k_, f in gpics if inb_g(f['y'] + f.get('h', 0) / 2)]
-        guide['lines'] = [(l, bb) for l, bb in glines if inb_g((bb[1] + bb[3]) / 2)]
-        gstate.update(start=i, end=j, bot=_guide_band(v, gd_t, inb_g, lo, band0, guide))
+        gstate.update(start=i, end=j, band0=band0, lo_y=b0)
     def g_close(i, cum):
         if not guide or gstate['start'] is None or i < gstate['end']:
             return cum
+        lo, hi = bounds[gstate['start']], bounds[gstate['end'] + 1]
+        last = gstate['end'] + 1 == len(bounds) - 1
+        inb_g = lambda y: lo <= y < hi or (last and y >= hi)
+        guide['pics'] = [(k_, f) for k_, f in gpics if inb_g(f['y'] + f.get('h', 0) / 2)]
+        guide['lines'] = [(l, bb) for l, bb in glines if inb_g((bb[1] + bb[3]) / 2)]
+        g_ = dict(guide); g_['anchors'] = [a for a in guide['anchors'] if a[0] >= gstate['lo_y'] - 1]
+        bot = _guide_band(v, gd_t, inb_g, lo, gstate['band0'], g_)
+        if g_.get('wide'):
+            guide.setdefault('wide', []).extend(g_['wide'])
         gstate['start'] = None
-        return max(cum, gstate['bot'])
+        return max(cum, bot)
     ans_l = [(l, b) for l, b in ans_l if not is_sep(b)]
     pics = [(key, f) for key in ('figs', 'images', 'glyphs') for f in (u.get(key) or []) if f['x'] < e3]
     gpics = [(key, f) for key in ('figs', 'images', 'glyphs') for f in (u.get(key) or []) if f['x'] >= e3 - 2]
@@ -856,6 +901,9 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None, g
                 continue                              # outside, or a rule of the cell
             if bb[2] - bb[0] < 1.3 and bb[3] - bb[1] > 0.6 * h:
                 continue
+            if any(f['x'] - 2 <= bb[0] and bb[2] <= f['x'] + (f.get('w') or 0) + 2 and f['y'] - 4 <= bb[1]
+                   and bb[3] <= f['y'] + (f.get('h') or 0) + 2 for _, f in gpics):
+                continue                              # drawn over a picture: part of the picture
             glines.append((l, bb))
     bounds = [0.0] + seps + [h]
     lines_m = {}
@@ -956,7 +1004,8 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None, g
         for l, b in decor:                            # underlines: they move with their word
             o = next((t for t in TT if 0.3 <= b[1] - t['y'] <= 5 and b[0] < t['x'] + t['w'] and b[2] > t['x'] and b[3] - b[1] < 1.3), None)
             under[id(l)] = o
-        pure = not PP and not cols and all(under[id(l)] is not None for l, b in decor)
+        is_brace = lambda b: b[3] - b[1] > 20 and b[2] - b[0] < 14   # a tall bracket beside a list (2026 MJ 32 q3(b))
+        pure = not PP and not cols and all(under[id(l)] is not None or is_brace(b) for l, b in decor)
         kb, moves, extra = 1.0, {}, 0.0
         tkey = tuple(round(x) for x in vx) if cols else None
         if tkey and not spanning:                      # remember each band's table needs (same design in several sub-rows)
@@ -1031,11 +1080,16 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None, g
             TT_out = [t for t in TT if not tab_rows(t)]   # a note under/over the table ('1 mark for each correct column')
             rf = _reflow_table([t for t in TT if tab_rows(t)], LL, PP, vx, (M - L + 4) if full_ else A,
                                mins_in=(force or {}).get(tkey))
+            tight = False
+            if rf is None and not full_:              # Dhruv, round 20: normal font size always - before any shrinking, the table
+                rf = _reflow_table([t for t in TT if tab_rows(t)], LL, PP, vx, M - L + 2,   # may use the whole Answer cell with
+                                   mins_in=(force or {}).get(tkey), pad=6)                 # slimmer cell padding (2026 MJ 43 q5)
+                tight = rf is not None
             if rf is not None:
                 tabs.setdefault(tkey, [[], False])[1] = True
             if rf is not None:                        # the table at the normal size, text wrapped inside its cells
                 texts_, lines_, pics_, tw_, ymap_ = rf
-                ox = L if full_ else L + 5 + (A - tw_) / 2   # a table filling the cell meets our column rules (round 16)
+                ox = L if full_ else (L + max(1.0, (M - L - tw_) / 2) if tight else L + 5 + (A - tw_) / 2)   # a table filling the cell meets our column rules (round 16)
                 ytab = min([b[1] for l, b in LL if b[2] - b[0] < 1.3 and b[3] - b[1] >= 4] or [b0])   # the table's top
                 oy = cum if full_ else cum + max(0.0, ytab - b0)   # a full-cell table starts on the row line (round 17)
                 for n in texts_:
@@ -1108,9 +1162,29 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None, g
             if kb < 1:
                 n['s'] = round(t['s'] * kb, 2); n['w'] = round(t['w'] * kb, 2)
             v['text'].append(n)
+            if guide and t.get('s', 11) >= 8:          # Guidance lines up with the Answer line it stood beside
+                guide.setdefault('anchors', []).append((t['y'] - 0.8 * t['s'], n['y'] - 0.8 * n['s']))
         lbot = 0.0
         for l, b in LL:
             o = under.get(id(l)); dx, dy = moves.get(id(o), (0.0, 0.0)) if o is not None else (0.0, 0.0)
+            if o is None and moves and not is_brace(b) and b[2] - b[0] < 40:
+                # a drawn sign (root sign, bracket piece) moves with the word that follows it ('(v =)√{2×2.5/0.18}', 2026 MJ 41 q1)
+                nxt = [t for t in TT if t['x'] >= b[0] - 1.5 and t['y'] - t.get('s', 10) - 4 <= b[3] and t['y'] + 4 >= b[1]]
+                if nxt:
+                    dx, dy = moves.get(id(min(nxt, key=lambda t: t['x'])), (0.0, 0.0))
+            if o is None and moves and is_brace(b):      # a bracket stays beside its (re-wrapped) lines and spans them
+                beside = [t for t in TT if b[1] - 3 <= t['y'] - 0.35 * t.get('s', 10) <= b[3] + 3 and t['x'] < b[0]]
+                if beside:
+                    def nyt(t):
+                        return fy(t['y'], moves.get(id(t), (0, 0))[1])
+                    top_t = min(beside, key=lambda t: t['y']); bot_t = max(beside, key=lambda t: t['y'])
+                    ny0 = nyt(top_t) - (top_t['y'] - b[1]); ny1 = nyt(bot_t) + (b[3] - bot_t['y'])
+                    nr = max(L + 5 + (tx(t) - e1b) + moves.get(id(t), (0, 0))[0] + t['w'] for t in beside)
+                    sy = (ny1 - ny0) / max(b[3] - b[1], 1)
+                    d_ = _map_path(l['d'], lambda x: nr + 4 + (x - b[0]), lambda y: ny0 + (y - b[1]) * sy)
+                    v['lines'].append({**l, 'd': d_})
+                    lbot = max(lbot, ny1)
+                    continue
             if o is not None and cols and not note(o):   # an underline moves with its word (2024 MJ 42 q1 'vectors')
                 d_ = _map_path(l['d'], lambda x, o=o: L + 5 + (tx(o) + (x - o['x']) - e1b) * kb + dx + cxs, lambda y: fy(y, dy))
             else:
@@ -1163,6 +1237,27 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None, g
         f_ = {k: [max(c) for c in zip(*ms_)] for k, (ms_, rfl) in tabs.items() if rfl and len(ms_) >= 2}
         if f_:
             return _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov, force=f_, guide=guide)
+    wide_y = None
+    if guide and guide.get('wide'):                   # Guidance pictures too wide for the column: a full-width line under the row
+        wide_y = cum + 2
+        y_ = wide_y + 4
+        for it in guide['wide']:
+            tw = max(f['x'] + (f.get('w') or 0) for _, f in it) - min(f['x'] for _, f in it)
+            k = min(1.0, (W - L - 10) / tw) if tw else 1.0
+            x_base, y_base = min(f['x'] for _, f in it), min(f['y'] for _, f in it)
+            x0_ = L + max(5.0, (W - L - tw * k) / 2)
+            hmax = 0.0
+            for k_, f in it:
+                g = dict(f); g['x'] = round(x0_ + (f['x'] - x_base) * k, 2); g['y'] = round(y_ + (f['y'] - y_base) * k, 2)
+                if 'w' in g: g['w'] = round(g['w'] * k, 2)
+                if 'h' in g: g['h'] = round(g['h'] * k, 2)
+                if k_ == 'figs': g['k'] = round(f.get('k', 1) * k, 4)
+                v.setdefault(k_, []).append(g)
+                hmax = max(hmax, (g['y'] - y_) + (g.get('h') or 0))
+            y_ += hmax + 4
+        v['lines'].append(_rect(L, wide_y, W, wide_y + T_ * 0.8))
+        cum = y_ + 2
+        end_full = None
     v['h'] = round(cum if end_full is not None and abs(end_full - cum) < 0.01 else cum + 2, 2)
     v['cell_scaled'] = round(kmin, 3)
     for y, into_m in sep_new:
@@ -1175,9 +1270,9 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None, g
         v['lines'].append(_rect(L, y, W if into_m else M, y + T_ * 0.8))
     v['lines'].append(_rect(L - 0.3, 0, L + 0.3, v['h']))
     if has_marks:
-        v['lines'].append(_rect(M - 0.3, 0, M + 0.3, v['h']))
+        v['lines'].append(_rect(M - 0.3, 0, M + 0.3, wide_y if wide_y else v['h']))
     if guide:
-        v['lines'].append(_rect(WR - 0.3, 0, WR + 0.3, v['h']))
+        v['lines'].append(_rect(WR - 0.3, 0, WR + 0.3, wide_y if wide_y else v['h']))
     return v
 
 

@@ -73,7 +73,7 @@ Read this first in every session. Update it before ending a session.
 4. May/Jun 2026 variant 7: mark schemes 17 and 27 exist, question papers missing.
 
 ## Next
-- 2016-2019 full check-up done (2026-11-05): 2016 FM - 2020 ON COMPLETE (2026-11-06): all MS in our table (old portrait ones too), all approved = final check in git (MongoDB paused until everything is done). 2022-2026 built ahead on GitHub. 2021, 2022 and 2023 approved (round 18 closed, fixes in all years). 2024 approved (round 19 closed). 2025+2026 checked together: round 20 open; after his answers + fixes approve 2025-2026. Then older years 2013-2015 FM (old portrait MS), cleanup, MongoDB push of everything. Known: 2019 ON 41 q9(a)(ii) hatched circles plain. Then 2022, 2023 ...; the older years 2013-2015 FM also need the old-portrait MS conversion (ms_layout._old_rows) when they are done; after his answers + fixes approve the remaining 2016-2019 papers, then 2020 under the new plan (build -> I check flags -> short round -> approve).
+- 2016-2019 full check-up done (2026-11-05): 2016 FM - 2020 ON COMPLETE (2026-11-06): all MS in our table (old portrait ones too), all approved = final check in git (MongoDB paused until everything is done). 2022-2026 built ahead on GitHub. 2021, 2022 and 2023 approved (round 18 closed, fixes in all years). 2016 FM - 2026 MJ ALL FINAL in git (round 20 closed 2026-11-09). Next: older years (2013-2015 built; 2002-2012 only a few papers) - scope asked to Dhruv; then cleanup, MongoDB push of everything. Known: 2019 ON 41 q9(a)(ii) hatched circles plain. Then 2022, 2023 ...; the older years 2013-2015 FM also need the old-portrait MS conversion (ms_layout._old_rows) when they are done; after his answers + fixes approve the remaining 2016-2019 papers, then 2020 under the new plan (build -> I check flags -> short round -> approve).
 
 1. Daily check: read Dhruv's round 3 answers (`feedback_r3`), fix anything marked wrong, approve the 2015–2024
    backlog by the rule in docs/DAILY_CHECK.md §6. 40 flagged questions did not fit round 3 (mostly editable-text
@@ -179,3 +179,14 @@ One line per run: date, pending papers checked/approved, feedback handled, fixes
 - 2026-11-05: round 5 closed (37 ok, 4 wrong -> fixed). 2016 ON built; round 6 on the NEW review page (portal.json).
 - 2026-11-05 13:10: round 6 closed (43 ok, 3 wrong -> option clean-cut rule). 2016 MJ APPROVED (Dhruv). Symbol library: later, after all years (also: drawn ✓/✗ -> text).
 - 2016 ON APPROVED. Round 8 = 2017 MJ+ON (strict, risk-based) on review page 2017. Waiting: his round 8 answers, approval of 2017 (FM+MJ+ON), his answer on a standing approval rule. 2017 MJ qp_11 missing. Rounds 8 (2017 MJ/ON), 9 (2018), 10 (2019) on ONE review page (portal.json review_url, button per year). Standing rule: approve a year after its round once wrong items are fixed (2017 FM approved). Next: 2020.
+
+
+## Usage per year (Dhruv 2026-11-09: track speed and capacity)
+Effective tokens = input + 0.1 x cache reads + 2 x cache writes + 5 x output (from the session transcript). Weekly % = Dhruv
+reads it in Settings > Usage before/after a year (I cannot see it).
+
+| Years | Dates | Effective tokens (M) | Share of that stretch | Weekly % (Dhruv) |
+| --- | --- | --- | --- | --- |
+| 2021-2023 | 2026-11-06 | 8.2 | 34 % | - |
+| 2024 (+ start 2025-26) | 2026-11-07 | 9.5 | 39 % | - |
+| 2025-2026 + round 20 | 2026-11-09 | 6.6 (to 14:00) + round 20 fixes | 27 % | - |
