@@ -21,14 +21,11 @@
   }
  ],
  "text": "9\nA student wrote the following report about an experiment to measure the speed of sound in\nair.\nMy friend and I went into a field a long way from any buildings and measured\nthe distance across the field. My friend stood at one side of the field and I\nstood at the other. My friend banged two pieces of wood together, and as I\nsaw him do this, I started a stopwatch. I stopped the stopwatch when I heard\nthe sound. We obtained the following readings.\ndistance across field  =  238 m\ntime for sound to cross field  =  0.7 s",
- "marks": 1,
+ "marks": 10,
  "figures": [],
  "review": {
-  "reasons": [
-   "options not found as text (likely in a table or diagrams)",
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -60,6 +57,11 @@
      "type": "text",
      "html": "Why was it necessary to be a long way from any buildings?",
      "text": "Why was it necessary to be a long way from any buildings?"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
     },
     {
      "type": "marks",
@@ -98,6 +100,11 @@
      "text": "Why was it necessary to use such a large distance?"
     },
     {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
      "type": "marks",
      "value": 1
     }
@@ -132,6 +139,11 @@
      "type": "text",
      "html": "Suggest what the students could have used to measure the distance across the field.",
      "text": "Suggest what the students could have used to measure the distance across the field."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
     },
     {
      "type": "marks",
@@ -170,6 +182,11 @@
      "text": "Why was there a delay between the student seeing the pieces of wood come together and hearing the bang?"
     },
     {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
      "type": "marks",
      "value": 2
     }
@@ -204,6 +221,11 @@
      "type": "text",
      "html": "Use the readings to calculate the speed of sound.",
      "text": "Use the readings to calculate the speed of sound."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "speed of sound ="
     },
     {
      "type": "marks",
@@ -242,16 +264,18 @@
      "text": "Suggest why it might have been a good idea for the students to repeat the experiment after they had exchanged positions."
     },
     {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
      "type": "marks",
      "value": 1
     }
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": false,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -262,8 +286,8 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 10,
  "topic": null,
  "subtopic": null,
  "keywords": [],

@@ -21,7 +21,7 @@
   }
  ],
  "text": "7\nA student holds a polythene rod in one hand and a dry cotton cloth in the other.\ndry cotton\npolythene\ncloth\nrod",
- "marks": 1,
+ "marks": 7,
  "figures": [
   {
    "caption": "Fig. 7.1",
@@ -48,26 +48,11 @@
    "id": "0625_2002ON_02_q07d_fig7-2",
    "part": "(d)",
    "alt": ""
-  },
-  {
-   "page": 8,
-   "bbox": [
-    142.2,
-    90.3,
-    424.5,
-    184.5
-   ],
-   "id": "0625_2002ON_02_q07_figA",
-   "caption": null,
-   "part": "",
-   "alt": ""
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -99,6 +84,11 @@
      "type": "text",
      "html": "How can the student cause the rod to become charged with static electricity?",
      "text": "How can the student cause the rod to become charged with static electricity?"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
     },
     {
      "type": "marks",
@@ -137,6 +127,11 @@
      "text": "How can the student detect that the rod has become charged?"
     },
     {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
      "type": "marks",
      "value": 1
     }
@@ -151,7 +146,7 @@
       30.0,
       335.9,
       570.0,
-      802.0
+      433.5
      ],
      "continued": false,
      "answer_space": {
@@ -159,7 +154,7 @@
       "dotted_lines": 2,
       "answer_line": null,
       "working_gap_pt": 15.8,
-      "height_pt": 466.1
+      "height_pt": 97.6
      }
     }
    ],
@@ -176,6 +171,11 @@
      "type": "text",
      "html": "What is meant by an <i>electric field</i> ?",
      "text": "What is meant by an electric field ?"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
     },
     {
      "type": "marks",
@@ -236,6 +236,11 @@
        "type": "text",
        "html": "What is seen to happen to the suspended rod?",
        "text": "What is seen to happen to the suspended rod?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       }
      ]
     },
@@ -268,6 +273,11 @@
        "type": "text",
        "html": "Explain why this happens.",
        "text": "Explain why this happens."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       },
       {
        "type": "marks",
@@ -321,16 +331,18 @@
      "text": "If the student used a copper rod in (a), instead of the polythene rod, why would he not be able to charge the rod?"
     },
     {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
      "type": "marks",
      "value": 1
     }
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -341,8 +353,8 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 7,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -358,33 +370,6 @@
    "type": "figure",
    "id": "0625_2002ON_02_q07_fig7-1",
    "caption": "Fig. 7.1"
-  },
-  {
-   "type": "figure",
-   "id": "0625_2002ON_02_q07_figA",
-   "caption": null
-  },
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
   }
  ]
 }

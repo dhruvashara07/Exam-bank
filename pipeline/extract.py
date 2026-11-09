@@ -18,6 +18,9 @@ DOTS = re.compile(r'\.{12,}')
 SESSION_NAMES = {'FM': 'February-March', 'MJ': 'May-June', 'ON': 'October-November'}
 PAPER_TYPES = {1: 'mcq_core', 2: 'mcq_extended', 3: 'theory_core', 4: 'theory_extended',
                5: 'practical_test', 6: 'alternative_to_practical'}
+# Before 2009 (0625/01 ... 0625/06, no variant) the cover prints only 'Paper 2': 1 = multiple choice (everyone),
+# 2 = core theory, 3 = extended theory, 5 = practical test, 6 = alternative to practical.
+OLD_PAPER_TYPES = {1: 'mcq', 2: 'theory_core', 3: 'theory_extended', 5: 'practical_test', 6: 'alternative_to_practical'}
 
 
 # Standard totals, used when the cover does not print one (covers before 2020).
@@ -25,7 +28,7 @@ STANDARD_TOTAL = {'mcq_core': 40, 'mcq_extended': 40, 'mcq': 40, 'theory_core': 
                   'practical_test': 40, 'alternative_to_practical': 40}
 
 
-def paper_type_from_cover(cover, paper):
+def paper_type_from_cover(cover, paper, old=False):
     """Read the paper type from the cover ('Paper 2 Core' in 2015 is theory, 'Paper 2 Multiple Choice
     (Extended)' from 2016 is MCQ); fall back to the current numbering."""
     m = re.search(r'Paper\s+\d\s+([^\n]+)', cover)
@@ -40,7 +43,7 @@ def paper_type_from_cover(cover, paper):
         return 'theory_extended'
     if 'core' in title or 'theory' in title:
         return 'theory_core'
-    return PAPER_TYPES[paper]
+    return (OLD_PAPER_TYPES if old else PAPER_TYPES)[paper]
 
 
 def paper_meta(doc, syllabus, year, session, pv):
@@ -49,7 +52,7 @@ def paper_meta(doc, syllabus, year, session, pv):
     dur = re.search(r'\n\s*(\d+ hours?(?: \d+ minutes)?|\d+ minutes)\s*\n', cover)
     old = pv[0] == '0'                     # before 2009 one paper per component: 0625/03 (no variant)
     paper, variant = (int(pv[1]), 0) if old else (int(pv[0]), int(pv[1]))
-    ptype = paper_type_from_cover(cover, paper)
+    ptype = paper_type_from_cover(cover, paper, old)
     return {
         'syllabus': syllabus, 'subject': 'Physics', 'board': 'CAIE', 'exam': 'IGCSE',
         'year': year, 'session': session, 'season': SESSION_NAMES[session],
@@ -73,7 +76,8 @@ def is_blank_page(page):
     if not re.search(r'BLANK\s+PAGE', t):
         return False
     top, bottom = page_bounds(page)
-    rest = [l for l in visible_lines(page, top, bottom) if not re.search(r'BLANK\s+PAGE', l['text'])]
+    rest = [l for l in visible_lines(page, top, bottom) if not re.search(r'BLANK\s+PAGE', l['text'])
+            and not re.match(r'(Every reasonable effort|infringed\.|University of Cambridge|Permission to reproduce)', l['text'])]   # copyright note at the foot of a blank page
     return len(rest) == 0
 
 
@@ -257,7 +261,11 @@ def find_figures(doc, seg, lines):
     page = doc[seg['page']]
     top, bottom = page_bounds(page)
     figs = []
-    caps = [l for l in lines if CAPTION.match(l['text'])]
+    from layout import dark_mask
+    mk = dark_mask(page)
+    def inked(l):        # invisible text (an OCR layer: 'Fig. 12' in Courier, 2004 ON 02 q12) prints nothing and is no caption
+        return bool(mk[int(l['y0'] * ZOOM):int(l['y1'] * ZOOM) + 1, int(l['x0'] * ZOOM):int(l['x1'] * ZOOM) + 1].any())
+    caps = [l for l in lines if CAPTION.match(l['text']) and inked(l)]
     marks_text = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in lines
                   if MARK.fullmatch(l['text'].strip()) or TOTAL.fullmatch(l['text'].strip()) or DOTS.search(l['text'])]
     drawings = [r for r in ink_boxes(page, top, bottom) if seg['y0'] <= r.y0 and r.y1 <= seg['y1'] + 1
@@ -405,7 +413,12 @@ def find_figures(doc, seg, lines):
                     inside.append(lr)
         x0 = min(r.x0 for r in inside); x1 = max(r.x1 for r in inside)
         y0 = min(r.y0 for r in inside); y1 = max(r.y1 for r in inside)
-        g = grow_to_ink(page, fitz.Rect(x0, y0, x1, y1), fitz.Rect(max(CONTENT_X0, min(xa, x0)), max(seg['y0'], band[0] - 1), min(CONTENT_X1, max(xb, x1)), min(seg['y1'], band[1] + 1)),
+        top_lim = max(seg['y0'], band[0] - 1)
+        if prose_above:      # the sentence that closes the band sits BESIDE the figure (bottles next to the question text): its top may rise past it
+            last = max(prose_above, key=lambda l: l['y1'])
+            if last['x1'] < x0 - 2 or last['x0'] > x1 + 2:
+                top_lim = seg['y0']
+        g = grow_to_ink(page, fitz.Rect(x0, y0, x1, y1), fitz.Rect(max(CONTENT_X0, min(xa, x0)), top_lim, min(CONTENT_X1, max(xb, x1)), min(seg['y1'], band[1] + 1)),
                         exclude=[fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in prose_above])
         x0, y0, x1, y1 = g.x0, g.y0, g.x1, g.y1
         for l in lines:                 # answer lines printed inside the figure ('nebula which contains .......')

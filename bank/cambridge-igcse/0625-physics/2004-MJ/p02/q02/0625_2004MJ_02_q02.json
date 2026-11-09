@@ -21,7 +21,7 @@
   }
  ],
  "text": "2\nFig. 2.1 shows a hinged rail in a fence. The rail has to be lifted vertically in order to let people\nthrough.\nhinge\nrail",
- "marks": 1,
+ "marks": 5,
  "figures": [
   {
    "caption": "Fig. 2.1",
@@ -35,26 +35,11 @@
    "id": "0625_2004MJ_02_q02_fig2-1",
    "part": "",
    "alt": ""
-  },
-  {
-   "page": 3,
-   "bbox": [
-    34.0,
-    103.7,
-    562.0,
-    336.0
-   ],
-   "id": "0625_2004MJ_02_q02_figA",
-   "caption": null,
-   "part": "",
-   "alt": ""
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -81,6 +66,28 @@
    "text": "On Fig. 2.1, draw an arrow to show the position and direction of the smallest force that\nwould be needed to begin to raise the rail.\n[3]",
    "marks": 3,
    "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "(a)\nstraight vertical arrow upwards to/from rail\nF\narrow to R of centre of rail\nF\narrow at R.H. end of rail (within 2× width of resting\nF\nblock)",
+     "codes": [
+      "B1",
+      "C1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        273.5,
+        559.0,
+        357.5
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -117,6 +124,26 @@
    "text": "What is the correct Physics term for the turning effect of a force?\nTick one box.\nforce\nwork\nmoment\nmovement\n[1]",
    "marks": 1,
    "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "(b)\nmoment ticked\nF",
+     "codes": [
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        362.0,
+        559.0,
+        382.8
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -178,11 +205,37 @@
    "text": "Suggest one way the designer of the fence could have reduced the force needed to lift\nthe rail.\n..........................................................................................................................................\n......................................................................................................................................[1]",
    "marks": 1,
    "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "(c)\nreduce weight/mass OR shorten rail, lighter rail,\nF\nthinner rail, open sideways, suitable long handle,\nsuitable 2 pulley system",
+     "codes": [
+      "B1",
+      "5"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        387.3,
+        559.0,
+        433.4
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
      "html": "Suggest one way the designer of the fence could have reduced the force needed to lift the rail.",
      "text": "Suggest one way the designer of the fence could have reduced the force needed to lift the rail."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
     },
     {
      "type": "marks",
@@ -191,10 +244,7 @@
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -205,8 +255,8 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 5,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -222,33 +272,6 @@
    "type": "figure",
    "id": "0625_2004MJ_02_q02_fig2-1",
    "caption": "Fig. 2.1"
-  },
-  {
-   "type": "figure",
-   "id": "0625_2004MJ_02_q02_figA",
-   "caption": null
-  },
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
   }
  ]
 }

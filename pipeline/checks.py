@@ -29,7 +29,7 @@ from extract import split_captions
 
 TEXT_MIN = 0.97
 MARKW = re.compile(r'\[\s*\d{1,2}\s*\]')
-NOTICE = re.compile(r'UCLES|Turn over|is on the (?:next|back) page|continues on the next (?:page|side)|continued on (?:the )?(?:next|following) (?:page|side)|'
+NOTICE = re.compile(r'UCLES|0625/\d{1,2}/[A-Z]/[A-Z]/\d\d|Turn over|is on the (?:next|back) page|continues on the next (?:page|side)|continued on (?:the )?(?:next|following) (?:page|side)|'
                     r'(?:begins|starts) on the next page|BLANK\s+PAGE|Permission to reproduce|'
                     r'Cambridge Assessment International|\*\s*\d{8,}\s*\*')
 WORD = re.compile(r"[A-Za-z]+|\d+(?:\.\d+)?")

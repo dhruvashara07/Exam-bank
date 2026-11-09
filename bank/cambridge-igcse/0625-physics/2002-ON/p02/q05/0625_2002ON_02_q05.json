@@ -3,14 +3,11 @@
  "number": 5,
  "segments": [],
  "text": "",
- "marks": 1,
+ "marks": 3,
  "figures": [],
  "review": {
-  "reasons": [
-   "options not found as text (likely in a table or diagrams)",
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -22,7 +19,7 @@
       30.0,
       59.0,
       570.0,
-      137.0
+      130.5
      ],
      "continued": false,
      "answer_space": {
@@ -30,23 +27,23 @@
       "dotted_lines": 2,
       "answer_line": null,
       "working_gap_pt": 15.8,
-      "height_pt": 78.0
+      "height_pt": 71.5
      }
     }
    ],
-   "text": "Use\n5\n(a)\nWhat happens to the nucleus of an atom that undergoes radioactive decay?\n..........................................................................................................................................\n......................................................................................................................................[1]",
+   "text": "5\n(a)\nWhat happens to the nucleus of an atom that undergoes radioactive decay?\n..........................................................................................................................................\n......................................................................................................................................[1]",
    "marks": 1,
    "path": "5(a)",
    "content": [
     {
      "type": "text",
-     "html": "<i>Use</i>",
-     "text": "Use"
-    },
-    {
-     "type": "text",
      "html": "What happens to the nucleus of an atom that undergoes radioactive decay?",
      "text": "What happens to the nucleus of an atom that undergoes radioactive decay?"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
     },
     {
      "type": "marks",
@@ -63,7 +60,7 @@
       30.0,
       137.0,
       570.0,
-      246.0
+      226.5
      ],
      "continued": false,
      "answer_space": {
@@ -71,7 +68,7 @@
       "dotted_lines": 1,
       "answer_line": "time = …… years   [2]",
       "working_gap_pt": 46.5,
-      "height_pt": 109.0
+      "height_pt": 89.5
      }
     }
    ],
@@ -85,16 +82,19 @@
      "text": "Strontium-90 has a half-life of 28 years. How much time must pass before its activity falls to \u0001\u0002 of its original value?"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "time =",
+     "unit": "years"
+    },
+    {
      "type": "marks",
      "value": 2
     }
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": false,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -105,12 +105,11 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 3,
  "topic": null,
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
- "pipeline_version": "2.1",
- "content": []
+ "pipeline_version": "2.1"
 }

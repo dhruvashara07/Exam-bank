@@ -21,7 +21,7 @@
   }
  ],
  "text": "10\nFig. 10.1 shows a simplified diagram of the front of a cathode-ray oscilloscope (c.r.o.).\nIGCSE OSCILLOSCOPE CO.\nbrightness\nfocus\ntime-base\ny-gain\nms/cm\nvolts/cm\nx-shift\ny-shift\non\ny input\noff",
- "marks": 1,
+ "marks": 11,
  "figures": [
   {
    "caption": "Fig. 10.1",
@@ -48,26 +48,11 @@
    "id": "0625_2003MJ_02_q10bii_fig10-2",
    "part": "(b)(ii)",
    "alt": ""
-  },
-  {
-   "page": 12,
-   "bbox": [
-    203.5,
-    90.0,
-    364.5,
-    303.0
-   ],
-   "id": "0625_2003MJ_02_q10_figA",
-   "caption": null,
-   "part": "",
-   "alt": ""
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -118,11 +103,38 @@
      "text": "Describe what causes this bright spot.\n...................................................................................................................................\n...................................................................................................................................\n...................................................................................................................................\n...............................................................................................................................[3]",
      "marks": 3,
      "path": "10(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "10(a)(i)",
+       "text": "(a)\n(i)\nelectrons OR cathode rays (NOT beta-\nF\nparticles)\nsomething ‘hitting’ the screen (NOT ‘form a\nF\nspot’)\nidea of fluorescence (of the screen, NOT ‘the\nC\ngas’)",
+       "codes": [
+        "B1",
+        "B1",
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          36.0,
+          160.2,
+          559.0,
+          268.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "Describe what causes this bright spot.",
        "text": "Describe what causes this bright spot."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 4
       },
       {
        "type": "marks",
@@ -154,11 +166,36 @@
      "text": "The spot is rather blurred. Which control should be adjusted to make it sharper?\n...............................................................................................................................[1]",
      "marks": 1,
      "path": "10(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "10(a)(ii)",
+       "text": "(ii)\nfocus\nC",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          36.0,
+          274.0,
+          559.0,
+          294.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "The spot is rather blurred. Which control should be adjusted to make it sharper?",
        "text": "The spot is rather blurred. Which control should be adjusted to make it sharper?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       },
       {
        "type": "marks",
@@ -190,11 +227,36 @@
      "text": "Which control would be switched on to turn the spot into a horizontal line?\n...............................................................................................................................[1]",
      "marks": 1,
      "path": "10(a)(iii)",
+     "mark_scheme": [
+      {
+       "label": "10(a)(iii)",
+       "text": "(iii)\ntime base OR ms/cm\nC",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          36.0,
+          299.3,
+          559.0,
+          319.4
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "Which control would be switched on to turn the spot into a horizontal line?",
        "text": "Which control would be switched on to turn the spot into a horizontal line?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       },
       {
        "type": "marks",
@@ -211,7 +273,7 @@
         30.0,
         603.4,
         570.0,
-        802.0
+        740.0
        ],
        "continued": false,
        "answer_space": {
@@ -219,18 +281,45 @@
         "dotted_lines": 4,
         "answer_line": null,
         "working_gap_pt": 15.8,
-        "height_pt": 198.6
+        "height_pt": 136.6
        }
       }
      ],
      "text": "Describe what happens inside the oscilloscope to turn the spot into a horizontal\nline.\n...................................................................................................................................\n...................................................................................................................................\n...................................................................................................................................\n...............................................................................................................................[3]",
      "marks": 3,
      "path": "10(a)(iv)",
+     "mark_scheme": [
+      {
+       "label": "10(a)(iv)",
+       "text": "(iv)\nelectrons/cathode rays deflected (e.c.f. from\nF\n(i); allow ‘attracted’ if intention clear)\nsomething deflected horizontally\nC\nsome idea of repeated sweeps/back and\nC\nforth",
+       "codes": [
+        "B1",
+        "M1",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          36.0,
+          324.6,
+          559.0,
+          420.6
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "Describe what happens inside the oscilloscope to turn the spot into a horizontal line.",
        "text": "Describe what happens inside the oscilloscope to turn the spot into a horizontal line."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 4
       },
       {
        "type": "marks",
@@ -296,11 +385,36 @@
      "text": "Where would you connect this alternating p.d. to the oscilloscope?\n...................................................................................................................................",
      "marks": 0,
      "path": "10(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "10(b)(i)",
+       "text": "(b)\n(i)\n(y-)input (allow y-plates)\nF",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          36.0,
+          425.8,
+          559.0,
+          445.9
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "Where would you connect this alternating p.d. to the oscilloscope?",
        "text": "Where would you connect this alternating p.d. to the oscilloscope?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       }
      ]
     },
@@ -328,6 +442,27 @@
      "text": "Fig. 10.2 shows what the trace on the screen might look like.\n1.What change would you see on the screen if you adjusted the x-shift control?\n...................................................................................................................................\n2.What change would you see on the screen if you adjusted the y-shift control?\n...................................................................................................................................\n[3]",
      "marks": 3,
      "path": "10(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "10(b)(ii)",
+       "text": "(ii)\n1. trace moves horizontally/sideways/left/right\nC\n2. trace moves vertically/up/down\nC",
+       "codes": [
+        "B1",
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          36.0,
+          451.1,
+          559.0,
+          509.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -350,6 +485,11 @@
        "text": "2. What change would you see on the screen if you adjusted the y-shift control?"
       },
       {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
+      },
+      {
        "type": "marks",
        "value": 3
       }
@@ -366,10 +506,7 @@
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -380,8 +517,8 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 11,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -397,33 +534,6 @@
    "type": "figure",
    "id": "0625_2003MJ_02_q10_fig10-1",
    "caption": "Fig. 10.1"
-  },
-  {
-   "type": "figure",
-   "id": "0625_2003MJ_02_q10_figA",
-   "caption": null
-  },
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
   }
  ]
 }

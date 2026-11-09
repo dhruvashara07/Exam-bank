@@ -21,7 +21,7 @@
   }
  ],
  "text": "4\nIn an experiment to find the density of some oil, a student takes the following readings.\ncm\nmass of empty measuring jug = 610g\ncm\noil\nmass of jug containing 500cm3 of oil = 1020g",
- "marks": 1,
+ "marks": 8,
  "figures": [
   {
    "caption": "Fig. 4.1",
@@ -61,26 +61,11 @@
    "id": "0625_2002ON_02_q04b_fig4-3",
    "part": "(b)",
    "alt": ""
-  },
-  {
-   "page": 5,
-   "bbox": [
-    95.4,
-    89.0,
-    232.5,
-    295.5
-   ],
-   "id": "0625_2002ON_02_q04_figA",
-   "caption": null,
-   "part": "",
-   "alt": ""
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -118,6 +103,12 @@
        "type": "text",
        "html": "Calculate the mass of oil in the jug.",
        "text": "Calculate the mass of oil in the jug."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "mass of oil =",
+       "unit": "g"
       }
      ]
     },
@@ -150,6 +141,11 @@
        "type": "text",
        "html": "Calculate the density of the oil.",
        "text": "Calculate the density of the oil."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "density of oil ="
       }
      ]
     },
@@ -184,6 +180,11 @@
        "text": "How could the volume of the oil be more accurately measured than with the measuring jug?"
       },
       {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
        "type": "marks",
        "value": 7
       }
@@ -211,23 +212,6 @@
       "working_gap_pt": 82.1,
       "height_pt": 196.6
      }
-    },
-    {
-     "page": 6,
-     "bbox": [
-      30.0,
-      53.4,
-      570.0,
-      57.0
-     ],
-     "continued": true,
-     "answer_space": {
-      "kind": "none",
-      "dotted_lines": 0,
-      "answer_line": null,
-      "working_gap_pt": 0,
-      "height_pt": 3.6
-     }
     }
    ],
    "text": "Water is more dense than oil.\nOn Fig. 4.3, mark approximately where the surface of the same mass of water would be\nif it replaced the oil.\n[1]\nlevel\ncm\nof oil",
@@ -250,16 +234,18 @@
      "caption": "Fig. 4.3"
     },
     {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 82.1
+    },
+    {
      "type": "marks",
      "value": 1
     }
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -270,8 +256,8 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 8,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -290,35 +276,8 @@
   },
   {
    "type": "figure",
-   "id": "0625_2002ON_02_q04_figA",
-   "caption": null
-  },
-  {
-   "type": "figure",
    "id": "0625_2002ON_02_q04_fig4-2",
    "caption": "Fig. 4.2"
-  },
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
   }
  ]
 }

@@ -3,7 +3,7 @@
  "number": 8,
  "segments": [],
  "text": "",
- "marks": 1,
+ "marks": 5,
  "figures": [
   {
    "caption": "Fig. 8.1",
@@ -20,10 +20,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -50,11 +48,35 @@
    "text": "8\n(a)\nIn an electronic circuit, what is a capacitor designed to store? ................................\n[1]",
    "marks": 1,
    "path": "8(a)",
+   "mark_scheme": [
+    {
+     "label": "8(a)",
+     "text": "(a)\nCharge(s) OR energy (NOT electricity (condone as\nC\nextra), charged particles (condone as extra), current,\nelectrons (condone as extra), voltage)",
+     "codes": [
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        36.0,
+        398.6,
+        559.0,
+        443.9
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
      "html": "In an electronic circuit, what is a capacitor designed to store? ……",
      "text": "In an electronic circuit, what is a capacitor designed to store? ……"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -110,6 +132,26 @@
      "text": "Switch S1 is open. Switch S2 is closed and then opened again.\nWhat reading now shows on the voltmeter?\n................................ V",
      "marks": 0,
      "path": "8(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "8(b)(i)",
+       "text": "(b)\n(i)\n0\nC",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          449.2,
+          559.0,
+          469.2
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -125,6 +167,10 @@
        "type": "text",
        "html": "What reading now shows on the voltmeter? …… V",
        "text": "What reading now shows on the voltmeter? …… V"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       }
      ]
     },
@@ -152,6 +198,27 @@
      "text": "S2 is left open and S1 is closed and left closed.\nDescribe what happens to the reading on the voltmeter.\n...................................................................................................................................\n...................................................................................................................................",
      "marks": 0,
      "path": "8(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "8(b)(ii)",
+       "text": "(ii)\nmention of 6V\nF\nmention of rising OR not instantaneous (NOT\nC\n‘reads’)",
+       "codes": [
+        "B1",
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          474.4,
+          559.0,
+          532.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -167,6 +234,11 @@
        "type": "text",
        "html": "Describe what happens to the reading on the voltmeter.",
        "text": "Describe what happens to the reading on the voltmeter."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
       }
      ]
     },
@@ -179,7 +251,7 @@
         30.0,
         491.3,
         570.0,
-        802.0
+        602.0
        ],
        "continued": false,
        "answer_space": {
@@ -187,13 +259,34 @@
         "dotted_lines": 2,
         "answer_line": null,
         "working_gap_pt": 15.8,
-        "height_pt": 310.7
+        "height_pt": 110.7
        }
       }
      ],
      "text": "The circuit in Fig. 8.1 is an example of a simple time-delay circuit.\nState one use of a time-delay circuit.\n...................................................................................................................................\n...................................................................................................................................\n[4]",
      "marks": 4,
      "path": "8(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "8(b)(iii)",
+       "text": "(iii)\nany realistic example of something turned\nF\non/off after a time lapse, e.g. electronic egg\ntimer, turn-off bedside radio",
+       "codes": [
+        "B1",
+        "6"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          537.7,
+          559.0,
+          583.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -204,6 +297,11 @@
        "type": "text",
        "html": "State one use of a time-delay circuit.",
        "text": "State one use of a time-delay circuit."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
       },
       {
        "type": "marks",
@@ -227,10 +325,7 @@
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -241,35 +336,11 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 5,
  "topic": null,
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
- "pipeline_version": "2.1",
- "content": [
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
-  }
- ]
+ "pipeline_version": "2.1"
 }

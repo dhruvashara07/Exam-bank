@@ -21,7 +21,7 @@
   }
  ],
  "text": "7\nBoy A throws a large stone into a large still pond, as illustrated in Fig. 7.1.\nB\nA",
- "marks": 1,
+ "marks": 6,
  "figures": [
   {
    "caption": "Fig. 7.1",
@@ -30,44 +30,16 @@
     98.0,
     94.0,
     497.5,
-    317.5
-   ],
-   "id": "0625_2004MJ_02_q07_fig7-1",
-   "part": "",
-   "alt": ""
-  },
-  {
-   "caption": "Fig. 7.1",
-   "page": 9,
-   "bbox": [
-    277.5,
-    311.0,
-    444.0,
     351.0
    ],
    "id": "0625_2004MJ_02_q07_fig7-1",
    "part": "",
    "alt": ""
-  },
-  {
-   "page": 9,
-   "bbox": [
-    98.0,
-    94.0,
-    497.5,
-    317.5
-   ],
-   "id": "0625_2004MJ_02_q07_figA",
-   "caption": null,
-   "part": "",
-   "alt": ""
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -94,6 +66,24 @@
    "text": "Girl B hears the ‘plop’ sound of the stone entering the water a very short time after she\nsees the splash, but it is many seconds before the water wave reaches the edge of the\npond where she is sitting.\nUse this information to decide which wave travels fastest and which travels slowest.\nWrite ‘fastest’ in one box and ‘slowest’ in another box. Leave one box empty.\nsound wave\nlight wave\nwater wave\n[2]",
    "marks": 2,
    "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "2F\n(a)\nlight wave fastest\n)\n)\nwater wave slowest\n)",
+     "codes": [],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        616.5,
+        559.0,
+        662.5
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -150,6 +140,28 @@
    "text": "In the boxes below, state whether each type of wave is a transverse or a longitudinal\nwave.\nsound wave\nlight wave\nwater wave\n[3]",
    "marks": 3,
    "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "(b)\nlongitudinal\nF\ntransverse\nC\ntransverse\nF",
+     "codes": [
+      "B1",
+      "B1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        667.1,
+        559.0,
+        738.4
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -201,6 +213,27 @@
    "text": "In the boxes below, put a tick alongside any of the types of wave that do notneed a\nsubstance in which to travel.\nsound wave\nlight wave\nwater wave\n[1]",
    "marks": 1,
    "path": "7(c)",
+   "mark_scheme": [
+    {
+     "label": "7(c)",
+     "text": "use \u0001+\u0002 = 0 if extras\n(c)\nlight wave ticked\nF",
+     "codes": [
+      "B1",
+      "6"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        743.0,
+        559.0,
+        776.4
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -229,10 +262,7 @@
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -243,8 +273,8 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 6,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -260,38 +290,6 @@
    "type": "figure",
    "id": "0625_2004MJ_02_q07_fig7-1",
    "caption": "Fig. 7.1"
-  },
-  {
-   "type": "figure",
-   "id": "0625_2004MJ_02_q07_figA",
-   "caption": null
-  },
-  {
-   "type": "figure",
-   "id": "0625_2004MJ_02_q07_fig7-1",
-   "caption": "Fig. 7.1"
-  },
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
   }
  ]
 }

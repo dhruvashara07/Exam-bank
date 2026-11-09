@@ -21,7 +21,7 @@
   }
  ],
  "text": "8\nA, B, C and D are an aluminium bar, an unmagnetised iron bar and two bar magnets. Tests\nare performed to find out which bar is which.\nEach row of Fig. 8.1 shows what happens when two of the bars are placed end to end.\nA\nB\nrepel\nA\nC\nattract\nno effect\nB\nD\nWhich bar is which? Complete the lines below.\nBar A is ........................................................................\nBar B is ........................................................................\nBar C is........................................................................\nBar D is........................................................................\n[4]",
- "marks": 1,
+ "marks": 4,
  "figures": [
   {
    "caption": "Fig. 8.1",
@@ -35,46 +35,37 @@
    "id": "0625_2004MJ_02_q08_fig8-1",
    "part": "",
    "alt": ""
-  },
-  {
-   "page": 10,
-   "bbox": [
-    163.0,
-    118.5,
-    404.7,
-    265.0
-   ],
-   "id": "0625_2004MJ_02_q08_figA",
-   "caption": null,
-   "part": "",
-   "alt": ""
   }
  ],
  "review": {
   "reasons": [],
   "status": "auto"
  },
- "type": "mcq",
- "options": [
+ "type": "structured",
+ "mark_scheme": [
   {
-   "label": "A",
-   "text": ""
-  },
-  {
-   "label": "B",
-   "text": "repel"
-  },
-  {
-   "label": "C",
-   "text": "attract"
-  },
-  {
-   "label": "D",
-   "text": "no effect"
+   "label": "8",
+   "text": "A\nmagnet OR magnetised\nF\nB\nmagnet OR magnetised\nF\nC\niron OR unmagnetised\nC\nD\naluminium\nC",
+   "codes": [
+    "B1",
+    "B1",
+    "B1",
+    "B1",
+    "4"
+   ],
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      36.0,
+      95.9,
+      559.0,
+      167.3
+     ]
+    }
+   ]
   }
  ],
- "has_diagram": true,
- "answer": "A",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -85,8 +76,8 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 4,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -104,35 +95,37 @@
    "caption": "Fig. 8.1"
   },
   {
-   "type": "figure",
-   "id": "0625_2004MJ_02_q08_figA",
-   "caption": null
-  },
-  {
    "type": "text",
    "html": "Which bar is which? Complete the lines below.",
    "text": "Which bar is which? Complete the lines below."
   },
   {
-   "type": "options",
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": "repel"
-    },
-    {
-     "label": "C",
-     "html": "attract"
-    },
-    {
-     "label": "D",
-     "html": "no effect"
-    }
-   ]
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "Bar A is"
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "Bar B is"
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "Bar C is"
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "Bar D is"
+  },
+  {
+   "type": "answer",
+   "kind": "lines"
+  },
+  {
+   "type": "marks",
+   "value": 4
   }
  ]
 }

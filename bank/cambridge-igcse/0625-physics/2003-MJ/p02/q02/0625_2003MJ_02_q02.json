@@ -3,7 +3,7 @@
  "number": 2,
  "segments": [],
  "text": "",
- "marks": 1,
+ "marks": 5,
  "figures": [
   {
    "caption": "Fig. 2.1",
@@ -33,10 +33,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -87,11 +85,37 @@
      "text": "The ball does not move. What is the value of the force F on the other string?\nF = .............................. N",
      "marks": 0,
      "path": "2(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(a)(i)",
+       "text": "(a)\n(i)\n10\nF",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          36.0,
+          223.4,
+          559.0,
+          243.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "The ball does not move. What is the value of the force F on the other string?",
        "text": "The ball does not move. What is the value of the force F on the other string?"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "F =",
+       "unit": "N"
       }
      ]
     },
@@ -119,11 +143,36 @@
      "text": "What change to the rubber ball do the two forces cause?\n...................................................................................................................................\n[2]",
      "marks": 2,
      "path": "2(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(a)(ii)",
+       "text": "(ii)\nstretch OR shape (or suitable sketch)\nC",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          36.0,
+          248.7,
+          559.0,
+          268.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "What change to the rubber ball do the two forces cause?",
        "text": "What change to the rubber ball do the two forces cause?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       },
       {
        "type": "marks",
@@ -199,11 +248,35 @@
      "text": "What is the force exerted by each block on the pot?\n...............N",
      "marks": 0,
      "path": "2(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(b)(i)",
+       "text": "(b)\n(i)\n120\nF",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          36.0,
+          274.0,
+          559.0,
+          294.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "What is the force exerted by each block on the pot? ……N",
        "text": "What is the force exerted by each block on the pot? ……N"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       }
      ]
     },
@@ -231,11 +304,36 @@
      "text": "State the direction of these forces.\n...................................................................................................................................",
      "marks": 0,
      "path": "2(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(b)(ii)",
+       "text": "(ii)\nup(wards) OR vertical (NOT vertically down)\nF\nAccept arrow on diagram",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          36.0,
+          299.3,
+          559.0,
+          332.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "State the direction of these forces.",
        "text": "State the direction of these forces."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       }
      ]
     },
@@ -263,11 +361,37 @@
      "text": "The gardener finds that the blocks sink into the ground, but he must have the pot\nup on blocks to allow the drainage. What can he do to reduce the sinking of the\npot?\n...................................................................................................................................\n[3]",
      "marks": 3,
      "path": "2(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "2(b)(iii)",
+       "text": "(iii)\nincrease size/area of blocks/larger blocks\nF\nOR increase number of blocks\nOR less soil in pot (NOT put pot on harder\nground)",
+       "codes": [
+        "B1",
+        "5"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          36.0,
+          337.3,
+          559.0,
+          395.3
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "The gardener finds that the blocks sink into the ground, but he must have the pot up on blocks to allow the drainage. What can he do to reduce the sinking of the pot?",
        "text": "The gardener finds that the blocks sink into the ground, but he must have the pot up on blocks to allow the drainage. What can he do to reduce the sinking of the pot?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       },
       {
        "type": "marks",
@@ -291,10 +415,7 @@
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -305,35 +426,11 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 5,
  "topic": null,
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
- "pipeline_version": "2.1",
- "content": [
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
-  }
- ]
+ "pipeline_version": "2.1"
 }

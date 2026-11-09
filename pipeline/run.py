@@ -15,6 +15,9 @@ import editable
 from golden import cut_hash
 from layout import page_bounds, visible_lines, ink_boxes, tight_ink, grow_to_ink, split_prose_rows, CONTENT_X0, CONTENT_X1
 from ms import mcq_key, structured_rows
+
+SCAN_QMARKS = {'2002ON_05': {1: 15, 2: 15, 3: 15, 4: 15}}    # 'TOTAL 15' under each question of the scanned mark scheme
+SCAN_TOTALS = {'2002ON_05': 60}    # 'MAXIMUM MARK : 60' on the scanned cover of the Nov 2002 practical mark scheme
 import paths
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -172,8 +175,15 @@ def process(qp_path):
     doc = fitz.open(qp)
     msdoc = fitz.open(ms) if ms else None
     w = Writer(meta)
+    ms_scan = bool(msdoc) and not any(pg.get_text().strip() for pg in msdoc[1:])   # Nov 2002: the mark scheme is page pictures
+    if msdoc and meta.get('total_marks_source') == 'standard' and pv[0] == '0':        # old covers print no total: the mark scheme does
+        mm = re.search(r'MAXIMUM\s+MARK:?\s*(\d+)', ' '.join(pg.get_text() for pg in msdoc[:4]), re.I)
+        if mm:
+            meta['total_marks'], meta['total_marks_source'] = int(mm.group(1)), 'mark scheme'
+        elif f'{year}{session}_{pv}' in SCAN_TOTALS:    # mark scheme cover is a picture: read by eye
+            meta['total_marks'], meta['total_marks_source'] = SCAN_TOTALS[f'{year}{session}_{pv}'], 'mark scheme (scan)'
     key = mcq_key(msdoc) if (msdoc and meta['is_mcq']) else {}
-    ms_rows = structured_rows(msdoc) if (msdoc and not meta['is_mcq']) else []
+    ms_rows = structured_rows(msdoc, meta['paper_type'] == 'practical_test' and pv[0] == '0') if (msdoc and not meta['is_mcq']) else []
     if not msdoc:
         meta['mark_scheme'] = 'missing'
 
@@ -214,6 +224,12 @@ def process(qp_path):
                              and len(row['path']) == len(tuple(x for x in (node.get('path') or '') if x == '(')) + 2)
                 if not exact and not deeper_ok:
                     q['review']['reasons'].append(f"mark scheme row {row['label']} has no matching part in the paper")
+            if meta['paper_type'] == 'practical_test' and not q['marks']:     # pre-2009: marks only in the mark scheme (TOTAL n)
+                tot = [int(c) for r in ms_rows if tuple(r['path']) == (q['number'],) for c in r['marks_codes'] if str(c).isdigit()]
+                if tot:
+                    q['marks'] = tot[-1]
+                elif q['number'] in SCAN_QMARKS.get(f'{year}{session}_{pv}', {}):
+                    q['marks'] = SCAN_QMARKS[f'{year}{session}_{pv}'][q['number']]
             with_ms = {str(q['number'])} if q.get('mark_scheme') else set()
             def collect(n):
                 for k in n.get('parts', []):
@@ -227,7 +243,7 @@ def process(qp_path):
                 if not k.get('mark_scheme') and covered(k['path']):
                     k['mark_scheme_on'] = max((a for a in with_ms if k['path'].startswith(a + '(')), key=len)
             missing = [k['path'] for k in leaves(q) if k.get('marks') and not covered(k['path'])]
-            if missing and msdoc:
+            if missing and msdoc and not ms_scan:
                 q['review']['reasons'].append('no mark scheme for ' + ', '.join(missing))
         q.update({k: meta[k] for k in ('syllabus', 'subject', 'board', 'exam', 'year', 'session', 'season',
                                        'paper', 'variant', 'paper_code', 'paper_type')})

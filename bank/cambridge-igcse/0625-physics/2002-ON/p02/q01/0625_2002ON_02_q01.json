@@ -21,7 +21,7 @@
   }
  ],
  "text": "1\nA baggage handler at an airport lifts a suitcase from the ground and places it on a moving\nbelt. The moving belt then transfers the suitcase to the owner.\nmoving\nbelt\nA\nsuitcase on ground\nB\nsuitcase held\nlevel with belt\nC\nsuitcase moving\non belt",
- "marks": 1,
+ "marks": 4,
  "figures": [
   {
    "caption": "Fig. 1.1",
@@ -35,26 +35,11 @@
    "id": "0625_2002ON_02_q01_fig1-1",
    "part": "",
    "alt": ""
-  },
-  {
-   "page": 2,
-   "bbox": [
-    73.0,
-    105.2,
-    355.0,
-    430.5
-   ],
-   "id": "0625_2002ON_02_q01_figA",
-   "caption": null,
-   "part": "",
-   "alt": ""
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -124,7 +109,7 @@
         30.0,
         589.3,
         570.0,
-        802.0
+        673.5
        ],
        "continued": false,
        "answer_space": {
@@ -132,7 +117,7 @@
         "dotted_lines": 2,
         "answer_line": null,
         "working_gap_pt": 15.8,
-        "height_pt": 212.7
+        "height_pt": 84.2
        }
       }
      ],
@@ -144,6 +129,11 @@
        "type": "text",
        "html": "Explain your answer.",
        "text": "Explain your answer."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
       },
       {
        "type": "marks",
@@ -169,7 +159,7 @@
         30.0,
         59.0,
         570.0,
-        176.0
+        174.0
        ],
        "continued": false,
        "answer_space": {
@@ -177,19 +167,14 @@
         "dotted_lines": 0,
         "answer_line": null,
         "working_gap_pt": 15.8,
-        "height_pt": 117.0
+        "height_pt": 115.0
        }
       }
      ],
-     "text": "Use\n(b)\n(i)\nHow does the total energy of the suitcase in C compare with its energy in B? Tick\none box.\nThe total energy is greater in C than in B.\nThe total energy is the same in C and B.\nThe total energy is less in C than in B.",
+     "text": "(i)\nHow does the total energy of the suitcase in C compare with its energy in B? Tick\none box.\nThe total energy is greater in C than in B.\nThe total energy is the same in C and B.\nThe total energy is less in C than in B.",
      "marks": 0,
      "path": "1(b)(i)",
      "content": [
-      {
-       "type": "text",
-       "html": "<i>Use</i>",
-       "text": "Use"
-      },
       {
        "type": "text",
        "html": "How does the total energy of the suitcase in C compare with its energy in B? Tick",
@@ -226,7 +211,7 @@
         30.0,
         176.0,
         570.0,
-        280.0
+        260.5
        ],
        "continued": false,
        "answer_space": {
@@ -234,7 +219,7 @@
         "dotted_lines": 2,
         "answer_line": null,
         "working_gap_pt": 15.8,
-        "height_pt": 104.0
+        "height_pt": 84.5
        }
       }
      ],
@@ -248,6 +233,11 @@
        "text": "Explain your answer."
       },
       {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
+      },
+      {
        "type": "marks",
        "value": 2
       }
@@ -257,10 +247,7 @@
    "path": "1(b)"
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -271,8 +258,8 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 4,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -288,33 +275,6 @@
    "type": "figure",
    "id": "0625_2002ON_02_q01_fig1-1",
    "caption": "Fig. 1.1"
-  },
-  {
-   "type": "figure",
-   "id": "0625_2002ON_02_q01_figA",
-   "caption": null
-  },
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
   }
  ]
 }

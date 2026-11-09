@@ -63,7 +63,7 @@ def page_bounds(page):
         for l in b['lines']:
             t = ''.join(s['text'] for s in l['spans']).strip()
             y0, y1 = l['bbox'][1], l['bbox'][3]
-            if y0 > 700 and ('©' in t or 'UCLES' in t or 'Turn over' in t or re.search(r'\d{4}/\d\d/[A-Z]/[A-Z]/\d\d', t)):
+            if y0 > 700 and ('©' in t or 'UCLES' in t or 'Turn over' in t or re.search(r'\d{4}/\d{1,2}/[A-Z]/[A-Z]/\d\d', t)):
                 bottom = min(bottom, footer_ink_top(page, l) - 1.0)
             if y0 > 560 and re.match(r'(Permission to reproduce|To avoid the issue of disclosure|Copyright Acknowledgements)', t):
                 rules = [d['rect'].y0 for d in page.get_drawings()
@@ -144,9 +144,14 @@ def ink_boxes(page, top, bottom):
 def label_tokens(page, top, bottom):
     """Candidate structural labels on a page: ('q', n) / ('l', 'a') / ('r', 'ii'), with y and x."""
     toks = []
-    for x0, y0, x1, y1, w, *_ in page.get_text('words'):
+    words = page.get_text('words')
+    for x0, y0, x1, y1, w, *_ in words:
         if y0 < top - 2 or y1 > bottom + 2:
             continue
+        if w == 'Question' and QNUM_X[0] <= x0 <= QNUM_X[1]:     # 'Question 1' heading (Nov 2002 practical test)
+            nxt = [v for v in words if abs(v[1] - y0) < 3 and x1 < v[0] < x1 + 25 and re.fullmatch(r'\d{1,2}', v[4])]
+            if nxt:
+                toks.append({'kind': 'q', 'val': int(nxt[0][4]), 'x0': x0, 'y0': y0, 'y1': y1})
         if QNUM_X[0] <= x0 <= QNUM_X[1] and re.fullmatch(r'\d{1,2}', w):
             toks.append({'kind': 'q', 'val': int(w), 'x0': x0, 'y0': y0, 'y1': y1})
         m = re.fullmatch(r'[a-z]?\(([a-z]{1,4})\)', w)   # some PDFs carry a stray hidden char: 'i(i)'

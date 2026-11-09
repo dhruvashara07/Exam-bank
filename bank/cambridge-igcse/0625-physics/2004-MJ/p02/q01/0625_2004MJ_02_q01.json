@@ -21,7 +21,7 @@
   }
  ],
  "text": "1\nThe clock on a public building has a bell that strikes each hour so that people who cannot\nsee the clock can know what hour of the day it is.\nAt precisely 6 o’clock, the clock starts to strike. It strikes 6 times.\nAt the first strike of the bell, a man’s wrist-watch is as shown in Fig. 1.1.\n12\n11\n1\n2\n10\n9\n3\n8\n4\n7\n5\n6\nWhen the bell strikes for the sixth time, the wrist-watch is as shown in Fig. 1.2.\n12\n11\n1\n2\n10\n9\n3\n8\n4\n7\n5\n6",
- "marks": 1,
+ "marks": 5,
  "figures": [
   {
    "caption": "Fig. 1.1",
@@ -48,39 +48,11 @@
    "id": "0625_2004MJ_02_q01_fig1-2",
    "part": "",
    "alt": ""
-  },
-  {
-   "page": 2,
-   "bbox": [
-    231.0,
-    131.5,
-    363.0,
-    263.5
-   ],
-   "id": "0625_2004MJ_02_q01_figA",
-   "caption": null,
-   "part": "",
-   "alt": ""
-  },
-  {
-   "page": 2,
-   "bbox": [
-    232.5,
-    330.0,
-    364.5,
-    462.0
-   ],
-   "id": "0625_2004MJ_02_q01_figB",
-   "caption": null,
-   "part": "",
-   "alt": ""
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -107,11 +79,42 @@
    "text": "Calculate the time interval between the 1st strike and the 6th strike.\ntime interval = ……………… s[1]",
    "marks": 1,
    "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "(a)\n10\nF",
+     "codes": [
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        121.2,
+        559.0,
+        142.0
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
      "html": "Calculate the time interval between the 1st strike and the 6th strike.",
      "text": "Calculate the time interval between the 1st strike and the 6th strike."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "time interval =",
+     "unit": "s"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 59.5
     },
     {
      "type": "marks",
@@ -143,11 +146,43 @@
    "text": "Calculate the time interval between one strike and the next.\ntime interval = ………………s[2]",
    "marks": 2,
    "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "(b)\ndivision by 5 OR division by 6\nF\n2.0 OR 2\nc.a.o\nC",
+     "codes": [
+      "C1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        146.5,
+        559.0,
+        192.5
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
      "html": "Calculate the time interval between one strike and the next.",
      "text": "Calculate the time interval between one strike and the next."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "time interval =",
+     "unit": "s"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 59.5
     },
     {
      "type": "marks",
@@ -179,11 +214,44 @@
    "text": "At precisely 11 o’clock, the clock starts to strike.\nCalculate the time interval between the 1st strike and the 11th strike.\ntime interval = ………………s[2]",
    "marks": 2,
    "path": "1(c)",
+   "mark_scheme": [
+    {
+     "label": "1(c)",
+     "text": "(c)\n10 × his(b) OR 11 × his(b)\nF\n20\nc.a.o\nC",
+     "codes": [
+      "C1",
+      "A1",
+      "5"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        197.1,
+        559.0,
+        255.8
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
      "html": "At precisely 11 o’clock, the clock starts to strike. Calculate the time interval between the 1st strike and the 11th strike.",
      "text": "At precisely 11 o’clock, the clock starts to strike. Calculate the time interval between the 1st strike and the 11th strike."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "time interval =",
+     "unit": "s"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 59.5
     },
     {
      "type": "marks",
@@ -192,10 +260,7 @@
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -206,8 +271,8 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 5,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -225,11 +290,6 @@
    "caption": "Fig. 1.1"
   },
   {
-   "type": "figure",
-   "id": "0625_2004MJ_02_q01_figA",
-   "caption": null
-  },
-  {
    "type": "text",
    "html": "When the bell strikes for the sixth time, the wrist-watch is as shown in Fig. 1.2.",
    "text": "When the bell strikes for the sixth time, the wrist-watch is as shown in Fig. 1.2."
@@ -238,33 +298,6 @@
    "type": "figure",
    "id": "0625_2004MJ_02_q01_fig1-2",
    "caption": "Fig. 1.2"
-  },
-  {
-   "type": "figure",
-   "id": "0625_2004MJ_02_q01_figB",
-   "caption": null
-  },
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
   }
  ]
 }

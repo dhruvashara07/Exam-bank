@@ -3,14 +3,14 @@
  "number": 3,
  "segments": [],
  "text": "",
- "marks": 1,
+ "marks": 9,
  "figures": [
   {
    "caption": "Fig. 3.1",
    "page": 4,
    "bbox": [
     301.0,
-    109.5,
+    61.5,
     468.0,
     192.5
    ],
@@ -33,10 +33,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -63,7 +61,33 @@
    "text": "3\n(a)\nAn unopened bottle of olive oil has\na mass of 0.97 kg. The empty bottle\nhas a mass of 0.51 kg.\nCalculate the mass of the olive oil.\n0.97kg\n0.51kg\nmass of olive oil = .................................. kg\n[2]",
    "marks": 2,
    "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "(a)\n0.97 – 0.51\nF\n0.46\nF",
+     "codes": [
+      "C1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        414.2,
+        559.0,
+        459.5
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
+    {
+     "type": "figure",
+     "id": "0625_2003MJ_02_q03a_fig3-1",
+     "caption": "Fig. 3.1"
+    },
     {
      "type": "text",
      "html": "An unopened bottle of olive oil has",
@@ -75,9 +99,10 @@
      "text": "a mass of 0.97 kg. The empty bottle has a mass of 0.51 kg. Calculate the mass of the olive oil."
     },
     {
-     "type": "figure",
-     "id": "0625_2003MJ_02_q03a_fig3-1",
-     "caption": "Fig. 3.1"
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "mass of olive oil =",
+     "unit": "kg"
     },
     {
      "type": "marks",
@@ -133,11 +158,37 @@
      "text": "What is the volume of the olive oil in the third measuring cylinder?\nvolume = .................................. cm3",
      "marks": 0,
      "path": "3(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(i)",
+       "text": "(b)\n(i)\n15\nF",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          36.0,
+          464.8,
+          559.0,
+          484.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "What is the volume of the olive oil in the third measuring cylinder?",
        "text": "What is the volume of the olive oil in the third measuring cylinder?"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "volume =",
+       "unit": "cm3"
       }
      ]
     },
@@ -165,11 +216,37 @@
      "text": "Calculate the volume of the olive oil in the unopened bottle.\nvolume = .................................. cm3",
      "marks": 0,
      "path": "3(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(ii)",
+       "text": "(ii)\n515 e.c.f.\nC",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          36.0,
+          490.0,
+          559.0,
+          510.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "Calculate the volume of the olive oil in the unopened bottle.",
        "text": "Calculate the volume of the olive oil in the unopened bottle."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "volume =",
+       "unit": "cm3"
       }
      ]
     },
@@ -182,7 +259,7 @@
         30.0,
         649.0,
         570.0,
-        802.0
+        766.5
        ],
        "continued": false,
        "answer_space": {
@@ -190,18 +267,48 @@
         "dotted_lines": 1,
         "answer_line": "density = ……",
         "working_gap_pt": 74.8,
-        "height_pt": 153.0
+        "height_pt": 117.5
        }
       }
      ],
      "text": "Calculate the density of the olive oil. Express your answer to 2 significant figures.\ndensity = ..................................\n[7]",
      "marks": 7,
      "path": "3(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(iii)",
+       "text": "(iii)\nD = M/V in any form, seen or implied\nF\n(words/letters/mix)\nEITHER\nOR\nOR\n460\n0.46\n0.46\nC\n-6\n515 \u0001 10 e.c.f.\n515\n515\n-4\n8.932… \u0001 10\n0.8932…\n893.2…No e.c.f.\nC\n(any number of significant figures)\n-4\n8.9 \u0001 10\n0.89\n890 (e.c.f. for\nC\nsignificant\nfigures)\n3\n3\n3\ng/cm\nkg/cm\nkg/m\nF\n3\n-04\n(0.89 kg/dm is\n(NOT 8.9\n)\nOK)",
+       "codes": [
+        "C1",
+        "C1",
+        "C1",
+        "A1",
+        "B1",
+        "9"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          36.0,
+          515.4,
+          559.0,
+          750.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "Calculate the density of the olive oil. Express your answer to 2 significant figures.",
        "text": "Calculate the density of the olive oil. Express your answer to 2 significant figures."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "density ="
       },
       {
        "type": "marks",
@@ -225,10 +332,7 @@
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -239,35 +343,11 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 9,
  "topic": null,
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
- "pipeline_version": "2.1",
- "content": [
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
-  }
- ]
+ "pipeline_version": "2.1"
 }

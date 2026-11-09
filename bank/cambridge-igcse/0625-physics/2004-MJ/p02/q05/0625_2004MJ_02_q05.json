@@ -21,7 +21,7 @@
   }
  ],
  "text": "5\nFig. 5.1 shows a shallow dish containing a liquid that evaporates easily. The bulb of a\nthermometer is held in the liquid. A jet of air is blown over the surface of the liquid, so that the\nliquid evaporates rapidly.\nthermometer\njet of air\nliquid\nshallow dish",
- "marks": 1,
+ "marks": 4,
  "figures": [
   {
    "caption": "Fig. 5.1",
@@ -35,26 +35,11 @@
    "id": "0625_2004MJ_02_q05_fig5-1",
    "part": "",
    "alt": ""
-  },
-  {
-   "page": 7,
-   "bbox": [
-    48.0,
-    121.0,
-    519.0,
-    301.5
-   ],
-   "id": "0625_2004MJ_02_q05_figA",
-   "caption": null,
-   "part": "",
-   "alt": ""
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -81,11 +66,36 @@
    "text": "State what happens to the reading shown on the thermometer.\n......................................................................................................................................[1]",
    "marks": 1,
    "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "(a)\ndrops OR decreases OR cools down\nF",
+     "codes": [
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        336.7,
+        559.0,
+        357.5
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
      "html": "State what happens to the reading shown on the thermometer.",
      "text": "State what happens to the reading shown on the thermometer."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
     },
     {
      "type": "marks",
@@ -117,11 +127,37 @@
    "text": "Explain your answer to (a) in terms of the behaviour of the molecules of the liquid.\n..........................................................................................................................................\n..........................................................................................................................................\n......................................................................................................................................[2]",
    "marks": 2,
    "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "(b)\nidea of loss of molecules (from surface) OR\nF\nmolecules evaporate\nmore energetic/faster molecules\nC\n(SPECIAL CASE remaining molecules slower B1)",
+     "codes": [
+      "M1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        362.0,
+        559.0,
+        433.3
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
      "html": "Explain your answer to <b>(a)</b> in terms of the behaviour of the molecules of the liquid.",
      "text": "Explain your answer to (a) in terms of the behaviour of the molecules of the liquid."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 3
     },
     {
      "type": "marks",
@@ -153,11 +189,37 @@
    "text": "State one example in everyday life where the effect demonstrated by this experiment\noccurs.\n......................................................................................................................................[1]",
    "marks": 1,
    "path": "5(c)",
+   "mark_scheme": [
+    {
+     "label": "5(c)",
+     "text": "(c)\nany sensible example where cooling is noticeable\nC\ne.g. (feeling cold) after swimming, sweating,\nrefrigerators",
+     "codes": [
+      "B1",
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        437.9,
+        559.0,
+        484.0
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
      "html": "State one example in everyday life where the effect demonstrated by this experiment occurs.",
      "text": "State one example in everyday life where the effect demonstrated by this experiment occurs."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
     },
     {
      "type": "marks",
@@ -166,10 +228,7 @@
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -180,8 +239,8 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 4,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -197,33 +256,6 @@
    "type": "figure",
    "id": "0625_2004MJ_02_q05_fig5-1",
    "caption": "Fig. 5.1"
-  },
-  {
-   "type": "figure",
-   "id": "0625_2004MJ_02_q05_figA",
-   "caption": null
-  },
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
   }
  ]
 }

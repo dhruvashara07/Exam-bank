@@ -3,7 +3,7 @@
  "number": 12,
  "segments": [],
  "text": "",
- "marks": 1,
+ "marks": 10,
  "figures": [
   {
    "caption": "Fig. 12.1",
@@ -33,10 +33,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -104,7 +102,7 @@
         30.0,
         433.7,
         570.0,
-        802.0
+        492.0
        ],
        "continued": false,
        "answer_space": {
@@ -112,7 +110,7 @@
         "dotted_lines": 1,
         "answer_line": null,
         "working_gap_pt": 15.8,
-        "height_pt": 368.3
+        "height_pt": 58.3
        }
       }
      ],
@@ -124,6 +122,11 @@
        "type": "text",
        "html": "What name do we use to describe what happens to the beam at A?",
        "text": "What name do we use to describe what happens to the beam at A?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       },
       {
        "type": "marks",
@@ -192,6 +195,11 @@
      "text": "Complete Fig. 12.2 to show what happens to the red and the violet light."
     },
     {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 113.3
+    },
+    {
      "type": "marks",
      "value": 2
     }
@@ -226,6 +234,11 @@
      "type": "text",
      "html": "The beam of red and violet light is replaced by a narrow beam of white light from the Sun. State what is now seen on the screen.",
      "text": "The beam of red and violet light is replaced by a narrow beam of white light from the Sun. State what is now seen on the screen."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
     },
     {
      "type": "marks",
@@ -318,6 +331,11 @@
        "type": "text",
        "html": "Why can infra-red not be seen on the screen?",
        "text": "Why can infra-red not be seen on the screen?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       }
      ]
     },
@@ -330,7 +348,7 @@
         30.0,
         630.9,
         570.0,
-        802.0
+        689.5
        ],
        "continued": false,
        "answer_space": {
@@ -338,7 +356,7 @@
         "dotted_lines": 1,
         "answer_line": null,
         "working_gap_pt": 15.8,
-        "height_pt": 171.1
+        "height_pt": 58.6
        }
       }
      ],
@@ -350,6 +368,11 @@
        "type": "text",
        "html": "What could be used to detect the infra-red radiation?",
        "text": "What could be used to detect the infra-red radiation?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       },
       {
        "type": "marks",
@@ -368,10 +391,7 @@
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -382,35 +402,11 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 10,
  "topic": null,
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
- "pipeline_version": "2.1",
- "content": [
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
-  }
- ]
+ "pipeline_version": "2.1"
 }

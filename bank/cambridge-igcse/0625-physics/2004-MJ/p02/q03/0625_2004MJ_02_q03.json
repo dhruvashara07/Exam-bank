@@ -21,7 +21,7 @@
   }
  ],
  "text": "3\nFig. 3.1 shows the speed-time graph of part of a short journey made by a cyclist.\n25\nspeed\nP\nQ\n20\nm/s\n15\n10\n5\nR\n0\n0\n10\n20\n30\n40\n50\n60\n70\n80\n90\n100\ntime/s",
- "marks": 1,
+ "marks": 10,
  "figures": [
   {
    "caption": "Fig. 3.1",
@@ -35,26 +35,11 @@
    "id": "0625_2004MJ_02_q03_fig3-1",
    "part": "",
    "alt": ""
-  },
-  {
-   "page": 4,
-   "bbox": [
-    115.6,
-    91.5,
-    478.1,
-    285.8
-   ],
-   "id": "0625_2004MJ_02_q03_figA",
-   "caption": null,
-   "part": "",
-   "alt": ""
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -81,11 +66,36 @@
    "text": "Which part of Fig. 3.1 shows when the cyclist is travelling at constant speed?\n......................................................................................................................................[1]",
    "marks": 1,
    "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "(a)\nPQ or 0-50s or the horizontal part\nF\nNOT just P or just Q",
+     "codes": [
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        451.1,
+        559.0,
+        484.5
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
      "html": "Which part of Fig. 3.1 shows when the cyclist is travelling at constant speed?",
      "text": "Which part of Fig. 3.1 shows when the cyclist is travelling at constant speed?"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
     },
     {
      "type": "marks",
@@ -117,11 +127,36 @@
    "text": "State what is happening during the rest of the journey shown in Fig. 3.1.\n......................................................................................................................................[1]",
    "marks": 1,
    "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "(b)\nchanging speed (however indicated) NO e.c.f from\nF\n(a). ACCEPT “acceleration”\nbut NOT “increasing speed”",
+     "codes": [
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        489.0,
+        559.0,
+        535.1
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
      "html": "State what is happening during the rest of the journey shown in Fig. 3.1.",
      "text": "State what is happening during the rest of the journey shown in Fig. 3.1."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
     },
     {
      "type": "marks",
@@ -159,11 +194,43 @@
      "text": "(i)\nCalculate the distance travelled during the first 50 s.\ndistance travelled = …………………... m",
      "marks": 0,
      "path": "3(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "3(c)(i)",
+       "text": "(i)\n20 × 50\nF\n1000\nF",
+       "codes": [
+        "C1",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          36.0,
+          577.5,
+          559.0,
+          623.6
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "Calculate the distance travelled during the first 50 s.",
        "text": "Calculate the distance travelled during the first 50 s."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "distance travelled =",
+       "unit": "... m"
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 87.9
       }
      ]
     },
@@ -191,11 +258,43 @@
      "text": "Calculate the distance travelled between 50 s and 100 s.\ndistance travelled = …………………... m",
      "marks": 0,
      "path": "3(c)(ii)",
+     "mark_scheme": [
+      {
+       "label": "3(c)(ii)",
+       "text": "(ii)\n½ × 20 × 50 OR ½ × his(i)\nC\n500\nC",
+       "codes": [
+        "C1",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          36.0,
+          628.1,
+          559.0,
+          674.2
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "Calculate the distance travelled between 50 s and 100 s.",
        "text": "Calculate the distance travelled between 50 s and 100 s."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "distance travelled =",
+       "unit": "... m"
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 87.9
       }
      ]
     },
@@ -223,6 +322,26 @@
      "text": "Calculate the total distance travelled.\ntotal distance travelled = …………………... m",
      "marks": 0,
      "path": "3(c)(iii)",
+     "mark_scheme": [
+      {
+       "label": "3(c)(iii)",
+       "text": "(iii)\nhis(i) + (ii) correctly evaluated\nF",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          36.0,
+          678.7,
+          559.0,
+          699.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -233,6 +352,11 @@
        "type": "text",
        "html": "total distance travelled = ……... m",
        "text": "total distance travelled = ……... m"
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 87.9
       }
      ]
     },
@@ -260,11 +384,43 @@
      "text": "Calculate the average speed during the 100 s.\naverage speed = …………………... m/s\n[8]",
      "marks": 8,
      "path": "3(c)(iv)",
+     "mark_scheme": [
+      {
+       "label": "3(c)(iv)",
+       "text": "(iv)\nhis(iii)/100 OR total distance/total time stated\nF\ncorrect evaluation\nF",
+       "codes": [
+        "C1",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          36.0,
+          704.0,
+          559.0,
+          762.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "Calculate the average speed during the 100 s.",
        "text": "Calculate the average speed during the 100 s."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "average speed =",
+       "unit": "... m/s"
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 87.9
       },
       {
        "type": "marks",
@@ -273,13 +429,30 @@
      ]
     }
    ],
-   "path": "3(c)"
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "(c)\ndistance = area indicated in words or figures\nF\nanywhere in (c)",
+     "codes": [
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        539.6,
+        559.0,
+        573.0
+       ]
+      }
+     ]
+    }
+   ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -290,8 +463,8 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 10,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -307,33 +480,6 @@
    "type": "figure",
    "id": "0625_2004MJ_02_q03_fig3-1",
    "caption": "Fig. 3.1"
-  },
-  {
-   "type": "figure",
-   "id": "0625_2004MJ_02_q03_figA",
-   "caption": null
-  },
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
   }
  ]
 }

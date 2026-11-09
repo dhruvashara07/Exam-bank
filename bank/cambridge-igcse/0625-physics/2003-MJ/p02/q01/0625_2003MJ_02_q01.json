@@ -21,7 +21,7 @@
   }
  ],
  "text": "1\nA person winds some thread tightly 4 times round the length of a metre rule and cuts the\nends off level with the left-hand end of the rule, as shown in Fig. 1.1.\nends cut\noff here\nthread\n1m rule",
- "marks": 1,
+ "marks": 2,
  "figures": [
   {
    "caption": "Fig. 1.1",
@@ -35,26 +35,11 @@
    "id": "0625_2003MJ_02_q01_fig1-1",
    "part": "",
    "alt": ""
-  },
-  {
-   "page": 2,
-   "bbox": [
-    98.2,
-    103.3,
-    469.2,
-    188.0
-   ],
-   "id": "0625_2003MJ_02_q01_figA",
-   "caption": null,
-   "part": "",
-   "alt": ""
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -81,11 +66,40 @@
    "text": "To the nearest metre, what is the length of the thread?\n.................. m [1]",
    "marks": 1,
    "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "(a)\n8\nF",
+     "codes": [
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        95.9,
+        559.0,
+        116.0
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
      "html": "To the nearest metre, what is the length of the thread?",
      "text": "To the nearest metre, what is the length of the thread?"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "m"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -102,7 +116,7 @@
       30.0,
       280.8,
       570.0,
-      802.0
+      391.5
      ],
      "continued": false,
      "answer_space": {
@@ -110,13 +124,34 @@
       "dotted_lines": 2,
       "answer_line": null,
       "working_gap_pt": 15.8,
-      "height_pt": 521.2
+      "height_pt": 110.7
      }
     }
    ],
    "text": "Is the actual length of thread slightly greater or slightly less than your answer to (a)?\nTick one box and give your reason.\nslightly greater\nslightly less\nreason .......................................................................................................................\n...............................................................................................................................[1]",
    "marks": 1,
    "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "(b)\nEITHER\nOR\ngreater\nsmaller\nAND\nAND\nF\nThickness of rule\nthread stretched when\non rule\nOR overlap at ends\nOR worn rule ends",
+     "codes": [
+      "B1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        121.2,
+        559.0,
+        204.5
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -129,16 +164,23 @@
      "text": "slightly greater slightly less"
     },
     {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "reason"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
      "type": "marks",
      "value": 1
     }
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -149,8 +191,8 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 2,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -166,33 +208,6 @@
    "type": "figure",
    "id": "0625_2003MJ_02_q01_fig1-1",
    "caption": "Fig. 1.1"
-  },
-  {
-   "type": "figure",
-   "id": "0625_2003MJ_02_q01_figA",
-   "caption": null
-  },
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
   }
  ]
 }

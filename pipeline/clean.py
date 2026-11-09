@@ -7,7 +7,7 @@ We delete every q..Q group that directly sets a /gRLs0* graphics state, plus the
 final top-level group that carries the outline watermark and footer text.
 Files without the watermark are copied unchanged.
 """
-import re, sys, pathlib, pikepdf
+import os, re, sys, pathlib, pikepdf
 
 MARK = '/gRLs0'
 
@@ -117,6 +117,39 @@ def strip_stamp_images(path):
     return len(stamps)
 
 
+def strip_examiner_rule_drawn(path):
+    """2002-2004 papers: the rule of the 'For Examiner's Use' column is not a vector path (no rule for
+    strip_examiner_column to find) but a thin line in the page's drawing: it would sit inside every piece. Found by
+    rendering the right-hand strip: a very thin vertical ink run over most of the page height, on pages that carry the
+    heading. Painted white; returns the number of pages changed."""
+    import numpy as np
+    import pymupdf as fitz
+    doc = fitz.open(path)
+    n = 0
+    for page in doc:
+        W, H = page.rect.width, page.rect.height
+        if W > H or not any(w[4].startswith('Examiner') and w[0] > 0.85 * W and w[1] < 75 for w in page.get_text('words')):
+            continue
+        if any(d['rect'].width < 1.5 and d['rect'].height > 0.6 * H for d in page.get_drawings()):
+            continue                       # a vector rule: strip_examiner_column removes it
+        clip = fitz.Rect(0.8 * W, 0, 0.97 * W, H)
+        pm = page.get_pixmap(matrix=fitz.Matrix(4, 4), clip=clip, colorspace=fitz.csGRAY)
+        ink = np.frombuffer(pm.samples, dtype=np.uint8).reshape(pm.height, pm.width) < 200
+        cols = np.nonzero(ink.sum(axis=0) > 0.6 * pm.height)[0]
+        if not len(cols) or cols.max() - cols.min() > 8:     # more than 2 pt wide: not a hairline rule
+            continue
+        xa, xb = clip.x0 + cols.min() / 4 - 0.5, clip.x0 + (cols.max() + 1) / 4 + 0.5
+        page.draw_rect(fitz.Rect(xa, 0, xb, H), color=None, fill=(1, 1, 1), overlay=True)
+        n += 1
+    if n:
+        doc.save(path + '.tmp')
+        doc.close()
+        os.replace(path + '.tmp', path)
+    else:
+        doc.close()
+    return n
+
+
 def strip_examiner_column(path):
     """Older question papers (2013 and before) have a 'For Examiner's Use' column: a thin vertical rule
     near the page edge running down most of the page, headed by 'For / Examiner's / Use'. It is page
@@ -130,10 +163,12 @@ def strip_examiner_column(path):
         rules = [d['rect'] for d in page.get_drawings()
                  if d['rect'].width < 1.5 and d['rect'].height > 0.6 * H
                  and (d['rect'].x0 > 0.8 * W or d['rect'].x1 < 0.2 * W)]
-        if not rules:
-            continue
         words = page.get_text('words')
         hits = []
+        # 2002-2004 papers: the heading 'For / Examiner's / Use' stays at the top right with no long rule beside it
+        corner = [w for w in words if w[0] > 0.85 * W and w[1] < 75 and w[4].replace('’', "'") in ('For', "Examiner's", 'Use')]
+        if not rules and any(w[4].startswith('Examiner') for w in corner):
+            hits += [('text', fitz.Rect(w[:4])) for w in corner]
         for r in rules:
             near = [w for w in words if w[1] < r.y0 + 40 and w[3] > r.y0 - 15
                     and min(abs(w[0] - r.x0), abs(w[2] - r.x0)) < 45]
@@ -192,6 +227,22 @@ def to_a4(pdf, page):
     return True
 
 
+def drop_answer_booklet(path):
+    """Nov 2002 practical test: the PDF holds the question paper and the Answer Booklet (cover 'ANSWER BOOKLET ...
+    FOR EXAMINER'S USE', then ruled pages). The booklet is not part of the paper: leave its pages out of the cleaned copy."""
+    import pymupdf as fitz
+    d = fitz.open(path)
+    for i in range(1, len(d)):
+        t = d[i].get_text().upper()
+        if 'ANSWER BOOKLET' in t and 'FOR EXAMINER' in t:
+            d.delete_pages(i, len(d) - 1)
+            d.save(path + '.tmp')
+            d.close()
+            os.replace(path + '.tmp', path)
+            return
+    d.close()
+
+
 def clean(src, dst):
     pdf = pikepdf.open(src)
     n = sum(clean_page(pdf, p) for p in pdf.pages)
@@ -204,7 +255,9 @@ def clean(src, dst):
     strip_stamp_images(dst)
     if '/qp_' in src.replace('\\', '/'):
         strip_corner_marks(dst)
+        strip_examiner_rule_drawn(dst)
         strip_examiner_column(dst)
+        drop_answer_booklet(dst)
     return n
 
 if __name__ == '__main__':

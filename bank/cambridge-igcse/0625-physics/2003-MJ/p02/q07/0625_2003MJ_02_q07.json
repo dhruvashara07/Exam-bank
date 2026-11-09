@@ -21,7 +21,7 @@
   }
  ],
  "text": "7\nThe speed of sound in air is 340 m/s.",
- "marks": 1,
+ "marks": 10,
  "figures": [
   {
    "caption": "Fig. 7.1",
@@ -65,7 +65,7 @@
  ],
  "review": {
   "reasons": [
-   "answer key not found in mark scheme"
+   "mark scheme row 7(c)(iii) has no matching part in the paper"
   ],
   "status": "flagged"
  },
@@ -94,6 +94,26 @@
    "text": "Complete Fig. 7.1 to show how far a sound wave has travelled 2, 3, 4 and 5 seconds\nafter the sound was made.\n[1]\ntime elapsed/s\n0\n1\n2\n3\n4\n5\ndistance travelled/m\n0\n340",
    "marks": 1,
    "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "(a)\n680\n1020\n1360\n1700\nF",
+     "codes": [
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        36.0,
+        70.6,
+        559.0,
+        90.7
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -120,7 +140,7 @@
       30.0,
       216.0,
       570.0,
-      802.0
+      605.5
      ],
      "continued": false,
      "answer_space": {
@@ -128,13 +148,34 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 46.5,
-      "height_pt": 586.0
+      "height_pt": 389.5
      }
     }
    ],
    "text": "On Fig. 7.2, draw the graph of distance travelled against time for the sound wave.\n[3]\ndistance\ntravelled\n/m\n2000\n1500\n1000\n500\n0\n0\n1\n2\n3\n4\n5\ntime/s",
    "marks": 3,
    "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "(b)\n5 points plotted\u0001\n1\nF\nsmall square (-1 e.e.o.o.)\n2\nignore 0,0 (e.c.f.)\nF\nreasonable line through his points –\ndrawn with rule/thickness reasonable",
+     "codes": [
+      "B2",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        36.0,
+        95.9,
+        559.0,
+        172.0
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -145,6 +186,11 @@
      "type": "figure",
      "id": "0625_2003MJ_02_q07b_fig7-2",
      "caption": "Fig. 7.2"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 46.5
     },
     {
      "type": "marks",
@@ -200,11 +246,39 @@
      "text": "A lifeboat crew hear the bang and see the flash, but not at the same time.\nState which reaches the lifeboat first, the bang or the flash, and give a reason.\n...................................................................................................................................\n...................................................................................................................................\n...................................................................................................................................",
      "marks": 0,
      "path": "7(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "7(c)(i)",
+       "text": "(c)\n(i)\nflash\nF\nlight travels quickly OR sound travels slowly\nF\n(accept figure)\nlight travels faster than sound (accept figure)\nF\nlight travels much faster than sound (accept\nC\nfigures)",
+       "codes": [
+        "B1",
+        "C1",
+        "C1",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          177.2,
+          559.0,
+          298.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "A lifeboat crew hear the bang and see the flash, but not at the same time. State which reaches the lifeboat first, the bang or the flash, and give a reason.",
        "text": "A lifeboat crew hear the bang and see the flash, but not at the same time. State which reaches the lifeboat first, the bang or the flash, and give a reason."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 3
       }
      ]
     },
@@ -232,11 +306,18 @@
      "text": "The time interval in (c)(i)is 4.2 s. Use your graph in (b)to find how far away the\nlifeboat is from the flare. Show clearly on your graph how you got your answer.\ndistance of lifeboat = .................................. m\n[6]",
      "marks": 6,
      "path": "7(c)(ii)",
+     "mark_scheme_on": "7(c)",
      "content": [
       {
        "type": "text",
        "html": "The time interval in <b>(c)(i)</b> is 4.2 s. Use your graph in <b>(b)</b> to find how far away the lifeboat is from the flare. Show clearly on your graph how you got your answer.",
        "text": "The time interval in (c)(i) is 4.2 s. Use your graph in (b) to find how far away the lifeboat is from the flare. Show clearly on your graph how you got your answer."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "distance of lifeboat =",
+       "unit": "m"
       },
       {
        "type": "marks",
@@ -246,6 +327,27 @@
     }
    ],
    "path": "7(c)",
+   "mark_scheme": [
+    {
+     "label": "7(c)(iii)",
+     "text": "(iii)\n1400 - 1450 OR correct value from his graph\nF\n\u0001\n1\nsquare\n2\nF\nclear and correct indication on graph of how\nobtained (minimum: dot at appropriate point)",
+     "codes": [
+      "B1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        36.0,
+        303.7,
+        559.0,
+        379.7
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -265,10 +367,7 @@
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -279,8 +378,8 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 10,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -291,28 +390,6 @@
    "type": "text",
    "html": "The speed of sound in air is 340 m/s.",
    "text": "The speed of sound in air is 340 m/s."
-  },
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
   }
  ]
 }

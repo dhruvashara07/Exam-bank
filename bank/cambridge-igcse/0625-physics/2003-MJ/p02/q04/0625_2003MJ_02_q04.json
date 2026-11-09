@@ -21,7 +21,7 @@
   }
  ],
  "text": "4\nThe air trapped in a cylinder by a piston is kept under pressure by a load, as shown in\nFig. 4.1.\nfixed\npivot\nload\npiston\ncylinder\nair",
- "marks": 1,
+ "marks": 6,
  "figures": [
   {
    "caption": "Fig. 4.1",
@@ -35,26 +35,11 @@
    "id": "0625_2003MJ_02_q04_fig4-1",
    "part": "",
    "alt": ""
-  },
-  {
-   "page": 5,
-   "bbox": [
-    122.4,
-    103.0,
-    445.9,
-    320.2
-   ],
-   "id": "0625_2003MJ_02_q04_figA",
-   "caption": null,
-   "part": "",
-   "alt": ""
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -81,11 +66,38 @@
    "text": "Describe how the pressure in the cylinder is caused by the air molecules.\n..........................................................................................................................................\n..........................................................................................................................................\n......................................................................................................................................[3]",
    "marks": 3,
    "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "(a)\nidea of air molecules moving (allow vibrating)\nF\n(N.B. ‘collide’ = ‘moving’)\nidea of air molecules striking something (condone\nF\nthemselves)\nidea of air molecules striking walls\nC",
+     "codes": [
+      "C1",
+      "C1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        83.3,
+        559.0,
+        179.3
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
      "html": "Describe how the pressure in the cylinder is caused by the air molecules.",
      "text": "Describe how the pressure in the cylinder is caused by the air molecules."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 3
     },
     {
      "type": "marks",
@@ -141,11 +153,36 @@
      "text": "State what happens to the piston.\n...................................................................................................................................",
      "marks": 0,
      "path": "4(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(i)",
+       "text": "(b)\n(i)\nmoves down\nF",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          184.5,
+          559.0,
+          204.6
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "State what happens to the piston.",
        "text": "State what happens to the piston."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       }
      ]
     },
@@ -173,11 +210,48 @@
      "text": "State what happens to the pressure in the cylinder, and give a reason.\nwhat happens ...........................................................................................................\n...................................................................................................................................\nreason .......................................................................................................................\n...................................................................................................................................\n[3]",
      "marks": 3,
      "path": "4(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(ii)",
+       "text": "(ii)\nincreases (e.c.f.)\nF\nidea of more collisions\nmust follow\nC\n(per unit time) (e.c.f.)\nfrom (i)\nOR P\u0001\n1\nV",
+       "codes": [
+        "M1",
+        "A1",
+        "6"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          209.8,
+          559.0,
+          284.6
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "State what happens to the pressure in the cylinder, and give a reason.",
        "text": "State what happens to the pressure in the cylinder, and give a reason."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "what happens"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "reason"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
       },
       {
        "type": "marks",
@@ -196,10 +270,7 @@
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -210,8 +281,8 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 6,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -227,33 +298,6 @@
    "type": "figure",
    "id": "0625_2003MJ_02_q04_fig4-1",
    "caption": "Fig. 4.1"
-  },
-  {
-   "type": "figure",
-   "id": "0625_2003MJ_02_q04_figA",
-   "caption": null
-  },
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
   }
  ]
 }

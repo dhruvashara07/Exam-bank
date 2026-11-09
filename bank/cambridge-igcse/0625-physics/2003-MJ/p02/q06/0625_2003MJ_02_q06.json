@@ -21,7 +21,7 @@
   }
  ],
  "text": "6\nIn this question, drawing should be done carefully.\nFig. 6.1 shows a ray of light striking mirror 1 at point X.\nray of\nmirror 2\nlight\nX\nmirror 1",
- "marks": 1,
+ "marks": 4,
  "figures": [
   {
    "caption": "Fig. 6.1",
@@ -35,26 +35,11 @@
    "id": "0625_2003MJ_02_q06_fig6-1",
    "part": "",
    "alt": ""
-  },
-  {
-   "page": 7,
-   "bbox": [
-    134.4,
-    116.8,
-    433.8,
-    248.8
-   ],
-   "id": "0625_2003MJ_02_q06_figA",
-   "caption": null,
-   "part": "",
-   "alt": ""
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -105,6 +90,26 @@
      "text": "draw the normal at X,",
      "marks": 0,
      "path": "6(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(a)(i)",
+       "text": "(a)\n(i)\nnormal correct, by eye\nF",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          533.9,
+          559.0,
+          559.2
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -137,6 +142,26 @@
      "text": "draw the ray reflected from mirror 1,",
      "marks": 0,
      "path": "6(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "6(a)(ii)",
+       "text": "(ii)\nreflected ray correct, by eye (ignore normal;\nF\nignore any arrow)",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          559.2,
+          559.0,
+          591.9
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -169,6 +194,26 @@
      "text": "mark the angle of incidence using the letter iand the angle of reflection using the\nletter r.\n[3]",
      "marks": 3,
      "path": "6(a)(iii)",
+     "mark_scheme": [
+      {
+       "label": "6(a)(iii)",
+       "text": "both i and r correctly marked (condone\n(iii)\nF\nsloppy normal and sloppy refracted ray)",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          597.1,
+          559.0,
+          629.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -215,6 +260,27 @@
    "text": "Mirror 2 is parallel to mirror 1. The reflected ray from mirror 1 strikes mirror 2.\nCompare the direction of the ray reflected from mirror 2 with the incident ray at X. You\nmay do a further construction if you wish. Complete the sentence below.\nThe reflected ray from mirror 2 is .....................................................................................\n......................................................................................................................................[1]",
    "marks": 1,
    "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "(b)\nparallel to ray striking mirror 1 (allow incident ray)\nC\nOR same direction (NOT equal/same as)\n(N.B. sentence must be completed, i.e. no inference\nfrom line on diagram)",
+     "codes": [
+      "B1",
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        635.1,
+        559.0,
+        693.1
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -232,16 +298,18 @@
      "text": "The reflected ray from mirror 2 is ……"
     },
     {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
      "type": "marks",
      "value": 1
     }
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -252,8 +320,8 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 4,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -274,33 +342,6 @@
    "type": "figure",
    "id": "0625_2003MJ_02_q06_fig6-1",
    "caption": "Fig. 6.1"
-  },
-  {
-   "type": "figure",
-   "id": "0625_2003MJ_02_q06_figA",
-   "caption": null
-  },
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
   }
  ]
 }

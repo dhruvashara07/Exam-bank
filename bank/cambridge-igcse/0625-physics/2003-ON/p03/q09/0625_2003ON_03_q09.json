@@ -33,11 +33,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "mark scheme row 9(c)(i) has no matching part in the paper",
-   "mark scheme row 9(c)(ii) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -332,25 +329,6 @@
          ]
         }
        ]
-      },
-      {
-       "label": "9(b)(i)",
-       "text": "sum of currents at junction = current after junction/12.5 A = 5.0 A + I\nvalue is 7.5 A",
-       "codes": [
-        "C1",
-        "A1"
-       ],
-       "segments": [
-        {
-         "page": 4,
-         "bbox": [
-          36.0,
-          116.9,
-          559.0,
-          151.9
-         ]
-        }
-       ]
       }
      ],
      "content": [
@@ -409,25 +387,6 @@
          ]
         }
        ]
-      },
-      {
-       "label": "9(b)(ii)",
-       "text": "power = VI or is 7.5 x 12 e.c.f from (i)\nvalue is 90 W",
-       "codes": [
-        "C1",
-        "A1"
-       ],
-       "segments": [
-        {
-         "page": 4,
-         "bbox": [
-          36.0,
-          151.9,
-          559.0,
-          186.9
-         ]
-        }
-       ]
       }
      ],
      "content": [
@@ -475,14 +434,11 @@
      "mark_scheme": [
       {
        "label": "9(b)(iii)",
-       "text": "difference in time of runners finishing race or other timing between two closely\nseparated events.\ncurrent = power/voltage or 150/12\nvalue is 12.5 A",
+       "text": "difference in time of runners finishing race or other timing between two closely\nseparated events.",
        "codes": [
         "B1",
         "4",
-        "[8]",
-        "C1",
-        "A1",
-        "2"
+        "[8]"
        ],
        "segments": [
         {
@@ -492,39 +448,6 @@
           672.4,
           559.0,
           709.7
-         ]
-        },
-        {
-         "page": 4,
-         "bbox": [
-          36.0,
-          56.2,
-          559.0,
-          116.9
-         ]
-        }
-       ]
-      },
-      {
-       "label": "9(b)(iii)",
-       "text": "resistance = voltage/current or 12/7.5 e.c.f. from (i) but not from (a)\nvalue is 1.6Ω\ntop line correct, need 24 and 0\nbottom line correct, need 12 and –1 (accept β or e for electron",
-       "codes": [
-        "C1",
-        "A1",
-        "6",
-        "[8]",
-        "B1",
-        "B1",
-        "2"
-       ],
-       "segments": [
-        {
-         "page": 4,
-         "bbox": [
-          36.0,
-          186.9,
-          559.0,
-          277.2
          ]
         }
        ]
@@ -549,29 +472,6 @@
     }
    ],
    "path": "9(b)",
-   "mark_scheme": [
-    {
-     "label": "9(b)",
-     "text": "particles take curved path (accept from diagram)\nmove between the poles at right angles to lines of force\nmove out of paper",
-     "codes": [
-      "B1",
-      "B1",
-      "B1",
-      "3"
-     ],
-     "segments": [
-      {
-       "page": 4,
-       "bbox": [
-        36.0,
-        277.8,
-        559.0,
-        330.3
-       ]
-      }
-     ]
-    }
-   ],
    "content": [
     {
      "type": "text",
@@ -587,47 +487,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "9(c)(i)",
-   "text": "use detector to pick up radiation (from isotope at points on/in body etc.)\nhigh count where circulation good or v.v. explained",
-   "codes": [
-    "B1",
-    "B1"
-   ],
-   "segments": [
-    {
-     "page": 4,
-     "bbox": [
-      36.0,
-      330.3,
-      559.0,
-      365.3
-     ]
-    }
-   ]
-  },
-  {
-   "label": "9(c)(ii)",
-   "text": "alpha particles all absorbed, none detected\nbeta particles may be largely absorbed, not penetrative enough\ngamma rays reach detector/leave body\nany two",
-   "codes": [
-    "B2",
-    "4",
-    "[9]"
-   ],
-   "segments": [
-    {
-     "page": 4,
-     "bbox": [
-      36.0,
-      365.3,
-      559.0,
-      455.6
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -638,7 +497,7 @@
  "paper": 3,
  "variant": 0,
  "paper_code": "0625/03",
- "paper_type": "theory_core",
+ "paper_type": "theory_extended",
  "total_marks": 8,
  "topic": null,
  "subtopic": null,

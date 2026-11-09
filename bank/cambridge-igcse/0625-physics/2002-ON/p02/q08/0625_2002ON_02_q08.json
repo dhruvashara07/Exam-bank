@@ -21,7 +21,7 @@
   }
  ],
  "text": "Fig. 8.1 shows an electric circuit containing a battery, a 4.7 Ωresistor, an ammeter and a\n8\nvariable resistor with a sliding contact. The variable resistor is set at zero. The ammeter and\nbattery have such a small resistance that it can be ignored.\nX\nsliding contact\nvariable\nA\nresistor\nY\n4.7Ω",
- "marks": 1,
+ "marks": 9,
  "figures": [
   {
    "caption": "Fig. 8.1",
@@ -35,26 +35,11 @@
    "id": "0625_2002ON_02_q08_fig8-1",
    "part": "",
    "alt": ""
-  },
-  {
-   "page": 10,
-   "bbox": [
-    165.6,
-    118.0,
-    403.5,
-    237.5
-   ],
-   "id": "0625_2002ON_02_q08_figA",
-   "caption": null,
-   "part": "",
-   "alt": ""
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -86,6 +71,10 @@
      "type": "text",
      "html": "In what unit do we measure the e.m.f. of the battery? ……",
      "text": "In what unit do we measure the e.m.f. of the battery? ……"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -122,6 +111,11 @@
      "type": "text",
      "html": "Write down the equation that links resistance, potential difference (p.d.) and current.",
      "text": "Write down the equation that links resistance, potential difference (p.d.) and current."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 46.8
     },
     {
      "type": "marks",
@@ -163,6 +157,11 @@
      "type": "text",
      "html": "Calculate the p.d. across the resistor.",
      "text": "Calculate the p.d. across the resistor."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "p.d. across resistor ="
     },
     {
      "type": "marks",
@@ -223,6 +222,11 @@
        "type": "text",
        "html": "What happens to the resistance of the variable resistor?",
        "text": "What happens to the resistance of the variable resistor?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       }
      ]
     },
@@ -257,6 +261,11 @@
        "text": "What happens to the reading on the ammeter?"
       },
       {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
        "type": "marks",
        "value": 2
       }
@@ -281,7 +290,7 @@
       30.0,
       646.2,
       570.0,
-      802.0
+      735.5
      ],
      "continued": false,
      "answer_space": {
@@ -289,7 +298,7 @@
       "dotted_lines": 1,
       "answer_line": "resistance of variable resistor = …… Ω",
       "working_gap_pt": 45.9,
-      "height_pt": 155.8
+      "height_pt": 89.3
      }
     }
    ],
@@ -314,10 +323,7 @@
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -328,8 +334,8 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 9,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -345,33 +351,6 @@
    "type": "figure",
    "id": "0625_2002ON_02_q08_fig8-1",
    "caption": "Fig. 8.1"
-  },
-  {
-   "type": "figure",
-   "id": "0625_2002ON_02_q08_figA",
-   "caption": null
-  },
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
   }
  ]
 }

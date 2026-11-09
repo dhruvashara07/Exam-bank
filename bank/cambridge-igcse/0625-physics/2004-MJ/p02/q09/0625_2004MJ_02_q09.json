@@ -21,7 +21,7 @@
   }
  ],
  "text": "9\nSome pond water becomes contaminated by the release of radioactive waste.\nThe radioactivity of a sample of the contaminated water is tested every week for 5 weeks.\nThe results are shown in the table below.\ntime/weeks\n0\n1\n2\n3\n4\n5\nactivity\n800\n440\n240\n130\n70\n40\ncount/s",
- "marks": 1,
+ "marks": 8,
  "figures": [
   {
    "caption": "Fig. 9.1",
@@ -35,26 +35,11 @@
    "id": "0625_2004MJ_02_q09a_fig9-1",
    "part": "(a)",
    "alt": ""
-  },
-  {
-   "page": 11,
-   "bbox": [
-    70.5,
-    119.0,
-    417.0,
-    185.0
-   ],
-   "id": "0625_2004MJ_02_q09_figA",
-   "caption": null,
-   "part": "",
-   "alt": ""
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -81,6 +66,24 @@
    "text": "Plot these values on Fig. 9.1.\n[3]\n800\nactivity\ncount/s\n700\n600\n500\n400\n300\n200\n100\n0\n0\n1\n2\n3\n4\n5\n6\ntime/weeks",
    "marks": 3,
    "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "(a)\npoints plotted correctly ( ± ½ small square)\n3F",
+     "codes": [],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        36.0,
+        184.9,
+        559.0,
+        205.7
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -122,6 +125,26 @@
    "text": "Draw the best curve through your points.\n[1]",
    "marks": 1,
    "path": "9(b)",
+   "mark_scheme": [
+    {
+     "label": "9(b)",
+     "text": "(b)\nsmooth curve through points by eye, not too thick\nF",
+     "codes": [
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        36.0,
+        210.3,
+        559.0,
+        231.0
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -158,6 +181,27 @@
    "text": "Use your graph to find the half-life of the radioactive material in the sample. Show clearly\non the graph how you obtained your answer.\nhalf-life of radioactive material = ………………… weeks[2]",
    "marks": 2,
    "path": "9(c)",
+   "mark_scheme": [
+    {
+     "label": "9(c)",
+     "text": "correct construction lines shown\nC\n(c)\n(allow dot on curve at correct place)\ncorrect value from his graph, based on 800-400\nF\n( ± ½ square)",
+     "codes": [
+      "B1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        36.0,
+        235.5,
+        559.0,
+        306.9
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -168,6 +212,11 @@
      "type": "text",
      "html": "half-life of radioactive material = …… weeks",
      "text": "half-life of radioactive material = …… weeks"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 55.0
     },
     {
      "type": "marks",
@@ -223,11 +272,35 @@
      "text": "the activity readings, .................................................................................................",
      "marks": 0,
      "path": "9(d)(i)",
+     "mark_scheme": [
+      {
+       "label": "9(d)(i)",
+       "text": "(d)\n(i)\nsmaller\nF",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          311.4,
+          559.0,
+          332.2
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "the activity readings, ……",
        "text": "the activity readings, ……"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       }
      ]
     },
@@ -255,11 +328,36 @@
      "text": "the value of the half-life. ............................................................................................\n[2]",
      "marks": 2,
      "path": "9(d)(ii)",
+     "mark_scheme": [
+      {
+       "label": "9(d)(ii)",
+       "text": "(ii)\nthe same OR no change\nC",
+       "codes": [
+        "B1",
+        "8"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          336.7,
+          559.0,
+          370.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "the value of the half-life. ……",
        "text": "the value of the half-life. ……"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -278,10 +376,7 @@
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -292,8 +387,8 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 8,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -306,30 +401,26 @@
    "text": "Some pond water becomes contaminated by the release of radioactive waste. The radioactivity of a sample of the contaminated water is tested every week for 5 weeks. The results are shown in the table below."
   },
   {
-   "type": "figure",
-   "id": "0625_2004MJ_02_q09_figA",
-   "caption": null
-  },
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
+   "type": "table",
+   "rows": [
+    [
+     "time/weeks",
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    [
+     "activity count/s",
+     "800",
+     "440",
+     "240",
+     "130",
+     "70",
+     "40"
+    ]
    ]
   }
  ]

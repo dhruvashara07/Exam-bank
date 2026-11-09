@@ -66,9 +66,28 @@ def region_pdf(src_doc, page_index, bbox):
     return out
 
 
+def fix_cmyk_images(svg):
+    """A CMYK picture (a JPEG 2000 in the Cambridge PDF, Adobe-inverted) is written by MuPDF as a CMYK JPEG that browsers
+    show black (2003 MJ 02 q7 Fig 7.3, the sunken ship). Re-encoded as inverted-CMYK -> RGB PNG; other pictures are untouched."""
+    import base64, io
+    from PIL import Image, ImageChops
+
+    def fix(m):
+        try:
+            im = Image.open(io.BytesIO(base64.b64decode(re.sub(r'\s', '', m.group(2)))))
+            if im.mode != 'CMYK':
+                return m.group(0)
+            buf = io.BytesIO()
+            ImageChops.invert(im).convert('RGB').save(buf, 'PNG', optimize=True)
+            return 'data:image/png;base64,' + base64.b64encode(buf.getvalue()).decode()
+        except Exception:
+            return m.group(0)
+    return re.sub(r'data:image/(jpeg|jpg);base64,\s*([A-Za-z0-9+/=\s]+)', fix, svg)
+
+
 def region_svg(src_doc, page_index, bbox):
     doc = region_pdf(src_doc, page_index, bbox)
-    return minify(doc[0].get_svg_image(text_as_path=True))
+    return minify(fix_cmyk_images(doc[0].get_svg_image(text_as_path=True)))
 
 
 USE_LIMIT = 900        # Cloudinary rejects SVGs with 1000+ <use> elements ("Resource is invalid")

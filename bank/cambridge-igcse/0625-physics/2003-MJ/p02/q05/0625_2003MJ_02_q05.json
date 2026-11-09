@@ -21,7 +21,7 @@
   }
  ],
  "text": "5\nAn immersion heater is put into some crushed ice at 0 °C. The immersion heater is switched\non.\ninsulating\nimmersion heater\nbeaker\ncrushed ice",
- "marks": 1,
+ "marks": 5,
  "figures": [
   {
    "caption": "Fig. 5.1",
@@ -48,26 +48,11 @@
    "id": "0625_2003MJ_02_q05a_fig5-2",
    "part": "(a)",
    "alt": ""
-  },
-  {
-   "page": 6,
-   "bbox": [
-    146.4,
-    101.5,
-    423.0,
-    229.5
-   ],
-   "id": "0625_2003MJ_02_q05_figA",
-   "caption": null,
-   "part": "",
-   "alt": ""
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -94,6 +79,27 @@
    "text": "On Fig. 5.2, sketch the graph of temperature against time, up to the time when all the\nice has melted.\n[3]\n100\ntemperature/°C\n0\ntime\n0\ntime when\nall ice has\nmelted",
    "marks": 3,
    "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "o\n(a)\nline starting at 0 C\nF\nreasonably horizontal line at any temp for Ä half the\nC\ntime\nhorizontal from zero time as far as dotted line (ignore\nC\nanything to R. of line)",
+     "codes": [
+      "B1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        304.7,
+        559.0,
+        401.2
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -104,6 +110,11 @@
      "type": "figure",
      "id": "0625_2003MJ_02_q05a_fig5-2",
      "caption": "Fig. 5.2"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 41.9
     },
     {
      "type": "marks",
@@ -159,11 +170,36 @@
      "text": "Suggest why the temperature stops rising, even though the heater is still on.\n...................................................................................................................................\n...................................................................................................................................",
      "marks": 0,
      "path": "5(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "5(b)(i)",
+       "text": "(b)\n(i)\nwater boils OR heat loss =\nC\nheat supplied (NOT evaporates/\nturns to gas)\nmark (i)\nand (ii)\nC",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          406.4,
+          559.0,
+          456.9
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "Suggest why the temperature stops rising, even though the heater is still on.",
        "text": "Suggest why the temperature stops rising, even though the heater is still on."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
       }
      ]
     },
@@ -176,7 +212,7 @@
         30.0,
         653.7,
         570.0,
-        802.0
+        738.0
        ],
        "continued": false,
        "answer_space": {
@@ -184,18 +220,44 @@
         "dotted_lines": 2,
         "answer_line": null,
         "working_gap_pt": 15.8,
-        "height_pt": 148.3
+        "height_pt": 84.3
        }
       }
      ],
      "text": "State what happens to the energy received by the water whilst this is happening.\n...................................................................................................................................\n...................................................................................................................................\n[2]",
      "marks": 2,
      "path": "5(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "5(b)(ii)",
+       "text": "(ii)\ngives water/molecules energy to\ntogether\nescape OR break bonds\nOR change state OR heat loss\nfrom sides/surface/to air",
+       "codes": [
+        "B1",
+        "5"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          456.9,
+          559.0,
+          515.0
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "State what happens to the energy received by the water whilst this is happening.",
        "text": "State what happens to the energy received by the water whilst this is happening."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
       },
       {
        "type": "marks",
@@ -214,10 +276,7 @@
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -228,8 +287,8 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 5,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -245,33 +304,6 @@
    "type": "figure",
    "id": "0625_2003MJ_02_q05_fig5-1",
    "caption": "Fig. 5.1"
-  },
-  {
-   "type": "figure",
-   "id": "0625_2003MJ_02_q05_figA",
-   "caption": null
-  },
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
   }
  ]
 }

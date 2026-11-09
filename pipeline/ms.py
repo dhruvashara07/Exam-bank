@@ -118,8 +118,53 @@ def _columns(lines):
     return 120, 730
 
 
-def structured_rows(doc):
-    rows = structured_rows_columns(doc) if is_column_format(doc) else structured_rows_table(doc)
+QHEAD = re.compile(r'^(\d{1,2})\.?$')
+TOTAL_LINE = re.compile(r'^TOTAL\s+(\d+)$')
+
+
+def practical_rows(doc):
+    """Practical-test mark schemes before 2009 (0625/05): numbered questions '1.' with one line per mark and
+    'TOTAL 15' under the last one, no (a)/(b) labels and no table rules. One row per question, ended by its TOTAL line
+    (marks_codes = [that total]; the paper itself prints no marks)."""
+    rows, cur = [], None
+    for pno, page in enumerate(doc):
+        if pno == 0:
+            continue
+        lines = [l for l in _lines(page) if l['y0'] > 66 and l['y1'] < 800]    # page header / footer out
+        seg = None
+
+        def push():
+            nonlocal seg
+            if cur is not None and seg:
+                cur['segments'].append({'page': pno + 1, 'bbox': [round(max(0.0, seg[2] - 6), 1), round(seg[0] - 3, 1),
+                                                                  round(seg[3] + 6, 1), round(seg[1] + 4, 1)]})
+            seg = None
+        for l in lines:
+            m = QHEAD.match(l['text'])
+            if m and l['x0'] < 100 and (cur is None or cur.get('done')):
+                cur = {'label': m.group(1), 'path': (int(m.group(1)),), 'segments': [], 'text': '', 'marks_codes': []}
+                rows.append(cur)
+            if cur is None or cur.get('done'):
+                continue
+            seg = [l['y0'], l['y1'], l['x0'], l['x1']] if not seg else \
+                [seg[0], max(seg[1], l['y1']), min(seg[2], l['x0']), max(seg[3], l['x1'])]
+            t = TOTAL_LINE.match(l['text'])
+            if t:
+                cur['marks_codes'], cur['done'] = [t.group(1)], True
+                push()
+            else:
+                cur['text'] = (cur['text'] + '\n' + l['text']).strip()
+        push()
+    for r in rows:
+        r.pop('done', None)
+    return [r for r in rows if r['segments']]
+
+
+def structured_rows(doc, old_practical=False):
+    """old_practical: practical test before 2009 (one row per numbered question, ended by its TOTAL)."""
+    rows = practical_rows(doc) if old_practical else []
+    if len(rows) < 2:
+        rows = structured_rows_columns(doc) if is_column_format(doc) else structured_rows_table(doc)
     out = []
     for r in rows:
         out.append(r)
@@ -276,6 +321,10 @@ def structured_rows_columns(doc):
             elif OLD_Q[0] <= x0 <= OLD_L[1] and m:
                 toks.append((y0, 'q', int(m.group(1))))
                 toks.append((y0 + 0.01, 'l', (m.group(2), m.group(3))))
+            elif OLD_Q[0] <= x0 <= OLD_L[1] and re.fullmatch(r'(\d{1,2})\(([a-p])\)', w):      # '10(a)' printed as one word
+                mm = re.fullmatch(r'(\d{1,2})\(([a-p])\)', w)
+                toks.append((y0, 'q', int(mm.group(1))))
+                toks.append((y0 + 0.01, 'l', mm.group(2)))
             elif OLD_L[0] <= x0 <= OLD_L[1] and m2 and m2.group(2) not in ROMANS and m2.group(2) > m2.group(1):
                 toks.append((y0, 'l', (m2.group(1), m2.group(2))))
             elif 44 <= x0 <= OLD_L[1] and re.fullmatch(r'\([a-p]\)', w):

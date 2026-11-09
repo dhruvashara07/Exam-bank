@@ -3,7 +3,7 @@
  "number": 4,
  "segments": [],
  "text": "",
- "marks": 1,
+ "marks": 7,
  "figures": [
   {
    "caption": "Fig. 4.1",
@@ -20,10 +20,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -50,6 +48,27 @@
    "text": "4\n(a)\nFig. 4.1 shows a person pulling a loaded barrow along a path from A to B at a steady\nspeed.\nA\nB\nState the two quantities you need to know in order to be able to calculate the work done\nby the person.\n1. ......................................................................................................................................\n2. ..................................................................................................................................[2]",
    "marks": 2,
    "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "(a)\n(horizontal) force\nF\nallow F\ndistance (travelled from A to B)\nF\ncondone “perpendicular”\nallow D OR d OR S",
+     "codes": [
+      "B1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        83.3,
+        559.0,
+        167.2
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -70,6 +89,20 @@
      "type": "text",
      "html": "State the two quantities you need to know in order to be able to calculate the work done by the person.",
      "text": "State the two quantities you need to know in order to be able to calculate the work done by the person."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -101,6 +134,27 @@
    "text": "Another person pulls an identical barrow and load from A to B, but this person pulls\nmuch harder than the person in (a).\nDescribe what happens to the second person’s barrow.\n..........................................................................................................................................\n......................................................................................................................................[2]",
    "marks": 2,
    "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "(b)\ngoes faster OR less time\nF\naccelerates\nC",
+     "codes": [
+      "B1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        171.8,
+        559.0,
+        217.9
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -111,6 +165,11 @@
      "type": "text",
      "html": "Describe what happens to the second person’s barrow.",
      "text": "Describe what happens to the second person’s barrow."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
     },
     {
      "type": "marks",
@@ -148,11 +207,36 @@
      "text": "(i)\nState which person has the greater power between A and B.\n...................................................................................................................................",
      "marks": 0,
      "path": "4(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "4(c)(i)",
+       "text": "nd\n(c)\n(i)\n2\nperson (however expressed)\nF",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          222.4,
+          559.0,
+          243.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "State which person has the greater power between A and B.",
        "text": "State which person has the greater power between A and B."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       }
      ]
     },
@@ -180,11 +264,47 @@
      "text": "Give two reasons for your answer to (c)(i).\nreason 1 ....................................................................................................................\nreason 2 ...................................................................................................................\n[3]",
      "marks": 3,
      "path": "4(c)(ii)",
+     "mark_scheme": [
+      {
+       "label": "4(c)(ii)",
+       "text": "(ii)\nmore work/energy OR bigger force OR pulls\nF\nharder\nsmaller time OR greater speed\nC\n(“more work/second” gets B1, B1)",
+       "codes": [
+        "B1",
+        "B1",
+        "7"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          247.7,
+          559.0,
+          319.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "Give two reasons for your answer to <b>(c)(i)</b>.",
        "text": "Give two reasons for your answer to (c)(i)."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "reason 1"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "reason 2"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -196,10 +316,7 @@
    "path": "4(c)"
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -210,35 +327,11 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 7,
  "topic": null,
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
- "pipeline_version": "2.1",
- "content": [
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
-  }
- ]
+ "pipeline_version": "2.1"
 }

@@ -301,3 +301,8 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   old-layout MS (2013-2016 FM). 2013-2015 approved (96 papers, final in git). 2013 - 2026 ALL FINAL.
 - He: usage today 15 % of the weekly limit (12:30 - 18:26). Asked how to use less and to prepare a new chat:
   docs/NEXT_CHAT.md written (start prompt + how to work cheaply).
+## 2026-11-09 evening - new chat, 2002-2012 (Dhruv: "option A": 2002-2012 in 3-year batches, then cleanup + MongoDB push)
+- Workflow agreed: 3-year build on GitHub, I check every flag, one short review round, fixes, approve, push; use usage only where it pays.
+- Batch 1 (2002-2004) built on GitHub, then fixed locally (see PROGRESS.md "2002-2012"). Found: GitHub build had read old paper numbers wrongly.
+  All 25 papers match their mark totals, 0 blocking checks. Old-layout mark schemes still to be put in our table (question to Dhruv).
+

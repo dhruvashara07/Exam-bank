@@ -2,6 +2,21 @@
 
 Read this first in every session. Update it before ending a session.
 
+## 2002-2012 (started 2026-11-09, batches of 3 years)
+- Batch 1 = 2002-2004 (25 papers: 01 MCQ, 02 core, 03 extended, 05 practical test, 06 alt. to practical). Built, NOT approved.
+  Pipeline fixes made (golden: 0 changed cuts; 2013-2026 untouched): pre-2009 paper types (02 = core theory, 03 = extended;
+  was read as MCQ), mark-scheme total from "MAXIMUM MARK" (pre-2009 only), practical-test (05) mark scheme parser
+  (`ms.practical_rows`, one row per question, marks from "TOTAL n"), scanned MS (2002 ON: no false "no mark scheme" flags),
+  2002 ON 05 (answer booklet pages dropped, "Question 1" headings, totals read by eye: SCAN_TOTALS/SCAN_QMARKS in run.py),
+  figure crop rising past beside-text, invisible text is no caption, "For Examiner's Use" heading + drawn rule removed,
+  footer code `0625/1/O/N/02`, blank page with copyright note, CMYK pictures black in browsers (render.fix_cmyk_images),
+  MS label "10(a)" as one word. checks: 25 papers, 0 blocking, 9 flags (all looked at: 32 MCQ sets side by side = fine).
+- OPEN for batch 1: old mark schemes (2002-2008 layout: Question | Answer | F/C tier | Marks, no frame, braces "mark alongside
+  diagram"; practical = item list + TOTAL) are shown as original pieces with partial frames: NOT yet in our table layout
+  (MS_TABLE_RULES: full frame, header once, Total row). Needs the F/C column type + a practical-item type, then review round.
+  2002 ON: paper 01 has no mark scheme file (no MCQ answers); other 2002 ON mark schemes are scans (page pictures).
+- GitHub build note: `bank.yml` "sessions" step runs `checks.py` with ids without `0625/` so it checks nothing; run checks locally.
+
 ## v5 prototype (2026-11-03) — waiting for Dhruv's approval
 - Hourly task `trig_0173DCrQWm76nnTXrW52TPjC` stays OFF. `review/backlog.json` `running_since` is a stale lock from a
   crashed run (00:06 IST); not cleared yet (Dhruv asked to have it explained first).

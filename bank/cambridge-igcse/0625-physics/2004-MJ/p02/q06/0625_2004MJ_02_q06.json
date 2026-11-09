@@ -3,7 +3,7 @@
  "number": 6,
  "segments": [],
  "text": "",
- "marks": 1,
+ "marks": 3,
  "figures": [
   {
    "caption": "Fig. 6.1",
@@ -33,10 +33,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -63,6 +61,26 @@
    "text": "6\n(a)\nWhen a certain amount of heat is supplied to 1 kg of insulated aluminium, the temperature\nof the aluminium rises by 1 °C.\n1kg aluminium inside\na layer of insulation\nheat supplied\nto aluminium\nIn what form does the aluminium store the energy that has been supplied?\n......................................................................................................................................[1]",
    "marks": 1,
    "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "(a)\n(increased) internal energy OR (increased) KE of\nC\nmolecules OR (increased) thermal/heat (energy)",
+     "codes": [
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        501.7,
+        559.0,
+        535.1
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -83,6 +101,11 @@
      "type": "text",
      "html": "In what form does the aluminium store the energy that has been supplied?",
      "text": "In what form does the aluminium store the energy that has been supplied?"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
     },
     {
      "type": "marks",
@@ -114,6 +137,28 @@
    "text": "The same amount of heat is supplied to 1 kg of insulated copper, as shown in Fig. 6.2.\n1kg copper inside\na layer of insulation\nheat supplied\nto copper\nThe temperature rise of the 1 kg copper block is greater than the temperature rise of the\n1 kg aluminium block in (a).\nExplain, in terms of thermal capacity, why this is so.\n..........................................................................................................................................\n......................................................................................................................................[2]",
    "marks": 2,
    "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "(b)\nany mention of thermal capacity\nC\nsmaller thermal capacity\nC",
+     "codes": [
+      "C1",
+      "A1",
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        539.6,
+        559.0,
+        598.3
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -136,16 +181,18 @@
      "text": "Explain, in terms of thermal capacity, why this is so."
     },
     {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
      "type": "marks",
      "value": 2
     }
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -156,35 +203,11 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 3,
  "topic": null,
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
- "pipeline_version": "2.1",
- "content": [
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
-  }
- ]
+ "pipeline_version": "2.1"
 }

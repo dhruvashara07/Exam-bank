@@ -3,7 +3,7 @@
  "number": 11,
  "segments": [],
  "text": "",
- "marks": 1,
+ "marks": 10,
  "figures": [
   {
    "caption": "Fig. 11.1",
@@ -33,10 +33,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -48,7 +46,7 @@
       30.0,
       59.0,
       570.0,
-      802.0
+      319.0
      ],
      "continued": false,
      "answer_space": {
@@ -56,13 +54,34 @@
       "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 152.6,
-      "height_pt": 743.0
+      "height_pt": 260.0
      }
     }
    ],
    "text": "11\n(a)\nFig. 11.1 shows a circuit containing a lamp and a variable resistor.\nThe circuit does not work. The lamp does not light and altering the setting on the\nvariable resistor makes no difference.\nIn the space below, re-draw the diagram, showing a circuit in which the variable resistor\nmay be used to change the brightness of the lamp.\n[2]",
    "marks": 2,
    "path": "11(a)",
+   "mark_scheme": [
+    {
+     "label": "11(a)",
+     "text": "(a)\nConnection to either side of cell, but not shorted out\nF\nVR in series with lamp, and not shorted out OR\nF\ncorrectly connected as a potential divider (condone\ninclusion of a switch)",
+     "codes": [
+      "B1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        36.0,
+        528.0,
+        559.0,
+        598.7
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -83,6 +102,11 @@
      "type": "text",
      "html": "In the space below, re-draw the diagram, showing a circuit in which the variable resistor may be used to change the brightness of the lamp.",
      "text": "In the space below, re-draw the diagram, showing a circuit in which the variable resistor may be used to change the brightness of the lamp."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 152.6
     },
     {
      "type": "marks",
@@ -138,11 +162,38 @@
      "text": "Calculate the combined resistance of the 8 Ωand 4 Ωresistors in series.\n(i)\ncombined resistance = .................................. Ω\n[2]",
      "marks": 2,
      "path": "11(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "11(b)(i)",
+       "text": "(b)\n(i)\nR + R\nF\n1\n2\n12\nF",
+       "codes": [
+        "C1",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          36.0,
+          603.9,
+          559.0,
+          649.3
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "Calculate the combined resistance of the 8 Ω and 4 Ω resistors in series.",
        "text": "Calculate the combined resistance of the 8 Ω and 4 Ω resistors in series."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "combined resistance =",
+       "unit": "Ω"
       },
       {
        "type": "marks",
@@ -174,11 +225,49 @@
      "text": "1.Calculate the current supplied by the 6 V d.c. supply.\ncurrent = ..................................\n2.State the value of the current\nin section PQ of the circuit ..................................\nrecorded by the ammeter ..................................\nin section SR of the circuit ..................................\n[5]",
      "marks": 5,
      "path": "11(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "11(b)(ii)",
+       "text": "(ii)\n1. Resistance = p.d./current in any form\nF\n(words/letters/mix)\n6/12 e.c.f.\nC\n1\nC\n0.5 or\ne.c.f.\n2\n2. his calculated current\nhis calculated current\nall 3\nC\nhis calculated current\nA OR amp OR ampere somewhere in (ii)\nF",
+       "codes": [
+        "C1",
+        "C1",
+        "A1",
+        "B1",
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          36.0,
+          654.5,
+          559.0,
+          742.1
+         ]
+        },
+        {
+         "page": 7,
+         "bbox": [
+          36.0,
+          55.4,
+          559.0,
+          166.6
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "<b>1.</b> Calculate the current supplied by the 6 V d.c. supply.",
        "text": "1. Calculate the current supplied by the 6 V d.c. supply."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "current ="
       },
       {
        "type": "text",
@@ -189,6 +278,11 @@
        "type": "text",
        "html": "in section PQ of the circuit ……",
        "text": "in section PQ of the circuit ……"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "recorded by the ammeter"
       },
       {
        "type": "text",
@@ -225,6 +319,26 @@
      "text": "On Fig. 11.2, show a voltmeter connected to measure the potential difference\nacross the 4 Ωresistor.\n[1]",
      "marks": 1,
      "path": "11(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "11(b)(iii)",
+       "text": "(iii)\nvoltmeter shown correctly connected (any\nC\nrecognisable symbol; allow re-drawn circuit)",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          36.0,
+          171.8,
+          559.0,
+          229.9
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -253,10 +367,7 @@
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -267,35 +378,11 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 10,
  "topic": null,
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
- "pipeline_version": "2.1",
- "content": [
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
-  }
- ]
+ "pipeline_version": "2.1"
 }

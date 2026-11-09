@@ -3,7 +3,7 @@
  "number": 10,
  "segments": [],
  "text": "",
- "marks": 1,
+ "marks": 9,
  "figures": [
   {
    "caption": "Fig. 10.1",
@@ -33,10 +33,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -87,11 +85,36 @@
      "text": "How can you tell from Fig. 10.1 that the transformer is a step-down transformer?\n...................................................................................................................................\n...............................................................................................................................[1]",
      "marks": 1,
      "path": "10(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "10(a)(i)",
+       "text": "(a)\n(i)\nless turns on secondary\nF\nACCEPT “because Np=4800 and Ns=200”\nACCEPT “sycoil < pycoil”\nNOT “secondary < primary”",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          387.8,
+          559.0,
+          446.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "How can you tell from Fig. 10.1 that the transformer is a step-down transformer?",
        "text": "How can you tell from Fig. 10.1 that the transformer is a step-down transformer?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
       },
       {
        "type": "marks",
@@ -123,11 +146,44 @@
      "text": "Calculate the voltage at which the toy train operates.\ntoy train operates at ………………… V[3]",
      "marks": 3,
      "path": "10(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "10(a)(ii)",
+       "text": "(ii)\nV /V = N /N\nin any form\nF\n2\n1\n2\n1\ncorrect substitution\nF\n10\nF",
+       "codes": [
+        "C1",
+        "C1",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          451.0,
+          559.0,
+          522.4
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "Calculate the voltage at which the toy train operates.",
        "text": "Calculate the voltage at which the toy train operates."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "toy train operates at",
+       "unit": "V"
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 138.9
       },
       {
        "type": "marks",
@@ -159,6 +215,27 @@
      "text": "1.\nThe voltage of the mains supply is reduced. What happens to the voltage\nsupplied to the train set? Tick one box.\nincreases\ndecreases\nstays the same\n2.\nAn attempt is made to use the train set in a country where the mains supply is\n110 V. Suggest onedifference that might be noticed in the way the toy train\noperates.\n...........................................................................................................................\n...........................................................................................................................\n[2]",
      "marks": 2,
      "path": "10(a)(iii)",
+     "mark_scheme": [
+      {
+       "label": "10(a)(iii)",
+       "text": "(iii)\n1. decreases\nF\n2. runs slower OR will not work e.c.f. from\nF\n(iii)1.",
+       "codes": [
+        "B1",
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          526.9,
+          559.0,
+          585.6
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -179,6 +256,11 @@
        "type": "text",
        "html": "<b>2.</b> An attempt is made to use the train set in a country where the mains supply is 110 V. Suggest <b>one</b> difference that might be noticed in the way the toy train operates.",
        "text": "2. An attempt is made to use the train set in a country where the mains supply is 110 V. Suggest one difference that might be noticed in the way the toy train operates."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
       },
       {
        "type": "marks",
@@ -230,6 +312,27 @@
    "text": "Fig. 10.2 shows an electromagnetic relay being used to operate an electric motor.\npivoted iron\narmature\npower supply\nfor motor\nmotor\nM\nswitch\ncontacts\nrelay core\nBelow are sentences that describe stages of the process by which the circuit works.\nA\nThe armature pivots and the contacts close.\nB\nThe core of the relay is magnetised.\nC\nThe switch is closed and the current flows through the coil.\nD\nA current flows through the motor, making it work.\nE\nThe core attracts the top part of the armature.\nPut the sentences so that the stages are in the correct order. Put the appropriate letters\nin the boxes below. One box has been filled in as an example.\nStage 1 is sentence\nC\nStage 2 is sentence\nStage 3 is sentence\nStage 4 is sentence\nStage 5 is sentence\n[3]",
    "marks": 3,
    "path": "10(b)",
+   "mark_scheme": [
+    {
+     "label": "10(b)",
+     "text": "(b)\nignore stage 1\nfrom stage 2 onwards……\nB\n)\nE\n)\n(3 marks for any 3)\nA\n)\n(2 marks for any 2)\n3C\nD\n)\n(1 mark for any 1)",
+     "codes": [
+      "B3",
+      "9"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        36.0,
+        590.2,
+        559.0,
+        686.9
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -247,30 +350,9 @@
      "text": "Below are sentences that describe stages of the process by which the circuit works."
     },
     {
-     "type": "options",
-     "options": [
-      {
-       "label": "A",
-       "html": "The armature pivots and the contacts close."
-      },
-      {
-       "label": "B",
-       "html": "The core of the relay is magnetised."
-      },
-      {
-       "label": "C",
-       "html": "The switch is closed and the current flows through the coil."
-      },
-      {
-       "label": "D",
-       "html": "A current flows through the motor, making it work."
-      }
-     ]
-    },
-    {
      "type": "text",
-     "html": "E The core attracts the top part of the armature.",
-     "text": "E The core attracts the top part of the armature."
+     "html": "A The armature pivots and the contacts close. B The core of the relay is magnetised. C The switch is closed and the current flows through the coil. D A current flows through the motor, making it work. E The core attracts the top part of the armature.",
+     "text": "A The armature pivots and the contacts close. B The core of the relay is magnetised. C The switch is closed and the current flows through the coil. D A current flows through the motor, making it work. E The core attracts the top part of the armature."
     },
     {
      "type": "text",
@@ -303,16 +385,18 @@
      "text": "Stage 5 is sentence"
     },
     {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 44.6
+    },
+    {
      "type": "marks",
      "value": 3
     }
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -323,35 +407,11 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 9,
  "topic": null,
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
- "pipeline_version": "2.1",
- "content": [
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
-  }
- ]
+ "pipeline_version": "2.1"
 }

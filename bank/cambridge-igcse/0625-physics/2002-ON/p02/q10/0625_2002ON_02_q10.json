@@ -3,7 +3,7 @@
  "number": 10,
  "segments": [],
  "text": "",
- "marks": 1,
+ "marks": 9,
  "figures": [
   {
    "caption": "Fig. 10.1",
@@ -33,10 +33,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -92,6 +90,11 @@
        "type": "text",
        "html": "Suggest what is seen to happen to the hanging copper rod when the switch is closed.",
        "text": "Suggest what is seen to happen to the hanging copper rod when the switch is closed."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
       }
      ]
     },
@@ -124,6 +127,11 @@
        "type": "text",
        "html": "Explain your answer.",
        "text": "Explain your answer."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
       }
      ]
     },
@@ -136,7 +144,7 @@
         30.0,
         518.4,
         570.0,
-        802.0
+        603.0
        ],
        "continued": false,
        "answer_space": {
@@ -144,7 +152,7 @@
         "dotted_lines": 1,
         "answer_line": null,
         "working_gap_pt": 15.8,
-        "height_pt": 283.6
+        "height_pt": 84.6
        }
       }
      ],
@@ -161,6 +169,11 @@
        "type": "text",
        "html": "How does what is seen now differ from what you described in <b>(a)(i)</b>?",
        "text": "How does what is seen now differ from what you described in (a)(i)?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       },
       {
        "type": "marks",
@@ -273,6 +286,11 @@
        "type": "text",
        "html": "Which part of the motor ensures that the coil keeps rotating when the battery is connected?",
        "text": "Which part of the motor ensures that the coil keeps rotating when the battery is connected?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       }
      ]
     },
@@ -307,6 +325,11 @@
        "text": "The battery is reversed. What difference does this make to the motor?"
       },
       {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
        "type": "marks",
        "value": 5
       }
@@ -328,10 +351,7 @@
    ]
   }
  ],
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -342,35 +362,11 @@
  "paper": 2,
  "variant": 0,
  "paper_code": "0625/02",
- "paper_type": "mcq_extended",
- "total_marks": 1,
+ "paper_type": "theory_core",
+ "total_marks": 9,
  "topic": null,
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
- "pipeline_version": "2.1",
- "content": [
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
-  }
- ]
+ "pipeline_version": "2.1"
 }
