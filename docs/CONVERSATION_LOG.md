@@ -266,3 +266,15 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - He asked why the build took > 1 hour (my full local re-cut of 2016-2024, not GitHub) and about "Review website" failure emails
   (two Pages deploys at once cancelled each other; site.yml now queues deploys: cancel-in-progress false).
 - 2024 approved (final in git). Next: 2025 (re-check in the new layout), then 2026.
+## 2026-11-07 / 11-09 — 2025 + 2026 together, round 20
+- 20:39 (11-07) Dhruv: "do both together and generate review for both" (2025-2026); repeated 11-09.
+- 2025-2026 rebuilt with the latest code (66 papers, 4 min). Checked every flag + ~70 questions side by side; every MS that
+  changed in approved years 2016-2024 (~110) checked side by side. Fixed in the pipeline:
+  2026 MJ new 4-column MS (Guidance): own total row and header (examiner note under the header dropped), Guidance laid out
+  per cell (spanning cells stay one, pictures kept side by side, root signs/fraction bars move with words), empty Guidance
+  cell keeps its rule; colour-emoji ticks (2025 FM 42 q6) kept as pictures; a PDF run spanning two baselines split into
+  words (2026 MJ 41 q7); fractions stay on their line (baselines within 1.5 pt one line; sub/superscripts follow their
+  word; no-space words never split); text set out in columns without rules inside a cell (2019 FM 42 q11 gamma/beta pairs);
+  Guidance paragraphs split at bold keywords and blank lines.
+- Round 20 "2025-2026" (7 items, 2 marked doubtful: small inner table 2026 MJ 43 q5, bracket list 2026 MJ 32 q3) on the page;
+  round 19 removed.

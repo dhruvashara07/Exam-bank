@@ -118,15 +118,31 @@ def _groups(words):
     return lines
 
 
-def _paragraphs(lines, x1):
-    """join soft-wrapped lines (a line that runs up to the right edge continues on the next); bullets start a paragraph."""
+KEYWORD = re.compile(r'(A|CON|TV|I|R|accept|allow|ignore|reject|do not|not|NOT|ecf|OR|AND|ORA|Note|NOTE)$')
+
+
+def _paragraphs(lines, x1, x0=None, guidance=False):
+    """join soft-wrapped lines (a line that runs up to the right edge continues on the next); bullets start a paragraph.
+    Also a new paragraph (2026 MJ guidance column): after a blank line, and at a line starting with a bold marking keyword
+    ('A ...', 'CON ...', 'accept ...', 'ignore ...') - each of those is its own instruction."""
     paras = []
+    tol = 45 if x0 is None else min(45, 0.15 * (x1 - x0))
     for ln in lines:
-        if paras and paras[-1]['soft'] and not BULLET.match(ln[0]['ws'][0]['t']):
+        w0 = ln[0]['ws'][0]
+        gap = paras and (w0['y'] - paras[-1]['lines'][-1][0]['ws'][0]['y']) > 1.6 * w0.get('s', 10)
+        key = w0.get('b') and KEYWORD.match(w0['t'].strip())
+        # a long line followed by one starting in lower case also continues (the printer wrapped early: 'after passing' /
+        # 'through the lens', 2026 MJ 42 q6); short lines are list items and stay apart
+        cont = (guidance and paras and x0 is not None and w0['t'][:1].islower() and not gap and not key   # Guidance only:
+                # (Answer columns hold lists whose items start in lower case: 2018 ON 62 q3(e), 2016 ON 63 q4)
+                and abs(ln[0]['x'] - paras[-1]['lines'][0][0]['x']) < 3
+                and paras[-1]['end'] >= x1 - 0.3 * (x1 - x0))
+        if paras and (paras[-1]['soft'] or cont) and not BULLET.match(w0['t']) and not gap and not key:
             paras[-1]['lines'].append(ln)
         else:
             paras.append({'lines': [ln], 'soft': False})
-        paras[-1]['soft'] = ln[-1]['x'] + ln[-1]['w'] >= x1 - 45
+        paras[-1]['soft'] = ln[-1]['x'] + ln[-1]['w'] >= x1 - tol
+        paras[-1]['end'] = ln[-1]['x'] + ln[-1]['w']
     return paras
 
 
@@ -187,6 +203,87 @@ def _line_w(ws):
     return max(out) if out else 0.0
 
 
+def _subcolumns(ws, x0, ow, nw, pitch):
+    """Text set out in columns WITHOUT rules inside one cell (2019 FM 42 q11(b): 'gamma-emission | beta-emission' pairs):
+    a plain re-wrap breaks the pairs apart. Found when a vertical strip of the cell is free of ink and at least 3 blocks
+    (groups of lines between blank lines) have words on both sides of it. Each block becomes one paragraph; each side is
+    wrapped in its own share of our column (alignment kept: centred stays centred)."""
+    lines = _groups(ws)
+    if len(lines) < 4:
+        return None
+    spans = [(g['x'], g['x'] + g['w']) for ln in lines for g in ln]
+    best = None
+    x = x0 + 0.25 * ow
+    while x < x0 + 0.8 * ow:                         # the widest ink-free strip
+        if not any(a - 2 < x < b + 2 for a, b in spans):
+            a = x
+            while x < x0 + 0.8 * ow and not any(a_ - 2 < x < b_ + 2 for a_, b_ in spans):
+                x += 1
+            if best is None or x - a > best[1] - best[0]:
+                best = (a, x)
+        x += 1
+    if best is None or best[1] - best[0] < 12:
+        return None
+    S = (best[0] + best[1]) / 2
+    blocks = []
+    for ln in lines:
+        if blocks and ln[0]['y'] - blocks[-1][-1][0]['y'] <= 1.6 * max(w['s'] for g in ln for w in g['ws']):
+            blocks[-1].append(ln)
+        else:
+            blocks.append([ln])
+    both = sum(1 for bl in blocks if any(g['x'] < S for ln in bl for g in ln) and any(g['x'] > S for ln in bl for g in ln))
+    if both < 3:
+        return None
+    # a block's lines on one side can be printed half a line apart from the other side: blocks by the blank gaps only
+    k = nw / ow
+    sides = [(x0, S), (S, x0 + ow)]
+    sinfo = []                                       # per side: centred? and the centre line (as printed)
+    for a, c in sides:
+        cs = []
+        for ln in lines:
+            gs = [g for g in ln if a <= g['x'] + g['w'] / 2 < c]
+            if gs:
+                cs.append((min(g['x'] for g in gs) + max(g['x'] + g['w'] for g in gs)) / 2)
+        med = statistics.median(cs) if cs else (a + c) / 2
+        sinfo.append((sum(abs(x_ - med) < 8 for x_ in cs) >= 0.7 * max(len(cs), 1), med))
+    out, cum = [], 0
+    for bl in blocks:
+        rows = []
+        for (a, c), (centred, med) in zip(sides, sinfo):
+            gs = [g for ln in bl for g in ln if a <= g['x'] + g['w'] / 2 < c]
+            if not gs:
+                rows.append([]); continue
+            na, width = (a - x0) * k + 3, (c - a) * k - 14
+            mid = (med - a) * k - 3                   # the printed centre line, in our narrower side
+            byl = {}
+            for g in gs:
+                byl.setdefault(round(g['y']), []).append(g)
+            centred = centred and all(abs((min(g['x'] for g in l_) + max(g['x'] + g['w'] for g in l_)) / 2 - med) < 12
+                                      for l_ in byl.values())   # ('Two of:' at the cell's left stays left)
+            lead = 0.0 if centred else max(0.0, (min(g['x'] for g in gs) - a) * k)
+            wl, cur, xx = [], [], lead
+            for g in sorted(gs, key=lambda g: (round(g['y']), g['x'])):
+                sp = 3.0 if cur else 0.0
+                if cur and xx + sp + g['w'] > width:
+                    wl.append(cur); cur, xx, sp = [], lead, 0.0
+                cur.append([g, xx + sp]); xx += sp + g['w']
+            if cur:
+                wl.append(cur)
+            for l_ in wl:
+                lw_ = l_[-1][1] + l_[-1][0]['w'] - l_[0][1]
+                sh = max(0.0, min(width - lw_, mid - lw_ / 2)) - l_[0][1] if centred else 0.0
+                for e in l_:
+                    e[1] = na + e[1] + sh
+            rows.append(wl)
+        n = max(len(r) for r in rows)
+        wl = [[(g, gx) for r in rows if j < len(r) for g, gx in r[j]] for j in range(n)]
+        y0 = min(g['y'] for ln in bl for g in ln)
+        orig = round((max(g['y'] for ln in bl for g in ln) - y0) / pitch) + 1
+        out.append({'y': y0, 'lines': wl, 'cum': cum, 'extra': n - orig})
+        cum += n - orig
+    return out, cum
+
+
 def portrait_unit(u, W=523.0, widths=None, sizes=None, probe=False):
     """widths: {(ncol, column): width} for the fixed columns (see column_widths); sizes: {figure id: (w, h)};
     probe=True: only report the content width of the fixed columns -> (None, {'probe': {(ncol, c): width}, ...})."""
@@ -237,10 +334,18 @@ def portrait_unit(u, W=523.0, widths=None, sizes=None, probe=False):
     seps = _cluster([(r[1] + r[3]) / 2 for r in hs if r[0] > edges[0] - 1 and 4 < (r[1] + r[3]) / 2 < h - 4])
     bounds = [0.0] + seps + [h]
     nb = len(bounds) - 1
+    def crosses_col(y, c):                       # does the sub-row line at y run across column c?
+        c0, c1 = colspan[c]
+        cov_ = sum(max(0.0, min(r[2], c1) - max(r[0], c0)) for r in hs if abs((r[1] + r[3]) / 2 - y) < 1.5)
+        return cov_ >= 0.85 * (c1 - c0)
+    cross = {(i, c): crosses_col(bounds[i], c) for i in range(1, nb) for c in range(ncol)}
     cells = collections.defaultdict(list)
     for t in u['text']:
         b = next((i for i in range(nb) if bounds[i] <= t['y'] < bounds[i + 1]), nb - 1)
-        cells[(b, col_of(t['x']))].append(t)
+        c = col_of(t['x'])
+        while b > 0 and c > 0 and old_w[c] >= 20 and not cross[(b, c)]:
+            b -= 1                                # a cell spanning several sub-rows (2026 MJ Guidance): one paragraph
+        cells[(b, c)].append(t)
     # fixed columns: the label column and columns whose text is only short tokens (marks)
     def short(c):
         ws = [t for (b, cc), v in cells.items() if cc == c for t in v]
@@ -270,8 +375,13 @@ def portrait_unit(u, W=523.0, widths=None, sizes=None, probe=False):
     for (b, c), ws in cells.items():
         if fixed[c]:
             continue
+        sc = _subcolumns(ws, cx0(c), old_w[c], new_w[c], pitch)
+        if sc is not None:
+            paras_of[(b, c)], cum_ = sc
+            band_extra[b] = max(band_extra[b], cum_)
+            continue
         out, cum = [], 0
-        for p in _paragraphs(_groups(ws), cx0(c) + old_w[c]):
+        for p in _paragraphs(_groups(ws), cx0(c) + old_w[c], cx0(c), guidance=sum(not f for f in fixed) >= 2 and c == max(i for i in range(ncol) if not fixed[i])):
             rel = {'lines': [[dict(g, x=g['x'] - cx0(c)) for g in ln] for ln in p['lines']]}
             last = rel['lines'][0][-1]
             if len(rel['lines']) == 1 and rel['lines'][0][0]['x'] > 0.5 * old_w[c] and last['x'] + last['w'] >= old_w[c] - 25:
@@ -359,7 +469,15 @@ def portrait_unit(u, W=523.0, widths=None, sizes=None, probe=False):
             v['lines'].append(rect(e - T / 2, y0, e + T / 2, bnew[i + 1]))
     for i in range(1, nb):
         full = any(r[0] < edges[0] - 5 and abs((r[1] + r[3]) / 2 - bounds[i]) < 2 for r in hs)
-        v['lines'].append(rect(left if full else new_edges[0], bnew[i], xr, bnew[i] + T))
+        real = [c for c in range(ncol) if old_w[c] >= 20]
+        if all(cross[(i, c)] for c in real[1:]):
+            v['lines'].append(rect(left if full else new_edges[0], bnew[i], xr, bnew[i] + T))
+            continue
+        for c in real[(0 if full else 1):]:      # only across the columns it crosses in the print
+            if c == 0 or cross[(i, c)]:
+                x0_ = left if c == 0 else new_edges[c - 1]
+                x1_ = xr if c == real[-1] else new_edges[c]
+                v['lines'].append(rect(x0_, bnew[i], x1_, bnew[i] + T))
     v['lines'].append(rect(left, v['h'] - T, xr, v['h']))
     segs = collections.defaultdict(list)                       # new line (rounded y) -> [x0, x1, y, rect-thickness]
     for r in decor:

@@ -113,3 +113,8 @@ Our mark scheme is the original's landscape table made portrait ("responsive"): 
 ## 12. Tick boxes (Dhruv, round 19)
 A tick sits in the exact centre of its box (drawn as a real ✓, not a picture); the words that label the box start a small
 space after it, on the box's middle line. `ms_layout._tidy_boxes`.
+
+## 13. Guidance column (2026 May/June mark schemes)
+Our table is Q | Answer | Marks | Guidance. A Guidance (or any) cell that spans several Answer sub-rows stays one cell (the
+sub-row line is drawn only across the columns it crosses in the print). Pictures in the Guidance cell are kept, side by side
+when printed side by side, shrunk only to fit the column; drawn marks (root signs, fraction bars) move with their words.

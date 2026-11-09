@@ -325,16 +325,18 @@ def _split_total(v, info):
 
 def _own_total(marks, info, rows):
     nw = [w for w in info['new_w'] if w >= 20]
-    if len(nw) != 3:
+    if len(nw) not in (3, 4):                         # Q | Answer | Marks (| Guidance, 2026 MJ): the total in the Marks column
         return None
-    ms0 = info['new_edges'][len(nw) - 2]
+    ms0 = info['new_edges'][1]
     tpl = next((dict(t) for v in rows for t in v['text'] if t.get('f')), {'s': 11.0, 'f': 'sans'})
     for k in ('i', 'c', 'role', 'u', 'dir'):
         tpl.pop(k, None)
     a = dict(tpl, t='Total', b=1, w=29.3, y=14.0); a['x'] = round(ms0 - 8 - a['w'], 2)
     num = str(marks)
     b = dict(tpl, t=num, b=1, w=round(6.1 * len(num), 2), y=14.0); b['x'] = round(ms0 + (nw[-1] - b['w']) / 2, 2)
-    return {'src': rows[-1]['src'], 'w': W, 'h': 20.0, 'text': [a, b], 'lines': [_rect(ms0 - 0.3, 0, ms0 + 0.3, 20.0)],
+    b['x'] = round(ms0 + (nw[2] - b['w']) / 2, 2)
+    lines = [_rect(ms0 - 0.3, 0, ms0 + 0.3, 20.0)] + ([_rect(ms0 + nw[2] - 0.3, 0, ms0 + nw[2] + 0.3, 20.0)] if len(nw) == 4 else [])
+    return {'src': rows[-1]['src'], 'w': W, 'h': 20.0, 'text': [a, b], 'lines': lines,
             'figs': [], 'glyphs': [], 'own_total': True}
 
 
@@ -491,8 +493,10 @@ def _cell_fallback(u, first):
             h = float(y); break
     full = sorted(x for x, c in cov.items() if c >= 0.6 * h and 20 < x < u['w'] - 8)
     cx_ = [t['x'] + t['w'] / 2 for t in u['text']]
-    while len(full) >= 2 and not any(c > full[-1] for c in cx_):
+    four = bool(first) and len([w for w in first['new_w'] if w >= 20]) == 4
+    while len(full) >= (4 if four else 2) and not any(c > full[-1] for c in cx_):
         full.pop()                                    # the table's own right border (2016 MJ 43: 9 pt inside the cut)
+                                                      # (not the Guidance rule of an empty Guidance cell, 2026 MJ 41 q8)
     left = [x for x, c in cov.items() if x <= 20 and c >= 0.6 * h]
     if len(full) == 1 and left and any(c > full[0] for c in cx_):
         full = [max(left)] + full                     # a continuation row with an empty question column (2020 MJ 31 q11, page 2)
@@ -506,9 +510,14 @@ def _cell_fallback(u, first):
         for y in sorted(hy):
             if hy[y] > 0.6 * u['w'] and 4 < y < h - 4 and ink2 and max(ink2) < y:
                 h = float(y); break
+    guide = None
     if first:
         nw = [w for w in first['new_w'] if w >= 20]
-        L = first['new_edges'][0]; M = first['new_edges'][len(nw) - 2]
+        L = first['new_edges'][0]; M = first['new_edges'][1 if len(nw) == 4 else len(nw) - 2]
+        if len(nw) == 4 and len(full) >= 3:           # Q | Answer | Marks | Guidance (2026 MJ)
+            xr = max([x for x in outer if x > full[-1]] + [u['w']])
+            guide = {'G': first['new_edges'][2], 'e3': full[-1], 'xr': xr}
+            full = full[:-1]
     else:
         L, M = 44.0, W - 44.0
     has_marks = True
@@ -518,7 +527,7 @@ def _cell_fallback(u, first):
         return _heading_row(u, L)                     # a heading row across answer and marks ('8  Hydroelectric', 2017 ON 41)
     else:
         return None
-    return _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov)
+    return _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov, guide=guide)
 
 
 def _heading_row(u, L):
@@ -695,18 +704,97 @@ def _reflow_table(TT, LL, PP, vx, A, mins_in=None, rec=None):
     return texts, lines + unders, pics, nx[-1], ymap
 
 
-def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None):
+def _guide_band(v, gd_t, inb, b0, band0, guide):
+    """The Guidance column of one band (2026 MJ): paragraphs re-wrapped to our Guidance column and pictures (prism diagrams,
+    2026 MJ 31 q7), placed top to bottom in their printed order - nothing overlaps; pictures printed in one row stay side
+    by side (shrunk together only if the row is wider than our column). Returns the bottom of the column's content."""
+    ws = [t for t in gd_t if inb(t['y'] - 0.35 * t.get('s', 10))]
+    G, e3, xr = guide['G'], guide['e3'], guide['xr']
+    nw = W - G
+    pics = guide.get('pics') or []
+    if not ws and not pics:
+        return band0
+    s_ = max([t.get('s', 10) for t in ws] + [10])
+    pitch = round(s_ * 1.18, 2)
+    items = []
+    for p in MP._paragraphs(MP._groups(ws), xr, e3, guidance=True):
+        y0 = min(w['y'] - 0.8 * w.get('s', 10) for ln in p['lines'] for g in ln for w in g['ws'])
+        items.append((y0, 'p', p))
+    rows = []
+    for k_, f in sorted(pics, key=lambda kf: kf[1]['y']):
+        if rows and f['y'] < max(g['y'] + (g.get('h') or 0) for _, g in rows[-1]) - 2:
+            rows[-1].append((k_, f))
+        else:
+            rows.append([(k_, f)])
+    for r in rows:
+        items.append((min(f['y'] for _, f in r), 'r', r))
+    items.sort(key=lambda it: it[0])
+    bot, delta, out_bot = band0, 0.0, band0
+    moved = []
+    for y_src, kind, it in items:
+        y = max(band0 + (y_src - b0) + delta, bot + (2 if kind == 'r' else 0))
+        if kind == 'r':
+            tw = sum(f.get('w') or 0 for _, f in it) + 6 * (len(it) - 1)
+            k = min(1.0, (nw - 6) / tw) if tw else 1.0
+            x = G + 3 + max(0.0, (nw - 6 - tw * k) / 2)
+            hmax = 0.0
+            for k_, f in sorted(it, key=lambda kf: kf[1]['x']):
+                g = dict(f); g['x'] = round(x, 2); g['y'] = round(y + (f['y'] - y_src) * k, 2)
+                if 'w' in g: g['w'] = round(g['w'] * k, 2)
+                if 'h' in g: g['h'] = round(g['h'] * k, 2)
+                if k_ == 'figs': g['k'] = round(f.get('k', 1) * k, 4)
+                v.setdefault(k_, []).append(g)
+                x += (g.get('w') or 0) + 6 * k
+                hmax = max(hmax, (g['y'] - y) + (g.get('h') or 0))
+            src_bot = max(f['y'] + (f.get('h') or 0) for _, f in it)
+            bot = y + hmax + 2
+            delta = bot - (band0 + (src_bot - b0))
+        else:
+            rel = {'lines': [[dict(g, x=g['x'] - e3) for g in ln] for ln in it['lines']]}
+            wl = MP._wrap(rel, nw - 2)
+            m0 = it['lines'][0][0]['ws'][0]
+            base = y + 0.8 * m0.get('s', 10)
+            for j, ln in enumerate(wl):
+                for g, gx in ln:
+                    m = g['ws'][0]
+                    for w in g['ws']:
+                        n = dict(w); n['x'] = round(G + gx + (w['x'] - m['x']), 2)
+                        n['y'] = round(base + j * pitch + (w['y'] - m['y']), 2)
+                        v['text'].append(n); bot = max(bot, n['y'] + 4); moved.append((w, n))
+            src_last = max(w['y'] for ln in it['lines'] for g in ln for w in g['ws'])
+            delta = (base + (len(wl) - 1) * pitch) - (band0 + (src_last - b0))
+        out_bot = max(out_bot, bot)
+    for l, bb in guide.get('lines') or []:            # each drawing moves with the word it touches (or the nearest one)
+        if not moved:
+            break
+        cx, cy = (bb[0] + bb[2]) / 2, (bb[1] + bb[3]) / 2
+        def dist(w):
+            dx_ = max(w['x'] - bb[2], bb[0] - (w['x'] + w['w']), 0)
+            dy_ = max((w['y'] - 0.8 * w.get('s', 10)) - bb[3], bb[1] - (w['y'] + 0.25 * w.get('s', 10)), 0)
+            return dx_ + 2 * dy_
+        w, n = min(moved, key=lambda wn: dist(wn[0]))
+        if dist(w) > 12:
+            continue
+        ddx, ddy = n['x'] - w['x'], n['y'] - w['y']
+        v['lines'].append({**l, 'd': _map_path(l['d'], lambda x: x + ddx, lambda y: y + ddy)})
+    return out_bot + 1
+
+
+def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None, guide=None):
     """Dhruv 2026-11-05 (round 13): rows drawn cell-wise keep the NORMAL font size; the row grows instead.
     The answer cell is laid out band by band (bands = its sub-rows): an inner table gets narrower columns to fit its
     content; a text-only band that is too wide is re-wrapped; only a band with fractions/drawings that still does not
     fit is shrunk (just that band)."""
     T_ = 0.6
+    WR = guide['G'] if guide else W               # right end of OUR marks column (Guidance follows, 2026 MJ)
+    e3 = guide['e3'] if guide else 1e9
     A = M - L - 10                                    # room in our answer column
     v = {'src': u['src'], 'w': W, 'h': 0, 'text': [], 'lines': [], 'figs': [], 'glyphs': [], 'cell_scaled': 1.0}
     cy = lambda t: t['y'] - 0.35 * t.get('s', 10)
     ans_t = [t for t in u['text'] if e1 < t['x'] + t['w'] / 2 < e2 and t['y'] < h - 1]
     lab_t = [t for t in u['text'] if t['x'] + t['w'] / 2 < e1 and t['y'] < h - 1]
-    mrk_t = [t for t in u['text'] if t['x'] + t['w'] / 2 > e2 and t['y'] < h - 1]
+    mrk_t = [t for t in u['text'] if e2 < t['x'] + t['w'] / 2 < e3 and t['y'] < h - 1]
+    gd_t = [t for t in u['text'] if t['x'] + t['w'] / 2 > e3 and t['y'] < h - 1]
     ans_l = []
     for l in u['lines']:
         if (l.get('fill') or '').lower() in ('#ffffff', '#fff') and not l.get('stroke') or (l.get('stroke') or '').lower() in ('#ffffff', '#fff'):
@@ -733,8 +821,42 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None):
     is_sep = lambda b: b[3] - b[1] < 1.3 and b[0] <= e1 + 4 and b[2] >= e2 - 4
     seps = MP._cluster([(b[1] + b[3]) / 2 for l, b in ans_l if is_sep(b)])
     sep_m = {y: any(r[3] - r[1] < 1.3 and abs((r[1] + r[3]) / 2 - y) < 1.5 and r[2] > e2 + 5 for r in rr) for y in seps}
+    sep_g = {y: any(r[3] - r[1] < 1.3 and abs((r[1] + r[3]) / 2 - y) < 1.5 and r[2] > e3 + 5 for r in rr) for y in seps}
+    gstate = {'start': None, 'y0': 0.0, 'bot': 0.0}   # a Guidance cell spanning several Answer sub-rows (no rule across it)
+    def g_open(i, band0, b0):
+        if not guide or gstate['start'] is not None:
+            return
+        j = i
+        while j < len(seps) and not sep_g.get(seps[j], True):
+            j += 1                                    # bands i..j share one Guidance cell
+        lo, hi = bounds[i], bounds[j + 1]
+        last = j + 1 == len(bounds) - 1
+        inb_g = lambda y: lo <= y < hi or (last and y >= hi)
+        guide['pics'] = [(k_, f) for k_, f in gpics if inb_g(f['y'] + f.get('h', 0) / 2)]
+        guide['lines'] = [(l, bb) for l, bb in glines if inb_g((bb[1] + bb[3]) / 2)]
+        gstate.update(start=i, end=j, bot=_guide_band(v, gd_t, inb_g, lo, band0, guide))
+    def g_close(i, cum):
+        if not guide or gstate['start'] is None or i < gstate['end']:
+            return cum
+        gstate['start'] = None
+        return max(cum, gstate['bot'])
     ans_l = [(l, b) for l, b in ans_l if not is_sep(b)]
-    pics = [(key, f) for key in ('figs', 'images', 'glyphs') for f in (u.get(key) or [])]
+    pics = [(key, f) for key in ('figs', 'images', 'glyphs') for f in (u.get(key) or []) if f['x'] < e3]
+    gpics = [(key, f) for key in ('figs', 'images', 'glyphs') for f in (u.get(key) or []) if f['x'] >= e3 - 2]
+    glines = []                                        # drawings in the Guidance cell (root signs, fraction bars): move with their word
+    if guide:
+        for l in u['lines']:
+            if (l.get('fill') or '').lower() in ('#ffffff', '#fff') and not l.get('stroke'):
+                continue
+            pts = [float(x) for x in MP.NUM.findall(l['d'])]
+            if len(pts) < 4:
+                continue
+            bb = (min(pts[0::2]), min(pts[1::2]), max(pts[0::2]), max(pts[1::2]))
+            if bb[0] < e3 + 1 or bb[1] >= h - 1.5 or (bb[3] - bb[1] < 1.3 and bb[2] - bb[0] > 0.8 * (u['w'] - e3)):
+                continue                              # outside, or a rule of the cell
+            if bb[2] - bb[0] < 1.3 and bb[3] - bb[1] > 0.6 * h:
+                continue
+            glines.append((l, bb))
     bounds = [0.0] + seps + [h]
     lines_m = {}
     for t in mrk_t:
@@ -844,7 +966,17 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None):
                 tabs.setdefault(tkey, [[], False])[0].append(rm[0])
         if (need > A + 0.5 or spanning) and pure and TT:   # re-wrap the text lines of this band (wide gaps closed up)
             # a fraction (numerator / bar / denominator) belongs to the text line it sits in (2022 FM 32 q11 '... OR 240×48/590')
-            line_of = {id(t): round(t['y']) for t in TT}
+            line_of = {}
+            ref_y = []                                  # baselines within 1.5 pt are one line ('ρ=' 0.8 pt off its brackets, 2026 MJ 41 q2)
+            for t in sorted((t for t in TT if t.get('s', 11) >= 8), key=lambda t: t['y']):
+                if ref_y and t['y'] - ref_y[-1][0] <= 1.5:
+                    line_of[id(t)] = ref_y[-1][1]
+                else:
+                    ref_y.append((t['y'], round(t['y']))); line_of[id(t)] = round(t['y'])
+            for t in TT:                                # a sub/superscript ('×10ᴺ') goes with the line it sits on
+                if id(t) not in line_of:
+                    near = min(ref_y, key=lambda r: abs(r[0] - t['y'])) if ref_y else None
+                    line_of[id(t)] = near[1] if near and abs(near[0] - t['y']) <= 7 else round(t['y'])
             for l, b in decor:
                 num = [t for t in TT if 0.3 <= b[1] - t['y'] <= 5 and b[0] - 1 <= t['x'] + t['w'] / 2 <= b[2] + 1]
                 den = [t for t in TT if 0 < t['y'] - b[3] <= 13 and b[0] - 1 <= t['x'] + t['w'] / 2 <= b[2] + 1]
@@ -852,9 +984,15 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None):
                     yn, yd = min(t['y'] for t in num), max(t['y'] for t in den)
                     host = [t for t in TT if yn + 1 < t['y'] < yd - 1 and t not in num + den]
                     if host:
-                        hy = round(min(host, key=lambda t: abs(t['y'] - (b[1] + 3)))['y'])
+                        hy = line_of[id(min(host, key=lambda t: abs(t['y'] - (b[1] + 3))))]
                         for t in num + den:
                             line_of[id(t)] = hy
+            for t in TT:                                # a sub/superscript follows the word it is attached to ('2.8×10ᴺ')
+                if t.get('s', 11) < 8:
+                    base = [o for o in TT if o.get('s', 11) >= 8 and abs(o['y'] - t['y']) <= 7
+                            and t['x'] - 3 <= o['x'] + o['w'] <= t['x'] + 1]
+                    if base:
+                        line_of[id(t)] = line_of[id(max(base, key=lambda o: o['x'] + o['w']))]
             rows_ = collections.OrderedDict()
             for t in sorted(TT, key=lambda t: (line_of[id(t)], t['x'])):
                 rows_.setdefault(line_of[id(t)], []).append(t)
@@ -865,6 +1003,8 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None):
                 for t in sorted(ws, key=lambda t: t['x']):
                     if toks and t['x'] < max(o['x'] + o['w'] for o in toks[-1]) - 0.5 and abs(t['y'] - toks[-1][0]['y']) > 2:
                         toks[-1].append(t)
+                    elif toks and t['x'] - max(o['x'] + o['w'] for o in toks[-1]) < 2.0:
+                        toks[-1].append(t)                 # no space between them ('2.8×10ᴺ'): never split
                     else:
                         toks.append([t])
                 tx0 = lambda tk: min(o['x'] for o in tk); tw_ = lambda tk: max(o['x'] + o['w'] for o in tk) - tx0(tk)
@@ -906,15 +1046,15 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None):
                     g['x'] = round(g['x'] + ox, 2); g['y'] = round(g['y'] + oy, 2); v.setdefault(k_, []).append(g)
                 Ymap = lambda y: oy + ymap_(y)
                 if has_marks:                         # the marks column's own sub-row lines, at the table's new row heights
-                    for y_m in MP._cluster([(r[1] + r[3]) / 2 for r in rr if r[3] - r[1] < 1.3 and r[0] >= e2 - 2 and r[2] - r[0] > 5
+                    for y_m in MP._cluster([(r[1] + r[3]) / 2 for r in rr if r[3] - r[1] < 1.3 and r[0] >= e2 - 2 and r[2] <= e3 + 2 and r[2] - r[0] > 5
                                             and b0 + 2 < (r[1] + r[3]) / 2 < b1 - 2 and (r[1] + r[3]) / 2 < h - 2]):
-                        v['lines'].append(_rect(M, Ymap(y_m) - 0.25, W, Ymap(y_m) + 0.25))
+                        v['lines'].append(_rect(M, Ymap(y_m) - 0.25, WR, Ymap(y_m) + 0.25))
                 for y_, ws in lines_m.items():
                     if not inb(y_ - 3):
                         continue
                     a_, c_ = span(ws)
                     for t in ws:
-                        n = dict(t); n['x'] = round(W - 6 - (c_ - a_) + (t['x'] - a_), 2)
+                        n = dict(t); n['x'] = round(WR - 6 - (c_ - a_) + (t['x'] - a_), 2)
                         n['y'] = round(cum + (t['y'] - b0) if t['y'] - 0.7 * t.get('s', 10) < ytab + 2 else Ymap(t['y']), 2)   # level with the label
                         v['text'].append(n)
                 for y_, ws in lines_l.items():
@@ -929,14 +1069,16 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None):
                     n = dict(t); n['x'] = round(L + 5 + (t['x'] - e1b), 2)
                     n['y'] = round(cum + (t['y'] - b0) if t['y'] < tab_y0 else tb + (t['y'] - tab_y1), 2)
                     v['text'].append(n)
-                cum = max([tb + (0 if full_ else 6)] + [n['y'] + 5 for n in v['text']])   # a full-cell table ends on the row line
+                g_open(i, cum, b0)
+                cum = max([tb + (0 if full_ else 6)] + [n['y'] + 5 for n in v['text'] if n['x'] < WR])   # a full-cell table ends on the row line
+                cum = g_close(i, cum)
                 if full_ and cum > tb + 0.5:              # its column lines run on to the row line
                     for l in list(v['lines'][-len(lines_):]):
                         bb_ = MP._bbox(l['d'])
                         if bb_ and bb_[2] - bb_[0] < 1.3 and abs(bb_[3] - tb) < 0.6:
                             v['lines'].append(_rect(bb_[0], tb, bb_[2], cum))
                 if i < len(bounds) - 2:
-                    sep_new.append((cum, sep_m.get(bounds[i + 1], False)))
+                    sep_new.append((cum, (sep_m.get(bounds[i + 1], False), sep_g.get(bounds[i + 1], False)) if guide else sep_m.get(bounds[i + 1], False)))
                 elif full_:
                     end_full = cum                    # the row ends on the table's last line (no 2 pt gap under it)
                 continue
@@ -992,15 +1134,15 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None):
                 if k_ == 'figs': g['k'] = round(f.get('k', 1) * kb, 4)
             v.setdefault(k_, []).append(g)
         if has_marks and not spanning:               # the marks column's own sub-row lines (2021 ON 32 q6(a))
-            for y_m in MP._cluster([(r[1] + r[3]) / 2 for r in rr if r[3] - r[1] < 1.3 and r[0] >= e2 - 2 and r[2] - r[0] > 5
+            for y_m in MP._cluster([(r[1] + r[3]) / 2 for r in rr if r[3] - r[1] < 1.3 and r[0] >= e2 - 2 and r[2] <= e3 + 2 and r[2] - r[0] > 5
                                     and b0 + 2 < (r[1] + r[3]) / 2 < b1 - 2 and (r[1] + r[3]) / 2 < h - 2]):
-                v['lines'].append(_rect(M, fy(y_m) - 0.25, W, fy(y_m) + 0.25))
+                v['lines'].append(_rect(M, fy(y_m) - 0.25, WR, fy(y_m) + 0.25))
         for y_, ws in lines_m.items():                # marks: right-aligned in our marks column, at the band's top offset
             if spanning or not inb(y_ - 3):
                 continue
             a_, c_ = span(ws)
             for t in ws:
-                n = dict(t); n['x'] = round(W - 6 - (c_ - a_) + (t['x'] - a_), 2); n['y'] = round(cum + (t['y'] - b0), 2)
+                n = dict(t); n['x'] = round(WR - 6 - (c_ - a_) + (t['x'] - a_), 2); n['y'] = round(cum + (t['y'] - b0), 2)
                 v['text'].append(n)
         for y_, ws in lines_l.items():                # question label: centred in our label column
             if spanning or not inb(y_ - 3):
@@ -1009,25 +1151,33 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None):
             for t in ws:
                 n = dict(t); n['x'] = round((L - (c_ - a_)) / 2 + (t['x'] - a_), 2); n['y'] = round(cum + (t['y'] - b0), 2)
                 v['text'].append(n)
-        bot = [n['y'] + 5 for n in v['text']]
+        bot = [n['y'] + 5 for n in v['text'] if n['x'] < WR]
+        g_open(i, cum, b0)
         cum = max([(b1 - b0) * kb + extra + cum] + [y for y in bot] + ([lbot + 6] if cols else []))   # room under an inner table's edge
+        cum = g_close(i, cum)
         if i < len(bounds) - 2:
-            sep_new.append((cum, sep_m.get(bounds[i + 1], False)))
+            sep_new.append((cum, (sep_m.get(bounds[i + 1], False), sep_g.get(bounds[i + 1], False)) if guide else sep_m.get(bounds[i + 1], False)))
     if force is None:
         # Dhruv, round 18 (2023 FM 42 q1): the same inner table in several sub-rows keeps ONE design - if one of them has
         # to be re-wrapped, all of them are, with the same column widths (the widest each column needs)
         f_ = {k: [max(c) for c in zip(*ms_)] for k, (ms_, rfl) in tabs.items() if rfl and len(ms_) >= 2}
         if f_:
-            return _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov, force=f_)
+            return _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov, force=f_, guide=guide)
     v['h'] = round(cum if end_full is not None and abs(end_full - cum) < 0.01 else cum + 2, 2)
     v['cell_scaled'] = round(kmin, 3)
     for y, into_m in sep_new:
         if y >= cum - 0.5:
             continue                                  # the bands below were dropped: the row's own bottom border is enough
+        if guide:                                     # Marks: into the marks column; Guidance: only where its own rule is
+            into_m, into_g = into_m
+            v['lines'].append(_rect(L, y, (W if into_g else WR) if into_m else M, y + T_ * 0.8))
+            continue
         v['lines'].append(_rect(L, y, W if into_m else M, y + T_ * 0.8))
     v['lines'].append(_rect(L - 0.3, 0, L + 0.3, v['h']))
     if has_marks:
         v['lines'].append(_rect(M - 0.3, 0, M + 0.3, v['h']))
+    if guide:
+        v['lines'].append(_rect(WR - 0.3, 0, WR + 0.3, v['h']))
     return v
 
 
@@ -1172,7 +1322,8 @@ def _header_unit(hdr, info):
     columns of the rows below. Only the ORDER of the printed header words is used, not their positions."""
     nw = list(info['new_w']); starts = [0.0] + list(info['new_edges'])
     real = [i for i, w in enumerate(nw) if w >= 20]
-    ws = sorted(hdr['text'], key=lambda t: t['x'])
+    top_y = min([t['y'] for t in hdr['text']] or [0])   # the header line only (2026 MJ 62: an examiner note printed under it)
+    ws = sorted((t for t in hdr['text'] if t['y'] <= top_y + 3), key=lambda t: t['x'])
     phrases = []
     for t in ws:
         if phrases and t['x'] - (phrases[-1][-1]['x'] + phrases[-1][-1]['w']) < 12:

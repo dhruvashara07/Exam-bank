@@ -97,6 +97,10 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
                 runs, cur = [], []
                 for c in s['chars']:
                     if c['c'].strip():
+                        # a jump of the baseline inside one run is a new word (')' + denominator '1.8' of the fraction
+                        # below, 2026 MJ 41 q7(b)(iii): one PDF run over two lines)
+                        if cur and abs(c['origin'][1] - cur[-1]['origin'][1]) > 2.5 and abs(dy) < 0.01:
+                            runs.append(cur); cur = []
                         cur.append(c)
                     elif cur:
                         runs.append(cur); cur = []
@@ -216,6 +220,28 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
                 page.get_pixmap(clip=r, dpi=300).save(os.path.join(store, 'figures', name))
                 u.setdefault('images', []).append({'file': name, 'x': round(r.x0 - ox, 2), 'y': round(r.y0 - oy, 2),
                                                     'w': round(r.width, 2), 'h': round(r.height, 2)})
+    # glyphs the text layer cannot read (colour-emoji ticks, 2025 FM 42 q6(a)(iv): Segoe UI Emoji maps them to a space,
+    # so they were lost): every drawn glyph whose character reads as a space is kept as a picture of itself
+    seen_ = set()
+    for tr in page.get_texttrace():
+        if not any(ch[0] == 32 and ch[1] > 3 for ch in tr['chars']) or 'emoji' not in tr['font'].lower() and 'symbol' not in tr['font'].lower():
+            continue
+        r = (fitz.Rect(tr['bbox']).quad * m).rect
+        if r.width < 3 or r.height < 3 or (r & clip).is_empty or not inside(r) or in_fig(r):
+            continue
+        k_ = (round(r.x0), round(r.y0))
+        if k_ in seen_:
+            continue
+        seen_.add(k_)
+        r = r + (-0.5, -0.5, 0.5, 0.5)
+        name = f"emo_{docname}{pno + 1}_{int(r.x0)}_{int(r.y0)}.png"
+        pix = page.get_pixmap(clip=r, dpi=300)
+        from PIL import Image as _I
+        im_ = _I.frombytes('RGB', (pix.width, pix.height), pix.samples).convert('RGBA')
+        im_.putdata([(rr, gg, bb, 0 if rr > 245 and gg > 245 and bb > 245 else 255) for rr, gg, bb, aa in im_.getdata()])
+        im_.save(os.path.join(store, 'figures', name))
+        u.setdefault('images', []).append({'file': name, 'x': round(r.x0 - ox, 2), 'y': round(r.y0 - oy, 2),
+                                            'w': round(r.width, 2), 'h': round(r.height, 2)})
     for f in figs:
         b = fitz.Rect(f['source']['box'])
         if inside(b):
