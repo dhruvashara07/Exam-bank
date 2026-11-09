@@ -47,6 +47,8 @@ def glyph_styles(doc, pages):
     occ = collections.defaultdict(list)                  # (font, gid) -> [(page, char, bbox)]
     count = collections.Counter()
     for pno in pages:
+        if not any(anonymous(f[3].split('+')[-1]) or anonymous(f[3]) for f in doc[pno].get_fonts()):
+            continue                                     # (no merged font on this page: reading its glyph trace cost 3 GB, 2013 MJ 11)
         for sp in doc[pno].get_texttrace():
             if not anonymous(sp['font']):
                 continue
@@ -63,8 +65,14 @@ def glyph_styles(doc, pages):
     raster = {}
     def page_ink(pno):
         if pno not in raster:
-            pix = doc[pno].get_pixmap(matrix=fitz.Matrix(Z, Z), colorspace=fitz.csGRAY)
-            raster[pno] = np.frombuffer(pix.samples, np.uint8).reshape(pix.h, pix.w) < 128
+            # rendered in 100 pt strips (pixel-identical to one render; one 8x render of a page with scans peaked at 2.3 GB)
+            pg, parts, y = doc[pno], [], 0.0
+            while y < pg.rect.height:
+                y1 = min(pg.rect.height, y + 100)
+                px = pg.get_pixmap(matrix=fitz.Matrix(Z, Z), clip=fitz.Rect(pg.rect.x0, y, pg.rect.x1, y1), colorspace=fitz.csGRAY)
+                parts.append(np.frombuffer(px.samples, np.uint8).reshape(px.h, px.w) < 128)
+                y = y1
+            raster[pno] = np.vstack(parts)
         return raster[pno]
     def measure(o):
         h = o.shape[0]
@@ -80,13 +88,22 @@ def glyph_styles(doc, pages):
         else:
             slant = 0.0
         return weight, slant
+    # the glyph crops, read page by page (one 8x page raster in memory at a time: keeping them all took 3 GB, 2013 MJ 11)
+    crops = {}
+    for pno_ in sorted({o[0] for lst in occ.values() for o in lst}):
+        a = page_ink(pno_)
+        for key, lst in occ.items():
+            for i_, (pno, ch, bbox) in enumerate(lst):
+                if pno == pno_:
+                    x0, y0, x1, y1 = [int(v * Z) for v in bbox]
+                    crops[(key, i_)] = a[max(0, y0 - 2):y1 + 2, max(0, x0 - 2):x1 + 2].copy()
+        raster.clear()
+        fitz.TOOLS.store_shrink(100)                     # (MuPDF's own cache kept every page raster)
     feats = {}
     for key, lst in occ.items():
         ws, ss = [], []
-        for pno, ch, bbox in lst:
-            a = page_ink(pno)
-            x0, y0, x1, y1 = [int(v * Z) for v in bbox]
-            crop = a[max(0, y0 - 2):y1 + 2, max(0, x0 - 2):x1 + 2]
+        for i_, (pno, ch, bbox) in enumerate(lst):
+            crop = crops[(key, i_)]
             ys, xs = np.nonzero(crop)
             if len(xs) < 20:
                 continue

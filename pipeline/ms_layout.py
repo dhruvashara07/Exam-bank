@@ -340,8 +340,11 @@ def _own_total(marks, info, rows):
             'figs': [], 'glyphs': [], 'own_total': True}
 
 
-LABEL_RE = re.compile(r'^(\d{1,2})$|^\(([a-h])\)$|^\(([ivx]{1,4})\)$')
+LABEL_RE = re.compile(r'^(\d{1,2})$|^\(([a-hj-p])\)$|^\(([ivx]{1,4})\)$')   # (practical papers run to (n))
+COMBO_RE = re.compile(r'^(\((?:[a-hj-p]|[ivx]{1,4})\)){2,4}$')   # one answer for several parts: '(iii)(iv)(v)', '(a)(i)(ii)', '(b)(c)'
 MARK_RE = re.compile(r'^\(?(?:[ABCMP]\d{1,2}|B\d|\d)\)?$|^\[\d{1,2}\]$')
+# marks-column pieces: codes, '[1]' (also printed as '[ ]' + '1', 2014 ON 63), 'max.' ('max. B2', 2015 MJ 23), '+' ('B1 + B1')
+MARKISH = lambda x: bool(MARK_RE.match(x) or re.fullmatch(r'[\[\]\s]+|max\.?|\+', x))
 
 
 def _old_rows(units, q, L=44.0, M=W - 44.0):
@@ -351,8 +354,39 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
     (re-wrapped when too wide), marks right-aligned in the Marks column; the printed '[Total: n]' goes (ours is drawn)."""
     A = M - L - 10
     qn = str(int(q['id'].rsplit('_q', 1)[1]))
+    # a brace running from one printed part into the next ('(d)(i) ... } both B1 (ii)', 2014 ON 21 q10): one unit, so one row
+    def tall_braces(u):
+        out_ = []
+        for l in u['lines']:
+            pts_ = [float(x_) for x_ in MP.NUM.findall(l['d'])]
+            if len(pts_) >= 4:
+                b_ = (min(pts_[0::2]), min(pts_[1::2]), max(pts_[0::2]), max(pts_[1::2]))
+                if b_[2] - b_[0] < 14 and b_[0] > 0.1 * u['w']:
+                    out_.append(b_)
+        return out_
+    merged = []
+    for u in units:
+        prev = merged[-1] if merged else None
+        if (prev is not None and prev['src']['page'] == u['src']['page'] and abs(prev['src']['box'][3] - u['src']['box'][1]) < 1
+                and abs(prev['src']['box'][0] - u['src']['box'][0]) < 1
+                and any(b_[3] - b_[1] > 20 and b_[3] >= prev['h'] - 2 for b_ in tall_braces(prev))
+                and any(b_[1] <= 2 for b_ in tall_braces(u))):
+            dy_ = prev['h']
+            m_ = dict(prev); m_['h'] = round(prev['h'] + u['h'], 2)
+            m_['src'] = dict(prev['src'], box=[prev['src']['box'][0], prev['src']['box'][1], prev['src']['box'][2], u['src']['box'][3]])
+            m_['text'] = prev['text'] + [dict(t, y=t['y'] + dy_) for t in u['text']]
+            m_['lines'] = prev['lines'] + [{**l, 'd': _map_path(l['d'], lambda x: x, lambda y, dy_=dy_: y + dy_)} for l in u['lines']]
+            for k_ in ('figs', 'images', 'glyphs'):
+                if prev.get(k_) or u.get(k_):
+                    m_[k_] = list(prev.get(k_) or []) + [dict(f, y=f['y'] + dy_) for f in u.get(k_) or []]
+            merged[-1] = m_
+        else:
+            merged.append(u)
+    units = merged
     state = {'l': None, 'r': None}
     rows = []
+    used = set()
+    qparts = {p.get('path') for p in q.get('parts', [])}
     for u in units:
         ws = [t for t in u['text'] if t.get('s', 10) >= 5]
         # the printed total '[Total: 5]'
@@ -377,32 +411,85 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
         for t in sorted(ws, key=lambda t: (key(t), t['x'])):
             lines.setdefault(key(t), []).append(t)
         lines = collections.OrderedDict(sorted(lines.items()))
-        def lead_labels(lw):                          # bold 'n', '(a)', '(i)' at the start of a line
-            out_ = []
+        cand = lambda t: ((LABEL_RE.match(t['t']) or COMBO_RE.match(t['t'])) and t['x'] < 0.3 * u['w']
+                          and (not t['t'].isdigit() or t['t'] == qn))   # an answer '92' is not a label (2013 MJ 23 q12)
+        plain = [t for lw in lines.values() for t in lw if not cand(t) and not (t['x'] > 0.82 * u['w'] and MARKISH(t['t']))]
+        indent = min([t['x'] for t in plain] + [u['w']])
+        def lead_labels(lw):                          # 'n', '(a)', '(i)' at the start of a line: bold, or left of the answer text
+            out_ = []                                 # (2013 MJ 51: labels printed in a plain font)
             for t in lw:
-                if t.get('b') and LABEL_RE.match(t['t']) and t['x'] < 0.3 * u['w']:
+                if cand(t) and (t.get('b') or t['x'] + t['w'] <= indent + 1 or (out_ == [] and t['x'] < indent - 8 and COMBO_RE.match(t['t']))):
                     out_.append(t)
                 else:
                     break
             return out_
         all_labs = {id(t) for lw in lines.values() for t in lead_labels(lw)}
-        body = [t for t in ws if id(t) not in all_labs and not (t['x'] > 0.82 * u['w'] and MARK_RE.match(t['t']))]
+        body = [t for t in ws if id(t) not in all_labs and not (t['x'] > 0.82 * u['w'] and MARKISH(t['t']))]
         ax0 = min([t['x'] for t in body]) if body else 56.0
         # split the unit at lines that start with a part label
         segs = []
+        pieces_ = []
+        for l in u['lines']:
+            pts_ = [float(x_) for x_ in MP.NUM.findall(l['d'])]
+            if len(pts_) >= 4:
+                bb_ = (min(pts_[0::2]), min(pts_[1::2]), max(pts_[0::2]), max(pts_[1::2]))
+                if bb_[2] - bb_[0] < 14 and bb_[0] > 0.1 * u['w'] and bb_[3] - bb_[1] > 4:
+                    pieces_.append(bb_)
+        pieces_.sort(key=lambda b_: b_[1])
+        braces = []
+        for b_ in pieces_:                            # a brace drawn in pieces (top, middle, bottom): one brace
+            if braces and b_[1] <= braces[-1][3] + 3 and b_[0] < braces[-1][2] + 2 and b_[2] > braces[-1][0] - 2:
+                c_ = braces[-1]; braces[-1] = (min(c_[0], b_[0]), c_[1], max(c_[2], b_[2]), max(c_[3], b_[3]))
+            else:
+                braces.append(b_)
+        braces = [b_ for b_ in braces if b_[3] - b_[1] > 20]
         for y, lw in lines.items():
             labs = lead_labels(lw)
-            if labs or not segs:
+            # parts joined by one brace share one answer and one mark ('(d)(i) ... } both B1 (ii)', 2014 ON 21 q10): one row
+            joined = labs and segs and any(b_[1] < y - 9 and y - 4 < b_[3] and b_[1] < segs[-1]['y0'] + 4 for b_ in braces)
+            if joined:
+                segs[-1].setdefault('more', []).extend(labs)
+                lw = [t for t in lw if t not in labs]
+            elif labs or not segs:
                 segs.append({'y0': y, 'labs': labs, 'lines': []})
             segs[-1]['lines'].append(lw)
         for sg in segs:
+            extra_lab = ''
             for t in sg['labs']:
-                m_ = LABEL_RE.match(t['t'])
-                if m_.group(2):
-                    state['l'], state['r'] = m_.group(2), None
-                elif m_.group(3):
-                    state['r'] = m_.group(3)
-            label = qn + (f"({state['l']})" if state['l'] else '') + (f"({state['r']})" if state['r'] else '')
+                pieces = re.findall(r'\(([a-hj-p]|[ivx]{1,4})\)', t['t']) or [t['t']]
+                for k_, pc in enumerate(pieces):
+                    roman = re.fullmatch(r'[ivx]{1,4}', pc) and not (pc in ('i', 'v', 'x') and state['r'] is None and k_ == 0
+                                                                         and not any(re.fullmatch(r'[a-h]', o) for o in pieces[:k_]) and False)
+                    if pc.isdigit():
+                        continue
+                    if pc == 'i' and state['l'] == 'h' and k_ == 0:
+                        state['l'], state['r'] = 'i', None    # '(i)' after '(h)' is the letter i
+                        continue
+                    if re.fullmatch(r'[a-hj-p]', pc):
+                        if extra_lab or (k_ and re.fullmatch(r'[a-hj-p]', pieces[k_ - 1])):
+                            extra_lab += f'({pc})'           # '(b)(c)': one answer for both
+                        else:
+                            state['l'], state['r'] = pc, None
+                    elif roman:
+                        if state['r'] is not None and k_ and re.fullmatch(r'[ivx]{1,4}', pieces[k_ - 1]):
+                            extra_lab += f'({pc})'           # '(iii)(iv)(v)'
+                        else:
+                            state['r'] = pc
+            for t in sg.get('more', []):                # labels joined into this row by a brace: '(d)(i)(ii)'
+                extra_lab += ''.join(f'({pc})' for pc in re.findall(r'\(([a-hj-p]|[ivx]{1,4})\)', t['t']))
+            label = qn + (f"({state['l']})" if state['l'] else '') + (f"({state['r']})" if state['r'] else '') + extra_lab
+            base_lab = qn + (f"({state['l']})" if state['l'] else '') + (f"({state['r']})" if state['r'] else '')
+            if sg['labs'] and state['l'] and state['r'] and not extra_lab and (base_lab in used or base_lab not in qparts):
+                # Cambridge left out the letter ('(a)(ii)' then '(i)' meaning (b)(i), 2013 ON 31 q11): the next letter whose
+                # part exists in the question paper
+                for k in range(1, 4):
+                    l2 = chr(ord(state['l']) + k)
+                    lab2 = f"{qn}({l2})({state['r']})"
+                    if lab2 in qparts and lab2 not in used:
+                        state['l'], label = l2, lab2
+                        break
+            if sg['labs']:
+                used.add(label)
             tpl = dict(next((t for lw in sg['lines'] for t in lw if not t.get('b')), sg['lines'][0][0]))
             for k in ('i', 'c', 'role', 'u', 'dir'):
                 tpl.pop(k, None)
@@ -410,8 +497,8 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
             top = max(sg['lines'][0], key=lambda t: t.get('s', 11))['y'] - 14.0
             extra = 0.0; cur_y = None
             for lw in sg['lines']:
-                body_l = [t for t in lw if t not in sg['labs'] and not (t['x'] > 0.82 * u['w'] and MARK_RE.match(t['t']))]
-                marks_l = [t for t in lw if t['x'] > 0.82 * u['w'] and MARK_RE.match(t['t'])]
+                body_l = [t for t in lw if t not in sg['labs'] and not (t['x'] > 0.82 * u['w'] and MARKISH(t['t']))]
+                marks_l = [t for t in lw if t['x'] > 0.82 * u['w'] and MARKISH(t['t'])]
                 ly = max(lw, key=lambda t: t.get('s', 11))['y']
                 y = ly - top + extra
                 dx = 0.0; start = None
@@ -425,20 +512,47 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                     n['x'] = round(x, 2); n['y'] = round(y + (t['y'] - ly), 2); v['text'].append(n)
                 if marks_l:
                     a_ = min(t['x'] for t in marks_l); c_ = max(t['x'] + t['w'] for t in marks_l)
+                    pos = {id(t): t['x'] - a_ for t in marks_l}
+                    stack = [t for t in marks_l if re.fullmatch(r'max\.?', t['t'])]
+                    if stack and c_ - a_ > (W - M) - 8:       # 'max. B2': 'max.' on the line above its code
+                        for t in stack:
+                            n = dict(t, b=0); n['x'] = round(W - 6 - t['w'], 2)
+                            n['y'] = round(max(lw, key=lambda t: t.get('s', 11))['y'] - top - 0.9 * t.get('s', 11), 2)
+                            v['text'].append(n)
+                        marks_l = [t for t in marks_l if t not in stack]
+                        a_ = min(t['x'] for t in marks_l); c_ = max(t['x'] + t['w'] for t in marks_l)
+                        pos = {id(t): t['x'] - a_ for t in marks_l}
+                    if c_ - a_ > (W - M) - 10:                # 'B1   [4]' wider than our Marks column: gaps closed up
+                        xx = 0.0; pos = {}
+                        for t in sorted(marks_l, key=lambda t: t['x']):
+                            br = re.fullmatch(r'[\[\]\s]+', t['t'])
+                            pos[id(t)] = xx; xx += t['w'] + (0.5 if br else 3.0)
+                        c_ = a_ + xx - 3.0
                     for t in marks_l:
-                        n = dict(t, b=1); n['x'] = round(W - 6 - (c_ - a_) + (t['x'] - a_), 2); n['y'] = round(max(lw, key=lambda t: t.get('s', 11))['y'] - top, 2)
-                        v['text'].append(n)                   # marks in bold, like the later years
-            # drawings and pictures of the unit (fraction bars, symbols) move with the answer text of the first segment
-            if sg is segs[0]:
-                for l in u['lines']:
-                    bb = MP._bbox(l['d'])
-                    if bb is None or (min(bb[2] - bb[0], bb[3] - bb[1]) <= 1.0 and (bb[2] - bb[0] > 0.8 * u['w'] or bb[3] - bb[1] > 0.8 * u['h'])):
-                        continue                      # the old frame of the row: ours instead
-                    v['lines'].append({**l, 'd': _map_path(l['d'], lambda x: L + 5 + (x - ax0), lambda y: y - top)})
-                for k_ in ('figs', 'images', 'glyphs'):
-                    for f in u.get(k_) or []:
-                        g = dict(f); g['x'] = round(L + 5 + (f['x'] - ax0), 2); g['y'] = round(f['y'] - top, 2)
-                        v.setdefault(k_, []).append(g)
+                        n = dict(t, b=1 if re.fullmatch(r'\(?[ABCMP]\d{1,2}\)?', t['t']) else 0)   # only mark codes bold
+                        n['x'] = round(W - 6 - (c_ - a_) + pos[id(t)], 2); n['y'] = round(max(lw, key=lambda t: t.get('s', 11))['y'] - top, 2)
+                        v['text'].append(n)                   # mark codes in bold, like the later years
+            # drawings and pictures (underlines, braces, fraction bars, symbols) go with the segment they are printed in
+            si = segs.index(sg)
+            lo_ = -1e9 if si == 0 else sg['y0'] - 12
+            hi_ = 1e9 if si == len(segs) - 1 else segs[si + 1]['y0'] - 12
+            def mine(y0_, y1_):
+                c_ = (y0_ + y1_) / 2
+                return lo_ <= c_ < hi_
+            for l in u['lines']:
+                pts_ = [float(x_) for x_ in MP.NUM.findall(l['d'])]
+                bb = MP._bbox(l['d']) or ((min(pts_[0::2]), min(pts_[1::2]), max(pts_[0::2]), max(pts_[1::2])) if len(pts_) >= 4 else None)
+                if bb is None or (min(bb[2] - bb[0], bb[3] - bb[1]) <= 1.0 and (bb[2] - bb[0] > 0.8 * u['w'] or bb[3] - bb[1] > 0.8 * u['h'])):
+                    continue                          # the old frame of the row: ours instead
+                if not mine(bb[1], bb[3]):
+                    continue
+                v['lines'].append({**l, 'd': _map_path(l['d'], lambda x: L + 5 + (x - ax0), lambda y: y - top)})
+            for k_ in ('figs', 'images', 'glyphs'):
+                for f in u.get(k_) or []:
+                    if not mine(f['y'], f['y'] + f.get('h', 0)):
+                        continue
+                    g = dict(f); g['x'] = round(L + 5 + (f['x'] - ax0), 2); g['y'] = round(f['y'] - top, 2)
+                    v.setdefault(k_, []).append(g)
             cw = sum(3.7 if c in '()' else 2.4 if c == 'i' else 5.5 if c in 'vx' else 6.1 for c in label)
             lab = dict(tpl, t=label, b=0, s=11.0, w=round(cw, 2))
             lab['x'] = round((L - lab['w']) / 2, 2); lab['y'] = 14.0
@@ -1293,6 +1407,11 @@ def build(q, store):
     if all(u['w'] <= W + 2 for u in units):          # the old portrait era: our table too (no printed one to follow)
         first = {'edges': [], 'new_edges': [44.0, W - 44.0], 'new_w': [44.0, W - 88.0, 44.0], 'default': True}
         out = _old_rows(units, q)
+        labw = max([t['w'] for v in out for t in v['text'] if t.get('s') == 11.0 and t['x'] < 44 and t['y'] == 14.0] + [0])
+        if labw + 8 > 44:                             # a long label ('1(a)(i)(ii)', '3(a)(iii)(iv)(v)'): a wider Q column
+            Lq_ = float(int(labw + 9))
+            first = {'edges': [], 'new_edges': [Lq_, W - 44.0], 'new_w': [Lq_, W - 44.0 - Lq_, 44.0], 'default': True}
+            out = _old_rows(units, q, L=Lq_)
         modes = {'old': len(out)}
         hdr = _header_unit({'src': units[0]['src'], 'text': []}, first)
         total_row = _own_total(q['marks'], first, out) if q.get('marks') else None
@@ -1301,7 +1420,7 @@ def build(q, store):
             _drop_slivers(v)
             _tidy_boxes(v)
             nxt = out[i + 1] if i + 1 < len(out) else None
-            _frame(v, bottom_from=44.0 if nxt is not None and nxt.get('cont') else 0.0)
+            _frame(v, bottom_from=first['new_edges'][0] if nxt is not None and nxt.get('cont') else 0.0)
         return {'w': W, 'h': round(sum(v['h'] for v in out), 2), 'rows': out, 'problems': [], 'modes': modes,
                 'printed_total': None, 'info': {k: first[k] for k in ('edges', 'new_edges', 'new_w')}, 'has_header': True}
     widths = MP.column_widths(units)

@@ -137,3 +137,13 @@ Our table is Q | Answer | Marks | Guidance.
   4. Text printed under a picture follows it directly; nothing overlaps.
 - **Ticks.** A tick or cross (dingbat font or colour emoji) is drawn as a real ✓ / ✗ / ✔ in its printed colour, centred where
   it was (rule 12 for tick boxes).
+
+## 14. Old mark schemes without a table (2013 - 2016 FM; Dhruv 2026-11-09: our table, like every year)
+- One row per part; labels in the Q column even when printed in a plain font; a bare number is a label only if it is the
+  question's number ('92' is an answer). Labels printed together ('(iii)(iv)(v)', '(a)(i)(ii)', '(b)(c)') = one row with
+  the combined label; parts joined by one brace ('(d)(i) ... } both B1 (ii)') = one row.
+- Cambridge's slips: '(a)(ii)' followed by '(i)' meaning (b)(i) -> the next letter that exists in the question paper.
+- The Q column grows when a combined label needs it.
+- Marks column: codes bold, '[1]' plain; 'B1 [4]' closed up to fit; 'max.' above its code.
+- Underlines, braces, fraction bars stay with their own part's row.
+- Symbols drawn with re-encoded fonts ('R' drawn as '=', 'U' as '°') are read by their shape.

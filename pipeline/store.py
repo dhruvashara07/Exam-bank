@@ -34,6 +34,9 @@ TICKS = {('wingdings', 0xFC): '✓', ('wingdings', 0xF0FC): '✓', ('wingdings',
          ('zapf', 0x37): '✗', ('zapf', 0x38): '✗', ('zapf', 0x2717): '✗', ('zapf', 0x2718): '✗'}
 
 
+_TRACE = {}
+
+
 def dingbat_family(font):
     f = font.lower()
     return 'wingdings' if 'wingding' in f else 'zapf' if ('zapf' in f or 'dingbat' in f) else None
@@ -153,6 +156,11 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
                     x, y = tp(m, *chars[0]['origin'])
                     w = {'t': ''.join(unpua(c['c']) for c in chars), 'x': round(x - ox, 2), 'y': round(y - oy, 2),
                          'w': round(span_len(chars, l['dir']), 2), 's': round(s['size'], 2), 'f': FAM[family(font)]}
+                    if len(w['t']) == 1 and w['t'].isalpha() and re.search(r'TT[0-9A-F]+o00$', font):
+                        from store_text import glyph_remap   # a re-encoded symbol ('R' drawn as '=', 2014 MJ 63)
+                        g_ = glyph_remap(page, font, w['t'], chars[0]['bbox'], s['size'])
+                        if g_ != w['t']:
+                            w['t'] = g_; w['f'] = 'symbol'
                     if w['f'] == 'symbol':
                         w['f'], w['s'] = symbol_family(w['t'], w['s'], w['w'])
                     st = collections.Counter(cstyle.get((round(c['origin'][0], 1), round(c['origin'][1], 1)), 'r')
@@ -262,8 +270,12 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
     # glyphs the text layer cannot read (colour-emoji ticks, 2025 FM 42 q6(a)(iv): Segoe UI Emoji maps them to a space,
     # so they were lost): every drawn glyph whose character reads as a space is kept as a picture of itself
     seen_ = set()
-    for tr in page.get_texttrace():
-        if not any(ch[0] == 32 and ch[1] > 3 for ch in tr['chars']) or 'emoji' not in tr['font'].lower() and 'symbol' not in tr['font'].lower():
+    # (only on pages that use an emoji font, read once per page: reading every glyph of every page took 3 GB, 2013 MJ 11)
+    key_ = (id(doc), pno)
+    if key_ not in _TRACE:
+        _TRACE[key_] = page.get_texttrace() if any('emoji' in f[3].lower() for f in page.get_fonts()) else []
+    for tr in _TRACE[key_]:
+        if not any(ch[0] == 32 and ch[1] > 3 for ch in tr['chars']) or 'emoji' not in tr['font'].lower():
             continue
         r = (fitz.Rect(tr['bbox']).quad * m).rect
         if r.width < 3 or r.height < 3 or (r & clip).is_empty or not inside(r) or in_fig(r):

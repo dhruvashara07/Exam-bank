@@ -391,3 +391,80 @@ def symbol_family(text, size, w):
     if nat and nat > w + 0.5 and w > 0:               # still wider than printed ('Δθ OR', 2024 ON 43 q3): a little smaller
         size = round(size * max(0.8, w / nat), 2)
     return fam, size
+
+
+_REMAP = {}
+_CANDS = '=°×±−÷→←≤≥′″≈∝'
+
+
+def glyph_remap(page, font, ch, bbox, size):
+    """Old mark schemes (2013-2015, Word export) draw symbols with small re-encoded fonts ('TT2A5CCo00': the code for 'R'
+    draws '=', 'U' draws '°', 2014 MJ 63). The text says 'R'; the page shows '='. Compare the drawn glyph with the letter and
+    with common symbols; return the symbol it looks like (or the letter)."""
+    k = (font, ch)
+    if k in _REMAP:
+        return _REMAP[k]
+    if not _tiny_font(page, font):                  # only a symbol-only subset (a handful of glyphs) is re-encoded
+        _REMAP[k] = ch
+        return ch
+    try:
+        from PIL import Image, ImageDraw, ImageFont, ImageChops
+        import pymupdf as fitz
+        r = fitz.Rect(bbox)
+        pix = page.get_pixmap(clip=r, dpi=600, colorspace=fitz.csGRAY)
+        im = Image.frombytes('L', (pix.width, pix.height), pix.samples)
+        box = ImageChops.invert(im).getbbox()
+        if not box:
+            _REMAP[k] = ch; return ch
+        g = im.crop(box).resize((24, 24))
+        F = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 80)
+        fonts_ch = [F] + [ImageFont.truetype(f_, 80) for f_ in (
+            '/usr/share/fonts/truetype/dejavu/DejaVuSans-Oblique.ttf', '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf',
+            '/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf', '/usr/share/fonts/truetype/liberation/LiberationSans-Italic.ttf')
+            if __import__('os').path.exists(f_)]
+        best, bd, d_self = ch, None, None
+        for c, F_ in [(ch, f_) for f_ in fonts_ch] + [(c_, F) for c_ in _CANDS]:
+            ref = Image.new('L', (120, 120), 255); ImageDraw.Draw(ref).text((10, 0), c, font=F_, fill=0)
+            b2 = ImageChops.invert(ref).getbbox()
+            if not b2:
+                continue
+            ref = ref.crop(b2).resize((24, 24))
+            # aspect ratio matters ('=' is wide and flat, 'R' tall)
+            ar = abs((box[2] - box[0]) / max(box[3] - box[1], 1) - (b2[2] - b2[0]) / max(b2[3] - b2[1], 1))
+            dsum = sum(abs(a - b) for a, b in zip(g.getdata(), ref.getdata())) / (24 * 24 * 255) + 0.3 * min(ar, 2)
+            if c == ch:
+                d_self = dsum if d_self is None else min(d_self, dsum)
+            if bd is None or dsum < bd:
+                best, bd = c, dsum
+        if best != ch and d_self is not None and d_self - bd < 0.12:
+            best = ch                                   # not clearly a different symbol (an italic 'I' stays 'I', 2016 FM 32)
+        _REMAP[k] = best
+        return best
+    except Exception:
+        return ch
+
+
+_TINY = {}
+
+
+def _tiny_font(page, font):
+    if font in _TINY:
+        return _TINY[font]
+    n = None
+    try:
+        import io
+        for f in page.get_fonts():
+            if f[3].split('+')[-1] == font.split('+')[-1]:
+                name, ext, typ, buf = page.parent.extract_font(f[0])
+                if ext == 'cff':
+                    from fontTools.cffLib import CFFFontSet
+                    c = CFFFontSet(); c.decompile(io.BytesIO(buf), None)
+                    n = len(c[c.fontNames[0]].charset)
+                elif buf:
+                    from fontTools.ttLib import TTFont
+                    n = len(TTFont(io.BytesIO(buf)).getGlyphOrder())
+                break
+    except Exception:
+        n = None
+    _TINY[font] = n is not None and n <= 6
+    return _TINY[font]

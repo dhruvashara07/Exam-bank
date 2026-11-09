@@ -289,3 +289,11 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   pieces of one drawing were merged, 2025 ON 43 q7). 2025-2026 final (approvals kept: cuts unchanged).
 - He asked to track usage per year (tokens and weekly %): PROGRESS.md has a usage table; I can count tokens, he reads the
   weekly % in Settings > Usage.
+- Older years: he did not answer which range -> I took 2013-2015 (already built, nearest the current syllabus); 2002-2012
+  left for later (only a few papers built). His answer: old mark schemes go into our table (yes).
+- 2013-2015 rebuilt and checked (~30 side by side + every flag). Fixed: answer '92' read as a label; plain-font and combined
+  labels ('(iii)(iv)(v)'); Cambridge letter slip fixed from the question paper; braces/underlines stay with their part's row;
+  brace joining two parts = one row; symbols in re-encoded fonts read by shape ('R' -> '='); marks column ('[1]', 'B1 [4]',
+  'max. B2'); Q column widens for long labels (MS rules 14). Memory: a full-page 8x render took 3 GB (machine ran out and the
+  build hung) -> rendered in strips, pixel-identical; 2016 MJ - 2026 unchanged (checked), golden 0 changed.
+- Round 21 "2013-2015" (8 items) on the page; round 20 removed.
