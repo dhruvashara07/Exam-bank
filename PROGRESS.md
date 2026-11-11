@@ -11,6 +11,8 @@ Read this first in every session. Update it before ending a session.
   figure crop rising past beside-text, invisible text is no caption, "For Examiner's Use" heading + drawn rule removed,
   footer code `0625/1/O/N/02`, blank page with copyright note, CMYK pictures black in browsers (render.fix_cmyk_images),
   MS label "10(a)" as one word. checks: 25 papers, 0 blocking, 9 flags (all looked at: 32 MCQ sets side by side = fine).
+- 2026-11-11: F/C (target grade) column removed from old Paper 2 mark schemes (clean.strip_tier_column, Dhruv).
+  Round 22 (33 items, 8 flagged) on the review page (portal.json review_url; closed rounds 9, 10, 21 removed from the page).
 - OPEN for batch 1: old mark schemes (2002-2008 layout: Question | Answer | F/C tier | Marks, no frame, braces "mark alongside
   diagram"; practical = item list + TOTAL) are shown as original pieces with partial frames: NOT yet in our table layout
   (MS_TABLE_RULES: full frame, header once, Total row). Needs the F/C column type + a practical-item type, then review round.

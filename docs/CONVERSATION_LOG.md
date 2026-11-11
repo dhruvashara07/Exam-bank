@@ -310,4 +310,6 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - Review round for each batch goes on the SAME review page (review/portal.json review_url), a new button per round.
 - F/C column = target grade of each mark in old core Paper 2 mark schemes. Dhruv: add it to our table for those years
   (MS_TABLE_RULES 15). Batch 1 round waits for the old mark schemes to be in our table.
+- Dhruv: no target-grade (F/C) column, remove it (done). Round 22 published for 2002-2004; finish review + fixes in this
+  chat, then a new chat for batch 2.
 

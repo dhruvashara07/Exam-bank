@@ -150,10 +150,6 @@ Our table is Q | Answer | Marks | Guidance.
 - (Round 21) Marks column of old layouts: no brackets ('[1]' -> '1'); a part total printed after the codes ('B1 + B1 [5]')
   is dropped (our Total row has it). Braces are redrawn clean, one per group, never past their own last line.
 
-## 15. F/C column (old core Paper 2 mark schemes, 2003-2004; 2002 ON is a scan)
-Old 0625/02 (core) mark schemes print F or C beside each mark: the grade the mark is aimed at (F = grade F
-candidates, C = grade C, the top grade on the core paper; the thresholds sheet lists C, E, F for Component 2).
-Not explained in the MS notes. Nothing in our layout carries it, so (Dhruv 2026-11-11) add it for those years only:
-a narrow column between Answer and Marks, header "F/C", values as printed. Papers without it keep the usual columns.
-Show original vs ours side by side before rebuilding.
-
+## 15. F/C column (old core Paper 2 mark schemes, 2003-2004)
+Old 0625/02 mark schemes print F or C beside each mark: the grade the mark is aimed at. Dhruv 2026-11-11: not wanted,
+remove it (clean.strip_tier_column redacts the letters; nothing else changes).

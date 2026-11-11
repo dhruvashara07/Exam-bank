@@ -243,6 +243,39 @@ def drop_answer_booklet(path):
     d.close()
 
 
+def strip_tier_column(path):
+    """Old core Paper 2 mark schemes (2003-2004) print F or C (target grade) beside each mark code. Dhruv 2026-11-11:
+    not wanted - the letters are redacted (text and ink). Only a column of >= 10 such letters, each followed on its
+    line by a mark code (B1, M1, C1, A1), counts."""
+    import pymupdf as fitz
+    doc = fitz.open(path)
+    hits = []
+    for page in doc:
+        W = page.get_text('words')
+        for w in W:
+            if w[4] in ('F', 'C') and 380 < w[0] < 480 and any(
+                    abs(v[1] - w[1]) < 3 and v[0] > w[2] + 20 and re.fullmatch(r'[BMCA]\d', v[4]) for v in W):
+                hits.append((page.number, fitz.Rect(w[:4])))
+    if len(hits) < 10:
+        doc.close()
+        return 0
+    import statistics
+    cx = statistics.median(r.x0 for _, r in hits)       # the column found: every lone F / C in it goes (a mark code on the next line)
+    seen = {(p, tuple(r)) for p, r in hits}
+    for page in doc:
+        for w in page.get_text('words'):
+            if w[4] in ('F', 'C') and abs(w[0] - cx) < 4 and (page.number, tuple(fitz.Rect(w[:4]))) not in seen:
+                hits.append((page.number, fitz.Rect(w[:4])))
+    for pno, r in hits:
+        doc[pno].add_redact_annot(r + (-1, -1, 1, 1), fill=(1, 1, 1))
+    for page in doc:
+        page.apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE, graphics=fitz.PDF_REDACT_LINE_ART_NONE)
+    doc.save(path + '.tmp')
+    doc.close()
+    os.replace(path + '.tmp', path)
+    return len(hits)
+
+
 def clean(src, dst):
     pdf = pikepdf.open(src)
     n = sum(clean_page(pdf, p) for p in pdf.pages)
@@ -258,6 +291,8 @@ def clean(src, dst):
         strip_examiner_rule_drawn(dst)
         strip_examiner_column(dst)
         drop_answer_booklet(dst)
+    if '/ms_' in src.replace('\\', '/'):
+        strip_tier_column(dst)
     return n
 
 if __name__ == '__main__':
