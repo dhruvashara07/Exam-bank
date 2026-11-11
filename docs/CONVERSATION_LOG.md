@@ -319,4 +319,5 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   (docs/ERROR_PATTERNS.md) and a step doc for new chats (docs/PLAYBOOK.md). Then do 2005-2007 here, new chat after.
 \n
 - Batch 2 (2005-2007) built and fixed; round 23 published (same review page). After it: fix, approve, new chat.
+- Round 23 done; fixes = ERROR_PATTERNS 23-30; 2005-2007 approved. Dhruv asked: are old MS text or pictures? Text (re-typeset in our table, same as all years); only 2002 ON MS are page scans. Next: 2008-2010 in this chat.
 

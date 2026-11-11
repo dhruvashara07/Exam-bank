@@ -11,7 +11,7 @@ Units are the same layout units as everywhere else (draw with store.unit_svg).
 import collections
 import os, json, copy, re
 import ms_portrait as MP
-from ms import MS_RELABEL
+from ms import MS_RELABEL, MS_SPLIT
 
 W = 523.0
 FRAME = '#000000'
@@ -428,10 +428,27 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
     qparts = {p.get('path') for p in q.get('parts', [])}
     for u in units:
         ws = [t for t in u['text'] if t.get('s', 10) >= 5]
+        if pre09:
+            ws = [dict(t) for t in ws]
+            for t in sorted(ws, key=lambda t: t['x']):    # 'B1 x 4' printed as three words: one 'B1×4' (2005 MJ 02 q7)
+                if CODE.match(t['t']):
+                    xs_ = [o for o in ws if abs(o['y'] - t['y']) < 2.5 and 0 < o['x'] - t['x'] < 30 and o['t'] in ('x', '×')]
+                    ns_ = [o for o in ws if xs_ and abs(o['y'] - t['y']) < 2.5 and 0 < o['x'] - xs_[0]['x'] < 15 and o['t'].isdigit()]
+                    if xs_ and ns_:
+                        t['t'] = t['t'] + '×' + ns_[0]['t']; t['w'] = round(ns_[0]['x'] + ns_[0]['w'] - t['x'], 2)
+                        xs_[0]['t'] = ns_[0]['t'] = ''
+            gone_ = set()
+            for pre_, lab_ in MS_SPLIT.get(q['id'], []):  # '(b) & (c)': the (c) is split off below (MS_SPLIT)
+                let_ = re.findall(r'\(([a-h])\)', lab_)
+                for t in ws:
+                    if t['t'] == '&':
+                        gone_.add(id(t))
+                        gone_ |= {id(o) for o in ws if let_ and o['t'] == f'({let_[-1]})' and abs(o['y'] - t['y']) < 2.5}
+            ws = [t for t in ws if t['t'] and id(t) not in gone_]
         # the printed total '[Total: 5]'
         drop = set()
         for t in ws:
-            if re.fullmatch(r'\[?Total:?', t['t']) or (pre09 and re.fullmatch(r'\[?TOTAL:?', t['t'])):
+            if re.fullmatch(r'\[?Total:?', t['t']) or (pre09 and re.fullmatch(r'\[?(TOTAL|total):?', t['t'])):
                 drop.add(id(t))
                 for o in ws:
                     if abs(o['y'] - t['y']) < 2.5 and o['x'] > t['x'] and re.fullmatch(r'[\d\]\[:]+', o['t']):
@@ -490,8 +507,9 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
             pts_ = [float(x_) for x_ in MP.NUM.findall(l['d'])]
             if len(pts_) >= 4:
                 bb_ = (min(pts_[0::2]), min(pts_[1::2]), max(pts_[0::2]), max(pts_[1::2]))
-                if bb_[2] - bb_[0] < 14 and bb_[0] > 0.1 * u['w'] and bb_[3] - bb_[1] > 4:
-                    pieces_.append(bb_)
+                if bb_[2] - bb_[0] < 14 and bb_[0] > 0.1 * u['w'] and bb_[3] - bb_[1] > 4 and not (
+                        pre09 and not re.search(r'[CcQqSs]', l['d']) and bb_[2] - bb_[0] < 1.5):
+                    pieces_.append(bb_)               # (pre-2009: a straight thin rule is a column line, not a brace)
         pieces_.sort(key=lambda b_: b_[1])
         braces = []
         for b_ in pieces_:                            # a brace drawn in pieces (top, middle, bottom): one brace
@@ -508,6 +526,12 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
             b_side[b_] = (sum(xs_) / len(xs_) > (b_[0] + b_[2]) / 2) if xs_ else True
         for y, lw in lines.items():
             labs = lead_labels(lw)
+            body_txt = ' '.join(t['t'] for t in lw if t not in labs)
+            forced = next((lab_ for pre_, lab_ in MS_SPLIT.get(q['id'], []) if body_txt.startswith(pre_)), None)
+            if forced:
+                segs.append({'y0': y, 'labs': [], 'lines': [], 'forced': forced})
+                segs[-1]['lines'].append(lw)
+                continue
             # parts joined by one brace share one answer and one mark ('(d)(i) ... } both B1 (ii)', 2014 ON 21 q10): one row
             joined = labs and segs and any(b_[1] < y - 9 and y - 4 < b_[3] and b_[1] < segs[-1]['y0'] + 4 for b_ in braces)
             if joined:
@@ -547,7 +571,7 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                 extra_lab += ''.join(f'({pc})' for pc in re.findall(r'\(([a-hj-p]|[ivx]{1,4})\)', t['t']))
             label = qn + (f"({state['l']})" if state['l'] else '') + (f"({state['r']})" if state['r'] else '') + extra_lab
             base_lab = qn + (f"({state['l']})" if state['l'] else '') + (f"({state['r']})" if state['r'] else '')
-            if sg['labs'] and state['l'] and state['r'] and not extra_lab and (base_lab in used or (base_lab not in qparts and not pre09)):
+            if sg['labs'] and state['l'] and state['r'] and not extra_lab and ((base_lab in used or base_lab not in qparts) and not pre09):
                 # Cambridge left out the letter ('(a)(ii)' then '(i)' meaning (b)(i), 2013 ON 31 q11): the next letter whose
                 # part exists in the question paper
                 for k in range(1, 4):
@@ -558,6 +582,16 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                         break
             if rng:
                 label = f"{qn}({rng[0]})–({rng[1]})"; state['l'] = rng[1]
+            if sg.get('forced'):
+                label = sg['forced']
+                fl_ = re.findall(r'\(([a-hj-p]|[ivx]{1,4})\)', label)
+                state['l'] = fl_[0] if fl_ else state['l']; state['r'] = fl_[1] if len(fl_) > 1 else None
+            if pre09 and sg['labs'] and state['r'] and label in used:   # '(ii)' printed twice: the second is (iii) (2005 MJ 02 q10)
+                ROM_ = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii']
+                if state['r'] in ROM_[:-1]:
+                    nxt_ = f"{qn}({state['l']})({ROM_[ROM_.index(state['r']) + 1]})"
+                    if nxt_ in qparts and nxt_ not in used:
+                        state['r'] = ROM_[ROM_.index(state['r']) + 1]; label = nxt_
             relab = MS_RELABEL.get(q['id'].split('_')[1] + '_' + q['id'].split('_')[2], {}).get(label)
             if relab:                                   # Cambridge's own numbering slip (ms.MS_RELABEL)
                 label = relab[0]
@@ -568,6 +602,8 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                 tpl.pop(k, None)
             v = {'src': u['src'], 'w': W, 'h': 0.0, 'text': [], 'lines': [], 'figs': [], 'glyphs': [], 'old_portrait': True}
             top = max(sg['lines'][0], key=lambda t: t.get('s', 11))['y'] - 14.0
+            if pre09 and len(sg['lines']) > 1 and all(t in sg['labs'] for t in sg['lines'][0]):
+                top = max(sg['lines'][1], key=lambda t: t.get('s', 11))['y'] - 14.0   # label alone on its line: answer from the top
             extra = 0.0; cur_y = None
             for lw in sg['lines']:
                 body_l = [t for t in lw if t not in sg['labs'] and not in_marks(t, u)]
@@ -640,7 +676,7 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                 if pre09 and bb[3] - bb[1] < 2 and (bb[2] - bb[0] > 0.5 * u['w'] or not any(
                         t['x'] < bb[2] and t['x'] + t['w'] > bb[0] and -1 <= bb[1] - t['y'] <= 6 for t in u['text'])):
                     continue                          # pre-2009: an old table rule, or a rule under no text (header leftovers)
-                if pre09 and bb[2] - bb[0] < 1.5 and bb[3] - bb[1] < 8:
+                if pre09 and bb[2] - bb[0] < 1.5 and (bb[3] - bb[1] < 8 or not re.search(r'[CcQqSs]', l['d'])):
                     continue                          # the stubs of old column rules cut at a page end
                 if any(b_[0] - 1 <= bb[0] and bb[2] <= b_[2] + 1 and b_[1] - 1 <= bb[1] and bb[3] <= b_[3] + 1 for b_ in braces):
                     continue                          # a piece of a brace: ours is drawn instead (below)

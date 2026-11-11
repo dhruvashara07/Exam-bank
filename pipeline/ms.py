@@ -118,8 +118,12 @@ def _columns(lines):
     return 120, 730
 
 
-MS_RELABEL = {'2003ON_03': {'11(a)': ('11(a)(i)', (11, 'a', 'i')), '11(b)': ('11(a)(ii)', (11, 'a', 'ii')),
+MS_RELABEL = {'2006ON_06': {'4(b)': ('4(b)(i)', (4, 'b', 'i')), '4(c)': ('4(b)(ii)', (4, 'b', 'ii')), '4(d)': ('4(b)(iii)', (4, 'b', 'iii'))},
+              '2003ON_03': {'11(a)': ('11(a)(i)', (11, 'a', 'i')), '11(b)': ('11(a)(ii)', (11, 'a', 'ii')),
                             '11(c)(i)': ('11(b)(i)', (11, 'b', 'i')), '11(c)(ii)': ('11(b)(ii)', (11, 'b', 'ii'))}}
+# a part the mark scheme does not label: (text the line starts with, label) - read by eye (Dhruv, round 23)
+MS_SPLIT = {'0625_2005MJ_02_q07': [('sound ticked', '7(b)')],
+            '0625_2005ON_06_q03': [('well judged', '3(c)')]}
 
 
 QHEAD = re.compile(r'^(\d{1,2})\.?$')

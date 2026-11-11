@@ -51,11 +51,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "mark scheme row 4(c) has no matching part in the paper",
-   "mark scheme row 4(d) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -190,7 +187,27 @@
      "text": "Look at the temperature readings in the tables. State whether the insulation round\nbeaker A or the lid on beaker B or neither is most effective in keeping the water\nhot. By reference to readings in the tables, justify your answer.\nstatement .................................................................................................................\njustification ...............................................................................................................\n............................................................................................................................[2]",
      "marks": 2,
      "path": "4(b)(i)",
-     "mark_scheme_on": "4(b)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(i)",
+       "text": "",
+       "codes": [
+        "[1]",
+        "[1]"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          36.0,
+          106.1,
+          559.0,
+          148.9
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -242,7 +259,26 @@
      "text": "Suggest a suitable material for the insulation around beaker A.\n............................................................................................................................[1]",
      "marks": 1,
      "path": "4(b)(ii)",
-     "mark_scheme_on": "4(b)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(ii)",
+       "text": "",
+       "codes": [
+        "[1]"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          36.0,
+          152.1,
+          559.0,
+          171.9
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -284,7 +320,26 @@
      "text": "To obtain reliable results in this experiment, it is important that variables are\ncontrolled. State three variables that should be controlled in this experiment.\nvariable 1 ..................................................................................................................\nvariable 2 ..................................................................................................................\nvariable 3 ............................................................................................................[3]",
      "marks": 3,
      "path": "4(b)(iii)",
-     "mark_scheme_on": "4(b)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(iii)",
+       "text": "",
+       "codes": [
+        "[3]"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          36.0,
+          175.1,
+          559.0,
+          286.9
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -318,27 +373,6 @@
     }
    ],
    "path": "4(b)",
-   "mark_scheme": [
-    {
-     "label": "4(b)",
-     "text": "",
-     "codes": [
-      "[1]",
-      "[1]"
-     ],
-     "segments": [
-      {
-       "page": 3,
-       "bbox": [
-        36.0,
-        106.1,
-        559.0,
-        148.9
-       ]
-      }
-     ]
-    }
-   ],
    "content": [
     {
      "type": "text",
@@ -470,44 +504,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "4(c)",
-   "text": "",
-   "codes": [
-    "[1]"
-   ],
-   "segments": [
-    {
-     "page": 3,
-     "bbox": [
-      36.0,
-      152.1,
-      559.0,
-      171.9
-     ]
-    }
-   ]
-  },
-  {
-   "label": "4(d)",
-   "text": "",
-   "codes": [
-    "[3]"
-   ],
-   "segments": [
-    {
-     "page": 3,
-     "bbox": [
-      36.0,
-      175.1,
-      559.0,
-      286.9
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",

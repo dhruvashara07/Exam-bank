@@ -45,3 +45,15 @@ Add a line whenever a review round or a check finds something new. Format: what 
 22. Run labels '(a)–(e)' (practical) -> one row labelled 1(a)–(e).
 Known small leftover: in-text codes at the far right of an answer line ('120 gets C1 C1 A0') can land in Marks.
 
+## Round 23 (2005-2007): 11 of 36 wrong
+23. Old column rules (straight thin vertical lines) taken as braces -> '{' at the start of answers. -> pre-2009 braces
+    must be curves; straight vertical rules dropped.
+24. '[total: 9]' in lower case left in the answer. -> any case.
+25. 'B1 x 4' printed as three words -> '4' dropped as a part total, 'x' left in the answer. -> merged to 'B1×4' first.
+26. '(ii)' printed twice in the MS -> second became (b)(ii). -> pre-2009: the next roman of the same letter.
+27. Parts Cambridge did not label ('sound ticked' = 7(b)) or printed together ('(b) & (c)'): by eye -> ms.MS_SPLIT.
+    MS letters for paper romans (2006 ON 06 q4 (b)(c)(d) = (b)(i)(ii)(iii)) -> ms.MS_RELABEL.
+28. A label alone on its line ('(a)–(g)') left an empty band at the top of the row. -> answer starts at the top.
+29. Captions 'Fig. 2.1a' / 'Fig. 2.1b' not read as captions -> figure missing. Ids now fig2-1a / fig2-1b.
+30. Paper prints one [Total] for two questions (2007 MJ 03 q10+q11) -> extract.TOTAL_SLIPS (no flag).
+
