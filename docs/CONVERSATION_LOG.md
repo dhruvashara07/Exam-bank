@@ -322,3 +322,4 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - Round 23 done; fixes = ERROR_PATTERNS 23-30; 2005-2007 approved. Dhruv asked: are old MS text or pictures? Text (re-typeset in our table, same as all years); only 2002 ON MS are page scans. Next: 2008-2010 in this chat.
 - Batch 3 (2008-2010) built and fixed; round 24 (50 items) published. Then new chat for 2011-2012 + cleanup.
 
+- Round 24 done (25 wrong). Dhruv: A1/B1/C1 looked like another font, sizes inconsistent; old MS labels wrong and subpart answers lumped together. Asked me to split rows by reading the question (subject knowledge), do this check before every round, update docs so it doesn't repeat, then next years if confident. Done: ms_map.json + ms_align.py (PLAYBOOK 5b, ERROR_PATTERNS 38-41, MS_TABLE_RULES 17), width fix, stacked codes. Round 25 (46 items) published.

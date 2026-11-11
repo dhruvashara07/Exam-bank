@@ -174,3 +174,11 @@ Ours: the usual table (Q | Answer | Marks, Total row) and:
   paper a(i), a(ii), b(i), b(ii)).
 - 2002 ON mark schemes are scans: shown as page pictures; 2002 ON paper 1 has no mark scheme (no MCQ answers).
 
+## 17. Rows by meaning (old papers 2002-2012; Dhruv round 24)
+Every mark-scheme row carries the label of the paper part it marks, worked out by reading the question and the
+answer (subject knowledge), not by the printed label alone: a printed '(a)–(e)', '1' or '(b)' that covers several
+parts is split into the parts' own rows where the lines can be told apart; one line that marks two parts
+('correct e1 3.1 and correct e2 2.4') is split; a mark that really covers several parts keeps a combined label
+('2(a)(i)(ii)', '4(b)–(g)', '1(b)(i)–(iii)'). A general note for the whole question keeps the bare number.
+Mark codes on one line ('B1 + B1') are stacked. Data: pipeline/ms_map.json; check: ms_align.py list.
+

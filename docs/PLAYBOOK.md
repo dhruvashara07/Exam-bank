@@ -13,6 +13,10 @@ GitHub builds, 3 years per batch, a new chat after each batch (long chats cost m
 4. Fix patterns in the pipeline, never single JSONs. Gate era-specific fixes (e.g. `pre09`) so approved years do not change.
 5. Mark-scheme sweep over `store.load(qid)['ms_p']`: no 'TOTAL', no bracketed totals, no codes in Answer, no side
    notes; then look at ONE MS of each paper type with `store.review_svgs` (small, 60 dpi grid).
+5b. Rows by meaning (MS_TABLE_RULES 17): `python3 pipeline/ms_align.py list <sessions>`; for each question listed,
+   `ms_align.py dump <qid>` (paper parts + MS lines, as text: cheap), decide the part of every MS line by reading
+   both, write the map in pipeline/ms_map.json, rebuild those papers, list again until empty. Then look at a few
+   with `pipeline/ms_grid.py` (our tables as students see them).
 6. Golden: fetch golden PDFs, rebuild them, `golden.py check` = 0 changed cuts; `git status` shows no store/bank change
    outside the batch.
 7. Review round: `review_round.py new <n> <ids> --sample 1 --max 90 --title ... --intro ...`;

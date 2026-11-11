@@ -432,13 +432,19 @@ def find_figures(doc, seg, lines):
             if last['x1'] < x0 - 2 or last['x0'] > x1 + 2:
                 top_lim = seg['y0']
         g = grow_to_ink(page, fitz.Rect(x0, y0, x1, y1), fitz.Rect(max(CONTENT_X0, min(xa, x0)), top_lim, min(CONTENT_X1, max(xb, x1)), min(seg['y1'], band[1] + 1)),
-                        exclude=[fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in prose_above], max_grow=mg)
+                        exclude=[fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in prose_above]
+                        + ([fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in lines if re.fullmatch(r'\d{1,2}', l['text'].strip()) and l['x0'] < 60]
+                           if mg > 80 else []), max_grow=mg)    # the question number beside a tall figure (2008 MJ 02 q4) is not ink of it
         x0, y0, x1, y1 = g.x0, g.y0, g.x1, g.y1
         for l in lines:                 # answer lines printed inside the figure ('nebula which contains .......')
             if DOTS.search(l['text']) and l['y0'] >= y0 - 2 and l['y1'] <= y1 + 2 and l['x0'] < x1 and l['x1'] > x0:
                 x0, x1 = min(x0, l['x0']), max(x1, l['x1'])
+        top_ = max(y0 - 3, seg['y0'])
+        for l in lines:                 # a question number at the top-left corner of the crop (2008 MJ 02 Fig 4.1): stays out
+            if re.fullmatch(r'\d{1,2}', l['text'].strip()) and l['x0'] < 60 and l['x1'] > x0 - 3 and l['y0'] < top_ < l['y1'] and l['y1'] <= y0 + 2:
+                top_ = l['y1'] + 0.3
         figs.append({'caption': cap['text'], 'page': seg['page'],
-                     'bbox': [round(x0 - 3, 1), round(max(y0 - 3, seg['y0']), 1), round(x1 + 3, 1),
+                     'bbox': [round(x0 - 3, 1), round(top_, 1), round(x1 + 3, 1),
                               round(min(y1 + 3, seg['y1']), 1)]})    # a crop never reaches past its piece
         if cap.get('split'):
             figs[-1]['_row'] = round(cap['y0'])

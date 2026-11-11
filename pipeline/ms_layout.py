@@ -12,6 +12,7 @@ import collections
 import os, json, copy, re
 import ms_portrait as MP
 from ms import MS_RELABEL, MS_SPLIT
+MS_MAP = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'ms_map.json')))   # rows by meaning (ms_align.py)
 
 W = 523.0
 FRAME = '#000000'
@@ -371,7 +372,8 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
     pre09 = int(q['id'].split('_')[1][:4]) < 2013     # the old printed layouts (rule 16) run to 2012 (2009-2010 checked in batch 3)
     CODE = re.compile(r'^(\([ABCM]\d{1,2}\)|[ABCM]\d{1,2}),?$')
     if pre09:                                     # 2008: codes printed '[B1]'
-        units = [dict(u, text=[dict(t, t=t['t'][1:-1]) if re.fullmatch(r'\[[ABCM]\d{1,2}\]', t['t']) else t for t in u['text']]) for u in units]
+        units = [dict(u, text=[dict(t, t=t['t'][1:-1], w=round(6.73 * (len(t['t']) - 2), 2))
+                               if re.fullmatch(r'\[[ABCM]\d{1,2}\]', t['t']) else t for t in u['text']]) for u in units]
     code_xs = [t['x'] / u['w'] for u in units for t in u['text'] if CODE.match(t['t']) and t['x'] > 0.5 * u['w']] if pre09 else []
     mk_x = (min(code_xs) - 0.01) if code_xs else 0.82          # left edge of the marks column, as a share of the width
     code_med = sorted(code_xs)[len(code_xs) // 2] if code_xs else 1.0
@@ -425,6 +427,9 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
             merged.append(u)
     units = merged
     state = {'l': None, 'r': None}
+    MAPQ = MS_MAP.get(q['id']) if pre09 else None   # Dhruv round 24: rows assigned to the paper's parts by reading them
+    map_i = [0]
+    norm = lambda x: re.sub(r'\s+', ' ', x).strip()
     rows = []
     used = set()
     qparts = {p.get('path') for p in q.get('parts', [])}
@@ -437,7 +442,7 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                     xs_ = [o for o in ws if abs(o['y'] - t['y']) < 2.5 and 0 < o['x'] - t['x'] < 30 and o['t'] in ('x', '×')]
                     ns_ = [o for o in ws if xs_ and abs(o['y'] - t['y']) < 2.5 and 0 < o['x'] - xs_[0]['x'] < 15 and o['t'].isdigit()]
                     if xs_ and ns_:
-                        t['t'] = t['t'] + '×' + ns_[0]['t']; t['w'] = round(ns_[0]['x'] + ns_[0]['w'] - t['x'], 2)
+                        t['t'] = t['t'] + '×' + ns_[0]['t']; t['w'] = round(6.73 * len(t['t']), 2)
                         xs_[0]['t'] = ns_[0]['t'] = ''
             gone_ = set()
             for pre_, lab_ in MS_SPLIT.get(q['id'], []):  # '(b) & (c)': the (c) is split off below (MS_SPLIT)
@@ -465,6 +470,7 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                     ws = [t for t in ws if t not in line_]   # '1.' heading of a practical question
         if not ws:
             continue
+        ws = [t for t in ws if t['t'].strip()]          # pieces blanked by the merges above
         # lines by baseline; small raised/lowered pieces (cm³, ½mv², ¹³¹₅₄Xe) join the nearest normal line
         anch = sorted({round(t['y']) for t in ws if t.get('s', 11) >= 9})
         def key(t):
@@ -486,6 +492,8 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                         a_['t'] = a_['t'] + '–' + c_['t']; a_['w'] = round(c_['x'] + c_['w'] - a_['x'], 2)
                         b_['t'] = c_['t'] = ''
                 ws = [t for t in ws if t['t']]
+                lines = collections.OrderedDict((k_, [t for t in v_ if t['t']]) for k_, v_ in lines.items())
+                lines = collections.OrderedDict((k_, v_) for k_, v_ in lines.items() if v_)
         cand = lambda t: ((LABEL_RE.match(t['t']) or COMBO_RE.match(t['t']) or (pre09 and (NUMLAB_RE.match(t['t']) or RANGE_RE.match(t['t']))))
                           and t['x'] < 0.3 * u['w']
                           and (not t['t'].isdigit() or t['t'] == qn))   # an answer '92' is not a label (2013 MJ 23 q12)
@@ -528,6 +536,34 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
             b_side[b_] = (sum(xs_) / len(xs_) > (b_[0] + b_[2]) / 2) if xs_ else True
         for y, lw in lines.items():
             labs = lead_labels(lw)
+            if MAPQ is not None:                      # mapped question: printed labels ignored, rows start where the map says
+                body_l = [t for t in lw if t not in labs]
+                while body_l and (body_l[0]['t'] in ('&', '–', '-', 'and', ',') or re.fullmatch(r'\((?:[a-hj-p]|[ivx]{1,4})\)([–-]\((?:[a-hj-p]|[ivx]{1,4})\))?', body_l[0]['t'])) \
+                        and len(body_l) > 1 and (body_l[0]['t'] != 'and' or re.fullmatch(r'\(.*\)', body_l[1]['t'])):
+                    body_l = body_l[1:]               # '& (ii) h value': the rest of a printed label
+                txt_ = norm(' '.join(t['t'] for t in body_l if t.get('s', 11) >= 9 or not re.fullmatch(r'[\d\w]{1,2}', t['t'])))   # sub/superscripts out
+                if not body_l or all(t['t'] in ('&', '–', '-', 'and', ',') or re.fullmatch(r'[,(].*\)?,?', t['t']) for t in body_l):
+                    continue                          # a line left with only the rest of a printed label
+                hit_ = next((j for j in range(map_i[0], min(len(MAPQ), map_i[0] + 3)) if txt_.startswith(norm(MAPQ[j][0]))), None)
+                if hit_ is not None:                  # (an entry for a lone superscript line may never match: skip it)
+                    ent = MAPQ[hit_]
+                    segs.append({'y0': y, 'labs': [], 'lines': [], 'forced': ent[1],
+                                 'shift': max(0.0, body_l[0]['x'] - min([t['x'] for t in ws if not cand(t)] or [body_l[0]['x']]))}); map_i[0] = hit_ + 1
+                    if len(ent) >= 4:                 # [prefix, label, word, next label(, words to drop)]: two parts on one line
+                        cut = next((t for t in body_l if t['t'] == ent[2] and t['x'] > body_l[0]['x'] + 1), None)
+                        if cut is not None:
+                            drop_ = set(ent[4]) if len(ent) > 4 else set()
+                            a_ = [t for t in body_l if t['x'] < cut['x'] and t['t'] not in drop_]
+                            b_ = [t for t in body_l if t['x'] >= cut['x']]
+                            segs[-1]['lines'].append(a_)
+                            segs.append({'y0': y + 0.5, 'labs': [], 'lines': [], 'forced': ent[3], 'shift': segs[-1]['shift'] + cut['x'] - body_l[0]['x']})
+                            segs[-1]['lines'].append(b_)
+                            continue
+                elif not segs:
+                    segs.append({'y0': y, 'labs': [], 'lines': []})
+                if body_l:
+                    segs[-1]['lines'].append(body_l)
+                continue
             body_txt = ' '.join(t['t'] for t in lw if t not in labs)
             forced = next((lab_ for pre_, lab_ in MS_SPLIT.get(q['id'], []) if body_txt.startswith(pre_)), None)
             if forced:
@@ -607,11 +643,19 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
             if pre09 and len(sg['lines']) > 1 and all(t in sg['labs'] for t in sg['lines'][0]):
                 top = max(sg['lines'][1], key=lambda t: t.get('s', 11))['y'] - 14.0   # label alone on its line: answer from the top
             extra = 0.0; cur_y = None
+            seg_sh = 0.0
+            if MAPQ is not None:                      # a mapped row starts flush left (its own indents kept)
+                xs_ = [t['x'] for lw_ in sg['lines'] for t in lw_ if not in_marks(t, u)]
+                seg_sh = max(0.0, (min(xs_) if xs_ else ax0) - ax0)
+            first_sh = seg_sh
+            if MAPQ is not None and sg['lines']:      # its first line too (the second part of a split line, a stripped label)
+                xf_ = [t['x'] for t in sg['lines'][0] if not in_marks(t, u)]
+                first_sh = max(0.0, (min(xf_) if xf_ else ax0) - ax0)
             for lw in sg['lines']:
                 body_l = [t for t in lw if t not in sg['labs'] and not in_marks(t, u)]
                 marks_l = [t for t in lw if in_marks(t, u)]
                 if pre09:
-                    marks_l = [dict(t, t=t['t'].rstrip(','), w=round(t['w'] * len(t['t'].rstrip(',')) / len(t['t']), 2)) for t in marks_l]
+                    marks_l = [dict(t, t=t['t'].rstrip(','), w=round(6.73 * len(t['t'].rstrip(',')), 2)) if CODE.match(t['t']) or JOINED.match(t['t']) else t for t in marks_l]
                 # Dhruv, round 21: no brackets in our Marks column - '[1]' is shown as '1'; a part total '[5]' printed after
                 # the codes ('B1 + B1 [5]') goes (our Total row has it)
                 if any(re.fullmatch(r'\(?[ABCMP]\d{1,2}\)?', t['t']) for t in marks_l):
@@ -625,13 +669,21 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                 y = ly - top + extra
                 dx = 0.0; start = None
                 for t in body_l:
-                    n = dict(t); x = L + 5 + (t['x'] - ax0) + dx
+                    n = dict(t); x = L + 5 + (t['x'] - ax0) + dx - (first_sh if lw is sg['lines'][0] else seg_sh)
                     if start is None:
                         start = x
                     if x + t['w'] > L + 5 + A and x > start + 1:
                         dx = start - (L + 5 + (t['x'] - ax0)); extra += t.get('s', 11) * 1.25; y += t.get('s', 11) * 1.25
                         x = start
                     n['x'] = round(x, 2); n['y'] = round(y + (t['y'] - ly), 2); v['text'].append(n)
+                codes_ = [t for t in marks_l if CODE.match(t['t'])]
+                if pre09 and len(codes_) >= 2:        # 'B1 + B1' on one line: one code under the other (Dhruv round 24)
+                    ly_ = max(lw, key=lambda t: t.get('s', 11))['y'] - top + extra
+                    for k_, t in enumerate(sorted(codes_, key=lambda t: t['x'])):
+                        n = dict(t, b=1, w=round(6.73 * len(t['t']), 2)); n['x'] = round(W - 6 - n['w'], 2); n['y'] = round(ly_ + 12.5 * k_, 2)
+                        v['text'].append(n)
+                    extra += 12.5 * (len(codes_) - 1)
+                    marks_l = []
                 if marks_l:
                     a_ = min(t['x'] for t in marks_l); c_ = max(t['x'] + t['w'] for t in marks_l)
                     pos = {id(t): t['x'] - a_ for t in marks_l}
@@ -682,7 +734,8 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                     continue                          # the stubs of old column rules cut at a page end
                 if any(b_[0] - 1 <= bb[0] and bb[2] <= b_[2] + 1 and b_[1] - 1 <= bb[1] and bb[3] <= b_[3] + 1 for b_ in braces):
                     continue                          # a piece of a brace: ours is drawn instead (below)
-                v['lines'].append({**l, 'd': _map_path(l['d'], lambda x: L + 5 + (x - ax0), lambda y: y - top)})
+                sh_ = seg_sh
+                v['lines'].append({**l, 'd': _map_path(l['d'], lambda x, sh_=sh_: L + 5 + (x - ax0) - sh_, lambda y: y - top)})
             # Dhruv, round 21: braces drawn clean - one '}' (or '{') from the first to the last line it groups, inside the row
             for b_ in braces:
                 if not mine(b_[1], b_[3]):
@@ -702,7 +755,10 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                         continue
                     g = dict(f); g['x'] = round(L + 5 + (f['x'] - ax0), 2); g['y'] = round(f['y'] - top, 2)
                     v.setdefault(k_, []).append(g)
-            cw = sum(3.7 if c in '()' else 2.4 if c == 'i' else 5.5 if c in 'vx' else 6.1 for c in label)
+            CW_ = {'(': 3.66, ')': 3.66, 'i': 2.44, 'l': 2.44, 'j': 2.44, 'f': 3.06, 't': 3.06, 'r': 3.66, 'v': 5.5, 'x': 5.5,
+                   'k': 5.5, 's': 5.5, 'c': 5.5, 'm': 9.16, 'w': 7.94}   # Arial 11 pt widths (a wrong width stretches the label)
+            cw = sum(CW_.get(c, 6.12) for c in label) if pre09 else sum(3.7 if c in '()' else 2.4 if c == 'i' else 5.5 if c in 'vx' else 6.1 for c in label)
+            # (2013-2016 keep the old estimate until their layout is rebuilt: ERROR_PATTERNS 39)
             lab = dict(tpl, t=label, b=0, s=11.0, w=round(cw, 2))
             lab['x'] = round((L - lab['w']) / 2, 2); lab['y'] = 14.0
             v['text'].append(lab)

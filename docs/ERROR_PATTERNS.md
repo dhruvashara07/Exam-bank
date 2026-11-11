@@ -71,3 +71,16 @@ Known small leftover: in-text codes at the far right of an answer line ('120 get
 Known: 2010 MJ 13, 23, 53 have no mark scheme file at all. MCQ labels cut at the right in 2010 ON 11 q34 /
 12 q31 / 13 q35 (same figure) and 2008 MJ 02 Fig 4.1 spotlight: in round 24.
 
+## Round 24 (2008-2010): 25 of 50 wrong - most: MS rows not matching the paper's parts
+38. Old mark schemes label rows their own way (whole question '1', '(a)–(e)', '1(b)' for (b)(i)-(iv), slips like
+    5(c) for 5(b)(ii)) or put several parts in one row. -> rows assigned BY MEANING: read each paper part and each
+    MS line and map them in pipeline/ms_map.json ([MS line start, label], optional split inside a line).
+    Check before every round: `python3 pipeline/ms_align.py list <sessions>` must print nothing
+    (it flags labels not in the paper, marked parts without a row, and rows on a parent part).
+    A row labelled with the bare question number is a note for all parts (kept).
+39. Codes and labels drawn stretched (a width stored for '[B1]', or a guessed width for 'f', 't', 'r'): the SVG
+    draws text at its stored width -> 'different font'. -> real widths (codes 6.73/char, Arial widths for labels,
+    pre-2013 only; 2013-2016 labels still use the old guess until their layout is rebuilt).
+40. 'B1 + B1' on one line widened the Marks column -> codes stacked one under the other.
+41. A question number in the corner of a tall figure crop -> crop starts below it.
+
