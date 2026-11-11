@@ -1,0 +1,508 @@
+{
+ "id": "0625_2005ON_02_q09",
+ "number": 9,
+ "segments": [],
+ "text": "",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": "Fig. 9.1",
+   "page": 10,
+   "bbox": [
+    152.0,
+    133.0,
+    415.5,
+    431.0
+   ],
+   "id": "0625_2005ON_02_q09a_fig9-1",
+   "part": "(a)",
+   "alt": ""
+  },
+  {
+   "caption": "Fig. 9.2",
+   "page": 10,
+   "bbox": [
+    101.5,
+    484.5,
+    425.0,
+    704.5
+   ],
+   "id": "0625_2005ON_02_q09b_fig9-2",
+   "part": "(b)",
+   "alt": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      60.6,
+      570.0,
+      446.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 50.3,
+      "height_pt": 385.4
+     }
+    }
+   ],
+   "text": "9\n(a)\nFig. 9.1 shows five circuit symbols and their names. The names are in the wrong order.\nDraw a straight line from each symbol to its name. One line has been drawn as an\nexample.\ncell\nV\nlamp\nammeter\nvoltmeter\nA\nswitch\n[3]",
+   "marks": 3,
+   "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "(a)\n1 correct\n2 correct\n4 correct",
+     "codes": [
+      "C1",
+      "C1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        120.7,
+        559.0,
+        192.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "table",
+     "rows": [
+      [
+       "<b>9</b> <b>(a)</b> Fig. 9.1 shows five circuit symbols and their names. The names are in the wrong order.",
+       "",
+       ""
+      ],
+      [
+       "Draw a straight line from each symbol to its name. One line has been drawn as an",
+       "",
+       ""
+      ],
+      [
+       "example.",
+       "",
+       ""
+      ],
+      [
+       "",
+       "V cell",
+       ""
+      ],
+      [
+       "",
+       "lamp",
+       ""
+      ],
+      [
+       "",
+       "ammeter",
+       ""
+      ],
+      [
+       "",
+       "voltmeter",
+       ""
+      ],
+      [
+       "",
+       "A switch",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 50.3
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      452.6,
+      570.0,
+      706.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 50.9,
+      "height_pt": 253.9
+     }
+    }
+   ],
+   "text": "Fig. 9.2 shows a circuit.\nammeter 1\nswitch\nlamp 2\nlamp 1\nammeter 2\ncell",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        60.6,
+        570.0,
+        80.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 4.0,
+        "height_pt": 19.4
+       }
+      }
+     ],
+     "text": "In the space below, draw the circuit using circuit symbols.\n[1]",
+     "marks": 1,
+     "path": "9(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "9(b)(i)",
+       "text": "(b)\n(i)\nall 6 components shown in series (any order)\necf from (a) for symbols",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          196.6,
+          559.0,
+          230.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "In the space below, draw the circuit using circuit symbols.",
+       "text": "In the space below, draw the circuit using circuit symbols."
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        297.1,
+        570.0,
+        329.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 4.0,
+        "height_pt": 32.4
+       }
+      }
+     ],
+     "text": "On your diagram in (b)(i), add a voltmeter connected to measure the potential\ndifference across the cell.\n[1]",
+     "marks": 1,
+     "path": "9(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "9(b)(ii)",
+       "text": "(ii)\nvoltmeter connected across cell, either our diag or his",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          234.5,
+          559.0,
+          255.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "On your diagram in <b>(b)(i)</b>, add a voltmeter connected to measure the potential difference across the cell.",
+       "text": "On your diagram in (b)(i), add a voltmeter connected to measure the potential difference across the cell."
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        331.1,
+        570.0,
+        376.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 15.8,
+        "height_pt": 45.4
+       }
+      }
+     ],
+     "text": "When the switch is pressed so that the contacts join, which of the lamps light up?\n............................................................................................................................[1]",
+     "marks": 1,
+     "path": "9(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "9(b)(iii)",
+       "text": "(iii)\nboth",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          259.8,
+          559.0,
+          280.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "When the switch is pressed so that the contacts join, which of the lamps light up?",
+       "text": "When the switch is pressed so that the contacts join, which of the lamps light up?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "iv",
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        378.1,
+        570.0,
+        449.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 1,
+        "answer_line": "current = …… A[1]",
+        "working_gap_pt": 15.8,
+        "height_pt": 71.4
+       }
+      }
+     ],
+     "text": "When there is a current in the circuit, ammeter 1 reads 0.5 A.\nWhat current does ammeter 2 read?\ncurrent = .................... A[1]",
+     "marks": 1,
+     "path": "9(b)(iv)",
+     "mark_scheme": [
+      {
+       "label": "9(b)(iv)",
+       "text": "(iv)\n0.5",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          285.1,
+          559.0,
+          305.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "When there is a current in the circuit, ammeter 1 reads 0.5 A.",
+       "text": "When there is a current in the circuit, ammeter 1 reads 0.5 A."
+      },
+      {
+       "type": "text",
+       "html": "What current does ammeter 2 read?",
+       "text": "What current does ammeter 2 read?"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "current =",
+       "unit": "A"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "v",
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        451.1,
+        570.0,
+        543.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 2,
+        "answer_line": null,
+        "working_gap_pt": 15.8,
+        "height_pt": 92.4
+       }
+      }
+     ],
+     "text": "One lamp “blows”, so that its filament breaks.\nWhat happens in the circuit?\n..................................................................................................................................\n............................................................................................................................[1]",
+     "marks": 1,
+     "path": "9(b)(v)",
+     "mark_scheme": [
+      {
+       "label": "9(b)(v)",
+       "text": "(v)\ncurrent stops OR ammeters read zero OR other bulb goes out",
+       "codes": [
+        "B1",
+        "[8]"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          310.4,
+          559.0,
+          354.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "One lamp “blows”, so that its filament breaks.",
+       "text": "One lamp “blows”, so that its filament breaks."
+      },
+      {
+       "type": "text",
+       "html": "What happens in the circuit?",
+       "text": "What happens in the circuit?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "9(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Fig. 9.2 shows a circuit.",
+     "text": "Fig. 9.2 shows a circuit."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2005ON_02_q09b_fig9-2",
+     "caption": "Fig. 9.2"
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0625",
+ "subject": "Physics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2005,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 2,
+ "variant": 0,
+ "paper_code": "0625/02",
+ "paper_type": "theory_core",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}
