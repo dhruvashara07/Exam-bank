@@ -1,0 +1,523 @@
+{
+ "id": "0625_2011ON_33_q10",
+ "number": 10,
+ "segments": [
+  {
+   "page": 18,
+   "bbox": [
+    30.0,
+    61.3,
+    570.0,
+    231.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 29.7,
+    "height_pt": 170.2
+   }
+  }
+ ],
+ "text": "Fig. 10.1 shows schematically a digital electronic circuit.\nA\nlight sensor\nB\nrelay and\nlamp\nheat sensor",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": "Fig. 10.1",
+   "page": 18,
+   "bbox": [
+    117.0,
+    86.5,
+    478.0,
+    229.5
+   ],
+   "id": "0625_2011ON_33_q10_fig10-1",
+   "part": "",
+   "alt": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 18,
+     "bbox": [
+      30.0,
+      237.9,
+      570.0,
+      257.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 19.6
+     }
+    }
+   ],
+   "text": "State the name of the logic gate",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 18,
+       "bbox": [
+        30.0,
+        263.5,
+        570.0,
+        283.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 4.0,
+        "height_pt": 19.5
+       }
+      }
+     ],
+     "text": "at A,  ...................................................................................................................................",
+     "marks": 0,
+     "path": "10(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "10(a)(i)",
+       "text": "",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          36.0,
+          707.2,
+          559.0,
+          728.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "(i) at A,"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 18,
+       "bbox": [
+        30.0,
+        289.1,
+        570.0,
+        321.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 4.0,
+        "height_pt": 32.4
+       }
+      }
+     ],
+     "text": "at B.  ...................................................................................................................................\n[2]",
+     "marks": 2,
+     "path": "10(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "10(a)(ii)",
+       "text": "",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          36.0,
+          732.4,
+          559.0,
+          753.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "(ii) at B."
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "10(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "State the name of the logic gate",
+     "text": "State the name of the logic gate"
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 18,
+     "bbox": [
+      30.0,
+      327.5,
+      570.0,
+      423.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 15.4,
+      "height_pt": 96.0
+     }
+    }
+   ],
+   "text": "The light sensor has a “high” (logic 1) output in bright light and a “low” (logic 0) output when it\nis dark.\nThe heat sensor has a “high” (logic 1) output when it is hot and a “low” (logic 0) output when it\nis cold.\nState the outputs of A and B when",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 18,
+       "bbox": [
+        30.0,
+        429.9,
+        570.0,
+        500.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 2,
+        "answer_line": "output of A =  ……",
+        "working_gap_pt": 15.4,
+        "height_pt": 70.6
+       }
+      }
+     ],
+     "text": "it is bright and cold,\noutput of A =  ...............................................................\noutput of B =  ...............................................................",
+     "marks": 0,
+     "path": "10(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "10(b)(i)",
+       "text": "low / 0 / off",
+       "codes": [
+        "B1",
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          36.0,
+          72.4,
+          559.0,
+          105.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "it is bright and cold,",
+       "text": "it is bright and cold,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "output of A ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "output of B ="
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 18,
+       "bbox": [
+        30.0,
+        506.7,
+        570.0,
+        590.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 2,
+        "answer_line": "output of A =  ……",
+        "working_gap_pt": 15.4,
+        "height_pt": 83.3
+       }
+      }
+     ],
+     "text": "it is dark and hot.\noutput of A =  ...............................................................\noutput of B =  ...............................................................\n[4]",
+     "marks": 4,
+     "path": "10(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "10(b)(ii)",
+       "text": "high / 1 / on",
+       "codes": [
+        "B1",
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          36.0,
+          110.3,
+          559.0,
+          143.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "it is dark and hot.",
+       "text": "it is dark and hot."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "output of A ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "output of B ="
+      },
+      {
+       "type": "marks",
+       "value": 4
+      }
+     ]
+    }
+   ],
+   "path": "10(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "The light sensor has a “high” (logic 1) output in bright light and a “low” (logic 0) output when it is dark.",
+     "text": "The light sensor has a “high” (logic 1) output in bright light and a “low” (logic 0) output when it is dark."
+    },
+    {
+     "type": "text",
+     "html": "The heat sensor has a “high” (logic 1) output when it is hot and a “low” (logic 0) output when it is cold.",
+     "text": "The heat sensor has a “high” (logic 1) output when it is hot and a “low” (logic 0) output when it is cold."
+    },
+    {
+     "type": "text",
+     "html": "State the outputs of A and B when",
+     "text": "State the outputs of A and B when"
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 18,
+     "bbox": [
+      30.0,
+      596.3,
+      570.0,
+      667.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 15.4,
+      "height_pt": 70.7
+     }
+    }
+   ],
+   "text": "Suggest why B is connected to a relay in order to light the lamp.\n...................................................................................................................................................\n...............................................................................................................................................[1]",
+   "marks": 1,
+   "path": "10(c)",
+   "mark_scheme": [
+    {
+     "label": "10(c)",
+     "text": "",
+     "codes": [
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        36.0,
+        160.9,
+        559.0,
+        181.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Suggest why B is connected to a relay in order to light the lamp.",
+     "text": "Suggest why B is connected to a relay in order to light the lamp."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 18,
+     "bbox": [
+      30.0,
+      673.1,
+      570.0,
+      795.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 3,
+      "answer_line": null,
+      "working_gap_pt": 15.4,
+      "height_pt": 121.9
+     }
+    }
+   ],
+   "text": "Suggest a practical use for this circuit.\n...................................................................................................................................................\n...................................................................................................................................................\n...............................................................................................................................................[1]\n[Total: 8]",
+   "marks": 1,
+   "path": "10(d)",
+   "mark_scheme": [
+    {
+     "label": "10(d)",
+     "text": "OR\nintruder alarm\nOR\nburglar alarm with explanation\nbeach lighting\nOR\nair freezer at indoor ski slope\nOR\nfridge alarm i.e.",
+     "codes": [
+      "B1",
+      "[8]"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        36.0,
+        198.8,
+        559.0,
+        244.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Suggest a practical use for this circuit.",
+     "text": "Suggest a practical use for this circuit."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 3
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "total_marks": 8,
+ "type": "structured",
+ "syllabus": "0625",
+ "subject": "Physics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2011,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 3,
+ "variant": 3,
+ "paper_code": "0625/33",
+ "paper_type": "theory_extended",
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Fig. 10.1 shows schematically a digital electronic circuit.",
+   "text": "Fig. 10.1 shows schematically a digital electronic circuit."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2011ON_33_q10_fig10-1",
+   "caption": "Fig. 10.1"
+  }
+ ]
+}
