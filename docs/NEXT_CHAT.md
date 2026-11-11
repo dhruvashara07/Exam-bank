@@ -1,12 +1,10 @@
 # Starting a new chat (Dhruv, updated 2026-11-11)
 
-Current task line to paste: "2002-2012, batch 1 (2002-2004) built and checked; next: old mark schemes into our
-table (incl. the F/C column, see MS_TABLE_RULES 15), then the batch 1 review round on the same review page, approve,
-then batch 2 (2005-2007)."
+Current task line to paste: "2002-2012: 2002-2007 done (see PROGRESS); next batch per docs/PLAYBOOK.md."
 When: a new chat when this one gets long (about one 3-year batch per chat), not a fixed rule.
 
 ## Prompt to paste
-> Exam-bank (repo dhruvashara07/Exam-bank). Read CLAUDE.md, PROGRESS.md (top "Next" + usage table), the last two days of
+> Exam-bank (repo dhruvashara07/Exam-bank). Read CLAUDE.md, docs/PLAYBOOK.md, docs/ERROR_PATTERNS.md, PROGRESS.md (top "Next" + usage table), the last two days of
 > docs/CONVERSATION_LOG.md and docs/MS_TABLE_RULES.md. State: 2013-2026 all final in git. Task now: <what you want, e.g.
 > "2002-2012" or "cleanup + MongoDB push">. Work the usual way (build -> audit -> check flags -> one short review round on
 > the review page -> fix -> approve -> push). Keep messages short. Tell me when you need my input.

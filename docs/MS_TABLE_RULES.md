@@ -153,3 +153,24 @@ Our table is Q | Answer | Marks | Guidance.
 ## 15. F/C column (old core Paper 2 mark schemes, 2003-2004)
 Old 0625/02 mark schemes print F or C beside each mark: the grade the mark is aimed at. Dhruv 2026-11-11: not wanted,
 remove it (clean.strip_tier_column redacts the letters; nothing else changes).
+
+## 16. Mark schemes 2002-2008 (Dhruv, round 22, 2026-11-11) - `ms_layout._old_rows` with `pre09`
+Printed layout: Question | Scheme | (F/C target grade) | Marks codes | running part total (underlined, '[8]' at the end).
+Practical 05 / 06: a numbered list '1.' with a '1' per marking point and 'TOTAL 15' under the question.
+Ours: the usual table (Q | Answer | Marks, Total row) and:
+- Marks column = the codes column. Its left edge is found per question from where the codes (B1 M1 C1 A1) are printed
+  (not a fixed 0.82 of the width: in 2003 papers the codes sit at ~0.80). Codes are never left in the Answer column.
+- Part totals are NOT shown: a bare number / '[n]' / '(n)' in the marks area of a question that has codes, the
+  totals column right of plain '1' marks (2004 ON 03), a part maximum 'M2'/'M3' right of the codes, and the
+  underline that ends a part. 'TOTAL n' and the '1.' heading of a practical question go (our Total row has it).
+- No F/C (target grade) column (rule 15). Removed by painting it white + `<pdf>.hide.json` (NOT redaction: it moved
+  the next word on the line).
+- Side notes right of the codes ('mark alongside diagram') and their braces go; braces inside the answer stay.
+- Old table rules, rules under no text and column-rule stubs at a page end go; ours is drawn.
+- 'B1+B1' beside a brace goes to Marks; 'B1,' loses its comma.
+- One-word labels '10(a)' are labels. A mark-scheme part that the paper does not split is kept (1(a)(i) in the MS,
+  1(a) in the paper): the 2013 'missing letter' fix is not used before 2009.
+- Cambridge's numbering slips are mapped by hand in `ms.MS_RELABEL` (2003 ON 03 q11: MS a, b, c(i), c(ii) =
+  paper a(i), a(ii), b(i), b(ii)).
+- 2002 ON mark schemes are scans: shown as page pictures; 2002 ON paper 1 has no mark scheme (no MCQ answers).
+

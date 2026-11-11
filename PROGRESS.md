@@ -2,7 +2,9 @@
 
 Read this first in every session. Update it before ending a session.
 
-## 2002-2012 (started 2026-11-09, batches of 3 years)
+## 2002-2012 (started 2026-11-09, batches of 3 years) - how: docs/PLAYBOOK.md, mistakes: docs/ERROR_PATTERNS.md
+- 2026-11-11: batch 1 (2002-2004, 25 papers) APPROVED. Round 22 closed (21 wrong, all mark-scheme layout -> MS_TABLE_RULES 16).
+  Next: batch 2 = 2005-2007 (in this chat), then a new chat.
 - Batch 1 = 2002-2004 (25 papers: 01 MCQ, 02 core, 03 extended, 05 practical test, 06 alt. to practical). Built, NOT approved.
   Pipeline fixes made (golden: 0 changed cuts; 2013-2026 untouched): pre-2009 paper types (02 = core theory, 03 = extended;
   was read as MCQ), mark-scheme total from "MAXIMUM MARK" (pre-2009 only), practical-test (05) mark scheme parser

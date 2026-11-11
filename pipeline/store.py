@@ -89,10 +89,16 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
         return clip.x0 <= cx <= clip.x1 and clip.y0 <= cy <= clip.y1
     u = {'src': {'doc': docname, 'page': pno + 1, 'box': [round(v, 2) for v in clip]},
          'w': round(clip.width, 2), 'h': round(clip.height, 2), 'text': [], 'lines': [], 'figs': [], 'glyphs': []}
+    hide = []                              # words painted out by clean.py (old F/C column): <pdf>.hide.json
+    if os.path.exists((doc.name or '') + '.hide.json'):
+        hide = [fitz.Rect(r) for p_, r in json.load(open(doc.name + '.hide.json')) if p_ == pno]
     for b in page.get_text('rawdict')['blocks']:
         if b['type'] != 0:
             continue
         for l in b['lines']:
+            if hide:
+                l = dict(l, spans=[s_ for s_ in l['spans'] if not any(h.contains(fitz.Point((s_['bbox'][0] + s_['bbox'][2]) / 2,
+                                                                                             (s_['bbox'][1] + s_['bbox'][3]) / 2)) for h in hide)])
             dx, dy = l['dir'][0] * m.a + l['dir'][1] * m.c, l['dir'][0] * m.b + l['dir'][1] * m.d
             for s in l['spans']:
                 font = s['font']

@@ -14,7 +14,7 @@ from extract import extract, segment_text_all
 import editable
 from golden import cut_hash
 from layout import page_bounds, visible_lines, ink_boxes, tight_ink, grow_to_ink, split_prose_rows, CONTENT_X0, CONTENT_X1
-from ms import mcq_key, structured_rows
+from ms import mcq_key, structured_rows, MS_RELABEL
 
 SCAN_QMARKS = {'2002ON_05': {1: 15, 2: 15, 3: 15, 4: 15}}    # 'TOTAL 15' under each question of the scanned mark scheme
 SCAN_TOTALS = {'2002ON_05': 60}    # 'MAXIMUM MARK : 60' on the scanned cover of the Nov 2002 practical mark scheme
@@ -184,6 +184,10 @@ def process(qp_path):
             meta['total_marks'], meta['total_marks_source'] = SCAN_TOTALS[f'{year}{session}_{pv}'], 'mark scheme (scan)'
     key = mcq_key(msdoc) if (msdoc and meta['is_mcq']) else {}
     ms_rows = structured_rows(msdoc, meta['paper_type'] == 'practical_test' and pv[0] == '0') if (msdoc and not meta['is_mcq']) else []
+    for r in ms_rows:                  # Cambridge numbered a mark scheme differently from its paper (read by eye, Dhruv round 22)
+        fix = MS_RELABEL.get(f'{year}{session}_{pv}', {}).get(r['label'])
+        if fix:
+            r['label'], r['path'] = fix[0], fix[1]
     if not msdoc:
         meta['mark_scheme'] = 'missing'
 

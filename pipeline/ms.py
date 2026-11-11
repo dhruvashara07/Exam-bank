@@ -118,6 +118,10 @@ def _columns(lines):
     return 120, 730
 
 
+MS_RELABEL = {'2003ON_03': {'11(a)': ('11(a)(i)', (11, 'a', 'i')), '11(b)': ('11(a)(ii)', (11, 'a', 'ii')),
+                            '11(c)(i)': ('11(b)(i)', (11, 'b', 'i')), '11(c)(ii)': ('11(b)(ii)', (11, 'b', 'ii'))}}
+
+
 QHEAD = re.compile(r'^(\d{1,2})\.?$')
 TOTAL_LINE = re.compile(r'^TOTAL\s+(\d+)$')
 

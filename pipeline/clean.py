@@ -253,7 +253,7 @@ def strip_tier_column(path):
     for page in doc:
         W = page.get_text('words')
         for w in W:
-            if w[4] in ('F', 'C') and 380 < w[0] < 480 and any(
+            if re.fullmatch(r'\d?[FC]', w[4]) and 380 < w[0] < 480 and any(
                     abs(v[1] - w[1]) < 3 and v[0] > w[2] + 20 and re.fullmatch(r'[BMCA]\d', v[4]) for v in W):
                 hits.append((page.number, fitz.Rect(w[:4])))
     if len(hits) < 10:
@@ -264,12 +264,14 @@ def strip_tier_column(path):
     seen = {(p, tuple(r)) for p, r in hits}
     for page in doc:
         for w in page.get_text('words'):
-            if w[4] in ('F', 'C') and abs(w[0] - cx) < 4 and (page.number, tuple(fitz.Rect(w[:4]))) not in seen:
+            if re.fullmatch(r'\d?[FC]', w[4]) and abs(w[0] - cx) < 6 and (page.number, tuple(fitz.Rect(w[:4]))) not in seen:
                 hits.append((page.number, fitz.Rect(w[:4])))
+    # NOT redaction: MuPDF's apply_redactions moved the next word on the line ('8  F  B1' -> B1 beside the 8, round 22).
+    # The letters are painted white (the picture) and listed in <file>.hide.json, which store.py skips (the text).
+    import json
     for pno, r in hits:
-        doc[pno].add_redact_annot(r + (-1, -1, 1, 1), fill=(1, 1, 1))
-    for page in doc:
-        page.apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE, graphics=fitz.PDF_REDACT_LINE_ART_NONE)
+        doc[pno].draw_rect(r + (-0.5, -0.5, 0.5, 0.5), color=None, fill=(1, 1, 1), overlay=True)
+    json.dump([[pno, [round(v, 2) for v in r]] for pno, r in hits], open(path + '.hide.json', 'w'))
     doc.save(path + '.tmp')
     doc.close()
     os.replace(path + '.tmp', path)

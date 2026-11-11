@@ -20,11 +20,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "mark scheme row 11(c)(i) has no matching part in the paper",
-   "mark scheme row 11(c)(ii) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -75,7 +72,28 @@
      "text": "Complete the decay equation below.\n11Na→\n24\nMg+",
      "marks": 0,
      "path": "11(a)(i)",
-     "mark_scheme_on": "11(a)",
+     "mark_scheme": [
+      {
+       "label": "11(a)(i)",
+       "text": "top line correct, need 24 and 0\nbottom line correct, need 12 and –1 (accept β or e for electron",
+       "codes": [
+        "B1",
+        "B1",
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          239.9,
+          559.0,
+          277.2
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -113,7 +131,29 @@
      "text": "Fig. 11.1 shows \u0001-particles from sodium nuclei moving into the space between the\npoles of a magnet.\nN\n\u0001-particles\nS\nDescribe the path of the \u0001-particles between the magnetic poles.\n..................................................................................................................................\n..................................................................................................................................\n..................................................................................................................................\n[5]",
      "marks": 5,
      "path": "11(a)(ii)",
-     "mark_scheme_on": "11(a)",
+     "mark_scheme": [
+      {
+       "label": "11(a)(ii)",
+       "text": "particles take curved path (accept from diagram)\nmove between the poles at right angles to lines of force\nmove out of paper",
+       "codes": [
+        "B1",
+        "B1",
+        "B1",
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          277.8,
+          559.0,
+          330.3
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -143,28 +183,6 @@
     }
    ],
    "path": "11(a)",
-   "mark_scheme": [
-    {
-     "label": "11(a)",
-     "text": "top line correct, need 24 and 0\nbottom line correct, need 12 and –1 (accept β or e for electron",
-     "codes": [
-      "B1",
-      "B1",
-      "2"
-     ],
-     "segments": [
-      {
-       "page": 4,
-       "bbox": [
-        36.0,
-        239.9,
-        559.0,
-        277.2
-       ]
-      }
-     ]
-    }
-   ],
    "content": [
     {
      "type": "text",
@@ -221,7 +239,27 @@
      "text": "Describe how the results are obtained.\n..................................................................................................................................\n..................................................................................................................................\n..................................................................................................................................\n..................................................................................................................................",
      "marks": 0,
      "path": "11(b)(i)",
-     "mark_scheme_on": "11(b)",
+     "mark_scheme": [
+      {
+       "label": "11(b)(i)",
+       "text": "use detector to pick up radiation (from isotope at points on/in body etc.)\nhigh count where circulation good or v.v. explained",
+       "codes": [
+        "B1",
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          330.3,
+          559.0,
+          365.3
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -259,7 +297,28 @@
      "text": "Explain why a \u0002-emitting isotope is used for this purpose rather than one that\n(ii)\nemits either \u0003-particles or \u0001-particles.\n..................................................................................................................................\n..................................................................................................................................\n..................................................................................................................................\n[4]",
      "marks": 4,
      "path": "11(b)(ii)",
-     "mark_scheme_on": "11(b)",
+     "mark_scheme": [
+      {
+       "label": "11(b)(ii)",
+       "text": "alpha particles all absorbed, none detected\nbeta particles may be largely absorbed, not penetrative enough\ngamma rays reach detector/leave body\nany two",
+       "codes": [
+        "B2",
+        "4",
+        "[9]"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          365.3,
+          559.0,
+          455.6
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -279,29 +338,6 @@
     }
    ],
    "path": "11(b)",
-   "mark_scheme": [
-    {
-     "label": "11(b)",
-     "text": "particles take curved path (accept from diagram)\nmove between the poles at right angles to lines of force\nmove out of paper",
-     "codes": [
-      "B1",
-      "B1",
-      "B1",
-      "3"
-     ],
-     "segments": [
-      {
-       "page": 4,
-       "bbox": [
-        36.0,
-        277.8,
-        559.0,
-        330.3
-       ]
-      }
-     ]
-    }
-   ],
    "content": [
     {
      "type": "text",
@@ -312,47 +348,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "11(c)(i)",
-   "text": "use detector to pick up radiation (from isotope at points on/in body etc.)\nhigh count where circulation good or v.v. explained",
-   "codes": [
-    "B1",
-    "B1"
-   ],
-   "segments": [
-    {
-     "page": 4,
-     "bbox": [
-      36.0,
-      330.3,
-      559.0,
-      365.3
-     ]
-    }
-   ]
-  },
-  {
-   "label": "11(c)(ii)",
-   "text": "alpha particles all absorbed, none detected\nbeta particles may be largely absorbed, not penetrative enough\ngamma rays reach detector/leave body\nany two",
-   "codes": [
-    "B2",
-    "4",
-    "[9]"
-   ],
-   "segments": [
-    {
-     "page": 4,
-     "bbox": [
-      36.0,
-      365.3,
-      559.0,
-      455.6
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",

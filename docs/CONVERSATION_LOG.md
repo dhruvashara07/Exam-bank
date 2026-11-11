@@ -313,3 +313,8 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - Dhruv: no target-grade (F/C) column, remove it (done). Round 22 published for 2002-2004; finish review + fixes in this
   chat, then a new chat for batch 2.
 
+
+- Round 22 answers: part totals shown twice, codes in the Answer column, 'TOTAL' text; 2003 ON 03 q11 MS numbering is
+  Cambridge's slip. All fixed as rule 16; batch 1 approved. Dhruv: keep a list of error patterns so no mistake repeats
+  (docs/ERROR_PATTERNS.md) and a step doc for new chats (docs/PLAYBOOK.md). Then do 2005-2007 here, new chat after.
+\n

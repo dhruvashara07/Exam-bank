@@ -11,6 +11,7 @@ Units are the same layout units as everywhere else (draw with store.unit_svg).
 import collections
 import os, json, copy, re
 import ms_portrait as MP
+from ms import MS_RELABEL
 
 W = 523.0
 FRAME = '#000000'
@@ -341,6 +342,7 @@ def _own_total(marks, info, rows):
 
 
 LABEL_RE = re.compile(r'^(\d{1,2})$|^\(([a-hj-p])\)$|^\(([ivx]{1,4})\)$')   # (practical papers run to (n))
+NUMLAB_RE = re.compile(r'^\d{1,2}(\((?:[a-hj-p]|[ivx]{1,4})\)){1,3}$')   # '11(a)' printed as one word (2003 ON 03)
 COMBO_RE = re.compile(r'^(\((?:[a-hj-p]|[ivx]{1,4})\)){2,4}$')   # one answer for several parts: '(iii)(iv)(v)', '(a)(i)(ii)', '(b)(c)'
 MARK_RE = re.compile(r'^\(?(?:[ABCMP]\d{1,2}|B\d|\d)\)?$|^\[\d{1,2}\]$')
 # marks-column pieces: codes, '[1]' (also printed as '[ ]' + '1', 2014 ON 63), 'max.' ('max. B2', 2015 MJ 23), '+' ('B1 + B1')
@@ -363,6 +365,33 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
     (re-wrapped when too wide), marks right-aligned in the Marks column; the printed '[Total: n]' goes (ours is drawn)."""
     A = M - L - 10
     qn = str(int(q['id'].rsplit('_q', 1)[1]))
+    # 2002-2008 mark schemes (rules 16): codes in their own column (x ~0.8 of the width) and a running part total
+    # ('6', '[8]', underlined) to the right of / under them; practical lists end with 'TOTAL 15'.
+    pre09 = int(q['id'].split('_')[1][:4]) < 2009
+    CODE = re.compile(r'^\(?[ABCM]\d{1,2}\)?,?$')
+    code_xs = [t['x'] / u['w'] for u in units for t in u['text'] if CODE.match(t['t']) and t['x'] > 0.5 * u['w']] if pre09 else []
+    mk_x = (min(code_xs) - 0.01) if code_xs else 0.82          # left edge of the marks column, as a share of the width
+    code_med = sorted(code_xs)[len(code_xs) // 2] if code_xs else 1.0
+    JOINED = re.compile(r'^\(?[ABCM]\d{1,2}(\+[ABCM]\d{1,2})+\)?$')    # 'B1+B1' printed beside a brace (2004 MJ 02 q7)
+    tot_x = None                                  # no codes, plain marks '1' + a part-total column right of them (2004 ON 03)
+    if pre09 and not code_xs:
+        nx = sorted({round(t['x'] / u['w'], 2) for u in units for t in u['text']
+                     if re.fullmatch(r'\(?\d{1,2}\)?', t['t']) and t['x'] > 0.72 * u['w']})
+        if nx and nx[-1] - nx[0] > 0.04:
+            mk_x, tot_x = nx[0] - 0.01, nx[-1] - 0.02
+
+    def in_marks(t, u):
+        if pre09 and JOINED.match(t['t']) and t['x'] > 0.5 * u['w']:
+            return True
+        return t['x'] > mk_x * u['w'] and (MARKISH(t['t']) or bool(code_xs and CODE.match(t['t'])))
+
+    def side_note(t, u):                          # right of the codes: the part maximum 'M2' and notes 'mark along- side diagram'
+        return bool(code_xs) and t['x'] > (code_med + 0.04) * u['w'] and not re.fullmatch(r'[\[(]?\d{1,2}[\])]?', t['t'])
+
+    def part_total(t, u):                         # pre-2009 with codes: a bare number in the marks area is the part total
+        if tot_x is not None:
+            return t['x'] > tot_x * u['w'] and bool(re.fullmatch(r'[\[(]?\d{1,2}[\])]?', t['t']))
+        return bool(code_xs) and t['x'] > mk_x * u['w'] and bool(re.fullmatch(r'[\[(]?\d{1,2}[\])]?', t['t']))
     # a brace running from one printed part into the next ('(d)(i) ... } both B1 (ii)', 2014 ON 21 q10): one unit, so one row
     def tall_braces(u):
         out_ = []
@@ -401,12 +430,14 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
         # the printed total '[Total: 5]'
         drop = set()
         for t in ws:
-            if re.fullmatch(r'\[?Total:?', t['t']):
+            if re.fullmatch(r'\[?Total:?', t['t']) or (pre09 and t['t'] == 'TOTAL'):
                 drop.add(id(t))
                 for o in ws:
                     if abs(o['y'] - t['y']) < 2.5 and o['x'] > t['x'] and re.fullmatch(r'[\d\]\[]+', o['t']):
                         drop.add(id(o))
-        ws = [t for t in ws if id(t) not in drop]
+        ws = [t for t in ws if id(t) not in drop and not part_total(t, u) and not (pre09 and side_note(t, u))]
+        if pre09:
+            ws = [t for t in ws if not (t['t'] == qn + '.' and t['x'] < 0.1 * u['w'])]   # '1.' heading of a practical question
         if not ws:
             continue
         # lines by baseline; small raised/lowered pieces (cm³, ½mv², ¹³¹₅₄Xe) join the nearest normal line
@@ -420,9 +451,10 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
         for t in sorted(ws, key=lambda t: (key(t), t['x'])):
             lines.setdefault(key(t), []).append(t)
         lines = collections.OrderedDict(sorted(lines.items()))
-        cand = lambda t: ((LABEL_RE.match(t['t']) or COMBO_RE.match(t['t'])) and t['x'] < 0.3 * u['w']
+        cand = lambda t: ((LABEL_RE.match(t['t']) or COMBO_RE.match(t['t']) or (pre09 and NUMLAB_RE.match(t['t'])))
+                          and t['x'] < 0.3 * u['w']
                           and (not t['t'].isdigit() or t['t'] == qn))   # an answer '92' is not a label (2013 MJ 23 q12)
-        plain = [t for lw in lines.values() for t in lw if not cand(t) and not (t['x'] > 0.82 * u['w'] and MARKISH(t['t']))]
+        plain = [t for lw in lines.values() for t in lw if not cand(t) and not in_marks(t, u)]
         indent = min([t['x'] for t in plain] + [u['w']])
         def lead_labels(lw):                          # 'n', '(a)', '(i)' at the start of a line: bold, or left of the answer text
             out_ = []                                 # (2013 MJ 51: labels printed in a plain font)
@@ -433,7 +465,7 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                     break
             return out_
         all_labs = {id(t) for lw in lines.values() for t in lead_labels(lw)}
-        body = [t for t in ws if id(t) not in all_labs and not (t['x'] > 0.82 * u['w'] and MARKISH(t['t']))]
+        body = [t for t in ws if id(t) not in all_labs and not in_marks(t, u)]
         ax0 = min([t['x'] for t in body]) if body else 56.0
         # split the unit at lines that start with a part label
         segs = []
@@ -494,7 +526,7 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                 extra_lab += ''.join(f'({pc})' for pc in re.findall(r'\(([a-hj-p]|[ivx]{1,4})\)', t['t']))
             label = qn + (f"({state['l']})" if state['l'] else '') + (f"({state['r']})" if state['r'] else '') + extra_lab
             base_lab = qn + (f"({state['l']})" if state['l'] else '') + (f"({state['r']})" if state['r'] else '')
-            if sg['labs'] and state['l'] and state['r'] and not extra_lab and (base_lab in used or base_lab not in qparts):
+            if sg['labs'] and state['l'] and state['r'] and not extra_lab and (base_lab in used or (base_lab not in qparts and not pre09)):
                 # Cambridge left out the letter ('(a)(ii)' then '(i)' meaning (b)(i), 2013 ON 31 q11): the next letter whose
                 # part exists in the question paper
                 for k in range(1, 4):
@@ -503,6 +535,9 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                     if lab2 in qparts and lab2 not in used:
                         state['l'], label = l2, lab2
                         break
+            relab = MS_RELABEL.get(q['id'].split('_')[1] + '_' + q['id'].split('_')[2], {}).get(label)
+            if relab:                                   # Cambridge's own numbering slip (ms.MS_RELABEL)
+                label = relab[0]
             if sg['labs']:
                 used.add(label)
             tpl = dict(next((t for lw in sg['lines'] for t in lw if not t.get('b')), sg['lines'][0][0]))
@@ -512,8 +547,10 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
             top = max(sg['lines'][0], key=lambda t: t.get('s', 11))['y'] - 14.0
             extra = 0.0; cur_y = None
             for lw in sg['lines']:
-                body_l = [t for t in lw if t not in sg['labs'] and not (t['x'] > 0.82 * u['w'] and MARKISH(t['t']))]
-                marks_l = [t for t in lw if t['x'] > 0.82 * u['w'] and MARKISH(t['t'])]
+                body_l = [t for t in lw if t not in sg['labs'] and not in_marks(t, u)]
+                marks_l = [t for t in lw if in_marks(t, u)]
+                if pre09:
+                    marks_l = [dict(t, t=t['t'].rstrip(','), w=round(t['w'] * len(t['t'].rstrip(',')) / len(t['t']), 2)) for t in marks_l]
                 # Dhruv, round 21: no brackets in our Marks column - '[1]' is shown as '1'; a part total '[5]' printed after
                 # the codes ('B1 + B1 [5]') goes (our Total row has it)
                 if any(re.fullmatch(r'\(?[ABCMP]\d{1,2}\)?', t['t']) for t in marks_l):
@@ -573,6 +610,15 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                     continue                          # the old frame of the row: ours instead
                 if not mine(bb[1], bb[3]):
                     continue
+                if pre09 and code_xs and bb[0] > (mk_x - 0.03) * u['w'] and bb[3] - bb[1] < 2 and bb[2] - bb[0] < 40:
+                    continue                          # the underline that ends a part (its total is dropped too)
+                if pre09 and code_xs and bb[0] > (code_med + 0.03) * u['w']:
+                    continue                          # the brace of a side note ('mark alongside diagram')
+                if pre09 and bb[3] - bb[1] < 2 and (bb[2] - bb[0] > 0.5 * u['w'] or not any(
+                        t['x'] < bb[2] and t['x'] + t['w'] > bb[0] and -1 <= bb[1] - t['y'] <= 6 for t in u['text'])):
+                    continue                          # pre-2009: an old table rule, or a rule under no text (header leftovers)
+                if pre09 and bb[2] - bb[0] < 1.5 and bb[3] - bb[1] < 8:
+                    continue                          # the stubs of old column rules cut at a page end
                 if any(b_[0] - 1 <= bb[0] and bb[2] <= b_[2] + 1 and b_[1] - 1 <= bb[1] and bb[3] <= b_[3] + 1 for b_ in braces):
                     continue                          # a piece of a brace: ours is drawn instead (below)
                 v['lines'].append({**l, 'd': _map_path(l['d'], lambda x: L + 5 + (x - ax0), lambda y: y - top)})
@@ -580,6 +626,9 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
             for b_ in braces:
                 if not mine(b_[1], b_[3]):
                     continue
+                if pre09 and code_xs and not any(b_[2] < t['x'] < mk_x * u['w'] and b_[1] - 4 <= t['y'] <= b_[3] + 4
+                                                 for t in u['text'] if not side_note(t, u)):
+                    continue                          # it grouped a side note we dropped ('mark alongside diagram')
                 cusp_right = b_side.get(b_, True)
                 x0b = L + 5 + (b_[0] - ax0); x1b = L + 5 + (b_[2] - ax0)
                 y0b = max(2.0, b_[1] - top)
@@ -1443,7 +1492,7 @@ def build(q, store):
     uniq = [(r, _tighten(_under_images(_dedupe(_unshrink(_bottom_rule(u)))))) for r, u in uniq]
     uniq = _common_columns(uniq)
     units = [u for _, u in uniq]
-    if all(u['w'] <= W + 2 for u in units):          # the old portrait era: our table too (no printed one to follow)
+    if all(u['w'] <= W + 2 for u in units) or int(q['id'].split('_')[1][:4]) < 2009:          # the old portrait era: our table too (no printed one to follow)
         first = {'edges': [], 'new_edges': [44.0, W - 44.0], 'new_w': [44.0, W - 88.0, 44.0], 'default': True}
         out = _old_rows(units, q)
         labw = max([t['w'] for v in out for t in v['text'] if t.get('s') == 11.0 and t['x'] < 44 and t['y'] == 14.0] + [0])
