@@ -182,3 +182,9 @@ parts is split into the parts' own rows where the lines can be told apart; one l
 ('2(a)(i)(ii)', '4(b)–(g)', '1(b)(i)–(iii)'). A general note for the whole question keeps the bare number.
 Mark codes on one line ('B1 + B1') are stacked. Data: pipeline/ms_map.json; check: ms_align.py list.
 
+
+## 18. Order and spacing (old papers; Dhruv round 25)
+Rows follow the question's part order, whatever order the mark scheme prints them in. A row's label is the part
+where its marks are earned. Same label on consecutive rows: label shown once, the line between rows kept.
+Inside a row no blank lines (double spacing closed), side notes beside their line, codes stacked without a gap.
+Separate parts only when the marks can be separated; one mark for two parts keeps a combined label.

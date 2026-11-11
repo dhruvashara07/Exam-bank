@@ -371,6 +371,8 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
     # ('6', '[8]', underlined) to the right of / under them; practical lists end with 'TOTAL 15'.
     pre09 = int(q['id'].split('_')[1][:4]) < 2013     # the old printed layouts (rule 16) run to 2012 (2009-2010 checked in batch 3)
     CODE = re.compile(r'^(\([ABCM]\d{1,2}\)|[ABCM]\d{1,2}),?$')
+    br_r = sorted(t['x'] + t['w'] for u in units for t in u['text'] if re.fullmatch(r'\[[ABCM]\d{1,2}\]', t['t'])) if pre09 else []
+    br_r = br_r[len(br_r) // 2] if br_r else None   # right edge of '[B1]' codes: a '[1]' there is a mark, not a part total (round 25)
     if pre09:                                     # 2008: codes printed '[B1]'
         units = [dict(u, text=[dict(t, t=t['t'][1:-1], w=round(6.73 * (len(t['t']) - 2), 2))
                                if re.fullmatch(r'\[[ABCM]\d{1,2}\]', t['t']) else t for t in u['text']]) for u in units]
@@ -394,9 +396,46 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
         return bool(code_xs) and t['x'] > (code_med + 0.04) * u['w'] and not re.fullmatch(r'[\[(]?\d{1,2}[\])]?', t['t'])
 
     def part_total(t, u):                         # pre-2009 with codes: a bare number in the marks area is the part total
+        if br_r is not None and re.fullmatch(r'\[\d{1,2}\]', t['t']) and abs(t['x'] + t['w'] - br_r) < 3:
+            return False
         if tot_x is not None:
             return t['x'] > tot_x * u['w'] and bool(re.fullmatch(r'[\[(]?\d{1,2}[\])]?', t['t']))
         return bool(code_xs) and t['x'] > mk_x * u['w'] and bool(re.fullmatch(r'[\[(]?\d{1,2}[\])]?', t['t']))
+    if pre09:
+        # a note printed far right in the answer column ('(ecf NO)', '(too different, wtte)'): moved up beside its line, so
+        # it does not wrap onto a line of its own (Dhruv round 25); short bars under it (underlines) move with it
+        units = [dict(u, text=[dict(t) for t in u['text']], lines=list(u['lines'])) for u in units]
+        for u in units:
+            for t in u['text']:                   # '[M2]' beside a brace: at most 2 marks for the lines it groups (round 25)
+                mm_ = re.fullmatch(r'\[?M(\d)\]?', t['t'])
+                if mm_ and side_note(t, u):
+                    row_ = [o for o in u['text'] if abs(o['y'] - t['y']) < 2 and o is not t and not in_marks(o, u) and o['x'] < mk_x * u['w']]
+                    if row_:
+                        t['t'] = f'(max {mm_.group(1)})'; t['w'] = round(5.5 * len(t['t']), 2); t['b'] = 0
+                        t['x'] = round(max(o['x'] + o['w'] for o in row_) + 12, 2)
+            big_ = sorted((t for t in u['text'] if t.get('s', 11) >= 9 and not in_marks(t, u) and not part_total(t, u)
+                           and not side_note(t, u)), key=lambda t: (round(t['y']), t['x']))
+            lines_ = []
+            for t in big_:
+                if lines_ and abs(lines_[-1][0]['y'] - t['y']) < 2:
+                    lines_[-1].append(t)
+                else:
+                    lines_.append([t])
+            for lw_ in lines_:
+                lw_.sort(key=lambda t: t['x'])
+                for a_, b_ in zip(lw_, lw_[1:]):
+                    gap_ = b_['x'] - (a_['x'] + a_['w'])
+                    if gap_ <= 40 or a_['x'] < 0.12 * u['w']:
+                        continue
+                    d_ = gap_ - 8.0; x0_ = b_['x'] - 0.5; ly_ = b_['y']
+                    for t in u['text']:
+                        if t['x'] >= x0_ and ly_ - 8 <= t['y'] <= ly_ + 4 and not in_marks(t, u) and not part_total(t, u):
+                            t['x'] = round(t['x'] - d_, 2)
+                    for k_, l in enumerate(u['lines']):
+                        bb_ = MP._bbox(l['d'])
+                        if bb_ and bb_[0] >= x0_ - 1 and ly_ - 8 <= bb_[1] <= ly_ + 5 and bb_[3] - bb_[1] < 2 and bb_[2] < mk_x * u['w']:
+                            u['lines'][k_] = {**l, 'd': _map_path(l['d'], lambda x, d_=d_: x - d_, lambda y: y)}
+                    break                         # (one gap per line)
     # a brace running from one printed part into the next ('(d)(i) ... } both B1 (ii)', 2014 ON 21 q10): one unit, so one row
     def tall_braces(u):
         out_ = []
@@ -553,8 +592,9 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                         cut = next((t for t in body_l if t['t'] == ent[2] and t['x'] > body_l[0]['x'] + 1), None)
                         if cut is not None:
                             drop_ = set(ent[4]) if len(ent) > 4 else set()
-                            a_ = [t for t in body_l if t['x'] < cut['x'] and t['t'] not in drop_]
-                            b_ = [t for t in body_l if t['x'] >= cut['x']]
+                            mf_ = len(ent) > 5 and ent[5] == 'marks_first'   # the line's mark goes with the first part (round 25)
+                            a_ = [t for t in body_l if (t['x'] < cut['x'] or (mf_ and in_marks(t, u))) and t['t'] not in drop_]
+                            b_ = [t for t in body_l if t['x'] >= cut['x'] and not (mf_ and in_marks(t, u))]
                             segs[-1]['lines'].append(a_)
                             segs.append({'y0': y + 0.5, 'labs': [], 'lines': [], 'forced': ent[3], 'shift': segs[-1]['shift'] + cut['x'] - body_l[0]['x']})
                             segs[-1]['lines'].append(b_)
@@ -651,7 +691,18 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
             if MAPQ is not None and sg['lines']:      # its first line too (the second part of a split line, a stripped label)
                 xf_ = [t['x'] for t in sg['lines'][0] if not in_marks(t, u)]
                 first_sh = max(0.0, (min(xf_) if xf_ else ax0) - ax0)
+            gaps_ = []; prev_ly = None                 # pre-2013 double-spaced lines inside one row: closed up (round 25)
+            def ysh(y_):
+                return -sum(c_ for ly_, c_ in gaps_ if y_ >= ly_ - 10)
             for lw in sg['lines']:
+                ly0_ = max(lw, key=lambda t: t.get('s', 11))['y']
+                if pre09 and prev_ly is not None and ly0_ - prev_ly > 15.5:
+                    busy_ = any(prev_ly + 4 < (MP._bbox(l['d']) or (0, -1e9, 0, -1e9))[3] and (MP._bbox(l['d']) or (0, 1e9))[1] < ly0_ - 10
+                                for l in u['lines']) or any(prev_ly + 4 < f['y'] + f.get('h', 0) and f['y'] < ly0_ - 10
+                                                            for k_ in ('figs', 'images', 'glyphs') for f in u.get(k_) or [])
+                    if not busy_:
+                        gaps_.append((ly0_, ly0_ - prev_ly - 12.7)); extra -= ly0_ - prev_ly - 12.7
+                prev_ly = ly0_
                 body_l = [t for t in lw if t not in sg['labs'] and not in_marks(t, u)]
                 marks_l = [t for t in lw if in_marks(t, u)]
                 if pre09:
@@ -682,7 +733,15 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                     for k_, t in enumerate(sorted(codes_, key=lambda t: t['x'])):
                         n = dict(t, b=1, w=round(6.73 * len(t['t']), 2)); n['x'] = round(W - 6 - n['w'], 2); n['y'] = round(ly_ + 12.5 * k_, 2)
                         v['text'].append(n)
-                    extra += 12.5 * (len(codes_) - 1)
+                    # the codes hang into the lines below when those have no marks of their own ('B1, B1' beside
+                    # 'makes it hot' then 'causes friction': no gap, round 25)
+                    rest_ = sg['lines'][sg['lines'].index(lw) + 1:]
+                    free_ = 0.0
+                    for lw2_ in rest_:
+                        if any(in_marks(t, u) for t in lw2_):
+                            break
+                        free_ = max(lw2_, key=lambda t: t.get('s', 11))['y'] - max(lw, key=lambda t: t.get('s', 11))['y']
+                    extra += max(0.0, 12.5 * (len(codes_) - 1) - free_)
                     marks_l = []
                 if marks_l:
                     a_ = min(t['x'] for t in marks_l); c_ = max(t['x'] + t['w'] for t in marks_l)
@@ -691,7 +750,7 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                     if stack and c_ - a_ > (W - M) - 8:       # 'max. B2': 'max.' on the line above its code
                         for t in stack:
                             n = dict(t, b=0); n['x'] = round(W - 6 - t['w'], 2)
-                            n['y'] = round(max(lw, key=lambda t: t.get('s', 11))['y'] - top - 0.9 * t.get('s', 11), 2)
+                            n['y'] = round(max(lw, key=lambda t: t.get('s', 11))['y'] - top + ysh(ly) - 0.9 * t.get('s', 11), 2)
                             v['text'].append(n)
                         marks_l = [t for t in marks_l if t not in stack]
                         a_ = min(t['x'] for t in marks_l); c_ = max(t['x'] + t['w'] for t in marks_l)
@@ -707,7 +766,7 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                                 pos[k_] += 2.0
                     for t in marks_l:
                         n = dict(t, b=1 if re.fullmatch(r'\(?[ABCMP]\d{1,2}\)?', t['t']) else 0)   # only mark codes bold
-                        n['x'] = round(W - 6 - (c_ - a_) + pos[id(t)], 2); n['y'] = round(max(lw, key=lambda t: t.get('s', 11))['y'] - top, 2)
+                        n['x'] = round(W - 6 - (c_ - a_) + pos[id(t)], 2); n['y'] = round(max(lw, key=lambda t: t.get('s', 11))['y'] - top + ysh(ly), 2)
                         v['text'].append(n)                   # mark codes in bold, like the later years
             # drawings and pictures (underlines, braces, fraction bars, symbols) go with the segment they are printed in
             si = segs.index(sg)
@@ -721,7 +780,15 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                 bb = MP._bbox(l['d']) or ((min(pts_[0::2]), min(pts_[1::2]), max(pts_[0::2]), max(pts_[1::2])) if len(pts_) >= 4 else None)
                 if bb is None or (min(bb[2] - bb[0], bb[3] - bb[1]) <= 1.0 and (bb[2] - bb[0] > 0.8 * u['w'] or bb[3] - bb[1] > 0.8 * u['h'])):
                     continue                          # the old frame of the row: ours instead
-                if not mine(bb[1], bb[3]):
+                if pre09 and bb[3] - bb[1] < 2 and bb[2] - bb[0] < 30:
+                    # a short bar just under a word ('±' printed '+' over a bar, round 25): it goes with the line it is under
+                    own_ = [k_ for k_, sg_ in enumerate(segs) for lw_ in sg_['lines'] for t in lw_
+                            if 0 <= bb[1] - t['y'] <= 5 and t['x'] - 1 <= bb[0] and bb[2] <= t['x'] + t['w'] + 1]
+                    if own_ and own_[0] != si:
+                        continue
+                    if not own_ and not mine(bb[1], bb[3]):
+                        continue
+                elif not mine(bb[1], bb[3]):
                     continue
                 if pre09 and code_xs and bb[0] > (mk_x - 0.03) * u['w'] and bb[3] - bb[1] < 2 and bb[2] - bb[0] < 40:
                     continue                          # the underline that ends a part (its total is dropped too)
@@ -735,7 +802,7 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                 if any(b_[0] - 1 <= bb[0] and bb[2] <= b_[2] + 1 and b_[1] - 1 <= bb[1] and bb[3] <= b_[3] + 1 for b_ in braces):
                     continue                          # a piece of a brace: ours is drawn instead (below)
                 sh_ = seg_sh
-                v['lines'].append({**l, 'd': _map_path(l['d'], lambda x, sh_=sh_: L + 5 + (x - ax0) - sh_, lambda y: y - top)})
+                v['lines'].append({**l, 'd': _map_path(l['d'], lambda x, sh_=sh_: L + 5 + (x - ax0) - sh_, lambda y: y - top + ysh(y))})
             # Dhruv, round 21: braces drawn clean - one '}' (or '{') from the first to the last line it groups, inside the row
             for b_ in braces:
                 if not mine(b_[1], b_[3]):
@@ -745,15 +812,15 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                     continue                          # it grouped a side note we dropped ('mark alongside diagram')
                 cusp_right = b_side.get(b_, True)
                 x0b = L + 5 + (b_[0] - ax0); x1b = L + 5 + (b_[2] - ax0)
-                y0b = max(2.0, b_[1] - top)
+                y0b = max(2.0, b_[1] - top + ysh(b_[1]))
                 txt_bot = max([t['y'] + 3 for t in v['text']] + [y0b + 10])
-                y1b = min(b_[3] - top, txt_bot)          # never past its own last line (it crossed the row line, round 21)
+                y1b = min(b_[3] - top + ysh(b_[3]), txt_bot)          # never past its own last line (it crossed the row line, round 21)
                 v['lines'].append({'d': _brace_path(x0b, y0b, x1b, y1b, cusp_right), 'stroke': '#000000', 'sw': 0.6, 'fill': 'none'})
             for k_ in ('figs', 'images', 'glyphs'):
                 for f in u.get(k_) or []:
                     if not mine(f['y'], f['y'] + f.get('h', 0)):
                         continue
-                    g = dict(f); g['x'] = round(L + 5 + (f['x'] - ax0), 2); g['y'] = round(f['y'] - top, 2)
+                    g = dict(f); g['x'] = round(L + 5 + (f['x'] - ax0), 2); g['y'] = round(f['y'] - top + ysh(f['y']), 2)
                     v.setdefault(k_, []).append(g)
             CW_ = {'(': 3.66, ')': 3.66, 'i': 2.44, 'l': 2.44, 'j': 2.44, 'f': 3.06, 't': 3.06, 'r': 3.66, 'v': 5.5, 'x': 5.5,
                    'k': 5.5, 's': 5.5, 'c': 5.5, 'm': 9.16, 'w': 7.94}   # Arial 11 pt widths (a wrong width stretches the label)
@@ -765,14 +832,30 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
             bot = [t['y'] + 6 for t in v['text']] + [f['y'] + f.get('h', 0) + 4 for k_ in ('figs', 'images', 'glyphs') for f in v.get(k_) or []]
             v['h'] = round(max(bot + [20.0]), 2)
             v['lines'] += [_rect(L - 0.3, 0, L + 0.3, v['h']), _rect(M - 0.3, 0, M + 0.3, v['h'])]
+            v['_lab'] = label
             rows.append(v)
+    if pre09 and qparts:
+        # Dhruv round 25: rows in the question's order ('(iii) Table' printed before '(i)' in practical schemes)
+        order_ = [p.get('path') for p in q.get('parts', [])]
+        last_ = -1
+        for v in rows:
+            m_ = re.match(r'^\d+(\([a-hj-p]\))?(\([ivx]{1,4}\))?', v['_lab'])
+            pf_ = m_.group(0) if m_ else ''
+            k_ = next((i for i, o in enumerate(order_) if o and (o == pf_ or o.startswith(pf_ + '('))), None) if m_ and (m_.group(1) or m_.group(2)) else None
+            last_ = k_ if k_ is not None else last_
+            v['_k'] = last_
+        rows.sort(key=lambda v: v['_k'])
+    for v in rows:
+        v.pop('_lab', None); v.pop('_k', None)
     # one part printed in several units ('(c)' continued): no new label for a row that repeats the previous label
-    for a_, b_ in zip(rows, rows[1:]):
-        la = [t for t in a_['text'] if t.get('s') == 11.0 and t['x'] < L and t['y'] == 14.0]
+    shown_ = None                                # the label last shown (a row between may already have lost its repeat: round 25)
+    for b_ in rows:
         lb = [t for t in b_['text'] if t.get('s') == 11.0 and t['x'] < L and t['y'] == 14.0]
-        if la and lb and la[0]['t'] == lb[0]['t']:
+        if lb and lb[0]['t'] == shown_:
             b_['text'] = [t for t in b_['text'] if t is not lb[0]]
             b_['cont'] = True
+        elif lb or not pre09:
+            shown_ = lb[0]['t'] if lb else None   # (2013+: only the row just above, as before)
     return rows
 
 

@@ -323,3 +323,8 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - Batch 3 (2008-2010) built and fixed; round 24 (50 items) published. Then new chat for 2011-2012 + cleanup.
 
 - Round 24 done (25 wrong). Dhruv: A1/B1/C1 looked like another font, sizes inconsistent; old MS labels wrong and subpart answers lumped together. Asked me to split rows by reading the question (subject knowledge), do this check before every round, update docs so it doesn't repeat, then next years if confident. Done: ms_map.json + ms_align.py (PLAYBOOK 5b, ERROR_PATTERNS 38-41, MS_TABLE_RULES 17), width fix, stacked codes. Round 25 (46 items) published.
+- Round 25 done (20 wrong): MS rows out of the paper's order, some labels/splits, a ± bar in the wrong row, gaps
+  inside rows, '(ecf NO)' notes wrapping, stacked codes leaving a gap, 2008 MJ 05 q2 marks missing. Dhruv: separate
+  parts where it can be done, otherwise a combined label is fine. Fixed in the pipeline (ERROR_PATTERNS 42-49,
+  MS_TABLE_RULES 18, PLAYBOOK 5b grid checklist); 2002-2010 rebuilt; 2008-2010 approved. Not split (one mark covers
+  both parts): 2010 MJ 61 q1 (a)(i)(iii)/(ii)(iv), 2010 ON 62 q1 (a)(i)(ii), (b)(i)(ii), (c)(i)(ii).

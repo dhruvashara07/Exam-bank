@@ -84,3 +84,17 @@ Known: 2010 MJ 13, 23, 53 have no mark scheme file at all. MCQ labels cut at the
 40. 'B1 + B1' on one line widened the Marks column -> codes stacked one under the other.
 41. A question number in the corner of a tall figure crop -> crop starts below it.
 
+42. Old practical schemes print parts out of order ('(c) units' or 'Table' first, '(e)' before '(b)–(d)') and we kept
+    the printed order. -> rows sorted into the question paper's part order (pre-2013; a note row keeps its place).
+43. A map that gives the same label to rows that are not next to each other ('evidence' after (d)) or labels like
+    '4(c)(d)' / '4(c)–(e)' for a step with no marks -> label each line with the part where its marks are earned
+    (the table/answer part, not the instruction step); general table lines go with the last part they cover.
+44. Short bars ('±' printed as '+' over a bar, underlines) went into the row below (y split 12 pt above the next
+    line) -> a short bar goes with the line it sits under.
+45. Old schemes double-space some lines: a gap inside a row -> gaps over 15.5 pt closed when nothing is drawn there.
+46. Notes printed far right ('(ecf NO)', '(too different, wtte)') wrapped onto their own line -> moved beside the
+    line (gap 8 pt), with their underline. '[M2]' beside a brace -> '(max 2)' at the end of its line.
+47. Stacked codes ('B1, B1') pushed the next line down -> they hang into the lines below when those have no marks.
+48. 2008 '[1]' marks in the same column as '[M1]' codes were dropped as part totals -> kept (right edge = codes').
+49. One line with one mark for two parts, split ('e1 ... and e2 ...'): the mark goes where Dhruv expects it
+    (map option 'marks_first'); a mark that covers two parts and cannot be split keeps the combined label.
