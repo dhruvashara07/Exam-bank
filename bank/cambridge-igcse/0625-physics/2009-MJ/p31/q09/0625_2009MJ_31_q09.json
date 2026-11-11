@@ -1,0 +1,311 @@
+{
+ "id": "0625_2009MJ_31_q09",
+ "number": 9,
+ "segments": [],
+ "text": "",
+ "marks": 4,
+ "figures": [
+  {
+   "caption": "Fig. 9.1",
+   "page": 16,
+   "bbox": [
+    172.0,
+    94.0,
+    396.5,
+    255.5
+   ],
+   "id": "0625_2009MJ_31_q09a_fig9-1",
+   "part": "(a)",
+   "alt": ""
+  },
+  {
+   "caption": "Fig. 9.2",
+   "page": 16,
+   "bbox": [
+    159.5,
+    310.0,
+    409.0,
+    532.0
+   ],
+   "id": "0625_2009MJ_31_q09a_fig9-2",
+   "part": "(a)",
+   "alt": ""
+  },
+  {
+   "caption": "Fig. 9.3",
+   "page": 17,
+   "bbox": [
+    61.5,
+    132.0,
+    508.0,
+    468.0
+   ],
+   "id": "0625_2009MJ_31_q09b_fig9-3",
+   "part": "(b)",
+   "alt": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      61.3,
+      570.0,
+      534.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 166.6,
+      "height_pt": 472.7
+     }
+    }
+   ],
+   "text": "9\n(a) Fig. 9.1 shows an a.c. supply connected in series to a diode and a resistor.\nOn the axes of Fig. 9.2, draw a graph showing the variation of the current in the\nresistor.\n[1]\ncurrent\n0\ntime",
+   "marks": 1,
+   "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "",
+     "codes": [
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        36.0,
+        375.4,
+        559.0,
+        408.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> Fig. 9.1 shows an a.c. supply connected in series to a diode and a resistor.",
+     "text": "Fig. 9.1 shows an a.c. supply connected in series to a diode and a resistor."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2009MJ_31_q09a_fig9-1",
+     "caption": "Fig. 9.1"
+    },
+    {
+     "type": "text",
+     "html": "On the axes of Fig. 9.2, draw a graph showing the variation of the current in the resistor.",
+     "text": "On the axes of Fig. 9.2, draw a graph showing the variation of the current in the resistor."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2009MJ_31_q09a_fig9-2",
+     "caption": "Fig. 9.2"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 166.6
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      61.3,
+      570.0,
+      470.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 58.2,
+      "height_pt": 408.7
+     }
+    }
+   ],
+   "text": "Fig. 9.3 shows four attempts, A, B, C and D, to connect a circuit known as a bridge\nrectifier.\nThe circuit is connected to a 12 V a.c. supply.\nA\nB\n12V\n12V\nred\nblack\nred\nblack\nC\nD\n12V\n12V\nred\nblack\nred\nblack",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 17,
+       "bbox": [
+        30.0,
+        476.7,
+        570.0,
+        535.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 15.8,
+        "height_pt": 58.3
+       }
+      }
+     ],
+     "text": "In which circuit will the direction of the conventional current in the resistor always\nbe from red to black?\n................................................. [1]",
+     "marks": 1,
+     "path": "9(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "9(b)(i)",
+       "text": "",
+       "codes": [
+        "M1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          426.0,
+          559.0,
+          446.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "In which circuit will the direction of the conventional current in the resistor always be from red to black?",
+       "text": "In which circuit will the direction of the conventional current in the resistor always be from red to black?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 17,
+       "bbox": [
+        30.0,
+        541.7,
+        570.0,
+        613.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 15.8,
+        "height_pt": 71.3
+       }
+      }
+     ],
+     "text": "On the circuit you chose in (b)(i), clearly indicate with arrows the path of the\nconventional current in the circuit when the upper terminal of the a.c. supply is\npositive with respect to the lower terminal.\n[2]\n[Total: 4]",
+     "marks": 2,
+     "path": "9(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "9(b)(ii)",
+       "text": "Route to resistor: correct arrow on one downwards diode and\nnothing wrong on this route\nRoute from resistor: correct arrow on one downwards diode and\nnothing wrong on this route",
+       "codes": [
+        "B1",
+        "B1",
+        "[4]"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          451.3,
+          559.0,
+          522.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "On the circuit you chose in <b>(b)(i)</b>, clearly indicate with arrows the path of the conventional current in the circuit when the upper terminal of the a.c. supply is positive with respect to the lower terminal.",
+       "text": "On the circuit you chose in (b)(i), clearly indicate with arrows the path of the conventional current in the circuit when the upper terminal of the a.c. supply is positive with respect to the lower terminal."
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "9(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Fig. 9.3 shows four attempts, <b>A</b>, <b>B</b>, <b>C</b> and <b>D</b>, to connect a circuit known as a bridge rectifier.",
+     "text": "Fig. 9.3 shows four attempts, A, B, C and D, to connect a circuit known as a bridge rectifier."
+    },
+    {
+     "type": "text",
+     "html": "The circuit is connected to a 12 V a.c. supply.",
+     "text": "The circuit is connected to a 12 V a.c. supply."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2009MJ_31_q09b_fig9-3",
+     "caption": "Fig. 9.3"
+    }
+   ]
+  }
+ ],
+ "total_marks": 4,
+ "type": "structured",
+ "syllabus": "0625",
+ "subject": "Physics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2009,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 3,
+ "variant": 1,
+ "paper_code": "0625/31",
+ "paper_type": "theory_extended",
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}
