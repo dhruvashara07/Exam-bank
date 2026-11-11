@@ -1,6 +1,6 @@
 # Starting a new chat (Dhruv, updated 2026-11-11)
 
-Current task line to paste: "2002-2012: 2002-2007 done (see PROGRESS); next batch per docs/PLAYBOOK.md."
+Current task line to paste: "2002-2012: 2002-2007 approved, 2008-2010 in round 24 (read feedback_r24, fix, approve), then 2011-2012, then cleanup + MongoDB push. Follow docs/PLAYBOOK.md."
 When: a new chat when this one gets long (about one 3-year batch per chat), not a fixed rule.
 
 ## Prompt to paste

@@ -154,7 +154,7 @@ Our table is Q | Answer | Marks | Guidance.
 Old 0625/02 mark schemes print F or C beside each mark: the grade the mark is aimed at. Dhruv 2026-11-11: not wanted,
 remove it (clean.strip_tier_column redacts the letters; nothing else changes).
 
-## 16. Mark schemes 2002-2008 (Dhruv, round 22, 2026-11-11) - `ms_layout._old_rows` with `pre09`
+## 16. Mark schemes 2002-2012 (Dhruv, round 22, 2026-11-11; extended to 2012 in batch 3) - `ms_layout._old_rows` with `pre09`
 Printed layout: Question | Scheme | (F/C target grade) | Marks codes | running part total (underlined, '[8]' at the end).
 Practical 05 / 06: a numbered list '1.' with a '1' per marking point and 'TOTAL 15' under the question.
 Ours: the usual table (Q | Answer | Marks, Total row) and:

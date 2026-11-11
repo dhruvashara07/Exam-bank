@@ -28,7 +28,7 @@
    "page": 5,
    "bbox": [
     47.5,
-    300.5,
+    71.5,
     245.5,
     555.0
    ],
@@ -38,11 +38,82 @@
   }
  ],
  "review": {
-  "reasons": [],
-  "status": "auto"
+  "reasons": [
+   "mark scheme row 4(a)(i) has no matching part in the paper",
+   "mark scheme row 4(a)(ii) has no matching part in the paper",
+   "mark scheme row 4(b) has no matching part in the paper",
+   "mark scheme row 4(c) has no matching part in the paper"
+  ],
+  "status": "flagged"
  },
  "total_marks": 4,
  "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "4(a)(i)",
+   "text": "(e.g. GPE, gravitational, gravity, potential, positional)",
+   "codes": [],
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      36.0,
+      71.9,
+      559.0,
+      105.3
+     ]
+    }
+   ]
+  },
+  {
+   "label": "4(a)(ii)",
+   "text": "",
+   "codes": [],
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      36.0,
+      109.8,
+      559.0,
+      130.6
+     ]
+    }
+   ]
+  },
+  {
+   "label": "4(b)",
+   "text": "",
+   "codes": [],
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      36.0,
+      147.7,
+      559.0,
+      181.1
+     ]
+    }
+   ]
+  },
+  {
+   "label": "4(c)",
+   "text": "",
+   "codes": [],
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      36.0,
+      198.3,
+      559.0,
+      257.0
+     ]
+    }
+   ]
+  }
+ ],
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",
@@ -66,6 +137,11 @@
    "text": "4"
   },
   {
+   "type": "figure",
+   "id": "0625_2008MJ_02_q04_fig4-1",
+   "caption": "Fig. 4.1"
+  },
+  {
    "type": "text",
    "html": "An electrician climbs up to the platform of a special tower, in order to reach a high-level spotlight, as shown in Fig. 4.1.",
    "text": "An electrician climbs up to the platform of a special tower, in order to reach a high-level spotlight, as shown in Fig. 4.1."
@@ -87,18 +163,8 @@
   },
   {
    "type": "text",
-   "html": "One of the electrician’s assistants also",
-   "text": "One of the electrician’s assistants also"
-  },
-  {
-   "type": "figure",
-   "id": "0625_2008MJ_02_q04_fig4-1",
-   "caption": "Fig. 4.1"
-  },
-  {
-   "type": "text",
-   "html": "climbs up to the platform. The assistant weighs less than the electrician.",
-   "text": "climbs up to the platform. The assistant weighs less than the electrician."
+   "html": "One of the electrician’s assistants also climbs up to the platform. The assistant weighs less than the electrician.",
+   "text": "One of the electrician’s assistants also climbs up to the platform. The assistant weighs less than the electrician."
   },
   {
    "type": "text",

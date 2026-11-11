@@ -5,7 +5,7 @@ for example question 4's stem, 4(a)'s stem, or 4(a)(ii). Printing the segments o
 question (or of a chosen part plus its parent stems) in order reproduces the original
 layout, answer space included.
 """
-import re
+import os, re
 import pymupdf as fitz
 from layout import page_bounds, visible_lines, ink_boxes, label_tokens, ROMAN, LETTERS, CONTENT_X0, CONTENT_X1, row_ink, ink_extent, ZOOM, tight_ink, grow_to_ink
 
@@ -311,6 +311,8 @@ def find_figures(doc, seg, lines):
                        and (prose_like(l) or bullet_item(l) or (re.match(r'^(\d{1,2}|\([a-z]+\))\s', l['text']) and l['x0'] < 110)
                                                                     or (re.fullmatch(r'\([a-z]+\)', l['text'].strip()) and l['x0'] < 110)
                                                                     or re.fullmatch(r'Method \d', l['text'].strip())
+                                                                    or (len(l['text'].split()) >= 4 and l['text'].rstrip().endswith('.')
+                                                                        and any(abs(o['y0'] - l['y0']) < 3 and re.fullmatch(r'\[\d{1,2}\]', o['text'].strip()) for o in lines))   # 'Draw the best curve for these points.   [2]'
                                                                     or (l['x0'] <= 76 and l['text'].rstrip().endswith('.'))
                                                                     or (l['text'].rstrip().endswith(('.', ':')) and l['x0'] < 130 and any(abs(l['x0'] - o['x0']) < 2 for o in long_lines if o is not l)))]
         for l in sorted(lines, key=lambda l: l['y0']):    # last line of a sentence ('Fig. 2.2.' after a long line)
@@ -325,7 +327,7 @@ def find_figures(doc, seg, lines):
                         and p['x1'] - 15 <= l['x0'] <= p['x1'] + 2 and l['x1'] <= p['x1'] + 8 for p in prose_above):
                 prose_above.append(l)
         rules = [r for r in drawings if not any(abs(r.x0 - t.x0) < 1 and abs(r.y0 - t.y0) < 1 for t in text_boxes)]
-        grid_below = [r for r in rules if cap['y1'] - 1 <= r.y0 <= cap['y1'] + 12]
+        grid_below = [r for r in rules if cap['y1'] - 1 <= r.y0 <= cap['y1'] + 18]   # 2010 MJ 52: table 15 pt under its caption
         grid_above = [r for r in rules if cap['y0'] - 30 <= r.y1 <= cap['y0'] + 1]
         if is_table and (grid_below or not grid_above):
             # table caption sits above the table (the usual case)
@@ -418,14 +420,19 @@ def find_figures(doc, seg, lines):
         x0 = min(r.x0 for r in inside); x1 = max(r.x1 for r in inside)
         y0 = min(r.y0 for r in inside); y1 = max(r.y1 for r in inside)
         top_lim = max(seg['y0'], band[0] - 1)
-        if prose_above and int((re.search(r'/((?:19|20)\d\d)-', doc.name or '') or [0, '9999'])[1]) < 2009:     # pre-2009: a figure printed close under its sentence (thermometer
+        mg = 80
+        if prose_above and int((re.search(r'/((?:19|20)\d\d)-', doc.name or '') or [0, '9999'])[1]) < 2009 and \
+                not any(l['x0'] < x1 - 2 and l['x1'] > x0 + 2 for l in prose_above if l['y1'] > band[0] - 30):
+            top_lim = seg['y0']             # pre-2009: every sentence above sits BESIDE the figure (2008 MJ 02 Fig 4.1, text in a column)
+            mg = 400                        # a tall figure beside a column of text: grow as far as its ink goes
+        elif prose_above and int((re.search(r'/((?:19|20)\d\d)-', doc.name or '') or [0, '9999'])[1]) < 2009:     # pre-2009: a figure printed close under its sentence (thermometer
             top_lim = max(seg['y0'], max(l['y1'] for l in prose_above) - 2.5)   # 2006 MJ 06 q4) may reach into the line's descent
         if prose_above:      # the sentence that closes the band sits BESIDE the figure (bottles next to the question text): its top may rise past it
             last = max(prose_above, key=lambda l: l['y1'])
             if last['x1'] < x0 - 2 or last['x0'] > x1 + 2:
                 top_lim = seg['y0']
         g = grow_to_ink(page, fitz.Rect(x0, y0, x1, y1), fitz.Rect(max(CONTENT_X0, min(xa, x0)), top_lim, min(CONTENT_X1, max(xb, x1)), min(seg['y1'], band[1] + 1)),
-                        exclude=[fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in prose_above])
+                        exclude=[fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in prose_above], max_grow=mg)
         x0, y0, x1, y1 = g.x0, g.y0, g.x1, g.y1
         for l in lines:                 # answer lines printed inside the figure ('nebula which contains .......')
             if DOTS.search(l['text']) and l['y0'] >= y0 - 2 and l['y1'] <= y1 + 2 and l['x0'] < x1 and l['x1'] > x0:

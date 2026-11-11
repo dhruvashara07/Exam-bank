@@ -368,8 +368,10 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
     qn = str(int(q['id'].rsplit('_q', 1)[1]))
     # 2002-2008 mark schemes (rules 16): codes in their own column (x ~0.8 of the width) and a running part total
     # ('6', '[8]', underlined) to the right of / under them; practical lists end with 'TOTAL 15'.
-    pre09 = int(q['id'].split('_')[1][:4]) < 2009
+    pre09 = int(q['id'].split('_')[1][:4]) < 2013     # the old printed layouts (rule 16) run to 2012 (2009-2010 checked in batch 3)
     CODE = re.compile(r'^(\([ABCM]\d{1,2}\)|[ABCM]\d{1,2}),?$')
+    if pre09:                                     # 2008: codes printed '[B1]'
+        units = [dict(u, text=[dict(t, t=t['t'][1:-1]) if re.fullmatch(r'\[[ABCM]\d{1,2}\]', t['t']) else t for t in u['text']]) for u in units]
     code_xs = [t['x'] / u['w'] for u in units for t in u['text'] if CODE.match(t['t']) and t['x'] > 0.5 * u['w']] if pre09 else []
     mk_x = (min(code_xs) - 0.01) if code_xs else 0.82          # left edge of the marks column, as a share of the width
     code_med = sorted(code_xs)[len(code_xs) // 2] if code_xs else 1.0
@@ -1551,7 +1553,7 @@ def build(q, store):
     uniq = [(r, _tighten(_under_images(_dedupe(_unshrink(_bottom_rule(u)))))) for r, u in uniq]
     uniq = _common_columns(uniq)
     units = [u for _, u in uniq]
-    if all(u['w'] <= W + 2 for u in units) or int(q['id'].split('_')[1][:4]) < 2009:          # the old portrait era: our table too (no printed one to follow)
+    if all(u['w'] <= W + 2 for u in units) or int(q['id'].split('_')[1][:4]) < 2013:          # the old portrait era: our table too (no printed one to follow)
         first = {'edges': [], 'new_edges': [44.0, W - 44.0], 'new_w': [44.0, W - 88.0, 44.0], 'default': True}
         out = _old_rows(units, q)
         labw = max([t['w'] for v in out for t in v['text'] if t.get('s') == 11.0 and t['x'] < 44 and t['y'] == 14.0] + [0])
