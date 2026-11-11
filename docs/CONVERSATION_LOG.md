@@ -305,4 +305,9 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - Workflow agreed: 3-year build on GitHub, I check every flag, one short review round, fixes, approve, push; use usage only where it pays.
 - Batch 1 (2002-2004) built on GitHub, then fixed locally (see PROGRESS.md "2002-2012"). Found: GitHub build had read old paper numbers wrongly.
   All 25 papers match their mark totals, 0 blocking checks. Old-layout mark schemes still to be put in our table (question to Dhruv).
+## 2026-11-11 - questions on batch 1
+- New chat: not after every batch by rule; when a chat gets long (about one 3-year batch per chat).
+- Review round for each batch goes on the SAME review page (review/portal.json review_url), a new button per round.
+- F/C column = target grade of each mark in old core Paper 2 mark schemes. Dhruv: add it to our table for those years
+  (MS_TABLE_RULES 15). Batch 1 round waits for the old mark schemes to be in our table.
 

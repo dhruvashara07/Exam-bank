@@ -1,4 +1,9 @@
-# Starting a new chat (Dhruv, 2026-11-09)
+# Starting a new chat (Dhruv, updated 2026-11-11)
+
+Current task line to paste: "2002-2012, batch 1 (2002-2004) built and checked; next: old mark schemes into our
+table (incl. the F/C column, see MS_TABLE_RULES 15), then the batch 1 review round on the same review page, approve,
+then batch 2 (2005-2007)."
+When: a new chat when this one gets long (about one 3-year batch per chat), not a fixed rule.
 
 ## Prompt to paste
 > Exam-bank (repo dhruvashara07/Exam-bank). Read CLAUDE.md, PROGRESS.md (top "Next" + usage table), the last two days of
