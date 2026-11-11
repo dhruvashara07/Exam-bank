@@ -1,0 +1,455 @@
+{
+ "id": "0625_2006MJ_02_q11",
+ "number": 11,
+ "segments": [
+  {
+   "page": 14,
+   "bbox": [
+    30.0,
+    60.6,
+    570.0,
+    293.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 73.9,
+    "height_pt": 232.9
+   }
+  }
+ ],
+ "text": "11\nFig. 11.1 illustrates part of the journey of a car.\n1000m\n500m\n1500m\nstart\nend\npylon\ntree\nof\noil drops\nof\ntown\non road\ntown\nThe car engine is leaking oil. Regularly, every 2.5 s, a drop of oil hits the road.",
+ "marks": 13,
+ "figures": [
+  {
+   "caption": "Fig. 11.1",
+   "page": 14,
+   "bbox": [
+    56.0,
+    95.0,
+    510.0,
+    258.5
+   ],
+   "id": "0625_2006MJ_02_q11_fig11-1",
+   "part": "",
+   "alt": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      300.2,
+      570.0,
+      319.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 19.3
+     }
+    }
+   ],
+   "text": "The car is driven at a steady speed of 10 m/s through the town.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 14,
+       "bbox": [
+        30.0,
+        321.2,
+        570.0,
+        412.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 1,
+        "answer_line": "distance between oil drops = …… m[2]",
+        "working_gap_pt": 61.2,
+        "height_pt": 90.8
+       }
+      }
+     ],
+     "text": "Calculate the distance on the road between one oil drop and the next oil drop.\ndistance between oil drops = ................... m[2]",
+     "marks": 2,
+     "path": "11(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "11(a)(i)",
+       "text": "10 x 2.5\n25 (m)",
+       "codes": [
+        "C1",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          70.1,
+          559.0,
+          103.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the distance on the road between one oil drop and the next oil drop.",
+       "text": "Calculate the distance on the road between one oil drop and the next oil drop."
+      },
+      {
+       "type": "text",
+       "html": "distance between oil drops = …… m",
+       "text": "distance between oil drops = …… m"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 14,
+       "bbox": [
+        30.0,
+        413.5,
+        570.0,
+        504.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 48.2,
+        "height_pt": 91.0
+       }
+      }
+     ],
+     "text": "The town is 500 m across. Show that it takes the car 50 s to travel through the\ntown.\n[3]",
+     "marks": 3,
+     "path": "11(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "11(a)(ii)",
+       "text": "500/10\n50 (s)",
+       "codes": [
+        "C1",
+        "M1",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          108.0,
+          559.0,
+          154.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The town is 500 m across. Show that it takes the car 50 s to travel through the town.",
+       "text": "The town is 500 m across. Show that it takes the car 50 s to travel through the town."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 48.2
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "11(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "The car is driven at a steady speed of 10 m/s through the town.",
+     "text": "The car is driven at a steady speed of 10 m/s through the town."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      510.9,
+      570.0,
+      653.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "speed of car = …… m/s[2]",
+      "working_gap_pt": 61.2,
+      "height_pt": 142.6
+     }
+    }
+   ],
+   "text": "At a distance of 1000 m outside the town, the car passes a tree. At a further distance of\n1500 m, the car passes a pylon. Between the tree and the pylon the oil drops are all\n75 m apart.\nCalculate the speed of the car between the tree and the pylon.\nspeed of car = ................ m/s[2]",
+   "marks": 2,
+   "path": "11(b)",
+   "mark_scheme": [
+    {
+     "label": "11(b)",
+     "text": "",
+     "codes": [
+      "C1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        158.6,
+        559.0,
+        192.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "At a distance of 1000 m outside the town, the car passes a tree. At a further distance of 1500 m, the car passes a pylon. Between the tree and the pylon the oil drops are all m apart.",
+     "text": "At a distance of 1000 m outside the town, the car passes a tree. At a further distance of 1500 m, the car passes a pylon. Between the tree and the pylon the oil drops are all m apart."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the speed of the car between the tree and the pylon.",
+     "text": "Calculate the speed of the car between the tree and the pylon."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "speed of car =",
+     "unit": "m/s"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      60.6,
+      570.0,
+      202.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 22.3,
+      "height_pt": 141.9
+     }
+    }
+   ],
+   "text": "What has happened to the car between the end of the town and the tree?\nTick one box.\nThe car has accelerated.\nThe car has decelerated.\nThe car has travelled at constant speed.\n[1]",
+   "marks": 1,
+   "path": "11(c)",
+   "mark_scheme": [
+    {
+     "label": "11(c)",
+     "text": "",
+     "codes": [
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        196.5,
+        559.0,
+        217.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "What has happened to the car between the end of the town and the tree?",
+     "text": "What has happened to the car between the end of the town and the tree?"
+    },
+    {
+     "type": "text",
+     "html": "Tick one box.",
+     "text": "Tick one box."
+    },
+    {
+     "type": "text",
+     "html": "The car has accelerated.",
+     "text": "The car has accelerated."
+    },
+    {
+     "type": "text",
+     "html": "The car has decelerated.",
+     "text": "The car has decelerated."
+    },
+    {
+     "type": "text",
+     "html": "The car has travelled at constant speed.",
+     "text": "The car has travelled at constant speed."
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      213.3,
+      570.0,
+      371.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "average speed = …… m/s[5]",
+      "working_gap_pt": 89.5,
+      "height_pt": 158.2
+     }
+    }
+   ],
+   "text": "Each of the three parts of the journey takes 50 s.\nCalculate the average speed of the car for the whole journey between the beginning of\nthe town and the pylon.\naverage speed = ................ m/s[5]",
+   "marks": 5,
+   "path": "11(d)",
+   "mark_scheme": [
+    {
+     "label": "11(d)",
+     "text": "",
+     "codes": [
+      "C1",
+      "C1",
+      "C1",
+      "C1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        221.8,
+        559.0,
+        303.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Each of the three parts of the journey takes 50 s.",
+     "text": "Each of the three parts of the journey takes 50 s."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the average speed of the car for the whole journey between the beginning of the town and the pylon.",
+     "text": "Calculate the average speed of the car for the whole journey between the beginning of the town and the pylon."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "average speed =",
+     "unit": "m/s"
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0625",
+ "subject": "Physics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2006,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 2,
+ "variant": 0,
+ "paper_code": "0625/02",
+ "paper_type": "theory_core",
+ "total_marks": 13,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Fig. 11.1 illustrates part of the journey of a car.",
+   "text": "Fig. 11.1 illustrates part of the journey of a car."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2006MJ_02_q11_fig11-1",
+   "caption": "Fig. 11.1"
+  },
+  {
+   "type": "text",
+   "html": "The car engine is leaking oil. Regularly, every 2.5 s, a drop of oil hits the road.",
+   "text": "The car engine is leaking oil. Regularly, every 2.5 s, a drop of oil hits the road."
+  }
+ ]
+}
