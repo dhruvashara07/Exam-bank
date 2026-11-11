@@ -1,0 +1,453 @@
+{
+ "id": "0625_2010MJ_33_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 16,
+   "bbox": [
+    30.0,
+    61.3,
+    570.0,
+    367.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 63.5,
+    "height_pt": 306.2
+   }
+  }
+ ],
+ "text": "9\nThe circuit in Fig. 9.1 contains a 4.0 V battery, whose resistance can be ignored.\nThere are also three resistors, a 3-position switch, S, and another component, P.\n22\u0002\n2\u0002\nA\nS\nB\n8\u0002\nC\nP\n4.0V",
+ "marks": 10,
+ "figures": [
+  {
+   "caption": "Fig. 9.1",
+   "page": 16,
+   "bbox": [
+    165.0,
+    120.0,
+    403.5,
+    365.5
+   ],
+   "id": "0625_2010MJ_33_q09_fig9-1",
+   "part": "",
+   "alt": ""
+  },
+  {
+   "caption": "Fig. 9.2",
+   "page": 17,
+   "bbox": [
+    165.0,
+    244.5,
+    401.5,
+    485.5
+   ],
+   "id": "0625_2010MJ_33_q09d_fig9-2",
+   "part": "(d)",
+   "alt": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      373.9,
+      570.0,
+      419.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 15.8,
+      "height_pt": 45.6
+     }
+    }
+   ],
+   "text": "State the name of component P.\n................................................. [1]",
+   "marks": 1,
+   "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "",
+     "codes": [
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        36.0,
+        505.9,
+        559.0,
+        526.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "State the name of component P.",
+     "text": "State the name of component P."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      425.9,
+      570.0,
+      445.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 19.6
+     }
+    }
+   ],
+   "text": "Deduce the resistance of the circuit when switch S is connected to",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 16,
+       "bbox": [
+        30.0,
+        451.9,
+        570.0,
+        610.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 1,
+        "answer_line": "resistance =  …… [1]",
+        "working_gap_pt": 129.2,
+        "height_pt": 158.6
+       }
+      }
+     ],
+     "text": "point A,\nresistance =  ................................................ [1]",
+     "marks": 1,
+     "path": "9(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "9(b)(i)",
+       "text": "",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          36.0,
+          542.7,
+          559.0,
+          563.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "point A,",
+       "text": "point A,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "resistance ="
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 16,
+       "bbox": [
+        30.0,
+        617.3,
+        570.0,
+        776.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 1,
+        "answer_line": "resistance =  …… [3]",
+        "working_gap_pt": 129.2,
+        "height_pt": 158.7
+       }
+      }
+     ],
+     "text": "point B.\nresistance =  ................................................ [3]",
+     "marks": 3,
+     "path": "9(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "9(b)(ii)",
+       "text": "R R\n1 2\n1 / R = 1 / R + 1 / R (+ 1 / R ) OR (R =)\n1\n2\n3\nR +R\n1\n2\nseen or used with any 2 resistors\nignore extra resistance added to expression for R in equation\n6 Ω",
+       "codes": [
+        "C1",
+        "C1",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          36.0,
+          568.0,
+          559.0,
+          671.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "point B.",
+       "text": "point B."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "resistance ="
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "9(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Deduce the resistance of the circuit when switch S is connected to",
+     "text": "Deduce the resistance of the circuit when switch S is connected to"
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      61.3,
+      570.0,
+      210.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 5,
+      "answer_line": "current =  ……",
+      "working_gap_pt": 15.8,
+      "height_pt": 149.2
+     }
+    }
+   ],
+   "text": "State the current in component P when S is in position C, and explain your answer.\ncurrent =  .....................................................\nexplanation  ......................................................................................................................\n..........................................................................................................................................\n..........................................................................................................................................\n.................................................................................................................................... [2]",
+   "marks": 2,
+   "path": "9(c)",
+   "mark_scheme": [
+    {
+     "label": "9(c)",
+     "text": "",
+     "codes": [
+      "M1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        36.0,
+        687.5,
+        559.0,
+        784.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "State the current in component P when S is in position C, and explain your answer.",
+     "text": "State the current in component P when S is in position C, and explain your answer."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "current ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "explanation"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      217.3,
+      570.0,
+      748.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "switch position =  …… [3]",
+      "working_gap_pt": 186.1,
+      "height_pt": 531.2
+     }
+    }
+   ],
+   "text": "The 22 \u0002 resistor is removed as shown in Fig. 9.2.\n2\u0002\nA\nS\nB\n8\u0002\nC\nP\n4.0V\nShowing your working, decide which switch position will result in energy release from\nthe circuit at the rate of 2.0 W.\nswitch position =  ................................................ [3]\n[Total: 10]",
+   "marks": 3,
+   "path": "9(d)",
+   "mark_scheme": [
+    {
+     "label": "9(d)",
+     "text": "2\n2\n2",
+     "codes": [
+      "M1",
+      "M1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        36.0,
+        73.1,
+        559.0,
+        183.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The 22 \u0002 resistor is removed as shown in Fig. 9.2.",
+     "text": "The 22 \u0002 resistor is removed as shown in Fig. 9.2."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2010MJ_33_q09d_fig9-2",
+     "caption": "Fig. 9.2"
+    },
+    {
+     "type": "text",
+     "html": "Showing your working, decide which switch position will result in energy release from the circuit at the rate of 2.0 W.",
+     "text": "Showing your working, decide which switch position will result in energy release from the circuit at the rate of 2.0 W."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "switch position ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "total_marks": 10,
+ "type": "structured",
+ "syllabus": "0625",
+ "subject": "Physics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2010,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 3,
+ "variant": 3,
+ "paper_code": "0625/33",
+ "paper_type": "theory_extended",
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The circuit in Fig. 9.1 contains a 4.0 V battery, whose resistance can be ignored.",
+   "text": "The circuit in Fig. 9.1 contains a 4.0 V battery, whose resistance can be ignored."
+  },
+  {
+   "type": "text",
+   "html": "There are also three resistors, a 3-position switch, S, and another component, P.",
+   "text": "There are also three resistors, a 3-position switch, S, and another component, P."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2010MJ_33_q09_fig9-1",
+   "caption": "Fig. 9.1"
+  }
+ ]
+}

@@ -1,0 +1,434 @@
+{
+ "id": "0625_2010MJ_52_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    61.3,
+    570.0,
+    339.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 44.1,
+    "height_pt": 277.7
+   }
+  }
+ ],
+ "text": "3\nIn this experiment, you are to determine the resistances of lamps in different circuit arrangements.\nCarry out the following instructions, referring to Fig. 3.1.\nThe circuit shown in Fig. 3.1 has been set up for you. This is Circuit 1.\npower\nsource\nA\nCircuit 1\nlamp P\nV",
+ "marks": 10,
+ "figures": [
+  {
+   "caption": "Fig. 3.1",
+   "page": 6,
+   "bbox": [
+    181.0,
+    148.0,
+    412.0,
+    337.0
+   ],
+   "id": "0625_2010MJ_52_q03_fig3-1",
+   "part": "",
+   "alt": ""
+  },
+  {
+   "caption": "Table 3.1",
+   "page": 6,
+   "bbox": [
+    70.0,
+    502.5,
+    525.5,
+    624.5
+   ],
+   "id": "0625_2010MJ_52_q03d_table3-1",
+   "part": "(d)",
+   "alt": ""
+  }
+ ],
+ "review": {
+  "reasons": [
+   "no mark scheme for 3(d)"
+  ],
+  "status": "flagged"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      345.5,
+      570.0,
+      378.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 2.8,
+      "height_pt": 32.5
+     }
+    }
+   ],
+   "text": "Switch on. Measure and record in Table 3.1 the current I in the circuit and the p.d. V across\nlamp P. Switch off.",
+   "marks": 0,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "V, A, Ω\nV to at least 1 dp (1 – 2.5)\nI to at least 2 dp and < 1A\ncorrect R values\ncircuit 3 R value less than other two values",
+     "codes": [
+      "[1]",
+      "[1]",
+      "[1]",
+      "[1]",
+      "[1]"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        72.4,
+        559.0,
+        160.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Switch on. Measure and record in Table 3.1 the current <i>I</i> in the circuit and the p.d. <i>V</i> across lamp <b>P</b>. Switch off.",
+     "text": "Switch on. Measure and record in Table 3.1 the current I in the circuit and the p.d. V across lamp P. Switch off."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      382.5,
+      570.0,
+      428.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 7.7,
+      "height_pt": 45.5
+     }
+    }
+   ],
+   "text": "Calculate the resistance R of lamp P using the equation R = V\nI.\nRecord this value of R in the table.",
+   "marks": 0,
+   "path": "3(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the resistance <i>R</i> of lamp <b>P</b> using the equation <i>R</i> = \\(\\frac{V}{I}\\) .",
+     "text": "Calculate the resistance R of lamp P using the equation R = (V)/(I) ."
+    },
+    {
+     "type": "text",
+     "html": "Record this value of <i>R</i> in the table.",
+     "text": "Record this value of R in the table."
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      436.5,
+      570.0,
+      456.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 19.5
+     }
+    }
+   ],
+   "text": "Replace lamp P with lamp Q. This is Circuit 2 (not shown). Repeat steps (a) and (b).",
+   "marks": 0,
+   "path": "3(c)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Replace lamp <b>P</b> with lamp <b>Q</b>. This is Circuit 2 (not shown). Repeat steps <b>(a)</b> and <b>(b)</b>.",
+     "text": "Replace lamp P with lamp Q. This is Circuit 2 (not shown). Repeat steps (a) and (b)."
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      462.5,
+      570.0,
+      638.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 19.4,
+      "height_pt": 175.5
+     }
+    }
+   ],
+   "text": "Return lamp P to the circuit so that lamps P and Q are in parallel with each other. This is\nCircuit 3. Repeat steps (a) and (b).\nI /\nV /\nR  /\nCircuit 1\nCircuit 2\nCircuit 3\n[5]",
+   "marks": 5,
+   "path": "3(d)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Return lamp <b>P</b> to the circuit so that lamps <b>P</b> and <b>Q</b> are in parallel with each other. This is Circuit 3. Repeat steps <b>(a)</b> and <b>(b)</b>.",
+     "text": "Return lamp P to the circuit so that lamps P and Q are in parallel with each other. This is Circuit 3. Repeat steps (a) and (b)."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2010MJ_52_q03d_table3-1",
+     "caption": "Table 3.1"
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      644.5,
+      570.0,
+      664.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 19.5
+     }
+    }
+   ],
+   "text": "Complete the column headings in the table.",
+   "marks": 0,
+   "path": "3(e)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the column headings in the table.",
+     "text": "Complete the column headings in the table."
+    }
+   ]
+  },
+  {
+   "label": "f",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      61.3,
+      570.0,
+      292.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 201.3,
+      "height_pt": 230.7
+     }
+    }
+   ],
+   "text": "Draw a diagram of Circuit 3 using standard circuit symbols.\n[3]",
+   "marks": 3,
+   "path": "3(f)",
+   "mark_scheme": [
+    {
+     "label": "3(f)",
+     "text": "",
+     "codes": [
+      "[1]",
+      "[1]",
+      "[1]"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        178.2,
+        559.0,
+        236.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Draw a diagram of Circuit 3 using standard circuit symbols.",
+     "text": "Draw a diagram of Circuit 3 using standard circuit symbols."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 201.3
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "g",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      298.7,
+      570.0,
+      487.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 5,
+      "answer_line": null,
+      "working_gap_pt": 15.8,
+      "height_pt": 188.3
+     }
+    }
+   ],
+   "text": "A student suggests that the resistance of lamp P added to the resistance of lamp Q should be\nequal to the combined resistance of the two lamps when arranged in parallel in Circuit 3. State\nwhether or not your results support this suggestion and justify your answer with reference to\nyour experimental results.\nStatement  .................................................................................................................................\nJustification  ...............................................................................................................................\n...................................................................................................................................................\n...................................................................................................................................................\n.............................................................................................................................................. [2]",
+   "marks": 2,
+   "path": "3(g)",
+   "mark_scheme": [
+    {
+     "label": "3(g)",
+     "text": "(expect NO)",
+     "codes": [
+      "[1]",
+      "[1]"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        254.1,
+        559.0,
+        312.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A student suggests that the resistance of lamp <b>P</b> added to the resistance of lamp <b>Q</b> should be equal to the combined resistance of the two lamps when arranged in parallel in Circuit 3. State whether or not your results support this suggestion and justify your answer with reference to your experimental results.",
+     "text": "A student suggests that the resistance of lamp P added to the resistance of lamp Q should be equal to the combined resistance of the two lamps when arranged in parallel in Circuit 3. State whether or not your results support this suggestion and justify your answer with reference to your experimental results."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Statement"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Justification"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 3
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0625",
+ "subject": "Physics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2010,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0625/52",
+ "paper_type": "practical_test",
+ "total_marks": 10,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In this experiment, you are to determine the resistances of lamps in different circuit arrangements.",
+   "text": "In this experiment, you are to determine the resistances of lamps in different circuit arrangements."
+  },
+  {
+   "type": "text",
+   "html": "Carry out the following instructions, referring to Fig. 3.1.",
+   "text": "Carry out the following instructions, referring to Fig. 3.1."
+  },
+  {
+   "type": "text",
+   "html": "The circuit shown in Fig. 3.1 has been set up for you. This is Circuit 1.",
+   "text": "The circuit shown in Fig. 3.1 has been set up for you. This is Circuit 1."
+  },
+  {
+   "type": "figure",
+   "id": "0625_2010MJ_52_q03_fig3-1",
+   "caption": "Fig. 3.1"
+  }
+ ]
+}
