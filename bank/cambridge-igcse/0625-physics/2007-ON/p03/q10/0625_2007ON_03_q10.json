@@ -1,0 +1,390 @@
+{
+ "id": "0625_2007ON_03_q10",
+ "number": 10,
+ "segments": [],
+ "text": "",
+ "marks": 6,
+ "figures": [
+  {
+   "caption": "Fig. 10.1",
+   "page": 13,
+   "bbox": [
+    163.5,
+    93.0,
+    404.5,
+    191.5
+   ],
+   "id": "0625_2007ON_03_q10a_fig10-1",
+   "part": "(a)",
+   "alt": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      59.6,
+      570.0,
+      219.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 30.3,
+      "height_pt": 159.9
+     }
+    }
+   ],
+   "text": "Fig. 10.1 shows an AND gate with two inputs A and B and one output.\nA\noutput\nB\nState the output when",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 13,
+       "bbox": [
+        30.0,
+        226.0,
+        570.0,
+        271.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 15.8,
+        "height_pt": 45.5
+       }
+      }
+     ],
+     "text": "A is high and B is low,\n............................................................................................................................ [1]",
+     "marks": 1,
+     "path": "10(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "10(a)(i)",
+       "text": "low/0/off/no output",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          36.0,
+          71.9,
+          559.0,
+          92.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "A is high and B is low,",
+       "text": "A is high and B is low,"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 13,
+       "bbox": [
+        30.0,
+        278.1,
+        570.0,
+        323.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 15.8,
+        "height_pt": 45.4
+       }
+      }
+     ],
+     "text": "both A and B are low.\n............................................................................................................................ [1]",
+     "marks": 1,
+     "path": "10(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "10(a)(ii)",
+       "text": "",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          36.0,
+          97.1,
+          559.0,
+          117.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "both A and B are low.",
+       "text": "both A and B are low."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "10(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Fig. 10.1 shows an AND gate with two inputs A and B and one output.",
+     "text": "Fig. 10.1 shows an AND gate with two inputs A and B and one output."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2007ON_03_q10a_fig10-1",
+     "caption": "Fig. 10.1"
+    },
+    {
+     "type": "text",
+     "html": "State the output when",
+     "text": "State the output when"
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      330.1,
+      570.0,
+      427.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 15.8,
+      "height_pt": 97.4
+     }
+    }
+   ],
+   "text": "An electrical thermometer in a greenhouse gives a low output if the temperature is too\nlow.\nA humidity sensor in the same greenhouse gives a high output if the humidity in the\ngreenhouse is too high.\nAn alarm sounds when both the temperature is too low and the humidity is too high.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 13,
+       "bbox": [
+        30.0,
+        434.1,
+        570.0,
+        607.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 62.5,
+        "height_pt": 172.9
+       }
+      }
+     ],
+     "text": "Complete the diagram below to show how a NOT gate and an AND gate may be\nused to provide the required output to the alarm.\n[2]\nelectrical thermometer\nalarm\nhumidity sensor",
+     "marks": 2,
+     "path": "10(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "10(b)(i)",
+       "text": "temp sensor to NOT gate input, correct symbol\noutput of NOT gate (condone incorrect symbol) and humidity\nsensor to AND inputs (condone labelled box for AND gate)",
+       "codes": [
+        "B1",
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          36.0,
+          135.1,
+          559.0,
+          181.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the diagram below to show how a NOT gate and an AND gate may be used to provide the required output to the alarm.",
+       "text": "Complete the diagram below to show how a NOT gate and an AND gate may be used to provide the required output to the alarm."
+      },
+      {
+       "type": "text",
+       "html": "electrical thermometer",
+       "text": "electrical thermometer"
+      },
+      {
+       "type": "text",
+       "html": "alarm",
+       "text": "alarm"
+      },
+      {
+       "type": "text",
+       "html": "humidity sensor",
+       "text": "humidity sensor"
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 62.5
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 13,
+       "bbox": [
+        30.0,
+        623.8,
+        570.0,
+        682.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 15.8,
+        "height_pt": 58.2
+       }
+      }
+     ],
+     "text": "On your diagram, use either ‘high’ or ‘low’ to indicate the level of the inputs and\noutputs of both gates when the alarm sounds.\n[2]\n[Total: 6]",
+     "marks": 2,
+     "path": "10(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "10(b)(ii)",
+       "text": "AND both inputs high, high output\nNote: B0, B0 for states on wrong diagram.",
+       "codes": [
+        "B1",
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          36.0,
+          185.7,
+          559.0,
+          257.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "On your diagram, use either ‘high’ or ‘low’ to indicate the level of the inputs and outputs of both gates when the alarm sounds.",
+       "text": "On your diagram, use either ‘high’ or ‘low’ to indicate the level of the inputs and outputs of both gates when the alarm sounds."
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "10(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "An electrical thermometer in a greenhouse gives a low output if the temperature is too low.",
+     "text": "An electrical thermometer in a greenhouse gives a low output if the temperature is too low."
+    },
+    {
+     "type": "text",
+     "html": "A humidity sensor in the same greenhouse gives a high output if the humidity in the greenhouse is too high.",
+     "text": "A humidity sensor in the same greenhouse gives a high output if the humidity in the greenhouse is too high."
+    },
+    {
+     "type": "text",
+     "html": "An alarm sounds when both the temperature is too low and the humidity is too high.",
+     "text": "An alarm sounds when both the temperature is too low and the humidity is too high."
+    }
+   ]
+  }
+ ],
+ "total_marks": 6,
+ "type": "structured",
+ "syllabus": "0625",
+ "subject": "Physics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2007,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 3,
+ "variant": 0,
+ "paper_code": "0625/03",
+ "paper_type": "theory_extended",
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}
