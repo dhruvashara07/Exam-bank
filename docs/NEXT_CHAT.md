@@ -1,17 +1,22 @@
 # Starting a new chat (Dhruv, updated 2026-11-11)
 
-Current task line to paste: "2002-2010 approved (rounds 22-25). Next: 2011-2012 batch; its review round also re-shows the 20 items fixed after round 25 (review/rounds/25.json wrong list). Then cleanup + MongoDB push. Follow docs/PLAYBOOK.md."
 When: a new chat when this one gets long (about one 3-year batch per chat), not a fixed rule.
 
-## Prompt to paste
-> Exam-bank (repo dhruvashara07/Exam-bank). Read CLAUDE.md, docs/PLAYBOOK.md, docs/ERROR_PATTERNS.md, PROGRESS.md (top "Next" + usage table), the last two days of
-> docs/CONVERSATION_LOG.md and docs/MS_TABLE_RULES.md. State: 2013-2026 all final in git. Task now: <what you want, e.g.
-> "2002-2012" or "cleanup + MongoDB push">. Work the usual way (build -> audit -> check flags -> one short review round on
-> the review page -> fix -> approve -> push). Keep messages short. Tell me when you need my input.
+## Prompt to paste (next: 2011-2012)
+> Exam-bank (repo dhruvashara07/Exam-bank). Start with `git pull --rebase`, then read docs/AGENT_GUIDE.md (vision,
+> quality bar, how I work), CLAUDE.md (hard rules), docs/PLAYBOOK.md (steps), docs/ERROR_PATTERNS.md (never repeat),
+> docs/MS_TABLE_RULES.md, PROGRESS.md (top) and the last two days of docs/CONVERSATION_LOG.md.
+> State: 2013-2026 final in git; 2002-2010 approved (rounds 22-25).
+> Task: the 2011-2012 batch (last old batch). Build, check every flag yourself, do the rows-by-meaning check
+> (ms_align list empty, grids: order, splits, gaps, marks), then ONE short review round on the same review page.
+> That round also re-shows the 20 items fixed after round 25 (wrong list in review/rounds/25.json). Then fix,
+> approve, push. After that: cleanup, then the MongoDB push. Keep messages short and tell me when you need my input.
+
+General form for later tasks: same prompt, with "Task: <e.g. cleanup + MongoDB push>".
 
 ## Where things are
-- Rules for every mark scheme: docs/MS_TABLE_RULES.md (sections 1-14). Decisions: docs/CONVERSATION_LOG.md.
-- Review page: review/portal.json review_url; rounds: pipeline/review_round.py + review_page.py (feedback_r<n>).
+- Rules for every mark scheme: docs/MS_TABLE_RULES.md (sections 1-18). Decisions: docs/CONVERSATION_LOG.md.
+- Review page (same link every round): https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e (review/portal.json review_url); rounds: pipeline/review_round.py + review_page.py (feedback_r<n>).
 - Layout-only rebuild of all years (~23 min, 4 at a time, low memory): for each paper
   `python3 -c "import sys;sys.path.insert(0,'pipeline');import store as S;S.build('0625_2024MJ_41')"`, then
   `python3 pipeline/store.py dupes <session>`. Full re-cut only when a cut rule changes: `JOBS=4 python3 pipeline/run.py 2024-MJ/41 ...`.

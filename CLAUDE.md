@@ -1,7 +1,7 @@
 # Rules for any Claude session in this repo
 (this chat on claude.ai, the daily scheduled check, or Claude Code on a laptop — all follow the same rules)
 
-- Start: `git pull --rebase`, then read `PROGRESS.md` (state, what's next, daily check log) and `docs/CONVERSATION_LOG.md` (what Dhruv decided, session by session; append an entry before ending).
+- Start: `git pull --rebase`, then read `docs/AGENT_GUIDE.md` (vision, quality bar, how Dhruv works), `PROGRESS.md` (state, what's next, daily check log) and `docs/CONVERSATION_LOG.md` (what Dhruv decided, session by session; append an entry before ending).
 - Never `git push` directly. Always `pipeline/push.sh "message"`: it waits for a running GitHub
   Action, rebases, rebuilds generated files on a clash and never force-pushes.
   Commit messages end with the Co-Authored-By / Claude-Session lines.

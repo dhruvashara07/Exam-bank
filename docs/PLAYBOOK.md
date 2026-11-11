@@ -1,4 +1,4 @@
-# Playbook: how a batch is done (for a new chat - read this first)
+# Playbook: how a batch is done (read docs/AGENT_GUIDE.md first for the why)
 Goal: all 0625 papers 2002-2026 final in git, then cleanup + one MongoDB push at the end (Dhruv decides when).
 State: see PROGRESS.md top. Rules for mark schemes: MS_TABLE_RULES.md. Mistakes not to repeat: ERROR_PATTERNS.md.
 Decisions: CONVERSATION_LOG.md (last two days). Use the weekly limit carefully: small crops, one rebuild per batch,

@@ -328,3 +328,6 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   parts where it can be done, otherwise a combined label is fine. Fixed in the pipeline (ERROR_PATTERNS 42-49,
   MS_TABLE_RULES 18, PLAYBOOK 5b grid checklist); 2002-2010 rebuilt; 2008-2010 approved. Not split (one mark covers
   both parts): 2010 MJ 61 q1 (a)(i)(iii)/(ii)(iv), 2010 ON 62 q1 (a)(i)(ii), (b)(i)(ii), (c)(i)(ii).
+- Dhruv asked for the next-chat prompt and docs written like a skill/guidelines for agents (our vision, not only
+  steps). Added docs/AGENT_GUIDE.md (vision, what "done" means, how he works, how to decide, where things are);
+  CLAUDE.md, PLAYBOOK, CONTEXT, NEXT_CHAT point to it; PROGRESS old-batch notes tidied. Next chat: 2011-2012.

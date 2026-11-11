@@ -1,8 +1,8 @@
-# Context for a new Claude chat (read this first, then docs/CONVERSATION_LOG.md, CLAUDE.md, PROGRESS.md, docs/V5_SPEC.md, docs/NEXT.md)
+# Older context (2026-11-03). Start with docs/AGENT_GUIDE.md; then docs/CONVERSATION_LOG.md, CLAUDE.md, PROGRESS.md, docs/V5_SPEC.md, docs/NEXT.md)
 
 IMPORTANT: docs/CONVERSATION_LOG.md holds the dated record of what Dhruv said and decided in each session. Read it, and append to it at the end of every session.
 
-STATUS 2026-11-03: the hourly backlog task is switched OFF (paused by Dhruv) until format v5
+STATUS 2026-11-11: 2013-2026 final, 2002-2010 approved, 2011-2012 next (PROGRESS.md). The hourly backlog task is switched OFF (paused by Dhruv) until format v5
 (docs/V5_SPEC.md) is approved and every year rebuilt. Its last run's work is in git.
 
 ## Who and what
@@ -23,7 +23,7 @@ builder (pick questions or parts → exam-style A4 PDF + mark scheme), full past
 - `store/` = THE data set (docs/STORE_DESIGN.md): per question JSON with layout units (words with
   position/size/style, lines as SVG paths, figure refs), figures one file per label at true size
   (vector SVG, photos PNG), MS rows, MCQ options, duplicates stored once, self-repair patches.
-- Review page (same link every round): https://claude.ai/artifact/LGic38rQwKjkZze9jL1zmq
+- Review page (same link every round): https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e
   (`review/portal.json`; answers in its database, collection `feedback_r<n>`).
 - Tracker (public): https://dhruvashara07.github.io/Exam-bank/#batches (GitHub Pages, site/).
 - Hourly backlog run: scheduled task trig_0173DCrQWm76nnTXrW52TPjC, runbook docs/BACKLOG.md, state in

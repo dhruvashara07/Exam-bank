@@ -2,11 +2,12 @@
 
 Read this first in every session. Update it before ending a session.
 
-## 2002-2012 (started 2026-11-09, batches of 3 years) - how: docs/PLAYBOOK.md, mistakes: docs/ERROR_PATTERNS.md
+## 2002-2012 (started 2026-11-09, batches of 3 years) - why: docs/AGENT_GUIDE.md, how: docs/PLAYBOOK.md, mistakes: docs/ERROR_PATTERNS.md
+- NEXT: 2011-2012 batch in a new chat (prompt: docs/NEXT_CHAT.md); its round re-shows the 20 round-25 fixes. Then cleanup, then MongoDB push.
 - 2026-11-11: batch 1 (2002-2004, 25 papers) APPROVED. Round 22 closed (21 wrong, all mark-scheme layout -> MS_TABLE_RULES 16).
   Batch 2 (2005-2007, 30 papers) built + fixed (ERROR_PATTERNS 17-22); round 23 closed (11 wrong -> fixed); 2005-2007 APPROVED.
   Batch 3 (2008-2010, 56 papers) APPROVED after rounds 24-25 (fixes ERROR_PATTERNS 31-49: MS rows by meaning, question order, spacing, side notes, stacked codes). All 2002-2010 rebuilt; ms_align list empty; golden 0 changed cuts. Next (new chat): 2011-2012, its round re-shows the 20 round-25 fixes.
-- Batch 1 = 2002-2004 (25 papers: 01 MCQ, 02 core, 03 extended, 05 practical test, 06 alt. to practical). Built, NOT approved.
+- Batch 1 = 2002-2004 (25 papers: 01 MCQ, 02 core, 03 extended, 05 practical test, 06 alt. to practical). APPROVED (round 22).
   Pipeline fixes made (golden: 0 changed cuts; 2013-2026 untouched): pre-2009 paper types (02 = core theory, 03 = extended;
   was read as MCQ), mark-scheme total from "MAXIMUM MARK" (pre-2009 only), practical-test (05) mark scheme parser
   (`ms.practical_rows`, one row per question, marks from "TOTAL n"), scanned MS (2002 ON: no false "no mark scheme" flags),
@@ -16,10 +17,8 @@ Read this first in every session. Update it before ending a session.
   MS label "10(a)" as one word. checks: 25 papers, 0 blocking, 9 flags (all looked at: 32 MCQ sets side by side = fine).
 - 2026-11-11: F/C (target grade) column removed from old Paper 2 mark schemes (clean.strip_tier_column, Dhruv).
   Round 22 (33 items, 8 flagged) on the review page (portal.json review_url; closed rounds 9, 10, 21 removed from the page).
-- OPEN for batch 1: old mark schemes (2002-2008 layout: Question | Answer | F/C tier | Marks, no frame, braces "mark alongside
-  diagram"; practical = item list + TOTAL) are shown as original pieces with partial frames: NOT yet in our table layout
-  (MS_TABLE_RULES: full frame, header once, Total row). Needs the F/C column type + a practical-item type, then review round.
-  2002 ON: paper 01 has no mark scheme file (no MCQ answers); other 2002 ON mark schemes are scans (page pictures).
+- DONE (was open for batch 1): old mark schemes now in our table layout (MS_TABLE_RULES 16-18, rounds 22-25).
+- Known gaps (no fix possible): 2002 ON: paper 01 has no mark scheme file (no MCQ answers); other 2002 ON mark schemes are scans (page pictures); 2010 MJ variants 13, 23, 53 have no mark scheme file.
 - GitHub build note: `bank.yml` "sessions" step runs `checks.py` with ids without `0625/` so it checks nothing; run checks locally.
 
 ## v5 prototype (2026-11-03) — waiting for Dhruv's approval
