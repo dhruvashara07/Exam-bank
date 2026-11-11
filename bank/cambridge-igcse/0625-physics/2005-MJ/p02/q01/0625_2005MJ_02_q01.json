@@ -1,0 +1,307 @@
+{
+ "id": "0625_2005MJ_02_q01",
+ "number": 1,
+ "segments": [],
+ "text": "",
+ "marks": 7,
+ "figures": [
+  {
+   "caption": "Fig. 1.1",
+   "page": 2,
+   "bbox": [
+    251.0,
+    127.0,
+    320.5,
+    341.5
+   ],
+   "id": "0625_2005MJ_02_q01a_fig1-1",
+   "part": "(a)",
+   "alt": ""
+  },
+  {
+   "caption": "Fig. 1.2",
+   "page": 2,
+   "bbox": [
+    224.5,
+    374.5,
+    319.5,
+    593.0
+   ],
+   "id": "0625_2005MJ_02_q01b_fig1-2",
+   "part": "(b)",
+   "alt": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      64.5,
+      570.0,
+      343.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 92.4,
+      "height_pt": 279.0
+     }
+    }
+   ],
+   "text": "A measuring cylinder contains 100 cm3of water. 20 cm3of the water is poured into a\n1\n(a)\nbeaker.\nOn Fig. 1.1, mark the level of the water left in the cylinder.\n[2]\ncm3\n100\n50",
+   "marks": 2,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "(a)\n100 – 20\nF\nlevel shown at 80 (ignore meniscus) ± 1mm (need\nF\nnot actually draw surface)",
+     "codes": [
+      "C1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        116.6,
+        559.0,
+        166.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A measuring cylinder contains 100 cm<sup>3</sup> of water. 20 cm<sup>3</sup> of the water is poured into a",
+     "text": "A measuring cylinder contains 100 cm3 of water. 20 cm3 of the water is poured into a"
+    },
+    {
+     "type": "text",
+     "html": "beaker.",
+     "text": "beaker."
+    },
+    {
+     "type": "text",
+     "html": "On Fig. 1.1, mark the level of the water left in the cylinder.",
+     "text": "On Fig. 1.1, mark the level of the water left in the cylinder."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2005MJ_02_q01a_fig1-1",
+     "caption": "Fig. 1.1"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 92.4
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      351.0,
+      570.0,
+      595.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 63.9,
+      "height_pt": 244.0
+     }
+    }
+   ],
+   "text": "A rule, calibrated in cm, is placed alongside the measuring cylinder, as shown in Fig. 1.2.\ncm3\n100\n15\n10\n50\n5",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        30.0,
+        602.8,
+        570.0,
+        645.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 15.8,
+        "height_pt": 42.7
+       }
+      }
+     ],
+     "text": "What is the length of the measuring cylinder, from zero up to the 100 cm3mark?\n(i)\n..................................................................................................................................",
+     "marks": 0,
+     "path": "1(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "1(b)(i)",
+       "text": "(b)\n(i)\n16 (cm)\nF",
+       "codes": [
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          166.2,
+          559.0,
+          184.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "What is the length of the measuring cylinder, from zero up to the 100 cm<sup>3</sup> mark?",
+       "text": "What is the length of the measuring cylinder, from zero up to the 100 cm3 mark?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        30.0,
+        649.8,
+        570.0,
+        795.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 1,
+        "answer_line": "cross-sectional area = ……",
+        "working_gap_pt": 61.2,
+        "height_pt": 145.7
+       }
+      }
+     ],
+     "text": "The volume of a cylinder is found using the equation\nvolume = cross-sectional area × length.\nCalculate the cross-sectional area of the measuring cylinder.\ncross-sectional area = .................................\n[5]",
+     "marks": 5,
+     "path": "1(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "1(b)(ii)",
+       "text": "(ii)\nsub of (i) into formula\nF\nsub of 100 into formula\nF\n6.25\ne.c.f. from (i)\nF\n2\ncm\nC\nAccept working from any two correct values",
+       "codes": [
+        "C1",
+        "C1",
+        "A1",
+        "B1",
+        "7"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          184.6,
+          559.0,
+          277.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The volume of a cylinder is found using the equation",
+       "text": "The volume of a cylinder is found using the equation"
+      },
+      {
+       "type": "text",
+       "html": "volume = cross-sectional area × length.",
+       "text": "volume = cross-sectional area × length."
+      },
+      {
+       "type": "text",
+       "html": "Calculate the cross-sectional area of the measuring cylinder.",
+       "text": "Calculate the cross-sectional area of the measuring cylinder."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "cross-sectional area ="
+      },
+      {
+       "type": "marks",
+       "value": 5
+      }
+     ]
+    }
+   ],
+   "path": "1(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "A rule, calibrated in cm, is placed alongside the measuring cylinder, as shown in Fig. 1.2.",
+     "text": "A rule, calibrated in cm, is placed alongside the measuring cylinder, as shown in Fig. 1.2."
+    },
+    {
+     "type": "figure",
+     "id": "0625_2005MJ_02_q01b_fig1-2",
+     "caption": "Fig. 1.2"
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0625",
+ "subject": "Physics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2005,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 2,
+ "variant": 0,
+ "paper_code": "0625/02",
+ "paper_type": "theory_core",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}
