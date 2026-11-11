@@ -318,3 +318,5 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   Cambridge's slip. All fixed as rule 16; batch 1 approved. Dhruv: keep a list of error patterns so no mistake repeats
   (docs/ERROR_PATTERNS.md) and a step doc for new chats (docs/PLAYBOOK.md). Then do 2005-2007 here, new chat after.
 \n
+- Batch 2 (2005-2007) built and fixed; round 23 published (same review page). After it: fix, approve, new chat.
+

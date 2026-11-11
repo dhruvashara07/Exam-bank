@@ -184,6 +184,8 @@ def process(qp_path):
             meta['total_marks'], meta['total_marks_source'] = SCAN_TOTALS[f'{year}{session}_{pv}'], 'mark scheme (scan)'
     key = mcq_key(msdoc) if (msdoc and meta['is_mcq']) else {}
     ms_rows = structured_rows(msdoc, meta['paper_type'] == 'practical_test' and pv[0] == '0') if (msdoc and not meta['is_mcq']) else []
+    ms_qtotals = [int(x) for x in re.findall(r'\[\s*Total:?\s*(\d+)\s*\]', ' '.join(pg.get_text() for pg in msdoc[1:]), re.I)] \
+        if (msdoc and pv[0] == '0' and meta['paper_type'] == 'practical_test') else []
     for r in ms_rows:                  # Cambridge numbered a mark scheme differently from its paper (read by eye, Dhruv round 22)
         fix = MS_RELABEL.get(f'{year}{session}_{pv}', {}).get(r['label'])
         if fix:
@@ -232,6 +234,11 @@ def process(qp_path):
                 tot = [int(c) for r in ms_rows if tuple(r['path']) == (q['number'],) for c in r['marks_codes'] if str(c).isdigit()]
                 if tot:
                     q['marks'] = tot[-1]
+                elif len(ms_qtotals) == len(questions) and q['number'] <= len(ms_qtotals):   # 2005-2008: '[Total: 10]' per question
+                    q['marks'] = ms_qtotals[q['number'] - 1]
+                elif any(r['path'][0] == q['number'] for r in ms_rows):      # else the '[1]' per point, summed
+                    q['marks'] = sum(int(m_.group(1)) for r in ms_rows if r['path'][0] == q['number']
+                                     for c in r['marks_codes'] for m_ in [re.fullmatch(r'\[?(\d{1,2})\]?', str(c))] if m_)
                 elif q['number'] in SCAN_QMARKS.get(f'{year}{session}_{pv}', {}):
                     q['marks'] = SCAN_QMARKS[f'{year}{session}_{pv}'][q['number']]
             with_ms = {str(q['number'])} if q.get('mark_scheme') else set()

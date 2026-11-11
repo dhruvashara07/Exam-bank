@@ -32,3 +32,16 @@ Add a line whenever a review round or a check finds something new. Format: what 
     schemes with `store.review_svgs` (what the review page and students get), e.g. pipeline/ms_grid.py.
 16. A new layout era (old MS) went to review before being put in our table -> Dhruv reviewed known problems.
     -> before a round: the MS sweep (PLAYBOOK step 5) must be clean, and look at one MS of each paper type.
+
+## Batch 2 (2005-2007), found by Claude before the round
+17. Practical marks only in the mark scheme as '[1]' per point + '[Total: 10]' -> marks 0. -> per-question
+    '[Total: n]' (run.py ms_qtotals), else the summed '[1]'s.
+18. A scale line ('-10 0 10 ... 110 C') or padded labels ('C       D') counted as the sentence above a figure ->
+    crop cut at the top. -> not prose (extract.find_figures); pre-2009 figures may reach into the prose line's descent.
+19. F/C column at x 482 (2006) outside the 380-480 window -> F/C shown. -> window 380-500; sweep shows no lone F/C.
+20. Repeated column heads at a page top ('QU. SCHEME MARK') inside a row; '[TOTAL: 10]' in caps -> dropped (pre09).
+21. Letters printed in the roman column (2005 ON 03 q11 at x 133) -> the question had no mark-scheme rows.
+    -> pre-2009 letters a-h accepted up to the roman column. Sweep: 'no table' hit = look.
+22. Run labels '(a)–(e)' (practical) -> one row labelled 1(a)–(e).
+Known small leftover: in-text codes at the far right of an answer line ('120 gets C1 C1 A0') can land in Marks.
+

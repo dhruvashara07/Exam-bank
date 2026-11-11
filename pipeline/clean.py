@@ -253,7 +253,7 @@ def strip_tier_column(path):
     for page in doc:
         W = page.get_text('words')
         for w in W:
-            if re.fullmatch(r'\d?[FC]', w[4]) and 380 < w[0] < 480 and any(
+            if re.fullmatch(r'\d?[FC]', w[4]) and 380 < w[0] < 500 and any(
                     abs(v[1] - w[1]) < 3 and v[0] > w[2] + 20 and re.fullmatch(r'[BMCA]\d', v[4]) for v in W):
                 hits.append((page.number, fitz.Rect(w[:4])))
     if len(hits) < 10:

@@ -343,6 +343,7 @@ def _own_total(marks, info, rows):
 
 LABEL_RE = re.compile(r'^(\d{1,2})$|^\(([a-hj-p])\)$|^\(([ivx]{1,4})\)$')   # (practical papers run to (n))
 NUMLAB_RE = re.compile(r'^\d{1,2}(\((?:[a-hj-p]|[ivx]{1,4})\)){1,3}$')   # '11(a)' printed as one word (2003 ON 03)
+RANGE_RE = re.compile(r'^\(([a-h])\)[–-]\(([a-h])\)$')   # '(a)–(e)': one row for a run of parts (practical, pre-2009)
 COMBO_RE = re.compile(r'^(\((?:[a-hj-p]|[ivx]{1,4})\)){2,4}$')   # one answer for several parts: '(iii)(iv)(v)', '(a)(i)(ii)', '(b)(c)'
 MARK_RE = re.compile(r'^\(?(?:[ABCMP]\d{1,2}|B\d|\d)\)?$|^\[\d{1,2}\]$')
 # marks-column pieces: codes, '[1]' (also printed as '[ ]' + '1', 2014 ON 63), 'max.' ('max. B2', 2015 MJ 23), '+' ('B1 + B1')
@@ -368,11 +369,11 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
     # 2002-2008 mark schemes (rules 16): codes in their own column (x ~0.8 of the width) and a running part total
     # ('6', '[8]', underlined) to the right of / under them; practical lists end with 'TOTAL 15'.
     pre09 = int(q['id'].split('_')[1][:4]) < 2009
-    CODE = re.compile(r'^\(?[ABCM]\d{1,2}\)?,?$')
+    CODE = re.compile(r'^(\([ABCM]\d{1,2}\)|[ABCM]\d{1,2}),?$')
     code_xs = [t['x'] / u['w'] for u in units for t in u['text'] if CODE.match(t['t']) and t['x'] > 0.5 * u['w']] if pre09 else []
     mk_x = (min(code_xs) - 0.01) if code_xs else 0.82          # left edge of the marks column, as a share of the width
     code_med = sorted(code_xs)[len(code_xs) // 2] if code_xs else 1.0
-    JOINED = re.compile(r'^\(?[ABCM]\d{1,2}(\+[ABCM]\d{1,2})+\)?$')    # 'B1+B1' printed beside a brace (2004 MJ 02 q7)
+    JOINED = re.compile(r'^\(?[ABCM]\d{1,2}(\+[ABCM]\d{1,2})+\)?$|^[ABCM]\d[×x]\d$')   # 'B1+B1', 'B1×3'    # 'B1+B1' printed beside a brace (2004 MJ 02 q7)
     tot_x = None                                  # no codes, plain marks '1' + a part-total column right of them (2004 ON 03)
     if pre09 and not code_xs:
         nx = sorted({round(t['x'] / u['w'], 2) for u in units for t in u['text']
@@ -430,14 +431,19 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
         # the printed total '[Total: 5]'
         drop = set()
         for t in ws:
-            if re.fullmatch(r'\[?Total:?', t['t']) or (pre09 and t['t'] == 'TOTAL'):
+            if re.fullmatch(r'\[?Total:?', t['t']) or (pre09 and re.fullmatch(r'\[?TOTAL:?', t['t'])):
                 drop.add(id(t))
                 for o in ws:
-                    if abs(o['y'] - t['y']) < 2.5 and o['x'] > t['x'] and re.fullmatch(r'[\d\]\[]+', o['t']):
+                    if abs(o['y'] - t['y']) < 2.5 and o['x'] > t['x'] and re.fullmatch(r'[\d\]\[:]+', o['t']):
                         drop.add(id(o))
         ws = [t for t in ws if id(t) not in drop and not part_total(t, u) and not (pre09 and side_note(t, u))]
         if pre09:
-            ws = [t for t in ws if not (t['t'] == qn + '.' and t['x'] < 0.1 * u['w'])]   # '1.' heading of a practical question
+            ws = [t for t in ws if not (t['t'] == qn + '.' and t['x'] < 0.1 * u['w'])]
+            HEAD = {'QU.', 'QUESTION', 'MARK', 'MARKS', 'SCHEME', 'TARGET', 'GRADE', 'QU', 'NO.'}
+            for y_ in {round(t['y']) for t in ws}:      # the column heads repeated at a page top ('QU. SCHEME MARK')
+                line_ = [t for t in ws if abs(t['y'] - y_) < 2.5]
+                if line_ and all(t['t'] in HEAD for t in line_):
+                    ws = [t for t in ws if t not in line_]   # '1.' heading of a practical question
         if not ws:
             continue
         # lines by baseline; small raised/lowered pieces (cm³, ½mv², ¹³¹₅₄Xe) join the nearest normal line
@@ -451,7 +457,17 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
         for t in sorted(ws, key=lambda t: (key(t), t['x'])):
             lines.setdefault(key(t), []).append(t)
         lines = collections.OrderedDict(sorted(lines.items()))
-        cand = lambda t: ((LABEL_RE.match(t['t']) or COMBO_RE.match(t['t']) or (pre09 and NUMLAB_RE.match(t['t'])))
+        if pre09:                                 # '(a)' '–' '(d)' printed as three words: one token
+            for lw_ in [ws]:
+                srt = sorted(lw_, key=lambda t: (round(t['y']), t['x']))
+                for i_ in range(len(srt) - 2):
+                    a_, b_, c_ = srt[i_:i_ + 3]
+                    if (re.fullmatch(r'\([a-h]\)', a_['t']) and b_['t'] in ('–', '-') and re.fullmatch(r'\([a-h]\)', c_['t'])
+                            and abs(a_['y'] - c_['y']) < 2.5 and c_['x'] - a_['x'] < 40):
+                        a_['t'] = a_['t'] + '–' + c_['t']; a_['w'] = round(c_['x'] + c_['w'] - a_['x'], 2)
+                        b_['t'] = c_['t'] = ''
+                ws = [t for t in ws if t['t']]
+        cand = lambda t: ((LABEL_RE.match(t['t']) or COMBO_RE.match(t['t']) or (pre09 and (NUMLAB_RE.match(t['t']) or RANGE_RE.match(t['t']))))
                           and t['x'] < 0.3 * u['w']
                           and (not t['t'].isdigit() or t['t'] == qn))   # an answer '92' is not a label (2013 MJ 23 q12)
         plain = [t for lw in lines.values() for t in lw if not cand(t) and not in_marks(t, u)]
@@ -502,7 +518,12 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
             segs[-1]['lines'].append(lw)
         for sg in segs:
             extra_lab = ''
+            rng = None
             for t in sg['labs']:
+                if RANGE_RE.match(t['t']):
+                    rng = RANGE_RE.match(t['t']).groups()
+                    state['l'], state['r'] = rng[0], None
+                    continue
                 pieces = re.findall(r'\(([a-hj-p]|[ivx]{1,4})\)', t['t']) or [t['t']]
                 for k_, pc in enumerate(pieces):
                     roman = re.fullmatch(r'[ivx]{1,4}', pc) and not (pc in ('i', 'v', 'x') and state['r'] is None and k_ == 0
@@ -535,6 +556,8 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                     if lab2 in qparts and lab2 not in used:
                         state['l'], label = l2, lab2
                         break
+            if rng:
+                label = f"{qn}({rng[0]})–({rng[1]})"; state['l'] = rng[1]
             relab = MS_RELABEL.get(q['id'].split('_')[1] + '_' + q['id'].split('_')[2], {}).get(label)
             if relab:                                   # Cambridge's own numbering slip (ms.MS_RELABEL)
                 label = relab[0]

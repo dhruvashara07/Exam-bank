@@ -38,10 +38,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "no mark scheme for 10(b), 10(c), 10(d)"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -109,18 +107,11 @@
     },
     {
      "label": "10(a)(iii)",
-     "text": "(iii)\n(changing) magnetic field cuts secondary coil\nB1\ninduces e.m.f.\nB1\n(b)\nmore turns on secondary (than on primary)\nB1\nno transfer of magnetic field from primary to secondary\nB1\n(c)\n(d)\nVp.Ip = Vs. Is or 100 x 0.4 = 200 x Is\nC1\nIs = 0.2 A\nA1",
+     "text": "(iii)\n(changing) magnetic field cuts secondary coil\nB1\ninduces e.m.f.\nB1",
      "codes": [
       "B1",
       "B1",
-      "[3]",
-      "B1",
-      "[1]",
-      "B1",
-      "[1]",
-      "C1",
-      "A1",
-      "[2]"
+      "[3]"
      ],
      "segments": [
       {
@@ -129,7 +120,7 @@
         36.0,
         299.3,
         559.0,
-        431.3
+        332.7
        ]
       }
      ]
@@ -191,6 +182,27 @@
    "text": "State what is needed to make the output voltage higher than the input voltage.\n..................................................................................................................................... [1]",
    "marks": 1,
    "path": "10(b)",
+   "mark_scheme": [
+    {
+     "label": "10(b)",
+     "text": "(b)\nmore turns on secondary (than on primary)\nB1",
+     "codes": [
+      "B1",
+      "[1]"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        337.3,
+        559.0,
+        358.0
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -232,6 +244,27 @@
    "text": "The core of this transformer splits along XX and YY. Explain why the transformer would\nnot work if the two halves of the core were separated by about 30 cm.\n..........................................................................................................................................\n..................................................................................................................................... [1]",
    "marks": 1,
    "path": "10(c)",
+   "mark_scheme": [
+    {
+     "label": "10(c)",
+     "text": "no transfer of magnetic field from primary to secondary\nB1\n(c)",
+     "codes": [
+      "B1",
+      "[1]"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        362.5,
+        559.0,
+        383.2
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -273,6 +306,28 @@
    "text": "A 100% efficient transformer is used to step up the voltage of a supply from 100 V to\n200 V. A resistor is connected to the output. The current in the primary coil is 0.4 A.\nCalculate the current in the secondary coil.\ncurrent = …………………… [2]",
    "marks": 2,
    "path": "10(d)",
+   "mark_scheme": [
+    {
+     "label": "10(d)",
+     "text": "(d)\nVp.Ip = Vs. Is or 100 x 0.4 = 200 x Is\nC1\nIs = 0.2 A\nA1",
+     "codes": [
+      "C1",
+      "A1",
+      "[2]"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        387.8,
+        559.0,
+        431.3
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",

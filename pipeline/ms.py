@@ -305,6 +305,10 @@ def structured_rows_columns(doc):
     """Rows for the old column layout: label tokens start rows; a row runs down to the next label."""
     cols = _label_columns(doc)
     OLD_Q, OLD_L, OLD_R = cols
+    if int((re.search(r'/((?:19|20)\d\d)-', doc.name or '') or [0, '9999'])[1]) < 2009 and cols != (globals()['OLD_Q'], globals()['OLD_L'], globals()['OLD_R']):
+        pre09_l = OLD_R[1]                               # pre-2009: a letter (not i/v/x) may sit in the roman column (2005 ON 03 q11)
+    else:
+        pre09_l = None
     CODE_X = 480 if cols == (globals()['OLD_Q'], globals()['OLD_L'], globals()['OLD_R']) else 420   # 2005: codes at 470
     rows, current, cur = [], None, [0, None, None]
     for pno, page in enumerate(doc):
@@ -331,7 +335,7 @@ def structured_rows_columns(doc):
                 toks.append((y0 + 0.01, 'l', mm.group(2)))
             elif OLD_L[0] <= x0 <= OLD_L[1] and m2 and m2.group(2) not in ROMANS and m2.group(2) > m2.group(1):
                 toks.append((y0, 'l', (m2.group(1), m2.group(2))))
-            elif 44 <= x0 <= OLD_L[1] and re.fullmatch(r'\([a-p]\)', w):
+            elif 44 <= x0 <= (pre09_l if pre09_l and w[1:-1] not in ROMANS else OLD_L[1]) and re.fullmatch(r'\([a-p]\)', w):
                 toks.append((y0, 'l', w[1:-1]))
             elif OLD_L[0] <= x0 <= OLD_L[1] and re.fullmatch(r'\((?:ii|iii|iv|vi|vii)\)', w):
                 toks.append((y0, 'r', w[1:-1]))                          # a roman part printed in the letter column

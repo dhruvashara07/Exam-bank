@@ -304,7 +304,10 @@ def find_figures(doc, seg, lines):
     caps = [c for c in caps if not in_grid(c)]       # 'Fig. 5.2' written in a table cell is a reference, not a caption
     for cap in caps:
         is_table = cap['text'].startswith('Table')
-        prose_above = [l for l in lines if l['y1'] <= cap['y0'] and not DOTS.search(l['text']) and (prose_like(l) or bullet_item(l) or (re.match(r'^(\d{1,2}|\([a-z]+\))\s', l['text']) and l['x0'] < 110)
+        prose_above = [l for l in lines if l['y1'] <= cap['y0'] and not DOTS.search(l['text'])
+                       and not re.fullmatch(r'[\s\d.,+—–−-]*(o?C|°C)?', l['text'].strip())    # a scale '−10 0 10 … 110 °C' is part of the figure
+                       and (len(re.sub(r'\W', '', l['text'])) > 2 or re.match(r'\s*(\(?[a-z]+\)|\d{1,2})\s', l['text'] + ' '))   # 'C      D' labels (2007 MJ 05 Fig 3.1)
+                       and (prose_like(l) or bullet_item(l) or (re.match(r'^(\d{1,2}|\([a-z]+\))\s', l['text']) and l['x0'] < 110)
                                                                     or (re.fullmatch(r'\([a-z]+\)', l['text'].strip()) and l['x0'] < 110)
                                                                     or re.fullmatch(r'Method \d', l['text'].strip())
                                                                     or (l['x0'] <= 76 and l['text'].rstrip().endswith('.'))
@@ -414,6 +417,8 @@ def find_figures(doc, seg, lines):
         x0 = min(r.x0 for r in inside); x1 = max(r.x1 for r in inside)
         y0 = min(r.y0 for r in inside); y1 = max(r.y1 for r in inside)
         top_lim = max(seg['y0'], band[0] - 1)
+        if prose_above and int((re.search(r'/((?:19|20)\d\d)-', doc.name or '') or [0, '9999'])[1]) < 2009:     # pre-2009: a figure printed close under its sentence (thermometer
+            top_lim = max(seg['y0'], max(l['y1'] for l in prose_above) - 2.5)   # 2006 MJ 06 q4) may reach into the line's descent
         if prose_above:      # the sentence that closes the band sits BESIDE the figure (bottles next to the question text): its top may rise past it
             last = max(prose_above, key=lambda l: l['y1'])
             if last['x1'] < x0 - 2 or last['x0'] > x1 + 2:
