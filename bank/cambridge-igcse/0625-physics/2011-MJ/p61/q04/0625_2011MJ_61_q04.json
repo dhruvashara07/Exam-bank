@@ -39,7 +39,7 @@
  ],
  "review": {
   "reasons": [
-   "no mark scheme for 4(a)(ii), 4(b)(ii), 4(c)(ii), 4(d)"
+   "no mark scheme for 4(c)(ii)"
   ],
   "status": "flagged"
  },
@@ -74,6 +74,7 @@
      "text": "Draw a normal to line MR at N.",
      "marks": 0,
      "path": "4(a)(i)",
+     "mark_scheme_on": "4(a)",
      "content": [
       {
        "type": "text",
@@ -106,6 +107,7 @@
      "text": "Draw a line 10 cm long that is parallel to line MR and 12 cm below it. The ends of\nthis line must be at the same distance from the edges of the page as the ends of\nline MR. Label this line CD with C directly below M.\n[3]",
      "marks": 3,
      "path": "4(a)(ii)",
+     "mark_scheme_on": "4(a)",
      "content": [
       {
        "type": "text",
@@ -119,7 +121,29 @@
      ]
     }
    ],
-   "path": "4(a)"
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "o",
+     "codes": [
+      "[1]",
+      "[1]",
+      "[1]"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        325.3,
+        559.0,
+        371.4
+       ]
+      }
+     ]
+    }
+   ]
   },
   {
    "label": "b",
@@ -169,6 +193,26 @@
      "text": "Draw a line from C to N.",
      "marks": 0,
      "path": "4(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(i)",
+       "text": "",
+       "codes": [
+        "[1]"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          36.0,
+          388.6,
+          559.0,
+          409.4
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -201,6 +245,26 @@
      "text": "Measure and record the angle of incidence i between the lineCN and the normal.\ni =  ........................................[2]",
      "marks": 2,
      "path": "4(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(ii)",
+       "text": "o\no",
+       "codes": [
+        "[1]"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          36.0,
+          426.5,
+          559.0,
+          447.3
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -276,6 +340,27 @@
      "text": "Draw in the line joining the positions of P3 and P4. Continue the line until it meets\nthe normal.",
      "marks": 0,
      "path": "4(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "4(c)(i)",
+       "text": "3\n4\no\no\nr = 21( ) ± 1( )",
+       "codes": [
+        "[1]",
+        "[1]"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          36.0,
+          464.5,
+          559.0,
+          497.9
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -359,6 +444,26 @@
    "text": "Several students found that, in spite of carrying out this experiment with reasonable\ncare, the measured value of the angle of reflection r was not exactly the same as the\nvalue obtained from theory.\nSuggest two possible causes of this inaccuracy.\n1.  ......................................................................................................................................\n..........................................................................................................................................\n2.  ......................................................................................................................................\n......................................................................................................................................[2]\n[Total: 9]",
    "marks": 2,
    "path": "4(d)",
+   "mark_scheme": [
+    {
+     "label": "4(d)",
+     "text": "o",
+     "codes": [
+      "[2]"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        515.1,
+        559.0,
+        611.8
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",

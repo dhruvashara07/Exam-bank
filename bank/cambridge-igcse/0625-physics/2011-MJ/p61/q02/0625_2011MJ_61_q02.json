@@ -64,10 +64,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "no mark scheme for 2(a), 2(b)(iii), 2(c), 2(d)(ii)"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -94,6 +92,26 @@
    "text": "Record room temperature θRas shown on the thermometer in Fig. 2.2.\nθR =  ........................................[1]",
    "marks": 1,
    "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "º",
+     "codes": [
+      "[1]"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        249.4,
+        559.0,
+        270.2
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -164,6 +182,7 @@
      "text": "Complete the column headings in Table 2.1.",
      "marks": 0,
      "path": "2(b)(i)",
+     "mark_scheme_on": "2(b)",
      "content": [
       {
        "type": "text",
@@ -196,6 +215,7 @@
      "text": "Calculate the temperature fall T1during the first 30 s of cooling.\nT1 =  ............................................",
      "marks": 0,
      "path": "2(b)(ii)",
+     "mark_scheme_on": "2(b)",
      "content": [
       {
        "type": "text",
@@ -233,6 +253,7 @@
      "text": "Calculate the temperature fall T2 during the final 30 s of cooling.\nT2 =  ........................................[3]",
      "marks": 3,
      "path": "2(b)(iii)",
+     "mark_scheme_on": "2(b)",
      "content": [
       {
        "type": "text",
@@ -252,6 +273,28 @@
     }
    ],
    "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "º",
+     "codes": [
+      "[1]",
+      "[1]",
+      "[1]"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        287.4,
+        559.0,
+        346.6
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -289,6 +332,30 @@
    "text": "Plot the graph of temperature (y-axis) against time (x-axis).\n[5]",
    "marks": 5,
    "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "",
+     "codes": [
+      "[1]",
+      "[1]",
+      "[1]",
+      "[1]",
+      "[1]"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        363.3,
+        559.0,
+        447.3
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -336,6 +403,7 @@
      "text": "State how the rate of cooling in the first 30 s differs from that in the final 30 s.\n..................................................................................................................................\n..................................................................................................................................",
      "marks": 0,
      "path": "2(d)(i)",
+     "mark_scheme_on": "2(d)",
      "content": [
       {
        "type": "text",
@@ -373,6 +441,7 @@
      "text": "Explain how the graph line shows this difference.\n..................................................................................................................................\n..............................................................................................................................[2]\n[Total: 11]",
      "marks": 2,
      "path": "2(d)(ii)",
+     "mark_scheme_on": "2(d)",
      "content": [
       {
        "type": "text",
@@ -391,7 +460,28 @@
      ]
     }
    ],
-   "path": "2(d)"
+   "path": "2(d)",
+   "mark_scheme": [
+    {
+     "label": "2(d)",
+     "text": "",
+     "codes": [
+      "[1]",
+      "[1]"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        464.5,
+        559.0,
+        523.2
+       ]
+      }
+     ]
+    }
+   ]
   }
  ],
  "total_marks": 11,

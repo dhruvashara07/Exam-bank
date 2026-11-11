@@ -360,6 +360,16 @@ def _brace_path(x0, y0, x1, y1, right=True):
             f'Q{c:.2f} {m:.2f} {c:.2f} {m + r:.2f}L{c:.2f} {y1 - r:.2f}Q{c:.2f} {y1:.2f} {a:.2f} {y1:.2f}')
 
 
+def _mnorm(t):
+    """Compare a map prefix with a line the same way: marks print as '[1]' in our table but '1' in the
+    mark scheme's own text, and a line may still start with the rest of a printed label ('& (ii)')."""
+    t = re.sub(r'\[(\d{1,2})\]', r'\1', t)
+    t = re.sub(r'\s(?:[ABCM]\d{1,2})(?=\s|$)', '', t)      # a mark code sits in the Marks column, not in the answer text
+    toks = t.split()
+    while toks and (toks[0] in ('&', '-', '\u2013', 'and', ',') or re.fullmatch(r'\((?:[a-hj-p]|[ivx]{1,4})\)([-\u2013]\((?:[a-hj-p]|[ivx]{1,4})\))?,?', toks[0])):
+        toks = toks[1:]
+    return re.sub(r'\s+', ' ', ' '.join(toks)).strip()
+
 def _old_rows(units, q, L=44.0, M=W - 44.0):
     """Old portrait mark schemes (up to 2016 FM: no table, 'n (a) answer ... B1'): put them in OUR table, like every
     other year (Dhruv 2026-11-06: 'we want each ms in our guideline layout, consistency in all ms').
@@ -468,6 +478,7 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
     state = {'l': None, 'r': None}
     MAPQ = MS_MAP.get(q['id']) if pre09 else None   # Dhruv round 24: rows assigned to the paper's parts by reading them
     map_i = [0]
+    map_used = set()
     norm = lambda x: re.sub(r'\s+', ' ', x).strip()
     rows = []
     used = set()
@@ -583,11 +594,17 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                 txt_ = norm(' '.join(t['t'] for t in body_l if t.get('s', 11) >= 9 or not re.fullmatch(r'[\d\w]{1,2}', t['t'])))   # sub/superscripts out
                 if not body_l or all(t['t'] in ('&', '–', '-', 'and', ',') or re.fullmatch(r'[,(].*\)?,?', t['t']) for t in body_l):
                     continue                          # a line left with only the rest of a printed label
-                hit_ = next((j for j in range(map_i[0], min(len(MAPQ), map_i[0] + 3)) if txt_.startswith(norm(MAPQ[j][0]))), None)
+                hit_ = next((j for j in range(map_i[0], min(len(MAPQ), map_i[0] + 3)) if _mnorm(txt_).startswith(_mnorm(MAPQ[j][0]))), None)
+                if hit_ is None:      # the map is in the paper's order, the print's order can differ (2012 MJ 21 q8:
+                    # the mark scheme prints (a)(iii) first). A line still matches an entry anywhere, if only one fits.
+                    far_ = [j for j in range(len(MAPQ)) if j not in map_used and _mnorm(txt_).startswith(_mnorm(MAPQ[j][0]))]
+                    hit_ = far_[0] if len(far_) == 1 else None
+                if os.environ.get('MSDEBUG'):
+                    print('LINE', repr(_mnorm(txt_)[:55]), '| hit', hit_)
                 if hit_ is not None:                  # (an entry for a lone superscript line may never match: skip it)
                     ent = MAPQ[hit_]
                     segs.append({'y0': y, 'labs': [], 'lines': [], 'forced': ent[1],
-                                 'shift': max(0.0, body_l[0]['x'] - min([t['x'] for t in ws if not cand(t)] or [body_l[0]['x']]))}); map_i[0] = hit_ + 1
+                                 'shift': max(0.0, body_l[0]['x'] - min([t['x'] for t in ws if not cand(t)] or [body_l[0]['x']]))}); map_i[0] = max(map_i[0], hit_ + 1); map_used.add(hit_)
                     if len(ent) >= 4:                 # [prefix, label, word, next label(, words to drop)]: two parts on one line
                         cut = next((t for t in body_l if t['t'] == ent[2] and t['x'] > body_l[0]['x'] + 1), None)
                         if cut is not None:
@@ -836,12 +853,18 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
             rows.append(v)
     if pre09 and qparts:
         # Dhruv round 25: rows in the question's order ('(iii) Table' printed before '(i)' in practical schemes)
-        order_ = [p.get('path') for p in q.get('parts', [])]
+        order_ = []                      # every part in the paper's order, sub-parts too (round 26: '(ii)' printed before '(i)')
+        def _walk(n):
+            for c in n.get('parts', []) or []:
+                order_.append(c.get('path')); _walk(c)
+        _walk(q)
         last_ = -1
         for v in rows:
             m_ = re.match(r'^\d+(\([a-hj-p]\))?(\([ivx]{1,4}\))?', v['_lab'])
             pf_ = m_.group(0) if m_ else ''
-            k_ = next((i for i, o in enumerate(order_) if o and (o == pf_ or o.startswith(pf_ + '('))), None) if m_ and (m_.group(1) or m_.group(2)) else None
+            k_ = next((i for i, o in enumerate(order_) if o == pf_), None) if m_ and (m_.group(1) or m_.group(2)) else None
+            if k_ is None and m_ and (m_.group(1) or m_.group(2)):
+                k_ = next((i for i, o in enumerate(order_) if o and o.startswith(pf_ + '(')), None)
             last_ = k_ if k_ is not None else last_
             v['_k'] = last_
         rows.sort(key=lambda v: v['_k'])

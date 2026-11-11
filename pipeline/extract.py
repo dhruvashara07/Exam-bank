@@ -121,7 +121,29 @@ def best_cut(page, y, floor):
     def cost(c):
         i = int(round(c * ZOOM))
         return int(rows[max(0, i - 1):i + 2].sum())
-    return min(cands, key=lambda c: (cost(c), abs(c - y)))
+    c = min(cands, key=lambda c: (cost(c), abs(c - y)))
+    return lift_over_thin_ink(page, c, floor)
+
+
+def lift_over_thin_ink(page, c, floor):
+    """A fraction's numerator and bar ('R = V/I', '1/u') are drawn ABOVE the text top of their own line
+    and touch it, so the cleanest cut runs through them and leaves that ink in no piece at all
+    (2011 MJ 51 p8, 2012 ON 63 p13). Move the cut up to the first white row above it, so a line keeps
+    the ink that hangs over it; a white gap is never crossed, so the part above keeps its own ink.
+    Pre-2013 only, so approved years keep their cuts."""
+    if int((re.search(r'/((?:19|20)\d\d)-', page.parent.name or '') or [0, '9999'])[1]) >= 2013:
+        return c
+    rows = row_ink(page)
+    i = int(round(c * ZOOM))
+    if i <= 0 or i >= len(rows) or not rows[i - 1:i + 1].any():
+        return c                                   # the cut is already in white: nothing hangs over
+    j = i
+    while j > 0 and rows[j - 1] and i - j < int(12 * ZOOM):
+        j -= 1
+    if rows[j - 1] if j > 0 else True:             # ink all the way up: not a hanging glyph, leave it
+        return c
+    up = (j - 0.5) / ZOOM
+    return up if up > floor else c
 
 
 def raw_segments(doc, bnds):
@@ -169,8 +191,11 @@ def raw_segments(doc, bnds):
         # '(b) (i)' on one line: one cut. A tall glyph on that line (a fraction 'h/x') can push the two
         # cuts apart and leave a sliver piece for '(b)' (a gap of 3 pt or less is dropped anyway)
         if bnds[i - 1]['page'] == bnds[i]['page'] and abs(bnds[i - 1]['y'] - bnds[i]['y']) < 1 \
-                and cuts[i] - cuts[i - 1] > 3:
-            cuts[i] = cuts[i - 1]
+                and (cuts[i] - cuts[i - 1] > 3 or
+                     (cuts[i] > cuts[i - 1] and
+                      int((re.search(r'/((?:19|20)\d\d)-', doc.name or '') or [0, '9999'])[1]) < 2013)):
+            cuts[i] = cuts[i - 1]        # same line: one cut, the higher one (a 3 pt sliver would be
+                                         # dropped and its ink lost - 2012 ON 63 p13 '(d) (i) ... 1/u')
     for i, b in enumerate(bnds):
         nxt = bnds[i + 1] if i + 1 < len(bnds) else None
         start_page = b['page']

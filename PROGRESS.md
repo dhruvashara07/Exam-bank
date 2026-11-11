@@ -3,7 +3,15 @@
 Read this first in every session. Update it before ending a session.
 
 ## 2002-2012 (started 2026-11-09, batches of 3 years) - why: docs/AGENT_GUIDE.md, how: docs/PLAYBOOK.md, mistakes: docs/ERROR_PATTERNS.md
-- NEXT: 2011-2012 batch in a new chat (prompt: docs/NEXT_CHAT.md); its round re-shows the 20 round-25 fixes. Then cleanup, then MongoDB push.
+- NEXT: round 26 is with Dhruv (2011-2012 + the 20 round-25 items + 3 changed approved questions). After his answers:
+  fix, `approve.py` 2011-2012, then cleanup, then the MongoDB push.
+- 2026-11-11: batch 4 (2011-2012, 58 papers) built and checked: 0 blocking; `ms_align list` empty (65+17 questions
+  mapped); ms_sweep clean (13 hits are codes printed inside Cambridge's own answer text); golden 0 changed cuts.
+  Pipeline fixes: fraction bar above a line was cut out of every piece (ERROR_PATTERNS 50), 2011 MJ 52/61 had no
+  mark scheme at all because the question number is printed '1.' (51), map prefixes matched against our own table (52),
+  rows sorted by sub-part and not only by letter (53, MS_TABLE_RULES 19), `dupes` after any single-paper rebuild (54).
+  Approved years moved in 3 questions only, all improvements: 2004 ON 06 q5 (2 pt of ink kept), 2005 MJ 05 q4 and
+  2005 ON 05 q3 (row order). All three are in round 26.
 - 2026-11-11: batch 1 (2002-2004, 25 papers) APPROVED. Round 22 closed (21 wrong, all mark-scheme layout -> MS_TABLE_RULES 16).
   Batch 2 (2005-2007, 30 papers) built + fixed (ERROR_PATTERNS 17-22); round 23 closed (11 wrong -> fixed); 2005-2007 APPROVED.
   Batch 3 (2008-2010, 56 papers) APPROVED after rounds 24-25 (fixes ERROR_PATTERNS 31-49: MS rows by meaning, question order, spacing, side notes, stacked codes). All 2002-2010 rebuilt; ms_align list empty; golden 0 changed cuts. Next (new chat): 2011-2012, its round re-shows the 20 round-25 fixes.

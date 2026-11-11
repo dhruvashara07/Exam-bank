@@ -51,10 +51,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "no mark scheme for 3(a)(vi), 3(b), 3(c)"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -87,6 +85,7 @@
      "text": "Switch on. Measure and record in Table 3.1 the current I in the circuit and the p.d. V\nacross the section of wire AB. Switch off.",
      "marks": 0,
      "path": "3(a)(i)",
+     "mark_scheme_on": "3(a)",
      "content": [
       {
        "type": "text",
@@ -124,6 +123,7 @@
      "text": "Record in the table the length l of the wire AB.",
      "marks": 0,
      "path": "3(a)(ii)",
+     "mark_scheme_on": "3(a)",
      "content": [
       {
        "type": "text",
@@ -156,6 +156,7 @@
      "text": "Calculate the resistance R of the section of wire AB using the equation\nR=V\nI.\nRecord this value of R in the table.",
      "marks": 0,
      "path": "3(a)(iii)",
+     "mark_scheme_on": "3(a)",
      "content": [
       {
        "type": "text",
@@ -198,6 +199,7 @@
      "text": "Complete the column headings in the table.",
      "marks": 0,
      "path": "3(a)(iv)",
+     "mark_scheme_on": "3(a)",
      "content": [
       {
        "type": "text",
@@ -230,6 +232,7 @@
      "text": "Repeat steps (i) – (iii) with the voltmeter connected across section AC of the wire.",
      "marks": 0,
      "path": "3(a)(v)",
+     "mark_scheme_on": "3(a)",
      "content": [
       {
        "type": "text",
@@ -262,6 +265,7 @@
      "text": "Repeat steps (i) – (iii) with the voltmeter connected across section AD of the wire.\nvoltmeter\nl/\nI /\nconnected\nV  /\nR  /\nacross\nAB\nAC\nAD\n[7]",
      "marks": 7,
      "path": "3(a)(vi)",
+     "mark_scheme_on": "3(a)",
      "content": [
       {
        "type": "text",
@@ -280,7 +284,33 @@
      ]
     }
    ],
-   "path": "3(a)"
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "= 2R\nto within 10%\nAD\nAB",
+     "codes": [
+      "[1]",
+      "[1]",
+      "[1]",
+      "[1]",
+      "[1]",
+      "[1]",
+      "[1]"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        72.4,
+        559.0,
+        170.3
+       ]
+      }
+     ]
+    }
+   ]
   },
   {
    "label": "b",
@@ -306,6 +336,27 @@
    "text": "It is suggested that the resistance of the wire AB should be half the resistance of the\nwire AD. State whether your results support this suggestion and justify your answer with\nreference to your results.\nstatement ..........................................................................................................................\njustification ........................................................................................................................\n......................................................................................................................................[2]",
    "marks": 2,
    "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "",
+     "codes": [
+      "[1]",
+      "[1]"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        187.0,
+        559.0,
+        233.0
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -357,6 +408,26 @@
    "text": "It is known that changes in temperature affect the resistance of the wire. Suggest how\nyou can limit the temperature changes when carrying out this experiment.\n..........................................................................................................................................\n..................................................................................................................................... [1]\n[Total: 10]",
    "marks": 1,
    "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "",
+     "codes": [
+      "[1]"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        250.2,
+        559.0,
+        321.5
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",

@@ -331,3 +331,19 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - Dhruv asked for the next-chat prompt and docs written like a skill/guidelines for agents (our vision, not only
   steps). Added docs/AGENT_GUIDE.md (vision, what "done" means, how he works, how to decide, where things are);
   CLAUDE.md, PLAYBOOK, CONTEXT, NEXT_CHAT point to it; PROGRESS old-batch notes tidied. Next chat: 2011-2012.
+
+## 2026-11-11 - batch 4 (2011-2012), round 26
+- 58 papers built on GitHub, checked locally: 0 blocking. Two blocking coverage problems were a real cut
+  bug: a fraction's numerator and bar are drawn above their own line, and the cut ran under them, so that
+  ink sat in no piece (ERROR_PATTERNS 50). Fixed pre-2013; it also recovered 2 pt of lost ink in an
+  approved paper (2004 ON 06 q5).
+- 2011 MJ 52 and 61 had NO mark scheme at all: Cambridge prints the question number as '1.' and the old
+  parser wanted a bare number (ERROR_PATTERNS 51). Both papers now have their tables.
+- Rows by meaning: 65 questions mapped (+12 copied to the variants that stopped being duplicates, +5 for
+  the two repaired papers): `ms_align list` empty for all four sessions, and a new check compares every
+  mapped question's row labels with its map entry (ERROR_PATTERNS 52).
+- Row order now follows sub-parts, not only letters (MS_TABLE_RULES 19). That corrected two approved
+  papers (2005 MJ 05 q4, 2005 ON 05 q3); both are in round 26 so Dhruv sees the change.
+- golden: 0 changed cuts. All of 2002-2010 rebuilt: only those 3 questions changed, all improvements.
+- Round 26 published (50 items): the 20 round-25 items, the 3 approved-paper changes, and the 2011-2012
+  mark schemes whose rows were split by reading the question. Waiting for Dhruv.

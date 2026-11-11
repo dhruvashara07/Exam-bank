@@ -295,7 +295,7 @@ def _label_columns(doc):
                 let[round(x0 / 4)] += 1
             elif re.fullmatch(r'\((?:i|ii|iii|iv)\)', w):
                 rom[round(x0 / 4)] += 1
-            elif re.fullmatch(r'\d{1,2}', w):
+            elif re.fullmatch(r'\d{1,2}\.?', w):
                 num[round(x0 / 4)] += 1
     if not let:
         return OLD_Q, OLD_L, OLD_R
@@ -330,8 +330,8 @@ def structured_rows_columns(doc):
                 continue
             m = re.fullmatch(r'(\d{1,2})\(([a-p])\)[–-]\(([a-p])\)', w)         # '4(a)–(g)'
             m2 = re.fullmatch(r'\(([a-p])\)[–-]?\(([a-p])\)', w)                # '(h)(l)' = (h) to (l)
-            if OLD_Q[0] <= x0 <= OLD_Q[1] and re.fullmatch(r'\d{1,2}', w):
-                toks.append((y0, 'q', int(w)))
+            if OLD_Q[0] <= x0 <= OLD_Q[1] and re.fullmatch(r'\d{1,2}\.?', w):
+                toks.append((y0, 'q', int(w.rstrip('.'))))   # 2011 MJ 52/61 print '1.' for the question number
             elif OLD_Q[0] <= x0 <= OLD_L[1] and m:
                 toks.append((y0, 'q', int(m.group(1))))
                 toks.append((y0 + 0.01, 'l', (m.group(2), m.group(3))))

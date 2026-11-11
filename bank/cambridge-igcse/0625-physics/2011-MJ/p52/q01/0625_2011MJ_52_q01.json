@@ -51,10 +51,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "no mark scheme for 1(c), 1(d), 1(e), 1(f)"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -81,6 +79,7 @@
    "text": "Without placing a mass on the rule, record in Table 1.1 the reading F on the forcemeter.",
    "marks": 0,
    "path": "1(a)",
+   "mark_scheme_on": "1",
    "content": [
     {
      "type": "text",
@@ -113,6 +112,7 @@
    "text": "Place a 100 g mass on the rule at the 50.0 cm mark shown in Fig. 1.1. Record in the\ntable the value of the mass m and the reading F on the forcemeter.",
    "marks": 0,
    "path": "1(b)",
+   "mark_scheme_on": "1",
    "content": [
     {
      "type": "text",
@@ -145,6 +145,7 @@
    "text": "Repeat step (b) using masses of 200 g, 300 g, 400 g and 500 g.\nm  / g\nF  / N\n0\n[3]",
    "marks": 3,
    "path": "1(c)",
+   "mark_scheme_on": "1",
    "content": [
     {
      "type": "text",
@@ -191,6 +192,29 @@
    "text": "Plot a graph of F / N (y-axis) against m / g (x-axis).\n[4]",
    "marks": 4,
    "path": "1(d)",
+   "mark_scheme": [
+    {
+     "label": "1(d)",
+     "text": "",
+     "codes": [
+      "[1]",
+      "[1]",
+      "[1]",
+      "[1]"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        148.3,
+        559.0,
+        219.6
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -232,6 +256,27 @@
    "text": "Use the graph to find the value of F when m = 375 g. Show clearly on the graph how you\nobtained the result.\nF =  ............................................................... [2]",
    "marks": 2,
    "path": "1(e)",
+   "mark_scheme": [
+    {
+     "label": "1(e)",
+     "text": "",
+     "codes": [
+      "[1]",
+      "[1]"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        236.8,
+        559.0,
+        270.2
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -273,6 +318,26 @@
    "text": "The forcemeter shows a reading when no mass has been added to the metre rule.\nAssuming that the forcemeter has no zero error, suggest a reason for the reading.\nsuggested reason .............................................................................................................\n..................................................................................................................................... [1]\n[Total: 10]",
    "marks": 1,
    "path": "1(f)",
+   "mark_scheme": [
+    {
+     "label": "1(f)",
+     "text": "",
+     "codes": [
+      "[1]"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        287.4,
+        559.0,
+        333.4
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -298,6 +363,28 @@
  ],
  "total_marks": 10,
  "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "1",
+   "text": "",
+   "codes": [
+    "[1]",
+    "[1]",
+    "[1]"
+   ],
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      36.0,
+      72.4,
+      559.0,
+      131.1
+     ]
+    }
+   ]
+  }
+ ],
  "syllabus": "0625",
  "subject": "Physics",
  "board": "CAIE",

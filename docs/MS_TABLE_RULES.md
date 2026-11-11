@@ -188,3 +188,8 @@ Rows follow the question's part order, whatever order the mark scheme prints the
 where its marks are earned. Same label on consecutive rows: label shown once, the line between rows kept.
 Inside a row no blank lines (double spacing closed), side notes beside their line, codes stacked without a gap.
 Separate parts only when the marks can be separated; one mark for two parts keeps a combined label.
+
+## 19. Order down to the sub-parts (old papers; round 26)
+Rows follow the question paper's part order all the way down, not only by letter: a mark scheme that
+prints (ii) before (i), or the table headings before the readings, is put back into the paper's order
+(`ms_layout`, pre-2013). A combined label ('4(b)(i)(iii)') takes the place of its first part.

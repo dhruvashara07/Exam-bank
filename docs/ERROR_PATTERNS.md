@@ -98,3 +98,26 @@ Known: 2010 MJ 13, 23, 53 have no mark scheme file at all. MCQ labels cut at the
 48. 2008 '[1]' marks in the same column as '[M1]' codes were dropped as part totals -> kept (right edge = codes').
 49. One line with one mark for two parts, split ('e1 ... and e2 ...'): the mark goes where Dhruv expects it
     (map option 'marks_first'); a mark that covers two parts and cannot be split keeps the combined label.
+
+## Batch 4 (2011-2012), found by Claude before round 26
+50. A fraction printed inside a line ('R = V/I', '1/u') draws its numerator and bar ABOVE the line's text
+    top. The cut between two parts ran under them, so that ink was in no piece at all (coverage, blocking:
+    2011 MJ 51 p8, 2012 ON 63 p13). -> `extract.lift_over_thin_ink`: the cut moves up to the first white
+    row, so a line keeps the ink hanging over it (pre-2013). Also '(d) (i)' on one line: the two cuts are
+    now always merged to the higher one, instead of leaving a 3 pt sliver that is dropped with its ink.
+51. 2011 MJ 52 and 61 print the question number as '1.' (with a dot). The old-layout parser only accepted
+    a bare number, so it found no rows and those two papers had NO mark scheme at all - and nothing failed,
+    because marks come from the question paper. -> `ms.py` accepts '1.'. Check: a paper with no `ms_p` in
+    any question is a bug, not a scan (`ms_sweep` 'no table').
+52. ms_map prefixes are matched against the text OUR table shows, not against the printed line: marks read
+    '[1]' not '1', mark codes (B1, M1) have moved to the Marks column, the rest of a printed label
+    ('& (ii)', ', (b)') is stripped, and a line of only sub/superscripts ('3', '240 240') is dropped.
+    -> `ms_layout._mnorm` ignores those differences; never take a prefix from a sub/superscript-only line,
+    and never cut a prefix in the middle of a word or code. Check: `/tmp`-style verifier - every mapped
+    question's row labels must equal the labels in its map entry (ms_align list alone does not catch a
+    prefix that matched the wrong line).
+53. Mapped rows were sorted by the letter only, so a mark scheme printing '(ii)' before '(i)' kept the wrong
+    order inside a part. -> `ms_layout` sorts by every part of the paper, sub-parts included (round 26).
+    This also corrected two approved papers (2005 MJ 05 q4, 2005 ON 05 q3).
+54. Rebuilding single papers with `store.build` and no `store.py dupes <session>` afterwards empties every
+    `same_as` list (614 files changed in approved years). -> always run `dupes` for each session touched.

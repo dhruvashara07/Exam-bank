@@ -2,15 +2,15 @@
 
 When: a new chat when this one gets long (about one 3-year batch per chat), not a fixed rule.
 
-## Prompt to paste (next: 2011-2012)
+## Prompt to paste (next: round 26 answers, then cleanup + MongoDB push)
 > Exam-bank (repo dhruvashara07/Exam-bank). Start with `git pull --rebase`, then read docs/AGENT_GUIDE.md (vision,
 > quality bar, how I work), CLAUDE.md (hard rules), docs/PLAYBOOK.md (steps), docs/ERROR_PATTERNS.md (never repeat),
 > docs/MS_TABLE_RULES.md, PROGRESS.md (top) and the last two days of docs/CONVERSATION_LOG.md.
-> State: 2013-2026 final in git; 2002-2010 approved (rounds 22-25).
-> Task: the 2011-2012 batch (last old batch). Build, check every flag yourself, do the rows-by-meaning check
-> (ms_align list empty, grids: order, splits, gaps, marks), then ONE short review round on the same review page.
-> That round also re-shows the 20 items fixed after round 25 (wrong list in review/rounds/25.json). Then fix,
-> approve, push. After that: cleanup, then the MongoDB push. Keep messages short and tell me when you need my input.
+> State: 2013-2026 final in git; 2002-2010 approved; 2011-2012 built and checked, round 26 open (my answers are in
+> collection feedback_r26 on the review page).
+> Task: read my round-26 answers, fix every pattern in the pipeline, rebuild once, re-check (ms_align list empty,
+> ms_sweep, golden), close round 26, approve 2011-2012. Then cleanup (unneeded files in git/Cloudinary) and the
+> MongoDB push. Keep messages short and tell me when you need my input.
 
 General form for later tasks: same prompt, with "Task: <e.g. cleanup + MongoDB push>".
 
