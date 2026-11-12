@@ -193,3 +193,34 @@ Separate parts only when the marks can be separated; one mark for two parts keep
 Rows follow the question paper's part order all the way down, not only by letter: a mark scheme that
 prints (ii) before (i), or the table headings before the readings, is put back into the paper's order
 (`ms_layout`, pre-2013). A combined label ('4(b)(i)(iii)') takes the place of its first part.
+
+## 20. When the marks cannot be separated: Cambridge's grouping, our layout (Dhruv, round 26)
+"If separation is hard, do it like the original mark scheme, but with our proper table layout."
+Splitting by meaning (rule 17) is only for lines that each clearly mark ONE part. When a printed group mixes
+parts so that a line would need a combined label across letters ('2(b)(c)', '4(e)(h)', '4(d)(h)') or a guess
+(trace marks, table marks that cover the readings AND their repeats, 'Both sets of temperatures'), keep the
+printed group: its label ('4(a)–(f)', '2(b)–(d)', '1(a)(b)(c)'; Cambridge's slips like '(i)–(n)' still corrected
+to the paper's parts), its lines in the printed order. Our layout still applies inside it:
+- every marking point is its own row with its own mark (the Q cell merged over them, label shown once);
+- a heading without a mark ('Table:', 'trace:', 'Graph:') sits in the row of the first marked line under it -
+  never a row of its own, never an empty Marks cell;
+- no blank lines, no stray brackets or underscores.
+Where the printed group leaves a part's block total without a row of its own (2011 ON 51 q4: '(g) ... [3]' is
+the table of (g)-(k), printed under '(h)–(j)'), the map starts with `["@original", ""]`: ms_align then does not
+ask for that part's row.
+Questions done this way: 2005 MJ 05 q4, 2009 ON 05 q2, 2011 MJ 52 q1, 2011 ON 51 q4, 2011 ON 52 q4, 2012 ON 51 q2.
+
+## 21. One mark over several parts: the Marks cell merged (Dhruv, round 26, 2011 MJ 31 q5)
+Cambridge's brace with 'all 3  B1' beside the middle part means ONE mark for the three parts together. Our table:
+the parts keep their own Q cells and rows, the Marks cell is ONE cell over those rows with the mark in it; the
+brace and the words 'all 3' go (`ms_layout._mark_spans`, pre-2013).
+
+## 22. Four values in two printed lines (Dhruv, round 26, 2010 MJ 61 q1)
+'l = 29 (mm) and l = 31 (mm)' / 'eA = 14 and eB = 15' answer (a)(i), (a)(iii) and (a)(ii), (a)(iv): each value is
+its own row, in the paper's order (i)-(iv), the joining 'and' dropped (map entry with a split word). The pair's
+mark goes with its second value.
+
+## 23. Block totals in the question data (Dhruv, round 26, 2011 ON 53 q1)
+An old paper prints one bracket after the last sub-part for the whole block ('(a)(i) ... (iv) ... [3]'). The 3 marks
+belong to (a), not to (a)(iv): when every sub-part but the last has no mark, the marks are stored on the part
+(`extract.block_marks`, pre-2013). The question still looks exactly like the paper; the totals do not change.

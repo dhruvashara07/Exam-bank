@@ -3,8 +3,16 @@
 Read this first in every session. Update it before ending a session.
 
 ## 2002-2012 (started 2026-11-09, batches of 3 years) - why: docs/AGENT_GUIDE.md, how: docs/PLAYBOOK.md, mistakes: docs/ERROR_PATTERNS.md
-- NEXT: round 26 is with Dhruv (2011-2012 + the 20 round-25 items + 3 changed approved questions). After his answers:
-  fix, `approve.py` 2011-2012, then cleanup, then the MongoDB push.
+- NEXT: ALL of 2002-2012 approved (2026-11-12). Next: cleanup (unneeded files in git / Cloudinary), then the one
+  MongoDB + Cloudinary push via the Action (prompt: docs/NEXT_CHAT.md).
+- 2026-11-12: round 26 answered (50 items, 12 wrong), all fixed, 2002-2012 rebuilt twice and re-checked: 0 blocking,
+  `ms_align list` empty, every mapped question's rows = its map (now for ALL 205 maps: 3 old approved maps whose entries
+  sat on superscript lines fixed - 2004 ON 05 q4, 2006 MJ 05 q4, 2009 ON 06 q1), golden 0 changed cuts, nothing outside
+  2002-2012 moved. New rules: MS_TABLE_RULES 20 (hard to separate -> Cambridge's grouping, our layout, one row per
+  mark, headings merged), 21 (one mark over several parts = merged Marks cell), 22 (values split in order), 23 (block
+  totals on the part). ERROR_PATTERNS 55-63. 2011-2012 approved (58); 2004 ON 03 and 06 re-approved.
+  Approved-year changes, all improvements: ≥ glyph (2009 MJ 02 q9, 2010 ON 51 q4), part marks of block totals (data
+  only, ~190 questions, totals unchanged), 17 figure crops a pixel or two wider (labels taken whole).
 - 2026-11-11: batch 4 (2011-2012, 58 papers) built and checked: 0 blocking; `ms_align list` empty (65+17 questions
   mapped); ms_sweep clean (13 hits are codes printed inside Cambridge's own answer text); golden 0 changed cuts.
   Pipeline fixes: fraction bar above a line was cut out of every piece (ERROR_PATTERNS 50), 2011 MJ 52/61 had no

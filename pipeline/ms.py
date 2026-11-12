@@ -386,6 +386,11 @@ def structured_rows_columns(doc):
             else:
                 starts.append((y, path, also))
         cuts = [(y - 4, p, a) for y, p, a in starts]
+        if re.search(r'/(?:200\d|201[012])-', doc.name or ''):
+            # a fraction's numerators ('1/u' printed as a fraction, 2012 ON 63 q4(b), round 26) stand above the
+            # label's line and reach into it: the row starts above them, not between them and their fraction
+            cuts = [(min([y - 4] + [w[1] - 1 for w in words if y - 10 < w[1] < y - 4 and w[3] > y + 1]), p, a)
+                    for (y, p, a) in [(y_, p_, a_) for y_, p_, a_ in starts]]
         if current and (not cuts or cuts[0][0] > top + 4):
             cuts.insert(0, (top, None, []))
         for i, (y, path, also) in enumerate(cuts):

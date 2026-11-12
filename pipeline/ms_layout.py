@@ -22,11 +22,49 @@ def _rect(x0, y0, x1, y1, fill=FRAME):
     return {'d': f'M{x0:.2f} {y0:.2f}L{x1:.2f} {y0:.2f}L{x1:.2f} {y1:.2f}L{x0:.2f} {y1:.2f}Z', 'fill': fill}
 
 
-def _frame(v, top=False, t=0.6, bottom_from=0.0):
+def _frame(v, top=False, t=0.6, bottom_from=0.0, bottom_to=None):
     h = v['h']
-    v['lines'] += [_rect(0, 0, t, h), _rect(W - t, 0, W, h), _rect(bottom_from, h - t, W, h)]
+    v['lines'] += [_rect(0, 0, t, h), _rect(W - t, 0, W, h), _rect(bottom_from, h - t, W if bottom_to is None else bottom_to, h)]
     if top:
         v['lines'].append(_rect(0, 0, W, t))
+
+
+def _mark_spans(out, Lq, Mx):
+    """Cambridge groups rows with a brace and writes 'all 3 B1' beside the middle one: one mark for the three
+    parts together (2011 MJ 31 q5(a)(i)-(iii)). Dhruv, round 26: the rows keep their own Q cells, the Marks cell
+    is merged over them, and the brace and the words 'all 3' go. Returns how many groups were merged."""
+    def num_bb(l):
+        pts = [float(x) for x in MP.NUM.findall(l['d'])]
+        return (min(pts[0::2]), min(pts[1::2]), max(pts[0::2]), max(pts[1::2])) if len(pts) >= 4 else None
+    def has_mark(v):
+        return any(t['x'] >= Mx - 1 for t in v['text'])
+    n = 0
+    for i, v in enumerate(out):
+        ans = sorted([t for t in v['text'] if Lq < t['x'] < Mx - 1], key=lambda t: (t['y'], t['x']))
+        k = next((j for j in range(len(ans) - 1) if ans[j]['t'].lower() == 'all' and
+                  re.fullmatch(r'\d|two|three|four', ans[j + 1]['t'].lower()) and
+                  not any(o['y'] == ans[j]['y'] and o['x'] > ans[j + 1]['x'] for o in ans)), None)
+        if k is None or not has_mark(v):
+            continue
+        N = {'two': 2, 'three': 3, 'four': 4}.get(ans[k + 1]['t'].lower()) or int(ans[k + 1]['t'])
+        if N < 2:
+            continue
+        for a in range(max(1, i - N + 1), i + 1):     # a window of N rows holding this one, the others without a mark
+            grp = out[a:a + N]
+            if len(grp) == N and all(not has_mark(w) for w in grp if w is not v) and \
+                    not any(w.get('heading') or any(re.fullmatch(r'Total:?', t['t']) for t in w['text']) for w in grp):
+                break
+        else:
+            continue
+        v['text'] = [t for t in v['text'] if t is not ans[k] and t is not ans[k + 1]]
+        for w in grp:                                  # the brace: tall stroked pieces in the answer column
+            w['lines'] = [l for l in w['lines'] if not (l.get('stroke') and not l.get('fill') and (lambda b: b is not None
+                          and Lq < b[0] and b[2] < Mx and b[3] - b[1] > 0.4 * w['h'])(num_bb(l)))]
+        for w in grp[:-1]:
+            w['mjoin'] = True
+        n += 1
+    return n
+
 
 
 def _shift_path(d, dx):
@@ -366,9 +404,44 @@ def _mnorm(t):
     t = re.sub(r'\[(\d{1,2})\]', r'\1', t)
     t = re.sub(r'\s(?:[ABCM]\d{1,2})(?=\s|$)', '', t)      # a mark code sits in the Marks column, not in the answer text
     toks = t.split()
-    while toks and (toks[0] in ('&', '-', '\u2013', 'and', ',') or re.fullmatch(r'\((?:[a-hj-p]|[ivx]{1,4})\)([-\u2013]\((?:[a-hj-p]|[ivx]{1,4})\))?,?', toks[0])):
+    while toks and (toks[0] in ('&', '-', '\u2013', 'and', ',') or (toks[0] == 'to' and len(toks) > 1 and toks[1].startswith('(')) or re.fullmatch(r'\((?:[a-hj-p]|[ivx]{1,4})\)([-\u2013]\((?:[a-hj-p]|[ivx]{1,4})\))?,?', toks[0])):
         toks = toks[1:]
     return re.sub(r'\s+', ' ', ' '.join(toks)).strip()
+
+def _merge_headings(out, L, M):
+    """A heading without a mark ('trace:', 'Table:', 'Graph:') printed as a row of its own, above the row of the same
+    part (Cambridge prints '4  trace:' and '(a) normal at 90°' on two rows): it goes on top of that row - never a row
+    with an empty Marks cell (Dhruv, round 26, MS_TABLE_RULES 20)."""
+    LH = 12.6
+    i = 0
+    while i < len(out) - 1:
+        v, n_ = out[i], out[i + 1]
+        ans = [t for t in v['text'] if L < t['x'] < M]
+        marks = [t for t in v['text'] if t['x'] >= M]
+        labs = [t for t in v['text'] if t['x'] <= L]
+        n_labs = [t for t in n_['text'] if t['x'] <= L]
+        txt = ' '.join(t['t'] for t in sorted(ans, key=lambda t: t['x']))
+        if ans and not marks and len({round(t['y']) for t in ans}) == 1 and re.fullmatch(r'[A-Za-z][A-Za-z ]{1,24}:', txt) \
+                and not v.get('lines_extra') and (not n_labs or [t['t'] for t in n_labs] == [t['t'] for t in labs]):
+            y0 = ans[0]['y']
+            m_ = {'src': n_['src'], 'w': n_['w'], 'h': round(n_['h'] + LH, 2),
+                  'text': labs + [dict(t, y=round(t['y'] - y0 + 14.0, 2)) for t in ans]
+                          + [dict(t, y=round(t['y'] + LH, 2)) for t in n_['text'] if t['x'] > L],
+                  'lines': [_rect(b_[0], 0, b_[2], n_['h'] + LH, l.get('fill', FRAME)) if (b_ := MP._bbox(l['d'])) and b_[2] - b_[0] < 2
+                            and b_[3] - b_[1] >= n_['h'] - 1 else dict(l, d=_map_path(l['d'], lambda x: x, lambda y: y + LH))
+                            for l in n_['lines']],          # column rules run the whole new height
+                  'figs': [dict(f, y=f['y'] + LH) for f in n_.get('figs', [])],
+                  'glyphs': [dict(g, y=g['y'] + LH) for g in n_.get('glyphs', []) or []]}
+            for k in n_:
+                if k not in m_:
+                    m_[k] = n_[k]
+            m_['cont'] = v.get('cont', False)
+            out[i:i + 2] = [m_]
+            continue
+        i += 1
+    return out
+
+
 
 def _old_rows(units, q, L=44.0, M=W - 44.0):
     """Old portrait mark schemes (up to 2016 FM: no table, 'n (a) answer ... B1'): put them in OUR table, like every
@@ -477,6 +550,8 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
     units = merged
     state = {'l': None, 'r': None}
     MAPQ = MS_MAP.get(q['id']) if pre09 else None   # Dhruv round 24: rows assigned to the paper's parts by reading them
+    if MAPQ is not None:                             # '@original': Cambridge's own grouping kept on purpose (round 26)
+        MAPQ = [e for e in MAPQ if not e[0].startswith('@')]
     map_i = [0]
     map_used = set()
     norm = lambda x: re.sub(r'\s+', ' ', x).strip()
@@ -588,8 +663,8 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
             labs = lead_labels(lw)
             if MAPQ is not None:                      # mapped question: printed labels ignored, rows start where the map says
                 body_l = [t for t in lw if t not in labs]
-                while body_l and (body_l[0]['t'] in ('&', '–', '-', 'and', ',') or re.fullmatch(r'\((?:[a-hj-p]|[ivx]{1,4})\)([–-]\((?:[a-hj-p]|[ivx]{1,4})\))?', body_l[0]['t'])) \
-                        and len(body_l) > 1 and (body_l[0]['t'] != 'and' or re.fullmatch(r'\(.*\)', body_l[1]['t'])):
+                while body_l and (body_l[0]['t'] in ('&', '–', '-', 'and', 'to', ',') or re.fullmatch(r'\((?:[a-hj-p]|[ivx]{1,4})\)([–-]\((?:[a-hj-p]|[ivx]{1,4})\))?', body_l[0]['t'])) \
+                        and len(body_l) > 1 and (body_l[0]['t'] not in ('and', 'to') or re.fullmatch(r'\(.*\)', body_l[1]['t'])):   # '(b) to (d)' (round 26)
                     body_l = body_l[1:]               # '& (ii) h value': the rest of a printed label
                 txt_ = norm(' '.join(t['t'] for t in body_l if t.get('s', 11) >= 9 or not re.fullmatch(r'[\d\w]{1,2}', t['t'])))   # sub/superscripts out
                 if not body_l or all(t['t'] in ('&', '–', '-', 'and', ',') or re.fullmatch(r'[,(].*\)?,?', t['t']) for t in body_l):
@@ -635,6 +710,28 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
             elif labs or not segs:
                 segs.append({'y0': y, 'labs': labs, 'lines': []})
             segs[-1]['lines'].append(lw)
+        if pre09:
+            # Dhruv, round 26: '1/u' printed as a fraction - the numerators ('1  1') and a superscript ('3' of cm3) are
+            # a text line of their own just above the line they belong to; when a new row starts at that line, they
+            # went to the row above. They join the line below them.
+            size_ = lambda lw_: max(lw_, key=lambda t: t.get('s', 11))['y']
+            orphan_ = []
+            for i_ in range(1, len(segs)):
+                a_, b_ = segs[i_ - 1], segs[i_]
+                lone_ = len(a_['lines']) == 1 and not a_.get('forced') and not a_['labs']   # the unit starts with them
+                if (len(a_['lines']) < 2 and not lone_) or not b_['lines']:
+                    continue
+                th_ = a_['lines'][-1]; fl_ = b_['lines'][0]
+                xs_ = [t['x'] for t in fl_ if not in_marks(t, u)]
+                if xs_ and all(len(t['t'].strip()) <= 3 and not in_marks(t, u) for t in th_) and \
+                        0 < size_(fl_) - size_(th_) < 9.5 and min(t['x'] for t in th_) >= min(xs_) - 2:
+                    b_['lines'][0] = fl_ + th_
+                    a_['lines'].pop()
+                    if not a_['lines']:
+                        orphan_.append(i_ - 1)
+            segs = [sg_ for k_, sg_ in enumerate(segs) if k_ not in orphan_]
+            for sg_ in segs:                             # a stray '_' left at the end of a question (2012 ON 21 q12)
+                sg_['lines'] = [lw_ for lw_ in sg_['lines'] if not all(re.fullmatch(r'_+', t['t'].strip()) for t in lw_ if t['t'].strip())] or sg_['lines']
         for sg in segs:
             extra_lab = ''
             rng = None
@@ -797,10 +894,15 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                 bb = MP._bbox(l['d']) or ((min(pts_[0::2]), min(pts_[1::2]), max(pts_[0::2]), max(pts_[1::2])) if len(pts_) >= 4 else None)
                 if bb is None or (min(bb[2] - bb[0], bb[3] - bb[1]) <= 1.0 and (bb[2] - bb[0] > 0.8 * u['w'] or bb[3] - bb[1] > 0.8 * u['h'])):
                     continue                          # the old frame of the row: ours instead
-                if pre09 and bb[3] - bb[1] < 2 and bb[2] - bb[0] < 30:
-                    # a short bar just under a word ('±' printed '+' over a bar, round 25): it goes with the line it is under
-                    own_ = [k_ for k_, sg_ in enumerate(segs) for lw_ in sg_['lines'] for t in lw_
-                            if 0 <= bb[1] - t['y'] <= 5 and t['x'] - 1 <= bb[0] and bb[2] <= t['x'] + t['w'] + 1]
+                if pre09 and bb[3] - bb[1] < 2 and bb[2] - bb[0] < 0.5 * u['w']:
+                    # a bar just under words ('±' printed '+' over a bar, round 25; the underline of 'correctly', round 26):
+                    # it goes with the line it is under, even when the next row starts right below that line
+                    own_ = []
+                    for k_, sg_ in enumerate(segs):
+                        for lw_ in sg_['lines']:
+                            over_ = [t for t in lw_ if 0 <= bb[1] - t['y'] <= 5 and t['x'] < bb[2] and bb[0] < t['x'] + t['w']]
+                            if over_ and min(t['x'] for t in over_) - 1 <= bb[0] and bb[2] <= max(t['x'] + t['w'] for t in over_) + 1:
+                                own_.append(k_)
                     if own_ and own_[0] != si:
                         continue
                     if not own_ and not mine(bb[1], bb[3]):
@@ -1723,15 +1825,21 @@ def build(q, store):
             Lq_ = float(int(labw + 9))
             first = {'edges': [], 'new_edges': [Lq_, W - 44.0], 'new_w': [Lq_, W - 44.0 - Lq_, 44.0], 'default': True}
             out = _old_rows(units, q, L=Lq_)
+        old_ = int(q['id'].split('_')[1][:4]) < 2013          # round-26 fixes: old papers only (final years never move)
+        if old_:
+            out = _merge_headings(out, first['new_edges'][0], first['new_edges'][1])
         modes = {'old': len(out)}
         hdr = _header_unit({'src': units[0]['src'], 'text': []}, first)
         total_row = _own_total(q['marks'], first, out) if q.get('marks') else None
         out = [hdr] + out + ([total_row] if total_row else [])
+        if old_:
+            _mark_spans(out, first['new_edges'][0], first['new_edges'][1])
         for i, v in enumerate(out[1:], 1):
             _drop_slivers(v)
             _tidy_boxes(v)
             nxt = out[i + 1] if i + 1 < len(out) else None
-            _frame(v, bottom_from=first['new_edges'][0] if nxt is not None and nxt.get('cont') else 0.0)
+            _frame(v, bottom_from=first['new_edges'][0] if nxt is not None and nxt.get('cont') else 0.0,
+                   bottom_to=first['new_edges'][1] if v.get('mjoin') else None)
         return {'w': W, 'h': round(sum(v['h'] for v in out), 2), 'rows': out, 'problems': [], 'modes': modes,
                 'printed_total': None, 'info': {k: first[k] for k in ('edges', 'new_edges', 'new_w')}, 'has_header': True}
     widths = MP.column_widths(units)

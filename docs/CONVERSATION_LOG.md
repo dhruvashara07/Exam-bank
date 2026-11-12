@@ -347,3 +347,22 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - golden: 0 changed cuts. All of 2002-2010 rebuilt: only those 3 questions changed, all improvements.
 - Round 26 published (50 items): the 20 round-25 items, the 3 approved-paper changes, and the 2011-2012
   mark schemes whose rows were split by reading the question. Waiting for Dhruv.
+
+## 2026-11-12 - round 26 answers, fixes, 2011-2012 approved
+- Dhruv: "review is done and if separation is hard then do like original ms but with our proper table layout and this
+  paper 5 has more ms problems so do proper doc update and edge cases and error doc pattern doc pipeline and context
+  and convo update and fix this round". Round 26: 50 items, 38 ok, 12 wrong.
+- His points and what was done:
+  - hard-to-separate practical tables (2009 ON 05 q2, 2011 ON 51 q4, 2012 ON 51 q2, 2011 MJ 52 q1, 2005 MJ 05 q4):
+    Cambridge's grouping kept, our layout inside it - one row per marking point, label shown once, headings on top of
+    the first marked line (MS_TABLE_RULES 20). 2011 ON 52 q4 done the same way without being asked (same pattern).
+  - 2011 MJ 31 q5: brace + 'all 3 B1' -> one merged Marks cell over (a)(i)-(iii), brace and words gone (rule 21).
+  - 2010 MJ 61 q1: four values -> (a)(i)-(iv) rows in order, 'and' dropped (rule 22).
+  - 2011 ON 53 q1: "is that 3 mark for the whole (a)?" - yes: old papers print the block total after the last
+    sub-part. The data now stores it on (a) (rule 23); the question still looks like the paper.
+  - 2011 MJ 62 q4 stray line = the underline of 'correctly' left in the next row; 2012 ON 63 q4 numerators of 1/u
+    in the row above; 2012 ON 21 q12 a stray '_'; 2012 MJ 23 q4 the cliff figure missing its top half (I had wrongly
+    dismissed that crop warning - now: always compare a flagged crop with the page). All fixed in the pipeline.
+- Also found: '≥' printed as a re-encoded '[' (2011 ON 51, 2009 MJ 02, 2010 ON 51) - fixed.
+- 2002-2012 rebuilt; checks 0 blocking; ms_align empty; maps verified; golden 0. All 2002-2012 approved.
+- Next: cleanup, then the MongoDB push.

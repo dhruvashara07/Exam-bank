@@ -121,3 +121,26 @@ Known: 2010 MJ 13, 23, 53 have no mark scheme file at all. MCQ labels cut at the
     This also corrected two approved papers (2005 MJ 05 q4, 2005 ON 05 q3).
 54. Rebuilding single papers with `store.build` and no `store.py dupes <session>` afterwards empties every
     `same_as` list (614 files changed in approved years). -> always run `dupes` for each session touched.
+
+## Round 26 (2011-2012 + round-25 re-checks), Dhruv 2026-11-12: 37 ok, 13 wrong
+55. Splitting a printed group by meaning when the lines do not each mark one part (trace marks, table marks over
+    readings and repeats, 'Both sets of temperatures') = guessing; Dhruv: keep Cambridge's grouping, our layout
+    (MS_TABLE_RULES 20). Sign: you need a label across letters ('2(b)(c)', '4(e)(h)') -> keep the group.
+    (2011 ON 51 q4, 2012 ON 51 q2, 2011 MJ 52 q1, 2009 ON 05 q2, 2011 ON 52 q4, 2005 MJ 05 q4)
+56. A figure crop warning was dismissed after looking at the stored figure alone: it showed a whole-looking
+    picture (a woman, a basket, a cliff) but the man at the top of the cliff was gone (2012 MJ 22/23 q4). Cause:
+    the questions printed BESIDE the figure counted as prose above it, so the crop started under them. The
+    pre-2009 rule for text beside a figure now holds to 2012; a label whose line was read together with that text
+    ('basket of') is taken whole. ALWAYS compare a flagged crop with the page.
+57. An underline under several words ('neatly and correctly') went to the next row when a row started on the
+    line below: it is now owned by the words it is under (2011 MJ 62 q4(b)(v) 'line').
+58. A fraction's numerators ('1  1' of 1/u, 1/v) and a superscript ('3' of cm3) are a text line of their own just
+    above their line; when a mapped row started at that line they stayed in the row above (2012 ON 63 q4: '1 1'
+    left in (a)(iii), the fractions in (b) without numerators). They now join the line below them (pre-2013).
+59. A stray '_' printed at the end of a mark scheme became a row line (2012 ON 21 q12(c)(ii)) -> dropped.
+60. '≥' printed with a re-encoded '[' in a symbol subset (2011 ON 51 'distance [ 5.0cm'): the glyph check now
+    covers brackets too (pre-2013).
+61. 'all 3  B1' + brace: one mark for three parts - shown as one merged Marks cell (MS_TABLE_RULES 21).
+62. The paper's '[3]' after (a)(iv) is the block total of (a): stored on (a) now (MS_TABLE_RULES 23).
+63. Map prefixes and printed order: entries of an '@original' map are still matched in printed order; a heading
+    line ('trace:', 'Table:') starts the row of the first marked line under it, so its entry is the heading.

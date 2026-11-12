@@ -282,6 +282,17 @@ def answer_space(lines, seg):
     }
 
 
+def _beside_part(l, x0, x1, rules):
+    """A text line that runs THROUGH a figure printed beside the question ('basket of' + '(b) Which form of energy ...'
+    read as one line, 2012 MJ 22 q4, round 26): only its part right of the figure is question text, the left part is a
+    label of the figure and must not be kept out of the crop."""
+    if l['x0'] < x1 - 2 and l['x1'] > x1 + 20 and any(r.y0 < l['y1'] and l['y0'] < r.y1 and r.x0 >= x0 - 1 and r.x1 <= x1 + 1
+                                                     for r in rules):
+        return fitz.Rect(x1 + 2, l['y0'], l['x1'], l['y1'])
+    return fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1'])
+
+
+
 def find_figures(doc, seg, lines):
     """Captioned figures (Fig. 1.1 / Table 2.1) inside a segment: band from the prose above to the caption."""
     page = doc[seg['page']]
@@ -446,9 +457,10 @@ def find_figures(doc, seg, lines):
         y0 = min(r.y0 for r in inside); y1 = max(r.y1 for r in inside)
         top_lim = max(seg['y0'], band[0] - 1)
         mg = 80
-        if prose_above and int((re.search(r'/((?:19|20)\d\d)-', doc.name or '') or [0, '9999'])[1]) < 2009 and \
+        if prose_above and int((re.search(r'/((?:19|20)\d\d)-', doc.name or '') or [0, '9999'])[1]) < 2013 and \
                 not any(l['x0'] < x1 - 2 and l['x1'] > x0 + 2 for l in prose_above if l['y1'] > band[0] - 30):
-            top_lim = seg['y0']             # pre-2009: every sentence above sits BESIDE the figure (2008 MJ 02 Fig 4.1, text in a column)
+            top_lim = seg['y0']             # pre-2013: every sentence above sits BESIDE the figure (2008 MJ 02 Fig 4.1, text in a column;
+                                            # 2012 MJ 22/23 q4 the cliff, round 26 - the crop had lost its top half)
             mg = 400                        # a tall figure beside a column of text: grow as far as its ink goes
         elif prose_above and int((re.search(r'/((?:19|20)\d\d)-', doc.name or '') or [0, '9999'])[1]) < 2009:     # pre-2009: a figure printed close under its sentence (thermometer
             top_lim = max(seg['y0'], max(l['y1'] for l in prose_above) - 2.5)   # 2006 MJ 06 q4) may reach into the line's descent
@@ -457,10 +469,16 @@ def find_figures(doc, seg, lines):
             if last['x1'] < x0 - 2 or last['x0'] > x1 + 2:
                 top_lim = seg['y0']
         g = grow_to_ink(page, fitz.Rect(x0, y0, x1, y1), fitz.Rect(max(CONTENT_X0, min(xa, x0)), top_lim, min(CONTENT_X1, max(xb, x1)), min(seg['y1'], band[1] + 1)),
-                        exclude=[fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in prose_above]
+                        exclude=[_beside_part(l, x0, x1, rules) if mg > 80 else fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in prose_above]
                         + ([fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in lines if re.fullmatch(r'\d{1,2}', l['text'].strip()) and l['x0'] < 60]
                            if mg > 80 else []), max_grow=mg)    # the question number beside a tall figure (2008 MJ 02 q4) is not ink of it
         x0, y0, x1, y1 = g.x0, g.y0, g.x1, g.y1
+        if mg > 80:                     # beside a column of text: a label the crop's edge runs through is taken whole
+            for _ in range(2):          # ('basket of' half outside, 2012 MJ 22 q4, round 26 - its line was read together
+                for r in drawings:      # with the question text beside the figure, so it was never inside the band)
+                    if r.x0 < x1 and r.x1 > x0 and (r.x0 < x0 or r.x1 > x1) and r.y0 >= y0 - 1 and r.y1 <= y1 + 1 \
+                            and r.x1 - r.x0 < 120 and r.x0 >= CONTENT_X0:
+                        x0, x1 = min(x0, r.x0), max(x1, r.x1)
         for l in lines:                 # answer lines printed inside the figure ('nebula which contains .......')
             if DOTS.search(l['text']) and l['y0'] >= y0 - 2 and l['y1'] <= y1 + 2 and l['x0'] < x1 and l['x1'] > x0:
                 x0, x1 = min(x0, l['x0']), max(x1, l['x1'])
@@ -571,6 +589,8 @@ def extract(pdf_path, syllabus, year, session, pv):
             q['has_diagram'] = bool(q['figures']) or has_drawings(doc, q)
         else:
             q['type'] = 'structured'
+            if int(year) < 2013:
+                block_marks(q)
             q['marks'] = sum_marks(q)
             if q['marks'] == 0 and not q.get('parts') and q.get('total_marks'):
                 q['marks'] = q['total_marks']        # single-part question marked only by '[Total: n]'
@@ -601,6 +621,19 @@ def has_drawings(doc, q):
             if r.y0 >= s['bbox'][1] and r.y1 <= s['bbox'][3] and not any(r.intersects(t) for t in text) and r.width * r.height > 40:
                 return True
     return False
+
+
+def block_marks(node):
+    """Old papers print one bracket for a whole block of sub-parts, after the last one: '(a)(i) ... (ii) ... (iii) ...
+    (iv) Calculate the density. [3]' - the 3 marks are for (a), not for (a)(iv) (Dhruv, round 26, 2011 ON 53 q1).
+    When every sub-part but the last has no mark, the last one's marks go to the part itself (the total is unchanged)."""
+    kids = node.get('parts', [])
+    for k in kids:
+        block_marks(k)
+    if 'id' not in node and len(kids) >= 2 and all(not k.get('parts') for k in kids) \
+            and all(not k.get('marks') for k in kids[:-1]) and kids[-1].get('marks'):
+        node['marks'] = node.get('marks', 0) + kids[-1]['marks']
+        kids[-1]['marks'] = 0
 
 
 def sum_marks(node):

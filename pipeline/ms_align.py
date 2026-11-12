@@ -72,9 +72,13 @@ def mismatch(qid):
     qn = str(q['number'])
     bad = [l for l in labs if l != qn and not all(p in allp for p in parts_of(l))]   # a row labelled with the bare number: a note for all parts
     import json as _j
-    mapped = qid in _j.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'ms_map.json')))
+    mp_ = _j.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'ms_map.json')))
+    mapped = qid in mp_
+    original = mapped and any(e[0] == '@original' for e in mp_[qid])
     bad += [] if mapped else [l + '(parent)' for l in labs if all(p in allp for p in parts_of(l)) and not all(p in leafset for p in parts_of(l))]   # Dhruv r24: split into subparts
-    bad += [p for p, m, _ in leaves if m and not any(p == c or p.startswith(c + '(') or c.startswith(p + '(') for c in covered)]
+    if not original:          # '@original' (Dhruv round 26): Cambridge's grouping kept because the marks cannot be separated;
+        # a block total printed on one part ('(g) ... [3]' for the table of (g)-(k)) need not have its own row then
+        bad += [p for p, m, _ in leaves if m and not any(p == c or p.startswith(c + '(') or c.startswith(p + '(') for c in covered)]
     return bad
 
 

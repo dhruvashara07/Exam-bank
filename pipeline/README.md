@@ -21,6 +21,11 @@
 | `claude_check.py` | Records Claude's check per paper → `review/claude/` |
 | `batch.py` | Upload batches and the stage of every paper (`review/batches/`) |
 | `review_round.py` | Builds a review round for Dhruv's review page; closes it with his answers (`review/rounds/`) |
+| `ms_align.py`, `ms_map.json` | Old mark schemes (2002-2012): rows by meaning. `ms_align.py list/dump`; `ms_map.json` = per question
+  `[prefix, label]` row starts in printed order (`[prefix, label, word, next label, [drop]]` splits one line in two;
+  a first entry `["@original", ""]` keeps Cambridge's grouping on purpose, MS_TABLE_RULES 20). Prefixes are matched
+  against our table's text (`ms_layout._mnorm`); `MSDEBUG=1` prints every line and the entry it matched. |
+| `ms_grid.py`, `fig_grid.py` | Grids of our mark-scheme tables / figure crops for Claude's own visual check |
 | `raw_store.py` | Original PDFs in GitHub Releases (`raw/manifest.json`): upload / fetch |
 | `sync_cloudinary.py`, `sync_mongo.py` | Run in GitHub Actions (`bank.yml`, `upload.yml`); Mongo sync writes `review/published.json` |
 

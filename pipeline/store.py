@@ -37,6 +37,12 @@ TICKS = {('wingdings', 0xFC): '✓', ('wingdings', 0xF0FC): '✓', ('wingdings',
 _TRACE = {}
 
 
+
+def _old_doc(doc):
+    """A paper from before 2013 (fixes for the old layouts are kept there, so final years never move)."""
+    m = re.search(r'/((?:19|20)\d\d)-', getattr(doc, 'name', '') or '')
+    return bool(m) and int(m.group(1)) < 2013
+
 def dingbat_family(font):
     f = font.lower()
     return 'wingdings' if 'wingding' in f else 'zapf' if ('zapf' in f or 'dingbat' in f) else None
@@ -162,7 +168,8 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
                     x, y = tp(m, *chars[0]['origin'])
                     w = {'t': ''.join(unpua(c['c']) for c in chars), 'x': round(x - ox, 2), 'y': round(y - oy, 2),
                          'w': round(span_len(chars, l['dir']), 2), 's': round(s['size'], 2), 'f': FAM[family(font)]}
-                    if len(w['t']) == 1 and w['t'].isalpha() and re.search(r'TT[0-9A-F]+o00$', font):
+                    if len(w['t']) == 1 and (w['t'].isalpha() or (w['t'] in '[]{}<>\\^_|~`@#' and _old_doc(doc))) and re.search(r'TT[0-9A-F]+o00$', font):
+                        # (a bracket too: '[' draws '≥' in 2011 ON 51's symbol subset, round 26)
                         from store_text import glyph_remap   # a re-encoded symbol ('R' drawn as '=', 2014 MJ 63)
                         g_ = glyph_remap(page, font, w['t'], chars[0]['bbox'], s['size'])
                         if g_ != w['t']:

@@ -2,15 +2,13 @@
 
 When: a new chat when this one gets long (about one 3-year batch per chat), not a fixed rule.
 
-## Prompt to paste (next: round 26 answers, then cleanup + MongoDB push)
-> Exam-bank (repo dhruvashara07/Exam-bank). Start with `git pull --rebase`, then read docs/AGENT_GUIDE.md (vision,
-> quality bar, how I work), CLAUDE.md (hard rules), docs/PLAYBOOK.md (steps), docs/ERROR_PATTERNS.md (never repeat),
-> docs/MS_TABLE_RULES.md, PROGRESS.md (top) and the last two days of docs/CONVERSATION_LOG.md.
-> State: 2013-2026 final in git; 2002-2010 approved; 2011-2012 built and checked, round 26 open (my answers are in
-> collection feedback_r26 on the review page).
-> Task: read my round-26 answers, fix every pattern in the pipeline, rebuild once, re-check (ms_align list empty,
-> ms_sweep, golden), close round 26, approve 2011-2012. Then cleanup (unneeded files in git/Cloudinary) and the
-> MongoDB push. Keep messages short and tell me when you need my input.
+## Prompt to paste (next: cleanup, then the MongoDB push)
+> Exam-bank (repo dhruvashara07/Exam-bank). Start with `git pull --rebase`, then read docs/AGENT_GUIDE.md, CLAUDE.md,
+> docs/PLAYBOOK.md, docs/ERROR_PATTERNS.md, PROGRESS.md (top) and the last two days of docs/CONVERSATION_LOG.md.
+> State: every year 2002-2026 is approved (2002-2012 on 2026-11-12, round 26 closed).
+> Task: cleanup first (list what is unneeded in git and Cloudinary, show me the list before deleting anything;
+> never delete original PDFs), then the one MongoDB + Cloudinary push through the GitHub Action (re-enable the paused
+> steps in bank.yml), then check what landed. Keep messages short and tell me when you need my input.
 
 General form for later tasks: same prompt, with "Task: <e.g. cleanup + MongoDB push>".
 

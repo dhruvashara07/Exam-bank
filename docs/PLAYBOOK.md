@@ -18,13 +18,18 @@ GitHub builds, 3 years per batch, a new chat after each batch (long chats cost m
    both, write the map in pipeline/ms_map.json, rebuild those papers, list again until empty. Then look at a few
    with `pipeline/ms_grid.py` (our tables as students see them). On the grid check for every question: rows in the
    paper's order, no part twice, no combined part that could be split (MS_TABLE_RULES 18), no gaps or stray bars,
-   every line with a mark has its mark. Rebuild with JOBS=1 and check `git status` shows the papers changed (a JOBS=4 run left some unchanged).
+   every line with a mark has its mark. When a line cannot be given ONE part without guessing, keep Cambridge's
+   printed group instead (MS_TABLE_RULES 20) - one row per marking point under the group label.
+   After mapping, VERIFY every mapped question: its row labels must equal its map's labels (a prefix that
+   matched the wrong line passes ms_align) - see ERROR_PATTERNS 52. Rebuild with JOBS=1 and check `git status` shows the papers changed (a JOBS=4 run left some unchanged).
 6. Golden: fetch golden PDFs, rebuild them, `golden.py check` = 0 changed cuts; `git status` shows no store/bank change
    outside the batch.
 7. Review round: `review_round.py new <n> <ids> --sample 1 --max 90 --title ... --intro ...`;
    page folder `out/review/page/` (`review_page.py add <n> <title>`); publish with publish_files to the review page
    (slug b3c8a710-c92b-4a33-95b2-f7eba1bc0031, portal.json review_url) in mode replace (closed rounds go).
    Same link every time: https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e
+7b. Figure crop warnings: compare the stored figure with the PAGE (orig), never judge the crop alone - a crop
+   missing its top half still looks like a whole picture (ERROR_PATTERNS 56).
 8. Dhruv answers; read collection `feedback_r<n>` (db_list). Add every new pattern to ERROR_PATTERNS.md and a rule to
    MS_TABLE_RULES.md; fix; rebuild once; re-sweep; `review_round.py close <n> <answers.json>`.
 9. Approve: `approve.py <ids> --note "..."` (a year counts as approved once its round is done and wrong items are fixed).
