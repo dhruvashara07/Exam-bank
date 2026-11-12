@@ -26,6 +26,7 @@
   a first entry `["@original", ""]` keeps Cambridge's grouping on purpose, MS_TABLE_RULES 20). Prefixes are matched
   against our table's text (`ms_layout._mnorm`); `MSDEBUG=1` prints every line and the entry it matched. |
 | `ms_grid.py`, `fig_grid.py` | Grids of our mark-scheme tables / figure crops for Claude's own visual check |
+| `cloudinary_admin.py` | Cloudinary housekeeping via `.github/workflows/cloudinary.yml`: `list` (read only) / `delete <prefix> <prefix>` (only under question_bank/) |
 | `raw_store.py` | Original PDFs in GitHub Releases (`raw/manifest.json`): upload / fetch |
 | `sync_cloudinary.py`, `sync_mongo.py` | Run in GitHub Actions (`bank.yml`, `upload.yml`); Mongo sync writes `review/published.json` |
 

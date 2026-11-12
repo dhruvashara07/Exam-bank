@@ -366,3 +366,13 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - Also found: '≥' printed as a re-encoded '[' (2011 ON 51, 2009 MJ 02, 2010 ON 51) - fixed.
 - 2002-2012 rebuilt; checks 0 blocking; ms_align empty; maps verified; golden 0. All 2002-2012 approved.
 - Next: cleanup, then the MongoDB push.
+
+## 2026-11-12 (later) - cleanup
+- Dhruv: no MongoDB push yet; first cleanup in git and Cloudinary (check nothing needed is deleted), not pushing to
+  Cloudinary while the data size is unknown; whole IGCSE Physics is done in its full form, with consistency; he gives the
+  next plan after the cleanup.
+- Git: data is lean (store 22k files, bank 12.7k, every store question has its bank record, no stale review records).
+  Removed: 49 store files nothing refers to, pipeline/strip_svgs.py (one-off, done). History (.git ~950 MB) can only
+  shrink by rewriting history + force-push - not done (CLAUDE.md: never force-push); asked Dhruv.
+- Cloudinary listed (new workflow cloudinary.yml, read only): 38,299 old-format SVGs, 1.62 GB, Free plan at 219% of its
+  credits. Asked Dhruv before deleting (the 66 papers in MongoDB point at them).

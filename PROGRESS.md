@@ -3,8 +3,12 @@
 Read this first in every session. Update it before ending a session.
 
 ## 2002-2012 (started 2026-11-09, batches of 3 years) - why: docs/AGENT_GUIDE.md, how: docs/PLAYBOOK.md, mistakes: docs/ERROR_PATTERNS.md
-- NEXT: ALL of 2002-2012 approved (2026-11-12). Next: cleanup (unneeded files in git / Cloudinary), then the one
-  MongoDB + Cloudinary push via the Action (prompt: docs/NEXT_CHAT.md).
+- NEXT: cleanup (2026-11-12, Dhruv: no MongoDB/Cloudinary push yet). Git: 49 orphan store files (glyphs/figures no
+  JSON refers to) and the finished one-off pipeline/strip_svgs.py removed. Cloudinary (listed by the new read-only
+  workflow cloudinary.yml): only question_bank/, 38,299 SVGs, 1.62 GB, uploaded 2026-10-29/30 = the OLD exact-SVG
+  pieces of 2015-2026 (removed from the repo 2026-11-02); the current data uses none of them. Free plan: credits 54.7 of
+  25 (219%). Waiting for Dhruv's OK to delete question_bank/ (it breaks the images of the 66 papers synced to MongoDB on
+  2026-10-30, old format). Then Dhruv gives the next plan.
 - 2026-11-12: round 26 answered (50 items, 12 wrong), all fixed, 2002-2012 rebuilt twice and re-checked: 0 blocking,
   `ms_align list` empty, every mapped question's rows = its map (now for ALL 205 maps: 3 old approved maps whose entries
   sat on superscript lines fixed - 2004 ON 05 q4, 2006 MJ 05 q4, 2009 ON 06 q1), golden 0 changed cuts, nothing outside
