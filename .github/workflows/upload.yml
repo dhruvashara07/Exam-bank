@@ -97,4 +97,5 @@ jobs:
         if: ${{ success() && github.event_name == 'push' }}
         run: |
           if [ -e /tmp/keep_branch ]; then echo "branch kept (unrecognised files)"; exit 0; fi
+          case "${GITHUB_REF_NAME}" in store*) echo "store-* branch kept (more uploads may follow; Claude deletes it after checking)"; exit 0 ;; esac
           git push origin --delete "${GITHUB_REF_NAME}" || echo "::warning::could not delete branch ${GITHUB_REF_NAME}"
