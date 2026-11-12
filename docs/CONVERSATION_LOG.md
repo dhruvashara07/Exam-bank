@@ -376,3 +376,5 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   shrink by rewriting history + force-push - not done (CLAUDE.md: never force-push); asked Dhruv.
 - Cloudinary listed (new workflow cloudinary.yml, read only): 38,299 old-format SVGs, 1.62 GB, Free plan at 219% of its
   credits. Asked Dhruv before deleting (the 66 papers in MongoDB point at them).
+- Dhruv chose: delete all of Cloudinary's question_bank/ (done: 38,299 files, account empty) and leave the git
+  history as it is. Next: Dhruv's plan.

@@ -2,7 +2,7 @@
 
 IMPORTANT: docs/CONVERSATION_LOG.md holds the dated record of what Dhruv said and decided in each session. Read it, and append to it at the end of every session.
 
-STATUS 2026-11-12: 2013-2026 final, 2002-2012 approved (all years done), next: cleanup + the MongoDB push (PROGRESS.md). The hourly backlog task is switched OFF (paused by Dhruv) until format v5
+STATUS 2026-11-12: 2013-2026 final, 2002-2012 approved (all years done), cleanup done (Cloudinary empty), next: Dhruv's plan (PROGRESS.md). The hourly backlog task is switched OFF (paused by Dhruv) until format v5
 (docs/V5_SPEC.md) is approved and every year rebuilt. Its last run's work is in git.
 
 ## Who and what
