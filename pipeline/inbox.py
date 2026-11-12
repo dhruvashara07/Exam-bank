@@ -3,7 +3,8 @@
     0625_s25_qp_41.pdf  ->  raw/0625/2025-MJ/qp_41.pdf      (m = Feb/Mar, s = May/Jun, w = Oct/Nov)
     0625_w25_ms_42.pdf  ->  raw/0625/2025-ON/ms_42.pdf
     0625_s25_er.pdf     ->  raw/0625/2025-MJ/er.pdf           (examiner report, kept for analysis)
-Prints the papers to (re)process, one per line, e.g. '0625/2025-MJ/41'. Unrecognised files stay in inbox/.
+Files may sit in sub-folders of inbox/. Prints the papers to (re)process, one per line, e.g. '0625/2025-MJ/41'.
+Unrecognised files stay in inbox/.
 """
 import os, re, shutil, sys
 
@@ -17,8 +18,10 @@ NAME = re.compile(r'(\d{4})[_\- ]?([msw])(\d\d)[_\- ]?(qp|ms|er)(?:[_\- ]?(\d\d)
 def main():
     inbox = os.path.join(ROOT, 'inbox')
     todo = set()
-    for name in sorted(os.listdir(inbox)) if os.path.isdir(inbox) else []:
-        m = NAME.search(name)
+    files = sorted(os.path.relpath(os.path.join(d, f), inbox) for d, _, fs in os.walk(inbox) for f in fs) \
+        if os.path.isdir(inbox) else []          # sub-folders allowed (e.g. a whole '2024-may-june' folder dropped in)
+    for name in files:
+        m = NAME.search(os.path.basename(name))
         if not name.lower().endswith('.pdf') or not m:
             continue
         syl, ses, yy, kind, pv = m.group(1), m.group(2).lower(), m.group(3), m.group(4).lower(), m.group(5)

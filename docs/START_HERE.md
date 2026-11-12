@@ -18,7 +18,7 @@ Only then start. Skip the other docs unless a step points to them.
 | 0 | start record, fetch PDFs | Claude | `start <batch>` |
 | 1 | build on GitHub (bank.yml, sessions input) | GitHub | `phase <b> build start/end`, `gh <b> <run ids>` |
 | 2 | pass 1: checks, every flag, pictures, fix the pipeline, rebuild once | Claude | `phase <b> claude1 ...`, `error ...` |
-| 3 | pass 2: re-check after the rebuild, rows by meaning, grids, build the review round | Claude | `phase <b> claude2 ...` |
+| 3 | pass 2: re-check after the rebuild, rows by meaning, grids, logic check (does each answer fit its question; solve it when in doubt), build the review round | Claude | `phase <b> claude2 ...` |
 | 4 | review round on the same review page; tell Dhruv | Dhruv | `phase <b> review ...` (not counted) |
 | 5 | fix what he marked wrong, rebuild, approve, docs, push | Claude | `phase <b> fix ...`, `tokens`, `report` |
 

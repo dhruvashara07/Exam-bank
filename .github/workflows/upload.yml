@@ -50,7 +50,7 @@ jobs:
           ls inbox/ || true
           python3 pipeline/inbox.py > /tmp/todo.txt 2> /tmp/inbox_err.txt || true
           cat /tmp/inbox_err.txt
-          left=$(ls inbox 2>/dev/null | grep -iv '^readme' | grep -ic '\.pdf$' || true)
+          left=$(find inbox -type f -iname '*.pdf' 2>/dev/null | grep -ic '\.pdf$' || true)
           if [ "$left" != "0" ]; then echo "::warning::$left PDF(s) in inbox/ have names the filer does not understand: kept on branch ${GITHUB_REF_NAME}"; touch /tmp/keep_branch; fi
           python3 pipeline/raw_store.py upload
           cp raw/manifest.json /tmp/manifest.incoming.json

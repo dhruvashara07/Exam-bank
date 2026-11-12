@@ -43,6 +43,11 @@ If the Action fails or for a few papers: build locally `JOBS=4 python3 pipeline/
    pipeline/ms_map.json, rebuild those papers, list again. `ms_align.py verify` must print 0. When a line cannot be
    given ONE part without guessing keep Cambridge's group (MS_TABLE_RULES 20).
 3. Look at our tables as a student: `pipeline/ms_grid.py` (order, no part twice, splits, gaps, marks, fonts).
+3b. Logic check (Dhruv 2026-11-12): read each question with its mark-scheme rows as a teacher would. Does every
+   answer belong to the part it sits under (values, units, what the part asks)? Do the marks add up? Is the maths
+   text (LaTeX) the same maths as the page? When something looks doubtful, work the question out yourself to be
+   sure (only then, not every question). Wrong -> fix the pattern in the pipeline; still unsure -> put it in the round
+   with a note.
 4. Review round: `python3 pipeline/review_round.py new <n> <ids> --sample 1 --max 90 --title ... --intro ...`
    (flagged items + a few random ones per paper type; aim: short); page folder `out/review/page/`
    (`review_page.py add <n> <title>`); publish with publish_files to the review page (slug
