@@ -1,0 +1,43 @@
+# Cloudinary housekeeping, started by hand (Actions -> Cloudinary -> Run workflow) or by Claude through the API.
+#   mode=list    read only: usage, every folder, file counts and sizes (artifact cloudinary-list + annotations)
+#   mode=delete  deletes everything under <prefix>/ ; <confirm> must repeat <prefix>; only question_bank/... allowed
+name: Cloudinary
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'list or delete'
+        default: 'list'
+      prefix:
+        description: 'delete: folder to empty (question_bank or question_bank/...)'
+        default: ''
+      confirm:
+        description: 'delete: type the prefix again'
+        default: ''
+jobs:
+  cloudinary:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
+      CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+      CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+      CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          sparse-checkout: pipeline
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+      - name: list
+        if: ${{ inputs.mode == 'list' }}
+        run: python3 pipeline/cloudinary_admin.py list
+      - name: delete
+        if: ${{ inputs.mode == 'delete' }}
+        run: python3 pipeline/cloudinary_admin.py delete "${{ inputs.prefix }}" "${{ inputs.confirm }}"
+      - uses: actions/upload-artifact@v4
+        if: ${{ inputs.mode == 'list' }}
+        with:
+          name: cloudinary-list
+          path: out/cloudinary_list.json
