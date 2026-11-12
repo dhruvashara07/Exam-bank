@@ -21,7 +21,7 @@ GitHub builds, 3 years per batch, a new chat after each batch (long chats cost m
    every line with a mark has its mark. When a line cannot be given ONE part without guessing, keep Cambridge's
    printed group instead (MS_TABLE_RULES 20) - one row per marking point under the group label.
    After mapping, VERIFY every mapped question: its row labels must equal its map's labels (a prefix that
-   matched the wrong line passes ms_align) - see ERROR_PATTERNS 52. Rebuild with JOBS=1 and check `git status` shows the papers changed (a JOBS=4 run left some unchanged).
+   matched the wrong line passes ms_align): `python3 pipeline/ms_align.py verify` must print 0 - ERROR_PATTERNS 52. Rebuild with JOBS=1 and check `git status` shows the papers changed (a JOBS=4 run left some unchanged).
 6. Golden: fetch golden PDFs, rebuild them, `golden.py check` = 0 changed cuts; `git status` shows no store/bank change
    outside the batch.
 7. Review round: `review_round.py new <n> <ids> --sample 1 --max 90 --title ... --intro ...`;

@@ -93,6 +93,23 @@ if __name__ == '__main__':
                 b = mismatch(qid)
                 if b:
                     print(qid, ' '.join(b))
+    elif cmd == 'verify':      # every mapped question: its rows carry exactly the labels of its map (ERROR_PATTERNS 52)
+        import json as _j
+        mp = _j.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'ms_map.json')))
+        bad = 0
+        for qid in sorted(mp):
+            try:
+                q, sq = load(qid)
+            except Exception:
+                continue
+            if not sq or not sq.get('ms_p') or sq.get('stub'):
+                continue
+            got = {l for l, _ in ms_rows(sq) if l}
+            want = {l for e in mp[qid] if not e[0].startswith('@') for l in [e[1]] + ([e[3]] if len(e) > 3 else [])}
+            if got != want:
+                bad += 1
+                print(qid, 'rows', sorted(got), 'map', sorted(want))
+        print(bad, 'mapped questions differ from their map')
     else:
         for qid in args:
             q, sq = load(qid)

@@ -113,7 +113,7 @@ Known: 2010 MJ 13, 23, 53 have no mark scheme file at all. MCQ labels cut at the
     '[1]' not '1', mark codes (B1, M1) have moved to the Marks column, the rest of a printed label
     ('& (ii)', ', (b)') is stripped, and a line of only sub/superscripts ('3', '240 240') is dropped.
     -> `ms_layout._mnorm` ignores those differences; never take a prefix from a sub/superscript-only line,
-    and never cut a prefix in the middle of a word or code. Check: `/tmp`-style verifier - every mapped
+    and never cut a prefix in the middle of a word or code. Check: `ms_align.py verify` - every mapped
     question's row labels must equal the labels in its map entry (ms_align list alone does not catch a
     prefix that matched the wrong line).
 53. Mapped rows were sorted by the letter only, so a mark scheme printing '(ii)' before '(i)' kept the wrong
