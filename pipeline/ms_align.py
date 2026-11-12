@@ -6,7 +6,7 @@ Mapping (by reading the question and the answer, Dhruv round 24): pipeline/ms_ma
     then ignored for that question. Checked by `list` again (must be empty) before a review round."""
 import sys, os, re, json, glob
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import store
+import store, subjects
 
 
 def qp_leaves(q):
@@ -86,10 +86,10 @@ if __name__ == '__main__':
     cmd, args = sys.argv[1], sys.argv[2:]
     if cmd == 'list':
         for ses in args:
-            for f in sorted(glob.glob(f'store/cambridge-igcse/0625-physics/{ses}/p*/q*.json')):
-                if re.search(r'/p(01|1\d)/', f):
+            for f in sorted(glob.glob(f"store/cambridge-igcse/{subjects.subject(subjects.current())['slug']}/{ses}/p*/q*.json")):
+                if subjects.mcq_dir(subjects.current(), f.split('/')[4][1:]):
                     continue
-                a = f.split('/'); qid = '0625_' + a[3].replace('-', '') + '_' + a[4][1:] + '_' + os.path.basename(f)[:-5]
+                a = f.split('/'); qid = subjects.current() + '_' + a[3].replace('-', '') + '_' + a[4][1:] + '_' + os.path.basename(f)[:-5]
                 b = mismatch(qid)
                 if b:
                     print(qid, ' '.join(b))

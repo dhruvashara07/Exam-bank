@@ -1,13 +1,14 @@
 """Mark-scheme sweep over OUR tables (ms_p) - ERROR_PATTERNS 11-13: python3 pipeline/ms_sweep.py 2005-MJ 2005-ON ..."""
 import sys, re, glob, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import store
+import store, subjects
+SYL = subjects.current(); SLUG = subjects.subject(SYL)['slug']
 bad = []
 for ses in sys.argv[1:]:
-    for f in sorted(glob.glob(f'store/cambridge-igcse/0625-physics/{ses}/p[0-6][2-6]*/q*.json') + glob.glob(f'store/cambridge-igcse/0625-physics/{ses}/p[2-6][1-3]/q*.json')):
-        if re.search(r'/p(01|1\d)/', f):
+    for f in sorted(glob.glob(f'store/cambridge-igcse/{SLUG}/{ses}/p*/q*.json')):
+        if subjects.mcq_dir(SYL, f.split('/')[4][1:]):
             continue                   # multiple choice: no table
-        a = f.split('/'); qid = '0625_' + a[3].replace('-', '') + '_' + a[4][1:] + '_' + os.path.basename(f)[:-5]
+        a = f.split('/'); qid = SYL + '_' + a[3].replace('-', '') + '_' + a[4][1:] + '_' + os.path.basename(f)[:-5]
         sq, _ = store.load(qid)
         if sq.get('stub'):
             continue                   # the same question as another variant (same_as): checked there

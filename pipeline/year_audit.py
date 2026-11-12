@@ -12,7 +12,7 @@ Signals (with what rounds 5-10 taught us about how often each one is a real prob
 """
 import json, os, re, sys, glob, collections
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import paths
+import paths, subjects
 import review_round as RR
 
 
@@ -20,7 +20,7 @@ def audit(sessions):
     out = collections.defaultdict(list)
     for s in sessions:
         sid = s.replace('-', '')
-        for f in sorted(glob.glob(os.path.join(paths.CHECKS, f'0625_{sid}_*.json'))):
+        for f in sorted(glob.glob(os.path.join(paths.CHECKS, f'{subjects.current()}_{sid}_*.json'))):
             d = json.load(open(f))
             for p in d.get('problems', []) + d.get('flags', []):
                 k = p['kind']
@@ -29,10 +29,10 @@ def audit(sessions):
                 if k == 'flag' and re.search(r'no mark scheme for|has no matching part', p['detail']):
                     k = 'msmiss'
                 out[p['id']].append((k, p['detail']))
-        for f in sorted(glob.glob(os.path.join(paths.STORE_CHECKS, f'0625_{sid}_*.json'))):
+        for f in sorted(glob.glob(os.path.join(paths.STORE_CHECKS, f'{subjects.current()}_{sid}_*.json'))):
             for d in json.load(open(f)).get('differ', []):
                 out[d['q']].append(('differs', f"{d['unit']}: {d['missing']}% missing, {d['extra']}% extra"))
-        for qf in sorted(glob.glob(f'store/cambridge-igcse/0625-physics/{s}/p*/q*.json')):
+        for qf in sorted(glob.glob(f"store/cambridge-igcse/{subjects.subject(subjects.current())['slug']}/{s}/p*/q*.json")):
             q = json.load(open(qf))
             if q.get('stub'):
                 continue

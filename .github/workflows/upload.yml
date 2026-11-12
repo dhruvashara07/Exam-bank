@@ -6,9 +6,11 @@ name: Upload batch
 #   2. on main: cuts the papers, runs the automatic checks, records a batch (review/batches/)
 #   3. pushes the result to main, uploads the SVGs to Cloudinary, deletes the upload branch
 # Then the scheduled Claude check looks at the batch, builds a review round, and approves.
+# A branch named store-* (pipeline/store_pdfs.sh) only stores the PDFs: manifest to main, nothing processed
+# (used to load a whole subject before its pipeline is ready, e.g. 0607 maths).
 on:
   push:
-    branches: ['upload**', '*-patch-*', 'patch-*']
+    branches: ['upload**', 'store**', '*-patch-*', 'patch-*']
     paths: ['inbox/**']
   workflow_dispatch:
 
@@ -71,6 +73,11 @@ jobs:
           b.update(a)
           json.dump(dict(sorted(b.items())), open('raw/manifest.json', 'w'), indent=1)
           PY
+          case "${GITHUB_REF_NAME}" in store*)
+            echo "store-only branch: PDFs stored, manifest to main, nothing processed"
+            SKIP_WAIT=1 pipeline/push.sh "Stored PDFs from ${GITHUB_REF_NAME}: $(wc -l < /tmp/todo.txt) papers (not processed)"
+            exit 0 ;;
+          esac
           python3 pipeline/raw_store.py fetch $(cat /tmp/todo.txt)
           python3 pipeline/run.py $(cat /tmp/todo.txt)
           python3 pipeline/checks.py $(cat /tmp/todo.txt)

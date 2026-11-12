@@ -19,10 +19,10 @@ Checks per question (problem kinds):
 """
 import collections, glob, json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import paths
+import paths, subjects
 
 ROOT = paths.ROOT
-STORE = os.path.join(ROOT, 'store', 'cambridge-igcse', '0625-physics')
+STORE = os.path.join(ROOT, 'store', 'cambridge-igcse', subjects.subject(subjects.current())['slug'])
 CODE = re.compile(r'^\(?([ABCM])(\d)\)?$')
 BAD = re.compile(r'(?<![A-Za-z])[æçèöø](?![A-Za-z])|Ã.|â€|�|[-]')
 DOUBLE = re.compile(r'([a-z])\1\1|(?<![a-z])([b-df-hj-np-tv-z])\2(?=[a-z]{3})')   # 'ciir..'-like repeats are caught below
@@ -212,7 +212,7 @@ def main(sessions):
     KNOWN = {w for w, n in allw.items() if n >= 1}          # a word that appears in a question paper is a real word
     verify = collections.defaultdict(list)
     for s in sessions:
-        for vf in glob.glob(os.path.join(ROOT, 'review', 'store', f"0625_{s.replace('-', '')}_*.json")):
+        for vf in glob.glob(os.path.join(ROOT, 'review', 'store', f"{subjects.current()}_{s.replace('-', '')}_*.json")):
             for d in json.load(open(vf)).get('differ', []):
                 verify[d['q']].append(d)
     out, kinds = {}, collections.Counter()

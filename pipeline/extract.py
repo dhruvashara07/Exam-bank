@@ -6,6 +6,7 @@ question (or of a chosen part plus its parent stems) in order reproduces the ori
 layout, answer space included.
 """
 import os, re
+import subjects
 import pymupdf as fitz
 from layout import page_bounds, visible_lines, ink_boxes, label_tokens, ROMAN, LETTERS, CONTENT_X0, CONTENT_X1, row_ink, ink_extent, ZOOM, tight_ink, grow_to_ink
 
@@ -49,18 +50,21 @@ def paper_type_from_cover(cover, paper, old=False):
 
 def paper_meta(doc, syllabus, year, session, pv):
     cover = doc[0].get_text()
-    m = re.search(r'total mark for this paper is (\d+)', cover)
+    total = subjects.total_from_cover(cover, syllabus)
     dur = re.search(r'\n\s*(\d+ hours?(?: \d+ minutes)?|\d+ minutes)\s*\n', cover)
     old = pv[0] == '0'                     # before 2009 one paper per component: 0625/03 (no variant)
     paper, variant = (int(pv[1]), 0) if old else (int(pv[0]), int(pv[1]))
-    ptype = paper_type_from_cover(cover, paper, old)
+    if subjects.is_physics(syllabus):
+        ptype = paper_type_from_cover(cover, paper, old)
+    else:
+        ptype = subjects.maths_paper_type(cover, paper)
     return {
-        'syllabus': syllabus, 'subject': 'Physics', 'board': 'CAIE', 'exam': 'IGCSE',
+        'syllabus': syllabus, 'subject': subjects.subject(syllabus)['subject'], 'board': 'CAIE', 'exam': 'IGCSE',
         'year': year, 'session': session, 'season': SESSION_NAMES[session],
         'paper': paper, 'variant': variant, 'paper_code': f'{syllabus}/{pv}',
         'paper_type': ptype, 'is_mcq': ptype.startswith('mcq'),
-        'total_marks': int(m.group(1)) if m else STANDARD_TOTAL.get(ptype),
-        'total_marks_source': 'cover' if m else 'standard',
+        'total_marks': total if total else STANDARD_TOTAL.get(ptype),
+        'total_marks_source': 'cover' if total else ('standard' if ptype in STANDARD_TOTAL else 'sum'),
         'duration': dur.group(1) if dur else None,
         'pages': len(doc),
         'erratum': [{'page': i + 1, 'text': doc[i].get_text().strip()} for i in range(len(doc)) if is_erratum_page(doc[i])],

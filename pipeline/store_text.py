@@ -305,13 +305,16 @@ def main():
     out = 'out/layout_test'
     if '--out' in a:
         out = a[a.index('--out') + 1]
+    syl = '0625'
+    if sel.count('/') == 2:
+        syl, sel = sel.split('/', 1)
     sess, pv = sel.split('/')
     out = os.path.join(paths.ROOT, out, sel.replace('/', '_'))
     shutil.rmtree(out, ignore_errors=True)
     os.makedirs(os.path.join(out, 'figures')); os.makedirs(os.path.join(out, 'render'))
-    qp = os.path.join(paths.ROOT, 'raw', '0625', sess, f'qp_{pv}.pdf')
-    ms = os.path.join(paths.ROOT, 'raw', '0625', sess, f'ms_{pv}.pdf')
-    pdir = glob.glob(os.path.join(paths.ROOT, 'bank', '*', '*', sess, f'p{pv}'))[0]
+    qp = os.path.join(paths.ROOT, 'raw', syl, sess, f'qp_{pv}.pdf')
+    ms = os.path.join(paths.ROOT, 'raw', syl, sess, f'ms_{pv}.pdf')
+    pdir = glob.glob(os.path.join(paths.ROOT, 'bank', '*', f'{syl}-*', sess, f'p{pv}'))[0]
     figs = {}
     for qf in glob.glob(os.path.join(pdir, 'q*', '*.json')):
         q = json.load(open(qf))

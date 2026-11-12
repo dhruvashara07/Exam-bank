@@ -9,7 +9,7 @@ for a in sys.argv[2:]:
     q = json.load(open(glob.glob(f'bank/**/{qid}.json', recursive=True)[0]))
     g = [x for x in q['figures'] if x['id'].endswith(suf)][0]; b = g['bbox']
     ses = q['id'].split('_')[1]; ses = ses[:4] + '-' + ses[4:]; pv = q['id'].split('_')[2]
-    p = f.open(cleaned(f'raw/0625/{ses}/qp_{pv}.pdf'))[g['page'] - 1]
+    p = f.open(cleaned(f"raw/{q['id'][:4]}/{ses}/qp_{pv}.pdf"))[g['page'] - 1]
     clip = f.Rect(max(0, b[0] - 30), max(0, b[1] - 40), min(p.rect.width, b[2] + 30), min(p.rect.height, b[3] + 15))
     pm = p.get_pixmap(dpi=50, clip=clip); im = I.frombytes('RGB', (pm.width, pm.height), pm.samples); s = 50 / 72
     D.Draw(im).rectangle([(b[0] - clip.x0) * s, (b[1] - clip.y0) * s, (b[2] - clip.x0) * s, (b[3] - clip.y0) * s], outline=(255, 0, 0), width=2)
