@@ -24,8 +24,8 @@ STAGES = ['uploaded', 'processed', 'auto_checked', 'claude_checked', 'your_revie
 
 def pid_of(s):
     """'0625/2025-MJ/41' -> '0625_2025MJ_41'; ids pass through."""
-    m = re.fullmatch(r'(\w+)/(\d{4})-(\w\w)/(\d\d)', s)
-    return f'{m.group(1)}_{m.group(2)}{m.group(3)}_{m.group(4)}' if m else s
+    m = re.fullmatch(r'(?:(\w+)/)?(\d{4})-(\w\w)/(\d\d)', s)       # bare '2025-MJ/41' = physics 0625
+    return f"{m.group(1) or '0625'}_{m.group(2)}{m.group(3)}_{m.group(4)}" if m else s
 
 
 def load_json(p, default):

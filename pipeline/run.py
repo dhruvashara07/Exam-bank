@@ -339,7 +339,8 @@ if __name__ == '__main__':
     papers = sorted(glob.glob(os.path.join(ROOT, 'raw', '*', '*', 'qp_*.pdf')))
     def wanted(p):
         p = p.replace('\\', '/')
-        return any(p.endswith(f"{s.rsplit('/', 1)[0]}/qp_{s.rsplit('/', 1)[1]}.pdf") for s in sels)
+        # '2025-MJ/41' = physics (0625) only; '0607/2025-MJ/41' = that syllabus
+        return any(p.endswith(f"{s.rsplit('/', 1)[0] if s.count('/') == 2 else '0625/' + s.rsplit('/', 1)[0]}/qp_{s.rsplit('/', 1)[1]}.pdf") for s in sels)
     if sels:
         papers = [p for p in papers if wanted(p)]
     all_queue = []
@@ -378,6 +379,6 @@ if __name__ == '__main__':
     paths.save_approvals(appr)
     write_index()
     import store                     # a question printed in two variants of one session is stored once
-    for ses in sorted({os.path.basename(os.path.dirname(p)) for p in papers}):
-        store.dupes(ses)
+    for syl, ses in sorted({tuple(p.replace('\\', '/').split('/')[-3:-1]) for p in papers}):
+        store.dupes(ses, syl)
 

@@ -3,6 +3,9 @@
 | File | Does |
 | --- | --- |
 | `paths.py` | Where everything lives (bank layout, Cloudinary ids). Every script goes through it |
+| `subjects.py` | Per syllabus: name, folder slug, MCQ papers, paper types (maths from the cover), cover total; `SYL=0607` env for session tools |
+| `batch_log.py` | Batch record: phase times, GitHub run times, counts, errors new/repeat, tokens -> review/cycle/, docs/BATCH_LOG.md |
+| `store_pdfs.sh` | Store many PDFs in Releases without processing (pushes a store-* branch; the Upload batch Action does the rest) |
 | `inbox.py` | Files Cambridge-named PDFs from `inbox/` into `raw/` |
 | `clean.py` | Deletes the PapaCambridge watermark layer and Cambridge page furniture (barcode, corner marks) |
 | `layout.py` | Page geometry: content area, ink boxes, label positions, symbol-font fixes |

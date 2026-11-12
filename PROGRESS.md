@@ -2,8 +2,18 @@
 
 Read this first in every session. Update it before ending a session.
 
+## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md
+- NEXT: finish storing the maths PDFs in Releases (Dhruv zips the rest of Desktop\math), then pilot M0
+  (2014-MJ, 2019-ON, 2021-FM, 2025-MJ) in a NEW chat with the prompt in docs/NEXT_CHAT.md.
+- 2026-11-12: plan agreed with Dhruv (MATHS_PLAN.md 1). Pipeline made subject-aware without moving physics:
+  pipeline/subjects.py, maths paper types from the cover, syllabus-aware selectors/session tools (SYL=0607),
+  dupes per syllabus, store-only upload branches (store_pdfs.sh + upload.yml), batch record (batch_log.py).
+  Golden set now 26 papers incl. 6 from 2004-2012: 0 changed cuts. Test run on 7 maths papers: cuts work,
+  marks = total on 6/7, MS linked on 252/263 parts; open problems listed in MATHS_PLAN.md 3.
+- PDFs in Releases: 262 of 946 (store-0607-part1); the rest waits for Dhruv's zips.
+
 ## 2002-2012 (started 2026-11-09, batches of 3 years) - why: docs/AGENT_GUIDE.md, how: docs/PLAYBOOK.md, mistakes: docs/ERROR_PATTERNS.md
-- NEXT: waiting for Dhruv's next plan (cleanup done 2026-11-12). Every year 2002-2026 approved; nothing pushed to
+- Physics finished (cleanup done 2026-11-12). Every year 2002-2026 approved; nothing pushed to
   MongoDB or Cloudinary since 2026-10-30 (Dhruv: not until the data size is known).
 - 2026-11-12 cleanup: git - 49 orphan store files and pipeline/strip_svgs.py removed; history (~950 MB) left as is
   (Dhruv). Cloudinary - question_bank/ deleted with Dhruv's OK: 38,299 old-format SVGs, 1.62 GB; account now empty

@@ -378,3 +378,24 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   credits. Asked Dhruv before deleting (the 66 papers in MongoDB point at them).
 - Dhruv chose: delete all of Cloudinary's question_bank/ (done: 38,299 files, account empty) and leave the git
   history as it is. Next: Dhruv's plan.
+
+## 2026-11-12 (evening) - maths 0607 plan
+- Dhruv: next subject is maths, files on his desktop ("math", watermarks removed). Asked for a full plan before
+  starting: same or other repo, what from physics helps, rules for what to rebuild, a cycle of GitHub build ->
+  Claude -> Claude again -> his review round -> fix, build, approve; times per step (git, Claude 1, Claude 2,
+  after-review fix and build; NOT his own time), tokens if possible, errors / repeat errors / solutions per batch;
+  3 years per batch; one review link; docs upgraded after every batch without being told; a skill for this.
+- Decisions (his answers): keep the pipeline change from touching physics, he asked whether to copy it - I said shared
+  pipeline, subject table, physics frozen by the golden set, and maths fixes that could help physics written down for
+  a later physics pass (docs/PHYSICS_LATER.md); 0607 is right; he will get 2019 May/June - remind him at that batch;
+  maths text as LaTeX/KaTeX, a picture only when needed; same repo, PDFs in the same Releases; 3-year batches, each in a
+  new chat; asked what a "4 session pilot" is (answered: a first small batch with one session of each layout family,
+  where the maths rules are written, so the big batches are routine); approved the skill; asked to upgrade all docs,
+  make the plan, upload the PDFs, get the pipeline ready, then give him the prompt for the new chat; docs must be easy
+  so each chat starts without misunderstanding.
+- Done: docs/MATHS_PLAN.md (decisions, physics safety, findings, pilot, batches M1-M4, LaTeX design, tracking, rebuild
+  rules), docs/START_HERE.md (every chat reads it first), PLAYBOOK rewritten for any subject, CLAUDE.md/AGENT_GUIDE/
+  CONTEXT/PROGRESS/NEXT_CHAT updated, pipeline/subjects.py + syllabus-aware tools, store-only uploads
+  (pipeline/store_pdfs.sh), pipeline/batch_log.py (review/cycle/, docs/BATCH_LOG.md). Golden set extended to every
+  physics era (26 papers): 0 changed cuts.
+- Upload: copying file by file from his computer slowed to timeouts after 262 files; asked him to zip the rest.

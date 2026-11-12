@@ -807,12 +807,12 @@ def signature(q):
         hashlib.sha1(ms.encode()).hexdigest()[:16]
 
 
-def dupes(session):
+def dupes(session, syl='*'):
     """Cambridge prints the same question in several variants of one session (e.g. 2016 May/June 32 = 33).
     Same words, same figure sizes, same marks and same mark-scheme text = the same question: the first
     (lowest id) keeps the content, the others become stubs that point to it (store once, list everywhere).
     When only the question matches but the mark scheme differs, both keep their content and say so."""
-    files = sorted(glob.glob(os.path.join(paths.STORE, '*', '*', session, 'p*', 'q*.json')))
+    files = sorted(glob.glob(os.path.join(paths.STORE, '*', f'{syl}-*' if syl != '*' else '*', session, 'p*', 'q*.json')))
     by = collections.defaultdict(list)
     for f in files:
         q = json.load(open(f))
@@ -1254,8 +1254,8 @@ if __name__ == '__main__':
     if a[0] == 'build':
         for pid in a[1:]:
             build(pid)
-    elif a[0] == 'dupes':
-        dupes(a[1])
+    elif a[0] == 'dupes':                # 'dupes 2021-MJ' (every syllabus) or 'dupes 0607/2021-MJ'
+        dupes(*reversed(a[1].split('/'))) if '/' in a[1] else dupes(a[1])
     elif a[0] == 'verify':
         verify(a[1:])
     elif a[0] == 'sheet':

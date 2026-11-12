@@ -1,11 +1,13 @@
 # Agent guide: what we are building and how to work on it
 
 Read this first in any new session (chat, scheduled check, Claude Code). It is the "why" and the judgement;
-docs/PLAYBOOK.md is the "how" step by step; CLAUDE.md has the hard rules. Updated 2026-11-11.
+docs/PLAYBOOK.md is the "how" step by step; CLAUDE.md has the hard rules; docs/START_HERE.md is the entry point.
+Updated 2026-11-12: physics 0625 finished; maths 0607 started (docs/MATHS_PLAN.md).
 
 ## 1. The vision
 Dhruv is a physics teacher in India (IST; he mostly reads on his phone). He is building a question bank of
-Cambridge IGCSE Physics 0625 past papers, 2002-2026, for his website **learnerspoint** (Next.js + React +
+Cambridge IGCSE past papers (Physics 0625, 2002-2026: done; International Mathematics 0607, 2014-2026: in progress,
+maths text as LaTeX shown with KaTeX), for his website **learnerspoint** (Next.js + React +
 Tailwind + MongoDB). With it, teachers and students can:
 - browse past papers and single questions (later by topic, like Save My Exams / Revision Village);
 - build homework and tests: pick questions or parts, then get an exam-style A4 PDF plus its mark scheme,
@@ -65,6 +67,11 @@ mode, and topics (docs/NEXT.md).
 ## 5. Where things are
 | Need | File |
 |---|---|
+| Entry point for every chat | docs/START_HERE.md |
+| Maths plan, batches, rebuild rules | docs/MATHS_PLAN.md |
+| Times / errors per batch | docs/BATCH_LOG.md (pipeline/batch_log.py) |
+| Subject differences | pipeline/subjects.py |
+| Maths fixes kept for a later physics pass | docs/PHYSICS_LATER.md |
 | Hard rules (push, keys, PDFs, MongoDB) | CLAUDE.md |
 | Steps for a batch | docs/PLAYBOOK.md |
 | Current state, what is next | PROGRESS.md (top section) |
@@ -75,7 +82,7 @@ mode, and topics (docs/NEXT.md).
 | Data format | docs/STORE_DESIGN.md, docs/V5_SPEC.md; layout code pipeline/ms_layout.py |
 | Old-paper row map | pipeline/ms_map.json (+ ms_align.py list/dump) |
 
-## 6. State on 2026-11-11
-2013-2026: final in git. 2002-2010: approved (review rounds 22-25). Next: 2011-2012 (the last old batch). Its
-review round also re-shows the 20 items fixed after round 25. Then cleanup, then the MongoDB push. On hold:
-the hourly backlog task (OFF) and the v5 prototype (waiting for Dhruv).
+## 6. State on 2026-11-12
+Physics 0625: every year 2002-2026 approved and frozen (golden set guards it). Cleanup done (Cloudinary empty).
+Maths 0607: plan agreed (docs/MATHS_PLAN.md): pilot M0 (2014-MJ, 2019-ON, 2021-FM, 2025-MJ), then batches M1-M4,
+one new chat each. Nothing goes to MongoDB/Cloudinary until Dhruv says so.

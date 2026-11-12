@@ -1,29 +1,23 @@
-# Starting a new chat (Dhruv, updated 2026-11-11)
+# Starting a new chat (Dhruv, updated 2026-11-12)
 
-When: a new chat when this one gets long (about one 3-year batch per chat), not a fixed rule.
+One batch per chat (docs/MATHS_PLAN.md section 5). Open a new chat, paste the prompt, nothing else needed.
+If a batch is not finished when the chat gets long, the chat writes "continue <batch>" here and you paste that.
 
-## Prompt to paste (next: cleanup, then the MongoDB push)
-> Exam-bank (repo dhruvashara07/Exam-bank). Start with `git pull --rebase`, then read docs/AGENT_GUIDE.md, CLAUDE.md,
-> docs/PLAYBOOK.md, docs/ERROR_PATTERNS.md, PROGRESS.md (top) and the last two days of docs/CONVERSATION_LOG.md.
-> State: every year 2002-2026 is approved (2002-2012 on 2026-11-12, round 26 closed).
-> Task: cleanup first (list what is unneeded in git and Cloudinary, show me the list before deleting anything;
-> never delete original PDFs), then the one MongoDB + Cloudinary push through the GitHub Action (re-enable the paused
-> steps in bank.yml), then check what landed. Keep messages short and tell me when you need my input.
+## Prompt to paste now: maths pilot M0
+> Exam-bank (repo dhruvashara07/Exam-bank). Follow docs/START_HERE.md exactly: git pull, then read the files it lists.
+> Task: maths 0607 pilot batch M0 = sessions 2014-MJ, 2019-ON, 2021-FM, 2025-MJ (docs/MATHS_PLAN.md section 4).
+> Make the pipeline handle maths (formula page, mark-scheme layout, maths text as LaTeX for KaTeX, the problems in
+> MATHS_PLAN section 3) without changing physics, run the full cycle with the batch log, ONE short review round on
+> the same review page, then fix, approve, update every doc and push. Ask me with options when you need a decision
+> (for example the mark-scheme column layout: show me original and ours side by side). Keep messages short.
 
-General form for later tasks: same prompt, with "Task: <e.g. cleanup + MongoDB push>".
-
-## Where things are
-- Rules for every mark scheme: docs/MS_TABLE_RULES.md (sections 1-18). Decisions: docs/CONVERSATION_LOG.md.
-- Review page (same link every round): https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e (review/portal.json review_url); rounds: pipeline/review_round.py + review_page.py (feedback_r<n>).
-- Layout-only rebuild of all years (~23 min, 4 at a time, low memory): for each paper
-  `python3 -c "import sys;sys.path.insert(0,'pipeline');import store as S;S.build('0625_2024MJ_41')"`, then
-  `python3 pipeline/store.py dupes <session>`. Full re-cut only when a cut rule changes: `JOBS=4 python3 pipeline/run.py 2024-MJ/41 ...`.
-- Do not run 4 builds of very old papers with the old code: one full-page 8x render used to take 3 GB (fixed: strips).
-- Side-by-side check pictures: render original MS crop | our SVG with Chromium (see review_assets.py).
+## Prompts for the next batches (same text, change the batch line)
+- M1: `Task: maths 0607 batch M1 (docs/MATHS_PLAN.md section 5), full cycle as in the playbook.`
+- M2: same with M2.  M3: same with M3 (it needs 2019 May/June from me: remind me first).  M4: same with M4.
+- Continue an unfinished batch: `Task: continue maths batch <M?> from PROGRESS.md NEXT line.`
 
 ## Using less of the weekly limit (what costs most)
-1. Long chats: every step re-reads the whole conversation, so cost per step grows. Start a new chat per year-batch / task.
-2. Pictures I look at stay in the conversation: look at fewer, smaller crops (only the changed rows), not full sheets.
-3. Re-running all years after every small fix: batch fixes first, then one rebuild + one diff of "what changed".
-4. Let GitHub do builds (free for the weekly limit); I only check and fix.
-5. Short replies and one review round per batch (2-3 years together, as for 2025-2026).
+1. Long chats: every step re-reads the whole conversation. One batch per chat.
+2. Pictures stay in the conversation: look at small crops and grids, not full pages.
+3. Collect fixes, rebuild once per pass (GitHub builds are free).
+4. Text dumps (`ms_align.py dump`) instead of pictures where text is enough.
