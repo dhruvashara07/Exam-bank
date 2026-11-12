@@ -399,3 +399,10 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   (pipeline/store_pdfs.sh), pipeline/batch_log.py (review/cycle/, docs/BATCH_LOG.md). Golden set extended to every
   physics era (26 papers): 0 changed cuts.
 - Upload: copying file by file from his computer slowed to timeouts after 262 files; asked him to zip the rest.
+
+## 2026-11-13 - maths PDFs stored
+- Dhruv tried the GitHub website upload, his network dropped and nothing arrived; he asked me to upload myself.
+  Copied the remaining 684 PDFs from his computer in batches of 15-25 (bigger batches time out) and stored them with
+  pipeline/store_pdfs.sh in 4 more parts. Manifest: all 946 maths PDFs (2014-2026, 2019-MJ still missing).
+- Dhruv asked for one more thing in Claude pass 2: a logic check (does each answer fit its question; solve it when in
+  doubt) - added to PLAYBOOK 3b and START_HERE. inbox.py accepts sub-folders; store-* branches are kept by the Action.
