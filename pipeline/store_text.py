@@ -50,6 +50,45 @@ def unpua(ch):
     return ch
 
 
+# Maths papers (0607): equation-editor fonts re-encode symbols (MathType 'MM*' fonts 2014-2024, 'AllAndNone' 2025+).
+# Read by eye from every glyph of the M0 pilot (2014 MJ, 2019 ON, 2021 FM, 2025 MJ): font base name -> {code: symbol}.
+# Bracket pieces (MMVariable, AllAndNone '`') stay drawn shapes (DINGBAT / odd). ERROR_PATTERNS 64.
+MATHS_GLYPHS = {
+    'AllAndNone': {'!': '≠', '#': '×', "'": '÷'},
+    'MMBinary': {'!': '±', '#': '×', "'": '÷', '+': '∩', ',': '∪'},
+    'MMEtc': {'f': '…', 'l': '′'},
+    'MMExtra': {'1': '<', '2': '>'},
+    'MMGreek': {'r': 'π'}, 'MMaGreek-Regular': {'r': 'π'},
+    'MMNegate': {'!': '≠', 'g': '∉'},
+    'MMRelation': {'G': '≤', 'H': '≥'},
+}
+
+
+def maths_doc(doc):
+    """True for a maths paper (syllabus with maths_text): its cleaned PDF path holds /<syllabus>/<year>-<session>/."""
+    m = re.search(r'/(\d{4})/\d{4}-[A-Z]{2}/', (doc.name or '').replace('\\', '/'))
+    return bool(m) and m.group(1) != '0625'
+
+
+# 2025 'AllAndNone' subsets reuse letter/digit codes for symbols: told apart by the glyph's width (em) - read by eye (M0).
+MATHS_WIDE = {'AllAndNone': {'1': (0.75, '<'), '2': (0.75, '>'), 'j': (0.75, '∪'), 'r': (0.52, 'π')}}
+
+
+def maths_glyph(font, text, chars=None, size=None):
+    """Real symbols for a run printed in an equation-editor font (maths papers only)."""
+    base = font.split('+')[-1]
+    tab = MATHS_GLYPHS.get(base)
+    wide = MATHS_WIDE.get(base)
+    out = []
+    for i, c in enumerate(text):
+        if wide and c in wide and chars and size and i < len(chars):
+            em = (chars[i]['bbox'][2] - chars[i]['bbox'][0]) / size
+            if em >= wide[c][0]:
+                out.append(wide[c][1]); continue
+        out.append(tab.get(c, c) if tab else c)
+    return ''.join(out)
+
+
 DINGBAT = ('sorts', 'dingbat', 'wingding', 'webding', 'mmvariable')   # MMVariable: big brackets of an equation editor, drawn in pieces
 
 

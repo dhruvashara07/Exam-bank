@@ -22,7 +22,36 @@
  ],
  "text": "13\nX\nY\nThe diagram shows two fair dice, X and Y, each with 6 faces.\nThe numbers on X are 1, 1, 1, 1, 2 and 3.\nThe numbers on Y are 1, 1, 1, 2, 3 and 3.",
  "marks": 9,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 18,
+   "bbox": [
+    217.2,
+    73.3,
+    281.1,
+    159.8
+   ],
+   "id": "0607_2014MJ_43_q13_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 18,
+   "bbox": [
+    313.5,
+    73.3,
+    377.4,
+    159.8
+   ],
+   "id": "0607_2014MJ_43_q13_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -80,7 +109,9 @@
       {
        "label": "13(a)(i)",
        "text": "oe\n1\n6\n2",
-       "codes": [],
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 6,
@@ -139,7 +170,9 @@
       {
        "label": "13(a)(ii)",
        "text": "oe\n1\n6\n12\n4\n3",
-       "codes": [],
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 6,
@@ -238,9 +271,7 @@
        "label": "13(b)(i)",
        "text": "oe\nM1 for\n×\noe\n2\n36\n6\n6\n30\n2\n3\n4\n3\n2",
        "codes": [
-        "3",
-        "4",
-        "3"
+        "2"
        ],
        "segments": [
         {
@@ -306,12 +337,7 @@
        "label": "13(b)(ii)",
        "text": "oe\nM2 for 1−\n×\nor\n×\n+\n×\n3\n36\n6\n6\n6\n6\n6\n2\n3\n×\nor M1 for\nwith no other products\n6\n6\n4\n3\n2\n3\n4\n3\n×\n+\n×\n+\n×\nor\nwith two products\n6\n6\n6\n6\n6\n6\ncorrect\n11\n5\n5\n1\n1\n1",
        "codes": [
-        "6",
-        "6",
-        "6",
-        "5",
-        "5",
-        "1"
+        "3"
        ],
        "segments": [
         {
@@ -377,9 +403,7 @@
        "label": "13(b)(iii)",
        "text": "M1 for 1−\n×\n×\n+\n×\noe\n2\nor\n36\n6\n6\n6\n6\n6\n1\n1\n1\n1\nor\n+\n–\n×\n6\n6\n6\n6\n3",
        "codes": [
-        "6",
-        "6",
-        "6"
+        "2"
        ],
        "segments": [
         {
@@ -462,9 +486,14 @@
    "text": "13"
   },
   {
-   "type": "text",
-   "html": "<i>X</i> <i>Y</i>",
-   "text": "X Y"
+   "type": "figure",
+   "id": "0607_2014MJ_43_q13_diagram1",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2014MJ_43_q13_diagram2",
+   "caption": null
   },
   {
    "type": "text",

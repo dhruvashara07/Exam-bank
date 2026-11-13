@@ -43,6 +43,26 @@ def editable_payload(q, d, qid):
         im.save(os.path.join(d, name), quality=75, optimize=True)
         figs[f['id']] = f'{qid}/{name}'
     out = []
+    if str(sq.get('paper', {}).get('syllabus', '0625')) != '0625':     # maths: the store's LaTeX content (KaTeX on the page)
+        import html as H
+        for p in sq['parts']:
+            depth = p['path'].count('(')
+            label = re.findall(r'\(([^()]*)\)', p['path'])[-1] if depth else None
+            blocks = []
+            if p.get('content') is None:
+                why = (p.get('tex_check') or '').replace('picture: ', '')
+                blocks.append({'type': 'text', 'html': f'<i>[website shows the printed picture of this part: {H.escape(why)}]</i>'})
+            for b in p.get('content') or []:
+                if b['type'] == 'figure':
+                    blocks.append({'type': 'figure', 'id': b['id']})
+                elif b['type'] == 'answer':
+                    blocks.append({'type': 'text', 'html': '<span style="color:#777">answer: </span>' + H.escape(b.get('tex') or '…')})
+                else:
+                    blocks.append({'type': 'text', 'html': H.escape(b.get('tex', ''))})
+            if p.get('marks') and not p.get('parts'):
+                blocks.append({'type': 'marks', 'value': p['marks']}) if not any(x['path'].startswith(p['path'] + '(') for x in sq['parts']) else None
+            out.append({'label': label, 'depth': depth, 'content': blocks})
+        return out, figs
     for n, depth in nodes(q):
         out.append({'label': n.get('label'), 'depth': depth, 'content': n.get('content', [])})
     return out, figs
@@ -148,6 +168,9 @@ def new(rnd, pids, sample=3, title=None, intro=None, max_items=None, recheck=Non
             'intro': intro or 'Questions the checks flagged, plus a few random ones from each paper. '
                               'Look at the rebuilt question against the original page; tap "Looks right" or say what is wrong.',
             'papers': pids}
+    import subjects
+    syl = pids[0][:4] if pids else '0625'
+    meta.update(syllabus=syl, subject=subjects.subject(syl)['subject'])
     json.dump(meta, open(os.path.join(out_dir, 'round.json'), 'w'), ensure_ascii=False)
     os.makedirs(paths.ROUNDS, exist_ok=True)
     rec = {**meta, 'status': 'open', 'items': [{'id': i['id'], 'group': i['group'], 'reasons': i['reasons']} for i in built]}

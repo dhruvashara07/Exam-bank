@@ -330,7 +330,7 @@ async function openRound(r) {
     [round, items] = await Promise.all([fetch(base + 'round.json').then(x => x.json()), fetch(base + 'items.json').then(x => x.json())]);
   } catch { $('#list').innerHTML = ''; showNotice('Could not load this review round.'); return; }
   fb = {}; filter = 'todo';
-  $('#title').innerHTML = `<span>0625</span> Physics question review · ${esc(round.title || 'round ' + round.round)}`;
+  $('#title').innerHTML = `<span>${esc(round.syllabus || '0625')}</span> ${esc(round.subject || 'Physics')} question review · ${esc(round.title || 'round ' + round.round)}`;
   $('#intro').textContent = round.intro || '';
   roundButtons(); render(); window.scrollTo({ top: 0 });
   if (!db) return;

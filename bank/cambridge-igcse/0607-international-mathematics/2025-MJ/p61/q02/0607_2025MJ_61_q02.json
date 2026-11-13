@@ -4,7 +4,22 @@
  "segments": [],
  "text": "",
  "marks": 13,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    213.5,
+    112.2,
+    299.1,
+    175.1
+   ],
+   "id": "0607_2025MJ_61_q02b_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -402,13 +417,18 @@
     },
     {
      "type": "text",
-     "html": "\\(\\frac{\\text{Example}}{\\text{The}}\\) sequence is 1 2 3 4 5",
-     "text": "(Example)/(The) sequence is 1 2 3 4 5"
+     "html": "\\(\\frac{\\text{Example}}{\\text{The}}\\)",
+     "text": "(Example)/(The)"
+    },
+    {
+     "type": "figure",
+     "id": "0607_2025MJ_61_q02b_diagram1",
+     "caption": null
     },
     {
      "type": "text",
-     "html": "inside pair",
-     "text": "inside pair"
+     "html": "sequence is 1 5",
+     "text": "sequence is 1 5"
     },
     {
      "type": "text",
@@ -602,26 +622,9 @@
       "working_gap_pt": 248.5,
       "height_pt": 358.5
      }
-    },
-    {
-     "page": 7,
-     "bbox": [
-      30.0,
-      60.5,
-      570.0,
-      555.0
-     ],
-     "continued": true,
-     "answer_space": {
-      "kind": "none",
-      "dotted_lines": 0,
-      "answer_line": null,
-      "working_gap_pt": 74.6,
-      "height_pt": 494.5
-     }
     }
    ],
-   "text": "The number of terms in a sequence is equal to the increase.\nFind a sequence with a product difference of 1859.\nWrite down the first and last terms of your sequence.\nFirst term =  .......................................................\nLast term =  .......................................................\n[4]\nSection B\nMODELLING  CROSSED POLES\nYou are advised to spend no more than 45 minutes on this section.\nIn this task you will be modelling the heights of triangles made below two poles when they cross.\nEach triangle is made from 2 poles that lean between vertical posts.\npole\npost\nh\nground\nd\nOne end of each pole rests on the ground and the other end rests against a vertical post.\nThe posts are d metres apart on horizontal ground.\nThe poles cross each other h metres above the ground.\nIn this task you will find Pythagoras’ theorem useful.\n2\n2\n2\nc\na\n+\nb\n=\nc\na\nb",
+   "text": "The number of terms in a sequence is equal to the increase.\nFind a sequence with a product difference of 1859.\nWrite down the first and last terms of your sequence.\nFirst term =  .......................................................\nLast term =  .......................................................\n[4]",
    "marks": 4,
    "path": "2(d)",
    "mark_scheme": [
@@ -671,83 +674,6 @@
     {
      "type": "marks",
      "value": 4
-    },
-    {
-     "type": "text",
-     "html": "<b>Section</b> <b>B</b>",
-     "text": "Section B"
-    },
-    {
-     "type": "text",
-     "html": "<b>MODELLING</b> <b>CROSSED</b> <b>POLES</b>",
-     "text": "MODELLING CROSSED POLES"
-    },
-    {
-     "type": "text",
-     "html": "You are advised to spend no more than 45 minutes on this section.",
-     "text": "You are advised to spend no more than 45 minutes on this section."
-    },
-    {
-     "type": "text",
-     "html": "In this task you will be modelling the heights of triangles made below two poles when they cross.",
-     "text": "In this task you will be modelling the heights of triangles made below two poles when they cross."
-    },
-    {
-     "type": "text",
-     "html": "Each triangle is made from 2 poles that lean between vertical posts.",
-     "text": "Each triangle is made from 2 poles that lean between vertical posts."
-    },
-    {
-     "type": "table",
-     "rows": [
-      [
-       "post",
-       "pole",
-       "",
-       ""
-      ],
-      [
-       "ground",
-       "h",
-       "",
-       ""
-      ]
-     ]
-    },
-    {
-     "type": "text",
-     "html": "d",
-     "text": "d"
-    },
-    {
-     "type": "text",
-     "html": "One end of each pole rests on the ground and the other end rests against a vertical post. The posts are d metres apart on horizontal ground. The poles cross each other h metres above the ground.",
-     "text": "One end of each pole rests on the ground and the other end rests against a vertical post. The posts are d metres apart on horizontal ground. The poles cross each other h metres above the ground."
-    },
-    {
-     "type": "text",
-     "html": "In this task you will find Pythagoras’ theorem useful.",
-     "text": "In this task you will find Pythagoras’ theorem useful."
-    },
-    {
-     "type": "text",
-     "html": "c a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>",
-     "text": "c a2 + b2 = c2"
-    },
-    {
-     "type": "text",
-     "html": "a",
-     "text": "a"
-    },
-    {
-     "type": "text",
-     "html": "b",
-     "text": "b"
-    },
-    {
-     "type": "answer",
-     "kind": "space",
-     "height_pt": 74.6
     }
    ]
   }

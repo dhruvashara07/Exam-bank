@@ -21,8 +21,23 @@
   }
  ],
  "text": "7\nThe scatter diagram shows the heights and the orbit times, t minutes, for 9 satellites making circular orbits\naround the Earth.\nt\n115\n110\nTime\n105\n(minutes)\n100\n95\n90\nh\n200\n300\n400\n500\n600\n700\n800\n900\n10001100120013001400\nHeight(km)",
- "marks": 0,
- "figures": [],
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    77.5,
+    267.3,
+    517.4,
+    475.9
+   ],
+   "id": "0607_2019ON_63_q07_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -56,7 +71,7 @@
       }
      ],
      "text": "The mean of these satellite heights is 770 km and the mean orbit time is 100 minutes.\nPlot this point.",
-     "marks": 0,
+     "marks": 1,
      "path": "7(a)(i)",
      "mark_scheme": [
       {
@@ -113,7 +128,7 @@
       }
      ],
      "text": "Draw a line of best fit.",
-     "marks": 0,
+     "marks": 1,
      "path": "7(a)(ii)",
      "mark_scheme": [
       {
@@ -165,7 +180,7 @@
       }
      ],
      "text": "Use your line of best fit to find a straight line model (Model A) connecting t and h.\nGive your answer in the form\nt\nmh\nc\n.\n=\n+",
-     "marks": 0,
+     "marks": 2,
      "path": "7(a)(iii)",
      "mark_scheme": [
       {
@@ -220,7 +235,7 @@
     }
    ],
    "text": "Another model (Model B) connecting t and h is\n4\n3\nt\n1 659\n.\n10\n-\n(\nh\n6370\n)\n.\n=\n+\n#\n#\nThe satellite NORAD 40730 has a circular orbit.\nIt takes 728.9 minutes to orbit the Earth at a height of 20 450 km.\nFind which of the two models gives an orbit time closer to the actual orbit time.",
-   "marks": 0,
+   "marks": 2,
    "path": "7(b)",
    "mark_scheme": [
     {
@@ -237,22 +252,6 @@
         199.8,
         556.0799560546875,
         247.3
-       ]
-      }
-     ]
-    },
-    {
-     "label": "7(b)",
-     "text": "(20450+6370)\n3\nseen",
-     "codes": [],
-     "segments": [
-      {
-       "page": 6,
-       "bbox": [
-        39.29999923706055,
-        596.2,
-        556.0799560546875,
-        626.8
        ]
       }
      ]
@@ -303,7 +302,7 @@
     }
    ],
    "text": "Communication satellites need an orbit time of 1440 minutes.\nUse Model B to find the height which gives an orbit time of 1440 minutes.",
-   "marks": 0,
+   "marks": 2,
    "path": "7(c)",
    "mark_scheme": [
     {
@@ -320,22 +319,6 @@
         249.6,
         556.0799560546875,
         310.7
-       ]
-      }
-     ]
-    },
-    {
-     "label": "7(c)",
-     "text": "‘km’ seen as units",
-     "codes": [],
-     "segments": [
-      {
-       "page": 6,
-       "bbox": [
-        39.29999923706055,
-        632.1,
-        556.0799560546875,
-        654.2
        ]
       }
      ]
@@ -362,7 +345,7 @@
  "variant": 3,
  "paper_code": "0607/63",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 0,
+ "total_marks": 8,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -375,49 +358,10 @@
    "text": "The scatter diagram shows the heights and the orbit times, t minutes, for 9 satellites making circular orbits around the Earth."
   },
   {
-   "type": "text",
-   "html": "<i>t</i> 115",
-   "text": "t 115"
-  },
-  {
-   "type": "text",
-   "html": "110",
-   "text": "110"
-  },
-  {
-   "type": "text",
-   "html": "Time 105 (minutes)",
-   "text": "Time 105 (minutes)"
-  },
-  {
-   "type": "text",
-   "html": "100",
-   "text": "100"
-  },
-  {
-   "type": "text",
-   "html": "95",
-   "text": "95"
-  },
-  {
-   "type": "text",
-   "html": "90",
-   "text": "90"
-  },
-  {
-   "type": "text",
-   "html": "<i>h</i>",
-   "text": "h"
-  },
-  {
-   "type": "text",
-   "html": "200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400",
-   "text": "200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400"
-  },
-  {
-   "type": "text",
-   "html": "Height (km)",
-   "text": "Height (km)"
+   "type": "figure",
+   "id": "0607_2019ON_63_q07_diagram1",
+   "caption": null
   }
- ]
+ ],
+ "marks_source": "mark scheme"
 }

@@ -298,7 +298,7 @@ def _subcolumns(ws, x0, ow, nw, pitch):
 def portrait_unit(u, W=523.0, widths=None, sizes=None, probe=False):
     """widths: {(ncol, column): width} for the fixed columns (see column_widths); sizes: {figure id: (w, h)};
     probe=True: only report the content width of the fixed columns -> (None, {'probe': {(ncol, c): width}, ...})."""
-    if u['w'] <= W + 2:
+    if u['w'] <= W + 2 and not FORCE_WRAP:
         return u, {'mode': 'same', 'why': 'portrait era', 'extra_lines': 0}
     if u.get('glyphs'):
         return _scaled(u, W, 'drawn symbol in the row')
@@ -373,6 +373,9 @@ def portrait_unit(u, W=523.0, widths=None, sizes=None, probe=False):
     if k < 0.3:
         return _scaled(u, W, 'columns too narrow')
     new_w = [fw if fw is not None else w * k for fw, w in zip(fixed_w, old_w)]
+    if EQUAL_FLEX and sum(1 for f in fixed if not f) == 2:      # maths (Dhruv, M0): Answer and Partial Marks the same width
+        half = flex * k / 2
+        new_w = [fw if fw is not None else half for fw in fixed_w]
     new_edges = [sum(new_w[:i + 1]) for i in range(ncol - 1)]
     def nx_start(c): return 0 if c == 0 else new_edges[c - 1]
     # line pitch of this row
@@ -549,6 +552,8 @@ def check(u, v):
 
 
 MIN_LABEL, MIN_MARKS, PAD = 40.0, 40.0, 12.0
+FORCE_WRAP = False          # set by ms_layout.build: a portrait ruled table (2014 maths) is re-laid out like the landscape era
+EQUAL_FLEX = False          # set by ms_layout.build for maths: the two text columns get equal widths
 
 
 def column_widths(units, W=523.0):
@@ -557,7 +562,7 @@ def column_widths(units, W=523.0):
     need = collections.defaultdict(float)
     old = {}
     for u in units:
-        if u['w'] <= W + 2:
+        if u['w'] <= W + 2 and not FORCE_WRAP:
             continue
         _, info = portrait_unit(u, W, probe=True)
         if not info.get('probe'):

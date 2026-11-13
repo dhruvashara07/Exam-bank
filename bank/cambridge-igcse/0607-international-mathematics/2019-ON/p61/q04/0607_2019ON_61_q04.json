@@ -3,8 +3,23 @@
  "number": 4,
  "segments": [],
  "text": "",
- "marks": 0,
- "figures": [],
+ "marks": 10,
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    67.0,
+    253.4,
+    525.8,
+    575.0
+   ],
+   "id": "0607_2019ON_61_q04a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -56,7 +71,7 @@
       }
      ],
      "text": "The pattern for the number of hours of daylight remains the same each year.\nComplete the graph to show the approximate number of hours of daylight for 2018.",
-     "marks": 0,
+     "marks": 1,
      "path": "4(a)(i)",
      "mark_scheme": [
       {
@@ -108,7 +123,7 @@
       }
      ],
      "text": "On the same grid, draw the graph to show the number of hours of darkness for the two years.",
-     "marks": 0,
+     "marks": 1,
      "path": "4(a)(ii)",
      "mark_scheme": [
       {
@@ -160,7 +175,7 @@
       }
      ],
      "text": "Describe fully the single transformation that maps the graph of the number of hours of daylight\nonto the graph of the number of hours of darkness.\n...........................................................................................................................................................",
-     "marks": 0,
+     "marks": 2,
      "path": "4(a)(iii)",
      "mark_scheme": [
       {
@@ -177,22 +192,6 @@
           187.9,
           543.3599853515625,
           222.8
-         ]
-        }
-       ]
-      },
-      {
-       "label": "4(a)(iii)",
-       "text": "drawing the line y = 12, from (0, 12) to (24, 12)",
-       "codes": [],
-       "segments": [
-        {
-         "page": 7,
-         "bbox": [
-          40.97999954223633,
-          264.7,
-          543.3599853515625,
-          286.9
          ]
         }
        ]
@@ -225,44 +224,9 @@
      "text": "On the x-axis, 0 is 1st January 2017, 12 is 1st January 2018 and 24 is 1st January 2019."
     },
     {
-     "type": "text",
-     "html": "<i>y</i> 17 16 15 14 13 12 11",
-     "text": "y 17 16 15 14 13 12 11"
-    },
-    {
-     "type": "text",
-     "html": "Number of",
-     "text": "Number of"
-    },
-    {
-     "type": "text",
-     "html": "10",
-     "text": "10"
-    },
-    {
-     "type": "text",
-     "html": "hours",
-     "text": "hours"
-    },
-    {
-     "type": "text",
-     "html": "9 8 7 6 5 4 3 2 1 0",
-     "text": "9 8 7 6 5 4 3 2 1 0"
-    },
-    {
-     "type": "text",
-     "html": "<i>x</i>",
-     "text": "x"
-    },
-    {
-     "type": "text",
-     "html": "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 J F M A M J J A S O N D J F M A M J J A S O N D J",
-     "text": "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 J F M A M J J A S O N D J F M A M J J A S O N D J"
-    },
-    {
-     "type": "text",
-     "html": "Month",
-     "text": "Month"
+     "type": "figure",
+     "id": "0607_2019ON_61_q04a_diagram1",
+     "caption": null
     }
    ]
   },
@@ -288,7 +252,7 @@
     }
    ],
    "text": "Pierre grows oats in Normandy, France.\nOat plants flower when there are less than 12 hours of darkness.\nFind the earliest month when an oat plant flowers.\n....................................................",
-   "marks": 0,
+   "marks": 1,
    "path": "4(b)",
    "mark_scheme": [
     {
@@ -369,7 +333,7 @@
       }
      ],
      "text": "Using Pierre’s model, find the maximum number of hours of daylight and the month in which it\noccurs.\nMaximum hours of daylight  ...................................................\nMonth  ...................................................",
-     "marks": 0,
+     "marks": 2,
      "path": "4(c)(i)",
      "mark_scheme": [
       {
@@ -387,22 +351,6 @@
           249.5,
           543.3599853515625,
           296.1
-         ]
-        }
-       ]
-      },
-      {
-       "label": "4(c)(i)",
-       "text": "5.6[…] seen or sketch",
-       "codes": [],
-       "segments": [
-        {
-         "page": 7,
-         "bbox": [
-          40.97999954223633,
-          289.2,
-          543.3599853515625,
-          311.4
          ]
         }
        ]
@@ -452,7 +400,7 @@
       }
      ],
      "text": "Pierre thinks that his oat plants flower at their best when the number of hours of darkness is at its\nminimum.\nFind the minimum number of hours of darkness.\n....................................................",
-     "marks": 0,
+     "marks": 1,
      "path": "4(c)(ii)",
      "mark_scheme": [
       {
@@ -509,7 +457,7 @@
       }
      ],
      "text": "Using Pierre’s model, write down a model for the number of hours of darkness, q.\n..................................................................................................",
-     "marks": 0,
+     "marks": 1,
      "path": "4(c)(iii)",
      "mark_scheme": [
       {
@@ -631,7 +579,7 @@
     }
    ],
    "text": "On 20th March, the number of hours of darkness is the same as the number of hours of daylight.\nThere are 31 days in March.\nShow that Pierre’s model finds this date accurately.",
-   "marks": 0,
+   "marks": 1,
    "path": "4(d)",
    "mark_scheme": [
     {
@@ -674,10 +622,11 @@
  "variant": 1,
  "paper_code": "0607/61",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 0,
+ "total_marks": 10,
  "topic": null,
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
- "pipeline_version": "2.1"
+ "pipeline_version": "2.1",
+ "marks_source": "mark scheme"
 }

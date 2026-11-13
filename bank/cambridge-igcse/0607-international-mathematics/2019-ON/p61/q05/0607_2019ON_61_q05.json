@@ -21,8 +21,23 @@
   }
  ],
  "text": "5\nAlexa grows soybeans in Queensland, Australia.\nIn Australia, there are more hours of darkness in June than there are in January.\nAlexa records the number of hours of darkness for 360 days, from 1st January to 26th December.\nShe finds this information.\nMaximum\n13.8\nHours of darkness\nMinimum\n10.2\nAlexa models the number of hours of darkness, y, by drawing the graph of\ny\na\nb\ncos\nt\n°\n=\n-\nwhere t is the day of the year.",
- "marks": 0,
- "figures": [],
+ "marks": 9,
+ "figures": [
+  {
+   "caption": null,
+   "page": 10,
+   "bbox": [
+    105.8,
+    462.8,
+    477.6,
+    707.7
+   ],
+   "id": "0607_2019ON_61_q05aii_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)(ii)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -56,7 +71,7 @@
       }
      ],
      "text": "Write suitable calculations to show that a\n12\nand\nb\n1 8\n.\n.\n=\n=",
-     "marks": 0,
+     "marks": 2,
      "path": "5(a)(i)",
      "mark_scheme": [
       {
@@ -108,7 +123,7 @@
       }
      ],
      "text": "On the axes, sketch the graph of the model\ny\n12\n1 8\n.\ncos\nt\n°\nfor\n0\nt\n360\n.\nG\nG\n=\n-\ny\nt\n0\n360",
-     "marks": 0,
+     "marks": 1,
      "path": "5(a)(ii)",
      "mark_scheme": [
       {
@@ -128,22 +143,6 @@
          ]
         }
        ]
-      },
-      {
-       "label": "5(a)(ii)",
-       "text": "vertical scale to 13.8\nor max point indicated at (180, 13.8)",
-       "codes": [],
-       "segments": [
-        {
-         "page": 7,
-         "bbox": [
-          40.97999954223633,
-          313.6,
-          543.3599853515625,
-          348.5
-         ]
-        }
-       ]
       }
      ],
      "content": [
@@ -153,24 +152,9 @@
        "text": "On the axes, sketch the graph of the model y = 12 - 1 8. cos t° for 0 G t G 360."
       },
       {
-       "type": "text",
-       "html": "<i>y</i>",
-       "text": "y"
-      },
-      {
-       "type": "text",
-       "html": "<i>t</i>",
-       "text": "t"
-      },
-      {
-       "type": "text",
-       "html": "0",
-       "text": "0"
-      },
-      {
-       "type": "text",
-       "html": "360",
-       "text": "360"
+       "type": "figure",
+       "id": "0607_2019ON_61_q05aii_diagram1",
+       "caption": null
       },
       {
        "type": "answer",
@@ -228,7 +212,7 @@
       }
      ],
      "text": "Find the number of days when the flowers are growing at their fastest rate.\n....................................................",
-     "marks": 0,
+     "marks": 2,
      "path": "5(b)(i)",
      "mark_scheme": [
       {
@@ -245,22 +229,6 @@
           727.0,
           543.3599853515625,
           761.7
-         ]
-        }
-       ]
-      },
-      {
-       "label": "5(b)(i)",
-       "text": "y = 13.6 drawn on their sketch of the model",
-       "codes": [],
-       "segments": [
-        {
-         "page": 7,
-         "bbox": [
-          40.97999954223633,
-          350.8,
-          543.3599853515625,
-          372.9
          ]
         }
        ]
@@ -301,7 +269,7 @@
       }
      ],
      "text": "The table shows the value of t on the first day of each month.\nMonth\nJan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug\nSep\nOct\nNov\nDec\nt\n1\n32\n60\n91\n121\n152\n182\n213\n244\n274\n305\n335\nOn average, Alexa’s soybeans flower 53 days after she plants them.\nShe wants to plant them so that, when they begin to flower, the flowers grow at the fastest rate.\nUse Alexa’s model to show that the latest date she should plant her soybeans is 3rd June.\nQuestion 5(c) is printed on the next page.",
-     "marks": 0,
+     "marks": 1,
      "path": "5(b)(ii)",
      "mark_scheme": [
       {
@@ -419,7 +387,7 @@
       }
      ],
      "text": "Alexa uses her model,\ny\n12\n1 8\n.\ncos\nt\n°\n, to find the first date when the number of hours of\n=\n-\ndarkness is the same as the number of hours of daylight.\nFind this date.\n....................................................",
-     "marks": 0,
+     "marks": 1,
      "path": "5(c)(i)",
      "mark_scheme": [
       {
@@ -436,22 +404,6 @@
           113.8,
           543.3599853515625,
           148.5
-         ]
-        }
-       ]
-      },
-      {
-       "label": "5(c)(i)",
-       "text": "[t =] 90 or 90th day seen",
-       "codes": [],
-       "segments": [
-        {
-         "page": 7,
-         "bbox": [
-          40.97999954223633,
-          375.2,
-          543.3599853515625,
-          397.4
          ]
         }
        ]
@@ -497,15 +449,14 @@
       }
      ],
      "text": "The actual date when the number of hours of darkness was the same as the number of hours of\ndaylight was 20th March.\nAlexa decides to change her model so that it finds this date accurately.\nShe does this by a translation of the graph of her model.\nFind the new model.\n....................................................",
-     "marks": 0,
+     "marks": 2,
      "path": "5(c)(ii)",
      "mark_scheme": [
       {
        "label": "5(c)(ii)",
        "text": "[y =] 12 – 1.8 cos(t + k)\nwhere k = 11 or\ntheir 5(c)(i) date in March – 20 or\ntheir 5(c)(i) day number – 79\n[y =] 12.34346 – 1.8 cos( t)",
        "codes": [
-        "2",
-        "1"
+        "2"
        ],
        "segments": [
         {
@@ -514,7 +465,7 @@
           40.97999954223633,
           150.9,
           543.3599853515625,
-          262.5
+          235.5
          ]
         }
        ]
@@ -549,7 +500,7 @@
  "variant": 1,
  "paper_code": "0607/61",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 0,
+ "total_marks": 9,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -591,5 +542,6 @@
    "html": "where <i>t</i> is the day of the year.",
    "text": "where t is the day of the year."
   }
- ]
+ ],
+ "marks_source": "mark scheme"
 }

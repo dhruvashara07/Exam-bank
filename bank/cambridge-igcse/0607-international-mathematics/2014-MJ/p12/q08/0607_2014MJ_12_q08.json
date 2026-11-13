@@ -4,7 +4,36 @@
  "segments": [],
  "text": "",
  "marks": 4,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    207.9,
+    86.3,
+    386.4,
+    225.1
+   ],
+   "id": "0607_2014MJ_12_q08a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    207.9,
+    296.1,
+    386.4,
+    434.9
+   ],
+   "id": "0607_2014MJ_12_q08b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -38,7 +67,9 @@
     {
      "label": "8(a)",
      "text": "6 and 8\n2\nB1 for each in correct order",
-     "codes": [],
+     "codes": [
+      "2"
+     ],
      "segments": [
       {
        "page": 2,
@@ -59,24 +90,9 @@
      "text": "Complete the mapping diagram for the function f : x a x + 5."
     },
     {
-     "type": "text",
-     "html": "<i>x</i> <i>x</i> + 5",
-     "text": "x x + 5"
-    },
-    {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "1"
-    },
-    {
-     "type": "text",
-     "html": "7",
-     "text": "7"
-    },
-    {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "3"
+     "type": "figure",
+     "id": "0607_2014MJ_12_q08a_diagram1",
+     "caption": null
     },
     {
      "type": "marks",
@@ -112,7 +128,9 @@
     {
      "label": "8(b)",
      "text": "2x + 3\nB1 for 2x + j or kx + 3, j and k ≠ 0\n2\n1\n25",
-     "codes": [],
+     "codes": [
+      "2"
+     ],
      "segments": [
       {
        "page": 2,
@@ -133,24 +151,9 @@
      "text": "Here is a different mapping diagram."
     },
     {
-     "type": "text",
-     "html": "<i>x</i>",
-     "text": "x"
-    },
-    {
-     "type": "text",
-     "html": "5",
-     "text": "5"
-    },
-    {
-     "type": "text",
-     "html": "7",
-     "text": "7"
-    },
-    {
-     "type": "text",
-     "html": "9",
-     "text": "9"
+     "type": "figure",
+     "id": "0607_2014MJ_12_q08b_diagram2",
+     "caption": null
     },
     {
      "type": "text",

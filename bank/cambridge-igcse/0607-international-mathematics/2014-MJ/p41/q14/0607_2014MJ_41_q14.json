@@ -22,7 +22,22 @@
  ],
  "text": "14\ny\n4\nx\n0\n–5\n5\n–4",
  "marks": 13,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 22,
+   "bbox": [
+    137.5,
+    73.4,
+    457.7,
+    347.3
+   ],
+   "id": "0607_2014MJ_41_q14_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -62,7 +77,9 @@
       {
        "label": "14(a)(i)",
        "text": "4\nB1 for left hand branch\nB1 for right hand branch\nB2 for middle branch, no overlaps and max\nclose to (0,0)\nor B1 for middle branch correct shape",
-       "codes": [],
+       "codes": [
+        "4"
+       ],
        "segments": [
         {
          "page": 7,
@@ -121,7 +138,9 @@
       {
        "label": "14(a)(ii)",
        "text": "y = 1, x = –1, x = 3\n3\nB1 for each",
-       "codes": [],
+       "codes": [
+        "3"
+       ],
        "segments": [
         {
          "page": 7,
@@ -180,7 +199,9 @@
       {
        "label": "14(a)(iii)",
        "text": "(0, 0)\n1",
-       "codes": [],
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 7,
@@ -239,7 +260,9 @@
       {
        "label": "14(a)(iv)",
        "text": "(–3, 0.75)\n2\nB1 for each coord",
-       "codes": [],
+       "codes": [
+        "2"
+       ],
        "segments": [
         {
          "page": 7,
@@ -301,7 +324,9 @@
     {
      "label": "14(b)",
      "text": "–1.1[0] < x < –1 or –1.098… < x < –1\nB2 for either interval\n3 < x < 4.1[0] or 3 < x < 4.098 ...\n3\nor B1 for –1.1[0] or –1.098... and 4.1[0] or\n4.098 ...",
-     "codes": [],
+     "codes": [
+      "3"
+     ],
      "segments": [
       {
        "page": 7,
@@ -363,34 +388,9 @@
    "text": "14"
   },
   {
-   "type": "text",
-   "html": "<i>y</i>",
-   "text": "y"
-  },
-  {
-   "type": "text",
-   "html": "4",
-   "text": "4"
-  },
-  {
-   "type": "text",
-   "html": "<i>x</i>",
-   "text": "x"
-  },
-  {
-   "type": "text",
-   "html": "0",
-   "text": "0"
-  },
-  {
-   "type": "text",
-   "html": "–5 5",
-   "text": "–5 5"
-  },
-  {
-   "type": "text",
-   "html": "–4",
-   "text": "–4"
+   "type": "figure",
+   "id": "0607_2014MJ_41_q14_diagram1",
+   "caption": null
   }
  ]
 }

@@ -1,23 +1,10 @@
 {
  "paper": "0607_2019ON_23",
  "pipeline_version": "2.1",
- "checked_at": "2026-11-13T10:16Z",
- "clean": false,
+ "checked_at": "2026-11-13T11:03Z",
+ "clean": true,
  "warnings": 0,
- "problems": [
-  {
-   "id": "0607_2019ON_23",
-   "kind": "coverage",
-   "detail": "page 2: 21923 px of print outside every piece near [50, 64, 468, 535]",
-   "blocking": true
-  },
-  {
-   "id": "0607_2019ON_23",
-   "kind": "coverage",
-   "detail": "page 3: 1049 px of print outside every piece near [242, 65, 353, 75]",
-   "blocking": true
-  }
- ],
+ "problems": [],
  "flags": [
   {
    "id": "0607_2019ON_23_q01",
@@ -35,7 +22,7 @@
    "detail": "no mark scheme for 3(a)"
   }
  ],
- "text_score_min": 0.978,
+ "text_score_min": 0.975,
  "text_scores": {
   "0607_2019ON_23_q01": 1.0,
   "0607_2019ON_23_q02": 1.0,
@@ -50,7 +37,7 @@
   "0607_2019ON_23_q11": 1.0,
   "0607_2019ON_23_q12": 1.0,
   "0607_2019ON_23_q13": 1.0,
-  "0607_2019ON_23_q14": 0.978,
+  "0607_2019ON_23_q14": 0.975,
   "0607_2019ON_23_q15": 1.0
  }
 }

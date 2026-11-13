@@ -224,3 +224,11 @@ mark goes with its second value.
 An old paper prints one bracket after the last sub-part for the whole block ('(a)(i) ... (iv) ... [3]'). The 3 marks
 belong to (a), not to (a)(iv): when every sub-part but the last has no mark, the marks are stored on the part
 (`extract.block_marks`, pre-2013). The question still looks exactly like the paper; the totals do not change.
+
+## 24. Maths 0607 mark schemes (Dhruv, M0 pilot 2026-11-13)
+- Our table is **Q | Answer | Marks | Partial Marks** (the printed 4th column 'Partial Marks': M1 for ..., B1 for ...).
+- **Answer and Partial Marks have the same width** (Dhruv: "make answer and partial mark same width ... so it looks
+  balanced"); Q and Marks keep the fixed widths of every other year. Code: `ms_portrait.EQUAL_FLEX` (set for maths).
+- 2014 schemes print the same 4 columns as a ruled table with no header: our header and our full label per row
+  (`ms_layout._maths_ruled`). Still open (PROGRESS): rows with fractions / column vectors / long notes.
+- Communication marks of investigation papers are paper marks (store paper.json `communication`), never a part's row.

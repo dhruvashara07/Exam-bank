@@ -21,8 +21,51 @@
   }
  ],
  "text": "2\nThere are now 2 dots on A.",
- "marks": 0,
- "figures": [],
+ "marks": 3,
+ "figures": [
+  {
+   "caption": null,
+   "page": 3,
+   "bbox": [
+    334.5,
+    114.3,
+    499.6,
+    190.3
+   ],
+   "id": "0607_2019ON_62_q02a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 3,
+   "bbox": [
+    334.5,
+    216.7,
+    499.0,
+    292.7
+   ],
+   "id": "0607_2019ON_62_q02a_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 3,
+   "bbox": [
+    104.6,
+    315.9,
+    269.1,
+    391.9
+   ],
+   "id": "0607_2019ON_62_q02a_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -50,7 +93,7 @@
     }
    ],
    "text": "Complete the diagrams for 1 dot on B and 3 dots on B, and use your results to complete the table.\nA\nA\nB\nB\nA\nA\nB\nB\nA\nB\nNumber of dots on B\nNumber of crossing points\n(b)\n(p)\n1\n2\n1\n3\n4\n6\n5\n10",
-   "marks": 0,
+   "marks": 1,
    "path": "2(a)",
    "mark_scheme": [
     {
@@ -79,6 +122,11 @@
      "text": "Complete the diagrams for 1 dot on B and 3 dots on B, and use your results to complete the table. A A"
     },
     {
+     "type": "figure",
+     "id": "0607_2019ON_62_q02a_diagram1",
+     "caption": null
+    },
+    {
      "type": "text",
      "html": "B B",
      "text": "B B"
@@ -89,6 +137,11 @@
      "text": "A A"
     },
     {
+     "type": "figure",
+     "id": "0607_2019ON_62_q02a_diagram2",
+     "caption": null
+    },
+    {
      "type": "text",
      "html": "B B",
      "text": "B B"
@@ -97,6 +150,11 @@
      "type": "text",
      "html": "A",
      "text": "A"
+    },
+    {
+     "type": "figure",
+     "id": "0607_2019ON_62_q02a_diagram3",
+     "caption": null
     },
     {
      "type": "text",
@@ -165,18 +223,13 @@
     }
    ],
    "text": "Find a formula for p in terms of b when there are 2 dots on A.\n......................................................",
-   "marks": 0,
+   "marks": 2,
    "path": "2(b)",
    "mark_scheme": [
     {
      "label": "2(b)",
      "text": "1\n1\np=\nb −\n2\nboe\n2\n2",
      "codes": [
-      "2",
-      "1",
-      "1",
-      "2",
-      "2",
       "2"
      ],
      "segments": [
@@ -187,22 +240,6 @@
         250.3,
         568.0799560546875,
         289.3
-       ]
-      }
-     ]
-    },
-    {
-     "label": "2(b)",
-     "text": "for showing 3 second differences = 1\nor simultaneous equations/formula",
-     "codes": [],
-     "segments": [
-      {
-       "page": 5,
-       "bbox": [
-        27.239999771118164,
-        356.6,
-        568.0799560546875,
-        391.4
        ]
       }
      ]
@@ -234,7 +271,7 @@
  "variant": 2,
  "paper_code": "0607/62",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 0,
+ "total_marks": 3,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -246,5 +283,6 @@
    "html": "There are now 2 dots on A.",
    "text": "There are now 2 dots on A."
   }
- ]
+ ],
+ "marks_source": "mark scheme"
 }

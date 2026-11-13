@@ -1,0 +1,105 @@
+{
+ "batch": "M0",
+ "subject": "0607",
+ "sessions": [
+  "2014-MJ",
+  "2019-ON",
+  "2021-FM",
+  "2025-MJ"
+ ],
+ "created": "2026-11-13T10:08:00+00:00",
+ "phases": {
+  "build": [
+   {
+    "start": "2026-11-13T10:09:10+00:00",
+    "end": "2026-11-13T10:18:42+00:00",
+    "note": "60 papers on GitHub (run 43406934899)"
+   }
+  ],
+  "claude1": [
+   {
+    "start": "2026-11-13T10:19:31+00:00",
+    "end": "2026-11-13T11:06:13+00:00",
+    "note": "maths pipeline: formula page, intros, MS marks/communication, symbol fonts, diagrams, LaTeX v1 (2186 ok / 120 picture parts), 4-col MS (partial)"
+   }
+  ],
+  "claude2": [],
+  "review": [],
+  "fix": []
+ },
+ "github_runs": [
+  {
+   "id": 43406934899,
+   "name": "Question bank",
+   "branch": "main",
+   "conclusion": "success",
+   "start": "2026-11-13T10:09:10Z",
+   "end": "2026-11-13T10:18:44Z",
+   "minutes": 9.6
+  }
+ ],
+ "counts": {
+  "papers": 60,
+  "questions": 743,
+  "flags": 27
+ },
+ "errors": [
+  {
+   "pattern": "64",
+   "kind": "new",
+   "what": "equation-editor symbol fonts drew # for x etc. in print and text",
+   "fix": "store_text MATHS_GLYPHS/MATHS_WIDE by eye",
+   "found_by": "claude",
+   "at": "2026-11-13T10:59:10+00:00"
+  },
+  {
+   "pattern": "65",
+   "kind": "new",
+   "what": "formula page + page-top instruction lines outside every piece",
+   "fix": "is_formula_page, page_bounds, paper.formula_list",
+   "found_by": "claude",
+   "at": "2026-11-13T10:59:10+00:00"
+  },
+  {
+   "pattern": "66",
+   "kind": "new",
+   "what": "investigation intro / section B text lost or glued to a part",
+   "fix": "maths_paper_parts -> paper intros",
+   "found_by": "claude",
+   "at": "2026-11-13T10:59:11+00:00"
+  },
+  {
+   "pattern": "67",
+   "kind": "new",
+   "what": "investigation papers 2014-2024: marks 0; communication rows taken as part rows",
+   "fix": "marks from MS; fold_communication; Partial Marks numbers not marks",
+   "found_by": "claude",
+   "at": "2026-11-13T10:59:11+00:00"
+  },
+  {
+   "pattern": "68",
+   "kind": "new",
+   "what": "uncaptioned maths diagrams not cut as figures",
+   "fix": "extract.diagrams + grow to light ink",
+   "found_by": "claude",
+   "at": "2026-11-13T10:59:11+00:00"
+  },
+  {
+   "pattern": "69",
+   "kind": "new",
+   "what": "Partial Marks column header/fallback",
+   "fix": "NAMES, EQUAL_FLEX, 4-col default",
+   "found_by": "claude",
+   "at": "2026-11-13T10:59:11+00:00"
+  },
+  {
+   "pattern": "70",
+   "kind": "new",
+   "what": "2014 ruled MS without header",
+   "fix": "_maths_ruled relabel + FORCE_WRAP (partial)",
+   "found_by": "claude",
+   "at": "2026-11-13T10:59:11+00:00"
+  }
+ ],
+ "tokens": []
+}

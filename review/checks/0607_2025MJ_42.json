@@ -1,16 +1,10 @@
 {
  "paper": "0607_2025MJ_42",
  "pipeline_version": "2.1",
- "checked_at": "2026-11-13T10:18Z",
- "clean": false,
+ "checked_at": "2026-11-13T11:03Z",
+ "clean": true,
  "warnings": 1,
  "problems": [
-  {
-   "id": "0607_2025MJ_42",
-   "kind": "coverage",
-   "detail": "page 2: 33231 px of print outside every piece near [50, 64, 472, 749]",
-   "blocking": true
-  },
   {
    "id": "0607_2025MJ_42_q16",
    "kind": "text",
@@ -19,7 +13,7 @@
   }
  ],
  "flags": [],
- "text_score_min": 0.962,
+ "text_score_min": 0.957,
  "text_scores": {
   "0607_2025MJ_42_q01": 1.0,
   "0607_2025MJ_42_q02": 1.0,
@@ -36,6 +30,6 @@
   "0607_2025MJ_42_q13": 1.0,
   "0607_2025MJ_42_q14": 1.0,
   "0607_2025MJ_42_q15": 1.0,
-  "0607_2025MJ_42_q16": 0.962
+  "0607_2025MJ_42_q16": 0.957
  }
 }

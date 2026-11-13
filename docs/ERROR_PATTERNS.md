@@ -144,3 +144,35 @@ Known: 2010 MJ 13, 23, 53 have no mark scheme file at all. MCQ labels cut at the
 62. The paper's '[3]' after (a)(iv) is the block total of (a): stored on (a) now (MS_TABLE_RULES 23).
 63. Map prefixes and printed order: entries of an '@original' map are still matched in printed order; a heading
     line ('trace:', 'Table:') starts the row of the first marked line under it, so its entry is the heading.
+
+## Maths 0607 pilot M0 (2014 MJ, 2019 ON, 2021 FM, 2025 MJ), found by Claude in pass 1
+64. Equation-editor fonts re-encode symbols: MathType 'MM*' fonts (2014-2024) and 2025 'AllAndNone' print × as '#',
+    ÷ as "'", ≠ as '!', ≤/≥ as 'G'/'H', π as 'r', ∪/∩ as ','/'+'. The store drew '#' in the PRINT layout too (2025 MJ 21 q5).
+    -> `store_text.MATHS_GLYPHS` (read by eye from a glyph sheet of every code) and `MATHS_WIDE` (2025: the same code is a
+    digit or a symbol, told apart by its width: '2' 0.83 em = '>'), maths only. Shape matching (glyph_remap) was tried and
+    is NOT reliable for these (≠ read as √). Check: maths_tex character check + store verify. New font in a later batch:
+    make the glyph sheet again (/tmp script in CONVERSATION_LOG M0 entry) and add the codes.
+65. Page 2 'Formula List' / 'List of formulas' is no question (coverage error on every paper); 'Answer all the questions.'
+    / 'Calculators must not be used in this paper.' on the first question page was ink outside every piece.
+    -> `extract.is_formula_page` (skipped like a blank page, kept as paper.formula_list), `layout.page_bounds` (maths only).
+66. Investigation / modelling papers (5, 6): the introduction before Q1 and the 'B MODELLING' / 'Section B' text before the
+    first question of part B belong to no question (it was lost, or glued to the last part of part A).
+    -> `extract.maths_paper_parts`: paper.json `intros` (section, before, segments); store paper.json has their layout +
+    LaTeX; every question of a section has `intro` = its index. Coverage counts them.
+67. 2014-2024 investigation papers print no [n] per part: marks found 0. -> marks from the mark scheme (`run.py`, maths
+    investigation only). Their 'Communication: seen in ...' rows are paper marks: the rows printed under them name earlier
+    parts (criteria) and were taken as extra rows of those parts (2019 ON 51: 3(c) got 2+1). -> `ms.fold_communication`
+    (paper.json `communication`); numbers in the 'Partial Marks' column (fractions, tables) are not marks
+    (`structured_rows_table` PX). Checks: marks + communication = cover total.
+68. Maths diagrams have no 'Fig.' caption (a triangle 'NOT TO SCALE', axes, grids), so no figure was cut and the
+    website text would read the diagram's labels as text. -> `extract.diagrams` (maths only): clusters of drawings/images
+    with their short labels, ruled tables of text excluded (they stay text + rules), grown to all ink (light grey grids
+    too: `_grow_light`). Ids `..._diagram<n>`. Check: checks.py crop warnings - compare each with the page (pattern 56).
+69. Mark schemes 2018+ have a 4th column 'Partial Marks' (M1 for ..., B1 for ...): the header was not recognised and rows
+    with a drawn symbol had no 4-column frame to fall back to (2025 MJ 21 q3: partial marks inside the Answer cell).
+    -> header name 'Partial Marks', Answer and Partial Marks the same width (Dhruv, MS_TABLE_RULES 24), 4-column default
+    from the printed rules when no row can be re-wrapped.
+70. 2014 maths mark schemes are portrait tables ruled into 4 columns with no header row; labels '2', '(a)', '(i)' sit
+    apart and only on a question's first row. -> `ms_layout._maths_ruled`: our full label per row, our header, re-laid out
+    like the landscape era (FORCE_WRAP). NOT finished in M0: rows with fractions / column vectors / long notes (2014 MJ 41
+    q10, 21 q2) still break; see PROGRESS.

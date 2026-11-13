@@ -21,8 +21,51 @@
   }
  ],
  "text": ", 3\n2 .\n1\nThe first three terms of a sequence of fractions are 1, 2\nThese terms are calculated in the following way.\n1\n=\n1\n1\n1\n1\n1\n=\n=\n1\n1 +\n2\n1 + 1\n1\n1\n1\n1\n2\n1\n=\n=\n=\n1 +\n3\n1\n3\n1 +\n1\n2\n2\n1 +\n1",
- "marks": 0,
- "figures": [],
+ "marks": 6,
+ "figures": [
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    79.4,
+    378.0,
+    239.0,
+    428.7
+   ],
+   "id": "0607_2014MJ_62_q01_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    67.9,
+    450.8,
+    239.5,
+    509.5
+   ],
+   "id": "0607_2014MJ_62_q01_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    233.9,
+    609.8,
+    325.9,
+    701.7
+   ],
+   "id": "0607_2014MJ_62_q01a_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -50,13 +93,15 @@
     }
    ],
    "text": "Fill in the box to complete the calculation of the 4th term.\n1\n1\n1\n=\n=\n1\n1\n1\n1 +\n1 +\n1 +\n1\n1\n3\n1 +\n1 +\n2\n1\n2\n1 +\n1\n1\n=\n=\n5\n3\n3\n=\n5",
-   "marks": 0,
+   "marks": 1,
    "path": "1(a)",
    "mark_scheme": [
     {
      "label": "1(a)",
      "text": "1\n1\nseen\n2\n1+\n3",
-     "codes": [],
+     "codes": [
+      "1"
+     ],
      "segments": [
       {
        "page": 2,
@@ -95,6 +140,11 @@
      "type": "text",
      "html": "+ 1 + + \\(\\frac{1}{1}\\)",
      "text": "+ 1 + + (1)/(1)"
+    },
+    {
+     "type": "figure",
+     "id": "0607_2014MJ_62_q01a_diagram3",
+     "caption": null
     },
     {
      "type": "text",
@@ -145,13 +195,15 @@
     }
    ],
    "text": ".\n(b) Show that the 5th term of this sequence of fractions is 8\n1\n=\n1\n1 +\n1\n1 +\n1\n1 +\n1\n1 +\n1",
-   "marks": 0,
+   "marks": 1,
    "path": "1(b)",
    "mark_scheme": [
     {
      "label": "1(b)",
      "text": "1\n1\nC opportunity\nseen\n3\n1+\n5\n1\n2\n8\n13\n21",
-     "codes": [],
+     "codes": [
+      "1"
+     ],
      "segments": [
       {
        "page": 2,
@@ -220,13 +272,15 @@
     }
    ],
    "text": "Complete the table to show the first eight terms of this sequence of fractions.\n2\n3\n5\n1\n1\n13\n3\n5\n8\n1\n2\n21",
-   "marks": 0,
+   "marks": 2,
    "path": "1(c)",
    "mark_scheme": [
     {
      "label": "1(c)",
      "text": "1\n3\n5\nB1 each\n2\n2\n3\n8\n13\n21\n1\n5\n34",
-     "codes": [],
+     "codes": [
+      "2"
+     ],
      "segments": [
       {
        "page": 2,
@@ -295,13 +349,15 @@
     }
    ],
    "text": "Explain how you used a pattern to find the numerator and the denominator of the 8th term.\nNumerator\nDenominator",
-   "marks": 0,
+   "marks": 2,
    "path": "1(d)",
    "mark_scheme": [
     {
      "label": "1(d)",
      "text": "th\n[Numerator =] denominator of 7\nor previous fraction\nB1 each\n2\nor added the two previous numerators oe\nor denominator of (previous term + 1) oe=\nth\n[Denominator =] numerator + denominator of 7 or\nprevious fraction\nor added the two previous denominators oe\nor numerator of (previous term + 1) oe",
-     "codes": [],
+     "codes": [
+      "2"
+     ],
      "segments": [
       {
        "page": 2,
@@ -346,7 +402,7 @@
  "variant": 2,
  "paper_code": "0607/62",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 0,
+ "total_marks": 6,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -374,44 +430,35 @@
    "text": "(1)/(1) = 1"
   },
   {
+   "type": "figure",
+   "id": "0607_2014MJ_62_q01_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "= \\(\\frac{1}{2}\\)",
+   "text": "= (1)/(2)"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2014MJ_62_q01_diagram2",
+   "caption": null
+  },
+  {
    "type": "text",
    "html": "1",
    "text": "1"
   },
   {
    "type": "text",
-   "html": "= \\(\\frac{1}{1 + 1}\\) = \\(\\frac{1}{2}\\)",
-   "text": "= (1)/(1 + 1) = (1)/(2)"
+   "html": "= = \\(\\frac{2}{3}\\)",
+   "text": "= = (2)/(3)"
   },
   {
    "type": "text",
-   "html": "+ \\(\\frac{^{1}}{_{1}}\\)",
-   "text": "+ (1)/(1)"
-  },
-  {
-   "type": "text",
-   "html": "\\(\\frac{1}{1}\\) 1 1",
-   "text": "(1)/(1) 1 1"
-  },
-  {
-   "type": "text",
-   "html": "= = = \\(\\frac{2}{3}\\)",
-   "text": "= = = (2)/(3)"
-  },
-  {
-   "type": "text",
-   "html": "+ \\(\\frac{3}{2}\\)",
-   "text": "+ (3)/(2)"
-  },
-  {
-   "type": "text",
-   "html": "+ \\(\\frac{^{1}}{_{2}}\\)",
-   "text": "+ (1)/(2)"
-  },
-  {
-   "type": "text",
-   "html": "+ \\(\\frac{^{1}}{_{1}}\\)",
-   "text": "+ (1)/(1)"
+   "html": "\\(\\frac{3}{2}\\)",
+   "text": "(3)/(2)"
   }
- ]
+ ],
+ "marks_source": "mark scheme"
 }

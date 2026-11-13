@@ -1,44 +1,26 @@
 {
  "paper": "0607_2019ON_63",
  "pipeline_version": "2.1",
- "checked_at": "2026-11-13T10:16Z",
- "clean": false,
+ "checked_at": "2026-11-13T11:03Z",
+ "clean": true,
  "warnings": 1,
  "problems": [
   {
-   "id": "0607_2019ON_63",
-   "kind": "marks",
-   "detail": "marks found 0, cover 40",
-   "blocking": true
-  },
-  {
-   "id": "0607_2019ON_63",
-   "kind": "coverage",
-   "detail": "page 2: 2273 px of print outside every piece near [201, 424, 394, 434]",
-   "blocking": true
-  },
-  {
-   "id": "0607_2019ON_63",
-   "kind": "coverage",
-   "detail": "page 3: 14797 px of print outside every piece near [50, 65, 442, 231]",
-   "blocking": true
-  },
-  {
    "id": "0607_2019ON_63_q06",
    "kind": "text",
-   "detail": "editable text has 94% of the printed words",
+   "detail": "editable text has 92% of the printed words",
    "blocking": false
   }
  ],
  "flags": [],
- "text_score_min": 0.938,
+ "text_score_min": 0.921,
  "text_scores": {
   "0607_2019ON_63_q01": 1.0,
   "0607_2019ON_63_q02": 1.0,
   "0607_2019ON_63_q03": 1.0,
   "0607_2019ON_63_q04": 1.0,
   "0607_2019ON_63_q05": 1.0,
-  "0607_2019ON_63_q06": 0.938,
+  "0607_2019ON_63_q06": 0.921,
   "0607_2019ON_63_q07": 1.0,
   "0607_2019ON_63_q08": 1.0,
   "0607_2019ON_63_q09": 0.991

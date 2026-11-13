@@ -21,8 +21,23 @@
   }
  ],
  "text": "1\nWhen there is 1 dot on A and 1 dot on B, there is no crossing point.\nA\nB",
- "marks": 0,
- "figures": [],
+ "marks": 2,
+ "figures": [
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    327.8,
+    554.7,
+    492.8,
+    602.3
+   ],
+   "id": "0607_2019ON_62_q01a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -50,7 +65,7 @@
     }
    ],
    "text": "Each of these diagrams has 1 dot on A.\nComplete the diagrams by joining the dot on A to each dot on B.\nA\nA\nB\nB",
-   "marks": 0,
+   "marks": 1,
    "path": "1(a)",
    "mark_scheme": [
     {
@@ -84,6 +99,11 @@
      "text": "A A"
     },
     {
+     "type": "figure",
+     "id": "0607_2019ON_62_q01a_diagram1",
+     "caption": null
+    },
+    {
      "type": "text",
      "html": "B B",
      "text": "B B"
@@ -112,7 +132,7 @@
     }
    ],
    "text": "The number of dots on B is b.\nThe number of crossing points is p.\nComplete this statement.\nWhen there is 1 dot on A and b dots on B, then the value of p is .......................... .",
-   "marks": 0,
+   "marks": 1,
    "path": "1(b)",
    "mark_scheme": [
     {
@@ -159,7 +179,7 @@
  "variant": 2,
  "paper_code": "0607/62",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 0,
+ "total_marks": 2,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -181,5 +201,6 @@
    "html": "B",
    "text": "B"
   }
- ]
+ ],
+ "marks_source": "mark scheme"
 }

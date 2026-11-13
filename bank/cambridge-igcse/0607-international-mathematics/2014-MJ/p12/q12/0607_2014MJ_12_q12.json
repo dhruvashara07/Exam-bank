@@ -22,7 +22,22 @@
  ],
  "text": "A boat sails for 12km from A to B on a bearing of 120°.\nThe boat changes direction and sails for 5km on a bearing of 030° to C.\nNorth\nNOT TO\nA\nSCALE\nNorth\n12km\nC\n5km\nB",
  "marks": 4,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 11,
+   "bbox": [
+    178.3,
+    111.2,
+    353.6,
+    349.5
+   ],
+   "id": "0607_2014MJ_12_q12_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -56,7 +71,9 @@
     {
      "label": "12(a)",
      "text": "300\n1",
-     "codes": [],
+     "codes": [
+      "1"
+     ],
      "segments": [
       {
        "page": 3,
@@ -121,7 +138,7 @@
      "label": "12(b)",
      "text": "2\n2\n5 +12\nor better, e.g.\n169\nM2 for\n13\n3\n2\n2\n2\nor M1 for [AC ] = 5 + 12 or 90° seen at B",
      "codes": [
-      "2"
+      "3"
      ],
      "segments": [
       {
@@ -184,49 +201,14 @@
    "text": "A boat sails for 12 km from A to B on a bearing of 120°. The boat changes direction and sails for 5 km on a bearing of 030° to C."
   },
   {
-   "type": "text",
-   "html": "North",
-   "text": "North"
+   "type": "figure",
+   "id": "0607_2014MJ_12_q12_diagram1",
+   "caption": null
   },
   {
    "type": "text",
-   "html": "NOT TO",
-   "text": "NOT TO"
-  },
-  {
-   "type": "text",
-   "html": "<i>A</i>",
-   "text": "A"
-  },
-  {
-   "type": "text",
-   "html": "SCALE",
-   "text": "SCALE"
-  },
-  {
-   "type": "text",
-   "html": "North",
-   "text": "North"
-  },
-  {
-   "type": "text",
-   "html": "km",
-   "text": "km"
-  },
-  {
-   "type": "text",
-   "html": "<i>C</i>",
-   "text": "C"
-  },
-  {
-   "type": "text",
-   "html": "km",
-   "text": "km"
-  },
-  {
-   "type": "text",
-   "html": "<i>B</i>",
-   "text": "B"
+   "html": "NOT TO SCALE",
+   "text": "NOT TO SCALE"
   }
  ]
 }

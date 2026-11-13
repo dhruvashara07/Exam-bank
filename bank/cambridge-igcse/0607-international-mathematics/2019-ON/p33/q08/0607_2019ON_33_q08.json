@@ -4,7 +4,36 @@
  "segments": [],
  "text": "",
  "marks": 8,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 10,
+   "bbox": [
+    127.2,
+    70.9,
+    468.1,
+    338.0
+   ],
+   "id": "0607_2019ON_33_q08a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 11,
+   "bbox": [
+    117.5,
+    71.9,
+    476.9,
+    257.2
+   ],
+   "id": "0607_2019ON_33_q08b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -56,34 +85,9 @@
    ],
    "content": [
     {
-     "type": "text",
-     "html": "<i>Q</i>",
-     "text": "Q"
-    },
-    {
-     "type": "text",
-     "html": "NOT TO SCALE",
-     "text": "NOT TO SCALE"
-    },
-    {
-     "type": "text",
-     "html": "40°",
-     "text": "40°"
-    },
-    {
-     "type": "text",
-     "html": "1.8 m",
-     "text": "1.8 m"
-    },
-    {
-     "type": "text",
-     "html": "<i>P</i> <i>A</i>",
-     "text": "P A"
-    },
-    {
-     "type": "text",
-     "html": "m",
-     "text": "m"
+     "type": "figure",
+     "id": "0607_2019ON_33_q08a_diagram1",
+     "caption": null
     },
     {
      "type": "text",
@@ -255,34 +259,9 @@
    "path": "8(b)",
    "content": [
     {
-     "type": "text",
-     "html": "<i>B</i>",
-     "text": "B"
-    },
-    {
-     "type": "text",
-     "html": "NOT TO SCALE",
-     "text": "NOT TO SCALE"
-    },
-    {
-     "type": "text",
-     "html": "cm",
-     "text": "cm"
-    },
-    {
-     "type": "text",
-     "html": "<i>O</i> 38° <i>A</i>",
-     "text": "O 38° A"
-    },
-    {
-     "type": "text",
-     "html": "cm",
-     "text": "cm"
-    },
-    {
-     "type": "text",
-     "html": "<i>C</i>",
-     "text": "C"
+     "type": "figure",
+     "id": "0607_2019ON_33_q08b_diagram2",
+     "caption": null
     },
     {
      "type": "text",
@@ -320,15 +299,7 @@
      "label": "8(c)",
      "text": "12.3 or 12.28 to 12.29",
      "codes": [
-      "3",
-      "4",
-      "4",
-      "2",
-      "2",
-      "4",
-      "2",
-      "4",
-      "2"
+      "3"
      ],
      "segments": [
       {

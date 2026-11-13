@@ -4,7 +4,36 @@
  "segments": [],
  "text": "",
  "marks": 3,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    195.2,
+    72.9,
+    399.5,
+    220.5
+   ],
+   "id": "0607_2019ON_13_q08a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    144.3,
+    278.8,
+    450.5,
+    450.0
+   ],
+   "id": "0607_2019ON_13_q08b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -53,6 +82,11 @@
     }
    ],
    "content": [
+    {
+     "type": "figure",
+     "id": "0607_2019ON_13_q08a_diagram1",
+     "caption": null
+    },
     {
      "type": "text",
      "html": "Complete the diagram above so that the dotted line is a line of symmetry.",
@@ -210,89 +244,9 @@
    "path": "8(b)",
    "content": [
     {
-     "type": "text",
-     "html": "<i>y</i> 3",
-     "text": "y 3"
-    },
-    {
-     "type": "table",
-     "rows": [
-      [
-       "",
-       "",
-       "",
-       "2",
-       "",
-       "",
-       "",
-       "",
-       "",
-       ""
-      ],
-      [
-       "",
-       "",
-       "",
-       "2 1",
-       "<i>B</i>",
-       "",
-       "",
-       "",
-       "",
-       ""
-      ],
-      [
-       "",
-       "",
-       "",
-       "",
-       "<i>A</i>",
-       "",
-       "",
-       "",
-       "",
-       ""
-      ],
-      [
-       "4 –3",
-       "–2",
-       "–1",
-       "0 –1",
-       "1",
-       "1 2",
-       "2 3",
-       "3 4",
-       "",
-       ""
-      ],
-      [
-       "",
-       "",
-       "",
-       "",
-       "",
-       "",
-       "",
-       "",
-       "4",
-       "4"
-      ]
-     ]
-    },
-    {
-     "type": "text",
-     "html": "<i>x</i>",
-     "text": "x"
-    },
-    {
-     "type": "text",
-     "html": "– 4",
-     "text": "– 4"
-    },
-    {
-     "type": "text",
-     "html": "–1",
-     "text": "–1"
+     "type": "figure",
+     "id": "0607_2019ON_13_q08b_diagram2",
+     "caption": null
     }
    ]
   }

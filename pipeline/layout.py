@@ -51,6 +51,11 @@ def footer_ink_top(page, line):
     return top
 
 
+def _maths_page(page):
+    m = re.search(r'/(\d{4})/\d{4}-[A-Z]{2}/', (page.parent.name or '').replace('\\', '/'))
+    return bool(m) and m.group(1) != '0625'
+
+
 def page_bounds(page):
     """Return (top, bottom) of the question content area on a page."""
     key = (page.parent.name, page.number)
@@ -74,6 +79,9 @@ def page_bounds(page):
                     r'(the next (page|side)|the back page|page \d+)|Question continued on (the )?(next|following) (page|side))\.?', ' '.join(t.split())):
                 bottom = min(bottom, y0 - 3.0)          # centred notice: 'Turn over', 'Question 10 is on the back page.'
             x0 = l['bbox'][0]
+            if y0 < 95 and 150 < x0 < 330 and re.fullmatch(r'(Answer all (the )?questions|Answer both parts A and B|Calculators must not '
+                                                       r'be used in this paper)\.?', ' '.join(t.split())) and _maths_page(page):
+                top = max(top, y1 + 3)                  # maths: the instruction line at the top of the first question page
             if y0 < 58 and y1 < 72 and re.fullmatch(r'\d{1,2}', t) and 240 < x0 < 360:   # page number (lower when a barcode sits above it)
                 top = max(top, y1 + 4)
     if len(_BOUNDS) > 4000:

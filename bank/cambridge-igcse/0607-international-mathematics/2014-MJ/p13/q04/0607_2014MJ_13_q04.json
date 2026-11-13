@@ -4,7 +4,36 @@
  "segments": [],
  "text": "",
  "marks": 4,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    127.0,
+    177.8,
+    467.7,
+    422.0
+   ],
+   "id": "0607_2014MJ_13_q04a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    167.7,
+    506.3,
+    418.2,
+    704.7
+   ],
+   "id": "0607_2014MJ_13_q04b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -38,7 +67,11 @@
     {
      "label": "4(a)",
      "text": "Diameter\n1\nSector\n1\nArc\n1",
-     "codes": [],
+     "codes": [
+      "1",
+      "1",
+      "1"
+     ],
      "segments": [
       {
        "page": 2,
@@ -69,9 +102,13 @@
      "text": "Label the diagram. Use only words from the box above."
     },
     {
+     "type": "figure",
+     "id": "0607_2014MJ_13_q04a_diagram1",
+     "caption": null
+    },
+    {
      "type": "answer",
-     "kind": "lines",
-     "lines": 3
+     "kind": "lines"
     },
     {
      "type": "marks",
@@ -107,7 +144,9 @@
     {
      "label": "4(b)",
      "text": "103° ± 2°\n1",
-     "codes": [],
+     "codes": [
+      "1"
+     ],
      "segments": [
       {
        "page": 2,
@@ -128,14 +167,14 @@
      "text": "Measure and write down the size of angle ABC."
     },
     {
-     "type": "text",
-     "html": "<i>A</i>",
-     "text": "A"
+     "type": "figure",
+     "id": "0607_2014MJ_13_q04b_diagram2",
+     "caption": null
     },
     {
      "type": "text",
-     "html": "<i>B</i> <i>C</i>",
-     "text": "B C"
+     "html": "<i>C</i>",
+     "text": "C"
     },
     {
      "type": "text",

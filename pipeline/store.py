@@ -20,7 +20,7 @@ import numpy as np
 from PIL import Image
 import paths
 from run import cleaned
-from store_text import family, unpua, hexcol, span_len, odd, symbol_family
+from store_text import family, unpua, hexcol, span_len, odd, symbol_family, maths_doc, maths_glyph
 from store_units import glyph_styles, char_styles, tp, drawing_d, nodes, scale_note
 import store_options as OPT
 import store_v5 as V5
@@ -80,6 +80,7 @@ SCHEMA = {
 def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
     page = doc[pno]
     m = page.rotation_matrix
+    MATHS = maths_doc(doc)
     ox, oy = clip.x0, clip.y0
     boxes = [fitz.Rect(f['source']['box']) for f in figs]
     capboxes = [fitz.Rect(f['caption_box']) for f in figs if f.get('caption_box') and f['source']['page'] == pno + 1]
@@ -172,6 +173,10 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
                         # (a bracket too: '[' draws '≥' in 2011 ON 51's symbol subset, round 26)
                         from store_text import glyph_remap   # a re-encoded symbol ('R' drawn as '=', 2014 MJ 63)
                         g_ = glyph_remap(page, font, w['t'], chars[0]['bbox'], s['size'])
+                        if g_ != w['t']:
+                            w['t'] = g_; w['f'] = 'symbol'
+                    if MATHS:                         # equation-editor symbol codes ('#' printed as ×, maths only)
+                        g_ = maths_glyph(font, w['t'], [c_ for c_ in chars], s['size'])
                         if g_ != w['t']:
                             w['t'] = g_; w['f'] = 'symbol'
                     if w['f'] == 'symbol':
@@ -638,6 +643,8 @@ def build(pid):
     msp = os.path.join(raw, f'ms_{pv}.pdf')
     mdoc = fitz.open(cleaned(msp)) if os.path.exists(msp) else fitz.open()   # same cleaned copy the cut used
     store = paths.store_dir(pid)
+    import subjects
+    MATHS_TEXT = subjects.subject(meta['syllabus'])['maths_text']
     shutil.rmtree(store, ignore_errors=True)
     for d in ('figures', 'glyphs'):
         os.makedirs(os.path.join(store, d))
@@ -762,7 +769,15 @@ def build(pid):
                                    'problems': [list(x) for x in mp['problems']]}
             except Exception as e:
                 print(f"  {q['id']}: portrait mark scheme failed: {e}", file=sys.stderr)
+        if MATHS_TEXT:                            # maths: LaTeX content per part (+ check), the section intro it needs
+            import maths_tex
+            maths_tex.build_record(rec)
+            sec = [k for k, it in enumerate(meta.get('intros', [])) if it['before'] <= q['number']]
+            if sec:
+                rec['intro'] = sec[-1]
         json.dump(rec, open(os.path.join(store, f"q{q['number']:02d}.json"), 'w'), ensure_ascii=False, separators=(',', ':'))
+    if MATHS_TEXT:
+        paper_record(meta, qdoc, mdoc, store, styles, qstyle, mstyle)
     # the mark-scheme table header row (Question | Answer | Marks), stored once per paper
     for pno in range(1, len(mdoc)):
         rm = mdoc[pno].rotation_matrix                 # mark-scheme pages are rotated: words in visible coordinates
@@ -799,6 +814,36 @@ def build(pid):
 
 
 # ---------------------------------------------------------------- duplicates (same question in two variants)
+def paper_record(meta, qdoc, mdoc, store, styles, qstyle, mstyle):
+    """Maths: what belongs to the paper, not to a question (ERROR_PATTERNS 65-67) -> store/<paper>/paper.json:
+    formula_list (print layout + LaTeX list), intros (investigation / modelling text before its questions: layout + LaTeX),
+    communication marks (investigation papers)."""
+    import maths_tex
+    rec = {'schema': 5, 'id': paths.paper_id(meta), 'paper_type': meta['paper_type'], 'total_marks': meta['total_marks']}
+    fl = meta.get('formula_list')
+    if fl:
+        pno = fl['page'] - 1
+        items = maths_tex.formula_list(qdoc[pno].get_text())
+        rec['formula_list'] = {'layout': [unit(qdoc, pno, fitz.Rect(fl['bbox']), [], styles(qdoc, 'qp', pno, qstyle), store, 'qp')],
+                               'items': items, 'tex_check': 'ok' if items else 'picture: formula line not known'}
+    intros = []
+    for it in meta.get('intros', []):
+        lay = [unit(qdoc, s['page'] - 1, fitz.Rect(s['bbox']), [], styles(qdoc, 'qp', s['page'] - 1, qstyle), store, 'qp')
+               for s in it['segments']]
+        part = {'path': 'intro', 'layout': lay}
+        r_ = {'parts': [part]}
+        maths_tex.build_record(r_)
+        intros.append({'section': it['section'], 'before': it['before'], 'layout': lay,
+                       **({'content': part['content']} if part.get('content') else {}), 'tex_check': part.get('tex_check')})
+    if intros:
+        rec['intros'] = intros
+    if meta.get('communication'):
+        rec['communication'] = [{'marks': c['marks'], 'criteria': c['criteria'], 'text': c['text'],
+                                 'layout': [unit(mdoc, s['page'] - 1, fitz.Rect(s['bbox']), [], styles(mdoc, 'ms', s['page'] - 1, mstyle),
+                                                 store, 'ms') for s in c['segments']]} for c in meta['communication']]
+    json.dump(rec, open(os.path.join(store, 'paper.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
+
+
 def signature(q):
     words = re.sub(r'\s+', ' ', ' '.join(p['text'] for p in q['parts'])).strip().lower()
     figs = sorted(tuple(round(v) for v in f['size_pt']) for f in q['figures'])

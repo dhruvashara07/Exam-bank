@@ -14,7 +14,8 @@ from extract import extract, segment_text_all
 import editable
 from golden import cut_hash
 from layout import page_bounds, visible_lines, ink_boxes, tight_ink, grow_to_ink, split_prose_rows, CONTENT_X0, CONTENT_X1
-from ms import mcq_key, structured_rows, MS_RELABEL
+from ms import mcq_key, structured_rows, MS_RELABEL, fold_communication
+import subjects
 
 SCAN_QMARKS = {'2002ON_05': {1: 15, 2: 15, 3: 15, 4: 15}}    # 'TOTAL 15' under each question of the scanned mark scheme
 SCAN_TOTALS = {'2002ON_05': 60}    # 'MAXIMUM MARK : 60' on the scanned cover of the Nov 2002 practical mark scheme
@@ -186,6 +187,17 @@ def process(qp_path):
     ms_rows = structured_rows(msdoc, meta['paper_type'] == 'practical_test' and pv[0] == '0') if (msdoc and not meta['is_mcq']) else []
     ms_qtotals = [int(x) for x in re.findall(r'\[\s*Total:?\s*(\d+)\s*\]', ' '.join(pg.get_text() for pg in msdoc[1:]), re.I)] \
         if (msdoc and pv[0] == '0' and meta['paper_type'] == 'practical_test') else []
+    maths = subjects.subject(syl)['maths_text']
+    comm_marks = 0
+    if maths and ms_rows:              # investigation papers: communication marks belong to the paper, not to a part
+        ms_rows, comms = fold_communication(ms_rows)
+        if comms:
+            meta['communication'] = []
+            for c in comms:
+                mk = sum(int(re.match(r'\d+', x).group()) for x in c['marks_codes'][:1] if re.match(r'\d+', x))
+                meta['communication'].append({'marks': mk, 'text': c['text'], 'criteria': [k['label'] for k in c['criteria']],
+                                              'segments': c['segments']})
+                comm_marks += mk
     for r in ms_rows:                  # Cambridge numbered a mark scheme differently from its paper (read by eye, Dhruv round 22)
         fix = MS_RELABEL.get(f'{year}{session}_{pv}', {}).get(r['label'])
         if fix:
@@ -282,7 +294,23 @@ def process(qp_path):
     if meta.get('erratum'):
         queue.append({'id': f'{syl}_{year}{session}_{pv}', 'reasons': ['paper has an erratum notice (page '
                       + ', '.join(str(e['page']) for e in meta['erratum']) + '): check the corrected question(s)']})
-    found = sum(q['marks'] for q in questions)
+    if maths and 'investigation' in meta['paper_type'] and not sum(q['marks'] for q in questions) and msdoc:
+        # 2014-2024 investigation papers print no [n] per part: the marks are in the mark scheme only (ERROR_PATTERNS 67)
+        from extract import sum_marks
+        def ms_marks(n):
+            for k in n.get('parts', []):
+                ms_marks(k)
+            n['marks'] = sum(int(m_.group(1)) for r in n.get('mark_scheme', []) for c in r.get('codes', [])
+                             for m_ in [re.match(r'(\d{1,2})(?:FT|ft)?$', str(c))] if m_)
+        for q in questions:
+            ms_marks(q)
+            q['marks'] = sum_marks(q)
+            q['total_marks'] = q['marks']
+            q['marks_source'] = 'mark scheme'
+            with open(os.path.join(w.qdir(q['id']), f"{q['id']}.json"), 'w') as f:
+                json.dump(q, f, ensure_ascii=False, indent=1)
+        meta['marks_source'] = 'mark scheme'
+    found = sum(q['marks'] for q in questions) + comm_marks
     meta['questions'] = len(questions)
     meta['marks_found'] = found
     meta['checks'] = {'marks_match_total': found == meta['total_marks']}

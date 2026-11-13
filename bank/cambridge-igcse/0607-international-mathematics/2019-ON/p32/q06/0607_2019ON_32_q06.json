@@ -4,7 +4,36 @@
  "segments": [],
  "text": "",
  "marks": 7,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    169.5,
+    105.8,
+    215.5,
+    183.7
+   ],
+   "id": "0607_2019ON_32_q06a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    152.9,
+    254.5,
+    359.7,
+    499.5
+   ],
+   "id": "0607_2019ON_32_q06b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -62,8 +91,18 @@
     },
     {
      "type": "text",
-     "html": "NOT TO SCALE",
-     "text": "NOT TO SCALE"
+     "html": "NOT TO",
+     "text": "NOT TO"
+    },
+    {
+     "type": "figure",
+     "id": "0607_2019ON_32_q06a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "SCALE",
+     "text": "SCALE"
     },
     {
      "type": "answer",
@@ -105,13 +144,7 @@
      "label": "6(b)",
      "text": "41.6 or 41.56 to 41.57",
      "codes": [
-      "4",
-      "1",
-      "2",
-      "2",
-      "1",
-      "2",
-      "2"
+      "4"
      ],
      "segments": [
       {
@@ -127,6 +160,11 @@
     }
    ],
    "content": [
+    {
+     "type": "figure",
+     "id": "0607_2019ON_32_q06b_diagram2",
+     "caption": null
+    },
     {
      "type": "text",
      "html": "NOT TO SCALE",

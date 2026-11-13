@@ -21,8 +21,23 @@
   }
  ],
  "text": "9\nSome satellites eventually fall back to the Earth.\nA model for the descent time of a satellite, D days, with an initial height, h kilometres, is\n`\nj\n24\n9 64\n.\nD\n5\n10\n-\nh\n.\n=\n#",
- "marks": 0,
- "figures": [],
+ "marks": 7,
+ "figures": [
+  {
+   "caption": null,
+   "page": 11,
+   "bbox": [
+    136.8,
+    164.7,
+    458.2,
+    410.0
+   ],
+   "id": "0607_2019ON_63_q09a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -50,7 +65,7 @@
     }
    ],
    "text": "Sketch the graph of this model for\n400\nh\n600\n.\nG\nG\nD\n3000\n0\nh\n400\n600",
-   "marks": 0,
+   "marks": 1,
    "path": "9(a)",
    "mark_scheme": [
     {
@@ -79,24 +94,9 @@
      "text": "Sketch the graph of this model for 400 G h G 600."
     },
     {
-     "type": "text",
-     "html": "<i>D</i> 3000",
-     "text": "D 3000"
-    },
-    {
-     "type": "text",
-     "html": "0",
-     "text": "0"
-    },
-    {
-     "type": "text",
-     "html": "<i>h</i>",
-     "text": "h"
-    },
-    {
-     "type": "text",
-     "html": "400 600",
-     "text": "400 600"
+     "type": "figure",
+     "id": "0607_2019ON_63_q09a_diagram1",
+     "caption": null
     },
     {
      "type": "answer",
@@ -127,7 +127,7 @@
     }
    ],
    "text": "The first satellite, Sputnik 1, had an initial height of 577 km and a descent time of 92 days.\nCompare this descent time with the descent time given by the model.\nQuestion 9(c) is printed on the next page.",
-   "marks": 0,
+   "marks": 2,
    "path": "9(b)",
    "mark_scheme": [
     {
@@ -144,22 +144,6 @@
         448.6,
         556.0799560546875,
         483.5
-       ]
-      }
-     ]
-    },
-    {
-     "label": "9(b)",
-     "text": "−24\n5 ×10\n×577\n9.64\n(\n)\n[× ]577\n−24\n9.64\nor 5 ×10\nseen",
-     "codes": [],
-     "segments": [
-      {
-       "page": 6,
-       "bbox": [
-        39.29999923706055,
-        697.6,
-        556.0799560546875,
-        743.3
        ]
       }
      ]
@@ -229,7 +213,7 @@
       }
      ],
      "text": "Write down the descent time of a satellite with an initial height of 450 km when the radiation is\n100 SFU.\n....................................................",
-     "marks": 0,
+     "marks": 1,
      "path": "9(c)(i)",
      "mark_scheme": [
       {
@@ -246,22 +230,6 @@
           485.8,
           556.0799560546875,
           508.0
-         ]
-        }
-       ]
-      },
-      {
-       "label": "9(c)(i)",
-       "text": "‘Days’ seen as units",
-       "codes": [],
-       "segments": [
-        {
-         "page": 6,
-         "bbox": [
-          39.29999923706055,
-          747.6,
-          556.0799560546875,
-          769.8
          ]
         }
        ]
@@ -302,7 +270,7 @@
       }
      ],
      "text": "What does the table show about the effect of radiation on the descent time of a satellite?\n...........................................................................................................................................................\n...........................................................................................................................................................",
-     "marks": 0,
+     "marks": 1,
      "path": "9(c)(ii)",
      "mark_scheme": [
       {
@@ -359,14 +327,13 @@
       }
      ],
      "text": "A satellite has an initial height of 500 km.\nD=ks1.1D=k – sD=ks0.9D=ks–1   where k is a constant.\nWhich one of these equations is the best model connecting descent time and radiation?\nGive a reason for your answer.\n...........................................................................................................................................................\n...........................................................................................................................................................",
-     "marks": 0,
+     "marks": 2,
      "path": "9(c)(iii)",
      "mark_scheme": [
       {
        "label": "9(c)(iii)",
        "text": "–1\nD = ks only indicated and valid reason",
        "codes": [
-        "2",
         "2"
        ],
        "segments": [
@@ -376,7 +343,7 @@
           39.29999923706055,
           547.3,
           556.0799560546875,
-          594.0
+          569.5
          ]
         }
        ]
@@ -507,7 +474,7 @@
  "variant": 3,
  "paper_code": "0607/63",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 0,
+ "total_marks": 7,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -529,5 +496,6 @@
    "html": ".",
    "text": "."
   }
- ]
+ ],
+ "marks_source": "mark scheme"
 }

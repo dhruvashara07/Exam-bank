@@ -173,6 +173,8 @@ def check_paper(pj):
                 what = (['ink crosses the ' + '/'.join(edges) + ' edge'] if edges else []) + ([f'{len(cut)} text line(s) half inside'] if cut else [])
                 problems.append({'id': qid, 'kind': 'figure', 'detail': f"{f['id']}: crop cut: {', '.join(what)}"})
         scores[qid] = text_score(doc, q)
+        if qid[:4] != '0625':
+            continue                  # maths: the old editable layer is replaced by the LaTeX check (store tex_check, maths_tex.py)
         if scores[qid] < TEXT_MIN:
             problems.append({'id': qid, 'kind': 'text', 'detail': f'editable text has {scores[qid]:.0%} of the printed words'})
     for i, a in enumerate(pieces):

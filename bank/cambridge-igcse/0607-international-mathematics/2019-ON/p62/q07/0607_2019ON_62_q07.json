@@ -21,8 +21,23 @@
   }
  ],
  "text": "7\nAnna says that this is a model for the value of a car as it gets older.\nAt the end of each year, the value of the car will be\nhalf of its value at the start of the year.\nEddie pays $16 000 for a new car.",
- "marks": 0,
- "figures": [],
+ "marks": 6,
+ "figures": [
+  {
+   "caption": null,
+   "page": 10,
+   "bbox": [
+    174.3,
+    227.4,
+    421.0,
+    275.7
+   ],
+   "id": "0607_2019ON_62_q07_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -50,7 +65,7 @@
     }
    ],
    "text": "Use Anna’s model to complete the table.\nAge of car (x years)\n0\n1\n2\n3\n4\n5\n6\nValue (V dollars)\n16 000\n8000",
-   "marks": 0,
+   "marks": 1,
    "path": "7(a)",
    "mark_scheme": [
     {
@@ -67,22 +82,6 @@
         113.8,
         568.0799560546875,
         136.0
-       ]
-      }
-     ]
-    },
-    {
-     "label": "7(a)",
-     "text": "for division by 2 at least once",
-     "codes": [],
-     "segments": [
-      {
-       "page": 8,
-       "bbox": [
-        27.239999771118164,
-        113.8,
-        568.0799560546875,
-        135.9
        ]
       }
      ]
@@ -143,7 +142,7 @@
     }
    ],
    "text": "Use these values to draw a graph of V against x.\nV\n16000\n14000\n12000\n10000\nValue of car\n8000\n(dollars)\n6000\n4000\n2000\n0\nx\n0\n1\n2\n3\n4\n5\n6\nAge of car (years)",
-   "marks": 0,
+   "marks": 3,
    "path": "7(b)",
    "mark_scheme": [
     {
@@ -265,7 +264,7 @@
     }
    ],
    "text": "Complete this model for V in terms of x.\nV = 16 000 ×.....................................................",
-   "marks": 0,
+   "marks": 1,
    "path": "7(c)",
    "mark_scheme": [
     {
@@ -322,7 +321,7 @@
     }
    ],
    "text": "Using Anna’s model, find the value of Eddie’s car when it is 10 years old.\n......................................................",
-   "marks": 0,
+   "marks": 1,
    "path": "7(d)",
    "mark_scheme": [
     {
@@ -339,22 +338,6 @@
         298.0,
         568.0799560546875,
         320.3
-       ]
-      }
-     ]
-    },
-    {
-     "label": "7(d)",
-     "text": "for repeated division by 2\nor for 3 values 125, 62.5, 31.25\n1\nor 16 000 ×\noe\n10\n2",
-     "codes": [],
-     "segments": [
-      {
-       "page": 8,
-       "bbox": [
-        27.239999771118164,
-        138.2,
-        568.0799560546875,
-        202.6
        ]
       }
      ]
@@ -386,7 +369,7 @@
  "variant": 2,
  "paper_code": "0607/62",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 0,
+ "total_marks": 6,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -399,14 +382,15 @@
    "text": "Anna says that this is a model for the value of a car as it gets older."
   },
   {
-   "type": "text",
-   "html": "At the end of each year, the value of the car will be half of its value at the start of the year.",
-   "text": "At the end of each year, the value of the car will be half of its value at the start of the year."
+   "type": "figure",
+   "id": "0607_2019ON_62_q07_diagram1",
+   "caption": null
   },
   {
    "type": "text",
    "html": "Eddie pays $16 000 for a new car.",
    "text": "Eddie pays $16 000 for a new car."
   }
- ]
+ ],
+ "marks_source": "mark scheme"
 }

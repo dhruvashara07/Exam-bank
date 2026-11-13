@@ -22,7 +22,36 @@
  ],
  "text": "5\nIn this question the lengths of the two poles are different.\nOne pole is 20 m long and the other pole is 15 m long.\nThe 20 m pole touches the left post at a height of b metres above the ground.\nThe 15 m pole touches the right post at a height of c metres above the ground.\nThe poles cross at R, which is x metres from the right post.\nE\nNOT TO\nSCALE\nb\nK\nR\nc\nh\nF\nS\nx\nG\nd",
  "marks": 10,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 10,
+   "bbox": [
+    100.7,
+    436.2,
+    415.8,
+    593.5
+   ],
+   "id": "0607_2025MJ_61_q05_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 11,
+   "bbox": [
+    226.6,
+    490.2,
+    369.7,
+    532.2
+   ],
+   "id": "0607_2025MJ_61_q05aiv_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)(iv)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -211,10 +240,6 @@
        "text": "b +d =20 oe\n2\n2\n2\nc +d =15 oe\n2\n2\n2\nb= 400−d and c= 225−d\n2\n2\nh\nh\n+\n=1\nor\n20 −d\n2\n2\n15 −d\n2\n2\nh\nh\n+\n=1\nleading to\n400−d\n2\n225−d\n2",
        "codes": [
         "M2",
-        "2",
-        "2",
-        "2",
-        "2",
         "A1"
        ],
        "segments": [
@@ -303,24 +328,9 @@
        "text": "Rearrange the model in part (a)(iii) to show that a model for h in terms of d is"
       },
       {
-       "type": "text",
-       "html": "<sup>2</sup>",
-       "text": "2"
-      },
-      {
-       "type": "text",
-       "html": "<sup>2</sup>",
-       "text": "2"
-      },
-      {
-       "type": "text",
-       "html": "h = \\(\\frac{` 400 - d `j 225 - d j}{` ^{2} ^{2}j}\\) .",
-       "text": "h = (`400-d`j225-dj)/(`22j) ."
-      },
-      {
-       "type": "text",
-       "html": "225 - d + 400 - d",
-       "text": "225 - d + 400 - d"
+       "type": "figure",
+       "id": "0607_2025MJ_61_q05aiv_diagram2",
+       "caption": null
       },
       {
        "type": "text",
@@ -624,36 +634,14 @@
    "text": "The poles cross at R, which is x metres from the right post."
   },
   {
-   "type": "table",
-   "rows": [
-    [
-     "E",
-     "R",
-     "",
-     "K"
-    ],
-    [
-     "b",
-     "h",
-     "",
-     "c"
-    ]
-   ]
+   "type": "figure",
+   "id": "0607_2025MJ_61_q05_diagram1",
+   "caption": null
   },
   {
    "type": "text",
    "html": "NOT TO SCALE",
    "text": "NOT TO SCALE"
-  },
-  {
-   "type": "text",
-   "html": "F S x G",
-   "text": "F S x G"
-  },
-  {
-   "type": "text",
-   "html": "d",
-   "text": "d"
   }
  ]
 }

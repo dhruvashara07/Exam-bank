@@ -22,7 +22,36 @@
  ],
  "text": "1\nThe diagram shows:\n•\na grey cube with each edge 1 centimetre long (a 1 cm cube)\n•\na view showing how the grey cube is enclosed in a layer of 1 cm white cubes\n•\nthe resulting cube.\nFirst cube\nSecond cube\nNOT TO\nSCALE",
  "marks": 10,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    346.6,
+    266.8,
+    520.4,
+    437.7
+   ],
+   "id": "0607_2021FM_62_q01_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    69.3,
+    192.1,
+    316.5,
+    508.3
+   ],
+   "id": "0607_2021FM_62_q01_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -337,8 +366,7 @@
      "text": "3\n7 – 1 oe\nor at least three differences of 2\n1\n2\n3\n4\nn\n3\n5\n7\n9\n2n + 1 oe\n3\n26\n124\n342\n728\n(2n+1) −1 oe isw",
      "codes": [
       "C1",
-      "4",
-      "3"
+      "4"
      ],
      "segments": [
       {
@@ -432,31 +460,18 @@
  "content": [
   {
    "type": "text",
-   "html": "The diagram shows:",
-   "text": "The diagram shows:"
+   "html": "<b>1 </b>",
+   "text": "1"
   },
   {
-   "type": "list",
-   "items": [
-    "a grey cube with each edge 1 centimetre long (a 1 cm cube)",
-    "a view showing how the grey cube is enclosed in a layer of 1 cm white cubes",
-    "the resulting cube."
-   ]
+   "type": "figure",
+   "id": "0607_2021FM_62_q01_diagram2",
+   "caption": null
   },
   {
-   "type": "text",
-   "html": "First cube",
-   "text": "First cube"
-  },
-  {
-   "type": "text",
-   "html": "Second cube",
-   "text": "Second cube"
-  },
-  {
-   "type": "text",
-   "html": "NOT TO SCALE",
-   "text": "NOT TO SCALE"
+   "type": "figure",
+   "id": "0607_2021FM_62_q01_diagram1",
+   "caption": null
   }
  ]
 }

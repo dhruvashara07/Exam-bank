@@ -22,7 +22,50 @@
  ],
  "text": "6\nDesign 1 is a cone and design 2 is a hemisphere.\nThe cone and the hemisphere have the same diameter, d.\nCone\nHemisphere\nh\nd\nd",
  "marks": 7,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    320.1,
+    370.7,
+    478.6,
+    481.4
+   ],
+   "id": "0607_2021FM_62_q06_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    117.3,
+    370.7,
+    263.5,
+    495.4
+   ],
+   "id": "0607_2021FM_62_q06_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 10,
+   "bbox": [
+    150.8,
+    61.8,
+    444.4,
+    189.4
+   ],
+   "id": "0607_2021FM_62_q06cii_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)(ii)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -124,11 +167,6 @@
        "label": "6(a)(ii)",
        "text": "3\nπd\n[V =]\nisw\n12",
        "codes": [
-        "2",
-        "3",
-        "1",
-        "2",
-        "3",
         "2"
        ],
        "segments": [
@@ -344,8 +382,6 @@
        "label": "6(c)(ii)",
        "text": "Cone with valid justification\ne.g. denominator for cone is greater\n1\nor\n12\n2\n>\n1\nor\noe\n24\n24\n\n\nor 0.83 > 0.042 (or 0.0416)\nor ratio = 1:2 oe",
        "codes": [
-        "1",
-        "1",
         "1"
        ],
        "segments": [
@@ -377,14 +413,9 @@
        "value": 1
       },
       {
-       "type": "text",
-       "html": "Information about cat enclosures",
-       "text": "Information about cat enclosures"
-      },
-      {
-       "type": "text",
-       "html": "Minimum floor sleep area per cat 0.5 m<sup>2</sup> Minimum floor exercise area per cat 2.8 m<sup>2</sup> Minimum extra floor area per cat 1 m<sup>2</sup> Highest point above floor must be 2 m or more",
-       "text": "Minimum floor sleep area per cat 0.5 m2 Minimum floor exercise area per cat 2.8 m2 Minimum extra floor area per cat 1 m2 Highest point above floor must be 2 m or more"
+       "type": "figure",
+       "id": "0607_2021FM_62_q06cii_diagram3",
+       "caption": null
       }
      ]
     }
@@ -417,24 +448,14 @@
    "text": "Design 1 is a cone and design 2 is a hemisphere. The cone and the hemisphere have the same diameter, d."
   },
   {
-   "type": "text",
-   "html": "Cone Hemisphere",
-   "text": "Cone Hemisphere"
+   "type": "figure",
+   "id": "0607_2021FM_62_q06_diagram1",
+   "caption": null
   },
   {
-   "type": "text",
-   "html": "<i>h</i>",
-   "text": "h"
-  },
-  {
-   "type": "text",
-   "html": "<i>d</i>",
-   "text": "d"
-  },
-  {
-   "type": "text",
-   "html": "<i>d</i>",
-   "text": "d"
+   "type": "figure",
+   "id": "0607_2021FM_62_q06_diagram2",
+   "caption": null
   }
  ]
 }

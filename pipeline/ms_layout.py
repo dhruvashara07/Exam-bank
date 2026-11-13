@@ -1804,6 +1804,7 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None, g
 
 
 def build(q, store):
+    MP.EQUAL_FLEX = str((q.get('paper') or {}).get('syllabus', '0625')) != '0625'   # maths: Answer = Partial Marks width
     sizes = {f['id']: tuple(f['size_pt']) for f in q.get('figures', [])}
     rows = [(r, u) for p in q['parts'] for r in p['ms'] for u in r['layout']]
     seen, uniq = set(), []
@@ -1814,10 +1815,16 @@ def build(q, store):
     if not uniq:
         return None
     uniq.sort(key=lambda ru: (ru[1]['src']['page'], ru[1]['src']['box'][1]))   # the mark scheme's own order (2017 ON 41 q8: 8 Hydroelectric (a)(b)(c), 8 Tidal flow (a)(b)(c) ...)
+    MP.FORCE_WRAP = False
+    if MP.EQUAL_FLEX and all(u['w'] <= W + 2 for _, u in uniq):
+        ruled = _maths_ruled(uniq)                    # 2014 maths: a ruled table without a header, Q | Answer | Mark | Notes
+        if ruled:
+            uniq = ruled
+            MP.FORCE_WRAP = True
     uniq = [(r, _tighten(_under_images(_dedupe(_unshrink(_bottom_rule(u)))))) for r, u in uniq]
     uniq = _common_columns(uniq)
     units = [u for _, u in uniq]
-    if all(u['w'] <= W + 2 for u in units) or int(q['id'].split('_')[1][:4]) < 2013:          # the old portrait era: our table too (no printed one to follow)
+    if not MP.FORCE_WRAP and (all(u['w'] <= W + 2 for u in units) or int(q['id'].split('_')[1][:4]) < 2013):          # the old portrait era: our table too (no printed one to follow)
         first = {'edges': [], 'new_edges': [44.0, W - 44.0], 'new_w': [44.0, W - 88.0, 44.0], 'default': True}
         out = _old_rows(units, q)
         labw = max([t['w'] for v in out for t in v['text'] if t.get('s') == 11.0 and t['x'] < 44 and t['y'] == 14.0] + [0])
@@ -1846,11 +1853,20 @@ def build(q, store):
     out, modes, problems, first = [], {}, [], None
     total_row = None
     hdr_p = os.path.join(store, 'ms_header.json')
+    if MP.FORCE_WRAP:                                 # no printed header: ours (Q | Answer | Marks | Partial Marks)
+        hdr_p = os.path.join(store, 'ms_header_maths.json')
+        if not os.path.exists(hdr_p):
+            json.dump({'src': units[0]['src'], 'w': W, 'h': 22.0, 'text': [
+                {'t': n, 'x': 100.0 * k, 'y': 15.0, 'w': 6.4 * len(n), 's': 11.0, 'f': 'sans', 'b': 1}
+                for k, n in enumerate(['Q', 'Answer', 'Marks', 'Partial Marks'])], 'lines': []}, open(hdr_p, 'w'))
     ncol = lambda info: len([w for w in info['new_w'] if w >= 20])
     expected = None
     if os.path.exists(hdr_p):                         # the printed header says how many columns the table has
         names_ = [n for t in json.load(open(hdr_p))['text']
-                  for pat, n in NAMES if re.search(pat, t['t'].strip().lower())]
+                  for pat, n in NAMES[:1] + NAMES[1:] if re.search(pat, t['t'].strip().lower())]
+        for i_ in range(len(names_) - 1, 0, -1):     # 'Partial Marks' (maths) is one heading of two words
+            if names_[i_] == 'Marks' and names_[i_ - 1] == 'Partial Marks':
+                del names_[i_]
         expected = len(names_) if len(names_) >= 3 else None   # Question | Answer | Marks (| Guidance)
     for i, (r, u) in enumerate(uniq):
         v, info = MP.portrait_unit(u, widths=widths, sizes=sizes)
@@ -1866,6 +1882,17 @@ def build(q, store):
             v, total_row = _split_total(v, info)      # the printed Total can sit in any row (rows follow the parts' order)
         if v is not None:
             out.append((v, info, u))
+    if first is None and expected == 4 and MP.EQUAL_FLEX:   # maths: Q | Answer | Marks | Partial Marks from the printed rules
+        for _, _, u_ in out or [(None, None, u) for r, u in uniq]:
+            vx = MP._rules(u_)
+            if not vx:
+                continue
+            vs_ = [r_ for r_ in vx[0] if r_[2] - r_[0] < 1.3 and r_[3] - r_[1] > 0.7 * u_['h']]
+            ed = sorted(x for x in MP._cluster([(r_[0] + r_[2]) / 2 for r_ in vs_]) if 20 < x < u_['w'] - 8)
+            if len(ed) == 3:
+                a_ = (W - 88.0) / 2
+                first = {'edges': ed, 'new_edges': [44.0, 44.0 + a_, 88.0 + a_], 'new_w': [44.0, a_, 44.0, a_], 'default': True}
+                break
     if first is None:                                 # no row could be re-wrapped: our default columns (Q 44 | Answer | Marks 44)
         first = {'edges': [], 'new_edges': [44.0, W - 44.0], 'new_w': [44.0, W - 88.0, 44.0], 'default': True}
     fixed = []
@@ -1947,7 +1974,37 @@ def build(q, store):
             'has_header': bool(first and os.path.exists(hdr_p))}
 
 
-NAMES = [(r'^(question|q)$', 'Q'), (r'answer', 'Answer'), (r'^marks?$', 'Marks'), (r'guidance|notes?|additional', 'Guidance')]
+def _maths_ruled(uniq):
+    """2014 maths mark schemes are portrait tables ruled into 4 columns with no header: label | answer | mark | notes.
+    The printed label column holds '2', '(a)', '(i)' in separate places and only on the first row of a question: our
+    Q column shows the row's full label instead. Returns uniq with relabelled units, or None for other layouts."""
+    out = []
+    for r, u in uniq:
+        vs = []
+        for l in u['lines']:
+            for sub in re.findall(r'M[^M]+', l['d']):
+                b = MP._bbox(sub)
+                if b is not None and b[2] - b[0] < 1.3 and b[3] - b[1] > 1.0:
+                    vs.append(b)
+        xs = MP._cluster([(b[0] + b[2]) / 2 for b in vs])
+        cov = {x: sum(b[3] - b[1] for b in vs if abs((b[0] + b[2]) / 2 - x) < 1.6) for x in xs}
+        inner = [x for x in xs if 20 < x < u['w'] - 8 and cov[x] > 0.6 * u['h']]
+        if len(inner) != 3:
+            return None
+        e0 = inner[0]
+        keep = [t for t in u['text'] if t['x'] + t['w'] / 2 > e0]
+        lab = [t for t in u['text'] if t['x'] + t['w'] / 2 <= e0]
+        y = min([t['y'] for t in lab] + [t['y'] for t in keep if t.get('s', 11) >= 9] or [14.0])
+        L = r['label']
+        if lab or True:
+            s0 = max([t.get('s', 11) for t in lab] + [11.0])
+            keep.append({'t': L, 'x': round(max(2.0, (e0 - 6.0 * len(L)) / 2), 2), 'y': y, 'w': round(6.0 * len(L), 2), 's': s0, 'f': 'serif'})
+        out.append((r, dict(u, text=keep)))
+    return out
+
+
+NAMES = [(r'^(question|q)$', 'Q'), (r'answer', 'Answer'), (r'^partial', 'Partial Marks'), (r'^marks?$', 'Marks'),
+         (r'guidance|notes?|additional', 'Guidance')]
 
 
 def _header_unit(hdr, info):

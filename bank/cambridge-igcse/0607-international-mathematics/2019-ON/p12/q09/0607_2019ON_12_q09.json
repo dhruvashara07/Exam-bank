@@ -22,7 +22,22 @@
  ],
  "text": "9\nLook at this train timetable.\nBunley\n0835\n0900\n0905\n0935\n1005\n1035\n1100\n1135\nAlton\n0851\n0951\n1051\n1151\nSidcot\n0919\n0944\n0930\n1019\n1119\n1144\n1219\nBilham\n0959\n1059\n1159\n1259\nTim Spa\n1022\n1056\n1130\n1222\n1236\n1322\nTrickway\n1035\n1111\n1235\n1249\n1335\nWester\n1125\n1214\n1330\n1404",
  "marks": 3,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    46.6,
+    59.7,
+    527.2,
+    187.1
+   ],
+   "id": "0607_2019ON_12_q09_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -167,14 +182,9 @@
  "pipeline_version": "2.1",
  "content": [
   {
-   "type": "text",
-   "html": "Look at this train timetable.",
-   "text": "Look at this train timetable."
-  },
-  {
-   "type": "text",
-   "html": "Bunley 08 35 09 00 09 05 09 35 10 05 10 35 11 00 11 35 Alton 08 51 09 51 10 51 11 51 Sidcot 09 19 09 44 09 30 10 19 11 19 11 44 12 19 Bilham 09 59 10 59 11 59 12 59 Tim Spa 10 22 10 56 11 30 12 22 12 36 13 22 Trickway 10 35 11 11 12 35 12 49 13 35 Wester 11 25 12 14 13 30 14 04",
-   "text": "Bunley 08 35 09 00 09 05 09 35 10 05 10 35 11 00 11 35 Alton 08 51 09 51 10 51 11 51 Sidcot 09 19 09 44 09 30 10 19 11 19 11 44 12 19 Bilham 09 59 10 59 11 59 12 59 Tim Spa 10 22 10 56 11 30 12 22 12 36 13 22 Trickway 10 35 11 11 12 35 12 49 13 35 Wester 11 25 12 14 13 30 14 04"
+   "type": "figure",
+   "id": "0607_2019ON_12_q09_diagram1",
+   "caption": null
   }
  ]
 }

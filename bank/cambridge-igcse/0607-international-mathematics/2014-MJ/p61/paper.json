@@ -16,10 +16,86 @@
  "duration": "1 hour 30 minutes",
  "pages": 8,
  "erratum": [],
+ "intros": [
+  {
+   "section": "A",
+   "before": 1,
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      86.5,
+      570.0,
+      156.0
+     ]
+    }
+   ]
+  },
+  {
+   "section": "B",
+   "before": 8,
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      62.5,
+      570.0,
+      342.5
+     ]
+    }
+   ]
+  }
+ ],
+ "communication": [
+  {
+   "marks": 1,
+   "text": "1\nMODELLING\nTIDES",
+   "criteria": [],
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      36.0,
+      254.1,
+      559.0,
+      287.4
+     ]
+    },
+    {
+     "page": 4,
+     "bbox": [
+      36.0,
+      57.1,
+      559.0,
+      99.3
+     ]
+    }
+   ]
+  },
+  {
+   "marks": 1,
+   "text": "1",
+   "criteria": [],
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      36.0,
+      365.4,
+      559.0,
+      398.6
+     ]
+    }
+   ]
+  }
+ ],
+ "marks_source": "mark scheme",
  "questions": 7,
- "marks_found": 0,
+ "marks_found": 40,
  "checks": {
-  "marks_match_total": false
+  "marks_match_total": true
  },
  "question_ids": [
   "0607_2014MJ_61_q01",

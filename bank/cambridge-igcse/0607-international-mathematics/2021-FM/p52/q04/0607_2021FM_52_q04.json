@@ -4,7 +4,22 @@
  "segments": [],
  "text": "",
  "marks": 13,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    91.8,
+    330.3,
+    391.0,
+    371.4
+   ],
+   "id": "0607_2021FM_52_q04a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -39,8 +54,6 @@
      "label": "4(a)",
      "text": "2\n2\n4\n2\n3\n3\n8\n2\n4\n16\n2\n4\n5\n5\n32\n2\nn\nn\n2",
      "codes": [
-      "2",
-      "5",
       "2"
      ],
      "segments": [
@@ -88,14 +101,14 @@
      "text": "32 ="
     },
     {
-     "type": "text",
-     "html": "<i>n</i>",
-     "text": "n"
+     "type": "figure",
+     "id": "0607_2021FM_52_q04a_diagram1",
+     "caption": null
     },
     {
      "type": "answer",
      "kind": "lines",
-     "lines": 4
+     "lines": 3
     },
     {
      "type": "marks",
@@ -269,7 +282,6 @@
        "codes": [
         "C1",
         "C1",
-        "2",
         "1"
        ],
        "segments": [

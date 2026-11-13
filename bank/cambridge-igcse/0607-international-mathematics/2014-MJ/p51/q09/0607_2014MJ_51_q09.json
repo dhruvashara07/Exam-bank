@@ -3,8 +3,23 @@
  "number": 9,
  "segments": [],
  "text": "",
- "marks": 0,
- "figures": [],
+ "marks": 3,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    149.0,
+    237.4,
+    446.4,
+    303.9
+   ],
+   "id": "0607_2014MJ_51_q09b_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -32,13 +47,15 @@
     }
    ],
    "text": "9\n(a) 85 = 5 × 17 where 5 and 17 are prime numbers.\nUse the method of question 7(c) to show why 85 has exactly 4 factors.",
-   "marks": 0,
+   "marks": 1,
    "path": "9(a)",
    "mark_scheme": [
     {
      "label": "9(a)",
      "text": "1\n1\n5 , 17 and 2 × 2 soi\n1",
-     "codes": [],
+     "codes": [
+      "1"
+     ],
      "segments": [
       {
        "page": 3,
@@ -87,13 +104,15 @@
     }
    ],
    "text": "Find all the numbers that are greater than 80 but smaller than 90 and have exactly 4 factors.\nThis list of prime numbers is useful in answering this question.\n2,  3,  5,  7,  11,  13,  17,  19,  23,  29,  31,  37,  41,\n43,  47,  53,  59,  61,  67,  71,  73,  79,  83,  89",
-   "marks": 0,
+   "marks": 2,
    "path": "9(b)",
    "mark_scheme": [
     {
      "label": "9(b)",
-     "text": "82, [85], 86, 87\n2\nB1 for one\n–1 for each extra between\n80 and 90.\nSC1 3 correct and 2\nwrong\nC opportunity\n1\nCommunication seen in one of the following questions\n4(b), 6(a), 6(b), 8(b), 8(c), 9(b)",
-     "codes": [],
+     "text": "82, [85], 86, 87\n2\nB1 for one\n–1 for each extra between\n80 and 90.\nSC1 3 correct and 2\nwrong\nC opportunity",
+     "codes": [
+      "2"
+     ],
      "segments": [
       {
        "page": 3,
@@ -101,7 +120,7 @@
         36.0,
         104.4,
         559.0,
-        222.5
+        187.9
        ]
       }
      ]
@@ -114,19 +133,9 @@
      "text": "Find all the numbers that are greater than 80 but smaller than 90 and have exactly 4 factors."
     },
     {
-     "type": "text",
-     "html": "This list of prime numbers is useful in answering this question.",
-     "text": "This list of prime numbers is useful in answering this question."
-    },
-    {
-     "type": "text",
-     "html": "2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41,",
-     "text": "2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41,"
-    },
-    {
-     "type": "text",
-     "html": "43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89",
-     "text": "43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89"
+     "type": "figure",
+     "id": "0607_2014MJ_51_q09b_diagram1",
+     "caption": null
     }
    ]
   }
@@ -143,10 +152,11 @@
  "variant": 1,
  "paper_code": "0607/51",
  "paper_type": "core_investigation",
- "total_marks": 0,
+ "total_marks": 3,
  "topic": null,
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
- "pipeline_version": "2.1"
+ "pipeline_version": "2.1",
+ "marks_source": "mark scheme"
 }

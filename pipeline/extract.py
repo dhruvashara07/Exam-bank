@@ -86,12 +86,33 @@ def is_blank_page(page):
     return len(rest) == 0
 
 
+def maths_doc(doc):
+    """A maths paper (syllabus with maths text, 0607): its cleaned PDF path holds /<syllabus>/<year>-<session>/."""
+    m = re.search(r'/(\d{4})/\d{4}-[A-Z]{2}/', (doc.name or '').replace('\\', '/'))
+    return bool(m) and m.group(1) in subjects.SUBJECTS and subjects.SUBJECTS[m.group(1)]['maths_text']
+
+
+FORMULA_TITLE = re.compile(r'^(Formula List|List of formulas|Formula list|FORMULA LIST)\s*$')
+
+
+def is_formula_page(page):
+    """Maths: page 2 'Formula List' / 'List of formulas' is no question; kept once per paper as paper.formula_list."""
+    if page.number > 3 or not maths_doc(page.parent):
+        return False
+    top = [l for l in page.get_text().split('\n') if l.strip()][:8]
+    return any(FORMULA_TITLE.match(l.strip()) for l in top)
+
+
+def skipped_page(page):
+    return is_blank_page(page) or is_erratum_page(page) or is_formula_page(page)
+
+
 def boundaries(doc):
     """Walk pages in order and accept labels that continue the numbering sequence."""
     out, q, letter, roman = [], 0, None, None
     for pno in range(1, len(doc)):
         page = doc[pno]
-        if is_blank_page(page) or is_erratum_page(page):
+        if skipped_page(page):
             continue
         top, bottom = page_bounds(page)
         for t in label_tokens(page, top, bottom):
@@ -153,7 +174,7 @@ def lift_over_thin_ink(page, c, floor):
 def raw_segments(doc, bnds):
     """Strips of pages between consecutive boundaries, continuing across page breaks."""
     segs = []
-    pages = [p for p in range(1, len(doc)) if not is_blank_page(doc[p]) and not is_erratum_page(doc[p])]
+    pages = [p for p in range(1, len(doc)) if not skipped_page(doc[p])]
     bounds = {p: page_bounds(doc[p]) for p in pages}
     cuts = []
     for i, b in enumerate(bnds):
@@ -295,6 +316,117 @@ def _beside_part(l, x0, x1, rules):
         return fitz.Rect(x1 + 2, l['y0'], l['x1'], l['y1'])
     return fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1'])
 
+
+
+def _grow_light(page, r, limit, exclude, Z=2.0):
+    """Grow a crop while any non-white ink (light grey grid lines and dot grids too, which the dark mask ignores)
+    crosses its edges; sentences never pull it."""
+    import numpy as np
+    pix = page.get_pixmap(matrix=fitz.Matrix(Z, Z), colorspace=fitz.csGRAY)
+    m = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.height, pix.width) < 250
+    m = m.copy()
+    for e in exclude:
+        m[max(0, int((e.y0 - 1) * Z)):int((e.y1 + 1) * Z) + 1, max(0, int((e.x0 - 1) * Z)):int((e.x1 + 1) * Z) + 1] = False
+    H, W = m.shape
+    r = fitz.Rect(r)
+    for _ in range(300):
+        x0, y0, x1, y1 = int(r.x0 * Z), int(r.y0 * Z), int(r.x1 * Z), int(r.y1 * Z)
+        moved = False
+        if r.x0 - 1 > limit.x0 and x0 - 2 >= 0 and m[y0:y1, x0 - 2].any():
+            r.x0 -= 1; moved = True
+        if r.x1 + 1 < limit.x1 and x1 + 2 < W and m[y0:y1, x1 + 2].any():
+            r.x1 += 1; moved = True
+        if r.y0 - 1 > limit.y0 and y0 - 2 >= 0 and m[y0 - 2, x0:x1].any():
+            r.y0 -= 1; moved = True
+        if r.y1 + 1 < limit.y1 and y1 + 2 < H and m[y1 + 2, x0:x1].any():
+            r.y1 += 1; moved = True
+        if not moved:
+            break
+    return r
+
+
+def diagrams(doc, seg, lines, captioned):
+    """Maths: drawings with no caption (a triangle 'NOT TO SCALE', axes, a grid to draw on, a stem-and-leaf box ...) inside
+    a segment -> figure crops {'caption': None, 'page', 'bbox'}. Not figures: answer lines and dots, fraction bars and
+    root signs inside a text line, ruled tables of text (kept as text + rules, store decision 4), the page furniture."""
+    page = doc[seg['page']]
+    top, bottom = page_bounds(page)
+    y0s, y1s = max(seg['y0'], top), min(seg['y1'], bottom)
+    taken = [fitz.Rect(f['bbox']) for f in captioned]
+    text = [l for l in lines]
+    tboxes = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in text]
+    items = []
+    for d in page.get_drawings():
+        r = d['rect']
+        if r.y1 < y0s - 1 or r.y0 > y1s + 1 or r.x1 < CONTENT_X0 + 2 or r.x0 > CONTENT_X1 - 2:
+            continue
+        if r.width > 0.95 * page.rect.width and r.height > 0.95 * page.rect.height:
+            continue
+        if d.get('fill') in ((1.0, 1.0, 1.0), (1, 1, 1)) and not d.get('color'):
+            continue
+        if r.height < 1.6 and r.width < 60 and any(t.y0 - 3 <= r.y0 <= t.y1 + 3 and t.x0 - 4 <= r.x0 and r.x1 <= t.x1 + 4 for t in tboxes):
+            continue                                       # a fraction bar / overline inside a text line
+        aligned = all((it[0] == 're') or (it[0] == 'l' and (abs(it[1].x - it[2].x) < 0.6 or abs(it[1].y - it[2].y) < 0.6))
+                      for it in d['items'])
+        rr = fitz.Rect(r); rr.aligned = aligned
+        items.append(rr)
+    for im in page.get_image_info():
+        r = fitz.Rect(im['bbox'])
+        if y0s - 1 <= r.y0 and r.y1 <= y1s + 1 and r.width > 8 and r.height > 8 and CONTENT_X0 - 2 <= r.x0:
+            items.append(r)
+    items = [r for r in items if not any(t.intersects(r) for t in taken)]
+    # clusters: drawings closer than 10 pt are one diagram
+    cl = []
+    for r in sorted(items, key=lambda r: (r.y0, r.x0)):
+        g = fitz.Rect(r) + (-10, -10, 10, 10)
+        hit = [c for c in cl if c['g'].intersects(g)]
+        if hit:
+            base = hit[0]
+            for c in hit[1:]:
+                base['r'] |= c['r']; base['n'] += c['n']; base['rs'] += c['rs']; cl.remove(c)
+            base['r'] |= r; base['n'] += 1; base['rs'].append(r)
+            base['g'] = base['r'] + (-10, -10, 10, 10)
+        else:
+            cl.append({'r': fitz.Rect(r), 'g': g, 'n': 1, 'rs': [r]})
+    out = []
+    for c in cl:
+        r = c['r']
+        if r.width < 25 or r.height < 20:
+            continue                                       # a root sign, a tick box, a short rule
+        straight = [x for x in c['rs'] if x.width < 1.6 or x.height < 1.6]
+        horiz = [x for x in straight if x.height < 1.6]
+        if len(straight) == len(c['rs']) and len(horiz) == len(c['rs']):
+            continue                                       # only horizontal lines: answer lines
+        inside = [t for t in text if fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']).intersects(r)]
+        if all(getattr(x, 'aligned', False) for x in c['rs']) and len(inside) >= 2 and \
+                len({round(x.x0) for x in c['rs'] if x.width < 1.6}) <= 25 and len({round(x.y0) for x in c['rs'] if x.height < 1.6}) <= 25 and \
+                all(len(t['text']) < 60 for t in inside):
+            vert = [x for x in c['rs'] if x.width < 1.6 and x.height > 5]
+            hz = [x for x in c['rs'] if x.height < 1.6 and x.width > 5]
+            fills = [x for x in c['rs'] if x.width >= 1.6 and x.height >= 1.6]
+            if (len({round(x.x0) for x in vert}) >= 2 or fills) and len({round(x.y0) for x in hz} | {round(x.y0) for x in fills}) >= 2:
+                continue                                   # a ruled table of text: stays text + rules
+        # labels touching the drawing (A, B, 68°, x, y, axis numbers) belong to it; sentences do not
+        box = fitz.Rect(r)
+        for _ in range(3):
+            for t in text:
+                tb = fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1'])
+                if 'NOT TO SCALE' in t['text'] and tb.intersects(box + (-60, -20, 60, 20)):
+                    box |= tb
+                elif tb.intersects(box + (-14, -12, 14, 12)) and len(t['text'].strip()) <= 22 and not DOTS.search(t['text']) \
+                        and not MARK.fullmatch(t['text'].strip()) and not re.match(r'^\(?[a-z]\)|^\([ivx]+\)', t['text'].strip()):
+                    box |= tb
+        if any((box & tk).get_area() > 0.3 * box.get_area() for tk in taken):
+            continue
+        prose = [fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']) for t in text if len(t['text'].strip()) > 22 or DOTS.search(t['text'])]
+        box = grow_to_ink(page, box, fitz.Rect(CONTENT_X0 - 5, y0s, CONTENT_X1 + 5, y1s), max_grow=120, exclude=prose)
+        box = _grow_light(page, box, fitz.Rect(CONTENT_X0 - 5, y0s, CONTENT_X1 + 5, y1s), prose)   # light grey grids too
+        for o in [o for o in out if fitz.Rect(o['bbox']).intersects(box)]:   # crops that overlap after taking labels: one
+            box |= fitz.Rect(o['bbox']) + (3, 3, -3, -3)
+            out.remove(o)
+        out.append({'caption': None, 'page': seg['page'],
+                    'bbox': [round(box.x0 - 3, 1), round(max(box.y0 - 3, seg['y0']), 1), round(box.x1 + 3, 1), round(min(box.y1 + 3, seg['y1']), 1)]})
+    return out
 
 
 def find_figures(doc, seg, lines):
@@ -553,6 +685,8 @@ def extract(pdf_path, syllabus, year, session, pv):
     meta = paper_meta(doc, syllabus, year, session, pv)
     bnds = boundaries(doc)
     segs = [s for s in (trim(doc, s) for s in raw_segments(doc, bnds)) if s]
+    if subjects.subject(syllabus)['maths_text']:
+        segs = maths_paper_parts(doc, bnds, segs, meta)
     sid = f"{syllabus}_{year}{session}_{pv}"
     questions = {}
     for s in segs:
@@ -572,7 +706,15 @@ def extract(pdf_path, syllabus, year, session, pv):
         seg_rec = {'page': s['page'] + 1, 'bbox': s['bbox'], 'continued': s['continued'],
                    'answer_space': answer_space(lines, s)}
         node['segments'].append(seg_rec)
-        for f in find_figures(doc, s, lines):
+        found = find_figures(doc, s, lines)
+        if subjects.subject(syllabus)['maths_text']:      # maths diagrams carry no 'Fig.' caption (ERROR_PATTERNS 68)
+            for k, f in enumerate(diagrams(doc, s, lines, found), 1):
+                label = ''.join(str(x) for x in s['path'][1:])
+                n_ = sum(1 for g in q['figures'] if g.get('kind') == 'diagram') + 1
+                f.update(id=f"{q['id']}{label}_diagram{n_}", page=f['page'] + 1, alt='', kind='diagram',
+                         part='(' + ')('.join(str(x) for x in s['path'][1:]) + ')' if len(s['path']) > 1 else '')
+                q['figures'].append(f)
+        for f in found:
             num = ''.join(re.match(r'^(?:Fig\.?|Figure|Table)\s*([\d.]+)([a-d]?)', f['caption']).groups()).replace('.', '-')   # 'Fig. 2.1a' -> 2-1a
             kind = 'table' if f['caption'].startswith('Table') else 'fig'
             label = ''.join(str(x) for x in s['path'][1:])
@@ -606,6 +748,82 @@ def extract(pdf_path, syllabus, year, session, pv):
         q['review']['status'] = 'flagged' if q['review']['reasons'] else 'auto'
         out.append(q)
     return meta, out
+
+
+SECTION_HEAD = re.compile(r'^(?:Section\s+([AB])|([AB]))$')
+
+
+def maths_paper_parts(doc, bnds, segs, meta):
+    """Maths only (ERROR_PATTERNS 65-66). Text that belongs to no question:
+    - the formula list (page 2) -> meta['formula_list'] = {page, bbox} (stored once per paper, exact print + LaTeX);
+    - the introduction of an investigation / modelling section (page 2 before Q1; 'B  MODELLING' or 'Section B'
+      heading before the first question of part B) -> meta['intros'] = [{section, before, segments}].
+    Questions keep only their own text; each question of a section points to its intro (store)."""
+    for p in range(1, min(4, len(doc))):
+        if is_formula_page(doc[p]):
+            top, bottom = page_bounds(doc[p])
+            t = trim(doc, {'path': ('formula',), 'page': p, 'y0': top - 6, 'y1': bottom, 'continued': True})
+            if t:
+                meta['formula_list'] = {'page': p + 1, 'bbox': t['bbox']}
+    if not bnds:
+        return segs
+    intros = []
+    first = bnds[0]
+    pre = []
+    for p in range(1, first['page'] + 1):
+        if skipped_page(doc[p]):
+            continue
+        top, bottom = page_bounds(doc[p])
+        y1 = bottom
+        if p == first['page']:
+            fs = [s for s in segs if s['page'] == p and not s['continued']]
+            y1 = min(s['y0'] for s in fs) if fs else first['y'] - PAD_TOP
+        t = trim(doc, {'path': ('intro',), 'page': p, 'y0': top, 'y1': y1, 'continued': True})
+        if t and t['y1'] - t['y0'] > 12:
+            pre.append({'page': p + 1, 'bbox': t['bbox']})
+    if pre:
+        heads = [SECTION_HEAD.match(l['text'].strip()) for x in pre
+                 for l in visible_lines(doc[x['page'] - 1], x['bbox'][1], x['bbox'][3])]
+        heads = [h.group(1) or h.group(2) for h in heads if h]
+        intros.append({'section': heads[0] if heads else None, 'before': 1, 'segments': pre})
+    # a section heading inside a question's last piece: that piece ends at the heading
+    out, cut_path = [], None
+    for s in segs:
+        if cut_path is not None and s['path'] == cut_path:
+            intros[-1]['segments'].append({'page': s['page'] + 1, 'bbox': s['bbox']})
+            continue
+        cut_path = None
+        page = doc[s['page']]
+        head = None
+        lines = visible_lines(page, s['y0'], s['y1'])
+        for i, l in enumerate(lines):
+            m = SECTION_HEAD.match(l['text'].strip())
+            if not m:
+                continue
+            nxt = ' '.join(x['text'] for x in lines if abs(x['y0'] - l['y0']) < 3 and x is not l) + ' ' + \
+                  ' '.join(x['text'] for x in lines[i + 1:i + 3])
+            if m.group(1) or re.search(r'MODELLING|INVESTIGATION', nxt):
+                head = l
+                break
+        if head is None or head['y0'] - s['y0'] < 2:
+            if head is not None:          # the piece starts with the heading: all of it is intro
+                intros.append({'section': (SECTION_HEAD.match(head['text'].strip()).group(1) or SECTION_HEAD.match(head['text'].strip()).group(2)),
+                               'before': s['path'][0] + 1, 'segments': [{'page': s['page'] + 1, 'bbox': s['bbox']}]})
+                cut_path = s['path']
+                continue
+            out.append(s)
+            continue
+        sec = SECTION_HEAD.match(head['text'].strip())
+        above = trim(doc, dict(s, y1=head['y0'] - 3))
+        below = trim(doc, dict(s, y0=head['y0'] - 3, continued=True))
+        if above:
+            out.append(above)
+        intros.append({'section': sec.group(1) or sec.group(2), 'before': s['path'][0] + 1,
+                       'segments': [{'page': s['page'] + 1, 'bbox': below['bbox']}] if below else []})
+        cut_path = s['path']
+    if intros:
+        meta['intros'] = intros
+    return out
 
 
 def segment_text_all(doc, q):

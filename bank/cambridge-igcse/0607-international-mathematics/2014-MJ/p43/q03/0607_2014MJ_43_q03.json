@@ -4,7 +4,36 @@
  "segments": [],
  "text": "",
  "marks": 8,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    124.5,
+    73.2,
+    470.7,
+    124.7
+   ],
+   "id": "0607_2014MJ_43_q03a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    116.3,
+    201.4,
+    478.6,
+    371.8
+   ],
+   "id": "0607_2014MJ_43_q03b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -38,7 +67,9 @@
     {
      "label": "3(a)",
      "text": "2 , x < 7\n2\nB1 B1",
-     "codes": [],
+     "codes": [
+      "2"
+     ],
      "segments": [
       {
        "page": 3,
@@ -54,14 +85,9 @@
    ],
    "content": [
     {
-     "type": "text",
-     "html": "<i>x</i>",
-     "text": "x"
-    },
-    {
-     "type": "text",
-     "html": "1 2 3 4 5 6 7 8 9 10 11",
-     "text": "1 2 3 4 5 6 7 8 9 10 11"
+     "type": "figure",
+     "id": "0607_2014MJ_43_q03a_diagram1",
+     "caption": null
     },
     {
      "type": "text",
@@ -107,7 +133,9 @@
     {
      "label": "3(b)",
      "text": "–2 , x , 0, 1 , x , 4\nSC2 for inequalities with < for ,.\n3\nSC1 for either inequality, condoning < for ,\nor for the 4 values seen",
-     "codes": [],
+     "codes": [
+      "3"
+     ],
      "segments": [
       {
        "page": 3,
@@ -123,29 +151,9 @@
    ],
    "content": [
     {
-     "type": "text",
-     "html": "<i>y</i>",
-     "text": "y"
-    },
-    {
-     "type": "text",
-     "html": "NOT TO SCALE",
-     "text": "NOT TO SCALE"
-    },
-    {
-     "type": "text",
-     "html": "<i>x</i>",
-     "text": "x"
-    },
-    {
-     "type": "text",
-     "html": "0",
-     "text": "0"
-    },
-    {
-     "type": "text",
-     "html": "–3 –2 1 4 5",
-     "text": "–3 –2 1 4 5"
+     "type": "figure",
+     "id": "0607_2014MJ_43_q03b_diagram2",
+     "caption": null
     },
     {
      "type": "text",

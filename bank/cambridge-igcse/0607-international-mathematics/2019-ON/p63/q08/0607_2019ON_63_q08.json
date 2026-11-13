@@ -21,8 +21,23 @@
   }
  ],
  "text": "8\nSome satellites do not have circular orbits.\nNOT TO\nSCALE\n7079km\n114027km\nThe height of satellite NORAD 25989 is between 7079 km and 114 027 km.\nIt has an orbit time of 2872 minutes.\nUse h as the mean of these two heights to calculate the orbit time using Model B.\n4\n3\nt\n1 659\n.\n10\n-\n(\nh\n6370\n)\n=\n+\n#\n#\nHow does this time compare with the actual orbit time?",
- "marks": 0,
- "figures": [],
+ "marks": 3,
+ "figures": [
+  {
+   "caption": null,
+   "page": 10,
+   "bbox": [
+    118.0,
+    86.6,
+    471.5,
+    223.5
+   ],
+   "id": "0607_2019ON_63_q08_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -46,22 +61,6 @@
      ]
     }
    ]
-  },
-  {
-   "label": "8",
-   "text": "114027+7079\nseen\n2",
-   "codes": [],
-   "segments": [
-    {
-     "page": 6,
-     "bbox": [
-      39.29999923706055,
-      656.5,
-      556.0799560546875,
-      695.3
-     ]
-    }
-   ]
   }
  ],
  "syllabus": "0607",
@@ -75,7 +74,7 @@
  "variant": 3,
  "paper_code": "0607/63",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 0,
+ "total_marks": 3,
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -88,19 +87,9 @@
    "text": "Some satellites do not have circular orbits."
   },
   {
-   "type": "text",
-   "html": "NOT TO SCALE",
-   "text": "NOT TO SCALE"
-  },
-  {
-   "type": "text",
-   "html": "7079 km",
-   "text": "7079 km"
-  },
-  {
-   "type": "text",
-   "html": "114 027 km",
-   "text": "114 027 km"
+   "type": "figure",
+   "id": "0607_2019ON_63_q08_diagram1",
+   "caption": null
   },
   {
    "type": "text",
@@ -127,5 +116,6 @@
    "kind": "space",
    "height_pt": 80.8
   }
- ]
+ ],
+ "marks_source": "mark scheme"
 }

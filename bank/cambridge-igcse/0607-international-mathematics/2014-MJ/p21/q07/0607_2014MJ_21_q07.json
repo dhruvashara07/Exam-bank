@@ -22,7 +22,22 @@
  ],
  "text": "7\ny\n12\n10\n8\n6\n4\n2\nx\n0\n2\n4\n6\n8\n10\n12",
  "marks": 8,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    105.7,
+    73.0,
+    489.2,
+    459.8
+   ],
+   "id": "0607_2014MJ_21_q07_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -56,7 +71,11 @@
     {
      "label": "7(a)",
      "text": "Answers on the diagram\n1\nx=1\ny =12 −2x\n2\nB1 for ruled line with correct gradient, or\nB1 for correct intercept on either axis\nB1 for ruled line with correct gradient, or\n4y + 3x=36\n2\nB1 for correct intercept on either axis",
-     "codes": [],
+     "codes": [
+      "1",
+      "2",
+      "2"
+     ],
      "segments": [
       {
        "page": 3,
@@ -120,7 +139,9 @@
     {
      "label": "7(b)",
      "text": "1\nR in correct region",
-     "codes": [],
+     "codes": [
+      "1"
+     ],
      "segments": [
       {
        "page": 3,
@@ -185,7 +206,9 @@
       {
        "label": "7(c)(i)",
        "text": "1\n9.25\nor 9.1 to 9.4",
-       "codes": [],
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 3,
@@ -249,7 +272,9 @@
       {
        "label": "7(c)(ii)",
        "text": "1\n(1, 8.25 ) or (1, 8.1 to 8.4)\n7\n6\n3 7\n2",
-       "codes": [],
+       "codes": [
+        "1"
+       ],
        "segments": [
         {
          "page": 3,
@@ -323,54 +348,9 @@
    "text": "7"
   },
   {
-   "type": "text",
-   "html": "<i>y</i>",
-   "text": "y"
-  },
-  {
-   "type": "text",
-   "html": "12",
-   "text": "12"
-  },
-  {
-   "type": "text",
-   "html": "10",
-   "text": "10"
-  },
-  {
-   "type": "text",
-   "html": "8",
-   "text": "8"
-  },
-  {
-   "type": "text",
-   "html": "6",
-   "text": "6"
-  },
-  {
-   "type": "text",
-   "html": "4",
-   "text": "4"
-  },
-  {
-   "type": "text",
-   "html": "2",
-   "text": "2"
-  },
-  {
-   "type": "text",
-   "html": "<i>x</i>",
-   "text": "x"
-  },
-  {
-   "type": "text",
-   "html": "0",
-   "text": "0"
-  },
-  {
-   "type": "text",
-   "html": "4 6 8 10 12",
-   "text": "4 6 8 10 12"
+   "type": "figure",
+   "id": "0607_2014MJ_21_q07_diagram1",
+   "caption": null
   }
  ]
 }

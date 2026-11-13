@@ -22,7 +22,22 @@
  ],
  "text": "4\n2y\n6x\nA small square of side 2y is inside a larger square of side 6x.",
  "marks": 5,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    237.3,
+    73.4,
+    357.5,
+    206.9
+   ],
+   "id": "0607_2014MJ_23_q04_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -57,7 +72,6 @@
      "label": "4(a)",
      "text": "2\n2\nB1 for 36x or 4y\n2\n2\n2\n36x −4y\noe\n2",
      "codes": [
-      "2",
       "2"
      ],
      "segments": [
@@ -123,7 +137,9 @@
     {
      "label": "4(b)",
      "text": "A +4y\n1\n3\nM1 for correct division by 36 or 6\nor\nA+(2y) oe\n2\n6\n36\nM1 for correct re-arrangement\nM1 for correct square root",
-     "codes": [],
+     "codes": [
+      "3"
+     ],
      "segments": [
       {
        "page": 2,
@@ -185,14 +201,9 @@
    "text": "4"
   },
   {
-   "type": "text",
-   "html": "2<i>y</i>",
-   "text": "2y"
-  },
-  {
-   "type": "text",
-   "html": "6<i>x</i>",
-   "text": "6x"
+   "type": "figure",
+   "id": "0607_2014MJ_23_q04_diagram1",
+   "caption": null
   },
   {
    "type": "text",

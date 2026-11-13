@@ -187,6 +187,7 @@ def structured_rows(doc, old_practical=False):
 def structured_rows_table(doc):
     """[{'label': '1(b)(iii)', 'path': (1,'b','iii'), 'segments': [{page, bbox}], 'text', 'marks_codes'}]"""
     rows, current = [], None
+    MATHS = _maths(doc)
     for pno, page in enumerate(doc):
         lines = _lines(page)
         area = _table_area(page, lines)
@@ -194,6 +195,13 @@ def structured_rows_table(doc):
             continue
         top, bottom = area
         QX, CX = _columns(lines)
+        PX = 1e9                                 # maths 'Partial Marks' column: its numbers (fractions, tables) are no marks
+        if MATHS:
+            pm = [l['x0'] for l in lines if l['text'].strip().startswith('Partial') and l['y0'] < 130]
+            if pm:
+                vr = sorted(round(d['rect'].x0) for d in page.get_drawings() if d['rect'].width < 2 and d['rect'].height > 5
+                            and CX + 10 < d['rect'].x0 < pm[0])
+                PX = (vr[0] + 1) if vr else pm[0] - 5
         # notes printed UNDER the table, outside every cell ('Additional graph notes', 2023 ON 51 / 2020 ON 51 q4): general
         # marking notes, not the last question's answer - the row ends where the table's column rules end
         vb = [d['rect'].y1 for d in page.get_drawings() if d['rect'].height > 3 and d['rect'].width < 2 and d['rect'].y1 > top + 10]
@@ -201,7 +209,8 @@ def structured_rows_table(doc):
                       for l in lines):
             bottom = min(bottom, max(vb) + 1)
         qcol = [l for l in lines if l['x0'] < QX and top <= l['y0'] <= bottom]
-        labels = [l for l in qcol if LABEL.match(label_text(l['text'])) or (rows and NONUM.match(label_text(l['text'])))]
+        labels = [l for l in qcol if LABEL.match(label_text(l['text'])) or (rows and NONUM.match(label_text(l['text'])))
+                  or (MATHS and COMM.match(l['text']))]
         if not labels and not current:
             continue
         x0, x1 = 58.0, page.rect.width - 58.0
@@ -235,7 +244,10 @@ def structured_rows_table(doc):
         for i, (y, lab) in enumerate(cuts):
             y_end = cuts[i + 1][0] if i + 1 < len(cuts) else bottom
             y_end = min([y_end] + [h - 3 for h in headers if h > y + 6])   # a new table starts mid-page
-            if lab is not None:
+            if lab is not None and MATHS and COMM.match(lab['text']):
+                current = {'label': 'C', 'path': ('C',), 'segments': [], 'text': '', 'marks_codes': [], 'also': []}
+                rows.append(current)
+            elif lab is not None:
                 text = label_text(lab['text'])
                 if NONUM.match(text) and current:
                     text = str(current['path'][0]) + text
@@ -250,7 +262,7 @@ def structured_rows_table(doc):
                                'also': [path[:-1] + (x.strip('()'),) for x in extra]}
                     rows.append(current)
             body = [l for l in lines if y - 1 <= l['y0'] < y_end - 1 and l['x0'] >= QX and l['x0'] < CX]
-            codes = [l['text'] for l in lines if y - 1 <= l['y0'] < y_end - 1 and l['x0'] >= CX and re.fullmatch(r'\(?[ABCM]\d\)?|\d|\[\d\]', l['text'])]
+            codes = [l['text'] for l in lines if y - 1 <= l['y0'] < y_end - 1 and CX <= l['x0'] < PX and re.fullmatch(r'\(?[ABCM]\d\)?|\d|\[\d\]', l['text'])]
             ink = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in lines if y - 1 <= l['y0'] < y_end - 1]
             if not ink:
                 continue
@@ -267,6 +279,52 @@ def structured_rows_table(doc):
             current['text'] = (current['text'] + '\n' + '\n'.join(l['text'] for l in body)).strip()
             current['marks_codes'] += codes
     return rows
+
+
+COMM = re.compile(r'^Communication(?::|\s+seen)')     # maths investigation papers: communication marks (ERROR_PATTERNS 67)
+
+
+def _maths(doc):
+    m = re.search(r'/(\d{4})/\d{4}-[A-Z]{2}/', (doc.name or '').replace('\\', '/'))
+    return bool(m) and m.group(1) != '0625'
+
+
+def _maths_rules(page):
+    """2014 maths mark schemes: a ruled table without a header row, Q | Answer | Mark | Notes. x of the long column rules."""
+    import collections
+    c = collections.Counter()
+    for d in page.get_drawings():
+        r = d['rect']
+        if r.width < 2 and r.height > 5:
+            c[round(r.x0)] += r.height
+    if not c:
+        return None
+    top = max(c.values())
+    xs = sorted(x for x, h in c.items() if h >= 0.75 * top and h > 60)     # the table's own rules (not a header box, inner tables)
+    return xs if len(xs) == 5 else None
+
+
+def fold_communication(rows):
+    """A 'Communication' row (label 'C') owns the rows printed under it that name earlier questions (its criteria):
+    they are not mark-scheme rows of those questions. Returns (rows, communication rows)."""
+    out, comms, last = [], [], ()
+    RN = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x']
+    def key(p):
+        q = p[0] if isinstance(p[0], int) else 0
+        let = ord(p[1]) if len(p) > 1 else 0
+        rom = RN.index(p[2]) + 1 if len(p) > 2 and p[2] in RN else 0
+        return (q, let, rom)
+    cur = None
+    for r in rows:
+        if r['path'][0] == 'C':
+            cur = dict(r, criteria=[]); comms.append(cur); continue
+        if cur is not None and key(r['path']) <= key(last):
+            cur['criteria'].append({'label': r['label'], 'text': r['text']})
+            cur['segments'] += r['segments']
+            continue
+        cur = None
+        out.append(r); last = r['path']
+    return out, comms
 
 
 def is_column_format(doc):
@@ -317,9 +375,11 @@ def structured_rows_columns(doc):
         pre09_l = None
     CODE_X = 480 if cols == (globals()['OLD_Q'], globals()['OLD_L'], globals()['OLD_R']) else 420   # 2005: codes at 470
     rows, current, cur = [], None, [0, None, None]
+    MATHS, mr = _maths(doc), None
     for pno, page in enumerate(doc):
         lines = _lines(page)
         words = page.get_text('words')
+        mr = (_maths_rules(page) or (mr if pno else None)) if MATHS else None   # 2014 maths: marks between the 3rd and 4th rule
         head = [l['y1'] for l in lines if l['y0'] < 80 and ('Cambridge' in l['text'] or 'Mark Scheme' in l['text'])]
         top = (max(head) + 8) if head else 60
         foot = [l['y0'] for l in lines if l['y0'] > page.rect.height - 80 and ('©' in l['text'] or 'UCLES' in l['text'])]
@@ -347,7 +407,9 @@ def structured_rows_columns(doc):
                 toks.append((y0, 'r', w[1:-1]))                          # a roman part printed in the letter column
             elif OLD_R[0] <= x0 <= OLD_R[1] and re.fullmatch(r'\([ivx]+\)', w):
                 toks.append((y0, 'r', w[1:-1]))
-        order = {'q': 0, 'l': 1, 'r': 2}
+        if MATHS:
+            toks += [(l['y0'], 'c', None) for l in lines if l['x0'] < 160 and COMM.match(l['text']) and top <= l['y0'] <= bottom]
+        order = {'q': 0, 'l': 1, 'r': 2, 'c': 0}
         toks.sort(key=lambda t: t[0])
         grouped, row = [], []
         for t in toks:                                  # same text row: number, then letter, then roman
@@ -358,6 +420,9 @@ def structured_rows_columns(doc):
         starts = []                                     # (y, path) - tokens on one row combine
         lastrng, rng = [], []
         for y, kind, val in grouped:
+            if kind == 'c':
+                starts.append((y, ('C',), []))
+                continue
             if kind == 'q':
                 if val != cur[0] + 1:
                     continue
@@ -395,7 +460,10 @@ def structured_rows_columns(doc):
             cuts.insert(0, (top, None, []))
         for i, (y, path, also) in enumerate(cuts):
             y_end = cuts[i + 1][0] if i + 1 < len(cuts) else bottom
-            if path is not None:
+            if path == ('C',):
+                current = {'label': 'C', 'path': path, 'segments': [], 'text': '', 'marks_codes': [], 'also': []}
+                rows.append(current)
+            elif path is not None:
                 label = str(path[0]) + ''.join(f'({x})' for x in path[1:])
                 current = {'label': label, 'path': path, 'segments': [], 'text': '', 'marks_codes': [], 'also': also}
                 rows.append(current)
@@ -405,7 +473,11 @@ def structured_rows_columns(doc):
             if not band:
                 continue
             body = [l for l in band if 100 <= l['x0'] < 480]
-            codes = [l['text'] for l in band if l['x0'] >= CODE_X and re.fullmatch(r'\(?[ABCM]\d\)?|\d|\[\d\]', l['text'])]
+            if mr:                                # 2014 maths: the Mark column (numbers, '2FT'); notes beside it are not marks
+                codes = [w[4] for w in words if y - 1 <= w[1] < y_end - 1 and mr[2] - 2 <= w[0] < mr[3]
+                         and re.fullmatch(r'\d{1,2}(?:FT|ft)?', w[4])]
+            else:
+                codes = [l['text'] for l in band if l['x0'] >= CODE_X and re.fullmatch(r'\(?[ABCM]\d\)?|\d|\[\d\]', l['text'])]
             seg_bottom = min(y_end, max(l['y1'] for l in band) + 6)
             current['segments'].append({'page': pno + 1, 'bbox': [36.0, round(y, 1), page.rect.width - 36.0, round(seg_bottom, 1)]})
             current['text'] = (current['text'] + '\n' + '\n'.join(l['text'] for l in body)).strip()
