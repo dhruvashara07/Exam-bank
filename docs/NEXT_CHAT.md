@@ -5,8 +5,9 @@ If a batch is not finished when the chat gets long, the chat writes "continue <b
 
 ## Prompt to paste now: continue maths pilot M0
 > Exam-bank (repo dhruvashara07/Exam-bank). Follow docs/START_HERE.md exactly: git pull, then read the files it lists.
-> Task: continue maths pilot M0 from PROGRESS.md NEXT line: read Dhruv's answers to round 27 (feedback_r27), fix every
-> wrong item as a pattern, approve, update every doc and push.
+> Task: continue maths pilot M0 from PROGRESS.md NEXT line: fix round 27 (review/rounds/27_answers.json, ERROR_PATTERNS
+> 75-85) with the strict checks of PLAYBOOK 1b/2a-2f/3a on ALL 60 papers before any round; then a re-check round,
+> fix, approve, update every doc and the batch-cycle skill, push.
 > Keep the batch log going (same record M0). Ask me with options when you need a decision. Keep messages short.
 
 ## (done 2026-11-13, first M0 chat) maths pilot M0

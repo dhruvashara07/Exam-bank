@@ -184,3 +184,24 @@ Known: 2010 MJ 13, 23, 53 have no mark scheme file at all. MCQ labels cut at the
     question of part A. -> they continue our numbering (extract.boundaries, ms 'B' token).
 74. Diagram crops: tick labels beside an axis, sideways axis titles and long labels of tree diagrams were cut off; bar
     charts were taken for tables of text. -> labels taken again after growing; tables need column rules top to bottom.
+
+## Round 27 (maths M0), Dhruv 2026-11-13: 17 ok, 23 wrong - most were simple and should have been caught by Claude
+75. Process: pass 2 looked at a sample of mark-scheme tables and never ran `store.py verify` or a MS content check.
+    -> PLAYBOOK 2a-2f / 3a: automatic checks against the PDF on every paper + full contact sheets before any round.
+76. Dot answer lines ('.......') missing in the rebuilt question (2014 MJ 11 q11, 21 q5, 33 q3, 42 q6): 2014 dots
+    are hidden ('hide') like physics working space -> the print view must keep answer lines. Check 2a.
+77. Mark-scheme fractions / vectors broken in ms_maths rows: stacked pieces split into different lines or chunks
+    (2014 MJ 21 q5, 22 q4, 31 q3 '1/8' '7/25', 33 q3, 62 q2; 2019 ON 43 q6 vector arrows over OA/AB). Small (raised)
+    pieces must join the chunk under/over them; drawn arrows join the letters under them.
+78. Mark-scheme pictures (Venn diagrams, sketches) broken in ms_maths: a shaded region drawn as a black triangle,
+    a picture scaled into a strip (2019 ON 42 q8, 2021 FM 32 q9, 2019 ON 52 q3). Pictures/drawings of a cell move as ONE
+    block with their clip; never split by line bands.
+79. Stray short lines in Marks / Partial Marks cells (2014 MJ 11 q11(b)(ii), q12(c)): pieces of printed row rules.
+80. Fonts not consistent in our MS (serif answers, sans header and bold sans marks, small 2014 text). Dhruv: ONE font
+    for question and mark scheme, same size, bold/italic only where printed (MS_TABLE_RULES 25).
+81. Diagram labels left outside the picture (2014 MJ 11/13 q12) and two overlapping crops of one diagram (2021 FM 62 q9,
+    2025 MJ 43 q16, 53 q3, 62 q6 '2 images', 'image 2 has a line'): crops must be merged / not cut through text.
+82. 'NOT TO SCALE' (2025 MJ 23 q17, 43 q6): Dhruv's rule: it is part of the diagram -> always inside the picture.
+83. A MS row missing: 2021 FM 42 q4(b)(iii) has a row in the printed scheme -> parse check per part (2b).
+84. Digits of a number printed with thin spaces ('0.003 094 8') drawn with a gap too wide (2025 MJ 21 q2, q3).
+85. Question tables (2019 ON 61 q3(b)) and 2019 ON 52 q3 render problems in the rebuilt question -> 2a.

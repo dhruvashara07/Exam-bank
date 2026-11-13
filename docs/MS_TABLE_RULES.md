@@ -232,3 +232,9 @@ belong to (a), not to (a)(iv): when every sub-part but the last has no mark, the
 - 2014 schemes print the same 4 columns as a ruled table with no header: our header and our full label per row
   (`ms_layout._maths_ruled`). Still open (PROGRESS): rows with fractions / column vectors / long notes.
 - Communication marks of investigation papers are paper marks (store paper.json `communication`), never a part's row.
+
+## 25. One font (Dhruv, round 27)
+- Question and mark scheme use the same font family (the paper's own: serif for 2014-2024 maths, sans for 2025+), one
+  size (11 pt) for all normal text in every column - header, Q labels, answers, marks, partial marks; bold / italic only
+  where the paper prints them (codes B1/M1 bold). Superscripts / subscripts / fraction parts keep their printed ratio.
+- 'NOT TO SCALE' always belongs to its diagram picture.

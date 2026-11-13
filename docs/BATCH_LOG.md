@@ -4,7 +4,7 @@ Minutes are wall clock. "Ours" = build + Claude 1 + Claude 2 + fix (Dhruv's revi
 
 | Batch | Sessions | Papers | Build | GitHub | Claude 1 | Claude 2 | Fix | Ours | Round items | New errors | Repeats | Tokens |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 46.7 | 8.4 | 0.0 | 64.6 |  | 7 | 0 | n/a |
+| M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 46.7 | 51.4 | 0.0 | 107.6 | 40 | 7 | 0 | n/a |
 
 ## Errors per batch (new = first time, repeat = a pattern seen before: the doc or the fix failed)
 

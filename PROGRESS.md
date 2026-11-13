@@ -3,8 +3,9 @@
 Read this first in every session. Update it before ending a session.
 
 ## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md
-- NEXT: M0 review round 27 is on the review page (40 items). When Dhruv says done: read feedback_r27, fix, approve,
-  docs, push (same chat, or a new chat with the NEXT_CHAT prompt "continue M0 from round 27").
+- NEXT: fix round 27 (23 wrong: ERROR_PATTERNS 75-85) in a NEW chat with the strict checks (PLAYBOOK 1b, 2a-2f, 3a):
+  build the automatic checks first, run them on all 60 papers, fix to zero, full contact sheets, then a re-check round
+  with the 23 items + new samples. Answers: review/rounds/27_answers.json. Nothing approved yet.
 - 2026-11-13 (later): mark schemes fixed before the round (Dhruv): new `pipeline/ms_maths.py` - every maths MS row laid
   out cell by cell (fractions / vectors / graphs kept whole, rows grow, Answer = Partial Marks width): 645 questions in
   our 4-column layout, 13 still on old paths (2019 ON 11 q8 etc., see MATHS_PLAN 10). Also: 2019 ON 11-13 MS parsing
