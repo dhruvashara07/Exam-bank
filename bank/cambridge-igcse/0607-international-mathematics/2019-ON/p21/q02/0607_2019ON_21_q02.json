@@ -24,10 +24,8 @@
  "marks": 2,
  "figures": [],
  "review": {
-  "reasons": [
-   "no mark scheme for 2(a), 2(b)"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -54,6 +52,26 @@
    "text": "a factor of 46,\n................................................... [1]",
    "marks": 1,
    "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "23",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        46.380001068115234,
+        531.2,
+        548.9400024414062,
+        553.4
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "answer",
@@ -94,6 +112,26 @@
    "text": "a prime number.\n................................................... [1]",
    "marks": 1,
    "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "23 or 29",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        46.380001068115234,
+        555.6,
+        548.9400024414062,
+        577.8
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "answer",

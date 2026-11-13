@@ -406,3 +406,16 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   pipeline/store_pdfs.sh in 4 more parts. Manifest: all 946 maths PDFs (2014-2026, 2019-MJ still missing).
 - Dhruv asked for one more thing in Claude pass 2: a logic check (does each answer fit its question; solve it when in
   doubt) - added to PLAYBOOK 3b and START_HERE. inbox.py accepts sub-folders; store-* branches are kept by the Action.
+
+## 2026-11-13 - maths pilot M0, first chat (pass 1 done; MS work continues in a new chat)
+- Dhruv: MS layout for maths = 4 columns "as you said but make answer and partial mark same width ... so it looks
+  balanced" (MS_TABLE_RULES 24). After pass 1 he chose "fix MS first, then round" over a round now.
+- Built the 60 papers on GitHub (bank.yml, 9.6 min), then made the pipeline handle maths (ERROR_PATTERNS 64-70) and
+  rebuilt locally 4 times. Physics: golden 0 changed cuts; store of physics papers byte-identical after `store.py dupes`.
+- Analysis: slowest phase = Claude pass 1 (new subject rules, as planned for a pilot). The mark-scheme layout is the
+  biggest open item: maths rows are full of fractions / brackets, which the physics re-wrap sends to the cell fallback;
+  2019+ maths schemes are portrait tables (they went to the old 2013-2016 path). No repeat errors (all patterns new).
+  Glyph shape matching (store_text.glyph_remap) was not reliable for equation-editor fonts: codes read by eye from a glyph
+  sheet instead (script: render each (font, code) crop at 300 dpi into a grid, see ERROR_PATTERNS 64).
+- What to change next: one MS pass on maths only (MATHS_PLAN 10), then the round; the 3-year batches need the MS work
+  done first, otherwise every round is full of known layout problems (pattern 16).

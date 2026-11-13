@@ -3,7 +3,13 @@
 One batch per chat (docs/MATHS_PLAN.md section 5). Open a new chat, paste the prompt, nothing else needed.
 If a batch is not finished when the chat gets long, the chat writes "continue <batch>" here and you paste that.
 
-## Prompt to paste now: maths pilot M0
+## Prompt to paste now: continue maths pilot M0
+> Exam-bank (repo dhruvashara07/Exam-bank). Follow docs/START_HERE.md exactly: git pull, then read the files it lists.
+> Task: continue maths pilot M0 from PROGRESS.md NEXT line: fix the mark schemes first (docs/MATHS_PLAN.md section 10,
+> in that order), then pass 2, ONE short review round on the same review page, fix, approve, update every doc and push.
+> Keep the batch log going (same record M0). Ask me with options when you need a decision. Keep messages short.
+
+## (done 2026-11-13, first M0 chat) maths pilot M0
 > Exam-bank (repo dhruvashara07/Exam-bank). Follow docs/START_HERE.md exactly: git pull, then read the files it lists.
 > Task: maths 0607 pilot batch M0 = sessions 2014-MJ, 2019-ON, 2021-FM, 2025-MJ (docs/MATHS_PLAN.md section 4).
 > Make the pipeline handle maths (formula page, mark-scheme layout, maths text as LaTeX for KaTeX, the problems in

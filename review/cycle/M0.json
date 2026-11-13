@@ -23,7 +23,13 @@
     "note": "maths pipeline: formula page, intros, MS marks/communication, symbol fonts, diagrams, LaTeX v1 (2186 ok / 120 picture parts), 4-col MS (partial)"
    }
   ],
-  "claude2": [],
+  "claude2": [
+   {
+    "start": "2026-11-13T11:06:34+00:00",
+    "end": "2026-11-13T11:14:59+00:00",
+    "note": "stopped: Dhruv chose MS fixes before the round; continues in a new chat"
+   }
+  ],
   "review": [],
   "fix": []
  },
@@ -41,7 +47,7 @@
  "counts": {
   "papers": 60,
   "questions": 743,
-  "flags": 27
+  "flags": 14
  },
  "errors": [
   {
@@ -101,5 +107,11 @@
    "at": "2026-11-13T10:59:11+00:00"
   }
  ],
- "tokens": []
+ "tokens": [
+  {
+   "n": 0,
+   "note": "n/a in this chat (explain-usage not run)",
+   "at": "2026-11-13T11:14:59+00:00"
+  }
+ ]
 }

@@ -110,3 +110,20 @@ paper changed. After a pipeline change: golden.py check (0 changed cuts) and phy
 ## 9. Saving tokens (quality first)
 GitHub builds (free); one rebuild per pass; look at small crops and grids, not whole pages; `ms_align.py dump`
 text instead of pictures; one new chat per batch; read only START_HERE + the files it names; short messages.
+
+## 10. M0 continued: open list (2026-11-13, end of the first M0 chat)
+Dhruv: fix the mark schemes first, then ONE short review round. In this order:
+1. **MS parsing (ms.py), maths**: a table starting lower on a page (notes above) is now read (every question has rows).
+   Still: 2019 ON 11-13 read answers as labels (the Q column limit is wrong for these tables); numbers inside answer
+   tables taken as marks (2019 ON 21 q5): use the printed column rules for every maths table (like `_maths_rules` / PX).
+2. **ms_layout for maths portrait tables**: 27 questions (2019-2025) fall to `_old_rows` because `_maths_ruled` did not
+   find 3 inner rules (list: `modes` 'old' in store ms_p, script in CONVERSATION_LOG M0). 68 rows 'same' (print kept).
+3. **Cell fallback rows** (434 'cell' rows): fractions / column vectors / brackets in Answer and Partial Marks cells
+   (2025 MJ 22 q20, 2021 FM 32 q7, 2025 MJ 21 q3 Partial Marks fraction): make the re-wrap fraction- and glyph-aware
+   (the Guidance-cell `_stack` idea, ms_layout ~1260) instead of falling back; Answer = Partial Marks width.
+4. **2014 MJ**: ruled 4-column MS (`_maths_ruled`, partly working: 2014 MJ 41 q10, 21 q2 break); 2014 MJ 62/63 marks
+   (part B numbered 1-3 in the MS, page 4 of ms_62 has a broken text layer).
+5. `ms_align.py list` gives false hits for maths labels (adapt it, then use it as the row check).
+6. 30 diagram crop warnings (checks.py figure): compare each with the page (pattern 56); light grey grids.
+7. LaTeX cosmetics: units inside maths ('cm^{2}'), '( , )' answer brackets, 'NOT TO SCALE' outside crops.
+Then: pass 2 (logic check), ONE short review round (the page renders KaTeX in the Editable tab), fixes, approve, docs.

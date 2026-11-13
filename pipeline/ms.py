@@ -97,6 +97,9 @@ def mcq_key(doc):
 def _table_area(page, lines):
     """Top (below the header row) and bottom (above the footer) of the answer table."""
     header = [l for l in lines if re.match(r'Question\b', l['text']) and l['y0'] < 120]
+    if not header and _maths(page.parent):     # maths: the table can start lower on a page (general notes above it, 2019 ON 21 p3)
+        header = [l for l in lines if re.match(r'Question\b', l['text']) and l['x0'] < 130
+                  and any(abs(o['y0'] - l['y0']) < 4 and re.match(r'Answer', o['text'].strip()) for o in lines)]
     if not header:
         return None
     top = header[0]['y1'] + 3
@@ -107,11 +110,12 @@ def _table_area(page, lines):
     return top, bottom
 
 
-def _columns(lines):
+def _columns(lines, maths=False):
     """x limits of the label column and the marks column, from the header row
     ('Question | Answer | Marks'); the table layout moved a little between years."""
     for h in lines:
-        if re.match(r'Question\b', h['text']) and h['y0'] < 120:
+        if re.match(r'Question\b', h['text']) and (h['y0'] < 120 or (maths and any(
+                abs(o['y0'] - h['y0']) < 4 and re.match(r'Answer', o['text'].strip()) for o in lines))):
             mk = [l for l in lines if abs(l['y0'] - h['y0']) < 4 and re.fullmatch(r'Marks?', l['text'].strip())]
             if mk:
                 return h['x1'] + 2, mk[0]['x0'] - 15
@@ -194,7 +198,7 @@ def structured_rows_table(doc):
         if not area:
             continue
         top, bottom = area
-        QX, CX = _columns(lines)
+        QX, CX = _columns(lines, MATHS)
         PX = 1e9                                 # maths 'Partial Marks' column: its numbers (fractions, tables) are no marks
         if MATHS:
             pm = [l['x0'] for l in lines if l['text'].strip().startswith('Partial') and l['y0'] < 130]

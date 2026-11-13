@@ -4,8 +4,18 @@ Minutes are wall clock. "Ours" = build + Claude 1 + Claude 2 + fix (Dhruv's revi
 
 | Batch | Sessions | Papers | Build | GitHub | Claude 1 | Claude 2 | Fix | Ours | Round items | New errors | Repeats | Tokens |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 46.7 | 8.4 | 0.0 | 64.6 |  | 7 | 0 | n/a |
 
 ## Errors per batch (new = first time, repeat = a pattern seen before: the doc or the fix failed)
+
+### M0
+- [new] pattern 64: equation-editor symbol fonts drew # for x etc. in print and text → store_text MATHS_GLYPHS/MATHS_WIDE by eye (found by claude)
+- [new] pattern 65: formula page + page-top instruction lines outside every piece → is_formula_page, page_bounds, paper.formula_list (found by claude)
+- [new] pattern 66: investigation intro / section B text lost or glued to a part → maths_paper_parts -> paper intros (found by claude)
+- [new] pattern 67: investigation papers 2014-2024: marks 0; communication rows taken as part rows → marks from MS; fold_communication; Partial Marks numbers not marks (found by claude)
+- [new] pattern 68: uncaptioned maths diagrams not cut as figures → extract.diagrams + grow to light ink (found by claude)
+- [new] pattern 69: Partial Marks column header/fallback → NAMES, EQUAL_FLEX, 4-col default (found by claude)
+- [new] pattern 70: 2014 ruled MS without header → _maths_ruled relabel + FORCE_WRAP (partial) (found by claude)
 
 ## Repeats to act on
 

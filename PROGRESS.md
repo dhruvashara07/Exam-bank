@@ -3,7 +3,16 @@
 Read this first in every session. Update it before ending a session.
 
 ## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md
-- NEXT: pilot M0 (2014-MJ, 2019-ON, 2021-FM, 2025-MJ) in a NEW chat with the prompt in docs/NEXT_CHAT.md.
+- NEXT: continue pilot M0 in a NEW chat (prompt in docs/NEXT_CHAT.md): Dhruv chose "fix the mark schemes first, then the
+  round". Open list (in this order) = docs/MATHS_PLAN.md section 10. Nothing of M0 is approved yet.
+- 2026-11-13: M0 pass 1 done and pushed (60 papers built on GitHub, then rebuilt locally). New for maths (ERROR_PATTERNS
+  64-70): formula page -> paper.formula_list (print + LaTeX list), investigation/modelling intros -> paper intros,
+  page-top instruction lines dropped, marks of 2014-2024 investigation papers from the mark scheme, communication marks
+  as paper marks, equation-editor symbols (# -> × ...) fixed in print and text, uncaptioned diagrams cut as figures
+  (`extract.diagrams`), LaTeX content per part (`pipeline/maths_tex.py`: 2186 parts ok, 120 fall back to the printed
+  picture, KaTeX + character check), store paper.json, 4-column mark schemes Q | Answer | Marks | Partial Marks with
+  Answer = Partial Marks width (Dhruv). checks: 57/60 papers no blocking (2014 MJ 62/63 marks, one piece). Physics
+  untouched (golden 0 changed cuts, store identical after `dupes`).
 - 2026-11-12: plan agreed with Dhruv (MATHS_PLAN.md 1). Pipeline made subject-aware without moving physics:
   pipeline/subjects.py, maths paper types from the cover, syllabus-aware selectors/session tools (SYL=0607),
   dupes per syllabus, store-only upload branches (store_pdfs.sh + upload.yml), batch record (batch_log.py).
