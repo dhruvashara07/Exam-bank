@@ -1,0 +1,205 @@
+{
+ "id": "0607_2021FM_62_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    56.6,
+    570.0,
+    219.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 27.6,
+    "height_pt": 162.4
+   }
+  }
+ ],
+ "text": "4\n3cm\nNOT TO\nSCALE\n2cm\n5cm\nThis grey cuboid has edge lengths of 2 cm, 3 cm and 5 cm.",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      221.9,
+      570.0,
+      440.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 179.9,
+      "height_pt": 218.1
+     }
+    }
+   ],
+   "text": "Find the number of white cubes when there is one enclosing layer.\n................................................. [3]",
+   "marks": 3,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "4 × 5 × 7 – 2 × 3 × 5\nor\n2(5 × 3 + 5 × 2 + 3 × 2)[faces] + 4(5 + 3 + 2)[edges]\n+ 8[corners]\n110",
+     "codes": [
+      "C2",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        25.079999923706055,
+        276.9,
+        570.1799926757812,
+        401.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the number of white cubes when there is one enclosing layer.",
+     "text": "Find the number of white cubes when there is one enclosing layer."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      442.9,
+      570.0,
+      674.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 153.9,
+      "height_pt": 231.1
+     }
+    }
+   ],
+   "text": "A grey cuboid has edge lengths of a cm, b cm and c cm.\nThe cuboid has n enclosing layers.\nFind the formula for the number of white cubes, W.\n............................................................................................ [2]",
+   "marks": 2,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "W = (a + 2n)(b + 2n)(c + 2n) – abc\nisw",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        25.079999923706055,
+        403.4,
+        570.1799926757812,
+        450.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A grey cuboid has edge lengths of <i>a</i> cm, <i>b</i> cm and <i>c</i> cm. The cuboid has <i>n</i> enclosing layers. Find the formula for the number of white cubes, <i>W</i>.",
+     "text": "A grey cuboid has edge lengths of a cm, b cm and c cm. The cuboid has n enclosing layers. Find the formula for the number of white cubes, W."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>4</b>",
+   "text": "4"
+  },
+  {
+   "type": "text",
+   "html": "cm",
+   "text": "cm"
+  },
+  {
+   "type": "text",
+   "html": "NOT TO SCALE",
+   "text": "NOT TO SCALE"
+  },
+  {
+   "type": "text",
+   "html": "cm",
+   "text": "cm"
+  },
+  {
+   "type": "text",
+   "html": "cm",
+   "text": "cm"
+  },
+  {
+   "type": "text",
+   "html": "This grey cuboid has edge lengths of 2 cm, 3 cm and 5 cm.",
+   "text": "This grey cuboid has edge lengths of 2 cm, 3 cm and 5 cm."
+  }
+ ]
+}

@@ -1,0 +1,183 @@
+{
+ "id": "0607_2021FM_52_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    58.6,
+    570.0,
+    80.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 21.4
+   }
+  }
+ ],
+ "text": "2\na and a+ 1 are two consecutive numbers.",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      84.6,
+      570.0,
+      368.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 231.9,
+      "height_pt": 283.4
+     }
+    }
+   ],
+   "text": "Find expressions for the four totals that can be made using a and a+ 1.\nGive each expression in its simplest form.\n....................................... , ....................................... , ....................................... , ....................................... [3]",
+   "marks": 3,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "One correct addition or\nall four pairings\n2a + 1, 1, −1, −2a – 1",
+     "codes": [
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        378.6,
+        549.0,
+        438.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find expressions for the four totals that <b>can</b> be made using <i>a</i> and <i>a</i> + 1. Give each expression in its simplest form.",
+     "text": "Find expressions for the four totals that can be made using a and a + 1. Give each expression in its simplest form."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      370.6,
+      570.0,
+      667.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 218.9,
+      "height_pt": 296.4
+     }
+    }
+   ],
+   "text": "An expression for the number of integers between the highest total and the lowest total that cannot\nbe made using a and a+ 1 is   4a- 1.\nShow that this gives the correct number when a= 10.\n[4]",
+   "marks": 4,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "10\n11\n−10\n11\n10\n−11\n−10\n−11\nor 2 × 10 + 1 [= 21]\nor 10 + 11 [= 21]\n21, −21\n19 + 19 + 1 = 39\nor\n21 + 21 + 1 – 4 = 39 oe\n4 × 10 – 1 = 39",
+     "codes": [
+      "C1",
+      "1",
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        440.9,
+        549.0,
+        617.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "An expression for the number of integers between the highest total and the lowest total that <b>cannot</b> be made using <i>a</i> and <i>a</i> + 1 is 4<i>a</i> - 1. Show that this gives the correct number when <i>a</i> = 10.",
+     "text": "An expression for the number of integers between the highest total and the lowest total that cannot be made using a and a + 1 is 4a - 1. Show that this gives the correct number when a = 10."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 218.9
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<i>a</i> and <i>a</i> + 1 are two consecutive numbers.",
+   "text": "a and a + 1 are two consecutive numbers."
+  }
+ ]
+}

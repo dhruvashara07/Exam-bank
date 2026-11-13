@@ -1,0 +1,190 @@
+{
+ "id": "0607_2021FM_12_q13",
+ "number": 13,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    252.7,
+    570.0,
+    302.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.7,
+    "height_pt": 49.3
+   }
+  }
+ ],
+ "text": "These are the first six terms of a sequence.\nx   2   9   16   23   y",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      304.7,
+      570.0,
+      406.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "x =  ……",
+      "working_gap_pt": 36.7,
+      "height_pt": 101.3
+     }
+    }
+   ],
+   "text": "Find the value of x and the value of y.\nx =  .................................................\ny =  ................................................. [2]",
+   "marks": 2,
+   "path": "13(a)",
+   "mark_scheme": [
+    {
+     "label": "13(a)",
+     "text": "[x =] −5\n[y =] 30",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        433.6,
+        549.0,
+        480.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the value of <i>x</i> and the value of <i>y</i>.",
+     "text": "Find the value of x and the value of y."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "x ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "y ="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      408.7,
+      570.0,
+      510.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 36.9,
+      "height_pt": 101.3
+     }
+    }
+   ],
+   "text": "Explain why 42 is not in this sequence.\n.....................................................................................................................................................\n..................................................................................................................................................... [1]",
+   "marks": 1,
+   "path": "13(b)",
+   "mark_scheme": [
+    {
+     "label": "13(b)",
+     "text": "Correct comment\ne.g. 37 and 44 are in the sequence [but not\n42]\nor (42 + 12 ) / 7 is not an integer",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        482.5,
+        549.0,
+        542.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Explain why 42 is not in this sequence.",
+     "text": "Explain why 42 is not in this sequence."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 1,
+ "variant": 2,
+ "paper_code": "0607/12",
+ "paper_type": "core_short_answer",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "These are the first six terms of a sequence.",
+   "text": "These are the first six terms of a sequence."
+  },
+  {
+   "type": "text",
+   "html": "<i>x</i> 2 9 16 23 <i>y</i>",
+   "text": "x 2 9 16 23 y"
+  }
+ ]
+}

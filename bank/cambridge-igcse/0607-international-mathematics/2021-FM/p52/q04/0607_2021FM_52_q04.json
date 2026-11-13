@@ -1,0 +1,411 @@
+{
+ "id": "0607_2021FM_52_q04",
+ "number": 4,
+ "segments": [],
+ "text": "",
+ "marks": 13,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      385.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 5,
+      "answer_line": null,
+      "working_gap_pt": 35.3,
+      "height_pt": 328.2
+     }
+    }
+   ],
+   "text": "4\n(a) There are 16 additions in the table on page 6.\nComplete the table below.\nUse Question 1 and Question 3 to help you.\nNumber of\nconsecutive\nNumber of additions\nnumbers\n2\n....................\n=\n....................\n23\n3\n....................\n=\n24\n4\n16\n=\n5\n32\n=\n....................\nn\n....................\n[2]",
+   "marks": 2,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "2\n2\n4\n2\n3\n3\n8\n2\n4\n16\n2\n4\n5\n5\n32\n2\nn\nn\n2",
+     "codes": [
+      "2",
+      "5",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.380001068115234,
+        89.4,
+        549.0,
+        212.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> There are 16 additions in the table on <b>page 6</b>.",
+     "text": "There are 16 additions in the table on page 6."
+    },
+    {
+     "type": "text",
+     "html": "Complete the table below. Use <b>Question 1</b> and <b>Question 3</b> to help you.",
+     "text": "Complete the table below. Use Question 1 and Question 3 to help you."
+    },
+    {
+     "type": "text",
+     "html": "Number of consecutive Number of additions numbers =",
+     "text": "Number of consecutive Number of additions numbers ="
+    },
+    {
+     "type": "text",
+     "html": "= 2<sup>3</sup>",
+     "text": "= 23"
+    },
+    {
+     "type": "text",
+     "html": "16 = 2<sup>4</sup>",
+     "text": "16 = 24"
+    },
+    {
+     "type": "text",
+     "html": "32 =",
+     "text": "32 ="
+    },
+    {
+     "type": "text",
+     "html": "<i>n</i>",
+     "text": "n"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 4
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      387.9,
+      570.0,
+      690.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 36.1,
+      "height_pt": 302.1
+     }
+    }
+   ],
+   "text": "Complete this table.\nUse Question 2(a) to help you.\nNumber of\nExpression for the highest\nconsecutive\nConsecutive numbers\ntotal in terms of a\nnumbers\n2\na, a+ 1\n3\n3a+ 3\n4\n5\na, a+ 1, a+ 2, a+ 3, a+ 4\nnn\n...............+(\n1\n)\n-\nn\n2\n[5]",
+   "marks": 5,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "2\na, a + 1\n2a + 1\n3\na, a + 1, a + 2\n3a + 3\n4\na, a + 1, a + 2, a + 3\n4a + 6\na, a + 1, a + 2, a + 3,\n5\n5a + 10\na + 4\nn( n−1)\nn\nan +\n2",
+     "codes": [
+      "5"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.380001068115234,
+        219.1,
+        549.0,
+        375.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this table. Use <b>Question 2(a)</b> to help you.",
+     "text": "Complete this table. Use Question 2(a) to help you."
+    },
+    {
+     "type": "text",
+     "html": "Number of",
+     "text": "Number of"
+    },
+    {
+     "type": "text",
+     "html": "Expression for the highest",
+     "text": "Expression for the highest"
+    },
+    {
+     "type": "text",
+     "html": "consecutive Consecutive numbers",
+     "text": "consecutive Consecutive numbers"
+    },
+    {
+     "type": "text",
+     "html": "total in terms of <i>a</i>",
+     "text": "total in terms of a"
+    },
+    {
+     "type": "text",
+     "html": "numbers <i>a</i>, <i>a</i> + 1",
+     "text": "numbers a, a + 1"
+    },
+    {
+     "type": "text",
+     "html": "3<i>a</i> + 3",
+     "text": "3a + 3"
+    },
+    {
+     "type": "text",
+     "html": "4",
+     "text": "4"
+    },
+    {
+     "type": "text",
+     "html": "<i>a</i>, <i>a</i> + 1, <i>a</i> + 2, <i>a</i> + 3, <i>a</i> + 4",
+     "text": "a, a + 1, a + 2, a + 3, a + 4"
+    },
+    {
+     "type": "text",
+     "html": "<i>n</i>",
+     "text": "n"
+    },
+    {
+     "type": "text",
+     "html": "+ \\(\\frac{n (n - 1)}{2}\\)",
+     "text": "+ (n(n-1))/(2)"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      281.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 10.7,
+      "height_pt": 224.7
+     }
+    }
+   ],
+   "text": "Anna uses this method to work out the number of integers that cannot be made.\n•\nUse Question 4(b) to find the highest total.\n•\nFind the number of integers from the highest total to the lowest total.\n•\nUse Question 4(a) to find the number of additions.\n•\nSubtract the number of additions from the number of integers.\nExample\nThere are three consecutive numbers.\nThe first number is 4.\nThe highest total is    3a+ 3 = 3 # 4 + 3 = 15.\nThe number of integers from 15 to -15 is 31.\nThe number of additions is 23.\nThe number of integers that cannot be made is 31 - 23= 23.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        30.0,
+        297.3,
+        570.0,
+        606.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 231.9,
+        "height_pt": 309.2
+       }
+      }
+     ],
+     "text": "There are two consecutive numbers.\nUse Anna’s method to find the number of integers that cannot be made when the first number\nis 9.\n................................................. [3]",
+     "marks": 3,
+     "path": "4(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "4(c)(i)",
+       "text": "2 × 9 + 1 = 19\nNumber of integers from 19 to –19 is 39 or\n2\n2 seen\n35",
+       "codes": [
+        "C1",
+        "C1",
+        "2",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.380001068115234,
+          384.0,
+          549.0,
+          467.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "There are two consecutive numbers. Use Anna’s method to find the number of integers that <b>cannot</b> be made when the first number is 9.",
+       "text": "There are two consecutive numbers. Use Anna’s method to find the number of integers that cannot be made when the first number is 9."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        30.0,
+        56.8,
+        570.0,
+        561.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 413.9,
+        "height_pt": 504.2
+       }
+      }
+     ],
+     "text": "Anna uses her method to find the number of integers that cannot be made with the three\nconsecutive numbers 1, 2 and 3.\nHer method gives the answer 5.\nExplain why her method gives the wrong answer.\n............................................................................................................................................. [3]",
+     "marks": 3,
+     "path": "4(c)(ii)",
+     "mark_scheme": [
+      {
+       "label": "4(c)(ii)",
+       "text": "List of at least five correct additions to include both\nthat give the total 0\nCan be made list\n[6, 4, 2,] 0, 0, [−2, −4, −6]\nor\nCannot be made list\n5, 3, 1, −1, −3, −5\nAny correct reason, e.g. A total are repeated oe",
+       "codes": [
+        "C1",
+        "C1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.380001068115234,
+          470.0,
+          549.0,
+          609.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Anna uses her method to find the number of integers that <b>cannot</b> be made with the three consecutive numbers 1, 2 and 3. Her method gives the answer 5. Explain why her method gives the wrong answer.",
+       "text": "Anna uses her method to find the number of integers that cannot be made with the three consecutive numbers 1, 2 and 3. Her method gives the answer 5. Explain why her method gives the wrong answer."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "4(c)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Anna uses this method to work out the number of integers that <b>cannot</b> be made.",
+     "text": "Anna uses this method to work out the number of integers that cannot be made."
+    },
+    {
+     "type": "list",
+     "items": [
+      "Use <b>Question 4(b)</b> to find the highest total.",
+      "Find the number of integers from the highest total to the lowest total.",
+      "Use <b>Question 4(a)</b> to find the number of additions.",
+      "Subtract the number of additions from the number of integers."
+     ]
+    },
+    {
+     "type": "text",
+     "html": "Example There are three consecutive numbers. The first number is 4. The highest total is 3<i>a</i> + 3 = 3 # 4 + 3 = 15. The number of integers from 15 to -15 is 31. The number of additions is 2<sup>3</sup>. The number of integers that <b>cannot</b> be made is 31 - 2<sup>3</sup> = 23.",
+     "text": "Example There are three consecutive numbers. The first number is 4. The highest total is 3a + 3 = 3 # 4 + 3 = 15. The number of integers from 15 to -15 is 31. The number of additions is 23. The number of integers that cannot be made is 31 - 23 = 23."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 13,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

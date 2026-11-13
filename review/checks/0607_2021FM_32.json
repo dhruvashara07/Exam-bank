@@ -1,0 +1,49 @@
+{
+ "paper": "0607_2021FM_32",
+ "pipeline_version": "2.1",
+ "checked_at": "2026-11-13T10:17Z",
+ "clean": false,
+ "warnings": 2,
+ "problems": [
+  {
+   "id": "0607_2021FM_32",
+   "kind": "coverage",
+   "detail": "page 2: 24666 px of print outside every piece near [50, 64, 413, 508]",
+   "blocking": true
+  },
+  {
+   "id": "0607_2021FM_32",
+   "kind": "coverage",
+   "detail": "page 3: 1174 px of print outside every piece near [239, 64, 356, 75]",
+   "blocking": true
+  },
+  {
+   "id": "0607_2021FM_32_q07",
+   "kind": "text",
+   "detail": "editable text has 91% of the printed words",
+   "blocking": false
+  },
+  {
+   "id": "0607_2021FM_32_q12",
+   "kind": "text",
+   "detail": "editable text has 96% of the printed words",
+   "blocking": false
+  }
+ ],
+ "flags": [],
+ "text_score_min": 0.907,
+ "text_scores": {
+  "0607_2021FM_32_q01": 1.0,
+  "0607_2021FM_32_q02": 1.0,
+  "0607_2021FM_32_q03": 1.0,
+  "0607_2021FM_32_q04": 1.0,
+  "0607_2021FM_32_q05": 1.0,
+  "0607_2021FM_32_q06": 1.0,
+  "0607_2021FM_32_q07": 0.907,
+  "0607_2021FM_32_q08": 1.0,
+  "0607_2021FM_32_q09": 1.0,
+  "0607_2021FM_32_q10": 1.0,
+  "0607_2021FM_32_q11": 1.0,
+  "0607_2021FM_32_q12": 0.957
+ }
+}

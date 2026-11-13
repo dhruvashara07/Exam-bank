@@ -1,0 +1,219 @@
+{
+ "id": "0607_2021FM_22_q07",
+ "number": 7,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    119.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 62.2
+   }
+  }
+ ],
+ "text": "7\nIraj travels to school either by bus or on a bicycle.\nThe probability that he goes by bus is 0.3 .\nHe can have lunch at home or at school.\nThe probability that he has lunch at school is 0.6 .",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      121.8,
+      570.0,
+      466.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 4,
+      "answer_line": null,
+      "working_gap_pt": 34.6,
+      "height_pt": 344.2
+     }
+    }
+   ],
+   "text": "Complete the tree diagram.\nSchool\n0.6\nBus\n0.3\n.............\nHome\nSchool\n.............\n.............\nBicycle\n.............\nHome\n[2]",
+   "marks": 2,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "Fully correct tree diagram\n0.4\n0.7\n0.6\n0.4",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        39.2400016784668,
+        458.4,
+        556.0199584960938,
+        518.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the tree diagram.",
+     "text": "Complete the tree diagram."
+    },
+    {
+     "type": "text",
+     "html": "School",
+     "text": "School"
+    },
+    {
+     "type": "text",
+     "html": "0.6",
+     "text": "0.6"
+    },
+    {
+     "type": "text",
+     "html": "Bus",
+     "text": "Bus"
+    },
+    {
+     "type": "text",
+     "html": "0.3",
+     "text": "0.3"
+    },
+    {
+     "type": "text",
+     "html": "Home",
+     "text": "Home"
+    },
+    {
+     "type": "text",
+     "html": "School",
+     "text": "School"
+    },
+    {
+     "type": "text",
+     "html": "Bicycle",
+     "text": "Bicycle"
+    },
+    {
+     "type": "text",
+     "html": "Home",
+     "text": "Home"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 4
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      468.5,
+      570.0,
+      557.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 49.9,
+      "height_pt": 88.5
+     }
+    }
+   ],
+   "text": "Find the probability that Iraj travels on a bicycle to school and goes home for lunch.\n................................................. [2]",
+   "marks": 2,
+   "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "0.28 oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        39.2400016784668,
+        520.8,
+        556.0199584960938,
+        555.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the probability that Iraj travels on a bicycle to school and goes home for lunch.",
+     "text": "Find the probability that Iraj travels on a bicycle to school and goes home for lunch."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 2,
+ "variant": 2,
+ "paper_code": "0607/22",
+ "paper_type": "extended_short_answer",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Iraj travels to school either by bus or on a bicycle. The probability that he goes by bus is 0.3 . He can have lunch at home or at school. The probability that he has lunch at school is 0.6 .",
+   "text": "Iraj travels to school either by bus or on a bicycle. The probability that he goes by bus is 0.3 . He can have lunch at home or at school. The probability that he has lunch at school is 0.6 ."
+  }
+ ]
+}

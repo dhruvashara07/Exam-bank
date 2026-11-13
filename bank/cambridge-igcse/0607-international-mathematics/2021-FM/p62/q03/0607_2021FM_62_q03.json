@@ -1,0 +1,222 @@
+{
+ "id": "0607_2021FM_62_q03",
+ "number": 3,
+ "segments": [],
+ "text": "",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      301.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 109.0,
+      "height_pt": 244.2
+     }
+    }
+   ],
+   "text": "3\n(a) Complete this table for a grey cube of edge length 3 cm.\nNumber of\n0\n1\n2\n3\n4\nn\nenclosing layers\nL\n3\nW\n0\n98\n316\n702\n1304\n[2]",
+   "marks": 2,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "0 1\n2\n3\n4\nn\n3 5\n7\n9\n11\n2n + 3 oe\n3\n3\n0 98\n316\n702\n1304\n(2n + 3) − 3 oe",
+     "codes": [
+      "2",
+      "3",
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        25.079999923706055,
+        626.8,
+        570.1799926757812,
+        675.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> Complete this table for a grey cube of edge length 3 cm.",
+     "text": "Complete this table for a grey cube of edge length 3 cm."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Number of enclosing layers",
+       "0",
+       "1",
+       "2",
+       "3",
+       "4",
+       "",
+       "<i>n</i>"
+      ],
+      [
+       "<i>L</i>",
+       "3",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "<i>W</i>",
+       "0",
+       "98",
+       "316",
+       "702",
+       "1304",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 109.0
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      303.7,
+      570.0,
+      568.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 41.4,
+      "height_pt": 264.3
+     }
+    }
+   ],
+   "text": "A grey cube has edge length e cm.\nWrite your expressions for W from questions 1(d), 2(b) and 3(a) in this table.\nComplete the table.\nEdge length of\nW\ngrey cube\n1\n2\n3\ne\n[2]",
+   "marks": 2,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "Edge\nlength of\nW\ngrey cube\n1\n(2n + 1) − 1\n3\n3\n3\n2\n(2n + 2) − 2\n3\n3\n3\n(2n + 3) − 3\n3\n3\ne\n(2n + e) – e\noe",
+     "codes": [
+      "3",
+      "2",
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        25.079999923706055,
+        89.4,
+        570.1799926757812,
+        266.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A grey cube has edge length <i>e</i> cm. Write your expressions for <i>W</i> from <b>questions 1(d)</b>, <b>2(b)</b> and <b>3(a)</b> in this table. Complete the table.",
+     "text": "A grey cube has edge length e cm. Write your expressions for W from questions 1(d), 2(b) and 3(a) in this table. Complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Edge length of grey cube",
+       "<i>W</i>"
+      ],
+      [
+       "1",
+       ""
+      ],
+      [
+       "2",
+       ""
+      ],
+      [
+       "3",
+       ""
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "<i>e</i>",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 41.4
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

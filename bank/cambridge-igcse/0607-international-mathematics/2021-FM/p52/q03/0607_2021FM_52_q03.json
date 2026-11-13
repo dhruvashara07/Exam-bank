@@ -1,0 +1,424 @@
+{
+ "id": "0607_2021FM_52_q03",
+ "number": 3,
+ "segments": [],
+ "text": "",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      80.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.2
+     }
+    }
+   ],
+   "text": "3\n(a) There are now three consecutive numbers.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        82.8,
+        570.0,
+        333.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 15.7,
+        "height_pt": 250.7
+       }
+      }
+     ],
+     "text": "Complete the table using the method with the consecutive numbers 3, 4 and 5.\nAddition\nTotal\nAll positive\n3\n4\n5\n12\n+\n+\n=\n4\n5\n6\n-3\n+\n+\n=\nOne negative\n-4\n4\n.......\n+\n+\n.......\n=\n2\n.......\n+\n.......\n+\n.......\n=\n-3\n-4\n........\n-2\n+\n+\n=\nTwo negative\n-3\n-5\n+\n.......\n+\n=\n.......\n.......\n+\n.......\n+\n.......\n=\n.......\nAll negative\n-3\n-4\n-5\n-12\n+\n+\n=\n[2]",
+     "marks": 2,
+     "path": "3(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "3(a)(i)",
+       "text": "3\n+\n4\n+\n5\n=\n12\n−3\n+\n4\n+\n5\n=\n6\n3\n+\n−4\n+\n5\n=\n4\n3\n+\n4\n+\n=\n2\n−5\n−3\n+\n−4\n+\n5\n=\n−2\n+\n4\n+\n=\n−3\n−5\n−4\n3\n+\n+\n=\n−4\n−5\n−6\n−3\n+\n−4\n+\n−5\n=\n−12",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.380001068115234,
+          89.4,
+          549.0,
+          328.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the table using the method with the consecutive numbers 3, 4 and 5.",
+       "text": "Complete the table using the method with the consecutive numbers 3, 4 and 5."
+      },
+      {
+       "type": "text",
+       "html": "Addition Total",
+       "text": "Addition Total"
+      },
+      {
+       "type": "text",
+       "html": "All positive 3 + 4 + 5 = 12",
+       "text": "All positive 3 + 4 + 5 = 12"
+      },
+      {
+       "type": "text",
+       "html": "-3 + 4 + 5 = 6",
+       "text": "-3 + 4 + 5 = 6"
+      },
+      {
+       "type": "text",
+       "html": "One negative + -4 + = 4",
+       "text": "One negative + -4 + = 4"
+      },
+      {
+       "type": "text",
+       "html": "....... .......",
+       "text": "....... ......."
+      },
+      {
+       "type": "text",
+       "html": "+ + = 2",
+       "text": "+ + = 2"
+      },
+      {
+       "type": "text",
+       "html": "....... ....... .......",
+       "text": "....... ....... ......."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "-3 + -4 +",
+       "unit": "= -2"
+      },
+      {
+       "type": "text",
+       "html": "Two negative -3 + + -5 =",
+       "text": "Two negative -3 + + -5 ="
+      },
+      {
+       "type": "text",
+       "html": "....... .......",
+       "text": "....... ......."
+      },
+      {
+       "type": "text",
+       "html": "....... + ....... + ....... = .......",
+       "text": "....... + ....... + ....... = ......."
+      },
+      {
+       "type": "text",
+       "html": "All negative -3 + -4 + -5 = -12",
+       "text": "All negative -3 + -4 + -5 = -12"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        336.1,
+        570.0,
+        528.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 153.9,
+        "height_pt": 192.4
+       }
+      }
+     ],
+     "text": "Find the number of integers that cannot be made between 12 and -12.\n................................................. [2]",
+     "marks": 2,
+     "path": "3(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "3(a)(ii)",
+       "text": "11, 10, 9, 8, 7, 5, 3, 1, 0, –1, –3, –5, –7, –8, –9,\n–10, –11\nor 25 stated as total\n17",
+       "codes": [
+        "C1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.380001068115234,
+          344.3,
+          549.0,
+          416.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the number of integers that <b>cannot</b> be made between 12 and -12.",
+       "text": "Find the number of integers that cannot be made between 12 and -12."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "3(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> There are now three consecutive numbers.",
+     "text": "There are now three consecutive numbers."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      526.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 15.7,
+      "height_pt": 469.7
+     }
+    },
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      60.5,
+      570.0,
+      79.5
+     ],
+     "continued": true,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 0.3,
+      "height_pt": 19.0
+     }
+    }
+   ],
+   "text": "There are now four consecutive numbers.\nComplete the table using the method and the consecutive numbers 3, 4, 5 and 6.\nAddition\nTotal\n3\n4\n5\n6\nAll positive\n18\n+\n+\n+\n=\n4\n5\n6\n-3\n12\n+\n+\n+\n=\n5\n6\n-4\n10\n.......\n+\n+\n+\n=\nOne negative\n3\n4\n6\n-5\n8\n+\n+\n+\n=\n.......\n+\n.......\n+\n.......\n+\n.......\n=\n.......\n5\n6\n-3\n-4\n+\n+\n+\n=\n.......\n-3\n4\n6\n2\n+\n+\n.......\n+\n=\n4\n5\n-3\n-6\n0\n+\n+\n+\n=\nTwo negative\n3\n6\n0\n-4\n+\n+\n.......\n+\n=\n3\n-4\n-6\n+\n+\n.......\n+\n=\n.......\n3\n4\n-5\n-6\n-4\n+\n+\n+\n=\n-3\n-4\n+\n+\n.......\n+\n.......\n=\n.......\n-3\n-4\n-8\n+\n+\n.......\n+\n.......\n=\nThree negative\n4\n-3\n-5\n-10\n.......\n+\n+\n+\n=\n3\n-12\n+\n.......\n+\n.......\n+\n.......\n=\nAll negative\n-3\n-4\n-5\n-6\n-18\n+\n+\n+\n=\n[3]\nTURN OVER FOR QUESTION 4",
+   "marks": 3,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "3\n+\n4\n+\n5\n+\n6\n=\n18\n+\n4\n+\n5\n+\n6\n=\n12\n−3\n3\n+\n+\n5\n+\n6\n=\n10\n−4\n3\n+\n4\n+\n+\n6\n=\n8\n−5\n3\n+\n4\n+\n5\n+ −6\n=\n6\n−3\n+\n−4\n+\n5\n+\n6\n=\n4\n+\n4\n+\n+\n6\n=\n2\n−3\n−5\n−3\n+\n4\n+\n5\n+ −6\n=\n0\n3\n+\n+\n+\n6\n=\n0\n−4\n−5\n3\n+\n−4\n+\n5\n+ −6\n=\n−2\n3\n+\n4\n+\n+ −6\n=\n−5\n−4\n−3\n+\n−4\n+\n−5\n+\n6\n=\n−6\n+\n+\n5\n+ −6\n=\n−3\n−4\n−8\n−3\n+\n4\n+\n−5\n+ −6\n= −10\n3\n+\n+\n+ −6\n= −12\n−4\n−5\n−3\n+\n−4\n+\n−5\n+ −6\n= −18",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        418.5,
+        549.0,
+        704.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "There are now four consecutive numbers. Complete the table using the method and the consecutive numbers 3, 4, 5 and 6.",
+     "text": "There are now four consecutive numbers. Complete the table using the method and the consecutive numbers 3, 4, 5 and 6."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "",
+       "Addition Total"
+      ],
+      [
+       "All positive",
+       "3 + 4 + 5 + 6 = 18"
+      ],
+      [
+       "One negative",
+       "-3 + 4 + 5 + 6 = 12"
+      ],
+      [
+       "",
+       "+ -4 + 5 + 6 = 10"
+      ],
+      [
+       "",
+       "......."
+      ],
+      [
+       "",
+       "3 + 4 + -5 + 6 = 8"
+      ],
+      [
+       "",
+       "....... + ....... + ....... + ....... ="
+      ],
+      [
+       "",
+       "......."
+      ],
+      [
+       "Two negative",
+       "-3 + -4 + 5 + 6 = ......."
+      ],
+      [
+       "",
+       "-3 + 4 + + 6 = 2"
+      ],
+      [
+       "",
+       "......."
+      ],
+      [
+       "",
+       "-3 + 4 + 5 + -6 = 0"
+      ],
+      [
+       "",
+       "3 + -4 + + 6 = 0"
+      ],
+      [
+       "",
+       "......."
+      ],
+      [
+       "",
+       "3 + -4 + + -6 ="
+      ],
+      [
+       "",
+       "....... ......."
+      ],
+      [
+       "",
+       "3 + 4 + -5 + -6 = -4"
+      ],
+      [
+       "Three negative",
+       "-3 + -4 + ....... + ....... = ......."
+      ],
+      [
+       "",
+       "-3 + -4 + ....... + ....... = -8"
+      ],
+      [
+       "",
+       "-3 + 4 + -5 + = -10"
+      ],
+      [
+       "",
+       "......."
+      ],
+      [
+       "",
+       "3 + + + = -12"
+      ],
+      [
+       "",
+       "....... ....... ......."
+      ],
+      [
+       "All negative",
+       "-3 + -4 + -5 + -6 = -18"
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 3
+    },
+    {
+     "type": "text",
+     "html": "<b>TURN OVER FOR QUESTION 4</b>",
+     "text": "TURN OVER FOR QUESTION 4"
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

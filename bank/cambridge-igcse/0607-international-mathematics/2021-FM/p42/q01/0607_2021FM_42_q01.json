@@ -1,0 +1,445 @@
+{
+ "id": "0607_2021FM_42_q01",
+ "number": 1,
+ "segments": [],
+ "text": "",
+ "marks": 8,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      82.8,
+      570.0,
+      364.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 13.2,
+      "height_pt": 281.2
+     }
+    }
+   ],
+   "text": "1\n(a)\ny\n10\n8\n6\n4\n2\nA\nx\n–10\n–8\n–6\n–4\n–2\n2\n4\n6\n8\n10\n0\n–2\n–4\n–6",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        372.8,
+        570.0,
+        396.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 4.0,
+        "height_pt": 23.2
+       }
+      }
+     ],
+     "text": "Rotate triangle A through 90° anticlockwise about (0, 0). Label the image B.\n[2]",
+     "marks": 2,
+     "path": "1(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "1(a)(i)",
+       "text": "correct triangle B\n(0, 3) (0, 8) (−3, 3)",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.099998474121094,
+          102.1,
+          563.1600341796875,
+          136.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Rotate triangle <i>A</i> through 90° anticlockwise about (0, 0). Label the image <i>B</i>.",
+       "text": "Rotate triangle A through 90° anticlockwise about (0, 0). Label the image B."
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        398.8,
+        570.0,
+        422.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 4.0,
+        "height_pt": 23.2
+       }
+      }
+     ],
+     "text": "Reflect triangle A in the y-axis. Label the image C.\n[1]",
+     "marks": 1,
+     "path": "1(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "1(a)(ii)",
+       "text": "correct triangle C\n(−3, 0) (−8, 0) (−3, 3)",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.099998474121094,
+          139.2,
+          563.1600341796875,
+          174.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Reflect triangle <i>A</i> in the <i>y</i>-axis. Label the image <i>C</i>.",
+       "text": "Reflect triangle A in the y-axis. Label the image C."
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        424.8,
+        570.0,
+        500.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 2,
+        "answer_line": null,
+        "working_gap_pt": 10.9,
+        "height_pt": 75.2
+       }
+      }
+     ],
+     "text": "Describe fully the single transformation that maps triangle B onto triangle C.\n.............................................................................................................................................\n............................................................................................................................................. [2]",
+     "marks": 2,
+     "path": "1(a)(iii)",
+     "mark_scheme": [
+      {
+       "label": "1(a)(iii)",
+       "text": "reflection\n𝑥 + 𝑦 = 0 oe",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.099998474121094,
+          176.2,
+          563.1600341796875,
+          211.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Describe fully the <b>single</b> transformation that maps triangle <i>B</i> onto triangle <i>C</i>.",
+       "text": "Describe fully the single transformation that maps triangle B onto triangle C."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "1(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "<i>y</i> 10 8 6 4 2",
+     "text": "y 10 8 6 4 2"
+    },
+    {
+     "type": "text",
+     "html": "<i>A</i>",
+     "text": "A"
+    },
+    {
+     "type": "text",
+     "html": "– 10 – 8 – 6 – 4 – 2 0 2 4 6 8 10 <i>x</i>",
+     "text": "– 10 – 8 – 6 – 4 – 2 0 2 4 6 8 10 x"
+    },
+    {
+     "type": "text",
+     "html": "– 2 – 4 – 6",
+     "text": "– 2 – 4 – 6"
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      502.8,
+      570.0,
+      750.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 21.8,
+      "height_pt": 247.7
+     }
+    }
+   ],
+   "text": "y\n6\nE\nE\n4\n2\nD\nD\n0\nx\n2\n4\n6\n8\n10\n12\nDescribe fully the single transformation that maps trapezium D onto trapezium E.\n.....................................................................................................................................................\n..................................................................................................................................................... [3]",
+   "marks": 3,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "enlargement\n[scale factor] 3\n[centre] (0, 0) oe",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.099998474121094,
+        213.6,
+        563.1600341796875,
+        261.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<i>y</i>",
+     "text": "y"
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "<i>E</i>",
+       "<i>E</i> <i>E</i>",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "<i>D</i><i>D</i>",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "html": "6 4 2",
+     "text": "6 4 2"
+    },
+    {
+     "type": "text",
+     "html": "<i>x</i>",
+     "text": "x"
+    },
+    {
+     "type": "text",
+     "html": "4 6 8 10 12",
+     "text": "4 6 8 10 12"
+    },
+    {
+     "type": "text",
+     "html": "Describe fully the <b>single</b> transformation that maps trapezium <i>D</i> onto trapezium <i>E</i>.",
+     "text": "Describe fully the single transformation that maps trapezium D onto trapezium E."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_long_answer",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

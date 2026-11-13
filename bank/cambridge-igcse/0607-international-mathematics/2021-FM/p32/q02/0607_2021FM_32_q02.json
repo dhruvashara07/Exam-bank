@@ -1,0 +1,312 @@
+{
+ "id": "0607_2021FM_32_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    254.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 15.7,
+    "height_pt": 197.7
+   }
+  }
+ ],
+ "text": "2\nHere is the price list in a restaurant.\nYou can choose a 1-course meal or a 2-course meal or a 3-course meal.\n1-course meal\n$28\n2-course meal\n$35\n3-course meal\n$42\nCoffee or Tea\n$3\nAnna and Alexa eat a meal in this restaurant.\nAnna has a 3-course meal and a cup of coffee.\nAlexa has a 2-course meal and two cups of tea.",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      257.0,
+      570.0,
+      397.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 101.9,
+      "height_pt": 140.5
+     }
+    }
+   ],
+   "text": "Work out how much this costs altogether.\n$ .................................................. [2]",
+   "marks": 2,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "86",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        39.2400016784668,
+        335.6,
+        556.0199584960938,
+        372.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Work out how much this costs altogether.",
+     "text": "Work out how much this costs altogether."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "$"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      400.0,
+      570.0,
+      423.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.5
+     }
+    }
+   ],
+   "text": "They pay a service charge of 15% of this cost.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        426.0,
+        570.0,
+        540.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 75.9,
+        "height_pt": 114.5
+       }
+      }
+     ],
+     "text": "Work out the total cost including the service charge.\n$ .................................................. [2]",
+     "marks": 2,
+     "path": "2(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(b)(i)",
+       "text": "98.9[0]",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          39.2400016784668,
+          374.4,
+          556.0199584960938,
+          414.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Work out the total cost including the service charge.",
+       "text": "Work out the total cost including the service charge."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "$"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        543.0,
+        570.0,
+        670.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 62.9,
+        "height_pt": 127.5
+       }
+      }
+     ],
+     "text": "They each pay half of the total cost including the service charge.\nWork out how much they each pay.\n$ .................................................. [1]",
+     "marks": 1,
+     "path": "2(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(b)(ii)",
+       "text": "49.45",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          39.2400016784668,
+          417.0,
+          556.0199584960938,
+          439.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "They each pay half of the total cost including the service charge. Work out how much they each pay.",
+       "text": "They each pay half of the total cost including the service charge. Work out how much they each pay."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "$"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "2(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "They pay a service charge of 15% of this cost.",
+     "text": "They pay a service charge of 15% of this cost."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 3,
+ "variant": 2,
+ "paper_code": "0607/32",
+ "paper_type": "core_long_answer",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Here is the price list in a restaurant. You can choose a 1-course meal or a 2-course meal or a 3-course meal.",
+   "text": "Here is the price list in a restaurant. You can choose a 1-course meal or a 2-course meal or a 3-course meal."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "1-course meal",
+     "$28"
+    ],
+    [
+     "2-course meal",
+     "$35"
+    ],
+    [
+     "3-course meal",
+     "$42"
+    ],
+    [
+     "Coffee or Tea",
+     "$3"
+    ]
+   ]
+  },
+  {
+   "type": "text",
+   "html": "Anna and Alexa eat a meal in this restaurant. Anna has a 3-course meal and a cup of coffee. Alexa has a 2-course meal and two cups of tea.",
+   "text": "Anna and Alexa eat a meal in this restaurant. Anna has a 3-course meal and a cup of coffee. Alexa has a 2-course meal and two cups of tea."
+  }
+ ]
+}

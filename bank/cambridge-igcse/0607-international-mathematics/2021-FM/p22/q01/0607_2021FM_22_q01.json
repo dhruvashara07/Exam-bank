@@ -1,0 +1,184 @@
+{
+ "id": "0607_2021FM_22_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    82.8,
+    570.0,
+    156.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.9,
+    "height_pt": 73.2
+   }
+  }
+ ],
+ "text": "1\nThese are the test results for 14 students.\n27  19  22  25  18  23  24\n17  16  25  17  27  23  26",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      160.8,
+      570.0,
+      319.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "Key: …… | …… = …… [3]",
+      "working_gap_pt": 119.6,
+      "height_pt": 158.2
+     }
+    }
+   ],
+   "text": "Construct an ordered stem-and-leaf diagram to show this information, including a key.\nKey: ................ | ................ = ................ [3]",
+   "marks": 3,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "1 6 7 7 8 9\n2 2 3 3 4 5 5 6 7 7\nkey e.g. 1 | 6 = 16",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        39.2400016784668,
+        102.1,
+        556.0199584960938,
+        160.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Construct an ordered stem-and-leaf diagram to show this information, including a key.",
+     "text": "Construct an ordered stem-and-leaf diagram to show this information, including a key."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Key:"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      321.5,
+      570.0,
+      384.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 23.9,
+      "height_pt": 62.5
+     }
+    }
+   ],
+   "text": "Find the median.\n................................................. [1]",
+   "marks": 1,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "23",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        39.2400016784668,
+        162.7,
+        556.0199584960938,
+        184.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the median.",
+     "text": "Find the median."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 2,
+ "variant": 2,
+ "paper_code": "0607/22",
+ "paper_type": "extended_short_answer",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "These are the test results for 14 students.",
+   "text": "These are the test results for 14 students."
+  },
+  {
+   "type": "text",
+   "html": "19 22 25 18 23 24 16 25 17 27 23 26",
+   "text": "19 22 25 18 23 24 16 25 17 27 23 26"
+  }
+ ]
+}

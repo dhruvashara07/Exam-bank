@@ -1,0 +1,227 @@
+{
+ "id": "0607_2021FM_62_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    241.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 50.8,
+    "height_pt": 184.2
+   }
+  }
+ ],
+ "text": "2\nA grey cube has edge length 2 cm.\nThis cube will be enclosed in layers of 1 cm white cubes.\nThe diagram shows some of the white cubes in the first layer.\nNOT TO\nSCALE",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      259.2,
+      570.0,
+      412.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 3,
+      "answer_line": null,
+      "working_gap_pt": 10.9,
+      "height_pt": 153.3
+     }
+    }
+   ],
+   "text": "This calculation gives the number of white cubes when there is one enclosing layer.\n43- 23\nExplain why this calculation works.\n.....................................................................................................................................................\n.....................................................................................................................................................\n..................................................................................................................................................... [2]",
+   "marks": 2,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "4 is the [total] volume of the cube [in cm ]\n3\n3\n3\n3\n2 is the volume of the grey cube [in cm ]\n[The difference is the number of white cubes oe]\nOR\n4 [cm] is the outer cube edge length oe\n2 [cm] is the grey cube edge length oe\nCubing edge length gives volume oe\n[The difference is the number of white cubes oe]",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        25.079999923706055,
+        413.5,
+        570.1799926757812,
+        549.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "This calculation gives the number of white cubes when there is one enclosing layer.",
+     "text": "This calculation gives the number of white cubes when there is one enclosing layer."
+    },
+    {
+     "type": "text",
+     "html": "- 2<sup>3</sup> Explain why this calculation works.",
+     "text": "- 23 Explain why this calculation works."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 3
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      415.2,
+      570.0,
+      750.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 200.0,
+      "height_pt": 335.3
+     }
+    }
+   ],
+   "text": "Complete this table for a grey cube of edge length 2 cm.\nNumber of\n0\n1\n2\n3\n4\nn\nenclosing layers\nL\n2\n10\nW\n0\n56\n992\n[4]",
+   "marks": 4,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "3\n3\n3\n3\n6 – 2 oe or 8 – 2 oe\nn\n1\n2\n3\n4\nn\nL 4\n6\n8\n10\n2n + 2 oe\n3\n3\nW 56\n208\n504\n992\n(2n+2) −2 isw oe",
+     "codes": [
+      "C1",
+      "3",
+      "3",
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        25.079999923706055,
+        551.8,
+        570.1799926757812,
+        624.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this table for a grey cube of edge length 2 cm.",
+     "text": "Complete this table for a grey cube of edge length 2 cm."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Number of enclosing layers",
+       "0",
+       "1",
+       "2",
+       "3",
+       "4",
+       "",
+       "<i>n</i>"
+      ],
+      [
+       "<i>L</i>",
+       "2",
+       "",
+       "",
+       "",
+       "10",
+       "",
+       ""
+      ],
+      [
+       "<i>W</i>",
+       "0",
+       "56",
+       "",
+       "",
+       "992",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 200.0
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A grey cube has edge length 2 cm. This cube will be enclosed in layers of 1 cm white cubes. The diagram shows some of the white cubes in the first layer.",
+   "text": "A grey cube has edge length 2 cm. This cube will be enclosed in layers of 1 cm white cubes. The diagram shows some of the white cubes in the first layer."
+  },
+  {
+   "type": "text",
+   "html": "NOT TO SCALE",
+   "text": "NOT TO SCALE"
+  }
+ ]
+}
