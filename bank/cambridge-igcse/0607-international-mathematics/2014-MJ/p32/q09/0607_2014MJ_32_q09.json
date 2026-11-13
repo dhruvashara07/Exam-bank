@@ -1,0 +1,286 @@
+{
+ "id": "0607_2014MJ_32_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 10,
+   "bbox": [
+    30.0,
+    61.5,
+    570.0,
+    93.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 3.6,
+    "height_pt": 31.5
+   }
+  }
+ ],
+ "text": "René has 6 oranges and 5 plums in a bag.\n9\nHe picks out a fruit at random and eats it.",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      99.4,
+      570.0,
+      209.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 81.1,
+      "height_pt": 110.1
+     }
+    }
+   ],
+   "text": "Find the probability that the fruit is an orange.\nAnswer(a)\n[1]",
+   "marks": 1,
+   "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "6\n1\n11",
+     "codes": [],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        473.2,
+        559.0,
+        509.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the probability that the fruit is an orange.",
+     "text": "Find the probability that the fruit is an orange."
+    },
+    {
+     "type": "text",
+     "html": "Answer(a)",
+     "text": "Answer(a)"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 81.1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      215.8,
+      570.0,
+      455.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 24.0,
+      "height_pt": 239.2
+     }
+    }
+   ],
+   "text": "René picks out a second fruit at random and eats it.\nComplete the tree diagram.\nFirst fruit\nSecond fruit\nOrange\n........\nOrange\n........\nPlum\n........\nOrange\n........\n........\nPlum\nPlum\n........\n[3]",
+   "marks": 3,
+   "path": "9(b)",
+   "mark_scheme": [
+    {
+     "label": "9(b)",
+     "text": "6\n5\n1 mark for each pair\n1\n11 11\n5\n5\n1\n10 10\n6\n4\n1\n10 10\n30",
+     "codes": [
+      "6"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        513.5,
+        559.0,
+        645.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "René picks out a second fruit at random and eats it.",
+     "text": "René picks out a second fruit at random and eats it."
+    },
+    {
+     "type": "text",
+     "html": "Complete the tree diagram.",
+     "text": "Complete the tree diagram."
+    },
+    {
+     "type": "text",
+     "html": "First fruit Second fruit",
+     "text": "First fruit Second fruit"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "Orange"
+    },
+    {
+     "type": "text",
+     "html": "Orange",
+     "text": "Orange"
+    },
+    {
+     "type": "text",
+     "html": "Plum",
+     "text": "Plum"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "Orange"
+    },
+    {
+     "type": "text",
+     "html": "Plum",
+     "text": "Plum"
+    },
+    {
+     "type": "text",
+     "html": "Plum",
+     "text": "Plum"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 4
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      461.7,
+      570.0,
+      689.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 182.2,
+      "height_pt": 227.8
+     }
+    }
+   ],
+   "text": "Find the probability that René eats two oranges.\nAnswer(c)\n[2]",
+   "marks": 2,
+   "path": "9(c)",
+   "mark_scheme": [
+    {
+     "label": "9(c)",
+     "text": "oe isw\nM1 for multiplying their\n2FT\n110\n5\ntheir\n10",
+     "codes": [],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        645.1,
+        559.0,
+        702.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the probability that René eats two oranges.",
+     "text": "Find the probability that René eats two oranges."
+    },
+    {
+     "type": "text",
+     "html": "Answer(c)",
+     "text": "Answer(c)"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 182.2
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2014,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 3,
+ "variant": 2,
+ "paper_code": "0607/32",
+ "paper_type": "core_long_answer",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "René has 6 oranges and 5 plums in a bag. He picks out a fruit at random and eats it.",
+   "text": "René has 6 oranges and 5 plums in a bag. He picks out a fruit at random and eats it."
+  }
+ ]
+}

@@ -1,0 +1,480 @@
+{
+ "id": "0607_2014MJ_43_q13",
+ "number": 13,
+ "segments": [
+  {
+   "page": 18,
+   "bbox": [
+    30.0,
+    61.5,
+    570.0,
+    226.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 70.8,
+    "height_pt": 164.5
+   }
+  }
+ ],
+ "text": "13\nX\nY\nThe diagram shows two fair dice, X and Y, each with 6 faces.\nThe numbers on X are 1, 1, 1, 1, 2 and 3.\nThe numbers on Y are 1, 1, 1, 2, 3 and 3.",
+ "marks": 9,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 18,
+     "bbox": [
+      30.0,
+      233.0,
+      570.0,
+      277.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 15.4,
+      "height_pt": 44.0
+     }
+    }
+   ],
+   "text": "X is rolled.\nWrite down the probability that the number on the top face is",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 18,
+       "bbox": [
+        30.0,
+        283.6,
+        570.0,
+        343.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 30.4,
+        "height_pt": 59.4
+       }
+      }
+     ],
+     "text": "odd,\nAnswer(a)(i)\n[1]",
+     "marks": 1,
+     "path": "13(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "13(a)(i)",
+       "text": "oe\n1\n6\n2",
+       "codes": [],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          36.0,
+          159.8,
+          559.0,
+          199.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "odd,",
+       "text": "odd,"
+      },
+      {
+       "type": "text",
+       "html": "Answer(a)(i)",
+       "text": "Answer(a)(i)"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 18,
+       "bbox": [
+        30.0,
+        349.4,
+        570.0,
+        408.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 30.5,
+        "height_pt": 59.1
+       }
+      }
+     ],
+     "text": "not 1.\nAnswer(a)(ii)\n[1]",
+     "marks": 1,
+     "path": "13(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "13(a)(ii)",
+       "text": "oe\n1\n6\n12\n4\n3",
+       "codes": [],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          36.0,
+          199.9,
+          559.0,
+          241.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "not 1.",
+       "text": "not 1."
+      },
+      {
+       "type": "text",
+       "html": "Answer(a)(ii)",
+       "text": "Answer(a)(ii)"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "13(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "X is rolled.",
+     "text": "X is rolled."
+    },
+    {
+     "type": "text",
+     "html": "Write down the probability that the number on the top face is",
+     "text": "Write down the probability that the number on the top face is"
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 18,
+     "bbox": [
+      30.0,
+      415.1,
+      570.0,
+      459.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 15.3,
+      "height_pt": 43.9
+     }
+    }
+   ],
+   "text": "The two dice are rolled and the numbers on the top faces are noted.\nFind the probability that",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 18,
+       "bbox": [
+        30.0,
+        465.7,
+        570.0,
+        677.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 182.2,
+        "height_pt": 211.3
+       }
+      }
+     ],
+     "text": "both numbers are 1,\nAnswer(b)(i)\n[2]",
+     "marks": 2,
+     "path": "13(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "13(b)(i)",
+       "text": "oe\nM1 for\n×\noe\n2\n36\n6\n6\n30\n2\n3\n4\n3\n2",
+       "codes": [
+        "3",
+        "4",
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          36.0,
+          241.0,
+          559.0,
+          281.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "both numbers are 1,",
+       "text": "both numbers are 1,"
+      },
+      {
+       "type": "text",
+       "html": "Answer(b)(i)",
+       "text": "Answer(b)(i)"
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 182.2
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 19,
+       "bbox": [
+        30.0,
+        61.5,
+        570.0,
+        222.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 131.6,
+        "height_pt": 160.5
+       }
+      }
+     ],
+     "text": "at least one of the numbers is 1,\nAnswer(b)(ii)\n[3]",
+     "marks": 3,
+     "path": "13(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "13(b)(ii)",
+       "text": "oe\nM2 for 1−\n×\nor\n×\n+\n×\n3\n36\n6\n6\n6\n6\n6\n2\n3\n×\nor M1 for\nwith no other products\n6\n6\n4\n3\n2\n3\n4\n3\n×\n+\n×\n+\n×\nor\nwith two products\n6\n6\n6\n6\n6\n6\ncorrect\n11\n5\n5\n1\n1\n1",
+       "codes": [
+        "6",
+        "6",
+        "6",
+        "5",
+        "5",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          36.0,
+          281.1,
+          559.0,
+          403.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "at least one of the numbers is 1,",
+       "text": "at least one of the numbers is 1,"
+      },
+      {
+       "type": "text",
+       "html": "Answer(b)(ii)",
+       "text": "Answer(b)(ii)"
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 131.6
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 19,
+       "bbox": [
+        30.0,
+        228.5,
+        570.0,
+        494.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 192.5,
+        "height_pt": 266.0
+       }
+      }
+     ],
+     "text": "the product of the two numbers is even.\nAnswer(b)(iii)\n[2]\nQuestion 14 is printed on the next page.",
+     "marks": 2,
+     "path": "13(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "13(b)(iii)",
+       "text": "M1 for 1−\n×\n×\n+\n×\noe\n2\nor\n36\n6\n6\n6\n6\n6\n1\n1\n1\n1\nor\n+\n–\n×\n6\n6\n6\n6\n3",
+       "codes": [
+        "6",
+        "6",
+        "6"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          36.0,
+          403.4,
+          559.0,
+          478.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "the product of the two numbers is even.",
+       "text": "the product of the two numbers is even."
+      },
+      {
+       "type": "text",
+       "html": "Answer(b)(iii)",
+       "text": "Answer(b)(iii)"
+      },
+      {
+       "type": "text",
+       "html": "Question 14 is printed on the next page.",
+       "text": "Question 14 is printed on the next page."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 192.5
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "13(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "The two dice are rolled and the numbers on the top faces are noted.",
+     "text": "The two dice are rolled and the numbers on the top faces are noted."
+    },
+    {
+     "type": "text",
+     "html": "Find the probability that",
+     "text": "Find the probability that"
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2014,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 3,
+ "paper_code": "0607/43",
+ "paper_type": "extended_long_answer",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "13",
+   "text": "13"
+  },
+  {
+   "type": "text",
+   "html": "<i>X</i> <i>Y</i>",
+   "text": "X Y"
+  },
+  {
+   "type": "text",
+   "html": "The diagram shows two fair dice, X and Y, each with 6 faces.",
+   "text": "The diagram shows two fair dice, X and Y, each with 6 faces."
+  },
+  {
+   "type": "text",
+   "html": "The numbers on X are 1, 1, 1, 1, 2 and 3. The numbers on Y are 1, 1, 1, 2, 3 and 3.",
+   "text": "The numbers on X are 1, 1, 1, 1, 2 and 3. The numbers on Y are 1, 1, 1, 2, 3 and 3."
+  }
+ ]
+}
