@@ -1,0 +1,236 @@
+{
+ "id": "0607_2019ON_23_q15",
+ "number": 15,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    136.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 16.4,
+    "height_pt": 79.5
+   }
+  }
+ ],
+ "text": "15\nThe table shows the height, h cm, of some plants.\nHeight (h cm)\n0\n1\nh\n10\n10\n1\nh\n40\n40\n1\nh\n60\nG\nG\nG\nFrequency\np\nq\n44",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      138.2,
+      570.0,
+      410.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 19.7,
+      "height_pt": 271.8
+     }
+    }
+   ],
+   "text": "Complete the histogram to show this information.\n6\n5\n4\nFrequency\n3\ndensity\n2\n1\n0\nh\n0\n10\n20\n30\n40\n50\n60\nHeight (cm)\n[1]",
+   "marks": 1,
+   "path": "15(a)",
+   "mark_scheme": [
+    {
+     "label": "15(a)",
+     "text": "Bar from 40 to 60, height 2.2",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.31999969482422,
+        226.7,
+        548.9400024414062,
+        248.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the histogram to show this information.",
+     "text": "Complete the histogram to show this information."
+    },
+    {
+     "type": "text",
+     "html": "6",
+     "text": "6"
+    },
+    {
+     "type": "text",
+     "html": "5",
+     "text": "5"
+    },
+    {
+     "type": "text",
+     "html": "4",
+     "text": "4"
+    },
+    {
+     "type": "text",
+     "html": "Frequency density 3",
+     "text": "Frequency density 3"
+    },
+    {
+     "type": "text",
+     "html": "2",
+     "text": "2"
+    },
+    {
+     "type": "text",
+     "html": "1",
+     "text": "1"
+    },
+    {
+     "type": "text",
+     "html": "0 10 20 30 40 50 60 <i>h</i>",
+     "text": "0 10 20 30 40 50 60 h"
+    },
+    {
+     "type": "text",
+     "html": "Height (cm)",
+     "text": "Height (cm)"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      413.2,
+      570.0,
+      582.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "p=  ……",
+      "working_gap_pt": 106.1,
+      "height_pt": 169.3
+     }
+    }
+   ],
+   "text": "Find the value of p and the value of q.\np=  ...................................................\nq=  ................................................... [2]",
+   "marks": 2,
+   "path": "15(b)",
+   "mark_scheme": [
+    {
+     "label": "15(b)",
+     "text": "[p =] 38\n[q = ] 150",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.31999969482422,
+        251.2,
+        548.9400024414062,
+        285.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the value of <i>p</i> and the value of <i>q</i>.",
+     "text": "Find the value of p and the value of q."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "p ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "q ="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2019,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 2,
+ "variant": 3,
+ "paper_code": "0607/23",
+ "paper_type": "extended_short_answer",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The table shows the height, <i>h</i> cm, of some plants.",
+   "text": "The table shows the height, h cm, of some plants."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Height (<i>h</i> cm)",
+     "0 1 <i>h</i> G 10",
+     "10 1 <i>h</i> G 40",
+     "40 1 <i>h</i> G 60"
+    ],
+    [
+     "Frequency",
+     "<i>p</i>",
+     "<i>q</i>",
+     "44"
+    ]
+   ]
+  }
+ ]
+}

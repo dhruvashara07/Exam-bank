@@ -1,0 +1,184 @@
+{
+ "id": "0607_2019ON_23_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    201.2,
+    570.0,
+    222.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 20.8
+   }
+  }
+ ],
+ "text": "5\nFactorise.",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      227.2,
+      570.0,
+      280.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 15.6,
+      "height_pt": 52.8
+     }
+    }
+   ],
+   "text": "-\n(a) x\n1\n.................................................... [1]",
+   "marks": 1,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "(x + 1)(x – 1)",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.31999969482422,
+        236.6,
+        548.9400024414062,
+        258.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "-",
+     "text": "-"
+    },
+    {
+     "type": "text",
+     "html": "<i>x</i><sup>2</sup> 1",
+     "text": "x2 1"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      283.2,
+      570.0,
+      415.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 94.9,
+      "height_pt": 132.3
+     }
+    }
+   ],
+   "text": "2\n2\n(b)\n3\nx\n6\nax\naxy\n2\nay\n-\n-\n+\n.................................................... [2]",
+   "marks": 2,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "(3x – ay)(x – 2a) oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.31999969482422,
+        261.1,
+        548.9400024414062,
+        295.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "3<i>x</i><sup>2</sup> - 6<i>ax</i> - <i>axy</i> + 2<i>a</i><sup>2</sup><i>y</i>",
+     "text": "3x2 - 6ax - axy + 2a2y"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2019,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 2,
+ "variant": 3,
+ "paper_code": "0607/23",
+ "paper_type": "extended_short_answer",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Factorise.",
+   "text": "Factorise."
+  }
+ ]
+}

@@ -1,0 +1,412 @@
+{
+ "id": "0607_2019ON_62_q07",
+ "number": 7,
+ "segments": [
+  {
+   "page": 10,
+   "bbox": [
+    30.0,
+    199.8,
+    570.0,
+    306.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 22.5,
+    "height_pt": 106.7
+   }
+  }
+ ],
+ "text": "7\nAnna says that this is a model for the value of a car as it gets older.\nAt the end of each year, the value of the car will be\nhalf of its value at the start of the year.\nEddie pays $16 000 for a new car.",
+ "marks": 0,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      309.5,
+      570.0,
+      387.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 14.7,
+      "height_pt": 77.5
+     }
+    }
+   ],
+   "text": "Use Anna’s model to complete the table.\nAge of car (x years)\n0\n1\n2\n3\n4\n5\n6\nValue (V dollars)\n16 000\n8000",
+   "marks": 0,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "4000\n2000\n1000\n500\n250",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        27.239999771118164,
+        113.8,
+        568.0799560546875,
+        136.0
+       ]
+      }
+     ]
+    },
+    {
+     "label": "7(a)",
+     "text": "for division by 2 at least once",
+     "codes": [],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        27.239999771118164,
+        113.8,
+        568.0799560546875,
+        135.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use Anna’s model to complete the table.",
+     "text": "Use Anna’s model to complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Age of car (<i>x</i> years)",
+       "0",
+       "1",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6"
+      ],
+      [
+       "Value (<i>V</i> dollars)",
+       "16 000",
+       "8000",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      519.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 30.9,
+      "height_pt": 462.5
+     }
+    }
+   ],
+   "text": "Use these values to draw a graph of V against x.\nV\n16000\n14000\n12000\n10000\nValue of car\n8000\n(dollars)\n6000\n4000\n2000\n0\nx\n0\n1\n2\n3\n4\n5\n6\nAge of car (years)",
+   "marks": 0,
+   "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "Correct curve",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        27.239999771118164,
+        138.2,
+        568.0799560546875,
+        271.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use these values to draw a graph of <i>V</i> against <i>x</i>.",
+     "text": "Use these values to draw a graph of V against x."
+    },
+    {
+     "type": "text",
+     "html": "<i>V</i> 000",
+     "text": "V 000"
+    },
+    {
+     "type": "text",
+     "html": "000",
+     "text": "000"
+    },
+    {
+     "type": "text",
+     "html": "000",
+     "text": "000"
+    },
+    {
+     "type": "text",
+     "html": "000",
+     "text": "000"
+    },
+    {
+     "type": "text",
+     "html": "Value of car",
+     "text": "Value of car"
+    },
+    {
+     "type": "text",
+     "html": "8000",
+     "text": "8000"
+    },
+    {
+     "type": "text",
+     "html": "(dollars)",
+     "text": "(dollars)"
+    },
+    {
+     "type": "text",
+     "html": "6000",
+     "text": "6000"
+    },
+    {
+     "type": "text",
+     "html": "4000",
+     "text": "4000"
+    },
+    {
+     "type": "text",
+     "html": "2000",
+     "text": "2000"
+    },
+    {
+     "type": "text",
+     "html": "0",
+     "text": "0"
+    },
+    {
+     "type": "text",
+     "html": "<i>x</i>",
+     "text": "x"
+    },
+    {
+     "type": "text",
+     "html": "1 2 3 4 5 6",
+     "text": "1 2 3 4 5 6"
+    },
+    {
+     "type": "text",
+     "html": "Age of car (years)",
+     "text": "Age of car (years)"
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      528.4,
+      570.0,
+      626.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "V = 16 000 ×……",
+      "working_gap_pt": 63.4,
+      "height_pt": 98.1
+     }
+    }
+   ],
+   "text": "Complete this model for V in terms of x.\nV = 16 000 ×.....................................................",
+   "marks": 0,
+   "path": "7(c)",
+   "mark_scheme": [
+    {
+     "label": "7(c)",
+     "text": "x\n0.5 oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        27.239999771118164,
+        273.6,
+        568.0799560546875,
+        295.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this model for <i>V</i> in terms of <i>x</i>.",
+     "text": "Complete this model for V in terms of x."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "V = 16 000 ×"
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      632.4,
+      570.0,
+      743.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 76.4,
+      "height_pt": 111.1
+     }
+    }
+   ],
+   "text": "Using Anna’s model, find the value of Eddie’s car when it is 10 years old.\n......................................................",
+   "marks": 0,
+   "path": "7(d)",
+   "mark_scheme": [
+    {
+     "label": "7(d)",
+     "text": "15.63",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        27.239999771118164,
+        298.0,
+        568.0799560546875,
+        320.3
+       ]
+      }
+     ]
+    },
+    {
+     "label": "7(d)",
+     "text": "for repeated division by 2\nor for 3 values 125, 62.5, 31.25\n1\nor 16 000 ×\noe\n10\n2",
+     "codes": [],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        27.239999771118164,
+        138.2,
+        568.0799560546875,
+        202.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Using Anna’s model, find the value of Eddie’s car when it is 10 years old.",
+     "text": "Using Anna’s model, find the value of Eddie’s car when it is 10 years old."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2019,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 0,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Anna says that this is a model for the value of a car as it gets older.",
+   "text": "Anna says that this is a model for the value of a car as it gets older."
+  },
+  {
+   "type": "text",
+   "html": "At the end of each year, the value of the car will be half of its value at the start of the year.",
+   "text": "At the end of each year, the value of the car will be half of its value at the start of the year."
+  },
+  {
+   "type": "text",
+   "html": "Eddie pays $16 000 for a new car.",
+   "text": "Eddie pays $16 000 for a new car."
+  }
+ ]
+}

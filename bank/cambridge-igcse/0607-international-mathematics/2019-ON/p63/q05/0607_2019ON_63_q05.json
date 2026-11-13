@@ -1,0 +1,288 @@
+{
+ "id": "0607_2019ON_63_q05",
+ "number": 5,
+ "segments": [],
+ "text": "",
+ "marks": 0,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      58.1,
+      570.0,
+      318.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 15.6,
+      "height_pt": 260.4
+     }
+    }
+   ],
+   "text": "5\n(a) Complete this table of values of\nR\n[\na\nb\n]\n.\n'\nb\n1\n2\n3\n4\n5\n6\n1\n0\n1\n1\n1\n1\n1\n2\n0\n3\n0\na\n4\n0\n5\n0\n6\n0",
+   "marks": 0,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "20 correct entries\nb\n1\n2\n3\n4\n5\n6\n1\n0\n1\n1\n1\n1\n1\n2\n0\n0\n2\n2\n2\n2\n3\n0\n1\n0\n3\n3\n3\na\n4\n0\n0\n1\n0\n4\n4\n5\n0\n1\n2\n1\n0\n5\n6\n0\n0\n0\n2\n1\n0",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        39.29999923706055,
+        309.5,
+        556.0799560546875,
+        521.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> Complete this table of values of R [<i>a</i> &#x27; <i>b</i>].",
+     "text": "Complete this table of values of R [a ' b]."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "",
+       "",
+       "<b><i>b</i></b>",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "<b>1</b>",
+       "<b>2</b>",
+       "<b>3</b>",
+       "<b>4</b>",
+       "<b>5</b>",
+       "<b>6</b>"
+      ],
+      [
+       "<b><i>a</i></b>",
+       "<b>1</b>",
+       "0",
+       "1",
+       "1",
+       "1",
+       "1",
+       "1"
+      ],
+      [
+       "",
+       "<b>2</b>",
+       "0",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "<b>3</b>",
+       "0",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "<b>4</b>",
+       "0",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "<b>5</b>",
+       "0",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "<b>6</b>",
+       "0",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      324.2,
+      570.0,
+      451.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 11.5,
+      "height_pt": 126.8
+     }
+    }
+   ],
+   "text": "R\n[\n10\n9\n]\nR\n[\n9\n10\n]\n10\n'\n+\n'\n=\nR\n[\n11\n7\n]\nR\n[\n7\n11\n]\n11\n'\n+\n'\n=\nThese examples suggest that\nR\n[\nx\ny\n]\nR\n[\ny\nx\n]\nx\n.\n'\n+\n'\n=\nUse values from the table to show one example that this is not always true.",
+   "marks": 0,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "A correct counter example, using numbers\n1 to 6, showing sum of two remainders",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        39.29999923706055,
+        530.0,
+        556.0799560546875,
+        564.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "R [<b>10</b> &#x27; 9] + R [9 &#x27; <b>10</b>] = <b>10</b> R [<b>11</b> &#x27; 7] + R [7 &#x27; <b>11</b>] = <b>11</b> These examples suggest that",
+     "text": "R [10 ' 9] + R [9 ' 10] = 10 R [11 ' 7] + R [7 ' 11] = 11 These examples suggest that"
+    },
+    {
+     "type": "text",
+     "html": "R [<b><i>x</i></b> &#x27; <i>y</i>] + R [<i>y</i> &#x27; <b><i>x</i></b>] = <b><i>x</i></b> .",
+     "text": "R [x ' y] + R [y ' x] = x ."
+    },
+    {
+     "type": "text",
+     "html": "Use values from the table to show one example that this is <b>not</b> always true.",
+     "text": "Use values from the table to show one example that this is not always true."
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      574.4,
+      570.0,
+      673.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 11.5,
+      "height_pt": 98.6
+     }
+    }
+   ],
+   "text": "The remainder when a positive integer, n, is divided by 100 is\nn\nR\n[\n100\n]\n.\n'\nn\nExplain why dividing\nR\n[\n100\n]\nby 100 gives the same remainder.\n'\n...................................................................................................................................................................\n...................................................................................................................................................................",
+   "marks": 0,
+   "path": "5(c)",
+   "mark_scheme": [
+    {
+     "label": "5(c)",
+     "text": "[The] remainder [is] less than 100 oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        39.29999923706055,
+        567.1,
+        556.0799560546875,
+        589.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The remainder when a positive integer, <i>n</i>, is divided by 100 is R [<i>n</i> &#x27; 100]. Explain why dividing R [<i>n</i> &#x27; 100] by 100 gives the same remainder.",
+     "text": "The remainder when a positive integer, n, is divided by 100 is R [n ' 100]. Explain why dividing R [n ' 100] by 100 gives the same remainder."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2019,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 0,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}
