@@ -103,6 +103,7 @@ def tex_token(t):
     return ''.join(out).replace('  ', ' ')
 
 
+SMALL_WORDS = {'of', 'to', 'in', 'is', 'on', 'at', 'by', 'the', 'and', 'or', 'an', 'as', 'be', 'it', 'if', 'for', 'are', 'its'}
 FUNC = re.compile(r'^(\d*)(sin|cos|tan|log|ln)(\^?-1|[xyθABC]|\d+|\(.*)?$')
 
 
@@ -117,9 +118,10 @@ def is_mathy(w):
     if re.match(r'^Answer\b', t):
         return False
     if len(t) == 1 and t.isalpha():
-        return bool(w.get('i')) or (t.islower() and t != 'a')     # 'a' alone is the article unless italic
+        return (bool(w.get('i')) and t not in ('a', 'A', 'I')) or (t.islower() and t != 'a')     # 'a' alone is the article unless italic
     return all(ch in MATHCH or ch.isdigit() or (ch.isalpha() and w.get('i')) for ch in t) and any(
-        ch.isdigit() or ch in SYM or ch in '=+-<>()/^' for ch in t) or (bool(w.get('i')) and len(t) <= 3 and t.isalpha())
+        ch.isdigit() or ch in SYM or ch in '=+-<>()/^' for ch in t) or (bool(w.get('i')) and len(t) <= 3 and t.isalpha()
+                                                             and t.lower() not in SMALL_WORDS)
 
 
 class Unsure(Exception):

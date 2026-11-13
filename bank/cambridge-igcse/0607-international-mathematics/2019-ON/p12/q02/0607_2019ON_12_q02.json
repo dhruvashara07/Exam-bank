@@ -24,10 +24,8 @@
  "marks": 2,
  "figures": [],
  "review": {
-  "reasons": [
-   "mark scheme row 2(m) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -57,9 +55,21 @@
    "mark_scheme": [
     {
      "label": "2(a)",
-     "text": "",
-     "codes": [],
-     "segments": []
+     "text": "15",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        126.4,
+        548.9400024414062,
+        148.6
+       ]
+      }
+     ]
     }
    ],
    "content": [
@@ -101,9 +111,21 @@
    "mark_scheme": [
     {
      "label": "2(b)",
-     "text": "",
-     "codes": [],
-     "segments": []
+     "text": "22",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        150.9,
+        548.9400024414062,
+        173.1
+       ]
+      }
+     ]
     }
    ],
    "content": [
@@ -120,40 +142,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "2(m)",
-   "text": "1",
-   "codes": [],
-   "segments": [
-    {
-     "page": 4,
-     "bbox": [
-      46.380001068115234,
-      643.1,
-      548.9400024414062,
-      665.4
-     ]
-    }
-   ]
-  },
-  {
-   "label": "2",
-   "text": "1\n3\n3\nall correct but not ordered",
-   "codes": [],
-   "segments": [
-    {
-     "page": 5,
-     "bbox": [
-      46.380001068115234,
-      114.6,
-      548.9400024414062,
-      127.3
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

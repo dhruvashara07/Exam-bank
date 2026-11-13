@@ -110,12 +110,25 @@ def skipped_page(page):
 def boundaries(doc):
     """Walk pages in order and accept labels that continue the numbering sequence."""
     out, q, letter, roman = [], 0, None, None
+    maths, pq = maths_doc(doc), None
     for pno in range(1, len(doc)):
         page = doc[pno]
         if skipped_page(page):
             continue
         top, bottom = page_bounds(page)
+        # 2014 maths paper 6: part B numbers its questions from 1 again ('B  MODELLING', then '1'): they continue ours
+        heads = [l['y0'] for l in visible_lines(page, top - 30, bottom) if maths and q
+                 and re.match(r'^(B\s+)?MODELLING\b', l['text'].strip())]
         for t in label_tokens(page, top, bottom):
+            if t['kind'] == 'q' and t['val'] == 1 and heads and t['y0'] > min(heads) and q >= 1:
+                q, letter, roman, pq = q + 1, None, None, 1
+                heads = []
+                out.append({'page': pno, 'y': t['y0'], 'path': (q,)})
+                continue
+            if t['kind'] == 'q' and pq is not None and t['val'] == pq + 1:
+                q, letter, roman, pq = q + 1, None, None, t['val']
+                out.append({'page': pno, 'y': t['y0'], 'path': (q,)})
+                continue
             if t['kind'] == 'q' and t['val'] == q + 1:
                 q, letter, roman = q + 1, None, None
                 out.append({'page': pno, 'y': t['y0'], 'path': (q,)})
@@ -318,6 +331,17 @@ def _beside_part(l, x0, x1, rules):
 
 
 
+def _label_like(t, tb, box, text):
+    """A text line that is part of a diagram: short, or a longer label touching the drawing ('gets up before 7 am');
+    never a piece of a sentence printed on the same baseline, an answer line, a mark or a part label."""
+    s = t['text'].strip()
+    if DOTS.search(t['text']) or MARK.fullmatch(s) or re.match(r'^\(?[a-z]\)|^\([ivx]+\)', s):
+        return False
+    if not (len(s) <= 22 or (len(s) <= 40 and not s.endswith('.') and tb.intersects(box + (-4, -2, 4, 2)))):
+        return False
+    return not any(o is not t and abs(o['y0'] - t['y0']) < 2 and len(o['text'].strip()) > 22 for o in text)
+
+
 def _grow_light(page, r, limit, exclude, Z=2.0):
     """Grow a crop while any non-white ink (light grey grid lines and dot grids too, which the dark mask ignores)
     crosses its edges; sentences never pull it."""
@@ -404,8 +428,16 @@ def diagrams(doc, seg, lines, captioned):
             vert = [x for x in c['rs'] if x.width < 1.6 and x.height > 5]
             hz = [x for x in c['rs'] if x.height < 1.6 and x.width > 5]
             fills = [x for x in c['rs'] if x.width >= 1.6 and x.height >= 1.6]
-            if (len({round(x.x0) for x in vert}) >= 2 or fills) and len({round(x.y0) for x in hz} | {round(x.y0) for x in fills}) >= 2:
-                continue                                   # a ruled table of text: stays text + rules
+            import collections as _c
+            vc, hc = _c.Counter(), _c.Counter()
+            for x in vert:
+                vc[round(x.x0)] += x.height
+            for x in hz:
+                hc[round(x.y0)] += x.width
+            full_v = sum(1 for h_ in vc.values() if h_ >= 0.8 * r.height)
+            full_h = sum(1 for w_ in hc.values() if w_ >= 0.8 * r.width)
+            if full_v >= 3 and full_h >= 2:
+                continue                                   # a ruled table of text (column rules top to bottom): stays text + rules
         # labels touching the drawing (A, B, 68°, x, y, axis numbers) belong to it; sentences do not
         box = fitz.Rect(r)
         for _ in range(3):
@@ -413,19 +445,39 @@ def diagrams(doc, seg, lines, captioned):
                 tb = fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1'])
                 if 'NOT TO SCALE' in t['text'] and tb.intersects(box + (-60, -20, 60, 20)):
                     box |= tb
-                elif tb.intersects(box + (-14, -12, 14, 12)) and len(t['text'].strip()) <= 22 and not DOTS.search(t['text']) \
-                        and not MARK.fullmatch(t['text'].strip()) and not re.match(r'^\(?[a-z]\)|^\([ivx]+\)', t['text'].strip()):
+                elif tb.intersects(box + (-14, -12, 14, 12)) and _label_like(t, tb, box, text):
                     box |= tb
+        dl = [(''.join(sp['text'] for sp in l_['spans']).strip(), fitz.Rect(l_['bbox']))
+              for b_ in page.get_text('dict')['blocks'] for l_ in b_.get('lines', [])]
+        for _ in range(2):                              # axis titles printed sideways, tick labels and point names a little further out
+            for lt, lb in dl:
+                if lt and lb.intersects(box + (-26, -16, 26, 16)) and not lb.intersects(box) and len(lt) <= 22 and y0s - 1 <= lb.y0 \
+                        and lb.y1 <= y1s + 1 and not DOTS.search(lt) and not MARK.fullmatch(lt) and not re.match(r'^\(?[a-z]\)|^\([ivx]+\)', lt) \
+                        and not any(abs(ob.y0 - lb.y0) < 2 and len(ot) > 22 for ot, ob in dl):
+                    box |= lb
         if any((box & tk).get_area() > 0.3 * box.get_area() for tk in taken):
             continue
         prose = [fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']) for t in text if len(t['text'].strip()) > 22 or DOTS.search(t['text'])]
         box = grow_to_ink(page, box, fitz.Rect(CONTENT_X0 - 5, y0s, CONTENT_X1 + 5, y1s), max_grow=120, exclude=prose)
         box = _grow_light(page, box, fitz.Rect(CONTENT_X0 - 5, y0s, CONTENT_X1 + 5, y1s), prose)   # light grey grids too
+        grown = fitz.Rect(box)
+        for _ in range(2):                              # labels next to what the growing found (axis numbers beside an axis)
+            for t in text:
+                tb = fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1'])
+                if tb.intersects(box + (-14, -12, 14, 12)) and _label_like(t, tb, box, text):
+                    box |= tb
+            for lt, lb in dl:
+                if lt and lb.intersects(box + (-26, -16, 26, 16)) and len(lt) <= 22 and y0s - 1 <= lb.y0 and lb.y1 <= y1s + 1 \
+                        and not DOTS.search(lt) and not MARK.fullmatch(lt) and not re.match(r'^\(?[a-z]\)|^\([ivx]+\)', lt) \
+                        and not any(abs(ob.y0 - lb.y0) < 2 and len(ot) > 22 for ot, ob in dl):
+                    box |= lb
+        if box != grown:
+            box = _grow_light(page, box, fitz.Rect(CONTENT_X0 - 5, y0s, CONTENT_X1 + 5, y1s), prose)
         for o in [o for o in out if fitz.Rect(o['bbox']).intersects(box)]:   # crops that overlap after taking labels: one
             box |= fitz.Rect(o['bbox']) + (3, 3, -3, -3)
             out.remove(o)
         out.append({'caption': None, 'page': seg['page'],
-                    'bbox': [round(box.x0 - 3, 1), round(max(box.y0 - 3, seg['y0']), 1), round(box.x1 + 3, 1), round(min(box.y1 + 3, seg['y1']), 1)]})
+                    'bbox': [round(box.x0 - 4, 1), round(max(box.y0 - 3, seg['y0']), 1), round(box.x1 + 6, 1), round(min(box.y1 + 3, seg['y1']), 1)]})
     return out
 
 

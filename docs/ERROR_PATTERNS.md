@@ -176,3 +176,11 @@ Known: 2010 MJ 13, 23, 53 have no mark scheme file at all. MCQ labels cut at the
     apart and only on a question's first row. -> `ms_layout._maths_ruled`: our full label per row, our header, re-laid out
     like the landscape era (FORCE_WRAP). NOT finished in M0: rows with fractions / column vectors / long notes (2014 MJ 41
     q10, 21 q2) still break; see PROGRESS.
+71. Maths mark-scheme rows full of fractions / brackets / graphs broke in the physics re-wrap (fallbacks, old paths).
+    -> `pipeline/ms_maths.py`: per printed cell, lines by vertical overlap, unbreakable chunks, rows grow (Dhruv).
+72. 2019 ON 11-13 schemes: header words not found -> default column limits read answers as labels; numbers of answer
+    tables counted as marks. -> maths: the table's own column rules decide Q / Marks / Partial Marks columns (ms.py).
+73. 2014 paper 6: part B numbers its questions from 1 again (paper and mark scheme) -> part B was glued to the last
+    question of part A. -> they continue our numbering (extract.boundaries, ms 'B' token).
+74. Diagram crops: tick labels beside an axis, sideways axis titles and long labels of tree diagrams were cut off; bar
+    charts were taken for tables of text. -> labels taken again after growing; tables need column rules top to bottom.

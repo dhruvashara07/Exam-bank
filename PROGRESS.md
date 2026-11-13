@@ -3,8 +3,15 @@
 Read this first in every session. Update it before ending a session.
 
 ## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md
-- NEXT: continue pilot M0 in a NEW chat (prompt in docs/NEXT_CHAT.md): Dhruv chose "fix the mark schemes first, then the
-  round". Open list (in this order) = docs/MATHS_PLAN.md section 10. Nothing of M0 is approved yet.
+- NEXT: M0 review round 27 is on the review page (40 items). When Dhruv says done: read feedback_r27, fix, approve,
+  docs, push (same chat, or a new chat with the NEXT_CHAT prompt "continue M0 from round 27").
+- 2026-11-13 (later): mark schemes fixed before the round (Dhruv): new `pipeline/ms_maths.py` - every maths MS row laid
+  out cell by cell (fractions / vectors / graphs kept whole, rows grow, Answer = Partial Marks width): 645 questions in
+  our 4-column layout, 13 still on old paths (2019 ON 11 q8 etc., see MATHS_PLAN 10). Also: 2019 ON 11-13 MS parsing
+  (rules decide the columns), tables lower on a page, 2014 paper 6 part B numbered from 1 again (extract + ms),
+  communication 'C2' marks, 'M1' marks in 2014 marks columns, diagram crops take axis labels / sideways titles /
+  long tree-diagram labels, bar charts no longer taken for tables. checks: 59/60 no blocking (2014 MJ 62: 39/40, one
+  row on a page with a broken text layer). LaTeX: 2229 parts ok, 118 picture. Golden 0 changed cuts.
 - 2026-11-13: M0 pass 1 done and pushed (60 papers built on GitHub, then rebuilt locally). New for maths (ERROR_PATTERNS
   64-70): formula page -> paper.formula_list (print + LaTeX list), investigation/modelling intros -> paper intros,
   page-top instruction lines dropped, marks of 2014-2024 investigation papers from the mark scheme, communication marks

@@ -194,7 +194,7 @@ def process(qp_path):
         if comms:
             meta['communication'] = []
             for c in comms:
-                mk = sum(int(re.match(r'\d+', x).group()) for x in c['marks_codes'][:1] if re.match(r'\d+', x))
+                mk = sum(int(re.match(r'C?(\d+)', x).group(1)) for x in c['marks_codes'][:1] if re.match(r'C?\d+', x))
                 meta['communication'].append({'marks': mk, 'text': c['text'], 'criteria': [k['label'] for k in c['criteria']],
                                               'segments': c['segments']})
                 comm_marks += mk
@@ -301,7 +301,7 @@ def process(qp_path):
             for k in n.get('parts', []):
                 ms_marks(k)
             n['marks'] = sum(int(m_.group(1)) for r in n.get('mark_scheme', []) for c in r.get('codes', [])
-                             for m_ in [re.match(r'(\d{1,2})(?:FT|ft)?$', str(c))] if m_)
+                             for m_ in [re.match(r'[ABM]?(\d{1,2})(?:FT|ft)?$', str(c))] if m_)
         for q in questions:
             ms_marks(q)
             q['marks'] = sum_marks(q)

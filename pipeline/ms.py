@@ -199,8 +199,22 @@ def structured_rows_table(doc):
             continue
         top, bottom = area
         QX, CX = _columns(lines, MATHS)
+        if MATHS and (QX, CX) == (120, 730):        # header words not found (2019 ON 11): the printed column rules decide
+            import collections as _c
+            cov_ = _c.Counter()
+            for d in page.get_drawings():
+                if d['rect'].width < 2 and d['rect'].height > 5:
+                    cov_[round(d['rect'].x0)] += d['rect'].height
+            top_ = max(cov_.values()) if cov_ else 0
+            vr = sorted(x for x, h_ in cov_.items() if h_ > 0.5 * top_)          # the table's own rules, not inner tables
+            vr = [x for i_, x in enumerate(vr) if not i_ or x - vr[i_ - 1] > 3]
+            if len(vr) >= 4:
+                QX, CX = vr[1] - 1, vr[2] - 2
+                MROW = vr[3] + 1 if len(vr) >= 5 else 1e9
         PX = 1e9                                 # maths 'Partial Marks' column: its numbers (fractions, tables) are no marks
-        if MATHS:
+        if MATHS and 'MROW' in locals() and MROW < 1e9 and (QX, CX) != _columns(lines, MATHS):
+            PX = MROW
+        elif MATHS:
             pm = [l['x0'] for l in lines if l['text'].strip().startswith('Partial') and l['y0'] < 130]
             if pm:
                 vr = sorted(round(d['rect'].x0) for d in page.get_drawings() if d['rect'].width < 2 and d['rect'].height > 5
@@ -379,7 +393,7 @@ def structured_rows_columns(doc):
         pre09_l = None
     CODE_X = 480 if cols == (globals()['OLD_Q'], globals()['OLD_L'], globals()['OLD_R']) else 420   # 2005: codes at 470
     rows, current, cur = [], None, [0, None, None]
-    MATHS, mr = _maths(doc), None
+    MATHS, mr, qoff = _maths(doc), None, 0
     for pno, page in enumerate(doc):
         lines = _lines(page)
         words = page.get_text('words')
@@ -413,7 +427,8 @@ def structured_rows_columns(doc):
                 toks.append((y0, 'r', w[1:-1]))
         if MATHS:
             toks += [(l['y0'], 'c', None) for l in lines if l['x0'] < 160 and COMM.match(l['text']) and top <= l['y0'] <= bottom]
-        order = {'q': 0, 'l': 1, 'r': 2, 'c': 0}
+            toks += [(l['y0'] - 0.01, 'b', None) for l in lines if l['x0'] < 60 and l['text'].strip() == 'B' and top <= l['y0'] <= bottom]
+        order = {'q': 0, 'l': 1, 'r': 2, 'c': 0, 'b': -1}
         toks.sort(key=lambda t: t[0])
         grouped, row = [], []
         for t in toks:                                  # same text row: number, then letter, then roman
@@ -427,7 +442,11 @@ def structured_rows_columns(doc):
             if kind == 'c':
                 starts.append((y, ('C',), []))
                 continue
+            if kind == 'b':                       # 2014 paper 6: part B numbers from 1 again (the paper's are ours, continued)
+                qoff = cur[0]
+                continue
             if kind == 'q':
+                val = val + qoff
                 if val != cur[0] + 1:
                     continue
                 cur = [val, None, None]
@@ -478,8 +497,8 @@ def structured_rows_columns(doc):
                 continue
             body = [l for l in band if 100 <= l['x0'] < 480]
             if mr:                                # 2014 maths: the Mark column (numbers, '2FT'); notes beside it are not marks
-                codes = [w[4] for w in words if y - 1 <= w[1] < y_end - 1 and mr[2] - 2 <= w[0] < mr[3]
-                         and re.fullmatch(r'\d{1,2}(?:FT|ft)?', w[4])]
+                codes = [w[4] for w in {(round(w[0]), round(w[1]), w[4]): w for w in words}.values()   # text printed twice (2014 MJ 62 p4)
+                         if y - 1 <= w[1] < y_end - 1 and mr[2] - 2 <= w[0] < mr[3] and re.fullmatch(r'\d{1,2}(?:FT|ft)?|C\d|[ABM]\d', w[4])]
             else:
                 codes = [l['text'] for l in band if l['x0'] >= CODE_X and re.fullmatch(r'\(?[ABCM]\d\)?|\d|\[\d\]', l['text'])]
             seg_bottom = min(y_end, max(l['y1'] for l in band) + 6)

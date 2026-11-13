@@ -1,0 +1,755 @@
+{
+ "id": "0607_2014MJ_62_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    61.5,
+    570.0,
+    105.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 3.6,
+    "height_pt": 44.0
+   }
+  }
+ ],
+ "text": "From day 10 she trains for one hour.\n3\nShe walks at an average speed of 6.4km/h and she jogs at an average speed of 8.1km/h.\nThese speeds do not change.",
+ "marks": 13,
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    85.7,
+    456.3,
+    511.7,
+    725.0
+   ],
+   "id": "0607_2014MJ_62_q06c_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  },
+  {
+   "caption": null,
+   "page": 10,
+   "bbox": [
+    85.2,
+    227.9,
+    511.5,
+    496.5
+   ],
+   "id": "0607_2014MJ_62_q06gii_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(g)(ii)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      112.1,
+      570.0,
+      247.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 2.7,
+      "height_pt": 135.4
+     }
+    }
+   ],
+   "text": "Construct a formula for the total distance, Dkm, when she walks for x minutes and jogs for the rest of\nthe hour.",
+   "marks": 1,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "\n6.4x\n\nx\n\n6.4x\n\n60−x\n[D = ]\n+ 8.1 1−\n\n\nor\n+ 8.1\n\n\n\n\n\n\n60\n\n60\n\n60\n\n60\n\n\n\n\n\n6.4x+8.1(60 −x)\n6.4x\n8.1\nor\nor\n+\n(60 −x) soi\n1\n60\n60\n60",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        213.6,
+        559.0,
+        279.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Construct a formula for the total distance, D km, when she walks for x minutes and jogs for the rest of the hour.",
+     "text": "Construct a formula for the total distance, D km, when she walks for x minutes and jogs for the rest of the hour."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      257.0,
+      570.0,
+      282.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": -0.1,
+      "height_pt": 25.5
+     }
+    }
+   ],
+   "text": "486\n−\n7.1\nx\nD\n=\n(b) Show that your formula simplifies to the model\n.\n60",
+   "marks": 1,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "6.4x+486−8.1x\n[D = ]\noe\n1\ndep. on 3(a)\n60",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        284.5,
+        559.0,
+        318.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that your formula simplifies to the model D = \\(\\frac{486 −7.1x}{60}\\) .",
+     "text": "Show that your formula simplifies to the model D = (486−7.1x)/(60) ."
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      432.1,
+      570.0,
+      727.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 94.1,
+      "height_pt": 294.9
+     }
+    }
+   ],
+   "text": "Sketch the graph of the model in part (b) on the axes below, for 0 YxY 60.\nD\n9\nDistance\n(km)\nx\n0\n60\nTime (min)",
+   "marks": 1,
+   "path": "6(c)",
+   "mark_scheme": [
+    {
+     "label": "6(c)",
+     "text": "1\nB1 Correct line\napproximately\nwith negative gradient\nTime (min)",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        322.8,
+        559.0,
+        449.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Sketch the graph of the model in part (b) on the axes below, for 0 Y x Y 60.",
+     "text": "Sketch the graph of the model in part (b) on the axes below, for 0 Y x Y 60."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2014MJ_62_q06c_diagram1",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 94.1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      61.5,
+      570.0,
+      196.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 3.6,
+      "height_pt": 135.0
+     }
+    }
+   ],
+   "text": "What distance will she travel in the hour when she walks and jogs for the same amount of time?",
+   "marks": 1,
+   "path": "6(d)",
+   "mark_scheme": [
+    {
+     "label": "6(d)",
+     "text": "7.25 [km]\n1\nC opportunity",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        466.6,
+        559.0,
+        486.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "What distance will she travel in the hour when she walks and jogs for the same amount of time?",
+     "text": "What distance will she travel in the hour when she walks and jogs for the same amount of time?"
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      203.1,
+      570.0,
+      376.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 15.4,
+      "height_pt": 173.4
+     }
+    }
+   ],
+   "text": "The next month Viola walks for 20 minutes, jogs for 20 minutes and runs for the rest of the hour.\nShe travels a total distance of 9km.\nWork out her average speed when she is running.",
+   "marks": 1,
+   "path": "6(e)",
+   "mark_scheme": [
+    {
+     "label": "6(e)",
+     "text": "12.5 [km / h]\n1\nC opportunity\n8.1y\ny\n6.4x\n\n\nx",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        490.5,
+        559.0,
+        523.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The next month Viola walks for 20 minutes, jogs for 20 minutes and runs for the rest of the hour. She travels a total distance of 9 km.",
+     "text": "The next month Viola walks for 20 minutes, jogs for 20 minutes and runs for the rest of the hour. She travels a total distance of 9 km."
+    },
+    {
+     "type": "text",
+     "html": "Work out her average speed when she is running.",
+     "text": "Work out her average speed when she is running."
+    }
+   ]
+  },
+  {
+   "label": "f",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      382.7,
+      570.0,
+      414.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 2.7,
+      "height_pt": 31.3
+     }
+    }
+   ],
+   "text": "The next month Viola walks for x minutes, jogs for y minutes and runs for the rest of the hour. Her\naverage speed when she is running does not change from the value found in part (e).",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        30.0,
+        420.7,
+        570.0,
+        581.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 2.4,
+        "height_pt": 160.3
+       }
+      }
+     ],
+     "text": "Extend your model in part(b) for the total distance, Dkm, to include walking for\nx minutes, jogging for y minutes and running for the rest of the hour.",
+     "marks": 1,
+     "path": "6(f)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(f)(i)",
+       "text": "[D = ]\n+\n+ 12.5 1−\n\n−\n\noe isw\n1FT\nFT their (e)\n\n\n60\n60\n\n60\n60\n\n\n\n1\n[D = ]\n(6.4x + 8.1y + 750 – 12.5x – 12.5y) soi www\n1\ndep on (f)(i)\n60\n1",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          523.1,
+          559.0,
+          599.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Extend your model in part (b) for the total distance, D km, to include walking for x minutes, jogging for y minutes and running for the rest of the hour.",
+       "text": "Extend your model in part (b) for the total distance, D km, to include walking for x minutes, jogging for y minutes and running for the rest of the hour."
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        30.0,
+        590.8,
+        570.0,
+        616.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": -0.1,
+        "height_pt": 25.7
+       }
+      }
+     ],
+     "text": "1(750 – 6.1x – 4.4y).\n(ii) Show that your model simplifies to D = 60",
+     "marks": 0,
+     "path": "6(f)(ii)",
+     "content": [
+      {
+       "type": "text",
+       "html": "Show that your model simplifies to D = \\(\\frac{1}{60}\\) (750 – 6.1x – 4.4y).",
+       "text": "Show that your model simplifies to D = (1)/(60) (750 – 6.1x – 4.4y)."
+      }
+     ]
+    }
+   ],
+   "path": "6(f)",
+   "content": [
+    {
+     "type": "text",
+     "html": "The next month Viola walks for x minutes, jogs for y minutes and runs for the rest of the hour. Her average speed when she is running does not change from the value found in part (e).",
+     "text": "The next month Viola walks for x minutes, jogs for y minutes and runs for the rest of the hour. Her average speed when she is running does not change from the value found in part (e)."
+    }
+   ]
+  },
+  {
+   "label": "g",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        30.0,
+        61.5,
+        570.0,
+        184.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 2.4,
+        "height_pt": 122.5
+       }
+      }
+     ],
+     "text": "Rewrite the model in part (f) when Viola’s walking and jogging times are both n minutes.",
+     "marks": 3,
+     "path": "6(g)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(g)(i)",
+       "text": "[D = ]\n(750 – 6.1n – 4.4n) oe isw\n1\nIf 0 scored then FT their\n60\ncorrect (f)(i)\n2\nB1 for line from 12.5 with\n15\nnegative gradient\n10\nB1 dependent for (30, 7.25)\n5\n0\nTime (min)",
+       "codes": [
+        "1",
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          599.7,
+          559.0,
+          750.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Rewrite the model in part (f) when Viola’s walking and jogging times are both n minutes.",
+       "text": "Rewrite the model in part (f) when Viola’s walking and jogging times are both n minutes."
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        30.0,
+        203.7,
+        570.0,
+        498.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 99.4,
+        "height_pt": 294.8
+       }
+      }
+     ],
+     "text": "Sketch the graph of the model in part (g)(i) on the axes below, for 0 YnY 30.\nD\nDistance\n(km)\nn\n0\n30\nTime (min)",
+     "marks": 0,
+     "path": "6(g)(ii)",
+     "content": [
+      {
+       "type": "text",
+       "html": "Sketch the graph of the model in part (g)(i) on the axes below, for 0 Y n Y 30.",
+       "text": "Sketch the graph of the model in part (g)(i) on the axes below, for 0 Y n Y 30."
+      },
+      {
+       "type": "figure",
+       "id": "0607_2014MJ_62_q06gii_diagram2",
+       "caption": null
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 99.4
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        30.0,
+        506.6,
+        570.0,
+        578.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 2.4,
+        "height_pt": 71.9
+       }
+      }
+     ],
+     "text": "What is Viola doing in her training when n = 0?",
+     "marks": 1,
+     "path": "6(g)(iii)",
+     "mark_scheme": [
+      {
+       "label": "6(g)(iii)",
+       "text": "No walking and / or jogging\n1",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          79.1,
+          559.0,
+          99.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "What is Viola doing in her training when n = 0?",
+       "text": "What is Viola doing in her training when n = 0?"
+      }
+     ]
+    },
+    {
+     "label": "iv",
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        30.0,
+        585.1,
+        570.0,
+        695.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 2.4,
+        "height_pt": 109.9
+       }
+      }
+     ],
+     "text": "What is Viola doing in her training when n = 30?",
+     "marks": 1,
+     "path": "6(g)(iv)",
+     "mark_scheme": [
+      {
+       "label": "6(g)(iv)",
+       "text": "or\nWalking and / or jogging\n1",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          103.1,
+          559.0,
+          123.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "What is Viola doing in her training when n = 30?",
+       "text": "What is Viola doing in her training when n = 30?"
+      }
+     ]
+    },
+    {
+     "label": "v",
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        61.5,
+        570.0,
+        503.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 369.5,
+        "height_pt": 441.5
+       }
+      }
+     ],
+     "text": "Modify the models in part (b) and part (f) when Viola spends H hours training.\nModel in part (b)\nModel in part (f)",
+     "marks": 2,
+     "path": "6(g)(v)",
+     "mark_scheme": [
+      {
+       "label": "6(g)(v)",
+       "text": "1\n6.4x\nx\n\n\nD =\n(486H – 1.7x) or\n+ 8.1 H −\noe\n\n\n2\nB1 for each\n\n60\n\n60\n60\n\n\n1\nD =\n(750H – 6.1x – 4.4y) or\n60\n8.1y\n6.4x\ny \nx\n\noe\n+\n+12.5\n\nH−\n−\n\n\n60\n60\n\n60 60\n\n\n",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          127.0,
+          559.0,
+          238.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Modify the models in part (b) and part (f) when Viola spends H hours training.",
+       "text": "Modify the models in part (b) and part (f) when Viola spends H hours training."
+      },
+      {
+       "type": "text",
+       "html": "Model in part (b)",
+       "text": "Model in part (b)"
+      },
+      {
+       "type": "text",
+       "html": "Model in part (f)",
+       "text": "Model in part (f)"
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 369.5
+      }
+     ]
+    }
+   ],
+   "path": "6(g)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2014,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 13,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "From day 10 she trains for one hour. She walks at an average speed of 6.4 km/h and she jogs at an average speed of 8.1 km/h. These speeds do not change.",
+   "text": "From day 10 she trains for one hour. She walks at an average speed of 6.4 km/h and she jogs at an average speed of 8.1 km/h. These speeds do not change."
+  }
+ ],
+ "marks_source": "mark scheme"
+}

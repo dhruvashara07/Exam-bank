@@ -1815,6 +1815,20 @@ def build(q, store):
     if not uniq:
         return None
     uniq.sort(key=lambda ru: (ru[1]['src']['page'], ru[1]['src']['box'][1]))   # the mark scheme's own order (2017 ON 41 q8: 8 Hydroelectric (a)(b)(c), 8 Tidal flow (a)(b)(c) ...)
+    if MP.EQUAL_FLEX:                                 # maths: its own cell layout (pipeline/ms_maths.py, MS_TABLE_RULES 24)
+        import ms_maths
+        def hdr_unit(first, ncols):
+            names = ['Q', 'Answer', 'Marks', 'Partial Marks'][:ncols]
+            fake = {'src': uniq[0][1]['src'], 'w': W, 'h': 22.0,
+                    'text': [{'t': n, 'x': 100.0 * k_, 'y': 15.0, 'w': 6.4 * len(n), 's': 11.0, 'f': 'sans', 'b': 1} for k_, n in enumerate(names)]}
+            return _header_unit(fake, first)
+        try:
+            res = ms_maths.build(q, uniq, store, hdr_unit, _own_total, _frame)
+        except Exception as e:
+            res = None
+            print(f"  {q['id']}: maths mark-scheme layout failed: {type(e).__name__}: {e}")
+        if res:
+            return res
     MP.FORCE_WRAP = False
     if MP.EQUAL_FLEX and all(u['w'] <= W + 2 for _, u in uniq):
         ruled = _maths_ruled(uniq)                    # 2014 maths: a ruled table without a header, Q | Answer | Mark | Notes
