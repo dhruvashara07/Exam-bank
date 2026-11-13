@@ -1,0 +1,186 @@
+{
+ "id": "0607_2025MJ_62_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    280.4,
+    570.0,
+    314.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 33.6
+   }
+  }
+ ],
+ "text": "3\nThe general linear sequence has 1st term a and common difference d.\nSo the first 3 terms of this sequence are   a, a\n+, a\nd\n+\n2\nd\n.",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      319.4,
+      570.0,
+      405.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 53.5,
+      "height_pt": 85.6
+     }
+    }
+   ],
+   "text": "Write the 7th term of the general linear sequence in terms of a and d.\n................................................. [1]",
+   "marks": 1,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "a + 6d",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        324.0,
+        549.3300170898438,
+        346.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write the 7th term of the general linear sequence in terms of a and d.",
+     "text": "Write the 7th term of the general linear sequence in terms of a and d."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      410.4,
+      570.0,
+      769.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 287.5,
+      "height_pt": 358.6
+     }
+    }
+   ],
+   "text": "A general linear sequence has 7 terms.\nFind an expression for F.\nkd2 where k is a positive integer.\nWrite your answer in the form (\n)\n................................................. [3]",
+   "marks": 3,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "(a+3d)(a+3d)=a +6ad +9d\n2\n2\na (a+6d)=a +6ad\n2\n(\n)\n2\n3d",
+     "codes": [
+      "C1",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        348.8,
+        549.3300170898438,
+        445.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A general linear sequence has 7 terms.",
+     "text": "A general linear sequence has 7 terms."
+    },
+    {
+     "type": "text",
+     "html": "Find an expression for F. Write your answer in the form (kd)<sup>2</sup> where k is a positive integer.",
+     "text": "Find an expression for F. Write your answer in the form (kd)2 where k is a positive integer."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The general linear sequence has 1st term a and common difference d. So the first 3 terms of this sequence are a, a + d , a + 2d .",
+   "text": "The general linear sequence has 1st term a and common difference d. So the first 3 terms of this sequence are a, a + d , a + 2d ."
+  }
+ ]
+}

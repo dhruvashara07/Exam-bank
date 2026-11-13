@@ -1,0 +1,209 @@
+{
+ "id": "0607_2025MJ_41_q14",
+ "number": 14,
+ "segments": [
+  {
+   "page": 13,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    150.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 19.9,
+    "height_pt": 91.1
+   }
+  }
+ ],
+ "text": "Ahmed records the mass of each of 50 pumpkins.\nThe results are shown in the table.\nMass (m kg)\n0 1\nm\nG\n2\n2 1\nm\nG\n5\n5\n1\nm\nG\n10\n1\n0\n1\nm\nG\n1\n5\n15\n1\nm\nG\n25\nFrequency\n13\n17\n10\n7\n3",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      180.3,
+      570.0,
+      266.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 53.5,
+      "height_pt": 85.7
+     }
+    }
+   ],
+   "text": "Calculate an estimate of the mean.\n............................................. kg [2]",
+   "marks": 2,
+   "path": "14(a)",
+   "mark_scheme": [
+    {
+     "label": "14(a)",
+     "text": "5.9",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        31.450000762939453,
+        223.9,
+        563.75,
+        246.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate an estimate of the mean.",
+     "text": "Calculate an estimate of the mean."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "kg"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      271.3,
+      570.0,
+      543.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 201.2,
+      "height_pt": 272.2
+     }
+    }
+   ],
+   "text": "Ahmed picks two of the 50 pumpkins at random.\nFind the probability that one of these pumpkins has a mass greater than 10 kg and the other\npumpkin has a mass of not more than 2 kg.\n................................................. [3]",
+   "marks": 3,
+   "path": "14(b)",
+   "mark_scheme": [
+    {
+     "label": "14(b)",
+     "text": "26\noe\n245",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        31.450000762939453,
+        248.7,
+        563.75,
+        356.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Ahmed picks two of the 50 pumpkins at random.",
+     "text": "Ahmed picks two of the 50 pumpkins at random."
+    },
+    {
+     "type": "text",
+     "html": "Find the probability that one of these pumpkins has a mass greater than 10 kg and the other pumpkin has a mass of not more than 2 kg.",
+     "text": "Find the probability that one of these pumpkins has a mass greater than 10 kg and the other pumpkin has a mass of not more than 2 kg."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_calculator",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Ahmed records the mass of each of 50 pumpkins. The results are shown in the table.",
+   "text": "Ahmed records the mass of each of 50 pumpkins. The results are shown in the table."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Mass (m kg)",
+     "0 1 m G 2",
+     "2 1 m G 5",
+     "5 1 m G 10",
+     "10 1 m G 15",
+     "15 1 m G 25"
+    ],
+    [
+     "Frequency",
+     "13",
+     "17",
+     "10",
+     "7",
+     "3"
+    ]
+   ]
+  }
+ ]
+}

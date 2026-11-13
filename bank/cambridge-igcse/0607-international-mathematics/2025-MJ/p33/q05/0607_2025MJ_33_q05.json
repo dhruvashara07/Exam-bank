@@ -1,0 +1,203 @@
+{
+ "id": "0607_2025MJ_33_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    158.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 8.5,
+    "height_pt": 98.6
+   }
+  }
+ ],
+ "text": "5\nA company uses this formula to work out the number of people who can safely work in an office.\nL\n#\nW\nN\n=\n15\nL is the length of the office in metres.\nW is the width of the office in metres.\nN is the number of people.",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      163.4,
+      570.0,
+      288.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 66.5,
+      "height_pt": 124.6
+     }
+    }
+   ],
+   "text": "An office has length 18 m and width 10 m.\nWork out the number of people who can safely work in this office.\n................................................. [1]",
+   "marks": 1,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "12",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        392.8,
+        550.5299682617188,
+        415.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "An office has length 18 m and width 10 m.",
+     "text": "An office has length 18 m and width 10 m."
+    },
+    {
+     "type": "text",
+     "html": "Work out the number of people who can safely work in this office.",
+     "text": "Work out the number of people who can safely work in this office."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      293.4,
+      570.0,
+      457.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 105.5,
+      "height_pt": 163.6
+     }
+    }
+   ],
+   "text": "60 people can safely work in an office with width 22.5 m.\nWork out the length of this office.\n............................................. m [2]",
+   "marks": 2,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "40",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        416.8,
+        550.5299682617188,
+        455.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "60 people can safely work in an office with width 22.5 m.",
+     "text": "60 people can safely work in an office with width 22.5 m."
+    },
+    {
+     "type": "text",
+     "html": "Work out the length of this office.",
+     "text": "Work out the length of this office."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "m"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 3,
+ "variant": 3,
+ "paper_code": "0607/33",
+ "paper_type": "core_calculator",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A company uses this formula to work out the number of people who can safely work in an office.",
+   "text": "A company uses this formula to work out the number of people who can safely work in an office."
+  },
+  {
+   "type": "text",
+   "html": "N = \\(\\frac{L # W}{15}\\)",
+   "text": "N = (L#W)/(15)"
+  },
+  {
+   "type": "text",
+   "html": "L is the length of the office in metres. W is the width of the office in metres. N is the number of people.",
+   "text": "L is the length of the office in metres. W is the width of the office in metres. N is the number of people."
+  }
+ ]
+}

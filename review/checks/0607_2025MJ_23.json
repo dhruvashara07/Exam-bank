@@ -1,0 +1,60 @@
+{
+ "paper": "0607_2025MJ_23",
+ "pipeline_version": "2.1",
+ "checked_at": "2026-11-13T10:18Z",
+ "clean": false,
+ "warnings": 2,
+ "problems": [
+  {
+   "id": "0607_2025MJ_23",
+   "kind": "coverage",
+   "detail": "page 2: 33231 px of print outside every piece near [50, 64, 472, 749]",
+   "blocking": true
+  },
+  {
+   "id": "0607_2025MJ_23",
+   "kind": "coverage",
+   "detail": "page 3: 2000 px of print outside every piece near [200, 64, 395, 75]",
+   "blocking": true
+  },
+  {
+   "id": "0607_2025MJ_23_q12",
+   "kind": "text",
+   "detail": "editable text has 96% of the printed words",
+   "blocking": false
+  },
+  {
+   "id": "0607_2025MJ_23_q13",
+   "kind": "text",
+   "detail": "editable text has 50% of the printed words",
+   "blocking": false
+  }
+ ],
+ "flags": [],
+ "text_score_min": 0.5,
+ "text_scores": {
+  "0607_2025MJ_23_q01": 1.0,
+  "0607_2025MJ_23_q02": 1.0,
+  "0607_2025MJ_23_q03": 1.0,
+  "0607_2025MJ_23_q04": 1.0,
+  "0607_2025MJ_23_q05": 1.0,
+  "0607_2025MJ_23_q06": 1.0,
+  "0607_2025MJ_23_q07": 1.0,
+  "0607_2025MJ_23_q08": 1.0,
+  "0607_2025MJ_23_q09": 1.0,
+  "0607_2025MJ_23_q10": 1.0,
+  "0607_2025MJ_23_q11": 1.0,
+  "0607_2025MJ_23_q12": 0.957,
+  "0607_2025MJ_23_q13": 0.5,
+  "0607_2025MJ_23_q14": 1.0,
+  "0607_2025MJ_23_q15": 1.0,
+  "0607_2025MJ_23_q16": 1.0,
+  "0607_2025MJ_23_q17": 1.0,
+  "0607_2025MJ_23_q18": 1.0,
+  "0607_2025MJ_23_q19": 1.0,
+  "0607_2025MJ_23_q20": 1.0,
+  "0607_2025MJ_23_q21": 1.0,
+  "0607_2025MJ_23_q22": 1.0,
+  "0607_2025MJ_23_q23": 1.0
+ }
+}

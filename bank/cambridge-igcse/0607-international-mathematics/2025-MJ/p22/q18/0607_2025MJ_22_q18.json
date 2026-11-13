@@ -1,0 +1,93 @@
+{
+ "id": "0607_2025MJ_22_q18",
+ "number": 18,
+ "segments": [
+  {
+   "page": 10,
+   "bbox": [
+    30.0,
+    606.5,
+    570.0,
+    766.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 1,
+    "answer_line": null,
+    "working_gap_pt": 75.2,
+    "height_pt": 159.5
+   }
+  }
+ ],
+ "text": "Apples cost $2.50 per kilogram.\nThe total cost of x kg of apples and y kg of pears is $10 .\nFind the cost of 1 kg of pears.\nGive your answer in terms of x and y.\n$ ................................................. [3]",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "18",
+   "text": "10−2.5x\noe\ny",
+   "codes": [
+    "3"
+   ],
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      35.45000076293945,
+      183.0,
+      558.9500122070312,
+      233.4
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 2,
+ "variant": 2,
+ "paper_code": "0607/22",
+ "paper_type": "extended_non_calculator",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Apples cost $2.50 per kilogram. <b>The</b> total cost of x kg of apples and y kg of pears is $10 .",
+   "text": "Apples cost $2.50 per kilogram. The total cost of x kg of apples and y kg of pears is $10 ."
+  },
+  {
+   "type": "text",
+   "html": "Find the cost of 1 kg of pears. Give your answer in terms of x and y.",
+   "text": "Find the cost of 1 kg of pears. Give your answer in terms of x and y."
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "$"
+  },
+  {
+   "type": "answer",
+   "kind": "lines"
+  },
+  {
+   "type": "marks",
+   "value": 3
+  }
+ ]
+}

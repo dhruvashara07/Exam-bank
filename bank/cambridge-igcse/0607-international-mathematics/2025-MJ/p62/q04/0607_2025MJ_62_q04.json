@@ -1,0 +1,218 @@
+{
+ "id": "0607_2025MJ_62_q04",
+ "number": 4,
+ "segments": [],
+ "text": "",
+ "marks": 9,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      656.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 348.9,
+      "height_pt": 597.1
+     }
+    }
+   ],
+   "text": "4\n(a) Complete the table.\nLinear sequence with common difference d\nNumber of terms\nF\nn\n1st term\nMiddle term\nLast term\n2\na\na\n+\nd\na\n+\n2\nd\n`\nj\n2\na\na\n+\n2\nd\n5\n`\nj\n2\na\n7\n`\nj\n2\na\na\n+\n4\nd\na\n+\n8\nd\n`\nj\n2\na\na\n+\n10\nd\n`\n5\nd\nj\n[4]",
+   "marks": 4,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "1st\nMiddle\nLast\nn\nF\na\na + d\na + 2d\n2\n3\nd\na\na + 2d\na + 4d\n(\n)\n2\n5\n2d\na\n7\n(3d)\n2\na\na + 4d\na + 8d\n(\n)\n2\n9\n4d\na\na + 5d\na +\n11\n(5d)\n2\n10d\nCorrect working for F in 1st, 2nd or 4th row\nshowing brackets and their expansions.",
+     "codes": [
+      "2",
+      "C2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        448.1,
+        549.3300170898438,
+        677.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Linear sequence with common difference d 1st term Middle term Last term",
+       "",
+       "",
+       "Number of terms n",
+       "F"
+      ],
+      [
+       "a",
+       "a + d",
+       "a + 2d",
+       "",
+       "<sup>2</sup> ` j"
+      ],
+      [
+       "a",
+       "a + 2d",
+       "",
+       "5",
+       "<sup>2</sup> ` j"
+      ],
+      [
+       "a",
+       "",
+       "",
+       "7",
+       "<sup>2</sup> ` j"
+      ],
+      [
+       "a",
+       "a + 4d",
+       "a + 8d",
+       "",
+       "<sup>2</sup> ` j"
+      ],
+      [
+       "a",
+       "",
+       "a + 10d",
+       "",
+       "<sup>2</sup> `5dj"
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 348.9
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      652.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 521.5,
+      "height_pt": 592.6
+     }
+    }
+   ],
+   "text": "The 1st term of a linear sequence of positive integers is 1.\nThe value of F is 36.\nUse the pattern in the F column in part (a) to help you find all the possible sequences.\n[5]",
+   "marks": 5,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "Pairing k and d\n(\n)\n2\n=36 or k d =36 or kd =6 oe\n2 2\nkd\nwhere k may be replaced by 2, 3, 4, 5 or 6\n(\n)\n2\nor 6= 2 ×3 or 36= 3 ×2\nand correct linked pair of k and d\nOR\nUsing middle term and differences\n\n\nMiddle term =a+kd = 1+ 36=7\nand using differences to find other terms in\n1, …………, 7\nOR\nPairing k and n or d and n\nn−1\n= k or n = 2k + 1 oe\n2\nwhere k may be replaced by 1, 2, 3 or 6\n12\n12\n+1 oe\nor d =\nor n =\nn−1\nd\nwhere d or n may be replaced by a number\nand correct linked pair of k and n or d and n\n1 7 13\n1 4\n7\n10\n13\n1 3\n5\n7\n9\n11 13\n1 2 3 4 5 6 7 8 9 10 11 12 13",
+     "codes": [
+      "C2",
+      "2",
+      "2",
+      "2",
+      "3",
+      "1",
+      "2",
+      "3",
+      "6",
+      "7",
+      "5",
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        89.3,
+        549.3300170898438,
+        589.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The 1st term of a linear sequence of positive integers is 1. The value of F is 36.",
+     "text": "The 1st term of a linear sequence of positive integers is 1. The value of F is 36."
+    },
+    {
+     "type": "text",
+     "html": "Use the pattern in the F column in <b>part</b> (a) to help you find all the possible sequences.",
+     "text": "Use the pattern in the F column in part (a) to help you find all the possible sequences."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 521.5
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

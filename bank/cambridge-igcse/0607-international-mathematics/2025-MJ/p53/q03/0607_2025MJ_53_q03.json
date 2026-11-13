@@ -1,0 +1,546 @@
+{
+ "id": "0607_2025MJ_53_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    338.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 17.0,
+    "height_pt": 278.6
+   }
+  }
+ ],
+ "text": "3\nTo find a number in the pyramid add its position in the row to the last number in the row above.\nExample\nN(6, 4) is in row 6.\nThe last number in row 5 is 15.\nN(6, 4) is in position 4.\nSo\nN\n(,)\n64\n=\n15\n+\n4\n=\n19\n.\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nRow 5\n11121314\n15\nRow 6\n1617181920\n21\n222324252627\n28\n29303132333435\n36\n3738\n4041\n45",
+ "marks": 10,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      397.7,
+      570.0,
+      418.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 20.8
+     }
+    }
+   ],
+   "text": "Complete the statements.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        423.7,
+        570.0,
+        444.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 1,
+        "answer_line": "(i) N (7, 4) = …… + 4 = 25",
+        "working_gap_pt": 4.0,
+        "height_pt": 20.8
+       }
+      }
+     ],
+     "text": "N (7, 4) = ............... + 4 = 25\n[1]",
+     "marks": 1,
+     "path": "3(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "3(a)(i)",
+       "text": "21",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          45.875,
+          628.2,
+          549.3300170898438,
+          651.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "(i) N (7, 4) =",
+       "unit": "+ 4 = 25"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        449.7,
+        570.0,
+        470.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 1,
+        "answer_line": "(ii) N (…… , ……) = 45 + …… = 50",
+        "working_gap_pt": 4.0,
+        "height_pt": 20.8
+       }
+      }
+     ],
+     "text": "N (............... , ...............) = 45 + ............... = 50\n[1]",
+     "marks": 1,
+     "path": "3(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "3(a)(ii)",
+       "text": "N(10 , 5) = 45 + 5 = 50",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          45.875,
+          652.3,
+          549.3300170898438,
+          674.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "(ii) N (",
+       "unit": "= 50"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "3(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the statements.",
+     "text": "Complete the statements."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      475.7,
+      570.0,
+      548.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 8.3,
+      "height_pt": 72.8
+     }
+    }
+   ],
+   "text": "This is a formula to find any number in row R.\nRR\n(\n-\n1\n)\nN\n(,)\nRk\n=\n+\nk\n2\nk is the position of the number in row R.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        553.7,
+        570.0,
+        743.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 157.5,
+        "height_pt": 189.8
+       }
+      }
+     ],
+     "text": "Show that the formula is correct for N(6, 4).\n[1]",
+     "marks": 1,
+     "path": "3(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(i)",
+       "text": "6 (6 −1)\n+4=19\n2",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          45.875,
+          677.1,
+          549.3300170898438,
+          717.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Show that the formula is correct for N(6, 4).",
+       "text": "Show that the formula is correct for N(6, 4)."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 157.5
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        59.4,
+        570.0,
+        249.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 157.5,
+        "height_pt": 189.6
+       }
+      }
+     ],
+     "text": "Find the 10th number in row 55.\n................................................. [2]",
+     "marks": 2,
+     "path": "3(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(ii)",
+       "text": "55×(55 −1)\n+10\n2\n1495",
+       "codes": [
+        "C1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          45.875,
+          89.3,
+          549.3300170898438,
+          154.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the 10th number in row 55.",
+       "text": "Find the 10th number in row 55."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "3(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "This is a formula to find any number in row R.",
+     "text": "This is a formula to find any number in row R."
+    },
+    {
+     "type": "text",
+     "html": "N (R, k) = \\(\\frac{R (R - 1)}{2}\\) + k",
+     "text": "N (R, k) = (R(R-1))/(2) + k"
+    },
+    {
+     "type": "text",
+     "html": "k is the position of the number in row R.",
+     "text": "k is the position of the number in row R."
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        254.4,
+        570.0,
+        366.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 79.5,
+        "height_pt": 111.6
+       }
+      }
+     ],
+     "text": "Calculate N(26, 26).\n................................................. [2]",
+     "marks": 2,
+     "path": "3(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "3(c)(i)",
+       "text": "26 (26−1)\n+ 26\n2\n351",
+       "codes": [
+        "C1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          45.875,
+          156.6,
+          549.3300170898438,
+          222.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate N(26, 26).",
+       "text": "Calculate N(26, 26)."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        371.4,
+        570.0,
+        626.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 2,
+        "answer_line": "R = ……",
+        "working_gap_pt": 157.5,
+        "height_pt": 254.6
+       }
+      }
+     ],
+     "text": "N\n(,)\nRk\n=\n362\nFind the value of R and the value of k.\nR = .................................................\nk = .................................................\n[3]",
+     "marks": 3,
+     "path": "3(c)(ii)",
+     "mark_scheme": [
+      {
+       "label": "3(c)(ii)",
+       "text": "362 −351\n27 (27 −1)\n+k =362\nor\n2\nR =27\nk =11",
+       "codes": [
+        "C1",
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          45.875,
+          223.9,
+          549.3300170898438,
+          339.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "N (R, k) = 362",
+       "text": "N (R, k) = 362"
+      },
+      {
+       "type": "text",
+       "html": "Find the value of R and the value of k.",
+       "text": "Find the value of R and the value of k."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "R ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "k ="
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "3(c)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 3,
+ "paper_code": "0607/53",
+ "paper_type": "core_investigation",
+ "total_marks": 10,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "To find a number in the pyramid add its position in the row to the last number in the row above.",
+   "text": "To find a number in the pyramid add its position in the row to the last number in the row above."
+  },
+  {
+   "type": "text",
+   "html": "\\(\\frac{\\text{Example}}{N(6, 4) \\text{is}}\\)",
+   "text": "(Example)/(N(6,4)is)"
+  },
+  {
+   "type": "text",
+   "html": "in row 6.",
+   "text": "in row 6."
+  },
+  {
+   "type": "text",
+   "html": "The last number in row 5 is 15. N(6, 4) is in position 4. So N (6, 4) = 15 + 4 = 19 .",
+   "text": "The last number in row 5 is 15. N(6, 4) is in position 4. So N (6, 4) = 15 + 4 = 19 ."
+  },
+  {
+   "type": "text",
+   "html": "1 3 5 6 8 9 10",
+   "text": "1 3 5 6 8 9 10"
+  },
+  {
+   "type": "text",
+   "html": "Row 5 11 12 13 14 15 Row 6 16 17 18 19 20 21",
+   "text": "Row 5 11 12 13 14 15 Row 6 16 17 18 19 20 21"
+  },
+  {
+   "type": "text",
+   "html": "23 24 25 26 27 28 30 31 32 33 34 35 36 38 40 41 45",
+   "text": "23 24 25 26 27 28 30 31 32 33 34 35 36 38 40 41 45"
+  }
+ ]
+}

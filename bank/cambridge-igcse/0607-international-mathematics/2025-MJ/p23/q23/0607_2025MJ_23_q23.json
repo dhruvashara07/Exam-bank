@@ -1,0 +1,199 @@
+{
+ "id": "0607_2025MJ_23_q23",
+ "number": 23,
+ "segments": [
+  {
+   "page": 12,
+   "bbox": [
+    30.0,
+    59.2,
+    570.0,
+    180.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 46.7,
+    "height_pt": 121.3
+   }
+  }
+ ],
+ "text": "23\nBag A\nBag B\nBag A contains 4 white balls and 3 black balls.\nBag B contains 5 white balls and 4 black balls.",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      185.9,
+      570.0,
+      386.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 129.1,
+      "height_pt": 200.1
+     }
+    }
+   ],
+   "text": "Ranjit picks a ball at random from Bag A and replaces it.\nRanjit also picks a ball at random from Bag B and replaces it.\nFind the probability that the two balls are the same colour.\n................................................. [3]",
+   "marks": 3,
+   "path": "23(a)",
+   "mark_scheme": [
+    {
+     "label": "23(a)",
+     "text": "32\n63",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        45.875,
+        557.8,
+        550.5299682617188,
+        623.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Ranjit picks a ball at random from Bag A and replaces it. Ranjit also picks a ball at random from Bag B and replaces it.",
+     "text": "Ranjit picks a ball at random from Bag A and replaces it. Ranjit also picks a ball at random from Bag B and replaces it."
+    },
+    {
+     "type": "text",
+     "html": "Find the probability that the two balls are the same colour.",
+     "text": "Find the probability that the two balls are the same colour."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      391.5,
+      570.0,
+      621.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 146.1,
+      "height_pt": 230.0
+     }
+    }
+   ],
+   "text": "Leyla picks a ball at random from Bag A.\nShe places it into Bag B.\nShe then picks a ball at random from Bag B.\nFind the probability that the ball she picks from Bag B is black.\n................................................. [3]",
+   "marks": 3,
+   "path": "23(b)",
+   "mark_scheme": [
+    {
+     "label": "23(b)",
+     "text": "31\n70",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        45.875,
+        626.6,
+        550.5299682617188,
+        692.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Leyla picks a ball at random from Bag A. She places it into Bag B. She then picks a ball at random from <b>Bag</b> <b>B.</b>",
+     "text": "Leyla picks a ball at random from Bag A. She places it into Bag B. She then picks a ball at random from Bag B."
+    },
+    {
+     "type": "text",
+     "html": "Find the probability that the ball she picks from <b>Bag</b> B is black.",
+     "text": "Find the probability that the ball she picks from Bag B is black."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 2,
+ "variant": 3,
+ "paper_code": "0607/23",
+ "paper_type": "extended_non_calculator",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "23",
+   "text": "23"
+  },
+  {
+   "type": "text",
+   "html": "Bag A Bag B",
+   "text": "Bag A Bag B"
+  },
+  {
+   "type": "text",
+   "html": "<b>Bag</b> A contains 4 white balls and 3 black balls. <b>Bag</b> B contains 5 white balls and 4 black balls.",
+   "text": "Bag A contains 4 white balls and 3 black balls. Bag B contains 5 white balls and 4 black balls."
+  }
+ ]
+}

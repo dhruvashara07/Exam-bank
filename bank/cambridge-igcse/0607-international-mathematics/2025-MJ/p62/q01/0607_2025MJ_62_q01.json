@@ -1,0 +1,169 @@
+{
+ "id": "0607_2025MJ_62_q01",
+ "number": 1,
+ "segments": [],
+ "text": "",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      436.2,
+      570.0,
+      548.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 14.5,
+      "height_pt": 111.8
+     }
+    }
+   ],
+   "text": "1\n(a) Write down the core integer and the shell integers for the sequence\n5 7 9 11 13 15 17 19 21.\nCore integer  .......................................................\nShell integers  ....................... and ........................\n[1]",
+   "marks": 1,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "[Core integer] 13\n[Shell integers] 5 and 21",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        114.2,
+        549.3300170898438,
+        148.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the core integer and the shell integers for the sequence",
+     "text": "Write down the core integer and the shell integers for the sequence"
+    },
+    {
+     "type": "text",
+     "html": "7 9 11 13 15 17 19 21.",
+     "text": "7 9 11 13 15 17 19 21."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Core integer"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Shell integers"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      553.2,
+      570.0,
+      665.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 79.5,
+      "height_pt": 111.8
+     }
+    }
+   ],
+   "text": "Calculate F for the sequence in part (a).\n................................................. [2]",
+   "marks": 2,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "13 × 13 – 5 × 21\nor 169 – 105\n64",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        151.0,
+        549.3300170898438,
+        210.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate F for the sequence in <b>part</b> <b>(a).</b>",
+     "text": "Calculate F for the sequence in part (a)."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

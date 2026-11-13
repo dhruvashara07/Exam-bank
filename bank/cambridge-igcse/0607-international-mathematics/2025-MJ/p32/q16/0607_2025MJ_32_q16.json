@@ -1,0 +1,198 @@
+{
+ "id": "0607_2025MJ_32_q16",
+ "number": 16,
+ "segments": [
+  {
+   "page": 11,
+   "bbox": [
+    30.0,
+    256.4,
+    570.0,
+    303.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 46.6
+   }
+  }
+ ],
+ "text": "Rohan goes for a holiday to Europe.\nHe changes $2000 into euros (€) at an exchange rate of $1 = €0.9759 .",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      308.4,
+      570.0,
+      399.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 58.2,
+      "height_pt": 90.6
+     }
+    }
+   ],
+   "text": "Show that Rohan receives €1951.80 .\n[1]",
+   "marks": 1,
+   "path": "16(a)",
+   "mark_scheme": [
+    {
+     "label": "16(a)",
+     "text": "2000 × 0.9759",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        45.875,
+        89.3,
+        549.3300170898438,
+        111.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that Rohan receives €1951.80 .",
+     "text": "Show that Rohan receives €1951.80 ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 58.2
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      404.1,
+      570.0,
+      692.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 126.2,
+      "height_pt": 288.4
+     }
+    }
+   ],
+   "text": "In Europe, Rohan spends €1500.\nHe changes the remaining euros back to dollars ($) at the same exchange rate.\nCalculate the amount Rohan receives.\n$ ................................................. [2]\nQuestion 17 is printed on the next page.",
+   "marks": 2,
+   "path": "16(b)",
+   "mark_scheme": [
+    {
+     "label": "16(b)",
+     "text": "462.96",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        45.875,
+        114.2,
+        549.3300170898438,
+        152.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "In Europe, Rohan spends €1500. He changes the remaining euros back to dollars ($) at the same exchange rate.",
+     "text": "In Europe, Rohan spends €1500. He changes the remaining euros back to dollars ($) at the same exchange rate."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the amount Rohan receives.",
+     "text": "Calculate the amount Rohan receives."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "$"
+    },
+    {
+     "type": "text",
+     "html": "<b>Question</b> 17 is <b>printed</b> <b>on</b> <b>the</b> <b>next</b> <b>page.</b>",
+     "text": "Question 17 is printed on the next page."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 3,
+ "variant": 2,
+ "paper_code": "0607/32",
+ "paper_type": "core_calculator",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Rohan goes for a holiday to Europe.",
+   "text": "Rohan goes for a holiday to Europe."
+  },
+  {
+   "type": "text",
+   "html": "He changes $2000 into euros (€) at an exchange rate of $1 = €0.9759 .",
+   "text": "He changes $2000 into euros (€) at an exchange rate of $1 = €0.9759 ."
+  }
+ ]
+}

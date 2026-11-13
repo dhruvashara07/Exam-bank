@@ -1,0 +1,188 @@
+{
+ "id": "0607_2025MJ_42_q08",
+ "number": 8,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    489.1,
+    570.0,
+    536.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 46.9
+   }
+  }
+ ],
+ "text": "8\nXiong flies by plane from Manchester to Hong Kong.\nThe distance from Manchester to Hong Kong is 9000 km.\nThe flight takes 12.5 hours.",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      541.1,
+      570.0,
+      614.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 40.5,
+      "height_pt": 72.9
+     }
+    }
+   ],
+   "text": "Calculate the average speed of the plane.\n......................................... km/h [1]",
+   "marks": 1,
+   "path": "8(a)",
+   "mark_scheme": [
+    {
+     "label": "8(a)",
+     "text": "720",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        21.825000762939453,
+        466.5,
+        574.1499633789062,
+        488.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the average speed of the plane.",
+     "text": "Calculate the average speed of the plane."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "km/h"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      619.1,
+      570.0,
+      731.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 40.5,
+      "height_pt": 111.9
+     }
+    }
+   ],
+   "text": "The plane leaves Manchester at 20 45.\nThe local time in Hong Kong is 8 hours ahead of the local time in Manchester.\nFind the local time in Hong Kong when the plane lands.\n................................................. [2]",
+   "marks": 2,
+   "path": "8(b)",
+   "mark_scheme": [
+    {
+     "label": "8(b)",
+     "text": "17 15",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        21.825000762939453,
+        491.3,
+        574.1499633789062,
+        513.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The plane leaves Manchester at 20 45. The local time in Hong Kong is 8 hours ahead of the local time in Manchester.",
+     "text": "The plane leaves Manchester at 20 45. The local time in Hong Kong is 8 hours ahead of the local time in Manchester."
+    },
+    {
+     "type": "text",
+     "html": "Find the local time in Hong Kong when the plane lands.",
+     "text": "Find the local time in Hong Kong when the plane lands."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_calculator",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Xiong flies by plane from Manchester to Hong Kong. The distance from Manchester to Hong Kong is 9000 km. The flight takes 12.5 hours.",
+   "text": "Xiong flies by plane from Manchester to Hong Kong. The distance from Manchester to Hong Kong is 9000 km. The flight takes 12.5 hours."
+  }
+ ]
+}

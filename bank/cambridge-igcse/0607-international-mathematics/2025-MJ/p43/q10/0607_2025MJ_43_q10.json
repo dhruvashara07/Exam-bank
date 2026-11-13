@@ -1,0 +1,114 @@
+{
+ "id": "0607_2025MJ_43_q10",
+ "number": 10,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    310.1,
+    570.0,
+    530.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 1,
+    "answer_line": null,
+    "working_gap_pt": 66.5,
+    "height_pt": 219.9
+   }
+  }
+ ],
+ "text": "The speed of each of 155 cars passing a school gate is recorded.\nThe results are shown in the table.\nSpeed (v km/h)\n1\n0\n1\nv\nG\n2\n0\n2\n0\n1\nv\nG\n3\n0\n3\n0\n1\nv\nG\n35\n35\n1\nv\nG\n4\n0\n40\n1\nv\nG\n60\nFrequency\n7\n23\n36\n49\n40\nCalculate an estimate of the mean speed.\n......................................... km/h [2]",
+ "marks": 2,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "10",
+   "text": "36.7 or 36.69...",
+   "codes": [
+    "2"
+   ],
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      45.875,
+      607.4,
+      549.3300170898438,
+      629.8
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 3,
+ "paper_code": "0607/43",
+ "paper_type": "extended_calculator",
+ "total_marks": 2,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The speed of each of 155 cars passing a school gate is recorded. The results are shown in the table.",
+   "text": "The speed of each of 155 cars passing a school gate is recorded. The results are shown in the table."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Speed (v km/h)",
+     "10 1 v G 20",
+     "20 1 v G 30",
+     "30 1 v G 35",
+     "35 1 v G 40",
+     "40 1 v G 60"
+    ],
+    [
+     "Frequency",
+     "7",
+     "23",
+     "36",
+     "49",
+     "40"
+    ]
+   ]
+  },
+  {
+   "type": "text",
+   "html": "Calculate an estimate of the mean speed.",
+   "text": "Calculate an estimate of the mean speed."
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "unit": "km/h"
+  },
+  {
+   "type": "answer",
+   "kind": "lines"
+  },
+  {
+   "type": "marks",
+   "value": 2
+  }
+ ]
+}

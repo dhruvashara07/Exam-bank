@@ -1,0 +1,233 @@
+{
+ "id": "0607_2025MJ_31_q07",
+ "number": 7,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    59.2,
+    570.0,
+    202.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 17.8,
+    "height_pt": 142.8
+   }
+  }
+ ],
+ "text": "7\nAbuja\n3438\nCairo\n8356\n5222\nKathmandu\n5649\n2758\n2766\nMuscat\nThe table shows the distances, in km, an aircraft flies when travelling between cities.\nFor example, the aircraft flies 8356 km between Abuja and Kathmandu.",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      207.4,
+      570.0,
+      266.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 27.0,
+      "height_pt": 59.1
+     }
+    }
+   ],
+   "text": "Write down the distance the aircraft flies between Cairo and Muscat.\n............................................ km [1]",
+   "marks": 1,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "2758",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        568.2,
+        549.3300170898438,
+        590.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the distance the aircraft flies between Cairo and Muscat.",
+     "text": "Write down the distance the aircraft flies between Cairo and Muscat."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "km"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      271.9,
+      570.0,
+      569.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 174.4,
+      "height_pt": 297.6
+     }
+    }
+   ],
+   "text": "Naji wants to fly from Abuja to Kathmandu.\nHe has two possible routes.\nRoute 1: Abuja to Cairo then Cairo to Kathmandu\nRoute 2: Abuja to Muscat then Muscat to Kathmandu\nUse information from the table to help you complete the sentence.\nYou must show your working.\nRoute 1 is longer than Route 2 by ........................................ km [3]",
+   "marks": 3,
+   "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "[Route 1] 3438 + 5222 = 8660\n[Route 2] 5649 + 2766 = 8415\n245",
+     "codes": [
+      "M2",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        593.0,
+        549.3300170898438,
+        653.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Naji wants to fly from Abuja to Kathmandu. He has two possible routes.",
+     "text": "Naji wants to fly from Abuja to Kathmandu. He has two possible routes."
+    },
+    {
+     "type": "text",
+     "html": "Route 1: Abuja to Cairo then Cairo to Kathmandu Route 2: Abuja to Muscat then Muscat to Kathmandu",
+     "text": "Route 1: Abuja to Cairo then Cairo to Kathmandu Route 2: Abuja to Muscat then Muscat to Kathmandu"
+    },
+    {
+     "type": "text",
+     "html": "Use information from the table to help you complete the sentence. You must show your working.",
+     "text": "Use information from the table to help you complete the sentence. You must show your working."
+    },
+    {
+     "type": "text",
+     "html": "Route 1 is longer than Route 2 by …… km",
+     "text": "Route 1 is longer than Route 2 by …… km"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 3,
+ "variant": 1,
+ "paper_code": "0607/31",
+ "paper_type": "core_calculator",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "7",
+   "text": "7"
+  },
+  {
+   "type": "text",
+   "html": "Abuja",
+   "text": "Abuja"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "3438",
+     "",
+     ""
+    ],
+    [
+     "8356",
+     "5222",
+     ""
+    ],
+    [
+     "5649",
+     "2758",
+     "2766"
+    ]
+   ]
+  },
+  {
+   "type": "text",
+   "html": "Muscat",
+   "text": "Muscat"
+  },
+  {
+   "type": "text",
+   "html": "The table shows the distances, in km, an aircraft flies when travelling between cities. For example, the aircraft flies 8356 km between Abuja and Kathmandu.",
+   "text": "The table shows the distances, in km, an aircraft flies when travelling between cities. For example, the aircraft flies 8356 km between Abuja and Kathmandu."
+  }
+ ]
+}

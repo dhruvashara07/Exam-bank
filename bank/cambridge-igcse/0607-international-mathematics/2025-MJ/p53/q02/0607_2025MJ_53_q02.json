@@ -1,0 +1,370 @@
+{
+ "id": "0607_2025MJ_53_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    105.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 46.1
+   }
+  }
+ ],
+ "text": "2\nThe numbers at the end of the rows make this sequence.\n1, 3, 6, 10, 15, ...",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      111.4,
+      570.0,
+      158.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 14.5,
+      "height_pt": 46.6
+     }
+    }
+   ],
+   "text": "Complete the statement.\nThis is the sequence of ........................................ numbers.\n[1]",
+   "marks": 1,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "triangle",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        251.1,
+        549.3300170898438,
+        273.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the statement.",
+     "text": "Complete the statement."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "This is the sequence of",
+     "unit": "numbers."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        163.4,
+        570.0,
+        512.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 38.6,
+        "height_pt": 349.1
+       }
+      }
+     ],
+     "text": "Complete the table.\nUse the pyramid of numbers and patterns to help you.\nLast number\nRow number\nCalculation\nin the row\n1\n1\n2\n2\n1\n#\n=\n2\n2\n3\n3\n#\n=\n3\n3\n6\n#\n=\n4\n#\n=\n5\n#\n=\n6\n6\n7\n42\n21\n#\n=\n10\n#\n=\n[3]",
+     "marks": 3,
+     "path": "2(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(b)(i)",
+       "text": "Row number\nCalculation\nLast number\n1\n1 × 2 = 2\n1\n2\n2 × 3 = 6\n3\n3\n3 × 4 = 12\n6\n4\n4 × 5 = 20\n10\n5\n5 × 6 = 30\n15\n6\n6 × 7 = 42\n21\n10\n10 × 11 = 110\n55",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          45.875,
+          275.9,
+          549.3300170898438,
+          500.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the table.",
+       "text": "Complete the table."
+      },
+      {
+       "type": "text",
+       "html": "Use the pyramid of numbers and patterns to help you.",
+       "text": "Use the pyramid of numbers and patterns to help you."
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "Row number",
+         "Calculation",
+         "Last number in the row"
+        ],
+        [
+         "1",
+         "1 # 2 = 2",
+         "1"
+        ],
+        [
+         "2",
+         "2 # 3 =",
+         "3"
+        ],
+        [
+         "3",
+         "3 # =",
+         "6"
+        ],
+        [
+         "4",
+         "# =",
+         ""
+        ],
+        [
+         "5",
+         "# =",
+         ""
+        ],
+        [
+         "6",
+         "6 # 7 = 42",
+         "21"
+        ],
+        [
+         "",
+         "",
+         ""
+        ],
+        [
+         "10",
+         "# =",
+         ""
+        ]
+       ]
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        517.7,
+        570.0,
+        655.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 105.5,
+        "height_pt": 137.8
+       }
+      }
+     ],
+     "text": "Show that the last number in row 50 is 1275.\n[2]",
+     "marks": 2,
+     "path": "2(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(b)(ii)",
+       "text": "50 ×51\n2",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          45.875,
+          509.7,
+          549.3300170898438,
+          583.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Show that the last number in row 50 is 1275.",
+       "text": "Show that the last number in row 50 is 1275."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 105.5
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        660.7,
+        570.0,
+        785.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 92.5,
+        "height_pt": 124.8
+       }
+      }
+     ],
+     "text": "Find an expression for the last number in row R.\n................................................. [1]",
+     "marks": 1,
+     "path": "2(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "2(b)(iii)",
+       "text": "R×(R+1)\noe\n2",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          45.875,
+          585.0,
+          549.3300170898438,
+          625.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find an expression for the last number in row R.",
+       "text": "Find an expression for the last number in row R."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "2(b)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 3,
+ "paper_code": "0607/53",
+ "paper_type": "core_investigation",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The numbers at the end of the rows make this sequence.",
+   "text": "The numbers at the end of the rows make this sequence."
+  },
+  {
+   "type": "text",
+   "html": "1, 3, 6, 10, 15, ...",
+   "text": "1, 3, 6, 10, 15, ..."
+  }
+ ]
+}

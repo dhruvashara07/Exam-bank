@@ -1,0 +1,276 @@
+{
+ "id": "0607_2025MJ_41_q13",
+ "number": 13,
+ "segments": [
+  {
+   "page": 12,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    158.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 98.6
+   }
+  }
+ ],
+ "text": "Pierre drives from town P to town Q and then to town R.\nThe distance from P to Q is 112 km.\nThe distance from Q to R is 87 km.\nThe average speed from P to Q is x km/h.\nThe average speed from Q to R is (\nx\n+\n10\n)\nkm/h.\nThe total time for the journey from P to Q to R is 3 hours.",
+ "marks": 8,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      163.4,
+      570.0,
+      392.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 196.5,
+      "height_pt": 228.6
+     }
+    }
+   ],
+   "text": "-\n(a) Show that   x\n3\n169\nx\n-\n1120\n=\n0\n.\n[4]",
+   "marks": 4,
+   "path": "13(a)",
+   "mark_scheme": [
+    {
+     "label": "13(a)",
+     "text": "112\n87\n+\n= 3 oe\nx+10\nx\n112(x + 10) + 87x = 3x(x + 10) oe\nCompletion to 3x – 169x – 1120 = 0\n2\nwith no errors or omissions",
+     "codes": [
+      "M2",
+      "M1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        31.450000762939453,
+        595.4,
+        564.1499633789062,
+        694.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that 3x<sup>2</sup> 169x - 1120 = 0.",
+     "text": "Show that 3x2 169x - 1120 = 0."
+    },
+    {
+     "type": "text",
+     "html": "-",
+     "text": "-"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 196.5
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        30.0,
+        397.4,
+        570.0,
+        587.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 1,
+        "answer_line": "x = …… or x = …… [3]",
+        "working_gap_pt": 144.5,
+        "height_pt": 189.6
+       }
+      }
+     ],
+     "text": "-\n(b) (i) Solve   x\n3\n169\nx\n-\n1120\n=\n0\n.\nYou must show your working.\nx = .................. or x = .................. [3]",
+     "marks": 3,
+     "path": "13(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "13(b)(i)",
+       "text": "Correct sketch of 3x – 169x – 1120\n2\nor\n( −)( −169)± ( −169) −4(3)( −1120)\n2\n2 ×3\n62.3 or 62.32…\n–5.99 or –5.990…",
+       "codes": [
+        "M1",
+        "B2"
+       ],
+       "segments": [
+        {
+         "page": 11,
+         "bbox": [
+          31.450000762939453,
+          89.3,
+          563.75,
+          197.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Solve 3x<sup>2</sup> 169x - 1120 = 0.",
+       "text": "Solve 3x2 169x - 1120 = 0."
+      },
+      {
+       "type": "text",
+       "html": "-",
+       "text": "-"
+      },
+      {
+       "type": "text",
+       "html": "You must show your working.",
+       "text": "You must show your working."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "x ="
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        30.0,
+        592.4,
+        570.0,
+        691.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 66.5,
+        "height_pt": 98.6
+       }
+      }
+     ],
+     "text": "Find the average speed from Q to R.\n......................................... km/h [1]",
+     "marks": 1,
+     "path": "13(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "13(b)(ii)",
+       "text": "72.3 or 72.32…",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 11,
+         "bbox": [
+          31.450000762939453,
+          199.8,
+          563.75,
+          222.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the average speed from Q to R.",
+       "text": "Find the average speed from Q to R."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "unit": "km/h"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "13(b)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_calculator",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Pierre drives from town P to town Q and then to town R. The distance from P to Q is 112 km. The distance from Q to R is 87 km.",
+   "text": "Pierre drives from town P to town Q and then to town R. The distance from P to Q is 112 km. The distance from Q to R is 87 km."
+  },
+  {
+   "type": "text",
+   "html": "The average speed from P to Q is x km/h. The average speed from Q to R is (x + 10) km/h. The total time for the journey from P to Q to R is 3 hours.",
+   "text": "The average speed from P to Q is x km/h. The average speed from Q to R is (x + 10) km/h. The total time for the journey from P to Q to R is 3 hours."
+  }
+ ]
+}

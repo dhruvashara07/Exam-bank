@@ -1,0 +1,192 @@
+{
+ "id": "0607_2025MJ_22_q16",
+ "number": 16,
+ "segments": [
+  {
+   "page": 9,
+   "bbox": [
+    30.0,
+    340.3,
+    570.0,
+    361.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 20.7
+   }
+  }
+ ],
+ "text": "Find the next term and the nth term in each sequence.",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      366.3,
+      570.0,
+      512.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "next term =  ……",
+      "working_gap_pt": 88.0,
+      "height_pt": 146.2
+     }
+    }
+   ],
+   "text": "12,  14,  16,  18,  20,  ....\nnext term =  ................................................\nnth term =  ................................................ [3]",
+   "marks": 3,
+   "path": "16(a)",
+   "mark_scheme": [
+    {
+     "label": "16(a)",
+     "text": "22\n2n+10 oe final answer",
+     "codes": [
+      "1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        35.45000076293945,
+        608.2,
+        558.9500122070312,
+        654.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "12, 14, 16, 18, 20, ....",
+     "text": "12, 14, 16, 18, 20, ...."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "next term ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "nth term ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      517.8,
+      570.0,
+      761.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "next term =  ……",
+      "working_gap_pt": 185.7,
+      "height_pt": 243.7
+     }
+    }
+   ],
+   "text": "81,  27,  9,  3,  1,  ....\nnext term =  ................................................\nnth term =  ................................................ [3]",
+   "marks": 3,
+   "path": "16(b)",
+   "mark_scheme": [
+    {
+     "label": "16(b)",
+     "text": "1\noe\n3\nn−1\n1 \n81×\noe final answer\n\n\n\n3\n",
+     "codes": [
+      "1",
+      "2",
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        35.45000076293945,
+        657.9,
+        558.9500122070312,
+        740.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "81, 27, 9, 3, 1, ....",
+     "text": "81, 27, 9, 3, 1, ...."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "next term ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "nth term ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 2,
+ "variant": 2,
+ "paper_code": "0607/22",
+ "paper_type": "extended_non_calculator",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Find the next term and the nth term in each sequence.",
+   "text": "Find the next term and the nth term in each sequence."
+  }
+ ]
+}

@@ -1,0 +1,361 @@
+{
+ "id": "0607_2025MJ_43_q14",
+ "number": 14,
+ "segments": [
+  {
+   "page": 9,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    158.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 98.6
+   }
+  }
+ ],
+ "text": "Priya buys pieces of fruit.\nThe pieces of fruit are apples and oranges.\nThe price of 1 apple is x cents.\nThe price of 1 orange is (\nx\n+\n10\n)\ncents.\nPriya spends 420 cents on apples.",
+ "marks": 8,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      163.4,
+      570.0,
+      223.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 27.5,
+      "height_pt": 59.6
+     }
+    }
+   ],
+   "text": "Write down an expression, in terms of x, for the number of apples she buys.\n................................................. [1]",
+   "marks": 1,
+   "path": "14(a)",
+   "mark_scheme": [
+    {
+     "label": "14(a)",
+     "text": "420\nx",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        158.2,
+        549.3300170898438,
+        196.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down an expression, in terms of x, for the number of apples she buys.",
+     "text": "Write down an expression, in terms of x, for the number of apples she buys."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      228.4,
+      570.0,
+      262.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 33.6
+     }
+    }
+   ],
+   "text": "Priya also spends 420 cents on oranges.\nShe buys 13 pieces of fruit.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        30.0,
+        267.4,
+        570.0,
+        470.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 170.5,
+        "height_pt": 202.6
+       }
+      }
+     ],
+     "text": "-\n(i) Show that\n13\nx\n710\nx\n-\n4200\n=\n0\n.\n[3]",
+     "marks": 3,
+     "path": "14(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "14(b)(i)",
+       "text": "420\n420\n+\n=13\nx+10\nx\n420(x+10)+420x=13x (x+10)\nCorrectly expanding brackets and\nleading to 13x −710x−4200=0\n2",
+       "codes": [
+        "M1",
+        "M1",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          45.875,
+          198.2,
+          549.3300170898438,
+          314.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Show that 13x<sup>2</sup> 710x - 4200 = 0.",
+       "text": "Show that 13x2 710x - 4200 = 0."
+      },
+      {
+       "type": "text",
+       "html": "-",
+       "text": "-"
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 170.5
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        30.0,
+        475.4,
+        570.0,
+        600.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 92.5,
+        "height_pt": 124.6
+       }
+      }
+     ],
+     "text": "-\n(ii) Factorise\n13\nx\n710\nx\n-\n4200\n.\n................................................. [2]",
+     "marks": 2,
+     "path": "14(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "14(b)(ii)",
+       "text": "(13x+70)(x−60) final answer",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          45.875,
+          316.7,
+          549.3300170898438,
+          385.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Factorise 13x<sup>2</sup> 710x - 4200.",
+       "text": "Factorise 13x2 710x - 4200."
+      },
+      {
+       "type": "text",
+       "html": "-",
+       "text": "-"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        30.0,
+        605.4,
+        570.0,
+        665.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 27.5,
+        "height_pt": 59.6
+       }
+      }
+     ],
+     "text": "Find the cost of one orange.\n........................................ cents [2]",
+     "marks": 2,
+     "path": "14(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "14(b)(iii)",
+       "text": "70",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          45.875,
+          390.4,
+          549.3300170898438,
+          425.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the cost of one orange.",
+       "text": "Find the cost of one orange."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "unit": "cents"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "14(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Priya also spends 420 cents on oranges. She buys 13 pieces of fruit.",
+     "text": "Priya also spends 420 cents on oranges. She buys 13 pieces of fruit."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 3,
+ "paper_code": "0607/43",
+ "paper_type": "extended_calculator",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Priya buys pieces of fruit. The pieces of fruit are apples and oranges.",
+   "text": "Priya buys pieces of fruit. The pieces of fruit are apples and oranges."
+  },
+  {
+   "type": "text",
+   "html": "The price of 1 apple is x cents. The price of 1 orange is (x + 10) cents.",
+   "text": "The price of 1 apple is x cents. The price of 1 orange is (x + 10) cents."
+  },
+  {
+   "type": "text",
+   "html": "Priya spends 420 cents on apples.",
+   "text": "Priya spends 420 cents on apples."
+  }
+ ]
+}

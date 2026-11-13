@@ -1,0 +1,255 @@
+{
+ "id": "0607_2025MJ_12_q16",
+ "number": 16,
+ "segments": [
+  {
+   "page": 10,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    145.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 85.6
+   }
+  }
+ ],
+ "text": "There are 25 students in a class.\nE = {students that eat eggs}\nC = {students that eat cereal}\nn(E ) = 11\nn(C ) = 13\nn(E + C ) = 8",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      163.4,
+      570.0,
+      318.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 27.5,
+      "height_pt": 154.6
+     }
+    }
+   ],
+   "text": "Complete the Venn diagram to represent this information.\nU\nE\nC\n...........\n......\n...........\n...........\n[2]",
+   "marks": 2,
+   "path": "16(a)",
+   "mark_scheme": [
+    {
+     "label": "16(a)",
+     "text": "",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        494.5,
+        549.3300170898438,
+        580.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the Venn diagram to represent this information.",
+     "text": "Complete the Venn diagram to represent this information."
+    },
+    {
+     "type": "text",
+     "html": "U",
+     "text": "U"
+    },
+    {
+     "type": "text",
+     "html": "E C",
+     "text": "E C"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      323.4,
+      570.0,
+      383.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 27.5,
+      "height_pt": 59.6
+     }
+    }
+   ],
+   "text": "Write down the number of students that do not eat eggs and do not eat cereal.\n................................................. [1]",
+   "marks": 1,
+   "path": "16(b)",
+   "mark_scheme": [
+    {
+     "label": "16(b)",
+     "text": "9",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        583.4,
+        549.3300170898438,
+        605.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the number of students that do not eat eggs and do not eat cereal.",
+     "text": "Write down the number of students that do not eat eggs and do not eat cereal."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      388.4,
+      570.0,
+      565.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 118.5,
+      "height_pt": 176.6
+     }
+    }
+   ],
+   "text": "One of the 25 students is chosen at random.\nFind the probability that this student eats eggs but does not eat cereal.\n................................................. [1]",
+   "marks": 1,
+   "path": "16(c)",
+   "mark_scheme": [
+    {
+     "label": "16(c)",
+     "text": "3\noe\n25",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        607.4,
+        549.3300170898438,
+        646.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "One of the 25 students is chosen at random.",
+     "text": "One of the 25 students is chosen at random."
+    },
+    {
+     "type": "text",
+     "html": "Find the probability that this student eats eggs but does not eat cereal.",
+     "text": "Find the probability that this student eats eggs but does not eat cereal."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 1,
+ "variant": 2,
+ "paper_code": "0607/12",
+ "paper_type": "core_non_calculator",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "There are 25 students in a class. E = {students that eat eggs} C = {students that eat cereal} n(E ) = 11 n(C ) = 13 n(E + C ) = 8",
+   "text": "There are 25 students in a class. E = {students that eat eggs} C = {students that eat cereal} n(E ) = 11 n(C ) = 13 n(E + C ) = 8"
+  }
+ ]
+}

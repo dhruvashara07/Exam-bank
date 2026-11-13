@@ -1,0 +1,269 @@
+{
+ "id": "0607_2025MJ_63_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    414.0,
+    570.0,
+    512.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 98.5
+   }
+  }
+ ],
+ "text": "2\nTo find a number in the pyramid add its position in the row to the last number in the row above.\nExample\nN(6, 4) is in row 6.\nThe last number in row 5 is 15.\nN(6, 4) is in position 4.\nSo N(6, 4) = 15 + 4 = 19.",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      518.0,
+      570.0,
+      564.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "N(…… , ……)  =  ……  +  ……  =  50",
+      "working_gap_pt": 14.5,
+      "height_pt": 46.5
+     }
+    }
+   ],
+   "text": "Complete the statement.\nN(............... , ...............)  =  ...............  +  ...............  =  50\n[1]",
+   "marks": 1,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "N(10 , 5) = 45 + 5 = 50",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        451.3,
+        549.3300170898438,
+        473.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the statement.",
+     "text": "Complete the statement."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "N(",
+     "unit": "= 50"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      570.0,
+      570.0,
+      746.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 112.2,
+      "height_pt": 176.5
+     }
+    }
+   ],
+   "text": "Use your expression from Question 1(c)(ii) to show that\nRR\n(\n-\n1\n)\nNRk\n(,)\n=\n+.\nk\n2\n[1]",
+   "marks": 1,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "Replacing R by R−1 in correct expression,\n(R−1) ×(R−1 +1)\n+k\ne.g.\n2",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        476.1,
+        549.3300170898438,
+        528.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your expression from <b>Question</b> 1(c)(ii) to show that",
+     "text": "Use your expression from Question 1(c)(ii) to show that"
+    },
+    {
+     "type": "text",
+     "html": "N(R, k) = \\(\\frac{R(R - 1)}{2}\\) + k .",
+     "text": "N(R, k) = (R(R-1))/(2) + k ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 112.2
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      60.5,
+      570.0,
+      536.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 417.5,
+      "height_pt": 475.5
+     }
+    }
+   ],
+   "text": "NR11\n(,\n)\n=\n362\nFind the value of R.\n............................................................. [4]",
+   "marks": 4,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "R (R −1)\n+11=362 oe\n2\nSketch of U-shaped quadratic and horizontal line\nOR\n1± 1−4 ×1×(−702)\nR −R−702=0and either R=\n2\n2\nor better with square root sign\nor sketch of R −R−702\n2\nOR\nTable of 3 values including one with the answer\nR (R −1)\n+11\ne.g. for\n2\nOR\nR(R – 1) = 702 and\n702 = 26. ….\nOR\nR – R – 702 = 0 and (R – 27)(R + 26) = 0\n2\nR =27",
+     "codes": [
+      "C1",
+      "C2",
+      "2",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        89.3,
+        549.3300170898438,
+        469.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "N(R, 11) = 362",
+     "text": "N(R, 11) = 362"
+    },
+    {
+     "type": "text",
+     "html": "Find the value of R.",
+     "text": "Find the value of R."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "To find a number in the pyramid add its position in the row to the last number in the row above.",
+   "text": "To find a number in the pyramid add its position in the row to the last number in the row above."
+  },
+  {
+   "type": "text",
+   "html": "\\(\\frac{\\text{Example}}{N(6, 4) \\text{is}}\\)",
+   "text": "(Example)/(N(6,4)is)"
+  },
+  {
+   "type": "text",
+   "html": "in row 6.",
+   "text": "in row 6."
+  },
+  {
+   "type": "text",
+   "html": "The last number in row 5 is 15. N(6, 4) is in position 4. So N(6, 4) = 15 + 4 = 19.",
+   "text": "The last number in row 5 is 15. N(6, 4) is in position 4. So N(6, 4) = 15 + 4 = 19."
+  }
+ ]
+}

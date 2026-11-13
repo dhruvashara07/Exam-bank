@@ -1,0 +1,298 @@
+{
+ "id": "0607_2025MJ_52_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    119.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 59.6
+   }
+  }
+ ],
+ "text": "4\nLinear sequences with three terms\nIn a linear sequence the term-to-term rule is add the same number.\nThis number is the common difference, d.",
+ "marks": 9,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      124.4,
+      570.0,
+      437.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 91.2,
+      "height_pt": 313.1
+     }
+    }
+   ],
+   "text": "F is the difference between the value of the core and the value of the shell.\nSo   F\n=\nC\n-.\nS\nComplete the table.\nCommon difference\nLinear sequence\nF\nd\n17         18         19\n1\n1\n24         27         30\n14         20      ...........\n36\n20      ...........       40\n[5]",
+   "marks": 5,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "17 18 19\n1\n1\n24 27 30\n3\n9\n14 20 26..\n6\n36\n20 30 40\n10\n100\n27 × 27 – 24 × 30\nor\n30 × 30 – 20 × 40",
+     "codes": [
+      "4",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        89.3,
+        549.3300170898438,
+        239.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "F is the difference between the value of the core and the value of the shell. So F = C - S .",
+     "text": "F is the difference between the value of the core and the value of the shell. So F = C - S ."
+    },
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "text",
+     "html": "Common difference",
+     "text": "Common difference"
+    },
+    {
+     "type": "text",
+     "html": "Linear sequence F",
+     "text": "Linear sequence F"
+    },
+    {
+     "type": "text",
+     "html": "d",
+     "text": "d"
+    },
+    {
+     "type": "text",
+     "html": "18 19 1 1",
+     "text": "18 19 1 1"
+    },
+    {
+     "type": "text",
+     "html": "27 30",
+     "text": "27 30"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "14 20",
+     "unit": "36"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "20",
+     "unit": "40"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 91.2
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      442.6,
+      570.0,
+      489.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 14.5,
+      "height_pt": 46.9
+     }
+    }
+   ],
+   "text": "Use part (a) to find a formula for F in terms of d.\n................................................. [2]",
+   "marks": 2,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "F = d\n2",
+     "codes": [
+      "2",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        242.3,
+        549.3300170898438,
+        264.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use <b>part</b> (a) to find a formula for F in terms of d.",
+     "text": "Use part (a) to find a formula for F in terms of d."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      494.7,
+      570.0,
+      671.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 105.5,
+      "height_pt": 176.8
+     }
+    }
+   ],
+   "text": "A linear sequence of 3 terms has F\n=\n49\n.\nThe 1st term is 11.\nComplete the sequence.\n11,   .................. ,   .................. [2]",
+   "marks": 2,
+   "path": "4(c)",
+   "mark_scheme": [
+    {
+     "label": "4(c)",
+     "text": "(11) 18 25",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        266.3,
+        549.3300170898438,
+        301.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A linear sequence of 3 terms has F = 49. The 1st term is 11.",
+     "text": "A linear sequence of 3 terms has F = 49. The 1st term is 11."
+    },
+    {
+     "type": "text",
+     "html": "Complete the sequence.",
+     "text": "Complete the sequence."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "11,"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>Linear</b> <b>sequences</b> with <b>three</b> <b>terms</b>",
+   "text": "Linear sequences with three terms"
+  },
+  {
+   "type": "text",
+   "html": "In a linear sequence the term-to-term rule is add the same number. This number is the common difference, d.",
+   "text": "In a linear sequence the term-to-term rule is add the same number. This number is the common difference, d."
+  }
+ ]
+}

@@ -1,0 +1,701 @@
+{
+ "id": "0607_2025MJ_51_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    93.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 33.6
+   }
+  }
+ ],
+ "text": "2\nEach sequence in this question has 4 terms.\nIn these sequences the increase is more than 1.",
+ "marks": 19,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        98.4,
+        570.0,
+        516.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 16,
+        "answer_line": null,
+        "working_gap_pt": 121.8,
+        "height_pt": 418.1
+       }
+      }
+     ],
+     "text": "Complete the table.\nProduct of\nProduct\nSequence\nIncrease\ndifference\ninside pair\noutside pair\n1,\n3,\n5,\n7\n2\n15\n7\n8\n6,\n8,\n............... ,\n12\n2\n...............\n72\n...............\n7.2,\n10.2,\n............... ,\n...............\n...............\n134.64\n...............\n18\n20,\n............... ,\n28,\n...............\n4\n...............\n640\n...............\n88,\n............... ,\n............... ,\n100\n...............\n...............\n8800\n...............\n[5]",
+     "marks": 5,
+     "path": "2(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(a)(i)",
+       "text": "Inside\nOutside\nProduct\nSequence\nIncrease\npair\npair\ndifference\n1, 3, 5, 7\n2\n15\n7\n8\n6, 8, 10, 12\n2\n80\n72\n8\n7.2, 10.2, 13.2,\n3\n134.64\n116.64\n18\n16.2\n20, 24, 28, 32\n4\n672\n640\n32\n88, 92, 96, 100\n4\n8832\n8800\n32\nOne calculation to justify the required terms of a sequence\nor one multiplication of a correct pair\nor subtraction of (their) inner and (their) outer pairs\nor in row three: 134.64 – 18 = 116.64",
+       "codes": [
+        "4",
+        "C1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          45.875,
+          89.3,
+          546.9299926757812,
+          326.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the table.",
+       "text": "Complete the table."
+      },
+      {
+       "type": "text",
+       "html": "Product of",
+       "text": "Product of"
+      },
+      {
+       "type": "text",
+       "html": "Product",
+       "text": "Product"
+      },
+      {
+       "type": "text",
+       "html": "Sequence Increase",
+       "text": "Sequence Increase"
+      },
+      {
+       "type": "text",
+       "html": "difference",
+       "text": "difference"
+      },
+      {
+       "type": "text",
+       "html": "inside pair outside pair",
+       "text": "inside pair outside pair"
+      },
+      {
+       "type": "text",
+       "html": "1, 3, 5, 7 2 15 7 8",
+       "text": "1, 3, 5, 7 2 15 7 8"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "6, 8,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "7.2, 10.2,",
+       "unit": "18"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "20,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "88,"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 5
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        521.9,
+        570.0,
+        724.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 131.5,
+        "height_pt": 202.6
+       }
+      }
+     ],
+     "text": "A sequence has an increase of 5.\nThe product of the inside pair is 6000.\nFind the 4 terms in the sequence.\n................ , ................ , ................ , ................ [3]",
+     "marks": 3,
+     "path": "2(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(a)(ii)",
+       "text": "6000\nor 1 correct trial with difference of 5 ≠ 6000\nor 1 correct trial without difference of 5 = 6000\nor sketch of x(x + 5)\n75 × 80 = 6000\nor correct sketch of x(x + 5) = 6000\n70, 75, 80, 85",
+       "codes": [
+        "C1",
+        "C1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          45.875,
+          328.0,
+          546.9299926757812,
+          455.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "A sequence has an increase of 5. The product of the inside pair is 6000.",
+       "text": "A sequence has an increase of 5. The product of the inside pair is 6000."
+      },
+      {
+       "type": "text",
+       "html": "Find the 4 terms in the sequence.",
+       "text": "Find the 4 terms in the sequence."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "2(a)"
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        30.0,
+        59.4,
+        570.0,
+        564.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 184.7,
+        "height_pt": 505.1
+       }
+      }
+     ],
+     "text": "Complete the table.\nUse your answers in part (a) to help you.\nIncrease, n\nProduct difference\n1\n2\n2\n8\n3\n18\n4\n5\n50\n6\n[2]",
+     "marks": 2,
+     "path": "2(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(b)(i)",
+       "text": "72 on row 6\nThree of the differences 6, 10, 14, 18, 22 seen\nor calculation of correct product difference for their 4-term\nsequence with increase 6",
+       "codes": [
+        "1",
+        "C1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          45.875,
+          458.5,
+          546.9299926757812,
+          535.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the table.",
+       "text": "Complete the table."
+      },
+      {
+       "type": "text",
+       "html": "Use your answers in <b>part</b> (a) to help you.",
+       "text": "Use your answers in part (a) to help you."
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "Increase, n",
+         "Product difference"
+        ],
+        [
+         "1",
+         "2"
+        ],
+        [
+         "2",
+         "8"
+        ],
+        [
+         "3",
+         "18"
+        ],
+        [
+         "4",
+         ""
+        ],
+        [
+         "5",
+         "50"
+        ],
+        [
+         "6",
+         ""
+        ]
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 184.7
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        30.0,
+        569.7,
+        570.0,
+        681.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 79.5,
+        "height_pt": 111.8
+       }
+      }
+     ],
+     "text": "Find an expression, in terms of n, for the product difference.\n................................................. [2]",
+     "marks": 2,
+     "path": "2(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(b)(ii)",
+       "text": "2n oe\n2\nThree common differences of 4 seen or\nSquare numbers 1, 4, 9, [16] seen or\nThree of × 2, × 4, × 6, × 8, × 10, × 12 or 2×, 4×, 6×, 8×, 10×,\n12× seen in table",
+       "codes": [
+        "1",
+        "C1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          45.875,
+          537.0,
+          546.9299926757812,
+          626.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find an expression, in terms of n, for the product difference.",
+       "text": "Find an expression, in terms of n, for the product difference."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "2(b)"
+  },
+  {
+   "label": "c",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        59.4,
+        570.0,
+        223.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 105.5,
+        "height_pt": 163.6
+       }
+      }
+     ],
+     "text": "A sequence has an increase of 11.\nUse your expression in part (b)(ii) to find the product difference for this sequence.\n................................................. [2]",
+     "marks": 2,
+     "path": "2(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(i)",
+       "text": "242\n2 × 11\n2",
+       "codes": [
+        "1",
+        "C1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          45.875,
+          628.2,
+          546.9299926757812,
+          688.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "A sequence has an increase of 11.",
+       "text": "A sequence has an increase of 11."
+      },
+      {
+       "type": "text",
+       "html": "Use your expression in <b>part</b> (b)(ii) to find the product difference for this sequence.",
+       "text": "Use your expression in part (b)(ii) to find the product difference for this sequence."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        228.4,
+        570.0,
+        337.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 37.5,
+        "height_pt": 108.6
+       }
+      }
+     ],
+     "text": "The first term in a sequence is 12.\nThe sequence has an increase of 11.\nWrite down the sequence.\n12, ................ , ................ , ................ [1]",
+     "marks": 1,
+     "path": "2(c)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(ii)",
+       "text": "23, 34, 45",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          45.875,
+          689.9,
+          546.9299926757812,
+          712.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The first term in a sequence is 12. The sequence has an increase of 11.",
+       "text": "The first term in a sequence is 12. The sequence has an increase of 11."
+      },
+      {
+       "type": "text",
+       "html": "Write down the sequence.",
+       "text": "Write down the sequence."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "12,"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        342.4,
+        570.0,
+        480.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 66.5,
+        "height_pt": 137.6
+       }
+      }
+     ],
+     "text": "The first term in a sequence is a.\nThe sequence has an increase of 11.\nComplete the sequence using expressions in terms of a.\na, ........................ , ........................ , ........................ [1]",
+     "marks": 1,
+     "path": "2(c)(iii)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(iii)",
+       "text": "a + 11, a + 22, a + 33 oe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          45.875,
+          716.3,
+          546.9299926757812,
+          738.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The first term in a sequence is a. The sequence has an increase of 11.",
+       "text": "The first term in a sequence is a. The sequence has an increase of 11."
+      },
+      {
+       "type": "text",
+       "html": "Complete the sequence using expressions in terms of a.",
+       "text": "Complete the sequence using expressions in terms of a."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "a,"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "iv",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        498.4,
+        570.0,
+        763.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 174.0,
+        "height_pt": 265.1
+       }
+      }
+     ],
+     "text": "Use the sequence in part (c)(iii) to show algebraically that your product difference in\npart (c)(i) is correct.\n[3]\nQuestion 3 is printed on the next page.",
+     "marks": 3,
+     "path": "2(c)(iv)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(iv)",
+       "text": "(\n)(\n)\na+11 a+22 =a +33a+242\n2\n(\n)\na a+33 =a +33a\n2\n242 with correct working",
+       "codes": [
+        "1",
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 9,
+         "bbox": [
+          45.875,
+          89.3,
+          546.9299926757812,
+          191.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use the sequence in <b>part</b> (c)(iii) to show algebraically that your product difference in <b>part</b> (c)(i) is correct.",
+       "text": "Use the sequence in part (c)(iii) to show algebraically that your product difference in part (c)(i) is correct."
+      },
+      {
+       "type": "text",
+       "html": "<b>Question</b> 3 is <b>printed</b> <b>on</b> <b>the</b> <b>next</b> <b>page.</b>",
+       "text": "Question 3 is printed on the next page."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 174.0
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "2(c)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 19,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Each sequence in this question has 4 terms. In these sequences the increase is more than 1.",
+   "text": "Each sequence in this question has 4 terms. In these sequences the increase is more than 1."
+  }
+ ]
+}

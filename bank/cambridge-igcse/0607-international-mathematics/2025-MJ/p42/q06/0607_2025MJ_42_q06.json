@@ -1,0 +1,187 @@
+{
+ "id": "0607_2025MJ_42_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    161.4,
+    570.0,
+    188.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": -0.0,
+    "height_pt": 26.6
+   }
+  }
+ ],
+ "text": "1\n6\nA\n=\n(\nx\n+\nyh\n)\n2",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      189.4,
+      570.0,
+      275.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "A =  …… [1]",
+      "working_gap_pt": 53.5,
+      "height_pt": 85.6
+     }
+    }
+   ],
+   "text": "Find the value of A when x = 7, y = 12.5 and h = 6.\nA =  ................................................ [1]",
+   "marks": 1,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "58.5",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        21.825000762939453,
+        294.3,
+        574.1499633789062,
+        316.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the value of A when x = 7, y = 12.5 and h = 6.",
+     "text": "Find the value of A when x = 7, y = 12.5 and h = 6."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "A ="
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      280.4,
+      570.0,
+      407.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "x =  …… [2]",
+      "working_gap_pt": 94.9,
+      "height_pt": 127.1
+     }
+    }
+   ],
+   "text": "Rearrange the formula to write x in terms of A, y and h.\nx =  ................................................ [2]",
+   "marks": 2,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "2A−hy\n2A\n− y\nor\noe\nh\nh",
+     "codes": [
+      "2",
+      "1",
+      "1",
+      "2",
+      "2",
+      "1",
+      "2",
+      "2",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        21.825000762939453,
+        319.2,
+        574.1499633789062,
+        389.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Rearrange the formula to write x in terms of A, y and h.",
+     "text": "Rearrange the formula to write x in terms of A, y and h."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "x ="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_calculator",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A = \\(\\frac{1}{2}\\) (x + y) h",
+   "text": "A = (1)/(2) (x + y) h"
+  }
+ ]
+}

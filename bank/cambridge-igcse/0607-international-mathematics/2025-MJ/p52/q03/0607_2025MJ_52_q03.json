@@ -1,0 +1,362 @@
+{
+ "id": "0607_2025MJ_52_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    119.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 59.6
+   }
+  }
+ ],
+ "text": "3\nFibonacci sequence      1    1    2    3    5    8   13   …\nIn the Fibonacci sequence you find the next term by adding the previous two terms.\nFor example   5th term + 6th term = 7th term   so   5\n+\n8\n=\n13\n.",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      124.4,
+      570.0,
+      145.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 20.6
+     }
+    }
+   ],
+   "text": "Calculate C and S for these sequences of 3 consecutive terms in the Fibonacci sequence.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        150.4,
+        570.0,
+        236.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 2,
+        "answer_line": "C =  ……",
+        "working_gap_pt": 14.5,
+        "height_pt": 85.6
+       }
+      }
+     ],
+     "text": "The 2nd, 3rd and 4th terms.    1   2   3\nC =  .......................................................\nS =  .......................................................\n[1]",
+     "marks": 1,
+     "path": "3(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "3(a)(i)",
+       "text": "(C =)\n4\n(S =)\n3",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          45.875,
+          525.7,
+          549.3300170898438,
+          560.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The 2nd, 3rd and 4th terms. 1 2 3",
+       "text": "The 2nd, 3rd and 4th terms. 1 2 3"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "C ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "S ="
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        241.4,
+        570.0,
+        327.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 2,
+        "answer_line": "C =  ……",
+        "working_gap_pt": 14.5,
+        "height_pt": 85.6
+       }
+      }
+     ],
+     "text": "The 4th, 5th and 6th terms.    3   5   8\nC =  .......................................................\nS =  .......................................................\n[1]",
+     "marks": 1,
+     "path": "3(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "3(a)(ii)",
+       "text": "(C =)\n25\n(S =)\n24",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          45.875,
+          562.6,
+          549.3300170898438,
+          597.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The 4th, 5th and 6th terms. 3 5 8",
+       "text": "The 4th, 5th and 6th terms. 3 5 8"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "C ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "S ="
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        332.4,
+        570.0,
+        496.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 2,
+        "answer_line": "C =  ……",
+        "working_gap_pt": 92.5,
+        "height_pt": 163.6
+       }
+      }
+     ],
+     "text": "The 6th, 7th and 8th terms.\nC =  .......................................................\nS =  .......................................................\n[2]",
+     "marks": 2,
+     "path": "3(a)(iii)",
+     "mark_scheme": [
+      {
+       "label": "3(a)(iii)",
+       "text": "(C =)\n169\n(S =)\n168\n[8th term is] 21",
+       "codes": [
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          45.875,
+          599.4,
+          549.3300170898438,
+          659.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The 6th, 7th and 8th terms.",
+       "text": "The 6th, 7th and 8th terms."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "C ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "S ="
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "3(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate C and S for these sequences of 3 consecutive terms in the Fibonacci sequence.",
+     "text": "Calculate C and S for these sequences of 3 consecutive terms in the Fibonacci sequence."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      501.4,
+      570.0,
+      743.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 170.5,
+      "height_pt": 241.6
+     }
+    }
+   ],
+   "text": "In the Fibonacci sequence there are 3 consecutive terms where the value of their shell\nis   S = 17 480 760.\nUse what you notice in your answers to part (a) to calculate the middle term.\n................................................. [2]",
+   "marks": 2,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "4181\n17480761",
+     "codes": [
+      "1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        661.1,
+        549.3300170898438,
+        711.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "In the Fibonacci sequence there are 3 consecutive terms where the value of their shell is S = 17 480 760.",
+     "text": "In the Fibonacci sequence there are 3 consecutive terms where the value of their shell is S = 17 480 760."
+    },
+    {
+     "type": "text",
+     "html": "Use what you notice in your answers to <b>part</b> (a) to calculate the middle term.",
+     "text": "Use what you notice in your answers to part (a) to calculate the middle term."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>Fibonacci</b> <b>sequence</b> 1 1 2 3 5 8 13 …",
+   "text": "Fibonacci sequence 1 1 2 3 5 8 13 …"
+  },
+  {
+   "type": "text",
+   "html": "In the Fibonacci sequence you find the next term by adding the previous two terms. For example 5th term + 6th term = 7th term so 5 + 8 = 13.",
+   "text": "In the Fibonacci sequence you find the next term by adding the previous two terms. For example 5th term + 6th term = 7th term so 5 + 8 = 13."
+  }
+ ]
+}
