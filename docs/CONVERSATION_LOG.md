@@ -419,3 +419,15 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   sheet instead (script: render each (font, code) crop at 300 dpi into a grid, see ERROR_PATTERNS 64).
 - What to change next: one MS pass on maths only (MATHS_PLAN 10), then the round; the 3-year batches need the MS work
   done first, otherwise every round is full of known layout problems (pattern 16).
+
+## 2026-11-14 - maths pilot M0, second chat (round 27 fixed, round 28 published)
+- Dhruv (round 27, 23 of 40 wrong): simple errors must be removed by my own 2 strict passes; sharp images; one font in
+  question and MS; NOT TO SCALE inside the picture; exact steps after the GitHub build; update docs and skill with every
+  new pattern without being asked; stop check loops early but not with limits so low that tasks get killed.
+- Fixed as patterns 75-90 (all new, 0 repeats): ms_maths one font 11 pt + bold of nameless fonts, run split, re-flow,
+  picture cells, 2014 dot lines, diagram crops (labels, NOT TO SCALE, merges), 4th-level MS labels, thin-space digits,
+  nested fractions and question tables to the picture. Review images now 192 dpi. Golden: 0 changed cuts.
+- Analysis: slowest phase = fix (about 3 h: new MS cell layout, many rebuilds of 60 papers at about 15 min each).
+  Two errors the checks missed: nested fractions (KaTeX + char check pass flat but wrong LaTeX) and question tables read
+  as text; both found only on a direct question. Changed: PLAYBOOK 2e reads the LaTeX of every stacked part against the
+  page. Next: rebuild only the papers a fix touches (a list per pattern), not all 60, to cut the fix phase.

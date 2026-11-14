@@ -39,9 +39,20 @@
    {
     "start": "2026-11-13T12:18:26+00:00",
     "end": "2026-11-13T13:07:37+00:00"
+   },
+   {
+    "start": "2026-11-14T12:28:00+00:00",
+    "end": null,
+    "note": "round 28 (re-check)"
    }
   ],
-  "fix": []
+  "fix": [
+   {
+    "start": "2026-11-14T09:30:00+00:00",
+    "end": "2026-11-14T12:28:00+00:00",
+    "note": "round 27 fixes (start estimated): ms_maths one font/11pt/bold, run split, re-flow, picture cells, dots, diagram crops, SUB4, nested fractions and tables to picture; round 28 re-check published (34 items)"
+   }
+  ]
  },
  "github_runs": [
   {
@@ -58,7 +69,7 @@
   "papers": 60,
   "questions": 743,
   "flags": 11,
-  "round_items": 40,
+  "round_items": 34,
   "wrong_items": 25
  },
  "errors": [
@@ -117,6 +128,30 @@
    "fix": "_maths_ruled relabel + FORCE_WRAP (partial)",
    "found_by": "claude",
    "at": "2026-11-13T10:59:11+00:00"
+  },
+  {
+   "pattern": "88",
+   "kind": "new",
+   "what": "long MS answers printed over several lines wrapped line by line in our narrower Answer column (ragged)",
+   "fix": "ms_maths._cell re-flows a text-only paragraph as one",
+   "found_by": "claude",
+   "at": "2026-11-14T12:27:38+00:00"
+  },
+  {
+   "pattern": "89",
+   "kind": "new",
+   "what": "nested/continued fractions came out as flat LaTeX that passed KaTeX and the char check",
+   "fix": "maths_tex: inner bar inside an outer fraction -> picture",
+   "found_by": "claude",
+   "at": "2026-11-14T12:27:38+00:00"
+  },
+  {
+   "pattern": "90",
+   "kind": "new",
+   "what": "ruled tables in question text read as one jumbled LaTeX line",
+   "fix": "maths_tex: >=3 column and >=3 row rules -> picture",
+   "found_by": "claude",
+   "at": "2026-11-14T12:27:38+00:00"
   }
  ],
  "tokens": [

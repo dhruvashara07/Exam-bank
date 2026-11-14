@@ -3,9 +3,13 @@
 Read this first in every session. Update it before ending a session.
 
 ## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md
-- NEXT: fix round 27 (23 wrong: ERROR_PATTERNS 75-85) in a NEW chat with the strict checks (PLAYBOOK 1b, 2a-2f, 3a):
-  build the automatic checks first, run them on all 60 papers, fix to zero, full contact sheets, then a re-check round
-  with the 23 items + new samples. Answers: review/rounds/27_answers.json. Nothing approved yet.
+- NEXT: Dhruv reviews round 28 (re-check of the 23 round-27 items + 11 new, review page). Then: read feedback_r28,
+  fix every wrong item as a pattern, `review_round.py close 28`, approve.py for the 60 M0 papers, docs, push; then M1.
+- 2026-11-14: round 27 fixed (ERROR_PATTERNS 75-90): one font 11 pt with bold, run split, paragraph re-flow, picture
+  cells, dot lines, diagram crops, 4th-level labels, nested fractions and question tables kept as the printed picture
+  (LaTeX: 2118 parts ok, 228 picture). maths_check: 9 hits left (2014 62 broken page, 2 overflows, 1 missing word).
+  Open (MATHS_PLAN 10): 2025 MJ 53 q3 pyramid cut by a part boundary; 2014 43 q3(b) inequality signs; 2019 ON 52 3(b)
+  inner-table shading; 6 MS questions on old paths.
 - 2026-11-13 (later): mark schemes fixed before the round (Dhruv): new `pipeline/ms_maths.py` - every maths MS row laid
   out cell by cell (fractions / vectors / graphs kept whole, rows grow, Answer = Partial Marks width): 645 questions in
   our 4-column layout, 13 still on old paths (2019 ON 11 q8 etc., see MATHS_PLAN 10). Also: 2019 ON 11-13 MS parsing

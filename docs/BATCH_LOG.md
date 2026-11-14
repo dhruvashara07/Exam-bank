@@ -4,7 +4,7 @@ Minutes are wall clock. "Ours" = build + Claude 1 + Claude 2 + fix (Dhruv's revi
 
 | Batch | Sessions | Papers | Build | GitHub | Claude 1 | Claude 2 | Fix | Ours | Round items | New errors | Repeats | Tokens |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 46.7 | 51.4 | 0.0 | 107.6 | 40 | 7 | 0 | n/a |
+| M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 46.7 | 51.4 | 178.0 | 285.6 | 34 | 10 | 0 | n/a |
 
 ## Errors per batch (new = first time, repeat = a pattern seen before: the doc or the fix failed)
 
@@ -16,6 +16,9 @@ Minutes are wall clock. "Ours" = build + Claude 1 + Claude 2 + fix (Dhruv's revi
 - [new] pattern 68: uncaptioned maths diagrams not cut as figures → extract.diagrams + grow to light ink (found by claude)
 - [new] pattern 69: Partial Marks column header/fallback → NAMES, EQUAL_FLEX, 4-col default (found by claude)
 - [new] pattern 70: 2014 ruled MS without header → _maths_ruled relabel + FORCE_WRAP (partial) (found by claude)
+- [new] pattern 88: long MS answers printed over several lines wrapped line by line in our narrower Answer column (ragged) → ms_maths._cell re-flows a text-only paragraph as one (found by claude)
+- [new] pattern 89: nested/continued fractions came out as flat LaTeX that passed KaTeX and the char check → maths_tex: inner bar inside an outer fraction -> picture (found by claude)
+- [new] pattern 90: ruled tables in question text read as one jumbled LaTeX line → maths_tex: >=3 column and >=3 row rules -> picture (found by claude)
 
 ## Repeats to act on
 

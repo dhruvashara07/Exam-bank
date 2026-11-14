@@ -238,3 +238,8 @@ belong to (a), not to (a)(iv): when every sub-part but the last has no mark, the
   size (11 pt) for all normal text in every column - header, Q labels, answers, marks, partial marks; bold / italic only
   where the paper prints them (codes B1/M1 bold). Superscripts / subscripts / fraction parts keep their printed ratio.
 - 'NOT TO SCALE' always belongs to its diagram picture.
+
+## 26. Re-flow long answers (round 27)
+- A paragraph the paper printed over several lines in a wider column is re-flowed as one in our Answer / Partial Marks
+  column (words keep their font and size; only line breaks change). Lines with fractions, vectors or pictures keep their
+  printed lines.

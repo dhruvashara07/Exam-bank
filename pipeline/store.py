@@ -20,7 +20,7 @@ import numpy as np
 from PIL import Image
 import paths
 from run import cleaned
-from store_text import family, unpua, hexcol, span_len, odd, symbol_family, maths_doc, maths_glyph
+from store_text import family, unpua, hexcol, span_len, odd, symbol_family, maths_doc, maths_glyph, nameless_bold
 from store_units import glyph_styles, char_styles, tp, drawing_d, nodes, scale_note
 import store_options as OPT
 import store_v5 as V5
@@ -175,6 +175,8 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
                          'w': round(span_len(chars, l['dir']), 2), 's': round(s['size'], 2), 'f': FAM[family(font)]}
                     if MATHS and w['f'] == 'sans' and re.match(r'TT[0-9A-F]+o00$', font.split('+')[-1]) and (s['flags'] & 4):
                         w['f'] = 'serif'           # 2014 maths: nameless subset fonts are Times (the font's serif flag)
+                    if MATHS and re.match(r'TT[0-9A-F]+o00$', font.split('+')[-1]) and nameless_bold(doc, font):
+                        bold = True                # ... and bold or regular by their letter widths
                     if len(w['t']) == 1 and (w['t'].isalpha() or (w['t'] in '[]{}<>\\^_|~`@#' and _old_doc(doc))) and re.search(r'TT[0-9A-F]+o00$', font):
                         # (a bracket too: '[' draws '≥' in 2011 ON 51's symbol subset, round 26)
                         from store_text import glyph_remap   # a re-encoded symbol ('R' drawn as '=', 2014 MJ 63)

@@ -140,6 +140,17 @@ def part_tex(units, figs_by_id=None, skip_label=True):
         if any(g for g in u.get('glyphs', []) if not _bracket_piece(g)):
             raise Unsure('drawn symbol in the text')
         S = sorted(w['s'] for w in ws)[len(ws) // 2] if ws else 11.0
+        # a ruled table (>= 3 column rules and >= 3 row rules) has no flat-text form: the part is shown as the picture
+        # (round 28 self-check, 2021 FM 52 q4(b): table rows were read as one jumbled line)
+        vr = hr = 0
+        for l in u.get('lines', []):
+            bb = _bbox(l['d'])
+            if bb and bb[2] - bb[0] <= 1.6 and bb[3] - bb[1] > 14:
+                vr += 1
+            elif bb and bb[3] - bb[1] <= 1.6 and bb[2] - bb[0] > 40:
+                hr += 1
+        if vr >= 3 and hr >= 3:
+            raise Unsure('table')
         # rules: fraction bars (short thin horizontal under/over words); slanted strokes = drawn maths we do not read
         bars = []
         for l in u.get('lines', []):
@@ -153,6 +164,17 @@ def part_tex(units, figs_by_id=None, skip_label=True):
                 continue                                   # page-wide rules, boxes, table rules: not inline maths
             if bb[3] - bb[1] <= 1.6 and 2.5 <= bb[2] - bb[0] <= 160:
                 bars.append(bb)
+        # a bar inside another fraction (continued / nested fraction) is not read: the part goes to the picture
+        # (round 27, 2014 MJ 52 q4: n/(1 + n/(1 + n)) came out as flat 'n/n, 1 + ...')
+        def has_num(bb):
+            yb = (bb[1] + bb[3]) / 2
+            return any(bb[0] - 2 <= w['x'] and w['x'] + w['w'] <= bb[2] + 2 and 0 < yb - w['y'] < 0.55 * S + 2 for w in ws)
+        for a in bars:
+            for b in bars:
+                # b is the inner bar: shorter, inside a's width, just below or above a, both with something written over them
+                if a is not b and (a[2] - a[0]) - (b[2] - b[0]) > 4 and a[0] - 1 <= b[0] and b[2] <= a[2] + 1 \
+                        and 1.0 < abs(a[1] - b[1]) < 2.2 * S and has_num(a) and has_num(b):
+                    raise Unsure('nested fraction')
         used = set()
         toks = []
         for bb in sorted(bars, key=lambda b: (b[1], b[0])):

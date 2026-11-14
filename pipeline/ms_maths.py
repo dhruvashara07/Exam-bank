@@ -174,7 +174,43 @@ def _cell(items, c0, c1, n0, n1, align='left'):
     left = min(i.x0 for i in items)
     lead = max(1.5, min(left - c0, PAD + 2))
     out, extra = [], 0.0
+    # a paragraph printed over several lines (the printed column was wider than ours) is re-flowed as one: its lines are
+    # joined when they hold only text, start at the same indent and the line before ran to the cell's right side (round 27,
+    # 2014 MJ 62 q2(b): 'previous / numerator.' broken lines)
+    def plain(ln):
+        return all(i.kind == 't' for i in ln['its'])
+    k = 0
+    while k < len(lines) - 1 and align != 'right':
+        a, b = lines[k], lines[k + 1]
+        lh_ = a['y1'] - a['y0']
+        ax0, ax1 = min(i.x0 for i in a['its']), max(i.x1 for i in a['its'])
+        bx0 = min(i.x0 for i in b['its'])
+        if plain(a) and plain(b) and abs(ax0 - bx0) < 3 and b['y0'] - a['y1'] < 0.6 * lh_ and ax1 > c1 - 0.3 * (c1 - c0) \
+                and (ax1 - ax0) > width * 0.6:
+            a.setdefault('parts', [dict(a, its=list(a['its']))]).append(b)
+            a['its'] = a['its'] + b['its']; a['y1'] = b['y1']
+            del lines[k + 1]
+            continue
+        k += 1
     for ln in lines:
+        if ln.get('parts'):                            # re-flow: chunks one after the other, a space between words
+            first = ln['parts'][0]
+            lh = first['y1'] - first['y0']
+            pitch = (ln['parts'][1]['y0'] - first['y0']) if len(ln['parts']) > 1 else lh + 2.0
+            x, row = 0.0, 0
+            for j, part in enumerate(ln['parts']):
+                for ch in _chunks(part['its']):
+                    w_ = ch['x1'] - ch['x0']
+                    sp_ = 0.0 if x == 0 else 0.25 * 11.0
+                    if x and x + sp_ + w_ > width + 0.5:
+                        row += 1; x, sp_ = 0.0, 0.0
+                    dx = n0 + lead + x + sp_ - ch['x0']
+                    dy = extra + (first['y0'] + row * pitch) - part['y0']
+                    for it in ch['its']:
+                        out.append((it, dx, dy, 1.0, ch['x0']))
+                    x += sp_ + w_
+            extra += (first['y0'] + row * pitch + lh) - ln['y1']
+            continue
         chunks = _chunks(ln['its'])
         rel0 = chunks[0]['x0'] - left                  # this printed line's indent in its cell
         vis = [{'chs': [], 'shift': 0.0}]

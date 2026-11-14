@@ -49,6 +49,9 @@ the minimum; record each in the batch log.
       question overlapping or one inside another (round 27: '2 images'), no stray line of a neighbour inside a crop.
    2d font check: one family per mark scheme (header, labels, answers, marks, partial marks), bold/italic kept.
    2e LaTeX: `maths_tex` check ok or picture; look at every part that fell back.
+      KaTeX and the character check test form, not meaning (pattern 89): for every part with stacked maths (fraction
+      bars, brackets over several lines, tables) read the LaTeX against the page; anything nested or tabular that
+      is not read exactly goes to the picture (`maths_tex.Unsure`).
    2f fix every hit as a pattern (ERROR_PATTERNS), rebuild once, run 2a-2e again.
 `batch_log.py phase M1 claude1 end`; push (`pipeline/push.sh`).
 

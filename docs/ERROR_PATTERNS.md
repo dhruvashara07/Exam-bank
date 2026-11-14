@@ -222,3 +222,18 @@ Fixes made in the same chat (2026-11-13, before the re-check round):
 Known open: 2025 MJ 53 q3 (the part boundary cuts through the pyramid diagram); 2014 MJ 43 q3(b) inequality signs of
 the 2014 symbol font not read in the mark scheme; 2014 MJ 62 p4 kept as pictures (broken text layer); 6 questions still on
 the old MS paths (2014 MJ 22 q2, 43 q9, 2019 ON 11/12 q8, 23 q3, 62 q5).
+86. 2014 maths fonts are nameless subsets ('TT1F0CAo00'): bold labels, marks and codes (M1, B1, FT) were drawn regular
+    (store verify: 2-8 % ink missing in 2014 MS rows). -> `store_text.nameless_bold`: a font is bold when its printed
+    letter widths match Times Bold better than Times Roman (cached per document). Found by PLAYBOOK 2a (store verify),
+    not by Dhruv: the strict checks work.
+87. Equation editors put the operators of one formula ('−', '×') in ONE text run, far apart: the run was drawn as a
+    stretched word over the digits (maths_check ms_overlap '−×' / '2'). -> maths: a run is split at a gap > 1.5 pt.
+88. A long mark-scheme answer printed over several lines (the printed Answer column is wider than ours) was wrapped
+    line by line: ragged lines ('previous / numerator.'). -> `ms_maths._cell` joins text-only lines with the same indent,
+    a normal gap and a full previous line into one paragraph and re-flows it in our column (MS_TABLE_RULES 26).
+89. Nested / continued fractions (n/(1 + n/(1 + n))) were turned into flat LaTeX that passed KaTeX AND the character
+    check: both checks test form, not meaning. -> `maths_tex`: a shorter fraction bar inside an outer one with text over
+    both = 'nested fraction' -> the part is shown as the printed picture. Found only because Dhruv asked how the sequence
+    was treated: PLAYBOOK 2c now asks to compare the LaTeX of every part with a stacked layout against the page.
+90. Ruled tables inside question text were read as one jumbled LaTeX line. -> `maths_tex`: >= 3 column rules and >= 3 row
+    rules in a unit = 'table' -> printed picture (105 parts in M0). Printed layout (store units) was never affected.

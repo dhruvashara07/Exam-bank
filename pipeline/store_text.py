@@ -64,6 +64,38 @@ MATHS_GLYPHS = {
 }
 
 
+_NB = {}
+
+
+def nameless_bold(doc, font):
+    """2014 maths: subset fonts named 'TT1F0C1o00' carry no weight. Bold or regular Times, read from the printed widths of
+    the font's letters against Times Roman and Times Bold (round 27: bold labels / marks / 'M1' drawn regular)."""
+    key = (doc.name, font)
+    if key in _NB:
+        return _NB[key]
+    if (doc.name, None) not in _NB:
+        import fitz
+        tr, tb = fitz.Font('tiro'), fitz.Font('tibo')
+        acc = {}
+        for page in doc:
+            for b in page.get_text('rawdict')['blocks']:
+                for l in b.get('lines', []):
+                    if abs(l['dir'][1]) > 0.01:
+                        continue
+                    for sp in l['spans']:
+                        fn = sp['font']
+                        for c in sp['chars']:
+                            ch = c['c']
+                            if ch in 'abcdefghknoprstuyABDEGHKNPRSU' and sp['size'] > 4:
+                                w = (c['bbox'][2] - c['bbox'][0]) / sp['size']
+                                a = acc.setdefault(fn, [0.0, 0.0, 0])
+                                a[0] += abs(w - tr.glyph_advance(ord(ch))); a[1] += abs(w - tb.glyph_advance(ord(ch))); a[2] += 1
+        for fn, (dr, db, n) in acc.items():
+            _NB[(doc.name, fn)] = n >= 3 and db < 0.6 * dr
+        _NB[(doc.name, None)] = True
+    return _NB.get(key, False)
+
+
 def maths_doc(doc):
     """True for a maths paper (syllabus with maths_text): its cleaned PDF path holds /<syllabus>/<year>-<session>/."""
     m = re.search(r'/(\d{4})/\d{4}-[A-Z]{2}/', (doc.name or '').replace('\\', '/'))
