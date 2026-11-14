@@ -22,6 +22,13 @@ Only then start. Skip the other docs unless a step points to them.
 | 4 | review round on the same review page; tell Dhruv | Dhruv | `phase <b> review ...` (not counted) |
 | 5 | fix what he marked wrong, rebuild, approve, docs, push | Claude | `phase <b> fix ...`, `tokens`, `report` |
 
+## 2b. Standing rules (Dhruv 2026-11-13)
+- Every new error pattern or rule: update the respective doc (ERROR_PATTERNS / MS_TABLE_RULES / MATHS_PLAN / PLAYBOOK)
+  AND the batch-cycle skill at once, without being asked (propose the skill change with the skill tool).
+- Loops cost tokens: a check or fix that does not converge after 3 attempts on the same pattern is written down as
+  a known open item (PROGRESS + ERROR_PATTERNS) and the work moves on. Long jobs run in the background with generous
+  time limits (run.py ~10 min for 60 papers) and are polled with sleeps, never restarted while still running.
+
 ## 3. Never
 - push with `git push` (use `pipeline/push.sh "msg"`; only `pipeline/store_pdfs.sh` pushes its own store-* branch);
 - change physics (golden check 0 changed cuts; nothing under `0625-physics` in `git status`);

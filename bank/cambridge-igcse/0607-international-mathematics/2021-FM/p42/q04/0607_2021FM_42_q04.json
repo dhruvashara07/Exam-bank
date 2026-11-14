@@ -33,10 +33,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "no mark scheme for 4(b)(iii)"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -359,11 +357,9 @@
      "mark_scheme": [
       {
        "label": "4(b)(ii)",
-       "text": "Correct cumulative frequency\ncurve\n124 to 127 nfww\n14 to 21",
+       "text": "Correct cumulative frequency\ncurve",
        "codes": [
-        "3",
-        "1",
-        "2"
+        "3"
        ],
        "segments": [
         {
@@ -372,7 +368,7 @@
           32.099998474121094,
           466.3,
           563.1600341796875,
-          600.5
+          551.6
          ]
         }
        ]
@@ -469,6 +465,44 @@
      "text": "Use your cumulative frequency curve to estimate\n(a) the median,\n.............................................. g [1]\n(b) the interquartile range.\n.............................................. g [2]",
      "marks": 3,
      "path": "4(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(iii)(a)",
+       "text": "124 to 127 nfww",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          32.099998474121094,
+          553.9,
+          563.1600341796875,
+          576.0
+         ]
+        }
+       ]
+      },
+      {
+       "label": "4(b)(iii)(b)",
+       "text": "14 to 21",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          32.099998474121094,
+          578.4,
+          563.1600341796875,
+          600.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",

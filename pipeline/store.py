@@ -109,7 +109,9 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
             dx, dy = l['dir'][0] * m.a + l['dir'][1] * m.c, l['dir'][0] * m.b + l['dir'][1] * m.d
             for s in l['spans']:
                 font = s['font']
-                if any(odd(c['c'], font) for c in s['chars']):
+                if any(odd(c['c'], font) for c in s['chars']) or (MATHS and re.search(r'mt\s*extra', font.lower())
+                                                                    and any(c['c'] in 'JGFH' for c in s['chars'])):
+                    # (maths: MT Extra draws vector arrows from letter codes 'JJG' - kept as drawn glyphs, round 27)
                     # a symbol we cannot write as a character (dingbat ✓ ✗, unknown code): keep its drawn shape
                     for c in s['chars']:
                         if not c['c'].strip() and ord(c['c'][0]) >= 32:
@@ -141,6 +143,8 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
                         # below, 2026 MJ 41 q7(b)(iii): one PDF run over two lines)
                         if cur and abs(c['origin'][1] - cur[-1]['origin'][1]) > 2.5 and abs(dy) < 0.01:
                             runs.append(cur); cur = []
+                        elif MATHS and cur and abs(dy) < 0.01 and c['bbox'][0] - cur[-1]['bbox'][2] > 1.5:
+                            runs.append(cur); cur = []   # equation editors put '−' '×' of a formula in one run, far apart
                         cur.append(c)
                     elif cur:
                         runs.append(cur); cur = []
@@ -169,6 +173,8 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
                     x, y = tp(m, *chars[0]['origin'])
                     w = {'t': ''.join(unpua(c['c']) for c in chars), 'x': round(x - ox, 2), 'y': round(y - oy, 2),
                          'w': round(span_len(chars, l['dir']), 2), 's': round(s['size'], 2), 'f': FAM[family(font)]}
+                    if MATHS and w['f'] == 'sans' and re.match(r'TT[0-9A-F]+o00$', font.split('+')[-1]) and (s['flags'] & 4):
+                        w['f'] = 'serif'           # 2014 maths: nameless subset fonts are Times (the font's serif flag)
                     if len(w['t']) == 1 and (w['t'].isalpha() or (w['t'] in '[]{}<>\\^_|~`@#' and _old_doc(doc))) and re.search(r'TT[0-9A-F]+o00$', font):
                         # (a bracket too: '[' draws '≥' in 2011 ON 51's symbol subset, round 26)
                         from store_text import glyph_remap   # a re-encoded symbol ('R' drawn as '=', 2014 MJ 63)
@@ -273,6 +279,24 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
             pix.save(os.path.join(store, 'figures', name))
         u.setdefault('images', []).append({'file': name, 'x': round(r.x0 - ox, 2), 'y': round(r.y0 - oy, 2),
                                             'w': round(r.width, 2), 'h': round(r.height, 2)})
+    if MATHS:                                     # 2014 maths: dotted answer lines are rows of tiny pictures: dots as text
+        tiny = sorted(((fitz.Rect(i['bbox']).quad * m).rect for i in page.get_image_info()
+                       if i['bbox'][2] - i['bbox'][0] < 5 and i['bbox'][3] - i['bbox'][1] < 3), key=lambda r: (round(r.y1), r.x0))
+        runs_ = []
+        for r in tiny:
+            if not inside(r) or in_fig(r):
+                continue
+            if runs_ and abs(runs_[-1][-1].y1 - r.y1) < 0.6 and r.x0 - runs_[-1][-1].x1 < 2:
+                runs_[-1].append(r)
+            else:
+                runs_.append([r])
+        for rn in runs_:
+            if len(rn) < 5:
+                continue
+            x0_, x1_, yb = rn[0].x0, rn[-1].x1, max(r.y1 for r in rn)
+            n_ = max(1, int((x1_ - x0_) / 2.75))
+            u['text'].append({'t': '.' * n_, 'x': round(x0_ - ox, 2), 'y': round(yb - oy, 2), 'w': round(x1_ - x0_, 2),
+                              's': 11.0, 'f': 'serif'})
     # shapes filled with a tiled picture (hatched circles = protons, 2019 ON 41 q9): the tiles cannot be placed, so each such
     # small filled shape is kept as a picture of itself (ring + hatching), drawn over its outline
     if any(i['bbox'][2] - i['bbox'][0] < 8 and i['bbox'][3] - i['bbox'][1] < 8 for i in page.get_image_info()):

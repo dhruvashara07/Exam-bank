@@ -329,6 +329,9 @@ def _line(ws, S):
         glued = (mrun and not gap and re.fullmatch(r'[.,:]', w['t']) and nxt is not None and is_mathy(nxt)
                  and nxt['x'] - (w['x'] + w['w']) < 0.18 * S)          # '3.2' printed as '3' '.' '2'
         if is_mathy(w) or glued:
+            g_ = w['x'] - (prev['x'] + prev['w']) if prev is not None else 0
+            if mrun and not gap and 0.6 < g_ and re.fullmatch(r'[\d.]+', w['t']) and re.fullmatch(r'[\d.]+', prev['t']):
+                mrun.append(r'\,')                    # digits grouped with a thin space ('0.003 094 8', round 27)
             if gap and mrun:
                 mrun.append(r'\quad ' if w['x'] - (prev['x'] + prev['w']) > 2.2 * S else ' ')
             elif gap and out and not mrun:
@@ -404,6 +407,7 @@ def chars_in(blocks):
     s = re.sub(r'\\[()]|\\quad', ' ', s)
     s = re.sub(r'\\(begin|end)\{pmatrix\}', '', s)
     rev = {v.strip(): k for k, v in SYM.items() if v.startswith('\\')}
+    s = s.replace('\\,', '')
     s = re.sub(r'\\(sin|cos|tan|log|ln)\b', r'\1', s)
     s = re.sub(r'\\[A-Za-z]+', lambda m: rev.get(m.group(0), ''), s)
     return re.sub(r'[\s{}^_\\&…]', '', s)

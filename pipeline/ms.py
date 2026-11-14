@@ -228,6 +228,7 @@ def structured_rows_table(doc):
             bottom = min(bottom, max(vb) + 1)
         qcol = [l for l in lines if l['x0'] < QX and top <= l['y0'] <= bottom]
         labels = [l for l in qcol if LABEL.match(label_text(l['text'])) or (rows and NONUM.match(label_text(l['text'])))
+                  or (MATHS and SUB4.match(label_text(l['text'])))
                   or (MATHS and COMM.match(l['text']))]
         if not labels and not current:
             continue
@@ -269,13 +270,16 @@ def structured_rows_table(doc):
                 text = label_text(lab['text'])
                 if NONUM.match(text) and current:
                     text = str(current['path'][0]) + text
+                sub4 = SUB4.match(text) if MATHS else None   # '4(b)(iii)(a)': a fourth level, part of 4(b)(iii) (2021 FM 42)
+                if sub4:
+                    text = sub4.group(1)
                 m = LABEL.match(text)
                 path = (int(m.group(1)),) + tuple(g.strip('()') for g in m.groups()[1:3] if g)
                 extra = [x for x in m.group(4).split(',') if x]        # ',(ii),(iii)'
                 if m.group(5) and current and current['path'] == path:
                     pass                                               # numbered item: same row continues
                 else:
-                    label = str(path[0]) + ''.join(f'({x})' for x in path[1:])
+                    label = str(path[0]) + ''.join(f'({x})' for x in path[1:]) + (sub4.group(2) if sub4 else '')
                     current = {'label': label, 'path': path, 'segments': [], 'text': '', 'marks_codes': [],
                                'also': [path[:-1] + (x.strip('()'),) for x in extra]}
                     rows.append(current)
@@ -299,6 +303,7 @@ def structured_rows_table(doc):
     return rows
 
 
+SUB4 = re.compile(r'^(\d{1,2}\([a-z]\)\([ivx]+\))(\([a-z]\))$')     # maths: 4(b)(iii)(a)
 COMM = re.compile(r'^Communication(?::|\s+seen)')     # maths investigation papers: communication marks (ERROR_PATTERNS 67)
 
 

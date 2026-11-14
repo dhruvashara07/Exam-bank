@@ -88,9 +88,13 @@ class _Item:
 def _items(u, edges):
     """Every piece of ink of the row with its box, minus the table's own rules."""
     its = []
+    seen_t = []
     for t in u.get('text', []):
         if not t.get('t', '').strip():
             continue
+        if any(o['t'] == t['t'] and abs(o['x'] - t['x']) < 1.2 and abs(o['y'] - t['y']) < 1.2 for o in seen_t):
+            continue                                    # text printed twice (2014 MJ 62 p4)
+        seen_t.append(t)
         s = t.get('s', 11)
         its.append(_Item('t', t, t['x'], t['y'] - 0.78 * s, t['x'] + t['w'], t['y'] + 0.22 * s))
     for k in ('glyphs', 'images'):
@@ -113,12 +117,20 @@ def _items(u, edges):
             continue
         if b[3] - b[1] > 0.9 * u['h'] and b[2] - b[0] > 0.9 * u['w']:
             continue                                    # a background box
+        if b[3] - b[1] < 1.3 and (b[1] < 2.5 or b[3] > u['h'] - 2.5):
+            continue                                    # a piece of the row's own top / bottom rule (round 27 stray lines)
+        if b[3] - b[1] < 1.3 and b[2] - b[0] > 25 and len(edges) >= 2 and b[0] >= edges[1] - 1 and not any(
+                t.get('t', '').strip() and t['x'] < b[2] and t['x'] + t['w'] > b[0] and 0 <= b[1] - t['y'] < 9
+                for t in u.get('text', [])):
+            continue                                    # a long line with nothing written over it: a cell rule
         its.append(_Item('lines', l, b[0], b[1], b[2], b[3]))
     return its
 
 
 def _lines_of(items):
-    """Printed lines: items whose vertical extents overlap (fractions and brackets join their line)."""
+    """Printed lines: items whose vertical extents overlap (fractions and brackets join their line). A band holding
+    only drawings (a fraction bar, a vector arrow) joins the bands right above and below it (numerator / letters),
+    and so does a band of small raised text (powers) - round 27, ERROR_PATTERNS 77."""
     rows = []
     for it in sorted(items, key=lambda i: i.y0):
         h = it.y1 - it.y0
@@ -126,6 +138,19 @@ def _lines_of(items):
             rows[-1]['its'].append(it); rows[-1]['y1'] = max(rows[-1]['y1'], it.y1)
         else:
             rows.append({'its': [it], 'y0': it.y0, 'y1': it.y1})
+    def drawn(b):
+        return all(i.kind == 'lines' for i in b['its'])
+    base = max([i.ref.get('s', 11) for i in items if i.kind == 't'] or [11])
+    def small(b):
+        ts = [i for i in b['its'] if i.kind == 't']
+        return ts and all(i.ref.get('s', 11) < 0.85 * base for i in ts)
+    k = 0
+    while k < len(rows) - 1:
+        a, b = rows[k], rows[k + 1]
+        if (drawn(a) or drawn(b) or small(a)) and b['y0'] - a['y1'] < 4.0:
+            a['its'] += b['its']; a['y1'] = max(a['y1'], b['y1']); del rows[k + 1]
+            continue
+        k += 1
     return rows
 
 
@@ -178,8 +203,35 @@ def _cell(items, c0, c1, n0, n1, align='left'):
     return out, bottom, min(i.y0 for i in items)
 
 
-def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW):
+def _scaled_unit(u, K):
+    """The whole printed row at K times its size (so its normal text is 11 pt, MS_TABLE_RULES 25)."""
+    if abs(K - 1) < 0.04:
+        return dict(u, _K=1.0)
+    v = dict(u, w=round(u['w'] * K, 2), h=round(u['h'] * K, 2), _K=K)
+    v['text'] = [dict(t, x=round(t['x'] * K, 2), y=round(t['y'] * K, 2), w=round(t['w'] * K, 2), s=round(t.get('s', 11) * K, 2))
+                 for t in u.get('text', [])]
+    def sp(d):
+        out = []
+        for cmd, args in re.findall(r'([A-Za-z])([^A-Za-z]*)', d):
+            n = [float(x) * K for x in NUM.findall(args)]
+            out.append(cmd + ' '.join(f'{a:.2f}' for a in n))
+        return ''.join(out)
+    v['lines'] = [dict(l, d=sp(l['d']), **({'sw': round(l['sw'] * K, 2)} if 'sw' in l else {})) for l in u.get('lines', [])]
+    for k in ('glyphs', 'images'):
+        if u.get(k):
+            v[k] = [dict(g, x=round(g['x'] * K, 2), y=round(g['y'] * K, 2), w=round(g['w'] * K, 2), h=round(g['h'] * K, 2)) for g in u[k]]
+    if u.get('figs'):
+        v['figs'] = [dict(f, x=round(f['x'] * K, 2), y=round(f['y'] * K, 2), k=round(f.get('k', 1) * K, 4)) for f in u['figs']]
+    return v
+
+
+def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, base=None):
     """One printed row unit -> our row unit, or None when its columns cannot be read."""
+    if base:
+        K = 11.0 / base
+        u = _scaled_unit(u, K)
+        if hint:
+            hint = ([x * K for x in hint[0]], hint[1] * K)
     edges = columns(u)
     if hint and (not edges or len(edges) != len(hint)) and abs(u['w'] - hint[1]) < 2:
         edges = list(hint[0])                            # a graph / grid in the row hides its column rules: same table
@@ -191,7 +243,7 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW):
     A = (W - QW - MW) / 2 if ncols == 4 else W - QW - MW
     ours = [(0.0, QW), (QW, QW + A), (QW + A, QW + A + MW), (QW + A + MW, W)]
     its = _items(u, edges[:3])
-    if not any(i.kind != 'lines' for i in its):
+    if not any(i.kind != 'lines' and not (i.kind == 't' and re.fullmatch(r'[.\s…_-]+', i.ref['t'])) for i in its):
         return 'empty'                                   # only rules left (the end of a table on a page): no row
     by = [[], [], [], []]
     for it in its:
@@ -204,6 +256,26 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW):
     for c in (1, 2, 3):
         if c == 3 and ncols == 3:
             by[1] += by[3]; continue
+        if (_picture_cell(by[c]) or u['src']['page'] in CTX.get('broken', ())) and by[c] and CTX.get('pdf'):   # a diagram / shaded sketch in the cell: its printed picture (pattern 78)
+            dr = [i for i in by[c] if i.kind != 't' and not (i.kind == 'lines' and i.y1 - i.y0 < 1.6 and i.x1 - i.x0 < 80)] or by[c]
+            px0, py0 = min(i.x0 for i in dr), min(i.y0 for i in dr)
+            px1, py1 = max(i.x1 for i in dr), max(i.y1 for i in dr)
+            inpic = [i for i in by[c] if px0 - 14 <= (i.x0 + i.x1) / 2 <= px1 + 14 and py0 - 12 <= (i.y0 + i.y1) / 2 <= py1 + 12
+                     and not (i.kind == 't' and len(i.ref['t']) > 12 and (i.y1 < py0 or i.y0 > py1))]   # axis labels go with it
+            rest = [i for i in by[c] if i not in inpic]
+            shift, tb = 0.0, None
+            if rest:                                     # text around the picture ('Correct diagram') laid out as text
+                above = [i for i in rest if i.y1 <= py0 + 1]
+                placed, tb, _ = _cell(rest, cells_src[c][0], cells_src[c][1], ours[c][0], ours[c][1])
+                for it, dx, dy, k, x0 in placed:
+                    _emit(v, it, dx, dy, k, x0)
+                if above:
+                    pl_ab = [p_ for p_ in placed if p_[0] in above]
+                    shift = max([p_[2] for p_ in pl_ab] + [0.0])
+            bot = _cell_picture(v, u, inpic, cells_src[c], ours[c], (px0, py0 + shift, px1, py1), shift)
+            if bot is not None:
+                bottoms.append(max(bot, tb or 0))
+                continue
         placed, bot, _ = _cell(by[c], cells_src[c][0], cells_src[c][1], ours[c][0], ours[c][1],
                                align='right' if c == 2 else 'left')
         for it, dx, dy, k, x0 in placed:
@@ -228,8 +300,71 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW):
         xs = [QW, QW + A]
     for x in xs:
         v['lines'].append({'d': f'M{x - 0.3:.2f} 0.00L{x + 0.3:.2f} 0.00L{x + 0.3:.2f} {v["h"]:.2f}L{x - 0.3:.2f} {v["h"]:.2f}Z', 'fill': '#000000'})
+    if fam:                                          # one font for question and mark scheme (Dhruv, round 27)
+        for t in v['text']:
+            if t.get('f') in ('serif', 'sans'):
+                t['f'] = fam
     v['info'] = {'edges': edges, 'new_edges': xs, 'new_w': [QW, A, MW] + ([A] if ncols == 4 else [])}
     return v
+
+
+CTX = {}
+
+
+def _picture_cell(items):
+    """A cell whose content is a drawing (Venn diagram, sketch, shaded region, picture) rather than text + fraction bars,
+    or whose text layer is broken (words drawn over each other, 2014 MJ 62 p4)."""
+    if any(i.kind in ('images', 'figs') for i in items):
+        return True
+    ts = [i for i in items if i.kind == 't' and i.x1 - i.x0 > 2]
+    clash = sum(1 for k, a in enumerate(ts) for b in ts[k + 1:]
+                if abs(a.ref['y'] - b.ref['y']) < 3.0 and min(a.x1, b.x1) - max(a.x0, b.x0) > 0.4 * min(a.x1 - a.x0, b.x1 - b.x0))
+    if clash >= 2:
+        return True
+    # curves / slanted strokes bigger than a root sign (Venn circles, sketches, arrows of a mapping) or a large shaded
+    # area; ruled inner tables (straight rules only) stay text (MS_TABLE_RULES 9)
+    curvy = [i for i in items if i.kind == 'lines' and ('C' in i.ref.get('d', '') or _slanted(i.ref.get('d', '')))
+             and (i.x1 - i.x0) > 30 and (i.y1 - i.y0) > 30]
+    shaded = [i for i in items if i.kind == 'lines' and i.ref.get('fill') and i.ref.get('fill', '').lower() not in ('#000000', '#ffffff', '#231f20')
+              and (i.x1 - i.x0) * (i.y1 - i.y0) > 400]
+    grid = [i for i in items if i.kind == 'lines' and not (i.y1 - i.y0 < 1.6 and i.x1 - i.x0 < 60)]
+    return bool(curvy) or bool(shaded) or len(grid) >= 15    # a graph / grid drawn with straight lines
+
+
+def _slanted(d):
+    pts = [(float(a), float(b)) for a, b in re.findall(r'[ML]\s*(-?[\d.]+)[ ,](-?[\d.]+)', d)]
+    return any(abs(p[0] - q[0]) > 1 and abs(p[1] - q[1]) > 1 for p, q in zip(pts, pts[1:]))
+
+
+def _cell_picture(v, u, items, src, ours, region=None, shift=0.0):
+    """Render the cell's printed region from the PDF as one picture (white transparent), placed at the cell's top, shrunk
+    to the column (never below 60 %; MS_TABLE_RULES 13). Returns the bottom y."""
+    import os, fitz
+    from PIL import Image
+    K = u.get('_K', 1.0)
+    x0, x1 = max(src[0] + 1.0, min(i.x0 for i in items) - 1.5), min(src[1] - 1.0, max(i.x1 for i in items) + 1.5)
+    y0 = max(0.5, min(i.y0 for i in items) - 1.5); y1 = min(u['h'] - 0.5, max(i.y1 for i in items) + 1.5)
+    b = u['src']['box']
+    r = fitz.Rect(b[0] + x0 / K, b[1] + y0 / K, b[0] + x1 / K, b[1] + y1 / K)
+    doc = CTX.setdefault('doc', fitz.open(CTX['pdf']))
+    pix = doc[u['src']['page'] - 1].get_pixmap(clip=r, dpi=220)
+    im = Image.frombytes('RGB', (pix.width, pix.height), pix.samples).convert('RGBA')
+    im.putdata([(a, b_, c, 0 if a > 245 and b_ > 245 and c > 245 else 255) for a, b_, c, _ in im.getdata()])
+    box = im.getbbox()
+    if not box:
+        return None
+    im = im.crop(box)
+    name = f"msimg_{u['src']['page']}_{int(r.x0)}_{int(r.y0)}.png"
+    im.save(os.path.join(CTX['store'], 'figures', name))
+    w, h = im.width / 220 * 72 * K, im.height / 220 * 72 * K
+    room = ours[1] - ours[0] - 2 * PAD
+    k = min(1.0, room / w) if w else 1.0
+    k = max(k, 0.6)
+    x = ours[0] + PAD + max(0.0, (x0 + box[0] / 220 * 72 * K - src[0] - PAD)) if k == 1.0 else ours[0] + PAD
+    x = min(x, ours[1] - PAD - w * k)
+    y = y0 + shift + box[1] / 220 * 72 * K
+    v.setdefault('images', []).append({'file': name, 'x': round(x, 2), 'y': round(y, 2), 'w': round(w * k, 2), 'h': round(h * k, 2)})
+    return y + h * k
 
 
 def _emit(v, it, dx, dy, k, x0):
@@ -260,6 +395,30 @@ def _emit(v, it, dx, dy, k, x0):
 
 def build(q, uniq, store, hdr_unit, own_total, frame):
     """All rows of one maths question -> ms_p dict, or None to let the general path try."""
+    import os
+    CTX.clear()
+    try:
+        import paths
+        from run import cleaned
+        pp = q['paper']; ses = pp['session']; pv = pp['code'].split('/')[1]
+        raw = os.path.join(paths.ROOT, 'raw', pp['syllabus'], ses, f'ms_{pv}.pdf')
+        if os.path.exists(raw):
+            CTX.update(pdf=cleaned(raw), store=store)
+    except Exception:
+        pass
+    import collections
+    fc = collections.Counter(t.get('f') for p in q.get('parts', []) for un in p.get('layout', []) for t in un.get('text', [])
+                             if t.get('f') in ('serif', 'sans'))
+    fam = fc.most_common(1)[0][0] if fc else None
+    sz = sorted(t.get('s', 11) for _, u in uniq for t in u.get('text', []) if t.get('t', '').strip() and t.get('s', 11) >= 7)
+    base = sz[len(sz) // 2] if sz else 11.0             # the scheme's normal text size -> ours is 11 pt
+    uniq = [(r, _scaled_unit(u, 11.0 / base)) for r, u in uniq]
+    pages = collections.defaultdict(int)             # a page whose text layer is broken (words drawn over each other):
+    for _, u in uniq:                                # every cell on it is kept as its printed picture (2014 MJ 62 p4)
+        ts = [t for t in u.get('text', []) if t.get('t', '').strip() and t['w'] > 2]
+        pages[u['src']['page']] += sum(1 for k, a in enumerate(ts) for b in ts[k + 1:] if a['t'] != b['t']
+                                       and abs(a['y'] - b['y']) < 3 and min(a['x'] + a['w'], b['x'] + b['w']) - max(a['x'], b['x']) > 0.5 * min(a['w'], b['w']))
+    CTX['broken'] = {p for p, n in pages.items() if n >= 6}
     cols = [(columns(u), u['w']) for _, u in uniq]
     ncols = 4 if any(len(c or []) == 3 for c, _ in cols) else 3
     good = [(c, w) for c, w in cols if c and len(c) == ncols - 1]
@@ -269,7 +428,7 @@ def build(q, uniq, store, hdr_unit, own_total, frame):
     for r, u in uniq:
         if u['h'] < 4:
             continue
-        v = layout_row(u, r['label'], ncols, first_unit=r['label'] not in seen_lab, hint=hint, QW=qw)
+        v = layout_row(u, r['label'], ncols, first_unit=r['label'] not in seen_lab, hint=hint, QW=qw, fam=fam)
         if v == 'empty':
             continue
         if v is None:
@@ -283,9 +442,16 @@ def build(q, uniq, store, hdr_unit, own_total, frame):
         v.pop('info', None)
         frame(v)
     first = {'edges': info['edges'], 'new_edges': info['new_edges'], 'new_w': info['new_w']}
-    rows = ([hdr_unit(first, ncols)] if hdr_unit else []) + out
+    rows = ([hdr_unit(first, ncols, fam)] if hdr_unit else []) + out
     tot = own_total(q.get('marks'), first, out) if q.get('marks') else None
     if tot:
+        for t in tot['text']:                        # the total row in our normal size (its template can be a tiny axis label)
+            t.update(s=11.0, b=1, w=round(0.55 * 11.0 * len(t['t']), 2), **({'f': fam} if fam else {}))
+            t.pop('i', None)
+        tw = tot['text']
+        if len(tw) == 2:
+            tw[0]['x'] = round(first['new_edges'][1] - 6 - tw[0]['w'], 2)
+            tw[1]['x'] = round(first['new_edges'][2] - 6 - tw[1]['w'], 2) if len(first['new_edges']) > 2 else tw[1]['x']
         frame(tot)
         rows.append(tot)
     if hdr_unit:

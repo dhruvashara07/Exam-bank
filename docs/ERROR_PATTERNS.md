@@ -205,3 +205,20 @@ Known: 2010 MJ 13, 23, 53 have no mark scheme file at all. MCQ labels cut at the
 83. A MS row missing: 2021 FM 42 q4(b)(iii) has a row in the printed scheme -> parse check per part (2b).
 84. Digits of a number printed with thin spaces ('0.003 094 8') drawn with a gap too wide (2025 MJ 21 q2, q3).
 85. Question tables (2019 ON 61 q3(b)) and 2019 ON 52 q3 render problems in the rebuilt question -> 2a.
+Fixes made in the same chat (2026-11-13, before the re-check round):
+- 76: 2014 dotted answer lines are rows of tiny pictures -> drawn as dots (store, maths); 2014 nameless 'TT..o00' fonts
+  are Times -> serif by the font's serif flag (the rebuilt 2014 questions were in a sans font).
+- 77: ms_maths bands: a drawing-only band (fraction bar, vector arrow) and a band of small raised text join their
+  neighbours; MT Extra arrows ('JJG') are drawn glyphs; mark scheme scaled so its normal text is 11 pt.
+- 78: ms_maths picture cells: curves/sketches/shaded areas (> 30 pt) and pages with a broken text layer are kept as the
+  printed picture of the cell (axis labels with it); ruled inner tables stay text.
+- 79: row-edge rule pieces and long lines in Marks / Partial Marks with nothing written over them dropped.
+- 80: one font: the question paper's family for the whole table (header, labels, marks, Total), 11 pt.
+- 81/82: diagram crops: 'NOT TO SCALE' always taken (up to 200 pt away), sentences on a crop's edge cut off, a line of a
+  part label is question text, crops touching across a part boundary merged, light grids (< 253) grown.
+- 83: '4(b)(iii)(a)' (a 4th level) read as a row of 4(b)(iii) with its full label (ms.SUB4, maths).
+- 84: digits grouped by thin spaces -> '\,' in LaTeX.
+- New tool `pipeline/maths_check.py` (ms_words, ms_overflow, ms_overlap, ms_font, fig_overlap, not_to_scale) - PLAYBOOK 2b-2d.
+Known open: 2025 MJ 53 q3 (the part boundary cuts through the pyramid diagram); 2014 MJ 43 q3(b) inequality signs of
+the 2014 symbol font not read in the mark scheme; 2014 MJ 62 p4 kept as pictures (broken text layer); 6 questions still on
+the old MS paths (2014 MJ 22 q2, 43 q9, 2019 ON 11/12 q8, 23 q3, 62 q5).

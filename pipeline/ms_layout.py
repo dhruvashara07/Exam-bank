@@ -1817,10 +1817,10 @@ def build(q, store):
     uniq.sort(key=lambda ru: (ru[1]['src']['page'], ru[1]['src']['box'][1]))   # the mark scheme's own order (2017 ON 41 q8: 8 Hydroelectric (a)(b)(c), 8 Tidal flow (a)(b)(c) ...)
     if MP.EQUAL_FLEX:                                 # maths: its own cell layout (pipeline/ms_maths.py, MS_TABLE_RULES 24)
         import ms_maths
-        def hdr_unit(first, ncols):
+        def hdr_unit(first, ncols, fam=None):
             names = ['Q', 'Answer', 'Marks', 'Partial Marks'][:ncols]
             fake = {'src': uniq[0][1]['src'], 'w': W, 'h': 22.0,
-                    'text': [{'t': n, 'x': 100.0 * k_, 'y': 15.0, 'w': 6.4 * len(n), 's': 11.0, 'f': 'sans', 'b': 1} for k_, n in enumerate(names)]}
+                    'text': [{'t': n, 'x': 100.0 * k_, 'y': 15.0, 'w': 6.4 * len(n), 's': 11.0, 'f': fam or 'sans', 'b': 1} for k_, n in enumerate(names)]}
             return _header_unit(fake, first)
         try:
             res = ms_maths.build(q, uniq, store, hdr_unit, _own_total, _frame)

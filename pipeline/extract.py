@@ -337,9 +337,27 @@ def _label_like(t, tb, box, text):
     s = t['text'].strip()
     if DOTS.search(t['text']) or MARK.fullmatch(s) or re.match(r'^\(?[a-z]\)|^\([ivx]+\)', s):
         return False
-    if not (len(s) <= 22 or (len(s) <= 40 and not s.endswith('.') and tb.intersects(box + (-4, -2, 4, 2)))):
+    if re.fullmatch(r'NOT\s+TO|SCALE|NOT TO SCALE', s):
+        return True
+    if _sentence(t, text):
+        return False                                 # a piece of a sentence ('Sketch the model for', round 27)
+    if not (len(s) <= 22 or (len(s) <= 40 and not s.endswith('.') and tb.intersects(box + (-4, -2, 4, 2)))
+            or re.fullmatch(r'(Diagram|Pattern|Shape|Figure)\s*\d+(\s+(Diagram|Pattern|Shape|Figure)\s*\d+)*', s)):
         return False
-    return not any(o is not t and abs(o['y0'] - t['y0']) < 2 and len(o['text'].strip()) > 22 for o in text)
+    return True
+
+
+def _sentence(t, text):
+    """True when the words on t's baseline read as a sentence (all pieces of that baseline together > 26 characters
+    with at least 4 words, or ending with a full stop after a word), not as labels."""
+    same = [o for o in text if abs(o['y0'] - t['y0']) < 2]
+    whole = ' '.join(o['text'].strip() for o in sorted(same, key=lambda o: o['x0']))
+    words = re.findall(r'[A-Za-z]{2,}', whole)
+    if re.fullmatch(r'((Diagram|Pattern|Shape|Figure|Row|Column)\s*\d+\W*\s*)+', whole.strip()):
+        return False
+    if re.match(r'^\(?[a-z]\)|^\((i|ii|iii|iv|v|vi)\)|^\d{1,2}\s+\(?[a-z]\)', whole.strip()):
+        return True                                  # the line of a part label: question text
+    return (len(whole) > 26 and len(words) >= 4) or bool(re.search(r'\S{2,}[.?]\s*$', whole.strip())) and len(whole) > 6
 
 
 def _grow_light(page, r, limit, exclude, Z=2.0):
@@ -347,7 +365,7 @@ def _grow_light(page, r, limit, exclude, Z=2.0):
     crosses its edges; sentences never pull it."""
     import numpy as np
     pix = page.get_pixmap(matrix=fitz.Matrix(Z, Z), colorspace=fitz.csGRAY)
-    m = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.height, pix.width) < 250
+    m = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.height, pix.width) < 253
     m = m.copy()
     for e in exclude:
         m[max(0, int((e.y0 - 1) * Z)):int((e.y1 + 1) * Z) + 1, max(0, int((e.x0 - 1) * Z)):int((e.x1 + 1) * Z) + 1] = False
@@ -443,7 +461,7 @@ def diagrams(doc, seg, lines, captioned):
         for _ in range(3):
             for t in text:
                 tb = fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1'])
-                if 'NOT TO SCALE' in t['text'] and tb.intersects(box + (-60, -20, 60, 20)):
+                if re.search(r'NOT TO SCALE|^NOT\s+TO$|^SCALE$', t['text'].strip()) and tb.intersects(box + (-200, -30, 200, 30)):
                     box |= tb
                 elif tb.intersects(box + (-14, -12, 14, 12)) and _label_like(t, tb, box, text):
                     box |= tb
@@ -457,7 +475,8 @@ def diagrams(doc, seg, lines, captioned):
                     box |= lb
         if any((box & tk).get_area() > 0.3 * box.get_area() for tk in taken):
             continue
-        prose = [fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']) for t in text if len(t['text'].strip()) > 22 or DOTS.search(t['text'])]
+        prose = [fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']) for t in text
+                 if len(t['text'].strip()) > 22 or DOTS.search(t['text']) or _sentence(t, text)]
         box = grow_to_ink(page, box, fitz.Rect(CONTENT_X0 - 5, y0s, CONTENT_X1 + 5, y1s), max_grow=120, exclude=prose)
         box = _grow_light(page, box, fitz.Rect(CONTENT_X0 - 5, y0s, CONTENT_X1 + 5, y1s), prose)   # light grey grids too
         grown = fitz.Rect(box)
@@ -473,11 +492,29 @@ def diagrams(doc, seg, lines, captioned):
                     box |= lb
         if box != grown:
             box = _grow_light(page, box, fitz.Rect(CONTENT_X0 - 5, y0s, CONTENT_X1 + 5, y1s), prose)
+        for t in text:                                  # a sentence touching the crop's top or bottom edge stays outside it
+            tb = fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1'])
+            if not tb.intersects(box) or not (_sentence(t, text) or len(t['text'].strip()) > 22) or DOTS.search(t['text']):
+                continue
+            if tb.y0 <= box.y0 + 14 and tb.y1 < box.y0 + 0.5 * box.height:
+                box.y0 = tb.y1 + 0.5
+            elif tb.y1 >= box.y1 - 14 and tb.y0 > box.y0 + 0.5 * box.height:
+                box.y1 = tb.y0 - 0.5
         for o in [o for o in out if fitz.Rect(o['bbox']).intersects(box)]:   # crops that overlap after taking labels: one
             box |= fitz.Rect(o['bbox']) + (3, 3, -3, -3)
             out.remove(o)
         out.append({'caption': None, 'page': seg['page'],
-                    'bbox': [round(box.x0 - 4, 1), round(max(box.y0 - 3, seg['y0']), 1), round(box.x1 + 6, 1), round(min(box.y1 + 3, seg['y1']), 1)]})
+                    'bbox': [round(box.x0 - 4, 1), round(max(box.y0 - 1, seg['y0']), 1), round(box.x1 + 6, 1), round(min(box.y1 + 1.5, seg['y1']), 1)]})
+    merged = True                                    # crops that touch or overlap are one diagram (round 27: '2 images')
+    while merged:
+        merged = False
+        for a in out:
+            for b in out:
+                if a is not b and (fitz.Rect(a['bbox']) + (-3, -3, 3, 3)).intersects(fitz.Rect(b['bbox'])):
+                    a['bbox'] = list(fitz.Rect(a['bbox']) | fitz.Rect(b['bbox'])); out.remove(b); merged = True
+                    break
+            if merged:
+                break
     return out
 
 
@@ -761,6 +798,11 @@ def extract(pdf_path, syllabus, year, session, pv):
         found = find_figures(doc, s, lines)
         if subjects.subject(syllabus)['maths_text']:      # maths diagrams carry no 'Fig.' caption (ERROR_PATTERNS 68)
             for k, f in enumerate(diagrams(doc, s, lines, found), 1):
+                near = [g for g in q['figures'] if g.get('kind') == 'diagram' and g['page'] == f['page'] + 1
+                        and (fitz.Rect(g['bbox']) + (-3, -3, 3, 3)).intersects(fitz.Rect(f['bbox']))]
+                if near:                                   # one drawing cut by a part boundary: one picture (round 27)
+                    near[0]['bbox'] = [round(v, 1) for v in fitz.Rect(near[0]['bbox']) | fitz.Rect(f['bbox'])]
+                    continue
                 label = ''.join(str(x) for x in s['path'][1:])
                 n_ = sum(1 for g in q['figures'] if g.get('kind') == 'diagram') + 1
                 f.update(id=f"{q['id']}{label}_diagram{n_}", page=f['page'] + 1, alt='', kind='diagram',

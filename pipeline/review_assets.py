@@ -87,7 +87,7 @@ def outline(node, depth=0):
     return rows
 
 
-def original(q, qp_path, dpi=72):
+def original(q, qp_path, dpi=144):
     doc = fitz.open(cleaned(qp_path))
     segs = walk(q)
     pages = sorted({s['page'] for _, s in segs} | {f['page'] for f in q['figures']})
@@ -137,19 +137,19 @@ def render_items(out_dir, items, reasons, byid=None):
         qp_path = paths.raw_pdfs(qid)[0]
         d = os.path.join(out_dir, qid); os.makedirs(d, exist_ok=True)
         imgs = {}
-        def save(name, im, width=900):
+        def save(name, im, width=1800):             # sharp review images (Dhruv, round 27: '2x', quality 88)
             if im is None:
                 return
             if im.width > width:
                 im = im.resize((width, round(im.height * width / im.width)), Image.LANCZOS)
-            im.save(os.path.join(d, name), quality=72, optimize=True)
+            im.save(os.path.join(d, name), quality=88, optimize=True)
             imgs[name.split('.')[0]] = f'{qid}/{name}'
         import store                   # what is checked is what students get: the stored question, redrawn
         sv = store.review_svgs(qid, os.path.join(ROOT, 'out', 'review_tmp'))
-        save('q.jpg', svg_img(sv['q']))
+        save('q.jpg', svg_img(sv['q'], 192))
         save('orig.jpg', original(q, qp_path))
         if 'ms' in sv:
-            save('ms.jpg', svg_img(sv['ms'], 110), width=1000)
+            save('ms.jpg', svg_img(sv['ms'], 192), width=1800)
         imgs_f = [fig_img(f) for f in sv['figs']]
         if imgs_f:
             save('figs.jpg', stack(imgs_f, sep=(230, 160, 0), gap=6))
