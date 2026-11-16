@@ -127,7 +127,8 @@ def _items(u, edges):
                 and not any(abs((b[0] + b[2]) / 2 - e) < 2.5 for e in edges + [0.5, u['w'] - 0.5])
                 and len(edges) >= 2 and edges[0] < (b[0] + b[2]) / 2 < edges[1])               # inside the Answer column
     # a rule printed as many short pieces (2014 MJ 62 page 4: 12 pt dashes): each piece is judged by the whole run
-    hz = sorted((b, id(l)) for l, b in ((l, _bbox(l['d'])) for l in u.get('lines', [])) if b and b[3] - b[1] < 1.3)
+    hz = sorted((b, id(l)) for l, b in ((l, _bbox(l['d'])) for l in u.get('lines', []))
+                if b and b[3] - b[1] < 1.3 and b[2] - b[0] >= 4)   # dashes of a rule (12 pt), never a curve's tiny steps
     span = {}
     run = []
     def close(run):
@@ -173,6 +174,13 @@ def _items(u, edges):
         if b[3] - b[1] < 1.6 and len(edges) >= 2 and edges[1] < (b[0] + b[2]) / 2 < (edges[2] if len(edges) >= 3 else u['w']):
             continue                                    # the Marks column holds no drawing: a short line there is the
             #                                             printed total's underline (round 29, 2014 MJ 11 q4(b), q12(c))
+        subs = re.findall(r'M[^M]+', l['d'])
+        sb = [_bbox(x) for x in subs]
+        if len(subs) > 1 and all(x and x[3] - x[1] < 1.6 for x in sb) and \
+                all(b_[0] - a_[2] > 2 for a_, b_ in zip(sorted(sb), sorted(sb)[1:])):
+            for x, d_ in zip(sb, subs):                 # several fraction bars drawn as ONE path: one item each, so a long
+                its.append(_Item('lines', dict(l, d=d_), x[0], x[1], x[2], x[3]))   # step can wrap between them (2014 MJ 21 q8)
+            continue
         its.append(_Item('lines', l, b0[0], b0[1], b0[2], b0[3]))
     return its
 
@@ -223,6 +231,50 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
     lines = _lines_of(items)
     width = n1 - n0 - 2 * PAD
     left = min(i.x0 for i in items)
+    # a printed line group joined by one tall sign that is wider than our column is laid out line by line again
+    # (scaling it shrank whole paragraphs: 2014 MJ 42 q1(e), round 30 - Dhruv: 'take the extra space, never shrink')
+    split_ = []
+    for ln in lines:
+        ts_ = [i for i in ln['its'] if i.kind == 't']
+        base_ = sorted({round(i.ref['y'], 0) for i in ts_ if i.ref.get('s', 11) >= 9})
+        bands = []
+        for y_ in base_:
+            if bands and y_ - bands[-1][-1] < 6:
+                bands[-1].append(y_)
+            else:
+                bands.append([y_])
+        # two printed lines stay together only when a drawing joins them: a fraction bar between them, a root sign or
+        # bracket reaching into both (2025 MJ 21 q15); a superscript alone never joins (2014 MJ 42 q1(d) overlapped)
+        if len(bands) >= 2:
+            dr_ = [i for i in ln['its'] if i.kind != 't']
+            merged = [bands[0]]
+            for b_ in bands[1:]:
+                ya, yb = sum(merged[-1]) / len(merged[-1]), sum(b_) / len(b_)
+                ta = [i for i in ts_ if i.ref.get('s', 11) >= 9 and min(abs(round(i.ref['y'], 0) - y_) for y_ in merged[-1]) < 0.6]
+                tb_ = [i for i in ts_ if i.ref.get('s', 11) >= 9 and min(abs(round(i.ref['y'], 0) - y_) for y_ in b_) < 0.6]
+                stacked = any(b.x0 > left + 8 and min(a.x1, b.x1) - max(a.x0, b.x0) > 0.5 * min(a.x1 - a.x0, b.x1 - b.x0)
+                              for a in ta for b in tb_) and yb - ya < 18 and tb_ and min(b.x0 for b in tb_) > left + 8
+                # (a denominator stands indented UNDER its numerator; a new printed line starts at the cell's left -
+                #  round 30: splitting broke fractions in 2025 MJ 22 q15, 2021 FM 42 q9, 2019 ON 31 q8)
+                if stacked or any((i.y1 - i.y0 < 1.6 and ya - 4 < i.y0 < yb - 1) or (i.y0 < ya - 2 and i.y1 > yb - 6) for i in dr_):
+                    merged[-1] = merged[-1] + b_
+                else:
+                    merged.append(b_)
+            bands = merged
+        span_ = max(i.x1 for i in ln['its']) - min(i.x0 for i in ln['its'])
+        if len(bands) >= 2 and span_ > width + 0.5:
+            ys = [sum(b_) / len(b_) for b_ in bands]
+            grp = {k_: [] for k_ in range(len(ys))}
+            for it in ln['its']:
+                yc = it.ref['y'] if it.kind == 't' else (it.y0 + it.y1) / 2 + 3
+                grp[min(range(len(ys)), key=lambda k_: (0 if min(bands[k_]) - 12 <= yc <= max(bands[k_]) + 4 else 1,
+                                                        abs(ys[k_] - yc)))].append(it)
+            for k_ in range(len(ys)):
+                if grp[k_]:
+                    split_.append({'its': grp[k_], 'y0': min(i.y0 for i in grp[k_]), 'y1': max(i.y1 for i in grp[k_])})
+        else:
+            split_.append(ln)
+    lines = split_
     lead = max(1.5, min(left - c0, PAD + 2))
     out, extra = [], 0.0
     # a paragraph printed over several lines (the printed column was wider than ours) is re-flowed as one: its lines are
@@ -230,6 +282,10 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
     # 2014 MJ 62 q2(b): 'previous / numerator.' broken lines)
     def plain(ln):
         return all(i.kind == 't' for i in ln['its'])
+    def open_end(ln):           # a printed line that stops mid-step ('... ÷ their', '... ='): the next line goes on with it
+        last = max((i for i in ln['its'] if i.kind == 't'), key=lambda i: i.x1, default=None)   # (round 30, Dhruv: write a
+        t_ = last.ref.get('t', '').strip() if last else ''                                   # step whole, not broken)
+        return bool(re.search(r'[÷×+\-–=(]$', t_)) or t_ in ('their', 'of', 'for', 'and', 'or', 'by', 'to', 'the')
     k = 0
     while k < len(lines) - 1 and align != 'right':
         a, b = lines[k], lines[k + 1]
@@ -238,7 +294,7 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
         bx0 = min(i.x0 for i in b['its'])
         first_b = min(b['its'], key=lambda i: i.x0).ref.get('t', '') if plain(b) else ''
         if plain(a) and plain(b) and abs(ax0 - bx0) < 3 and b['y0'] - a['y1'] < 0.6 * lh_ and ax1 > c1 - 0.3 * (c1 - c0) \
-                and (ax1 - ax0) > width * 0.6 and re.match(r'[a-z]', first_b) and not re.match(r'(or|and)$', first_b):
+                and (ax1 - ax0) > width * 0.6 and (re.match(r'[a-z]', first_b) or open_end(a)) and not re.match(r'(or|and)$', first_b):
             # (only a line that goes on with a sentence: '[x =] 1.13 ...' or 'or ...' is a new answer line, round 28)
             a.setdefault('parts', [dict(a, its=list(a['its']))]).append(b)
             a['its'] = a['its'] + b['its']; a['y1'] = b['y1']
@@ -250,7 +306,12 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
             first = ln['parts'][0]
             lh = first['y1'] - first['y0']
             pitch = (ln['parts'][1]['y0'] - first['y0']) if len(ln['parts']) > 1 else lh + 2.0
+            tl_ = [i for i in first['its'] if i.kind == 't' and i.ref.get('s', 11) >= 9]
+            lh_t = (max(i.y1 for i in tl_) - min(i.y0 for i in tl_)) if tl_ else lh
+            pitch = max(pitch, lh_t + LGAP)      # (a superscript on the next printed line made the pitch smaller than a
+            #                                      line: re-flowed rows overlapped, 2014 MJ 42 q1(d), round 30)
             x, row = 0.0, 0
+            fy0_ = min(i.y0 for i in tl_) if tl_ else first['y0']
             for j, part in enumerate(ln['parts']):
                 for ch in _chunks(part['its']):
                     w_ = ch['x1'] - ch['x0']
@@ -258,7 +319,9 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
                     if x and x + sp_ + w_ > width + 0.5:
                         row += 1; x, sp_ = 0.0, 0.0
                     dx = n0 + lead + x + sp_ - ch['x0']
-                    dy = extra + push(first['y0']) + (first['y0'] + row * pitch) - part['y0']
+                    ptl = [i for i in part['its'] if i.kind == 't' and i.ref.get('s', 11) >= 9]
+                    py0_ = min(i.y0 for i in ptl) if ptl else part['y0']      # the text top, not a superscript's
+                    dy = extra + push(first['y0']) + (fy0_ + row * pitch) - py0_
                     for it in ch['its']:
                         out.append((it, dx, dy, 1.0, ch['x0']))
                     x += sp_ + w_
@@ -272,9 +335,30 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
         span_all = chunks[-1]['x1'] - chunks[0]['x0']
         lead_ts = [i for i in ln['its'] if i.kind == 't' and i.x0 - chunks[0]['x0'] < 3]
         multi = len({round(i.ref['y'] / (0.9 * i.ref.get('s', 11))) for i in lead_ts}) >= 2 and len(lead_ts) >= 2
-        if multi:                                      # two printed lines joined by a tall sign (a root over brackets, 2025 MJ
+        if multi and span_all > width + 0.5:           # too wide for one block: pieces that overlap in x stay together
+            xc = []                                    # (a fraction, a root), the line wraps between them - never shrinks
+            for it in sorted(ln['its'], key=lambda i: i.x0):   # (round 30, 2014 MJ 21 q8(b)(ii), 2025 MJ 22 q21(b))
+                if xc and it.x0 < xc[-1]['x1'] - 0.3:
+                    xc[-1]['its'].append(it); xc[-1]['x1'] = max(xc[-1]['x1'], it.x1)
+                else:
+                    xc.append({'its': [it], 'x0': it.x0, 'x1': it.x1})
+            chunks = xc
+        elif multi:                                    # two printed lines joined by a tall sign (a root over brackets, 2025 MJ
             chunks = [{'its': list(ln['its']), 'x0': chunks[0]['x0'], 'x1': chunks[-1]['x1']}]   # 21 q15): one block,
             #                                             never wrapped piece by piece (they were drawn on top of each other)
+        if any(ch['x1'] - ch['x0'] > width + 0.5 for ch in chunks):    # one piece wider than the column: split it where
+            nc = []                                                     # nothing overlaps in x (never shrink, round 30)
+            for ch in chunks:
+                if ch['x1'] - ch['x0'] <= width + 0.5:
+                    nc.append(ch); continue
+                for it in sorted(ch['its'], key=lambda i: i.x0):
+                    if nc and nc[-1].get('_s') and it.x0 < nc[-1]['x1'] - 0.3:
+                        nc[-1]['its'].append(it); nc[-1]['x1'] = max(nc[-1]['x1'], it.x1)
+                    else:
+                        nc.append({'its': [it], 'x0': it.x0, 'x1': it.x1, '_s': True})
+                if nc and nc[-1].get('_s'):
+                    nc[-1]['_s'] = False
+            chunks = nc
         first_shift = 0.0
         if span_all <= width + 0.5 and chunks[-1]['x1'] - left > width + 0.5:
             first_shift = min(rel0, chunks[-1]['x1'] - left - width)   # a line hanging right ('+ 8[corners]', 2021 FM 62 q4)
@@ -426,6 +510,13 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
             # it is laid out as usual (round 29: tables as lines + text, never a picture; dotted rows split the old cluster)
             rl = [i for i in by[c] if i.kind == 'lines' and ((i.x1 - i.x0 < 1.6 and i.y1 - i.y0 > 8) or (i.y1 - i.y0 < 1.6 and i.x1 - i.x0 > 15)
                                                              or i.ref.get('fill', '').lower() not in ('', '#000000', '#ffffff', '#231f20'))]
+            vl_ = [i for i in rl if i.x1 - i.x0 < 1.6 and i.y1 - i.y0 > 8]
+            if len(vl_) >= 3:       # the grid = its verticals and the rules / shading between them; a fraction bar higher up
+                gy0, gy1 = min(i.y0 for i in vl_) - 2, max(i.y1 for i in vl_) + 2   # in the cell is no table rule (round 30:
+                gx0, gx1 = min(i.x0 for i in vl_) - 2, max(i.x1 for i in vl_) + 2   # sentences above 2025 MJ 62 q4(b)'s table)
+                rl = [i for i in rl if (gy0 <= (i.y0 + i.y1) / 2 <= gy1 and i.x1 > gx0 and i.x0 < gx1) or
+                      (gy0 - 40 < (i.y0 + i.y1) / 2 < gy1 + 40 and i.x0 >= gx0 - 3 and i.x1 <= gx1 + 3
+                       and i.x1 - i.x0 > 0.8 * (gx1 - gx0))]   # a full-width rule of a row without column rules
             tx0, ty0 = min(i.x0 for i in rl) - 1, min(i.y0 for i in rl) - 1
             tx1, ty1 = max(i.x1 for i in rl) + 1, max(i.y1 for i in rl) + 1
             blk = [i for i in by[c] if tx0 <= (i.x0 + i.x1) / 2 <= tx1 and ty0 <= (i.y0 + i.y1) / 2 <= ty1]
@@ -439,7 +530,11 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                 if not add:
                     break
                 rowy = {round(i.ref['y']) for i in add}
-                if any(len([i for i in add if round(i.ref['y']) == y_]) < 3 for y_ in rowy):
+                colx = {round(i.x0) for i in blk if i.kind == 't'}
+                if any(re.fullmatch(r'[A-Za-z]{4,}[.,]?', i.ref.get('t', '')) for i in add) or any(len([i for i in add if round(i.ref['y']) == y_]) < 3 or
+                       sum(1 for i in add if round(i.ref['y']) == y_ and any(abs(i.x0 - cx) <= 3 for cx in colx)) < 3
+                       for y_ in rowy):     # (its cells line up with the table's columns: sentences above a small
+                    #                          table were pulled in and drawn over the text, 2025 MJ 62 q4(b), round 30)
                     break           # only whole table-like rows (several cells), never a sentence under it
                 blk += add
             rest = [i for i in by[c] if i not in blk]
@@ -524,6 +619,31 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                     shift = max([p_[2] for p_ in pl_ab] + [0.0])
             shift = max(shift, push(py0))                # (the heading's placement already holds the push)
             broken_pg = u['src']['page'] in CTX.get('broken', ())
+            drawn_ = (not broken_pg and not any(i.kind in ('images', 'figs') for i in inpic)
+                      and not _clash([i for i in inpic if i.kind == 't'])
+                      and not any(i.kind == 'lines' and (i.ref.get('fill') or '').lower() not in ('', '#000000', '#ffffff', '#231f20')
+                                  and (i.x1 - i.x0) * (i.y1 - i.y0) > 30 for i in inpic))
+            # (shaded areas stay the printed picture: their transparency is not in our line data - 2014 MJ 52 q1 turned dark)
+            if drawn_ and not _is_table(inpic):          # a graph / sketch the PDF draws as lines: drawn again by us as sharp
+                bx0, by0 = min(i.x0 for i in inpic), min(i.y0 for i in inpic)   # lines, a little darker (Dhruv, round 30:
+                bx1, by1 = max(i.x1 for i in inpic), max(i.y1 for i in inpic)   # 'faint diagrams - redraw + darken')
+                room = ours[c][1] - ours[c][0] - 2 * PAD
+                k_ = max(0.6, min(1.0, room / max(1.0, bx1 - bx0)))
+                x_at = ours[c][0] + PAD + (max(0.0, bx0 - cells_src[c][0] - PAD) if k_ == 1.0 else 0.0)
+                x_at = min(x_at, ours[c][1] - PAD - (bx1 - bx0) * k_)
+                n0_ = len(v['lines'])
+                inpic = _chain(inpic)
+                _emit_block(v, inpic, bx0, by0, x_at, by0 + shift, k_, table=False)
+                area_ = {}              # colours that fill an AREA (shading drawn in thin strips, 2014 MJ 52 q1) keep their tone
+                for i in inpic:
+                    if i.kind == 'lines' and i.ref.get('fill'):
+                        area_[i.ref['fill'].lower()] = area_.get(i.ref['fill'].lower(), 0) + (i.x1 - i.x0) * (i.y1 - i.y0)
+                keep_ = {c_ for c_, a_ in area_.items() if a_ > 150}
+                for l_ in v['lines'][n0_:]:
+                    if (l_.get('fill') or '').lower() not in keep_:
+                        _darken(l_)
+                bottoms.append(max(by0 + shift + (by1 - by0) * k_ + 3.0, tb or 0))
+                continue
             if not broken_pg and _is_table(inpic):       # a table: its own lines + text, one rigid block (round 29)
                 bx0, by0 = min(i.x0 for i in inpic), min(i.y0 for i in inpic)
                 bx1, by1 = max(i.x1 for i in inpic), max(i.y1 for i in inpic)
@@ -668,6 +788,68 @@ def _erase_bands(im):
     im.paste(Image.fromarray(a))
 
 
+def _chain(items):
+    """Join a curve printed as hundreds of tiny strokes (end of one = start of the next) into one polyline: drawn one by
+    one they showed as a dashed line (2025 MJ 42 q11, round 30)."""
+    segs, rest = [], []
+    for i in items:
+        m = re.fullmatch(r'M(-?[\d.]+) (-?[\d.]+)L(-?[\d.]+) (-?[\d.]+)', (i.ref.get('d') or '').strip()) if i.kind == 'lines' else None
+        if m and i.ref.get('stroke') and i.x1 - i.x0 < 3 and i.y1 - i.y0 < 3:
+            segs.append((i, [float(g) for g in m.groups()]))
+        else:
+            rest.append(i)
+    if len(segs) < 20:
+        return items
+    out, cur = [], None
+    for i, (a, b, c, d) in segs:
+        if cur and cur['ref']['stroke'] == i.ref['stroke'] and abs(cur['end'][0] - a) < 0.06 and abs(cur['end'][1] - b) < 0.06:
+            cur['pts'].append((c, d)); cur['end'] = (c, d)
+        else:
+            cur = {'ref': i.ref, 'pts': [(a, b), (c, d)], 'end': (c, d)}
+            out.append(cur)
+    for p in out:
+        xs, ys = [q[0] for q in p['pts']], [q[1] for q in p['pts']]
+        d = 'M%.2f %.2f' % p['pts'][0] + ''.join('L%.2f %.2f' % q for q in p['pts'][1:])
+        rest.append(_Item('lines', dict(p['ref'], d=d), min(xs), min(ys), max(xs), max(ys)))
+    return rest
+
+
+def _clash(ts):
+    """Words printed over each other (a broken text layer)."""
+    ts = [i for i in ts if i.x1 - i.x0 > 2]
+    return sum(1 for k, a in enumerate(ts) for b in ts[k + 1:]
+               if abs(a.ref['y'] - b.ref['y']) < 3.0 and min(a.x1, b.x1) - max(a.x0, b.x0) > 0.4 * min(a.x1 - a.x0, b.x1 - b.x0)) >= 2
+
+
+def _dark_hex(h, f=0.62):
+    h = h.lstrip('#')
+    if len(h) != 6:
+        return '#' + h
+    r, g, b = (int(h[k:k + 2], 16) for k in (0, 2, 4))
+    if min(r, g, b) > 250:
+        return '#' + h
+    return '#%02x%02x%02x' % tuple(int(c * f) for c in (r, g, b))
+
+
+def _darken(l):
+    """A thin line / stroke of a redrawn graph: darker colour, at least 0.6 pt (faint grey grids and pale curves were
+    hard to see, round 30). Filled areas (shading) keep their tone."""
+    b = _bbox(l['d'])
+    thin = b and min(b[2] - b[0], b[3] - b[1]) < 2.0
+    if l.get('stroke'):
+        h_ = l['stroke'].lstrip('#')
+        ch_ = [int(h_[k:k + 2], 16) for k in (0, 2, 4)] if len(h_) == 6 else [0, 0, 0]
+        light = min(ch_) >= 0x90 and max(ch_) - min(ch_) < 24      # light GREY = grid; a coloured line is a curve
+        if light:               # a light grid stays light, just visible (round 30: grids turned black)
+            l['stroke'] = _dark_hex(l['stroke'], 0.85)
+            l['sw'] = max(l.get('sw', 0.3), 0.25)
+        else:
+            l['stroke'] = _dark_hex(l['stroke'])
+            l['sw'] = max(l.get('sw', 0.5), 0.6)
+    if l.get('fill') and thin:
+        l['fill'] = _dark_hex(l['fill'])
+
+
 def _root_sign(i):
     """A drawn root sign (any size): a horizontal bar along the TOP of the path covering most of its width, the rest
     slanted strokes below-left of it. A tall nested root (sqrt of a fraction, 33 pt) passed as a sketch and the cell
@@ -695,8 +877,31 @@ def _cell_picture(v, u, items, src, ours, region=None, shift=0.0):
     y0 = max(0.5, min(i.y0 for i in items) - 1.5); y1 = min(u['h'] - 0.5, max(i.y1 for i in items) + 1.5)
     if region:
         y0 = max(y0, region[1])                          # not over a text line kept as our text
-    for l in u.get('lines', []):                         # never over the printed table's own row rules (a full-width line
-        b_ = _bbox(l['d'])                               # under a Venn picture, round 29 2021 FM 32 q9)
+    runs = []                   # rules printed as dashes (2014 MJ 62 p4) are judged as whole runs (round 30)
+    for b_ in sorted((x for x in (_bbox(l['d']) for l in u.get('lines', [])) if x), key=lambda q: (round(q[1], 0), q[0])):
+        if b_[3] - b_[1] >= 1.6:
+            continue
+        if runs and abs(runs[-1][1] - b_[1]) < 0.5 and b_[0] - runs[-1][2] < 2.0:
+            runs[-1] = (runs[-1][0], runs[-1][1], max(runs[-1][2], b_[2]), max(runs[-1][3], b_[3]))
+        else:
+            runs.append(tuple(b_))
+    vr = []
+    for b_ in sorted((x for x in (_bbox(l['d']) for l in u.get('lines', [])) if x), key=lambda q: (round(q[0], 0), q[1])):
+        if b_[2] - b_[0] >= 1.6:
+            continue
+        if vr and abs(vr[-1][0] - b_[0]) < 0.5 and b_[1] - vr[-1][3] < 2.0:
+            vr[-1] = (vr[-1][0], vr[-1][1], max(vr[-1][2], b_[2]), max(vr[-1][3], b_[3]))
+        else:
+            vr.append(tuple(b_))
+    for b_ in vr:               # a column rule inside the picture's sides: the picture stops before it
+        if b_[3] - b_[1] > 0.6 * u['h'] and x0 < (b_[0] + b_[2]) / 2 < x1 and \
+                min(abs((b_[0] + b_[2]) / 2 - src[0]), abs((b_[0] + b_[2]) / 2 - src[1])) < 5:   # (an axis is no rule)
+            if (b_[0] + b_[2]) / 2 > (x0 + x1) / 2:
+                x1 = b_[0] - 0.4
+            else:
+                x0 = b_[2] + 0.4
+    for b_ in runs:                                      # never over the printed table's own row rules (a full-width line
+        l = None                                         # under a Venn picture, round 29 2021 FM 32 q9)
         if b_ and b_[3] - b_[1] < 1.6 and (b_[2] - b_[0] > 0.8 * u['w'] or
                                            (b_[0] <= src[0] + 3 and b_[2] >= src[1] - 3)):   # (or the cell's own rule)
             if y0 < b_[1] < y1 and b_[1] > (y0 + y1) / 2:
@@ -744,6 +949,23 @@ def _cell_picture(v, u, items, src, ours, region=None, shift=0.0):
         A[(G >= 238) & (hi - lo <= 4), 3] = 0
         im = Image.fromarray(A)
     # (232 erased light grey graph grids, round 28 - 245 kept: the grey band of 2021 FM 32 q9 is printed so)
+    if True:                        # raise contrast of what stays (faint screenshots, Dhruv round 30): ink x 2.4
+        A0 = np.array(im).astype(int)
+        G0 = A0[:, :, :3].mean(axis=2)
+        ink = (A0[:, :, 3] > 0) & (G0 < 245)
+        er = ink.copy()                 # thick ink (shaded regions, filled shapes) keeps its tone; only thin lines and
+        for dy_ in range(-3, 4):        # curves get darker (round 30: a grey Venn shading turned black, 2014 MJ 31 q10)
+            for dx_ in range(-3, 4):
+                er &= np.roll(np.roll(ink, dy_, 0), dx_, 1)
+        thick = er.copy()
+        for dy_ in range(-3, 4):
+            for dx_ in range(-3, 4):
+                thick |= np.roll(np.roll(er, dy_, 0), dx_, 1)
+        op = ink & ~thick
+        for ch in range(3):
+            c_ = A0[:, :, ch]
+            c_[op] = np.clip(255 - (255 - c_[op]) * 2.4, 0, 255)
+        im = Image.fromarray(A0.astype('uint8'))
     import numpy as _np
     arr = _np.array(im)
     box = im.getbbox()
@@ -796,6 +1018,16 @@ def _is_table(items):
     round 29: 'it can be done using lines and box and text, no need of image', as in physics)."""
     if any(i.kind in ('images', 'figs') for i in items):
         return False
+    if sum(1 for i in items if i.kind == 'lines' and i.x1 - i.x0 < 3 and i.y1 - i.y0 < 3 and i.ref.get('stroke')) > 40:
+        return False        # a curve drawn as many tiny strokes: a graph on a grid, not a table (2025 MJ 42 q11, round 30)
+    for i in items:         # a coloured line or a polyline of many points is a curve: a graph, not a table (2014 MJ 42 q2)
+        st = (i.ref.get('stroke') or '').lstrip('#') if i.kind == 'lines' else ''
+        if len(st) == 6:
+            ch = [int(st[k:k + 2], 16) for k in (0, 2, 4)]
+            if max(ch) - min(ch) > 40:
+                return False
+        if i.kind == 'lines' and (i.ref.get('d') or '').count('L') > 6 and i.x1 - i.x0 > 5 and i.y1 - i.y0 > 5:
+            return False
     ln = [i for i in items if i.kind == 'lines']
     if any('C' in i.ref.get('d', '') and (i.x1 - i.x0) > 6 and (i.y1 - i.y0) > 6 for i in ln):
         return False                                     # a curve: a graph or Venn diagram
@@ -823,9 +1055,31 @@ def _has_table(items):
     return sum(1 for w in rows.values() if w > 0.6 * (x1 - x0)) >= 2
 
 
-def _emit_block(v, items, ox, oy, nx, ny, k):
+def _emit_block(v, items, ox, oy, nx, ny, k, table=True):
     """Place items as one rigid block: (ox, oy) -> (nx, ny), scaled k both ways (a table is never wrapped)."""
     from ms_layout import _map_path
+    hr = [i for i in items if i.kind == 'lines' and i.y1 - i.y0 < 1.6 and i.x1 - i.x0 > 20] if table else []
+    # (border clean-up only for tables: a curve drawn as tiny segments lost them, 2025 MJ 42 q11(a) round 30)
+    drop = set()                # a rule printed double (two lines < 2.5 pt apart, same run): one line (Dhruv, round 30:
+    for a in hr:                # 'why double edge at top of the table', 2021 FM 52 q4)
+        for b in hr:
+            if a is not b and id(a) not in drop and 0 < b.y0 - a.y0 < 2.5 and abs(a.x0 - b.x0) < 3 and abs(a.x1 - b.x1) < 3:
+                drop.add(id(b))
+    items = [i for i in items if id(i) not in drop]
+    # a Word 'double' border prints tiny corner pieces and leaves a gap between the top rule and the column rules: the
+    # pieces go and the column rules reach up to the rule (2021 FM 52 q4, round 30: 'why double edge at top')
+    hr = [i for i in items if i.kind == 'lines' and i.y1 - i.y0 < 1.6 and i.x1 - i.x0 > 20]
+    out_ = []
+    for i in items:
+        if i.kind == 'lines' and i.x1 - i.x0 < 2 and i.y1 - i.y0 < 2 and any(abs(i.y0 - h.y1) < 2.2 or abs(i.y0 - h.y0) < 2.2 for h in hr):
+            continue
+        if i.kind == 'lines' and i.x1 - i.x0 < 1.6 and i.y1 - i.y0 > 5 and not i.ref.get('stroke'):
+            top = [h for h in hr if 0 < i.y0 - h.y1 < 2.2 and h.x0 - 1 <= i.x0 <= h.x1 + 1]
+            if top:
+                y0n = top[0].y0
+                i = _Item('lines', dict(i.ref, d=f'M{i.x0:.2f} {y0n:.2f}H{i.x1:.2f}V{i.y1:.2f}H{i.x0:.2f}Z'), i.x0, y0n, i.x1, i.y1)
+        out_.append(i)
+    items = out_
     fx = lambda x: nx + (x - ox) * k
     fy = lambda y: ny + (y - oy) * k
     for it in items:

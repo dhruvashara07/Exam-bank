@@ -516,6 +516,24 @@ def diagrams(doc, seg, lines, captioned):
                 continue                                   # a ruled table of text (column rules top to bottom): stays text + rules
         if not inside and all(getattr(x, 'aligned', False) for x in c['rs']) and r.height < 40:
             continue                                       # an empty answer box ('FG = [  ]', 2025 MJ 61 q5), no diagram
+        if all(getattr(x, 'aligned', False) for x in c['rs']) and max(max(x.width, x.height) for x in c['rs']) <= 42:
+            bx_ = []                                       # only small EMPTY boxes on equation lines ('100 = 10 x 10 = 2 x 5
+            for x in sorted(c['rs'], key=lambda q_: (q_.y0, q_.x0)):    # x [ ] x [ ]', 2019 ON 53 q1, round 30): answer
+                h_ = [b_ for b_ in bx_ if (b_ + (-1.5, -1.5, 1.5, 1.5)).intersects(x)]   # boxes in the text, no diagram
+                nb = fitz.Rect(x)
+                for b_ in h_:
+                    nb |= b_; bx_.remove(b_)
+                bx_.append(nb)
+            if all(b_.width <= 42 and b_.height <= 42 and not any(
+                    b_.contains(fitz.Point((t['x0'] + t['x1']) / 2, (t['y0'] + t['y1']) / 2)) for t in text) for b_ in bx_):
+                continue
+        if inside and r.height < 120:                      # a boxed formula ('You may find this formula useful', 2014 MJ 62
+            edge_ = [x for x in c['rs'] if getattr(x, 'aligned', False) and (abs(x.x0 - r.x0) < 2 or abs(x.x1 - r.x1) < 2
+                                                                           or abs(x.y0 - r.y0) < 2 or abs(x.y1 - r.y1) < 2)]
+            rest_ = [x for x in c['rs'] if x not in edge_]
+            if len(edge_) >= 4 and len(rest_) <= 8 and all(x.height < 22 and x.width < 160 for x in rest_):
+                tables.append(fitz.Rect(r))                # q3): text + LaTeX + its box lines, never a picture (round 30)
+                continue
         if inside and all(getattr(x, 'aligned', False) for x in c['rs']) and all(
                 abs(x.x0 - r.x0) < 2 or abs(x.x1 - r.x1) < 2 or abs(x.y0 - r.y0) < 2 or abs(x.y1 - r.y1) < 2 for x in c['rs']):
             tables.append(fitz.Rect(r))
@@ -599,6 +617,20 @@ def diagrams(doc, seg, lines, captioned):
                 elif t.y1 <= ob.y0 + 0.5 * ob.height:
                     ob.y0 = max(ob.y0, t.y1 + 1)
         o['bbox'] = [round(v, 1) for v in ob]
+    merged = True                                    # drawings side by side at one height are ONE picture (Dhruv, round
+    while merged:                                    # 30, 2014 MJ 43 q13: 'make that 2 image as one image')
+        merged = False
+        for a in out:
+            for b in out:
+                A, B_ = fitz.Rect(a['bbox']), fitz.Rect(b['bbox'])
+                ov = min(A.y1, B_.y1) - max(A.y0, B_.y0)
+                if a is not b and ov > 0.7 * min(A.height, B_.height) and 0 <= B_.x0 - A.x1 < 60 and not any(
+                        (fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']) & fitz.Rect(A.x1, max(A.y0, B_.y0), B_.x0, min(A.y1, B_.y1))).get_area() > 4
+                        and len(t['text'].strip()) > 22 for t in text):
+                    a['bbox'] = list(A | B_); out.remove(b); merged = True
+                    break
+            if merged:
+                break
     merged = True                                    # crops that touch or overlap are one diagram (round 27: '2 images')
     while merged:
         merged = False

@@ -51,7 +51,8 @@ def main(batch, ids, sample=8):
                 continue
             rec = json.load(open(os.path.join(sd, f)))
             mp = rec.get('ms_p') or {}
-            if any(v.get('images') for v in mp.get('rows', [])):
+            if any(v.get('images') or len(v.get('lines', [])) > 25 for v in mp.get('rows', [])):   # pictures, and graphs /
+                #                                                  tables redrawn as lines (round 30)
                 pics.append(rec['id'])
     qids = sorted({q for q in hits} | set(pics))
     pool = []

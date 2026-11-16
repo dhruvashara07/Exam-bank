@@ -384,3 +384,23 @@ the old MS paths (2014 MJ 22 q2, 43 q9, 2019 ON 11/12 q8, 23 q3, 62 q5).
     -> the check dedups by position, like the layout.
 148. (open) 2014 MJ 62: marks found 39 of 40 - q6(f)(ii) [1] is not read (QP pages 9-10 have no text for the mark
     brackets). Paper not approved until fixed.
+
+### Round 30 (14 of 40 wrong) + round-31 Claude check
+149. Stray verticals in Partial Marks (2014 MJ 11/12/13/42): the sketch-axis rule (145) took column-rule pieces for axes.
+    -> axis rule only inside the Answer column (already fixed before the round-30 images were cut; verified 0 across all papers).
+150. Shrunk text (2014 MJ 12 q9(c), 42 q1(e)): printed lines joined by a tall sign / a superscript were scaled as one
+    block. -> (Dhruv: 'take the extra space, a whole step may start on a new line') bands split unless a fraction bar /
+    stack / root joins them; a piece wider than the column wraps between parts that do not overlap in x; several
+    fraction bars drawn as ONE path are split into bars; a line ending mid-step ('÷ their', '=') joins the next.
+151. Boxed formula / small answer boxes as pictures (2014 MJ 62 q3, 2019 ON 53 q1) -> extract: a box around a short
+    formula = text + box lines; only small empty boxes on equation lines = no diagram.
+152. Two drawings side by side at one height = ONE picture (2014 MJ 43 q13).
+153. Word 'double' table border drew two top edges (2021 FM 52 q4) -> corner pieces dropped, column rules reach the rule.
+154. 2014 MJ 62 marks 39/40 (148): the broken text layer prints words as overlapping pieces ('(i'+'ii)', '1F'+'FT') ->
+    pieces that overlap are joined; paper now 40/40.
+155. Faint mark-scheme graphs (Dhruv: redraw + darken): graphs drawn as lines are redrawn by us (curves of tiny strokes
+    joined into one polyline, curves darker / thicker, grey grids stay light); pasted screenshots: thin ink x 2.4
+    contrast, shading keeps its tone; shaded-area sketches stay the printed picture.
+156. (found in the check) a graph's grid + numbers looked like a table (coloured curve / polyline / tiny strokes =
+    graph); table-rule search used fraction bars far above the grid -> grid = its verticals; rows against a table join
+    it only if their cells line up with its columns and hold no words.

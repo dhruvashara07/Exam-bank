@@ -52,6 +52,11 @@
    },
    {
     "start": "2026-11-16T09:55:27+00:00",
+    "end": "2026-11-16T11:10:48+00:00",
+    "note": "round 30: 14 of 40 wrong"
+   },
+   {
+    "start": "2026-11-16T14:21:46+00:00",
     "end": null
    }
   ],
@@ -77,6 +82,11 @@
     "start": "2026-11-16T09:35:34+00:00",
     "end": "2026-11-16T09:55:27+00:00",
     "note": "one check round: 66 doubtful + 8 random sides read; 8 classes fixed; golden 0"
+   },
+   {
+    "start": "2026-11-16T11:10:48+00:00",
+    "end": "2026-11-16T14:21:46+00:00",
+    "note": "round 30 fixes: 149-156, redraw graphs; round 31 built"
    }
   ]
  },
@@ -96,7 +106,7 @@
   "questions": 743,
   "flags": 11,
   "round_items": 40,
-  "wrong_items": 21
+  "wrong_items": 14
  },
  "errors": [
   {
@@ -514,6 +524,70 @@
    "fix": "judge runs",
    "found_by": "claude",
    "at": "2026-11-16T09:55:27+00:00"
+  },
+  {
+   "pattern": "149",
+   "kind": "new",
+   "what": "see ERROR_PATTERNS 149",
+   "fix": "pipeline",
+   "found_by": "claude",
+   "at": "2026-11-16T14:21:46+00:00"
+  },
+  {
+   "pattern": "150",
+   "kind": "new",
+   "what": "see ERROR_PATTERNS 150",
+   "fix": "pipeline",
+   "found_by": "claude",
+   "at": "2026-11-16T14:21:46+00:00"
+  },
+  {
+   "pattern": "151",
+   "kind": "new",
+   "what": "see ERROR_PATTERNS 151",
+   "fix": "pipeline",
+   "found_by": "claude",
+   "at": "2026-11-16T14:21:46+00:00"
+  },
+  {
+   "pattern": "152",
+   "kind": "new",
+   "what": "see ERROR_PATTERNS 152",
+   "fix": "pipeline",
+   "found_by": "claude",
+   "at": "2026-11-16T14:21:46+00:00"
+  },
+  {
+   "pattern": "153",
+   "kind": "new",
+   "what": "see ERROR_PATTERNS 153",
+   "fix": "pipeline",
+   "found_by": "claude",
+   "at": "2026-11-16T14:21:46+00:00"
+  },
+  {
+   "pattern": "154",
+   "kind": "new",
+   "what": "see ERROR_PATTERNS 154",
+   "fix": "pipeline",
+   "found_by": "claude",
+   "at": "2026-11-16T14:21:46+00:00"
+  },
+  {
+   "pattern": "155",
+   "kind": "new",
+   "what": "see ERROR_PATTERNS 155",
+   "fix": "pipeline",
+   "found_by": "claude",
+   "at": "2026-11-16T14:21:46+00:00"
+  },
+  {
+   "pattern": "156",
+   "kind": "new",
+   "what": "see ERROR_PATTERNS 156",
+   "fix": "pipeline",
+   "found_by": "claude",
+   "at": "2026-11-16T14:21:46+00:00"
   }
  ],
  "tokens": [

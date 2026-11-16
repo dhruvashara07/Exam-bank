@@ -271,3 +271,9 @@ belong to (a), not to (a)(iv): when every sub-part but the last has no mark, the
 - A table's block also holds its rotated row labels and unruled rows printed right against it (same width).
 - Root signs of any size, fraction bars and brackets are text furniture, never a reason to make a cell a picture.
 - A heading over a graph is our text; the picture starts under it (never both).
+
+## 30. Similar, not exact (Dhruv, round 30)
+- Our mark scheme follows these rules, not the printed line breaks: take extra height when needed; a whole step may
+  start on a new line; text is never shrunk to fit (a piece wider than the column wraps between its parts; only a
+  table or a single unbreakable formula may scale, never below 60 %).
+- Graphs drawn as lines are redrawn by us (sharp, curves darker, light grey grid); pasted screenshots get more contrast.

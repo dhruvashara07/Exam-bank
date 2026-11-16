@@ -3,10 +3,11 @@
 Read this first in every session. Update it before ending a session.
 
 ## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md
-- NEXT: Dhruv reviews round 30 (21 round-29 wrong items re-checked + 8 found in Claude's check round + samples; page
-  https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e). Then: feedback_r30 -> `review_round.py close 28/29/30`, fix any
-  wrong item as a CLASS, ONE Claude check round (PLAYBOOK 2, `claude_check.py`), approve.py for clean papers (not 2014
-  MJ 62 until ERROR_PATTERNS 148), docs, push; then M1.
+- NEXT: Dhruv reviews round 31 (14 round-30 wrong items re-checked + faint graphs redrawn + long steps wrap; page
+  https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e). Then: feedback_r31 -> fix wrong items as CLASSES, ONE Claude check
+  round (PLAYBOOK 2), approve.py for clean papers (checks 60/60 clean now, 2014 MJ 62 40/40), docs, push; then M1.
+- 2026-11-16 (evening): round 30 (14/40 wrong) fixed - ERROR_PATTERNS 149-156; faint graphs redrawn + darkened (Dhruv);
+  'similar not exact' layout rule (MS_TABLE_RULES 30); checks 60/60; golden 0.
 - 2026-11-16: round 29 fixed (ERROR_PATTERNS 130-138) and Claude's ONE check round introduced (Dhruv: one round, rules +
   checkboxes, side by side only in doubt; `pipeline/claude_check.py`, checklist review/claude/M0_check.md, zoom sheets
   `ms_compare.py --zoom`, new checks ms_mode and q_rule). That round found 8 more classes (139-147) and fixed them before

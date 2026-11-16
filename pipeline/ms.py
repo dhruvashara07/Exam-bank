@@ -459,6 +459,18 @@ def structured_rows_columns(doc):
     for pno, page in enumerate(doc):
         lines = _lines(page)
         words = page.get_text('words')
+        if MATHS:                   # a broken text layer prints words as overlapping pieces ('(i' + 'ii)' = '(ii)', '1F' + 'FT'
+            fixed = []              # = '1FT', 2014 MJ 62 p4: (f)(ii), (g)(ii) and a 1FT mark were lost - round 30). Normal text
+            for w_ in sorted(words, key=lambda q_: q_[0]):          # never overlaps the word before it.
+                pr = next((o for o in reversed(fixed) if abs(o[1] - w_[1]) < 2.5 and o[0] < w_[0] < o[2] - 1.0), None)
+                if pr is not None:
+                    a_, b_ = pr[4], w_[4]
+                    k_ = max((n for n in range(1, min(len(a_), len(b_)) + 1) if a_[-n:] == b_[:n]), default=0)
+                    if k_:
+                        fixed[fixed.index(pr)] = (pr[0], pr[1], max(pr[2], w_[2]), max(pr[3], w_[3]), a_ + b_[k_:]) + tuple(pr[5:])
+                        continue
+                fixed.append(w_)
+            words = fixed
         mr = (_maths_rules(page) or (mr if pno else None)) if MATHS else None   # 2014 maths: marks between the 3rd and 4th rule
         head = [l['y1'] for l in lines if l['y0'] < 80 and ('Cambridge' in l['text'] or 'Mark Scheme' in l['text'])]
         top = (max(head) + 8) if head else 60

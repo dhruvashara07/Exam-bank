@@ -465,3 +465,12 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   one threshold for all pasted images; 135: heading rule only for pasted images). Rule now in PLAYBOOK 2.3: after every
   fix search ALL papers for the class, and zoom on doubtful details. A fallback layout escaped every check because the
   checks only ran on the maths layout - checks must fail loudly when their precondition is missing (ms_mode).
+
+## 2026-11-16 (evening) - round 30 answered (14 of 40 wrong), round 31 published
+- Dhruv: MS need not match the print exactly - take extra space, a step may start on a new line; asked about faint MS
+  diagrams (chose: redraw graphs drawn as lines, darken screenshots); reminded: check each rebuild is needed, use vision
+  in my round; asked to recheck 2014 MJ 62 marks (fixed: broken text layer joined, 40/40) and the 32 q9 band (he marked
+  it ok: only hairline traces of the screenshot's band edges were left).
+- Analysis: 7 of 14 wrong were one class (stray verticals) from my own round-29 axis rule; my new wrap/table rules
+  broke fractions and a table twice before I looked at all cells - now PLAYBOOK 2.4: look at every cell a fix touches
+  in all papers, and decide before each rebuild whether it is needed (MS-only fixes never run run.py).
