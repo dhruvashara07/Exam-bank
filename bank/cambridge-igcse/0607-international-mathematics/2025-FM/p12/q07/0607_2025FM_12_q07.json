@@ -1,0 +1,228 @@
+{
+ "id": "0607_2025FM_12_q07",
+ "number": 7,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    180.1,
+    570.0,
+    402.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 19.4,
+    "height_pt": 222.4
+   }
+  }
+ ],
+ "text": "7\nThis is Haruna’s school timetable for Monday.\nMonday\n08 00 to 09 00\nEnglish\n09 00 to 09 45\nHistory\n09 45 to 10 00\nBreak Time\n10 00 to 11 00\nMathematics\n11 00 to 12 00\nScience\n12 00 to 13 00\nLunch Time\n13 00 to 14 00\nArt\n14 00 to 15 00\nArt",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      406.2,
+      570.0,
+      466.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 14.5,
+      "height_pt": 59.8
+     }
+    }
+   ],
+   "text": "Complete the statement.\nThe length of Haruna’s Break Time is ................. minutes.\n[1]",
+   "marks": 1,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "15",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        45.875,
+        520.1,
+        549.3300170898438,
+        545.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the statement.",
+     "text": "Complete the statement."
+    },
+    {
+     "type": "text",
+     "html": "The length of Haruna’s Break Time is …… minutes.",
+     "text": "The length of Haruna’s Break Time is …… minutes."
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      484.2,
+      570.0,
+      583.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 66.5,
+      "height_pt": 98.8
+     }
+    }
+   ],
+   "text": "Work out how much longer Haruna is in Art than in History.\n................... h ................... min [2]",
+   "marks": 2,
+   "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "1 [h] 15 [min]",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        45.875,
+        545.0,
+        549.3300170898438,
+        569.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Work out how much longer Haruna is in Art than in History.",
+     "text": "Work out how much longer Haruna is in Art than in History."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "min"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 1,
+ "variant": 2,
+ "paper_code": "0607/12",
+ "paper_type": "core_non_calculator",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This is Haruna’s school timetable for Monday.",
+   "text": "This is Haruna’s school timetable for Monday."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "",
+     "Monday"
+    ],
+    [
+     "08 00 to 09 00",
+     "English"
+    ],
+    [
+     "09 00 to 09 45",
+     "History"
+    ],
+    [
+     "09 45 to 10 00",
+     "<b>Break</b> <b>Time</b>"
+    ],
+    [
+     "10 00 to 11 00",
+     "Mathematics"
+    ],
+    [
+     "11 00 to 12 00",
+     "Science"
+    ],
+    [
+     "12 00 to 13 00",
+     "<b>Lunch</b> <b>Time</b>"
+    ],
+    [
+     "13 00 to 14 00",
+     "Art"
+    ],
+    [
+     "14 00 to 15 00",
+     "Art"
+    ]
+   ]
+  }
+ ]
+}

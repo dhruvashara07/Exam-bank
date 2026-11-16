@@ -1,0 +1,283 @@
+{
+ "id": "0607_2025FM_42_q12",
+ "number": 12,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    93.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 33.6
+   }
+  }
+ ],
+ "text": "A container is in the shape of a cuboid.\nThe cuboid measures 41 cm by 32 cm by 25 cm.",
+ "marks": 8,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      98.4,
+      570.0,
+      210.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 79.5,
+      "height_pt": 111.6
+     }
+    }
+   ],
+   "text": "Show that the capacity of the container is 32.8 litres.\n[2]",
+   "marks": 2,
+   "path": "12(a)",
+   "mark_scheme": [
+    {
+     "label": "12(a)",
+     "text": "41 ×32×25\n1000\n= 32.8 with no errors",
+     "codes": [
+      "M2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        570.6,
+        551.2479248046875,
+        626.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that the capacity of the container is 32.8 litres.",
+     "text": "Show that the capacity of the container is 32.8 litres."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 79.5
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      215.4,
+      570.0,
+      249.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 33.6
+     }
+    }
+   ],
+   "text": "At 10 40 the container is empty.\nWater flows into the container at a rate of 2 litres per hour until the container is full.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        30.0,
+        254.4,
+        570.0,
+        444.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 131.5,
+        "height_pt": 189.6
+       }
+      }
+     ],
+     "text": "At 12 10 there are x litres of water in the container.\nFind x as a percentage of 32.8 .\n..............................................% [3]",
+     "marks": 3,
+     "path": "12(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "12(b)(i)",
+       "text": "9.15 or 9.146…",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          45.875,
+          626.6,
+          551.2479248046875,
+          682.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "At 12 10 there are x litres of water in the container.",
+       "text": "At 12 10 there are x litres of water in the container."
+      },
+      {
+       "type": "text",
+       "html": "Find x as a percentage of 32.8 .",
+       "text": "Find x as a percentage of 32.8 ."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "unit": "%"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        30.0,
+        449.4,
+        570.0,
+        639.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 157.5,
+        "height_pt": 189.6
+       }
+      }
+     ],
+     "text": "Find the time when the container is full.\n................................................. [3]",
+     "marks": 3,
+     "path": "12(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "12(b)(ii)",
+       "text": "[0]3 04",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          45.875,
+          682.7,
+          551.2479248046875,
+          751.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the time when the container is full.",
+       "text": "Find the time when the container is full."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "12(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "At 10 40 the container is empty. Water flows into the container at a rate of 2 litres per hour until the container is full.",
+     "text": "At 10 40 the container is empty. Water flows into the container at a rate of 2 litres per hour until the container is full."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_calculator",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A container is in the shape of a cuboid. The cuboid measures 41 cm by 32 cm by 25 cm.",
+   "text": "A container is in the shape of a cuboid. The cuboid measures 41 cm by 32 cm by 25 cm."
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "id": "0607_2025FM_52_q11",
+ "number": 11,
+ "segments": [
+  {
+   "page": 10,
+   "bbox": [
+    30.0,
+    59.8,
+    570.0,
+    548.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 1,
+    "answer_line": null,
+    "working_gap_pt": 443.5,
+    "height_pt": 488.2
+   }
+  }
+ ],
+ "text": "Find all the possible ways where one of the 3 polygons is a square.\n11\nUse the table from Question 5 to help you.\n............................................................................................................................................................. [5]",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "11",
+   "text": "[The sides are]\n[4,] 5, 20\n[4,] 6, 12\n[4,] 8, 8\nand no others\nOR\n[The angles are]\n[90,] 108, 162\n[90,] 120, 15\n[90,] 135, 135\nAnd no others\nA correct calculation e.g. 360 – (90 + 108) = 162\nor 108 + 162 = 270",
+   "codes": [
+    "4",
+    "C1"
+   ],
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      45.875,
+      84.5,
+      549.3300170898438,
+      281.4
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Find all the possible ways where one of the 3 polygons is a square. Use the table from <b>Question</b> 5 to help you.",
+   "text": "Find all the possible ways where one of the 3 polygons is a square. Use the table from Question 5 to help you."
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
+   "lines": 1
+  },
+  {
+   "type": "marks",
+   "value": 5
+  }
+ ]
+}

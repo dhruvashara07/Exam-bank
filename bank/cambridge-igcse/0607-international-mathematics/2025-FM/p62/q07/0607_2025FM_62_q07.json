@@ -1,0 +1,88 @@
+{
+ "id": "0607_2025FM_62_q07",
+ "number": 7,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    782.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 1,
+    "answer_line": null,
+    "working_gap_pt": 690.5,
+    "height_pt": 722.6
+   }
+  }
+ ],
+ "text": "7\nFind all the possible ways to fit a square and 2 other regular polygons at a point.\n............................................................................................................................................................. [4]",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "7",
+   "text": "[4,] 5, 20\n[4,] 6, 12\n[4,] 8, 8\nand no others\nOR\n[The angles are]\n[90,] 108, 162\n[90,] 120, 150\n[90,] 135, 135\nand no others\nFraction Method\n1\n1\n1\n+\n=\nq\nr\n4\n1\n1\n−\n4\n5 or 6 or 8\n4q\nor r =\nwhere q = 5 or 6 or 8\nq−4\nOR\nAngle Method\nInterior\nExterior\n270 – 108 = 162\n360\noe\nor 360 – 90 – 108 = 162\n5 or 6 or 8\nor 270 – 120 = 150\nor 360 – 90 – 120 = 150\nor 270 – 135 = 135\nor 360 – 90 – 135 = 135\noe\n360\n360\n(180−their\n)\n5 or 6 or 8\n180 −150\n360\n360\n360\nor\n18\nor\nor\n180 −162\n30\n360\n360\nor\nor\noe\n180 −120\n45",
+   "codes": [
+    "2",
+    "C1",
+    "C1",
+    "(C1)",
+    "(C1)"
+   ],
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      45.875,
+      89.3,
+      549.3300170898438,
+      671.5
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Find all the possible ways to fit a square and 2 other regular polygons at a point.",
+   "text": "Find all the possible ways to fit a square and 2 other regular polygons at a point."
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
+   "lines": 1
+  },
+  {
+   "type": "marks",
+   "value": 4
+  }
+ ]
+}

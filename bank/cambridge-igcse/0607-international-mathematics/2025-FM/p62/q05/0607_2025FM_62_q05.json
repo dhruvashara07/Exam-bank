@@ -1,0 +1,296 @@
+{
+ "id": "0607_2025FM_62_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    132.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 72.6
+   }
+  }
+ ],
+ "text": "5\nCharlie finds other ways to fit 3 regular polygons together at a point.\nThe first polygon has p sides.\nThe second polygon has q sides.\nThe third polygon has r sides.",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      135.4,
+      570.0,
+      379.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 177.3,
+      "height_pt": 243.6
+     }
+    }
+   ],
+   "text": "360\n(a) Consider the angles around a point and use the formula   a\n=\n180\n-\nto show that\nn\n1\n1\n1\n1\n+\n+\n=\n.\np\nq\nr\n2\n[3]",
+   "marks": 3,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "\n360 \n360\n\n\n360\n180−\n+ 180−\n+ 180−\n=360\n\n \n \n\np\nq\n \nr\n\n\n \nCollect numerical terms\nor divide by or factor out 180\nor divide by or factor out 360\n1\n1\n1\n1\n+\n+\n=\nLeading to\np\nq\nr\n2",
+     "codes": [
+      "1",
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        45.875,
+        551.4,
+        549.3300170898438,
+        689.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Consider the angles around a point and use the formula a = 180 - \\(\\frac{360}{n}\\) to show that",
+     "text": "Consider the angles around a point and use the formula a = 180 - (360)/(n) to show that"
+    },
+    {
+     "type": "text",
+     "html": "\\(\\frac{1}{p}\\) + \\(\\frac{1}{q}\\) + \\(\\frac{1}{r}\\) = \\(\\frac{1}{2}\\) .",
+     "text": "(1)/(p) + (1)/(q) + (1)/(r) = (1)/(2) ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 177.3
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      384.4,
+      570.0,
+      405.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 20.6
+     }
+    }
+   ],
+   "text": "p\nG\nq\nG\nr",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        408.4,
+        570.0,
+        561.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 2,
+        "answer_line": "q =  ……",
+        "working_gap_pt": 73.3,
+        "height_pt": 152.6
+       }
+      }
+     ],
+     "text": "1\n1\n1\n1\n(i) When p\n=\n6\n, use   p\n+\n+\n=\nto find the value of q and the value of r.\nq\nr\n2\nq =  .......................................................\nr =  .......................................................\n[1]",
+     "marks": 1,
+     "path": "5(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "5(b)(i)",
+       "text": "q = 6 r = 6",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          45.875,
+          689.9,
+          549.3300170898438,
+          717.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "When p = 6, use \\(\\frac{1}{p}\\) + \\(\\frac{1}{q}\\) + \\(\\frac{1}{r}\\) = \\(\\frac{1}{2}\\) to find the value of q and the value of r.",
+       "text": "When p = 6, use (1)/(p) + (1)/(q) + (1)/(r) = (1)/(2) to find the value of q and the value of r."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "q ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "r ="
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        566.4,
+        570.0,
+        730.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 105.5,
+        "height_pt": 163.6
+       }
+      }
+     ],
+     "text": "p cannot be greater than 6.\nGive an example to show this.\n[1]",
+     "marks": 1,
+     "path": "5(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "5(b)(ii)",
+       "text": "Values of p, q and r with p\nq\nr and p > 6\n1\n1\n1\n1\n+\n+\n=k\nwhere k ≠\nand\np\nq\nr\n2\n1\n1\n1\n3\n+\n+\ne.g.\n=\n7\n7\n7\n7",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          45.875,
+          89.3,
+          549.3300170898438,
+          176.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "p cannot be greater than 6.",
+       "text": "p cannot be greater than 6."
+      },
+      {
+       "type": "text",
+       "html": "Give an example to show this.",
+       "text": "Give an example to show this."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 105.5
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "5(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "p G q G r",
+     "text": "p G q G r"
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Charlie finds other ways to fit 3 regular polygons together at a point.",
+   "text": "Charlie finds other ways to fit 3 regular polygons together at a point."
+  },
+  {
+   "type": "text",
+   "html": "The first polygon has p sides. The second polygon has q sides. The third polygon has r sides.",
+   "text": "The first polygon has p sides. The second polygon has q sides. The third polygon has r sides."
+  }
+ ]
+}

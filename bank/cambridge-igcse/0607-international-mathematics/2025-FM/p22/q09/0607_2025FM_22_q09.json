@@ -1,0 +1,190 @@
+{
+ "id": "0607_2025FM_22_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    228.4,
+    570.0,
+    275.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 46.6
+   }
+  }
+ ],
+ "text": "9\nThese are the equations of two lines.\n4\ny\n=\nx\n+\n7\ny\n+\n4\nx\n=\n6",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      280.4,
+      570.0,
+      509.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 196.5,
+      "height_pt": 228.6
+     }
+    }
+   ],
+   "text": "Find the coordinates of the point where these two lines intersect.\n(.............. , ..............) [3]",
+   "marks": 3,
+   "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "(1, 2) final answer",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        45.875,
+        465.7,
+        551.9818725585938,
+        578.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the coordinates of the point where these two lines intersect.",
+     "text": "Find the coordinates of the point where these two lines intersect."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "(",
+     "unit": ")"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      514.4,
+      570.0,
+      665.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 79.5,
+      "height_pt": 150.6
+     }
+    }
+   ],
+   "text": "Are the two lines perpendicular?\nGive a reason for your answer.\n................................. because  ...........................................................................................................\n..................................................................................................................................................... [2]",
+   "marks": 2,
+   "path": "9(b)",
+   "mark_scheme": [
+    {
+     "label": "9(b)",
+     "text": "1\nboth gradients seen –4 and\n4\n1\nYes and −4×\n= −1\n4",
+     "codes": [
+      "B1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        45.875,
+        578.6,
+        551.9818725585938,
+        661.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Are the two lines perpendicular? Give a reason for your answer.",
+     "text": "Are the two lines perpendicular? Give a reason for your answer."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 2,
+ "variant": 2,
+ "paper_code": "0607/22",
+ "paper_type": "extended_non_calculator",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "These are the equations of two lines.",
+   "text": "These are the equations of two lines."
+  },
+  {
+   "type": "text",
+   "html": "4y = x + 7 y + 4x = 6",
+   "text": "4y = x + 7 y + 4x = 6"
+  }
+ ]
+}

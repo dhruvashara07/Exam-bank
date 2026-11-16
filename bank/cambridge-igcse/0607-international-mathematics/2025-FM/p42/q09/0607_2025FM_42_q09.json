@@ -1,0 +1,223 @@
+{
+ "id": "0607_2025FM_42_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    149.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 19.4,
+    "height_pt": 90.1
+   }
+  }
+ ],
+ "text": "9\nA class of students take a writing test and a speaking test.\nThe scores are shown in the table.\nWriting score (x)\n1\n2\n3\n4\n6\n7\n8\n9\n10\nSpeaking score (y)\n4\n6\n3\n8\n6\n7\n7\n8\n9",
+ "marks": 4,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    152.6,
+    207.1,
+    444.8,
+    463.7
+   ],
+   "id": "0607_2025FM_42_q09a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      166.4,
+      570.0,
+      484.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 13.3,
+      "height_pt": 317.6
+     }
+    }
+   ],
+   "text": "Complete the scatter diagram.\nThe first 5 points have been plotted for you.\ny\n10\n9\n8\n7\n6\nSpeaking\n5\nscore\n4\n3\n2\n1\nx\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nWriting score\n[2]",
+   "marks": 2,
+   "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "Correct plots",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        89.3,
+        551.2479248046875,
+        199.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the scatter diagram. The first 5 points have been plotted for you.",
+     "text": "Complete the scatter diagram. The first 5 points have been plotted for you."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2025FM_42_q09a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      489.3,
+      570.0,
+      575.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "y =  …… [2]",
+      "working_gap_pt": 53.5,
+      "height_pt": 85.7
+     }
+    }
+   ],
+   "text": "Find the equation of the line of regression for y in terms of x.\ny =  ................................................ [2]",
+   "marks": 2,
+   "path": "9(b)",
+   "mark_scheme": [
+    {
+     "label": "9(b)",
+     "text": "[y =] 0.459x + 3.89",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        199.0,
+        551.2479248046875,
+        236.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the equation of the line of regression for y in terms of x.",
+     "text": "Find the equation of the line of regression for y in terms of x."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "y ="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_calculator",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A class of students take a writing test and a speaking test. The scores are shown in the table.",
+   "text": "A class of students take a writing test and a speaking test. The scores are shown in the table."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Writing score (x)",
+     "1",
+     "2",
+     "3",
+     "4",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10"
+    ],
+    [
+     "Speaking score (y)",
+     "4",
+     "6",
+     "3",
+     "8",
+     "6",
+     "7",
+     "7",
+     "8",
+     "9"
+    ]
+   ]
+  }
+ ]
+}

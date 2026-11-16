@@ -1,0 +1,209 @@
+{
+ "id": "0607_2025FM_62_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    215.2,
+    570.0,
+    476.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 173.5,
+    "height_pt": 260.8
+   }
+  }
+ ],
+ "text": "1\nThe diagram shows a square and 2 regular octagons fitting together at a point.\nThis is the formula for the size of each interior angle, a°, of a regular polygon with n sides.\n360\na\n=\n180\n-\nn",
+ "marks": 3,
+ "figures": [
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    183.3,
+    243.3,
+    414.0,
+    388.4
+   ],
+   "id": "0607_2025FM_62_q01_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      483.9,
+      570.0,
+      582.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 66.5,
+      "height_pt": 98.6
+     }
+    }
+   ],
+   "text": "Show that the size of each interior angle of a regular octagon is 135°.\n[1]",
+   "marks": 1,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "360\n=135\n180−\n8",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        45.875,
+        89.3,
+        549.3300170898438,
+        129.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that the size of each interior angle of a regular octagon is 135°.",
+     "text": "Show that the size of each interior angle of a regular octagon is 135°."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 66.5
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      587.9,
+      570.0,
+      725.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 105.5,
+      "height_pt": 137.6
+     }
+    }
+   ],
+   "text": "Use angles to show that 2 regular octagons and a square fit together at a point.\n[2]",
+   "marks": 2,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "135 + 135 + 90 = 360 oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        45.875,
+        129.4,
+        549.3300170898438,
+        167.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use angles to show that 2 regular octagons and a square fit together at a point.",
+     "text": "Use angles to show that 2 regular octagons and a square fit together at a point."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 105.5
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The diagram shows a square and 2 regular octagons fitting together at a point.",
+   "text": "The diagram shows a square and 2 regular octagons fitting together at a point."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2025FM_62_q01_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "This is the formula for the size of each interior angle, a°, of a regular polygon with n sides.",
+   "text": "This is the formula for the size of each interior angle, a°, of a regular polygon with n sides."
+  },
+  {
+   "type": "text",
+   "html": "a = 180 - \\(\\frac{360}{n}\\)",
+   "text": "a = 180 - (360)/(n)"
+  }
+ ]
+}

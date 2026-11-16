@@ -1,0 +1,184 @@
+{
+ "id": "0607_2025FM_12_q16",
+ "number": 16,
+ "segments": [
+  {
+   "page": 9,
+   "bbox": [
+    30.0,
+    253.7,
+    570.0,
+    287.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 33.8
+   }
+  }
+ ],
+ "text": "A cup contains 3 blue marbles and 4 red marbles.\nFred picks a marble at random from the cup, notes the colour and replaces it.",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      292.7,
+      570.0,
+      352.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 27.5,
+      "height_pt": 59.8
+     }
+    }
+   ],
+   "text": "Find the probability that Fred picks a red marble.\n................................................. [1]",
+   "marks": 1,
+   "path": "16(a)",
+   "mark_scheme": [
+    {
+     "label": "16(a)",
+     "text": "4\n7",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        492.9,
+        549.3300170898438,
+        533.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the probability that Fred picks a red marble.",
+     "text": "Find the probability that Fred picks a red marble."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      357.7,
+      570.0,
+      482.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 66.5,
+      "height_pt": 124.8
+     }
+    }
+   ],
+   "text": "Fred repeats this 140 times.\nFind the expected number of times that Fred picks a red marble.\n................................................. [2]",
+   "marks": 2,
+   "path": "16(b)",
+   "mark_scheme": [
+    {
+     "label": "16(b)",
+     "text": "80",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        533.0,
+        549.3300170898438,
+        627.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Fred repeats this 140 times.",
+     "text": "Fred repeats this 140 times."
+    },
+    {
+     "type": "text",
+     "html": "Find the expected number of times that Fred picks a red marble.",
+     "text": "Find the expected number of times that Fred picks a red marble."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 1,
+ "variant": 2,
+ "paper_code": "0607/12",
+ "paper_type": "core_non_calculator",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A cup contains 3 blue marbles and 4 red marbles. Fred picks a marble at random from the cup, notes the colour and replaces it.",
+   "text": "A cup contains 3 blue marbles and 4 red marbles. Fred picks a marble at random from the cup, notes the colour and replaces it."
+  }
+ ]
+}

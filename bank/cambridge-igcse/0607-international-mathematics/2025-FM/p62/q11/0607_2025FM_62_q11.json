@@ -1,0 +1,293 @@
+{
+ "id": "0607_2025FM_62_q11",
+ "number": 11,
+ "segments": [
+  {
+   "page": 12,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    429.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 60.5,
+    "height_pt": 370.1
+   }
+  }
+ ],
+ "text": "11\nbulb\nx\nh\nr\ncircle of light\nThe diagram shows a light with height h metres and its circle of light.\nA model for the intensity of light, L, at distance x metres from the bulb is\nB\nL\n=\n.\n2\nx\nB is a number called the brightness index of the bulb.\nWhen B is larger the light is brighter.\nThe intensity of light on the circumference of the circle of light must be 0.05 units.",
+ "marks": 7,
+ "figures": [
+  {
+   "caption": null,
+   "page": 12,
+   "bbox": [
+    184.6,
+    73.8,
+    412.7,
+    266.4
+   ],
+   "id": "0607_2025FM_62_q11_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      435.0,
+      570.0,
+      715.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 248.5,
+      "height_pt": 280.5
+     }
+    }
+   ],
+   "text": "2\n(a) Show that   r\n=\n20\nB\n-\nh\n.\n[3]",
+   "marks": 3,
+   "path": "11(a)",
+   "mark_scheme": [
+    {
+     "label": "11(a)",
+     "text": "x = r + h oe\n2\n2\n2\nB\n2\nx =\n0.05\nor B = 0.05x\n2\nleading to r= 20B−h\n2",
+     "codes": [
+      "1",
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        45.875,
+        352.0,
+        549.3300170898438,
+        460.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that r = 20B - h<sup>2</sup> .",
+     "text": "Show that r = 20B - h2 ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 248.5
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      314.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 183.5,
+      "height_pt": 254.6
+     }
+    }
+   ],
+   "text": "The height of the light is 6 m.\nThe radius of the circle of light is 10 m.\nFind the value of B.\n................................................. [3]",
+   "marks": 3,
+   "path": "11(b)",
+   "mark_scheme": [
+    {
+     "label": "11(b)",
+     "text": "6.8\n10= 20B−6\n2\noe\nor x or r + h\n2\n2\n2\nor 20B = 10 + 6 oe\n2\n2",
+     "codes": [
+      "2",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        45.875,
+        460.1,
+        549.3300170898438,
+        594.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The height of the light is 6 m. The radius of the circle of light is 10 m.",
+     "text": "The height of the light is 6 m. The radius of the circle of light is 10 m."
+    },
+    {
+     "type": "text",
+     "html": "Find the value of B.",
+     "text": "Find the value of B."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      319.4,
+      570.0,
+      600.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 222.5,
+      "height_pt": 280.6
+     }
+    }
+   ],
+   "text": "The height of the lights is h metres.\n2\n2\nChange the model   d\n=+\nr\nr\n-\nw\nto find a model for d in terms of B, h and w.\n..................................................................................................................................................... [1]",
+   "marks": 1,
+   "path": "11(c)",
+   "mark_scheme": [
+    {
+     "label": "11(c)",
+     "text": "d = 20B−h + 20B−h −w\n2\n2\n2\nisw",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        45.875,
+        594.6,
+        549.3300170898438,
+        629.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The height of the lights is h metres. Change the model d = r + r<sup>2</sup> - w<sup>2</sup> to find a model for d in terms of B, h and w.",
+     "text": "The height of the lights is h metres. Change the model d = r + r2 - w2 to find a model for d in terms of B, h and w."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "11",
+   "text": "11"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2025FM_62_q11_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The diagram shows a light with height h metres and its circle of light.",
+   "text": "The diagram shows a light with height h metres and its circle of light."
+  },
+  {
+   "type": "text",
+   "html": "A model for the intensity of light, L, at distance x metres from the bulb is",
+   "text": "A model for the intensity of light, L, at distance x metres from the bulb is"
+  },
+  {
+   "type": "text",
+   "html": "L = \\(\\frac{B}{x^{2}}\\) .",
+   "text": "L = (B)/(x2) ."
+  },
+  {
+   "type": "text",
+   "html": "B is a number called the brightness index of the bulb. When B is larger the light is brighter.",
+   "text": "B is a number called the brightness index of the bulb. When B is larger the light is brighter."
+  },
+  {
+   "type": "text",
+   "html": "The intensity of light on the circumference of the circle of light must be 0.05 units.",
+   "text": "The intensity of light on the circumference of the circle of light must be 0.05 units."
+  }
+ ]
+}

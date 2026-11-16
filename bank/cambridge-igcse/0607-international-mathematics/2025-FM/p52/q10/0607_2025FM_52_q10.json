@@ -1,0 +1,232 @@
+{
+ "id": "0607_2025FM_52_q10",
+ "number": 10,
+ "segments": [
+  {
+   "page": 9,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    106.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 46.6
+   }
+  }
+ ],
+ "text": "Samira wants to find all the ways to fit 3 regular polygons together at a point.\nIn this question one of the polygons is always an equilateral triangle.",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      111.4,
+      570.0,
+      327.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 131.5,
+      "height_pt": 215.6
+     }
+    }
+   ],
+   "text": "Samira uses an equilateral triangle and a regular hexagon.\nGive reasons why these 2 polygons and a third regular polygon cannot fit together at a point.\n.....................................................................................................................................................\n..................................................................................................................................................... [2]",
+   "marks": 2,
+   "path": "10(a)",
+   "mark_scheme": [
+    {
+     "label": "10(a)",
+     "text": "360 – (120 + 60) = 180 soi\nThe third polygon has an interior angle of 180 , but\n○\nthis is a straight line oe",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        452.1,
+        549.3300170898438,
+        513.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Samira uses an equilateral triangle and a regular hexagon.",
+     "text": "Samira uses an equilateral triangle and a regular hexagon."
+    },
+    {
+     "type": "text",
+     "html": "Give reasons why these 2 polygons and a third regular polygon cannot fit together at a point.",
+     "text": "Give reasons why these 2 polygons and a third regular polygon cannot fit together at a point."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      332.4,
+      570.0,
+      778.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 193.9,
+      "height_pt": 446.1
+     }
+    }
+   ],
+   "text": "Complete the table.\nUse your answers from Question 5 and Question 6(d) to help you.\nNumber of sides of\nNumber of sides of\nNumber of sides of\nfirst polygon\nsecond polygon\nthird polygon\n3\n7\n42\n3\n8\n3\n9\n3\n10\n3\n12\n12\n[5]",
+   "marks": 5,
+   "path": "10(b)",
+   "mark_scheme": [
+    {
+     "label": "10(b)",
+     "text": "Number of\nNumber of\nNumber of\nsides of first\nsides of second\nsides of third\npolygon\npolygon,\npolygon\n3\n8\n24\n3\n9\n18\n3\n10\n15\n360−60 −135 =165\nor 360−60 −140 =160\n360\n360\nor\n180 −165\n180 −160",
+     "codes": [
+      "2",
+      "C2",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        513.7,
+        549.3300170898438,
+        736.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table. Use your answers from <b>Question</b> 5 and <b>Question</b> 6(d) to help you.",
+     "text": "Complete the table. Use your answers from Question 5 and Question 6(d) to help you."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Number of sides of",
+       "Number of sides of",
+       "Number of sides of"
+      ],
+      [
+       "first polygon",
+       "second polygon",
+       "third polygon"
+      ],
+      [
+       "3",
+       "7",
+       "42"
+      ],
+      [
+       "3",
+       "8",
+       ""
+      ],
+      [
+       "3",
+       "9",
+       ""
+      ],
+      [
+       "3",
+       "10",
+       ""
+      ],
+      [
+       "3",
+       "12",
+       "12"
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 193.9
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Samira wants to find all the ways to fit 3 regular polygons together at a point.",
+   "text": "Samira wants to find all the ways to fit 3 regular polygons together at a point."
+  },
+  {
+   "type": "text",
+   "html": "In this question one of the polygons is always an equilateral triangle.",
+   "text": "In this question one of the polygons is always an equilateral triangle."
+  }
+ ]
+}
