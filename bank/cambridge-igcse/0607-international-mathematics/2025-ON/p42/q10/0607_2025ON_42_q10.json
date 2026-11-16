@@ -1,0 +1,271 @@
+{
+ "id": "0607_2025ON_42_q10",
+ "number": 10,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    299.4,
+    570.0,
+    376.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 19.4,
+    "height_pt": 77.1
+   }
+  }
+ ],
+ "text": "The table shows the marks of 10 students in a French test and in a Spanish test.\nFrench mark (x)\n27\n32\n36\n44\n57\n65\n78\n86\n89\n93\nSpanish mark (y)\n28\n12\n40\n47\n59\n68\n75\n82\n83\n89",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      380.4,
+      570.0,
+      490.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "y =  …… [2]",
+      "working_gap_pt": 78.0,
+      "height_pt": 110.1
+     }
+    }
+   ],
+   "text": "Find the equation of the regression line for y in terms of x.\ny =  ................................................ [2]",
+   "marks": 2,
+   "path": "10(a)",
+   "mark_scheme": [
+    {
+     "label": "10(a)",
+     "text": "y = –1.81 + 0.99[0] x",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        605.8,
+        569.3500366210938,
+        655.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the equation of the regression line for y in terms of x.",
+     "text": "Find the equation of the regression line for y in terms of x."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "y ="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      496.0,
+      570.0,
+      589.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 61.0,
+      "height_pt": 93.0
+     }
+    }
+   ],
+   "text": "Use your equation to estimate the Spanish mark when the French mark is 5.\n................................................. [1]",
+   "marks": 1,
+   "path": "10(b)",
+   "mark_scheme": [
+    {
+     "label": "10(b)",
+     "text": "3.1 or 3.14… or 3",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        655.5,
+        569.3500366210938,
+        679.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your equation to estimate the Spanish mark when the French mark is 5.",
+     "text": "Use your equation to estimate the Spanish mark when the French mark is 5."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      594.5,
+      570.0,
+      680.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 14.5,
+      "height_pt": 85.5
+     }
+    }
+   ],
+   "text": "Is your answer to part (b) likely to be a reliable estimate of the Spanish mark?\nGive a reason for your answer.\n............................................................................................................................................................\n..................................................................................................................................................... [1]",
+   "marks": 1,
+   "path": "10(c)",
+   "mark_scheme": [
+    {
+     "label": "10(c)",
+     "text": "No, outside range of data",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        679.5,
+        569.3500366210938,
+        704.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Is your answer to <b>part</b> (b) likely to be a reliable estimate of the Spanish mark? Give a reason for your answer.",
+     "text": "Is your answer to part (b) likely to be a reliable estimate of the Spanish mark? Give a reason for your answer."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_calculator",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The table shows the marks of 10 students in a French test and in a Spanish test.",
+   "text": "The table shows the marks of 10 students in a French test and in a Spanish test."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "French mark (x)",
+     "27",
+     "32",
+     "36",
+     "44",
+     "57",
+     "65",
+     "78",
+     "86",
+     "89",
+     "93"
+    ],
+    [
+     "Spanish mark (y)",
+     "28",
+     "12",
+     "40",
+     "47",
+     "59",
+     "68",
+     "75",
+     "82",
+     "83",
+     "89"
+    ]
+   ]
+  }
+ ]
+}

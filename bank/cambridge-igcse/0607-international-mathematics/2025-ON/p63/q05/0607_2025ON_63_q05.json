@@ -1,0 +1,332 @@
+{
+ "id": "0607_2025ON_63_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 11,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    132.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 72.6
+   }
+  }
+ ],
+ "text": "5\nAnother club has N members.\nThe fee for each member is $F.\nx members leave the club.\nThe club increases the fee for each member by $y.",
+ "marks": 10,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        137.4,
+        570.0,
+        184.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 14.5,
+        "height_pt": 46.6
+       }
+      }
+     ],
+     "text": "Write down an expression for the total fees before the increase in the fee.\n................................................. [1]",
+     "marks": 1,
+     "path": "5(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "5(a)(i)",
+       "text": "NF",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 9,
+         "bbox": [
+          45.875,
+          380.8,
+          549.3300170898438,
+          404.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Write down an expression for the total fees before the increase in the fee.",
+       "text": "Write down an expression for the total fees before the increase in the fee."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        189.4,
+        570.0,
+        262.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 40.5,
+        "height_pt": 72.6
+       }
+      }
+     ],
+     "text": "Complete the expression for the total fees after the increase in the fee.\n(................ - ...............)(............... + ...............) [2]",
+     "marks": 2,
+     "path": "5(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "5(a)(ii)",
+       "text": "(N – x)(F + y) or (N – x)(y + F) isw",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 9,
+         "bbox": [
+          45.875,
+          404.8,
+          549.3300170898438,
+          429.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the expression for the total fees after the increase in the fee.",
+       "text": "Complete the expression for the total fees after the increase in the fee."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "(",
+       "unit": ")"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "5(a)"
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      267.4,
+      570.0,
+      535.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 196.5,
+      "height_pt": 267.6
+     }
+    }
+   ],
+   "text": "The total fees in part (a)(i) and part (a)(ii) are the same.\nFind a model for x in terms of N, F and y.\nWrite your answer as a single fraction.\n................................................. [4]",
+   "marks": 4,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "[(N – x)(F + y) = ] NF + Ny – xF – xy\nor\nNF\nx = N –\nF + y\nor\n\nFx \ny=\ny(N – x) = yN – yx\n\n\nN−x\n\n\nNy\nx =\nF + y",
+     "codes": [
+      "C2",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        45.875,
+        429.7,
+        549.3300170898438,
+        685.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The total fees in <b>part</b> (a)(i) and <b>part</b> (a)(ii) are the same.",
+     "text": "The total fees in part (a)(i) and part (a)(ii) are the same."
+    },
+    {
+     "type": "text",
+     "html": "Find a model for x in terms of N, F and y. Write your answer as a single fraction.",
+     "text": "Find a model for x in terms of N, F and y. Write your answer as a single fraction."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      540.4,
+      570.0,
+      756.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 131.5,
+      "height_pt": 215.6
+     }
+    }
+   ],
+   "text": "20 members leave the club.\nThe club increases the fee for each member by $10 so that the total fees in part (a)(i) stay the\nsame.\nFind a model for N in terms of F.\n................................................. [3]",
+   "marks": 3,
+   "path": "5(c)",
+   "mark_scheme": [
+    {
+     "label": "5(c)",
+     "text": "10N\n20F\nor 10 =\n20 =\nF +10\nN −20\nor\nFN = (N – 20)(F + 10)\nN = 2F + 20 or N = 2(F + 10) oe",
+     "codes": [
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        45.875,
+        89.3,
+        549.3300170898438,
+        424.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "20 members leave the club. The club increases the fee for each member by $10 so that the total fees in <b>part</b> (a)(i) stay the same.",
+     "text": "20 members leave the club. The club increases the fee for each member by $10 so that the total fees in part (a)(i) stay the same."
+    },
+    {
+     "type": "text",
+     "html": "Find a model for N in terms of F.",
+     "text": "Find a model for N in terms of F."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 10,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Another club has N members. The fee for each member is $F.",
+   "text": "Another club has N members. The fee for each member is $F."
+  },
+  {
+   "type": "text",
+   "html": "x members leave the club. The club increases the fee for each member by $y.",
+   "text": "x members leave the club. The club increases the fee for each member by $y."
+  }
+ ]
+}

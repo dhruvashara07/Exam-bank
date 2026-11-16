@@ -1,0 +1,329 @@
+{
+ "id": "0607_2025ON_53_q07",
+ "number": 7,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    119.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 59.6
+   }
+  }
+ ],
+ "text": "7\nThere are now 5 integers in a set.\nThe first integer is still 10.\nThe integers still increase by k each time.",
+ "marks": 11,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      124.4,
+      570.0,
+      184.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 14.5,
+      "height_pt": 59.6
+     }
+    }
+   ],
+   "text": "Write an expression for the last integer in the set.\nGive your answer in its simplest form.\n10,\n10+,\nk\n10\n+\n2\nk\n,\n10\n+\n3\nk\n,      ......................\n[1]",
+   "marks": 1,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "10 + 4k",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        396.0,
+        549.3300170898438,
+        420.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write an expression for the last integer in the set. Give your answer in its simplest form.",
+     "text": "Write an expression for the last integer in the set. Give your answer in its simplest form."
+    },
+    {
+     "type": "text",
+     "html": "10, 10+ k , 10 + 2k , 10 + 3k , ……",
+     "text": "10, 10+ k , 10 + 2k , 10 + 3k , ……"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      189.4,
+      570.0,
+      418.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 196.5,
+      "height_pt": 228.6
+     }
+    }
+   ],
+   "text": "42.\n(b) Show that an expression for the answer to   STEP 3 - STEP 2   is now   k\n[3]",
+   "marks": 3,
+   "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "(10 + 2k) oe = 10 + 20k + 20k + 4k or\n2\n2\n2\nbetter\n10(10 + 4k) = 10 + 4 × 10k or better\n2\nand\ncorrect subtraction leading to 4k\n2",
+     "codes": [
+      "2",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        420.8,
+        549.3300170898438,
+        508.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that an expression for the answer to STEP 3 - STEP 2 is now 4k<sup>2</sup> .",
+     "text": "Show that an expression for the answer to STEP 3 - STEP 2 is now 4k2 ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 196.5
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      423.4,
+      570.0,
+      704.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 196.5,
+      "height_pt": 280.6
+     }
+    }
+   ],
+   "text": "Show that the expression in part (b) is true for this set of 5 integers.\n6,    10,    14,    18,    22\n[3]\nQuestion 7(d) is printed on the next page.",
+   "marks": 3,
+   "path": "7(c)",
+   "mark_scheme": [
+    {
+     "label": "7(c)",
+     "text": "4 × 4 = 64\n2\n14 and 22 × 6\n2\n14 – 22 × 6 = 64\n2\nor\n196 – 132 = 64",
+     "codes": [
+      "1",
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        508.9,
+        549.3300170898438,
+        614.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that the expression in <b>part</b> (b) is true for this set of 5 integers.",
+     "text": "Show that the expression in part (b) is true for this set of 5 integers."
+    },
+    {
+     "type": "text",
+     "html": "6, 10, 14, 18, 22",
+     "text": "6, 10, 14, 18, 22"
+    },
+    {
+     "type": "text",
+     "html": "<b>Question</b> 7(d) is <b>printed</b> <b>on</b> <b>the</b> <b>next</b> <b>page.</b>",
+     "text": "Question 7(d) is printed on the next page."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 196.5
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      574.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 391.5,
+      "height_pt": 514.6
+     }
+    }
+   ],
+   "text": "The integer at one end of a set is 41.\nThere are 5 integers in the set.\nThe answer to STEP 3 - the answer to STEP 2 is 144.\nFind both possible sets of 5 integers.\n..............................................................................\n..............................................................................\n[4]",
+   "marks": 4,
+   "path": "7(d)",
+   "mark_scheme": [
+    {
+     "label": "7(d)",
+     "text": "41, 47, 53, 59, 65\nand\n17, 23, 29, 35, 41\nLinear sequences of 5 terms with 41 at\nend, for three values of k (including k =\n6) and STEP 3 – STEP 2 correctly\ncalculated\nOR\n4k = 144 or k = 144÷4\n2\n2\nand [k =] 6",
+     "codes": [
+      "2",
+      "C2"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        45.875,
+        84.5,
+        549.3300170898438,
+        256.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The integer at one end of a set is 41. There are 5 integers in the set. The answer to STEP 3 - the answer to STEP 2 is 144.",
+     "text": "The integer at one end of a set is 41. There are 5 integers in the set. The answer to STEP 3 - the answer to STEP 2 is 144."
+    },
+    {
+     "type": "text",
+     "html": "Find both possible sets of 5 integers.",
+     "text": "Find both possible sets of 5 integers."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 3,
+ "paper_code": "0607/53",
+ "paper_type": "core_investigation",
+ "total_marks": 11,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "There are now 5 integers in a set.",
+   "text": "There are now 5 integers in a set."
+  },
+  {
+   "type": "text",
+   "html": "The first integer is still 10. The integers still increase by k each time.",
+   "text": "The first integer is still 10. The integers still increase by k each time."
+  }
+ ]
+}

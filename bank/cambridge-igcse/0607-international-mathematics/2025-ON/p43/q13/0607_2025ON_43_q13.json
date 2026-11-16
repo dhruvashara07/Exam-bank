@@ -1,0 +1,287 @@
+{
+ "id": "0607_2025ON_43_q13",
+ "number": 13,
+ "segments": [
+  {
+   "page": 11,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    78.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 19.1
+   }
+  }
+ ],
+ "text": "Rob and Sal each have $500 to invest.",
+ "marks": 9,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      85.4,
+      570.0,
+      249.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 105.5,
+      "height_pt": 163.6
+     }
+    }
+   ],
+   "text": "Rob invests his $500 at a rate of 2.5% per year simple interest.\nCalculate the total value of Rob’s investment at the end of 4 years.\n$  ................................................ [3]",
+   "marks": 3,
+   "path": "13(a)",
+   "mark_scheme": [
+    {
+     "label": "13(a)",
+     "text": "550",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        611.4,
+        549.3300170898438,
+        681.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Rob invests his $500 at a rate of 2.5% per year <b>simple</b> interest.",
+     "text": "Rob invests his $500 at a rate of 2.5% per year simple interest."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the total value of Rob’s investment at the end of 4 years.",
+     "text": "Calculate the total value of Rob’s investment at the end of 4 years."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "$"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      254.4,
+      570.0,
+      275.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 20.6
+     }
+    }
+   ],
+   "text": "Sal invests her $500 at a rate of 1.95% per year compound interest.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        280.4,
+        570.0,
+        418.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 105.5,
+        "height_pt": 137.6
+       }
+      }
+     ],
+     "text": "Calculate the value of Sal’s investment at the end of 4 years.\n$  ................................................ [2]",
+     "marks": 2,
+     "path": "13(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "13(b)(i)",
+       "text": "540.16 or 540 or 540.1 to 540.2",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          45.875,
+          681.1,
+          549.3300170898438,
+          730.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the value of Sal’s investment at the end of 4 years.",
+       "text": "Calculate the value of Sal’s investment at the end of 4 years."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "$"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        423.4,
+        570.0,
+        691.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 222.5,
+        "height_pt": 267.6
+       }
+      }
+     ],
+     "text": "Find the number of complete years it takes for the total value of Sal’s investment of $500 to\nbe first greater than $800.\n................................................. [4]",
+     "marks": 4,
+     "path": "13(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "13(b)(ii)",
+       "text": "25 nfww",
+       "codes": [
+        "4"
+       ],
+       "segments": [
+        {
+         "page": 9,
+         "bbox": [
+          45.875,
+          89.3,
+          549.3300170898438,
+          327.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the number of complete years it takes for the total value of Sal’s investment of $500 to be first greater than $800.",
+       "text": "Find the number of complete years it takes for the total value of Sal’s investment of $500 to be first greater than $800."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 4
+      }
+     ]
+    }
+   ],
+   "path": "13(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Sal invests her $500 at a rate of 1.95% per year <b>compound</b> interest.",
+     "text": "Sal invests her $500 at a rate of 1.95% per year compound interest."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 3,
+ "paper_code": "0607/43",
+ "paper_type": "extended_calculator",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Rob and Sal each have $500 to invest.",
+   "text": "Rob and Sal each have $500 to invest."
+  }
+ ]
+}

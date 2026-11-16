@@ -1,0 +1,184 @@
+{
+ "id": "0607_2025ON_11_q12",
+ "number": 12,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    319.4,
+    570.0,
+    364.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 44.6
+   }
+  }
+ ],
+ "text": "These are the first 4 terms of a sequence.\n1   5   9   13",
+ "marks": 2,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      371.4,
+      570.0,
+      431.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 27.5,
+      "height_pt": 59.6
+     }
+    }
+   ],
+   "text": "Write down the next term in this sequence.\n................................................. [1]",
+   "marks": 1,
+   "path": "12(a)",
+   "mark_scheme": [
+    {
+     "label": "12(a)",
+     "text": "17",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        598.6,
+        549.3300170898438,
+        627.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the next term in this sequence.",
+     "text": "Write down the next term in this sequence."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      436.4,
+      570.0,
+      496.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 27.5,
+      "height_pt": 59.6
+     }
+    }
+   ],
+   "text": "Explain why 31 is not in this sequence.\n..................................................................................................................................................... [1]",
+   "marks": 1,
+   "path": "12(b)",
+   "mark_scheme": [
+    {
+     "label": "12(b)",
+     "text": "Convincing explanation showing\nthat 31 does not appear in the\nsequence\ne.g. shows 21, 25, 29, 33\ne.g. the 8th term is 29 and the 9th\nterm is 33\ne.g. solves 4n – 3 = 31 to reach\nn = 8.5 and states that this is not an\ninteger\ne.g. shows 31, 27, 23, 19, 15, 11\nand states 11 is not in the sequence",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        89.3,
+        549.3300170898438,
+        278.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Explain why 31 is <b>not</b> in this sequence.",
+     "text": "Explain why 31 is not in this sequence."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 1,
+ "variant": 1,
+ "paper_code": "0607/11",
+ "paper_type": "core_non_calculator",
+ "total_marks": 2,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "These are the first 4 terms of a sequence.",
+   "text": "These are the first 4 terms of a sequence."
+  },
+  {
+   "type": "text",
+   "html": "5 9 13",
+   "text": "5 9 13"
+  }
+ ]
+}

@@ -1,0 +1,215 @@
+{
+ "id": "0607_2025ON_11_q15",
+ "number": 15,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    282.7,
+    570.0,
+    353.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 70.3
+   }
+  }
+ ],
+ "text": "These are the heights, in cm, of 12 flowers.\n25   39   18   19   48   41\n12   34   14   24   20   46",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      360.7,
+      570.0,
+      584.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 49.1,
+      "height_pt": 223.8
+     }
+    }
+   ],
+   "text": "Draw an ordered stem-and-leaf diagram for these heights.\n1\n2\n3\n4\nKey ....... | ....... represents ............... cm\n[3]",
+   "marks": 3,
+   "path": "15(a)",
+   "mark_scheme": [
+    {
+     "label": "15(a)",
+     "text": "Correct example for the key e.g.",
+     "codes": [
+      "2",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        415.2,
+        549.3300170898438,
+        553.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Draw an ordered stem-and-leaf diagram for these heights.",
+     "text": "Draw an ordered stem-and-leaf diagram for these heights."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "1",
+       ""
+      ],
+      [
+       "2",
+       ""
+      ],
+      [
+       "3",
+       ""
+      ],
+      [
+       "4",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "html": "Key ....... | ....... represents …… cm",
+     "text": "Key ....... | ....... represents …… cm"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      589.9,
+      570.0,
+      662.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 40.5,
+      "height_pt": 72.6
+     }
+    }
+   ],
+   "text": "Write down the fraction of these flowers with height less than 30 cm.\n................................................. [1]",
+   "marks": 1,
+   "path": "15(b)",
+   "mark_scheme": [
+    {
+     "label": "15(b)",
+     "text": "7\n12",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        553.0,
+        549.3300170898438,
+        595.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the fraction of these flowers with height less than 30 cm.",
+     "text": "Write down the fraction of these flowers with height less than 30 cm."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 1,
+ "variant": 1,
+ "paper_code": "0607/11",
+ "paper_type": "core_non_calculator",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "These are the heights, in cm, of 12 flowers.",
+   "text": "These are the heights, in cm, of 12 flowers."
+  },
+  {
+   "type": "text",
+   "html": "39 18 19 48 41",
+   "text": "39 18 19 48 41"
+  },
+  {
+   "type": "text",
+   "html": "34 14 24 20 46",
+   "text": "34 14 24 20 46"
+  }
+ ]
+}

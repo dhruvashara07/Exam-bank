@@ -1,0 +1,99 @@
+{
+ "id": "0607_2025ON_53_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    483.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 1,
+    "answer_line": null,
+    "working_gap_pt": 300.5,
+    "height_pt": 423.6
+   }
+  }
+ ],
+ "text": "5\nFor a set of 3 connected integers:\n•\nthe answer to STEP 3 - the answer to STEP 2 is 225\n•\nthe integers can be positive and negative\n•\nthe integers increase by the same positive integer, k, each time\n•\nthe answer to STEP 2 is -125.\nFind 2 different sets of 3 integers for which this is true.\n............. , ............. , ............. and ............. , ............. , ............. [4]",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "5",
+   "text": "–5, 10, 25 and –25, –10, 5\nTwo of these:\n•\n225 or 15 seen for difference k\n•\nFactors of 125 are [1] 5 25 [125]\nor 125 = 5 × 25\nor –125 = –5×25\nor –125 = 5×(–25)\n•\n[answer to] STEP 3 – (– 125) = 225\nor 100 + 125 = 225 oe",
+   "codes": [
+    "2",
+    "C2"
+   ],
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      45.875,
+      89.3,
+      549.3300170898438,
+      271.1
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 3,
+ "paper_code": "0607/53",
+ "paper_type": "core_investigation",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "For a set of 3 connected integers:",
+   "text": "For a set of 3 connected integers:"
+  },
+  {
+   "type": "list",
+   "items": [
+    "the answer to <b>STEP</b> 3 - the answer to STEP 2 is 225",
+    "the integers can be positive and negative",
+    "the integers increase by the same positive integer, k, each time",
+    "the answer to <b>STEP</b> 2 is -125."
+   ]
+  },
+  {
+   "type": "text",
+   "html": "Find 2 different sets of 3 integers for which this is true.",
+   "text": "Find 2 different sets of 3 integers for which this is true."
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
+   "lines": 1
+  },
+  {
+   "type": "marks",
+   "value": 4
+  }
+ ]
+}

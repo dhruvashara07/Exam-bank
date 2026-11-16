@@ -1,0 +1,270 @@
+{
+ "id": "0607_2025ON_42_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    380.3,
+    570.0,
+    457.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 19.4,
+    "height_pt": 77.2
+   }
+  }
+ ],
+ "text": "2\nThe table shows the marks scored by 100 students in a test.\nMark\n1–10\n11–20\n21–40\n41–60\n61–80\n81–90\n91–100\nNumber of students\n2\n8\n17\n21\n14\n25\n13",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      461.3,
+      570.0,
+      547.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 27.5,
+      "height_pt": 85.7
+     }
+    }
+   ],
+   "text": "One of these students is chosen at random.\nFind the probability that this student scored more than 90 marks.\n................................................. [1]",
+   "marks": 1,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "0.13 oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        45.875,
+        602.6,
+        569.3500366210938,
+        627.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "One of these students is chosen at random.",
+     "text": "One of these students is chosen at random."
+    },
+    {
+     "type": "text",
+     "html": "Find the probability that this student scored more than 90 marks.",
+     "text": "Find the probability that this student scored more than 90 marks."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      552.2,
+      570.0,
+      599.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 14.5,
+      "height_pt": 46.8
+     }
+    }
+   ],
+   "text": "Write down the group that contains the median.\n................................................. [1]",
+   "marks": 1,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "61 - 80",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        45.875,
+        627.4,
+        569.3500366210938,
+        651.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the group that contains the median.",
+     "text": "Write down the group that contains the median."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      604.3,
+      570.0,
+      697.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 61.0,
+      "height_pt": 93.2
+     }
+    }
+   ],
+   "text": "Calculate an estimate for the mean.\n................................................. [2]",
+   "marks": 2,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "60.8",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        45.875,
+        651.5,
+        569.3500366210938,
+        689.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate an estimate for the mean.",
+     "text": "Calculate an estimate for the mean."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_calculator",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>The</b> table shows the marks scored by 100 students in a test.",
+   "text": "The table shows the marks scored by 100 students in a test."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Mark",
+     "1–10",
+     "11–20",
+     "21–40",
+     "41–60",
+     "61–80",
+     "81–90",
+     "91–100"
+    ],
+    [
+     "Number of students",
+     "2",
+     "8",
+     "17",
+     "21",
+     "14",
+     "25",
+     "13"
+    ]
+   ]
+  }
+ ]
+}

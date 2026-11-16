@@ -1,0 +1,106 @@
+{
+ "id": "0607_2025ON_53_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    366.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 131.5,
+    "height_pt": 306.6
+   }
+  }
+ ],
+ "text": "6\nThe first of a set of 3 integers is 10.\nThe integers increase by k each time.\nExpressions for the integers are\n10,\n10+,\nk\n10\n+\n2\nk\n.\nComplete this working to show that your expression in the last cell in Question 4 is true.\nSTEP 3 (\n10+)(\nk\n10+) =\nk\nSTEP 2 10(\n10\n+\n2\nk\n) =\n[4]",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "6",
+   "text": "[(10 + k)(10 + k) =] 10 + 10k + 10k + k\n2\n2\nor better\n[10(10 + 2k) =] 10 + 2 × 10 × k or better\n2\nSubtraction of the correct expansions\nleading to k\n2",
+   "codes": [
+    "2",
+    "1",
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      45.875,
+      271.1,
+      549.3300170898438,
+      396.0
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 3,
+ "paper_code": "0607/53",
+ "paper_type": "core_investigation",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The first of a set of 3 integers is 10. The integers increase by k each time. Expressions for the integers are",
+   "text": "The first of a set of 3 integers is 10. The integers increase by k each time. Expressions for the integers are"
+  },
+  {
+   "type": "text",
+   "html": "10, 10+ k , 10 + 2k .",
+   "text": "10, 10+ k , 10 + 2k ."
+  },
+  {
+   "type": "text",
+   "html": "Complete this working to show that your expression in the last cell in <b>Question</b> 4 is true.",
+   "text": "Complete this working to show that your expression in the last cell in Question 4 is true."
+  },
+  {
+   "type": "text",
+   "html": "STEP 3 (10+ k )(10+ k ) =",
+   "text": "STEP 3 (10+ k )(10+ k ) ="
+  },
+  {
+   "type": "text",
+   "html": "STEP 2 10(10 + 2k ) =",
+   "text": "STEP 2 10(10 + 2k ) ="
+  },
+  {
+   "type": "answer",
+   "kind": "space",
+   "height_pt": 131.5
+  },
+  {
+   "type": "marks",
+   "value": 4
+  }
+ ]
+}

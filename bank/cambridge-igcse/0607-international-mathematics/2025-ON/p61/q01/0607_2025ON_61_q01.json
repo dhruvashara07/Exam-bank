@@ -1,0 +1,344 @@
+{
+ "id": "0607_2025ON_61_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    119.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 59.6
+   }
+  }
+ ],
+ "text": "1\n4 by 4 square rings\nThe example shows square ring 3.\nThis is because 3 is the top left number in the ring.",
+ "marks": 9,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      124.4,
+      570.0,
+      223.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 66.5,
+      "height_pt": 98.6
+     }
+    }
+   ],
+   "text": "Work out the ring value for the square ring in the example.\n................................................. [2]",
+   "marks": 2,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "234 – 78",
+     "codes": [
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        45.875,
+        502.5,
+        549.3300170898438,
+        527.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Work out the ring value for the square ring in the example.",
+     "text": "Work out the ring value for the square ring in the example."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      228.4,
+      570.0,
+      451.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 19.4,
+      "height_pt": 222.6
+     }
+    }
+   ],
+   "text": "Complete this table using part (a) and any patterns you notice.\nSquare ring\nRing value\nL\nS\n(n)\nL - S\n1\n2\n222\n74\n148\n3\n4\n246\n82\n164\n5\n86\n[2]",
+   "marks": 2,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "156\n(n)\nL\nS\nL – S\n1\n210\n70\n140\n2\n222\n74\n148\n3\n234\n78\n156\n4\n246\n82\n164\n5\n258\n86\n172",
+     "codes": [
+      "1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        45.875,
+        527.3,
+        549.3300170898438,
+        733.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this table using <b>part</b> (a) and any patterns you notice.",
+     "text": "Complete this table using part (a) and any patterns you notice."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Square ring (n)",
+       "L",
+       "S",
+       "Ring value L - S"
+      ],
+      [
+       "1",
+       "",
+       "",
+       ""
+      ],
+      [
+       "2",
+       "222",
+       "74",
+       "148"
+      ],
+      [
+       "3",
+       "",
+       "",
+       ""
+      ],
+      [
+       "4",
+       "246",
+       "82",
+       "164"
+      ],
+      [
+       "5",
+       "",
+       "86",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      456.3,
+      570.0,
+      620.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 131.5,
+      "height_pt": 163.7
+     }
+    }
+   ],
+   "text": "Find an expression, in terms of n, for the ring value.\n................................................. [3]",
+   "marks": 3,
+   "path": "1(c)",
+   "mark_scheme": [
+    {
+     "label": "1(c)",
+     "text": "8n + 132 oe\nThree differences of 8 in final column or\nin working",
+     "codes": [
+      "2",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        89.3,
+        550.5299682617188,
+        151.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression, in terms of n, for the ring value.",
+     "text": "Find an expression, in terms of n, for the ring value."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      625.3,
+      570.0,
+      763.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 105.5,
+      "height_pt": 137.7
+     }
+    }
+   ],
+   "text": "Find the ring value for square ring 731.\n................................................. [2]",
+   "marks": 2,
+   "path": "1(d)",
+   "mark_scheme": [
+    {
+     "label": "1(d)",
+     "text": "5980",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.875,
+        151.8,
+        550.5299682617188,
+        214.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the ring value for square ring 731.",
+     "text": "Find the ring value for square ring 731."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "4 by 4 square <b>rings</b>",
+   "text": "4 by 4 square rings"
+  },
+  {
+   "type": "text",
+   "html": "The example shows square ring 3. This is because 3 is the top left number in the ring.",
+   "text": "The example shows square ring 3. This is because 3 is the top left number in the ring."
+  }
+ ]
+}

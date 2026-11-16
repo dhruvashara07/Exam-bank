@@ -1,0 +1,318 @@
+{
+ "id": "0607_2025ON_61_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 10,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    368.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 38.6,
+    "height_pt": 308.6
+   }
+  }
+ ],
+ "text": "6\nTo make lift, an aircraft wing is angled to the airflow.\nThis is called the angle of attack.\nlift\nangle of\nattack\nairflow\nAs the speed of the aircraft decreases, the angle of attack, a°, increases to get more lift.\nThe amount of lift depends on a quantity known as the lift coefficient, C.\nThis table shows how C changes for different values of the angle of attack.\nAngle of attack (a° )\n0\n5\n10\n15\n20\n25\n-5\nLift coefficient (C )\n0.00\n0.55\n1.05\n1.46\n1.70\n1.66\n1.44\n172\nA possible model for C is\nC\n=\nm\n+\nna\n(\n-\n)\nwhere m and n are constants.",
+ "marks": 9,
+ "figures": [
+  {
+   "caption": null,
+   "page": 10,
+   "bbox": [
+    185.1,
+    99.8,
+    419.7,
+    207.7
+   ],
+   "id": "0607_2025ON_61_q06_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      373.1,
+      570.0,
+      537.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 79.5,
+      "height_pt": 163.9
+     }
+    }
+   ],
+   "text": "Use a = 0 and a = 20 to find two equations each in terms of m and n.\nGive each equation in its simplest form.\n.................................................\n.................................................\n[3]",
+   "marks": 3,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "0.55 = m + 289n\nand\n1.66 = m + 9n",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        45.875,
+        437.7,
+        549.3300170898438,
+        643.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use a = 0 and a = 20 to find two equations each in terms of m and n. Give each equation in its simplest form.",
+     "text": "Use a = 0 and a = 20 to find two equations each in terms of m and n. Give each equation in its simplest form."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      418.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 3,
+      "answer_line": "m =  ……",
+      "working_gap_pt": 248.5,
+      "height_pt": 358.6
+     }
+    }
+   ],
+   "text": "Find the value of m and the value of n, and write the model for C.\nGive each value correct to 2 significant figures.\nm =  ................................................\nn =  ................................................\nC =  ..................................................................................................\n[4]",
+   "marks": 4,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "[m =] 1.7\n[n =] – 0.0040\n[C =1.7−0.0040(a−17) ]\n2\nC marks are only available for equations containing just 2 variables\nIf candidate restarts with different a and C values award C marks for correct method\nCorrect method to eliminate one variable\nor\nCorrect sketch showing two intersecting\nlines with appropriate gradients\nCorrect method to find second variable\nor\nCorrect sketch with point of intersection\nlabelled",
+     "codes": [
+      "2",
+      "C1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        45.875,
+        89.3,
+        549.3300170898438,
+        306.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the value of m and the value of n, and write the model for C. Give each value correct to 2 significant figures.",
+     "text": "Find the value of m and the value of n, and write the model for C. Give each value correct to 2 significant figures."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "m ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "n ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "C ="
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      423.4,
+      570.0,
+      769.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 157.5,
+      "height_pt": 345.6
+     }
+    }
+   ],
+   "text": "Use your model to find the maximum lift coefficient for this wing.\n................................................. [2]\nQuestion 7 is printed on the next page.",
+   "marks": 2,
+   "path": "6(c)",
+   "mark_scheme": [
+    {
+     "label": "6(c)",
+     "text": "[a =] 17 seen\n1.70",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        45.875,
+        306.3,
+        549.3300170898438,
+        355.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your model to find the maximum lift coefficient for this wing.",
+     "text": "Use your model to find the maximum lift coefficient for this wing."
+    },
+    {
+     "type": "text",
+     "html": "<b>Question</b> 7 is <b>printed</b> <b>on</b> <b>the</b> <b>next</b> <b>page.</b>",
+     "text": "Question 7 is printed on the next page."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "To make lift, an aircraft wing is angled to the airflow. This is called the angle of attack.",
+   "text": "To make lift, an aircraft wing is angled to the airflow. This is called the angle of attack."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2025ON_61_q06_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "As the speed of the aircraft decreases, the angle of attack, a°, increases to get more lift. The amount of lift depends on a quantity known as the lift coefficient, C.",
+   "text": "As the speed of the aircraft decreases, the angle of attack, a°, increases to get more lift. The amount of lift depends on a quantity known as the lift coefficient, C."
+  },
+  {
+   "type": "text",
+   "html": "This table shows how C changes for different values of the angle of attack.",
+   "text": "This table shows how C changes for different values of the angle of attack."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Angle of attack (a°)",
+     "-5",
+     "0",
+     "5",
+     "10",
+     "15",
+     "20",
+     "25"
+    ],
+    [
+     "Lift coefficient (C)",
+     "0.00",
+     "0.55",
+     "1.05",
+     "1.46",
+     "1.70",
+     "1.66",
+     "1.44"
+    ]
+   ]
+  },
+  {
+   "type": "text",
+   "html": "A possible model for C is C = m + n (a - 17)<sup>2</sup> where m and n are constants.",
+   "text": "A possible model for C is C = m + n (a - 17)2 where m and n are constants."
+  }
+ ]
+}

@@ -1,0 +1,408 @@
+{
+ "id": "0607_2025ON_63_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 9,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    130.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 71.1
+   }
+  }
+ ],
+ "text": "4\nA club has 200 members.\nThe fee for each member is $100.\nx members leave the club.\nThe club wants the total fees to be $20 000.",
+ "marks": 9,
+ "figures": [
+  {
+   "caption": null,
+   "page": 10,
+   "bbox": [
+    62.2,
+    89.6,
+    535.1,
+    368.4
+   ],
+   "id": "0607_2025ON_63_q04d_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(d)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      137.4,
+      570.0,
+      223.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 53.5,
+      "height_pt": 85.6
+     }
+    }
+   ],
+   "text": "Write down an expression for the new fee that each member pays.\n................................................. [1]",
+   "marks": 1,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "20000\n100x\nor 100+\nisw\n200−x\n200−x",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        449.7,
+        549.3300170898438,
+        492.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down an expression for the new fee that each member pays.",
+     "text": "Write down an expression for the new fee that each member pays."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      228.4,
+      570.0,
+      570.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 277.6,
+      "height_pt": 342.1
+     }
+    }
+   ],
+   "text": "The increase in the fee for each member is $y.\n100\nx\nShow that a model for the increase in the fee is   y\n=\n- .\n200\nx\n[3]",
+   "marks": 3,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "20000\n– 100\n200−x\nCorrect next step e.g\n100(200−x)\n20000\n−\n200−x\n200−x\n100x\nleading to y =\n200−x\nScheme for when answer to 4(a) is 100+\n100x\n100+\n– 100\n200−x\n100x\nleading to y =\n200−x",
+     "codes": [
+      "1",
+      "1",
+      "1",
+      "2",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        492.1,
+        549.3300170898438,
+        778.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The increase in the fee for each member is $y.",
+     "text": "The increase in the fee for each member is $y."
+    },
+    {
+     "type": "text",
+     "html": "Show that a model for the increase in the fee is y = \\(\\frac{100x}{200 - x}\\) .",
+     "text": "Show that a model for the increase in the fee is y = (100x)/(200-x) ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 277.6
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      575.8,
+      570.0,
+      635.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 27.5,
+      "height_pt": 59.7
+     }
+    }
+   ],
+   "text": "Write down the values of x for which the model is valid.\n................................................. [1]",
+   "marks": 1,
+   "path": "4(c)",
+   "mark_scheme": [
+    {
+     "label": "4(c)",
+     "text": "[0 ⩽ x ] < 200 [where x is an integer]",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        45.875,
+        89.3,
+        549.3300170898438,
+        114.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the values of x for which the model is valid.",
+     "text": "Write down the values of x for which the model is valid."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      64.3,
+      570.0,
+      413.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 102.4,
+      "height_pt": 349.2
+     }
+    }
+   ],
+   "text": "100\nx\n(d) Sketch the graph of the model   y\n=\n-   for values of x between 0 and 100.\n200\nx\ny\n100\nFee\nincrease\n($)\n0\nx\n0\n100\nNumber of members that leave\n[2]",
+   "marks": 2,
+   "path": "4(d)",
+   "mark_scheme": [
+    {
+     "label": "4(d)",
+     "text": "Correct shape through the origin.\nReaches (100, 100)",
+     "codes": [
+      "1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        45.875,
+        114.2,
+        549.3300170898438,
+        263.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Sketch the graph of the model y = \\(\\frac{100x}{200 - x}\\) for values of x between 0 and 100.",
+     "text": "Sketch the graph of the model y = (100x)/(200-x) for values of x between 0 and 100."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2025ON_63_q04d_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Number of members that leave",
+     "text": "Number of members that leave"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 102.4
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      418.9,
+      570.0,
+      624.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 131.5,
+      "height_pt": 205.6
+     }
+    }
+   ],
+   "text": "Some members leave the club.\n100\nx\nThe club uses the model   y\n=\n-   and finds that the fee increase is $13.\n200\nx\nFind the number of members that left the club.\n................................................. [2]",
+   "marks": 2,
+   "path": "4(e)",
+   "mark_scheme": [
+    {
+     "label": "4(e)",
+     "text": "Horizontal line y = 13 on diagram\nor\n100x\n= 13\n200−x\nor\n(200 – x)(100 + 13) = 20000\n23",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        45.875,
+        263.1,
+        549.3300170898438,
+        380.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Some members leave the club. The club uses the model y = \\(\\frac{100x}{200 - x}\\) and finds that the fee increase is $13.",
+     "text": "Some members leave the club. The club uses the model y = (100x)/(200-x) and finds that the fee increase is $13."
+    },
+    {
+     "type": "text",
+     "html": "Find the number of members that left the club.",
+     "text": "Find the number of members that left the club."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A club has 200 members. The fee for each member is $100.",
+   "text": "A club has 200 members. The fee for each member is $100."
+  },
+  {
+   "type": "text",
+   "html": "x members leave the club. The club wants the total fees to be $20 000.",
+   "text": "x members leave the club. The club wants the total fees to be $20 000."
+  }
+ ]
+}

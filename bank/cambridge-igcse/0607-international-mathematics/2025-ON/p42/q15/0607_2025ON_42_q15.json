@@ -1,0 +1,285 @@
+{
+ "id": "0607_2025ON_42_q15",
+ "number": 15,
+ "segments": [
+  {
+   "page": 10,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    78.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 19.1
+   }
+  }
+ ],
+ "text": "Erik invests $x.",
+ "marks": 10,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      85.4,
+      570.0,
+      106.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 20.6
+     }
+    }
+   ],
+   "text": "He receives compound interest at a rate of 7.5% each year.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        30.0,
+        111.4,
+        570.0,
+        298.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 129.1,
+        "height_pt": 187.1
+       }
+      }
+     ],
+     "text": "At the end of 5 years, the value of Erik’s investment is $11 485.\nShow that x = 8000 correct to the nearest dollar.\n[3]",
+     "marks": 3,
+     "path": "15(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "15(a)(i)",
+       "text": "11485\nx=\noe\n5\n1.075\n7999.9[…]",
+       "codes": [
+        "M2",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          45.875,
+          446.5,
+          569.3500366210938,
+          512.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "At the end of 5 years, the value of Erik’s investment is $11 485.",
+       "text": "At the end of 5 years, the value of Erik’s investment is $11 485."
+      },
+      {
+       "type": "text",
+       "html": "Show that x = 8000 correct to the nearest dollar.",
+       "text": "Show that x = 8000 correct to the nearest dollar."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 129.1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        30.0,
+        304.0,
+        570.0,
+        532.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 182.9,
+        "height_pt": 228.0
+       }
+      }
+     ],
+     "text": "Find the number of complete years it takes for the total value of his investment of $8000 to be\nfirst greater than $16 000.\n................................................. [4]",
+     "marks": 4,
+     "path": "15(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "15(a)(ii)",
+       "text": "10 nfww",
+       "codes": [
+        "4"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          45.875,
+          512.9,
+          569.3500366210938,
+          713.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the number of complete years it takes for the total value of his investment of $8000 to be first greater than $16 000.",
+       "text": "Find the number of complete years it takes for the total value of his investment of $8000 to be first greater than $16 000."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 4
+      }
+     ]
+    }
+   ],
+   "path": "15(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "He receives compound interest at a rate of 7.5% each year.",
+     "text": "He receives compound interest at a rate of 7.5% each year."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      537.4,
+      570.0,
+      766.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "y =  …… [3]",
+      "working_gap_pt": 157.4,
+      "height_pt": 228.6
+     }
+    }
+   ],
+   "text": "The compound interest rate of 7.5% each year is equivalent to a compound interest rate\nof y % each month.\nFind the value of y.\ny =  ................................................ [3]",
+   "marks": 3,
+   "path": "15(b)",
+   "mark_scheme": [
+    {
+     "label": "15(b)",
+     "text": "0.604 or 0.6044 to 0.6045",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        713.9,
+        569.3500366210938,
+        765.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The compound interest rate of 7.5% each year is equivalent to a compound interest rate of y % each month.",
+     "text": "The compound interest rate of 7.5% each year is equivalent to a compound interest rate of y % each month."
+    },
+    {
+     "type": "text",
+     "html": "Find the value of y.",
+     "text": "Find the value of y."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "y ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_calculator",
+ "total_marks": 10,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Erik invests $x.",
+   "text": "Erik invests $x."
+  }
+ ]
+}

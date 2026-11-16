@@ -1,0 +1,107 @@
+{
+ "id": "0607_2025ON_61_q07",
+ "number": 7,
+ "segments": [
+  {
+   "page": 12,
+   "bbox": [
+    30.0,
+    64.7,
+    570.0,
+    675.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 1,
+    "answer_line": null,
+    "working_gap_pt": 391.5,
+    "height_pt": 610.3
+   }
+  }
+ ],
+ "text": "2\ndvAC\n7\nA model for the lift, L newtons, that an aircraft makes is    L\n=\n.\n2\nkg/m3\nd = air density (\n)\nv = speed (m/s)\nm2\nA = wing area (\n)\nC = lift coefficient\n2.\nAn aircraft has a wing area of\n125\nm\nIt flies\n•\nat a height of 12 km above sea level\n•\nat a speed of 210 m/s\n•\nwith angle of attack 3°.\nUse Question 6(b) and Model A in Question 5(b) to calculate the lift for this aircraft.\nGive your answer correct to 2 significant figures.\n................................................. [7]",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "7",
+   "text": "Correct substitution of a = 3 in model in\n6(b)\n[C =] 0.916 to 0.923[0...] seen\n195\nd =\n39 ×12 +160\n[d =] 0.311 or 0.3105... seen\nCorrect substitution of their d and\n2\ntheir C and 210 and 125 in L=\ndv AC\n2\n780 000 or 790 000",
+   "codes": [
+    "C1",
+    "1",
+    "C1",
+    "1",
+    "C1",
+    "2"
+   ],
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      45.875,
+      355.2,
+      549.3300170898438,
+      567.3
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A model for the lift, L newtons, that an aircraft makes is L = \\(\\frac{\\text{dv}^{2}\\text{AC}}{2}\\) .",
+   "text": "A model for the lift, L newtons, that an aircraft makes is L = (dv2AC)/(2) ."
+  },
+  {
+   "type": "text",
+   "html": "d = air density (kg/m<sup>3</sup>) v = speed (m/s) A = wing area (m<sup>2</sup>) C = lift coefficient An aircraft has a wing area of 125 m<sup>2</sup> . It flies",
+   "text": "d = air density (kg/m3) v = speed (m/s) A = wing area (m2) C = lift coefficient An aircraft has a wing area of 125 m2 . It flies"
+  },
+  {
+   "type": "list",
+   "items": [
+    "at a height of 12 km above sea level",
+    "at a speed of 210 m/s",
+    "with angle of attack 3°."
+   ]
+  },
+  {
+   "type": "text",
+   "html": "Use <b>Question</b> 6(b) and Model A in <b>Question</b> 5(b) to calculate the lift for this aircraft. Give your answer correct to 2 significant figures.",
+   "text": "Use Question 6(b) and Model A in Question 5(b) to calculate the lift for this aircraft. Give your answer correct to 2 significant figures."
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
+   "lines": 1
+  },
+  {
+   "type": "marks",
+   "value": 7
+  }
+ ]
+}

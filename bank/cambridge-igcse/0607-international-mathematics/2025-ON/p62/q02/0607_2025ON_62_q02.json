@@ -1,0 +1,485 @@
+{
+ "id": "0607_2025ON_62_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    420.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 28.5,
+    "height_pt": 360.6
+   }
+  }
+ ],
+ "text": "2\nThe square patterns in Question 1 make towers of squares.\nThis is Tower 1.\nThere are 2 vertical lines.\nThere are 2 horizontal lines.\nThere are 4 lines in total.\nThis is Tower 2.\nThere are 5 vertical lines.\nThere are 6 horizontal lines.\nThere are 11 lines in total.\nThis is Tower 3.",
+ "marks": 16,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      544.9,
+      570.0,
+      796.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 22.5,
+      "height_pt": 251.1
+     }
+    }
+   ],
+   "text": "Complete the table.\nTower number\nNumber of\nNumber of\nTotal number\n(t)\nvertical lines\nhorizontal lines\nof lines\n1\n2\n2\n4\n2\n5\n6\n11\n3\n4\n5\n[4]",
+   "marks": 4,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "Tower\nNumber\nNumber of\nTotal\n(t)\nof vertical\nhorizontal\nnumber\nlines\nlines\nof lines\n3\n9\n12\n21\n4\n14\n20\n34\n5\n20\n30\n50\nTower 4 (or Tower 5) drawn\n(may be a correct extension of Tower 3)\nor 9 + 12 or their 14 + their20 or their 20 + their30\nor 3 differences from 3, 4, 5, 6 for vertical lines\nor 3 differences from 4, 6, 8, 10 for horizontal lines\nor 3 differences from 7, 10, 13, 16 for total",
+     "codes": [
+      "3",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        28.25,
+        214.2,
+        566.5499877929688,
+        438.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Tower number",
+       "Number of",
+       "Number of",
+       "Total number"
+      ],
+      [
+       "(t)",
+       "vertical lines",
+       "horizontal lines",
+       "of lines"
+      ],
+      [
+       "1",
+       "2",
+       "2",
+       "4"
+      ],
+      [
+       "2",
+       "5",
+       "6",
+       "11"
+      ],
+      [
+       "3",
+       "",
+       "",
+       ""
+      ],
+      [
+       "4",
+       "",
+       "",
+       ""
+      ],
+      [
+       "5",
+       "",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      197.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 105.5,
+      "height_pt": 137.6
+     }
+    }
+   ],
+   "text": "Find an expression, in terms of t, for the number of horizontal lines in Tower t.\n................................................. [2]",
+   "marks": 2,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "t + t or t(t +1) oe\n2",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        28.25,
+        438.5,
+        566.5499877929688,
+        476.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression, in terms of t, for the number of <b>horizontal</b> lines in Tower t.",
+     "text": "Find an expression, in terms of t, for the number of horizontal lines in Tower t."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      202.4,
+      570.0,
+      483.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 170.5,
+      "height_pt": 280.6
+     }
+    }
+   ],
+   "text": "This is an expression for the total number of lines in Tower t.\n0 53\n.\nt\n(\nt\n+\n5\n)\nUse this expression and your answer from part (b) to find an expression for the number of vertical\nlines in Tower t.\nGive your answer in its simplest form.\n................................................. [3]",
+   "marks": 3,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "0.5t(t + 3) or t(0.5t + 1.5) or 0.5t + 1.5t\n2\nfinal answer\n0.5t(3t + 5) – (t + t)\n2",
+     "codes": [
+      "2",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        28.25,
+        476.1,
+        566.5499877929688,
+        566.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "This is an expression for the total number of lines in Tower t.",
+     "text": "This is an expression for the total number of lines in Tower t."
+    },
+    {
+     "type": "text",
+     "html": "0.5t (3t + 5)",
+     "text": "0.5t (3t + 5)"
+    },
+    {
+     "type": "text",
+     "html": "Use this expression and your answer from <b>part</b> (b) to find an expression for the number of vertical lines in Tower t. Give your answer in its simplest form.",
+     "text": "Use this expression and your answer from part (b) to find an expression for the number of vertical lines in Tower t. Give your answer in its simplest form."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      488.4,
+      570.0,
+      782.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 235.5,
+      "height_pt": 293.6
+     }
+    }
+   ],
+   "text": "A tower has 902 vertical lines.\nFind the total number of lines in the bottom row of squares in this tower.\n................................................. [4]",
+   "marks": 4,
+   "path": "2(d)",
+   "mark_scheme": [
+    {
+     "label": "2(d)",
+     "text": "Correct sketch of y = 0.5t + 1.5t oe\n2\nand line drawn at y = 902 on sketch\nor\n0.5t + 1.5t – 902 = 0\n2\n−1.5± 1.5 −4×0.5×−902\n2\nand\noe\n2×0.5\nor\ntable of 3 consecutive values from\n39\n40\n41\n42\n819\n860\n902\n945\nor\n0.5t + 1.5t – 902 = 0\n2\nand (t + 44)(t – 41) = 0\n124",
+     "codes": [
+      "C2",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        28.25,
+        89.3,
+        566.1499633789062,
+        460.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A tower has 902 vertical lines.",
+     "text": "A tower has 902 vertical lines."
+    },
+    {
+     "type": "text",
+     "html": "Find the total number of lines in the bottom row of squares in this tower.",
+     "text": "Find the total number of lines in the bottom row of squares in this tower."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      60.5,
+      570.0,
+      523.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 404.5,
+      "height_pt": 462.5
+     }
+    }
+   ],
+   "text": "The total number of lines in Tower (\nn\n+\n1\n)\nis 175 more than the total number of lines in Tower n.\nWork out the value of n.\n................................................. [3]",
+   "marks": 3,
+   "path": "2(e)",
+   "mark_scheme": [
+    {
+     "label": "2(e)",
+     "text": "3(n + 1) + 1 = 175\nor\n0.5(n + 1)(3(n + 1) + 5) – 0.5n(3n + 5) = 175\nor\nSketch of 2 graphs labelled correctly\nSimplification to 3n + 4 = 175 oe\nor\nsketch showing intersection of 2 graphs at n = 57\n57\nAlternative method\n3N + 1 = 175\nand\n174\n3\n−1 or 58 – 1\n[n =]\n57",
+     "codes": [
+      "C1",
+      "C1",
+      "1",
+      "C2",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        28.25,
+        460.9,
+        566.1499633789062,
+        741.9
+       ]
+      },
+      {
+       "page": 9,
+       "bbox": [
+        28.25,
+        83.9,
+        566.1499633789062,
+        114.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The total number of lines in Tower (n + 1) is 175 more than the total number of lines in Tower n.",
+     "text": "The total number of lines in Tower (n + 1) is 175 more than the total number of lines in Tower n."
+    },
+    {
+     "type": "text",
+     "html": "Work out the value of n.",
+     "text": "Work out the value of n."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2025,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 16,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The square patterns in <b>Question</b> 1 make towers of squares.",
+   "text": "The square patterns in Question 1 make towers of squares."
+  },
+  {
+   "type": "text",
+   "html": "This is Tower 1.",
+   "text": "This is Tower 1."
+  },
+  {
+   "type": "text",
+   "html": "There are 2 vertical lines.",
+   "text": "There are 2 vertical lines."
+  },
+  {
+   "type": "text",
+   "html": "There are 2 horizontal lines.",
+   "text": "There are 2 horizontal lines."
+  },
+  {
+   "type": "text",
+   "html": "There are 4 lines in total.",
+   "text": "There are 4 lines in total."
+  },
+  {
+   "type": "text",
+   "html": "This is Tower 2.",
+   "text": "This is Tower 2."
+  },
+  {
+   "type": "text",
+   "html": "There are 5 vertical lines.",
+   "text": "There are 5 vertical lines."
+  },
+  {
+   "type": "text",
+   "html": "There are 6 horizontal lines.",
+   "text": "There are 6 horizontal lines."
+  },
+  {
+   "type": "text",
+   "html": "There are 11 lines in total.",
+   "text": "There are 11 lines in total."
+  },
+  {
+   "type": "text",
+   "html": "This is Tower 3.",
+   "text": "This is Tower 3."
+  }
+ ]
+}
