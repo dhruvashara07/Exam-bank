@@ -1,0 +1,388 @@
+{
+ "id": "0607_2026FM_52_q05",
+ "number": 5,
+ "segments": [],
+ "text": "",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    90.3,
+    297.0,
+    531.9,
+    479.4
+   ],
+   "id": "0607_2026FM_52_q05b_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  },
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    91.3,
+    165.2,
+    386.0,
+    378.9
+   ],
+   "id": "0607_2026FM_52_q05c_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      60.5,
+      570.0,
+      223.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 130.2,
+      "height_pt": 162.5
+     }
+    }
+   ],
+   "text": "5\n(a) Show that (,\n96561 is an Eisenstein triple.\n,\n)\n[3]",
+   "marks": 3,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "2\n2\n9 + 65 – 9 × 65 = 3721\n2\nand 61 = 3721 or\n3721 = 61\nOR\n2\n2\n2\n9 + 65 – 61 = 585\nand 9 × 65 = 585",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        453.2,
+        549.239990234375,
+        558.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that (9, 65, 61) is an Eisenstein triple.",
+     "text": "Show that (9, 65, 61) is an Eisenstein triple."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 130.2
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      241.2,
+      570.0,
+      512.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 55.9,
+      "height_pt": 271.3
+     }
+    }
+   ],
+   "text": "The diagrams show how you can use one Eisenstein triple to find another Eisenstein triple.\nThe sides of triangle PQR make the Eisenstein triple (,\n96561.\n,\n)\nS\nNOT TO SCALE\nQ\nQ\n61\n61\n9\n9\n60°\n60°\nP\nP\nR\nR\n65\n65\nIn the diagram on the right, PQ has been extended to S so that PS\n=\nPR\n.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        30.0,
+        517.9,
+        570.0,
+        616.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 2,
+        "answer_line": null,
+        "working_gap_pt": 40.5,
+        "height_pt": 98.6
+       }
+      }
+     ],
+     "text": "Give geometrical reasons why angle\nPSR\n=\n60\n°\n.\n....................................................................................................................................................\n............................................................................................................................................. [2]",
+     "marks": 2,
+     "path": "5(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "5(b)(i)",
+       "text": "Triangle PSR is isosceles\nand an isosceles triangle has two equal angles oe\nAngle PRS + angle PSR = 120°\nand 120° ÷ 2 = 60° oe",
+       "codes": [
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          46.619998931884766,
+          558.2,
+          549.239990234375,
+          632.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Give geometrical reasons why angle PSR = 60°.",
+       "text": "Give geometrical reasons why angle PSR = 60°."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        30.0,
+        621.9,
+        570.0,
+        784.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 130.2,
+        "height_pt": 162.5
+       }
+      }
+     ],
+     "text": "Use triangle QSR to find another Eisenstein triple.\n(.......... , .......... , 61) [2]",
+     "marks": 2,
+     "path": "5(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "5(b)(ii)",
+       "text": "[RS =] 65 because triangle PSR is equilateral oe\nor 65 – 9 = 56\n(56, 65, 61)",
+       "codes": [
+        "C1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          46.619998931884766,
+          632.5,
+          549.239990234375,
+          694.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use triangle QSR to find another Eisenstein triple.",
+       "text": "Use triangle QSR to find another Eisenstein triple."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "(",
+       "unit": ", 61)"
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 130.2
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "5(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "The diagrams show how you can use one Eisenstein triple to find another Eisenstein triple.",
+     "text": "The diagrams show how you can use one Eisenstein triple to find another Eisenstein triple."
+    },
+    {
+     "type": "text",
+     "html": "The sides of triangle PQR make the Eisenstein triple (9 , 65 , 61).",
+     "text": "The sides of triangle PQR make the Eisenstein triple (9 , 65 , 61)."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2026FM_52_q05b_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "In the diagram on the right, PQ has been extended to S so that PS = PR .",
+     "text": "In the diagram on the right, PQ has been extended to S so that PS = PR ."
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      456.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 67.7,
+      "height_pt": 396.6
+     }
+    }
+   ],
+   "text": "The two Eisenstein triples in 5(b) are related to each other by the diagrams.\nThe Eisenstein triples (7, 40, 37)\nand (33, 40, 37) are also related to each other in the same way.\nFind the Eisenstein triple that is related to (9, 24, 21).\nYou may use the diagram to help you.\nS\nNOT TO SCALE\nQ\n60°\nP\nR\n(.......... , .......... , ..........) [1]",
+   "marks": 1,
+   "path": "5(c)",
+   "mark_scheme": [
+    {
+     "label": "5(c)",
+     "text": "(15, 24, 21)",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        694.0,
+        549.239990234375,
+        722.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The two Eisenstein triples in 5(b) are related to each other by the diagrams.",
+     "text": "The two Eisenstein triples in 5(b) are related to each other by the diagrams."
+    },
+    {
+     "type": "text",
+     "html": "The Eisenstein triples (7, 40, 37)",
+     "text": "The Eisenstein triples (7, 40, 37)"
+    },
+    {
+     "type": "text",
+     "html": "and (33, 40, 37) are also related to each other in the same way.",
+     "text": "and (33, 40, 37) are also related to each other in the same way."
+    },
+    {
+     "type": "text",
+     "html": "Find the Eisenstein triple that is related to (9, 24, 21). You may use the diagram to help you.",
+     "text": "Find the Eisenstein triple that is related to (9, 24, 21). You may use the diagram to help you."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2026FM_52_q05c_diagram2",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "(",
+     "unit": ")"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 67.7
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

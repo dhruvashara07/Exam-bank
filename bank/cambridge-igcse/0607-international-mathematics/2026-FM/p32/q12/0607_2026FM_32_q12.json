@@ -1,0 +1,225 @@
+{
+ "id": "0607_2026FM_32_q12",
+ "number": 12,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    169.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 28.0,
+    "height_pt": 109.6
+   }
+  }
+ ],
+ "text": "The diagram shows a cube.\nNOT TO SCALE",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    68.8,
+    87.3,
+    330.8,
+    164.9
+   ],
+   "id": "0607_2026FM_32_q12_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    91.5,
+    424.3,
+    482.9,
+    491.6
+   ],
+   "id": "0607_2026FM_32_q12b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      176.7,
+      570.0,
+      378.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 143.2,
+      "height_pt": 201.3
+     }
+    }
+   ],
+   "text": "2.\n(a) The total surface area of the cube is\n384\ncm\n3.\nShow that the volume of the cube is\n512\ncm\n[3]",
+   "marks": 3,
+   "path": "12(a)",
+   "mark_scheme": [
+    {
+     "label": "12(a)",
+     "text": "384 ÷6 soi 64\n64 soi 8\n3\n8 leading to 512",
+     "codes": [
+      "M1",
+      "M1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        512.2,
+        549.2999877929688,
+        594.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The total surface area of the cube is 384 cm<sup>2</sup> . Show that the volume of the cube is 512 cm<sup>3</sup> .",
+     "text": "The total surface area of the cube is 384 cm2 . Show that the volume of the cube is 512 cm3 ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 143.2
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      396.5,
+      570.0,
+      684.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "y =  …… [2]",
+      "working_gap_pt": 109.2,
+      "height_pt": 288.0
+     }
+    }
+   ],
+   "text": "ycm\nNOT TO SCALE\n5cm\n32cm\nThe cuboid has length 32 cm, width 5 cm and height y cm.\nThe cuboid has the same volume as the cube.\nWork out the value of y.\ny =  ............................................................ [2]",
+   "marks": 2,
+   "path": "12(b)",
+   "mark_scheme": [
+    {
+     "label": "12(b)",
+     "text": "3.2",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        594.1,
+        549.2999877929688,
+        621.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "figure",
+     "id": "0607_2026FM_32_q12b_diagram2",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "The cuboid has length 32 cm, width 5 cm and height y cm. The cuboid has the same volume as the cube.",
+     "text": "The cuboid has length 32 cm, width 5 cm and height y cm. The cuboid has the same volume as the cube."
+    },
+    {
+     "type": "text",
+     "html": "Work out the value of y.",
+     "text": "Work out the value of y."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "y ="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 3,
+ "variant": 2,
+ "paper_code": "0607/32",
+ "paper_type": "core_calculator",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The diagram shows a cube.",
+   "text": "The diagram shows a cube."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2026FM_32_q12_diagram1",
+   "caption": null
+  }
+ ]
+}

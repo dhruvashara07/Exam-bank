@@ -1,0 +1,209 @@
+{
+ "id": "0607_2026FM_42_q15",
+ "number": 15,
+ "segments": [
+  {
+   "page": 13,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    138.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 26.1,
+    "height_pt": 79.1
+   }
+  }
+ ],
+ "text": "Alisha has these 10 letter cards.\nR\nE\nG\nR\nE\nS\nS\nI\nO\nN",
+ "marks": 6,
+ "figures": [
+  {
+   "caption": null,
+   "page": 13,
+   "bbox": [
+    127.8,
+    87.4,
+    469.5,
+    137.0
+   ],
+   "id": "0607_2026FM_42_q15_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      146.0,
+      570.0,
+      340.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 135.7,
+      "height_pt": 194.0
+     }
+    }
+   ],
+   "text": "Alisha selects 2 of these cards at random without replacement.\nFind the probability that at least 1 card has an S on it.\n............................................................. [3]",
+   "marks": 3,
+   "path": "15(a)",
+   "mark_scheme": [
+    {
+     "label": "15(a)",
+     "text": "17\noe\n45",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.619998931884766,
+        521.5,
+        549.2999877929688,
+        650.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Alisha selects 2 of these cards at random without replacement.",
+     "text": "Alisha selects 2 of these cards at random without replacement."
+    },
+    {
+     "type": "text",
+     "html": "Find the probability that at least 1 card has an S on it.",
+     "text": "Find the probability that at least 1 card has an S on it."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      358.2,
+      570.0,
+      653.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 224.0,
+      "height_pt": 295.3
+     }
+    }
+   ],
+   "text": "The 2 cards are replaced.\nAlisha now selects 3 cards from the set of 10, at random without replacement.\nFind the probability that the cards can be arranged to spell the word SON.\n............................................................. [3]",
+   "marks": 3,
+   "path": "15(b)",
+   "mark_scheme": [
+    {
+     "label": "15(b)",
+     "text": "1\noe\n60",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.619998931884766,
+        650.2,
+        549.2999877929688,
+        778.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The 2 cards are replaced. Alisha now selects 3 cards from the set of 10, at random without replacement.",
+     "text": "The 2 cards are replaced. Alisha now selects 3 cards from the set of 10, at random without replacement."
+    },
+    {
+     "type": "text",
+     "html": "Find the probability that the cards can be arranged to spell the word <b>SON</b><b>.</b>",
+     "text": "Find the probability that the cards can be arranged to spell the word SON."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_calculator",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Alisha has these 10 letter cards.",
+   "text": "Alisha has these 10 letter cards."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2026FM_42_q15_diagram1",
+   "caption": null
+  }
+ ]
+}

@@ -1,0 +1,260 @@
+{
+ "id": "0607_2026FM_52_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    309.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 90.2,
+    "height_pt": 249.6
+   }
+  }
+ ],
+ "text": "2\nThe sides of this triangle also make an Eisenstein triple.\nc = ........\na = 8\n60°\nb = ........",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 3,
+   "bbox": [
+    79.6,
+    87.5,
+    516.8,
+    293.9
+   ],
+   "id": "0607_2026FM_52_q02_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      320.4,
+      570.0,
+      341.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 20.6
+     }
+    }
+   ],
+   "text": "By measuring, complete the number of centimetres in the length of each side.\n[2]",
+   "marks": 2,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "[b =] 15\n[c =] 13",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        588.3,
+        549.239990234375,
+        612.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "By measuring, complete the number of centimetres in the length of each side.",
+     "text": "By measuring, complete the number of centimetres in the length of each side."
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      359.4,
+      570.0,
+      419.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "b2= …… = ……",
+      "working_gap_pt": 22.3,
+      "height_pt": 59.6
+     }
+    }
+   ],
+   "text": "Calculate the squares of your answers to 2(a).\nb2= .................... = ....................\nc2= .................... = ....................\n2\n2\na\n=\n8\n=\n64\n[2]",
+   "marks": 2,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "2\n2\n2\n2\n[b = 15 =] 225\n[c = 13 =] 169",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        612.7,
+        549.239990234375,
+        649.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the squares of your answers to 2(a).",
+     "text": "Calculate the squares of your answers to 2(a)."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "a2 = 82 = 64 b2 ="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      437.4,
+      570.0,
+      513.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 44.0,
+      "height_pt": 76.1
+     }
+    }
+   ],
+   "text": "2\n2\n2\n(c) Use 2(b) to show that   a\n+\nb\n-\nc\n=\n120\n.\n[1]",
+   "marks": 1,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "64 + 225 – 169 = 120",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        649.8,
+        549.239990234375,
+        682.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use 2(b) to show that a<sup>2</sup> + b<sup>2</sup> - c<sup>2</sup> = 120.",
+     "text": "Use 2(b) to show that a2 + b2 - c2 = 120."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 44.0
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The sides of this triangle also make an Eisenstein triple.",
+   "text": "The sides of this triangle also make an Eisenstein triple."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2026FM_52_q02_diagram1",
+   "caption": null
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "b ="
+  }
+ ]
+}

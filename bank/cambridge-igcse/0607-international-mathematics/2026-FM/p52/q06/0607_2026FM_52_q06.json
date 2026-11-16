@@ -1,0 +1,303 @@
+{
+ "id": "0607_2026FM_52_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    62.2,
+    570.0,
+    83.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 20.8
+   }
+  }
+ ],
+ "text": "6\nThe table shows a sequence of Eisenstein triples (a, b, c) and the value of\n2\n#\nb\n+.\n1",
+ "marks": 11,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      88.2,
+      570.0,
+      314.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 58.2,
+      "height_pt": 225.8
+     }
+    }
+   ],
+   "text": "Continue the sequence and complete the last 4 rows of the table.\na\nb\nc\n2\n#\nb\n+\n1\nanswer\n5\n8\n7\n2\n#\n8\n+  =\n1\n2\n# = 6\n3\n7\n15\n13\n2\n#\n15\n+ =\n1\n2\n# = 8\n4\n9\n24\n21\n11\n35\n31\n[5]",
+   "marks": 5,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "9\n24\n21\n2× 24+ 1=2 ×5=10\n2× 35 + 1=2 ×6=12\n11\n35\n31\n2× 48 + 1=2 ×7=14\n13\n48\n43\n15\n63\n57\n2× 63 + 1=2 ×8=16\nThree consecutive differences seen in column b\nor c\nor three from –1, –2, –3, –4, –5, –6 between b\nand c\n2\n2\n2\n2\nor 13 + 48 – 13 × 48 or 15 + 63 – 15 × 63",
+     "codes": [
+      "4",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.239990234375,
+        293.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Continue the sequence and complete the last 4 rows of the table.",
+     "text": "Continue the sequence and complete the last 4 rows of the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "a",
+       "b",
+       "c",
+       "2 # b + 1 <b>answer</b>"
+      ],
+      [
+       "5",
+       "8",
+       "7",
+       "2 # 8 + 1 = 2 # 3 = 6"
+      ],
+      [
+       "7",
+       "15",
+       "13",
+       "2 # 15 + 1 = 2 # 4 = 8"
+      ],
+      [
+       "9",
+       "24",
+       "21",
+       ""
+      ],
+      [
+       "11",
+       "35",
+       "31",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 58.2
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      332.3,
+      570.0,
+      379.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 14.5,
+      "height_pt": 46.7
+     }
+    }
+   ],
+   "text": "Write down the connection between a and\n2\n#\nb\n+.\n1\n..................................................................................................................................................... [1]",
+   "marks": 1,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "a+ 1=2× b+1 oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.619998931884766,
+        293.3,
+        549.239990234375,
+        322.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the connection between a and 2 # b + 1 .",
+     "text": "Write down the connection between a and 2 # b + 1 ."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      397.3,
+      570.0,
+      674.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 205.6,
+      "height_pt": 276.7
+     }
+    }
+   ],
+   "text": "Find two Eisenstein triples with b\n=\n899\n.\n(.......... , 899, ..........)\n(.......... , 899, ..........)\n[5]",
+   "marks": 5,
+   "path": "6(c)",
+   "mark_scheme": [
+    {
+     "label": "6(c)",
+     "text": "2× 899 +1\nseen\n(59, 899, 871)\n(840, 899, 871)\nor\n(899, 899, 899)\n2\n2\n59 + 899 – 59 × 899",
+     "codes": [
+      "C1",
+      "2",
+      "1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.619998931884766,
+        322.4,
+        549.239990234375,
+        469.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find <b>two</b> Eisenstein triples with b = 899.",
+     "text": "Find two Eisenstein triples with b = 899."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "(",
+     "unit": ")"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "(",
+     "unit": ")"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 205.6
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 11,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The table shows a sequence of Eisenstein triples (a, b, c) and the value of 2 # b + 1 .",
+   "text": "The table shows a sequence of Eisenstein triples (a, b, c) and the value of 2 # b + 1 ."
+  }
+ ]
+}

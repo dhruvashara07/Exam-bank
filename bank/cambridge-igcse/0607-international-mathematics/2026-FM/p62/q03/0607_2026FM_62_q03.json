@@ -1,0 +1,294 @@
+{
+ "id": "0607_2026FM_62_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    328.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 53.4,
+    "height_pt": 269.1
+   }
+  }
+ ],
+ "text": "3\nThe diagrams show how you can use one Eisenstein triple to find another related Eisenstein triple.\nThe sides of triangle PQR make the Eisenstein triple (a, b, c).\nS\nNOT TO SCALE\nQ\nQ\nc\nc\na\na\n60°\n60°\nP\nP\nR\nR\nb\nb\nIn the diagram on the right, PQ has been extended to S so that PS = PR.",
+ "marks": 7,
+ "figures": [
+  {
+   "caption": null,
+   "page": 3,
+   "bbox": [
+    67.6,
+    115.2,
+    508.5,
+    295.3
+   ],
+   "id": "0607_2026FM_62_q03_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      333.8,
+      570.0,
+      458.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 4,
+      "answer_line": null,
+      "working_gap_pt": 14.5,
+      "height_pt": 124.7
+     }
+    }
+   ],
+   "text": "Give geometrical reasons why triangle QSR gives the Eisenstein triple (b - a,   b,   c).\n............................................................................................................................................................\n............................................................................................................................................................\n............................................................................................................................................................\n..................................................................................................................................................... [3]",
+   "marks": 3,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "180−60\nAngle PSR =\n2\n180−60\nor angle SRP =\n= 60\n2\nAND\nangle PSR = 180 – (60 + 60)\nor isosceles triangle and angle PSR = angle\nPRS oe\nTriangle PSR is equilateral oe\nQS = b – a",
+     "codes": [
+      "1",
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.2999877929688,
+        259.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Give geometrical reasons why triangle QSR gives the Eisenstein triple (b - a, b, c).",
+     "text": "Give geometrical reasons why triangle QSR gives the Eisenstein triple (b - a, b, c)."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 4
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      476.8,
+      570.0,
+      562.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 27.5,
+      "height_pt": 85.7
+     }
+    }
+   ],
+   "text": "(9, 65, 61) is an Eisenstein triple.\nUse the information in 3(a) to write down the related Eisenstein triple.\n(................ , ................ , ................) [1]",
+   "marks": 1,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "(56, 65, 61)",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        259.2,
+        549.2999877929688,
+        283.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "(9, 65, 61) is an Eisenstein triple.",
+     "text": "(9, 65, 61) is an Eisenstein triple."
+    },
+    {
+     "type": "text",
+     "html": "Use the information in 3(a) to write down the related Eisenstein triple.",
+     "text": "Use the information in 3(a) to write down the related Eisenstein triple."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "(",
+     "unit": ")"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      580.8,
+      570.0,
+      771.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 132.4,
+      "height_pt": 190.7
+     }
+    }
+   ],
+   "text": "(32, ... , ... ) and (45, ... , ... ) are two Eisenstein triples that are related to each other.\nFind the missing integers and complete the two Eisenstein triples.\n(32, ................ , ................)  (45, ................ , ................) [3]",
+   "marks": 3,
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "32 + 45 = 77\n2\n2\n32 + 77 – 32×77\n2\n2\nor 45 + 77 – 45×77\n(32, 77, 67) (45, 77, 67)",
+     "codes": [
+      "C1",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        283.7,
+        549.2999877929688,
+        369.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "(32, ... , ... ) and (45, ... , ... ) are two Eisenstein triples that are related to each other.",
+     "text": "(32, ... , ... ) and (45, ... , ... ) are two Eisenstein triples that are related to each other."
+    },
+    {
+     "type": "text",
+     "html": "Find the missing integers and complete the two Eisenstein triples.",
+     "text": "Find the missing integers and complete the two Eisenstein triples."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "(32,",
+     "unit": ")"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The diagrams show how you can use one Eisenstein triple to find another related Eisenstein triple.",
+   "text": "The diagrams show how you can use one Eisenstein triple to find another related Eisenstein triple."
+  },
+  {
+   "type": "text",
+   "html": "The sides of triangle PQR make the Eisenstein triple (a, b, c).",
+   "text": "The sides of triangle PQR make the Eisenstein triple (a, b, c)."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2026FM_62_q03_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "In the diagram on the right, PQ has been extended to S so that PS = PR.",
+   "text": "In the diagram on the right, PQ has been extended to S so that PS = PR."
+  }
+ ]
+}

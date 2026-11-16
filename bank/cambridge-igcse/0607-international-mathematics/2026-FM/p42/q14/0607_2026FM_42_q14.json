@@ -1,0 +1,205 @@
+{
+ "id": "0607_2026FM_42_q14",
+ "number": 14,
+ "segments": [
+  {
+   "page": 12,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    281.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 25.9,
+    "height_pt": 222.1
+   }
+  }
+ ],
+ "text": "The diagram shows the positions of A, B and C.\nNOT TO SCALE\nB\n110°\n428km\nNorth\n252km\nC\n40°\nA\nAB = 252 km and BC = 428 km.\nAngle ABC = 110°.\nThe bearing of B from A is 040°.",
+ "marks": 7,
+ "figures": [
+  {
+   "caption": null,
+   "page": 12,
+   "bbox": [
+    68.5,
+    87.1,
+    455.9,
+    222.3
+   ],
+   "id": "0607_2026FM_42_q14_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      286.7,
+      570.0,
+      450.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "AC =  …… km [3]",
+      "working_gap_pt": 131.5,
+      "height_pt": 163.8
+     }
+    }
+   ],
+   "text": "Calculate AC.\nAC =  ...................................................... km [3]",
+   "marks": 3,
+   "path": "14(a)",
+   "mark_scheme": [
+    {
+     "label": "14(a)",
+     "text": "566 or 566.0 to 566.1",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.619998931884766,
+        256.1,
+        549.2999877929688,
+        375.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate AC.",
+     "text": "Calculate AC."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "AC =",
+     "unit": "km"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      468.7,
+      570.0,
+      685.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 184.2,
+      "height_pt": 216.3
+     }
+    }
+   ],
+   "text": "Find the bearing of C from A.\n............................................................. [4]",
+   "marks": 4,
+   "path": "14(b)",
+   "mark_scheme": [
+    {
+     "label": "14(b)",
+     "text": "085.3 or 085.27 to 085.28…",
+     "codes": [
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.619998931884766,
+        375.4,
+        549.2999877929688,
+        521.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the bearing of C from A.",
+     "text": "Find the bearing of C from A."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_calculator",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The diagram shows the positions of A, B and C.",
+   "text": "The diagram shows the positions of A, B and C."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2026FM_42_q14_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "AB = 252 km and BC = 428 km. Angle ABC = 110°. The bearing of B from A is 040°.",
+   "text": "AB = 252 km and BC = 428 km. Angle ABC = 110°. The bearing of B from A is 040°."
+  }
+ ]
+}

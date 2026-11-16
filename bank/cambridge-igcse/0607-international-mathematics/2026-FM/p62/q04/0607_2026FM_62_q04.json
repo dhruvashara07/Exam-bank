@@ -1,0 +1,313 @@
+{
+ "id": "0607_2026FM_62_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    80.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 20.6
+   }
+  }
+ ],
+ "text": "4\nThe table shows the first 7 terms of a sequence of Eisenstein triples (a, b, c).",
+ "marks": 15,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      85.4,
+      570.0,
+      610.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 246.1,
+      "height_pt": 524.6
+     }
+    }
+   ],
+   "text": "Complete the table.\nn is the term number in the sequence.\nn\na\nb\nc\n1\n3\n3\n3\n2\n5\n8\n7\n3\n7\n15\n4\n9\n24\n21\n5\n11\n35\n6\n43\n7\n[5]",
+   "marks": 5,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "n\na\nb\nc\n1\n3\n3\n3\n2\n5\n8\n7\n3\n7\n15\n13\n4\n9\n24\n21\n5\n11\n35\n31\n6\n13\n48\n43\n7\n15\n63\n57\nThree consecutive differences seen in column b\nor c\nor three from 0, –1, –2, –3, –4, –5, –6 between\nb and c oe\n2\n2\n2\n2\nor 7 + 15 – 7×15 or 11 + 35 – 11×35\n2\n2\nor 15 + 63 – 15×63",
+     "codes": [
+      "4",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        369.7,
+        549.2999877929688,
+        670.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table. n is the term number in the sequence.",
+     "text": "Complete the table. n is the term number in the sequence."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "n",
+       "a",
+       "b",
+       "c"
+      ],
+      [
+       "1",
+       "3",
+       "3",
+       "3"
+      ],
+      [
+       "2",
+       "5",
+       "8",
+       "7"
+      ],
+      [
+       "3",
+       "7",
+       "15",
+       ""
+      ],
+      [
+       "4",
+       "9",
+       "24",
+       "21"
+      ],
+      [
+       "5",
+       "11",
+       "35",
+       ""
+      ],
+      [
+       "6",
+       "",
+       "",
+       "43"
+      ],
+      [
+       "7",
+       "",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 246.1
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      453.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 3,
+      "answer_line": "a =  ……",
+      "working_gap_pt": 296.8,
+      "height_pt": 394.1
+     }
+    }
+   ],
+   "text": "Use patterns in the table to find expressions for each of a, b and c in terms of n.\na =  ...................................................................\nb =  ...................................................................\nc =  ...................................................................\n[5]",
+   "marks": 5,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "[a =] 2n + 1 oe\n2\n[b =] n + 2n oe\n2\n[c =] n + n + 1 oe\nThree second differences of 2 in for column b\nor c\nor three from 1, 4, 9, 16, 25, 36, 49, 64 related\nto column b or column c",
+     "codes": [
+      "4",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.2999877929688,
+        290.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use patterns in the table to find expressions for each of a, b and c in terms of n.",
+     "text": "Use patterns in the table to find expressions for each of a, b and c in terms of n."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "a ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "b ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "c ="
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      471.7,
+      570.0,
+      772.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 268.5,
+      "height_pt": 300.8
+     }
+    }
+   ],
+   "text": "Find two Eisenstein triples where the difference between b and c is 35.\n(................ , ................ , ................) and (................ , ................ , ................) [5]",
+   "marks": 5,
+   "path": "4(c)",
+   "mark_scheme": [
+    {
+     "label": "4(c)",
+     "text": "2\n2\nn + 2n – (n + n + 1 ) = 35 oe\nor from the table, three of b – c = 0, 1, 2, 3, 4,\n5, 6\nn = 36 soi\n(73, 1368, 1333)\n(1295, 1368, 1333)",
+     "codes": [
+      "C1",
+      "1",
+      "2",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.619998931884766,
+        290.1,
+        549.2999877929688,
+        438.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find two Eisenstein triples where the difference between b and c is 35.",
+     "text": "Find two Eisenstein triples where the difference between b and c is 35."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "(",
+     "unit": ")"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 15,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The table shows the first 7 terms of a sequence of Eisenstein triples (a, b, c).",
+   "text": "The table shows the first 7 terms of a sequence of Eisenstein triples (a, b, c)."
+  }
+ ]
+}

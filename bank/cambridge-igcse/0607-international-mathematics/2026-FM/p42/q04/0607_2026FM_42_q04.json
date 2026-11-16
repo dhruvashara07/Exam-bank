@@ -1,0 +1,222 @@
+{
+ "id": "0607_2026FM_42_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    219.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 19.2,
+    "height_pt": 160.1
+   }
+  }
+ ],
+ "text": "4\nThese are the ingredients for making 20 ginger biscuits.\ningredient\namount (g)\nbutter\n100\nsugar\n75\nginger\n35\nsyrup\n100\nflour\n250",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      223.1,
+      570.0,
+      332.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 50.7,
+      "height_pt": 108.9
+     }
+    }
+   ],
+   "text": "Laila makes 48 biscuits.\nWork out the amount of sugar Laila needs.\n.......................................................... g [2]",
+   "marks": 2,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "180",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        340.7,
+        549.2999877929688,
+        394.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Laila makes 48 biscuits.",
+     "text": "Laila makes 48 biscuits."
+    },
+    {
+     "type": "text",
+     "html": "Work out the amount of sugar Laila needs.",
+     "text": "Work out the amount of sugar Laila needs."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "g"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      350.3,
+      570.0,
+      510.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 101.8,
+      "height_pt": 160.2
+     }
+    }
+   ],
+   "text": "Girish has 100 g of ginger and large amounts of the other ingredients.\nWork out the greatest number of biscuits Girish can make.\n............................................................. [2]",
+   "marks": 2,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "57 cao",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        394.4,
+        549.2999877929688,
+        435.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Girish has 100 g of ginger and large amounts of the other ingredients.",
+     "text": "Girish has 100 g of ginger and large amounts of the other ingredients."
+    },
+    {
+     "type": "text",
+     "html": "Work out the greatest number of biscuits Girish can make.",
+     "text": "Work out the greatest number of biscuits Girish can make."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_calculator",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "These are the ingredients for making 20 ginger biscuits.",
+   "text": "These are the ingredients for making 20 ginger biscuits."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "ingredient",
+     "amount (g)"
+    ],
+    [
+     "<b>butter</b>",
+     "<b>100</b>"
+    ],
+    [
+     "sugar",
+     "75"
+    ],
+    [
+     "<b>ginger</b>",
+     "<b>35</b>"
+    ],
+    [
+     "syrup",
+     "100"
+    ],
+    [
+     "<b>flour</b>",
+     "<b>250</b>"
+    ]
+   ]
+  }
+ ]
+}
