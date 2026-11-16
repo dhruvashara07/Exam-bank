@@ -3,9 +3,12 @@
 Read this first in every session. Update it before ending a session.
 
 ## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md
-- NEXT: Dhruv reviews round 31 (14 round-30 wrong items re-checked + faint graphs redrawn + long steps wrap; page
-  https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e). Then: feedback_r31 -> fix wrong items as CLASSES, ONE Claude check
-  round (PLAYBOOK 2), approve.py for clean papers (checks 60/60 clean now, 2014 MJ 62 40/40), docs, push; then M1.
+- NEXT: maths batch M1 (docs/MATHS_PLAN.md 5): 0607 sessions 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ
+  (~100 papers, all PDFs already in Releases). New chat. Full cycle per PLAYBOOK: build on GitHub, ONE Claude check round
+  (claude_check.py), one review round for Dhruv, fix as classes, approve, docs, push.
+- 2026-11-16 (night): M0 PILOT DONE - 60 papers approved (rounds 27-31; round 31 36/40 ok, 3 fixed: patterns 157-159).
+  Known limit: mark-scheme graphs that are pasted SCREENSHOTS (most of 2014) have no line data - only contrast is raised,
+  they cannot be redrawn as lines (graphs the PDF draws as lines ARE redrawn).
 - 2026-11-16 (evening): round 30 (14/40 wrong) fixed - ERROR_PATTERNS 149-156; faint graphs redrawn + darkened (Dhruv);
   'similar not exact' layout rule (MS_TABLE_RULES 30); checks 60/60; golden 0.
 - 2026-11-16: round 29 fixed (ERROR_PATTERNS 130-138) and Claude's ONE check round introduced (Dhruv: one round, rules +

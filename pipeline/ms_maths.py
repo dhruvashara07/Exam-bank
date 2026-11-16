@@ -514,7 +514,8 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
             if len(vl_) >= 3:       # the grid = its verticals and the rules / shading between them; a fraction bar higher up
                 gy0, gy1 = min(i.y0 for i in vl_) - 2, max(i.y1 for i in vl_) + 2   # in the cell is no table rule (round 30:
                 gx0, gx1 = min(i.x0 for i in vl_) - 2, max(i.x1 for i in vl_) + 2   # sentences above 2025 MJ 62 q4(b)'s table)
-                rl = [i for i in rl if (gy0 <= (i.y0 + i.y1) / 2 <= gy1 and i.x1 > gx0 and i.x0 < gx1) or
+                rl = [i for i in rl if (gy0 - 10 <= (i.y0 + i.y1) / 2 <= gy1 + 10 and i.x0 >= gx0 - 3 and i.x1 <= gx1 + 3)
+                      or (gy0 <= (i.y0 + i.y1) / 2 <= gy1 and i.x1 > gx0 and i.x0 < gx1) or
                       (gy0 - 40 < (i.y0 + i.y1) / 2 < gy1 + 40 and i.x0 >= gx0 - 3 and i.x1 <= gx1 + 3
                        and i.x1 - i.x0 > 0.8 * (gx1 - gx0))]   # a full-width rule of a row without column rules
             tx0, ty0 = min(i.x0 for i in rl) - 1, min(i.y0 for i in rl) - 1
@@ -547,6 +548,10 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                 shift = max([shift] + [p_[2] for p_ in ab])
             bx0, bx1 = min(i.x0 for i in blk), max(i.x1 for i in blk)
             by0_, by1_ = min(i.y0 for i in blk), max(i.y1 for i in blk)
+            if rest:                # the table starts under the text above it as WE placed it (re-flowed text can end
+                ab_b = [p_[0].ref['y'] + 0.25 * p_[0].ref.get('s', 11) + p_[2] for p_ in placed if (p_[0].y0 + p_[0].y1) / 2 < ty0 and p_[0].kind == 't']   # lower than
+                if ab_b:            # printed: its last line ran into the table's top rule, 2025 MJ 62 q4(b), round 31)
+                    shift = max(shift, max(ab_b) + 2.5 - by0_)
             room = ours[c][1] - ours[c][0] - 2 * PAD
             k_ = min(1.0, room / max(1.0, bx1 - bx0))
             thin = lambda i: i.kind == 'lines' and min(i.x1 - i.x0, i.y1 - i.y0) < 1.6
@@ -639,7 +644,17 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                     if i.kind == 'lines' and i.ref.get('fill'):
                         area_[i.ref['fill'].lower()] = area_.get(i.ref['fill'].lower(), 0) + (i.x1 - i.x0) * (i.y1 - i.y0)
                 keep_ = {c_ for c_, a_ in area_.items() if a_ > 150}
+                grid_ = sum(1 for l_ in v['lines'][n0_:] if (l_.get('stroke') or '').lower() in ('#c0c0c0', '#bfbfbf', '#d9d9d9', '#a6a6a6', '#808080'))
+                nb = [b_ for b_ in (_bbox(l_['d']) for l_ in v['lines'][n0_:] if l_.get('stroke')) if b_]
+                fx0, fy0 = min(b_[0] for b_ in nb) if nb else 0, min(b_[1] for b_ in nb) if nb else 0
+                fx1, fy1 = max(b_[2] for b_ in nb) if nb else 0, max(b_[3] for b_ in nb) if nb else 0
                 for l_ in v['lines'][n0_:]:
+                    b_ = _bbox(l_['d'])
+                    if grid_ >= 6 and l_.get('stroke') and b_ and (
+                            (b_[2] - b_[0] < 0.5 and min(abs(b_[0] - fx0), abs(b_[0] - fx1)) < 0.8 and b_[3] - b_[1] > 0.8 * (fy1 - fy0)) or
+                            (b_[3] - b_[1] < 0.5 and min(abs(b_[1] - fy0), abs(b_[1] - fy1)) < 0.8 and b_[2] - b_[0] > 0.8 * (fx1 - fx0))):
+                        l_['stroke'] = '#b0b0b0'; l_['sw'] = 0.25     # the chart's frame stays light like its grid (Dhruv,
+                        continue                                        # round 31: black box next to the y-axis, 2019 ON 41 q11)
                     if (l_.get('fill') or '').lower() not in keep_:
                         _darken(l_)
                 bottoms.append(max(by0 + shift + (by1 - by0) * k_ + 3.0, tb or 0))

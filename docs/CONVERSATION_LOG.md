@@ -474,3 +474,9 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - Analysis: 7 of 14 wrong were one class (stray verticals) from my own round-29 axis rule; my new wrap/table rules
   broke fractions and a table twice before I looked at all cells - now PLAYBOOK 2.4: look at every cell a fix touches
   in all papers, and decide before each rebuild whether it is needed (MS-only fixes never run run.py).
+
+## 2026-11-16 (night) - round 31 (36/40 ok), M0 approved
+- 3 fixed (157-159); 2014 MJ 31 q15 'redraw MS image' = pasted screenshot, explained as a limit (160).
+- One check round, checks 60/60, golden 0 -> approve.py all 60 M0 papers; rounds 28-31 closed. Next: M1 in a new chat.
+- Pilot lesson for M1: the slowest part was mark-scheme cell layout (pictures vs tables vs graphs vs wrapped steps);
+  the rules for those are now in MS_TABLE_RULES 24-30 and ERROR_PATTERNS 89-160, so M1 should mostly be routine.

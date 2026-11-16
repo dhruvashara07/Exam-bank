@@ -57,7 +57,8 @@
    },
    {
     "start": "2026-11-16T14:21:46+00:00",
-    "end": null
+    "end": "2026-11-16T14:50:12+00:00",
+    "note": "round 31: 36/40 ok"
    }
   ],
   "fix": [
@@ -75,6 +76,11 @@
     "start": "2026-11-16T09:00:00+00:00",
     "end": null,
     "note": "round 29: 21 of 39 wrong"
+   },
+   {
+    "start": "2026-11-16T14:50:12+00:00",
+    "end": "2026-11-16T14:50:12+00:00",
+    "note": "approved 60 papers"
    }
   ],
   "claude": [
@@ -106,7 +112,7 @@
   "questions": 743,
   "flags": 11,
   "round_items": 40,
-  "wrong_items": 14
+  "wrong_items": 4
  },
  "errors": [
   {
@@ -588,6 +594,30 @@
    "fix": "pipeline",
    "found_by": "claude",
    "at": "2026-11-16T14:21:46+00:00"
+  },
+  {
+   "pattern": "157",
+   "kind": "new",
+   "what": "table top rule above re-flowed text: table placed under OUR text",
+   "fix": "2025 MJ 62 q4(b)",
+   "found_by": "dhruv",
+   "at": "2026-11-16T14:50:12+00:00"
+  },
+  {
+   "pattern": "158",
+   "kind": "new",
+   "what": "chart frame darkened next to the y-axis: frame stays light grey",
+   "fix": "2019 ON 41 q11",
+   "found_by": "dhruv",
+   "at": "2026-11-16T14:50:12+00:00"
+  },
+  {
+   "pattern": "159",
+   "kind": "new",
+   "what": "table rule search missed short corner pieces of a Word double border",
+   "fix": "2021 FM 52 q4, 2025 MJ 62 q4(a)",
+   "found_by": "dhruv",
+   "at": "2026-11-16T14:50:12+00:00"
   }
  ],
  "tokens": [

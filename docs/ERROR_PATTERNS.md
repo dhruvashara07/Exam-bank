@@ -404,3 +404,12 @@ the old MS paths (2014 MJ 22 q2, 43 q9, 2019 ON 11/12 q8, 23 q3, 62 q5).
 156. (found in the check) a graph's grid + numbers looked like a table (coloured curve / polyline / tiny strokes =
     graph); table-rule search used fraction bars far above the grid -> grid = its verticals; rows against a table join
     it only if their cells line up with its columns and hold no words.
+
+### Round 31 (36 of 40 ok) - M0 approved
+157. A table placed at its printed height ran into OUR re-flowed text above it (2025 MJ 62 q4(b)) -> the table starts
+    under our text as placed.
+158. A chart's thin black frame darkened like a curve: a black box 2 pt from the y-axis (2019 ON 41 q11) -> a frame
+    on the outer edges of a gridded graph is drawn light grey like the grid.
+159. A Word double border's short corner pieces were outside the table-rule search (2021 FM 52 q4, 2025 MJ 62 q4(a))
+    -> all rule pieces inside the grid's box (+10 pt) belong to the table.
+160. (limit, not a bug) Pasted screenshot graphs (2014 MJ 31 q15 ...) are pixels only: contrast raised, never redrawn.

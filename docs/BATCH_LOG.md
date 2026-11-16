@@ -4,7 +4,7 @@ Minutes are wall clock. "Ours" = build + Claude 1 + Claude 2 + fix (Dhruv's revi
 
 | Batch | Sessions | Papers | Build | GitHub | Claude 1 | Claude 2 | Fix | Ours | Round items | New errors | Repeats | Tokens |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 66.6 | 51.4 | 2766.0 | 2893.5 | 40 | 47 | 5 | n/a |
+| M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 257.5 | 51.4 | 2766.0 | 3084.4 | 40 | 58 | 5 | n/a |
 
 ## Errors per batch (new = first time, repeat = a pattern seen before: the doc or the fix failed)
 
@@ -61,6 +61,17 @@ Minutes are wall clock. "Ours" = build + Claude 1 + Claude 2 + fix (Dhruv's revi
 - [new] pattern 144: rotated table labels misplaced → vertical boxes + block takes labels/rows (found by claude)
 - [new] pattern 145: sketch y-axis dropped as column rule → axis_v (found by claude)
 - [new] pattern 146: dashed row rules on 2014 62 p4 → judge runs (found by claude)
+- [new] pattern 149: see ERROR_PATTERNS 149 → pipeline (found by claude)
+- [new] pattern 150: see ERROR_PATTERNS 150 → pipeline (found by claude)
+- [new] pattern 151: see ERROR_PATTERNS 151 → pipeline (found by claude)
+- [new] pattern 152: see ERROR_PATTERNS 152 → pipeline (found by claude)
+- [new] pattern 153: see ERROR_PATTERNS 153 → pipeline (found by claude)
+- [new] pattern 154: see ERROR_PATTERNS 154 → pipeline (found by claude)
+- [new] pattern 155: see ERROR_PATTERNS 155 → pipeline (found by claude)
+- [new] pattern 156: see ERROR_PATTERNS 156 → pipeline (found by claude)
+- [new] pattern 157: table top rule above re-flowed text: table placed under OUR text → 2025 MJ 62 q4(b) (found by dhruv)
+- [new] pattern 158: chart frame darkened next to the y-axis: frame stays light grey → 2019 ON 41 q11 (found by dhruv)
+- [new] pattern 159: table rule search missed short corner pieces of a Word double border → 2021 FM 52 q4, 2025 MJ 62 q4(a) (found by dhruv)
 
 ## Repeats to act on
 
