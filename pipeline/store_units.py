@@ -38,7 +38,7 @@ def anonymous(font):
     return not KNOWN.search(font)
 
 
-def glyph_styles(doc, pages):
+def glyph_styles(doc, pages, feats_out=None):
     """2025+ Cambridge PDFs merge regular/bold/italic glyphs into one nameless font ('AllAndNone'), so
     text extraction says 'regular' for everything. Each style still has its own glyph id. For every glyph id
     measure stroke weight (ink per box) and slant on the rendered page; for a character drawn with several
@@ -152,6 +152,8 @@ def glyph_styles(doc, pages):
             b = w > base_w * 1.18
             i = sl - base_s > 0.12
             style[key] = 'bi' if (b and i) else 'b' if b else 'i' if i else 'r'
+    if feats_out is not None:                     # (maths reads the measures again, store_text.maths_styles)
+        feats_out.update(feats); feats_out['__count'] = count
     return style
 
 

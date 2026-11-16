@@ -4,22 +4,7 @@
  "segments": [],
  "text": "",
  "marks": 9,
- "figures": [
-  {
-   "caption": null,
-   "page": 4,
-   "bbox": [
-    45.9,
-    126.3,
-    551.5,
-    303.3
-   ],
-   "id": "0607_2025MJ_62_q04a_diagram1",
-   "alt": "",
-   "kind": "diagram",
-   "part": "(a)"
-  }
- ],
+ "figures": [],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -64,7 +49,7 @@
         45.875,
         448.1,
         549.3300170898438,
-        677.8
+        684.2
        ]
       }
      ]
@@ -77,34 +62,51 @@
      "text": "Complete the table."
     },
     {
-     "type": "text",
-     "html": "Linear sequence with common difference d",
-     "text": "Linear sequence with common difference d"
-    },
-    {
-     "type": "text",
-     "html": "Number of terms",
-     "text": "Number of terms"
-    },
-    {
-     "type": "text",
-     "html": "F",
-     "text": "F"
-    },
-    {
-     "type": "text",
-     "html": "n",
-     "text": "n"
-    },
-    {
-     "type": "text",
-     "html": "1st term Middle term Last term",
-     "text": "1st term Middle term Last term"
-    },
-    {
-     "type": "figure",
-     "id": "0607_2025MJ_62_q04a_diagram1",
-     "caption": null
+     "type": "table",
+     "rows": [
+      [
+       "Linear sequence with common difference d 1st term Middle term Last term",
+       "",
+       "",
+       "Number of terms n",
+       "F"
+      ],
+      [
+       "a",
+       "a + d",
+       "a + 2d",
+       "",
+       "<sup>2</sup> ` j"
+      ],
+      [
+       "a",
+       "a + 2d",
+       "",
+       "5",
+       "<sup>2</sup> ` j"
+      ],
+      [
+       "a",
+       "",
+       "",
+       "7",
+       "<sup>2</sup> ` j"
+      ],
+      [
+       "a",
+       "a + 4d",
+       "a + 8d",
+       "",
+       "<sup>2</sup> ` j"
+      ],
+      [
+       "a",
+       "",
+       "a + 10d",
+       "",
+       "<sup>2</sup> `5dj"
+      ]
+     ]
     },
     {
      "type": "answer",
@@ -156,7 +158,7 @@
         45.875,
         89.3,
         549.3300170898438,
-        589.0
+        590.6
        ]
       }
      ]

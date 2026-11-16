@@ -4,7 +4,7 @@ Minutes are wall clock. "Ours" = build + Claude 1 + Claude 2 + fix (Dhruv's revi
 
 | Batch | Sessions | Papers | Build | GitHub | Claude 1 | Claude 2 | Fix | Ours | Round items | New errors | Repeats | Tokens |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 46.7 | 51.4 | 178.0 | 285.6 | 34 | 10 | 0 | n/a |
+| M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 46.7 | 51.4 | 2766.0 | 2873.6 | 40 | 40 | 4 | n/a |
 
 ## Errors per batch (new = first time, repeat = a pattern seen before: the doc or the fix failed)
 
@@ -19,7 +19,44 @@ Minutes are wall clock. "Ours" = build + Claude 1 + Claude 2 + fix (Dhruv's revi
 - [new] pattern 88: long MS answers printed over several lines wrapped line by line in our narrower Answer column (ragged) → ms_maths._cell re-flows a text-only paragraph as one (found by claude)
 - [new] pattern 89: nested/continued fractions came out as flat LaTeX that passed KaTeX and the char check → maths_tex: inner bar inside an outer fraction -> picture (found by claude)
 - [new] pattern 90: ruled tables in question text read as one jumbled LaTeX line → maths_tex: >=3 column and >=3 row rules -> picture (found by claude)
+- [new] pattern 91: round 28 (see ERROR_PATTERNS 91) → see ERROR_PATTERNS 91 (found by claude)
+- [new] pattern 92: round 28 (see ERROR_PATTERNS 92) → see ERROR_PATTERNS 92 (found by claude)
+- [new] pattern 93: round 28 (see ERROR_PATTERNS 93) → see ERROR_PATTERNS 93 (found by claude)
+- [new] pattern 94: round 28 (see ERROR_PATTERNS 94) → see ERROR_PATTERNS 94 (found by claude)
+- [new] pattern 95: round 28 (see ERROR_PATTERNS 95) → see ERROR_PATTERNS 95 (found by claude)
+- [new] pattern 96: round 28 (see ERROR_PATTERNS 96) → see ERROR_PATTERNS 96 (found by claude)
+- [new] pattern 97: round 28 (see ERROR_PATTERNS 97) → see ERROR_PATTERNS 97 (found by claude)
+- [new] pattern 98: round 28 (see ERROR_PATTERNS 98) → see ERROR_PATTERNS 98 (found by claude)
+- [new] pattern 99: round 28 (see ERROR_PATTERNS 99) → see ERROR_PATTERNS 99 (found by claude)
+- [new] pattern 100: round 28 (see ERROR_PATTERNS 100) → see ERROR_PATTERNS 100 (found by claude)
+- [new] pattern 101: round 28 (see ERROR_PATTERNS 101) → see ERROR_PATTERNS 101 (found by claude)
+- [new] pattern 102: round 28 (see ERROR_PATTERNS 102) → see ERROR_PATTERNS 102 (found by claude)
+- [new] pattern 103: round 28 (see ERROR_PATTERNS 103) → see ERROR_PATTERNS 103 (found by claude)
+- [new] pattern 104: round 28 (see ERROR_PATTERNS 104) → see ERROR_PATTERNS 104 (found by claude)
+- [new] pattern 105: round 28 (see ERROR_PATTERNS 105) → see ERROR_PATTERNS 105 (found by claude)
+- [new] pattern 106: round 28 (see ERROR_PATTERNS 106) → see ERROR_PATTERNS 106 (found by claude)
+- [new] pattern 107: round 28 (see ERROR_PATTERNS 107) → see ERROR_PATTERNS 107 (found by claude)
+- [new] pattern 108: round 28 (see ERROR_PATTERNS 108) → see ERROR_PATTERNS 108 (found by claude)
+- [new] pattern 109: round 28 (see ERROR_PATTERNS 109) → see ERROR_PATTERNS 109 (found by claude)
+- [new] pattern 110: round 28 (see ERROR_PATTERNS 110) → see ERROR_PATTERNS 110 (found by claude)
+- [new] pattern 111: round 28 (see ERROR_PATTERNS 111) → see ERROR_PATTERNS 111 (found by claude)
+- [new] pattern 112: round 28 (see ERROR_PATTERNS 112) → see ERROR_PATTERNS 112 (found by claude)
+- [new] pattern 113: round 28 (see ERROR_PATTERNS 113) → see ERROR_PATTERNS 113 (found by claude)
+- [new] pattern 114: round 28 (see ERROR_PATTERNS 114) → see ERROR_PATTERNS 114 (found by claude)
+- [new] pattern 115: round 28 (see ERROR_PATTERNS 115) → see ERROR_PATTERNS 115 (found by claude)
+- [new] pattern 117: round 28 (see ERROR_PATTERNS 117) → see ERROR_PATTERNS 117 (found by claude)
+- [new] pattern 118: round 28 (see ERROR_PATTERNS 118) → see ERROR_PATTERNS 118 (found by claude)
+- [new] pattern 119: round 28 (see ERROR_PATTERNS 119) → see ERROR_PATTERNS 119 (found by claude)
+- [new] pattern 120: round 28 (see ERROR_PATTERNS 120) → see ERROR_PATTERNS 120 (found by claude)
+- [new] pattern 121: round 28 (see ERROR_PATTERNS 121) → see ERROR_PATTERNS 121 (found by claude)
+- [repeat] pattern 92: repeat of a round-27 class: the round-27 fix covered the reported item, not the class → class fix + appearance check (ERROR_PATTERNS 92) (found by dhruv)
+- [repeat] pattern 93: repeat of a round-27 class: the round-27 fix covered the reported item, not the class → class fix + appearance check (ERROR_PATTERNS 93) (found by dhruv)
+- [repeat] pattern 97: repeat of a round-27 class: the round-27 fix covered the reported item, not the class → class fix + appearance check (ERROR_PATTERNS 97) (found by dhruv)
+- [repeat] pattern 99: repeat of a round-27 class: the round-27 fix covered the reported item, not the class → class fix + appearance check (ERROR_PATTERNS 99) (found by dhruv)
 
 ## Repeats to act on
 
-- none
+- M0: pattern 92 came back: repeat of a round-27 class: the round-27 fix covered the reported item, not the class
+- M0: pattern 93 came back: repeat of a round-27 class: the round-27 fix covered the reported item, not the class
+- M0: pattern 97 came back: repeat of a round-27 class: the round-27 fix covered the reported item, not the class
+- M0: pattern 99 came back: repeat of a round-27 class: the round-27 fix covered the reported item, not the class

@@ -20,7 +20,7 @@ import numpy as np
 from PIL import Image
 import paths
 from run import cleaned
-from store_text import family, unpua, hexcol, span_len, odd, symbol_family, maths_doc, maths_glyph, nameless_bold
+from store_text import family, unpua, hexcol, span_len, odd, symbol_family, maths_doc, maths_glyph, nameless_bold, nameless_style, maths_symbol_family, symbol_subset
 from store_units import glyph_styles, char_styles, tp, drawing_d, nodes, scale_note
 import store_options as OPT
 import store_v5 as V5
@@ -77,6 +77,10 @@ SCHEMA = {
 
 
 # ---------------------------------------------------------------- one exact piece of a page
+def _st(span):
+    return ''.join(c['c'] for c in span['chars']).strip()
+
+
 def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
     page = doc[pno]
     m = page.rotation_matrix
@@ -110,7 +114,15 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
             for s in l['spans']:
                 font = s['font']
                 if any(odd(c['c'], font) for c in s['chars']) or (MATHS and re.search(r'mt\s*extra', font.lower())
-                                                                    and any(c['c'] in 'JGFH' for c in s['chars'])):
+                                                                    and any(c['c'].strip() for c in s['chars'])) \
+                        or (MATHS and font.split('+')[-1] == 'MMEtc' and any(c['c'] == 'o' for c in s['chars'])) \
+                        or (MATHS and any(cstyle.get((round(c['origin'][0], 1), round(c['origin'][1], 1))) == 'sym' for c in s['chars'])) \
+                        or (MATHS and re.match(r'TT[0-9A-F]+oI?00$', font.split('+')[-1]) and len(_st(s)) == 1
+                            and symbol_subset(doc, font)):
+                    # (2014 maths: a one-letter span of a symbol subset that does not look like its letter - '<' printed
+                    # as <=, '.' as >, 'Y' as <= - is kept as drawn, round 28)
+                    # (maths: MT Extra draws vector arrows 'JJG' and recurring dots (code 5, 'i'); MMEtc 'o' is the
+                    # recurring dot too - written as a letter 'o' it drew a blob, round 28: kept as drawn glyphs)
                     # (maths: MT Extra draws vector arrows from letter codes 'JJG' - kept as drawn glyphs, round 27)
                     # a symbol we cannot write as a character (dingbat ✓ ✗, unknown code): keep its drawn shape
                     for c in s['chars']:
@@ -129,6 +141,9 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
                                               'f': 'symbol', **({'c': hexcol(s['color'])} if hexcol(s['color']) != '#000000' else {})})
                             continue
                         key = f"g_{re.sub('[^A-Za-z0-9]', '', font)[:24]}_{ord(c['c'][0]):x}_{round(s['size'] * 10)}_{page.rotation}"
+                        if MATHS:                      # maths: one cut per place - a character box holds the ink under it too
+                            key += f"_{docname}{pno + 1}_{int(r.x0)}_{int(r.y0)}"   # (a recurring dot cut over '0' was reused
+                            #                            over '3' and read as theta, round 28 2019 ON 61 q3)
                         gfile = os.path.join(store, 'glyphs', key + '.svg')
                         if not os.path.exists(gfile):
                             from render import region_svg
@@ -175,8 +190,12 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
                          'w': round(span_len(chars, l['dir']), 2), 's': round(s['size'], 2), 'f': FAM[family(font)]}
                     if MATHS and w['f'] == 'sans' and re.match(r'TT[0-9A-F]+o00$', font.split('+')[-1]) and (s['flags'] & 4):
                         w['f'] = 'serif'           # 2014 maths: nameless subset fonts are Times (the font's serif flag)
-                    if MATHS and re.match(r'TT[0-9A-F]+o00$', font.split('+')[-1]) and nameless_bold(doc, font):
-                        bold = True                # ... and bold or regular by their letter widths
+                    if MATHS and w['f'] == 'sans' and font.split('+')[-1].startswith('AllAndNone') and (s['flags'] & 4):
+                        w['f'] = 'serif'           # 2025 maths: 'AllAndNone' draws Times (round 28: we showed it in sans)
+                    if MATHS and re.match(r'TT[0-9A-F]+o00$', font.split('+')[-1]):
+                        st_ = nameless_style(doc, font)    # ... and bold / italic / regular by their letter widths
+                        bold = bold or 'b' in st_
+                        italic = italic or 'i' in st_
                     if len(w['t']) == 1 and (w['t'].isalpha() or (w['t'] in '[]{}<>\\^_|~`@#' and _old_doc(doc))) and re.search(r'TT[0-9A-F]+o00$', font):
                         # (a bracket too: '[' draws '≥' in 2011 ON 51's symbol subset, round 26)
                         from store_text import glyph_remap   # a re-encoded symbol ('R' drawn as '=', 2014 MJ 63)
@@ -188,7 +207,7 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
                         if g_ != w['t']:
                             w['t'] = g_; w['f'] = 'symbol'
                     if w['f'] == 'symbol':
-                        w['f'], w['s'] = symbol_family(w['t'], w['s'], w['w'])
+                        w['f'], w['s'] = (maths_symbol_family if MATHS else symbol_family)(w['t'], w['s'], w['w'])
                     st = collections.Counter(cstyle.get((round(c['origin'][0], 1), round(c['origin'][1], 1)), 'r')
                                              for c in chars if c['c'].isalnum()) or collections.Counter('r')
                     st = st.most_common(1)[0][0]
@@ -378,7 +397,7 @@ FOREIGN = []                                   # words of a neighbouring figure 
 SIBLINGS = []                                  # the other figures' boxes on the page (same question), set by build
 
 
-def fit_crop(pg, b, max_grow=50.0):
+def fit_crop(pg, b, max_grow=50.0, maths=False):
     """Mend a figure crop that cuts through ink or a label (review rounds: 80% of 'crop cut' flags were real).
     1. a drawing crossing an edge is taken in (at most max_grow pt per side);
     2. short label lines half inside or just outside (axis label 'day of the month', a row of axis numbers,
@@ -399,6 +418,10 @@ def fit_crop(pg, b, max_grow=50.0):
     def sentence(lw, l=None):
         # a line of the question's text: real words, and it starts at the text column's left margin (2017 ON 33 q7:
         # 'direction of travel of the water wave' is a label inside the drawing; 'R O Y _ B _ V' is no sentence at all)
+        real = [w for w in lw if REALW.fullmatch(w[4])]
+        if maths and lw and (re.fullmatch(r'\(([a-z]|[ivx]{1,4})\)', lw[0][4]) and len(real) >= 1
+                             or len(real) >= 3 and lw[-1][4][-1:] in '.?:'):
+            return True           # maths: part lines are indented under their label ('(ii) Sketch the model ...', round 28)
         real = [w for w in lw if REALW.fullmatch(w[4])]
         long_ = len(real) >= 5 or (len(real) >= 3 and lw and lw[-1][4][-1:] in '.?:')
         at_margin = l is None or l.x0 <= body_x0 + 25
@@ -424,6 +447,12 @@ def fit_crop(pg, b, max_grow=50.0):
     caps = [l for l in lines if re.match(r'(Fig|Table)\.?\s*\d', ' '.join(w[4] for w in words_of(l)))]
     b0 = fitz.Rect(b)
     drw = [d_['rect'] for d_ in pg.get_drawings()]
+    D = None
+    if maths:                                          # the drawing's own ink (lines have empty boxes: widened)
+        for r_ in drw:
+            r_ = fitz.Rect(r_.x0 - 0.3, r_.y0 - 0.3, r_.x1 + 0.3, r_.y1 + 0.3)
+            if b0.intersects(r_) and r_.width < 0.9 * pg.rect.width:
+                D = fitz.Rect(r_) if D is None else D | r_
     def ok(nb):
         if nb.width - b0.width > 2 * max_grow or nb.height - b0.height > 2 * max_grow:
             return False
@@ -439,6 +468,8 @@ def fit_crop(pg, b, max_grow=50.0):
                 r = d['rect']
                 if r.width > 0.9 * pg.rect.width or not r.intersects(b) or b.contains(r):
                     continue
+                if maths and not (r + (-0.5, -0.5, 0.5, 0.5)).intersects(b0):
+                    continue          # maths: only drawings crossing the ORIGINAL edge - no chain into a table (2019 ON 62 q3)
                 nb = b | r
                 if ok(nb):
                     b = nb; changed = True
@@ -451,6 +482,23 @@ def fit_crop(pg, b, max_grow=50.0):
             near = ov > 0.15 or (ov == 0 and 0 <= gap < 14 and l.x0 >= b.x0 - 10 and l.x1 <= b.x1 + 10)
             half = ov > 0.15
             label_ok = (not sentence(lw, l)) if half else not bad_label(lw, l)
+            lt_ = ' '.join(w[4] for w in lw)
+            if maths and label_ok and D is not None and not b0.contains(l):
+                for o in lines:                       # a piece of a stacked formula whose '=' line is outside the drawing
+                    ot = ' '.join(w[4] for w in words_of(o))      # ('3x + 2' over '(x + 2)(x - 3)' beside 'f(x) =')
+                    if '=' in ot and abs((o.y0 + o.y1) - (l.y0 + l.y1)) < 28 and o.x0 - 60 < l.x1 and l.x0 < o.x1 + 60 \
+                            and (o.y0 >= D.y1 - 2 or o.y1 <= D.y0 + 2):
+                        label_ok = False
+                        break
+            if maths and label_ok and not b0.contains(l):
+                ym_ = (l.y0 + l.y1) / 2               # a line in a ruled table cell (rules left and right of it) is table
+                vr_ = [r_ for r_ in drw if r_.width < 1.6 and r_.y0 - 1 <= ym_ <= r_.y1 + 1]   # text, never a label
+                if any(r_.x0 <= l.x0 + 1 for r_ in vr_) and any(r_.x0 >= l.x1 - 1 for r_ in vr_) and \
+                        any(l.x0 - r_.x0 < 80 for r_ in vr_ if r_.x0 <= l.x0 + 1):
+                    label_ok = False                  # (2019 ON 62 q3: the table header under a diagram was taken in)
+            if maths and label_ok and D is not None and (l.y1 <= D.y0 + 2 or l.y0 >= D.y1 - 2) and \
+                    ((l.x1 < D.x0 - 14 or l.x0 > D.x1 + 14) or ('=' in lt_ and len(lt_) > 6)) and not re.search(r'NOT|SCALE', lt_):
+                label_ok = False      # maths: a line above / below the drawing and off to its side is question text
             if half and re.match(r'(Fig|Table)\.?\s*\d', ' '.join(w[4] for w in lw)):
                 label_ok = False
             if near and label_ok and (len(lw) <= 4 or numeric(lw) or half):
@@ -582,7 +630,8 @@ def save_figure(f, q, meta, qdoc, store):
     cap, cap_in, masked, clash = None, False, False, False
     if not f.get('mask'):
         FOREIGN.clear()
-        nb = fit_crop(pg, b)
+        import subjects
+        nb = fit_crop(pg, b, maths=subjects.subject(meta['syllabus'])['maths_text'])
         if nb != b:
             f = dict(f, bbox=list(nb), svg=None); b = nb
         clash = bool(FOREIGN)                     # Dhruv, round 17: no clean cut without the neighbour's ink -> nothing is
@@ -674,7 +723,11 @@ def build(pid):
     shutil.rmtree(store, ignore_errors=True)
     for d in ('figures', 'glyphs'):
         os.makedirs(os.path.join(store, d))
-    qstyle, mstyle = glyph_styles(qdoc, range(1, len(qdoc))), glyph_styles(mdoc, range(1, len(mdoc)))
+    if MATHS_TEXT:                                           # maths: Times bold / italic read from letter widths too
+        from store_text import maths_styles
+        qstyle, mstyle = maths_styles(qdoc, range(1, len(qdoc))), maths_styles(mdoc, range(1, len(mdoc)))
+    else:
+        qstyle, mstyle = glyph_styles(qdoc, range(1, len(qdoc))), glyph_styles(mdoc, range(1, len(mdoc)))
     scan = []
     if len(mdoc) and sum(len(pg.get_text().strip()) for pg in mdoc) < 50 * len(mdoc):
         os.makedirs(os.path.join(store, 'ms_pages'))         # no text layer: keep the pages as pictures

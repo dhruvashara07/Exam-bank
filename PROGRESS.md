@@ -3,8 +3,11 @@
 Read this first in every session. Update it before ending a session.
 
 ## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md
-- NEXT: Dhruv reviews round 28 (re-check of the 23 round-27 items + 11 new, review page). Then: read feedback_r28,
-  fix every wrong item as a pattern, `review_round.py close 28`, approve.py for the 60 M0 papers, docs, push; then M1.
+- NEXT: Dhruv reviews round 29 (re-check of the 25 round-28 wrong items + new samples). Then: feedback_r29, fix every
+  wrong item as a pattern (maths_check + ms_compare on all 60 first), close rounds 28-29, approve.py, docs, push; then M1.
+- 2026-11-14 (evening): round 28 (25 of 34 wrong) fixed as ERROR_PATTERNS 91-121; new appearance checks (maths_check)
+  and pipeline/ms_compare.py; PLAYBOOK 2b+/2b++. Open: 2014 MJ 62 p4 (broken text layer: (g)(i)/(ii) one row, stray
+  rule pieces in its cell pictures), a wrap inside a long bracket (2014 MJ 62 q6(g)(v)), wide inner tables shrink to 60 %.
 - 2026-11-14: round 27 fixed (ERROR_PATTERNS 75-90): one font 11 pt with bold, run split, paragraph re-flow, picture
   cells, dot lines, diagram crops, 4th-level labels, nested fractions and question tables kept as the printed picture
   (LaTeX: 2118 parts ok, 228 picture). maths_check: 9 hits left (2014 62 broken page, 2 overflows, 1 missing word).

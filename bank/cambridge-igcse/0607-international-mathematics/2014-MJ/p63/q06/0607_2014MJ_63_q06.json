@@ -22,22 +22,7 @@
  ],
  "text": "The Example on page 2 used only 3 and 4.\n6\nTotals using 3 and 4\nTotal\n1\n2\n3\n4\n5\n6\n7\n8\nCalculation\n1 × 3\n1 × 4\n2 × 3\n1 × 3 + 1 × 4\n2 × 4\nThe largest total that is not possible is 5.\nThe smallest possibletotal, after which all totals are possible, is 6.\nSo 6, 7, 8, 9, … are all possible.",
  "marks": 5,
- "figures": [
-  {
-   "caption": null,
-   "page": 7,
-   "bbox": [
-    59.6,
-    89.4,
-    537.8,
-    161.5
-   ],
-   "id": "0607_2014MJ_63_q06_diagram1",
-   "alt": "",
-   "kind": "diagram",
-   "part": ""
-  }
- ],
+ "figures": [],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -185,7 +170,7 @@
         36.0,
         526.9,
         559.0,
-        585.1
+        588.9
        ]
       }
      ]
@@ -225,9 +210,36 @@
    "text": "The Example on page 2 used only 3 and 4."
   },
   {
-   "type": "figure",
-   "id": "0607_2014MJ_63_q06_diagram1",
-   "caption": null
+   "type": "text",
+   "html": "Totals using 3 and 4",
+   "text": "Totals using 3 and 4"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Total",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    [
+     "Calculation",
+     "",
+     "",
+     "1 × 3",
+     "1 × 4",
+     "",
+     "2 × 3",
+     "1 × 3 + 1 × 4",
+     "2 × 4"
+    ]
+   ]
   },
   {
    "type": "text",

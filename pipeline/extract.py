@@ -398,6 +398,7 @@ def diagrams(doc, seg, lines, captioned):
     text = [l for l in lines]
     tboxes = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in text]
     items = []
+    verts_ = [d_['rect'] for d_ in page.get_drawings() if d_['rect'].width < 1.6 and d_['rect'].height > 5]
     for d in page.get_drawings():
         r = d['rect']
         if r.y1 < y0s - 1 or r.y0 > y1s + 1 or r.x1 < CONTENT_X0 + 2 or r.x0 > CONTENT_X1 - 2:
@@ -408,15 +409,67 @@ def diagrams(doc, seg, lines, captioned):
             continue
         if r.height < 1.6 and r.width < 60 and any(t.y0 - 3 <= r.y0 <= t.y1 + 3 and t.x0 - 4 <= r.x0 and r.x1 <= t.x1 + 4 for t in tboxes):
             continue                                       # a fraction bar / overline inside a text line
+        if r.height < 1.6 and r.width < 200 and any(0 <= r.y0 - t.y1 < 4 and t.x0 < r.x1 and t.x1 > r.x0 for t in tboxes) \
+                and any(0 <= t.y0 - r.y1 < 4 and t.x0 < r.x1 and t.x1 > r.x0 for t in tboxes) \
+                and not any(v.width < 1.6 and v.height > 5 and (abs(v.x0 - r.x0) < 2 or abs(v.x0 - r.x1) < 2) and v.y0 - 2 <= r.y0 <= v.y1 + 2
+                            for v in verts_):              # (a table's row rule meets its column rules; a fraction bar does not)
+            continue                                       # a wide fraction bar: text right above AND right below (round 28)
         aligned = all((it[0] == 're') or (it[0] == 'l' and (abs(it[1].x - it[2].x) < 0.6 or abs(it[1].y - it[2].y) < 0.6))
                       for it in d['items'])
-        rr = fitz.Rect(r); rr.aligned = aligned
+        if not aligned:                                   # a box with rounded corners: straight sides + small corner arcs
+            aligned = all((it[0] == 'l' and (abs(it[1].x - it[2].x) < 0.6 or abs(it[1].y - it[2].y) < 0.6)) or
+                          (it[0] == 'c' and abs(it[1].x - it[4].x) < 15 and abs(it[1].y - it[4].y) < 15) or it[0] == 're'
+                          for it in d['items']) and any(it[0] == 'l' for it in d['items']) and r.width > 60 and r.height > 30
+        rr = fitz.Rect(r)
+        if rr.width < 0.6:                                 # a vertical / horizontal line has an empty box, and PyMuPDF
+            rr.x0 -= 0.3; rr.x1 += 0.3                     # leaves empty boxes out of a union: grids and axes were not in
+        if rr.height < 0.6:                                # the crop (round 28, 2014 MJ 11 q12: dots without their grid)
+            rr.y0 -= 0.3; rr.y1 += 0.3
+        rr.aligned = aligned
         items.append(rr)
     for im in page.get_image_info():
         r = fitz.Rect(im['bbox'])
         if y0s - 1 <= r.y0 and r.y1 <= y1s + 1 and r.width > 8 and r.height > 8 and CONTENT_X0 - 2 <= r.x0:
             items.append(r)
     items = [r for r in items if not any(t.intersects(r) for t in taken)]
+    # ruled tables of text found BEFORE clustering (a table 15 pt under a diagram joined its cluster and the crop took
+    # it, round 28 2019 ON 62 q3): >= 3 horizontal rules with the same ends, vertical rules inside, text between
+    pre_tables = []
+    pieces_h = sorted([r for r in items if getattr(r, 'aligned', False) and r.height < 1.6 and r.width > 1.5],
+                      key=lambda r: (round(r.y0), r.x0))
+    hz_ = []                                         # rule pieces at one height joined (rules drawn cell by cell, dotted
+    for r in pieces_h:                               # separators: 2014 MJ 63 q2, 2021 FM 52 q4)
+        if hz_ and abs(hz_[-1].y0 - r.y0) < 0.8 and r.x0 - hz_[-1].x1 < 4:
+            hz_[-1] = hz_[-1] | r
+        else:
+            hz_.append(fitz.Rect(r))
+    hz_ = [r for r in hz_ if r.width > 30]
+    groups = {}
+    for r in hz_:
+        groups.setdefault((round(r.x0 / 3), round(r.x1 / 3)), []).append(r)
+    for g in groups.values():
+        if len(g) < 3:
+            continue
+        tr = fitz.Rect(min(r.x0 for r in g), min(r.y0 for r in g), max(r.x1 for r in g), max(r.y1 for r in g))
+        vv = [r for r in items if r.width < 1.6 and r.height > 5 and tr.x0 - 2 <= r.x0 <= tr.x1 + 2 and tr.y0 - 2 <= r.y0 and r.y1 <= tr.y1 + 2]
+        inside_t = [t for t in tboxes if tr.contains(t)]
+        ys = sorted({round(r.y0) for r in g})
+        bands = list(zip(ys, ys[1:]))
+        filled = sum(1 for a_, b_ in bands if any(a_ < (t.y0 + t.y1) / 2 < b_ for t in inside_t))
+        if sum(r.height for r in vv) >= 0.7 * tr.height and len(inside_t) >= 2 and tr.height > 15 \
+                and len(ys) <= 16 and bands and filled >= 0.5 * len(bands):    # text in most rows: a table, not a grid
+            pre_tables.append(tr)
+    merged_t = True
+    while merged_t:                                  # a table drawn as two halves (rules split at a column) is one
+        merged_t = False
+        for a in pre_tables:
+            for b in pre_tables:
+                if a is not b and (a + (-3, -3, 3, 3)).intersects(b):
+                    a |= b; pre_tables.remove(b); merged_t = True
+                    break
+            if merged_t:
+                break
+
     # clusters: drawings closer than 10 pt are one diagram
     cl = []
     for r in sorted(items, key=lambda r: (r.y0, r.x0)):
@@ -430,11 +483,13 @@ def diagrams(doc, seg, lines, captioned):
             base['g'] = base['r'] + (-10, -10, 10, 10)
         else:
             cl.append({'r': fitz.Rect(r), 'g': g, 'n': 1, 'rs': [r]})
-    out = []
+    out, tables = [], list(pre_tables)
     for c in cl:
         r = c['r']
         if r.width < 25 or r.height < 20:
             continue                                       # a root sign, a tick box, a short rule
+        if any((t & r).get_area() > 0.6 * max(r.get_area(), 1) for t in pre_tables):
+            continue                                       # the cluster is (mostly) a ruled table: text + rules (round 28)
         straight = [x for x in c['rs'] if x.width < 1.6 or x.height < 1.6]
         horiz = [x for x in straight if x.height < 1.6]
         if len(straight) == len(c['rs']) and len(horiz) == len(c['rs']):
@@ -455,7 +510,14 @@ def diagrams(doc, seg, lines, captioned):
             full_v = sum(1 for h_ in vc.values() if h_ >= 0.8 * r.height)
             full_h = sum(1 for w_ in hc.values() if w_ >= 0.8 * r.width)
             if full_v >= 3 and full_h >= 2:
+                tables.append(fitz.Rect(r))
                 continue                                   # a ruled table of text (column rules top to bottom): stays text + rules
+        if not inside and all(getattr(x, 'aligned', False) for x in c['rs']) and r.height < 40:
+            continue                                       # an empty answer box ('FG = [  ]', 2025 MJ 61 q5), no diagram
+        if inside and all(getattr(x, 'aligned', False) for x in c['rs']) and all(
+                abs(x.x0 - r.x0) < 2 or abs(x.x1 - r.x1) < 2 or abs(x.y0 - r.y0) < 2 or abs(x.y1 - r.y1) < 2 for x in c['rs']):
+            tables.append(fitz.Rect(r))
+            continue                                       # a box of words (arc / sector / ...): text + rules, no picture (round 28)
         # labels touching the drawing (A, B, 68°, x, y, axis numbers) belong to it; sentences do not
         box = fitz.Rect(r)
         for _ in range(3):
@@ -492,19 +554,49 @@ def diagrams(doc, seg, lines, captioned):
                     box |= lb
         if box != grown:
             box = _grow_light(page, box, fitz.Rect(CONTENT_X0 - 5, y0s, CONTENT_X1 + 5, y1s), prose)
+        def band_text(t):                               # the whole printed line: pieces at the same height joined
+            same = sorted([o for o in text if abs((o['y0'] + o['y1']) - (t['y0'] + t['y1'])) < 6], key=lambda o: o['x0'])
+            return ' '.join(o['text'].strip() for o in same), same
         for t in text:                                  # a sentence touching the crop's top or bottom edge stays outside it
             tb = fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1'])
-            if not tb.intersects(box) or not (_sentence(t, text) or len(t['text'].strip()) > 22) or DOTS.search(t['text']):
+            bt, same = band_text(t)
+            qline = len(bt) > 22 and len(re.findall(r'[A-Za-z]{2,}', bt)) >= 3 or \
+                re.match(r'^(\d{1,2}\s+)?\(([a-z]|[ivx]+)\)\s+\S', bt) and min(o['x0'] for o in same) < 110   # '(ii) Sketch ...' (round 28)
+            beside = ((tb.y1 <= r.y0 + 2 or tb.y0 >= r.y1 - 2) and (tb.x1 < r.x0 - 14 or tb.x0 > r.x1 + 14) or
+                      ('=' in bt and len(bt) > 6 and (tb.y1 <= r.y0 + 1 or tb.y0 >= r.y1 - 1))) and \
+                not re.search(r'NOT|SCALE', bt)            # (an equation line above / below the drawing too: 'f(x) = ...')            # a line above / below the drawing and off to its side: question
+            #                                                text ('So N(6, 4) = 15 + 4 = 19.' over the pyramid, round 28)
+            if not tb.intersects(box) or not (_sentence(t, text) or len(t['text'].strip()) > 22 or qline or beside) or DOTS.search(t['text']):
                 continue
             if tb.y0 <= box.y0 + 14 and tb.y1 < box.y0 + 0.5 * box.height:
                 box.y0 = tb.y1 + 0.5
             elif tb.y1 >= box.y1 - 14 and tb.y0 > box.y0 + 0.5 * box.height:
                 box.y1 = tb.y0 - 0.5
+        for t in text:                                  # a stacked formula under / over the drawing ('f(x) = (3x + 2) /
+            tb = fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1'])   # ((x + 2)(x - 3))', 2019 ON 43 q12): its '=' line and the
+            bt, same = band_text(t)                     # pieces stacked on it stay out together
+            if '=' not in bt or len(bt) < 5 or not (tb.y0 >= r.y1 - 1 or tb.y1 <= r.y0 + 1):
+                continue
+            stack = [o for o in text if fitz.Rect(o['x0'], o['y0'], o['x1'], o['y1']).intersects(
+                fitz.Rect(min(x['x0'] for x in same), tb.y0 - 12, max(x['x1'] for x in same) + 60, tb.y1 + 12))]
+            if tb.y0 >= r.y1 - 1:
+                box.y1 = min(box.y1, min(o['y0'] for o in stack) - 2.5)
+            else:
+                box.y0 = max(box.y0, max(o['y1'] for o in stack) + 2.5)
         for o in [o for o in out if fitz.Rect(o['bbox']).intersects(box)]:   # crops that overlap after taking labels: one
             box |= fitz.Rect(o['bbox']) + (3, 3, -3, -3)
             out.remove(o)
         out.append({'caption': None, 'page': seg['page'],
                     'bbox': [round(box.x0 - 4, 1), round(max(box.y0 - 1, seg['y0']), 1), round(box.x1 + 6, 1), round(min(box.y1 + 1.5, seg['y1']), 1)]})
+    for o in out:                                    # a crop never runs into a table / box of words kept as text (round 28,
+        ob = fitz.Rect(o['bbox'])                    # 2019 ON 62 q3: the diagram grew down through the table below it)
+        for t in tables:
+            if ob.intersects(t) and not t.contains(ob):
+                if t.y0 >= ob.y0 + 0.5 * ob.height:
+                    ob.y1 = min(ob.y1, t.y0 - 1)
+                elif t.y1 <= ob.y0 + 0.5 * ob.height:
+                    ob.y0 = max(ob.y0, t.y1 + 1)
+        o['bbox'] = [round(v, 1) for v in ob]
     merged = True                                    # crops that touch or overlap are one diagram (round 27: '2 images')
     while merged:
         merged = False

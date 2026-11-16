@@ -257,12 +257,18 @@ def structured_rows_table(doc):
             if above and y_ - max(above) > 4:
                 y_ = max(above) + 1
             cuts.append((y_, l))
+        if MATHS:
+            cuts = _lift(page, cuts, QX - 2, top)
         if current and (not cuts or cuts[0][0] > top + 4):
             cuts.insert(0, (top, None))          # continuation of the previous label
-        headers = [l['y0'] for l in lines if re.match(r'Question\b', l['text']) and l['x0'] < 130]
+        headers = [l['y0'] for l in lines if (re.match(r'Question\b', l['text']) and l['x0'] < 130)
+                   or (MATHS and re.match(r'(MODELLING|INVESTIGATION)\b|(Modelling|Investigation):', l['text'].strip()))]
+        #                                                  part B heading ('MODELLING ...' 2021, 'Modelling: ...' 2025; round 28)
         for i, (y, lab) in enumerate(cuts):
             y_end = cuts[i + 1][0] if i + 1 < len(cuts) else bottom
-            y_end = min([y_end] + [h - 3 for h in headers if h > y + 6])   # a new table starts mid-page
+            y_end = min([y_end] + [h - 3 for h in headers if h > y + 6 and (lab is None or h > lab['y0'])])
+            # a new table starts mid-page (a header ABOVE the label never ends its row: the lifted first row of a page
+            # reached over the table header and lost its content, round 28 2025 MJ 61 q1(a))
             if lab is not None and MATHS and COMM.match(lab['text']):
                 current = {'label': 'C', 'path': ('C',), 'segments': [], 'text': '', 'marks_codes': [], 'also': []}
                 rows.append(current)
@@ -296,7 +302,18 @@ def structured_rows_table(doc):
             # ... but not a picture of the next row (2016 MJ 41 q10: the diode starts above the next label)
             ink_y1 = max(r.y1 for r in ink)
             pics = [r for r in pics if not any(ink_y1 - 1 <= ry <= r.y0 + 1 for ry in hrules)]
-            seg_bottom = min(y_end, max([r.y1 for r in ink] + [r.y1 for r in pics]) + 6)
+            drawn = []
+            if MATHS:                                 # vector drawings in the row count too (a Venn diagram / sketch
+                for d_ in page.get_drawings():        # below the last text line was cut off, round 28: 2019 ON 42 q8)
+                    r_ = d_['rect']
+                    if not (y - 1 <= r_.y0 < y_end - 1 and r_.y1 <= y_end + 1 and r_.x0 >= QX - 2):
+                        continue
+                    if (r_.height < 1.6 and r_.width > 0.45 * (x1 - x0)) or r_.width < 1.6 or r_.width > 0.9 * (x1 - x0):
+                        continue                      # table rules (row / column lines), the page box
+                    if d_.get('fill') and not d_.get('color') and r_.width > 0.3 * (x1 - x0):
+                        continue                      # a shaded cell background
+                    drawn.append(r_)
+            seg_bottom = min(y_end, max([r.y1 for r in ink] + [r.y1 for r in pics] + [r.y1 for r in drawn]) + 6)
             current['segments'].append({'page': pno + 1, 'bbox': [x0, round(y, 1), x1, round(seg_bottom, 1)]})
             current['text'] = (current['text'] + '\n' + '\n'.join(l['text'] for l in body)).strip()
             current['marks_codes'] += codes
@@ -305,6 +322,46 @@ def structured_rows_table(doc):
 
 SUB4 = re.compile(r'^(\d{1,2}\([a-z]\)\([ivx]+\))(\([a-z]\))$')     # maths: 4(b)(iii)(a)
 COMM = re.compile(r'^Communication(?::|\s+seen)')     # maths investigation papers: communication marks (ERROR_PATTERNS 67)
+
+
+def _lift(page, cuts, x_min, top=None):
+    """Maths: a row starts 4 pt above its label, but a numerator ('144' over '233'), a rotated table label ('All pos') or a
+    table's top band can be printed higher (round 28): while a word or drawing crosses a row's top cut, the cut moves up
+    above it (never above the previous label's line). cuts: [(y, label line or None, ...)] -> same list, y lifted."""
+    W = page.rect.width
+    ink = [fitz.Rect(w[:4]) for w in page.get_text('words') if w[0] >= x_min]
+    ink += [fitz.Rect(im['bbox']) for im in page.get_image_info() if fitz.Rect(im['bbox']).x0 >= x_min]   # pasted tables
+    drs_ = page.get_drawings()
+    import collections as _co
+    cover_ = _co.Counter()
+    for d in drs_:
+        if d['rect'].width < 1.6:
+            cover_[round(d['rect'].x0)] += d['rect'].height
+    main_x = [x for x, h in cover_.items() if h > 0.3 * page.rect.height]
+    for d in drs_:
+        r = d['rect']
+        if r.width < 1.6 and any(abs(r.x0 - x) < 2.5 for x in main_x):
+            continue                                  # a piece of a main column rule (drawn row by row, or in 6 pt pieces:
+            #                                           the cut climbed up them, 2021 FM 52 q4(c)(ii))
+        if r.x0 < x_min or (r.height < 1.6 and r.width > 0.45 * W) or (r.width < 1.6 and r.height > 0.35 * page.rect.height) \
+                or r.width > 0.8 * W:
+            continue                                  # the page table's own rules (an inner table's border counts:
+            #                                           2021 FM 52 q3(b), its top row printed above the label)
+        ink.append(fitz.Rect(r.x0, r.y0, r.x1, max(r.y1, r.y0 + 0.3)))
+    out = []
+    for i, c in enumerate(cuts):
+        y, lab = c[0], c[1]
+        if lab is None or (i == 0 and top is None):
+            out.append(c); continue
+        prev = cuts[i - 1][1] if i else None
+        floor = (prev['y1'] + 1) if prev else (cuts[i - 1][0] + 2 if i else top + 1)   # first row of a page: the table top (not the header: its rule came in)
+        for _ in range(6):
+            cross = [r.y0 for r in ink if r.y0 < y - 0.5 and r.y1 > y + 1 and r.y0 > floor and r.y1 < lab['y1'] + 30]
+            if not cross:
+                break
+            y = min(cross) - 2
+        out.append((y,) + tuple(c[1:]))
+    return out
 
 
 def _maths(doc):
@@ -479,11 +536,19 @@ def structured_rows_columns(doc):
             else:
                 starts.append((y, path, also))
         cuts = [(y - 4, p, a) for y, p, a in starts]
-        if re.search(r'/(?:200\d|201[012])-', doc.name or ''):
+        if re.search(r'/(?:200\d|201[012])-', doc.name or '') or _maths(doc):   # (maths too: 2014 MJ 21 q5(b), round 28)
             # a fraction's numerators ('1/u' printed as a fraction, 2012 ON 63 q4(b), round 26) stand above the
             # label's line and reach into it: the row starts above them, not between them and their fraction
             cuts = [(min([y - 4] + [w[1] - 1 for w in words if y - 10 < w[1] < y - 4 and w[3] > y + 1]), p, a)
                     for (y, p, a) in [(y_, p_, a_) for y_, p_, a_ in starts]]
+        if _maths(doc):
+            labs = {}
+            for l in lines:
+                for (yy, p_, a_) in cuts:
+                    if p_ is not None and abs(l['y0'] - (yy + 4)) < 0.6 and l['x0'] < 100:
+                        labs.setdefault(yy, l)
+            tmp = [(yy, labs.get(yy, {'y0': yy + 4, 'y1': yy + 14}) if p_ is not None else None, p_, a_) for yy, p_, a_ in cuts]
+            cuts = [(t_[0], t_[2], t_[3]) for t_ in _lift(page, tmp, 90)]
         if current and (not cuts or cuts[0][0] > top + 4):
             cuts.insert(0, (top, None, []))
         for i, (y, path, also) in enumerate(cuts):
@@ -506,7 +571,16 @@ def structured_rows_columns(doc):
                          if y - 1 <= w[1] < y_end - 1 and mr[2] - 2 <= w[0] < mr[3] and re.fullmatch(r'\d{1,2}(?:FT|ft)?|C\d|[ABM]\d', w[4])]
             else:
                 codes = [l['text'] for l in band if l['x0'] >= CODE_X and re.fullmatch(r'\(?[ABCM]\d\)?|\d|\[\d\]', l['text'])]
-            seg_bottom = min(y_end, max(l['y1'] for l in band) + 6)
+            drawn = []
+            if _maths(doc):                           # vector drawings in the row count too (2014 MJ 31 q10: the Venn
+                for d_ in page.get_drawings():        # diagram's lower half was cut off at the last text line, round 28)
+                    r_ = d_['rect']
+                    if not (y - 1 <= r_.y0 < y_end - 1 and r_.y1 <= y_end + 1 and r_.x0 >= 90):
+                        continue
+                    if (r_.height < 1.6 and r_.width > 0.45 * page.rect.width) or r_.width < 1.6 or r_.width > 0.8 * page.rect.width:
+                        continue
+                    drawn.append(r_)
+            seg_bottom = min(y_end, max([l['y1'] for l in band] + [r.y1 for r in drawn]) + 6)
             current['segments'].append({'page': pno + 1, 'bbox': [36.0, round(y, 1), page.rect.width - 36.0, round(seg_bottom, 1)]})
             current['text'] = (current['text'] + '\n' + '\n'.join(l['text'] for l in body)).strip()
             current['marks_codes'] += codes

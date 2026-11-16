@@ -42,8 +42,13 @@
    },
    {
     "start": "2026-11-14T12:28:00+00:00",
-    "end": null,
+    "end": "2026-11-14T13:04:05+00:00",
     "note": "round 28 (re-check)"
+   },
+   {
+    "start": "2026-11-16T08:20:00+00:00",
+    "end": null,
+    "note": "round 29 (re-check 2)"
    }
   ],
   "fix": [
@@ -51,6 +56,11 @@
     "start": "2026-11-14T09:30:00+00:00",
     "end": "2026-11-14T12:28:00+00:00",
     "note": "round 27 fixes (start estimated): ms_maths one font/11pt/bold, run split, re-flow, picture cells, dots, diagram crops, SUB4, nested fractions and tables to picture; round 28 re-check published (34 items)"
+   },
+   {
+    "start": "2026-11-14T13:12:00+00:00",
+    "end": "2026-11-16T08:20:00+00:00",
+    "note": "round 28: 25 of 34 wrong -> ERROR_PATTERNS 91-129, appearance checks (maths_check), ms_compare.py, 6 full rebuilds; round 29 published (40 items). Chat paused 14-16 Nov (time not all work)."
    }
   ]
  },
@@ -69,7 +79,7 @@
   "papers": 60,
   "questions": 743,
   "flags": 11,
-  "round_items": 34,
+  "round_items": 40,
   "wrong_items": 25
  },
  "errors": [
@@ -152,6 +162,278 @@
    "fix": "maths_tex: >=3 column and >=3 row rules -> picture",
    "found_by": "claude",
    "at": "2026-11-14T12:27:38+00:00"
+  },
+  {
+   "pattern": "91",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 91)",
+   "fix": "see ERROR_PATTERNS 91",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "92",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 92)",
+   "fix": "see ERROR_PATTERNS 92",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "93",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 93)",
+   "fix": "see ERROR_PATTERNS 93",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "94",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 94)",
+   "fix": "see ERROR_PATTERNS 94",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "95",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 95)",
+   "fix": "see ERROR_PATTERNS 95",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "96",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 96)",
+   "fix": "see ERROR_PATTERNS 96",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "97",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 97)",
+   "fix": "see ERROR_PATTERNS 97",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "98",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 98)",
+   "fix": "see ERROR_PATTERNS 98",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "99",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 99)",
+   "fix": "see ERROR_PATTERNS 99",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "100",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 100)",
+   "fix": "see ERROR_PATTERNS 100",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "101",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 101)",
+   "fix": "see ERROR_PATTERNS 101",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "102",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 102)",
+   "fix": "see ERROR_PATTERNS 102",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "103",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 103)",
+   "fix": "see ERROR_PATTERNS 103",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "104",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 104)",
+   "fix": "see ERROR_PATTERNS 104",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "105",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 105)",
+   "fix": "see ERROR_PATTERNS 105",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "106",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 106)",
+   "fix": "see ERROR_PATTERNS 106",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "107",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 107)",
+   "fix": "see ERROR_PATTERNS 107",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "108",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 108)",
+   "fix": "see ERROR_PATTERNS 108",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "109",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 109)",
+   "fix": "see ERROR_PATTERNS 109",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "110",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 110)",
+   "fix": "see ERROR_PATTERNS 110",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "111",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 111)",
+   "fix": "see ERROR_PATTERNS 111",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "112",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 112)",
+   "fix": "see ERROR_PATTERNS 112",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "113",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 113)",
+   "fix": "see ERROR_PATTERNS 113",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "114",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 114)",
+   "fix": "see ERROR_PATTERNS 114",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "115",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 115)",
+   "fix": "see ERROR_PATTERNS 115",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "117",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 117)",
+   "fix": "see ERROR_PATTERNS 117",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "118",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 118)",
+   "fix": "see ERROR_PATTERNS 118",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "119",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 119)",
+   "fix": "see ERROR_PATTERNS 119",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "120",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 120)",
+   "fix": "see ERROR_PATTERNS 120",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:53+00:00"
+  },
+  {
+   "pattern": "121",
+   "kind": "new",
+   "what": "round 28 (see ERROR_PATTERNS 121)",
+   "fix": "see ERROR_PATTERNS 121",
+   "found_by": "claude",
+   "at": "2026-11-14T14:23:54+00:00"
+  },
+  {
+   "pattern": "92",
+   "kind": "repeat",
+   "what": "repeat of a round-27 class: the round-27 fix covered the reported item, not the class",
+   "fix": "class fix + appearance check (ERROR_PATTERNS 92)",
+   "found_by": "dhruv",
+   "at": "2026-11-14T14:24:00+00:00"
+  },
+  {
+   "pattern": "93",
+   "kind": "repeat",
+   "what": "repeat of a round-27 class: the round-27 fix covered the reported item, not the class",
+   "fix": "class fix + appearance check (ERROR_PATTERNS 93)",
+   "found_by": "dhruv",
+   "at": "2026-11-14T14:24:00+00:00"
+  },
+  {
+   "pattern": "97",
+   "kind": "repeat",
+   "what": "repeat of a round-27 class: the round-27 fix covered the reported item, not the class",
+   "fix": "class fix + appearance check (ERROR_PATTERNS 97)",
+   "found_by": "dhruv",
+   "at": "2026-11-14T14:24:00+00:00"
+  },
+  {
+   "pattern": "99",
+   "kind": "repeat",
+   "what": "repeat of a round-27 class: the round-27 fix covered the reported item, not the class",
+   "fix": "class fix + appearance check (ERROR_PATTERNS 99)",
+   "found_by": "dhruv",
+   "at": "2026-11-14T14:24:00+00:00"
   }
  ],
  "tokens": [

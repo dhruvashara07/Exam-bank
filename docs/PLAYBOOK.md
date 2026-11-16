@@ -45,6 +45,12 @@ the minimum; record each in the batch log.
       dot lines, wrong symbols, lost words); every hit looked at.
    2b `python3 pipeline/maths_check.py <ids>`: every printed word of a MS row is in our row once, inside its own column, nothing past
       the column edges, no two pieces overlapping; marks per part = the printed marks (`ms_maths` check, to build).
+   2b+ appearance checks (round 28: 25 of 34 wrong passed the content checks): maths_check.py ms_stretch, ms_edge,
+      ms_piccut, q_font, fig_cut, fig_text must be 0 (or each hit looked at against the page and explained).
+   2b++ LOOK, ours beside the print: `python3 pipeline/ms_compare.py /tmp/x <qids>` (our mark scheme | the printed rows)
+      for every question with a hit, every question with a picture cell, table or graph in its mark scheme, and every
+      planned round item. Read each pair line by line: same words, same line breaks (or a re-flow of a sentence), marks
+      beside their line, nothing touching a rule, pictures whole. A round is built only when these sheets are clean.
    2c figure check: no short label within 26 pt left outside a crop, 'NOT TO SCALE' inside the crop, no two crops of one
       question overlapping or one inside another (round 27: '2 images'), no stray line of a neighbour inside a crop.
    2d font check: one family per mark scheme (header, labels, answers, marks, partial marks), bold/italic kept.

@@ -431,3 +431,21 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   Two errors the checks missed: nested fractions (KaTeX + char check pass flat but wrong LaTeX) and question tables read
   as text; both found only on a direct question. Changed: PLAYBOOK 2e reads the LaTeX of every stacked part against the
   page. Next: rebuild only the papers a fix touches (a list per pattern), not all 60, to cut the fix phase.
+
+## 2026-11-14 (evening) - maths pilot M0, round 28 answered (25 of 34 wrong) and fixed
+- Dhruv: Q column font looked wider and bold/normal mixed (want: same font, normal; header and Total bold, same font);
+  fractions need space around them like their surroundings, the line vertically centred; a rendering error seen twice
+  ('this is second time same type of error'); 'in physics you are unstoppable, here you are not solving the same error -
+  check the pipeline and approach, where is it not working for maths'; tell him what was fixed and why it will not recur.
+- Root cause analysis (the answer to his question): (1) my pre-round checks tested CONTENT only (every word present,
+  nothing overlapping) - every round-28 fault was APPEARANCE (stretched guessed widths, ink touching rules, cut pictures,
+  sans font, wrong bold/italic, wrong symbol shapes); (2) the maths MS is 2-D typeset in three PDF generations (2014
+  nameless fonts, 2019-21 MathType, 2025 merged font) and I patched each complaint instead of each class; (3) my own look
+  was a few grids of OUR table only, never ours beside the print; (4) three guesses of mine were wrong decisions
+  (2025 = sans, guessed label widths, '15 lines = graph').
+- Changed the approach: maths_check.py appearance checks (ms_stretch, ms_edge, ms_piccut, q_font, fig_cut, fig_text) on
+  all 60 papers, and pipeline/ms_compare.py (ours beside the printed rows) looked at for every hit and every round item
+  BEFORE a round. Fixes: ERROR_PATTERNS 91-121 (all new classes, each fixed for every paper). 4 full rebuilds.
+- Analysis: slowest phase = fix again (the classes were found one layer at a time: each fix uncovered the next fault on
+  the same sheet). What to change next: run maths_check + ms_compare on every paper of a batch in pass 1, not after
+  Dhruv's round; keep the 'ours beside print' sheet as the gate.

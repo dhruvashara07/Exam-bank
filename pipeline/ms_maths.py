@@ -102,9 +102,10 @@ def _items(u, edges):
             its.append(_Item(k, g, g['x'], g['y'], g['x'] + g['w'], g['y'] + g['h']))
     for f in u.get('figs') or []:
         its.append(_Item('figs', f, f['x'], f['y'], f['x'] + f.get('w', 0), f['y'] + f.get('h', 0)))
+    shaded = any(l.get('fill', '').lower() not in ('', '#ffffff', '#000000', '#231f20') for l in u.get('lines', []))
     for l in u.get('lines', []):
-        if l.get('fill', '').lower() == '#ffffff' and 'stroke' not in l:
-            continue
+        if l.get('fill', '').lower() == '#ffffff' and 'stroke' not in l and not shaded:
+            continue                                    # (a white box over grey 'un-shades' a cell: kept, round 28 2019 ON 51 q1)
         b = _bbox(l['d'])
         if not b:
             continue
@@ -117,7 +118,7 @@ def _items(u, edges):
             continue
         if b[3] - b[1] > 0.9 * u['h'] and b[2] - b[0] > 0.9 * u['w']:
             continue                                    # a background box
-        if b[3] - b[1] < 1.3 and (b[1] < 2.5 or b[3] > u['h'] - 2.5):
+        if (b[3] - b[1] < 3.0 and (b[1] < 3.0 or b[3] > u['h'] - 3.0) and b[2] - b[0] > 20) or b[3] <= 3.0 or b[1] >= u['h'] - 3.0:   # the row's own top / bottom rule, or the edge of the header's shading poking in (2019 ON 63 q6, round 28)
             continue                                    # a piece of the row's own top / bottom rule (round 27 stray lines)
         if b[3] - b[1] < 1.3 and b[2] - b[0] > 25 and len(edges) >= 2 and b[0] >= edges[1] - 1 and not any(
                 t.get('t', '').strip() and t['x'] < b[2] and t['x'] + t['w'] > b[0] and 0 <= b[1] - t['y'] < 9
@@ -165,10 +166,11 @@ def _chunks(its):
     return out
 
 
-def _cell(items, c0, c1, n0, n1, align='left'):
+def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
     """Lay the items of one printed cell [c0, c1] into our column [n0, n1]. Returns (placed pieces, bottom y, top y)."""
     if not items:
         return [], None, None
+    push = push or (lambda y: 0.0)
     lines = _lines_of(items)
     width = n1 - n0 - 2 * PAD
     left = min(i.x0 for i in items)
@@ -185,8 +187,10 @@ def _cell(items, c0, c1, n0, n1, align='left'):
         lh_ = a['y1'] - a['y0']
         ax0, ax1 = min(i.x0 for i in a['its']), max(i.x1 for i in a['its'])
         bx0 = min(i.x0 for i in b['its'])
+        first_b = min(b['its'], key=lambda i: i.x0).ref.get('t', '') if plain(b) else ''
         if plain(a) and plain(b) and abs(ax0 - bx0) < 3 and b['y0'] - a['y1'] < 0.6 * lh_ and ax1 > c1 - 0.3 * (c1 - c0) \
-                and (ax1 - ax0) > width * 0.6:
+                and (ax1 - ax0) > width * 0.6 and re.match(r'[a-z]', first_b) and not re.match(r'(or|and)$', first_b):
+            # (only a line that goes on with a sentence: '[x =] 1.13 ...' or 'or ...' is a new answer line, round 28)
             a.setdefault('parts', [dict(a, its=list(a['its']))]).append(b)
             a['its'] = a['its'] + b['its']; a['y1'] = b['y1']
             del lines[k + 1]
@@ -205,15 +209,28 @@ def _cell(items, c0, c1, n0, n1, align='left'):
                     if x and x + sp_ + w_ > width + 0.5:
                         row += 1; x, sp_ = 0.0, 0.0
                     dx = n0 + lead + x + sp_ - ch['x0']
-                    dy = extra + (first['y0'] + row * pitch) - part['y0']
+                    dy = extra + push(first['y0']) + (first['y0'] + row * pitch) - part['y0']
                     for it in ch['its']:
                         out.append((it, dx, dy, 1.0, ch['x0']))
                     x += sp_ + w_
-            extra += (first['y0'] + row * pitch + lh) - ln['y1']
+            g_ = (first['y0'] + row * pitch + lh) - ln['y1']
+            extra += g_
+            if growth is not None and abs(g_) > 0.01:
+                growth.append((ln['y1'], g_))
             continue
         chunks = _chunks(ln['its'])
         rel0 = chunks[0]['x0'] - left                  # this printed line's indent in its cell
-        vis = [{'chs': [], 'shift': 0.0}]
+        span_all = chunks[-1]['x1'] - chunks[0]['x0']
+        lead_ts = [i for i in ln['its'] if i.kind == 't' and i.x0 - chunks[0]['x0'] < 3]
+        multi = len({round(i.ref['y'] / (0.9 * i.ref.get('s', 11))) for i in lead_ts}) >= 2 and len(lead_ts) >= 2
+        if multi:                                      # two printed lines joined by a tall sign (a root over brackets, 2025 MJ
+            chunks = [{'its': list(ln['its']), 'x0': chunks[0]['x0'], 'x1': chunks[-1]['x1']}]   # 21 q15): one block,
+            #                                             never wrapped piece by piece (they were drawn on top of each other)
+        first_shift = 0.0
+        if span_all <= width + 0.5 and chunks[-1]['x1'] - left > width + 0.5:
+            first_shift = min(rel0, chunks[-1]['x1'] - left - width)   # a line hanging right ('+ 8[corners]', 2021 FM 62 q4)
+            #                                             moves left to end at our column edge instead of wrapping
+        vis = [{'chs': [], 'shift': first_shift}]
         for ch in chunks:
             cur = vis[-1]
             if cur['chs'] and (ch['x1'] - left - cur['shift']) > width + 0.5:
@@ -222,7 +239,7 @@ def _cell(items, c0, c1, n0, n1, align='left'):
             cur['chs'].append(ch)
         lh = ln['y1'] - ln['y0']
         for k, r in enumerate(vis):
-            dy = extra + k * (lh + 2.0)
+            dy = extra + push(ln['y0']) + k * (lh + 2.0)
             span = r['chs'][-1]['x1'] - r['chs'][0]['x0']
             sc = width / span if span > width + 0.5 else 1.0        # one unbreakable piece wider than the column
             if align == 'right':
@@ -235,8 +252,55 @@ def _cell(items, c0, c1, n0, n1, align='left'):
                 for it in ch['its']:
                     out.append((it, dx, dy, sc, r['chs'][0]['x0']))
         extra += (len(vis) - 1) * (lh + 2.0)
-    bottom = max(it.y1 for it in items) + extra
+        if growth is not None and len(vis) > 1:
+            growth.append((ln['y1'], (len(vis) - 1) * (lh + 2.0)))
+    bottom = max(it.y1 for it in items) + extra + push(1e9)
     return out, bottom, min(i.y0 for i in items)
+
+
+_FONTS = {('serif', 0): 'tiro', ('serif', 1): 'tibo', ('sans', 0): 'helv', ('sans', 1): 'hebo'}
+
+
+def text_width(t, fam, s, bold=False):
+    """Width of a text in the font the page draws it with (Times / Helvetica metrics = the review and site fonts)."""
+    import fitz
+    return round(fitz.get_text_length(t, fontname=_FONTS.get((fam if fam in ('serif', 'sans') else 'serif', int(bool(bold))), 'tiro'),
+                                      fontsize=s), 2)
+
+
+TOP = 4.0          # free space above the highest ink of a row (round 28: fractions touched the row's top rule)
+MARGIN = 3.0       # extra space above and below a line holding stacked maths (fraction, vector, root)
+LGAP = 1.5         # least free space between two printed lines of one cell
+
+
+def _pushes(cols, base):
+    """Vertical space to add, as a function of the printed y: lines with stacked maths get MARGIN above and below,
+    the first line TOP below the row's top. The pushes of all columns are joined (the larger one wins at each height),
+    so a line keeps its printed height against the same line in the other columns (round 28, Dhruv: 'margin around
+    the fraction, the whole line vertically centred')."""
+    per = []
+    for its in cols:
+        ln = _lines_of(its) if its else []
+        ps, prev = [], None
+        for l in ln:
+            tall = (l['y1'] - l['y0']) > 1.45 * base
+            if prev is None:
+                need = TOP + (MARGIN if tall else 0.0) - l['y0']
+                if need > 0:
+                    ps.append((-1e9, need))
+            else:
+                ptall = (prev['y1'] - prev['y0']) > 1.45 * base
+                need = LGAP + (MARGIN if tall or ptall else 0.0) - (l['y0'] - prev['y1'])
+                if need > 0:
+                    ps.append((l['y0'] - 0.01, need))
+            prev = l
+        if prev is not None and (prev['y1'] - prev['y0']) > 1.45 * base:
+            ps.append((prev['y0'] + 0.01, MARGIN))      # space under a tall last line (counted in the row's height)
+        per.append(ps)
+    marks = sorted({y for ps in per for y, _ in ps})
+    def push(y):
+        return max([sum(p for yy, p in ps if yy < y) for ps in per] + [0.0])
+    return push
 
 
 def _scaled_unit(u, K):
@@ -279,7 +343,7 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
     A = (W - QW - MW) / 2 if ncols == 4 else W - QW - MW
     ours = [(0.0, QW), (QW, QW + A), (QW + A, QW + A + MW), (QW + A + MW, W)]
     its = _items(u, edges[:3])
-    if not any(i.kind != 'lines' and not (i.kind == 't' and re.fullmatch(r'[.\s…_-]+', i.ref['t'])) for i in its):
+    if not any(i.kind != 'lines' and not (i.kind == 't' and re.fullmatch(r'[.\s…_|\-]+', i.ref['t'])) for i in its):
         return 'empty'                                   # only rules left (the end of a table on a page): no row
     by = [[], [], [], []]
     for it in its:
@@ -288,32 +352,92 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
         by[c].append(it)
     v = {'src': u['src'], 'w': W, 'h': 0.0, 'text': [], 'lines': [], 'figs': [], 'glyphs': []}
     bottoms = []
+    push0 = _pushes([by[0], by[1], by[2], by[3]], 11.0 if base else max([i.ref.get('s', 11) for i in its if i.kind == 't'] or [11]))
+    # rows grow in step: a line that wraps in one column moves the lines below it in EVERY column (round 28, 2025 MJ 61 q4:
+    # the '1' mark stayed beside the wrong line). Pass 1 measures each column's growth by printed height.
+    grows = {}
+    for c in (1, 2, 3):
+        if by[c] and not (c == 3 and ncols == 3) and not ((_picture_cell(by[c]) or u['src']['page'] in CTX.get('broken', ()))
+                                                          and CTX.get('pdf')):
+            g = []
+            _cell(by[c] + (by[3] if c == 1 and ncols == 3 else []), cells_src[c][0], cells_src[c][1], ours[c][0], ours[c][1],
+                  align='right' if c == 2 else 'left', push=push0, growth=g)
+            grows[c] = g
+    def G(c, y):
+        return sum(a for yy, a in grows.get(c, []) if yy < y)
+    def push_for(c):
+        return lambda y: push0(y) + max([G(k, y) for k in grows] + [0.0]) - G(c, y)
+    push = push_for(0)
     top_pad = min([i.y0 for i in its] + [u['h']])
     for c in (1, 2, 3):
         if c == 3 and ncols == 3:
             by[1] += by[3]; continue
         if (_picture_cell(by[c]) or u['src']['page'] in CTX.get('broken', ())) and by[c] and CTX.get('pdf'):   # a diagram / shaded sketch in the cell: its printed picture (pattern 78)
-            dr = [i for i in by[c] if i.kind != 't' and not (i.kind == 'lines' and i.y1 - i.y0 < 1.6 and i.x1 - i.x0 < 80)] or by[c]
+            tbx = [(t.x0 - 1.5, t.y0 - 1.5, t.x1 + 1.5, t.y1 + 1.5) for t in by[c] if t.kind == 't']
+            dr = [i for i in by[c] if i.kind != 't' and not (i.kind == 'lines' and i.y1 - i.y0 < 1.6 and i.x1 - i.x0 < 80)
+                  and not (i.kind == 'lines' and max(i.x1 - i.x0, i.y1 - i.y0) < 40 and any(
+                      i.x0 < b[2] and i.x1 > b[0] and i.y0 < b[3] and i.y1 > b[1] for b in tbx))] or by[c]
+            # (a root sign / bar on a text line below a table is text, not the drawing: 2025 MJ 61 q1, round 28)
+            groups_ = []                                 # drawings in clusters (6 pt apart): the picture is the main ones,
+            for i in sorted(dr, key=lambda i: (i.y0, i.x0)):   # small marks standing apart (a bracket or sign in the
+                box_ = [i.x0 - 6, i.y0 - 6, i.x1 + 6, i.y1 + 6]  # notes under a table) stay with the text
+                hit = [g for g in groups_ if g['b'][0] < box_[2] and g['b'][2] > box_[0] and g['b'][1] < box_[3] and g['b'][3] > box_[1]]
+                g = {'its': [i], 'b': box_}
+                for h in hit:
+                    g['its'] += h['its']; groups_.remove(h)
+                    g['b'] = [min(g['b'][0], h['b'][0]), min(g['b'][1], h['b'][1]), max(g['b'][2], h['b'][2]), max(g['b'][3], h['b'][3])]
+                groups_.append(g)
+            if len(groups_) > 1:
+                big = max((g['b'][2] - g['b'][0]) * (g['b'][3] - g['b'][1]) for g in groups_)
+                dr = [i for g in groups_ if (g['b'][2] - g['b'][0]) * (g['b'][3] - g['b'][1]) >= 0.3 * big for i in g['its']]
             px0, py0 = min(i.x0 for i in dr), min(i.y0 for i in dr)
             px1, py1 = max(i.x1 for i in dr), max(i.y1 for i in dr)
             inpic = [i for i in by[c] if px0 - 14 <= (i.x0 + i.x1) / 2 <= px1 + 14 and py0 - 12 <= (i.y0 + i.y1) / 2 <= py1 + 12
-                     and not (i.kind == 't' and len(i.ref['t']) > 12 and (i.y1 < py0 or i.y0 > py1))]   # axis labels go with it
+                     and not (i.kind == 't' and len(i.ref['t']) > 6 and not (py0 - 2 <= (i.y0 + i.y1) / 2 <= py1 + 2))]
+            # (short labels just outside the drawing go with it; words of the text around it do not - round 28, 2025 MJ 61
+            # q1: the lines under a table went into its picture and everything shrank)
+            if u['src']['page'] in CTX.get('broken', ()):
+                inpic = list(by[c])                      # broken text layer: the whole cell is its printed picture
+            grow = True                                  # text on the same line as the drawing belongs to the picture
+            while grow:
+                grow = False
+                for t_ in [i for i in by[c] if i not in inpic and i.kind == 't']:
+                    if any(o.kind != 't' and min(o.y1, t_.y1) - max(o.y0, t_.y0) > 0.5 * (t_.y1 - t_.y0) for o in inpic) \
+                            and not (t_.y0 < py0 + 3 and len(t_.ref['t']) > 3 and t_.y1 <= py0 + 0.6 * (t_.y1 - t_.y0) + 3):
+                        inpic.append(t_); grow = True
             rest = [i for i in by[c] if i not in inpic]
+            pasted = [i for i in dr if i.kind in ('images', 'figs')]
+            head = [t_ for t_ in by[c] if t_.kind == 't' and t_.y0 < py0 + 3 and t_.y1 > py0 - 0.5
+                    and any(i.y0 < t_.y1 for i in pasted)]   # a text line a pasted picture lies over (never a drawn box,
+            head_moved = any(len(t_.ref['t']) > 3 for t_ in head)
+            if head_moved:                                   # 2021 FM 42 q9) ('Correct diagram' half hidden, 2021 FM 32 q9):
+                line = [t_ for t_ in by[c] if t_.kind == 't' and any(abs(t_.ref['y'] - h_.ref['y']) < 2 for h_ in head)]
+                py0 = max([py0] + [t_.y1 + 0.5 for t_ in line])   # the picture starts under it, the WHOLE line is our text
+                for t_ in line:                              # (round 28: only its first word was kept)
+                    if t_ in inpic:
+                        inpic.remove(t_)
+                    if t_ not in rest:
+                        rest.append(t_)
             shift, tb = 0.0, None
             if rest:                                     # text around the picture ('Correct diagram') laid out as text
                 above = [i for i in rest if i.y1 <= py0 + 1]
-                placed, tb, _ = _cell(rest, cells_src[c][0], cells_src[c][1], ours[c][0], ours[c][1])
+                placed, tb, _ = _cell(rest, cells_src[c][0], cells_src[c][1], ours[c][0], ours[c][1], push=push_for(c))
                 for it, dx, dy, k, x0 in placed:
                     _emit(v, it, dx, dy, k, x0)
                 if above:
                     pl_ab = [p_ for p_ in placed if p_[0] in above]
                     shift = max([p_[2] for p_ in pl_ab] + [0.0])
-            bot = _cell_picture(v, u, inpic, cells_src[c], ours[c], (px0, py0 + shift, px1, py1), shift)
+            shift = max(shift, push(py0))                # (the heading's placement already holds the push)
+            broken_pg = u['src']['page'] in CTX.get('broken', ())
+            bot = _cell_picture(v, u, inpic, cells_src[c], ours[c], (px0, py0, px1, py1) if head_moved and not broken_pg else None,
+                                shift)          # (top clamped only under a moved heading: a rotated 'All' above a table
+            #                                     was cut, 2021 FM 52 q3)
+            #                     (broken page: from the cell's first ink - the formula over the graph was cut, 2014 MJ 62 q6)
             if bot is not None:
                 bottoms.append(max(bot, tb or 0))
                 continue
         placed, bot, _ = _cell(by[c], cells_src[c][0], cells_src[c][1], ours[c][0], ours[c][1],
-                               align='right' if c == 2 else 'left')
+                               align='right' if c == 2 else 'left', push=push_for(c))
         for it, dx, dy, k, x0 in placed:
             _emit(v, it, dx, dy, k, x0)
         if bot is not None:
@@ -325,10 +449,12 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
         y0 = min([i.ref['y'] for i in lab_items if i.kind == 't'] or
                  [i.ref['y'] for c in (1, 2) for i in by[c] if i.kind == 't'] or [top_pad + 0.78 * s0])
         f = next((i.ref.get('f') for i in lab_items if i.kind == 't'), 'serif')
-        tw = round(0.5 * s0 * len(label) + 0.6, 2)
-        v['text'].append({'t': label, 'x': round(max(2.0, (QW - tw) / 2), 2), 'y': round(y0, 2), 'w': tw, 's': s0, 'f': f})
+        s0 = 11.0
+        tw = text_width(label, fam or f, s0)               # the real width: a guessed one stretched the label (round 28)
+        v['text'].append({'t': label, 'x': round(max(2.0, (QW - tw) / 2), 2), 'y': round(y0 + push(y0 - 0.5), 2), 'w': tw,
+                          's': s0, 'f': f})            # Q labels in normal weight (Dhruv, round 28)
     bottom_pad = max(3.0, min(8.0, u['h'] - max([i.y1 for i in its] + [0])))
-    lab_bot = max([i.y1 for i in by[0]] + [0])
+    lab_bot = max([i.y1 for i in by[0]] + [0]) + push(1e9)
     v['h'] = round(max([b + bottom_pad for b in bottoms] + [lab_bot + bottom_pad, 18.0]), 2) if bottoms else u['h']
     if ncols == 4:
         xs = [QW, QW + A, QW + A + MW]
@@ -361,10 +487,30 @@ def _picture_cell(items):
     # area; ruled inner tables (straight rules only) stay text (MS_TABLE_RULES 9)
     curvy = [i for i in items if i.kind == 'lines' and ('C' in i.ref.get('d', '') or _slanted(i.ref.get('d', '')))
              and (i.x1 - i.x0) > 30 and (i.y1 - i.y0) > 30]
-    shaded = [i for i in items if i.kind == 'lines' and i.ref.get('fill') and i.ref.get('fill', '').lower() not in ('#000000', '#ffffff', '#231f20')
-              and (i.x1 - i.x0) * (i.y1 - i.y0) > 400]
-    grid = [i for i in items if i.kind == 'lines' and not (i.y1 - i.y0 < 1.6 and i.x1 - i.x0 < 60)]
-    return bool(curvy) or bool(shaded) or len(grid) >= 15    # a graph / grid drawn with straight lines
+    shaded = [i for i in items if i.kind == 'lines' and i.ref.get('fill') and i.ref.get('fill', '').lower() not in ('#000000', '#ffffff', '#231f20')]
+    shaded = shaded if sum((i.x1 - i.x0) * (i.y1 - i.y0) for i in shaded) > 400 else []   # shading drawn in thin strips
+    #                                                                     counts together (2019 ON 51 q1(b)(ii), round 28)
+    # a graph / grid drawn with straight lines: long rules both ways (root signs and brackets are short strokes: a cell full
+    # of square roots was taken for a graph, round 28 2025 MJ 61 q4)
+    gv = [i for i in items if i.kind == 'lines' and i.x1 - i.x0 < 1.6 and i.y1 - i.y0 > 20]
+    gh = [i for i in items if i.kind == 'lines' and i.y1 - i.y0 < 1.6 and i.x1 - i.x0 > 40]
+    # axes: a long vertical line crossing a long horizontal one - every graph has them, root signs and brackets never
+    # (round 28: graphs drawn from short straight pieces with dashed grids were laid out as faint loose lines, 2014 MJ 42 q2)
+    av = [i for i in items if i.kind == 'lines' and i.x1 - i.x0 < 1.6 and i.y1 - i.y0 > 30]
+    ah = [i for i in items if i.kind == 'lines' and i.y1 - i.y0 < 1.6 and i.x1 - i.x0 > 40]
+    axes = any(h.x0 - 1 <= v.x0 <= h.x1 + 1 and v.y0 - 1 <= h.y0 <= v.y1 + 1 for v in av for h in ah)
+    # a drawing made of many short pieces (a graph traced in 20 pt segments, 2014 MJ 42 q2): pieces that touch no text
+    # (root signs and fraction bars always sit on their text)
+    tb = [(t.x0 - 1.5, t.y0 - 1.5, t.x1 + 1.5, t.y1 + 1.5) for t in ts]
+    free = [i for i in items if i.kind == 'lines' and not (i.y1 - i.y0 < 1.6 and i.x1 - i.x0 < 60)
+            and max(i.x1 - i.x0, i.y1 - i.y0) > 3
+            and not any(i.x0 < b[2] and i.x1 > b[0] and i.y0 < b[3] and i.y1 > b[1] for b in tb)]
+    slant = [i for i in free if i.x1 - i.x0 > 1.6 and i.y1 - i.y0 > 1.6 and max(i.x1 - i.x0, i.y1 - i.y0) > 8]
+    #        (the tick of a root sign is 2.7 x 5 pt and stands beside its text; curve pieces are longer)
+    def spread(lst):
+        return lst and (max(i.x1 for i in lst) - min(i.x0 for i in lst)) > 60 and (max(i.y1 for i in lst) - min(i.y0 for i in lst)) > 30
+    pieces = (len(free) >= 20 and spread(free)) or (len(slant) >= 5 and spread(slant))   # (a curve over a grid, 2014 MJ 43 q6)
+    return bool(curvy) or bool(shaded) or (len(gv) >= 3 and len(gh) >= 3) or axes or pieces
 
 
 def _slanted(d):
@@ -380,12 +526,36 @@ def _cell_picture(v, u, items, src, ours, region=None, shift=0.0):
     K = u.get('_K', 1.0)
     x0, x1 = max(src[0] + 1.0, min(i.x0 for i in items) - 1.5), min(src[1] - 1.0, max(i.x1 for i in items) + 1.5)
     y0 = max(0.5, min(i.y0 for i in items) - 1.5); y1 = min(u['h'] - 0.5, max(i.y1 for i in items) + 1.5)
+    if region:
+        y0 = max(y0, region[1])                          # not over a text line kept as our text
     b = u['src']['box']
     r = fitz.Rect(b[0] + x0 / K, b[1] + y0 / K, b[0] + x1 / K, b[1] + y1 / K)
     doc = CTX.setdefault('doc', fitz.open(CTX['pdf']))
+    # grow sideways to whole ink inside the cell: words that are no text items (a rotated 'All' left of 'pos', 2021 FM 52
+    # q3) were cut at the picture's left edge (round 28)
+    import numpy as np
+    lo, hi = b[0] + (src[0] + 1.0) / K, b[0] + (src[1] - 1.0) / K
+    pg_ = doc[u['src']['page'] - 1]
+    for _ in range(12):
+        grown = False
+        for side in ('l', 'r'):
+            xa = r.x0 - 1.5 if side == 'l' else r.x1 + 0.2
+            if (side == 'l' and r.x0 - 2.5 < lo) or (side == 'r' and r.x1 + 2.5 > hi):
+                continue
+            bp = pg_.get_pixmap(clip=fitz.Rect(xa, r.y0, xa + 1.3, r.y1), dpi=150, colorspace=fitz.csGRAY)
+            a = np.frombuffer(bp.samples, np.uint8)
+            if a.size and (a < 160).sum() >= 2:
+                if side == 'l':
+                    r.x0 -= 2.5
+                else:
+                    r.x1 += 2.5
+                grown = True
+        if not grown:
+            break
     pix = doc[u['src']['page'] - 1].get_pixmap(clip=r, dpi=220)
     im = Image.frombytes('RGB', (pix.width, pix.height), pix.samples).convert('RGBA')
-    im.putdata([(a, b_, c, 0 if a > 245 and b_ > 245 and c > 245 else 255) for a, b_, c, _ in im.getdata()])
+    im.putdata([(a, b_, c, 0 if a > 245 and b_ > 245 and c > 245 else 255) for a, b_, c, _ in im.getdata()])   # near-white
+    # (232 erased light grey graph grids, round 28 - 245 kept: the grey band of 2021 FM 32 q9 is printed so)
     box = im.getbbox()
     if not box:
         return None
@@ -399,7 +569,9 @@ def _cell_picture(v, u, items, src, ours, region=None, shift=0.0):
     x = ours[0] + PAD + max(0.0, (x0 + box[0] / 220 * 72 * K - src[0] - PAD)) if k == 1.0 else ours[0] + PAD
     x = min(x, ours[1] - PAD - w * k)
     y = y0 + shift + box[1] / 220 * 72 * K
-    v.setdefault('images', []).append({'file': name, 'x': round(x, 2), 'y': round(y, 2), 'w': round(w * k, 2), 'h': round(h * k, 2)})
+    v.setdefault('images', []).append({'file': name, 'x': round(x, 2), 'y': round(y, 2), 'w': round(w * k, 2), 'h': round(h * k, 2),
+                                       'src': [u['src']['page'], round(r.x0 + box[0] / 220 * 72, 2), round(r.y0 + box[1] / 220 * 72, 2),
+                                               round(r.x0 + box[2] / 220 * 72, 2), round(r.y0 + box[3] / 220 * 72, 2)]})
     return y + h * k
 
 
@@ -459,7 +631,7 @@ def build(q, uniq, store, hdr_unit, own_total, frame):
     ncols = 4 if any(len(c or []) == 3 for c, _ in cols) else 3
     good = [(c, w) for c, w in cols if c and len(c) == ncols - 1]
     hint = max(good, key=lambda cw: sum(1 for c2, w2 in good if c2 == cw[0])) if good else None
-    qw = max([QW] + [round(0.5 * 11 * len(r['label']) + 0.6 + 8) for r, _ in uniq])   # long labels ('11(d)(iii)'): wider Q
+    qw = max([QW] + [round(text_width(r['label'], fam, 11.0) + 10) for r, _ in uniq])   # long labels ('11(d)(iii)'): wider Q
     out, seen_lab = [], set()
     for r, u in uniq:
         if u['h'] < 4:
@@ -479,10 +651,18 @@ def build(q, uniq, store, hdr_unit, own_total, frame):
         frame(v)
     first = {'edges': info['edges'], 'new_edges': info['new_edges'], 'new_w': info['new_w']}
     rows = ([hdr_unit(first, ncols, fam)] if hdr_unit else []) + out
+    if hdr_unit:                                     # header words: real bold widths, centred in their column
+        ne = [0.0] + list(first['new_edges']) + [W]
+        for t in rows[0]['text']:
+            cx = t['x'] + t['w'] / 2
+            k = next((j for j in range(len(ne) - 1) if ne[j] <= cx < ne[j + 1]), None)
+            t['w'] = text_width(t['t'], fam, t.get('s', 11.0), True)
+            if k is not None:
+                t['x'] = round((ne[k] + ne[k + 1] - t['w']) / 2, 2)
     tot = own_total(q.get('marks'), first, out) if q.get('marks') else None
     if tot:
         for t in tot['text']:                        # the total row in our normal size (its template can be a tiny axis label)
-            t.update(s=11.0, b=1, w=round(0.55 * 11.0 * len(t['t']), 2), **({'f': fam} if fam else {}))
+            t.update(s=11.0, b=1, w=text_width(t['t'], fam, 11.0, True), **({'f': fam} if fam else {}))
             t.pop('i', None)
         tw = tot['text']
         if len(tw) == 2:

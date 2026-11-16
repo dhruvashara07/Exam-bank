@@ -61,21 +61,23 @@ MATHS_GLYPHS = {
     'MMGreek': {'r': 'π'}, 'MMaGreek-Regular': {'r': 'π'},
     'MMNegate': {'!': '≠', 'g': '∉'},
     'MMRelation': {'G': '≤', 'H': '≥'},
+    'EuclidMathTwo': {'-': '≤'},                     # 2019 ON 41 MS '71... ≤ f(x)' (round 28 symbol sweep)
 }
 
 
 _NB = {}
 
 
-def nameless_bold(doc, font):
-    """2014 maths: subset fonts named 'TT1F0C1o00' carry no weight. Bold or regular Times, read from the printed widths of
-    the font's letters against Times Roman and Times Bold (round 27: bold labels / marks / 'M1' drawn regular)."""
+def nameless_style(doc, font):
+    """2014 maths: subset fonts named 'TT1F0C1o00' carry no weight or slant. Regular, bold, italic or bold italic Times,
+    read from the printed widths of the font's letters against the four Times fonts (round 27: bold labels / 'M1' drawn
+    regular; round 28: italic x, y drawn upright). Returns '', 'b', 'i' or 'bi'."""
     key = (doc.name, font)
     if key in _NB:
         return _NB[key]
     if (doc.name, None) not in _NB:
         import fitz
-        tr, tb = fitz.Font('tiro'), fitz.Font('tibo')
+        F = {'': fitz.Font('tiro'), 'b': fitz.Font('tibo'), 'i': fitz.Font('tiit'), 'bi': fitz.Font('tibi')}
         acc = {}
         for page in doc:
             for b in page.get_text('rawdict')['blocks']:
@@ -86,14 +88,22 @@ def nameless_bold(doc, font):
                         fn = sp['font']
                         for c in sp['chars']:
                             ch = c['c']
-                            if ch in 'abcdefghknoprstuyABDEGHKNPRSU' and sp['size'] > 4:
+                            if ch.isascii() and ch.isalpha() and sp['size'] > 4:
                                 w = (c['bbox'][2] - c['bbox'][0]) / sp['size']
-                                a = acc.setdefault(fn, [0.0, 0.0, 0])
-                                a[0] += abs(w - tr.glyph_advance(ord(ch))); a[1] += abs(w - tb.glyph_advance(ord(ch))); a[2] += 1
-        for fn, (dr, db, n) in acc.items():
-            _NB[(doc.name, fn)] = n >= 3 and db < 0.6 * dr
+                                a = acc.setdefault(fn, {k: 0.0 for k in F} | {'n': 0})
+                                for k, f in F.items():
+                                    a[k] += abs(w - f.glyph_advance(ord(ch)))
+                                a['n'] += 1
+        for fn, a in acc.items():
+            n = a.pop('n')
+            best = min(a, key=a.get)
+            _NB[(doc.name, fn)] = best if n >= 3 and a[best] < 0.6 * a[''] else ''
         _NB[(doc.name, None)] = True
-    return _NB.get(key, False)
+    return _NB.get(key, '')
+
+
+def nameless_bold(doc, font):
+    return 'b' in nameless_style(doc, font)
 
 
 def maths_doc(doc):
@@ -542,3 +552,149 @@ def _tiny_font(page, font):
         n = None
     _TINY[font] = n is not None and n <= 6
     return _TINY[font]
+
+
+def maths_styles(doc, pages):
+    """Maths: glyph_styles (stroke weight) misses Times bold - Times bold strokes are close to regular ones, the classifier
+    was tuned on the sans font of physics 2025 (round 28: '(a)' labels of 2025 maths drawn regular). A letter's printed
+    width tells regular from bold / italic for most letters (Times 'a': 0.444 em regular, 0.5 em bold or italic); the
+    measured slant then tells bold from italic."""
+    import collections
+    import fitz
+    import numpy as np
+    from store_units import glyph_styles, anonymous
+    feats = {}
+    st = glyph_styles(doc, pages, feats_out=feats)
+    count = feats.pop('__count', collections.Counter())
+    F = {v: fitz.Font(n) for v, n in (('r', 'tiro'), ('b', 'tibo'), ('i', 'tiit'), ('bi', 'tibi'))}
+    wid = collections.defaultdict(list)
+    count2 = collections.Counter()
+    for p in pages:
+        if not any(anonymous(f[3].split('+')[-1]) for f in doc[p].get_fonts()):
+            continue
+        for sp in doc[p].get_texttrace():
+            if not anonymous(sp['font']) or sp['size'] < 5:
+                continue
+            for c in sp['chars']:
+                ch = chr(c[0])
+                if ch.isascii() and ch.strip():
+                    count2[(sp['font'], c[1], ch)] += 1
+                if ch.isascii() and ch.strip() and len(wid[(sp['font'], c[1])]) < 8:
+                    wid[(sp['font'], c[1])].append(((c[3][2] - c[3][0]) / sp['size'], ch))
+    upright = {}
+    for key, v in feats.items():
+        ch, w, sl = v
+        n = count[(key[0], key[1], ch)]
+        if (key[0], ch) not in upright or n > upright[(key[0], ch)][0]:
+            upright[(key[0], ch)] = (n, sl)
+    usual = {}                                       # the most used glyph of each character = the real character
+    for (fnt, gid, ch), n in count2.items():
+        if (fnt, ch) not in usual or n > usual[(fnt, ch)][1]:
+            usual[(fnt, ch)] = (gid, n)
+    for key, lst in wid.items():
+        ch = lst[0][1]
+        r = float(np.median([x[0] for x in lst]))
+        if not ch.isdigit() and ch not in '.,' and usual.get((key[0], ch), (key[1],))[0] != key[1] and min(abs(r - f.glyph_advance(ord(ch))) for f in F.values()) > 0.02:
+            st[key] = 'sym'                          # a symbol in a letter's code ('+' printed as the cap sign, 'l' as a
+            continue                                 # prime: 2025 MJ 43 q16 'P + Ql' for P∩Q′, round 28): kept drawn
+        if not ch.isalpha():
+            continue
+        cand = sorted((abs(r - f.glyph_advance(ord(ch))), v) for v, f in F.items() if abs(r - f.glyph_advance(ord(ch))) < 0.012)
+        cand = [v for _, v in cand]
+        if not cand or st.get(key, 'r') in cand:
+            continue
+        f_ = feats.get(key)
+        slanted = bool(f_ and (key[0], ch) in upright and f_[2] - upright[(key[0], ch)][1] > 0.12)
+        pick = [v for v in cand if ('i' in v) == slanted] or cand
+        st[key] = pick[0]
+    return st
+
+
+def maths_symbol_family(text, size, w):
+    """Maths: symbols in the paper's own serif font when Liberation Serif (= Times metrics) draws them (one font for
+    question and mark scheme, round 28: x and <= were drawn in sans); otherwise as symbol_family."""
+    try:
+        ser = _width('/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf', text, size)
+    except Exception:
+        ser = None
+    if ser is not None:
+        if ser > w + 0.5 and w > 0:
+            size = round(size * max(0.8, w / ser), 2)
+        return 'serif', size
+    return symbol_family(text, size, w)
+
+
+
+_SYMF = {}
+
+
+def symbol_subset(doc, font):
+    """Maths 2014: a nameless subset font that re-uses letter codes for symbols ('<' printed as <=, '.' as >, 'Y' as <=).
+    Its characters are far off every Times width somewhere (a '.' as wide as a '>'): then the whole font is symbols and
+    its characters are kept as drawn (round 28; glyph names lie - the '<=' glyph is named 'less')."""
+    key = (doc.name, font)
+    if key in _SYMF:
+        return _SYMF[key]
+    import fitz
+    F = [fitz.Font(n) for n in ('tiro', 'tibo', 'tiit', 'tibi')]
+    bad = False
+    for page in doc:
+        if bad:
+            break
+        if not any(f_[3] == font or f_[3].split('+')[-1] == font.split('+')[-1] for f_ in page.get_fonts()):
+            continue
+        for b in page.get_text('rawdict')['blocks']:
+            for l in b.get('lines', []):
+                for sp in l['spans']:
+                    if sp['font'] != font or sp['size'] < 4:
+                        continue
+                    for c in sp['chars']:
+                        ch = c['c']
+                        if not ch.strip() or not ch.isascii():
+                            continue
+                        w = (c['bbox'][2] - c['bbox'][0]) / sp['size']
+                        if min(abs(w - f.glyph_advance(ord(ch))) for f in F) > 0.12:
+                            bad = True
+    _SYMF[key] = bad
+    return bad
+
+
+_SHAPE = {}
+
+
+def shape_ok(page, font, ch, bbox, size, italic=False, bold=False):
+    """Maths 2014: does a one-letter span of a nameless subset font look like that letter in Times? Symbol subsets
+    re-use letter codes ('<' printed as <=, '.' as >, 'Y' as <=; round 28). Printed ink vs the Times letter, overlap of
+    the two shapes scaled to the same box; False -> keep the drawn glyph (exact)."""
+    import numpy as np
+    from PIL import Image, ImageDraw, ImageFont
+    import fitz
+    key = (page.parent.name, font, ch)
+    if key in _SHAPE:
+        return _SHAPE[key]
+    Z = 400 / 72
+    pix = page.get_pixmap(matrix=fitz.Matrix(Z, Z), clip=fitz.Rect(bbox), colorspace=fitz.csGRAY)
+    a = np.frombuffer(pix.samples, np.uint8).reshape(pix.h, pix.w) < 128
+    ys, xs = np.nonzero(a)
+    if len(xs) < 4:
+        _SHAPE[key] = True
+        return True
+    a = a[ys.min():ys.max() + 1, xs.min():xs.max() + 1]
+    var = ('BoldItalic' if bold and italic else 'Bold' if bold else 'Italic' if italic else 'Regular')
+    f = ImageFont.truetype(f'/usr/share/fonts/truetype/liberation/LiberationSerif-{var}.ttf', int(size * Z))
+    im = Image.new('L', (int(size * Z * 3), int(size * Z * 3)), 255)
+    ImageDraw.Draw(im).text((int(size * Z), int(size * Z)), ch, font=f, fill=0)
+    r = np.asarray(im) < 128
+    ys, xs = np.nonzero(r)
+    if len(xs) < 4:
+        _SHAPE[key] = True
+        return True
+    r = r[ys.min():ys.max() + 1, xs.min():xs.max() + 1]
+    # same size of box? (a '.' printed as '>' is far bigger than a period)
+    if not (0.6 < a.shape[0] / r.shape[0] < 1.6 and 0.6 < a.shape[1] / r.shape[1] < 1.6):
+        _SHAPE[key] = False
+        return False
+    r2 = np.asarray(Image.fromarray(r.astype(np.uint8) * 255).resize((a.shape[1], a.shape[0]))) > 127
+    iou = (a & r2).sum() / max(1, (a | r2).sum())
+    _SHAPE[key] = bool(iou > 0.5)
+    return _SHAPE[key]

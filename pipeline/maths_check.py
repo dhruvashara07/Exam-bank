@@ -9,6 +9,13 @@ Checks (each hit is a problem to fix as a pattern, or to look at on the contact 
   ms_font     more than one font family in our table (MS_TABLE_RULES 25)
   fig_overlap two figure crops of one question overlapping (one diagram cut in two)
   not_to_scale 'NOT TO SCALE' left as question text while the part has a diagram (rule: inside the picture)
+Appearance checks (round 28: the checks above test content only; 25 of 34 round-28 items were appearance faults):
+  ms_stretch  a word of our table stored wider / narrower than its font draws it (guessed widths stretched labels)
+  ms_edge     ink of a row closer than 2 pt to the row's top or bottom rule (fractions touching the rule)
+  ms_piccut   a mark-scheme cell picture with ink on its border (picture cut)
+  q_font      sans text in a maths question (maths papers print Times; 2025 'AllAndNone' was read as sans)
+  fig_cut     a diagram crop whose edge runs through ink on the page (diagram cut)
+  fig_text    a question sentence ('(ii) Sketch ...') inside a diagram crop
 """
 import collections, glob, json, os, re, sys
 
@@ -69,6 +76,30 @@ def check_question(rec):
                     break
             if found:
                 hits.append(('ms_overlap', f"'{found[0]['t']}' / '{found[1]['t']}'"))
+        from ms_maths import text_width
+        bad = None
+        q_edge = ((mp.get('info') or {}).get('new_edges') or [60])[0]
+        ours_rows = [mp['rows'][0]] + ([mp['rows'][-1]] if any(t['t'] == 'Total' for t in mp['rows'][-1]['text']) else [])
+        for v in mp['rows']:                         # the words WE make: header, Q labels, Total (printed words keep
+            for t in v['text']:                      # their printed widths and draw as printed)
+                if not (v in ours_rows or t['x'] + t['w'] <= q_edge + 1):
+                    continue
+                if t.get('f') in ('serif', 'sans') and len(t['t'].strip()) >= 2 and t['w'] > 3 and re.fullmatch(r"[\w().,:;'\[\]=+/% -]+", t['t']):
+                    m = text_width(t['t'], t['f'], t.get('s', 11), t.get('b'))
+                    if m > 0 and not 0.85 <= t['w'] / m <= 1.18 and not t.get('i'):
+                        bad = bad or f"'{t['t']}' {t['w']:.1f} pt for {m:.1f} pt"
+        if bad:
+            hits.append(('ms_stretch', bad))
+        for v in rows:
+            ink = [(t['y'] - 0.72 * t.get('s', 11), t['y'] + 0.2 * t.get('s', 11)) for t in v['text'] if t.get('t', '').strip()
+                   and not re.fullmatch(r'[.\s…_]+', t['t'])]
+            ink += [(g['y'], g['y'] + g['h']) for k in ('glyphs', 'images', 'figs') for g in v.get(k) or [] if 'h' in g]
+            if ink and (min(a for a, _ in ink) < 2.0 or max(b for _, b in ink) > v['h'] - 1.5):
+                hits.append(('ms_edge', ' '.join(t['t'] for t in v['text'][:4])[:40])); break
+        for v in rows:                               # a cell picture whose edge runs through ink on the printed page
+            for im in v.get('images') or []:
+                if im.get('src') and _cut(rec, 'ms', im['src'][0], im['src'][1:]):
+                    hits.append(('ms_piccut', im['file'])); break
         fams = {t.get('f') for v in mp['rows'] for t in v['text'] if t.get('f') in ('serif', 'sans', 'mono')}
         if len(fams) > 1:
             hits.append(('ms_font', ' + '.join(sorted(fams))))
@@ -80,11 +111,86 @@ def check_question(rec):
                 A, B = sa['box'], sb['box']
                 if min(A[2], B[2]) - max(A[0], B[0]) > 2 and min(A[3], B[3]) - max(A[1], B[1]) > 2:
                     hits.append(('fig_overlap', f"{a['id'].split('_')[-1]} / {b['id'].split('_')[-1]}"))
+    nsans = sum(1 for p in rec['parts'] for u in p['layout'] for t in u['text'] if t.get('f') == 'sans' and t['t'].strip()
+                and not (len(t['t'].strip()) == 1 and not t['t'].strip().isalnum()))   # (a bullet / sign printed in Arial)
+    if nsans:
+        hits.append(('q_font', f'{nsans} words in sans'))
+    hits += fig_checks(rec)
     for p in rec['parts']:
         txt = ' '.join(t['t'] for u in p['layout'] for t in u['text'])
         if re.search(r'NOT\s+TO\s+SCALE', txt) and any(u.get('figs') for u in p['layout']):
             hits.append(('not_to_scale', p['path']))
     return hits
+
+
+_DOCS = {}
+
+
+def _doc(rec, kind):
+    import fitz
+    syl, ses, pv = rec['id'].split('_')[0], rec['id'].split('_')[1], rec['id'].split('_')[2]
+    fp = os.path.join(paths.ROOT, 'raw', syl, ses[:4] + '-' + ses[4:], f'{kind}_{pv}.pdf')
+    if not os.path.exists(fp):
+        return None
+    return _DOCS.setdefault(fp, fitz.open(fp))
+
+
+def _cut(rec, kind, page, box, pad=0.0):
+    """Sides of box (page coordinates) that run through ink: ink just inside AND just outside the edge."""
+    import fitz
+    import numpy as np
+    doc = _doc(rec, kind)
+    if doc is None:
+        return []
+    b = fitz.Rect(box) + (-pad, -pad, pad, pad)
+    Z, o = 3, 18
+    pix = doc[page - 1].get_pixmap(matrix=fitz.Matrix(Z, Z), clip=b + (-6, -6, 6, 6), colorspace=fitz.csGRAY)
+    a = np.frombuffer(pix.samples, np.uint8).reshape(pix.h, pix.w) < 140
+    inner = {'top': a[o:o + 2, o:-o], 'bottom': a[-o - 2:-o, o:-o], 'left': a[o:-o, o:o + 2], 'right': a[o:-o, -o - 2:-o]}
+    outer = {'top': a[o - 3:o - 1, o:-o], 'bottom': a[-o + 1:-o + 3, o:-o], 'left': a[o:-o, o - 3:o - 1], 'right': a[o:-o, -o + 1:-o + 3]}
+    def rule(band):                                   # a table / column rule right beside the edge is not a cut
+        return band.size and band.mean() > 0.8
+    return [k for k in inner if (inner[k] & outer[k]).sum() >= 3 and not rule(outer[k][:1] if k in ('top', 'bottom') else outer[k][:, :1])
+            and not rule(outer[k][1:2] if k in ('top', 'bottom') else outer[k][:, 1:2])]
+
+
+def fig_checks(rec):
+    """Diagram crops against the printed page: an edge running through ink (cut) or a question sentence inside."""
+    import fitz
+    import numpy as np
+    out = []
+    syl, ses, pv = rec['id'].split('_')[0], rec['id'].split('_')[1], rec['id'].split('_')[2]
+    ses = ses[:4] + '-' + ses[4:]
+    fp = os.path.join(paths.ROOT, 'raw', syl, ses, f'qp_{pv}.pdf')
+    if not os.path.exists(fp):
+        return out
+    doc = _DOCS.setdefault(fp, fitz.open(fp))
+    for f in rec.get('figures', []):
+        src = f.get('source') or {}
+        if not src.get('box') or not str(f['id']).count('diagram'):
+            continue
+        pg = doc[src['page'] - 1]
+        b = fitz.Rect(src['box'])
+        Z = 3
+        pix = pg.get_pixmap(matrix=fitz.Matrix(Z, Z), clip=b + (-6, -6, 6, 6), colorspace=fitz.csGRAY)
+        a = np.frombuffer(pix.samples, np.uint8).reshape(pix.h, pix.w) < 140
+        o = 6 * Z
+        inner = {'top': a[o:o + 2, o:-o], 'bottom': a[-o - 2:-o, o:-o], 'left': a[o:-o, o:o + 2], 'right': a[o:-o, -o - 2:-o]}
+        outer = {'top': a[o - 3:o - 1, o:-o], 'bottom': a[-o + 1:-o + 3, o:-o], 'left': a[o:-o, o - 3:o - 1], 'right': a[o:-o, -o + 1:-o + 3]}
+        cut = [k for k in inner if (inner[k] & outer[k]).sum() >= 3]
+        if cut:
+            out.append(('fig_cut', f"{f['id'].split('_')[-1]} {'/'.join(cut)}"))
+        lines = {}
+        for bl in pg.get_text('dict', clip=b)['blocks']:
+            for l in bl.get('lines', []):
+                t = ''.join(sp['text'] for sp in l['spans']).strip()
+                if t and fitz.Rect(l['bbox']).intersects(b):
+                    lines.setdefault(round(l['bbox'][1] / 3), []).append((l['bbox'][0], t))
+        for k, ps in lines.items():
+            bt = ' '.join(t for _, t in sorted(ps))
+            if re.match(r'^(\d{1,2}\s+)?\(([a-z]|[ivx]+)\)\s+\S', bt) or (len(bt) > 30 and len(re.findall(r'[A-Za-z]{3,}', bt)) >= 5):
+                out.append(('fig_text', f"{f['id'].split('_')[-1]}: {bt[:40]}")); break
+    return out
 
 
 def check_paper(pid):

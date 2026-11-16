@@ -243,3 +243,17 @@ belong to (a), not to (a)(iv): when every sub-part but the last has no mark, the
 - A paragraph the paper printed over several lines in a wider column is re-flowed as one in our Answer / Partial Marks
   column (words keep their font and size; only line breaks change). Lines with fractions, vectors or pictures keep their
   printed lines.
+
+## 27. Spacing and fonts (round 28, Dhruv)
+- A line with a fraction (or any stacked maths) has free space above and below it like its surroundings (3 pt more than
+  a normal line gap); a row has at least 4 pt above its highest ink. The other text of that line stays at the fraction's
+  middle, as printed, in every column.
+- Every word we make (Q labels, header, Total) has its real width in the font that draws it - never a guessed width
+  (text is stretched to its width). Q labels normal weight; header and Total bold; one family (the paper's: Times).
+- A cell picture never cuts through ink and never takes text that is not on its own lines.
+- Rows grow in step: when a long answer wraps in our narrower column, every column below that line moves with it, so
+  marks and partial marks stay beside their answer line.
+- A cell with a drawing (graph, Venn diagram, sketch, shaded table, ruled table) is its printed picture; text lines of the
+  cell outside the drawing stay our text. A broken text layer: the whole cell is the picture.
+- A row includes everything printed for it: drawings below its last text line and numerators / labels / table bands
+  printed above its label line.

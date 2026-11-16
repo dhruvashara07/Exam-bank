@@ -237,3 +237,100 @@ the old MS paths (2014 MJ 22 q2, 43 q9, 2019 ON 11/12 q8, 23 q3, 62 q5).
     was treated: PLAYBOOK 2c now asks to compare the LaTeX of every part with a stacked layout against the page.
 90. Ruled tables inside question text were read as one jumbled LaTeX line. -> `maths_tex`: >= 3 column rules and >= 3 row
     rules in a unit = 'table' -> printed picture (105 parts in M0). Printed layout (store units) was never affected.
+
+### Round 28 (25 of 34 wrong) - why the strict checks missed them: they tested CONTENT (every word present, nothing
+### overlapping), never APPEARANCE (font, width, spacing, cut pictures). maths_check.py now has appearance checks.
+91. Q labels, header and Total of the maths MS were given GUESSED widths (0.5-0.55 x size x letters) and the renderer
+    stretches text to its width: '5(a)' 22.6 pt for 17.7 pt -> a 'wider font'. -> `ms_maths.text_width` (real Times /
+    Helvetica metrics) for every word we make; labels normal weight, header and Total bold (Dhruv). Check: ms_stretch.
+92. Rows were cut at the top of their first text line and no space was added above tall maths: fractions touched the
+    row's top rule or the line above. -> `ms_maths._pushes`: 4 pt above a row's highest ink, 3 pt above and below a line
+    with stacked maths, applied across all columns at that height (labels and marks stay level with the fraction's
+    middle, as printed). Check: ms_edge (ink closer than 2 pt to a row rule).
+93. A MS row ended 6 pt under its last text line or image: vector drawings (Venn diagram, sketch) were not counted, the
+    bottom of the drawing was cut (2019 ON 42 q8). -> ms.py (maths): drawings in the row (not table rules / shading) count.
+94. 'Graph = 15 straight lines' (round 27) also counted root signs and brackets: a long answer full of square roots
+    became a half picture with loose words in the Marks column (2025 MJ 61 q4). -> a grid needs >= 3 long vertical and
+    >= 3 long horizontal rules; text on the same line as a drawing goes into the picture with it.
+95. A printed picture lying over its own heading ('Correct diagram', 2021 FM 32 q9) was copied with the half-hidden text
+    and a light grey band. -> the picture starts under the heading (heading = our text); near-white (> 232) = paper.
+96. Straight lines have EMPTY boxes in PyMuPDF and `Rect |= empty` does nothing: grids and axes never widened a diagram
+    crop (2014 MJ 11 q12: dots without their grid and 'Diagram 1-4'). -> line boxes get 0.3 pt each side. Check: fig_cut.
+97. A diagram crop took the part's question line ('(ii) Sketch the model ...', '(b) Shade P∩Q′', 'So N(6, 4) = ...'):
+    pieces of the line were each < 22 characters. -> whole printed lines are judged; a line starting with a part label,
+    or a line above / below the drawing and off to its side, is question text. Check: fig_text.
+98. A box of words (arc / circumference / ... 2014 MJ 11 q4) was cut as a picture. -> a cluster made only of the box's
+    edges with words inside stays text + rules.
+99. 2025 'AllAndNone' (one font holding regular, bold and italic Times) was read as SANS, and the one-font rule then put
+    the whole 2025 mark scheme in sans too; bold labels '(a)' came out regular (glyph_styles was tuned on physics sans).
+    -> maths: AllAndNone = serif; `store_text.maths_styles` reads bold / italic from Times letter widths + slant.
+    Check: q_font (any sans word in a maths question).
+100. 2014 nameless fonts: italic x, y, their drawn upright. -> `store_text.nameless_style` (regular / bold / italic /
+    bold italic by letter widths against the four Times fonts).
+101. Recurring-decimal dots are letters of equation fonts (MMEtc 'o', MT Extra code 5 and 'i'): written as the letter
+    'o' squeezed to 1.8 pt they drew a blob over the digit (2019 ON 61 q3). -> kept as drawn glyphs (exact shape and
+    place); EuclidMathTwo '-' = '≤'. Symbol sweep of all M0 equation fonts: no other unmapped letter left.
+102. Graphs in MS cells drawn from many short straight pieces with dashed grids were not seen as drawings (no curve
+    over 30 pt, no long grid lines): laid out as faint loose lines, axis numbers lost (2014 MJ 42 q2, 2019 ON 41 q11).
+    -> `_picture_cell`: axes (a long vertical line crossing a long horizontal one) = a graph = picture.
+103. A MS row starts 4 pt above its label, but maths prints things higher: a numerator ('144' over '233', 2014 MJ 52
+    q1(b)(ii)), a rotated table label ('All pos', 2021 FM 52 q3), a table's top band (2014 MJ 62 q1) went into the row
+    above. -> ms.py `_lift` (maths, both row finders): while a word or drawing crosses a row's top cut, the cut moves
+    up above it (not above the previous label's line).
+104. The round-27 re-flow joined separate answer lines ('... -1.241' + '[x =] 1.13 ...', 2019 ON 42 q12). -> only a line
+    that goes on with a sentence (starts with a lower-case word, not 'or' / 'and') is joined.
+105. The 'heading under a pasted picture' rule (pattern 95) cut the top edge of a DRAWN Venn box (2021 FM 42 q9). -> only
+    for pasted pictures (images); and the whole heading line is our text (only its first word was kept).
+106. Cell shading printed as many thin grey strips counted piece by piece (< 400 pt2 each): the table was laid out as
+    items and the strips landed in the wrong cells (2019 ON 51 q1(b)(ii)). -> shading area is added up.
+107. A long answer that wraps in our narrower column moved only its own column: the Marks / Partial Marks lines stayed
+    beside the wrong answer line (2025 MJ 61 q4). -> two passes: each column's growth by printed height, then every
+    column is laid out with the largest growth at each height.
+108. 2014 nameless SYMBOL subsets re-use letter codes: '<' printed as <=, '.' as >, 'Y' as <=, 'I' as >= (2014 MJ 43 q6,
+    q3(b)). Glyph names lie (the <= glyph is named 'less'). -> `store_text.symbol_subset`: a nameless font with a
+    character far off every Times width (a '.' as wide as a '>') is a symbol font; its one-letter spans are kept drawn.
+109. fit_crop (store) took a part's question line into a diagram crop again: maths part lines are indented under their
+    label, so they never counted as sentences ('(ii) Sketch ...', 2021 FM 62 q9). -> fit_crop(maths=True): a line
+    starting with a part label, or a full sentence, or a line above/below the drawing and off to its side, stays out.
+110. A diagram crop grew down through a ruled table under it (2019 ON 62 q3). -> crops stop at tables / boxes of words.
+111. A rounded box of text (curved corners, 2021 FM 62 q6) was cut as a picture. -> straight sides + small corner arcs
+    = a box (pattern 98).
+112. The next section's title ('MODELLING ...' 2021, 'Modelling: ...' 2025) went into the last MS row. -> it ends the
+    table like a 'Question' header.
+113. A printed line hanging right ('+ 8[corners]') kept its indent and crossed our column rule; two printed lines joined
+    by a tall root sign were wrapped piece by piece and drawn on top of each other (2025 MJ 21 q15). -> the line moves
+    left to end at our edge; joined lines are one block (scaled if wider than the column).
+114. Long text lines just under a drawing went into its cell picture (2025 MJ 61 q1: a table and its notes shrank into
+    one small picture). -> words longer than 6 letters join a picture only inside the drawing's own height.
+115. Symbols (x, <=, ÷, °, π) were drawn in sans in maths papers. -> maths: Liberation Serif when it has the symbol.
+116. Check false alarms fixed: ms_stretch only for words WE make (printed words keep printed widths); ms_piccut and
+    fig_cut ignore a straight table rule beside the edge.
+117. A ruled table 15 pt under a diagram joined the diagram's cluster (drawings within 20 pt), so the table test never saw
+    it alone and the crop took the table (2019 ON 62 q3). -> ruled tables (>= 3 rules with the same ends, vertical rules,
+    text in most rows - not a grid) are found BEFORE clustering and kept as text + rules.
+118. An empty answer box beside a formula was cut as a diagram (2025 MJ 61 q5). -> an empty box < 40 pt tall is no diagram.
+119. An equation line under a graph ('f(x) = (3x + 2)/...', 2019 ON 43 q12) was half inside the crop. -> a line with '='
+    fully above / below the drawing is question text (extract and fit_crop).
+120. Broken text layer (2014 MJ 62 p4): words outside the drawing's height were laid out as text OVER the cell picture,
+    and the picture's top was clamped to the graph (the formula above it was lost). -> broken page: the whole cell is
+    the picture, from its first ink.
+121. Graphs traced in short pieces with no long axis line (2014 MJ 42 q2, 43 q6). -> 20+ pieces touching no text, or 5+
+    slanted pieces longer than 8 pt, spread over 60 x 30 pt = a drawing (root-sign ticks are 2.7 x 5 pt, beside text).
+122. A row lifted over the table header ended at the header (it counted as 'a new table below'): the first row of a page
+    lost all its content (2025 MJ 61 q1(a)). -> a header above the row's label never ends the row; the first row's lift
+    stops at the table top.
+123. Main column rules drawn in 6 pt pieces: the lift climbed up them into the row above (2021 FM 52 q4(c)(ii) took
+    4(c)(i)'s lines). -> verticals at an x where the page's verticals add up to > 30 % of the page height are main
+    column rules and never lift a cut; an inner table's border does (2021 FM 52 q3(b): its top row came back).
+124. Pasted pictures (images) were not seen by the lift. -> images count.
+125. Notes under a table went into its picture because a root sign in them counted as part of the drawing. -> a cell
+    picture takes the main clusters of drawings (>= 30 % of the largest); small marks standing apart stay text.
+126. A rotated label ('All' left of 'pos', no text item) was cut at the picture's left edge. -> cell pictures grow
+    sideways while ink is cut, inside the cell.
+127. The header's grey shading pokes 2 pt into the first row of a page: its area made the cell a 'shaded' picture with
+    the text drawn twice (2019 ON 63 q6(b)(i)). -> anything lying wholly in a row's top / bottom 3 pt is the neighbour's.
+128. 2025 'AllAndNone' also re-uses letter codes for symbols ('+' printed as the cap sign, 'l' as a prime: 'P + Ql' for
+    P∩Q′, 2025 MJ 43 q16). -> a glyph that is not its character's usual glyph AND matches no Times width (> 0.02 em off)
+    is a symbol: kept drawn (digits and . , excluded).
+129. A drawn glyph's cut (its character box) holds the ink under it too, and one cut was reused for every same glyph
+    of the paper: a recurring dot cut over '0' drew '0' over '3' -> theta (2019 ON 61 q3 MS). -> maths: one cut per place.
