@@ -1,10 +1,17 @@
 {
  "paper": "0607_2019ON_42",
  "pipeline_version": "2.1",
- "checked_at": "2026-11-13T13:51Z",
+ "checked_at": "2026-11-16T09:51Z",
  "clean": true,
- "warnings": 0,
- "problems": [],
+ "warnings": 1,
+ "problems": [
+  {
+   "id": "0607_2019ON_42_q09",
+   "kind": "figure",
+   "detail": "0607_2019ON_42_q09_diagram1: crop cut: ink crosses the top edge",
+   "blocking": false
+  }
+ ],
  "flags": [],
  "text_score_min": 0.939,
  "text_scores": {
@@ -19,6 +26,6 @@
   "0607_2019ON_42_q09": 1.0,
   "0607_2019ON_42_q10": 0.985,
   "0607_2019ON_42_q11": 1.0,
-  "0607_2019ON_42_q12": 0.971
+  "0607_2019ON_42_q12": 0.97
  }
 }

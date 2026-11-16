@@ -257,3 +257,17 @@ belong to (a), not to (a)(iv): when every sub-part but the last has no mark, the
   cell outside the drawing stay our text. A broken text layer: the whole cell is the picture.
 - A row includes everything printed for it: drawings below its last text line and numerators / labels / table bands
   printed above its label line.
+
+## 28. Answer wider than Partial Marks (Dhruv, round 29 - replaces the equal widths of rule 24)
+- Answer : Partial Marks = 60 : 40 of the width left by Q and Marks (`ms_maths.ANSWER_SHARE`).
+- A table in a cell is its own lines, shading and text placed as ONE rigid block (never wrapped; scaled down only if
+  wider than the Answer column) - never a picture. Pictures only for graphs, sketches, Venn diagrams, pasted images.
+- No drawing in the Marks column (a printed total underline there is dropped). A cell picture never includes the
+  table's own row rule; a pasted screenshot's light grey bands (lighter than 230) are paper.
+
+## 29. Pictures and tables in cells (round 30)
+- Pasted picture: paper = white (> 252), a uniform light band, a smooth light area, or the light tone reaching its
+  edges. Grids (246-252), pale curves and inner shading stay.
+- A table's block also holds its rotated row labels and unruled rows printed right against it (same width).
+- Root signs of any size, fraction bars and brackets are text furniture, never a reason to make a cell a picture.
+- A heading over a graph is our text; the picture starts under it (never both).

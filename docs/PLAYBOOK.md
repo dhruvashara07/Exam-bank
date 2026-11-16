@@ -19,72 +19,47 @@ Wait: `gh api "repos/dhruvashara07/Exam-bank/actions/runs?per_page=3" -q '.workf
 `batch_log.py gh M1 <run id>`; `batch_log.py phase M1 build end`.
 If the Action fails or for a few papers: build locally `JOBS=4 python3 pipeline/run.py 0607/2024-MJ/41 ...`.
 
-## 1b. Why this order (Dhruv, round 27, 2026-11-13: 23 of 40 wrong, most of them simple)
+## 1b. Why this order (history; the steps are now ONE Claude round, section 2) (Dhruv, round 27, 2026-11-13: 23 of 40 wrong, most of them simple)
 Dhruv's round is for judgement, never for finding simple errors. Before a round EVERY question and EVERY mark-scheme
 table of the batch is checked by Claude: first by automatic checks that compare our output with the PDF, then by eye on
 full contact sheets (ours next to the original), not on a sample. Round 27 failed because pass 2 looked at ~15 tables
 and no check compared our mark-scheme rows or question rebuilds with the paper. The exact steps (2a-2f, 3a-3e) below are
 the minimum; record each in the batch log.
 
-## 2. Claude pass 1: check everything, fix the pipeline
-`batch_log.py phase M1 claude1 start`
-1. `python3 pipeline/checks.py <selectors>` -> 0 blocking. Every paper: marks found = total.
-2. Every flag yourself: look at the page and our piece (small crops, `pipeline/fig_grid.py` for figure crops: ALWAYS
-   compare with the page, ERROR_PATTERNS 56).
-3. Mark-scheme sweep: `SYL=0607 python3 pipeline/ms_sweep.py <sessions>` (no TOTAL, no bracketed totals, no codes in
-   Answer, no side notes in Answer).
-4. Maths text (pilot builds this): LaTeX check report - every flagged part looked at.
-5. Every problem is a PATTERN: fix the code (gated to maths when physics must not change), or ms_map.json for rows.
-   Record it: `batch_log.py error M1 --pattern <n> --kind new|repeat --what "..." --fix "..."`, and write the pattern
-   into ERROR_PATTERNS.md (and a rule into MS_TABLE_RULES.md if it is about layout) NOW, not at the end.
-6. Collect the fixes, then rebuild ONCE following the rebuild table (MATHS_PLAN.md 8).
-7. Golden: `python3 pipeline/golden.py check` = 0 changed cuts (fetch the golden PDFs first if missing:
-   `raw_store.py fetch` with the ids in tests/golden/). `git status`: nothing under 0625-physics.
-8. (maths, strict - round 27) run these on EVERY paper and get each to zero before pass 2:
-   2a `python3 pipeline/store.py verify <ids>` - every question piece redrawn and compared with the page (catches missing
-      dot lines, wrong symbols, lost words); every hit looked at.
-   2b `python3 pipeline/maths_check.py <ids>`: every printed word of a MS row is in our row once, inside its own column, nothing past
-      the column edges, no two pieces overlapping; marks per part = the printed marks (`ms_maths` check, to build).
-   2b+ appearance checks (round 28: 25 of 34 wrong passed the content checks): maths_check.py ms_stretch, ms_edge,
-      ms_piccut, q_font, fig_cut, fig_text must be 0 (or each hit looked at against the page and explained).
-   2b++ LOOK, ours beside the print: `python3 pipeline/ms_compare.py /tmp/x <qids>` (our mark scheme | the printed rows)
-      for every question with a hit, every question with a picture cell, table or graph in its mark scheme, and every
-      planned round item. Read each pair line by line: same words, same line breaks (or a re-flow of a sentence), marks
-      beside their line, nothing touching a rule, pictures whole. A round is built only when these sheets are clean.
-   2c figure check: no short label within 26 pt left outside a crop, 'NOT TO SCALE' inside the crop, no two crops of one
-      question overlapping or one inside another (round 27: '2 images'), no stray line of a neighbour inside a crop.
-   2d font check: one family per mark scheme (header, labels, answers, marks, partial marks), bold/italic kept.
-   2e LaTeX: `maths_tex` check ok or picture; look at every part that fell back.
-      KaTeX and the character check test form, not meaning (pattern 89): for every part with stacked maths (fraction
-      bars, brackets over several lines, tables) read the LaTeX against the page; anything nested or tabular that
-      is not read exactly goes to the picture (`maths_tex.Unsure`).
-   2f fix every hit as a pattern (ERROR_PATTERNS), rebuild once, run 2a-2e again.
-`batch_log.py phase M1 claude1 end`; push (`pipeline/push.sh`).
+## 2. Claude's ONE check round (Dhruv, round 29: one round, rules + checkboxes, side by side only when in doubt)
+`batch_log.py phase M1 claude start`
+1. RULES on every paper - one command writes the checklist (review/claude/<batch>_check.md) with a box per rule and
+   the doubtful questions: `python3 pipeline/claude_check.py M1 <paper ids>`. Before it:
+   - `python3 pipeline/checks.py <selectors>` -> 0 blocking; every paper: marks found = total.
+   - `SYL=0607 python3 pipeline/ms_sweep.py <sessions>` (no TOTAL / bracketed totals / codes / side notes in Answer).
+   - Rows by meaning: `SYL=0607 python3 pipeline/ms_align.py list <sessions>` empty (MS_TABLE_RULES 17, 20).
+   - `python3 pipeline/store.py verify <ids>` (question pieces redrawn vs the page).
+   claude_check runs maths_check (content: ms_words, ms_overflow, ms_overlap, ms_font, fig_overlap, not_to_scale;
+   appearance: ms_stretch, ms_edge, ms_piccut, q_font, fig_cut, fig_text) on all papers.
+2. DOUBTFUL = every question with a hit, every mark-scheme cell drawn as a picture or table block, + 8 random.
+   claude_check draws the side-by-side sheets for exactly these: out/claude_check/<batch>/ms_<n>.png (our mark scheme |
+   printed rows) and fig_<n>.png (each diagram crop drawn on its printed page). READ EVERY SHEET line by line: same
+   words, same line breaks (or a re-flowed sentence), marks beside their line, nothing touching a rule, pictures whole,
+   no stray line, no question line / number / table inside a diagram crop, tables as lines + text.
+   In doubt about a detail (thin rules, shading, faint grids) zoom: `python3 pipeline/ms_compare.py --zoom /tmp/z <qid>`
+   (one question at 2x, ours | printed) and crop the part. Look for: lines missing in one row only, grids/curves
+   faded, a heading drawn twice, labels moved out of a table, an axis missing, an empty fallback layout.
+3. Tick each box. A doubtful item that matches the print is PASSED with its reason written in the checklist (Dhruv:
+   'pass it, log the reason'). Anything else is a PATTERN: fix the code (gated to maths), `batch_log.py error`,
+   ERROR_PATTERNS / MS_TABLE_RULES now; then search ALL papers for the same class (a repeat = the fix was too narrow).
+4. Collect fixes, rebuild once (MATHS_PLAN.md 8), run claude_check again: the new sheets only for what changed.
+5. LaTeX (maths_tex): check ok or picture; stacked maths (fractions, brackets, tables) read against the page - KaTeX and
+   the character check test form, not meaning (pattern 89).
+6. Golden: `python3 pipeline/golden.py check` = 0 changed cuts; `git status`: nothing under 0625-physics. Push.
+7. Only when every box is ticked: the review round (step 3 below). `batch_log.py phase M1 claude end`.
+Loops: if one class needs a third rebuild, stop and write down what is not understood (ERROR_PATTERNS 'open') rather
+than burning rebuilds; long runs go in the background with timeouts high enough to finish (60 papers ~ 35 min).
 
-## 3. Claude pass 2: re-check, rows by meaning, prepare the round
-`batch_log.py phase M1 claude2 start`
-1. checks.py again (0 blocking); everything changed by pass 1 looked at again (small grids).
-2. Rows by meaning (MS_TABLE_RULES 17): `SYL=0607 python3 pipeline/ms_align.py list <sessions>` must be empty;
-   for each listed question `ms_align.py dump <qid>` (text, cheap), decide each MS line's part, write the map in
-   pipeline/ms_map.json, rebuild those papers, list again. `ms_align.py verify` must print 0. When a line cannot be
-   given ONE part without guessing keep Cambridge's group (MS_TABLE_RULES 20).
-3. Look at our tables as a student: `pipeline/ms_grid.py` (order, no part twice, splits, gaps, marks, fonts).
-3a. (maths) contact sheets of EVERY question, not samples: (1) our mark-scheme table next to the printed rows,
-   (2) every figure crop next to its page region, (3) every question rebuild next to the page, at 2x resolution.
-   Look at all of them; every problem -> pattern -> fix -> rebuild -> look again at the changed ones.
-3b. Logic check (Dhruv 2026-11-12): read each question with its mark-scheme rows as a teacher would. Does every
-   answer belong to the part it sits under (values, units, what the part asks)? Do the marks add up? Is the maths
-   text (LaTeX) the same maths as the page? When something looks doubtful, work the question out yourself to be
-   sure (only then, not every question). Wrong -> fix the pattern in the pipeline; still unsure -> put it in the round
-   with a note.
-3c. Only when 2a-2e are zero and every sheet in 3a was looked at: the review round (sharp images: 2x).
-4. Review round: `python3 pipeline/review_round.py new <n> <ids> --sample 1 --max 90 --title ... --intro ...`
-   (flagged items + a few random ones per paper type; aim: short); page folder `out/review/page/`
-   (`review_page.py add <n> <title>`); publish with publish_files to the review page (slug
-   b3c8a710-c92b-4a33-95b2-f7eba1bc0031, mode replace). Same link every time:
-   https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e
-5. `batch_log.py count M1 papers=.. questions=.. flags=.. round_items=..`; `phase M1 claude2 end`;
-   `phase M1 review start`; push; tell Dhruv (2 lines + the link).
+## 3. The review round
+1. `python3 pipeline/review_round.py new <n> <ids> --sample 1 --max 40 --recheck "<wrong items>" --title ... --intro ...`
+   then `python3 pipeline/review_page.py add <n> "<title>"`; publish out/review/page to the SAME review page
+   (list_files first, publish_files replace). Images: question and stored figures at 192 dpi (same scale).
+2. `batch_log.py count M1 papers=.. questions=.. flags=.. round_items=..`; tell Dhruv in 2 lines.
 
 ## 4. Dhruv's round
 He answers on the page (collection `feedback_r<n>`, read with db_list). When he says done:

@@ -449,3 +449,19 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - Analysis: slowest phase = fix again (the classes were found one layer at a time: each fix uncovered the next fault on
   the same sheet). What to change next: run maths_check + ms_compare on every paper of a batch in pass 1, not after
   Dhruv's round; keep the 'ours beside print' sheet as the gate.
+
+## 2026-11-16 - maths pilot M0, third chat (rounds 28-29 fixed, ONE Claude check round, round 30 published)
+- Dhruv (round 29, 21 of 39 wrong; fractions now good): stored figures under the question looked shrunk; make Claude's
+  check ONE round (rules + checkboxes, side by side with the original only in doubt), improve checking; wants the
+  ponytail plugin (Claude Code CLI only - he installs it himself; third-party, not reviewed). Decisions (asked): figures
+  at the question's size; Answer column wider than Partial Marks (60:40); doubtful item matching the print = pass with
+  the reason logged.
+- Done: round-29 classes 130-138; `claude_check.py` (checklist + sheets), `ms_compare.py --zoom/--figs`, checks ms_mode
+  and q_rule, ms_words dedup. The one check round read 66 doubtful + 8 random side by side and found 8 classes Dhruv
+  would have marked wrong (139-147: grids erased in pasted graphs, table verticals dropped, heading twice over drawn
+  graphs, a whole MS on the fallback layout, a big root sign as a picture, rotated table labels, a lost y-axis, dashed
+  rules). Golden 0. Round 30: 40 items.
+- Analysis: slowest = fixing picture/threshold rules one by one; repeats came from fixes too narrow for the class (136:
+  one threshold for all pasted images; 135: heading rule only for pasted images). Rule now in PLAYBOOK 2.3: after every
+  fix search ALL papers for the class, and zoom on doubtful details. A fallback layout escaped every check because the
+  checks only ran on the maths layout - checks must fail loudly when their precondition is missing (ms_mode).

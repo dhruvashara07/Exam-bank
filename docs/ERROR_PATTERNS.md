@@ -334,3 +334,53 @@ the old MS paths (2014 MJ 22 q2, 43 q9, 2019 ON 11/12 q8, 23 q3, 62 q5).
     is a symbol: kept drawn (digits and . , excluded).
 129. A drawn glyph's cut (its character box) holds the ink under it too, and one cut was reused for every same glyph
     of the paper: a recurring dot cut over '0' drew '0' over '3' -> theta (2019 ON 61 q3 MS). -> maths: one cut per place.
+
+### Round 29 (21 of 39 wrong; fractions now right)
+130. 2014 prints a full-width rule between questions: kept at the end of every question. -> store (maths): a rule
+    > 85 % of the width in the last 10 pt of a block is dropped.
+131. A short underline in the Marks column (printed total line) drawn as a stray line. -> the Marks column holds no
+    drawing (MS_TABLE_RULES 28).
+132. The question number '12' went into a diagram crop through the sideways-label passes (they skip _label_like). ->
+    a 1-2 digit line at the left margin (x < 62) is never a label (extract and fit_crop).
+133. 2014 MJ 22 q2: grids drawn in the answer have tall lines too, the column finder found 5 'rules' and gave up -> old
+    layout with stray '}' and no grids. -> when not 2-3, keep only the full-height rules.
+134. Tables in MS cells were pictures (Dhruv: 'lines and box and text, as in physics'); laid out line by line they fell
+    apart (shading strips, dotted rows). -> `_has_table` (>= 2 row rules running most of the width): every item inside
+    the table's rules is one rigid block (`_emit_block`); boxes around numbers are no table.
+135. A pasted graph covering its own heading ('Correct sketch' drawn twice, 2021 FM 62 q9(d)(ii)). -> a text line in the
+    top 30 % of a pasted picture is the heading: our text, the picture starts under it.
+136. A light grey band of a pasted screenshot and the cell's row rule were kept in the picture (2021 FM 32 q9). ->
+    pasted pictures: lighter than 230 = paper; the picture region stops at the row / cell rule (never pixel-stripping:
+    that took the Venn box too).
+137. Review page: stored figures under the question were drawn at 96 dpi beside a 192 dpi question ('shrunk'). ->
+    review_assets.fig_img at the question's scale.
+138. (process) Two Claude passes doubled the time without catching appearance faults. -> ONE round: rules on all papers
+    (claude_check.py checklist) + side by side only for doubtful items, each passed with a reason or fixed as a class.
+
+### Round 30 - found in Claude's ONE check round (before Dhruv's round)
+139. Pasted screenshots: the global 'lighter than 229 = paper' cut (136) erased graph grids and pale curves (2014 MJ 31
+    q15, 33 q15). -> pasted pictures keep everything darker than 252; a light tone is paper only when it is a BAND
+    (>= 10 rows/cols of one tone), a SMOOTH area (5x5 window spread <= 4) or the background tone that reaches the
+    picture's edges (`ms_maths._erase_bands`). Shading inside a Venn box never reaches the edges (2025 MJ 11 q16).
+140. Table lines in a cell: the rule 'thin vertical taller than half the row = a column rule' removed every vertical of a
+    tall table row (2014 MJ 62 q3). -> >= 3 thin verticals with the same span inside the Answer column are the table's
+    own (`grid_v`); rules are drawn over the shading.
+141. A heading above a DRAWN graph ('Correct sketch') went half into the picture and half into our text -> drawn twice
+    (2019 ON 41 q11, 43 q3, 43 q12, 2025 MJ 31 q18). -> a text line (> 8 chars) ending above the drawing's top, or our
+    text over the top 30 % of it, is the heading: our text, the picture starts under it.
+142. Column finder summed the lengths of a graph's grid line drawn 3 times over itself: it out-measured the table rules
+    and the whole mark scheme fell back to the general layout (2014 MJ 43 q9) - no check looked, as every maths check
+    needed the maths layout. -> covered height = UNION of the pieces; new check `ms_mode` (any fallback is a hit).
+143. A tall nested root sign (sqrt of a fraction, 33 pt) counted as a 'sketch' -> Partial Marks cell became a cut
+    picture (2025 MJ 21 q15). -> `_root_sign`: a bar along the top of the path is a root, never a sketch.
+144. Rotated row labels ('1 neg') boxed as level text: split from their table, '3 neg' under it (2021 FM 52 q3). ->
+    rotated text gets its real (vertical) box; rotated labels beside a table and whole unruled table rows right
+    against it go into the table's rigid block.
+145. The y-axis of a sketch standing near the column rule taken for a column rule (2025 MJ 61 q5(a)(v)). -> a vertical
+    in the Answer column met by a horizontal axis inside its height is an axis.
+146. A rule printed as 12 pt dashes (2014 MJ 62 p4): each dash too short for the row-rule tests -> stray lines and
+    partial-marks pictures. -> pieces on one line are judged by the whole run.
+147. (check) ms_words counted text printed twice on top of itself twice (tick labels of 2014 graphs): false 'missing'.
+    -> the check dedups by position, like the layout.
+148. (open) 2014 MJ 62: marks found 39 of 40 - q6(f)(ii) [1] is not read (QP pages 9-10 have no text for the mark
+    brackets). Paper not approved until fixed.

@@ -4,7 +4,7 @@ Minutes are wall clock. "Ours" = build + Claude 1 + Claude 2 + fix (Dhruv's revi
 
 | Batch | Sessions | Papers | Build | GitHub | Claude 1 | Claude 2 | Fix | Ours | Round items | New errors | Repeats | Tokens |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 46.7 | 51.4 | 2766.0 | 2873.6 | 40 | 40 | 4 | n/a |
+| M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 66.6 | 51.4 | 2766.0 | 2893.5 | 40 | 47 | 5 | n/a |
 
 ## Errors per batch (new = first time, repeat = a pattern seen before: the doc or the fix failed)
 
@@ -53,6 +53,14 @@ Minutes are wall clock. "Ours" = build + Claude 1 + Claude 2 + fix (Dhruv's revi
 - [repeat] pattern 93: repeat of a round-27 class: the round-27 fix covered the reported item, not the class → class fix + appearance check (ERROR_PATTERNS 93) (found by dhruv)
 - [repeat] pattern 97: repeat of a round-27 class: the round-27 fix covered the reported item, not the class → class fix + appearance check (ERROR_PATTERNS 97) (found by dhruv)
 - [repeat] pattern 99: repeat of a round-27 class: the round-27 fix covered the reported item, not the class → class fix + appearance check (ERROR_PATTERNS 99) (found by dhruv)
+- [new] pattern 139: pasted grid/pale curves erased by global 229 cut → band / smooth / edge-tone paper (found by claude)
+- [new] pattern 140: table verticals dropped as column rules (2014 62 q3) → grid_v (found by claude)
+- [repeat] pattern 141: heading over drawn graph drawn twice → heading rule for drawn graphs (found by claude)
+- [new] pattern 142: column finder summed grid pieces; 43 q9 fell back unchecked → union coverage + ms_mode check (found by claude)
+- [new] pattern 143: tall root sign made a cut picture → _root_sign (found by claude)
+- [new] pattern 144: rotated table labels misplaced → vertical boxes + block takes labels/rows (found by claude)
+- [new] pattern 145: sketch y-axis dropped as column rule → axis_v (found by claude)
+- [new] pattern 146: dashed row rules on 2014 62 p4 → judge runs (found by claude)
 
 ## Repeats to act on
 
@@ -60,3 +68,4 @@ Minutes are wall clock. "Ours" = build + Claude 1 + Claude 2 + fix (Dhruv's revi
 - M0: pattern 93 came back: repeat of a round-27 class: the round-27 fix covered the reported item, not the class
 - M0: pattern 97 came back: repeat of a round-27 class: the round-27 fix covered the reported item, not the class
 - M0: pattern 99 came back: repeat of a round-27 class: the round-27 fix covered the reported item, not the class
+- M0: pattern 141 came back: heading over drawn graph drawn twice

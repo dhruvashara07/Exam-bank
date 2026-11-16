@@ -47,8 +47,12 @@
    },
    {
     "start": "2026-11-16T08:20:00+00:00",
-    "end": null,
+    "end": "2026-11-16T08:54:04+00:00",
     "note": "round 29 (re-check 2)"
+   },
+   {
+    "start": "2026-11-16T09:55:27+00:00",
+    "end": null
    }
   ],
   "fix": [
@@ -61,6 +65,18 @@
     "start": "2026-11-14T13:12:00+00:00",
     "end": "2026-11-16T08:20:00+00:00",
     "note": "round 28: 25 of 34 wrong -> ERROR_PATTERNS 91-129, appearance checks (maths_check), ms_compare.py, 6 full rebuilds; round 29 published (40 items). Chat paused 14-16 Nov (time not all work)."
+   },
+   {
+    "start": "2026-11-16T09:00:00+00:00",
+    "end": null,
+    "note": "round 29: 21 of 39 wrong"
+   }
+  ],
+  "claude": [
+   {
+    "start": "2026-11-16T09:35:34+00:00",
+    "end": "2026-11-16T09:55:27+00:00",
+    "note": "one check round: 66 doubtful + 8 random sides read; 8 classes fixed; golden 0"
    }
   ]
  },
@@ -80,7 +96,7 @@
   "questions": 743,
   "flags": 11,
   "round_items": 40,
-  "wrong_items": 25
+  "wrong_items": 21
  },
  "errors": [
   {
@@ -434,6 +450,70 @@
    "fix": "class fix + appearance check (ERROR_PATTERNS 99)",
    "found_by": "dhruv",
    "at": "2026-11-14T14:24:00+00:00"
+  },
+  {
+   "pattern": "139",
+   "kind": "new",
+   "what": "pasted grid/pale curves erased by global 229 cut",
+   "fix": "band / smooth / edge-tone paper",
+   "found_by": "claude",
+   "at": "2026-11-16T09:55:26+00:00"
+  },
+  {
+   "pattern": "140",
+   "kind": "new",
+   "what": "table verticals dropped as column rules (2014 62 q3)",
+   "fix": "grid_v",
+   "found_by": "claude",
+   "at": "2026-11-16T09:55:26+00:00"
+  },
+  {
+   "pattern": "141",
+   "kind": "repeat",
+   "what": "heading over drawn graph drawn twice",
+   "fix": "heading rule for drawn graphs",
+   "found_by": "claude",
+   "at": "2026-11-16T09:55:26+00:00"
+  },
+  {
+   "pattern": "142",
+   "kind": "new",
+   "what": "column finder summed grid pieces; 43 q9 fell back unchecked",
+   "fix": "union coverage + ms_mode check",
+   "found_by": "claude",
+   "at": "2026-11-16T09:55:26+00:00"
+  },
+  {
+   "pattern": "143",
+   "kind": "new",
+   "what": "tall root sign made a cut picture",
+   "fix": "_root_sign",
+   "found_by": "claude",
+   "at": "2026-11-16T09:55:26+00:00"
+  },
+  {
+   "pattern": "144",
+   "kind": "new",
+   "what": "rotated table labels misplaced",
+   "fix": "vertical boxes + block takes labels/rows",
+   "found_by": "claude",
+   "at": "2026-11-16T09:55:26+00:00"
+  },
+  {
+   "pattern": "145",
+   "kind": "new",
+   "what": "sketch y-axis dropped as column rule",
+   "fix": "axis_v",
+   "found_by": "claude",
+   "at": "2026-11-16T09:55:27+00:00"
+  },
+  {
+   "pattern": "146",
+   "kind": "new",
+   "what": "dashed row rules on 2014 62 p4",
+   "fix": "judge runs",
+   "found_by": "claude",
+   "at": "2026-11-16T09:55:27+00:00"
   }
  ],
  "tokens": [

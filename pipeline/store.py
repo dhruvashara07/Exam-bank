@@ -482,6 +482,8 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
             near = ov > 0.15 or (ov == 0 and 0 <= gap < 14 and l.x0 >= b.x0 - 10 and l.x1 <= b.x1 + 10)
             half = ov > 0.15
             label_ok = (not sentence(lw, l)) if half else not bad_label(lw, l)
+            if maths and re.fullmatch(r'\d{1,2}', ' '.join(w[4] for w in lw).strip()) and l.x0 < 62:
+                label_ok = False      # maths: the question number at the margin is never in a diagram (round 29)
             lt_ = ' '.join(w[4] for w in lw)
             if maths and label_ok and D is not None and not b0.contains(l):
                 for o in lines:                       # a piece of a stacked formula whose '=' line is outside the drawing
@@ -850,6 +852,16 @@ def build(pid):
                 print(f"  {q['id']}: portrait mark scheme failed: {e}", file=sys.stderr)
         if MATHS_TEXT:                            # maths: LaTeX content per part (+ check), the section intro it needs
             import maths_tex
+            for p_ in rec.get('parts', []):       # 2014: the full-width rule printed between questions is no content
+                for u_ in p_.get('layout', []):   # (round 29: 'no need for horizontal line at the end of que')
+                    keep = []
+                    for l_ in u_.get('lines', []):
+                        from ms_maths import _bbox
+                        bb_ = _bbox(l_['d'])
+                        if bb_ and bb_[3] - bb_[1] < 1.6 and bb_[2] - bb_[0] > 0.85 * u_['w'] and bb_[1] > u_['h'] - 10:
+                            continue
+                        keep.append(l_)
+                    u_['lines'] = keep
             maths_tex.build_record(rec)
             sec = [k for k, it in enumerate(meta.get('intros', [])) if it['before'] <= q['number']]
             if sec:
@@ -1411,6 +1423,7 @@ def review_svgs(qid, tmp):
     if ms:
         out['ms'] = stacked_svg(ms, store, figs, os.path.join(tmp, qid + '_ms.svg'), gap=0 if q.get('ms_p') else 6)
     out['figs'] = [os.path.join(store, 'figures', f['file']) for f in q['figures']]
+    out['fig_recs'] = q['figures']
     out['fig_ids'] = [{'id': f['id'], 'caption': f.get('caption')} for f in q['figures']]   # what is stored (the review legend)
     out['options'] = q.get('options', [])
     return out

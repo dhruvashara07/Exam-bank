@@ -339,6 +339,8 @@ def _label_like(t, tb, box, text):
         return False
     if re.fullmatch(r'NOT\s+TO|SCALE|NOT TO SCALE', s):
         return True
+    if re.fullmatch(r'\d{1,2}', s) and tb.x0 < 62:
+        return False                                 # the question number at the margin (2014 MJ 11 q12, round 29)
     if _sentence(t, text):
         return False                                 # a piece of a sentence ('Sketch the model for', round 27)
     if not (len(s) <= 22 or (len(s) <= 40 and not s.endswith('.') and tb.intersects(box + (-4, -2, 4, 2)))
@@ -532,7 +534,7 @@ def diagrams(doc, seg, lines, captioned):
         for _ in range(2):                              # axis titles printed sideways, tick labels and point names a little further out
             for lt, lb in dl:
                 if lt and lb.intersects(box + (-26, -16, 26, 16)) and not lb.intersects(box) and len(lt) <= 22 and y0s - 1 <= lb.y0 \
-                        and lb.y1 <= y1s + 1 and not DOTS.search(lt) and not MARK.fullmatch(lt) and not re.match(r'^\(?[a-z]\)|^\([ivx]+\)', lt) \
+                        and lb.y1 <= y1s + 1 and not (re.fullmatch(r'\d{1,2}', lt) and lb.x0 < 62) and not DOTS.search(lt) and not MARK.fullmatch(lt) and not (re.fullmatch(r'\d{1,2}', lt) and lb.x0 < 62) and not re.match(r'^\(?[a-z]\)|^\([ivx]+\)', lt) \
                         and not any(abs(ob.y0 - lb.y0) < 2 and len(ot) > 22 for ot, ob in dl):
                     box |= lb
         if any((box & tk).get_area() > 0.3 * box.get_area() for tk in taken):
@@ -549,7 +551,7 @@ def diagrams(doc, seg, lines, captioned):
                     box |= tb
             for lt, lb in dl:
                 if lt and lb.intersects(box + (-26, -16, 26, 16)) and len(lt) <= 22 and y0s - 1 <= lb.y0 and lb.y1 <= y1s + 1 \
-                        and not DOTS.search(lt) and not MARK.fullmatch(lt) and not re.match(r'^\(?[a-z]\)|^\([ivx]+\)', lt) \
+                        and not DOTS.search(lt) and not MARK.fullmatch(lt) and not (re.fullmatch(r'\d{1,2}', lt) and lb.x0 < 62) and not re.match(r'^\(?[a-z]\)|^\([ivx]+\)', lt) \
                         and not any(abs(ob.y0 - lb.y0) < 2 and len(ot) > 22 for ot, ob in dl):
                     box |= lb
         if box != grown:

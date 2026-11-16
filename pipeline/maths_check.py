@@ -3,6 +3,8 @@
     python3 pipeline/maths_check.py <paper ids...>        # prints every hit, writes review/claude/<pid>.maths_check.json
 
 Checks (each hit is a problem to fix as a pattern, or to look at on the contact sheet):
+  q_rule      no full-width separator rule at the bottom of a question part
+  ms_mode     the mark scheme was laid out by ms_maths (any fallback is a hit)
   ms_words    every printed word of the question's mark-scheme rows is in our table once (missing / extra words)
   ms_overflow a word of our table that runs past its column edge or the table edge
   ms_overlap  two words of one row drawn on top of each other
@@ -33,6 +35,9 @@ def words(ts):
 def check_question(rec):
     hits = []
     mp = rec.get('ms_p')
+    if mp and 'maths' not in (mp.get('modes') or {}):
+        hits.append(('ms_mode', f"mark scheme not laid out by ms_maths: {list((mp.get('modes') or {}))}"))   # (round 30: a
+        # fallback layout of 2014 MJ 43 q9 was never checked, because every check below needs the maths layout)
     if mp and 'maths' in (mp.get('modes') or {}):
         src = collections.Counter()
         seen = set()
@@ -43,7 +48,12 @@ def check_question(rec):
                     if k in seen:
                         continue
                     seen.add(k)
-                    src.update(w for w in words(u['text']) if not LABEL.match(w))
+                    pos = set()             # text printed twice on top of itself counts once (as in ms_maths._items)
+                    for t in u['text']:
+                        w = t.get('t', '').strip()
+                        key = (w, round(t.get('x', 0)), round(t.get('y', 0)))
+                        if w and not LABEL.match(w) and key not in pos:
+                            pos.add(key); src[w] += 1
         ours = collections.Counter()
         rows = mp['rows'][1:]
         if rows and any(t['t'] == 'Total' for t in rows[-1]['text']):
@@ -115,6 +125,13 @@ def check_question(rec):
                 and not (len(t['t'].strip()) == 1 and not t['t'].strip().isalnum()))   # (a bullet / sign printed in Arial)
     if nsans:
         hits.append(('q_font', f'{nsans} words in sans'))
+    from ms_maths import _bbox as _bb               # q_rule: the full-width rule printed between 2014 questions kept as
+    for p_ in rec.get('parts', []):                 # content (round 29, ERROR_PATTERNS 130)
+        for u_ in p_.get('layout', []):
+            for l_ in u_.get('lines', []):
+                b_ = _bb(l_['d'])
+                if b_ and b_[3] - b_[1] < 1.6 and b_[2] - b_[0] > 0.85 * u_['w'] and b_[1] > u_['h'] - 10:
+                    hits.append(('q_rule', f"part {p_.get('label')}: full-width rule at the bottom"))
     hits += fig_checks(rec)
     for p in rec['parts']:
         txt = ' '.join(t['t'] for u in p['layout'] for t in u['text'])

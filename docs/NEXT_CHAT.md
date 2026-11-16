@@ -1,13 +1,22 @@
-# Starting a new chat (Dhruv, updated 2026-11-12)
+# Starting a new chat (Dhruv, updated 2026-11-16)
 
 One batch per chat (docs/MATHS_PLAN.md section 5). Open a new chat, paste the prompt, nothing else needed.
 If a batch is not finished when the chat gets long, the chat writes "continue <batch>" here and you paste that.
 
-## Prompt to paste now: finish maths pilot M0 (after round 28 is answered)
-> Exam-bank (repo dhruvashara07/Exam-bank). Follow docs/START_HERE.md exactly: git pull, then read the files it lists.
-> Task: finish maths pilot M0 from PROGRESS.md NEXT line: read round 29 answers (feedback_r29), fix every wrong item as a
-> pattern with the strict checks (PLAYBOOK 2a-2f) on all 60 papers, close the round, approve, update every doc and the
-> batch-cycle skill, push. Keep the batch log going (same record M0). Ask me with options when needed. Keep messages short.
+## THE prompt (works for every chat from now on - paste it as it is; updated 2026-11-16)
+> Exam-bank (repo dhruvashara07/Exam-bank). Follow docs/START_HERE.md exactly: git pull, then read every file it lists
+> (PROGRESS.md NEXT line first). Do the task the NEXT line names with the batch log (docs/PLAYBOOK.md): if a review
+> round is answered, read its feedback, fix every wrong item as a CLASS (search all papers of the batch), then ONE
+> Claude check round (`pipeline/claude_check.py`: rules on every paper + side-by-side sheets for every doubtful item,
+> each passed with its reason or fixed), golden 0 and nothing changed under 0625-physics, then the next review round on
+> the same review page, or approve.py when the round is clean; if nothing is pending start the next batch of
+> docs/MATHS_PLAN.md. Update every doc the playbook names and the batch-cycle skill for every new pattern without being
+> asked, push with pipeline/push.sh, write the NEXT line. Ask me with options only for real decisions. Keep messages short.
+
+Why one prompt: the state lives in the repo (PROGRESS NEXT line, BATCH_LOG, review/rounds, ERROR_PATTERNS), not in the
+chat. If the repo layout or the rules change, change START_HERE / PLAYBOOK - never this prompt.
+
+## (done 2026-11-16, third M0 chat) rounds 28-29 fixed, one Claude check round, round 30 published
 
 ## (done 2026-11-14, second M0 chat) continue maths pilot M0: round 27 fixed, round 28 published
 

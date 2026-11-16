@@ -3,8 +3,15 @@
 Read this first in every session. Update it before ending a session.
 
 ## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md
-- NEXT: Dhruv reviews round 29 (re-check of the 25 round-28 wrong items + new samples). Then: feedback_r29, fix every
-  wrong item as a pattern (maths_check + ms_compare on all 60 first), close rounds 28-29, approve.py, docs, push; then M1.
+- NEXT: Dhruv reviews round 30 (21 round-29 wrong items re-checked + 8 found in Claude's check round + samples; page
+  https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e). Then: feedback_r30 -> `review_round.py close 28/29/30`, fix any
+  wrong item as a CLASS, ONE Claude check round (PLAYBOOK 2, `claude_check.py`), approve.py for clean papers (not 2014
+  MJ 62 until ERROR_PATTERNS 148), docs, push; then M1.
+- 2026-11-16: round 29 fixed (ERROR_PATTERNS 130-138) and Claude's ONE check round introduced (Dhruv: one round, rules +
+  checkboxes, side by side only in doubt; `pipeline/claude_check.py`, checklist review/claude/M0_check.md, zoom sheets
+  `ms_compare.py --zoom`, new checks ms_mode and q_rule). That round found 8 more classes (139-147) and fixed them before
+  Dhruv's round. Answer column now 60 % / Partial Marks 40 % of the free width (Dhruv; MS_TABLE_RULES 28). Review page:
+  stored figures at the question's scale. checks 59/60 (2014 MJ 62 marks 39/40, pattern 148). Golden 0.
 - 2026-11-14 (evening): round 28 (25 of 34 wrong) fixed as ERROR_PATTERNS 91-121; new appearance checks (maths_check)
   and pipeline/ms_compare.py; PLAYBOOK 2b+/2b++. Open: 2014 MJ 62 p4 (broken text layer: (g)(i)/(ii) one row, stray
   rule pieces in its cell pictures), a wrap inside a long bracket (2014 MJ 62 q6(g)(v)), wide inner tables shrink to 60 %.

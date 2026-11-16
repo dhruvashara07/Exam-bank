@@ -50,15 +50,15 @@ def printed_rows(rec, dpi=72):
     return out
 
 
-def pair(qid, width=900):
+def pair(qid, width=900, dpi=72):
     ses = qid.split('_')[1]
     rec = json.load(open(os.path.join(paths.store_dir(qid.rsplit('_', 1)[0]), qid.rsplit('_', 1)[1] + '.json')))
     if 'parts' not in rec and rec.get('same_as'):    # stored once for the session (store.py dupes)
         qid = rec['same_as'][0] if isinstance(rec['same_as'], list) else rec['same_as']
         rec = json.load(open(os.path.join(paths.store_dir(qid.rsplit('_', 1)[0]), qid.rsplit('_', 1)[1] + '.json')))
     sv = store.review_svgs(qid, '/tmp/rtmp')
-    ours = ra.svg_img(sv['ms'], 72) if sv.get('ms') else None
-    pr = printed_rows(rec)
+    ours = ra.svg_img(sv['ms'], dpi) if sv.get('ms') else None
+    pr = printed_rows(rec, dpi)
     parts = [x for x in (ours, pr) if x is not None]
     if not parts:
         return None
@@ -74,7 +74,50 @@ def pair(qid, width=900):
     return c
 
 
+def fig_sheet(out, items):
+    """Each diagram crop (red) drawn on its printed page, 3 per row: items 'qid:diagram1'."""
+    ims = []
+    for it in items:
+        qid, suf = it.split(':')
+        pid = qid.rsplit('_', 1)[0]
+        rec = json.load(open(os.path.join(paths.store_dir(pid), qid.rsplit('_', 1)[1] + '.json')))
+        fs = [f for f in rec.get('figures', []) if f['id'].endswith(suf)]
+        if not fs:
+            continue
+        src = fs[0]['source']
+        syl, ses, pv = qid.split('_')[0], qid.split('_')[1], qid.split('_')[2]
+        doc = fitz.open(os.path.join(ROOT, 'raw', syl, ses[:4] + '-' + ses[4:], f'qp_{pv}.pdf'))
+        pg = doc[src['page'] - 1]
+        b = fitz.Rect(src['box'])
+        clip = (b + (-40, -40, 40, 40)) & pg.rect
+        pix = pg.get_pixmap(dpi=90, clip=clip)
+        im = Image.frombytes('RGB', (pix.width, pix.height), pix.samples)
+        k = 90 / 72
+        d = ImageDraw.Draw(im)
+        d.rectangle([(b.x0 - clip.x0) * k, (b.y0 - clip.y0) * k, (b.x1 - clip.x0) * k, (b.y1 - clip.y0) * k], outline=(255, 0, 0), width=2)
+        d.text((3, 3), it, fill=(0, 0, 255))
+        ims.append(im)
+    for n in range(0, len(ims), 6):
+        g = ims[n:n + 6]
+        W, H = max(i.width for i in g), max(i.height for i in g)
+        sheet = Image.new('RGB', (3 * W, ((len(g) + 2) // 3) * H), 'white')
+        for i, im in enumerate(g):
+            sheet.paste(im, ((i % 3) * W, (i // 3) * H))
+        sheet.thumbnail((1800, 2400))
+        sheet.save(f'{out}_{n // 6}.png')
+        print(f'{out}_{n // 6}.png', sheet.size)
+
+
 if __name__ == '__main__':
+    if sys.argv[1] == '--figs':
+        fig_sheet(sys.argv[2], sys.argv[3:])
+        sys.exit()
+    ZOOM = sys.argv[1] == '--zoom'      # one question per image at 2x: for a doubtful detail (thin rules, shading)
+    if ZOOM:
+        for q in sys.argv[3:]:
+            im = pair(q, 1800, 144)
+            im.save(f'{sys.argv[2]}_{q}.png'); print(f'{sys.argv[2]}_{q}.png', im.size)
+        sys.exit()
     out, ids = sys.argv[1], sys.argv[2:]
     ims = [i for i in (pair(q) for q in ids) if i is not None]
     for n in range(0, len(ims), 4):

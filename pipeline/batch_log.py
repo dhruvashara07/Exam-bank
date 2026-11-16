@@ -3,7 +3,7 @@ errors (new / repeat) and tokens. One file per batch: review/cycle/<batch>.json.
 rebuilt from all of them by `report`, so the table is never typed by hand.
 
     python3 pipeline/batch_log.py start  M0 --subject 0607 --sessions 2014-MJ 2019-ON 2021-FM 2025-MJ
-    python3 pipeline/batch_log.py phase  M0 build start         # build | claude1 | claude2 | review | fix
+    python3 pipeline/batch_log.py phase  M0 build start         # build | claude | review | fix
     python3 pipeline/batch_log.py phase  M0 build end  --note "26 papers"
     python3 pipeline/batch_log.py gh     M0 43252980978 ...     # add GitHub Action run times (REST API)
     python3 pipeline/batch_log.py count  M0 papers=26 questions=310 flags=41 round_items=18
@@ -24,8 +24,8 @@ import paths
 
 DIR = os.path.join(paths.ROOT, 'review', 'cycle')
 LOG = os.path.join(paths.ROOT, 'docs', 'BATCH_LOG.md')
-PHASES = ['build', 'claude1', 'claude2', 'review', 'fix']
-OURS = ['build', 'claude1', 'claude2', 'fix']          # Dhruv's review time is not ours
+PHASES = ['build', 'claude', 'claude1', 'claude2', 'review', 'fix']   # 'claude' = the ONE check round (round 29+); claude1/2 kept for old records
+OURS = ['build', 'claude', 'claude1', 'claude2', 'fix']          # Dhruv's review time is not ours
 REPO = os.environ.get('GITHUB_REPOSITORY', 'dhruvashara07/Exam-bank')
 
 
@@ -75,7 +75,7 @@ def cmd_start(a):
 def cmd_phase(a):
     b, ph, what = a[0], a[1], a[2]
     assert ph in PHASES, PHASES
-    r = load(b); spans = r['phases'][ph]
+    r = load(b); spans = r['phases'].setdefault(ph, [])
     if what == 'start':
         spans.append({'start': now(), 'end': None})
     else:
@@ -126,7 +126,7 @@ def cmd_tokens(a):
 
 
 def summary(r):
-    m = {p: minutes(r['phases'][p]) for p in PHASES}
+    m = {p: minutes(r['phases'].get(p, [])) for p in PHASES}
     ghm = round(sum(x['minutes'] for x in r['github_runs']), 1)
     ours = round(sum(m[p] for p in OURS), 1)
     new = sum(1 for e in r['errors'] if e['kind'] == 'new')
@@ -155,7 +155,7 @@ def cmd_report(a):
         m, ghm, ours, new, rep, tok = summary(r)
         c = r['counts']
         L.append(f"| {r['batch']} | {' '.join(r['sessions'])} | {c.get('papers', '')} | {m['build']} | {ghm} | "
-                 f"{m['claude1']} | {m['claude2']} | {m['fix']} | {ours} | {c.get('round_items', '')} | {new} | {rep} | {tok or 'n/a'} |")
+                 f"{m['claude'] + m['claude1']} | {m['claude2']} | {m['fix']} | {ours} | {c.get('round_items', '')} | {new} | {rep} | {tok or 'n/a'} |")
     L += ['', '## Errors per batch (new = first time, repeat = a pattern seen before: the doc or the fix failed)', '']
     for r in rs:
         if not r['errors']:

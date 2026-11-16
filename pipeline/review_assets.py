@@ -43,10 +43,16 @@ def svg_img(path, dpi=96):
     return Image.open(io.BytesIO(pg.screenshot())).convert('RGB')
 
 
-def fig_img(path):
+def fig_img(path, pt_w=None, dpi=192):
+    """A stored figure at the SAME scale as the question image (round 29, Dhruv: 'show them as it is size as in que';
+    they were drawn at 96 dpi beside a 192 dpi question)."""
     if path.endswith('.png'):
-        return Image.open(path).convert('RGB')
-    return svg_img(path)
+        im = Image.open(path).convert('RGB')
+        if pt_w:
+            w = round(pt_w * dpi / 72)
+            im = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
+        return im
+    return svg_img(path, dpi)
 
 
 def stack(imgs, sep=(225, 70, 70), gap=5):
@@ -150,7 +156,8 @@ def render_items(out_dir, items, reasons, byid=None):
         save('orig.jpg', original(q, qp_path))
         if 'ms' in sv:
             save('ms.jpg', svg_img(sv['ms'], 192), width=1800)
-        imgs_f = [fig_img(f) for f in sv['figs']]
+        boxes = {os.path.basename(f.get('file', '')): (f.get('source') or {}).get('box') for f in sv.get('fig_recs', [])}
+        imgs_f = [fig_img(f, (lambda b: b[2] - b[0] if b else None)(boxes.get(os.path.basename(f)))) for f in sv['figs']]
         if imgs_f:
             save('figs.jpg', stack(imgs_f, sep=(230, 160, 0), gap=6))
         out.append({

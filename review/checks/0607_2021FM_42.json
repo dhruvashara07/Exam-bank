@@ -1,14 +1,20 @@
 {
  "paper": "0607_2021FM_42",
  "pipeline_version": "2.1",
- "checked_at": "2026-11-13T13:51Z",
+ "checked_at": "2026-11-16T09:51Z",
  "clean": true,
- "warnings": 1,
+ "warnings": 2,
  "problems": [
   {
    "id": "0607_2021FM_42_q04",
    "kind": "figure",
    "detail": "0607_2021FM_42_q04bi_table1: crop cut: ink crosses the top edge",
+   "blocking": false
+  },
+  {
+   "id": "0607_2021FM_42_q09",
+   "kind": "figure",
+   "detail": "0607_2021FM_42_q09a_diagram1: crop cut: ink crosses the top edge",
    "blocking": false
   }
  ],
@@ -18,7 +24,7 @@
   "0607_2021FM_42_q01": 1.0,
   "0607_2021FM_42_q02": 1.0,
   "0607_2021FM_42_q03": 1.0,
-  "0607_2021FM_42_q04": 0.985,
+  "0607_2021FM_42_q04": 0.983,
   "0607_2021FM_42_q05": 0.983,
   "0607_2021FM_42_q06": 1.0,
   "0607_2021FM_42_q07": 1.0,
