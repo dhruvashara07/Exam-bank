@@ -1,0 +1,262 @@
+{
+ "id": "0607_2024MJ_61_q12",
+ "number": 12,
+ "segments": [
+  {
+   "page": 13,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    321.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 81.5,
+    "height_pt": 264.2
+   }
+  }
+ ],
+ "text": "Mei decides to use a point P(x, y) in Step 1 of her model.\n1\nFraction of\ntotal income\nP(x, y)\ny\n0\nx\n0\n1\nFraction of population",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 13,
+   "bbox": [
+    164.4,
+    81.8,
+    432.9,
+    318.8
+   ],
+   "id": "0607_2024MJ_61_q12_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      325.5,
+      570.0,
+      569.4
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 205.9,
+      "height_pt": 244.0
+     }
+    }
+   ],
+   "text": "Find the area in Step 3 of her model as an expression without brackets in terms of x and y.\n..................................................................................................................................................... [5]",
+   "marks": 5,
+   "path": "12(a)",
+   "mark_scheme": [
+    {
+     "label": "12(a)",
+     "text": "1\n1\n×x×y + (1 – x)×y +\n×(1−x) ×(1−y)\n2\n2\n1\n1\n1\n1\n1\nxy+ y−xy+\n−\nx−\ny+\nxy oe isw\n2\n2\n2\n2\n2",
+     "codes": [
+      "C3",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        533.7,
+        549.1799926757812,
+        687.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the area in Step 3 of her model as an expression without brackets in terms of <i>x</i> and <i>y</i>.",
+     "text": "Find the area in Step 3 of her model as an expression without brackets in terms of x and y."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      569.4,
+      570.0,
+      734.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 127.9,
+      "height_pt": 165.0
+     }
+    }
+   ],
+   "text": "Do steps 4 and 5 in her model to show that her approximation, G, for the Gini coefficient is x\ny\n-.\n[2]",
+   "marks": 2,
+   "path": "12(b)",
+   "mark_scheme": [
+    {
+     "label": "12(b)",
+     "text": "1 1\n1 \n1\n1\n1\n1\n1\n−\n+\ny−\n−\ny+\nx−\nx\nor\noe\n\n\n2\n2\n2\n2\n\n\n2\n2\n2\n2\nMultiplication by 2 leading correctly to\ngiven answer x – y",
+     "codes": [
+      "M1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.1799926757812,
+        191.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Do steps 4 and 5 in her model to show that her approximation, <i>G</i>, for the Gini coefficient is <i>x</i> - <i>y</i> .",
+     "text": "Do steps 4 and 5 in her model to show that her approximation, G, for the Gini coefficient is x - y ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 127.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      734.5,
+      570.0,
+      796.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 23.9,
+      "height_pt": 62.0
+     }
+    }
+   ],
+   "text": "Give a reason why G will be smaller than the actual Gini coefficient.\n..................................................................................................................................................... [1]",
+   "marks": 1,
+   "path": "12(c)",
+   "mark_scheme": [
+    {
+     "label": "12(c)",
+     "text": "Valid reason suggesting that the area found\nin the approximate method is less than the\nshaded area:\nA triangle takes up part of the shaded area\noe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        191.4,
+        549.1799926757812,
+        266.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Give a reason why <i>G</i> will be smaller than the actual Gini coefficient.",
+     "text": "Give a reason why G will be smaller than the actual Gini coefficient."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Mei decides to use a point <i>P</i>(<i>x</i>, <i>y</i>) in Step 1 of her model.",
+   "text": "Mei decides to use a point P(x, y) in Step 1 of her model."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024MJ_61_q12_diagram1",
+   "caption": null
+  }
+ ]
+}

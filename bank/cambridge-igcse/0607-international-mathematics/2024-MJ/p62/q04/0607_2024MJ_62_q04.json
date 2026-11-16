@@ -1,0 +1,244 @@
+{
+ "id": "0607_2024MJ_62_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    70.2,
+    570.0,
+    276.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 22.5,
+    "height_pt": 205.8
+   }
+  }
+ ],
+ "text": "4\nThe table shows values of A\n-\nB\nand A\n+\nB\n-\nT\nfor trees with 4 leaves on each branch.\nNumber of\nA\n-\nB\nA\n+\nB\n-\nT\nbranches (n)\n2\n5\n8\n4\n10\n16\n6\n15\n24\n8\n20\n32",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      279.5,
+      570.0,
+      475.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 22.5,
+      "height_pt": 196.0
+     }
+    }
+   ],
+   "text": "Complete the table below.\nUse the table above and your answers from Questions 2(b)(ii) and 3(b) to help you.\nNumber of\nNumber of leaves\nA\n-\nB\nA\n+\nB\n-\nT\nbranches\non each branch (x)\nn\n2\n1.5n\nn\n3\nn\n4\n[2]",
+   "marks": 2,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "branches\nleaves\nA – B\nA + B – T\nn\n2\n1.5n\n2n\nn\n3\n2n\n3n\nn\n4\n2.5n oe\n4n oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        661.9,
+        549.1799926757812,
+        763.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table below. Use the table above and your answers from <b>Questions 2(b)(ii)</b> and <b>3(b)</b> to help you.",
+     "text": "Complete the table below. Use the table above and your answers from Questions 2(b)(ii) and 3(b) to help you."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Number of branches",
+       "Number of leaves on each branch (<i>x</i>)",
+       "<i>A</i> - <i>B</i>",
+       "<i>A</i> + <i>B</i> - <i>T</i>"
+      ],
+      [
+       "<i>n</i>",
+       "2",
+       "1.5<i>n</i>",
+       ""
+      ],
+      [
+       "<i>n</i>",
+       "3",
+       "",
+       ""
+      ],
+      [
+       "<i>n</i>",
+       "4",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      480.8,
+      570.0,
+      606.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "=  …… [2]",
+      "working_gap_pt": 22.3,
+      "height_pt": 125.7
+     }
+    }
+   ],
+   "text": "A tree has an even number of branches, n, with x leaves on each branch.\nComplete the expressions for A\n-\nB\nand A\n+\nB\n-\nT\nin terms of n and x.\n=n\nA\n-\nB\n2(................................................)\nA\n+\nB\n-\nT\n=  ................................................ [2]",
+   "marks": 2,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "x + 1 oe\nxn oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.1799926757812,
+        126.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A tree has an even number of branches, <i>n</i>, with <i>x</i> leaves on each branch.",
+     "text": "A tree has an even number of branches, n, with x leaves on each branch."
+    },
+    {
+     "type": "text",
+     "html": "Complete the expressions for <i>A</i> - <i>B</i> and <i>A</i> + <i>B</i> - <i>T</i> in terms of <i>n</i> and <i>x</i>.",
+     "text": "Complete the expressions for A - B and A + B - T in terms of n and x."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "A - B = (n)/(2) (",
+     "unit": ")"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "A + B - T ="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The table shows values of <i>A</i> - <i>B</i> and <i>A</i> + <i>B</i> - <i>T</i> for trees with 4 leaves on each branch.",
+   "text": "The table shows values of A - B and A + B - T for trees with 4 leaves on each branch."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Number of branches (<i>n</i>)",
+     "<i>A</i> - <i>B</i>",
+     "<i>A</i> + <i>B</i> - <i>T</i>"
+    ],
+    [
+     "2",
+     "5",
+     "8"
+    ],
+    [
+     "4",
+     "10",
+     "16"
+    ],
+    [
+     "6",
+     "15",
+     "24"
+    ],
+    [
+     "8",
+     "20",
+     "32"
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,328 @@
+{
+ "id": "0607_2024MJ_63_q07",
+ "number": 7,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    173.8,
+    570.0,
+    223.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.7,
+    "height_pt": 49.2
+   }
+  }
+ ],
+ "text": "7\nA farmer uses 600 metres of fencing to make a rectangular field.\nThe length of the field is x metres.",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    108.8,
+    493.6,
+    489.1,
+    738.8
+   ],
+   "id": "0607_2024MJ_63_q07c_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      225.8,
+      570.0,
+      340.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 49.9,
+      "height_pt": 114.2
+     }
+    }
+   ],
+   "text": "The area of the field is A square metres.\nShow that a model for A, in terms of x, is\nA\nx\n(\n300\nx\n)\n.\n=\n-\n[2]",
+   "marks": 2,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "[Area =] length × breadth\n600−2x\nand A=\n×x\n2\n600\n\nor A=\n−x ×x\n\n\n\n2\n",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        35.880001068115234,
+        89.5,
+        559.5000610351562,
+        175.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The area of the field is <i>A</i> square metres. Show that a model for <i>A</i>, in terms of <i>x</i>, is <i>A</i> = <i>x</i> (300 - <i>x</i>).",
+     "text": "The area of the field is A square metres. Show that a model for A, in terms of x, is A = x (300 - x)."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 49.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      342.8,
+      570.0,
+      470.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 88.9,
+      "height_pt": 127.2
+     }
+    }
+   ],
+   "text": "Find the range of possible lengths of the field.\n................................................. [1]",
+   "marks": 1,
+   "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "0 < length < 300 [m]",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        35.880001068115234,
+        175.5,
+        559.5000610351562,
+        200.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the range of possible lengths of the field.",
+     "text": "Find the range of possible lengths of the field."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      472.8,
+      570.0,
+      758.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 194.3,
+      "height_pt": 285.2
+     }
+    }
+   ],
+   "text": "Sketch the graph of the model\nA\nx\n(\n300\nx\n)\n.\n=\n-\nA\nx\n[3]",
+   "marks": 3,
+   "path": "7(c)",
+   "mark_scheme": [
+    {
+     "label": "7(c)",
+     "text": "Correct sketch\n0 and 300 labelled\nSuitable scale on A axis",
+     "codes": [
+      "1",
+      "C2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        35.880001068115234,
+        200.1,
+        559.5000610351562,
+        435.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Sketch the graph of the model <i>A</i> = <i>x</i> (300 - <i>x</i>).",
+     "text": "Sketch the graph of the model A = x (300 - x)."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2024MJ_63_q07c_diagram1",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 194.3
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      223.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "Area = ……",
+      "working_gap_pt": 101.9,
+      "height_pt": 166.2
+     }
+    }
+   ],
+   "text": "Find the maximum area of the field and the length which gives this maximum area.\nArea = .................................................\nLength = ................................................. [2]",
+   "marks": 2,
+   "path": "7(d)",
+   "mark_scheme": [
+    {
+     "label": "7(d)",
+     "text": "[Area =] 22 500\n[Length =] 150\n2\nm and m",
+     "codes": [
+      "1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        35.880001068115234,
+        435.6,
+        559.5000610351562,
+        497.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the maximum area of the field and the length which gives this maximum area.",
+     "text": "Find the maximum area of the field and the length which gives this maximum area."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Area ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Length ="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A farmer uses 600 metres of fencing to make a rectangular field. The length of the field is <i>x</i> metres.",
+   "text": "A farmer uses 600 metres of fencing to make a rectangular field. The length of the field is x metres."
+  }
+ ]
+}

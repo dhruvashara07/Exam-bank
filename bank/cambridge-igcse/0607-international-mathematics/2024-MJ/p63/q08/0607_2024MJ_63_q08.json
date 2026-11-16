@@ -1,0 +1,211 @@
+{
+ "id": "0607_2024MJ_63_q08",
+ "number": 8,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    238.8,
+    570.0,
+    426.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 43.9,
+    "height_pt": 187.7
+   }
+  }
+ ],
+ "text": "8\nThe farmer uses a wall as one side of the field.\nThe farmer uses 500 metres of fencing for this field.\nfence\nx metres\nfence\nfence\nwall",
+ "marks": 6,
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    189.1,
+    292.8,
+    408.2,
+    426.5
+   ],
+   "id": "0607_2024MJ_63_q08_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      435.3,
+      570.0,
+      679.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 179.9,
+      "height_pt": 244.2
+     }
+    }
+   ],
+   "text": "The length of the field is x metres.\n2.\nB\nFind a model for the area of the field,\nm\n................................................. [3]",
+   "marks": 3,
+   "path": "8(a)",
+   "mark_scheme": [
+    {
+     "label": "8(a)",
+     "text": "B = an expression in x\n500−x\nB=x×\noe\n2",
+     "codes": [
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        35.880001068115234,
+        497.8,
+        559.5000610351562,
+        562.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The length of the field is <i>x</i> metres. Find a model for the area of the field, <i>B</i> m<sup>2</sup> .",
+     "text": "The length of the field is x metres. Find a model for the area of the field, B m2 ."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      386.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 251.9,
+      "height_pt": 329.2
+     }
+    }
+   ],
+   "text": "Which model gives the greater maximum area of the field, the model for A or the model for B?\nFind the difference between these two maximum areas.\nModel  ................................................\nDifference  ................................................ [3]",
+   "marks": 3,
+   "path": "8(b)",
+   "mark_scheme": [
+    {
+     "label": "8(b)",
+     "text": "500−x\nSketch of B=x×\nwith x-intercepts 0\n2\nand 500\nor substituting x = 250\n31250 or 31200 or 31300 nfww\nModel B has greater area by 8750 [m ]\n2",
+     "codes": [
+      "C1",
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        35.880001068115234,
+        562.9,
+        559.5000610351562,
+        692.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Which model gives the greater maximum area of the field, the model for <i>A</i> or the model for <i>B</i>? Find the difference between these two maximum areas.",
+     "text": "Which model gives the greater maximum area of the field, the model for A or the model for B? Find the difference between these two maximum areas."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Model"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Difference"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The farmer uses a wall as one side of the field. The farmer uses 500 metres of fencing for this field.",
+   "text": "The farmer uses a wall as one side of the field. The farmer uses 500 metres of fencing for this field."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024MJ_63_q08_diagram1",
+   "caption": null
+  }
+ ]
+}

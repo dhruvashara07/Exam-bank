@@ -1,0 +1,332 @@
+{
+ "id": "0607_2024MJ_62_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    69.3,
+    570.0,
+    373.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 2,
+    "answer_line": null,
+    "working_gap_pt": 22.2,
+    "height_pt": 304.2
+   }
+  }
+ ],
+ "text": "6\nIn this question a tree can have either an even number or an odd number of branches.\nA tree can now start with any integer, k.\nA tree has p leaves on each branch.\nThis is the start of a tree.\nIt shows expressions for the integers on the trunk and the outer leaves only.\nk\n................\nk\n+\np\nk\n+\n2\np\n+\n1\n................\nk\n++\np\n1",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      434.3,
+      570.0,
+      509.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 29.9,
+      "height_pt": 75.2
+     }
+    }
+   ],
+   "text": "An expression for the outer leaf on the second branch is k\n+\n2\np\n+.\n1\nShow that this statement is correct.\n[1]",
+   "marks": 1,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "k + p + 1 + p or p + k + p + 1",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        382.2,
+        549.1799926757812,
+        406.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "An expression for the outer leaf on the second branch is <i>k</i> + 2<i>p</i> + 1. Show that this statement is correct.",
+     "text": "An expression for the outer leaf on the second branch is k + 2p + 1. Show that this statement is correct."
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      514.7,
+      570.0,
+      691.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 131.5,
+      "height_pt": 176.8
+     }
+    }
+   ],
+   "text": "Find expressions for the third integer on the trunk and the outer leaf on the third branch.\nWrite your expressions, in their simplest forms, on the tree.\n[2]",
+   "marks": 2,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "k + 2p + 2 oe\nk + 3p + 2 oe\nin correct places on tree",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        406.6,
+        549.1799926757812,
+        456.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find expressions for the third integer on the trunk and the outer leaf on the third branch. Write your expressions, in their simplest forms, on the tree.",
+     "text": "Find expressions for the third integer on the trunk and the outer leaf on the third branch. Write your expressions, in their simplest forms, on the tree."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 131.5
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        30.0,
+        70.2,
+        570.0,
+        546.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 3,
+        "answer_line": null,
+        "working_gap_pt": 378.5,
+        "height_pt": 475.8
+       }
+      }
+     ],
+     "text": "Find expressions for A\n+\nB\n-\nT\nwhen a tree has 2 branches, 3 branches and 4 branches.\nGive each expression in its simplest form.\n.................................................\n.................................................\n................................................. [3]",
+     "marks": 3,
+     "path": "6(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(c)(i)",
+       "text": "Two from the expressions for 2, 3 and 4\nbranches\n(2) (k + 2p + 1)\n+ (k + p)\n– (2k + p + 1)\n(3) (k + 2p + 1)\n+ (2k + 4p + 2)\n– (3k + 3p + 3)\n(4) (2k + 6p + 4) + (2k + 4p + 2)\n– (4k + 6p +6)\n2p 3p 4p oe",
+       "codes": [
+        "C2",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.619998931884766,
+          456.4,
+          549.1799926757812,
+          631.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find expressions for <i>A</i> + <i>B</i> - <i>T</i> when a tree has 2 branches, 3 branches and 4 branches.",
+       "text": "Find expressions for A + B - T when a tree has 2 branches, 3 branches and 4 branches."
+      },
+      {
+       "type": "text",
+       "html": "Give each expression in its simplest form.",
+       "text": "Give each expression in its simplest form."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 3
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        30.0,
+        551.2,
+        570.0,
+        637.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 53.5,
+        "height_pt": 85.8
+       }
+      }
+     ],
+     "text": "Find an expression for A\n+\nB\n-\nT\nwhen a tree has n branches.\n................................................. [1]",
+     "marks": 1,
+     "path": "6(c)(ii)",
+     "mark_scheme": [
+      {
+       "label": "6(c)(ii)",
+       "text": "np oe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.619998931884766,
+          631.8,
+          549.1799926757812,
+          656.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find an expression for <i>A</i> + <i>B</i> - <i>T</i> when a tree has <i>n</i> branches.",
+       "text": "Find an expression for A + B - T when a tree has n branches."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "6(c)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In this question a tree can have either an even number or an odd number of branches. A tree can now start with any integer, <i>k</i>. A tree has <i>p</i> leaves on each branch.",
+   "text": "In this question a tree can have either an even number or an odd number of branches. A tree can now start with any integer, k. A tree has p leaves on each branch."
+  },
+  {
+   "type": "text",
+   "html": "This is the start of a tree. It shows expressions for the integers on the trunk and the outer leaves only.",
+   "text": "This is the start of a tree. It shows expressions for the integers on the trunk and the outer leaves only."
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "k",
+   "unit": "k + p"
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "k + 2p + 1",
+   "unit": "k + p + 1"
+  },
+  {
+   "type": "answer",
+   "kind": "lines"
+  }
+ ]
+}

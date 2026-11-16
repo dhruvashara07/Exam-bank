@@ -1,0 +1,127 @@
+{
+ "id": "0607_2024MJ_61_q11",
+ "number": 11,
+ "segments": [
+  {
+   "page": 12,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    798.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 1,
+    "answer_line": null,
+    "working_gap_pt": 288.9,
+    "height_pt": 741.7
+   }
+  }
+ ],
+ "text": "Mei uses these steps to model the Gini coefficient for the curve in Question 9.\nStep 1:  Plot point V from Question 9 on the Lorenz curve.\nStep 2:  Approximate the area below the curve with a rectangle and two triangles.\nStep 3:  Calculate the total area of the rectangle and the two triangles. This is T.\nStep 4:  Calculate the shaded area by subtracting T from the area of the large triangle with vertices (0, 0),\n(1, 1) and (1, 0).\nStep 5:  Multiply the result by 2.\n1.0\n0.9\n0.8\n0.7\nLine of perfect equality\nFraction of\n0.6\ntotal income\n0.5\n(y)\nV\n0.4\n0.3\n0.2\n0.1\n00\n0.10.20.30.40.5\n0.60.70.80.91.0\nFraction of population (x)\nSteps 1 and 2 in Mei’s model have been done for you on the graph.\nDo Steps 3, 4 and 5 to calculate her approximation of the Gini coefficient.\n................................................. [6]",
+ "marks": 6,
+ "figures": [
+  {
+   "caption": null,
+   "page": 12,
+   "bbox": [
+    150.8,
+    201.8,
+    446.5,
+    420.5
+   ],
+   "id": "0607_2024MJ_61_q11_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "11",
+   "text": "1\n1\n2\n×0.7 ×0.4 + 0.3 × 0.4 +\n2\n×0.3 ×0.6\n0.35 seen\n1\n2\n[× 1× 1] – their 0.35\n0.3\nor correct evaluation of 2(0.5 – their 0.35)",
+   "codes": [
+    "C3",
+    "1",
+    "C1",
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      46.619998931884766,
+      392.8,
+      549.1799926757812,
+      533.7
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Mei uses these steps to model the Gini coefficient for the curve in <b>Question 9</b>. Step 1: Plot point <i>V</i> from <b>Question 9</b> on the Lorenz curve. Step 2: Approximate the area below the curve with a rectangle and two triangles. Step 3: Calculate the total area of the rectangle and the two triangles. This is <i>T</i>. Step 4: Calculate the shaded area by subtracting <i>T</i> from the area of the large triangle with vertices (0, 0),",
+   "text": "Mei uses these steps to model the Gini coefficient for the curve in Question 9. Step 1: Plot point V from Question 9 on the Lorenz curve. Step 2: Approximate the area below the curve with a rectangle and two triangles. Step 3: Calculate the total area of the rectangle and the two triangles. This is T. Step 4: Calculate the shaded area by subtracting T from the area of the large triangle with vertices (0, 0),"
+  },
+  {
+   "type": "text",
+   "html": "(1, 1) and (1, 0).",
+   "text": "(1, 1) and (1, 0)."
+  },
+  {
+   "type": "text",
+   "html": "Step 5: Multiply the result by 2.",
+   "text": "Step 5: Multiply the result by 2."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024MJ_61_q11_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "Fraction of population (<i>x</i>)",
+   "text": "Fraction of population (x)"
+  },
+  {
+   "type": "text",
+   "html": "Steps 1 and 2 in Mei’s model have been done for you on the graph. Do Steps 3, 4 and 5 to calculate her approximation of the Gini coefficient.",
+   "text": "Steps 1 and 2 in Mei’s model have been done for you on the graph. Do Steps 3, 4 and 5 to calculate her approximation of the Gini coefficient."
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
+   "lines": 1
+  },
+  {
+   "type": "marks",
+   "value": 6
+  }
+ ]
+}

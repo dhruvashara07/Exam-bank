@@ -1,0 +1,339 @@
+{
+ "id": "0607_2024MJ_62_q08",
+ "number": 8,
+ "segments": [
+  {
+   "page": 12,
+   "bbox": [
+    30.0,
+    69.3,
+    570.0,
+    476.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 27.2,
+    "height_pt": 407.2
+   }
+  }
+ ],
+ "text": "8\nNikita finds this data for an aircraft making journeys of different lengths.\nJourney length (L km)\n260\n400\n520\n740\n950\n1080\n1200\n1460\nAverage fuel use (F kg/km)\n10.6\n7.5\n6.2\n5.8\n5.0\n4.6\n4.5\n4.3\nShe plots the data on a grid.\nF\n12\n10\n8\nAverage fuel\nuse\n6\n(kg/km)\n4\n2\n0\n1600L\n0\n200\n400\n600\n800\n1000\n1200\n1400\nJourney length (km)",
+ "marks": 6,
+ "figures": [
+  {
+   "caption": null,
+   "page": 12,
+   "bbox": [
+    88.0,
+    178.0,
+    509.4,
+    472.9
+   ],
+   "id": "0607_2024MJ_62_q08_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      485.5,
+      570.0,
+      532.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 14.5,
+      "height_pt": 46.5
+     }
+    }
+   ],
+   "text": "What happens to the average fuel use as the journey length increases?\n..................................................................................................................................................... [1]",
+   "marks": 1,
+   "path": "8(a)",
+   "mark_scheme": [
+    {
+     "label": "8(a)",
+     "text": "decreases oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        705.1,
+        549.1799926757812,
+        733.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "What happens to the average fuel use as the journey length increases?",
+     "text": "What happens to the average fuel use as the journey length increases?"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      535.5,
+      570.0,
+      561.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": -0.0,
+      "height_pt": 26.0
+     }
+    }
+   ],
+   "text": "b\n(b) Nikita thinks a model for the data is   F\n=\na\n+\nwhere a and b are constants.\nL",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        30.0,
+        563.5,
+        570.0,
+        662.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 2,
+        "answer_line": null,
+        "working_gap_pt": 27.5,
+        "height_pt": 98.5
+       }
+      }
+     ],
+     "text": "Use the values of F from the table for L\n=\n400\nand L\n=\n12\n00\nto write down two equations in\nterms of a and b.\n.................................................\n................................................. [2]",
+     "marks": 2,
+     "path": "8(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "8(b)(i)",
+       "text": "b\n7.5 = a +\noe isw\n400\nb\n4.5 = a +\noe isw\n1200",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.619998931884766,
+          89.4,
+          549.1799926757812,
+          159.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use the values of <i>F</i> from the table for <i>L</i> = 400 and <i>L</i> = 1200 to write down two equations in terms of <i>a</i> and <i>b</i>.",
+       "text": "Use the values of F from the table for L = 400 and L = 1200 to write down two equations in terms of a and b."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 13,
+       "bbox": [
+        30.0,
+        69.3,
+        570.0,
+        337.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 3,
+        "answer_line": "a =  ……",
+        "working_gap_pt": 170.5,
+        "height_pt": 267.7
+       }
+      }
+     ],
+     "text": "Solve your equations to find the value of a and the value of b and write down the model.\na =  ................................................\nb =  ................................................\nModel  ................................................ [3]",
+     "marks": 3,
+     "path": "8(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "8(b)(ii)",
+       "text": "b\nor\n2b\n3 =\n600\n1200\n[a =] 3\n[b =] 1800\n1800\nF = 3 +\nL\nAlternative\nEliminating a\nor equating coefficients of b\nor removing fractions and equating\ncoefficients of a\nor sketch of intersecting straight lines with\nnegative gradients\nSimplified equation with one variable on\none side nfww\nor equations of lines and intersection\nmarked on the sketch.\n[a =] 3\n[b =] 1800\n1800\nF = 3 +\nL",
+       "codes": [
+        "C2",
+        "1",
+        "(C1)",
+        "(C1)"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.619998931884766,
+          159.6,
+          549.1799926757812,
+          507.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Solve your equations to find the value of <i>a</i> and the value of <i>b</i> and write down the model.",
+       "text": "Solve your equations to find the value of a and the value of b and write down the model."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "a ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "b ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Model"
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "8(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Nikita thinks a model for the data is <i>F</i> = <i>a</i> + \\(\\frac{b}{L}\\) where <i>a</i> and <i>b</i> are constants.",
+     "text": "Nikita thinks a model for the data is F = a + (b)/(L) where a and b are constants."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Nikita finds this data for an aircraft making journeys of different lengths.",
+   "text": "Nikita finds this data for an aircraft making journeys of different lengths."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Journey length (<i>L</i> km)",
+     "260",
+     "400",
+     "520",
+     "740",
+     "950",
+     "1080",
+     "1200",
+     "1460"
+    ],
+    [
+     "Average fuel use (<i>F</i> kg/km)",
+     "10.6",
+     "7.5",
+     "6.2",
+     "5.8",
+     "5.0",
+     "4.6",
+     "4.5",
+     "4.3"
+    ]
+   ]
+  },
+  {
+   "type": "text",
+   "html": "She plots the data on a grid.",
+   "text": "She plots the data on a grid."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024MJ_62_q08_diagram1",
+   "caption": null
+  }
+ ]
+}

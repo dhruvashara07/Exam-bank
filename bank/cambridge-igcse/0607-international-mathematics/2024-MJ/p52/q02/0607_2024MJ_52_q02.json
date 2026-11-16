@@ -1,0 +1,270 @@
+{
+ "id": "0607_2024MJ_52_q02",
+ "number": 2,
+ "segments": [],
+ "text": "",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      477.4,
+      570.0,
+      686.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 20.6,
+      "height_pt": 209.1
+     }
+    }
+   ],
+   "text": "2\n(a) Complete the table for trees with 2 leaves on each branch.\nUse your answers to Question 1 to help you.\nNumber of\nA\nB\nT\nA\n-\nB\nA\n+\nB\n-\nT\nbranches (n)\n2\n6\n3\n5\n3\n4\n4\n18\n12\n22\n6\n8\n6\n9\n8\n60\n16\n[4]",
+   "marks": 4,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "19\n20\n21\n24\n23\n22\nor 3 common differences of 3 or 4 seen in\none of last two columns\nor 36 + 27 – 51 [= 12]\nor 60 – 12 = 48\nn\nA\nB\nT\nA – B\nA + B – T\n2\n6\n3\n5\n3\n4\n4\n18\n12\n22\n6\n8\n6\n36\n27\n51\n9\n12\n8\n60\n48\n92\n12\n16",
+     "codes": [
+      "C1",
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        211.6,
+        550.6799926757812,
+        418.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> Complete the table for trees with 2 leaves on each branch.",
+     "text": "Complete the table for trees with 2 leaves on each branch."
+    },
+    {
+     "type": "text",
+     "html": "Use your answers to <b>Question 1</b> to help you.",
+     "text": "Use your answers to Question 1 to help you."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Number of branches (<i>n</i>)",
+       "<i>A</i>",
+       "<i>B</i>",
+       "<i>T</i>",
+       "<i>A</i> - <i>B</i>",
+       "<i>A</i> + <i>B</i> - <i>T</i>"
+      ],
+      [
+       "2",
+       "6",
+       "3",
+       "5",
+       "3",
+       "4"
+      ],
+      [
+       "4",
+       "18",
+       "12",
+       "22",
+       "6",
+       "8"
+      ],
+      [
+       "6",
+       "",
+       "",
+       "",
+       "9",
+       ""
+      ],
+      [
+       "8",
+       "60",
+       "",
+       "",
+       "",
+       "16"
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        691.6,
+        570.0,
+        738.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 14.5,
+        "height_pt": 46.9
+       }
+      }
+     ],
+     "text": "Use values from the table to give an example to show that\nA\n-\nB\n=\n1 5\n.\nn\n.\n............................................................................................................................................. [1]",
+     "marks": 1,
+     "path": "2(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(b)(i)",
+       "text": "3 = 1.5 × 2\nor 6 = 1.5 × 4\nor 9 = 1.5 × 6\nor 12 = 1.5 × 8",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.619998931884766,
+          418.3,
+          550.6799926757812,
+          480.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use values from the table to give an example to show that <i>A</i> - <i>B</i> = 1 5. <i>n</i>.",
+       "text": "Use values from the table to give an example to show that A - B = 1 5. n."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        743.6,
+        570.0,
+        790.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 14.5,
+        "height_pt": 46.9
+       }
+      }
+     ],
+     "text": "Write an expression for  A\n+\nB\n-\nT\nin terms of n.\n................................................. [1]",
+     "marks": 1,
+     "path": "2(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(b)(ii)",
+       "text": "2n oe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.619998931884766,
+          480.6,
+          550.6799926757812,
+          505.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Write an expression for <i>A</i> + <i>B</i> - <i>T</i> in terms of <i>n</i>.",
+       "text": "Write an expression for A + B - T in terms of n."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "2(b)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

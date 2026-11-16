@@ -1,0 +1,187 @@
+{
+ "id": "0607_2024MJ_63_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    106.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.7,
+    "height_pt": 49.2
+   }
+  }
+ ],
+ "text": "6\nWhen the result of calculation 1 is the same as the result of calculation 2,\nxy\n(\nz\n)\nx\nyz\n.\n+\n=\n+",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      108.8,
+      570.0,
+      288.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 114.9,
+      "height_pt": 179.2
+     }
+    }
+   ],
+   "text": "xx\n(\n1\n)\n(\ny\nxz\n)(\nx\n)\n-\n=\n-\n-\nExpand the brackets and rearrange to show that this becomes    (\nxy\nz\n)\nx\nyz\n.\n+\n=\n+\n[2]",
+   "marks": 2,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "2\n2\nx – x = yz – xy – xz +x\nCorrect rearrangement leading to given answer",
+     "codes": [
+      "M1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        35.880001068115234,
+        507.2,
+        559.5000610351562,
+        556.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<i>x</i> (<i>x</i> - 1) = (<i>y</i> - <i>x</i>)(<i>z</i> - <i>x</i>) Expand the brackets and rearrange to show that this becomes (<i>x</i> <i>y</i> + <i>z</i>) = <i>x</i> + <i>yz</i> .",
+     "text": "x (x - 1) = (y - x)(z - x) Expand the brackets and rearrange to show that this becomes (x y + z) = x + yz ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 114.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      290.8,
+      570.0,
+      780.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 412.5,
+      "height_pt": 489.7
+     }
+    }
+   ],
+   "text": "The results of calculation 1 and calculation 2 are the same.\nx\n6\nand z\n2\ny\n.\n=\nFind all the possible values for x, y and z.\n..................................................................................................................................................... [4]",
+   "marks": 4,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "6 × 5 = (y – 6)(z – 6)\nTwo pairs from\n1\n30\n2\n15\n3\n10\n5\n6\n6, 7, 36\n6, 8, 21\n6, 9, 16\n6, 11, 12",
+     "codes": [
+      "C1",
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        35.880001068115234,
+        556.2,
+        559.5000610351562,
+        726.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The results of calculation 1 and calculation 2 are the same. <i>x</i> = 6 and <i>z</i> 2 <i>y</i> . Find all the possible values for <i>x</i>, <i>y</i> and <i>z</i>.",
+     "text": "The results of calculation 1 and calculation 2 are the same. x = 6 and z 2 y . Find all the possible values for x, y and z."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "When the result of calculation 1 is the same as the result of calculation 2,",
+   "text": "When the result of calculation 1 is the same as the result of calculation 2,"
+  },
+  {
+   "type": "text",
+   "html": "<i>x</i> (<i>y</i> + <i>z</i>) = <i>x</i> + <i>yz</i> .",
+   "text": "x (y + z) = x + yz ."
+  }
+ ]
+}

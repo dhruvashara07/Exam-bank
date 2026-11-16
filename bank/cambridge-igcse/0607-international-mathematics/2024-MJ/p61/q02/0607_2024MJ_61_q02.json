@@ -1,0 +1,86 @@
+{
+ "id": "0607_2024MJ_61_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    275.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 1,
+    "answer_line": null,
+    "working_gap_pt": 166.9,
+    "height_pt": 218.2
+   }
+  }
+ ],
+ "text": "2\nUse the method to calculate the sum of the first 128 positive integers.\nThat is   1\n+++ … 128\n2\n3\n.\n+\n................................................. [3]",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "2",
+   "text": "129 seen as the sum of 1 and 128\nand the sum of one other pair of values\n64 × their 129\n8256",
+   "codes": [
+    "C1",
+    "C1",
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      46.619998931884766,
+      164.5,
+      549.1799926757812,
+      251.3
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Use the method to calculate the sum of the first 128 positive integers. That is 1 + 2 + 3 + … 128+ .",
+   "text": "Use the method to calculate the sum of the first 128 positive integers. That is 1 + 2 + 3 + … 128+ ."
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
+   "lines": 1
+  },
+  {
+   "type": "marks",
+   "value": 3
+  }
+ ]
+}

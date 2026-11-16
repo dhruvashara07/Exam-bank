@@ -1,0 +1,114 @@
+{
+ "id": "0607_2024MJ_61_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    389.5,
+    570.0,
+    608.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "answer_line",
+    "dotted_lines": 10,
+    "answer_line": "…… # ……   =",
+    "working_gap_pt": 49.9,
+    "height_pt": 218.5
+   }
+  }
+ ],
+ "text": "1\nUse the method to complete the sum of the first 60 positive integers.\n+++… 60\nThat is   1\n2\n3\n1830\n.\n+\n=\n…   ...............\n1\n2\n3\n…   ...............\n...............\n...............\n...............\n…   ...............\n...............\n...............\n...............\n............... # ...............   =\n1830\n[3]",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "1",
+   "text": "30\n60 59 58 … 31\n61 61 61 … 61\n30 × 61",
+   "codes": [
+    "3"
+   ],
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      46.619998931884766,
+      89.4,
+      549.1799926757812,
+      164.5
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Use the method to complete the sum of the first 60 positive integers.",
+   "text": "Use the method to complete the sum of the first 60 positive integers."
+  },
+  {
+   "type": "text",
+   "html": "…",
+   "text": "…"
+  },
+  {
+   "type": "text",
+   "html": "That is 1 + 2 + 3 + 60+ = 1830.",
+   "text": "That is 1 + 2 + 3 + 60+ = 1830."
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "…"
+  },
+  {
+   "type": "text",
+   "html": "2 3",
+   "text": "2 3"
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "…"
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "…"
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "unit": "= 1830"
+  },
+  {
+   "type": "marks",
+   "value": 3
+  }
+ ]
+}

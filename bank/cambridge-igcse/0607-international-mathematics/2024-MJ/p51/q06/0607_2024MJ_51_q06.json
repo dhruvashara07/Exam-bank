@@ -1,0 +1,84 @@
+{
+ "id": "0607_2024MJ_51_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    521.7,
+    570.0,
+    688.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 1,
+    "answer_line": null,
+    "working_gap_pt": 101.9,
+    "height_pt": 166.3
+   }
+  }
+ ],
+ "text": "6\n1\n2\n3\n+   has n positive integers and its sum is T.\nn\n+++\ng\nFind a formula for T in terms of n.\n................................................. [3]",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "6",
+   "text": "n\nT =\n(n + 1) oe\n2",
+   "codes": [
+    "3"
+   ],
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      46.619998931884766,
+      557.0,
+      552.0599975585938,
+      704.8
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "1 + 2 + 3 + g + <i>n</i> has <i>n</i> positive integers and its sum is <i>T</i>. Find a formula for <i>T</i> in terms of <i>n</i>.",
+   "text": "1 + 2 + 3 + g + n has n positive integers and its sum is T. Find a formula for T in terms of n."
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
+   "lines": 1
+  },
+  {
+   "type": "marks",
+   "value": 3
+  }
+ ]
+}

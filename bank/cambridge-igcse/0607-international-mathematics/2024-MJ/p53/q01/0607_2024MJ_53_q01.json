@@ -1,0 +1,94 @@
+{
+ "id": "0607_2024MJ_53_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    383.7,
+    570.0,
+    538.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "answer_line",
+    "dotted_lines": 10,
+    "answer_line": "= ……",
+    "working_gap_pt": 13.7,
+    "height_pt": 154.3
+   }
+  }
+ ],
+ "text": "1\nIn this question   x\n2\n,   y\n4\n,   z\n6\n.\n=\n=\n=\nComplete calculation 1 and calculation 2.\nCalculation 1\nCalculation 2\ny\nz\n4\n6\n= .............\ny\nz\n4\n6\n= .............\n+=\n+\n=\n#\n#\n.............  x\n= ............. 2\n= .............\n.............\nx =\n.............\n2 =\n.............\n+\n+\n#\n#\n[4]\nResult = .............\nResult = .............",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "1",
+   "text": "(4 + 6 = )10\n(10 × x = 10 × 2 =) 20\n(4 × 6 =) 24\n(24 + x = 24 + 2) = 26",
+   "codes": [
+    "4"
+   ],
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      46.619998931884766,
+      89.4,
+      549.2400512695312,
+      164.5
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 3,
+ "paper_code": "0607/53",
+ "paper_type": "core_investigation",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In this question <i>x</i> = 2, <i>y</i> = 4, <i>z</i> = 6. Complete calculation 1 and calculation 2.",
+   "text": "In this question x = 2, y = 4, z = 6. Complete calculation 1 and calculation 2."
+  },
+  {
+   "type": "text",
+   "html": "Calculation 1 Calculation 2",
+   "text": "Calculation 1 Calculation 2"
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "y + z = 4 + 6 ="
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "Result ="
+  },
+  {
+   "type": "marks",
+   "value": 4
+  }
+ ]
+}

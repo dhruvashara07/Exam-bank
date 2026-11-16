@@ -1,0 +1,258 @@
+{
+ "id": "0607_2024MJ_61_q06",
+ "number": 6,
+ "segments": [],
+ "text": "",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      212.8,
+      570.0,
+      502.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 19.4,
+      "height_pt": 289.7
+     }
+    }
+   ],
+   "text": "6\n(a) Complete the table.\nSum of first n positive integers\nSum of first n cube numbers\nCalculation\nSum (T )\nCalculation\nSum (C )\n3\n3\n3\n9\n1\n2\n1\n2\n+\n+\n6\n3\n3\n3\n36\n1\n2\n3\n1\n2\n3\n++\n+\n+\n10\n3\n3\n3\n3\n100\n1\n2\n3\n4\n1\n2\n3\n4\n+++\n+\n+\n+\n15\n3\n3\n3\n3\n3\n225\n1\n2\n3\n4\n5\n1\n2\n3\n4\n5\n++++\n+\n+\n+\n+\n1\n2\n3\n4\n5\n6\n3\n3\n3\n3\n3\n3\n1\n2\n3\n4\n5\n6\n+++++\n+\n+\n+\n+\n+\n[1]",
+   "marks": 1,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "21\n441",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        328.2,
+        549.1799926757812,
+        352.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Sum of first <i>n</i> positive integers",
+       "",
+       "Sum of first <i>n</i> cube numbers",
+       ""
+      ],
+      [
+       "Calculation Sum (<i>T</i> )",
+       "",
+       "Calculation Sum (<i>C</i> )",
+       ""
+      ],
+      [
+       "1 + 2",
+       "3",
+       "<sup>3</sup> <sup>3</sup> 1 + 2",
+       "9"
+      ],
+      [
+       "1 + 2 + 3",
+       "6",
+       "<sup>3</sup> <sup>3</sup> <sup>3</sup> 1 + 2 + 3",
+       "36"
+      ],
+      [
+       "1 + 2 + 3 + 4",
+       "10",
+       "<sup>3</sup> <sup>3</sup> <sup>3</sup> <sup>3</sup> 1 + 2 + 3 + 4",
+       "100"
+      ],
+      [
+       "1 + 2 + 3 + 4 + 5",
+       "15",
+       "<sup>3</sup> <sup>3</sup> <sup>3</sup> <sup>3</sup> <sup>3</sup> 1 + 2 + 3 + 4 + 5",
+       "225"
+      ],
+      [
+       "1 + 2 + 3 + 4 + 5 + 6",
+       "",
+       "<sup>3</sup> <sup>3</sup> <sup>3</sup> <sup>3</sup> <sup>3</sup> <sup>3</sup> 1 + 2 + 3 + 4 + 5 + 6",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      505.1,
+      570.0,
+      593.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 49.9,
+      "height_pt": 88.4
+     }
+    }
+   ],
+   "text": "Write a formula for C in terms of T.\n................................................. [1]",
+   "marks": 1,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "2\nC = T",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        352.6,
+        549.1799926757812,
+        377.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write a formula for <i>C</i> in terms of <i>T</i>.",
+     "text": "Write a formula for C in terms of T."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      596.1,
+      570.0,
+      749.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 88.9,
+      "height_pt": 153.4
+     }
+    }
+   ],
+   "text": "1\n+++ … 60\n2\n3\n1830\n+\n=\n3\n3\n3\n+ … 603\nCalculate   1\n2\n3\n.\n+\n+\n+\n................................................. [2]",
+   "marks": 2,
+   "path": "6(c)",
+   "mark_scheme": [
+    {
+     "label": "6(c)",
+     "text": "2\n1830\n3 348 900",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        377.1,
+        549.1799926757812,
+        426.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "1 + 2 + 3 + … 60+ = 1830 Calculate 1<sup>3</sup> + 2<sup>3</sup> + 3<sup>3</sup> + … 60+<sup>3</sup> .",
+     "text": "1 + 2 + 3 + … 60+ = 1830 Calculate 13 + 23 + 33 + … 60+3 ."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}
