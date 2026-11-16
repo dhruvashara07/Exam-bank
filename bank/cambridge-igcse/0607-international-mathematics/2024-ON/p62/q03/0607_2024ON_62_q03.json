@@ -1,0 +1,192 @@
+{
+ "id": "0607_2024ON_62_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    106.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 46.6
+   }
+  }
+ ],
+ "text": "3\nUse your result from Question 2(d)(i) to answer both parts of this question.\nAnna uses 3-digit numbers to find reverse differences.",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      111.4,
+      570.0,
+      223.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 40.5,
+      "height_pt": 111.6
+     }
+    }
+   ],
+   "text": "The reverse difference for a 3-digit number is 99.\nComment on the values of each of the three digits.\n.....................................................................................................................................................\n..................................................................................................................................................... [3]",
+   "marks": 3,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "99(a – c) = 99\nor\na correct example resulting in 99\nThe difference between the first and third digits\nmust be 1 oe\nThe second digit can be any digit",
+     "codes": [
+      "C1",
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        608.9,
+        549.239990234375,
+        724.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The reverse difference for a 3-digit number is 99. Comment on the values of each of the three digits.",
+     "text": "The reverse difference for a 3-digit number is 99. Comment on the values of each of the three digits."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      228.4,
+      570.0,
+      444.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 157.5,
+      "height_pt": 215.6
+     }
+    }
+   ],
+   "text": "The table in Question 2(a) is extended to 999.\nFind all the possible reverse differences for 3-digit numbers.\n..................................................................................................................................................... [2]",
+   "marks": 2,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "Min c = 0, max a = 9 so 0 to 9 = 10 [digits]\nor\ncorrect example showing RD of 891\nor\none of 0 × 99 or 1 × 99, ..., 9 × 99\nor\nc – a = 9 oe\n0, 99, 198, 297, 396, 495, 594, 693, 792, 891",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.239990234375,
+        215.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The table in <b>Question</b> 2(a) is extended to 999.",
+     "text": "The table in Question 2(a) is extended to 999."
+    },
+    {
+     "type": "text",
+     "html": "Find all the possible reverse differences for 3-digit numbers.",
+     "text": "Find all the possible reverse differences for 3-digit numbers."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Use your result from <b>Question</b> 2(d)(i) to answer both parts of this question.",
+   "text": "Use your result from Question 2(d)(i) to answer both parts of this question."
+  },
+  {
+   "type": "text",
+   "html": "Anna uses 3-digit numbers to find reverse differences.",
+   "text": "Anna uses 3-digit numbers to find reverse differences."
+  }
+ ]
+}

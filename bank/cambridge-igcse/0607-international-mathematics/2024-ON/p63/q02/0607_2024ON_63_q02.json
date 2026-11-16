@@ -1,0 +1,334 @@
+{
+ "id": "0607_2024ON_63_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    60.5,
+    570.0,
+    563.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 68.9,
+    "height_pt": 502.5
+   }
+  }
+ ],
+ "text": "2\nThis question is about grids with h\n=\n2\n.\nA 2 by 2 grid has 2 rows each with 1 diagonal square and 1 row of 2 diagonal squares.\nThe table shows this.\n2 by 2 grid\nNumber of rows of\nNumber of diagonal\nTotal\ndiagonal squares\nsquares in each row\n2\n1\n2\n1\n=\n2\n#\n1\n2\n1\n2\n=\n2\n#\nD(2, 2) = 2\n+\n2\n=\n4\nA 2 by 4 grid has 2 rows of 3 diagonal squares and 1 row of 4 diagonal squares.\nThe table shows this.\n2 by 4 grid\nNumber of rows of\nNumber of diagonal\nTotal\ndiagonal squares\nsquares in each row\n2\n3\n2\n3\n=\n6\n#\n1\n4\n1\n4\n=\n4\n#\nD(2, 4) = 6\n+\n4\n=\n10",
+ "marks": 6,
+ "figures": [
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    228.0,
+    114.0999984741211,
+    369.29998779296875,
+    155.39999389648438
+   ],
+   "id": "0607_2024ON_63_q02_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    87.9,
+    101.5,
+    509.5,
+    311.3
+   ],
+   "id": "0607_2024ON_63_q02a_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      343.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 77.9,
+      "height_pt": 284.1
+     }
+    }
+   ],
+   "text": "Complete the table.\nYou may use the grids to help you.\n2 by 8 grid\nNumber of rows of\nNumber of diagonal\nTotal\ndiagonal squares\nsquares in each row\n2\n1\nD(2, 8) =          +          = 22\n[3]",
+   "marks": 3,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "2\n7\n14\n1\n8\n8\nD(2, 8) = 14 + 8 = 22\n2 × 7 or 1 × 8 or\nIndication of correct 14 squares or 8 squares on\ngrids",
+     "codes": [
+      "2",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        629.1,
+        549.239990234375,
+        780.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table. You may use the grids to help you.",
+     "text": "Complete the table. You may use the grids to help you."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2024ON_63_q02a_diagram2",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 77.9
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      348.8,
+      570.0,
+      617.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 49.6,
+      "height_pt": 268.7
+     }
+    }
+   ],
+   "text": "A 2 by w grid has h\n=\n2\nand width w.\nComplete the table with expressions in terms of w.\n2 by w grid\nNumber of rows of\nNumber of diagonal\nTotal\ndiagonal squares\nsquares in each row\n2\n1\nD(2, w) =\n[3]",
+   "marks": 3,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "2\nw – 1\n2w – 2 oe\n1\nw\nw\nD(2, w) = 3w – 2 oe\nisw",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.239990234375,
+        200.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A 2 by w grid has h = 2 and width w.",
+     "text": "A 2 by w grid has h = 2 and width w."
+    },
+    {
+     "type": "text",
+     "html": "Complete the table with expressions in terms of w.",
+     "text": "Complete the table with expressions in terms of w."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "2 by w grid",
+       "",
+       ""
+      ],
+      [
+       "Number of rows of diagonal squares",
+       "Number of diagonal squares in each row",
+       "Total"
+      ],
+      [
+       "2",
+       "",
+       ""
+      ],
+      [
+       "1",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "D(2, w) ="
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 49.6
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This question is about grids with h = 2.",
+   "text": "This question is about grids with h = 2."
+  },
+  {
+   "type": "text",
+   "html": "A 2 by 2 grid has 2 rows each with 1 diagonal square and 1 row of 2 diagonal squares.",
+   "text": "A 2 by 2 grid has 2 rows each with 1 diagonal square and 1 row of 2 diagonal squares."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024ON_63_q02_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The table shows this.",
+   "text": "The table shows this."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "2 by 2 grid",
+     "",
+     ""
+    ],
+    [
+     "Number of rows of diagonal squares",
+     "Number of diagonal squares in each row",
+     "Total"
+    ],
+    [
+     "2",
+     "1",
+     "2 # 1 = 2"
+    ],
+    [
+     "1",
+     "2",
+     "1 # 2 = 2"
+    ],
+    [
+     "",
+     "",
+     "D(2, 2) = 2 + 2 = 4"
+    ]
+   ]
+  },
+  {
+   "type": "text",
+   "html": "A 2 by 4 grid has 2 rows of 3 diagonal squares and 1 row of 4 diagonal squares.",
+   "text": "A 2 by 4 grid has 2 rows of 3 diagonal squares and 1 row of 4 diagonal squares."
+  },
+  {
+   "type": "text",
+   "html": "The table shows this.",
+   "text": "The table shows this."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "2 by 4 grid",
+     "",
+     ""
+    ],
+    [
+     "Number of rows of diagonal squares",
+     "Number of diagonal squares in each row",
+     "Total"
+    ],
+    [
+     "2",
+     "3",
+     "2 # 3 = 6"
+    ],
+    [
+     "1",
+     "4",
+     "1 # 4 = 4"
+    ],
+    [
+     "",
+     "",
+     "D(2, 4) = 6 + 4 = 10"
+    ]
+   ]
+  }
+ ]
+}

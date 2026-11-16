@@ -1,0 +1,467 @@
+{
+ "id": "0607_2024ON_61_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    392.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 27.5,
+    "height_pt": 332.6
+   }
+  }
+ ],
+ "text": "2\nThe house number is the number of rows in the house.\nThis is House 1.\nThere are 0 horizontal cards.\nThere are 2 diagonal cards.\nThere are 2 cards in total.\nThis is House 2.\nThere is 1 horizontal card.\nThere are 6 diagonal cards.\nThere are 7 cards in total.\nThis is House 3.",
+ "marks": 11,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    269.6,
+    93.3,
+    367.7,
+    121.5
+   ],
+   "id": "0607_2024ON_61_q02_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    255.4,
+    197.6,
+    381.8,
+    248.5
+   ],
+   "id": "0607_2024ON_61_q02_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    255.4,
+    314.6,
+    381.8,
+    388.2
+   ],
+   "id": "0607_2024ON_61_q02_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    86.6,
+    666.9,
+    510.7,
+    785.8
+   ],
+   "id": "0607_2024ON_61_q02a_diagram4",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      410.4,
+      570.0,
+      789.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 19.7,
+      "height_pt": 379.1
+     }
+    }
+   ],
+   "text": "Complete the table.\nYou may use the grid to help you.\nHouse\nNumber of\nNumber of\nTotal number\n(h)\nhorizontal cards\ndiagonal cards\nof cards\n1\n0\n2\n2\n2\n1\n6\n7\n3\n4\n5\n[4]",
+   "marks": 4,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "h\nHorizontal\nDiagonal\nTotal\n1\n0\n2\n2\n2\n1\n6\n7\n3\n3\n12\n15\n4\n6\n20\n26\n5\n10\n30\n40\nHouse 4 or House 5 correctly drawn\nor\n3 differences from 1, 2, 3, 4 in horizontal\ncolumn or\n3 differences from 4, 6, 8, 10 in diagonal\ncolumn\nor\n3 differences from 5, 8, 11, 14 in total\ncolumn",
+     "codes": [
+      "3",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        252.2,
+        549.2999877929688,
+        536.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table. You may use the grid to help you.",
+     "text": "Complete the table. You may use the grid to help you."
+    },
+    {
+     "type": "text",
+     "html": "House Number of Number of Total number horizontal cards diagonal cards of cards",
+     "text": "House Number of Number of Total number horizontal cards diagonal cards of cards"
+    },
+    {
+     "type": "text",
+     "html": "0 2 2",
+     "text": "0 2 2"
+    },
+    {
+     "type": "text",
+     "html": "1 6 7",
+     "text": "1 6 7"
+    },
+    {
+     "type": "text",
+     "html": "3",
+     "text": "3"
+    },
+    {
+     "type": "text",
+     "html": "4",
+     "text": "4"
+    },
+    {
+     "type": "text",
+     "html": "5",
+     "text": "5"
+    },
+    {
+     "type": "figure",
+     "id": "0607_2024ON_61_q02a_diagram4",
+     "caption": null
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      184.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 92.5,
+      "height_pt": 124.6
+     }
+    }
+   ],
+   "text": "Find an expression, in terms of h, for the number of diagonal cards in House h.\n................................................. [2]",
+   "marks": 2,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "2\nh + h or h(h +1) oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        536.8,
+        549.2999877929688,
+        573.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression, in terms of h, for the number of diagonal cards in House h.",
+     "text": "Find an expression, in terms of h, for the number of diagonal cards in House h."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      189.4,
+      570.0,
+      405.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 105.5,
+      "height_pt": 215.6
+     }
+    }
+   ],
+   "text": "This is an expression for the number of horizontal cards in House h.\n0 5\n.\nhh\n(\n-\n1\n)\nUse this expression and your answer from part (b) to find an expression for the total number of\ncards in House h.\nGive your answer in its simplest form.\n................................................. [2]",
+   "marks": 2,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "0.5h (h−1) + h + h oe\n2\n2\n1.5h + 0.5h oe isw",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        573.9,
+        549.2999877929688,
+        632.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "This is an expression for the number of horizontal cards in House h.",
+     "text": "This is an expression for the number of horizontal cards in House h."
+    },
+    {
+     "type": "text",
+     "html": "0.5h (h - 1)",
+     "text": "0.5h (h - 1)"
+    },
+    {
+     "type": "text",
+     "html": "Use this expression and your answer from <b>part</b> (b) to find an expression for the total number of cards in House h. Give your answer in its simplest form.",
+     "text": "Use this expression and your answer from part (b) to find an expression for the total number of cards in House h. Give your answer in its simplest form."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      410.4,
+      570.0,
+      665.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 196.5,
+      "height_pt": 254.6
+     }
+    }
+   ],
+   "text": "The total number of cards in House k is 737.\nFind the number of rows in House k.\n................................................. [3]",
+   "marks": 3,
+   "path": "2(d)",
+   "mark_scheme": [
+    {
+     "label": "2(d)",
+     "text": "2\n1.5k + 0.5k = 737 oe or\n2\ncorrect sketch of y = 1.5k + 0.5k oe\n−0.5± 0.5 −4 ×1.5×−737\n2\nor better\n2 ×1.5\nor\n(3k + 67)(k – 22) or (1.5k – 33)(k + 22.3) oe\nor\nline drawn at y = 737 on sketch\nor\nsolution indicated at y = 0 on appropriate\nsketch\nor\n2\n3 correct trials of integer k > 10 in 1.5k +\n0.5k\nor\ntriangle drawn with at least 13 rows with 3\ntotals correct from rows > 10\n22 cao",
+     "codes": [
+      "C1",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.2999877929688,
+        438.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The total number of cards in House k is 737.",
+     "text": "The total number of cards in House k is 737."
+    },
+    {
+     "type": "text",
+     "html": "Find the number of rows in House k.",
+     "text": "Find the number of rows in House k."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 11,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The house number is the number of rows in the house.",
+   "text": "The house number is the number of rows in the house."
+  },
+  {
+   "type": "text",
+   "html": "This is House 1.",
+   "text": "This is House 1."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024ON_61_q02_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "There are 0 horizontal cards.",
+   "text": "There are 0 horizontal cards."
+  },
+  {
+   "type": "text",
+   "html": "There are 2 diagonal cards.",
+   "text": "There are 2 diagonal cards."
+  },
+  {
+   "type": "text",
+   "html": "There are 2 cards in total.",
+   "text": "There are 2 cards in total."
+  },
+  {
+   "type": "text",
+   "html": "This is House 2.",
+   "text": "This is House 2."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024ON_61_q02_diagram2",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "There is 1 horizontal card.",
+   "text": "There is 1 horizontal card."
+  },
+  {
+   "type": "text",
+   "html": "There are 6 diagonal cards.",
+   "text": "There are 6 diagonal cards."
+  },
+  {
+   "type": "text",
+   "html": "There are 7 cards in total.",
+   "text": "There are 7 cards in total."
+  },
+  {
+   "type": "text",
+   "html": "This is House 3.",
+   "text": "This is House 3."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024ON_61_q02_diagram3",
+   "caption": null
+  }
+ ]
+}

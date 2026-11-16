@@ -1,0 +1,380 @@
+{
+ "id": "0607_2024ON_63_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    60.5,
+    570.0,
+    342.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 88.3,
+    "height_pt": 282.0
+   }
+  }
+ ],
+ "text": "3\nThis question is about grids with h\n=.\n3\nA 3 by 5 grid has 3 rows each with 4 diagonal squares and 2 rows each with 5 diagonal squares.\nThe table shows this.\n3 by 5 grid\nNumber of rows of\nNumber of diagonal\nTotal\ndiagonal squares\nsquares in each row\n3\n4\n3\n4\n=\n12\n#\n2\n5\n2\n5\n=\n10\n#\nD(3, 5) = 12\n+\n10\n=\n22",
+ "marks": 7,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    156.9,
+    114.1,
+    264.0,
+    174.8
+   ],
+   "id": "0607_2024ON_63_q03_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    333.4,
+    114.1,
+    440.4,
+    174.8
+   ],
+   "id": "0607_2024ON_63_q03_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    109.30000305175781,
+    373.6000061035156,
+    488.0,
+    434.29998779296875
+   ],
+   "id": "0607_2024ON_63_q03a_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      346.0,
+      570.0,
+      531.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 153.3,
+      "height_pt": 185.5
+     }
+    }
+   ],
+   "text": "Work out D(3, 8).\n................................................. [2]",
+   "marks": 2,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "3 × 7 and 2 × 8 or\n21 and 16 or\nIndication of correct 7 squares and correct 8\nsquares on grids\n37",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        200.4,
+        549.239990234375,
+        287.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Work out D(3, 8).",
+     "text": "Work out D(3, 8)."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2024ON_63_q03a_diagram3",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      60.5,
+      570.0,
+      381.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 101.6,
+      "height_pt": 320.5
+     }
+    }
+   ],
+   "text": "A 3 by w grid has h\n= and width w.\n3\nComplete the table with expressions in terms of w.\n3 by w grid\nNumber of rows of\nNumber of diagonal\nTotal\ndiagonal squares\nsquares in each row\n3\n2\nD(3, w) =\n[3]",
+   "marks": 3,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "3\nw – 1\n3w – 3 oe\n2\nw\n2w\nD(2, w) = 5w – 3 oe\nisw",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        287.2,
+        549.239990234375,
+        398.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A 3 by w grid has h = 3 and width w.",
+     "text": "A 3 by w grid has h = 3 and width w."
+    },
+    {
+     "type": "text",
+     "html": "Complete the table with expressions in terms of w.",
+     "text": "Complete the table with expressions in terms of w."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "3 by w grid",
+       "",
+       ""
+      ],
+      [
+       "Number of rows of diagonal squares",
+       "Number of diagonal squares in each row",
+       "Total"
+      ],
+      [
+       "3",
+       "",
+       ""
+      ],
+      [
+       "2",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "D(3, w) ="
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 101.6
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      386.5,
+      570.0,
+      628.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 183.5,
+      "height_pt": 241.5
+     }
+    }
+   ],
+   "text": "In a 3 by w grid, D(3, w) = 97.\nFind the value of w.\n................................................. [2]",
+   "marks": 2,
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "5w – 3 = 97\n20",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        398.1,
+        549.239990234375,
+        447.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "In a 3 by w grid, D(3, w) = 97.",
+     "text": "In a 3 by w grid, D(3, w) = 97."
+    },
+    {
+     "type": "text",
+     "html": "Find the value of w.",
+     "text": "Find the value of w."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This question is about grids with h = 3.",
+   "text": "This question is about grids with h = 3."
+  },
+  {
+   "type": "text",
+   "html": "A 3 by 5 grid has 3 rows each with 4 diagonal squares and 2 rows each with 5 diagonal squares.",
+   "text": "A 3 by 5 grid has 3 rows each with 4 diagonal squares and 2 rows each with 5 diagonal squares."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024ON_63_q03_diagram1",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024ON_63_q03_diagram2",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The table shows this.",
+   "text": "The table shows this."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "3 by 5 grid",
+     "",
+     ""
+    ],
+    [
+     "Number of rows of diagonal squares",
+     "Number of diagonal squares in each row",
+     "Total"
+    ],
+    [
+     "3",
+     "4",
+     "3 # 4 = 12"
+    ],
+    [
+     "2",
+     "5",
+     "2 # 5 = 10"
+    ],
+    [
+     "",
+     "",
+     "D(3, 5) = 12 + 10 = 22"
+    ]
+   ]
+  }
+ ]
+}

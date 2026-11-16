@@ -1,0 +1,104 @@
+{
+ "id": "0607_2024ON_63_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 10,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    691.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 1,
+    "answer_line": null,
+    "working_gap_pt": 534.5,
+    "height_pt": 631.6
+   }
+  }
+ ],
+ "text": "6\nA grid is a rectangle.\nIt has 31 diagonal squares.\nD(h, w) =\n2\nhw\n-\n(\nh\n+\nw\n)\nFind the sizes of the possible rectangular grids when h\n1\nw\n.\n............................................................................................................................................................. [5]",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "6",
+   "text": "Two correct substitutions of h and w with h < w\nor\nTwo correct substitutions of h and w with h < w\nin\nh\nw – 1\nh(w – 1)\nh – 1\nw\nw(h – 1)\nwith\ntotals\nor\nTwo correct substitutions of h or w and solution\nof equation = 31\n1 by 32 oe\n2 by 11 oe\n4 by 5 oe",
+   "codes": [
+    "C2",
+    "3"
+   ],
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      46.619998931884766,
+      84.8,
+      549.239990234375,
+      318.1
+     ]
+    },
+    {
+     "page": 7,
+     "bbox": [
+      46.619998931884766,
+      84.1,
+      549.239990234375,
+      113.8
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A grid is a rectangle. It has 31 diagonal squares.",
+   "text": "A grid is a rectangle. It has 31 diagonal squares."
+  },
+  {
+   "type": "text",
+   "html": "D(h, w) = 2hw - (h + w)",
+   "text": "D(h, w) = 2hw - (h + w)"
+  },
+  {
+   "type": "text",
+   "html": "Find the sizes of the possible rectangular grids when h 1 w .",
+   "text": "Find the sizes of the possible rectangular grids when h 1 w ."
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
+   "lines": 1
+  },
+  {
+   "type": "marks",
+   "value": 5
+  }
+ ]
+}

@@ -1,0 +1,192 @@
+{
+ "id": "0607_2024ON_53_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    410.4,
+    570.0,
+    431.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 20.6
+   }
+  }
+ ],
+ "text": "4\nA 4-digit number abcd, where a\n2\nd\n, has a value of\n1000\na\n+\n100\nb\n+\n10\nc\n+\nd\n.",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      436.4,
+      570.0,
+      704.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 222.5,
+      "height_pt": 267.6
+     }
+    }
+   ],
+   "text": "Find an expression, in terms of a, b, c and d, for the reverse difference.\nYour answer should have four terms.\n............................................................................... [3]",
+   "marks": 3,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "1000d + 100c + 10b + a\n999a + 90b − 90c − 999d",
+     "codes": [
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        213.4,
+        547.7999877929688,
+        263.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression, in terms of a, b, c and d, for the reverse difference. Your answer should have four terms.",
+     "text": "Find an expression, in terms of a, b, c and d, for the reverse difference. Your answer should have four terms."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      613.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 482.5,
+      "height_pt": 553.6
+     }
+    }
+   ],
+   "text": "A 4-digit number has first digit 7 and last digit 5.\nIts reverse difference is 2178.\nFind the connection between the middle two digits of the 4-digit number.\n..................................................................................................................................................... [4]",
+   "marks": 4,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "Second digit minus third digit is 2 oe\nor b – c = 2\nAND\nOne correct calculation with b – c = 2\ne.g. 7 3 1 5\n− 5 1 3 7\n2 1 7 8\nTwo further correct calculations with b – c = 2\nOR\nSubstitution of a = 7 and d = 5\ne.g. 999 × 7 + 90b – 90c – 999 × 5 = 2178\nCollection of terms\n90b – 90c = 2178 – 6993 + 4995 or better\nOR\n7 – 5 = 2\n2178 – 2 × 999\n180 ÷ 90 = 2",
+     "codes": [
+      "1",
+      "C2",
+      "C1",
+      "C2",
+      "C1",
+      "C1",
+      "C1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        263.1,
+        547.7999877929688,
+        653.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A 4-digit number has first digit 7 and last digit 5. Its reverse difference is 2178.",
+     "text": "A 4-digit number has first digit 7 and last digit 5. Its reverse difference is 2178."
+    },
+    {
+     "type": "text",
+     "html": "Find the connection between the middle two digits of the 4-digit number.",
+     "text": "Find the connection between the middle two digits of the 4-digit number."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 3,
+ "paper_code": "0607/53",
+ "paper_type": "core_investigation",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A 4-digit number abcd, where a 2 d , has a value of 1000a + 100b + 10c + d .",
+   "text": "A 4-digit number abcd, where a 2 d , has a value of 1000a + 100b + 10c + d ."
+  }
+ ]
+}

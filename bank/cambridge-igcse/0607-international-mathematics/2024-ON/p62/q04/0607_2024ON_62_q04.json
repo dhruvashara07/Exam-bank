@@ -1,0 +1,262 @@
+{
+ "id": "0607_2024ON_62_q04",
+ "number": 4,
+ "segments": [],
+ "text": "",
+ "marks": 9,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      462.4,
+      570.0,
+      782.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 287.5,
+      "height_pt": 319.6
+     }
+    }
+   ],
+   "text": "4\n(a) Find an expression for the reverse difference for the 5-digit number abcde, where a\n2.\ne\n.............................................................................. [3]",
+   "marks": 3,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "10 000a + 1000b + 100c + 10d + e\nor\n10 000e + 1000d + 100c + 10b + a\n9999a + 990b – 990d – 9999e isw oe",
+     "codes": [
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        215.1,
+        549.239990234375,
+        289.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression for the reverse difference for the 5-digit number abcde, where a 2 e.",
+     "text": "Find an expression for the reverse difference for the 5-digit number abcde, where a 2 e."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      60.4,
+      570.0,
+      81.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 20.6
+     }
+    }
+   ],
+   "text": "The 5-digit number  a158e  has a reverse difference of 33 066 and a\n2.\ne",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        86.4,
+        570.0,
+        536.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 417.5,
+        "height_pt": 449.6
+       }
+      }
+     ],
+     "text": "Find the connection between a and e.\n................................................. [4]",
+     "marks": 4,
+     "path": "4(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(i)",
+       "text": "9999a + 990b – 990d – 9999e = 33 066\nor\none correct trial of a158e – e851a with a > e\n9999a + 990 [× 1] – 990 × 8 – 9999e\nor\na second correct trial of a158e – e851a with a >\ne\n9999a – 9999e = 39 996 oe\nor\na third correct trial of a158e – e851a with a > e\nand with result of 33 066\na – e = 4 oe",
+       "codes": [
+        "C1",
+        "C1",
+        "C1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          46.619998931884766,
+          289.2,
+          549.239990234375,
+          526.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the connection between a and e.",
+       "text": "Find the connection between a and e."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 4
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        541.4,
+        570.0,
+        770.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 196.5,
+        "height_pt": 228.6
+       }
+      }
+     ],
+     "text": "Find all the 5-digit numbers a158e with a reverse difference of 33 066.\n............................................................................................................................................. [2]",
+     "marks": 2,
+     "path": "4(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(ii)",
+       "text": "41 580 51 581 61 582\n71 583 81 584 91 585",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          46.619998931884766,
+          526.2,
+          549.239990234375,
+          579.8
+         ]
+        },
+        {
+         "page": 8,
+         "bbox": [
+          46.619998931884766,
+          84.1,
+          549.239990234375,
+          113.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find all the 5-digit numbers a158e with a reverse difference of 33 066.",
+       "text": "Find all the 5-digit numbers a158e with a reverse difference of 33 066."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "4(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "The 5-digit number a158e has a reverse difference of 33 066 and a 2 e.",
+     "text": "The 5-digit number a158e has a reverse difference of 33 066 and a 2 e."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

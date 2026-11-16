@@ -1,0 +1,97 @@
+{
+ "id": "0607_2024ON_63_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    314.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 157.5,
+    "height_pt": 254.6
+   }
+  }
+ ],
+ "text": "4\nIn an h by w grid there are:\n•\nh rows with (\nw\n-\n1\n)\ndiagonal squares\n•\n(\nh\n-\n1\n)\nrows with w diagonal squares.\nShow that    D(h, w) =\n2\nhw\n-\n(\nh\n+\nw\n)\n.\n[2]",
+ "marks": 2,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "4",
+   "text": "h × (w−1)\n(h−1) ×w oe\nand\nhw−h+hw−w\nleading to\n2hw−(h+w)",
+   "codes": [
+    "1",
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      46.619998931884766,
+      447.1,
+      549.239990234375,
+      522.0
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 2,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In an h by w grid there are:",
+   "text": "In an h by w grid there are:"
+  },
+  {
+   "type": "list",
+   "items": [
+    "h rows with (w - 1) diagonal squares",
+    "(h - 1) rows with w diagonal squares."
+   ]
+  },
+  {
+   "type": "text",
+   "html": "Show that D(h, w) = 2hw - (h + w) .",
+   "text": "Show that D(h, w) = 2hw - (h + w) ."
+  },
+  {
+   "type": "answer",
+   "kind": "space",
+   "height_pt": 157.5
+  },
+  {
+   "type": "marks",
+   "value": 2
+  }
+ ]
+}

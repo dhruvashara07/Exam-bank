@@ -1,0 +1,693 @@
+{
+ "id": "0607_2024ON_63_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 14,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    385.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 19.7,
+    "height_pt": 326.1
+   }
+  }
+ ],
+ "text": "9\nThis question is about what happens when a car overtakes a truck.\nThe diagrams are not to scale.\nIn these diagrams, the direction of travel is from left to right.\nThe car has length 5 metres.\nThe truck has length 15 metres.\nThe car moves into the outside lane to overtake the truck when there is a gap of 45 metres between the\nfront of the car and the back of the truck.\nOutside lane\nInside lane\n5m\n45m\n15m\nThe car moves back into the inside lane when there is a gap of 50 metres between the back of the car\nand the front of the truck.\nOutside lane\nInside lane\n15m\n50m\n5m",
+ "marks": 15,
+ "figures": [
+  {
+   "caption": null,
+   "page": 15,
+   "bbox": [
+    70.3,
+    127.0,
+    527.1,
+    490.5
+   ],
+   "id": "0607_2024ON_63_q09b_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      396.9,
+      570.0,
+      521.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 40.5,
+      "height_pt": 124.6
+     }
+    }
+   ],
+   "text": "When the car starts overtaking the distance between the front of the car and the front of the truck is\n60 m.\nShow that when the car finishes overtaking the distance between the front of the car and the front\nof the truck is 55 m.\n[1]",
+   "marks": 1,
+   "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "5+50 [= 55]",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        638.6,
+        549.239990234375,
+        663.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "When the car starts overtaking the distance between the front of the car and the front of the truck is m.",
+     "text": "When the car starts overtaking the distance between the front of the car and the front of the truck is m."
+    },
+    {
+     "type": "text",
+     "html": "Show that when the car finishes overtaking the distance between the front of the car and the front of the truck is 55 m.",
+     "text": "Show that when the car finishes overtaking the distance between the front of the car and the front of the truck is 55 m."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 40.5
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      60.3,
+      570.0,
+      679.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 88.4,
+      "height_pt": 619.2
+     }
+    }
+   ],
+   "text": "The car starts overtaking the truck at time t\n=\n8\nseconds.\nThe car finishes overtaking the truck at time t\n=\nk\nseconds.\nThe sketch graph shows their distances from a fixed point on the road.\nd\nCar\n(40,900)\n55m\nTruck\nDistance\n(metres)\n60m\n100\n0\nt\n0\n8\nk\nTime (seconds)\nThe distance travelled, d metres, and the time taken, t seconds, are measured from a fixed point on\nthe road.\nA model for the distance travelled by the car, in terms of t, is d\n=\n25\nt\n.\nFind the speed of the truck and write down a model for the distance travelled by the truck.\nSpeed  ................................................\nModel  ................................................ [3]",
+   "marks": 3,
+   "path": "9(b)",
+   "mark_scheme": [
+    {
+     "label": "9(b)",
+     "text": "900 −1 00\nor\n40−0\n260 −1 00\n8\nd = 20t + 100",
+     "codes": [
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        663.7,
+        549.239990234375,
+        765.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The car starts overtaking the truck at time t = 8 seconds. The car finishes overtaking the truck at time t = k seconds.",
+     "text": "The car starts overtaking the truck at time t = 8 seconds. The car finishes overtaking the truck at time t = k seconds."
+    },
+    {
+     "type": "text",
+     "html": "The sketch graph shows their distances from a fixed point on the road.",
+     "text": "The sketch graph shows their distances from a fixed point on the road."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2024ON_63_q09b_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "The distance travelled, d metres, and the time taken, t seconds, are measured from a fixed point on the road. A model for the distance travelled by the car, in terms of t, is d = 25t .",
+     "text": "The distance travelled, d metres, and the time taken, t seconds, are measured from a fixed point on the road. A model for the distance travelled by the car, in terms of t, is d = 25t ."
+    },
+    {
+     "type": "text",
+     "html": "Find the speed of the truck and write down a model for the distance travelled by the truck.",
+     "text": "Find the speed of the truck and write down a model for the distance travelled by the truck."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Speed"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Model"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      60.3,
+      570.0,
+      237.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 118.5,
+      "height_pt": 176.7
+     }
+    }
+   ],
+   "text": "When t\n=\n8\n, the truck is 60 metres in front of the car.\nFind the time, k seconds, when the car is 55 metres in front of the truck.\n................................................. [2]",
+   "marks": 2,
+   "path": "9(c)",
+   "mark_scheme": [
+    {
+     "label": "9(c)",
+     "text": "20k +1 00 = 25k – 55 oe or\n60 + 55\nor\n25 −20\nList of pairs of distances including 720 with 775\n31",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.239990234375,
+        180.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "When t = 8, the truck is 60 metres in front of the car.",
+     "text": "When t = 8, the truck is 60 metres in front of the car."
+    },
+    {
+     "type": "text",
+     "html": "Find the time, k seconds, when the car is 55 metres in front of the truck.",
+     "text": "Find the time, k seconds, when the car is 55 metres in front of the truck."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      242.3,
+      570.0,
+      380.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 105.5,
+      "height_pt": 137.7
+     }
+    }
+   ],
+   "text": "Work out the total distance that the car travels when overtaking the truck.\n................................................. [2]",
+   "marks": 2,
+   "path": "9(d)",
+   "mark_scheme": [
+    {
+     "label": "9(d)",
+     "text": "25 × 8 or\n25 × 31 or\n25 × (31 – 8)\n575 m",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.619998931884766,
+        180.4,
+        549.239990234375,
+        254.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Work out the total distance that the car travels when overtaking the truck.",
+     "text": "Work out the total distance that the car travels when overtaking the truck."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      385.3,
+      570.0,
+      406.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 20.7
+     }
+    }
+   ],
+   "text": "When the car overtakes the truck it travels further than the truck.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 16,
+       "bbox": [
+        30.0,
+        411.3,
+        570.0,
+        536.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 92.5,
+        "height_pt": 124.7
+       }
+      }
+     ],
+     "text": "Show that the difference between the distances travelled by the car and the truck is 115 metres.\n[1]",
+     "marks": 1,
+     "path": "9(e)(i)",
+     "mark_scheme": [
+      {
+       "label": "9(e)(i)",
+       "text": "60 + 55 or\n5 × (31 – 8) or\n575 – (20 × (31 – 8)) or\n575 – ((20 × 31+ 100) – 260)",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          46.619998931884766,
+          254.6,
+          549.239990234375,
+          317.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Show that the difference between the distances travelled by the car and the truck is 115 metres.",
+       "text": "Show that the difference between the distances travelled by the car and the truck is 115 metres."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 92.5
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 17,
+       "bbox": [
+        30.0,
+        59.4,
+        570.0,
+        158.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 40.5,
+        "height_pt": 98.6
+       }
+      }
+     ],
+     "text": "The speed of the car is now x m/s and the speed of the truck is 20 m/s.\nWrite down an expression for the difference in speed between the car and the truck.\n................................................. [1]",
+     "marks": 1,
+     "path": "9(e)(ii)",
+     "mark_scheme": [
+      {
+       "label": "9(e)(ii)",
+       "text": "x – 20",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          46.619998931884766,
+          317.0,
+          549.239990234375,
+          341.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The speed of the car is now x m/s and the speed of the truck is 20 m/s.",
+       "text": "The speed of the car is now x m/s and the speed of the truck is 20 m/s."
+      },
+      {
+       "type": "text",
+       "html": "Write down an expression for the difference in speed between the car and the truck.",
+       "text": "Write down an expression for the difference in speed between the car and the truck."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 17,
+       "bbox": [
+        30.0,
+        163.4,
+        570.0,
+        410.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 190.3,
+        "height_pt": 246.6
+       }
+      }
+     ],
+     "text": "Show that a model for the total distance, D metres, the car travels when overtaking the truck\n115\nx\nis     D\n=\n.\nx\n-\n20\n[2]",
+     "marks": 2,
+     "path": "9(e)(iii)",
+     "mark_scheme": [
+      {
+       "label": "9(e)(iii)",
+       "text": "115\n115x\ns[peed] × t[ime] = x ×\nleading to\nx − 20\nx − 20",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          46.619998931884766,
+          341.4,
+          549.239990234375,
+          382.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Show that a model for the total distance, D metres, the car travels when overtaking the truck is D = \\(\\frac{115x}{x - 20}\\) .",
+       "text": "Show that a model for the total distance, D metres, the car travels when overtaking the truck is D = (115x)/(x-20) ."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 190.3
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "iv",
+     "segments": [
+      {
+       "page": 17,
+       "bbox": [
+        30.0,
+        428.4,
+        570.0,
+        670.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 183.5,
+        "height_pt": 241.6
+       }
+      }
+     ],
+     "text": "The car travels 690 metres when overtaking the truck.\nFind the speed of the car when overtaking the truck.\n................................................. [3]",
+     "marks": 3,
+     "path": "9(e)(iv)",
+     "mark_scheme": [
+      {
+       "label": "9(e)(iv)",
+       "text": "115x\n= 690\nx − 20\nor\n20 : 575\nx : 690 oe\nor\n115x\nsketch of positive branch of D =\nx − 20\n690(x – 20) = 115x or better\nor\n20\n575\n×690 oe\nor\nhorizontal line at 690\n24 m/s",
+       "codes": [
+        "C1",
+        "C1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          46.619998931884766,
+          382.1,
+          549.239990234375,
+          621.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The car travels 690 metres when overtaking the truck.",
+       "text": "The car travels 690 metres when overtaking the truck."
+      },
+      {
+       "type": "text",
+       "html": "Find the speed of the car when overtaking the truck.",
+       "text": "Find the speed of the car when overtaking the truck."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "9(e)",
+   "content": [
+    {
+     "type": "text",
+     "html": "When the car overtakes the truck it travels further than the truck.",
+     "text": "When the car overtakes the truck it travels further than the truck."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 15,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This question is about what happens when a car overtakes a truck. The diagrams are not to scale. In these diagrams, the direction of travel is from left to right.",
+   "text": "This question is about what happens when a car overtakes a truck. The diagrams are not to scale. In these diagrams, the direction of travel is from left to right."
+  },
+  {
+   "type": "text",
+   "html": "The car has length 5 metres. The truck has length 15 metres.",
+   "text": "The car has length 5 metres. The truck has length 15 metres."
+  },
+  {
+   "type": "text",
+   "html": "The car moves into the outside lane to overtake the truck when there is a gap of 45 metres between the front of the car and the back of the truck.",
+   "text": "The car moves into the outside lane to overtake the truck when there is a gap of 45 metres between the front of the car and the back of the truck."
+  },
+  {
+   "type": "text",
+   "html": "Outside lane",
+   "text": "Outside lane"
+  },
+  {
+   "type": "text",
+   "html": "Inside lane",
+   "text": "Inside lane"
+  },
+  {
+   "type": "text",
+   "html": "m 45 m 15 m",
+   "text": "m 45 m 15 m"
+  },
+  {
+   "type": "text",
+   "html": "The car moves back into the inside lane when there is a gap of 50 metres between the back of the car and the front of the truck.",
+   "text": "The car moves back into the inside lane when there is a gap of 50 metres between the back of the car and the front of the truck."
+  },
+  {
+   "type": "text",
+   "html": "Outside lane",
+   "text": "Outside lane"
+  },
+  {
+   "type": "text",
+   "html": "Inside lane",
+   "text": "Inside lane"
+  },
+  {
+   "type": "text",
+   "html": "m 50 m 5 m",
+   "text": "m 50 m 5 m"
+  }
+ ]
+}

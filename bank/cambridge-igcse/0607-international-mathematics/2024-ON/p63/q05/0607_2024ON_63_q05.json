@@ -1,0 +1,193 @@
+{
+ "id": "0607_2024ON_63_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 9,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    93.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 33.6
+   }
+  }
+ ],
+ "text": "5\nThis question is about a square grid with n rows and n columns.\nThis is an n by n grid.",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      98.4,
+      570.0,
+      366.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 209.5,
+      "height_pt": 267.6
+     }
+    }
+   ],
+   "text": "D(h, w) =\n2\nhw\n-\n(\nh\n+\nw\n)\nShow that the number of diagonal squares in an n by n grid, D(n, n), is always an even number.\n[2]",
+   "marks": 2,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "2n −2n\n2\nhas a factor of 2 so must be/always even or\nis a multiple of 2 so must be/always even oe",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        522.0,
+        549.239990234375,
+        587.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "D(h, w) = 2hw - (h + w)",
+     "text": "D(h, w) = 2hw - (h + w)"
+    },
+    {
+     "type": "text",
+     "html": "Show that the number of diagonal squares in an n by n grid, D(n, n), is always an even number.",
+     "text": "Show that the number of diagonal squares in an n by n grid, D(n, n), is always an even number."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 209.5
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      371.4,
+      570.0,
+      717.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 261.5,
+      "height_pt": 345.6
+     }
+    }
+   ],
+   "text": "The width of square grid A is one more than the width of square grid B.\nThe width of square grid B is n.\nThe difference between the number of diagonal squares in the two square grids is 36.\nFind the value of n.\n................................................. [4]",
+   "marks": 4,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "n + 1 seen\n2(n+1) −2(n+1) oe seen\n2\n2n −2n\n2\nand\nCorrect simplification to 4n=36\n9",
+     "codes": [
+      "C1",
+      "C1",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        587.2,
+        549.239990234375,
+        707.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The width of square grid A is one more than the width of square grid B. The width of square grid B is n. The difference between the number of diagonal squares in the two square grids is 36.",
+     "text": "The width of square grid A is one more than the width of square grid B. The width of square grid B is n. The difference between the number of diagonal squares in the two square grids is 36."
+    },
+    {
+     "type": "text",
+     "html": "Find the value of n.",
+     "text": "Find the value of n."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This question is about a square grid with n rows and n columns. This is an n by n grid.",
+   "text": "This question is about a square grid with n rows and n columns. This is an n by n grid."
+  }
+ ]
+}

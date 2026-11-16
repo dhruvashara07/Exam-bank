@@ -1,0 +1,265 @@
+{
+ "id": "0607_2024ON_23_q11",
+ "number": 11,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    357.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 44.3,
+    "height_pt": 297.6
+   }
+  }
+ ],
+ "text": "A bag contains blue pens and green pens.\nZoe takes a pen from the bag at random, records the colour and replaces the pen.\nShe then takes a second pen from the bag at random.\nThe probabilities are shown in the tree diagram.\nBlue\n1\n4\nBlue\n1\n3\n4\nGreen\n4\nBlue\n1\n4\n3\n4\nGreen\n3\n4\nGreen",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    181.6,
+    130.1,
+    420.5,
+    355.2
+   ],
+   "id": "0607_2024ON_23_q11_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      367.7,
+      570.0,
+      453.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 27.5,
+      "height_pt": 85.8
+     }
+    }
+   ],
+   "text": "There are 40 pens in the bag.\nFind the number of blue pens.\n................................................. [1]",
+   "marks": 1,
+   "path": "11(a)",
+   "mark_scheme": [
+    {
+     "label": "11(a)",
+     "text": "10",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        392.7,
+        549.2999877929688,
+        417.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "There are 40 pens in the bag.",
+     "text": "There are 40 pens in the bag."
+    },
+    {
+     "type": "text",
+     "html": "Find the number of blue pens.",
+     "text": "Find the number of blue pens."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      458.7,
+      570.0,
+      583.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 92.5,
+      "height_pt": 124.8
+     }
+    }
+   ],
+   "text": "Find the probability that Zoe takes a blue pen and then a green pen.\n................................................. [2]",
+   "marks": 2,
+   "path": "11(b)",
+   "mark_scheme": [
+    {
+     "label": "11(b)",
+     "text": "3\noe\n16",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        417.2,
+        549.2999877929688,
+        460.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the probability that Zoe takes a blue pen and then a green pen.",
+     "text": "Find the probability that Zoe takes a blue pen and then a green pen."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      588.7,
+      570.0,
+      700.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 79.5,
+      "height_pt": 111.8
+     }
+    }
+   ],
+   "text": "Find the probability that Zoe takes at least one blue pen.\n................................................. [2]",
+   "marks": 2,
+   "path": "11(c)",
+   "mark_scheme": [
+    {
+     "label": "11(c)",
+     "text": "7\n16",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        460.3,
+        549.2999877929688,
+        537.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the probability that Zoe takes at least one blue pen.",
+     "text": "Find the probability that Zoe takes at least one blue pen."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 2,
+ "variant": 3,
+ "paper_code": "0607/23",
+ "paper_type": "extended_short_answer",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A bag contains blue pens and green pens. Zoe takes a pen from the bag at random, records the colour and replaces the pen. She then takes a second pen from the bag at random. The probabilities are shown in the tree diagram.",
+   "text": "A bag contains blue pens and green pens. Zoe takes a pen from the bag at random, records the colour and replaces the pen. She then takes a second pen from the bag at random. The probabilities are shown in the tree diagram."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024ON_23_q11_diagram1",
+   "caption": null
+  }
+ ]
+}

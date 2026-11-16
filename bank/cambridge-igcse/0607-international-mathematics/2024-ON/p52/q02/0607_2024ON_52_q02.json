@@ -1,0 +1,559 @@
+{
+ "id": "0607_2024ON_52_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    156.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 96.6
+   }
+  }
+ ],
+ "text": "2\nYou can find reverse differences for 3-digit numbers using the same steps.\nExample\nSTEP 1\nWrite a number\n138\nSTEP 2\nReverse the digits\n831\nSTEP 3\nFind the difference\n831\n-\n138\n=\n693",
+ "marks": 11,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      163.4,
+      570.0,
+      524.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 46.4,
+      "height_pt": 360.6
+     }
+    }
+   ],
+   "text": "Complete this table.\nYou may use any patterns you notice to help you.\nReverse\nReverse\nReverse\nReverse\nNumber\nNumber\nNumber\nNumber\ndifference\ndifference\ndifference\ndifference\n100\n99\n110\n120\n130\n99\n101\n0\n111\n0\n121\n0\n131\n0\n102\n112\n122\n132\n99\n103\n198\n113\n123\n133\n104\n297\n114\n124\n134\n105\n396\n115\n125\n135\n106\n116\n126\n136\n495\n107\n117\n127\n137\n594\n108\n693\n118\n128\n138\n693\n109\n792\n119\n129\n139\n792\n[3]",
+   "marks": 3,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "N\nD\nN\nD\nN\nD\nN\nD\n100\n99\n110\n99\n120\n99\n130\n99\n101\n0\n111\n0\n121\n0\n131\n0\n102\n99\n112\n99\n122\n99\n132\n99\n103\n198\n113\n198\n123\n198\n133\n198\n104\n297\n114\n297\n124\n297\n134\n297\n105\n396\n115\n396\n125\n396\n135\n396\n106\n495\n116\n495\n126\n495\n136\n495\n107\n594\n117\n594\n127\n594\n137\n594\n108\n693\n118\n693\n128\n693\n138\n693\n109\n792\n119\n792\n129\n792\n139\n792\nOne correct subtraction seen\nor\nthree differences of 99",
+     "codes": [
+      "2",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        547.7999877929688,
+        377.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this table. You may use any patterns you notice to help you.",
+     "text": "Complete this table. You may use any patterns you notice to help you."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Number",
+       "Reverse difference",
+       "Number",
+       "Reverse difference",
+       "Number",
+       "Reverse difference",
+       "Number",
+       "Reverse difference"
+      ],
+      [
+       "100",
+       "99",
+       "110",
+       "",
+       "120",
+       "",
+       "130",
+       "99"
+      ],
+      [
+       "101",
+       "0",
+       "111",
+       "0",
+       "121",
+       "0",
+       "131",
+       "0"
+      ],
+      [
+       "102",
+       "",
+       "112",
+       "",
+       "122",
+       "",
+       "132",
+       "99"
+      ],
+      [
+       "103",
+       "198",
+       "113",
+       "",
+       "123",
+       "",
+       "133",
+       ""
+      ],
+      [
+       "104",
+       "297",
+       "114",
+       "",
+       "124",
+       "",
+       "134",
+       ""
+      ],
+      [
+       "105",
+       "396",
+       "115",
+       "",
+       "125",
+       "",
+       "135",
+       ""
+      ],
+      [
+       "106",
+       "",
+       "116",
+       "",
+       "126",
+       "",
+       "136",
+       "495"
+      ],
+      [
+       "107",
+       "",
+       "117",
+       "",
+       "127",
+       "",
+       "137",
+       "594"
+      ],
+      [
+       "108",
+       "693",
+       "118",
+       "",
+       "128",
+       "",
+       "138",
+       "693"
+      ],
+      [
+       "109",
+       "792",
+       "119",
+       "",
+       "129",
+       "",
+       "139",
+       "792"
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 46.4
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      529.3,
+      570.0,
+      602.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 40.5,
+      "height_pt": 72.7
+     }
+    }
+   ],
+   "text": "Complete the statement with the largest number possible.\nThe reverse difference is always a multiple of  ................................................ [1]",
+   "marks": 1,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "99",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        377.5,
+        547.7999877929688,
+        401.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the statement with the largest number possible.",
+     "text": "Complete the statement with the largest number possible."
+    },
+    {
+     "type": "text",
+     "html": "The reverse difference is always a multiple of ……",
+     "text": "The reverse difference is always a multiple of ……"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      118.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 14.5,
+      "height_pt": 59.1
+     }
+    }
+   ],
+   "text": "A 3-digit number   abc   has first digit a, second digit b and third digit c.\nIn this part a\n2.\nc\nSo the number 601 has   a\n=\n6\n, b\n=\n0\nand c\n=.\n1",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        124.4,
+        570.0,
+        405.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 209.5,
+        "height_pt": 280.6
+       }
+      }
+     ],
+     "text": "There is a relationship between   a\n-   and the reverse difference.\nc\nInvestigate this relationship, giving three examples.\nWrite down this relationship.\n............................................................................................................................................. [3]",
+     "marks": 3,
+     "path": "2(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(i)",
+       "text": "Three examples, each with three calculations\nshowing the rule\ne.g. 601 – 106 = 495\n6 – 1 = 5\n5 × 99 = 495 oe\nor 500 – 5 = 495\n(a – c) × 99 = reverse difference oe isw",
+       "codes": [
+        "2",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.619998931884766,
+          401.9,
+          547.7999877929688,
+          514.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "There is a relationship between a - c and the reverse difference.",
+       "text": "There is a relationship between a - c and the reverse difference."
+      },
+      {
+       "type": "text",
+       "html": "Investigate this relationship, giving three examples. Write down this relationship.",
+       "text": "Investigate this relationship, giving three examples. Write down this relationship."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        410.4,
+        570.0,
+        639.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 92.5,
+        "height_pt": 228.6
+       }
+      }
+     ],
+     "text": "Anna says that a is the hundreds digit, b is the tens digit and c is the units digit.\nShe says the value of   abc   is\n100\na\n+\n10\nb\n+.\nc\nAnna writes the value of the reverse number cba.\n100\nc\n+\n10\nb\n+\na\nShe writes the difference between the two numbers.\n(\n100\na\n+\n10\nb\n+\nc\n)\n-\n(\n100\nc\n+\n10\nb\n+\na\n)\nContinue Anna’s working to show that the\nreverse difference is\n99\n(\na\n-\nc\n)\n.\n[2]",
+     "marks": 2,
+     "path": "2(c)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(ii)",
+       "text": "100a + 10b + c – 100c – 10b – a\n99a – 99c = 99(a – c)",
+       "codes": [
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.619998931884766,
+          514.9,
+          547.7999877929688,
+          563.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Anna says that a is the hundreds digit, b is the tens digit and c is the units digit. She says the value of abc is 100a + 10b + c.",
+       "text": "Anna says that a is the hundreds digit, b is the tens digit and c is the units digit. She says the value of abc is 100a + 10b + c."
+      },
+      {
+       "type": "text",
+       "html": "Anna writes the value of the reverse number cba. 100c + 10b + a",
+       "text": "Anna writes the value of the reverse number cba. 100c + 10b + a"
+      },
+      {
+       "type": "text",
+       "html": "She writes the difference between the two numbers. (100a + 10b + c) - (100c + 10b + a)",
+       "text": "She writes the difference between the two numbers. (100a + 10b + c) - (100c + 10b + a)"
+      },
+      {
+       "type": "text",
+       "html": "Continue Anna’s working to show that the reverse difference is 99 (a - c) .",
+       "text": "Continue Anna’s working to show that the reverse difference is 99 (a - c) ."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 92.5
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        644.4,
+        570.0,
+        795.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 92.5,
+        "height_pt": 150.6
+       }
+      }
+     ],
+     "text": "A 3-digit number has   a\n=\n8\nand a reverse difference of 594.\nFind three possible 3-digit numbers.\n............................................................................... [2]",
+     "marks": 2,
+     "path": "2(c)(iii)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(iii)",
+       "text": "594 ÷ 99\nor\ndifference [between a and c] = 6\nor\n99c = 99×8 – 594\nor\nthree correct trials with a = 8\nThree numbers of the form\n8 ... 2",
+       "codes": [
+        "C1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.619998931884766,
+          563.8,
+          547.7999877929688,
+          705.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "A 3-digit number has a = 8 and a reverse difference of 594.",
+       "text": "A 3-digit number has a = 8 and a reverse difference of 594."
+      },
+      {
+       "type": "text",
+       "html": "Find <b>three</b> possible 3-digit numbers.",
+       "text": "Find three possible 3-digit numbers."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "2(c)",
+   "content": [
+    {
+     "type": "text",
+     "html": "A 3-digit number abc has first digit a, second digit b and third digit c. In this part a 2 c .",
+     "text": "A 3-digit number abc has first digit a, second digit b and third digit c. In this part a 2 c ."
+    },
+    {
+     "type": "text",
+     "html": "So the number 601 has a = 6 , b = 0 and c = 1.",
+     "text": "So the number 601 has a = 6 , b = 0 and c = 1."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 11,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "You can find reverse differences for 3-digit numbers using the same steps.",
+   "text": "You can find reverse differences for 3-digit numbers using the same steps."
+  },
+  {
+   "type": "text",
+   "html": "Example",
+   "text": "Example"
+  },
+  {
+   "type": "text",
+   "html": "STEP 1 Write a number 138 STEP 2 Reverse the digits 831 STEP 3 Find the difference 831 - 138 = 693",
+   "text": "STEP 1 Write a number 138 STEP 2 Reverse the digits 831 STEP 3 Find the difference 831 - 138 = 693"
+  }
+ ]
+}

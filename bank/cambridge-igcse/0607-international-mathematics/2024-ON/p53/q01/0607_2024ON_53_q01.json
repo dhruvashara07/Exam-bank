@@ -1,0 +1,630 @@
+{
+ "id": "0607_2024ON_53_q01",
+ "number": 1,
+ "segments": [],
+ "text": "",
+ "marks": 13,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      294.1,
+      570.0,
+      412.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 20.4,
+      "height_pt": 118.4
+     }
+    }
+   ],
+   "text": "1\n(a) Complete the three steps for each 2-digit number in the table.\nSTEP 1\n12\n13\n14\n15\n16\n17\n18\nSTEP 2\n21\n31\n41\n51\nSTEP 3\n18\n45\n63\n[3]",
+   "marks": 3,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "12\n14\n15\n16\n17\n18\n61\n71\n81\n9\n27\n36\n54",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        502.3,
+        547.7999877929688,
+        560.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the three steps for each 2-digit number in the table.",
+     "text": "Complete the three steps for each 2-digit number in the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "12",
+       "13",
+       "14",
+       "15",
+       "16",
+       "17",
+       "18"
+      ],
+      [
+       "21",
+       "31",
+       "41",
+       "51",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "18",
+       "",
+       "",
+       "45",
+       "",
+       "63"
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "html": "STEP 1",
+     "text": "STEP 1"
+    },
+    {
+     "type": "text",
+     "html": "STEP 2",
+     "text": "STEP 2"
+    },
+    {
+     "type": "text",
+     "html": "STEP 3",
+     "text": "STEP 3"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      417.7,
+      570.0,
+      789.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 57.1,
+      "height_pt": 371.3
+     }
+    }
+   ],
+   "text": "Complete this table of 2-digit numbers and their reverse differences.\nUse part (a) and any patterns you notice to help you.\nReverse\nReverse\nReverse\nReverse\nNumber\nNumber\nNumber\nNumber\ndifference\ndifference\ndifference\ndifference\n10\n9\n20\n18\n30\n27\n40\n36\n11\n21\n9\n31\n18\n41\n27\n12\n22\n32\n9\n42\n13\n18\n23\n9\n33\n43\n14\n24\n34\n44\n15\n25\n27\n35\n45\n16\n45\n26\n36\n36\n46\n17\n27\n45\n37\n36\n47\n18\n63\n28\n54\n38\n45\n48\n19\n29\n63\n39\n54\n49\n45\n[4]",
+   "marks": 4,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "N\nD\nN\nD\nN\nD\nN\nD\n10\n9\n20\n18\n30\n27\n40\n36\n11\n0\n21\n9\n31\n18\n41\n27\n12\n9\n22\n0\n32\n9\n42\n18\n13\n18\n23\n9\n33\n0\n43\n9\n14\n27\n24\n18\n34\n9\n44\n0\n15\n36\n25\n27\n35\n18\n45\n9\n16\n45\n26\n36\n36\n27\n46\n18\n17\n54\n27\n45\n37\n36\n47\n27\n18\n63\n28\n54\n38\n45\n48\n36\n19\n72\n29\n63\n39\n54\n49\n45\nOne correct subtraction seen\nor\n3 differences of 9",
+     "codes": [
+      "3",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        547.7999877929688,
+        402.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this table of 2-digit numbers and their reverse differences. Use <b>part</b> (a) and any patterns you notice to help you.",
+     "text": "Complete this table of 2-digit numbers and their reverse differences. Use part (a) and any patterns you notice to help you."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Number",
+       "Reverse difference",
+       "Number",
+       "Reverse difference",
+       "Number",
+       "Reverse difference",
+       "Number",
+       "Reverse difference"
+      ],
+      [
+       "10",
+       "9",
+       "20",
+       "18",
+       "30",
+       "27",
+       "40",
+       "36"
+      ],
+      [
+       "11",
+       "",
+       "21",
+       "9",
+       "31",
+       "18",
+       "41",
+       "27"
+      ],
+      [
+       "12",
+       "",
+       "22",
+       "",
+       "32",
+       "9",
+       "42",
+       ""
+      ],
+      [
+       "13",
+       "18",
+       "23",
+       "9",
+       "33",
+       "",
+       "43",
+       ""
+      ],
+      [
+       "14",
+       "",
+       "24",
+       "",
+       "34",
+       "",
+       "44",
+       ""
+      ],
+      [
+       "15",
+       "",
+       "25",
+       "27",
+       "35",
+       "",
+       "45",
+       ""
+      ],
+      [
+       "16",
+       "45",
+       "26",
+       "36",
+       "36",
+       "",
+       "46",
+       ""
+      ],
+      [
+       "17",
+       "",
+       "27",
+       "45",
+       "37",
+       "36",
+       "47",
+       ""
+      ],
+      [
+       "18",
+       "63",
+       "28",
+       "54",
+       "38",
+       "45",
+       "48",
+       ""
+      ],
+      [
+       "19",
+       "",
+       "29",
+       "63",
+       "39",
+       "54",
+       "49",
+       "45"
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 57.1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      158.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 66.5,
+      "height_pt": 98.6
+     }
+    }
+   ],
+   "text": "Find how many 2-digit numbers have a reverse difference of 0.\n................................................. [2]",
+   "marks": 2,
+   "path": "1(c)",
+   "mark_scheme": [
+    {
+     "label": "1(c)",
+     "text": "9\n[11, 22, 33, 44,] 55, 66, 77, 88, 99\nor\ncomment that the digits must be the same.",
+     "codes": [
+      "1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        402.8,
+        547.7999877929688,
+        477.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find how many 2-digit numbers have a reverse difference of 0.",
+     "text": "Find how many 2-digit numbers have a reverse difference of 0."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        163.4,
+        570.0,
+        223.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 27.5,
+        "height_pt": 59.6
+       }
+      }
+     ],
+     "text": "Complete the statement with the largest number possible.\nThe reverse difference is always a multiple of  ................................................ [1]",
+     "marks": 1,
+     "path": "1(d)(i)",
+     "mark_scheme": [
+      {
+       "label": "1(d)(i)",
+       "text": "9",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.619998931884766,
+          477.0,
+          547.7999877929688,
+          501.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the statement with the largest number possible.",
+       "text": "Complete the statement with the largest number possible."
+      },
+      {
+       "type": "text",
+       "html": "The reverse difference is always a multiple of ……",
+       "text": "The reverse difference is always a multiple of ……"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        228.4,
+        570.0,
+        599.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 192.6,
+        "height_pt": 371.1
+       }
+      }
+     ],
+     "text": "The table in part (b) is extended to the right.\nThese two columns are part of the extended table.\nReverse\nNumber\ndifference\nA\n9\nWhat is the value of the 2-digit number A?\n................................................. [2]",
+     "marks": 2,
+     "path": "1(d)(ii)",
+     "mark_scheme": [
+      {
+       "label": "1(d)(ii)",
+       "text": "80\nIn 2nd column three from 72, 63, 54, 45, 36, 27, 18,\n9, 0 leading to 9 in the bottom row\nor\n[72, 63, 54, 45,] 36, 27, 18 (bottom row)\nor\n89 in bottom left cell and 98 – 89 = 9\nor\n12, 23, 34, 45, … or difference in digits is 1",
+       "codes": [
+        "1",
+        "C1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.619998931884766,
+          501.4,
+          547.7999877929688,
+          638.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The table in <b>part</b> (b) is extended to the right. These two columns are part of the extended table.",
+       "text": "The table in part (b) is extended to the right. These two columns are part of the extended table."
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "Number",
+         "Reverse difference"
+        ],
+        [
+         "A",
+         ""
+        ],
+        [
+         "",
+         ""
+        ],
+        [
+         "",
+         ""
+        ],
+        [
+         "",
+         ""
+        ],
+        [
+         "",
+         ""
+        ],
+        [
+         "",
+         ""
+        ],
+        [
+         "",
+         ""
+        ],
+        [
+         "",
+         ""
+        ],
+        [
+         "",
+         ""
+        ],
+        [
+         "",
+         "9"
+        ]
+       ]
+      },
+      {
+       "type": "text",
+       "html": "What is the value of the 2-digit number A?",
+       "text": "What is the value of the 2-digit number A?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        605.0,
+        570.0,
+        729.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 66.5,
+        "height_pt": 124.5
+       }
+      }
+     ],
+     "text": "64 has a reverse difference of 18.\nShow how you can use 6 and 4 to work out the reverse difference without using the STEPs.\n[1]",
+     "marks": 1,
+     "path": "1(d)(iii)",
+     "mark_scheme": [
+      {
+       "label": "1(d)(iii)",
+       "text": "(6 – 4) × 9\noe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.619998931884766,
+          638.9,
+          547.7999877929688,
+          668.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "64 has a reverse difference of 18.",
+       "text": "64 has a reverse difference of 18."
+      },
+      {
+       "type": "text",
+       "html": "Show how you can use 6 and 4 to work out the reverse difference without using the STEPs.",
+       "text": "Show how you can use 6 and 4 to work out the reverse difference without using the STEPs."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 66.5
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "1(d)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 3,
+ "paper_code": "0607/53",
+ "paper_type": "core_investigation",
+ "total_marks": 13,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

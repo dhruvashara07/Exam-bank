@@ -1,0 +1,427 @@
+{
+ "id": "0607_2024ON_61_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    416.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 27.5,
+    "height_pt": 357.1
+   }
+  }
+ ],
+ "text": "3\nThe investigation now looks at the total number of cards in a sequence of houses of cards.\nThis is the first diagram in the sequence of houses.\nThere is 1 house.\nThere are 0 horizontal cards.\nThere are 2 diagonal cards.\nThere are 2 cards in total.\nThis is the second diagram in the sequence of houses.\nThere are 2 houses.\nThere is 1 horizontal card.\nThere are 8 diagonal cards.\nThere are 9 cards in total.\nThis is the third diagram in the sequence of houses.\nThere are 3 houses.\nThere are 4 horizontal cards.\nThere are 20 diagonal cards.\nThere are 24 cards in total.",
+ "marks": 10,
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    246.9,
+    133.6,
+    345.0,
+    161.8
+   ],
+   "id": "0607_2024ON_61_q03_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    246.9,
+    236.6,
+    472.5,
+    287.5
+   ],
+   "id": "0607_2024ON_61_q03_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    246.9,
+    339.2,
+    529.2,
+    412.8
+   ],
+   "id": "0607_2024ON_61_q03_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      423.3,
+      570.0,
+      777.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 114.1,
+      "height_pt": 353.7
+     }
+    }
+   ],
+   "text": "Complete the table.\nYou may use the table in Question 2(a) to help you.\nTotal number of\nNumber of\nNumber of\nTotal number\nhouses (t)\nhorizontal cards (H )\ndiagonal cards\nof cards\n1\n0\n2\n2\n2\n1\n8\n9\n3\n4\n20\n24\n4\n5\n[2]",
+   "marks": 2,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "t\nHorizontal H\nDiagonal\nTotal\n1\n0\n2\n2\n2\n1\n8\n9\n3\n4\n20\n24\n4\n10\n40\n50\n5\n20\n70\n90",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        438.3,
+        549.2999877929688,
+        597.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table. You may use the table in <b>Question</b> 2(a) to help you.",
+     "text": "Complete the table. You may use the table in Question 2(a) to help you."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Total number of",
+       "Number of",
+       "Number of",
+       "Total number"
+      ],
+      [
+       "houses (t)",
+       "horizontal cards (H)",
+       "diagonal cards",
+       "of cards"
+      ],
+      [
+       "1",
+       "0",
+       "2",
+       "2"
+      ],
+      [
+       "2",
+       "1",
+       "8",
+       "9"
+      ],
+      [
+       "3",
+       "4",
+       "20",
+       "24"
+      ],
+      [
+       "4",
+       "",
+       "",
+       ""
+      ],
+      [
+       "5",
+       "",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 114.1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      275.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "a =  ……",
+      "working_gap_pt": 79.5,
+      "height_pt": 215.6
+     }
+    }
+   ],
+   "text": "This is a formula for the number of horizontal cards, H, in a sequence of t houses of cards.\n1\nH\n=\ntt\n(\n+\nat\n)(\n-\na\n)\n,\n6\nwhere a is a positive constant.\nFind the value of a and write down the formula.\na =  .................................................\nH = ............................................................................... [3]",
+   "marks": 3,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "Substitution of any t, H pair from the table\ninto given equation or\nMethod of differences with two third\ndifferences\nof 1 and 6a = 1\n(a =) 1\n1\n(H =) t (t+1)(t−1) oe\n6",
+     "codes": [
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        597.3,
+        549.2999877929688,
+        729.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "This is a formula for the number of horizontal cards, H, in a sequence of t houses of cards.",
+     "text": "This is a formula for the number of horizontal cards, H, in a sequence of t houses of cards."
+    },
+    {
+     "type": "text",
+     "html": "H = \\(\\frac{1}{6}\\) t (t + a)(t - a),",
+     "text": "H = (1)/(6) t (t + a)(t - a),"
+    },
+    {
+     "type": "text",
+     "html": "where a is a positive constant.",
+     "text": "where a is a positive constant."
+    },
+    {
+     "type": "text",
+     "html": "Find the value of a and write down the formula.",
+     "text": "Find the value of a and write down the formula."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "a ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "H ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      280.4,
+      570.0,
+      730.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 391.5,
+      "height_pt": 449.6
+     }
+    }
+   ],
+   "text": "The nth diagram, with n houses, in the sequence of houses has 2925 horizontal cards.\nUse part (b) and Question 2(c) to find the total number of cards in the last house in the diagram.\n................................................. [5]",
+   "marks": 5,
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "1\nt (t+1)(t−1) and\nCorrect sketch of H =\n6\nline H = 2925 oe\nor\n3\n2925 ×6 rounded to 26\nor\n3 correct trials of integer t > 19 in their\n1\nt (t+a)(t−a)\nH =\n6\n2\nSubstitution of t = 26 into 1.5h + 0.5h\n1027",
+     "codes": [
+      "C2",
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.2999877929688,
+        354.8
+       ]
+      },
+      {
+       "page": 8,
+       "bbox": [
+        46.619998931884766,
+        84.1,
+        549.2999877929688,
+        113.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The nth diagram, with n houses, in the sequence of houses has 2925 horizontal cards.",
+     "text": "The nth diagram, with n houses, in the sequence of houses has 2925 horizontal cards."
+    },
+    {
+     "type": "text",
+     "html": "Use <b>part</b> (b) and <b>Question</b> 2(c) to find the total number of cards in the last house in the diagram.",
+     "text": "Use part (b) and Question 2(c) to find the total number of cards in the last house in the diagram."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 10,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The investigation now looks at the total number of cards in a sequence of houses of cards.",
+   "text": "The investigation now looks at the total number of cards in a sequence of houses of cards."
+  },
+  {
+   "type": "text",
+   "html": "This is the first diagram in the sequence of houses. There is 1 house.",
+   "text": "This is the first diagram in the sequence of houses. There is 1 house."
+  },
+  {
+   "type": "text",
+   "html": "There are 0 horizontal cards.",
+   "text": "There are 0 horizontal cards."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024ON_61_q03_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "There are 2 diagonal cards. There are 2 cards in total.",
+   "text": "There are 2 diagonal cards. There are 2 cards in total."
+  },
+  {
+   "type": "text",
+   "html": "This is the second diagram in the sequence of houses. There are 2 houses.",
+   "text": "This is the second diagram in the sequence of houses. There are 2 houses."
+  },
+  {
+   "type": "text",
+   "html": "There is 1 horizontal card.",
+   "text": "There is 1 horizontal card."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024ON_61_q03_diagram2",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "There are 8 diagonal cards. There are 9 cards in total.",
+   "text": "There are 8 diagonal cards. There are 9 cards in total."
+  },
+  {
+   "type": "text",
+   "html": "This is the third diagram in the sequence of houses. There are 3 houses.",
+   "text": "This is the third diagram in the sequence of houses. There are 3 houses."
+  },
+  {
+   "type": "text",
+   "html": "There are 4 horizontal cards.",
+   "text": "There are 4 horizontal cards."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024ON_61_q03_diagram3",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "There are 20 diagonal cards. There are 24 cards in total.",
+   "text": "There are 20 diagonal cards. There are 24 cards in total."
+  }
+ ]
+}
