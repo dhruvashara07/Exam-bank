@@ -1,0 +1,195 @@
+{
+ "id": "0607_2024FM_52_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    508.4,
+    570.0,
+    649.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 22.8,
+    "height_pt": 141.1
+   }
+  }
+ ],
+ "text": "1\nThis is part of a different 3 by 3 magic square using the integers 1 to 9.\n2\n9\n4\n7\n3\n1",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    241.6,
+    538.8,
+    355.7,
+    645.4
+   ],
+   "id": "0607_2024FM_52_q01_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      654.5,
+      570.0,
+      730.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 36.9,
+      "height_pt": 75.5
+     }
+    }
+   ],
+   "text": "Work out the line total for this magic square.\n................................................. [2]",
+   "marks": 2,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "15\n2 + 9 + 4",
+     "codes": [
+      "1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        45.875,
+        89.3,
+        555.7200317382812,
+        138.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Work out the line total for this magic square.",
+     "text": "Work out the line total for this magic square."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      732.5,
+      570.0,
+      769.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 36.5
+     }
+    }
+   ],
+   "text": "Complete this magic square.\n[3]",
+   "marks": 3,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "2\n9\n4\n7\n5\n3\n6\n1\n8",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        45.875,
+        138.2,
+        555.7200317382812,
+        212.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this magic square.",
+     "text": "Complete this magic square."
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This is part of a different 3 by 3 magic square using the integers 1 to 9.",
+   "text": "This is part of a different 3 by 3 magic square using the integers 1 to 9."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_52_q01_diagram1",
+   "caption": null
+  }
+ ]
+}

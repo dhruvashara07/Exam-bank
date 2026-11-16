@@ -1,0 +1,258 @@
+{
+ "id": "0607_2024FM_62_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    255.5,
+    570.0,
+    783.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 424.3,
+    "height_pt": 527.5
+   }
+  }
+ ],
+ "text": "6\nDifferent 3 by 3 magic squares are made using the first nine terms of a sequence.\nThe first term of the sequence is 2.\nThe nth term of the sequence is n\n3\n-.\n1\nFind six of these magic squares.\nUse the method of Question 4 and reflection to help you.\n[5]",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    417.0,
+    390.0,
+    526.6,
+    492.1
+   ],
+   "id": "0607_2024FM_62_q06_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    70.6,
+    390.0,
+    180.3,
+    492.1
+   ],
+   "id": "0607_2024FM_62_q06_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    243.8,
+    390.0,
+    353.4,
+    492.1
+   ],
+   "id": "0607_2024FM_62_q06_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    70.6,
+    525.9,
+    180.3,
+    628.0
+   ],
+   "id": "0607_2024FM_62_q06_diagram4",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    243.8,
+    525.9,
+    353.4,
+    628.0
+   ],
+   "id": "0607_2024FM_62_q06_diagram5",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    417.0,
+    525.9,
+    526.6,
+    628.0
+   ],
+   "id": "0607_2024FM_62_q06_diagram6",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    70.6,
+    661.7,
+    180.3,
+    763.8
+   ],
+   "id": "0607_2024FM_62_q06_diagram7",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    243.8,
+    661.7,
+    353.4,
+    763.8
+   ],
+   "id": "0607_2024FM_62_q06_diagram8",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    417.0,
+    661.7,
+    526.6,
+    763.8
+   ],
+   "id": "0607_2024FM_62_q06_diagram9",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "6",
+   "text": "[2,] 5, 8, 11, 14, 17, 20, 23, 26\nAt least two lines of reflection drawn\nSix from\n23\n2\n17\n17\n2\n23\n11 26\n5\n8\n14\n20\n20 14\n8\n8\n14\n20\n11 26\n5\n5\n26\n11\n23\n2\n17\n5\n20\n17\n23\n8\n11\n11\n8\n23\n26 14\n2\n2\n14\n26\n26 14\n2\n11\n8\n23\n17 20\n5\n5\n20\n17\n5\n26\n11\n17 20\n5\n20 14\n8\n2\n14\n26\n17\n2\n23\n23\n8\n11",
+   "codes": [
+    "C1",
+    "C1",
+    "3"
+   ],
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      45.875,
+      400.8,
+      549.3300170898438,
+      665.0
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Different 3 by 3 magic squares are made using the first nine terms of a sequence. The first term of the sequence is 2. The <i>n</i>th term of the sequence is 3<i>n</i> - 1. Find six of these magic squares. Use the method of <b>Question 4</b> and reflection to help you.",
+   "text": "Different 3 by 3 magic squares are made using the first nine terms of a sequence. The first term of the sequence is 2. The nth term of the sequence is 3n - 1. Find six of these magic squares. Use the method of Question 4 and reflection to help you."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_62_q06_diagram1",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_62_q06_diagram2",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_62_q06_diagram3",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_62_q06_diagram4",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_62_q06_diagram5",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_62_q06_diagram6",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_62_q06_diagram7",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_62_q06_diagram8",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_62_q06_diagram9",
+   "caption": null
+  },
+  {
+   "type": "answer",
+   "kind": "space",
+   "height_pt": 424.3
+  },
+  {
+   "type": "marks",
+   "value": 5
+  }
+ ]
+}

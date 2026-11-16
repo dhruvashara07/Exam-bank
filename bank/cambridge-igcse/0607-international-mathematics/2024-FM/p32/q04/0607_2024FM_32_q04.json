@@ -1,0 +1,274 @@
+{
+ "id": "0607_2024FM_32_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    170.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 17.0,
+    "height_pt": 113.7
+   }
+  }
+ ],
+ "text": "4\nTwo companies sell invitation cards.\nHere is how each company works out the price of the cards.\nCompany A\nCompany B\nP\n1 55\n.\nn\n=\n$1.35 for each card plus $24.50\nwhere P is the price in dollars and n is the number of cards",
+ "marks": 9,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      175.7,
+      570.0,
+      355.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 114.9,
+      "height_pt": 179.3
+     }
+    }
+   ],
+   "text": "David wants to buy 140 cards.\nWork out which company is cheaper, and by how much.\nCompany .......... is cheaper by $  ................................................. [4]",
+   "marks": 4,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "A [is cheaper by$] 3.5[0]",
+     "codes": [
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        45.875,
+        89.3,
+        549.3300170898438,
+        139.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "David wants to buy 140 cards. Work out which company is cheaper, and by how much.",
+     "text": "David wants to buy 140 cards. Work out which company is cheaper, and by how much."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Company"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      357.7,
+      570.0,
+      550.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 114.9,
+      "height_pt": 192.3
+     }
+    }
+   ],
+   "text": "Nor has $100 to spend on cards.\nFind which company gives the largest number of cards for $100.\nHow many more cards does this company give?\nCompany .......... would give  ............................... more cards [4]",
+   "marks": 4,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "B [would give] 9 [more cards]\nfrom A = 55 and B = 64",
+     "codes": [
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        45.875,
+        139.0,
+        549.3300170898438,
+        188.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Nor has $100 to spend on cards. Find which company gives the largest number of cards for $100. How many more cards does this company give?",
+     "text": "Nor has $100 to spend on cards. Find which company gives the largest number of cards for $100. How many more cards does this company give?"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Company",
+     "unit": "more cards"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      552.7,
+      570.0,
+      667.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "n=  …… [1]",
+      "working_gap_pt": 49.7,
+      "height_pt": 114.3
+     }
+    }
+   ],
+   "text": "Rearrange the formula to make n the subject.\nP\n1 55\n.\nn\n=\nn=  ................................................. [1]",
+   "marks": 1,
+   "path": "4(c)",
+   "mark_scheme": [
+    {
+     "label": "4(c)",
+     "text": "P\nor P ÷ 1.55\n1.55",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        45.875,
+        188.6,
+        549.3300170898438,
+        231.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Rearrange the formula to make <i>n</i> the subject.",
+     "text": "Rearrange the formula to make n the subject."
+    },
+    {
+     "type": "text",
+     "html": "<i>P</i> = 1 55. <i>n</i>",
+     "text": "P = 1 55. n"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "n ="
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 3,
+ "variant": 2,
+ "paper_code": "0607/32",
+ "paper_type": "core_long_answer",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Two companies sell invitation cards. Here is how each company works out the price of the cards.",
+   "text": "Two companies sell invitation cards. Here is how each company works out the price of the cards."
+  },
+  {
+   "type": "text",
+   "html": "Company A Company B",
+   "text": "Company A Company B"
+  },
+  {
+   "type": "text",
+   "html": "<i>P</i> = 1 55. <i>n</i>",
+   "text": "P = 1 55. n"
+  },
+  {
+   "type": "text",
+   "html": "$1.35 for each card plus $24.50",
+   "text": "$1.35 for each card plus $24.50"
+  },
+  {
+   "type": "text",
+   "html": "where <i>P</i> is the price in dollars and <i>n</i> is the number of cards",
+   "text": "where P is the price in dollars and n is the number of cards"
+  }
+ ]
+}

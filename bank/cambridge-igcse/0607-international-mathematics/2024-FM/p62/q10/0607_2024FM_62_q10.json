@@ -1,0 +1,244 @@
+{
+ "id": "0607_2024FM_62_q10",
+ "number": 10,
+ "segments": [
+  {
+   "page": 15,
+   "bbox": [
+    30.0,
+    64.3,
+    570.0,
+    120.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": -2.3,
+    "height_pt": 55.7
+   }
+  }
+ ],
+ "text": "244\n(\nx\n)\n96\n24\nx\n+\n+\n10 The model for one delivery from the first warehouse, S\n, is the same as\nS\n.\n=\n=\n2\nx\n2\nx\n+\n+\nThis model can be changed when there are more deliveries.\nEach delivery is a distance of x km on busy roads from the previous delivery.",
+ "marks": 8,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      122.8,
+      570.0,
+      198.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 36.9,
+      "height_pt": 75.2
+     }
+    }
+   ],
+   "text": "Rewrite this model for a total of 3 deliveries.\n................................................. [1]",
+   "marks": 1,
+   "path": "10(a)",
+   "mark_scheme": [
+    {
+     "label": "10(a)",
+     "text": "24 (4+3x)\nS =\noe\n2+3x",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        45.875,
+        645.9,
+        549.3300170898438,
+        693.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Rewrite this model for a total of 3 deliveries.",
+     "text": "Rewrite this model for a total of 3 deliveries."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      200.8,
+      570.0,
+      484.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 199.6,
+      "height_pt": 283.2
+     }
+    }
+   ],
+   "text": "The average time that Meera stops to complete each delivery is 5 minutes.\nMeera rewrites the model in Question 8(d)(i) to include the times stopped to make all 3 deliveries.\n244\n(\n3\nx\n)\n+\nShow that her model is\nS\n.\n=\n8\n3\nx\n+\n[3]",
+   "marks": 3,
+   "path": "10(b)",
+   "mark_scheme": [
+    {
+     "label": "10(b)",
+     "text": "4+3x\noe\n1\n3x\n15\n+\n+\n12\n24\n60\nCorrect clearance of fractions in denominator\n24 (4+3x)\nleading to S =\n8+3x",
+     "codes": [
+      "2",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        45.875,
+        89.3,
+        549.3300170898438,
+        245.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The average time that Meera stops to complete each delivery is 5 minutes. Meera rewrites the model in <b>Question 8(d)(i)</b> to include the times stopped to make all 3 deliveries. Show that her model is <i>S</i> = \\(\\frac{24 (4 + 3x)}{8 + 3x}\\) .",
+     "text": "The average time that Meera stops to complete each delivery is 5 minutes. Meera rewrites the model in Question 8(d)(i) to include the times stopped to make all 3 deliveries. Show that her model is S = (24(4+3x))/(8+3x) ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 199.6
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      486.8,
+      570.0,
+      796.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 231.9,
+      "height_pt": 309.2
+     }
+    }
+   ],
+   "text": "Meera needs to shorten the average time that she stops so that her average speed for the whole\njourney is 24 km/h.\nFind the total length of time she now stops to make the 3 deliveries.\n................................................. [4]",
+   "marks": 4,
+   "path": "10(c)",
+   "mark_scheme": [
+    {
+     "label": "10(c)",
+     "text": "4+3x\n= 24 or better\n1\n3x\nt\n+\n+\n12\n24\n60\n4+3x\n=24 or better\nor\n1\n3x\n+\n+t\n12\n24\n4+3x\nor Total time =\n24\nCorrect removal of fractions from denominator\n3x\n1\nor subtract\nand subtract\n24\n12\n2\n5 [min] or\n[h] oe\n24\nCorrect units dependent on use of variable, e.g. t",
+     "codes": [
+      "C1",
+      "C1",
+      "1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        45.875,
+        245.5,
+        549.3300170898438,
+        496.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Meera needs to shorten the average time that she stops so that her average speed for the whole journey is 24 km/h. Find the total length of time she now stops to make the 3 deliveries.",
+     "text": "Meera needs to shorten the average time that she stops so that her average speed for the whole journey is 24 km/h. Find the total length of time she now stops to make the 3 deliveries."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The model for one delivery from the first warehouse, <i>S</i> = \\(\\frac{96 + 24x}{2 + x}\\) , is the same as <i>S</i> = \\(\\frac{24 (4 + x)}{2 + x}\\) . This model can be changed when there are more deliveries. Each delivery is a distance of <i>x</i> km on busy roads from the previous delivery.",
+   "text": "The model for one delivery from the first warehouse, S = (96+24x)/(2+x) , is the same as S = (24(4+x))/(2+x) . This model can be changed when there are more deliveries. Each delivery is a distance of x km on busy roads from the previous delivery."
+  }
+ ]
+}

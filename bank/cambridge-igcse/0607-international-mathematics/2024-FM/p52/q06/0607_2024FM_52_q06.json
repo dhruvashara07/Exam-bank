@@ -1,0 +1,200 @@
+{
+ "id": "0607_2024FM_52_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    683.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 522.6,
+    "height_pt": 626.2
+   }
+  }
+ ],
+ "text": "6\nDifferent 3 by 3 magic squares are made using the first nine terms of a sequence.\nThe first term of the sequence is 2.\nThe nth term of the sequence is n\n3\n-.\n1\nFind four of these magic squares.\nUse the method of Question 5 and reflection to help you.\n[4]",
+ "marks": 4,
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    129.9,
+    180.6,
+    258.6,
+    301.9
+   ],
+   "id": "0607_2024FM_52_q06_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    338.6,
+    180.6,
+    467.4,
+    301.9
+   ],
+   "id": "0607_2024FM_52_q06_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    129.9,
+    361.4,
+    258.6,
+    482.7
+   ],
+   "id": "0607_2024FM_52_q06_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    338.6,
+    361.4,
+    467.4,
+    482.7
+   ],
+   "id": "0607_2024FM_52_q06_diagram4",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    129.9,
+    542.2,
+    258.6,
+    663.4
+   ],
+   "id": "0607_2024FM_52_q06_diagram5",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    338.6,
+    542.2,
+    467.4,
+    663.4
+   ],
+   "id": "0607_2024FM_52_q06_diagram6",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "6",
+   "text": "[2,] 5, 8, 11, 14, 17, 20, 23, 26\nFour of these correct\n23\n2\n17\n17\n2\n23\n11\n26\n5\n8\n14\n20\n20\n14\n8\n8\n14\n20\n11\n26\n5\n5\n26\n11\n23\n2\n17\n5\n20\n17\n23\n8\n11\n11\n8\n23\n26\n14\n2\n2\n14\n26\n26\n14\n2\n11\n8\n23\n17\n20\n5\n5\n20\n17\n5\n26\n11\n17\n20\n5\n20\n14\n8\n2\n14\n26\n17\n2\n23\n23\n8\n11",
+   "codes": [
+    "C1",
+    "3"
+   ],
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      45.875,
+      89.3,
+      555.7200317382812,
+      365.5
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Different 3 by 3 magic squares are made using the first nine terms of a sequence. The first term of the sequence is 2. The <i>n</i>th term of the sequence is 3<i>n</i> - 1. Find four of these magic squares. Use the method of <b>Question 5</b> and reflection to help you.",
+   "text": "Different 3 by 3 magic squares are made using the first nine terms of a sequence. The first term of the sequence is 2. The nth term of the sequence is 3n - 1. Find four of these magic squares. Use the method of Question 5 and reflection to help you."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_52_q06_diagram1",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_52_q06_diagram2",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_52_q06_diagram3",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_52_q06_diagram4",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_52_q06_diagram5",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_52_q06_diagram6",
+   "caption": null
+  },
+  {
+   "type": "answer",
+   "kind": "space",
+   "height_pt": 522.6
+  },
+  {
+   "type": "marks",
+   "value": 4
+  }
+ ]
+}

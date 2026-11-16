@@ -1,0 +1,95 @@
+{
+ "id": "0607_2024FM_62_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    60.5,
+    570.0,
+    253.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 1,
+    "answer_line": null,
+    "working_gap_pt": 75.9,
+    "height_pt": 192.5
+   }
+  }
+ ],
+ "text": "This is an expression for the line total in an n by n magic square using the integers 1 to n2.\n5\n`\nj\n2 +\nnn\n1\n2\nFind the line total for a magic square using the integers 1 to 81.\n................................................. [2]",
+ "marks": 2,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "5",
+   "text": "9(81 +1)\n2\n369",
+   "codes": [
+    "C1",
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      45.875,
+      335.2,
+      549.3300170898438,
+      400.8
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 2,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This is an expression for the line total in an <i>n</i> by <i>n</i> magic square using the integers 1 to <i>n</i><sup>2</sup> .",
+   "text": "This is an expression for the line total in an n by n magic square using the integers 1 to n2 ."
+  },
+  {
+   "type": "text",
+   "html": "+ \\(\\frac{n`n 1j}{2}\\)",
+   "text": "+ (n`n1j)/(2)"
+  },
+  {
+   "type": "text",
+   "html": "Find the line total for a magic square using the integers 1 to 81.",
+   "text": "Find the line total for a magic square using the integers 1 to 81."
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
+   "lines": 1
+  },
+  {
+   "type": "marks",
+   "value": 2
+  }
+ ]
+}

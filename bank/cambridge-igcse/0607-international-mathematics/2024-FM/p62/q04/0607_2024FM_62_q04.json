@@ -1,0 +1,541 @@
+{
+ "id": "0607_2024FM_62_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    639.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 36.0,
+    "height_pt": 582.2
+   }
+  }
+ ],
+ "text": "4\nThis is a method to make an n by n magic square where n is odd.\nStep 1\nPlace the smallest integer in the middle square of the top row.\nStep 2\nMove up and right in the direction of the left diagonal to place the next integer.\n(i) If you go off the magic square, place the next integer at the opposite end of the row or\ncolumn you are on.\n(ii) If the square that is up and right has an integer in it, go down one square to place the next\ninteger.\n(iii) If you are in the top right corner, go down one square to place the next integer.\nStep 3\nRepeat step 2 until the magic square is complete.\nExample using integers 1 to 9\n2\n•\nPut 1 in the middle square of the top row.\n1\n•\nMove up and right.\n2\nThis is off the square, so go to the opposite end of this column and place 2.\n•\nMove up and right from 2.\n1\nThis is off the square, so go to the opposite end of this row and place 3.\n3\n•\nMove up and right from 3.\n4\n2\nThis square has 1 in it, so go down one square from 3 and place 4.\n6\n1\n•\nMove up and right and place 5 and 6.\n3\n5\n7\n4\n2\n•\n6 is in the top right corner so go down one square and place 7.\n•\nMove up and right from 7.\nThis is off the square, so go to the opposite end of this row and place 8.\n8\n1\n6\n3\n5\n7\n•\nMove up and right from 8.\n4\n9\n2\nThis is off the square, so go to the opposite end of this column and place 9.",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    466.3,
+    233.6,
+    540.0,
+    320.7
+   ],
+   "id": "0607_2024FM_62_q04_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    466.6,
+    377.1,
+    546.6,
+    424.7
+   ],
+   "id": "0607_2024FM_62_q04_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    466.3,
+    449.6,
+    540.0,
+    515.7
+   ],
+   "id": "0607_2024FM_62_q04_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    466.6,
+    585.1,
+    551.8,
+    632.7
+   ],
+   "id": "0607_2024FM_62_q04_diagram4",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      272.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 112.9,
+      "height_pt": 215.7
+     }
+    }
+   ],
+   "text": "Use the method to make a 3 by 3 magic square with the integers 15 to 23.\nStep 1 has been done for you.\n15\n[2]",
+   "marks": 2,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "22\n15\n20\n17\n19\n21\n18\n23\n16",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        45.875,
+        523.3,
+        549.3300170898438,
+        630.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use the method to make a 3 by 3 magic square with the integers 15 to 23. Step 1 has been done for you.",
+     "text": "Use the method to make a 3 by 3 magic square with the integers 15 to 23. Step 1 has been done for you."
+    },
+    {
+     "type": "text",
+     "html": "15",
+     "text": "15"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 112.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        274.2,
+        570.0,
+        547.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 35.3,
+        "height_pt": 272.8
+       }
+      }
+     ],
+     "text": "Use the method to complete the 5 by 5 magic square with the integers 1 to 25.\nThe first six numbers have been placed for you.\n1\n5\n4\n6\n3\n2\n[2]",
+     "marks": 2,
+     "path": "4(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(i)",
+       "text": "17\n24\n1\n8\n15\n23\n5\n7\n14\n16\n4\n6\n13\n20\n22\n10\n12\n19\n21\n3\n11\n18\n25\n2\n9",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          45.875,
+          89.3,
+          549.3300170898438,
+          248.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use the method to complete the 5 by 5 magic square with the integers 1 to 25.",
+       "text": "Use the method to complete the 5 by 5 magic square with the integers 1 to 25."
+      },
+      {
+       "type": "text",
+       "html": "The first six numbers have been placed for you.",
+       "text": "The first six numbers have been placed for you."
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "",
+         "",
+         "1",
+         "",
+         ""
+        ],
+        [
+         "",
+         "5",
+         "",
+         "",
+         ""
+        ],
+        [
+         "4",
+         "6",
+         "",
+         "",
+         ""
+        ],
+        [
+         "",
+         "",
+         "",
+         "",
+         "3"
+        ],
+        [
+         "",
+         "",
+         "",
+         "2",
+         ""
+        ]
+       ]
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        548.8,
+        570.0,
+        597.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 9.9,
+        "height_pt": 48.2
+       }
+      }
+     ],
+     "text": "Find the line total for this magic square.\n................................................. [1]",
+     "marks": 1,
+     "path": "4(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(ii)",
+       "text": "65",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          45.875,
+          248.7,
+          549.3300170898438,
+          273.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the line total for this magic square.",
+       "text": "Find the line total for this magic square."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        598.8,
+        570.0,
+        659.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 21.9,
+        "height_pt": 60.2
+       }
+      }
+     ],
+     "text": "What is the connection between the line total and the integer in the middle square?\n............................................................................................................................................. [1]",
+     "marks": 1,
+     "path": "4(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(iii)",
+       "text": "Line total = 5 × the integer in the middle square oe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          45.875,
+          273.5,
+          549.3300170898438,
+          298.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "What is the connection between the line total and the integer in the middle square?",
+       "text": "What is the connection between the line total and the integer in the middle square?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "4(b)"
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      660.8,
+      570.0,
+      796.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "Integer in the middle square =  ……",
+      "working_gap_pt": 49.9,
+      "height_pt": 135.7
+     }
+    }
+   ],
+   "text": "A 7 by 7 magic square uses the integers 1 to 49.\nFind the integer in the middle square and the line total.\nInteger in the middle square =  .................................................\nLine total =  ................................................. [2]",
+   "marks": 2,
+   "path": "4(c)",
+   "mark_scheme": [
+    {
+     "label": "4(c)",
+     "text": "[Integer in the middle square =]\n25\n[Line total =]\n175",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        45.875,
+        298.3,
+        549.3300170898438,
+        335.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A 7 by 7 magic square uses the integers 1 to 49. Find the integer in the middle square and the line total.",
+     "text": "A 7 by 7 magic square uses the integers 1 to 49. Find the integer in the middle square and the line total."
+    },
+    {
+     "type": "text",
+     "html": "Integer in the middle square = ……",
+     "text": "Integer in the middle square = ……"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Line total ="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This is a method to make an <i>n</i> by <i>n </i>magic square where <i>n</i> is odd. Step 1 Place the smallest integer in the middle square of the top row. Step 2 Move <b>up and right</b> in the direction of the left diagonal to place the next integer.",
+   "text": "This is a method to make an n by n magic square where n is odd. Step 1 Place the smallest integer in the middle square of the top row. Step 2 Move up and right in the direction of the left diagonal to place the next integer."
+  },
+  {
+   "type": "text",
+   "html": "If you go off the magic square, place the next integer at the opposite end of the row or column you are on. If the square that is up and right has an integer in it, go down one square to place the next integer. If you are in the top right corner, go down one square to place the next integer.",
+   "text": "If you go off the magic square, place the next integer at the opposite end of the row or column you are on. If the square that is up and right has an integer in it, go down one square to place the next integer. If you are in the top right corner, go down one square to place the next integer."
+  },
+  {
+   "type": "text",
+   "html": "Step 3 Repeat step 2 until the magic square is complete. Example using integers 1 to 9",
+   "text": "Step 3 Repeat step 2 until the magic square is complete. Example using integers 1 to 9"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_62_q04_diagram1",
+   "caption": null
+  },
+  {
+   "type": "list",
+   "items": [
+    "Put <b>1</b> in the middle square of the top row.",
+    "Move up and right. This is off the square, so go to the opposite end of this column and place <b>2</b>.",
+    "Move up and right from 2. 1"
+   ]
+  },
+  {
+   "type": "text",
+   "html": "This is off the square, so go to the opposite end of this row and place <b>3</b>.",
+   "text": "This is off the square, so go to the opposite end of this row and place 3."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_62_q04_diagram2",
+   "caption": null
+  },
+  {
+   "type": "list",
+   "items": [
+    "Move up and right from 3. This square has 1 in it, so go down one square from 3 and place <b>4</b>."
+   ]
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_62_q04_diagram3",
+   "caption": null
+  },
+  {
+   "type": "list",
+   "items": [
+    "Move up and right and place <b>5</b> and <b>6</b>.",
+    "6 is in the top right corner so go down one square and place <b>7</b>.",
+    "Move up and right from 7. This is off the square, so go to the opposite end of this row and place <b>8</b>. 1 6"
+   ]
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_62_q04_diagram4",
+   "caption": null
+  },
+  {
+   "type": "list",
+   "items": [
+    "Move up and right from 8. This is off the square, so go to the opposite end of this column and place <b>9</b>."
+   ]
+  }
+ ]
+}

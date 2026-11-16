@@ -1,0 +1,270 @@
+{
+ "id": "0607_2024FM_42_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 10,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    425.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 37.5,
+    "height_pt": 368.7
+   }
+  }
+ ],
+ "text": "5\nB\nNorth\nNOT TO\nSCALE\n123m\n154m\nNorth\nA\n27°\n183m\nC\n106°\nD\nThe diagram shows a field ABCD, with a straight path AC.\nThe bearing of C from A is\n122.\n°",
+ "marks": 11,
+ "figures": [
+  {
+   "caption": null,
+   "page": 10,
+   "bbox": [
+    130.6,
+    71.6,
+    466.8,
+    380.4
+   ],
+   "id": "0607_2024FM_42_q05_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      428.1,
+      570.0,
+      555.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 88.9,
+      "height_pt": 127.4
+     }
+    }
+   ],
+   "text": "Calculate the bearing of D from C.\n................................................. [3]",
+   "marks": 3,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "255 cao",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        45.875,
+        609.8,
+        549.3300170898438,
+        709.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the bearing of <i>D</i> from <i>C</i>.",
+     "text": "Calculate the bearing of D from C."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      558.1,
+      570.0,
+      750.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 153.9,
+      "height_pt": 192.4
+     }
+    }
+   ],
+   "text": "Show that angle\nABC\n81 9\n.°\ncorrect to one decimal place.\n=\n[3]",
+   "marks": 3,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "123 +154 −183\n2\n2\n2\n[cos] =\n2 ×123 ×154\n81.87...",
+     "codes": [
+      "M2",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        45.875,
+        709.9,
+        549.3300170898438,
+        781.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that angle <i>ABC</i> = 81 9. ° correct to one decimal place.",
+     "text": "Show that angle ABC = 81 9. ° correct to one decimal place."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 153.9
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      340.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 243.2,
+      "height_pt": 283.2
+     }
+    }
+   ],
+   "text": "Find the total area of the field ABCD.\n........................................... m2 [5]",
+   "marks": 5,
+   "path": "5(c)",
+   "mark_scheme": [
+    {
+     "label": "5(c)",
+     "text": "15 200 or 15 150 to 15 161",
+     "codes": [
+      "5"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        45.875,
+        89.3,
+        549.3300170898438,
+        350.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the total area of the field <i>ABCD</i>.",
+     "text": "Find the total area of the field ABCD."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "m2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_long_answer",
+ "total_marks": 11,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>5 </b>",
+   "text": "5"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_42_q05_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The diagram shows a field <i>ABCD</i>, with a straight path <i>AC</i>. The bearing of <i>C</i> from <i>A</i> is 122°.",
+   "text": "The diagram shows a field ABCD, with a straight path AC. The bearing of C from A is 122°."
+  }
+ ]
+}

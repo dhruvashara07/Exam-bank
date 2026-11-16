@@ -1,0 +1,337 @@
+{
+ "id": "0607_2024FM_62_q07",
+ "number": 7,
+ "segments": [
+  {
+   "page": 9,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    495.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 24.1,
+    "height_pt": 438.7
+   }
+  }
+ ],
+ "text": "7\nWhen n is even there is no middle square so we use a different method to make a magic square.\n•\nDraw the two diagonals on the 4 by 4 square.\n•\nPut the smallest integer in the top left square.\n•\nGo from left toright, but only write the integers in the squares where there is part of a diagonal.\n1\n2\n3\n4\n6\n7\n5\n8\n9\n10\n11\n12\n13\n14\n15\n16\n•\nStarting with the bottom row write the remaining integers, in order, from right to left in the empty\nsquares.\n1\n15\n14\n4\n12\n6\n7\n9\n8\n10\n11\n5\n13\n3\n2\n16",
+ "marks": 6,
+ "figures": [
+  {
+   "caption": null,
+   "page": 9,
+   "bbox": [
+    220.0,
+    139.3,
+    377.4,
+    289.2
+   ],
+   "id": "0607_2024FM_62_q07_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 9,
+   "bbox": [
+    220.0,
+    341.7,
+    377.4,
+    491.6
+   ],
+   "id": "0607_2024FM_62_q07_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 9,
+   "bbox": [
+    74.80000305175781,
+    544.2000122070312,
+    522.7000122070312,
+    733.7999877929688
+   ],
+   "id": "0607_2024FM_62_q07a_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      500.7,
+      570.0,
+      753.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 201.0,
+      "height_pt": 252.3
+     }
+    }
+   ],
+   "text": "Use this method to complete the 4 by 4 magic square with the consecutive integers k to k\n15\n.\n+\nThere is an extra grid for working.\n[2]",
+   "marks": 2,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "k\nk + 14\nk + 13\nk + 3\nk + 11\nk + 5\nk + 6\nk + 8\nk + 7\nk + 9\nk + 10\nk + 4\nk + 12\nk + 2\nk + 1\nk + 15",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        45.875,
+        89.3,
+        549.3300170898438,
+        228.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use this method to complete the 4 by 4 magic square with the consecutive integers <i>k</i> to <i>k</i> + 15. There is an extra grid for working.",
+     "text": "Use this method to complete the 4 by 4 magic square with the consecutive integers k to k + 15. There is an extra grid for working."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2024FM_62_q07a_diagram3",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 201.0
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        30.0,
+        56.8,
+        570.0,
+        210.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 101.9,
+        "height_pt": 153.2
+       }
+      }
+     ],
+     "text": "Find the line total in terms of k.\nGive your answer in its simplest form.\n................................................. [2]",
+     "marks": 2,
+     "path": "7(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "7(b)(i)",
+       "text": "Four expressions from one row or column or\ndiagonal added\nor all 16 cells added and divide by 4\n4k + 30 isw",
+       "codes": [
+        "C1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          45.875,
+          228.7,
+          549.3300170898438,
+          303.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the line total in terms of <i>k</i>.",
+       "text": "Find the line total in terms of k."
+      },
+      {
+       "type": "text",
+       "html": "Give your answer in its simplest form.",
+       "text": "Give your answer in its simplest form."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        30.0,
+        212.8,
+        570.0,
+        418.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 140.9,
+        "height_pt": 205.2
+       }
+      }
+     ],
+     "text": "The line total is 254.\nFind the value of the largest integer in the third row.\n................................................. [2]",
+     "marks": 2,
+     "path": "7(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "7(b)(ii)",
+       "text": "254 = 4k + 30 oe\nfollowed by one correct line of working\n254−30\ne.g. 224 = 4k or\n4\n66",
+       "codes": [
+        "C1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          45.875,
+          303.1,
+          549.3300170898438,
+          423.2
+         ]
+        },
+        {
+         "page": 7,
+         "bbox": [
+          45.875,
+          83.9,
+          549.3300170898438,
+          114.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The line total is 254. Find the value of the largest integer in the third row.",
+       "text": "The line total is 254. Find the value of the largest integer in the third row."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "7(b)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "When <i>n</i> is even there is no middle square so we use a different method to make a magic square.",
+   "text": "When n is even there is no middle square so we use a different method to make a magic square."
+  },
+  {
+   "type": "list",
+   "items": [
+    "Draw the two diagonals on the 4 by 4 square.",
+    "Put the smallest integer in the top left square.",
+    "Go from <b>left to</b> <b>right</b>, but only write the integers in the squares where there is part of a diagonal."
+   ]
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_62_q07_diagram1",
+   "caption": null
+  },
+  {
+   "type": "list",
+   "items": [
+    "Starting with the bottom row write the remaining integers, in order, from <b>right to left</b> in the empty squares."
+   ]
+  },
+  {
+   "type": "figure",
+   "id": "0607_2024FM_62_q07_diagram2",
+   "caption": null
+  }
+ ]
+}

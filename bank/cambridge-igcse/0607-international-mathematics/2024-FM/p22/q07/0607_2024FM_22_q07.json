@@ -1,0 +1,202 @@
+{
+ "id": "0607_2024FM_22_q07",
+ "number": 7,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    171.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 15.8,
+    "height_pt": 114.7
+   }
+  }
+ ],
+ "text": "7\nShami asked 200 people from a town about their favourite type of TV programme.\nThese are the results.\nType of\nSport\nComedy\nDrama\nQuiz\nReality\nDocumentary\nprogramme\nFrequency\n46\n38\n23\n21\n56\n16",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      172.8,
+      570.0,
+      248.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 36.9,
+      "height_pt": 75.2
+     }
+    }
+   ],
+   "text": "Find the relative frequency of Reality.\n................................................. [1]",
+   "marks": 1,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "56\noe\n200",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        45.875,
+        522.5,
+        552.5299682617188,
+        563.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the relative frequency of Reality.",
+     "text": "Find the relative frequency of Reality."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      250.8,
+      570.0,
+      404.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 75.9,
+      "height_pt": 153.2
+     }
+    }
+   ],
+   "text": "The town has 40 000 inhabitants.\nWork out the expected number of people in the town whose favourite type of programme\nis Documentary.\n................................................. [2]",
+   "marks": 2,
+   "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "3200",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        45.875,
+        563.4,
+        552.5299682617188,
+        605.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The town has 40 000 inhabitants. Work out the expected number of people in the town whose favourite type of programme is Documentary.",
+     "text": "The town has 40 000 inhabitants. Work out the expected number of people in the town whose favourite type of programme is Documentary."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2024,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 2,
+ "variant": 2,
+ "paper_code": "0607/22",
+ "paper_type": "extended_short_answer",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Shami asked 200 people from a town about their favourite type of TV programme. These are the results.",
+   "text": "Shami asked 200 people from a town about their favourite type of TV programme. These are the results."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Type of programme",
+     "Sport",
+     "Comedy",
+     "Drama",
+     "Quiz",
+     "Reality",
+     "Documentary"
+    ],
+    [
+     "Frequency",
+     "46",
+     "38",
+     "23",
+     "21",
+     "56",
+     "16"
+    ]
+   ]
+  }
+ ]
+}
