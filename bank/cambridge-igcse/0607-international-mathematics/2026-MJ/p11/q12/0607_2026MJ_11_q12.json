@@ -1,0 +1,312 @@
+{
+ "id": "0607_2026MJ_11_q12",
+ "number": 12,
+ "segments": [],
+ "text": "",
+ "marks": 4,
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    91.0,
+    87.3,
+    319.1,
+    230.8
+   ],
+   "id": "0607_2026MJ_11_q12a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    333.7,
+    413.5,
+    510.8,
+    541.2
+   ],
+   "id": "0607_2026MJ_11_q12b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    86.1,
+    413.5,
+    263.1,
+    541.2
+   ],
+   "id": "0607_2026MJ_11_q12b_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      261.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 50.2,
+      "height_pt": 202.1
+     }
+    }
+   ],
+   "text": "This is a Venn diagram.\nU\nA\nB\n2\n7\n3\n1\n4\n6\n5\n9\n8\n10\nWrite down",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        30.0,
+        268.6,
+        570.0,
+        315.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 14.5,
+        "height_pt": 46.9
+       }
+      }
+     ],
+     "text": "the elements of A\n+\nB\n............................................................. [1]",
+     "marks": 1,
+     "path": "12(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "12(a)(i)",
+       "text": "3, 6, 9",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 10,
+         "bbox": [
+          58.0,
+          76.5,
+          783.9199829101562,
+          101.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "the elements of A + B",
+       "text": "the elements of A + B"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        30.0,
+        320.6,
+        570.0,
+        367.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 14.5,
+        "height_pt": 46.9
+       }
+      }
+     ],
+     "text": "nA.\n()\n............................................................. [1]",
+     "marks": 1,
+     "path": "12(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "12(a)(ii)",
+       "text": "6 cao",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 10,
+         "bbox": [
+          58.0,
+          101.0,
+          783.9199829101562,
+          138.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "n (A).",
+       "text": "n (A)."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "12(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "This is a Venn diagram.",
+     "text": "This is a Venn diagram."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2026MJ_11_q12a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Write down",
+     "text": "Write down"
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      385.6,
+      570.0,
+      599.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 120.9,
+      "height_pt": 213.9
+     }
+    }
+   ],
+   "text": "Use set notation to describe each of the shaded regions.\nU\nU\nP\nQ\nR\nS\n.................................................\n.................................................\n[2]",
+   "marks": 2,
+   "path": "12(b)",
+   "mark_scheme": [
+    {
+     "label": "12(b)",
+     "text": "P  Q\nS′",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        58.0,
+        138.1,
+        783.9199829101562,
+        176.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use set notation to describe each of the shaded regions.",
+     "text": "Use set notation to describe each of the shaded regions."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2026MJ_11_q12b_diagram2",
+     "caption": null
+    },
+    {
+     "type": "figure",
+     "id": "0607_2026MJ_11_q12b_diagram3",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 1,
+ "variant": 1,
+ "paper_code": "0607/11",
+ "paper_type": "core_non_calculator",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

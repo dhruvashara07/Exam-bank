@@ -1,0 +1,263 @@
+{
+ "id": "0607_2026MJ_31_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    106.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 46.6
+   }
+  }
+ ],
+ "text": "9\nRyan is paid $12 each day to pick asparagus.\nThe asparagus Ryan picks is weighed.\nRyan is also paid $1.50 for each kilogram of asparagus he picks.",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      111.4,
+      570.0,
+      239.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 69.5,
+      "height_pt": 127.6
+     }
+    }
+   ],
+   "text": "One day Ryan picks 23 kg of asparagus.\nWork out how much he is paid in total that day.\n$ ............................................................. [2]",
+   "marks": 2,
+   "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "46.5[0]",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        58.0,
+        198.9,
+        783.9199829101562,
+        223.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "One day Ryan picks 23 kg of asparagus.",
+     "text": "One day Ryan picks 23 kg of asparagus."
+    },
+    {
+     "type": "text",
+     "html": "Work out how much he is paid in total that day.",
+     "text": "Work out how much he is paid in total that day."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "$"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      257.4,
+      570.0,
+      375.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "P =  …… [2]",
+      "working_gap_pt": 46.9,
+      "height_pt": 118.1
+     }
+    }
+   ],
+   "text": "Ryan works for D days and picks a total of A kg of asparagus.\nRyan is paid a total of $P.\nWrite down a formula for P in terms of D and A.\nP =  ............................................................ [2]",
+   "marks": 2,
+   "path": "9(b)",
+   "mark_scheme": [
+    {
+     "label": "9(b)",
+     "text": "12D + 1.5[0]A",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        58.0,
+        223.3,
+        783.9199829101562,
+        247.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Ryan works for D days and picks a total of A kg of asparagus. Ryan is paid a total of $P.",
+     "text": "Ryan works for D days and picks a total of A kg of asparagus. Ryan is paid a total of $P."
+    },
+    {
+     "type": "text",
+     "html": "Write down a formula for P in terms of D and A.",
+     "text": "Write down a formula for P in terms of D and A."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "P ="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      393.8,
+      570.0,
+      550.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 97.9,
+      "height_pt": 156.2
+     }
+    }
+   ],
+   "text": "Ryan works for 5 days and is paid a total of $189.\nWork out how many kilograms of asparagus Ryan picks in these 5 days.\n......................................................... kg [2]",
+   "marks": 2,
+   "path": "9(c)",
+   "mark_scheme": [
+    {
+     "label": "9(c)",
+     "text": "86",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        58.0,
+        247.7,
+        783.9199829101562,
+        297.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Ryan works for 5 days and is paid a total of $189.",
+     "text": "Ryan works for 5 days and is paid a total of $189."
+    },
+    {
+     "type": "text",
+     "html": "Work out how many kilograms of asparagus Ryan picks in these 5 days.",
+     "text": "Work out how many kilograms of asparagus Ryan picks in these 5 days."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "kg"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 3,
+ "variant": 1,
+ "paper_code": "0607/31",
+ "paper_type": "core_calculator",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Ryan is paid $12 each day to pick asparagus. The asparagus Ryan picks is weighed. Ryan is also paid $1.50 for each kilogram of asparagus he picks.",
+   "text": "Ryan is paid $12 each day to pick asparagus. The asparagus Ryan picks is weighed. Ryan is also paid $1.50 for each kilogram of asparagus he picks."
+  }
+ ]
+}

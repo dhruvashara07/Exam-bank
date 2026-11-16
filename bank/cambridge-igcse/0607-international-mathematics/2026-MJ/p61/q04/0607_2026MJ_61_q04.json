@@ -1,0 +1,402 @@
+{
+ "id": "0607_2026MJ_61_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    132.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.1,
+    "height_pt": 72.6
+   }
+  }
+ ],
+ "text": "4\nIn another grid:\n•\nthe numbers increase by d\n•\nthe width of the grid is w squares\n•\nthe grid continues downwards.",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      137.4,
+      570.0,
+      370.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 122.4,
+      "height_pt": 233.1
+     }
+    }
+   ],
+   "text": "The number in the top square is n.\nn\n...............\nComplete the bottom square with an expression in terms of n, d and w.\n[1]",
+   "marks": 1,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "n+2dw oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        58.0,
+        285.9,
+        783.9199829101562,
+        315.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The number in the top square is n.",
+     "text": "The number in the top square is n."
+    },
+    {
+     "type": "text",
+     "html": "n",
+     "text": "n"
+    },
+    {
+     "type": "text",
+     "html": "Complete the bottom square with an expression in terms of n, d and w.",
+     "text": "Complete the bottom square with an expression in terms of n, d and w."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      306.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 131.6,
+      "height_pt": 246.6
+     }
+    }
+   ],
+   "text": "The formula for the frame sum on this grid is\n2\n2\nframe sum\n=\n2\ndn\n+\nd\n(\nw\n+\n1\n).\n88\nThe frame sum for this frame is 1280.\nAll the numbers in the grid are positive integers.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        30.0,
+        320.1,
+        570.0,
+        660.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 297.7,
+        "height_pt": 340.4
+       }
+      }
+     ],
+     "text": "1280\n-\n176\nd\n(i) Show that   w\n=\n- .\n1\nd\n[3]",
+     "marks": 3,
+     "path": "4(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(i)",
+       "text": "2d×88+d (w+1) =1280\n2\n2\n2\n𝑑 (𝑤+ 1) = 1280 −176𝑑\n2\nand\n1280 −176d\nor d (w+1)= 1280 −176d\n(w+1) =\n2\n2\nd\n1280 −176d\n1280 −176d\nw+ 1=\nor w+ 1=\n2\nd\nd\n1280 −176d\nleading to w=\n−1\nd",
+       "codes": [
+        "1",
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 9,
+         "bbox": [
+          58.0,
+          76.5,
+          783.9199829101562,
+          313.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Show that w = \\(\\frac{1280 - 176d}{d}\\) - 1 .",
+       "text": "Show that w = (1280-176d)/(d) - 1 ."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 297.7
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        30.0,
+        59.4,
+        570.0,
+        358.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 19.7,
+        "height_pt": 299.1
+       }
+      }
+     ],
+     "text": "Complete the table.\nGive non-integer values correct to 2 decimal places.\nd\nw\n1\n32.23\n2\n3\n4\n5\n6\n1.49\n7\n[2]",
+     "marks": 2,
+     "path": "4(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(ii)",
+       "text": "d\nw\n1\n32.23\n2\n14.23\n3\n8.14\n4\n5\n5\n3\n6\n1.49\n7\n–0.01",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 9,
+         "bbox": [
+          58.0,
+          313.5,
+          783.9199829101562,
+          531.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the table. Give non-integer values correct to 2 decimal places.",
+       "text": "Complete the table. Give non-integer values correct to 2 decimal places."
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "d",
+         "w"
+        ],
+        [
+         "1",
+         "32.23"
+        ],
+        [
+         "2",
+         ""
+        ],
+        [
+         "3",
+         ""
+        ],
+        [
+         "4",
+         ""
+        ],
+        [
+         "5",
+         ""
+        ],
+        [
+         "6",
+         "1.49"
+        ],
+        [
+         "7",
+         ""
+        ]
+       ]
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        30.0,
+        363.7,
+        570.0,
+        436.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 40.5,
+        "height_pt": 72.8
+       }
+      }
+     ],
+     "text": "Write down all the possible widths of the grid.\n............................................................. [1]",
+     "marks": 1,
+     "path": "4(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(iii)",
+       "text": "3, 5",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 10,
+         "bbox": [
+          58.0,
+          76.5,
+          783.9199829101562,
+          164.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Write down all the possible widths of the grid.",
+       "text": "Write down all the possible widths of the grid."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "4(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "The formula for the frame sum on this grid is",
+     "text": "The formula for the frame sum on this grid is"
+    },
+    {
+     "type": "text",
+     "html": "frame sum = 2dn + d<sup>2</sup> (w + 1)<sup>2</sup> .",
+     "text": "frame sum = 2dn + d2 (w + 1)2 ."
+    },
+    {
+     "type": "text",
+     "html": "88",
+     "text": "88"
+    },
+    {
+     "type": "text",
+     "html": "The frame sum for this frame is 1280. All the numbers in the grid are positive integers.",
+     "text": "The frame sum for this frame is 1280. All the numbers in the grid are positive integers."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In another grid:",
+   "text": "In another grid:"
+  },
+  {
+   "type": "list",
+   "items": [
+    "the numbers increase by d",
+    "the width of the grid is w squares",
+    "the grid continues downwards."
+   ]
+  }
+ ]
+}

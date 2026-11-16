@@ -1,0 +1,357 @@
+{
+ "id": "0607_2026MJ_52_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 9,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    106.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 46.6
+   }
+  }
+ ],
+ "text": "5\nNow you always start the game.\nIn each move, a player takes 1 or 2 sticks from the pile.\nYou always take the number of sticks so that you are sure to win.",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      111.4,
+      570.0,
+      334.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 4,
+      "answer_line": null,
+      "working_gap_pt": 19.2,
+      "height_pt": 223.1
+     }
+    }
+   ],
+   "text": "There are 5 sticks in the pile at the start.\nComplete the table.\nnumber of\nnumber of sticks left\nmove\nresult\nsticks taken\nin the pile\n5\n1\nyou take    ................\n................\n2\nfriend takes      2\n................\n3\nyou take    ................\n0\nyou win\n[1]",
+   "marks": 1,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "move\nsticks taken\nsticks left\nresult\n5\n1\nY\n2\n3\nF\n2\n1\n3\nY\n1\n0\nw\nor\nmove\nsticks taken\nsticks left\nresult\n5\n1\nY\n1\n4\n2\nF\n2\n2\n3\nY\n2\n0\nw",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 15,
+       "bbox": [
+        52.79999923706055,
+        76.5,
+        789.219970703125,
+        373.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "There are 5 sticks in the pile at the start.",
+     "text": "There are 5 sticks in the pile at the start."
+    },
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "text",
+     "html": "<b>number</b> <b>of</b> <b>number</b> of sticks <b>left</b>",
+     "text": "number of number of sticks left"
+    },
+    {
+     "type": "text",
+     "html": "move <b>result</b>",
+     "text": "move result"
+    },
+    {
+     "type": "text",
+     "html": "sticks <b>taken</b> <b>in</b> <b>the</b> <b>pile</b>",
+     "text": "sticks taken in the pile"
+    },
+    {
+     "type": "text",
+     "html": "5",
+     "text": "5"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "1 you take"
+    },
+    {
+     "type": "text",
+     "html": "friend takes 2",
+     "text": "friend takes 2"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "3 you take",
+     "unit": "0 you win"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      352.7,
+      570.0,
+      438.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 27.5,
+      "height_pt": 85.8
+     }
+    }
+   ],
+   "text": "There are 4 sticks in the pile at the start.\nWrite down the number of sticks you should take on your first move.\n............................................................... [1]",
+   "marks": 1,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "1",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 15,
+       "bbox": [
+        52.79999923706055,
+        373.0,
+        789.219970703125,
+        397.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "There are 4 sticks in the pile at the start.",
+     "text": "There are 4 sticks in the pile at the start."
+    },
+    {
+     "type": "text",
+     "html": "Write down the number of sticks you should take on your first move.",
+     "text": "Write down the number of sticks you should take on your first move."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      456.7,
+      570.0,
+      529.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 14.5,
+      "height_pt": 72.8
+     }
+    }
+   ],
+   "text": "There are 19 sticks in the pile at the start.\nGive a reason why you should take 1 stick in your first move.\n..................................................................................................................................................... [1]",
+   "marks": 1,
+   "path": "5(c)",
+   "mark_scheme": [
+    {
+     "label": "5(c)",
+     "text": "Leaves a multiple of 3 oe\nor numerical example",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 15,
+       "bbox": [
+        52.79999923706055,
+        397.5,
+        789.219970703125,
+        510.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "There are 19 sticks in the pile at the start.",
+     "text": "There are 19 sticks in the pile at the start."
+    },
+    {
+     "type": "text",
+     "html": "Give a reason why you should take 1 stick in your first move.",
+     "text": "Give a reason why you should take 1 stick in your first move."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      547.7,
+      570.0,
+      620.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 14.5,
+      "height_pt": 72.8
+     }
+    }
+   ],
+   "text": "After your first move there are 12 sticks in the pile.\nWrite down the possible numbers of sticks that were in the pile at the start.\n............................................................. [1]",
+   "marks": 1,
+   "path": "5(d)",
+   "mark_scheme": [
+    {
+     "label": "5(d)",
+     "text": "13, 14",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 15,
+       "bbox": [
+        52.79999923706055,
+        510.6,
+        789.219970703125,
+        538.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "After your first move there are 12 sticks in the pile.",
+     "text": "After your first move there are 12 sticks in the pile."
+    },
+    {
+     "type": "text",
+     "html": "Write down the possible numbers of sticks that were in the pile at the start.",
+     "text": "Write down the possible numbers of sticks that were in the pile at the start."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Now you always start the game. In each move, a player takes 1 or 2 sticks from the pile. You always take the number of sticks so that you are sure to win.",
+   "text": "Now you always start the game. In each move, a player takes 1 or 2 sticks from the pile. You always take the number of sticks so that you are sure to win."
+  }
+ ]
+}

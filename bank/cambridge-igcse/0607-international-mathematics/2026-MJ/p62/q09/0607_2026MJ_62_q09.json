@@ -1,0 +1,115 @@
+{
+ "id": "0607_2026MJ_62_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 11,
+   "bbox": [
+    30.0,
+    279.1,
+    570.0,
+    681.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 1,
+    "answer_line": null,
+    "working_gap_pt": 214.1,
+    "height_pt": 402.4
+   }
+  }
+ ],
+ "text": "9\nEach year, Maya invests $P in a savings account that pays compound interest at a rate of R% per year.\nAt the end of n years there is a total of $T in the account.\nA model for the total value of Maya’s investment is\nn\nP\nrr\n(\n-\n1\n)\n#\nR\nT\n=\n,  where r\n=\n1\n+\n.\nr\n-\n1\n100\nMaya invests $250 each year for 9 years.\nThe account pays a rate of 5% compound interest per year.\nFind the value of T.\n............................................................. [2]",
+ "marks": 2,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "9",
+   "text": "(\n)\n250 ×1.05 1.05 −1\n9\n1.05 −1\n$2894.47",
+   "codes": [
+    "C1",
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 18,
+     "bbox": [
+      58.0,
+      72.1,
+      783.9199829101562,
+      170.6
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 2,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Each year, Maya invests $P in a savings account that pays compound interest at a rate of R% per year.",
+   "text": "Each year, Maya invests $P in a savings account that pays compound interest at a rate of R% per year."
+  },
+  {
+   "type": "text",
+   "html": "At the end of n years there is a total of $T in the account.",
+   "text": "At the end of n years there is a total of $T in the account."
+  },
+  {
+   "type": "text",
+   "html": "A model for the total value of Maya’s investment is",
+   "text": "A model for the total value of Maya’s investment is"
+  },
+  {
+   "type": "text",
+   "html": "<sup>n</sup>",
+   "text": "n"
+  },
+  {
+   "type": "text",
+   "html": "T = \\(\\frac{P # r (r - 1)}{r - 1}\\) , where r = 1 + \\(\\frac{R}{100}\\) .",
+   "text": "T = (P#r(r-1))/(r-1) , where r = 1 + (R)/(100) ."
+  },
+  {
+   "type": "text",
+   "html": "Maya invests $250 each year for 9 years. <b>The</b> account pays a rate of 5% compound interest per year.",
+   "text": "Maya invests $250 each year for 9 years. The account pays a rate of 5% compound interest per year."
+  },
+  {
+   "type": "text",
+   "html": "Find the value of T.",
+   "text": "Find the value of T."
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
+   "lines": 1
+  },
+  {
+   "type": "marks",
+   "value": 2
+  }
+ ]
+}

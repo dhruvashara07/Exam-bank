@@ -1,0 +1,414 @@
+{
+ "id": "0607_2026MJ_63_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    79.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 20.1
+   }
+  }
+ ],
+ "text": "4\nYou now use sets of 3 numbers a, b and c.",
+ "marks": 10,
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    46.6,
+    218.7,
+    443.5,
+    327.8
+   ],
+   "id": "0607_2026MJ_63_q04c_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      85.4,
+      570.0,
+      542.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 191.5,
+      "height_pt": 456.6
+     }
+    }
+   ],
+   "text": "Complete this table.\nHCF of\nLCM of\nHCF of\nHCF of\nHCF of\nnumbers\na # b # c\na, b, c\na, b, c\na and b\na and c\nb and c\na  b  c\n(P)\n(Q)\n(R)\n(S )\n(T )\n3   6   9\n162\n3\n18\n3\n3\n3\n4   8  10\n320\n2\n40\n4\n2\n2\n6   8  12\n576\n2\n24\n2\n5  10   4\n200\n1\n5\n1\n2\n12   9  15\n1620\n180\n3\n3\n20  12   8\n1920\n4\n4\n4\n9  12  18\n1944\n3\n9\n6\n[3]",
+   "marks": 3,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "LCM\nHCF of\nHCF of\nHCF of\nHCF of\nof\na, b, c\na and b\na and c\nb and c\na, b, c\n(P)\n(R)\n(S)\n(T)\n(Q)\n2\n24\n2\n6\n4\n1\n20\n5\n1\n2\n3\n180\n3\n3\n3\n4\n120\n4\n4\n4\n3\n36\n3\n9\n6\nOne list, to 120, of multiples of 20 or 12 or 8.\nor two prime factor decompositions from 20,\n12 and 8",
+     "codes": [
+      "2",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        58.0,
+        76.5,
+        783.9199829101562,
+        419.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this table.",
+     "text": "Complete this table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "numbers a b c",
+       "a # b # c",
+       "HCF of a, b, c (P)",
+       "LCM of a, b, c (Q)",
+       "HCF of a and b (R)",
+       "HCF of a and c (S)",
+       "HCF of b and c (T)"
+      ],
+      [
+       "3 6 9",
+       "162",
+       "3",
+       "18",
+       "3",
+       "3",
+       "3"
+      ],
+      [
+       "4 8 10",
+       "320",
+       "2",
+       "40",
+       "4",
+       "2",
+       "2"
+      ],
+      [
+       "6 8 12",
+       "576",
+       "2",
+       "24",
+       "2",
+       "",
+       ""
+      ],
+      [
+       "5 10 4",
+       "200",
+       "1",
+       "",
+       "5",
+       "1",
+       "2"
+      ],
+      [
+       "12 9 15",
+       "1620",
+       "",
+       "180",
+       "",
+       "3",
+       "3"
+      ],
+      [
+       "20 12 8",
+       "1920",
+       "4",
+       "",
+       "4",
+       "4",
+       ""
+      ],
+      [
+       "9 12 18",
+       "1944",
+       "",
+       "",
+       "3",
+       "9",
+       "6"
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 191.5
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      560.2,
+      570.0,
+      690.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "# …… = …… # …… # …… #  …… [2]",
+      "working_gap_pt": 98.0,
+      "height_pt": 130.3
+     }
+    }
+   ],
+   "text": "Complete this relationship using P, Q, R, S and T.\n(\na\nb\nc\n)\n# ............ = ............ # ............ # ............ #  ............ [2]\n#\n#",
+   "marks": 2,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "[(a × b × c) ×] P = Q × R × S × T oe\nCorrect numerical statements\ne.g. 320 × 2 = 640 and 40 × 4 × 2 × 2 = 640",
+     "codes": [
+      "1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        58.0,
+        76.5,
+        783.9199829101562,
+        250.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this relationship using P, Q, R, S and T.",
+     "text": "Complete this relationship using P, Q, R, S and T."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "(a # b # c) #"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      564.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "d = …… and e =  ……",
+      "working_gap_pt": 355.8,
+      "height_pt": 505.1
+     }
+    },
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      60.5,
+      570.0,
+      454.0
+     ],
+     "continued": true,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 37.6,
+      "height_pt": 393.5
+     }
+    }
+   ],
+   "text": "In this question there are 3 numbers: 40, d and e.\n40, d and e have HCF = 4.\n40, d and e have LCM = 360.\nR = 4, S = 8 and T = 12.\nFind two different pairs of numbers, d and e.\nd = .................. and e =  ..................\nd = .................. and e =  ..................\n[5]\nModelling     Helix\nYou are advised to spend no more than 45 minutes on this section.\nIn this task you will look at the length of a line drawn on the curved surface of a cylinder.\nThis line is called a helix.\nIn this task, diagrams are not drawn to scale.\nA rectangle of paper is wrapped around a cylinder with diameter 10 cm.\nThe long edges of the paper meet along the line AB.\nhorizontal track\nB\nA\naxis of\n10cm\nsymmetry\nA pencil is fixed to a horizontal track above the cylinder.\nThe pencil rests on the paper at A.\nYou may find this formula useful.\nCircumference, C, of circle of diameter d.\nC\n=\nd\nr",
+   "marks": 5,
+   "path": "4(c)",
+   "mark_scheme": [
+    {
+     "label": "4(c)",
+     "text": "36 and 24\n12 and 72\n40de × 4 = 360 × 4 × 8 × 12\n3 factor pairs of 864 with multiples of 4\ne.g. (4,216), (8,108), (12,72)…\nor 12 identified as the HCF of d and e\nor 864=2 ×3\n5\n3\nLCM check: 360 or 72 divided by a value from one\nof their factor pairs\nor a check that 8 is a factor of one number in 12 and\n72 or 36 and 24\nor checking that HCFs for their 40, d and e are\n4, 8 and 12\nor 360=3 ×2 ×5 or 40=2 ×5\n2\n3\n3",
+     "codes": [
+      "2",
+      "C1",
+      "C1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        58.0,
+        250.0,
+        783.9199829101562,
+        526.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "In this question there are 3 numbers: 40, d and e.",
+     "text": "In this question there are 3 numbers: 40, d and e."
+    },
+    {
+     "type": "text",
+     "html": "40, d and e have HCF = 4. 40, d and e have LCM = 360. R = 4, S = 8 and T = 12.",
+     "text": "40, d and e have HCF = 4. 40, d and e have LCM = 360. R = 4, S = 8 and T = 12."
+    },
+    {
+     "type": "text",
+     "html": "Find two different pairs of numbers, d and e.",
+     "text": "Find two different pairs of numbers, d and e."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "d ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "d ="
+    },
+    {
+     "type": "marks",
+     "value": 5
+    },
+    {
+     "type": "text",
+     "html": "<b>Modelling</b> <b>Helix</b>",
+     "text": "Modelling Helix"
+    },
+    {
+     "type": "text",
+     "html": "You are advised to spend no more than 45 minutes on this section.",
+     "text": "You are advised to spend no more than 45 minutes on this section."
+    },
+    {
+     "type": "text",
+     "html": "In this task you will look at the length of a line drawn on the curved surface of a cylinder. This line is called a helix.",
+     "text": "In this task you will look at the length of a line drawn on the curved surface of a cylinder. This line is called a helix."
+    },
+    {
+     "type": "text",
+     "html": "In this task, diagrams are not drawn to scale.",
+     "text": "In this task, diagrams are not drawn to scale."
+    },
+    {
+     "type": "text",
+     "html": "A rectangle of paper is wrapped around a cylinder with diameter 10 cm. The long edges of the paper meet along the line AB.",
+     "text": "A rectangle of paper is wrapped around a cylinder with diameter 10 cm. The long edges of the paper meet along the line AB."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2026MJ_63_q04c_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "A pencil is fixed to a horizontal track above the cylinder. The pencil rests on the paper at A.",
+     "text": "A pencil is fixed to a horizontal track above the cylinder. The pencil rests on the paper at A."
+    },
+    {
+     "type": "text",
+     "html": "You may find this formula useful.",
+     "text": "You may find this formula useful."
+    },
+    {
+     "type": "text",
+     "html": "Circumference, C, of circle of diameter d. C = rd",
+     "text": "Circumference, C, of circle of diameter d. C = rd"
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 10,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "You now use sets of 3 numbers a, b and c.",
+   "text": "You now use sets of 3 numbers a, b and c."
+  }
+ ]
+}

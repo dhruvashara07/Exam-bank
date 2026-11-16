@@ -1,0 +1,383 @@
+{
+ "id": "0607_2026MJ_62_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    427.8,
+    570.0,
+    537.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 109.7
+   }
+  }
+ ],
+ "text": "4\nYou always start the game.\nIn each move, a player now takes 1, 2 or 3 sticks from the pile.\nYou always take the number of sticks so that you are sure to win.\nIn your first move you always take 1 stick so that you are sure to win.\nThe possible number of sticks in the pile at the start form this sequence.\n1   5   9   13   17   ...",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      544.8,
+      570.0,
+      649.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 72.4,
+      "height_pt": 104.7
+     }
+    }
+   ],
+   "text": "Find the nth term for this sequence.\n............................................................. [2]",
+   "marks": 2,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "4n – 3 oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        58.0,
+        151.7,
+        783.9199829101562,
+        188.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the nth term for this sequence.",
+     "text": "Find the nth term for this sequence."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      605.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 41.4,
+      "height_pt": 546.1
+     }
+    }
+   ],
+   "text": "When there is 1 stick in the pile at the start there is 1 move to win.\nComplete the total number of moves to win.\nnumber of sticks at the start ( p)\n1\n5\n9\n13\n17\ntotal number of moves to win (m)\n1\nYou may use the table below to help you.\nnumber of\nnumber of sticks left\nnumber of sticks left\nmove\nsticks taken\nin the pile\nin the pile\nyou take   1\nfriend takes\nyou take\nfriend takes\nyou take\nfriend takes\nyou take\nfriend takes\nyou take\nfriend takes\nyou take\n[3]",
+   "marks": 3,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "1\n5\n9\n13\n17\n1\n3\n5\n7\n9\nStart on\n9\nor\n13\nor\n17\n8, 4, 0 or 12, 8, 4, 0\nor 16, 12, 8, 4, 0\nseen in consecutive ‘you take’ rows",
+     "codes": [
+      "2",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        58.0,
+        188.8,
+        783.9199829101562,
+        325.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "When there is 1 stick in the pile at the start there is 1 move to win.",
+     "text": "When there is 1 stick in the pile at the start there is 1 move to win."
+    },
+    {
+     "type": "text",
+     "html": "Complete the total number of moves to win.",
+     "text": "Complete the total number of moves to win."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "<b>number</b> of sticks at <b>the</b> <b>start</b> ( p)",
+       "1",
+       "5",
+       "9",
+       "13",
+       "17"
+      ],
+      [
+       "total <b>number</b> <b>of</b> <b>moves</b> <b>to</b> <b>win</b> (m)",
+       "1",
+       "",
+       "",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "html": "You may use the table below to help you.",
+     "text": "You may use the table below to help you."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "move",
+       "<b>number</b> <b>of</b> sticks <b>taken</b>",
+       "<b>number</b> <b>of</b> <b>sticks</b> <b>left</b> <b>in</b> <b>the</b> <b>pile</b>",
+       "<b>number</b> of sticks <b>left</b> <b>in</b> <b>the</b> <b>pile</b>"
+      ],
+      [
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "you take 1",
+       "",
+       ""
+      ],
+      [
+       "",
+       "friend takes",
+       "",
+       ""
+      ],
+      [
+       "",
+       "you take",
+       "",
+       ""
+      ],
+      [
+       "",
+       "friend takes",
+       "",
+       ""
+      ],
+      [
+       "",
+       "you take",
+       "",
+       ""
+      ],
+      [
+       "",
+       "friend takes",
+       "",
+       ""
+      ],
+      [
+       "",
+       "you take",
+       "",
+       ""
+      ],
+      [
+       "",
+       "friend takes",
+       "",
+       ""
+      ],
+      [
+       "",
+       "you take",
+       "",
+       ""
+      ],
+      [
+       "",
+       "friend takes",
+       "",
+       ""
+      ],
+      [
+       "",
+       "you take",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 41.4
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      626.8,
+      570.0,
+      730.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 58.2,
+      "height_pt": 103.2
+     }
+    }
+   ],
+   "text": "Find a formula for the total number of moves, m, in terms of the number of sticks in the pile at\nthe start, p.\n............................................................. [2]",
+   "marks": 2,
+   "path": "4(c)",
+   "mark_scheme": [
+    {
+     "label": "4(c)",
+     "text": "p+1\nm=\noe as final answer\n2",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        58.0,
+        325.0,
+        783.9199829101562,
+        460.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find a formula for the total number of moves, m, in terms of the number of sticks in the pile at the start, p.",
+     "text": "Find a formula for the total number of moves, m, in terms of the number of sticks in the pile at the start, p."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "4",
+   "text": "4\n104\nand 1.04 as 1 +\nor\n100\n,",
+   "codes": [],
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      58.0,
+      448.8,
+      783.9199829101562,
+      479.0
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "You always start the game. In each move, a player now takes 1, 2 or 3 sticks from the pile. You always take the number of sticks so that you are sure to win.",
+   "text": "You always start the game. In each move, a player now takes 1, 2 or 3 sticks from the pile. You always take the number of sticks so that you are sure to win."
+  },
+  {
+   "type": "text",
+   "html": "In your first move you always take 1 stick so that you are sure to win. <b>The</b> possible number of sticks in the pile at the start form this sequence.",
+   "text": "In your first move you always take 1 stick so that you are sure to win. The possible number of sticks in the pile at the start form this sequence."
+  },
+  {
+   "type": "text",
+   "html": "5 9 13 17 ...",
+   "text": "5 9 13 17 ..."
+  }
+ ]
+}

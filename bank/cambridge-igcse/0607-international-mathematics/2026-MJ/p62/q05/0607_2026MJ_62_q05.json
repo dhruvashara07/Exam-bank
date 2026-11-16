@@ -1,0 +1,130 @@
+{
+ "id": "0607_2026MJ_62_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    771.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 489.8,
+    "height_pt": 711.6
+   }
+  }
+ ],
+ "text": "5\nIn a game, there are 50 sticks in the pile at the start.\nYou start the game and you win.\nIn each move a player can take up to k sticks from the pile,\n1\n1\nk\n1\n7\n.\nYou always take the number of sticks so that you are sure to win.\nComplete the table.\nIf you are not sure to win, write X in the cell for the number of sticks you take on the first move.\nnumber of sticks you take\ntotal number of moves\nvalue of k\non the first move\nto win\n2\n3\n[4]",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "5",
+   "text": "number of\ntotal number\nvalue of k\nsticks\nof moves\n2\n2\n33\n3\n2\n25\n4\nX\n5\n2\n17\n6\n1\n15\nOne row from\nFor k = 2\n48 is a multiple of 3 oe\nFor k = 3\n48 is a multiple of 4 oe\nFor k = 4\n45 or 50 is a multiple of 5 oe\nFor k = 5\n48 is a multiple of 6 oe\nFor k = 6\n49 is a multiple of 7 oe\nor\nWith k given, [number of moves =] doubling of\ncorrect number in pile after first move\n+1\nk +1",
+   "codes": [
+    "3",
+    "C1"
+   ],
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      58.0,
+      76.5,
+      783.9199829101562,
+      447.9
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In a game, there are 50 sticks in the pile at the start. You start the game and you win.",
+   "text": "In a game, there are 50 sticks in the pile at the start. You start the game and you win."
+  },
+  {
+   "type": "text",
+   "html": "In each move a player can take up to k sticks from the pile, 1 1 k 1 7 . You always take the number of sticks so that you are sure to win.",
+   "text": "In each move a player can take up to k sticks from the pile, 1 1 k 1 7 . You always take the number of sticks so that you are sure to win."
+  },
+  {
+   "type": "text",
+   "html": "Complete the table. If you are not sure to win, write X in the cell for the number of sticks you take on the first move.",
+   "text": "Complete the table. If you are not sure to win, write X in the cell for the number of sticks you take on the first move."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "<b>value</b> of k",
+     "<b>number</b> <b>of</b> <b>sticks</b> <b>you</b> <b>take</b> <b>on</b> <b>the</b> <b>first</b> <b>move</b>",
+     "<b>total</b> <b>number</b> <b>of</b> <b>moves</b> to win"
+    ],
+    [
+     "2",
+     "",
+     ""
+    ],
+    [
+     "3",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "type": "answer",
+   "kind": "space",
+   "height_pt": 489.8
+  },
+  {
+   "type": "marks",
+   "value": 4
+  }
+ ]
+}

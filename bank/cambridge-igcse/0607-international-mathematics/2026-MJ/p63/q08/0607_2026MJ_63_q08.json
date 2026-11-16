@@ -1,0 +1,415 @@
+{
+ "id": "0607_2026MJ_63_q08",
+ "number": 8,
+ "segments": [
+  {
+   "page": 14,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    277.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 22.8,
+    "height_pt": 217.6
+   }
+  }
+ ],
+ "text": "8\nA new piece of paper is wrapped around the cylinder.\nhcm/s\nX\nB\nA\nDcm\ntcm/s\nThe cylinder has diameter D cm.\nAB rotates at a speed of t cm /s.\nThe pencil moves along the horizontal track at a speed of h cm /s.\nThe helix is from A to X.",
+ "marks": 9,
+ "figures": [
+  {
+   "caption": null,
+   "page": 14,
+   "bbox": [
+    68.3,
+    87.3,
+    424.2,
+    207.2
+   ],
+   "id": "0607_2026MJ_63_q08_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 15,
+   "bbox": [
+    247.0,
+    101.1,
+    351.7,
+    128.9
+   ],
+   "id": "0607_2026MJ_63_q08b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  },
+  {
+   "caption": null,
+   "page": 16,
+   "bbox": [
+    98.3,
+    100.3,
+    454.2,
+    227.3
+   ],
+   "id": "0607_2026MJ_63_q08c_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  },
+  {
+   "caption": null,
+   "page": 16,
+   "bbox": [
+    91.0,
+    249.5,
+    375.5,
+    436.8
+   ],
+   "id": "0607_2026MJ_63_q08c_diagram4",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  },
+  {
+   "caption": null,
+   "page": 17,
+   "bbox": [
+    254.2,
+    88.8,
+    344.6,
+    120.4
+   ],
+   "id": "0607_2026MJ_63_q08d_diagram5",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(d)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      284.3,
+      570.0,
+      457.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 140.4,
+      "height_pt": 172.7
+     }
+    }
+   ],
+   "text": "Find a model for the pitch, P cm, in terms of h, t and D.\n............................................................. [2]",
+   "marks": 2,
+   "path": "8(a)",
+   "mark_scheme": [
+    {
+     "label": "8(a)",
+     "text": "h\nP\n=\noe\nt\nπD\nh\nand P = πD× tan( a)oe\nor tan a =\nt\nπDh\nP=\nt",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 13,
+       "bbox": [
+        58.0,
+        255.0,
+        783.9199829101562,
+        370.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find a model for the pitch, P cm, in terms of h, t and D.",
+     "text": "Find a model for the pitch, P cm, in terms of h, t and D."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      307.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 162.8,
+      "height_pt": 247.6
+     }
+    }
+   ],
+   "text": "Use Pythagoras’ theorem and 8(a) to show that a model for the length, H1 cm, of the helix\nfrom A to X is\n2\nh\n+bl .\nH\n=\nD\n1\nr\nt\n1\n[3]",
+   "marks": 3,
+   "path": "8(b)",
+   "mark_scheme": [
+    {
+     "label": "8(b)",
+     "text": "2\nπDh\n(πD) +\n2\n\n\n\nt\n\n\n\n2\n2\nh\nh\n(πD) 1+\n2\n or\n(πD)\n2\n1+\n \n \n\n\n \nt\n \nt\n\n\n2\nh\nH = πD 1+\n\n\n1\n\nt\n",
+     "codes": [
+      "2",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 14,
+       "bbox": [
+        58.0,
+        76.5,
+        783.9199829101562,
+        250.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use Pythagoras’ theorem and 8(a) to show that a model for the length, H<sub>1</sub> cm, of the helix from A to X is",
+     "text": "Use Pythagoras’ theorem and 8(a) to show that a model for the length, H1 cm, of the helix from A to X is"
+    },
+    {
+     "type": "figure",
+     "id": "0607_2026MJ_63_q08b_diagram2",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 162.8
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      600.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 66.7,
+      "height_pt": 541.1
+     }
+    }
+   ],
+   "text": "The cylinder rotates and the pencil moves until it reaches the end of the cylinder.\nThe cylinder has length L cm.\nhcm/s\nB\nA\nDcm\ntcm/s\nLcm\nhcm/s\nA\nX\nB\na\nthe helix\ntcm/s\nA\nX\nB\nthe pitch\nThe length,\nH2\ncm\n, of the helix is now the total length of the two straight lines on the paper.\nUse 8(a) to find a model for the number of turns the cylinder makes before the pencil reaches the\nend of the cylinder.\nGive your answer in terms of D, h, L and t.\n............................................................. [1]",
+   "marks": 1,
+   "path": "8(c)",
+   "mark_scheme": [
+    {
+     "label": "8(c)",
+     "text": "Lt\noe\nπDh",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 14,
+       "bbox": [
+        58.0,
+        250.2,
+        783.9199829101562,
+        321.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The cylinder rotates and the pencil moves until it reaches the end of the cylinder. The cylinder has length L cm.",
+     "text": "The cylinder rotates and the pencil moves until it reaches the end of the cylinder. The cylinder has length L cm."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2026MJ_63_q08c_diagram3",
+     "caption": null
+    },
+    {
+     "type": "figure",
+     "id": "0607_2026MJ_63_q08c_diagram4",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "The length, H<sub>2</sub> cm , of the helix is now the total length of the two straight lines on the paper.",
+     "text": "The length, H2 cm , of the helix is now the total length of the two straight lines on the paper."
+    },
+    {
+     "type": "text",
+     "html": "Use 8(a) to find a model for the number of turns the cylinder makes before the pencil reaches the end of the cylinder. Give your answer in terms of D, h, L and t.",
+     "text": "Use 8(a) to find a model for the number of turns the cylinder makes before the pencil reaches the end of the cylinder. Give your answer in terms of D, h, L and t."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      60.1,
+      570.0,
+      431.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 295.7,
+      "height_pt": 371.4
+     }
+    }
+   ],
+   "text": "Use 8(b) and 8(c) to show that a model for the total length,\nH2\ncm\n, of the helix is\n2\nt\nH\n=\nL\n+ .\n1\n2\n2\nh\n[3]",
+   "marks": 3,
+   "path": "8(d)",
+   "mark_scheme": [
+    {
+     "label": "8(d)",
+     "text": "EITHER:\nMETHOD 1\n2\nh\nLt\n[H = ]\n[×] πD 1+\nπDh\n\n\n2\n\nt\n\n2\nLt\nh\n1+\n[H =]\n\n\n2\nh\n\nt\n\n2\n2\n2\nt h\nt\n1+\n[H =] L\noe\n \n2\n2\n2\nh\nh  \nt\n2\nt\nleading to H = L\n+1\n2\n2\nh\nOR:\nMETHOD 2\nL\nL\n2\n2\nH =\nh +t ×\nTime =\nh\n, and\n2\nh\n2\n2\nh\nt\nH =\n+\nL\noe\n2\n2\n2\nh\nh\n2\nt\nleading to H = L\n+1\n2\n2\nh",
+     "codes": [
+      "2",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 15,
+       "bbox": [
+        58.0,
+        76.5,
+        783.9199829101562,
+        457.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use 8(b) and 8(c) to show that a model for the total length, H<sub>2</sub> cm , of the helix is",
+     "text": "Use 8(b) and 8(c) to show that a model for the total length, H2 cm , of the helix is"
+    },
+    {
+     "type": "figure",
+     "id": "0607_2026MJ_63_q08d_diagram5",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 295.7
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A new piece of paper is wrapped around the cylinder.",
+   "text": "A new piece of paper is wrapped around the cylinder."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2026MJ_63_q08_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The cylinder has diameter D cm. AB rotates at a speed of t cm /s. The pencil moves along the horizontal track at a speed of h cm /s. The helix is from A to X.",
+   "text": "The cylinder has diameter D cm. AB rotates at a speed of t cm /s. The pencil moves along the horizontal track at a speed of h cm /s. The helix is from A to X."
+  }
+ ]
+}

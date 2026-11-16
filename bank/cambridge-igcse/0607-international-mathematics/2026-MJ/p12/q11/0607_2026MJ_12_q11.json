@@ -1,0 +1,210 @@
+{
+ "id": "0607_2026MJ_12_q11",
+ "number": 11,
+ "segments": [],
+ "text": "",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 9,
+   "bbox": [
+    91.0,
+    87.6,
+    272.9,
+    178.9
+   ],
+   "id": "0607_2026MJ_12_q11a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 9,
+   "bbox": [
+    91.0,
+    348.79998779296875,
+    492.79998779296875,
+    440.1000061035156
+   ],
+   "id": "0607_2026MJ_12_q11b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      302.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 3,
+      "answer_line": "U = {……}",
+      "working_gap_pt": 19.1,
+      "height_pt": 243.1
+     }
+    }
+   ],
+   "text": "This is a Venn diagram.\nU\nA\nB\n13\n12\n8\n5\n7\n4\n9\nComplete these statements.\nU = {...................................................................................................}\nA\n+\nB\n= {...................................................................................................}\nl\nn\n()\nA\n=\n...................................................................\n[3]",
+   "marks": 3,
+   "path": "11(a)",
+   "mark_scheme": [
+    {
+     "label": "11(a)",
+     "text": "[U =]\n4, 5, 7, 8, 9, 12, 13\n[ A∩B =] 7, 12\n[n(A')=]\n3 cao",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        58.0,
+        316.2,
+        783.9199829101562,
+        380.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "This is a Venn diagram.",
+     "text": "This is a Venn diagram."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2026MJ_12_q11a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Complete these statements.",
+     "text": "Complete these statements."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "U = {",
+     "unit": "}"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "A + B = {",
+     "unit": "}"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "n (Al) ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      320.6,
+      570.0,
+      516.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 119.7,
+      "height_pt": 195.9
+     }
+    }
+   ],
+   "text": "Use set notation to describe each shaded region.\nU\nU\nP\nQ\nR\nT\n...................................\n...................................\n[2]",
+   "marks": 2,
+   "path": "11(b)",
+   "mark_scheme": [
+    {
+     "label": "11(b)",
+     "text": "P U Q\nR ∩ T '",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        58.0,
+        380.9,
+        783.9199829101562,
+        405.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use set notation to describe each shaded region.",
+     "text": "Use set notation to describe each shaded region."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2026MJ_12_q11b_diagram2",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 1,
+ "variant": 2,
+ "paper_code": "0607/12",
+ "paper_type": "core_non_calculator",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

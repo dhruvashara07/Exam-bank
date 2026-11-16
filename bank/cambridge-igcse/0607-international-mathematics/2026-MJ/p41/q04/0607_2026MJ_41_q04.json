@@ -1,0 +1,204 @@
+{
+ "id": "0607_2026MJ_41_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    401.8,
+    570.0,
+    480.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 19.8,
+    "height_pt": 78.2
+   }
+  }
+ ],
+ "text": "4\nThe table shows the times taken by 800 people to complete a task.\ntime (t seconds)\n0\n1\nt\nG\n25\n25\n1\nt\nG\n35\n35\n1\nt\nG\n4\n0\n4\n0\n1\nt\nG\n5\n0\n50\n1\nt\nG\n70\nfrequency\n15\n90\n280\n275\n140",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      512.1,
+      570.0,
+      559.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 14.5,
+      "height_pt": 46.9
+     }
+    }
+   ],
+   "text": "Write down the modal class.\n.........................\n1\nt\nG ......................... [1]",
+   "marks": 1,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "35 [< t ⩽] 40",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        49.91999816894531,
+        183.0,
+        792.219970703125,
+        207.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the modal class.",
+     "text": "Write down the modal class."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      577.1,
+      570.0,
+      712.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 102.9,
+      "height_pt": 134.9
+     }
+    }
+   ],
+   "text": "Calculate an estimate of the mean time.\n............................................................s [2]",
+   "marks": 2,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "42.7[0…]",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        49.91999816894531,
+        207.7,
+        792.219970703125,
+        247.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate an estimate of the mean time.",
+     "text": "Calculate an estimate of the mean time."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "s"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_calculator",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The table shows the times taken by 800 people to complete a task.",
+   "text": "The table shows the times taken by 800 people to complete a task."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "<b>time</b> (t seconds)",
+     "0 1 t G 25",
+     "25 1 t G 35",
+     "35 1 t G 40",
+     "40 1 t G 50",
+     "50 1 t G 70"
+    ],
+    [
+     "frequency",
+     "15",
+     "90",
+     "280",
+     "275",
+     "140"
+    ]
+   ]
+  }
+ ]
+}

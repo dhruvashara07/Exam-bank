@@ -1,0 +1,220 @@
+{
+ "id": "0607_2026MJ_52_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    239.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 23.4,
+    "height_pt": 179.6
+   }
+  }
+ ],
+ "text": "2\nIn each move, a player takes 1 or 2 sticks from the pile.\nYour friend starts the game.\nHere is a table for the total number of moves for you to win the game.\nnumber of sticks taken\ntotal number of moves\n3\n2\n6\n4\n9\n6\n18\n12",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      242.5,
+      570.0,
+      444.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 143.2,
+      "height_pt": 201.5
+     }
+    }
+   ],
+   "text": "There are 24 sticks.\nFind the total number of moves for you to win the game.\n............................................................. [2]",
+   "marks": 2,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "16\nTwo differences of 2 seen\nor sequence [2, 4, 6,] 8, 10, 12, 14, 16\nor sequence ‘below table’ [18\n12]\n21\n14\n24\n16\n2\nor multiplying number of sticks by\nor dividing by 1.5\n3\nor 24 – (24 ÷ 3)\nor 4 × 6 and 4 × 4",
+     "codes": [
+      "1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        52.79999923706055,
+        76.5,
+        789.219970703125,
+        232.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "There are 24 sticks.",
+     "text": "There are 24 sticks."
+    },
+    {
+     "type": "text",
+     "html": "Find the total number of moves for you to win the game.",
+     "text": "Find the total number of moves for you to win the game."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      462.3,
+      570.0,
+      644.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 123.4,
+      "height_pt": 181.7
+     }
+    }
+   ],
+   "text": "The total number of moves for you to win the game is 40.\nFind the number of sticks in the pile at the start of the game.\n.............................................................. [2]",
+   "marks": 2,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "60\n40\n2\n×3 oe\nor [24] 27 30 33 36 39 42 45 48 51 54 57 60",
+     "codes": [
+      "1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        52.79999923706055,
+        232.2,
+        789.219970703125,
+        362.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The total number of moves for you to win the game is 40.",
+     "text": "The total number of moves for you to win the game is 40."
+    },
+    {
+     "type": "text",
+     "html": "Find the number of sticks in the pile at the start of the game.",
+     "text": "Find the number of sticks in the pile at the start of the game."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In each move, a player takes 1 or 2 sticks from the pile. Your friend starts the game. Here is a table for the total number of moves for you to win the game.",
+   "text": "In each move, a player takes 1 or 2 sticks from the pile. Your friend starts the game. Here is a table for the total number of moves for you to win the game."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "<b>number</b> <b>of</b> <b>sticks</b> <b>taken</b>",
+     "total <b>number</b> <b>of</b> <b>moves</b>"
+    ],
+    [
+     "3",
+     "2"
+    ],
+    [
+     "6",
+     "4"
+    ],
+    [
+     "9",
+     "6"
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "18",
+     "12"
+    ]
+   ]
+  }
+ ]
+}

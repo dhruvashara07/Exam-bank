@@ -1,0 +1,202 @@
+{
+ "id": "0607_2026MJ_22_q18",
+ "number": 18,
+ "segments": [
+  {
+   "page": 12,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    145.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 85.6
+   }
+  }
+ ],
+ "text": "A car journey has two stages.\nStage 1: 80 km at an average speed of x km/h\nStage 2: 450 km at an average speed of (\nx\n+\n50\n)\nkm/h\nThe journey takes a total of 7 hours.",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      150.4,
+      570.0,
+      382.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 199.3,
+      "height_pt": 231.6
+     }
+    }
+   ],
+   "text": "-\n(a) Show that   x\n7\n180\nx\n-\n4000\n=\n0\n.\n[3]",
+   "marks": 3,
+   "path": "18(a)",
+   "mark_scheme": [
+    {
+     "label": "18(a)",
+     "text": "80\n450\n+\nx+50\nx\n80(x+50)+450x=7 x( x+50) oe or\nbetter\n80x+4000+450x=7x +350x\n2\n7x +350x−(80x+4000+450x)=0\n2\nLeading to 7x −180x−4000=0 with\n2\nno errors or omissions",
+     "codes": [
+      "M1",
+      "M1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        58.0,
+        76.5,
+        783.9199829101562,
+        255.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that 7x<sup>2</sup> 180x - 4000 = 0.",
+     "text": "Show that 7x2 180x - 4000 = 0."
+    },
+    {
+     "type": "text",
+     "html": "-",
+     "text": "-"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 199.3
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      400.2,
+      570.0,
+      637.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "x =  …… [3]",
+      "working_gap_pt": 205.0,
+      "height_pt": 237.3
+     }
+    }
+   ],
+   "text": "-\n(b) By factorising   x\n7\n180\nx\n-\n4000\nfind the value of x.\nx =  ............................................................ [3]",
+   "marks": 3,
+   "path": "18(b)",
+   "mark_scheme": [
+    {
+     "label": "18(b)",
+     "text": "(7x+100)(x−40)\n[x =] 40",
+     "codes": [
+      "M2",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        58.0,
+        255.9,
+        783.9199829101562,
+        431.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "By factorising 7x<sup>2</sup> 180x - 4000 find the value of x.",
+     "text": "By factorising 7x2 180x - 4000 find the value of x."
+    },
+    {
+     "type": "text",
+     "html": "-",
+     "text": "-"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "x ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 2,
+ "variant": 2,
+ "paper_code": "0607/22",
+ "paper_type": "extended_non_calculator",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A car journey has two stages.",
+   "text": "A car journey has two stages."
+  },
+  {
+   "type": "text",
+   "html": "Stage 1: 80 km at an average speed of x km/h Stage 2: 450 km at an average speed of (x + 50) km/h",
+   "text": "Stage 1: 80 km at an average speed of x km/h Stage 2: 450 km at an average speed of (x + 50) km/h"
+  },
+  {
+   "type": "text",
+   "html": "The journey takes a total of 7 hours.",
+   "text": "The journey takes a total of 7 hours."
+  }
+ ]
+}

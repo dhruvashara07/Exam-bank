@@ -1,0 +1,288 @@
+{
+ "id": "0607_2026MJ_12_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    166.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 61.7,
+    "height_pt": 107.1
+   }
+  }
+ ],
+ "text": "5\nThis is a sequence of patterns made with sticks.\nAll sticks are the same length.\npattern 1\npattern 2\npattern 3",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    68.4000015258789,
+    99.9000015258789,
+    370.70001220703125,
+    150.60000610351562
+   ],
+   "id": "0607_2026MJ_12_q05_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      175.1,
+      570.0,
+      294.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 86.5,
+      "height_pt": 118.9
+     }
+    }
+   ],
+   "text": "Draw pattern 4.\n[1]",
+   "marks": 1,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        58.0,
+        76.5,
+        783.9199829101562,
+        113.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Draw pattern 4.",
+     "text": "Draw pattern 4."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 86.5
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      312.1,
+      570.0,
+      427.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 25.9,
+      "height_pt": 115.4
+     }
+    }
+   ],
+   "text": "Complete the table.\npattern number\n1\n2\n3\n4\n8\nnumber of sticks\n4\n7\n[2]",
+   "marks": 2,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "10, 13, 25",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        58.0,
+        113.6,
+        783.9199829101562,
+        176.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "pattern number",
+       "1",
+       "2",
+       "3",
+       "4",
+       "",
+       "8"
+      ],
+      [
+       "number of sticks",
+       "4",
+       "7",
+       "",
+       "",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      445.7,
+      570.0,
+      618.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 114.9,
+      "height_pt": 172.8
+     }
+    }
+   ],
+   "text": "The numbers of sticks form a sequence.\nFind the nth term of this sequence.\n............................................................. [2]",
+   "marks": 2,
+   "path": "5(c)",
+   "mark_scheme": [
+    {
+     "label": "5(c)",
+     "text": "3n + 1 oe final answer",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        58.0,
+        176.1,
+        783.9199829101562,
+        238.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The numbers of sticks form a sequence.",
+     "text": "The numbers of sticks form a sequence."
+    },
+    {
+     "type": "text",
+     "html": "Find the nth term of this sequence.",
+     "text": "Find the nth term of this sequence."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 1,
+ "variant": 2,
+ "paper_code": "0607/12",
+ "paper_type": "core_non_calculator",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This is a sequence of patterns made with sticks. All sticks are the same length.",
+   "text": "This is a sequence of patterns made with sticks. All sticks are the same length."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2026MJ_12_q05_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "pattern 1 pattern 2 pattern 3",
+   "text": "pattern 1 pattern 2 pattern 3"
+  }
+ ]
+}

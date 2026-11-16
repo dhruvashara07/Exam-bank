@@ -1,0 +1,207 @@
+{
+ "id": "0607_2026MJ_12_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    98.4,
+    570.0,
+    119.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 20.6
+   }
+  }
+ ],
+ "text": "1\nTanya goes shopping.",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      124.4,
+      570.0,
+      341.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 25.9,
+      "height_pt": 217.1
+     }
+    }
+   ],
+   "text": "Complete the shopping bill.\nitem\ncost ($)\n2 kg of tomatoes at $2.40 for each kg\n4 peppers at 90 cents each\n3 kg of onions at ................. for each kg\n4.50\nTotal\n[4]",
+   "marks": 4,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "4.8[0]\n3.6[0]\n1.5[0]\n12.9[0]",
+     "codes": [
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        58.0,
+        113.6,
+        783.9199829101562,
+        188.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the shopping bill.",
+     "text": "Complete the shopping bill."
+    },
+    {
+     "type": "text",
+     "html": "<b>item</b> <b>cost</b> <b>($)</b>",
+     "text": "item cost ($)"
+    },
+    {
+     "type": "text",
+     "html": "kg of tomatoes at $2.40 for each kg",
+     "text": "kg of tomatoes at $2.40 for each kg"
+    },
+    {
+     "type": "text",
+     "html": "peppers at 90 cents each",
+     "text": "peppers at 90 cents each"
+    },
+    {
+     "type": "text",
+     "html": "kg of onions at …… for each kg 4.50",
+     "text": "kg of onions at …… for each kg 4.50"
+    },
+    {
+     "type": "text",
+     "html": "Total",
+     "text": "Total"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      360.0,
+      570.0,
+      450.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 58.2,
+      "height_pt": 90.5
+     }
+    }
+   ],
+   "text": "Calculate the change Tanya receives from $20.\n$  ............................................................ [1]",
+   "marks": 1,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "7.1[0]",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        58.0,
+        188.8,
+        783.9199829101562,
+        213.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the change Tanya receives from $20.",
+     "text": "Calculate the change Tanya receives from $20."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "$"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 1,
+ "variant": 2,
+ "paper_code": "0607/12",
+ "paper_type": "core_non_calculator",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Tanya goes shopping.",
+   "text": "Tanya goes shopping."
+  }
+ ]
+}

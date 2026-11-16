@@ -1,0 +1,225 @@
+{
+ "id": "0607_2026MJ_62_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    93.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 33.6
+   }
+  }
+ ],
+ "text": "2\nIn different games of Nim, a player can take different numbers of sticks from the pile.\nYou win a game of Nim after your friend goes first.",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      98.4,
+      570.0,
+      344.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 29.6,
+      "height_pt": 246.1
+     }
+    }
+   ],
+   "text": "Complete the table.\nnumber of sticks that can\nsequence of possible number of\nnth term of the sequence\nbe taken in each move\nsticks in the pile at the start\n1 or 2\n3\n6\n9\n12\n1, 2 or 3\n4\n8\n12\n...........\n1, 2, 3 or 4\n5\n...........\n...........\n...........\n1, 2, 3, 4, or 5\n......................\n...........\n...........\n1, 2, 3,  …. or k\n[3]",
+   "marks": 3,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "1 or 2\n3\n6\n9\n12\n3n oe\n1, 2 or\n16\n4n oe\n3\n4\n8\n12\n1, 2, 3\n10\n15\n20\n5n oe\nor 4\n5\n1, 2, 3,\n6\n12\n18\n24\n6n oe\n4, or 5\n1, 2,\n3, ….\n(k+1)n oe\nor k",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        58.0,
+        76.5,
+        783.9199829101562,
+        302.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "text",
+     "html": "number of sticks that can sequence of possible number of",
+     "text": "number of sticks that can sequence of possible number of"
+    },
+    {
+     "type": "text",
+     "html": "nth term of the sequence",
+     "text": "nth term of the sequence"
+    },
+    {
+     "type": "text",
+     "html": "be taken in each move sticks in the pile at the start",
+     "text": "be taken in each move sticks in the pile at the start"
+    },
+    {
+     "type": "text",
+     "html": "or 2 3 6 9 12",
+     "text": "or 2 3 6 9 12"
+    },
+    {
+     "type": "text",
+     "html": "1, 2 or 3 4 8 12",
+     "text": "1, 2 or 3 4 8 12"
+    },
+    {
+     "type": "text",
+     "html": "1, 2, 3 or 4 5",
+     "text": "1, 2, 3 or 4 5"
+    },
+    {
+     "type": "text",
+     "html": "1, 2, 3, 4, or 5",
+     "text": "1, 2, 3, 4, or 5"
+    },
+    {
+     "type": "text",
+     "html": "1, 2, 3, …. or k",
+     "text": "1, 2, 3, …. or k"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 3
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      362.9,
+      570.0,
+      764.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 330.3,
+      "height_pt": 401.6
+     }
+    }
+   ],
+   "text": "The number of sticks in the pile at the start is 30.\nIn each game, the greatest number of sticks you can take in each move is k.\nFind all the different possible values of k.\n..................................................................................................................................................... [4]",
+   "marks": 4,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "[k=] [no of sticks] 1, 2, 4, 5, 9, 14, 29 (no extras)\n[Factors of 30 are]\n1, 2, 3, 5, 6, 10, 15, 30 soi with no extras\nOR\nWriting 4 correct equations that would give\ninteger solutions e.g. 2n = 30 or 5(k + 1) = 30\nOR\n30\n30\nn =\nand two examples such as\n= 6\nk +1\n4+1\nOR\n30\n30\nk =\n– 1 and two examples such as\n– 1 =\nn\n10\n2",
+     "codes": [
+      "2",
+      "C2"
+     ],
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        58.0,
+        76.5,
+        783.9199829101562,
+        483.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The number of sticks in the pile at the start is 30. In each game, the greatest number of sticks you can take in each move is k.",
+     "text": "The number of sticks in the pile at the start is 30. In each game, the greatest number of sticks you can take in each move is k."
+    },
+    {
+     "type": "text",
+     "html": "Find all the different possible values of k.",
+     "text": "Find all the different possible values of k."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In different games of Nim, a player can take different numbers of sticks from the pile. You win a game of Nim after your friend goes first.",
+   "text": "In different games of Nim, a player can take different numbers of sticks from the pile. You win a game of Nim after your friend goes first."
+  }
+ ]
+}

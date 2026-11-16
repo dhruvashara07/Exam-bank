@@ -1,0 +1,186 @@
+{
+ "id": "0607_2026MJ_62_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 9,
+   "bbox": [
+    30.0,
+    377.9,
+    570.0,
+    398.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 20.6
+   }
+  }
+ ],
+ "text": "6\nRosie invests $500 in a savings account that pays compound interest at a rate of 4% per year.",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      403.9,
+      570.0,
+      522.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 86.5,
+      "height_pt": 118.6
+     }
+    }
+   ],
+   "text": "Work out how much money is in the account at the end of 5 years.\n............................................................. [2]",
+   "marks": 2,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "5\n\n4 \n500 ×1.04\n5\n500 × 1+\nor\n\n\n\n100\n\n$608.33",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 14,
+       "bbox": [
+        58.0,
+        76.5,
+        783.9199829101562,
+        154.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Work out how much money is in the account at the end of 5 years.",
+     "text": "Work out how much money is in the account at the end of 5 years."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      540.9,
+      570.0,
+      742.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 143.2,
+      "height_pt": 201.6
+     }
+    }
+   ],
+   "text": "Rosie wants the value of her investment to grow to $1000.\nCalculate the number of complete years it takes for the value of Rosie’s $500 to first reach $1000.\n............................................................. [3]",
+   "marks": 3,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "n\nn\n\n4 \n\n4 \n500 1+\n1000 or 1+\n> 2\n\n\n\n\n100\n\n\n\n100\n\nand\n\n4 \nlog2\nnlog 1+\nlog2\nor\n\n\n\n100\n\nlog1.04\nOR\nn\nn\n\n4 \n\n4 \nsketch of 500 1+\nor 1+\n\n\n\n\n\n100\n\n\n100\n\nand intersecting horizontal line\nOR\n17\n973.95\nor\n1.9479\n18\n1012.91\n2.0258\n18",
+     "codes": [
+      "C2",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 14,
+       "bbox": [
+        58.0,
+        154.2,
+        783.9199829101562,
+        483.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Rosie wants the value of her investment to grow to $1000.",
+     "text": "Rosie wants the value of her investment to grow to $1000."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the number of complete years it takes for the value of Rosie’s $500 to first reach $1000.",
+     "text": "Calculate the number of complete years it takes for the value of Rosie’s $500 to first reach $1000."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Rosie invests $500 in a savings account that pays compound interest at a rate of 4% per year.",
+   "text": "Rosie invests $500 in a savings account that pays compound interest at a rate of 4% per year."
+  }
+ ]
+}

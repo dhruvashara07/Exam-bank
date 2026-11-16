@@ -1,0 +1,370 @@
+{
+ "id": "0607_2026MJ_61_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 16,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    320.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 60.4,
+    "height_pt": 260.6
+   }
+  }
+ ],
+ "text": "6\nA cylinder of height h fits inside the cone.\nNOT TO SCALE\n20\nh\nx\n10\nThe cylinder has radius x and volume V.",
+ "marks": 11,
+ "figures": [
+  {
+   "caption": null,
+   "page": 16,
+   "bbox": [
+    68.3,
+    86.9,
+    415.9,
+    286.9
+   ],
+   "id": "0607_2026MJ_61_q06_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 17,
+   "bbox": [
+    135.7,
+    94.3,
+    461.7,
+    301.9
+   ],
+   "id": "0607_2026MJ_61_q06b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      325.4,
+      570.0,
+      715.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 312.1,
+      "height_pt": 389.6
+     }
+    }
+   ],
+   "text": "Show that a model for V is\n2\nr(\nh\n20\nh\n)\n-\nV\n=\n.\n4\n[4]",
+   "marks": 4,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "correct use of similar triangles involving x and h\n20−h\n10−x\nh\nx\n=\n=\ne.g.\n,\n10\n20\n10\n20\n20−h\n[x=]\noe\n2\n2\n20−h\nV = π×\n×h\n\n\n\n2\n\nπh(20−h)\n2\nleading to V =\n4",
+     "codes": [
+      "M1",
+      "A2",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        58.0,
+        76.5,
+        783.9199829101562,
+        266.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that a model for V is",
+     "text": "Show that a model for V is"
+    },
+    {
+     "type": "text",
+     "html": "<sup>2</sup>",
+     "text": "2"
+    },
+    {
+     "type": "text",
+     "html": "V = \\(\\frac{\\text{rh} (20 - h)}{4}\\) .",
+     "text": "V = (rh(20-h))/(4) ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 312.1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      64.5,
+      570.0,
+      335.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 165.5,
+      "height_pt": 270.5
+     }
+    }
+   ],
+   "text": "2\nr(\nh\n20\n-\nh\n)\n(b) Sketch the graph of\nV\n=\nfor values of h between 0 and 20.\n4\nV\nh\n0\n20\n[3]",
+   "marks": 3,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "Correct sketch\nscale on vertical axis to indicate maximum about 1000",
+     "codes": [
+      "2",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        58.0,
+        266.1,
+        783.9199829101562,
+        514.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<sup>2</sup>",
+     "text": "2"
+    },
+    {
+     "type": "text",
+     "html": "Sketch the graph of V = \\(\\frac{\\text{rh} (20 - h)}{4}\\) for values of h between 0 and 20.",
+     "text": "Sketch the graph of V = (rh(20-h))/(4) for values of h between 0 and 20."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2026MJ_61_q06b_diagram2",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 165.5
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      353.4,
+      570.0,
+      400.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 14.5,
+      "height_pt": 46.6
+     }
+    }
+   ],
+   "text": "Find the maximum volume of the cylinder.\n............................................................. [1]",
+   "marks": 1,
+   "path": "6(c)",
+   "mark_scheme": [
+    {
+     "label": "6(c)",
+     "text": "931 awrt",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        58.0,
+        514.2,
+        783.9199829101562,
+        542.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the maximum volume of the cylinder.",
+     "text": "Find the maximum volume of the cylinder."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      418.4,
+      570.0,
+      632.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "height =  ……",
+      "working_gap_pt": 142.6,
+      "height_pt": 213.6
+     }
+    }
+   ],
+   "text": "Find the height and the radius of the cylinder with the maximum volume.\nheight =  ...................................................................\nradius =  ...................................................................\n[3]",
+   "marks": 3,
+   "path": "6(d)",
+   "mark_scheme": [
+    {
+     "label": "6(d)",
+     "text": "height = 6.67 awrt\n20−their h\nx=\n2\ntheirV\nor theirV = π × x ² × their h and x =\n2\nπ ×their h\nradius = 6.67 cao",
+     "codes": [
+      "1",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        58.0,
+        76.5,
+        783.9199829101562,
+        345.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the height and the radius of the cylinder with the maximum volume.",
+     "text": "Find the height and the radius of the cylinder with the maximum volume."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "height ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "radius ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 11,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A cylinder of height h fits inside the cone.",
+   "text": "A cylinder of height h fits inside the cone."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2026MJ_61_q06_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The cylinder has radius x and volume V.",
+   "text": "The cylinder has radius x and volume V."
+  }
+ ]
+}

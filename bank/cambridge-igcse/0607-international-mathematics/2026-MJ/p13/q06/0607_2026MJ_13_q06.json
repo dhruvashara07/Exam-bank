@@ -1,0 +1,220 @@
+{
+ "id": "0607_2026MJ_13_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    178.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 19.2,
+    "height_pt": 118.6
+   }
+  }
+ ],
+ "text": "6\nThe table shows the choice of drink for some students in a school.\ntype of drink\nnumber of students\nwater\n20\nmilk\n8\njuice\n12",
+ "marks": 4,
+ "figures": [
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    145.3,
+    205.7,
+    452.2,
+    545.5
+   ],
+   "id": "0607_2026MJ_13_q06a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      180.0,
+      570.0,
+      565.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 22.0,
+      "height_pt": 385.5
+     }
+    }
+   ],
+   "text": "On the grid, draw a bar chart to show this information.\n20\n18\n16\n14\n12\nnumber\n10\nof students\n8\n6\n4\n2\n0\nwater\nmilk\njuice\ntype of drink\n[2]",
+   "marks": 2,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "Correct bar chart",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        58.0,
+        76.5,
+        783.9199829101562,
+        209.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the grid, draw a bar chart to show this information.",
+     "text": "On the grid, draw a bar chart to show this information."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2026MJ_13_q06a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      583.5,
+      570.0,
+      782.2
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 130.1,
+      "height_pt": 198.7
+     }
+    }
+   ],
+   "text": "One of these students is chosen at random.\nWrite down the probability that this student chooses water.\nGive your answer as a fraction in its simplest form.\n............................................................. [2]",
+   "marks": 2,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "1\ncao\n2",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        58.0,
+        209.1,
+        783.9199829101562,
+        262.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "One of these students is chosen at random.",
+     "text": "One of these students is chosen at random."
+    },
+    {
+     "type": "text",
+     "html": "Write down the probability that this student chooses water. Give your answer as a fraction in its simplest form.",
+     "text": "Write down the probability that this student chooses water. Give your answer as a fraction in its simplest form."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 1,
+ "variant": 3,
+ "paper_code": "0607/13",
+ "paper_type": "core_non_calculator",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The table shows the choice of drink for some students in a school.",
+   "text": "The table shows the choice of drink for some students in a school."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "<b>type</b> <b>of</b> <b>drink</b>",
+     "<b>number</b> <b>of</b> <b>students</b>"
+    ],
+    [
+     "water",
+     "20"
+    ],
+    [
+     "milk",
+     "8"
+    ],
+    [
+     "juice",
+     "12"
+    ]
+   ]
+  }
+ ]
+}

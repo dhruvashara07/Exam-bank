@@ -1,0 +1,342 @@
+{
+ "id": "0607_2026MJ_51_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    251.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 37.5,
+    "height_pt": 192.1
+   }
+  }
+ ],
+ "text": "2\nThe diagram shows the frame on the same grid.\nThe number in the top square is n.\nn\nn+9",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      259.2,
+      570.0,
+      280.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 20.8
+     }
+    }
+   ],
+   "text": "Complete the bottom square with an expression in terms of n.\n[1]",
+   "marks": 1,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "n+16 oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        58.0,
+        274.7,
+        783.9199829101562,
+        299.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the bottom square with an expression in terms of n.",
+     "text": "Complete the bottom square with an expression in terms of n."
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      298.2,
+      570.0,
+      483.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 6,
+      "answer_line": null,
+      "working_gap_pt": 29.8,
+      "height_pt": 185.3
+     }
+    }
+   ],
+   "text": "Complete the steps below to show that an expression for the frame sum is   n\n2\n+\n81\n.\n2\n2\n(\nn\n+\n9\n)\n=\n(\nn\n+\n9\n)(\nn\n+\n9\n)\n=\nn\n+\n9\nn\n+\n9\nn\n+\n....................\nn\n(....................\n+\n....................)\n=\n....................\n2 +\nn\n9\nn\n+\n9\nn\n+\n....................\n-\n....................\nframe sum =\n2\nn\n+\n81\n[2]",
+   "marks": 2,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "81\n[n (n + 16) =] n +16n\n2",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        58.0,
+        299.9,
+        783.9199829101562,
+        362.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the steps below to show that an expression for the frame sum is 2n + 81 .",
+     "text": "Complete the steps below to show that an expression for the frame sum is 2n + 81 ."
+    },
+    {
+     "type": "text",
+     "html": "(n + 9)<sup>2</sup> = (n + 9)(n + 9) = n<sup>2</sup> + 9n + 9n + ……",
+     "text": "(n + 9)2 = (n + 9)(n + 9) = n2 + 9n + 9n + ……"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "n ("
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "n2 9n + 9n +"
+    },
+    {
+     "type": "text",
+     "html": "+",
+     "text": "+"
+    },
+    {
+     "type": "text",
+     "html": "frame sum = 2n + 81",
+     "text": "frame sum = 2n + 81"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      307.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 189.6,
+      "height_pt": 247.6
+     }
+    }
+   ],
+   "text": "The number in the top square of the frame is 207.\nFind the frame sum.\n............................................................. [2]",
+   "marks": 2,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "495\n2 ×207+81",
+     "codes": [
+      "1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        58.0,
+        362.3,
+        783.9199829101562,
+        449.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The number in the top square of the frame is 207.",
+     "text": "The number in the top square of the frame is 207."
+    },
+    {
+     "type": "text",
+     "html": "Find the frame sum.",
+     "text": "Find the frame sum."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      325.5,
+      570.0,
+      647.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 263.3,
+      "height_pt": 321.5
+     }
+    }
+   ],
+   "text": "The frame sum is 197.\nFind the number in the top square of the frame.\n............................................................. [2]",
+   "marks": 2,
+   "path": "2(d)",
+   "mark_scheme": [
+    {
+     "label": "2(d)",
+     "text": "58\n2n+81 =197",
+     "codes": [
+      "1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        58.0,
+        449.2,
+        783.9199829101562,
+        517.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The frame sum is 197.",
+     "text": "The frame sum is 197."
+    },
+    {
+     "type": "text",
+     "html": "Find the number in the top square of the frame.",
+     "text": "Find the number in the top square of the frame."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The diagram shows the frame on the same grid. The number in the top square is n.",
+   "text": "The diagram shows the frame on the same grid. The number in the top square is n."
+  },
+  {
+   "type": "text",
+   "html": "n",
+   "text": "n"
+  },
+  {
+   "type": "text",
+   "html": "n + 9",
+   "text": "n + 9"
+  }
+ ]
+}

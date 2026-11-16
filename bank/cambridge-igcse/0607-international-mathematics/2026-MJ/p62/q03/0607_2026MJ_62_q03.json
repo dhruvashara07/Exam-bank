@@ -1,0 +1,139 @@
+{
+ "id": "0607_2026MJ_62_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    409.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 1,
+    "answer_line": null,
+    "working_gap_pt": 34.6,
+    "height_pt": 350.1
+   }
+  }
+ ],
+ "text": "3\nNow you always start the game.\nIn each move, a player takes 1 or 2 sticks from the pile.\nYou always take the number of sticks so that you are sure to win.\nExample\nThere are 5 sticks in the pile at the start.\nnumber of\nnumber of sticks left\nmove\nresult\nsticks taken\nin the pile\n5\n1\nyou take   2\n3\n2\nfriend takes 2\n1\n3\nyou take   1\n0\nyou win\nThere are now 19 sticks in the pile at the start.\nGive a reason why you should take 1 stick in your first move.\n............................................................................................................................................................. [1]",
+ "marks": 1,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "3",
+   "text": "Leaves a multiple of 3 oe",
+   "codes": [
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      58.0,
+      76.5,
+      783.9199829101562,
+      151.7
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 1,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Now you always start the game. In each move, a player takes 1 or 2 sticks from the pile. You always take the number of sticks so that you are sure to win.",
+   "text": "Now you always start the game. In each move, a player takes 1 or 2 sticks from the pile. You always take the number of sticks so that you are sure to win."
+  },
+  {
+   "type": "text",
+   "html": "<b>Example</b>",
+   "text": "Example"
+  },
+  {
+   "type": "text",
+   "html": "There are 5 sticks in the pile at the start.",
+   "text": "There are 5 sticks in the pile at the start."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "<b>move</b>",
+     "<b>number</b> <b>of</b> <b>sticks</b> <b>taken</b>",
+     "<b>number</b> <b>of</b> <b>sticks</b> <b>left</b> <b>in</b> <b>the</b> <b>pile</b>",
+     "<b>result</b>"
+    ],
+    [
+     "",
+     "",
+     "5",
+     ""
+    ],
+    [
+     "1",
+     "you take 2",
+     "3",
+     ""
+    ],
+    [
+     "2",
+     "friend takes 2",
+     "1",
+     ""
+    ],
+    [
+     "3",
+     "you take 1",
+     "0",
+     "you win"
+    ]
+   ]
+  },
+  {
+   "type": "text",
+   "html": "There are now 19 sticks in the pile at the start.",
+   "text": "There are now 19 sticks in the pile at the start."
+  },
+  {
+   "type": "text",
+   "html": "Give a reason why you should take 1 stick in your first move.",
+   "text": "Give a reason why you should take 1 stick in your first move."
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
+   "lines": 1
+  },
+  {
+   "type": "marks",
+   "value": 1
+  }
+ ]
+}

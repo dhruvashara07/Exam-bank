@@ -1,0 +1,179 @@
+{
+ "id": "0607_2026MJ_43_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    455.2,
+    570.0,
+    474.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 1.6,
+    "height_pt": 18.8
+   }
+  }
+ ],
+ "text": "2\n2\n4\nX\n=\nc\n-\n9\nd",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      481.2,
+      570.0,
+      585.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 71.7,
+      "height_pt": 103.8
+     }
+    }
+   ],
+   "text": "Find the value of X when c = 10.4 and d = 3.2 .\n............................................................. [1]",
+   "marks": 1,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "16",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        58.0,
+        191.1,
+        783.9199829101562,
+        215.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the value of X when c = 10.4 and d = 3.2 .",
+     "text": "Find the value of X when c = 10.4 and d = 3.2 ."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      603.4,
+      570.0,
+      767.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "d =  …… [3]",
+      "working_gap_pt": 131.3,
+      "height_pt": 163.6
+     }
+    }
+   ],
+   "text": "Rearrange the formula to write d in terms of X and c.\nd =  ............................................................ [3]",
+   "marks": 3,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "c − X\n2\nd =[ ±]\noe final answer\n9",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        58.0,
+        215.4,
+        783.9199829101562,
+        277.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Rearrange the formula to write d in terms of X and c.",
+     "text": "Rearrange the formula to write d in terms of X and c."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "d ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 3,
+ "paper_code": "0607/43",
+ "paper_type": "extended_calculator",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "X = c<sup>2</sup> - 9d<sup>2</sup>",
+   "text": "X = c2 - 9d2"
+  }
+ ]
+}

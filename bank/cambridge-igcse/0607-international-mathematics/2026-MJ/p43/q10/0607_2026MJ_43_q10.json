@@ -1,0 +1,346 @@
+{
+ "id": "0607_2026MJ_43_q10",
+ "number": 10,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    136.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 19.3,
+    "height_pt": 77.1
+   }
+  }
+ ],
+ "text": "The table shows the marks of 10 students in a French exam and a Spanish exam.\nFrench mark (x)\n18\n22\n31\n36\n42\n48\n55\n63\n69\n76\nSpanish mark (y)\n34\n42\n43\n55\n48\n58\n59\n68\n72\n79",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      140.3,
+      570.0,
+      219.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 46.2,
+      "height_pt": 78.7
+     }
+    }
+   ],
+   "text": "Find the mean French mark.\n............................................................. [1]",
+   "marks": 1,
+   "path": "10(a)",
+   "mark_scheme": [
+    {
+     "label": "10(a)",
+     "text": "46",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        58.0,
+        76.5,
+        783.9199829101562,
+        101.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the mean French mark.",
+     "text": "Find the mean French mark."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        237.1,
+        570.0,
+        315.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 1,
+        "answer_line": "y =  …… [2]",
+        "working_gap_pt": 46.2,
+        "height_pt": 78.4
+       }
+      }
+     ],
+     "text": "Find the equation of the regression line for y in terms of x.\ny =  ............................................................ [2]",
+     "marks": 2,
+     "path": "10(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "10(b)(i)",
+       "text": "y=0.708x+23.2",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 10,
+         "bbox": [
+          58.0,
+          101.0,
+          783.9199829101562,
+          143.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the equation of the regression line for y in terms of x.",
+       "text": "Find the equation of the regression line for y in terms of x."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "y ="
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        320.8,
+        570.0,
+        380.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 27.5,
+        "height_pt": 59.7
+       }
+      }
+     ],
+     "text": "Use your answer to 10(b)(i) to estimate the Spanish mark when the French mark is 25.\n............................................................. [1]",
+     "marks": 1,
+     "path": "10(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "10(b)(ii)",
+       "text": "41 or 40.9…",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 10,
+         "bbox": [
+          58.0,
+          143.4,
+          783.9199829101562,
+          167.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use your answer to 10(b)(i) to estimate the Spanish mark when the French mark is 25.",
+       "text": "Use your answer to 10(b)(i) to estimate the Spanish mark when the French mark is 25."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "10(b)"
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      398.8,
+      570.0,
+      596.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 139.8,
+      "height_pt": 197.7
+     }
+    }
+   ],
+   "text": "Two of the students who scored more than 40 in the French exam are chosen at random.\nFind the probability that they both scored more than 50 in the Spanish exam.\n............................................................. [2]",
+   "marks": 2,
+   "path": "10(c)",
+   "mark_scheme": [
+    {
+     "label": "10(c)",
+     "text": "2\noe\n3",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        58.0,
+        167.9,
+        783.9199829101562,
+        208.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Two of the students who scored more than 40 in the French exam are chosen at random.",
+     "text": "Two of the students who scored more than 40 in the French exam are chosen at random."
+    },
+    {
+     "type": "text",
+     "html": "Find the probability that they both scored more than 50 in the Spanish exam.",
+     "text": "Find the probability that they both scored more than 50 in the Spanish exam."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 3,
+ "paper_code": "0607/43",
+ "paper_type": "extended_calculator",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The table shows the marks of 10 students in a French exam and a Spanish exam.",
+   "text": "The table shows the marks of 10 students in a French exam and a Spanish exam."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "<b>French</b> <b>mark</b> (x)",
+     "18",
+     "22",
+     "31",
+     "36",
+     "42",
+     "48",
+     "55",
+     "63",
+     "69",
+     "76"
+    ],
+    [
+     "<b>Spanish</b> <b>mark</b> (y)",
+     "34",
+     "42",
+     "43",
+     "55",
+     "48",
+     "58",
+     "59",
+     "68",
+     "72",
+     "79"
+    ]
+   ]
+  }
+ ]
+}

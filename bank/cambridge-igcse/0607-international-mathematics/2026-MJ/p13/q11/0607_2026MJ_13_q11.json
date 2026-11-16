@@ -1,0 +1,203 @@
+{
+ "id": "0607_2026MJ_13_q11",
+ "number": 11,
+ "segments": [],
+ "text": "",
+ "marks": 3,
+ "figures": [
+  {
+   "caption": null,
+   "page": 9,
+   "bbox": [
+    180.3,
+    418.4,
+    416.6,
+    555.0
+   ],
+   "id": "0607_2026MJ_13_q11a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 9,
+   "bbox": [
+    91.0,
+    620.9,
+    322.9,
+    730.3
+   ],
+   "id": "0607_2026MJ_13_q11b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      338.3,
+      570.0,
+      574.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 107.1,
+      "height_pt": 236.2
+     }
+    }
+   ],
+   "text": "U = {integers from 1 to 12}\nA = {2, 5, 9, 11, 12}\nB = {3, 5, 7, 9, 12}\nComplete the Venn diagram.\nU\nA\nB\n[2]",
+   "marks": 2,
+   "path": "11(a)",
+   "mark_scheme": [
+    {
+     "label": "11(a)",
+     "text": "",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        58.0,
+        76.5,
+        783.9199829101562,
+        154.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "U = {integers from 1 to 12}",
+     "text": "U = {integers from 1 to 12}"
+    },
+    {
+     "type": "text",
+     "html": "A = {2, 5, 9, 11, 12} B = {3, 5, 7, 9, 12}",
+     "text": "A = {2, 5, 9, 11, 12} B = {3, 5, 7, 9, 12}"
+    },
+    {
+     "type": "text",
+     "html": "Complete the Venn diagram.",
+     "text": "Complete the Venn diagram."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2026MJ_13_q11a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 107.1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      592.8,
+      570.0,
+      778.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 120.2,
+      "height_pt": 185.7
+     }
+    }
+   ],
+   "text": "Use set notation to describe the shaded region.\nU\nP\nQ\n............................................................. [1]",
+   "marks": 1,
+   "path": "11(b)",
+   "mark_scheme": [
+    {
+     "label": "11(b)",
+     "text": "PQ",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        58.0,
+        154.9,
+        783.9199829101562,
+        181.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use set notation to describe the shaded region.",
+     "text": "Use set notation to describe the shaded region."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2026MJ_13_q11b_diagram2",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 1,
+ "variant": 3,
+ "paper_code": "0607/13",
+ "paper_type": "core_non_calculator",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

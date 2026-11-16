@@ -1,0 +1,230 @@
+{
+ "id": "0607_2026MJ_51_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    420.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 25.1,
+    "height_pt": 360.6
+   }
+  }
+ ],
+ "text": "4\nThe numbers in the grid increase by a different amount.\nIn this grid:\n•\nthe numbers start at 11\n•\nthe numbers increase by 4\n•\nthe width of the grid is 7 squares\n•\nthe grid continues downwards.\n11\n15\n19\n23\n27\n31\n35\n39\n43\n47\n51\n55\n59\n63\n67\n71\n75\n79\n83\n87\n91\n95\n99\n103\n107\n111\n115\n119\n123\n127\n131\n135\n139\n143\n147",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    68.8,
+    178.3,
+    328.3,
+    416.6
+   ],
+   "id": "0607_2026MJ_51_q04_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      429.7,
+      570.0,
+      693.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 140.4,
+      "height_pt": 263.3
+     }
+    }
+   ],
+   "text": "Find the frame sum for this frame.\n95\n127\n............................................................. [3]",
+   "marks": 3,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "151 seen\n127 −95×their151\n2\n1784",
+     "codes": [
+      "1",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        58.0,
+        403.1,
+        783.9199829101562,
+        494.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the frame sum for this frame.",
+     "text": "Find the frame sum for this frame."
+    },
+    {
+     "type": "text",
+     "html": "95",
+     "text": "95"
+    },
+    {
+     "type": "text",
+     "html": "127",
+     "text": "127"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      337.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 154.6,
+      "height_pt": 277.6
+     }
+    }
+   ],
+   "text": "Complete the frame.\n167\n[2]",
+   "marks": 2,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "135\n191",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        58.0,
+        494.8,
+        783.9199829101562,
+        535.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the frame.",
+     "text": "Complete the frame."
+    },
+    {
+     "type": "text",
+     "html": "167",
+     "text": "167"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 154.6
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The numbers in the grid increase by a different amount.",
+   "text": "The numbers in the grid increase by a different amount."
+  },
+  {
+   "type": "text",
+   "html": "In this grid:",
+   "text": "In this grid:"
+  },
+  {
+   "type": "list",
+   "items": [
+    "the numbers start at 11",
+    "the numbers increase by 4",
+    "the width of the grid is 7 squares",
+    "the grid continues downwards."
+   ]
+  },
+  {
+   "type": "figure",
+   "id": "0607_2026MJ_51_q04_diagram1",
+   "caption": null
+  }
+ ]
+}

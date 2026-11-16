@@ -1,0 +1,207 @@
+{
+ "id": "0607_2026MJ_31_q12",
+ "number": 12,
+ "segments": [
+  {
+   "page": 9,
+   "bbox": [
+    30.0,
+    448.0,
+    570.0,
+    559.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 24.5,
+    "height_pt": 111.0
+   }
+  }
+ ],
+ "text": "Sundeep throws a biased 6-sided die.\nThe table shows the probability of the die landing on each number.\nnumber\n1\n2\n3\n4\n5\n6\nx\n11\n13\n8\n10\n14\nprobability\n72\n72\n72\n72\n72\n72",
+ "marks": 2,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      562.9,
+      570.0,
+      630.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "x =  …… [1]",
+      "working_gap_pt": 35.5,
+      "height_pt": 67.6
+     }
+    }
+   ],
+   "text": "Find the value of x.\nx =  ............................................................ [1]",
+   "marks": 1,
+   "path": "12(a)",
+   "mark_scheme": [
+    {
+     "label": "12(a)",
+     "text": "16",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        58.0,
+        362.9,
+        783.9199829101562,
+        404.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the value of x.",
+     "text": "Find the value of x."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "x ="
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      648.9,
+      570.0,
+      779.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 72.4,
+      "height_pt": 130.6
+     }
+    }
+   ],
+   "text": "Sundeep throws this die 180 times.\nFind the expected number of times this die lands on 4.\n............................................................. [1]",
+   "marks": 1,
+   "path": "12(b)",
+   "mark_scheme": [
+    {
+     "label": "12(b)",
+     "text": "25",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        58.0,
+        404.0,
+        783.9199829101562,
+        428.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Sundeep throws this die 180 times.",
+     "text": "Sundeep throws this die 180 times."
+    },
+    {
+     "type": "text",
+     "html": "Find the expected number of times this die lands on 4.",
+     "text": "Find the expected number of times this die lands on 4."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 3,
+ "variant": 1,
+ "paper_code": "0607/31",
+ "paper_type": "core_calculator",
+ "total_marks": 2,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Sundeep throws a biased 6-sided die. The table shows the probability of the die landing on each number.",
+   "text": "Sundeep throws a biased 6-sided die. The table shows the probability of the die landing on each number."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "<b>number</b>",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6"
+    ],
+    [
+     "<b>probability</b>",
+     "11 72",
+     "13 72",
+     "8 72",
+     "10 72",
+     "14 72",
+     "x 72"
+    ]
+   ]
+  }
+ ]
+}

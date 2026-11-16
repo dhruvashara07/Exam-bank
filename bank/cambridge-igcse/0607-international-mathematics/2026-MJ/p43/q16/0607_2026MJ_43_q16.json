@@ -1,0 +1,193 @@
+{
+ "id": "0607_2026MJ_43_q16",
+ "number": 16,
+ "segments": [
+  {
+   "page": 11,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    132.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.5,
+    "height_pt": 72.6
+   }
+  }
+ ],
+ "text": "Raul bought a house on 1 January 2024.\nOn 1 January 2025 the value of the house increased by 8%.\nOn 1 January 2026 the value of the house increased by 5% of its value on 1 January 2025.\nThe value of the house on 1 January 2026 was $90 720.",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      137.4,
+      570.0,
+      371.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 202.1,
+      "height_pt": 234.1
+     }
+    }
+   ],
+   "text": "Calculate the amount Raul paid for the house on 1 January 2024.\n$ ............................................................. [3]",
+   "marks": 3,
+   "path": "16(a)",
+   "mark_scheme": [
+    {
+     "label": "16(a)",
+     "text": "80 000",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 13,
+       "bbox": [
+        58.0,
+        177.0,
+        783.9199829101562,
+        285.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the amount Raul paid for the house on 1 January 2024.",
+     "text": "Calculate the amount Raul paid for the house on 1 January 2024."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "$"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      390.0,
+      570.0,
+      714.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 253.1,
+      "height_pt": 324.5
+     }
+    }
+   ],
+   "text": "From 2026 the value of the house increases exponentially at the rate of 5% each year.\nThe value of the house on 1 January 2026 was $90 720.\nFind the year in which the value of the house on 1 January will first be greater than $200 000.\n............................................................. [4]",
+   "marks": 4,
+   "path": "16(b)",
+   "mark_scheme": [
+    {
+     "label": "16(b)",
+     "text": "2043 nfww",
+     "codes": [
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 13,
+       "bbox": [
+        58.0,
+        285.5,
+        783.9199829101562,
+        541.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "From 2026 the value of the house increases exponentially at the rate of 5% each year. The value of the house on 1 January 2026 was $90 720.",
+     "text": "From 2026 the value of the house increases exponentially at the rate of 5% each year. The value of the house on 1 January 2026 was $90 720."
+    },
+    {
+     "type": "text",
+     "html": "Find the year in which the value of the house on 1 January will first be greater than $200 000.",
+     "text": "Find the year in which the value of the house on 1 January will first be greater than $200 000."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 3,
+ "paper_code": "0607/43",
+ "paper_type": "extended_calculator",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Raul bought a house on 1 January 2024. On 1 January 2025 the value of the house increased by 8%. On 1 January 2026 the value of the house increased by 5% of its value on 1 January 2025.",
+   "text": "Raul bought a house on 1 January 2024. On 1 January 2025 the value of the house increased by 8%. On 1 January 2026 the value of the house increased by 5% of its value on 1 January 2025."
+  },
+  {
+   "type": "text",
+   "html": "The value of the house on 1 January 2026 was $90 720.",
+   "text": "The value of the house on 1 January 2026 was $90 720."
+  }
+ ]
+}

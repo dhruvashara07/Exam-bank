@@ -1,0 +1,286 @@
+{
+ "id": "0607_2026MJ_61_q07",
+ "number": 7,
+ "segments": [
+  {
+   "page": 18,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    343.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 67.5,
+    "height_pt": 283.6
+   }
+  }
+ ],
+ "text": "7\nIn this question, different sized cones enclose a cylinder of fixed dimensions.\nNOT TO SCALE\nH\n12\n8\nR\nThe cylinder has radius 8 and height 12.\nThe cone has radius R and height H.",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 18,
+   "bbox": [
+    68.6,
+    86.9,
+    382.5,
+    296.7
+   ],
+   "id": "0607_2026MJ_61_q07_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 18,
+     "bbox": [
+      30.0,
+      348.3,
+      570.0,
+      568.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 188.0,
+      "height_pt": 220.2
+     }
+    }
+   ],
+   "text": "Find an expression for H in terms of R.\n............................................................. [2]",
+   "marks": 2,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "correct use of similar triangles involving R and H\nH −12\nR−8\n12\nH\n=\n=\ne.g.\n,\nH\nR\n8\nR\n12R\noe\nR−8",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        58.0,
+        345.9,
+        783.9199829101562,
+        456.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression for H in terms of R.",
+     "text": "Find an expression for H in terms of R."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 19,
+       "bbox": [
+        30.0,
+        59.4,
+        570.0,
+        259.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 122.2,
+        "height_pt": 199.6
+       }
+      }
+     ],
+     "text": "Show that a model for the volume of the cone, V, is\n3\n4\nR\nr\nV\n=\n- .\nR\n8\n[1]",
+     "marks": 1,
+     "path": "7(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "7(b)(i)",
+       "text": "1\n12R\nπ×R ×\n2\nisw\n3\nR−8",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 12,
+         "bbox": [
+          58.0,
+          456.3,
+          783.9199829101562,
+          502.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Show that a model for the volume of the cone, V, is",
+       "text": "Show that a model for the volume of the cone, V, is"
+      },
+      {
+       "type": "text",
+       "html": "V = \\(\\frac{4\\text{rR}^{3}}{R - 8}\\) .",
+       "text": "V = (4rR3)/(R-8) ."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 122.2
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 19,
+       "bbox": [
+        30.0,
+        264.3,
+        570.0,
+        737.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 414.7,
+        "height_pt": 472.7
+       }
+      }
+     ],
+     "text": "The volume of the cone is a minimum when the radius is between 8 and 20.\nFind the minimum volume of the cone.\n............................................................. [2]",
+     "marks": 2,
+     "path": "7(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "7(b)(ii)",
+       "text": "Correct suitable sketch, e.g.\n5430 or 5428 to 5429",
+       "codes": [
+        "C1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 13,
+         "bbox": [
+          58.0,
+          76.5,
+          783.9199829101562,
+          335.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The volume of the cone is a minimum when the radius is between 8 and 20.",
+       "text": "The volume of the cone is a minimum when the radius is between 8 and 20."
+      },
+      {
+       "type": "text",
+       "html": "Find the minimum volume of the cone.",
+       "text": "Find the minimum volume of the cone."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "7(b)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In this question, different sized cones enclose a cylinder of fixed dimensions.",
+   "text": "In this question, different sized cones enclose a cylinder of fixed dimensions."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2026MJ_61_q07_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The cylinder has radius 8 and height 12. The cone has radius R and height H.",
+   "text": "The cylinder has radius 8 and height 12. The cone has radius R and height H."
+  }
+ ]
+}

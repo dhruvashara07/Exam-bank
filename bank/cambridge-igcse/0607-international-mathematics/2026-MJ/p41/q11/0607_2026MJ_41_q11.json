@@ -1,0 +1,203 @@
+{
+ "id": "0607_2026MJ_41_q11",
+ "number": 11,
+ "segments": [],
+ "text": "",
+ "marks": 2,
+ "figures": [
+  {
+   "caption": null,
+   "page": 9,
+   "bbox": [
+    91.0,
+    87.5,
+    257.6,
+    175.5
+   ],
+   "id": "0607_2026MJ_41_q11a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 9,
+   "bbox": [
+    206.6,
+    280.4,
+    390.2,
+    397.5
+   ],
+   "id": "0607_2026MJ_41_q11b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      234.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 52.5,
+      "height_pt": 174.6
+     }
+    }
+   ],
+   "text": "This is a Venn diagram.\nU\nB\nC\nComplete the statement using set notation.\nC ............ B [1]",
+   "marks": 1,
+   "path": "11(a)",
+   "mark_scheme": [
+    {
+     "label": "11(a)",
+     "text": "",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        49.91999816894531,
+        496.8,
+        792.219970703125,
+        538.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "This is a Venn diagram.",
+     "text": "This is a Venn diagram."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2026MJ_41_q11a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Complete the statement using set notation.",
+     "text": "Complete the statement using set notation."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "C",
+     "unit": "B"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      252.3,
+      570.0,
+      417.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 69.1,
+      "height_pt": 164.7
+     }
+    }
+   ],
+   "text": "On the Venn diagram, shade\nP\nl\n+\n(\nQ\n,\nR\n)\n.\nU\nQ\nP\nR\n[1]",
+   "marks": 1,
+   "path": "11(b)",
+   "mark_scheme": [
+    {
+     "label": "11(b)",
+     "text": "",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        49.91999816894531,
+        76.5,
+        792.219970703125,
+        193.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the Venn diagram, shade Pl + (Q , R).",
+     "text": "On the Venn diagram, shade Pl + (Q , R)."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2026MJ_41_q11b_diagram2",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 69.1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_calculator",
+ "total_marks": 2,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

@@ -1,0 +1,369 @@
+{
+ "id": "0607_2026MJ_51_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 10,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    574.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 57.8,
+    "height_pt": 515.1
+   }
+  }
+ ],
+ "text": "5\nIn another grid:\n•\nthe numbers increase by d\n•\nthe width of the grid is w squares\n•\nthe grid continues downwards.\nThe diagram shows expressions for the numbers in the frame on this grid.\nThe number in the top square is n.\nn\nn+d(w+1)\nn+2dw\nThe frame is placed on a grid.\n40\n58",
+ "marks": 9,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      582.0,
+      570.0,
+      669.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 55.4,
+      "height_pt": 87.5
+     }
+    }
+   ],
+   "text": "Show that   (\ndw\n+\n1\n)\n=\n18\n.\n[1]",
+   "marks": 1,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "40+d (w+1)=58\nand\n58 – 40 = 18",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        58.0,
+        76.5,
+        783.9199829101562,
+        128.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that d (w + 1) = 18 .",
+     "text": "Show that d (w + 1) = 18 ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 55.4
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      687.9,
+      570.0,
+      784.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 3,
+      "answer_line": null,
+      "working_gap_pt": 14.5,
+      "height_pt": 96.6
+     }
+    }
+   ],
+   "text": "Give a reason why d cannot be 18.\n............................................................................................................................................................\n............................................................................................................................................................\n..................................................................................................................................................... [1]",
+   "marks": 1,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "The width of the grid cannot be zero oe\nor\n58 would be in the square to the right of 40 oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        58.0,
+        128.7,
+        783.9199829101562,
+        178.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Give a reason why d cannot be 18.",
+     "text": "Give a reason why d cannot be 18."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 3
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      59.4,
+      570.0,
+      338.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 246.3,
+      "height_pt": 278.6
+     }
+    }
+   ],
+   "text": "Find all the possible pairs of values of d and w.\n..................................................................................................................................................... [4]",
+   "marks": 4,
+   "path": "5(c)",
+   "mark_scheme": [
+    {
+     "label": "5(c)",
+     "text": "d\nw\n1\n17\n2\n8\n3\n5\n6\n2\nNo extras\nFor three of\n1(17 + 1) = 18, 2(8+ 1) = 18, 3(5 + 1) = 18, 6(2+ 1) = 18,\n9(1 + 1) = 18",
+     "codes": [
+      "2",
+      "C2"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        58.0,
+        178.5,
+        783.9199829101562,
+        366.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find <b>all</b> the possible pairs of values of d and w.",
+     "text": "Find all the possible pairs of values of d and w."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      356.2,
+      570.0,
+      727.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "d = ……",
+      "working_gap_pt": 113.1,
+      "height_pt": 371.3
+     }
+    }
+   ],
+   "text": "The frame is moved to a different position on the same grid.\n76\n106\nFind the value of d and the value of w.\nd = ................................................................\nw = ................................................................\n[3]",
+   "marks": 3,
+   "path": "5(d)",
+   "mark_scheme": [
+    {
+     "label": "5(d)",
+     "text": "d = 3\nw = 5\n76+2dw=106\ndw=15",
+     "codes": [
+      "1",
+      "C1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        58.0,
+        76.5,
+        783.9199829101562,
+        335.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The frame is moved to a different position on the <b>same</b> grid.",
+     "text": "The frame is moved to a different position on the same grid."
+    },
+    {
+     "type": "text",
+     "html": "76",
+     "text": "76"
+    },
+    {
+     "type": "text",
+     "html": "106",
+     "text": "106"
+    },
+    {
+     "type": "text",
+     "html": "Find the value of d and the value of w.",
+     "text": "Find the value of d and the value of w."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "d ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "w ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In another grid:",
+   "text": "In another grid:"
+  },
+  {
+   "type": "list",
+   "items": [
+    "the numbers increase by d",
+    "the width of the grid is w squares",
+    "the grid continues downwards."
+   ]
+  },
+  {
+   "type": "text",
+   "html": "The diagram shows expressions for the numbers in the frame on this grid. The number in the top square is n.",
+   "text": "The diagram shows expressions for the numbers in the frame on this grid. The number in the top square is n."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "n",
+     ""
+    ],
+    [
+     "",
+     "n + d(w + 1)"
+    ],
+    [
+     "n + 2dw",
+     ""
+    ]
+   ]
+  },
+  {
+   "type": "text",
+   "html": "The frame is placed on a grid.",
+   "text": "The frame is placed on a grid."
+  },
+  {
+   "type": "text",
+   "html": "40",
+   "text": "40"
+  },
+  {
+   "type": "text",
+   "html": "58",
+   "text": "58"
+  }
+ ]
+}

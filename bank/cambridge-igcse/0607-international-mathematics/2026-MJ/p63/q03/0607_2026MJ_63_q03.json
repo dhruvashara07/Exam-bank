@@ -1,0 +1,189 @@
+{
+ "id": "0607_2026MJ_63_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    59.4,
+    570.0,
+    141.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 17.2,
+    "height_pt": 82.1
+   }
+  }
+ ],
+ "text": "3\na and b are two numbers.\nx and y are different prime numbers.\n2\na\n=\nx\nx\ny\n=\nxy\n#\n#\n3\nb\n=\nx\ny\ny\ny\n=\nxy\n#\n#\n#",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      150.4,
+      570.0,
+      283.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "HCF =  ……",
+      "working_gap_pt": 48.3,
+      "height_pt": 132.6
+     }
+    }
+   ],
+   "text": "Write down the HCF and the LCM of a and b.\nGive each answer in terms of x and y using indices.\nHCF =  ...................................................................\nLCM =  ...................................................................\n[2]",
+   "marks": 2,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "[HCF] xy oe\n[LCM] x y oe\n2 3",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        58.0,
+        72.1,
+        783.9199829101562,
+        121.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the HCF and the LCM of a and b. Give each answer in terms of x and y using indices.",
+     "text": "Write down the HCF and the LCM of a and b. Give each answer in terms of x and y using indices."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "HCF ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "LCM ="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      301.2,
+      570.0,
+      428.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 95.0,
+      "height_pt": 127.3
+     }
+    }
+   ],
+   "text": "Use 3(a) to show that your connection in 2(b) is true for a and b.\n[2]",
+   "marks": 2,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "[a × b] x y × xy = x y\n2\n3\n3 4\nand\n[HCF × LCM] xy × x y = x y\n2 3\n3 4",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        58.0,
+        121.9,
+        783.9199829101562,
+        188.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use 3(a) to show that your connection in 2(b) is true for a and b.",
+     "text": "Use 3(a) to show that your connection in 2(b) is true for a and b."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 95.0
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2026,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "a and b are two numbers. x and y are different prime numbers.",
+   "text": "a and b are two numbers. x and y are different prime numbers."
+  },
+  {
+   "type": "text",
+   "html": "a = x # x # y = x<sup>2</sup>y b = x # y # y # y = xy<sup>3</sup>",
+   "text": "a = x # x # y = x2y b = x # y # y # y = xy3"
+  }
+ ]
+}
