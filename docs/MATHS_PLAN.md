@@ -146,3 +146,7 @@ Then: pass 2 (logic check), ONE short review round (the page renders KaTeX in th
   4. Claude: looks only at what changed and what is still doubtful; anything not decided goes to the review round.
   5. Dhruv's review round: only decisions, undecided items and ~5 calibration items - never an error Claude's own
      report already named.
+  More effective (Dhruv 2026-11-17 night): every reason lives in ONE file review/claude/<batch>_reasons.json (id, part,
+  reason, source check, status open/fixed/passed/ask, Claude's note) - pass 1 writes it, Claude fills status, pass 2
+  re-checks every 'fixed' one. Round 2 looks only at pass-2 changes. Measure: wrong items per review round
+  (round 32: 18/30, round 33: 9/23) - target <= 2. Build this before the next batch.
