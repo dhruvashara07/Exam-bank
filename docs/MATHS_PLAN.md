@@ -137,6 +137,12 @@ Then: pass 2 (logic check), ONE short review round (the page renders KaTeX in th
 - Mark-scheme graphs that are pasted screenshots: when the question gives the function, draw the graph from the
   function (same window and grid as printed, black-and-white, clear axis labels, the function label where printed);
   otherwise keep the picture with raised contrast.
-- Later (after M1): GitHub pass 1 runs ALL checks (maths_check, sheets, question-side sheet) and writes one report per
-  question; Claude's round resolves every reason; GitHub pass 2 rebuilds the batch strictly and reports a diff; the
-  review round holds only decisions, undecided items and ~5 calibration items.
+- Next batches run in 5 steps (Dhruv 2026-11-17: "git, you, git, then you and review round"):
+  1. GitHub pass 1: build + ALL checks (checks.py, maths_check, side-by-side sheets for MS and question side), one
+     report per question with its flagged reasons.
+  2. Claude: resolves every flagged reason - fixes the CLASS in the pipeline (searching the whole batch) or passes it
+     with a written reason after a look (vision).
+  3. GitHub pass 2: rebuilds the batch with those fixes and reports what changed against pass 1.
+  4. Claude: looks only at what changed and what is still doubtful; anything not decided goes to the review round.
+  5. Dhruv's review round: only decisions, undecided items and ~5 calibration items - never an error Claude's own
+     report already named.
