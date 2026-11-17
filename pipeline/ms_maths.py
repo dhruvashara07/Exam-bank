@@ -745,10 +745,17 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                 dr = [i for g in groups_ if (g['b'][2] - g['b'][0]) * (g['b'][3] - g['b'][1]) >= 0.3 * big for i in g['its']]
             px0, py0 = min(i.x0 for i in dr), min(i.y0 for i in dr)
             px1, py1 = max(i.x1 for i in dr), max(i.y1 for i in dr)
+            BR_ = set('⎛⎜⎝⎞⎟⎠⎡⎢⎣⎤⎥⎦⎧⎨⎩⎫⎬⎭')     # pieces of a tall bracket are text of the line under, never picture
             inpic = [i for i in by[c] if px0 - 14 <= (i.x0 + i.x1) / 2 <= px1 + 14 and py0 - 12 <= (i.y0 + i.y1) / 2 <= py1 + 12
-                     and not (i.kind == 't' and len(i.ref['t']) > 6 and not (py0 - 2 <= (i.y0 + i.y1) / 2 <= py1 + 2))]
+                     and not (i.kind == 't' and len(i.ref['t']) > 6 and not (py0 - 2 <= (i.y0 + i.y1) / 2 <= py1 + 2))
+                     and not (i.kind == 't' and i.ref['t'] and set(i.ref['t']) <= BR_ and not (py0 - 2 <= (i.y0 + i.y1) / 2 <= py1 + 2))]
             long_out = [i for i in by[c] if i.kind == 't' and i not in inpic and len(i.ref['t']) > 6
                         and px0 - 14 <= (i.x0 + i.x1) / 2 <= px1 + 14 and py0 - 12 <= (i.y0 + i.y1) / 2 <= py1 + 12]
+            br_out = [i for i in by[c] if i.kind == 't' and i not in inpic and i.ref['t'] and set(i.ref['t']) <= BR_]
+            long_out += br_out                           # (2026 MJ 63 q9: the top of '((100/50)^2 - 1)' drawn twice)
+            if br_out:                                   # and everything printed on the bracket's lines (its exponent '2')
+                b0_, b1_ = min(i.y0 for i in br_out) - 4, max(i.y1 for i in br_out)
+                inpic = [i for i in inpic if not (i.kind == 't' and b0_ <= (i.y0 + i.y1) / 2 <= b1_)]
             if long_out:                                 # a text line under / over the drawing goes WHOLE to our text, never
                 inpic = [i for i in inpic if not (i.kind == 't' and any(abs(i.ref['y'] - o.ref['y']) < 2 for o in long_out))]
                 #   half into the picture ('Correct sketch passing through (3, -5)' drawn twice, 2025 ON 63 q1, M1)
@@ -870,6 +877,7 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                     for it, dx, dy, k, x0 in pl_:
                         _emit(v, it, dx + 0, dy + max(0.0, (oy_ + gh) - (py1 + dy)), k, x0)
                 continue
+            CTX['pic_text_out'] = [i for i in by[c] if i.kind == 't' and i not in inpic]
             bot = _cell_picture(v, u, inpic, cells_src[c], ours[c], (px0, py0, px1, py1) if head_moved and not broken_pg else None,
                                 shift)          # (top clamped only under a moved heading: a rotated 'All' above a table
             #                                     was cut, 2021 FM 52 q3)
@@ -1023,10 +1031,87 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
         for t in v['text']:
             if t.get('f') in ('serif', 'sans'):
                 t['f'] = fam
+            elif t.get('f') == 'symbol' and t['t'] and all(ch in OPS_SERIF for ch in t['t']):
+                t['f'] = fam
+                if len(t['t']) == 1 and t['t'] not in ',.()[]':     # centred in its printed width
+                    nat = _serif_w(t['t'], t.get('s', 11))
+                    if nat and nat < t['w']:
+                        t['x'] = round(t['x'] + (t['w'] - nat) / 2, 2); t['w'] = round(nat, 2)            # signs in the paper's font: the 'symbol' face (DejaVu) draws '>' far wider than
+                #                         its printed width, it ran into the '9' (2026 MJ 21 q10(c), Dhruv round 33)
     if is_note:
         v['note'] = True
     v['info'] = {'edges': edges, 'new_edges': xs, 'new_w': [QW, A, MW] + ([A] if ncols == 4 else [P5, W - xs[-1]] if ncols == 5 else [])}
+    _sub_chain(v)
     return v
+
+
+OPS_SERIF = set('<>=≤≥≠+−×÷±→*∞°√,.()[]')
+_SW = {}
+
+
+def _serif_w(ch, size):
+    """advance width of a character in Liberation Serif (the face the pages draw with)"""
+    if not _SW:
+        import glob
+        from fontTools.ttLib import TTFont
+        f = (glob.glob('/usr/share/fonts/**/LiberationSerif-Regular.ttf', recursive=True) or [None])[0]
+        if not f:
+            _SW['_'] = None
+            return None
+        tt = TTFont(f); _SW['_'] = (tt.getBestCmap(), tt['hmtx'].metrics, tt['head'].unitsPerEm)
+    if not _SW.get('_'):
+        return None
+    cm, hm, upm = _SW['_']
+    g = cm.get(ord(ch))
+    return hm[g][0] / upm * size if g else None
+
+
+def _sub_chain(v):
+    """'y₂ − y₁' printed as one subscript chain (the '− y' at subscript size: 2024 ON 32 q1(f), Dhruv round 33 'shrunk'):
+    the sign and the second letter go back to the letter's size and line; the digits stay subscripts. What follows on
+    the same line, and a fraction bar under / over the chain, move right by the extra width."""
+    from ms_layout import _map_path
+    tt = v['text']
+    for b in sorted([t for t in tt if t.get('s', 11) > 9.5 and len(t['t']) == 1 and t['t'].isalpha()], key=lambda t: t['x']):
+        near = lambda t, x0: [u for u in tt if -1.0 <= u['x'] - x0 < 2.5 and u is not t]
+        d1 = [u for u in near(b, b['x'] + b['w']) if u.get('s', 11) < 8 and u['t'].isdigit() and 0.5 < u['y'] - b['y'] < 5]
+        if not d1:
+            continue
+        d1 = d1[0]
+        op = [u for u in near(d1, d1['x'] + d1['w']) if u['t'] in ('−', '+', '-') and u.get('s', 11) < 8 and abs(u['y'] - d1['y']) < 1]
+        if not op:
+            continue
+        op = op[0]
+        l2 = [u for u in near(op, op['x'] + op['w']) if u['t'].isalpha() and len(u['t']) == 1 and u.get('s', 11) < 8 and abs(u['y'] - op['y']) < 1]
+        if not l2:
+            continue
+        l2 = l2[0]
+        d2 = [u for u in near(l2, l2['x'] + l2['w']) if u['t'].isdigit() and u.get('s', 11) < l2.get('s', 11)]
+        x_end0 = max(u['x'] + u['w'] for u in [l2] + d2)
+        S = b['s']; k_ = S / op['s']
+        x = d1['x'] + d1['w'] + 0.8
+        op.update(s=S, y=b['y'], w=round(op['w'] * k_, 2), x=round(x, 2), f=b.get('f', op.get('f'))); x += op['w'] + 0.8
+        l2.update(s=S, y=b['y'], w=round(l2['w'] * k_, 2), x=round(x, 2)); x += l2['w']
+        for u in d2:
+            u.update(s=round(0.64 * S, 2), y=round(d1['y'], 2), w=round(u['w'] * 0.64 * S / max(u['s'], 1), 2), x=round(x, 2)); x += u['w']
+        dx = x - x_end0
+        if dx <= 0.2:
+            continue
+        rest_ = [u for u in tt if u['x'] >= x_end0 - 0.3 and u not in (op, l2) and u not in d2 and abs(u['y'] - b['y']) < 12]
+        bars = [bb for bb in (_bbox(l_['d']) for l_ in v['lines']) if bb and bb[3] - bb[1] < 1.6 and bb[0] < b['x'] + 1
+                and bb[2] >= x_end0 - 3 and abs((bb[1] + bb[3]) / 2 - b['y']) < 14]
+        right = max([x] + [bb[2] + dx for bb in bars])
+        sh = max(0.0, right + 3.0 - min([u['x'] for u in rest_] + [1e9]))   # what follows moves only if it would touch
+        for u in rest_:
+            u['x'] = round(u['x'] + sh, 2)
+        for l_ in v['lines']:
+            bb = _bbox(l_['d'])
+            if not bb:
+                continue
+            if bb[3] - bb[1] < 1.6 and bb[0] < b['x'] + 1 and bb[2] >= x_end0 - 3 and abs((bb[1] + bb[3]) / 2 - b['y']) < 14:
+                l_['d'] = _map_path(l_['d'], lambda X, a=bb[0], c=bb[2]: X if X <= a + 0.5 else X + dx, lambda Y: Y)
+            elif bb[0] >= x_end0 - 0.3 and abs((bb[1] + bb[3]) / 2 - b['y']) < 12 and sh:
+                l_['d'] = _map_path(l_['d'], lambda X: X + sh, lambda Y: Y)
 
 
 CTX = {}
@@ -1254,6 +1339,9 @@ def _cell_picture(v, u, items, src, ours, region=None, shift=0.0):
                 y1 = b_[1] - 0.4
             elif y0 < b_[3] < y1 and b_[3] < (y0 + y1) / 2:
                 y0 = b_[3] + 0.4
+    below_ = [i.y0 for i in CTX.pop('pic_text_out', []) if i.y0 > (y0 + y1) / 2 and i.x0 < x1 and i.x1 > x0]
+    if below_ and min(below_) - 0.6 < y1:   # never into a text line laid out as our text under the picture (its top half
+        y1 = min(below_) - 0.6              # came out twice: 2026 MJ 63 q9, Dhruv round 33)
     b = u['src']['box']
     CTX['last_pic'] = (y0, y1)
     CTX.setdefault('pic_spans', []).append((y0, y1))

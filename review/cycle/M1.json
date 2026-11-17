@@ -36,12 +36,17 @@
    },
    {
     "start": "2026-11-17T16:34:57+00:00",
-    "end": null
+    "end": "2026-11-17T17:11:57+00:00",
+    "note": "round 33: 9 of 23 wrong"
    }
   ],
   "fix": [
    {
     "start": "2026-11-17T12:18:55+00:00",
+    "end": null
+   },
+   {
+    "start": "2026-11-17T17:11:57+00:00",
     "end": null
    }
   ]
@@ -88,7 +93,8 @@
   "papers": 90,
   "questions": 1483,
   "flags": 13,
-  "round_items": 23
+  "round_items": 23,
+  "wrong_items": 9
  },
  "errors": [
   {
@@ -378,6 +384,70 @@
    "fix": "see ERROR_PATTERNS 200",
    "found_by": "claude",
    "at": "2026-11-17T16:31:31+00:00"
+  },
+  {
+   "pattern": "201",
+   "kind": "new",
+   "what": "graph labels small, fraction form, never over curves/ticks; only where printed",
+   "fix": "round 33",
+   "found_by": "dhruv",
+   "at": "2026-11-17T17:11:57+00:00"
+  },
+  {
+   "pattern": "202",
+   "kind": "new",
+   "what": "y2-y1 printed as one subscript chain: sign and letter back to normal size",
+   "fix": "round 33",
+   "found_by": "dhruv",
+   "at": "2026-11-17T17:11:57+00:00"
+  },
+  {
+   "pattern": "203",
+   "kind": "new",
+   "what": "operators in the symbol face (DejaVu) drawn too wide: paper font, centred in printed width",
+   "fix": "round 33",
+   "found_by": "dhruv",
+   "at": "2026-11-17T17:11:58+00:00"
+  },
+  {
+   "pattern": "204",
+   "kind": "new",
+   "what": "unread bold on part label (c): bold + partlabel when it leads the part line (maths)",
+   "fix": "round 33",
+   "found_by": "dhruv",
+   "at": "2026-11-17T17:11:58+00:00"
+  },
+  {
+   "pattern": "205",
+   "kind": "new",
+   "what": "intro picture running beside the first question was cut: its lower part joins the intro",
+   "fix": "round 33",
+   "found_by": "dhruv",
+   "at": "2026-11-17T17:11:58+00:00"
+  },
+  {
+   "pattern": "206",
+   "kind": "new",
+   "what": "figure SVG lost the width of spaces (MuPDF redaction): glyphs back to printed x (maths)",
+   "fix": "round 33",
+   "found_by": "dhruv",
+   "at": "2026-11-17T17:11:58+00:00"
+  },
+  {
+   "pattern": "207",
+   "kind": "new",
+   "what": "formula with a root sign taken as a diagram: text + root (maths)",
+   "fix": "round 33",
+   "found_by": "dhruv",
+   "at": "2026-11-17T17:11:58+00:00"
+  },
+  {
+   "pattern": "208",
+   "kind": "new",
+   "what": "MS picture crop took the top of the text line under it / bracket pieces: picture stops above, brackets are text",
+   "fix": "round 33",
+   "found_by": "dhruv",
+   "at": "2026-11-17T17:11:58+00:00"
   }
  ],
  "tokens": [],
@@ -532,6 +602,50 @@
   {
    "at": "2026-11-17T16:35:15+00:00",
    "task": "count M1 round_items=23"
+  },
+  {
+   "at": "2026-11-17T17:11:57+00:00",
+   "task": "phase M1 review"
+  },
+  {
+   "at": "2026-11-17T17:11:57+00:00",
+   "task": "count M1 round_items=23"
+  },
+  {
+   "at": "2026-11-17T17:11:57+00:00",
+   "task": "phase M1 fix"
+  },
+  {
+   "at": "2026-11-17T17:11:57+00:00",
+   "task": "error M1 --pattern"
+  },
+  {
+   "at": "2026-11-17T17:11:57+00:00",
+   "task": "error M1 --pattern"
+  },
+  {
+   "at": "2026-11-17T17:11:58+00:00",
+   "task": "error M1 --pattern"
+  },
+  {
+   "at": "2026-11-17T17:11:58+00:00",
+   "task": "error M1 --pattern"
+  },
+  {
+   "at": "2026-11-17T17:11:58+00:00",
+   "task": "error M1 --pattern"
+  },
+  {
+   "at": "2026-11-17T17:11:58+00:00",
+   "task": "error M1 --pattern"
+  },
+  {
+   "at": "2026-11-17T17:11:58+00:00",
+   "task": "error M1 --pattern"
+  },
+  {
+   "at": "2026-11-17T17:11:58+00:00",
+   "task": "error M1 --pattern"
   }
  ]
 }

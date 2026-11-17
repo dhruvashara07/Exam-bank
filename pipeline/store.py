@@ -800,6 +800,7 @@ def build(pid):
     store = paths.store_dir(pid)
     import subjects
     MATHS_TEXT = subjects.subject(meta['syllabus'])['maths_text']
+    V5.MATHS[0] = bool(MATHS_TEXT)
     shutil.rmtree(store, ignore_errors=True)
     for d in ('figures', 'glyphs'):
         os.makedirs(os.path.join(store, d))
@@ -1001,6 +1002,29 @@ def paper_record(meta, qdoc, mdoc, store, styles, qstyle, mstyle):
     for it in meta.get('intros', []):
         lay = [unit(qdoc, s['page'] - 1, fitz.Rect(s['bbox']), [], styles(qdoc, 'qp', s['page'] - 1, qstyle), store, 'qp')
                for s in it['segments']]
+        if lay and it['segments']:           # a picture of the intro running on beside the first question (the scooter of
+            s = it['segments'][-1]           # 2024 FM 62 B, Dhruv round 33 'cut'): its lower part joins the intro
+            pg = qdoc[s['page'] - 1]; b_ = fitz.Rect(s['bbox'])
+            dr = [fitz.Rect(d['rect']) for d in pg.get_drawings() if d.get('rect')]
+            cl = [r for r in dr if r.y0 < b_.y1 - 1 and r.y1 > b_.y1 + 1 and r.x0 >= b_.x0 - 2 and r.x1 <= b_.x1 + 2]
+            if cl:
+                box = fitz.Rect(cl[0])
+                for r in cl[1:]:
+                    box |= r
+                for _ in range(4):           # the whole drawing: everything touching it under the edge
+                    for r in dr:
+                        if r.y0 >= b_.y1 - 2 and r.intersects(fitz.Rect(box.x0 - 2, box.y0, box.x1 + 2, box.y1 + 2)) and r.height < 120:
+                            box |= r
+                ext = fitz.Rect(box.x0 - 1, b_.y1, box.x1 + 1, box.y1 + 1)
+                if 2 < ext.height < 80:
+                    u2 = unit(qdoc, s['page'] - 1, ext, [], styles(qdoc, 'qp', s['page'] - 1, qstyle), store, 'qp')
+                    u0 = lay[-1]; dx_, dy_ = ext.x0 - b_.x0, ext.y0 - b_.y0
+                    import ms_layout
+                    for l_ in u2.get('lines', []):
+                        u0['lines'].append(dict(l_, d=ms_layout._map_path(l_['d'], lambda x: x + dx_, lambda y: y + dy_)))
+                    for t_ in u2.get('text', []):
+                        u0['text'].append(dict(t_, x=round(t_['x'] + dx_, 2), y=round(t_['y'] + dy_, 2)))
+                    u0['h'] = round(max(u0['h'], dy_ + u2['h']), 2)
         part = {'path': 'intro', 'layout': lay}
         r_ = {'parts': [part]}
         maths_tex.build_record(r_)

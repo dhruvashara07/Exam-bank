@@ -87,7 +87,49 @@ def fix_cmyk_images(svg):
 
 def region_svg(src_doc, page_index, bbox):
     doc = region_pdf(src_doc, page_index, bbox)
-    return minify(fix_cmyk_images(doc[0].get_svg_image(text_as_path=True)))
+    svg = doc[0].get_svg_image(text_as_path=True)
+    if '/0607/' in (src_doc.name or ''):
+        svg = _respace(svg, src_doc[page_index], fitz.Rect(bbox))
+    return minify(fix_cmyk_images(svg))
+
+
+def _respace(svg, page, clip):
+    """MuPDF's redaction (the isolation above) rewrites text runs and drops the width of spaces: a label inside a
+    figure came out 'Reflectioninleftdiagonal' (2024 FM 62 q3(b), Dhruv round 33). Every glyph goes back to the x
+    of the same character on the original page (same baseline, never left of where it is). Maths only."""
+    orig = {}
+    for b in page.get_text('rawdict')['blocks']:
+        for l in b.get('lines', []):
+            for sp in l['spans']:
+                for c in sp['chars']:
+                    if c['c'].strip():
+                        x, y = c['origin'][0] - clip.x0, c['origin'][1] - clip.y0
+                        orig.setdefault(c['c'], []).append([x, y, False])
+    uses = list(re.finditer(r'(<use data-text="([^"]*)"[^>]*?transform="matrix\()([^)]*)(\)")', svg))
+    if not uses or not orig:
+        return svg
+    rep = {}
+    order = sorted(range(len(uses)), key=lambda k: (round(float(uses[k].group(3).split(',')[5]), 1),
+                                                   float(uses[k].group(3).split(',')[4])))
+    for k in order:
+        m = uses[k]; ch = m.group(2); v = [float(t) for t in m.group(3).split(',')]
+        if abs(v[1]) > 1e-6 or abs(v[2]) > 1e-6:
+            continue                                # rotated text: left as it is
+        cand = [o for o in orig.get(ch, []) if not o[2] and abs(o[1] - v[5]) < 0.8 and -0.3 <= o[0] - v[4] < 60]
+        if not cand:
+            continue
+        o = min(cand, key=lambda o: o[0]); o[2] = True
+        if o[0] - v[4] > 0.3:
+            v[4] = o[0]
+            rep[k] = m.group(1) + ','.join(f'{t:.3f}' for t in v) + m.group(4)
+    if not rep:
+        return svg
+    out, last = [], 0
+    for k, m in enumerate(uses):
+        if k in rep:
+            out.append(svg[last:m.start()]); out.append(rep[k]); last = m.end()
+    out.append(svg[last:])
+    return ''.join(out)
 
 
 USE_LIMIT = 900        # Cloudinary rejects SVGs with 1000+ <use> elements ("Resource is invalid")

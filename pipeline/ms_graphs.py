@@ -11,16 +11,23 @@ import math
 # 'xt' / 'yt': labelled ticks (as on the question's axes), 'grid': grid step (x, y), 'ylab': y-axis letter.
 SPECS = {
     ('0607_2024FM_42_q10', '10(b)(i)'): {'f': [('(3*x-2)/(5-2*x)', 'y = (3x − 2)/(5 − 2x)')], 'x': (-2, 6), 'y': (-10, 10),
+                                         'labels': [[('i', 'y'), ('t', ' = '), ('frac', '3x − 2', '5 − 2x')]],
                                          'xt': [-2, 2, 4, 6], 'yt': [-10, -5, 5, 10], 'grid': (1, 2.5)},
     ('0607_2024MJ_42_q03', '3(b)(i)'): {'f': [('2**x - 1/x', 'f(x) = 2ˣ − 1/x')], 'x': (-3, 3), 'y': (-5, 8),
+                                        'labels': [[('t', 'f('), ('i', 'x'), ('t', ') = 2'), ('sup', 'x'), ('t', ' − '), ('frac', '1', 'x')]],
                                         'xt': [-3, 3], 'yt': [-5, 8], 'grid': (1, 1)},
     ('0607_2024MJ_42_q03', '3(b)(iv)(a)'): {'f': [('2**x - 1/x', 'f(x) = 2ˣ − 1/x'), ('3 - x', 'g(x) = 3 − x')],
-                                            'x': (-3, 3), 'y': (-5, 8), 'xt': [-3, 3], 'yt': [-5, 8], 'grid': (1, 1)},
+                                            'x': (-3, 3), 'y': (-5, 8), 'xt': [-3, 3], 'yt': [-5, 8], 'grid': (1, 1),
+                                            'labels': [[('t', 'f('), ('i', 'x'), ('t', ') = 2'), ('sup', 'x'), ('t', ' − '), ('frac', '1', 'x')],
+                                                       [('t', 'g('), ('i', 'x'), ('t', ') = 3 − '), ('i', 'x')]]},
     ('0607_2024MJ_43_q10', '10(f)'): {'f': [('math.sin(math.radians(3*(x+1)))', 'y = sin(3(x + 1))'),
                                             ('1 - 0.01*x', 'y = 1 − 0.01x')],
-                                      'x': (0, 180), 'y': (-2, 2), 'xt': [180], 'yt': [-2, 2], 'grid': (30, 0.5)},
+                                      'x': (0, 180), 'y': (-2, 2), 'xt': [180], 'yt': [-2, 2], 'grid': (30, 0.5),
+                                      'labels': [[('i', 'y'), ('t', ' = sin(3('), ('i', 'x'), ('t', ' + 1))')],
+                                                 [('i', 'y'), ('t', ' = 1 − 0.01'), ('i', 'x')]]},
     ('0607_2024MJ_61_q13', '13(b)(iii)'): {'f': [('x - 1 + math.sqrt(1 - x)', 'G = x − 1 + √(1 − x)')], 'x': (0, 1),
-                                           'y': (0, 0.5), 'xt': [1], 'yt': [0.5], 'grid': (0.1, 0.05), 'ylab': 'G'},
+                                           'y': (0, 0.5), 'xt': [1], 'yt': [0.5], 'grid': (0.1, 0.05), 'ylab': 'G',
+                                           'labels': [[('i', 'G'), ('t', ' = '), ('i', 'x'), ('t', ' − 1 + √(1 − '), ('i', 'x'), ('t', ')')]]},
 }
 
 
@@ -101,19 +108,66 @@ def draw(sp, w, h, size=9.0):
             if dashes[n % 3]:
                 ln['dash'] = dashes[n % 3]
             L.append(ln)
-    # the function(s) in the top right corner, in a white box (Dhruv: 'function written in the top right')
-    ls = [lab for _, lab in sp['f']]
-    bw = max(text_width(t, 'serif', size) for t in ls) + 6 + (14 if len(ls) > 1 else 0)
-    bh = len(ls) * (size + 2) + 4
-    bx, by = pl + W - bw, pt
-    L.append({'d': f'M{bx:.2f} {by:.2f}H{bx + bw:.2f}V{by + bh:.2f}H{bx:.2f}Z', 'fill': '#ffffff', 'stroke': '#000000', 'sw': 0.5})
-    for n, lab in enumerate(ls):
-        yy = by + 2 + (n + 1) * (size + 2) - 2
-        xx = bx + 3
-        if len(ls) > 1:                                   # line sample, so the reader can tell the curves apart
-            ln = {'d': f'M{xx:.2f} {yy - size * 0.3:.2f}h10', 'stroke': '#000000', 'sw': 1.0}
+    # the function label(s) (Dhruv round 33: only where the printed graph has one, small, never over the curves or the
+    # axes, fractions as fractions): pieces ('t', text) / ('i', italic) / ('sup', text) / ('frac', num, den)
+    if not sp.get('label', True):
+        return L, T
+    ls_ = sp.get('labels') or [[('t', lab)] for _, lab in sp['f']]
+    ls = 7.0                                            # label size
+    def piece_w(pc):
+        if pc[0] == 'frac':
+            return max(text_width(pc[1], 'serif', ls * 0.9), text_width(pc[2], 'serif', ls * 0.9)) + 1.5
+        if pc[0] == 'sup':
+            return text_width(pc[1], 'serif', ls * 0.7)
+        return text_width(pc[1], 'serif', ls)
+    def lab_h(lab):
+        return ls * 2.3 if any(pc[0] == 'frac' for pc in lab) else ls * 1.35
+    samp = len(sp['f']) > 1
+    widths = [sum(piece_w(pc) for pc in lab) + (13 if samp else 0) for lab in ls_]
+    bw, bh = max(widths) + 2, sum(lab_h(l_) for l_ in ls_) + 2
+    pts = []                                            # every drawn curve point, the axes and the edges: kept clear
+    for l_ in L:
+        if l_.get('stroke') == '#000000':
+            nums = [float(v) for v in __import__('re').findall(r'-?\d+\.?\d*', l_['d'])]
+            pts += list(zip(nums[0::2], nums[1::2]))
+    for t_ in T:                                        # tick numbers and axis letters are kept clear too
+        for fx_ in (0, 0.5, 1):
+            for fy_ in (0, 1):
+                pts.append((t_['x'] + fx_ * t_['w'], t_['y'] - fy_ * t_['s'] * 0.75))
+    def hits(bx_, by_):
+        m = 2.5
+        return sum(1 for a, b in pts if bx_ - m <= a <= bx_ + bw + m and by_ - m <= b <= by_ + bh + m)
+    cands = []
+    for fx in (0.98, 0.6, 0.3, 0.02):
+        for fy in (0.02, 0.3, 0.6, 0.98):
+            bx_ = pl + 3 + fx * (W - bw - 6); by_ = pt + 3 + fy * (H - bh - 6)
+            cands.append((hits(bx_, by_), -fx, fy, bx_, by_))
+    _, _, _, bx, by = min(cands)
+    L.append({'d': f'M{bx:.2f} {by:.2f}H{bx + bw:.2f}V{by + bh:.2f}H{bx:.2f}Z', 'fill': '#ffffff'})   # no border
+    yy = by + 1
+    for n, lab in enumerate(ls_):
+        h_ = lab_h(lab); base = yy + h_ / 2 + ls * 0.35; xx = bx + 1
+        if samp:
+            ln = {'d': f'M{xx:.2f} {base - ls * 0.3:.2f}h10', 'stroke': '#000000', 'sw': 1.0}
             if dashes[n % 3]:
                 ln['dash'] = dashes[n % 3]
-            L.append(ln); xx += 14
-        T.append({'t': lab, 'x': round(xx, 2), 'y': round(yy, 2), 'w': text_width(lab, 'serif', size), 's': size})
+            L.append(ln); xx += 13
+        for pc in lab:
+            w_ = piece_w(pc)
+            if pc[0] == 'frac':
+                s2 = ls * 0.9
+                for txt, yb in ((pc[1], base - ls * 0.62), (pc[2], base + ls * 0.78)):
+                    tw = text_width(txt, 'serif', s2)
+                    T.append({'t': txt, 'x': round(xx + (w_ - tw) / 2, 2), 'y': round(yb, 2), 'w': tw, 's': s2})
+                L.append({'d': f'M{xx + 0.5:.2f} {base - ls * 0.3 - 0.25:.2f}H{xx + w_ - 0.5:.2f}V{base - ls * 0.3 + 0.25:.2f}'
+                               f'H{xx + 0.5:.2f}Z', 'fill': '#000000'})
+            elif pc[0] == 'sup':
+                T.append({'t': pc[1], 'x': round(xx, 2), 'y': round(base - ls * 0.4, 2), 'w': w_, 's': ls * 0.7, 'i': 1})
+            else:
+                t_ = {'t': pc[1], 'x': round(xx, 2), 'y': round(base, 2), 'w': w_, 's': ls}
+                if pc[0] == 'i':
+                    t_['i'] = 1
+                T.append(t_)
+            xx += w_
+        yy += h_
     return L, T

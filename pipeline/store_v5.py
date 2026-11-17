@@ -136,6 +136,9 @@ def _split_trailing(txt):
     return m.group(1), m.group(2)
 
 
+MATHS = [False]           # set by store.build for maths papers (gated label fixes)
+
+
 def tag_unit(u, ox, oy, qnum, captions, path, docname, first_unit, ms_label=None):
     """Tag roles on the words of one unit.
     captions: [{'rect': Rect page coords, 'kind', 'q', 'n'}]   the caption lines of this question's figures/tables
@@ -200,6 +203,11 @@ def tag_unit(u, ox, oy, qnum, captions, path, docname, first_unit, ms_label=None
         if top is not None:
             line = sorted([t for t in ws if abs(t['y'] - top['y']) < 2.5 and t.get('b') and LABEL.match(t['t']) and t['x'] < 130],
                           key=lambda t: t['x'])
+            if not line and MATHS[0]:      # maths: a part label whose bold was not read ('(c)' of 2025 ON 32 q15, Dhruv
+                line = [t for t in ws if abs(t['y'] - top['y']) < 2.5 and t['t'] == comps[-1] and t['x'] < 130   # round 33)
+                        and t is min((w for w in ws if abs(w['y'] - top['y']) < 2.5), key=lambda w: w['x'])]
+                for t in line:
+                    t['b'] = 1
             lead = []
             for t in line:                       # consecutive label words from the left: '(d)' '(i)'
                 if lead and t['x'] - (lead[-1]['x'] + lead[-1]['w']) > 40:

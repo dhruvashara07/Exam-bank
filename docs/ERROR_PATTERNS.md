@@ -499,3 +499,20 @@ the old MS paths (2014 MJ 22 q2, 43 q9, 2019 ON 11/12 q8, 23 q3, 62 q5).
 197. Paper 5/6 tasks as ONE record (Dhruv round 32): pipeline/tasks.py writes task_<S>.json (id ..._t<S>): intro as
     stem, every printed question as a part (printed numbers kept: renumber skips qnum/mslabel for type 'task'), one
     MS (header, section note once, one Total). Per-question records stay for the checks and point to it ('task').
+
+## Round 33 (Dhruv, 2026-11-17: 9 of 23 wrong)
+201. Graph labels in drawn MS graphs: small (7 pt), fractions as fractions, placed where no curve, axis or tick number
+    is (ms_graphs); a label only where the printed graph has one.
+202. 'y2 - y1' printed as one subscript chain (sign and second letter at subscript size): back to normal size, digits stay
+    subscripts (ms_maths._sub_chain).
+203. Signs in the 'symbol' face were drawn in DejaVu Sans, far wider than printed ('>' ran into '9'): signs use the
+    paper's font, centred in their printed width (ms_maths OPS_SERIF).
+204. A part label whose bold was not read ('(c)', 2025 ON 32 q15): bold + partlabel when it leads its part's first line.
+205. An intro picture running on beside the first question (the scooter, 2024 FM 62 B) was cut at the question's top:
+    its lower part joins the intro (store.paper_record).
+206. Figure SVGs lost the width of every space (MuPDF redaction rewrites text runs: 'Reflectioninleftdiagonal'): each
+    glyph goes back to its printed x (render._respace, maths only).
+207. A formula with a root sign ('H1 = piD sqrt(1 + (h/t)^2)') was cut as a diagram: text + root sign (extract, maths).
+208. An MS picture took the top of the text line under it, and tall-bracket pieces went into the picture: the picture
+    stops above our text, bracket pieces and their line stay text (2026 MJ 63 q9).
+Passed with reason: 2024 FM 62 task A empty magic squares are vector drawings (lines), already crisp - Dhruv: 'your call'.

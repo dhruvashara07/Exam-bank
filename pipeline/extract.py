@@ -498,6 +498,10 @@ def diagrams(doc, seg, lines, captioned):
         if len(straight) == len(c['rs']) and len(horiz) == len(c['rs']):
             continue                                       # only horizontal lines: answer lines
         inside = [t for t in text if fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']).intersects(r)]
+        if maths_doc(doc) and r.height < 40 and r.width < 200 and len(c['rs']) <= 4 and any('=' in t['text'] for t in text
+                                                                                    if fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']).intersects(r + (-60, 0, 0, 0))):
+            continue                    # a formula with a root sign ('H = sqrt(h1^2 + D^2)', 2026 MJ 63 q8, Dhruv round 33):
+            #                             text + root, never a picture
         if all(getattr(x, 'aligned', False) for x in c['rs']) and len(inside) >= 2 and \
                 len({round(x.x0) for x in c['rs'] if x.width < 1.6}) <= 25 and len({round(x.y0) for x in c['rs'] if x.height < 1.6}) <= 25 and \
                 all(len(t['text']) < 60 for t in inside):
