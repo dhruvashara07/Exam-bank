@@ -480,3 +480,15 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - One check round, checks 60/60, golden 0 -> approve.py all 60 M0 papers; rounds 28-31 closed. Next: M1 in a new chat.
 - Pilot lesson for M1: the slowest part was mark-scheme cell layout (pictures vs tables vs graphs vs wrapped steps);
   the rules for those are now in MS_TABLE_RULES 24-30 and ERROR_PATTERNS 89-160, so M1 should mostly be routine.
+
+## 2026-11-16/17 - M1 (2024 FM - 2026 MJ, 90 papers): build, ONE check round, round 32 published
+- Dhruv decided (asked): 2026 MJ Guidance column = 5 columns (40:30:30); 'Throughout the modelling ...' note at the top
+  of every modelling question.
+- Done: GitHub build 11 min; new glyph codes (161); ms_align made maths-aware (164: it had listed every maths question
+  since M0, so its 'empty' check never worked for maths); 20 classes fixed (161-180) before Dhruv's round; 7 approved M0
+  questions changed by the fraction-bar / crop / table-gap / dotted-rule fixes and are re-shown in round 32.
+- Analysis: slowest phase = the check round (sheets + zoom for ~210 doubtful items, many fixes affecting other cells:
+  each needed a run of ms_rebuild over all 11 sessions to see what else moved). Repeats: picture-cell heading logic
+  (169, 173, 177, 179, 180 are all 'what belongs to the picture vs our text'); the checks missed them because
+  ms_words counts words, not duplicates drawn twice in a picture and as text. Next: a check for text drawn both as our
+  text and inside a cell picture; keep ms_rebuild.py as the first tool after any ms_maths change.

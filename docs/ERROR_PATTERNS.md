@@ -413,3 +413,49 @@ the old MS paths (2014 MJ 22 q2, 43 q9, 2019 ON 11/12 q8, 23 q3, 62 q5).
 159. A Word double border's short corner pieces were outside the table-rule search (2021 FM 52 q4, 2025 MJ 62 q4(a))
     -> all rule pieces inside the grid's box (+10 pt) belong to the table.
 160. (limit, not a bug) Pasted screenshot graphs (2014 MJ 31 q15 ...) are pixels only: contrast raised, never redrawn.
+
+### M1 Claude check (2024 FM - 2026 MJ, 90 papers)
+161. New equation-font codes in 2024-2026 papers: MMBinary j/k (∪ ∩), MMEtc c/g (° ⋯), EuclidMathTwo and Calibri
+    F084/F085 (≤ ≥) -> MATHS_GLYPHS; maths_tex knows ⋯ ⩽ ⩾. New font: make a glyph sheet (crop each unknown code).
+162. Paper-6 notice without 'task' ('The modelling starts on the next page.', 2024 MJ 61) -> layout regex.
+163. MS label typo '9a)(ii)' (2024 MJ 43) -> label_text reads it as 9(a)(ii).
+164. ms_align list read labels only at y == 14.0 (maths labels sit at 13.97 or lower) -> every maths question was
+    listed; maths: the top Q-column word; a 4th-level label belongs to its part. (Was open since M0.)
+165. 2026 MJ mark schemes: 5th column Guidance -> 5 columns, Answer : Partial : Guidance = 40 : 30 : 30 (Dhruv);
+    gated by 'Guidance' in the stored MS header.
+166. A fraction bar took only the numerator band; the denominator stayed its own line and another column's growth
+    pushed it away -> a band ending in a bar takes the band under it (inside the bar's width).
+167. Lines of one cell overlapped or ran past the row bottom when other columns' growth and the cell's own wrap met
+    -> each line starts under the line placed above it (+ its printed gap); bottom = last placed ink.
+168. Two fraction bars 0.06 pt apart in height (Answer and Partial Marks) joined into one rule over the Marks column
+    and were dropped -> a rule run never takes a piece left of it. Also in approved M0 (2014 MJ 41 q11, 52/53 q4,
+    2019 ON 42 q10, 2025 MJ 13 q7, 21 q22, 43 q17): re-shown.
+169. Diagram label pieces ('Q', 'S', '65') over pasted pictures taken as a heading -> empty picture crop, crash;
+    a heading line needs 4+ letters; empty crops are skipped.
+170. Diagram crops: a sentence BESIDE the drawing moved the top through it (2025 ON 51 q4, half a grid lost) -> cut
+    at the side (pixel test); vector pieces above (rider over scooter) chain in; axis titles up to 7 words and labels
+    touching the edge are taken in (7 approved M0 crops gained their axis title / last label: re-shown).
+171. A note across the table (a merged row 'For all parts accept ...', or a band inside a row 'In parts (a)(ii)(b)
+    and (a)(ii)(c) ...') was cut into our columns or lost -> one full-width cell; column rules stop at a band; the
+    next section's title row is never a note.
+172. 4th-level labels printed without the number '(a)(ii)(b)' (2024 MJ 41 q2) -> ms.NONUM4.
+173. A picture cell that fell back to text laid its heading out twice (2026 MJ 21 q7/q10, 23 q7: every word twice)
+    -> the heading placement is undone when no picture is made.
+174. Section-wide note 'Throughout the modelling allow ...' (2026 MJ paper 6) was glued to one question's end and
+    the next's top -> ms.section_notes cuts it out and puts it on top of EVERY later question (Dhruv), one cell.
+175. 2024-2025 section titles 'Modelling DELIVERIES BY SCOOTER', 'Modelling Waste Plastic', a bare 'Modelling' were
+    not titles -> shown as the last row of the question before; header regex takes title words.
+176. Dotted table rules printed as runs of 1 pt wide pictures were lost (2024 MJ 53 q4(a); also approved 2021 FM
+    52/62: re-shown) -> 2+ thin pictures in a run = one dotted line of ours (mark schemes only).
+177. A picture cell under a heading started at the drawing's top: a numerator / labels printed above the pasted piece
+    were cut (2024 ON 41 q5(a)) -> the picture starts at its own first ink under the heading; a heading needs 4+
+    letters (a numerator line is never a heading).
+178. Every row of a table inside a cell got the fraction margin: a big gap under long tables (2024 ON 62 q1(b); also
+    approved 2025 MJ 61 q1/q2: re-shown) -> table rows (2+ cell rules) are not 'tall' lines.
+179. Items under a sub-row rule inside a picture cell were outside the crop and lost (2024 ON 61 q2(d) formula,
+    2025 FM 62 q12 pasted '≤'); a power on the heading line was cut ('k²') -> items the crop leaves out are laid
+    out as text / pictures; small raised text joins the heading line.
+180. A text line under a sketch went half into the picture (short words) and half to our text: drawn twice (2025 ON
+    63 q1 'Correct sketch passing through', 2025 FM 42 q9) -> the whole line goes to our text.
+    Open: a small pasted symbol ('≠' image) inside a text line still makes the cell a picture and doubles the line
+    (2025 FM 62 q5(b)(ii)) - sent to Dhruv's round as a recheck.

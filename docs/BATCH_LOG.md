@@ -5,6 +5,7 @@ Minutes are wall clock. "Ours" = build + Claude 1 + Claude 2 + fix (Dhruv's revi
 | Batch | Sessions | Papers | Build | GitHub | Claude 1 | Claude 2 | Fix | Ours | Round items | New errors | Repeats | Tokens |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 257.5 | 51.4 | 2766.0 | 3084.4 | 40 | 58 | 5 | n/a |
+| M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 | 11.7 | 0.1 | 1178.4 | 0.0 | 0.0 | 1190.1 | 30 | 20 | 0 | n/a |
 
 ## Errors per batch (new = first time, repeat = a pattern seen before: the doc or the fix failed)
 
@@ -72,6 +73,28 @@ Minutes are wall clock. "Ours" = build + Claude 1 + Claude 2 + fix (Dhruv's revi
 - [new] pattern 157: table top rule above re-flowed text: table placed under OUR text → 2025 MJ 62 q4(b) (found by dhruv)
 - [new] pattern 158: chart frame darkened next to the y-axis: frame stays light grey → 2019 ON 41 q11 (found by dhruv)
 - [new] pattern 159: table rule search missed short corner pieces of a Word double border → 2021 FM 52 q4, 2025 MJ 62 q4(a) (found by dhruv)
+
+### M1
+- [new] pattern 161: new equation-font codes in 2024 papers (MMBinary j/k, MMEtc c/g, EuclidMathTwo F084/F085) not mapped → MATHS_GLYPHS + maths_tex cdots (found by claude)
+- [new] pattern 162: paper-6 notice 'The modelling starts on the next page.' (no 'task') inside 2024 MJ 61 q7(c) → layout.page_bounds regex (found by claude)
+- [new] pattern 163: MS label typo '9a)(ii)' not read: 9(a)(ii) row glued to 9(a)(i) (2024 MJ 43) → ms.label_text (found by claude)
+- [new] pattern 164: ms_align list read labels only at y==14.0: maths labels at 13.97 or pushed -> every maths question listed (never adapted in M0) → maths: top Q-column word; 4th-level labels belong to their part (found by claude)
+- [new] pattern 165: 2026 MJ mark schemes have a 5th column Guidance: whole session fell to the physics layout → ms_maths 5 columns 40:30:30 (Dhruv) gated by the header (found by claude)
+- [new] pattern 166: fraction bar merged with the numerator band only; denominator stayed a line of its own and was pushed away by another column's growth → _lines_of: a band ending in a bar takes the band under it within the bar's width (found by claude)
+- [new] pattern 167: lines of one cell overlapped / ran past the row when another column's growth and the cell's own wrap met → _cell: each line under the previous placed line; bottom = last placed ink (found by claude)
+- [new] pattern 168: two fraction bars at the same height in Answer and Partial Marks joined into one 'rule' over the Marks column and dropped (also in approved M0: 2014 MJ 41 q11, 52/53 q4, 2019 ON 42 q10, 2025 MJ 13 q7, 21 q22, 43 q17) → rule runs never take a piece left of the run (found by claude)
+- [new] pattern 169: pasted label pieces of a diagram (Q, S, 65) taken as the heading over a pasted picture: the picture crop became empty and the layout crashed → heading lines need >= 4 letters; empty crop guard (found by claude)
+- [new] pattern 170: diagram crops: a sentence beside the drawing cut its top half off (2025 ON 51 q4); vector rider above a scooter, axis titles of 5+ words and labels touching the edge left out (also 7 approved M0 crops lacked their axis title / last label) → fit_crop (maths): side cut by pixels, curves chain, titles <= 7 words, touching labels (found by claude)
+- [new] pattern 171: note printed across the table (a merged row 'For all parts accept ...', or a band inside a row 'In parts (a)(ii)(b) and (a)(ii)(c) ...') was cut into our columns or dropped → ms_maths: merged row = one cell; note band = full-width band with rules above/under, column rules stop (found by claude)
+- [new] pattern 172: 4th-level labels printed without the question number '(a)(ii)(b)' not read: three rows glued into 2(a)(ii)(a) → ms.NONUM4 (maths) (found by claude)
+- [new] pattern 173: a picture cell that fell back to text laid its heading out twice (2026 MJ 21 q7, q10, 23 q7: every word drawn twice) → undo the heading placement when no picture is made (found by claude)
+- [new] pattern 174: section-wide note 'Throughout the modelling allow ...' (2026 MJ paper 6) glued to the end of one question and the top of another → ms.section_notes: cut out, put on top of every later question (Dhruv); one full-width cell (found by claude)
+- [new] pattern 175: 2024-2025 section titles 'Modelling DELIVERIES BY SCOOTER', 'Modelling Waste Plastic', bare 'Modelling' not seen as titles: shown as a last row → ms.py header regex (title words) (found by claude)
+- [new] pattern 176: dotted table rules printed as runs of 1 pt pictures lost (2024 MJ 53 q4(a); also approved 2021 FM 52/62) → store unit (maths ms): 2+ thin pictures in a run = a dotted line (found by claude)
+- [new] pattern 177: a picture cell under a heading started at the drawing's top, cutting a numerator / labels printed above it (2024 ON 41 q5(a)) → picture starts at its own first ink under the heading; numerator lines are never a heading (found by claude)
+- [new] pattern 178: every row of a table in a cell got the fraction margin: big gap under tables (2024 ON 62 q1(b), also M0 2025 MJ 61 q1/q2) → _pushes: table rows (cell rules) are not tall lines (found by claude)
+- [new] pattern 179: text, root signs and a pasted '≤' under a sub-row rule inside a picture cell were left out of the crop and lost (2024 ON 61 q2(d) formula, 2025 FM 62 q12 '≤'); a power on the heading line was cut ('k²') → items the crop leaves out are laid out as text/pictures; raised small text joins the heading line (found by claude)
+- [new] pattern 180: a text line under a sketch went half into the picture (short words) and half to our text: drawn twice (2025 ON 63 q1, 2025 FM 42 q9) → a line with a long word outside the picture goes whole to our text (found by claude)
 
 ## Repeats to act on
 

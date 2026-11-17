@@ -7,6 +7,7 @@ Mapping (by reading the question and the answer, Dhruv round 24): pipeline/ms_ma
 import sys, os, re, json, glob
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import store, subjects
+MATHS = not subjects.is_physics(subjects.current())
 
 
 def qp_leaves(q):
@@ -25,10 +26,15 @@ def ms_rows(sq):
     rows = []
     for v in (sq.get('ms_p') or {}).get('rows', [])[1:-1]:
         L = min([float(re.findall(r'M([\d.]+)', l['d'])[0]) for l in v['lines'] if re.match(r'M[\d.]+ 0', l.get('d', '')) and 5 < float(re.findall(r'M([\d.]+)', l['d'])[0]) < 200] or [44.0])
-        lab = [t['t'] for t in v['text'] if t['y'] == 14.0 and t['x'] + t['w'] < L + 2 and re.match(r'\d', t['t'])]
+        if MATHS:      # maths rows grow / push their label down (fractions): the label is the top Q-column word (M1)
+            qc = sorted([t for t in v['text'] if t['x'] + t['w'] < L + 2 and re.match(r'\d', t['t'])], key=lambda t: t['y'])
+            ly = qc[0]['y'] if qc else None
+        else:
+            ly = 14.0
+        lab = [t['t'] for t in v['text'] if t['y'] == ly and t['x'] + t['w'] < L + 2 and re.match(r'\d', t['t'])]
         lines = {}
         for t in sorted(v['text'], key=lambda t: (round(t['y']), t['x'])):
-            if not (t['x'] + t['w'] < L + 2 and t['y'] == 14.0 and re.match(r'\d', t['t'])):
+            if not (t['x'] + t['w'] < L + 2 and t['y'] == ly and re.match(r'\d', t['t'])):
                 lines.setdefault(round(t['y']), []).append(t['t'])
         rows.append((lab[0] if lab else '', [' '.join(l) for l in lines.values()]))
     return rows
@@ -58,6 +64,9 @@ def mismatch(qid):
         m = re.fullmatch(r'(\d+)\(([a-p])\)[–-]\(([a-p])\)', l)
         if m:
             return [f'{m.group(1)}({chr(c)})' for c in range(ord(m.group(2)), ord(m.group(3)) + 1)]
+        m = MATHS and re.fullmatch(r'(\d+\([a-p]\)\([ivx]+\))\([a-h]\)', l)
+        if m:                                  # maths 4th level '4(b)(iii)(a)' marks its part 4(b)(iii) (ERROR_PATTERNS 83)
+            return [m.group(1)]
         R = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii']
         m = re.fullmatch(r'(\d+\([a-p]\))\(([ivx]+)\)[–-]\(([ivx]+)\)', l)
         if m and m.group(2) in R and m.group(3) in R:

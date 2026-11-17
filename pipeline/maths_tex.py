@@ -27,7 +27,8 @@ SYM = {'×': r'\times', '÷': r'\div', '≤': r'\leqslant', '≥': r'\geqslant',
        '∠': r'\angle', '%': r'\%', '$': r'\$', '<': '<', '>': '>', '{': r'\{', '}': r'\}', '#': r'\#', '&': r'\&',
        '£': r'\pounds', '€': r'\text{€}', '¥': r'\text{¥}', '·': r'\cdot', '•': r'\bullet', 'µ': r'\mu', 'σ': r'\sigma',
        'Σ': r'\Sigma', 'λ': r'\lambda', 'φ': r'\varphi', 'ξ': r'\xi', '∅': r'\varnothing', '⊂': r'\subset', '⊆': r'\subseteq',
-       '∝': r'\propto', '→': r'\to', '△': r'\triangle', '∴': r'\therefore', '\u2032': "'"}
+       '∝': r'\propto', '→': r'\to', '△': r'\triangle', '∴': r'\therefore', '\u2032': "'",
+       '⋯': r'\cdots', '⩽': r'\leqslant', '⩾': r'\geqslant'}
 NUM = re.compile(r'-?\d+(?:\.\d+)?')
 MATHCH = set('0123456789=+-−–×÷≤≥≠±π<>()[]^_/.,°′∩∪∉∈|:;') | set(SYM)
 WORD = re.compile(r"^[A-Za-z][a-z]+[.,:;?!)]*$|^[A-Z][A-Za-z'’]+[.,:;?!)]*$")

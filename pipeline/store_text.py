@@ -55,13 +55,14 @@ def unpua(ch):
 # Bracket pieces (MMVariable, AllAndNone '`') stay drawn shapes (DINGBAT / odd). ERROR_PATTERNS 64.
 MATHS_GLYPHS = {
     'AllAndNone': {'!': '≠', '#': '×', "'": '÷'},
-    'MMBinary': {'!': '±', '#': '×', "'": '÷', '+': '∩', ',': '∪'},
-    'MMEtc': {'f': '…', 'l': '′'},
+    'MMBinary': {'!': '±', '#': '×', "'": '÷', '+': '∩', ',': '∪', 'j': '∪', 'k': '∩'},   # j k: M1 2024 MJ 23
+    'MMEtc': {'f': '…', 'l': '′', 'c': '°', 'g': '⋯'},                              # c g: M1 2024 MJ 43 / 51
     'MMExtra': {'1': '<', '2': '>'},
     'MMGreek': {'r': 'π'}, 'MMaGreek-Regular': {'r': 'π'},
     'MMNegate': {'!': '≠', 'g': '∉'},
     'MMRelation': {'G': '≤', 'H': '≥'},
-    'EuclidMathTwo': {'-': '≤'},                     # 2019 ON 41 MS '71... ≤ f(x)' (round 28 symbol sweep)
+    'EuclidMathTwo': {'-': '≤', '\x84': '≤', '\x85': '≥'},
+    'Calibri': {'\x84': '≤', '\x85': '≥'},       # Word's maths font as Calibri F084 (2025 ON ms_42, 2026 MJ ms_21; M1)   # x84/x85 (PUA F084/F085): M1 2024 MJ ms_22, ms_31                     # 2019 ON 41 MS '71... ≤ f(x)' (round 28 symbol sweep)
 }
 
 

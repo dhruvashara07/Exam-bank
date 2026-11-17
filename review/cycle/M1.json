@@ -1,0 +1,219 @@
+{
+ "batch": "M1",
+ "subject": "0607",
+ "sessions": [
+  "2024-FM",
+  "2024-MJ",
+  "2024-ON",
+  "2025-FM",
+  "2025-ON",
+  "2026-FM",
+  "2026-MJ"
+ ],
+ "created": "2026-11-16T15:08:25+00:00",
+ "phases": {
+  "build": [
+   {
+    "start": "2026-11-16T15:08:25+00:00",
+    "end": "2026-11-16T15:20:09+00:00",
+    "note": "GitHub run 43893190451, 90 papers, 11 min"
+   }
+  ],
+  "claude": [
+   {
+    "start": "2026-11-16T15:20:14+00:00",
+    "end": "2026-11-17T10:58:37+00:00",
+    "note": "one round: 20 classes fixed (161-180), 223 boxes ticked; 3 open rechecks"
+   }
+  ],
+  "claude1": [],
+  "claude2": [],
+  "review": [
+   {
+    "start": "2026-11-17T11:03:42+00:00",
+    "end": null
+   }
+  ],
+  "fix": []
+ },
+ "github_runs": [
+  {
+   "id": 43893190451,
+   "name": "Question bank",
+   "branch": "main",
+   "conclusion": null,
+   "start": "2026-11-16T15:08:36Z",
+   "end": "2026-11-16T15:08:40Z",
+   "minutes": 0.1
+  }
+ ],
+ "counts": {
+  "papers": 90,
+  "questions": 1483,
+  "flags": 13,
+  "round_items": 30
+ },
+ "errors": [
+  {
+   "pattern": "161",
+   "kind": "new",
+   "what": "new equation-font codes in 2024 papers (MMBinary j/k, MMEtc c/g, EuclidMathTwo F084/F085) not mapped",
+   "fix": "MATHS_GLYPHS + maths_tex cdots",
+   "found_by": "claude",
+   "at": "2026-11-16T15:52:10+00:00"
+  },
+  {
+   "pattern": "162",
+   "kind": "new",
+   "what": "paper-6 notice 'The modelling starts on the next page.' (no 'task') inside 2024 MJ 61 q7(c)",
+   "fix": "layout.page_bounds regex",
+   "found_by": "claude",
+   "at": "2026-11-16T15:52:10+00:00"
+  },
+  {
+   "pattern": "163",
+   "kind": "new",
+   "what": "MS label typo '9a)(ii)' not read: 9(a)(ii) row glued to 9(a)(i) (2024 MJ 43)",
+   "fix": "ms.label_text",
+   "found_by": "claude",
+   "at": "2026-11-16T15:52:10+00:00"
+  },
+  {
+   "pattern": "164",
+   "kind": "new",
+   "what": "ms_align list read labels only at y==14.0: maths labels at 13.97 or pushed -> every maths question listed (never adapted in M0)",
+   "fix": "maths: top Q-column word; 4th-level labels belong to their part",
+   "found_by": "claude",
+   "at": "2026-11-16T15:52:10+00:00"
+  },
+  {
+   "pattern": "165",
+   "kind": "new",
+   "what": "2026 MJ mark schemes have a 5th column Guidance: whole session fell to the physics layout",
+   "fix": "ms_maths 5 columns 40:30:30 (Dhruv) gated by the header",
+   "found_by": "claude",
+   "at": "2026-11-16T16:56:30+00:00"
+  },
+  {
+   "pattern": "166",
+   "kind": "new",
+   "what": "fraction bar merged with the numerator band only; denominator stayed a line of its own and was pushed away by another column's growth",
+   "fix": "_lines_of: a band ending in a bar takes the band under it within the bar's width",
+   "found_by": "claude",
+   "at": "2026-11-16T16:56:30+00:00"
+  },
+  {
+   "pattern": "167",
+   "kind": "new",
+   "what": "lines of one cell overlapped / ran past the row when another column's growth and the cell's own wrap met",
+   "fix": "_cell: each line under the previous placed line; bottom = last placed ink",
+   "found_by": "claude",
+   "at": "2026-11-16T16:56:30+00:00"
+  },
+  {
+   "pattern": "168",
+   "kind": "new",
+   "what": "two fraction bars at the same height in Answer and Partial Marks joined into one 'rule' over the Marks column and dropped (also in approved M0: 2014 MJ 41 q11, 52/53 q4, 2019 ON 42 q10, 2025 MJ 13 q7, 21 q22, 43 q17)",
+   "fix": "rule runs never take a piece left of the run",
+   "found_by": "claude",
+   "at": "2026-11-16T16:56:30+00:00"
+  },
+  {
+   "pattern": "169",
+   "kind": "new",
+   "what": "pasted label pieces of a diagram (Q, S, 65) taken as the heading over a pasted picture: the picture crop became empty and the layout crashed",
+   "fix": "heading lines need >= 4 letters; empty crop guard",
+   "found_by": "claude",
+   "at": "2026-11-16T16:56:30+00:00"
+  },
+  {
+   "pattern": "170",
+   "kind": "new",
+   "what": "diagram crops: a sentence beside the drawing cut its top half off (2025 ON 51 q4); vector rider above a scooter, axis titles of 5+ words and labels touching the edge left out (also 7 approved M0 crops lacked their axis title / last label)",
+   "fix": "fit_crop (maths): side cut by pixels, curves chain, titles <= 7 words, touching labels",
+   "found_by": "claude",
+   "at": "2026-11-16T17:09:04+00:00"
+  },
+  {
+   "pattern": "171",
+   "kind": "new",
+   "what": "note printed across the table (a merged row 'For all parts accept ...', or a band inside a row 'In parts (a)(ii)(b) and (a)(ii)(c) ...') was cut into our columns or dropped",
+   "fix": "ms_maths: merged row = one cell; note band = full-width band with rules above/under, column rules stop",
+   "found_by": "claude",
+   "at": "2026-11-17T09:59:52+00:00"
+  },
+  {
+   "pattern": "172",
+   "kind": "new",
+   "what": "4th-level labels printed without the question number '(a)(ii)(b)' not read: three rows glued into 2(a)(ii)(a)",
+   "fix": "ms.NONUM4 (maths)",
+   "found_by": "claude",
+   "at": "2026-11-17T09:59:52+00:00"
+  },
+  {
+   "pattern": "173",
+   "kind": "new",
+   "what": "a picture cell that fell back to text laid its heading out twice (2026 MJ 21 q7, q10, 23 q7: every word drawn twice)",
+   "fix": "undo the heading placement when no picture is made",
+   "found_by": "claude",
+   "at": "2026-11-17T10:18:36+00:00"
+  },
+  {
+   "pattern": "174",
+   "kind": "new",
+   "what": "section-wide note 'Throughout the modelling allow ...' (2026 MJ paper 6) glued to the end of one question and the top of another",
+   "fix": "ms.section_notes: cut out, put on top of every later question (Dhruv); one full-width cell",
+   "found_by": "claude",
+   "at": "2026-11-17T10:18:36+00:00"
+  },
+  {
+   "pattern": "175",
+   "kind": "new",
+   "what": "2024-2025 section titles 'Modelling DELIVERIES BY SCOOTER', 'Modelling Waste Plastic', bare 'Modelling' not seen as titles: shown as a last row",
+   "fix": "ms.py header regex (title words)",
+   "found_by": "claude",
+   "at": "2026-11-17T10:30:29+00:00"
+  },
+  {
+   "pattern": "176",
+   "kind": "new",
+   "what": "dotted table rules printed as runs of 1 pt pictures lost (2024 MJ 53 q4(a); also approved 2021 FM 52/62)",
+   "fix": "store unit (maths ms): 2+ thin pictures in a run = a dotted line",
+   "found_by": "claude",
+   "at": "2026-11-17T10:30:29+00:00"
+  },
+  {
+   "pattern": "177",
+   "kind": "new",
+   "what": "a picture cell under a heading started at the drawing's top, cutting a numerator / labels printed above it (2024 ON 41 q5(a))",
+   "fix": "picture starts at its own first ink under the heading; numerator lines are never a heading",
+   "found_by": "claude",
+   "at": "2026-11-17T10:33:21+00:00"
+  },
+  {
+   "pattern": "178",
+   "kind": "new",
+   "what": "every row of a table in a cell got the fraction margin: big gap under tables (2024 ON 62 q1(b), also M0 2025 MJ 61 q1/q2)",
+   "fix": "_pushes: table rows (cell rules) are not tall lines",
+   "found_by": "claude",
+   "at": "2026-11-17T10:36:16+00:00"
+  },
+  {
+   "pattern": "179",
+   "kind": "new",
+   "what": "text, root signs and a pasted '≤' under a sub-row rule inside a picture cell were left out of the crop and lost (2024 ON 61 q2(d) formula, 2025 FM 62 q12 '≤'); a power on the heading line was cut ('k²')",
+   "fix": "items the crop leaves out are laid out as text/pictures; raised small text joins the heading line",
+   "found_by": "claude",
+   "at": "2026-11-17T10:40:25+00:00"
+  },
+  {
+   "pattern": "180",
+   "kind": "new",
+   "what": "a text line under a sketch went half into the picture (short words) and half to our text: drawn twice (2025 ON 63 q1, 2025 FM 42 q9)",
+   "fix": "a line with a long word outside the picture goes whole to our text",
+   "found_by": "claude",
+   "at": "2026-11-17T10:46:39+00:00"
+  }
+ ],
+ "tokens": []
+}

@@ -1818,7 +1818,7 @@ def build(q, store):
     if MP.EQUAL_FLEX:                                 # maths: its own cell layout (pipeline/ms_maths.py, MS_TABLE_RULES 24)
         import ms_maths
         def hdr_unit(first, ncols, fam=None):
-            names = ['Q', 'Answer', 'Marks', 'Partial Marks'][:ncols]
+            names = ['Q', 'Answer', 'Marks', 'Partial Marks', 'Guidance'][:ncols]
             fake = {'src': uniq[0][1]['src'], 'w': W, 'h': 22.0,
                     'text': [{'t': n, 'x': 100.0 * k_, 'y': 15.0, 'w': 6.4 * len(n), 's': 11.0, 'f': fam or 'sans', 'b': 1} for k_, n in enumerate(names)]}
             return _header_unit(fake, first)
@@ -1826,7 +1826,7 @@ def build(q, store):
             res = ms_maths.build(q, uniq, store, hdr_unit, _own_total, _frame)
         except Exception as e:
             res = None
-            print(f"  {q['id']}: maths mark-scheme layout failed: {type(e).__name__}: {e}")
+            print(f"  {q['id']}: maths mark-scheme layout failed: {type(e).__name__}: {e}"); import traceback, os as _o; _o.environ.get("MSTB") and traceback.print_exc()
         if res:
             return res
     MP.FORCE_WRAP = False

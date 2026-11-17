@@ -318,6 +318,28 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
             n_ = max(1, int((x1_ - x0_) / 2.75))
             u['text'].append({'t': '.' * n_, 'x': round(x0_ - ox, 2), 'y': round(yb - oy, 2), 'w': round(x1_ - x0_, 2),
                               's': 11.0, 'f': 'serif'})
+    if MATHS and docname == 'ms':                 # dotted table rules printed as runs of 1 pt wide pictures (2024 MJ 53 q4(a),
+        thin = sorted(((fitz.Rect(i['bbox']).quad * m).rect for i in page.get_image_info()    # M1): a dotted line of ours
+                       if (i['bbox'][2] - i['bbox'][0] < 1.6 and i['bbox'][3] - i['bbox'][1] >= 3)
+                       or (i['bbox'][3] - i['bbox'][1] < 1.6 and i['bbox'][2] - i['bbox'][0] >= 3)), key=lambda r: (r.x0, r.y0))
+        vr_ = {}
+        for r in thin:
+            if r.is_empty or not inside(r) or in_fig(r) or not r.intersects(clip):
+                continue
+            vert = r.width < r.height
+            key = (vert, round(r.x0 if vert else r.y0))
+            lst = vr_.setdefault(key, [])
+            if lst and (r.y0 - lst[-1][0].y1 < 1.5 if vert else r.x0 - lst[-1][0].x1 < 1.5):
+                lst[-1] = (lst[-1][0] | r, lst[-1][1] + 1)
+            else:
+                lst.append((fitz.Rect(r), 1))
+        for (vert, _), lst in vr_.items():
+            for r, n_pc in lst:
+                if max(r.width, r.height) < 4 or n_pc < 2:      # (one long thin picture is a solid rule, 2014 MJ 31)
+                    continue
+                cx, cy = (r.x0 + r.x1) / 2 - ox, (r.y0 + r.y1) / 2 - oy
+                d_ = (f'M{cx:.2f} {r.y0 - oy:.2f}L{cx:.2f} {r.y1 - oy:.2f}' if vert else f'M{r.x0 - ox:.2f} {cy:.2f}L{r.x1 - ox:.2f} {cy:.2f}')
+                u['lines'].append({'d': d_, 'stroke': '#000000', 'sw': 0.75, 'dash': '1 1.5'})
     # shapes filled with a tiled picture (hatched circles = protons, 2019 ON 41 q9): the tiles cannot be placed, so each such
     # small filled shape is kept as a picture of itself (ring + hatching), drawn over its outline
     if any(i['bbox'][2] - i['bbox'][0] < 8 and i['bbox'][3] - i['bbox'][1] < 8 for i in page.get_image_info()):
@@ -463,12 +485,20 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
                                                          # on beside and below it: 2021 ON 63 q1 magnified scale)
     for _ in range(3):
         changed = False
+        if maths and cut_edges(pg, b):                 # maths: a pasted picture crossing an edge is taken in whole (the
+            for i_ in pg.get_image_info():             # rider's head above the scooter, 2024 FM 62 q8, M1)
+                r = fitz.Rect(i_['bbox'])
+                if r.intersects(b) and not b.contains(r) and r.width < 0.6 * pg.rect.width and r.height < 250 \
+                        and (r & b).get_area() > 0.3 * r.get_area():
+                    nb = b | r
+                    if ok(nb):
+                        b = nb; changed = True
         if cut_edges(pg, b):
             for d in pg.get_drawings():
                 r = d['rect']
                 if r.width > 0.9 * pg.rect.width or not r.intersects(b) or b.contains(r):
                     continue
-                if maths and not (r + (-0.5, -0.5, 0.5, 0.5)).intersects(b0):
+                if maths and not (r + (-0.5, -0.5, 0.5, 0.5)).intersects(b0) and (r.width < 1.5 or r.height < 1.5):
                     continue          # maths: only drawings crossing the ORIGINAL edge - no chain into a table (2019 ON 62 q3)
                 nb = b | r
                 if ok(nb):
@@ -479,7 +509,8 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
             lw = words_of(l)
             ov = (l & b).get_area() / max(l.get_area(), 1)
             gap = max(l.y0 - b.y1, b.y0 - l.y1, l.x0 - b.x1, b.x0 - l.x1)
-            near = ov > 0.15 or (ov == 0 and 0 <= gap < 14 and l.x0 >= b.x0 - 10 and l.x1 <= b.x1 + 10)
+            near = ov > 0.15 or (ov == 0 and 0 <= gap < 14 and l.x0 >= b.x0 - 10 and l.x1 <= b.x1 + 10) or \
+                (maths and ov <= 0.15 and -3 <= gap < 14 and l.x0 >= b.x0 - 10 and l.x1 <= b.x1 + 10)   # (just touching, M1)
             half = ov > 0.15
             label_ok = (not sentence(lw, l)) if half else not bad_label(lw, l)
             if maths and re.fullmatch(r'\d{1,2}', ' '.join(w[4] for w in lw).strip()) and l.x0 < 62:
@@ -503,7 +534,8 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
                 label_ok = False      # maths: a line above / below the drawing and off to its side is question text
             if half and re.match(r'(Fig|Table)\.?\s*\d', ' '.join(w[4] for w in lw)):
                 label_ok = False
-            if near and label_ok and (len(lw) <= 4 or numeric(lw) or half):
+            if near and label_ok and (len(lw) <= (7 if maths else 4) or numeric(lw) or half):   # (maths: axis titles
+                #                                   'Distance on busy roads (km)' were left out, 2024 FM 62 q8, M1)
                 nb = b | l
                 if ok(nb):
                     b = nb; changed = True
@@ -513,6 +545,20 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
         return r.height < 1.2 and any(l.y0 - 3 <= r.y0 <= l.y1 + 3 and r.x0 < l.x1 and r.x1 > l.x0 for l in lines)
     ink = [d['rect'] for d in pg.get_drawings() if d['rect'].intersects(b) and d['rect'].width < 0.9 * pg.rect.width and not text_bar(d['rect'])]
     top, bot = (min(r.y0 for r in ink), max(r.y1 for r in ink)) if ink else (b.y0, b.y1)
+    def beside(l):              # maths: printed ink at the line's height, inside the crop, on one side of it with a gap
+        from layout import dark_mask, ZOOM as Z_    # (pixels: hatching tiles and clipped images have useless boxes)
+        m_ = dark_mask(pg); H_, W_ = m_.shape
+        ya, yb = max(0, int((l.y0 + 1) * Z_)), min(H_, int((l.y1 - 1) * Z_))
+        if yb <= ya:
+            return None
+        def any_ink(xa, xb):
+            xa, xb = max(0, int(xa * Z_)), min(W_, int(xb * Z_))
+            return xb > xa and m_[ya:yb, xa:xb].sum() >= 6
+        if any_ink(b.x0, l.x0 - 8) and not any_ink(l.x0 - 6, l.x0 - 1) and l.x0 > b.x0 + 40:
+            return 'r'
+        if any_ink(l.x1 + 8, b.x1) and not any_ink(l.x1 + 1, l.x1 + 6) and l.x1 < b.x1 - 40:
+            return 'l'
+        return None
     for c in caps:                                     # nothing under the figure's caption ('Method 1' heading, 2020 MJ 53 q3)
         if c.y0 >= (b.y0 + b.y1) / 2 and c.x0 < b.x1 and c.x1 > b.x0 and c.y1 <= b.y1 + 1 and not any(
                 r.y1 > c.y1 + 3 and r.intersects(b) and r.width < 0.9 * pg.rect.width for r in (d_['rect'] for d_ in pg.get_drawings())):
@@ -535,6 +581,13 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
     for l in sorted(lines, key=lambda l: l.y0):
         ov = (l & b).get_area() / max(l.get_area(), 1)
         if ov <= 0.15 or not sentence(words_of(l), l):
+            continue
+        side_ = beside(l) if maths and ov < 0.85 else None
+        if side_:                                      # (ink of the drawing at the same height, on the other side)
+            if side_ == 'r':                     # maths: a sentence BESIDE the drawing (inside its height) is cut off
+                b.x1 = min(b.x1, l.x0 - 0.5)           # at the side, never by moving the top or bottom through the drawing
+            else:                                      # (2025 ON 51 q4: half the grid was lost, M1)
+                b.x0 = max(b.x0, l.x1 + 0.5)
             continue
         if ov < 0.85 or l.y1 <= top + 1 or l.y0 >= bot - 1:
             if (l.y0 + l.y1) / 2 < (top + bot) / 2:

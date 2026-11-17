@@ -3,9 +3,15 @@
 Read this first in every session. Update it before ending a session.
 
 ## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md
-- NEXT: maths batch M1 (docs/MATHS_PLAN.md 5): 0607 sessions 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ
-  (~100 papers, all PDFs already in Releases). New chat. Full cycle per PLAYBOOK: build on GitHub, ONE Claude check round
-  (claude_check.py), one review round for Dhruv, fix as classes, approve, docs, push.
+- NEXT: M1 review round 32 is published (30 items, review page r32). When Dhruv has answered: read feedback_r32, fix
+  every wrong item as a class (incl. the 3 OPEN items: 2025 FM 62 q5 small pasted symbol in a text line, 2026 MJ 21 q10
+  Guidance symbols, 2024 ON 32 q1 printed breaks around fractions, 2025 ON 23 q15 half a diagram cropped), ONE check
+  round, then approve.py the 90 M1 papers (2024-FM .. 2026-MJ) when clean. Same chat or "continue M1" in a new one.
+- 2026-11-17: M1 built on GitHub (90 papers, 11 min, run 43893190451), checks 0 blocking; ONE Claude check round found
+  20 classes (ERROR_PATTERNS 161-180) incl. the 2026 MJ Guidance column (5 columns, Dhruv: 40:30:30), the paper-6
+  section note (Dhruv: top of every modelling question), fraction bars dropped / denominators split (also re-shown from
+  approved M0), dotted rules from pictures, diagram crops beside sentences. ms_align adapted to maths (was listing every
+  question since M0). New tool pipeline/ms_rebuild.py (layout-only rebuild). Golden 0, nothing under 0625.
 - 2026-11-16 (night): M0 PILOT DONE - 60 papers approved (rounds 27-31; round 31 36/40 ok, 3 fixed: patterns 157-159).
   Known limit: mark-scheme graphs that are pasted SCREENSHOTS (most of 2014) have no line data - only contrast is raised,
   they cannot be redrawn as lines (graphs the PDF draws as lines ARE redrawn).

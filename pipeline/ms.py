@@ -4,6 +4,7 @@ MCQ (papers 1, 2): a table of question number -> letter.
 Structured (papers 3-6): landscape table with a Question column (labels like 1(b)(iii)),
 an Answer column and a Marks column. Each label's rows become one or more page strips.
 """
+import os
 import re
 import pymupdf as fitz
 from layout import norm
@@ -18,10 +19,12 @@ def label_text(t):
     t = re.sub(r'(?<=\d)MP\d+$', '', t)                              # '4 MP1' (practical marking points, 2017 MJ 53)
     t = re.sub(r'\(\(+', '(', t)
     t = re.sub(r'^(\d{1,2})([a-z])(?=\(|$)', r'\1(\2)', t)          # '9b(i)'
+    t = re.sub(r'^(\d{1,2})([a-z])\)', r'\1(\2)', t)                 # '9a)(ii)' (2024 MJ 43 ms, M1)
     return re.sub(r'\(([a-z]+)\(', r'(\1)(', t)
 
 
 NONUM = re.compile(r'^\([a-z]\)(\([ivx]+\))?$')     # '(b)(ii)' printed without its question number
+NONUM4 = re.compile(r'^\([a-z]\)\([ivx]+\)\([a-h]\)$')   # maths: '(a)(ii)(b)' (4th level, no number: 2024 MJ 41 q2, M1)
 # 1(a)(ii)        a normal row
 # 2(a)(i),(ii)    one answer for several parts -> one row per listed part, same pieces
 # 8(a)(ii)1       numbered item of 8(a)(ii) -> continues that row
@@ -228,6 +231,7 @@ def structured_rows_table(doc):
             bottom = min(bottom, max(vb) + 1)
         qcol = [l for l in lines if l['x0'] < QX and top <= l['y0'] <= bottom]
         labels = [l for l in qcol if LABEL.match(label_text(l['text'])) or (rows and NONUM.match(label_text(l['text'])))
+                  or (MATHS and NONUM4.match(label_text(l['text'])))
                   or (MATHS and SUB4.match(label_text(l['text'])))
                   or (MATHS and COMM.match(l['text']))]
         if not labels and not current:
@@ -262,7 +266,9 @@ def structured_rows_table(doc):
         if current and (not cuts or cuts[0][0] > top + 4):
             cuts.insert(0, (top, None))          # continuation of the previous label
         headers = [l['y0'] for l in lines if (re.match(r'Question\b', l['text']) and l['x0'] < 130)
-                   or (MATHS and re.match(r'(MODELLING|INVESTIGATION)\b|(Modelling|Investigation):', l['text'].strip()))]
+                   or (MATHS and re.match(r'(MODELLING|INVESTIGATION)\b|(Modelling|Investigation):', l['text'].strip()))
+                   or (MATHS and re.fullmatch(r"(Modelling|Investigation)(\s+[A-Z0-9][\w']*)*\s*", l['text'].strip()))]
+        #   ('Modelling DELIVERIES BY SCOOTER', 'Modelling Waste Plastic', a bare 'Modelling': 2024-2025 titles, M1)
         #                                                  part B heading ('MODELLING ...' 2021, 'Modelling: ...' 2025; round 28)
         for i, (y, lab) in enumerate(cuts):
             y_end = cuts[i + 1][0] if i + 1 < len(cuts) else bottom
@@ -274,7 +280,7 @@ def structured_rows_table(doc):
                 rows.append(current)
             elif lab is not None:
                 text = label_text(lab['text'])
-                if NONUM.match(text) and current:
+                if (NONUM.match(text) or (MATHS and NONUM4.match(text))) and current:
                     text = str(current['path'][0]) + text
                 sub4 = SUB4.match(text) if MATHS else None   # '4(b)(iii)(a)': a fourth level, part of 4(b)(iii) (2021 FM 42)
                 if sub4:
@@ -382,6 +388,52 @@ def _maths_rules(page):
     top = max(c.values())
     xs = sorted(x for x, h in c.items() if h >= 0.75 * top and h > 60)     # the table's own rules (not a header box, inner tables)
     return xs if len(xs) == 5 else None
+
+
+NOTE_RE = re.compile(r'Throughout the (modelling|investigation)\b', re.I)
+
+
+def section_notes(doc, rows):
+    """Maths (2026 MJ paper 6): a section-wide note printed once ('Throughout the modelling allow 4% as ...') is cut out of
+    the row it fell in and put at the top of the first row of EVERY question after it (Dhruv, M1: top of every modelling
+    question). rows: in print order; changed in place."""
+    notes = []
+    for pno, page in enumerate(doc):
+        for l in _lines(page):
+            if NOTE_RE.match(l['text'].strip()) and l['x0'] < 160:
+                hr = sorted(d['rect'].y0 for d in page.get_drawings()
+                            if d['rect'].height < 2 and d['rect'].width > 0.5 * page.rect.width and d['rect'].y0 > l['y1'] + 2)
+                txt = [m for m in _lines(page) if m['y0'] >= l['y0'] - 1 and (not hr or m['y1'] <= hr[0] + 1)]
+                y1 = hr[0] if hr else max(m['y1'] for m in txt) + 3
+                notes.append((pno, l['y0'] - 4, y1))
+    for pno, y0, y1 in notes:
+        xs = [s_['bbox'] for r in rows for s_ in r['segments'] if s_['page'] == pno + 1]
+        if not xs:
+            continue
+        x0, x1 = min(b[0] for b in xs), max(b[2] for b in xs)
+        for r in rows:                                   # cut the note out of the row it fell in
+            keep = []
+            for s_ in r['segments']:
+                b = list(s_['bbox'])
+                if s_['page'] == pno + 1 and b[1] < y1 and b[3] > y0:
+                    if b[1] < y0 - 3:
+                        b[3] = min(b[3], y0)
+                    elif b[3] > y1 + 3:
+                        b[1] = max(b[1], y1)
+                    else:
+                        continue
+                keep.append({**s_, 'bbox': b})
+            r['segments'] = keep
+        seen = set()
+        for r in rows:
+            if not r['segments'] or not isinstance(r['path'][0], int):
+                continue
+            s0 = r['segments'][0]
+            if (s0['page'], s0['bbox'][1]) < (pno + 1, y0) or r['path'][0] in seen:
+                continue
+            seen.add(r['path'][0])
+            r['segments'] = [{'page': pno + 1, 'bbox': [x0, y0, x1, y1], 'note': True}] + r['segments']
+    return rows
 
 
 def fold_communication(rows):

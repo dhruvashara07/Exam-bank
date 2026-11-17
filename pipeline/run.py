@@ -189,6 +189,9 @@ def process(qp_path):
         if (msdoc and pv[0] == '0' and meta['paper_type'] == 'practical_test') else []
     maths = subjects.subject(syl)['maths_text']
     comm_marks = 0
+    if maths and ms_rows:              # a section-wide note at the top of every question after it (M1, Dhruv)
+        from ms import section_notes
+        ms_rows = section_notes(msdoc, ms_rows)
     if maths and ms_rows:              # investigation papers: communication marks belong to the paper, not to a part
         ms_rows, comms = fold_communication(ms_rows)
         if comms:

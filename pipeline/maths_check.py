@@ -28,6 +28,17 @@ W = 523.0
 LABEL = re.compile(r'^\d{1,2}(\([a-z]\))*(\([ivx]+\))*$|^\([a-z]\)$|^\([ivx]+\)$|^\d{1,2}$')
 
 
+
+def _rule_at(v, x, y):
+    """Does row v draw a vertical rule at x through height y (a note band / merged row has none there)?"""
+    import re as _re
+    for l in v.get('lines', []):
+        n = [float(a) for a in _re.findall(r'-?\d+(?:\.\d+)?', l.get('d', ''))]
+        xs, ys = n[0::2], n[1::2]
+        if xs and max(xs) - min(xs) < 1.3 and abs((max(xs) + min(xs)) / 2 - x) < 1.5 and min(ys) - 2 <= y <= max(ys) + 2:
+            return True
+    return False
+
 def words(ts):
     return [t['t'].strip() for t in ts if t.get('t', '').strip()]
 
@@ -73,8 +84,8 @@ def check_question(rec):
                 x1 = t['x'] + t['w']
                 if x1 > W + 0.5:
                     hits.append(('ms_overflow', f"'{t['t']}' past the table edge")); break
-                nxt = [e for e in edges if e > t['x'] + 0.5]
-                if nxt and x1 > nxt[0] + 1.0:
+                nxt = [e for e in edges if e > t['x'] + 0.5 and _rule_at(v, e, t['y'])]
+                if nxt and x1 > nxt[0] + 1.0:   # (only where this row draws that rule: notes across the table, M1)
                     hits.append(('ms_overflow', f"'{t['t']}' crosses a column rule")); break
             ts = [t for t in v['text'] if t.get('t', '').strip() and t['w'] > 2]
             found = None

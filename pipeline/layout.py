@@ -78,7 +78,7 @@ def page_bounds(page):
                     r'(Turn over( for (the next )?([Qq]uestion|[Pp]age) ?\d*)?|Question \d+ (is|continues|begins|starts) on '
                     r'(the next (page|side)|the back page|page \d+)|Question continued on (the )?(next|following) (page|side))\.?', ' '.join(t.split())):
                 bottom = min(bottom, y0 - 3.0)          # centred notice: 'Turn over', 'Question 10 is on the back page.'
-            if y0 > 100 and 150 < l['bbox'][0] < 330 and re.fullmatch(r'The (modelling|investigation) task starts on the next page\.?',
+            if y0 > 100 and 150 < l['bbox'][0] < 330 and re.fullmatch(r'The (modelling|investigation)( task)? starts on the next page\.?',
                                                                        ' '.join(t.split())) and _maths_page(page):
                 bottom = min(bottom, y0 - 3.0)          # maths paper 6 notice before part B
             x0 = l['bbox'][0]

@@ -277,3 +277,8 @@ belong to (a), not to (a)(iv): when every sub-part but the last has no mark, the
   start on a new line; text is never shrunk to fit (a piece wider than the column wraps between its parts; only a
   table or a single unbreakable formula may scale, never below 60 %).
 - Graphs drawn as lines are redrawn by us (sharp, curves darker, light grey grid); pasted screenshots get more contrast.
+
+## 31. Guidance column (Dhruv, M1 2026-11-16)
+- 2026 MJ onwards prints Q | Answer | Marks | Partial Marks | Guidance: we show the same 5 columns, Answer : Partial
+  Marks : Guidance = 40 : 30 : 30 of the room left by Q and Marks. Rows without a Guidance cell leave it empty.
+- A note printed across the table (merged row or a band inside a row) is one full-width cell, never split.

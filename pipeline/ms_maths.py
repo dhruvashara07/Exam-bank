@@ -10,12 +10,15 @@ such rows to a fallback. Here every printed cell is laid out on its own:
 Q shows the row's full label; Marks are right-aligned; Answer and Partial Marks have the same width.
 Columns come from the printed column rules of the row (3 inner rules = 4 columns, 2 = 3 columns).
 """
+import os
 import re
 
 W = 523.0
 QW, MW = 44.0, 44.0
 PAD = 5.0
 ANSWER_SHARE = 0.6        # Answer : Partial Marks = 60 : 40 of the room left by Q and Marks (MS_TABLE_RULES 24, round 29)
+FIVE_SHARES = (0.4, 0.3, 0.3)   # 2026 MJ: Q | Answer | Marks | Partial Marks | Guidance - Answer : Partial : Guidance of the room
+                                # left by Q and Marks (Dhruv, M1 2026-11-16, MS_TABLE_RULES 31)
 GAP = 1.9                     # a gap wider than this between ink pieces is a word space (a place to wrap)
 NUM = re.compile(r'-?\d+(?:\.\d+)?')
 
@@ -82,11 +85,12 @@ def columns(u):
                 tot += b_ - max(a, end); end = b_
         e[1] = tot
     xs = [(x, c) for x, c, _ in xs]
+    ok = (2, 3, 4) if CTX.get('five') else (2, 3)        # 4 inner rules only in a scheme with a Guidance column (M1)
     inner = [x for x, c in xs if c > 0.6 * u['h'] and 20 < x < u['w'] - 20]
-    if len(inner) not in (2, 3) and xs:                  # a grid drawn in the answer (2014 MJ 22 q2) has tall lines too:
+    if len(inner) not in ok and xs:                  # a grid drawn in the answer (2014 MJ 22 q2) has tall lines too:
         top = max(c for _, c in xs)                      # the table's own rules run the full height
         inner = [x for x, c in xs if c > 0.97 * top and 20 < x < u['w'] - 20]
-    return inner if len(inner) in (2, 3) else None
+    return inner if len(inner) in ok else None
 
 
 class _Item:
@@ -135,7 +139,9 @@ def _items(u, edges):
         for b, k in run:
             span[k] = (min(r[0][0] for r in run), max(r[0][2] for r in run))
     for b, k in sorted(hz, key=lambda t: ((t[0][1] + t[0][3]) / 2, t[0][0])):
-        if run and abs((run[-1][0][1] + run[-1][0][3]) / 2 - (b[1] + b[3]) / 2) < 0.4 and b[0] - max(r[0][2] for r in run) < 1.5:
+        if run and abs((run[-1][0][1] + run[-1][0][3]) / 2 - (b[1] + b[3]) / 2) < 0.4 and b[0] - max(r[0][2] for r in run) < 1.5 \
+                and b[2] >= min(r[0][0] for r in run) - 1.5:    # (never a piece far LEFT of the run: two fraction bars 0.06 pt
+            #   apart in height in Answer and Partial Marks became one 'rule' over the Marks column and were dropped, M1)
             run.append((b, k))
         else:
             if run:
@@ -205,7 +211,12 @@ def _lines_of(items):
     k = 0
     while k < len(rows) - 1:
         a, b = rows[k], rows[k + 1]
-        if (drawn(a) or drawn(b) or small(a)) and b['y0'] - a['y1'] < 4.0:
+        op = a.get('open')          # under a fraction bar: only a band that lies within the bar's width (its denominator)
+        under = bool(op) and all(op[0] - 2 <= i.x0 and i.x1 <= op[1] + 2 for i in b['its'])
+        if (drawn(a) or drawn(b) or small(a) or under) and b['y0'] - a['y1'] < 4.0:
+            # a band that took a drawing-only band at its bottom (a fraction bar under the numerator) also takes the band
+            # right under it (the denominator) - M1 2026 MJ 42 q9: '2(3)' fell out of its fraction and moved down
+            a['open'] = drawn(b) and not drawn(a) and (min(i.x0 for i in b['its']), max(i.x1 for i in b['its']))
             a['its'] += b['its']; a['y1'] = max(a['y1'], b['y1']); del rows[k + 1]
             continue
         k += 1
@@ -301,7 +312,16 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
             del lines[k + 1]
             continue
         k += 1
+    prev = None                 # (placed bottom, printed bottom) of the line above in this cell
     for ln in lines:
+        if prev is not None:    # a line never moves above the line before it plus their printed gap: growth of OTHER
+            n_ = len(out)       # columns and this cell's own wraps must add up, not overlap (M1 2026 MJ 12 q13)
+            need = prev[0] + max(0.0, ln["y0"] - prev[1]) - (ln["y0"] + extra + push(ln["y0"]))
+            if need > 0.01:
+                extra += need
+                if growth is not None:
+                    growth.append((ln['y0'], need))
+        n_ = len(out)
         if ln.get('parts'):                            # re-flow: chunks one after the other, a space between words
             first = ln['parts'][0]
             lh = first['y1'] - first['y0']
@@ -329,6 +349,8 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
             extra += g_
             if growth is not None and abs(g_) > 0.01:
                 growth.append((ln['y1'], g_))
+            if len(out) > n_:
+                prev = (max(it.y1 + dy_ for it, dx_, dy_, k_, x_ in out[n_:]), ln['y1'])
             continue
         chunks = _chunks(ln['its'])
         rel0 = chunks[0]['x0'] - left                  # this printed line's indent in its cell
@@ -387,7 +409,11 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
         extra += (len(vis) - 1) * (lh + 2.0)
         if growth is not None and len(vis) > 1:
             growth.append((ln['y1'], (len(vis) - 1) * (lh + 2.0)))
+        if len(out) > n_:
+            prev = (max(it.y1 + dy_ for it, dx_, dy_, k_, x_ in out[n_:]), ln['y1'])
     bottom = max(it.y1 for it in items) + extra + push(1e9)
+    if out:                     # never above the last placed line: a line pushed by ANOTHER column's growth and then wrapped
+        bottom = max(bottom, max(it.y1 + dy for it, dx, dy, k, x0 in out))   # itself ran past the row (M1 2026 MJ 12 q3)
     return out, bottom, min(i.y0 for i in items)
 
 
@@ -417,17 +443,21 @@ def _pushes(cols, base):
         ps, prev = [], None
         for l in ln:
             tall = (l['y1'] - l['y0']) > 1.45 * base
+            if sum(1 for i in l['its'] if i.kind == 'lines' and i.x1 - i.x0 < 1.6 and i.y1 - i.y0 > 5) >= 2:
+                tall = False            # a table row (cell rules): the table is one rigid block, no margins per row (M1:
+                #                         2024 ON 62 q1(b) - 11 rows x margins opened a big gap under the table)
             if prev is None:
                 need = TOP + (MARGIN if tall else 0.0) - l['y0']
                 if need > 0:
                     ps.append((-1e9, need))
             else:
-                ptall = (prev['y1'] - prev['y0']) > 1.45 * base
+                ptall = (prev['y1'] - prev['y0']) > 1.45 * base and not prev.get('_tbl')
                 need = LGAP + (MARGIN if tall or ptall else 0.0) - (l['y0'] - prev['y1'])
                 if need > 0:
                     ps.append((l['y0'] - 0.01, need))
+            l['_tbl'] = not tall and (l['y1'] - l['y0']) > 1.45 * base
             prev = l
-        if prev is not None and (prev['y1'] - prev['y0']) > 1.45 * base:
+        if prev is not None and (prev['y1'] - prev['y0']) > 1.45 * base and not prev.get('_tbl'):
             ps.append((prev['y0'] + 0.01, MARGIN))      # space under a tall last line (counted in the row's height)
         per.append(ps)
     marks = sorted({y for ps in per for y, _ in ps})
@@ -466,30 +496,88 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
         if hint:
             hint = ([x * K for x in hint[0]], hint[1] * K)
     edges = columns(u)
+    merged = False
+    is_note = bool(re.match(r'Throughout the (modelling|investigation)\b', ' '.join(
+        t['t'] for t in sorted(u.get('text', []), key=lambda t: (round(t['y']), t['x'])) if t['t'].strip())[:40].strip(), re.I))
+    # a section-wide note (Dhruv M1: top of every modelling question): ONE cell over the whole table, no label, no rules
     if hint and (not edges or len(edges) != len(hint)) and abs(u['w'] - hint[1]) < 2:
+        own = edges
         edges = list(hint[0])                            # a graph / grid in the row hides its column rules: same table
+        vx = [((bb[0] + bb[2]) / 2, bb[3] - bb[1]) for bb in (_bbox(l['d']) for l in u.get('lines', [])) if bb and bb[2] - bb[0] < 1.3]
+        merged = not own and len(edges) >= 2 and all(sum(h for x, h in vx if abs(x - e) < 2.5) < 0.2 * u['h'] for e in edges[1:]) \
+            and any(abs(x - edges[0]) < 2.5 and h > 0.5 * u['h'] for x, h in vx)
+        # a note row printed across Answer, Marks and Partial Marks (no column rules after the Q column, 2024 MJ 42 q10
+        # 'For all parts accept ...'): ONE cell over all of them, never cut into our columns (M1)
     if not edges:
         return None
     if len(edges) == 2:
         edges = edges + [u['w'] - 0.5]                   # no Partial Marks column printed
-    cells_src = [(0.0, edges[0]), (edges[0], edges[1]), (edges[1], edges[2]), (edges[2], u['w'])]
+    if ncols == 5 and len(edges) == 3:
+        edges = edges + [u['w'] - 0.5]                   # no Guidance column printed in this row
+    cells_src = [(0.0, edges[0])] + [(edges[k], edges[k + 1]) for k in range(len(edges) - 1)] + [(edges[-1], u['w'])]
     A = ANSWER_SHARE * (W - QW - MW) if ncols == 4 else W - QW - MW   # (Dhruv, round 29: Answer wider than Partial Marks)
     ours = [(0.0, QW), (QW, QW + A), (QW + A, QW + A + MW), (QW + A + MW, W)]
-    its = _items(u, edges[:3])
+    if ncols == 5:
+        F = W - QW - MW
+        A, P5 = FIVE_SHARES[0] * F, FIVE_SHARES[1] * F
+        ours = [(0.0, QW), (QW, QW + A), (QW + A, QW + A + MW), (QW + A + MW, QW + A + MW + P5), (QW + A + MW + P5, W)]
+    its = _items(u, edges[:4] if ncols == 5 else edges[:3])
     if not any(i.kind != 'lines' and not (i.kind == 't' and re.fullmatch(r'[.\s…_|\-]+', i.ref['t'])) for i in its):
         return 'empty'                                   # only rules left (the end of a table on a page): no row
-    by = [[], [], [], []]
+    by = [[] for _ in cells_src]
     for it in its:
         cx = (it.x0 + it.x1) / 2
-        c = 0 if cx < edges[0] else 1 if cx < edges[1] else 2 if cx < edges[2] else 3
+        c = next((k for k, e in enumerate(edges) if cx < e), len(edges))
         by[c].append(it)
+    CS = (1, 2, 3, 4) if ncols == 5 else (1, 2, 3)
+    if is_note:
+        for c in range(len(by)):
+            if c != 1:
+                by[1] += by[c]; by[c] = []
+        cells_src[1] = (0.0, u['w'])
+        ours[1] = (0.0, W)
+        merged = True
+        first_unit = False
+    note = None                 # a note band printed across the whole table INSIDE a row ('In parts (a)(ii)(b) and (a)(ii)(c),
+    if not merged and ncols >= 4 and len(edges) >= 3:   # marks can only be ...', 2024 MJ 41 q2, M1): no column rules there
+        vx_ = [((bb[0] + bb[2]) / 2, bb[1], bb[3]) for bb in (_bbox(l['d']) for l in u.get('lines', [])) if bb and bb[2] - bb[0] < 1.3]
+        def cov_(e, y):
+            return any(abs(x - e) < 2.5 and y0 - 1 <= y <= y1 + 1 for x, y0, y1 in vx_)
+        run_, best_ = None, None
+        for yy in [k_ * 0.5 for k_ in range(int(u['h'] * 2))]:
+            free_ = not cov_(edges[1], yy) and not cov_(edges[2], yy)
+            if free_ and run_ is None:
+                run_ = yy
+            if (not free_ or yy + 0.5 >= u['h']) and run_ is not None:
+                if yy - run_ > 8 and (best_ is None or yy - run_ > best_[1] - best_[0]):
+                    best_ = (run_, yy)
+                run_ = None
+        if best_ and 2 < best_[0] and best_[1] < u['h'] - 2 and any(cov_(edges[1], y) for y in (best_[0] - 2, best_[1] + 2)):
+            nt_ = [it for c in range(len(by)) for it in by[c] if best_[0] < (it.y0 + it.y1) / 2 < best_[1]]
+            txt_ = ' '.join(it.ref['t'] for it in sorted(nt_, key=lambda i: (i.y0, i.x0)) if it.kind == 't').strip()
+            if re.match(r'(MODELLING|INVESTIGATION|Modelling|Investigation)\b', txt_):
+                nt_ = []                # the NEXT section's title row (pattern 112) is never a note of this row
+            if any(it.kind == 't' for it in nt_):
+                for c in range(len(by)):
+                    by[c] = [it for it in by[c] if it not in nt_]
+                qfree_ = not cov_(edges[0], (best_[0] + best_[1]) / 2)
+                by.append(nt_)
+                cells_src.append((0.0 if qfree_ else edges[0], u['w']))
+                ours.append((0.0 if qfree_ else QW, W))
+                CS = CS + (len(by) - 1,)
+                note = (len(by) - 1, qfree_)
+    if merged:
+        for c in range(2, len(by)):
+            by[1] += by[c]; by[c] = []
+        cells_src[1] = (edges[0], u['w'])
+        ours[1] = (QW, W)
     v = {'src': u['src'], 'w': W, 'h': 0.0, 'text': [], 'lines': [], 'figs': [], 'glyphs': []}
     bottoms = []
-    push0 = _pushes([by[0], by[1], by[2], by[3]], 11.0 if base else max([i.ref.get('s', 11) for i in its if i.kind == 't'] or [11]))
+    push0 = _pushes(list(by), 11.0 if base else max([i.ref.get('s', 11) for i in its if i.kind == 't'] or [11]))
     # rows grow in step: a line that wraps in one column moves the lines below it in EVERY column (round 28, 2025 MJ 61 q4:
     # the '1' mark stayed beside the wrong line). Pass 1 measures each column's growth by printed height.
     grows = {}
-    for c in (1, 2, 3):
+    for c in CS:
         if by[c] and not (c == 3 and ncols == 3) and not ((_picture_cell(by[c]) or _has_table(by[c]) or u['src']['page'] in CTX.get('broken', ()))
                                                           and CTX.get('pdf')):
             g = []
@@ -502,7 +590,7 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
         return lambda y: push0(y) + max([G(k, y) for k in grows] + [0.0]) - G(c, y)
     push = push_for(0)
     top_pad = min([i.y0 for i in its] + [u['h']])
-    for c in (1, 2, 3):
+    for c in CS:
         if c == 3 and ncols == 3:
             by[1] += by[3]; continue
         if by[c] and u['src']['page'] not in CTX.get('broken', ()) and _has_table(by[c]):
@@ -581,6 +669,11 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
             px1, py1 = max(i.x1 for i in dr), max(i.y1 for i in dr)
             inpic = [i for i in by[c] if px0 - 14 <= (i.x0 + i.x1) / 2 <= px1 + 14 and py0 - 12 <= (i.y0 + i.y1) / 2 <= py1 + 12
                      and not (i.kind == 't' and len(i.ref['t']) > 6 and not (py0 - 2 <= (i.y0 + i.y1) / 2 <= py1 + 2))]
+            long_out = [i for i in by[c] if i.kind == 't' and i not in inpic and len(i.ref['t']) > 6
+                        and px0 - 14 <= (i.x0 + i.x1) / 2 <= px1 + 14 and py0 - 12 <= (i.y0 + i.y1) / 2 <= py1 + 12]
+            if long_out:                                 # a text line under / over the drawing goes WHOLE to our text, never
+                inpic = [i for i in inpic if not (i.kind == 't' and any(abs(i.ref['y'] - o.ref['y']) < 2 for o in long_out))]
+                #   half into the picture ('Correct sketch passing through (3, -5)' drawn twice, 2025 ON 63 q1, M1)
             # (short labels just outside the drawing go with it; words of the text around it do not - round 28, 2025 MJ 61
             # q1: the lines under a table went into its picture and everything shrank)
             if u['src']['page'] in CTX.get('broken', ()):
@@ -594,11 +687,15 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                         inpic.append(t_); grow = True
             rest = [i for i in by[c] if i not in inpic]
             pasted = [i for i in dr if i.kind in ('images', 'figs')]
+            def _words(t_):                              # letters of the whole printed line of t_: a heading is words,
+                return sum(ch.isalpha() for o in by[c] if o.kind == 't' and abs(o.ref['y'] - t_.ref['y']) < 2
+                           for ch in o.ref['t'])          # never a diagram label 'Q', 'S', '65' (2026 MJ 21 q13, M1)
             head = [t_ for t_ in by[c] if t_.kind == 't' and (
-                        (t_.y0 < py0 + 3 and t_.y1 > py0 - 0.5 and any(i.y0 < t_.y1 for i in pasted)) or
-                        any(i.x0 - 2 <= t_.x0 and t_.x1 <= i.x1 + 2 and i.y0 - 0.5 < t_.y1 and t_.y0 < i.y0 + 0.3 * (i.y1 - i.y0)
-                            for i in pasted) or
-                        (t_ not in inpic and t_.x0 < px1 and t_.x1 > px0 and t_.y1 > py0 and t_.y0 < py0 + 0.3 * (py1 - py0)) or
+                        (_words(t_) >= 4 and t_.y0 < py0 + 3 and t_.y1 > py0 - 0.5 and any(i.y0 < t_.y1 for i in pasted)) or
+                        (_words(t_) >= 4 and any(i.x0 - 2 <= t_.x0 and t_.x1 <= i.x1 + 2 and i.y0 - 0.5 < t_.y1
+                                                 and t_.y0 < i.y0 + 0.3 * (i.y1 - i.y0) for i in pasted)) or
+                        (_words(t_) >= 4 and t_ not in inpic and t_.x0 < px1 and t_.x1 > px0 and t_.y1 > py0
+                         and t_.y0 < py0 + 0.3 * (py1 - py0)) or
                         (t_.y1 <= py0 + 3 and len(' '.join(o.ref['t'] for o in by[c] if o.kind == 't'
                                                          and abs(o.ref['y'] - t_.ref['y']) < 2)) > 8))]
             # (and a heading of OUR text over the top of a DRAWN graph: drawn twice, 2019 ON 41 q11, 43 q3, round 30)
@@ -607,13 +704,20 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
             head_moved = any(len(t_.ref['t']) > 3 for t_ in head)
             if head_moved:                                   # 2021 FM 42 q9) ('Correct diagram' half hidden, 2021 FM 32 q9):
                 line = [t_ for t_ in by[c] if t_.kind == 't' and any(abs(t_.ref['y'] - h_.ref['y']) < 2 for h_ in head)]
-                py0 = max([py0] + [t_.y1 + 0.5 for t_ in line])   # the picture starts under it, the WHOLE line is our text
+                if line:                                 # (a raised power on the heading line goes with it: 'k²', M1)
+                    ly0_, ly1_ = min(t_.y0 for t_ in line), max(t_.y1 for t_ in line)
+                    line += [t_ for t_ in by[c] if t_.kind == 't' and t_ not in line and t_.y0 >= ly0_ - 4 and t_.y1 <= ly1_ + 0.5
+                             and t_.ref.get('s', 11) < 0.85 * max(o.ref.get('s', 11) for o in line)]
+                py0 = max([min([py0] + [i.y0 - 1.0 for i in inpic if i not in line and i.y0 > max(t_.y1 for t_ in line)])]
+                          + [t_.y1 + 0.5 for t_ in line])   # the picture starts under it, the WHOLE line is our text
+                #   (from the picture's own first ink: a numerator above a pasted bracket was cut, 2024 ON 41 q5, M1)
                 for t_ in line:                              # (round 28: only its first word was kept)
                     if t_ in inpic:
                         inpic.remove(t_)
                     if t_ not in rest:
                         rest.append(t_)
             shift, tb = 0.0, None
+            snap_ = {k_: len(v.get(k_, [])) for k_ in ('text', 'lines', 'glyphs', 'images', 'figs')}
             if rest:                                     # text around the picture ('Correct diagram') laid out as text
                 above = [i for i in rest if i.y1 <= py0 + 1]
                 placed, tb, _ = _cell(rest, cells_src[c][0], cells_src[c][1], ours[c][0], ours[c][1], push=push_for(c))
@@ -673,11 +777,24 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
             #                     (broken page: from the cell's first ink - the formula over the graph was cut, 2014 MJ 62 q6)
             if bot is not None:
                 bottoms.append(max(bot, tb or 0))
+                lp_ = CTX.pop('last_pic', None)        # text the crop left out (under a sub-row rule: the formula
+                out_ = [i for i in inpic if i.kind in ('t', 'lines', 'images', 'glyphs') and lp_ and not (lp_[0] - 1 <= (i.y0 + i.y1) / 2 <= lp_[1] + 1)]
+                if out_:                               # row under a sketch, 2024 ON 61 q2(d), M1) is laid out as text
+                    pl_, bt_, _ = _cell(out_, cells_src[c][0], cells_src[c][1], ours[c][0], ours[c][1], push=push_for(c))
+                    for it, dx, dy, k, x0 in pl_:
+                        _emit(v, it, dx, dy, k, x0)
+                    if bt_ is not None:
+                        bottoms.append(bt_)
                 continue
+            for k_, n_ in snap_.items():                 # no picture after all: the text placed around it goes, the whole
+                if k_ in v:                              # cell is laid out once below (2026 MJ 21 q7: drawn twice, M1)
+                    del v[k_][n_:]
         placed, bot, _ = _cell(by[c], cells_src[c][0], cells_src[c][1], ours[c][0], ours[c][1],
                                align='right' if c == 2 else 'left', push=push_for(c))
         for it, dx, dy, k, x0 in placed:
             _emit(v, it, dx, dy, k, x0)
+        if note and c == note[0] and placed:
+            note = note + (min(it.y0 + dy for it, dx, dy, k, x0 in placed) - 4, max(it.y1 + dy for it, dx, dy, k, x0 in placed) + 4)
         if bot is not None:
             bottoms.append(bot)
     # Q column: our full label on the first printed line (continued rows show none)
@@ -694,17 +811,28 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
     bottom_pad = max(3.0, min(8.0, u['h'] - max([i.y1 for i in its] + [0])))
     lab_bot = max([i.y1 for i in by[0]] + [0]) + push(1e9)
     v['h'] = round(max([b + bottom_pad for b in bottoms] + [lab_bot + bottom_pad, 18.0]), 2) if bottoms else u['h']
-    if ncols == 4:
+    if ncols == 5:
+        xs = [QW, QW + A, QW + A + MW, QW + A + MW + P5]
+    elif ncols == 4:
         xs = [QW, QW + A, QW + A + MW]
     else:
         xs = [QW, QW + A]
-    for x in xs:
-        v['lines'].append({'d': f'M{x - 0.3:.2f} 0.00L{x + 0.3:.2f} 0.00L{x + 0.3:.2f} {v["h"]:.2f}L{x - 0.3:.2f} {v["h"]:.2f}Z', 'fill': '#000000'})
+    segs_ = [(0.0, v['h'])]
+    if note and len(note) == 4:                     # column rules stop at the note band; a rule above and under it
+        segs_ = [(0.0, note[2]), (note[3], v['h'])]
+        for yy in (note[2], note[3]):
+            v['lines'].append({'d': f'M{0 if note[1] else QW:.2f} {yy - 0.3:.2f}L{W:.2f} {yy - 0.3:.2f}L{W:.2f} {yy + 0.3:.2f}'
+                                    f'L{0 if note[1] else QW:.2f} {yy + 0.3:.2f}Z', 'fill': '#000000'})
+    for x in ([] if is_note else [QW] if merged else xs):
+        for ya_, yb_ in (segs_ if not (note and len(note) == 4 and x == QW and not note[1]) else [(0.0, v['h'])]):
+            v['lines'].append({'d': f'M{x - 0.3:.2f} {ya_:.2f}L{x + 0.3:.2f} {ya_:.2f}L{x + 0.3:.2f} {yb_:.2f}L{x - 0.3:.2f} {yb_:.2f}Z', 'fill': '#000000'})
     if fam:                                          # one font for question and mark scheme (Dhruv, round 27)
         for t in v['text']:
             if t.get('f') in ('serif', 'sans'):
                 t['f'] = fam
-    v['info'] = {'edges': edges, 'new_edges': xs, 'new_w': [QW, A, MW] + ([A] if ncols == 4 else [])}
+    if is_note:
+        v['note'] = True
+    v['info'] = {'edges': edges, 'new_edges': xs, 'new_w': [QW, A, MW] + ([A] if ncols == 4 else [P5, W - xs[-1]] if ncols == 5 else [])}
     return v
 
 
@@ -759,6 +887,8 @@ def _erase_bands(im):
     band of a pasted screenshot. Thin grid lines (1-3 px) and curves stay."""
     import numpy as np
     a = np.array(im)
+    if a.ndim < 3 or min(a.shape[:2]) < 1:
+        return im               # an empty crop (2026 MJ 21 q13, M1): nothing to clean
     g = a[:, :, :3].astype(int).mean(axis=2)
     for _ in range(3):              # a light background tone covering >= 10 % of the picture (a screenshot's grey paper)
         light = np.round(g[(g >= 200) & (g <= 254)])
@@ -924,6 +1054,7 @@ def _cell_picture(v, u, items, src, ours, region=None, shift=0.0):
             elif y0 < b_[3] < y1 and b_[3] < (y0 + y1) / 2:
                 y0 = b_[3] + 0.4
     b = u['src']['box']
+    CTX['last_pic'] = (y0, y1)
     r = fitz.Rect(b[0] + x0 / K, b[1] + y0 / K, b[0] + x1 / K, b[1] + y1 / K)
     doc = CTX.setdefault('doc', fitz.open(CTX['pdf']))
     # grow sideways to whole ink inside the cell: words that are no text items (a rotated 'All' left of 'pos', 2021 FM 52
@@ -1144,8 +1275,12 @@ def build(q, uniq, store, hdr_unit, own_total, frame):
         pages[u['src']['page']] += sum(1 for k, a in enumerate(ts) for b in ts[k + 1:] if a['t'] != b['t']
                                        and abs(a['y'] - b['y']) < 3 and min(a['x'] + a['w'], b['x'] + b['w']) - max(a['x'], b['x']) > 0.5 * min(a['w'], b['w']))
     CTX['broken'] = {p for p, n in pages.items() if n >= 6}
+    try:                                             # 2026 MJ: a Guidance column (5 columns; Dhruv M1: shown as 5 columns)
+        CTX['five'] = 'Guidance' in open(os.path.join(store, 'ms_header.json')).read()
+    except Exception:
+        CTX['five'] = False
     cols = [(columns(u), u['w']) for _, u in uniq]
-    ncols = 4 if any(len(c or []) == 3 for c, _ in cols) else 3
+    ncols = 5 if CTX['five'] and any(len(c or []) == 4 for c, _ in cols) else 4 if any(len(c or []) == 3 for c, _ in cols) else 3
     good = [(c, w) for c, w in cols if c and len(c) == ncols - 1]
     hint = max(good, key=lambda cw: sum(1 for c2, w2 in good if c2 == cw[0])) if good else None
     qw = max([QW] + [round(text_width(r['label'], fam, 11.0) + 10) for r, _ in uniq])   # long labels ('11(d)(iii)'): wider Q
@@ -1158,11 +1293,12 @@ def build(q, uniq, store, hdr_unit, own_total, frame):
             continue
         if v is None:
             return None
-        seen_lab.add(r['label'])
+        if not v.get('note'):
+            seen_lab.add(r['label'])
         out.append(v)
     if not out:
         return None
-    info = out[0]['info']
+    info = next((v['info'] for v in out if not v.get('note')), out[0]['info'])
     for v in out:
         v.pop('info', None)
         frame(v)
