@@ -32,3 +32,7 @@ for _ in [0]:
             print('CHANGED', qf, old.get('h'), new['h'])
             if write:
                 rec['ms_p'] = new; json.dump(rec, open(qf, 'w'), ensure_ascii=False, separators=(',', ':'))
+if write:                                   # paper 5/6 task records carry the merged mark scheme (tasks.py)
+    import tasks
+    for d in sorted({os.path.dirname(f) for f in files}):
+        tasks.build_paper(d)

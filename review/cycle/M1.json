@@ -51,6 +51,15 @@
    "start": "2026-11-16T15:08:36Z",
    "end": "2026-11-16T15:19:24Z",
    "minutes": 10.8
+  },
+  {
+   "id": 44085611730,
+   "name": "Question bank",
+   "branch": "main",
+   "conclusion": "success",
+   "start": "2026-11-17T12:42:09Z",
+   "end": "2026-11-17T13:10:35Z",
+   "minutes": 28.4
   }
  ],
  "counts": {
@@ -307,6 +316,22 @@
    "fix": "extract.diagrams: short-label boxes / empty boxes on a NOT TO SCALE band join the diagram",
    "found_by": "dhruv",
    "at": "2026-11-17T12:41:38+00:00"
+  },
+  {
+   "pattern": "192",
+   "kind": "new",
+   "what": "MS screenshot graphs",
+   "fix": "ms_graphs.py draws from function",
+   "found_by": "dhruv",
+   "at": "2026-11-17T12:55:54+00:00"
+  },
+  {
+   "pattern": "193",
+   "kind": "new",
+   "what": "MathType minus gap",
+   "fix": "MMTimesRoman - to minus",
+   "found_by": "claude",
+   "at": "2026-11-17T12:55:57+00:00"
   }
  ],
  "tokens": [],
@@ -405,6 +430,30 @@
   {
    "at": "2026-11-17T12:41:38+00:00",
    "task": "error M1 --by"
+  },
+  {
+   "at": "2026-11-17T12:42:25+00:00",
+   "task": "GitHub rebuild of all 11 maths sessions with round-32 fixes (one run)"
+  },
+  {
+   "at": "2026-11-17T12:55:54+00:00",
+   "task": "error M1 --pattern"
+  },
+  {
+   "at": "2026-11-17T12:55:57+00:00",
+   "task": "graphs drawn from functions"
+  },
+  {
+   "at": "2026-11-17T12:55:57+00:00",
+   "task": "error M1 --pattern"
+  },
+  {
+   "at": "2026-11-17T15:47:30+00:00",
+   "task": "gh M1 44085611730"
+  },
+  {
+   "at": "2026-11-17T15:54:37+00:00",
+   "task": "fixes: graphs, tasks, re-flow at sub-row rules"
   }
  ]
 }

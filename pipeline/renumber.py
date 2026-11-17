@@ -54,7 +54,8 @@ def comps(path):
 
 def make_plan(q, parts, new_number, relabel_parts=True):
     """parts: the printed parts of the question, in print order (each has 'layout' units with tagged words)."""
-    plan = {'q': q['number'], 'new_q': new_number, 'fig': {}, 'label': {}, 'path': {}, 'flags': []}
+    plan = {'q': q['number'], 'new_q': new_number, 'fig': {}, 'label': {}, 'path': {}, 'flags': [],
+            'task': q.get('type') == 'task'}
     # figures and tables: numbered in the order their captions are printed
     cnt = {'fig': 0, 'table': 0}
     for p in parts:
@@ -71,7 +72,7 @@ def make_plan(q, parts, new_number, relabel_parts=True):
     for path in paths:
         cs = comps(path)
         for i, c in enumerate(cs):
-            parent = str(q['number']) + ''.join(cs[:i])
+            parent = (re.match(r'\d*', path).group(0) if plan['task'] else str(q['number'])) + ''.join(cs[:i])
             kids = seen.setdefault(parent, [])
             if c not in kids:
                 kids.append(c)
@@ -79,7 +80,7 @@ def make_plan(q, parts, new_number, relabel_parts=True):
         cs = comps(path)
         new = []
         for i, c in enumerate(cs):
-            parent = str(q['number']) + ''.join(cs[:i])
+            parent = (re.match(r'\d*', path).group(0) if plan['task'] else str(q['number'])) + ''.join(cs[:i])
             kids = seen[parent]
             nl = _label(_style(c), kids.index(c)) if relabel_parts else c
             new.append(nl)
@@ -136,6 +137,8 @@ def apply_plan(u, plan, doc='qp', meta=None):
                 ws[-1]['w'] = round(text_w(ws[-1]['t'], ws[-1]), 2)
     for i, w in enumerate(ws):
         role = w.get('role')
+        if plan.get('task') and role in ('qnum', 'mslabel'):
+            continue                                  # a maths task keeps its printed question numbers (text says 'Question 8')
         if role == 'qnum':
             new = str(plan['new_q'])
             if new != w['t']:

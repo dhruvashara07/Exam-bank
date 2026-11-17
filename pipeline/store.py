@@ -947,6 +947,8 @@ def build(pid):
         json.dump(rec, open(os.path.join(store, f"q{q['number']:02d}.json"), 'w'), ensure_ascii=False, separators=(',', ':'))
     if MATHS_TEXT:
         paper_record(meta, qdoc, mdoc, store, styles, qstyle, mstyle)
+        import tasks                              # paper 5/6: each task as ONE record (Dhruv round 32)
+        tasks.build_paper(store)
     # the mark-scheme table header row (Question | Answer | Marks), stored once per paper
     for pno in range(1, len(mdoc)):
         rm = mdoc[pno].rotation_matrix                 # mark-scheme pages are rotated: words in visible coordinates
@@ -1148,6 +1150,8 @@ def unit_svg(u, base, dx=0, dy=0, renumber=None, drop_total=False, figs=None, vi
 
 def load(qid):
     pid = '_'.join(qid.split('_')[:3])
+    if re.match(r'^t[A-Z0-9]+$', qid.split('_')[-1]):      # maths paper 5/6: a whole task (tasks.py)
+        return json.load(open(os.path.join(paths.store_dir(pid), f"task_{qid.split('_')[-1][1:]}.json"))), paths.store_dir(pid)
     f = os.path.join(paths.store_dir(pid), f"q{int(qid.split('_q')[1]):02d}.json")
     if not os.path.exists(f):
         build(pid)

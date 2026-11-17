@@ -61,6 +61,7 @@ MATHS_GLYPHS = {
     'MMGreek': {'r': 'π'}, 'MMaGreek-Regular': {'r': 'π'},
     'MMNegate': {'!': '≠', 'g': '∉'},
     'MMRelation': {'G': '≤', 'H': '≥'},
+    'MMTimesRoman': {'-': '−'},     # MathType's minus: a hyphen read as '-' left a gap after it ('5- 1/2x', 2024, round 32 check)
     'EuclidMathTwo': {'-': '≤', '\x84': '≤', '\x85': '≥'},
     'Calibri': {'\x84': '', '\x85': ''},          # Calibri F084: an INVISIBLE fallback copy (glyph 0) of a symbol that is
     #                                               drawn by another font: dropped (it doubled '≤≤', round 32, 2026 MJ 21 q10)   # x84/x85 (PUA F084/F085): M1 2024 MJ ms_22, ms_31                     # 2019 ON 41 MS '71... ≤ f(x)' (round 28 symbol sweep)

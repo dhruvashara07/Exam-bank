@@ -7,6 +7,7 @@ Every round item and every question with an automatic-check hit is looked at thi
 the content checks cannot see a stretched font, a fraction touching a rule or a cut picture; this sheet can.
 """
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -52,10 +53,10 @@ def printed_rows(rec, dpi=72):
 
 def pair(qid, width=900, dpi=72):
     ses = qid.split('_')[1]
-    rec = json.load(open(os.path.join(paths.store_dir(qid.rsplit('_', 1)[0]), qid.rsplit('_', 1)[1] + '.json')))
+    rec = json.load(open(os.path.join(paths.store_dir(qid.rsplit('_', 1)[0]), re.sub(r'^t', 'task_', qid.rsplit('_', 1)[1]) + '.json')))
     if 'parts' not in rec and rec.get('same_as'):    # stored once for the session (store.py dupes)
         qid = rec['same_as'][0] if isinstance(rec['same_as'], list) else rec['same_as']
-        rec = json.load(open(os.path.join(paths.store_dir(qid.rsplit('_', 1)[0]), qid.rsplit('_', 1)[1] + '.json')))
+        rec = json.load(open(os.path.join(paths.store_dir(qid.rsplit('_', 1)[0]), re.sub(r'^t', 'task_', qid.rsplit('_', 1)[1]) + '.json')))
     sv = store.review_svgs(qid, '/tmp/rtmp')
     ours = ra.svg_img(sv['ms'], dpi) if sv.get('ms') else None
     pr = printed_rows(rec, dpi)
@@ -80,7 +81,7 @@ def fig_sheet(out, items):
     for it in items:
         qid, suf = it.split(':')
         pid = qid.rsplit('_', 1)[0]
-        rec = json.load(open(os.path.join(paths.store_dir(pid), qid.rsplit('_', 1)[1] + '.json')))
+        rec = json.load(open(os.path.join(paths.store_dir(pid), re.sub(r'^t', 'task_', qid.rsplit('_', 1)[1]) + '.json')))
         fs = [f for f in rec.get('figures', []) if f['id'].endswith(suf)]
         if not fs:
             continue

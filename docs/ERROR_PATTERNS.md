@@ -479,5 +479,17 @@ the old MS paths (2014 MJ 22 q2, 43 q9, 2019 ON 11/12 q8, 23 q3, 62 q5).
     the line was drawn twice (2025 FM 62 q5) -> a picture <= 24 x 90 pt inside a text line is a piece of the line.
 191. A labelled rectangle beside a diagram (same band as NOT TO SCALE) was left out of the crop and redrawn as lines
     (2025 ON 23 q15) -> short-label / empty boxes on a NOT TO SCALE band join the diagram.
-Open for Dhruv (decided, still to build): paper-6 tasks as one record (MATHS_PLAN 11); MS screenshot graphs drawn from
-the question's function (2024 FM 42 q10, MJ 42 q3, MJ 43 q10, MJ 61 q13).
+192. MS graphs printed as calculator screenshots (colour, blurry) -> drawn again from the function the question gives
+    (pipeline/ms_graphs.py SPECS: function, window, ticks as on the question's axes; black curves, light grid, function
+    in a box top right, 2nd curve dashed). New screenshot graph: add a SPECS line (the check sheet shows it).
+193. MathType minus (MMTimesRoman '-') read as a hyphen left a gap ('5- 1/2x') -> mapped to '−' (store_text).
+194. Re-flow joined lines across a printed sub-row rule ('... or better' + next sub-row '32.8 km/h' in one cell,
+    2024 FM 62 q9(c); 25 questions) -> never join across a rule (ms_maths re-flow, CTX subrules).
+195. A column that wraps more than printed (5-column Guidance) left no room for the sub-row rule: the rule was dropped
+    -> the row under the rule moves down so the rule fits (2026 MJ 63 q6(b)). Still open: the first lines of each
+    column under a rule are not always level (guidance can sit a line lower) - per-column alignment broke later rules.
+196. A task heading with no section letter ('Modelling   Helix', 2026 MJ 63) was not found: no intro, no task record
+    -> extract.TASK_HEAD + 'You are advised' on the next lines; letter by order.
+197. Paper 5/6 tasks as ONE record (Dhruv round 32): pipeline/tasks.py writes task_<S>.json (id ..._t<S>): intro as
+    stem, every printed question as a part (printed numbers kept: renumber skips qnum/mslabel for type 'task'), one
+    MS (header, section note once, one Total). Per-question records stay for the checks and point to it ('task').

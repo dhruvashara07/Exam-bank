@@ -313,7 +313,9 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
         bx0 = min(i.x0 for i in b['its'])
         first_b = min(b['its'], key=lambda i: i.x0).ref.get('t', '') if plain(b) else ''
         if plain(a) and plain(b) and abs(ax0 - bx0) < 3 and b['y0'] - a['y1'] < 0.6 * lh_ and ax1 > c1 - 0.3 * (c1 - c0) \
-                and (ax1 - ax0) > width * 0.6 and (re.match(r'[a-z]', first_b) or open_end(a)) and not re.match(r'(or|and)$', first_b):
+                and (ax1 - ax0) > width * 0.6 and (re.match(r'[a-z]', first_b) or open_end(a)) and not re.match(r'(or|and)$', first_b) \
+                and not any(a['y1'] - 1 < sy < b['y0'] + 1 and sx0 - 3 <= ax0 <= sx1 for sx0, sy, sx1 in CTX.get('subrules', [])):
+            # (never across a printed sub-row rule: '... or better' + next sub-row '32.8 km/h', 2024 FM 62 q9(c), M1 check)
             # (only a line that goes on with a sentence: '[x =] 1.13 ...' or 'or ...' is a new answer line, round 28)
             a.setdefault('parts', [dict(a, its=list(a['its']))]).append(b)
             a['its'] = a['its'] + b['its']; a['y1'] = b['y1']
@@ -835,6 +837,27 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                 _emit_block(v, inpic, bx0, by0, ours[c][0] + PAD, by0 + shift, k_)
                 bottoms.append(max(by0 + shift + (by1 - by0) * k_ + 3.0, tb or 0))
                 continue
+            import ms_graphs
+            gsp = ms_graphs.spec(CTX.get('qid'), label) if c == 1 and any(i.kind in ('images', 'figs') for i in inpic) else None
+            if gsp:                                     # a screenshot graph: drawn again from the question's function
+                K_ = u.get('_K', 1.0)                   # (Dhruv round 32, ms_graphs.SPECS)
+                gw = min(ours[c][1] - ours[c][0] - 2 * PAD, max(230.0, (px1 - px0)))
+                gh = max(110.0, (py1 - py0))
+                gL, gT = ms_graphs.draw(gsp, gw, gh)
+                ox_, oy_ = ours[c][0] + PAD, py0 + shift
+                from ms_layout import _map_path
+                for l_ in gL:
+                    l2 = dict(l_); l2['d'] = _map_path(l_['d'], lambda x: x + ox_, lambda y: y + oy_); v['lines'].append(l2)
+                for t_ in gT:
+                    t2 = dict(t_, x=round(t_['x'] + ox_, 2), y=round(t_['y'] + oy_, 2), f=fam or 'serif'); v['text'].append(t2)
+                CTX.setdefault('pic_spans', []).append((py0, py1))
+                bottoms.append(max(oy_ + gh + 3.0, tb or 0))
+                lp_out = [i for i in inpic if i.kind == 't' and not (py0 - 1 <= (i.y0 + i.y1) / 2 <= py1 + 1)]
+                if lp_out:
+                    pl_, bt_, _ = _cell(lp_out, cells_src[c][0], cells_src[c][1], ours[c][0], ours[c][1], push=push_for(c))
+                    for it, dx, dy, k, x0 in pl_:
+                        _emit(v, it, dx + 0, dy + max(0.0, (oy_ + gh) - (py1 + dy)), k, x0)
+                continue
             bot = _cell_picture(v, u, inpic, cells_src[c], ours[c], (px0, py0, px1, py1) if head_moved and not broken_pg else None,
                                 shift)          # (top clamped only under a moved heading: a rotated 'All' above a table
             #                                     was cut, 2021 FM 52 q3)
@@ -876,6 +899,29 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
         f_ = min(under, key=lambda p_: p_[0])
         y_ = max(f_[1] - (f_[0] - sy), max(p_[3] for p_ in above) + 1.5)
         y_ = min(y_, f_[1] - 1.0)
+        if any(p_[3] > y_ for p_ in above) and not any(p_[1] < max(q_[3] for q_ in above) - 30 for p_ in under):
+            # a column above the rule grew more than the others (a guidance cell wraps to more lines than printed): the
+            # whole row under the rule moves down so the rule fits - rows grow in step (2026 MJ 63 q6(b), M1 check)
+            from ms_layout import _map_path
+            T = min(p_[1] for p_ in under) - 0.5
+            need = max(p_[3] for p_ in above) + 3.0 - min(p_[1] for p_ in under)
+            for t_ in v['text']:
+                if t_['y'] - 0.75 * t_.get('s', 11) > T:
+                    t_['y'] = round(t_['y'] + need, 2)
+            for l_ in v['lines']:
+                b_ = _bbox(l_['d'])
+                if b_ and b_[1] > T:
+                    l_['d'] = _map_path(l_['d'], lambda x: x, lambda y: y + need)
+            for k_ in ('figs', 'glyphs', 'images'):
+                for g_ in v.get(k_, []):
+                    if isinstance(g_, dict) and g_.get('y', -1) > T:
+                        g_['y'] = round(g_['y'] + need, 2)
+            placed_all = [(a0, b0 + need, a1, b1 + need) if b0 > T else (a0, b0, a1, b1) for a0, b0, a1, b1 in placed_all]
+            bottoms = [b0 + need if b0 > T else b0 for b0 in bottoms]
+            under = [p_ for p_ in placed_all if p_[0] > sy]
+            f_ = min(under, key=lambda p_: p_[0])
+            y_ = max(f_[1] - (f_[0] - sy), max(p_[3] for p_ in above) + 1.5)
+            y_ = min(y_, f_[1] - 1.0)
         if any(p_[1] < y_ for p_ in under) or any(p_[3] > y_ for p_ in above) or any(
                 a_ - 1 < sy < b_ + 1 for a_, b_ in pic_spans):
             continue                # the columns are not aligned at this rule: no rule rather than one through content
@@ -1428,6 +1474,7 @@ def build(q, uniq, store, hdr_unit, own_total, frame):
     """All rows of one maths question -> ms_p dict, or None to let the general path try."""
     import os
     CTX.clear()
+    CTX['qid'] = q.get('id')
     try:
         import paths
         from run import cleaned

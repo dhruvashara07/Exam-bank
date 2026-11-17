@@ -288,3 +288,13 @@ belong to (a), not to (a)(iv): when every sub-part but the last has no mark, the
   cell meets a rule, shading fills whole cells, an outer edge the print left out is drawn.
 - Sub-row lines inside a row are drawn (each answer line beside its mark); a long step with fractions re-flows like
   text ('+ 7.5 oe' joins the line above when it fits).
+
+## 33. Screenshot graphs (Dhruv, round 32)
+A graph the MS prints as a calculator screenshot is drawn again from the question's function in the same window:
+black and white, light grey grid, axes with the question's labelled ticks, the function(s) in a box top right
+(second curve dashed). Data in pipeline/ms_graphs.py SPECS (question id + MS row label).
+
+## 34. Paper 5/6 tasks (Dhruv, round 32)
+A task (investigation, modelling) is one record: the intro page as the stem (heading, time advice, picture), then
+every printed question with its printed number; one mark scheme with the header once, the section note once and
+one Total for the task. Built by pipeline/tasks.py after every store build / ms_rebuild --write.

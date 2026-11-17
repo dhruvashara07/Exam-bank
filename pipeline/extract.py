@@ -998,6 +998,14 @@ def extract(pdf_path, syllabus, year, session, pv):
 
 
 SECTION_HEAD = re.compile(r'^(?:Section\s+([AB])|([AB]))$')
+TASK_HEAD = re.compile(r'^(?:Modelling|MODELLING|Investigation|INVESTIGATION)\b')   # a task heading with no section letter
+
+
+def _sec_of(head):
+    if head.get('letter'):
+        return head['letter']
+    m = SECTION_HEAD.match(head['text'].strip())
+    return m.group(1) or m.group(2)
 
 
 def maths_paper_parts(doc, bnds, segs, meta):
@@ -1045,27 +1053,29 @@ def maths_paper_parts(doc, bnds, segs, meta):
         lines = visible_lines(page, s['y0'], s['y1'])
         for i, l in enumerate(lines):
             m = SECTION_HEAD.match(l['text'].strip())
-            if not m:
-                continue
             nxt = ' '.join(x['text'] for x in lines if abs(x['y0'] - l['y0']) < 3 and x is not l) + ' ' + \
                   ' '.join(x['text'] for x in lines[i + 1:i + 3])
+            if not m and TASK_HEAD.match(l['text'].strip()) and re.search(r'You are advised', nxt):
+                head = dict(l, letter=chr(ord('A') + len([x for x in intros if x.get('section')])))
+                break                     # 'Modelling   Helix' with no 'Section B' (2026 MJ 63)
+            if not m:
+                continue
             if m.group(1) or re.search(r'MODELLING|INVESTIGATION', nxt):
                 head = l
                 break
         if head is None or head['y0'] - s['y0'] < 2:
             if head is not None:          # the piece starts with the heading: all of it is intro
-                intros.append({'section': (SECTION_HEAD.match(head['text'].strip()).group(1) or SECTION_HEAD.match(head['text'].strip()).group(2)),
+                intros.append({'section': _sec_of(head),
                                'before': s['path'][0] + 1, 'segments': [{'page': s['page'] + 1, 'bbox': s['bbox']}]})
                 cut_path = s['path']
                 continue
             out.append(s)
             continue
-        sec = SECTION_HEAD.match(head['text'].strip())
         above = trim(doc, dict(s, y1=head['y0'] - 3))
         below = trim(doc, dict(s, y0=head['y0'] - 3, continued=True))
         if above:
             out.append(above)
-        intros.append({'section': sec.group(1) or sec.group(2), 'before': s['path'][0] + 1,
+        intros.append({'section': _sec_of(head), 'before': s['path'][0] + 1,
                        'segments': [{'page': s['page'] + 1, 'bbox': below['bbox']}] if below else []})
         cut_path = s['path']
     if intros:
