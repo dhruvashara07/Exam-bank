@@ -503,3 +503,11 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   ms_rebuild (no write) before writing, view the biggest changes, never write wide changes blind.
 - Local store.build differs from the Action (font 'symbol' vs 'serif'): question-side fixes go through the Action.
 - Open: MongoDB shape for tasks; scope of drawing the other ~40 screenshot sketches (asked in round 33 message).
+
+## 2026-11-17 (night) - round 33 fixed, M1 approved
+- Round 33: 9 of 23 wrong (graph labels, task A grids passed as vector lines, scooter cut, subscript chain, (c) bold,
+  sign spacing, formula-as-picture, MS picture taking the next line). Fixes = patterns 201-208.
+- Found on the way: local ms_rebuild differs from the Action for some papers (font family: sans/serif headings) -
+  never write a wide local ms_rebuild; env-free data passes (like the sign font pass) are fine. git checkout of review/
+  also reverts batch log and round files - restore only store/ and bank/.
+- M1 approved in git (111 papers). Next: PDF uploads for chem/bio/add math (Dhruv via GitHub Desktop, store-* branches).

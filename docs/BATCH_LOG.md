@@ -5,7 +5,7 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 | Batch | Sessions | Papers | Build | GitHub | Claude 1 | Claude 2 | Fix | Ours | Round items | New errors | Repeats | Tokens |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 257.5 | 51.4 | 2766.0 | 3084.4 | 40 | 58 | 5 | n/a |
-| M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 | 11.7 | 71.1 | 191.6 | 0.0 | 0.0 | 203.3 | 30 | 34 | 2 | n/a |
+| M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 | 11.7 | 97.4 | 191.6 | 0.0 | 30.1 | 233.4 | 23 | 42 | 2 | n/a |
 
 ## Errors per batch (new = first time, repeat = a pattern seen before: the doc or the fix failed)
 
@@ -111,6 +111,14 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - [new] pattern 198: M1 check round → see ERROR_PATTERNS 198 (found by claude)
 - [new] pattern 199: M1 check round → see ERROR_PATTERNS 199 (found by claude)
 - [new] pattern 200: M1 check round → see ERROR_PATTERNS 200 (found by claude)
+- [new] pattern 201: graph labels small, fraction form, never over curves/ticks; only where printed → round 33 (found by dhruv)
+- [new] pattern 202: y2-y1 printed as one subscript chain: sign and letter back to normal size → round 33 (found by dhruv)
+- [new] pattern 203: operators in the symbol face (DejaVu) drawn too wide: paper font, centred in printed width → round 33 (found by dhruv)
+- [new] pattern 204: unread bold on part label (c): bold + partlabel when it leads the part line (maths) → round 33 (found by dhruv)
+- [new] pattern 205: intro picture running beside the first question was cut: its lower part joins the intro → round 33 (found by dhruv)
+- [new] pattern 206: figure SVG lost the width of spaces (MuPDF redaction): glyphs back to printed x (maths) → round 33 (found by dhruv)
+- [new] pattern 207: formula with a root sign taken as a diagram: text + root (maths) → round 33 (found by dhruv)
+- [new] pattern 208: MS picture crop took the top of the text line under it / bracket pieces: picture stops above, brackets are text → round 33 (found by dhruv)
 
 ## Repeats to act on
 

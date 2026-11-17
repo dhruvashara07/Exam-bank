@@ -87,3 +87,5 @@ See docs/MATHS_PLAN.md section 5. Physics batches are all done (history in PROGR
 
 - Local `store.build` is NOT identical to the Action (font family 'symbol' vs 'serif' in MS text, 2026-11-17): question-side
   fixes are rebuilt by the Action only; `ms_rebuild.py` (MS layout only) matches the Action and may be written locally.
+- Local `ms_rebuild.py --write` is safe only for papers where its no-write listing shows just the intended changes
+  (2019 ON differed in heading font family, 2026-11-17). Restore with `git checkout -- store bank`, never `-- review`.

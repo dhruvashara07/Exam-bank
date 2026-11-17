@@ -69,7 +69,7 @@ the LaTeX builder working with a check, measured times -> decide if 3 years per 
 ## 5. Batches after the pilot (each one new chat)
 | Batch | Sessions (pilot sessions not repeated) | Papers (about) |
 | --- | --- | --- |
-| M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 (built 2026-11-17; round 32) |
+| M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 (built 2026-11-17; rounds 32-33; APPROVED 2026-11-17) |
 | M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 115 |
 | M3 | 2018-MJ 2018-ON 2019-MJ (**remind Dhruv: he must upload it**) 2020-MJ 2020-ON | 85 |
 | M4 | 2014-ON 2015-MJ 2015-ON 2016-MJ 2016-ON 2017-MJ 2017-ON | 115 |

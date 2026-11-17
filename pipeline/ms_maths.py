@@ -1031,12 +1031,7 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
         for t in v['text']:
             if t.get('f') in ('serif', 'sans'):
                 t['f'] = fam
-            elif t.get('f') == 'symbol' and t['t'] and all(ch in OPS_SERIF for ch in t['t']):
-                t['f'] = fam
-                if len(t['t']) == 1 and t['t'] not in ',.()[]':     # centred in its printed width
-                    nat = _serif_w(t['t'], t.get('s', 11))
-                    if nat and nat < t['w']:
-                        t['x'] = round(t['x'] + (t['w'] - nat) / 2, 2); t['w'] = round(nat, 2)            # signs in the paper's font: the 'symbol' face (DejaVu) draws '>' far wider than
+        _ops_font(v, fam)            # signs in the paper's font: the 'symbol' face (DejaVu) draws '>' far wider than
                 #                         its printed width, it ran into the '9' (2026 MJ 21 q10(c), Dhruv round 33)
     if is_note:
         v['note'] = True
@@ -1046,6 +1041,19 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
 
 
 OPS_SERIF = set('<>=≤≥≠+−×÷±→*∞°√,.()[]')
+
+
+def _ops_font(v, fam):
+    """signs in the 'symbol' face -> the paper's font, centred in their printed width (pattern 203)"""
+    if not fam or not isinstance(v, dict):
+        return
+    for t in v.get('text', []):
+        if t.get('f') == 'symbol' and t['t'] and all(ch in OPS_SERIF for ch in t['t']):
+            t['f'] = fam
+            if len(t['t']) == 1 and t['t'] not in ',.()[]':
+                nat = _serif_w(t['t'], t.get('s', 11))
+                if nat and nat < t['w']:
+                    t['x'] = round(t['x'] + (t['w'] - nat) / 2, 2); t['w'] = round(nat, 2)
 _SW = {}
 
 
@@ -1660,6 +1668,7 @@ def build(q, uniq, store, hdr_unit, own_total, frame):
             continue
         if v is None:
             return None
+        _ops_font(v, fam)
         if not v.get('note'):
             seen_lab.add(r['label'])
         out.append(v)
