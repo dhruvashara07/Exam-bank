@@ -48,6 +48,8 @@ the minimum; record each in the batch log.
    'pass it, log the reason'). Anything else is a PATTERN: fix the code (gated to maths), `batch_log.py error`,
    ERROR_PATTERNS / MS_TABLE_RULES now; then search ALL papers for the same class (a repeat = the fix was too narrow).
 4. Collect fixes, rebuild once (MATHS_PLAN.md 8), run claude_check again: the new sheets only for what changed.
+   Budget (START_HERE 2c): triage everything first, try each fix on its targets (`ms_rebuild.py <qid>`), at most 3
+   full-batch runs per round, read results as diffs; tick the batch log at every step.
    BEFORE every rebuild ask: is it needed? Mark-scheme layout only (ms_maths) -> `pipeline/ms_rebuild.py <sessions> [--write]` (minutes), never run.py;
    extract/store/ms.py -> run.py only for the papers the class touches; full run.py only when a shared step changed.
    After each fix LOOK at the cells it touches in ALL papers (a fix for one cell broke fractions elsewhere twice in round 30).

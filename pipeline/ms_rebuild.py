@@ -1,11 +1,20 @@
 """Maths: recompute ms_p (ms_layout/ms_maths only) for sessions, list questions whose rows change; --write stores them.
-   python3 pipeline/ms_rebuild.py 2024-MJ 2025-ON [--write]   (minutes; never run.py for a layout-only fix)"""
+   python3 pipeline/ms_rebuild.py 2024-MJ 2025-ON [--write]   (minutes; never run.py for a layout-only fix)
+   python3 pipeline/ms_rebuild.py 0607_2024MJ_41_q02 ... [--write]  (seconds: try a fix on its target questions first)"""
 import sys, os, glob, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import ms_layout as ML
 write = '--write' in sys.argv
-for ses in [a for a in sys.argv[1:] if not a.startswith('--')]:
-    for qf in sorted(glob.glob(f'store/cambridge-igcse/0607*/{ses}/p*/q*.json')):
+only = [a for a in sys.argv[1:] if a.startswith('0607_')]      # question ids: test a fix on its targets first (seconds)
+sess = [a for a in sys.argv[1:] if not a.startswith('--') and not a.startswith('0607_')]
+files = []
+for q in only:
+    _, s_, p_, n_ = q.split('_')
+    files += glob.glob(f'store/cambridge-igcse/0607*/{s_[:4]}-{s_[4:]}/p{p_}/{n_}.json')
+for ses in sess:
+    files += sorted(glob.glob(f'store/cambridge-igcse/0607*/{ses}/p*/q*.json'))
+for _ in [0]:
+    for qf in files:
         rec = json.load(open(qf))
         if not rec.get('ms_p') or rec.get('stub'):
             continue

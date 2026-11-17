@@ -5,7 +5,8 @@ You are continuing Dhruv's exam question bank (repo dhruvashara07/Exam-bank, wor
 
 ## 1. First 5 minutes (in this order, nothing else)
 1. `cd /home/claude/exam-bank && git pull --rebase` (clone it first if missing: `gh repo clone dhruvashara07/Exam-bank`).
-2. Read `CLAUDE.md` (hard rules), then `PROGRESS.md` top section: the line **NEXT:** says which batch is yours.
+2. `python3 pipeline/batch_log.py now`: the time now and the last task recorded (resume exactly there; a gap > 45
+   min is a pause and is not counted). Then `CLAUDE.md` (hard rules), `PROGRESS.md` top: **NEXT:** says your task.
 3. Read `docs/MATHS_PLAN.md` (the plan, decisions, batches, rebuild rules) and `docs/PLAYBOOK.md` (the steps).
 4. Read `docs/ERROR_PATTERNS.md` and `docs/MS_TABLE_RULES.md` (mistakes never to repeat, table rules).
 5. Read the last 2 entries of `docs/CONVERSATION_LOG.md` (what Dhruv decided lately) and `docs/BATCH_LOG.md`
@@ -27,6 +28,19 @@ Only then start. Skip the other docs unless a step points to them.
 - Loops cost tokens: a check or fix that does not converge after 3 attempts on the same pattern is written down as
   a known open item (PROGRESS + ERROR_PATTERNS) and the work moves on. Long jobs run in the background with generous
   time limits (run.py ~10 min for 60 papers) and are polled with sleeps, never restarted while still running.
+
+## 2c. Work like it costs money (Dhruv, M1 2026-11-17: 'tokens and time are currency')
+- `batch_log.py tick <b> "<task>"` at every step (start and end of every long run too): the record knows the task in
+  hand and the active time; a usage-limit pause is not work.
+- Understand ALL items first (every flag, every wrong item), group them into classes, write ALL the fixes, THEN verify
+  once. Never 'fix one -> full rebuild -> look -> fix the next' (M1: 11 sessions re-checked ~20 times).
+- Try a fix on its target questions only (`ms_rebuild.py <qid> ...`, seconds). Full-batch runs at most 3 per round:
+  one after the fixes, one after the corrections they need, one final. Each full run's result is read as a diff
+  (what changed), not re-read from the start.
+- Nothing I have found goes to Dhruv as 'OPEN': each item is fixed, proven to match the print (reason written), or
+  turned into a question with options. His round is for decisions and what vision could not settle.
+- Check the QUESTION side too (stray notices 'Question 11 is on the next page', part labels, bold letters, shading),
+  not only mark schemes: M1 round 32 had 4 question-side misses.
 
 ## 3. Never
 - push with `git push` (use `pipeline/push.sh "msg"`; only `pipeline/store_pdfs.sh` pushes its own store-* branch);

@@ -31,20 +31,26 @@
   "review": [
    {
     "start": "2026-11-17T11:03:42+00:00",
-    "end": null
+    "end": "2026-11-17T12:17:47+00:00",
+    "note": "round 32: 19 of 30 wrong"
    }
   ],
-  "fix": []
+  "fix": [
+   {
+    "start": "2026-11-17T12:18:55+00:00",
+    "end": null
+   }
+  ]
  },
  "github_runs": [
   {
    "id": 43893190451,
    "name": "Question bank",
    "branch": "main",
-   "conclusion": null,
+   "conclusion": "success",
    "start": "2026-11-16T15:08:36Z",
-   "end": "2026-11-16T15:08:40Z",
-   "minutes": 0.1
+   "end": "2026-11-16T15:19:24Z",
+   "minutes": 10.8
   }
  ],
  "counts": {
@@ -215,5 +221,38 @@
    "at": "2026-11-17T10:46:39+00:00"
   }
  ],
- "tokens": []
+ "tokens": [],
+ "excluded": [
+  {
+   "from": "2026-11-16T17:29:15+00:00",
+   "to": "2026-11-17T09:56:00+00:00",
+   "note": "usage limit / chat paused"
+  }
+ ],
+ "events": [
+  {
+   "at": "2026-11-17T12:17:47+00:00",
+   "task": "exclude 2026-11-16T17:29:15+00:00..2026-11-17T09:56:00+00:00"
+  },
+  {
+   "at": "2026-11-17T12:17:47+00:00",
+   "task": "phase M1 review"
+  },
+  {
+   "at": "2026-11-17T12:17:47+00:00",
+   "task": "round 32 answered; Dhruv decisions: paper-6 tasks = one record, fix round 32 first, MS graphs drawn from the question's function"
+  },
+  {
+   "at": "2026-11-17T12:18:02+00:00",
+   "task": "gh M1 43893190451"
+  },
+  {
+   "at": "2026-11-17T12:18:55+00:00",
+   "task": "phase M1 fix"
+  },
+  {
+   "at": "2026-11-17T12:18:55+00:00",
+   "task": "docs updated; triage round 32 items"
+  }
+ ]
 }

@@ -10,12 +10,18 @@ rebuilt from all of them by `report`, so the table is never typed by hand.
     python3 pipeline/batch_log.py error  M0 --pattern 64 --kind new --what "formula page cut as Q1" --fix "extract: skip formula list page"
     python3 pipeline/batch_log.py error  M0 --pattern 12 --kind repeat --what "..." --fix "..."
     python3 pipeline/batch_log.py tokens M0 1850000 --note "explain-usage at chat end"
+    python3 pipeline/batch_log.py tick   M1 "fixing class 181: picture-cell headings"   # what I do now (every step)
+    python3 pipeline/batch_log.py now                            # last task + its time + time now (read on resume)
+    python3 pipeline/batch_log.py exclude M1 2026-11-16T17:29Z 2026-11-17T09:56Z --note "usage limit"   # a pause
     python3 pipeline/batch_log.py show   M0
     python3 pipeline/batch_log.py report                         # rewrite docs/BATCH_LOG.md
 
 Phases: build = GitHub/pipeline build; claude1 = Claude pass 1 (check + fix); claude2 = Claude pass 2
 (re-check after the rebuild, prepare the round); review = Dhruv's round (recorded for the calendar, NOT
-counted in "our time"); fix = fixes after Dhruv's round + rebuild + approve. Times are wall-clock UTC.
+counted in "our time"); fix = fixes after Dhruv's round + rebuild + approve. Times are UTC.
+Pauses are not work (Dhruv, M1): every command records an event (tick = the task in hand); inside a phase a gap of
+more than PAUSE_MIN minutes between two events counts as a pause, and `exclude` takes out a known pause. Tick at every
+step, so a long real wait (a GitHub run) is never mistaken for a pause: tick when it starts and when it ends.
 """
 import datetime, json, os, subprocess, sys, glob
 
@@ -26,6 +32,8 @@ DIR = os.path.join(paths.ROOT, 'review', 'cycle')
 LOG = os.path.join(paths.ROOT, 'docs', 'BATCH_LOG.md')
 PHASES = ['build', 'claude', 'claude1', 'claude2', 'review', 'fix']   # 'claude' = the ONE check round (round 29+); claude1/2 kept for old records
 OURS = ['build', 'claude', 'claude1', 'claude2', 'fix']          # Dhruv's review time is not ours
+PAUSE_MIN = 45
+NOW = os.path.join(DIR, 'NOW.json')                 # last task of any batch: read first when a chat resumes
 REPO = os.environ.get('GITHUB_REPOSITORY', 'dhruvashara07/Exam-bank')
 
 
@@ -47,16 +55,37 @@ def load(b):
     return json.load(open(path(b)))
 
 
-def save(r):
+def save(r, task=None):
     os.makedirs(DIR, exist_ok=True)
+    ev = r.setdefault('events', [])
+    ev.append({'at': now(), 'task': task or ' '.join(sys.argv[1:4])})
     json.dump(r, open(path(r['batch']), 'w'), indent=1, ensure_ascii=False)
+    json.dump({'batch': r['batch'], 'at': ev[-1]['at'], 'task': ev[-1]['task']}, open(NOW, 'w'), ensure_ascii=False)
 
 
-def minutes(spans):
+_R = {}
+
+
+def minutes(spans, r=None):
+    """Active minutes of the spans: minus excluded pauses, minus gaps > PAUSE_MIN between events (when events exist)."""
+    r = r or _R
+    ev = sorted(ts(e['at']) for e in r.get('events', []))
+    ex = [(ts(x['from']), ts(x['to'])) for x in r.get('excluded', [])]
     t = 0.0
     for s in spans:
-        if s.get('end'):
-            t += (ts(s['end']) - ts(s['start'])).total_seconds() / 60
+        if not s.get('end'):
+            continue
+        a, b = ts(s['start']), ts(s['end'])
+        pts = [a] + [e for e in ev if a < e < b] + [b]
+        for p0, p1 in zip(pts, pts[1:]):
+            g = (p1 - p0).total_seconds() / 60
+            if len(pts) > 2 and g > PAUSE_MIN:
+                continue                                  # no event for that long: a pause, not work
+            for x0, x1 in ex:
+                o = (min(p1, x1) - max(p0, x0)).total_seconds() / 60
+                if o > 0:
+                    g -= o
+            t += max(0.0, g)
     return round(t, 1)
 
 
@@ -85,7 +114,8 @@ def cmd_phase(a):
         open_[-1]['end'] = now()
         if '--note' in a:
             open_[-1]['note'] = args_after(a, '--note')
-    save(r); print(b, ph, what, f"{minutes(spans)} min so far")
+    _R.clear(); _R.update(r)
+    save(r); print(b, ph, what, f"{minutes(spans, r)} min so far")
 
 
 def cmd_gh(a):
@@ -125,8 +155,30 @@ def cmd_tokens(a):
     save(r); print('tokens', sum(t['n'] for t in r['tokens']))
 
 
+def cmd_tick(a):
+    r = load(a[0]); task = ' '.join(a[1:]) or 'tick'
+    last = (r.get('events') or [{}])[-1]
+    save(r, task)
+    gap = (ts(now()) - ts(last['at'])).total_seconds() / 60 if last.get('at') else 0
+    print(f"{now()}  {task}  (last: {last.get('task', '-')} {gap:.0f} min ago{' - counted as a pause' if gap > PAUSE_MIN else ''})")
+
+
+def cmd_now(a):
+    if not os.path.exists(NOW):
+        print('no task recorded'); return
+    n = json.load(open(NOW)); gap = (ts(now()) - ts(n['at'])).total_seconds() / 60
+    print(f"now {now()} | last task ({n['batch']}): {n['task']} at {n['at']} ({gap:.0f} min ago)")
+
+
+def cmd_exclude(a):
+    r = load(a[0])
+    r.setdefault('excluded', []).append({'from': a[1], 'to': a[2], 'note': args_after(a, '--note', '')})
+    save(r, f'exclude {a[1]}..{a[2]}'); print('excluded', a[1], a[2])
+
+
 def summary(r):
-    m = {p: minutes(r['phases'].get(p, [])) for p in PHASES}
+    _R.clear(); _R.update(r)
+    m = {p: minutes(r['phases'].get(p, []), r) for p in PHASES}
     ghm = round(sum(x['minutes'] for x in r['github_runs']), 1)
     ours = round(sum(m[p] for p in OURS), 1)
     new = sum(1 for e in r['errors'] if e['kind'] == 'new')
@@ -146,9 +198,9 @@ def cmd_show(a):
 
 
 def cmd_report(a):
-    rs = [json.load(open(f)) for f in sorted(glob.glob(os.path.join(DIR, '*.json')))]
+    rs = [json.load(open(f)) for f in sorted(glob.glob(os.path.join(DIR, '*.json'))) if os.path.basename(f) != 'NOW.json']
     L = ['# Batch log (generated by pipeline/batch_log.py report; do not edit by hand)', '',
-         'Minutes are wall clock. "Ours" = build + Claude 1 + Claude 2 + fix (Dhruv\'s review time not counted).', '',
+         'Minutes are active time (pauses / usage limits not counted). "Ours" = build + Claude + fix (Dhruv\'s review time not counted).', '',
          '| Batch | Sessions | Papers | Build | GitHub | Claude 1 | Claude 2 | Fix | Ours | Round items | New errors | Repeats | Tokens |',
          '| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |']
     for r in rs:
@@ -174,4 +226,5 @@ def cmd_report(a):
 if __name__ == '__main__':
     c, a = sys.argv[1], sys.argv[2:]
     {'start': cmd_start, 'phase': cmd_phase, 'gh': cmd_gh, 'count': cmd_count, 'error': cmd_error,
-     'tokens': cmd_tokens, 'show': cmd_show, 'report': cmd_report}[c](a)
+     'tokens': cmd_tokens, 'show': cmd_show, 'report': cmd_report, 'tick': cmd_tick, 'now': cmd_now,
+     'exclude': cmd_exclude}[c](a)

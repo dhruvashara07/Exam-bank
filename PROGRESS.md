@@ -3,10 +3,9 @@
 Read this first in every session. Update it before ending a session.
 
 ## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md
-- NEXT: M1 review round 32 is published (30 items, review page r32). When Dhruv has answered: read feedback_r32, fix
-  every wrong item as a class (incl. the 3 OPEN items: 2025 FM 62 q5 small pasted symbol in a text line, 2026 MJ 21 q10
-  Guidance symbols, 2024 ON 32 q1 printed breaks around fractions, 2025 ON 23 q15 half a diagram cropped), ONE check
-  round, then approve.py the 90 M1 papers (2024-FM .. 2026-MJ) when clean. Same chat or "continue M1" in a new one.
+- NEXT: M1 fix round 32 (closed: 18 of 30 wrong, review/rounds/32_answers.json). Classes: 4 items I had marked OPEN,
+  4 question-side misses, 6 mark-scheme layout faults, 4 MS graphs to draw from the question's function, paper-6
+  tasks as ONE record (Dhruv, MATHS_PLAN 11). Work rules START_HERE 2c. Then ONE check round, round 33, approve.
 - 2026-11-17: M1 built on GitHub (90 papers, 11 min, run 43893190451), checks 0 blocking; ONE Claude check round found
   20 classes (ERROR_PATTERNS 161-180) incl. the 2026 MJ Guidance column (5 columns, Dhruv: 40:30:30), the paper-6
   section note (Dhruv: top of every modelling question), fraction bars dropped / denominators split (also re-shown from

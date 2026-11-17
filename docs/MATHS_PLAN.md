@@ -127,3 +127,16 @@ Dhruv: fix the mark schemes first, then ONE short review round. In this order:
 6. 30 diagram crop warnings (checks.py figure): compare each with the page (pattern 56); light grey grids.
 7. LaTeX cosmetics: units inside maths ('cm^{2}'), '( , )' answer brackets, 'NOT TO SCALE' outside crops.
 Then: pass 2 (logic check), ONE short review round (the page renders KaTeX in the Editable tab), fixes, approve, docs.
+
+
+## 11. Decisions after round 32 (Dhruv, 2026-11-17)
+- Paper 6: each task (the investigation, the modelling) is ONE record: the task's intro (text, pictures, instructions)
+  is the stem, every printed question is a part (its own label, marks and mark scheme rows), one mark scheme with the
+  section note on top. A single question of a task has no use out of context.
+- Fix round 32 first with the current flow (then the GitHub two-pass plan below).
+- Mark-scheme graphs that are pasted screenshots: when the question gives the function, draw the graph from the
+  function (same window and grid as printed, black-and-white, clear axis labels, the function label where printed);
+  otherwise keep the picture with raised contrast.
+- Later (after M1): GitHub pass 1 runs ALL checks (maths_check, sheets, question-side sheet) and writes one report per
+  question; Claude's round resolves every reason; GitHub pass 2 rebuilds the batch strictly and reports a diff; the
+  review round holds only decisions, undecided items and ~5 calibration items.
