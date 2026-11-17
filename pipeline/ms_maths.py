@@ -694,10 +694,9 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                 blk += add
             rest = [i for i in by[c] if i not in blk]
             shift, tb = push_for(c)(ty0), None
+            placed = []
             if rest:
                 placed, tb, _ = _cell(rest, cells_src[c][0], cells_src[c][1], ours[c][0], ours[c][1], push=push_for(c))
-                for it, dx, dy, k, x0 in placed:
-                    _emit(v, it, dx, dy, k, x0)
                 ab = [p_ for p_ in placed if p_[0].y1 <= ty0 + 1]
                 shift = max([shift] + [p_[2] for p_ in ab])
             bx0, bx1 = min(i.x0 for i in blk), max(i.x1 for i in blk)
@@ -708,9 +707,22 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                     shift = max(shift, max(ab_b) + 2.5 - by0_)
             room = ours[c][1] - ours[c][0] - 2 * PAD
             k_ = min(1.0, room / max(1.0, bx1 - bx0))
+            bel = [p_ for p_ in placed if p_[0].y0 >= by1_ - 1]
+            e_ = 0.0
+            if bel:                 # text under the table starts under it as WE placed it (the table moved down with the
+                f_b = min(bel, key=lambda p_: p_[0].y0)     # text above it: 2024 ON 63 q6, a rule ran through 'or', M1 check)
+                e_ = max(0.0, by0_ + shift + (by1_ - by0_) * k_ + (f_b[0].y0 - by1_) - (f_b[0].y0 + f_b[2]))
+            for it, dx, dy, k, x0 in placed:
+                dy_ = dy + (e_ if it.y0 >= by1_ - 1 else 0.0)
+                _emit(v, it, dx, dy_, k, x0)
+                if it.kind == 't':          # (text around a table counts for sub-row rules and alignment, M1 check)
+                    placed_all.append((it.y0, it.y0 + dy_, it.y1, it.y1 + dy_, c))
+            if tb is not None and bel:
+                tb += e_
             thin = lambda i: i.kind == 'lines' and min(i.x1 - i.x0, i.y1 - i.y0) < 1.6
             blk = [i for i in blk if not thin(i)] + [i for i in blk if thin(i)]   # rules over the shading (round 30)
             _emit_block(v, blk, bx0, by0_, ours[c][0] + PAD, by0_ + shift, k_)
+            placed_all.append((by0_, by0_ + shift, by1_, by0_ + shift + (by1_ - by0_) * k_, c))   # the table counts too
             bottoms.append(max(by0_ + shift + (by1_ - by0_) * k_ + 3.0, tb or 0))
             continue
         if (_picture_cell(by[c]) or u['src']['page'] in CTX.get('broken', ())) and by[c] and CTX.get('pdf'):   # a diagram / shaded sketch in the cell: its printed picture (pattern 78)
@@ -880,7 +892,7 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                                align='right' if c == 2 else 'left', push=push_for(c))
         for it, dx, dy, k, x0 in placed:
             _emit(v, it, dx, dy, k, x0)
-            placed_all.append((it.y0, it.y0 + dy, it.y1, it.y1 + dy))
+            placed_all.append((it.y0, it.y0 + dy, it.y1, it.y1 + dy, c))
         if note and c == note[0] and placed:
             note = note[:2] + (min(it.y0 + dy for it, dx, dy, k, x0 in placed) - 4, max(it.y1 + dy for it, dx, dy, k, x0 in placed) + 4) + note[2:4]
         if bot is not None:
@@ -894,8 +906,53 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
             continue
         under = [p_ for p_ in placed_all if p_[0] > sy]
         above = [p_ for p_ in placed_all if p_[2] < sy]
-        if not under or not above:
+        if not under:
             continue
+        # every column starts its first line under the rule at the same height (Dhruv round 32, 2026 MJ 62 q6: a mark
+        # '1' sat beside the table above its '18' when the table grew; 2026 MJ 63 q6(b)). A column whose first line under
+        # the rule is higher than the others moves down - only its lines from there on, and placed_all with them.
+        nxt = min([r_[1] for r_ in subr if r_[1] > sy + 1] + [1e9])
+        firsts = {}                 # column -> (our top, our top - printed top) of its first line under the rule
+        for p_ in under:
+            if p_[0] < nxt and p_[1] < firsts.get(p_[4], (1e9, 0))[0]:
+                firsts[p_[4]] = (p_[1], p_[1] - p_[0])
+        def fits():                 # the rule as placed would run through no line
+            if not above:
+                return True
+            f1 = min(under, key=lambda p_: p_[0])
+            y1_ = min(max(f1[1] - (f1[0] - sy), max(p_[3] for p_ in above) + 1.5), f1[1] - 1.0)
+            return not any(p_[1] < y1_ for p_ in under) and not any(p_[3] > y1_ for p_ in above)
+        if len(firsts) >= 2 and not fits():     # only where the rule would otherwise be dropped (2025 MJ 43 q14: the
+            from ms_layout import _map_path     # alignment everywhere moved good rows apart)
+            tgt = max(o_ for f0, o_ in firsts.values())   # (offsets, not tops: a cell printed lower - centred - stays lower)
+            for c_, (f0, o_) in firsts.items():
+                d_ = tgt - o_
+                if not (0.8 < d_ < 200) or not (1 <= c_ < len(ours)):
+                    continue
+                x0_, x1_ = ours[c_][0] - 1, ours[c_][1] + 1
+                for t_ in v['text']:
+                    if x0_ <= t_['x'] < x1_ and t_['y'] - 0.75 * t_.get('s', 11) >= f0 - 0.5:
+                        t_['y'] = round(t_['y'] + d_, 2)
+                for l_ in v['lines']:
+                    bb = _bbox(l_['d'])
+                    if bb and x0_ <= bb[0] and bb[2] <= x1_ and bb[1] >= f0 - 0.5:
+                        l_['d'] = _map_path(l_['d'], lambda x: x, lambda y: y + d_)
+                for k_ in ('images', 'figs', 'glyphs'):
+                    for g_ in v.get(k_, []):
+                        if isinstance(g_, dict) and x0_ <= g_.get('x', -1) < x1_ and g_.get('y', -1) >= f0 - 0.5:
+                            g_['y'] = round(g_['y'] + d_, 2)
+                placed_all = [(a0, b0 + d_, a1, b1 + d_, k0) if k0 == c_ and b0 >= f0 - 0.5 else (a0, b0, a1, b1, k0)
+                              for a0, b0, a1, b1, k0 in placed_all]
+                bottoms.append(max([b1 for a0, b0, a1, b1, k0 in placed_all if k0 == c_] + [0]))
+            under = [p_ for p_ in placed_all if p_[0] > sy]
+            above = [p_ for p_ in placed_all if p_[2] < sy]
+        if not above:               # only a rigid block above (a table: its text is not in placed_all) - its bottom
+            top_u = min(p_[1] for p_ in under)      # in our row (2026 MJ 62 q6: 'OR' table, then '18 | 1')
+            bt = [t_['y'] + 0.3 * t_.get('s', 11) for t_ in v['text'] if t_['y'] < top_u - 1]
+            bt += [b_[3] for b_ in (_bbox(l_['d']) for l_ in v['lines']) if b_ and b_[3] < top_u - 1 and b_[1] > 0.5]
+            if not bt:
+                continue
+            above = [(sy - 1, max(bt), sy - 1, max(bt), -1)]
         f_ = min(under, key=lambda p_: p_[0])
         y_ = max(f_[1] - (f_[0] - sy), max(p_[3] for p_ in above) + 1.5)
         y_ = min(y_, f_[1] - 1.0)
@@ -916,7 +973,7 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                 for g_ in v.get(k_, []):
                     if isinstance(g_, dict) and g_.get('y', -1) > T:
                         g_['y'] = round(g_['y'] + need, 2)
-            placed_all = [(a0, b0 + need, a1, b1 + need) if b0 > T else (a0, b0, a1, b1) for a0, b0, a1, b1 in placed_all]
+            placed_all = [(a0, b0 + need, a1, b1 + need, c0_) if b0 > T else (a0, b0, a1, b1, c0_) for a0, b0, a1, b1, c0_ in placed_all]
             bottoms = [b0 + need if b0 > T else b0 for b0 in bottoms]
             under = [p_ for p_ in placed_all if p_[0] > sy]
             f_ = min(under, key=lambda p_: p_[0])

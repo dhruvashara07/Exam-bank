@@ -84,3 +84,6 @@ He answers on the page (collection `feedback_r<n>`, read with db_list). When he 
 
 ## Batches
 See docs/MATHS_PLAN.md section 5. Physics batches are all done (history in PROGRESS.md and CONVERSATION_LOG.md).
+
+- Local `store.build` is NOT identical to the Action (font family 'symbol' vs 'serif' in MS text, 2026-11-17): question-side
+  fixes are rebuilt by the Action only; `ms_rebuild.py` (MS layout only) matches the Action and may be written locally.

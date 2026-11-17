@@ -486,8 +486,14 @@ the old MS paths (2014 MJ 22 q2, 43 q9, 2019 ON 11/12 q8, 23 q3, 62 q5).
 194. Re-flow joined lines across a printed sub-row rule ('... or better' + next sub-row '32.8 km/h' in one cell,
     2024 FM 62 q9(c); 25 questions) -> never join across a rule (ms_maths re-flow, CTX subrules).
 195. A column that wraps more than printed (5-column Guidance) left no room for the sub-row rule: the rule was dropped
-    -> the row under the rule moves down so the rule fits (2026 MJ 63 q6(b)). Still open: the first lines of each
-    column under a rule are not always level (guidance can sit a line lower) - per-column alignment broke later rules.
+    -> the row under the rule moves down so the rule fits (2026 MJ 63 q6(b)).
+198. A rule that would run through a line (a mark '1' beside the table above its '18', 2026 MJ 62 q6 - Dhruv round 32
+    'all lines align with their answer'): the columns under the rule move down to their printed offsets (not to the
+    same top: a centred cell stays lower), only where the rule would otherwise be dropped (everywhere broke good rows).
+    Text around a table and the table itself now count for rules (placed_all).
+199. Text under a table in a cell did not move down with the table (2024 ON 63 q6: a rule ran through 'or') -> it
+    starts under the table as placed.
+200. Maths notices 'Question 4(b) / 10(c)(i) and (ii) is/are printed on the next page' (6 papers, found by checks).
 196. A task heading with no section letter ('Modelling   Helix', 2026 MJ 63) was not found: no intro, no task record
     -> extract.TASK_HEAD + 'You are advised' on the next lines; letter by order.
 197. Paper 5/6 tasks as ONE record (Dhruv round 32): pipeline/tasks.py writes task_<S>.json (id ..._t<S>): intro as
