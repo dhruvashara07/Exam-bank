@@ -486,6 +486,7 @@ def diagrams(doc, seg, lines, captioned):
         else:
             cl.append({'r': fitz.Rect(r), 'g': g, 'n': 1, 'rs': [r]})
     out, tables = [], list(pre_tables)
+    boxes_ = []
     for c in cl:
         r = c['r']
         if r.width < 25 or r.height < 20:
@@ -515,6 +516,7 @@ def diagrams(doc, seg, lines, captioned):
                 tables.append(fitz.Rect(r))
                 continue                                   # a ruled table of text (column rules top to bottom): stays text + rules
         if not inside and all(getattr(x, 'aligned', False) for x in c['rs']) and r.height < 40:
+            boxes_.append(fitz.Rect(r))                    # (kept aside: it may sit beside a diagram, joined below)
             continue                                       # an empty answer box ('FG = [  ]', 2025 MJ 61 q5), no diagram
         if all(getattr(x, 'aligned', False) for x in c['rs']) and max(max(x.width, x.height) for x in c['rs']) <= 42:
             bx_ = []                                       # only small EMPTY boxes on equation lines ('100 = 10 x 10 = 2 x 5
@@ -617,6 +619,31 @@ def diagrams(doc, seg, lines, captioned):
                 elif t.y1 <= ob.y0 + 0.5 * ob.height:
                     ob.y0 = max(ob.y0, t.y1 + 1)
         o['bbox'] = [round(v, 1) for v in ob]
+    nts_ = [fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']) for t in text if re.search(r'NOT TO SCALE|^NOT\s+TO$|^SCALE$', t['text'].strip())]
+    cands_ = list(tables) + [b_ for b_ in boxes_ if any(n_.y0 < b_.y1 + 30 and n_.y1 > b_.y0 - 30 for n_ in nts_)]
+    #   (an empty box joins only on a band with 'NOT TO SCALE': an answer box 'FG = [ ]' never does)
+    for t_ in cands_:                                # a plain box with only short labels (a rectangle 'x + 9', '2') beside a
+        lab_ = [t for t in text if fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']).intersects(t_ + (-14, -12, 14, 12))]
+        if any(t_ == p_ for p_ in pre_tables) or len(lab_) > 4 or any(len(t['text'].strip()) > 8 for t in lab_):   # diagram on the same band is part of that diagram (round 32,
+            continue                                 # 2025 ON 23 q15: the right rectangle was drawn as question lines)
+        for o in out:
+            A = fitz.Rect(o['bbox'])
+            ov = min(A.y1, t_.y1) - max(A.y0, t_.y0)
+            gap = max(t_.x0 - A.x1, A.x0 - t_.x1)
+            if ov > 0.6 * t_.height and gap < 160 and not any(
+                    len(t['text'].strip()) > 22 and fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']).intersects(
+                        fitz.Rect(min(A.x1, t_.x1), max(A.y0, t_.y0), max(A.x0, t_.x0), min(A.y1, t_.y1))) for t in text):
+                box_ = A | t_
+                for t in lab_:
+                    box_ |= fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1'])
+                for t in text:                       # its NOT TO SCALE goes with it
+                    tb = fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1'])
+                    if re.search(r'NOT TO SCALE|^NOT\s+TO$|^SCALE$', t['text'].strip()) and tb.intersects(box_ + (-200, -30, 200, 30)):
+                        box_ |= tb
+                o['bbox'] = [round(v, 1) for v in box_]
+                if t_ in tables:
+                    tables.remove(t_)
+                break
     merged = True                                    # drawings side by side at one height are ONE picture (Dhruv, round
     while merged:                                    # 30, 2014 MJ 43 q13: 'make that 2 image as one image')
         merged = False

@@ -62,7 +62,8 @@ MATHS_GLYPHS = {
     'MMNegate': {'!': '≠', 'g': '∉'},
     'MMRelation': {'G': '≤', 'H': '≥'},
     'EuclidMathTwo': {'-': '≤', '\x84': '≤', '\x85': '≥'},
-    'Calibri': {'\x84': '≤', '\x85': '≥'},       # Word's maths font as Calibri F084 (2025 ON ms_42, 2026 MJ ms_21; M1)   # x84/x85 (PUA F084/F085): M1 2024 MJ ms_22, ms_31                     # 2019 ON 41 MS '71... ≤ f(x)' (round 28 symbol sweep)
+    'Calibri': {'\x84': '', '\x85': ''},          # Calibri F084: an INVISIBLE fallback copy (glyph 0) of a symbol that is
+    #                                               drawn by another font: dropped (it doubled '≤≤', round 32, 2026 MJ 21 q10)   # x84/x85 (PUA F084/F085): M1 2024 MJ ms_22, ms_31                     # 2019 ON 41 MS '71... ≤ f(x)' (round 28 symbol sweep)
 }
 
 

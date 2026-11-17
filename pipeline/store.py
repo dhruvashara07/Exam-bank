@@ -290,7 +290,9 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
         if docname == 'ms':                   # a picture filling its table cell: keep it off the cell's rules (2016 MJ 41 q10)
             r = fitz.Rect(r.x0, r.y0 + (1.5 if r.y0 <= clip.y0 + 1 else 0), r.x1, r.y1 - (1.5 if r.y1 >= clip.y1 - 1 else 0))
         name = f"img_{docname}{pno + 1}_{int(r.x0)}_{int(r.y0)}.png"
-        pix = page.get_pixmap(clip=r, dpi=300)
+        pix = (_notext(doc, pno) if MATHS else page).get_pixmap(clip=r, dpi=300)
+        # (maths: the picture is rendered WITHOUT the page's text - a clipped image's box covers words we keep as text,
+        #  and they were drawn twice = looked bold, 2025 ON 61 q4 / 51 q4, M1 round 32)
         if docname == 'ms':                   # white paper is transparent, so our lines stay visible around the picture
             from PIL import Image as _I
             im_ = _I.frombytes('RGB', (pix.width, pix.height), pix.samples).convert('RGBA')
@@ -417,6 +419,29 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
 # ---------------------------------------------------------------- figures
 FOREIGN = []                                   # words of a neighbouring figure inside the last fit_crop box
 SIBLINGS = []                                  # the other figures' boxes on the page (same question), set by build
+
+
+_NOTEXT = {}
+
+
+def _notext(doc, pno):
+    """The page with its text removed (cached): pictures in a unit are rendered from it, so words we keep as text are
+    never baked into a picture as well (M1 round 32)."""
+    key = (id(doc), pno)
+    if key not in _NOTEXT:
+        if len(_NOTEXT) > 4:
+            _NOTEXT.clear()
+        nd = fitz.open()
+        nd.insert_pdf(doc, from_page=pno, to_page=pno)
+        pg = nd[0]
+        for b_ in pg.get_text('rawdict')['blocks']:
+            for l_ in b_.get('lines', []):
+                for s_ in l_['spans']:
+                    pg.add_redact_annot(fitz.Rect(s_['bbox']))
+        pg.apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE, graphics=fitz.PDF_REDACT_LINE_ART_NONE,
+                            text=fitz.PDF_REDACT_TEXT_REMOVE)
+        _NOTEXT[key] = (nd, pg)
+    return _NOTEXT[key][1]
 
 
 def fit_crop(pg, b, max_grow=50.0, maths=False):

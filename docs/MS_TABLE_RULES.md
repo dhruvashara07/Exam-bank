@@ -282,3 +282,9 @@ belong to (a), not to (a)(iv): when every sub-part but the last has no mark, the
 - 2026 MJ onwards prints Q | Answer | Marks | Partial Marks | Guidance: we show the same 5 columns, Answer : Partial
   Marks : Guidance = 40 : 30 : 30 of the room left by Q and Marks. Rows without a Guidance cell leave it empty.
 - A note printed across the table (merged row or a band inside a row) is one full-width cell, never split.
+
+## 32. Similar but proper (Dhruv, round 32)
+- A table inside a cell is redrawn clean: one grid of column / row lines, no double edges, no steps where a shaded
+  cell meets a rule, shading fills whole cells, an outer edge the print left out is drawn.
+- Sub-row lines inside a row are drawn (each answer line beside its mark); a long step with fractions re-flows like
+  text ('+ 7.5 oe' joins the line above when it fits).

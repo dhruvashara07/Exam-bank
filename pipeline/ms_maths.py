@@ -166,6 +166,8 @@ def _items(u, edges):
                                   or (b[0] + b[2]) / 2 < 20 or (b[0] + b[2]) / 2 > u['w'] - 20):
             continue                                    # a column rule / border (or a piece of one)
         if b[3] - b[1] < 1.3 and b[2] - b[0] > 30 and any(b[0] - 3 <= e <= b[0] + 3 or b[2] - 3 <= e <= b[2] + 3 for e in edges + [0, u['w']]):
+            if 3.0 < b[1] < u['h'] - 3.0 and b[0] > edges[0] - 3:
+                CTX.setdefault('subrules', []).append((b[0], (b[1] + b[3]) / 2, b[2]))   # redrawn by layout_row (round 32)
             continue                                    # a row / sub-row rule running between column rules
         if b[3] - b[1] < 1.3 and b[2] - b[0] > 0.8 * u['w']:
             continue
@@ -234,6 +236,12 @@ def _chunks(its):
     return out
 
 
+def _rootish(i):
+    d = i.ref.get('d', '')
+    return i.y1 - i.y0 < 30 and i.x1 - i.x0 < 400 and ('L' in d or 'l' in d) and not i.ref.get('fill') == '#ffffff' and \
+        _slanted(d)
+
+
 def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
     """Lay the items of one printed cell [c0, c1] into our column [n0, n1]. Returns (placed pieces, bottom y, top y)."""
     if not items:
@@ -291,8 +299,8 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
     # a paragraph printed over several lines (the printed column was wider than ours) is re-flowed as one: its lines are
     # joined when they hold only text, start at the same indent and the line before ran to the cell's right side (round 27,
     # 2014 MJ 62 q2(b): 'previous / numerator.' broken lines)
-    def plain(ln):
-        return all(i.kind == 't' for i in ln['its'])
+    def plain(ln):              # text, fraction bars and root signs (a step with fractions re-flows too: round 32, 2014 MJ
+        return all(i.kind == 't' or (i.kind == 'lines' and (i.y1 - i.y0 < 1.6 or _rootish(i))) for i in ln['its'])   # 41 q11)
     def open_end(ln):           # a printed line that stops mid-step ('... ÷ their', '... ='): the next line goes on with it
         last = max((i for i in ln['its'] if i.kind == 't'), key=lambda i: i.x1, default=None)   # (round 30, Dhruv: write a
         t_ = last.ref.get('t', '').strip() if last else ''                                   # step whole, not broken)
@@ -322,6 +330,11 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
                 if growth is not None:
                     growth.append((ln['y0'], need))
         n_ = len(out)
+        if not ln.get('parts') and align != 'right' and plain(ln) and any(i.kind == 'lines' for i in ln['its']) \
+                and max(i.x1 for i in ln['its']) - min(i.x0 for i in ln['its']) > width + 0.5 \
+                and len({round(i.ref['y']) for i in ln['its'] if i.kind == 't' and i.ref.get('s', 11) >= 9}) <= 3:
+            ln['parts'] = [dict(ln, its=list(ln['its']))]   # one wide step with fractions: wrapped like a re-flow, each
+            #                                                row as tall as its own pieces (round 32: 'of x' far below)
         if ln.get('parts'):                            # re-flow: chunks one after the other, a space between words
             first = ln['parts'][0]
             lh = first['y1'] - first['y0']
@@ -332,6 +345,45 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
             #                                      line: re-flowed rows overlapped, 2014 MJ 42 q1(d), round 30)
             x, row = 0.0, 0
             fy0_ = min(i.y0 for i in tl_) if tl_ else first['y0']
+            import collections as _cl
+            def base_(part):            # the part's text baseline: the y most of its words sit on
+                c_ = _cl.Counter(round(i.ref['y'], 1) for i in part['its'] if i.kind == 't' and i.ref.get('s', 11) >= 9)
+                return c_.most_common(1)[0][0] if c_ else part['y1']
+            tall_ = any(i.kind == 'lines' for p_ in ln['parts'] for i in p_['its']) and len(tl_) > 0
+            if tall_:                   # a step with fractions (round 32, 2014 MJ 41 q11): rows aligned on the baseline,
+                up_ = max(base_(p_) - p_['y0'] for p_ in ln['parts'])        # each row as tall as the tallest piece
+                dn_ = max(p_['y1'] - base_(p_) for p_ in ln['parts'])
+                pitch = up_ + dn_ + LGAP
+                fb_ = base_(first)
+            if tall_:                   # rows first, then each row as tall as ITS pieces (a short 'line CB' row is not
+                rows_ = [[]]            # given the fraction's height: round 32, 2024 ON 32 q1)
+                xx_ = 0.0
+                for part in ln['parts']:
+                    bp_ = base_(part)
+                    for ch in _chunks(part['its']):
+                        w_ = ch['x1'] - ch['x0']; sp_ = 0.0 if xx_ == 0 else 0.25 * 11.0
+                        if xx_ and xx_ + sp_ + w_ > width + 0.5:
+                            rows_.append([]); xx_, sp_ = 0.0, 0.0
+                        rows_[-1].append((ch, xx_ + sp_, bp_)); xx_ += sp_ + w_
+                yb_ = fb_
+                for r_i, rw in enumerate(rows_):
+                    ups = max(bp_ - min(i.y0 for i in ch['its']) for ch, _, bp_ in rw)
+                    dns = max(max(i.y1 for i in ch['its']) - bp_ for ch, _, bp_ in rw)
+                    if r_i:
+                        yb_ += prev_dn + LGAP + ups
+                    prev_dn = dns
+                    for ch, xo, bp_ in rw:
+                        dx = n0 + lead + xo - ch['x0']
+                        dy = extra + push(first['y0']) + yb_ - bp_
+                        for it in ch['its']:
+                            out.append((it, dx, dy, 1.0, ch['x0']))
+                g_ = (yb_ + prev_dn) - ln['y1']
+                extra += g_
+                if growth is not None and abs(g_) > 0.01:
+                    growth.append((ln['y1'], g_))
+                if len(out) > n_:
+                    prev = (max(it.y1 + dy_ for it, dx_, dy_, k_, x_ in out[n_:]), ln['y1'])
+                continue
             for j, part in enumerate(ln['parts']):
                 for ch in _chunks(part['its']):
                     w_ = ch['x1'] - ch['x0']
@@ -521,7 +573,12 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
         F = W - QW - MW
         A, P5 = FIVE_SHARES[0] * F, FIVE_SHARES[1] * F
         ours = [(0.0, QW), (QW, QW + A), (QW + A, QW + A + MW), (QW + A + MW, QW + A + MW + P5), (QW + A + MW + P5, W)]
+    CTX['subrules'] = []
     its = _items(u, edges[:4] if ncols == 5 else edges[:3])
+    vlong = [i for i in its if i.kind == 'lines' and i.x1 - i.x0 < 1.6 and i.y1 - i.y0 >= 8]
+    its = [i for i in its if not (i.kind == 'lines' and i.x1 - i.x0 < 1.6 and i.y1 - i.y0 < 8 and i.y0 < 1.5 and any(
+        abs(i.x0 - l.x0) < 1.2 and abs(l.y0 - i.y1) < 1.5 for l in vlong))]
+    # (a column rule split at the row's top edge: its stub stayed above the table it belongs to, 2014 MJ 31 q5, round 32)
     if not any(i.kind != 'lines' and not (i.kind == 't' and re.fullmatch(r'[.\s…_|\-]+', i.ref['t'])) for i in its):
         return 'empty'                                   # only rules left (the end of a table on a page): no row
     by = [[] for _ in cells_src]
@@ -558,14 +615,19 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
             if re.match(r'(MODELLING|INVESTIGATION|Modelling|Investigation)\b', txt_):
                 nt_ = []                # the NEXT section's title row (pattern 112) is never a note of this row
             if any(it.kind == 't' for it in nt_):
+                rules_ = [it for c in range(len(by)) for it in by[c] if it.kind == 'lines' and it.y1 - it.y0 < 1.6
+                          and it.x1 - it.x0 > 0.25 * u['w'] and (best_[0] - 6 <= it.y0 <= best_[0] + 2 or best_[1] - 2 <= it.y0 <= best_[1] + 6)]
+                nt_ = nt_ + rules_      # (the printed rules above / under the band: ours replace them - no double edge, round 32)
                 for c in range(len(by)):
                     by[c] = [it for it in by[c] if it not in nt_]
+                nt_ = [it for it in nt_ if it not in rules_]
                 qfree_ = not cov_(edges[0], (best_[0] + best_[1]) / 2)
                 by.append(nt_)
                 cells_src.append((0.0 if qfree_ else edges[0], u['w']))
                 ours.append((0.0 if qfree_ else QW, W))
                 CS = CS + (len(by) - 1,)
-                note = (len(by) - 1, qfree_)
+                note = (len(by) - 1, qfree_, best_[0] < 8, best_[1] > u['h'] - 8)   # (band at the row's top / bottom:
+                #   the row's own border is the band's edge - ours would double it, round 32 2024 MJ 41 q2)
     if merged:
         for c in range(2, len(by)):
             by[1] += by[c]; by[c] = []
@@ -573,6 +635,8 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
         ours[1] = (QW, W)
     v = {'src': u['src'], 'w': W, 'h': 0.0, 'text': [], 'lines': [], 'figs': [], 'glyphs': []}
     bottoms = []
+    placed_all = []                                      # (source y0, our y0, source y1, our y1) of every placed text piece
+    CTX['pic_spans'] = []                                # source y ranges of pictures / rigid blocks in this row
     push0 = _pushes(list(by), 11.0 if base else max([i.ref.get('s', 11) for i in its if i.kind == 't'] or [11]))
     # rows grow in step: a line that wraps in one column moves the lines below it in EVERY column (round 28, 2025 MJ 61 q4:
     # the '1' mark stayed beside the wrong line). Pass 1 measures each column's growth by printed height.
@@ -793,11 +857,35 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                                align='right' if c == 2 else 'left', push=push_for(c))
         for it, dx, dy, k, x0 in placed:
             _emit(v, it, dx, dy, k, x0)
+            placed_all.append((it.y0, it.y0 + dy, it.y1, it.y1 + dy))
         if note and c == note[0] and placed:
-            note = note + (min(it.y0 + dy for it, dx, dy, k, x0 in placed) - 4, max(it.y1 + dy for it, dx, dy, k, x0 in placed) + 4)
+            note = note[:2] + (min(it.y0 + dy for it, dx, dy, k, x0 in placed) - 4, max(it.y1 + dy for it, dx, dy, k, x0 in placed) + 4) + note[2:4]
         if bot is not None:
             bottoms.append(bot)
     # Q column: our full label on the first printed line (continued rows show none)
+    # sub-row rules (maths, Dhruv round 32: 'line between A1 and M1', 'lines align with their answer'): each printed
+    # rule inside the row is drawn again over the columns it crosses, between the lines placed above and under it
+    subr = CTX.pop('subrules', []); pic_spans = CTX.pop('pic_spans', [])
+    for sx0, sy, sx1 in sorted(set(subr), key=lambda t: t[1]):
+        if any(a_ - 1 < sy < b_ + 1 for a_, b_ in pic_spans) or not placed_all:
+            continue
+        under = [p_ for p_ in placed_all if p_[0] > sy]
+        above = [p_ for p_ in placed_all if p_[2] < sy]
+        if not under or not above:
+            continue
+        f_ = min(under, key=lambda p_: p_[0])
+        y_ = max(f_[1] - (f_[0] - sy), max(p_[3] for p_ in above) + 1.5)
+        y_ = min(y_, f_[1] - 1.0)
+        if any(p_[1] < y_ for p_ in under) or any(p_[3] > y_ for p_ in above) or any(
+                a_ - 1 < sy < b_ + 1 for a_, b_ in pic_spans):
+            continue                # the columns are not aligned at this rule: no rule rather than one through content
+        def col_x(x):                                  # a printed x on a column edge -> our edge
+            cand = [(abs(x - e), o) for e, o in zip([edges[0]] + list(edges[1:]) + [u['w']], [ours[1][0]] + [ours[c_][0] for c_ in range(2, len(ours))] + [W])]
+            return min(cand)[1] if min(cand)[0] < 6.5 else None
+        xa, xb = col_x(sx0), col_x(sx1)
+        if xa is None or xb is None or xb - xa < 10:
+            continue
+        v['lines'].append({'d': f'M{xa:.2f} {y_ - 0.3:.2f}H{xb:.2f}V{y_ + 0.3:.2f}H{xa:.2f}Z', 'fill': '#000000'})
     lab_items = sorted(by[0], key=lambda i: i.y0)
     s0 = next((i.ref.get('s', 11) for i in lab_items if i.kind == 't'), 11.0)
     if first_unit and label:
@@ -818,13 +906,15 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
     else:
         xs = [QW, QW + A]
     segs_ = [(0.0, v['h'])]
-    if note and len(note) == 4:                     # column rules stop at the note band; a rule above and under it
+    if note and len(note) == 6:                     # column rules stop at the note band; a rule above and under it
         segs_ = [(0.0, note[2]), (note[3], v['h'])]
-        for yy in (note[2], note[3]):
+        for yy, edge_ in ((note[2], note[4]), (note[3], note[5])):
+            if edge_:
+                continue
             v['lines'].append({'d': f'M{0 if note[1] else QW:.2f} {yy - 0.3:.2f}L{W:.2f} {yy - 0.3:.2f}L{W:.2f} {yy + 0.3:.2f}'
                                     f'L{0 if note[1] else QW:.2f} {yy + 0.3:.2f}Z', 'fill': '#000000'})
     for x in ([] if is_note else [QW] if merged else xs):
-        for ya_, yb_ in (segs_ if not (note and len(note) == 4 and x == QW and not note[1]) else [(0.0, v['h'])]):
+        for ya_, yb_ in (segs_ if not (note and len(note) == 6 and x == QW and not note[1]) else [(0.0, v['h'])]):
             v['lines'].append({'d': f'M{x - 0.3:.2f} {ya_:.2f}L{x + 0.3:.2f} {ya_:.2f}L{x + 0.3:.2f} {yb_:.2f}L{x - 0.3:.2f} {yb_:.2f}Z', 'fill': '#000000'})
     if fam:                                          # one font for question and mark scheme (Dhruv, round 27)
         for t in v['text']:
@@ -839,10 +929,18 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
 CTX = {}
 
 
+def _inline_pic(i, items):
+    """A symbol pasted as a tiny picture inside a text line ('≠' in 2025 FM 62 q5(b)(ii)): one more piece of that line,
+    never a reason to make the cell a picture (that drew the line twice, round 32)."""
+    if i.y1 - i.y0 > 24 or i.x1 - i.x0 > 90:
+        return False
+    return sum(1 for t in items if t.kind == 't' and t.y0 < i.y1 - 2 and t.y1 > i.y0 + 2 and 0 <= min(abs(t.x0 - i.x1), abs(i.x0 - t.x1)) < 20) >= 2
+
+
 def _picture_cell(items):
     """A cell whose content is a drawing (Venn diagram, sketch, shaded region, picture) rather than text + fraction bars,
     or whose text layer is broken (words drawn over each other, 2014 MJ 62 p4)."""
-    if any(i.kind in ('images', 'figs') for i in items):
+    if any(i.kind == 'figs' or (i.kind == 'images' and not _inline_pic(i, items)) for i in items):
         return True
     ts = [i for i in items if i.kind == 't' and i.x1 - i.x0 > 2]
     clash = sum(1 for k, a in enumerate(ts) for b in ts[k + 1:]
@@ -1055,6 +1153,7 @@ def _cell_picture(v, u, items, src, ours, region=None, shift=0.0):
                 y0 = b_[3] + 0.4
     b = u['src']['box']
     CTX['last_pic'] = (y0, y1)
+    CTX.setdefault('pic_spans', []).append((y0, y1))
     r = fitz.Rect(b[0] + x0 / K, b[1] + y0 / K, b[0] + x1 / K, b[1] + y1 / K)
     doc = CTX.setdefault('doc', fitz.open(CTX['pdf']))
     # grow sideways to whole ink inside the cell: words that are no text items (a rotated 'All' left of 'pos', 2021 FM 52
@@ -1201,6 +1300,80 @@ def _has_table(items):
     return sum(1 for w in rows.values() if w > 0.6 * (x1 - x0)) >= 2
 
 
+def _curvy(i):
+    d = i.ref.get('d', '')
+    return 'C' in d or _slanted(d) or bool(i.ref.get('dash'))
+
+
+def _clean_table(items):
+    """A table is redrawn 'similar but proper' (Dhruv, round 32): its rule pieces snap to one grid of column x's and
+    row y's, pieces of one rule join into one line (no double edge, no step at a shaded cell), shading fills snap to the
+    grid cells, and a missing outer edge is added when the column rules show it (2025 MJ 61 q2, 2014 MJ 31 q5)."""
+    thin_h = [i for i in items if i.kind == 'lines' and i.y1 - i.y0 < 1.6 and i.x1 - i.x0 >= 3 and not _curvy(i)]
+    thin_v = [i for i in items if i.kind == 'lines' and i.x1 - i.x0 < 1.6 and i.y1 - i.y0 >= 3 and not _curvy(i)]
+    if len(thin_h) < 2 or len(thin_v) < 2:
+        return items
+    def clusters(vals, tol=1.6):
+        out = []
+        for v_ in sorted(vals):
+            if out and v_ - out[-1][-1] <= tol:
+                out[-1].append(v_)
+            else:
+                out.append([v_])
+        return [sum(c) / len(c) for c in out]
+    xs = clusters([(i.x0 + i.x1) / 2 for i in thin_v])
+    ys = clusters([(i.y0 + i.y1) / 2 for i in thin_h])
+    if len(xs) < 2 or len(ys) < 2:
+        return items
+    snap = lambda v_, grid, tol=2.6: min(grid, key=lambda g: abs(g - v_)) if min(abs(g - v_) for g in grid) <= tol else v_
+    def runs(segs):
+        segs = sorted(segs); out = []
+        for a_, b_ in segs:
+            if out and a_ <= out[-1][1] + 0.8:
+                out[-1][1] = max(out[-1][1], b_)
+            else:
+                out.append([a_, b_])
+        return out
+    H = {}
+    for i in thin_h:
+        y_ = snap((i.y0 + i.y1) / 2, ys); H.setdefault(round(y_, 2), []).append((snap(i.x0, xs), snap(i.x1, xs)))
+    V = {}
+    for i in thin_v:
+        x_ = snap((i.x0 + i.x1) / 2, xs); V.setdefault(round(x_, 2), []).append((snap(i.y0, ys), snap(i.y1, ys)))
+    x0, x1, y0, y1 = xs[0], xs[-1], ys[0], ys[-1]
+    ends = [(min(a_ for a_, b_ in V.get(round(xx, 2), [(1e9, 0)])), max(b_ for a_, b_ in V.get(round(xx, 2), [(0, -1e9)]))) for xx in (x0, x1)]
+    if abs(ends[0][0] - ends[1][0]) < 1.5 and ends[0][0] < y0 - 3:       # both outer column rules start above the first
+        y0 = (ends[0][0] + ends[1][0]) / 2; ys = [y0] + ys                # row rule: the table's top edge was not printed
+    if abs(ends[0][1] - ends[1][1]) < 1.5 and ends[0][1] > y1 + 3:       # in this unit (2014 MJ 31 q5) - draw it
+        y1 = (ends[0][1] + ends[1][1]) / 2; ys = ys + [y1]
+    for yy in (y0, y1):                                   # a missing outer edge (top / bottom) where both outer columns reach it
+        if not any(a_ <= x0 + 1 and b_ >= x1 - 1 for a_, b_ in runs(H.get(round(yy, 2), []))):
+            if all(any(a_ <= yy + 1 and b_ >= yy - 1 for a_, b_ in V.get(round(xx, 2), [])) for xx in (x0, x1)):
+                H.setdefault(round(yy, 2), []).append((x0, x1))
+    nearg = lambda i: any(abs((i.x0 + i.x1) / 2 - g) < 1.6 for g in xs) or any(abs((i.y0 + i.y1) / 2 - g) < 1.6 for g in ys)
+    keep = [i for i in items if not (i in thin_h or i in thin_v) and not (
+        i.kind == 'lines' and i.x1 - i.x0 < 3.5 and i.y1 - i.y0 < 3.5 and not i.ref.get('stroke') and nearg(i))]
+    # (tiny rule stubs at a grid line - corner pieces, a step where shading meets a rule - go: 2025 MJ 61 q2)
+    fills = []
+    for i in keep:
+        if i.kind == 'lines' and i.ref.get('fill') and not i.ref.get('stroke') and i.x1 - i.x0 >= 3 and i.y1 - i.y0 >= 3:
+            a_, b_, c_, d_ = snap(i.x0, xs), snap(i.y0, ys), snap(i.x1, xs), snap(i.y1, ys)
+            fills.append(_Item('lines', dict(i.ref, d=f'M{a_:.2f} {b_:.2f}H{c_:.2f}V{d_:.2f}H{a_:.2f}Z'), a_, b_, c_, d_))
+        else:
+            fills.append(i)
+    col = '#000000'
+    rules = []
+    for yy, segs in H.items():
+        for a_, b_ in runs(segs):
+            rules.append(_Item('lines', {'d': f'M{a_ - 0.3:.2f} {yy - 0.3:.2f}H{b_ + 0.3:.2f}V{yy + 0.3:.2f}H{a_ - 0.3:.2f}Z', 'fill': col},
+                               a_ - 0.3, yy - 0.3, b_ + 0.3, yy + 0.3))
+    for xx, segs in V.items():
+        for a_, b_ in runs(segs):
+            rules.append(_Item('lines', {'d': f'M{xx - 0.3:.2f} {a_ - 0.3:.2f}H{xx + 0.3:.2f}V{b_ + 0.3:.2f}H{xx - 0.3:.2f}Z', 'fill': col},
+                               xx - 0.3, a_ - 0.3, xx + 0.3, b_ + 0.3))
+    return fills + rules                                  # (shading first, rules over it)
+
+
 def _emit_block(v, items, ox, oy, nx, ny, k, table=True):
     """Place items as one rigid block: (ox, oy) -> (nx, ny), scaled k both ways (a table is never wrapped)."""
     from ms_layout import _map_path
@@ -1225,7 +1398,9 @@ def _emit_block(v, items, ox, oy, nx, ny, k, table=True):
                 y0n = top[0].y0
                 i = _Item('lines', dict(i.ref, d=f'M{i.x0:.2f} {y0n:.2f}H{i.x1:.2f}V{i.y1:.2f}H{i.x0:.2f}Z'), i.x0, y0n, i.x1, i.y1)
         out_.append(i)
-    items = out_
+    if items:
+        CTX.setdefault('pic_spans', []).append((min(i.y0 for i in items), max(i.y1 for i in items)))
+    items = _clean_table(out_) if table else out_
     fx = lambda x: nx + (x - ox) * k
     fy = lambda y: ny + (y - oy) * k
     for it in items:

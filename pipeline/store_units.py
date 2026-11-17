@@ -152,9 +152,61 @@ def glyph_styles(doc, pages, feats_out=None):
             b = w > base_w * 1.18
             i = sl - base_s > 0.12
             style[key] = 'bi' if (b and i) else 'b' if b else 'i' if i else 'r'
+    # stroke weight read from the font program itself (exact): the page-render weight mixed in neighbouring ink and
+    # missed a bold '(c)' / made regular words bold (M1 round 32, 2025 ON 32 q15). Overrides bold where available.
+    ow = _outline_weights(doc, pages, {k for k in feats}) if '/0607/' in (doc.name or '').replace('\\', '/') else {}   # maths only
+    if ow:
+        for (font, ch), lst in bychar.items():
+            ks = [t for t in lst if t[1] in ow]
+            if len(ks) < 2:
+                continue                                   # one shape only: keep the render decision
+            base = ow[max(ks, key=lambda t: t[0])[1]]      # the most used shape of the character = regular
+            for n_, key, w_, sl_ in ks:
+                r_ = ow[key] / max(base, 1e-6)
+                st = style.get(key, 'r'); i_ = 'i' in st; b_ = 'b' in st
+                if r_ > 1.3:
+                    b_ = True                              # clearly heavier outline: bold
+                elif r_ < 1.1:
+                    b_ = False                             # same weight as the regular shape: not bold
+                style[key] = 'bi' if (b_ and i_) else 'b' if b_ else 'i' if i_ else 'r'
     if feats_out is not None:                     # (maths reads the measures again, store_text.maths_styles)
         feats_out.update(feats); feats_out['__count'] = count
     return style
+
+
+def _outline_weights(doc, pages, keys):
+    """(font name, gid) -> stroke width (2 * area / outline length, font units) from the embedded CFF program."""
+    try:
+        import io
+        from fontTools.cffLib import CFFFontSet
+        from fontTools.pens.areaPen import AreaPen
+        from fontTools.pens.perimeterPen import PerimeterPen
+    except Exception:
+        return {}
+    out, seen = {}, set()
+    names = {k[0] for k in keys}
+    for pno in pages:
+        for f in doc[pno].get_fonts():
+            nm = f[3].split('+')[-1]
+            if nm not in names or (nm, f[0]) in seen:
+                continue
+            seen.add((nm, f[0]))
+            try:
+                buf = doc.extract_font(f[0])[3]
+                cff = CFFFontSet(); cff.decompile(io.BytesIO(buf), None)
+                top = cff[cff.fontNames[0]]; cs = top.CharStrings; cset = top.charset
+            except Exception:
+                continue
+            for (fn, gid) in keys:
+                if fn != nm or (fn, gid) in out or gid >= len(cset):
+                    continue
+                try:
+                    g = cs[cset[gid]]; a_ = AreaPen(cs); g.draw(a_); p_ = PerimeterPen(cs); g.draw(p_)
+                    if p_.value > 0:
+                        out[(fn, gid)] = 2 * abs(a_.value) / p_.value
+                except Exception:
+                    pass
+    return out
 
 
 def char_styles(doc, pno, gstyle):

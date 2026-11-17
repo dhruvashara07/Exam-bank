@@ -219,6 +219,94 @@
    "fix": "a line with a long word outside the picture goes whole to our text",
    "found_by": "claude",
    "at": "2026-11-17T10:46:39+00:00"
+  },
+  {
+   "pattern": "181",
+   "kind": "new",
+   "what": "pictures in a unit were rendered WITH the page text: words under a clipped image box drawn twice = looked bold (2025 ON 61 q4, 51 q4)",
+   "fix": "store: unit pictures rendered from a text-free copy of the page (maths)",
+   "found_by": "dhruv",
+   "at": "2026-11-17T12:41:38+00:00"
+  },
+  {
+   "pattern": "182",
+   "kind": "new",
+   "what": "merged-font bold read from the page render: bold '(c)' missed, regular glyphs bold (2025 ON 32 q15)",
+   "fix": "store_units: stroke weight from the font outline; most-used shape = regular (maths)",
+   "found_by": "dhruv",
+   "at": "2026-11-17T12:41:38+00:00"
+  },
+  {
+   "pattern": "183",
+   "kind": "new",
+   "what": "'Question 11 is printed on the next page.' kept in the question (2024 ON 31 q10 and 37 more, M0 too)",
+   "fix": "layout.page_bounds + checks NOTICE",
+   "found_by": "dhruv",
+   "at": "2026-11-17T12:41:38+00:00"
+  },
+  {
+   "pattern": "184",
+   "kind": "new",
+   "what": "MS label slip '15(d)' for the paper's 15(c) (2025 ON 32)",
+   "fix": "run.py: one orphan row -> the one free leaf part at the same level (maths)",
+   "found_by": "dhruv",
+   "at": "2026-11-17T12:41:38+00:00"
+  },
+  {
+   "pattern": "185",
+   "kind": "repeat",
+   "what": "double rule at a note band at the row's top (2024 MJ 41 q2) - my own pattern-171 fix",
+   "fix": "band edge at the row border is not drawn again; printed band rules dropped",
+   "found_by": "dhruv",
+   "at": "2026-11-17T12:41:38+00:00"
+  },
+  {
+   "pattern": "186",
+   "kind": "new",
+   "what": "tables in MS cells copied with their print faults: step at a shaded cell, missing top edge, stubs (2025 MJ 61 q2, 2014 MJ 31 q5)",
+   "fix": "_clean_table: snap to one grid, join rule pieces, add the outer edge, drop stubs",
+   "found_by": "dhruv",
+   "at": "2026-11-17T12:41:38+00:00"
+  },
+  {
+   "pattern": "187",
+   "kind": "new",
+   "what": "sub-row rules inside a row were dropped: answer lines not aligned with their marks (2025 ON 23 q15, 2026 MJ 62 q6)",
+   "fix": "layout_row redraws printed sub-row rules between the placed lines when all columns align",
+   "found_by": "dhruv",
+   "at": "2026-11-17T12:41:38+00:00"
+  },
+  {
+   "pattern": "188",
+   "kind": "new",
+   "what": "steps with fractions never re-flowed and wrapped rows took the fraction's height ('7.5 oe' alone, 'of x' far below: 2014 MJ 41 q11, 2024 ON 32 q1)",
+   "fix": "re-flow allows fraction bars/roots; rows aligned on baselines, each as tall as its pieces",
+   "found_by": "dhruv",
+   "at": "2026-11-17T12:41:38+00:00"
+  },
+  {
+   "pattern": "189",
+   "kind": "new",
+   "what": "Calibri F084 (opacity 0, glyph 0) mapped to ≤: a second invisible ≤ drawn (2026 MJ 21 q10)",
+   "fix": "Calibri PUA fallbacks dropped",
+   "found_by": "dhruv",
+   "at": "2026-11-17T12:41:38+00:00"
+  },
+  {
+   "pattern": "190",
+   "kind": "repeat",
+   "what": "small pasted symbol in a text line made the cell a picture: line drawn twice (2025 FM 62 q5) - left OPEN in round 32",
+   "fix": "_inline_pic: <=24x90 pt picture inside a text line is a piece of the line",
+   "found_by": "dhruv",
+   "at": "2026-11-17T12:41:38+00:00"
+  },
+  {
+   "pattern": "191",
+   "kind": "new",
+   "what": "a labelled rectangle beside a diagram with NOT TO SCALE left out of the crop, redrawn as question lines (2025 ON 23 q15)",
+   "fix": "extract.diagrams: short-label boxes / empty boxes on a NOT TO SCALE band join the diagram",
+   "found_by": "dhruv",
+   "at": "2026-11-17T12:41:38+00:00"
   }
  ],
  "tokens": [],
@@ -253,6 +341,70 @@
   {
    "at": "2026-11-17T12:18:55+00:00",
    "task": "docs updated; triage round 32 items"
+  },
+  {
+   "at": "2026-11-17T12:23:54+00:00",
+   "task": "triage: question side classes coded (notice, baked text, bold); now MS items"
+  },
+  {
+   "at": "2026-11-17T12:29:33+00:00",
+   "task": "MS classes coded (band edge, table clean-up, stubs, sub-row rules); full diff run next"
+  },
+  {
+   "at": "2026-11-17T12:35:37+00:00",
+   "task": "coded: label slip, reflow of fraction steps, Calibri fallback, labelled box beside diagram; next: paper-6 task records"
+  },
+  {
+   "at": "2026-11-17T12:39:03+00:00",
+   "task": "local test run.py on 4 target papers before one GitHub rebuild"
+  },
+  {
+   "at": "2026-11-17T12:41:24+00:00",
+   "task": "golden check before pushing all fixes"
+  },
+  {
+   "at": "2026-11-17T12:41:38+00:00",
+   "task": "error M1 --by"
+  },
+  {
+   "at": "2026-11-17T12:41:38+00:00",
+   "task": "error M1 --by"
+  },
+  {
+   "at": "2026-11-17T12:41:38+00:00",
+   "task": "error M1 --by"
+  },
+  {
+   "at": "2026-11-17T12:41:38+00:00",
+   "task": "error M1 --by"
+  },
+  {
+   "at": "2026-11-17T12:41:38+00:00",
+   "task": "error M1 --by"
+  },
+  {
+   "at": "2026-11-17T12:41:38+00:00",
+   "task": "error M1 --by"
+  },
+  {
+   "at": "2026-11-17T12:41:38+00:00",
+   "task": "error M1 --by"
+  },
+  {
+   "at": "2026-11-17T12:41:38+00:00",
+   "task": "error M1 --by"
+  },
+  {
+   "at": "2026-11-17T12:41:38+00:00",
+   "task": "error M1 --by"
+  },
+  {
+   "at": "2026-11-17T12:41:38+00:00",
+   "task": "error M1 --by"
+  },
+  {
+   "at": "2026-11-17T12:41:38+00:00",
+   "task": "error M1 --by"
   }
  ]
 }

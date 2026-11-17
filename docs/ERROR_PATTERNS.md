@@ -459,3 +459,25 @@ the old MS paths (2014 MJ 22 q2, 43 q9, 2019 ON 11/12 q8, 23 q3, 62 q5).
     63 q1 'Correct sketch passing through', 2025 FM 42 q9) -> the whole line goes to our text.
     Open: a small pasted symbol ('≠' image) inside a text line still makes the cell a picture and doubles the line
     (2025 FM 62 q5(b)(ii)) - sent to Dhruv's round as a recheck.
+
+### Round 32 (M1: 12 of 30 ok; 14 of the 18 wrong should have been caught by me - START_HERE 2c)
+181. Unit pictures were rendered WITH the page text: words under a clipped image's box were drawn twice and looked
+    bold (2025 ON 61 q4 first line, 51 q4) -> pictures are rendered from a text-free copy of the page (maths).
+182. Merged-font (AllAndNone) bold read from the page render mixed neighbouring ink: bold '(c)' missed, regular glyphs
+    bold -> stroke weight from the font program's outline; a character's most used shape is regular (maths).
+183. 'Question 11 is printed on the next page.' stayed in the question (38 questions, M0 too) -> page_bounds + checks.
+184. Mark-scheme label slip '15(d)' for the paper's 15(c) -> one orphan row goes to the one free leaf at its level.
+185. (repeat of 171, my own fix) a note band at the row's top got our rule over the row border: double edge.
+186. Tables in MS cells: Dhruv 'make similar but proper' - rule pieces snap to one grid and join (no step at a shaded
+    cell), a missing outer edge is drawn, stubs above the table dropped (2025 MJ 61 q2, 2014 MJ 31 q5). MS_TABLE_RULES 32.
+187. Sub-row rules inside a row were dropped: answer lines no longer lined up with their marks (2025 ON 23 q15 'line
+    between A1 and M1', 2026 MJ 62 q6) -> redrawn between the placed lines when every column is aligned there.
+188. Steps with fractions never re-flowed; wrapped rows took the fraction's height ('7.5 oe' alone, 'of x' far below)
+    -> re-flow allows bars / roots; rows aligned on baselines, each row as tall as its own pieces.
+189. Calibri F084 (invisible, opacity 0, glyph 0) was mapped to '≤' (pattern 161): a second ≤ drawn -> dropped.
+190. (repeat, left OPEN in round 32 - never again) a small pasted symbol in a text line made the cell a picture and
+    the line was drawn twice (2025 FM 62 q5) -> a picture <= 24 x 90 pt inside a text line is a piece of the line.
+191. A labelled rectangle beside a diagram (same band as NOT TO SCALE) was left out of the crop and redrawn as lines
+    (2025 ON 23 q15) -> short-label / empty boxes on a NOT TO SCALE band join the diagram.
+Open for Dhruv (decided, still to build): paper-6 tasks as one record (MATHS_PLAN 11); MS screenshot graphs drawn from
+the question's function (2024 FM 42 q10, MJ 42 q3, MJ 43 q10, MJ 61 q13).

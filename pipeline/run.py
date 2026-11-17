@@ -229,6 +229,21 @@ def process(qp_path):
             elif not q['answer'] and msdoc:
                 q['review']['reasons'].append('answer key not found in mark scheme')
         else:
+            if maths:                  # a mark-scheme label slip ('15(d)' for the paper's 15(c), 2025 ON 32, round 32): a
+                def leaf_paths(n, pth):    # row whose part does not exist goes to the one leaf part no row names (same level)
+                    ks = n.get('parts', [])
+                    return [pth] if not ks else [x for k_ in ks for x in leaf_paths(k_, pth + (k_["label"],))]
+                lv = leaf_paths(q, (q['number'],))
+                mine = [r for r in ms_rows if r['path'][0] == q['number']]
+                named = {tuple(r['path']) for r in mine}
+                orphan = [r for r in mine if tuple(r['path']) not in lv and not any(tuple(r['path'])[:len(x)] == x for x in lv)
+                          and not any(x[:len(r['path'])] == tuple(r['path']) for x in lv)]
+                free = [x for x in lv if x not in named and not any(tuple(r['path'])[:len(x)] == x for r in mine)]
+                if len(orphan) == 1 and len(free) == 1 and len(orphan[0]['path']) == len(free[0]) \
+                        and tuple(orphan[0]['path'])[:-1] == free[0][:-1]:
+                    r_ = orphan[0]
+                    r_['path'] = free[0]
+                    r_['label'] = str(free[0][0]) + ''.join(f'({x})' for x in free[0][1:])
             for row in [r for r in ms_rows if r['path'][0] == q['number']]:
                 node, exact = find_node(q, row['path'])
                 segs = []
