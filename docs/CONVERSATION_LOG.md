@@ -492,3 +492,14 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   (169, 173, 177, 179, 180 are all 'what belongs to the picture vs our text'); the checks missed them because
   ms_words counts words, not duplicates drawn twice in a picture and as text. Next: a check for text drawn both as our
   text and inside a cell picture; keep ms_rebuild.py as the first tool after any ms_maths change.
+
+## 2026-11-17 (evening) - round 32 fixed, round 33 published
+- Built: MS screenshot graphs drawn from the question's function (ms_graphs.SPECS, 4 graphs); paper 5/6 tasks as ONE
+  record (tasks.py: intro stem + every printed question with printed numbers + one MS, 75 tasks; per-question records
+  stay for the checks); task heading without 'Section B'; MathType minus; re-flow never crosses a sub-row rule (25 q);
+  rows grow in step at rules; text under a table moves with it; maths notices with part labels.
+- Analysis: slowest = my own blast-radius loops (alignment tried 3 ways: 'everywhere' moved 79 questions and broke good
+  rows, so it now runs only where a rule would be dropped). Lesson kept in PLAYBOOK: measure the blast radius with
+  ms_rebuild (no write) before writing, view the biggest changes, never write wide changes blind.
+- Local store.build differs from the Action (font 'symbol' vs 'serif'): question-side fixes go through the Action.
+- Open: MongoDB shape for tasks; scope of drawing the other ~40 screenshot sketches (asked in round 33 message).

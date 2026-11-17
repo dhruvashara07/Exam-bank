@@ -5,7 +5,7 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 | Batch | Sessions | Papers | Build | GitHub | Claude 1 | Claude 2 | Fix | Ours | Round items | New errors | Repeats | Tokens |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 257.5 | 51.4 | 2766.0 | 3084.4 | 40 | 58 | 5 | n/a |
-| M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 | 11.7 | 10.8 | 191.6 | 0.0 | 0.0 | 203.3 | 30 | 20 | 0 | n/a |
+| M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 | 11.7 | 71.1 | 191.6 | 0.0 | 0.0 | 203.3 | 30 | 34 | 2 | n/a |
 
 ## Errors per batch (new = first time, repeat = a pattern seen before: the doc or the fix failed)
 
@@ -95,6 +95,22 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - [new] pattern 178: every row of a table in a cell got the fraction margin: big gap under tables (2024 ON 62 q1(b), also M0 2025 MJ 61 q1/q2) → _pushes: table rows (cell rules) are not tall lines (found by claude)
 - [new] pattern 179: text, root signs and a pasted '≤' under a sub-row rule inside a picture cell were left out of the crop and lost (2024 ON 61 q2(d) formula, 2025 FM 62 q12 '≤'); a power on the heading line was cut ('k²') → items the crop leaves out are laid out as text/pictures; raised small text joins the heading line (found by claude)
 - [new] pattern 180: a text line under a sketch went half into the picture (short words) and half to our text: drawn twice (2025 ON 63 q1, 2025 FM 42 q9) → a line with a long word outside the picture goes whole to our text (found by claude)
+- [new] pattern 181: pictures in a unit were rendered WITH the page text: words under a clipped image box drawn twice = looked bold (2025 ON 61 q4, 51 q4) → store: unit pictures rendered from a text-free copy of the page (maths) (found by dhruv)
+- [new] pattern 182: merged-font bold read from the page render: bold '(c)' missed, regular glyphs bold (2025 ON 32 q15) → store_units: stroke weight from the font outline; most-used shape = regular (maths) (found by dhruv)
+- [new] pattern 183: 'Question 11 is printed on the next page.' kept in the question (2024 ON 31 q10 and 37 more, M0 too) → layout.page_bounds + checks NOTICE (found by dhruv)
+- [new] pattern 184: MS label slip '15(d)' for the paper's 15(c) (2025 ON 32) → run.py: one orphan row -> the one free leaf part at the same level (maths) (found by dhruv)
+- [repeat] pattern 185: double rule at a note band at the row's top (2024 MJ 41 q2) - my own pattern-171 fix → band edge at the row border is not drawn again; printed band rules dropped (found by dhruv)
+- [new] pattern 186: tables in MS cells copied with their print faults: step at a shaded cell, missing top edge, stubs (2025 MJ 61 q2, 2014 MJ 31 q5) → _clean_table: snap to one grid, join rule pieces, add the outer edge, drop stubs (found by dhruv)
+- [new] pattern 187: sub-row rules inside a row were dropped: answer lines not aligned with their marks (2025 ON 23 q15, 2026 MJ 62 q6) → layout_row redraws printed sub-row rules between the placed lines when all columns align (found by dhruv)
+- [new] pattern 188: steps with fractions never re-flowed and wrapped rows took the fraction's height ('7.5 oe' alone, 'of x' far below: 2014 MJ 41 q11, 2024 ON 32 q1) → re-flow allows fraction bars/roots; rows aligned on baselines, each as tall as its pieces (found by dhruv)
+- [new] pattern 189: Calibri F084 (opacity 0, glyph 0) mapped to ≤: a second invisible ≤ drawn (2026 MJ 21 q10) → Calibri PUA fallbacks dropped (found by dhruv)
+- [repeat] pattern 190: small pasted symbol in a text line made the cell a picture: line drawn twice (2025 FM 62 q5) - left OPEN in round 32 → _inline_pic: <=24x90 pt picture inside a text line is a piece of the line (found by dhruv)
+- [new] pattern 191: a labelled rectangle beside a diagram with NOT TO SCALE left out of the crop, redrawn as question lines (2025 ON 23 q15) → extract.diagrams: short-label boxes / empty boxes on a NOT TO SCALE band join the diagram (found by dhruv)
+- [new] pattern 192: MS screenshot graphs → ms_graphs.py draws from function (found by dhruv)
+- [new] pattern 193: MathType minus gap → MMTimesRoman - to minus (found by claude)
+- [new] pattern 198: M1 check round → see ERROR_PATTERNS 198 (found by claude)
+- [new] pattern 199: M1 check round → see ERROR_PATTERNS 199 (found by claude)
+- [new] pattern 200: M1 check round → see ERROR_PATTERNS 200 (found by claude)
 
 ## Repeats to act on
 
@@ -103,3 +119,5 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - M0: pattern 97 came back: repeat of a round-27 class: the round-27 fix covered the reported item, not the class
 - M0: pattern 99 came back: repeat of a round-27 class: the round-27 fix covered the reported item, not the class
 - M0: pattern 141 came back: heading over drawn graph drawn twice
+- M1: pattern 185 came back: double rule at a note band at the row's top (2024 MJ 41 q2) - my own pattern-171 fix
+- M1: pattern 190 came back: small pasted symbol in a text line made the cell a picture: line drawn twice (2025 FM 62 q5) - left OPEN in round 32

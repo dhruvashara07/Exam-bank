@@ -33,6 +33,10 @@
     "start": "2026-11-17T11:03:42+00:00",
     "end": "2026-11-17T12:17:47+00:00",
     "note": "round 32: 19 of 30 wrong"
+   },
+   {
+    "start": "2026-11-17T16:34:57+00:00",
+    "end": null
    }
   ],
   "fix": [
@@ -84,7 +88,7 @@
   "papers": 90,
   "questions": 1483,
   "flags": 13,
-  "round_items": 30
+  "round_items": 23
  },
  "errors": [
   {
@@ -520,6 +524,14 @@
   {
    "at": "2026-11-17T16:31:31+00:00",
    "task": "error M1 --pattern"
+  },
+  {
+   "at": "2026-11-17T16:34:57+00:00",
+   "task": "phase M1 review"
+  },
+  {
+   "at": "2026-11-17T16:35:15+00:00",
+   "task": "count M1 round_items=23"
   }
  ]
 }
