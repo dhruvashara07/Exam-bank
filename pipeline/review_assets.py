@@ -6,7 +6,7 @@ For each review item:  orig.jpg  (source page(s) with detected segments boxed)
                        figs.jpg  (each cropped figure, stacked)
 Usage: python3 pipeline/review_assets.py OUT_DIR [sample_per_paper_type]
 """
-import json, os, sys, random, io
+import json, os, re, sys, random, io
 import pymupdf as fitz
 from PIL import Image, ImageDraw
 
@@ -139,7 +139,15 @@ def render_items(out_dir, items, reasons, byid=None):
     flagged = reasons
     out = []
     for qid, group in items:
-        q = json.load(open(byid[qid]))
+        task = None
+        if re.match(r'^t[A-Z0-9]+$', qid.split('_')[-1]):   # maths paper 5/6: a whole task (tasks.py) - the original
+            import store                                      # is every member question's print, stacked
+            task, _ = store.load(qid)
+            mem = [json.load(open(byid[m])) for m in task['members'] if m in byid]
+            q = dict(mem[0], number=task['number'], type='task', marks=task['marks'],
+                     parts=[p_ for m in mem for p_ in m.get('parts', [])], figures=[f for m in mem for f in m['figures']])
+        else:
+            q = json.load(open(byid[qid]))
         qp_path = paths.raw_pdfs(qid)[0]
         d = os.path.join(out_dir, qid); os.makedirs(d, exist_ok=True)
         imgs = {}
@@ -153,7 +161,7 @@ def render_items(out_dir, items, reasons, byid=None):
         import store                   # what is checked is what students get: the stored question, redrawn
         sv = store.review_svgs(qid, os.path.join(ROOT, 'out', 'review_tmp'))
         save('q.jpg', svg_img(sv['q'], 192))
-        save('orig.jpg', original(q, qp_path))
+        save('orig.jpg', stack([original(m, qp_path) for m in mem]) if task else original(q, qp_path))
         if 'ms' in sv:
             save('ms.jpg', svg_img(sv['ms'], 192), width=1800)
         boxes = {os.path.basename(f.get('file', '')): (f.get('source') or {}).get('box') for f in sv.get('fig_recs', [])}

@@ -113,6 +113,9 @@ def new(rnd, pids, sample=3, title=None, intro=None, max_items=None, recheck=Non
     flags, then figure crops, then editable text) up to four fifths, then random spot checks spread over
     the papers. Flags that did not fit go into the next round (the paper waits for them)."""
     byid = {os.path.basename(f)[:-5]: f for f in paths.question_files()}
+    for qid in (recheck or {}):             # maths paper 5/6 task records (tasks.py) live in the store only
+        if re.match(r'^t[A-Z0-9]+$', qid.split('_')[-1]):
+            byid[qid] = os.path.join(paths.store_dir('_'.join(qid.split('_')[:3])), f"task_{qid.split('_')[-1][1:]}.json")
     rng = random.Random(rnd)
     reasons, prio, samples = {}, {}, []
     rank = {'flag': 0, 'figure': 1, 'text': 2}
