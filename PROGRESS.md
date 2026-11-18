@@ -3,7 +3,10 @@
 Read this first in every session. Update it before ending a session.
 
 ## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md
-- NEXT: Dhruv pushes chem / bio / add-math PDFs on store-* branches (GitHub Desktop, docs in PROGRESS 2026-11-17 night).
+- 2026-11-18: CHEM stored: 1599 of 1600 PDFs in Releases (only chemistry_0652_to_0620_mapping.pdf, not a Cambridge name,
+  stays on branch store-chem). inbox.py now keeps gt/ci/ir/in/eq/one-digit/combined files (302 had been skipped).
+  Branches store-chem and store-chem-rest: Dhruv deletes them (this session cannot delete branches).
+- NEXT: Dhruv pushes bio / add-math PDFs on store-* branches (GitHub Desktop, docs in PROGRESS 2026-11-17 night).
   Check raw/manifest.json counts (chem 1601, bio 1619, add math 598 PDFs), delete the store-* branches. Do NOT start the
   next maths batch until Dhruv says so. Then MATHS_PLAN 11 (GitHub two-pass checks) when he asks.
 - 2026-11-17 (night): round 33 (9 of 23 wrong) fixed - patterns 201-208; GitHub run 44134367484; M1 APPROVED (111 papers:
