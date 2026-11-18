@@ -57,7 +57,10 @@ jobs:
           mkdir -p /tmp/raw && cp -r raw/. /tmp/raw/
           sort -u /tmp/todo.txt -o /tmp/todo.txt
           echo "papers: $(tr '\n' ' ' < /tmp/todo.txt)"
-          if [ ! -s /tmp/todo.txt ]; then echo "::error::no question paper or mark scheme recognised in inbox/"; exit 1; fi
+          if [ ! -s /tmp/todo.txt ]; then
+            case "${GITHUB_REF_NAME}" in store*) echo "store-only branch: no paper to process (fine)";;
+              *) echo "::error::no question paper or mark scheme recognised in inbox/"; exit 1;; esac
+          fi
 
       - name: Process on main, check, record the batch
         run: |
