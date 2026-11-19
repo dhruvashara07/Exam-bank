@@ -1,0 +1,396 @@
+{
+ "id": "0607_2023MJ_52_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    265.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 42.5,
+    "height_pt": 208.7
+   }
+  }
+ ],
+ "text": "3\nRectangles of width 3\nLength 3\n+\n+\n+\n9 squares\n2 squares\n2 squares\n1 square\n+\n+\n+\nof side 1\nof side 2\nof side 2\nof side 3\nTotal = 14 squares",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    89.2,
+    336.5,
+    497.2,
+    588.6
+   ],
+   "id": "0607_2023MJ_52_q03a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    52.7,
+    306.9,
+    544.6,
+    564.9
+   ],
+   "id": "0607_2023MJ_52_q03bi_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)(i)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      268.2,
+      570.0,
+      658.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 286.4,
+      "height_pt": 389.8
+     }
+    }
+   ],
+   "text": "Draw lines on these rectangles and write the number of squares under each one\nto find the total number of squares in a rectangle of width 3 and length 4.\nYou may not need to use all the rectangles.\nLength 4\n................................................. [4]",
+   "marks": 4,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "Diagrams that show a total of\n\n12 : (1 × 1) squares\n\n6 : (2 × 2) squares\n\n2 : (3 × 3) squares\n20",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        518.0,
+        549.0,
+        607.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Draw lines on these rectangles and write the number of squares under each one to find the total number of squares in a rectangle of width 3 and length 4. You may not need to use all the rectangles.",
+     "text": "Draw lines on these rectangles and write the number of squares under each one to find the total number of squares in a rectangle of width 3 and length 4. You may not need to use all the rectangles."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2023MJ_52_q03a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        56.8,
+        570.0,
+        599.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 309.7,
+        "height_pt": 542.2
+       }
+      }
+     ],
+     "text": "Complete the table.\nYou may use the grid to help you.\nRectangles of width 3\nLength of rectangle\nTotal number of squares\n3\n14\n4\n5\n26\n6\n32\n7\n[2]",
+     "marks": 2,
+     "path": "3(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(i)",
+       "text": "38\n3 common differences of 6 seen\nor 21 [+] 12 [+] 5",
+       "codes": [
+        "1",
+        "C1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.380001068115234,
+          607.3,
+          549.0,
+          668.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the table.",
+       "text": "Complete the table."
+      },
+      {
+       "type": "text",
+       "html": "You may use the grid to help you.",
+       "text": "You may use the grid to help you."
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "Rectangles of width 3",
+         ""
+        ],
+        [
+         "Length of rectangle",
+         "Total number of squares"
+        ],
+        [
+         "3",
+         "14"
+        ],
+        [
+         "4",
+         ""
+        ],
+        [
+         "5",
+         "26"
+        ],
+        [
+         "6",
+         "32"
+        ],
+        [
+         "7",
+         ""
+        ]
+       ]
+      },
+      {
+       "type": "figure",
+       "id": "0607_2023MJ_52_q03bi_diagram2",
+       "caption": null
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 309.7
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        601.8,
+        570.0,
+        755.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 101.9,
+        "height_pt": 153.2
+       }
+      }
+     ],
+     "text": "Find an expression, in terms of L, for the number of squares in a rectangle of width 3 and\nlength L.\n................................................. [2]",
+     "marks": 2,
+     "path": "3(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(ii)",
+       "text": "6L – 4 oe",
+       "codes": [],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.380001068115234,
+          668.8,
+          549.0,
+          697.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find an expression, in terms of <i>L</i>, for the number of squares in a rectangle of width 3 and length <i>L</i>.",
+       "text": "Find an expression, in terms of L, for the number of squares in a rectangle of width 3 and length L."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "3(b)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Rectangles of width 3",
+   "text": "Rectangles of width 3"
+  },
+  {
+   "type": "text",
+   "html": "Length 3",
+   "text": "Length 3"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "+",
+     "",
+     "",
+     "",
+     "+",
+     "",
+     "",
+     "",
+     "+",
+     "",
+     "",
+     ""
+    ],
+    [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "type": "text",
+   "html": "squares + 2 squares + 2 squares + 1 square of side 1 of side 2 of side 2 of side 3",
+   "text": "squares + 2 squares + 2 squares + 1 square of side 1 of side 2 of side 2 of side 3"
+  },
+  {
+   "type": "text",
+   "html": "Total = 14 squares",
+   "text": "Total = 14 squares"
+  }
+ ]
+}

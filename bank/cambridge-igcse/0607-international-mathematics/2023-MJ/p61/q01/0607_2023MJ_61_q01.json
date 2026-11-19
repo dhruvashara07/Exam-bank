@@ -1,0 +1,304 @@
+{
+ "id": "0607_2023MJ_61_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    186.8,
+    570.0,
+    343.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 92.2,
+    "height_pt": 156.7
+   }
+  }
+ ],
+ "text": "1\nIn a game you win by making a straight line of three  s on a 3 by 3 grid.\nExamples of a winning line with three  s.\nThere are 8 different winning lines.",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    68.30000305175781,
+    231.60000610351562,
+    434.29998779296875,
+    311.6000061035156
+   ],
+   "id": "0607_2023MJ_61_q01_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    134.60000610351562,
+    425.79998779296875,
+    462.70001220703125,
+    519.5999755859375
+   ],
+   "id": "0607_2023MJ_61_q01a_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 3,
+   "bbox": [
+    100.5999984741211,
+    136.5,
+    496.70001220703125,
+    252.89999389648438
+   ],
+   "id": "0607_2023MJ_61_q01b_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      346.1,
+      570.0,
+      590.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 153.9,
+      "height_pt": 244.4
+     }
+    }
+   ],
+   "text": "Another grid is 4 by 4.\nYou now need four  s in a line to win.\nFind the number of winning lines on a 4 by 4 grid.\nYou may use the grids to help you.\n................................................. [2]",
+   "marks": 2,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "4 [+] 4 [+] 2 or 2 × 4 + 2\nor lines or symbols on grid implying\n4 horizontal or 4 vertical and 2 diagonal\n10",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        89.4,
+        548.9400024414062,
+        163.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Another grid is 4 by 4. You now need four s in a line to win. Find the number of winning lines on a 4 by 4 grid. You may use the grids to help you.",
+     "text": "Another grid is 4 by 4. You now need four s in a line to win. Find the number of winning lines on a 4 by 4 grid. You may use the grids to help you."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2023MJ_61_q01a_diagram2",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      298.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 150.6,
+      "height_pt": 241.2
+     }
+    }
+   ],
+   "text": "Another grid is 5 by 5.\nYou now need five  s in a line to win.\nFind the number of winning lines on a 5 by 5 grid.\nYou may use the grids to help you.\n................................................. [1]",
+   "marks": 1,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "12",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        163.6,
+        548.9400024414062,
+        188.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Another grid is 5 by 5. You now need five s in a line to win. Find the number of winning lines on a 5 by 5 grid. You may use the grids to help you.",
+     "text": "Another grid is 5 by 5. You now need five s in a line to win. Find the number of winning lines on a 5 by 5 grid. You may use the grids to help you."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2023MJ_61_q01b_diagram3",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      300.5,
+      570.0,
+      454.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 62.9,
+      "height_pt": 153.5
+     }
+    }
+   ],
+   "text": "A grid is n by n.\nYou need n  s in a line to win.\nFind an expression, in terms of n, for the number of winning lines.\nGive your answer in its simplest form.\n................................................. [2]",
+   "marks": 2,
+   "path": "1(c)",
+   "mark_scheme": [
+    {
+     "label": "1(c)",
+     "text": "2n + 2 or 2(n + 1) final answer",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        188.1,
+        548.9400024414062,
+        276.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A grid is <i>n</i> by <i>n</i>. You need <i>n</i> s in a line to win. Find an expression, in terms of <i>n</i>, for the number of winning lines. Give your answer in its simplest form.",
+     "text": "A grid is n by n. You need n s in a line to win. Find an expression, in terms of n, for the number of winning lines. Give your answer in its simplest form."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In a game you win by making a straight line of three s on a 3 by 3 grid. Examples of a winning line with three s.",
+   "text": "In a game you win by making a straight line of three s on a 3 by 3 grid. Examples of a winning line with three s."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2023MJ_61_q01_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "There are 8 different winning lines.",
+   "text": "There are 8 different winning lines."
+  }
+ ]
+}

@@ -1,0 +1,570 @@
+{
+ "id": "0607_2023MJ_61_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    311.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 79.7,
+    "height_pt": 254.7
+   }
+  }
+ ],
+ "text": "3\nA rectangular grid has height 2 and width at least 2.\nYou need two  s in a line to win.\nThese diagrams show all the winning lines with two  s on a 2 by 3 grid.\nThere are\n11 winning\nlines",
+ "marks": 10,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    123.30000305175781,
+    114.5999984741211,
+    474.0,
+    171.89999389648438
+   ],
+   "id": "0607_2023MJ_61_q03_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    123.30000305175781,
+    191.5,
+    383.29998779296875,
+    239.89999389648438
+   ],
+   "id": "0607_2023MJ_61_q03_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    123.30000305175781,
+    259.5,
+    474.0,
+    308.0
+   ],
+   "id": "0607_2023MJ_61_q03_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    77.9,
+    578.4,
+    519.4,
+    694.9
+   ],
+   "id": "0607_2023MJ_61_q03a_diagram4",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    104.8,
+    219.0,
+    492.4,
+    361.0
+   ],
+   "id": "0607_2023MJ_61_q03bii_diagram5",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)(ii)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      316.5,
+      570.0,
+      727.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 162.4,
+      "height_pt": 410.5
+     }
+    }
+   ],
+   "text": "Complete the table for the number of winning lines with two  s.\nYou may use the grid below the table to help you.\nNumber of winning lines\nSize of grid\nHorizontal\nVertical\nDiagonal\nTotal\n2 by 2\n2\n2\n2\n6\n2 by 3\n4\n3\n4\n11\n2 by 4\n6\n4\n2 by 5\n5\n8\n2 by w\nw\n[3]",
+   "marks": 3,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "2\n2\n2\n6\n4\n3\n4\n11\n6\n4\n6\n16\n8\n5\n8\n21\n2w – 2 oe\nw\n2w – 2 oe\n5w – 4 oe",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        89.4,
+        548.9400024414062,
+        225.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table for the number of winning lines with two s. You may use the grid below the table to help you.",
+     "text": "Complete the table for the number of winning lines with two s. You may use the grid below the table to help you."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Size of grid",
+       "Number of winning lines",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "Horizontal",
+       "Vertical",
+       "Diagonal",
+       "Total"
+      ],
+      [
+       "2 by 2",
+       "2",
+       "2",
+       "2",
+       "6"
+      ],
+      [
+       "2 by 3",
+       "4",
+       "3",
+       "4",
+       "11"
+      ],
+      [
+       "2 by 4",
+       "6",
+       "4",
+       "",
+       ""
+      ],
+      [
+       "2 by 5",
+       "",
+       "5",
+       "8",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "2 by <i>w</i>",
+       "",
+       "<i>w</i>",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "figure",
+     "id": "0607_2023MJ_61_q03a_diagram4",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 162.4
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      57.7,
+      570.0,
+      94.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 36.3
+     }
+    }
+   ],
+   "text": "A rectangular grid has height n and width w where n\n2\nand w\nn\n.\nH\nH\nAny winning line of  s has n  s.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        96.7,
+        570.0,
+        172.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 2,
+        "answer_line": null,
+        "working_gap_pt": 10.9,
+        "height_pt": 75.3
+       }
+      }
+     ],
+     "text": "Give a reason why there are always w vertical winning lines.\n.............................................................................................................................................\n............................................................................................................................................. [1]",
+     "marks": 1,
+     "path": "3(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(i)",
+       "text": "One winning line in each column oe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.380001068115234,
+          225.1,
+          548.9400024414062,
+          249.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Give a reason why there are always <i>w</i> vertical winning lines.",
+       "text": "Give a reason why there are always w vertical winning lines."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        174.7,
+        570.0,
+        446.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 220.2,
+        "height_pt": 271.8
+       }
+      }
+     ],
+     "text": "Find an expression, in terms of n and w, for the total number of horizontal winning lines.\nYou may use the grid to help you.\n................................................. [2]",
+     "marks": 2,
+     "path": "3(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(ii)",
+       "text": "n(w – n + 1) oe final answer",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.380001068115234,
+          249.6,
+          548.9400024414062,
+          274.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find an expression, in terms of <i>n</i> and <i>w</i>, for the <b>total</b> number of horizontal winning lines. You may use the grid to help you.",
+       "text": "Find an expression, in terms of n and w, for the total number of horizontal winning lines. You may use the grid to help you."
+      },
+      {
+       "type": "figure",
+       "id": "0607_2023MJ_61_q03bii_diagram5",
+       "caption": null
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        449.0,
+        570.0,
+        563.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 49.9,
+        "height_pt": 114.5
+       }
+      }
+     ],
+     "text": "Use part (i) and part (ii) and the geometry of the grid to find an expression for the total\nnumber of winning lines.\nDo not simplify your expression.\n............................................................................................................................................. [1]",
+     "marks": 1,
+     "path": "3(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(iii)",
+       "text": "n(w – n + 1) + w + 2(w – n + 1) oe, isw",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.380001068115234,
+          274.0,
+          548.9400024414062,
+          311.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use <b>part (i)</b> and <b>part (ii)</b> and the geometry of the grid to find an expression for the total number of winning lines. Do not simplify your expression.",
+       "text": "Use part (i) and part (ii) and the geometry of the grid to find an expression for the total number of winning lines. Do not simplify your expression."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "iv",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        566.0,
+        570.0,
+        796.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 179.9,
+        "height_pt": 230.5
+       }
+      }
+     ],
+     "text": "Using your answer to part (iii) show that, when w\n2\nn\n, the expression for the total number\n=\n2 +\nof winning lines is   n\n5\nn\n+.\n2\n[3]",
+     "marks": 3,
+     "path": "3(b)(iv)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(iv)",
+       "text": "Correct substitution of 2n for w in their 3b(iii)\n2\nCorrect simplification to the form an + bn +c\nwhere a and at least one of b and c is non-zero\n2\nReduction to given expression n + 5n + 2 with\nno errors",
+       "codes": [
+        "M1",
+        "M1",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.380001068115234,
+          311.1,
+          548.9400024414062,
+          435.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Using your answer to <b>part (iii)</b> show that, when <i>w</i> = 2<i>n</i>, the expression for the total number",
+       "text": "Using your answer to part (iii) show that, when w = 2n, the expression for the total number"
+      },
+      {
+       "type": "text",
+       "html": "+",
+       "text": "+"
+      },
+      {
+       "type": "text",
+       "html": "of winning lines is <i>n</i><sup>2</sup> 5<i>n</i> + 2.",
+       "text": "of winning lines is n2 5n + 2."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 179.9
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "3(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "A rectangular grid has height <i>n</i> and width <i>w</i> where <i>n</i> H 2 and <i>w</i> H <i>n</i>. Any winning line of s has <i>n</i> s.",
+     "text": "A rectangular grid has height n and width w where n H 2 and w H n. Any winning line of s has n s."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 10,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A rectangular grid has height 2 and width at least 2. You need two s in a line to win. These diagrams show all the winning lines with two s on a 2 by 3 grid.",
+   "text": "A rectangular grid has height 2 and width at least 2. You need two s in a line to win. These diagrams show all the winning lines with two s on a 2 by 3 grid."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2023MJ_61_q03_diagram1",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2023MJ_61_q03_diagram2",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "There are winning lines",
+   "text": "There are winning lines"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2023MJ_61_q03_diagram3",
+   "caption": null
+  }
+ ]
+}

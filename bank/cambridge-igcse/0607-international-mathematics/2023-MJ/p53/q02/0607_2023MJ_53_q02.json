@@ -1,0 +1,219 @@
+{
+ "id": "0607_2023MJ_53_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    342.9,
+    570.0,
+    368.2
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": -1.4,
+    "height_pt": 25.3
+   }
+  }
+ ],
+ "text": "1#\n2\nArea of a triangle\nbase # height\n=\n2",
+ "marks": 4,
+ "figures": [
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    92.6,
+    387.0,
+    272.6,
+    467.4
+   ],
+   "id": "0607_2023MJ_53_q02a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    92.6,
+    577.9,
+    386.0,
+    665.5
+   ],
+   "id": "0607_2023MJ_53_q02b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      368.2,
+      570.0,
+      564.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 49.1,
+      "height_pt": 195.8
+     }
+    }
+   ],
+   "text": "5\nShow that the area of this triangle is 5.\n[1]",
+   "marks": 1,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "1\n2\n×5 ×2\n= 5",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        179.7,
+        549.0,
+        222.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "figure",
+     "id": "0607_2023MJ_53_q02a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Show that the area of this triangle is 5.",
+     "text": "Show that the area of this triangle is 5."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 49.1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      566.2,
+      570.0,
+      798.7
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 93.4,
+      "height_pt": 232.5
+     }
+    }
+   ],
+   "text": "Find the area of each triangle.\nWrite your answer inside each triangle.\n[3]",
+   "marks": 3,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "1\n1\n2\n×4 ×1\n2\n×3 ×2\nor\n3\n2",
+     "codes": [
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        222.7,
+        549.0,
+        345.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "figure",
+     "id": "0607_2023MJ_53_q02b_diagram2",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Find the area of each triangle. Write your answer inside each triangle.",
+     "text": "Find the area of each triangle. Write your answer inside each triangle."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 93.4
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 3,
+ "paper_code": "0607/53",
+ "paper_type": "core_investigation",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Area of a triangle = \\(\\frac{1}{2}\\)<sup>#</sup> base # height",
+   "text": "Area of a triangle = (1)/(2)# base # height"
+  }
+ ]
+}

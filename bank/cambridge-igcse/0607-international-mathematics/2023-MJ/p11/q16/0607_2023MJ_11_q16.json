@@ -1,0 +1,114 @@
+{
+ "id": "0607_2023MJ_11_q16",
+ "number": 16,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    318.6,
+    570.0,
+    662.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 35.8,
+    "height_pt": 343.4
+   }
+  }
+ ],
+ "text": "A bag contains 2 pink balls and 7 green balls.\nOne ball is taken at random and then put back in the bag.\nAnother ball is then taken at random from the bag.\nComplete the tree diagram.\n1st ball\n2nd ball\npink\n...........\npink\n2\n9\n7\ngreen\n9\npink\n...........\n...........\ngreen\n...........\ngreen\n[2]",
+ "marks": 2,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    187.4,
+    483.6,
+    415.7,
+    643.0
+   ],
+   "id": "0607_2023MJ_11_q16_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "16",
+   "text": "2\nAll pink branches\n9\n7\nAll green branches\n9",
+   "codes": [
+    "2"
+   ],
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      46.380001068115234,
+      655.8,
+      549.0,
+      725.2
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 1,
+ "variant": 1,
+ "paper_code": "0607/11",
+ "paper_type": "core_short_answer",
+ "total_marks": 2,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A bag contains 2 pink balls and 7 green balls. One ball is taken at random and then put back in the bag. Another ball is then taken at random from the bag. Complete the tree diagram.",
+   "text": "A bag contains 2 pink balls and 7 green balls. One ball is taken at random and then put back in the bag. Another ball is then taken at random from the bag. Complete the tree diagram."
+  },
+  {
+   "type": "text",
+   "html": "1st ball 2nd ball",
+   "text": "1st ball 2nd ball"
+  },
+  {
+   "type": "text",
+   "html": "pink",
+   "text": "pink"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2023MJ_11_q16_diagram1",
+   "caption": null
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
+   "lines": 1
+  },
+  {
+   "type": "marks",
+   "value": 2
+  }
+ ]
+}

@@ -1,0 +1,334 @@
+{
+ "id": "0607_2023MJ_51_q03",
+ "number": 3,
+ "segments": [],
+ "text": "",
+ "marks": 9,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      351.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 30.2,
+      "height_pt": 294.2
+     }
+    }
+   ],
+   "text": "3\n(a) Complete this table using your answers to Question 1 and Question 2 and any patterns you notice.\nNumber of winning lines\nSize of grid\nHorizontal\nVertical\nDiagonal\nTotal\n3 by 3\n8\n4 by 4\n5 by 5\n6 by 6\n7 by 7\n20 by 20\n[3]",
+   "marks": 3,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "Size of\nNumber of winning lines.\ngrid\nH\nV\nD\nT\n3 by 3\n3\n3\n2\n8\n4 by 4\n4\n4\n2\n10\n5 by 5\n5\n5\n2\n12\n6 by 6\n6\n6\n2\n14\n7 by 7\n7\n7\n2\n16\n20 by 20\n20\n20\n2\n42",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        364.3,
+        548.9400024414062,
+        524.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> Complete this table using your answers to <b>Question 1</b> and <b>Question 2</b> and any patterns you notice.",
+     "text": "Complete this table using your answers to Question 1 and Question 2 and any patterns you notice."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Size of grid",
+       "Number of winning lines Horizontal Vertical Diagonal Total",
+       "",
+       "",
+       ""
+      ],
+      [
+       "3 by 3",
+       "",
+       "",
+       "",
+       "8"
+      ],
+      [
+       "4 by 4",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "5 by 5",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "6 by 6",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "7 by 7",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "20 by 20",
+       "",
+       "",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      366.5,
+      570.0,
+      507.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 62.9,
+      "height_pt": 140.5
+     }
+    }
+   ],
+   "text": "A grid is n by n.\nYou need ns in a line to win.\nFind an expression, in terms of n, for the number of winning lines.\n................................................. [2]",
+   "marks": 2,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "2n + 2",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        524.9,
+        548.9400024414062,
+        549.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A grid is <i>n</i> by <i>n</i>. You need <i>n</i> s in a line to win. Find an expression, in terms of <i>n</i>, for the number of winning lines.",
+     "text": "A grid is n by n. You need n s in a line to win. Find an expression, in terms of n, for the number of winning lines."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      509.5,
+      570.0,
+      611.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 23.9,
+      "height_pt": 101.5
+     }
+    }
+   ],
+   "text": "Jibreel draws a very large square grid.\nHe thinks there will be 583 winning lines of s on his grid.\nGive a reason why he is wrong.\n..................................................................................................................................................... [1]",
+   "marks": 1,
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "The total must be even oe\nor 290.5 should be a whole number oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        549.3,
+        548.9400024414062,
+        586.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Jibreel draws a very large square grid. He thinks there will be 583 winning lines of s on his grid. Give a reason why he is wrong.",
+     "text": "Jibreel draws a very large square grid. He thinks there will be 583 winning lines of s on his grid. Give a reason why he is wrong."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      405.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 283.8,
+      "height_pt": 348.2
+     }
+    }
+   ],
+   "text": "Harriet draws a square grid with 324 squares.\nFind the number of winning lines of s on this grid.\n................................................... [3]",
+   "marks": 3,
+   "path": "3(d)",
+   "mark_scheme": [
+    {
+     "label": "3(d)",
+     "text": "324\n[=18]\n18 correctly substituted into 2n + 2\n38",
+     "codes": [
+      "C1",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        586.4,
+        548.9400024414062,
+        689.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Harriet draws a square grid with 324 squares. Find the number of winning lines of s on this grid.",
+     "text": "Harriet draws a square grid with 324 squares. Find the number of winning lines of s on this grid."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

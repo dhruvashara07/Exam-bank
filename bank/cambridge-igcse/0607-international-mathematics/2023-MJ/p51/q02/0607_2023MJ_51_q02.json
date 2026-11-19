@@ -1,0 +1,261 @@
+{
+ "id": "0607_2023MJ_51_q02",
+ "number": 2,
+ "segments": [],
+ "text": "",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 3,
+   "bbox": [
+    114.80000305175781,
+    149.5,
+    482.5,
+    254.60000610351562
+   ],
+   "id": "0607_2023MJ_51_q02a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 3,
+   "bbox": [
+    76.5,
+    433.79998779296875,
+    520.7999877929688,
+    564.5
+   ],
+   "id": "0607_2023MJ_51_q02b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      338.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 191.2,
+      "height_pt": 281.7
+     }
+    }
+   ],
+   "text": "2\n(a) Another grid is 4 by 4.\nYou now need four s in a line to win.\nFind the number of winning lines on a 4 by 4 grid.\nYou may use the grids to help you.\n................................................. [2]",
+   "marks": 2,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "4 [+] 4 [+] 2\nor 2 × 4 + 2\nor lines or symbols on grid implying 4\nhorizontal or 4 vertical and 2 diagonal winning\nlines\n10",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        139.2,
+        548.9400024414062,
+        239.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> Another grid is 4 by 4.",
+     "text": "Another grid is 4 by 4."
+    },
+    {
+     "type": "text",
+     "html": "You now need four s in a line to win. Find the number of winning lines on a 4 by 4 grid. You may use the grids to help you.",
+     "text": "You now need four s in a line to win. Find the number of winning lines on a 4 by 4 grid. You may use the grids to help you."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2023MJ_51_q02a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      341.2,
+      570.0,
+      622.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 190.8,
+      "height_pt": 281.3
+     }
+    }
+   ],
+   "text": "Another grid is 5 by 5.\nYou now need five s in a line to win.\nFind the number of winning lines on a 5 by 5 grid.\nYou may use the grids to help you.\n................................................. [2]",
+   "marks": 2,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "5 [+] 5 [+] 2\nor 2 × 5 + 2\nor lines or symbols on grid implying 5\nhorizontal or 5 vertical and 2 diagonal winning\nlines\n12",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        239.5,
+        548.9400024414062,
+        339.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Another grid is 5 by 5. You now need five s in a line to win. Find the number of winning lines on a 5 by 5 grid. You may use the grids to help you.",
+     "text": "Another grid is 5 by 5. You now need five s in a line to win. Find the number of winning lines on a 5 by 5 grid. You may use the grids to help you."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2023MJ_51_q02b_diagram2",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      625.0,
+      570.0,
+      752.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 49.9,
+      "height_pt": 127.5
+     }
+    }
+   ],
+   "text": "Another grid is 6 by 6.\nYou now need six s in a line to win.\nWrite down the number of winning lines on a 6 by 6 grid.\n................................................. [1]",
+   "marks": 1,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "14",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        339.8,
+        548.9400024414062,
+        364.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Another grid is 6 by 6. You now need six s in a line to win. Write down the number of winning lines on a 6 by 6 grid.",
+     "text": "Another grid is 6 by 6. You now need six s in a line to win. Write down the number of winning lines on a 6 by 6 grid."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

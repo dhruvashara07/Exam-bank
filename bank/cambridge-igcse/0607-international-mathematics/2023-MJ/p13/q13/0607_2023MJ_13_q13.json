@@ -1,0 +1,242 @@
+{
+ "id": "0607_2023MJ_13_q13",
+ "number": 13,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    213.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 9.7,
+    "height_pt": 156.7
+   }
+  }
+ ],
+ "text": "This is a train timetable.\nStation\nTrain\nA\n06 40\n07 05\n07 40\n08 05\n08 40\n10 05\nB\n07 16\n08 16\n08 51\nC\n07 10\n07 48\n08 10\n08 48\n10 35\nD\n07 19\n07 57\n08 57\n09 27\n10 44\nE\n07 37\n08 32\n09 15\n11 02",
+ "marks": 2,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      216.5,
+      570.0,
+      292.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 10.9,
+      "height_pt": 75.5
+     }
+    }
+   ],
+   "text": "Javid must arrive at station E no later than 11 00.\nWrite down the time of the latest train he can catch from station A.\n................................................. [1]",
+   "marks": 1,
+   "path": "13(a)",
+   "mark_scheme": [
+    {
+     "label": "13(a)",
+     "text": "08 05",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        490.2,
+        549.0,
+        514.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Javid must arrive at station E no later than 11 00. Write down the time of the latest train he can catch from station A.",
+     "text": "Javid must arrive at station E no later than 11 00. Write down the time of the latest train he can catch from station A."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      307.5,
+      570.0,
+      409.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 36.9,
+      "height_pt": 101.5
+     }
+    }
+   ],
+   "text": "Jacinta catches the 08 51 train from station B.\nWork out how many minutes her journey takes from station B to station D.\n........................................... min [1]",
+   "marks": 1,
+   "path": "13(b)",
+   "mark_scheme": [
+    {
+     "label": "13(b)",
+     "text": "36",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        514.6,
+        549.0,
+        539.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Jacinta catches the 08 51 train from station B. Work out how many minutes her journey takes from station B to station D.",
+     "text": "Jacinta catches the 08 51 train from station B. Work out how many minutes her journey takes from station B to station D."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "min"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 1,
+ "variant": 3,
+ "paper_code": "0607/13",
+ "paper_type": "core_short_answer",
+ "total_marks": 2,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This is a train timetable.",
+   "text": "This is a train timetable."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Station",
+     "Train",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "A",
+     "06 40",
+     "07 05",
+     "07 40",
+     "08 05",
+     "08 40",
+     "10 05"
+    ],
+    [
+     "B",
+     "",
+     "07 16",
+     "",
+     "08 16",
+     "08 51",
+     ""
+    ],
+    [
+     "C",
+     "07 10",
+     "07 48",
+     "08 10",
+     "08 48",
+     "",
+     "10 35"
+    ],
+    [
+     "D",
+     "07 19",
+     "07 57",
+     "",
+     "08 57",
+     "09 27",
+     "10 44"
+    ],
+    [
+     "E",
+     "07 37",
+     "",
+     "08 32",
+     "09 15",
+     "",
+     "11 02"
+    ]
+   ]
+  }
+ ]
+}

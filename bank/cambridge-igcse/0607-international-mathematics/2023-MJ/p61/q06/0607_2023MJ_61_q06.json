@@ -1,0 +1,340 @@
+{
+ "id": "0607_2023MJ_61_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 12,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    233.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 13.9,
+    "height_pt": 176.2
+   }
+  }
+ ],
+ "text": "6\nHumid air contains water vapour.\nSound travels at a different speed in humid air compared to its speed in dry air.\nAir with 0% humidity is dry air.\nAir with 100% humidity holds all the water vapour that it can.\nThe table shows the speed of sound, correct to 2 decimal places, for different values of humidity, when\nthe temperature is 20 °C.\nHumidity (H %)\n0\n20\n40\n60\n80\n100\nSpeed of sound (S m/s)\n343.37\n343.62\n343.87\n344.12\n344.37\n344.62",
+ "marks": 8,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      266.5,
+      570.0,
+      407.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 101.9,
+      "height_pt": 140.5
+     }
+    }
+   ],
+   "text": "Show that a linear relationship connects H and S.\n[2]",
+   "marks": 2,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "Five differences of 0.25 oe\nor five correctly evaluated gradient calculations\nand\nThese are the same oe\nor The gradient is constant oe\nor When humidity increases by 20 (%) the speed\nof sound [always] increases by 0.25 oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.380001068115234,
+        89.4,
+        548.9400024414062,
+        278.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that a linear relationship connects <i>H</i> and <i>S</i>.",
+     "text": "Show that a linear relationship connects H and S."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 101.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        30.0,
+        409.5,
+        570.0,
+        563.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 88.9,
+        "height_pt": 153.5
+       }
+      }
+     ],
+     "text": "I is the increase in the speed of sound with humidity when the temperature is 20 °C.\nShow that   I= 0.0125H.\n[1]",
+     "marks": 1,
+     "path": "6(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(b)(i)",
+       "text": "0.25 ÷ 20 = 0.0125 oe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          46.380001068115234,
+          278.3,
+          548.9400024414062,
+          303.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "<i>I</i> is the increase in the speed of sound with humidity when the temperature is 20 °C.",
+       "text": "I is the increase in the speed of sound with humidity when the temperature is 20 °C."
+      },
+      {
+       "type": "text",
+       "html": "Show that <i>I</i> = 0.0125<i>H</i>.",
+       "text": "Show that I = 0.0125H."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 88.9
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        30.0,
+        565.5,
+        570.0,
+        693.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 36.9,
+        "height_pt": 127.5
+       }
+      }
+     ],
+     "text": "Assume that the increase in part (i) is the same for all temperatures.\nWhen T= 0 and H= 0, the speed of sound, correct to 2 decimal places, is 331.37 m/s.\nUse this information and part (i) to change your model for S in Question 5(b).\nGive your answer in the form S\nx\nyT\nzH\n, where x, y and z are constants.\n=\n+\n+\n.............................................................................. [1]",
+     "marks": 1,
+     "path": "6(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "6(b)(ii)",
+       "text": "[S =] 331.37 + their 0.6T + 0.0125H",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          46.380001068115234,
+          303.6,
+          548.9400024414062,
+          340.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Assume that the increase in <b>part (i)</b> is the same for all temperatures. When <i>T</i> = 0 and <i>H</i> = 0, the speed of sound, correct to 2 decimal places, is 331.37 m/s. Use this information and <b>part (i)</b> to change your model for <i>S</i> in <b>Question 5(b)</b>. Give your answer in the form <i>S</i> = <i>x</i> + <i>yT</i> + <i>zH</i> , where <i>x</i>, <i>y</i> and <i>z</i> are constants.",
+       "text": "Assume that the increase in part (i) is the same for all temperatures. When T = 0 and H = 0, the speed of sound, correct to 2 decimal places, is 331.37 m/s. Use this information and part (i) to change your model for S in Question 5(b). Give your answer in the form S = x + yT + zH , where x, y and z are constants."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "6(b)"
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      457.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 283.9,
+      "height_pt": 400.2
+     }
+    }
+   ],
+   "text": "A firework makes a loud bang.\nThe sound travels 1 km.\nThe temperature is 20 °C.\nFind the difference between the time for the sound to travel 1 km in dry air and the time to travel\n1 km when the humidity is 63%.\nGive your answer in seconds, correct to 5 decimal places.\n................................................. [4]",
+   "marks": 4,
+   "path": "6(c)",
+   "mark_scheme": [
+    {
+     "label": "6(c)",
+     "text": "Correct substitution of [T =] 20 and [H =] 63\n1000\n1\nCorrect use of\nor\nspeed in m/s\nspeed in km/s\nat least once\n0.00666 or 0.006663 to 0.006 69 nfww",
+     "codes": [
+      "C1",
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.380001068115234,
+        340.7,
+        548.9400024414062,
+        458.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A firework makes a loud bang. The sound travels 1 km. The temperature is 20 °C. Find the difference between the time for the sound to travel 1 km in dry air and the time to travel km when the humidity is 63%. Give your answer in seconds, correct to 5 decimal places.",
+     "text": "A firework makes a loud bang. The sound travels 1 km. The temperature is 20 °C. Find the difference between the time for the sound to travel 1 km in dry air and the time to travel km when the humidity is 63%. Give your answer in seconds, correct to 5 decimal places."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Humid air contains water vapour. Sound travels at a different speed in humid air compared to its speed in dry air. Air with 0% humidity is dry air. Air with 100% humidity holds all the water vapour that it can. The table shows the speed of sound, correct to 2 decimal places, for different values of humidity, when the temperature is 20 °C.",
+   "text": "Humid air contains water vapour. Sound travels at a different speed in humid air compared to its speed in dry air. Air with 0% humidity is dry air. Air with 100% humidity holds all the water vapour that it can. The table shows the speed of sound, correct to 2 decimal places, for different values of humidity, when the temperature is 20 °C."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Humidity (<i>H</i> %)",
+     "0",
+     "20",
+     "40",
+     "60",
+     "80",
+     "100"
+    ],
+    [
+     "Speed of sound (<i>S</i> m/s)",
+     "343.37",
+     "343.62",
+     "343.87",
+     "344.12",
+     "344.37",
+     "344.62"
+    ]
+   ]
+  }
+ ]
+}

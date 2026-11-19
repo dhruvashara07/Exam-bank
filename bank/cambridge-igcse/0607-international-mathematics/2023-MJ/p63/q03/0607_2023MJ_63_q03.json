@@ -1,0 +1,284 @@
+{
+ "id": "0607_2023MJ_63_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    554.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 17.6,
+    "height_pt": 497.2
+   }
+  }
+ ],
+ "text": "3\nThroughout the rest of this task vertices are labelled anticlockwise starting at O(0, 0).\nThese steps are the start of a method to find the area of the parallelogram OPQR.\nStep 1     Draw a rectangle around the\ny\nparallelogram.\nQ\n6\n5\nR\n4\n3\n2\nP\n1\nx\nO\n1\n2\n3\n4\n5\n6\n7\n8\ny\nStep 2     Fill the space between the\nrectangle and the parallelogram\nQ\n6\nwith rectangles or right-angled\ntriangles.\n5\nR\n4\n3\n2\nP\n1\nx\nO\n1\n2\n3\n4\n5\n6\n7\n8",
+ "marks": 3,
+ "figures": [
+  {
+   "caption": null,
+   "page": 3,
+   "bbox": [
+    278.1,
+    124.8,
+    553.8,
+    553.7
+   ],
+   "id": "0607_2023MJ_63_q03_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      556.8,
+      570.0,
+      632.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 36.9,
+      "height_pt": 75.2
+     }
+    }
+   ],
+   "text": "Find the area of the rectangle that goes around the parallelogram.\n................................................. [1]",
+   "marks": 1,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "48",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        342.3,
+        549.0,
+        366.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the area of the rectangle that goes around the parallelogram.",
+     "text": "Find the area of the rectangle that goes around the parallelogram."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        634.8,
+        570.0,
+        671.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 4.0,
+        "height_pt": 36.2
+       }
+      }
+     ],
+     "text": "Use the results in Question 1 and Question 2 to write the areas of the small rectangles and\nright-angled triangles inside each shape.\n[1]",
+     "marks": 1,
+     "path": "3(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(i)",
+       "text": "3\n2\n5\n5\n2\n3",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.380001068115234,
+          366.7,
+          549.0,
+          491.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use the results in <b>Question 1</b> and <b>Question 2</b> to write the areas of the small rectangles and",
+       "text": "Use the results in Question 1 and Question 2 to write the areas of the small rectangles and"
+      },
+      {
+       "type": "text",
+       "html": "right-angled triangles inside each shape.",
+       "text": "right-angled triangles inside each shape."
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        671.8,
+        570.0,
+        793.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 82.9,
+        "height_pt": 121.2
+       }
+      }
+     ],
+     "text": "Use your answer to part (a) to show that the area of the parallelogram is 28.\n[1]",
+     "marks": 1,
+     "path": "3(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(ii)",
+       "text": "48 – 2 × 2 – 2 × 3 – 2 × 5",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.380001068115234,
+          491.2,
+          549.0,
+          516.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use your answer to <b>part (a)</b> to show that the area of the parallelogram is 28.",
+       "text": "Use your answer to part (a) to show that the area of the parallelogram is 28."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 82.9
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "3(b)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Throughout the rest of this task vertices are labelled anticlockwise starting at <i>O</i>(0, 0). These steps are the start of a method to find the area of the parallelogram <i>OPQR</i>. Step 1 Draw a rectangle around the <i>y</i>",
+   "text": "Throughout the rest of this task vertices are labelled anticlockwise starting at O(0, 0). These steps are the start of a method to find the area of the parallelogram OPQR. Step 1 Draw a rectangle around the y"
+  },
+  {
+   "type": "text",
+   "html": "parallelogram.",
+   "text": "parallelogram."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2023MJ_63_q03_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "Step 2 Fill the space between the",
+   "text": "Step 2 Fill the space between the"
+  },
+  {
+   "type": "text",
+   "html": "rectangle and the parallelogram with rectangles or right-angled triangles.",
+   "text": "rectangle and the parallelogram with rectangles or right-angled triangles."
+  }
+ ]
+}

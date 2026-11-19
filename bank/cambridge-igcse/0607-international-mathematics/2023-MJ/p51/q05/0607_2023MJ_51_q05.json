@@ -1,0 +1,316 @@
+{
+ "id": "0607_2023MJ_51_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    334.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 97.5,
+    "height_pt": 277.2
+   }
+  }
+ ],
+ "text": "5\nA rectangular grid has height 2 and width at least 2.\nYou need two s in a line to win.\nThese diagrams show all the winning lines with two s on a 2 by 3 grid.\nThere are 11\nwinning lines",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    102.0,
+    114.69999694824219,
+    495.29998779296875,
+    177.60000610351562
+   ],
+   "id": "0607_2023MJ_51_q05_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    102.0,
+    200.0,
+    393.20001220703125,
+    254.10000610351562
+   ],
+   "id": "0607_2023MJ_51_q05_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    102.0,
+    276.5,
+    495.29998779296875,
+    330.6000061035156
+   ],
+   "id": "0607_2023MJ_51_q05_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    51.0,
+    609.3,
+    546.3,
+    739.9
+   ],
+   "id": "0607_2023MJ_51_q05a_diagram4",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      339.2,
+      570.0,
+      759.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 162.3,
+      "height_pt": 419.8
+     }
+    }
+   ],
+   "text": "Complete the table for the number of winning lines with two s.\nYou may use the grid below the table to help you.\nNumber of winning lines\nSize of grid\nHorizontal\nVertical\nDiagonal\nTotal\n2 by 2\n2\n2\n2\n6\n2 by 3\n4\n3\n4\n11\n2 by 4\n2 by 5\n2 by w\n[5]",
+   "marks": 5,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "Size of\nNumber of winning lines\ngrid\nH\nV\nD\nT\n2 by 2\n2\n2\n2\n6\n2 by 3\n4\n3\n4\n11\n2 by 4\n6\n4\n6\n16\n2 by 5\n8\n5\n8\n21\n5w – 4\n2 by w\n2w – 2\nw\n2w – 2\noe\nOne correct diagram for 2 by 4 or 2 by 5",
+     "codes": [
+      "4",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        521.4,
+        550.9186401367188,
+        701.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table for the number of winning lines with two s. You may use the grid below the table to help you.",
+     "text": "Complete the table for the number of winning lines with two s. You may use the grid below the table to help you."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Size of grid",
+       "Number of winning lines Horizontal Vertical Diagonal Total",
+       "",
+       "",
+       ""
+      ],
+      [
+       "2 by 2",
+       "2",
+       "2",
+       "2",
+       "6"
+      ],
+      [
+       "2 by 3",
+       "4",
+       "3",
+       "4",
+       "11"
+      ],
+      [
+       "2 by 4",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "2 by 5",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "2 by <i>w</i>",
+       "",
+       "",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "figure",
+     "id": "0607_2023MJ_51_q05a_diagram4",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 162.3
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      57.1,
+      570.0,
+      431.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 309.9,
+      "height_pt": 374.4
+     }
+    }
+   ],
+   "text": "A 2 by w grid has 111 winning lines with two s.\nFind the width of the grid.\n................................................. [3]",
+   "marks": 3,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "23",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        701.2,
+        550.9186401367188,
+        756.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A 2 by <i>w</i> grid has 111 winning lines with two s. Find the width of the grid.",
+     "text": "A 2 by w grid has 111 winning lines with two s. Find the width of the grid."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A rectangular grid has height 2 and width at least 2. You need two s in a line to win. These diagrams show all the winning lines with two s on a 2 by 3 grid.",
+   "text": "A rectangular grid has height 2 and width at least 2. You need two s in a line to win. These diagrams show all the winning lines with two s on a 2 by 3 grid."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2023MJ_51_q05_diagram1",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2023MJ_51_q05_diagram2",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "There are 11 winning lines",
+   "text": "There are 11 winning lines"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2023MJ_51_q05_diagram3",
+   "caption": null
+  }
+ ]
+}

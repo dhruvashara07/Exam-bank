@@ -1,0 +1,109 @@
+{
+ "id": "0607_2023MJ_63_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 9,
+   "bbox": [
+    30.0,
+    157.8,
+    570.0,
+    331.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 11.7,
+    "height_pt": 173.7
+   }
+  }
+ ],
+ "text": "of what we memorised the day before.\n9\nResearch has shown that after a day we remember  2\nThis decrease in memory continues for the following days.\nRetention is the fraction that we still remember.\nComplete the retention at the end of day d as a power of 2.\nAt the end of\nTime\nAt the start\nday 1\nday 2\nday 3\nday 4\nday d\n1\n1\n1\n1\n2......\nRetention\n1\n4\n8\n16\n2\n[1]",
+ "marks": 1,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "9",
+   "text": "-d\n2",
+   "codes": [
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      46.380001068115234,
+      250.5,
+      549.0,
+      280.6
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 1,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "of what we memorised the day before.",
+   "text": "of what we memorised the day before."
+  },
+  {
+   "type": "text",
+   "html": "Research has shown that after a day we remember 2 This decrease in memory continues for the following days. <i>Retention</i> is the fraction that we still remember. Complete the retention at the end of day <i>d</i> as a power of 2.",
+   "text": "Research has shown that after a day we remember 2 This decrease in memory continues for the following days. Retention is the fraction that we still remember. Complete the retention at the end of day d as a power of 2."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Time",
+     "At the start",
+     "At the end of day 1 day 2 day 3 day 4 day <i>d</i>",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Retention",
+     "1",
+     "1 2",
+     "1 4",
+     "1 8",
+     "1 16",
+     "",
+     "<sup>......</sup> 2"
+    ]
+   ]
+  },
+  {
+   "type": "marks",
+   "value": 1
+  }
+ ]
+}

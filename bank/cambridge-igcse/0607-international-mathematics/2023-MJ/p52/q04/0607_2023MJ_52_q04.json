@@ -1,0 +1,293 @@
+{
+ "id": "0607_2023MJ_52_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    298.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 23.9,
+    "height_pt": 241.2
+   }
+  }
+ ],
+ "text": "4\nThis is another method to count squares in rectangles.\nStep A\nMultiply the width by the length of the rectangle\n1st product\nStep B\nSubtract 1 from the width and 1 from the length and multiply\n2nd product\nStep C\nRepeat step B until the width is 1\nStep D\nAdd together all the products\nExample\nRectangle of width 3 and length 5\nStep A\n3\n#\n5\n1st product  = 15\nStep B\n(\n3\n1\n)\n(\n5\n1\n)\n2\n4\n2nd product = 8\n-\n-\n=\n#\n#\nStep C\n(\n2\n1\n)\n(\n4\n1\n)\n1\n3\n3rd product  = 3\n-\n-\n=\n#\n#\nWidth is now 1 so move to step D\nStep D\n15\n8\n3\n26\n++\n=",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      300.8,
+      570.0,
+      649.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 296.9,
+      "height_pt": 348.2
+     }
+    }
+   ],
+   "text": "Use this method to show that the total number of squares in a rectangle of width 4 and length 4\nis 30.\n[2]",
+   "marks": 2,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "4 × 4\n3 × 3 or (4 – 1) × (4 – 1)\n2 × 2 or (3 – 1) × (3 – 1)\n1 × 1 or (2 – 1) × (2 – 1)\nand\n16 + 9 + 4 + 1 = 30 oe",
+     "codes": [],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        89.4,
+        549.0,
+        180.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use this method to show that the total number of squares in a rectangle of width 4 and length 4 is 30.",
+     "text": "Use this method to show that the total number of squares in a rectangle of width 4 and length 4 is 30."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 296.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        30.0,
+        56.8,
+        570.0,
+        467.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 190.5,
+        "height_pt": 410.2
+       }
+      }
+     ],
+     "text": "Complete the table.\nRectangles of width 4\nLength of rectangle\nTotal number of squares\n4\n30\n5\n6\n7\n8\n70\n[3]",
+     "marks": 3,
+     "path": "4(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(i)",
+       "text": "40\n50\n60\nCorrect working for 40 or 50 or 60",
+       "codes": [
+        "C1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.380001068115234,
+          180.4,
+          549.0,
+          254.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the table.",
+       "text": "Complete the table."
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "Rectangles of width 4",
+         ""
+        ],
+        [
+         "Length of rectangle",
+         "Total number of squares"
+        ],
+        [
+         "4",
+         "30"
+        ],
+        [
+         "5",
+         ""
+        ],
+        [
+         "6",
+         ""
+        ],
+        [
+         "7",
+         ""
+        ],
+        [
+         "8",
+         "70"
+        ]
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 190.5
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        30.0,
+        469.7,
+        570.0,
+        675.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 153.9,
+        "height_pt": 205.3
+       }
+      }
+     ],
+     "text": "Find an expression, in terms of L, for the number of squares in a rectangle of width 4 and\nlength L.\n................................................. [2]",
+     "marks": 2,
+     "path": "4(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(ii)",
+       "text": "10L – 10 oe",
+       "codes": [],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.380001068115234,
+          254.6,
+          549.0,
+          279.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find an expression, in terms of <i>L</i>, for the number of squares in a rectangle of width 4 and length <i>L</i>.",
+       "text": "Find an expression, in terms of L, for the number of squares in a rectangle of width 4 and length L."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "4(b)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This is another method to count squares in rectangles. Step A Multiply the width by the length of the rectangle 1st product Step B Subtract 1 from the width and 1 from the length and multiply 2nd product Step C Repeat step B until the width is 1 Step D Add together all the products",
+   "text": "This is another method to count squares in rectangles. Step A Multiply the width by the length of the rectangle 1st product Step B Subtract 1 from the width and 1 from the length and multiply 2nd product Step C Repeat step B until the width is 1 Step D Add together all the products"
+  },
+  {
+   "type": "text",
+   "html": "Example Rectangle of width 3 and length 5 Step A 3 # 5 1st product = 15 Step B (3 - 1) # (5 - 1) = 2 # 4 2nd product = 8 Step C (2 - 1) # (4 - 1) = 1 # 3 3rd product = 3",
+   "text": "Example Rectangle of width 3 and length 5 Step A 3 # 5 1st product = 15 Step B (3 - 1) # (5 - 1) = 2 # 4 2nd product = 8 Step C (2 - 1) # (4 - 1) = 1 # 3 3rd product = 3"
+  },
+  {
+   "type": "text",
+   "html": "Width is now 1 so move to step D",
+   "text": "Width is now 1 so move to step D"
+  },
+  {
+   "type": "text",
+   "html": "Step D 15 + 8 + 3 = 26",
+   "text": "Step D 15 + 8 + 3 = 26"
+  }
+ ]
+}

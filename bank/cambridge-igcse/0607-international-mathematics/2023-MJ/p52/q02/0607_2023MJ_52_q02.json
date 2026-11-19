@@ -1,0 +1,559 @@
+{
+ "id": "0607_2023MJ_52_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    405.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 37.6,
+    "height_pt": 348.7
+   }
+  }
+ ],
+ "text": "2\nRectangles of width 2\nLength 2\n+\n4 squares\n1 square\n+\nof side 1\nof side 2\nTotal = 5 squares\nLength 3\n+\n+\n6 squares\n1 square\n1 square\n+\n+\nof side 1\nof side 2\nof side 2\nTotal = 8 squares",
+ "marks": 12,
+ "figures": [
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    52.7,
+    294.4,
+    544.6,
+    438.8
+   ],
+   "id": "0607_2023MJ_52_q02bi_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)(i)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      408.2,
+      570.0,
+      603.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 3,
+      "answer_line": null,
+      "working_gap_pt": 46.1,
+      "height_pt": 195.3
+     }
+    }
+   ],
+   "text": "Draw lines on these rectangles and write the number of squares under each one to show there is a\ntotal of 11 squares.\nLength 4\n+\n+\n.................... squares\n.................... squares\n.................... square\n+\n+\nof side 1\nof side 2\nof side 2\nTotal = 11 squares [3]",
+   "marks": 3,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "8\n2\n1",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        126.5,
+        549.0,
+        183.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Draw lines on these rectangles and write the number of squares under each one to show there is a total of 11 squares. Length 4",
+     "text": "Draw lines on these rectangles and write the number of squares under each one to show there is a total of 11 squares. Length 4"
+    },
+    {
+     "type": "text",
+     "html": "+ +",
+     "text": "+ +"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "square"
+    },
+    {
+     "type": "text",
+     "html": "of side 1 of side 2 of side 2",
+     "text": "of side 1 of side 2 of side 2"
+    },
+    {
+     "type": "text",
+     "html": "Total = 11 squares",
+     "text": "Total = 11 squares"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        56.8,
+        570.0,
+        486.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 208.1,
+        "height_pt": 429.2
+       }
+      }
+     ],
+     "text": "Complete the table.\nYou may use the grid below the table to help you.\nRectangles of width 2\nLength of rectangle\nTotal number of squares\n2\n5\n3\n8\n4\n11\n5\n[2]",
+     "marks": 2,
+     "path": "2(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(b)(i)",
+       "text": "14\n3 common differences of 3 seen\nor correct 2 by 5 diagram(s) for all 14\nsquares seen clearly\nor 10 [+] 2 [+] 2 not from a wrong diagram\nfor 2 by 2 squares, (e.g. a repeat)\nor all 14 squares numbered",
+       "codes": [
+        "1",
+        "C1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.380001068115234,
+          183.3,
+          549.0,
+          295.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the table.",
+       "text": "Complete the table."
+      },
+      {
+       "type": "text",
+       "html": "You may use the grid below the table to help you.",
+       "text": "You may use the grid below the table to help you."
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "Rectangles of width 2",
+         ""
+        ],
+        [
+         "Length of rectangle",
+         "Total number of squares"
+        ],
+        [
+         "2",
+         "5"
+        ],
+        [
+         "3",
+         "8"
+        ],
+        [
+         "4",
+         "11"
+        ],
+        [
+         "5",
+         ""
+        ]
+       ]
+      },
+      {
+       "type": "figure",
+       "id": "0607_2023MJ_52_q02bi_diagram1",
+       "caption": null
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 208.1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        488.7,
+        570.0,
+        655.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 127.9,
+        "height_pt": 166.3
+       }
+      }
+     ],
+     "text": "Find the total number of squares inside a rectangle of width 2 and length 8.\n................................................... [2]",
+     "marks": 2,
+     "path": "2(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(b)(ii)",
+       "text": "16 + 4 + 3 [= 23] oe\nor differences of 3 seen between 14 and 17,\nand 17 and 20\nor sequence continued to 23\n23",
+       "codes": [
+        "C1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.380001068115234,
+          295.4,
+          549.0,
+          382.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the total number of squares inside a rectangle of width 2 and length 8.",
+       "text": "Find the total number of squares inside a rectangle of width 2 and length 8."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "2(b)"
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      145.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 36.9,
+      "height_pt": 88.2
+     }
+    }
+   ],
+   "text": "Can a rectangle of width 2 have a total of exactly 30 squares inside?\nShow how you decide.\n..................................................................................................................................................... [1]",
+   "marks": 1,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "No and 26, 29\nor\nNo and 29, 32",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        382.3,
+        549.0,
+        432.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Can a rectangle of width 2 have a total of exactly 30 squares inside? Show how you decide.",
+     "text": "Can a rectangle of width 2 have a total of exactly 30 squares inside? Show how you decide."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        147.8,
+        570.0,
+        275.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 75.9,
+        "height_pt": 127.2
+       }
+      }
+     ],
+     "text": "Find an expression, in terms of L, for the total number of squares in a rectangle of width 2 and\nlength L.\n................................................. [2]",
+     "marks": 2,
+     "path": "2(d)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(d)(i)",
+       "text": "3L – 1 oe",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.380001068115234,
+          432.0,
+          549.0,
+          456.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find an expression, in terms of<i> L</i>, for the total number of squares in a rectangle of width 2 and",
+       "text": "Find an expression, in terms of L, for the total number of squares in a rectangle of width 2 and"
+      },
+      {
+       "type": "text",
+       "html": "length <i>L</i>.",
+       "text": "length L."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        290.8,
+        570.0,
+        405.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 75.9,
+        "height_pt": 114.2
+       }
+      }
+     ],
+     "text": "Calculate the total number of squares in a rectangle of width 2 and length 170.\n................................................. [2]",
+     "marks": 2,
+     "path": "2(d)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(d)(ii)",
+       "text": "3 × 170 − 1\n509",
+       "codes": [],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.380001068115234,
+          456.4,
+          549.0,
+          518.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the total number of squares in a rectangle of width 2 and length 170.",
+       "text": "Calculate the total number of squares in a rectangle of width 2 and length 170."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "2(d)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 12,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Rectangles of width 2",
+   "text": "Rectangles of width 2"
+  },
+  {
+   "type": "text",
+   "html": "Length 2",
+   "text": "Length 2"
+  },
+  {
+   "type": "text",
+   "html": "+",
+   "text": "+"
+  },
+  {
+   "type": "text",
+   "html": "squares + 1 square of side 1 of side 2",
+   "text": "squares + 1 square of side 1 of side 2"
+  },
+  {
+   "type": "text",
+   "html": "Total = 5 squares",
+   "text": "Total = 5 squares"
+  },
+  {
+   "type": "text",
+   "html": "Length 3",
+   "text": "Length 3"
+  },
+  {
+   "type": "text",
+   "html": "+ +",
+   "text": "+ +"
+  },
+  {
+   "type": "text",
+   "html": "squares + 1 square + 1 square of side 1 of side 2 of side 2",
+   "text": "squares + 1 square + 1 square of side 1 of side 2 of side 2"
+  },
+  {
+   "type": "text",
+   "html": "Total = 8 squares",
+   "text": "Total = 8 squares"
+  }
+ ]
+}

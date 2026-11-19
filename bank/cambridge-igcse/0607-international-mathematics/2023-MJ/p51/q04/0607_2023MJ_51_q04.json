@@ -1,0 +1,474 @@
+{
+ "id": "0607_2023MJ_51_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    106.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 49.2
+   }
+  }
+ ],
+ "text": "4\nA grid is n by n.\nIn a different game a winning line is one  less than n.\nTo make a line, the s must be in squares that are next to each other.",
+ "marks": 12,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    153.0,
+    162.5,
+    444.29998779296875,
+    255.89999389648438
+   ],
+   "id": "0607_2023MJ_51_q04a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    120.7,
+    366.5,
+    476.6,
+    456.9
+   ],
+   "id": "0607_2023MJ_51_q04a_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    114.80000305175781,
+    672.4000244140625,
+    482.5,
+    777.5
+   ],
+   "id": "0607_2023MJ_51_q04b_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  },
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    76.5,
+    287.7,
+    520.8,
+    429.1
+   ],
+   "id": "0607_2023MJ_51_q04c_diagram4",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      108.8,
+      570.0,
+      475.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 100.7,
+      "height_pt": 366.7
+     }
+    }
+   ],
+   "text": "In a 3 by 3 grid you need two s in a line to win.\nThese diagrams show some of the diagonal winning lines.\nComplete the table to find the number of winning lines with two s.\nYou may use the grids below the table to help you.\nNumber of winning lines\nSize of grid\nHorizontal\nVertical\nDiagonal\nTotal\n3 by 3\n20\n[2]",
+   "marks": 2,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "3 by 3 6\n6\n8\n20\nDiagram(s) implying 6 horizontal or 6 vertical\nwinning lines",
+     "codes": [
+      "1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        689.7,
+        548.9400024414062,
+        755.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "In a 3 by 3 grid you need two s in a line to win. These diagrams show some of the diagonal winning lines.",
+     "text": "In a 3 by 3 grid you need two s in a line to win. These diagrams show some of the diagonal winning lines."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2023MJ_51_q04a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Complete the table to find the number of winning lines with two s. You may use the grids below the table to help you.",
+     "text": "Complete the table to find the number of winning lines with two s. You may use the grids below the table to help you."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Size of grid",
+       "Number of winning lines Horizontal Vertical Diagonal Total",
+       "",
+       "",
+       ""
+      ],
+      [
+       "3 by 3",
+       "",
+       "",
+       "",
+       "20"
+      ]
+     ]
+    },
+    {
+     "type": "figure",
+     "id": "0607_2023MJ_51_q04a_diagram2",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 100.7
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      506.8,
+      570.0,
+      796.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 136.6,
+      "height_pt": 289.7
+     }
+    }
+   ],
+   "text": "In a 4 by 4 grid you need three s in a line to win.\nComplete the table to find the number of winning lines with three s.\nYou may use the grids below the table to help you.\nNumber of winning lines\nSize of grid\nHorizontal\nVertical\nDiagonal\nTotal\n4 by 4\n[2]",
+   "marks": 2,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "4 by 4 8\n8\n8\n24\nDiagram showing exactly 4 diagonals in the\nsame direction",
+     "codes": [
+      "1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        89.4,
+        550.9186401367188,
+        151.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "In a 4 by 4 grid you need three s in a line to win. Complete the table to find the number of winning lines with three s. You may use the grids below the table to help you.",
+     "text": "In a 4 by 4 grid you need three s in a line to win. Complete the table to find the number of winning lines with three s. You may use the grids below the table to help you."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Size of grid",
+       "Number of winning lines Horizontal Vertical Diagonal Total",
+       "",
+       "",
+       ""
+      ],
+      [
+       "4 by 4",
+       "",
+       "",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "figure",
+     "id": "0607_2023MJ_51_q04b_diagram3",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 136.6
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      448.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 149.1,
+      "height_pt": 391.2
+     }
+    }
+   ],
+   "text": "Copy your results from part (a) and part (b) into this table.\nComplete the table.\nYou may use the grids below the table to help you.\nNumber of winning lines\nSize of grid\nHorizontal\nVertical\nDiagonal\nTotal\n3 by 3\n4 by 4\n5 by 5\nn by n\n[4]",
+   "marks": 4,
+   "path": "4(c)",
+   "mark_scheme": [
+    {
+     "label": "4(c)",
+     "text": "Number of winning lines.\nSize of\ngrid\nH\nV\nD\nT\n3 by 3\n6\n6\n8\n20\n4 by 4\n8\n8\n8\n24\n5 by 5\n10\n10\n8\n28\nn by n\n2n\n2n\n8\n4n + 8",
+     "codes": [
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        151.0,
+        550.9186401367188,
+        295.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Copy your results from <b>part (a)</b> and <b>part (b)</b> into this table. Complete the table. You may use the grids below the table to help you.",
+     "text": "Copy your results from part (a) and part (b) into this table. Complete the table. You may use the grids below the table to help you."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Size of grid",
+       "Number of winning lines Horizontal Vertical Diagonal Total",
+       "",
+       "",
+       ""
+      ],
+      [
+       "3 by 3",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "4 by 4",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "5 by 5",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "<i>n</i> by <i>n</i>",
+       "",
+       "",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "figure",
+     "id": "0607_2023MJ_51_q04c_diagram4",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 149.1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      450.7,
+      570.0,
+      786.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 231.9,
+      "height_pt": 335.3
+     }
+    }
+   ],
+   "text": "In an n by n grid you need (n – 1) s in a line to win.\nn must be at least 3.\nIn one grid the total number of winning lines is a square number less than 50.\nFind the grid size.\n................................................. [4]",
+   "marks": 4,
+   "path": "4(d)",
+   "mark_scheme": [
+    {
+     "label": "4(d)",
+     "text": "4n + 8 = 36\nTwo correct stages shown in the solution of their\nequation\n7 by 7\nAlternative Method\nExtending correct totals to 36\nShowing grid sizes or values of n with totals\nor 4 × 6 + 8 = 32 and 4 × 7 + 8 = 36\n7 by 7",
+     "codes": [
+      "C2",
+      "C1",
+      "1",
+      "(C2)",
+      "(C1)"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        295.6,
+        550.9186401367188,
+        521.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "In an <i>n</i> by <i>n</i> grid you need (<i>n</i> – 1) s in a line to win. <i>n</i> must be at least 3. In one grid the total number of winning lines is a square number less than 50. Find the grid size.",
+     "text": "In an n by n grid you need (n – 1) s in a line to win. n must be at least 3. In one grid the total number of winning lines is a square number less than 50. Find the grid size."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 12,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A grid is <i>n</i> by <i>n</i>. In a different game a winning line is one less than <i>n</i>. To make a line, the s must be in squares that are next to each other.",
+   "text": "A grid is n by n. In a different game a winning line is one less than n. To make a line, the s must be in squares that are next to each other."
+  }
+ ]
+}
