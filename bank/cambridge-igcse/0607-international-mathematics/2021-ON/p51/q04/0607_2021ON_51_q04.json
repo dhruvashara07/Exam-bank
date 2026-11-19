@@ -1,0 +1,101 @@
+{
+ "id": "0607_2021ON_51_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    404.9,
+    570.0,
+    792.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 218.9,
+    "height_pt": 387.1
+   }
+  }
+ ],
+ "text": "2\n2\n2\n2\n4\nWhen    a\nb\nc\nd\nthen (a, b, c, d) is a 4-square set.\n+\n+\n=\nIt is possible to make a 4-square set using two rows in the table.\n2\n2\n2\nExample   From the table   row two\n5\n12\n13\n+\n=\n2\n2\n2\nrow six\n13\n84\n85\n+\n=\nReplace 132 in the second equation with 5\n2\n2\n2\n2\n2\n2\n12\nfrom the first equation:\n5\n12\n84\n85\n.\n+\n+\n+\n=\nSo (5,   12,   84,   85) is a 4-square set.\nUse the same method with rows from the table to find two more 4-square sets.\n(......... , ......... , ......... , .........) and (......... , ......... , ......... , .........) [3]",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "4",
+   "text": "Using (3, 4, 5) and (5, 12, 13)\nor (7, 24, 25) and (25, 312, 313)\n(3, 4, 12, 13)\n(7, 24, 312, 313)",
+   "codes": [
+    "C1",
+    "2"
+   ],
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      46.619998931884766,
+      602.5,
+      549.0,
+      702.0
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "When <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup> + <i>c</i><sup>2</sup> = <i>d</i><sup>2</sup> then (<i>a</i>, <i>b</i>, <i>c</i>, <i>d</i>) is a <i>4-square set</i>. It is possible to make a 4-square set using two rows in the table. Example From the table row two 5<sup>2</sup> + 12<sup>2</sup> = 13<sup>2</sup>",
+   "text": "When a2 + b2 + c2 = d2 then (a, b, c, d) is a 4-square set. It is possible to make a 4-square set using two rows in the table. Example From the table row two 52 + 122 = 132"
+  },
+  {
+   "type": "text",
+   "html": "row six 13<sub>2</sub> + 84<sup>2</sup> = 85<sup>2</sup>",
+   "text": "row six 132 + 842 = 852"
+  },
+  {
+   "type": "text",
+   "html": "Replace 13<sup>2</sup> in the second equation with 5<sup>2</sup> + 12<sup>2</sup> from the first equation: 5<sup>2</sup> + 12<sup>2</sup> + 84<sup>2</sup> = 85<sup>2</sup>. So (5, 12, 84, 85) is a 4-square set. Use the same method with rows from the table to find two more 4-square sets.",
+   "text": "Replace 132 in the second equation with 52 + 122 from the first equation: 52 + 122 + 842 = 852. So (5, 12, 84, 85) is a 4-square set. Use the same method with rows from the table to find two more 4-square sets."
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "(",
+   "unit": ")"
+  },
+  {
+   "type": "answer",
+   "kind": "space",
+   "height_pt": 218.9
+  },
+  {
+   "type": "marks",
+   "value": 3
+  }
+ ]
+}

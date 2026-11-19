@@ -1,0 +1,624 @@
+{
+ "id": "0607_2021ON_51_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    134.8
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.7,
+    "height_pt": 78.0
+   }
+  }
+ ],
+ "text": "6\nHere is another method for finding a 4-square set (a, b, c, d).\nChoose two positive integers a and b with a less than b.\n2\n2\n2\n2\na\nb\n1\na\nb\n1\n+\n-   and\n+\n+   make the 4-square set (a, b, c, d).\nThen   c\nd\n=\n=\n2\n2",
+ "marks": 15,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      134.8,
+      570.0,
+      158.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.2
+     }
+    }
+   ],
+   "text": "Use this to find a 4-square set when",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        30.0,
+        160.8,
+        570.0,
+        314.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 114.9,
+        "height_pt": 153.2
+       }
+      }
+     ],
+     "text": "a\n2\nand b\n=,\n3\n=\n(2,   3, ......... , .........) [3]",
+     "marks": 3,
+     "path": "6(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(a)(i)",
+       "text": "2\n2\n2\n2\n2 +3 −1\n2 +3 +1\nor\n2\n2\n(2, 3, 6, 7)",
+       "codes": [
+        "C1",
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.619998931884766,
+          249.6,
+          549.0,
+          314.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "<i>a</i> = 2 and <i>b</i> = 3,",
+       "text": "a = 2 and b = 3,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "(2, 3,",
+       "unit": ")"
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 114.9
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        30.0,
+        316.8,
+        570.0,
+        470.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 114.9,
+        "height_pt": 153.2
+       }
+      }
+     ],
+     "text": "a\n2\nand d\n4\n3\n.\n=\n=\n(2, ......... , ......... , 43) [3]",
+     "marks": 3,
+     "path": "6(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "6(a)(ii)",
+       "text": "2\n2\n2 +b +1\n= 43\n2\n(2, 9, 42, 43)",
+       "codes": [
+        "C1",
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.619998931884766,
+          314.4,
+          549.0,
+          379.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "<i>a</i> = 2 and <i>d</i> = 43.",
+       "text": "a = 2 and d = 43."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "(2,",
+       "unit": ", 43)"
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 114.9
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "6(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Use this to find a 4-square set when",
+     "text": "Use this to find a 4-square set when"
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        30.0,
+        472.8,
+        570.0,
+        684.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 16.5,
+        "height_pt": 211.7
+       }
+      }
+     ],
+     "text": "Use your answers to part (a) and any patterns you notice to complete the table for\n4-square sets that start with 2.\na\nb\nc\nd\n2\n3\n2\n5\n14\n15\n2\n7\n26\n27\n2\n43\n2\n[3]",
+     "marks": 3,
+     "path": "6(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(b)(i)",
+       "text": "At least 3 correct differences in column b,\nc or d\n2\n2\n2\n2\n2 +11 −1\n2 +11 +1\nor\nor\n2\n2\na\nb\nc\nd\n2\n3\n6\n7\n2\n5\n14\n15\n2\n7\n26\n27\n2\n9\n42\n43\n2\n11\n62\n63",
+       "codes": [
+        "C1",
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.619998931884766,
+          379.1,
+          549.0,
+          617.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use your answers to <b>part (a)</b> and any patterns you notice to complete the table for",
+       "text": "Use your answers to part (a) and any patterns you notice to complete the table for"
+      },
+      {
+       "type": "text",
+       "html": "4-square sets that start with 2.",
+       "text": "4-square sets that start with 2."
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "<i>a</i>",
+         "<i>b</i>",
+         "<i>c</i>",
+         "<i>d</i>"
+        ],
+        [
+         "2",
+         "3",
+         "",
+         ""
+        ],
+        [
+         "2",
+         "5",
+         "14",
+         "15"
+        ],
+        [
+         "2",
+         "7",
+         "26",
+         "27"
+        ],
+        [
+         "2",
+         "",
+         "",
+         "43"
+        ],
+        [
+         "2",
+         "",
+         "",
+         ""
+        ]
+       ]
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        30.0,
+        687.2,
+        570.0,
+        775.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 49.9,
+        "height_pt": 88.3
+       }
+      }
+     ],
+     "text": "Write down an equation connecting c and d.\n................................................. [1]",
+     "marks": 1,
+     "path": "6(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "6(b)(ii)",
+       "text": "d = c + 1 oe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.619998931884766,
+          617.3,
+          549.0,
+          641.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Write down an equation connecting <i>c</i> and <i>d</i>.",
+       "text": "Write down an equation connecting c and d."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "6(b)"
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      64.6,
+      570.0,
+      272.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 127.9,
+      "height_pt": 207.4
+     }
+    }
+   ],
+   "text": "2\n2\n2\n2\na\nb\n1\na\nb\n1\n+\n-   and\n+\n+   do not give a\n(c) When a and b are both even then   c\nd\n=\n=\n2\n2\n4-square set.\nGive an example to show this.\n[2]",
+   "marks": 2,
+   "path": "6(c)",
+   "mark_scheme": [
+    {
+     "label": "6(c)",
+     "text": "Substituting a and b both even in\n2\n2\n2\n2\na +b −1\na +b +1\nor\n2\n2\nA correct numerical value\nand ‘not an integer’ oe",
+     "codes": [
+      "M1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        641.8,
+        549.0,
+        735.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "When <i>a</i> and <i>b</i> are both even then <i>c</i> = \\(\\frac{a^{2} + b^{2} - 1}{2}\\) and <i>d</i> = \\(\\frac{a^{2} + b^{2} + 1}{2}\\) do not give a 4-square set. Give an example to show this.",
+     "text": "When a and b are both even then c = (a2+b2-1)/(2) and d = (a2+b2+1)/(2) do not give a 4-square set. Give an example to show this."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 127.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      274.5,
+      570.0,
+      324.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 10.7,
+      "height_pt": 49.5
+     }
+    }
+   ],
+   "text": "When a and b are both odd there are no 4-square sets.\nIn a 4-square set, d\n23\n.\n=",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        326.6,
+        570.0,
+        454.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 88.9,
+        "height_pt": 127.4
+       }
+      }
+     ],
+     "text": "2\n2\n(i) Show that a\nb\n45\n.\n+\n=\n[1]",
+     "marks": 1,
+     "path": "6(d)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(d)(i)",
+       "text": "2\n2\na +b +1\n= 23\n2\n2\n2\nand a + b + 1 = 46\nor 23 × 2 – 1 = 45\nOR\n2\n2\na +b −1\nc = 22 and\n= 2\n2\n2\n2\nand a + b – 1 = 44\nor 22 × 2 + 1 = 45",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.619998931884766,
+          84.8,
+          549.0,
+          243.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Show that <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup> = 45.",
+       "text": "Show that a2 + b2 = 45."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 88.9
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        456.5,
+        570.0,
+        688.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 192.9,
+        "height_pt": 231.5
+       }
+      }
+     ],
+     "text": "Find a 4-square set when d\n23\n.\n=\n(......... , ......... , ......... , 23) [2]",
+     "marks": 2,
+     "path": "6(d)(ii)",
+     "mark_scheme": [
+      {
+       "label": "6(d)(ii)",
+       "text": "(3, 6, 22, 23)",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.619998931884766,
+          243.8,
+          549.0,
+          289.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find a 4-square set when <i>d</i> = 23.",
+       "text": "Find a 4-square set when d = 23."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "(",
+       "unit": ", 23)"
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 192.9
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "6(d)",
+   "content": [
+    {
+     "type": "text",
+     "html": "When <i>a</i> and <i>b</i> are both odd there are no 4-square sets. In a 4-square set, <i>d</i> = 23.",
+     "text": "When a and b are both odd there are no 4-square sets. In a 4-square set, d = 23."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 15,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Here is another method for finding a 4-square set (<i>a</i>, <i>b</i>, <i>c</i>, <i>d</i>). Choose two positive integers <i>a</i> and <i>b</i> with <i>a</i> less than <i>b</i>. Then <i>c</i> = \\(\\frac{a^{2} + b^{2} - 1}{2}\\) and <i>d</i> = \\(\\frac{a^{2} + b^{2} + 1}{2}\\) make the 4-square set (<i>a</i>, <i>b</i>, <i>c</i>, <i>d</i>).",
+   "text": "Here is another method for finding a 4-square set (a, b, c, d). Choose two positive integers a and b with a less than b. Then c = (a2+b2-1)/(2) and d = (a2+b2+1)/(2) make the 4-square set (a, b, c, d)."
+  }
+ ]
+}

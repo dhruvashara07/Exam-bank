@@ -1,0 +1,106 @@
+{
+ "id": "0607_2021ON_61_q07",
+ "number": 7,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    793.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 619.8,
+    "height_pt": 736.2
+   }
+  }
+ ],
+ "text": "7\nThe method in Question 5 to find Pythagorean sets of four is:\n•\nChoose any even integer for b.\n•\nCalculate ac using Question 4(a).\n•\nFind all the possible pairs of integers for a and c, where a\n1.\nc\nUse this method to find two basic Pythagorean sets of four where the smallest integer, a, is 2.\n(........... , ........... , ........... , ...........)  and  (........... , ........... , ........... , ...........) [5]",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "7",
+   "text": "Even b identified\nCorresponding value for c with correct\nworking shown\nSubstitution into d = 2 + c oe\n2\n2\n2\nor into d = 2 + (their b) +(their c)\noe\nTwo from\n(2, 6, 9, 11)\n(2, 10, 25, 27)\n(2, 14, 49, 51)\n(2, 18, 81, 83)\netc.",
+   "codes": [
+    "C1",
+    "C1",
+    "C1",
+    "2"
+   ],
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      46.619998931884766,
+      261.4,
+      549.1799926757812,
+      470.7
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The method in <b>Question 5</b> to find Pythagorean sets of four is:",
+   "text": "The method in Question 5 to find Pythagorean sets of four is:"
+  },
+  {
+   "type": "list",
+   "items": [
+    "Choose any even integer for <i>b</i>.",
+    "Calculate <i>ac</i> using <b>Question 4(a)</b>.",
+    "Find all the possible pairs of integers for <i>a</i> and <i>c</i>, where <i>a</i> 1 <i>c</i>."
+   ]
+  },
+  {
+   "type": "text",
+   "html": "Use this method to find two basic Pythagorean sets of four where the smallest integer, <i>a</i>, is 2.",
+   "text": "Use this method to find two basic Pythagorean sets of four where the smallest integer, a, is 2."
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "(",
+   "unit": ")"
+  },
+  {
+   "type": "answer",
+   "kind": "space",
+   "height_pt": 619.8
+  },
+  {
+   "type": "marks",
+   "value": 5
+  }
+ ]
+}

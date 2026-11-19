@@ -1,0 +1,209 @@
+{
+ "id": "0607_2021ON_61_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    322.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 26.6,
+    "height_pt": 265.7
+   }
+  }
+ ],
+ "text": "2\nS\nNOT TO\nSCALE\nc\nd\nR\nb\nP\na\nQ\nThe diagram shows a cuboid with sides of integer length a, b and c.\nIts diagonal, PS, has integer length d.",
+ "marks": 2,
+ "figures": [
+  {
+   "caption": null,
+   "page": 3,
+   "bbox": [
+    174.0,
+    71.7,
+    423.6,
+    277.3
+   ],
+   "id": "0607_2021ON_61_q02_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      325.0,
+      570.0,
+      387.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 23.9,
+      "height_pt": 62.5
+     }
+    }
+   ],
+   "text": "Use Pythagoras’ Theorem in triangle PQR to write down an expression for PR2 in terms of a and b.\n................................................. [1]",
+   "marks": 1,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "2\n2\na + b",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        187.2,
+        549.1799926757812,
+        211.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use Pythagoras’ Theorem in triangle <i>PQR</i> to write down an expression for <i>PR</i><sup>2</sup> in terms of <i>a</i> and <i>b</i>.",
+     "text": "Use Pythagoras’ Theorem in triangle PQR to write down an expression for PR2 in terms of a and b."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      390.0,
+      570.0,
+      526.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 75.9,
+      "height_pt": 136.0
+     }
+    }
+   ],
+   "text": "Use your answer to part (a), and Pythagoras’ Theorem in triangle PRS, to show that\n2\n2\n2\n2\nd\na\nb\nc\n.\n=\n+\n+\n[1]",
+   "marks": 1,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "2\n2\n2\nd = PR +c\n2\n2\n2\n2\nleading to d =a +b +c",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        211.6,
+        549.1799926757812,
+        255.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your answer to <b>part (a)</b>, and Pythagoras’ Theorem in triangle <i>PRS</i>, to show that",
+     "text": "Use your answer to part (a), and Pythagoras’ Theorem in triangle PRS, to show that"
+    },
+    {
+     "type": "text",
+     "html": "<i>d</i><sup>2</sup> = <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup> + <i>c</i><sup>2</sup> .",
+     "text": "d2 = a2 + b2 + c2 ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 75.9
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 2,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>2 </b>",
+   "text": "2"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2021ON_61_q02_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The diagram shows a cuboid with sides of integer length <i>a</i>, <i>b</i> and <i>c</i>. Its diagonal, <i>PS</i>, has integer length <i>d</i>.",
+   "text": "The diagram shows a cuboid with sides of integer length a, b and c. Its diagonal, PS, has integer length d."
+  }
+ ]
+}

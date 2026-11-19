@@ -1,0 +1,101 @@
+{
+ "id": "0607_2021ON_61_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    792.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 1,
+    "answer_line": null,
+    "working_gap_pt": 619.4,
+    "height_pt": 735.7
+   }
+  }
+ ],
+ "text": "5\nHere is a method for finding Pythagorean sets of four using Question 4:\n•\nChoose any even integer for b.\n•\nCalculate ac using Question 4(a).\n•\nFind all the possible pairs of integers for a and c, where a\n1.\nc\nUse this method to find all the Pythagorean sets of four when you choose b\n8\n.\n=\n............................................................................................................................................................. [7]",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "5",
+   "text": "2\n8\n2\nac = 32\n1, 32\n2, 16\n4, 8\nSubstitution of one of their pairs into\n2\n2\n2\na + c or a + 8 + c\noe\n(1, 8, 32, 33)\n(2, 8, 16, 18)\n(4, 8, 8, 12)",
+   "codes": [
+    "C1",
+    "1",
+    "C1",
+    "C1",
+    "3"
+   ],
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      46.619998931884766,
+      531.0,
+      549.1799926757812,
+      738.5
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Here is a method for finding Pythagorean sets of four using <b>Question 4</b>:",
+   "text": "Here is a method for finding Pythagorean sets of four using Question 4:"
+  },
+  {
+   "type": "list",
+   "items": [
+    "Choose any even integer for <i>b</i>.",
+    "Calculate <i>ac</i> using <b>Question 4(a)</b>.",
+    "Find all the possible pairs of integers for <i>a</i> and <i>c</i>, where <i>a</i> 1 <i>c</i>."
+   ]
+  },
+  {
+   "type": "text",
+   "html": "Use this method to find all the Pythagorean sets of four when you choose <i>b</i> = 8.",
+   "text": "Use this method to find all the Pythagorean sets of four when you choose b = 8."
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
+   "lines": 1
+  },
+  {
+   "type": "marks",
+   "value": 7
+  }
+ ]
+}

@@ -1,0 +1,352 @@
+{
+ "id": "0607_2021ON_41_q07",
+ "number": 7,
+ "segments": [],
+ "text": "",
+ "marks": 11,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      65.8,
+      570.0,
+      180.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 49.9,
+      "height_pt": 114.2
+     }
+    }
+   ],
+   "text": "The nth term of a sequence is   (\nnn\n12\n)(\nn\n1\n).\n+\n+\n7\n6\nFind the first three terms of this sequence.\n................. , ................. , ................. [2]",
+   "marks": 2,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "1, 5, 14,",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        339.9,
+        549.2400512695312,
+        364.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> The <i>n</i>th term of a sequence is \\(\\frac{n (n + 1)(2n + 1)}{6}\\) .",
+     "text": "The nth term of a sequence is (n(n+1)(2n+1))/(6) ."
+    },
+    {
+     "type": "text",
+     "html": "Find the first three terms of this sequence.",
+     "text": "Find the first three terms of this sequence."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      182.8,
+      570.0,
+      245.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 10.4,
+      "height_pt": 62.2
+     }
+    }
+   ],
+   "text": "For each of the following sequences:\n• find the next two terms\n• find an expression for the nth term.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        247.8,
+        570.0,
+        375.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 2,
+        "answer_line": null,
+        "working_gap_pt": 62.9,
+        "height_pt": 127.2
+       }
+      }
+     ],
+     "text": "11          8          5          2\nNext two terms  ....................... , ......................\nnth term  ................................................ [3]",
+     "marks": 3,
+     "path": "7(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "7(b)(i)",
+       "text": "–1, –4\n14 – 3n oe final answer",
+       "codes": [
+        "B1",
+        "B2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.619998931884766,
+          364.3,
+          549.2400512695312,
+          425.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "11 8 5 2",
+       "text": "11 8 5 2"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Next two terms"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "nth term"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        377.8,
+        570.0,
+        531.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 2,
+        "answer_line": null,
+        "working_gap_pt": 88.9,
+        "height_pt": 153.2
+       }
+      }
+     ],
+     "text": "-\n2\n-          0          4          10          18\n2\nNext two terms  ....................... , ......................\nnth term  ................................................ [3]",
+     "marks": 3,
+     "path": "7(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "7(b)(ii)",
+       "text": "28, 40\nn² – 3n oe final answer",
+       "codes": [
+        "B1",
+        "B2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.619998931884766,
+          425.8,
+          549.2400512695312,
+          487.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "-2 -2 0 4 10 18",
+       "text": "-2 -2 0 4 10 18"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Next two terms"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "nth term"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        533.8,
+        570.0,
+        713.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 2,
+        "answer_line": null,
+        "working_gap_pt": 114.9,
+        "height_pt": 179.2
+       }
+      }
+     ],
+     "text": "3          5          9          17          33\nNext two terms  ....................... , ......................\nnth term  ................................................ [3]",
+     "marks": 3,
+     "path": "7(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "7(b)(iii)",
+       "text": "65, 129\nn\n2 + 1 oe final answer",
+       "codes": [
+        "B1",
+        "B2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.619998931884766,
+          487.4,
+          549.2400512695312,
+          536.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "3 5 9 17 33",
+       "text": "3 5 9 17 33"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Next two terms"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "nth term"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "7(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "For each of the following sequences:",
+     "text": "For each of the following sequences:"
+    },
+    {
+     "type": "list",
+     "items": [
+      "find the next two terms",
+      "find an expression for the <i>n</i>th term."
+     ]
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_long_answer",
+ "total_marks": 11,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

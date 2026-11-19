@@ -1,0 +1,203 @@
+{
+ "id": "0607_2021ON_63_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    57.9,
+    570.0,
+    92.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 34.1
+   }
+  }
+ ],
+ "text": "3\nThe values of N that can be written as the sum of two square numbers are of the form\n4+\nk\nr\n,\nwhere the remainder r is a constant.",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      96.9,
+      570.0,
+      359.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 223.6,
+      "height_pt": 262.1
+     }
+    }
+   ],
+   "text": "Explain why r can be 0, 1 or 2 but cannot be 3.\n[3]",
+   "marks": 3,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "2\n2\n(even) + (even) gives remainder 0\n2\n2\n(odd) + (odd) gives remainder 2\n[Remaining case] (odd) + (even) gives remainder 1\n2\n2\nand\nThese are the only possible cases so r cannot be 3 oe",
+     "codes": [
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.1799926757812,
+        176.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Explain why <i>r</i> can be 0, 1 or 2 but cannot be 3.",
+     "text": "Explain why r can be 0, 1 or 2 but cannot be 3."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 223.6
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      374.6,
+      570.0,
+      697.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 257.9,
+      "height_pt": 322.4
+     }
+    },
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      421.0,
+      570.0,
+      438.5
+     ],
+     "continued": true,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 0.4,
+      "height_pt": 17.5
+     }
+    }
+   ],
+   "text": "2\n2\n(b) N\na\nb\n=\n+\nFind all the values of N, where\n10\n1\nN\n1\n30\n,\nthat are of the form k\n4\n+.\n1\n................................................. [3]\nTHE MODELLING TASK STARTS ON PAGE 8.",
+   "marks": 3,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "Two from\n2\n2\n13 = 3 + 2\noe\n2\n2\n17 = 4 + 1\noe\n2\n2\n18 = 3 + 3\noe\n2\n2\n20 = 2 + 4\noe\n25 = 4 + 3\n2\n2\noe\n2\n2\n26 = 1 + 5\noe\n2\n2\n29 = 5 + 2\noe\n13, 17, 25, 29",
+     "codes": [
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        176.2,
+        549.1799926757812,
+        314.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<i>N</i> = <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup> Find all the values of <i>N</i>, where 10 1 <i>N</i> 1 30, that are of the form 4<i>k</i> + 1.",
+     "text": "N = a2 + b2 Find all the values of N, where 10 1 N 1 30, that are of the form 4k + 1."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    },
+    {
+     "type": "text",
+     "html": "<b>THE MODELLING TASK STARTS ON PAGE 8.</b>",
+     "text": "THE MODELLING TASK STARTS ON PAGE 8."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The values of <i>N</i> that can be written as the sum of two square numbers are of the form 4<i>k</i> + <i>r</i>, where the remainder <i>r</i> is a constant.",
+   "text": "The values of N that can be written as the sum of two square numbers are of the form 4k + r, where the remainder r is a constant."
+  }
+ ]
+}

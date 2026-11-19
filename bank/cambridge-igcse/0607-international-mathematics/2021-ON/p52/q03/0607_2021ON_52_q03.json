@@ -1,0 +1,408 @@
+{
+ "id": "0607_2021ON_52_q03",
+ "number": 3,
+ "segments": [],
+ "text": "",
+ "marks": 9,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      243.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 16.5,
+      "height_pt": 186.7
+     }
+    }
+   ],
+   "text": "3\n(a) Complete the table for the numbers of connectors that join 4 dots.\nNumbers of connectors that join 4 dots\nHorizontal\nVertical\nUp diagonal\nDown diagonal\nTotal\n3 by 3\n0\n0\n0\n0\n0\nSize of\n4 by 4\n10\ndiagram\n5 by 5\n10\n(n by n)\n6 by 6\n18\n18\n9\n9\n54\n[2]",
+   "marks": 2,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "H\nV\nU D\nD D\nT\n0\n0\n0\n0\n0\n3 × 3\n4\n4\n1\n1\n10\n4 × 4\n5 × 5\n10\n10\n4\n4\n28\n6 × 6\n18\n18\n9\n9\n54",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        215.0,
+        549.1799926757812,
+        346.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> Complete the table for the numbers of connectors that join 4 dots.",
+     "text": "Complete the table for the numbers of connectors that join 4 dots."
+    },
+    {
+     "type": "text",
+     "html": "Numbers of connectors that join 4 dots",
+     "text": "Numbers of connectors that join 4 dots"
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "",
+       "Horizontal",
+       "Vertical",
+       "Up diagonal",
+       "Down diagonal",
+       "Total"
+      ],
+      [
+       "3 by 3",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "4 by 4",
+       "",
+       "",
+       "",
+       "",
+       "10"
+      ],
+      [
+       "5 by 5",
+       "10",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "6 by 6",
+       "18",
+       "18",
+       "9",
+       "9",
+       "54"
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "html": "Size of diagram (<i>n</i> by<i> n</i>)",
+     "text": "Size of diagram (n by n)"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        30.0,
+        246.0,
+        570.0,
+        308.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 10.9,
+        "height_pt": 62.5
+       }
+      }
+     ],
+     "text": "Write down an expression, in terms of n, for the number of up diagonal connectors that join\n4 dots on an n by n diagram.\n................................................. [1]",
+     "marks": 1,
+     "path": "3(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(i)",
+       "text": "2\n(n – 3)\noe isw",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.619998931884766,
+          346.8,
+          549.1799926757812,
+          371.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Write down an expression, in terms of <i>n</i>, for the number of up diagonal connectors that join",
+       "text": "Write down an expression, in terms of n, for the number of up diagonal connectors that join"
+      },
+      {
+       "type": "text",
+       "html": "dots on an <i>n</i> by <i>n</i> diagram.",
+       "text": "dots on an n by n diagram."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        30.0,
+        311.0,
+        570.0,
+        399.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 36.9,
+        "height_pt": 88.5
+       }
+      }
+     ],
+     "text": "Find an expression, in terms of n, for the number of horizontal connectors that join 4 dots on\nan n by n diagram.\n................................................. [2]",
+     "marks": 2,
+     "path": "3(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(ii)",
+       "text": "2\nn – 3n or n(n – 3)",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.619998931884766,
+          371.3,
+          549.1799926757812,
+          421.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find an expression, in terms of <i>n</i>, for the number of horizontal connectors that join 4 dots on an <i>n</i> by <i>n</i> diagram.",
+       "text": "Find an expression, in terms of n, for the number of horizontal connectors that join 4 dots on an n by n diagram."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "3(b)"
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      402.0,
+      570.0,
+      540.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 75.9,
+      "height_pt": 138.5
+     }
+    }
+   ],
+   "text": "Show that the total number of connectors that join 4 dots on an n by n diagram is\n2 -\n4\nn\n18\nn\n18\n.\n+\n[2]",
+   "marks": 2,
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "2\n2\n2 × their (n – 3) + 2 × their (n – 3n)\nCorrect expansion and simplification\n2\nleading to 4n – 18n + 18",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        421.0,
+        549.1799926757812,
+        483.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that the <b>total</b> number of connectors that join 4 dots on an <i>n</i> by <i>n</i> diagram is",
+     "text": "Show that the total number of connectors that join 4 dots on an n by n diagram is"
+    },
+    {
+     "type": "text",
+     "html": "- 4<i>n</i><sup>2</sup> 18<i>n</i> + 18.",
+     "text": "- 4n2 18n + 18."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 75.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      543.0,
+      570.0,
+      692.8
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 114.9,
+      "height_pt": 149.7
+     }
+    }
+   ],
+   "text": "Find the size of the diagram which has a total of 180 connectors that join 4 dots.\n................................................. [2]",
+   "marks": 2,
+   "path": "3(d)",
+   "mark_scheme": [
+    {
+     "label": "3(d)",
+     "text": "Sketch of quadratic and horizontal line\nor further row or total seen\nor one correct trial of n > 6 substituted\n2\ninto 4n – 18n + 18\nor one correct trial of n > 6 substituted\ninto a correct rearranged equation\nor correct substitution of n > 6 into their\n2\n2\n(n – 3) and their (n – 3n)\n9 by 9 oe",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        483.4,
+        549.1799926757812,
+        662.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the size of the diagram which has a total of 180 connectors that join 4 dots.",
+     "text": "Find the size of the diagram which has a total of 180 connectors that join 4 dots."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

@@ -1,0 +1,182 @@
+{
+ "id": "0607_2021ON_51_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    511.8,
+    570.0,
+    678.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 24.1,
+    "height_pt": 166.2
+   }
+  },
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    60.5,
+    570.0,
+    389.0
+   ],
+   "continued": true,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 30.2,
+    "height_pt": 328.5
+   }
+  }
+ ],
+ "text": "3\n2\n2\n2\nWhen a\nb\nc\nthen (a, b, c) is a 3-square set.\n+\n=\na, b and c are positive integers.\nExample\nIn Question 2(b), a\n9\n, b\n40\nand c\n41\n.\n=\n=\n=\n2\n2\n2\n9\n40\n41\n, so (9,   40,   41) is a 3-square set.\n+\n=\n2\n2\n2\n2\n2\nWhen    a\nb\nc\nthen    c\na\nb\n.\n+\n=\n=\n+\nUse this formula and any patterns you notice to complete the table on the next page for 3-square sets.\na\nb\nc\n3\n4\n5\n5\n12\n13\n7\n24\n25\n9\n40\n41\n11\n60\n13\n84\n85\n112\n113\n144\n19\n181\n21\n221\n25\n312\n313\n[6]",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "3",
+   "text": "At least three correct differences in at\nleast one column\n2\n2\na +b\n2\n2\n2\nor c =\nor a + b = c\nused\nnumerically at least once\na\nb\nc\n3\n4\n5\n5\n12\n13\n7\n24\n25\n9\n40\n41\n11\n60\n61\n13\n84\n85\n15\n112\n113\n17\n144\n145\n19\n180\n181\n21\n220\n221\n23\n264\n265\n25\n312\n313",
+   "codes": [
+    "C1",
+    "5"
+   ],
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      46.619998931884766,
+      187.2,
+      549.0,
+      602.5
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>3</b>",
+   "text": "3"
+  },
+  {
+   "type": "text",
+   "html": "When <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup> = <i>c</i><sup>2</sup> then (<i>a</i>, <i>b</i>, <i>c</i>) is a <i>3-square set</i>.",
+   "text": "When a2 + b2 = c2 then (a, b, c) is a 3-square set."
+  },
+  {
+   "type": "text",
+   "html": "<i>a</i>, <i>b</i> and <i>c</i> are positive integers.",
+   "text": "a, b and c are positive integers."
+  },
+  {
+   "type": "text",
+   "html": "\\(\\frac{\\text{Example}}{\\text{In}}\\) <b>Question 2(b)</b>, <i>a</i> = 9, <i>b</i> = 40 and <i>c</i> = 41. + 40<sup>2</sup> = 41<sup>2</sup> , so (9, 40, 41) is a 3-square set. When <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup> = <i>c</i><sup>2</sup> then <i>c</i> = <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup> . Use this formula and any patterns you notice to complete the table on the next page for 3-square sets.",
+   "text": "(Example)/(In) Question 2(b), a = 9, b = 40 and c = 41. + 402 = 412 , so (9, 40, 41) is a 3-square set. When a2 + b2 = c2 then c = a2 + b2 . Use this formula and any patterns you notice to complete the table on the next page for 3-square sets."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "<i>a</i>",
+     "<i>b</i>",
+     "<i>c</i>"
+    ],
+    [
+     "3",
+     "4",
+     "5"
+    ],
+    [
+     "5",
+     "12",
+     "13"
+    ],
+    [
+     "7",
+     "24",
+     "25"
+    ],
+    [
+     "9",
+     "40",
+     "41"
+    ],
+    [
+     "11",
+     "60",
+     ""
+    ],
+    [
+     "13",
+     "84",
+     "85"
+    ],
+    [
+     "",
+     "112",
+     "113"
+    ],
+    [
+     "",
+     "144",
+     ""
+    ],
+    [
+     "19",
+     "",
+     "181"
+    ],
+    [
+     "21",
+     "",
+     "221"
+    ],
+    [
+     "",
+     "",
+     ""
+    ],
+    [
+     "25",
+     "312",
+     "313"
+    ]
+   ]
+  },
+  {
+   "type": "marks",
+   "value": 6
+  }
+ ]
+}

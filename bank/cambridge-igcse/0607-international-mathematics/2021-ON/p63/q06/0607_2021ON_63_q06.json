@@ -1,0 +1,188 @@
+{
+ "id": "0607_2021ON_63_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 12,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    130.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.9,
+    "height_pt": 73.2
+   }
+  }
+ ],
+ "text": "6\nThe company puts new machinery to make phones in factory A and factory B.\nFactory A can now make double the number of A-phones.\nFactory B can now make 10% more B-phones.\nAll other conditions remain the same.",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      134.8,
+      570.0,
+      327.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "Factory A: p=  ……   for t",
+      "working_gap_pt": 88.7,
+      "height_pt": 192.2
+     }
+    }
+   ],
+   "text": "Complete the following models for the production boundaries at each factory after the changes.\nUse the models in Question 4 and Question 5(a).\nFactory A: p=  .................................................................   for t\n0\nH\nFactory B:\np\n2 2\n.\nt\n11000\nfor  ..................  GtG  ..................\n[2]\n= -\n+",
+   "marks": 2,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "\n\n2\nt\nA: p=2 9000 −\n\n\noe where t ⩾ 0\n\n1000\nB: p = −2.2t + 11 000 for 1000 ⩽ t ⩽ 4000",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.619998931884766,
+        319.4,
+        549.1799926757812,
+        392.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the following models for the production boundaries at each factory after the changes. Use the models in <b>Question 4</b> and <b>Question 5(a)</b>.",
+     "text": "Complete the following models for the production boundaries at each factory after the changes. Use the models in Question 4 and Question 5(a)."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Factory A: p =",
+     "unit": "for t H 0"
+    },
+    {
+     "type": "text",
+     "html": "Factory B: <i>p</i> = -2 2. <i>t</i> + 11000 for …… G <i>t</i> G ……",
+     "text": "Factory B: p = -2 2. t + 11000 for …… G t G ……"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      342.8,
+      570.0,
+      535.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 127.9,
+      "height_pt": 192.2
+     }
+    }
+   ],
+   "text": "After the changes, the greatest possible profit made each day by factory A is $1 830 000.\nFind the total greatest possible profit made each day by the company.\n................................................. [3]",
+   "marks": 3,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "(−2.2 × 1000) + 11 000 or 1.1 × 8000\nor suitable sketch\n[1 830 000 +] 200 × 1000 + 190 × 8800\n3 702 000",
+     "codes": [
+      "C1",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.619998931884766,
+        392.5,
+        549.1799926757812,
+        484.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "After the changes, the greatest possible profit made each day by factory A is $1 830 000. Find the <b>total</b> greatest possible profit made each day by the company.",
+     "text": "After the changes, the greatest possible profit made each day by factory A is $1 830 000. Find the total greatest possible profit made each day by the company."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The company puts new machinery to make phones in factory A and factory B. Factory A can now make double the number of A-phones. Factory B can now make 10% more B-phones. All other conditions remain the same.",
+   "text": "The company puts new machinery to make phones in factory A and factory B. Factory A can now make double the number of A-phones. Factory B can now make 10% more B-phones. All other conditions remain the same."
+  }
+ ]
+}

@@ -1,0 +1,270 @@
+{
+ "id": "0607_2021ON_43_q11",
+ "number": 11,
+ "segments": [
+  {
+   "page": 16,
+   "bbox": [
+    30.0,
+    56.6,
+    570.0,
+    387.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 84.5,
+    "height_pt": 330.9
+   }
+  }
+ ],
+ "text": "11\nB\n48°\n120m\nNOT TO\n45m\nSCALE\nC\nA\n28°\n54m\nD\nAngles ACB and ACD are obtuse.",
+ "marks": 11,
+ "figures": [
+  {
+   "caption": null,
+   "page": 16,
+   "bbox": [
+    79.8,
+    71.5,
+    517.9,
+    355.5
+   ],
+   "id": "0607_2021ON_43_q11_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      390.2,
+      570.0,
+      686.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 257.9,
+      "height_pt": 296.3
+     }
+    }
+   ],
+   "text": "Show that AC= 95.9 m correct to the nearest 0.1 metre.\n[3]",
+   "marks": 3,
+   "path": "11(a)",
+   "mark_scheme": [
+    {
+     "label": "11(a)",
+     "text": "2\n2\n[AC =] 120 +45 −2×45 ×120 ×cos48\n95.90 to 95.91",
+     "codes": [
+      "M2",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        467.6,
+        549.1799926757812,
+        530.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that <i>AC</i> = 95.9 m correct to the nearest 0.1 metre.",
+     "text": "Show that AC = 95.9 m correct to the nearest 0.1 metre."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 257.9
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      353.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "Angle ACD =  …… [4]",
+      "working_gap_pt": 257.7,
+      "height_pt": 296.2
+     }
+    }
+   ],
+   "text": "Find angle ACD.\nAngle ACD =  ................................................. [4]",
+   "marks": 4,
+   "path": "11(b)",
+   "mark_scheme": [
+    {
+     "label": "11(b)",
+     "text": "95.5 or 95.50 to 95.51…",
+     "codes": [
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        530.8,
+        549.1799926757812,
+        620.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find angle <i>ACD</i>.",
+     "text": "Find angle ACD."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Angle ACD ="
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      355.8,
+      570.0,
+      756.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 334.2,
+      "height_pt": 400.2
+     }
+    }
+   ],
+   "text": "The area of triangle ABD is 5137m2.\nCalculate the area of triangle BCD.\n............................................ m2 [4]",
+   "marks": 4,
+   "path": "11(c)",
+   "mark_scheme": [
+    {
+     "label": "11(c)",
+     "text": "552 or 553 or 554 or 551.5 to 553.9",
+     "codes": [
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.1799926757812,
+        328.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The area of triangle <i>ABD</i> is 5137m<sup>2</sup> . Calculate the area of triangle <i>BCD</i>.",
+     "text": "The area of triangle ABD is 5137m2 . Calculate the area of triangle BCD."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "m2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 3,
+ "paper_code": "0607/43",
+ "paper_type": "extended_long_answer",
+ "total_marks": 11,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>11</b>",
+   "text": "11"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2021ON_43_q11_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "Angles <i>ACB</i> and <i>ACD</i> are obtuse.",
+   "text": "Angles ACB and ACD are obtuse."
+  }
+ ]
+}

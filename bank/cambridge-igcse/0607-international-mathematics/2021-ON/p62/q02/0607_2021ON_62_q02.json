@@ -1,0 +1,532 @@
+{
+ "id": "0607_2021ON_62_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    216.3
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.7,
+    "height_pt": 159.5
+   }
+  }
+ ],
+ "text": "2\nThis is a 3 by 3 diagram.\nThere are 8 ways to join 3 dots together.\nThese are:\n•\n3 vertical connectors\n•\n3 horizontal connectors\n•\n1 up diagonal connector\n•\n1 down diagonal connector.",
+ "marks": 9,
+ "figures": [
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    303.0,
+    69.3,
+    404.9,
+    162.9
+   ],
+   "id": "0607_2021ON_62_q02_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    317.9,
+    241.9,
+    490.2,
+    265.2
+   ],
+   "id": "0607_2021ON_62_q02a_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      216.3,
+      570.0,
+      626.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 4,
+      "answer_line": null,
+      "working_gap_pt": 192.9,
+      "height_pt": 409.7
+     }
+    }
+   ],
+   "text": "This is a 4 by 4 diagram.\nFind the number of horizontal, vertical, up diagonal and down diagonal connectors that join 3 dots.\nTwo horizontal connectors have been drawn for you.\nHorizontal  ................................................\nVertical  ................................................\nUp diagonal  ................................................\nDown diagonal  ................................................ [2]",
+   "marks": 2,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "[horizontal] 8\n[vertical] 8\n[up diagonal] 4\n[down diagonal] 4",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        664.8,
+        549.1799926757812,
+        731.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "This is a 4 by 4 diagram.",
+     "text": "This is a 4 by 4 diagram."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2021ON_62_q02a_diagram2",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Find the number of horizontal, vertical, up diagonal and down diagonal connectors that join 3 dots. Two horizontal connectors have been drawn for you.",
+     "text": "Find the number of horizontal, vertical, up diagonal and down diagonal connectors that join 3 dots. Two horizontal connectors have been drawn for you."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Horizontal"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Vertical"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Up diagonal"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Down diagonal"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      318.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 16.5,
+      "height_pt": 261.2
+     }
+    }
+   ],
+   "text": "Complete the table for the numbers of connectors that join 3 dots.\nUse your answers to part (a) and any patterns you notice.\nYou may use the square dotty paper on page 12 for diagrams.\nNumbers of connectors that join 3 dots\nUp\nDown\nHorizontal\nVertical\nTotal\ndiagonal\ndiagonal\n2 by 2\n0\n0\n0\n0\n0\n3 by 3\n3\n3\n1\n1\n8\nSize of\ndiagram\n4 by 4\n(n by n)\n5 by 5\n15\n6 by 6\n80\n[2]",
+   "marks": 2,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "H\nV\nRD\nLD\nT\n2 × 2\n0\n0\n0\n0\n0\n3\n3\n1\n1\n8\n3 × 3\n8\n8\n4\n4\n24\n4 × 4\n15\n15\n9\n9\n48\n5 × 5\n24\n24\n16\n16\n80\n6 × 6",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.1799926757812,
+        245.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table for the numbers of connectors that join 3 dots. Use your answers to <b>part (a)</b> and any patterns you notice. You may use the square dotty paper on page 12 for diagrams.",
+     "text": "Complete the table for the numbers of connectors that join 3 dots. Use your answers to part (a) and any patterns you notice. You may use the square dotty paper on page 12 for diagrams."
+    },
+    {
+     "type": "text",
+     "html": "Numbers of connectors that join 3 dots",
+     "text": "Numbers of connectors that join 3 dots"
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "",
+       "Horizontal",
+       "Vertical",
+       "Up diagonal",
+       "Down diagonal",
+       "Total"
+      ],
+      [
+       "2 by 2",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "3 by 3",
+       "3",
+       "3",
+       "1",
+       "1",
+       "8"
+      ],
+      [
+       "4 by 4",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "5 by 5",
+       "15",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "6 by 6",
+       "",
+       "",
+       "",
+       "",
+       "80"
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "html": "Size of diagram (<i>n</i> by<i> n</i>)",
+     "text": "Size of diagram (n by n)"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        320.7,
+        570.0,
+        487.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 62.9,
+        "height_pt": 166.3
+       }
+      }
+     ],
+     "text": "This is an expression for the number of up diagonal connectors that join 3 dots on an n by n\ndiagram.\n22\n(\nn\n)\n-\nWork out the number of up diagonal connectors that join 3 dots on a 20 by 20 diagram.\n................................................. [1]",
+     "marks": 1,
+     "path": "2(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(i)",
+       "text": "324",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.619998931884766,
+          245.3,
+          549.1799926757812,
+          269.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "This is an expression for the number of up diagonal connectors that join 3 dots on an <i>n</i> by <i>n</i>",
+       "text": "This is an expression for the number of up diagonal connectors that join 3 dots on an n by n"
+      },
+      {
+       "type": "text",
+       "html": "diagram.",
+       "text": "diagram."
+      },
+      {
+       "type": "text",
+       "html": "(<i>n</i> - 2)<sup>2</sup>",
+       "text": "(n - 2)2"
+      },
+      {
+       "type": "text",
+       "html": "Work out the number of up diagonal connectors that join 3 dots on a 20 by 20 diagram.",
+       "text": "Work out the number of up diagonal connectors that join 3 dots on a 20 by 20 diagram."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        489.8,
+        570.0,
+        682.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 88.9,
+        "height_pt": 192.2
+       }
+      }
+     ],
+     "text": "This is an expression for the number of horizontal connectors that join 3 dots on an n by n\ndiagram.\n2 +\nn\nan\nFind the value of a and write down the expression.\n................................................. [3]",
+     "marks": 3,
+     "path": "2(c)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(ii)",
+       "text": "n rows/columns × (n−2) connectors\nor\nform a correct equation in a and use a correct step\ntowards solving this equation\nor\nat least 3 correct numerical examples\n2\n[a =] −2 and n − 2n",
+       "codes": [
+        "C2",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.619998931884766,
+          269.7,
+          549.1799926757812,
+          412.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "This is an expression for the number of horizontal connectors that join 3 dots on an <i>n</i> by <i>n </i> diagram.",
+       "text": "This is an expression for the number of horizontal connectors that join 3 dots on an n by n diagram."
+      },
+      {
+       "type": "text",
+       "html": "+ <i>n</i><sup>2</sup> <i>an</i>",
+       "text": "+ n2 an"
+      },
+      {
+       "type": "text",
+       "html": "Find the value of <i>a</i> and write down the expression.",
+       "text": "Find the value of a and write down the expression."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "2(c)"
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      684.7,
+      570.0,
+      796.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 49.9,
+      "height_pt": 111.7
+     }
+    }
+   ],
+   "text": "Find an expression, in terms of n, for the total number of connectors that join 3 dots on\nan n by n diagram.\nDo not simplify your expression.\n................................................. [1]",
+   "marks": 1,
+   "path": "2(d)",
+   "mark_scheme": [
+    {
+     "label": "2(d)",
+     "text": "2(n – 2) + 2(n – 2n) oe isw\n2\n2",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        412.5,
+        549.1799926757812,
+        450.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression, in terms of <i>n</i>, for the total number of connectors that join 3 dots on an <i>n</i> by <i>n</i> diagram. Do not simplify your expression.",
+     "text": "Find an expression, in terms of n, for the total number of connectors that join 3 dots on an n by n diagram. Do not simplify your expression."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This is a 3 by 3 diagram.",
+   "text": "This is a 3 by 3 diagram."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2021ON_62_q02_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "There are 8 ways to join <b>3 dots</b> together. These are:",
+   "text": "There are 8 ways to join 3 dots together. These are:"
+  },
+  {
+   "type": "list",
+   "items": [
+    "3 vertical connectors",
+    "3 horizontal connectors",
+    "1 up diagonal connector",
+    "1 down diagonal connector."
+   ]
+  }
+ ]
+}

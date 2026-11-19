@@ -1,0 +1,233 @@
+{
+ "id": "0607_2021ON_41_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 14,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    387.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 77.3,
+    "height_pt": 330.7
+   }
+  }
+ ],
+ "text": "9\ny\nB\n4\nNOT TO\nSCALE\nx\n–4\n4\n0\nA\n–4\n2\n2\nThe equation of the circle is\nx\ny\n16\n.\n+\n=\nThe equation of the straight line is\ny\n3\nx\n1\n.\n=\n+\nThe line crosses the circle at the points A and B.",
+ "marks": 7,
+ "figures": [
+  {
+   "caption": null,
+   "page": 14,
+   "bbox": [
+    126.4,
+    71.7,
+    470.9,
+    329.3
+   ],
+   "id": "0607_2021ON_41_q09_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      390.0,
+      570.0,
+      556.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 114.9,
+      "height_pt": 166.5
+     }
+    }
+   ],
+   "text": "Use substitution to show that the x-coordinates of the points A and B satisfy the\n2 +\nequation\n10\nx\n6\nx\n15\n0\n.\n-\n=\n[3]",
+   "marks": 3,
+   "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "2\n2\nx + (3x + 1) = 16\n2\n2\n9x + 3x + 3x + 1 or 9x + 6x + 1\n2\nCompletion to 10x + 6x – 15 = 0\nwith no errors",
+     "codes": [
+      "M1",
+      "B1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        212.9,
+        549.2400512695312,
+        298.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use substitution to show that the <i>x</i>-coordinates of the points <i>A</i> and <i>B</i> satisfy the",
+     "text": "Use substitution to show that the x-coordinates of the points A and B satisfy the"
+    },
+    {
+     "type": "text",
+     "html": "+",
+     "text": "+"
+    },
+    {
+     "type": "text",
+     "html": "equation 10<i>x</i><sup>2</sup> 6<i>x</i> - 15 = 0.",
+     "text": "equation 10x2 6x - 15 = 0."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 114.9
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      559.0,
+      570.0,
+      764.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 127.7,
+      "height_pt": 205.5
+     }
+    }
+   ],
+   "text": "+\n(b) Solve the equation\n10\nx\n6\nx\n15\n0\nto find the coordinates of the points A and B.\n-\n=\nShow your working and give your answers correct to 2 decimal places.\nA  ( ...................... , .......................)\nB  ( ...................... , .......................) [4]",
+   "marks": 4,
+   "path": "9(b)",
+   "mark_scheme": [
+    {
+     "label": "9(b)",
+     "text": "2\n−6± (6) −4(10)( −15)\n2 ×10\nor sketch of parabola (+ve x²) with\nx intercepts opposite sign\n(–1.56, –3.68)\n(0.96, 3.88)",
+     "codes": [
+      "M2",
+      "A2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        298.9,
+        549.2400512695312,
+        478.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "+",
+     "text": "+"
+    },
+    {
+     "type": "text",
+     "html": "Solve the equation 10<i>x</i><sup>2</sup> 6<i>x</i> - 15 = 0 to find the coordinates of the points <i>A</i> and <i>B</i>. Show your working and give your answers correct to 2 decimal places.",
+     "text": "Solve the equation 10x2 6x - 15 = 0 to find the coordinates of the points A and B. Show your working and give your answers correct to 2 decimal places."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "A (",
+     "unit": ")"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "B (",
+     "unit": ")"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_long_answer",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>9 </b>",
+   "text": "9"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2021ON_41_q09_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The equation of the circle is <i>x</i><sup>2</sup> + <i>y</i><sup>2</sup> = 16. The equation of the straight line is <i>y</i> = 3<i>x</i> + 1. The line crosses the circle at the points <i>A</i> and <i>B</i>.",
+   "text": "The equation of the circle is x2 + y2 = 16. The equation of the straight line is y = 3x + 1. The line crosses the circle at the points A and B."
+  }
+ ]
+}

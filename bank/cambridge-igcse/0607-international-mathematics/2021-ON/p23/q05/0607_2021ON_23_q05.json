@@ -1,0 +1,198 @@
+{
+ "id": "0607_2021ON_23_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    149.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 15.7,
+    "height_pt": 92.7
+   }
+  }
+ ],
+ "text": "5\nThere are 640 students in a school.\nThe table shows the favourite colour of each of the students.\nFavourite colour\nBlue\nGreen\nRed\nYellow\n2x\nx\nNumber of students\n120\n280",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      150.6,
+      570.0,
+      247.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "x=  …… [2]",
+      "working_gap_pt": 57.7,
+      "height_pt": 96.4
+     }
+    }
+   ],
+   "text": "Find the value of x.\nx=  ................................................ [2]",
+   "marks": 2,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "80",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        236.1,
+        549.2400512695312,
+        263.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the value of <i>x</i>.",
+     "text": "Find the value of x."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "x ="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      249.6,
+      570.0,
+      351.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 49.9,
+      "height_pt": 101.4
+     }
+    }
+   ],
+   "text": "Find the relative frequency of students whose favourite colour is red.\nGive your answer as a fraction in its lowest terms.\n................................................. [2]",
+   "marks": 2,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "7\ncao\n16",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        263.2,
+        549.2400512695312,
+        304.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the relative frequency of students whose favourite colour is red. Give your answer as a fraction in its lowest terms.",
+     "text": "Find the relative frequency of students whose favourite colour is red. Give your answer as a fraction in its lowest terms."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 2,
+ "variant": 3,
+ "paper_code": "0607/23",
+ "paper_type": "extended_short_answer",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "There are 640 students in a school. The table shows the favourite colour of each of the students.",
+   "text": "There are 640 students in a school. The table shows the favourite colour of each of the students."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Favourite colour",
+     "Blue",
+     "Green",
+     "Red",
+     "Yellow"
+    ],
+    [
+     "Number of students",
+     "120",
+     "2<i>x</i>",
+     "280",
+     "<i>x</i>"
+    ]
+   ]
+  }
+ ]
+}

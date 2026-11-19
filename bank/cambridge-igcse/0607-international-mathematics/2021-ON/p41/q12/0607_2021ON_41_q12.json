@@ -1,0 +1,438 @@
+{
+ "id": "0607_2021ON_41_q12",
+ "number": 12,
+ "segments": [],
+ "text": "",
+ "marks": 11,
+ "figures": [
+  {
+   "caption": null,
+   "page": 18,
+   "bbox": [
+    105.9,
+    85.2,
+    492.9,
+    200.9
+   ],
+   "id": "0607_2021ON_41_q12ai_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)(i)"
+  },
+  {
+   "caption": null,
+   "page": 18,
+   "bbox": [
+    206.1,
+    248.6,
+    390.7,
+    348.7
+   ],
+   "id": "0607_2021ON_41_q12aii_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)(ii)"
+  },
+  {
+   "caption": null,
+   "page": 18,
+   "bbox": [
+    143.4,
+    438.3,
+    453.4,
+    664.6
+   ],
+   "id": "0607_2021ON_41_q12b_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 18,
+       "bbox": [
+        30.0,
+        56.8,
+        570.0,
+        217.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 62.1,
+        "height_pt": 160.7
+       }
+      }
+     ],
+     "text": "For each Venn diagram, shade the given set.\nU\nU\nA\nB\nA\nB\nA\nB\nA\nB\nl\n+l\n,\n[2]",
+     "marks": 2,
+     "path": "12(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "12(a)(i)",
+       "text": "",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          46.619998931884766,
+          256.9,
+          549.2400512695312,
+          400.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "For each Venn diagram, shade the given set.",
+       "text": "For each Venn diagram, shade the given set."
+      },
+      {
+       "type": "figure",
+       "id": "0607_2021ON_41_q12ai_diagram1",
+       "caption": null
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 62.1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 18,
+       "bbox": [
+        30.0,
+        220.2,
+        570.0,
+        394.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 89.7,
+        "height_pt": 173.8
+       }
+      }
+     ],
+     "text": "Use set language to describe the shaded set.\nU\nA\nB\n................................................. [1]",
+     "marks": 1,
+     "path": "12(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "12(a)(ii)",
+       "text": "(A∩B )∪(A ∩B) oe\n′\n′",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          46.619998931884766,
+          400.7,
+          549.2400512695312,
+          430.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use set language to describe the shaded set.",
+       "text": "Use set language to describe the shaded set."
+      },
+      {
+       "type": "figure",
+       "id": "0607_2021ON_41_q12aii_diagram2",
+       "caption": null
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "12(a)"
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 18,
+     "bbox": [
+      30.0,
+      396.9,
+      570.0,
+      668.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 36.1,
+      "height_pt": 271.6
+     }
+    }
+   ],
+   "text": "40 people are asked which of 3 television programmes, P, Q and R, they watch.\nThe results are shown in the Venn diagram.\nU\nP\nQ\n7\n4\n5\n5\n6\n4\n8\n1\nR",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 19,
+       "bbox": [
+        30.0,
+        56.8,
+        570.0,
+        197.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 75.9,
+        "height_pt": 140.2
+       }
+      }
+     ],
+     "text": "Two of the 40 people are chosen at random.\nFind the probability that they both watch exactly 2 of the 3 programmes.\n................................................. [2]",
+     "marks": 2,
+     "path": "12(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "12(b)(i)",
+       "text": "7\noe\n60",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          46.619998931884766,
+          430.6,
+          549.2400512695312,
+          471.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Two of the 40 people are chosen at random. Find the probability that they both watch exactly 2 of the 3 programmes.",
+       "text": "Two of the 40 people are chosen at random. Find the probability that they both watch exactly 2 of the 3 programmes."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 19,
+       "bbox": [
+        30.0,
+        199.8,
+        570.0,
+        366.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 88.9,
+        "height_pt": 166.2
+       }
+      }
+     ],
+     "text": "Two of the people who watch programme P are chosen at random.\nFind the probability that one of them watches both other programmes and one watches just\none of the other programmes.\n................................................. [3]",
+     "marks": 3,
+     "path": "12(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "12(b)(ii)",
+       "text": "50\noe\n231",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          46.619998931884766,
+          471.6,
+          549.2400512695312,
+          541.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Two of the people who watch programme <i>P</i> are chosen at random. Find the probability that one of them watches both other programmes and one watches just one of the other programmes.",
+       "text": "Two of the people who watch programme P are chosen at random. Find the probability that one of them watches both other programmes and one watches just one of the other programmes."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 19,
+       "bbox": [
+        30.0,
+        368.8,
+        570.0,
+        665.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 218.9,
+        "height_pt": 296.2
+       }
+      }
+     ],
+     "text": "Three of the 40 people are chosen at random.\nFind the probability that two of them watch only programme Q and one of them watches only\nprogramme R.\n................................................. [3]",
+     "marks": 3,
+     "path": "12(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "12(b)(iii)",
+       "text": "2\noe\n247",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          46.619998931884766,
+          541.9,
+          549.2400512695312,
+          624.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Three of the 40 people are chosen at random. Find the probability that two of them watch only programme <i>Q</i> and one of them watches only programme <i>R</i>.",
+       "text": "Three of the 40 people are chosen at random. Find the probability that two of them watch only programme Q and one of them watches only programme R."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "12(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "40 people are asked which of 3 television programmes, <i>P</i>,<i> Q </i>and<i> R</i>, they watch. The results are shown in the Venn diagram.",
+     "text": "40 people are asked which of 3 television programmes, P, Q and R, they watch. The results are shown in the Venn diagram."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2021ON_41_q12b_diagram3",
+     "caption": null
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_long_answer",
+ "total_marks": 11,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

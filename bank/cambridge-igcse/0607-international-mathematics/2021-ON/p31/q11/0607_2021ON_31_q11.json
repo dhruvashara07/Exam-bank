@@ -1,0 +1,541 @@
+{
+ "id": "0607_2021ON_31_q11",
+ "number": 11,
+ "segments": [
+  {
+   "page": 16,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    264.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 15.5,
+    "height_pt": 207.2
+   }
+  }
+ ],
+ "text": "A farmer finds the mass, in kilograms, of each of 100 chickens.\nThe results are shown in the table.\nMass (w kg)\nFrequency\n8\n1 1wG 1.5\n15\n1.5 1wG 2\n2 1wG 2.5\n32\n23\n2.5 1wG 3\n3 1wG 3.5\n16\n6\n3.5 1wG 4",
+ "marks": 11,
+ "figures": [
+  {
+   "caption": null,
+   "page": 17,
+   "bbox": [
+    128.0,
+    86.9,
+    469.2,
+    422.2
+   ],
+   "id": "0607_2021ON_31_q11c_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      265.1,
+      570.0,
+      340.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 36.6,
+      "height_pt": 75.4
+     }
+    }
+   ],
+   "text": "Write down the modal class.\n................... 1wG ................... [1]",
+   "marks": 1,
+   "path": "11(a)",
+   "mark_scheme": [
+    {
+     "label": "11(a)",
+     "text": "2 < w ⩽ 2.5",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.380001068115234,
+        89.4,
+        549.0,
+        114.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the modal class.",
+     "text": "Write down the modal class."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      343.0,
+      570.0,
+      548.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 15.5,
+      "height_pt": 205.5
+     }
+    }
+   ],
+   "text": "Complete the cumulative frequency table for this data.\nMass (w kg)\nCumulative frequency\nwG 1.5\nwG 2\nwG 2.5\nwG 3\nwG 3.5\n100\nwG 4\n[2]",
+   "marks": 2,
+   "path": "11(b)",
+   "mark_scheme": [
+    {
+     "label": "11(b)",
+     "text": "8\n23\n55\n78\n94\n[100]",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.380001068115234,
+        114.1,
+        549.0,
+        201.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the cumulative frequency table for this data.",
+     "text": "Complete the cumulative frequency table for this data."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Mass (<i>w</i> kg)",
+       "Cumulative frequency"
+      ],
+      [
+       "<i> w</i> G 1.5",
+       ""
+      ],
+      [
+       "<i>w</i> G 2",
+       ""
+      ],
+      [
+       "<i> w</i> G 2.5",
+       ""
+      ],
+      [
+       "<i>w</i> G 3",
+       ""
+      ],
+      [
+       "<i> w</i> G 3.5",
+       ""
+      ],
+      [
+       "<i>w</i> G 4",
+       "100"
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      456.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 19.5,
+      "height_pt": 399.7
+     }
+    }
+   ],
+   "text": "On the grid, draw a cumulative frequency curve.\n100\n90\n80\n70\n60\nCumulative\n50\nfrequency\n40\n30\n20\n10\nw\n0\n0\n1\n2\n3\n4\nMass (kg)\n[3]",
+   "marks": 3,
+   "path": "11(c)",
+   "mark_scheme": [
+    {
+     "label": "11(c)",
+     "text": "Correct cumulative frequency curve",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.380001068115234,
+        201.8,
+        549.0,
+        251.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the grid, draw a cumulative frequency curve.",
+     "text": "On the grid, draw a cumulative frequency curve."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2021ON_31_q11c_diagram1",
+     "caption": null
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      459.1,
+      570.0,
+      482.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.4
+     }
+    }
+   ],
+   "text": "Use your curve to find an estimate for",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 17,
+       "bbox": [
+        30.0,
+        485.1,
+        570.0,
+        534.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 10.9,
+        "height_pt": 49.4
+       }
+      }
+     ],
+     "text": "the median,\n............................................. kg [1]",
+     "marks": 1,
+     "path": "11(d)(i)",
+     "mark_scheme": [
+      {
+       "label": "11(d)(i)",
+       "text": "2.4",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          46.380001068115234,
+          251.5,
+          549.0,
+          276.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "the median,",
+       "text": "the median,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "unit": "kg"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 17,
+       "bbox": [
+        30.0,
+        537.1,
+        570.0,
+        599.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 23.9,
+        "height_pt": 62.4
+       }
+      }
+     ],
+     "text": "the interquartile range,\n............................................. kg [2]",
+     "marks": 2,
+     "path": "11(d)(ii)",
+     "mark_scheme": [
+      {
+       "label": "11(d)(ii)",
+       "text": "[0].9",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          46.380001068115234,
+          276.0,
+          549.0,
+          313.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "the interquartile range,",
+       "text": "the interquartile range,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "unit": "kg"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 17,
+       "bbox": [
+        30.0,
+        602.1,
+        570.0,
+        703.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 62.9,
+        "height_pt": 101.4
+       }
+      }
+     ],
+     "text": "the number of chickens with a mass greater than 3.25 kg.\n.................................................. [2]",
+     "marks": 2,
+     "path": "11(d)(iii)",
+     "mark_scheme": [
+      {
+       "label": "11(d)(iii)",
+       "text": "11 to 15 integer",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          46.380001068115234,
+          313.1,
+          549.0,
+          362.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "the number of chickens with a mass greater than 3.25 kg.",
+       "text": "the number of chickens with a mass greater than 3.25 kg."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "11(d)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your curve to find an estimate for",
+     "text": "Use your curve to find an estimate for"
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 3,
+ "variant": 1,
+ "paper_code": "0607/31",
+ "paper_type": "core_long_answer",
+ "total_marks": 11,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A farmer finds the mass, in kilograms, of each of 100 chickens. The results are shown in the table.",
+   "text": "A farmer finds the mass, in kilograms, of each of 100 chickens. The results are shown in the table."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Mass (<i>w</i> kg)",
+     "Frequency"
+    ],
+    [
+     "1 1 <i>w</i> G 1.5",
+     "8"
+    ],
+    [
+     "1.5 1 <i>w</i> G 2",
+     "15"
+    ],
+    [
+     "2 1 <i>w</i> G 2.5",
+     "32"
+    ],
+    [
+     "2.5 1 <i>w</i> G 3",
+     "23"
+    ],
+    [
+     "3 1 <i>w</i> G 3.5",
+     "16"
+    ],
+    [
+     "3.5 1 <i>w</i> G 4",
+     "6"
+    ]
+   ]
+  }
+ ]
+}
