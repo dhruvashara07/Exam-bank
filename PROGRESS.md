@@ -6,9 +6,11 @@ Read this first in every session. Update it before ending a session.
 - 2026-11-18: CHEM stored: 1599 of 1600 PDFs in Releases (only chemistry_0652_to_0620_mapping.pdf, not a Cambridge name,
   stays on branch store-chem). inbox.py now keeps gt/ci/ir/in/eq/one-digit/combined files (302 had been skipped).
   Branches store-chem and store-chem-rest: Dhruv deletes them (this session cannot delete branches).
-- NEXT: Dhruv pushes bio / add-math PDFs on store-* branches (GitHub Desktop, docs in PROGRESS 2026-11-17 night).
-  Check raw/manifest.json counts (chem 1601, bio 1619, add math 598 PDFs), delete the store-* branches. Do NOT start the
-  next maths batch until Dhruv says so. Then MATHS_PLAN 11 (GitHub two-pass checks) when he asks.
+- NEXT: M2 (2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON, 115 papers) WITH THE NEW FLOW. First build
+  the two-pass flow of MATHS_PLAN 11 ('NEXT BATCH FLOW' + reasons file review/claude/<batch>_reasons.json), test it on
+  M2: GitHub pass 1 -> Claude resolves every reason -> GitHub pass 2 (diff) -> Claude checks only changes -> review
+  round (decisions + undecided + ~5 calibration). Target <= 2 wrong items per round. Bio / add-math PDF uploads are
+  Dhruv's (store-* branches from main); check them when he says pushed.
 - 2026-11-17 (night): round 33 (9 of 23 wrong) fixed - patterns 201-208; GitHub run 44134367484; M1 APPROVED (111 papers:
   100 of 2024-2026 + 11 earlier papers whose approval the re-cut removed). MongoDB unchanged (Dhruv: approve in git only).
   Bridge upload of zips timed out (only <=40 MB files pass): Dhruv uploads PDFs himself.
