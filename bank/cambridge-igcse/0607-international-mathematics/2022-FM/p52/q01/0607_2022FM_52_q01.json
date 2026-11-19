@@ -1,0 +1,386 @@
+{
+ "id": "0607_2022FM_52_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    134.8,
+    570.0,
+    201.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 9.8,
+    "height_pt": 66.7
+   }
+  }
+ ],
+ "text": "1\nThis is a sequence of dot patterns.\nPattern 1\nPattern 2\nPattern 3",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      206.8,
+      570.0,
+      308.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 62.9,
+      "height_pt": 101.2
+     }
+    }
+   ],
+   "text": "Draw Pattern 4.\n[1]",
+   "marks": 1,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        34.5,
+        89.4,
+        560.8200073242188,
+        126.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Draw Pattern 4.",
+     "text": "Draw Pattern 4."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 62.9
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      310.8,
+      570.0,
+      405.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 12.5,
+      "height_pt": 94.7
+     }
+    }
+   ],
+   "text": "Complete the table.\nPattern number, n\n1\n2\n3\n4\n5\n6\nNumber of dots\n2\n3\n4\n[1]",
+   "marks": 1,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "Pattern number, n\n1\n2\n3\n4\n5\n6\nNumber of dots\n2\n3\n4\n5\n6\n7",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        34.5,
+        126.5,
+        560.8200073242188,
+        187.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Pattern number, <i>n</i>",
+       "1",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6"
+      ],
+      [
+       "Number of dots",
+       "2",
+       "3",
+       "4",
+       "",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      408.4,
+      570.0,
+      483.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 36.9,
+      "height_pt": 75.1
+     }
+    }
+   ],
+   "text": "How many dots are in Pattern 9?\n................................................. [1]",
+   "marks": 1,
+   "path": "1(c)",
+   "mark_scheme": [
+    {
+     "label": "1(c)",
+     "text": "10",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        34.5,
+        187.7,
+        560.8200073242188,
+        212.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "How many dots are in Pattern 9?",
+     "text": "How many dots are in Pattern 9?"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      486.4,
+      570.0,
+      561.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 36.9,
+      "height_pt": 75.1
+     }
+    }
+   ],
+   "text": "Write down an expression, in terms of n, for the number of dots in Pattern n.\n................................................. [1]",
+   "marks": 1,
+   "path": "1(d)",
+   "mark_scheme": [
+    {
+     "label": "1(d)",
+     "text": "n + 1",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        34.5,
+        212.2,
+        560.8200073242188,
+        236.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down an expression, in terms of <i>n</i>, for the number of dots in Pattern <i>n</i>.",
+     "text": "Write down an expression, in terms of n, for the number of dots in Pattern n."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      564.4,
+      570.0,
+      652.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 49.9,
+      "height_pt": 88.1
+     }
+    }
+   ],
+   "text": "Find the number of the pattern that has 26 dots.\n................................................. [2]",
+   "marks": 2,
+   "path": "1(e)",
+   "mark_scheme": [
+    {
+     "label": "1(e)",
+     "text": "26 – 1\nor n + 1 = 26 oe seen\n25",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        34.5,
+        236.6,
+        560.8200073242188,
+        298.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the number of the pattern that has 26 dots.",
+     "text": "Find the number of the pattern that has 26 dots."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This is a sequence of dot patterns.",
+   "text": "This is a sequence of dot patterns."
+  },
+  {
+   "type": "text",
+   "html": "Pattern 1 Pattern 2 Pattern 3",
+   "text": "Pattern 1 Pattern 2 Pattern 3"
+  }
+ ]
+}

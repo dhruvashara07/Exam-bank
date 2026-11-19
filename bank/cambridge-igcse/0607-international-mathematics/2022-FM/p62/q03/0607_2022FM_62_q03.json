@@ -1,0 +1,99 @@
+{
+ "id": "0607_2022FM_62_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    431.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "answer_line",
+    "dotted_lines": 2,
+    "answer_line": "n=  ……",
+    "working_gap_pt": 218.7,
+    "height_pt": 374.2
+   }
+  }
+ ],
+ "text": "3\nThe formula for the number of dots, T, in the sequence of centred hexagons is\n2\nT\n3\nn\n3\nn\n+.\n1\n=\n-\nThe number of dots in the nth centred hexagon is 6 more than the number of dots in the nth centred\nsquare.\nFind the value of n and the number of dots in the centred hexagon.\nn=  ................................................\nnumber of dots in the centred hexagon :  ................................................ [3]",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "3",
+   "text": "[n = ]3\n[Number of dots =] 19",
+   "codes": [
+    "3"
+   ],
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      34.79999923706055,
+      89.4,
+      560.4599609375,
+      162.2
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The formula for the number of dots, <i>T</i>, in the sequence of centred hexagons is",
+   "text": "The formula for the number of dots, T, in the sequence of centred hexagons is"
+  },
+  {
+   "type": "text",
+   "html": "<i>T</i> = 3<i>n</i><sup>2</sup> - 3<i>n</i> + 1.",
+   "text": "T = 3n2 - 3n + 1."
+  },
+  {
+   "type": "text",
+   "html": "The number of dots in the <i>n</i>th centred hexagon is 6 more than the number of dots in the <i>n</i>th centred square. Find the value of <i>n</i> and the number of dots in the centred hexagon.",
+   "text": "The number of dots in the nth centred hexagon is 6 more than the number of dots in the nth centred square. Find the value of n and the number of dots in the centred hexagon."
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "n ="
+  },
+  {
+   "type": "text",
+   "html": "number of dots in the centred hexagon : ……",
+   "text": "number of dots in the centred hexagon : ……"
+  },
+  {
+   "type": "marks",
+   "value": 3
+  }
+ ]
+}

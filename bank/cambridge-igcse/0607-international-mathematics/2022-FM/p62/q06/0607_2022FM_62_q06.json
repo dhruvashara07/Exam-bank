@@ -1,0 +1,188 @@
+{
+ "id": "0607_2022FM_62_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 15,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    796.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "answer_line",
+    "dotted_lines": 1,
+    "answer_line": "H=   …… [6]",
+    "working_gap_pt": 270.7,
+    "height_pt": 739.7
+   }
+  }
+ ],
+ "text": "6\nThis table shows sunrise and sunset times for Tokyo in Japan on the 21st day of every month.\nSunrise and sunset times in Tokyo\nMonth\nDay\nSunrise\nSunset\nMarch\n21\n05 43\n17 53\nApril\n21\n05 00\n18 19\nMay\n21\n04 32\n18 44\nJune\n21\n04 25\n19 00\nJuly\n21\n04 40\n18 53\nAugust\n21\n05 04\n18 23\nSeptember\n21\n05 28\n17 39\nOctober\n21\n05 52\n16 58\nNovember\n21\n06 22\n16 30\nDecember\n21\n06 47\n16 32\nJanuary\n21\n06 48\n16 56\nFebruary\n21\n06 22\n17 27\nMarch\n21\n05 43\n17 53\nThe shortest day is 21 December and the longest day is 21 June.\nFind a model for the number of daylight hours, H, in Tokyo.\nWrite your model in the form\nH\nA\nsin\n(\nB\nx\n)\nC\n,\n=\n+\nwhere x is the number of months after 21 March and A, B and C are numbers to be found.\nH=   ............................................... [6]",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "6",
+   "text": "B = 30 soi\n14 h 35 min and 14.6 [h] or 14.58[...]\n9 h 45 min and 9.8 or 9.75 [h]\nC = 12.2 soi\n14.6 – 12.2\nor 12.2 – 9.8\n14.6−9.8\nor\n2\nA = 2.4\nH = 2.4 sin 30 x + 12.2",
+   "codes": [
+    "1",
+    "C2",
+    "1",
+    "C1",
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      34.79999923706055,
+      89.4,
+      560.4599609375,
+      318.3
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This table shows sunrise and sunset times for Tokyo in Japan on the 21st day of every month.",
+   "text": "This table shows sunrise and sunset times for Tokyo in Japan on the 21st day of every month."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Sunrise and sunset times in Tokyo",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Month",
+     "Day",
+     "Sunrise",
+     "Sunset"
+    ],
+    [
+     "March",
+     "21",
+     "05 43",
+     "17 53"
+    ],
+    [
+     "April",
+     "21",
+     "05 00",
+     "18 19"
+    ],
+    [
+     "May",
+     "21",
+     "04 32",
+     "18 44"
+    ],
+    [
+     "June",
+     "21",
+     "04 25",
+     "19 00"
+    ],
+    [
+     "July",
+     "21",
+     "04 40",
+     "18 53"
+    ],
+    [
+     "August",
+     "21",
+     "05 04",
+     "18 23"
+    ],
+    [
+     "September",
+     "21",
+     "05 28",
+     "17 39"
+    ],
+    [
+     "October",
+     "21",
+     "05 52",
+     "16 58"
+    ],
+    [
+     "November",
+     "21",
+     "06 22",
+     "16 30"
+    ],
+    [
+     "December",
+     "21",
+     "06 47",
+     "16 32"
+    ],
+    [
+     "January",
+     "21",
+     "06 48",
+     "16 56"
+    ],
+    [
+     "February",
+     "21",
+     "06 22",
+     "17 27"
+    ],
+    [
+     "March",
+     "21",
+     "05 43",
+     "17 53"
+    ]
+   ]
+  },
+  {
+   "type": "text",
+   "html": "The shortest day is 21 December and the longest day is 21 June. Find a model for the number of daylight hours, <i>H</i>, in Tokyo. Write your model in the form <i>H</i> = <i>A</i> sin (<i>B</i><i>x</i>) + <i>C</i> , where <i>x</i> is the number of months after 21 March and <i>A</i>, <i>B</i> and <i>C</i> are numbers to be found.",
+   "text": "The shortest day is 21 December and the longest day is 21 June. Find a model for the number of daylight hours, H, in Tokyo. Write your model in the form H = A sin (Bx) + C , where x is the number of months after 21 March and A, B and C are numbers to be found."
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "H ="
+  },
+  {
+   "type": "marks",
+   "value": 6
+  }
+ ]
+}
