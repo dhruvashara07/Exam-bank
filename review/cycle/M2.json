@@ -13,15 +13,35 @@
  ],
  "created": "2026-11-19T09:14:31+00:00",
  "phases": {
-  "build": [],
+  "build": [
+   {
+    "start": "2026-11-19T09:41:53+00:00",
+    "end": "2026-11-19T10:47:07+00:00",
+    "note": "pass 1 (41 min incl. 11 approved sessions R209)"
+   }
+  ],
   "claude": [],
   "claude1": [],
   "claude2": [],
   "review": [],
   "fix": []
  },
- "github_runs": [],
- "counts": {},
+ "github_runs": [
+  {
+   "id": 44498754254,
+   "name": "Question bank",
+   "branch": "main",
+   "conclusion": "success",
+   "start": "2026-11-19T09:41:37Z",
+   "end": "2026-11-19T10:22:18Z",
+   "minutes": 40.7
+  }
+ ],
+ "counts": {
+  "papers": 117,
+  "questions": 1129,
+  "flags": 329
+ },
  "errors": [
   {
    "pattern": "209",
@@ -38,6 +58,142 @@
    "fix": "maths edges; direct path",
    "found_by": "claude",
    "at": "2026-11-19T09:41:13+00:00"
+  },
+  {
+   "pattern": "211",
+   "kind": "new",
+   "what": "local ms_rebuild without the session PDFs: picture cells silently fall back (local != Action)",
+   "fix": "ms_rebuild exits unless PDFs fetched",
+   "found_by": "claude",
+   "at": "2026-11-19T10:40:57+00:00"
+  },
+  {
+   "pattern": "212",
+   "kind": "new",
+   "what": "2023 MJ 33: Q1 printed 13 pt under 'Answer all the questions.' was cut off with the notice: 0 questions; checks.py crashed, 10 papers unchecked",
+   "fix": "page_bounds stops above a Q label; checks: empty paper = blocking, no crash",
+   "found_by": "claude",
+   "at": "2026-11-19T10:40:57+00:00"
+  },
+  {
+   "pattern": "213",
+   "kind": "new",
+   "what": "M2 reasons pass 1: see ERROR_PATTERNS 213",
+   "fix": "see ERROR_PATTERNS 213",
+   "found_by": "claude",
+   "at": "2026-11-19T10:47:05+00:00"
+  },
+  {
+   "pattern": "214",
+   "kind": "new",
+   "what": "M2 reasons pass 1: see ERROR_PATTERNS 214",
+   "fix": "see ERROR_PATTERNS 214",
+   "found_by": "claude",
+   "at": "2026-11-19T10:47:05+00:00"
+  },
+  {
+   "pattern": "215",
+   "kind": "new",
+   "what": "M2 reasons pass 1: see ERROR_PATTERNS 215",
+   "fix": "see ERROR_PATTERNS 215",
+   "found_by": "claude",
+   "at": "2026-11-19T10:47:06+00:00"
+  },
+  {
+   "pattern": "216",
+   "kind": "new",
+   "what": "M2 reasons pass 1: see ERROR_PATTERNS 216",
+   "fix": "see ERROR_PATTERNS 216",
+   "found_by": "claude",
+   "at": "2026-11-19T10:47:06+00:00"
+  },
+  {
+   "pattern": "217",
+   "kind": "new",
+   "what": "M2 reasons pass 1: see ERROR_PATTERNS 217",
+   "fix": "see ERROR_PATTERNS 217",
+   "found_by": "claude",
+   "at": "2026-11-19T10:47:06+00:00"
+  },
+  {
+   "pattern": "218",
+   "kind": "new",
+   "what": "M2 reasons pass 1: see ERROR_PATTERNS 218",
+   "fix": "see ERROR_PATTERNS 218",
+   "found_by": "claude",
+   "at": "2026-11-19T10:47:06+00:00"
+  },
+  {
+   "pattern": "219",
+   "kind": "new",
+   "what": "M2 reasons pass 1: see ERROR_PATTERNS 219",
+   "fix": "see ERROR_PATTERNS 219",
+   "found_by": "claude",
+   "at": "2026-11-19T10:47:06+00:00"
+  },
+  {
+   "pattern": "220",
+   "kind": "new",
+   "what": "M2 reasons pass 1: see ERROR_PATTERNS 220",
+   "fix": "see ERROR_PATTERNS 220",
+   "found_by": "claude",
+   "at": "2026-11-19T10:47:06+00:00"
+  },
+  {
+   "pattern": "221",
+   "kind": "new",
+   "what": "M2 reasons pass 1: see ERROR_PATTERNS 221",
+   "fix": "see ERROR_PATTERNS 221",
+   "found_by": "claude",
+   "at": "2026-11-19T10:47:06+00:00"
+  },
+  {
+   "pattern": "222",
+   "kind": "new",
+   "what": "M2 reasons pass 1: see ERROR_PATTERNS 222",
+   "fix": "see ERROR_PATTERNS 222",
+   "found_by": "claude",
+   "at": "2026-11-19T10:47:06+00:00"
+  },
+  {
+   "pattern": "223",
+   "kind": "new",
+   "what": "M2 reasons pass 1: see ERROR_PATTERNS 223",
+   "fix": "see ERROR_PATTERNS 223",
+   "found_by": "claude",
+   "at": "2026-11-19T10:47:06+00:00"
+  },
+  {
+   "pattern": "224",
+   "kind": "new",
+   "what": "M2 reasons pass 1: see ERROR_PATTERNS 224",
+   "fix": "see ERROR_PATTERNS 224",
+   "found_by": "claude",
+   "at": "2026-11-19T10:47:06+00:00"
+  },
+  {
+   "pattern": "225",
+   "kind": "new",
+   "what": "M2 reasons pass 1: see ERROR_PATTERNS 225",
+   "fix": "see ERROR_PATTERNS 225",
+   "found_by": "claude",
+   "at": "2026-11-19T10:47:06+00:00"
+  },
+  {
+   "pattern": "226",
+   "kind": "new",
+   "what": "M2 reasons pass 1: see ERROR_PATTERNS 226",
+   "fix": "see ERROR_PATTERNS 226",
+   "found_by": "claude",
+   "at": "2026-11-19T10:47:06+00:00"
+  },
+  {
+   "pattern": "227",
+   "kind": "new",
+   "what": "M2 reasons pass 1: see ERROR_PATTERNS 227",
+   "fix": "see ERROR_PATTERNS 227",
+   "found_by": "claude",
+   "at": "2026-11-19T10:47:06+00:00"
   }
  ],
  "tokens": [],
@@ -65,6 +221,114 @@
   {
    "at": "2026-11-19T09:41:19+00:00",
    "task": "push flow + 209 fix; dispatch pass 1"
+  },
+  {
+   "at": "2026-11-19T09:41:53+00:00",
+   "task": "phase M2 build"
+  },
+  {
+   "at": "2026-11-19T10:05:36+00:00",
+   "task": "triage M2 (local pass1 copy): figure classes F1-F6 found; MS sheets"
+  },
+  {
+   "at": "2026-11-19T10:08:14+00:00",
+   "task": "MS sheets read (45); classes M1-M15; zoom doubtful"
+  },
+  {
+   "at": "2026-11-19T10:15:55+00:00",
+   "task": "MS fixes: M1 M6 M11 M12 M15 done; M3 partial; now M13"
+  },
+  {
+   "at": "2026-11-19T10:21:51+00:00",
+   "task": "question-side crop fixes F1/F2; local test"
+  },
+  {
+   "at": "2026-11-19T10:26:47+00:00",
+   "task": "blast radius ms_rebuild all maths sessions"
+  },
+  {
+   "at": "2026-11-19T10:40:57+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T10:40:57+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T10:44:27+00:00",
+   "task": "set reasons statuses; docs; push; pass 2"
+  },
+  {
+   "at": "2026-11-19T10:47:05+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T10:47:05+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T10:47:06+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T10:47:06+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T10:47:06+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T10:47:06+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T10:47:06+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T10:47:06+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T10:47:06+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T10:47:06+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T10:47:06+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T10:47:06+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T10:47:06+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T10:47:06+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T10:47:06+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T10:47:06+00:00",
+   "task": "count M2 papers=117"
+  },
+  {
+   "at": "2026-11-19T10:47:07+00:00",
+   "task": "gh M2 44498754254"
+  },
+  {
+   "at": "2026-11-19T10:47:07+00:00",
+   "task": "phase M2 build"
   }
  ]
 }

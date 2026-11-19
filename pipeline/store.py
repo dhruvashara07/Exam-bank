@@ -273,6 +273,9 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
         r = (fitz.Rect(info['bbox']).quad * m).rect & clip
         if r.is_empty or r.width < 8 or r.height < 8 or not inside(r) or in_fig(r):
             continue
+        if MATHS and info.get('width', 99) * info.get('height', 99) <= 16:
+            continue                          # a 2x2 px mask stretched under a formula line (2022 ON 43 q5(c), M2 reasons):
+            #                                   no picture - it made the cell a picture and broke the formula
         rects_.append(r)
     merged_ = True                                # pictures that touch side by side are ONE picture (Dhruv, round 20: 2026 MJ 31 q7(a)(ii))
     while merged_:
@@ -619,6 +622,34 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
                 b.y0 = max(b.y0, l.y1 + 0.5)
             else:
                 b.y1 = min(b.y1, l.y0 - 0.5)
+    if maths:                   # maths: a question line above / below all of the drawing's ink is never in its picture -
+        def rowext(l):          # width of all text pieces on l's baseline (words of a formula come as separate pieces)
+            yc = (l.y0 + l.y1) / 2
+            row = [o for o in lines if abs((o.y0 + o.y1) / 2 - yc) < 2.5]
+            return max(o.x1 for o in row) - min(o.x0 for o in row)
+        ink2 = [r for r in ink if not any((r & (l + (-2, -3, 2, 3))).get_area() >= 0.8 * max(r.get_area(), 0.01) or
+                                          (r.width < 1.5 or r.height < 1.5) and (l + (-2, -3, 2, 3)).contains(r) or
+                                          (rowext(l) > 25 and r.height < 20 and r.width < 20 and min(r.y1, l.y1) - max(r.y0, l.y0) > 0.5 * max(r.height, 0.5)
+                                           and max(l.x0 - r.x1, r.x0 - l.x1) < 12) for l in lines)]
+        #   (small strokes on a text line - '|...|' bars, roots, fraction bars - belong to that line, not the drawing)
+        top2, bot2 = (min(r.y0 for r in ink2), max(r.y1 for r in ink2)) if ink2 else (top, bot)
+        #   (root signs and fraction bars of the text line itself are not the drawing: '... shape is 7√3/4.', 2022 ON 63)
+        for l in sorted(lines, key=lambda l: l.y0):   # the tail of 'On the Venn diagram, shade A∪B.', a part line '(a) A'∪B'',
+            if (l & b).get_area() <= 0.15 * max(l.get_area(), 1) or not (l.y1 <= top2 + 1 or l.y0 >= bot2 - 1):
+                continue        # '11 (a) On the ...', the question number, 'f(x) = ... for ...' under a graph (M2 reasons)
+            yc_ = (l.y0 + l.y1) / 2
+            same_ = sorted((w for w in ws if abs((w[1] + w[3]) / 2 - yc_) < 3), key=lambda w: w[0])
+            txt_ = ' '.join(w[4] for w in same_).strip()
+            if not txt_ or re.search(r'NOT|SCALE', txt_):
+                continue
+            outside_ = any(w[2] < b.x0 - 1 or w[0] > b.x1 + 1 for w in same_) and len(txt_) > 8
+            q_ = (re.match(r'^\(?([a-z]|[ivx]{1,4})\)\s', txt_ + ' ') or (re.match(r'^\d{1,2}(\s+\(|\s*$)', txt_) and same_[0][0] < 62)
+                  or ('=' in txt_ and re.search(r'\bfor\b', txt_)) or re.match(r'^[a-z]\s*\(\s*x\s*\)', txt_) or outside_)
+            if q_:
+                if yc_ < (top2 + bot2) / 2:
+                    b.y0 = max(b.y0, l.y1 + 0.5)
+                else:
+                    b.y1 = min(b.y1, l.y0 - 0.5)
     # side-by-side figures (2022 FM 62 Fig. 2.2 | 2.3, 2022 ON 31 Fig. 7.1 | 7.2): when the crop reaches over the neighbour's
     # drawing, keep only the ink that belongs to OUR caption (ink grouped by touching pieces, each group to the nearest caption)
     below = [c for c in caps if b.y1 - 40 <= c.y0 <= b.y1 + 45 and c.x1 > b.x0 - 150 and c.x0 < b.x1 + 150]

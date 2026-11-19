@@ -119,6 +119,8 @@ def _items(u, edges):
             its.append(_Item('t', t, t['x'] - 0.22 * s, t['y'], t['x'] + 0.78 * s, t['y'] + t['w']))
             continue
         its.append(_Item('t', t, t['x'], t['y'] - 0.78 * s, t['x'] + t['w'], t['y'] + 0.22 * s))
+        #  (a large equation-font letter ('m' at 16 pt in 'm²') reached into the next line and joined it: words of that
+        #   line moved to another paragraph, 2021 ON 63 q1(c), M2 reasons - its descent counts as normal text's)
     for k in ('glyphs', 'images'):
         for g in u.get(k) or []:
             its.append(_Item(k, g, g['x'], g['y'], g['x'] + g['w'], g['y'] + g['h']))
@@ -155,6 +157,8 @@ def _items(u, edges):
         return (b[3] - b[1] < 0.9 * u['h'] and not any(abs(x - e) < 4 for e in edges + [0.5, u['w'] - 0.5])
                 and len(edges) >= 2 and edges[0] < x < edges[1]                     # only in the Answer column
                 and any(h[0] - 3 <= x <= h[2] + 3 and b[1] + 5 < (h[1] + h[3]) / 2 <= b[3] + 1 for h in hb))
+    vlong_in = [q_ for q_ in (_bbox(l_['d']) for l_ in u.get('lines', [])) if q_ and q_[2] - q_[0] < 1.3 and q_[3] - q_[1] > 6
+                and not any(abs((q_[0] + q_[2]) / 2 - e) < 2.5 for e in edges + [0.5, u['w'] - 0.5])]
     for l in u.get('lines', []):
         if l.get('fill', '').lower() == '#ffffff' and 'stroke' not in l and not shaded:
             continue                                    # (a white box over grey 'un-shades' a cell: kept, round 28 2019 ON 51 q1)
@@ -165,7 +169,12 @@ def _items(u, edges):
         if b[2] - b[0] < 1.3 and not grid_v(b) and not axis_v(b) and (b[3] - b[1] > 0.5 * u['h'] or any(abs((b[0] + b[2]) / 2 - e) < 2.5 for e in edges + [0.5, u['w'] - 0.5])
                                   or (b[0] + b[2]) / 2 < 20 or (b[0] + b[2]) / 2 > u['w'] - 20):
             continue                                    # a column rule / border (or a piece of one)
-        if b[3] - b[1] < 1.3 and b[2] - b[0] > 30 and any(b[0] - 3 <= e <= b[0] + 3 or b[2] - 3 <= e <= b[2] + 3 for e in edges + [0, u['w']]):
+        one_end_tbl = b[3] - b[1] < 1.3 and not (any(b[0] - 3 <= e <= b[0] + 3 for e in edges + [0, u['w']])
+                                                 and any(b[2] - 3 <= e <= b[2] + 3 for e in edges + [0, u['w']])) \
+            and sum(1 for q_ in vlong_in if b[0] + 3 < q_[0] < b[2] - 3 and q_[1] - 1 <= b[1] <= q_[3] + 1) >= 2
+        #   (a table printed flush with the cell's left border: its rules start at the edge, end inside the column and
+        #    its own column rules cross them - table rules, not sub-row rules; 2023 FM 62 q1/q2 fell apart, M2)
+        if not one_end_tbl and b[3] - b[1] < 1.3 and b[2] - b[0] > 30 and any(b[0] - 3 <= e <= b[0] + 3 or b[2] - 3 <= e <= b[2] + 3 for e in edges + [0, u['w']]):
             if 3.0 < b[1] < u['h'] - 3.0 and b[0] > edges[0] - 3:
                 CTX.setdefault('subrules', []).append((b[0], (b[1] + b[3]) / 2, b[2]))   # redrawn by layout_row (round 32)
             continue                                    # a row / sub-row rule running between column rules
@@ -173,7 +182,12 @@ def _items(u, edges):
             continue
         if b[3] - b[1] > 0.9 * u['h'] and b[2] - b[0] > 0.9 * u['w']:
             continue                                    # a background box
-        if (b[3] - b[1] < 3.0 and (b[1] < 3.0 or b[3] > u['h'] - 3.0) and b[2] - b[0] > 20) or b[3] <= 3.0 or b[1] >= u['h'] - 3.0:   # the row's own top / bottom rule, or the edge of the header's shading poking in (2019 ON 63 q6, round 28)
+        inner_ = b[3] - b[1] < 1.6 and b[2] - b[0] > 20 and not any(abs(b[0] - e) < 3 or abs(b[2] - e) < 3 for e in edges + [0, u['w']]) \
+            and sum(1 for l2 in u.get('lines', []) if (lambda q: q and q[2] - q[0] < 1.3 and b[0] - 1 <= q[0] <= b[2] + 1
+                                                       and q[1] <= b[3] + 1 and q[3] > b[1] + 6)(_bbox(l2['d']))) >= 2
+        #   (a table printed at the very top of its row: its top edge lies inside the column, its column rules hang under
+        #    it - the table's own edge, not the row's rule; without it the table lost its top and kept stubs, 2022 FM 52 q4)
+        if not inner_ and ((b[3] - b[1] < 3.0 and (b[1] < 3.0 or b[3] > u['h'] - 3.0) and b[2] - b[0] > 20) or b[3] <= 3.0 or b[1] >= u['h'] - 3.0):   # the row's own top / bottom rule, or the edge of the header's shading poking in (2019 ON 63 q6, round 28)
             continue                                    # a piece of the row's own top / bottom rule (round 27 stray lines)
         if b[3] - b[1] < 1.3 and b[2] - b[0] > 25 and len(edges) >= 2 and b[0] >= edges[1] - 1 and not any(
                 t.get('t', '').strip() and t['x'] < b[2] and t['x'] + t['w'] > b[0] and 0 <= b[1] - t['y'] < 9
@@ -206,7 +220,11 @@ def _lines_of(items):
             rows.append({'its': [it], 'y0': it.y0, 'y1': it.y1})
     def drawn(b):
         return all(i.kind == 'lines' for i in b['its'])
-    base = max([i.ref.get('s', 11) for i in items if i.kind == 't'] or [11])
+    import collections as _c_
+    _sz = _c_.Counter(round(i.ref.get('s', 11), 1) for i in items if i.kind == 't')
+    base = max([s_ for s_, n_ in _sz.items() if n_ >= 0.2 * sum(_sz.values())] or [11])
+    #  (the cell's normal size, not its largest letter: one 16 pt equation-font 'm' made every 11 pt line 'small raised
+    #   text' that joined the line above - 'give a' moved paragraphs, 2021 ON 63 q1(c), M2 reasons)
     def small(b):
         ts = [i for i in b['its'] if i.kind == 't']
         return ts and all(i.ref.get('s', 11) < 0.85 * base for i in ts)
@@ -302,6 +320,8 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
     def plain(ln):              # text, fraction bars and root signs (a step with fractions re-flows too: round 32, 2014 MJ
         return all(i.kind == 't' or (i.kind == 'lines' and (i.y1 - i.y0 < 1.6 or _rootish(i))) for i in ln['its'])   # 41 q11)
     def open_end(ln):           # a printed line that stops mid-step ('... ÷ their', '... ='): the next line goes on with it
+        ln = ln['parts'][-1] if ln.get('parts') else ln   # the LAST printed line of a joined paragraph (its widest line
+        #   ended in 'or' / 'and': every later line was joined, 'B1 for ...' / 'FT ...' too: M2 reasons, 2022 FM 62 q8)
         last = max((i for i in ln['its'] if i.kind == 't'), key=lambda i: i.x1, default=None)   # (round 30, Dhruv: write a
         t_ = last.ref.get('t', '').strip() if last else ''                                   # step whole, not broken)
         return bool(re.search(r'[÷×+\-–=(]$', t_)) or t_ in ('their', 'of', 'for', 'and', 'or', 'by', 'to', 'the')
@@ -314,6 +334,7 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
         first_b = min(b['its'], key=lambda i: i.x0).ref.get('t', '') if plain(b) else ''
         if plain(a) and plain(b) and abs(ax0 - bx0) < 3 and b['y0'] - a['y1'] < 0.6 * lh_ and ax1 > c1 - 0.3 * (c1 - c0) \
                 and (ax1 - ax0) > width * 0.6 and (re.match(r'[a-z]', first_b) or open_end(a)) and not re.match(r'(or|and)$', first_b) \
+                and not re.match(r'(\(?[ABCM]\d|SC\d|FT|If|OR|AND|Method)\b', first_b) \
                 and not any(a['y1'] - 1 < sy < b['y0'] + 1 and sx0 - 3 <= ax0 <= sx1 for sx0, sy, sx1 in CTX.get('subrules', [])):
             # (never across a printed sub-row rule: '... or better' + next sub-row '32.8 km/h', 2024 FM 62 q9(c), M1 check)
             # (only a line that goes on with a sentence: '[x =] 1.13 ...' or 'or ...' is a new answer line, round 28)
@@ -364,6 +385,9 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
                     bp_ = base_(part)
                     for ch in _chunks(part['its']):
                         w_ = ch['x1'] - ch['x0']; sp_ = 0.0 if xx_ == 0 else 0.25 * 11.0
+                        if w_ > width + 0.5:     # one unbreakable piece (a fraction with a long numerator) wider than
+                            ch = dict(ch, _k=max(0.6, width / w_)); w_ *= ch['_k']   # the column: scaled to fit (rule 30,
+                            #                                            >= 60 %), never clipped (M2 reasons, 2021 MJ 22 q13)
                         if xx_ and xx_ + sp_ + w_ > width + 0.5:
                             rows_.append([]); xx_, sp_ = 0.0, 0.0
                         rows_[-1].append((ch, xx_ + sp_, bp_)); xx_ += sp_ + w_
@@ -378,7 +402,7 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
                         dx = n0 + lead + xo - ch['x0']
                         dy = extra + push(first['y0']) + yb_ - bp_
                         for it in ch['its']:
-                            out.append((it, dx, dy, 1.0, ch['x0']))
+                            out.append((it, dx, dy, ch.get('_k', 1.0), ch['x0']))
                 g_ = (yb_ + prev_dn) - ln['y1']
                 extra += g_
                 if growth is not None and abs(g_) > 0.01:
@@ -389,6 +413,8 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
             for j, part in enumerate(ln['parts']):
                 for ch in _chunks(part['its']):
                     w_ = ch['x1'] - ch['x0']
+                    k_ch = max(0.6, width / w_) if w_ > width + 0.5 else 1.0   # (as above: scaled, never clipped)
+                    w_ *= k_ch
                     sp_ = 0.0 if x == 0 else 0.25 * 11.0
                     if x and x + sp_ + w_ > width + 0.5:
                         row += 1; x, sp_ = 0.0, 0.0
@@ -397,7 +423,7 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
                     py0_ = min(i.y0 for i in ptl) if ptl else part['y0']      # the text top, not a superscript's
                     dy = extra + push(first['y0']) + (fy0_ + row * pitch) - py0_
                     for it in ch['its']:
-                        out.append((it, dx, dy, 1.0, ch['x0']))
+                        out.append((it, dx, dy, k_ch, ch['x0']))
                     x += sp_ + w_
             g_ = (first['y0'] + row * pitch + lh) - ln['y1']
             extra += g_
@@ -554,6 +580,10 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
     is_note = bool(re.match(r'Throughout the (modelling|investigation)\b', ' '.join(
         t['t'] for t in sorted(u.get('text', []), key=lambda t: (round(t['y']), t['x'])) if t['t'].strip())[:40].strip(), re.I))
     # a section-wide note (Dhruv M1: top of every modelling question): ONE cell over the whole table, no label, no rules
+    if hint and edges and len(edges) == len(hint) and abs(u['w'] - hint[1]) < 2 and abs(edges[0] - hint[0][0]) > 8 \
+            and any(abs(a_ - b_) < 2.5 for a_, b_ in zip(edges[1:], hint[0][1:])):
+        edges = list(hint[0])   # a table flush with the Answer column (shaded cells, no printed Q|Answer rule) put its own
+        #                         first rule in place of the column rule: the table fell into the Q column (2023 FM 62 q1, M2)
     if hint and (not edges or len(edges) != len(hint)) and abs(u['w'] - hint[1]) < 2:
         own = edges
         edges = list(hint[0])                            # a graph / grid in the row hides its column rules: same table
@@ -685,6 +715,9 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                 if not add:
                     break
                 rowy = {round(i.ref['y']) for i in add}
+                if any(i not in blk and i not in add and i.kind == 't' and round(i.ref['y']) in rowy for i in by[c]):
+                    break           # a printed line running on past the table is a sentence, not a table row: its tail
+                    #                 was laid out alone at the cell's left ('x = 22 and y ...', 2022 MJ 61 q3, M2)
                 colx = {round(i.x0) for i in blk if i.kind == 't'}
                 if any(re.fullmatch(r'[A-Za-z]{4,}[.,]?', i.ref.get('t', '')) for i in add) or any(len([i for i in add if round(i.ref['y']) == y_]) < 3 or
                        sum(1 for i in add if round(i.ref['y']) == y_ and any(abs(i.x0 - cx) <= 3 for cx in colx)) < 3
@@ -783,6 +816,11 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                          and t_.y0 < py0 + 0.3 * (py1 - py0)) or
                         (t_.y1 <= py0 + 3 and len(' '.join(o.ref['t'] for o in by[c] if o.kind == 't'
                                                          and abs(o.ref['y'] - t_.ref['y']) < 2)) > 8))]
+            head = [t_ for t_ in head if not any(
+                i.kind == 'lines' and i.x1 - i.x0 > 40 and i.y1 - i.y0 > 30 and i.x0 < t_.x0 - 1 and t_.x1 + 1 < i.x1
+                and i.y0 < t_.y0 - 1 and t_.y1 + 1 < i.y1 for i in dr)]
+            #   (a label INSIDE a drawn frame - 'Sandwich' / 'Fruit' in a Venn box - is never a heading: the box's top was
+            #    cut and the labels moved out, 2023 ON 12 q20, M2 reasons)
             # (and a heading of OUR text over the top of a DRAWN graph: drawn twice, 2019 ON 41 q11, 43 q3, round 30)
             #   (also a heading INSIDE the top of a pasted graph: 'Correct sketch'
             #                                       drawn twice, 2021 FM 62 q9(d)(ii), round 29)   # a text line a pasted picture lies over (never a drawn box,
@@ -996,6 +1034,10 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
         xa, xb = col_x(sx0), col_x(sx1)
         if xa is None or xb is None or xb - xa < 10:
             continue
+        if any(xa - 1 < t_['x'] + t_.get('w', 0) and t_['x'] < xb + 1 and t_['y'] - 0.72 * t_.get('s', 11) < y_ < t_['y'] + 0.2 * t_.get('s', 11)
+               for t_ in v['text'] if t_.get('t', '').strip()):
+            continue                # never a rule through a word: text laid out under a cell picture is not in placed_all
+            #                         ('[on third roll] corner ...' struck through, 2021 MJ 51 q7 / 62 q3, M2 reasons)
         v['lines'].append({'d': f'M{xa:.2f} {y_ - 0.3:.2f}H{xb:.2f}V{y_ + 0.3:.2f}H{xa:.2f}Z', 'fill': '#000000'})
     lab_items = sorted(by[0], key=lambda i: i.y0)
     s0 = next((i.ref.get('s', 11) for i in lab_items if i.kind == 't'), 11.0)
@@ -1489,14 +1531,42 @@ def _has_table(items):
     ln = [i for i in items if i.kind == 'lines']
     gv = [i for i in ln if i.x1 - i.x0 < 1.6 and i.y1 - i.y0 > 8]
     gh = [i for i in ln if i.y1 - i.y0 < 1.6 and i.x1 - i.x0 > 15]
-    if not (len(gv) >= 3 and len(gh) >= 3 and _is_table(items)):
-        return False
+    fills = [i for i in ln if (i.ref.get('fill') or '').lower() not in ('', '#000000', '#231f20') and i.y1 - i.y0 > 3 and i.x1 - i.x0 > 10]
+    if not (len(gv) >= 3 and (len(gh) >= 3 or len(fills) >= 4) and _is_table(items)):
+        return False        # (rows drawn as cell fills, not rules: 2023 FM 62 q1(a), M2)
     x0, x1 = min(i.x0 for i in gv + gh), max(i.x1 for i in gv + gh)
     import collections
     rows = collections.defaultdict(float)             # rule length per height: a table's row rules run most of its width
     for i in gh:                                      # (boxes around numbers, 2019 ON 51 q1(a)(ii), are no table)
         rows[round(i.y0)] += i.x1 - i.x0
-    return sum(1 for w in rows.values() if w > 0.6 * (x1 - x0)) >= 2
+    if sum(1 for w in rows.values() if w > 0.6 * (x1 - x0)) >= 2:
+        return True
+    # a Word table whose rows are drawn as cell fills (grey / white) with short rule pieces: the fills' edges are its row
+    # lines (2023 FM 62 q1(a) was taken for a 'shaded picture' and fell apart, M2 reasons)
+    for i in ln:
+        f_ = (i.ref.get('fill') or '').lower()
+        if f_ and f_ not in ('#000000', '#231f20') and i.y1 - i.y0 > 3 and i.x1 - i.x0 > 10:
+            rows[round(i.y0)] += i.x1 - i.x0; rows[round(i.y1)] += i.x1 - i.x0
+    if sum(1 for w in rows.values() if w > 0.6 * (x1 - x0)) >= 2:
+        return True
+    cols_ = collections.defaultdict(list)             # ... or >= 4 column rules (pieces joined) over most of the grid's
+    for i in gv:                                      # height: a grid of columns, never a few boxes around numbers
+        cols_[round((i.x0 + i.x1) / 2)].append((i.y0, i.y1))
+    gy0, gy1 = min(i.y0 for i in gv), max(i.y1 for i in gv)
+    def cov(sp):
+        tot, end = 0.0, -1e9
+        for a_, b_ in sorted(sp):
+            if b_ > end:
+                tot += b_ - max(a_, end); end = b_
+        return tot
+    merged_, last_ = [], None
+    for x_ in sorted(cols_):
+        if last_ is not None and x_ - last_ <= 2:
+            merged_[-1] += cols_[x_]
+        else:
+            merged_.append(list(cols_[x_]))
+        last_ = x_
+    return sum(1 for sp in merged_ if cov(sp) > 0.6 * (gy1 - gy0)) >= 4
 
 
 def _curvy(i):
@@ -1623,6 +1693,28 @@ def _emit_block(v, items, ox, oy, nx, ny, k, table=True):
             v.setdefault(it.kind, []).append(g)
 
 
+_PB = {}
+
+
+def _paper_base(qid):
+    """The most used text size of the whole printed mark scheme (characters counted), or None."""
+    try:
+        import paths, collections, pymupdf
+        f = paths.raw_pdfs(qid)[1]
+        if f not in _PB:
+            c = collections.Counter()
+            for pg in pymupdf.open(f):
+                for b_ in pg.get_text('dict')['blocks']:
+                    for l_ in b_.get('lines', []):
+                        for s_ in l_['spans']:
+                            if s_['text'].strip():
+                                c[round(s_['size'] * 2) / 2] += len(s_['text'].strip())
+            _PB[f] = c.most_common(1)[0][0] if c else None
+        return _PB[f]
+    except Exception:
+        return None
+
+
 def build(q, uniq, store, hdr_unit, own_total, frame):
     """All rows of one maths question -> ms_p dict, or None to let the general path try."""
     import os
@@ -1643,6 +1735,9 @@ def build(q, uniq, store, hdr_unit, own_total, frame):
     fam = fc.most_common(1)[0][0] if fc else None
     sz = sorted(t.get('s', 11) for _, u in uniq for t in u.get('text', []) if t.get('t', '').strip() and t.get('s', 11) >= 7)
     base = sz[len(sz) // 2] if sz else 11.0             # the scheme's normal text size -> ours is 11 pt
+    pb = _paper_base(q['id'])                         # ... but a question that is mostly a small printed table (8 pt) has
+    if pb and base < 0.9 * pb:                        # a small median: the whole scheme came out at 15 pt (2023 MJ 53 q6,
+        base = pb                                     # 2023 FM 52 q1/q2, M2 reasons) -> the paper's normal size decides
     uniq = [(r, _scaled_unit(u, 11.0 / base)) for r, u in uniq]
     pages = collections.defaultdict(int)             # a page whose text layer is broken (words drawn over each other):
     for _, u in uniq:                                # every cell on it is kept as its printed picture (2014 MJ 62 p4)

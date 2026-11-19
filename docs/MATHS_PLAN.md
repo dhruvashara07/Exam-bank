@@ -70,7 +70,7 @@ the LaTeX builder working with a check, measured times -> decide if 3 years per 
 | Batch | Sessions (pilot sessions not repeated) | Papers (about) |
 | --- | --- | --- |
 | M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 (built 2026-11-17; rounds 32-33; APPROVED 2026-11-17) |
-| M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 115 |
+| M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 117 (built 2026-11-19 with the two-pass flow) |
 | M3 | 2018-MJ 2018-ON 2019-MJ (**remind Dhruv: he must upload it**) 2020-MJ 2020-ON | 85 |
 | M4 | 2014-ON 2015-MJ 2015-ON 2016-MJ 2016-ON 2017-MJ 2017-ON | 115 |
 Order: newest first (closest to the pilot's 2025 rules), oldest last. If the pilot shows a chat cannot hold a
@@ -149,4 +149,5 @@ Then: pass 2 (logic check), ONE short review round (the page renders KaTeX in th
   More effective (Dhruv 2026-11-17 night): every reason lives in ONE file review/claude/<batch>_reasons.json (id, part,
   reason, source check, status open/fixed/passed/ask, Claude's note) - pass 1 writes it, Claude fills status, pass 2
   re-checks every 'fixed' one. Round 2 looks only at pass-2 changes. Measure: wrong items per review round
-  (round 32: 18/30, round 33: 9/23) - target <= 2. Build this before the next batch.
+  (round 32: 18/30, round 33: 9/23) - target <= 2. BUILT in M2 (2026-11-19): pipeline/reasons.py + bank.yml input
+  'reasons' (PLAYBOOK 1a). Statuses open/fixed/passed/ask/known; pass 2 = diff (NOT FIXED, NEW, COLLATERAL).

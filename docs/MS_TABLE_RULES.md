@@ -298,3 +298,12 @@ black and white, light grey grid, axes with the question's labelled ticks, the f
 A task (investigation, modelling) is one record: the intro page as the stem (heading, time advice, picture), then
 every printed question with its printed number; one mark scheme with the header once, the section note once and
 one Total for the task. Built by pipeline/tasks.py after every store build / ms_rebuild --write.
+
+## 35. M2 additions (2026-11-19)
+- Every maths MS ends with our Total row, 5-column (Guidance) schemes too (rule 8).
+- One formula wider than its column is scaled to fit (>= 60 %), never clipped; a new marking point (B1 / M1 / FT / If / OR)
+  always starts its own line in a re-flow.
+- The scheme's text size is the paper's normal MS size (a question that is mostly a small table is not blown up).
+- A table in a cell stays one table even when its rows are only cell fills or it touches the cell's left border; a line
+  running on past the table's width is text under it, not a table row.
+- A sub-row rule is never drawn through a word.

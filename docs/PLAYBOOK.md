@@ -19,6 +19,27 @@ Wait: `gh api "repos/dhruvashara07/Exam-bank/actions/runs?per_page=3" -q '.workf
 `batch_log.py gh M1 <run id>`; `batch_log.py phase M1 build end`.
 If the Action fails or for a few papers: build locally `JOBS=4 python3 pipeline/run.py 0607/2024-MJ/41 ...`.
 
+## 1a. THE FLOW SINCE M2 (Dhruv 2026-11-17 'git, you, git, then you and review round'; MATHS_PLAN 11)
+One file holds every reason: review/claude/<batch>_reasons.json (pipeline/reasons.py; statuses open / fixed / passed /
+ask; pass 2 adds verified / not fixed). Its fingerprints (<batch>_fp.json) make pass 2 a diff.
+1. GitHub pass 1: dispatch bank.yml with `inputs[sessions]=0607/<ses> ...` AND `inputs[reasons]=pass1 <batch> <ses ...>
+   --skip-checks` (checks.py already ran per session; verify, maths_check, ms_sweep, ms_align, MS picture/table cells
+   are collected). Then `git pull`; `reasons.py status <batch>`; `reasons.py classes <batch>`.
+   FIRST: `ms_mode` must be 0 and the Action log must have no 'No module named' (pattern 209).
+2. Claude resolves EVERY reason, class by class (never item by item): `reasons.py classes` -> for each class look at a
+   few members side by side (`reasons.py sheets <batch> --check C --qid ...`, zoom with ms_compare --zoom), then
+   `reasons.py set <batch> --check C [--match R] --status fixed --pattern N --note ...` (pipeline fixed, gated to
+   maths, ERROR_PATTERNS now) or `--status passed --note "<why it matches the print>"` or `--status ask` (a real decision:
+   Dhruv). Fixes are tried on their targets (`ms_rebuild.py <qid>`), blast radius measured before wide changes.
+   `reasons.py status`: open = 0. Golden 0 + nothing under 0625-physics; push.
+3. GitHub pass 2: dispatch the same sessions with `inputs[reasons]=pass2 <batch> --skip-checks`: rebuild + diff
+   -> review/claude/<batch>_pass2.md: NOT FIXED, NEW reasons and COLLATERAL changed questions.
+4. Claude looks ONLY at that list (sheets for those qids), sets each to fixed / passed / ask (a third GitHub run only if
+   a fix was needed; same diff).
+5. Review round: `reasons.py round <batch> --calibrate 5` prints the ids + --recheck string: every 'ask', anything still
+   open, 5 calibration items (passed by me: does Dhruv agree?). Then review_round.py new / review_page.py add as in 3.
+   Measure: wrong items per round (target <= 2). A wrong calibration item = my pass rule was wrong: fix the class.
+
 ## 1b. Why this order (history; the steps are now ONE Claude round, section 2) (Dhruv, round 27, 2026-11-13: 23 of 40 wrong, most of them simple)
 Dhruv's round is for judgement, never for finding simple errors. Before a round EVERY question and EVERY mark-scheme
 table of the batch is checked by Claude: first by automatic checks that compare our output with the PDF, then by eye on
@@ -87,5 +108,7 @@ See docs/MATHS_PLAN.md section 5. Physics batches are all done (history in PROGR
 
 - Local `store.build` is NOT identical to the Action (font family 'symbol' vs 'serif' in MS text, 2026-11-17): question-side
   fixes are rebuilt by the Action only; `ms_rebuild.py` (MS layout only) matches the Action and may be written locally.
+- (M2, pattern 209/211) The local / Action difference had two causes: fontTools missing on GitHub (now in requirements) and
+  missing PDFs locally (ms_rebuild now refuses to run without them). With both, local = Action.
 - Local `ms_rebuild.py --write` is safe only for papers where its no-write listing shows just the intended changes
   (2019 ON differed in heading font family, 2026-11-17). Restore with `git checkout -- store bank`, never `-- review`.

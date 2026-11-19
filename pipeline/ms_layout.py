@@ -365,8 +365,9 @@ def _split_total(v, info):
 
 def _own_total(marks, info, rows):
     nw = [w for w in info['new_w'] if w >= 20]
-    if len(nw) not in (3, 4):                         # Q | Answer | Marks (| Guidance, 2026 MJ): the total in the Marks column
-        return None
+    if len(nw) not in (3, 4, 5):                      # Q | Answer | Marks (| Guidance, 2026 MJ): the total in the Marks column
+        return None                                   # (5: maths Q | Answer | Marks | Partial | Guidance, 2026 MJ - no Total
+        #                                               row at all was made for every 2026 MJ maths question, M2 reasons)
     ms0 = info['new_edges'][1]
     tpl = next((dict(t) for v in rows for t in v['text'] if t.get('f')), {'s': 11.0, 'f': 'sans'})
     for k in ('i', 'c', 'role', 'u', 'dir'):
@@ -375,7 +376,7 @@ def _own_total(marks, info, rows):
     num = str(marks)
     b = dict(tpl, t=num, b=1, w=round(6.1 * len(num), 2), y=14.0); b['x'] = round(ms0 + (nw[-1] - b['w']) / 2, 2)
     b['x'] = round(ms0 + (nw[2] - b['w']) / 2, 2)
-    lines = [_rect(ms0 - 0.3, 0, ms0 + 0.3, 20.0)] + ([_rect(ms0 + nw[2] - 0.3, 0, ms0 + nw[2] + 0.3, 20.0)] if len(nw) == 4 else [])
+    lines = [_rect(ms0 - 0.3, 0, ms0 + 0.3, 20.0)] + ([_rect(ms0 + nw[2] - 0.3, 0, ms0 + nw[2] + 0.3, 20.0)] if len(nw) >= 4 else [])
     return {'src': rows[-1]['src'], 'w': W, 'h': 20.0, 'text': [a, b], 'lines': lines,
             'figs': [], 'glyphs': [], 'own_total': True}
 

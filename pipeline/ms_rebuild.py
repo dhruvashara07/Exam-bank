@@ -13,6 +13,10 @@ for q in only:
     files += glob.glob(f'store/cambridge-igcse/0607*/{s_[:4]}-{s_[4:]}/p{p_}/{n_}.json')
 for ses in sess:
     files += sorted(glob.glob(f'store/cambridge-igcse/0607*/{ses}/p*/q*.json'))
+missing = sorted({os.path.join('raw', '0607', qf.split('/')[3], f"ms_{qf.split('/')[4][1:]}.pdf") for qf in files}
+                 - {p for p in glob.glob('raw/0607/*/ms_*.pdf')})
+if missing:                    # without the printed PDF every picture cell silently falls back: the local rebuild then differs
+    sys.exit('fetch the PDFs first (raw_store.py fetch ...): ' + ' '.join(missing[:6]))   # from the Action (ERROR_PATTERNS 211)
 for _ in [0]:
     for qf in files:
         rec = json.load(open(qf))

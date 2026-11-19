@@ -245,6 +245,28 @@ def process(qp_path):
                     r_ = orphan[0]
                     r_['path'] = free[0]
                     r_['label'] = str(free[0][0]) + ''.join(f'({x})' for x in free[0][1:])
+                elif not orphan and len(free) == 1 and lv.index(free[0]) > 0:
+                    # the label printed twice ('12(a)(i)' over the rows of 12(a)(ii), 2023 ON 43, M2 reasons): the
+                    # rows past the previous leaf's marks go to the one free leaf when their marks are exactly its marks
+                    prv, fr = lv[lv.index(free[0]) - 1], free[0]
+                    def mk(n_, pth):
+                        for k_ in n_.get('parts', []):
+                            if pth and k_['label'] == pth[0]:
+                                return mk(k_, pth[1:]) if pth[1:] else k_.get('marks', 0)
+                        return None
+                    rows_p = [r for r in mine if tuple(r['path']) == prv]
+                    val = lambda r: sum(int(c[1:]) if re.fullmatch(r'[ABCM]\d', c) else int(c) if c.isdigit() else 0
+                                        for c in r['marks_codes'])
+                    mp_, mf_ = mk(q, prv[1:]), mk(q, fr[1:])
+                    if prv[:-1] == fr[:-1] and len(rows_p) > 1 and mp_ and mf_:
+                        acc, k_ = 0, 0
+                        while k_ < len(rows_p) and acc < mp_:
+                            acc += val(rows_p[k_]); k_ += 1
+                        rest = rows_p[k_:]
+                        if acc == mp_ and rest and sum(val(r) for r in rest) == mf_:
+                            for r_ in rest:
+                                r_['path'] = fr
+                                r_['label'] = str(fr[0]) + ''.join(f'({x})' for x in fr[1:])
             for row in [r for r in ms_rows if r['path'][0] == q['number']]:
                 node, exact = find_node(q, row['path'])
                 segs = []

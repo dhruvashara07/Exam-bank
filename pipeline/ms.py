@@ -234,6 +234,16 @@ def structured_rows_table(doc):
                   or (MATHS and NONUM4.match(label_text(l['text'])))
                   or (MATHS and SUB4.match(label_text(l['text'])))
                   or (MATHS and COMM.match(l['text']))]
+        if MATHS:                    # a label wrapped in the Q column ('5(a)(iv)' over '(b)', 2023 FM 62, M2 reasons):
+            mg = []                  # one label '5(a)(iv)(b)' (a 4th level of 5(a)(iv)), not a row '(b)' = 5(b)
+            for l in labels:
+                if (mg and re.fullmatch(r'\([a-h]\)', label_text(l['text'])) and 0 <= l['y0'] - mg[-1]['y1'] < 4
+                        and LABEL.match(label_text(mg[-1]['text'])) and abs(l['x0'] - mg[-1]['x0']) < 25
+                        and SUB4.match(label_text(mg[-1]['text']) + label_text(l['text']))):
+                    mg[-1] = dict(mg[-1], text=label_text(mg[-1]['text']) + label_text(l['text']), y1=l['y1'])
+                    continue
+                mg.append(l)
+            labels = mg
         if not labels and not current:
             continue
         x0, x1 = 58.0, page.rect.width - 58.0

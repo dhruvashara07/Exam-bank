@@ -56,11 +56,13 @@ def unpua(ch):
 MATHS_GLYPHS = {
     'AllAndNone': {'!': '≠', '#': '×', "'": '÷'},
     'MMBinary': {'!': '±', '#': '×', "'": '÷', '+': '∩', ',': '∪', 'j': '∪', 'k': '∩'},   # j k: M1 2024 MJ 23
-    'MMEtc': {'f': '…', 'l': '′', 'c': '°', 'g': '⋯'},                              # c g: M1 2024 MJ 43 / 51
+    'MMEtc': {'f': '…', 'l': '′', 'c': '°', 'g': '⋯', 'k': '…'},                    # c g: M1 2024 MJ 43 / 51; k: M2 2022 MJ 61
+    'MMaEtc-Regular': {'g': '⋯'},                                                   # M2 2023 ON 61 'F2 + F3 + ⋯ + Fn'
+    'MathematicalPi-Six': {'N': 'ℕ', 'Z': 'ℤ', 'Q': 'ℚ', 'R': 'ℝ'},               # M2 2021 ON 31 'natural number (ℕ)'
     'MMExtra': {'1': '<', '2': '>'},
     'MMGreek': {'r': 'π'}, 'MMaGreek-Regular': {'r': 'π'},
     'MMNegate': {'!': '≠', 'g': '∉'},
-    'MMRelation': {'G': '≤', 'H': '≥'},
+    'MMRelation': {'G': '≤', 'H': '≥', '1': '⊂', ';': '⩽'},       # 1 ;: M2 2023 MJ 11 'B ⊂ A', 2021 ON 43 '2 ⩽ x ⩽ 12'
     'MMTimesRoman': {'-': '−'},     # MathType's minus: a hyphen read as '-' left a gap after it ('5- 1/2x', 2024, round 32 check)
     'EuclidMathTwo': {'-': '≤', '\x84': '≤', '\x85': '≥'},
     'Calibri': {'\x84': '', '\x85': ''},          # Calibri F084: an INVISIBLE fallback copy (glyph 0) of a symbol that is

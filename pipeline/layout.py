@@ -80,14 +80,21 @@ def page_bounds(page):
                 bottom = min(bottom, y0 - 3.0)          # centred notice: 'Turn over', 'Question 10 is on the back page.'
             if y0 > 100 and 150 < l['bbox'][0] < 330 and re.fullmatch(r'Questions? \d+(\([a-z]+\)|\([ivx]+\))*( and \([a-z0-9ivx]+\))* (is|are) printed on (the next page|the back page|page \d+)\.?',
                                                                        ' '.join(t.split())) and _maths_page(page):
-                bottom = min(bottom, y0 - 3.0)          # maths 2024+: 'Question 11 / 4(b) / 10(c)(i) and (ii) is printed on the next page.' (round 32, M1 check)
-            if y0 > 100 and 150 < l['bbox'][0] < 330 and re.fullmatch(r'The (modelling|investigation)( task)? starts on the next page\.?',
+                tight_ = [l2['bbox'][3] for b2 in page.get_text('dict')['blocks'] if b2['type'] == 0 for l2 in b2['lines']
+                          if y0 - 3.0 < l2['bbox'][3] <= y0 + 3.0 and l2['bbox'][1] < y0 - 5]
+                bottom = min(bottom, max([y0 - 3.0] + [v_ + 0.3 for v_ in tight_]))   # maths 2024+: 'Question 11 / 4(b) /
+                #   10(c)(i) and (ii) is printed on the next page.' (round 32, M1 check); an answer line '..... [3]' printed
+                #   right above it stays in (2021 ON 61 q11: its [3] was cut off - marks 57 of 60, M2 reasons)
+            if y0 > 55 and 150 < l['bbox'][0] < 330 and re.fullmatch(r'The (modelling|investigation)( task)? starts on the next page\.?',
                                                                        ' '.join(t.split())) and _maths_page(page):
                 bottom = min(bottom, y0 - 3.0)          # maths paper 6 notice before part B
             x0 = l['bbox'][0]
             if y0 < 95 and 150 < x0 < 330 and re.fullmatch(r'(Answer all (the )?questions|Answer both parts A and B|Calculators must not '
                                                        r'be used in this paper)\.?', ' '.join(t.split())) and _maths_page(page):
-                top = max(top, y1 + 3)                  # maths: the instruction line at the top of the first question page
+                q1_ = [w[1] for w in page.get_text('words') if w[0] < 62 and re.fullmatch(r'\d{1,2}', w[4]) and y0 + 5 < w[1] < y1 + 3]
+                top = max(top, min([y1 + 3] + [w_ - 0.5 for w_ in q1_]))   # maths: the instruction line at the top of the
+                #   first question page ('Question 1' printed only 13 pt under it: its label was cut off and the paper
+                #   had NO questions, 2023 MJ 33, M2 reasons)
             if y0 < 58 and y1 < 72 and re.fullmatch(r'\d{1,2}', t) and 240 < x0 < 360:   # page number (lower when a barcode sits above it)
                 top = max(top, y1 + 4)
     if len(_BOUNDS) > 4000:

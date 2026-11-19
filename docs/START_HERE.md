@@ -17,8 +17,9 @@ Only then start. Skip the other docs unless a step points to them.
 | # | Phase | Who | Record (`pipeline/batch_log.py`) |
 | --- | --- | --- | --- |
 | 0 | start record, fetch PDFs | Claude | `start <batch>` |
-| 1 | build on GitHub (bank.yml, sessions input) | GitHub | `phase <b> build start/end`, `gh <b> <run ids>` |
-| 2-3 | ONE Claude check round (PLAYBOOK 2): rules on every paper via `claude_check.py` checklist, side by side (`out/claude_check/`) only for doubtful items - pass with a reason or fix the class; rebuild once; golden; build the review round | Claude | `phase <b> claude ...`, `error ...` |
+| 1 | GitHub pass 1: bank.yml sessions + `reasons=pass1 <b> ...` (PLAYBOOK 1a) | GitHub | `phase <b> build start/end`, `gh <b> <run ids>` |
+| 1b | resolve EVERY reason (`reasons.py classes / sheets / set`), GitHub pass 2 (`reasons=pass2 <b>`), look only at its diff | Claude + GitHub | `phase <b> claude ...` |
+| 2-3 | (details of the look) ONE Claude check round (PLAYBOOK 2): rules on every paper via `claude_check.py` checklist, side by side (`out/claude_check/`) only for doubtful items - pass with a reason or fix the class; rebuild once; golden; build the review round | Claude | `phase <b> claude ...`, `error ...` |
 | 4 | review round on the same review page; tell Dhruv | Dhruv | `phase <b> review ...` (not counted) |
 | 5 | fix what he marked wrong, rebuild, approve, docs, push | Claude | `phase <b> fix ...`, `tokens`, `report` |
 

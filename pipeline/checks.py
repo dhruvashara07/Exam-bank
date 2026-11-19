@@ -117,6 +117,12 @@ def cut_edges(page, r, min_px=3):
 def check_paper(pj):
     meta = json.load(open(pj))
     pid = paths.paper_id(meta)
+    if not meta.get('question_ids'):         # a paper with NO question cut (2023 MJ 33, M2): blocking, and the papers after
+        res = {'paper': pid, 'clean': False, 'warnings': 0, 'flags': [], 'text_scores': {}, 'text_score_min': None,
+               'problems': [{'id': pid, 'kind': 'marks', 'detail': 'no questions found', 'blocking': True}]}
+        os.makedirs(paths.CHECKS, exist_ok=True)       # it are still checked (the crash left 10 papers unchecked)
+        json.dump(res, open(os.path.join(paths.CHECKS, pid + '.json'), 'w'), indent=1)
+        return res
     doc = fitz.open(cleaned(paths.raw_pdfs(meta['question_ids'][0])[0]))
     problems, flags, scores = [], [], {}
     if meta.get('marks_found') != meta.get('total_marks'):

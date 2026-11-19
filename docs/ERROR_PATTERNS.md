@@ -528,3 +528,49 @@ Passed with reason: 2024 FM 62 task A empty magic squares are vector drawings (l
 210. (checks) ms_sweep tested 'code left of x 470' (physics columns): in maths every 'M1 for ...' of Partial Marks was a
     hit -> maths uses the table's own Answer / Marks edges. ms_align globbed the whole bank per question (20+ min for 11
     sessions) -> direct path (1 s).
+211. (tool) Local ms_rebuild without the session's printed PDFs: every picture cell silently fell back, so the local result
+    differed from the Action (164 'changes' of 253 were this, not my fixes). -> ms_rebuild.py exits unless the PDFs are
+    fetched. Measure blast radius only with the PDFs on disk.
+212. 2023 MJ 33: 'Answer all the questions.' with Question 1 printed 13 pt under it - the notice cut (y1 + 3) took Q1's label:
+    0 questions; checks.py then crashed and left 10 papers unchecked. -> page_bounds stops above a question number;
+    checks.py reports an empty paper as blocking instead of crashing.
+213. A formula wider than the Partial Marks column (one fraction with a long numerator, a long root) was clipped at the
+    column edge in the re-flow paths. -> the unbreakable piece is scaled to fit (>= 60 %, MS_TABLE_RULES 30).
+214. A 2x2 px image stretched under a formula line (invisible mask) made the cell a 'picture': the formula was half picture,
+    half text (2022 ON 43 q5(c)). -> images of <= 16 pixels are no pictures (store, maths). Open: the '[...]' dots there.
+215. Re-flow joined a new marking point ('B1 for ...', 'FT ...', 'If ...') to the line above: open_end() looked at the widest
+    line of a joined paragraph (ending 'or') instead of its last line. -> last printed line; code-led lines never join.
+216. A question whose MS is mostly a small printed table (8 pt) got a small median size and the whole scheme was scaled to
+    ~15 pt (2023 MJ 53 q6, 2023 FM 52 q1/q2). -> the paper's most used MS size decides when the question's is < 90 % of it.
+217. MS labels: '12(a)(i)' printed twice (the second = 12(a)(ii)) -> rows past the first leaf's marks go to the one free
+    leaf when the marks match (run.py); '5(a)(iv)' wrapped over '(b)' in the Q column -> one label 5(a)(iv)(b) (ms.py).
+218. A sub-row rule was redrawn through text laid out under a cell picture ('[on third roll] ...' struck through, 2021 MJ 51
+    q7). -> a rule is never drawn through a word (no rule rather than one through content).
+219. Tables in MS cells fell apart: rules starting at the cell's left edge were taken for sub-row rules, and a table whose
+    rows are cell fills (no row rules) was taken for a shaded picture (2023 FM 62 q1/q2). -> one-ended rules crossed by
+    >= 2 column rules are table rules; fills count as row lines; >= 4 column rules over the grid = a table.
+220. A line running on past a table ('x = 2 and y = 3 or x = 3 and y = 2' under the bins table) was half pulled into the
+    table block: its tail drawn at the cell's left ('x = 22', 2022 MJ 61 q3). -> a printed line that does not fit the
+    table's width is a sentence, never a table row.
+221. One 16 pt equation-font letter ('m' of m²) made every 11 pt line of the cell 'small raised text' that joined the line
+    above: words moved paragraphs and a big gap opened (2021 ON 63 q1(c)). -> 'small' is measured against the cell's
+    normal size (most used), not its largest letter.
+222. Labels inside a Venn frame ('Sandwich', 'Fruit') were taken as a heading: moved out as text, the frame's top cut
+    (2023 ON 12 q20). -> text inside a drawn frame is never a heading.
+223. A table printed at the very top of its row lost its top edge (dropped as the row's rule) and kept rule stubs (2022 FM 52
+    q4). -> an inner rule with the table's own column rules hanging under it is the table's edge.
+224. 2026 MJ (5 columns): no Total row at all (_own_total accepted 3-4 columns) - in the M1 approval too. -> 5 columns:
+    Total in the Marks column (MS_TABLE_RULES 8). 256 approved questions gain their Total row.
+225. Diagram crops kept question text above / below the drawing: the tail of 'shade A∪B.', part lines '(a) A′∪B′',
+    '11 (a) On the Venn diagram ...', the question number, 'f(x) = ... for ...' under a graph, '... shape is 7√3/4.'
+    (9 crops). -> fit_crop (maths): a line above / below all drawing ink that is a part line, a question number at the
+    margin, a 'f(x) = ... for' line or a sentence running past the crop is cut off; strokes on a text line (|..|, roots,
+    bars) are text, not drawing.
+226. New equation-font codes: MathematicalPi-Six N Z Q R (ℕ ℤ ℚ ℝ), MMRelation 1 ; (⊂ ⩽), MMEtc k (…), MMaEtc g (⋯) were
+    drawn as plain sans letters (q_font). -> MATHS_GLYPHS + maths_tex.
+227. Page furniture at a page top / bottom: 'The modelling task starts on the next page.' at y 61 (rule needed y > 100) and
+    an answer line '..... [3]' printed 0.2 pt into the box of 'Question 12 is printed on the next page.' was cut off with
+    it (2021 ON 61 marks 57/60). -> notice at any height; the line above it stays.
+Known open (M2, written down after 2-3 tries): a tree diagram cut into two crops (2023 MJ 32 q11), a box of words taken into
+the circle's crop (2023 MJ 11 q3), a rounded formula box kept as a picture (2022 ON 61 q6), the dotted '[...]' of 2022 ON
+43 q5(c) lost. Status 'known' in M2_reasons.json - fixed first in the next chat, never sent to Dhruv as items.

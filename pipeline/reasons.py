@@ -23,7 +23,7 @@ review round').
         counts by status and check (open must be 0 before the round)
 
 Statuses: open (not looked at), fixed (pipeline fix, pattern N), passed (looked at: matches the print, reason
-written), ask (Dhruv decides). Pass 2 adds 'verified' (fixed and gone) / 'not fixed' (fixed but still reported).
+written), ask (Dhruv decides), known (my own fault not fixed yet: in PROGRESS / ERROR_PATTERNS, never in his round). Pass 2 adds 'verified' (fixed and gone) / 'not fixed' (fixed but still reported).
 """
 import collections
 import glob
@@ -41,6 +41,7 @@ import paths
 ROOT = paths.ROOT
 SYL = '0607'
 SLOW = ('checks', 'verify')
+ALWAYS = ('ms_picture', 'ms_table')     # 'look at it' reasons, not faults: present in every pass
 
 
 def _f(batch, kind):
@@ -235,11 +236,51 @@ def setcmd(batch, o):
 
 def sheets(batch, o):
     rs = select(load(batch), o)
-    qids = sorted({'_'.join(r['qid'].split('_')[:4]) for r in rs if r['qid'].count('_') >= 3})
     out = os.path.join(ROOT, 'out', 'claude_check', batch)
     os.makedirs(out, exist_ok=True)
-    r = run([sys.executable, 'pipeline/ms_compare.py', os.path.join(out, 'ms')] + qids)
-    print(r.stdout[-3000:], r.stderr[-1500:])
+    tag = o.get('tag', 'x')
+    figs = []                          # question-side diagram reasons: the crop drawn on its printed page
+    for r in rs:
+        m = re.search(r'(diagram\d+)', r['detail'])
+        if m and (r['check'].startswith(('fig', 'checks.figure'))):
+            q = '_'.join(r['qid'].split('_')[:4])
+            figs.append(f'{q}:{m.group(1)}')
+    if figs:
+        r = run([sys.executable, 'pipeline/ms_compare.py', '--figs', os.path.join(out, f'fig_{tag}')] + sorted(set(figs)))
+        print(r.stdout[-3000:], r.stderr[-800:])
+        stored_sheet(sorted(set(figs)), os.path.join(out, f'figstored_{tag}'))
+    qids = sorted({'_'.join(r['qid'].split('_')[:4]) for r in rs if r['qid'].count('_') >= 3
+                   and not r['check'].startswith(('fig', 'checks.figure'))})
+    if qids:
+        r = run([sys.executable, 'pipeline/ms_compare.py', os.path.join(out, f'ms_{tag}')] + qids)
+        print(r.stdout[-3000:], r.stderr[-800:])
+
+
+def stored_sheet(items, out):
+    """The STORED figure SVGs (what students get) in a grey frame, 6 per sheet: is anything cut at an edge?"""
+    from PIL import Image, ImageDraw
+    import review_assets as ra
+    ims = []
+    for it in items:
+        qid, suf = it.split(':')
+        sd = paths.store_dir(qid.rsplit('_', 1)[0])
+        fs = sorted(glob.glob(os.path.join(sd, 'figures', f'{qid}*{suf}.svg')))
+        if not fs:
+            continue
+        im = ra.svg_img(os.path.relpath(fs[0], ROOT), 110).convert('RGB')
+        c = Image.new('RGB', (im.width + 24, im.height + 34), (235, 235, 235))
+        c.paste(im, (12, 22))
+        ImageDraw.Draw(c).text((3, 3), it, fill=(0, 0, 255))
+        ims.append(c)
+    for n in range(0, len(ims), 6):
+        g = ims[n:n + 6]
+        W, H = max(i.width for i in g), max(i.height for i in g)
+        sheet = Image.new('RGB', (3 * W, ((len(g) + 2) // 3) * H), 'white')
+        for i, im in enumerate(g):
+            sheet.paste(im, ((i % 3) * W, (i // 3) * H))
+        sheet.thumbnail((1800, 2400))
+        sheet.save(f'{out}_{n // 6}.png')
+        print(f'{out}_{n // 6}.png', sheet.size)
 
 
 def pass2(batch, o):
@@ -249,10 +290,13 @@ def pass2(batch, o):
     fp_old = json.load(open(_f(batch, 'fp.json')))
     fp_new = fingerprints(pids)
     rep = collections.defaultdict(list)
+    moved = {q for q in set(fp_old) | set(fp_new) if fp_old.get(q) != fp_new.get(q)}
     for r in data['reasons']:
         here = r['rid'] in nowids
         r['pass2'] = 'present' if here else 'gone'
         if r['status'] in ('fixed', 'verified', 'not fixed'):
+            if r['check'] in ALWAYS:   # a picture / table cell is listed whatever its state: fixed = the question changed
+                here = '_'.join(r['qid'].split('_')[:4]) not in moved
             r['status'] = 'not fixed' if here else 'verified'
             rep[r['status']].append(r)
         elif not here:
@@ -289,7 +333,8 @@ def pass2(batch, o):
 
 def round_items(batch, o):
     data = load(batch)
-    ask = [r for r in data['reasons'] if r['status'] in ('ask', 'open', 'not fixed')]
+    ask = [r for r in data['reasons'] if r['status'] in ('ask', 'open', 'not fixed')]   # ('known' = an open fault of
+    #   mine, written in PROGRESS / ERROR_PATTERNS: never in Dhruv's round)
     pool = sorted({r['qid'] for r in data['reasons'] if r['status'] in ('passed', 'verified')} - {r['qid'] for r in ask})
     random.seed(batch)
     cal = random.sample(pool, min(int(o.get('calibrate', 5)), len(pool)))
