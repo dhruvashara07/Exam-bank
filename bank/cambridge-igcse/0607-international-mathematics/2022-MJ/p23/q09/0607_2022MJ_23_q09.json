@@ -1,0 +1,205 @@
+{
+ "id": "0607_2022MJ_23_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    56.6,
+    570.0,
+    278.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 39.7,
+    "height_pt": 221.4
+   }
+  }
+ ],
+ "text": "9\nE\nNOT TO\nSCALE\nF\nC\nD\nA\nB\nABCD is a parallelogram.\nEDA and EFB are straight lines.",
+ "marks": 4,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    146.8,
+    76.0,
+    440.3,
+    230.8
+   ],
+   "id": "0607_2022MJ_23_q09_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      280.8,
+      570.0,
+      460.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 140.9,
+      "height_pt": 179.2
+     }
+    }
+   ],
+   "text": "Show that triangles EDF and BCF are similar.\n[2]",
+   "marks": 2,
+   "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "EFD = BFC (Vert) opposite s\nEDF = BCF Alternate s\nDEF = CBF Alternate s\nOR\nTwo of the above AND\n3 angles are equal, triangles are\nsimilar",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        33.29999923706055,
+        566.9,
+        562.02001953125,
+        667.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that triangles <i>EDF</i> and <i>BCF</i> are similar.",
+     "text": "Show that triangles EDF and BCF are similar."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 140.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      462.8,
+      570.0,
+      668.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "EF=  …… cm [2]",
+      "working_gap_pt": 140.7,
+      "height_pt": 205.2
+     }
+    }
+   ],
+   "text": "BC= 4 cm, DE= 5 cm and FB= 3 cm.\nFind EF.\nEF=  ........................................... cm [2]",
+   "marks": 2,
+   "path": "9(b)",
+   "mark_scheme": [
+    {
+     "label": "9(b)",
+     "text": "3\n3\noe\n4",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        33.29999923706055,
+        667.2,
+        562.02001953125,
+        707.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<i>BC</i> = 4 cm, <i>DE</i> = 5 cm and <i>FB</i> = 3 cm. Find <i>EF</i>.",
+     "text": "BC = 4 cm, DE = 5 cm and FB = 3 cm. Find EF."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "EF =",
+     "unit": "cm"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 2,
+ "variant": 3,
+ "paper_code": "0607/23",
+ "paper_type": "extended_short_answer",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>9</b>",
+   "text": "9"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2022MJ_23_q09_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "<i>ABCD</i> is a parallelogram. <i>EDA</i> and <i>EFB</i> are straight lines.",
+   "text": "ABCD is a parallelogram. EDA and EFB are straight lines."
+  }
+ ]
+}

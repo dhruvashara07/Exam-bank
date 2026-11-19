@@ -1,0 +1,210 @@
+{
+ "id": "0607_2022MJ_62_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    423.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 52.3,
+    "height_pt": 366.7
+   }
+  }
+ ],
+ "text": "4\nAnother grid of consecutive even numbers has width 7 units.\nThe diagram shows the start of the grid.\n2\n4\n6\n8\n10\n12\n14\n16\nThe diagram shows a 2 by 2 window on the grid.\nn is the first number in the window.\nn\nn + 2",
+ "marks": 4,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    184.2,
+    103.4,
+    413.9,
+    184.0
+   ],
+   "id": "0607_2022MJ_62_q04_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      430.9,
+      570.0,
+      532.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 62.9,
+      "height_pt": 101.1
+     }
+    }
+   ],
+   "text": "Complete the window using expressions in terms of n.\n[2]",
+   "marks": 2,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "n + 14\nn + 16",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        164.4,
+        549.0,
+        188.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the window using expressions in terms of <i>n</i>.",
+     "text": "Complete the window using expressions in terms of n."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 62.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      534.9,
+      570.0,
+      766.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 192.9,
+      "height_pt": 231.1
+     }
+    }
+   ],
+   "text": "Use part (a) to show that the opposite difference for a 2 by 2 window is 28.\n[2]",
+   "marks": 2,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "2\n(n + 14)×(n + 2) = n + 16n + 28\nn + 16n + 28 – n − 16n = 28\n2\n2",
+     "codes": [
+      "M1",
+      "M1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        188.9,
+        549.0,
+        238.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use <b>part (a)</b> to show that the opposite difference for a 2 by 2 window is 28.",
+     "text": "Use part (a) to show that the opposite difference for a 2 by 2 window is 28."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 192.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Another grid of consecutive even numbers has width 7 units. The diagram shows the start of the grid.",
+   "text": "Another grid of consecutive even numbers has width 7 units. The diagram shows the start of the grid."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2022MJ_62_q04_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The diagram shows a 2 by 2 window on the grid. <i>n</i> is the first number in the window.",
+   "text": "The diagram shows a 2 by 2 window on the grid. n is the first number in the window."
+  },
+  {
+   "type": "text",
+   "html": "<i>n</i> <i>n</i> + 2",
+   "text": "n n + 2"
+  }
+ ]
+}

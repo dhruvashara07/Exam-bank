@@ -1,0 +1,261 @@
+{
+ "id": "0607_2022MJ_52_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    80.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 23.2
+   }
+  }
+ ],
+ "text": "3\nA 4 by 4 window moves on the grid on page 2.",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      82.8,
+      570.0,
+      271.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 109.1,
+      "height_pt": 188.2
+     }
+    }
+   ],
+   "text": "Complete the corner squares in the first window.\n2\n8\n[2]",
+   "marks": 2,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "62 and 68",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        47.459999084472656,
+        505.0,
+        547.7999877929688,
+        529.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the corner squares in the first window.",
+     "text": "Complete the corner squares in the first window."
+    },
+    {
+     "type": "text",
+     "html": "8",
+     "text": "8"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 109.1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      273.8,
+      570.0,
+      349.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 10.9,
+      "height_pt": 75.2
+     }
+    }
+   ],
+   "text": "Complete the opposite difference calculations for this window.\n.......... # 8\n= ..........\n2 # ..........\n= ..........\n.......... - .......... = ..........\n[2]",
+   "marks": 2,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "62 (× 8 =) 496\n(2 ×) 68 (=) 136\n496 – 136",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        47.459999084472656,
+        529.5,
+        547.7999877929688,
+        604.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the opposite difference calculations for this window.",
+     "text": "Complete the opposite difference calculations for this window."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2 #"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      351.8,
+      570.0,
+      706.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 118.0,
+      "height_pt": 354.2
+     }
+    }
+   ],
+   "text": "Complete the corner squares for each window and find the opposite difference.\n64\n.................................................\n20\n................................................. [3]",
+   "marks": 3,
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "4\n10\n14\n70\n74\n80\n360\n360\nOne complete correct set of calculations for a\ndifference",
+     "codes": [
+      "2",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        47.459999084472656,
+        604.5,
+        547.7999877929688,
+        722.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the corner squares for each window and find the opposite difference.",
+     "text": "Complete the corner squares for each window and find the opposite difference."
+    },
+    {
+     "type": "text",
+     "html": "64",
+     "text": "64"
+    },
+    {
+     "type": "text",
+     "html": "20",
+     "text": "20"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A 4 by 4 window moves on the grid on page 2.",
+   "text": "A 4 by 4 window moves on the grid on page 2."
+  }
+ ]
+}

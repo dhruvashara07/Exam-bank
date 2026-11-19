@@ -1,0 +1,183 @@
+{
+ "id": "0607_2022MJ_61_q07",
+ "number": 7,
+ "segments": [
+  {
+   "page": 14,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    93.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 36.2
+   }
+  }
+ ],
+ "text": "7\nLee has 60 grams of chemical E.\nThis decreases by 11 grams in 1.6 minutes.",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      95.8,
+      570.0,
+      587.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 449.9,
+      "height_pt": 491.2
+     }
+    }
+   ],
+   "text": "3kt\n(a) Use\nN\n( )\nt\nN\n,   where k is a constant, to find the half-life of chemical E in minutes.\n=\n0#\n................................................. [5]",
+   "marks": 5,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "relevant sketch of intersecting graphs or\n49\n1.6k\n1.6k\n49=60 ×3\nor\n60\n=3\n49\ny = 49 or y =\nindicated on relevant sketch\n60\nof intersecting graphs\nor\nevidence of a calculation for the value of k e.g.\n49\nlog\n60\nlog3\n=1.6k\nk = −0.115[2...]\nrelevant sketch of intersecting graphs to solve\n30 = 60 ×3\n−0.1152...H\nor\nEvidence of a calculation for the value of the\n1\nlog\n2\nhalf-life H e.g.\nlog3\n= −0.115H\nawrt 5.48 or 5.49",
+     "codes": [
+      "C1",
+      "C1",
+      "1",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        46.560001373291016,
+        375.8,
+        549.0010375976562,
+        713.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use N ( )<i>t</i> = N<sub>0</sub> # 3<i><sup>kt</sup></i> , where <i>k</i> is a constant, to find the half-life of chemical <i>E</i> in minutes.",
+     "text": "Use N ( )t = N0 # 3kt , where k is a constant, to find the half-life of chemical E in minutes."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      589.8,
+      570.0,
+      756.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 114.9,
+      "height_pt": 166.2
+     }
+    }
+   ],
+   "text": "Change the model from Question 5(a)  to find the mass, in grams, of chemical E which remains at\ntime t minutes and use it to check your answer to Question 7(a).\n[1]",
+   "marks": 1,
+   "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "Valid verification e.g.\n1.6\n0.292....\n1 5.476...\n \n1\n60\n= 49 or 60\n= 49\n \n \n2\n2",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        46.560001373291016,
+        713.5,
+        549.0010375976562,
+        782.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Change the model from <b>Question 5(a)</b> to find the mass, in grams, of chemical <i>E</i> which remains at time <i>t</i> minutes and use it to check your answer to <b>Question 7(a)</b>.",
+     "text": "Change the model from Question 5(a) to find the mass, in grams, of chemical E which remains at time t minutes and use it to check your answer to Question 7(a)."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 114.9
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Lee has 60 grams of chemical <i>E</i>. This decreases by 11 grams in 1.6 minutes.",
+   "text": "Lee has 60 grams of chemical E. This decreases by 11 grams in 1.6 minutes."
+  }
+ ]
+}

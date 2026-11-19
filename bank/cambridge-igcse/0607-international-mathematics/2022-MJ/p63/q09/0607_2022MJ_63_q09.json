@@ -1,0 +1,420 @@
+{
+ "id": "0607_2022MJ_63_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 12,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    106.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 49.2
+   }
+  }
+ ],
+ "text": "9\nTo decide if a second runway should be built, more data is needed.\nThe table shows the data for 180 planes.\nAll values are given correct to the nearest integer.",
+ "marks": 6,
+ "figures": [
+  {
+   "caption": null,
+   "page": 13,
+   "bbox": [
+    91.0,
+    84.7,
+    484.9,
+    430.7
+   ],
+   "id": "0607_2022MJ_63_q09b_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      108.8,
+      570.0,
+      629.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 90.2,
+      "height_pt": 520.7
+     }
+    }
+   ],
+   "text": "Complete the table.\nCumulative\nInter-arrival time\nNumber of\nPercentage of\nInter-arrival time\npercentage\n(t seconds)\nplanes\nplanes\n(t seconds)\nof planes (p)\nt\n42\n23\nt G 60\n23\n0\n1\nG 60\n60\nt\nG 120\n34\n19\nt G 120\n42\n1\n120\n1\nt\nG 180\n29\nt G 180\n23\n71\n180\n1\nt\nG 240\nt G 240\nt\n16\nt G 300\n80\n240\n1\nG 300\n300\nt\nG 360\n11\n6\nt G 360\n86\n1\n360\n1\nt\nG 420\n11\n6\nt G 420\n7\n4\n420\n1\nt\nG 480\nt G 480\nt\n4\n2\nt G 540\n480\n1\nG 540\n540\nt\nG 600\n2\n1\nt G 600\n99\n1\n600\n1\nt\nG 660\n0\n0\nt G 660\n99\n0\n0\n99\n660\n1\nt\nG 720\nt G 720\nt\n1\n1\nt G 780\n100\n720\n1\nG 780\n780\nt\nG 840\n0\n0\nt G 840\n100\n1\n840\n1\nt\nG 900\n0\n0\nt G 900\n100\n[3]",
+   "marks": 3,
+   "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "Inter\nNum\n%\nCum %\n60<t⩽120\nt ⩽ 120\n34\n19\n42\n120<t⩽180\n29\n16\nt ⩽ 180\n58\n180<t⩽240\nt ⩽ 240\n71\n23\n13\n240<t⩽300\nt ⩽ 300\n16\n9\n80\n300<t⩽360\nt ⩽ 360\n11\n6\n86\n360<t⩽420\nt ⩽ 420\n11\n6\n92\n420<t⩽480\nt ⩽ 480\n7\n4\n96\n480<t⩽540\nt ⩽ 540\n4\n2\n98\n540<t⩽600\n2\n1\nt ⩽ 600\n99",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        39.29999923706055,
+        89.4,
+        556.0199584960938,
+        336.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Inter-arrival time",
+       "Number of",
+       "Percentage of"
+      ],
+      [
+       "(<i>t</i> seconds)",
+       "planes",
+       "planes"
+      ],
+      [
+       "0 1 <i>t</i> G 60",
+       "42",
+       "23"
+      ],
+      [
+       "60 1 <i>t</i> G 120",
+       "34",
+       "19"
+      ],
+      [
+       "120 1 <i>t</i> G 180",
+       "29",
+       ""
+      ],
+      [
+       "180 1 <i>t</i> G 240",
+       "23",
+       ""
+      ],
+      [
+       "240 1 <i>t</i> G 300",
+       "16",
+       ""
+      ],
+      [
+       "300 1 <i>t</i> G 360",
+       "11",
+       "6"
+      ],
+      [
+       "360 1 <i>t</i> G 420",
+       "11",
+       "6"
+      ],
+      [
+       "420 1 <i>t</i> G 480",
+       "7",
+       "4"
+      ],
+      [
+       "480 1 <i>t</i> G 540",
+       "4",
+       "2"
+      ],
+      [
+       "540 1 <i>t</i> G 600",
+       "2",
+       "1"
+      ],
+      [
+       "600 1 <i>t</i> G 660",
+       "0",
+       "0"
+      ],
+      [
+       "660 1 <i>t</i> G 720",
+       "0",
+       "0"
+      ],
+      [
+       "720 1 <i>t</i> G 780",
+       "1",
+       "1"
+      ],
+      [
+       "780 1 <i>t</i> G 840",
+       "0",
+       "0"
+      ],
+      [
+       "840 1 <i>t</i> G 900",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Inter-arrival time (<i>t</i> seconds)",
+       "Cumulative percentage of planes (<i>p</i>)"
+      ],
+      [
+       "<i>t</i> G 60",
+       "23"
+      ],
+      [
+       "<i>t</i> G 120",
+       "42"
+      ],
+      [
+       "<i>t</i> G 180",
+       ""
+      ],
+      [
+       "<i>t</i> G 240",
+       "71"
+      ],
+      [
+       "<i>t</i> G 300",
+       "80"
+      ],
+      [
+       "<i>t</i> G 360",
+       "86"
+      ],
+      [
+       "<i>t</i> G 420",
+       ""
+      ],
+      [
+       "<i>t</i> G 480",
+       ""
+      ],
+      [
+       "<i>t</i> G 540",
+       ""
+      ],
+      [
+       "<i>t</i> G 600",
+       "99"
+      ],
+      [
+       "<i>t</i> G 660",
+       "99"
+      ],
+      [
+       "<i>t</i> G 720",
+       "99"
+      ],
+      [
+       "<i>t</i> G 780",
+       "100"
+      ],
+      [
+       "<i>t</i> G 840",
+       "100"
+      ],
+      [
+       "<i>t</i> G 900",
+       "100"
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 90.2
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      462.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 41.7,
+      "height_pt": 405.7
+     }
+    }
+   ],
+   "text": "On the grid below, complete the cumulative percentage curve.\np\n100\n80\n60\nCumulative\npercentage\n40\n20\n0\nt\n0\n100\n200\n300\n400\n500\n600\n700\n800\n9001000\nTime (seconds)\n[2]",
+   "marks": 2,
+   "path": "9(b)",
+   "mark_scheme": [
+    {
+     "label": "9(b)",
+     "text": "Points correctly plotted\nCorrect curve",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        39.29999923706055,
+        336.7,
+        556.0199584960938,
+        385.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the grid below, complete the cumulative percentage curve.",
+     "text": "On the grid below, complete the cumulative percentage curve."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2022MJ_63_q09b_diagram1",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 41.7
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      465.4,
+      570.0,
+      553.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 49.9,
+      "height_pt": 88.1
+     }
+    }
+   ],
+   "text": "Use the graph to estimate the inter-arrival time for a cumulative percentage of 50.\n................................................. [1]",
+   "marks": 1,
+   "path": "9(c)",
+   "mark_scheme": [
+    {
+     "label": "9(c)",
+     "text": "Between 140 and 160",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        39.29999923706055,
+        385.6,
+        556.0199584960938,
+        410.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use the graph to estimate the inter-arrival time for a cumulative percentage of 50.",
+     "text": "Use the graph to estimate the inter-arrival time for a cumulative percentage of 50."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "To decide if a second runway should be built, more data is needed. The table shows the data for 180 planes. All values are given correct to the nearest integer.",
+   "text": "To decide if a second runway should be built, more data is needed. The table shows the data for 180 planes. All values are given correct to the nearest integer."
+  }
+ ]
+}

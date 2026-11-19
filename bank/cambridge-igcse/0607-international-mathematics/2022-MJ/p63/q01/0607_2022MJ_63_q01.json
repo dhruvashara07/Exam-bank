@@ -1,0 +1,246 @@
+{
+ "id": "0607_2022MJ_63_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    199.8,
+    570.0,
+    378.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 36.4,
+    "height_pt": 178.2
+   }
+  }
+ ],
+ "text": "1\nRadii\nThe diagrams show the number of regions inside a circle when 1 radius and 2 radii are drawn.\nThe regions inside the circle are numbered.\n1\n1\n2\n1 radius\n2 radii",
+ "marks": 2,
+ "figures": [
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    155.1,
+    269.4,
+    248.1,
+    377.6
+   ],
+   "id": "0607_2022MJ_63_q01_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    349.2,
+    269.4,
+    442.2,
+    377.6
+   ],
+   "id": "0607_2022MJ_63_q01_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      386.3,
+      570.0,
+      594.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 11.7,
+      "height_pt": 207.7
+     }
+    }
+   ],
+   "text": "Complete the table.\nNumber of\nNumber of regions\nradii\n1\n1\n2\n2\n3\n4\n5\n6\n[1]",
+   "marks": 1,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "3, 4, 5, 6 in correct rows",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        39.29999923706055,
+        89.4,
+        556.0199584960938,
+        113.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Number of radii",
+       "Number of regions"
+      ],
+      [
+       "1",
+       "1"
+      ],
+      [
+       "2",
+       "2"
+      ],
+      [
+       "3",
+       ""
+      ],
+      [
+       "4",
+       ""
+      ],
+      [
+       "5",
+       ""
+      ],
+      [
+       "6",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      596.8,
+      570.0,
+      685.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 49.9,
+      "height_pt": 88.2
+     }
+    }
+   ],
+   "text": "Write a formula, in terms of n, for the number of regions, R, when there are n radii.\n................................................. [1]",
+   "marks": 1,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "R = n",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        39.29999923706055,
+        113.8,
+        556.0199584960938,
+        138.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write a formula, in terms of <i>n</i>, for the number of regions, <i>R</i>, when there are <i>n</i> radii.",
+     "text": "Write a formula, in terms of n, for the number of regions, R, when there are n radii."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 2,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>Radii</b> The diagrams show the number of regions inside a circle when 1 radius and 2 radii are drawn. The regions inside the circle are numbered.",
+   "text": "Radii The diagrams show the number of regions inside a circle when 1 radius and 2 radii are drawn. The regions inside the circle are numbered."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2022MJ_63_q01_diagram1",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2022MJ_63_q01_diagram2",
+   "caption": null
+  }
+ ]
+}

@@ -1,0 +1,306 @@
+{
+ "id": "0607_2022MJ_61_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    387.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 54.2,
+    "height_pt": 330.7
+   }
+  }
+ ],
+ "text": "4\nAmara now also uses the dimensions of each bin and of each item to find the maximum number of\nitems that will go into a bin.\nEach item is a cuboid and is the same height as the bin.\nAmara looks at the rectangular top of each bin to work out the maximum number of items that will go\ninto it.\nStorage bin\nView of top of\nstorage bin\nNOT TO\nSCALE\nA bin is now full either because it contains the maximum total mass\nor because it contains the maximum number of items that will go into it.\nShe uses this method.\nMethod 4\nWork out the maximum number of items for each bin using dimensions.\nThen use Method 2.",
+ "marks": 7,
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    125.9,
+    169.8,
+    470.8,
+    275.2
+   ],
+   "id": "0607_2022MJ_61_q04_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      392.4,
+      570.0,
+      623.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 153.9,
+      "height_pt": 231.1
+     }
+    }
+   ],
+   "text": "The rectangular top of Amara’s bin measures 90 cm by 90 cm.\nThe rectangular top of each item measures 60 cm by 30 cm.\nFind the maximum number of items that will go into a bin using these dimensions.\n................................................... [2]",
+   "marks": 2,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "Diagram showing 3 or 4 items correctly\nor\nreasoning using dimensions e.g.\n‘3 items uses 90 by 60 and that leaves 90 by 30,\nso one more will fit’\n4",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.560001373291016,
+        505.4,
+        549.0010375976562,
+        610.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The rectangular top of Amara’s bin measures 90 cm by 90 cm. The rectangular top of each item measures 60 cm by 30 cm. Find the maximum number of items that will go into a bin using these dimensions.",
+     "text": "The rectangular top of Amara’s bin measures 90 cm by 90 cm. The rectangular top of each item measures 60 cm by 30 cm. Find the maximum number of items that will go into a bin using these dimensions."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      761.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 384.5,
+      "height_pt": 704.7
+     }
+    }
+   ],
+   "text": "These are the masses, in kg, of eleven items with tops measuring 60 cm by 30 cm.\n41  33  22  18  16  14  8  7  6  5  4\nThe maximum total mass that each bin can hold is 90 kg.\nThe top of each bin measures 90 cm by 90 cm.\nEach bin costs $13.50 .\nUse Method 4 to put these items into bins.\nShow that this is a best solution and find the cost of this solution.\nNumber of\nBin\nMass of items in bin\nUnused mass in bin\nitems\n1\n2\n3\n4\n5\n$  ................................................ [5]",
+   "marks": 5,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "Bin\nMass of\nUnused mass in bin\nItems\nitems\n1\n41, 33, 16\n[49] [16] [0]\n[3]\n2\n22, 18, 14, [68] [50] [36] [28]\n[4]\n8\n3\n7, 6, 5, 4\n[83] [77] [72] [68]\n[4]\nEvidence of 3 bins as best solution for items:\n11 ÷ 4 = 2.75\nor\n2 × 4 = 8 and 3 × 4 = 12 oe\n40.5[0]",
+     "codes": [
+      "2",
+      "2",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.560001373291016,
+        87.7,
+        549.0010375976562,
+        403.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "These are the masses, in kg, of eleven items with tops measuring 60 cm by 30 cm.",
+     "text": "These are the masses, in kg, of eleven items with tops measuring 60 cm by 30 cm."
+    },
+    {
+     "type": "text",
+     "html": "33 22 18 16 14 8 7 6 5 4",
+     "text": "33 22 18 16 14 8 7 6 5 4"
+    },
+    {
+     "type": "text",
+     "html": "The maximum total mass that each bin can hold is <b>90 kg</b>. The top of each bin measures 90 cm by 90 cm. Each bin costs $13.50 . Use Method 4 to put these items into bins. Show that this is a best solution and find the cost of this solution.",
+     "text": "The maximum total mass that each bin can hold is 90 kg. The top of each bin measures 90 cm by 90 cm. Each bin costs $13.50 . Use Method 4 to put these items into bins. Show that this is a best solution and find the cost of this solution."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Bin",
+       "Mass of items in bin",
+       "Unused mass in bin",
+       "",
+       "",
+       "",
+       "",
+       "Number of items"
+      ],
+      [
+       "1",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "2",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "3",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "4",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "5",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "$"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Amara now also uses the dimensions of each bin and of each item to find the maximum number of items that will go into a bin. Each item is a cuboid and is the same height as the bin. Amara looks at the rectangular top of each bin to work out the maximum number of items that will go into it.",
+   "text": "Amara now also uses the dimensions of each bin and of each item to find the maximum number of items that will go into a bin. Each item is a cuboid and is the same height as the bin. Amara looks at the rectangular top of each bin to work out the maximum number of items that will go into it."
+  },
+  {
+   "type": "text",
+   "html": "Storage bin View of top of",
+   "text": "Storage bin View of top of"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2022MJ_61_q04_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "A bin is now full <b>either</b> because it contains the maximum total mass",
+   "text": "A bin is now full either because it contains the maximum total mass"
+  },
+  {
+   "type": "text",
+   "html": "<b>or</b> because it contains the maximum number of items that will go into it.",
+   "text": "or because it contains the maximum number of items that will go into it."
+  },
+  {
+   "type": "text",
+   "html": "She uses this method. <b>Method 4</b> Work out the maximum number of items for each bin using dimensions.",
+   "text": "She uses this method. Method 4 Work out the maximum number of items for each bin using dimensions."
+  },
+  {
+   "type": "text",
+   "html": "Then use <b>Method 2</b>.",
+   "text": "Then use Method 2."
+  }
+ ]
+}

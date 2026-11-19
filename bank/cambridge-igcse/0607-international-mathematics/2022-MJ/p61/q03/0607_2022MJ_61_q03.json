@@ -1,0 +1,102 @@
+{
+ "id": "0607_2022MJ_61_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    769.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "answer_line",
+    "dotted_lines": 2,
+    "answer_line": "x=  ……",
+    "working_gap_pt": 517.7,
+    "height_pt": 712.2
+   }
+  }
+ ],
+ "text": "3\nAmara has six items.\nThe mass, in kg, of each item is an integer.\nThese are the masses of her six items.\n9  4  7  15  xy\nThe maximum total mass that each bin can hold is 20 kg.\nAmara finds that Method 1 needs fewer bins than Method 2.\nFind the value of x and the value of y.\nx=  ................................................\ny=  ................................................ [4]",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "3",
+   "text": "Bin\nMass of items in bin\n1\n9, 4, 7\n2\n15,\nBin\nMass of items in bin\n1\n15, 4\n2\n9, 7\nx + y ⩽ 5 oe\nor\nBin\nMass of items in bin\n1\n9, 4, 7\n2\n15, 3, 2\nBin\nMass of items in bin\n1\n15, 4\n2\n9, 7, 3\n3\n2\nx = 2 and y = 3 or x = 3 and y = 2",
+   "codes": [
+    "C1",
+    "C1",
+    "C1",
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      46.560001373291016,
+      87.7,
+      549.0010375976562,
+      505.4
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Amara has six items. The mass, in kg, of each item is an integer. These are the masses of her six items.",
+   "text": "Amara has six items. The mass, in kg, of each item is an integer. These are the masses of her six items."
+  },
+  {
+   "type": "text",
+   "html": "4 7 15 <i>x</i> <i>y</i>",
+   "text": "4 7 15 x y"
+  },
+  {
+   "type": "text",
+   "html": "The maximum total mass that each bin can hold is <b>20 kg</b>. Amara finds that Method 1 needs fewer bins than Method 2. Find the value of <i>x</i> and the value of <i>y</i>.",
+   "text": "The maximum total mass that each bin can hold is 20 kg. Amara finds that Method 1 needs fewer bins than Method 2. Find the value of x and the value of y."
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "x ="
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "y ="
+  },
+  {
+   "type": "marks",
+   "value": 4
+  }
+ ]
+}

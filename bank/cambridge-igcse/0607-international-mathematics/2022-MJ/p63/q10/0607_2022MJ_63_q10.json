@@ -1,0 +1,500 @@
+{
+ "id": "0607_2022MJ_63_q10",
+ "number": 10,
+ "segments": [
+  {
+   "page": 14,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    106.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.7,
+    "height_pt": 49.2
+   }
+  }
+ ],
+ "text": "This is a model for the cumulative percentage, p, in terms of the inter-arrival time, t.\np\nkt\n(\na\n)\nwhere a and k are constants\n=\n-",
+ "marks": 14,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      115.8,
+      570.0,
+      230.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 49.9,
+      "height_pt": 114.2
+     }
+    }
+   ],
+   "text": "Use the points (60, 23) and (360, 86) to write down two equations in terms of a and k.\n...............................................................................\n............................................................................... [1]",
+   "marks": 1,
+   "path": "10(a)",
+   "mark_scheme": [
+    {
+     "label": "10(a)",
+     "text": "1\n23= k60−a isw\n3\n1\n86= k360−a isw\n3",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        39.29999923706055,
+        410.1,
+        556.0199584960938,
+        473.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use the points (60, 23) and (360, 86) to write down two equations in terms of <i>a</i> and <i>k</i>.",
+     "text": "Use the points (60, 23) and (360, 86) to write down two equations in terms of a and k."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      232.8,
+      570.0,
+      386.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 108.6,
+      "height_pt": 153.2
+     }
+    }
+   ],
+   "text": "360\na\n- ,   where 52.3 is correct to 1 decimal place.\n(b) Show that\n52 3\n.\n=\n60\na\n-\n[2]",
+   "marks": 2,
+   "path": "10(b)",
+   "mark_scheme": [
+    {
+     "label": "10(b)",
+     "text": "1\n360−a\n86\n3\n=\n1\n23\n60−a\n3\n3\n360−a\n86\n=\n\n\n60−a\n\n23\n",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        39.29999923706055,
+        473.8,
+        556.0199584960938,
+        584.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that 52 3. = \\(\\frac{360 - a}{60 - a}\\) , where 52.3 is correct to 1 decimal place.",
+     "text": "Show that 52 3. = (360-a)/(60-a) , where 52.3 is correct to 1 decimal place."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 108.6
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      388.8,
+      570.0,
+      646.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 218.9,
+      "height_pt": 257.2
+     }
+    }
+   ],
+   "text": "Solve the equation in part (b) to show that a\n54\n, correct to the nearest integer.\n=\n[3]",
+   "marks": 3,
+   "path": "10(c)",
+   "mark_scheme": [
+    {
+     "label": "10(c)",
+     "text": "52.3 60−a=360−a\nCorrectly isolating a\n54.1 […] or 54.2 leading to 54",
+     "codes": [
+      "1",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        39.29999923706055,
+        584.4,
+        556.0199584960938,
+        666.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Solve the equation in <b>part (b)</b> to show that <i>a</i> = 54, correct to the nearest integer.",
+     "text": "Solve the equation in part (b) to show that a = 54, correct to the nearest integer."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 218.9
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      255.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 139.9,
+      "height_pt": 198.2
+     }
+    }
+   ],
+   "text": "Find the value of k, correct to the nearest integer, and complete the model.\n.............)\np\n............. (\nt\n=\n-\n[2]",
+   "marks": 2,
+   "path": "10(d)",
+   "mark_scheme": [
+    {
+     "label": "10(d)",
+     "text": "Correct substitution of 54 into one of the equations in part (a)\n1\n\n\np = …13… t − 54\n3",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        39.29999923706055,
+        666.1,
+        556.0199584960938,
+        732.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the value of <i>k</i>, correct to the nearest integer, and complete the model.",
+     "text": "Find the value of k, correct to the nearest integer, and complete the model."
+    },
+    {
+     "type": "text",
+     "html": "<sup>1</sup>",
+     "text": "1"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "p =",
+     "unit": ")3"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      257.5,
+      570.0,
+      424.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 127.9,
+      "height_pt": 166.5
+     }
+    }
+   ],
+   "text": "Use the model to find the inter-arrival time for a cumulative percentage of 50.\n................................................. [3]",
+   "marks": 3,
+   "path": "10(e)",
+   "mark_scheme": [
+    {
+     "label": "10(e)",
+     "text": "1\n50 =their13t−54\n3\nor correct sketch of model\nCorrect first step\nor correct sketch with line at 50\n111",
+     "codes": [
+      "1",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        39.29999923706055,
+        89.4,
+        556.0199584960938,
+        201.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use the model to find the inter-arrival time for a cumulative percentage of 50.",
+     "text": "Use the model to find the inter-arrival time for a cumulative percentage of 50."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "f",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      426.5,
+      570.0,
+      450.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.5
+     }
+    }
+   ],
+   "text": "Sketch the model on the axes in Question 9(b).\n[2]",
+   "marks": 2,
+   "path": "10(f)",
+   "mark_scheme": [
+    {
+     "label": "10(f)",
+     "text": "Correct sketch",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        39.29999923706055,
+        201.4,
+        556.0199584960938,
+        355.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Sketch the model on the axes in <b>Question 9(b)</b>.",
+     "text": "Sketch the model on the axes in Question 9(b)."
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "g",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      452.5,
+      570.0,
+      528.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 10.9,
+      "height_pt": 75.5
+     }
+    }
+   ],
+   "text": "Comment on the validity of this model.\n.....................................................................................................................................................\n..................................................................................................................................................... [1]",
+   "marks": 1,
+   "path": "10(g)",
+   "mark_scheme": [
+    {
+     "label": "10(g)",
+     "text": "Valid up to t = approx. 500 or invalid after t = approx. 500",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        39.29999923706055,
+        355.9,
+        556.0199584960938,
+        380.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Comment on the validity of this model.",
+     "text": "Comment on the validity of this model."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 14,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This is a model for the cumulative percentage, <i>p</i>, in terms of the inter-arrival time, <i>t</i>.",
+   "text": "This is a model for the cumulative percentage, p, in terms of the inter-arrival time, t."
+  },
+  {
+   "type": "text",
+   "html": "<i>p</i> = <i>k</i> (<i>t</i> - <i>a</i>)<sup>3</sup><sup>1</sup> where <i>a</i> and <i>k</i> are constants",
+   "text": "p = k (t - a)31 where a and k are constants"
+  }
+ ]
+}

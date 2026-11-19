@@ -1,0 +1,253 @@
+{
+ "id": "0607_2022MJ_62_q08",
+ "number": 8,
+ "segments": [
+  {
+   "page": 13,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    104.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 9.2,
+    "height_pt": 47.2
+   }
+  }
+ ],
+ "text": "8\nThis is another model for the data on page 10.\n2\nN\n0 5\n.\nT\naT\n+ where a and b are constants\nb\n=\n+",
+ "marks": 8,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      108.8,
+      570.0,
+      548.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 3,
+      "answer_line": "a=  ……",
+      "working_gap_pt": 322.7,
+      "height_pt": 439.2
+     }
+    }
+   ],
+   "text": "Use the information in the table on page 10 for temperatures of 16 °C and 27 °C to find the value\nof a and the value of b, each correct to the nearest integer.\nWrite down the model.\na=  ................................................\nb=  ................................................\n2\nN\n0 5\n.\nT\n................................................ [5]\n=",
+   "marks": 5,
+   "path": "8(a)",
+   "mark_scheme": [
+    {
+     "label": "8(a)",
+     "text": "88 = 0.5 × 16 + 16a +b\n2\n208 = 0.5 × 27 + 27a +b\n2\nCorrect isolation of variable(s)\nand\ncorrect subtraction or correct substitution\nand\n11a = –116.5 or –11a = 116.5\nor 22a = –233 or –22a = 233\nOR\nCorrect isolation of b in both equations\nand\nsketch of intersecting straight lines\n[a =] −11\n[b =] 129",
+     "codes": [
+      "C1",
+      "C1",
+      "C2",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.380001068115234,
+        89.4,
+        549.0,
+        430.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use the information in the table on page 10 for temperatures of 16 °C and 27 °C to find the value of <i>a</i> and the value of <i>b</i>, each correct to the nearest integer. Write down the model.",
+     "text": "Use the information in the table on page 10 for temperatures of 16 °C and 27 °C to find the value of a and the value of b, each correct to the nearest integer. Write down the model."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "a ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "b ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "N = 0 5. T2"
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      550.8,
+      570.0,
+      574.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.2
+     }
+    }
+   ],
+   "text": "Sketch the graph of the model on the axes on page 11.\n[2]",
+   "marks": 2,
+   "path": "8(b)",
+   "mark_scheme": [
+    {
+     "label": "8(b)",
+     "text": "Correct sketch",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.380001068115234,
+        430.0,
+        549.0,
+        694.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Sketch the graph of the model on the axes on page 11.",
+     "text": "Sketch the graph of the model on the axes on page 11."
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      576.8,
+      570.0,
+      652.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 10.9,
+      "height_pt": 75.2
+     }
+    }
+   ],
+   "text": "Explain how suitable the model is for the data on page 10.\n.....................................................................................................................................................\n..................................................................................................................................................... [1]",
+   "marks": 1,
+   "path": "8(c)",
+   "mark_scheme": [
+    {
+     "label": "8(c)",
+     "text": "Good fit oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.380001068115234,
+        694.5,
+        549.0,
+        722.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Explain how suitable the model is for the data on page 10.",
+     "text": "Explain how suitable the model is for the data on page 10."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This is another model for the data on page 10.",
+   "text": "This is another model for the data on page 10."
+  },
+  {
+   "type": "text",
+   "html": "<i>N</i> = 0 5. <i>T</i><sup>2</sup> + <i>aT</i> + <i>b</i> where <i>a</i> and <i>b</i> are constants",
+   "text": "N = 0 5. T2 + aT + b where a and b are constants"
+  }
+ ]
+}

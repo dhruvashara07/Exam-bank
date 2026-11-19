@@ -1,0 +1,204 @@
+{
+ "id": "0607_2022MJ_52_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    420.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 50.6,
+    "height_pt": 363.7
+   }
+  }
+ ],
+ "text": "5\nAnother grid of consecutive even numbers has width 5.\nThe diagram shows the start of the grid.\n2\n4\n6\n8\n10\n12\nThe diagram shows a 2 by 2 window on the grid.\nn is the first number in the window.\nn\nn\n2\n+",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      427.5,
+      570.0,
+      477.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 10.9,
+      "height_pt": 49.5
+     }
+    }
+   ],
+   "text": "Complete the window using expressions in terms of n.\n[2]",
+   "marks": 2,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "n + 10 and n + 12",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        47.459999084472656,
+        576.5,
+        547.7999877929688,
+        601.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the window using expressions in terms of <i>n</i>.",
+     "text": "Complete the window using expressions in terms of n."
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      479.5,
+      570.0,
+      750.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 231.9,
+      "height_pt": 270.5
+     }
+    }
+   ],
+   "text": "Use your expressions to show that the opposite difference for a 2 by 2 window is 20.\n[3]",
+   "marks": 3,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "(n + 10) × (n + 2) = n + 12n + 20\n2\nn + 12n + 20 – n − 12n leading to 20 or = 20\n2\n2",
+     "codes": [
+      "M2",
+      "M1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        47.459999084472656,
+        601.0,
+        547.7999877929688,
+        780.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your expressions to show that the opposite difference for a 2 by 2 window is 20.",
+     "text": "Use your expressions to show that the opposite difference for a 2 by 2 window is 20."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 231.9
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Another grid of consecutive even numbers has width 5. The diagram shows the start of the grid.",
+   "text": "Another grid of consecutive even numbers has width 5. The diagram shows the start of the grid."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "2",
+     "4",
+     "6",
+     "8",
+     "10"
+    ],
+    [
+     "12",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "type": "text",
+   "html": "The diagram shows a 2 by 2 window on the grid. <i>n</i> is the first number in the window.",
+   "text": "The diagram shows a 2 by 2 window on the grid. n is the first number in the window."
+  },
+  {
+   "type": "text",
+   "html": "<i>n</i> <i>n</i> + 2",
+   "text": "n n + 2"
+  }
+ ]
+}

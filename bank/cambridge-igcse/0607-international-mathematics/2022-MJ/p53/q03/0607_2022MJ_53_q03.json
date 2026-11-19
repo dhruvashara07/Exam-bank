@@ -1,0 +1,384 @@
+{
+ "id": "0607_2022MJ_53_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    287.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 18.3,
+    "height_pt": 230.2
+   }
+  }
+ ],
+ "text": "3\nChords\nIn this investigation:\n•\neach chord must cut every other chord\n•\nonly two chords may intersect at any point.\nThe diagrams show the number of regions inside a circle when 1 chord, 2 chords and 3 chords are\ndrawn.\n2\n1\n1\n1\n3\n5\n4\n3\n2\n2\n4\n7\n6\n1 chord\n2 chords\n3 chords",
+ "marks": 6,
+ "figures": [
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    68.3,
+    153.6,
+    197.1,
+    271.0
+   ],
+   "id": "0607_2022MJ_53_q03_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    262.0,
+    178.39999389648438,
+    493.20001220703125,
+    271.0
+   ],
+   "id": "0607_2022MJ_53_q03_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    150.4,
+    325.9,
+    446.9,
+    614.9
+   ],
+   "id": "0607_2022MJ_53_q03a_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    286.1,
+    103.6,
+    551.2,
+    361.2
+   ],
+   "id": "0607_2022MJ_53_q03b_diagram4",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      295.3,
+      570.0,
+      647.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 313.7,
+      "height_pt": 352.2
+     }
+    }
+   ],
+   "text": "Count the number of regions in the circle when 4 chords are drawn.\n................................................. [1]",
+   "marks": 1,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "11",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        323.8,
+        548.9400024414062,
+        348.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Count the number of regions in the circle when 4 chords are drawn.",
+     "text": "Count the number of regions in the circle when 4 chords are drawn."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2022MJ_53_q03a_diagram3",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      380.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 58.1,
+      "height_pt": 323.7
+     }
+    }
+   ],
+   "text": "Complete this table.\nYou may use the empty circle to help you.\nNumber of\nNumber of\nchords\nregions\n1\n2\n2\n4\n3\n7\n4\n5\n6\n22\n[2]",
+   "marks": 2,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "3 differences seen\nor correct diagram\n16 in row 5 of table",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        348.3,
+        548.9400024414062,
+        409.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this table. You may use the empty circle to help you.",
+     "text": "Complete this table. You may use the empty circle to help you."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2022MJ_53_q03b_diagram4",
+     "caption": null
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Number of",
+       "Number of"
+      ],
+      [
+       "chords",
+       "regions"
+      ],
+      [
+       "1",
+       "2"
+      ],
+      [
+       "2",
+       "4"
+      ],
+      [
+       "3",
+       "7"
+      ],
+      [
+       "4",
+       ""
+      ],
+      [
+       "5",
+       ""
+      ],
+      [
+       "6",
+       "22"
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 58.1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      383.4,
+      570.0,
+      627.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 153.9,
+      "height_pt": 244.1
+     }
+    }
+   ],
+   "text": "This is a formula for the number of regions, R, when there are n intersecting chords.\n1\n2\nR\nn\nbn\n1\n=\n+\n+\n2\nFind the value of b.\n................................................. [3]",
+   "marks": 3,
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "Equation in b with correct substitution for R and n\nOne correct step to simplify their equation\n1\noe\n2",
+     "codes": [
+      "1",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        409.8,
+        548.9400024414062,
+        499.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "This is a formula for the number of regions, <i>R</i>, when there are <i>n</i> intersecting chords.",
+     "text": "This is a formula for the number of regions, R, when there are n intersecting chords."
+    },
+    {
+     "type": "text",
+     "html": "<i>R</i> = \\(\\frac{1}{2}\\) <i>n</i><sup>2</sup> + <i>bn</i> + 1",
+     "text": "R = (1)/(2) n2 + bn + 1"
+    },
+    {
+     "type": "text",
+     "html": "Find the value of <i>b</i>.",
+     "text": "Find the value of b."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 3,
+ "paper_code": "0607/53",
+ "paper_type": "core_investigation",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>Chords</b> In this investigation:",
+   "text": "Chords In this investigation:"
+  },
+  {
+   "type": "list",
+   "items": [
+    "each chord must cut every other chord",
+    "only two chords may intersect at any point."
+   ]
+  },
+  {
+   "type": "text",
+   "html": "The diagrams show the number of regions inside a circle when 1 chord, 2 chords and 3 chords are",
+   "text": "The diagrams show the number of regions inside a circle when 1 chord, 2 chords and 3 chords are"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2022MJ_53_q03_diagram1",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2022MJ_53_q03_diagram2",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "chord 2 chords 3 chords",
+   "text": "chord 2 chords 3 chords"
+  }
+ ]
+}

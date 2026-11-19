@@ -1,0 +1,160 @@
+{
+ "id": "0607_2022MJ_51_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    606.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 1,
+    "answer_line": null,
+    "working_gap_pt": 249.1,
+    "height_pt": 549.7
+   }
+  }
+ ],
+ "text": "5\nThese are the masses, in kg, of eight items.\n31  10  39  20  29  47  50  12\nThe maximum total mass that each bin can hold is 60 kg.\nEach bin Amara uses costs $13.50 .\nUse Method 2 or Method 3 to put these items into bins to give a best solution.\nFind the cost of this solution.\nBin\nMass of items in bin\nUnused mass in bin\n1\n2\n3\n4\n5\n$  ................................................ [5]",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "5",
+   "text": "3.96... so 4 bins best solution [therefore min\ncost]\nMethod 2: 50, 47, 39, 31, 29, 20, 12, 10\nor Method 3: 47, 39, 20, 12\nMethod 2\nBin\nMass of items\nUnused mass in bin\n1\n50, 10\n[10]\n0\n2\n47, 12\n13\n1\n3\n39, 20\n21\n1\n4\n31, 29\n[29]\n0\nor Method 3\nBin\nMass of items\nUnused mass in bin\n1\n31, 29\n[29]\n0\n2\n50, 10\n[10]\n0\n3\n47, 12\n13\n1\n4\n39, 20\n21\n1\n[$] 54",
+   "codes": [
+    "C1",
+    "C1",
+    "2",
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      46.380001068115234,
+      89.4,
+      548.9400024414062,
+      495.2
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "These are the masses, in kg, of eight items.",
+   "text": "These are the masses, in kg, of eight items."
+  },
+  {
+   "type": "text",
+   "html": "10 39 20 29 47 50 12",
+   "text": "10 39 20 29 47 50 12"
+  },
+  {
+   "type": "text",
+   "html": "The maximum total mass that each bin can hold is <b>60 kg</b>. Each bin Amara uses costs $13.50 . Use Method 2 or Method 3 to put these items into bins to give a best solution. Find the cost of this solution.",
+   "text": "The maximum total mass that each bin can hold is 60 kg. Each bin Amara uses costs $13.50 . Use Method 2 or Method 3 to put these items into bins to give a best solution. Find the cost of this solution."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Bin",
+     "Mass of items in bin",
+     "Unused mass in bin",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "1",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "2",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "3",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "4",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "5",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "$"
+  },
+  {
+   "type": "answer",
+   "kind": "lines"
+  },
+  {
+   "type": "marks",
+   "value": 5
+  }
+ ]
+}

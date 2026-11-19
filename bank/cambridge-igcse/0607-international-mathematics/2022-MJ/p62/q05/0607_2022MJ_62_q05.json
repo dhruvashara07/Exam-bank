@@ -1,0 +1,109 @@
+{
+ "id": "0607_2022MJ_62_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    744.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 1,
+    "answer_line": null,
+    "working_gap_pt": 596.6,
+    "height_pt": 687.2
+   }
+  }
+ ],
+ "text": "5\nA 2 by 2 window moves on a grid of width g, with squares numbered 2, 4, 6, … .\nUse algebra to find an expression for the opposite difference on this grid.\nGive your answer in its simplest form.\nYou may use this diagram to help you.\n................................................. [4]",
+ "marks": 4,
+ "figures": [
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    93.5,
+    141.4,
+    278.9,
+    319.3
+   ],
+   "id": "0607_2022MJ_62_q05_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "5",
+   "text": "n\nn + 2\nn + 2g\nn + 2g + 2 oe\n2\n(n + 2g) (n + 2) = n + 2ng + 2n + 4g\n2\n[–] n(n + 2g + 2) and – n – 2ng – 2n\ngiving 4g final answer\n5 Alternative method\n2\n4\n2 + 2g\n2 + 2g + 2 oe\n4(2 + 2g) = 8 + 8g\n– 2(4 + 2g) = – 8 – 4g\ngiving 4g as final answer",
+   "codes": [
+    "C2",
+    "C1",
+    "1",
+    "C2",
+    "C1",
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      46.380001068115234,
+      238.6,
+      549.0,
+      536.2
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A 2 by 2 window moves on a grid of width <i>g</i>, with squares numbered 2, 4, 6, … . Use algebra to find an expression for the opposite difference on this grid. Give your answer in its simplest form. You may use this diagram to help you.",
+   "text": "A 2 by 2 window moves on a grid of width g, with squares numbered 2, 4, 6, … . Use algebra to find an expression for the opposite difference on this grid. Give your answer in its simplest form. You may use this diagram to help you."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2022MJ_62_q05_diagram1",
+   "caption": null
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
+   "lines": 1
+  },
+  {
+   "type": "marks",
+   "value": 4
+  }
+ ]
+}

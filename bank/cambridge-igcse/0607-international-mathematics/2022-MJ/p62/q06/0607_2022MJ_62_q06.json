@@ -1,0 +1,187 @@
+{
+ "id": "0607_2022MJ_62_q06",
+ "number": 6,
+ "segments": [],
+ "text": "",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    116.8,
+    103.1,
+    278.7,
+    246.8
+   ],
+   "id": "0607_2022MJ_62_q06a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      57.7,
+      570.0,
+      763.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 452.9,
+      "height_pt": 705.3
+     }
+    }
+   ],
+   "text": "6\n(a) A square window of side x\n+ moves on a grid of width g, with squares numbered 2, 4, 6, … .\n1\nn is the first number in the window.\nx + 1\nn\nx + 1\n2, where x can be any\nShow that an expression for the opposite difference using this window is gx\n4\npositive integer.\n[4]",
+   "marks": 4,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "n + 2x\nn + 2gx oe\nn+ 2gx + 2x oe\n2\n2\n(n + 2x) (n + 2gx) = n + 2nx + 2ngx + 4gx\n2\n[–] n(n + 2gx + 2x) and – n – 2ngx –2nx\n2\nleading to 4gx",
+     "codes": [
+      "2",
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        536.2,
+        549.0,
+        676.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> A square window of side <i>x</i> + 1 moves on a grid of width <i>g</i>, with squares numbered 2, 4, 6, … .",
+     "text": "A square window of side x + 1 moves on a grid of width g, with squares numbered 2, 4, 6, … ."
+    },
+    {
+     "type": "text",
+     "html": "<i>n</i> is the first number in the window.",
+     "text": "n is the first number in the window."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2022MJ_62_q06a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Show that an expression for the opposite difference using this window is 4<i>gx</i><sup>2</sup> , where <i>x</i> can be any positive integer.",
+     "text": "Show that an expression for the opposite difference using this window is 4gx2 , where x can be any positive integer."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 452.9
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      795.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 660.9,
+      "height_pt": 738.2
+     }
+    }
+   ],
+   "text": "A square window moves on a grid numbered 2, 4, 6, … .\nThe opposite difference is 144.\nUse your answer to part (a) to find all the ways this is possible.\n[4]",
+   "marks": 4,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "36\n6\ngx = 36 or g =\n2\nor x=\n2\nx\ng\n2\nor for substituting for g or x in 4gx = 144\n2 by 2 window on a grid of width 36\n3 by 3 window on a grid of width 9\n4 by 4 window on a grid of width 4",
+     "codes": [
+      "C1",
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.380001068115234,
+        89.4,
+        549.0,
+        247.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A square window moves on a grid numbered 2, 4, 6, … . The opposite difference is 144. Use your answer to <b>part (a)</b> to find all the ways this is possible.",
+     "text": "A square window moves on a grid numbered 2, 4, 6, … . The opposite difference is 144. Use your answer to part (a) to find all the ways this is possible."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 660.9
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

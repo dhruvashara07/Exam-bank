@@ -1,0 +1,320 @@
+{
+ "id": "0607_2022MJ_63_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    321.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 11.6,
+    "height_pt": 264.7
+   }
+  }
+ ],
+ "text": "5\nSecants\nA secant is a straight line that intersects a circle at two points and extends outside the circle.\nIn this investigation:\n•\neach secant must cut every other secant\nsecant\n•\nonly 2 secants may intersect at any point\n•\nsecants must not intersect on the circumference of the circle.\nThe diagram shows the number of regions with 2 secants drawn on a circle.\n2\n3\n8\n6\n4\n1\n7\n5",
+ "marks": 6,
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    419.1,
+    116.4,
+    551.5,
+    164.6
+   ],
+   "id": "0607_2022MJ_63_q05_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    165.4,
+    203.7,
+    431.8,
+    317.7
+   ],
+   "id": "0607_2022MJ_63_q05_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    90.8,
+    358.6,
+    391.6,
+    565.7
+   ],
+   "id": "0607_2022MJ_63_q05a_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      326.8,
+      570.0,
+      725.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 210.0,
+      "height_pt": 398.2
+     }
+    }
+   ],
+   "text": "Find the number of regions when there are 3 secants.\nComplete the table.\nNumber of\nNumber of regions\nsecants\n1\n4\n2\n8\n3\n4\n19\n5\n26\n[2]",
+   "marks": 2,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "3 secants intersecting each other\n13",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        39.29999923706055,
+        458.3,
+        556.0199584960938,
+        507.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the number of regions when there are 3 secants. Complete the table.",
+     "text": "Find the number of regions when there are 3 secants. Complete the table."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2022MJ_63_q05a_diagram3",
+     "caption": null
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Number of secants",
+       "Number of regions"
+      ],
+      [
+       "1",
+       "4"
+      ],
+      [
+       "2",
+       "8"
+      ],
+      [
+       "3",
+       ""
+      ],
+      [
+       "4",
+       "19"
+      ],
+      [
+       "5",
+       "26"
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 210.0
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      476.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "b =  ……",
+      "working_gap_pt": 296.7,
+      "height_pt": 419.2
+     }
+    }
+   ],
+   "text": "This is a formula for the number of regions, R, when there are n secants.\n1\n2\nR\nn\nbn\nc\n=\n+\n+\n2\nFind the value of b and the value of c.\nb =  ................................................\nc =  ................................................ [4]",
+   "marks": 4,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "Two equations with correct substitution for R and n\nCorrect method to eliminate either b or c\n(b =) 2.5\n(c =) 1\n5(b) alternative 1\n2\n[½ n ]\n0.5 2 4 .5\n8 12.5\n[leaves]\n3.5 6\n8.5 11 13.5\nOne difference of 2.5 seen\n(b =) 2.5\n(c =) 1",
+     "codes": [
+      "1",
+      "C1",
+      "2",
+      "1",
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        39.29999923706055,
+        507.2,
+        556.0199584960938,
+        720.2
+       ]
+      }
+     ]
+    },
+    {
+     "label": "5(b)",
+     "text": "5(b) alternative 2\n1 4\n8\n13 19\n26\n3\n4\n5\n6\n7\na + b = 3 indicated\n(b =) 2.5\n(c =) 1",
+     "codes": [
+      "1",
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        39.29999923706055,
+        89.4,
+        556.0199584960938,
+        212.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "This is a formula for the number of regions, <i>R</i>, when there are <i>n</i> secants.",
+     "text": "This is a formula for the number of regions, R, when there are n secants."
+    },
+    {
+     "type": "text",
+     "html": "<i>R</i> = \\(\\frac{1}{2}\\) <i>n</i><sup>2</sup> + <i>bn</i> + <i>c</i>",
+     "text": "R = (1)/(2) n2 + bn + c"
+    },
+    {
+     "type": "text",
+     "html": "Find the value of <i>b</i> and the value of <i>c</i>.",
+     "text": "Find the value of b and the value of c."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "b ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "c ="
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>Secants</b> A secant is a straight line that intersects a circle at two points and extends outside the circle. In this investigation:",
+   "text": "Secants A secant is a straight line that intersects a circle at two points and extends outside the circle. In this investigation:"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2022MJ_63_q05_diagram1",
+   "caption": null
+  },
+  {
+   "type": "list",
+   "items": [
+    "each secant must cut every other secant",
+    "only 2 secants may intersect at any point",
+    "secants must not intersect on the circumference of the circle."
+   ]
+  },
+  {
+   "type": "text",
+   "html": "The diagram shows the number of regions with 2 secants drawn on a circle.",
+   "text": "The diagram shows the number of regions with 2 secants drawn on a circle."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2022MJ_63_q05_diagram2",
+   "caption": null
+  }
+ ]
+}

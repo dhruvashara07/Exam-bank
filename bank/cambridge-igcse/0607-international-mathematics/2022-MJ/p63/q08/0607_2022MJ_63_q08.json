@@ -1,0 +1,240 @@
+{
+ "id": "0607_2022MJ_63_q08",
+ "number": 8,
+ "segments": [
+  {
+   "page": 11,
+   "bbox": [
+    30.0,
+    316.8,
+    570.0,
+    579.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 11.7,
+    "height_pt": 262.7
+   }
+  }
+ ],
+ "text": "8\nThis table shows the data for the first 5 planes arriving at the airport for the 1080 seconds after 8 am on\nday 1.\nFor example:  Plane B arrives 120 seconds after plane A. Plane A has not ended its landing.\nPlane B starts its landing 180 seconds after 8 am, as soon as plane A has ended its\nlanding.\nArrival\nStart of\nEnd of\nInter-arrival\nLanding\nSeconds\nover airport\nlanding\nlanding\nPlane\ntime\ntime\nwaiting\n(seconds\n(seconds\n(seconds\n(seconds)\n(seconds)\nto land\nafter 8 am)\nafter 8 am)\nafter 8 am)\nA\n30\n30\n150\n180\n0\nB\n120\n150\n180\n110\n290\n30\nC\n360\n510\n510\n100\n610\n0\nD\n25\n535\n610\n280\n75\nE\n60\n44\n934",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      584.4,
+      570.0,
+      659.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 36.9,
+      "height_pt": 75.1
+     }
+    }
+   ],
+   "text": "Complete the table.\n[5]",
+   "marks": 5,
+   "path": "8(a)",
+   "mark_scheme": [
+    {
+     "label": "8(a)",
+     "text": "Correct calculation for a correct figure in table\nPlan\ninter\narrive\nstart\nland\nend\nwait\nD\n25\n535\n610\n280\n890\n75\nE\n60\n595\n890\n44\n934\n295",
+     "codes": [
+      "C1",
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        39.29999923706055,
+        459.6,
+        556.0199584960938,
+        569.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      662.4,
+      570.0,
+      776.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 49.9,
+      "height_pt": 114.1
+     }
+    }
+   ],
+   "text": "A plane uses the runway for the whole of its landing time.\nCalculate the total time that the runway was not used during these 1080 seconds.\n................................................. [2]",
+   "marks": 2,
+   "path": "8(b)",
+   "mark_scheme": [
+    {
+     "label": "8(b)",
+     "text": "1080 – (150 + 110 + 100 + 280 + 44) oe\n396",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        39.29999923706055,
+        569.7,
+        556.0199584960938,
+        622.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A plane uses the runway for the whole of its landing time. Calculate the total time that the runway was <b>not</b> used during these 1080 seconds.",
+     "text": "A plane uses the runway for the whole of its landing time. Calculate the total time that the runway was not used during these 1080 seconds."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This table shows the data for the first 5 planes arriving at the airport for the 1080 seconds after 8 am on day 1. For example: Plane B arrives 120 seconds after plane A. Plane A has not ended its landing.",
+   "text": "This table shows the data for the first 5 planes arriving at the airport for the 1080 seconds after 8 am on day 1. For example: Plane B arrives 120 seconds after plane A. Plane A has not ended its landing."
+  },
+  {
+   "type": "text",
+   "html": "Plane B starts its landing 180 seconds after 8 am, as soon as plane A has ended its landing.",
+   "text": "Plane B starts its landing 180 seconds after 8 am, as soon as plane A has ended its landing."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Plane",
+     "Inter-arrival time (seconds)",
+     "Arrival over airport (seconds after 8 am)",
+     "Start of landing (seconds after 8 am)",
+     "Landing time (seconds)",
+     "End of landing (seconds after 8 am)",
+     "Seconds waiting to land"
+    ],
+    [
+     "A",
+     "",
+     "30",
+     "30",
+     "150",
+     "180",
+     "0"
+    ],
+    [
+     "B",
+     "120",
+     "150",
+     "180",
+     "110",
+     "290",
+     "30"
+    ],
+    [
+     "C",
+     "360",
+     "510",
+     "510",
+     "100",
+     "610",
+     "0"
+    ],
+    [
+     "D",
+     "25",
+     "535",
+     "610",
+     "280",
+     "",
+     "75"
+    ],
+    [
+     "E",
+     "60",
+     "",
+     "",
+     "44",
+     "934",
+     ""
+    ]
+   ]
+  }
+ ]
+}

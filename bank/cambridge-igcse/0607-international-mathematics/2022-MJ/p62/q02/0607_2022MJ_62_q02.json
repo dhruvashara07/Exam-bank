@@ -1,0 +1,323 @@
+{
+ "id": "0607_2022MJ_62_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    80.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 23.2
+   }
+  }
+ ],
+ "text": "2\nA 3 by 3 window moves on the same grid.",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    97.0,
+    118.9,
+    222.4,
+    237.0
+   ],
+   "id": "0607_2022MJ_62_q02a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    97.0,
+    358.6,
+    222.4,
+    476.7
+   ],
+   "id": "0607_2022MJ_62_q02c_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  },
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    97.0,
+    494.3,
+    222.4,
+    612.4
+   ],
+   "id": "0607_2022MJ_62_q02c_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  },
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    97.0,
+    630.1,
+    222.4,
+    748.2
+   ],
+   "id": "0607_2022MJ_62_q02c_diagram4",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      82.8,
+      570.0,
+      242.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 75.1,
+      "height_pt": 159.2
+     }
+    }
+   ],
+   "text": "Complete the corner squares in the first window.\n2\n6\n[1]",
+   "marks": 1,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "42\n46",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        242.7,
+        549.0,
+        267.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the corner squares in the first window.",
+     "text": "Complete the corner squares in the first window."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2022MJ_62_q02a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 75.1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      244.5,
+      570.0,
+      320.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 10.9,
+      "height_pt": 75.5
+     }
+    }
+   ],
+   "text": "Complete the opposite difference calculations for this window.\n.......... # 6\n= ..........\n2 # ..........\n= ..........\n.......... - .......... = ..........\n[1]",
+   "marks": 1,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "their42 × 6 = their252\n2 × their46 = their92\ntheir 252 – their 92",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        267.1,
+        549.0,
+        316.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the opposite difference calculations for this window.",
+     "text": "Complete the opposite difference calculations for this window."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "2 #"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      322.5,
+      570.0,
+      753.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 3,
+      "answer_line": null,
+      "working_gap_pt": 104.8,
+      "height_pt": 430.5
+     }
+    }
+   ],
+   "text": "Complete the corner squares for each window and find the opposite difference.\n4\n44\n.................................................\n10\n54\n.................................................\n174\n................................................. [3]",
+   "marks": 3,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "8\n48\n160\n14\n50\n160\n134\n138\n178\n160\nComplete set of calculations for a difference",
+     "codes": [
+      "2",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        316.8,
+        549.0,
+        505.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the corner squares for each window and find the opposite difference.",
+     "text": "Complete the corner squares for each window and find the opposite difference."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2022MJ_62_q02c_diagram2",
+     "caption": null
+    },
+    {
+     "type": "figure",
+     "id": "0607_2022MJ_62_q02c_diagram3",
+     "caption": null
+    },
+    {
+     "type": "figure",
+     "id": "0607_2022MJ_62_q02c_diagram4",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 3
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A 3 by 3 window moves on the same grid.",
+   "text": "A 3 by 3 window moves on the same grid."
+  }
+ ]
+}

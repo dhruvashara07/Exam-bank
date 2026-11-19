@@ -1,0 +1,89 @@
+{
+ "id": "0607_2022MJ_12_q16",
+ "number": 16,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    531.2,
+    570.0,
+    788.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "answer_line",
+    "dotted_lines": 2,
+    "answer_line": "=  ……",
+    "working_gap_pt": 153.7,
+    "height_pt": 257.3
+   }
+  }
+ ],
+ "text": "16\nA = {square numbers less than 20}\nB = {multiples of 4 less than 20}\nList the elements of A\nB\nand A\nB\n.\n+\n,\nA\nB\n=  ................................................\n+\nA\nB\n= ................................................. [3]\n,",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "16",
+   "text": "[A  B] 4, 16\n[A  B] 1, 4, 8, 9, 12, 16",
+   "codes": [
+    "3"
+   ],
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      46.13999938964844,
+      603.5,
+      549.1799926757812,
+      654.9
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 1,
+ "variant": 2,
+ "paper_code": "0607/12",
+ "paper_type": "core_short_answer",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<i>A</i> = {square numbers less than 20} <i>B</i> = {multiples of 4 less than 20} List the elements of <i>A</i> + <i>B</i> and <i>A</i> , <i>B</i>.",
+   "text": "A = {square numbers less than 20} B = {multiples of 4 less than 20} List the elements of A + B and A , B."
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "A + B ="
+  },
+  {
+   "type": "answer",
+   "kind": "answer_line",
+   "prefix": "A , B ="
+  },
+  {
+   "type": "marks",
+   "value": 3
+  }
+ ]
+}

@@ -1,0 +1,238 @@
+{
+ "id": "0607_2022MJ_41_q10",
+ "number": 10,
+ "segments": [],
+ "text": "",
+ "marks": 11,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      210.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 82.6,
+      "height_pt": 153.2
+     }
+    }
+   ],
+   "text": "Simplify fully.\n2\n4\nxy\nx\n'\n3\n12\ny\n................................................. [2]",
+   "marks": 2,
+   "path": "10(a)",
+   "mark_scheme": [
+    {
+     "label": "10(a)",
+     "text": "2\n16xy Final answer",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.31999969482422,
+        242.7,
+        548.9400024414062,
+        285.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Simplify fully.",
+     "text": "Simplify fully."
+    },
+    {
+     "type": "text",
+     "html": "<sup>2</sup> \\(\\frac{4x y}{3}\\) &#x27; \\(\\frac{x}{12y}\\)",
+     "text": "2 (4xy)/(3) ' (x)/(12y)"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      212.8,
+      570.0,
+      405.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 121.6,
+      "height_pt": 192.2
+     }
+    }
+   ],
+   "text": "Write as a single fraction in its simplest form.\n1\nx\n3\n-\n-\nx\n3\n2\n-\n................................................. [3]",
+   "marks": 3,
+   "path": "10(b)",
+   "mark_scheme": [
+    {
+     "label": "10(b)",
+     "text": "−x +6x−7\n2\nFinal answer\n2(x−3)",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.31999969482422,
+        285.5,
+        548.9400024414062,
+        331.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write as a single fraction in its simplest form.",
+     "text": "Write as a single fraction in its simplest form."
+    },
+    {
+     "type": "text",
+     "html": "\\(\\frac{1}{x - 3}\\) - \\(\\frac{x - 3}{2}\\)",
+     "text": "(1)/(x-3) - (x-3)/(2)"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      420.8,
+      570.0,
+      782.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "a =  ……",
+      "working_gap_pt": 244.7,
+      "height_pt": 361.2
+     }
+    }
+   ],
+   "text": "+\n(c) The nth term of a sequence is an\nbn\n-.\n5\nThe second term of this sequence is\n- and the third term is 4.\n3\nFind the value of a and the value of b.\nYou must show all your working.\na =  ................................................\nb =  ................................................ [6]",
+   "marks": 6,
+   "path": "10(c)",
+   "mark_scheme": [
+    {
+     "label": "10(c)",
+     "text": "2 ×a+2×b−5=−3oe\n2\n3 ×a+3×b−5=4 oe\n2\ncorrectly equating one set of coefficients\nor making a or b subject of one equation\ncorrect method for eliminating one\nvariable\nor correctly substituting in other equation\n[a=] 2\n[b=] −3",
+     "codes": [
+      "M2",
+      "M1",
+      "M1",
+      "B2"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.31999969482422,
+        331.3,
+        548.9400024414062,
+        499.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "+",
+     "text": "+"
+    },
+    {
+     "type": "text",
+     "html": "The <i>n</i>th term of a sequence is <i>an</i><sup>2</sup> <i>bn</i> - 5. The second term of this sequence is -3 and the third term is 4. Find the value of <i>a</i> and the value of <i>b</i>. You must show all your working.",
+     "text": "The nth term of a sequence is an2 bn - 5. The second term of this sequence is -3 and the third term is 4. Find the value of a and the value of b. You must show all your working."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "a ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "b ="
+    },
+    {
+     "type": "marks",
+     "value": 6
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_long_answer",
+ "total_marks": 11,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

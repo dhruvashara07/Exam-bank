@@ -1,0 +1,321 @@
+{
+ "id": "0607_2022MJ_51_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    119.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.7,
+    "height_pt": 62.2
+   }
+  }
+ ],
+ "text": "4\nAmara tries another way to improve Method 1.\nMethod 3 Look for items that combine to make as many full bins as possible and place these first.\nFor the remaining items, use Method 2.",
+ "marks": 11,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      121.8,
+      570.0,
+      775.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 366.1,
+      "height_pt": 653.7
+     }
+    }
+   ],
+   "text": "These are the masses, in kg, of eight items.\n21  10  30  19  13  7  28  4\nThe maximum total mass that each bin can hold is 40 kg.\nDoes Method 3 give a best solution for these items?\nShow how you decide.\nBin\nMass of items in bin\nUnused mass in bin\n1\n2\n3\n4\n5\n[6]",
+   "marks": 6,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "28, 13, 7, 4\nor\n30, 28, 21, 13\nMass of\nBin\nUnused mass in bin\nitems in bin\n1\n30, 10\n[10]\n[0]\n2\n21, 19\n[19]\n[0]\n3\n28, 7, 4\n[12]\n[5]\n1\n4\n13\n27\n5\nor\nMass of\nBin\nUnused mass in bin\nitems in bin\n1\n10, 19, 7, 4\n[30] [11]\n[4]\n0\n2\n30\n10\n3\n28\n12\n4\n21, 13\n[19]\n6\n5\nYes oe\nAND\n3.3\nor\n[3 × 40 =] 120 and 132 seen\nor\n132 ÷ 3 = 44 seen",
+     "codes": [
+      "C1",
+      "3",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.380001068115234,
+        89.4,
+        548.9400024414062,
+        599.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "These are the masses, in kg, of eight items.",
+     "text": "These are the masses, in kg, of eight items."
+    },
+    {
+     "type": "text",
+     "html": "10 30 19 13 7 28 4",
+     "text": "10 30 19 13 7 28 4"
+    },
+    {
+     "type": "text",
+     "html": "The maximum total mass that each bin can hold is <b>40 kg</b>. Does Method 3 give a best solution for these items? Show how you decide.",
+     "text": "The maximum total mass that each bin can hold is 40 kg. Does Method 3 give a best solution for these items? Show how you decide."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Bin",
+       "Mass of items in bin",
+       "Unused mass in bin",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "1",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "2",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "3",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "4",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "5",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 366.1
+    },
+    {
+     "type": "marks",
+     "value": 6
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      775.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 413.9,
+      "height_pt": 718.7
+     }
+    }
+   ],
+   "text": "Amara puts nine items into bins using Method 3.\nThe maximum total mass that each bin can hold is 40 kg.\nBin\nMass of items in bin\nUnused mass in bin\n1\n18, 22\n0\n2\n32, 5, 3\n0\n3\n32\n8\n4\n19, 15\n21\n6\n5\n12\n28\nAmara only wants to use 4 bins.\nShe removes the last item she packed and divides it into two smaller items with the same total\nmass.\nShe puts each of these two items into a bin that can hold its mass.\nWork out how much the percentage of unused storage changes when Amara uses 4 bins instead of\n5 bins.\n................................................. [5]",
+   "marks": 5,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "Evidence of 12 removed from bin 5 and 2 items\ntotalling 12 correctly placed in bins 3 and 4\n8+6+28\n42\n\n\n\n\n200\n× 100 or\n× 100 oe or\n5 ×40\n2\n2\n\n\n\n\n160\n× 100 or\n4×40\n× 100 oe\n[decreases by] 19.75[%] or 19.8[%] nfww",
+     "codes": [
+      "C1",
+      "C1",
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.380001068115234,
+        599.5,
+        548.9400024414062,
+        778.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Amara puts nine items into bins using Method 3. The maximum total mass that each bin can hold is <b>40 kg</b>.",
+     "text": "Amara puts nine items into bins using Method 3. The maximum total mass that each bin can hold is 40 kg."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Bin",
+       "Mass of items in bin",
+       "Unused mass in bin",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "1",
+       "18, 22",
+       "0",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "2",
+       "32, 5, 3",
+       "0",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "3",
+       "32",
+       "8",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "4",
+       "19, 15",
+       "21",
+       "6",
+       "",
+       "",
+       ""
+      ],
+      [
+       "5",
+       "12",
+       "28",
+       "",
+       "",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "html": "Amara only wants to use 4 bins. She removes the last item she packed and divides it into two smaller items with the same total mass. She puts each of these two items into a bin that can hold its mass. Work out how much the percentage of unused storage changes when Amara uses 4 bins instead of bins.",
+     "text": "Amara only wants to use 4 bins. She removes the last item she packed and divides it into two smaller items with the same total mass. She puts each of these two items into a bin that can hold its mass. Work out how much the percentage of unused storage changes when Amara uses 4 bins instead of bins."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 11,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Amara tries another way to improve Method 1. <b>Method 3</b> Look for items that combine to make as many full bins as possible and place these first.",
+   "text": "Amara tries another way to improve Method 1. Method 3 Look for items that combine to make as many full bins as possible and place these first."
+  },
+  {
+   "type": "text",
+   "html": "For the remaining items, use <b>Method 2</b>.",
+   "text": "For the remaining items, use Method 2."
+  }
+ ]
+}

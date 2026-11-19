@@ -1,0 +1,612 @@
+{
+ "id": "0607_2022MJ_62_q07",
+ "number": 7,
+ "segments": [],
+ "text": "",
+ "marks": 15,
+ "figures": [
+  {
+   "caption": null,
+   "page": 11,
+   "bbox": [
+    109.9,
+    67.0,
+    486.9,
+    552.1
+   ],
+   "id": "0607_2022MJ_62_q07b_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      498.7,
+      570.0,
+      639.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 75.9,
+      "height_pt": 140.3
+     }
+    }
+   ],
+   "text": "7\n(a) Calculate the mean temperature and the mean number of chirps.\nTemperature  ................................................\nNumber of chirps  ................................................ [2]",
+   "marks": 2,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "[Temperature]\n20.4[4…]\n[Number of chirps]\n132[.33…]",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.380001068115234,
+        247.2,
+        549.0,
+        284.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> Calculate the mean temperature and the mean number of chirps.",
+     "text": "Calculate the mean temperature and the mean number of chirps."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Temperature"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Number of chirps"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      641.7,
+      570.0,
+      678.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 36.3
+     }
+    },
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      67.0,
+      570.0,
+      573.5
+     ],
+     "continued": true,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 13.2,
+      "height_pt": 506.5
+     }
+    }
+   ],
+   "text": "Plot the data on the grid on page 11.\nThe first five points have been plotted for you.\nN\n220\n210\n200\n190\n180\n170\n160\nNumber of chirps\n150\nin 60 seconds\n140\n130\n120\n110\n100\n90\n80\n7010\nT\n15\n20\n25\n30\nTemperature,°C\n[2]",
+   "marks": 2,
+   "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "4 points correctly plotted",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.380001068115234,
+        284.3,
+        549.0,
+        308.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Plot the data on the grid on page 11. The first five points have been plotted for you.",
+     "text": "Plot the data on the grid on page 11. The first five points have been plotted for you."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2022MJ_62_q07b_diagram1",
+     "caption": null
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      576.0,
+      570.0,
+      664.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 23.9,
+      "height_pt": 88.5
+     }
+    }
+   ],
+   "text": "A model for the number of chirps, N, is the regression line for N in terms of T.\nFind this model.\n................................................. [2]",
+   "marks": 2,
+   "path": "7(c)",
+   "mark_scheme": [
+    {
+     "label": "7(c)",
+     "text": "N = 9.72T – 66.4",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.380001068115234,
+        308.7,
+        549.0,
+        396.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A model for the number of chirps, <i>N</i>, is the regression line for <i>N</i> in terms of <i>T</i>. Find this model.",
+     "text": "A model for the number of chirps, N, is the regression line for N in terms of T. Find this model."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      667.0,
+      570.0,
+      690.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.5
+     }
+    }
+   ],
+   "text": "Draw the graph of the model on the axes.\n[2]",
+   "marks": 2,
+   "path": "7(d)",
+   "mark_scheme": [
+    {
+     "label": "7(d)",
+     "text": "Correct ruled straight line through their mean\npoint",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.380001068115234,
+        396.4,
+        549.0,
+        509.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Draw the graph of the model on the axes.",
+     "text": "Draw the graph of the model on the axes."
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      693.0,
+      570.0,
+      781.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 23.9,
+      "height_pt": 88.5
+     }
+    }
+   ],
+   "text": "A Snowy Tree Cricket chirps 170 times in 60 seconds.\nUse your model to find the temperature.\n................................................. [2]",
+   "marks": 2,
+   "path": "7(e)",
+   "mark_scheme": [
+    {
+     "label": "7(e)",
+     "text": "Line N = 170 drawn\nor\nsubstitution N = 170 in their model\n24 to 25",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.380001068115234,
+        509.4,
+        549.0,
+        587.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A Snowy Tree Cricket chirps 170 times in 60 seconds. Use your model to find the temperature.",
+     "text": "A Snowy Tree Cricket chirps 170 times in 60 seconds. Use your model to find the temperature."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "f",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      119.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 10.7,
+      "height_pt": 62.2
+     }
+    }
+   ],
+   "text": "Amos Dolbear originally counted the number of chirps in 13 seconds and measured the temperature\nin degrees Fahrenheit, F.\nTo change the temperature from T °C to F, use\nF\n1 8\n.\nT\n32\n.\n=\n+",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        30.0,
+        121.8,
+        570.0,
+        464.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 57.1,
+        "height_pt": 342.7
+       }
+      }
+     ],
+     "text": "Complete the table to change the data to the form Amos Dolbear used.\nAll the data in the table is correct to the nearest integer.\nTemperature\nNumber of chirps\nT °C\nF\nin 60 seconds\nin 13 seconds\n14\n57\n83\n18\n16\n61\n88\n19\n17\n63\n102\n22\n19\n106\n21\n129\n22\n138\n23\n73\n157\n34\n25\n77\n180\n39\n27\n81\n208\n45\n[4]",
+     "marks": 4,
+     "path": "7(f)(i)",
+     "mark_scheme": [
+      {
+       "label": "7(f)(i)",
+       "text": "One calculation to convert temperature\ne.g. 1.8 × 19 + 32\nand\ncorrect calculation for finding N\n13\ne.g. 106 ×\n60\noe\nNumber of\nTemperature C\nchirps\nto F\n19\n66\n106\n23\n21\n70\n129\n28\n22\n72\n138\n30",
+       "codes": [
+        "C2",
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          46.380001068115234,
+          89.4,
+          549.0,
+          324.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the table to change the data to the form Amos Dolbear used. All the data in the table is correct to the nearest integer.",
+       "text": "Complete the table to change the data to the form Amos Dolbear used. All the data in the table is correct to the nearest integer."
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "Temperature",
+         "",
+         "Number of chirps",
+         ""
+        ],
+        [
+         "<i>T</i> °C",
+         "<i>F</i>",
+         "in 60 seconds",
+         "in 13 seconds"
+        ],
+        [
+         "14",
+         "57",
+         "83",
+         "18"
+        ],
+        [
+         "16",
+         "61",
+         "88",
+         "19"
+        ],
+        [
+         "17",
+         "63",
+         "102",
+         "22"
+        ],
+        [
+         "19",
+         "",
+         "106",
+         ""
+        ],
+        [
+         "21",
+         "",
+         "129",
+         ""
+        ],
+        [
+         "22",
+         "",
+         "138",
+         ""
+        ],
+        [
+         "23",
+         "73",
+         "157",
+         "34"
+        ],
+        [
+         "25",
+         "77",
+         "180",
+         "39"
+        ],
+        [
+         "27",
+         "81",
+         "208",
+         "45"
+        ]
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 57.1
+      },
+      {
+       "type": "marks",
+       "value": 4
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        30.0,
+        467.2,
+        570.0,
+        674.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 2,
+        "answer_line": null,
+        "working_gap_pt": 49.9,
+        "height_pt": 206.8
+       }
+      }
+     ],
+     "text": "Amos Dolbear suggested a simple model to find the temperature, F, from the number of\nchirps.\nAdd 40 to the number of chirps in 13 seconds to find the temperature, F.\nIs this a suitable model for the data?\nGive a reason for your answer.\n.............................................................................................................................................\n............................................................................................................................................. [1]",
+     "marks": 1,
+     "path": "7(f)(ii)",
+     "mark_scheme": [
+      {
+       "label": "7(f)(ii)",
+       "text": "Yes: The temperatures are around 40 more oe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          46.380001068115234,
+          324.3,
+          549.0,
+          352.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Amos Dolbear suggested a simple model to find the temperature, <i>F</i>, from the number of chirps.",
+       "text": "Amos Dolbear suggested a simple model to find the temperature, F, from the number of chirps."
+      },
+      {
+       "type": "text",
+       "html": "Add 40 to the number of chirps in 13 seconds to find the temperature, <i>F</i>.",
+       "text": "Add 40 to the number of chirps in 13 seconds to find the temperature, F."
+      },
+      {
+       "type": "text",
+       "html": "Is this a suitable model for the data? Give a reason for your answer.",
+       "text": "Is this a suitable model for the data? Give a reason for your answer."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "7(f)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Amos Dolbear originally counted the number of chirps in 13 seconds and measured the temperature in degrees Fahrenheit, <i>F</i>. To change the temperature from <i>T</i> °C to <i>F</i>, use <i>F</i> = 1 8. <i>T</i> + 32.",
+     "text": "Amos Dolbear originally counted the number of chirps in 13 seconds and measured the temperature in degrees Fahrenheit, F. To change the temperature from T °C to F, use F = 1 8. T + 32."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 15,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

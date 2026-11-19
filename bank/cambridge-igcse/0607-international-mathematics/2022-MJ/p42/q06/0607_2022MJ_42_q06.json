@@ -1,0 +1,557 @@
+{
+ "id": "0607_2022MJ_42_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 10,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    276.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 17.0,
+    "height_pt": 219.7
+   }
+  }
+ ],
+ "text": "6\nThe lifetimes, x hours, of 80 electric light bulbs are shown in the table.\nLifetime (x hours)\nFrequency\n4\n850\n1\nx\n870\nG\n8\n70\nx\n8\n90\n6\n1\nG\n890\n1\nx\n900\n12\nG\n18\n900\n1\nx\n920\nG\n920\nx\n940\n16\n1\nG\n940\n1\nx\n950\n20\nG\n4\n950\n1\nx\n1000\nG",
+ "marks": 11,
+ "figures": [
+  {
+   "caption": null,
+   "page": 11,
+   "bbox": [
+    36.6,
+    86.9,
+    557.4,
+    367.9
+   ],
+   "id": "0607_2022MJ_42_q06c_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      277.5,
+      570.0,
+      418.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 101.9,
+      "height_pt": 140.5
+     }
+    }
+   ],
+   "text": "Calculate an estimate of the mean lifetime.\n.............................................. h [2]",
+   "marks": 2,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "919",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        35.459999084472656,
+        377.4,
+        559.8600463867188,
+        401.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate an estimate of the mean lifetime.",
+     "text": "Calculate an estimate of the mean lifetime."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "h"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      420.5,
+      570.0,
+      682.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 21.3,
+      "height_pt": 262.0
+     }
+    }
+   ],
+   "text": "Complete the cumulative frequency table.\nLifetime (x hours)\nCumulative\nfrequency\n4\nx\n870\nG\nx\n890\nG\nx\n900\nG\nx\n920\nG\nx\n940\nG\nx\n9\n50\nG\n80\nx\n1000\nG\n[1]",
+   "marks": 1,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "[ 4], 10, 22, 40, 56, 76, [80]",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        35.459999084472656,
+        401.8,
+        559.8600463867188,
+        426.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the cumulative frequency table.",
+     "text": "Complete the cumulative frequency table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Lifetime (<i>x</i> hours)",
+       "Cumulative frequency"
+      ],
+      [
+       "<i>x</i> G 870",
+       "4"
+      ],
+      [
+       "<i>x</i> G 890",
+       ""
+      ],
+      [
+       "<i>x</i> G 900",
+       ""
+      ],
+      [
+       "<i>x</i> G 920",
+       ""
+      ],
+      [
+       "<i>x</i> G 940",
+       ""
+      ],
+      [
+       "<i>x</i> G 950",
+       ""
+      ],
+      [
+       "<i>x</i> G 1000",
+       "80"
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      389.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 23.6,
+      "height_pt": 332.2
+     }
+    }
+   ],
+   "text": "On the grid below, draw a cumulative frequency curve.\n80\n70\n60\n50\nCumulative\n40\nfrequency\n30\n20\n10\n0\n9901000x\n850\n860\n870\n880\n890\n900\n910\n920\n930\n940\n950\n960\n970\n980\nLifetime (hours)\n[3]",
+   "marks": 3,
+   "path": "6(c)",
+   "mark_scheme": [
+    {
+     "label": "6(c)",
+     "text": "Correct curve or polygon and correct points\nplotted\n(870, 4) (890, 10) (900, 22) (920, 40)\n(940, 56) (950, 76) (1000, 80)",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        35.459999084472656,
+        426.3,
+        559.8600463867188,
+        488.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the grid below, draw a cumulative frequency curve.",
+     "text": "On the grid below, draw a cumulative frequency curve."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2022MJ_42_q06c_diagram1",
+     "caption": null
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      391.9,
+      570.0,
+      415.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.1
+     }
+    }
+   ],
+   "text": "Use your graph in part(c) to find an estimate for",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        417.9,
+        570.0,
+        480.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 23.9,
+        "height_pt": 62.1
+       }
+      }
+     ],
+     "text": "the median lifetime,\n.............................................. h [1]",
+     "marks": 1,
+     "path": "6(d)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(d)(i)",
+       "text": "920",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          35.459999084472656,
+          488.7,
+          559.8600463867188,
+          513.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "the median lifetime,",
+       "text": "the median lifetime,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "unit": "h"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        482.9,
+        570.0,
+        558.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 36.9,
+        "height_pt": 75.1
+       }
+      }
+     ],
+     "text": "the interquartile range.\n.............................................. h [2]",
+     "marks": 2,
+     "path": "6(d)(ii)",
+     "mark_scheme": [
+      {
+       "label": "6(d)(ii)",
+       "text": "42 to 47",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          35.459999084472656,
+          513.1,
+          559.8600463867188,
+          550.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "the interquartile range.",
+       "text": "the interquartile range."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "unit": "h"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "6(d)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your graph in <b>part</b> <b>(c)</b> to find an estimate for",
+     "text": "Use your graph in part (c) to find an estimate for"
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      560.9,
+      570.0,
+      675.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 75.9,
+      "height_pt": 114.1
+     }
+    }
+   ],
+   "text": "Find the percentage of bulbs that have a lifetime of more than 900 hours.\n............................................. % [2]",
+   "marks": 2,
+   "path": "6(e)",
+   "mark_scheme": [
+    {
+     "label": "6(e)",
+     "text": "72.5",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        35.459999084472656,
+        550.2,
+        559.8600463867188,
+        587.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the percentage of bulbs that have a lifetime of more than 900 hours.",
+     "text": "Find the percentage of bulbs that have a lifetime of more than 900 hours."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "%"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_long_answer",
+ "total_marks": 11,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The lifetimes, <i>x</i> hours, of 80 electric light bulbs are shown in the table.",
+   "text": "The lifetimes, x hours, of 80 electric light bulbs are shown in the table."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Lifetime (<i>x</i> hours)",
+     "Frequency"
+    ],
+    [
+     "850 1 <i>x</i> G 870",
+     "4"
+    ],
+    [
+     "870 1 <i>x</i> G 890",
+     "6"
+    ],
+    [
+     "890 1 <i>x</i> G 900",
+     "12"
+    ],
+    [
+     "900 1 <i>x</i> G 920",
+     "18"
+    ],
+    [
+     "920 1 <i>x</i> G 940",
+     "16"
+    ],
+    [
+     "940 1 <i>x</i> G 950",
+     "20"
+    ],
+    [
+     "950 1 <i>x</i> G 1000",
+     "4"
+    ]
+   ]
+  }
+ ]
+}

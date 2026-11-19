@@ -1,0 +1,85 @@
+{
+ "id": "0607_2022MJ_52_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    509.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 1,
+    "answer_line": null,
+    "working_gap_pt": 374.9,
+    "height_pt": 452.2
+   }
+  }
+ ],
+ "text": "6\nA square window moves on the grid of width 5 with squares numbered 2, 4, 6, … .\nThe opposite difference for this window is 180.\nFind the size of the window.\n................................................. [3]",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "6",
+   "text": "4 [by 4]\nA correct trial with a 4 by 4 window and full\nworking\nOR\nReference to difference for 2 by 2 being halved\nfrom 10 wide grid and testing with another\nsized window on 5 wide grid\nOR\n2\n20(w – 1) = 180\n2\n(w – 1) = 9\n(w – 1) = 3",
+   "codes": [
+    "1",
+    "C2"
+   ],
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      47.459999084472656,
+      84.8,
+      547.7999877929688,
+      306.7
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A square window moves on the grid of width 5 with squares numbered 2, 4, 6, … . The opposite difference for this window is 180. Find the size of the window.",
+   "text": "A square window moves on the grid of width 5 with squares numbered 2, 4, 6, … . The opposite difference for this window is 180. Find the size of the window."
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
+   "lines": 1
+  },
+  {
+   "type": "marks",
+   "value": 3
+  }
+ ]
+}
