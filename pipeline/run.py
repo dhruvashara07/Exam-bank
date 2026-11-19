@@ -7,6 +7,7 @@ Outputs: bank/<board-exam>/<syllabus-subject>/<year-session>/p<pv>/  (layout: se
 """
 import json, os, re, sys, glob, hashlib
 import pymupdf as fitz
+import fontTools  # noqa: F401 - required; without it maths layouts silently fell back on GitHub (ERROR_PATTERNS 209)
 
 sys.path.insert(0, os.path.dirname(__file__))
 from clean import clean

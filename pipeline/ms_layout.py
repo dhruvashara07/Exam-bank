@@ -1824,6 +1824,8 @@ def build(q, store):
             return _header_unit(fake, first)
         try:
             res = ms_maths.build(q, uniq, store, hdr_unit, _own_total, _frame)
+        except ImportError:
+            raise                                     # a missing module is never a silent fallback (ERROR_PATTERNS 209)
         except Exception as e:
             res = None
             print(f"  {q['id']}: maths mark-scheme layout failed: {type(e).__name__}: {e}"); import traceback, os as _o; _o.environ.get("MSTB") and traceback.print_exc()

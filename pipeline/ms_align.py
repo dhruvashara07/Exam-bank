@@ -44,7 +44,8 @@ def load(qid):
     sq, _ = store.load(qid)
     if sq.get('stub'):
         return None, None
-    q = json.load(open(glob.glob(f'bank/**/{qid}.json', recursive=True)[0]))
+    import paths                               # direct path: a recursive glob over the whole bank per question took 20+ min
+    q = json.load(open(paths.question_file(qid)))
     return q, sq
 
 

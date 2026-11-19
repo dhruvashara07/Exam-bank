@@ -5,3 +5,4 @@ pillow
 requests
 pymongo
 playwright
+fonttools==4.67.0   # ms_maths, bold / symbol-font reading (ERROR_PATTERNS 209: missing on GitHub = silent fallbacks)

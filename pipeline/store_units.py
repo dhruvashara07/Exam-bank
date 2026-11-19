@@ -181,8 +181,8 @@ def _outline_weights(doc, pages, keys):
         from fontTools.cffLib import CFFFontSet
         from fontTools.pens.areaPen import AreaPen
         from fontTools.pens.perimeterPen import PerimeterPen
-    except Exception:
-        return {}
+    except ImportError:
+        raise                                   # never silently without bold reading (ERROR_PATTERNS 209)
     out, seen = {}, set()
     names = {k[0] for k in keys}
     for pno in pages:

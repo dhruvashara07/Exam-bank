@@ -33,6 +33,10 @@ on:
         description: 'Build these sessions one after another, pushing after each (e.g. "2021-FM 2021-MJ 2021-ON")'
         type: string
         default: ''
+      reasons:
+        description: 'After building: reasons.py passes, ";"-separated (e.g. "pass1 M2 2021-MJ 2021-ON --skip-checks; pass2 R209")'
+        type: string
+        default: ''
 
 permissions:
   contents: write
@@ -84,6 +88,17 @@ jobs:
             python3 pipeline/store.py dupes $ses || true
             SKIP_WAIT=1 pipeline/push.sh "Built ahead: $ses (waits for Claude's check)"
           done
+
+      - name: Reasons passes (two-pass flow, MATHS_PLAN 11 - one reasons file per batch)
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.reasons != '' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REASONS: ${{ inputs.reasons }}
+        run: |
+          git config user.name "exam-bank bot"; git config user.email "actions@users.noreply.github.com"
+          IFS=';' read -ra CMDS <<< "$REASONS"
+          for c in "${CMDS[@]}"; do echo "== reasons.py $c"; python3 pipeline/reasons.py $c; done
+          SKIP_WAIT=1 pipeline/push.sh "Reasons: $REASONS"
 
       - name: File inbox PDFs, store them in Releases, find papers to process
         id: todo

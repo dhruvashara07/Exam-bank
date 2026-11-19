@@ -516,3 +516,15 @@ the old MS paths (2014 MJ 22 q2, 43 q9, 2019 ON 11/12 q8, 23 q3, 62 q5).
 208. An MS picture took the top of the text line under it, and tall-bracket pieces went into the picture: the picture
     stops above our text, bracket pieces and their line stay text (2026 MJ 63 q9).
 Passed with reason: 2024 FM 62 task A empty magic squares are vector drawings (lines), already crisp - Dhruv: 'your call'.
+
+## M2 (2026-11-19) - found while building the two-pass flow
+209. fontTools was not in requirements.txt: on GitHub every `from fontTools ...` failed and was swallowed - ms_maths fell
+    back to the physics layout ('wrap'/'scale'/'cell': Partial Marks inside Answer, codes in the Answer column) for 1682
+    questions in the LAST M1 Action run, and bold / symbol-font reading (patterns 182, 108) never ran on GitHub. The M1
+    approval committed that Action output: ~880 approved maths questions (M0 + M1) were in the fallback layout. This was
+    also the real cause of 'local store.build differs from the Action (font family)'. -> fonttools pinned in
+    requirements; run.py imports it; ImportError is never caught (ms_layout, store_units, store_text). Check: reasons.py
+    ms_mode class must be 0 after every GitHub build; any 'No module named' in the Action log = stop.
+210. (checks) ms_sweep tested 'code left of x 470' (physics columns): in maths every 'M1 for ...' of Partial Marks was a
+    hit -> maths uses the table's own Answer / Marks edges. ms_align globbed the whole bank per question (20+ min for 11
+    sessions) -> direct path (1 s).

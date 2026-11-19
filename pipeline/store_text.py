@@ -538,8 +538,10 @@ def _tiny_font(page, font):
     if font in _TINY:
         return _TINY[font]
     n = None
+    import io
+    from fontTools.cffLib import CFFFontSet     # imported outside the try: a missing module must fail (ERROR_PATTERNS 209)
+    from fontTools.ttLib import TTFont
     try:
-        import io
         for f in page.get_fonts():
             if f[3].split('+')[-1] == font.split('+')[-1]:
                 name, ext, typ, buf = page.parent.extract_font(f[0])

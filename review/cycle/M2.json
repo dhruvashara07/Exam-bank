@@ -1,0 +1,70 @@
+{
+ "batch": "M2",
+ "subject": "0607",
+ "sessions": [
+  "2021-MJ",
+  "2021-ON",
+  "2022-FM",
+  "2022-MJ",
+  "2022-ON",
+  "2023-FM",
+  "2023-MJ",
+  "2023-ON"
+ ],
+ "created": "2026-11-19T09:14:31+00:00",
+ "phases": {
+  "build": [],
+  "claude": [],
+  "claude1": [],
+  "claude2": [],
+  "review": [],
+  "fix": []
+ },
+ "github_runs": [],
+ "counts": {},
+ "errors": [
+  {
+   "pattern": "209",
+   "kind": "new",
+   "what": "fontTools missing on GitHub: ms_maths/bold/symbol reading silently off; ~880 approved maths questions in fallback layout",
+   "fix": "requirements + loud ImportError; GitHub rebuild of all maths sessions (R209)",
+   "found_by": "claude",
+   "at": "2026-11-19T09:41:13+00:00"
+  },
+  {
+   "pattern": "210",
+   "kind": "new",
+   "what": "ms_sweep physics columns for maths; ms_align 20-min glob",
+   "fix": "maths edges; direct path",
+   "found_by": "claude",
+   "at": "2026-11-19T09:41:13+00:00"
+  }
+ ],
+ "tokens": [],
+ "events": [
+  {
+   "at": "2026-11-19T09:14:31+00:00",
+   "task": "start M2 --subject"
+  },
+  {
+   "at": "2026-11-19T09:14:31+00:00",
+   "task": "read docs; design two-pass flow"
+  },
+  {
+   "at": "2026-11-19T09:18:54+00:00",
+   "task": "pattern 209 found (fontTools missing on GitHub); baseline R209"
+  },
+  {
+   "at": "2026-11-19T09:41:13+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T09:41:13+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T09:41:19+00:00",
+   "task": "push flow + 209 fix; dispatch pass 1"
+  }
+ ]
+}
