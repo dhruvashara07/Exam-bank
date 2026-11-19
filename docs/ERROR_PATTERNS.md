@@ -574,3 +574,11 @@ Passed with reason: 2024 FM 62 task A empty magic squares are vector drawings (l
 Known open (M2, written down after 2-3 tries): a tree diagram cut into two crops (2023 MJ 32 q11), a box of words taken into
 the circle's crop (2023 MJ 11 q3), a rounded formula box kept as a picture (2022 ON 61 q6), the dotted '[...]' of 2022 ON
 43 q5(c) lost. Status 'known' in M2_reasons.json - fixed first in the next chat, never sent to Dhruv as items.
+228. (pass 2) Pattern 225's cut stopped at the f(x) line's text box: its own fraction bar / numerator ('1' over
+    '(2x-3)(2x+1)') stayed in the graph crop (2023 ON 41 q2, 2024 ON 41 q9 - approved, re-shown). -> the cut passes the
+    line's own strokes and the stacked pieces just above / below it.
+229. (pass 2) Pattern 219's 'grid of >= 4 columns = table' also took boxes around numbers ('2 x 5 x [2] x [5]', 2019 ON
+    51/52 q1) for a table; a fill-only table lost its row lines and its row-name column fell over it (2022 FM 62 q1).
+    -> the grid rule needs cell fills; fill edges become row lines; text left of the first column rule joins the table.
+Lesson (M2): the pass-2 diff caught my own collateral (229) BEFORE Dhruv's round - the flow works; my one-off visual check
+of a fix must include one 'look-alike that must NOT change' (boxes, grids) next to the target.

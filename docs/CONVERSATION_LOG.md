@@ -511,3 +511,20 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   never write a wide local ms_rebuild; env-free data passes (like the sign font pass) are fine. git checkout of review/
   also reverts batch log and round files - restore only store/ and bank/.
 - M1 approved in git (111 papers). Next: PDF uploads for chem/bio/add math (Dhruv via GitHub Desktop, store-* branches).
+
+## 2026-11-19 - M2 (2021 MJ - 2023 ON, 117 papers): the two-pass flow built and run
+- Dhruv asked: build the two-pass flow (MATHS_PLAN 11) and run M2 with it; nothing I can decide reaches his round; target
+  <= 2 wrong items; time and tokens as currency; measure blast radius first.
+- Built: pipeline/reasons.py (one reasons file per batch, statuses, classes, sheets incl. stored-figure sheets, pass 2 diff
+  with NOT FIXED / NEW / COLLATERAL, round items with calibration), bank.yml input 'reasons'. ms_sweep maths-aware, ms_align
+  20 min -> 1 s.
+- Found first: fontTools was never installed on GitHub (209): ms_maths fell back for ~880 approved maths questions and bold /
+  symbol reading never ran there - the real cause of 'local differs from the Action'. All 11 approved sessions rebuilt on
+  GitHub (R209 reasons file: ms_mode 882 -> 0). Second cause of local/Action differences: missing PDFs locally (211).
+- Pass 1: 329 reasons in 231 questions; resolved as classes: 62 fixed (patterns 212-227), 263 passed with reasons, 4 known
+  open (written down). 2023 MJ 33 had NO questions (212) and 2021 ON 61 was 57/60 (227) - both only visible through the
+  reasons file (checks.py crashed on the empty paper).
+- Analysis: slowest = reading 45 MS sheets + 7 figure sheets (all picture / table cells); second = finding the cause of
+  wide-blast changes (1123 'changed' questions were mostly the missing-PDF effect; real collateral ~70, attributed fix by
+  fix with a toggle script). Repeats: none of 181-208 came back; the table/picture classes (219, 222, 223) are the same
+  family as 169-180 (what belongs to a cell picture vs our text) - still the weakest part of ms_maths.

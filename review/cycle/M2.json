@@ -18,6 +18,11 @@
     "start": "2026-11-19T09:41:53+00:00",
     "end": "2026-11-19T10:47:07+00:00",
     "note": "pass 1 (41 min incl. 11 approved sessions R209)"
+   },
+   {
+    "start": "2026-11-19T10:47:45+00:00",
+    "end": "2026-11-19T11:22:52+00:00",
+    "note": "pass 2"
    }
   ],
   "claude": [],
@@ -35,6 +40,15 @@
    "start": "2026-11-19T09:41:37Z",
    "end": "2026-11-19T10:22:18Z",
    "minutes": 40.7
+  },
+  {
+   "id": 44508898223,
+   "name": "Question bank",
+   "branch": "main",
+   "conclusion": "success",
+   "start": "2026-11-19T10:47:24Z",
+   "end": "2026-11-19T11:20:10Z",
+   "minutes": 32.8
   }
  ],
  "counts": {
@@ -194,6 +208,22 @@
    "fix": "see ERROR_PATTERNS 227",
    "found_by": "claude",
    "at": "2026-11-19T10:47:06+00:00"
+  },
+  {
+   "pattern": "228",
+   "kind": "repeat",
+   "what": "pass 2: f(x) fraction pieces left in crops (my 225 too narrow)",
+   "fix": "cut passes the line's strokes",
+   "found_by": "claude",
+   "at": "2026-11-19T11:30:49+00:00"
+  },
+  {
+   "pattern": "229",
+   "kind": "repeat",
+   "what": "pass 2: my 219 grid rule took boxes for tables; fill-only table lost rows",
+   "fix": "needs fills; fill edges = rows",
+   "found_by": "claude",
+   "at": "2026-11-19T11:30:49+00:00"
   }
  ],
  "tokens": [],
@@ -329,6 +359,38 @@
   {
    "at": "2026-11-19T10:47:07+00:00",
    "task": "phase M2 build"
+  },
+  {
+   "at": "2026-11-19T10:47:45+00:00",
+   "task": "phase M2 build"
+  },
+  {
+   "at": "2026-11-19T10:47:45+00:00",
+   "task": "pass 2 running on GitHub (~45 min)"
+  },
+  {
+   "at": "2026-11-19T11:22:52+00:00",
+   "task": "gh M2 44508898223"
+  },
+  {
+   "at": "2026-11-19T11:22:52+00:00",
+   "task": "phase M2 build"
+  },
+  {
+   "at": "2026-11-19T11:28:14+00:00",
+   "task": "pass-2 diff look: NOT FIXED/NEW + collateral sample"
+  },
+  {
+   "at": "2026-11-19T11:30:49+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T11:30:49+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-19T11:31:04+00:00",
+   "task": "push pass-2 fixes; dispatch pass 3"
   }
  ]
 }

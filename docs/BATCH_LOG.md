@@ -6,6 +6,7 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 257.5 | 51.4 | 2766.0 | 3084.4 | 40 | 58 | 5 | n/a |
 | M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 | 11.7 | 97.4 | 191.6 | 0.0 | 30.1 | 233.4 | 23 | 42 | 2 | n/a |
+| M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 117 | 100.3 | 73.5 | 0.0 | 0.0 | 0.0 | 100.3 |  | 19 | 2 | n/a |
 
 ## Errors per batch (new = first time, repeat = a pattern seen before: the doc or the fix failed)
 
@@ -120,6 +121,29 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - [new] pattern 207: formula with a root sign taken as a diagram: text + root (maths) → round 33 (found by dhruv)
 - [new] pattern 208: MS picture crop took the top of the text line under it / bracket pieces: picture stops above, brackets are text → round 33 (found by dhruv)
 
+### M2
+- [new] pattern 209: fontTools missing on GitHub: ms_maths/bold/symbol reading silently off; ~880 approved maths questions in fallback layout → requirements + loud ImportError; GitHub rebuild of all maths sessions (R209) (found by claude)
+- [new] pattern 210: ms_sweep physics columns for maths; ms_align 20-min glob → maths edges; direct path (found by claude)
+- [new] pattern 211: local ms_rebuild without the session PDFs: picture cells silently fall back (local != Action) → ms_rebuild exits unless PDFs fetched (found by claude)
+- [new] pattern 212: 2023 MJ 33: Q1 printed 13 pt under 'Answer all the questions.' was cut off with the notice: 0 questions; checks.py crashed, 10 papers unchecked → page_bounds stops above a Q label; checks: empty paper = blocking, no crash (found by claude)
+- [new] pattern 213: M2 reasons pass 1: see ERROR_PATTERNS 213 → see ERROR_PATTERNS 213 (found by claude)
+- [new] pattern 214: M2 reasons pass 1: see ERROR_PATTERNS 214 → see ERROR_PATTERNS 214 (found by claude)
+- [new] pattern 215: M2 reasons pass 1: see ERROR_PATTERNS 215 → see ERROR_PATTERNS 215 (found by claude)
+- [new] pattern 216: M2 reasons pass 1: see ERROR_PATTERNS 216 → see ERROR_PATTERNS 216 (found by claude)
+- [new] pattern 217: M2 reasons pass 1: see ERROR_PATTERNS 217 → see ERROR_PATTERNS 217 (found by claude)
+- [new] pattern 218: M2 reasons pass 1: see ERROR_PATTERNS 218 → see ERROR_PATTERNS 218 (found by claude)
+- [new] pattern 219: M2 reasons pass 1: see ERROR_PATTERNS 219 → see ERROR_PATTERNS 219 (found by claude)
+- [new] pattern 220: M2 reasons pass 1: see ERROR_PATTERNS 220 → see ERROR_PATTERNS 220 (found by claude)
+- [new] pattern 221: M2 reasons pass 1: see ERROR_PATTERNS 221 → see ERROR_PATTERNS 221 (found by claude)
+- [new] pattern 222: M2 reasons pass 1: see ERROR_PATTERNS 222 → see ERROR_PATTERNS 222 (found by claude)
+- [new] pattern 223: M2 reasons pass 1: see ERROR_PATTERNS 223 → see ERROR_PATTERNS 223 (found by claude)
+- [new] pattern 224: M2 reasons pass 1: see ERROR_PATTERNS 224 → see ERROR_PATTERNS 224 (found by claude)
+- [new] pattern 225: M2 reasons pass 1: see ERROR_PATTERNS 225 → see ERROR_PATTERNS 225 (found by claude)
+- [new] pattern 226: M2 reasons pass 1: see ERROR_PATTERNS 226 → see ERROR_PATTERNS 226 (found by claude)
+- [new] pattern 227: M2 reasons pass 1: see ERROR_PATTERNS 227 → see ERROR_PATTERNS 227 (found by claude)
+- [repeat] pattern 228: pass 2: f(x) fraction pieces left in crops (my 225 too narrow) → cut passes the line's strokes (found by claude)
+- [repeat] pattern 229: pass 2: my 219 grid rule took boxes for tables; fill-only table lost rows → needs fills; fill edges = rows (found by claude)
+
 ## Repeats to act on
 
 - M0: pattern 92 came back: repeat of a round-27 class: the round-27 fix covered the reported item, not the class
@@ -129,3 +153,5 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - M0: pattern 141 came back: heading over drawn graph drawn twice
 - M1: pattern 185 came back: double rule at a note band at the row's top (2024 MJ 41 q2) - my own pattern-171 fix
 - M1: pattern 190 came back: small pasted symbol in a text line made the cell a picture: line drawn twice (2025 FM 62 q5) - left OPEN in round 32
+- M2: pattern 228 came back: pass 2: f(x) fraction pieces left in crops (my 225 too narrow)
+- M2: pattern 229 came back: pass 2: my 219 grid rule took boxes for tables; fill-only table lost rows

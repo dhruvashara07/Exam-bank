@@ -708,6 +708,10 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
             blk += [i for i in by[c] if i not in blk and i.kind == 't' and (i.ref.get('dir') or [1, 0])[0] < 0.3
                     and ty0 - 3 <= (i.y0 + i.y1) / 2 <= ty1 + 3 and tx0 - 30 <= i.x0 and i.x1 <= tx0 + 2]
             # (rotated row labels beside the table ('1 neg') belong to it: round 30, 2021 FM 52 q3)
+            blk += [i for i in by[c] if i not in blk and i.kind in ('t', 'lines') and ty0 <= (i.y0 + i.y1) / 2 <= ty1
+                    and i.x1 <= tx0 + 2 and not (i.kind == 'lines' and i.y1 - i.y0 > ty1 - ty0 + 4)]
+            # (the first column of a table whose cells are fills - its row names 'Pattern number, n' sit left of the
+            #  grid's first rule - goes with the table, never laid out as loose text over it: 2022 FM 62 q1, M2 pass 2)
             for _ in range(3):      # an unruled row printed right against the table, inside its width ('3 + 4 + 5 + 6 = 18'
                 yb0, yb1 = min(i.y0 for i in blk), max(i.y1 for i in blk)   # above, '-3 + -4 ... = -18' below: 52 q3(b))
                 add = [i for i in by[c] if i not in blk and i.kind == 't' and tx0 - 2 <= i.x0 and i.x1 <= tx1 + 2
@@ -1566,7 +1570,8 @@ def _has_table(items):
         else:
             merged_.append(list(cols_[x_]))
         last_ = x_
-    return sum(1 for sp in merged_ if cov(sp) > 0.6 * (gy1 - gy0)) >= 4
+    return len(fills) >= 4 and sum(1 for sp in merged_ if cov(sp) > 0.6 * (gy1 - gy0)) >= 4
+    #   (only with cell fills: boxes around numbers in rows ('2 x 5 x [2] x [5]', 2019 ON 51 q1) are no table, M2 pass 2)
 
 
 def _curvy(i):
@@ -1580,6 +1585,29 @@ def _clean_table(items):
     grid cells, and a missing outer edge is added when the column rules show it (2025 MJ 61 q2, 2014 MJ 31 q5)."""
     thin_h = [i for i in items if i.kind == 'lines' and i.y1 - i.y0 < 1.6 and i.x1 - i.x0 >= 3 and not _curvy(i)]
     thin_v = [i for i in items if i.kind == 'lines' and i.x1 - i.x0 < 1.6 and i.y1 - i.y0 >= 3 and not _curvy(i)]
+    fl_ = [i for i in items if i.kind == 'lines' and (i.ref.get('fill') or '').lower() not in ('', '#000000', '#231f20')
+           and i.y1 - i.y0 > 3 and i.x1 - i.x0 > 10]
+    if len(thin_h) < 2 and len(fl_) >= 4 and len(thin_v) >= 2:
+        # a table whose rows are only cell fills (no printed row rules, 2022 FM 62 q1(a)(ii)): its row lines are the fills'
+        # edges and its outer edges are drawn too ('similar but proper', MS_TABLE_RULES 32)
+        ts_ = [i for i in items if i.kind == 't']
+        gx0 = min([i.x0 for i in fl_ + thin_v] + [t.x0 - 4 for t in ts_])
+        gx1 = max(i.x1 for i in fl_ + thin_v)
+        ys_ = sorted({round(i.y0, 1) for i in fl_} | {round(i.y1, 1) for i in fl_})
+        cl_ = []
+        for y_ in ys_:
+            if cl_ and y_ - cl_[-1][-1] <= 3.5:
+                cl_[-1].append(y_)
+            else:
+                cl_.append([y_])
+        for c_ in cl_:
+            y_ = sum(c_) / len(c_)
+            thin_h.append(_Item('lines', {'d': f'M{gx0:.2f} {y_ - 0.3:.2f}H{gx1:.2f}V{y_ + 0.3:.2f}H{gx0:.2f}Z', 'fill': '#000000'},
+                                gx0, y_ - 0.3, gx1, y_ + 0.3))
+        y0_, y1_ = min(i.y0 for i in fl_), max(i.y1 for i in fl_)
+        thin_v.append(_Item('lines', {'d': f'M{gx0 - 0.3:.2f} {y0_:.2f}H{gx0 + 0.3:.2f}V{y1_:.2f}H{gx0 - 0.3:.2f}Z', 'fill': '#000000'},
+                            gx0 - 0.3, y0_, gx0 + 0.3, y1_))
+        items = items + thin_h[-len(cl_):] + [thin_v[-1]]
     if len(thin_h) < 2 or len(thin_v) < 2:
         return items
     def clusters(vals, tol=1.6):

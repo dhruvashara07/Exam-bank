@@ -629,6 +629,9 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
             return max(o.x1 for o in row) - min(o.x0 for o in row)
         ink2 = [r for r in ink if not any((r & (l + (-2, -3, 2, 3))).get_area() >= 0.8 * max(r.get_area(), 0.01) or
                                           (r.width < 1.5 or r.height < 1.5) and (l + (-2, -3, 2, 3)).contains(r) or
+                                          (r.height < 1.5 and r.width < 160 and any(abs(w[1] - r.y0) < 9 and w[0] < r.x1 + 3 and w[2] > r.x0 - 3
+                                                                                   for w in ws) and any(abs(w[3] - r.y0) < 9 and w[0] < r.x1 + 3 and w[2] > r.x0 - 3 for w in ws)
+                                           and abs((l.y0 + l.y1) / 2 - r.y0) < 10) or
                                           (rowext(l) > 25 and r.height < 20 and r.width < 20 and min(r.y1, l.y1) - max(r.y0, l.y0) > 0.5 * max(r.height, 0.5)
                                            and max(l.x0 - r.x1, r.x0 - l.x1) < 12) for l in lines)]
         #   (small strokes on a text line - '|...|' bars, roots, fraction bars - belong to that line, not the drawing)
@@ -645,11 +648,18 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
             outside_ = any(w[2] < b.x0 - 1 or w[0] > b.x1 + 1 for w in same_) and len(txt_) > 8
             q_ = (re.match(r'^\(?([a-z]|[ivx]{1,4})\)\s', txt_ + ' ') or (re.match(r'^\d{1,2}(\s+\(|\s*$)', txt_) and same_[0][0] < 62)
                   or ('=' in txt_ and re.search(r'\bfor\b', txt_)) or re.match(r'^[a-z]\s*\(\s*x\s*\)', txt_) or outside_)
-            if q_:
+            if q_:              # the cut passes the line's OWN strokes too (|..| bars, roots, numerators reach out of
+                row_ = [r for r in ink if r not in ink2 and min(r.y1, l.y1 + 6) - max(r.y0, l.y0 - 6) > 0]   # its box)
+                ys_ = [o for o in (fitz.Rect(w[:4]) for w in ws) if l.y0 - 14 < (o.y0 + o.y1) / 2 < l.y1 + 14 and o.width < 30
+                       and not any(abs((w[1] + w[3]) / 2 - (o.y0 + o.y1) / 2) < 0.5 and w[0] == o.x0 for w in same_)
+                       and min(o.x1, max(w[2] for w in same_) + 120) - max(o.x0, min(w[0] for w in same_)) > -4
+                       and not (o.y1 <= top2 + 1 and yc_ > (top2 + bot2) / 2) and not (o.y0 >= bot2 - 1 and yc_ < (top2 + bot2) / 2)]
+                row_ += ys_     # (the numerator / denominator of the line's fraction is a text piece just above / under it:
+                #                  'f(x) = 1/(...)' left its '1' in the crop, 2023 ON 41 q2 / 2024 ON 41 q9, M2 pass 2)
                 if yc_ < (top2 + bot2) / 2:
-                    b.y0 = max(b.y0, l.y1 + 0.5)
+                    b.y0 = max(b.y0, max([l.y1] + [r.y1 for r in row_]) + 0.5)
                 else:
-                    b.y1 = min(b.y1, l.y0 - 0.5)
+                    b.y1 = min(b.y1, min([l.y0] + [r.y0 for r in row_]) - 0.5)
     # side-by-side figures (2022 FM 62 Fig. 2.2 | 2.3, 2022 ON 31 Fig. 7.1 | 7.2): when the crop reaches over the neighbour's
     # drawing, keep only the ink that belongs to OUR caption (ink grouped by touching pieces, each group to the nearest caption)
     below = [c for c in caps if b.y1 - 40 <= c.y0 <= b.y1 + 45 and c.x1 > b.x0 - 150 and c.x0 < b.x1 + 150]

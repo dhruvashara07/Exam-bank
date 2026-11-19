@@ -6,11 +6,16 @@ Read this first in every session. Update it before ending a session.
 - 2026-11-18: CHEM stored: 1599 of 1600 PDFs in Releases (only chemistry_0652_to_0620_mapping.pdf, not a Cambridge name,
   stays on branch store-chem). inbox.py now keeps gt/ci/ir/in/eq/one-digit/combined files (302 had been skipped).
   Branches store-chem and store-chem-rest: Dhruv deletes them (this session cannot delete branches).
-- NEXT: M2 (2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON, 115 papers) WITH THE NEW FLOW. First build
-  the two-pass flow of MATHS_PLAN 11 ('NEXT BATCH FLOW' + reasons file review/claude/<batch>_reasons.json), test it on
-  M2: GitHub pass 1 -> Claude resolves every reason -> GitHub pass 2 (diff) -> Claude checks only changes -> review
-  round (decisions + undecided + ~5 calibration). Target <= 2 wrong items per round. Bio / add-math PDF uploads are
-  Dhruv's (store-* branches from main); check them when he says pushed.
+- NEXT: M2 pass 3 ran on GitHub with the pass-2 fixes (228-229; run id in review/cycle/M2.json): read
+  review/claude/M2_pass2.md + R209_pass2.md (only NOT FIXED / NEW / COLLATERAL), then fix the 10 'known' reasons FIRST
+  (`reasons.py classes M2 --status known`: (a)+(b) diagrams in one crop 2023 MJ 53 q3 / 63 q3, tree in 2 crops 2023 MJ
+  32 q11, word box in circle crop 2023 MJ 11 q3, rounded formula box 2022 ON 61 q6, '[...]' dots 2022 ON 43 q5(c)),
+  then `reasons.py round M2 --calibrate 5` -> review round 34 (M2 + re-shown approved questions that changed: R209 list),
+  then re-approve the approved sessions whose rebuild changed (approve.py). Bio / add-math uploads: Dhruv's.
+- 2026-11-19: two-pass flow BUILT (pipeline/reasons.py, bank.yml 'reasons'); pattern 209: fontTools missing on GitHub ->
+  ~880 approved maths questions had been stored in the fallback layout; all 11 approved sessions rebuilt (R209: ms_mode
+  0). M2 built (117 papers), pass 1 resolved (62 fixed / 263 passed / 4 known, patterns 211-227). Approved papers whose
+  rebuild changed must be re-approved after the pass-2 look (approve.py).
 - 2026-11-17 (night): round 33 (9 of 23 wrong) fixed - patterns 201-208; GitHub run 44134367484; M1 APPROVED (111 papers:
   100 of 2024-2026 + 11 earlier papers whose approval the re-cut removed). MongoDB unchanged (Dhruv: approve in git only).
   Bridge upload of zips timed out (only <=40 MB files pass): Dhruv uploads PDFs himself.

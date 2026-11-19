@@ -16,7 +16,8 @@ If a batch is not finished when the chat gets long, the chat writes "continue <b
 Why one prompt: the state lives in the repo (PROGRESS NEXT line, BATCH_LOG, review/rounds, ERROR_PATTERNS), not in the
 chat. If the repo layout or the rules change, change START_HERE / PLAYBOOK - never this prompt.
 
-## (2026-11-19: next chat = build the two-pass flow, then M2 with it - same prompt)
+## (2026-11-19: two-pass flow built; M2 pass 2 ran. Next chat (if this one ends first) = M2 pass-2 look + review round 34,
+##  then his answers, fixes, approve - same prompt. The flow: PLAYBOOK 1a; the reasons file review/claude/M2_reasons.json)
 
 ## (2026-11-17 night: M1 approved)
 
