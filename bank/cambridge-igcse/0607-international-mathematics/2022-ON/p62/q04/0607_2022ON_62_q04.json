@@ -1,0 +1,302 @@
+{
+ "id": "0607_2022ON_62_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    130.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.5,
+    "height_pt": 73.2
+   }
+  }
+ ],
+ "text": "4\nIn this question the two steps are always:\n•\nmultiply by 2\n•\nthen add k.\nThe first term is 1.",
+ "marks": 8,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      134.8,
+      570.0,
+      401.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 3,
+      "answer_line": null,
+      "working_gap_pt": 18.9,
+      "height_pt": 266.7
+     }
+    }
+   ],
+   "text": "Complete the table.\nUse your answer to Question 1(c) and any patterns you notice.\nSteps to get the next term\nExpression for the nth term\nMultiply by 2,   then add  1\n.....................................\nMultiply by 2,   then add  3\nn\n2\n2\n3\n-\n#\nn\nMultiply by 2,   then add  5\n3\n2\n5\n-\n#\nMultiply by 2,   then add  7\n.....................................\nMultiply by 2,   then add ...........\n9\n-\n............................\n[2]",
+   "marks": 2,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "Steps\nExpression\nn\nMultiply by 2, then add 1\n2 – 1\nn\n2 × 2 – 3\nMultiply by 2, then add 3\n3 × 2 – 5\nn\nMultiply by 2, then add 5\n4 × 2 – 7\nMultiply by 2, then add 7\nn\n5 × 2 – 9\nn\nMultiply by 2, then add 9",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        439.3,
+        549.2999877929688,
+        601.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table. Use your answer to <b>Question 1(c)</b> and any patterns you notice.",
+     "text": "Complete the table. Use your answer to Question 1(c) and any patterns you notice."
+    },
+    {
+     "type": "text",
+     "html": "Steps to get the next term Expression for the <i>n</i>th term",
+     "text": "Steps to get the next term Expression for the nth term"
+    },
+    {
+     "type": "text",
+     "html": "Multiply by 2, then add 1",
+     "text": "Multiply by 2, then add 1"
+    },
+    {
+     "type": "text",
+     "html": "Multiply by 2, then add 3 2 # 2<i><sup>n</sup></i> - 3",
+     "text": "Multiply by 2, then add 3 2 # 2n - 3"
+    },
+    {
+     "type": "text",
+     "html": "Multiply by 2, then add 5 3 # 2<i><sup>n</sup></i> - 5",
+     "text": "Multiply by 2, then add 5 3 # 2n - 5"
+    },
+    {
+     "type": "text",
+     "html": "Multiply by 2, then add 7",
+     "text": "Multiply by 2, then add 7"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Multiply by 2, then add",
+     "unit": "- 9"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 3
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      404.2,
+      570.0,
+      700.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 3,
+      "answer_line": "a=  ……",
+      "working_gap_pt": 140.7,
+      "height_pt": 296.3
+     }
+    }
+   ],
+   "text": "2n\n(b) An expression for the nth term of this sequence is  a\n+.\nb\n#\nFind expressions for a and b in terms of k.\nWrite down the expression for the nth term of the sequence.\na=  ..............................\nb=  ..............................\nnth term =  ................................................ [3]",
+   "marks": 3,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "k+1\nk\n1\n+\n[a =]\nor\noe\n2\n2\n2\n[b =] – k",
+     "codes": [
+      "2",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        601.6,
+        549.2999877929688,
+        700.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "An expression for the <i>n</i>th term of this sequence is <i>a</i> # 2<i><sup>n</sup></i> + <i>b</i>. Find expressions for <i>a</i> and <i>b</i> in terms of <i>k</i>. Write down the expression for the <i>n</i>th term of the sequence.",
+     "text": "An expression for the nth term of this sequence is a # 2n + b. Find expressions for a and b in terms of k. Write down the expression for the nth term of the sequence."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "a ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "b ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "nth term ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      262.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 114.0,
+      "height_pt": 205.2
+     }
+    }
+   ],
+   "text": "The 5th term of a sequence using the nth term in part (b) is 286.\nComplete the two steps.\n•\nmultiply by 2\n•\nthen add  ........................ [3]",
+   "marks": 3,
+   "path": "4(c)",
+   "mark_scheme": [
+    {
+     "label": "4(c)",
+     "text": "k +1\n5\n−k =286\n2\n\n\n\n2\n\n16k + 16 – k = 286 oe\n18",
+     "codes": [
+      "C1",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.2999877929688,
+        194.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The 5th term of a sequence using the <i>n</i>th term in <b>part (b)</b> is 286. Complete the two steps.",
+     "text": "The 5th term of a sequence using the nth term in part (b) is 286. Complete the two steps."
+    },
+    {
+     "type": "list",
+     "items": [
+      "multiply by 2",
+      "then add ……"
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In this question the two steps are always:",
+   "text": "In this question the two steps are always:"
+  },
+  {
+   "type": "list",
+   "items": [
+    "multiply by 2",
+    "then add <i>k</i>."
+   ]
+  },
+  {
+   "type": "text",
+   "html": "The first term is 1.",
+   "text": "The first term is 1."
+  }
+ ]
+}

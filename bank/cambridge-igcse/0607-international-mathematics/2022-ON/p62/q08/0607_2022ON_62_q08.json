@@ -1,0 +1,582 @@
+{
+ "id": "0607_2022ON_62_q08",
+ "number": 8,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    130.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.9,
+    "height_pt": 73.2
+   }
+  }
+ ],
+ "text": "8\nWhen I leave home after 7.00 am, there is more traffic, and my average speed is less than 50 km/h.\nMy average speed decreases steadily by 1 km/h for every 2 minutes after 7.00 am that I leave home.\nFor example, when I leave at 6 minutes after 7.00 am, my average speed is 3 km/h less,\nwhich is 47 km/h.",
+ "marks": 13,
+ "figures": [
+  {
+   "caption": null,
+   "page": 9,
+   "bbox": [
+    133.0,
+    113.9,
+    461.6,
+    313.0
+   ],
+   "id": "0607_2022ON_62_q08c_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      134.8,
+      570.0,
+      158.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.2
+     }
+    }
+   ],
+   "text": "I leave home at 7.40 am.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        30.0,
+        160.8,
+        570.0,
+        301.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 101.9,
+        "height_pt": 140.2
+       }
+      }
+     ],
+     "text": "Find my average speed.\n................................................. [2]",
+     "marks": 2,
+     "path": "8(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "8(a)(i)",
+       "text": "20 seen\n30 km/h",
+       "codes": [
+        "C1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.619998931884766,
+          130.4,
+          549.2999877929688,
+          179.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find my average speed.",
+       "text": "Find my average speed."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        30.0,
+        303.8,
+        570.0,
+        418.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 75.9,
+        "height_pt": 114.2
+       }
+      }
+     ],
+     "text": "Show that the time to drive to work is 40 minutes.\n[1]",
+     "marks": 1,
+     "path": "8(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "8(a)(ii)",
+       "text": "20 ×60\n= 40 oe\n30\n20\n2\n=\nhour oe=40 [mins]\nor\n30\n3",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.619998931884766,
+          179.3,
+          549.2999877929688,
+          249.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Show that the time to drive to work is 40 minutes.",
+       "text": "Show that the time to drive to work is 40 minutes."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 75.9
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "8(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "I leave home at 7.40 am.",
+     "text": "I leave home at 7.40 am."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      420.8,
+      570.0,
+      704.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 212.6,
+      "height_pt": 283.2
+     }
+    }
+   ],
+   "text": "I leave home x minutes after 7.00 am.\n2400\nShow that a model for the time, T minutes, to drive to work is   T\n- .\n=\n100\nx\n[2]",
+   "marks": 2,
+   "path": "8(b)",
+   "mark_scheme": [
+    {
+     "label": "8(b)",
+     "text": "x\n50 –\nseen\n2\n2400\n1200\nx\nleading to\n100 −x\n50−\n2",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        249.5,
+        549.2999877929688,
+        345.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "I leave home <i>x</i> minutes after 7.00 am. Show that a model for the time, <i>T</i> minutes, to drive to work is <i>T</i> = \\(\\frac{2400}{100 - x}\\) .",
+     "text": "I leave home x minutes after 7.00 am. Show that a model for the time, T minutes, to drive to work is T = (2400)/(100-x) ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 212.6
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      63.7,
+      570.0,
+      347.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 169.4,
+      "height_pt": 283.3
+     }
+    }
+   ],
+   "text": "2400\n(c) Sketch the graph of the model   T\n-   for\n0\nx\n90\n.\n=\nG\nG\n100\nx\nT\n0\nx\n0\n90\n[2]",
+   "marks": 2,
+   "path": "8(c)",
+   "mark_scheme": [
+    {
+     "label": "8(c)",
+     "text": "Correct sketch\nT intercept marked as 24",
+     "codes": [
+      "1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        345.5,
+        549.2999877929688,
+        504.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Sketch the graph of the model <i>T</i> = \\(\\frac{2400}{100 - x}\\) for 0 G <i>x</i> G 90.",
+     "text": "Sketch the graph of the model T = (2400)/(100-x) for 0 G x G 90."
+    },
+    {
+     "type": "text",
+     "html": "<i>T</i>",
+     "text": "T"
+    },
+    {
+     "type": "figure",
+     "id": "0607_2022ON_62_q08c_diagram1",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 169.4
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      349.9,
+      570.0,
+      477.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 62.9,
+      "height_pt": 127.1
+     }
+    }
+   ],
+   "text": "I do not want to drive for more than 30 minutes.\nFind the latest time that I should leave home.\n................................................. [2]",
+   "marks": 2,
+   "path": "8(d)",
+   "mark_scheme": [
+    {
+     "label": "8(d)",
+     "text": "T = 30 drawn on the graph\n2400\nor\n100 −x\n= 30\n7.20 oe",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        504.6,
+        549.2999877929688,
+        599.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "I do not want to drive for more than 30 minutes. Find the latest time that I should leave home.",
+     "text": "I do not want to drive for more than 30 minutes. Find the latest time that I should leave home."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      479.9,
+      570.0,
+      516.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 36.1
+     }
+    }
+   ],
+   "text": "I must be at work by 9.00 am.\nOne day I oversleep and leave home at 8.35 am.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        30.0,
+        518.9,
+        570.0,
+        698.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 127.9,
+        "height_pt": 179.1
+       }
+      }
+     ],
+     "text": "Use the model to find how late I will be for work.\nGive your answer in hours and minutes.\n................................................. [3]",
+     "marks": 3,
+     "path": "8(e)(i)",
+     "mark_scheme": [
+      {
+       "label": "8(e)(i)",
+       "text": "2400\n100−95\nor correct sketches of T =\n2400\n100 −x\nand x = 95\nor x = 95 drawn on graph in 8(c)\n7h 35 min",
+       "codes": [
+        "C1",
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          46.619998931884766,
+          89.4,
+          549.2999877929688,
+          327.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use the model to find how late I will be for work. Give your answer in hours and minutes.",
+       "text": "Use the model to find how late I will be for work. Give your answer in hours and minutes."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        30.0,
+        700.9,
+        570.0,
+        750.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 10.9,
+        "height_pt": 49.1
+       }
+      }
+     ],
+     "text": "Make a statement about the suitability of the model.\n............................................................................................................................................. [1]",
+     "marks": 1,
+     "path": "8(e)(ii)",
+     "mark_scheme": [
+      {
+       "label": "8(e)(ii)",
+       "text": "Not useful for leaving home very late oe\nor unsuitable for 100 minutes [after 7am]\noe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          46.619998931884766,
+          327.0,
+          549.2999877929688,
+          376.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Make a statement about the suitability of the model.",
+       "text": "Make a statement about the suitability of the model."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "8(e)",
+   "content": [
+    {
+     "type": "text",
+     "html": "I must be at work by 9.00 am. One day I oversleep and leave home at 8.35 am.",
+     "text": "I must be at work by 9.00 am. One day I oversleep and leave home at 8.35 am."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 13,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "When I leave home after 7.00 am, there is more traffic, and my average speed is less than 50 km/h. My average speed decreases steadily by 1 km/h for every 2 minutes after 7.00 am that I leave home. For example, when I leave at 6 minutes after 7.00 am, my average speed is 3 km/h less, which is 47 km/h.",
+   "text": "When I leave home after 7.00 am, there is more traffic, and my average speed is less than 50 km/h. My average speed decreases steadily by 1 km/h for every 2 minutes after 7.00 am that I leave home. For example, when I leave at 6 minutes after 7.00 am, my average speed is 3 km/h less, which is 47 km/h."
+  }
+ ]
+}

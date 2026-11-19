@@ -1,0 +1,298 @@
+{
+ "id": "0607_2022ON_62_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    130.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.5,
+    "height_pt": 73.2
+   }
+  }
+ ],
+ "text": "2\nIn this question the two steps are:\n•\nmultiply by 2\n•\nthen add 3.\nThe first term is 1.",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      134.8,
+      570.0,
+      223.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 49.9,
+      "height_pt": 88.2
+     }
+    }
+   ],
+   "text": "Work out the 2nd, 3rd and 4th terms of this sequence.\n1 , .......... , .......... , .......... , 61 [2]",
+   "marks": 2,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "5, 13, 29",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        188.1,
+        549.2999877929688,
+        237.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Work out the 2nd, 3rd and 4th terms of this sequence.",
+     "text": "Work out the 2nd, 3rd and 4th terms of this sequence."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "1 ,",
+     "unit": ", 61"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 49.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      225.8,
+      570.0,
+      249.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 2.4,
+      "height_pt": 23.2
+     }
+    }
+   ],
+   "text": "2n\n(b) The nth term of this sequence is   a\n+.\nb\n#",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        251.8,
+        570.0,
+        340.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 23.9,
+        "height_pt": 88.2
+       }
+      }
+     ],
+     "text": "Substituting n\n=, to get the first term of the sequence, gives the equation   a\n1\n2\nb\n=.\n1\n+\nSubstitute another value for n to make another equation in terms of a and b.\n................................................. [1]",
+     "marks": 1,
+     "path": "2(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(b)(i)",
+       "text": "Correct substitution for n to make correct\nequation",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.619998931884766,
+          237.8,
+          549.2999877929688,
+          274.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Substituting <i>n</i> = 1, to get the first term of the sequence, gives the equation 2<i>a</i> + <i>b</i> = 1. Substitute another value for <i>n</i> to make another equation in terms of <i>a</i> and <i>b</i>.",
+       "text": "Substituting n = 1, to get the first term of the sequence, gives the equation 2a + b = 1. Substitute another value for n to make another equation in terms of a and b."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        342.8,
+        570.0,
+        509.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 101.9,
+        "height_pt": 166.2
+       }
+      }
+     ],
+     "text": "Solve the simultaneous equations in part (i) to show that the nth term of the sequence is\nn\n2\n2\n-.\n3\n#\n[2]",
+     "marks": 2,
+     "path": "2(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(b)(ii)",
+       "text": "Correct equation isolating a or b\nCorrectly substituting a = 2 in an equation\nin a and b, leading to b = – 3\nor correctly substituting b = – 3 leading to\na = 2.",
+       "codes": [
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.619998931884766,
+          274.9,
+          549.2999877929688,
+          361.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Solve the simultaneous equations in <b>part (i)</b> to show that the <i>n</i>th term of the sequence is",
+       "text": "Solve the simultaneous equations in part (i) to show that the nth term of the sequence is"
+      },
+      {
+       "type": "text",
+       "html": "# 2<i><sup>n</sup></i> - 3.",
+       "text": "# 2n - 3."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 101.9
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "2(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "The <i>n</i>th term of this sequence is <i>a</i> # 2<i><sup>n</sup></i> + <i>b</i>.",
+     "text": "The nth term of this sequence is a # 2n + b."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In this question the two steps are:",
+   "text": "In this question the two steps are:"
+  },
+  {
+   "type": "list",
+   "items": [
+    "multiply by 2",
+    "then add 3."
+   ]
+  },
+  {
+   "type": "text",
+   "html": "The first term is 1.",
+   "text": "The first term is 1."
+  }
+ ]
+}

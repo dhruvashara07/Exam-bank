@@ -1,0 +1,267 @@
+{
+ "id": "0607_2022ON_63_q03",
+ "number": 3,
+ "segments": [],
+ "text": "",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    52.4,
+    278.3,
+    544.9,
+    490.2
+   ],
+   "id": "0607_2022ON_63_q03a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      57.9,
+      570.0,
+      510.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 221.8,
+      "height_pt": 452.6
+     }
+    }
+   ],
+   "text": "3\n(a) Complete the table using expressions in the form an\n+, where a and b are integers.\nb\nUse your expressions from Question 1(c) and Question 2(b).\nYou may use the grid below to help you.\nArea of remaining shape\nSide difference (d)\nfor larger square of side n\n1\n2\n3\n4\n[4]",
+   "marks": 4,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "One correct diagram with side difference\nof 3 or 4\nor 15, 21, 27 or 24, 32, 48\nor n² – (n – 3)² or n² – (n – 4)²\nSide difference (d)\nArea of remaining\nshape for larger\nsquare of side n\n1\n2n – 1\n2\n4n – 4\n3\n6n – 9\n4\n8n – 16",
+     "codes": [
+      "C1",
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.239990234375,
+        311.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> Complete the table using expressions in the form <i>an</i> + <i>b</i>, where <i>a</i> and <i>b</i> are integers.",
+     "text": "Complete the table using expressions in the form an + b, where a and b are integers."
+    },
+    {
+     "type": "text",
+     "html": "Use your expressions from <b>Question 1(c)</b> and <b>Question 2(b)</b>. You may use the grid below to help you.",
+     "text": "Use your expressions from Question 1(c) and Question 2(b). You may use the grid below to help you."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Side difference (<i>d</i>)",
+       "Area of remaining shape for larger square of side <i>n</i>"
+      ],
+      [
+       "1",
+       ""
+      ],
+      [
+       "2",
+       ""
+      ],
+      [
+       "3",
+       ""
+      ],
+      [
+       "4",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "figure",
+     "id": "0607_2022ON_63_q03a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 221.8
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      513.2,
+      570.0,
+      627.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 62.9,
+      "height_pt": 114.3
+     }
+    }
+   ],
+   "text": "Find an expression, in terms of n and d, for the area of the remaining shape when the side difference\nis d.\n................................................. [2]",
+   "marks": 2,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "2dn – d² oe\n2\n2\nor n – (n – d)\nisw",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        311.7,
+        549.239990234375,
+        361.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression, in terms of <i>n</i> and <i>d</i>, for the area of the remaining shape when the side difference is <i>d</i>.",
+     "text": "Find an expression, in terms of n and d, for the area of the remaining shape when the side difference is d."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      630.2,
+      570.0,
+      757.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 49.9,
+      "height_pt": 127.3
+     }
+    }
+   ],
+   "text": "The area of a remaining shape is 343.\nThe side difference is 7.\nFind the length of the side of the larger square.\n................................................. [2]",
+   "marks": 2,
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "Substitution of d = 7 into (2dn – d²) = 343\nor substitution of d = 7 into\n2\n2\nn – (n – d) = 343\n28",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        361.4,
+        549.239990234375,
+        435.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The area of a remaining shape is 343. The side difference is 7. Find the length of the side of the larger square.",
+     "text": "The area of a remaining shape is 343. The side difference is 7. Find the length of the side of the larger square."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

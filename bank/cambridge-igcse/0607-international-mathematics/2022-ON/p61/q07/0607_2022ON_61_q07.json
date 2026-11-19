@@ -1,0 +1,260 @@
+{
+ "id": "0607_2022ON_61_q07",
+ "number": 7,
+ "segments": [
+  {
+   "page": 12,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    236.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.9,
+    "height_pt": 179.2
+   }
+  }
+ ],
+ "text": "7\nPablo makes changes to the conditions.\nThese are the conditions now:\n•\nHe sells one type of pizza with a selling price of $x.\n•\nHe sells n pizzas per week.\n•\nIt costs him $2 to make one pizza.\n•\nHis running costs of $400 increase by 50%.\n•\nHe employs 3 people each costing $300 per week.",
+ "marks": 8,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      238.8,
+      570.0,
+      431.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 127.9,
+      "height_pt": 192.2
+     }
+    }
+   ],
+   "text": "Use these conditions to show that the model for the weekly profit, $P, is\nP\n(\nx\n2\n)\nn\n1500\n.\n=\n-\n-\n[3]",
+   "marks": 3,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "150\n400 × 1.5 or 400 ×\n100\nor 400 + 200\nor 600\n300 × 3 or 900\nxn – 2n – 600 ‒ 900",
+     "codes": [
+      "1",
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        466.4,
+        549.239990234375,
+        582.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use these conditions to show that the model for the weekly profit, $<i>P</i>, is",
+     "text": "Use these conditions to show that the model for the weekly profit, $P, is"
+    },
+    {
+     "type": "text",
+     "html": "<i>P</i> = (<i>x</i> - 2) <i>n</i> - 1500.",
+     "text": "P = (x - 2) n - 1500."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 127.9
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      433.8,
+      570.0,
+      704.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 179.9,
+      "height_pt": 270.2
+     }
+    }
+   ],
+   "text": "The pizza business is now open for 6 hours per day and 6 days per week.\nIt continues to make 16 pizzas per hour for half of the time and 8 pizzas per hour for the rest of the\ntime.\nWork out the number of pizzas the business can make per week.\n................................................. [2]",
+   "marks": 2,
+   "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "18 × 16 + 18 × 8\nor 18(16 + 8)\nor 6(16 × 3 + 8 × 3)\nor 1.5 × 288 oe\n432",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        582.8,
+        549.239990234375,
+        672.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The pizza business is now open for 6 hours per day and 6 days per week. It continues to make 16 pizzas per hour for half of the time and 8 pizzas per hour for the rest of the time. Work out the number of pizzas the business can make per week.",
+     "text": "The pizza business is now open for 6 hours per day and 6 days per week. It continues to make 16 pizzas per hour for half of the time and 8 pizzas per hour for the rest of the time. Work out the number of pizzas the business can make per week."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      353.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 218.9,
+      "height_pt": 296.2
+     }
+    }
+   ],
+   "text": "Pablo wants a weekly profit of at least $500.\nUse the model in part (a) and your answer to part (b) to work out the minimum selling price of a\npizza.\n................................................. [3]",
+   "marks": 3,
+   "path": "7(c)",
+   "mark_scheme": [
+    {
+     "label": "7(c)",
+     "text": "(x – 2) × 432 – 1500 [= P or 500]\nCorrect step towards isolating x or x – 2\n[$]6.63 or 6.629[…] cao",
+     "codes": [
+      "C1",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        672.1,
+        549.239990234375,
+        750.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Pablo wants a weekly profit of at least $500. Use the model in <b>part (a)</b> and your answer to<b> part (b)</b> to work out the minimum selling price of a pizza.",
+     "text": "Pablo wants a weekly profit of at least $500. Use the model in part (a) and your answer to part (b) to work out the minimum selling price of a pizza."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Pablo makes changes to the conditions. These are the conditions now:",
+   "text": "Pablo makes changes to the conditions. These are the conditions now:"
+  },
+  {
+   "type": "list",
+   "items": [
+    "He sells one type of pizza with a selling price of $<i>x</i>.",
+    "He sells <i>n</i> pizzas per week.",
+    "It costs him $2 to make one pizza.",
+    "His running costs of $400 increase by 50%.",
+    "He employs 3 people each costing $300 per week."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,277 @@
+{
+ "id": "0607_2022ON_42_q12",
+ "number": 12,
+ "segments": [
+  {
+   "page": 20,
+   "bbox": [
+    30.0,
+    57.7,
+    570.0,
+    81.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 23.3
+   }
+  }
+ ],
+ "text": "12\nP\n2\nn\n+ where n is a positive integer.\n1\n=",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 20,
+     "bbox": [
+      30.0,
+      83.7,
+      570.0,
+      265.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 143.2,
+      "height_pt": 181.8
+     }
+    }
+   ],
+   "text": "Show that P2 is always an odd number.\n[2]",
+   "marks": 2,
+   "path": "12(a)",
+   "mark_scheme": [
+    {
+     "label": "12(a)",
+     "text": "4n² + 4n + 1\nOR\n2n is even so 2n + 1 is odd\n4n² + 4n [has a factor 2 so] is even oe\nSo 4n² + 4n + 1 is odd\nOR\nSo p is odd as odd × odd is odd\n2",
+     "codes": [
+      "M1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.08000183105469,
+        495.4,
+        549.239990234375,
+        607.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that <i>P</i><sup>2</sup> is always an odd number.",
+     "text": "Show that P2 is always an odd number."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 143.2
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 20,
+     "bbox": [
+      30.0,
+      268.1,
+      570.0,
+      291.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.4
+     }
+    }
+   ],
+   "text": "P and Q are consecutive odd numbers where Q\n2\nP\n.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 20,
+       "bbox": [
+        30.0,
+        294.1,
+        570.0,
+        369.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 36.9,
+        "height_pt": 75.4
+       }
+      }
+     ],
+     "text": "Write down an expression for Q, in terms of n.\n................................................. [1]",
+     "marks": 1,
+     "path": "12(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "12(b)(i)",
+       "text": "2n + 3",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          46.08000183105469,
+          607.6,
+          549.239990234375,
+          632.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Write down an expression for <i>Q</i>, in terms of <i>n</i>.",
+       "text": "Write down an expression for Q, in terms of n."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 20,
+       "bbox": [
+        30.0,
+        385.1,
+        570.0,
+        644.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 221.2,
+        "height_pt": 259.4
+       }
+      }
+     ],
+     "text": "2\n2\n(ii) Show that   Q\nP\nis always a multiple of 8.\n-\n[3]",
+     "marks": 3,
+     "path": "12(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "12(b)(ii)",
+       "text": "4n² +12n + 9\n8n + 8\n8n + 8 has factor of 8 and so is a multiple\nof 8",
+       "codes": [
+        "M1",
+        "A1",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          46.08000183105469,
+          632.1,
+          549.239990234375,
+          747.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Show that <i>Q</i><sup>2</sup> - <i>P</i><sup>2</sup> is always a multiple of 8.",
+       "text": "Show that Q2 - P2 is always a multiple of 8."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 221.2
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "12(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "<i>P</i> and <i>Q</i> are consecutive odd numbers where <i>Q</i> 2 <i>P</i> .",
+     "text": "P and Q are consecutive odd numbers where Q 2 P ."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_long_answer",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<i>P</i> = 2<i>n</i> + 1 where <i>n</i> is a positive integer.",
+   "text": "P = 2n + 1 where n is a positive integer."
+  }
+ ]
+}

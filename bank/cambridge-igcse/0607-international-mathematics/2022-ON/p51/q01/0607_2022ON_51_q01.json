@@ -1,0 +1,400 @@
+{
+ "id": "0607_2022ON_51_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    186.8,
+    570.0,
+    630.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 25.6,
+    "height_pt": 443.2
+   }
+  }
+ ],
+ "text": "1\nThe diagrams show a sequence of trapeziums.\nThe sloping side length is 1.\nBoth parallel sides increase in length by 1 each time.\nThis is the first trapezium in the sequence.\nThe length of the shorter parallel side is 1.\n1\n1\n1\n2\nThis is the second trapezium in the sequence.\nThe length of the shorter parallel side is 2.\n2\n1\n1\n3\nThis is the third trapezium in the sequence.\nThe length of the shorter parallel side is 3.\n3\n1\n1\n4",
+ "marks": 6,
+ "figures": [
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    234.8,
+    306.4,
+    362.5,
+    364.4
+   ],
+   "id": "0607_2022ON_51_q01_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    220.6,
+    438.2,
+    376.7,
+    496.3
+   ],
+   "id": "0607_2022ON_51_q01_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    206.4,
+    570.5,
+    390.9,
+    629.8
+   ],
+   "id": "0607_2022ON_51_q01_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      186.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 91.1,
+      "height_pt": 129.7
+     }
+    }
+   ],
+   "text": "Draw the next trapezium in the sequence.\n[1]",
+   "marks": 1,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.239990234375,
+        164.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Draw the next trapezium in the sequence.",
+     "text": "Draw the next trapezium in the sequence."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 91.1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      189.0,
+      570.0,
+      380.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 15.3,
+      "height_pt": 191.5
+     }
+    }
+   ],
+   "text": "Complete the table.\nShorter parallel side length (x)\nLonger parallel side length\nPerimeter\n1\n2\n5\n2\n3\n4\n9\n4\n[2]",
+   "marks": 2,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "3 and 7\n5 and 11",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        164.9,
+        549.239990234375,
+        201.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Shorter parallel side length (<i>x</i>)",
+       "Longer parallel side length",
+       "Perimeter"
+      ],
+      [
+       "1",
+       "2",
+       "5"
+      ],
+      [
+       "2",
+       "",
+       ""
+      ],
+      [
+       "3",
+       "4",
+       "9"
+      ],
+      [
+       "4",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      383.1,
+      570.0,
+      432.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 10.9,
+      "height_pt": 49.4
+     }
+    }
+   ],
+   "text": "Write down an expression, in terms of x, for the length of the longer parallel side.\n................................................. [1]",
+   "marks": 1,
+   "path": "1(c)",
+   "mark_scheme": [
+    {
+     "label": "1(c)",
+     "text": "x + 1 oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        201.9,
+        549.239990234375,
+        226.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down an expression, in terms of <i>x</i>, for the length of the longer parallel side.",
+     "text": "Write down an expression, in terms of x, for the length of the longer parallel side."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      435.1,
+      570.0,
+      601.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 114.9,
+      "height_pt": 166.4
+     }
+    }
+   ],
+   "text": "Find an expression, in terms of x, for the perimeter.\nGive your answer in its simplest form.\n................................................. [2]",
+   "marks": 2,
+   "path": "1(d)",
+   "mark_scheme": [
+    {
+     "label": "1(d)",
+     "text": "2x + 3\nx + their (x + 1) + 1 + 1\nor three differences of 2 seen",
+     "codes": [
+      "1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        226.4,
+        549.239990234375,
+        287.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression, in terms of <i>x</i>, for the perimeter. Give your answer in its simplest form.",
+     "text": "Find an expression, in terms of x, for the perimeter. Give your answer in its simplest form."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The diagrams show a sequence of trapeziums. The <i>sloping side length</i> is 1. Both parallel sides increase in length by 1 each time.",
+   "text": "The diagrams show a sequence of trapeziums. The sloping side length is 1. Both parallel sides increase in length by 1 each time."
+  },
+  {
+   "type": "text",
+   "html": "This is the first trapezium in the sequence. The length of the shorter parallel side is 1.",
+   "text": "This is the first trapezium in the sequence. The length of the shorter parallel side is 1."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2022ON_51_q01_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "This is the second trapezium in the sequence. The length of the shorter parallel side is 2.",
+   "text": "This is the second trapezium in the sequence. The length of the shorter parallel side is 2."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2022ON_51_q01_diagram2",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "This is the third trapezium in the sequence. The length of the shorter parallel side is 3.",
+   "text": "This is the third trapezium in the sequence. The length of the shorter parallel side is 3."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2022ON_51_q01_diagram3",
+   "caption": null
+  }
+ ]
+}

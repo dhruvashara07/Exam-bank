@@ -1,0 +1,215 @@
+{
+ "id": "0607_2022ON_61_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    243.8,
+    570.0,
+    395.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 39.8,
+    "height_pt": 151.2
+   }
+  }
+ ],
+ "text": "2\nThese are the first three isosceles trapeziums in a sequence.\nThe length of each sloping side is y.\ny = 1\ny = 2\ny = 3",
+ "marks": 4,
+ "figures": [
+  {
+   "caption": null,
+   "page": 3,
+   "bbox": [
+    104.9,
+    312.3,
+    492.3,
+    392.7
+   ],
+   "id": "0607_2022ON_61_q02_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      425.9,
+      570.0,
+      532.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 19.3,
+      "height_pt": 106.1
+     }
+    }
+   ],
+   "text": "Complete the table.\nLength of sloping side (y)\n1\n2\n3\n4\nNumber of unit triangles\n3\n24\n[1]",
+   "marks": 1,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "8, 15",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        138.3,
+        549.239990234375,
+        162.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Length of sloping side (<i>y</i>)",
+       "1",
+       "2",
+       "3",
+       "4"
+      ],
+      [
+       "Number of unit triangles",
+       "3",
+       "",
+       "",
+       "24"
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      535.0,
+      570.0,
+      688.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 101.9,
+      "height_pt": 153.0
+     }
+    }
+   ],
+   "text": "Find an expression, in terms of y, for the number of unit triangles.\nGive your answer in its simplest form.\n................................................. [3]",
+   "marks": 3,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "two common differences of 2 seen\nor three of 1 × 3, 2 × 4, 3 × 5, 4 × 6 seen\nor 1, 4, 9, [16]\nor three of 4 – 1, 9 – 1, 16 – 1, 25 – 1\nseen\nnext step shown in difference method\nor two from 1 + 2 = 3, 2 + 2 = 4,\n3 + 2 = 5, 4 + 2 = 6 oe\nor 3, 8, 15, [24] subtract 1, 4, 9, [16]\n2\nor (y + 1) ‒ 1\n2\ny + 2y or y(y + 2) isw",
+     "codes": [
+      "C1",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        162.8,
+        549.239990234375,
+        338.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression, in terms of <i>y</i>, for the number of unit triangles. Give your answer in its simplest form.",
+     "text": "Find an expression, in terms of y, for the number of unit triangles. Give your answer in its simplest form."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "These are the first three isosceles trapeziums in a sequence. The length of each sloping side is <i>y</i>.",
+   "text": "These are the first three isosceles trapeziums in a sequence. The length of each sloping side is y."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2022ON_61_q02_diagram1",
+   "caption": null
+  }
+ ]
+}

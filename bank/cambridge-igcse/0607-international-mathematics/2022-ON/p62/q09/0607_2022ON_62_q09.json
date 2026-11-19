@@ -1,0 +1,348 @@
+{
+ "id": "0607_2022ON_62_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 10,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    78.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 21.2
+   }
+  }
+ ],
+ "text": "9\nI leave home x minutes after 7.00 am.",
+ "marks": 8,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      82.8,
+      570.0,
+      171.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 17.6,
+      "height_pt": 88.2
+     }
+    }
+   ],
+   "text": "Explain why a model for A, the number of minutes after 7.00 am when I arrive at work, is\n2400\nA\nx\n-.\n=\n+\n100\nx\n..................................................................................................................................................... [1]",
+   "marks": 1,
+   "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "number of minutes after 07.00 + time to\ndrive to work oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        376.8,
+        549.2999877929688,
+        413.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Explain why a model for <i>A</i>, the number of minutes after 7.00 am when I arrive at work, is",
+     "text": "Explain why a model for A, the number of minutes after 7.00 am when I arrive at work, is"
+    },
+    {
+     "type": "text",
+     "html": "<i>A</i> = <i>x</i> + \\(\\frac{2400}{100 - x}\\) .",
+     "text": "A = x + (2400)/(100-x) ."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      173.8,
+      570.0,
+      210.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 36.2
+     }
+    }
+   ],
+   "text": "I must be at work by 9.00 am, which is two hours after 7.00 am.\nSo my maximum value of A is 120.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        30.0,
+        212.8,
+        570.0,
+        457.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 179.9,
+        "height_pt": 244.2
+       }
+      }
+     ],
+     "text": "Show that, for this maximum value of A, x is a solution to the equation\n2 -\nx\n220\nx\n9600\n0\n.\n+\n=\n[3]",
+     "marks": 3,
+     "path": "9(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "9(b)(i)",
+       "text": "2400\nx +\n= 120\n100 −x\nCorrect elimination of fractions\nCorrect expansion of brackets\n2\nleading to x – 220x + 9600 = 0 nfww",
+       "codes": [
+        "1",
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          46.619998931884766,
+          413.9,
+          549.2999877929688,
+          520.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Show that, for this maximum value of <i>A</i>, <i>x</i> is a solution to the equation",
+       "text": "Show that, for this maximum value of A, x is a solution to the equation"
+      },
+      {
+       "type": "text",
+       "html": "- <i>x</i><sup>2</sup> 220<i>x</i> + 9600 = 0 .",
+       "text": "- x2 220x + 9600 = 0 ."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 179.9
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        30.0,
+        459.8,
+        570.0,
+        678.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 179.9,
+        "height_pt": 218.2
+       }
+      }
+     ],
+     "text": "Find this value of x.\n................................................. [3]",
+     "marks": 3,
+     "path": "9(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "9(b)(ii)",
+       "text": "2\nSketch of y = x – 220x + 9600 with left\npositive x intercept clearly marked\nOR\n(x – 60)(x – 160)\nOR\n– (–220)± (−220) −4×1×9600\n2\n=\n2\n60, 160\nOR\nx – 110 = ± 2500 leading to 60, 160\nOR\nA minimum of two trials, one of which is\n60.\n60",
+       "codes": [
+        "C2",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          46.619998931884766,
+          89.4,
+          549.2999877929688,
+          381.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find this value of <i>x</i>.",
+       "text": "Find this value of x."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        30.0,
+        680.8,
+        570.0,
+        743.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 23.9,
+        "height_pt": 62.2
+       }
+      }
+     ],
+     "text": "Find the latest time that I can leave home to arrive at work on time.\n................................................. [1]",
+     "marks": 1,
+     "path": "9(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "9(b)(iii)",
+       "text": "8am oe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          46.619998931884766,
+          381.8,
+          549.2999877929688,
+          406.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the latest time that I can leave home to arrive at work on time.",
+       "text": "Find the latest time that I can leave home to arrive at work on time."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "9(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "I must be at work by 9.00 am, which is two hours after 7.00 am. So my maximum value of <i>A</i> is 120.",
+     "text": "I must be at work by 9.00 am, which is two hours after 7.00 am. So my maximum value of A is 120."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "I leave home <i>x</i> minutes after 7.00 am.",
+   "text": "I leave home x minutes after 7.00 am."
+  }
+ ]
+}

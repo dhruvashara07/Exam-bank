@@ -1,0 +1,182 @@
+{
+ "id": "0607_2022ON_62_q10",
+ "number": 10,
+ "segments": [
+  {
+   "page": 11,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    130.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.7,
+    "height_pt": 73.2
+   }
+  }
+ ],
+ "text": "I move to a new home and now live d km from my work.\nWhen I leave my new home at 7.00 am, my average speed is v km/h.\nAs before, my average speed decreases steadily by 1 km/h for every 2 minutes after 7.00 am that I leave\nhome.",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      134.8,
+      570.0,
+      444.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 238.6,
+      "height_pt": 309.2
+     }
+    }
+   ],
+   "text": "I leave my new home x minutes after 7.00 am.\n120\nd\nShow that a model for the time, T minutes, to drive to work is    T\n- .\n=\n2\nv\nx\n[2]",
+   "marks": 2,
+   "path": "10(a)",
+   "mark_scheme": [
+    {
+     "label": "10(a)",
+     "text": "x\nv –\nseen for speed\n2\nd\n×60 oe\nx\nv−\n2\n120d\nleading to\n2v −x",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.619998931884766,
+        406.2,
+        549.2999877929688,
+        531.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "I leave my new home <i>x</i> minutes after 7.00 am. Show that a model for the time, <i>T</i> minutes, to drive to work is <i>T</i> = \\(\\frac{120d}{2v - x}\\) .",
+     "text": "I leave my new home x minutes after 7.00 am. Show that a model for the time, T minutes, to drive to work is T = (120d)/(2v-x) ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 238.6
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      446.8,
+      570.0,
+      743.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 231.9,
+      "height_pt": 296.2
+     }
+    }
+   ],
+   "text": "I want to leave my new home at 7.30 am and arrive at work at 9.00 am.\nFind a model for v in terms of d.\n................................................. [3]",
+   "marks": 3,
+   "path": "10(b)",
+   "mark_scheme": [
+    {
+     "label": "10(b)",
+     "text": "120d\n= 90 oe\n2v−30\nCorrect next step towards isolating v\n2\nd +15 oe isw\nv =\n3",
+     "codes": [
+      "C1",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.619998931884766,
+        531.1,
+        549.2999877929688,
+        641.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "I want to leave my new home at 7.30 am and arrive at work at 9.00 am. Find a model for <i>v</i> in terms of <i>d</i>.",
+     "text": "I want to leave my new home at 7.30 am and arrive at work at 9.00 am. Find a model for v in terms of d."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "I move to a new home and now live <i>d</i> km from my work. When I leave my new home at 7.00 am, my average speed is <i>v</i> km/h. As before, my average speed decreases steadily by 1 km/h for every 2 minutes after 7.00 am that I leave home.",
+   "text": "I move to a new home and now live d km from my work. When I leave my new home at 7.00 am, my average speed is v km/h. As before, my average speed decreases steadily by 1 km/h for every 2 minutes after 7.00 am that I leave home."
+  }
+ ]
+}

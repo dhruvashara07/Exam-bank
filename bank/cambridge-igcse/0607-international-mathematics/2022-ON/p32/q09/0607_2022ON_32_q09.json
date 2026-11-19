@@ -1,0 +1,363 @@
+{
+ "id": "0607_2022ON_32_q09",
+ "number": 9,
+ "segments": [],
+ "text": "",
+ "marks": 7,
+ "figures": [
+  {
+   "caption": null,
+   "page": 14,
+   "bbox": [
+    169.5,
+    282.7,
+    427.3,
+    425.3
+   ],
+   "id": "0607_2022ON_32_q09aii_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)(ii)"
+  },
+  {
+   "caption": null,
+   "page": 14,
+   "bbox": [
+    78.3,
+    475.9,
+    246.0,
+    566.7
+   ],
+   "id": "0607_2022ON_32_q09b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  },
+  {
+   "caption": null,
+   "page": 14,
+   "bbox": [
+    350.8,
+    475.9,
+    518.5,
+    566.7
+   ],
+   "id": "0607_2022ON_32_q09b_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      58.2,
+      570.0,
+      107.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 3.8,
+      "height_pt": 49.3
+     }
+    }
+   ],
+   "text": "9\n(a) U = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21}\nA is the set of odd numbers.\nB is the set of multiples of 3.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 14,
+       "bbox": [
+        30.0,
+        110.2,
+        570.0,
+        250.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 3,
+        "answer_line": null,
+        "working_gap_pt": 23.9,
+        "height_pt": 140.3
+       }
+      }
+     ],
+     "text": "List the elements of the following sets.\n(a)A\n................................................. [1]\n(b)B\n................................................. [1]\n(c)A\nB\n+\n................................................. [1]",
+     "marks": 3,
+     "path": "9(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "9(a)(i)(a)",
+       "text": "11, 13, 15, 17, 19, 21",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          48.65999984741211,
+          614.3,
+          546.719970703125,
+          638.8
+         ]
+        }
+       ]
+      },
+      {
+       "label": "9(a)(i)(b)",
+       "text": "12, 15, 18, 21",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          48.65999984741211,
+          638.8,
+          546.719970703125,
+          663.2
+         ]
+        }
+       ]
+      },
+      {
+       "label": "9(a)(i)(c)",
+       "text": "15, 21",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          48.65999984741211,
+          663.2,
+          546.719970703125,
+          691.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "List the elements of the following sets.",
+       "text": "List the elements of the following sets."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "(a) A"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "(b) B"
+      },
+      {
+       "type": "text",
+       "html": "<i>A</i> + <i>B</i>",
+       "text": "A + B"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 14,
+       "bbox": [
+        30.0,
+        253.2,
+        570.0,
+        445.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 115.4,
+        "height_pt": 191.8
+       }
+      }
+     ],
+     "text": "Complete the Venn diagram by writing each element in the correct subset.\nU\nA\nB\n[2]",
+     "marks": 2,
+     "path": "9(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "9(a)(ii)",
+       "text": "Correct Venn diagram\nA\nB\n11\n10\n13\n15\n14\n12\n17\n21\n16\n18\n19\n20",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          48.65999984741211,
+          89.4,
+          546.719970703125,
+          240.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the Venn diagram by writing each element in the correct subset.",
+       "text": "Complete the Venn diagram by writing each element in the correct subset."
+      },
+      {
+       "type": "figure",
+       "id": "0607_2022ON_32_q09aii_diagram1",
+       "caption": null
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 115.4
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "9(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> U = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21}",
+     "text": "U = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21}"
+    },
+    {
+     "type": "text",
+     "html": "<i>A</i> is the set of odd numbers. <i>B</i> is the set of multiples of 3.",
+     "text": "A is the set of odd numbers. B is the set of multiples of 3."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      447.5,
+      570.0,
+      625.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 96.2,
+      "height_pt": 177.5
+     }
+    }
+   ],
+   "text": "Use set notation to describe the region shaded in each Venn diagram.\nU\nU\nP\nQ\nP\nQ\n........................................\n........................................\n[2]",
+   "marks": 2,
+   "path": "9(b)",
+   "mark_scheme": [
+    {
+     "label": "9(b)",
+     "text": "QP′\nPQ",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        48.65999984741211,
+        240.4,
+        546.719970703125,
+        268.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use set notation to describe the region shaded in each Venn diagram.",
+     "text": "Use set notation to describe the region shaded in each Venn diagram."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2022ON_32_q09b_diagram2",
+     "caption": null
+    },
+    {
+     "type": "figure",
+     "id": "0607_2022ON_32_q09b_diagram3",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 3,
+ "variant": 2,
+ "paper_code": "0607/32",
+ "paper_type": "core_long_answer",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

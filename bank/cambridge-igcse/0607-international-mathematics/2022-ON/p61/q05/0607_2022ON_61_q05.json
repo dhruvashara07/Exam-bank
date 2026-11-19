@@ -1,0 +1,304 @@
+{
+ "id": "0607_2022ON_61_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    220.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 44.9,
+    "height_pt": 163.2
+   }
+  }
+ ],
+ "text": "5\nw\ny\nIn each trapezium:\n•\nthe length of the shorter parallel side is w\n•\nthe length of each sloping side is y.",
+ "marks": 13,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    232.3,
+    85.5,
+    365.0,
+    161.7
+   ],
+   "id": "0607_2022ON_61_q05_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      222.9,
+      570.0,
+      597.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 335.9,
+      "height_pt": 374.1
+     }
+    }
+   ],
+   "text": "Show that an expression for the number of unit triangles is\nyy\n(\n2\nw\n)\n.\n+\n[3]",
+   "marks": 3,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "Diagram with right-hand side labelled y\nand base labelled w + y\n2\n2\n(w + y) – w\n2\n2\n2\nExpansion to w + 2yw + y – w leading\nto y (y + 2w)\nAlternative\n4w + 4 seen\n2, 4, 6 expressed as 2y\n2\nand 1, 4, 9 expressed as y\n2\nFactorisation of 2wy + y to y (y + 2w)",
+     "codes": [
+      "C1",
+      "1",
+      "1",
+      "(C1)"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.239990234375,
+        298.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that an expression for the number of unit triangles is <i>y</i> (<i>y</i> + 2<i>w</i>).",
+     "text": "Show that an expression for the number of unit triangles is y (y + 2w)."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 335.9
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      470.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 348.9,
+      "height_pt": 413.2
+     }
+    }
+   ],
+   "text": "In a trapezium the length of the shorter parallel side is equal to the length of the sloping side.\nIs it possible for the number of unit triangles to be 300?\n[4]",
+   "marks": 4,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "y = w stated or trapezium labelled with\none variable\ny(y + 2y) = 300 oe\nor w(w + 2w) = 300 oe\n2\n2\nor (y + y) – y = 300 oe\n2\n2\nor (w+ w) – w = 300 oe\nor y(3y) = 300\nor w(3w) = 300\n2\nor 3y = 300\n2\nor 3w = 300\n2\n2\ny = 100 or w = 100 seen\ny = 10 or w = 10\nand Yes oe\nAlternative\ny = w stated or diagram labelled with one\nvariable\nCorrect substitution of a value into\ny(y + 2w) oe\ny = 10 or w = 10\nand Yes oe",
+     "codes": [
+      "C1",
+      "C1",
+      "1",
+      "1",
+      "(C1)",
+      "(C1)"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        298.5,
+        549.239990234375,
+        649.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "In a trapezium the length of the shorter parallel side is equal to the length of the sloping side. Is it possible for the number of unit triangles to be 300?",
+     "text": "In a trapezium the length of the shorter parallel side is equal to the length of the sloping side. Is it possible for the number of unit triangles to be 300?"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 348.9
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      730.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 634.9,
+      "height_pt": 673.2
+     }
+    },
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      60.5,
+      570.0,
+      78.0
+     ],
+     "continued": true,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 0.1,
+      "height_pt": 17.5
+     }
+    }
+   ],
+   "text": "Find the lengths of the sides for all the trapeziums with exactly 160 unit triangles.\n[6]\nSPARE GRID",
+   "marks": 6,
+   "path": "5(c)",
+   "mark_scheme": [
+    {
+     "label": "5(c)",
+     "text": "At least two from 1 × 160, 2 × 80, 4 × 40,\n5 × 32, 8 × 20, 10 × 16\nTwo correct substitutions for y in\ny(y + 2w) =160 oe\nor two correct substitutions for y and w in\ny(y + 2w) oe\ny\n2\n4\n8\n10\nw\n39\n18\n6\n3\nw + y\n41\n22\n14\n13",
+     "codes": [
+      "C1",
+      "C1",
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.239990234375,
+        278.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the lengths of the sides for all the trapeziums with exactly 160 unit triangles.",
+     "text": "Find the lengths of the sides for all the trapeziums with exactly 160 unit triangles."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 634.9
+    },
+    {
+     "type": "marks",
+     "value": 6
+    },
+    {
+     "type": "text",
+     "html": "<b>SPARE GRID</b>",
+     "text": "SPARE GRID"
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 13,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>5 </b>",
+   "text": "5"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2022ON_61_q05_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "In each trapezium:",
+   "text": "In each trapezium:"
+  },
+  {
+   "type": "list",
+   "items": [
+    "the length of the shorter parallel side is <i>w</i>",
+    "the length of each sloping side is <i>y</i>."
+   ]
+  }
+ ]
+}

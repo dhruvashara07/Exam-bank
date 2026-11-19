@@ -1,0 +1,297 @@
+{
+ "id": "0607_2022ON_61_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 10,
+   "bbox": [
+    30.0,
+    225.6,
+    570.0,
+    469.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 15.8,
+    "height_pt": 243.9
+   }
+  }
+ ],
+ "text": "6\nModel 1\nPablo sets the following conditions:\n•\nHe sells one type of pizza with a selling price of $10.\n•\nHe sells n pizzas per week.\n•\nIt costs him $2 to make one pizza.\n•\nHis running costs are $400 per week.\n•\nHe employs 2 people each costing $300 per week.\nThis is how he works out his profit.\nprofit = income from selling pizzas - his costs",
+ "marks": 7,
+ "figures": [
+  {
+   "caption": null,
+   "page": 10,
+   "bbox": [
+    163.5,
+    438.0,
+    433.8,
+    465.5
+   ],
+   "id": "0607_2022ON_61_q06_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      474.4,
+      570.0,
+      601.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 62.9,
+      "height_pt": 127.1
+     }
+    }
+   ],
+   "text": "Show that a model for the weekly profit, $P, in terms of n, is\nP\nn\n8\n1000\n.\n=\n-\n[1]",
+   "marks": 1,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "10n – 2n – 400 ‒ 2 × 300 oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        278.3,
+        549.239990234375,
+        303.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that a model for the weekly profit, $<i>P</i>, in terms of <i>n</i>, is",
+     "text": "Show that a model for the weekly profit, $P, in terms of n, is"
+    },
+    {
+     "type": "text",
+     "html": "<i>P</i> = 8<i>n</i> - 1000.",
+     "text": "P = 8n - 1000."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 62.9
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      617.4,
+      570.0,
+      796.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 114.9,
+      "height_pt": 179.1
+     }
+    }
+   ],
+   "text": "Pablo wants a profit of at least $500 per week.\nUse the model to find the minimum number of pizzas he must sell per week.\n................................................. [3]",
+   "marks": 3,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "8n ‒ 1000 ≥ 500\n188",
+     "codes": [
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        303.6,
+        549.239990234375,
+        352.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Pablo wants a profit of at least $500 per week. Use the model to find the minimum number of pizzas he must sell per week.",
+     "text": "Pablo wants a profit of at least $500 per week. Use the model to find the minimum number of pizzas he must sell per week."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      496.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 218.9,
+      "height_pt": 439.2
+     }
+    }
+   ],
+   "text": "Pablo expects sales to vary.\nHe sets the following conditions.\nThe pizza business:\n•\nopens 4 days per week\n•\nopens 6 hours per day\n•\nmakes 16 pizzas per hour for half of the time\n•\nmakes 8 pizzas per hour for the rest of the time.\nCan Pablo make a weekly profit of $500?\nUse the conditions above and your answer to part (b) to show how you decide.\n[3]",
+   "marks": 3,
+   "path": "6(c)",
+   "mark_scheme": [
+    {
+     "label": "6(c)",
+     "text": "12 × 16 + 12 × 8\nor 12(16 + 8)\nor 4(16 × 3 + 8 × 3)\nor 24 × 3 × 4 or\n288\nYes oe, because 288 > 188 oe",
+     "codes": [
+      "C1",
+      "A1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        352.7,
+        549.239990234375,
+        466.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Pablo expects sales to vary. He sets the following conditions. The pizza business:",
+     "text": "Pablo expects sales to vary. He sets the following conditions. The pizza business:"
+    },
+    {
+     "type": "list",
+     "items": [
+      "opens 4 days per week",
+      "opens 6 hours per day",
+      "makes 16 pizzas per hour for half of the time",
+      "makes 8 pizzas per hour for the rest of the time."
+     ]
+    },
+    {
+     "type": "text",
+     "html": "Can Pablo make a weekly profit of $500? Use the conditions above and your answer to <b>part (b)</b> to show how you decide.",
+     "text": "Can Pablo make a weekly profit of $500? Use the conditions above and your answer to part (b) to show how you decide."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 218.9
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Model 1 Pablo sets the following conditions:",
+   "text": "Model 1 Pablo sets the following conditions:"
+  },
+  {
+   "type": "list",
+   "items": [
+    "He sells one type of pizza with a selling price of $10.",
+    "He sells <i>n</i> pizzas per week.",
+    "It costs him $2 to make one pizza.",
+    "His running costs are $400 per week.",
+    "He employs 2 people each costing $300 per week."
+   ]
+  },
+  {
+   "type": "text",
+   "html": "This is how he works out his profit.",
+   "text": "This is how he works out his profit."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2022ON_61_q06_diagram1",
+   "caption": null
+  }
+ ]
+}

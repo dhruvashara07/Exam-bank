@@ -1,0 +1,278 @@
+{
+ "id": "0607_2022ON_42_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    82.8,
+    570.0,
+    106.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 23.2
+   }
+  }
+ ],
+ "text": "1\nGiselle flies from Paris (France) to Atlanta (USA).",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      108.8,
+      570.0,
+      249.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "€1 = $  …… [1]",
+      "working_gap_pt": 62.9,
+      "height_pt": 140.2
+     }
+    }
+   ],
+   "text": "She changes 8500 euros (€) to USA dollars ($).\nShe receives $9520.\nCalculate the exchange rate.\n€1 = $  ................................................ [1]",
+   "marks": 1,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "1.12",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.08000183105469,
+        89.4,
+        549.239990234375,
+        113.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "She changes 8500 euros (€) to USA dollars ($). She receives $9520. Calculate the exchange rate.",
+     "text": "She changes 8500 euros (€) to USA dollars ($). She receives $9520. Calculate the exchange rate."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "€1 = $"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      251.8,
+      570.0,
+      286.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 34.2
+     }
+    }
+   ],
+   "text": "The aircraft leaves at 10 35 local time and the flight takes 9 hours 30 minutes.\nThe time in Atlanta is 6 hours behind the time in Paris.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        290.8,
+        570.0,
+        444.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 114.9,
+        "height_pt": 153.2
+       }
+      }
+     ],
+     "text": "Find the local time in Atlanta when the aircraft lands.\n................................................. [2]",
+     "marks": 2,
+     "path": "1(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "1(b)(i)",
+       "text": "14 05",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.08000183105469,
+          113.8,
+          549.239990234375,
+          151.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the local time in Atlanta when the aircraft lands.",
+       "text": "Find the local time in Atlanta when the aircraft lands."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        446.8,
+        570.0,
+        704.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 166.9,
+        "height_pt": 257.2
+       }
+      }
+     ],
+     "text": "On the return flight the aircraft leaves Atlanta at 23 08 local time and arrives in Paris the next\nday at 13 25 local time.\nThe distance from Atlanta to Paris is 7072 km.\nFind the average speed for the flight from Atlanta to Paris.\n........................................ km/h [4]",
+     "marks": 4,
+     "path": "1(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "1(b)(ii)",
+       "text": "854 or 853.7 to 853.8",
+       "codes": [
+        "4"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.08000183105469,
+          151.0,
+          549.239990234375,
+          233.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "On the return flight the aircraft leaves Atlanta at 23 08 local time and arrives in Paris the next day at 13 25 local time. The distance from Atlanta to Paris is 7072 km. Find the average speed for the flight from Atlanta to Paris.",
+       "text": "On the return flight the aircraft leaves Atlanta at 23 08 local time and arrives in Paris the next day at 13 25 local time. The distance from Atlanta to Paris is 7072 km. Find the average speed for the flight from Atlanta to Paris."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "unit": "km/h"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 4
+      }
+     ]
+    }
+   ],
+   "path": "1(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "The aircraft leaves at 10 35 local time and the flight takes 9 hours 30 minutes. The time in Atlanta is 6 hours behind the time in Paris.",
+     "text": "The aircraft leaves at 10 35 local time and the flight takes 9 hours 30 minutes. The time in Atlanta is 6 hours behind the time in Paris."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_long_answer",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Giselle flies from Paris (France) to Atlanta (USA).",
+   "text": "Giselle flies from Paris (France) to Atlanta (USA)."
+  }
+ ]
+}

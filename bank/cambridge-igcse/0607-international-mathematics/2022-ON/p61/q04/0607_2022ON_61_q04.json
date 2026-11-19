@@ -1,0 +1,287 @@
+{
+ "id": "0607_2022ON_61_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    269.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 68.3,
+    "height_pt": 212.2
+   }
+  }
+ ],
+ "text": "4\nThese are the first three trapeziums in another sequence.\nThe length of each sloping side is 3.\nThe length of the shorter parallel side is w.\nw = 1\nw = 2\nw = 3",
+ "marks": 6,
+ "figures": [
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    36.1,
+    187.2,
+    561.1,
+    267.0
+   ],
+   "id": "0607_2022ON_61_q04_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      300.3,
+      570.0,
+      491.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 19.3,
+      "height_pt": 191.2
+     }
+    }
+   ],
+   "text": "Complete the table.\nLength of shorter parallel side (w)\nNumber of unit triangles\n1\n42-=        15\n2\n-        22=\n3\n-=27\n4\n-=\n[2]",
+   "marks": 2,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "2\n[2]\n4 – 1\n= 15\n2\n5 – 2 = 21\n2\n2\n2\n6 – 3 = 27\n7 – 4 = 33\n2\n2",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        509.8,
+        549.239990234375,
+        619.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Length of shorter parallel side (<i>w</i>)",
+       "Number of unit triangles"
+      ],
+      [
+       "1",
+       "<sup>2</sup> 4 - = 15"
+      ],
+      [
+       "2",
+       "<sup>2</sup> - 2 ="
+      ],
+      [
+       "3",
+       "- = 27"
+      ],
+      [
+       "4",
+       "- ="
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      494.3,
+      570.0,
+      608.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 62.9,
+      "height_pt": 114.2
+     }
+    }
+   ],
+   "text": "Find an expression, in terms of w, for the number of unit triangles.\nGive your answer in its simplest form.\n................................................. [2]",
+   "marks": 2,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "2\n2\n(w + 3) ‒ w\nseen\nor three differences of 6 seen\n6w + 9 or 3(2w + 3) isw",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        619.9,
+        549.239990234375,
+        681.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression, in terms of <i>w</i>, for the number of unit triangles. Give your answer in its simplest form.",
+     "text": "Find an expression, in terms of w, for the number of unit triangles. Give your answer in its simplest form."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      611.3,
+      570.0,
+      725.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 75.9,
+      "height_pt": 114.2
+     }
+    }
+   ],
+   "text": "Find the value of w when there are 93 unit triangles.\n................................................. [2]",
+   "marks": 2,
+   "path": "4(c)",
+   "mark_scheme": [
+    {
+     "label": "4(c)",
+     "text": "6w + 9 = 93\n14",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        681.5,
+        549.239990234375,
+        734.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the value of <i>w</i> when there are 93 unit triangles.",
+     "text": "Find the value of w when there are 93 unit triangles."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2022,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "These are the first three trapeziums in another sequence. The length of each sloping side is 3. The length of the shorter parallel side is<i> w</i>.",
+   "text": "These are the first three trapeziums in another sequence. The length of each sloping side is 3. The length of the shorter parallel side is w."
+  },
+  {
+   "type": "text",
+   "html": "<i>w</i> = 1 <i>w</i> = 2 <i>w</i> = 3",
+   "text": "w = 1 w = 2 w = 3"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2022ON_61_q04_diagram1",
+   "caption": null
+  }
+ ]
+}
