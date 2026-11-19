@@ -1,0 +1,365 @@
+{
+ "id": "0607_2021MJ_63_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    142.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 23.0,
+    "height_pt": 85.7
+   }
+  }
+ ],
+ "text": "3\nA=rr2\nArea, A, of circle, radius r.\nThis question looks at the area of a path around a circle.",
+ "marks": 9,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    233.6,
+    192.3,
+    328.7,
+    279.9
+   ],
+   "id": "0607_2021MJ_63_q03a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      145.1,
+      570.0,
+      445.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 118.9,
+      "height_pt": 300.4
+     }
+    }
+   ],
+   "text": "The shaded circle has radius 2.\nThere is a path of width 1 around the shaded circle.\nShow that the area of the path is 5r.\n[2]",
+   "marks": 2,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "π × 3² – π × 2²\n9π – 4π leading to 5𝜋",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        347.9,
+        549.1799926757812,
+        398.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The shaded circle has radius 2. There is a path of width 1 around the shaded circle.",
+     "text": "The shaded circle has radius 2. There is a path of width 1 around the shaded circle."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2021MJ_63_q03a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Show that the area of the path is 5r.",
+     "text": "Show that the area of the path is 5r."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 118.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      448.2,
+      570.0,
+      627.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 140.9,
+      "height_pt": 179.3
+     }
+    }
+   ],
+   "text": "Show that the area of a path of width 1 around a circle of radius 3 is 7r.\n[2]",
+   "marks": 2,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "π 𝗑 4² – π × 3²\n16π – 9π leading to 7π",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        398.5,
+        549.1799926757812,
+        449.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that the area of a path of width 1 around a circle of radius 3 is 7r.",
+     "text": "Show that the area of a path of width 1 around a circle of radius 3 is 7r."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 140.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      404.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 160.2,
+      "height_pt": 347.2
+     }
+    }
+   ],
+   "text": "Complete the table to show the areas of paths of width 1 around circles of different sizes.\nRadius of shaded circle\nArea of path\n1\n2\n5r\n3\n7r\n4\n[2]",
+   "marks": 2,
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "Radius of\nArea of path\nshaded circle\n1\n3π\n2\n5π\n3\n7π\n4\n9π",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        449.1,
+        549.1799926757812,
+        599.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table to show the areas of paths of width 1 around circles of different sizes.",
+     "text": "Complete the table to show the areas of paths of width 1 around circles of different sizes."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Radius of shaded circle",
+       "Area of path"
+      ],
+      [
+       "1",
+       ""
+      ],
+      [
+       "2",
+       "5r"
+      ],
+      [
+       "3",
+       "7r"
+      ],
+      [
+       "4",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 160.2
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      406.8,
+      570.0,
+      612.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 153.9,
+      "height_pt": 205.2
+     }
+    }
+   ],
+   "text": "Find an expression for the area of a path of width W around a circle of radius R.\nGive your answer in its simplest form in terms of r, R and W.\n................................................. [3]",
+   "marks": 3,
+   "path": "3(d)",
+   "mark_scheme": [
+    {
+     "label": "3(d)",
+     "text": "π (R + W)² – πR²\n2\nR² + RW + RW + W\n2\nor R² + 2RW + W\n2𝜋RW + πW²\n2\nor π (2RW + W )\nor πW(2R + W) isw",
+     "codes": [
+      "C1",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        599.5,
+        549.1799926757812,
+        718.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression for the area of a path of width <i>W</i> around a circle of radius <i>R</i>. Give your answer in its simplest form in terms of r, <i>R</i> and <i>W</i>.",
+     "text": "Find an expression for the area of a path of width W around a circle of radius R. Give your answer in its simplest form in terms of r, R and W."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>3 </b>",
+   "text": "3"
+  },
+  {
+   "type": "text",
+   "html": "Area, <i>A</i>, of circle, radius <i>r</i>. <i>A</i> = r<i>r</i><sup>2</sup>",
+   "text": "Area, A, of circle, radius r. A = rr2"
+  },
+  {
+   "type": "text",
+   "html": "This question looks at the area of a path around a circle.",
+   "text": "This question looks at the area of a path around a circle."
+  }
+ ]
+}

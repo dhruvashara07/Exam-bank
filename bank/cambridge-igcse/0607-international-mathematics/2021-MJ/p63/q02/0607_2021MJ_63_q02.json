@@ -1,0 +1,460 @@
+{
+ "id": "0607_2021MJ_63_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    189.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 132.2
+   }
+  }
+ ],
+ "text": "2\nThis is the path around a rectangle of width 1 and length 2.",
+ "marks": 10,
+ "figures": [
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    236.9,
+    97.3,
+    360.3,
+    184.8
+   ],
+   "id": "0607_2021MJ_63_q02_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    80.7,
+    424.3,
+    516.5,
+    654.2
+   ],
+   "id": "0607_2021MJ_63_q02ai_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)(i)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        203.9,
+        570.0,
+        657.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 19.3,
+        "height_pt": 453.6
+       }
+      }
+     ],
+     "text": "Complete the table to show the number of tiles in the paths around rectangles of width 1 with\ndifferent lengths.\nLength of rectangle (L)\nNumber of tiles in path\n2\n10\n3\n4\n5\n[1]",
+     "marks": 1,
+     "path": "2(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(a)(i)",
+       "text": "Length of\nNumber of tiles in\nrectangle (L)\npath\n2\n10\n3\n12\n4\n14\n5\n16",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.619998931884766,
+          534.9,
+          549.1799926757812,
+          682.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the table to show the number of tiles in the paths around rectangles of width 1 with",
+       "text": "Complete the table to show the number of tiles in the paths around rectangles of width 1 with"
+      },
+      {
+       "type": "text",
+       "html": "different lengths.",
+       "text": "different lengths."
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "Length of rectangle (<i>L</i>)",
+         "Number of tiles in path"
+        ],
+        [
+         "2",
+         "10"
+        ],
+        [
+         "3",
+         ""
+        ],
+        [
+         "4",
+         ""
+        ],
+        [
+         "5",
+         ""
+        ]
+       ]
+      },
+      {
+       "type": "figure",
+       "id": "0607_2021MJ_63_q02ai_diagram2",
+       "caption": null
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        672.2,
+        570.0,
+        773.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 49.7,
+        "height_pt": 101.3
+       }
+      }
+     ],
+     "text": "Complete the expression for the number of tiles in the path around a rectangle of width 1 and\nlength L.\n2L +  ................................................ [1]",
+     "marks": 1,
+     "path": "2(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(a)(ii)",
+       "text": "6",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.619998931884766,
+          682.1,
+          549.1799926757812,
+          710.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the expression for the number of tiles in the path around a rectangle of width 1 and length <i>L</i>.",
+       "text": "Complete the expression for the number of tiles in the path around a rectangle of width 1 and length L."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "2L +"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "2(a)"
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      292.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 15.7,
+      "height_pt": 235.7
+     }
+    }
+   ],
+   "text": "Write your expression from Question 2(a)(ii) in the table.\nComplete the table to show expressions for the number of tiles in the paths around rectangles of\ndifferent widths and lengths.\nNumber of tiles in path\nWidth of rectangle (W)\naround a rectangle of length L\n1\n2\n3\n4\n[3]",
+   "marks": 3,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "Width of\nNumber of tiles in\nrectangle (W)\npath around a\nrectangle of length (L)\n1\n2L + 6\n2\n2L + 8\n3\n2L + 10\n4\n2L + 12",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.1799926757812,
+        249.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write your expression from <b>Question 2(a)(ii)</b> in the table. Complete the table to show expressions for the number of tiles in the paths around rectangles of different widths and lengths.",
+     "text": "Write your expression from Question 2(a)(ii) in the table. Complete the table to show expressions for the number of tiles in the paths around rectangles of different widths and lengths."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Width of rectangle (<i>W</i>)",
+       "Number of tiles in path around a rectangle of length <i>L</i>"
+      ],
+      [
+       "1",
+       ""
+      ],
+      [
+       "2",
+       ""
+      ],
+      [
+       "3",
+       ""
+      ],
+      [
+       "4",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      295.1,
+      570.0,
+      422.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 75.9,
+      "height_pt": 127.4
+     }
+    }
+   ],
+   "text": "Find an expression, in terms of L and W, for the number of tiles in the path around a rectangle of\nlength L and width W.\n................................................. [2]",
+   "marks": 2,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "2L + 2W + 4 oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        249.3,
+        549.1799926757812,
+        273.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression, in terms of <i>L</i> and <i>W</i>, for the number of tiles in the path around a rectangle of length <i>L</i> and width <i>W</i>.",
+     "text": "Find an expression, in terms of L and W, for the number of tiles in the path around a rectangle of length L and width W."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      425.1,
+      570.0,
+      796.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 306.9,
+      "height_pt": 371.4
+     }
+    }
+   ],
+   "text": "The path around a rectangle has 20 tiles.\nFind all the possible dimensions of the rectangle.\n..................................................................................................................................................... [3]",
+   "marks": 3,
+   "path": "2(d)",
+   "mark_scheme": [
+    {
+     "label": "2(d)",
+     "text": "Use of their (2L + 2W + 4) = 20\n7 by 1, 6 by 2, 5 by 3, [4 by 4]",
+     "codes": [
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        273.7,
+        549.1799926757812,
+        347.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The path around a rectangle has 20 tiles. Find all the possible dimensions of the rectangle.",
+     "text": "The path around a rectangle has 20 tiles. Find all the possible dimensions of the rectangle."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 10,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This is the path around a rectangle of width 1 and length 2.",
+   "text": "This is the path around a rectangle of width 1 and length 2."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2021MJ_63_q02_diagram1",
+   "caption": null
+  }
+ ]
+}

@@ -1,0 +1,300 @@
+{
+ "id": "0607_2021MJ_53_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    179.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 122.2
+   }
+  }
+ ],
+ "text": "2\nThis is the path around a rectangle of width 1 and length 2.",
+ "marks": 7,
+ "figures": [
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    236.9,
+    87.4,
+    360.3,
+    174.9
+   ],
+   "id": "0607_2021MJ_53_q02_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    52.4,
+    238.3,
+    544.9,
+    411.4
+   ],
+   "id": "0607_2021MJ_53_q02a_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      184.1,
+      570.0,
+      430.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 182.8,
+      "height_pt": 245.9
+     }
+    }
+   ],
+   "text": "On the grid, draw a diagram to show the path around the given rectangles.\nRectangle width 1 and length 3\nRectangle width 1 and length 4\n[2]",
+   "marks": 2,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        537.9,
+        549.1799926757812,
+        663.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the grid, draw a diagram to show the path around the given rectangles. Rectangle width 1 and length 3 Rectangle width 1 and length 4",
+     "text": "On the grid, draw a diagram to show the path around the given rectangles. Rectangle width 1 and length 3 Rectangle width 1 and length 4"
+    },
+    {
+     "type": "figure",
+     "id": "0607_2021MJ_53_q02a_diagram2",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 182.8
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      432.9,
+      570.0,
+      638.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 15.3,
+      "height_pt": 205.1
+     }
+    }
+   ],
+   "text": "Complete the table to show the number of tiles in the paths around rectangles of width 1 with\ndifferent lengths.\nLength of rectangle (L)\nNumber of tiles in path\n2\n3\n4\n5\n[2]",
+   "marks": 2,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "Length of\nNumber of tiles in path\nrectangle (L)\n2\n10\n3\n12\n4\n14\n5\n16",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        549.1799926757812,
+        229.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table to show the number of tiles in the paths around rectangles of width 1 with different lengths.",
+     "text": "Complete the table to show the number of tiles in the paths around rectangles of width 1 with different lengths."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Length of rectangle (<i>L</i>)",
+       "Number of tiles in path"
+      ],
+      [
+       "2",
+       ""
+      ],
+      [
+       "3",
+       ""
+      ],
+      [
+       "4",
+       ""
+      ],
+      [
+       "5",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      640.5,
+      570.0,
+      741.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 49.9,
+      "height_pt": 101.0
+     }
+    }
+   ],
+   "text": "Find an expression, in terms of L, for the number of tiles in the path around a rectangle of\nwidth 1 and length L.\n................................................. [3]",
+   "marks": 3,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "2L + 6 oe\nAt least three differences of 2 seen",
+     "codes": [
+      "2",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        229.7,
+        549.1799926757812,
+        278.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression, in terms of <i>L</i>, for the number of tiles in the path around a rectangle of width 1 and length <i>L</i>.",
+     "text": "Find an expression, in terms of L, for the number of tiles in the path around a rectangle of width 1 and length L."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 3,
+ "paper_code": "0607/53",
+ "paper_type": "core_investigation",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This is the path around a rectangle of width 1 and length 2.",
+   "text": "This is the path around a rectangle of width 1 and length 2."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2021MJ_53_q02_diagram1",
+   "caption": null
+  }
+ ]
+}

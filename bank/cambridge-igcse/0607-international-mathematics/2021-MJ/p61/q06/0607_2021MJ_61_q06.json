@@ -1,0 +1,331 @@
+{
+ "id": "0607_2021MJ_61_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    218.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 13.8,
+    "height_pt": 161.2
+   }
+  }
+ ],
+ "text": "6\nA square of side 2 cm rolls along the x-axis.\ny\n3\n2\nA\n1\nPosition 1\nPosition 2\nx\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15",
+ "marks": 10,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    65.5,
+    84.8,
+    531.8,
+    217.5
+   ],
+   "id": "0607_2021MJ_61_q06_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      226.2,
+      570.0,
+      340.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 18.7,
+      "height_pt": 113.8
+     }
+    }
+   ],
+   "text": "The table shows the x-coordinate of the point A for each position.\nComplete the table.\nPosition\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\nx-coordinate\n0\n4\n6\n8\n12\n14\n20\n22\n24\n[1]",
+   "marks": 1,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "6\n14\n16\n22",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        684.9,
+        548.9400024414062,
+        713.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The table shows the <i>x</i>-coordinate of the point <i>A</i> for each position. Complete the table.",
+     "text": "The table shows the x-coordinate of the point A for each position. Complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Position",
+       "1",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6",
+       "7",
+       "8",
+       "9",
+       "10",
+       "11",
+       "12",
+       "13"
+      ],
+      [
+       "<i>x</i>-coordinate",
+       "0",
+       "4",
+       "6",
+       "",
+       "8",
+       "12",
+       "",
+       "14",
+       "",
+       "20",
+       "",
+       "22",
+       "24"
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      342.8,
+      570.0,
+      754.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 3,
+      "answer_line": null,
+      "working_gap_pt": 80.1,
+      "height_pt": 411.2
+     }
+    }
+   ],
+   "text": "In the row of x-coordinates there are four sequences.\nFor Positions 4, 8, 12, ... the expression for the position is 4a, where a is a positive integer.\nComplete the table.\na\n1\n2\n3\n4\n5\na\nPosition   (4a)\n4\n8\n12\n16\n20\n4a\nx-coordinate\n14\n22\n8a- ..........\nPosition   (4a – 1)\n4a – 1\n3\n7\n11\n15\n19\nx-coordinate\n6\n...............\nPosition   (4a – 2)\n2\n6\n10\n14\n18\n4a – 2\nx-coordinate\n4\n12\n20\n...............\nPosition   (4a – 3)\n1\n4a – 3\nx-coordinate\n0\n...............\n[5]",
+   "marks": 5,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "1\n2\n3\n4\n5\n4\n8\n12\n16\n20\n6\n14\n22\n30\n38\n8a – 2\n3\n7\n11\n15\n21\n6\n14\n22\n30\n38\n8a – 2\n2\n6\n10\n14\n18\n4\n12\n20\n28\n36\n8a – 4\n1\n5\n9\n13\n17\n0\n8\n16\n24\n32\n8a − 8",
+     "codes": [
+      "5"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        89.4,
+        548.9400024414062,
+        343.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "In the row of <i>x</i>-coordinates there are four sequences. For Positions 4, 8, 12, ... the expression for the position is 4<i>a</i>, where <i>a</i> is a positive integer. Complete the table.",
+     "text": "In the row of x-coordinates there are four sequences. For Positions 4, 8, 12, ... the expression for the position is 4a, where a is a positive integer. Complete the table."
+    },
+    {
+     "type": "text",
+     "html": "<i>a</i> 1 2 3 4 5 <i>a</i>",
+     "text": "a 1 2 3 4 5 a"
+    },
+    {
+     "type": "text",
+     "html": "Position (4<i>a</i>) 4 8 12 16 20 4<i>a</i>",
+     "text": "Position (4a) 4 8 12 16 20 4a"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "x-coordinate 14 22 8a -"
+    },
+    {
+     "type": "text",
+     "html": "Position (4<i>a </i>– 1) 3 7 11 15 19 4<i>a</i> – 1 <i>x-</i>coordinate 6",
+     "text": "Position (4a – 1) 3 7 11 15 19 4a – 1 x-coordinate 6"
+    },
+    {
+     "type": "text",
+     "html": "Position (4<i>a </i>– 2) 2 6 10 14 18 4<i>a</i> – 2 <i>x</i>-coordinate 4 12 20",
+     "text": "Position (4a – 2) 2 6 10 14 18 4a – 2 x-coordinate 4 12 20"
+    },
+    {
+     "type": "text",
+     "html": "Position (4<i>a </i>– 3) 1 4<i>a</i> – 3 <i>x</i>-coordinate 0",
+     "text": "Position (4a – 3) 1 4a – 3 x-coordinate 0"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 3
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      535.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 413.9,
+      "height_pt": 478.2
+     }
+    }
+   ],
+   "text": "The 2 cm square rolls to Position 523.\nUse part (b) to help you find the coordinates of point A.\n(...................... , ......................) [4]",
+   "marks": 4,
+   "path": "6(c)",
+   "mark_scheme": [
+    {
+     "label": "6(c)",
+     "text": "Method 1: Using algebra\n523\n523+2\n523+3\nor\nor\nor\n4\n4\n4\n523+1\n4\nor 4a – 1 = 523 or 4(131) – 1 = 523\n523−3\nor\n4\n(their 131) × 8 – 2\nor (their130) × 8 – 2 + 8\nor (their130) × 8 – 2\n(1046, 0)\nMethod 2: Using patterns\nIdentifies the correct row in the table as\n4a – 1 and states 2 × 523\n(1046, 0)",
+     "codes": [
+      "C1",
+      "C1",
+      "2",
+      "C2",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        343.2,
+        548.9400024414062,
+        670.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The 2 cm square rolls to Position 523. Use <b>part (b)</b> to help you find the coordinates of point <i>A</i>.",
+     "text": "The 2 cm square rolls to Position 523. Use part (b) to help you find the coordinates of point A."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "(",
+     "unit": ")"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 10,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A square of side 2 cm rolls along the <i>x</i>-axis.",
+   "text": "A square of side 2 cm rolls along the x-axis."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2021MJ_61_q06_diagram1",
+   "caption": null
+  }
+ ]
+}

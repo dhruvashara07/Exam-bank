@@ -1,0 +1,235 @@
+{
+ "id": "0607_2021MJ_41_q11",
+ "number": 11,
+ "segments": [],
+ "text": "",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 18,
+   "bbox": [
+    96.7,
+    79.9,
+    376.1,
+    434.6
+   ],
+   "id": "0607_2021MJ_41_q11a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 18,
+     "bbox": [
+      30.0,
+      59.1,
+      570.0,
+      755.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 307.2,
+      "height_pt": 696.4
+     }
+    }
+   ],
+   "text": "x =\n11 (a) Using a suitable sketch, solve   5\n10\n.\ny\n12\nx\n0\n–1\n3\n–1\nx=\n[3]",
+   "marks": 3,
+   "path": "11(a)",
+   "mark_scheme": [
+    {
+     "label": "11(a)",
+     "text": "Correct sketch\n1.43 or 1.430 to 1.431",
+     "codes": [
+      "M2",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        40.97999954223633,
+        457.0,
+        554.9400024414062,
+        658.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "=",
+     "text": "="
+    },
+    {
+     "type": "text",
+     "html": "Using a suitable sketch, solve 5<i><sup>x</sup></i> 10.",
+     "text": "Using a suitable sketch, solve 5x 10."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2021MJ_41_q11a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "<i>x</i> =",
+     "text": "x ="
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 307.2
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 19,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      457.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "x= …… or x= …… [5]",
+      "working_gap_pt": 309.7,
+      "height_pt": 400.2
+     }
+    }
+   ],
+   "text": "Solve.\n5\nx\n+\n6\nx\n1\n-\n=\n2\nx\n3\n+\nYou must show all your working.\nx= ............................ or x= ............................ [5]",
+   "marks": 5,
+   "path": "11(b)",
+   "mark_scheme": [
+    {
+     "label": "11(b)",
+     "text": "Algebraic method\n(6x−1)(2x+3)=[5+ x] or better\n2\n12x +15x−8=0\n2\n−15± 15 −4 ×12× −8\nx=\n2 ×12\n0.403 or 0.4032…\n–1.65 or –1.653…",
+     "codes": [
+      "M1",
+      "A1",
+      "M1",
+      "B1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        40.97999954223633,
+        89.4,
+        554.9400024414062,
+        262.9
+       ]
+      }
+     ]
+    },
+    {
+     "label": "11(b)",
+     "text": "Graphical method (1)\nCorrect sketch of y = 6x – 1\n5+x\nCorrect sketch of y=\n2x+3\n0.403\nor 0.4032…\n–1.65\nor –1.653…",
+     "codes": [
+      "M1",
+      "M2",
+      "B1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        40.97999954223633,
+        262.9,
+        554.9400024414062,
+        513.4
+       ]
+      }
+     ]
+    },
+    {
+     "label": "11(b)",
+     "text": "Graphical method (2)\nCorrect sketch\n0.403 or 0.4032...\n–1.65 or –1.653...",
+     "codes": [
+      "M3",
+      "B1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        40.97999954223633,
+        513.4,
+        554.9400024414062,
+        702.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Solve.",
+     "text": "Solve."
+    },
+    {
+     "type": "text",
+     "html": "6<i>x</i> - 1 = \\(\\frac{5 + x}{2x + 3}\\) You must show all your working.",
+     "text": "6x - 1 = (5+x)/(2x+3) You must show all your working."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "x ="
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_long_answer",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

@@ -1,0 +1,355 @@
+{
+ "id": "0607_2021MJ_42_q10",
+ "number": 10,
+ "segments": [
+  {
+   "page": 16,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    145.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.9,
+    "height_pt": 88.2
+   }
+  }
+ ],
+ "text": "Hua travels to school by bus or she cycles or she walks.\nIf it rains, the probability that she travels by bus is 0.7 and the probability that she cycles is 0.25 .\nIf it does not rain, the probability that she cycles is 0.55 and the probability that she walks is 0.25 .\nOn any day, the probability that it rains is 0.6 .",
+ "marks": 11,
+ "figures": [
+  {
+   "caption": null,
+   "page": 16,
+   "bbox": [
+    135.1,
+    181.6,
+    451.5,
+    499.4
+   ],
+   "id": "0607_2021MJ_42_q10a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      147.8,
+      570.0,
+      519.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 5,
+      "answer_line": null,
+      "working_gap_pt": 42.8,
+      "height_pt": 371.7
+     }
+    }
+   ],
+   "text": "Complete the tree diagram to show the probabilities of the three methods of travel.\nBus\n0.7\nRain\nCycle\n............\n0.6\n............\nWalk\nBus\n............\n............\n0.55\nNot Rain\nCycle\n............\nWalk\n[2]",
+   "marks": 2,
+   "path": "10(a)",
+   "mark_scheme": [
+    {
+     "label": "10(a)",
+     "text": "(0.7)\n0.25 oe\n0.05 oe\n0.2 oe\n0.4 oe\n(0.55)\n0.25 oe",
+     "codes": [
+      "B1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.13999938964844,
+        511.8,
+        548.699951171875,
+        611.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the tree diagram to show the probabilities of the three methods of travel.",
+     "text": "Complete the tree diagram to show the probabilities of the three methods of travel."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2021MJ_42_q10a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      522.1,
+      570.0,
+      545.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.4
+     }
+    }
+   ],
+   "text": "Calculate the probability that, on any day,",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 16,
+       "bbox": [
+        30.0,
+        548.1,
+        570.0,
+        636.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 49.9,
+        "height_pt": 88.4
+       }
+      }
+     ],
+     "text": "Hua walks to school,\n................................................. [3]",
+     "marks": 3,
+     "path": "10(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "10(b)(i)",
+       "text": "0.13 oe",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          46.13999938964844,
+          611.4,
+          548.699951171875,
+          665.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Hua walks to school,",
+       "text": "Hua walks to school,"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 16,
+       "bbox": [
+        30.0,
+        639.1,
+        570.0,
+        740.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 62.9,
+        "height_pt": 101.4
+       }
+      }
+     ],
+     "text": "Hua does not cycle.\n................................................. [3]",
+     "marks": 3,
+     "path": "10(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "10(b)(ii)",
+       "text": "0.63 oe",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          46.13999938964844,
+          89.4,
+          548.699951171875,
+          316.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Hua does not cycle.",
+       "text": "Hua does not cycle."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "10(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the probability that, on any day,",
+     "text": "Calculate the probability that, on any day,"
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      301.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 179.9,
+      "height_pt": 244.2
+     }
+    }
+   ],
+   "text": "Last week it rained every day of the 5 school days.\nCalculate the probability that Hua travelled by bus on exactly 4 of the 5 days.\n................................................. [3]",
+   "marks": 3,
+   "path": "10(c)",
+   "mark_scheme": [
+    {
+     "label": "10(c)",
+     "text": "0.36[0] or 0.3601 to 0.3602 oe",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.13999938964844,
+        316.2,
+        548.699951171875,
+        353.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Last week it rained every day of the 5 school days. Calculate the probability that Hua travelled by bus on exactly 4 of the 5 days.",
+     "text": "Last week it rained every day of the 5 school days. Calculate the probability that Hua travelled by bus on exactly 4 of the 5 days."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_long_answer",
+ "total_marks": 11,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Hua travels to school by bus or she cycles or she walks. If it rains, the probability that she travels by bus is 0.7 and the probability that she cycles is 0.25 . If it does not rain, the probability that she cycles is 0.55 and the probability that she walks is 0.25 . On any day, the probability that it rains is 0.6 .",
+   "text": "Hua travels to school by bus or she cycles or she walks. If it rains, the probability that she travels by bus is 0.7 and the probability that she cycles is 0.25 . If it does not rain, the probability that she cycles is 0.55 and the probability that she walks is 0.25 . On any day, the probability that it rains is 0.6 ."
+  }
+ ]
+}

@@ -1,0 +1,220 @@
+{
+ "id": "0607_2021MJ_43_q05",
+ "number": 5,
+ "segments": [],
+ "text": "",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      227.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 27.1,
+      "height_pt": 170.2
+     }
+    }
+   ],
+   "text": "5\n(a) There are 200 students in a school.\nThe table shows information about their heights, h cm.\nHeight, h cm\n150\n1\nh\n165\n1\n65\n1\nh\n1\n70\n10\n7\n1\nh\n15\n7\n1\n75\n1\nh\n1\n80\n10\n8\n1\nh\n1\n90\n10\n9\n1\nh\n200\nG\nG\nG\nG\nG\nG\nFrequency\n7\n17\n43\n64\n49\n20\nCalculate an estimate of the mean height.\n............................................ cm [2]",
+   "marks": 2,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "178 or 178.4 to 178.5",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        612.9,
+        549.1799926757812,
+        637.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> There are 200 students in a school.",
+     "text": "There are 200 students in a school."
+    },
+    {
+     "type": "text",
+     "html": "The table shows information about their heights, <i>h</i> cm.",
+     "text": "The table shows information about their heights, h cm."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Height, <i>h</i> cm",
+       "150 1 <i>h</i> G 165",
+       "165 1 <i>h</i> G 170",
+       "170 1 <i>h</i> G 175",
+       "175 1 <i>h</i> G 180",
+       "180 1 <i>h</i> G 190",
+       "190 1 <i>h</i> G 200"
+      ],
+      [
+       "Frequency",
+       "7",
+       "17",
+       "43",
+       "64",
+       "49",
+       "20"
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "html": "Calculate an estimate of the mean height.",
+     "text": "Calculate an estimate of the mean height."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "cm"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      229.7,
+      570.0,
+      670.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "x=  ……",
+      "working_gap_pt": 244.7,
+      "height_pt": 440.3
+     }
+    }
+   ],
+   "text": "A biased die in the shape of a cube is numbered   0, 1, 1, 2, 3 and 3.\nIt is rolled 100 times.\nThe table shows the results.\nScore\n0\n1\n2\n3\nFrequency\nx\ny\n30\n45\nThe mean score is 2.13 .\nFind the value of x and the value of y.\nx=  ................................................\ny=  ................................................. [3]",
+   "marks": 3,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "[x =] 7\n[y =] 18",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        637.3,
+        549.1799926757812,
+        712.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A biased die in the shape of a cube is numbered 0, 1, 1, 2, 3 and 3. It is rolled 100 times. The table shows the results.",
+     "text": "A biased die in the shape of a cube is numbered 0, 1, 1, 2, 3 and 3. It is rolled 100 times. The table shows the results."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Score",
+       "0",
+       "1",
+       "2",
+       "3"
+      ],
+      [
+       "Frequency",
+       "<i>x</i>",
+       "<i>y</i>",
+       "30",
+       "45"
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "html": "The mean score is 2.13 . Find the value of <i>x</i> and the value of <i>y</i>.",
+     "text": "The mean score is 2.13 . Find the value of x and the value of y."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "x ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "y ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 3,
+ "paper_code": "0607/43",
+ "paper_type": "extended_long_answer",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

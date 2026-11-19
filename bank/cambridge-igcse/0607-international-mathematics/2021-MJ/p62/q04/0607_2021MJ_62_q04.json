@@ -1,0 +1,145 @@
+{
+ "id": "0607_2021MJ_62_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    791.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 146.5,
+    "height_pt": 734.2
+   }
+  }
+ ],
+ "text": "4\nHere is a rectangular pattern of points on a square grid.\ny\n5\n4\n3\n2\n1\nx\n–8\n–7\n–6\n–5\n–4\n–3\n–2\n–1\n0\n1\n2\n3\n4\n5\n6\n7\n8\n–1\n–2\n–3\n–4\n–5\nNearest neighbour distances can be found for these points.\nThe two 1st nearest neighbours to (0, 0) have circles around them.\nThe four 2nd nearest neighbours to (0, 0) have squares around them.\nThe four 3rd nearest neighbours to (0, 0) have triangles around them.\nComplete this table.\nNearest neighbour\n1st\n2nd\n3rd\n4th\n5th\n6th\n7th\nd2\n1\n4\n5\n9\n13\n16\nNumber of nearest neighbours\n2\n4\n4\n2\n4\n4\n[3]",
+ "marks": 3,
+ "figures": [
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    45.8,
+    86.6,
+    548.5,
+    421.1
+   ],
+   "id": "0607_2021MJ_62_q04_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "4",
+   "text": "2\n2\n2 + 2",
+   "codes": [
+    "2",
+    "C1"
+   ],
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      46.380001068115234,
+      644.7,
+      549.0,
+      782.6
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Here is a rectangular pattern of points on a square grid.",
+   "text": "Here is a rectangular pattern of points on a square grid."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2021MJ_62_q04_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "Nearest neighbour distances can be found for these points. The two 1st nearest neighbours to (0, 0) have circles around them. The four 2nd nearest neighbours to (0, 0) have squares around them. The four 3rd nearest neighbours to (0, 0) have triangles around them. Complete this table.",
+   "text": "Nearest neighbour distances can be found for these points. The two 1st nearest neighbours to (0, 0) have circles around them. The four 2nd nearest neighbours to (0, 0) have squares around them. The four 3rd nearest neighbours to (0, 0) have triangles around them. Complete this table."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Nearest neighbour",
+     "1st",
+     "2nd",
+     "3rd",
+     "4th",
+     "5th",
+     "6th",
+     "7th"
+    ],
+    [
+     "<sup>2</sup> <i>d</i>",
+     "1",
+     "4",
+     "5",
+     "",
+     "9",
+     "13",
+     "16"
+    ],
+    [
+     "Number of nearest neighbours",
+     "2",
+     "4",
+     "4",
+     "",
+     "2",
+     "4",
+     "4"
+    ]
+   ]
+  },
+  {
+   "type": "answer",
+   "kind": "space",
+   "height_pt": 146.5
+  },
+  {
+   "type": "marks",
+   "value": 3
+  }
+ ]
+}

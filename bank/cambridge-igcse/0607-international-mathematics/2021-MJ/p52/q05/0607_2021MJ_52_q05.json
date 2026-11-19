@@ -1,0 +1,222 @@
+{
+ "id": "0607_2021MJ_52_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 11,
+   "bbox": [
+    30.0,
+    57.1,
+    570.0,
+    416.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 172.0,
+    "height_pt": 359.4
+   }
+  }
+ ],
+ "text": "5\nThe circles show the 1st, 2nd, 3rd, and 4th nearest neighbours to the point X.\nX",
+ "marks": 3,
+ "figures": [
+  {
+   "caption": null,
+   "page": 11,
+   "bbox": [
+    100.9,
+    139.0,
+    496.4,
+    374.7
+   ],
+   "id": "0607_2021MJ_52_q05_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      434.7,
+      570.0,
+      541.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 15.5,
+      "height_pt": 106.3
+     }
+    }
+   ],
+   "text": "Complete this table.\nNearest neighbour\n1st\n2nd\n3rd\n4th\n5th\n6th\n7th\n8th\nNumber of nearest neighbours\n6\n12\n6\n[2]",
+   "marks": 2,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "Next circle or points indicated.",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.13999938964844,
+        507.4,
+        548.5799560546875,
+        671.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this table.",
+     "text": "Complete this table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Nearest neighbour",
+       "1st",
+       "2nd",
+       "3rd",
+       "4th",
+       "5th",
+       "6th",
+       "7th",
+       "8th"
+      ],
+      [
+       "Number of nearest neighbours",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "6",
+       "12",
+       "6"
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      543.7,
+      570.0,
+      671.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 62.9,
+      "height_pt": 127.3
+     }
+    }
+   ],
+   "text": "A computer calculates that there is a total of 9 points for a certain nearest neighbour distance.\nExplain why the computer is probably wrong.\n..................................................................................................................................................... [1]",
+   "marks": 1,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "[Should probably] be [either] 6 s or 12 s oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.13999938964844,
+        671.1,
+        548.5799560546875,
+        699.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A computer calculates that there is a total of 9 points for a certain nearest neighbour distance. Explain why the computer is probably wrong.",
+     "text": "A computer calculates that there is a total of 9 points for a certain nearest neighbour distance. Explain why the computer is probably wrong."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The circles show the 1st, 2nd, 3rd, and 4th nearest neighbours to the point <b>X</b>.",
+   "text": "The circles show the 1st, 2nd, 3rd, and 4th nearest neighbours to the point X."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2021MJ_52_q05_diagram1",
+   "caption": null
+  }
+ ]
+}

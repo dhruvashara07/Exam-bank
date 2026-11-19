@@ -1,0 +1,291 @@
+{
+ "id": "0607_2021MJ_61_q08",
+ "number": 8,
+ "segments": [
+  {
+   "page": 10,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    160.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 15.8,
+    "height_pt": 103.7
+   }
+  }
+ ],
+ "text": "8\nThe amount of power generated depends on wind speed as well as the area covered.\nThis table shows the power (in kW) for blades of different lengths at a fixed wind speed.\nBlade length (bmetres)\n27\n33\n40\n44\n48\n54\n64\n72\n80\nPower (PkW)\n225\n300\n500\n600\n750\n1000\n1500\n2000\n2500",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 10,
+   "bbox": [
+    52.8,
+    202.7,
+    542.4,
+    509.2
+   ],
+   "id": "0607_2021MJ_61_q08a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      161.8,
+      570.0,
+      564.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 37.4,
+      "height_pt": 402.2
+     }
+    }
+   ],
+   "text": "Plot the last three points on this graph.\nThe first six points have been plotted for you.\nP\n2500\n2000\nPower (kW)\n1500\n1000\n500\n0\nb\n0\n10\n20\n30\n40\n50\n60\n70\n80\nBlade length (m)\n[1]",
+   "marks": 1,
+   "path": "8(a)",
+   "mark_scheme": [
+    {
+     "label": "8(a)",
+     "text": "3 points correctly plotted",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.380001068115234,
+        327.5,
+        548.9400024414062,
+        352.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Plot the last three points on this graph. The first six points have been plotted for you.",
+     "text": "Plot the last three points on this graph. The first six points have been plotted for you."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2021MJ_61_q08a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      275.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 127.9,
+      "height_pt": 218.2
+     }
+    }
+   ],
+   "text": "A model for the power, P kW, is\nP=cb2, where b is the length of the blade in metres and c is a constant.\nUse the information to find a value for c and write down the model.\n................................................. [2]",
+   "marks": 2,
+   "path": "8(b)",
+   "mark_scheme": [
+    {
+     "label": "8(b)",
+     "text": "Correct substitution of P and b from the\nc=\nP\n2\ntable into P = cb or\n[\n]\n2\nb\n2\nP = (0.275 to 0.391)b\nnfww",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.380001068115234,
+        352.0,
+        548.9400024414062,
+        429.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A model for the power, <i>P</i> kW, is",
+     "text": "A model for the power, P kW, is"
+    },
+    {
+     "type": "text",
+     "html": "<i>P</i> = <i>cb</i><sup>2</sup>, where <i>b</i> is the length of the blade in metres and <i>c</i> is a constant. Use the information to find a value for <i>c</i> and write down the model.",
+     "text": "P = cb2, where b is the length of the blade in metres and c is a constant. Use the information to find a value for c and write down the model."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      290.8,
+      570.0,
+      509.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 153.9,
+      "height_pt": 218.2
+     }
+    }
+   ],
+   "text": "Another wind turbine generates 1200 kW.\nUse your model to find the length of its blade.\n................................................. [2]",
+   "marks": 2,
+   "path": "8(c)",
+   "mark_scheme": [
+    {
+     "label": "8(c)",
+     "text": "1200\n1200÷their c oe or\n2\nb =\ntheir c\n55.4 to 66.1",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.380001068115234,
+        429.4,
+        548.9400024414062,
+        495.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Another wind turbine generates 1200 kW. Use your model to find the length of its blade.",
+     "text": "Another wind turbine generates 1200 kW. Use your model to find the length of its blade."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The amount of power generated depends on wind speed as well as the area covered. This table shows the power (in kW) for blades of different lengths at a fixed wind speed.",
+   "text": "The amount of power generated depends on wind speed as well as the area covered. This table shows the power (in kW) for blades of different lengths at a fixed wind speed."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Blade length (<i>b</i> metres)",
+     "27",
+     "33",
+     "40",
+     "44",
+     "48",
+     "54",
+     "64",
+     "72",
+     "80"
+    ],
+    [
+     "Power (<i>P</i> kW)",
+     "225",
+     "300",
+     "500",
+     "600",
+     "750",
+     "1000",
+     "1500",
+     "2000",
+     "2500"
+    ]
+   ]
+  }
+ ]
+}

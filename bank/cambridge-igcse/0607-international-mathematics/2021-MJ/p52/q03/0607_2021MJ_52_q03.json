@@ -1,0 +1,484 @@
+{
+ "id": "0607_2021MJ_52_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    103.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 9.2,
+    "height_pt": 46.7
+   }
+  }
+ ],
+ "text": "3\nYou can find the distance, d, from (0, 0) to the point (a, b) using Pythagoras’ Theorem.\n2\n2\n2\nd\na\nb\n=\n+",
+ "marks": 9,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      108.8,
+      570.0,
+      327.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 179.9,
+      "height_pt": 218.2
+     }
+    }
+   ],
+   "text": "Show that the distance of a 4th nearest neighbour from (0, 0) is 5.\n[2]",
+   "marks": 2,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "2\n2\n2\n[d =] 1 + 2 oe\n2\n[d =] 5 leading to [d =]\n5",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.13999938964844,
+        329.1,
+        548.5799560546875,
+        382.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that the distance of a 4th nearest neighbour from (0, 0) is 5.",
+     "text": "Show that the distance of a 4th nearest neighbour from (0, 0) is 5."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 179.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      329.8,
+      570.0,
+      548.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 127.9,
+      "height_pt": 218.2
+     }
+    }
+   ],
+   "text": "Here are four points and their coordinates.\nA(20, 5)  B(7, 24)  C(\n-, 24)  D(0, 25)\n7\nWhich of these points are a distance of 25 units from (0, 0)?\n................................................. [3]",
+   "marks": 3,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "Correct use of Pythagoras for B, C or D\nB, C and D",
+     "codes": [
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.13999938964844,
+        382.2,
+        548.5799560546875,
+        443.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Here are four points and their coordinates. <i>A</i>(20, 5) <i>B</i>(7, 24) <i>C</i>(-7, 24) <i>D</i>(0, 25) Which of these points are a distance of 25 units from (0, 0)?",
+     "text": "Here are four points and their coordinates. A(20, 5) B(7, 24) C(-7, 24) D(0, 25) Which of these points are a distance of 25 units from (0, 0)?"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      57.9,
+      570.0,
+      614.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 28.9,
+      "height_pt": 556.6
+     }
+    }
+   ],
+   "text": "There are more than 10 nearest neighbours to (0, 0) with d\n5\n.\n=\nFour of them are (0, 5), (5, 0), (5\n-, 0) and (0, 5\n-).\nOn the grid, mark with a cross all the nearest neighbours to (0, 0) with d\n5\n.\n=\ny\n5\n4\n3\n2\n1\nx\n0\n1\n2\n3\n4\n5\n–5\n–4\n–3\n–2\n–1\n–1\n–2\n–3\n–4\n–5\n[4]",
+   "marks": 4,
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "Attempt at circle centre (0, 0) and radius 5 or\nat least 4 lines drawn from centre to points\n12 points plotted correctly",
+     "codes": [
+      "C1",
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.13999938964844,
+        443.8,
+        548.5799560546875,
+        620.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "There are more than 10 nearest neighbours to (0, 0) with <i>d</i> = 5. Four of them are (0, 5), (5, 0), (-5, 0) and (0, 5- ). On the grid, mark with a cross <b>all</b> the nearest neighbours to (0, 0) with <i>d</i> = 5.",
+     "text": "There are more than 10 nearest neighbours to (0, 0) with d = 5. Four of them are (0, 5), (5, 0), (-5, 0) and (0, 5- ). On the grid, mark with a cross all the nearest neighbours to (0, 0) with d = 5."
+    },
+    {
+     "type": "text",
+     "html": "<i>y</i> 5",
+     "text": "y 5"
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "",
+       "",
+       "",
+       "",
+       "5",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "4",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "4",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "3",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "3",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "2",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "2",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "1",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "1",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "–5 –4",
+       "–4 –3",
+       "–3 –2",
+       "–2 –1",
+       "0 –1 –1",
+       "1",
+       "1 2",
+       "2 3",
+       "3 4",
+       "4 5"
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "–1",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "–2",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "–2",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "–3",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "–3",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "–4",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "–4",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "–5",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "html": "<i>x</i>",
+     "text": "x"
+    },
+    {
+     "type": "text",
+     "html": "–5 5",
+     "text": "–5 5"
+    },
+    {
+     "type": "text",
+     "html": "–5",
+     "text": "–5"
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "You can find the distance, <i>d</i>, from (0, 0) to the point (<i>a</i>, <i>b</i>) using Pythagoras’ Theorem.",
+   "text": "You can find the distance, d, from (0, 0) to the point (a, b) using Pythagoras’ Theorem."
+  },
+  {
+   "type": "text",
+   "html": "<i>d</i><sup>2</sup> = <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup>",
+   "text": "d2 = a2 + b2"
+  }
+ ]
+}

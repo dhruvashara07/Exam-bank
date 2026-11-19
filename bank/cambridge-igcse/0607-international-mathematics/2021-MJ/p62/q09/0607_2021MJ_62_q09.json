@@ -1,0 +1,506 @@
+{
+ "id": "0607_2021MJ_62_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 14,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    158.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 12.7,
+    "height_pt": 101.7
+   }
+  }
+ ],
+ "text": "9\nEngineers use this formula to model the probability of high river flows.\nfeop\nF\n-\nb\np\n3\n=\nwhere p is the probability of an event greater than F and\na and b are both constants.",
+ "marks": 12,
+ "figures": [
+  {
+   "caption": null,
+   "page": 14,
+   "bbox": [
+    102.3,
+    524.9,
+    449.8,
+    743.2
+   ],
+   "id": "0607_2021MJ_62_q09ci_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)(i)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      163.3,
+      570.0,
+      264.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 56.6,
+      "height_pt": 101.2
+     }
+    }
+   ],
+   "text": "1\n(a) Show that p\nwhen b\nF\n.\n=\n=\n3\n[2]",
+   "marks": 2,
+   "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "Method 1\na\n−1\np=3\nnfww\n1\n−1\n3\n=\n3\nMethod 2\n1\np=\na\nF \n \n b \n3\n1\n1\na\n=\n1\n3\n3",
+     "codes": [
+      "1",
+      "1",
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.380001068115234,
+        533.8,
+        549.0,
+        754.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that <i>p</i> = \\(\\frac{1}{3}\\) when <i>b</i> = <i>F</i> .",
+     "text": "Show that p = (1)/(3) when b = F ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 56.6
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      267.3,
+      570.0,
+      381.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 49.9,
+      "height_pt": 114.2
+     }
+    }
+   ],
+   "text": "1\n(b) Give a reason why 8 is the best integer estimate for b when p\n.\n=\n3\nUse part (a) and values from the table for the Missouri River on page 12 in your answer.\n..................................................................................................................................................... [1]",
+   "marks": 1,
+   "path": "9(b)",
+   "mark_scheme": [
+    {
+     "label": "9(b)",
+     "text": "0.33[…] is closest to 0.26 oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        46.380001068115234,
+        89.4,
+        549.0,
+        113.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Give a reason why 8 is the best integer estimate for <i>b</i> when <i>p</i> = \\(\\frac{1}{3}\\) . Use <b>part (a)</b> and values from the table for the Missouri River on page 12 in your answer.",
+     "text": "Give a reason why 8 is the best integer estimate for b when p = (1)/(3) . Use part (a) and values from the table for the Missouri River on page 12 in your answer."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 14,
+       "bbox": [
+        30.0,
+        390.4,
+        570.0,
+        762.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 197.2,
+        "height_pt": 371.6
+       }
+      }
+     ],
+     "text": "feop\nF\n-\nb\n(c) (i) On the axes below, sketch three graphs of\nF\np\n3\nfor\n0\n25\n.\n=\nG\nG\nUse b\n8\nand\n=\n•\na= 0.5,\n•\na= 1,\n•\na= 2.5 .\nThe graph with b\n8\nand a\n10\nis sketched for you.\n=\n=\np\n0\nF\n25\n[4]",
+     "marks": 4,
+     "path": "9(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "9(c)(i)",
+       "text": "Correct sketch showing three more curves.\n1 at the p-intercept of the given curve.\nLabelling each of their curves with a correct\na value oe",
+       "codes": [
+        "2",
+        "C1",
+        "C1"
+       ],
+       "segments": [
+        {
+         "page": 9,
+         "bbox": [
+          46.380001068115234,
+          113.8,
+          549.0,
+          337.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "<i>a</i> <sup>-</sup>fe\\(\\frac{F}{b}\\)o p",
+       "text": "a -fe(F)/(b)o p"
+      },
+      {
+       "type": "text",
+       "html": "On the axes below, sketch three graphs of <i>p</i> = 3 for 0 G <i>F</i> G 25.",
+       "text": "On the axes below, sketch three graphs of p = 3 for 0 G F G 25."
+      },
+      {
+       "type": "text",
+       "html": "Use <i>b</i> = 8 and",
+       "text": "Use b = 8 and"
+      },
+      {
+       "type": "list",
+       "items": [
+        "<i>a</i> = 0.5,",
+        "<i>a</i> = 1,",
+        "<i>a</i> = 2.5 ."
+       ]
+      },
+      {
+       "type": "text",
+       "html": "The graph with <i>b</i> = 8 and <i>a</i> = 10 is sketched for you.",
+       "text": "The graph with b = 8 and a = 10 is sketched for you."
+      },
+      {
+       "type": "text",
+       "html": "<i>p</i>",
+       "text": "p"
+      },
+      {
+       "type": "figure",
+       "id": "0607_2021MJ_62_q09ci_diagram1",
+       "caption": null
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 197.2
+      },
+      {
+       "type": "marks",
+       "value": 4
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 15,
+       "bbox": [
+        30.0,
+        56.8,
+        570.0,
+        106.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 10.9,
+        "height_pt": 49.2
+       }
+      }
+     ],
+     "text": "Find the coordinates of the points of intersection of the curves.\n............................................................................................................................................. [2]",
+     "marks": 2,
+     "path": "9(c)(ii)",
+     "mark_scheme": [
+      {
+       "label": "9(c)(ii)",
+       "text": "(0, 1) and (8, 0.33)",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 9,
+         "bbox": [
+          46.380001068115234,
+          337.8,
+          549.0,
+          362.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the coordinates of the points of intersection of the curves.",
+       "text": "Find the coordinates of the points of intersection of the curves."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 15,
+       "bbox": [
+        30.0,
+        108.8,
+        570.0,
+        171.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 10.9,
+        "height_pt": 62.2
+       }
+      }
+     ],
+     "text": "Describe the effect on the graph when a increases and the flow is between 6000 m3/s and\n8000 m3/s.\n............................................................................................................................................. [1]",
+     "marks": 1,
+     "path": "9(c)(iii)",
+     "mark_scheme": [
+      {
+       "label": "9(c)(iii)",
+       "text": "The gradient decreases oe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 9,
+         "bbox": [
+          46.380001068115234,
+          362.3,
+          549.0,
+          386.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Describe the effect on the graph when <i>a</i> increases and the flow is between 6000 m<sup>3</sup>/s and 8000 m<sup>3</sup>/s.",
+       "text": "Describe the effect on the graph when a increases and the flow is between 6000 m3/s and 8000 m3/s."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "iv",
+     "segments": [
+      {
+       "page": 15,
+       "bbox": [
+        30.0,
+        173.8,
+        570.0,
+        288.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 2,
+        "answer_line": "a= …… because  ……",
+        "working_gap_pt": 36.7,
+        "height_pt": 114.2
+       }
+      }
+     ],
+     "text": "Which value of a gives the best model for the Missouri River data on page 12?\nGive a reason for your answer.\na= .................................... because  ...................................................................................\n............................................................................................................................................. [2]",
+     "marks": 2,
+     "path": "9(c)(iv)",
+     "mark_scheme": [
+      {
+       "label": "9(c)(iv)",
+       "text": "2.5\nBest match to the data oe\nor closest to the points oe",
+       "codes": [
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 9,
+         "bbox": [
+          46.380001068115234,
+          386.7,
+          549.0,
+          452.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Which value of <i>a</i> gives the best model for the Missouri River data on page 12? Give a reason for your answer.",
+       "text": "Which value of a gives the best model for the Missouri River data on page 12? Give a reason for your answer."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "a ="
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "9(c)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 12,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Engineers use this formula to model the probability of high river flows.",
+   "text": "Engineers use this formula to model the probability of high river flows."
+  },
+  {
+   "type": "text",
+   "html": "<i>a</i> <sup>-</sup>fe\\(\\frac{F}{b}\\)o p",
+   "text": "a -fe(F)/(b)o p"
+  },
+  {
+   "type": "text",
+   "html": "<i>p</i> = 3",
+   "text": "p = 3"
+  },
+  {
+   "type": "text",
+   "html": "where <i>p</i> is the probability of an event greater than <i>F</i> and",
+   "text": "where p is the probability of an event greater than F and"
+  },
+  {
+   "type": "text",
+   "html": "<i>a</i> and <i>b</i> are both constants.",
+   "text": "a and b are both constants."
+  }
+ ]
+}

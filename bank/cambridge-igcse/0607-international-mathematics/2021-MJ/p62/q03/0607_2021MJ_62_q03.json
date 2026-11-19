@@ -1,0 +1,298 @@
+{
+ "id": "0607_2021MJ_62_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    210.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 16.5,
+    "height_pt": 153.7
+   }
+  }
+ ],
+ "text": "3\nThe table shows information about the nth nearest neighbours to (0, 0) for values of n from 1 to 11.\nd is the distance from (0, 0) to a nearest neighbour.\nn\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\nd 2\n1\n2\n4\n5\n8\n9\n10\n13\n16\n17\n18\nd\n1\n2\n8\n3\n10\n13\n4\n17\n18\nNumber of nth\n4\n4\n4\n8\n8\n4\n8\n4\nnearest neighbours",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      211.8,
+      570.0,
+      235.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.2
+     }
+    }
+   ],
+   "text": "Complete the table.\n[2]",
+   "marks": 2,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "n\n1\n2\n3\n4\n5\n6\n2\nd\n1\n2\n4\n5\n8\n9\nd\n1\n2\n3\n2\n5\n8\n4\n4\n4\n8\n4\n4",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        216.1,
+        549.0,
+        330.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      237.8,
+      570.0,
+      391.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 101.9,
+      "height_pt": 153.2
+     }
+    }
+   ],
+   "text": "Is d 2 directly proportional to n?\nShow how you decide.\n[2]",
+   "marks": 2,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "Two correct ratios seen.\nor one correct ratio giving another value for\n2\nd or n.\n2\nor correct sketch of e.g. d against n\n2\nor ratio = 1 so d = n.\nNo or not proportional\nand\nratios not equal\nor sketch not a straight line\n2\nor d ≠ n",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        330.6,
+        549.0,
+        583.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Is <i>d </i><sup>2</sup> directly proportional to <i>n</i>? Show how you decide.",
+     "text": "Is d 2 directly proportional to n? Show how you decide."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 101.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      393.8,
+      570.0,
+      794.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 309.9,
+      "height_pt": 400.2
+     }
+    }
+   ],
+   "text": "The 12th nearest neighbours to (0, 0) are at a distance h, where h 2= 20.\nFind the coordinates of all these nearest neighbours.\n.....................................................................................................................................................\n..................................................................................................................................................... [3]",
+   "marks": 3,
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "2\n2\n2 + 4 = 20 oe\n(2, 4), (2, –4), (4, 2), (4, –2), (–2, 4), (–2, –4),\n(–4, 2) and (–4, –2)",
+     "codes": [
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        583.1,
+        549.0,
+        644.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The 12th nearest neighbours to (0, 0) are at a distance <i>h</i>, where <i>h </i><sup>2</sup> = 20. Find the coordinates of all these nearest neighbours.",
+     "text": "The 12th nearest neighbours to (0, 0) are at a distance h, where h 2 = 20. Find the coordinates of all these nearest neighbours."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2021,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The table shows information about the <i>n</i>th nearest neighbours to (0, 0) for values of <i>n</i> from 1 to 11. <i>d</i> is the distance from (0, 0) to a nearest neighbour.",
+   "text": "The table shows information about the nth nearest neighbours to (0, 0) for values of n from 1 to 11. d is the distance from (0, 0) to a nearest neighbour."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "<i>n</i>",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10",
+     "11"
+    ],
+    [
+     "<sup>2</sup> <i>d</i>",
+     "1",
+     "2",
+     "4",
+     "5",
+     "8",
+     "9",
+     "10",
+     "13",
+     "16",
+     "17",
+     "18"
+    ],
+    [
+     "<i>d</i>",
+     "1",
+     "2",
+     "",
+     "",
+     "8",
+     "3",
+     "10",
+     "13",
+     "4",
+     "17",
+     "18"
+    ],
+    [
+     "Number of <i>n</i>th nearest neighbours",
+     "4",
+     "",
+     "",
+     "",
+     "4",
+     "4",
+     "8",
+     "8",
+     "4",
+     "8",
+     "4"
+    ]
+   ]
+  }
+ ]
+}
