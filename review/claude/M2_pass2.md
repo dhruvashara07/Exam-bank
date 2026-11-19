@@ -1,194 +1,60 @@
 # M2 pass 2 (diff against pass 1)
 
-Reasons: 347; verified 55, NOT FIXED 7, NEW 18; changed questions 152 (113 collateral).
+Reasons: 348; verified 43, NOT FIXED 22, NEW 1; changed questions 20 (11 collateral).
 
 Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / passed / ask).
 
 ## not fixed
 
-- 1bc574f0a6 0607_2021MJ_51_q07 ms_piccut: msimg_5_123_472.png
-- c10f9b4737 0607_2021ON_43_q06 q_font: 2 words in sans
-- 1fbc1d1836 0607_2022MJ_41_q06 ms_overlap: 'π' / 'r'
+- 97b6407a3b 0607_2021MJ_51_q07 ms_picture: 7: picture cell
+- ae45bdd480 0607_2021MJ_62_q03 ms_picture: 3(a): picture cell
+- 7498174ba3 0607_2021MJ_62_q03 ms_picture: 3(b): picture cell
+- 26591268d6 0607_2021ON_22_q10 fig_cut: diagram1 top/left
+- 1220053b19 0607_2021ON_63_q01 ms_table: 1(a): table / graph drawn as lines
+- 6f46caf899 0607_2022FM_52_q04 ms_table: 4(a): table / graph drawn as lines
+- 4ae88fde01 0607_2022FM_52_q04 ms_table: 4(b): table / graph drawn as lines
+- 8ca76d23c9 0607_2022FM_62_q08 ms_table: 8(a): table / graph drawn as lines
+- 88c6332b48 0607_2022MJ_41_q03 ms_picture: 3(a): picture cell
+- 4b6e095168 0607_2022MJ_61_q03 ms_table: 3: table / graph drawn as lines
+- ae3e83d7f4 0607_2022ON_43_q05 ms_picture: 5(c): picture cell
 - eab140ea6a 0607_2022ON_63_q04 checks.figure: 0607_2022ON_63_q04b_diagram2: crop cut: 1 text line(s) half inside
 - 93d17290b3 0607_2023FM_32_q10 checks.figure: 0607_2023FM_32_q10_diagram1: crop cut: ink crosses the top edge, 1 text line(s) half inside
-- 675c37bbf7 0607_2023ON_41_q02 fig_cut: diagram1 bottom
-- 01d2a6b802 0607_2023ON_42_q05 fig_cut: diagram2 bottom
+- 71ffdbda2a 0607_2023FM_52_q01 ms_table: 1(d): table / graph drawn as lines
+- 3947b2d32c 0607_2023FM_52_q02 ms_table: 2(a): table / graph drawn as lines
+- 4b176cecbf 0607_2023FM_62_q02 ms_table: 2(a): table / graph drawn as lines
+- 12862ea3fe 0607_2023FM_62_q05 ms_table: 5(a)(ii): table / graph drawn as lines
+- 80e6e8a3ea 0607_2023MJ_53_q04 ms_picture: 4: picture cell
+- bba3bb9fc5 0607_2023MJ_53_q06 ms_table: 6: table / graph drawn as lines
+- d7a3e01163 0607_2023MJ_62_q06 ms_picture: 6(b)(iii): picture cell
+- 5518666232 0607_2023MJ_63_q06 ms_table: 6(a): table / graph drawn as lines
+- 4a82beebc6 0607_2023ON_12_q20 ms_picture: 20: picture cell
 
 ## NEW
 
-- 26591268d6 0607_2021ON_22_q10 fig_cut: diagram1 top/left
-- cb95dd28da 0607_2021ON_43_q08 fig_cut: diagram1 bottom
-- c7635813b8 0607_2022FM_42_q07 fig_cut: diagram1 bottom
-- 11391ab0db 0607_2022FM_62_q01 ms_overlap: 'Pattern' / '1'
-- b99c415511 0607_2022MJ_43_q05 fig_cut: diagram1 bottom
-- 7938a56dee 0607_2022ON_32_q03 ms_table: 3(d): table / graph drawn as lines
-- dd4bfadb38 0607_2023FM_62_q05 ms_words: extra: 5(a)(iv)(a) 5(a)(iv)(b)
-- 37c5aa2945 0607_2023MJ_32_q11 fig_cut: diagram1 bottom
-- 8977dfb895 0607_2023MJ_33_q06 checks.figure: 0607_2023MJ_33_q06bi_diagram1: crop cut: 1 text line(s) half inside
-- e82a901d00 0607_2023MJ_33_q03 ms_picture: 3(a)(i): picture cell
-- b225d6f6b1 0607_2023MJ_33_q06 ms_picture: 6(b)(i): picture cell
-- cb53abafc0 0607_2023MJ_33_q11 ms_picture: 11(a)(i): picture cell
-- 5f994e870b 0607_2023MJ_33_q11 ms_picture: 11(b): picture cell
-- 2601e259e2 0607_2023MJ_43_q07 fig_cut: diagram1 bottom
-- 3edee44640 0607_2023MJ_53_q03 checks.figure: 0607_2023MJ_53_q03b_diagram2: crop cut: 1 text line(s) half inside
-- f476589cde 0607_2023MJ_62_q06 checks.figure: 0607_2023MJ_62_q06_diagram1: crop cut: ink crosses the bottom edge
-- b317e7d89d 0607_2023MJ_63_q03 checks.figure: 0607_2023MJ_63_q03_diagram1: crop cut: 1 text line(s) half inside
-- 442981ad57 0607_2023MJ_63_q10 checks.figure: 0607_2023MJ_63_q10a_diagram1: crop cut: ink crosses the top edge
+- 7e5c45459e 0607_2022MJ_32_q10 fig_cut: diagram1 bottom
 
 ## Changed questions
 
-- 0607_2021MJ_21_q09 [ms] COLLATERAL
-- 0607_2021MJ_22_q13 [ms] expected
-- 0607_2021MJ_23_q06 [q] expected
-- 0607_2021MJ_31_q08 [q] COLLATERAL
-- 0607_2021MJ_51_q07 [ms] expected
-- 0607_2021MJ_51_t1 [ms] COLLATERAL
-- 0607_2021MJ_53_q03 [ms] COLLATERAL
-- 0607_2021MJ_53_t1 [ms] COLLATERAL
-- 0607_2021MJ_62_q03 [ms] expected
-- 0607_2021MJ_62_tA [ms] COLLATERAL
-- 0607_2021ON_12_q12 [ms] COLLATERAL
-- 0607_2021ON_22_q10 [q] expected
-- 0607_2021ON_31_q02 [q] expected
-- 0607_2021ON_41_q06 [ms] COLLATERAL
-- 0607_2021ON_41_q08 [ms] COLLATERAL
-- 0607_2021ON_42_q08 [ms] COLLATERAL
-- 0607_2021ON_43_q06 [q] expected
-- 0607_2021ON_43_q08 [q] COLLATERAL
-- 0607_2021ON_43_q11 [ms] COLLATERAL
-- 0607_2021ON_61_q11 [q+ms] COLLATERAL
-- 0607_2021ON_61_tB [q+ms] COLLATERAL
-- 0607_2021ON_62_q05 [ms] COLLATERAL
-- 0607_2021ON_62_q06 [ms] COLLATERAL
-- 0607_2021ON_62_tB [ms] COLLATERAL
-- 0607_2021ON_63_q01 [ms] expected
-- 0607_2021ON_63_tA [ms] COLLATERAL
-- 0607_2022FM_22_q04 [ms] COLLATERAL
-- 0607_2022FM_22_q10 [q] COLLATERAL
-- 0607_2022FM_42_q07 [q] COLLATERAL
-- 0607_2022FM_52_q02 [q] COLLATERAL
-- 0607_2022FM_52_q03 [q] COLLATERAL
-- 0607_2022FM_52_q04 [q+ms] expected
-- 0607_2022FM_52_t1 [q+ms] COLLATERAL
-- 0607_2022FM_62_q01 [q+ms] COLLATERAL
-- 0607_2022FM_62_q08 [ms] expected
-- 0607_2022FM_62_tA [q+ms] COLLATERAL
-- 0607_2022FM_62_tB [ms] COLLATERAL
-- 0607_2022MJ_21_q02 [ms] COLLATERAL
-- 0607_2022MJ_32_q10 [q+ms] COLLATERAL
-- 0607_2022MJ_41_q03 [ms] expected
-- 0607_2022MJ_41_q06 [ms] expected
-- 0607_2022MJ_42_q07 [ms] expected
-- 0607_2022MJ_43_q05 [q] COLLATERAL
-- 0607_2022MJ_43_q06 [ms] COLLATERAL
+- 0607_2021ON_43_q08 [q] expected
+- 0607_2022FM_42_q07 [q] expected
+- 0607_2022FM_62_q01 [ms] expected
+- 0607_2022FM_62_tA [ms] COLLATERAL
+- 0607_2022MJ_32_q10 [q] COLLATERAL
+- 0607_2022MJ_43_q05 [q] expected
 - 0607_2022MJ_43_q07 [q] COLLATERAL
-- 0607_2022MJ_43_q08 [ms] expected
-- 0607_2022MJ_52_q01 [ms] COLLATERAL
-- 0607_2022MJ_52_q02 [ms] COLLATERAL
-- 0607_2022MJ_52_q03 [ms] COLLATERAL
-- 0607_2022MJ_52_q04 [ms] COLLATERAL
-- 0607_2022MJ_52_q06 [ms] COLLATERAL
-- 0607_2022MJ_52_t1 [ms] COLLATERAL
-- 0607_2022MJ_53_q01 [q] COLLATERAL
-- 0607_2022MJ_53_q02 [q] COLLATERAL
-- 0607_2022MJ_53_q03 [q] COLLATERAL
-- 0607_2022MJ_53_t1 [q] COLLATERAL
-- 0607_2022MJ_61_q02 [ms] COLLATERAL
-- 0607_2022MJ_61_q03 [ms] expected
-- 0607_2022MJ_61_q04 [ms] COLLATERAL
-- 0607_2022MJ_61_q05 [q] expected
-- 0607_2022MJ_61_tA [ms] COLLATERAL
-- 0607_2022MJ_61_tB [q] COLLATERAL
-- 0607_2022MJ_63_q01 [q] COLLATERAL
-- 0607_2022MJ_63_q02 [q] COLLATERAL
-- 0607_2022MJ_63_q03 [q] COLLATERAL
-- 0607_2022MJ_63_tA [q] COLLATERAL
-- 0607_2022ON_31_q06 [q] COLLATERAL
-- 0607_2022ON_31_q09 [q] COLLATERAL
-- 0607_2022ON_32_q02 [q] COLLATERAL
-- 0607_2022ON_32_q03 [ms] COLLATERAL
-- 0607_2022ON_32_q07 [q+ms] COLLATERAL
-- 0607_2022ON_41_q11 [q+ms] COLLATERAL
-- 0607_2022ON_42_q10 [ms] COLLATERAL
-- 0607_2022ON_43_q05 [q+ms] expected
-- 0607_2022ON_62_q09 [ms] COLLATERAL
-- 0607_2022ON_62_tB [ms] COLLATERAL
 - 0607_2022ON_63_q04 [q] expected
 - 0607_2022ON_63_tA [q] COLLATERAL
-- 0607_2023FM_12_q13 [q] COLLATERAL
-- 0607_2023FM_22_q07 [q+ms] COLLATERAL
-- 0607_2023FM_22_q13 [q] expected
-- 0607_2023FM_22_q14 [ms] COLLATERAL
-- 0607_2023FM_32_q10 [q] expected
-- 0607_2023FM_42_q05 [ms] COLLATERAL
-- 0607_2023FM_52_q01 [ms] expected
-- 0607_2023FM_52_q02 [ms] expected
-- 0607_2023FM_52_t1 [ms] COLLATERAL
 - 0607_2023FM_62_q01 [ms] expected
-- 0607_2023FM_62_q02 [ms] expected
-- 0607_2023FM_62_q03 [q] expected
-- 0607_2023FM_62_q05 [q+ms] expected
-- 0607_2023FM_62_tA [q+ms] COLLATERAL
-- 0607_2023FM_62_tB [q+ms] COLLATERAL
-- 0607_2023MJ_11_q14 [q] expected
-- 0607_2023MJ_13_q08 [ms] COLLATERAL
-- 0607_2023MJ_22_q07 [ms] COLLATERAL
-- 0607_2023MJ_32_q08 [ms] COLLATERAL
+- 0607_2023FM_62_tA [ms] COLLATERAL
 - 0607_2023MJ_32_q11 [q] COLLATERAL
-- 0607_2023MJ_33_q01 [added] COLLATERAL
-- 0607_2023MJ_33_q02 [added] COLLATERAL
-- 0607_2023MJ_33_q03 [added] COLLATERAL
-- 0607_2023MJ_33_q04 [added] COLLATERAL
-- 0607_2023MJ_33_q05 [added] COLLATERAL
-- 0607_2023MJ_33_q06 [added] COLLATERAL
-- 0607_2023MJ_33_q07 [added] COLLATERAL
-- 0607_2023MJ_33_q08 [added] COLLATERAL
-- 0607_2023MJ_33_q09 [added] COLLATERAL
-- 0607_2023MJ_33_q10 [added] COLLATERAL
-- 0607_2023MJ_33_q11 [added] COLLATERAL
-- 0607_2023MJ_41_q02 [ms] COLLATERAL
-- 0607_2023MJ_42_q08 [ms] expected
-- 0607_2023MJ_43_q06 [ms] COLLATERAL
 - 0607_2023MJ_43_q07 [q] expected
 - 0607_2023MJ_52_q02 [ms] COLLATERAL
 - 0607_2023MJ_52_t1 [ms] COLLATERAL
-- 0607_2023MJ_53_q04 [ms] expected
-- 0607_2023MJ_53_q06 [ms] expected
-- 0607_2023MJ_53_t1 [ms] COLLATERAL
-- 0607_2023MJ_61_q06 [ms] COLLATERAL
-- 0607_2023MJ_61_q07 [ms] COLLATERAL
-- 0607_2023MJ_61_tB [ms] COLLATERAL
 - 0607_2023MJ_62_q02 [ms] COLLATERAL
-- 0607_2023MJ_62_q05 [ms] COLLATERAL
-- 0607_2023MJ_62_q06 [ms] expected
 - 0607_2023MJ_62_tA [ms] COLLATERAL
-- 0607_2023MJ_62_tB [ms] COLLATERAL
-- 0607_2023MJ_63_q06 [ms] expected
-- 0607_2023MJ_63_tA [ms] COLLATERAL
-- 0607_2023ON_11_q23 [ms] COLLATERAL
-- 0607_2023ON_12_q11 [q] COLLATERAL
-- 0607_2023ON_12_q20 [ms] expected
-- 0607_2023ON_21_q07 [ms] COLLATERAL
-- 0607_2023ON_22_q11 [q] expected
-- 0607_2023ON_22_q15 [q] COLLATERAL
-- 0607_2023ON_23_q09 [ms] COLLATERAL
-- 0607_2023ON_23_q14 [ms] COLLATERAL
 - 0607_2023ON_31_q06 [q] COLLATERAL
 - 0607_2023ON_41_q02 [q] expected
 - 0607_2023ON_42_q05 [q] expected
-- 0607_2023ON_42_q06 [ms] COLLATERAL
-- 0607_2023ON_43_q03 [ms] COLLATERAL
-- 0607_2023ON_43_q06 [ms] COLLATERAL
-- 0607_2023ON_43_q10 [ms] COLLATERAL
-- 0607_2023ON_43_q12 [q+ms] expected
-- 0607_2023ON_61_q01 [q] expected
-- 0607_2023ON_61_tA [q] COLLATERAL
-- 0607_2023ON_62_q05 [q] COLLATERAL
-- 0607_2023ON_62_q06 [q+ms] COLLATERAL
-- 0607_2023ON_62_q07 [q] COLLATERAL
-- 0607_2023ON_62_tB [q+ms] COLLATERAL
-- 0607_2023ON_63_q04 [ms] COLLATERAL
-- 0607_2023ON_63_tA [ms] COLLATERAL
 
 ## gone (passed)
 

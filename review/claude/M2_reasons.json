@@ -475,7 +475,7 @@
 "part": "",
 "blocking": false,
 "rid": "97b6407a3b",
-"status": "verified",
+"status": "not fixed",
 "note": "sub-row rule drawn through a text line -> never through a word",
 "pattern": 218,
 "from": "pass1",
@@ -618,7 +618,7 @@
 "part": "3(a)",
 "blocking": false,
 "rid": "ae45bdd480",
-"status": "verified",
+"status": "not fixed",
 "note": "sub-row rule drawn through a text line -> never through a word",
 "pattern": 218,
 "from": "pass1",
@@ -631,7 +631,7 @@
 "part": "3(b)",
 "blocking": false,
 "rid": "7498174ba3",
-"status": "verified",
+"status": "not fixed",
 "note": "sub-row rule drawn through a text line -> never through a word",
 "pattern": 218,
 "from": "pass1",
@@ -865,10 +865,11 @@
 "part": "",
 "blocking": false,
 "rid": "26591268d6",
-"status": "fixed",
+"status": "not fixed",
 "note": "f(x) line's fraction pieces / bars left in the crop -> cut with the line",
 "pattern": 228,
-"from": "pass2"
+"from": "pass2",
+"pass2": "present"
 },
 {
 "qid": "0607_2021ON_22_q10",
@@ -1072,10 +1073,11 @@
 "part": "",
 "blocking": false,
 "rid": "cb95dd28da",
-"status": "fixed",
+"status": "verified",
 "note": "f(x) line's fraction pieces / bars left in the crop -> cut with the line",
 "pattern": 228,
-"from": "pass2"
+"from": "pass2",
+"pass2": "gone"
 },
 {
 "qid": "0607_2021ON_51_q03",
@@ -1331,7 +1333,7 @@
 "part": "1(a)",
 "blocking": false,
 "rid": "1220053b19",
-"status": "verified",
+"status": "not fixed",
 "note": "one 16 pt letter made normal lines 'small': words moved paragraphs -> cell's normal size",
 "pattern": 221,
 "from": "pass1",
@@ -1383,10 +1385,11 @@
 "part": "",
 "blocking": false,
 "rid": "c7635813b8",
-"status": "fixed",
+"status": "verified",
 "note": "f(x) line's fraction pieces / bars left in the crop -> cut with the line",
 "pattern": 228,
-"from": "pass2"
+"from": "pass2",
+"pass2": "gone"
 },
 {
 "qid": "0607_2022FM_42_q07",
@@ -1538,7 +1541,7 @@
 "part": "4(a)",
 "blocking": false,
 "rid": "6f46caf899",
-"status": "verified",
+"status": "not fixed",
 "note": "table at the row top lost its top edge, stubs left -> table edge kept",
 "pattern": 223,
 "from": "pass1",
@@ -1551,7 +1554,7 @@
 "part": "4(b)",
 "blocking": false,
 "rid": "4ae88fde01",
-"status": "verified",
+"status": "not fixed",
 "note": "table at the row top lost its top edge, stubs left -> table edge kept",
 "pattern": 223,
 "from": "pass1",
@@ -1564,10 +1567,11 @@
 "part": "",
 "blocking": false,
 "rid": "11391ab0db",
-"status": "fixed",
+"status": "verified",
 "note": "fill-only table: row lines + label column kept; boxes around numbers no table",
 "pattern": 229,
-"from": "pass2"
+"from": "pass2",
+"pass2": "gone"
 },
 {
 "qid": "0607_2022FM_62_q01",
@@ -1654,7 +1658,7 @@
 "part": "8(a)",
 "blocking": false,
 "rid": "8ca76d23c9",
-"status": "verified",
+"status": "not fixed",
 "note": "re-flow joined a new marking point (B1 / FT / If ...) to the line above -> never",
 "pattern": 215,
 "from": "pass1",
@@ -1711,6 +1715,18 @@
 "pattern": null,
 "from": "pass1",
 "pass2": "present"
+},
+{
+"qid": "0607_2022MJ_32_q10",
+"check": "fig_cut",
+"detail": "diagram1 bottom",
+"part": "",
+"blocking": false,
+"rid": "7e5c45459e",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0607_2022MJ_33_q02",
@@ -1810,7 +1826,7 @@
 "part": "3(a)",
 "blocking": false,
 "rid": "88c6332b48",
-"status": "verified",
+"status": "not fixed",
 "note": "re-flow joined a new marking point (B1 / FT / If ...) to the line above -> never",
 "pattern": 215,
 "from": "pass1",
@@ -1927,10 +1943,11 @@
 "part": "",
 "blocking": false,
 "rid": "b99c415511",
-"status": "fixed",
+"status": "verified",
 "note": "f(x) line's fraction pieces / bars left in the crop -> cut with the line",
 "pattern": 228,
-"from": "pass2"
+"from": "pass2",
+"pass2": "gone"
 },
 {
 "qid": "0607_2022MJ_43_q05",
@@ -2056,7 +2073,7 @@
 "part": "",
 "blocking": false,
 "rid": "4b6e095168",
-"status": "verified",
+"status": "not fixed",
 "note": "line running past a table was half in the table block ('x = 22') -> whole line is text",
 "pattern": 220,
 "from": "pass1",
@@ -2293,7 +2310,8 @@
 "status": "passed",
 "note": "pass-2 sheet read: matches print",
 "pattern": null,
-"from": "pass2"
+"from": "pass2",
+"pass2": "present"
 },
 {
 "qid": "0607_2022ON_32_q04",
@@ -2484,7 +2502,7 @@
 "part": "5(c)",
 "blocking": false,
 "rid": "ae3e83d7f4",
-"status": "verified",
+"status": "not fixed",
 "note": "invisible 2x2 px image under a formula made the cell a picture -> tiny-pixel images ignored",
 "pattern": 214,
 "from": "pass1",
@@ -2627,7 +2645,7 @@
 "part": "",
 "blocking": false,
 "rid": "eab140ea6a",
-"status": "fixed",
+"status": "not fixed",
 "note": "f(x) line's fraction pieces / bars left in the crop -> cut with the line",
 "pattern": 228,
 "from": "pass1",
@@ -2770,7 +2788,7 @@
 "part": "",
 "blocking": false,
 "rid": "93d17290b3",
-"status": "fixed",
+"status": "not fixed",
 "note": "f(x) line's fraction pieces / bars left in the crop -> cut with the line",
 "pattern": 228,
 "from": "pass1",
@@ -2861,7 +2879,7 @@
 "part": "1(d)",
 "blocking": false,
 "rid": "71ffdbda2a",
-"status": "verified",
+"status": "not fixed",
 "note": "MS drawn at ~15 pt (question mostly a small table) -> paper-wide normal size",
 "pattern": 216,
 "from": "pass1",
@@ -2874,7 +2892,7 @@
 "part": "2(a)",
 "blocking": false,
 "rid": "3947b2d32c",
-"status": "verified",
+"status": "not fixed",
 "note": "MS drawn at ~15 pt (question mostly a small table) -> paper-wide normal size",
 "pattern": 216,
 "from": "pass1",
@@ -2939,7 +2957,7 @@
 "part": "2(a)",
 "blocking": false,
 "rid": "4b176cecbf",
-"status": "verified",
+"status": "not fixed",
 "note": "table flush with the cell / rows as fills fell apart -> kept as one table",
 "pattern": 219,
 "from": "pass1",
@@ -2991,7 +3009,7 @@
 "part": "5(a)(ii)",
 "blocking": false,
 "rid": "12862ea3fe",
-"status": "verified",
+"status": "not fixed",
 "note": "MS label printed twice / wrapped label -> rows to the right part",
 "pattern": 217,
 "from": "pass1",
@@ -3007,7 +3025,8 @@
 "status": "passed",
 "note": "our labels 5(a)(iv)(a)/(b) (pattern 217) - words check counts the label text",
 "pattern": null,
-"from": "pass2"
+"from": "pass2",
+"pass2": "present"
 },
 {
 "qid": "0607_2023MJ_11_q03",
@@ -3201,7 +3220,8 @@
 "status": "known",
 "note": "two diagrams of (a) and (b) in one crop - fix first next chat",
 "pattern": null,
-"from": "pass2"
+"from": "pass2",
+"pass2": "present"
 },
 {
 "qid": "0607_2023MJ_32_q11",
@@ -3278,7 +3298,8 @@
 "status": "passed",
 "note": "pass-2 sheet read: matches print",
 "pattern": null,
-"from": "pass2"
+"from": "pass2",
+"pass2": "present"
 },
 {
 "qid": "0607_2023MJ_33_q06",
@@ -3290,7 +3311,8 @@
 "status": "passed",
 "note": "stored figure read: whole drawing, labels in, no question text",
 "pattern": null,
-"from": "pass2"
+"from": "pass2",
+"pass2": "present"
 },
 {
 "qid": "0607_2023MJ_33_q06",
@@ -3302,7 +3324,8 @@
 "status": "passed",
 "note": "stored figure read: whole drawing, labels in, no question text",
 "pattern": null,
-"from": "pass2"
+"from": "pass2",
+"pass2": "present"
 },
 {
 "qid": "0607_2023MJ_33_q11",
@@ -3314,7 +3337,8 @@
 "status": "passed",
 "note": "pass-2 sheet read: matches print",
 "pattern": null,
-"from": "pass2"
+"from": "pass2",
+"pass2": "present"
 },
 {
 "qid": "0607_2023MJ_33_q11",
@@ -3326,7 +3350,8 @@
 "status": "passed",
 "note": "pass-2 sheet read: matches print",
 "pattern": null,
-"from": "pass2"
+"from": "pass2",
+"pass2": "present"
 },
 {
 "qid": "0607_2023MJ_41",
@@ -3452,10 +3477,11 @@
 "part": "",
 "blocking": false,
 "rid": "2601e259e2",
-"status": "fixed",
+"status": "verified",
 "note": "f(x) line's fraction pieces / bars left in the crop -> cut with the line",
 "pattern": 228,
-"from": "pass2"
+"from": "pass2",
+"pass2": "gone"
 },
 {
 "qid": "0607_2023MJ_43_q07",
@@ -3610,7 +3636,8 @@
 "status": "known",
 "note": "two diagrams of (a) and (b) in one crop - fix first next chat",
 "pattern": null,
-"from": "pass2"
+"from": "pass2",
+"pass2": "present"
 },
 {
 "qid": "0607_2023MJ_53_q03",
@@ -3632,7 +3659,7 @@
 "part": "",
 "blocking": false,
 "rid": "80e6e8a3ea",
-"status": "verified",
+"status": "not fixed",
 "note": "re-flow joined a new marking point (B1 / FT / If ...) to the line above -> never",
 "pattern": 215,
 "from": "pass1",
@@ -3671,7 +3698,7 @@
 "part": "",
 "blocking": false,
 "rid": "bba3bb9fc5",
-"status": "verified",
+"status": "not fixed",
 "note": "MS drawn at ~15 pt (question mostly a small table) -> paper-wide normal size",
 "pattern": 216,
 "from": "pass1",
@@ -3726,7 +3753,8 @@
 "status": "passed",
 "note": "stored figure read: whole drawing, labels in, no question text",
 "pattern": null,
-"from": "pass2"
+"from": "pass2",
+"pass2": "present"
 },
 {
 "qid": "0607_2023MJ_62_q06",
@@ -3748,7 +3776,7 @@
 "part": "6(b)(iii)",
 "blocking": false,
 "rid": "d7a3e01163",
-"status": "verified",
+"status": "not fixed",
 "note": "re-flow joined a new marking point (B1 / FT / If ...) to the line above -> never",
 "pattern": 215,
 "from": "pass1",
@@ -3803,7 +3831,8 @@
 "status": "known",
 "note": "two diagrams of (a) and (b) in one crop - fix first next chat",
 "pattern": null,
-"from": "pass2"
+"from": "pass2",
+"pass2": "present"
 },
 {
 "qid": "0607_2023MJ_63_q03",
@@ -3864,7 +3893,7 @@
 "part": "6(a)",
 "blocking": false,
 "rid": "5518666232",
-"status": "verified",
+"status": "not fixed",
 "note": "MS drawn at ~15 pt (question mostly a small table) -> paper-wide normal size",
 "pattern": 216,
 "from": "pass1",
@@ -3880,7 +3909,8 @@
 "status": "passed",
 "note": "stored figure read: whole drawing, labels in, no question text",
 "pattern": null,
-"from": "pass2"
+"from": "pass2",
+"pass2": "present"
 },
 {
 "qid": "0607_2023MJ_63_q10",
@@ -3928,7 +3958,7 @@
 "part": "",
 "blocking": false,
 "rid": "4a82beebc6",
-"status": "verified",
+"status": "not fixed",
 "note": "labels inside a Venn frame taken as heading, box top cut -> never a heading",
 "pattern": 222,
 "from": "pass1",
@@ -4084,11 +4114,11 @@
 "part": "",
 "blocking": false,
 "rid": "675c37bbf7",
-"status": "fixed",
+"status": "verified",
 "note": "f(x) line's fraction pieces / bars left in the crop -> cut with the line",
 "pattern": 228,
 "from": "pass1",
-"pass2": "present"
+"pass2": "gone"
 },
 {
 "qid": "0607_2023ON_41_q02",
@@ -4149,11 +4179,11 @@
 "part": "",
 "blocking": false,
 "rid": "01d2a6b802",
-"status": "fixed",
+"status": "verified",
 "note": "f(x) line's fraction pieces / bars left in the crop -> cut with the line",
 "pattern": 228,
 "from": "pass1",
-"pass2": "present"
+"pass2": "gone"
 },
 {
 "qid": "0607_2023ON_42_q05",
