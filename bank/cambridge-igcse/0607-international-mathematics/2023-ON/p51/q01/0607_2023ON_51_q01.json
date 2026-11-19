@@ -1,0 +1,438 @@
+{
+ "id": "0607_2023ON_51_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    199.8,
+    570.0,
+    406.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 13.9,
+    "height_pt": 206.2
+   }
+  }
+ ],
+ "text": "1\nHere is a table of the first seven terms of an F-type sequence.\nThe first term F1 is 5.\nThe second term F2 is 3.\nF1\nF2\nF3\nF4\nF5\nF6\nF7\n5\n3\n8\n11\n19\n30\n49\nIn the table,\nF1+F2=   5   +    3 =   8 =  F3\nF2+F3=   3   +    8 =  11 =  F4\nF3+F4=   8   +   11 = 19 =  F5\nand so on.",
+ "marks": 13,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      410.6,
+      570.0,
+      513.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "F8=  ……",
+      "working_gap_pt": 33.6,
+      "height_pt": 102.9
+     }
+    }
+   ],
+   "text": "Calculate the 8th term (F8) and the 9th term (F9).\nF8=  ................................................\nF9=  ................................................ [3]",
+   "marks": 3,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "49 + their79\n79\n128",
+     "codes": [
+      "C1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        51.959999084472656,
+        89.4,
+        548.8600463867188,
+        150.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the 8th term (<i>F</i><sub>8</sub>) and the 9th term (<i>F</i><sub>9</sub>).",
+     "text": "Calculate the 8th term (F8) and the 9th term (F9)."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "F8 ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "F9 ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      514.6,
+      570.0,
+      706.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 5,
+      "answer_line": "= …… = ……",
+      "working_gap_pt": 23.7,
+      "height_pt": 191.4
+     }
+    }
+   ],
+   "text": "Complete the table.\nF1\n= 5\nF3-F2\n= 8   -   3\n=\n5\nF1+F2\n= 5 + 3\n= 8\nF4-F2\n= .................. = ............\nF1+F2+F3\n= 5 + 3 + 8\n= 16\nF5-F2\n= .................. = ............\nF1+F2+F3+F4\n= ............................... = .........\n..................\n= .................. =\n27\n[5]",
+   "marks": 5,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "F1\n= 5\nF3 –F2 = 8 –3 =5\nF1+F2 =5 + 3 = 8\nF4–F2 = 11 – 3 = 8\nF1+F2+F3= 5+3+8 =16\nF5–F2 = 19 – 3 = 16\nF1 + F2 +F3 + F4 =\n5 + 3 + 8 + 11 = 27\nF6–F2 = 30 – 3 = 27",
+     "codes": [
+      "5"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        51.959999084472656,
+        150.8,
+        548.8600463867188,
+        273.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "text",
+     "html": "<i>F</i><sub>1</sub> = 5 <i>F</i><sub>3</sub> - <i>F</i><sub>2</sub> = 8 - 3 = 5 <i>F</i><sub>1</sub> + <i>F</i><sub>2</sub> = 5 + 3 = 8 <i>F</i><sub>4</sub> - <i>F</i><sub>2</sub> = …… = …… <i>F</i><sub>1</sub> + <i>F</i><sub>2</sub> + <i>F</i><sub>3</sub> = 5 + 3 + 8 = 16 <i>F</i><sub>5</sub> - <i>F</i><sub>2</sub> = …… = ……",
+     "text": "F1 = 5 F3 - F2 = 8 - 3 = 5 F1 + F2 = 5 + 3 = 8 F4 - F2 = …… = …… F1 + F2 + F3 = 5 + 3 + 8 = 16 F5 - F2 = …… = ……"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "F1 + F2 + F3 + F4 =",
+     "unit": "= 27"
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      113.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 10.7,
+      "height_pt": 56.2
+     }
+    }
+   ],
+   "text": "Use what you notice in the table in part (b) to complete this statement.\nF1+ F2+ F3+F4+ F5=F ......   -F ......\n[1]",
+   "marks": 1,
+   "path": "1(c)",
+   "mark_scheme": [
+    {
+     "label": "1(c)",
+     "text": "F7 – F2",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        51.959999084472656,
+        273.6,
+        548.8600463867188,
+        298.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use what you notice in the table in <b>part (b)</b> to complete this statement.",
+     "text": "Use what you notice in the table in part (b) to complete this statement."
+    },
+    {
+     "type": "text",
+     "html": "<i>F</i><sub>1</sub> + <i>F</i><sub>2</sub> + <i>F</i><sub>3</sub> + <i>F</i><sub>4</sub> + <i>F</i><sub>5</sub> = <i>F </i> - <i>F </i>",
+     "text": "F1 + F2 + F3 + F4 + F5 = F - F"
+    },
+    {
+     "type": "text",
+     "html": "...... ......",
+     "text": "...... ......"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      121.8,
+      570.0,
+      178.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 7.8,
+      "height_pt": 56.2
+     }
+    }
+   ],
+   "text": "Use the statement in part (c) to complete this general statement.\nF1+ F2+ F3+…+  Fn=Fn+-F ......\n[1]\n.............",
+   "marks": 1,
+   "path": "1(d)",
+   "mark_scheme": [
+    {
+     "label": "1(d)",
+     "text": "Fn + 2 – F2",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        51.959999084472656,
+        298.1,
+        548.8600463867188,
+        322.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use the statement in <b>part (c)</b> to complete this general statement.",
+     "text": "Use the statement in part (c) to complete this general statement."
+    },
+    {
+     "type": "text",
+     "html": "…",
+     "text": "…"
+    },
+    {
+     "type": "text",
+     "html": "<i>F</i><sub>1</sub> + <i>F</i><sub>2</sub> + <i>F</i><sub>3</sub> + + <i>F</i><i><sub>n</sub></i> = <i>F</i><i><sub>n</sub></i> - <i>F </i>",
+     "text": "F1 + F2 + F3 + + Fn = Fn - F"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "......"
+    },
+    {
+     "type": "text",
+     "html": "+",
+     "text": "+"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      186.8,
+      570.0,
+      366.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 140.9,
+      "height_pt": 179.2
+     }
+    }
+   ],
+   "text": "Show that your statement in part (d) is correct when n= 7.\n[3]",
+   "marks": 3,
+   "path": "1(e)",
+   "mark_scheme": [
+    {
+     "label": "1(e)",
+     "text": "5 + 3 + 8 + 11 + 19 + 30 + 49\nor 27 + 19 + 30 + 49\n128 – 3\n125 calculated twice",
+     "codes": [
+      "1",
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        51.959999084472656,
+        322.6,
+        548.8600463867188,
+        420.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that your statement in <b>part (d)</b> is correct when <i>n</i> = 7.",
+     "text": "Show that your statement in part (d) is correct when n = 7."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 140.9
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 13,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Here is a table of the first seven terms of an F-type sequence. The first term <i>F</i><sub>1</sub> is 5. The second term <i>F</i><sub>2</sub> is 3.",
+   "text": "Here is a table of the first seven terms of an F-type sequence. The first term F1 is 5. The second term F2 is 3."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "<i>F</i><sub>1</sub>",
+     "<i>F</i><sub>2</sub>",
+     "<i>F</i><sub>3</sub>",
+     "<i>F</i><sub>4</sub>",
+     "<i>F</i><sub>5</sub>",
+     "<i>F</i><sub>6</sub>",
+     "<i>F</i><sub>7</sub>"
+    ],
+    [
+     "5",
+     "3",
+     "8",
+     "11",
+     "19",
+     "30",
+     "49"
+    ]
+   ]
+  },
+  {
+   "type": "text",
+   "html": "In the table, <i>F</i><sub>1</sub> + <i>F</i><sub>2</sub> = 5 + 3 = 8 = <i> F</i><sub>3</sub>",
+   "text": "In the table, F1 + F2 = 5 + 3 = 8 = F3"
+  },
+  {
+   "type": "text",
+   "html": "<i>F</i><sub>2</sub> + <i>F</i><sub>3</sub> = 3 + 8 = 11 = <i> F</i><sub>4</sub> <i>F</i><sub>3</sub> + <i>F</i><sub>4</sub> = 8 + 11 = 19 = <i> F</i><sub>5</sub>",
+   "text": "F2 + F3 = 3 + 8 = 11 = F4 F3 + F4 = 8 + 11 = 19 = F5"
+  },
+  {
+   "type": "text",
+   "html": "and so on.",
+   "text": "and so on."
+  }
+ ]
+}

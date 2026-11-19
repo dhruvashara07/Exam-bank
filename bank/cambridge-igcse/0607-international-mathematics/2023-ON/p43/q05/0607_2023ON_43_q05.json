@@ -1,0 +1,244 @@
+{
+ "id": "0607_2023ON_43_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    104.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 47.7
+   }
+  }
+ ],
+ "text": "5\nA museum records the value of a picture every 5 years.\nThe picture increases in value by 60% every 5 years.\nThe value the museum recorded in 2020 was $20 000.",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      108.8,
+      570.0,
+      197.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 49.9,
+      "height_pt": 88.2
+     }
+    }
+   ],
+   "text": "Calculate the value recorded in 2015.\n$  ................................................ [2]",
+   "marks": 2,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "12 500",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.560001373291016,
+        200.6,
+        549.219970703125,
+        244.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the value recorded in 2015.",
+     "text": "Calculate the value recorded in 2015."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "$"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      199.8,
+      570.0,
+      353.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 114.9,
+      "height_pt": 153.2
+     }
+    }
+   ],
+   "text": "Show that the value recorded in 2040 will be $131 072 .\n[1]",
+   "marks": 1,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "4\n\n60 \n20 000 × 1 +\noe\n\n\n\n100\n\n[= 131 072]",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.560001373291016,
+        244.2,
+        549.219970703125,
+        302.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that the value recorded in 2040 will be $131 072 .",
+     "text": "Show that the value recorded in 2040 will be $131 072 ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 114.9
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      355.8,
+      570.0,
+      626.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 231.9,
+      "height_pt": 270.2
+     }
+    }
+   ],
+   "text": "Calculate the year in which the value recorded will first be over $1 000 000.\n................................................. [4]",
+   "marks": 4,
+   "path": "5(c)",
+   "mark_scheme": [
+    {
+     "label": "5(c)",
+     "text": "2065 nfww",
+     "codes": [
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.560001373291016,
+        302.9,
+        549.219970703125,
+        628.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the year in which the value recorded will first be over $1 000 000.",
+     "text": "Calculate the year in which the value recorded will first be over $1 000 000."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 3,
+ "paper_code": "0607/43",
+ "paper_type": "extended_long_answer",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A museum records the value of a picture every 5 years. The picture increases in value by 60% <b>every 5 years</b>. The value the museum recorded in 2020 was $20 000.",
+   "text": "A museum records the value of a picture every 5 years. The picture increases in value by 60% every 5 years. The value the museum recorded in 2020 was $20 000."
+  }
+ ]
+}

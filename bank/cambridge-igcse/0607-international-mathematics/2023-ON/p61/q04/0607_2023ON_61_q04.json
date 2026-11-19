@@ -1,0 +1,195 @@
+{
+ "id": "0607_2023ON_61_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    106.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.9,
+    "height_pt": 49.2
+   }
+  }
+ ],
+ "text": "4\nThe Fibonacci sequence is a special F‑type sequence.\nThe sequence starts   1,  1,  2,  3,  5,  8,  13,  21,  34,  55,  …",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      121.8,
+      570.0,
+      236.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 46.6,
+      "height_pt": 114.2
+     }
+    }
+   ],
+   "text": "Use this information and your answers to Question 1(c) to simplify this sum.\nF\nF\nF\nf\nFn\n+\n+\n+\n+\n1\n3\n5\n2\n1\n-\n................................................. [1]",
+   "marks": 1,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "F2n",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        47.63999938964844,
+        89.4,
+        547.6599731445312,
+        113.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use this information and your answers to <b>Question 1(c)</b> to simplify this sum.",
+     "text": "Use this information and your answers to Question 1(c) to simplify this sum."
+    },
+    {
+     "type": "text",
+     "html": "f",
+     "text": "f"
+    },
+    {
+     "type": "text",
+     "html": "<i>F</i><sub>1</sub> + <i>F</i><sub>3</sub> + <i>F</i><sub>5</sub> + + <i>F</i><sub>2</sub>",
+     "text": "F1 + F3 + F5 + + F2"
+    },
+    {
+     "type": "text",
+     "html": "<i>n</i>-1",
+     "text": "n-1"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      251.8,
+      570.0,
+      509.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 192.9,
+      "height_pt": 257.2
+     }
+    }
+   ],
+   "text": "The 16th term in the Fibonacci sequence is 987.\nFind the 8 different terms in the Fibonacci sequence that add up to 987.\n..................................................................................................................................................... [2]",
+   "marks": 2,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "89, 144, 233, 377, 610, […]\n1 2 5 13 34 89 233 610",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        47.63999938964844,
+        113.7,
+        547.6599731445312,
+        162.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The 16th term in the Fibonacci sequence is 987. Find the 8 different terms in the Fibonacci sequence that add up to 987.",
+     "text": "The 16th term in the Fibonacci sequence is 987. Find the 8 different terms in the Fibonacci sequence that add up to 987."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The Fibonacci sequence is a special F‑type sequence. The sequence starts 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, …",
+   "text": "The Fibonacci sequence is a special F‑type sequence. The sequence starts 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, …"
+  }
+ ]
+}

@@ -1,0 +1,224 @@
+{
+ "id": "0607_2023ON_11_q22",
+ "number": 22,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    216.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 15.5,
+    "height_pt": 159.2
+   }
+  }
+ ],
+ "text": "The grouped frequency table shows information about the number of hours worked by each\nof 80 doctors.\nNumber of hours (t)\nFrequency\nt\n8\n10\n1\n20\nG\n2\n0\nt\n3\n0\n16\n1\nG\n3\n0\n1\nt\n4\n0\n21\nG\n35\n4\n0\n1\nt\n5\n0\nG",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      216.9,
+      570.0,
+      266.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 10.7,
+      "height_pt": 49.1
+     }
+    }
+   ],
+   "text": "Write down the class interval containing the median.\n...................\n1\nt\nG  ................... [1]",
+   "marks": 1,
+   "path": "22(a)",
+   "mark_scheme": [
+    {
+     "label": "22(a)",
+     "text": "30 < t ⩽ 40",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.560001373291016,
+        261.1,
+        549.219970703125,
+        291.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the class interval containing the median.",
+     "text": "Write down the class interval containing the median."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      268.9,
+      570.0,
+      426.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 15.5,
+      "height_pt": 157.1
+     }
+    }
+   ],
+   "text": "Complete the cumulative frequency table.\nNumber of hours (t)\nCumulative frequency\nt\n8\n2\n0\nG\nt\n3\n0\nG\nt\n40\nG\nt\n50\nG\n[2]",
+   "marks": 2,
+   "path": "22(b)",
+   "mark_scheme": [
+    {
+     "label": "22(b)",
+     "text": "Number of\nFrequency\nhours (t)",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.560001373291016,
+        291.9,
+        549.219970703125,
+        335.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the cumulative frequency table.",
+     "text": "Complete the cumulative frequency table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Number of hours (<i>t</i>)",
+       "Cumulative frequency"
+      ],
+      [
+       "<i>t</i> G 20",
+       "8"
+      ],
+      [
+       "<i>t</i> G 30",
+       ""
+      ],
+      [
+       "<i>t</i> G 40",
+       ""
+      ],
+      [
+       "<i>t</i> G 50",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 1,
+ "variant": 1,
+ "paper_code": "0607/11",
+ "paper_type": "core_short_answer",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The grouped frequency table shows information about the number of hours worked by each of 80 doctors.",
+   "text": "The grouped frequency table shows information about the number of hours worked by each of 80 doctors."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Number of hours (<i>t</i>)",
+     "Frequency"
+    ],
+    [
+     "10 1 <i>t</i> G 20",
+     "8"
+    ],
+    [
+     "20 1 <i>t</i> G 30",
+     "16"
+    ],
+    [
+     "30 1 <i>t</i> G 40",
+     "21"
+    ],
+    [
+     "40 1 <i>t</i> G 50",
+     "35"
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,186 @@
+{
+ "id": "0607_2023ON_51_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    80.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 23.2
+   }
+  }
+ ],
+ "text": "2\nIn another F-type sequence the first term is 3 and the second term is 1.",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      82.8,
+      570.0,
+      184.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 62.9,
+      "height_pt": 101.2
+     }
+    }
+   ],
+   "text": "Complete the first five terms.\n3,   1,   ......... , ......... , ......... [2]",
+   "marks": 2,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "4, 5, 9",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        51.959999084472656,
+        444.4,
+        548.8600463867188,
+        481.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the first five terms.",
+     "text": "Complete the first five terms."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "3, 1,"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 62.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      186.8,
+      570.0,
+      405.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 179.9,
+      "height_pt": 218.2
+     }
+    }
+   ],
+   "text": "Is your statement in Question 1(c) correct for the sum of the first five terms in this sequence?\n..................................................................................................................................................... [3]",
+   "marks": 3,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "3 + 1 + 4 + 5 + 9 = 22\n14, 23 for the next two terms\nYes oe and 23 – 1 = 22",
+     "codes": [
+      "1",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        51.959999084472656,
+        481.5,
+        548.8600463867188,
+        567.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Is your statement in <b>Question 1(c)</b> correct for the sum of the first five terms in this sequence?",
+     "text": "Is your statement in Question 1(c) correct for the sum of the first five terms in this sequence?"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In another F-type sequence the first term is 3 and the second term is 1.",
+   "text": "In another F-type sequence the first term is 3 and the second term is 1."
+  }
+ ]
+}

@@ -1,0 +1,601 @@
+{
+ "id": "0607_2023ON_61_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    251.8,
+    570.0,
+    458.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 17.9,
+    "height_pt": 206.7
+   }
+  }
+ ],
+ "text": "1\nHere is a table of the first nine terms of an F‑type sequence.\nThe first term F1 is 5.\nThe second term F2 is 3.\nF1\nF2\nF3\nF4\nF5\nF6\nF7\nF8\nF9\n5\n3\n8\n11\n19\n30\n49\n79\n128\nF\nF\n= 5 +  3 =  8 =F3\nIn the table,\n+\n1\n2\nF\nF\n= 3 +  8 = 11 =F4\n+\n2\n3\nF\nF\n= 8 + 11 = 19 =F5\n+\n3\n4\nand so on.",
+ "marks": 11,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      476.3,
+      570.0,
+      553.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "F10 =  …… [2]",
+      "working_gap_pt": 36.7,
+      "height_pt": 76.7
+     }
+    }
+   ],
+   "text": "Calculate the 10th term.\nF10 =  ................................................. [2]",
+   "marks": 2,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "79 + 128\n207",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        47.63999938964844,
+        89.4,
+        547.6599731445312,
+        138.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the 10th term.",
+     "text": "Calculate the 10th term."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "F10"
+    },
+    {
+     "type": "text",
+     "html": "=",
+     "text": "="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        30.0,
+        567.3,
+        570.0,
+        747.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 17.8,
+        "height_pt": 180.2
+       }
+      }
+     ],
+     "text": "Complete the table.\nF\nF\nF2\n= 3\n= 3\n-\n3\n1\nF\nF\n= 14\nF\nF\n=\n+\n-\n2\n4\n5\n1\n...........\nF\nF\nF\n=\nF\nF\n=\n-\n+\n+\n7\n1\n2\n4\n6\n...........\n...........\nF\nF\n=\nF\nF\nF\nF\n= 123\n+\n+\n+\n-\n2\n4\n6\n8\n9\n1\n...........\n[2]",
+     "marks": 2,
+     "path": "1(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "1(b)(i)",
+       "text": "F2\n= 3\nF3 –F1\n= 3\nF2+F4\n= 14\nF5–F1\n= 14\nF2+F4+F6\n= 44\nF7–F1\n= 44\nF2 + F4 +F6 + F8 = 123\nF9–F1\n= 123",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          47.63999938964844,
+          138.2,
+          547.6599731445312,
+          249.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the table.",
+       "text": "Complete the table."
+      },
+      {
+       "type": "text",
+       "html": "<i>F</i><sub>2</sub> = 3 <i>F</i><sub>3</sub> - <i>F</i><sub>1</sub> = 3 <i>F</i><sub>2</sub> + <i>F</i><sub>4</sub> = <i>F</i><sub>5</sub> - <i>F</i><sub>1</sub> = 14",
+       "text": "F2 = 3 F3 - F1 = 3 F2 + F4 = F5 - F1 = 14"
+      },
+      {
+       "type": "text",
+       "html": "<i>F</i><sub>2</sub> + <i>F</i><sub>4</sub> + <i>F</i><sub>6</sub> = <i>F</i><sub>7</sub> - <i>F</i><sub>1</sub> =",
+       "text": "F2 + F4 + F6 = F7 - F1 ="
+      },
+      {
+       "type": "text",
+       "html": "<i>F</i><sub>2</sub> + <i>F</i><sub>4</sub> + <i>F</i><sub>6</sub> + <i>F</i><sub>8</sub> = 123 <i>F</i><sub>9</sub> - <i>F</i><sub>1</sub> =",
+       "text": "F2 + F4 + F6 + F8 = 123 F9 - F1 ="
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 3
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        56.8,
+        570.0,
+        145.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 14.4,
+        "height_pt": 88.2
+       }
+      }
+     ],
+     "text": "Complete this statement.\nF2+F4+F6+F8+F10=F\n-F\n.......\n.......\n[1]",
+     "marks": 1,
+     "path": "1(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "1(b)(ii)",
+       "text": "F11 – F1",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          47.63999938964844,
+          249.5,
+          547.6599731445312,
+          274.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete this statement.",
+       "text": "Complete this statement."
+      },
+      {
+       "type": "text",
+       "html": "<i>F</i><sub>2</sub> + <i>F</i><sub>4</sub> + <i>F</i><sub>6</sub> + <i>F</i><sub>8</sub> + <i>F</i><sub>10</sub> = <i>F</i> - <i>F</i>",
+       "text": "F2 + F4 + F6 + F8 + F10 = F - F"
+      },
+      {
+       "type": "text",
+       "html": "....... .......",
+       "text": "....... ......."
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "1(b)"
+  },
+  {
+   "label": "c",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        160.8,
+        570.0,
+        341.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 17.8,
+        "height_pt": 180.2
+       }
+      }
+     ],
+     "text": "Complete the table.\nF1\nF\nF\nF\n=  5\n=  5\n+\n-\n2\n1\n2\nF\nF\n=\nF\nF\nF\n= 13\n+\n-\n+\n4\n1\n2\n1\n3\n...........\nF\nF\nF\n=\nF\nF\nF\n=\n+\n+\n+\n-\n1\n3\n5\n6\n1\n2\n...........\n...........\nF\nF\nF\nF\n= 81\nF\nF\nF\n=\n+\n-\n+\n+\n+\n8\n1\n2\n1\n3\n5\n7\n...........\n[2]",
+     "marks": 2,
+     "path": "1(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "1(c)(i)",
+       "text": "F1\n= 5\nF2 + F1–F2\n= 5\nF1 + F3\n= 13\nF4 + F1–F2\n= 13\nF1 + F3 + F5\n= 32\nF6 + F1–F2\n= 32\nF1 + F3 + F5 + F7 = 81\nF8 + F1–F2\n= 81",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          47.63999938964844,
+          274.0,
+          547.6599731445312,
+          385.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the table.",
+       "text": "Complete the table."
+      },
+      {
+       "type": "text",
+       "html": "<i>F</i><sub>1</sub> = 5 <i>F</i><sub>2</sub> + <i>F</i><sub>1</sub> - <i>F</i><sub>2</sub> = 5 <i>F</i><sub>1</sub> + <i>F</i><sub>3</sub> = <i>F</i><sub>4</sub> + <i>F</i><sub>1</sub> - <i>F</i><sub>2</sub> = 13",
+       "text": "F1 = 5 F2 + F1 - F2 = 5 F1 + F3 = F4 + F1 - F2 = 13"
+      },
+      {
+       "type": "text",
+       "html": "<i>F</i><sub>1</sub> + <i>F</i><sub>3</sub> + <i>F</i><sub>5</sub> = <i>F</i><sub>6</sub> + <i>F</i><sub>1</sub> - <i>F</i><sub>2</sub> =",
+       "text": "F1 + F3 + F5 = F6 + F1 - F2 ="
+      },
+      {
+       "type": "text",
+       "html": "<i>F</i><sub>1</sub> + <i>F</i><sub>3</sub> + <i>F</i><sub>5</sub> + <i>F</i><sub>7</sub> = 81 <i>F</i><sub>8</sub> + <i>F</i><sub>1</sub> - <i>F</i><sub>2</sub> =",
+       "text": "F1 + F3 + F5 + F7 = 81 F8 + F1 - F2 ="
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 3
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        343.5,
+        570.0,
+        432.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 14.4,
+        "height_pt": 88.5
+       }
+      }
+     ],
+     "text": "Complete this statement.\nF1+F3+F5+F7+F9=F\n+F\n-F\n.......\n.......\n.......\n[1]",
+     "marks": 1,
+     "path": "1(c)(ii)",
+     "mark_scheme": [
+      {
+       "label": "1(c)(ii)",
+       "text": "F10 + F1 – F2",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          47.63999938964844,
+          385.2,
+          547.6599731445312,
+          409.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete this statement.",
+       "text": "Complete this statement."
+      },
+      {
+       "type": "text",
+       "html": "<i>F</i><sub>1</sub> + <i>F</i><sub>3</sub> + <i>F</i><sub>5</sub> + <i>F</i><sub>7</sub> + <i>F</i><sub>9</sub> = <i>F</i> + <i>F</i> - <i>F</i>",
+       "text": "F1 + F3 + F5 + F7 + F9 = F + F - F"
+      },
+      {
+       "type": "text",
+       "html": "....... ....... .......",
+       "text": "....... ....... ......."
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "1(c)"
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      447.5,
+      570.0,
+      614.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 85.9,
+      "height_pt": 166.5
+     }
+    }
+   ],
+   "text": "Use your statements in part (b)(ii) and part (c)(ii), and the definition of an F‑type sequence, to\nshow that\nF\nF\nF\nF\nF\nF\nF\nF\nF\nF\n=F\nF\n.\n+\n+\n+\n+\n+\n+\n+\n+\n+\n-\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n12\n2\n[2]",
+   "marks": 2,
+   "path": "1(d)",
+   "mark_scheme": [
+    {
+     "label": "1(d)",
+     "text": "F11 – F1 [ + ] F10 + F1 – F2\nF10 + F11 – F2 = F12 – F2 or\nF10 + F11 = F12 leading to F12 – F2",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        47.63999938964844,
+        409.7,
+        547.6599731445312,
+        471.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your statements in <b>part (b)(ii)</b> and <b>part (c)(ii)</b>, and the definition of an F‑type sequence, to show that",
+     "text": "Use your statements in part (b)(ii) and part (c)(ii), and the definition of an F‑type sequence, to show that"
+    },
+    {
+     "type": "text",
+     "html": "<i>F</i><sub>1</sub> + <i>F</i><sub>2</sub> + <i>F</i><sub>3</sub> + <i>F</i><sub>4</sub> + <i>F</i><sub>5</sub> + <i>F</i><sub>6</sub> + <i>F</i><sub>7</sub> + <i>F</i><sub>8</sub> + <i>F</i><sub>9</sub> + <i>F</i><sub>10</sub> = <i>F</i><sub>12</sub> - <i>F</i><sub>2</sub> .",
+     "text": "F1 + F2 + F3 + F4 + F5 + F6 + F7 + F8 + F9 + F10 = F12 - F2 ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 85.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      629.5,
+      570.0,
+      705.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 10.7,
+      "height_pt": 75.5
+     }
+    }
+   ],
+   "text": "Use the statement in part (d) to complete this general statement.\nF1+F2+F3+g+Fn=F\n-F\n.......\n.......\n[1]",
+   "marks": 1,
+   "path": "1(e)",
+   "mark_scheme": [
+    {
+     "label": "1(e)",
+     "text": "Fn + 2 – F2",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        47.63999938964844,
+        471.2,
+        547.6599731445312,
+        495.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use the statement in <b>part (d)</b> to complete this general statement.",
+     "text": "Use the statement in part (d) to complete this general statement."
+    },
+    {
+     "type": "text",
+     "html": "<i>F</i><sub>1</sub> + <i>F</i><sub>2</sub> + <i>F</i><sub>3</sub> + g + <i>F</i><i><sub>n</sub></i> = <i>F</i> - <i>F</i>",
+     "text": "F1 + F2 + F3 + g + Fn = F - F"
+    },
+    {
+     "type": "text",
+     "html": "....... .......",
+     "text": "....... ......."
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 11,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Here is a table of the first nine terms of an F‑type sequence. The first term <i>F</i><sub>1</sub> is 5. The second term <i>F</i><sub>2</sub> is 3.",
+   "text": "Here is a table of the first nine terms of an F‑type sequence. The first term F1 is 5. The second term F2 is 3."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "<i>F</i><sub>1</sub>",
+     "<i>F</i><sub>2</sub>",
+     "<i>F</i><sub>3</sub>",
+     "<i>F</i><sub>4</sub>",
+     "<i>F</i><sub>5</sub>",
+     "<i>F</i><sub>6</sub>",
+     "<i>F</i><sub>7</sub>",
+     "<i>F</i><sub>8</sub>",
+     "<i>F</i><sub>9</sub>"
+    ],
+    [
+     "5",
+     "3",
+     "8",
+     "11",
+     "19",
+     "30",
+     "49",
+     "79",
+     "128"
+    ]
+   ]
+  },
+  {
+   "type": "text",
+   "html": "In the table, <i>F</i><sub>1</sub> + <i>F</i><sub>2</sub> = 5 + 3 = 8 = <i>F</i><sub>3</sub>",
+   "text": "In the table, F1 + F2 = 5 + 3 = 8 = F3"
+  },
+  {
+   "type": "text",
+   "html": "<i>F</i><sub>2</sub> + <i>F</i><sub>3</sub> = 3 + 8 = 11 = <i>F</i><sub>4</sub> <i>F</i><sub>3</sub> + <i>F</i><sub>4</sub> = 8 + 11 = 19 = <i>F</i><sub>5</sub>",
+   "text": "F2 + F3 = 3 + 8 = 11 = F4 F3 + F4 = 8 + 11 = 19 = F5"
+  },
+  {
+   "type": "text",
+   "html": "and so on.",
+   "text": "and so on."
+  }
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "id": "0607_2023ON_51_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    80.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 23.2
+   }
+  }
+ ],
+ "text": "4\nIn another F-type sequence the first term is 6 and the second term is k.",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      82.8,
+      570.0,
+      249.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 114.9,
+      "height_pt": 166.2
+     }
+    }
+   ],
+   "text": "Find an expression, in terms of k, for the 4th term.\nWrite your answer in its simplest form.\n................................................. [2]",
+   "marks": 2,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "6 + k oe seen\n6 + 2k final answer",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        51.959999084472656,
+        675.3,
+        548.8600463867188,
+        728.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression, in terms of <i>k</i>, for the 4th term. Write your answer in its simplest form.",
+     "text": "Find an expression, in terms of k, for the 4th term. Write your answer in its simplest form."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      251.8,
+      570.0,
+      496.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 179.9,
+      "height_pt": 244.2
+     }
+    }
+   ],
+   "text": "The 4th term of this sequence is 14.\nFind k and complete the first four terms.\n6,   ......... , ......... , 14 [3]",
+   "marks": 3,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "6 + 2k = 14 oe\nk = 4\n[6,] 4, 10, [14]",
+     "codes": [
+      "C1",
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        51.959999084472656,
+        89.4,
+        548.8600463867188,
+        175.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The 4th term of this sequence is 14. Find <i>k</i> and complete the first four terms.",
+     "text": "The 4th term of this sequence is 14. Find k and complete the first four terms."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "6,",
+     "unit": ", 14"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 179.9
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In another F-type sequence the first term is 6 and the second term is <i>k</i>.",
+   "text": "In another F-type sequence the first term is 6 and the second term is k."
+  }
+ ]
+}

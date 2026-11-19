@@ -1,0 +1,208 @@
+{
+ "id": "0607_2023ON_32_q10",
+ "number": 10,
+ "segments": [
+  {
+   "page": 15,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    396.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 68.0,
+    "height_pt": 339.7
+   }
+  }
+ ],
+ "text": "10\nNorth\nX\nNOT TO\nSCALE\n590km\nY\nZ\nX, Y and Z are three towns.\nZ is 590 km due South of X.\nY is due West of Z.\nThe bearing of Y from X is 220°.",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 15,
+   "bbox": [
+    182.6,
+    76.2,
+    414.1,
+    323.2
+   ],
+   "id": "0607_2023ON_32_q10_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      399.2,
+      570.0,
+      565.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 127.9,
+      "height_pt": 166.3
+     }
+    }
+   ],
+   "text": "Use trigonometry to calculate the distance XY.\n........................................... km [4]",
+   "marks": 4,
+   "path": "10(a)",
+   "mark_scheme": [
+    {
+     "label": "10(a)",
+     "text": "770 or 770.1 to 770.2",
+     "codes": [
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.560001373291016,
+        89.4,
+        549.219970703125,
+        214.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use trigonometry to calculate the distance <i>XY</i>.",
+     "text": "Use trigonometry to calculate the distance XY."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "km"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      568.2,
+      570.0,
+      695.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 88.9,
+      "height_pt": 127.3
+     }
+    }
+   ],
+   "text": "Work out the bearing of X from Y.\n................................................. [1]",
+   "marks": 1,
+   "path": "10(b)",
+   "mark_scheme": [
+    {
+     "label": "10(b)",
+     "text": "040",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.560001373291016,
+        214.7,
+        549.219970703125,
+        239.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Work out the bearing of <i>X</i> from <i>Y</i>.",
+     "text": "Work out the bearing of X from Y."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 3,
+ "variant": 2,
+ "paper_code": "0607/32",
+ "paper_type": "core_long_answer",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>10 </b>",
+   "text": "10"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2023ON_32_q10_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "<i>X</i>, <i>Y</i> and <i>Z</i> are three towns. <i>Z</i> is 590 km due South of <i>X</i>. <i>Y</i> is due West of <i>Z</i>. The bearing of <i>Y</i> from <i>X</i> is 220°.",
+   "text": "X, Y and Z are three towns. Z is 590 km due South of X. Y is due West of Z. The bearing of Y from X is 220°."
+  }
+ ]
+}

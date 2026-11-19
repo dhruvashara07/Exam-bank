@@ -1,0 +1,415 @@
+{
+ "id": "0607_2023ON_62_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    151.3
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.7,
+    "height_pt": 94.5
+   }
+  }
+ ],
+ "text": "2\nm is the number of minutes after the last hour.\n12\nIn this question the last hour is 1.00 am.\n11\n1\nExamples\n10\n2\nAt 1.10 am, m= 10.\nH\nM\nAt 1.45 am, m= 45.\n9\n3",
+ "marks": 12,
+ "figures": [
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    384.3,
+    66.6,
+    547.8,
+    193.9
+   ],
+   "id": "0607_2023ON_62_q02_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    60.29999923706055,
+    562.4000244140625,
+    538.9000244140625,
+    703.9000244140625
+   ],
+   "id": "0607_2023ON_62_q02b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      151.3,
+      570.0,
+      327.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 90.2,
+      "height_pt": 175.7
+     }
+    }
+   ],
+   "text": "This clock shows the time 1.10 am.\n8\n4\nShow that the clockwise angle from\nhand H to hand M at 1.10 am is 25°.\n7\n5\n6\n[2]",
+   "marks": 2,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "10 𝗑 6 – 10 𝗑 0.5 – 30 leading to 25\ni.e. 10 × 6 – (10 × 0.5 + 30) leading to 25\nor 30 – 10 𝗑 0.5 leading to 25\nor 10 𝗑 6 – 70 𝗑 0.5 leading to 25\n30\nor 30 –\nleading to 25\n6",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.560001373291016,
+        259.9,
+        549.0999755859375,
+        390.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "This clock shows the time 1.10 am.",
+     "text": "This clock shows the time 1.10 am."
+    },
+    {
+     "type": "text",
+     "html": "<b>4</b>",
+     "text": "4"
+    },
+    {
+     "type": "text",
+     "html": "Show that the clockwise angle from hand <i>H</i> to hand <i>M</i> at 1.10 am is 25°. <b>7</b>",
+     "text": "Show that the clockwise angle from hand H to hand M at 1.10 am is 25°. 7"
+    },
+    {
+     "type": "text",
+     "html": "<b>5</b>",
+     "text": "5"
+    },
+    {
+     "type": "text",
+     "html": "<b>6</b>",
+     "text": "6"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 90.2
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      329.8,
+      570.0,
+      723.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 36.2,
+      "height_pt": 393.2
+     }
+    }
+   ],
+   "text": "Complete the table.\nYou may use the clock diagrams to help you.\nNumber of minutes\nAngle rotated since 1.00 am in degrees\nClockwise angle\nafter the last hour\nbetween the hands\nHand H angle\nHand M angle\n(m)\nin degrees\n6\n7\n8.5\n8\n9\n10\n25\n12\n12\n12\n11\n1\n11\n1\n11\n1\n10\n10\n10\n2\n2\n2\n9\n9\n9\n3\n3\n3\n8\n8\n8\n4\n4\n4\n7\n5\n7\n5\n7\n5\n6\n6\n6\n[4]",
+   "marks": 4,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "3 correct from:\nthree differences of 0.5 seen\nthree differences of 6 seen\nthree differences of 5.5 seen\nat least one calculation for H e.g. for top row\n6 × 0.5\nat least one calculation for M e.g. for top row\n6 × 6\nat least one calculation for final column e.g.\nfor top row 36 – 30 – 3\n(m)\nH\nM\nangle\n6\n3\n36\n3\n7\n3.5\n42\n8.5\n8\n4\n48\n14\n9\n4.5\n54\n19.5\n10\n5\n60\n25",
+     "codes": [
+      "C2",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.560001373291016,
+        390.5,
+        549.0999755859375,
+        687.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table. You may use the clock diagrams to help you.",
+     "text": "Complete the table. You may use the clock diagrams to help you."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Number of minutes after the last hour (<i>m</i>)",
+       "Angle rotated since 1.00 am in degrees",
+       "",
+       "Clockwise angle between the hands in degrees"
+      ],
+      [
+       "",
+       "Hand <i>H</i> angle",
+       "Hand <i>M</i> angle",
+       ""
+      ],
+      [
+       "6",
+       "",
+       "",
+       ""
+      ],
+      [
+       "7",
+       "",
+       "",
+       "8.5"
+      ],
+      [
+       "8",
+       "",
+       "",
+       ""
+      ],
+      [
+       "9",
+       "",
+       "",
+       ""
+      ],
+      [
+       "10",
+       "",
+       "",
+       "25"
+      ]
+     ]
+    },
+    {
+     "type": "figure",
+     "id": "0607_2023ON_62_q02b_diagram2",
+     "caption": null
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      171.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 62.9,
+      "height_pt": 114.2
+     }
+    }
+   ],
+   "text": "Find an expression, in terms of m, for the clockwise angle between the hands when the last hour\nis 1.00 am.\n............................................................. [2]",
+   "marks": 2,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "5.5m – 30 oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.560001373291016,
+        687.8,
+        549.0999755859375,
+        745.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression, in terms of <i>m</i>, for the clockwise angle between the hands when the last hour is 1.00 am.",
+     "text": "Find an expression, in terms of m, for the clockwise angle between the hands when the last hour is 1.00 am."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      173.8,
+      570.0,
+      483.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 257.9,
+      "height_pt": 309.2
+     }
+    }
+   ],
+   "text": "Find how many minutes and seconds after 1.00 am the clockwise angle is 270°.\nGive your answer correct to the nearest second.\n.................... minutes .................... seconds [4]",
+   "marks": 4,
+   "path": "2(d)",
+   "mark_scheme": [
+    {
+     "label": "2(d)",
+     "text": "5.5m – 30 = 270\n300\nRearrange equation to get [m =]\noe\n5.5\n(decimal part of their m) 𝗑 60\n54 minutes 33 seconds",
+     "codes": [
+      "C1",
+      "1",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.560001373291016,
+        89.4,
+        549.0999755859375,
+        204.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find how many minutes and seconds after 1.00 am the clockwise angle is 270°. Give your answer correct to the nearest second.",
+     "text": "Find how many minutes and seconds after 1.00 am the clockwise angle is 270°. Give your answer correct to the nearest second."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "seconds"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 12,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<i>m</i> is the number of minutes after the last hour.",
+   "text": "m is the number of minutes after the last hour."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2023ON_62_q02_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "In this question the last hour is 1.00 am. Examples At 1.10 am, <i>m</i> = 10. At 1.45 am, <i>m</i> = 45.",
+   "text": "In this question the last hour is 1.00 am. Examples At 1.10 am, m = 10. At 1.45 am, m = 45."
+  }
+ ]
+}
