@@ -1,0 +1,510 @@
+{
+ "id": "0607_2023FM_42_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    268.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 15.5,
+    "height_pt": 211.2
+   }
+  }
+ ],
+ "text": "4\nThe heights, x cm, of 500 students in a school are shown in the table.\nHeight (x)\nFrequency\nx\n24\n150\n1\n155\nG\n15\n5\nx\n1\n60\n42\n1\nG\n10\n6\n1\nx\n15\n6\n84\nG\n106\n1\n65\n1\nx\n1\n70\nG\nx\n112\n10\n7\n1\n15\n7\nG\n1\n75\nx\n1\n80\n87\n1\nG\n180\n1\nx\n15\n8\n45\nG",
+ "marks": 9,
+ "figures": [
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    39.0,
+    87.2,
+    558.2,
+    423.8
+   ],
+   "id": "0607_2023FM_42_q04c_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      269.1,
+      570.0,
+      362.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 54.6,
+      "height_pt": 92.9
+     }
+    }
+   ],
+   "text": "Calculate an estimate of the mean height.\n............................................ cm [2]",
+   "marks": 2,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "169.31 or 169 or 169.3",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.31999969482422,
+        589.6,
+        549.0999755859375,
+        639.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate an estimate of the mean height.",
+     "text": "Calculate an estimate of the mean height."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "cm"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      364.8,
+      570.0,
+      587.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 15.3,
+      "height_pt": 222.2
+     }
+    }
+   ],
+   "text": "Complete the cumulative frequency table.\nHeight (x)\nCumulative frequency\n24\nx\n155\nG\nx\n160\nG\nx\n15\n6\nG\nx\n170\nG\nx\n15\n7\nG\nx\n180\nG\n500\nx\n15\n8\nG\n[1]",
+   "marks": 1,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "[24], 66, 150, 256, 368, 455, [500]",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.31999969482422,
+        639.3,
+        549.0999755859375,
+        663.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the cumulative frequency table.",
+     "text": "Complete the cumulative frequency table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Height (<i>x</i>)",
+       "Cumulative frequency"
+      ],
+      [
+       "<i>x</i> G 155",
+       "24"
+      ],
+      [
+       "<i>x</i> G 160",
+       ""
+      ],
+      [
+       "<i>x</i> G 165",
+       ""
+      ],
+      [
+       "<i>x</i> G 170",
+       ""
+      ],
+      [
+       "<i>x</i> G 175",
+       ""
+      ],
+      [
+       "<i>x</i> G 180",
+       ""
+      ],
+      [
+       "<i>x</i> G 185",
+       "500"
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      458.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 18.6,
+      "height_pt": 401.2
+     }
+    }
+   ],
+   "text": "On the grid below, draw a cumulative frequency curve.\n500\n450\n400\n350\n300\n250\nCumulative\nfrequency\n200\n150\n100\n50\n0\n185x\n150\n155\n160\n165\n170\n175\n180\nHeight(cm)\n[3]",
+   "marks": 3,
+   "path": "4(c)",
+   "mark_scheme": [
+    {
+     "label": "4(c)",
+     "text": "Correct curve\n(155, 24) (160, 66) (165, 150)\n(170, 256) (175, 368) (180, 455) (185, 500)",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.31999969482422,
+        663.8,
+        549.0999755859375,
+        713.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the grid below, draw a cumulative frequency curve.",
+     "text": "On the grid below, draw a cumulative frequency curve."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2023FM_42_q04c_diagram1",
+     "caption": null
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      460.8,
+      570.0,
+      484.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.2
+     }
+    }
+   ],
+   "text": "Use your graph in part (c) to find an estimate for",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        486.8,
+        570.0,
+        536.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 10.9,
+        "height_pt": 49.2
+       }
+      }
+     ],
+     "text": "the upper quartile\n............................................ cm [1]",
+     "marks": 1,
+     "path": "4(d)(i)",
+     "mark_scheme": [
+      {
+       "label": "4(d)(i)",
+       "text": "175 to 176.5",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.31999969482422,
+          713.6,
+          549.0999755859375,
+          741.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "the upper quartile",
+       "text": "the upper quartile"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "unit": "cm"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        538.8,
+        570.0,
+        617.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 40.4,
+        "height_pt": 78.7
+       }
+      }
+     ],
+     "text": "the percentage of students who are less than 162 cm in height.\n............................................. % [2]",
+     "marks": 2,
+     "path": "4(d)(ii)",
+     "mark_scheme": [
+      {
+       "label": "4(d)(ii)",
+       "text": "18 to 20",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.31999969482422,
+          89.4,
+          549.0999755859375,
+          142.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "the percentage of students who are less than 162 cm in height.",
+       "text": "the percentage of students who are less than 162 cm in height."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "unit": "%"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "4(d)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your graph in <b>part (c)</b> to find an estimate for",
+     "text": "Use your graph in part (c) to find an estimate for"
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "4",
+   "text": "In parts (b), (c) and (d), marks can only be earned with an increasing curve",
+   "codes": [],
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      46.31999969482422,
+      565.1,
+      549.0999755859375,
+      589.6
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_long_answer",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The heights, <i>x</i> cm, of 500 students in a school are shown in the table.",
+   "text": "The heights, x cm, of 500 students in a school are shown in the table."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Height (<i>x</i>)",
+     "Frequency"
+    ],
+    [
+     "150 1 <i>x</i> G 155",
+     "24"
+    ],
+    [
+     "155 1 <i>x</i> G 160",
+     "42"
+    ],
+    [
+     "160 1 <i>x</i> G 165",
+     "84"
+    ],
+    [
+     "165 1 <i>x</i> G 170",
+     "106"
+    ],
+    [
+     "170 1 <i>x</i> G 175",
+     "112"
+    ],
+    [
+     "175 1 <i>x</i> G 180",
+     "87"
+    ],
+    [
+     "180 1 <i>x</i> G 185",
+     "45"
+    ]
+   ]
+  }
+ ]
+}

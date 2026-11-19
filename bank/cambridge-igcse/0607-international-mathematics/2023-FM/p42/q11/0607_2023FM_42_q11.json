@@ -1,0 +1,368 @@
+{
+ "id": "0607_2023FM_42_q11",
+ "number": 11,
+ "segments": [
+  {
+   "page": 18,
+   "bbox": [
+    30.0,
+    56.6,
+    570.0,
+    320.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 53.0,
+    "height_pt": 263.4
+   }
+  }
+ ],
+ "text": "11\nA\nNOT TO\nSCALE\nO\nrcm\nC\nB\nThe diagram shows an equilateral triangle ABC touching a circle, centre O and radius r cm.",
+ "marks": 10,
+ "figures": [
+  {
+   "caption": null,
+   "page": 18,
+   "bbox": [
+    156.9,
+    76.0,
+    428.3,
+    284.8
+   ],
+   "id": "0607_2023FM_42_q11_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 19,
+   "bbox": [
+    159.4,
+    76.0,
+    438.1,
+    310.9
+   ],
+   "id": "0607_2023FM_42_q11b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 18,
+       "bbox": [
+        30.0,
+        322.5,
+        570.0,
+        557.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 190.1,
+        "height_pt": 234.5
+       }
+      }
+     ],
+     "text": "33\n2\n2.\n(a) (i) Show that the area of triangle ABC is\nr\ncm\n4\n[4]",
+     "marks": 4,
+     "path": "11(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "11(a)(i)",
+       "text": "Fully correct method for area\nCompletion to answer with no errors",
+       "codes": [
+        "M3",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 9,
+         "bbox": [
+          46.31999969482422,
+          89.4,
+          549.0999755859375,
+          482.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Show that the area of triangle <i>ABC</i> is \\(\\frac{3 3}{4}\\) <i>r</i><sup>2</sup> cm<sup>2</sup> .",
+       "text": "Show that the area of triangle ABC is (33)/(4) r2 cm2 ."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 190.1
+      },
+      {
+       "type": "marks",
+       "value": 4
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 18,
+       "bbox": [
+        30.0,
+        559.9,
+        570.0,
+        653.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 52.9,
+        "height_pt": 93.1
+       }
+      }
+     ],
+     "text": "Find an expression, in terms of r and r, for the exact value of the shaded area.\n......................................... cm2 [1]",
+     "marks": 1,
+     "path": "11(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "11(a)(ii)",
+       "text": "3 3\nπr −\n2\n2\nr oe\n4",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 9,
+         "bbox": [
+          46.31999969482422,
+          482.1,
+          549.0999755859375,
+          525.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find an expression, in terms of r and <i>r</i>, for the exact value of the shaded area.",
+       "text": "Find an expression, in terms of r and r, for the exact value of the shaded area."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "unit": "cm2"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "11(a)"
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 19,
+     "bbox": [
+      30.0,
+      56.6,
+      570.0,
+      619.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 231.5,
+      "height_pt": 562.9
+     }
+    }
+   ],
+   "text": "D\nA\nNOT TO\nSCALE\nO\nrcm\nB\nC\nE\nF\nAnother equilateral triangle DEF is touching the same circle.\nFind an expression, in terms of r and r, for the exact value of this shaded area.\n........................................  cm2 [3]",
+   "marks": 3,
+   "path": "11(b)",
+   "mark_scheme": [
+    {
+     "label": "11(b)",
+     "text": "2\n2\n[Area =] 3 3r −πr oe",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        46.31999969482422,
+        525.0,
+        549.0999755859375,
+        600.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "figure",
+     "id": "0607_2023FM_42_q11b_diagram2",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Another equilateral triangle <i>DEF</i> is touching the same circle. Find an expression, in terms of r and <i>r</i>, for the exact value of this shaded area.",
+     "text": "Another equilateral triangle DEF is touching the same circle. Find an expression, in terms of r and r, for the exact value of this shaded area."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "cm2"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 19,
+     "bbox": [
+      30.0,
+      622.1,
+      570.0,
+      762.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 75.9,
+      "height_pt": 140.4
+     }
+    }
+   ],
+   "text": "Find in its simplest form the ratio\nperimeter of triangle ABC  :  perimeter of triangle DEF .\n......................  :  ...................... [2]",
+   "marks": 2,
+   "path": "11(c)",
+   "mark_scheme": [
+    {
+     "label": "11(c)",
+     "text": "1 : 2",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        46.31999969482422,
+        600.0,
+        549.0999755859375,
+        624.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find in its simplest form the ratio",
+     "text": "Find in its simplest form the ratio"
+    },
+    {
+     "type": "text",
+     "html": "perimeter of triangle <i>ABC</i> : perimeter of triangle <i>DEF</i> .",
+     "text": "perimeter of triangle ABC : perimeter of triangle DEF ."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_long_answer",
+ "total_marks": 10,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>11</b>",
+   "text": "11"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2023FM_42_q11_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The diagram shows an equilateral triangle <i>ABC</i> touching a circle, centre <i>O</i> and radius <i>r </i>cm.",
+   "text": "The diagram shows an equilateral triangle ABC touching a circle, centre O and radius r cm."
+  }
+ ]
+}

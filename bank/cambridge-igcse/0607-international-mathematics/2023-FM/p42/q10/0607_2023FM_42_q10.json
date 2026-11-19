@@ -1,0 +1,206 @@
+{
+ "id": "0607_2023FM_42_q10",
+ "number": 10,
+ "segments": [
+  {
+   "page": 16,
+   "bbox": [
+    30.0,
+    56.6,
+    570.0,
+    363.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 75.4,
+    "height_pt": 306.4
+   }
+  }
+ ],
+ "text": "10\nB\nA\nC\n28°\n63°\nNOT TO\nSCALE\nxm\nD\nA plane is flying in a straight line ABC at a constant height, x metres, above ground level.\nThe point D is on the ground directly below C.\nThe plane is travelling at a constant speed of 480 km/h.\nThe time taken for the plane to travel from A to B is 18 seconds.",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 16,
+   "bbox": [
+    95.4,
+    72.4,
+    494.4,
+    276.9
+   ],
+   "id": "0607_2023FM_42_q10_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      365.9,
+      570.0,
+      600.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 190.1,
+      "height_pt": 234.6
+     }
+    }
+   ],
+   "text": "x\n(a) Show that, in metres,\nAC\n2400\n.\n=\n+\ntan\n63\n[3]",
+   "marks": 3,
+   "path": "10(a)",
+   "mark_scheme": [
+    {
+     "label": "10(a)",
+     "text": "x\nx\ntan63=\nor BC=\nBC\ntan63\n1000\nAB=480×\n×18\noe\n3600\nAB=2400\nx\nAC =\n+2400\ntan63",
+     "codes": [
+      "B1",
+      "M1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.31999969482422,
+        504.3,
+        549.0999755859375,
+        644.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that, in metres, <i>AC</i> = \\(\\frac{x}{\\tan 63}\\) + 2400 .",
+     "text": "Show that, in metres, AC = (x)/(tan63) + 2400 ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 190.1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      433.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "x=  …… [5]",
+      "working_gap_pt": 337.9,
+      "height_pt": 376.7
+     }
+    }
+   ],
+   "text": "Find the value of x.\nx=  ................................................ [5]",
+   "marks": 5,
+   "path": "10(b)",
+   "mark_scheme": [
+    {
+     "label": "10(b)",
+     "text": "1750 or 1750.[…]",
+     "codes": [
+      "5"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        46.31999969482422,
+        89.4,
+        549.0999755859375,
+        381.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the value of <i>x</i>.",
+     "text": "Find the value of x."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "x ="
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_long_answer",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>10</b>",
+   "text": "10"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2023FM_42_q10_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "A plane is flying in a straight line <i>ABC</i> at a constant height, <i>x</i> metres, above ground level. The point <i>D</i> is on the ground directly below <i>C</i>. The plane is travelling at a constant speed of 480 km/h. The time taken for the plane to travel from <i>A</i> to <i>B</i> is 18 seconds.",
+   "text": "A plane is flying in a straight line ABC at a constant height, x metres, above ground level. The point D is on the ground directly below C. The plane is travelling at a constant speed of 480 km/h. The time taken for the plane to travel from A to B is 18 seconds."
+  }
+ ]
+}

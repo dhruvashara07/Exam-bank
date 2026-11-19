@@ -1,0 +1,269 @@
+{
+ "id": "0607_2023FM_32_q06",
+ "number": 6,
+ "segments": [],
+ "text": "",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      117.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 10.9,
+      "height_pt": 60.2
+     }
+    }
+   ],
+   "text": "6\n(a) This is the start of a sequence.\nThe first term and the fifth term are missing.\n.......  55  63  71  .......  87  95",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        30.0,
+        121.8,
+        570.0,
+        197.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 2,
+        "answer_line": "First term = ……",
+        "working_gap_pt": 10.9,
+        "height_pt": 75.2
+       }
+      }
+     ],
+     "text": "Find the first term and the fifth term of this sequence.\nFirst term = .................................................\nFifth term = ................................................. [2]",
+     "marks": 2,
+     "path": "6(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(a)(i)",
+       "text": "47\n79",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.31999969482422,
+          302.1,
+          549.0999755859375,
+          339.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the first term and the fifth term of this sequence.",
+       "text": "Find the first term and the fifth term of this sequence."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "First term ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Fifth term ="
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        30.0,
+        199.8,
+        570.0,
+        340.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 101.9,
+        "height_pt": 140.2
+       }
+      }
+     ],
+     "text": "Find the nth term of this sequence.\n................................................. [2]",
+     "marks": 2,
+     "path": "6(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "6(a)(ii)",
+       "text": "8n + 39 oe final answer",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.31999969482422,
+          339.1,
+          549.0999755859375,
+          363.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the <i>n</i>th term of this sequence.",
+       "text": "Find the nth term of this sequence."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "6(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> This is the start of a sequence.",
+     "text": "This is the start of a sequence."
+    },
+    {
+     "type": "text",
+     "html": "The first term and the fifth term are missing.",
+     "text": "The first term and the fifth term are missing."
+    },
+    {
+     "type": "text",
+     "html": "....... 55 63 71 ....... 87 95",
+     "text": "....... 55 63 71 ....... 87 95"
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      342.8,
+      570.0,
+      574.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 166.9,
+      "height_pt": 231.2
+     }
+    }
+   ],
+   "text": "+\n(b) Another sequence has nth term   n\n2\n3\nn\n.\nWork out the first 3 terms of this sequence.\n....................... , ...................... , ....................... [2]",
+   "marks": 2,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "5, 14, 27",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.31999969482422,
+        363.5,
+        549.0999755859375,
+        400.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "+",
+     "text": "+"
+    },
+    {
+     "type": "text",
+     "html": "Another sequence has <i>n</i>th term 2<i>n</i><sup>2</sup> 3<i>n</i>. Work out the first 3 terms of this sequence.",
+     "text": "Another sequence has nth term 2n2 3n. Work out the first 3 terms of this sequence."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 3,
+ "variant": 2,
+ "paper_code": "0607/32",
+ "paper_type": "core_long_answer",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

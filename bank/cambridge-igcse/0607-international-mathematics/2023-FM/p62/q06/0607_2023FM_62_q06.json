@@ -1,0 +1,256 @@
+{
+ "id": "0607_2023FM_62_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 14,
+   "bbox": [
+    30.0,
+    355.8,
+    570.0,
+    718.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 35.2,
+    "height_pt": 362.2
+   }
+  }
+ ],
+ "text": "6\nJin changes the route of the ferry so that it makes a stop before it arrives at the mainland.\nWhen there are at least 10 passengers, the ferry\n•\nstarts at the island (I)\n•\ntravels to another island (A)\n•\nwaits 16 minutes then\n•\ntravels to the mainland (M).\nThe diagram shows the ferry journey and the distance, in km, of each part.\nA\n1km\nNOT TO\nM\nSCALE\n4km\nI\nThe table shows the speed of the ferry and the speed of the water, in km/h, for each part of the journey.\nI to A\nA to M\nSpeed of ferry\nv\nv\n1\n-\nSpeed of water\n2\n1",
+ "marks": 6,
+ "figures": [
+  {
+   "caption": null,
+   "page": 14,
+   "bbox": [
+    178.7,
+    503.4,
+    419.1,
+    607.7
+   ],
+   "id": "0607_2023FM_62_q06_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      431.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 244.9,
+      "height_pt": 374.2
+     }
+    }
+   ],
+   "text": "Jin finds a model for the total time, tminutes, the ferry takes from when it returns to the island to\nwhen it next arrives at the mainland.\nHe uses the mean time from the model in Question 5(a).\n2\nkv\n(\n12\nv\n4\n)\n+\n+\nHis model is\nt\nwhere k is an integer.\n=\nvv\n(\n2\n)\n+\nFind the value of k.\n................................................. [4]",
+   "marks": 4,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "240\n60\nv+2\n+\n+16+their14 oe\n[t =]\nv\n240v+60(v+2)+30v (v+2)\nt =\nor better\nv (v+2)\n30 nfww",
+     "codes": [
+      "C2",
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        46.31999969482422,
+        89.4,
+        549.0999755859375,
+        239.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Jin finds a model for the total time, <i>t</i> <b>minutes</b>, the ferry takes from when it returns to the island to when it next arrives at the mainland. He uses the mean time from the model in<b> Question 5(a)</b>.",
+     "text": "Jin finds a model for the total time, t minutes, the ferry takes from when it returns to the island to when it next arrives at the mainland. He uses the mean time from the model in Question 5(a)."
+    },
+    {
+     "type": "text",
+     "html": "<sup>2</sup>",
+     "text": "2"
+    },
+    {
+     "type": "text",
+     "html": "His model is <i>t</i> = \\(\\frac{k (v + 12v + 4)}{v (v + 2)}\\) where <i>k</i> is an integer.",
+     "text": "His model is t = (k(v+12v+4))/(v(v+2)) where k is an integer."
+    },
+    {
+     "type": "text",
+     "html": "Find the value of <i>k</i>.",
+     "text": "Find the value of k."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      433.8,
+      570.0,
+      756.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 231.9,
+      "height_pt": 322.2
+     }
+    }
+   ],
+   "text": "For this route, the maximum value of v, the speed of the ferry, is 40 km/h.\nJin wants the total time from when the ferry returns to the island to when it next arrives at the\nmainland to be no more than 35 minutes.\nWork out if it is possible for the ferry to complete the journey in this time.\n..................................................................................................................................................... [2]",
+   "marks": 2,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "30(40 +12(40)+4)\n2\nt =\noe\n40(42)\n(\n)\n(their30) v +12v+4\n2\nor 35=\noe\nv (v+2)\nNo and t = 37[.21… minutes]\nor No and v = 58[.41… km/h]",
+     "codes": [
+      "C1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        46.31999969482422,
+        239.1,
+        549.0999755859375,
+        364.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "For this route, the maximum value of <i>v</i>, the speed of the ferry, is 40 km/h. Jin wants the total time from when the ferry returns to the island to when it next arrives at the mainland to be no more than 35 minutes. Work out if it is possible for the ferry to complete the journey in this time.",
+     "text": "For this route, the maximum value of v, the speed of the ferry, is 40 km/h. Jin wants the total time from when the ferry returns to the island to when it next arrives at the mainland to be no more than 35 minutes. Work out if it is possible for the ferry to complete the journey in this time."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2023,
+ "session": "FM",
+ "season": "February-March",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Jin changes the route of the ferry so that it makes a stop before it arrives at the mainland. When there are at least 10 passengers, the ferry",
+   "text": "Jin changes the route of the ferry so that it makes a stop before it arrives at the mainland. When there are at least 10 passengers, the ferry"
+  },
+  {
+   "type": "list",
+   "items": [
+    "starts at the island (I)",
+    "travels to another island (A)",
+    "waits 16 minutes then",
+    "travels to the mainland (M)."
+   ]
+  },
+  {
+   "type": "text",
+   "html": "The diagram shows the ferry journey and the distance, in km, of each part.",
+   "text": "The diagram shows the ferry journey and the distance, in km, of each part."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2023FM_62_q06_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The table shows the speed of the ferry and the speed of the water, in km/h, for each part of the journey.",
+   "text": "The table shows the speed of the ferry and the speed of the water, in km/h, for each part of the journey."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "",
+     "I to A",
+     "A to M"
+    ],
+    [
+     "Speed of ferry",
+     "<i>v</i>",
+     "<i>v</i> - 1"
+    ],
+    [
+     "Speed of water",
+     "2",
+     "1"
+    ]
+   ]
+  }
+ ]
+}
