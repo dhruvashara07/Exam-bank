@@ -719,6 +719,7 @@ def diagrams(doc, seg, lines, captioned):
                         tb = fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1'])
                         if O.contains(tb) and tb.y1 < bx.y0 - 1 and tb.intersects(H + (-14, -12, 14, 12)):
                             H |= tb
+                    H = H + (-1.5, -1.5, 1.5, 1.5)        # the stroke's width (the circle's bottom was shaved flat)
                     o['bbox'] = [round(v, 1) for v in H]
                     tables.append(fitz.Rect(bx))
                     break
