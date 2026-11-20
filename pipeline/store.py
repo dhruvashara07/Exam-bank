@@ -645,7 +645,15 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
             txt_ = ' '.join(w[4] for w in same_).strip()
             if not txt_ or re.search(r'NOT|SCALE', txt_):
                 continue
-            outside_ = any(w[2] < b.x0 - 1 or w[0] > b.x1 + 1 for w in same_) and len(txt_) > 8
+            run_ = [w for w in same_ if w[0] < l.x1 + 1 and w[2] > l.x0 - 1]   # only the line's OWN words, chained by
+            for w in same_:                                              # word gaps (< 12 pt): an axis title and the
+                if w not in run_ and any(abs(w[0] - v[2]) < 12 or abs(v[0] - w[2]) < 12 for v in run_):   # mark '[2]',
+                    run_.append(w)                                       # or two tree labels, are no running sentence
+            for w in reversed(same_):                                    # (2022 MJ 32 q10 lost its x axis, 2023 MJ 32
+                if w not in run_ and any(abs(w[0] - v[2]) < 12 or abs(v[0] - w[2]) < 12 for v in run_):   # q11, M2 p3)
+                    run_.append(w)
+            run_ = [w for w in run_ if not re.fullmatch(r'\[\d+\]', w[4])]
+            outside_ = any(w[2] < b.x0 - 1 or w[0] > b.x1 + 1 for w in run_) and len(' '.join(w[4] for w in run_)) > 8
             q_ = (re.match(r'^\(?([a-z]|[ivx]{1,4})\)\s', txt_ + ' ') or (re.match(r'^\d{1,2}(\s+\(|\s*$)', txt_) and same_[0][0] < 62)
                   or ('=' in txt_ and re.search(r'\bfor\b', txt_)) or re.match(r'^[a-z]\s*\(\s*x\s*\)', txt_) or outside_)
             if q_:              # the cut passes the line's OWN strokes too (|..| bars, roots, numerators reach out of

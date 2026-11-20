@@ -296,6 +296,8 @@ def pass2(batch, o):
         r['pass2'] = 'present' if here else 'gone'
         if r['status'] in ('fixed', 'verified', 'not fixed'):
             if r['check'] in ALWAYS:   # a picture / table cell is listed whatever its state: fixed = the question changed
+                if r['status'] == 'verified':   # verified by an EARLIER pass: unchanged since is right (pass 3 listed 19
+                    continue                    # of them as 'not fixed', M2)
                 here = '_'.join(r['qid'].split('_')[:4]) not in moved
             r['status'] = 'not fixed' if here else 'verified'
             rep[r['status']].append(r)

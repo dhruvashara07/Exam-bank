@@ -544,11 +544,20 @@ def diagrams(doc, seg, lines, captioned):
                 abs(x.x0 - r.x0) < 2 or abs(x.x1 - r.x1) < 2 or abs(x.y0 - r.y0) < 2 or abs(x.y1 - r.y1) < 2 for x in c['rs']):
             tables.append(fitz.Rect(r))
             continue                                       # a box of words (arc / sector / ...): text + rules, no picture (round 28)
+        if maths_doc(doc) and inside and r.height < 60 and len(inside) <= 2 and all(
+                min(abs(x.x0 - r.x0), abs(x.x1 - r.x1)) < 3 or min(abs(x.y0 - r.y0), abs(x.y1 - r.y1)) < 3 for x in c['rs']):
+            tables.append(fitz.Rect(r))                # a formula in a ROUNDED box (corners are curves, not aligned rules:
+            continue                                   # 'profit = income ... - his costs', 2022 ON 61 q6, M2): text + box
         # labels touching the drawing (A, B, 68°, x, y, axis numbers) belong to it; sentences do not
         box = fitz.Rect(r)
+        wbox_ = [d_['rect'] for d_ in page.get_drawings() if maths_doc(doc) and d_['rect'].width > 100 and d_['rect'].height > 20
+                 and not (d_['rect'] & r).get_area() and sum(1 for t in tboxes if d_['rect'].contains(t)) >= 3]
+        #   (words in a separate drawn box - the word list under the circle, 2023 MJ 11 q3, M2 - are never its labels)
         for _ in range(3):
             for t in text:
                 tb = fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1'])
+                if any(w_.contains(tb) for w_ in wbox_):
+                    continue
                 if re.search(r'NOT TO SCALE|^NOT\s+TO$|^SCALE$', t['text'].strip()) and tb.intersects(box + (-200, -30, 200, 30)):
                     box |= tb
                 elif tb.intersects(box + (-14, -12, 14, 12)) and _label_like(t, tb, box, text):
@@ -558,6 +567,7 @@ def diagrams(doc, seg, lines, captioned):
         for _ in range(2):                              # axis titles printed sideways, tick labels and point names a little further out
             for lt, lb in dl:
                 if lt and lb.intersects(box + (-26, -16, 26, 16)) and not lb.intersects(box) and len(lt) <= 22 and y0s - 1 <= lb.y0 \
+                        and not any(w_.contains(lb) for w_ in wbox_) \
                         and lb.y1 <= y1s + 1 and not (re.fullmatch(r'\d{1,2}', lt) and lb.x0 < 62) and not DOTS.search(lt) and not MARK.fullmatch(lt) and not (re.fullmatch(r'\d{1,2}', lt) and lb.x0 < 62) and not re.match(r'^\(?[a-z]\)|^\([ivx]+\)', lt) \
                         and not any(abs(ob.y0 - lb.y0) < 2 and len(ot) > 22 for ot, ob in dl):
                     box |= lb
@@ -662,12 +672,81 @@ def diagrams(doc, seg, lines, captioned):
                     break
             if merged:
                 break
+    if maths_doc(doc):          # one cluster holding two pictures stacked closer than 10 pt, each with its own text line
+        for o in list(out):     # beside it ('Step 1 ...' / 'Step 2 ...', 2023 MJ 53 q3 / 63 q3): split at the empty band
+            O = fitz.Rect(o['bbox'])
+            side = sorted((t['y0'] + t['y1']) / 2 for t in text if len(t['text'].strip()) >= 8
+                          and (t['x1'] < O.x0 - 4 or t['x0'] > O.x1 + 4) and O.y0 - 20 <= (t['y0'] + t['y1']) / 2 <= O.y1)
+            if len(side) < 2 or side[-1] - side[0] < 0.3 * O.height:
+                continue
+            ink = [r for r in items if (r & O).get_area() > 0 or O.contains(r)]
+            ink += [fitz.Rect(t['x0'], t['y0'] + 0.25 * (t['y1'] - t['y0']), t['x1'], t['y1'] - 0.2 * (t['y1'] - t['y0']))
+                    for t in text if O.contains(fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']))]   # (glyph height, not line box)
+            best = None
+            for y in range(int(max(side[0], O.y0)) + 20, int(side[-1])):
+                if not any(r.y0 - 1 < y < r.y1 + 1 for r in ink):
+                    best = y if best is None or abs(y - (side[0] + side[-1]) / 2) < abs(best - (side[0] + side[-1]) / 2) else best
+            if best is None:
+                continue
+            up = [r for r in ink if r.y1 <= best]; dn = [r for r in ink if r.y0 >= best]
+            if not up or not dn:
+                continue
+            u_, d_ = fitz.Rect(up[0]), fitz.Rect(dn[0])
+            for r in up: u_ |= r
+            for r in dn: d_ |= r
+            o['bbox'] = [round(v, 1) for v in u_]
+            out.insert(out.index(o) + 1, dict(o, bbox=[round(v, 1) for v in d_]))
+    if maths_doc(doc):          # a box of words printed under (or over) a diagram, closer than the 10 pt cluster gap: the
+        for o in list(out):     # crop took it ('an obtuse / a chord / ...' under the circle, 2023 MJ 11 q3, M2) -> the box
+            O = fitz.Rect(o['bbox'])                   # is text + rules, the crop keeps the drawing only
+            ink = [r for r in items if (O + (-3, -3, 3, 3)).intersects(r) or (O + (-3, -3, 3, 3)).contains(r)]
+            for bx in [r for r in ink if r.width > 0.6 * O.width and r.height > 20]:     # a drawn box ('re')
+                txt_in = [t for t in text if bx.contains(fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']))]
+                hi = [r for r in ink if r is not bx and r.y1 < bx.y0 - 4]
+                if len(txt_in) >= 3 and hi and all(r is bx or r.y1 < bx.y0 - 4 or bx.contains(r) for r in ink):
+                    H = fitz.Rect(hi[0])
+                    for r in hi:
+                        H |= r
+                    for t in text:
+                        tb = fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1'])
+                        if O.contains(tb) and tb.y1 < bx.y0 - 1 and tb.intersects(H + (-14, -12, 14, 12)):
+                            H |= tb
+                    o['bbox'] = [round(v, 1) for v in H]
+                    tables.append(fitz.Rect(bx))
+                    break
+    def own_side_text(A, B_):                        # stacked crops that each have their own text line beside them
+        side = [fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']) for t in text if len(t['text'].strip()) >= 8]   # ('Step 1
+        side = [t for t in side if t.x1 < min(A.x0, B_.x0) - 4 or t.x0 > max(A.x1, B_.x1) + 4]   # Draw a square ...' /
+        inA = any(A.y0 - 20 <= (t.y0 + t.y1) / 2 <= A.y1 for t in side)                # 'Step 2 Fill ...' beside two
+        inB = any(B_.y0 - 20 <= (t.y0 + t.y1) / 2 <= B_.y1 for t in side)              # grids, 2023 MJ 53 q3 / 63 q3):
+        return maths_doc(doc) and inA and inB                                          # two pictures (M2 round 34)
+    if maths_doc(doc):                               # a tree printed as two clusters (branches end at their labels, the
+        merged = True                                # '0.80 / wakes before 7am' labels between): one picture when only short
+        while merged:                                # labels lie between them (2023 MJ 32 q11 tree in 2 crops, M2)
+            merged = False
+            for a in out:
+                for b in out:
+                    A, B_ = fitz.Rect(a['bbox']), fitz.Rect(b['bbox'])
+                    hov = min(A.x1, B_.x1) - max(A.x0, B_.x0)
+                    if a is b or not (0 <= B_.y0 - A.y1 < 20) or hov < 0.3 * min(A.width, B_.width) or own_side_text(A, B_):
+                        continue
+                    if any(any(abs(d_['rect'].x0 - X.x0) < 4 and abs(d_['rect'].x1 - X.x1) < 4 and abs(d_['rect'].y0 - X.y0) < 4
+                               and abs(d_['rect'].y1 - X.y1) < 4 for d_ in page.get_drawings()) for X in (A, B_)):
+                        continue        # one of them is a single drawn box (a word list, 2023 MJ 11 q3): no tree half
+                    gapr = fitz.Rect(min(A.x0, B_.x0) - 120, A.y1, max(A.x1, B_.x1), B_.y0)
+                    if not any((fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']) & gapr).get_area() > 4 and len(t['text'].strip()) > 22
+                               for t in text):
+                        a['bbox'] = list(A | B_); out.remove(b); merged = True
+                        break
+                if merged:
+                    break
     merged = True                                    # crops that touch or overlap are one diagram (round 27: '2 images')
     while merged:
         merged = False
         for a in out:
             for b in out:
-                if a is not b and (fitz.Rect(a['bbox']) + (-3, -3, 3, 3)).intersects(fitz.Rect(b['bbox'])):
+                if a is not b and (fitz.Rect(a['bbox']) + (-3, -3, 3, 3)).intersects(fitz.Rect(b['bbox'])) \
+                        and not own_side_text(fitz.Rect(a['bbox']), fitz.Rect(b['bbox'])):
                     a['bbox'] = list(fitz.Rect(a['bbox']) | fitz.Rect(b['bbox'])); out.remove(b); merged = True
                     break
             if merged:

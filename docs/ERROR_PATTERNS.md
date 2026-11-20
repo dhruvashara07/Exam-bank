@@ -582,3 +582,12 @@ the circle's crop (2023 MJ 11 q3), a rounded formula box kept as a picture (2022
     -> the grid rule needs cell fills; fill edges become row lines; text left of the first column rule joins the table.
 Lesson (M2): the pass-2 diff caught my own collateral (229) BEFORE Dhruv's round - the flow works; my one-off visual check
 of a fix must include one 'look-alike that must NOT change' (boxes, grids) next to the target.
+230. (pass 3) Pattern 225's 'sentence running past the crop' joined every word on the row: an axis title plus the mark
+    '[2]' (2022 MJ 32 q10 lost its x axis) and two tree labels ('0.80' + 'on time') counted as one sentence. -> only the
+    line's own words, chained by word gaps < 12 pt; marks '[n]' never count.
+231. Figure grouping (maths): a tree printed as two clusters (2023 MJ 32 q11) -> stacked crops with only short labels
+    between are one picture; two grids each with their own 'Step' text beside them in one 10 pt cluster (2023 MJ 53 q3 /
+    63 q3) -> split at the empty band, never re-merged; a drawn box of words under a circle (2023 MJ 11 q3) -> its words
+    are no labels and the box is text + rules; a formula in a ROUNDED box (2022 ON 61 q6) -> text + box, no picture.
+(tool) reasons.py pass 2 re-judged 'verified' picture / table reasons against the newest fingerprints: 19 false 'not
+fixed' in pass 3 -> verified stays verified.

@@ -224,6 +224,22 @@
    "fix": "needs fills; fill edges = rows",
    "found_by": "claude",
    "at": "2026-11-19T11:30:49+00:00"
+  },
+  {
+   "pattern": "230",
+   "kind": "repeat",
+   "what": "pass 3: my 225 cut an x axis / tree",
+   "fix": "line's own words only",
+   "found_by": "claude",
+   "at": "2026-11-20T08:57:21+00:00"
+  },
+  {
+   "pattern": "231",
+   "kind": "new",
+   "what": "figure grouping: tree split, step grids merged, word box in crop, rounded formula box",
+   "fix": "extract.diagrams rules (maths)",
+   "found_by": "claude",
+   "at": "2026-11-20T08:57:21+00:00"
   }
  ],
  "tokens": [],
@@ -391,6 +407,14 @@
   {
    "at": "2026-11-19T11:31:04+00:00",
    "task": "push pass-2 fixes; dispatch pass 3"
+  },
+  {
+   "at": "2026-11-20T08:57:21+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-20T08:57:21+00:00",
+   "task": "error M2 --pattern"
   }
  ]
 }
