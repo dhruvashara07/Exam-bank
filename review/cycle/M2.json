@@ -248,6 +248,14 @@
    "fix": "narrowed; 28 look-alikes re-tested",
    "found_by": "claude",
    "at": "2026-11-20T09:56:21+00:00"
+  },
+  {
+   "pattern": "233",
+   "kind": "new",
+   "what": "stored crop grew into a sibling grid",
+   "fix": "clamp at sibling figures (3 of 423 change)",
+   "found_by": "claude",
+   "at": "2026-11-20T10:08:15+00:00"
   }
  ],
  "tokens": [],
@@ -426,6 +434,10 @@
   },
   {
    "at": "2026-11-20T09:56:21+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-20T10:08:15+00:00",
    "task": "error M2 --pattern"
   }
  ]

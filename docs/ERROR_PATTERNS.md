@@ -599,3 +599,6 @@ fixed' in pass 3 -> verified stays verified.
     branch of the other leaves just right of it (a NODE); split: side text >= 15 chars and both halves >= 40 pt.
     Re-tested on all 28 affected questions: targets right, every other crop back to its pre-M2 (approved) box.
     Lesson: a grouping rule is tested on its target AND on the 20+ look-alikes the diff names, before any push.
+233. (round 34 prep) After the 231 split, the lower 'Step 2' grid's stored crop grew up into the upper grid's x axis
+    (fit_crop grows over ink crossing its edge). -> maths: a stored crop never grows into a sibling figure of the same
+    page. Blast radius measured on all 423 figures with a sibling: 3 change (the target + 2 circles, all right).

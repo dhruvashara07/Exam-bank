@@ -760,7 +760,17 @@ def save_figure(f, q, meta, qdoc, store):
     if not f.get('mask'):
         FOREIGN.clear()
         import subjects
-        nb = fit_crop(pg, b, maths=subjects.subject(meta['syllabus'])['maths_text'])
+        mx_ = subjects.subject(meta['syllabus'])['maths_text']
+        nb = fit_crop(pg, b, maths=mx_)
+        if mx_:                 # maths: a crop never grows into a sibling figure of the same page (the lower 'Step 2' grid
+            for g_ in q.get('figures', []):        # took the upper grid's x axis, 2023 MJ 63 q3, M2 round 34)
+                G = fitz.Rect(g_['bbox'])
+                if g_ is f or g_.get('id') == f.get('id') or g_['page'] != f['page'] or G.intersects(b):
+                    continue
+                if G.y1 <= b.y0 + 1 and nb.y0 < G.y1:
+                    nb.y0 = min(b.y0, G.y1 + 1)
+                if G.y0 >= b.y1 - 1 and nb.y1 > G.y0:
+                    nb.y1 = max(b.y1, G.y0 - 1)
         if nb != b:
             f = dict(f, bbox=list(nb), svg=None); b = nb
         clash = bool(FOREIGN)                     # Dhruv, round 17: no clean cut without the neighbour's ink -> nothing is
