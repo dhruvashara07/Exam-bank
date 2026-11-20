@@ -591,3 +591,11 @@ of a fix must include one 'look-alike that must NOT change' (boxes, grids) next 
     are no labels and the box is text + rules; a formula in a ROUNDED box (2022 ON 61 q6) -> text + box, no picture.
 (tool) reasons.py pass 2 re-judged 'verified' picture / table reasons against the newest fingerprints: 19 false 'not
 fixed' in pass 3 -> verified stays verified.
+232. (pass 4) My first versions of the 231 rules were too wide - the pass-4 diff showed 34 + 20 collateral questions:
+    the 'rounded box = text' rule dropped real diagrams (a number line, a triangle, cubes with NOT TO SCALE), the tree
+    merge joined grid rows / diagram pairs, the word-box rule cut 'x cm' labels of a shape beside another shape, and the
+    stacked split broke a circle from its label. -> rounded box: ONE line >= 15 chars between full-width top and bottom
+    edges; word box: one drawn rectangle with only text in it; tree merge: a branch of one crop ends at a label and a
+    branch of the other leaves just right of it (a NODE); split: side text >= 15 chars and both halves >= 40 pt.
+    Re-tested on all 28 affected questions: targets right, every other crop back to its pre-M2 (approved) box.
+    Lesson: a grouping rule is tested on its target AND on the 20+ look-alikes the diff names, before any push.

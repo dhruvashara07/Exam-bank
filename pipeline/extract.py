@@ -544,14 +544,22 @@ def diagrams(doc, seg, lines, captioned):
                 abs(x.x0 - r.x0) < 2 or abs(x.x1 - r.x1) < 2 or abs(x.y0 - r.y0) < 2 or abs(x.y1 - r.y1) < 2 for x in c['rs']):
             tables.append(fitz.Rect(r))
             continue                                       # a box of words (arc / sector / ...): text + rules, no picture (round 28)
-        if maths_doc(doc) and inside and r.height < 60 and len(inside) <= 2 and all(
+        if maths_doc(doc) and r.height < 60 and len(inside) == 1 and len(inside[0]['text'].strip()) >= 15 \
+                and inside[0]['x1'] - inside[0]['x0'] > 0.5 * r.width \
+                and (sum(1 for x in c['rs'] if x.height < 1.6 and x.width > 0.8 * r.width) >= 2 or (len(c['rs']) <= 2 and any(
+                    abs(x.x0 - r.x0) < 2 and abs(x.x1 - r.x1) < 2 and abs(x.y0 - r.y0) < 2 and abs(x.y1 - r.y1) < 2 for x in c['rs']))) and all(
                 min(abs(x.x0 - r.x0), abs(x.x1 - r.x1)) < 3 or min(abs(x.y0 - r.y0), abs(x.y1 - r.y1)) < 3 for x in c['rs']):
+            #   (ONE long text line between a full-width top and bottom rule: never a small drawing with a label -
+            #    pass 4 dropped a number line, a triangle, cubes, M2)
             tables.append(fitz.Rect(r))                # a formula in a ROUNDED box (corners are curves, not aligned rules:
             continue                                   # 'profit = income ... - his costs', 2022 ON 61 q6, M2): text + box
         # labels touching the drawing (A, B, 68°, x, y, axis numbers) belong to it; sentences do not
         box = fitz.Rect(r)
         wbox_ = [d_['rect'] for d_ in page.get_drawings() if maths_doc(doc) and d_['rect'].width > 100 and d_['rect'].height > 20
-                 and not (d_['rect'] & r).get_area() and sum(1 for t in tboxes if d_['rect'].contains(t)) >= 3]
+                 and [i_[0] for i_ in d_['items']] == ['re'] and not (d_['rect'] & r).get_area()
+                 and sum(1 for t in tboxes if d_['rect'].contains(t)) >= 3
+                 and not any(d2['rect'] != d_['rect'] and d_['rect'].contains(d2['rect']) for d2 in page.get_drawings())]
+        #   (ONE drawn rectangle holding only text: another shape beside a shape is no word box - pass 4 cut 'x cm' labels)
         #   (words in a separate drawn box - the word list under the circle, 2023 MJ 11 q3, M2 - are never its labels)
         for _ in range(3):
             for t in text:
@@ -675,7 +683,7 @@ def diagrams(doc, seg, lines, captioned):
     if maths_doc(doc):          # one cluster holding two pictures stacked closer than 10 pt, each with its own text line
         for o in list(out):     # beside it ('Step 1 ...' / 'Step 2 ...', 2023 MJ 53 q3 / 63 q3): split at the empty band
             O = fitz.Rect(o['bbox'])
-            side = sorted((t['y0'] + t['y1']) / 2 for t in text if len(t['text'].strip()) >= 8
+            side = sorted((t['y0'] + t['y1']) / 2 for t in text if len(t['text'].strip()) >= 15
                           and (t['x1'] < O.x0 - 4 or t['x0'] > O.x1 + 4) and O.y0 - 20 <= (t['y0'] + t['y1']) / 2 <= O.y1)
             if len(side) < 2 or side[-1] - side[0] < 0.3 * O.height:
                 continue
@@ -689,7 +697,7 @@ def diagrams(doc, seg, lines, captioned):
             if best is None:
                 continue
             up = [r for r in ink if r.y1 <= best]; dn = [r for r in ink if r.y0 >= best]
-            if not up or not dn:
+            if not up or not dn or min(max(r.y1 for r in up) - min(r.y0 for r in up), max(r.y1 for r in dn) - min(r.y0 for r in dn)) < 40:
                 continue
             u_, d_ = fitz.Rect(up[0]), fitz.Rect(dn[0])
             for r in up: u_ |= r
@@ -715,7 +723,7 @@ def diagrams(doc, seg, lines, captioned):
                     tables.append(fitz.Rect(bx))
                     break
     def own_side_text(A, B_):                        # stacked crops that each have their own text line beside them
-        side = [fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']) for t in text if len(t['text'].strip()) >= 8]   # ('Step 1
+        side = [fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']) for t in text if len(t['text'].strip()) >= 15]  # ('Step 1
         side = [t for t in side if t.x1 < min(A.x0, B_.x0) - 4 or t.x0 > max(A.x1, B_.x1) + 4]   # Draw a square ...' /
         inA = any(A.y0 - 20 <= (t.y0 + t.y1) / 2 <= A.y1 for t in side)                # 'Step 2 Fill ...' beside two
         inB = any(B_.y0 - 20 <= (t.y0 + t.y1) / 2 <= B_.y1 for t in side)              # grids, 2023 MJ 53 q3 / 63 q3):
@@ -734,7 +742,18 @@ def diagrams(doc, seg, lines, captioned):
                                and abs(d_['rect'].y1 - X.y1) < 4 for d_ in page.get_drawings()) for X in (A, B_)):
                         continue        # one of them is a single drawn box (a word list, 2023 MJ 11 q3): no tree half
                     gapr = fitz.Rect(min(A.x0, B_.x0) - 120, A.y1, max(A.x1, B_.x1), B_.y0)
-                    if not any((fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']) & gapr).get_area() > 4 and len(t['text'].strip()) > 22
+                    ends_ = lambda X: [pt for d_ in page.get_drawings() if (X + (-8, -8, 8, 8)).intersects(d_['rect'])
+                                       for i_ in d_['items'] if i_[0] == 'l' for pt in i_[1:3] if (X + (-8, -8, 8, 8)).contains(pt)]
+                    eA, eB = ends_(A), ends_(B_)
+                    def at_(pts, x, t):
+                        return any(abs(pt.x - x) < 8 and t['y0'] - 6 < pt.y < t['y1'] + 6 for pt in pts)
+                    def at2_(pts, x, t):          # a branch leaves a little right of its label
+                        return any(0 <= pt.x - x < 25 and t['y0'] - 30 < pt.y < t['y1'] + 30 for pt in pts)
+                    node = any((at_(eA, t['x0'], t) and at2_(eB, t['x1'], t)) or (at_(eB, t['x0'], t) and at2_(eA, t['x1'], t))
+                               for t in text if len(t['text'].strip()) <= 25)
+                    #   (a tree NODE: a branch of one crop ends at a label and a branch of the other starts at it - never
+                    #    just two drawings close together: pass 4 merged grid rows and diagram pairs, M2)
+                    if node and not any((fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']) & gapr).get_area() > 4 and len(t['text'].strip()) > 22
                                for t in text):
                         a['bbox'] = list(A | B_); out.remove(b); merged = True
                         break
