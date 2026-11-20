@@ -1,6 +1,6 @@
 # R209 pass 2 (diff against pass 1)
 
-Reasons: 2401; verified 0, NOT FIXED 0, NEW 1; changed questions 20 (20 collateral).
+Reasons: 2401; verified 0, NOT FIXED 0, NEW 0; changed questions 14 (14 collateral).
 
 Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / passed / ask).
 
@@ -9,7 +9,6 @@ Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / pass
 
 ## NEW
 
-- 4da8a4d342 0607_2026MJ_11_q17 not_to_scale: 17(b)
 
 ## Changed questions
 
@@ -18,16 +17,10 @@ Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / pass
 - 0607_2019ON_62_q02 [q] COLLATERAL
 - 0607_2019ON_62_q03 [q] COLLATERAL
 - 0607_2019ON_62_tA [q] COLLATERAL
-- 0607_2021FM_22_q02 [ms] COLLATERAL
 - 0607_2024FM_12_q05 [q] COLLATERAL
 - 0607_2024FM_12_q21 [q] COLLATERAL
-- 0607_2024FM_42_q06 [q] COLLATERAL
 - 0607_2024MJ_33_q02 [q] COLLATERAL
-- 0607_2025MJ_23_q23 [q] COLLATERAL
-- 0607_2025MJ_43_q03 [q] COLLATERAL
 - 0607_2025MJ_43_q06 [q] COLLATERAL
-- 0607_2025MJ_62_q07 [q] COLLATERAL
-- 0607_2025MJ_62_tB [q] COLLATERAL
 - 0607_2026FM_32_q12 [q] COLLATERAL
 - 0607_2026MJ_11_q17 [q] COLLATERAL
 - 0607_2026MJ_23_q17 [q] COLLATERAL
@@ -1377,6 +1370,7 @@ Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / pass
 - 0607_2026MJ_11_q15 ms_sweep: code in answer M1
 - 0607_2026MJ_11_q17 ms_align: 17(b)
 - 0607_2026MJ_11_q17 ms_mode: mark scheme not laid out by ms_maths: ['wrap', 'scale', 'cell']
+- 0607_2026MJ_11_q17 not_to_scale: 17(b)
 - 0607_2026MJ_11_q18 ms_align: 18(b)
 - 0607_2026MJ_11_q18 ms_mode: mark scheme not laid out by ms_maths: ['wrap']
 - 0607_2026MJ_12_q01 ms_align: 1(b)
