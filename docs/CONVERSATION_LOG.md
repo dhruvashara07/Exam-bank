@@ -528,3 +528,7 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   wide-blast changes (1123 'changed' questions were mostly the missing-PDF effect; real collateral ~70, attributed fix by
   fix with a toggle script). Repeats: none of 181-208 came back; the table/picture classes (219, 222, 223) are the same
   family as 169-180 (what belongs to a cell picture vs our text) - still the weakest part of ms_maths.
+- 2026-11-20 (same chat, round 34): pass 3 showed my diff tool re-judging verified items (fixed) and two crop regressions
+  of my own (230); pass 4 showed 54 collateral questions from too-wide grouping rules (231 -> 232). Each pass-diff took
+  ~10 min of my looking instead of a full re-check: the flow paid for itself. Round 34 has 13 items and no open decision.
+  Lesson: test every new rule on the look-alikes the diff names BEFORE pushing (now in ERROR_PATTERNS 232).

@@ -6,12 +6,13 @@ Read this first in every session. Update it before ending a session.
 - 2026-11-18: CHEM stored: 1599 of 1600 PDFs in Releases (only chemistry_0652_to_0620_mapping.pdf, not a Cambridge name,
   stays on branch store-chem). inbox.py now keeps gt/ci/ir/in/eq/one-digit/combined files (302 had been skipped).
   Branches store-chem and store-chem-rest: Dhruv deletes them (this session cannot delete branches).
-- NEXT: M2 pass 3 ran on GitHub with the pass-2 fixes (228-229; run id in review/cycle/M2.json): read
-  review/claude/M2_pass2.md + R209_pass2.md (only NOT FIXED / NEW / COLLATERAL), then fix the 10 'known' reasons FIRST
-  (`reasons.py classes M2 --status known`: (a)+(b) diagrams in one crop 2023 MJ 53 q3 / 63 q3, tree in 2 crops 2023 MJ
-  32 q11, word box in circle crop 2023 MJ 11 q3, rounded formula box 2022 ON 61 q6, '[...]' dots 2022 ON 43 q5(c)),
-  then `reasons.py round M2 --calibrate 5` -> review round 34 (M2 + re-shown approved questions that changed: R209 list),
-  then re-approve the approved sessions whose rebuild changed (approve.py). Bio / add-math uploads: Dhruv's.
+- NEXT: Dhruv's review round 34 (13 items: 4 of my fixes, 4 changed approved questions, 5 calibration) is on the review
+  page. In THIS chat: read feedback_r34, fix every wrong item as a class (ERROR_PATTERNS), `review_round.py close 34`,
+  approve.py for M2 (117 papers) and re-approve the approved sessions rebuilt in M2, docs, push. Then the next batch
+  (M3: 2018-2020, remind Dhruv to upload 2019 MJ first) starts in a NEW chat.
+- 2026-11-20: M2 passes 3-5 on GitHub; known items fixed (patterns 230-233: tree in one picture, Step grids split, word box
+  as text, rounded formula box as text, crops never grow into a sibling); pass 4 caught my own collateral (54 questions),
+  narrowed and re-tested - all approved crops back to their approved boxes. Reasons file: 0 open, 0 ask.
 - 2026-11-19: two-pass flow BUILT (pipeline/reasons.py, bank.yml 'reasons'); pattern 209: fontTools missing on GitHub ->
   ~880 approved maths questions had been stored in the fallback layout; all 11 approved sessions rebuilt (R209: ms_mode
   0). M2 built (117 papers), pass 1 resolved (62 fixed / 263 passed / 4 known, patterns 211-227). Approved papers whose
