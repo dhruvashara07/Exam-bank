@@ -31,10 +31,16 @@
   "review": [
    {
     "start": "2026-11-20T11:00:17+00:00",
-    "end": null
+    "end": "2026-11-22T17:52:48+00:00",
+    "note": "round 34 answered: 6 wrong of 13"
    }
   ],
-  "fix": []
+  "fix": [
+   {
+    "start": "2026-11-22T17:52:48+00:00",
+    "end": null
+   }
+  ]
  },
  "github_runs": [
   {
@@ -105,7 +111,8 @@
   "papers": 117,
   "questions": 1129,
   "flags": 353,
-  "round_items": 13
+  "round_items": 13,
+  "wrong_items": 6
  },
  "errors": [
   {
@@ -307,6 +314,54 @@
    "fix": "clamp at sibling figures (3 of 423 change)",
    "found_by": "claude",
    "at": "2026-11-20T10:08:15+00:00"
+  },
+  {
+   "pattern": "234",
+   "kind": "new",
+   "what": "MS boxes around numbers got a rule under the x signs (2019 ON 51 q1(a)(ii))",
+   "fix": "row rule = touching pieces; outer edge only with a real row rule",
+   "found_by": "dhruv",
+   "at": "2026-11-22T17:52:48+00:00"
+  },
+  {
+   "pattern": "235",
+   "kind": "new",
+   "what": "MS strip-shaded table: double rules, loose ticks, right edge lost (2023 FM 62 q1(a))",
+   "fix": "whole-cell fill edges, stubs join column rule, right outer edge",
+   "found_by": "dhruv",
+   "at": "2026-11-22T17:52:48+00:00"
+  },
+  {
+   "pattern": "236",
+   "kind": "new",
+   "what": "column vector bracket pieces with a gap (2021 FM 22 q2)",
+   "fix": "_close_brackets adds extenders",
+   "found_by": "dhruv",
+   "at": "2026-11-22T17:52:48+00:00"
+  },
+  {
+   "pattern": "237",
+   "kind": "new",
+   "what": "slanted stroke crossing the crop edge not taken in: tree top branch cut (2022 FM 42 q10)",
+   "fix": "FIT_SLANT in fit_crop (maths)",
+   "found_by": "dhruv",
+   "at": "2026-11-22T17:52:48+00:00"
+  },
+  {
+   "pattern": "238",
+   "kind": "new",
+   "what": "tree column headings left out of the figure (2022 FM 42 q10)",
+   "fix": "FIT_HEAD: two headings on one baseline above the crop",
+   "found_by": "dhruv",
+   "at": "2026-11-22T17:52:49+00:00"
+  },
+  {
+   "pattern": "239",
+   "kind": "new",
+   "what": "blurred raster MS pictures: handwriting-style tree (2023 MJ 32 q11), graph (2023 MJ 63 q12)",
+   "fix": "ms_graphs: tree spec + graph spec; the rest of M2's screenshots = Dhruv's decision",
+   "found_by": "dhruv",
+   "at": "2026-11-22T17:52:49+00:00"
   }
  ],
  "tokens": [],
@@ -510,6 +565,42 @@
   {
    "at": "2026-11-20T11:00:17+00:00",
    "task": "phase M2 review"
+  },
+  {
+   "at": "2026-11-22T17:52:48+00:00",
+   "task": "phase M2 review"
+  },
+  {
+   "at": "2026-11-22T17:52:48+00:00",
+   "task": "phase M2 fix"
+  },
+  {
+   "at": "2026-11-22T17:52:48+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-22T17:52:48+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-22T17:52:48+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-22T17:52:48+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-22T17:52:49+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-22T17:52:49+00:00",
+   "task": "error M2 --pattern"
+  },
+  {
+   "at": "2026-11-22T17:52:49+00:00",
+   "task": "count M2 round_items=13"
   }
  ]
 }

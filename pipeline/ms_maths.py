@@ -702,6 +702,15 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                       or (gy0 <= (i.y0 + i.y1) / 2 <= gy1 and i.x1 > gx0 and i.x0 < gx1) or
                       (gy0 - 40 < (i.y0 + i.y1) / 2 < gy1 + 40 and i.x0 >= gx0 - 3 and i.x1 <= gx1 + 3
                        and i.x1 - i.x0 > 0.8 * (gx1 - gx0))]   # a full-width rule of a row without column rules
+            for _ in range(4):      # a column rule printed in pieces: the short pieces at its ends (a 5.6 pt stub above the first
+                #                     strip of shading) are part of it - left out they were drawn as loose ticks above the
+                #                     table (2023 FM 62 q1(a), round 34, pattern 235)
+                add_ = [i for i in by[c] if i not in rl and i.kind == 'lines' and i.x1 - i.x0 < 1.6 and 0.4 < i.y1 - i.y0 <= 8
+                        and any(j.kind == 'lines' and j.x1 - j.x0 < 1.6 and abs((i.x0 + i.x1) / 2 - (j.x0 + j.x1) / 2) < 0.8
+                                and (abs(i.y1 - j.y0) < 1.0 or abs(i.y0 - j.y1) < 1.0) for j in rl)]
+                if not add_:
+                    break
+                rl = rl + add_
             tx0, ty0 = min(i.x0 for i in rl) - 1, min(i.y0 for i in rl) - 1
             tx1, ty1 = max(i.x1 for i in rl) + 1, max(i.y1 for i in rl) + 1
             blk = [i for i in by[c] if tx0 <= (i.x0 + i.x1) / 2 <= tx1 and ty0 <= (i.y0 + i.y1) / 2 <= ty1]
@@ -902,8 +911,8 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
             gsp = ms_graphs.spec(CTX.get('qid'), label) if c == 1 and any(i.kind in ('images', 'figs') for i in inpic) else None
             if gsp:                                     # a screenshot graph: drawn again from the question's function
                 K_ = u.get('_K', 1.0)                   # (Dhruv round 32, ms_graphs.SPECS)
-                gw = min(ours[c][1] - ours[c][0] - 2 * PAD, max(230.0, (px1 - px0)))
-                gh = max(110.0, (py1 - py0))
+                gw = min(ours[c][1] - ours[c][0] - 2 * PAD, max(gsp.get('w', 230.0), (px1 - px0)))
+                gh = max(gsp.get('h', 110.0), (py1 - py0))
                 gL, gT = ms_graphs.draw(gsp, gw, gh)
                 ox_, oy_ = ours[c][0] + PAD, py0 + shift
                 from ms_layout import _map_path
@@ -1540,9 +1549,20 @@ def _has_table(items):
         return False        # (rows drawn as cell fills, not rules: 2023 FM 62 q1(a), M2)
     x0, x1 = min(i.x0 for i in gv + gh), max(i.x1 for i in gv + gh)
     import collections
-    rows = collections.defaultdict(float)             # rule length per height: a table's row rules run most of its width
-    for i in gh:                                      # (boxes around numbers, 2019 ON 51 q1(a)(ii), are no table)
-        rows[round(i.y0)] += i.x1 - i.x0
+    pcs = collections.defaultdict(list)               # rule length per height: a table's row rules run most of its width.
+    for i in gh:                                      # Only pieces that TOUCH (<= 1.5 pt) are one rule: four boxes around numbers
+        pcs[round(i.y0)].append((i.x0, i.x1))         # with 11-16 pt between them are no table row (2019 ON 51 q1(a)(ii), pattern 234)
+    rows = collections.defaultdict(float)
+    for y_, sp in pcs.items():
+        a_ = b_ = None
+        for p0, p1 in sorted(sp):
+            if a_ is not None and p0 <= b_ + 1.5:
+                b_ = max(b_, p1)
+            else:
+                if a_ is not None:
+                    rows[y_] = max(rows[y_], b_ - a_)
+                a_, b_ = p0, p1
+        rows[y_] = max(rows[y_], b_ - a_)
     if sum(1 for w in rows.values() if w > 0.6 * (x1 - x0)) >= 2:
         return True
     # a Word table whose rows are drawn as cell fills (grey / white) with short rule pieces: the fills' edges are its row
@@ -1593,7 +1613,11 @@ def _clean_table(items):
         ts_ = [i for i in items if i.kind == 't']
         gx0 = min([i.x0 for i in fl_ + thin_v] + [t.x0 - 4 for t in ts_])
         gx1 = max(i.x1 for i in fl_ + thin_v)
-        ys_ = sorted({round(i.y0, 1) for i in fl_} | {round(i.y1, 1) for i in fl_})
+        fm_ = [i for i in fl_ if not any(o is not i and o.x0 <= i.x0 + 0.5 and o.x1 >= i.x1 - 0.5 and o.y0 <= i.y0 + 0.5 and o.y1 >= i.y1 - 0.5
+                                         and (o.y1 - o.y0) > (i.y1 - i.y0) + 1 for o in fl_)]
+        #   (a cell shaded in strips - a top strip, a middle one, a bottom one, and the whole cell on top of them: only the
+        #    whole cell's edges are row lines, not every strip's: 2023 FM 62 q1(a), round 34, pattern 235)
+        ys_ = sorted({round(i.y0, 1) for i in fm_} | {round(i.y1, 1) for i in fm_})
         cl_ = []
         for y_ in ys_:
             if cl_ and y_ - cl_[-1][-1] <= 3.5:
@@ -1604,10 +1628,15 @@ def _clean_table(items):
             y_ = sum(c_) / len(c_)
             thin_h.append(_Item('lines', {'d': f'M{gx0:.2f} {y_ - 0.3:.2f}H{gx1:.2f}V{y_ + 0.3:.2f}H{gx0:.2f}Z', 'fill': '#000000'},
                                 gx0, y_ - 0.3, gx1, y_ + 0.3))
-        y0_, y1_ = min(i.y0 for i in fl_), max(i.y1 for i in fl_)
+        y0_, y1_ = min(i.y0 for i in fl_ + thin_v), max(i.y1 for i in fl_ + thin_v)     # (the header row above the first shaded
+        #                                                                        row has its outer edges too)
         thin_v.append(_Item('lines', {'d': f'M{gx0 - 0.3:.2f} {y0_:.2f}H{gx0 + 0.3:.2f}V{y1_:.2f}H{gx0 - 0.3:.2f}Z', 'fill': '#000000'},
                             gx0 - 0.3, y0_, gx0 + 0.3, y1_))
         items = items + thin_h[-len(cl_):] + [thin_v[-1]]
+        if gx1 - max((i.x0 + i.x1) / 2 for i in thin_v[:-1]) > 3:      # the right outer edge too (printed against the column rule
+            thin_v.append(_Item('lines', {'d': f'M{gx1 - 0.3:.2f} {y0_:.2f}H{gx1 + 0.3:.2f}V{y1_:.2f}H{gx1 - 0.3:.2f}Z', 'fill': '#000000'},
+                                gx1 - 0.3, y0_, gx1 + 0.3, y1_))       # and lost with it: 2023 FM 62 q1(a), round 34)
+            items = items + [thin_v[-1]]
     if len(thin_h) < 2 or len(thin_v) < 2:
         return items
     def clusters(vals, tol=1.6):
@@ -1638,12 +1667,15 @@ def _clean_table(items):
     for i in thin_v:
         x_ = snap((i.x0 + i.x1) / 2, xs); V.setdefault(round(x_, 2), []).append((snap(i.y0, ys), snap(i.y1, ys)))
     x0, x1, y0, y1 = xs[0], xs[-1], ys[0], ys[-1]
+    full_ = any(b_ - a_ >= 0.6 * (x1 - x0) for segs_ in H.values() for a_, b_ in runs(segs_))   # a real table has a row rule across
+    #   (boxes around numbers - four separate boxes in a row: their outer verticals are no table edges, so no bottom /
+    #    top rule is drawn through the 'x' signs between them: 2019 ON 51 q1(a)(ii), round 34, pattern 234)
     ends = [(min(a_ for a_, b_ in V.get(round(xx, 2), [(1e9, 0)])), max(b_ for a_, b_ in V.get(round(xx, 2), [(0, -1e9)]))) for xx in (x0, x1)]
-    if abs(ends[0][0] - ends[1][0]) < 1.5 and ends[0][0] < y0 - 3:       # both outer column rules start above the first
+    if full_ and abs(ends[0][0] - ends[1][0]) < 1.5 and ends[0][0] < y0 - 3:       # both outer column rules start above the first
         y0 = (ends[0][0] + ends[1][0]) / 2; ys = [y0] + ys                # row rule: the table's top edge was not printed
-    if abs(ends[0][1] - ends[1][1]) < 1.5 and ends[0][1] > y1 + 3:       # in this unit (2014 MJ 31 q5) - draw it
+    if full_ and abs(ends[0][1] - ends[1][1]) < 1.5 and ends[0][1] > y1 + 3:       # in this unit (2014 MJ 31 q5) - draw it
         y1 = (ends[0][1] + ends[1][1]) / 2; ys = ys + [y1]
-    for yy in (y0, y1):                                   # a missing outer edge (top / bottom) where both outer columns reach it
+    for yy in ((y0, y1) if full_ else ()):                # a missing outer edge (top / bottom) where both outer columns reach it
         if not any(a_ <= x0 + 1 and b_ >= x1 - 1 for a_, b_ in runs(H.get(round(yy, 2), []))):
             if all(any(a_ <= yy + 1 and b_ >= yy - 1 for a_, b_ in V.get(round(xx, 2), [])) for xx in (x0, x1)):
                 H.setdefault(round(yy, 2), []).append((x0, x1))

@@ -447,6 +447,10 @@ def _notext(doc, pno):
     return _NOTEXT[key][1]
 
 
+FIT_SLANT = True      # maths: a slanted stroke crossing the crop's edge is taken in (pattern 237)
+FIT_HEAD = True       # maths: column headings above a tree / table-like diagram are part of it (pattern 238)
+
+
 def fit_crop(pg, b, max_grow=50.0, maths=False):
     """Mend a figure crop that cuts through ink or a label (review rounds: 80% of 'crop cut' flags were real).
     1. a drawing crossing an edge is taken in (at most max_grow pt per side);
@@ -521,7 +525,12 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
                     nb = b | r
                     if ok(nb):
                         b = nb; changed = True
-        if cut_edges(pg, b):
+        slant_ = maths and FIT_SLANT and any(                     # (the pixel test misses a SLANTED stroke: its ink above and
+            d_['rect'].intersects(b) and not b.contains(d_['rect']) and d_['rect'].width < 0.9 * pg.rect.width        # below the edge
+            and d_['rect'].width > 12 and d_['rect'].height > 12 and d_['rect'].height < 120 and d_['type'] == 's'   # sits at other x:
+            and (d_['rect'].y0 < b.y0 - 1 < d_['rect'].y1 or d_['rect'].y0 < b.y1 + 1 < d_['rect'].y1)               # a tree's branch,
+            for d_ in pg.get_drawings())                            # 2022 FM 42 q10, round 34)
+        if cut_edges(pg, b) or slant_:
             for d in pg.get_drawings():
                 r = d['rect']
                 if r.width > 0.9 * pg.rect.width or not r.intersects(b) or b.contains(r):
@@ -569,6 +578,27 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
                     b = nb; changed = True
         if not changed:
             break
+    if maths and FIT_HEAD:      # two column headings on one baseline just above the drawing ('Wears a sweatshirt' / 'Goes for a
+        #                         walk' over a tree diagram) are part of it (2022 FM 42 q10, round 34, pattern 238)
+        heads = [l for l in lines if not b.contains(l) and l.y1 <= b.y0 + 1 and b.y0 - l.y1 <= 34 and l.x0 >= b.x0 - 10 and l.x1 <= b.x1 + 10
+                 and words_of(l) and len(words_of(l)) <= 6 and not bad_label(words_of(l), l) and not numeric(words_of(l))
+                 and not any(r_.x1 >= l.x0 - 30 and r_.x0 <= l.x1 + 30 and r_.y1 >= l.y0 - 2 and r_.y0 <= l.y1 + 2
+                             and r_.width < 0.9 * pg.rect.width for r_ in drw)]       # (rules are empty rects: no .intersects)
+        #   (a label with a line running out of it is a label of ANOTHER drawing - the points 'B' 'B' on the lines of a diagram
+        #    above: 2019 ON 62 q3(a); the headings of a tree and the 'w = 1' over a shape stand clear of ink)
+        if heads:
+            ymax_ = max(l.y1 for l in heads)
+            row_ = [l for l in heads if abs(l.y1 - ymax_) < 3]
+            xs_ = sorted(row_, key=lambda l: l.x0)
+            if len(row_) >= 2 and all(b2.x0 - a2.x1 >= 40 for a2, b2 in zip(xs_, xs_[1:])):
+                gap_ = fitz.Rect(min(l.x0 for l in row_), ymax_ + 0.5, max(l.x1 for l in row_), b.y0 - 0.5)
+                if not any(o not in row_ and o.intersects(gap_) for o in lines) and not any(
+                        r_.intersects(gap_) and r_.width < 0.9 * pg.rect.width for r_ in drw):
+                    nb = b
+                    for l in row_:
+                        nb = nb | l
+                    if ok(nb):
+                        b = nb
     def text_bar(r):                                   # a fraction bar inside a text row ('f = uv / (u + v)'): text, not drawing
         return r.height < 1.2 and any(l.y0 - 3 <= r.y0 <= l.y1 + 3 and r.x0 < l.x1 and r.x1 > l.x0 for l in lines)
     ink = [d['rect'] for d in pg.get_drawings() if d['rect'].intersects(b) and d['rect'].width < 0.9 * pg.rect.width and not text_bar(d['rect'])]

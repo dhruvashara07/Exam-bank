@@ -602,3 +602,35 @@ fixed' in pass 3 -> verified stays verified.
 233. (round 34 prep) After the 231 split, the lower 'Step 2' grid's stored crop grew up into the upper grid's x axis
     (fit_crop grows over ink crossing its edge). -> maths: a stored crop never grows into a sibling figure of the same
     page. Blast radius measured on all 423 figures with a sibling: 3 change (the target + 2 circles, all right).
+
+## Round 34 (Dhruv: 6 wrong of 13; my 4 fixes: 2 wrong, 4 changed approved: 2 wrong, 5 calibration: 2 wrong)
+234. MS 'boxes around numbers' (2019 ON 51 q1(a)(ii), approved before, changed by M2) got a rule drawn under the x signs
+    between the boxes: _has_table added the lengths of SEPARATE rule pieces (four boxes 11-16 pt apart) and called the sum
+    a row rule; _clean_table then 'added the missing outer edge' because the boxes' outer verticals reached it.
+    -> a row rule is only pieces that TOUCH (<= 1.5 pt); the missing outer top/bottom edge is added only when the grid has a
+    real row rule across (>= 60 % of its width). Same blast measured on all 20 maths sessions: 4 questions changed.
+235. MS table 2023 FM 62 q1(a) (cells shaded in strips: top / middle / bottom strip + the whole cell on top): every strip
+    edge became a row line (double / triple rules), the 5.6 pt stubs of the column rules were left outside the table block
+    as loose ticks above the header, and the right outer edge (printed against the column rule) was lost.
+    -> fill-only row lines come from the WHOLE cell's edges only (strips inside a larger fill are ignored); a column rule
+    printed in pieces is one rule (stubs <= 8 pt that touch it go with the block); the right outer edge is drawn like the
+    left one, over the header row too.
+236. A column vector's brackets (2021 FM 22 q2 answer cell): the printed pieces (top, extender, bottom) are 13 pt apart
+    but our piece glyphs are 8.7 pt tall -> a visible gap each side of the extender. -> ms_layout._close_brackets adds
+    extenders between pieces more than 1.2 glyph heights apart (touching brackets stay as they are).
+237. Question side (maths): fit_crop's 'ink crosses the edge' test is a pixel test and misses a SLANTED stroke (ink above
+    and below the edge sit at other x): 2022 FM 42 q10(c) tree lost its top branch. -> maths: a stroked drawing > 12 pt
+    each way that crosses the crop's top / bottom edge counts as cut and is taken in (store.FIT_SLANT).
+238. Question side (maths): the two COLUMN HEADINGS above a tree ('Wears a sweatshirt', 'Goes for a walk') were left out
+    of the stored figure (2022 FM 42 q10). -> two short non-sentence lines on one baseline, >= 40 pt apart, nothing else
+    between them and the crop, within 34 pt above it, are part of the picture (store.FIT_HEAD).
+239. MS pictures that are blurred RASTER screenshots: a handwriting-style tree (2023 MJ 32 q11(a)) and a calculator graph
+    (2023 MJ 63 q12(c)(iii)) look poor next to our text. -> ms_graphs.SPECS: new 'tree' spec (two stages, probabilities
+    on the branches, drawn as lines + text like the question's tree) and options 'xlab' / 'xlow' for graphs. Only the two
+    flagged ones are redrawn; ALL other raster screenshots of M2 (about 60 graphs / Venn pictures) are an open decision
+    for Dhruv (a batch of its own, every redraw needs the function read by eye).
+Lesson (round 34): the 6 wrong items were 3 classes I had passed as 'matches print' - (a) MS pictures that match the print
+but look blurred (239), (b) a stray edge inside a few-cell group (234), (c) crop rules blind to slanted strokes (237).
+The 'look-alike that must NOT change' list for 234/235: every MS table with only strips or boxes (blast run = 0 more).
+Tool note: `ms_rebuild.py` WITHOUT --write still rewrites msimg_*.png (byte noise, ~300 files): `git restore` them before
+the commit (never commit msimg PNGs from a local run).

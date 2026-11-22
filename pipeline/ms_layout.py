@@ -1831,6 +1831,8 @@ def build(q, store):
             res = None
             print(f"  {q['id']}: maths mark-scheme layout failed: {type(e).__name__}: {e}"); import traceback, os as _o; _o.environ.get("MSTB") and traceback.print_exc()
         if res:
+            for v_ in res['rows']:
+                _close_brackets(v_)                   # (maths only: this branch; 0625 is frozen)
             return res
     MP.FORCE_WRAP = False
     if MP.EQUAL_FLEX and all(u['w'] <= W + 2 for _, u in uniq):
@@ -1989,6 +1991,38 @@ def build(q, store):
             'printed_total': printed_total,
             'info': {k: first[k] for k in ('edges', 'new_edges', 'new_w')} if first else None,
             'has_header': bool(first and os.path.exists(hdr_p))}
+
+
+_BR_TOP = {'⎛': '⎜', '⎞': '⎟', '⎡': '⎢', '⎤': '⎥'}
+_BR_BOT = {'⎝', '⎠', '⎣', '⎦'}
+
+
+def _close_brackets(v):
+    """A tall bracket is printed as pieces (top, extender, bottom). A vector with a wide row gap prints the pieces further
+    apart than our smaller piece glyphs are tall: the bracket showed a gap on each side of the extender (2021 FM 22 q2,
+    round 34, pattern 236). Extenders are added between pieces that are more than 1.2 glyph heights apart; a bracket whose
+    pieces already touch is left as it is."""
+    import collections
+    import math
+    g = collections.defaultdict(list)
+    for t in v['text']:
+        if t['t'] in _BR_TOP or t['t'] in _BR_TOP.values() or t['t'] in _BR_BOT or t['t'] in ('⎜', '⎟', '⎢', '⎥'):
+            g[round(t['x'] / 1.5)].append(t)
+    new = []
+    for ts in g.values():
+        ts = sorted(ts, key=lambda t: t['y'])
+        top = next((t for t in ts if t['t'] in _BR_TOP), None)
+        if top is None:
+            continue
+        ext = _BR_TOP[top['t']]
+        for a, b in zip(ts, ts[1:]):
+            s_ = a.get('s', 8.74) or 8.74
+            gap = b['y'] - a['y']
+            if gap > 1.2 * s_ and b['t'] != top['t']:
+                n = math.ceil(gap / s_) - 1
+                for k in range(1, n + 1):
+                    new.append(dict(a, t=ext, y=round(a['y'] + gap * k / (n + 1), 2)))
+    v['text'].extend(new)
 
 
 def _maths_ruled(uniq):

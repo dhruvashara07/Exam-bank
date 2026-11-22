@@ -307,3 +307,12 @@ one Total for the task. Built by pipeline/tasks.py after every store build / ms_
 - A table in a cell stays one table even when its rows are only cell fills or it touches the cell's left border; a line
   running on past the table's width is text under it, not a table row.
 - A sub-row rule is never drawn through a word.
+
+## 36. Round 34 additions (2026-11-22)
+- A row rule of a table is pieces that touch; separate boxes in a row ('2 x 5 x [2] x [5]') are never a table row, and no
+  outer edge is drawn for a group without a real row rule across it.
+- A table shaded in strips: only the whole cell's edges are row lines; column-rule stubs at its ends belong to the rule;
+  the right outer edge and the header row's outer edges are drawn like the left.
+- Vector brackets (column vectors) made of printed pieces get extenders where the pieces are further apart than a glyph.
+- ms_graphs.SPECS: 'tree' specs redraw a completed probability tree (lines + text like the question's); graph specs take
+  'xlab' (axis letter) and 'xlow' (numbers under the window).

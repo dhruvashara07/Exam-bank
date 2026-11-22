@@ -28,7 +28,48 @@ SPECS = {
     ('0607_2024MJ_61_q13', '13(b)(iii)'): {'f': [('x - 1 + math.sqrt(1 - x)', 'G = x − 1 + √(1 − x)')], 'x': (0, 1),
                                            'y': (0, 0.5), 'xt': [1], 'yt': [0.5], 'grid': (0.1, 0.05), 'ylab': 'G',
                                            'labels': [[('i', 'G'), ('t', ' = '), ('i', 'x'), ('t', ' − 1 + √(1 − '), ('i', 'x'), ('t', ')')]]},
+    ('0607_2023MJ_63_q12', '12(c)(iii)'): {'f': [('1.12*2**(-x) - 0.12', 'R = 1.12 × 2⁻ʰ − 0.12')], 'x': (0, 52), 'y': (-0.2, 1.0),
+                                           'xt': [8, 16, 24, 32, 40, 48], 'yt': [-0.2, 0.2, 0.4, 0.6, 0.8, 1.0], 'grid': (4, 0.2),
+                                           'ylab': 'R', 'xlab': 'h', 'xlow': True,      # (round 34: a blurred screenshot, redrawn from the model)
+                                           'labels': [[('i', 'R'), ('t', ' = 1.12 × 2'), ('sup', '–h'), ('t', ' – 0.12')]]},
+    ('0607_2023MJ_32_q11', '11(a)'): {'w': 250.0, 'h': 200.0, 'tree': {         # (round 34: a blurred handwriting-style picture of the
+        'first': [('0.80', ['wakes before', '7am']), ('0.20', ['does not', 'wake before', '7am'])],       # completed tree,
+        'second': [[('0.92', ['gets to school', 'on time']), ('0.08', ['does not', 'get to school', 'on time'])],     # drawn again
+                   [('0.23', ['gets to school', 'on time']), ('0.77', ['does not', 'get to school', 'on time'])]]}},   # like the question's)
 }
+
+
+def _draw_tree(sp, w, h, size=8.0):
+    """A completed two-stage tree diagram drawn as lines and text like the question's own (probabilities on the branches)."""
+    tr = sp['tree']
+    L, T = [], []
+    from ms_maths import text_width as tw0
+    tw = lambda t: tw0(t, 'serif', size) or 0.5 * size * len(t)
+    def txt(lines, x, yc, right=False):                       # a block of lines centred on yc, left edge at x
+        lh = size * 1.15
+        y0 = yc - (len(lines) - 1) * lh / 2 + size * 0.33
+        for k, t in enumerate(lines):
+            T.append({'t': t, 'x': round(x - (tw(t) if right else 0), 2), 'y': round(y0 + k * lh, 2), 'w': round(tw(t), 2), 's': size})
+    def br(x0, y0, x1, y1, prob, upper):
+        L.append({'d': f'M{x0:.2f} {y0:.2f}L{x1:.2f} {y1:.2f}', 'stroke': '#000000', 'sw': 0.8})
+        mx, my = (x0 + x1) / 2, (y0 + y1) / 2
+        if upper:
+            T.append({'t': prob, 'x': round(mx - tw(prob) - 1, 2), 'y': round(my - 1.5, 2), 'w': round(tw(prob), 2), 's': size})
+        else:
+            T.append({'t': prob, 'x': round(mx - tw(prob) - 1, 2), 'y': round(my + size + 0.5, 2), 'w': round(tw(prob), 2), 's': size})
+    rx, ry = 4.0, h / 2
+    e1 = 0.24 * w
+    f1 = 0.52 * w
+    e2 = 0.66 * w
+    for i, (prob, lines) in enumerate(tr['first']):
+        yn = h * (0.26 if i == 0 else 0.74)
+        br(rx, ry, e1, yn, prob, i == 0)
+        txt(lines, e1 + 3, yn)
+        for j, (p2, l2) in enumerate(tr['second'][i]):
+            ye = yn + (-1 if j == 0 else 1) * 0.15 * h
+            br(f1, yn, e2, ye, p2, j == 0)
+            txt(l2, e2 + 3, ye)
+    return L, T
 
 
 def spec(qid, label):
@@ -41,6 +82,8 @@ def _num(v):
 
 def draw(sp, w, h, size=9.0):
     """-> (lines, texts) in a box w x h (pt), origin top left. lines: {'d', 'stroke', 'sw'}; texts: {'t', 'x', 'y', 'w', 's'}."""
+    if 'tree' in sp:
+        return _draw_tree(sp, w, h, size)
     from ms_maths import text_width as tw0
     # text_width measures some Unicode signs (−, –) as ~0 and the label was squeezed; an estimate never below 0.5 em/char
     text_width = lambda t, f, s: max(tw0(t, f, s), 0.5 * s * len(t))
@@ -67,12 +110,13 @@ def draw(sp, w, h, size=9.0):
     for v in sp.get('xt', []):
         L.append({'d': f'M{X(v):.2f} {ax_y - 2:.2f}V{ax_y + 2:.2f}', 'stroke': '#000000', 'sw': 0.6})
         t = _num(v); tw = text_width(t, 'serif', size)
-        T.append({'t': t, 'x': round(X(v) - tw / 2, 2), 'y': round(ax_y + 2 + size, 2), 'w': tw, 's': size})
+        T.append({'t': t, 'x': round(X(v) - tw / 2, 2), 'y': round((Y(y0) + 1 + size) if sp.get('xlow') else (ax_y + 2 + size), 2),
+                  'w': tw, 's': size})       # ('xlow': numbers under the window - a curve runs along the axis, 2023 MJ 63 q12)
     for v in sp.get('yt', []):
         L.append({'d': f'M{ax_x - 2:.2f} {Y(v):.2f}H{ax_x + 2:.2f}', 'stroke': '#000000', 'sw': 0.6})
         t = _num(v); tw = text_width(t, 'serif', size)
         T.append({'t': t, 'x': round(ax_x - 3 - tw, 2), 'y': round(Y(v) + size * 0.35, 2), 'w': tw, 's': size})
-    T.append({'t': 'x', 'x': round(X(x1) + 8, 2), 'y': round(ax_y + size * 0.35, 2), 'w': size * 0.5, 's': size, 'i': 1})
+    T.append({'t': sp.get('xlab', 'x'), 'x': round(X(x1) + 8, 2), 'y': round(ax_y + size * 0.35, 2), 'w': size * 0.5, 's': size, 'i': 1})
     yl = sp.get('ylab', 'y')
     T.append({'t': yl, 'x': round(ax_x + 3, 2), 'y': round(Y(y1) - 2, 2), 'w': size * 0.6, 's': size, 'i': 1})
     dashes = [None, '3 2', '1 1.5']
