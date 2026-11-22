@@ -1,6 +1,6 @@
 # R209 pass 2 (diff against pass 1)
 
-Reasons: 2401; verified 0, NOT FIXED 0, NEW 0; changed questions 14 (14 collateral).
+Reasons: 2412; verified 0, NOT FIXED 0, NEW 11; changed questions 22 (22 collateral).
 
 Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / passed / ask).
 
@@ -9,23 +9,42 @@ Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / pass
 
 ## NEW
 
+- fc18be5518 0607_2021FM_22_q02 ms_words: extra: ⎜ ⎟
+- c3081411c2 0607_2025MJ_12_q19 ms_words: extra: ⎜ ⎟
+- 1ade53c21d 0607_2025MJ_13_q11 ms_words: extra: ⎢ ⎢ ⎥ ⎥
+- dd34d2eac2 0607_2025MJ_21_q06 ms_words: extra: ⎜ ⎟
+- 46908de6d2 0607_2025MJ_41_q08 ms_words: extra: ⎜ ⎟
+- c054d69309 0607_2025ON_13_q14 ms_words: extra: ⎜ ⎟
+- 5b39334a09 0607_2025ON_21_q05 ms_words: extra: ⎜ ⎟
+- dfebc05f72 0607_2025ON_22_q10 ms_words: extra: ⎟
+- 91755fb6e5 0607_2025ON_31_q15 ms_words: extra: ⎟ ⎟
+- 9d1dc7e4b5 0607_2025ON_33_q04 ms_table: 4: table / graph drawn as lines
+- 7ce645e328 0607_2025ON_62_q03 ms_words: extra: ⎜ ⎟
 
 ## Changed questions
 
-- 0607_2014MJ_12_q07 [q] COLLATERAL
+- 0607_2014MJ_32_q09 [q] COLLATERAL
+- 0607_2019ON_11_q06 [q] COLLATERAL
 - 0607_2019ON_12_q06 [q] COLLATERAL
-- 0607_2019ON_62_q02 [q] COLLATERAL
-- 0607_2019ON_62_q03 [q] COLLATERAL
-- 0607_2019ON_62_tA [q] COLLATERAL
-- 0607_2024FM_12_q05 [q] COLLATERAL
-- 0607_2024FM_12_q21 [q] COLLATERAL
-- 0607_2024MJ_33_q02 [q] COLLATERAL
-- 0607_2025MJ_43_q06 [q] COLLATERAL
-- 0607_2026FM_32_q12 [q] COLLATERAL
-- 0607_2026MJ_11_q17 [q] COLLATERAL
-- 0607_2026MJ_23_q17 [q] COLLATERAL
-- 0607_2026MJ_41_q15 [q] COLLATERAL
-- 0607_2026MJ_42_q14 [q] COLLATERAL
+- 0607_2019ON_51_q01 [ms] COLLATERAL
+- 0607_2019ON_51_t1 [ms] COLLATERAL
+- 0607_2019ON_52_t1 [ms] COLLATERAL
+- 0607_2019ON_53_t1 [ms] COLLATERAL
+- 0607_2021FM_22_q02 [ms] COLLATERAL
+- 0607_2025MJ_12_q19 [ms] COLLATERAL
+- 0607_2025MJ_13_q11 [ms] COLLATERAL
+- 0607_2025MJ_13_q14 [q] COLLATERAL
+- 0607_2025MJ_21_q06 [ms] COLLATERAL
+- 0607_2025MJ_41_q08 [ms] COLLATERAL
+- 0607_2025ON_13_q14 [ms] COLLATERAL
+- 0607_2025ON_21_q05 [ms] COLLATERAL
+- 0607_2025ON_22_q10 [ms] COLLATERAL
+- 0607_2025ON_31_q15 [ms] COLLATERAL
+- 0607_2025ON_33_q04 [ms] COLLATERAL
+- 0607_2025ON_61_q02 [q] COLLATERAL
+- 0607_2025ON_61_tA [q] COLLATERAL
+- 0607_2025ON_62_q03 [ms] COLLATERAL
+- 0607_2025ON_62_tB [ms] COLLATERAL
 
 ## gone (open)
 
@@ -172,11 +191,13 @@ Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / pass
 - 0607_2021FM_42_q01 ms_mode: mark scheme not laid out by ms_maths: ['wrap']
 - 0607_2021FM_42_q02 ms_mode: mark scheme not laid out by ms_maths: ['wrap', 'scale', 'cell']
 - 0607_2021FM_42_q03 ms_mode: mark scheme not laid out by ms_maths: ['wrap', 'scale', 'cell']
+- 0607_2021FM_42_q03 ms_piccut: msimg_5_102_276.png
 - 0607_2021FM_42_q05 ms_mode: mark scheme not laid out by ms_maths: ['wrap', 'scale', 'cell']
 - 0607_2021FM_42_q06 ms_mode: mark scheme not laid out by ms_maths: ['scale', 'cell']
 - 0607_2021FM_42_q07 ms_mode: mark scheme not laid out by ms_maths: ['wrap']
 - 0607_2021FM_42_q08 ms_mode: mark scheme not laid out by ms_maths: ['wrap', 'scale', 'cell']
 - 0607_2021FM_42_q09 ms_mode: mark scheme not laid out by ms_maths: ['wrap', 'scale', 'cell']
+- 0607_2021FM_42_q10 fig_cut: diagram1 top
 - 0607_2021FM_42_q10 ms_mode: mark scheme not laid out by ms_maths: ['scale', 'cell']
 - 0607_2021FM_42_q11 ms_mode: mark scheme not laid out by ms_maths: ['wrap', 'scale', 'cell']
 - 0607_2021FM_52_q01 ms_mode: mark scheme not laid out by ms_maths: ['wrap']
@@ -195,6 +216,7 @@ Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / pass
 - 0607_2021FM_52_q04 ms_sweep: code in answer C1
 - 0607_2021FM_52_q04 ms_table: 4: table / graph drawn as lines
 - 0607_2021FM_52_q04 ms_table: row 2: table / graph drawn as lines
+- 0607_2021FM_62_q01 fig_cut: diagram1 bottom
 - 0607_2021FM_62_q01 ms_align: 1(b)(i) 1(b)(ii)
 - 0607_2021FM_62_q01 ms_mode: mark scheme not laid out by ms_maths: ['same', 'wrap']
 - 0607_2021FM_62_q02 ms_mode: mark scheme not laid out by ms_maths: ['wrap']
@@ -216,6 +238,7 @@ Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / pass
 - 0607_2024FM_22_q13 ms_sweep: code in answer M1
 - 0607_2024FM_22_q14 ms_mode: mark scheme not laid out by ms_maths: ['scale', 'cell']
 - 0607_2024FM_22_q15 ms_mode: mark scheme not laid out by ms_maths: ['wrap']
+- 0607_2024FM_32_q03 fig_text: diagram1: Monday Tuesday Wednesday Thursday Friday
 - 0607_2024FM_32_q07 ms_mode: mark scheme not laid out by ms_maths: ['scale', 'cell']
 - 0607_2024FM_32_q08 ms_mode: mark scheme not laid out by ms_maths: ['wrap', 'scale', 'cell']
 - 0607_2024FM_32_q09 ms_mode: mark scheme not laid out by ms_maths: ['wrap', 'scale', 'cell']
@@ -333,6 +356,7 @@ Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / pass
 - 0607_2024MJ_32_q01 ms_sweep: code in answer B1
 - 0607_2024MJ_32_q01 ms_sweep: code in answer B1
 - 0607_2024MJ_32_q02 ms_mode: mark scheme not laid out by ms_maths: ['wrap', 'scale', 'cell']
+- 0607_2024MJ_32_q04 fig_text: diagram1: Pattern 1 Pattern 2 Pattern 3 Pattern 4 
 - 0607_2024MJ_32_q04 ms_mode: mark scheme not laid out by ms_maths: ['old']
 - 0607_2024MJ_32_q04 ms_picture: 4: picture cell
 - 0607_2024MJ_32_q04 ms_sweep: code in answer B1
@@ -608,6 +632,7 @@ Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / pass
 - 0607_2024ON_62_q10 ms_sweep: code in answer C2
 - 0607_2024ON_62_q10 ms_table: 10: table / graph drawn as lines
 - 0607_2024ON_63_q01 ms_mode: mark scheme not laid out by ms_maths: ['wrap']
+- 0607_2024ON_63_q02 fig_text: diagram2: diagonal squares squares in each row
 - 0607_2024ON_63_q04 ms_mode: mark scheme not laid out by ms_maths: ['wrap']
 - 0607_2024ON_63_q05 ms_mode: mark scheme not laid out by ms_maths: ['wrap']
 - 0607_2024ON_63_q07 ms_mode: mark scheme not laid out by ms_maths: ['wrap']
@@ -675,6 +700,7 @@ Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / pass
 - 0607_2025FM_32_q17 ms_mode: mark scheme not laid out by ms_maths: ['wrap', 'scale', 'cell']
 - 0607_2025FM_42_q02 ms_mode: mark scheme not laid out by ms_maths: ['scale', 'cell']
 - 0607_2025FM_42_q04 ms_mode: mark scheme not laid out by ms_maths: ['wrap', 'scale', 'cell']
+- 0607_2025FM_42_q08 ms_piccut: msimg_6_325_625.png
 - 0607_2025FM_42_q11 ms_mode: mark scheme not laid out by ms_maths: ['scale', 'cell']
 - 0607_2025FM_42_q12 ms_align: 12(b)(i) 12(b)(ii)
 - 0607_2025FM_42_q12 ms_mode: mark scheme not laid out by ms_maths: ['scale', 'cell']
@@ -1364,6 +1390,7 @@ Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / pass
 - 0607_2026MJ_11_q11 ms_mode: mark scheme not laid out by ms_maths: ['scale', 'cell']
 - 0607_2026MJ_11_q11 ms_sweep: code in answer M1
 - 0607_2026MJ_11_q12 ms_align: 12(b)
+- 0607_2026MJ_11_q14 fig_text: diagram1: First piece of fruit Second piece of fru
 - 0607_2026MJ_11_q14 ms_align: 14(b)(ii)
 - 0607_2026MJ_11_q14 ms_mode: mark scheme not laid out by ms_maths: ['scale', 'wrap', 'cell']
 - 0607_2026MJ_11_q15 ms_mode: mark scheme not laid out by ms_maths: ['scale', 'cell']
@@ -1812,6 +1839,7 @@ Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / pass
 - 0607_2026MJ_43_q08 ms_align: 8(c)
 - 0607_2026MJ_43_q09 ms_align: 9(c)
 - 0607_2026MJ_43_q09 ms_mode: mark scheme not laid out by ms_maths: ['wrap']
+- 0607_2026MJ_43_q09 ms_piccut: msimg_9_126_143.png
 - 0607_2026MJ_43_q09 ms_sweep: code in answer B1
 - 0607_2026MJ_43_q10 ms_align: 10(c)
 - 0607_2026MJ_43_q10 ms_mode: mark scheme not laid out by ms_maths: ['wrap', 'scale', 'cell']
