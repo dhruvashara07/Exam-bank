@@ -6,10 +6,17 @@ Read this first in every session. Update it before ending a session.
 - 2026-11-18: CHEM stored: 1599 of 1600 PDFs in Releases (only chemistry_0652_to_0620_mapping.pdf, not a Cambridge name,
   stays on branch store-chem). inbox.py now keeps gt/ci/ir/in/eq/one-digit/combined files (302 had been skipped).
   Branches store-chem and store-chem-rest: Dhruv deletes them (this session cannot delete branches).
-- NEXT: Dhruv's review round 34 (13 items: 4 of my fixes, 4 changed approved questions, 5 calibration) is on the review
-  page. In THIS chat: read feedback_r34, fix every wrong item as a class (ERROR_PATTERNS), `review_round.py close 34`,
-  approve.py for M2 (117 papers) and re-approve the approved sessions rebuilt in M2, docs, push. Then the next batch
-  (M3: 2018-2020, remind Dhruv to upload 2019 MJ first) starts in a NEW chat.
+- NEXT: (1) fix the 3 open vector-bracket questions of pattern 240 (2023 MJ 32 q8(c) = the only M2 paper still pending
+  approval, 2023 MJ 32; 2026 MJ 11 q18(b), 2026 MJ 22 q6), approve 0607_2023MJ_32; (2) ask Dhruv (options) whether to redraw
+  ALL blurry raster MS screenshots of M2 (~60 graphs / Venn pictures) or keep the printed ones; (3) re-show in the next round
+  (--recheck) the approved questions whose figures changed in round 34 (2014MJ_32_q09b, 2019ON_11/12_q06, 2025MJ_13_q14a,
+  2021FM_22_q02, 2022ON_61_q03/q04, 2023MJ_11_q16, 2023ON_32_q08, 2023ON_42_q09, 2025ON_61_q02); (4) then M3 (2018-2020) in a
+  NEW chat (remind Dhruv to upload 2019 May/June first). Dhruv may continue in another Claude account: put docs/NEXT_CHAT.md
+  prompt there (skill, memory, review page feedback do not carry over; the repo does).
+- 2026-11-22: ROUND 34 CLOSED (13 items, 6 wrong -> patterns 234-239, all fixed and checked side by side), M2 APPROVED: 116 of
+  117 papers (2023 MJ 32 waits for pattern 240). Pass 2 on GitHub (run 45052380975): 2 not fixed passed (231 grids), 17 NEW
+  = bracket-extender words (check now ignores them) + the two redraws; 52 collateral questions all looked at: one real
+  regression of my own (stray extender line, fixed) and 3 old vector-wrap defects (pattern 240, 2 fixed, 3 open).
 - 2026-11-20: M2 passes 3-5 on GitHub; known items fixed (patterns 230-233: tree in one picture, Step grids split, word box
   as text, rounded formula box as text, crops never grow into a sibling); pass 4 caught my own collateral (54 questions),
   narrowed and re-tested - all approved crops back to their approved boxes. Reasons file: 0 open, 0 ask.

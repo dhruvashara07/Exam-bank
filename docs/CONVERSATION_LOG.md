@@ -532,3 +532,15 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   of my own (230); pass 4 showed 54 collateral questions from too-wide grouping rules (231 -> 232). Each pass-diff took
   ~10 min of my looking instead of a full re-check: the flow paid for itself. Round 34 has 13 items and no open decision.
   Lesson: test every new rule on the look-alikes the diff names BEFORE pushing (now in ERROR_PATTERNS 232).
+
+## 2026-11-22 - M2 round 34 closed, M2 approved (116 of 117)
+- Dhruv: 'Review is done' (6 of 13 wrong). Fixed as classes 234-239 (box rule, strip-shaded table, bracket gap, slanted-stroke
+  crop, tree headings in the crop, blurred raster pictures redrawn), blast radius measured first (MS 4 questions, figures 15).
+- Pass 2 on GitHub: all 52 collateral questions looked at on 10 sheets + 3 figure sheets (~35 min, the slowest phase). Found my
+  own regression (a bracket extender run bridged two different brackets: pattern 240) by reading, not by a check - and a
+  scan for its look-alikes found 3 older vector-wrap defects; 2 fixed, 3 open (written in PROGRESS NEXT).
+- Repeat errors: the bracket class (236) came back as 240 because I tested the fix on the 2021 FM target only, not on the
+  look-alikes (rows with brackets of two stacks). Change: every layout rule is scanned over ALL stored rows for its
+  look-alikes before the push (now in ERROR_PATTERNS lesson). Slowest next time: reading collateral sheets - make the pass-2
+  diff report class (bracket-only changes) auto-passed when the only change is added extender glyphs.
+- Open decision for Dhruv: redraw all ~60 blurry raster MS pictures of M2 or keep the printed ones.

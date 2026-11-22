@@ -105,12 +105,21 @@
    "start": "2026-11-20T10:47:48Z",
    "end": "2026-11-20T10:56:26Z",
    "minutes": 8.6
+  },
+  {
+   "id": 45052380975,
+   "name": "Question bank",
+   "branch": "main",
+   "conclusion": null,
+   "start": "2026-11-22T17:58:14Z",
+   "end": "2026-11-22T17:58:18Z",
+   "minutes": 0.1
   }
  ],
  "counts": {
   "papers": 117,
-  "questions": 1129,
-  "flags": 353,
+  "questions": 1580,
+  "flags": 370,
   "round_items": 13,
   "wrong_items": 6
  },
@@ -362,6 +371,14 @@
    "fix": "ms_graphs: tree spec + graph spec; the rest of M2's screenshots = Dhruv's decision",
    "found_by": "dhruv",
    "at": "2026-11-22T17:52:49+00:00"
+  },
+  {
+   "pattern": "240",
+   "kind": "new",
+   "what": "stacked vectors torn apart when a MS line wraps; extender run bridged between different brackets (236 follow-up)",
+   "fix": "bracket bridge only top->bottom within 3 glyphs; band merge by bracket column; maths_check ignores extenders",
+   "found_by": "claude",
+   "at": "2026-11-22T18:23:21+00:00"
   }
  ],
  "tokens": [],
@@ -601,6 +618,18 @@
   {
    "at": "2026-11-22T17:52:49+00:00",
    "task": "count M2 round_items=13"
+  },
+  {
+   "at": "2026-11-22T17:58:45+00:00",
+   "task": "gh M2 45052380975"
+  },
+  {
+   "at": "2026-11-22T18:23:21+00:00",
+   "task": "count M2 papers=117"
+  },
+  {
+   "at": "2026-11-22T18:23:21+00:00",
+   "task": "error M2 --pattern"
   }
  ]
 }

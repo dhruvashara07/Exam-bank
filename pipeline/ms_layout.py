@@ -2018,7 +2018,11 @@ def _close_brackets(v):
         for a, b in zip(ts, ts[1:]):
             s_ = a.get('s', 8.74) or 8.74
             gap = b['y'] - a['y']
-            if gap > 1.2 * s_ and b['t'] != top['t']:
+            top_ = a['t'] in _BR_TOP or a['t'] in _BR_TOP.values() or a['t'] in ('⎜', '⎟', '⎢', '⎥')
+            bot_ = b['t'] in _BR_BOT or b['t'] in ('⎜', '⎟', '⎢', '⎥')
+            # only a top/extender piece to the bottom/extender piece right below it, at most 3 glyph heights apart: pieces of
+            # different brackets at the same x (2023 ON 41 q1 1(d)(ii): a line down the whole cell) are not one bracket
+            if 1.2 * s_ < gap <= 3 * s_ and top_ and bot_ and b['t'] != top['t']:
                 n = math.ceil(gap / s_) - 1
                 for k in range(1, n + 1):
                     new.append(dict(a, t=ext, y=round(a['y'] + gap * k / (n + 1), 2)))

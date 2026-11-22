@@ -289,10 +289,19 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
                 ya, yb = sum(merged[-1]) / len(merged[-1]), sum(b_) / len(b_)
                 ta = [i for i in ts_ if i.ref.get('s', 11) >= 9 and min(abs(round(i.ref['y'], 0) - y_) for y_ in merged[-1]) < 0.6]
                 tb_ = [i for i in ts_ if i.ref.get('s', 11) >= 9 and min(abs(round(i.ref['y'], 0) - y_) for y_ in b_) < 0.6]
-                stacked = any(b.x0 > left + 8 and min(a.x1, b.x1) - max(a.x0, b.x0) > 0.5 * min(a.x1 - a.x0, b.x1 - b.x0)
-                              for a in ta for b in tb_) and yb - ya < 18 and tb_ and min(b.x0 for b in tb_) > left + 8
-                # (a denominator stands indented UNDER its numerator; a new printed line starts at the cell's left -
-                #  round 30: splitting broke fractions in 2025 MJ 22 q15, 2021 FM 42 q9, 2019 ON 31 q8)
+                ov_ = lambda a, b: min(a.x1, b.x1) - max(a.x0, b.x0) > 0.5 * min(a.x1 - a.x0, b.x1 - b.x0)
+                stacked = any(b.x0 > left + 8 and ov_(a, b) for a in ta for b in tb_) and yb - ya < 18 and tb_ \
+                    and min(b.x0 for b in tb_) > left + 8
+                # a vector / bracket glyph pair (top piece above its extender or bottom piece) is one stack even when the
+                # printed line starts at the cell's left ('B1 for translation of (-5 / y) or (x / -3)': the second vector
+                # was torn apart when the line wrapped; 2023 MJ 32 q8, 2025 ON 22 q10, 2026 MJ 11 q18 / 22 q4 / 22 q6, pattern 240)
+                if not stacked and yb - ya < 18:
+                    stk_ = [i for i in ts_ if i.ref.get('t') in BRK_]
+                    for g_ in stk_:         # a bracket column spans the bands it sits beside: its glyphs lie between them
+                        col_ = [h for h in stk_ if abs(h.ref['x'] - g_.ref['x']) < 1.5]
+                        lo_, hi_ = min(h.ref['y'] for h in col_), max(h.ref['y'] for h in col_)
+                        if lo_ - 4 <= ya <= hi_ + 1 and lo_ - 4 <= yb <= hi_ + 1 and hi_ > lo_:
+                            stacked = True; break
                 if stacked or any((i.y1 - i.y0 < 1.6 and ya - 4 < i.y0 < yb - 1) or (i.y0 < ya - 2 and i.y1 > yb - 6) for i in dr_):
                     merged[-1] = merged[-1] + b_
                 else:
@@ -508,6 +517,7 @@ def text_width(t, fam, s, bold=False):
 
 
 TOP = 4.0          # free space above the highest ink of a row (round 28: fractions touched the row's top rule)
+BRK_ = set('⎛⎜⎝⎞⎟⎠⎡⎢⎣⎤⎥⎦')
 MARGIN = 3.0       # extra space above and below a line holding stacked maths (fraction, vector, root)
 LGAP = 1.5         # least free space between two printed lines of one cell
 

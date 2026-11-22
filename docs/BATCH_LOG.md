@@ -6,7 +6,7 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 257.5 | 51.4 | 2766.0 | 3084.4 | 40 | 58 | 5 | n/a |
 | M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 | 11.7 | 97.4 | 191.6 | 0.0 | 30.1 | 233.4 | 23 | 42 | 2 | n/a |
-| M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 117 | 100.3 | 73.5 | 0.0 | 0.0 | 0.0 | 100.3 |  | 19 | 2 | n/a |
+| M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 117 | 100.3 | 131.2 | 0.0 | 0.0 | 0.0 | 100.3 | 13 | 28 | 4 | n/a |
 
 ## Errors per batch (new = first time, repeat = a pattern seen before: the doc or the fix failed)
 
@@ -143,6 +143,17 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - [new] pattern 227: M2 reasons pass 1: see ERROR_PATTERNS 227 → see ERROR_PATTERNS 227 (found by claude)
 - [repeat] pattern 228: pass 2: f(x) fraction pieces left in crops (my 225 too narrow) → cut passes the line's strokes (found by claude)
 - [repeat] pattern 229: pass 2: my 219 grid rule took boxes for tables; fill-only table lost rows → needs fills; fill edges = rows (found by claude)
+- [repeat] pattern 230: pass 3: my 225 cut an x axis / tree → line's own words only (found by claude)
+- [new] pattern 231: figure grouping: tree split, step grids merged, word box in crop, rounded formula box → extract.diagrams rules (maths) (found by claude)
+- [repeat] pattern 232: pass 4: my 231 grouping rules too wide (54 collateral) → narrowed; 28 look-alikes re-tested (found by claude)
+- [new] pattern 233: stored crop grew into a sibling grid → clamp at sibling figures (3 of 423 change) (found by claude)
+- [new] pattern 234: MS boxes around numbers got a rule under the x signs (2019 ON 51 q1(a)(ii)) → row rule = touching pieces; outer edge only with a real row rule (found by dhruv)
+- [new] pattern 235: MS strip-shaded table: double rules, loose ticks, right edge lost (2023 FM 62 q1(a)) → whole-cell fill edges, stubs join column rule, right outer edge (found by dhruv)
+- [new] pattern 236: column vector bracket pieces with a gap (2021 FM 22 q2) → _close_brackets adds extenders (found by dhruv)
+- [new] pattern 237: slanted stroke crossing the crop edge not taken in: tree top branch cut (2022 FM 42 q10) → FIT_SLANT in fit_crop (maths) (found by dhruv)
+- [new] pattern 238: tree column headings left out of the figure (2022 FM 42 q10) → FIT_HEAD: two headings on one baseline above the crop (found by dhruv)
+- [new] pattern 239: blurred raster MS pictures: handwriting-style tree (2023 MJ 32 q11), graph (2023 MJ 63 q12) → ms_graphs: tree spec + graph spec; the rest of M2's screenshots = Dhruv's decision (found by dhruv)
+- [new] pattern 240: stacked vectors torn apart when a MS line wraps; extender run bridged between different brackets (236 follow-up) → bracket bridge only top->bottom within 3 glyphs; band merge by bracket column; maths_check ignores extenders (found by claude)
 
 ## Repeats to act on
 
@@ -155,3 +166,5 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - M1: pattern 190 came back: small pasted symbol in a text line made the cell a picture: line drawn twice (2025 FM 62 q5) - left OPEN in round 32
 - M2: pattern 228 came back: pass 2: f(x) fraction pieces left in crops (my 225 too narrow)
 - M2: pattern 229 came back: pass 2: my 219 grid rule took boxes for tables; fill-only table lost rows
+- M2: pattern 230 came back: pass 3: my 225 cut an x axis / tree
+- M2: pattern 232 came back: pass 4: my 231 grouping rules too wide (54 collateral)

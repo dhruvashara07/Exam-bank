@@ -634,3 +634,13 @@ but look blurred (239), (b) a stray edge inside a few-cell group (234), (c) crop
 The 'look-alike that must NOT change' list for 234/235: every MS table with only strips or boxes (blast run = 0 more).
 Tool note: `ms_rebuild.py` WITHOUT --write still rewrites msimg_*.png (byte noise, ~300 files): `git restore` them before
 the commit (never commit msimg PNGs from a local run).
+240. Stacked column vectors torn apart when a mark-scheme line wraps ('B1 for translation of (-5 / y) or (x / -3)': the
+    second vector's top on line 1, its bottom on line 2; 2025 ON 22 q10, 2026 MJ 22 q4) and, found in the round-34 pass
+    check of my own bracket fix (236): an extender run drawn between the bottom piece of one bracket and the top of another
+    at the same x (a line down the whole cell, 2023 ON 41 q1 1(d)(ii)). -> ms_layout._close_brackets bridges ONLY a
+    top/extender piece to the bottom/extender piece right below it (<= 3 glyph heights); ms_maths._cell merges the bands a
+    bracket column spans (BRK_). maths_check ignores the extender glyphs it adds. STILL OPEN (3 questions, wrong in print
+    layout only, found by the bracket-pieces scan): 2023 MJ 32 q8(c), 2026 MJ 11 q18(b), 2026 MJ 22 q6 Guidance - the vector
+    brackets there are drawings in _cell, not glyphs: the same band merge must key on the drawn bracket (next chat first task).
+Lesson (round 34 pass 2): a new layout rule needs the SCAN for its look-alikes before the push (here: stored rows whose
+bracket tops have no matching bottom, rows with >= 5 extenders): that scan found the stray line and 6 more questions in 2 min.

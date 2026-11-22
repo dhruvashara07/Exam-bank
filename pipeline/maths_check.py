@@ -72,6 +72,8 @@ def check_question(rec):
         for v in rows:
             ours.update(w for w in words(v['text']) if not LABEL.match(w))
         miss, extra = src - ours, ours - src
+        for g_ in '⎜⎟⎢⎥':                            # bracket extenders added by ms_layout._close_brackets (pattern 236)
+            extra.pop(g_, None)
         if any(v.get('images') for v in rows):       # a cell kept as its printed picture: its words are in the picture
             miss = collections.Counter()
         if miss:
