@@ -198,20 +198,20 @@
         30.0,
         148.0,
         570.0,
-        171.0
+        244.0
        ],
        "continued": false,
        "answer_space": {
-        "kind": "none",
-        "dotted_lines": 0,
+        "kind": "lines",
+        "dotted_lines": 1,
         "answer_line": null,
-        "working_gap_pt": 4.0,
-        "height_pt": 23.0
+        "working_gap_pt": 63.5,
+        "height_pt": 96.0
        }
       }
      ],
-     "text": "the mean height,",
-     "marks": 0,
+     "text": "the mean height,\n................................................ m [1]",
+     "marks": 1,
      "path": "9(c)(i)",
      "mark_scheme": [
       {
@@ -238,6 +238,19 @@
        "type": "text",
        "html": "the mean height,",
        "text": "the mean height,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "unit": "m"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 1
       }
      ]
     },
@@ -248,22 +261,22 @@
        "page": 13,
        "bbox": [
         30.0,
-        233.0,
+        244.0,
         570.0,
         340.0
        ],
        "continued": false,
        "answer_space": {
         "kind": "lines",
-        "dotted_lines": 2,
+        "dotted_lines": 1,
         "answer_line": null,
         "working_gap_pt": 63.5,
-        "height_pt": 107.0
+        "height_pt": 96.0
        }
       }
      ],
-     "text": "................................................ m [1]\n(ii) the mean temperature.\n...............................................°C [1]",
-     "marks": 2,
+     "text": "the mean temperature.\n...............................................°C [1]",
+     "marks": 1,
      "path": "9(c)(ii)",
      "mark_scheme": [
       {
@@ -287,11 +300,6 @@
      ],
      "content": [
       {
-       "type": "answer",
-       "kind": "answer_line",
-       "unit": "m"
-      },
-      {
        "type": "text",
        "html": "the mean temperature.",
        "text": "the mean temperature."
@@ -307,7 +315,7 @@
       },
       {
        "type": "marks",
-       "value": 2
+       "value": 1
       }
      ]
     }

@@ -21,7 +21,7 @@
   }
  ],
  "text": "4\nLee draws a circle on a piece of paper in the shape of a regular polygon with n sides.\nThe circle touches all n edges of the paper.\nHe drops grains of rice at random onto the piece of paper.\nHe counts the number of grains of rice inside the circle and finds the relative frequency.\nEstimate for r=k# relative frequency\nExplain clearly why the constant k gives an approximation for r, as the value of n increases.",
- "marks": 1,
+ "marks": 2,
  "figures": [],
  "review": {
   "reasons": [],
@@ -31,8 +31,9 @@
  "mark_scheme": [
   {
    "label": "4",
-   "text": "Relative frequency approaches 1 oe",
+   "text": "Relative frequency approaches 1 oe\nJustification\ne.g. Almost all the discs will land\ninside the circle.\nor\nThe [area of the] polygon approaches\nthe [area of the] circle.",
    "codes": [
+    "1",
     "1"
    ],
    "segments": [
@@ -42,7 +43,7 @@
       32.15999984741211,
       84.8,
       563.1599731445312,
-      109.2
+      224.4
      ]
     }
    ]
@@ -59,7 +60,7 @@
  "variant": 3,
  "paper_code": "0607/63",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 1,
+ "total_marks": 2,
  "topic": null,
  "subtopic": null,
  "keywords": [],

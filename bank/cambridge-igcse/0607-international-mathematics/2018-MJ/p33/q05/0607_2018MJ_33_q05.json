@@ -37,20 +37,20 @@
       30.0,
       356.6,
       570.0,
-      405.0
+      426.5
      ],
      "continued": false,
      "answer_space": {
       "kind": "lines",
-      "dotted_lines": 1,
+      "dotted_lines": 2,
       "answer_line": null,
       "working_gap_pt": 11.4,
-      "height_pt": 48.4
+      "height_pt": 69.9
      }
     }
    ],
-   "text": "Write down the co-ordinates of point A and point B.\nA ( ................ , ................ )",
-   "marks": 0,
+   "text": "Write down the co-ordinates of point A and point B.\nA ( ................ , ................ )\nB ( ................ , ................ ) [2]",
+   "marks": 2,
    "path": "5(a)",
    "mark_scheme": [
     {
@@ -86,7 +86,17 @@
     },
     {
      "type": "answer",
+     "kind": "answer_line",
+     "prefix": "B (",
+     "unit": ")"
+    },
+    {
+     "type": "answer",
      "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
     }
    ]
   },
@@ -97,22 +107,22 @@
      "page": 7,
      "bbox": [
       30.0,
-      415.7,
+      426.5,
       570.0,
-      444.5
+      504.5
      ],
      "continued": false,
      "answer_space": {
       "kind": "lines",
       "dotted_lines": 1,
       "answer_line": null,
-      "working_gap_pt": -1.7,
-      "height_pt": 28.8
+      "working_gap_pt": 50.5,
+      "height_pt": 78.0
      }
     }
    ],
-   "text": "B ( ................ , ................ ) [2]\n(b) Find the co-ordinates of the midpoint of AB.",
-   "marks": 2,
+   "text": "Find the co-ordinates of the midpoint of AB.\n( ................ , ................ ) [1]",
+   "marks": 1,
    "path": "5(b)",
    "mark_scheme": [
     {
@@ -136,15 +146,15 @@
    ],
    "content": [
     {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "B (",
-     "unit": ")"
-    },
-    {
      "type": "text",
      "html": "Find the co-ordinates of the midpoint of <i>AB</i>.",
      "text": "Find the co-ordinates of the midpoint of AB."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "(",
+     "unit": ")"
     },
     {
      "type": "answer",
@@ -152,7 +162,7 @@
     },
     {
      "type": "marks",
-     "value": 2
+     "value": 1
     }
    ]
   },
@@ -163,22 +173,22 @@
      "page": 7,
      "bbox": [
       30.0,
-      493.7,
+      504.5,
       570.0,
       613.5
      ],
      "continued": false,
      "answer_space": {
       "kind": "lines",
-      "dotted_lines": 2,
+      "dotted_lines": 1,
       "answer_line": null,
       "working_gap_pt": 76.5,
-      "height_pt": 119.8
+      "height_pt": 109.0
      }
     }
    ],
-   "text": "( ................ , ................ ) [1]\n(c) Find the gradient of AB.\n..................................................... [2]",
-   "marks": 3,
+   "text": "Find the gradient of AB.\n..................................................... [2]",
+   "marks": 2,
    "path": "5(c)",
    "mark_scheme": [
     {
@@ -202,12 +212,6 @@
    ],
    "content": [
     {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "(",
-     "unit": ")"
-    },
-    {
      "type": "text",
      "html": "Find the gradient of <i>AB</i>.",
      "text": "Find the gradient of AB."
@@ -219,7 +223,7 @@
     },
     {
      "type": "marks",
-     "value": 3
+     "value": 2
     }
    ]
   },

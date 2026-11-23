@@ -61,20 +61,20 @@
         30.0,
         304.0,
         570.0,
-        327.0
+        361.0
        ],
        "continued": false,
        "answer_space": {
-        "kind": "none",
-        "dotted_lines": 0,
+        "kind": "lines",
+        "dotted_lines": 1,
         "answer_line": null,
-        "working_gap_pt": 4.0,
-        "height_pt": 23.0
+        "working_gap_pt": 24.5,
+        "height_pt": 57.0
        }
       }
      ],
-     "text": "the y-axis,",
-     "marks": 0,
+     "text": "the y-axis,\n( ................ , ................ ) [1]",
+     "marks": 1,
      "path": "14(a)(i)",
      "mark_scheme": [
       {
@@ -101,6 +101,20 @@
        "type": "text",
        "html": "the <i>y</i>-axis,",
        "text": "the y-axis,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "(",
+       "unit": ")"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 1
       }
      ]
     },
@@ -111,22 +125,22 @@
        "page": 16,
        "bbox": [
         30.0,
-        350.0,
+        361.0,
         570.0,
         418.0
        ],
        "continued": false,
        "answer_space": {
         "kind": "lines",
-        "dotted_lines": 2,
+        "dotted_lines": 1,
         "answer_line": null,
         "working_gap_pt": 24.5,
-        "height_pt": 68.0
+        "height_pt": 57.0
        }
       }
      ],
-     "text": "( ................ , ................ ) [1]\n(ii) the x-axis.\n( ................ , ................ ) and ( ................ , ................ ) [2]",
-     "marks": 3,
+     "text": "the x-axis.\n( ................ , ................ ) and ( ................ , ................ ) [2]",
+     "marks": 2,
      "path": "14(a)(ii)",
      "mark_scheme": [
       {
@@ -150,12 +164,6 @@
      ],
      "content": [
       {
-       "type": "answer",
-       "kind": "answer_line",
-       "prefix": "(",
-       "unit": ")"
-      },
-      {
        "type": "text",
        "html": "the <i>x</i>-axis.",
        "text": "the x-axis."
@@ -172,7 +180,7 @@
       },
       {
        "type": "marks",
-       "value": 3
+       "value": 2
       }
      ]
     }
