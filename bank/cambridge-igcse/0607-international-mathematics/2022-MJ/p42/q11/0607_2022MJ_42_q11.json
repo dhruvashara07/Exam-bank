@@ -48,20 +48,20 @@
       30.0,
       56.8,
       570.0,
-      106.0
+      153.0
      ],
      "continued": false,
      "answer_space": {
-      "kind": "none",
-      "dotted_lines": 0,
+      "kind": "lines",
+      "dotted_lines": 1,
       "answer_line": null,
-      "working_gap_pt": 10.7,
-      "height_pt": 49.2
+      "working_gap_pt": 35.2,
+      "height_pt": 96.2
      }
     }
    ],
-   "text": "A pyramid has a square base with sides of length 9 cm and vertical height h cm.\nFind an expression, in terms of h, for the volume of the pyramid.",
-   "marks": 0,
+   "text": "A pyramid has a square base with sides of length 9 cm and vertical height h cm.\nFind an expression, in terms of h, for the volume of the pyramid.\n......................................... cm3 [1]",
+   "marks": 1,
    "path": "11(a)",
    "mark_scheme": [
     {
@@ -93,6 +93,19 @@
      "type": "text",
      "html": "Find an expression, in terms of <i>h</i>, for the volume of the pyramid.",
      "text": "Find an expression, in terms of h, for the volume of the pyramid."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "cm3"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 1
     }
    ]
   },
@@ -103,22 +116,22 @@
      "page": 18,
      "bbox": [
       30.0,
-      138.8,
+      153.0,
       570.0,
       503.5
      ],
      "continued": false,
      "answer_space": {
-      "kind": "lines",
-      "dotted_lines": 1,
+      "kind": "none",
+      "dotted_lines": 0,
       "answer_line": null,
       "working_gap_pt": 71.8,
-      "height_pt": 364.7
+      "height_pt": 350.5
      }
     }
    ],
-   "text": "......................................... cm3 [1]\n(b)\nA\nNOT TO\n10cm\nSCALE\nB\nC\nacm\nhcm\nD\nE\n9cm\nADE is an isosceles triangle.\nBC is parallel to DE, BC=a cm and DE= 9 cm.\nThe vertical height of triangle ADE is h cm and the vertical height of triangle ABC is 10 cm.\n90\nShow that   a\n=\nh\n[1]",
-   "marks": 2,
+   "text": "A\nNOT TO\n10cm\nSCALE\nB\nC\nacm\nhcm\nD\nE\n9cm\nADE is an isosceles triangle.\nBC is parallel to DE, BC=a cm and DE= 9 cm.\nThe vertical height of triangle ADE is h cm and the vertical height of triangle ABC is 10 cm.\n90\nShow that   a\n=\nh\n[1]",
+   "marks": 1,
    "path": "11(b)",
    "mark_scheme": [
     {
@@ -142,11 +155,6 @@
    ],
    "content": [
     {
-     "type": "answer",
-     "kind": "answer_line",
-     "unit": "cm3"
-    },
-    {
      "type": "figure",
      "id": "0607_2022MJ_42_q11b_diagram1",
      "caption": null
@@ -158,11 +166,12 @@
     },
     {
      "type": "answer",
-     "kind": "lines"
+     "kind": "space",
+     "height_pt": 71.8
     },
     {
      "type": "marks",
-     "value": 2
+     "value": 1
     }
    ]
   },

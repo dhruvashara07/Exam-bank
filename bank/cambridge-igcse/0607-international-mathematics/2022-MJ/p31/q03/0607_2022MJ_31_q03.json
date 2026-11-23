@@ -151,20 +151,20 @@
         30.0,
         441.4,
         570.0,
-        464.5
+        511.5
        ],
        "continued": false,
        "answer_space": {
-        "kind": "none",
-        "dotted_lines": 0,
+        "kind": "lines",
+        "dotted_lines": 1,
         "answer_line": null,
-        "working_gap_pt": 4.0,
-        "height_pt": 23.1
+        "working_gap_pt": 36.9,
+        "height_pt": 70.1
        }
       }
      ],
-     "text": "the circumference of the circle,",
-     "marks": 0,
+     "text": "the circumference of the circle,\n............................................ cm [2]",
+     "marks": 2,
      "path": "3(b)(i)",
      "mark_scheme": [
       {
@@ -191,6 +191,19 @@
        "type": "text",
        "html": "the circumference of the circle,",
        "text": "the circumference of the circle,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "unit": "cm"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 2
       }
      ]
     },
@@ -201,22 +214,22 @@
        "page": 5,
        "bbox": [
         30.0,
-        499.9,
+        511.5,
         570.0,
         581.5
        ],
        "continued": false,
        "answer_space": {
         "kind": "lines",
-        "dotted_lines": 2,
+        "dotted_lines": 1,
         "answer_line": null,
         "working_gap_pt": 35.8,
-        "height_pt": 81.6
+        "height_pt": 70.0
        }
       }
      ],
-     "text": "............................................ cm [2]\n(ii) the area of the circle.\n.......................................... cm2 [2]",
-     "marks": 4,
+     "text": "the area of the circle.\n.......................................... cm2 [2]",
+     "marks": 2,
      "path": "3(b)(ii)",
      "mark_scheme": [
       {
@@ -240,11 +253,6 @@
      ],
      "content": [
       {
-       "type": "answer",
-       "kind": "answer_line",
-       "unit": "cm"
-      },
-      {
        "type": "text",
        "html": "the area of the circle.",
        "text": "the area of the circle."
@@ -260,7 +268,7 @@
       },
       {
        "type": "marks",
-       "value": 4
+       "value": 2
       }
      ]
     }
