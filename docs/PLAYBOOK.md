@@ -32,6 +32,11 @@ ask; pass 2 adds verified / not fixed). Its fingerprints (<batch>_fp.json) make 
    maths, ERROR_PATTERNS now) or `--status passed --note "<why it matches the print>"` or `--status ask` (a real decision:
    Dhruv). Fixes are tried on their targets (`ms_rebuild.py <qid>`), blast radius measured before wide changes.
    `reasons.py status`: open = 0. Golden 0 + nothing under 0625-physics; push.
+   (M3) `reasons.py set` changes EVERY matching reason whatever its status: run the broad 'passed' sets FIRST, the
+   specific fixed / known sets after. Blast before the push: a figure-rule change (extract.diagrams, store.fit_crop) ->
+   `pipeline/fig_blast.py` old worktree vs new on all 0607 figures (every BIG change looked at on the page); an ms.py
+   change -> old vs new `ms.structured_rows_table` on every 0607 MS (labels + segments). Approved papers a fix corrects
+   are rebuilt in pass 2 too (their sessions in `inputs[sessions]`), re-shown in the round and re-approved.
 3. GitHub pass 2: dispatch the same sessions with `inputs[reasons]=pass2 <batch> --skip-checks`: rebuild + diff
    -> review/claude/<batch>_pass2.md: NOT FIXED, NEW reasons and COLLATERAL changed questions.
 4. Claude looks ONLY at that list (sheets for those qids), sets each to fixed / passed / ask (a third GitHub run only if

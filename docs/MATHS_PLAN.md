@@ -17,7 +17,7 @@ is what every new chat reads first.
 | Docs | Updated after EVERY batch without being asked. |
 | Skill | A "batch cycle" skill for these steps (approved by Dhruv). |
 | MongoDB / Cloudinary | Still nothing pushed. Dhruv decides when, after he knows the data size. |
-| 2019 May/June | Missing (the 2019-may-june folder held Oct/Nov copies). Dhruv will get it: REMIND HIM when batch M3 starts. |
+| 2019 May/June | Missing. SKIPPED by Dhruv 2026-11-23 (NOT DONE): batch M3b when he uploads it - do not remind him. |
 
 ## 2. Physics stays safe (shared pipeline, not a copy)
 Why shared: most of the code (cutting, mark-scheme parsing, our table layout, checks, review page) is the same
@@ -71,7 +71,7 @@ the LaTeX builder working with a check, measured times -> decide if 3 years per 
 | --- | --- | --- |
 | M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 (built 2026-11-17; rounds 32-33; APPROVED 2026-11-17) |
 | M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 117 (built 2026-11-19 with the two-pass flow) |
-| M3 | 2018-MJ 2018-ON 2020-MJ 2020-ON (**2019-MJ SKIPPED by Dhruv 2026-11-23: NOT DONE, no PDFs yet; build it later as 'M3b' when he uploads it**) | ~68 |
+| M3 | 2018-MJ 2018-ON 2020-MJ 2020-ON (**2019-MJ SKIPPED by Dhruv 2026-11-23: NOT DONE, no PDFs yet; build it later as 'M3b' when he uploads it**) | 69 (2020-MJ: 15 papers, no 13/33/53; built 2026-11-23, round 35) |
 | M4 | 2014-ON 2015-MJ 2015-ON 2016-MJ 2016-ON 2017-MJ 2017-ON | 115 |
 Order: newest first (closest to the pilot's 2025 rules), oldest last. If the pilot shows a chat cannot hold a
 batch, split it (e.g. M2a/M2b) and tell Dhruv.

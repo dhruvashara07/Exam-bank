@@ -42,7 +42,7 @@ mode, and topics (docs/NEXT.md).
 - Short, plain messages. Say clearly when you need his input; otherwise keep going.
 - You check everything first (every flag, every picture that matters) so his round has little left in it.
   He reviews only a short round on the same review page every time:
-  https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e (answers in its database, collection feedback_r<n>).
+  https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8 (shared account, from round 35; rounds 1-34 were on PCdP6oibAkjQvGz8mKm73e in Dhruv's own account) (answers in its database, collection feedback_r<n>).
 - Be honest: criticise his ideas when needed, and say what you could not fix and why. Never claim something
   is done that you have not checked.
 - Ask before big or irreversible changes. For a small layout decision, show the original and ours side by

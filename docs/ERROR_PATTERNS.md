@@ -687,4 +687,4 @@ bracket tops have no matching bottom, rows with >= 5 extenders): that scan found
     paragraph (lines starting 'sin', 'cos' counted as a sentence going on).
 Lesson (M3): a figure rule that looks fine on its target can change ~100 approved crops (an 'arrowhead = graph, not table'
 rule turned every numbered coordinate grid into a picture): the full-batch figure blast (old vs new crop of every 0607
-figure, /tmp script in CONVERSATION_LOG M3) caught it before any push - run it for every extract/fit_crop change.
+figure, pipeline/fig_blast.py) caught it before any push - run it for every extract/fit_crop change.

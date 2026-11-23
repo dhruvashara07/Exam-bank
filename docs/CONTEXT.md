@@ -23,7 +23,7 @@ builder (pick questions or parts → exam-style A4 PDF + mark scheme), full past
 - `store/` = THE data set (docs/STORE_DESIGN.md): per question JSON with layout units (words with
   position/size/style, lines as SVG paths, figure refs), figures one file per label at true size
   (vector SVG, photos PNG), MS rows, MCQ options, duplicates stored once, self-repair patches.
-- Review page (same link every round): https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e
+- Review page (same link every round): https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8 (shared account, from round 35; rounds 1-34 were on PCdP6oibAkjQvGz8mKm73e in Dhruv's own account)
   (`review/portal.json`; answers in its database, collection `feedback_r<n>`).
 - Tracker (public): https://dhruvashara07.github.io/Exam-bank/#batches (GitHub Pages, site/).
 - Hourly backlog run: scheduled task trig_0173DCrQWm76nnTXrW52TPjC, runbook docs/BACKLOG.md, state in

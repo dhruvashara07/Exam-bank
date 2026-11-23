@@ -544,3 +544,27 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   look-alikes before the push (now in ERROR_PATTERNS lesson). Slowest next time: reading collateral sheets - make the pass-2
   diff report class (bracket-only changes) auto-passed when the only change is added extender glyphs.
 - Open decision for Dhruv: redraw all ~60 blurry raster MS pictures of M2 or keep the printed ones.
+
+## 2026-11-23 - M3 (2018 MJ/ON, 2020 MJ/ON, 69 papers) on the shared account: two-pass flow, round 35
+- Dhruv asked: M3 = 2018-MJ, 2018-ON, 2020-MJ, 2020-ON (2019-MJ skipped on purpose, NOT DONE, no reminders); check the 2020-MJ
+  paper list first; two-pass flow, rare classes (< 5 q) log-and-skip, max 2 GitHub passes + 1 review round, usage budget
+  (START_HERE 5), short messages, ask only real decisions.
+- 2020-MJ: 15 papers (13, 33, 53 have neither QP nor MS in the manifest) - recorded, not a decision.
+- Pass 1 (run 45217380443, 15 min): 182 reasons / 115 questions. The data classes first: three papers with wrong marks totals
+  (white '[2]' text 241; Communication rows eating the row above 242) and part marks in the wrong part (245 - the paper total
+  was right, only checks.piece saw it). Then labels (243, 244), crops (246-249), glyphs (250).
+- Blast before the push saved two regressions: (a) my first legend-join rule pulled formula text into a crop (2024 ON 41
+  q10b) and my arrowhead rule would have turned ~100 approved coordinate grids into pictures - fig_blast.py (new tool, old
+  worktree vs new on all 0607 figures) showed both; both narrowed/reverted. (b) It also showed 245 corrects 4 approved
+  papers (parts with 0 marks) - rebuilt in pass 2, re-shown in round 35, to re-approve.
+- Known, not fixed (budget ~30 min per class reached): 5 MS cell pictures broken (251) and 2018 ON 61/63 MS rendering (252) -
+  first task of the next chat, never in Dhruv's round.
+- Pass 2 (run 45231218239, 13 min, also rebuilt 2019-ON, 2021-ON, 2022-MJ): 27 verified, 0 new, 3 'not fixed' were check
+  wording (passed), 30 collateral = corrections of 245/242 or 2 pt Communication-rule shifts. Approved-session extras were only
+  bracket extender glyphs (passed unlooked, START_HERE 5).
+- The old review page (PCdP6...) is in Dhruv's own account and not reachable here: round 35 is on a NEW page in the shared
+  account (https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8, db declared for feedback_r35). Docs point to it.
+- Analysis: slowest = the figure classes (~1.5 h: each crop rule needed a blast run on 336 papers, 15 min on 2 CPUs) and
+  reading 20 MS sheets. Repeats: the 'beside' side-cut of pattern 170 came back as 246 (its pixel test saw the line's own
+  symbols and '[1]'); the fit_crop text rules of 225 came back as 249 (italic 'f ( )x' and a sentence with no part label).
+  Lesson: `reasons.py set` overwrites any status - broad passes first, specific sets after (PLAYBOOK 1a).

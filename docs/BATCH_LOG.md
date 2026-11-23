@@ -7,6 +7,7 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 | M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 257.5 | 51.4 | 2766.0 | 3084.4 | 40 | 58 | 5 | n/a |
 | M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 | 11.7 | 97.4 | 191.6 | 0.0 | 30.1 | 233.4 | 23 | 42 | 2 | n/a |
 | M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 117 | 100.3 | 131.2 | 0.0 | 0.0 | 0.0 | 100.3 | 13 | 28 | 4 | n/a |
+| M3 | 2018-MJ 2018-ON 2020-MJ 2020-ON | 69 | 29.2 | 0.2 | 38.4 | 0.0 | 0.0 | 67.6 | 10 | 12 | 0 | n/a |
 
 ## Errors per batch (new = first time, repeat = a pattern seen before: the doc or the fix failed)
 
@@ -154,6 +155,20 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - [new] pattern 238: tree column headings left out of the figure (2022 FM 42 q10) → FIT_HEAD: two headings on one baseline above the crop (found by dhruv)
 - [new] pattern 239: blurred raster MS pictures: handwriting-style tree (2023 MJ 32 q11), graph (2023 MJ 63 q12) → ms_graphs: tree spec + graph spec; the rest of M2's screenshots = Dhruv's decision (found by dhruv)
 - [new] pattern 240: stacked vectors torn apart when a MS line wraps; extender run bridged between different brackets (236 follow-up) → bracket bridge only top->bottom within 3 glyphs; band merge by bracket column; maths_check ignores extenders (found by claude)
+
+### M3
+- [new] pattern 241: white [n] marks counted (2018 ON 31: 105/96) → visible_lines drops white mark brackets (maths) (found by claude)
+- [new] pattern 242: Communication row took the cell above (2018 MJ 63 35/40, 2018 ON 61 38/40) → C cut never lifts above its rule (found by claude)
+- [new] pattern 243: number-less labels lost on the first table page (2020 ON 41 q2) → accepted after a numbered label on the page (found by claude)
+- [new] pattern 244: MS label typos (12b), 1(ii) → label_text / current letter (found by claude)
+- [new] pattern 245: answer line + mark level with next label went to the next part (2018 MJ 32/33; 4 approved papers) → lone-mark cut rule takes answer lines (found by claude)
+- [new] pattern 246: part line overlapping crop top counted as beside: crop lost half (Venn, axes, chart) → part-label line never beside; words blanked (found by claude)
+- [new] pattern 247: mapping-diagram arrows 20.7 pt apart not one cluster → column of same thin shape joins (found by claude)
+- [new] pattern 248: hatch line boxes reached the next part (text-only diagram) → clipped_drawings; legend joins chart (found by claude)
+- [new] pattern 249: f( )x line / full sentence under drawing kept in crop → q_ regexes (found by claude)
+- [new] pattern 250: MMGreekItalic/MMEtc/MMNegate letters drawn as sans → MATHS_GLYPHS + drawn negation slash (found by claude)
+- [new] pattern 251: KNOWN: MS Venn/graph pictures broken (5 q) → open - next chat (found by claude)
+- [new] pattern 252: KNOWN: 2018 ON 61 root bars/bold bleed; 2018 ON 63 re-flow → open - next chat (found by claude)
 
 ## Repeats to act on
 

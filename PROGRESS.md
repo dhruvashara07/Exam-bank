@@ -6,13 +6,22 @@ Read this first in every session. Update it before ending a session.
 - 2026-11-18: CHEM stored: 1599 of 1600 PDFs in Releases (only chemistry_0652_to_0620_mapping.pdf, not a Cambridge name,
   stays on branch store-chem). inbox.py now keeps gt/ci/ir/in/eq/one-digit/combined files (302 had been skipped).
   Branches store-chem and store-chem-rest: Dhruv deletes them (this session cannot delete branches).
-- NEXT: (1) fix the 3 open vector-bracket questions of pattern 240 (2023 MJ 32 q8(c) = the only M2 paper still pending
-  approval, 2023 MJ 32; 2026 MJ 11 q18(b), 2026 MJ 22 q6), approve 0607_2023MJ_32; (2) Dhruv DECIDED (2026-11-22): redraw ALL
-  blurry raster MS screenshots of M2 (~60 graphs / Venn pictures) as a batch of its own (ms_graphs.SPECS, each function read by eye); (3) re-show in the next round
-  (--recheck) the approved questions whose figures changed in round 34 (2014MJ_32_q09b, 2019ON_11/12_q06, 2025MJ_13_q14a,
-  2021FM_22_q02, 2022ON_61_q03/q04, 2023MJ_11_q16, 2023ON_32_q08, 2023ON_42_q09, 2025ON_61_q02); (4) then M3 = 2018-MJ, 2018-ON, 2020-MJ, 2020-ON (4 sessions; 2019-MJ SKIPPED on purpose, NOT DONE - PDFs missing, Dhruv uploads it later and it becomes batch M3b; 2020-MJ has only 30 PDFs in raw/manifest.json, check the paper list) in a
-  NEW chat (do NOT remind about 2019 May/June: skipped). Dhruv may continue in another Claude account: put docs/NEXT_CHAT.md
-  prompt there (skill, memory, review page feedback do not carry over; the repo does).
+- NEXT: (1) M3 round 35 (review page https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8, 10 items: 5 calibration + 5 approved
+  questions my pattern 242/245 fixes corrected): read Dhruv's answers (db_list feedback_r35), fix what he marks wrong, then
+  approve.py the 69 M3 papers + re-approve 0607_2019ON_43, 2021ON_42, 2022MJ_31, 2022MJ_42 (approve.py --pending). M3 is NOT
+  approved yet. (2) Known open M3 items, fix first (ERROR_PATTERNS 251-252, status 'known' in M3_reasons.json): MS cell pictures
+  broken in 5 questions (2018 MJ 33 q8, 2020 MJ 31 q11, 2020 ON 33 q8, 2020 ON 43 q8, 2020 ON 62 q6) and 2018 ON 61 root bars /
+  bold bleed + 2018 ON 63 q6 re-flow. (3) Still from M2: 3 vector-bracket questions of pattern 240 (2023 MJ 32 q8(c) - the
+  only M2 paper pending, 2026 MJ 11 q18(b), 2026 MJ 22 q6), approve 0607_2023MJ_32; the raster-screenshot redraw batch (Dhruv
+  2026-11-22) now covers M2 AND M3 screenshots; the round-34 --recheck list (2014MJ_32_q09b ... 2023ON_42_q09).
+  2019-MJ is SKIPPED on purpose (NOT DONE, batch M3b when Dhruv uploads it) - do not remind him.
+- 2026-11-23: M3 BUILT + pass 1/pass 2 (2018 MJ/ON, 2020 MJ/ON = 69 papers; 2020-MJ has no 13/33/53 at all). Pass 1: 182 reasons
+  in 115 questions -> 30 fixed (patterns 241-250: white marks, Communication rows, number-less labels, label typos, answer line
+  beside the next label, crop side-cut / arrow column / hatch clipping / question text in crops, new equation-font glyphs),
+  125 passed, 30 known (251-252). Blast measured before push (fig_blast.py, ms old/new): 4 approved papers had wrong part
+  marks (245) and 2019 ON 61 q5(c)(ii) a lost MS piece (242) - corrected. Pass 2 (run 45231218239): 27 verified, 0 new,
+  30 collateral all looked at (corrections or 2 pt rule shifts); approved-session extras = bracket extenders only.
+  Golden 0 changed cuts, nothing under 0625. Round 35 published on a NEW review page (shared account).
 - 2026-11-22: ROUND 34 CLOSED (13 items, 6 wrong -> patterns 234-239, all fixed and checked side by side), M2 APPROVED: 116 of
   117 papers (2023 MJ 32 waits for pattern 240). Pass 2 on GitHub (run 45052380975): 2 not fixed passed (231 grids), 17 NEW
   = bracket-extender words (check now ignores them) + the two redraws; 52 collateral questions all looked at: one real

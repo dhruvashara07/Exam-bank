@@ -56,7 +56,7 @@ D. Review round: `reasons.py round <b> --calibrate 5` (ask + still open + 5 pass
    (read the live rounds.json) before publishing.
 3. Review round: `review_round.py new <n> <ids> --sample 0 --max 40 --recheck "qid=why;..."`, then
    `review_page.py add <n> "<title>"`; list_files, then publish_files (patch: keeps older rounds) to the same review
-   page (slug b3c8a710-c92b-4a33-95b2-f7eba1bc0031, link https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e).
+   page (slug b3c8a710-c92b-4a33-95b2-f7eba1bc0031, link https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8 (shared account, from round 35; rounds 1-34 were on PCdP6oibAkjQvGz8mKm73e in Dhruv's own account)).
    Stored figures under the question are at the question's scale. Tell Dhruv in 2 lines.
 4. Dhruv's round: read feedback_r<n>; his time is recorded as review but not counted.
 5. Fix: every wrong item -> pattern -> pipeline fix -> search the whole batch; rebuild once; checks; golden;
@@ -114,3 +114,10 @@ MATHS_PLAN.md if the plan changed; docs/NEXT_CHAT.md prompt; `pipeline/push.sh`;
 - `ms_rebuild.py` WITHOUT --write still rewrites msimg_*.png: `git restore` them before every commit.
 - Question-side crop changes (store.fit_crop): measure on ALL stored maths figures, render old | new for every changed one.
 - Blurry raster MS pictures: ms_graphs.SPECS (graph or 'tree' spec). Dhruv decided 2026-11-22: redraw ALL ~60 of M2 as a batch of its own.
+
+## M3 additions (2026-11-23)
+- Blast before every push: figure rules (extract.diagrams, store.fit_crop) -> `pipeline/fig_blast.py` (old git worktree vs
+  new, every 0607 figure; look at every BIG change on the page); ms.py -> old vs new `ms.structured_rows_table` on every MS.
+- Approved papers a fix corrects: add their sessions to the pass-2 `inputs[sessions]`, re-show them in the round, re-approve.
+- `reasons.py set` overwrites any status: broad 'passed' sets first, specific fixed / known sets after.
+- Review page of the shared account: https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8 (publish_files replace; db declared).
