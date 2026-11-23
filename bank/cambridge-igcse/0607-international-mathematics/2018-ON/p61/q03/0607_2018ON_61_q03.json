@@ -1,0 +1,235 @@
+{
+ "id": "0607_2018ON_61_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    63.7,
+    570.0,
+    472.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": -1.5,
+    "height_pt": 408.3
+   }
+  }
+ ],
+ "text": "The diagram below shows three diagonal rectangles, each of width 1 and gradient 1\n3\n3 .",
+ "marks": 3,
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    93.69999694824219,
+    81.80000305175781,
+    503.6000061035156,
+    241.60000610351562
+   ],
+   "id": "0607_2018ON_61_q03_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    150.4,
+    264.3,
+    446.9,
+    440.0
+   ],
+   "id": "0607_2018ON_61_q03_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      638.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 14.8,
+      "height_pt": 581.5
+     }
+    }
+   ],
+   "text": "Complete the table.\nYou may use the square dotty paper below to help you.\nNumber of dots inside a\nWidth\ndiagonal rectangle with gradient 1\n3\n(W )\n(d )\n1\n2\n19L − 1\n3\n4\n5\n49L − 4",
+   "marks": 2,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "9L\n19L − 1\n29L − 2\n39L – 3 oe\n49L − 4",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        25.139999389648438,
+        89.3,
+        570.239990234375,
+        232.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table. You may use the square dotty paper below to help you.",
+     "text": "Complete the table. You may use the square dotty paper below to help you."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Width (<i>W</i> )",
+       "Number of dots inside a 1 <i>diagonal</i> rectangle with gradient 3 (<i>d</i> )"
+      ],
+      [
+       "1",
+       ""
+      ],
+      [
+       "2",
+       "19<i>L</i> − 1"
+      ],
+      [
+       "3",
+       ""
+      ],
+      [
+       "4",
+       ""
+      ],
+      [
+       "5",
+       "49<i>L</i> − 4"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      644.4,
+      570.0,
+      775.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 70.3,
+      "height_pt": 130.6
+     }
+    }
+   ],
+   "text": "Find a formula, in terms of W and L, for the number of dots, d, inside a diagonal rectangle with\ngradient 1\n3 .\n...................................................",
+   "marks": 1,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "d = (10W – 1)L– (W – 1) oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        25.139999389648438,
+        232.5,
+        570.239990234375,
+        256.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find a formula, in terms of <i>W</i> and<i> L</i>, for the number of dots, <i>d</i>, inside a <i>diagonal</i> rectangle with gradient \\(\\frac{1}{3}\\) .",
+     "text": "Find a formula, in terms of W and L, for the number of dots, d, inside a diagonal rectangle with gradient (1)/(3) ."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The diagram below shows three <i>diagonal</i> rectangles, each of width 1 and gradient \\(\\frac{1}{3}\\) .",
+   "text": "The diagram below shows three diagonal rectangles, each of width 1 and gradient (1)/(3) ."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2018ON_61_q03_diagram1",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2018ON_61_q03_diagram2",
+   "caption": null
+  }
+ ],
+ "marks_source": "mark scheme"
+}

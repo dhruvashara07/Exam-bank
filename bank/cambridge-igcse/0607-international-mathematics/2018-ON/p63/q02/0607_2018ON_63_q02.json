@@ -1,0 +1,354 @@
+{
+ "id": "0607_2018ON_63_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    186.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 65.7,
+    "height_pt": 129.0
+   }
+  }
+ ],
+ "text": "2\nAs well as pairs of nearest neighbours there are also pairs of 2nd nearest neighbours,\n3rd nearest neighbours, 4th nearest neighbours and so on.\nHere are some examples.\nNearest neighbours\n2nd nearest neighbours\n3rd nearest neighbours",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      194.6,
+      570.0,
+      584.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 26.0,
+      "height_pt": 389.9
+     }
+    }
+   ],
+   "text": "Complete this table.\nNumber of pairs of\nNumber of dots in row\nNearest neighbours\n2nd nearest neighbours\n3rd nearest neighbours\n2\n1\n3\n4\n3\n5\n6\nn",
+   "marks": 2,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "2nd\nNearest\n3rd nearest\nnearest\nneighbours\nneighbours\nneighbours\n2\n1\n3\n2\n1\n4\n3\n2\n1\n5\n4\n3\n2\n6\n5\n4\n3\n7\nn − 1\nn − 2\nn − 3",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.459999084472656,
+        461.9,
+        562.8599853515625,
+        673.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this table.",
+     "text": "Complete this table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Number of dots in row",
+       "Number of pairs of",
+       "",
+       ""
+      ],
+      [
+       "",
+       "Nearest neighbours",
+       "2nd nearest neighbours",
+       "3rd nearest neighbours"
+      ],
+      [
+       "2",
+       "1",
+       "",
+       ""
+      ],
+      [
+       "3",
+       "",
+       "",
+       ""
+      ],
+      [
+       "4",
+       "3",
+       "",
+       ""
+      ],
+      [
+       "5",
+       "",
+       "",
+       ""
+      ],
+      [
+       "6",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "<i>n</i>",
+       "",
+       "",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      590.0,
+      570.0,
+      719.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 94.1,
+      "height_pt": 129.5
+     }
+    }
+   ],
+   "text": "Find an expression for the number of pairs of kth nearest neighbours in a row of n dots.\n...................................................",
+   "marks": 1,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "n – k",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.459999084472656,
+        673.2,
+        562.8599853515625,
+        697.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression for the number of pairs of <i>k</i>th nearest neighbours in a row of <i>n</i> dots.",
+     "text": "Find an expression for the number of pairs of kth nearest neighbours in a row of n dots."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        57.0,
+        570.0,
+        251.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 107.1,
+        "height_pt": 194.5
+       }
+      }
+     ],
+     "text": "You can find the total number of different arrangements of two crosses by adding the number of\npairs of nearest neighbours, 2nd nearest neighbours, 3rd nearest neighbours and so on.\nUse this method to find the total number of different arrangements of two crosses in a row\nof 11 dots.\n...................................................",
+     "marks": 2,
+     "path": "2(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(i)",
+       "text": "55",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.459999084472656,
+          697.7,
+          562.8599853515625,
+          734.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "You can find the total number of different arrangements of two crosses by adding the number of",
+       "text": "You can find the total number of different arrangements of two crosses by adding the number of"
+      },
+      {
+       "type": "text",
+       "html": "pairs of nearest neighbours, 2nd nearest neighbours, 3rd nearest neighbours and so on. Use this method to find the total number of different arrangements of two crosses in a row of 11 dots.",
+       "text": "pairs of nearest neighbours, 2nd nearest neighbours, 3rd nearest neighbours and so on. Use this method to find the total number of different arrangements of two crosses in a row of 11 dots."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        256.7,
+        570.0,
+        279.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 4.0,
+        "height_pt": 22.8
+       }
+      }
+     ],
+     "text": "Use your expression in question 1(c)(ii) to show that your answer in question 2(c)(i) is correct.",
+     "marks": 1,
+     "path": "2(c)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(ii)",
+       "text": "11 ×10\noe\n2",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.459999084472656,
+          734.8,
+          562.8599853515625,
+          779.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use your expression in <b>question 1(c)(ii)</b> to show that your answer in <b>question 2(c)(i)</b> is correct.",
+       "text": "Use your expression in question 1(c)(ii) to show that your answer in question 2(c)(i) is correct."
+      }
+     ]
+    }
+   ],
+   "path": "2(c)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "As well as pairs of nearest neighbours there are also pairs of 2nd nearest neighbours, 3rd nearest neighbours, 4th nearest neighbours and so on. Here are some examples.",
+   "text": "As well as pairs of nearest neighbours there are also pairs of 2nd nearest neighbours, 3rd nearest neighbours, 4th nearest neighbours and so on. Here are some examples."
+  },
+  {
+   "type": "text",
+   "html": "Nearest neighbours 2nd nearest neighbours 3rd nearest neighbours",
+   "text": "Nearest neighbours 2nd nearest neighbours 3rd nearest neighbours"
+  }
+ ],
+ "marks_source": "mark scheme"
+}

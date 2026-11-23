@@ -1,0 +1,289 @@
+{
+ "id": "0607_2018ON_43_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    156.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 16.0,
+    "height_pt": 99.0
+   }
+  }
+ ],
+ "text": "5\nThe table shows the scores of 10 students in a mathematics test and in a physics test.\nStudent\nA\nB\nC\nD\nE\nF\nG\nH\nI\nJ\nMathematics (x)\n4\n6\n6\n8\n9\n9\n9\n10\n10\n10\nPhysics (y)\n5\n5\n6\n9\n9\n8\n7\n9\n10\n7",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      157.4,
+      570.0,
+      232.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "median =  ……",
+      "working_gap_pt": 11.5,
+      "height_pt": 74.6
+     }
+    }
+   ],
+   "text": "Find the median and the upper quartile of the physics scores.\nmedian =  ....................................................\nupper quartile =  .................................................... [2]",
+   "marks": 2,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "7.5\n9",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        49.619998931884766,
+        485.1,
+        545.6399536132812,
+        522.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the median and the upper quartile of the physics scores.",
+     "text": "Find the median and the upper quartile of the physics scores."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "median ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "upper quartile ="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      235.4,
+      570.0,
+      284.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 11.5,
+      "height_pt": 48.6
+     }
+    }
+   ],
+   "text": "Write down the type of correlation between the mathematics scores and the physics scores.\n.................................................... [1]",
+   "marks": 1,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "Positive",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        49.619998931884766,
+        522.2,
+        545.6399536132812,
+        546.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the type of correlation between the mathematics scores and the physics scores.",
+     "text": "Write down the type of correlation between the mathematics scores and the physics scores."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      287.4,
+      570.0,
+      336.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "y=  …… [2]",
+      "working_gap_pt": 11.4,
+      "height_pt": 48.6
+     }
+    }
+   ],
+   "text": "Find the equation of the line of regression in the form y\nmx\nc\n+.\n=\ny=  .................................................... [2]",
+   "marks": 2,
+   "path": "5(c)",
+   "mark_scheme": [
+    {
+     "label": "5(c)",
+     "text": "[y = ]0.681 (or 0.6812…)x\n+ 1.98 (or 1.982…)",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        49.619998931884766,
+        546.6,
+        545.6399536132812,
+        596.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the equation of the line of regression in the form <i>y</i> = <i>mx</i> + <i>c</i>.",
+     "text": "Find the equation of the line of regression in the form y = mx + c."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "y ="
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 3,
+ "paper_code": "0607/43",
+ "paper_type": "extended_long_answer",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The table shows the scores of 10 students in a mathematics test and in a physics test.",
+   "text": "The table shows the scores of 10 students in a mathematics test and in a physics test."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Student",
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I",
+     "J"
+    ],
+    [
+     "Mathematics (<i>x</i>)",
+     "4",
+     "6",
+     "6",
+     "8",
+     "9",
+     "9",
+     "9",
+     "10",
+     "10",
+     "10"
+    ],
+    [
+     "Physics (<i>y</i>)",
+     "5",
+     "5",
+     "6",
+     "9",
+     "9",
+     "8",
+     "7",
+     "9",
+     "10",
+     "7"
+    ]
+   ]
+  }
+ ]
+}

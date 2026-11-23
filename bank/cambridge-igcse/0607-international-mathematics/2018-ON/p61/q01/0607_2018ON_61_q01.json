@@ -1,0 +1,450 @@
+{
+ "id": "0607_2018ON_61_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    183.5,
+    570.0,
+    796.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 155.5,
+    "height_pt": 612.5
+   }
+  }
+ ],
+ "text": "1\nRectangles are drawn at an angle to the horizontal.\nThey are called diagonal rectangles.\nThe rectangles below are drawn at an angle of 45° to the horizontal.\nTwo sides of each rectangle have a gradient of 1.\nThese are diagonal rectangles with gradient 1.\nWidth 1\nLength 1\nWidth 2\nLength 1\nLength 2\nWidth 1\nLength 3\nWidth 1",
+ "marks": 7,
+ "figures": [
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    69.3,
+    333.7,
+    197.7,
+    395.9
+   ],
+   "id": "0607_2018ON_61_q01_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    311.0,
+    362.0,
+    453.9,
+    452.6
+   ],
+   "id": "0607_2018ON_61_q01_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    69.3,
+    475.4,
+    225.7,
+    565.9
+   ],
+   "id": "0607_2018ON_61_q01_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    69.3,
+    645.5,
+    225.7,
+    764.4
+   ],
+   "id": "0607_2018ON_61_q01_diagram4",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      673.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 37.6,
+      "height_pt": 616.5
+     }
+    }
+   ],
+   "text": "Complete the tables below.\nNumber of dots inside a\nWidth\nLength\ndiagonalrectangle with gradient 1\n(W )\n(L)\n(d)\n1\n1\n1\n1\n2\n2\n1\n3\n1\n4\n1\n5\nNumber of dots inside a\nWidth\nLength\ndiagonalrectangle with gradient 1\n(W )\n(L)\n(d )\n2\n1\n2\n2\n2\n2\n3\n2\n4\n2\n5\nNumber of dots inside a\nWidth\nLength\ndiagonalrectangle with gradient 1\n(W )\n(L)\n(d )\n3\n1\n3\n3\n2\n3\n3\n3\n4\n3\n5",
+   "marks": 3,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "2\n3\n1\n5\n8\n2\n8\n13\n3\n11\n18\n4\n14\n23\n5",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        25.139999389648438,
+        128.7,
+        570.239990234375,
+        271.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the tables below.",
+     "text": "Complete the tables below."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Width (<i>W</i> )",
+       "Length (<i>L</i>)",
+       "Number of dots inside a <i>diagonal</i> rectangle with gradient 1 (<i>d</i>)"
+      ],
+      [
+       "1",
+       "1",
+       "1"
+      ],
+      [
+       "1",
+       "2",
+       "2"
+      ],
+      [
+       "1",
+       "3",
+       ""
+      ],
+      [
+       "1",
+       "4",
+       ""
+      ],
+      [
+       "1",
+       "5",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Width (<i>W</i> )",
+       "Length (<i>L</i>)",
+       "Number of dots inside a <i>diagonal</i> rectangle with gradient 1 (<i>d</i> )"
+      ],
+      [
+       "2",
+       "1",
+       "2"
+      ],
+      [
+       "2",
+       "2",
+       ""
+      ],
+      [
+       "2",
+       "3",
+       ""
+      ],
+      [
+       "2",
+       "4",
+       ""
+      ],
+      [
+       "2",
+       "5",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Width (<i>W</i> )",
+       "Length (<i>L</i>)",
+       "Number of dots inside a <i>diagonal</i> rectangle with gradient 1 (<i>d</i> )"
+      ],
+      [
+       "3",
+       "1",
+       "3"
+      ],
+      [
+       "3",
+       "2",
+       ""
+      ],
+      [
+       "3",
+       "3",
+       ""
+      ],
+      [
+       "3",
+       "4",
+       ""
+      ],
+      [
+       "3",
+       "5",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      267.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 14.8,
+      "height_pt": 210.5
+     }
+    }
+   ],
+   "text": "Use your results from part (a) and any patterns you notice to complete the table.\nNumber of dots inside a\nWidth\ndiagonalrectangle with gradient 1\n(W )\n(d )\n1\n2\n3L − 1\n3\n4\n5\n9L − 4",
+   "marks": 2,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "L\noe\n3L − 1\n5L – 2\noe\n7L – 3\noe\n9L − 4",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        25.139999389648438,
+        271.9,
+        570.239990234375,
+        415.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your results from <b>part (a)</b> and any patterns you notice to complete the table.",
+     "text": "Use your results from part (a) and any patterns you notice to complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Width (<i>W</i> )",
+       "Number of dots inside a <i>diagonal</i> rectangle with gradient 1 (<i>d</i> )"
+      ],
+      [
+       "1",
+       ""
+      ],
+      [
+       "2",
+       "3<i>L</i> − 1"
+      ],
+      [
+       "3",
+       ""
+      ],
+      [
+       "4",
+       ""
+      ],
+      [
+       "5",
+       "9<i>L</i> − 4"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      273.0,
+      570.0,
+      489.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 3,
+      "answer_line": "a = ……",
+      "working_gap_pt": 50.4,
+      "height_pt": 216.0
+     }
+    }
+   ],
+   "text": "A formula, in terms of W andL, for the number of dots, d, inside a diagonal rectangle with gradient 1, is\nd= (aW+b)L - (W + c) .\nFind the values of a, b and c.\na = ...................................................\nb = ...................................................\nc = ...................................................",
+   "marks": 2,
+   "path": "1(c)",
+   "mark_scheme": [
+    {
+     "label": "1(c)",
+     "text": "2\n−1\n−1",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        25.139999389648438,
+        415.1,
+        570.239990234375,
+        464.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A formula, in terms of <i>W</i> and <i>L</i>, for the number of dots, <i>d</i>, inside a <i>diagonal</i> rectangle with gradient 1, is",
+     "text": "A formula, in terms of W and L, for the number of dots, d, inside a diagonal rectangle with gradient 1, is"
+    },
+    {
+     "type": "text",
+     "html": "<i>d</i> = (<i>aW</i> + <i>b</i>)<i>L </i>- (<i>W</i> + <i>c</i>) .",
+     "text": "d = (aW + b)L - (W + c) ."
+    },
+    {
+     "type": "text",
+     "html": "Find the values of <i>a</i>, <i>b</i> and <i>c</i>.",
+     "text": "Find the values of a, b and c."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "a ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "b ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "c ="
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Rectangles are drawn at an angle to the horizontal. They are called <i>diagonal</i> rectangles. The rectangles below are drawn at an angle of 45° to the horizontal. Two sides of each rectangle have a gradient of 1. These are <i>diagonal</i> rectangles with gradient 1.",
+   "text": "Rectangles are drawn at an angle to the horizontal. They are called diagonal rectangles. The rectangles below are drawn at an angle of 45° to the horizontal. Two sides of each rectangle have a gradient of 1. These are diagonal rectangles with gradient 1."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2018ON_61_q01_diagram1",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2018ON_61_q01_diagram2",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2018ON_61_q01_diagram3",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2018ON_61_q01_diagram4",
+   "caption": null
+  }
+ ],
+ "marks_source": "mark scheme"
+}

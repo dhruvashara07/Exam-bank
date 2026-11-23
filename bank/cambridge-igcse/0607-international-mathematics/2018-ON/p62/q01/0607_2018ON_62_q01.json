@@ -1,0 +1,259 @@
+{
+ "id": "0607_2018ON_62_q01",
+ "number": 1,
+ "segments": [],
+ "text": "",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      62.8,
+      570.0,
+      88.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 25.2
+     }
+    }
+   ],
+   "text": "1\n(a) By continuing the spiral, show that Corner 10 is at (3, 3).",
+   "marks": 1,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "Completely correct spiral to (3, 3)",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        113.8,
+        563.0999755859375,
+        138.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> By continuing the spiral, show that Corner 10 is at (3, 3).",
+     "text": "By continuing the spiral, show that Corner 10 is at (3, 3)."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      88.8,
+      570.0,
+      189.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 37.5,
+      "height_pt": 100.7
+     }
+    }
+   ],
+   "text": "The length of the spiral from (0, 0) to Corner 4 is 6 units.\nFind the length of the spiral from (0, 0) to Corner 10.\n...................................................",
+   "marks": 1,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "30",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        138.2,
+        563.0999755859375,
+        162.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The length of the spiral from (0, 0) to Corner 4 is 6 units.",
+     "text": "The length of the spiral from (0, 0) to Corner 4 is 6 units."
+    },
+    {
+     "type": "text",
+     "html": "Find the length of the spiral from (0, 0) to Corner 10 .",
+     "text": "Find the length of the spiral from (0, 0) to Corner 10 ."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      194.8,
+      570.0,
+      549.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 16.0,
+      "height_pt": 354.7
+     }
+    }
+   ],
+   "text": "Use your spiral to complete this table.\nCorner\nLengths added\nLength from (0, 0)\nnumber\n1\n1\n1\n2\n2\n1 + 1\n3\n1 + 1 + 2\n4\n4\n6\n5\n6\n1 + 1 + 2 + 2 + 3 + 3\n12\n7\n16\n1 + 1 + 2 + 2 + 3 + 3 + 4\n8\n20\n9\n10\n1 + 1 + 2 + 2 + 3 + 3 + 4 + 4 + 5 + 5",
+   "marks": 2,
+   "path": "1(c)",
+   "mark_scheme": [
+    {
+     "label": "1(c)",
+     "text": "1 + 1 + 2 + 2\n1 + 1 + 2 + 2 + 3\n9\n1 + 1 + 2 + 2 + 3 + 3 + 4 + 4\n1 + 1 + 2 + 2 + 3 + 3 + 4 + 4 + 5\n25\n(30)",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        162.7,
+        563.0999755859375,
+        250.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your spiral to complete this table.",
+     "text": "Use your spiral to complete this table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Corner number",
+       "Lengths added",
+       "Length from (0, 0)"
+      ],
+      [
+       "1",
+       "1",
+       "1"
+      ],
+      [
+       "2",
+       "1 + 1",
+       "2"
+      ],
+      [
+       "3",
+       "1 + 1 + 2",
+       "4"
+      ],
+      [
+       "4",
+       "",
+       "6"
+      ],
+      [
+       "5",
+       "",
+       ""
+      ],
+      [
+       "6",
+       "1 + 1 + 2 + 2 + 3 + 3",
+       "12"
+      ],
+      [
+       "7",
+       "1 + 1 + 2 + 2 + 3 + 3 + 4",
+       "16"
+      ],
+      [
+       "8",
+       "",
+       "20"
+      ],
+      [
+       "9",
+       "",
+       ""
+      ],
+      [
+       "10",
+       "1 + 1 + 2 + 2 + 3 + 3 + 4 + 4 + 5 + 5",
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "marks_source": "mark scheme"
+}

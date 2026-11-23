@@ -1,0 +1,265 @@
+{
+ "id": "0607_2018ON_62_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    62.8,
+    570.0,
+    278.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 24.0,
+    "height_pt": 215.7
+   }
+  }
+ ],
+ "text": "2\nThe table shows the length, L, of the spiral from (0, 0) to Corner k, where k is an even number.\nTerm number\nLength\nk\n(n)\n(L)\n1\n2\n2\n2\n4\n6\n3\n6\n12\n4\n8\n20\n`\nj\nn\nk\nnn\n1\n+",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      284.0,
+      570.0,
+      344.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 24.5,
+      "height_pt": 60.0
+     }
+    }
+   ],
+   "text": "Find a formula for n in terms of k.\n......................................................",
+   "marks": 1,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "k\nn =\noe\n2",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        250.3,
+        563.0999755859375,
+        291.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find a formula for <i>n</i> in terms of <i>k</i>.",
+     "text": "Find a formula for n in terms of k."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      349.0,
+      570.0,
+      401.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 5.1,
+      "height_pt": 52.5
+     }
+    }
+   ],
+   "text": "Use part (a) to show that the formula for the length, L, of the spiral from (0, 0) to Corner k is\nkk\n`\nj.\nL\n2\n=\n+\n4",
+   "marks": 1,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "k k\n\n[L=]\n+1 with no subsequent errors\n\n\n2 2\n\n",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        291.4,
+        563.0999755859375,
+        378.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use <b>part (a)</b> to show that the formula for the length, <i>L</i>, of the spiral from (0, 0) to Corner <i>k</i> is",
+     "text": "Use part (a) to show that the formula for the length, L, of the spiral from (0, 0) to Corner k is"
+    },
+    {
+     "type": "text",
+     "html": "<i>L</i> = \\(\\frac{k}{4}\\)`<i>k</i> + 2j.",
+     "text": "L = (k)/(4)`k + 2j."
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      505.0,
+      570.0,
+      530.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 25.5
+     }
+    }
+   ],
+   "text": "Show that the formula gives the correct length of the spiral from (0, 0) to Corner 14.",
+   "marks": 2,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "14\n(14+2)\n=56\n4\n20 + 10 + 12 + 14 = 56 oe",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        378.3,
+        563.0999755859375,
+        443.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that the formula gives the correct length of the spiral from (0, 0) to Corner 14 .",
+     "text": "Show that the formula gives the correct length of the spiral from (0, 0) to Corner 14 ."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The table shows the length, <i>L</i>, of the spiral from (0, 0) to Corner <i>k</i> , where <i>k</i> is an even number.",
+   "text": "The table shows the length, L, of the spiral from (0, 0) to Corner k , where k is an even number."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Term number (<i>n</i>)",
+     "<i>k</i>",
+     "Length (<i>L</i>)"
+    ],
+    [
+     "1",
+     "2",
+     "2"
+    ],
+    [
+     "2",
+     "4",
+     "6"
+    ],
+    [
+     "3",
+     "6",
+     "12"
+    ],
+    [
+     "4",
+     "8",
+     "20"
+    ],
+    [
+     "",
+     "",
+     ""
+    ],
+    [
+     "<i>n</i>",
+     "<i>k</i>",
+     "<i>n</i>`<i>n</i> + 1j"
+    ]
+   ]
+  }
+ ],
+ "marks_source": "mark scheme"
+}

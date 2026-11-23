@@ -1,0 +1,628 @@
+{
+ "id": "0607_2018ON_63_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    163.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 24.7,
+    "height_pt": 106.0
+   }
+  }
+ ],
+ "text": "3\nHere is a 2 by 5 rectangle of dots.\nIt has 2 rows of 5 dots.\na\nb\nThe distance between the dots in each column is a and the distance between each row is b.",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    235.5,
+    99.5,
+    333.3999938964844,
+    133.10000610351562
+   ],
+   "id": "0607_2018ON_63_q03_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    228.0,
+    203.8,
+    363.3,
+    255.5
+   ],
+   "id": "0607_2018ON_63_q03a_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    362.6,
+    94.2,
+    474.7,
+    130.9
+   ],
+   "id": "0607_2018ON_63_q03b_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      168.4,
+      570.0,
+      770.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 425.1,
+      "height_pt": 601.6
+     }
+    }
+   ],
+   "text": "Whena=b, here are two pairs of crosses which are nearest neighbours.\nThere are a total of 13 pairs of nearest neighbours for a 2 by 5 rectangle of dots.\nFor a 2 by w rectangle of dots, where wH 2, find an expression for the number of pairs of nearest\nneighbours.\n...................................................",
+   "marks": 2,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "3w – 2 oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        32.459999084472656,
+        84.8,
+        562.8599853515625,
+        121.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b> When</b> <b><i>a</i></b> = <b><i>b</i></b>, here are two pairs of crosses which are nearest neighbours.",
+     "text": "When a = b, here are two pairs of crosses which are nearest neighbours."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2018ON_63_q03a_diagram2",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "There are a total of 13 pairs of nearest neighbours for a 2 by 5 rectangle of dots. For a 2 by <i>w</i> rectangle of dots, where <i>w</i> H 2, find an expression for the number of pairs of nearest neighbours.",
+     "text": "There are a total of 13 pairs of nearest neighbours for a 2 by 5 rectangle of dots. For a 2 by w rectangle of dots, where w H 2, find an expression for the number of pairs of nearest neighbours."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      58.7,
+      570.0,
+      212.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 37.6,
+      "height_pt": 153.3
+     }
+    }
+   ],
+   "text": "Whena!b, the pairs of nearest neighbours are the dots that are closest to each other.\nNot nearest neighbours\nNearest neighbours\nFor a 2 by w rectangle of dots, where wH 2, find an expression for the number of pairs of\nnearest neighbours,",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        215.3,
+        570.0,
+        314.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 63.4,
+        "height_pt": 98.7
+       }
+      }
+     ],
+     "text": "when a2b,\n...................................................",
+     "marks": 1,
+     "path": "3(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(i)",
+       "text": "w",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          32.459999084472656,
+          121.9,
+          562.8599853515625,
+          146.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "when <i>a</i> 2 <i>b</i>,",
+       "text": "when a 2 b,"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        319.3,
+        570.0,
+        457.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 102.4,
+        "height_pt": 137.7
+       }
+      }
+     ],
+     "text": "when a1b.\n...................................................",
+     "marks": 1,
+     "path": "3(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(ii)",
+       "text": "2w – 2 oe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          32.459999084472656,
+          146.3,
+          562.8599853515625,
+          170.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "when <i>a</i> 1 <i>b</i>.",
+       "text": "when a 1 b."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    }
+   ],
+   "path": "3(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "<b> When</b> <b><i>a</i></b> ! <b><i>b</i></b>, the pairs of nearest neighbours are the dots that are closest to each other.",
+     "text": "When a ! b, the pairs of nearest neighbours are the dots that are closest to each other."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2018ON_63_q03b_diagram3",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Nearest neighbours",
+     "text": "Nearest neighbours"
+    },
+    {
+     "type": "text",
+     "html": "For a 2 by <i>w</i> rectangle of dots, where <i>w</i> H 2, find an expression for the number of pairs of nearest neighbours,",
+     "text": "For a 2 by w rectangle of dots, where w H 2, find an expression for the number of pairs of nearest neighbours,"
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      397.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 90.7,
+      "height_pt": 340.0
+     }
+    }
+   ],
+   "text": "Here are two rectangles of dots.\nb\n3 by 5 rectangle of dots\na\nb\na\n6 by 4 rectangle of dots",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        30.0,
+        402.8,
+        570.0,
+        661.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 42.4,
+        "height_pt": 258.2
+       }
+      }
+     ],
+     "text": "For an h by w rectangle of dots, here are some expressions for the number of pairs of\nnearest neighbours, T.\nIn all cases a2b and wH 2.\nNumber of pairs of\nh\nnearest neighbours (T )\n3\n2w\n4\n3w\n4w\n5\n6\n5w\nFind the formula for T in terms of h and w.\n...................................................",
+     "marks": 1,
+     "path": "3(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "3(c)(i)",
+       "text": "T = (h – 1)w oe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          32.459999084472656,
+          170.8,
+          562.8599853515625,
+          195.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "For an <i>h</i> by <i>w</i> rectangle of dots, here are some expressions for the number of pairs of nearest neighbours, <i>T</i>. In all cases <i>a</i> 2 <i>b</i> and <i>w</i> H 2.",
+       "text": "For an h by w rectangle of dots, here are some expressions for the number of pairs of nearest neighbours, T. In all cases a 2 b and w H 2."
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "<i>h</i>",
+         "Number of pairs of nearest neighbours (<i>T</i> )"
+        ],
+        [
+         "3",
+         "2<i>w</i>"
+        ],
+        [
+         "4",
+         "3<i>w</i>"
+        ],
+        [
+         "5",
+         "4<i>w</i>"
+        ],
+        [
+         "6",
+         "5<i>w</i>"
+        ]
+       ]
+      },
+      {
+       "type": "text",
+       "html": "Find the formula for <i>T</i> in terms of <i>h</i> and <i>w</i>.",
+       "text": "Find the formula for T in terms of h and w."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        30.0,
+        666.1,
+        570.0,
+        770.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 42.4,
+        "height_pt": 103.9
+       }
+      }
+     ],
+     "text": "For a2b, there are 1000 pairs of nearest neighbours in a 101 by w rectangle of dots.\nFind the value of w.\n...................................................",
+     "marks": 1,
+     "path": "3(c)(ii)",
+     "mark_scheme": [
+      {
+       "label": "3(c)(ii)",
+       "text": "10",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          32.459999084472656,
+          195.2,
+          562.8599853515625,
+          232.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "For <i>a</i> 2 <i>b</i>, there are 1000 pairs of nearest neighbours in a 101 by <i>w</i> rectangle of dots. Find the value of <i>w</i>.",
+       "text": "For a 2 b, there are 1000 pairs of nearest neighbours in a 101 by w rectangle of dots. Find the value of w."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    }
+   ],
+   "path": "3(c)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Here are two rectangles of dots.",
+     "text": "Here are two rectangles of dots."
+    },
+    {
+     "type": "text",
+     "html": "<i>b</i>",
+     "text": "b"
+    },
+    {
+     "type": "text",
+     "html": "by 5 rectangle of dots",
+     "text": "by 5 rectangle of dots"
+    },
+    {
+     "type": "text",
+     "html": "<i>a</i>",
+     "text": "a"
+    },
+    {
+     "type": "text",
+     "html": "<i>b</i>",
+     "text": "b"
+    },
+    {
+     "type": "text",
+     "html": "<i>a</i>",
+     "text": "a"
+    },
+    {
+     "type": "text",
+     "html": "by 4 rectangle of dots",
+     "text": "by 4 rectangle of dots"
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      58.7,
+      570.0,
+      784.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 689.9,
+      "height_pt": 725.3
+     }
+    },
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      420.5,
+      570.0,
+      437.5
+     ],
+     "continued": true,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 0.3,
+      "height_pt": 17.0
+     }
+    }
+   ],
+   "text": "For an h by w rectangle of dots, find an expression for T when a=b and wH 2.\n...................................................\nTHE MODELLING STARTS ON PAGE 11.",
+   "marks": 2,
+   "path": "3(d)",
+   "mark_scheme": [
+    {
+     "label": "3(d)",
+     "text": "w(2h – 1) – h oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        32.459999084472656,
+        232.4,
+        562.8599853515625,
+        282.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "For an <i>h</i> by <i>w</i> rectangle of dots, find an expression for <i>T</i> when <b><i>a</i></b> = <b><i>b</i></b> and <i>w</i> H 2.",
+     "text": "For an h by w rectangle of dots, find an expression for T when a = b and w H 2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "text",
+     "html": "<b>THE MODELLING STARTS ON PAGE 11.</b>",
+     "text": "THE MODELLING STARTS ON PAGE 11."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Here is a 2 by 5 rectangle of dots. It has 2 rows of 5 dots.",
+   "text": "Here is a 2 by 5 rectangle of dots. It has 2 rows of 5 dots."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2018ON_63_q03_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The distance between the dots in each column is <i>a</i> and the distance between each row is <i>b</i>.",
+   "text": "The distance between the dots in each column is a and the distance between each row is b."
+  }
+ ],
+ "marks_source": "mark scheme"
+}

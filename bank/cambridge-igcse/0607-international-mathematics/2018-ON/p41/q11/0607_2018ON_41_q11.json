@@ -1,0 +1,269 @@
+{
+ "id": "0607_2018ON_41_q11",
+ "number": 11,
+ "segments": [
+  {
+   "page": 16,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    239.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 31.8,
+    "height_pt": 182.7
+   }
+  }
+ ],
+ "text": "11\nB\nNOT TO\n8.6cm\nSCALE\nA\n9.3cm\nC\nThe area of triangle ABC=  23.5 cm2.",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 16,
+   "bbox": [
+    114.1,
+    72.4,
+    484.6,
+    212.2
+   ],
+   "id": "0607_2018ON_41_q11_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      239.5,
+      570.0,
+      368.3
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 91.9,
+      "height_pt": 128.8
+     }
+    }
+   ],
+   "text": "Show that angle BAC= 36.0°, correct to 1 decimal place.\n[2]",
+   "marks": 2,
+   "path": "11(a)",
+   "mark_scheme": [
+    {
+     "label": "11(a)",
+     "text": "0.5 ×8.6×9.3 ×sinA=23.5\n35.99...[ = 36.0]",
+     "codes": [
+      "M1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        34.439998626708984,
+        514.6,
+        560.9400024414062,
+        569.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that angle <i>BAC</i> = 36.0°, correct to 1 decimal place.",
+     "text": "Show that angle BAC = 36.0°, correct to 1 decimal place."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 91.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      368.3,
+      570.0,
+      507.3
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "BC =  …… cm [3]",
+      "working_gap_pt": 102.4,
+      "height_pt": 139.0
+     }
+    }
+   ],
+   "text": "Use the cosine rule to find BC.\nBC =  ............................................... cm [3]",
+   "marks": 3,
+   "path": "11(b)",
+   "mark_scheme": [
+    {
+     "label": "11(b)",
+     "text": "[x=] 8.6 +9.3 −2 ×8.6 ×9.3 ×cos36\n2\n2\n5.57 or 5.569 to 5.571...",
+     "codes": [
+      "M2",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        34.439998626708984,
+        569.3,
+        560.9400024414062,
+        639.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use the cosine rule to find <i>BC</i>.",
+     "text": "Use the cosine rule to find BC."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "BC =",
+     "unit": "cm"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      507.3,
+      570.0,
+      692.8
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 128.5,
+      "height_pt": 185.4
+     }
+    }
+   ],
+   "text": "All the angles in triangle ABC are acute.\nUse the sine rule to find the largest angle in the triangle ABC.\n.................................................... [3]",
+   "marks": 3,
+   "path": "11(c)",
+   "mark_scheme": [
+    {
+     "label": "11(c)",
+     "text": "9.3 ×sin36\nsin B=\ntheir( b)\n78.8 or 78.9 or 79.[0]\nor 78.77 to 78.98...",
+     "codes": [
+      "M2",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        34.439998626708984,
+        639.1,
+        560.9400024414062,
+        725.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "All the angles in triangle <i>ABC</i> are acute. Use the sine rule to find the largest angle in the triangle <i>ABC</i>.",
+     "text": "All the angles in triangle ABC are acute. Use the sine rule to find the largest angle in the triangle ABC."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_long_answer",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>11 </b>",
+   "text": "11"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2018ON_41_q11_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The area of triangle <i>ABC</i> = 23.5 cm<sup>2</sup>.",
+   "text": "The area of triangle ABC = 23.5 cm2."
+  }
+ ]
+}

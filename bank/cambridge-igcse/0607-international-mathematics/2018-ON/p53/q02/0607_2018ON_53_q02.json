@@ -1,0 +1,244 @@
+{
+ "id": "0607_2018ON_53_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    152.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 15.8,
+    "height_pt": 95.5
+   }
+  }
+ ],
+ "text": "2\nThis table shows the first five terms of a sequence.\nn\n1\n2\n3\n4\n5\n6\n7\nTerm of the\n1\n3\n6\n10\n15\nsequence",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      158.0,
+      570.0,
+      181.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.0
+     }
+    }
+   ],
+   "text": "For this sequence, fill in the next two terms.",
+   "marks": 1,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "21, 28",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        39.29999923706055,
+        225.9,
+        556.0799560546875,
+        250.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "For this sequence, fill in the next two terms.",
+     "text": "For this sequence, fill in the next two terms."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      210.0,
+      570.0,
+      256.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 11.4,
+      "height_pt": 46.5
+     }
+    }
+   ],
+   "text": "Write down the mathematical name for this sequence of numbers.\n......................................................",
+   "marks": 1,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "Triangle",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        39.29999923706055,
+        250.3,
+        556.0799560546875,
+        274.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the mathematical name for this sequence of numbers.",
+     "text": "Write down the mathematical name for this sequence of numbers."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      261.0,
+      570.0,
+      309.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 5.3,
+      "height_pt": 48.0
+     }
+    }
+   ],
+   "text": "nn\n(c) The nth term for this sequence is  (\n1\n)\n+\n.\n2\nShow that this is correct when n= 5.",
+   "marks": 1,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "5(5+1)\n=15\n2",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        39.29999923706055,
+        274.8,
+        556.0799560546875,
+        315.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The <i>n</i>th term for this sequence is \\(\\frac{n (n + 1)}{2}\\) . Show that this is correct when <i>n</i> = 5.",
+     "text": "The nth term for this sequence is (n(n+1))/(2) . Show that this is correct when n = 5."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 3,
+ "paper_code": "0607/53",
+ "paper_type": "core_investigation",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This table shows the first five terms of a sequence.",
+   "text": "This table shows the first five terms of a sequence."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "<i>n</i>",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7"
+    ],
+    [
+     "Term of the sequence",
+     "1",
+     "3",
+     "6",
+     "10",
+     "15",
+     "",
+     ""
+    ]
+   ]
+  }
+ ],
+ "marks_source": "mark scheme"
+}

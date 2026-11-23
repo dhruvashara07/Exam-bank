@@ -1,0 +1,325 @@
+{
+ "id": "0607_2018ON_61_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 12,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    203.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 28.9,
+    "height_pt": 146.0
+   }
+  }
+ ],
+ "text": "6\nSafety rules for ladders say that the angle between the bottom of the ladder and the ground must be\nmore than 76°.\nNOT TO\nSCALE\nx\nz",
+ "marks": 7,
+ "figures": [
+  {
+   "caption": null,
+   "page": 12,
+   "bbox": [
+    184.2,
+    102.5,
+    413.0,
+    202.7
+   ],
+   "id": "0607_2018ON_61_q06_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 13,
+   "bbox": [
+    105.0,
+    86.9,
+    489.7,
+    364.9
+   ],
+   "id": "0607_2018ON_61_q06c_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      210.0,
+      570.0,
+      256.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 11.4,
+      "height_pt": 46.5
+     }
+    }
+   ],
+   "text": "To use a ladder safely, show that a model for its position is\nz\n1\n0 242\n.\nx\n.",
+   "marks": 1,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "cos76 >\nz\noe\nx",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        25.200000762939453,
+        289.8,
+        570.3599853515625,
+        330.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "To use a ladder safely, show that a model for its position is",
+     "text": "To use a ladder safely, show that a model for its position is"
+    },
+    {
+     "type": "text",
+     "html": "<i>z</i> 1 0 242. <i>x</i>.",
+     "text": "z 1 0 242. x."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      340.0,
+      570.0,
+      478.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 76.4,
+      "height_pt": 138.0
+     }
+    }
+   ],
+   "text": "To use a ladder safely the angle between the bottom of the ladder and the ground must be less than 82°.\nFind a second inequality connecting z and x.\n...................................................",
+   "marks": 1,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "z >0.139x oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        25.200000762939453,
+        330.9,
+        570.3599853515625,
+        368.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "To use a ladder safely the angle between the bottom of the ladder and the ground must be less than 82°. Find a second inequality connecting <i>z </i>and<i> x</i>.",
+     "text": "To use a ladder safely the angle between the bottom of the ladder and the ground must be less than 82°. Find a second inequality connecting z and x."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      365.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 98.9,
+      "height_pt": 308.0
+     }
+    }
+   ],
+   "text": "On the axes, shade the region defined by the inequalities in part (a) and part (b).\nz\n2\n1\nx\n0\n0\n1\n2\n3\n4\n5\n6",
+   "marks": 3,
+   "path": "6(c)",
+   "mark_scheme": [
+    {
+     "label": "6(c)",
+     "text": "Correct region between lines",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        25.200000762939453,
+        368.0,
+        570.3599853515625,
+        476.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the axes, shade the region defined by the inequalities in<b> part (a) </b>and<b> part (b)</b>.",
+     "text": "On the axes, shade the region defined by the inequalities in part (a) and part (b)."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2018ON_61_q06c_diagram2",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 98.9
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      376.3,
+      570.0,
+      527.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 76.4,
+      "height_pt": 150.7
+     }
+    }
+   ],
+   "text": "A ladder is 3 m long.\nTo use this ladder safely,   a1z1b.\nUse your graph in part (c) to find the value of a and the value of b.\n........................................ 1z1 ........................................",
+   "marks": 2,
+   "path": "6(d)",
+   "mark_scheme": [
+    {
+     "label": "6(d)",
+     "text": "0.38… to 0.44… < z < 0.70… to 0.75…",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        25.200000762939453,
+        476.4,
+        570.3599853515625,
+        564.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A ladder is 3 m long. To use this ladder safely, <i>a</i> 1 <i>z</i> 1 <i>b</i>. Use your graph in <b>part (c)</b> to find the value of <i>a</i> and the value of <i>b</i>.",
+     "text": "A ladder is 3 m long. To use this ladder safely, a 1 z 1 b. Use your graph in part (c) to find the value of a and the value of b."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Safety rules for ladders say that the angle between the bottom of the ladder and the ground must be more than 76°.",
+   "text": "Safety rules for ladders say that the angle between the bottom of the ladder and the ground must be more than 76°."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2018ON_61_q06_diagram1",
+   "caption": null
+  }
+ ],
+ "marks_source": "mark scheme"
+}

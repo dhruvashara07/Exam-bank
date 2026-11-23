@@ -1,0 +1,408 @@
+{
+ "id": "0607_2018ON_62_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    268.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 15.8,
+    "height_pt": 211.5
+   }
+  }
+ ],
+ "text": "4\nA corner on the spiral has co-ordinates (x, y).\nHorizontal lengths of the spiral are added to give the total horizontal length, H.\nx co-ordinate\nTotal horizontal length\nHorizontal lengths\n(x)\n(H)\n1\n1\n1\n2\n6\n1 + 2 + 3\n3\n1 + 2 + 3 + 4 + 5\n15\n4\n28\n1 + 2 + 3 + 4 + 5 + 6 + 7\n5",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      274.2,
+      570.0,
+      297.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 22.8
+     }
+    }
+   ],
+   "text": "Complete the table.",
+   "marks": 1,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "1 + 2 + ... + 7 + 8 + 9 and 45",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        612.6,
+        563.0999755859375,
+        637.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      300.2,
+      570.0,
+      607.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 258.5,
+      "height_pt": 306.8
+     }
+    }
+   ],
+   "text": "Find a formula, in terms of x, for the total horizontal length, H, of the spiral from (0, 0) to the corner\nwith co-ordinates (x, y).\n......................................................",
+   "marks": 2,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "2\nH = 2x − x oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        637.1,
+        563.0999755859375,
+        686.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find a formula, in terms of <i>x</i>, for the total <b>horizontal</b> length, <i>H</i>, of the spiral from (0, 0) to the corner with co-ordinates (<i>x</i>, <i>y</i>).",
+     "text": "Find a formula, in terms of x, for the total horizontal length, H, of the spiral from (0, 0) to the corner with co-ordinates (x, y)."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      612.2,
+      570.0,
+      711.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 50.5,
+      "height_pt": 98.8
+     }
+    }
+   ],
+   "text": "Write down a formula, in terms of y, for the total vertical length, V, of the spiral from (0, 0) to the\ncorner with co-ordinates (x, y).\n......................................................",
+   "marks": 1,
+   "path": "4(c)",
+   "mark_scheme": [
+    {
+     "label": "4(c)",
+     "text": "V = 2y − y oe\n2",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        686.8,
+        563.0999755859375,
+        712.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down a formula, in terms of <i>y</i>, for the total <b>vertical</b> length, <i>V</i>, of the spiral from (0, 0) to the corner with co-ordinates (<i>x</i>, <i>y</i>).",
+     "text": "Write down a formula, in terms of y, for the total vertical length, V, of the spiral from (0, 0) to the corner with co-ordinates (x, y)."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      79.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 22.5
+     }
+    }
+   ],
+   "text": "k is an even number.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        83.0,
+        570.0,
+        151.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 5.1,
+        "height_pt": 68.5
+       }
+      }
+     ],
+     "text": "Use your answers to part (b) and part (c) to show that a formula for the length, L, of the spiral\nfrom (0, 0) to Corner k with co-ordinates (x, y) is\n`\nj.\nL\n2\nx\n2\nx\n1\n=\n-",
+     "marks": 2,
+     "path": "4(d)(i)",
+     "mark_scheme": [
+      {
+       "label": "4(d)(i)",
+       "text": "y = x\n2x − x + 2x − x oe\n2\n2\n2\nor 2(2x – x)",
+       "codes": [
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.15999984741211,
+          712.1,
+          563.0999755859375,
+          778.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use your answers to <b>part (b)</b> and <b>part (c)</b> to show that a formula for the length, <i>L</i>, of the spiral from (0, 0) to Corner <i>k</i> with co-ordinates (<i>x</i>, <i>y</i>) is",
+       "text": "Use your answers to part (b) and part (c) to show that a formula for the length, L, of the spiral from (0, 0) to Corner k with co-ordinates (x, y) is"
+      },
+      {
+       "type": "text",
+       "html": "<i>L</i> = 2<i>x</i>`2<i>x</i> - 1j.",
+       "text": "L = 2x`2x - 1j."
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        335.0,
+        570.0,
+        707.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 310.5,
+        "height_pt": 372.0
+       }
+      }
+     ],
+     "text": "The spiral has length 1560 from (0, 0) to the corner with co-ordinates (x, y).\nUse the formula in part (i) to find the value of x.\n......................................................",
+     "marks": 1,
+     "path": "4(d)(ii)",
+     "mark_scheme": [
+      {
+       "label": "4(d)(ii)",
+       "text": "20",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          32.15999984741211,
+          84.8,
+          563.0999755859375,
+          109.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The spiral has length 1560 from (0, 0) to the corner with co-ordinates (<i>x</i>, <i>y</i>). Use the formula in <b>part (i)</b> to find the value of <i>x</i>.",
+       "text": "The spiral has length 1560 from (0, 0) to the corner with co-ordinates (x, y). Use the formula in part (i) to find the value of x."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    }
+   ],
+   "path": "4(d)",
+   "content": [
+    {
+     "type": "text",
+     "html": "<i>k</i> is an even number.",
+     "text": "k is an even number."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A corner on the spiral has co-ordinates (<i>x</i>, <i>y</i>). <b>Horizontal</b> lengths of the spiral are added to give the total<b> horizontal</b> length, <i>H</i>.",
+   "text": "A corner on the spiral has co-ordinates (x, y). Horizontal lengths of the spiral are added to give the total horizontal length, H."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "<i>x</i> co-ordinate (<i>x</i>)",
+     "Horizontal lengths",
+     "Total horizontal length (<i>H</i> )"
+    ],
+    [
+     "1",
+     "1",
+     "1"
+    ],
+    [
+     "2",
+     "1 + 2 + 3",
+     "6"
+    ],
+    [
+     "3",
+     "1 + 2 + 3 + 4 + 5",
+     "15"
+    ],
+    [
+     "4",
+     "1 + 2 + 3 + 4 + 5 + 6 + 7",
+     "28"
+    ],
+    [
+     "5",
+     "",
+     ""
+    ]
+   ]
+  }
+ ],
+ "marks_source": "mark scheme"
+}

@@ -1,0 +1,304 @@
+{
+ "id": "0607_2018ON_62_q03",
+ "number": 3,
+ "segments": [],
+ "text": "",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      80.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.0
+     }
+    }
+   ],
+   "text": "3\n(a) When k is an even number, find an expression, in terms of k, for the length of the spiral",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        83.0,
+        570.0,
+        169.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 50.5,
+        "height_pt": 86.0
+       }
+      }
+     ],
+     "text": "from Corner k- 1 to Corner k,\n......................................................",
+     "marks": 1,
+     "path": "3(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "3(a)(i)",
+       "text": "k\noe\n2",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.15999984741211,
+          443.8,
+          563.0999755859375,
+          484.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "from Corner <i>k</i> - 1 to Corner <i>k</i> ,",
+       "text": "from Corner k - 1 to Corner k ,"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        174.0,
+        570.0,
+        273.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 63.5,
+        "height_pt": 99.0
+       }
+      }
+     ],
+     "text": "from Corner k to Corner k+ 1.\n......................................................",
+     "marks": 1,
+     "path": "3(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "3(a)(ii)",
+       "text": "k\n+1 oe\n2",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.15999984741211,
+          484.8,
+          563.0999755859375,
+          525.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "from Corner <i>k</i> to Corner <i>k</i> + 1 .",
+       "text": "from Corner k to Corner k + 1 ."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    }
+   ],
+   "path": "3(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> When <i>k</i> is an even number, find an expression, in terms of <i>k</i>, for the length of the spiral",
+     "text": "When k is an even number, find an expression, in terms of k, for the length of the spiral"
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        278.0,
+        570.0,
+        511.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 180.5,
+        "height_pt": 233.0
+       }
+      }
+     ],
+     "text": "Using question 2(b), find a formula, in terms of k, for the length, L, of the spiral\nfrom (0, 0) to Corner k+ 1.\n......................................................",
+     "marks": 1,
+     "path": "3(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(i)",
+       "text": "kk\n\nk\n\n[L\n=]\n+1 +their\n+1\noe\nisw\n\n\n\n\nk+1\n2 2\n\n\n\n2\n",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.15999984741211,
+          525.7,
+          563.0999755859375,
+          588.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Using <b>question 2(b)</b>, find a formula, in terms of <i>k</i>, for the length, <i>L</i>, of the spiral",
+       "text": "Using question 2(b), find a formula, in terms of k, for the length, L, of the spiral"
+      },
+      {
+       "type": "text",
+       "html": "from (0, 0) to Corner <i>k</i> + 1 .",
+       "text": "from (0, 0) to Corner k + 1 ."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        523.0,
+        570.0,
+        548.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 4.0,
+        "height_pt": 25.5
+       }
+      }
+     ],
+     "text": "Use your formula to show that the length of the spiral from (0, 0) to Corner 7 is 16.",
+     "marks": 1,
+     "path": "3(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(ii)",
+       "text": "Correct substitution in their (i) leading to 16",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.15999984741211,
+          588.2,
+          563.0999755859375,
+          612.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use your formula to show that the length of the spiral from (0, 0) to Corner 7 is 16.",
+       "text": "Use your formula to show that the length of the spiral from (0, 0) to Corner 7 is 16."
+      }
+     ]
+    }
+   ],
+   "path": "3(b)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "marks_source": "mark scheme"
+}

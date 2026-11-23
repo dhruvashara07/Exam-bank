@@ -1,0 +1,508 @@
+{
+ "id": "0607_2018ON_53_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    470.0,
+    570.0,
+    493.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 23.0
+   }
+  }
+ ],
+ "text": "3\nThis table shows the length, L, of the spiral from 0 to an even numbered corner, k.",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      496.0,
+      570.0,
+      790.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 13.9,
+      "height_pt": 294.0
+     }
+    }
+   ],
+   "text": "Use your table from question 1(c) to help you complete this table.\nLength\nk\n(L)\n2\n2\n4\n6\n6\n12\n8\n10\n12\n14\n56\n16",
+   "marks": 1,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "[their 20]\n[their 30]\n42\n72",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        39.29999923706055,
+        315.1,
+        556.0799560546875,
+        390.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your table from <b>question 1(c)</b> to help you complete this table.",
+     "text": "Use your table from question 1(c) to help you complete this table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "<i>k</i>",
+       "Length (<i>L</i>)"
+      ],
+      [
+       "2",
+       "2"
+      ],
+      [
+       "4",
+       "6"
+      ],
+      [
+       "6",
+       "12"
+      ],
+      [
+       "8",
+       ""
+      ],
+      [
+       "10",
+       ""
+      ],
+      [
+       "12",
+       ""
+      ],
+      [
+       "14",
+       "56"
+      ],
+      [
+       "16",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      294.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 13.9,
+      "height_pt": 237.0
+     }
+    }
+   ],
+   "text": "Complete this table using your answers to question 2(a) and question 3(a).\nTerm of the\nLength\nn\nk\n(L)\nsequence\n1\n1\n2\n2\n2\n3\n4\n6\n3\n6\n6\n12\n4\n10\n8\n5\n15\n10\n6\n12",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        299.7,
+        570.0,
+        346.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 1,
+        "answer_line": "n =……",
+        "working_gap_pt": 11.4,
+        "height_pt": 46.3
+       }
+      }
+     ],
+     "text": "Complete this formula for n in terms of k.\nn =.....................................................",
+     "marks": 1,
+     "path": "3(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(i)",
+       "text": "k\noe\n2",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          39.29999923706055,
+          390.1,
+          556.0799560546875,
+          430.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete this formula for <i>n</i> in terms of <i>k</i>.",
+       "text": "Complete this formula for n in terms of k."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "n ="
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        351.7,
+        570.0,
+        398.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 11.5,
+        "height_pt": 46.8
+       }
+      }
+     ],
+     "text": "Write down the connection between the length, L, and the term of the sequence.\n...........................................................................................................................................................",
+     "marks": 1,
+     "path": "3(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(ii)",
+       "text": "L is double the term oe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          39.29999923706055,
+          430.5,
+          556.0799560546875,
+          467.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Write down the connection between the length, <i>L</i>, and the term of the sequence.",
+       "text": "Write down the connection between the length, L, and the term of the sequence."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        403.7,
+        570.0,
+        472.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 5.0,
+        "height_pt": 68.8
+       }
+      }
+     ],
+     "text": "Use part (i), part(ii) and question 2(c) to show that the formula for the length, L, of the spiral\nfrom 0 to an even numbered corner, k, is\ne\no.\nkk\nL\n1\n=\n+\n22",
+     "marks": 1,
+     "path": "3(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(iii)",
+       "text": "\n\nk k\n+1\n\n\n2 2\n\n\n[L=]\n×2 oe\n2",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          39.29999923706055,
+          467.5,
+          556.0799560546875,
+          522.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use <b>part (i)</b>, <b>part(ii)</b> and <b>question 2(c) </b>to show that the formula for the length, <i>L</i>, of the spiral from 0 to an <b>even numbered </b>corner, <i>k</i>, is",
+       "text": "Use part (i), part(ii) and question 2(c) to show that the formula for the length, L, of the spiral from 0 to an even numbered corner, k, is"
+      },
+      {
+       "type": "text",
+       "html": "<i>L</i> = \\(\\frac{k}{2}\\)e\\(\\frac{k}{2}\\) + 1o.",
+       "text": "L = (k)/(2)e(k)/(2) + 1o."
+      }
+     ]
+    },
+    {
+     "label": "iv",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        585.7,
+        570.0,
+        608.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 4.0,
+        "height_pt": 22.8
+       }
+      }
+     ],
+     "text": "Show that the formula from part(iii) is correct for Corner 6.",
+     "marks": 1,
+     "path": "3(b)(iv)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(iv)",
+       "text": "6 6\n\n+1 =12\n\n\n2 2\n\n",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          39.29999923706055,
+          522.9,
+          556.0799560546875,
+          566.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Show that the formula from <b>part(iii)</b> is correct for Corner 6.",
+       "text": "Show that the formula from part(iii) is correct for Corner 6."
+      }
+     ]
+    },
+    {
+     "label": "v",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        689.7,
+        570.0,
+        712.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 4.0,
+        "height_pt": 22.8
+       }
+      }
+     ],
+     "text": "Show that the formula from part (iii) is not correct when k is an odd number.",
+     "marks": 2,
+     "path": "3(b)(v)",
+     "mark_scheme": [
+      {
+       "label": "3(b)(v)",
+       "text": "Substitute odd k into formula for L and\nwork out the result correctly\nState that the answer is\nnot the number in the table oe\nor\nnot a whole number oe\nor\nnot at a spiral corner\nor\nnot double the term",
+       "codes": [
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          39.29999923706055,
+          566.9,
+          556.0799560546875,
+          679.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Show that the formula from <b>part (iii)</b> is not correct when <i>k</i> is an <b>odd number</b>.",
+       "text": "Show that the formula from part (iii) is not correct when k is an odd number."
+      }
+     ]
+    }
+   ],
+   "path": "3(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this table using your answers to <b>question 2(a)</b> and <b>question 3(a)</b>.",
+     "text": "Complete this table using your answers to question 2(a) and question 3(a)."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "<i>n</i>",
+       "Term of the sequence",
+       "<i>k</i>",
+       "Length (<i>L</i>)"
+      ],
+      [
+       "1",
+       "1",
+       "2",
+       "2"
+      ],
+      [
+       "2",
+       "3",
+       "4",
+       "6"
+      ],
+      [
+       "3",
+       "6",
+       "6",
+       "12"
+      ],
+      [
+       "4",
+       "10",
+       "8",
+       ""
+      ],
+      [
+       "5",
+       "15",
+       "10",
+       ""
+      ],
+      [
+       "6",
+       "",
+       "12",
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 3,
+ "paper_code": "0607/53",
+ "paper_type": "core_investigation",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This table shows the length, <i>L</i>, of the spiral from 0 to an <b>even numbered</b> corner, <i>k</i>.",
+   "text": "This table shows the length, L, of the spiral from 0 to an even numbered corner, k."
+  }
+ ],
+ "marks_source": "mark scheme"
+}
