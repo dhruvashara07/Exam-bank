@@ -1,0 +1,187 @@
+{
+ "id": "0607_2018MJ_63_q07",
+ "number": 7,
+ "segments": [
+  {
+   "page": 12,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    160.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 17.7,
+    "height_pt": 103.0
+   }
+  }
+ ],
+ "text": "7\nThe table shows the amount of material for each style.\nStyle X\nStyle Y\n0.5 m2\n0.4 m2\nMaterial for one pair of shoes\nThere is a shortage of material and 50 m2 is used each day to make all the shoes.",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      163.1,
+      570.0,
+      186.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 22.9
+     }
+    }
+   ],
+   "text": "Draw a line on the grid in question 6 to show this information.",
+   "marks": 2,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "Line from (0, 125) to (100, 0)",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        32.15999984741211,
+        502.1,
+        563.1599731445312,
+        529.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Draw a line on the grid in <b>question 6</b> to show this information.",
+     "text": "Draw a line on the grid in question 6 to show this information."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      241.1,
+      570.0,
+      353.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 76.4,
+      "height_pt": 111.9
+     }
+    }
+   ],
+   "text": "Work out the decrease in the greatest profit because of the shortage.\n...................................................",
+   "marks": 1,
+   "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "[$]2475",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        32.15999984741211,
+        529.2,
+        563.1599731445312,
+        591.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Work out the <b>decrease</b> in the greatest profit because of the shortage.",
+     "text": "Work out the decrease in the greatest profit because of the shortage."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The table shows the amount of material for each style.",
+   "text": "The table shows the amount of material for each style."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "",
+     "Style <i>X</i>",
+     "Style <i>Y</i>"
+    ],
+    [
+     "Material for one pair of shoes",
+     "<sup>2</sup> 0.5 m",
+     "<sup>2</sup> 0.4 m"
+    ]
+   ]
+  },
+  {
+   "type": "text",
+   "html": "There is a shortage of material and 50 m<sup>2</sup> is used each day to make all the shoes.",
+   "text": "There is a shortage of material and 50 m2 is used each day to make all the shoes."
+  }
+ ],
+ "marks_source": "mark scheme"
+}

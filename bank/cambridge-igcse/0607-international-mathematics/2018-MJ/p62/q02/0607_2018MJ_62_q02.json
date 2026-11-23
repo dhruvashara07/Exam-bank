@@ -1,0 +1,432 @@
+{
+ "id": "0607_2018MJ_62_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    335.0,
+    570.0,
+    618.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 28.1,
+    "height_pt": 283.5
+   }
+  }
+ ],
+ "text": "2\nThis question looks at the patterns that finish with a white border.\nNumber of white tiles\nTotal number of white\nPattern finishes with\nin border\ntiles in pattern\n1st white border\n8\n8\n2nd white border\n32\n3rd white border\n40\n4th white border\n128\n5th white border\n72\n200",
+ "marks": 9,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      624.2,
+      570.0,
+      647.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 22.8
+     }
+    }
+   ],
+   "text": "Complete the table.",
+   "marks": 2,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "Pattern\nNumber of\nTotal\nfinishes\nwhite tiles in\nnumber of\nwith\nborder\nwhite tiles\n1st white\n8\n8\nborder\n2nd white\n24\n32\nborder\n3rd white\n40\n72\nborder\n4th white\n128\n56\nborder\n5th white\n72\n200\nborder",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        162.7,
+        563.1599731445312,
+        334.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      247.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 115.5,
+      "height_pt": 190.0
+     }
+    }
+   ],
+   "text": "The values in the last column, for the total number of white tiles in these patterns, form a sequence.\nFind an expression, in terms of n, for the total number of white tiles in the pattern that finishes with the\nnth white border.\n......................................................",
+   "marks": 2,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "2\n8n oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        334.4,
+        563.1599731445312,
+        396.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The values in the last column, for the total number of white tiles in these patterns, form a sequence. Find an expression, in terms of <i>n</i>, for the total number of <b>white</b> tiles in the pattern that finishes with the <i>n</i>th white border.",
+     "text": "The values in the last column, for the total number of white tiles in these patterns, form a sequence. Find an expression, in terms of n, for the total number of white tiles in the pattern that finishes with the nth white border."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      252.0,
+      570.0,
+      275.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.0
+     }
+    }
+   ],
+   "text": "There are 3 white tiles along one side of the pattern that finishes with the first white border.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        278.0,
+        570.0,
+        474.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 25.1,
+        "height_pt": 196.0
+       }
+      }
+     ],
+     "text": "Complete the table.\nNumber of white tiles\nPattern finishes with\nalong one side\n1st white border\n3\n2nd white border\n3rd white border\nnth white border",
+     "marks": 2,
+     "path": "2(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(i)",
+       "text": "7\n11\n4n –1 oe",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.15999984741211,
+          396.8,
+          563.1599731445312,
+          459.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the table.",
+       "text": "Complete the table."
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "Pattern finishes with",
+         "Number of white tiles along one side"
+        ],
+        [
+         "1st white border",
+         "3"
+        ],
+        [
+         "2nd white border",
+         ""
+        ],
+        [
+         "3rd white border",
+         ""
+        ],
+        [
+         "",
+         ""
+        ],
+        [
+         "<i>n</i>th white border",
+         ""
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        479.4,
+        570.0,
+        565.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 37.5,
+        "height_pt": 85.6
+       }
+      }
+     ],
+     "text": "Use your answer to part (c)(i) to write down an expression, in terms of n, for the total number of\nall tiles in the pattern that finishes with the nth white border.\n......................................................",
+     "marks": 1,
+     "path": "2(c)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(ii)",
+       "text": "2\n(4n –1) oe isw",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.15999984741211,
+          459.2,
+          563.1599731445312,
+          483.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use your answer to <b>part (c)(i)</b> to write down an expression, in terms of <i>n</i>, for the <b>total</b> number of <b>all</b> tiles in the pattern that finishes with the <i>n</i>th white border.",
+       "text": "Use your answer to part (c)(i) to write down an expression, in terms of n, for the total number of all tiles in the pattern that finishes with the nth white border."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    }
+   ],
+   "path": "2(c)",
+   "content": [
+    {
+     "type": "text",
+     "html": "There are 3 white tiles along one side of the pattern that finishes with the first white border.",
+     "text": "There are 3 white tiles along one side of the pattern that finishes with the first white border."
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      116.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 9.1,
+      "height_pt": 59.5
+     }
+    }
+   ],
+   "text": "Use your answers in part (b) and part (c) to show that an expression for the total number of grey tiles\nin the pattern that finishes with the nth white borderis\n2 -\n8\nn\n8\nn\n+.\n1",
+   "marks": 2,
+   "path": "2(d)",
+   "mark_scheme": [
+    {
+     "label": "2(d)",
+     "text": "2\n2\ntheir (4n –1) – their 8n\n2\n2\n16n – 8n + 1 – 8n",
+     "codes": [
+      "M1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        483.6,
+        563.1599731445312,
+        532.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your answers in <b>part (b)</b> and<b> part (c)</b> to show that an expression for the total number of <b>grey</b> tiles in the pattern that finishes with the <i>n</i>th white border is",
+     "text": "Use your answers in part (b) and part (c) to show that an expression for the total number of grey tiles in the pattern that finishes with the nth white border is"
+    },
+    {
+     "type": "text",
+     "html": "- 8<i>n</i><sup>2</sup> 8<i>n</i> + 1.",
+     "text": "- 8n2 8n + 1."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This question looks at the patterns that finish with a <b>white</b> border.",
+   "text": "This question looks at the patterns that finish with a white border."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Pattern finishes with",
+     "Number of white tiles in border",
+     "Total number of white tiles in pattern"
+    ],
+    [
+     "1st white border",
+     "8",
+     "8"
+    ],
+    [
+     "2nd white border",
+     "",
+     "32"
+    ],
+    [
+     "3rd white border",
+     "40",
+     ""
+    ],
+    [
+     "4th white border",
+     "",
+     "128"
+    ],
+    [
+     "5th white border",
+     "72",
+     "200"
+    ]
+   ]
+  }
+ ],
+ "marks_source": "mark scheme"
+}

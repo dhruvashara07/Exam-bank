@@ -1,0 +1,282 @@
+{
+ "id": "0607_2018MJ_32_q10",
+ "number": 10,
+ "segments": [
+  {
+   "page": 13,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    313.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 46.8,
+    "height_pt": 256.5
+   }
+  }
+ ],
+ "text": "10\nA square has side 8 cm.\nA small square is drawn inside this larger square so that the corners of the small square touch the sides of the\nlarger square.\n1cm\n1cm\nNOT TO\nSCALE\n8cm\n1cm\n1cm",
+ "marks": 7,
+ "figures": [
+  {
+   "caption": null,
+   "page": 13,
+   "bbox": [
+    68.3,
+    101.1,
+    474.4,
+    312.8
+   ],
+   "id": "0607_2018MJ_32_q10_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 13,
+       "bbox": [
+        30.0,
+        324.2,
+        570.0,
+        438.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 75.5,
+        "height_pt": 113.8
+       }
+      }
+     ],
+     "text": "Calculate the area of the shaded triangle.\n.............................................cm2 [2]",
+     "marks": 2,
+     "path": "10(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "10(a)(i)",
+       "text": "3.5 oe",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.380001068115234,
+          89.3,
+          548.9400024414062,
+          113.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the area of the shaded triangle.",
+       "text": "Calculate the area of the shaded triangle."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "unit": "cm2"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 13,
+       "bbox": [
+        30.0,
+        441.2,
+        570.0,
+        568.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 88.5,
+        "height_pt": 126.8
+       }
+      }
+     ],
+     "text": "Using your answer to part (a)(i), calculate the area of the small square.\n.............................................cm2 [2]",
+     "marks": 2,
+     "path": "10(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "10(a)(ii)",
+       "text": "8 × 8 – 4 × their(a)(i)\n50",
+       "codes": [
+        "M1",
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.380001068115234,
+          113.8,
+          548.9400024414062,
+          162.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Using your answer to <b>part (a)(i)</b>, calculate the area of the small square.",
+       "text": "Using your answer to part (a)(i), calculate the area of the small square."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "unit": "cm2"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "10(a)"
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      571.2,
+      570.0,
+      698.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 89.6,
+      "height_pt": 126.8
+     }
+    }
+   ],
+   "text": "Calculate the perimeter of the small square.\n.............................................. cm [3]",
+   "marks": 3,
+   "path": "10(b)",
+   "mark_scheme": [
+    {
+     "label": "10(b)",
+     "text": "28.3 or 28.28…",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.380001068115234,
+        162.7,
+        548.9400024414062,
+        223.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the perimeter of the small square.",
+     "text": "Calculate the perimeter of the small square."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "cm"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 3,
+ "variant": 2,
+ "paper_code": "0607/32",
+ "paper_type": "core_long_answer",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A square has side 8 cm. A small square is drawn inside this larger square so that the corners of the small square touch the sides of the larger square.",
+   "text": "A square has side 8 cm. A small square is drawn inside this larger square so that the corners of the small square touch the sides of the larger square."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2018MJ_32_q10_diagram1",
+   "caption": null
+  }
+ ]
+}

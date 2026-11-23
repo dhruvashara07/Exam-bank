@@ -1,0 +1,177 @@
+{
+ "id": "0607_2018MJ_61_q08",
+ "number": 8,
+ "segments": [
+  {
+   "page": 10,
+   "bbox": [
+    30.0,
+    356.0,
+    570.0,
+    405.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.5,
+    "height_pt": 49.0
+   }
+  }
+ ],
+ "text": "8\nA quadratic model, Q(x), for the number of primes that are less than x, is\nQ(x) =kx – 0.001x2 .",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      408.0,
+      570.0,
+      623.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 154.4,
+      "height_pt": 215.5
+     }
+    }
+   ],
+   "text": "The model estimates that there are 34 primes that are less than 140.\nFind the value of k, giving your answer correct to 1 decimal place.\n......................................................",
+   "marks": 2,
+   "path": "8(a)",
+   "mark_scheme": [
+    {
+     "label": "8(a)",
+     "text": "[0].4",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        32.15999984741211,
+        373.1,
+        563.1599731445312,
+        422.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The model estimates that there are 34 primes that are less than 140. Find the value of <i>k</i>, giving your answer correct to 1 decimal place.",
+     "text": "The model estimates that there are 34 primes that are less than 140. Find the value of k, giving your answer correct to 1 decimal place."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      629.0,
+      570.0,
+      728.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 11.5,
+      "height_pt": 99.0
+     }
+    }
+   ],
+   "text": "The model is quite accurate for the number of primes when x1 200.\nWhy is the model unsuitable for the number of primes when x2 200?\n...................................................................................................................................................................\n...................................................................................................................................................................",
+   "marks": 1,
+   "path": "8(b)",
+   "mark_scheme": [
+    {
+     "label": "8(b)",
+     "text": "There are more primes but the\ngraph or function value decreases\noe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        32.15999984741211,
+        422.8,
+        563.1599731445312,
+        472.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The model is quite accurate for the number of primes when <i>x</i> 1 200. Why is the model unsuitable for the number of primes when <i>x</i> 2 200?",
+     "text": "The model is quite accurate for the number of primes when x 1 200. Why is the model unsuitable for the number of primes when x 2 200?"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A quadratic model, Q(<i>x</i>), for the number of primes that are less than <i>x</i>, is",
+   "text": "A quadratic model, Q(x), for the number of primes that are less than x, is"
+  },
+  {
+   "type": "text",
+   "html": "Q(<i>x</i>) = <i>kx</i> – 0.001<i>x</i><sup>2</sup> .",
+   "text": "Q(x) = kx – 0.001x2 ."
+  }
+ ],
+ "marks_source": "mark scheme"
+}

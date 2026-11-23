@@ -1,0 +1,287 @@
+{
+ "id": "0607_2018MJ_31_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    260.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 9.1,
+    "height_pt": 203.2
+   }
+  }
+ ],
+ "text": "3\nFood\nNumber of calories\n1 bread roll\n78\n1 bagel\n69\n1 tomato\n3\n1 slice of chicken\n60\n1 slice of cheese\n69\n1 lettuce leaf\n1\n1 apple\n53",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      265.4,
+      570.0,
+      418.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 89.6,
+      "height_pt": 152.6
+     }
+    }
+   ],
+   "text": "For lunch, Clint has 1 bread roll, 1 lettuce leaf, 1 tomato, 2 slices of chicken and 1 apple.\nWork out the total number of calories in Clint’s lunch.\n.................................................... [2]",
+   "marks": 2,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "255",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        473.8,
+        548.9400024414062,
+        524.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "For lunch, Clint has 1 bread roll, 1 lettuce leaf, 1 tomato, 2 slices of chicken and 1 apple. Work out the total number of calories in Clint’s lunch.",
+     "text": "For lunch, Clint has 1 bread roll, 1 lettuce leaf, 1 tomato, 2 slices of chicken and 1 apple. Work out the total number of calories in Clint’s lunch."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      421.4,
+      570.0,
+      548.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 89.6,
+      "height_pt": 126.6
+     }
+    }
+   ],
+   "text": "Work out your answer to part (a) as a percentage of 2500.\n................................................% [1]",
+   "marks": 1,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "10.2",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        524.4,
+        548.9400024414062,
+        548.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Work out your answer to <b>part (a)</b> as a percentage of 2500.",
+     "text": "Work out your answer to part (a) as a percentage of 2500."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "%"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      551.4,
+      570.0,
+      717.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "change = $  …… [3]",
+      "working_gap_pt": 50.5,
+      "height_pt": 165.6
+     }
+    }
+   ],
+   "text": "A bagel costs $0.65 .\nFind the greatest number of these bagels that Clint can buy with $10.\nHow much change does he receive?\n......................................... bagels\nchange = $  .................................................... [3]",
+   "marks": 3,
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "15 [bagels]\n0.25",
+     "codes": [
+      "2",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        548.8,
+        548.9400024414062,
+        615.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A bagel costs $0.65 . Find the greatest number of these bagels that Clint can buy with $10. How much change does he receive?",
+     "text": "A bagel costs $0.65 . Find the greatest number of these bagels that Clint can buy with $10. How much change does he receive?"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "bagels"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "change = $"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 3,
+ "variant": 1,
+ "paper_code": "0607/31",
+ "paper_type": "core_long_answer",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>3 </b>",
+   "text": "3"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Food",
+     "Number of calories"
+    ],
+    [
+     "1 bread roll",
+     "78"
+    ],
+    [
+     "1 bagel",
+     "69"
+    ],
+    [
+     "1 tomato",
+     "3"
+    ],
+    [
+     "1 slice of chicken",
+     "60"
+    ],
+    [
+     "1 slice of cheese",
+     "69"
+    ],
+    [
+     "1 lettuce leaf",
+     "1"
+    ],
+    [
+     "1 apple",
+     "53"
+    ]
+   ]
+  }
+ ]
+}

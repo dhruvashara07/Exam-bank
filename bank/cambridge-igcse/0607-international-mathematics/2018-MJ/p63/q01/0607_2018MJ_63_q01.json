@@ -1,0 +1,749 @@
+{
+ "id": "0607_2018MJ_63_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    250.9,
+    570.0,
+    299.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 48.6
+   }
+  }
+ ],
+ "text": "1\nLee draws circles on rectangular pieces of paper.\nHe drops grains of rice at random onto the pieces of paper.\nHe counts the number of grains of rice inside each circle.",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    118.4,
+    334.5,
+    463.5,
+    469.8
+   ],
+   "id": "0607_2018MJ_63_q01a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    69.3,
+    672.5,
+    519.3,
+    790.7
+   ],
+   "id": "0607_2018MJ_63_q01aii_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)(ii)"
+  },
+  {
+   "caption": null,
+   "page": 3,
+   "bbox": [
+    118.4,
+    232.5,
+    463.5,
+    352.9
+   ],
+   "id": "0607_2018MJ_63_q01aiii_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)(iii)"
+  },
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    138.6,
+    88.6,
+    443.4,
+    225.8
+   ],
+   "id": "0607_2018MJ_63_q01b_diagram4",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  },
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    133.5,
+    360.7,
+    456.0,
+    484.2
+   ],
+   "id": "0607_2018MJ_63_q01bii_diagram5",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)(ii)"
+  },
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    133.5,
+    567.1,
+    456.0,
+    690.6
+   ],
+   "id": "0607_2018MJ_63_q01bii_diagram6",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)(ii)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      302.9,
+      570.0,
+      538.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 65.9,
+      "height_pt": 235.1
+     }
+    }
+   ],
+   "text": "Lee draws a circle of radius 5 cm on a rectangular piece of paper measuring 40 cm by 20 cm.\n40cm\nNOT TO\nSCALE\n5cm\n20cm\nThe probability, p, that a grain of rice lands inside the circle is\np=area of circle\narea of paper .",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        30.0,
+        547.1,
+        570.0,
+        570.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 4.0,
+        "height_pt": 22.9
+       }
+      }
+     ],
+     "text": "Show that p is approximately 0.098 for this piece of paper.",
+     "marks": 1,
+     "path": "1(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "1(a)(i)",
+       "text": "π×25\nπ×5\n2\n78.5\nor\nor\n40×20\n800\n800",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.15999984741211,
+          117.2,
+          563.1599731445312,
+          159.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Show that <i>p</i> is approximately 0.098 for this piece of paper.",
+       "text": "Show that p is approximately 0.098 for this piece of paper."
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        30.0,
+        625.1,
+        570.0,
+        795.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 42.6,
+        "height_pt": 169.9
+       }
+      },
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        61.0,
+        570.0,
+        195.0
+       ],
+       "continued": true,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 37.4,
+        "height_pt": 134.0
+       }
+      }
+     ],
+     "text": "Lee drops 10 grains of rice at random onto the piece of paper.\nThe diagram shows the result.\nNOT TO\nSCALE\nKey:\nrepresents one grain of rice.\nThe relative frequency that a grain of rice is inside the circle\n=number of grains of rice inside the circle\ntotal number of grains of rice dropped .\nFind the relative frequency that a grain of rice is inside the circle.\n...................................................",
+     "marks": 1,
+     "path": "1(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "1(a)(ii)",
+       "text": "2\noe\nisw\n10",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.15999984741211,
+          159.7,
+          563.1599731445312,
+          200.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Lee drops 10 grains of rice at random onto the piece of paper. The diagram shows the result.",
+       "text": "Lee drops 10 grains of rice at random onto the piece of paper. The diagram shows the result."
+      },
+      {
+       "type": "figure",
+       "id": "0607_2018MJ_63_q01aii_diagram2",
+       "caption": null
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 42.6
+      },
+      {
+       "type": "text",
+       "html": "The relative frequency that a grain of rice is inside the circle",
+       "text": "The relative frequency that a grain of rice is inside the circle"
+      },
+      {
+       "type": "text",
+       "html": "number of grains of rice inside the circle = . total number of grains of rice dropped",
+       "text": "number of grains of rice inside the circle = . total number of grains of rice dropped"
+      },
+      {
+       "type": "text",
+       "html": "Find the relative frequency that a grain of rice is inside the circle.",
+       "text": "Find the relative frequency that a grain of rice is inside the circle."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        200.0,
+        570.0,
+        388.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 97.0,
+        "height_pt": 188.0
+       }
+      }
+     ],
+     "text": "Lee drops 10 more grains of rice at random onto the piece of paper.\nNOT TO\nSCALE\nShow that the relative frequency that a grain of rice is inside the circle is 0.15 .",
+     "marks": 1,
+     "path": "1(a)(iii)",
+     "mark_scheme": [
+      {
+       "label": "1(a)(iii)",
+       "text": "3\n20",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.15999984741211,
+          200.8,
+          563.1599731445312,
+          241.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Lee drops 10 more grains of rice at random onto the piece of paper.",
+       "text": "Lee drops 10 more grains of rice at random onto the piece of paper."
+      },
+      {
+       "type": "figure",
+       "id": "0607_2018MJ_63_q01aiii_diagram3",
+       "caption": null
+      },
+      {
+       "type": "text",
+       "html": "Show that the relative frequency that a grain of rice is inside the circle is 0.15 .",
+       "text": "Show that the relative frequency that a grain of rice is inside the circle is 0.15 ."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 97.0
+      }
+     ]
+    },
+    {
+     "label": "iv",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        534.0,
+        570.0,
+        616.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 11.3,
+        "height_pt": 82.5
+       }
+      }
+     ],
+     "text": "The relative frequency that a grain of rice is inside the circle gives an estimate for the probability, p.\nThe area of the circle is\n25 #.\nr\nUse   area of circle\narea of paper= 0.15   to show that an estimate for r is 4.8 .",
+     "marks": 1,
+     "path": "1(a)(iv)",
+     "mark_scheme": [
+      {
+       "label": "1(a)(iv)",
+       "text": "40×20\nπ=0.15×\noe\n25",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.15999984741211,
+          241.9,
+          563.1599731445312,
+          282.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "The relative frequency that a grain of rice is inside the circle gives an estimate for the probability, <i>p</i>. The area of the circle is 25 # r. Use \\(\\frac{\\text{area of circle}}{\\text{area of paper}}\\) = 0.15 to show that an estimate for r is 4.8 .",
+       "text": "The relative frequency that a grain of rice is inside the circle gives an estimate for the probability, p. The area of the circle is 25 # r. Use (area of circle)/(area of paper) = 0.15 to show that an estimate for r is 4.8 ."
+      }
+     ]
+    }
+   ],
+   "path": "1(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Lee draws a circle of radius 5 cm on a rectangular piece of paper measuring 40 cm by 20 cm.",
+     "text": "Lee draws a circle of radius 5 cm on a rectangular piece of paper measuring 40 cm by 20 cm."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2018MJ_63_q01a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "The probability, <i>p</i>, that a grain of rice lands <b>inside</b> the circle is",
+     "text": "The probability, p, that a grain of rice lands inside the circle is"
+    },
+    {
+     "type": "text",
+     "html": "<i>p</i> = \\(\\frac{\\text{area of circle}}{\\text{area of paper}}\\) .",
+     "text": "p = (area of circle)/(area of paper) ."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      230.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 14.0,
+      "height_pt": 173.0
+     }
+    }
+   ],
+   "text": "Lee draws a circle of radius 10 cm on a rectangular piece of paper measuring 30 cm by 20 cm.\n30cm\nNOT TO\nSCALE\n10cm\n20cm",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        251.0,
+        570.0,
+        311.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 1,
+        "answer_line": "Area of circle = …… #r",
+        "working_gap_pt": 24.5,
+        "height_pt": 60.0
+       }
+      }
+     ],
+     "text": "Complete this statement with a number.\nArea of circle = .................... #r",
+     "marks": 1,
+     "path": "1(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "1(b)(i)",
+       "text": "100 cao",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.15999984741211,
+          282.9,
+          563.1599731445312,
+          307.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete this statement with a number.",
+       "text": "Complete this statement with a number."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Area of circle =",
+       "unit": "# r"
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        316.0,
+        570.0,
+        695.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 111.6,
+        "height_pt": 379.0
+       }
+      },
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        61.0,
+        570.0,
+        193.5
+       ],
+       "continued": true,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 12.3,
+        "height_pt": 132.5
+       }
+      }
+     ],
+     "text": "Lee drops 10 grains of rice at random onto the piece of paper.\nDiagram A shows the result.\nA\nNOT TO\nSCALE\nLee removes the 10 grains of rice and drops another 10 grains of rice at random onto the piece of\npaper.\nDiagram B shows the result.\nB\nNOT TO\nSCALE\nComplete the table.\nCombined results for\nA\nB\nall 20 grains of rice\nNumber of grains of rice\ninside circle\n10\nRelative frequency\n20",
+     "marks": 1,
+     "path": "1(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "1(b)(ii)",
+       "text": "4\n6\n10 cao",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.15999984741211,
+          307.4,
+          563.1599731445312,
+          331.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Lee drops 10 grains of rice at random onto the piece of paper. Diagram A shows the result.",
+       "text": "Lee drops 10 grains of rice at random onto the piece of paper. Diagram A shows the result."
+      },
+      {
+       "type": "figure",
+       "id": "0607_2018MJ_63_q01bii_diagram5",
+       "caption": null
+      },
+      {
+       "type": "text",
+       "html": "Lee removes the 10 grains of rice and drops another 10 grains of rice at random onto the piece of paper. Diagram B shows the result.",
+       "text": "Lee removes the 10 grains of rice and drops another 10 grains of rice at random onto the piece of paper. Diagram B shows the result."
+      },
+      {
+       "type": "figure",
+       "id": "0607_2018MJ_63_q01bii_diagram6",
+       "caption": null
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 111.6
+      },
+      {
+       "type": "text",
+       "html": "Complete the table.",
+       "text": "Complete the table."
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "",
+         "A",
+         "B",
+         "Combined results for all 20 grains of rice"
+        ],
+        [
+         "Number of grains of rice",
+         "",
+         "",
+         ""
+        ],
+        [
+         "inside circle",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Relative frequency",
+         "",
+         "",
+         "10 20"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        199.2,
+        570.0,
+        493.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 1,
+        "answer_line": "r= ……",
+        "working_gap_pt": 193.4,
+        "height_pt": 293.8
+       }
+      }
+     ],
+     "text": "Use the formula\narea of circle\narea of paper= relative frequency\nto estimate r using the combined results for all 20 grains of rice.\nr= ...................................................",
+     "marks": 2,
+     "path": "1(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "1(b)(iii)",
+       "text": "3",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.15999984741211,
+          331.8,
+          563.1599731445312,
+          398.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use the formula",
+       "text": "Use the formula"
+      },
+      {
+       "type": "text",
+       "html": "\\(\\frac{\\text{area of circle}}{\\text{area of paper}}\\) = relative frequency",
+       "text": "(area of circle)/(area of paper) = relative frequency"
+      },
+      {
+       "type": "text",
+       "html": "to estimate r using the combined results for all 20 grains of rice.",
+       "text": "to estimate r using the combined results for all 20 grains of rice."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "r ="
+      }
+     ]
+    }
+   ],
+   "path": "1(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Lee draws a circle of radius 10 cm on a rectangular piece of paper measuring 30 cm by 20 cm.",
+     "text": "Lee draws a circle of radius 10 cm on a rectangular piece of paper measuring 30 cm by 20 cm."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2018MJ_63_q01b_diagram4",
+     "caption": null
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Lee draws circles on rectangular pieces of paper. He drops grains of rice at random onto the pieces of paper. He counts the number of grains of rice inside each circle.",
+   "text": "Lee draws circles on rectangular pieces of paper. He drops grains of rice at random onto the pieces of paper. He counts the number of grains of rice inside each circle."
+  }
+ ],
+ "marks_source": "mark scheme"
+}

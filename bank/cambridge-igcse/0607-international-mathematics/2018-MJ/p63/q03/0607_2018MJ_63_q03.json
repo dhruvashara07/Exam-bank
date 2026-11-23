@@ -1,0 +1,208 @@
+{
+ "id": "0607_2018MJ_63_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    308.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 64.4,
+    "height_pt": 251.5
+   }
+  }
+ ],
+ "text": "3\nLee draws a circle on a piece of paper in the shape of a regular hexagon of side length x cm.\nThe circle touches all six edges of the paper.\nNOT TO\nSCALE\n√3\n— xcm\n2\nxcm\nLee drops grains of rice at random onto the piece of paper.\nHe counts the number of grains of rice inside the circle and finds the relative frequency.",
+ "marks": 4,
+ "figures": [
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    162.8,
+    102.5,
+    419.2,
+    261.5
+   ],
+   "id": "0607_2018MJ_63_q03_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      311.9,
+      570.0,
+      611.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 218.5,
+      "height_pt": 299.6
+     }
+    }
+   ],
+   "text": "Find an estimate for the value of r when x= 30 and the relative frequency that the grain of rice is\ninside the circle is 0.905 .\nUse the formula    area of circle\narea of paper= relative frequency .\n...................................................",
+   "marks": 2,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "3.134 to 3.138\nor\n3.14 or 3.13 nfww",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        533.1,
+        563.1599731445312,
+        613.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an estimate for the value of r when <i>x</i> = 30 and the relative frequency that the grain of rice is inside the circle is 0.905 . Use the formula \\(\\frac{\\text{area of circle}}{\\text{area of paper}}\\) = relative frequency .",
+     "text": "Find an estimate for the value of r when x = 30 and the relative frequency that the grain of rice is inside the circle is 0.905 . Use the formula (area of circle)/(area of paper) = relative frequency ."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      312.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "k = ……",
+      "working_gap_pt": 167.4,
+      "height_pt": 255.0
+     }
+    }
+   ],
+   "text": "Show that, for any value of x,\nestimate for r=k# relative frequency, where k is an exact constant.\nFind the value of k.\nk = ...................................................",
+   "marks": 2,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "3\nx ×π\n2\n[relative frequency=]\n4\noe\n3 3\n2\nx\n2\nk = 2 3",
+     "codes": [
+      "M1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        613.5,
+        563.1599731445312,
+        715.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that, for any value of <i>x</i>,",
+     "text": "Show that, for any value of x,"
+    },
+    {
+     "type": "text",
+     "html": "estimate for r = <i>k</i> # relative frequency, where <i>k</i> is an <b>exact</b> constant.",
+     "text": "estimate for r = k # relative frequency, where k is an exact constant."
+    },
+    {
+     "type": "text",
+     "html": "Find the value of <i>k</i>.",
+     "text": "Find the value of k."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "k ="
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Lee draws a circle on a piece of paper in the shape of a regular hexagon of side length <i>x</i> cm. The circle touches all six edges of the paper.",
+   "text": "Lee draws a circle on a piece of paper in the shape of a regular hexagon of side length x cm. The circle touches all six edges of the paper."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2018MJ_63_q03_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "Lee drops grains of rice at random onto the piece of paper. He counts the number of grains of rice inside the circle and finds the relative frequency.",
+   "text": "Lee drops grains of rice at random onto the piece of paper. He counts the number of grains of rice inside the circle and finds the relative frequency."
+  }
+ ],
+ "marks_source": "mark scheme"
+}

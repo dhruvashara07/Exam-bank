@@ -1,0 +1,376 @@
+{
+ "id": "0607_2018MJ_43_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 10,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    434.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 48.0,
+    "height_pt": 377.5
+   }
+  }
+ ],
+ "text": "6\ny\nNorth\nNorth\nNOT TO\nSCALE\n125°\nB\n80km\n65°\n140km\nA\nC\nx\nO\nA ship sails 80 km on a bearing of 065° from A to B.\nIt then sails 140 km on a bearing of 125° from B to C.",
+ "marks": 14,
+ "figures": [
+  {
+   "caption": null,
+   "page": 10,
+   "bbox": [
+    97.7,
+    71.7,
+    501.3,
+    375.8
+   ],
+   "id": "0607_2018MJ_43_q06_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      437.8,
+      570.0,
+      708.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 204.7,
+      "height_pt": 270.2
+     }
+    }
+   ],
+   "text": "Find AB as a column vector with the components in kilometres.\nf\np       [4]",
+   "marks": 4,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "\n72.5 or 72.50...\n\n\n\n33.8 or 33.80 to 33.81\n\n",
+     "codes": [
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        474.4,
+        548.9400024414062,
+        568.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find <i>AB</i> as a column vector with the components in kilometres.",
+     "text": "Find AB as a column vector with the components in kilometres."
+    },
+    {
+     "type": "text",
+     "html": "f p",
+     "text": "f p"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 204.7
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      61.6,
+      570.0,
+      344.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 217.7,
+      "height_pt": 282.9
+     }
+    }
+   ],
+   "text": "Find AC as a column vector with the components in kilometres.\nf\np       [5]",
+   "marks": 5,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "187 or 187.1 to 187.2 \n\n\n– 46.5 or – 46.49...\n\n",
+     "codes": [
+      "5"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        568.6,
+        548.9400024414062,
+        688.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find <i>AC</i> as a column vector with the components in kilometres.",
+     "text": "Find AC as a column vector with the components in kilometres."
+    },
+    {
+     "type": "text",
+     "html": "f p",
+     "text": "f p"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 217.7
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      347.6,
+      570.0,
+      396.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 11.3,
+      "height_pt": 48.9
+     }
+    }
+   ],
+   "text": "The ship sails directly back from C to A.\nUsing your answer to part (b), calculate",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        399.6,
+        570.0,
+        526.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 89.6,
+        "height_pt": 126.9
+       }
+      }
+     ],
+     "text": "the distance the ship sails from C to A,\n............................................. km [2]",
+     "marks": 2,
+     "path": "6(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(c)(i)",
+       "text": "2\n2\n(their 187) + (their[–] 46.5)\n193 or 192.6 to 192.9",
+       "codes": [
+        "M1",
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.380001068115234,
+          688.0,
+          548.9400024414062,
+          740.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "the distance the ship sails from <i>C</i> to <i>A</i>,",
+       "text": "the distance the ship sails from C to A,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "unit": "km"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        555.6,
+        570.0,
+        760.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 167.6,
+        "height_pt": 204.9
+       }
+      }
+     ],
+     "text": "the bearing of A from C.\n.................................................... [3]",
+     "marks": 3,
+     "path": "6(c)(ii)",
+     "mark_scheme": [
+      {
+       "label": "6(c)(ii)",
+       "text": "their46.5\ntan[x] =\noe soi by 13.9...\ntheir187\n284 or 283.9 to 284.0",
+       "codes": [
+        "M1",
+        "B2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.380001068115234,
+          89.3,
+          548.9400024414062,
+          170.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "the bearing of <i>A</i> from <i>C.</i>",
+       "text": "the bearing of A from C."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "6(c)",
+   "content": [
+    {
+     "type": "text",
+     "html": "The ship sails directly back from <i>C</i> to <i>A</i>. Using your answer to <b>part (b)</b>, calculate",
+     "text": "The ship sails directly back from C to A. Using your answer to part (b), calculate"
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 3,
+ "paper_code": "0607/43",
+ "paper_type": "extended_long_answer",
+ "total_marks": 14,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>6 </b>",
+   "text": "6"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2018MJ_43_q06_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "A ship sails 80 km on a bearing of 065° from <i>A</i> to <i>B</i>. It then sails 140 km on a bearing of 125° from <i>B</i> to <i>C</i>.",
+   "text": "A ship sails 80 km on a bearing of 065° from A to B. It then sails 140 km on a bearing of 125° from B to C."
+  }
+ ]
+}

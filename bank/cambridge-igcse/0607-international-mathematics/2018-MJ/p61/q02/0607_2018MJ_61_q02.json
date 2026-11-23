@@ -1,0 +1,286 @@
+{
+ "id": "0607_2018MJ_61_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    145.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.1,
+    "height_pt": 88.0
+   }
+  }
+ ],
+ "text": "2\nTom wants to find the set of positive integers that have a sum of 19 and give the largest product.\nHe uses the ideas from question 1 and the following method.\n•\nWrite 19 in the top box of the diagram.\n•\nWrite the two positive integers that give the largest product in the two boxes on the next row.\n•\nComplete the remaining boxes in the same way.",
+ "marks": 4,
+ "figures": [
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    94.7,
+    178.0,
+    502.5,
+    301.3
+   ],
+   "id": "0607_2018MJ_61_q02a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    91.0,
+    88.1,
+    455.6,
+    168.2
+   ],
+   "id": "0607_2018MJ_61_q02c_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      148.0,
+      570.0,
+      357.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 50.8,
+      "height_pt": 209.5
+     }
+    }
+   ],
+   "text": "Complete the diagram.\n19\n9\n2\n2\n2\n3\n2\n3\n2\n3\nThe largest product using Tom’s method is\n2  ×  2  ×  2  ×  3  ×  2  ×  3  ×  2  ×  3   =   25 × 33=   864.",
+   "marks": 1,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "10\n4\n5\n5\n5",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        374.2,
+        563.1599731445312,
+        411.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the diagram.",
+     "text": "Complete the diagram."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2018MJ_61_q02a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "The largest product using Tom’s method is",
+     "text": "The largest product using Tom’s method is"
+    },
+    {
+     "type": "text",
+     "html": "× 2 × 2 × 3 × 2 × 3 × 2 × 3 = 2<sup>5</sup> × 3<sup>3</sup> = 864.",
+     "text": "× 2 × 2 × 3 × 2 × 3 × 2 × 3 = 25 × 33 = 864."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 50.8
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      376.0,
+      570.0,
+      449.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 11.6,
+      "height_pt": 73.0
+     }
+    }
+   ],
+   "text": "Explain why Tom does not replace the 2s and the 3s to make another row in the diagram.\n...................................................................................................................................................................\n...................................................................................................................................................................",
+   "marks": 1,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "Valid explanation",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        411.3,
+        563.1599731445312,
+        435.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Explain why Tom does not replace the 2s and the 3s to make another row in the diagram.",
+     "text": "Explain why Tom does not replace the 2s and the 3s to make another row in the diagram."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      470.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 336.0,
+      "height_pt": 413.5
+     }
+    }
+   ],
+   "text": "Complete the diagram and find the largest product that Tom’s method gives for positive integers that\nhave a sum of 22.\n22\n......................................................",
+   "marks": 2,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "2916 nfww",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        435.8,
+        563.1599731445312,
+        523.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the diagram and find the largest product that Tom’s method gives for positive integers that have a sum of 22.",
+     "text": "Complete the diagram and find the largest product that Tom’s method gives for positive integers that have a sum of 22."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2018MJ_61_q02c_diagram2",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Tom wants to find the set of positive integers that have a sum of 19 and give the largest product. He uses the ideas from <b>question 1</b> and the following method.",
+   "text": "Tom wants to find the set of positive integers that have a sum of 19 and give the largest product. He uses the ideas from question 1 and the following method."
+  },
+  {
+   "type": "list",
+   "items": [
+    "Write 19 in the top box of the diagram.",
+    "Write the two positive integers that give the largest product in the two boxes on the next row.",
+    "Complete the remaining boxes in the same way."
+   ]
+  }
+ ],
+ "marks_source": "mark scheme"
+}

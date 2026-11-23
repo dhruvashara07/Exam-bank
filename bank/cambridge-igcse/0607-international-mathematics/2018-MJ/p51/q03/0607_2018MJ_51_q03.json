@@ -1,0 +1,321 @@
+{
+ "id": "0607_2018MJ_51_q03",
+ "number": 3,
+ "segments": [],
+ "text": "",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      308.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 24.4,
+      "height_pt": 251.0
+     }
+    }
+   ],
+   "text": "3\n(a) Three positive integers have a sum of 6.\nComplete the table for all the different sets of positive integers that have a sum of 6.\nWriting the positive integers in a different order does not give a different set.\nIntegers\nSum\nProduct\n6\n6\n6\nWrite down the calculation that gives the largest product.\n......................................................",
+   "marks": 2,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "1\n1\n4\n6\n4\n1\n2\n3\n6\n6\n2\n2\n2\n6\n8\n2 × 2 × 2",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        133.3,
+        548.9400024414062,
+        212.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) Three</b> positive integers have a sum of 6.",
+     "text": "Three positive integers have a sum of 6."
+    },
+    {
+     "type": "text",
+     "html": "Complete the table for all the different sets of positive integers that have a sum of 6. Writing the positive integers in a different order does not give a different set.",
+     "text": "Complete the table for all the different sets of positive integers that have a sum of 6. Writing the positive integers in a different order does not give a different set."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Integers",
+       "",
+       "",
+       "Sum",
+       "Product"
+      ],
+      [
+       "",
+       "",
+       "",
+       "6",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "6",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "6",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "html": "Write down the calculation that gives the largest product.",
+     "text": "Write down the calculation that gives the largest product."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      313.7,
+      570.0,
+      388.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 11.5,
+      "height_pt": 74.8
+     }
+    }
+   ],
+   "text": "Look at how you found the largest product in part (a) and in question 1(a).\nFour positive integers have a sum of 40.\nShow that the largest product of these four integers is 10 000.",
+   "marks": 2,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "40 ÷ 4 = 10 oe\n4\n10 × 10 × 10 × 10 or 10 oe",
+     "codes": [
+      "B1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        212.5,
+        548.9400024414062,
+        261.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Look at how you found the largest product in <b>part (a) </b>and in <b>question 1(a)</b>. <b>Four</b> positive integers have a sum of 40. Show that the largest product of these four integers is 10 000.",
+     "text": "Look at how you found the largest product in part (a) and in question 1(a). Four positive integers have a sum of 40. Show that the largest product of these four integers is 10 000."
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      181.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 16.0,
+      "height_pt": 124.0
+     }
+    }
+   ],
+   "text": "Complete the table.\nSum\n6\n40\n15\n24\nNumber of positive integers\n3\n4\n5\n6\nin the sum\nLargest product\n10 000",
+   "marks": 2,
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "6\n40\n15\n24\n3\n4\n5\n6\n8\n10 000\n243\n4096",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        261.4,
+        548.9400024414062,
+        331.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Sum",
+       "6",
+       "40",
+       "15",
+       "24"
+      ],
+      [
+       "Number of positive integers in the sum",
+       "3",
+       "4",
+       "5",
+       "6"
+      ],
+      [
+       "Largest product",
+       "",
+       "10 000",
+       "",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      328.1,
+      570.0,
+      595.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 206.4,
+      "height_pt": 267.4
+     }
+    }
+   ],
+   "text": "n integers have a sum of 40, where n is a factor of 40.\nFind the value of the largest product of the n integers.\n......................................................",
+   "marks": 1,
+   "path": "3(d)",
+   "mark_scheme": [
+    {
+     "label": "3(d)",
+     "text": "1 048 576",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        331.5,
+        548.9400024414062,
+        355.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<i>n</i> integers have a sum of 40, where <i>n</i> is a factor of 40. Find the value of the largest product of the <i>n</i> integers.",
+     "text": "n integers have a sum of 40, where n is a factor of 40. Find the value of the largest product of the n integers."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "marks_source": "mark scheme"
+}

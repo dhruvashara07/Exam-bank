@@ -1,0 +1,263 @@
+{
+ "id": "0607_2018MJ_53_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    232.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 64.0,
+    "height_pt": 175.5
+   }
+  }
+ ],
+ "text": "4\nLee draws one circle of radius rcm on a different piece of paper.\nThe circle touches all four edges of the paper.\nrcm",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    233.0,
+    105.2,
+    363.5,
+    228.3
+   ],
+   "id": "0607_2018MJ_53_q04_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      242.4,
+      570.0,
+      484.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "r=  ……",
+      "working_gap_pt": 133.4,
+      "height_pt": 241.6
+     }
+    }
+   ],
+   "text": "Lee drops 500 grains of rice at random onto the piece of paper.\nHe removes the 500 grains of rice and drops another 500 grains of rice at random onto the piece of\npaper.\nThe combined number of grains of rice inside the circle is 785.\nUse the formula   area of circle\narea of rectangle= relative frequency   to estimate r.\nr=  ............................................",
+   "marks": 3,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "3.14 nfww",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        669.3,
+        563.1599731445312,
+        784.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Lee drops 500 grains of rice at random onto the piece of paper. He removes the 500 grains of rice and drops another 500 grains of rice at random onto the piece of paper. The combined number of grains of rice inside the circle is 785. Use the formula \\(\\frac{\\text{area of circle}}{\\text{area of rectangle}}\\) = relative frequency to estimate r.",
+     "text": "Lee drops 500 grains of rice at random onto the piece of paper. He removes the 500 grains of rice and drops another 500 grains of rice at random onto the piece of paper. The combined number of grains of rice inside the circle is 785. Use the formula (area of circle)/(area of rectangle) = relative frequency to estimate r."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "r ="
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      502.4,
+      570.0,
+      577.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 11.3,
+      "height_pt": 74.6
+     }
+    }
+   ],
+   "text": "Complete this sentence with a single number.\nTo estimate the value of r when the circle touches all four edges of the paper, multiply\nthe relative frequency by ..........................",
+   "marks": 1,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "4",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        32.15999984741211,
+        84.8,
+        563.1599731445312,
+        109.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this sentence with a single number.",
+     "text": "Complete this sentence with a single number."
+    },
+    {
+     "type": "text",
+     "html": "To estimate the value of r when the circle touches all four edges of the paper, multiply",
+     "text": "To estimate the value of r when the circle touches all four edges of the paper, multiply"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "the relative frequency by"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      580.4,
+      570.0,
+      658.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 5.6,
+      "height_pt": 78.1
+     }
+    }
+   ],
+   "text": "Lee drops n grains of rice at random onto the piece of paper.\nHe removes the n grains of rice and drops another n grains of rice at random onto the piece of paper.\nThe combined number of grains of rice inside the circle is k.\n2 is an estimate for r.\nk\nShow that n",
+   "marks": 1,
+   "path": "4(c)",
+   "mark_scheme": [
+    {
+     "label": "4(c)",
+     "text": "πr\n2\nk\n=\nor\n2\n2n\n4r\nk\n×4 oe\n2n",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        32.15999984741211,
+        109.2,
+        563.1599731445312,
+        182.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Lee drops <i>n </i>grains of rice at random onto the piece of paper. He removes the <i>n</i> grains of rice and drops another <i>n</i> grains of rice at random onto the piece of paper. The combined number of grains of rice inside the circle is <i>k</i>.",
+     "text": "Lee drops n grains of rice at random onto the piece of paper. He removes the n grains of rice and drops another n grains of rice at random onto the piece of paper. The combined number of grains of rice inside the circle is k."
+    },
+    {
+     "type": "text",
+     "html": "is an estimate for",
+     "text": "is an estimate for"
+    },
+    {
+     "type": "text",
+     "html": "Show that \\(\\frac{k}{n}\\) r.",
+     "text": "Show that (k)/(n) r."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 3,
+ "paper_code": "0607/53",
+ "paper_type": "core_investigation",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Lee draws one circle of radius <i>r</i> cm on a different piece of paper. The circle touches all four edges of the paper.",
+   "text": "Lee draws one circle of radius r cm on a different piece of paper. The circle touches all four edges of the paper."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2018MJ_53_q04_diagram1",
+   "caption": null
+  }
+ ],
+ "marks_source": "mark scheme"
+}

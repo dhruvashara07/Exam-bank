@@ -1,0 +1,212 @@
+{
+ "id": "0607_2018MJ_63_q02",
+ "number": 2,
+ "segments": [],
+ "text": "",
+ "marks": 4,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    243.7,
+    102.5,
+    350.1,
+    201.3
+   ],
+   "id": "0607_2018MJ_63_q02a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    233.6,
+    454.0,
+    363.7,
+    576.7
+   ],
+   "id": "0607_2018MJ_63_q02b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      403.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "r= ……",
+      "working_gap_pt": 95.7,
+      "height_pt": 346.5
+     }
+    }
+   ],
+   "text": "2\n(a) Lee draws a circle of radius 12 cm on a different piece of paper.\nThe circle touches all four edges of the paper.\n12cm\nLee drops 50 grains of rice at random onto the piece of paper.\nHe removes the 50 grains of rice and drops another 50 grains of rice at random onto the piece of paper.\nThe combined number of grains of rice inside the circle is 78.\nUse the formula   area of circle\narea of paper= relative frequency   to estimate r.\nr= ...................................................",
+   "marks": 2,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "3.12",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        398.2,
+        563.1599731445312,
+        466.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> Lee draws a circle of radius 12 cm on a different piece of paper.",
+     "text": "Lee draws a circle of radius 12 cm on a different piece of paper."
+    },
+    {
+     "type": "text",
+     "html": "The circle touches all four edges of the paper.",
+     "text": "The circle touches all four edges of the paper."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2018MJ_63_q02a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Lee drops 50 grains of rice at random onto the piece of paper. He removes the 50 grains of rice and drops another 50 grains of rice at random onto the piece of paper. The combined number of grains of rice inside the circle is 78. Use the formula \\(\\frac{\\text{area of circle}}{\\text{area of paper}}\\) = relative frequency to estimate r.",
+     "text": "Lee drops 50 grains of rice at random onto the piece of paper. He removes the 50 grains of rice and drops another 50 grains of rice at random onto the piece of paper. The combined number of grains of rice inside the circle is 78. Use the formula (area of circle)/(area of paper) = relative frequency to estimate r."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "r ="
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      408.6,
+      570.0,
+      765.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "k = ……",
+      "working_gap_pt": 89.4,
+      "height_pt": 356.9
+     }
+    }
+   ],
+   "text": "Lee draws a circle of radius r cm on a different piece of paper.\nThe circle touches all four edges of the paper.\nrcm\nShow that, for any value of r,\nestimate for r=k# relative frequency, where k is an integer.\nFind the value of k.\nk = ...................................................",
+   "marks": 2,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "r ×π\n2\n[relative frequency=]\n2r×2r\n[k =] 4",
+     "codes": [
+      "M1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        466.0,
+        563.1599731445312,
+        533.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Lee draws a circle of radius <i>r</i> cm on a different piece of paper. The circle touches all four edges of the paper.",
+     "text": "Lee draws a circle of radius r cm on a different piece of paper. The circle touches all four edges of the paper."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2018MJ_63_q02b_diagram2",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Show that, for any value of <i>r</i>,",
+     "text": "Show that, for any value of r,"
+    },
+    {
+     "type": "text",
+     "html": "estimate for r = <i>k</i> # relative frequency, where <i>k</i> is an integer.",
+     "text": "estimate for r = k # relative frequency, where k is an integer."
+    },
+    {
+     "type": "text",
+     "html": "Find the value of <i>k</i>.",
+     "text": "Find the value of k."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "k ="
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "marks_source": "mark scheme"
+}

@@ -1,0 +1,172 @@
+{
+ "id": "0607_2018MJ_61_q07",
+ "number": 7,
+ "segments": [
+  {
+   "page": 10,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    93.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 36.0
+   }
+  }
+ ],
+ "text": "7\nA model, L(x), for the number of primes less than x, is a straight line that passes through the points (40, 12)\nand (140, 34).",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      96.0,
+      570.0,
+      259.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 128.4,
+      "height_pt": 163.5
+     }
+    }
+   ],
+   "text": "Find the equation of the line.\n......................................................",
+   "marks": 2,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "L(x) = 0.22x + 3.2 oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        32.15999984741211,
+        224.2,
+        563.1599731445312,
+        309.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the equation of the line.",
+     "text": "Find the equation of the line."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      265.0,
+      570.0,
+      337.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 37.4,
+      "height_pt": 72.5
+     }
+    }
+   ],
+   "text": "Use your model to estimate the number of primes that are less than 1000.\n......................................................",
+   "marks": 1,
+   "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "223",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        32.15999984741211,
+        309.9,
+        563.1599731445312,
+        373.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your model to estimate the number of primes that are less than 1000.",
+     "text": "Use your model to estimate the number of primes that are less than 1000."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2018,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A model, L(<i>x</i>), for the number of primes less than <i>x</i>, is a straight line that passes through the points (40, 12) and (140, 34).",
+   "text": "A model, L(x), for the number of primes less than x, is a straight line that passes through the points (40, 12) and (140, 34)."
+  }
+ ],
+ "marks_source": "mark scheme"
+}
