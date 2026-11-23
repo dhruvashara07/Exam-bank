@@ -165,20 +165,20 @@
         30.0,
         277.2,
         570.0,
-        301.5
+        367.5
        ],
        "continued": false,
        "answer_space": {
-        "kind": "none",
-        "dotted_lines": 0,
+        "kind": "lines",
+        "dotted_lines": 1,
         "answer_line": null,
-        "working_gap_pt": 2.7,
-        "height_pt": 24.3
+        "working_gap_pt": 55.3,
+        "height_pt": 90.3
        }
       }
      ],
-     "text": "3x\n(iii)\nlog\n(\n)\n9",
-     "marks": 0,
+     "text": "3x\n(iii)\nlog\n(\n)\n9\n.................................................... [1]",
+     "marks": 1,
      "path": "11(a)(iii)",
      "mark_scheme": [
       {
@@ -205,6 +205,15 @@
        "type": "text",
        "html": "log<sub>9</sub> (3<i><sup>x</sup></i>)",
        "text": "log9 (3x)"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
       }
      ]
     }
@@ -225,22 +234,22 @@
      "page": 18,
      "bbox": [
       30.0,
-      356.7,
+      367.5,
       570.0,
       532.0
      ],
      "continued": false,
      "answer_space": {
       "kind": "answer_line",
-      "dotted_lines": 2,
+      "dotted_lines": 1,
       "answer_line": "x=  …… [2]",
       "working_gap_pt": 106.1,
-      "height_pt": 175.3
+      "height_pt": 164.5
      }
     }
    ],
-   "text": ".................................................... [1]\n(b) Solve.\n3\nlog\n10\n2\nlog\n5\nlogx\n-\n=\nx=  ................................................... [2]",
-   "marks": 3,
+   "text": "Solve.\n3\nlog\n10\n2\nlog\n5\nlogx\n-\n=\nx=  ................................................... [2]",
+   "marks": 2,
    "path": "11(b)",
    "mark_scheme": [
     {
@@ -280,7 +289,7 @@
     },
     {
      "type": "marks",
-     "value": 3
+     "value": 2
     }
    ]
   }
