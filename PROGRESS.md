@@ -7,8 +7,8 @@ Read this first in every session. Update it before ending a session.
   stays on branch store-chem). inbox.py now keeps gt/ci/ir/in/eq/one-digit/combined files (302 had been skipped).
   Branches store-chem and store-chem-rest: Dhruv deletes them (this session cannot delete branches).
 - NEXT: (1) fix the 3 open vector-bracket questions of pattern 240 (2023 MJ 32 q8(c) = the only M2 paper still pending
-  approval, 2023 MJ 32; 2026 MJ 11 q18(b), 2026 MJ 22 q6), approve 0607_2023MJ_32; (2) ask Dhruv (options) whether to redraw
-  ALL blurry raster MS screenshots of M2 (~60 graphs / Venn pictures) or keep the printed ones; (3) re-show in the next round
+  approval, 2023 MJ 32; 2026 MJ 11 q18(b), 2026 MJ 22 q6), approve 0607_2023MJ_32; (2) Dhruv DECIDED (2026-11-22): redraw ALL
+  blurry raster MS screenshots of M2 (~60 graphs / Venn pictures) as a batch of its own (ms_graphs.SPECS, each function read by eye); (3) re-show in the next round
   (--recheck) the approved questions whose figures changed in round 34 (2014MJ_32_q09b, 2019ON_11/12_q06, 2025MJ_13_q14a,
   2021FM_22_q02, 2022ON_61_q03/q04, 2023MJ_11_q16, 2023ON_32_q08, 2023ON_42_q09, 2025ON_61_q02); (4) then M3 (2018-2020) in a
   NEW chat (remind Dhruv to upload 2019 May/June first). Dhruv may continue in another Claude account: put docs/NEXT_CHAT.md
