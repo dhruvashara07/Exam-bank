@@ -1,5 +1,11 @@
 # Starting a new chat (Dhruv, updated 2026-11-16)
 
+**New (shared) Claude account, 2026-11-23:** open claude.ai in the browser logged into that account, connect GitHub so
+dhruvashara07/Exam-bank is allowed (push access), then paste THE prompt below; if the repo is not attached in the chat, say
+'add repo dhruvashara07/Exam-bank with push access'. Skills and memory do not carry over: the repo does (docs/SKILL_exam-batch-cycle.md,
+START_HERE section 5 = usage budget). First task there = PROGRESS NEXT line (3 open vector defects, approve 2023 MJ 32, then M3).
+Chemistry starts in Dhruv's own account later.
+
 One batch per chat (docs/MATHS_PLAN.md section 5). Open a new chat, paste the prompt, nothing else needed.
 If a batch is not finished when the chat gets long, the chat writes "continue <batch>" here and you paste that.
 

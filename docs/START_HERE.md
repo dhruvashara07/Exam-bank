@@ -61,3 +61,12 @@ Only then start. Skip the other docs unless a step points to them.
 Physics teacher in India (IST), reads on his phone. Short plain messages. Ask only when you need his input
 (use the question tool with options). Be honest about what is not fixed. Review page (same link every round):
 https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e
+
+## 5. Usage budget (Dhruv 2026-11-23: the work moves to a SHARED Claude subscription - use it sparingly)
+- Per batch: at most 2 GitHub passes + 1 review round. Wait for GitHub with ONE long poll, never many short ones.
+- A defect class touching fewer than 5 questions with no wrong text / marks / figure data: write it in ERROR_PATTERNS as
+  'known' and move on - do not fix it inside the batch. Max ~30 min per class.
+- Pass-2 collateral that is only added bracket glyphs: pass without looking. Read comparison sheets in bulk, zoom only doubts.
+- Run `batch_log.py phase <batch> claude|fix start/end` (M2's log shows 0.0 because it was never run).
+- No Fable model. No scheduled tasks unless Dhruv asks. Never use Claude API tokens in any workflow.
+- The skill text for a new account is docs/SKILL_exam-batch-cycle.md.
