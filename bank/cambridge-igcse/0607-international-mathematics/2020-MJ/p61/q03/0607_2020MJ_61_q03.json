@@ -1,0 +1,120 @@
+{
+ "id": "0607_2020MJ_61_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    286.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 26.1,
+    "height_pt": 229.2
+   }
+  }
+ ],
+ "text": "3\nComplete the table for adding two consecutive triangle numbers.\nT1\n1\nT2 + T1\n4\nT3 + T2\n9\nT4 + T3\nT5 + T4\nT6 + T5\nTn + Tn-1\n[2]",
+ "marks": 2,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "3",
+   "text": "T1\n1\nT2 + T1\n4\nT3 + T2\n9\nT4 + T3\n16\nT5 + T4\n25\nT6 + T5\n36\n2\nTn + Tn–1\nn",
+   "codes": [
+    "2"
+   ],
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      46.619998931884766,
+      424.2,
+      537.219970703125,
+      637.8
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 2,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Complete the table for adding two consecutive triangle numbers.",
+   "text": "Complete the table for adding two consecutive triangle numbers."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "<i>T</i><sub>1</sub>",
+     "1"
+    ],
+    [
+     "<i>T</i><sub>2</sub> + <i>T</i><sub>1</sub>",
+     "4"
+    ],
+    [
+     "<i>T</i><sub>3</sub> + <i>T</i><sub>2</sub>",
+     "9"
+    ],
+    [
+     "<i>T</i><sub>4</sub> + <i>T</i><sub>3</sub>",
+     ""
+    ],
+    [
+     "<i>T</i><sub>5</sub> + <i>T</i><sub>4</sub>",
+     ""
+    ],
+    [
+     "<i>T</i><sub>6</sub> + <i>T</i><sub>5</sub>",
+     ""
+    ],
+    [
+     "",
+     ""
+    ],
+    [
+     "<i>T</i><i><sub>n</sub></i> + <i>T</i><i><sub>n</sub></i>",
+     ""
+    ],
+    [
+     "-1",
+     ""
+    ]
+   ]
+  },
+  {
+   "type": "marks",
+   "value": 2
+  }
+ ]
+}

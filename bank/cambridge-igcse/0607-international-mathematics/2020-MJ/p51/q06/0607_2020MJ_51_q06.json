@@ -1,0 +1,306 @@
+{
+ "id": "0607_2020MJ_51_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    392.7,
+    570.0,
+    568.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.9,
+    "height_pt": 175.8
+   }
+  }
+ ],
+ "text": "6\nThe sum of two different triangle numbers sometimes equals another triangle number.\nWhen this happens, we have a triangle triple.\nExample\n•\nStart with the triangle number  T\n6\n.\n=\n3\n•\nFrom the table in question 2(a)T\nT\n6\n.\n-\n=\n6\n5\nSo T\nT\nT\n.\n-\n=\n6\n5\n3\n•\nRearrange the equation\nT\nT\nT\n.\n+\n=\n3\n5\n6\n•\nThe triangle triple is then\n(3,     5,     6).\nThe three different numbers must be written in order of increasing size.",
+ "marks": 10,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      571.4,
+      570.0,
+      763.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 5,
+      "answer_line": "- …… = ……",
+      "working_gap_pt": 33.9,
+      "height_pt": 192.1
+     }
+    }
+   ],
+   "text": "Start with triangle number T\n15\nand complete the method of the Example to find another\n5=\ntriangle triple.\nT15\n- ............ = ............\nT5\nSo ............\n- ............ =\nT5\n+\n............ = ............\nThe triangle triple is ( 5,  ................ ,  ................ )\n[4]",
+   "marks": 4,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "T15 – T14 = 15\nT15 – T14 = T5\nT5 + T14 = T15\n(5, 14, 15)",
+     "codes": [
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        470.5,
+        537.219970703125,
+        571.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Start with triangle number <i>T</i><sub>5</sub> = 15 and complete the method of the Example to find another triangle triple.",
+     "text": "Start with triangle number T5 = 15 and complete the method of the Example to find another triangle triple."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "T15 -"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "So",
+     "unit": "= T5"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "T5 +"
+    },
+    {
+     "type": "text",
+     "html": "The triangle triple is ( 5, …… , …… )",
+     "text": "The triangle triple is ( 5, …… , …… )"
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      450.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 197.1,
+      "height_pt": 393.7
+     }
+    }
+   ],
+   "text": "In the table, each row is a triangle triple.\nUse your answer to part (a) and any patterns you notice to complete the table.\nTriangle triple\n3\n5\n6\n4\n9\n10\n5\n6\n7\n[5]",
+   "marks": 5,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "3\n5\n6\n4\n9\n10\n5\n14\n15\n6\n20\n21\n7\n27\n28\nShowing differences\nor using the method at least once\nor last column are triangle numbers",
+     "codes": [
+      "B4",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        571.0,
+        537.219970703125,
+        755.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "In the table, each row is a triangle triple. Use your answer to <b>part (a)</b> and any patterns you notice to complete the table.",
+     "text": "In the table, each row is a triangle triple. Use your answer to part (a) and any patterns you notice to complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Triangle triple",
+       "",
+       ""
+      ],
+      [
+       "3",
+       "5",
+       "6"
+      ],
+      [
+       "4",
+       "9",
+       "10"
+      ],
+      [
+       "5",
+       "",
+       ""
+      ],
+      [
+       "6",
+       "",
+       ""
+      ],
+      [
+       "7",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 197.1
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      479.3,
+      570.0,
+      619.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 101.9,
+      "height_pt": 140.2
+     }
+    }
+   ],
+   "text": "Use the list of triangle numbers on page 2 to check the triangle triple beginning with 6.\n[1]",
+   "marks": 1,
+   "path": "6(c)",
+   "mark_scheme": [
+    {
+     "label": "6(c)",
+     "text": "21 + 210 = 231",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        755.2,
+        537.219970703125,
+        783.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use the list of triangle numbers on page 2 to check the triangle triple beginning with 6.",
+     "text": "Use the list of triangle numbers on page 2 to check the triangle triple beginning with 6."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 101.9
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 10,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The sum of two <b>different</b> triangle numbers sometimes equals another triangle number. When this happens, we have a <i>triangle triple</i>. Example",
+   "text": "The sum of two different triangle numbers sometimes equals another triangle number. When this happens, we have a triangle triple. Example"
+  },
+  {
+   "type": "list",
+   "items": [
+    "Start with the triangle number <i>T</i><sub>3</sub> = 6.",
+    "From the table in <b>question 2(a)</b> <i>T</i><sub>6</sub> - <i>T</i><sub>5</sub> = 6. So <i>T</i><sub>6</sub> - <i>T</i><sub>5</sub> = <i>T</i><sub>3</sub> .",
+    "Rearrange the equation <i>T</i><sub>3</sub> + <i>T</i><sub>5</sub> = <i>T</i><sub>6</sub> .",
+    "The <i>triangle triple</i> is then (3, 5, 6)."
+   ]
+  },
+  {
+   "type": "text",
+   "html": "The three different numbers must be written in order of increasing size.",
+   "text": "The three different numbers must be written in order of increasing size."
+  }
+ ]
+}

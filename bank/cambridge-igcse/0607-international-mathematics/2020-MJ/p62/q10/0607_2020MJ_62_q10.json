@@ -1,0 +1,181 @@
+{
+ "id": "0607_2020MJ_62_q10",
+ "number": 10,
+ "segments": [
+  {
+   "page": 12,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    145.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.9,
+    "height_pt": 88.2
+   }
+  }
+ ],
+ "text": "Glen is driving his car when an emergency happens.\nHe usually takes 0.7 seconds to react before braking.\nBecause he is looking at his mobile phone he takes an extra 2 seconds to react.\nThe weather is wet and the measure of grip the tyre has on the road is 0.5 .\nGlen is driving at x km/h.",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      147.8,
+      570.0,
+      262.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 75.9,
+      "height_pt": 114.2
+     }
+    }
+   ],
+   "text": "Show that x km/h is approximately 0.28x m/s.\n[2]",
+   "marks": 2,
+   "path": "10(a)",
+   "mark_scheme": [
+    {
+     "label": "10(a)",
+     "text": "[x×]1000\noe\n60 ×60\n0.277[...] oe",
+     "codes": [
+      "C1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        52.02000045776367,
+        394.0,
+        564.0599975585938,
+        459.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that <i>x</i> km/h is approximately 0.28<i>x</i> m/s.",
+     "text": "Show that x km/h is approximately 0.28x m/s."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 75.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      264.8,
+      570.0,
+      665.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 296.9,
+      "height_pt": 400.2
+     }
+    }
+   ],
+   "text": "The total stopping distance is the distance the car travels from when the emergency happens to\nwhen the car stops.\nUse Question 8 and Question 9 to find, in terms of x, a model for Glen’s total stopping distance in\nmetres.\nGive your answer as simply as possible.\n................................................. [5]",
+   "marks": 5,
+   "path": "10(b)",
+   "mark_scheme": [
+    {
+     "label": "10(b)",
+     "text": "2\n0.756x + 0.00784x\nAnnotating both components",
+     "codes": [
+      "B4",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        52.02000045776367,
+        459.6,
+        564.0599975585938,
+        557.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The total stopping distance is the distance the car travels from when the emergency happens to when the car stops. Use <b>Question 8</b> and <b>Question 9</b> to find, in terms of <i>x</i>, a model for Glen’s total stopping distance in metres. Give your answer as simply as possible.",
+     "text": "The total stopping distance is the distance the car travels from when the emergency happens to when the car stops. Use Question 8 and Question 9 to find, in terms of x, a model for Glen’s total stopping distance in metres. Give your answer as simply as possible."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Glen is driving his car when an emergency happens. He usually takes 0.7 seconds to react before braking. Because he is looking at his mobile phone he takes an <b>extra</b> 2 seconds to react. The weather is wet and the measure of grip the tyre has on the road is 0.5 . Glen is driving at <i>x</i> km/h.",
+   "text": "Glen is driving his car when an emergency happens. He usually takes 0.7 seconds to react before braking. Because he is looking at his mobile phone he takes an extra 2 seconds to react. The weather is wet and the measure of grip the tyre has on the road is 0.5 . Glen is driving at x km/h."
+  }
+ ]
+}

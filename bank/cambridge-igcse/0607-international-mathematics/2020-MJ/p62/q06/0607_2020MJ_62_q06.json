@@ -1,0 +1,107 @@
+{
+ "id": "0607_2020MJ_62_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    58.6,
+    570.0,
+    635.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 1,
+    "answer_line": null,
+    "working_gap_pt": 452.9,
+    "height_pt": 576.9
+   }
+  }
+ ],
+ "text": "6\nWhen p= 50,\nThe total number of dots in\nThe total number of dots in\n=\nthe nth dotty polygon + 865\nthe (n + 1)th dotty polygon.\nFind the value of n.\n................................................. [4]",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "6",
+   "text": "2\n(50−2)n\n(4−50)n\noe\n+\n2\n2\n2\n(50−2)(n+1)\n(4−50)(n+1)\n+\noe\n2\n2\n2\n2\n24(n+1) – 23(n+1) – (24n – 23n) = 865 oe\n18",
+   "codes": [
+    "C1",
+    "C1",
+    "C1",
+    "B1"
+   ],
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      52.02000045776367,
+      405.2,
+      564.0599975585938,
+      538.4
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "When <i>p</i> = 50,",
+   "text": "When p = 50,"
+  },
+  {
+   "type": "text",
+   "html": "The total number of dots in The total number of dots in",
+   "text": "The total number of dots in The total number of dots in"
+  },
+  {
+   "type": "text",
+   "html": "=",
+   "text": "="
+  },
+  {
+   "type": "text",
+   "html": "the <i>n</i>th dotty polygon + 865 the (<i>n</i> + 1)th dotty polygon.",
+   "text": "the nth dotty polygon + 865 the (n + 1)th dotty polygon."
+  },
+  {
+   "type": "text",
+   "html": "Find the value of <i>n</i>.",
+   "text": "Find the value of n."
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
+   "lines": 1
+  },
+  {
+   "type": "marks",
+   "value": 4
+  }
+ ]
+}

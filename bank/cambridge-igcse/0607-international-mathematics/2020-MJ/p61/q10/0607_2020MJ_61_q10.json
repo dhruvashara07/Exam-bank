@@ -1,0 +1,253 @@
+{
+ "id": "0607_2020MJ_61_q10",
+ "number": 10,
+ "segments": [
+  {
+   "page": 9,
+   "bbox": [
+    30.0,
+    186.8,
+    570.0,
+    275.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 9.1,
+    "height_pt": 88.2
+   }
+  }
+ ],
+ "text": "Bode’s rule requires doubling each time.\nSo a possible model for the distance of a planet from the Sun, R au, is\n2n\nR\na\nb\n=\n+\n#\n2n\nwhere n is Bode’s number and a and b are constants that transform the graph of R\n.\n=",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      277.8,
+      570.0,
+      340.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 23.9,
+      "height_pt": 62.2
+     }
+    }
+   ],
+   "text": "Write down the two types of transformation used.\n............................................ , ............................................ [2]",
+   "marks": 2,
+   "path": "10(a)",
+   "mark_scheme": [
+    {
+     "label": "10(a)",
+     "text": "Translation\nStretch",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        371.2,
+        537.219970703125,
+        408.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the two types of transformation used.",
+     "text": "Write down the two types of transformation used."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      342.8,
+      570.0,
+      483.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 62.9,
+      "height_pt": 140.2
+     }
+    }
+   ],
+   "text": "Using the information for Earth and Jupiter on page 8, write two equations in a and b.\n.................................................\n................................................. [2]",
+   "marks": 2,
+   "path": "10(b)",
+   "mark_scheme": [
+    {
+     "label": "10(b)",
+     "text": "2a + b = 1 oe\n16a + b = 5.2 oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        408.3,
+        537.219970703125,
+        445.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Using the information for Earth and Jupiter on page 8, write two equations in <i>a</i> and <i>b</i>.",
+     "text": "Using the information for Earth and Jupiter on page 8, write two equations in a and b."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      485.8,
+      570.0,
+      769.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 244.9,
+      "height_pt": 283.2
+     }
+    }
+   ],
+   "text": "n\n(c) Show how solving these simultaneous equations gives\nR\n0 3\n.\n2\n0 4\n.\n.\n=\n+\n#\n[2]",
+   "marks": 2,
+   "path": "10(c)",
+   "mark_scheme": [
+    {
+     "label": "10(c)",
+     "text": "14a = 4.2 leading to a = 0.3\n2 × their 0.3 + b = 1\nor 16 × their 0.3 + b = 5.2\nleading to b = 0.4\nOR\n7b = 0.28 leading to b = 0.4\n2a + their 0.4 = 1\nor 16a + their 0.4 = 5.2\nleading to a = 0.3",
+     "codes": [
+      "C1",
+      "C1",
+      "C1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        445.5,
+        537.219970703125,
+        621.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show how solving these simultaneous equations gives <i>R</i> = 0 3. # 2<i><sup>n</sup></i> + 0 4. .",
+     "text": "Show how solving these simultaneous equations gives R = 0 3. # 2n + 0 4. ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 244.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Bode’s rule requires doubling each time. So a possible model for the distance of a planet from the Sun, <i>R</i> au, is",
+   "text": "Bode’s rule requires doubling each time. So a possible model for the distance of a planet from the Sun, R au, is"
+  },
+  {
+   "type": "text",
+   "html": "<i>R</i> = <i>a</i> # 2<i><sup>n</sup></i> + <i>b</i>",
+   "text": "R = a # 2n + b"
+  },
+  {
+   "type": "text",
+   "html": "where <i>n</i> is Bode’s number and <i>a</i> and <i>b</i> are constants that transform the graph of <i>R</i> = 2<i><sup>n</sup></i> .",
+   "text": "where n is Bode’s number and a and b are constants that transform the graph of R = 2n ."
+  }
+ ]
+}

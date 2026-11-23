@@ -1,0 +1,221 @@
+{
+ "id": "0607_2020MJ_51_q07",
+ "number": 7,
+ "segments": [],
+ "text": "",
+ "marks": 8,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      445.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 167.8,
+      "height_pt": 388.7
+     }
+    }
+   ],
+   "text": "7\n(a) The triangle numbers T1 and T3 are not consecutive. They are two apart.\nComplete the table for subtracting triangle numbers that are two apart.\n5\nT3-T1\nT4-T2\nT5-T3\nT6-T4\nT7-T5\n13\nT\nT\n-\nn\nn\n2\n-\n[4]",
+   "marks": 4,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "T3 – T1\n5\nT4 – T2\n7\nT5 – T3\n9\nT6 – T4\n11\nT7 – T5\n13\nTn – Tn–2\n2n – 1\nDifferences of 2 shown",
+     "codes": [
+      "B3",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        537.219970703125,
+        303.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> The triangle numbers <i>T</i><sub>1</sub> and <i>T</i><sub>3</sub> are not consecutive. They are two apart.",
+     "text": "The triangle numbers T1 and T3 are not consecutive. They are two apart."
+    },
+    {
+     "type": "text",
+     "html": "Complete the table for subtracting triangle numbers that are two apart.",
+     "text": "Complete the table for subtracting triangle numbers that are two apart."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "<i>T</i><sub>3</sub> - <i>T</i><sub>1</sub>",
+       "5"
+      ],
+      [
+       "<i>T</i><sub>4</sub> - <i>T</i><sub>2</sub>",
+       ""
+      ],
+      [
+       "<i>T</i><sub>5</sub> - <i>T</i><sub>3</sub>",
+       ""
+      ],
+      [
+       "<i>T</i><sub>6</sub> - <i>T</i><sub>4</sub>",
+       ""
+      ],
+      [
+       "<i>T</i><sub>7</sub> - <i>T</i><sub>5</sub>",
+       "13"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "<i>T</i><i><sub>n</sub></i> - <i>T</i><i><sub>n</sub></i>",
+       ""
+      ],
+      [
+       "-2",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 167.8
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      448.0,
+      570.0,
+      770.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 205.9,
+      "height_pt": 322.5
+     }
+    }
+   ],
+   "text": "Use the triangle number T\n45\nto find a triangle triple where\n9=\n•\nthe smallest number is 9\n•\nthe difference between the other two numbers is 2.\nHints: Use the last row of the table in part (a).\nUse a method similar to that in the Example in Question 6.\n( 9 ,  ............... ,  ............... ) [4]",
+   "marks": 4,
+   "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "their 2n – 1 = 45\nor\ndifferences continued to 45\n276 – 231 = 45 seen\nor\nT23 – T21 = T9\n(9, 21, 23)",
+     "codes": [
+      "C1",
+      "C1",
+      "B2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        303.0,
+        537.219970703125,
+        431.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use the triangle number <i>T</i><sub>9</sub> = 45 to find a triangle triple where",
+     "text": "Use the triangle number T9 = 45 to find a triangle triple where"
+    },
+    {
+     "type": "list",
+     "items": [
+      "the smallest number is 9",
+      "the difference between the other two numbers is 2."
+     ]
+    },
+    {
+     "type": "text",
+     "html": "Hints: Use the last row of the table in <b>part (a)</b>.",
+     "text": "Hints: Use the last row of the table in part (a)."
+    },
+    {
+     "type": "text",
+     "html": "Use a method similar to that in the Example in <b>Question 6</b>.",
+     "text": "Use a method similar to that in the Example in Question 6."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "( 9 ,",
+     "unit": ")"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

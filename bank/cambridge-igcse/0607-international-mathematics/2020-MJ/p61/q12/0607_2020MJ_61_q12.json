@@ -1,0 +1,318 @@
+{
+ "id": "0607_2020MJ_61_q12",
+ "number": 12,
+ "segments": [],
+ "text": "",
+ "marks": 10,
+ "figures": [
+  {
+   "caption": null,
+   "page": 11,
+   "bbox": [
+    115.4,
+    442.5,
+    484.7,
+    685.6
+   ],
+   "id": "0607_2020MJ_61_q12b_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      405.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 205.9,
+      "height_pt": 348.2
+     }
+    }
+   ],
+   "text": "Assume that planets travel in a circle with the Sun at the centre.\nn\nUse your model in Question 11(b) and\nR\n0 3\n.\n2\n0 4\n.\nto show that a model for the average\n=\n+\n#\nspeed of a planet is\n2\nr\nS\n,\n=\nn\n0 3\n.\n2\n0 4\n.\n+\n#\nwhere n is Bode’s number and S is measured in au/year.\n[3]",
+   "marks": 3,
+   "path": "12(a)",
+   "mark_scheme": [
+    {
+     "label": "12(a)",
+     "text": "distance\n2πR\n2π\nS =\n=\n=\n1.5\n0.5\ntime\nR\nR",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        151.0,
+        537.219970703125,
+        204.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Assume that planets travel in a circle with the Sun at the centre.",
+     "text": "Assume that planets travel in a circle with the Sun at the centre."
+    },
+    {
+     "type": "text",
+     "html": "Use your model in <b>Question 11(b)</b> and <i>R</i> = 0 3. # 2<i><sup>n</sup></i> + 0 4. to show that a model for the average speed of a planet is",
+     "text": "Use your model in Question 11(b) and R = 0 3. # 2n + 0 4. to show that a model for the average speed of a planet is"
+    },
+    {
+     "type": "text",
+     "html": "<i>S</i> = \\(\\frac{2r}{0 3. # 2^{n} + 0 4.}\\) ,",
+     "text": "S = (2r)/(0 3.#2n+0 4.) ,"
+    },
+    {
+     "type": "text",
+     "html": "where <i>n</i> is Bode’s number and <i>S</i> is measured in au/year.",
+     "text": "where n is Bode’s number and S is measured in au/year."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 205.9
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      407.8,
+      570.0,
+      765.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 200.4,
+      "height_pt": 357.2
+     }
+    }
+   ],
+   "text": "Sketch the graph of S for\n0\nn\n5\n.\nG\nG\nS\n0\nn\n0\n5\n[2]\nQuestions 12(c) and 12(d) are printed on the next page.",
+   "marks": 2,
+   "path": "12(b)",
+   "mark_scheme": [
+    {
+     "label": "12(b)",
+     "text": "Correct sketch\n10 S\n5\nn\n5\nVertical scale implying intercept\nbetween 7 and 8.",
+     "codes": [
+      "B1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        204.8,
+        537.219970703125,
+        348.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Sketch the graph of <i>S</i> for 0 G <i>n</i> G 5.",
+     "text": "Sketch the graph of S for 0 G n G 5."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2020MJ_61_q12b_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "<b>Questions 12(c) and 12(d) are printed on the next page.</b>",
+     "text": "Questions 12(c) and 12(d) are printed on the next page."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 200.4
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      340.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 205.9,
+      "height_pt": 283.2
+     }
+    }
+   ],
+   "text": "The graph in part (b) is approximately a straight line.\nFind a linear model for S, in terms of n, by finding the equation of this straight line.\nWrite the numbers in your model correct to 1 decimal place.\n................................................. [3]",
+   "marks": 3,
+   "path": "12(c)",
+   "mark_scheme": [
+    {
+     "label": "12(c)",
+     "text": "rise\ncalculation\nrun\nS =(–1.3 to –1.0)n + (7.3 to 7.7)",
+     "codes": [
+      "C1",
+      "B2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        348.0,
+        537.219970703125,
+        426.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The graph in <b>part (b)</b> is approximately a straight line. Find a linear model for <i>S</i>, in terms of <i>n</i>, by finding the equation of this straight line. Write the numbers in your model correct to 1 decimal place.",
+     "text": "The graph in part (b) is approximately a straight line. Find a linear model for S, in terms of n, by finding the equation of this straight line. Write the numbers in your model correct to 1 decimal place."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      342.8,
+      570.0,
+      483.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 75.9,
+      "height_pt": 140.2
+     }
+    }
+   ],
+   "text": "Bode’s number for Neptune is 7.\nShow that your model does not give a sensible answer for the speed of Neptune.\n[2]",
+   "marks": 2,
+   "path": "12(d)",
+   "mark_scheme": [
+    {
+     "label": "12(d)",
+     "text": "their gradient × 7 + their intercept\n= negative answer",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        46.619998931884766,
+        426.1,
+        537.219970703125,
+        492.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Bode’s number for Neptune is 7. Show that your model does not give a sensible answer for the speed of Neptune.",
+     "text": "Bode’s number for Neptune is 7. Show that your model does not give a sensible answer for the speed of Neptune."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 75.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 10,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

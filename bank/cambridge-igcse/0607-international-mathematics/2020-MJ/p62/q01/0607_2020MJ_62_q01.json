@@ -1,0 +1,205 @@
+{
+ "id": "0607_2020MJ_62_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    264.8,
+    570.0,
+    386.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 83.0,
+    "height_pt": 121.7
+   }
+  }
+ ],
+ "text": "1\nThis is a dotty triangle.\nIn this dotty triangle, p= 3 and n= 4.",
+ "marks": 4,
+ "figures": [
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    265.1,
+    300.3,
+    327.2,
+    348.3
+   ],
+   "id": "0607_2020MJ_62_q01_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      389.1,
+      570.0,
+      464.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "1 + 2 + 3 + …… = …… [1]",
+      "working_gap_pt": 10.9,
+      "height_pt": 75.4
+     }
+    }
+   ],
+   "text": "Look at the numbers of dots in each row of the triangle.\nComplete this sum for the total number of dots in the triangle.\n1 + 2 + 3 + ............. = ............. [1]",
+   "marks": 1,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "...+ 4 [=] 10",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        52.02000045776367,
+        126.5,
+        564.0599975585938,
+        151.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Look at the numbers of dots in each row of the triangle. Complete this sum for the total number of dots in the triangle.",
+     "text": "Look at the numbers of dots in each row of the triangle. Complete this sum for the total number of dots in the triangle."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "1 + 2 + 3 +"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      465.1,
+      570.0,
+      724.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 212.6,
+      "height_pt": 259.4
+     }
+    }
+   ],
+   "text": "2\n(b) Show that   n\nn\ngives the correct number of dots when n= 10.\n+\n2\n2\n[3]",
+   "marks": 3,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "2\n10\n10\n= 55\n+\n2\n2\n1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55",
+     "codes": [
+      "B2",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        52.02000045776367,
+        151.0,
+        564.0599975585938,
+        218.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that \\(\\frac{n^{2}}{2}\\) + \\(\\frac{n}{2}\\) gives the correct number of dots when <i>n</i> = 10.",
+     "text": "Show that (n2)/(2) + (n)/(2) gives the correct number of dots when n = 10."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 212.6
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This is a dotty triangle.",
+   "text": "This is a dotty triangle."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2020MJ_62_q01_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "In this dotty triangle, <i>p</i> = 3 and <i>n</i> = 4.",
+   "text": "In this dotty triangle, p = 3 and n = 4."
+  }
+ ]
+}

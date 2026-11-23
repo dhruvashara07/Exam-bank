@@ -1,0 +1,218 @@
+{
+ "id": "0607_2020MJ_62_q03",
+ "number": 3,
+ "segments": [],
+ "text": "",
+ "marks": 3,
+ "figures": [
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    147.10000610351562,
+    257.1000061035156,
+    291.79998779296875,
+    326.20001220703125
+   ],
+   "id": "0607_2020MJ_62_q03b_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  },
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    98.3,
+    461.8,
+    505.8,
+    610.2
+   ],
+   "id": "0607_2020MJ_62_q03b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      210.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 62.9,
+      "height_pt": 153.2
+     }
+    }
+   ],
+   "text": "3\n(a) A formula for d, in terms of p (the number of sides) and n is\nd\n(\np\n2\n)\nn\np\n3\n.\n=\n-\n-+\nFor dotty pentagons, show that the formula becomes   d\n3\nn\n-.\n2\n=\n[1]",
+   "marks": 1,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "(5 – 2)n − 5 + 3 leading to 3n – 2",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        52.02000045776367,
+        292.2,
+        564.0599975585938,
+        317.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> A formula for <i>d</i>, in terms of <i>p</i> (the number of sides) and <i>n</i> is",
+     "text": "A formula for d, in terms of p (the number of sides) and n is"
+    },
+    {
+     "type": "text",
+     "html": "<i>d</i> = (<i>p</i> - 2) <i>n</i> - <i>p</i> + 3.",
+     "text": "d = (p - 2) n - p + 3."
+    },
+    {
+     "type": "text",
+     "html": "For dotty pentagons, show that the formula becomes <i>d</i> = 3<i>n</i> - 2.",
+     "text": "For dotty pentagons, show that the formula becomes d = 3n - 2."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 62.9
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      212.8,
+      570.0,
+      701.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 183.7,
+      "height_pt": 488.7
+     }
+    }
+   ],
+   "text": "This diagram shows the first three dotty pentagons.\nd= 1\nd= 4\nd= 7\ntotal = 1\ntotal = 5\ntotal = 12\nDotty pentagons grow along the grey lines.\nThis diagram shows how to form the first three dotty pentagons.\nCompletethe diagram to show the 4th and 5th dotty pentagons.\n[2]",
+   "marks": 2,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "Correct diagrams",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        52.02000045776367,
+        317.4,
+        564.0599975585938,
+        379.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "This diagram shows the first three dotty pentagons.",
+     "text": "This diagram shows the first three dotty pentagons."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2020MJ_62_q03b_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "<i>d</i> = 1 <i>d</i> = 4 <i>d</i> = 7 total = 1 total = 5 total = 12",
+     "text": "d = 1 d = 4 d = 7 total = 1 total = 5 total = 12"
+    },
+    {
+     "type": "text",
+     "html": "Dotty pentagons grow along the grey lines. This diagram shows how to form the first three dotty pentagons.",
+     "text": "Dotty pentagons grow along the grey lines. This diagram shows how to form the first three dotty pentagons."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2020MJ_62_q03b_diagram2",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Complete the diagram to show the 4th and 5th dotty pentagons.",
+     "text": "Complete the diagram to show the 4th and 5th dotty pentagons."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 183.7
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

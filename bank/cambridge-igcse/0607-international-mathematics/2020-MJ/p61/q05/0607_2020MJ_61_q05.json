@@ -1,0 +1,247 @@
+{
+ "id": "0607_2020MJ_61_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    233.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.9,
+    "height_pt": 176.2
+   }
+  }
+ ],
+ "text": "5\nThe sum of two different triangle numbers sometimes equals another triangle number.\nWhen this happens, we have a triangle triple.\nExample\n•\nStart with the triangle number\nT\n6\n3=\n•\nFrom the table in Question 2 T\nT\n6\n-\n=\n6\n5\nSo T\nT\nT\n-\n=\n6\n5\n3\n•\nRearrange the equation\nT\nT\nT\n+\n=\n3\n5\n6\n•\nThe triangle triple is then\n(3,     5,     6)\nThe three different numbers must be written in order of increasing size.",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      235.5,
+      570.0,
+      428.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 5,
+      "answer_line": "- …… = ……",
+      "working_gap_pt": 33.9,
+      "height_pt": 192.5
+     }
+    }
+   ],
+   "text": "Start with triangle number T\n15\nand complete the method of the Example to find another\n5=\ntriangle triple.\nT15\n- ............ = ............\nSo ............\n- ............ =\nT5\nT5\n+\n............ = ............\nThe triangle triple is ( 5,  ................ ,  ................ )\n[3]",
+   "marks": 3,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "T15 – T14 = 15\nT15 – T14 = T5\nT5 + T14 = T15\n(5, 14, 15)",
+     "codes": [
+      "B1",
+      "B1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        537.219970703125,
+        175.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Start with triangle number <i>T</i><sub>5</sub> = 15 and complete the method of the Example to find another triangle triple.",
+     "text": "Start with triangle number T5 = 15 and complete the method of the Example to find another triangle triple."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "T15 -"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "So",
+     "unit": "= T5"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "T5 +"
+    },
+    {
+     "type": "text",
+     "html": "The triangle triple is ( 5, …… , …… )",
+     "text": "The triangle triple is ( 5, …… , …… )"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      430.5,
+      570.0,
+      759.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 119.1,
+      "height_pt": 329.0
+     }
+    }
+   ],
+   "text": "In the table, each row is a triangle triple.\nUse part (a) and any patterns you notice to complete the table.\nTriangle triple\n3\n5\n6\n4\n5\n6\n7\n[3]",
+   "marks": 3,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "3\n5\n6\n4\n9\n10\n5\n14\n15\n6\n20\n21\n7\n27\n28\nShowing differences\nor using the method at least once\nor last column are triangle numbers",
+     "codes": [
+      "B2",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        175.6,
+        537.219970703125,
+        359.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "In the table, each row is a triangle triple. Use <b>part (a)</b> and any patterns you notice to complete the table.",
+     "text": "In the table, each row is a triangle triple. Use part (a) and any patterns you notice to complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Triangle triple",
+       "",
+       ""
+      ],
+      [
+       "3",
+       "5",
+       "6"
+      ],
+      [
+       "4",
+       "",
+       ""
+      ],
+      [
+       "5",
+       "",
+       ""
+      ],
+      [
+       "6",
+       "",
+       ""
+      ],
+      [
+       "7",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 119.1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The sum of two <b>different</b> triangle numbers sometimes equals another triangle number. When this happens, we have a <i>triangle triple</i>. Example",
+   "text": "The sum of two different triangle numbers sometimes equals another triangle number. When this happens, we have a triangle triple. Example"
+  },
+  {
+   "type": "list",
+   "items": [
+    "Start with the triangle number <i>T</i><sub>3</sub> = 6",
+    "From the table in <b>Question 2 </b> <i>T</i><sub>6</sub> - <i>T</i><sub>5</sub> = 6 So <i>T</i><sub>6</sub> - <i>T</i><sub>5</sub> = <i>T</i><sub>3</sub>",
+    "Rearrange the equation <i>T</i><sub>3</sub> + <i>T</i><sub>5</sub> = <i>T</i><sub>6</sub>",
+    "The <i>triangle triple</i> is then (3, 5, 6)"
+   ]
+  },
+  {
+   "type": "text",
+   "html": "The three different numbers must be written in order of increasing size.",
+   "text": "The three different numbers must be written in order of increasing size."
+  }
+ ]
+}

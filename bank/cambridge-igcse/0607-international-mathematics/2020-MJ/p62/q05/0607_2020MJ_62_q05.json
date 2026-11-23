@@ -1,0 +1,195 @@
+{
+ "id": "0607_2020MJ_62_q05",
+ "number": 5,
+ "segments": [],
+ "text": "",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      310.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 27.4,
+      "height_pt": 253.7
+     }
+    }
+   ],
+   "text": "5\n(a) Use Question 4 and any patterns you notice to help you complete this table.\nTotal number of dots\nPolygon\np\n(n)\n2\nn\nn\nTriangle\n3\n+\n2\n2\nSquare\n4\nPentagon\n5\nHexagon\n6\n...................\n-\nn\n[2]",
+   "marks": 2,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "Polygon\np\n(n)\n2\nn\nn\nTriangle\n3\n+\n2\n2\n2\nSquare\n4\nn\n2\n3n\nn\nPentagon\n5\n−\n2\n2\n2\n4n\nHexagon\n6\n− n\n2\n2\n2\n2\nn\n2n\n3n\n2\n2\n2",
+     "codes": [
+      "B1",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        52.02000045776367,
+        89.4,
+        564.0599975585938,
+        337.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> Use <b>Question 4</b> and any patterns you notice to help you complete this table.",
+     "text": "Use Question 4 and any patterns you notice to help you complete this table."
+    },
+    {
+     "type": "text",
+     "html": "Total number of dots",
+     "text": "Total number of dots"
+    },
+    {
+     "type": "text",
+     "html": "Polygon <i>p</i>",
+     "text": "Polygon p"
+    },
+    {
+     "type": "text",
+     "html": "Triangle 3",
+     "text": "Triangle 3"
+    },
+    {
+     "type": "text",
+     "html": "\\(\\frac{n^{2}}{2}\\) + \\(\\frac{n}{2}\\)",
+     "text": "(n2)/(2) + (n)/(2)"
+    },
+    {
+     "type": "text",
+     "html": "Square 4",
+     "text": "Square 4"
+    },
+    {
+     "type": "text",
+     "html": "Pentagon 5",
+     "text": "Pentagon 5"
+    },
+    {
+     "type": "text",
+     "html": "Hexagon 6",
+     "text": "Hexagon 6"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "-n"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      313.0,
+      570.0,
+      570.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 218.9,
+      "height_pt": 257.5
+     }
+    }
+   ],
+   "text": "Find, in terms of n and p, an expression for the total number of dots in any dotty polygon.\n................................................. [3]",
+   "marks": 3,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "Suitable pattern used\n2\n(p−2)n\n(4− p )n\noe\n+\n2\n2",
+     "codes": [
+      "C1",
+      "B2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        52.02000045776367,
+        337.5,
+        564.0599975585938,
+        405.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find, in terms of <i>n</i> and <i>p</i>, an expression for the total number of dots in any dotty polygon.",
+     "text": "Find, in terms of n and p, an expression for the total number of dots in any dotty polygon."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

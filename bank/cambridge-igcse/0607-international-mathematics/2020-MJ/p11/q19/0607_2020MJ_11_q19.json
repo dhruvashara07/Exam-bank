@@ -1,0 +1,208 @@
+{
+ "id": "0607_2020MJ_11_q19",
+ "number": 19,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    106.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 49.2
+   }
+  }
+ ],
+ "text": "Apples are stored in boxes.\nThere are 100 apples in a box.\nTwo boxes are chosen at random and the apples are sorted into good and bad.",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      108.8,
+      570.0,
+      309.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 59.2,
+      "height_pt": 200.2
+     }
+    }
+   ],
+   "text": "Complete the table of results.\nGood\nBad\nTotal\nBox 1\n12\n100\nBox 2\n95\n100\nTotal\n183\n200\n[2]",
+   "marks": 2,
+   "path": "19(a)",
+   "mark_scheme": [
+    {
+     "label": "19(a)",
+     "text": "88\n5\n17 correctly placed",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        626.2,
+        537.219970703125,
+        676.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table of results.",
+     "text": "Complete the table of results."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "",
+       "<b>Good</b>",
+       "<b>Bad</b>",
+       "<b>Total</b>"
+      ],
+      [
+       "<b>Box 1</b>",
+       "",
+       "12",
+       "100"
+      ],
+      [
+       "<b>Box 2</b>",
+       "95",
+       "",
+       "100"
+      ],
+      [
+       "<b>Total</b>",
+       "183",
+       "",
+       "200"
+      ]
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 59.2
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      311.8,
+      570.0,
+      400.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 23.9,
+      "height_pt": 88.2
+     }
+    }
+   ],
+   "text": "One of these 200 apples is chosen at random.\nWrite down the probability that this apple is good.\n................................................. [1]",
+   "marks": 1,
+   "path": "19(b)",
+   "mark_scheme": [
+    {
+     "label": "19(b)",
+     "text": "183\n200",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        676.0,
+        537.219970703125,
+        717.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "One of these 200 apples is chosen at random. Write down the probability that this apple is good.",
+     "text": "One of these 200 apples is chosen at random. Write down the probability that this apple is good."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 1,
+ "variant": 1,
+ "paper_code": "0607/11",
+ "paper_type": "core_short_answer",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Apples are stored in boxes. There are 100 apples in a box. Two boxes are chosen at random and the apples are sorted into good and bad.",
+   "text": "Apples are stored in boxes. There are 100 apples in a box. Two boxes are chosen at random and the apples are sorted into good and bad."
+  }
+ ]
+}

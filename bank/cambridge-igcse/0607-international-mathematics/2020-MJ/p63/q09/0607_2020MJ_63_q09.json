@@ -1,0 +1,230 @@
+{
+ "id": "0607_2020MJ_63_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 10,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    345.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 15.7,
+    "height_pt": 288.2
+   }
+  }
+ ],
+ "text": "9\nThis table shows information about the number of earthquakes in northern Chile between April 2008\nand April 2018.\nMinimum magnitude\nNumber of earthquakes\n(M)\n(N)\n3.5\n2028\n4.0\n1912\n4.5\n784\n5.0\n230\n5.5\n57\n6.0\n14\n6.5\n3\n7.0\n0\nThere were a total of 2028 earthquakes with\nM\n3 5\n.\n.\nH\nThere were a total of 2028 - 1912 = 116 earthquakes with a magnitude in the range .\n3 5\nM\n1\n4 0\n.\n.\nG",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      347.7,
+      570.0,
+      423.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 36.9,
+      "height_pt": 75.3
+     }
+    }
+   ],
+   "text": "Find the number of earthquakes in the range\n5\nM\n1\n6 5\n.\n.\nG\n................................................. [2]",
+   "marks": 2,
+   "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "230 – k or subtracting 3\n227",
+     "codes": [
+      "C1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        52.02000045776367,
+        713.2,
+        540.4199829101562,
+        766.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the number of earthquakes in the range 5 G <i>M</i> 1 6 5. .",
+     "text": "Find the number of earthquakes in the range 5 G M 1 6 5. ."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      425.7,
+      570.0,
+      605.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 88.9,
+      "height_pt": 179.3
+     }
+    }
+   ],
+   "text": "k\n(b) A model for this data is   N\n,    where k is a constant and N is the number of earthquakes with\n=\nM\nminimum magnitude M.\nIs this a suitable model?\nShow how you decide.\n[2]",
+   "marks": 2,
+   "path": "9(b)",
+   "mark_scheme": [
+    {
+     "label": "9(b)",
+     "text": "No, with correct working",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        52.02000045776367,
+        89.4,
+        540.4199829101562,
+        126.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A model for this data is <i>N</i> = \\(\\frac{k}{M}\\) , where <i>k</i> is a constant and <i>N</i> is the number of earthquakes with minimum magnitude <i>M</i>. Is this a suitable model? Show how you decide.",
+     "text": "A model for this data is N = (k)/(M) , where k is a constant and N is the number of earthquakes with minimum magnitude M. Is this a suitable model? Show how you decide."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 88.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This table shows information about the number of earthquakes in northern Chile between April 2008 and April 2018.",
+   "text": "This table shows information about the number of earthquakes in northern Chile between April 2008 and April 2018."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Minimum magnitude",
+     "Number of earthquakes"
+    ],
+    [
+     "(<i>M</i>)",
+     "(<i>N</i>)"
+    ],
+    [
+     "3.5",
+     "2028"
+    ],
+    [
+     "4.0",
+     "1912"
+    ],
+    [
+     "4.5",
+     "784"
+    ],
+    [
+     "5.0",
+     "230"
+    ],
+    [
+     "5.5",
+     "57"
+    ],
+    [
+     "6.0",
+     "14"
+    ],
+    [
+     "6.5",
+     "3"
+    ],
+    [
+     "7.0",
+     "0"
+    ]
+   ]
+  },
+  {
+   "type": "text",
+   "html": "There were a total of 2028 earthquakes with <i>M</i> H 3 5. . There were a total of 2028 - 1912 = 116 earthquakes with a magnitude in the range .3 5 G <i>M</i> 1 4 0. .",
+   "text": "There were a total of 2028 earthquakes with M H 3 5. . There were a total of 2028 - 1912 = 116 earthquakes with a magnitude in the range .3 5 G M 1 4 0. ."
+  }
+ ]
+}

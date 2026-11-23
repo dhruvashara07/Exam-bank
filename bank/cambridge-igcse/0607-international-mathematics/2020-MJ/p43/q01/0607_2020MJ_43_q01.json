@@ -1,0 +1,270 @@
+{
+ "id": "0607_2020MJ_43_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    82.8,
+    570.0,
+    106.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 23.2
+   }
+  }
+ ],
+ "text": "1\nFor each sequence, write down the next two terms and find an expression for the nth term.",
+ "marks": 9,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      108.8,
+      570.0,
+      262.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 88.7,
+      "height_pt": 153.2
+     }
+    }
+   ],
+   "text": "15,  11,  7,  3,\n-,  ...\n1\nNext two terms  ....................... , .......................\nnth term  ................................................. [3]",
+   "marks": 3,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "–5, –9\n19 – 4n oe",
+     "codes": [
+      "1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        102.1,
+        537.219970703125,
+        151.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "15, 11, 7, 3, -1, ...",
+     "text": "15, 11, 7, 3, -1, ..."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Next two terms"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "nth term"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      264.8,
+      570.0,
+      418.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 88.7,
+      "height_pt": 153.2
+     }
+    }
+   ],
+   "text": "1,  2,  4,  8,  16,  ...\nNext two terms  ....................... , .......................\nnth term  ................................................. [3]",
+   "marks": 3,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "32, 64\nn–1\n2\noe",
+     "codes": [
+      "1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        151.0,
+        537.219970703125,
+        199.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "1, 2, 4, 8, 16, ...",
+     "text": "1, 2, 4, 8, 16, ..."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Next two terms"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "nth term"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      420.8,
+      570.0,
+      574.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 88.7,
+      "height_pt": 153.2
+     }
+    }
+   ],
+   "text": "4,  10,  18,  28,  40,  ...\nNext two terms  ....................... , .......................\nnth term  ................................................. [3]",
+   "marks": 3,
+   "path": "1(c)",
+   "mark_scheme": [
+    {
+     "label": "1(c)",
+     "text": "54, 70\nn + 3n oe\n2",
+     "codes": [
+      "1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        199.9,
+        537.219970703125,
+        248.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "4, 10, 18, 28, 40, ...",
+     "text": "4, 10, 18, 28, 40, ..."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Next two terms"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "nth term"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 3,
+ "paper_code": "0607/43",
+ "paper_type": "extended_long_answer",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "For each sequence, write down the next two terms and find an expression for the <i>n</i>th term.",
+   "text": "For each sequence, write down the next two terms and find an expression for the nth term."
+  }
+ ]
+}

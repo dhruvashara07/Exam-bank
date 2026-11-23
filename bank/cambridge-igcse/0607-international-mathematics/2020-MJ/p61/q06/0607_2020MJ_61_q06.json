@@ -1,0 +1,252 @@
+{
+ "id": "0607_2020MJ_61_q06",
+ "number": 6,
+ "segments": [],
+ "text": "",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      57.6,
+      570.0,
+      185.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 49.9,
+      "height_pt": 127.4
+     }
+    }
+   ],
+   "text": "6\n(a) When you add the last two rows in the table in Question 2, you get an expression for T\nT\n-.\n-\nn\nn2\nThis is the difference between triangle numbers that are two apart.\nGive this expression in its simplest form.\n................................................. [1]",
+   "marks": 1,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "2n – 1",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        359.8,
+        537.219970703125,
+        384.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> When you add the last two rows in the table in <b>Question 2</b>, you get an expression for <i>T</i><i><sub>n</sub></i> - <i>T</i><i><sub>n</sub></i> .",
+     "text": "When you add the last two rows in the table in Question 2, you get an expression for Tn - Tn ."
+    },
+    {
+     "type": "text",
+     "html": "-<sub>2</sub>",
+     "text": "-2"
+    },
+    {
+     "type": "text",
+     "html": "This is the difference between triangle numbers that are two apart. Give this expression in its simplest form.",
+     "text": "This is the difference between triangle numbers that are two apart. Give this expression in its simplest form."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        187.5,
+        570.0,
+        289.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 60.0,
+        "height_pt": 101.5
+       }
+      }
+     ],
+     "text": "Find n when T\nT\n15\n.\n-\n=\nn\nn2\n-\n................................................. [1]",
+     "marks": 1,
+     "path": "6(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(b)(i)",
+       "text": "8",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.619998931884766,
+          384.3,
+          537.219970703125,
+          408.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find <i>n</i> when <i>T</i><i><sub>n</sub></i> - <i>T</i><i><sub>n</sub></i> = 15.",
+       "text": "Find n when Tn - Tn = 15."
+      },
+      {
+       "type": "text",
+       "html": "-2",
+       "text": "-2"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        291.6,
+        570.0,
+        614.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 218.4,
+        "height_pt": 322.4
+       }
+      }
+     ],
+     "text": "T\n15\n5=\nUse your answer to part (i) to find a triangle triple where\n•\nthe smallest number is 5\n•\nthe difference between the other two numbers is 2.\n( 5, ................ , ................ ) [2]",
+     "marks": 2,
+     "path": "6(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "6(b)(ii)",
+       "text": "T8 – T6 or 36 – 21 = 15 or T5\n(5, 6, 8)",
+       "codes": [
+        "C1",
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.619998931884766,
+          408.9,
+          537.219970703125,
+          457.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "<i>T</i><sub>5</sub> = 15 Use your answer to <b>part (i)</b> to find a triangle triple where",
+       "text": "T5 = 15 Use your answer to part (i) to find a triangle triple where"
+      },
+      {
+       "type": "list",
+       "items": [
+        "the smallest number is 5",
+        "the difference between the other two numbers is 2."
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "( 5,",
+       "unit": ")"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "6(b)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

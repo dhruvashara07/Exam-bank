@@ -1,0 +1,229 @@
+{
+ "id": "0607_2020MJ_62_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    427.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 110.0,
+    "height_pt": 370.2
+   }
+  }
+ ],
+ "text": "2\nThe diagram shows the first four dotty triangles.\nThe number of dots added each time is d.\nn= 1\nn= 2\nn= 3\nn= 4\nd = 1\nd= 2\nd= 3\nd= 4\nSo, for dotty triangles, d=n.\nThis diagram shows the first four dotty squares.\nn= 1\nn= 2\nn= 3\nn= 4\nd= 1\nd= 3\nd= 5\nd= 7",
+ "marks": 3,
+ "figures": [
+  {
+   "caption": null,
+   "page": 3,
+   "bbox": [
+    226.1999969482422,
+    112.30000305175781,
+    366.1000061035156,
+    160.3000030517578
+   ],
+   "id": "0607_2020MJ_62_q02_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 3,
+   "bbox": [
+    137.5,
+    291.1000061035156,
+    364.0,
+    366.8999938964844
+   ],
+   "id": "0607_2020MJ_62_q02_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      444.6,
+      570.0,
+      546.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 62.9,
+      "height_pt": 101.4
+     }
+    }
+   ],
+   "text": "Find an expression, in terms of n, for the total number of dots in the nth dotty square.\n................................................. [1]",
+   "marks": 1,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "2\nn",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        52.02000045776367,
+        218.8,
+        564.0599975585938,
+        243.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression, in terms of <i>n</i>, for the <b>total</b> number of dots in the <i>n</i>th dotty square.",
+     "text": "Find an expression, in terms of n, for the total number of dots in the nth dotty square."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      548.6,
+      570.0,
+      728.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 140.9,
+      "height_pt": 179.4
+     }
+    }
+   ],
+   "text": "For dotty squares, find a formula for d in terms of n.\n................................................. [2]",
+   "marks": 2,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "Differences of 2\nd = 2n – 1",
+     "codes": [
+      "C1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        52.02000045776367,
+        243.2,
+        564.0599975585938,
+        292.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "For dotty squares, find a formula for <i>d</i> in terms of <i>n</i>.",
+     "text": "For dotty squares, find a formula for d in terms of n."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The diagram shows the first four dotty triangles. The number of dots added each time is <i>d</i>.",
+   "text": "The diagram shows the first four dotty triangles. The number of dots added each time is d."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2020MJ_62_q02_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "<i>n</i> = 1 <i>n</i> = 2 <i>n</i> = 3 <i>n</i> = 4 <i>d</i> = 1 <i>d</i> = 2 <i>d</i> = 3 <i>d</i> = 4 So, for dotty triangles, <i>d</i> = <i>n</i>. This diagram shows the first four dotty squares.",
+   "text": "n = 1 n = 2 n = 3 n = 4 d = 1 d = 2 d = 3 d = 4 So, for dotty triangles, d = n. This diagram shows the first four dotty squares."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2020MJ_62_q02_diagram2",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "<i>n</i> = 1 <i>n</i> = 2 <i>n</i> = 3 <i>n</i> = 4 <i>d</i> = 1 <i>d</i> = 3 <i>d</i> = 5 <i>d</i> = 7",
+   "text": "n = 1 n = 2 n = 3 n = 4 d = 1 d = 3 d = 5 d = 7"
+  }
+ ]
+}

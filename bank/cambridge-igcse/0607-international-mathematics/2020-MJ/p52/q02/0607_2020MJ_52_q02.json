@@ -1,0 +1,521 @@
+{
+ "id": "0607_2020MJ_52_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    464.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 145.8,
+    "height_pt": 407.2
+   }
+  }
+ ],
+ "text": "2\nThe diagram shows the first four dotty triangles.\nThe number of dots added each time is d.\nn= 1\nn= 2\nn= 3\nn= 4\nd= 1\nd= 2\nd= 3\nd= 4\nSo, for dotty triangles, d\nn\n.\n=\nThis diagram shows the first three dotty squares.\nn= 1\nn= 2\nn= 3\nn= 4\nd= 1\nd= 3\nd= 5\nd= 7",
+ "marks": 10,
+ "figures": [
+  {
+   "caption": null,
+   "page": 3,
+   "bbox": [
+    256.3999938964844,
+    112.30000305175781,
+    396.20001220703125,
+    160.3000030517578
+   ],
+   "id": "0607_2020MJ_52_q02_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 3,
+   "bbox": [
+    178.6999969482422,
+    297.6000061035156,
+    305.6000061035156,
+    349.8999938964844
+   ],
+   "id": "0607_2020MJ_52_q02_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      482.2,
+      570.0,
+      505.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.3
+     }
+    }
+   ],
+   "text": "Draw the dotty square for n\n4\nin the space above.\n[1]\n=",
+   "marks": 1,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "Correct diagram",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        52.02000045776367,
+        218.9,
+        540.4199829101562,
+        331.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Draw the dotty square for <i>n</i> = 4 in the space above.",
+     "text": "Draw the dotty square for n = 4 in the space above."
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        521.2,
+        570.0,
+        570.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 10.9,
+        "height_pt": 49.3
+       }
+      }
+     ],
+     "text": "Write down the total number of dots in each of the first four dotty squares.\n............... , ............... , ............... , ............... [1]",
+     "marks": 1,
+     "path": "2(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(b)(i)",
+       "text": "1\n4\n9\n16",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          52.02000045776367,
+          331.9,
+          540.4199829101562,
+          356.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Write down the total number of dots in each of the first four dotty squares.",
+       "text": "Write down the total number of dots in each of the first four dotty squares."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        573.2,
+        570.0,
+        635.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 23.9,
+        "height_pt": 62.3
+       }
+      }
+     ],
+     "text": "Write down an expression, in terms of n, for the total number of dots in the nth dotty square.\n................................................. [1]",
+     "marks": 1,
+     "path": "2(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(b)(ii)",
+       "text": "2\nn",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          52.02000045776367,
+          356.4,
+          540.4199829101562,
+          380.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Write down an expression, in terms of <i>n</i>, for the <b>total</b> number of dots in the <i>n</i>th dotty square.",
+       "text": "Write down an expression, in terms of n, for the total number of dots in the nth dotty square."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "2(b)"
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      638.2,
+      570.0,
+      791.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 114.9,
+      "height_pt": 153.3
+     }
+    }
+   ],
+   "text": "For dotty squares, find a formula for d in terms of n.\n................................................. [3]",
+   "marks": 3,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "Differences of 2 seen\nd = 2n – 1",
+     "codes": [
+      "C1",
+      "B2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        52.02000045776367,
+        380.8,
+        540.4199829101562,
+        429.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "For dotty squares, find a formula for <i>d</i> in terms of <i>n</i>.",
+     "text": "For dotty squares, find a formula for d in terms of n."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      132.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 10.7,
+      "height_pt": 75.2
+     }
+    }
+   ],
+   "text": "A formula for d, in terms of p (the number of sides) and n is\nd\n(\np\n2\n)\nn\np\n3\n.\n=\n-\n-+\nBy substituting appropriate values for p, show that this formula gives",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        134.8,
+        570.0,
+        275.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 101.9,
+        "height_pt": 140.2
+       }
+      }
+     ],
+     "text": "the formula for dotty triangles,\n[2]",
+     "marks": 2,
+     "path": "2(d)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(d)(i)",
+       "text": "d = (3 – 2)n − 3 + 3 leading to n",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          52.02000045776367,
+          429.7,
+          540.4199829101562,
+          455.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "the formula for dotty triangles,",
+       "text": "the formula for dotty triangles,"
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 101.9
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        277.8,
+        570.0,
+        444.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 127.9,
+        "height_pt": 166.2
+       }
+      }
+     ],
+     "text": "your formula for dotty squares.\n[2]",
+     "marks": 2,
+     "path": "2(d)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(d)(ii)",
+       "text": "d = (4 – 2)n − 4 + 3 leading to 2n – 1",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          52.02000045776367,
+          455.0,
+          540.4199829101562,
+          480.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "your formula for dotty squares.",
+       "text": "your formula for dotty squares."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 127.9
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "2(d)",
+   "content": [
+    {
+     "type": "text",
+     "html": "A formula for <i>d</i>, in terms of <i>p</i> (the number of sides) and <i>n</i> is",
+     "text": "A formula for d, in terms of p (the number of sides) and n is"
+    },
+    {
+     "type": "text",
+     "html": "<i>d</i> = (<i>p</i> - 2) <i>n</i> - <i>p</i> + 3.",
+     "text": "d = (p - 2) n - p + 3."
+    },
+    {
+     "type": "text",
+     "html": "By substituting appropriate values for <i>p</i>, show that this formula gives",
+     "text": "By substituting appropriate values for p, show that this formula gives"
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 10,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The diagram shows the first four dotty triangles. The number of dots added each time is <i>d</i>.",
+   "text": "The diagram shows the first four dotty triangles. The number of dots added each time is d."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2020MJ_52_q02_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "<i>n</i> = 1 <i>n</i> = 2 <i>n</i> = 3 <i>n</i> = 4 <i>d</i> = 1 <i>d</i> = 2 <i>d</i> = 3 <i>d</i> = 4 So, for dotty triangles, <i>d</i> = <i>n</i>. This diagram shows the first three dotty squares.",
+   "text": "n = 1 n = 2 n = 3 n = 4 d = 1 d = 2 d = 3 d = 4 So, for dotty triangles, d = n. This diagram shows the first three dotty squares."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2020MJ_52_q02_diagram2",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "<i>n</i> = 1 <i>n</i> = 2 <i>n</i> = 3 <i>n</i> = 4 <i>d</i> = 1 <i>d</i> = 3 <i>d</i> = 5 <i>d</i> = 7",
+   "text": "n = 1 n = 2 n = 3 n = 4 d = 1 d = 3 d = 5 d = 7"
+  }
+ ]
+}

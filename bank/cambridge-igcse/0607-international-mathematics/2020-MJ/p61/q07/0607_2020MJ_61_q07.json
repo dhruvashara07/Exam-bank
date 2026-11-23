@@ -1,0 +1,178 @@
+{
+ "id": "0607_2020MJ_61_q07",
+ "number": 7,
+ "segments": [],
+ "text": "",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      57.7,
+      570.0,
+      159.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 49.9,
+      "height_pt": 101.3
+     }
+    }
+   ],
+   "text": "7\n(a) By adding rows in the table in Question 2, show that T\nT\n3\nn\n3\n.\n-\n=\n-\nn\nn3\n-\nThis is the difference between triangle numbers that are three apart.\n[1]",
+   "marks": 1,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "Adding last three rows soi\nor n + n – 1 + n – 2",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        457.8,
+        537.219970703125,
+        495.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> By adding rows in the table in <b>Question 2</b>, show that <i>T</i><i><sub>n</sub></i> - <i>T</i><i><sub>n</sub></i> = 3<i>n</i> - 3.",
+     "text": "By adding rows in the table in Question 2, show that Tn - Tn = 3n - 3."
+    },
+    {
+     "type": "text",
+     "html": "-3",
+     "text": "-3"
+    },
+    {
+     "type": "text",
+     "html": "This is the difference between triangle numbers that are three apart.",
+     "text": "This is the difference between triangle numbers that are three apart."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 49.9
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      161.7,
+      570.0,
+      458.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 192.4,
+      "height_pt": 296.3
+     }
+    }
+   ],
+   "text": "T\n105\n14=\nUse part (a) to find a triangle triple where\n•\nthe smallest number is 14\n•\nthe difference between the other two numbers is 3.\n( 14, ............ , ............ ) [3]",
+   "marks": 3,
+   "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "3n – 3 = 105\nn = 36\n(14, 33, 36)",
+     "codes": [
+      "C1",
+      "B1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        495.0,
+        537.219970703125,
+        568.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<i>T</i><sub>14</sub> = 105 Use <b>part (a)</b> to find a triangle triple where",
+     "text": "T14 = 105 Use part (a) to find a triangle triple where"
+    },
+    {
+     "type": "list",
+     "items": [
+      "the smallest number is 14",
+      "the difference between the other two numbers is 3."
+     ]
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "( 14,",
+     "unit": ")"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

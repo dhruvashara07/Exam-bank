@@ -1,0 +1,209 @@
+{
+ "id": "0607_2020MJ_51_q05",
+ "number": 5,
+ "segments": [],
+ "text": "",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      299.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 24.8,
+      "height_pt": 242.2
+     }
+    }
+   ],
+   "text": "5\n(a) The table shows the difference of the squares of two consecutive triangle numbers.\nComplete the table.\n(T1)2\n1\n(T2)2- (T1)2\n8\n(T3)2- (T2)2\n(T4)2- (T3)2\n(T5)2- (T4)2\n125\n216\n(T6)2- (T5)2\n(Tn)2- (Tn-1)2\n[3]",
+   "marks": 3,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "2\n(T1)\n1\n(T2) – (T1)\n2\n2\n8\n2\n2\n(T3) – (T2)\n27\n2\n2\n(T4) – (T3)\n64\n2\n2\n(T5) – (T4)\n125\n2\n2\n(T6) – (T5)\n216\n2\n2\n3\n(Tn) – (Tn–1)\nn\nCorrect working for one value",
+     "codes": [
+      "B2",
+      "C1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        89.4,
+        537.219970703125,
+        340.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> The table shows the difference of the squares of two consecutive triangle numbers.",
+     "text": "The table shows the difference of the squares of two consecutive triangle numbers."
+    },
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "<sup>2</sup> (<i>T</i><sub>1</sub>)",
+       "1"
+      ],
+      [
+       "<sup>2</sup> <sup>2</sup> (<i>T</i><sub>2</sub>) - (<i>T</i><sub>1</sub>)",
+       "8"
+      ],
+      [
+       "<sup>2</sup> <sup>2</sup>",
+       ""
+      ],
+      [
+       "(<i>T</i><sub>3</sub>) - (<i>T</i><sub>2</sub>)",
+       ""
+      ],
+      [
+       "<sup>2</sup> <sup>2</sup>",
+       ""
+      ],
+      [
+       "(<i>T</i><sub>4</sub>) - (<i>T</i><sub>3</sub>)",
+       ""
+      ],
+      [
+       "<sup>2</sup> <sup>2</sup> (<i>T</i><sub>5</sub>) - (<i>T</i><sub>4</sub>)",
+       "125"
+      ],
+      [
+       "<sup>2</sup> <sup>2</sup> (<i>T</i><sub>6</sub>) - (<i>T</i><sub>5</sub>)",
+       "216"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "<sup>2</sup> <sup>2</sup>",
+       ""
+      ],
+      [
+       "(<i>T</i><i><sub>n</sub></i>) - (<i>T</i><i><sub>n</sub></i> <sub>1</sub>)",
+       ""
+      ],
+      [
+       "-",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      301.7,
+      570.0,
+      377.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 36.9,
+      "height_pt": 75.3
+     }
+    }
+   ],
+   "text": "Calculate the difference between the squares of the 50th and the 49th triangle numbers.\n................................................. [2]",
+   "marks": 2,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "3\n50\n125 000",
+     "codes": [
+      "C1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        340.2,
+        537.219970703125,
+        470.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate the difference between the squares of the 50th and the 49th triangle numbers.",
+     "text": "Calculate the difference between the squares of the 50th and the 49th triangle numbers."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}
