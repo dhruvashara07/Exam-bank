@@ -1,0 +1,238 @@
+{
+ "batch": "M3",
+ "subject": "0607",
+ "sessions": [
+  "2018-MJ",
+  "2018-ON",
+  "2020-MJ",
+  "2020-ON"
+ ],
+ "created": "2026-11-23T16:30:05+00:00",
+ "phases": {
+  "build": [
+   {
+    "start": "2026-11-23T16:30:22+00:00",
+    "end": "2026-11-23T16:45:43+00:00"
+   }
+  ],
+  "claude": [
+   {
+    "start": "2026-11-23T17:07:26+00:00",
+    "end": "2026-11-23T17:45:48+00:00"
+   }
+  ],
+  "claude1": [],
+  "claude2": [],
+  "review": [],
+  "fix": []
+ },
+ "github_runs": [
+  {
+   "id": 45217380443,
+   "name": "Question bank",
+   "branch": "main",
+   "conclusion": null,
+   "start": "2026-11-23T16:30:59Z",
+   "end": "2026-11-23T16:31:04Z",
+   "minutes": 0.1
+  }
+ ],
+ "counts": {
+  "papers": 69,
+  "questions": 115,
+  "flags": 182
+ },
+ "errors": [
+  {
+   "pattern": "241",
+   "kind": "new",
+   "what": "white [n] marks counted (2018 ON 31: 105/96)",
+   "fix": "visible_lines drops white mark brackets (maths)",
+   "found_by": "claude",
+   "at": "2026-11-23T17:46:03+00:00"
+  },
+  {
+   "pattern": "242",
+   "kind": "new",
+   "what": "Communication row took the cell above (2018 MJ 63 35/40, 2018 ON 61 38/40)",
+   "fix": "C cut never lifts above its rule",
+   "found_by": "claude",
+   "at": "2026-11-23T17:46:03+00:00"
+  },
+  {
+   "pattern": "243",
+   "kind": "new",
+   "what": "number-less labels lost on the first table page (2020 ON 41 q2)",
+   "fix": "accepted after a numbered label on the page",
+   "found_by": "claude",
+   "at": "2026-11-23T17:46:03+00:00"
+  },
+  {
+   "pattern": "244",
+   "kind": "new",
+   "what": "MS label typos (12b), 1(ii)",
+   "fix": "label_text / current letter",
+   "found_by": "claude",
+   "at": "2026-11-23T17:46:03+00:00"
+  },
+  {
+   "pattern": "245",
+   "kind": "new",
+   "what": "answer line + mark level with next label went to the next part (2018 MJ 32/33; 4 approved papers)",
+   "fix": "lone-mark cut rule takes answer lines",
+   "found_by": "claude",
+   "at": "2026-11-23T17:46:03+00:00"
+  },
+  {
+   "pattern": "246",
+   "kind": "new",
+   "what": "part line overlapping crop top counted as beside: crop lost half (Venn, axes, chart)",
+   "fix": "part-label line never beside; words blanked",
+   "found_by": "claude",
+   "at": "2026-11-23T17:46:03+00:00"
+  },
+  {
+   "pattern": "247",
+   "kind": "new",
+   "what": "mapping-diagram arrows 20.7 pt apart not one cluster",
+   "fix": "column of same thin shape joins",
+   "found_by": "claude",
+   "at": "2026-11-23T17:46:03+00:00"
+  },
+  {
+   "pattern": "248",
+   "kind": "new",
+   "what": "hatch line boxes reached the next part (text-only diagram)",
+   "fix": "clipped_drawings; legend joins chart",
+   "found_by": "claude",
+   "at": "2026-11-23T17:46:03+00:00"
+  },
+  {
+   "pattern": "249",
+   "kind": "new",
+   "what": "f( )x line / full sentence under drawing kept in crop",
+   "fix": "q_ regexes",
+   "found_by": "claude",
+   "at": "2026-11-23T17:46:03+00:00"
+  },
+  {
+   "pattern": "250",
+   "kind": "new",
+   "what": "MMGreekItalic/MMEtc/MMNegate letters drawn as sans",
+   "fix": "MATHS_GLYPHS + drawn negation slash",
+   "found_by": "claude",
+   "at": "2026-11-23T17:46:03+00:00"
+  },
+  {
+   "pattern": "251",
+   "kind": "new",
+   "what": "KNOWN: MS Venn/graph pictures broken (5 q)",
+   "fix": "open - next chat",
+   "found_by": "claude",
+   "at": "2026-11-23T17:46:03+00:00"
+  },
+  {
+   "pattern": "252",
+   "kind": "new",
+   "what": "KNOWN: 2018 ON 61 root bars/bold bleed; 2018 ON 63 re-flow",
+   "fix": "open - next chat",
+   "found_by": "claude",
+   "at": "2026-11-23T17:46:03+00:00"
+  }
+ ],
+ "tokens": [],
+ "events": [
+  {
+   "at": "2026-11-23T16:30:05+00:00",
+   "task": "start M3 --subject"
+  },
+  {
+   "at": "2026-11-23T16:30:22+00:00",
+   "task": "phase M3 build"
+  },
+  {
+   "at": "2026-11-23T16:31:27+00:00",
+   "task": "gh M3 45217380443"
+  },
+  {
+   "at": "2026-11-23T16:31:27+00:00",
+   "task": "pass1 on GitHub 45217380443; fetching PDFs"
+  },
+  {
+   "at": "2026-11-23T16:45:43+00:00",
+   "task": "phase M3 build"
+  },
+  {
+   "at": "2026-11-23T17:07:26+00:00",
+   "task": "pass1 resolve: marks/labels/cuts fixed (241-245); blast measured; next figures"
+  },
+  {
+   "at": "2026-11-23T17:07:26+00:00",
+   "task": "phase M3 claude"
+  },
+  {
+   "at": "2026-11-23T17:42:45+00:00",
+   "task": "pass1 resolve: figure fixes 246-249 + blast; MS sheets"
+  },
+  {
+   "at": "2026-11-23T17:45:48+00:00",
+   "task": "phase M3 claude"
+  },
+  {
+   "at": "2026-11-23T17:45:48+00:00",
+   "task": "error M3 --help"
+  },
+  {
+   "at": "2026-11-23T17:46:03+00:00",
+   "task": "error M3 --pattern"
+  },
+  {
+   "at": "2026-11-23T17:46:03+00:00",
+   "task": "error M3 --pattern"
+  },
+  {
+   "at": "2026-11-23T17:46:03+00:00",
+   "task": "error M3 --pattern"
+  },
+  {
+   "at": "2026-11-23T17:46:03+00:00",
+   "task": "error M3 --pattern"
+  },
+  {
+   "at": "2026-11-23T17:46:03+00:00",
+   "task": "error M3 --pattern"
+  },
+  {
+   "at": "2026-11-23T17:46:03+00:00",
+   "task": "error M3 --pattern"
+  },
+  {
+   "at": "2026-11-23T17:46:03+00:00",
+   "task": "error M3 --pattern"
+  },
+  {
+   "at": "2026-11-23T17:46:03+00:00",
+   "task": "error M3 --pattern"
+  },
+  {
+   "at": "2026-11-23T17:46:03+00:00",
+   "task": "error M3 --pattern"
+  },
+  {
+   "at": "2026-11-23T17:46:03+00:00",
+   "task": "error M3 --pattern"
+  },
+  {
+   "at": "2026-11-23T17:46:03+00:00",
+   "task": "error M3 --pattern"
+  },
+  {
+   "at": "2026-11-23T17:46:03+00:00",
+   "task": "error M3 --pattern"
+  },
+  {
+   "at": "2026-11-23T17:46:03+00:00",
+   "task": "count M3 papers=69"
+  }
+ ]
+}

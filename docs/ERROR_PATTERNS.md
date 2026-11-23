@@ -644,3 +644,47 @@ the commit (never commit msimg PNGs from a local run).
     brackets there are drawings in _cell, not glyphs: the same band merge must key on the drawn bracket (next chat first task).
 Lesson (round 34 pass 2): a new layout rule needs the SCAN for its look-alikes before the push (here: stored rows whose
 bracket tops have no matching bottom, rows with >= 5 extenders): that scan found the stray line and 6 more questions in 2 min.
+
+## M3 (2018 MJ/ON, 2020 MJ/ON - 2026-11-23), GitHub pass 1: 182 reasons in 115 questions
+241. 2018 ON 31: WHITE '[2]' / '[3]' text on the first line of a two-line answer ('Perimeter = ... cm' / 'Area = ... cm2 [2]')
+    prints nothing but was read as a mark: marks 105 of 96. -> layout.visible_lines (maths) drops white mark brackets.
+    Scan of all 0607 QPs: only this paper.
+242. 2018 MJ 63 / 2018 ON 61: a 'Communication' row printed 6.5 pt under its full-width rule: the cut 4 pt above its text
+    crossed the rule's column stubs and the lift climbed the sub-row column rules of the merged cell above - 'Justification',
+    9(b) A1, 7(c)(iii) went into the communication row (marks 35/40, 38/40). -> ms.py (maths): a Communication cut never
+    lifts above the rule it sits under. Also corrected approved 2019 ON 61 q5(c)(ii) (27 pt of it was in the C row).
+243. 2020 ON 41 q2: labels printed without the number ('(a)(ii)') were accepted only after a page with rows; Q1 and Q2 share
+    the first table page -> 7 rows lost. -> maths: accepted when a numbered label is above them on the same page.
+244. MS label typos '(12b)' (2018 ON 22) and '1(ii)' after 1(b)(i) (2018 ON 42) -> label_text / the current letter (maths).
+    Typos '6a)(i)', '3(b(ii)', '6b(ii)', '7c(ii)' were already read right (ms_words only: passed).
+245. 2018 MJ 32 q14 / 33 q5: a whole answer line 'B ( ...... , ...... ) [2]' printed level with the next part's label: its
+    mark went to the part below (part marks wrong, paper total right - only checks.piece saw it). -> the 'lone mark' cut
+    rule (extract.raw_segments) takes answer lines ending in a mark (maths). Blast: 4 approved papers had the same
+    defect and are corrected (2019 ON 43 q11, 2021 ON 42 q2, 2022 MJ 31 q3, 2022 MJ 42 q10).
+246. fit_crop (maths) 'sentence BESIDE the drawing': a part's question line overlapping the crop top ('(iv) On the Venn
+    diagram below, shade the region G'∩B') counted as beside because its own symbols / its '[1]' at the right looked like
+    drawing ink: the crop lost its left half (2020 MJ 31 q11 Venn, 2018 MJ 63 q8 axes, 2020 ON 11 q8 chart). -> a line
+    led by a part label is never beside; words are blanked before the beside pixel test.
+247. A mapping diagram's 5 arrows are 20.7 pt apart; the 10 pt cluster rule joined only two (2018 ON 11 q15 lost rows).
+    -> extract.diagrams (maths): a column of the same thin shape (same x, < 30 pt apart) is one cluster.
+248. Hatched bars: hatch lines are long diagonals clipped by the bar; their whole boxes reached 80 pt into the next part
+    (2020 ON 11 q8: the chart crop took q7's last line and the stem; part (a) got a text-only 'diagram'). -> extract.
+    clipped_drawings (boxes cut to their clip path) in extract.diagrams and fit_crop (maths); a chart's small legend
+    cluster beside it joins it.
+249. Question text under a drawing not cut: 'f ( )x = x3 - ...' (italic pieces broke the f(x) regex, 2020 MJ 43 q4) and a
+    full sentence with no part label ('On the grid, translate the triangle by the vector (4, -2).', 2020 ON 12 q15).
+    -> fit_crop q_ test: 'f ( )x =' and a sentence of >= 6 lower-case words ending in '.'.
+250. New equation-font codes: MMGreekItalic i a (θ α), MMEtc h (⋮), MMNegate 'Y' (the slash over a separate '=': kept as a
+    drawn glyph) - drawn as sans letters before (q_font). Arial 'U' (universal set), Helvetica answer dots and the 96 pt
+    Arial 'VRIEND' (a symmetry question) match the print: passed.
+251. KNOWN OPEN (M3, 5 questions, written after the ~30 min budget): MS cell pictures broken in ms_maths - (a) a Venn picture
+    with a light frame split into a frame strip + circles (2018 MJ 33 q8(b)(i), 2020 MJ 31 q11(a)(i)); (b) Venn letters that
+    are tiny pasted images lost and the drawing drawn twice (2020 ON 33 q8(b)); (c) a partial-marks sketch lost (2020 ON 43
+    q8(a)(iii)); (d) plotted crosses (4 strokes of 1.5 pt each) lost from a redrawn graph (2020 ON 62 q6(a)) - not dropped by
+    _chain; look at the store's MS row lines first (store.py drawings for docname 'ms'). Status 'known' in M3_reasons.json.
+252. KNOWN OPEN (M3): 2018 ON 61 MS - root-sign bars drawn through the text (7(a), 7(b)(i)) and bold bleeding into the next
+    letters ('C op|portunity', 'Co|rrect': ms_overlap); 2018 ON 63 q6(d)(i) - four formula lines re-flowed into one
+    paragraph (lines starting 'sin', 'cos' counted as a sentence going on).
+Lesson (M3): a figure rule that looks fine on its target can change ~100 approved crops (an 'arrowhead = graph, not table'
+rule turned every numbered coordinate grid into a picture): the full-batch figure blast (old vs new crop of every 0607
+figure, /tmp script in CONVERSATION_LOG M3) caught it before any push - run it for every extract/fit_crop change.

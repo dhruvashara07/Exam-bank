@@ -20,6 +20,7 @@ def label_text(t):
     t = re.sub(r'\(\(+', '(', t)
     t = re.sub(r'^(\d{1,2})([a-z])(?=\(|$)', r'\1(\2)', t)          # '9b(i)'
     t = re.sub(r'^(\d{1,2})([a-z])\)', r'\1(\2)', t)                 # '9a)(ii)' (2024 MJ 43 ms, M1)
+    t = re.sub(r'^\((\d{1,2})([a-z])\)$', r'\1(\2)', t)                 # '(12b)' (2018 ON 22 ms, M3 pattern 244)
     return re.sub(r'\(([a-z]+)\(', r'(\1)(', t)
 
 
@@ -230,10 +231,13 @@ def structured_rows_table(doc):
                       for l in lines):
             bottom = min(bottom, max(vb) + 1)
         qcol = [l for l in lines if l['x0'] < QX and top <= l['y0'] <= bottom]
-        labels = [l for l in qcol if LABEL.match(label_text(l['text'])) or (rows and NONUM.match(label_text(l['text'])))
+        labels = [l for l in qcol if LABEL.match(label_text(l['text'])) or ((rows or (MATHS and any(
+                      LABEL.match(label_text(o['text'])) and o['y0'] < l['y0'] for o in qcol))) and NONUM.match(label_text(l['text'])))
                   or (MATHS and NONUM4.match(label_text(l['text'])))
                   or (MATHS and SUB4.match(label_text(l['text'])))
                   or (MATHS and COMM.match(l['text']))]
+        #   maths: '(a)(ii)' without its number is a label also when the first labelled row is on this page (2020 ON 41 q2:
+        #   every row after 2(a)(i) was lost; M3 reasons, pattern 243)
         if MATHS:                    # a label wrapped in the Q column ('5(a)(iv)' over '(b)', 2023 FM 62, M2 reasons):
             mg = []                  # one label '5(a)(iv)(b)' (a 4th level of 5(a)(iv)), not a row '(b)' = 5(b)
             for l in labels:
@@ -261,18 +265,27 @@ def structured_rows_table(doc):
         hrules = [d['rect'].y0 for d in page.get_drawings()
                   if d['rect'].height < 2 and d['rect'].width > 0.5 * (x1 - x0)]   # full-width row rules
         # a label printed in the MIDDLE of its cell (2019 ON 33 q11): the row starts at the rule above it, not 4 pt above the label
-        qrules = sorted(d['rect'].y0 for d in page.get_drawings()   # rules across the Q column = Q-cell boundaries
-                        if d['rect'].height < 2 and d['rect'].x0 < QX - 10 and d['rect'].x1 > QX - 15 and d['rect'].width > 20)
-        cuts = []
+        qrules_ = sorted((d['rect'].y0, d['rect'].x0) for d in page.get_drawings()   # rules across the Q column = Q-cell boundaries
+                         if d['rect'].height < 2 and d['rect'].x0 < QX - 10 and d['rect'].x1 > QX - 15 and d['rect'].width > 20)
+        qrules = [ry for ry, _ in qrules_]
+        cuts, comm_floor = [], {}
         for k, l in enumerate(labels):
             y_ = l['y0'] - 4
             prev = labels[k - 1]['y1'] if k else top
             above = [ry for ry in qrules if prev + 1 < ry < l['y0'] - 1]
+            if MATHS and COMM.match(l['text']):
+                tight = [ry for ry, rx in qrules_ if l['y0'] - 9 < ry < l['y0'] and rx < l['x0'] - 1]
+                if tight:              # maths: a 'Communication' row printed 6.5 pt under its full-width rule: the lift
+                    comm_floor[id(l)] = max(tight) + 0.5   # climbed the column stubs above the text and the rules of the
+                    #   merged cell above (2018 MJ 63 q4 'Justification', 9(b) A1 went into the communication row: marks 35
+                    #   of 40; also approved 2019 ON 61 5(c)(ii); M3 reasons, pattern 242) -> never above that rule
             if above and y_ - max(above) > 4:
                 y_ = max(above) + 1
             cuts.append((y_, l))
         if MATHS:
             cuts = _lift(page, cuts, QX - 2, top)
+            cuts = [(max(c[0], comm_floor[id(c[1])]),) + tuple(c[1:]) if c[1] is not None and id(c[1]) in comm_floor
+                    and c[0] < comm_floor[id(c[1])] - 1 else c for c in cuts]
         if current and (not cuts or cuts[0][0] > top + 4):
             cuts.insert(0, (top, None))          # continuation of the previous label
         headers = [l['y0'] for l in lines if (re.match(r'Question\b', l['text']) and l['x0'] < 130)
@@ -298,6 +311,10 @@ def structured_rows_table(doc):
                 m = LABEL.match(text)
                 path = (int(m.group(1)),) + tuple(g.strip('()') for g in m.groups()[1:3] if g)
                 extra = [x for x in m.group(4).split(',') if x]        # ',(ii),(iii)'
+                if (MATHS and not m.group(2) and m.group(3) and m.group(3) not in ('(i)',) and current
+                        and len(current['path']) == 3 and current['path'][0] == path[0] and isinstance(current['path'][1], str)):
+                    path = (path[0], current['path'][1], path[1])   # maths: '1(ii)' printed after 1(b)(i) = 1(b)(ii)
+                    #                                                 (2018 ON 42 q1; M3 reasons, pattern 244)
                 if m.group(5) and current and current['path'] == path:
                     pass                                               # numbered item: same row continues
                 else:

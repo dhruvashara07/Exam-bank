@@ -113,6 +113,10 @@ def visible_lines(page, top, bottom):
             if abs(l['dir'][1]) > 0.1:
                 continue
             spans = [s for s in l['spans'] if s['text'].strip() and s['size'] > 6]
+            if any(s['color'] == 0xFFFFFF and re.fullmatch(r'\[\d+\]', s['text'].strip()) for s in spans) and _maths_page(page):
+                spans = [s for s in spans if not (s['color'] == 0xFFFFFF and re.fullmatch(r'\[\d+\]', s['text'].strip()))]
+                #   maths: a WHITE '[2]' on the first line of a two-line answer prints nothing (2018 ON 31: marks 105 of
+                #   96 - the mark was counted twice; M3 reasons, pattern 241)
             if not spans:
                 continue
             x0, y0, x1, y1 = l['bbox']

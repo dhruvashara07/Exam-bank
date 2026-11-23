@@ -22,7 +22,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import paths
 
 SYM = {'×': r'\times', '÷': r'\div', '≤': r'\leqslant', '≥': r'\geqslant', '≠': r'\neq', '±': r'\pm', 'π': r'\pi',
-       '°': r'^{\circ}', '−': '-', '–': '-', '∩': r'\cap', '∪': r'\cup', '∉': r'\notin', '∈': r'\in', '…': r'\ldots',
+       '°': r'^{\circ}', '−': '-', '–': '-', '∩': r'\cap', '∪': r'\cup', '∉': r'\notin', '∈': r'\in', '…': r'\ldots', '⋮': r'\vdots',
        '′': "'", '√': r'\surd', '∞': r'\infty', '≈': r'\approx', 'θ': r'\theta', 'α': r'\alpha', 'β': r'\beta',
        '∠': r'\angle', '%': r'\%', '$': r'\$', '<': '<', '>': '>', '{': r'\{', '}': r'\}', '#': r'\#', '&': r'\&',
        '£': r'\pounds', '€': r'\text{€}', '¥': r'\text{¥}', '·': r'\cdot', '•': r'\bullet', 'µ': r'\mu', 'σ': r'\sigma',

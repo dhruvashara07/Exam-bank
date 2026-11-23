@@ -56,7 +56,8 @@ def unpua(ch):
 MATHS_GLYPHS = {
     'AllAndNone': {'!': '≠', '#': '×', "'": '÷'},
     'MMBinary': {'!': '±', '#': '×', "'": '÷', '+': '∩', ',': '∪', 'j': '∪', 'k': '∩'},   # j k: M1 2024 MJ 23
-    'MMEtc': {'f': '…', 'l': '′', 'c': '°', 'g': '⋯', 'k': '…'},                    # c g: M1 2024 MJ 43 / 51; k: M2 2022 MJ 61
+    'MMEtc': {'f': '…', 'l': '′', 'c': '°', 'g': '⋯', 'k': '…', 'h': '⋮'},          # c g: M1 2024 MJ 43 / 51; k: M2 2022 MJ 61; h: M3 2020 MJ 52
+    'MMGreekItalic': {'i': 'θ', 'a': 'α'},                               # M3 2018 ON 23 'sin θ', 2020 ON 23 'α is acute'
     'MMaEtc-Regular': {'g': '⋯'},                                                   # M2 2023 ON 61 'F2 + F3 + ⋯ + Fn'
     'MathematicalPi-Six': {'N': 'ℕ', 'Z': 'ℤ', 'Q': 'ℚ', 'R': 'ℝ'},               # M2 2021 ON 31 'natural number (ℕ)'
     'MMExtra': {'1': '<', '2': '>'},
@@ -139,10 +140,13 @@ def maths_glyph(font, text, chars=None, size=None):
 DINGBAT = ('sorts', 'dingbat', 'wingding', 'webding', 'mmvariable')   # MMVariable: big brackets of an equation editor, drawn in pieces
 
 
+ODD_MATHS = {('MMNegate', 'Y')}    # MathType's negation SLASH laid over a separate '=' ('x =Y 0' = x ≠ 0, M3 2018 MJ 42): drawn
+
+
 def odd(ch, font):
     """A character we cannot write as text: control codes, unmapped private-use codes, dingbat fonts."""
     o = ord(ch[0])
-    return o < 32 or any(k in font.lower() for k in DINGBAT) or (0xE000 <= o <= 0xF8FF and unpua(ch) == ch)
+    return (font.split('+')[-1], ch) in ODD_MATHS or o < 32 or any(k in font.lower() for k in DINGBAT) or (0xE000 <= o <= 0xF8FF and unpua(ch) == ch)
 
 
 def family(font):

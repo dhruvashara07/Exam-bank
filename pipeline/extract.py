@@ -8,7 +8,7 @@ layout, answer space included.
 import os, re
 import subjects
 import pymupdf as fitz
-from layout import page_bounds, visible_lines, ink_boxes, label_tokens, ROMAN, LETTERS, CONTENT_X0, CONTENT_X1, row_ink, ink_extent, ZOOM, tight_ink, grow_to_ink
+from layout import _maths_page, page_bounds, visible_lines, ink_boxes, label_tokens, ROMAN, LETTERS, CONTENT_X0, CONTENT_X1, row_ink, ink_extent, ZOOM, tight_ink, grow_to_ink
 
 PAD_TOP, PAD_BOTTOM = 4.0, 5.0
 TOTAL_SLIPS = {'0625_2007MJ_03_q11'}   # the paper prints [Total: 12] for q10 + q11 together (Dhruv, round 23)
@@ -205,8 +205,11 @@ def raw_segments(doc, bnds):
             cuts.append(min(cands, key=lambda c: (cost(c), -c)) if cands else best_cut(doc[p], b['y'] - PAD_TOP, floor))
             continue
         # a lone mark '[1]' of the part above printed level with the top of this label: cut below it
-        mk = [l for l in visible_lines(doc[p], *bounds[p]) if MARK.fullmatch(l['text'].strip()) and l['x0'] > 400
+        mk = [l for l in visible_lines(doc[p], *bounds[p]) if (MARK.fullmatch(l['text'].strip()) and l['x0'] > 400
+              or (_maths_page(doc[p]) and l['x0'] > 300 and re.search(r'\[\s*\d{1,2}\s*\]$', l['text'].strip())))
               and b['y'] - 20 < l['y0'] < b['y'] - 1 and l['y1'] > b['y'] - 6]
+        #   maths: a whole answer line 'B ( ...... , ...... ) [2]' printed level with the next label's top (2018 MJ 32/33:
+        #   its mark went to the part below; M3 reasons, pattern 245)
         if mk:
             from layout import dark_mask
             m = dark_mask(doc[p]); Z = ZOOM
@@ -389,6 +392,32 @@ def _grow_light(page, r, limit, exclude, Z=2.0):
     return r
 
 
+def clipped_drawings(page):
+    """page.get_drawings() with each box cut to its clip path: hatching is drawn as long diagonals clipped by the bar, and
+    their whole boxes reached 80 pt into the next part (2020 ON 11 q8: a text-only 'diagram'; M3 reasons, pattern 248)."""
+    out, stack = [], []
+    for dr in page.get_drawings(extended=True):
+        lvl = dr.get('level', 0)
+        while stack and stack[-1][0] >= lvl:
+            stack.pop()
+        if dr['type'] == 'clip':
+            if dr.get('scissor') is not None:
+                stack.append((lvl, fitz.Rect(dr['scissor'])))
+            continue
+        if dr['type'] == 'group':
+            continue
+        sc = None
+        for _, r_ in stack:
+            sc = r_ if sc is None else sc & r_
+        r = fitz.Rect(dr['rect'])
+        if sc is not None and r.width > 0.6 and r.height > 0.6 and not sc.contains(r):
+            if (r & sc).is_empty:
+                continue
+            dr = dict(dr, rect=r & sc)
+        out.append(dr)
+    return out
+
+
 def diagrams(doc, seg, lines, captioned):
     """Maths: drawings with no caption (a triangle 'NOT TO SCALE', axes, a grid to draw on, a stem-and-leaf box ...) inside
     a segment -> figure crops {'caption': None, 'page', 'bbox'}. Not figures: answer lines and dots, fraction bars and
@@ -400,8 +429,9 @@ def diagrams(doc, seg, lines, captioned):
     text = [l for l in lines]
     tboxes = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in text]
     items = []
-    verts_ = [d_['rect'] for d_ in page.get_drawings() if d_['rect'].width < 1.6 and d_['rect'].height > 5]
-    for d in page.get_drawings():
+    drs_all = clipped_drawings(page)
+    verts_ = [d_['rect'] for d_ in drs_all if d_['rect'].width < 1.6 and d_['rect'].height > 5]
+    for d in drs_all:
         r = d['rect']
         if r.y1 < y0s - 1 or r.y0 > y1s + 1 or r.x1 < CONTENT_X0 + 2 or r.x0 > CONTENT_X1 - 2:
             continue
@@ -485,6 +515,33 @@ def diagrams(doc, seg, lines, captioned):
             base['g'] = base['r'] + (-10, -10, 10, 10)
         else:
             cl.append({'r': fitz.Rect(r), 'g': g, 'n': 1, 'rs': [r]})
+    if maths_doc(doc):        # maths: a column of the SAME thin shape (the arrows of a mapping diagram, 20.7 pt apart) is
+        again_ = True         # one diagram - the 10 pt rule joined only two of five (2018 ON 11 q15 lost its first row;
+        while again_:         # M3 reasons, pattern 247)
+            again_ = False
+            cl.sort(key=lambda c: c['r'].y0)
+            for a_ in cl:
+                for b_ in cl:
+                    A_, B_ = a_['r'], b_['r']
+                    if a_ is b_ or not (0 <= B_.y0 - A_.y1 < 30) or abs(A_.x0 - B_.x0) > 1.5 or abs(A_.x1 - B_.x1) > 1.5:
+                        continue
+                    if min(x.height for x in a_['rs'] + b_['rs']) < 1 or max(x.height for x in a_['rs'] + b_['rs']) > 15 \
+                            or min(x.width for x in a_['rs'] + b_['rs']) < 25:
+                        continue          # (every piece a long thin shape: an arrow - never dots of a lattice)
+                    a_['r'] |= B_; a_['n'] += b_['n']; a_['rs'] += b_['rs']; a_['g'] = a_['r'] + (-10, -10, 10, 10)
+                    cl.remove(b_); again_ = True
+                    break
+                if again_:
+                    break
+    if maths_doc(doc):        # maths: a chart's legend (small key boxes 18 pt beside the bars, inside the chart's height) is
+        for c_ in [c for c in cl if c['n'] >= 3 and 10 <= c['r'].width <= 30 and c['r'].height >= 20      # part of the chart
+                   and sum(1 for t in tboxes if 0 <= t.x0 - c['r'].x1 < 12 and c['r'].y0 - 3 <= (t.y0 + t.y1) / 2 <= c['r'].y1 + 3) >= 2]:
+            #   (a column of key boxes with their labels to the right; never formula pieces: 2024 ON 41 q10b; 2020 ON 11 q8,
+            big_ = [b for b in cl if b is not c_ and b['r'].width >= 60 and b['r'].height >= 60   # pattern 248)
+                    and b['r'].y0 - 5 <= c_['r'].y0 and c_['r'].y1 <= b['r'].y1 + 5
+                    and (0 <= c_['r'].x0 - b['r'].x1 < 40 or 0 <= b['r'].x0 - c_['r'].x1 < 40)]
+            if big_ and c_ in cl:
+                b = big_[0]; b['r'] |= c_['r']; b['n'] += c_['n']; b['rs'] += c_['rs']; cl.remove(c_)
     out, tables = [], list(pre_tables)
     boxes_ = []
     for c in cl:

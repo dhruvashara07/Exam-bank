@@ -460,6 +460,9 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
     from checks import cut_edges
     from layout import page_bounds, visible_lines, tight_ink
     from extract import split_captions
+    from extract import clipped_drawings
+    _cd = clipped_drawings(pg) if maths else None
+    GD_ = (lambda: _cd) if maths else pg.get_drawings   # maths: boxes cut to their clip path (hatching, pattern 248)
     t, bt = page_bounds(pg)
     lines = [x for x in (tight_ink(pg, fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1'])) for l in split_captions(pg, visible_lines(pg, t, bt))) if x]
     ws = pg.get_text('words')
@@ -500,7 +503,7 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
                 or re.search(r'\.{4,}|…|\[\d+\]', txt))             # an answer line '..........[1]'
     caps = [l for l in lines if re.match(r'(Fig|Table)\.?\s*\d', ' '.join(w[4] for w in words_of(l)))]
     b0 = fitz.Rect(b)
-    drw = [d_['rect'] for d_ in pg.get_drawings()]
+    drw = [d_['rect'] for d_ in GD_()]
     D = None
     if maths:                                          # the drawing's own ink (lines have empty boxes: widened)
         for r_ in drw:
@@ -529,9 +532,9 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
             d_['rect'].intersects(b) and not b.contains(d_['rect']) and d_['rect'].width < 0.9 * pg.rect.width        # below the edge
             and d_['rect'].width > 12 and d_['rect'].height > 12 and d_['rect'].height < 120 and d_['type'] == 's'   # sits at other x:
             and (d_['rect'].y0 < b.y0 - 1 < d_['rect'].y1 or d_['rect'].y0 < b.y1 + 1 < d_['rect'].y1)               # a tree's branch,
-            for d_ in pg.get_drawings())                            # 2022 FM 42 q10, round 34)
+            for d_ in GD_())                            # 2022 FM 42 q10, round 34)
         if cut_edges(pg, b) or slant_:
-            for d in pg.get_drawings():
+            for d in GD_():
                 r = d['rect']
                 if r.width > 0.9 * pg.rect.width or not r.intersects(b) or b.contains(r):
                     continue
@@ -601,7 +604,7 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
                         b = nb
     def text_bar(r):                                   # a fraction bar inside a text row ('f = uv / (u + v)'): text, not drawing
         return r.height < 1.2 and any(l.y0 - 3 <= r.y0 <= l.y1 + 3 and r.x0 < l.x1 and r.x1 > l.x0 for l in lines)
-    ink = [d['rect'] for d in pg.get_drawings() if d['rect'].intersects(b) and d['rect'].width < 0.9 * pg.rect.width and not text_bar(d['rect'])]
+    ink = [d['rect'] for d in GD_() if d['rect'].intersects(b) and d['rect'].width < 0.9 * pg.rect.width and not text_bar(d['rect'])]
     top, bot = (min(r.y0 for r in ink), max(r.y1 for r in ink)) if ink else (b.y0, b.y1)
     def beside(l):              # maths: printed ink at the line's height, inside the crop, on one side of it with a gap
         from layout import dark_mask, ZOOM as Z_    # (pixels: hatching tiles and clipped images have useless boxes)
@@ -609,9 +612,13 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
         ya, yb = max(0, int((l.y0 + 1) * Z_)), min(H_, int((l.y1 - 1) * Z_))
         if yb <= ya:
             return None
+        band_ = m_[ya:yb].copy()
+        for w_ in ws:                 # words are no drawing: the line's own '[1]' or symbols at its right end made a question
+            if w_[3] > l.y0 and w_[1] < l.y1:   # line 'beside' the drawing (2020 ON 11 q8; M3 reasons, pattern 246)
+                band_[:, max(0, int(w_[0] * Z_) - 1):min(W_, int(w_[2] * Z_) + 1)] = False
         def any_ink(xa, xb):
             xa, xb = max(0, int(xa * Z_)), min(W_, int(xb * Z_))
-            return xb > xa and m_[ya:yb, xa:xb].sum() >= 6
+            return xb > xa and band_[:, xa:xb].sum() >= 6
         if any_ink(b.x0, l.x0 - 8) and not any_ink(l.x0 - 6, l.x0 - 1) and l.x0 > b.x0 + 40:
             return 'r'
         if any_ink(l.x1 + 8, b.x1) and not any_ink(l.x1 + 1, l.x1 + 6) and l.x1 < b.x1 - 40:
@@ -619,7 +626,7 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
         return None
     for c in caps:                                     # nothing under the figure's caption ('Method 1' heading, 2020 MJ 53 q3)
         if c.y0 >= (b.y0 + b.y1) / 2 and c.x0 < b.x1 and c.x1 > b.x0 and c.y1 <= b.y1 + 1 and not any(
-                r.y1 > c.y1 + 3 and r.intersects(b) and r.width < 0.9 * pg.rect.width for r in (d_['rect'] for d_ in pg.get_drawings())):
+                r.y1 > c.y1 + 3 and r.intersects(b) and r.width < 0.9 * pg.rect.width for r in (d_['rect'] for d_ in GD_())):
             # (only when no drawing goes on under the caption: 2021 ON 63 q1 has the magnified scale below 'Fig. 1.1')
             for l in lines:
                 if l is not c and l.y0 >= c.y1 - 1 and l.intersects(b):
@@ -640,7 +647,11 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
         ov = (l & b).get_area() / max(l.get_area(), 1)
         if ov <= 0.15 or not sentence(words_of(l), l):
             continue
-        side_ = beside(l) if maths and ov < 0.85 else None
+        lw_ = sorted(words_of(l), key=lambda w: w[0])
+        side_ = beside(l) if maths and ov < 0.85 and not (lw_ and re.fullmatch(r'\((?:[a-h]|[ivx]+)\)', lw_[0][4])) else None
+        #   maths: a part's question line ('(iv) On the Venn diagram below, shade the region G'∩B') is never BESIDE the
+        #   drawing - its own drawn symbols on the right looked like drawing ink and the crop lost its left half
+        #   (2020 MJ 31 q11, 2018 MJ 63 q8; M3 reasons, pattern 246)
         if side_:                                      # (ink of the drawing at the same height, on the other side)
             if side_ == 'r':                     # maths: a sentence BESIDE the drawing (inside its height) is cut off
                 b.x1 = min(b.x1, l.x0 - 0.5)           # at the side, never by moving the top or bottom through the drawing
@@ -685,7 +696,11 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
             run_ = [w for w in run_ if not re.fullmatch(r'\[\d+\]', w[4])]
             outside_ = any(w[2] < b.x0 - 1 or w[0] > b.x1 + 1 for w in run_) and len(' '.join(w[4] for w in run_)) > 8
             q_ = (re.match(r'^\(?([a-z]|[ivx]{1,4})\)\s', txt_ + ' ') or (re.match(r'^\d{1,2}(\s+\(|\s*$)', txt_) and same_[0][0] < 62)
-                  or ('=' in txt_ and re.search(r'\bfor\b', txt_)) or re.match(r'^[a-z]\s*\(\s*x\s*\)', txt_) or outside_)
+                  or ('=' in txt_ and re.search(r'\bfor\b', txt_)) or re.match(r'^[a-z]\s*\(\s*x\s*\)', txt_) or outside_
+                  or re.match(r'^[a-z]\s*\(\s*x?\s*\)\s*x?\s*=', txt_)          # 'f ( )x = ...' (italic pieces, 2020 MJ 43 q4)
+                  or (len(re.findall(r'\b[a-z]{2,}\b', txt_)) >= 6 and re.search(r'\.\s*(\[\d+\])?\s*$', txt_)))
+            #   (... and a full sentence ending in '.': 'On the grid, translate the triangle by the vector (4, -2).' under
+            #   the grid, 2020 ON 12 q15; M3 reasons, pattern 249)
             if q_:              # the cut passes the line's OWN strokes too (|..| bars, roots, numerators reach out of
                 row_ = [r for r in ink if r not in ink2 and min(r.y1, l.y1 + 6) - max(r.y0, l.y0 - 6) > 0]   # its box)
                 ys_ = [o for o in (fitz.Rect(w[:4]) for w in ws) if l.y0 - 14 < (o.y0 + o.y1) / 2 < l.y1 + 14 and o.width < 30
@@ -706,7 +721,7 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
             and abs((o.x0 + o.x1) / 2 - (b0.x0 + b0.x1) / 2) > 60]    # a neighbour figure BESIDE ours whose box overlaps ours
     if side and len(below) >= 2 and any(abs((c2.x0 + c2.x1) / 2 - (c1.x0 + c1.x1) / 2) > 80 for c1, c2 in zip(below, below[1:])):
         own = min(below, key=lambda c: abs((c.x0 + c.x1) / 2 - (b.x0 + b.x1) / 2))
-        items = [fitz.Rect(d_['rect']) for d_ in pg.get_drawings() if d_['rect'].intersects(b) and d_['rect'].width < 0.9 * pg.rect.width]
+        items = [fitz.Rect(d_['rect']) for d_ in GD_() if d_['rect'].intersects(b) and d_['rect'].width < 0.9 * pg.rect.width]
         items = [r for r in items if (r & b).get_area() > 0 or r.width < 1 or r.height < 1]
         n_draw = len(items)
         items += [fitz.Rect(w[:4]) for w in pg.get_text('words') if fitz.Rect(w[:4]).intersects(b)
