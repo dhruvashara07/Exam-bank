@@ -1,0 +1,431 @@
+{
+ "id": "0607_2020ON_42_q08",
+ "number": 8,
+ "segments": [
+  {
+   "page": 12,
+   "bbox": [
+    30.0,
+    56.6,
+    570.0,
+    237.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 99.3,
+    "height_pt": 180.4
+   }
+  }
+ ],
+ "text": "8\nBag A\nBag B\nBag A contains 5 black balls and 2 white balls.\nBag B contains 4 black balls and 5 white balls.",
+ "marks": 11,
+ "figures": [
+  {
+   "caption": null,
+   "page": 12,
+   "bbox": [
+    128.39999389648438,
+    74.19999694824219,
+    457.8999938964844,
+    192.10000610351562
+   ],
+   "id": "0607_2020ON_42_q08_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      239.8,
+      570.0,
+      328.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 23.9,
+      "height_pt": 88.2
+     }
+    }
+   ],
+   "text": "Gustav picks one ball at random from bag A and replaces it.\nWrite down the probability that the ball Gustav picks is black.\n................................................. [1]",
+   "marks": 1,
+   "path": "8(a)",
+   "mark_scheme": [
+    {
+     "label": "8(a)",
+     "text": "5\noe\n7",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.34889602661133,
+        259.9,
+        537.280029296875,
+        300.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Gustav picks one ball at random from bag <i>A</i> and replaces it. Write down the probability that the ball Gustav picks is black.",
+     "text": "Gustav picks one ball at random from bag A and replaces it. Write down the probability that the ball Gustav picks is black."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      330.8,
+      570.0,
+      393.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 10.9,
+      "height_pt": 62.2
+     }
+    }
+   ],
+   "text": "Sharia picks one ball at random from bag A, notes its colour, and places it in bag B.\nShe then picks a ball at random from bag B.\nFind the probability that",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        30.0,
+        395.8,
+        570.0,
+        536.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 101.9,
+        "height_pt": 140.2
+       }
+      }
+     ],
+     "text": "both balls are white,\n................................................. [2]",
+     "marks": 2,
+     "path": "8(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "8(b)(i)",
+       "text": "6\noe\n35",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          45.34889602661133,
+          300.9,
+          537.280029296875,
+          342.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "both balls are white,",
+       "text": "both balls are white,"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        30.0,
+        538.8,
+        570.0,
+        731.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 153.9,
+        "height_pt": 192.2
+       }
+      }
+     ],
+     "text": "one ball is black and the other ball is white.\n................................................. [3]",
+     "marks": 3,
+     "path": "8(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "8(b)(ii)",
+       "text": "33\noe\n70",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          45.34889602661133,
+          342.5,
+          537.280029296875,
+          397.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "one ball is black and the other ball is white.",
+       "text": "one ball is black and the other ball is white."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "8(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Sharia picks one ball at random from bag <i>A</i>, notes its colour, and places it in bag <i>B</i>. She then picks a ball at random from bag <i>B</i>. Find the probability that",
+     "text": "Sharia picks one ball at random from bag A, notes its colour, and places it in bag B. She then picks a ball at random from bag B. Find the probability that"
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      301.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 127.9,
+      "height_pt": 244.2
+     }
+    }
+   ],
+   "text": "The balls are returned to their original bags.\nJean picks a ball at random from bag A.\nHe then replaces the ball.\nHe continues to do this until he gets a white ball.\nFind the probability that the first time he gets a white ball is on the 5th pick.\n................................................. [2]",
+   "marks": 2,
+   "path": "8(c)",
+   "mark_scheme": [
+    {
+     "label": "8(c)",
+     "text": "1250\n16807",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.34889602661133,
+        397.3,
+        537.280029296875,
+        441.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The balls are returned to their original bags. Jean picks a ball at random from <b>bag </b><b><i>A</i></b>. He then replaces the ball. He continues to do this until he gets a white ball. Find the probability that the first time he gets a white ball is on the 5th pick.",
+     "text": "The balls are returned to their original bags. Jean picks a ball at random from bag A. He then replaces the ball. He continues to do this until he gets a white ball. Find the probability that the first time he gets a white ball is on the 5th pick."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      303.8,
+      570.0,
+      587.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 153.9,
+      "height_pt": 283.2
+     }
+    }
+   ],
+   "text": "The balls are returned to their original bags.\nLeanne picks a ball at random from bag B.\nShe continues to do this without replacement until she gets a white ball.\n5.\nThe probability that she picks the first white ball on her nth attempt is 126\nFind the value of n.\n................................................. [3]",
+   "marks": 3,
+   "path": "8(d)",
+   "mark_scheme": [
+    {
+     "label": "8(d)",
+     "text": "4 nfww",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        45.34889602661133,
+        441.0,
+        537.280029296875,
+        509.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The balls are returned to their original bags. Leanne picks a ball at random from <b>bag </b><b><i>B</i></b>. She continues to do this without replacement until she gets a white ball.",
+     "text": "The balls are returned to their original bags. Leanne picks a ball at random from bag B. She continues to do this without replacement until she gets a white ball."
+    },
+    {
+     "type": "text",
+     "html": "5",
+     "text": "5"
+    },
+    {
+     "type": "text",
+     "html": "The probability that she picks the first white ball on her <i>n</i>th attempt is 126 . Find the value of <i>n</i>.",
+     "text": "The probability that she picks the first white ball on her nth attempt is 126 . Find the value of n."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_long_answer",
+ "total_marks": 11,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>8</b>",
+   "text": "8"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2020ON_42_q08_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "Bag <i>A</i> contains 5 black balls and 2 white balls. Bag <i>B</i> contains 4 black balls and 5 white balls.",
+   "text": "Bag A contains 5 black balls and 2 white balls. Bag B contains 4 black balls and 5 white balls."
+  }
+ ]
+}

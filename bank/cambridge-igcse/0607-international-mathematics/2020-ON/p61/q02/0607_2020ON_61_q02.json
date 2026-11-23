@@ -1,0 +1,859 @@
+{
+ "id": "0607_2020ON_61_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    267.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 119.7,
+    "height_pt": 210.2
+   }
+  }
+ ],
+ "text": "2\nBlack squares and white squares are now piled on top of each other.\nEvery row starts with a white square, followed by a black square, followed by a white square and so on.\n1 square on the bottom row\n2 squares on the bottom row\n3 squares on the bottom row\n1 white square\n2 white squares\n4 white squares\n0 black squares\n1 black square\n2 black squares\nTotal = 1 square\nTotal = 3 squares\nTotal = 6 squares",
+ "marks": 21,
+ "figures": [
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    422.7,
+    106.9,
+    517.7,
+    194.4
+   ],
+   "id": "0607_2020ON_61_q02_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    261.0,
+    134.8,
+    327.7,
+    194.0
+   ],
+   "id": "0607_2020ON_61_q02_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    100.9,
+    306.7,
+    493.6,
+    579.1
+   ],
+   "id": "0607_2020ON_61_q02a_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      269.6,
+      570.0,
+      605.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 297.0,
+      "height_pt": 335.4
+     }
+    }
+   ],
+   "text": "On the dotty paper, complete the next diagram in the sequence.\n[1]",
+   "marks": 1,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        49.406551361083984,
+        545.1,
+        537.280029296875,
+        616.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the dotty paper, complete the next diagram in the sequence.",
+     "text": "On the dotty paper, complete the next diagram in the sequence."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2020ON_61_q02a_diagram3",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 297.0
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      607.8,
+      570.0,
+      792.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 15.7,
+      "height_pt": 184.7
+     }
+    }
+   ],
+   "text": "Complete the table.\nNumber of squares\n1\n2\n3\n4\n5\n6\n7\non the bottom row (s)\nNumber of black\n0\n1\n2\n9\nsquares (b)\nNumber of white\n1\n2\n4\n12\nsquares (w)\nTotal number\n1\n3\n6\n21\nof squares (T )\n[3]",
+   "marks": 3,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "s\n1\n2\n3\n4\n5\n6\n7\nb\n0\n1\n2\n4\n6\n9\n12\nw\n1\n2\n4\n6\n9\n12\n16\nT\n1\n3\n6\n10\n15\n21\n28",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        49.406551361083984,
+        616.6,
+        537.280029296875,
+        724.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Number of squares on the bottom row (<i>s</i>)",
+       "1",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6",
+       "7"
+      ],
+      [
+       "Number of black squares (<i>b</i>)",
+       "0",
+       "1",
+       "2",
+       "",
+       "",
+       "9",
+       ""
+      ],
+      [
+       "Number of white squares (<i>w</i>)",
+       "1",
+       "2",
+       "4",
+       "",
+       "",
+       "12",
+       ""
+      ],
+      [
+       "Total number of squares (<i>T</i> )",
+       "1",
+       "3",
+       "6",
+       "",
+       "",
+       "21",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        56.8,
+        570.0,
+        358.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 79.1,
+        "height_pt": 301.7
+       }
+      }
+     ],
+     "text": "Complete the two tables for black squares.\nSome of the information is in the table in part (b).\nOdd number of squares\n1\n3\n5\n7\n9\non the bottom row (s)\nNumber of black\n0\n2\n20\nsquares (b)\nEven number of squares\n2\n4\n6\n8\n10\non the bottom row (s)\nNumber of black\n1\n9\n16\nsquares (b)\n[1]",
+     "marks": 1,
+     "path": "2(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(i)",
+       "text": "Odd s\n1\n3\n5\n7\n9\nb\n0\n2\n6\n12\n20\nEven s\n2\n4\n6\n8\n10\nb\n1\n4\n9\n16\n25",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          49.406551361083984,
+          85.0,
+          537.280029296875,
+          186.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the two tables for black squares.",
+       "text": "Complete the two tables for black squares."
+      },
+      {
+       "type": "text",
+       "html": "Some of the information is in the table in <b>part (b)</b>.",
+       "text": "Some of the information is in the table in part (b)."
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "Odd number of squares on the bottom row (<i>s</i>)",
+         "1",
+         "3",
+         "5",
+         "7",
+         "9"
+        ],
+        [
+         "Number of black squares (<i>b</i>)",
+         "0",
+         "2",
+         "",
+         "",
+         "20"
+        ]
+       ]
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "Even number of squares on the bottom row (<i>s</i>)",
+         "2",
+         "4",
+         "6",
+         "8",
+         "10"
+        ],
+        [
+         "Number of black squares (<i>b</i>)",
+         "1",
+         "",
+         "9",
+         "16",
+         ""
+        ]
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 79.1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        361.3,
+        570.0,
+        631.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 2,
+        "answer_line": "x=  ……",
+        "working_gap_pt": 140.7,
+        "height_pt": 270.2
+       }
+      }
+     ],
+     "text": "A formula for finding the number of black squares, b, when the number of squares on the\nbottom row, s, is an odd number is\n2\nb\nxs\ny\n+.\n=\nFind the value of x and the value of y.\nx=  ................................................\ny=  ................................................ [3]",
+     "marks": 3,
+     "path": "2(c)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(ii)",
+       "text": "Substitution of two pairs of values from\ntheir table\n1\nx =\noe\n4\n1\ny = −\noe\n4",
+       "codes": [
+        "C1",
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          49.406551361083984,
+          186.5,
+          537.280029296875,
+          288.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "A formula for finding the number of black squares, <i>b</i>, when the number of squares on the bottom row, <i>s</i>, is an <b>odd</b> number is",
+       "text": "A formula for finding the number of black squares, b, when the number of squares on the bottom row, s, is an odd number is"
+      },
+      {
+       "type": "text",
+       "html": "<i>b</i> = <i>xs</i><sup>2</sup> + <i>y</i>.",
+       "text": "b = xs2 + y."
+      },
+      {
+       "type": "text",
+       "html": "Find the value of <i>x</i> and the value of <i>y</i>.",
+       "text": "Find the value of x and the value of y."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "x ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "y ="
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        30.0,
+        634.3,
+        570.0,
+        787.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 101.9,
+        "height_pt": 153.2
+       }
+      }
+     ],
+     "text": "Find a formula for the number of black squares, b, when the number of squares on the bottom\nrow, s, is an even number.\n................................................. [2]",
+     "marks": 2,
+     "path": "2(c)(iii)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(iii)",
+       "text": "b =\n2\ns\noe\n \n \n2",
+       "codes": [
+        "C1",
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          49.406551361083984,
+          288.8,
+          537.280029296875,
+          356.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find a formula for the number of black squares, <i>b</i>, when the number of squares on the bottom row, <i>s</i>, is an <b>even</b> number.",
+       "text": "Find a formula for the number of black squares, b, when the number of squares on the bottom row, s, is an even number."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "2(c)"
+  },
+  {
+   "label": "d",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        30.0,
+        56.8,
+        570.0,
+        384.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 92.1,
+        "height_pt": 327.7
+       }
+      }
+     ],
+     "text": "Complete the two tables for white squares.\nSome of the information is in the table in part (b).\nOdd number of squares\n1\n3\n5\n7\n9\non the bottom row (s)\nNumber of white\n1\n4\n25\nsquares (w)\nEven number of squares\n2\n4\n6\n8\n10\non the bottom row (s)\nNumber of white\n2\n12\n20\nsquares (w)\n[1]",
+     "marks": 1,
+     "path": "2(d)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(d)(i)",
+       "text": "Odd s\n1\n3\n5\n7\n9\nw\n1\n4\n9\n16\n25\nEven s\n2\n4\n6\n8\n10\nw\n2\n6\n12\n20\n30",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          49.406551361083984,
+          356.1,
+          537.280029296875,
+          457.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the two tables for white squares.",
+       "text": "Complete the two tables for white squares."
+      },
+      {
+       "type": "text",
+       "html": "Some of the information is in the table in <b>part (b)</b>.",
+       "text": "Some of the information is in the table in part (b)."
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "Odd number of squares on the bottom row (<i>s</i>)",
+         "1",
+         "3",
+         "5",
+         "7",
+         "9"
+        ],
+        [
+         "Number of white squares (<i>w</i>)",
+         "1",
+         "4",
+         "",
+         "",
+         "25"
+        ]
+       ]
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "Even number of squares on the bottom row (<i>s</i>)",
+         "2",
+         "4",
+         "6",
+         "8",
+         "10"
+        ],
+        [
+         "Number of white squares (<i>w</i>)",
+         "2",
+         "",
+         "12",
+         "20",
+         ""
+        ]
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 92.1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        30.0,
+        400.3,
+        570.0,
+        798.7
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 2,
+        "answer_line": "x=  ……",
+        "working_gap_pt": 270.7,
+        "height_pt": 398.4
+       }
+      }
+     ],
+     "text": "A formula for finding the number of white squares, w, when the number of squares on the\nbottom row, s, is an odd number is\n1\n2\nw\nxs\nys\n.\n=\n+\n+\n4\nFind the value of x and the value of y.\nx=  ................................................\ny=  ................................................ [3]",
+     "marks": 3,
+     "path": "2(d)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(d)(ii)",
+       "text": "Substitution of two pairs of values from\ntheir table\nor trialling (checking) a formula by\nsubstitution of two pairs of values from\ntheir table\nor correct equivalent expression\nor total – black\n1\n1\n1\n1\n2\n2\ns +\ns−\ns −\n=\n\n\n2\n2\n\n4\n4\n\n1\nx =\n4\n1\ny =\n2",
+       "codes": [
+        "C1",
+        "B2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          49.406551361083984,
+          457.6,
+          537.280029296875,
+          666.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "A formula for finding the number of white squares, <i>w</i>, when the number of squares on the bottom row, <i>s</i>, is an <b>odd</b> number is",
+       "text": "A formula for finding the number of white squares, w, when the number of squares on the bottom row, s, is an odd number is"
+      },
+      {
+       "type": "text",
+       "html": "<i>w</i> = <i>xs</i><sup>2</sup> + <i>ys</i> + \\(\\frac{1}{4}\\) .",
+       "text": "w = xs2 + ys + (1)/(4) ."
+      },
+      {
+       "type": "text",
+       "html": "Find the value of <i>x</i> and the value of <i>y</i>.",
+       "text": "Find the value of x and the value of y."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "x ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "y ="
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        56.8,
+        570.0,
+        275.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 166.9,
+        "height_pt": 218.2
+       }
+      }
+     ],
+     "text": "Find a formula for the number of white squares, w, when the number of squares on the bottom\nrow, s, is an even number.\n................................................. [3]",
+     "marks": 3,
+     "path": "2(d)(iii)",
+     "mark_scheme": [
+      {
+       "label": "2(d)(iii)",
+       "text": "1\n1\n2\nw=\ns +\ns oe isw\n4\n2",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          49.406551361083984,
+          85.0,
+          537.280029296875,
+          180.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find a formula for the number of white squares, <i>w</i>, when the number of squares on the bottom row, <i>s</i>, is an <b>even</b> number.",
+       "text": "Find a formula for the number of white squares, w, when the number of squares on the bottom row, s, is an even number."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "2(d)"
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      277.8,
+      570.0,
+      782.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 3,
+      "answer_line": null,
+      "working_gap_pt": 374.9,
+      "height_pt": 504.2
+     }
+    }
+   ],
+   "text": "A pattern has a total of 253 squares.\nCalculate the number of squares on the bottom row, the total number of white squares and the total\nnumber of black squares.\nNumber of squares on the bottom row  .................................................\nTotal number of white squares  ..............................................................\nTotal number of black squares  .............................................................. [4]",
+   "marks": 4,
+   "path": "2(e)",
+   "mark_scheme": [
+    {
+     "label": "2(e)",
+     "text": "Total formula = 253 soi oe\nor continuation of sequence\n[Bottom row] = 22\n[White] = 132\n[Black] = 121",
+     "codes": [
+      "C1",
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        49.406551361083984,
+        180.5,
+        537.280029296875,
+        273.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A pattern has a total of 253 squares. Calculate the number of squares on the bottom row, the total number of white squares and the total number of black squares.",
+     "text": "A pattern has a total of 253 squares. Calculate the number of squares on the bottom row, the total number of white squares and the total number of black squares."
+    },
+    {
+     "type": "text",
+     "html": "Number of squares on the bottom row …… Total number of white squares …… Total number of black squares ……",
+     "text": "Number of squares on the bottom row …… Total number of white squares …… Total number of black squares ……"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 21,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Black squares and white squares are now piled on top of each other. Every row starts with a white square, followed by a black square, followed by a white square and so on.",
+   "text": "Black squares and white squares are now piled on top of each other. Every row starts with a white square, followed by a black square, followed by a white square and so on."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2020ON_61_q02_diagram1",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2020ON_61_q02_diagram2",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "square on the bottom row 2 squares on the bottom row 3 squares on the bottom row white square 2 white squares 4 white squares black squares 1 black square 2 black squares Total = 1 square Total = 3 squares Total = 6 squares",
+   "text": "square on the bottom row 2 squares on the bottom row 3 squares on the bottom row white square 2 white squares 4 white squares black squares 1 black square 2 black squares Total = 1 square Total = 3 squares Total = 6 squares"
+  }
+ ]
+}

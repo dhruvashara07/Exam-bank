@@ -1,0 +1,558 @@
+{
+ "id": "0607_2020ON_61_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 11,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    104.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 47.2
+   }
+  }
+ ],
+ "text": "6\nA ball drops from a height of 10 metres.\nEach time it bounces it rises to a maximum height which is half the height that it previously dropped.\nTime is measured in seconds.",
+ "marks": 11,
+ "figures": [
+  {
+   "caption": null,
+   "page": 11,
+   "bbox": [
+    236.0,
+    141.3,
+    361.9,
+    177.1
+   ],
+   "id": "0607_2020ON_61_q06a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 12,
+   "bbox": [
+    101.6,
+    91.9,
+    495.8,
+    341.7
+   ],
+   "id": "0607_2020ON_61_q06c_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      108.8,
+      570.0,
+      210.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 15.2,
+      "height_pt": 101.2
+     }
+    }
+   ],
+   "text": "A model for the time taken until the nth bounce, tn, is\nf\nn\np,\n1\nq\n2\nq\n10\n+\n-\nt\n=\n7\nn\n1\nq\n-\nwhere q is the fraction of the previous maximum height.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        212.8,
+        570.0,
+        327.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 69.8,
+        "height_pt": 114.2
+       }
+      }
+     ],
+     "text": "10\n(i) Show that t\n.\n1=\n7\n[1]",
+     "marks": 1,
+     "path": "6(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(a)(i)",
+       "text": "1− 0.5\n10\nleading to\n7\n1 – 0.5",
+       "codes": [
+        "C1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          49.406551361083984,
+          259.4,
+          537.280029296875,
+          302.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Show that <i>t</i><sub>1</sub> = \\(\\frac{10}{7}\\) .",
+       "text": "Show that t1 = (10)/(7) ."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 69.8
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        342.8,
+        570.0,
+        548.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 166.9,
+        "height_pt": 205.2
+       }
+      }
+     ],
+     "text": "Show that the time taken until the 10th bounce is 8.0 seconds, correct to 2 significant figures.\n[2]",
+     "marks": 2,
+     "path": "6(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "6(a)(ii)",
+       "text": "\n\n10\n10 1+ 0.5−2 0.5\n\n\n\n\n7\n1− 0.5\n\n\n8.02…",
+       "codes": [
+        "C1",
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          49.406551361083984,
+          302.1,
+          537.280029296875,
+          374.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Show that the time taken until the 10th bounce is 8.0 seconds, correct to 2 significant figures.",
+       "text": "Show that the time taken until the 10th bounce is 8.0 seconds, correct to 2 significant figures."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 166.9
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "6(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "A model for the time taken until the <i>n</i>th bounce, <i>t</i><i><sub>n</sub></i> , is",
+     "text": "A model for the time taken until the nth bounce, tn , is"
+    },
+    {
+     "type": "figure",
+     "id": "0607_2020ON_61_q06a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "where <i>q</i> is the fraction of the previous maximum height.",
+     "text": "where q is the fraction of the previous maximum height."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      550.8,
+      570.0,
+      795.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 101.9,
+      "height_pt": 244.2
+     }
+    }
+   ],
+   "text": "A model for T, the total time that the ball bounces, is\nf\np.\n1\nq\n10\n+\nT\n=\n7\n1\nq\n-\nCalculate the total time that the ball bounces.\n................................................. [2]\nQuestions 6(c) and 6(d) are printed on the next page.",
+   "marks": 2,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "\n\n10 1+ 0.5\n\n\n\n\n7 1− 0.5\n\n\n8.32… or 8.33",
+     "codes": [
+      "C1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        49.406551361083984,
+        374.5,
+        537.280029296875,
+        444.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A model for <i>T</i>, the total time that the ball bounces, is",
+     "text": "A model for T, the total time that the ball bounces, is"
+    },
+    {
+     "type": "text",
+     "html": "<i>T</i> = \\(\\frac{10}{7}\\)f\\(\\frac{1 + q}{1 - q}\\)p.",
+     "text": "T = (10)/(7)f(1+q)/(1-q)p."
+    },
+    {
+     "type": "text",
+     "html": "Calculate the total time that the ball bounces.",
+     "text": "Calculate the total time that the ball bounces."
+    },
+    {
+     "type": "text",
+     "html": "<b>Questions 6(c) and 6(d) are printed on the next page.</b>",
+     "text": "Questions 6(c) and 6(d) are printed on the next page."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      57.8,
+      570.0,
+      383.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 146.1,
+      "height_pt": 325.7
+     }
+    }
+   ],
+   "text": "Sketch the graph of the model for T in part (b), for\n0\nq\n1\n1\n.\nG\nT\nTime\n(seconds)\n0\nq\n0\n1\nFraction of the previous maximum height\n[4]",
+   "marks": 4,
+   "path": "6(c)",
+   "mark_scheme": [
+    {
+     "label": "6(c)",
+     "text": "Scale on T axis\nCorrect sketch",
+     "codes": [
+      "C1",
+      "B3"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        49.406551361083984,
+        444.0,
+        537.280029296875,
+        578.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Sketch the graph of the model for <i>T</i> in <b>part (b)</b>, for 0 G <i>q</i> 1 1.",
+     "text": "Sketch the graph of the model for T in part (b), for 0 G q 1 1."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2020ON_61_q06c_diagram2",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Fraction of the previous maximum height",
+     "text": "Fraction of the previous maximum height"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 146.1
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      384.1,
+      570.0,
+      422.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": -1.9,
+      "height_pt": 38.4
+     }
+    }
+   ],
+   "text": "2\np\n(d) The time taken until the first bounce, t1, is also modelled by\nt\n, where p is the initial\n1=\n9 8\n.\nheight that the ball drops.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        30.0,
+        425.1,
+        570.0,
+        474.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 7.9,
+        "height_pt": 49.4
+       }
+      }
+     ],
+     "text": "Find the value of t1 when the ball is dropped from a height of 22.5 m.\n................................................. [1]",
+     "marks": 1,
+     "path": "6(d)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(d)(i)",
+       "text": "15\nor 2.14 to 2.143\n7",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          49.406551361083984,
+          578.4,
+          537.280029296875,
+          617.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the value of <i>t</i><sub>1</sub> when the ball is dropped from a height of 22.5 m.",
+       "text": "Find the value of t1 when the ball is dropped from a height of 22.5 m."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        30.0,
+        477.1,
+        570.0,
+        617.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 88.9,
+        "height_pt": 140.4
+       }
+      }
+     ],
+     "text": "Change the model for the total time T, in part (b), for the ball when it is dropped from a\nheight of 22.5 m.\n................................................. [1]",
+     "marks": 1,
+     "path": "6(d)(ii)",
+     "mark_scheme": [
+      {
+       "label": "6(d)(ii)",
+       "text": "\n\n15 1+ q\n\n\nT =\n\n\n7 1− q\n\n",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          49.406551361083984,
+          617.5,
+          537.280029296875,
+          668.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Change the model for the total time <i>T</i>, in <b>part (b)</b>, for the ball when it is dropped from a height of 22.5 m.",
+       "text": "Change the model for the total time T, in part (b), for the ball when it is dropped from a height of 22.5 m."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "6(d)",
+   "content": [
+    {
+     "type": "text",
+     "html": "The time taken until the first bounce, <i>t</i><sub>1</sub> , is also modelled by <i>t</i><sub>1</sub> = \\(\\frac{2p}{9 8.}\\) , where <i>p</i> is the initial height that the ball drops.",
+     "text": "The time taken until the first bounce, t1 , is also modelled by t1 = (2p)/(9 8.) , where p is the initial height that the ball drops."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 11,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A ball drops from a height of 10 metres. Each time it bounces it rises to a maximum height which is half the height that it previously dropped. Time is measured in seconds.",
+   "text": "A ball drops from a height of 10 metres. Each time it bounces it rises to a maximum height which is half the height that it previously dropped. Time is measured in seconds."
+  }
+ ]
+}

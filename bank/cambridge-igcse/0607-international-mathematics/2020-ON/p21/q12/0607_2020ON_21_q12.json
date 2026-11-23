@@ -1,0 +1,223 @@
+{
+ "id": "0607_2020ON_21_q12",
+ "number": 12,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    165.9,
+    570.0,
+    336.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 12.5,
+    "height_pt": 170.1
+   }
+  }
+ ],
+ "text": "The table shows the marks of 80 students in an examination.\nMark (x)\nFrequency\n0\n1\nx\n10\n8\nG\n16\n10\n1\nx\n15\nG\n15\nx\n20\n25\n1\nG\n20\n1\nx\n30\n17\nG\n14\n30\n1\nx\n50\nG",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    97.5,
+    380.4,
+    497.8,
+    657.2
+   ],
+   "id": "0607_2020ON_21_q12a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      347.3,
+      570.0,
+      678.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 22.6,
+      "height_pt": 330.7
+     }
+    }
+   ],
+   "text": "On the grid, draw a cumulative frequency curve to show this information.\n80\n70\n60\n50\nCumulative\n40\nfrequency\n30\n20\n10\n0\nx\n0\n10\n20\n30\n40\n50\nMark\n[4]",
+   "marks": 4,
+   "path": "12(a)",
+   "mark_scheme": [
+    {
+     "label": "12(a)",
+     "text": "Correct graph passing through\n(0, 0) (10, 8) (15, 24) (20, 49)\n(30, 66) (50, 80)",
+     "codes": [
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        115.1,
+        549.0,
+        233.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the grid, draw a cumulative frequency curve to show this information.",
+     "text": "On the grid, draw a cumulative frequency curve to show this information."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2020ON_21_q12a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      680.8,
+      570.0,
+      730.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 10.9,
+      "height_pt": 49.2
+     }
+    }
+   ],
+   "text": "Use your graph to estimate the median mark of the students.\n................................................. [1]",
+   "marks": 1,
+   "path": "12(b)",
+   "mark_scheme": [
+    {
+     "label": "12(b)",
+     "text": "17 to 19",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        233.6,
+        549.0,
+        259.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your graph to estimate the median mark of the students.",
+     "text": "Use your graph to estimate the median mark of the students."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 2,
+ "variant": 1,
+ "paper_code": "0607/21",
+ "paper_type": "extended_short_answer",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The table shows the marks of 80 students in an examination.",
+   "text": "The table shows the marks of 80 students in an examination."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Mark (<i>x</i>)",
+     "Frequency"
+    ],
+    [
+     "0 1 <i>x</i> G 10",
+     "8"
+    ],
+    [
+     "10 1 <i>x</i> G 15",
+     "16"
+    ],
+    [
+     "15 1 <i>x</i> G 20",
+     "25"
+    ],
+    [
+     "20 1 <i>x</i> G 30",
+     "17"
+    ],
+    [
+     "30 1 <i>x</i> G 50",
+     "14"
+    ]
+   ]
+  }
+ ]
+}

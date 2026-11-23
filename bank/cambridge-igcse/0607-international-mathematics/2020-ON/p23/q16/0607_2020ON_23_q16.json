@@ -1,0 +1,179 @@
+{
+ "id": "0607_2020ON_23_q16",
+ "number": 16,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    529.7,
+    570.0,
+    578.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.7,
+    "height_pt": 48.8
+   }
+  }
+ ],
+ "text": "16\na is acute and tan\nx\n.\na =\nFind, in terms of x,",
+ "marks": 2,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      581.7,
+      570.0,
+      660.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "= …… [1]",
+      "working_gap_pt": 40.4,
+      "height_pt": 78.8
+     }
+    }
+   ],
+   "text": "tan180\n(\n)\n,\n-\na\ntan180\n(\n)\n= ................................................. [1]\n-\na",
+   "marks": 1,
+   "path": "16(a)",
+   "mark_scheme": [
+    {
+     "label": "16(a)",
+     "text": "–x",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        733.2,
+        549.0,
+        761.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "tan (180 - <i>a</i>),",
+     "text": "tan (180 - a),"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "tan (180 - a) ="
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      663.2,
+      570.0,
+      770.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "=  …… [1]",
+      "working_gap_pt": 68.8,
+      "height_pt": 107.3
+     }
+    }
+   ],
+   "text": "tan\n(\n9\n0\n)\n.\n-\na\ntan90\n(\n)\n=  ................................................ [1]\n-\na",
+   "marks": 1,
+   "path": "16(b)",
+   "mark_scheme": [
+    {
+     "label": "16(b)",
+     "text": "1\nx",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        84.8,
+        549.0,
+        126.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "tan (90 - <i>a</i>).",
+     "text": "tan (90 - a)."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "tan (90 - a) ="
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 2,
+ "variant": 3,
+ "paper_code": "0607/23",
+ "paper_type": "extended_short_answer",
+ "total_marks": 2,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<i>a</i> is acute and tan <i>a</i> = <i>x</i>. Find, in terms of <i>x</i>,",
+   "text": "a is acute and tan a = x. Find, in terms of x,"
+  }
+ ]
+}

@@ -1,0 +1,181 @@
+{
+ "id": "0607_2020ON_62_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 16,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    80.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 23.2
+   }
+  }
+ ],
+ "text": "9\nAnother journey is at sunset.",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      82.8,
+      570.0,
+      275.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 101.9,
+      "height_pt": 192.2
+     }
+    }
+   ],
+   "text": "The balloon completes Part 1 of the journey in 7.5 minutes.\nAt the end of Part 1, the height of the balloon above the ground is 960 m.\n`\nj   for\nA model for Part 1 is\nh\n4801\ncos\n()°\nkt\n0\nt\n7 5\n.\n.\n=\n-\nG\nG\nFind the value of k.\n................................................. [2]",
+   "marks": 2,
+   "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "960 = 480(1 – cos(7.5k))\n\n\n\n6\n\n180\nor 480 1−cos\n×20t\nor\n\n\n\n\n5\n\n7.5\n\n24",
+     "codes": [
+      "C1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        47.7599983215332,
+        596.0,
+        547.5599975585938,
+        678.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The balloon completes Part 1 of the journey in 7.5 minutes. At the end of Part 1, the height of the balloon above the ground is 960 m. A model for Part 1 is <i>h</i> = 480`1 - cos (<i>kt</i>)°j for 0 G <i>t</i> G 7 5. . Find the value of <i>k</i>.",
+     "text": "The balloon completes Part 1 of the journey in 7.5 minutes. At the end of Part 1, the height of the balloon above the ground is 960 m. A model for Part 1 is h = 480`1 - cos (kt)°j for 0 G t G 7 5. . Find the value of k."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      277.8,
+      570.0,
+      561.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 205.9,
+      "height_pt": 283.2
+     }
+    }
+   ],
+   "text": "In Part 2, the first 6 minutes of the journey are at a constant height of 960 m.\nThen, the balloon rises 2 times as fast as in Question 6(b)(ii).\nChange the model in Question 6(b)(ii) so that it models this part of the journey.\n................................................. [3]",
+   "marks": 3,
+   "path": "9(b)",
+   "mark_scheme": [
+    {
+     "label": "9(b)",
+     "text": "Attempting to find c, by a correct\nmethod\ne.g. their (54(13.5)) + c = their 960\nL = 54t + 231",
+     "codes": [
+      "C1",
+      "B2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        47.7599983215332,
+        678.7,
+        547.5599975585938,
+        769.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "In Part 2, the first 6 minutes of the journey are at a constant height of 960 m. Then, the balloon rises 2 times as fast as in <b>Question 6(b)(ii)</b>. Change the model in <b>Question 6(b)(ii)</b> so that it models this part of the journey.",
+     "text": "In Part 2, the first 6 minutes of the journey are at a constant height of 960 m. Then, the balloon rises 2 times as fast as in Question 6(b)(ii). Change the model in Question 6(b)(ii) so that it models this part of the journey."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Another journey is at sunset.",
+   "text": "Another journey is at sunset."
+  }
+ ]
+}

@@ -1,0 +1,200 @@
+{
+ "id": "0607_2020ON_11_q20",
+ "number": 20,
+ "segments": [],
+ "text": "",
+ "marks": 4,
+ "figures": [
+  {
+   "caption": null,
+   "page": 9,
+   "bbox": [
+    176.4,
+    139.5,
+    425.5,
+    334.7
+   ],
+   "id": "0607_2020ON_11_q20a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 9,
+   "bbox": [
+    220.1,
+    391.5,
+    376.6,
+    549.3
+   ],
+   "id": "0607_2020ON_11_q20b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      353.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 22.8,
+      "height_pt": 296.7
+     }
+    }
+   ],
+   "text": "Xiong spins a fair 5-sided spinner, numbered 1, 2, 3, 4, 5, two times.\nComplete the tree diagram.\nScore on first spin\nScore on second spin\n4\n..........\n4\n1\n5\n..........\nNot 4\n4\n..........\n..........\nNot 4\n..........\nNot 4\n[2]",
+   "marks": 2,
+   "path": "20(a)",
+   "mark_scheme": [
+    {
+     "label": "20(a)",
+     "text": "1\n4\nand\ncorrectly placed on all branches\n5\n5",
+     "codes": [
+      "2",
+      "4",
+      "5"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        290.9,
+        549.1799926757812,
+        331.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Xiong spins a fair 5-sided spinner, numbered 1, 2, 3, 4, 5, two times.",
+     "text": "Xiong spins a fair 5-sided spinner, numbered 1, 2, 3, 4, 5, two times."
+    },
+    {
+     "type": "text",
+     "html": "Complete the tree diagram.",
+     "text": "Complete the tree diagram."
+    },
+    {
+     "type": "text",
+     "html": "Score on first spin Score on second spin",
+     "text": "Score on first spin Score on second spin"
+    },
+    {
+     "type": "figure",
+     "id": "0607_2020ON_11_q20a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      369.4,
+      570.0,
+      681.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 66.3,
+      "height_pt": 312.1
+     }
+    }
+   ],
+   "text": "E\nD\nA\nC\nB\nThis fair 5-sided spinner is spun 200 times.\nWork out the expected number of times it lands on C.\n.................................................. [2]",
+   "marks": 2,
+   "path": "20(b)",
+   "mark_scheme": [
+    {
+     "label": "20(b)",
+     "text": "40",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.619998931884766,
+        331.9,
+        549.1799926757812,
+        356.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "figure",
+     "id": "0607_2020ON_11_q20b_diagram2",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "This fair 5-sided spinner is spun 200 times. Work out the expected number of times it lands on C.",
+     "text": "This fair 5-sided spinner is spun 200 times. Work out the expected number of times it lands on C."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 1,
+ "variant": 1,
+ "paper_code": "0607/11",
+ "paper_type": "core_short_answer",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

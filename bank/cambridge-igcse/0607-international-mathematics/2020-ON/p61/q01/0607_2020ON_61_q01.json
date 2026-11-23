@@ -1,0 +1,406 @@
+{
+ "id": "0607_2020ON_61_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    225.8,
+    570.0,
+    407.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 129.8,
+    "height_pt": 181.2
+   }
+  }
+ ],
+ "text": "1\nSquares are piled in a pattern, like this:\n1 square on the bottom row\n2 squares on the bottom row\n3 squares on the bottom row\nTotal = 1 square\nTotal = 3 squares\nTotal = 6 squares",
+ "marks": 9,
+ "figures": [
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    422.7,
+    270.9,
+    517.7,
+    358.5
+   ],
+   "id": "0607_2020ON_61_q01_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    261.0,
+    298.4,
+    327.7,
+    357.6
+   ],
+   "id": "0607_2020ON_61_q01_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    100.9,
+    473.3,
+    493.6,
+    745.7
+   ],
+   "id": "0607_2020ON_61_q01a_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      422.7,
+      570.0,
+      782.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 321.5,
+      "height_pt": 359.8
+     }
+    }
+   ],
+   "text": "On the dotty paper, complete the next diagram in the sequence.\n[1]",
+   "marks": 1,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        49.406551361083984,
+        108.2,
+        537.280029296875,
+        179.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the dotty paper, complete the next diagram in the sequence.",
+     "text": "On the dotty paper, complete the next diagram in the sequence."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2020ON_61_q01a_diagram3",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 321.5
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        56.8,
+        570.0,
+        265.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 92.1,
+        "height_pt": 208.2
+       }
+      }
+     ],
+     "text": "Complete the table.\nNumber of squares\n1\n2\n3\n4\n5\n6\n7\non the bottom row (s)\nTotal number\n1\n3\n6\nof squares (T)\n[2]",
+     "marks": 2,
+     "path": "1(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "1(b)(i)",
+       "text": "s\n1\n2\n3\n4\n5\n6\n7\nT\n1\n3\n6\n10\n15\n21\n28",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          49.406551361083984,
+          179.7,
+          537.280029296875,
+          247.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Complete the table.",
+       "text": "Complete the table."
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "Number of squares on the bottom row (<i>s</i>)",
+         "1",
+         "2",
+         "3",
+         "4",
+         "5",
+         "6",
+         "7"
+        ],
+        [
+         "Total number of squares (<i>T</i>)",
+         "1",
+         "3",
+         "6",
+         "",
+         "",
+         "",
+         ""
+        ]
+       ]
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 92.1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        267.6,
+        570.0,
+        538.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 2,
+        "answer_line": "x=  ……",
+        "working_gap_pt": 166.7,
+        "height_pt": 270.4
+       }
+      }
+     ],
+     "text": "2\n(ii) A formula for finding the total number of squares is\nT\nxs\nys\n.\n=\n+\nFind the value of x and the value of y.\nx=  ................................................\ny=  ................................................ [3]",
+     "marks": 3,
+     "path": "1(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "1(b)(ii)",
+       "text": "Substitution of two pairs of values from\ntheir table\nor at least 3 second differences of 1\nor use of general quadratic with\ndifferences\nor triangle numbers stated\n1\nx =\noe\n2\n1\ny =\noe\n2",
+       "codes": [
+        "C1",
+        "B2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          49.406551361083984,
+          247.9,
+          537.280029296875,
+          410.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "A formula for finding the total number of squares is <i>T</i> = <i>xs</i><sup>2</sup> + <i>ys</i>. Find the value of <i>x</i> and the value of <i>y</i>.",
+       "text": "A formula for finding the total number of squares is T = xs2 + ys. Find the value of x and the value of y."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "x ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "y ="
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        540.6,
+        570.0,
+        785.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 192.9,
+        "height_pt": 244.4
+       }
+      }
+     ],
+     "text": "Show that the formula in part (ii) gives the correct total for a pattern of squares with 8 squares\non the bottom row.\n[3]",
+     "marks": 3,
+     "path": "1(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "1(b)(iii)",
+       "text": "2\ntheir x × 8 + their y × 8 oe\n28 + 8\nor difference of 8 seen below table\nor 1 + 2 + … + 8\n8 ×9\nor\n2\nor diagram labelled up to 36\n36 seen twice nfww",
+       "codes": [
+        "1",
+        "B1",
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          49.406551361083984,
+          410.4,
+          537.280029296875,
+          545.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Show that the formula in <b>part (ii)</b> gives the correct total for a pattern of squares with 8 squares on the bottom row.",
+       "text": "Show that the formula in part (ii) gives the correct total for a pattern of squares with 8 squares on the bottom row."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 192.9
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "1(b)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Squares are piled in a pattern, like this:",
+   "text": "Squares are piled in a pattern, like this:"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2020ON_61_q01_diagram1",
+   "caption": null
+  },
+  {
+   "type": "figure",
+   "id": "0607_2020ON_61_q01_diagram2",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "square on the bottom row 2 squares on the bottom row 3 squares on the bottom row Total = 1 square Total = 3 squares Total = 6 squares",
+   "text": "square on the bottom row 2 squares on the bottom row 3 squares on the bottom row Total = 1 square Total = 3 squares Total = 6 squares"
+  }
+ ]
+}

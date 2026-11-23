@@ -1,0 +1,207 @@
+{
+ "id": "0607_2020ON_52_q02",
+ "number": 2,
+ "segments": [],
+ "text": "",
+ "marks": 6,
+ "figures": [
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    163.2,
+    71.0,
+    405.8,
+    174.1
+   ],
+   "id": "0607_2020ON_52_q02a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    170.2,
+    385.1,
+    399.3,
+    488.2
+   ],
+   "id": "0607_2020ON_52_q02b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      53.7,
+      570.0,
+      366.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 101.3,
+      "height_pt": 312.3
+     }
+    }
+   ],
+   "text": "2\n(a)\nNOT TO\n26\nSCALE\n10\n24\nThis triangle has perimeter  P= 60.\nb\nl   gives the correct area for this triangle.\n60\n60\nShow that the calculation   2\n26\n-\n#\n2\n[3]",
+   "marks": 3,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "1\n×24 ×10\n2\n30(30 – 26) or 30 × 4\n120 seen twice from correct formulae",
+     "codes": [
+      "M1",
+      "M1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        447.4,
+        549.1200561523438,
+        538.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "figure",
+     "id": "0607_2020ON_52_q02a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "This triangle has perimeter <i>P</i> = 60. Show that the calculation 2<sub>#</sub> b\\(\\frac{60}{2}\\) - 26l gives the correct area for this triangle.",
+     "text": "This triangle has perimeter P = 60. Show that the calculation 2# b(60)/(2) - 26l gives the correct area for this triangle."
+    },
+    {
+     "type": "text",
+     "html": "60",
+     "text": "60"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 101.3
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      367.8,
+      570.0,
+      717.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 138.5,
+      "height_pt": 349.2
+     }
+    }
+   ],
+   "text": "NOT TO\n50\nSCALE\n48\nThis triangle has perimeter  P= 112.\nb\nl   gives the correct area for this triangle.\n112\n112\nShow that the calculation   2\n50\n-\n#\n2\n[3]",
+   "marks": 3,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "112 – 50 – 48\n2\n2\n2\n2\nor 50 −48 or\n50 −48\n1\n×48 ×14=336\n2\n56(56 – 50) = 336 or 56 × 6 = 336",
+     "codes": [
+      "C1",
+      "B1",
+      "B1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.619998931884766,
+        538.2,
+        549.1200561523438,
+        651.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "figure",
+     "id": "0607_2020ON_52_q02b_diagram2",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "This triangle has perimeter <i>P</i> = 112. Show that the calculation 2 b\\(\\frac{112}{2}\\) - 50l gives the correct area for this triangle.",
+     "text": "This triangle has perimeter P = 112. Show that the calculation 2 b(112)/(2) - 50l gives the correct area for this triangle."
+    },
+    {
+     "type": "text",
+     "html": "112<sub>#</sub>",
+     "text": "112#"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 138.5
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

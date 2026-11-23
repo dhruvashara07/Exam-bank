@@ -1,0 +1,292 @@
+{
+ "id": "0607_2020ON_63_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 14,
+   "bbox": [
+    30.0,
+    56.6,
+    570.0,
+    325.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 74.4,
+    "height_pt": 268.4
+   }
+  }
+ ],
+ "text": "6\n2\nVolume, V, of a cylinder of radius r, height h\nV\nrh\n=\nr\nCurved surface area, A, of a cylinder of radius r, height h\nA\n2r\nrh\n=\nOlivia now uses a cylinder to model the container.\nrcm\nNOT TO\nhcm\nSCALE\n2.\nThe total surface area of this model is cm\nT",
+ "marks": 7,
+ "figures": [
+  {
+   "caption": null,
+   "page": 14,
+   "bbox": [
+    122.3,
+    162.8,
+    338.5,
+    286.7
+   ],
+   "id": "0607_2020ON_63_q06_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      329.6,
+      570.0,
+      522.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 122.0,
+      "height_pt": 192.4
+     }
+    }
+   ],
+   "text": "V\n1000\n.\n=\n2000\n2\nShow that   T\n2\nr\n.\n=\n+\nr\nr\n[3]",
+   "marks": 3,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "2\nT = 2πr + 2πrh\noe\n1000\nh=\noe\n2\nπr\n1000\n2\nT = 2πr + 2πr ×\n2\nπr\n2000\n2\nleading to T =2πr +\nr",
+     "codes": [
+      "M1",
+      "M1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.380001068115234,
+        284.2,
+        548.9400024414062,
+        424.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<i>V</i> = 1000. Show that <i>T</i> = 2r<i>r</i><sup>2</sup> + \\(\\frac{2000}{r}\\) .",
+     "text": "V = 1000. Show that T = 2rr2 + (2000)/(r) ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 122.0
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 14,
+       "bbox": [
+        30.0,
+        524.6,
+        570.0,
+        730.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 166.9,
+        "height_pt": 205.4
+       }
+      }
+     ],
+     "text": "Find the minimum surface area of the cylinder.\n................................................. [2]",
+     "marks": 2,
+     "path": "6(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(b)(i)",
+       "text": "Correct sketch\nor 3 correct trials\n554 or 553.5 to 553.6",
+       "codes": [
+        "C1",
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.380001068115234,
+          424.6,
+          548.9400024414062,
+          567.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the minimum surface area of the cylinder.",
+       "text": "Find the minimum surface area of the cylinder."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 15,
+       "bbox": [
+        30.0,
+        56.8,
+        570.0,
+        197.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 2,
+        "answer_line": "r=  ……",
+        "working_gap_pt": 75.7,
+        "height_pt": 140.2
+       }
+      }
+     ],
+     "text": "Find the dimensions of the cylinder with the minimum surface area.\nr=  ................................................\nh=  ................................................ [2]",
+     "marks": 2,
+     "path": "6(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "6(b)(ii)",
+       "text": "r = 5.42 or 5.419...\nh = 10.8 or 10.83 to 10.84",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.380001068115234,
+          567.1,
+          548.9400024414062,
+          604.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the dimensions of the cylinder with the minimum surface area.",
+       "text": "Find the dimensions of the cylinder with the minimum surface area."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "r ="
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "h ="
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "6(b)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>6</b>",
+   "text": "6"
+  },
+  {
+   "type": "text",
+   "html": "Volume, <i>V</i>, of a cylinder of radius <i>r</i>, height <i>h</i> <i>V</i> = r<i>r</i><sup>2</sup><i>h</i> Curved surface area, <i>A</i>, of a cylinder of radius <i>r</i>, height <i>h</i> <i>A</i> = 2r<i>rh</i>",
+   "text": "Volume, V, of a cylinder of radius r, height h V = rr2h Curved surface area, A, of a cylinder of radius r, height h A = 2rrh"
+  },
+  {
+   "type": "text",
+   "html": "Olivia now uses a cylinder to model the container.",
+   "text": "Olivia now uses a cylinder to model the container."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2020ON_63_q06_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The total surface area of this model is cm<i>T</i><sup>2</sup> .",
+   "text": "The total surface area of this model is cmT2 ."
+  }
+ ]
+}

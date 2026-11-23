@@ -1,0 +1,374 @@
+{
+ "id": "0607_2020ON_33_q07",
+ "number": 7,
+ "segments": [
+  {
+   "page": 10,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    267.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 11.7,
+    "height_pt": 210.2
+   }
+  }
+ ],
+ "text": "7\nOne day, Mr Amir made a note of the number of employees who were on time for work and the number\nwho were late for work.\nHe asked each employee if they ate breakfast or not.\nThe information is shown in the table.\nNumber who ate\nNumber who did\nTotal\nbreakfast\nnot eat breakfast\nNumber who were\n12\na\n17\non time for work\nNumber who were\n2\nc\nb\nlate for work\nTotal\n14\n6\n20",
+ "marks": 6,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      272.0,
+      570.0,
+      373.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 3,
+      "answer_line": "a  =  ……",
+      "working_gap_pt": 10.7,
+      "height_pt": 101.5
+     }
+    }
+   ],
+   "text": "Work out the value of each of a, b and c.\na  =  .................................................\nb  =  .................................................\nc  =  ................................................. [3]",
+   "marks": 3,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "[a =] 5\n[b =] 3\n[c =] 1",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.619998931884766,
+        161.2,
+        547.7999877929688,
+        210.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Work out the value of each of <i>a</i>, <i>b</i> and <i>c</i>.",
+     "text": "Work out the value of each of a, b and c."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "a ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "b ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "c ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      376.0,
+      570.0,
+      425.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 10.9,
+      "height_pt": 49.5
+     }
+    }
+   ],
+   "text": "An employee is chosen at random.\nFind the probability that this employee",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        30.0,
+        428.0,
+        570.0,
+        490.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 23.7,
+        "height_pt": 62.5
+       }
+      }
+     ],
+     "text": "was on time,\n.................................................. [1]",
+     "marks": 1,
+     "path": "7(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "7(b)(i)",
+       "text": "17\noe\n20",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.619998931884766,
+          210.9,
+          547.7999877929688,
+          252.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "was on time,",
+       "text": "was on time,"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        30.0,
+        506.0,
+        570.0,
+        568.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 23.7,
+        "height_pt": 62.5
+       }
+      }
+     ],
+     "text": "did not eat breakfast,\n.................................................. [1]",
+     "marks": 1,
+     "path": "7(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "7(b)(ii)",
+       "text": "6\noe\n20",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.619998931884766,
+          252.7,
+          547.7999877929688,
+          294.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "did not eat breakfast,",
+       "text": "did not eat breakfast,"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        30.0,
+        584.0,
+        570.0,
+        646.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 23.7,
+        "height_pt": 62.5
+       }
+      }
+     ],
+     "text": "ate breakfast and was late for work.\n.................................................. [1]",
+     "marks": 1,
+     "path": "7(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "7(b)(iii)",
+       "text": "2\noe\n20",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.619998931884766,
+          294.5,
+          547.7999877929688,
+          336.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "ate breakfast and was late for work.",
+       "text": "ate breakfast and was late for work."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "7(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "An employee is chosen at random. Find the probability that this employee",
+     "text": "An employee is chosen at random. Find the probability that this employee"
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 3,
+ "variant": 3,
+ "paper_code": "0607/33",
+ "paper_type": "core_long_answer",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "One day, Mr Amir made a note of the number of employees who were on time for work and the number who were late for work. He asked each employee if they ate breakfast or not. The information is shown in the table.",
+   "text": "One day, Mr Amir made a note of the number of employees who were on time for work and the number who were late for work. He asked each employee if they ate breakfast or not. The information is shown in the table."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "",
+     "Number who ate breakfast",
+     "Number who did not eat breakfast",
+     "Total"
+    ],
+    [
+     "Number who were on time for work",
+     "12",
+     "<i>a</i>",
+     "17"
+    ],
+    [
+     "Number who were late for work",
+     "2",
+     "<i>c</i>",
+     "<i>b</i>"
+    ],
+    [
+     "Total",
+     "14",
+     "6",
+     "20"
+    ]
+   ]
+  }
+ ]
+}

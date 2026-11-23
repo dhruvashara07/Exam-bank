@@ -1,0 +1,293 @@
+{
+ "id": "0607_2020ON_22_q11",
+ "number": 11,
+ "segments": [],
+ "text": "",
+ "marks": 4,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    92.0,
+    327.1000061035156,
+    464.70001220703125,
+    429.29998779296875
+   ],
+   "id": "0607_2020ON_22_q11a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    189.0,
+    471.0,
+    406.9,
+    615.3
+   ],
+   "id": "0607_2020ON_22_q11b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      295.7,
+      570.0,
+      436.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 54.0,
+      "height_pt": 140.3
+     }
+    }
+   ],
+   "text": "In each Venn diagram, shade the given set.\nU\nU\nA\nB\nA\nB\nA\nB\nA\nB\n(\n)\nl\n,\n+\n[2]",
+   "marks": 2,
+   "path": "11(a)",
+   "mark_scheme": [
+    {
+     "label": "11(a)",
+     "text": "",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        89.4,
+        549.0,
+        281.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "In each Venn diagram, shade the given set.",
+     "text": "In each Venn diagram, shade the given set."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2020ON_22_q11a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 54.0
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      438.9,
+      570.0,
+      649.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 31.9,
+      "height_pt": 210.6
+     }
+    }
+   ],
+   "text": "In this Venn diagram, the number of elements in each of the subsets is shown.\nU\nP\nQ\n7\n4\n12\n3\n5\n6\n11\n8\nR\nFind.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        30.0,
+        654.2,
+        570.0,
+        719.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 26.2,
+        "height_pt": 64.8
+       }
+      }
+     ],
+     "text": "n\n(\nP\n(\nQ\nR\n))\n,\n+\n................................................. [1]",
+     "marks": 1,
+     "path": "11(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "11(b)(i)",
+       "text": "30",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.380001068115234,
+          281.4,
+          549.0,
+          305.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "n (<i>P</i> , (<i>Q</i> + <i>R</i>))",
+       "text": "n (P , (Q + R))"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        30.0,
+        721.5,
+        570.0,
+        786.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 26.2,
+        "height_pt": 64.5
+       }
+      }
+     ],
+     "text": "n\n((\nP\nQ\n)\nR\n)'\n,\n+\n................................................. [1]",
+     "marks": 1,
+     "path": "11(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "11(b)(ii)",
+       "text": "23",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.380001068115234,
+          305.8,
+          549.0,
+          330.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "n ((<i>P</i> , <i>Q</i>) + <i>R</i><i>&#x27;</i>)",
+       "text": "n ((P , Q) + R')"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "11(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "In this Venn diagram, the number of elements in each of the subsets is shown.",
+     "text": "In this Venn diagram, the number of elements in each of the subsets is shown."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2020ON_22_q11b_diagram2",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Find.",
+     "text": "Find."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2020,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 2,
+ "variant": 2,
+ "paper_code": "0607/22",
+ "paper_type": "extended_short_answer",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}
