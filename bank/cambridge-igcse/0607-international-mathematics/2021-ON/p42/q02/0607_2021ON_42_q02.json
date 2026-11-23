@@ -320,20 +320,20 @@
         30.0,
         511.0,
         570.0,
-        534.5
+        568.0
        ],
        "continued": false,
        "answer_space": {
-        "kind": "none",
-        "dotted_lines": 0,
+        "kind": "lines",
+        "dotted_lines": 1,
         "answer_line": null,
-        "working_gap_pt": 4.0,
-        "height_pt": 23.5
+        "working_gap_pt": 23.9,
+        "height_pt": 57.0
        }
       }
      ],
-     "text": "fx,\n()",
-     "marks": 0,
+     "text": "fx,\n()\n................................................. [1]",
+     "marks": 1,
      "path": "2(e)(i)",
      "mark_scheme": [
       {
@@ -360,6 +360,15 @@
        "type": "text",
        "html": "f (<i>x</i>),",
        "text": "f (x),"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
       }
      ]
     },
@@ -370,22 +379,22 @@
        "page": 4,
        "bbox": [
         30.0,
-        556.4,
+        568.0,
         570.0,
         625.0
        ],
        "continued": false,
        "answer_space": {
         "kind": "lines",
-        "dotted_lines": 2,
+        "dotted_lines": 1,
         "answer_line": null,
         "working_gap_pt": 23.9,
-        "height_pt": 68.6
+        "height_pt": 57.0
        }
       }
      ],
-     "text": "................................................. [1]\n(ii)\ngx.\n()\n................................................. [1]",
-     "marks": 2,
+     "text": "gx.\n()\n................................................. [1]",
+     "marks": 1,
      "path": "2(e)(ii)",
      "mark_scheme": [
       {
@@ -416,11 +425,11 @@
       {
        "type": "answer",
        "kind": "lines",
-       "lines": 2
+       "lines": 1
       },
       {
        "type": "marks",
-       "value": 2
+       "value": 1
       }
      ]
     }
