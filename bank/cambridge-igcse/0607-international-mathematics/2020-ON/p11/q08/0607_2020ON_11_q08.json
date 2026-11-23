@@ -27,29 +27,15 @@
    "caption": null,
    "page": 4,
    "bbox": [
-    85.6,
-    448.6,
-    557.6,
-    674.5
+    119.1,
+    489.1,
+    478.1,
+    672.2
    ],
    "id": "0607_2020ON_11_q08_diagram1",
    "alt": "",
    "kind": "diagram",
    "part": ""
-  },
-  {
-   "caption": null,
-   "page": 4,
-   "bbox": [
-    91.6,
-    677.5,
-    557.6,
-    744.2
-   ],
-   "id": "0607_2020ON_11_q08a_diagram2",
-   "alt": "",
-   "kind": "diagram",
-   "part": "(a)"
   }
  ],
  "review": {
@@ -103,13 +89,18 @@
    ],
    "content": [
     {
-     "type": "figure",
-     "id": "0607_2020ON_11_q08a_diagram2",
-     "caption": null
+     "type": "text",
+     "html": "Work out how many more boys than girls named English as their favourite subject.",
+     "text": "Work out how many more boys than girls named English as their favourite subject."
     },
     {
      "type": "answer",
-     "kind": "lines"
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
     }
    ]
   },
@@ -195,14 +186,14 @@
  "pipeline_version": "2.1",
  "content": [
   {
+   "type": "text",
+   "html": "Some students were each asked to name their favourite subject. The bar chart shows the results.",
+   "text": "Some students were each asked to name their favourite subject. The bar chart shows the results."
+  },
+  {
    "type": "figure",
    "id": "0607_2020ON_11_q08_diagram1",
    "caption": null
-  },
-  {
-   "type": "text",
-   "html": "<b>8</b>",
-   "text": "8"
   }
  ]
 }
