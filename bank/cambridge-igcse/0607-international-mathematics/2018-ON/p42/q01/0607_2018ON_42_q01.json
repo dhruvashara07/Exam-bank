@@ -24,10 +24,8 @@
  "marks": 10,
  "figures": [],
  "review": {
-  "reasons": [
-   "mark scheme row 1(ii) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -208,7 +206,26 @@
      "text": "Find the least number of complete years after which the value of the investment is more than $9000.\n.................................................... [4]",
      "marks": 4,
      "path": "1(b)(ii)",
-     "mark_scheme_on": "1",
+     "mark_scheme": [
+      {
+       "label": "1(b)(ii)",
+       "text": "12 nfww",
+       "codes": [
+        "4"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.380001068115234,
+          255.4,
+          548.9400024414062,
+          391.6
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -238,26 +255,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "1(ii)",
-   "text": "12 nfww",
-   "codes": [
-    "4"
-   ],
-   "segments": [
-    {
-     "page": 4,
-     "bbox": [
-      46.380001068115234,
-      255.4,
-      548.9400024414062,
-      391.6
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

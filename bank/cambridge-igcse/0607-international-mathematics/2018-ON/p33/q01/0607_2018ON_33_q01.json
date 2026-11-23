@@ -534,20 +534,20 @@
       30.0,
       616.0,
       570.0,
-      663.0
+      714.0
      ],
      "continued": false,
      "answer_space": {
-      "kind": "none",
-      "dotted_lines": 0,
-      "answer_line": null,
-      "working_gap_pt": 11.3,
-      "height_pt": 47.0
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "s=  …… [2]",
+      "working_gap_pt": 39.7,
+      "height_pt": 98.0
      }
     }
    ],
-   "text": "s\n2\nm\n3\nn\n=\n+\nFind the value of s when m= 4.8 and n= 1.6 .",
-   "marks": 0,
+   "text": "s\n2\nm\n3\nn\n=\n+\nFind the value of s when m= 4.8 and n= 1.6 .\ns=  .................................................... [2]",
+   "marks": 2,
    "path": "1(e)",
    "mark_scheme": [
     {
@@ -574,6 +574,15 @@
      "type": "text",
      "html": "<i>s</i> = 2<i>m</i> + 3<i>n</i> Find the value of <i>s</i> when <i>m</i> = 4.8 and <i>n</i> = 1.6 .",
      "text": "s = 2m + 3n Find the value of s when m = 4.8 and n = 1.6 ."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "s ="
+    },
+    {
+     "type": "marks",
+     "value": 2
     }
    ]
   },
@@ -584,22 +593,22 @@
      "page": 3,
      "bbox": [
       30.0,
-      702.8,
+      714.0,
       570.0,
       768.0
      ],
      "continued": false,
      "answer_space": {
-      "kind": "answer_line",
-      "dotted_lines": 2,
-      "answer_line": "s=  …… [2]",
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
       "working_gap_pt": 21.5,
-      "height_pt": 65.2
+      "height_pt": 54.0
      }
     }
    ],
-   "text": "s=  .................................................... [2]\n(f)\nChange 2.3 kilometres into metres.\n.................................................m [1]",
-   "marks": 3,
+   "text": "Change 2.3 kilometres into metres.\n.................................................m [1]",
+   "marks": 1,
    "path": "1(f)",
    "mark_scheme": [
     {
@@ -623,11 +632,6 @@
    ],
    "content": [
     {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "s ="
-    },
-    {
      "type": "text",
      "html": "Change 2.3 kilometres into metres.",
      "text": "Change 2.3 kilometres into metres."
@@ -638,8 +642,12 @@
      "unit": "m"
     },
     {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
      "type": "marks",
-     "value": 3
+     "value": 1
     }
    ]
   }

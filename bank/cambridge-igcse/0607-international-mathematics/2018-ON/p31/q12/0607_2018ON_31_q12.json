@@ -66,20 +66,20 @@
       30.0,
       229.2,
       570.0,
-      251.5
+      338.0
      ],
      "continued": false,
      "answer_space": {
-      "kind": "none",
-      "dotted_lines": 0,
-      "answer_line": null,
-      "working_gap_pt": 4.0,
-      "height_pt": 22.3
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "x =  ……  [2]",
+      "working_gap_pt": 76.4,
+      "height_pt": 108.8
      }
     }
    ],
-   "text": "Find the value of x.",
-   "marks": 0,
+   "text": "Find the value of x.\nx =  ..................................................  [2]",
+   "marks": 2,
    "path": "12(a)",
    "mark_scheme": [
     {
@@ -106,6 +106,15 @@
      "type": "text",
      "html": "Find the value of <i>x</i>.",
      "text": "Find the value of x."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "x ="
+    },
+    {
+     "type": "marks",
+     "value": 2
     }
    ]
   },
@@ -116,22 +125,22 @@
      "page": 15,
      "bbox": [
       30.0,
-      326.8,
+      338.0,
       570.0,
       520.5
      ],
      "continued": false,
      "answer_space": {
-      "kind": "answer_line",
-      "dotted_lines": 1,
-      "answer_line": "x =  ……  [2]",
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
       "working_gap_pt": 36.2,
-      "height_pt": 193.7
+      "height_pt": 182.5
      }
     }
    ],
-   "text": "x =  ..................................................  [2]\n(b)\nNOT TO\nycm\nSCALE\n27cm\np°\n34cm\nFor the smaller computer screen, work out",
-   "marks": 2,
+   "text": "NOT TO\nycm\nSCALE\n27cm\np°\n34cm\nFor the smaller computer screen, work out",
+   "marks": 0,
    "parts": [
     {
      "label": "i",
@@ -259,11 +268,6 @@
    "path": "12(b)",
    "content": [
     {
-     "type": "answer",
-     "kind": "answer_line",
-     "prefix": "x ="
-    },
-    {
      "type": "figure",
      "id": "0607_2018ON_31_q12b_diagram2",
      "caption": null
@@ -272,10 +276,6 @@
      "type": "text",
      "html": "For the smaller computer screen, work out",
      "text": "For the smaller computer screen, work out"
-    },
-    {
-     "type": "marks",
-     "value": 2
     }
    ]
   }

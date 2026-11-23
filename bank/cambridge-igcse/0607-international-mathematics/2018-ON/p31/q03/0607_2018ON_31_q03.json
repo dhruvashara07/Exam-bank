@@ -21,7 +21,7 @@
   }
  ],
  "text": "Here is a rectangle drawn on a 1 cm2 grid.\n3",
- "marks": 12,
+ "marks": 7,
  "figures": [
   {
    "caption": null,
@@ -72,14 +72,14 @@
      "answer_space": {
       "kind": "answer_line",
       "dotted_lines": 2,
-      "answer_line": "Perimeter =……  cm2  [2]",
+      "answer_line": "Perimeter =……  cm2",
       "working_gap_pt": 10.5,
       "height_pt": 74.8
      }
     }
    ],
-   "text": "Work out the perimeter and the area of the rectangle.\nPerimeter =...................................................  cm2  [2]\nArea =  ...................................................  cm2  [2]",
-   "marks": 4,
+   "text": "Work out the perimeter and the area of the rectangle.\nPerimeter =...................................................  cm2\nArea =  ...................................................  cm2  [2]",
+   "marks": 2,
    "path": "3(a)",
    "mark_scheme": [
     {
@@ -134,20 +134,20 @@
       30.0,
       354.2,
       570.0,
-      403.0
+      437.0
      ],
      "continued": false,
      "answer_space": {
-      "kind": "none",
-      "dotted_lines": 0,
+      "kind": "lines",
+      "dotted_lines": 1,
       "answer_line": null,
-      "working_gap_pt": 11.5,
-      "height_pt": 48.8
+      "working_gap_pt": 24.5,
+      "height_pt": 82.8
      }
     }
    ],
-   "text": "A square has the same area as the rectangle.\nWork out the length of one side of the square.",
-   "marks": 0,
+   "text": "A square has the same area as the rectangle.\nWork out the length of one side of the square.\n.....................................................  cm  [2]",
+   "marks": 2,
    "path": "3(b)",
    "mark_scheme": [
     {
@@ -174,6 +174,19 @@
      "type": "text",
      "html": "A square has the same <b>area</b> as the rectangle. Work out the length of one side of the square.",
      "text": "A square has the same area as the rectangle. Work out the length of one side of the square."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "cm"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
     }
    ]
   },
@@ -184,22 +197,22 @@
      "page": 6,
      "bbox": [
       30.0,
-      426.2,
+      437.0,
       570.0,
       734.0
      ],
      "continued": false,
      "answer_space": {
       "kind": "answer_line",
-      "dotted_lines": 3,
-      "answer_line": "b =……  cm  [3]",
+      "dotted_lines": 2,
+      "answer_line": "b =……  cm",
       "working_gap_pt": 102.4,
-      "height_pt": 307.8
+      "height_pt": 297.0
      }
     }
    ],
-   "text": ".....................................................  cm  [2]\n(c)\nNOT TO\nh\nSCALE\nb\nWork out a value forb and a value for h so that this triangle has the same area as the rectangle.\nb =....................................................  cm  [3]\nh =  ....................................................  cm  [3]",
-   "marks": 8,
+   "text": "NOT TO\nh\nSCALE\nb\nWork out a value forb and a value for h so that this triangle has the same area as the rectangle.\nb =....................................................  cm\nh =  ....................................................  cm  [3]",
+   "marks": 3,
    "path": "3(c)",
    "mark_scheme": [
     {
@@ -222,11 +235,6 @@
     }
    ],
    "content": [
-    {
-     "type": "answer",
-     "kind": "answer_line",
-     "unit": "cm"
-    },
     {
      "type": "figure",
      "id": "0607_2018ON_31_q03c_diagram2",
@@ -251,7 +259,7 @@
     },
     {
      "type": "marks",
-     "value": 8
+     "value": 6
     }
    ]
   }
@@ -268,7 +276,7 @@
  "variant": 1,
  "paper_code": "0607/31",
  "paper_type": "core_long_answer",
- "total_marks": 12,
+ "total_marks": 7,
  "topic": null,
  "subtopic": null,
  "keywords": [],
