@@ -47,7 +47,7 @@ chat. If the repo layout or the rules change, change START_HERE / PLAYBOOK - nev
 
 ## Prompts for the next batches (same text, change the batch line)
 - M1: `Task: maths 0607 batch M1 (docs/MATHS_PLAN.md section 5), full cycle as in the playbook.`
-- M2: same with M2.  M3: same with M3 (it needs 2019 May/June from me: remind me first).  M4: same with M4.
+- M2: same with M2.  M3: sessions 2018-MJ 2018-ON 2020-MJ 2020-ON (2019 May/June is skipped = NOT DONE, a later batch M3b once I upload it; do not remind me).  M4: same with M4.
 - Continue an unfinished batch: `Task: continue maths batch <M?> from PROGRESS.md NEXT line.`
 
 ## Using less of the weekly limit (what costs most)

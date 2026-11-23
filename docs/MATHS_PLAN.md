@@ -71,7 +71,7 @@ the LaTeX builder working with a check, measured times -> decide if 3 years per 
 | --- | --- | --- |
 | M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 (built 2026-11-17; rounds 32-33; APPROVED 2026-11-17) |
 | M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 117 (built 2026-11-19 with the two-pass flow) |
-| M3 | 2018-MJ 2018-ON 2019-MJ (**remind Dhruv: he must upload it**) 2020-MJ 2020-ON | 85 |
+| M3 | 2018-MJ 2018-ON 2020-MJ 2020-ON (**2019-MJ SKIPPED by Dhruv 2026-11-23: NOT DONE, no PDFs yet; build it later as 'M3b' when he uploads it**) | ~68 |
 | M4 | 2014-ON 2015-MJ 2015-ON 2016-MJ 2016-ON 2017-MJ 2017-ON | 115 |
 Order: newest first (closest to the pilot's 2025 rules), oldest last. If the pilot shows a chat cannot hold a
 batch, split it (e.g. M2a/M2b) and tell Dhruv.

@@ -10,8 +10,8 @@ Read this first in every session. Update it before ending a session.
   approval, 2023 MJ 32; 2026 MJ 11 q18(b), 2026 MJ 22 q6), approve 0607_2023MJ_32; (2) Dhruv DECIDED (2026-11-22): redraw ALL
   blurry raster MS screenshots of M2 (~60 graphs / Venn pictures) as a batch of its own (ms_graphs.SPECS, each function read by eye); (3) re-show in the next round
   (--recheck) the approved questions whose figures changed in round 34 (2014MJ_32_q09b, 2019ON_11/12_q06, 2025MJ_13_q14a,
-  2021FM_22_q02, 2022ON_61_q03/q04, 2023MJ_11_q16, 2023ON_32_q08, 2023ON_42_q09, 2025ON_61_q02); (4) then M3 (2018-2020) in a
-  NEW chat (remind Dhruv to upload 2019 May/June first). Dhruv may continue in another Claude account: put docs/NEXT_CHAT.md
+  2021FM_22_q02, 2022ON_61_q03/q04, 2023MJ_11_q16, 2023ON_32_q08, 2023ON_42_q09, 2025ON_61_q02); (4) then M3 = 2018-MJ, 2018-ON, 2020-MJ, 2020-ON (4 sessions; 2019-MJ SKIPPED on purpose, NOT DONE - PDFs missing, Dhruv uploads it later and it becomes batch M3b; 2020-MJ has only 30 PDFs in raw/manifest.json, check the paper list) in a
+  NEW chat (do NOT remind about 2019 May/June: skipped). Dhruv may continue in another Claude account: put docs/NEXT_CHAT.md
   prompt there (skill, memory, review page feedback do not carry over; the repo does).
 - 2026-11-22: ROUND 34 CLOSED (13 items, 6 wrong -> patterns 234-239, all fixed and checked side by side), M2 APPROVED: 116 of
   117 papers (2023 MJ 32 waits for pattern 240). Pass 2 on GitHub (run 45052380975): 2 not fixed passed (231 grids), 17 NEW
@@ -304,3 +304,5 @@ reads it in Settings > Usage before/after a year (I cannot see it).
 | 2024 (+ start 2025-26) | 2026-11-07 | 9.5 | 39 % | - |
 | 2025-2026 + round 20 | 2026-11-09 | 6.6 (to 14:00) + round 20 fixes | 27 % | - |
 | round 20 fixes + 2013-2015 + round 21 | 2026-11-09 12:30-18:30 | - | - | 15 % (Dhruv) |
+
+- NOT DONE (recorded 2026-11-23): maths 2019 May/June (0607 2019-MJ) - skipped in M3 by Dhruv's choice, PDFs missing; later batch M3b. Also not done: 2002-2012, the ~60 raster MS picture redraws of M2, 3 vector-bracket defects (pattern 240), MongoDB push of everything.
