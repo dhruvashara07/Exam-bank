@@ -35,7 +35,8 @@
   "review": [
    {
     "start": "2026-11-24T13:16:44+00:00",
-    "end": null
+    "end": "2026-11-24T16:22:22+00:00",
+    "note": "round 39: 8 ok, 8 wrong"
    }
   ],
   "fix": [
@@ -43,6 +44,11 @@
     "start": "2026-11-24T12:31:41+00:00",
     "end": "2026-11-24T13:14:47+00:00",
     "note": "181 flagged pictures: 180 redrawn, 1 kept; 1 local rebuild"
+   },
+   {
+    "start": "2026-11-24T16:22:22+00:00",
+    "end": "2026-11-24T17:09:05+00:00",
+    "note": "round 39 fixes, round 40 built"
    }
   ]
  },
@@ -77,6 +83,22 @@
    "fix": "left room from the widest y number; white ground under ticks; clashing y tick dropped; axes sampled for label placement",
    "found_by": "claude",
    "at": "2026-11-24T13:16:44+00:00"
+  },
+  {
+   "pattern": "275",
+   "kind": "new",
+   "what": "dot paper (triangle) cut as half a picture",
+   "fix": "extract: triangle lattice rule",
+   "found_by": "claude",
+   "at": "2026-11-24T17:09:05+00:00"
+  },
+  {
+   "pattern": "274",
+   "kind": "new",
+   "what": "graph grid/aspect chosen by eye",
+   "fix": "RD2_LOOK measured from printed screenshot, unsure list",
+   "found_by": "claude",
+   "at": "2026-11-24T17:09:05+00:00"
   }
  ],
  "tokens": [],
@@ -160,6 +182,26 @@
   {
    "at": "2026-11-24T13:16:44+00:00",
    "task": "phase RD2 review"
+  },
+  {
+   "at": "2026-11-24T16:22:22+00:00",
+   "task": "phase RD2 review"
+  },
+  {
+   "at": "2026-11-24T16:22:22+00:00",
+   "task": "phase RD2 fix"
+  },
+  {
+   "at": "2026-11-24T17:09:05+00:00",
+   "task": "error RD2 --pattern"
+  },
+  {
+   "at": "2026-11-24T17:09:05+00:00",
+   "task": "error RD2 --pattern"
+  },
+  {
+   "at": "2026-11-24T17:09:05+00:00",
+   "task": "phase RD2 fix"
   }
  ]
 }

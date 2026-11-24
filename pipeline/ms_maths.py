@@ -977,6 +977,9 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                 gw = min(ours[c][1] - ours[c][0] - 2 * PAD, max(gsp.get('w', 230.0), (px1 - px0)))
                 gh = max(gsp.get('h', 110.0), (py1 - py0))
                 gL, gT = ms_graphs.draw(gsp, gw, gh)
+                yb_ = [b_[3] for b_ in (_bbox(l_['d']) for l_ in gL) if b_] + [t_['y'] + 0.3 * t_.get('s', 9) for t_ in gT]
+                if yb_ and max(yb_) + 2 < gh:           # (Dhruv round 39) the cell is as tall as the DRAWING: a drawing
+                    gh = max(yb_) + 2                   # smaller than the printed picture left empty space under it
                 ox_, oy_ = ours[c][0] + PAD, py0 + shift
                 if gh > (py1 - py0) + 0.5:              # the drawing is taller than the printed picture: what is under
                     CTX.setdefault('pic_grow', []).append(  # it in the row moves down (Dhruv round 38, 2021 MJ 63 7(d):
@@ -988,6 +991,7 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                     t2 = dict(t_, x=round(t_['x'] + ox_, 2), y=round(t_['y'] + oy_, 2), f=fam or 'serif', _g=1); v['text'].append(t2)
                 CTX.setdefault('pic_spans', []).append((py0, py1))
                 bottoms.append(max(oy_ + gh + 3.0, tb or 0))
+                CTX.setdefault('pic_bots', []).append(bottoms[-1])   # (already below the grown picture: never moved again)
                 lp_out = [i for i in inpic if i.kind in ('t', 'lines', 'glyphs') and not (py0 - 1 <= (i.y0 + i.y1) / 2 <= py1 + 1)]
                 if lp_out:
                     pl_, bt_, _ = _cell(lp_out, cells_src[c][0], cells_src[c][1], ours[c][0], ours[c][1], push=push_for(c))
@@ -1043,7 +1047,9 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                     g_['y'] = round(g_['y'] + ext_, 2)
         placed_all = [(a0, b0 + ext_, a1, b1 + ext_, k0) if b0 >= thr_ - 0.5 else (a0, b0, a1, b1, k0)
                       for a0, b0, a1, b1, k0 in placed_all]
-        bottoms[:] = [b_ + ext_ if b_ > thr_ + 0.5 else b_ for b_ in bottoms]
+        own_ = CTX.get('pic_bots', [])           # (Dhruv round 39: the drawing's own bottom moved down by its own growth
+        bottoms[:] = [b_ + ext_ if b_ > thr_ + 0.5 and b_ not in own_ else b_ for b_ in bottoms]   # = empty space under it)
+    CTX.pop('pic_bots', None)
     for l_ in v['lines']:
         l_.pop('_g', None)
     for t_ in v['text']:

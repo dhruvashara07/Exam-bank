@@ -5,7 +5,7 @@ for example question 4's stem, 4(a)'s stem, or 4(a)(ii). Printing the segments o
 question (or of a chosen part plus its parent stems) in order reproduces the original
 layout, answer space included.
 """
-import os, re
+import math, os, re
 import subjects
 import pymupdf as fitz
 from layout import _maths_page, page_bounds, visible_lines, ink_boxes, label_tokens, ROMAN, LETTERS, CONTENT_X0, CONTENT_X1, row_ink, ink_extent, ZOOM, tight_ink, grow_to_ink
@@ -555,6 +555,28 @@ def diagrams(doc, seg, lines, captioned):
         lattice_ = fitz.Rect(rd_[0])
         for d_ in rd_:
             lattice_ |= d_
+    if lattice_ is None and maths_doc(doc):    # (Dhruv round 39, 2025 FM 52 q2) TRIANGLE dot paper (every other row moved
+        tri_ = [d_['rect'] for d_ in drs_all if d_.get('fill') is not None and 1.5 <= d_['rect'].width <= 5.5    # half a
+                and abs(d_['rect'].width - d_['rect'].height) < 0.6 and seg_r_.intersects(d_['rect'])]           # step) with
+        ok_ = False
+        if len(tri_) >= 20 and len({round(r_.width, 1) for r_ in tri_}) <= 2:     # one dot size, a real lattice:
+            rows_ = {}
+            for r_ in tri_:
+                rows_.setdefault(round((r_.y0 + r_.y1) / 2), []).append((r_.x0 + r_.x1) / 2)
+            full_ = [sorted(v) for v in rows_.values() if len(v) >= 3]
+            if len(full_) >= 3 and sum(len(v) for v in full_) >= 0.9 * len(tri_):
+                gaps_ = sorted(round(v[i + 1] - v[i], 0) for v in full_ for i in range(len(v) - 1))
+                d_ = gaps_[len(gaps_) // 2]                                         # (same step along every row,
+                if d_ > 12 and all(abs(g - d_) <= 1.5 for g in gaps_):              # neighbouring rows moved half of it)
+                    offs_ = sorted({round(v[0] % d_) for v in full_})
+                    ys_ = sorted(rows_)
+                    ok_ = len(offs_) >= 2 and any(abs(abs(o - offs_[0]) - d_ / 2) <= 2.5 for o in offs_[1:]) and len(ys_) >= 3
+        if ok_ and any(sum(1 for r_ in tri_ if (c_['r'] + (-12, -12, 12, 12)).contains(r_)) >= 0.8 * len(tri_) for c_ in cl):
+            ok_ = False        # the picture already holds the whole lattice (house of cards, 2024 ON 61): approved, unchanged
+        if ok_:
+            lattice_ = fitz.Rect(tri_[0])
+            for d_ in tri_:
+                lattice_ |= d_
     for c in cl:
         r = c['r']
         if r.width < 25 or r.height < 20:

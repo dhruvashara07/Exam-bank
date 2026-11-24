@@ -625,3 +625,9 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   (Venns, grid shapes, parallelograms) and moving labels off lines. Repeat error: pattern 265 again (several spaces in one
   SVG text stretch it) - now numbers in tables / Venns are separate texts.
 - Approvals unchanged (the approval hash covers cut + marks, not the MS drawing): approve.py not needed.
+- RD2 fixes after round 39 (Dhruv: 'don't change grid from original, match it, flag if you cannot decide'): every graph now takes
+  grid, aspect and tick size from the printed screenshot (RD2_LOOK); 8 graphs with a too-faint grid are flagged (RD2_GRID_UNSURE)
+  and shown in round 40. Fixed the 8 wrong items (black square, no empty cell space, finer minor grid, tables at 11 pt, trees with
+  the question's angles, root sign instead of a box, no grid in 2025 MJ 62 9(c)(i)). Question figure on triangle dot paper (2025 FM 52
+  q2) was half a picture: extract.diagrams now knows triangle lattices (patterns 274-276). Side by side: ~40 graphs checked, spill
+  check 0 real problems, golden 0, nothing under 0625-physics.

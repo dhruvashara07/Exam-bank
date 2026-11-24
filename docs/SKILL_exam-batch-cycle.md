@@ -115,6 +115,8 @@ MATHS_PLAN.md if the plan changed; docs/NEXT_CHAT.md prompt; `pipeline/push.sh`;
 - Question-side crop changes (store.fit_crop): measure on ALL stored maths figures, render old | new for every changed one.
 - Blurry raster MS pictures: ms_graphs.SPECS (graph, 'tree', 'venn', 'bars' spec; 'band', 'tags', 'vlines', 'h'). M2+M3 done
   2026-11-24 (pattern 264); in a new batch redraw them in the batch itself. After every SPECS edit: ms_rebuild.py <qids> | grep failed.
+  Graph redraws copy the PRINTED screenshot's grid, aspect and tick size (ms_graphs.RD2_LOOK, measured; no grid if the original has none);
+  where the grid cannot be counted list it in RD2_GRID_UNSURE and ask Dhruv (pattern 274). Triangle dot paper stays real dots (pattern 275).
 
 ## M3 additions (2026-11-23)
 - Blast before every push: figure rules (extract.diagrams, store.fit_crop) -> `pipeline/fig_blast.py` (old git worktree vs

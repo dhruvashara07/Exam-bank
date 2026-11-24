@@ -9,7 +9,7 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 | M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 117 | 100.3 | 131.2 | 0.0 | 0.0 | 0.0 | 100.3 | 13 | 28 | 4 | n/a |
 | M3 | 2018-MJ 2018-ON 2020-MJ 2020-ON | 69 | 29.2 | 0.2 | 38.4 | 0.0 | 0.0 | 67.6 | 8 | 15 | 0 | n/a |
 | RD |  |  | 0.0 | 0 | 0.0 | 0.0 | 13.2 | 13.2 |  | 0 | 0 | n/a |
-| RD2 | 2014-MJ 2018-MJ 2018-ON 2019-ON 2020-MJ 2020-ON 2021-FM 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON 2024-FM 2024-MJ 2024-ON 2025-FM 2025-MJ 2025-ON 2026-FM 2026-MJ | 0 | 0.0 | 0 | 0.0 | 0.0 | 43.1 | 43.1 | 16 | 3 | 0 | n/a |
+| RD2 | 2014-MJ 2018-MJ 2018-ON 2019-ON 2020-MJ 2020-ON 2021-FM 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON 2024-FM 2024-MJ 2024-ON 2025-FM 2025-MJ 2025-ON 2026-FM 2026-MJ | 0 | 0.0 | 0 | 0.0 | 0.0 | 89.8 | 89.8 | 16 | 5 | 0 | n/a |
 
 ## Errors per batch (new = first time, repeat = a pattern seen before: the doc or the fix failed)
 
@@ -179,6 +179,8 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - [new] pattern 271: RD2: 181 blurry MS pictures in all batches (tables, grid shapes, dots, pies, Venns, trees, mappings, plots, graphs) had no drawer → ms_graphs: table / plane (squares, dots, iso, isov, panels, stack) / pie / map drawers, smooth data curves, alts per label (found by claude)
 - [new] pattern 272: a formula line under a screenshot (its bar / root lines in the picture's cluster) was swallowed by the redraw (2024 ON 61 2(d)) → ms_maths: the drawing replaces the pasted image's box only; lines/glyphs outside it stay text (found by claude)
 - [new] pattern 273: graph drawer: y numbers like 146000 spilled left of the cell; curves ran through tick numbers; '-1' twice at the origin; label boxes over an axis → left room from the widest y number; white ground under ticks; clashing y tick dropped; axes sampled for label placement (found by claude)
+- [new] pattern 275: dot paper (triangle) cut as half a picture → extract: triangle lattice rule (found by claude)
+- [new] pattern 274: graph grid/aspect chosen by eye → RD2_LOOK measured from printed screenshot, unsure list (found by claude)
 
 ## Repeats to act on
 

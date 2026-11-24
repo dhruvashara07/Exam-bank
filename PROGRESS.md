@@ -24,10 +24,9 @@ Read this first in every session. Update it before ending a session.
   2 pies, 2 mappings, 3 sketches), 1 kept (2025 FM 62 10(a), Dhruv decides). maths_check picture_checks: 0 left. One local
   rebuild (ms_rebuild, 105 questions written after the groups; all redraws looked at side by side); golden 0, nothing under
   0625; approvals unchanged (hash = cut + marks). Round 39 published (10 redraws + 5 calibration + 1 decision).
-- NEXT: (1) Round 39 (Dhruv): read feedback_r39, fix what is wrong, decide 2025 FM 62 10(a) (redraw or keep), close the round
-  and drop it from the page. (2) The round-34 recheck list. (3) 2024 ON 23 q7 partial marks a bit small. (4) Next maths batch
-  M4 (MATHS_PLAN 5): redraw blurry pictures inside the batch (ms_graphs drawers, picture_checks = 0 before the round).
-  Review page (shared account): https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8 - round 39 open. 2019-MJ SKIPPED on purpose (NOT DONE).
+- NEXT: (1) Round 40 (Dhruv): read feedback_r40 on the review page (10 fixes from round 39 + 8 graphs whose printed grid was too faint to decide:
+  say yes/no), fix what is wrong as a class, ms_rebuild + grep 'failed', golden 0, close and drop the round, docs, push with pipeline/push.sh.
+  (2) The triangle dot-paper rule (pattern 275) would change ~20 approved figures in 2022 ON 51, 2024 ON 51, 2024 ON 61 on a re-extract: show side by side first.
 - 2026-11-24: ROUND 36 closed (7 ok, 1 wrong: no function label on the redrawn 2019 ON 61 graph - removed). M3 APPROVED:
   62 of 69 papers + re-approved 2019 ON 43, 2021 ON 42, 2022 MJ 31, 2022 MJ 42 (their part marks were corrected); 7 M3
   papers kept pending for the known open MS pictures. Rounds 35-36 removed from the review page.

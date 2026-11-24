@@ -786,3 +786,15 @@ not what Dhruv wants (one picture). 2018 MJ 33 q5: the graph is drawn exactly (l
     clear); dense x ticks over a curve -> 'xlow'. Text in tables / Venns as separate tokens: an SVG text with several spaces
     collapses them and stretches to its width (pattern 265 again).
 Repeat check: pattern 264's rule 'grep failed after every SPECS edit' caught one broken spec (a comment pasted into a line).
+274. Graph look not matched to the printed screenshot (Dhruv round 39: 'don't change grid from original'). A grid, a square
+    versus wide aspect and small tick numbers were chosen by eye. Now measured on the printed screenshot (grid line spacing,
+    major lines, aspect) and stored per graph in ms_graphs.RD2_LOOK (ar, grid, gmaj, ts); no grid when the original has none.
+    Where the printed grid is too faint to count, the graph is listed in RD2_GRID_UNSURE and shown to Dhruv for a yes/no.
+275. Dot paper cut as half a picture (Dhruv round 39, 2025 FM 52 q2): extract.diagrams() only knew square dot paper
+    (>= 40 round dots on a grid). Triangle paper (every other row moved half a step, 4.8 pt dots, 12-90 dots) was not a lattice,
+    so the shaded shape was cut as a picture while the dots around it stayed dots. A TRIANGLE lattice rule now exists (one dot
+    size, same step along every row, rows moved half a step, 3+ rows) - shapes on it stay drawn with the dots. Blast radius
+    (fig_blast, 336 papers): only 2022 ON 51, 2024 ON 51 and 2024 ON 61 (house of cards / trapezium dot paper, ~20 figures) would
+    change on a later re-extract; they are approved and NOT rebuilt now - look at them side by side before they are.
+276. Row growth counted twice under a taller drawing (2022 MJ 33 q3, 'empty space below the cell'): the cell height now
+    shrinks to the drawing's real bottom and the later rows are shifted once (ms_maths pic_bots).
