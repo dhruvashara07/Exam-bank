@@ -271,7 +271,8 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
     rects_ = []
     for k, info in enumerate(page.get_image_info()):
         r = (fitz.Rect(info['bbox']).quad * m).rect & clip
-        if r.is_empty or r.width < 8 or r.height < 8 or not inside(r) or in_fig(r):
+        if r.is_empty or r.width < (4 if MATHS and r.height >= 20 else 8) or r.height < 8 or not inside(r) or in_fig(r):
+            #   (maths: a Venn letter pasted as a narrow image, 5-7 pt wide: 2020 ON 33 q8(b) lost R I O A T F C N, round 37)
             continue
         if MATHS and info.get('width', 99) * info.get('height', 99) <= 16:
             continue                          # a 2x2 px mask stretched under a formula line (2022 ON 43 q5(c), M2 reasons):

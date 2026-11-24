@@ -585,3 +585,8 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   fixed with the existing 'label': False. Dhruv: the one-picture rule is good, some rows must stay separate - he will name
   them. Approved 62 M3 papers + 4 corrected approved papers; the 7 papers with known open MS pictures stay pending (same as
   2023 MJ 32). Closed rounds are now removed from the review page (his request).
+- Round 37 (2026-11-24): Dhruv asked what is wrong in the 7 pending papers and to see it ('take photo'), redraw faint
+  ones. Sent before/after photos. Fixed all 7 (patterns 257-262): rows cut too high over Venns, Venn letters lost, 4 graphs
+  redrawn (faint sketch, plotted crosses, 2 blurry screenshots), root-sign cells kept as printed picture, formula list
+  kept one per line, shrunken marks. The row fix also corrects 14 other mark schemes (approved ones re-shown). Golden 0.
+

@@ -702,3 +702,20 @@ figure, pipeline/fig_blast.py) caught it before any push - run it for every extr
     A first version counted any 12 small dots and dropped real graph pictures (plotted points): the blast caught it.
 Calibration lesson: I had passed 2020 ON 51 q2 as 'matches print' - a row of 3 separate crops matched the print but is
 not what Dhruv wants (one picture). 2018 MJ 33 q5: the graph is drawn exactly (lines + text); Dhruv: drawn is fine.
+
+## Round 37 work (2026-11-24): the 7 pending M3 papers fixed (Dhruv: 'show me what is wrong, redraw faint ones')
+257. MS rows cut too high over a Venn of 1-pt image tiles: the Communication row-line floor now holds for every maths label
+    (only when the cut was lifted more than 6 pt) - 2018 MJ 33 q8(b)(i), 2020 MJ 31 q11(a)(i), 2020 ON 33 q8(b), 2020 ON 43 q8
+    and 14 other mark schemes (2018 MJ 42, 2019 ON 23, 2021 MJ 32, 2022 MJ 53/61, 2022 ON 63, 2023 MJ 63, 2023 ON 11, 2025 ON
+    51/53/61 ...). Closes 251 (a)/(b) and 252's Venn part.
+258. Venn letters pasted as narrow images (< 8 pt wide) were dropped: maths keeps images >= 4 pt wide when >= 20 pt tall (store.py).
+259. Faint / screenshot MS graphs redrawn (ms_graphs.SPECS, no function label): 2020 ON 43 8(a)(iii) (column 3, vector),
+    2020 ON 62 6(a) (12 plotted crosses, drawn over the line), 2018 ON 61 5(b)(i) and 6(c) (blurry screenshots with broken
+    grid). A spec now also works for a vector picture ('vector': True) and for the partial-marks column ('col': 3).
+260. A cell whose PDF text is unusable (root sign with no drawing of its bar, doubled bold letters) is kept as its printed
+    picture by name: ms_maths.PRINTED_CELLS (2018 ON 61 7(a), 7(b)(i)).
+261. A list of formulas is not re-flowed into one paragraph: a line ending with ':' or with 'oe' followed by a line with '='
+    starts a new line (2018 ON 63 q6(d)(i)).
+262. A white background box wider than our column made the text 'too wide' and shrank marks / partial marks to 70-88 %
+    (2020 MJ 31 q11(a)(i) '2'): wide white boxes are not ink in a text cell (6 questions had it).
+

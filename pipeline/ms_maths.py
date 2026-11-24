@@ -265,6 +265,10 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
     if not items:
         return [], None, None
     push = push or (lambda y: 0.0)
+    # a white box behind the printed text (the cell's own background) wider than our column is no ink: kept, it made the
+    # text's piece 'too wide' and shrank the marks / partial marks to 70-88 % (2020 MJ 31 q11(a)(i) '2', round 37)
+    items = [i for i in items if not (i.kind == 'lines' and (i.ref.get('fill') or '').lower() == '#ffffff'
+                                      and not i.ref.get('stroke') and i.x1 - i.x0 > (n1 - n0) - 2 * PAD)] or items
     lines = _lines_of(items)
     width = n1 - n0 - 2 * PAD
     left = min(i.x0 for i in items)
@@ -334,6 +338,13 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
         last = max((i for i in ln['its'] if i.kind == 't'), key=lambda i: i.x1, default=None)   # (round 30, Dhruv: write a
         t_ = last.ref.get('t', '').strip() if last else ''                                   # step whole, not broken)
         return bool(re.search(r'[÷×+\-–=(]$', t_)) or t_ in ('their', 'of', 'for', 'and', 'or', 'by', 'to', 'the')
+    def last_t(ln):             # the text at the end of the LAST printed line of (a joined) line
+        ln = ln['parts'][-1] if ln.get('parts') else ln
+        last = max((i for i in ln['its'] if i.kind == 't'), key=lambda i: i.x1, default=None)
+        return last.ref.get('t', '').strip() if last else ''
+    def list_line(a, b):        # a list of formulas ('... seen in working:' / 'sin a = v/T oe' / 'cos a = h/T oe') stays one
+        bt = ' '.join(i.ref.get('t', '') for i in b['its'] if i.kind == 't')   # per line (2018 ON 63 q6(d)(i), round 37)
+        return last_t(a).endswith(':') or (re.search(r'\boe$', last_t(a)) is not None and '=' in bt)
     k = 0
     while k < len(lines) - 1 and align != 'right':
         a, b = lines[k], lines[k + 1]
@@ -343,7 +354,7 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
         first_b = min(b['its'], key=lambda i: i.x0).ref.get('t', '') if plain(b) else ''
         if plain(a) and plain(b) and abs(ax0 - bx0) < 3 and b['y0'] - a['y1'] < 0.6 * lh_ and ax1 > c1 - 0.3 * (c1 - c0) \
                 and (ax1 - ax0) > width * 0.6 and (re.match(r'[a-z]', first_b) or open_end(a)) and not re.match(r'(or|and)$', first_b) \
-                and not re.match(r'(\(?[ABCM]\d|SC\d|FT|If|OR|AND|Method)\b', first_b) \
+                and not re.match(r'(\(?[ABCM]\d|SC\d|FT|If|OR|AND|Method)\b', first_b) and not list_line(a, b) \
                 and not any(a['y1'] - 1 < sy < b['y0'] + 1 and sx0 - 3 <= ax0 <= sx1 for sx0, sy, sx1 in CTX.get('subrules', [])):
             # (never across a printed sub-row rule: '... or better' + next sub-row '32.8 km/h', 2024 FM 62 q9(c), M1 check)
             # (only a line that goes on with a sentence: '[x =] 1.13 ...' or 'or ...' is a new answer line, round 28)
@@ -684,7 +695,7 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
     # the '1' mark stayed beside the wrong line). Pass 1 measures each column's growth by printed height.
     grows = {}
     for c in CS:
-        if by[c] and not (c == 3 and ncols == 3) and not ((_picture_cell(by[c]) or _has_table(by[c]) or u['src']['page'] in CTX.get('broken', ()))
+        if by[c] and not (c == 3 and ncols == 3) and not ((_picture_cell(by[c]) or _has_table(by[c]) or _brk(u, label, c))
                                                           and CTX.get('pdf')):
             g = []
             _cell(by[c] + (by[3] if c == 1 and ncols == 3 else []), cells_src[c][0], cells_src[c][1], ours[c][0], ours[c][1],
@@ -699,7 +710,7 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
     for c in CS:
         if c == 3 and ncols == 3:
             by[1] += by[3]; continue
-        if by[c] and u['src']['page'] not in CTX.get('broken', ()) and _has_table(by[c]):
+        if by[c] and not _brk(u, label, c) and _has_table(by[c]):
             # a table: everything inside its rules is one rigid block of its own lines, shading and text; text above / below
             # it is laid out as usual (round 29: tables as lines + text, never a picture; dotted rows split the old cluster)
             rl = [i for i in by[c] if i.kind == 'lines' and ((i.x1 - i.x0 < 1.6 and i.y1 - i.y0 > 8) or (i.y1 - i.y0 < 1.6 and i.x1 - i.x0 > 15)
@@ -781,7 +792,10 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
             placed_all.append((by0_, by0_ + shift, by1_, by0_ + shift + (by1_ - by0_) * k_, c))   # the table counts too
             bottoms.append(max(by0_ + shift + (by1_ - by0_) * k_ + 3.0, tb or 0))
             continue
-        if (_picture_cell(by[c]) or u['src']['page'] in CTX.get('broken', ())) and by[c] and CTX.get('pdf'):   # a diagram / shaded sketch in the cell: its printed picture (pattern 78)
+        _gs = __import__('ms_graphs').spec(CTX.get('qid'), label)
+        _forced = bool(_gs and _gs.get('vector') and c == _gs.get('col', 1) and any(i.kind != 't' for i in by[c]))
+        #   (a spec'd faint sketch is a picture even when its few thin lines don't look like one: 2020 ON 43 8(a)(iii))
+        if (_forced or _picture_cell(by[c]) or _brk(u, label, c)) and by[c] and CTX.get('pdf'):   # a diagram / shaded sketch in the cell: its printed picture (pattern 78)
             tbx =[(t.x0 - 1.5, t.y0 - 1.5, t.x1 + 1.5, t.y1 + 1.5) for t in by[c] if t.kind == 't']
             dr = [i for i in by[c] if i.kind != 't' and not (i.kind == 'lines' and i.y1 - i.y0 < 1.6 and i.x1 - i.x0 < 80)
                   and not (i.kind == 'lines' and max(i.x1 - i.x0, i.y1 - i.y0) < 40 and any(
@@ -817,7 +831,7 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                 #   half into the picture ('Correct sketch passing through (3, -5)' drawn twice, 2025 ON 63 q1, M1)
             # (short labels just outside the drawing go with it; words of the text around it do not - round 28, 2025 MJ 61
             # q1: the lines under a table went into its picture and everything shrank)
-            if u['src']['page'] in CTX.get('broken', ()):
+            if _brk(u, label, c):
                 inpic = list(by[c])                      # broken text layer: the whole cell is its printed picture
             grow = True                                  # text on the same line as the drawing belongs to the picture
             while grow:
@@ -873,8 +887,13 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                     pl_ab = [p_ for p_ in placed if p_[0] in above]
                     shift = max([p_[2] for p_ in pl_ab] + [0.0])
             shift = max(shift, push(py0))                # (the heading's placement already holds the push)
-            broken_pg = u['src']['page'] in CTX.get('broken', ())
-            drawn_ = (not broken_pg and not any(i.kind in ('images', 'figs') for i in inpic)
+            broken_pg = _brk(u, label, c)
+            import ms_graphs
+            gsp_ = ms_graphs.spec(CTX.get('qid'), label)
+            gsp_ = gsp_ if gsp_ and c == gsp_.get('col', 1) and (gsp_.get('vector') or any(i.kind in ('images', 'figs') for i in inpic)) else None
+            #   ('vector': a drawn graph that lost its points / is too faint is drawn again too; 'col': 3 = Partial Marks,
+            #    Dhruv round 37: 2020 ON 62 6(a), 2020 ON 43 8(a)(iii))
+            drawn_ = gsp_ is None and (not broken_pg and not any(i.kind in ('images', 'figs') for i in inpic)
                       and not _clash([i for i in inpic if i.kind == 't'])
                       and not any(i.kind == 'lines' and (i.ref.get('fill') or '').lower() not in ('', '#000000', '#ffffff', '#231f20')
                                   and (i.x1 - i.x0) * (i.y1 - i.y0) > 30 for i in inpic))
@@ -918,7 +937,7 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                 bottoms.append(max(by0 + shift + (by1 - by0) * k_ + 3.0, tb or 0))
                 continue
             import ms_graphs
-            gsp = ms_graphs.spec(CTX.get('qid'), label) if c == 1 and any(i.kind in ('images', 'figs') for i in inpic) else None
+            gsp = gsp_
             if gsp:                                     # a screenshot graph: drawn again from the question's function
                 K_ = u.get('_K', 1.0)                   # (Dhruv round 32, ms_graphs.SPECS)
                 gw = min(ours[c][1] - ours[c][0] - 2 * PAD, max(gsp.get('w', 230.0), (px1 - px0)))
@@ -1188,6 +1207,15 @@ def _sub_chain(v):
 
 
 CTX = {}
+
+
+PRINTED_CELLS = {   # cells whose PDF text layer is broken (doubled characters, a root sign with no drawing): shown as their
+    ('0607_2018ON_61_q07', '7(a)', 1), ('0607_2018ON_61_q07', '7(b)(i)', 1),   # printed picture (Dhruv round 37)
+}
+
+
+def _brk(u, label, c):
+    return u['src']['page'] in CTX.get('broken', ()) or (CTX.get('qid'), label, c) in PRINTED_CELLS
 
 
 def _inline_pic(i, items):
@@ -1868,3 +1896,4 @@ def build(q, uniq, store, hdr_unit, own_total, frame):
         rows[0]['lines'] += []
     return {'w': W, 'h': round(sum(v['h'] for v in rows), 2), 'rows': rows, 'problems': [], 'modes': {'maths': len(out)},
             'info': first, 'has_header': bool(hdr_unit), 'printed_total': None}
+

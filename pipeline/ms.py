@@ -273,7 +273,8 @@ def structured_rows_table(doc):
             y_ = l['y0'] - 4
             prev = labels[k - 1]['y1'] if k else top
             above = [ry for ry in qrules if prev + 1 < ry < l['y0'] - 1]
-            if MATHS and COMM.match(l['text']):
+            if MATHS:   # (all labels since round 37: a Venn of 1-pt image tiles touching the rule of 8(b)(ii) lifted its
+                #           cut above the whole Venn - 2018 MJ 33 q8, 2020 MJ 31 q11, 2020 ON 33 q8, 2020 ON 43 q8)
                 tight = [ry for ry, rx in qrules_ if l['y0'] - 9 < ry < l['y0'] and rx < l['x0'] - 1]
                 if tight:              # maths: a 'Communication' row printed 6.5 pt under its full-width rule: the lift
                     comm_floor[id(l)] = max(tight) + 0.5   # climbed the column stubs above the text and the rules of the
@@ -285,7 +286,8 @@ def structured_rows_table(doc):
         if MATHS:
             cuts = _lift(page, cuts, QX - 2, top)
             cuts = [(max(c[0], comm_floor[id(c[1])]),) + tuple(c[1:]) if c[1] is not None and id(c[1]) in comm_floor
-                    and c[0] < comm_floor[id(c[1])] - 1 else c for c in cuts]
+                    and c[0] < comm_floor[id(c[1])] - (1 if COMM.match(c[1]['text']) else 6) else c for c in cuts]
+            #   (other labels: only a cut lifted > 6 pt above its row line - the 2 pt shifts of 92 papers stay as approved)
         if current and (not cuts or cuts[0][0] > top + 4):
             cuts.insert(0, (top, None))          # continuation of the previous label
         headers = [l['y0'] for l in lines if (re.match(r'Question\b', l['text']) and l['x0'] < 130)

@@ -32,6 +32,17 @@ SPECS = {
                                            'xt': [8, 16, 24, 32, 40, 48], 'yt': [-0.2, 0.2, 0.4, 0.6, 0.8, 1.0], 'grid': (4, 0.2),
                                            'ylab': 'R', 'xlab': 'h', 'xlow': True,      # (round 34: a blurred screenshot, redrawn from the model)
                                            'labels': [[('i', 'R'), ('t', ' = 1.12 × 2'), ('sup', '–h'), ('t', ' – 0.12')]]},
+    ('0607_2020ON_62_q06', '6(a)'): {'f': [], 'label': False, 'vector': True, 'x': (9, 20), 'y': (900, 1100), 'grid': (1, 10),   # the 12
+                                     'xt': list(range(9, 21)), 'yt': [950, 1000, 1050, 1100], 'xlab': 't', 'ylab': 'L',  # points
+                                     'points': [(9, 960), (10, 959), (11, 960), (12, 960), (13, 960), (14, 959), (15, 960),  # of
+                                                (16, 987), (17, 1014), (18, 1041), (19, 1068), (20, 1095)]},   # the question's table
+    ('0607_2020ON_43_q08', '8(a)(iii)'): {'f': [('1.5**(-x)', ''), ('x**2', '')], 'label': False, 'dash': False, 'vector': True, 'col': 3,  # faint
+                                          'x': (-2, 2), 'y': (0, 4), 'grid': (1, 1), 'xt': [-2, 2], 'yt': [4]},  # (round 37)
+    ('0607_2018ON_61_q05', '5(b)(i)'): {'f': [('math.sqrt(x*x - 2.25)', '')], 'label': False, 'x': (-6, 6), 'y': (0, 6),
+                                        'grid': (1, 1), 'xt': [-6, 6], 'yt': [6]},     # blurry screenshot (round 37)
+    ('0607_2018ON_61_q06', '6(c)'): {'f': [('x*math.cos(math.radians(76))', ''), ('0.139*x', '')], 'label': False,
+                                     'dash': False, 'x': (0, 6), 'y': (0, 2), 'grid': (0.5, 0.25),       # z = x cos 76,
+                                     'xt': [1, 2, 3, 4, 5, 6], 'yt': [1, 2], 'xlab': 'x', 'ylab': 'z'},  # z = 0.139x (round 37)
     ('0607_2019ON_61_q05', '5(a)(ii)'): {'f': [('12 - 1.8*math.cos(math.radians(x))', 'y = 12 − 1.8 cos t°')],     # (round 35:
                                          'x': (0, 360), 'y': (0, 14), 'grid': (20, 2), 'ylab': 'y', 'xlab': 't',  # a blurred
                                          'xt': [60, 120, 180, 240, 300, 360], 'yt': [2, 4, 6, 8, 10, 12, 14],    # screenshot;
@@ -154,9 +165,13 @@ def draw(sp, w, h, size=9.0):
         for sg in segs:
             d = 'M' + 'L'.join(f'{a:.2f} {b:.2f}' for a, b in sg)
             ln = {'d': d, 'stroke': '#000000', 'sw': 1.0}
-            if dashes[n % 3]:
+            if dashes[n % 3] and sp.get('dash', True):      # ('dash': False - all curves solid, as printed)
                 ln['dash'] = dashes[n % 3]
             L.append(ln)
+    for px, py in sp.get('points', []):        # plotted points as crosses x (2020 ON 62 6(a): the crosses were lost)
+        cx, cy, r_ = X(px), Y(py), 2.2
+        L.append({'d': f'M{cx - r_:.2f} {cy - r_:.2f}L{cx + r_:.2f} {cy + r_:.2f}M{cx - r_:.2f} {cy + r_:.2f}L{cx + r_:.2f} {cy - r_:.2f}',
+                  'stroke': '#000000', 'sw': 0.8})
     # the function label(s) (Dhruv round 33: only where the printed graph has one, small, never over the curves or the
     # axes, fractions as fractions): pieces ('t', text) / ('i', italic) / ('sup', text) / ('frac', num, den)
     if not sp.get('label', True):

@@ -6,14 +6,17 @@ Read this first in every session. Update it before ending a session.
 - 2026-11-18: CHEM stored: 1599 of 1600 PDFs in Releases (only chemistry_0652_to_0620_mapping.pdf, not a Cambridge name,
   stays on branch store-chem). inbox.py now keeps gt/ci/ir/in/eq/one-digit/combined files (302 had been skipped).
   Branches store-chem and store-chem-rest: Dhruv deletes them (this session cannot delete branches).
-- NEXT: (1) Known open M3 items, then approve their 7 papers (kept pending on purpose): 5 broken MS cell pictures
-  (2018 MJ 33 q8, 2020 MJ 31 q11, 2020 ON 33 q8, 2020 ON 43 q8, 2020 ON 62 q6 - ERROR_PATTERNS 251) and 2018 ON 61 root
-  bars / bold bleed, 2018 ON 63 q6 re-flow (252); pending: 0607_2018MJ_33, 2018ON_61, 2018ON_63, 2020MJ_31, 2020ON_33,
-  2020ON_43, 2020ON_62. (2) From M2: 3 vector-bracket questions (pattern 240) + approve 0607_2023MJ_32; the screenshot
-  redraw batch (M2 + M3; no function label unless printed); the round-34 recheck list. (3) Approved papers that change on
-  their next rebuild (round-35 rules): ~57 questions with rows of diagrams, 7 dotty-paper crops, 9 outline path joins -
-  rebuild together, re-show, re-approve. (4) Next maths batch after that (MATHS_PLAN 5). Review page (shared account):
-  https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8 - empty, no open round. 2019-MJ SKIPPED on purpose (NOT DONE).
+- 2026-11-24 (round 37 work, Dhruv asked 'what is wrong in the 7 pending papers - show me'): all 7 fixed (ERROR_PATTERNS
+  257-262), plus 14 other mark schemes whose rows were cut too high (approved ones included) - rebuilt locally, photos sent
+  to Dhruv in chat.
+- NEXT: (1) Dhruv looks at the round-37 photos; on his ok approve the 16 pending 0607 papers (approve.py --pending; 0607_2023MJ_32
+  stays pending for M2 item (2)). (2) From M2: 3 vector-bracket questions (pattern 240) + approve 0607_2023MJ_32; the
+  screenshot redraw batch (M2 + M3; no function label unless printed); the round-34 recheck list. (3) Approved papers that
+  change on their next rebuild (round-35 rules): ~57 questions with rows of diagrams, 7 dotty-paper crops, 9 outline path
+  joins - rebuild together, re-show, re-approve. (4) Small open: after a re-flowed paragraph the next line keeps its printed
+  place (a blank line under it, 2018 ON 63 6(c)/6(d)(i)); 2024 ON 23 q7 partial marks still a bit small. (5) Next maths batch
+  (MATHS_PLAN 5). Review page (shared account): https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8 - empty, no open round.
+  2019-MJ SKIPPED on purpose (NOT DONE).
 - 2026-11-24: ROUND 36 closed (7 ok, 1 wrong: no function label on the redrawn 2019 ON 61 graph - removed). M3 APPROVED:
   62 of 69 papers + re-approved 2019 ON 43, 2021 ON 42, 2022 MJ 31, 2022 MJ 42 (their part marks were corrected); 7 M3
   papers kept pending for the known open MS pictures. Rounds 35-36 removed from the review page.
