@@ -703,8 +703,16 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
             grows[c] = g
     def G(c, y):
         return sum(a for yy, a in grows.get(c, []) if yy < y)
-    def push_for(c):
-        return lambda y: push0(y) + max([G(k, y) for k in grows] + [0.0]) - G(c, y)
+    def anchored(c, y):         # this printed line lines up with another column (a line of it starts at the same height)
+        neg = [yy for yy, a in grows.get(c, []) if a < 0 and yy < y]     # or a sub-row rule lies between it and the
+        return any(abs(i.y0 - y) < 3 for k in CS if k != c and k < len(by) for i in by[k] if i.kind == 't') or \
+            any(min(neg) - 1 <= sy <= y + 1 for sx0, sy, sx1 in CTX.get('subrules', []))   # re-flow above it
+    def push_for(c):            # a column's growth is matched by the others; space a re-flow SAVED (negative growth) is
+        def p_(y):              # kept only where the line must line up - otherwise the next line moves up (no blank line
+            if G(c, y) < 0 and not anchored(c, y):                # under a re-flowed sentence: Dhruv round 37, 2018 ON 63 q6)
+                return push0(y)   # (a wrap in the Partial Marks column beside it is no reason to stay down)
+            return push0(y) + max([G(k, y) for k in grows] + [0.0]) - G(c, y)
+        return p_
     push = push_for(0)
     top_pad = min([i.y0 for i in its] + [u['h']])
     for c in CS:

@@ -718,4 +718,8 @@ not what Dhruv wants (one picture). 2018 MJ 33 q5: the graph is drawn exactly (l
     starts a new line (2018 ON 63 q6(d)(i)).
 262. A white background box wider than our column made the text 'too wide' and shrank marks / partial marks to 70-88 %
     (2020 MJ 31 q11(a)(i) '2'): wide white boxes are not ink in a text cell (6 questions had it).
+263. A blank line under a re-flowed sentence (the next line kept its printed place: 2018 ON 63 6(c), 6(d)(i), Dhruv round
+    37): space a re-flow saves now moves the next lines up, unless the line lines up with another column (a line there at
+    the same height) or a sub-row rule lies between; a wrap in the Partial Marks column beside it does not hold it down.
+    Sample rebuild (2014 MJ 41, 2022 FM 62, 2024 FM 62, 2026 MJ 12, 2023 ON 11, 2025 ON 53): 13 questions tighter, no overlap.
 

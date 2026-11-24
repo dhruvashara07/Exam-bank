@@ -13,8 +13,8 @@ Read this first in every session. Update it before ending a session.
   stays pending for M2 item (2)). (2) From M2: 3 vector-bracket questions (pattern 240) + approve 0607_2023MJ_32; the
   screenshot redraw batch (M2 + M3; no function label unless printed); the round-34 recheck list. (3) Approved papers that
   change on their next rebuild (round-35 rules): ~57 questions with rows of diagrams, 7 dotty-paper crops, 9 outline path
-  joins - rebuild together, re-show, re-approve. (4) Small open: after a re-flowed paragraph the next line keeps its printed
-  place (a blank line under it, 2018 ON 63 6(c)/6(d)(i)); 2024 ON 23 q7 partial marks still a bit small. (5) Next maths batch
+  joins - rebuild together, re-show, re-approve. (4) Small open: 2024 ON 23 q7 partial marks still a bit small. Pattern 263 (no blank line
+  after a re-flow) changes approved papers on their next rebuild (looked at a sample of 13: fine). (5) Next maths batch
   (MATHS_PLAN 5). Review page (shared account): https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8 - empty, no open round.
   2019-MJ SKIPPED on purpose (NOT DONE).
 - 2026-11-24: ROUND 36 closed (7 ok, 1 wrong: no function label on the redrawn 2019 ON 61 graph - removed). M3 APPROVED:

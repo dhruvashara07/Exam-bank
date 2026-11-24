@@ -589,4 +589,6 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   ones. Sent before/after photos. Fixed all 7 (patterns 257-262): rows cut too high over Venns, Venn letters lost, 4 graphs
   redrawn (faint sketch, plotted crosses, 2 blurry screenshots), root-sign cells kept as printed picture, formula list
   kept one per line, shrunken marks. The row fix also corrects 14 other mark schemes (approved ones re-shown). Golden 0.
+- Dhruv: '2018 ON 63 6(d)(i) space between the first two lines is unnecessary; otherwise the Venns are done right?' -
+  fixed (pattern 263, also 6(c)); Venns confirmed done.
 
