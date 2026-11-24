@@ -6,15 +6,20 @@ Read this first in every session. Update it before ending a session.
 - 2026-11-18: CHEM stored: 1599 of 1600 PDFs in Releases (only chemistry_0652_to_0620_mapping.pdf, not a Cambridge name,
   stays on branch store-chem). inbox.py now keeps gt/ci/ir/in/eq/one-digit/combined files (302 had been skipped).
   Branches store-chem and store-chem-rest: Dhruv deletes them (this session cannot delete branches).
-- NEXT: (1) M3 round 35 (review page https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8, 10 items: 5 calibration + 5 approved
-  questions my pattern 242/245 fixes corrected): read Dhruv's answers (db_list feedback_r35), fix what he marks wrong, then
-  approve.py the 69 M3 papers + re-approve 0607_2019ON_43, 2021ON_42, 2022MJ_31, 2022MJ_42 (approve.py --pending). M3 is NOT
-  approved yet. (2) Known open M3 items, fix first (ERROR_PATTERNS 251-252, status 'known' in M3_reasons.json): MS cell pictures
-  broken in 5 questions (2018 MJ 33 q8, 2020 MJ 31 q11, 2020 ON 33 q8, 2020 ON 43 q8, 2020 ON 62 q6) and 2018 ON 61 root bars /
-  bold bleed + 2018 ON 63 q6 re-flow. (3) Still from M2: 3 vector-bracket questions of pattern 240 (2023 MJ 32 q8(c) - the
-  only M2 paper pending, 2026 MJ 11 q18(b), 2026 MJ 22 q6), approve 0607_2023MJ_32; the raster-screenshot redraw batch (Dhruv
-  2026-11-22) now covers M2 AND M3 screenshots; the round-34 --recheck list (2014MJ_32_q09b ... 2023ON_42_q09).
-  2019-MJ is SKIPPED on purpose (NOT DONE, batch M3b when Dhruv uploads it) - do not remind him.
+- NEXT: (1) Round 36 for Dhruv (review page https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8): the 3 round-35 fixes + 4
+  examples of his new 'one picture' rule, notes in plain words. Read his answers (db_list feedback_r36), fix what he marks
+  wrong, then approve.py the 69 M3 papers and re-approve 0607_2019ON_43, 2019ON_61, 2021ON_42, 2022MJ_31, 2022MJ_42
+  (approve.py --pending). M3 is NOT approved yet. (2) Known open M3 items (ERROR_PATTERNS 251-252): 5 broken MS cell
+  pictures (2018 MJ 33 q8, 2020 MJ 31 q11, 2020 ON 33 q8, 2020 ON 43 q8, 2020 ON 62 q6), 2018 ON 61 root bars / bold
+  bleed, 2018 ON 63 q6 re-flow. (3) From M2: 3 vector-bracket questions (pattern 240), approve 0607_2023MJ_32, the
+  screenshot redraw batch (M2 + M3), the round-34 recheck list. (4) Approved papers that will change on their next
+  rebuild (Dhruv's round-35 rules, not applied to them yet): about 57 questions with rows of diagrams, 7 dotty-paper
+  crops, 9 brace/outline path joins - rebuild them in one go, re-show, re-approve (list: fig_blast.py diff of HEAD vs
+  the commit before round 35). 2019-MJ SKIPPED on purpose (NOT DONE) - do not remind him.
+- 2026-11-24: ROUND 35 answered (7 ok, 3 wrong). Fixed: 2019 ON 61 q5 brace + graph redrawn from the model; 2020 ON 51
+  q1/q2 rows of diagrams = one picture with captions, dotty paper drawn. Dhruv's decisions -> MATHS_PLAN section 12
+  (plain words in rounds; drawn grids need no image; row rule; dotty paper). GitHub dispatch was refused this time:
+  M3 rebuilt locally (same as the Action).
 - 2026-11-23: M3 BUILT + pass 1/pass 2 (2018 MJ/ON, 2020 MJ/ON = 69 papers; 2020-MJ has no 13/33/53 at all). Pass 1: 182 reasons
   in 115 questions -> 30 fixed (patterns 241-250: white marks, Communication rows, number-less labels, label typos, answer line
   beside the next label, crop side-cut / arrow column / hatch clipping / question text in crops, new equation-font glyphs),

@@ -7,7 +7,7 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 | M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 257.5 | 51.4 | 2766.0 | 3084.4 | 40 | 58 | 5 | n/a |
 | M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 | 11.7 | 97.4 | 191.6 | 0.0 | 30.1 | 233.4 | 23 | 42 | 2 | n/a |
 | M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 117 | 100.3 | 131.2 | 0.0 | 0.0 | 0.0 | 100.3 | 13 | 28 | 4 | n/a |
-| M3 | 2018-MJ 2018-ON 2020-MJ 2020-ON | 69 | 29.2 | 0.2 | 38.4 | 0.0 | 0.0 | 67.6 | 10 | 12 | 0 | n/a |
+| M3 | 2018-MJ 2018-ON 2020-MJ 2020-ON | 69 | 29.2 | 0.2 | 38.4 | 0.0 | 0.0 | 67.6 | 8 | 15 | 0 | n/a |
 
 ## Errors per batch (new = first time, repeat = a pattern seen before: the doc or the fix failed)
 
@@ -169,6 +169,9 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - [new] pattern 250: MMGreekItalic/MMEtc/MMNegate letters drawn as sans → MATHS_GLYPHS + drawn negation slash (found by claude)
 - [new] pattern 251: KNOWN: MS Venn/graph pictures broken (5 q) → open - next chat (found by claude)
 - [new] pattern 252: KNOWN: 2018 ON 61 root bars/bold bleed; 2018 ON 63 re-flow → open - next chat (found by claude)
+- [new] pattern 253: round 35: MS brace fill broken into wedges → zero-length pieces keep the sub-path (found by claude)
+- [new] pattern 255: round 35: row of diagrams as 3 crops (Dhruv: one picture) → row merge + captions (found by claude)
+- [new] pattern 256: round 35: crop of part of dotty paper → dot lattice drawn (found by claude)
 
 ## Repeats to act on
 

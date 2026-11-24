@@ -568,3 +568,16 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   reading 20 MS sheets. Repeats: the 'beside' side-cut of pattern 170 came back as 246 (its pixel test saw the line's own
   symbols and '[1]'); the fit_crop text rules of 225 came back as 249 (italic 'f ( )x' and a sentence with no part label).
   Lesson: `reasons.py set` overwrites any status - broad passes first, specific sets after (PLAYBOOK 1a).
+
+## 2026-11-24 - Round 35 answers (M3), same chat
+- Dhruv: 7 ok, 3 wrong: 2018 MJ 33 q5 'there should be image of graph', 2019 ON 61 q5 (brace broken; redraw the sketch
+  from the function, same grid), 2020 ON 51 q2 (3 diagrams one picture; dotty paper whole). Also: 'don't write just pattern
+  numbers in the round - how am I supposed to know' and 'update your side so the other account knows'.
+- Asked him 2 questions: grids -> 'when you can draw them no need for image' (our drawn grids stay); rows -> 'when they are
+  side by side or one above the other with no text between, whole; otherwise separate', dots: we draw them (vector dots).
+- Fixed: brace (zero-length pieces restarted the fill), graph redraw spec, row merge + captions + lone square, dotty
+  lattice drawn. Blast (fig_blast.py, all 0607): first dotty rule dropped real graphs (plotted points) - tightened to a
+  real lattice; a mark '[2]' was pulled into a merged picture - excluded. 57 approved/other questions merge: applied to
+  M3 now, approved papers on their next rebuild (Dhruv: 'for this right now').
+- Docs for any account: MATHS_PLAN 12 (decisions), PLAYBOOK + skill text (plain-words rule), START_HERE/NEXT_CHAT links
+  to the shared-account review page.

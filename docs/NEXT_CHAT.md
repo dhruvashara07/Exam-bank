@@ -3,10 +3,10 @@
 **New (shared) Claude account, 2026-11-23:** open claude.ai in the browser logged into that account, connect GitHub so
 dhruvashara07/Exam-bank is allowed (push access), then paste THE prompt below; if the repo is not attached in the chat, say
 'add repo dhruvashara07/Exam-bank with push access'. Skills and memory do not carry over: the repo does (docs/SKILL_exam-batch-cycle.md,
-START_HERE section 5 = usage budget). First task there = PROGRESS NEXT line: close M3 round 35 (review page https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8 -
+START_HERE section 5 = usage budget). First task there = PROGRESS NEXT line: close M3 round 36 (review page https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8 -
 this shared account's page from round 35 on), approve M3, then the known items 251-252 and the M2 leftovers.
 Prompt for that chat: 'Exam-bank: add repo dhruvashara07/Exam-bank with push access. Follow docs/START_HERE.md exactly.
-Task: close M3 round 35 (my answers are on the review page), approve M3, then PROGRESS NEXT. Budget rules apply.'
+Task: close M3 round 36 (my answers are on the review page), approve M3, then PROGRESS NEXT. Budget rules apply.'
 Chemistry starts in Dhruv's own account later.
 
 One batch per chat (docs/MATHS_PLAN.md section 5). Open a new chat, paste the prompt, nothing else needed.
