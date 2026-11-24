@@ -1,5 +1,8 @@
 # Starting a new chat (Dhruv, updated 2026-11-16)
 
+**Next chat (2026-11-24):** paste: 'Exam-bank: add repo dhruvashara07/Exam-bank with push access. Follow docs/START_HERE.md
+exactly. Task: PROGRESS NEXT item (1), picture batch RD2 (redraw every flagged screenshot in all 0607 batches). Budget rules apply.'
+
 **New (shared) Claude account, 2026-11-23:** open claude.ai in the browser logged into that account, connect GitHub so
 dhruvashara07/Exam-bank is allowed (push access), then paste THE prompt below; if the repo is not attached in the chat, say
 'add repo dhruvashara07/Exam-bank with push access'. Skills and memory do not carry over: the repo does (docs/SKILL_exam-batch-cycle.md,

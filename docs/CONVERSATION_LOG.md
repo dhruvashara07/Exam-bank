@@ -610,3 +610,4 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   fractions on branches, no label for 2022 ON 42 q11). Dhruv asked what 'vector kept whole' means (a column vector stays one
   piece: never top number on one line and bottom on the next, never cut across) and made a rule: redraw every faint
   picture, flag what cannot be redrawn (pattern 270). Remaining: 47 screenshots in M2/M3 - asked him.
+- Dhruv's decision: redraw all the 47 M2/M3 screenshots that can be redrawn, and check M0 and M1 the same way (131 more) -> batch RD2 in a new chat.
