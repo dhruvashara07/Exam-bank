@@ -591,4 +591,4 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   kept one per line, shrunken marks. The row fix also corrects 14 other mark schemes (approved ones re-shown). Golden 0.
 - Dhruv: '2018 ON 63 6(d)(i) space between the first two lines is unnecessary; otherwise the Venns are done right?' -
   fixed (pattern 263, also 6(c)); Venns confirmed done.
-
+- Dhruv: 'Yes approve M3 and this remaining' -> approved 16 papers; M3 complete. Pending only 0607_2023MJ_32 (M2).

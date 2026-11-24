@@ -9,8 +9,9 @@ Read this first in every session. Update it before ending a session.
 - 2026-11-24 (round 37 work, Dhruv asked 'what is wrong in the 7 pending papers - show me'): all 7 fixed (ERROR_PATTERNS
   257-262), plus 14 other mark schemes whose rows were cut too high (approved ones included) - rebuilt locally, photos sent
   to Dhruv in chat.
-- NEXT: (1) Dhruv looks at the round-37 photos; on his ok approve the 16 pending 0607 papers (approve.py --pending; 0607_2023MJ_32
-  stays pending for M2 item (2)). (2) From M2: 3 vector-bracket questions (pattern 240) + approve 0607_2023MJ_32; the
+- 2026-11-24: Dhruv ok on round-37 photos -> M3 DONE: all M3 papers approved (16 approved today incl. 9 re-shown MS
+  row fixes). Only 0607_2023MJ_32 stays pending (M2 item below).
+- NEXT: (1) From M2: 3 vector-bracket questions (pattern 240) + approve 0607_2023MJ_32; the
   screenshot redraw batch (M2 + M3; no function label unless printed); the round-34 recheck list. (3) Approved papers that
   change on their next rebuild (round-35 rules): ~57 questions with rows of diagrams, 7 dotty-paper crops, 9 outline path
   joins - rebuild together, re-show, re-approve. (4) Small open: 2024 ON 23 q7 partial marks still a bit small. Pattern 263 (no blank line
