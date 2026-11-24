@@ -125,3 +125,14 @@ MATHS_PLAN.md if the plan changed; docs/NEXT_CHAT.md prompt; `pipeline/push.sh`;
 - Faint / blurry pictures (Dhruv round 38): redraw every one (ms_graphs.SPECS); if it cannot be redrawn reliably, FLAG it for
   Dhruv (maths_check picture_checks reasons ms_screenshot / ms_faint / fig_faint) - never leave one silently. His 'keep as
   printed' goes into ms_graphs.KEPT. Drawing text uses real widths (ms_graphs._w) - a guessed width changes the font look.
+
+## RD2 additions (2026-11-24)
+- Blurry / faint MS pictures of a NEW batch are redrawn inside the batch before its round: maths_check picture_checks must be 0
+  (or the rest in ms_graphs.KEPT with a reason, shown to Dhruv as a decision with a photo).
+- ms_graphs drawers: graph spec (function from the question, printed axes/ticks, 'xlow', 'dots', 'smooth', 'points'), 'table'
+  ('*' bold answer, '~' grey given, 'span', 'nohl', stem-and-leaf via 'noframe'/'hlines'/'vlines'), 'plane'/'panels' (squares,
+  dots, iso, isov, polys, cells, circles, arcs, crosses, text; 'seps', 'stack'), 'pie', 'map', 'venn', 'tree', 'bars',
+  'graphs' (stacked), 'alts' (several screenshots under one label). Data read by eye from the question and the printed MS.
+- Work per group: write specs -> rebuild only those qids (ms_rebuild <qids> --write) -> grep failed -> ours | printed sheet ->
+  fix labels off lines. Several words in one SVG text stretch: split numbers into separate texts.
+- The redraw replaces only the pasted image; text under it stays text (pattern 272).

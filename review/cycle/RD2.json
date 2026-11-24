@@ -1,0 +1,165 @@
+{
+ "batch": "RD2",
+ "subject": "0607",
+ "sessions": [
+  "2014-MJ",
+  "2018-MJ",
+  "2018-ON",
+  "2019-ON",
+  "2020-MJ",
+  "2020-ON",
+  "2021-FM",
+  "2021-MJ",
+  "2021-ON",
+  "2022-FM",
+  "2022-MJ",
+  "2022-ON",
+  "2023-FM",
+  "2023-MJ",
+  "2023-ON",
+  "2024-FM",
+  "2024-MJ",
+  "2024-ON",
+  "2025-FM",
+  "2025-MJ",
+  "2025-ON",
+  "2026-FM",
+  "2026-MJ"
+ ],
+ "created": "2026-11-24T12:31:41+00:00",
+ "phases": {
+  "build": [],
+  "claude": [],
+  "claude1": [],
+  "claude2": [],
+  "review": [
+   {
+    "start": "2026-11-24T13:16:44+00:00",
+    "end": null
+   }
+  ],
+  "fix": [
+   {
+    "start": "2026-11-24T12:31:41+00:00",
+    "end": "2026-11-24T13:14:47+00:00",
+    "note": "181 flagged pictures: 180 redrawn, 1 kept; 1 local rebuild"
+   }
+  ]
+ },
+ "github_runs": [],
+ "counts": {
+  "papers": 0,
+  "questions": 149,
+  "flags": 181,
+  "round_items": 16
+ },
+ "errors": [
+  {
+   "pattern": "271",
+   "kind": "new",
+   "what": "RD2: 181 blurry MS pictures in all batches (tables, grid shapes, dots, pies, Venns, trees, mappings, plots, graphs) had no drawer",
+   "fix": "ms_graphs: table / plane (squares, dots, iso, isov, panels, stack) / pie / map drawers, smooth data curves, alts per label",
+   "found_by": "claude",
+   "at": "2026-11-24T13:16:43+00:00"
+  },
+  {
+   "pattern": "272",
+   "kind": "new",
+   "what": "a formula line under a screenshot (its bar / root lines in the picture's cluster) was swallowed by the redraw (2024 ON 61 2(d))",
+   "fix": "ms_maths: the drawing replaces the pasted image's box only; lines/glyphs outside it stay text",
+   "found_by": "claude",
+   "at": "2026-11-24T13:16:43+00:00"
+  },
+  {
+   "pattern": "273",
+   "kind": "new",
+   "what": "graph drawer: y numbers like 146000 spilled left of the cell; curves ran through tick numbers; '-1' twice at the origin; label boxes over an axis",
+   "fix": "left room from the widest y number; white ground under ticks; clashing y tick dropped; axes sampled for label placement",
+   "found_by": "claude",
+   "at": "2026-11-24T13:16:44+00:00"
+  }
+ ],
+ "tokens": [],
+ "events": [
+  {
+   "at": "2026-11-24T12:31:41+00:00",
+   "task": "start RD2 --subject"
+  },
+  {
+   "at": "2026-11-24T12:31:41+00:00",
+   "task": "phase RD2 fix"
+  },
+  {
+   "at": "2026-11-24T12:39:07+00:00",
+   "task": "count sent: 181 pictures; start redraw groups"
+  },
+  {
+   "at": "2026-11-24T12:44:35+00:00",
+   "task": "group 1 (16 graphs) redrawn + looked at"
+  },
+  {
+   "at": "2026-11-24T12:46:43+00:00",
+   "task": "group 2 done; group 3"
+  },
+  {
+   "at": "2026-11-24T12:47:52+00:00",
+   "task": "group 3 done; group 4"
+  },
+  {
+   "at": "2026-11-24T12:50:16+00:00",
+   "task": "group 4 done (+ text under a screenshot kept); group 5"
+  },
+  {
+   "at": "2026-11-24T12:51:18+00:00",
+   "task": "group 5 done; group 6"
+  },
+  {
+   "at": "2026-11-24T12:53:10+00:00",
+   "task": "group 6 done; group 7 (last graphs)"
+  },
+  {
+   "at": "2026-11-24T12:54:06+00:00",
+   "task": "107 graphs done; data plots / trees / pies / mappings"
+  },
+  {
+   "at": "2026-11-24T12:55:04+00:00",
+   "task": "data plots done; trees, pies, mappings, sketches"
+  },
+  {
+   "at": "2026-11-24T12:58:18+00:00",
+   "task": "tables done; Venns"
+  },
+  {
+   "at": "2026-11-24T12:59:28+00:00",
+   "task": "Venns done; grid shapes + dot patterns"
+  },
+  {
+   "at": "2026-11-24T13:04:37+00:00",
+   "task": "all 181 specs written (1 kept); spill check + full rebuild"
+  },
+  {
+   "at": "2026-11-24T13:14:47+00:00",
+   "task": "phase RD2 fix"
+  },
+  {
+   "at": "2026-11-24T13:16:43+00:00",
+   "task": "error RD2 --pattern"
+  },
+  {
+   "at": "2026-11-24T13:16:43+00:00",
+   "task": "error RD2 --pattern"
+  },
+  {
+   "at": "2026-11-24T13:16:44+00:00",
+   "task": "error RD2 --pattern"
+  },
+  {
+   "at": "2026-11-24T13:16:44+00:00",
+   "task": "count RD2 papers=0"
+  },
+  {
+   "at": "2026-11-24T13:16:44+00:00",
+   "task": "phase RD2 review"
+  }
+ ]
+}

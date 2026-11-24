@@ -19,13 +19,15 @@ Read this first in every session. Update it before ending a session.
   side by side, all approved still). Round 38 published (10 redraws + 5 calibration + 5 vector-bracket items).
 - 2026-11-24: round 38 closed (13 ok, 7 wrong - fixed, patterns 265-269). New rule + check: faint / blurry pictures are
   redrawn or flagged (pattern 270, maths_check picture_checks); 3 faint graphs redrawn.
-- NEXT: (1) Picture batch 'RD2' (Dhruv 2026-11-24): redraw ALL flagged screenshots of every 0607 batch (M0, M1, M2, M3:
-  47 in M2/M3 + 131 others; list = maths_check picture_checks, kinds ms_screenshot / ms_faint / fig_faint). Redraw all that
-  can be redrawn: tables as real tables, shapes on grids, dot patterns, pie charts, data plots, graphs; hand-written sketches
-  with no clear data -> ms_graphs.KEPT with the reason, and list them for Dhruv. Groups of ~15, one local rebuild, side by
-  side check of every redraw, one review round (~10 redraws + 5 calibration). (2) The round-34 recheck list. (3) 2024 ON 23
-  q7 partial marks a bit small. (4) Next maths batch (MATHS_PLAN 5). Review page (shared account):
-  https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8 - empty. 2019-MJ SKIPPED on purpose (NOT DONE).
+- 2026-11-24: picture batch RD2 DONE locally (ERROR_PATTERNS 271-273): 181 flagged MS pictures in all 0607 batches (149
+  questions): 180 redrawn (107 graphs, 19 grid shapes, 14 Venns, 11 data plots / bar charts, 10 tables, 9 dot patterns, 3 trees,
+  2 pies, 2 mappings, 3 sketches), 1 kept (2025 FM 62 10(a), Dhruv decides). maths_check picture_checks: 0 left. One local
+  rebuild (ms_rebuild, 105 questions written after the groups; all redraws looked at side by side); golden 0, nothing under
+  0625; approvals unchanged (hash = cut + marks). Round 39 published (10 redraws + 5 calibration + 1 decision).
+- NEXT: (1) Round 39 (Dhruv): read feedback_r39, fix what is wrong, decide 2025 FM 62 10(a) (redraw or keep), close the round
+  and drop it from the page. (2) The round-34 recheck list. (3) 2024 ON 23 q7 partial marks a bit small. (4) Next maths batch
+  M4 (MATHS_PLAN 5): redraw blurry pictures inside the batch (ms_graphs drawers, picture_checks = 0 before the round).
+  Review page (shared account): https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8 - round 39 open. 2019-MJ SKIPPED on purpose (NOT DONE).
 - 2026-11-24: ROUND 36 closed (7 ok, 1 wrong: no function label on the redrawn 2019 ON 61 graph - removed). M3 APPROVED:
   62 of 69 papers + re-approved 2019 ON 43, 2021 ON 42, 2022 MJ 31, 2022 MJ 42 (their part marks were corrected); 7 M3
   papers kept pending for the known open MS pictures. Rounds 35-36 removed from the review page.

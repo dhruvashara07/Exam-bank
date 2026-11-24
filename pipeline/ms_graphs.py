@@ -258,17 +258,299 @@ SPECS.update({
     ('0607_2021MJ_11_q14', '14'): {'venn': [{'sets': 'AB', 'shade': 'A or B', 'cap': 'A ∪ B'},
                                             {'sets': 'CD', 'shade': 'C and D', 'cap': 'C ∩ D'}], 'w': 300.0, 'h': 110.0},
     ('0607_2021MJ_12_q20', '20(a)'): {'venn': {'sets': 'ME', 'nums': {'M': 50, 'ME': 15, 'E': 75, '': 10}}, 'w': 180.0, 'h': 100.0},
-    ('0607_2021MJ_13_q21', '21(a)'): {'venn': {'sets': 'AB', 'nums': {'A': '1  5\n6  9', 'AB': 4, 'B': '2  7\n10', '': '3\n8'}},
+    ('0607_2021MJ_13_q21', '21(a)'): {'venn': {'sets': 'AB', 'nums': {'A': '1   5\n6   9', 'AB': 4, 'B': '2   7\n10', '': '3\n8'}},
                                       'w': 180.0, 'h': 100.0},
 })
 
-def _w(t, s, f='serif'):
+def _w(t, s, f='serif', b=False):
     """The text's real width: the SVG draws it with textLength, so a guessed width stretched or squeezed the letters
     (Dhruv round 38: 'why does the font look different'). Minus signs measure ~0 in text_width: counted as 0.5 em."""
     from ms_maths import text_width as tw0           # (the font metrics know Latin-1 only: '–3' measured as 1/4 em
     if all(ord(ch) < 256 for ch in t):               #  and was drawn squeezed - other characters 0.55 em each)
-        return tw0(t, f, s)
-    return round(sum(tw0(ch, f, s) if ord(ch) < 256 else 0.55 * s for ch in t), 2)
+        return tw0(t, f, s, b)
+    return round(sum(tw0(ch, f, s, b) if ord(ch) < 256 else 0.55 * s for ch in t), 2)
+
+
+# ---- RD2 (Dhruv 2026-11-24): the other blurry screenshots drawn as real tables, shapes on their grid, dot patterns,
+#      pie charts and mapping diagrams. Each drawer also knows its natural size (natural()), so the row is made tall
+#      enough and nothing spills out of its cell.
+GREY_TXT = '#8c8c8c'          # values the question gave, printed grey in the mark-scheme table
+
+
+def _cell_txt(c):
+    """'*12' bold, '~3' grey (given in the question), '_n' italic; '\\n' = several lines. -> (lines, style dict)"""
+    st = {}
+    while c and c[0] in '*~_':
+        st[{'*': 'b', '~': 'c', '_': 'i'}[c[0]]] = 1; c = c[1:]
+    return c.split('\n'), st
+
+
+def _lw(t, size, b=False):
+    return sum(_w(k, size, b=b) for k in t.split('   ')) + 0.9 * size * t.count('   ')
+
+
+def _table_size(tb, size):
+    rows = tb['rows']; nc = max(len(r) for r in rows); span = tb.get('span', {})
+    cw = [0.0] * nc
+    for r, row in enumerate(rows):
+        for c, cell in enumerate(row):
+            if cell is None or span.get((r, c), 1) > 1:
+                continue
+            ls, st = _cell_txt(cell)
+            cw[c] = max(cw[c], max(_lw(l, size, st.get('b')) for l in ls) + 2 * tb.get('pad', 5.0))
+    cw = [max(x, tb.get('minw', 14.0)) for x in cw]
+    rh = [max(len(_cell_txt(c)[0]) for c in row if c is not None) * size * 1.2 + tb.get('vpad', 6.0) for row in rows]
+    return cw, rh
+
+
+def _draw_table(sp, w, h, size=9.0):
+    """A table drawn as rules + text (Dhruv: 'tables as real tables'). sp['table'] = {'rows': [[cell, ...]], 'shade':
+    [(r, c)], 'span': {(r, c): n} (a cell over n columns; the cells it covers are None), 'noframe': True (only the
+    inner rules: a stem-and-leaf), 'hlines': only these row rules (default all), 'align': 'c' | 'l'}."""
+    tb = sp['table']; size = tb.get('size', size)
+    cw, rh = _table_size(tb, size)
+    k = min(1.0, (w - 2) / sum(cw))                   # too wide for the column: the whole table scales (never clipped)
+    if k < 1.0:
+        size *= k; cw, rh = _table_size(tb, size)
+    L, T = [], []
+    x0, y0 = 1.0, 1.0
+    xs = [x0]
+    for c in cw:
+        xs.append(xs[-1] + c)
+    ys = [y0]
+    for r in rh:
+        ys.append(ys[-1] + r)
+    span = tb.get('span', {})
+    for (r, c) in tb.get('shade', []):
+        n = span.get((r, c), 1)
+        L.append({'d': f'M{xs[c]:.2f} {ys[r]:.2f}H{xs[c + n]:.2f}V{ys[r + 1]:.2f}H{xs[c]:.2f}Z', 'fill': '#d9d9d9'})
+    frame = not tb.get('noframe')
+    for r in range(len(ys)):
+        if (r in (0, len(ys) - 1) and not frame) or ('hlines' in tb and r not in tb['hlines']):
+            continue
+        for c in range(len(cw)):                       # (a cell merged with the one above has no rule on top: 'nohl')
+            if (r, c) not in tb.get('nohl', ()):
+                L.append({'d': f'M{xs[c]:.2f} {ys[r]:.2f}H{xs[c + 1]:.2f}', 'stroke': '#000000', 'sw': 0.6})
+    for c in range(len(xs)):
+        if (c in (0, len(xs) - 1) and not frame) or ('vlines' in tb and c not in tb['vlines']):
+            continue
+        for r in range(len(rh)):                       # a column rule stops at a cell spanning over it
+            if any(span.get((r, c0), 1) > 1 and c0 < c < c0 + span[(r, c0)] for c0 in range(c)):
+                continue
+            L.append({'d': f'M{xs[c]:.2f} {ys[r]:.2f}V{ys[r + 1]:.2f}', 'stroke': '#000000', 'sw': 0.6})
+    for r, row in enumerate(tb['rows']):
+        for c, cell in enumerate(row):
+            if cell is None or cell == '':
+                continue
+            n = span.get((r, c), 1)
+            ls, st = _cell_txt(cell)
+            for j, t in enumerate(ls):
+                tw = _lw(t, size, st.get('b'))
+                yb = ys[r] + (rh[r] - len(ls) * size * 1.2) / 2 + (j + 0.78) * size * 1.2
+                xl = xs[c] + tb.get('pad', 5.0) if tb.get('align') == 'l' else (xs[c] + xs[c + n]) / 2 - tw / 2
+                for tok in t.split('   '):           # (leaves '8   9   9': each its own text - spaces collapse in the SVG
+                    w_ = _w(tok, size, b=st.get('b'))  #  and the text was stretched to its width)
+                    t_ = {'t': tok, 'x': round(xl, 2), 'y': round(yb, 2), 'w': w_, 's': round(size, 2)}
+                    if st.get('b'): t_['b'] = 1
+                    if st.get('i'): t_['i'] = 1
+                    if st.get('c'): t_['c'] = GREY_TXT
+                    T.append(t_); xl += w_ + 0.9 * size
+    return L, T
+
+
+def _iso(p):
+    return (p[0], p[1] * 0.8660254)
+
+
+def _isov(p):                                         # (RD2) the triangle lattice turned 90°: columns of dots (hexagons
+    return (p[0] * 0.8660254, p[1])                   #  pointing up, 2025 FM 52 q2)
+
+
+def _draw_plane(sp, w, h, size=9.0):
+    """Shapes on squared paper / dotty paper / plain (sp['plane'], or a list sp['panels'] side by side with an 'OR' or
+    caption between them). Grid units, y up. {'style': 'squares' | 'dots' | 'iso' | 'none', 'n': (x0, x1, y0, y1),
+    'axes': {'xt': [...], 'yt': [...]} (axes through 0 with numbers), 'polys': [{'p': [(x, y)], 'fill': '#bfbfbf',
+    'open': True, 'sw': 1.2, 'dash': '3 2'}], 'cells': [(x, y, colour)] (a filled unit square, lower left corner),
+    'pts': [(x, y)] (dots), 'big': radius of the dots, 'crosses': [(x, y)], 'text': [(x, y, 'txt', {'b': 1})]}."""
+    pans = sp['panels'] if 'panels' in sp else [sp['plane']]
+    seps = sp.get('seps', [])                          # text between panels ('or')
+    gap = [max(14.0, _w(s_, size) + 10) for s_ in seps] + [0.0] * len(pans)
+    widths = [(p['n'][1] - p['n'][0]) for p in pans]
+    heights = [(p['n'][3] - p['n'][2]) * (0.8660254 if p.get('style') == 'iso' else 1) for p in pans]
+    widths = [w_ * (0.8660254 if p.get('style') == 'isov' else 1) for w_, p in zip(widths, pans)]
+    ax_room = lambda p: (22.0 if p.get('axes') else 6.0)
+    stack = sp.get('stack')                            # (RD2) panels one above the other, 'OR' between them
+    if stack:
+        avail_h = h - (len(pans) - 1) * (size * 1.8) - sum(ax_room(p) + 6 for p in pans)
+        u = min(min((w - ax_room(p) - 8) / ww for p, ww in zip(pans, widths)), avail_h / sum(heights))
+    else:
+        avail_w = w - sum(gap[:len(pans) - 1]) - sum(ax_room(p) + 6 for p in pans)
+        u = min(avail_w / sum(widths), min((h - ax_room(p) - 8) / hh for p, hh in zip(pans, heights)))
+    u = min(u, sp.get('u', (pans[0].get('u') if len(pans) == 1 else None) or 14.0))
+    L, T = [], []
+    ox = 0.0; oy = 0.0
+    for k, p in enumerate(pans):
+        x0, x1, y0, y1 = p['n']; iso = p.get('style') == 'iso'; isv = p.get('style') == 'isov'
+        left = ax_room(p) + 2 if p.get('axes') else 4.0
+        top = 6.0 + oy
+        hh = heights[k] * u
+        def P(q, ox=ox, left=left):
+            a, b = _iso(q) if iso else (_isov(q) if isv else q)
+            return (ox + left + (a - x0 * (0.8660254 if isv else 1)) * u, top + hh - (b - (y0 * (0.8660254 if iso else 1))) * u)
+        st = p.get('style', 'squares')
+        if st == 'squares':
+            for i in range(int(math.ceil(x0)), int(math.floor(x1)) + 1):
+                L.append({'d': f'M{P((i, y0))[0]:.2f} {P((i, y0))[1]:.2f}V{P((i, y1))[1]:.2f}', 'stroke': '#b0b0b0', 'sw': 0.4})
+            for j in range(int(math.ceil(y0)), int(math.floor(y1)) + 1):
+                L.append({'d': f'M{P((x0, j))[0]:.2f} {P((x0, j))[1]:.2f}H{P((x1, j))[0]:.2f}', 'stroke': '#b0b0b0', 'sw': 0.4})
+        elif st == 'isov':
+            d = []
+            for i in range(int(math.ceil(x0)), int(math.floor(x1)) + 1):
+                off = 0.5 * (i % 2)
+                j = math.ceil(y0 - off)
+                while j + off <= y1 + 1e-9:
+                    d.append(_circle(*P((i, j + off)), p.get('dot', 0.9))); j += 1
+            L.append({'d': ''.join(d), 'fill': '#808080'})
+        elif st in ('dots', 'iso'):
+            d = []
+            for j in range(int(math.ceil(y0)), int(math.floor(y1)) + 1):
+                off = 0.5 * (j % 2) if iso else 0.0
+                i = math.ceil(x0 - off)
+                while i + off <= x1 + 1e-9:
+                    cx, cy = P((i + off, j)); r_ = p.get('dot', 0.9)
+                    d.append(_circle(cx, cy, r_)); i += 1
+            L.append({'d': ''.join(d), 'fill': '#808080'})
+        for (cx_, cy_, col) in p.get('cells', []):
+            a = P((cx_, cy_)); b = P((cx_ + 1, cy_ + 1))
+            L.append({'d': f'M{a[0]:.2f} {b[1]:.2f}H{b[0]:.2f}V{a[1]:.2f}H{a[0]:.2f}Z', 'fill': col})
+        if p.get('axes'):
+            ax = p['axes']
+            xa, ya = P((x0, 0)), P((0, y0))
+            L.append({'d': f'M{P((x0, 0))[0]:.2f} {xa[1]:.2f}H{P((x1, 0))[0] + 5:.2f}', 'stroke': '#000000', 'sw': 0.7})
+            L.append({'d': f'M{ya[0]:.2f} {P((0, y0))[1]:.2f}V{P((0, y1))[1] - 5:.2f}', 'stroke': '#000000', 'sw': 0.7})
+            s2 = size * 0.85
+            for v in ax.get('xt', []):
+                t = _num(v); tw = _w(t, s2)
+                T.append({'t': t, 'x': round(P((v, 0))[0] - tw / 2 - (2.5 if v == 0 else 0), 2), 'y': round(xa[1] + s2 + 2, 2), 'w': tw, 's': s2})
+            for v in ax.get('yt', []):
+                if v == 0:
+                    continue
+                t = _num(v); tw = _w(t, s2)
+                T.append({'t': t, 'x': round(ya[0] - 3 - tw, 2), 'y': round(P((0, v))[1] + s2 * 0.35, 2), 'w': tw, 's': s2})
+        for pl in p.get('polys', []):
+            q = [P(v) for v in pl['p']]
+            dd = 'M' + 'L'.join(f'{a:.2f} {b:.2f}' for a, b in q) + ('' if pl.get('open') else 'Z')
+            if pl.get('fill'):
+                L.append({'d': dd, 'fill': pl['fill']})
+            ln = {'d': dd, 'stroke': '#000000', 'sw': pl.get('sw', 1.2)}
+            if pl.get('dash'):
+                ln['dash'] = pl['dash']
+            if pl.get('sw', 1.2) > 0:
+                L.append(ln)
+        for (ccx, ccy, cr) in p.get('circles', []):     # circles (radius in grid units)
+            L.append({'d': _circle(*P((ccx, ccy)), cr * u), 'stroke': '#000000', 'sw': 0.9})
+        for (ccx, ccy, cr, a0, a1) in p.get('arcs', []):  # angle arcs, degrees anticlockwise from the x direction
+            q = [P((ccx + cr * math.cos(math.radians(a0 + (a1 - a0) * i / 24)),
+                    ccy + cr * math.sin(math.radians(a0 + (a1 - a0) * i / 24)))) for i in range(25)]
+            L.append({'d': 'M' + 'L'.join(f'{a:.2f} {b:.2f}' for a, b in q), 'stroke': '#000000', 'sw': 0.8})
+        r_ = p.get('big', 1.8)
+        if p.get('pts'):
+            L.append({'d': ''.join(_circle(*P(v), r_) for v in p['pts']), 'fill': '#000000'})
+        for v in p.get('crosses', []):
+            cx, cy = P(v); c_ = 2.6
+            L.append({'d': f'M{cx - c_:.2f} {cy - c_:.2f}L{cx + c_:.2f} {cy + c_:.2f}M{cx - c_:.2f} {cy + c_:.2f}L{cx + c_:.2f} {cy - c_:.2f}',
+                      'stroke': '#000000', 'sw': 1.1})
+        for tx in p.get('text', []):
+            a, b, t = tx[:3]; o = tx[3] if len(tx) > 3 else {}
+            s_ = o.get('s', size); tw = _w(t, s_, b=o.get('b')); cx, cy = P((a, b))
+            t_ = {'t': t, 'x': round(cx - tw / 2, 2), 'y': round(cy + s_ * 0.35, 2), 'w': tw, 's': s_}
+            if o.get('b'): t_['b'] = 1
+            if o.get('i'): t_['i'] = 1
+            T.append(t_)
+        pw = widths[k] * u + left + 6
+        if stack:
+            ph = hh + (ax_room(p) if p.get('axes') else 0) + 6
+            if k < len(seps):
+                t = seps[k]; tw = _w(t, size)
+                T.append({'t': t, 'x': round(left + widths[k] * u / 2 - tw / 2, 2), 'y': round(oy + ph + size * 1.1, 2), 'w': tw, 's': size})
+            oy += ph + size * 1.8
+            continue
+        if k < len(seps):
+            t = seps[k]; tw = _w(t, size)
+            T.append({'t': t, 'x': round(ox + pw + (gap[k] - tw) / 2, 2), 'y': round(top + hh / 2 + size * 0.35, 2), 'w': tw, 's': size})
+        ox += pw + gap[k]
+    return L, T
+
+
+def _draw_pie(sp, w, h, size=9.0):
+    """A pie chart: sp['pie'] = [(angle in degrees, label)], drawn clockwise from 'start' (degrees from 12 o'clock)."""
+    L, T = [], []
+    r = min(w, h) / 2 - 4
+    cx, cy = r + 4, h / 2
+    L.append({'d': _circle(cx, cy, r), 'stroke': '#000000', 'sw': 0.8})
+    a = sp.get('start', 0.0)
+    for ang, lab in sp['pie']:
+        t = math.radians(a)
+        L.append({'d': f'M{cx:.2f} {cy:.2f}L{cx + r * math.sin(t):.2f} {cy - r * math.cos(t):.2f}', 'stroke': '#000000', 'sw': 0.8})
+        m = math.radians(a + ang / 2)
+        for j, ln in enumerate(lab.split('\n')):
+            tw = _w(ln, size)
+            T.append({'t': ln, 'x': round(cx + 0.58 * r * math.sin(m) - tw / 2, 2),
+                      'y': round(cy - 0.58 * r * math.cos(m) + size * 0.35 + (j - (lab.count('\n')) / 2) * size * 1.15, 2), 'w': tw, 's': size})
+        a += ang
+    return L, T
+
+
+def _draw_map(sp, w, h, size=9.0):
+    """A mapping diagram: two ovals with the numbers in them, arrows from left to right. sp['map'] = {'l': [...], 'r':
+    [...], 'a': [(i, j)]}."""
+    m = sp['map']; L, T = [], []
+    n = max(len(m['l']), len(m['r']))
+    rw = max(_w(t, size) for t in m['l'] + m['r']) / 2 + 14
+    ry = n * size * 1.1 + 8
+    cy = h / 2
+    lx, rx = 4 + rw, w - 4 - rw
+    for ox_, vals in ((lx, m['l']), (rx, m['r'])):
+        k = 0.5523
+        L.append({'d': f'M{ox_ + rw:.2f} {cy:.2f}C{ox_ + rw:.2f} {cy + k * ry:.2f} {ox_ + k * rw:.2f} {cy + ry:.2f} {ox_:.2f} {cy + ry:.2f}'
+                       f'C{ox_ - k * rw:.2f} {cy + ry:.2f} {ox_ - rw:.2f} {cy + k * ry:.2f} {ox_ - rw:.2f} {cy:.2f}'
+                       f'C{ox_ - rw:.2f} {cy - k * ry:.2f} {ox_ - k * rw:.2f} {cy - ry:.2f} {ox_:.2f} {cy - ry:.2f}'
+                       f'C{ox_ + k * rw:.2f} {cy - ry:.2f} {ox_ + rw:.2f} {cy - k * ry:.2f} {ox_ + rw:.2f} {cy:.2f}Z', 'stroke': '#000000', 'sw': 0.9})
+    yv = lambda i, cnt: cy + (i - (cnt - 1) / 2) * size * 2.0
+    for i, t in enumerate(m['l']):
+        tw = _w(t, size); T.append({'t': t, 'x': round(lx - tw / 2, 2), 'y': round(yv(i, len(m['l'])) + size * 0.35, 2), 'w': tw, 's': size})
+    for j, t in enumerate(m['r']):
+        tw = _w(t, size); T.append({'t': t, 'x': round(rx - tw / 2, 2), 'y': round(yv(j, len(m['r'])) + size * 0.35, 2), 'w': tw, 's': size})
+    for i, j in m['a']:
+        a_ = (lx + _w(m['l'][i], size) / 2 + 3, yv(i, len(m['l']))); b_ = (rx - _w(m['r'][j], size) / 2 - 3, yv(j, len(m['r'])))
+        L.append({'d': f'M{a_[0]:.2f} {a_[1]:.2f}L{b_[0] - 4:.2f} {b_[1]:.2f}', 'stroke': '#000000', 'sw': 0.8})
+        ang = math.atan2(b_[1] - a_[1], b_[0] - a_[0]); c, s = math.cos(ang), math.sin(ang)
+        L.append({'d': f'M{b_[0]:.2f} {b_[1]:.2f}L{b_[0] - 5 * c + 2 * s:.2f} {b_[1] - 5 * s - 2 * c:.2f}L{b_[0] - 5 * c - 2 * s:.2f} {b_[1] - 5 * s + 2 * c:.2f}Z',
+                  'fill': '#000000'})
+    return L, T
+
+
+def natural(sp, size=9.0):
+    """(w, h) the drawing needs (tables), else None: the row is made at least this tall."""
+    if 'table' in sp:
+        cw, rh = _table_size(sp['table'], sp['table'].get('size', size))
+        return sum(cw) + 2, sum(rh) + 2
+    return None
+
+
+def _pchip(pts):
+    """A smooth increasing curve through data points (cumulative frequency): monotone cubic, as drawn by hand."""
+    xs = [p[0] for p in pts]; ys = [p[1] for p in pts]; n = len(pts)
+    d = [(ys[i + 1] - ys[i]) / (xs[i + 1] - xs[i]) for i in range(n - 1)]
+    m = [d[0]] + [0.0 if d[i - 1] * d[i] <= 0 else 2 / (1 / d[i - 1] + 1 / d[i]) for i in range(1, n - 1)] + [d[-1]]
+    out = []
+    for i in range(n - 1):
+        hh = xs[i + 1] - xs[i]
+        for k in range(12):
+            t = k / 12
+            h00, h10, h01, h11 = 2*t**3 - 3*t**2 + 1, t**3 - 2*t**2 + t, -2*t**3 + 3*t**2, t**3 - t**2
+            out.append((xs[i] + t * hh, h00 * ys[i] + h10 * hh * m[i] + h01 * ys[i + 1] + h11 * hh * m[i + 1]))
+    return out + [pts[-1]]
 
 
 def _draw_tree(sp, w, h, size=8.0):
@@ -370,7 +652,7 @@ def _draw_venns(sp, w, h, size=9.0):
         for i, (cx, cy) in enumerate(cs):              # set letters outside the circles, near the top
             nm = names[i]
             if len(sets) == 3 and i == 2:
-                lx, ly = cx + 0.75 * r, cy + 0.85 * r
+                lx, ly = cx + 0.95 * r, cy + 0.80 * r      # (RD2: off the circle's line)
             else:
                 lx, ly = cx + (-0.95 if i == 0 else 0.75) * r, cy - 0.78 * r
             if len(nm) > 2:                         # a word ('Sandwich'): in the box's top corner, upright, as printed
@@ -389,14 +671,20 @@ def _draw_venns(sp, w, h, size=9.0):
             pts = acc.get(key)
             if not pts:
                 continue
-            if key == '':
+            if key == '' and vd.get('out') == 'bottom':   # (RD2) a long list outside the circles: under them, centred
+                px, py = bx + bw / 2, by + bh - 4
+            elif key == '' and vd.get('out') == 'left':   # a column of numbers at the box's left side
+                px, py = bx + 4 + max(tw(t_) for t_ in str(val).split('\n')) / 2, by + bh / 2 + size * 0.35
+            elif key == '':
                 px, py = bx + bw - 12, by + bh - 6 - (str(val).count('\n')) * size * 0.6
             else:
                 px = sum(a for a, b in pts) / len(pts); py = sum(b for a, b in pts) / len(pts) + size * 0.35
             ls_ = str(val).split('\n')                     # several lines ('1 5\n6 9'): stacked round the centre
             for j, t in enumerate(ls_):
                 yy = py + (j - (len(ls_) - 1) / 2) * size * 1.2
-                T.append({'t': t, 'x': round(px - tw(t) / 2, 2), 'y': round(yy, 2), 'w': tw(t), 's': size})
+                xx = px - _lw(t, size) / 2                 # (RD2) '1   5': each number its own text (no stretched spaces)
+                for tok in t.split('   '):
+                    T.append({'t': tok, 'x': round(xx, 2), 'y': round(yy, 2), 'w': tw(tok), 's': size}); xx += tw(tok) + 0.9 * size
         if cap:
             T.append({'t': cap, 'x': round(bx + bw / 2 - tw(cap) / 2, 2), 'y': round(by + bh + size + 4, 2), 'w': tw(cap), 's': size})
     return L, T
@@ -435,7 +723,11 @@ def _draw_bars(sp, w, h, size=9.0):
 
 
 def spec(qid, label):
-    return SPECS.get((qid, label))
+    sp = SPECS.get((qid, label))
+    if sp and natural(sp):                     # a table: the row is made as tall as the drawn table (nothing spills)
+        nw, nh = natural(sp)
+        sp = dict(sp, w=max(sp.get('w', 0), nw), h=max(sp.get('h', 0), nh))
+    return sp
 
 
 def _num(v):
@@ -444,18 +736,37 @@ def _num(v):
 
 def draw(sp, w, h, size=9.0):
     """-> (lines, texts) in a box w x h (pt), origin top left. lines: {'d', 'stroke', 'sw'}; texts: {'t', 'x', 'y', 'w', 's'}."""
+    if 'graphs' in sp:                         # (RD2) two graphs one above the other in one screenshot (2025 MJ 62 9(c)(i))
+        from ms_layout import _map_path
+        L, T = [], []
+        hh = h / len(sp['graphs'])
+        for k, g in enumerate(sp['graphs']):
+            gL, gT = draw(g, w, hh - 4, size)
+            L += [dict(l_, d=_map_path(l_['d'], lambda x: x, lambda y, k=k: y + k * hh)) for l_ in gL]
+            T += [dict(t_, y=round(t_['y'] + k * hh, 2)) for t_ in gT]
+        return L, T
     if 'tree' in sp:
         return _draw_tree(sp, w, h, size)
     if 'venn' in sp:
         return _draw_venns(sp, w, h, size)
     if 'bars' in sp:
         return _draw_bars(sp, w, h, size)
+    if 'table' in sp:
+        return _draw_table(sp, w, h, size)
+    if 'plane' in sp or 'panels' in sp:
+        return _draw_plane(sp, w, h, size)
+    if 'pie' in sp:
+        return _draw_pie(sp, w, h, size)
+    if 'map' in sp:
+        return _draw_map(sp, w, h, size)
     from ms_maths import text_width as tw0
     # text_width measures some Unicode signs (−, –) as ~0 and the label was squeezed; an estimate never below 0.5 em/char
     text_width = lambda t, f, s: _w(t, s, f)
     L, T = [], []
     pl, pr, pt, pb = 22.0, 16.0, 12.0, 14.0                # room for tick labels, arrows and the y letter
     x0, x1 = sp['x']; y0, y1 = sp['y']
+    if not (x0 < 0 < x1):                                  # (RD2) the y numbers stand left of the window: room for the
+        pl = max(pl, max([_w(_num(v), size) for v in sp.get('yt', [])] + [0]) + 7)   # widest ('146000', '1.2585': spilled)
     W, H = max(20.0, w - pl - pr), max(20.0, h - pt - pb)
     X = lambda x: pl + (x - x0) / (x1 - x0) * W
     Y = lambda y: pt + (y1 - y) / (y1 - y0) * H
@@ -488,10 +799,15 @@ def draw(sp, w, h, size=9.0):
         L.append({'d': f'M{ax_x - 2:.2f} {Y(v):.2f}H{ax_x + 2:.2f}', 'stroke': '#000000', 'sw': 0.6})
         t = _num(v); tw = text_width(t, 'serif', size)
         T.append({'t': t, 'x': round(ax_x - 3 - tw, 2), 'y': round(Y(v) + size * 0.35, 2), 'w': tw, 's': size})
+    nx_ = len(sp.get('xt', []))                         # (RD2) a y number that would touch an x number goes (the
+    for t_ in [t_ for t_ in T[nx_:] if any(abs(t_['y'] - o['y']) < size and t_['x'] < o['x'] + o['w'] + 1   # '–1' / '–1'
+                                           and o['x'] < t_['x'] + t_['w'] + 1 for o in T[:nx_])]:            #  at the origin)
+        T.remove(t_)
+    tick_txt = list(T)
     xl = sp.get('xlab', 'x')
-    T.append({'t': xl, 'x': round(X(x1) + 8, 2), 'y': round(ax_y + size * 0.35, 2), 'w': _w(xl, size), 's': size, 'i': 1})
+    if xl: T.append({'t': xl, 'x': round(X(x1) + 8, 2), 'y': round(ax_y + size * 0.35, 2), 'w': _w(xl, size), 's': size, 'i': 1})
     yl = sp.get('ylab', 'y')
-    T.append({'t': yl, 'x': round(ax_x + 4, 2), 'y': round(Y(y1) - 6 + size * 0.35, 2), 'w': _w(yl, size), 's': size, 'i': 1})
+    if yl: T.append({'t': yl, 'x': round(ax_x + 4, 2), 'y': round(Y(y1) - 6 + size * 0.35, 2), 'w': _w(yl, size), 's': size, 'i': 1})
     #  (beside the arrow tip, above the window: on the window's top edge it sat on a curve, Dhruv round 38 2021 MJ 62 q9)
     dashes = [None, '3 2', '1 1.5']
     for n, (expr, lab) in enumerate(sp['f']):
@@ -526,10 +842,17 @@ def draw(sp, w, h, size=9.0):
             if dashes[n % 3] and sp.get('dash', True):      # ('dash': False - all curves solid, as printed)
                 ln['dash'] = dashes[n % 3]
             L.append(ln)
-    for px, py in sp.get('points', []):        # plotted points as crosses x (2020 ON 62 6(a): the crosses were lost)
+    if sp.get('smooth') and sp.get('points'):    # a smooth curve through the plotted points (cumulative frequency, RD2)
+        L.append({'d': 'M' + 'L'.join(f'{X(a):.2f} {Y(b):.2f}' for a, b in _pchip(sorted(sp['points']))), 'stroke': '#000000', 'sw': 1.0})
+    if sp.get('dots') and sp.get('points'):    # (RD2) points printed as dots, not crosses
+        L.append({'d': ''.join(_circle(X(a), Y(b), 1.6) for a, b in sp['points']), 'fill': '#000000'})
+    for px, py in ([] if sp.get('dots') else sp.get('points', [])):   # plotted points as crosses x (2020 ON 62 6(a))
         cx, cy, r_ = X(px), Y(py), 2.2
         L.append({'d': f'M{cx - r_:.2f} {cy - r_:.2f}L{cx + r_:.2f} {cy + r_:.2f}M{cx - r_:.2f} {cy + r_:.2f}L{cx + r_:.2f} {cy - r_:.2f}',
                   'stroke': '#000000', 'sw': 0.8})
+    for t_ in tick_txt:                        # (RD2) tick numbers on a white ground: a curve or line through a number
+        L.append({'d': f"M{t_['x'] - 0.8:.2f} {t_['y'] - 0.72 * t_['s']:.2f}H{t_['x'] + t_['w'] + 0.8:.2f}"   # never runs
+                       f"V{t_['y'] + 0.22 * t_['s']:.2f}H{t_['x'] - 0.8:.2f}Z", 'fill': '#ffffff'})          # over it
     for vx in sp.get('vlines', []):          # a vertical line (x = 95, 2022 ON 62 8(e)(i))
         L.append({'d': f'M{X(vx):.2f} {Y(y0):.2f}V{Y(y1):.2f}', 'stroke': '#000000', 'sw': 1.0})
     for tx, ty, tt in sp.get('tags', []):      # a printed label next to its curve ('a = 2.5', 2021 MJ 62 9(c)(i))
@@ -556,6 +879,9 @@ def draw(sp, w, h, size=9.0):
         if l_.get('stroke') == '#000000':
             nums = [float(v) for v in __import__('re').findall(r'-?\d+\.?\d*', l_['d'])]
             pts += list(zip(nums[0::2], nums[1::2]))
+    n_ax = int(max(W, H) / 3) + 2                       # the axes are long lines with only 2 end points: sampled, so a
+    pts += [(X(x0) + (X(x1) - X(x0)) * i / n_ax, ax_y) for i in range(n_ax + 1)]   # label is never put over an axis (RD2)
+    pts += [(ax_x, Y(y0) + (Y(y1) - Y(y0)) * i / n_ax) for i in range(n_ax + 1)]
     for t_ in T:                                        # tick numbers and axis letters are kept clear too
         for fx_ in (0, 0.5, 1):
             for fy_ in (0, 1):
@@ -597,3 +923,557 @@ def draw(sp, w, h, size=9.0):
             xx += w_
         yy += h_
     return L, T
+
+
+# ---- RD2 (Dhruv 2026-11-24): every other flagged screenshot of all 0607 batches (M0, M1, M2, M3) drawn again. Graphs
+# from the question's function on the question's own axes (ticks as printed there); a function label only where the
+# screenshot prints one. Tables, shapes on grids, dot patterns, pie charts, mapping diagrams: the drawers above.
+CUM = [(0, 0), (10, 6), (20, 14), (30, 21), (40, 27), (50, 30)]          # 2014 MJ 32 q14 (c)
+SPECS.update({
+    # group 1 (M0: 2014 MJ, 2019 ON, 2020, 2021 FM)
+    ('0607_2014MJ_21_q07', '7(a)'): dict(NO, f=[('12 - 2*x if 0 <= x <= 6 else None', ''), ('(36 - 3*x)/4', '')], vlines=[1],
+                                         x=(0, 12), y=(0, 12), grid=(1, 1), xt=[2, 4, 6, 8, 10, 12], yt=[2, 4, 6, 8, 10, 12],
+                                         tags=[(1.6, 10.6, 'R')]),
+    ('0607_2014MJ_32_q10', '10(d)'): dict(NO, f=[('2*x**2 - 5*x - 8', ''), ('-2*x - 3', '')], x=(-2, 4), y=(-12, 10), grid=(1, 2),
+                                          xt=[-2, 4], yt=[-12, 10]),
+    ('0607_2014MJ_32_q14', '14(d)'): dict(NO, f=[], points=CUM, smooth=True, x=(0, 50), y=(0, 30), grid=(5, 5),
+                                          xt=[10, 20, 30, 40, 50], yt=[5, 10, 15, 20, 25, 30], ylab=''),
+    ('0607_2014MJ_41_q06', '6(a)'): dict(NO, f=[('abs(4*x**2 - 9)', '')], x=(-2, 2), y=(-10, 10), grid=(0.5, 2), xt=[-2, 2], yt=[-10, 10]),
+    ('0607_2014MJ_41_q14', '14(a)(i)'): dict(f=[('x**2/(x**2 - 2*x - 3)', '')], dash=False, x=(-5, 5), y=(-4, 4), grid=(1, 1),
+                                             xt=[-5, 5], yt=[-4, 4],
+                                             labels=[[('t', 'f('), ('i', 'x'), ('t', ') = '), ('frac', 'x²', 'x² − 2x − 3')]]),
+    ('0607_2014MJ_61_q08', '8(a)(i)'): dict(NO, f=[('math.sin(math.radians(3*x))', '')], x=(0, 360), y=(-1, 1), grid=(30, 0.5),
+                                            xt=list(range(30, 361, 30)), yt=[-1, -0.5, 0.5, 1], xlow=True),
+    ('0607_2019ON_31_q10', '10(a)'): dict(NO, f=[('x**3 - 5*x**2 + 2*x + 8', '')], x=(-2, 5), y=(-25, 20), grid=(1, 5),
+                                          xt=[-2, 5], yt=[-25, 20]),
+    ('0607_2019ON_41_q03', '3(c)'): dict(NO, f=[('1/(1 - x**3)', ''), ('x**2 if -2 <= x <= 2 else None', '')], x=(-3, 3), y=(-2, 4),
+                                         grid=(1, 1), xt=[-3, 3], yt=[-2, 4]),
+    ('0607_2019ON_42_q02', '2(f)(i)'): dict(f=[('1/(x - 2)', ''), ('x**2', '')], dash=False, x=(-3, 3), y=(-3, 9), grid=(1, 1),
+                                            xt=[-3, 3], yt=[-3, 9],
+                                            labels=[[('t', 'f('), ('i', 'x'), ('t', ') = '), ('frac', '1', 'x − 2')],
+                                                    [('t', 'h('), ('i', 'x'), ('t', ') = '), ('i', 'x'), ('sup', '2')]]),
+    ('0607_2019ON_42_q12', '12(a)'): dict(f=[('1/(x*(x - 1)*(x + 1))', '')], dash=False, x=(-3, 3), y=(-4, 4), grid=(1, 1),
+                                          xt=[-3, 3], yt=[-4, 4],
+                                          labels=[[('t', 'f('), ('i', 'x'), ('t', ') = '), ('frac', '1', 'x(x − 1)(x + 1)')]]),
+    ('0607_2019ON_62_q09', '9(a)'): dict(NO, f=[('56.2 - 15.6*math.log10(x)', '')], x=(0, 10), y=(0, 100), grid=(1, 10),
+                                         xt=[10], yt=[100], ylab='P'),
+    ('0607_2019ON_62_q10', '10(b)'): dict(NO, f=[('100/(1 + 0.4*x)', ''), ('56.2 - 15.6*math.log10(x)', '')], x=(0, 10), y=(0, 100),
+                                          grid=(1, 10), xt=[10], yt=[100], ylab='P'),     # a = 0.4 (MS 10(a)); Eddie's model too
+    ('0607_2019ON_63_q09', '9(a)'): dict(NO, f=[('5e-24*x**9.64', '')], x=(400, 600), y=(0, 3000), grid=(25, 250),
+                                         xt=[400, 600], yt=[3000], xlab='h', ylab='D'),
+    ('0607_2020ON_41_q03', '3(b)'): dict(NO, f=[('(4*x - 1)*(2*x + 3)', ''), ('-5', '')], x=(-1.2, 0.4), y=(-7, 1), grid=(0.2, 1),
+                                         xt=[-1], yt=[]),      # the GDC method: y = (4x - 1)(2x + 3) meets y = -5 (MS 'GDC')
+    ('0607_2021FM_12_q24', '24'): dict(NO, f=[('2*abs(x + 2)', ''), ('2*abs(x + 1)', '')], dash=True, x=(-4, 2), y=(-2, 4), grid=(1, 1),
+                                       xt=[-4, -3, -2, -1, 1, 2], yt=[-2, -1, 1, 2, 3, 4]),   # y = f(x + 1) solid, f dotted as printed
+    ('0607_2021FM_32_q12', '12(a)'): dict(NO, f=[('0.5**x', '')], x=(-3, 3), y=(-5, 8), grid=(0.5, 1), xt=[-3, 3], yt=[-5, 8]),
+})
+SPECS.update({
+    # group 2
+    ('0607_2021FM_32_q12', '12(c)'): dict(NO, f=[('0.5**x', ''), ('4 - x**2', '')], x=(-3, 3), y=(-5, 8), grid=(0.5, 1), xt=[-3, 3], yt=[-5, 8]),
+    ('0607_2021FM_42_q03', '3(e)(i)'): dict(NO, h=190.0, f=[('4', ''), ('3 - x', ''), ('x - 1', '')], x=(-2, 7), y=(-2, 7), grid=(1, 1),
+                                            xt=[-2, -1, 1, 2, 3, 4, 5, 6, 7], yt=[-2, -1, 1, 2, 3, 4, 5, 6, 7]),
+    ('0607_2021FM_42_q07', '7(a)'): dict(NO, f=[('1/(x - 2)', '')], x=(-4, 3), y=(-3, 13), grid=(1, 1), xt=[-4, 3], yt=[-3, 13]),
+    ('0607_2021FM_62_q08', '8(b)'): dict(NO, f=[('120/(math.pi*x*x)', '')], x=(0, 12), y=(0, 12), grid=(1, 1), xt=[12], yt=[12],
+                                         xlab='d', ylab='h'),               # h = 120/(πd²) (MS 8(a))
+    ('0607_2021FM_62_q09', '9(c)(ii)'): dict(NO, f=[('80/(math.pi*x*x)', '')], x=(0, 12), y=(0, 12), grid=(1, 1), xt=[12], yt=[12],
+                                             xlab='d', ylab='w'),
+    ('0607_2021FM_62_q09', '9(d)(ii)'): dict(NO, f=[('80/(math.pi*x*x)', ''), ('8.6/x', '')], x=(0, 12), y=(0, 12), grid=(1, 1),
+                                             xt=[12], yt=[12], xlab='d', ylab='w'),   # w = 8.6/d (MS 9(d)(i))
+    ('0607_2021MJ_41_q06', '6(c)'): dict(NO, f=[('1.04**x', ''), ('1 + 0.065*x', '')], x=(0, 28), y=(1, 3.2), grid=(2, 0.2),
+                                         xt=[], yt=[]),      # e.g. y = 1.04^x and y = 1 + 0.065x (MS); no numbers printed
+    ('0607_2021MJ_41_q11', '11(b)'): {'alts': [
+        dict(NO, f=[('6*x - 1', ''), ('(5 + x)/(2*x + 3)', '')], x=(-3, 1), y=(-8, 4), grid=(0.5, 1), xt=[], yt=[]),
+        dict(NO, f=[('(6*x - 1)*(2*x + 3)', ''), ('5 + x', '')], x=(-2.2, 0.8), y=(-9, 8), grid=(0.5, 1), xt=[], yt=[])]},
+    ('0607_2022MJ_41_q09', '9(b)(i)'): dict(NO, f=[('-(x + 6)*(x - 3)**2/27', ''), ('-(x + 8)*(x - 1)**2/27', '')], x=(-10, 10),
+                                            y=(-10, 10), grid=(1, 1), xt=[-10, -5, 5, 10], yt=[-10, -5, 5, 10]),
+    #   (j fits the printed sketch exactly: zeros -6 and 3 (touching), min (-3, -4), y-intercept -2; j(x + 2) = j moved 2 left)
+    ('0607_2022ON_62_q06', '6(b)'): dict(NO, f=[('2*6**(x - 1) - 1', ''), ('2e7', '')], x=(0, 10.5), y=(0, 3e7), grid=(1, 2.5e6),
+                                      xt=[], yt=[], xlab='n', ylab=''),   # the graphical way: 2 × 6^(n-1) - 1 against 20 000 000
+    ('0607_2023ON_61_q10', '10'): dict(NO, f=[('7*x', ''), ('4*x + 16', ''), ('37*math.log10(x) + 31 if x > 0 else None', '')],
+                                       x=(0, 20), y=(0, 140), grid=(2, 10), xt=[], yt=[], xlab='a', ylab='b'),   # Models M, N, P
+    ('0607_2024FM_32_q10', '10(a)'): dict(NO, f=[('x**2 + 3*x', '')], x=(-4, 4), y=(-30, 30), grid=(1, 5), xt=[-4, 4], yt=[-30, 30]),
+    ('0607_2024FM_32_q10', '10(c)'): dict(NO, f=[('x**2 + 3*x', ''), ('5 + 3*x - x**2', '')], x=(-4, 4), y=(-30, 30), grid=(1, 5),
+                                          xt=[-4, 4], yt=[-30, 30]),
+    ('0607_2024FM_42_q01', '1(a)'): dict(NO, f=[('math.sin(math.radians(x))**2', '')], x=(-180, 180), y=(-1.5, 1.5), grid=(30, 0.5),
+                                         xt=[-180, 180], yt=[-1.5, 1.5]),
+    ('0607_2024FM_42_q01', '1(c)(i)'): dict(NO, f=[('math.sin(math.radians(x))**2', ''), ('0.002*x + 0.5', '')], x=(-180, 180),
+                                            y=(-1.5, 1.5), grid=(30, 0.5), xt=[-180, 180], yt=[-1.5, 1.5]),
+})
+SPECS[('0607_2022ON_62_q06', '2')] = SPECS[('0607_2022ON_62_q06', '6(b)')]   # (maths_check reads this row's label as '2')
+INT = lambda a, b: [v for v in range(a, b + 1) if v]
+SPECS.update({
+    # group 3 (M1: 2024)
+    ('0607_2024FM_62_q08', '8(f)'): dict(NO, f=[('(96 + 24*x)/(2 + x)', '')], x=(0, 20), y=(0, 50), grid=(2, 5), xt=[20], yt=[48],
+                                         ylab='S'),
+    ('0607_2024FM_62_q09', '9(c)'): dict(NO, f=[('(96 + 24*x)/(2 + x)', ''), ('(144 + 48*x)/(6 + x)', '')], x=(0, 20), y=(0, 50),
+                                         grid=(2, 5), xt=[20], yt=[], ylab=''),      # S and Y on the same axes
+    ('0607_2024MJ_13_q18', '18'): dict(NO, h=160.0, f=[('x + 2', '')], x=(-4, 4), y=(-4, 4), grid=(1, 1), xt=INT(-4, 4), yt=INT(-4, 4)),
+    ('0607_2024MJ_31_q07', '7(d)(i)'): dict(NO, h=170.0, f=[('0.5*x*(5 - x) + 2 if 0 <= x <= 5 else None', '')], x=(-4, 8), y=(-4, 6),
+                                            grid=(1, 1), xt=INT(-4, 8), yt=INT(-4, 6)),   # f(x) = 0.5x(5 - x) fits the printed arc
+    ('0607_2024MJ_31_q07', '7(d)(ii)'): dict(NO, h=170.0, f=[('0.5*(x + 3)*(2 - x) if -3 <= x <= 2 else None', '')], x=(-4, 8), y=(-4, 6),
+                                             grid=(1, 1), xt=INT(-4, 8), yt=INT(-4, 6)),
+    ('0607_2024MJ_31_q11', '11(b)'): dict(NO, f=[('x**2 + 2*x - 3', ''), ('-x**2 + x + 2', '')], x=(-4, 3), y=(-18, 12), grid=(1, 2),
+                                          xt=[-4, 3], yt=[-18, 12]),
+    ('0607_2024MJ_32_q11', '11(a)'): dict(NO, f=[('2/(x - 2)', '')], x=(-3, 5), y=(-5, 11), grid=(1, 1), xt=[-3, 5], yt=[-5, 11]),
+    ('0607_2024MJ_32_q11', '11(d)'): dict(NO, f=[('2/(x - 2)', ''), ('2*x + 1', '')], x=(-3, 5), y=(-5, 11), grid=(1, 1), xt=[-3, 5], yt=[-5, 11]),
+    ('0607_2024MJ_33_q12', '12(a)(i)'): dict(NO, f=[('2*x**2 - 6*x', '')], x=(-4, 6), y=(-10, 60), grid=(1, 10), xt=[-4, 6], yt=[-10, 60]),
+    ('0607_2024MJ_33_q12', '12(b)'): dict(NO, f=[('2*x**2 - 6*x', ''), ('x**2 - 4*x + 15', '')], x=(-4, 6), y=(-10, 60), grid=(1, 10),
+                                          xt=[-4, 6], yt=[-10, 60]),
+    ('0607_2024MJ_41_q06', '6(a)'): dict(NO, f=[('2 - abs(1 - 0.5*x**2)', '')], x=(-3, 3), y=(-3, 3), grid=(0.5, 0.5), xt=[-3, 3], yt=[-3, 3]),
+    ('0607_2024MJ_43_q05', '5(a)'): dict(f=[('5 + 2*x - 4*x**2 - x**3', '')], dash=False, x=(-5, 2), y=(-20, 20), grid=(1, 5), xt=[-5, 2],
+                                         yt=[-20, 20], labels=[[('t', 'f('), ('i', 'x'), ('t', ') = 5 + 2'), ('i', 'x'), ('t', ' − 4'),
+                                                                ('i', 'x'), ('sup', '2'), ('t', ' − '), ('i', 'x'), ('sup', '3')]]),
+    ('0607_2024MJ_62_q10', '10(b)(ii)'): dict(NO, f=[('48 + 28800/x if x >= 200 else None', '')], x=(0, 1600), y=(0, 200), grid=(100, 20),
+                                              xt=[200, 1600], yt=[], xlab='L', ylab='C'),
+    ('0607_2024MJ_63_q07', '7(c)'): dict(NO, f=[('x*(300 - x)', '')], x=(0, 300), y=(0, 24000), grid=(25, 2000), xt=[100, 200, 300],
+                                         yt=[6000, 12000, 18000, 24000], ylab='A'),     # (numbers as on the printed screenshot)
+    ('0607_2024MJ_63_q10', '10(b)'): dict(NO, f=[('40000*math.sin(math.radians(x))*math.cos(math.radians(x))', '')], x=(0, 90),
+                                          y=(0, 30000), grid=(10, 5000), xt=[90], yt=[30000], xlab='w', ylab='A'),
+    ('0607_2024ON_31_q11', '11(a)(i)'): dict(NO, f=[('5/x', '')], x=(-3, 3), y=(-15, 15), grid=(0.5, 2.5), xt=[-3, 3], yt=[-15, 15], xlow=True),
+})
+for _a, _b in ((('0607_2024FM_62_q08', '48'), '8(f)'), (('0607_2024MJ_63_q07', '0'), '7(c)'), (('0607_2024MJ_63_q10', '0'), '10(b)')):
+    SPECS[_a] = SPECS[(_a[0], _b)]          # (maths_check reads these rows' label as a number of the cell)
+SPECS.update({
+    # group 4 (M1: 2024 ON, 2025 FM/MJ)
+    ('0607_2024ON_31_q11', '11(b)'): dict(NO, f=[('5/x', ''), ('3*x - 2', '')], x=(-3, 3), y=(-15, 15), grid=(0.5, 2.5), xt=[-3, 3],
+                                          yt=[-15, 15], xlow=True),
+    ('0607_2024ON_32_q12', '12(a)(i)'): dict(NO, f=[('x**3 + 6*x**2', '')], x=(-6, 2), y=(-5, 40), grid=(1, 5), xt=[-6, 2], yt=[-5, 40]),
+    ('0607_2024ON_32_q12', '12(b)'): dict(NO, f=[('x**3 + 6*x**2', ''), ('10 - 3*x', '')], x=(-6, 2), y=(-5, 40), grid=(1, 5),
+                                          xt=[-6, 2], yt=[-5, 40]),
+    ('0607_2024ON_41_q09', '9(a)'): dict(NO, f=[('1/((2*x - 3)*(2*x + 1))', '')], x=(-2, 4), y=(-4, 4), grid=(0.5, 1), xt=[-2, 4], yt=[-4, 4]),
+    ('0607_2024ON_43_q04', '4(a)'): dict(NO, f=[('x**3 - 4*x + 2', '')], x=(-3, 3), y=(-13, 17), grid=(1, 2), xt=[-3, 3], yt=[-13, 17]),
+    ('0607_2024ON_43_q04', '4(c)'): dict(NO, f=[('x**3 - 4*x + 2', ''), ('3/x + x**2', '')], x=(-3, 3), y=(-13, 17), grid=(1, 2),
+                                         xt=[-3, 3], yt=[-13, 17]),
+    ('0607_2024ON_61_q02', '2(d)'): dict(NO, h=1.0, f=[('1.5*x**2 + 0.5*x', '')], x=(0, 25), y=(0, 1000), grid=(5, 100), xt=[], yt=[],
+                                         xlab='k', ylab=''),         # the GDC way: total cards 1.5k² + 0.5k (= 737)
+    ('0607_2024ON_61_q03', '3(c)'): dict(NO, f=[('x*(x + 1)*(x - 1)/6', '')], x=(0, 30), y=(0, 4000), grid=(5, 500), xt=[], yt=[],
+                                         xlab='t', ylab='H'),       # H = t(t + 1)(t - 1)/6 (= 2925)
+    ('0607_2024ON_61_q05', '5(c)'): dict(NO, f=[('268 - 248*x**0.0139', ''), ('10', '')], x=(5, 20), y=(9, 15), grid=(1, 0.5),
+                                         xt=[5, 10, 15, 20], yt=[10, 11, 12, 13, 14, 15]),   # y = 268 - 248x^0.0139 (MS 5(b))
+    ('0607_2024ON_61_q06', '6(a)'): dict(NO, f=[('0.0381*x**2 - 6.23*x + 269', '')], x=(82, 105), y=(10, 40), grid=(1, 5),
+                                         xt=[82, 105], yt=[10, 20, 30, 40]),
+    ('0607_2024ON_62_q09', '9(a)'): dict(NO, f=[('(100/x)**2', '')], x=(0, 10), y=(0, 3000), grid=(1, 250), xt=[10], yt=[3000],
+                                         xlab='D', ylab='N'),       # N = (100/D)² (MS 8)
+    ('0607_2025FM_32_q16', '16(a)'): dict(NO, f=[('2*x**2 + x - 6', '')], x=(-3, 4), y=(-12, 30), grid=(1, 3), xt=[-3, 4], yt=[-12, 30]),
+    ('0607_2025FM_32_q16', '16(b)(i)'): dict(NO, f=[('2*x**2 + x - 6', ''), ('3 + 2*x - x**2', '')], x=(-3, 4), y=(-12, 30), grid=(1, 3),
+                                             xt=[-3, 4], yt=[-12, 30]),
+    ('0607_2025FM_42_q08', '8(a)'): dict(NO, f=[('1/(1 + x**2)', '')], x=(-3, 3), y=(-2, 2), grid=(0.5, 0.5), xt=[-3, 3], yt=[-2, 2]),
+    ('0607_2025FM_42_q08', '8(b)'): dict(NO, col=3, f=[('1/(1 + x**2)', ''), ('x**2 + x - 1', '')], x=(-3, 3), y=(-2, 2), grid=(0.5, 0.5),
+                                         xt=[-3, 3], yt=[-2, 2]),
+    ('0607_2025MJ_23_q14', '14(b)'): dict(NO, f=[('math.cos(math.radians(x))', '')], x=(0, 360), y=(-1, 1), grid=(30, 0.5), xt=[360],
+                                          yt=[-1, 1]),
+})
+for _a, _b in ((('0607_2024ON_61_q02', '3'), '2(d)'), (('0607_2024ON_61_q03', '3'), '3(c)'), (('0607_2024ON_61_q05', '10'), '5(c)')):
+    SPECS[_a] = SPECS[(_a[0], _b)]
+DV = '(x*x + x*math.sqrt(x*x + 80))/20'                 # 2025 MJ 62: D = (V² + V√(V² + 80))/20 (MS 9(b))
+SPECS.update({
+    # group 5 (M1: 2025 MJ / ON)
+    ('0607_2025MJ_31_q18', '18(a)'): dict(NO, f=[('7/(x + 2)', '')], x=(-10, 10), y=(-10, 10), grid=(1, 1), xt=[-10, 10], yt=[-10, 10]),
+    ('0607_2025MJ_31_q18', '18(c)'): dict(NO, f=[('7/(x + 2)', ''), ('x/5', '')], x=(-10, 10), y=(-10, 10), grid=(1, 1), xt=[-10, 10],
+                                          yt=[-10, 10]),
+    ('0607_2025MJ_32_q17', '17(a)'): dict(NO, f=[('(3*x + 6)/(x - 2)', '')], x=(-10, 10), y=(-10, 10), grid=(1, 1), xt=[-10, 10], yt=[-10, 10]),
+    ('0607_2025MJ_32_q17', '17(c)'): dict(NO, f=[('(3*x + 6)/(x - 2)', ''), ('x', '')], x=(-10, 10), y=(-10, 10), grid=(1, 1),
+                                          xt=[-10, 10], yt=[-10, 10]),
+    ('0607_2025MJ_33_q17', '17(a)(i)'): dict(NO, f=[('x**3 + 6*x**2 + 2*x - 20', '')], x=(-6, 3), y=(-35, 70), grid=(1, 5),
+                                             xt=[-6, 3], yt=[-35, 70]),
+    ('0607_2025MJ_33_q17', '17(b)'): dict(NO, f=[('x**3 + 6*x**2 + 2*x - 20', ''), ('3*x + 10', '')], x=(-6, 3), y=(-35, 70), grid=(1, 5),
+                                          xt=[-6, 3], yt=[-35, 70]),
+    ('0607_2025MJ_41_q11', '11(a)'): dict(f=[('x**3/((x + 2)*(x - 3))', '')], dash=False, x=(-10, 10), y=(-20, 20), grid=(1, 2.5),
+                                          xt=[-10, 10], yt=[-20, 20],
+                                          labels=[[('t', 'f('), ('i', 'x'), ('t', ') = '), ('frac', 'x³', '(x + 2)(x − 3)')]]),
+    ('0607_2025MJ_42_q13', '13'): dict(NO, f=[('5*0.8**x', ''), ('2*x + 7', '')], x=(-5, 5), y=(-12, 15), grid=(1, 2), xt=[-4, -2, 2, 4],
+                                       yt=[-10, 10]),       # no axes in the question: the printed screenshot's window
+    ('0607_2025MJ_62_q07', '7(c)(ii)'): dict(NO, f=[('10*x + 2 - 4.9*x*x', '')], x=(0, 2.3), y=(0, 8), grid=(0.25, 1), xt=[1, 2],
+                                             yt=[2, 4, 6], ylab='H'),
+    ('0607_2025MJ_62_q09', '9(c)(i)'): {'col': 3, 'graphs': [
+        dict(NO, f=[(DV, ''), ('82.98', '')], x=(0, 30), y=(0, 120), grid=(5, 20), xt=[30], yt=[100], xlab='V', ylab='D'),
+        dict(NO, f=[(DV + ' - 82.98', '')], x=(-30, 30), y=(-100, 100), grid=(5, 25), xt=[], yt=[], xlab='V', ylab='')]},
+    ('0607_2025MJ_63_q08', '8(a)'): dict(NO, f=[('-0.32*x*x + 12.4*x + 2', '')], x=(0, 30), y=(0, 140), grid=(2, 10), xt=[30],
+                                         yt=[50, 100], ylab='L'),                       # Irene: L = -0.32x² + 12.4x + 2 (MS 6(b))
+    ('0607_2025MJ_63_q08', '8(b)'): dict(NO, f=[('123/(1 + 3.2*10**(-0.103*x))', '')], x=(0, 30), y=(0, 140), grid=(2, 10), xt=[30],
+                                         yt=[50, 100], ylab='L'),                       # Mayuko: k = 0.103 (MS 7(c))
+    ('0607_2025ON_31_q19', '19(a)'): dict(NO, f=[('(3 - x)*(x - 5)', '')], x=(0, 8), y=(-16, 4), grid=(1, 2), xt=[8], yt=[-16, 4]),
+    ('0607_2025ON_33_q18', '18(a)'): dict(NO, f=[('2*x**2 - 8*x + 3', '')], x=(-1, 5), y=(-10, 15), grid=(1, 2.5), xt=[-1, 5], yt=[-10, 15]),
+    ('0607_2025ON_41_q08', '8(a)'): dict(f=[('2**x/(x + 2)', '')], dash=False, x=(-5, 5), y=(-5, 5), grid=(1, 1), xt=[-5, 5], yt=[-5, 5],
+                                         labels=[[('t', 'f('), ('i', 'x'), ('t', ') = '), ('frac', '2ˣ', 'x + 2')]]),
+    ('0607_2025ON_42_q08', '8(a)(i)'): dict(NO, f=[('1/((2*x - 1)*(x + 1)) - 1', '')], x=(-4, 4), y=(-4, 4), grid=(0.5, 0.5),
+                                            xt=[-4, 4], yt=[-4, 4], xlow=True),
+})
+VL = '0.5*x*x + 1.5*x'                       # 2025 ON 62: vertical lines in Tower t (MS 2(c))
+SPECS.update({
+    # group 6 (M1: 2025 ON, 2026)
+    ('0607_2025ON_42_q08', '8(b)'): dict(NO, f=[('1/((2*x - 1)*(x + 1)) - 1', ''), ('0.5*(x + 1)', '')], x=(-4, 4), y=(-4, 4),
+                                         grid=(0.5, 0.5), xt=[-4, 4], yt=[-4, 4], xlow=True),
+    ('0607_2025ON_43_q04', '4(f)(ii)'): dict(NO, f=[('x**4 + 4*x**3', ''), ('20 + 10*x', '')], vlines=[-2],
+                                             band=('x**4 + 4*x**3 if x <= -2 else 0', 'max(20 + 10*x, x**4 + 4*x**3) if x <= -2 else 0'),
+                                             x=(-4.5, 2), y=(-30, 50), grid=(0.5, 5), xt=[-4.5, 2], yt=[-30, 50], tags=[(-3.2, -15, 'R')]),
+    ('0607_2025ON_61_q05', '5(b)(i)'): dict(NO, f=[('195/(39*x + 160)', '')], x=(0, 50), y=(0, 1.2), grid=(5, 0.1),
+                                            xt=[10, 20, 30, 40, 50], yt=[0.2, 0.4, 0.6, 0.8, 1.0, 1.2], xlab='h', ylab='d'),
+    ('0607_2025ON_61_q05', '5(c)(i)'): dict(NO, f=[('1/math.log10(2*x + 3) - 0.5', '')], x=(0, 50), y=(0, 1.2), grid=(5, 0.1),
+                                            xt=[10, 20, 30, 40, 50], yt=[0.2, 0.4, 0.6, 0.8, 1.0, 1.2], xlab='h', ylab='d'),
+    ('0607_2025ON_62_q02', '2(d)'): {'alts': [
+        dict(NO, f=[(VL, ''), ('902', '')], x=(0, 45), y=(0, 1000), grid=(5, 100), xt=[], yt=[], xlab='t', ylab=''),
+        dict(NO, col=3, f=[(VL, '')], x=(0, 45), y=(0, 1000), grid=(5, 100), xt=[], yt=[], xlab='t', ylab='')]},
+    ('0607_2025ON_62_q04', '4(b)'): dict(NO, f=[('0.001595*x*x - 6.399*x + 6419', '')], x=(2020, 2050), y=(0, 4.5), grid=(5, 0.5),
+                                         xt=[2020, 2050], yt=[1.2585], xlab='t', ylab='m'),
+    ('0607_2025ON_63_q01', '1(a)(i)'): dict(NO, f=[('1.5*x*x - 6*x + 4', ''), ('3*x*x - 6*x + 4', ''), ('x*x - 6*x + 4', '')],
+                                            x=(-1, 7), y=(-6, 6), grid=(1, 1), xt=[2, 4, 6], yt=[-6, -4, -2, 2, 4, 6]),
+    ('0607_2025ON_63_q02', '2(a)(i)'): dict(NO, h=160.0, f=[(f'x*x + {b}*x', '') for b in (-6, -4, -2, 0, 2, 4, 6)], x=(-8, 6), y=(-10, 8),
+                                            grid=(1, 1), xt=[-8, -6, -4, -2, 2, 4, 6], yt=[-10, -8, -6, -4, -2, 2, 4, 6, 8]),
+    ('0607_2025ON_63_q04', '4(d)'): dict(NO, f=[('100*x/(200 - x)', '')], x=(0, 100), y=(0, 100), grid=(10, 10), xt=[100], yt=[100]),
+    ('0607_2026FM_32_q17', '17(a)'): dict(NO, f=[('6/(4 - x)', '')], x=(-5, 10), y=(-10, 15), grid=(1, 1), xt=[-5, 10], yt=[-10, 15]),
+    ('0607_2026FM_32_q17', '17(c)'): dict(NO, f=[('6/(4 - x)', ''), ('5 - x', '')], x=(-5, 10), y=(-10, 15), grid=(1, 1), xt=[-5, 10],
+                                          yt=[-10, 15]),
+    ('0607_2026FM_42_q10', '10(a)'): dict(f=[('2*x/(x*x + x - 12)', '')], dash=False, x=(-8, 8), y=(-8, 8), grid=(1, 1), xt=[-8, 8],
+                                          yt=[-8, 8], labels=[[('t', 'f('), ('i', 'x'), ('t', ') = '), ('frac', '2x', 'x² + x − 12')]]),
+    ('0607_2026FM_62_q06', '6(a)'): dict(NO, f=[('144000 + 19200/x + 12*x', '')], x=(0, 150), y=(144000, 146000), grid=(10, 250),
+                                         xt=[150], yt=[144000, 145000, 146000], ylab='T'),
+    ('0607_2026MJ_31_q17', '17(a)'): dict(NO, f=[('2*x*x - 5*x + 1', '')], x=(-2, 4), y=(-5, 20), grid=(0.5, 2.5), xt=[-2, 4], yt=[-5, 20]),
+    ('0607_2026MJ_32_q14', '14(a)(i)'): dict(NO, f=[('x*x + 2', ''), ('x**3 + x*x - 5*x + 2', '')],
+                                             x=(-3, 3), y=(-5, 25), grid=(0.5, 2.5), xt=[-3, 3], yt=[-5, 25]),   # (the screenshot shows both)
+})
+F43 = '1/(x - 2) + 3/(2*x - 1)'                      # 2026 MJ 43 q9 f(x)
+SPECS.update({
+    # group 7 (M1: 2026 MJ)
+    ('0607_2026MJ_32_q14', '14(b)'): dict(NO, f=[('x*x + 2', ''), ('x**3 + x*x - 5*x + 2', '')], x=(-3, 3), y=(-5, 25), grid=(0.5, 2.5),
+                                          xt=[-3, 3], yt=[-5, 25]),
+    ('0607_2026MJ_33_q20', '20(a)'): dict(NO, f=[('x*x - 4*x + 3', '')], x=(-2, 4), y=(-2, 20), grid=(0.5, 2), xt=[-2, 4], yt=[-2, 20]),
+    ('0607_2026MJ_41_q06', '6(a)'): dict(NO, f=[('0.5*x**3 - 2*x + 2', '')], x=(-3, 3), y=(-6, 10), grid=(0.5, 1), xt=[-3, 3], yt=[-6, 10]),
+    ('0607_2026MJ_41_q17', '17'): dict(NO, f=[('x*x + 3*x - 6', '')], x=(-6, 2.5), y=(-10, 10), grid=(1, 2), xt=[-5], yt=[-10, 10]),
+    #   (no axes in the question: the printed screenshot's window)
+    ('0607_2026MJ_42_q05', '5(a)'): dict(NO, f=[('5/x**2 + 1/x**3', '')], x=(-2, 2), y=(-5, 25), grid=(0.5, 2.5), xt=[-2, 2], yt=[-5, 25]),
+    ('0607_2026MJ_43_q09', '9(a)(i)'): dict(NO, f=[(F43, '')], x=(-4, 4), y=(-6, 6), grid=(0.5, 1), xt=[-4, 4], yt=[-6, 6]),
+    ('0607_2026MJ_43_q09', '9(b)'): dict(NO, f=[(F43, ''), ('x - 1', '')], x=(-4, 4), y=(-6, 6), grid=(0.5, 1), xt=[-4, 4], yt=[-6, 6]),
+    ('0607_2026MJ_43_q17', '17(a)'): dict(NO, f=[('2**x', ''), ('0.5*x + 1.5', '')], x=(-4, 2.5), y=(-0.5, 4), grid=(0.5, 0.5), xt=[], yt=[]),
+    ('0607_2026MJ_61_q06', '6(b)'): dict(NO, f=[('math.pi*x*(20 - x)**2/4', '')], x=(0, 20), y=(0, 1000), grid=(1, 100), xt=[20], yt=[],
+                                         xlab='h', ylab='V'),     # V = πh(20 - h)²/4 (question 6(a))
+    ('0607_2026MJ_61_q07', '7(b)(ii)'): dict(NO, f=[('4*math.pi*x**3/(x - 8) if x > 8 else None', '')], x=(0, 25), y=(0, 20000),
+                                             grid=(2.5, 2000), xt=[], yt=[], xlab='R', ylab='V'),   # V = 4πR³/(R - 8) (7(b)(i))
+    ('0607_2026MJ_63_q09', '9'): dict(NO, f=[('50*math.sqrt(1 + x*x/9)', ''), ('100', '')], x=(0, 8.5), y=(0, 130), grid=(0.5, 10),
+                                      xt=[], yt=[], xlab='t', ylab=''),     # H = 50√(1 + t²/3²) = 100 (MS)
+})
+CHIRP = [(14, 83), (16, 88), (17, 102), (19, 106), (21, 129), (22, 138), (23, 157), (25, 180), (27, 208)]   # 2022 MJ 62 table
+ARRIVE = [(60, 23), (120, 42), (180, 58), (240, 71), (300, 80), (360, 86), (420, 92), (480, 96), (540, 98), (600, 99), (660, 99),
+          (720, 99), (780, 100), (840, 100), (900, 100)]                                                        # 2022 MJ 63 9(a)
+SPECS.update({
+    # data plots and bar charts (RD2)
+    ('0607_2019ON_62_q07', '7(b)'): dict(NO, f=[], points=[(0, 16000), (1, 8000), (2, 4000), (3, 2000), (4, 1000), (5, 500), (6, 250)],
+                                         smooth=True, x=(0, 6), y=(0, 16000), grid=(0.5, 1000), xt=[1, 2, 3, 4, 5, 6],
+                                         yt=[4000, 8000, 12000, 16000], ylab='V'),
+    ('0607_2019ON_62_q08', '8(a)'): dict(NO, f=[], points=[(0, 100), (1, 72), (2, 58), (3, 48), (4, 44), (5, 42), (6, 40)], x=(0, 6),
+                                         y=(0, 100), grid=(0.5, 10), xt=[1, 2, 3, 4, 5, 6], yt=[20, 40, 60, 80, 100], ylab='P'),
+    ('0607_2020MJ_63_q06', '6(a)(i)'): dict(NO, f=[], dots=True, points=[(1, 2), (2, 3), (3, 5), (4, 7), (5, 2), (6, 4), (7, 8), (8, 1)],
+                                            x=(0, 9), y=(0, 9), grid=(1, 1), xt=[5], yt=[1, 2, 3, 4, 5, 6, 7, 8, 9], xlab='n',
+                                            ylab='D(Pₙ)'),          # digital roots of the primes 2, 3, 5, 7 (and 11, 13, 17, 19 printed)
+    ('0607_2021MJ_62_q08', '8(c)(i)'): dict(NO, f=[('0.0048*x*x - 0.1619*x + 1.3281 if 2 <= x <= 22 else None', '')], dash=True,
+                                            x=(0, 25), y=(-0.1, 1), grid=(1, 0.1), xt=[5, 10, 15, 20, 25], yt=[0.5, 1], xlab='F',
+                                            ylab='p', points=[(2, 0.99), (4, 0.85), (6, 0.56), (8, 0.26), (10, 0.11), (12, 0.04),
+                                                              (14, 0.02), (16, 0.02), (18, 0.02), (20, 0.02), (22, 0.01)]),
+    ('0607_2022MJ_62_q08', '8(b)'): dict(NO, f=[('0.5*x*x - 11*x + 136', '')], points=CHIRP, x=(10, 30), y=(70, 220), grid=(1, 10),
+                                         xt=[15, 20, 25, 30], yt=[80, 120, 160, 200], xlab='T', ylab='N'),   # a = -11, b = 136 (MS 8(a))
+    ('0607_2022MJ_63_q10', '10(f)'): dict(NO, f=[('13*(x - 54)**(1/3) if x >= 54 else None', '')], dots=True, points=ARRIVE, x=(0, 900),
+                                          y=(0, 110), grid=(50, 10), xt=[300, 600, 900], yt=[50, 100], xlab='t', ylab='p'),
+    ('0607_2022ON_32_q07', '7(c)'): dict(NO, f=[], points=[(0, 0), (15, 2), (30, 6), (45, 15), (60, 27), (75, 42), (90, 54), (105, 58),
+                                                           (120, 60)], smooth=True, x=(0, 120), y=(0, 60), grid=(10, 5),
+                                         xt=[20, 40, 60, 80, 100, 120], yt=[10, 20, 30, 40, 50, 60], xlab='t', ylab=''),
+    ('0607_2024MJ_31_q02', '2(f)'): {'bars': [('blue', 7), ('yellow', 3), ('pink', 2), ('green', 5), ('purple', 4)], 'y': (0, 8),
+                                     'yt': [0, 1, 2, 3, 4, 5, 6, 7, 8], 'grid': (None, 1), 'w': 230.0, 'h': 140.0},
+    ('0607_2024MJ_32_q08', '8(d)(i)'): {'bars': [('Walk', 4), ('Bicycle', 6), ('Bus', 7), ('Car', 3)], 'y': (0, 8),
+                                        'yt': [0, 1, 2, 3, 4, 5, 6, 7, 8], 'grid': (None, 1), 'w': 200.0, 'h': 140.0},
+    ('0607_2025FM_42_q09', '9(a)'): dict(NO, f=[], points=[(1, 4), (2, 6), (3, 3), (4, 8), (6, 6), (7, 7), (8, 7), (9, 8), (10, 9)],
+                                         x=(0, 10), y=(0, 10), grid=(1, 1), xt=[2, 4, 6, 8, 10], yt=[2, 4, 6, 8, 10]),
+    ('0607_2026MJ_13_q06', '6(a)'): {'bars': [('water', 20), ('milk', 8), ('juice', 12)], 'y': (0, 20),
+                                     'yt': [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20], 'grid': (None, 1), 'w': 170.0, 'h': 170.0},
+})
+SPECS[('0607_2019ON_62_q08', '7')] = SPECS[('0607_2019ON_62_q08', '8(a)')]
+SPECS.update({
+    # probability trees, pie charts, mapping diagrams (RD2)
+    ('0607_2019ON_31_q12', '12(a)'): {'w': 270.0, 'h': 180.0, 'tree': {
+        'first': [('5/7', ['school day']), ('2/7', ['non-school', 'day'])],
+        'second': [[('9/10', ['gets up', 'before 7 am']), ('1/10', ['does not get', 'up before 7 am'])],
+                   [('1/20', ['gets up', 'before 7 am']), ('19/20', ['does not get', 'up before 7 am'])]]}},
+    ('0607_2026FM_12_q19', '19(a)'): {'w': 230.0, 'h': 170.0, 'tree': {
+        'first': [('1/4', ['tea']), ('3/4', ['not tea'])],
+        'second': [[('1/4', ['tea']), ('3/4', ['not tea'])], [('1/4', ['tea']), ('3/4', ['not tea'])]]}},
+    ('0607_2026MJ_11_q14', '14(b)(i)'): {'w': 250.0, 'h': 170.0, 'tree': {
+        'first': [('6/11', ['apple']), ('5/11', ['not an', 'apple'])],
+        'second': [[('6/11', ['apple']), ('5/11', ['not an', 'apple'])], [('6/11', ['apple']), ('5/11', ['not an', 'apple'])]]}},
+    ('0607_2022ON_32_q04', '4(b)(ii)'): {'pie': [(60, '27'), (105, '28'), (120, '29'), (75, '30')], 'w': 160.0, 'h': 150.0},
+    ('0607_2023ON_31_q03', '3(b)'): {'pie': [(75, 'books'), (165, 'food'), (120, 'clothes')], 'w': 160.0, 'h': 150.0},
+    ('0607_2023ON_31_q09', '9(a)'): {'map': {'l': ['0', '1', '2'], 'r': ['–1', '2', '5'], 'a': [(0, 0), (1, 1), (2, 2)]},
+                                     'w': 150.0, 'h': 90.0},
+    ('0607_2025FM_12_q04', '4'): {'map': {'l': ['[5]', '[–2]', '0'], 'r': ['16', '2', '[6]'], 'a': [(0, 0), (1, 1), (2, 2)]},
+                                  'w': 170.0, 'h': 100.0},
+})
+_S3 = 3 ** 0.5
+_AB = (300 * math.sin(math.radians(60)), 300 * math.cos(math.radians(60)))        # 2020 MJ 31 q8: B from A, C from B
+_C = (_AB[0] + 220 * math.sin(math.radians(150)), _AB[1] + 220 * math.cos(math.radians(150)))
+SPECS.update({
+    # sketches with clear data (RD2)
+    ('0607_2020MJ_31_q08', '8(a)'): {'w': 260.0, 'h': 130.0, 'plane': {
+        'style': 'none', 'n': (-30, 400, -70, 200),
+        'polys': [{'p': [(0, 0), _AB, _C], 'open': True, 'sw': 0.9}, {'p': [_C, (0, 0)], 'open': True, 'sw': 0.7, 'dash': '3 2'},
+                  {'p': [(0, 0), (0, 70)], 'open': True, 'sw': 0.7}, {'p': [_AB, (_AB[0], _AB[1] + 50)], 'open': True, 'sw': 0.7}],
+        'arcs': [(0, 0, 22, 90, 30), (_AB[0], _AB[1], 18, 90, -60)],
+        'text': [(-14, -12, 'A', {'i': 1}), (_AB[0] - 16, _AB[1] + 12, 'B', {'i': 1}), (_C[0] + 10, _C[1] - 8, 'C', {'i': 1}),
+                 (0, 84, 'North', {'s': 8}), (30, 42, '060°', {'s': 8}), (_AB[0] + 35, _AB[1] + 10, '150°', {'s': 8}),
+                 (120, 100, '300 m', {'s': 8}), (_AB[0] + 92, _AB[1] - 90, '220 m', {'s': 8})]}},
+    ('0607_2021MJ_52_q05', '5(a)'): {'w': 200.0, 'h': 150.0, 'plane': {
+        'style': 'iso', 'n': (-4, 4, -4, 4), 'dot': 0.9,
+        'circles': [(0, 0, 1), (0, 0, _S3), (0, 0, 2), (0, 0, 7 ** 0.5), (0, 0, 3)],     # the 5th nearest neighbours: radius 3
+        'text': [(0, 0, 'X', {'b': 1, 's': 7})]}},
+    ('0607_2023MJ_32_q07', '7(a)'): {'w': 250.0, 'h': 130.0, 'plane': {
+        'style': 'none', 'n': (0, 10, 0, 5.2),
+        'polys': [{'p': [(0, 0), (10, 0), (10, 5.2), (0, 5.2)], 'sw': 0.7}, {'p': [(5, 0), (5, 5.2)], 'open': True, 'sw': 0.7},
+                  {'p': [(0, 2.6), (10, 2.6)], 'open': True, 'sw': 0.7},
+                  {'p': [(1.5, 4.9), (1.5, 3.4), (3.3, 3.4)], 'open': True, 'sw': 0.9},                 # right angle
+                  {'p': [(1.5, 3.65), (1.75, 3.65), (1.75, 3.4)], 'open': True, 'sw': 0.6},
+                  {'p': [(6.3, 4.7), (7.6, 3.4), (9.2, 3.4)], 'open': True, 'sw': 0.9},                 # obtuse
+                  {'p': [(3.4, 1.4), (1.6, 0.8), (3.6, 0.8)], 'open': True, 'sw': 0.9},                 # acute
+                  {'p': [(7.2, 2.1), (7.5, 1.2), (8.3, 0.6)], 'open': True, 'sw': 0.9}],                # reflex
+        'arcs': [(7.6, 3.4, 0.35, 0, 135), (1.6, 0.8, 0.6, 0, 18.4), (7.5, 1.2, 0.3, 108.4, 323.1 + 360 - 360)],
+        'text': [(2.5, 2.9, 'A right angle', {'s': 7}), (7.5, 2.9, 'An obtuse angle', {'s': 7}),
+                 (2.5, 0.3, 'An acute angle', {'s': 7}), (7.5, 0.3, 'A reflex angle', {'s': 7})]}},
+})
+CK = '✓'
+SPECS.update({
+    # tables (RD2): '*' bold (the answer), '~' grey (given in the question), as printed
+    ('0607_2018ON_63_q01', '1(a)'): {'table': {'rows': [['Number of dots in row', 'Number of pairs of nearest neighbours'],
+                                                       ['~2', '~1'], ['3', '*2'], ['~4', '~3'], ['5', '*4'], ['6', '*5'], ['', ''],
+                                                       ['_n', '*n − 1']], 'size': 8.0}},
+    ('0607_2018ON_63_q01', '1(b)'): {'table': {'rows': [['Number of dots in row', 'Total number of different\narrangements of two crosses'],
+                                                       ['2', '~1'], ['3', '*3'], ['4', '~6'], ['5', '*10'], ['6', '~15'], ['', ''],
+                                                       ['_n', '']], 'shade': [(7, 1)], 'size': 8.0}},
+    ('0607_2021MJ_52_q01', '1(a)'): {'table': {'rows': [
+        ['Point', 'At the centre of\na square', 'Inside a square,\nnot at its centre', 'On the side of\ntwo squares', 'Where 4\nsquares meet'],
+        ['(0, 0)', '~' + CK, '', '', ''], ['(–1, 0.5)', '', '', '~' + CK, ''], ['(0.5, 0.5)', '', '', '', '~' + CK],
+        ['(1.5, 1.5)', '', '', '', '*' + CK], ['(0, 1.5)', '', '', '*' + CK, ''], ['(0.25, 0)', '', '*' + CK, '', ''],
+        ['(100.5, 99.5)', '', '', '', '*' + CK]], 'size': 7.0, 'pad': 3.0}},
+    ('0607_2021MJ_62_q04', '4'): {'table': {'rows': [['4th'], ['8'], ['4']], 'size': 9.0, 'minw': 40.0}},
+    ('0607_2023ON_52_q01', '2'): {'table': {'rows': [
+        ['Hour shown by hand H', 'Angle between hand H and hand M', None], ['(x)', 'Clockwise angle', 'Anticlockwise angle'],
+        ['1', '~30', '~330'], ['2', '*60', '*300'], ['3', '*90', '*270'], ['4', '~120', '~240'], ['5', '*150', '*210'],
+        ['6', '~180', '*180']], 'span': {(0, 1): 2}, 'nohl': [(1, 0)], 'size': 8.0}},
+    ('0607_2023ON_52_q03', '3'): {'table': {'rows': [
+        ['Number of minutes', 'Angle rotated after 1.00 am', None, 'Clockwise angle'],
+        ['after 1.00 am (m)', 'Hand H angle', 'Hand M angle', 'between the hands (c)'],
+        ['6', '*3', '*36', '*3'], ['7', '~3.5', '~42', '~8.5'], ['8', '*4', '*48', '*14'], ['9', '*4.5', '*54', '*19.5'],
+        ['10', '~5', '~60', '~25']], 'span': {(0, 1): 2}, 'nohl': [(1, 0), (1, 3)], 'size': 7.5, 'pad': 3.0}},
+    ('0607_2024ON_11_q02', '2'): {'table': {'rows': [['70', '15', '85'], ['65', '20', '85'], ['85', '40', '125'], ['80', '25', '105'],
+                                                    ['300', '100', '400']],
+                                           'shade': [(0, 0), (0, 2), (1, 1), (1, 2), (2, 0), (2, 1), (3, 1), (3, 2), (4, 0), (4, 2)],
+                                           'size': 9.0, 'minw': 34.0}},
+    ('0607_2024ON_12_q10', '10'): {'table': {'rows': [['0', '*8   9   9   9'], ['1', '*0   2   3   7   7   8'], ['2', '*0   1   2   5'],
+                                                     ['Key  1 | 2  represents  12  photos', None]],
+                                            'span': {(3, 0): 2}, 'noframe': True, 'hlines': [0, 1, 2, 3], 'vlines': [1],
+                                            'align': 'l', 'size': 9.0}},
+    ('0607_2026MJ_33_q09', '9(a)'): {'table': {'rows': [['0', '1   1   1   2   4   5   7'], ['1', '0   2   3   6   7   8']],
+                                              'noframe': True, 'hlines': [1], 'vlines': [1], 'align': 'l', 'size': 10.0}},
+    ('0607_2025ON_11_q01', '1(b)'): {'w': 150.0, 'h': 80.0, 'plane': {
+        'style': 'none', 'n': (0, 8, 0, 4.2),
+        'text': [(2, 3.4, '7'), (3, 3.4, '2'), (4, 3.4, '3'), (4.6, 3.4, '.'), (5.2, 3.4, '5'), (6.2, 3.4, '8'),
+                 (0.6, 2.3, '+'), (2, 2.3, '2'), (3, 2.3, '0'), (4, 2.3, '6'), (4.6, 2.3, '.'), (5.2, 2.3, '6'), (6.2, 2.3, '3'),
+                 (2, 0.7, '9'), (3, 0.7, '3'), (4, 0.7, '0'), (4.6, 0.7, '.'), (5.2, 0.7, '2'), (6.2, 0.7, '1')],
+        'polys': [{'p': [(0.2, 1.5), (7, 1.5)], 'open': True, 'sw': 0.7}] + [
+            {'p': [(a - 0.42, b - 0.5), (a + 0.42, b - 0.5), (a + 0.42, b + 0.5), (a - 0.42, b + 0.5)], 'sw': 0.7}
+            for a, b in ((3, 3.4), (4, 2.3), (5.2, 2.3), (2, 0.7), (6.2, 0.7))]}},     # boxed digits = the answers
+})
+SPECS.update({
+    # Venn diagrams (RD2): numbers per region as printed
+    ('0607_2019ON_31_q09', '9(d)'): {'venn': {'sets': 'BC', 'shade': 'B and not C'}, 'w': 180.0, 'h': 100.0},
+    ('0607_2021FM_32_q09', '9(a)(ii)'): {'venn': {'sets': 'AB', 'nums': {'A': '4\n6\n8', 'AB': '2\n10', 'B': '1\n5', '': '3   7   9'},
+                                                  'out': 'bottom'}, 'w': 190.0, 'h': 115.0},
+    ('0607_2021FM_32_q09', '9(b)'): {'venn': {'sets': 'PQ', 'shade': 'not (P or Q)'}, 'w': 180.0, 'h': 100.0},
+    ('0607_2024FM_42_q06', '6(a)(i)'): {'venn': {'sets': 'PQ', 'nums': {'P': '1   2\n4', 'PQ': '3\n6\n12', 'Q': '9\n15',
+                                                                       '': '5   7   8   10   11   13   14'}, 'out': 'bottom'},
+                                        'w': 200.0, 'h': 120.0},
+    ('0607_2024MJ_13_q19', '19'): {'venn': {'sets': 'PQ', 'nums': {'P': 'c   e\ni   r   y', 'PQ': 'm   h\nt   s', 'Q': 'a',
+                                                                  '': 'b   d   v'}, 'out': 'bottom'}, 'w': 200.0, 'h': 120.0},
+    ('0607_2024MJ_41_q07', '7(b)(i)'): {'venn': {'sets': 'AB', 'shade': 'A or B'}, 'w': 180.0, 'h': 100.0},
+    ('0607_2024ON_41_q07', '7(a)(i)'): {'venn': {'sets': 'CPB', 'nums': {'B': '13 − y', 'CB': '6', 'PB': '11', 'CPB': 'x', 'C': 'y',
+                                                                         'CP': '2', 'P': '12'}}, 'w': 200.0, 'h': 150.0},
+    ('0607_2025MJ_11_q16', '16(a)'): {'venn': [{'sets': 'AB', 'shade': 'B'}, {'sets': 'AB', 'shade': 'A or B'}], 'w': 300.0, 'h': 90.0},
+    ('0607_2025MJ_11_q16', '16(b)'): {'venn': {'sets': 'CL', 'nums': {'C': 43, 'CL': 12, 'L': 20, '': '[5]'}}, 'w': 190.0, 'h': 105.0},
+    ('0607_2025MJ_12_q16', '16(a)'): {'venn': {'sets': 'EC', 'nums': {'E': 3, 'EC': 8, 'C': 5, '': 9}}, 'w': 190.0, 'h': 105.0},
+    ('0607_2025ON_13_q12', '12(c)'): {'venn': {'sets': 'ET', 'nums': {'E': '8   10', 'ET': '2   4\n6   12', 'T': '1   3',
+                                                                      '': '5   7   9   11'}, 'out': 'bottom'}, 'w': 200.0, 'h': 120.0},
+    ('0607_2025ON_31_q12', '12(a)(i)'): {'venn': {'sets': 'FG', 'nums': {'F': 35, 'FG': 9, 'G': 34, '': 2}}, 'w': 190.0, 'h': 105.0},
+    ('0607_2026MJ_13_q11', '11(a)'): {'venn': {'sets': 'AB', 'nums': {'A': '2\n11', 'AB': '5\n9\n12', 'B': '3\n7',
+                                                                      '': '1\n4\n6\n8\n10'}, 'out': 'left'}, 'w': 210.0, 'h': 115.0},
+    ('0607_2026MJ_41_q11', '11(b)'): {'venn': {'sets': 'PQR', 'shade': '(Q or R) and not P'}, 'w': 190.0, 'h': 135.0},
+})
+
+
+def _sq(x, y, fill=None, sw=0.8, n=1):
+    d = {'p': [(x, y), (x + n, y), (x + n, y + n), (x, y + n)], 'sw': sw}
+    if fill:
+        d['fill'] = fill
+    return d
+
+
+def _seg(a, b, sw=0.8, dash=None):
+    d = {'p': [a, b], 'open': True, 'sw': sw}
+    if dash:
+        d['dash'] = dash
+    return d
+
+
+def _path_tiles(W, H):
+    """The tiles of a path around a W x H rectangle (one tile wide) plus the grey rectangle (2021 MJ 53 / 63 q1-2)."""
+    t = [_sq(x, y) for x in range(W + 2) for y in range(H + 2) if x in (0, W + 1) or y in (0, H + 1)]
+    return [{'p': [(1, 1), (W + 1, 1), (W + 1, H + 1), (1, H + 1)], 'fill': '#bfbfbf', 'sw': 0.8}] + t
+
+
+def _cells(cells, added, fill='#000000', dash_inner=True):
+    """A shape of unit squares on squared paper: its outline, the printed dashed lines between its squares, the added square."""
+    cs = set(cells) | {added}
+    P = []
+    for (x, y) in cs:                                    # outline: every square edge with no square on the other side
+        for (dx, dy, a, b) in ((0, -1, (x, y), (x + 1, y)), (0, 1, (x, y + 1), (x + 1, y + 1)),
+                               (-1, 0, (x, y), (x, y + 1)), (1, 0, (x + 1, y), (x + 1, y + 1))):
+            if (x + dx, y + dy) not in cs:
+                P.append(_seg(a, b, 1.2))
+            elif dash_inner and (x + dx, y + dy) > (x, y):
+                P.append(_seg(a, b, 0.6, '2 2'))
+    return [_sq(added[0], added[1], fill, 0.0)] + P
+
+
+L_SHAPE = [(1, 2), (2, 2), (1, 1), (1, 0)]                 # 2022 MJ 33 q3 (the printed L of four squares)
+SQ_GRID = lambda n: {'style': 'squares', 'n': n}
+RH60 = dict(O=(0, 0), P=(5, 2), Q=(7, 7), R=(2, 5))       # 2023 MJ 53 q3
+SPECS.update({
+    # shapes on grids (RD2)
+    ('0607_2021MJ_52_q03', '3(c)'): {'w': 170.0, 'h': 170.0, 'plane': {
+        'style': 'squares', 'n': (-5.5, 5.5, -5.5, 5.5), 'axes': {'xt': [-4, -3, -2, -1, 1, 2, 3, 4], 'yt': [-4, -3, -2, -1, 1, 2, 3, 4]},   # (±5 under the crosses)
+        'crosses': [(5, 0), (-5, 0), (0, 5), (0, -5), (3, 4), (4, 3), (-3, 4), (-4, 3), (3, -4), (4, -3), (-3, -4), (-4, -3)]}},
+    ('0607_2021MJ_53_q02', '2(a)'): {'w': 140.0, 'h': 150.0, 'stack': True, 'seps': [''],
+                                     'panels': [{'style': 'none', 'n': (0, 5, 0, 3), 'polys': _path_tiles(3, 1)},
+                                                {'style': 'none', 'n': (0, 6, 0, 3), 'polys': _path_tiles(4, 1)}]},
+    ('0607_2021MJ_63_q01', '1(a)'): {'w': 100.0, 'h': 95.0, 'plane': {'style': 'none', 'n': (0, 5, 0, 5), 'polys': _path_tiles(3, 3)}},
+    ('0607_2022MJ_33_q03', '3(b)'): {'w': 90.0, 'h': 90.0, 'plane': dict(SQ_GRID((-1, 4, -1, 4)), polys=_cells(L_SHAPE, (0, 0)))},
+    ('0607_2022MJ_33_q03', '3(c)(i)'): {'w': 100.0, 'h': 250.0, 'stack': True, 'seps': ['OR', 'OR'], 'panels': [
+        dict(SQ_GRID((-1, 4, -1, 4)), polys=_cells(L_SHAPE, (2, 0))), dict(SQ_GRID((-1, 4, -1, 4)), polys=_cells(L_SHAPE, (3, 2))),
+        dict(SQ_GRID((-1, 4, -1, 4)), polys=_cells(L_SHAPE, (0, 2)))]},
+    ('0607_2022MJ_33_q03', '3(c)(ii)'): {'w': 100.0, 'h': 250.0, 'stack': True, 'seps': ['OR', 'OR'], 'panels': [
+        dict(SQ_GRID((-1, 4, -1, 4)), polys=_cells(L_SHAPE, (2, 0), '#bfbfbf') + [_seg((0, 1.5), (3.5, 1.5), 1.0, '4 2')]),
+        dict(SQ_GRID((-1, 4, -1, 4)), polys=_cells(L_SHAPE, (3, 2), '#bfbfbf') + [_seg((0.5, 3.5), (4, 0), 1.0, '4 2')]),
+        dict(SQ_GRID((-1, 4, -1, 4)), polys=_cells(L_SHAPE, (0, 2), '#bfbfbf') + [_seg((1.5, -0.5), (1.5, 3.5), 1.0, '4 2')])]},
+    ('0607_2022ON_63_q01', '1(a)'): {'w': 100.0, 'h': 100.0, 'plane': {
+        'style': 'none', 'n': (0, 5, 0, 5), 'polys': [_sq(x, 4, '#bfbfbf') for x in range(4)] + [_sq(4, y, '#bfbfbf') for y in range(5)]}},
+    ('0607_2023MJ_53_q01', '1'): {'w': 190.0, 'h': 70.0, 'plane': {
+        'style': 'squares', 'n': (-0.5, 8.5, -0.5, 3.5),
+        'polys': [_sq(0, 2, None, 0.9), _sq(2, 1, None, 0.9, 2), _sq(5, 0, None, 0.9, 3)],
+        'pts': [(0, 2), (1, 2), (0, 3), (1, 3), (2, 1), (4, 1), (2, 3), (4, 3), (5, 0), (8, 0), (5, 3), (8, 3)], 'big': 1.4,
+        'text': [(3, 2, '4', {'b': 1}), (6.5, 1.5, '9', {'b': 1})]}},
+    ('0607_2023MJ_53_q02', '2(b)'): {'w': 200.0, 'h': 60.0, 'plane': {
+        'style': 'squares', 'n': (-0.5, 8.5, -0.5, 2.5),
+        'polys': [{'p': [(0, 0), (4, 0), (4, 1)], 'sw': 0.9}, {'p': [(5, 0), (8, 0), (8, 2)], 'sw': 0.9}],
+        'pts': [(0, 0), (4, 0), (4, 1), (5, 0), (8, 0), (8, 2)], 'big': 1.4,
+        'text': [(3.3, 0.4, '2', {'b': 1}), (7.2, 0.7, '3', {'b': 1})]}},
+    ('0607_2023MJ_63_q01', '1'): {'w': 90.0, 'h': 55.0, 'plane': {
+        'style': 'squares', 'n': (-0.5, 2.5, -0.5, 1.5), 'polys': [{'p': [(0, 0), (2, 0), (2, 1), (0, 1)], 'sw': 0.9}],
+        'pts': [(0, 0), (2, 0), (2, 1), (0, 1)], 'big': 1.4, 'text': [(1.4, 0.5, '2')]}},
+    ('0607_2023MJ_63_q02', '2'): {'w': 200.0, 'h': 120.0, 'plane': {
+        'style': 'squares', 'n': (-0.5, 9.7, -0.5, 5.5),
+        'polys': [{'p': [(0, 2), (6, 2), (6, 3)], 'sw': 0.9}, {'p': [(7.2, 0), (9.2, 0), (9.2, 5)], 'sw': 0.9}],
+        'pts': [(0, 2), (6, 2), (6, 3), (7.2, 0), (9.2, 0), (9.2, 5)], 'big': 1.4,
+        'text': [(5.4, 2.4, '3'), (8.6, 2.0, '5')]}},
+})
+
+
+def _rhombus(O, P, Q, R, box, lines, nums, axes, n, fill='#bfbfbf', lab=True, qlab='Q', offs=None, u=20.0):
+    """A parallelogram on a grid with its surrounding box, the lines that cut the box into triangles and rectangles and the
+    printed areas (2023 MJ 53 q3-5, 63 q3-5)."""
+    x0, y0, x1, y1 = box if box else (0, 0, 0, 0)
+    polys = [{'p': [O, P, Q, R], 'fill': fill, 'sw': 1.0}]
+    if box:
+        polys.append({'p': [(x0, y0), (x1, y0), (x1, y1), (x0, y1)], 'sw': 0.9})
+    polys += [_seg(a, b, 0.8) for a, b in lines]
+    text = [(x, y, t) for x, y, t in nums]
+    if lab:
+        o_ = dict({'O': (0.35, -0.35), 'P': (-0.3, 0.35), 'Q': (0.35, 0.3), 'R': (0.3, -0.35)}, **(offs or {}))
+        for nm, pt in (('O', O), ('P', P), ('Q', Q), ('R', R)):
+            text.append((pt[0] + o_[nm][0], pt[1] + o_[nm][1], qlab if nm == 'Q' else nm, {'s': 8}))
+    return {'style': 'squares', 'n': n, 'axes': axes, 'polys': polys, 'pts': [O, P, Q, R], 'big': 1.3, 'text': text, 'u': u}
+
+
+SPECS.update({
+    ('0607_2023MJ_53_q03', '3(b)(ii)'): {'w': 200.0, 'h': 190.0, 'plane': _rhombus(
+        (0, 0), (5, 2), (7, 7), (2, 5), (0, 0, 7, 7), [((2, 5), (2, 7)), ((2, 5), (0, 5)), ((5, 2), (5, 0)), ((5, 2), (7, 2))],
+        [(1, 6, '4'), (4.2, 6.4, '5'), (0.7, 3.4, '5'), (6.3, 3.8, '5'), (3.2, 0.6, '5'), (6, 1, '4')],
+        {'xt': list(range(0, 8)), 'yt': list(range(1, 8))}, (0, 7.4, 0, 7.4))},
+    ('0607_2023MJ_53_q04', '4'): {'w': 170.0, 'h': 150.0, 'plane': _rhombus(
+        (0, 0), (3, 2), (5, 5), (2, 3), (0, 0, 5, 5), [((2, 3), (2, 5)), ((2, 3), (0, 3)), ((3, 2), (3, 0)), ((3, 2), (5, 2))],
+        [(1, 4, '4'), (2.7, 4.4, '3'), (0.6, 2.1, '3'), (4.4, 2.9, '3'), (2.3, 0.6, '3'), (4, 1, '4')],
+        {'xt': list(range(0, 6)), 'yt': list(range(1, 6))}, (0, 5.4, 0, 5.4), offs={'R': (-0.3, 0.35), 'P': (0.3, -0.35)})},
+    ('0607_2023MJ_53_q05', '5(a)'): {'w': 130.0, 'h': 130.0, 'plane': _rhombus(
+        (0, 0), (4, 1), (5, 5), (1, 4), None, [], [], {'xt': list(range(0, 7)), 'yt': list(range(1, 7))}, (0, 6.4, 0, 6.4),
+        fill=None, qlab='[Q]')},
+    ('0607_2023MJ_53_q05', '5(b)'): {'w': 150.0, 'h': 150.0, 'plane': _rhombus(
+        (0, 0), (4, 1), (5, 5), (1, 4), (0, 0, 5, 5), [((1, 4), (1, 5)), ((1, 4), (0, 4)), ((4, 1), (4, 0)), ((4, 1), (5, 1))],
+        [(0.5, 4.5, '1'), (2.6, 4.7, '2'), (0.25, 2.6, '2'), (4.7, 2.6, '2'), (2.4, 0.3, '2'), (4.5, 0.5, '1')],
+        {'xt': list(range(0, 7)), 'yt': list(range(1, 7))}, (0, 6.4, 0, 6.4), fill=None)},
+    ('0607_2023MJ_63_q03', '3(b)(i)'): {'w': 180.0, 'h': 150.0, 'plane': _rhombus(
+        (0, 0), (6, 1), (8, 6), (2, 5), (0, 0, 8, 6), [((2, 5), (2, 6)), ((2, 5), (0, 5)), ((6, 1), (6, 0)), ((6, 1), (8, 1))],
+        [(1, 5.5, '2'), (4.5, 5.65, '3'), (0.8, 3.2, '5'), (7.2, 2.8, '5'), (3.5, 0.35, '3'), (7, 0.5, '2')],
+        {'xt': list(range(0, 9)), 'yt': list(range(1, 7))}, (0, 8.4, 0, 6.4))},
+    ('0607_2023MJ_63_q04', '4'): {'w': 220.0, 'h': 150.0, 'plane': _rhombus(
+        (0, 0), (3, 4), (-1, 3), (-4, -1), (-4, -1, 3, 4), [((-1, 3), (-1, 4)), ((-1, 3), (-4, 3)), ((0, 0), (0, -1)), ((0, 0), (3, 0))],
+        [(-2.5, 3.5, '3'), (0.9, 3.6, '2'), (-3.2, 1.4, '6'), (2.2, 1.7, '6'), (-1.5, -0.72, '2'), (1.5, -0.72, '3')],
+        {'xt': [-4, -3, -2, -1, 1, 2, 3], 'yt': [-1, 1, 2, 3, 4]}, (-4.4, 3.4, -1.4, 4.4),
+        offs={'Q': (-0.4, 0.35), 'R': (-0.1, -0.4), 'P': (0.3, 0.3), 'O': (0.35, -0.35)})},
+    ('0607_2023MJ_63_q05', '5(a)'): {'w': 210.0, 'h': 120.0, 'plane': _rhombus(
+        (0, 0), (5, 2), (3, 4), (-2, 2), None, [], [], {'xt': [-2, -1, 0, 1, 2, 3, 4, 5], 'yt': [1, 2, 3, 4]}, (-2.4, 5.4, 0, 4.4),
+        qlab='[Q]', offs={'R': (-0.3, -0.4), 'P': (0.2, 0.4)})},
+    ('0607_2023MJ_63_q05', '5(b)'): {'w': 210.0, 'h': 120.0, 'plane': _rhombus(
+        (0, 0), (5, 2), (3, 4), (-2, 2), (-2, 0, 5, 4), [], [(-1.1, 3.3, '5'), (4.4, 3.4, '2'), (-1.4, 0.7, '2'), (3.2, 0.6, '5')],
+        {'xt': [-2, -1, 0, 1, 2, 3, 4, 5], 'yt': [1, 2, 3, 4]}, (-2.4, 5.4, 0, 4.4), offs={'R': (0.25, 0.4), 'P': (0.25, -0.4)})},
+})
+
+
+def _hexv(c, fill='#d9d9d9'):
+    """A regular hexagon (side 1) pointing up on the turned triangle lattice, centre c = (column, row)."""
+    a, b = c
+    return {'p': [(a, b + 1), (a + 1, b + 0.5), (a + 1, b - 0.5), (a, b - 1), (a - 1, b - 0.5), (a - 1, b + 0.5)], 'fill': fill, 'sw': 0.9}
+
+
+_DIA = lambda k: {'p': [(k, 0), (0, k), (-k, 0), (0, -k)], 'sw': 0.8}
+_CS4 = [(x, y) for x in range(-3, 4) for y in range(-3, 4) if abs(x) + abs(y) <= 3]     # centred square pattern 4 (25 dots)
+SPECS.update({
+    # dot patterns / dotty paper (RD2)
+    ('0607_2019ON_62_q06', '6(b)(i)'): {'w': 200.0, 'h': 75.0, 'plane': {
+        'style': 'none', 'n': (-0.5, 8.5, 0, 3),
+        'polys': [_seg((-0.5, 3), (8.5, 3), 1.2), _seg((-0.5, 0), (8.5, 0), 1.2)] + [_seg((a, 3), (b, 0), 0.7) for a in (0, 4, 8) for b in (0, 4, 8)],
+        'pts': [(0, 3), (4, 3), (8, 3), (0, 0), (4, 0), (8, 0)], 'big': 1.6}},
+    ('0607_2022FM_52_q03', '3(a)(i)'): {'w': 130.0, 'h': 130.0, 'plane': {
+        'style': 'none', 'n': (-3.3, 3.3, -3.3, 3.3), 'polys': [_DIA(1), _DIA(2), _DIA(3)], 'pts': _CS4, 'big': 2.2}},
+    ('0607_2022FM_62_q01', '1(a)(i)'): {'w': 130.0, 'h': 130.0, 'plane': {
+        'style': 'squares', 'n': (-4, 4, -4, 4),
+        'polys': [_DIA(1), _DIA(2), _DIA(3)],     # centred squares: squares of increasing size round the centre dot
+        'pts': _CS4, 'big': 2.2}},
+    ('0607_2022ON_51_q01', '1(a)'): {'w': 200.0, 'h': 90.0, 'plane': {
+        'style': 'iso', 'n': (-1, 5, -1, 2), 'u': 30.0, 'dot': 1.2, 'polys': [{'p': [(0, 0), (4, 0), (3.5, 1), (0.5, 1)], 'sw': 1.5}]}},
+    ('0607_2022ON_51_q02', '2(a)'): {'w': 270.0, 'h': 110.0, 'plane': {
+        'style': 'iso', 'n': (-1, 8, -1, 3), 'u': 30.0, 'dot': 1.2, 'polys': [{'p': [(0, 0), (7, 0), (6, 2), (1, 2)], 'sw': 1.5}]}},
+    ('0607_2024MJ_32_q04', '4(a)(i)'): {'w': 110.0, 'h': 110.0, 'plane': {
+        'style': 'squares', 'n': (0, 5, 0, 5), 'pts': [(i + 0.5, 4.5 - j) for j in range(5) for i in range(5 - j)], 'big': 3.0}},
+    ('0607_2025FM_52_q02', '2(a)'): {'w': 120.0, 'h': 100.0, 'plane': {
+        'style': 'isov', 'n': (-3, 3, -2, 2),
+        'polys': [{'p': [(0, 0), (-1, -0.5), (0, -1)], 'fill': '#bfbfbf', 'sw': 0.9}] +
+                 [{'p': [(0, 0), a, b], 'fill': '#e6e6e6', 'sw': 0.9} for a, b in (((0, -1), (1, -0.5)), ((1, -0.5), (1, 0.5)),
+                                                                                    ((1, 0.5), (0, 1)), ((0, 1), (-1, 0.5)),
+                                                                                    ((-1, 0.5), (-1, -0.5)))]}},
+    ('0607_2025FM_52_q02', '2(b)'): {'w': 140.0, 'h': 120.0, 'plane': {
+        'style': 'isov', 'n': (-3, 3, -3, 3), 'polys': [_hexv((-1, -0.5), '#bfbfbf'), _hexv((0, 1), '#e6e6e6'), _hexv((1, -0.5), '#e6e6e6')]}},
+    ('0607_2025FM_52_q02', '2(c)'): {'w': 260.0, 'h': 110.0, 'seps': ['or'], 'panels': [
+        {'style': 'isov', 'n': (-3, 3, -2.5, 2.5),
+         'polys': [_hexv((-1, -0.5)), _hexv((1, -0.5)), {'p': [(0, 0), (-1, 0.5), (0, 1)], 'fill': '#d9d9d9', 'sw': 0.9},
+                   {'p': [(0, 0), (0, 1), (1, 0.5)], 'fill': '#d9d9d9', 'sw': 0.9}]},
+        {'style': 'isov', 'n': (-3, 3, -2.5, 2.5),
+         'polys': [_hexv((1, 0.5)), _hexv((-1, -0.5)), {'p': [(0, 0), (0, 1), (-1, 0.5)], 'fill': '#d9d9d9', 'sw': 0.9},
+                   {'p': [(0, 0), (1, -0.5), (0, -1)], 'fill': '#d9d9d9', 'sw': 0.9}]}]},
+})
+KEPT.update({
+    ('0607_2025FM_62_q10', '10(a)'): 'a sketch of the candidate\'s own diagram whose labels do not match a clear figure (the r sits off the '
+                                     'triangle) - kept as printed, Dhruv to decide (RD2)',
+})

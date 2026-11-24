@@ -165,7 +165,8 @@ Then: pass 2 (logic check), ONE short review round (the page renders KaTeX in th
   (2019 ON 61 5(a)(ii) done; M2/M3 redraw batch done 2026-11-24, ERROR_PATTERNS 264; later batches redraw in the batch).
 - (round 36) A redrawn MS graph gets a function label ONLY when the original MS shows one ('label': False otherwise).
 - (round 38) Every faint or blurry picture (question or mark scheme) is redrawn; one that cannot be redrawn reliably is
-  flagged for Dhruv (maths_check picture_checks) and kept only on his word (ms_graphs.KEPT).
+  flagged for Dhruv (maths_check picture_checks) and kept only on his word (ms_graphs.KEPT). RD2 (2026-11-24): all 0607
+  batches done - 180 of 181 flagged pictures redrawn, picture_checks now 0; round 39.
 - (round 36) The one-picture rule is good; sometimes diagrams in a row must stay separate even with no text between -
   Dhruv names those cases when he sees them (fix them one by one, don't guess).
 - (round 36) A closed round is removed from the review page (review_page.py drop <n>, then publish_files with those

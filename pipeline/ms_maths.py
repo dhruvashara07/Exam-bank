@@ -915,7 +915,7 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
             broken_pg = _brk(u, label, c)
             import ms_graphs
             gsp_ = ms_graphs.spec(CTX.get('qid'), label)
-            gsp_ = gsp_ if gsp_ and c == gsp_.get('col', 1) and (gsp_.get('vector') or any(i.kind in ('images', 'figs') for i in inpic)) else None
+            gsp_ = gsp_ if gsp_ and c in {a_.get('col', 1) for a_ in [gsp_] + gsp_.get('alts', [])} and (gsp_.get('vector') or any(i.kind in ('images', 'figs') for i in inpic)) else None
             #   ('vector': a drawn graph that lost its points / is too faint is drawn again too; 'col': 3 = Partial Marks,
             #    Dhruv round 37: 2020 ON 62 6(a), 2020 ON 43 8(a)(iii))
             drawn_ = gsp_ is None and (not broken_pg and not any(i.kind in ('images', 'figs') for i in inpic)
@@ -964,7 +964,16 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
             import ms_graphs
             gsp = gsp_
             if gsp:                                     # a screenshot graph: drawn again from the question's function
+                if 'alts' in gsp:                       # several screenshots under one label (2021 MJ 41 11(b): graphical
+                    n_ = CTX.setdefault('alt_n', {})    # method (1) and (2)): the k-th picture of the label takes alts[k] (RD2)
+                    al_ = [a_ for a_ in gsp['alts'] if a_.get('col', 1) == c] or gsp['alts']   # (an alt may sit in the
+                    k_ = n_.get((label, c), 0); n_[(label, c)] = k_ + 1                       #  Partial Marks column)
+                    gsp = dict(al_[min(k_, len(al_) - 1)])
                 K_ = u.get('_K', 1.0)                   # (Dhruv round 32, ms_graphs.SPECS)
+                im_ = [i for i in inpic if i.kind in ('images', 'figs')]
+                if im_ and max(i.y1 for i in im_) < py1 - 4:   # (RD2) the drawing replaces the SCREENSHOT only: a formula
+                    py1 = max(i.y1 for i in im_)               # under it (its bar / root lines joined the picture's cluster)
+                    #  stays text - 2024 ON 61 2(d) lost '-0.5 ± √(0.5² - 4×1.5×-737)' under the redrawn graph
                 gw = min(ours[c][1] - ours[c][0] - 2 * PAD, max(gsp.get('w', 230.0), (px1 - px0)))
                 gh = max(gsp.get('h', 110.0), (py1 - py0))
                 gL, gT = ms_graphs.draw(gsp, gw, gh)
@@ -979,7 +988,7 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                     t2 = dict(t_, x=round(t_['x'] + ox_, 2), y=round(t_['y'] + oy_, 2), f=fam or 'serif', _g=1); v['text'].append(t2)
                 CTX.setdefault('pic_spans', []).append((py0, py1))
                 bottoms.append(max(oy_ + gh + 3.0, tb or 0))
-                lp_out = [i for i in inpic if i.kind == 't' and not (py0 - 1 <= (i.y0 + i.y1) / 2 <= py1 + 1)]
+                lp_out = [i for i in inpic if i.kind in ('t', 'lines', 'glyphs') and not (py0 - 1 <= (i.y0 + i.y1) / 2 <= py1 + 1)]
                 if lp_out:
                     pl_, bt_, _ = _cell(lp_out, cells_src[c][0], cells_src[c][1], ours[c][0], ours[c][1], push=push_for(c))
                     nt0_, nl0_ = len(v['text']), len(v['lines'])

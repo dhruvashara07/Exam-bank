@@ -761,3 +761,28 @@ not what Dhruv wants (one picture). 2018 MJ 33 q5: the graph is drawn exactly (l
     the pictures he decided to keep as printed. Found at once: 3 faint graphs (2018 ON 41 q3(a), 2018 ON 61 q7(b)(ii),
     2023 MJ 62 q6(b)(iii)) - redrawn. Open: 47 screenshots in M2/M3 (tables, grid shapes, dot patterns, pie charts,
     hand sketches, data plots) and 131 in the other 0607 batches - his decision.
+
+## Picture batch RD2 (2026-11-24): every flagged blurry MS picture of all 0607 batches (M0-M3) drawn again
+271. 181 flagged pictures in 149 questions (maths_check picture_checks: 179 ms_screenshot + 2 ms_faint, no fig_faint): 107 graphs,
+    19 shapes on grids, 14 Venns, 11 data plots / bar charts, 10 tables, 9 dot patterns, 3 trees, 2 pie charts, 2 mapping
+    diagrams, 4 sketches. 180 redrawn with ms_graphs.SPECS, 1 kept (ms_graphs.KEPT: 2025 FM 62 10(a), a student's own
+    triangle sketch - Dhruv decides in round 39). New drawers: 'table' (rows, '*' bold answer, '~' grey given value, '_'
+    italic, 'span' merged header, 'nohl' no rule under a merged cell, 'noframe'/'hlines'/'vlines' for stem-and-leaf,
+    numbers split by 3 spaces drawn as separate texts), 'plane' / 'panels' (squared paper, dotty paper 'dots', triangle
+    lattice 'iso' and turned 'isov', axes, polygons with fill/dash, unit cells, circles, angle arcs, crosses, text; panels side
+    by side with 'seps' or 'stack' one above the other with OR), 'pie', 'map', 'graphs' (two graphs stacked in one cell),
+    'alts' (several screenshots under one label: the k-th picture of the label takes alts[k], per column), 'smooth' (a
+    monotone curve through data points: cumulative frequency) and 'dots' (points as dots, not crosses). maths_check reads some
+    labels as a number in the cell ('48', '0', '3', '10'): those specs are copied under that key too.
+    Fitted curves where the question gives a sketch and no formula (2022 MJ 41 9(b)(i) j(x), 2024 MJ 31 7(d) f(x)): round 39
+    calibration items.
+272. The redraw replaced the WHOLE picture cluster: a quadratic-formula line printed under a screenshot whose fraction bar and
+    root sign joined the cluster vanished (2024 ON 61 2(d)). -> ms_maths: the drawing replaces the pasted image's box only;
+    text, lines and glyphs outside it are laid out under the drawing. Look-alike scan: rows changed outside the spec'd labels
+    = 3 (all the redraw rows themselves).
+273. Graph drawer details found side by side: y numbers wider than 22 pt ('146000', '1.2585') spilled out of the cell (left
+    room now from the widest number); curves ran through tick numbers (white ground under each); '–1' printed twice at the
+    origin of x0 = y0 = -1 windows (the y one dropped); function labels placed over an axis (axes sampled as points to keep
+    clear); dense x ticks over a curve -> 'xlow'. Text in tables / Venns as separate tokens: an SVG text with several spaces
+    collapses them and stretches to its width (pattern 265 again).
+Repeat check: pattern 264's rule 'grep failed after every SPECS edit' caught one broken spec (a comment pasted into a line).

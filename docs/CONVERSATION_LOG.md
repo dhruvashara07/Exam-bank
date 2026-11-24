@@ -611,3 +611,17 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   piece: never top number on one line and bottom on the next, never cut across) and made a rule: redraw every faint
   picture, flag what cannot be redrawn (pattern 270). Remaining: 47 screenshots in M2/M3 - asked him.
 - Dhruv's decision: redraw all the 47 M2/M3 screenshots that can be redrawn, and check M0 and M1 the same way (131 more) -> batch RD2 in a new chat.
+
+## 2026-11-24 - picture batch RD2 (shared account)
+- Dhruv: redraw every blurry / faint picture still flagged in M0-M3 (picture_checks), count by kind first, groups of ~15,
+  real tables, shapes and dots on their grid, pies, plotted points, graphs from the question's function with the printed axes,
+  no function label unless printed, real text widths, nothing overlapping or spilling; sketches with no clear data -> KEPT with
+  a photo; one local rebuild, side by side once, golden, one review round (10 redraws + 5 calibration, plain words).
+- Count sent first: 181 pictures (47 M2/M3, 134 M0/M1 - all mark scheme; 0 faint question pictures).
+- Done: 180 redrawn, 1 kept (2025 FM 62 10(a) - a student's own triangle sketch; decision in round 39). New drawers in
+  ms_graphs (table, plane/panels, pie, map, stacked graphs, alts, smooth curve, dots). Bug found side by side: a formula under a
+  screenshot was swallowed by the redraw (fixed: pattern 272). Round 39: 16 items.
+- Time: ~45 min active for ~180 pictures (about 15 s each); the slow part was reading data off hand-drawn MS pictures
+  (Venns, grid shapes, parallelograms) and moving labels off lines. Repeat error: pattern 265 again (several spaces in one
+  SVG text stretch it) - now numbers in tables / Venns are separate texts.
+- Approvals unchanged (the approval hash covers cut + marks, not the MS drawing): approve.py not needed.

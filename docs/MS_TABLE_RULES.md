@@ -316,3 +316,11 @@ one Total for the task. Built by pipeline/tasks.py after every store build / ms_
 - Vector brackets (column vectors) made of printed pieces get extenders where the pieces are further apart than a glyph.
 - ms_graphs.SPECS: 'tree' specs redraw a completed probability tree (lines + text like the question's); graph specs take
   'xlab' (axis letter) and 'xlow' (numbers under the window).
+
+## 37. RD2 additions (2026-11-24)
+- Every blurry or faint MS picture is drawn again (ms_graphs.SPECS): tables as real tables (answers bold, given values grey as
+  printed, merged headings), shapes and dots on their own grid / dotty paper, pie charts with the right angles, Venns with the
+  numbers in their regions, mapping diagrams, data points (crosses or dots, a smooth curve only where the MS draws one),
+  graphs from the question's function on the question's axes. Nothing may spill out of its cell or overlap; text widths are real.
+- A text line under a screenshot is never swallowed by the redraw: only the pasted image is replaced.
+- What cannot be redrawn reliably goes into ms_graphs.KEPT with the reason, and to Dhruv as a decision.
