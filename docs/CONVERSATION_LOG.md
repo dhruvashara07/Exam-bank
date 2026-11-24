@@ -581,3 +581,7 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   M3 now, approved papers on their next rebuild (Dhruv: 'for this right now').
 - Docs for any account: MATHS_PLAN 12 (decisions), PLAYBOOK + skill text (plain-words rule), START_HERE/NEXT_CHAT links
   to the shared-account review page.
+- Round 36 (same day): 7 ok, 1 wrong (2019 ON 61 graph: 'no need for function label if the original MS has none') -
+  fixed with the existing 'label': False. Dhruv: the one-picture rule is good, some rows must stay separate - he will name
+  them. Approved 62 M3 papers + 4 corrected approved papers; the 7 papers with known open MS pictures stay pending (same as
+  2023 MJ 32). Closed rounds are now removed from the review page (his request).

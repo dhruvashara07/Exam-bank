@@ -35,7 +35,8 @@ SPECS = {
     ('0607_2019ON_61_q05', '5(a)(ii)'): {'f': [('12 - 1.8*math.cos(math.radians(x))', 'y = 12 − 1.8 cos t°')],     # (round 35:
                                          'x': (0, 360), 'y': (0, 14), 'grid': (20, 2), 'ylab': 'y', 'xlab': 't',  # a blurred
                                          'xt': [60, 120, 180, 240, 300, 360], 'yt': [2, 4, 6, 8, 10, 12, 14],    # screenshot;
-                                         'labels': [[('i', 'y'), ('t', ' = 12 − 1.8 cos '), ('i', 't'), ('t', '°')]]},  # the question's model)
+                                         'label': False},   # the question's model; no function label: the printed
+                                                            # MS shows none (Dhruv round 36: a label only where the original has one)
     ('0607_2023MJ_32_q11', '11(a)'): {'w': 250.0, 'h': 200.0, 'tree': {         # (round 34: a blurred handwriting-style picture of the
         'first': [('0.80', ['wakes before', '7am']), ('0.20', ['does not', 'wake before', '7am'])],       # completed tree,
         'second': [[('0.92', ['gets to school', 'on time']), ('0.08', ['does not', 'get to school', 'on time'])],     # drawn again
