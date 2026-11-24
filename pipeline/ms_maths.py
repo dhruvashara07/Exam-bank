@@ -980,7 +980,9 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                 if lp_out:
                     pl_, bt_, _ = _cell(lp_out, cells_src[c][0], cells_src[c][1], ours[c][0], ours[c][1], push=push_for(c))
                     for it, dx, dy, k, x0 in pl_:
-                        _emit(v, it, dx + 0, dy + max(0.0, (oy_ + gh) - (py1 + dy)), k, x0)
+                        dd_ = dy + max(0.0, (oy_ + gh + 3.0) - (py1 + dy))
+                        _emit(v, it, dx + 0, dd_, k, x0)
+                        bottoms.append(it.y1 + dd_ + 3.0)       # the row grows with the text under a redrawn graph
                 continue
             CTX['pic_text_out'] = [i for i in by[c] if i.kind == 't' and i not in inpic]
             bot = _cell_picture(v, u, inpic, cells_src[c], ours[c], (px0, py0, px1, py1) if head_moved and not broken_pg else None,

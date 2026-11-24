@@ -1,0 +1,38 @@
+{
+ "batch": "RD",
+ "subject": "0607",
+ "sessions": [],
+ "created": "2026-11-24T11:01:44+00:00",
+ "phases": {
+  "build": [],
+  "claude": [],
+  "claude1": [],
+  "claude2": [],
+  "review": [],
+  "fix": [
+   {
+    "start": "2026-11-24T11:01:44+00:00",
+    "end": "2026-11-24T11:14:54+00:00",
+    "note": "96 redraws, 83 papers rebuilt, 227 questions checked side by side"
+   }
+  ]
+ },
+ "github_runs": [],
+ "counts": {},
+ "errors": [],
+ "tokens": [],
+ "events": [
+  {
+   "at": "2026-11-24T11:01:44+00:00",
+   "task": "start RD"
+  },
+  {
+   "at": "2026-11-24T11:01:44+00:00",
+   "task": "phase RD fix"
+  },
+  {
+   "at": "2026-11-24T11:14:54+00:00",
+   "task": "phase RD fix"
+  }
+ ]
+}

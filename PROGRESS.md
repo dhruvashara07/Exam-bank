@@ -14,13 +14,13 @@ Read this first in every session. Update it before ending a session.
 - 2026-11-24 (own account): pattern 240 fixed, 0607_2023MJ_32 approved -> ALL maths papers approved (0 pending). The fix
   moved 60 approved questions (vectors kept whole; checked side by side, fine): list in review/claude/R240_changed.txt, re-show
   a sample of 5 in the next round.
-- NEXT: (1) M2 DONE. The
-  screenshot redraw batch (M2 + M3; no function label unless printed); the round-34 recheck list. (3) Approved papers that
-  change on their next rebuild (round-35 rules): ~57 questions with rows of diagrams, 7 dotty-paper crops, 9 outline path
-  joins - rebuild together, re-show, re-approve. (4) Small open: 2024 ON 23 q7 partial marks still a bit small. Pattern 263 (no blank line
-  after a re-flow) changes approved papers on their next rebuild (looked at a sample of 13: fine). (5) Next maths batch
-  (MATHS_PLAN 5). Review page (shared account): https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8 - empty, no open round.
-  2019-MJ SKIPPED on purpose (NOT DONE).
+- 2026-11-24: screenshot-redraw batch DONE locally (ERROR_PATTERNS 264): 96 blurry MS pictures redrawn (ms_graphs.SPECS),
+  11 kept as printed; same rebuild applied the round-35 rules to 35 approved papers (83 papers rebuilt, 227 questions checked
+  side by side, all approved still). Round 38 published (10 redraws + 5 calibration + 5 vector-bracket items).
+- NEXT: (1) Read round 38 answers (review page db feedback_r38), fix wrong items as a class, close the round
+  (review_round.py close 38; review_page.py drop 38). (2) The round-34 recheck list. (3) Small open: 2024 ON 23 q7 partial
+  marks a bit small. (4) Next maths batch (MATHS_PLAN 5). Review page (shared account):
+  https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8 - round 38 open. 2019-MJ SKIPPED on purpose (NOT DONE).
 - 2026-11-24: ROUND 36 closed (7 ok, 1 wrong: no function label on the redrawn 2019 ON 61 graph - removed). M3 APPROVED:
   62 of 69 papers + re-approved 2019 ON 43, 2021 ON 42, 2022 MJ 31, 2022 MJ 42 (their part marks were corrected); 7 M3
   papers kept pending for the known open MS pictures. Rounds 35-36 removed from the review page.

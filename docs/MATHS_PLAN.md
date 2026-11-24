@@ -162,7 +162,7 @@ Then: pass 2 (logic check), ONE short review round (the page renders KaTeX in th
   captions under them inside it, never cut); with text between them they stay separate pictures. 'For this right now':
   applied from M3 on; approved papers are not rebuilt for it (they change only on a later rebuild - re-show then).
 - MS screenshot graphs: redraw from the question's function in the same grid, clear, and store the drawing in the MS
-  (2019 ON 61 5(a)(ii) done; the rest of M2/M3 screenshots = the redraw batch).
+  (2019 ON 61 5(a)(ii) done; M2/M3 redraw batch done 2026-11-24, ERROR_PATTERNS 264; later batches redraw in the batch).
 - (round 36) A redrawn MS graph gets a function label ONLY when the original MS shows one ('label': False otherwise).
 - (round 36) The one-picture rule is good; sometimes diagrams in a row must stay separate even with no text between -
   Dhruv names those cases when he sees them (fix them one by one, don't guess).

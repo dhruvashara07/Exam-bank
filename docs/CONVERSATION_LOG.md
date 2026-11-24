@@ -598,3 +598,11 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   at on 15 sheets (~15 min); 0607_2023MJ_32 approved: no maths paper pending. M3 was done meanwhile in the shared account.
 - Time: ~1 h, of which ~30 min waiting on two full local blast runs (fix and baseline). Next time: run the baseline once
   per chat and keep its output, so each fix needs only one run.
+
+## 2026-11-24 - screenshot-redraw batch (shared account)
+- Dhruv: list every blurry MS screenshot of M2+M3 (count first), redraw in groups of ~15, keep what cannot be redrawn,
+  rebuild with the round-35 rules, one review round (10 redraws, 5 calibration, 5 from R240_changed.txt).
+- Count sent: 110 pictures in 84 questions. 96 redrawn, 11 kept. New spec kinds (Venn, bars, band, tags) - pattern 264.
+- One full local rebuild (83 papers, ~10 min, GitHub dispatch not used); golden 0; approvals unchanged (hash = cut+marks).
+- Slow part: reading each function from the question (~7 groups). Repeat error: a comment pasted mid-line broke a spec
+  silently (old layout fallback) - now: grep 'failed' after every SPECS edit.

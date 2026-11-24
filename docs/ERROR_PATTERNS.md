@@ -724,3 +724,20 @@ not what Dhruv wants (one picture). 2018 MJ 33 q5: the graph is drawn exactly (l
     the same height) or a sub-row rule lies between; a wrap in the Partial Marks column beside it does not hold it down.
     Sample rebuild (2014 MJ 41, 2022 FM 62, 2024 FM 62, 2026 MJ 12, 2023 ON 11, 2025 ON 53): 13 questions tighter, no overlap.
 
+## Screenshot-redraw batch (2026-11-24, decided 2026-11-22): every blurry MS picture of M2 + M3 drawn again
+264. 110 blurry pictures in 84 questions (83 graphs, 12 data plots, 12 Venns, 3 trees; 95 other screenshots - tables, shape
+    grids, dot patterns, pie charts - out of scope). 96 redrawn with ms_graphs.SPECS (each read from the question by eye,
+    the question's own axes and ticks, no label unless the screenshot prints one). New spec kinds: 'venn' (2 or 3 circles,
+    'shade' = a set expression, 'nums' per region, 'names' words go in the box corners, a list = several Venns, 'stack'
+    = one above the other, 'cap' caption), 'bars' (bar chart), 'band' (region between two curves shaded), 'tags' (text
+    on the drawing: 'a = 2.5'), 'vlines' (x = 95), 'h': 1.0 (the picture keeps its own height: text under it in the
+    cell), tree probabilities 'a/b' drawn as fractions. Text under a redrawn graph now grows the row (it ran into the
+    next row: 2021 MJ 62 q3(b)). A spec whose line breaks Python makes the whole MS fall back to the old layout (KeyError
+    'x' after a comment pasted mid-line): always run ms_rebuild.py without --write and grep 'failed' after editing SPECS.
+    KEPT as printed (no axes in the question / the function is the candidate's own / hand-drawn data plot with a fitted
+    curve): 2021 MJ 41 q6(c), 2021 MJ 41 q11(b), 2022 ON 62 q6(b), 2023 ON 61 q10, 2020 ON 41 q3(b), 2022 MJ 41 q9(b)(i)
+    (already clear), data plots 2021 MJ 62 q8(c)(i), 2022 MJ 62 q8(b), 2022 MJ 63 q10(f), 2022 ON 32 q7(c), 2020 MJ 63
+    q6(a)(i); 2020 MJ 31 q11 Venns (Dhruv ok, round 37).
+    Approval hashes cover the cut and marks, not the MS drawing: the 83 rebuilt papers stayed approved (all 227 changed
+    questions looked at side by side: 96 redraws, 81 MS spacing/row moves from patterns 257/263, 41 round-35 figure
+    merges - all match print).

@@ -113,7 +113,8 @@ MATHS_PLAN.md if the plan changed; docs/NEXT_CHAT.md prompt; `pipeline/push.sh`;
   >= 5 extender glyphs): one 2-minute scan found a regression of my own and 6 older defects (pattern 240).
 - `ms_rebuild.py` WITHOUT --write still rewrites msimg_*.png: `git restore` them before every commit.
 - Question-side crop changes (store.fit_crop): measure on ALL stored maths figures, render old | new for every changed one.
-- Blurry raster MS pictures: ms_graphs.SPECS (graph or 'tree' spec). Dhruv decided 2026-11-22: redraw ALL ~60 of M2 as a batch of its own.
+- Blurry raster MS pictures: ms_graphs.SPECS (graph, 'tree', 'venn', 'bars' spec; 'band', 'tags', 'vlines', 'h'). M2+M3 done
+  2026-11-24 (pattern 264); in a new batch redraw them in the batch itself. After every SPECS edit: ms_rebuild.py <qids> | grep failed.
 
 ## M3 additions (2026-11-23)
 - Blast before every push: figure rules (extract.diagrams, store.fit_crop) -> `pipeline/fig_blast.py` (old git worktree vs
