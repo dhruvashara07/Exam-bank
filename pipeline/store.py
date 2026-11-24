@@ -255,7 +255,7 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
             cbox = cbox & (scissor + (-.5, -.5, .5, .5))
             if cbox.is_empty:
                 continue
-        d = drawing_d(dr, m, cbox, ox, oy)   # table rules on the piece's edge belong to it; clipped like the PDF
+        d = drawing_d(dr, m, cbox, ox, oy, maths=MATHS)   # table rules on the piece's edge belong to it; clipped like the PDF
         if not d:
             continue
         rec = {'d': d}

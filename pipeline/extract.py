@@ -425,6 +425,7 @@ def diagrams(doc, seg, lines, captioned):
     page = doc[seg['page']]
     top, bottom = page_bounds(page)
     y0s, y1s = max(seg['y0'], top), min(seg['y1'], bottom)
+    seg_r_ = fitz.Rect(0, y0s, 10000, y1s)
     taken = [fitz.Rect(f['bbox']) for f in captioned]
     text = [l for l in lines]
     tboxes = [fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']) for l in text]
@@ -544,10 +545,25 @@ def diagrams(doc, seg, lines, captioned):
                 b = big_[0]; b['r'] |= c_['r']; b['n'] += c_['n']; b['rs'] += c_['rs']; cl.remove(c_)
     out, tables = [], list(pre_tables)
     boxes_ = []
+    dots_ = [d_['rect'] for d_ in drs_all if d_.get('fill') is not None and d_['rect'].width <= 4 and d_['rect'].height <= 4
+             and seg_r_.intersects(d_['rect'])] if maths_doc(doc) else []
+    smalls_ = []
+    rd_ = [d_ for d_ in dots_ if abs(d_.width - d_.height) < 0.6]          # a DOT LATTICE: >= 40 round dots on a grid
+    xs_ = {round((d_.x0 + d_.x1) / 2) for d_ in rd_}; ys_ = {round((d_.y0 + d_.y1) / 2) for d_ in rd_}
+    lattice_ = None
+    if len(rd_) >= 40 and len(xs_) >= 6 and len(ys_) >= 4 and len(rd_) >= 0.7 * len(xs_) * len(ys_):
+        lattice_ = fitz.Rect(rd_[0])
+        for d_ in rd_:
+            lattice_ |= d_
     for c in cl:
         r = c['r']
         if r.width < 25 or r.height < 20:
+            if maths_doc(doc) and 12 <= r.width and 12 <= r.height:
+                smalls_.append(r)          # a one-square diagram: a picture only if it joins a row of diagrams (below)
             continue                                       # a root sign, a tick box, a short rule
+        if lattice_ is not None and (lattice_ + (-15, -15, 15, 15)).contains(r):
+            continue    # maths: shapes on DOTTY PAPER stay drawn with the dots, no picture (Dhruv, round 35: 2020 ON 51 q2
+            #             'if you can draw using lines and dots then no image')
         if any((t & r).get_area() > 0.6 * max(r.get_area(), 1) for t in pre_tables):
             continue                                       # the cluster is (mostly) a ruled table: text + rules (round 28)
         straight = [x for x in c['rs'] if x.width < 1.6 or x.height < 1.6]
@@ -578,6 +594,8 @@ def diagrams(doc, seg, lines, captioned):
                 continue                                   # a ruled table of text (column rules top to bottom): stays text + rules
         if not inside and all(getattr(x, 'aligned', False) for x in c['rs']) and r.height < 40:
             boxes_.append(fitz.Rect(r))                    # (kept aside: it may sit beside a diagram, joined below)
+            if maths_doc(doc) and abs(r.width - r.height) < 3:
+                smalls_.append(fitz.Rect(r))               # (a lone square may be the first diagram of a row, round 35)
             continue                                       # an empty answer box ('FG = [  ]', 2025 MJ 61 q5), no diagram
         if all(getattr(x, 'aligned', False) for x in c['rs']) and max(max(x.width, x.height) for x in c['rs']) <= 42:
             bx_ = []                                       # only small EMPTY boxes on equation lines ('100 = 10 x 10 = 2 x 5
@@ -828,6 +846,47 @@ def diagrams(doc, seg, lines, captioned):
                     break
             if merged:
                 break
+    if out:
+        out += [{'caption': None, 'page': seg['page'], 'bbox': [round(r_.x0 - 4, 1), round(r_.y0 - 1, 1), round(r_.x1 + 4, 1), round(r_.y1 + 1.5, 1)], 'small_': True} for r_ in smalls_]
+    merged = True     # (Dhruv, round 35, 2020 ON 51 q2) diagrams SIDE BY SIDE or ONE ABOVE THE OTHER with no text or other
+    while merged:     # break between them are one picture; with text between them they stay separate
+        merged = False
+        for a in out:
+            for b in out:
+                if a is b:
+                    continue
+                A, B_ = fitz.Rect(a['bbox']), fitz.Rect(b['bbox'])
+                if A.x0 > B_.x0 if abs(min(A.y1, B_.y1) - max(A.y0, B_.y0)) > 0 else A.y0 > B_.y0:
+                    continue
+                vo = min(A.y1, B_.y1) - max(A.y0, B_.y0); ho = min(A.x1, B_.x1) - max(A.x0, B_.x0)
+                if vo >= 0.5 * min(A.height, B_.height) and 0 < B_.x0 - A.x1 < 200:
+                    gap = fitz.Rect(A.x1, max(A.y0, B_.y0), B_.x0, min(A.y1, B_.y1))
+                elif ho >= 0.5 * min(A.width, B_.width) and 0 < B_.y0 - A.y1 < 60:
+                    gap = fitz.Rect(max(A.x0, B_.x0), A.y1, min(A.x1, B_.x1), B_.y0)
+                else:
+                    continue
+                if any((fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1']) & gap).get_area() > 1 for t in text) or \
+                        any((tb & gap).get_area() > 1 for tb in tables):
+                    continue
+                a['bbox'] = list(A | B_); a['row_'] = True; a['small_'] = a.get('small_') and b.get('small_'); out.remove(b); merged = True
+                break
+            if merged:
+                break
+    out = [a for a in out if not a.pop('small_', False)]
+    for a in out:          # ... and the caption lines under them ('Height = 2 squares') are inside whole, never cut through
+        if not a.pop('row_', False):
+            continue
+        A = fitz.Rect(a['bbox']); grown = True
+        while grown:
+            grown = False
+            for t in text:
+                T = fitz.Rect(t['x0'], t['y0'], t['x1'], t['y1'])
+                if T.x0 >= A.x0 - 5 and T.x1 <= A.x1 + 60 and T.y0 < A.y1 + 12 and (T.y1 > A.y1 + 0.5 or (T.x1 > A.x1 + 0.5
+                        and T.y0 < A.y1 - 1)) and T.y1 <= y1s and len(t['text'].strip()) < 45 \
+                        and not re.search(r'\[\s*\d+\s*\]|\.{4}', t['text']) \
+                        and not re.match(r'^\((?:[a-h]|[ivx]+)\)', t['text'].strip()):     # (never a mark '[2]' or answer dots)
+                    A.y1 = max(A.y1, T.y1 + 1); A.x1 = max(A.x1, T.x1 + 1); grown = True
+        a['bbox'] = list(A)
     return out
 
 

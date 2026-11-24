@@ -151,3 +151,15 @@ Then: pass 2 (logic check), ONE short review round (the page renders KaTeX in th
   re-checks every 'fixed' one. Round 2 looks only at pass-2 changes. Measure: wrong items per review round
   (round 32: 18/30, round 33: 9/23) - target <= 2. BUILT in M2 (2026-11-19): pipeline/reasons.py + bank.yml input
   'reasons' (PLAYBOOK 1a). Statuses open/fixed/passed/ask/known; pass 2 = diff (NOT FIXED, NEW, COLLATERAL).
+
+## 12. Decisions in round 35 (Dhruv, 2026-11-24)
+- Review round notes are PLAIN WORDS for Dhruv: what changed in this question and what to look at ('the mark of 9(c)
+  was in 9(d); it is back in 9(c)'). Never a pattern number, file or code name - he cannot look those up.
+- Coordinate grids / graphs in questions: 'when you can draw them then no need for image' - a grid we draw exactly
+  (lines + text, as since M0) stays drawn; a picture only when we cannot draw it.
+- Dotty paper: the dots are vector dots, so it is DRAWN with the shapes on it (no picture of a part of it).
+- Several diagrams side by side or one above the other with NO text or other break between them are ONE picture (their
+  captions under them inside it, never cut); with text between them they stay separate pictures. 'For this right now':
+  applied from M3 on; approved papers are not rebuilt for it (they change only on a later rebuild - re-show then).
+- MS screenshot graphs: redraw from the question's function in the same grid, clear, and store the drawing in the MS
+  (2019 ON 61 5(a)(ii) done; the rest of M2/M3 screenshots = the redraw batch).

@@ -54,7 +54,7 @@ D. Review round: `reasons.py round <b> --calibrate 5` (ask + still open + 5 pass
    text or WHOLE into the picture, never half (patterns 169-180).
    review_page.py add on a fresh clone writes rounds.json with only the new round: merge the older rounds back
    (read the live rounds.json) before publishing.
-3. Review round: `review_round.py new <n> <ids> --sample 0 --max 40 --recheck "qid=why;..."`, then
+3. Review round: `review_round.py new <n> <ids> --sample 0 --max 40 --recheck "qid=why;..."` ("why" in plain words for Dhruv: what changed and what to look at - never a pattern number or code name; Dhruv round 35), then
    `review_page.py add <n> "<title>"`; list_files, then publish_files (patch: keeps older rounds) to the same review
    page (slug b3c8a710-c92b-4a33-95b2-f7eba1bc0031, link https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8 (shared account, from round 35; rounds 1-34 were on PCdP6oibAkjQvGz8mKm73e in Dhruv's own account)).
    Stored figures under the question are at the question's scale. Tell Dhruv in 2 lines.

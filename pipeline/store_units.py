@@ -249,7 +249,7 @@ def clip_seg(a, b, r):
     return (x0 + t0 * dx, y0 + t0 * dy), (x0 + t1 * dx, y0 + t1 * dy)
 
 
-def drawing_d(dr, m, clip, ox, oy):
+def drawing_d(dr, m, clip, ox, oy, maths=False):
     """SVG path data of a drawing in visible coordinates, clipped to `clip`, relative to (ox, oy).
     Straight lines and rectangles are clipped exactly; curves are kept when their box touches the clip."""
     out = []
@@ -264,8 +264,9 @@ def drawing_d(dr, m, clip, ox, oy):
                     out.append(f'M{f(*s[0])}')
                 out.append(f'L{f(*s[1])}')
                 cur = s[1]
-            else:
-                cur = None
+            elif not (maths and s and cur is not None and abs(cur[0] - s[0][0]) <= .01 and abs(cur[1] - s[0][1]) <= .01):
+                cur = None   # maths: a zero-length line inside a filled outline keeps the sub-path (2019 ON 61 MS 5(a)(i):
+                #              the brace '}' was cut into wedges; round 35)
             continue
         if k == 're':
             cur = None
@@ -283,13 +284,13 @@ def drawing_d(dr, m, clip, ox, oy):
         elif k == 'c':
             pts = [tp(m, p.x, p.y) for p in it[1:5]]
             box = fitz.Rect(min(p[0] for p in pts), min(p[1] for p in pts), max(p[0] for p in pts), max(p[1] for p in pts))
-            if box.intersects(clip):
+            if box.intersects(clip) or (maths and (box + (-.1, -.1, .1, .1)).intersects(clip)):   # (maths: flat pieces too)
                 if cur is None or abs(cur[0] - pts[0][0]) > .01 or abs(cur[1] - pts[0][1]) > .01:
                     out.append(f'M{f(*pts[0])}')
                 out.append(f'C{f(*pts[1])} {f(*pts[2])} {f(*pts[3])}')
                 cur = pts[3]
-            else:
-                cur = None
+            elif not (maths and cur is not None and max(abs(p[0] - cur[0]) + abs(p[1] - cur[1]) for p in pts) <= .02):
+                cur = None   # maths: a zero-size curve piece at the current point keeps the sub-path (same brace)
     return ''.join(out)
 
 
@@ -352,7 +353,7 @@ def extract_unit(doc, pno, clip, figs, cstyle):
         if dr['type'] == 's': fill = None
         if fill is None and stroke is None:
             continue
-        d = drawing_d(dr, m, clip, ox, oy)
+        d = drawing_d(dr, m, clip, ox, oy, maths='/0607/' in (doc.name or '').replace('\\', '/'))
         if not d:
             continue
         rec = {'d': d}

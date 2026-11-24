@@ -688,3 +688,17 @@ bracket tops have no matching bottom, rows with >= 5 extenders): that scan found
 Lesson (M3): a figure rule that looks fine on its target can change ~100 approved crops (an 'arrowhead = graph, not table'
 rule turned every numbered coordinate grid into a picture): the full-batch figure blast (old vs new crop of every 0607
 figure, pipeline/fig_blast.py) caught it before any push - run it for every extract/fit_crop change.
+
+## Round 35 (Dhruv, 2026-11-24): 7 ok, 3 wrong (2 of them my calibration passes)
+253. MS brace '}' drawn as one filled outline with ZERO-LENGTH lines and flat curve pieces inside: each one restarted the
+    sub-path, so the fill fell apart into wedges (2019 ON 61 5(a)(i)). -> store_units.drawing_d (maths): such pieces keep
+    the current sub-path. 27 pages of 0607 have such outlines; approved ones change only path joins (draw the same as print).
+254. MS screenshot graph 2019 ON 61 5(a)(ii) redrawn from the question's model y = 12 - 1.8 cos t (ms_graphs.SPECS, grid as
+    the screenshot: t every 20, y every 2 to 14).
+255. Diagrams side by side / one above the other with no text between them are ONE picture, captions under them inside
+    whole (never a '[2]' mark or answer dots); a one-square diagram joins its row (2020 ON 51 q1, q2). Dhruv's rule,
+    round 35. Blast: 57 questions merge (all 0607); applied to M3 now, approved papers only on a later rebuild.
+256. Dotty paper (>= 40 round dots on a grid) is drawn with the shapes on it - no crop of a part of it (2020 ON 51 q2(a)).
+    A first version counted any 12 small dots and dropped real graph pictures (plotted points): the blast caught it.
+Calibration lesson: I had passed 2020 ON 51 q2 as 'matches print' - a row of 3 separate crops matched the print but is
+not what Dhruv wants (one picture). 2018 MJ 33 q5: the graph is drawn exactly (lines + text); Dhruv: drawn is fine.

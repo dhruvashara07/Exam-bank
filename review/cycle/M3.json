@@ -157,6 +157,30 @@
    "fix": "open - next chat",
    "found_by": "claude",
    "at": "2026-11-23T17:46:03+00:00"
+  },
+  {
+   "pattern": "253",
+   "kind": "new",
+   "what": "round 35: MS brace fill broken into wedges",
+   "fix": "zero-length pieces keep the sub-path",
+   "found_by": "claude",
+   "at": "2026-11-24T03:42:26+00:00"
+  },
+  {
+   "pattern": "255",
+   "kind": "new",
+   "what": "round 35: row of diagrams as 3 crops (Dhruv: one picture)",
+   "fix": "row merge + captions",
+   "found_by": "claude",
+   "at": "2026-11-24T03:42:26+00:00"
+  },
+  {
+   "pattern": "256",
+   "kind": "new",
+   "what": "round 35: crop of part of dotty paper",
+   "fix": "dot lattice drawn",
+   "found_by": "claude",
+   "at": "2026-11-24T03:42:26+00:00"
   }
  ],
  "tokens": [
@@ -290,6 +314,22 @@
   {
    "at": "2026-11-23T18:05:48+00:00",
    "task": "round 35 published; docs; push"
+  },
+  {
+   "at": "2026-11-24T03:42:26+00:00",
+   "task": "error M3 --pattern"
+  },
+  {
+   "at": "2026-11-24T03:42:26+00:00",
+   "task": "error M3 --pattern"
+  },
+  {
+   "at": "2026-11-24T03:42:26+00:00",
+   "task": "error M3 --pattern"
+  },
+  {
+   "at": "2026-11-24T03:42:26+00:00",
+   "task": "round 35 answers: 3 wrong fixed (brace, MS graph redraw, row/dotty pictures)"
   }
  ]
 }

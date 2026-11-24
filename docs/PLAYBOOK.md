@@ -41,7 +41,7 @@ ask; pass 2 adds verified / not fixed). Its fingerprints (<batch>_fp.json) make 
    -> review/claude/<batch>_pass2.md: NOT FIXED, NEW reasons and COLLATERAL changed questions.
 4. Claude looks ONLY at that list (sheets for those qids), sets each to fixed / passed / ask (a third GitHub run only if
    a fix was needed; same diff).
-5. Review round: `reasons.py round <batch> --calibrate 5` prints the ids + --recheck string: every 'ask', anything still
+5. Review round (notes in PLAIN WORDS for Dhruv - what changed, what to look at; never pattern numbers): `reasons.py round <batch> --calibrate 5` prints the ids + --recheck string: every 'ask', anything still
    open, 5 calibration items (passed by me: does Dhruv agree?). Then review_round.py new / review_page.py add as in 3.
    Measure: wrong items per round (target <= 2). A wrong calibration item = my pass rule was wrong: fix the class.
 
