@@ -233,7 +233,13 @@ def _lines_of(items):
         a, b = rows[k], rows[k + 1]
         op = a.get('open')          # under a fraction bar: only a band that lies within the bar's width (its denominator)
         under = bool(op) and all(op[0] - 2 <= i.x0 and i.x1 <= op[1] + 2 for i in b['its'])
-        if (drawn(a) or drawn(b) or small(a) or under) and b['y0'] - a['y1'] < 4.0:
+        # a tall bracket printed as glyph pieces (top / extender / bottom) is one stack: its top piece's line and the line
+        # of its lower pieces are one printed line (the pieces' boxes do not overlap; pattern 240: '(x / -3)' torn apart,
+        # 2023 MJ 32 q8(c), 2026 MJ 11 q18(b), 2026 MJ 22 q6)
+        brk_ = any(i.kind == 't' and i.ref.get('t') in '⎛⎜⎞⎟⎡⎢⎤⎥' and abs(i.y1 - a['y1']) < 3 and any(
+            j.kind == 't' and j.ref.get('t') in '⎜⎝⎟⎠⎢⎣⎥⎦' and abs(j.x0 - i.x0) < 1.5 and 0 <= j.y0 - i.y1 < 3
+            for j in b['its']) for i in a['its'])
+        if (drawn(a) or drawn(b) or small(a) or under or brk_) and b['y0'] - a['y1'] < 4.0:
             # a band that took a drawing-only band at its bottom (a fraction bar under the numerator) also takes the band
             # right under it (the denominator) - M1 2026 MJ 42 q9: '2(3)' fell out of its fraction and moved down
             a['open'] = drawn(b) and not drawn(a) and (min(i.x0 for i in b['its']), max(i.x1 for i in b['its']))
@@ -243,11 +249,22 @@ def _lines_of(items):
     return rows
 
 
+def _brk_join(ch, it):
+    """A tall bracket made of glyph pieces never ends a wrap piece on its own: an opening bracket takes what follows it,
+    a closing bracket joins what is before it (pattern 240: 'Allow ... = (' and '4 / -3)' on two lines, 2026 MJ 22 q6)."""
+    if it.x0 - ch['x1'] >= 2 * GAP:          # bracket glyphs sit a little apart from their contents (1.9 pt)
+        return False
+    if it.kind == 't' and it.ref.get('t') in '⎞⎟⎠⎤⎥⎦':
+        return True
+    last_ = max(ch['its'], key=lambda i: i.x1)
+    return last_.kind == 't' and last_.ref.get('t') in '⎛⎜⎝⎡⎢⎣'
+
+
 def _chunks(its):
     """Unbreakable pieces of one line: ink closer than a word space, or stacked (x-overlapping) pieces."""
     out = []
     for it in sorted(its, key=lambda i: i.x0):
-        if out and it.x0 - out[-1]['x1'] < GAP:
+        if out and (it.x0 - out[-1]['x1'] < GAP or _brk_join(out[-1], it)):
             out[-1]['its'].append(it); out[-1]['x1'] = max(out[-1]['x1'], it.x1)
         else:
             out.append({'its': [it], 'x0': it.x0, 'x1': it.x1})
@@ -460,7 +477,7 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
         if multi and span_all > width + 0.5:           # too wide for one block: pieces that overlap in x stay together
             xc = []                                    # (a fraction, a root), the line wraps between them - never shrinks
             for it in sorted(ln['its'], key=lambda i: i.x0):   # (round 30, 2014 MJ 21 q8(b)(ii), 2025 MJ 22 q21(b))
-                if xc and it.x0 < xc[-1]['x1'] - 0.3:
+                if xc and (it.x0 < xc[-1]['x1'] - 0.3 or _brk_join(xc[-1], it)):
                     xc[-1]['its'].append(it); xc[-1]['x1'] = max(xc[-1]['x1'], it.x1)
                 else:
                     xc.append({'its': [it], 'x0': it.x0, 'x1': it.x1})
@@ -474,7 +491,7 @@ def _cell(items, c0, c1, n0, n1, align='left', push=None, growth=None):
                 if ch['x1'] - ch['x0'] <= width + 0.5:
                     nc.append(ch); continue
                 for it in sorted(ch['its'], key=lambda i: i.x0):
-                    if nc and nc[-1].get('_s') and it.x0 < nc[-1]['x1'] - 0.3:
+                    if nc and nc[-1].get('_s') and (it.x0 < nc[-1]['x1'] - 0.3 or _brk_join(nc[-1], it)):
                         nc[-1]['its'].append(it); nc[-1]['x1'] = max(nc[-1]['x1'], it.x1)
                     else:
                         nc.append({'its': [it], 'x0': it.x0, 'x1': it.x1, '_s': True})

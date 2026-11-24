@@ -639,9 +639,10 @@ the commit (never commit msimg PNGs from a local run).
     check of my own bracket fix (236): an extender run drawn between the bottom piece of one bracket and the top of another
     at the same x (a line down the whole cell, 2023 ON 41 q1 1(d)(ii)). -> ms_layout._close_brackets bridges ONLY a
     top/extender piece to the bottom/extender piece right below it (<= 3 glyph heights); ms_maths._cell merges the bands a
-    bracket column spans (BRK_). maths_check ignores the extender glyphs it adds. STILL OPEN (3 questions, wrong in print
-    layout only, found by the bracket-pieces scan): 2023 MJ 32 q8(c), 2026 MJ 11 q18(b), 2026 MJ 22 q6 Guidance - the vector
-    brackets there are drawings in _cell, not glyphs: the same band merge must key on the drawn bracket (next chat first task).
+    bracket column spans (BRK_). maths_check ignores the extender glyphs it adds. FIXED 2026-11-24 (2023 MJ 32 q8(c), 2026 MJ 11 q18(b),
+    2026 MJ 22 q6): (a) ms_maths._lines_of joins the line of a bracket's top piece with the line of its lower pieces (the
+    glyph boxes do not overlap); (b) _brk_join: a wrap piece never ends on an opening bracket or starts with a closing one
+    (gap up to 2 x GAP). Blast: 60 questions in 2020-2026, all vectors now one block, all looked at side by side (fine).
 Lesson (round 34 pass 2): a new layout rule needs the SCAN for its look-alikes before the push (here: stored rows whose
 bracket tops have no matching bottom, rows with >= 5 extenders): that scan found the stray line and 6 more questions in 2 min.
 

@@ -592,3 +592,9 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - Dhruv: '2018 ON 63 6(d)(i) space between the first two lines is unnecessary; otherwise the Venns are done right?' -
   fixed (pattern 263, also 6(c)); Venns confirmed done.
 - Dhruv: 'Yes approve M3 and this remaining' -> approved 16 papers; M3 complete. Pending only 0607_2023MJ_32 (M2).
+
+## 2026-11-24 - M2 closed (own account)
+- Pattern 240 fixed as one class (bracket glyph pieces kept as one line and one wrap piece); blast 60 questions, all looked
+  at on 15 sheets (~15 min); 0607_2023MJ_32 approved: no maths paper pending. M3 was done meanwhile in the shared account.
+- Time: ~1 h, of which ~30 min waiting on two full local blast runs (fix and baseline). Next time: run the baseline once
+  per chat and keep its output, so each fix needs only one run.

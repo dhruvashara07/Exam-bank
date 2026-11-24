@@ -11,7 +11,10 @@ Read this first in every session. Update it before ending a session.
   to Dhruv in chat.
 - 2026-11-24: Dhruv ok on round-37 photos -> M3 DONE: all M3 papers approved (16 approved today incl. 9 re-shown MS
   row fixes). Only 0607_2023MJ_32 stays pending (M2 item below).
-- NEXT: (1) From M2: 3 vector-bracket questions (pattern 240) + approve 0607_2023MJ_32; the
+- 2026-11-24 (own account): pattern 240 fixed, 0607_2023MJ_32 approved -> ALL maths papers approved (0 pending). The fix
+  moved 60 approved questions (vectors kept whole; checked side by side, fine): list in review/claude/R240_changed.txt, re-show
+  a sample of 5 in the next round.
+- NEXT: (1) M2 DONE. The
   screenshot redraw batch (M2 + M3; no function label unless printed); the round-34 recheck list. (3) Approved papers that
   change on their next rebuild (round-35 rules): ~57 questions with rows of diagrams, 7 dotty-paper crops, 9 outline path
   joins - rebuild together, re-show, re-approve. (4) Small open: 2024 ON 23 q7 partial marks still a bit small. Pattern 263 (no blank line
