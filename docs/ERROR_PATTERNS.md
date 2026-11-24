@@ -741,3 +741,23 @@ not what Dhruv wants (one picture). 2018 MJ 33 q5: the graph is drawn exactly (l
     Approval hashes cover the cut and marks, not the MS drawing: the 83 rebuilt papers stayed approved (all 227 changed
     questions looked at side by side: 96 redraws, 81 MS spacing/row moves from patterns 257/263, 41 round-35 figure
     merges - all match print).
+
+## Round 38 (Dhruv, 2026-11-24): 13 ok, 7 wrong - all fixed
+265. Text in a redrawn picture looked like another font: the drawing guessed widths (0.5 em per letter) and the SVG
+    stretches each text to its width (textLength) - Venn numbers '1 5', 'a = 2.5' tags, function labels. Now the real
+    width (ms_graphs._w; characters outside Latin-1 such as '–' measured 0.55 em: the font table measured '–3' as 1/4 em).
+266. The y-axis letter sat on the window's top edge, on a curve that starts at the top (2021 MJ 62 q9 'p', 2023 MJ 41 q3):
+    now beside the arrow tip above the window (top padding 12 pt). Curve tags ('a = 2.5') placed in clear space next to
+    their own curve.
+267. A redrawn graph taller than the printed picture ran over the next sub-row (2021 MJ 63 q7(d)): everything under it in
+    the row now moves down by the extra height (CTX pic_grow; the drawing's own pieces carry _g and stay).
+268. Tree probabilities as fractions sat on their branch (2021 ON 31 q7): each fraction's corner is placed clear of the
+    line at its right edge (above the upper branch, below the lower one), layout like the question's tree.
+269. Function label only where Dhruv wants it: 2022 ON 42 q11 none (the printed corner label is not needed there).
+270. RULE (Dhruv round 38): every faint or blurry picture is redrawn; what cannot be redrawn reliably is FLAGGED for his
+    decision. pipeline/maths_check.py picture_checks -> reasons 'ms_screenshot' (a raster image in a mark-scheme cell,
+    >= 50 x 35 pt, no ms_graphs spec), 'ms_faint' (ink mostly light grey, not shading), 'fig_faint' (question picture
+    with curves / slanted lines whose ink is light; empty answer grids and tables are never flagged). ms_graphs.KEPT holds
+    the pictures he decided to keep as printed. Found at once: 3 faint graphs (2018 ON 41 q3(a), 2018 ON 61 q7(b)(ii),
+    2023 MJ 62 q6(b)(iii)) - redrawn. Open: 47 screenshots in M2/M3 (tables, grid shapes, dot patterns, pie charts,
+    hand sketches, data plots) and 131 in the other 0607 batches - his decision.

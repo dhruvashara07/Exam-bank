@@ -122,3 +122,6 @@ MATHS_PLAN.md if the plan changed; docs/NEXT_CHAT.md prompt; `pipeline/push.sh`;
 - Approved papers a fix corrects: add their sessions to the pass-2 `inputs[sessions]`, re-show them in the round, re-approve.
 - `reasons.py set` overwrites any status: broad 'passed' sets first, specific fixed / known sets after.
 - Review page of the shared account: https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8 (publish_files replace; db declared).
+- Faint / blurry pictures (Dhruv round 38): redraw every one (ms_graphs.SPECS); if it cannot be redrawn reliably, FLAG it for
+  Dhruv (maths_check picture_checks reasons ms_screenshot / ms_faint / fig_faint) - never leave one silently. His 'keep as
+  printed' goes into ms_graphs.KEPT. Drawing text uses real widths (ms_graphs._w) - a guessed width changes the font look.

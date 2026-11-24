@@ -223,13 +223,78 @@ def fig_checks(rec):
     return out
 
 
+def _faint(doc, page, box):
+    """A picture drawn in light grey only (a faint screenshot, a pale sketch): its ink is mostly light."""
+    import fitz
+    import numpy as np
+    pix = doc[page - 1].get_pixmap(matrix=fitz.Matrix(2, 2), clip=fitz.Rect(box), colorspace=fitz.csGRAY)
+    a = np.frombuffer(pix.samples, np.uint8).reshape(pix.h, pix.w)
+    dark, light = int((a < 90).sum()), int(((a >= 90) & (a < 215)).sum())
+    return light > 300 and dark < 0.05 * light and light < 0.25 * a.size
+    # (thin black lines still have black cores: not faint; grey SHADING fills a large area - a shaded Venn is not faint)
+
+
+def _drawing_kind(doc, page, box):
+    """'raster' if a picture is pasted there, 'shape' if it holds curves or slanted lines, else 'grid' (only straight
+    rules: an empty answer grid or table, printed light on purpose - never flagged)."""
+    import fitz
+    r = fitz.Rect(box)
+    pg = doc[page - 1]
+    if any(fitz.Rect(i['bbox']).intersect(r).get_area() > 0.3 * r.get_area() for i in pg.get_image_info()):
+        return 'raster'
+    for d in pg.get_drawings():
+        if not r.intersects(d['rect']):
+            continue
+        for it in d['items']:
+            if it[0] in ('c', 'qu'):
+                return 'shape'
+            if it[0] == 'l' and abs(it[1].x - it[2].x) > 0.5 and abs(it[1].y - it[2].y) > 0.5:
+                return 'shape'
+    return 'grid'
+
+
+def picture_checks(rec):
+    """Dhruv 2026-11-24 (round 38): every blurry screenshot or faint picture is redrawn (ms_graphs.SPECS) - what cannot be
+    redrawn reliably is FLAGGED for his decision (ms_graphs.KEPT records it once he decided). Mark scheme: a raster
+    image of a cell (>= 50 x 35 pt) with no spec and not kept; question and mark scheme: a picture whose ink is faint."""
+    import fitz
+    import ms_graphs
+    out = []
+    qid = rec['id']
+    ms = _doc(rec, 'ms')
+    lab = None
+    for v in (rec.get('ms_p') or {}).get('rows', []):
+        ls = [t['t'] for t in v.get('text', []) if t.get('role') == 'mslabel' or (t['x'] < 45 and re.match(r'\d', t['t']))]
+        lab = ls[0] if ls else lab
+        for im in v.get('images', []):
+            s_ = im.get('src')
+            if not s_ or ms is None or (s_[3] - s_[1]) < 50 or (s_[4] - s_[2]) < 35:
+                continue
+            if ms_graphs.spec(qid, lab) or (qid, lab) in ms_graphs.KEPT:
+                continue
+            r = fitz.Rect(s_[1:])
+            ras = [i for i in ms[s_[0] - 1].get_image_info() if fitz.Rect(i['bbox']).intersect(r).get_area() > 0.5 * r.get_area()]
+            if ras:
+                out.append(('ms_screenshot', f"{lab}: blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv"))
+            elif _faint(ms, s_[0], r):
+                out.append(('ms_faint', f"{lab}: faint picture in the mark scheme - redraw or ask Dhruv"))
+    qp = _doc(rec, 'qp')
+    for f in rec.get('figures', []):
+        src = f.get('source') or {}
+        if qp is None or not src.get('box') or (qid, f['id'].split('_')[-1]) in ms_graphs.KEPT:
+            continue
+        if _drawing_kind(qp, src['page'], src['box']) != 'grid' and _faint(qp, src['page'], src['box']):
+            out.append(('fig_faint', f"{f['id'].split('_')[-1]}: faint picture in the question - redraw or ask Dhruv"))
+    return out
+
+
 def check_paper(pid):
     out = []
     for f in sorted(glob.glob(os.path.join(paths.store_dir(pid), 'q*.json'))):
         rec = json.load(open(f))
         if rec.get('stub'):
             continue
-        for kind, d in check_question(rec):
+        for kind, d in check_question(rec) + picture_checks(rec):
             out.append({'id': rec['id'], 'kind': kind, 'detail': d})
     os.makedirs(paths.CLAUDE_CHECKS, exist_ok=True)
     json.dump(out, open(os.path.join(paths.CLAUDE_CHECKS, f'{pid}.maths_check.json'), 'w'), indent=1)

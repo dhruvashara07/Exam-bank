@@ -969,20 +969,26 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                 gh = max(gsp.get('h', 110.0), (py1 - py0))
                 gL, gT = ms_graphs.draw(gsp, gw, gh)
                 ox_, oy_ = ours[c][0] + PAD, py0 + shift
+                if gh > (py1 - py0) + 0.5:              # the drawing is taller than the printed picture: what is under
+                    CTX.setdefault('pic_grow', []).append(  # it in the row moves down (Dhruv round 38, 2021 MJ 63 7(d):
+                        (oy_ + (py1 - py0), gh - (py1 - py0), len(v['lines']), len(v['text'])))   # graph over the next sub-row)
                 from ms_layout import _map_path
                 for l_ in gL:
-                    l2 = dict(l_); l2['d'] = _map_path(l_['d'], lambda x: x + ox_, lambda y: y + oy_); v['lines'].append(l2)
+                    l2 = dict(l_, _g=1); l2['d'] = _map_path(l_['d'], lambda x: x + ox_, lambda y: y + oy_); v['lines'].append(l2)
                 for t_ in gT:
-                    t2 = dict(t_, x=round(t_['x'] + ox_, 2), y=round(t_['y'] + oy_, 2), f=fam or 'serif'); v['text'].append(t2)
+                    t2 = dict(t_, x=round(t_['x'] + ox_, 2), y=round(t_['y'] + oy_, 2), f=fam or 'serif', _g=1); v['text'].append(t2)
                 CTX.setdefault('pic_spans', []).append((py0, py1))
                 bottoms.append(max(oy_ + gh + 3.0, tb or 0))
                 lp_out = [i for i in inpic if i.kind == 't' and not (py0 - 1 <= (i.y0 + i.y1) / 2 <= py1 + 1)]
                 if lp_out:
                     pl_, bt_, _ = _cell(lp_out, cells_src[c][0], cells_src[c][1], ours[c][0], ours[c][1], push=push_for(c))
+                    nt0_, nl0_ = len(v['text']), len(v['lines'])
                     for it, dx, dy, k, x0 in pl_:
                         dd_ = dy + max(0.0, (oy_ + gh + 3.0) - (py1 + dy))
                         _emit(v, it, dx + 0, dd_, k, x0)
                         bottoms.append(it.y1 + dd_ + 3.0)       # the row grows with the text under a redrawn graph
+                    for e_ in v['text'][nt0_:] + v['lines'][nl0_:]:
+                        e_['_g'] = 1                            # (placed under the drawing already: not moved again)
                 continue
             CTX['pic_text_out'] = [i for i in by[c] if i.kind == 't' and i not in inpic]
             bot = _cell_picture(v, u, inpic, cells_src[c], ours[c], (px0, py0, px1, py1) if head_moved and not broken_pg else None,
@@ -1012,6 +1018,27 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
             note = note[:2] + (min(it.y0 + dy for it, dx, dy, k, x0 in placed) - 4, max(it.y1 + dy for it, dx, dy, k, x0 in placed) + 4) + note[2:4]
         if bot is not None:
             bottoms.append(bot)
+    for thr_, ext_, nl_, nt_ in CTX.pop('pic_grow', []):     # (the drawing's own pieces come after nl_ / nt_ and stay)
+        from ms_layout import _map_path
+        dl_ = len(v['lines']); dt_ = len(v['text'])
+        for k_, t_ in enumerate(v['text']):
+            if not t_.get('_g') and t_['y'] - 0.75 * t_.get('s', 11) >= thr_ - 0.5:
+                t_['y'] = round(t_['y'] + ext_, 2)
+        for k_, l_ in enumerate(v['lines']):
+            bb = _bbox(l_['d'])
+            if bb and bb[1] >= thr_ - 0.5 and not l_.get('_g'):
+                l_['d'] = _map_path(l_['d'], lambda x: x, lambda y: y + ext_)
+        for k_ in ('images', 'figs', 'glyphs'):
+            for g_ in v.get(k_, []):
+                if isinstance(g_, dict) and g_.get('y', -1) >= thr_ - 0.5:
+                    g_['y'] = round(g_['y'] + ext_, 2)
+        placed_all = [(a0, b0 + ext_, a1, b1 + ext_, k0) if b0 >= thr_ - 0.5 else (a0, b0, a1, b1, k0)
+                      for a0, b0, a1, b1, k0 in placed_all]
+        bottoms[:] = [b_ + ext_ if b_ > thr_ + 0.5 else b_ for b_ in bottoms]
+    for l_ in v['lines']:
+        l_.pop('_g', None)
+    for t_ in v['text']:
+        t_.pop('_g', None)
     # Q column: our full label on the first printed line (continued rows show none)
     # sub-row rules (maths, Dhruv round 32: 'line between A1 and M1', 'lines align with their answer'): each printed
     # rule inside the row is drawn again over the columns it crosses, between the lines placed above and under it

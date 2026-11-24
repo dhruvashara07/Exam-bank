@@ -59,6 +59,11 @@ SPECS = {
 # again from the question's function on the question's own axes (ticks as printed there), no function label unless the
 # screenshot prints one. 'kept' (left as printed, docs/ERROR_PATTERNS 264): sketches with no axes in the question.
 NO = {'label': False, 'dash': False}
+# Pictures left as printed by Dhruv's decision (maths_check.picture_checks flags every other screenshot / faint picture):
+# (question id, MS row label or figure suffix) -> why
+KEPT = {
+    ('0607_2020MJ_31_q11', '11(a)(i)'): 'Venn: Dhruv ok round 37', ('0607_2020MJ_31_q11', '11(b)(i)'): 'Venn: Dhruv ok round 37',
+}
 HERD = [(1, 20), (2, 36), (3, 64), (4, 116), (5, 208), (6, 374), (7, 674), (8, 1214)]   # 2021 ON 62 (MS 5(b)(i))
 SPECS.update({
     # 2021 MJ
@@ -87,7 +92,7 @@ SPECS.update({
     ('0607_2021MJ_62_q09', '9(c)(i)'): dict(NO, f=[('math.exp(-(x/8)**0.5)', ''), ('math.exp(-(x/8)**1)', ''), ('math.exp(-(x/8)**2.5)', ''),
                                                    ('math.exp(-(x/8)**10)', '')], x=(0, 25), y=(0, 1), grid=(5, 0.25),
                                             xt=[5, 10, 15, 20, 25], yt=[1], xlab='F', ylab='p',
-                                            tags=[(21, 0.13, 'a = 0.5'), (3.2, 0.62, 'a = 1'), (5.2, 0.86, 'a = 2.5'), (8.6, 0.97, 'a = 10')]),
+                                            tags=[(20, 0.31, 'a=0.5'), (18, 0.145, 'a=1'), (4.5, 0.81, 'a=2.5'), (9.0, 0.93, 'a=10')]),
     ('0607_2021MJ_63_q04', '4(a)(i)'): dict(NO, f=[('math.cos(math.radians(2*x))', '')], x=(0, 360), y=(-1, 1), grid=(30, 0.5),
                                             xt=[90, 180, 270, 360], yt=[-1, 1]),
     ('0607_2021MJ_63_q06', '6(b)'): dict(NO, f=[('0.4*0.7**x*math.cos(math.radians(200*x)) + 0.6', '')], x=(0, 5), y=(0, 1.2),
@@ -96,7 +101,7 @@ SPECS.update({
                                          grid=(0.5, 0.25), xt=[1, 2, 3], yt=[1], xlab='t', ylab='D'),            # b = -0.6 (MS)
     # 2021 ON
     ('0607_2021ON_22_q10', '10(a)'): {'venn': {'sets': 'PQ', 'shade': 'not (P or Q)'}, 'w': 200.0, 'h': 100.0},
-    ('0607_2021ON_31_q07', '7(b)(i)'): {'w': 250.0, 'h': 170.0, 'tree': {
+    ('0607_2021ON_31_q07', '7(b)(i)'): {'w': 260.0, 'h': 200.0, 'tree': {
         'first': [('16/30', ['Grape']), ('14/30', ['Cherry'])],
         'second': [[('15/29', ['Grape']), ('14/29', ['Cherry'])], [('16/29', ['Grape']), ('13/29', ['Cherry'])]]}},
     ('0607_2021ON_31_q12', '12(a)'): dict(NO, f=[('x**3', '')], x=(-2, 2), y=(-8, 8), grid=(0.5, 2), xt=[-2, 2], yt=[-8, 8]),
@@ -141,9 +146,9 @@ SPECS.update({
     ('0607_2022ON_32_q11', '11(a)'): dict(NO, f=[('-x**2 + 4*x + 5', '')], x=(-2, 6), y=(-7, 10), grid=(1, 1), xt=[-2, 6], yt=[-7, 10]),
     ('0607_2022ON_41_q05', '5(d)'): dict(NO, f=[('1/((x - 1)*(x - 2)*(x - 3))', ''), ('x - 1', '')], x=(-1, 5), y=(-4, 4),
                                          grid=(0.5, 1), xt=[-1, 5], yt=[-4, 4]),
-    ('0607_2022ON_42_q11', '11(a)'): dict(f=[('x + 5/((x - 2)*(x + 3))', '')], dash=False, x=(-5, 5), y=(-9, 8), grid=(1, 1),
+    ('0607_2022ON_42_q11', '11(a)'): dict(f=[('x + 5/((x - 2)*(x + 3))', '')], dash=False, label=False, x=(-5, 5), y=(-9, 8), grid=(1, 1),
                                           xt=[-5, 5], yt=[-9, 8],
-                                          labels=[[('t', 'f('), ('i', 'x'), ('t', ') = '), ('i', 'x'), ('t', ' + '), ('frac', '5', '(x − 2)(x + 3)')]]),
+                                          labels=[[('t', 'f('), ('i', 'x'), ('t', ') = '), ('i', 'x'), ('t', ' + '), ('frac', '5', '(x − 2)(x + 3)')]]),   # (round 38: no label)
     ('0607_2022ON_43_q02', '2(a)'): dict(NO, f=[('1/x - 1/x**2', '')], x=(-5, 5), y=(-3, 1), grid=(1, 0.5), xt=[-5, 5], yt=[-3, 1]),
     ('0607_2022ON_61_q09', '9(b)'): dict(NO, f=[('-28*x**2 + 676*x - 2740', '')], x=(0, 25), y=(-3000, 1500), grid=(5, 500),
                                          xt=[25], yt=[], ylab='P'),
@@ -242,6 +247,13 @@ SPECS.update({
     ('0607_2023ON_12_q20', '20'): {'venn': {'sets': 'SF', 'names': ['Sandwich', 'Fruit'], 'nums': {'S': 10, 'SF': 20, 'F': 20, '': 70}},
                                    'w': 190.0, 'h': 105.0},
     ('0607_2023ON_22_q11', '11(c)'): {'venn': {'sets': 'AC', 'nums': {'A': 10, 'AC': 5, 'C': 9, '': 11}}, 'w': 180.0, 'h': 100.0},
+    # faint MS graphs found by maths_check.picture_checks (2026-11-24)
+    ('0607_2018ON_41_q03', '3(a)'): dict(NO, f=[('1 - 2*math.sin(math.radians(2*x - 10))', '')], x=(-90, 90), y=(-4, 4), grid=(15, 1),
+                                         xt=[-90, 90], yt=[-4, 4]),
+    ('0607_2018ON_61_q07', '7(b)(ii)'): dict(NO, f=[('math.sqrt(3.61*x*x - 2.25) - math.sqrt(x*x - 2.25)', '')], x=(0, 6), y=(0, 6),
+                                             grid=(0.5, 1), xt=[6], yt=[], ylab='C'),
+    ('0607_2023MJ_62_q06', '6(b)(iii)'): dict(NO, f=[('3*x*x + 50000/x - 2*x + 1', '')], x=(0, 60), y=(0, 10000), grid=(5, 1000),
+                                              xt=[60], yt=[10000], xlab='L', ylab='A'),
     # 2021 MJ Venns
     ('0607_2021MJ_11_q14', '14'): {'venn': [{'sets': 'AB', 'shade': 'A or B', 'cap': 'A ∪ B'},
                                             {'sets': 'CD', 'shade': 'C and D', 'cap': 'C ∩ D'}], 'w': 300.0, 'h': 110.0},
@@ -250,12 +262,21 @@ SPECS.update({
                                       'w': 180.0, 'h': 100.0},
 })
 
+def _w(t, s, f='serif'):
+    """The text's real width: the SVG draws it with textLength, so a guessed width stretched or squeezed the letters
+    (Dhruv round 38: 'why does the font look different'). Minus signs measure ~0 in text_width: counted as 0.5 em."""
+    from ms_maths import text_width as tw0           # (the font metrics know Latin-1 only: '–3' measured as 1/4 em
+    if all(ord(ch) < 256 for ch in t):               #  and was drawn squeezed - other characters 0.55 em each)
+        return tw0(t, f, s)
+    return round(sum(tw0(ch, f, s) if ord(ch) < 256 else 0.55 * s for ch in t), 2)
+
+
 def _draw_tree(sp, w, h, size=8.0):
     """A completed two-stage tree diagram drawn as lines and text like the question's own (probabilities on the branches)."""
     tr = sp['tree']
     L, T = [], []
     from ms_maths import text_width as tw0
-    tw = lambda t: tw0(t, 'serif', size) or 0.5 * size * len(t)
+    tw = lambda t: _w(t, size)
     def txt(lines, x, yc, right=False):                       # a block of lines centred on yc, left edge at x
         lh = size * 1.15
         y0 = yc - (len(lines) - 1) * lh / 2 + size * 0.33
@@ -267,8 +288,9 @@ def _draw_tree(sp, w, h, size=8.0):
         if '/' in prob:                                   # a fraction written as a fraction (16/30 -> 16 over 30)
             nu, de = prob.split('/')
             fw = max(tw(nu), tw(de)) + 2
-            fx = mx - fw - 2
-            fy = my - 4 if upper else my + size + 3        # the bar's height
+            fx = mx - fw - 3                             # right edge just left of the branch's middle, clear of the
+            ly = y0 + (y1 - y0) * (fx + fw - x0) / max(1.0, x1 - x0)   # line (Dhruv round 38: the 15/29 sat on its branch)
+            fy = ly - 3 - size if upper else ly + 3 + size * 0.75     # the bar's height
             for t_, yb in ((nu, fy - 1.5), (de, fy + size - 0.5)):
                 T.append({'t': t_, 'x': round(fx + (fw - tw(t_)) / 2, 2), 'y': round(yb, 2), 'w': round(tw(t_), 2), 's': size})
             L.append({'d': f'M{fx:.2f} {fy + 0.5:.2f}H{fx + fw:.2f}V{fy + 1.0:.2f}H{fx:.2f}Z', 'fill': '#000000'})
@@ -306,7 +328,7 @@ def _draw_venns(sp, w, h, size=9.0):
     'stack': True): {'sets': 'AB' | 'ABC', 'shade': python expression over the set letters (e.g. 'not (A or B)'),
     'nums': {'A': 10, 'AB': 5, 'B': 9, '': 11}  (region = the letters it is in, '' = outside), 'cap': caption under it}."""
     from ms_maths import text_width as tw0
-    tw = lambda t, s_=size: max(tw0(t, 'serif', s_), 0.5 * s_ * len(t))
+    tw = lambda t, s_=size: _w(t, s_)
     vs = sp['venn'] if isinstance(sp['venn'], list) else [sp['venn']]
     L, T = [], []
     n = len(vs); stack = sp.get('stack', False)
@@ -383,7 +405,7 @@ def _draw_venns(sp, w, h, size=9.0):
 def _draw_bars(sp, w, h, size=9.0):
     """A bar chart on the question's grid: sp['bars'] = [(category, value)], 'y': window, 'yt': labelled ticks."""
     from ms_maths import text_width as tw0
-    tw = lambda t, s_=size: max(tw0(t, 'serif', s_), 0.5 * s_ * len(t))
+    tw = lambda t, s_=size: _w(t, s_)
     L, T = [], []
     y0, y1 = sp['y']; bars = sp['bars']
     pl, pr, pt, pb = 30.0, 6.0, 8.0, 16.0
@@ -430,9 +452,9 @@ def draw(sp, w, h, size=9.0):
         return _draw_bars(sp, w, h, size)
     from ms_maths import text_width as tw0
     # text_width measures some Unicode signs (−, –) as ~0 and the label was squeezed; an estimate never below 0.5 em/char
-    text_width = lambda t, f, s: max(tw0(t, f, s), 0.5 * s * len(t))
+    text_width = lambda t, f, s: _w(t, s, f)
     L, T = [], []
-    pl, pr, pt, pb = 22.0, 16.0, 8.0, 14.0                 # room for tick labels and arrows
+    pl, pr, pt, pb = 22.0, 16.0, 12.0, 14.0                # room for tick labels, arrows and the y letter
     x0, x1 = sp['x']; y0, y1 = sp['y']
     W, H = max(20.0, w - pl - pr), max(20.0, h - pt - pb)
     X = lambda x: pl + (x - x0) / (x1 - x0) * W
@@ -466,9 +488,11 @@ def draw(sp, w, h, size=9.0):
         L.append({'d': f'M{ax_x - 2:.2f} {Y(v):.2f}H{ax_x + 2:.2f}', 'stroke': '#000000', 'sw': 0.6})
         t = _num(v); tw = text_width(t, 'serif', size)
         T.append({'t': t, 'x': round(ax_x - 3 - tw, 2), 'y': round(Y(v) + size * 0.35, 2), 'w': tw, 's': size})
-    T.append({'t': sp.get('xlab', 'x'), 'x': round(X(x1) + 8, 2), 'y': round(ax_y + size * 0.35, 2), 'w': size * 0.5, 's': size, 'i': 1})
+    xl = sp.get('xlab', 'x')
+    T.append({'t': xl, 'x': round(X(x1) + 8, 2), 'y': round(ax_y + size * 0.35, 2), 'w': _w(xl, size), 's': size, 'i': 1})
     yl = sp.get('ylab', 'y')
-    T.append({'t': yl, 'x': round(ax_x + 3, 2), 'y': round(Y(y1) - 2, 2), 'w': size * 0.6, 's': size, 'i': 1})
+    T.append({'t': yl, 'x': round(ax_x + 4, 2), 'y': round(Y(y1) - 6 + size * 0.35, 2), 'w': _w(yl, size), 's': size, 'i': 1})
+    #  (beside the arrow tip, above the window: on the window's top edge it sat on a curve, Dhruv round 38 2021 MJ 62 q9)
     dashes = [None, '3 2', '1 1.5']
     for n, (expr, lab) in enumerate(sp['f']):
         f = eval('lambda x: ' + expr, {'math': math})
@@ -509,7 +533,7 @@ def draw(sp, w, h, size=9.0):
     for vx in sp.get('vlines', []):          # a vertical line (x = 95, 2022 ON 62 8(e)(i))
         L.append({'d': f'M{X(vx):.2f} {Y(y0):.2f}V{Y(y1):.2f}', 'stroke': '#000000', 'sw': 1.0})
     for tx, ty, tt in sp.get('tags', []):      # a printed label next to its curve ('a = 2.5', 2021 MJ 62 9(c)(i))
-        T.append({'t': tt, 'x': round(X(tx), 2), 'y': round(Y(ty), 2), 'w': round(0.5 * 7.0 * len(tt), 2), 's': 7.0})
+        T.append({'t': tt, 'x': round(X(tx), 2), 'y': round(Y(ty), 2), 'w': _w(tt, 7.0), 's': 7.0})
     # the function label(s) (Dhruv round 33: only where the printed graph has one, small, never over the curves or the
     # axes, fractions as fractions): pieces ('t', text) / ('i', italic) / ('sup', text) / ('frac', num, den)
     if not sp.get('label', True):

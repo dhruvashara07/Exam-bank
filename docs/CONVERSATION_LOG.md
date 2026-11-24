@@ -606,3 +606,7 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - One full local rebuild (83 papers, ~10 min, GitHub dispatch not used); golden 0; approvals unchanged (hash = cut+marks).
 - Slow part: reading each function from the question (~7 groups). Repeat error: a comment pasted mid-line broke a spec
   silently (old layout fallback) - now: grep 'failed' after every SPECS edit.
+- Round 38 (2026-11-24): 13 ok, 7 wrong (fonts in drawings, y letter on a curve, graph over the next sub-row, tree
+  fractions on branches, no label for 2022 ON 42 q11). Dhruv asked what 'vector kept whole' means (a column vector stays one
+  piece: never top number on one line and bottom on the next, never cut across) and made a rule: redraw every faint
+  picture, flag what cannot be redrawn (pattern 270). Remaining: 47 screenshots in M2/M3 - asked him.
