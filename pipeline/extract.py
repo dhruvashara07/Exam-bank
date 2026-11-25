@@ -54,7 +54,7 @@ def paper_meta(doc, syllabus, year, session, pv):
     dur = re.search(r'\n\s*(\d+ hours?(?: \d+ minutes)?|\d+ minutes)\s*\n', cover)
     old = pv[0] == '0'                     # before 2009 one paper per component: 0625/03 (no variant)
     paper, variant = (int(pv[1]), 0) if old else (int(pv[0]), int(pv[1]))
-    if subjects.is_physics(syllabus):
+    if not subjects.is_maths(syllabus):           # physics and chemistry: same numbering and cover wording
         ptype = paper_type_from_cover(cover, paper, old)
     else:
         ptype = subjects.maths_paper_type(cover, paper)
@@ -103,8 +103,38 @@ def is_formula_page(page):
     return any(FORMULA_TITLE.match(l.strip()) for l in top)
 
 
+ELEMENTS = set('''hydrogen helium lithium beryllium boron carbon nitrogen oxygen fluorine neon sodium magnesium aluminium silicon
+    phosphorus sulfur sulphur chlorine argon potassium calcium scandium titanium vanadium chromium manganese iron cobalt nickel copper
+    zinc gallium germanium arsenic selenium bromine krypton rubidium strontium yttrium zirconium niobium molybdenum technetium
+    ruthenium rhodium palladium silver cadmium indium tin antimony tellurium iodine xenon caesium barium lanthanum cerium
+    praseodymium neodymium promethium samarium europium gadolinium terbium dysprosium holmium erbium thulium ytterbium lutetium
+    hafnium tantalum tungsten rhenium osmium iridium platinum gold mercury thallium lead bismuth polonium astatine radon francium
+    radium actinium thorium protactinium uranium'''.split())
+QA_HEADS = ('qualitative analysis', 'tests for anions', 'tests for aqueous cations', 'tests for gases', 'flame tests')
+
+
+def chem_doc(doc):
+    return subjects.is_chem(subjects.path_syl(doc.name) or '')
+
+
+def data_page_kind(page):
+    """Chemistry 0620 (CHEM_PLAN D3): 'periodic_table' (the Periodic Table, last page of MCQ / theory papers: 92 element
+    names) or 'qa_notes' ('Notes for use in qualitative analysis', practical papers) - no question; kept once per paper as
+    paper.data_sheet. None otherwise (and always None outside chemistry)."""
+    if page.number == 0 or not chem_doc(page.parent):
+        return None
+    t = page.get_text()
+    if len(ELEMENTS & set(re.findall(r'[a-z]+', t.lower()))) >= 60:
+        return 'periodic_table'
+    flat = ' '.join(t.split()).lower()
+    top = ' '.join(' '.join(l.split()) for l in t.split('\n')[:6]).lower()
+    if sum(h in flat for h in QA_HEADS) >= 2 or 'notes for use in qualitative analysis' in top:
+        return 'qa_notes'
+    return None
+
+
 def skipped_page(page):
-    return is_blank_page(page) or is_erratum_page(page) or is_formula_page(page)
+    return is_blank_page(page) or is_erratum_page(page) or is_formula_page(page) or bool(data_page_kind(page))
 
 
 def boundaries(doc):
@@ -1170,6 +1200,15 @@ def extract(pdf_path, syllabus, year, session, pv):
     segs = [s for s in (trim(doc, s) for s in raw_segments(doc, bnds)) if s]
     if subjects.subject(syllabus)['maths_text']:
         segs = maths_paper_parts(doc, bnds, segs, meta)
+    if subjects.is_chem(syllabus):
+        ds = []
+        for p in range(1, len(doc)):
+            k = data_page_kind(doc[p])
+            if k:
+                top, bottom = page_bounds(doc[p])
+                ds.append({'kind': k, 'page': p + 1, 'bbox': [0.0, round(top, 1), round(doc[p].rect.width, 1), round(bottom, 1)]})
+        if ds:
+            meta['data_sheet'] = ds
     sid = f"{syllabus}_{year}{session}_{pv}"
     questions = {}
     for s in segs:

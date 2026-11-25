@@ -4,6 +4,7 @@ All coordinates are PDF points with the origin at the top-left (PyMuPDF conventi
 """
 import re
 import pymupdf as fitz
+import subjects
 
 CONTENT_X0, CONTENT_X1 = 30.0, 570.0      # outside this: margin strips (corner marks are filtered by shape)
 QNUM_X = (44.0, 58.0)                     # question numbers
@@ -52,8 +53,7 @@ def footer_ink_top(page, line):
 
 
 def _maths_page(page):
-    m = re.search(r'/(\d{4})/\d{4}-[A-Z]{2}/', (page.parent.name or '').replace('\\', '/'))
-    return bool(m) and m.group(1) != '0625'
+    return subjects.is_maths(subjects.path_syl(page.parent.name) or '')
 
 
 def page_bounds(page):

@@ -16,7 +16,7 @@ for ses in sys.argv[1:]:
         if not mp:
             bad.append((qid, 'no table (scan?)')); continue
         e = (mp.get('info') or {}).get('new_edges') or []
-        maths = not subjects.is_physics(SYL) and len(e) >= 3   # maths: Q | Answer | Marks | Partial Marks: the Marks
+        maths = subjects.is_maths(SYL) and len(e) >= 3   # maths: Q | Answer | Marks | Partial Marks: the Marks
         #   column is new_edges[1]..[2]; 'M1 for ...' in Partial Marks is no code in the answer (M2 reasons, 2026-11-19)
         for v in mp['rows'][1:-1]:
             for t in v['text']:

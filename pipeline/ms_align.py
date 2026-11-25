@@ -7,7 +7,7 @@ Mapping (by reading the question and the answer, Dhruv round 24): pipeline/ms_ma
 import sys, os, re, json, glob
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import store, subjects
-MATHS = not subjects.is_physics(subjects.current())
+MATHS = subjects.is_maths(subjects.current())
 
 
 def qp_leaves(q):

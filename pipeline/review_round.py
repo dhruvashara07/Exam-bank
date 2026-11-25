@@ -18,6 +18,7 @@ import datetime, json, os, random, re, sys
 
 sys.path.insert(0, os.path.dirname(__file__))
 import paths
+import subjects
 import review_assets as ra
 from PIL import Image
 
@@ -43,7 +44,7 @@ def editable_payload(q, d, qid):
         im.save(os.path.join(d, name), quality=75, optimize=True)
         figs[f['id']] = f'{qid}/{name}'
     out = []
-    if str(sq.get('paper', {}).get('syllabus', '0625')) != '0625':     # maths: the store's LaTeX content (KaTeX on the page)
+    if subjects.is_maths(str(sq.get('paper', {}).get('syllabus', '0625'))):     # maths: the store's LaTeX content (KaTeX on the page)
         import html as H
         for p in sq['parts']:
             depth = p['path'].count('(')

@@ -96,6 +96,11 @@ def wanted(r, sels):
         parts = s.split('/')
         if len(parts) == 3 and parts[0] == syl and parts[1] == folder and (pv and parts[2] == pv.group(1)):
             return True
+        # chemistry 2002-2009 is stored only as qp_1 / ms_5 / ms_1-2-3-5-6 (one digit): selector 0620/2005-MJ/01 fetches
+        # those, fetch() then writes the qp_01 copies (old_papers.py). Physics has its renamed copies in Releases.
+        if (len(parts) == 3 and syl != '0625' and parts[0] == syl and parts[1] == folder and parts[2][:1] == '0'
+                and re.fullmatch(r'(qp|ms)_(\d|all|[\d-]+)\.pdf', name) and parts[2][1] in re.sub(r'\D', '', name)):
+            return True
         if len(parts) == 2 and parts[0] == folder and pv and parts[1] == pv.group(1):
             return True
         if len(parts) == 1 and parts[0] in (folder, folder[:4], syl):
@@ -133,6 +138,12 @@ def fetch(sels=()):
             else:
                 os.remove(dst + '.part'); print('download failed:', r)
     print(f'{got} PDFs fetched from Releases')
+    old = [os.path.join(ROOT, 'raw', r) for r in m if r.split('/')[0] != '0625' and wanted(r, sels)
+           and re.fullmatch(r'(qp|ms)_(\d|all|[\d-]+)\.pdf', r.split('/')[2]) and os.path.exists(os.path.join(ROOT, 'raw', r))]
+    if old:                                    # one-digit old papers of another syllabus -> qp_01 ... (old_papers.py)
+        import old_papers
+        for syl in sorted({os.path.relpath(p, os.path.join(ROOT, 'raw')).split(os.sep)[0] for p in old}):
+            old_papers.main(False, syl, [p for p in old if f'{os.sep}{syl}{os.sep}' in p])
     return got
 
 

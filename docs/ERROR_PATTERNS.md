@@ -798,3 +798,18 @@ Repeat check: pattern 264's rule 'grep failed after every SPECS edit' caught one
     change on a later re-extract; they are approved and NOT rebuilt now - look at them side by side before they are.
 276. Row growth counted twice under a taller drawing (2022 MJ 33 q3, 'empty space below the cell'): the cell height now
     shrinks to the drawing's real bottom and the later rows are shifted once (ms_maths pic_bots).
+
+## Chemistry 0620 - analysis and pilot C0 set-up (2026-11-25)
+277. A third subject would have taken the MATHS path: 12 places decided 'maths' as 'syllabus != 0625' / 'not is_physics' /
+    '/0607/' in the path (layout, ms, store_text, store_units, render, checks, ms_layout, review_round, ms_align, ms_sweep,
+    extract.paper_meta). -> all ask `subjects.is_maths()` / `maths_path()`; chemistry-only code asks `subjects.is_chem()`.
+    Never write 'not physics' for maths again. Proof: golden 0 changed cuts, nothing tracked under 0625 changed, ms_rebuild
+    over all 23 maths sessions = 0 changed questions.
+278. Chemistry 2002-2009 is stored only as one-digit names (qp_1, ms_5); the pipeline needs qp_01 (old = pv starts with 0).
+    -> session_papers prints 0620/2005-MJ/01 (non-physics only); raw_store.fetch fetches the one-digit original for it and
+    writes the qp_01 copy with old_papers.main(syl) (now syllabus-aware). Combined files (ms_1-2-3-5-6, 2003-2004) are NOT
+    split yet - batch C8.
+279. Periodic Table (last page of MCQ / theory papers) and 'Notes for use in qualitative analysis' (practical papers, 1-2
+    pages) are no questions. -> extract.data_page_kind (chemistry only: >= 60 element names / the notes headings): skipped like
+    a blank page, meta.data_sheet; store writes each DIFFERENT sheet once to store/.../0620-chemistry/data_sheets/ (keyed by its
+    text, ~1 MB SVG) and paper.json points to it (Dhruv D3). Coverage counts it.

@@ -5,6 +5,7 @@ only what it shows.
 """
 import re
 import pymupdf as fitz
+import subjects
 
 
 def _subtract(r, holes):
@@ -88,7 +89,7 @@ def fix_cmyk_images(svg):
 def region_svg(src_doc, page_index, bbox):
     doc = region_pdf(src_doc, page_index, bbox)
     svg = doc[0].get_svg_image(text_as_path=True)
-    if '/0607/' in (src_doc.name or ''):
+    if subjects.maths_path(src_doc.name):
         svg = _respace(svg, src_doc[page_index], fitz.Rect(bbox))
     return minify(fix_cmyk_images(svg))
 

@@ -1055,6 +1055,21 @@ def build(pid):
         paper_record(meta, qdoc, mdoc, store, styles, qstyle, mstyle)
         import tasks                              # paper 5/6: each task as ONE record (Dhruv round 32)
         tasks.build_paper(store)
+    if meta.get('data_sheet'):                    # chemistry: periodic table / qualitative-analysis notes, ONCE per paper
+        from render import region_svg             # (CHEM_PLAN D3: never inside a question; the practice-sheet tool may add it)
+        import hashlib                            # one file per DIFFERENT sheet (~1 MB each, the same in most papers of an
+        ds, shared = [], os.path.join(os.path.dirname(os.path.dirname(store)), 'data_sheets')   # era): keyed by its text
+        os.makedirs(shared, exist_ok=True)
+        for d_ in meta['data_sheet']:
+            txt = ' '.join(qdoc[d_['page'] - 1].get_textbox(fitz.Rect(d_['bbox'])).split())
+            txt = re.sub(r'(© UCLES|©\s*Cambridge University Press & Assessment)\s*\d{4}|\d{4}/\d{2}/[A-Z/]+/\d{2}|\d\d_\d{4}_\d\d_\d{4}_[\d.]+', '', txt)
+            name = f"{d_['kind']}_{hashlib.sha1(txt.encode()).hexdigest()[:10]}.svg"
+            fp = os.path.join(shared, name)
+            if not os.path.exists(fp):
+                open(fp, 'w').write(region_svg(qdoc, d_['page'] - 1, d_['bbox']))
+            ds.append(dict(d_, file='data_sheets/' + name))
+        json.dump({'schema': 5, 'id': paths.paper_id(meta), 'paper_type': meta['paper_type'], 'total_marks': meta['total_marks'],
+                   'data_sheet': ds}, open(os.path.join(store, 'paper.json'), 'w'), ensure_ascii=False, indent=1)
     # the mark-scheme table header row (Question | Answer | Marks), stored once per paper
     for pno in range(1, len(mdoc)):
         rm = mdoc[pno].rotation_matrix                 # mark-scheme pages are rotated: words in visible coordinates

@@ -11,6 +11,7 @@ Units are the same layout units as everywhere else (draw with store.unit_svg).
 import collections
 import os, json, copy, re
 import ms_portrait as MP
+import subjects
 from ms import MS_RELABEL, MS_SPLIT
 MS_MAP = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'ms_map.json')))   # rows by meaning (ms_align.py)
 
@@ -1805,7 +1806,7 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None, g
 
 
 def build(q, store):
-    MP.EQUAL_FLEX = str((q.get('paper') or {}).get('syllabus', '0625')) != '0625'   # maths: Answer = Partial Marks width
+    MP.EQUAL_FLEX = subjects.is_maths(str((q.get('paper') or {}).get('syllabus', '0625')))   # maths: Answer = Partial Marks width
     sizes = {f['id']: tuple(f['size_pt']) for f in q.get('figures', [])}
     rows = [(r, u) for p in q['parts'] for r in p['ms'] for u in r['layout']]
     seen, uniq = set(), []

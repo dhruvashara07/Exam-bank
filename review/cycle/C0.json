@@ -1,0 +1,53 @@
+{
+ "batch": "C0",
+ "subject": "0620",
+ "sessions": [
+  "2005-MJ",
+  "2015-MJ",
+  "2024-MJ"
+ ],
+ "created": "2026-11-25T03:44:14+00:00",
+ "phases": {
+  "build": [],
+  "claude": [
+   {
+    "start": "2026-11-25T03:44:14+00:00",
+    "end": null
+   }
+  ],
+  "claude1": [],
+  "claude2": [],
+  "review": [],
+  "fix": []
+ },
+ "github_runs": [],
+ "counts": {},
+ "errors": [],
+ "tokens": [],
+ "events": [
+  {
+   "at": "2026-11-25T03:44:14+00:00",
+   "task": "start C0 --subject"
+  },
+  {
+   "at": "2026-11-25T03:44:14+00:00",
+   "task": "phase C0 claude"
+  },
+  {
+   "at": "2026-11-25T03:55:42+00:00",
+   "task": "plan written, decisions D1-D4; start P1-P7 code"
+  },
+  {
+   "at": "2026-11-25T03:57:37+00:00",
+   "task": "P1 P2 P6 P7 done; next P4 periodic table page"
+  },
+  {
+   "at": "2026-11-25T03:58:38+00:00",
+   "task": "P4 data sheet done; local test build 2024-MJ/41 + 2005-MJ/03"
+  },
+  {
+   "at": "2026-11-25T04:12:13+00:00",
+   "task": "freeze: golden 0; ms_rebuild new=153 CHANGED, running baseline on HEAD to compare"
+  }
+ ]
+}

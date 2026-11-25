@@ -360,6 +360,8 @@ if __name__ == '__main__':
     cmd = sys.argv[1]
     o, rest = opts(sys.argv[2:])
     batch = rest[0]
+    _rec = os.path.join(ROOT, 'review', 'cycle', batch + '.json')       # the batch's syllabus (C0 = 0620); default maths
+    SYL = os.environ.get('SYL') or (json.load(open(_rec)).get('subject') if os.path.exists(_rec) else None) or SYL
     {'pass1': lambda: pass1(batch, rest[1:], o), 'pass2': lambda: pass2(batch, o), 'classes': lambda: classes(batch, o),
      'set': lambda: setcmd(batch, o), 'sheets': lambda: sheets(batch, o), 'round': lambda: round_items(batch, o),
      'status': lambda: status(batch, o)}[cmd]()

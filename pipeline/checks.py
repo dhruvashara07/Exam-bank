@@ -20,6 +20,7 @@ import collections, datetime, glob, html, json, os, re, sys
 import pymupdf as fitz
 
 sys.path.insert(0, os.path.dirname(__file__))
+import subjects
 import paths
 from run import cleaned
 from layout import page_bounds, visible_lines, dark_mask, ZOOM, tight_ink
@@ -179,7 +180,7 @@ def check_paper(pj):
                 what = (['ink crosses the ' + '/'.join(edges) + ' edge'] if edges else []) + ([f'{len(cut)} text line(s) half inside'] if cut else [])
                 problems.append({'id': qid, 'kind': 'figure', 'detail': f"{f['id']}: crop cut: {', '.join(what)}"})
         scores[qid] = text_score(doc, q)
-        if qid[:4] != '0625':
+        if subjects.is_maths(qid):
             continue                  # maths: the old editable layer is replaced by the LaTeX check (store tex_check, maths_tex.py)
         if scores[qid] < TEXT_MIN:
             problems.append({'id': qid, 'kind': 'text', 'detail': f'editable text has {scores[qid]:.0%} of the printed words'})

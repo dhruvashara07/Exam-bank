@@ -49,7 +49,7 @@ def paper_problems(pj):
     for qf in glob.glob(os.path.join(d, 'q*', '*.json')):
         for s in segs_of(json.load(open(qf))):
             by_page[s['page']].append(s['bbox'])
-    for x in ([meta['formula_list']] if meta.get('formula_list') else []) + \
+    for x in ([meta['formula_list']] if meta.get('formula_list') else []) + meta.get('data_sheet', []) + \
             [s for i in meta.get('intros', []) for s in i['segments']]:       # maths: formula list, section intros
         by_page[x['page']].append(x['bbox'])
     last = max(by_page) if by_page else 0

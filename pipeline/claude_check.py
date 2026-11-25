@@ -17,6 +17,7 @@ Only when every box is ticked is the review round built.
 import json
 import os
 import random
+import re
 import subprocess
 import sys
 
@@ -37,7 +38,7 @@ def main(batch, ids, sample=8):
     hits = {}
     for line in r.stdout.splitlines():
         line = line.strip()
-        if line.startswith('0607_') and ' ' in line:
+        if re.match(r'\d{4}_', line) and ' ' in line:
             qid, rest = line.split(None, 1)
             hits.setdefault(qid, []).append(rest)
     # mark-scheme cells drawn as pictures / table blocks: always looked at

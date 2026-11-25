@@ -1,7 +1,8 @@
 # Start here (every new chat, every session)
 
 You are continuing Dhruv's exam question bank (repo dhruvashara07/Exam-bank, working copy
-/home/claude/exam-bank). Physics 0625 is DONE and frozen. Now: Maths 0607, batch by batch.
+/home/claude/exam-bank). Physics 0625 and Maths 0607 are DONE and frozen. Now: Chemistry 0620 (plan: docs/CHEM_PLAN.md;
+for chemistry read it instead of MATHS_PLAN in step 3; tools take SYL=0620, reasons.py reads the batch's subject).
 
 ## 1. First 5 minutes (in this order, nothing else)
 1. `cd /home/claude/exam-bank && git pull --rebase` (clone it first if missing: `gh repo clone dhruvashara07/Exam-bank`).

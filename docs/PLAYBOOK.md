@@ -1,4 +1,6 @@
-# Playbook: how one batch is done (any subject; maths 0607 now)
+# Playbook: how one batch is done (any subject; chemistry 0620 now - docs/CHEM_PLAN.md)
+Chemistry: selectors `0620/2024-MJ/41`, ids `0620_2024MJ_41`; `SYL=0620` for ms_rebuild / ms_align / ms_sweep; reasons.py takes
+the syllabus from the batch record (`batch_log.py start C0 --subject 0620`). Chemistry runs the PHYSICS path (subjects.is_chem gates only).
 Read docs/START_HERE.md first. Plan and batches: docs/MATHS_PLAN.md. Rules for mark schemes: MS_TABLE_RULES.md.
 Mistakes not to repeat: ERROR_PATTERNS.md. Decisions: CONVERSATION_LOG.md. Physics 0625 is frozen.
 Selectors: physics `2021-MJ/41`; maths ALWAYS with the syllabus: `0607/2021-MJ/41`, session `0607/2021-MJ`,

@@ -7,6 +7,7 @@ an Answer column and a Marks column. Each label's rows become one or more page s
 import os
 import re
 import pymupdf as fitz
+import subjects
 from layout import norm
 
 LABEL = re.compile(r'^(\d{1,2})((?:\([a-z]\))?)((?:\([ivx]+\))?)((?:,\([a-z]+\))*)(\d?)\.?$')
@@ -400,8 +401,7 @@ def _lift(page, cuts, x_min, top=None):
 
 
 def _maths(doc):
-    m = re.search(r'/(\d{4})/\d{4}-[A-Z]{2}/', (doc.name or '').replace('\\', '/'))
-    return bool(m) and m.group(1) != '0625'
+    return subjects.is_maths(subjects.path_syl(doc.name) or '')
 
 
 def _maths_rules(page):

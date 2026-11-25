@@ -16,6 +16,7 @@ import pymupdf as fitz
 import numpy as np
 from PIL import Image
 import paths
+import subjects
 from run import cleaned
 
 FAMILY = [('symbol', 'DejaVu Sans'), ('cambriamath', 'DejaVu Sans'), ('times', 'Liberation Serif'), ('serif', 'Liberation Serif'),
@@ -114,8 +115,7 @@ def nameless_bold(doc, font):
 
 def maths_doc(doc):
     """True for a maths paper (syllabus with maths_text): its cleaned PDF path holds /<syllabus>/<year>-<session>/."""
-    m = re.search(r'/(\d{4})/\d{4}-[A-Z]{2}/', (doc.name or '').replace('\\', '/'))
-    return bool(m) and m.group(1) != '0625'
+    return subjects.is_maths(subjects.path_syl(doc.name) or '')
 
 
 # 2025 'AllAndNone' subsets reuse letter/digit codes for symbols: told apart by the glyph's width (em) - read by eye (M0).

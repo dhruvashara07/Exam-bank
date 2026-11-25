@@ -7,7 +7,7 @@ Before 2009 Cambridge printed one paper per component (0625/03) and some downloa
 Writes the new files next to the originals in raw/ (git-ignored); push them to the branch incoming-raw to
 store them in Releases. Prints what it did. Never deletes or changes an original.
 
-    python3 pipeline/old_papers.py [--dry]
+    python3 pipeline/old_papers.py [--dry] [--syl 0620]     (default 0625; raw_store.fetch runs it for 0620 itself)
 """
 import glob, os, re, sys
 import pymupdf as fitz
@@ -16,18 +16,18 @@ sys.path.insert(0, os.path.dirname(__file__))
 from paths import ROOT
 
 
-def codes(page):
+def codes(page, syl='0625'):
     """Component codes printed on a page: '31', '03', ..."""
     t = page.get_text()
-    out = re.findall(r'0625\s*/\s*(\d{1,2})\b', t)
+    out = re.findall(syl + r'\s*/\s*(\d{1,2})\b', t)
     return [c if len(c) == 2 else '0' + c for c in out]
 
 
-def split_by_code(doc):
+def split_by_code(doc, syl='0625'):
     """{code: [page numbers]}; a page without a code goes with the page before it."""
     groups, cur = {}, None
     for i, pg in enumerate(doc):
-        c = codes(pg)
+        c = codes(pg, syl)
         if len(set(c)) == 1:          # a contents page lists every component: it starts no paper
             cur = c[0]
         if cur is None:
@@ -47,15 +47,15 @@ def write_pages(doc, pages, dst, dry):
     return f'{os.path.relpath(dst, ROOT)} <- pages {pages[0] + 1}-{pages[-1] + 1} ({len(pages)})'
 
 
-def main(dry=False):
-    for path in sorted(glob.glob(os.path.join(ROOT, 'raw', '0625', '200[0-9]-*', '*.pdf'))):
+def main(dry=False, syl='0625', only=None):
+    for path in sorted(only or glob.glob(os.path.join(ROOT, 'raw', syl, '200[0-9]-*', '*.pdf'))):
         d, name = os.path.split(path)
         m = re.fullmatch(r'(qp|ms)_(\d|all)\.pdf', name)
         if not m:
             continue
         kind = m.group(1)
         doc = fitz.open(path)
-        groups = split_by_code(doc)
+        groups = split_by_code(doc, syl)
         real = {c: p for c, p in groups.items() if c != '?' and len(c) == 2}
         if m.group(2) == 'all' or len(real) > 1:            # several papers in one file
             # a mark-scheme page naming another paper only in passing must not open a new group
@@ -69,4 +69,4 @@ def main(dry=False):
 
 
 if __name__ == '__main__':
-    main('--dry' in sys.argv)
+    main('--dry' in sys.argv, sys.argv[sys.argv.index('--syl') + 1] if '--syl' in sys.argv else '0625')

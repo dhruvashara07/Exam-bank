@@ -20,6 +20,7 @@ import pymupdf as fitz
 import numpy as np
 from PIL import Image, ImageFont, ImageDraw
 import paths
+import subjects
 from run import cleaned
 from store_text import family, unpua, hexcol, span_len
 
@@ -154,7 +155,7 @@ def glyph_styles(doc, pages, feats_out=None):
             style[key] = 'bi' if (b and i) else 'b' if b else 'i' if i else 'r'
     # stroke weight read from the font program itself (exact): the page-render weight mixed in neighbouring ink and
     # missed a bold '(c)' / made regular words bold (M1 round 32, 2025 ON 32 q15). Overrides bold where available.
-    ow = _outline_weights(doc, pages, {k for k in feats}) if '/0607/' in (doc.name or '').replace('\\', '/') else {}   # maths only
+    ow = _outline_weights(doc, pages, {k for k in feats}) if subjects.maths_path(doc.name) else {}   # maths only
     if ow:
         for (font, ch), lst in bychar.items():
             ks = [t for t in lst if t[1] in ow]
@@ -353,7 +354,7 @@ def extract_unit(doc, pno, clip, figs, cstyle):
         if dr['type'] == 's': fill = None
         if fill is None and stroke is None:
             continue
-        d = drawing_d(dr, m, clip, ox, oy, maths='/0607/' in (doc.name or '').replace('\\', '/'))
+        d = drawing_d(dr, m, clip, ox, oy, maths=subjects.maths_path(doc.name))
         if not d:
             continue
         rec = {'d': d}

@@ -14,4 +14,8 @@ sel = {f"{pre}{r.split('/')[1]}/{re.sub(r'^qp_|[.]pdf$', '', r.split('/')[2])}"
 # build the renamed one only, or every paper is built twice.
 # 2008-2009: qp_3 holds 0625/31 and /32 together (split into qp_31, qp_32): skip the combined original too.
 sel = {s for s in sel if not (re.search(r'/\d$', s) and any(o != s and re.fullmatch(re.escape(s[:-1]) + r'\d' + s[-1] + '|' + re.escape(s) + r'\d', o) for o in sel))}
+# Other syllabuses store 2002-2009 only under the one-digit name (qp_1): build it as 0620/2005-MJ/01 (raw_store.fetch
+# writes the qp_01 copy, old_papers.py). Physics is unchanged.
+if syl != '0625':
+    sel = {re.sub(r'/(\d)$', r'/0\1', s) for s in sel}
 print(' '.join(sorted(sel)))
