@@ -631,3 +631,23 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   the question's angles, root sign instead of a box, no grid in 2025 MJ 62 9(c)(i)). Question figure on triangle dot paper (2025 FM 52
   q2) was half a picture: extract.diagrams now knows triangle lattices (patterns 274-276). Side by side: ~40 graphs checked, spill
   check 0 real problems, golden 0, nothing under 0625-physics.
+
+## 2026-11-25 - Chemistry 0620: analysis, plan, pilot C0 (own account)
+- Dhruv: start IGCSE Chemistry 0620 with a pilot like maths; physics and maths frozen (golden 0, nothing under their folders,
+  maths ms_rebuild unchanged for any shared change, else gate to 0620); analyse first, CHEM_PLAN.md, ask only real decisions,
+  4-session pilot, two-pass flow, ONE review round.
+- Analysis (2005 / 2015 / 2024 + MS of 2010, 2019-2023, 2026): same Cambridge templates as physics (Arial, Fig. captions,
+  MCQ, practical/ATP, old text MS, 3-column MS 2016-2025, Guidance 2013-2015 and 2026). New: Periodic Table and
+  qualitative-analysis notes pages, displayed formulae (letters as text, outlines or tiny images), one-digit old file names.
+- Decisions (CHEM_PLAN 8): D1 Dhruv asked what physics does (plain Unicode sub/superscripts, not LaTeX) and said LaTeX may be
+  needed in some cases -> Unicode by default, mhchem only where needed; D2 follow print; D3 Periodic Table stored once (a future
+  practice-sheet tool gets an 'add periodic table' toggle); D4 pilot 2005-MJ 2015-MJ 2024-MJ 2026-MJ.
+- Biggest finding: 12 shared-code places meant 'maths' as 'not physics' - a third subject would have run the maths path.
+  Refactored to subjects.is_maths; proven byte-identical for maths (192 questions hashed) and physics (golden + git status).
+- Pass 1: 2242 reasons, ~2000 of them maths-only checks (sans font, ms_maths mode, 'M1' marking-point labels) - passed and
+  filtered from future chemistry passes. Real classes: 283, 282, 284, 281, 285, 286 (the big one: ~23 questions with displayed
+  formulae in MS cells). Pass 2 found 287 (MS page without a header row) and showed my 286 rule missed 2024's image letters.
+- Repeat: pattern 96 (empty line boxes) in my own new structure detector - the old lesson was in ERROR_PATTERNS but not in my
+  head; also the reasons.py 'set overwrites any status' trap twice (restored by hand). Slowest: the MS structure class (~30 min).
+- Process: both GitHub passes used; final fixes rebuilt locally (as M3). Round 41 on the own-account page (the shared page is
+  not reachable from this account).

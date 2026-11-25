@@ -4,7 +4,8 @@
  "sessions": [
   "2005-MJ",
   "2015-MJ",
-  "2024-MJ"
+  "2024-MJ",
+  "2026-MJ"
  ],
  "created": "2026-11-25T03:44:14+00:00",
  "phases": {
@@ -12,17 +13,26 @@
    {
     "start": "2026-11-25T04:17:50+00:00",
     "end": "2026-11-25T04:23:50+00:00"
+   },
+   {
+    "start": "2026-11-25T04:41:38+00:00",
+    "end": "2026-11-25T04:44:40+00:00"
    }
   ],
   "claude": [
    {
     "start": "2026-11-25T03:44:14+00:00",
-    "end": null
+    "end": "2026-11-25T05:03:25+00:00"
    }
   ],
   "claude1": [],
   "claude2": [],
-  "review": [],
+  "review": [
+   {
+    "start": "2026-11-25T05:03:25+00:00",
+    "end": null
+   }
+  ],
   "fix": []
  },
  "github_runs": [
@@ -34,10 +44,113 @@
    "start": "2026-11-25T04:17:51Z",
    "end": "2026-11-25T04:17:55Z",
    "minutes": 0.1
+  },
+  {
+   "id": 45548516884,
+   "name": "Review website",
+   "branch": "main",
+   "conclusion": null,
+   "start": "2026-11-25T04:41:40Z",
+   "end": "2026-11-25T04:41:45Z",
+   "minutes": 0.1
   }
  ],
- "counts": {},
- "errors": [],
+ "counts": {
+  "papers": 56,
+  "questions": 856,
+  "flags": 2242,
+  "round_items": 7
+ },
+ "errors": [
+  {
+   "pattern": "280",
+   "kind": "new",
+   "what": "ms_align read chem labels at y 14.0 only",
+   "fix": "top Q-column word (tool)",
+   "found_by": "claude",
+   "at": "2026-11-25T05:03:25+00:00"
+  },
+  {
+   "pattern": "281",
+   "kind": "new",
+   "what": "MS label slip at another level 8(c)(iii) for 8(d)",
+   "fix": "orphan row after the previous leaf",
+   "found_by": "claude",
+   "at": "2026-11-25T05:03:25+00:00"
+  },
+  {
+   "pattern": "282",
+   "kind": "new",
+   "what": "empty Guidance cell cut at the Marks rule: 3-column rows",
+   "fix": "outer border (_tighten, chem)",
+   "found_by": "claude",
+   "at": "2026-11-25T05:03:25+00:00"
+  },
+  {
+   "pattern": "283",
+   "kind": "new",
+   "what": "2015 paper 2 read as MCQ; ATP total 60 vs 40",
+   "fix": "old numbering <2016; MS maximum raw mark",
+   "found_by": "claude",
+   "at": "2026-11-25T05:03:25+00:00"
+  },
+  {
+   "pattern": "284",
+   "kind": "new",
+   "what": "MS table under a notes paragraph not read (2024 41 Q1-2)",
+   "fix": "maths rule for chem",
+   "found_by": "claude",
+   "at": "2026-11-25T05:03:26+00:00"
+  },
+  {
+   "pattern": "285",
+   "kind": "new",
+   "what": "end atom H of displayed formulae cut from crops",
+   "fix": "fit_crop just-touching for chem",
+   "found_by": "claude",
+   "at": "2026-11-25T05:03:26+00:00"
+  },
+  {
+   "pattern": "286",
+   "kind": "new",
+   "what": "displayed formulae in MS cells torn apart (glyph outlines / image letters / empty line boxes)",
+   "fix": "one vector picture per structure",
+   "found_by": "claude",
+   "at": "2026-11-25T05:03:26+00:00"
+  },
+  {
+   "pattern": "287",
+   "kind": "new",
+   "what": "MS page without header row skipped (2015 21 Q7)",
+   "fix": "table starts under the page header box",
+   "found_by": "claude",
+   "at": "2026-11-25T05:03:26+00:00"
+  },
+  {
+   "pattern": "288",
+   "kind": "new",
+   "what": "band with pictures shrunk instead of re-wrapped",
+   "fix": "pictures on own lines move with the re-wrap",
+   "found_by": "claude",
+   "at": "2026-11-25T05:03:26+00:00"
+  },
+  {
+   "pattern": "289",
+   "kind": "new",
+   "what": "practical MS marking points (i)-(iv) under an unsplit part",
+   "fix": "row goes to the leaf part",
+   "found_by": "claude",
+   "at": "2026-11-25T05:03:26+00:00"
+  },
+  {
+   "pattern": "96",
+   "kind": "repeat",
+   "what": "straight lines have empty boxes: structure bonds ignored by intersects (my own new chem code)",
+   "fix": "widened 0.3 pt like extract",
+   "found_by": "claude",
+   "at": "2026-11-25T05:03:30+00:00"
+  }
+ ],
  "tokens": [],
  "events": [
   {
@@ -83,6 +196,78 @@
   {
    "at": "2026-11-25T04:36:16+00:00",
    "task": "MS displayed formulae as vector pictures (286) done; freeze checks 2"
+  },
+  {
+   "at": "2026-11-25T04:41:38+00:00",
+   "task": "phase C0 build"
+  },
+  {
+   "at": "2026-11-25T04:42:04+00:00",
+   "task": "gh C0 45548516884"
+  },
+  {
+   "at": "2026-11-25T04:44:40+00:00",
+   "task": "phase C0 build"
+  },
+  {
+   "at": "2026-11-25T04:51:57+00:00",
+   "task": "local rebuild of C0 with fixes 287-289"
+  },
+  {
+   "at": "2026-11-25T05:03:25+00:00",
+   "task": "phase C0 claude"
+  },
+  {
+   "at": "2026-11-25T05:03:25+00:00",
+   "task": "phase C0 review"
+  },
+  {
+   "at": "2026-11-25T05:03:25+00:00",
+   "task": "count C0 papers=56"
+  },
+  {
+   "at": "2026-11-25T05:03:25+00:00",
+   "task": "error C0 280"
+  },
+  {
+   "at": "2026-11-25T05:03:25+00:00",
+   "task": "error C0 281"
+  },
+  {
+   "at": "2026-11-25T05:03:25+00:00",
+   "task": "error C0 282"
+  },
+  {
+   "at": "2026-11-25T05:03:25+00:00",
+   "task": "error C0 283"
+  },
+  {
+   "at": "2026-11-25T05:03:26+00:00",
+   "task": "error C0 284"
+  },
+  {
+   "at": "2026-11-25T05:03:26+00:00",
+   "task": "error C0 285"
+  },
+  {
+   "at": "2026-11-25T05:03:26+00:00",
+   "task": "error C0 286"
+  },
+  {
+   "at": "2026-11-25T05:03:26+00:00",
+   "task": "error C0 287"
+  },
+  {
+   "at": "2026-11-25T05:03:26+00:00",
+   "task": "error C0 288"
+  },
+  {
+   "at": "2026-11-25T05:03:26+00:00",
+   "task": "error C0 289"
+  },
+  {
+   "at": "2026-11-25T05:03:30+00:00",
+   "task": "error C0 96"
   }
  ]
 }

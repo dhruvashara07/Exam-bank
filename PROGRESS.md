@@ -2,6 +2,26 @@
 
 Read this first in every session. Update it before ending a session.
 
+## Chemistry 0620 (started 2026-11-25) - plan: docs/CHEM_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md
+- 2026-11-25: analysis + CHEM_PLAN.md (Dhruv's decisions D1-D4: Unicode like physics + LaTeX only where needed; MS columns
+  follow print; Periodic Table once per paper; pilot 2005-MJ 2015-MJ 2024-MJ 2026-MJ). Shared code: the 12 'not 0625 = maths'
+  gates now ask subjects.is_maths (chemistry runs the physics path); chemistry-only code asks subjects.is_chem.
+- 2026-11-25: pilot C0 (56 papers) built: GitHub pass 1 (run 45545804757) + pass 2 (45548516463), then the last fixes rebuilt
+  LOCALLY (= Action; both GitHub passes of the budget used). 56/56 papers exact mark totals, 0 blocking. Patterns 277-289.
+  Reasons: 2040 passed, 189 verified, 3 fixed, 29 known, 0 open. Freeze proven before each push: golden 0 changed cuts,
+  nothing tracked under 0625/0607 changed, maths ms_layout byte-identical on 192 questions, ms_rebuild list = untouched baseline.
+- Round 41 (chemistry pilot, 7 items: 3 new rules, 3 calibration, 1 decision - faint MS structure pictures redraw yes/no) on
+  Dhruv's OWN-account review page https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e (this chat runs in his own account; round 34
+  dropped from it). Maths round 40 is on the shared-account page and still open.
+- Known C0 items (not in the round, ERROR_PATTERNS 'Known (C0...)'): 2026 MJ 23 q36 MCQ option pictures cut over two rows
+  (paper NOT to approve until fixed); options-table pictures holding question text (2026 MJ 12 q3, 2015 MJ 11 q1); practical
+  marking points (iii)/(iv) under a split part (2026 MJ 51 q2, 52 q1, 52 q2); Cambridge label slips (2024 MJ 33 q2, 52 q1, 32 q6);
+  2015 MJ 33 q7 7(b)(i) small text beside a faint picture.
+- NEXT: (1) Chemistry round 41 (Dhruv, own-account page): read feedback_r41 (db_list on slug b3c8a710-c92b-4a33-95b2-f7eba1bc0031),
+  fix what is wrong as a class, apply his redraw decision, fix the known C0 items above (2026 MJ 23 q36 first), rebuild C0, freeze
+  checks, close round 41 (review_round.py close + review_page.py drop 41), approve C0, docs, push. Then C1 (CHEM_PLAN 6) in a new chat.
+  (2) Maths round 40 (shared account) is still open - see the maths NEXT below.
+
 ## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md
 - 2026-11-18: CHEM stored: 1599 of 1600 PDFs in Releases (only chemistry_0652_to_0620_mapping.pdf, not a Cambridge name,
   stays on branch store-chem). inbox.py now keeps gt/ci/ir/in/eq/one-digit/combined files (302 had been skipped).
@@ -24,7 +44,7 @@ Read this first in every session. Update it before ending a session.
   2 pies, 2 mappings, 3 sketches), 1 kept (2025 FM 62 10(a), Dhruv decides). maths_check picture_checks: 0 left. One local
   rebuild (ms_rebuild, 105 questions written after the groups; all redraws looked at side by side); golden 0, nothing under
   0625; approvals unchanged (hash = cut + marks). Round 39 published (10 redraws + 5 calibration + 1 decision).
-- NEXT: (1) Round 40 (Dhruv): read feedback_r40 on the review page (10 fixes from round 39 + 8 graphs whose printed grid was too faint to decide:
+- MATHS NEXT: (1) Round 40 (Dhruv): read feedback_r40 on the review page (10 fixes from round 39 + 8 graphs whose printed grid was too faint to decide:
   say yes/no), fix what is wrong as a class, ms_rebuild + grep 'failed', golden 0, close and drop the round, docs, push with pipeline/push.sh.
   (2) The triangle dot-paper rule (pattern 275) would change ~20 approved figures in 2022 ON 51, 2024 ON 51, 2024 ON 61 on a re-extract: show side by side first.
 - 2026-11-24: ROUND 36 closed (7 ok, 1 wrong: no function label on the redrawn 2019 ON 61 graph - removed). M3 APPROVED:

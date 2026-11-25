@@ -106,9 +106,18 @@ def _table_area(page, lines):
         # maths / chemistry: the table can start lower on a page (general notes above it, 2019 ON 21 p3; chemistry 2024 MJ 41 p5)
         header = [l for l in lines if re.match(r'Question\b', l['text']) and l['x0'] < 130
                   and any(abs(o['y0'] - l['y0']) < 4 and re.match(r'Answer', o['text'].strip()) for o in lines)]
-    if not header:
+    top = None
+    if not header and subjects.is_chem(subjects.path_syl(page.parent.name) or ''):
+        # chemistry 2015: the table runs on to a page with no header row (ms_21 p9: 6(b), Q7 lost, ERROR_PATTERNS 287):
+        # it starts under the page's header box ('Page 9 | Mark Scheme | Syllabus | Paper')
+        lab = [l for l in lines if re.match(r'\d{1,2}\([a-z]\)', l['text'].replace(' ', ''))]
+        box = [l for l in lines if l['y0'] < 130 and not re.match(r'\d{1,2}\(', l['text'].replace(' ', ''))
+               and re.search(r'Page \d+|Mark Scheme|Syllabus|Paper|IGCSE|^\d{2,4}$', l['text'].strip())]
+        if lab and box:
+            top = max(l['y1'] for l in box) + 3
+    if not header and top is None:
         return None
-    top = header[0]['y1'] + 3
+    top = header[0]['y1'] + 3 if top is None else top
     foot = [l['y0'] for l in lines if l['y0'] > page.rect.height - 80 and ('©' in l['text'] or 'Page ' in l['text'])]
     if not foot:                       # a landscape page printed shrunk onto portrait paper (2019 ON 42): footer higher up
         foot = [l['y0'] for l in lines if l['y0'] > top + 20 and ('©' in l['text'] or re.search(r'Page \d+ of \d+', l['text']))]

@@ -99,3 +99,12 @@ C2 / C3 are as big as maths M2 (117): split into a / b if the chat cannot hold t
 | D2 | Mark-scheme columns follow the print, as physics: 3 columns; Guidance 4th column where printed (2013-2015, 2026). |
 | D3 | Periodic table: stored ONCE per paper (`paper.data_sheet`), never in a question. Later the practice-sheet tool gets an 'add periodic table' toggle that attaches it at the end (future, not now). |
 | D4 | Pilot C0 = 2005-MJ, 2015-MJ, 2024-MJ, 2026-MJ. |
+
+## 9. Pilot C0 status (2026-11-25)
+Built (GitHub pass 1 + pass 2, last fixes rebuilt locally), 56/56 exact totals, round 41 published (7 items). New rules found
+in the pilot (ERROR_PATTERNS 277-289): gate refactor, old one-digit files, data sheets, 2015 paper types + ATP total,
+Guidance frame for empty cells, MS table under notes / page without header, label slips (orphan, marking points (i)-(iv)),
+displayed formulae (end atoms in crops; one vector picture per structure in MS cells; never shrunk). Measured: ~90 min of Claude
+time for 56 papers (pilot rate); a 3-year batch (~125 papers) should fit one chat now that the classes exist.
+Still to build for later batches: ms_1-2-3-5-6 split (C8), qp_3 holding 31+32 (check C7), equilibrium arrow '⇌' as printed
+(seen as text in 2015 MS, fine so far), LaTeX (D1) only when a part needs it - no part needed it in C0.

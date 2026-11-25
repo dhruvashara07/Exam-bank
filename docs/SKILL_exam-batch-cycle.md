@@ -138,3 +138,14 @@ MATHS_PLAN.md if the plan changed; docs/NEXT_CHAT.md prompt; `pipeline/push.sh`;
 - Work per group: write specs -> rebuild only those qids (ms_rebuild <qids> --write) -> grep failed -> ours | printed sheet ->
   fix labels off lines. Several words in one SVG text stretch: split numbers into separate texts.
 - The redraw replaces only the pasted image; text under it stays text (pattern 272).
+
+## Chemistry 0620 additions (2026-11-25, pilot C0)
+- Plan: docs/CHEM_PLAN.md (read it instead of MATHS_PLAN for chemistry). Batches C0 (pilot) then C1-C8, 3 years each.
+- Chemistry runs the PHYSICS path; chemistry-only code asks `subjects.is_chem()`, maths-only code `subjects.is_maths()` -
+  never 'not physics'. Freeze before every push: golden 0 changed cuts, nothing tracked under 0625/0607, and for shared code
+  the maths ms_rebuild list equal to the untouched baseline (153 local/stored differences exist on HEAD itself) plus a hash of
+  ms_layout output on those questions (old tree vs new) = 0 differences.
+- Tools take the syllabus: `SYL=0620` for ms_rebuild / ms_align / ms_sweep; reasons.py reads it from the batch record
+  (`batch_log.py start C0 --subject 0620`). reasons.py drops the maths-only checks (q_font, ms_mode, 'M1' marking points).
+- `reasons.py set` changes EVERY matching reason whatever its status: never pass --status to select; use --qid / --match.
+- Review page = the one of the account the chat runs in (own account: PCdP6oibAkjQvGz8mKm73e; shared: 8YDJDKJCXfURh5QFLnpTw8).

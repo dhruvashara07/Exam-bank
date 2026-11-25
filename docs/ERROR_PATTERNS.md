@@ -836,4 +836,16 @@ Repeat check: pattern 264's rule 'grep failed after every SPECS edit' caught one
     letter shapes (or >= 2 + bonds, 5+ pieces, <= 17 pt apart) = ONE vector picture (figures/msfml_*.svg, an 'image' the
     layout moves whole). Open: a cell with a structure + a long line beside it falls to the 'cell' layout and is shrunk
     (2026 MJ 41 7(c)(iii) Answer) - counted in pass 2.
-Known (C0, 2 questions): MCQ question line / statements inside the options-table picture (2026 MJ 12 q3, 2015 MJ 11 q1).
+    2024 MS draws the atom letters as tiny pasted IMAGES (like maths 258): they count as letter shapes too.
+287. 2015 MS page 9 continues the table with NO header row: the page was skipped (2015 MJ 21: 6(b) and all of Q7 had no mark
+    scheme; found in pass 2 once paper 2 was read as theory). -> chemistry: a page with labels and no header row starts its
+    table under the page header box ('Page 9 | Mark Scheme | Syllabus | Paper'). Blast over all C0 MS: only 2015 21 (+ 284).
+288. A band holding pictures was never re-wrapped (`pure = not PP`) and was SHRUNK to fit (25 rows / 23 C0 questions with a
+    displayed formula + a long line, e.g. 2026 MJ 41 7(c)(iii)): Dhruv's rule is normal size always. -> chemistry: pictures
+    on lines of their own let the text re-wrap; each picture moves down with the lines above it (ms_layout pic_own).
+289. Practical MS (2026 MJ 51/52) numbers marking points 1(a)(i)-(iv) under a part the paper does not split: rows matched no
+    part. -> chemistry: a row one level below an existing LEAF part belongs to that part (run.py).
+Known (C0, all <= 3 questions, written down under the budget rule): MCQ question line / statements inside the options-table
+picture (2026 MJ 12 q3, 2015 MJ 11 q1); extra marking points (iii)/(iv) under a split part stay on the parent (2026 MJ 51 q2,
+52 q1, 52 q2); Cambridge label slips '2(b)' twice / '1(f)' twice / extra '6(f)' (2024 MJ 33 q2, 52 q1, 32 q6); editable text
+93-97 % where labels sit inside pictures (5 questions).

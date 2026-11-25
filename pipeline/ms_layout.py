@@ -1537,6 +1537,12 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None, g
             under[id(l)] = o
         is_brace = lambda b: b[3] - b[1] > 20 and b[2] - b[0] < 14   # a tall bracket beside a list (2026 MJ 32 q3(b))
         pure = not PP and not cols and all(under[id(l)] is not None or is_brace(b) for l, b in decor)
+        # chemistry: pictures (displayed formulae, pattern 286) on lines of their own do not stop the re-wrap - the text is
+        # re-wrapped at the normal size and each picture moves down with the lines above it (never shrunk: ERROR_PATTERNS 288)
+        pic_own = bool(getattr(MP, 'CHEM', False) and PP and not cols and TT and not decor
+                       and all(f.get('w', 0) <= A + 0.5 for k_, f in PP)
+                       and not any(f['y'] - 1 < t['y'] and t['y'] - t.get('s', 10) < f['y'] + f.get('h', 0) + 1 for k_, f in PP for t in TT))
+        pure = pure or pic_own
         kb, moves, extra = 1.0, {}, 0.0
         tkey = tuple(round(x) for x in vx) if cols else None
         if tkey and not spanning:                      # remember each band's table needs (same design in several sub-rows)
@@ -1733,6 +1739,10 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None, g
                 lbot = max(lbot, fy(vb))
         for k_, f in PP:
             g = dict(f); g['x'] = round(L + 5 + (fxc(f['x']) - e1b) * kb + cxs, 2); g['y'] = round(fy(f['y']), 2)
+            if pic_own and moves:                     # chemistry: down by the extra lines of the text above it, inside the column
+                above = [moves.get(id(t), (0, 0))[1] for t in TT if t['y'] <= f['y'] + 1]
+                g['y'] = round(fy(f['y'], max(above) if above else 0.0), 2)
+                g['x'] = round(max(L + 5, min(g['x'], L + 5 + A - f.get('w', 0))), 2)
             if kb < 1:
                 if 'w' in g: g['w'] = round(g['w'] * kb, 2)
                 if 'h' in g: g['h'] = round(g['h'] * kb, 2)

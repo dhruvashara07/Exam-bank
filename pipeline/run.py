@@ -239,6 +239,11 @@ def process(qp_path):
                     return [pth] if not ks else [x for k_ in ks for x in leaf_paths(k_, pth + (k_["label"],))]
                 lv = leaf_paths(q, (q['number'],))
                 mine = [r for r in ms_rows if r['path'][0] == q['number']]
+                if chem:                   # chemistry practical MS numbers its marking points '1(a)(i)'-'(iv)' under a part the
+                    for r_ in mine:        # paper does not split (2026 MJ 51/52): the row belongs to that part (ERROR_PATTERNS 289)
+                        p_ = tuple(r_['path'])
+                        if p_ not in lv and len(p_) > 1 and p_[:-1] in lv:
+                            r_['path'] = list(p_[:-1]) if isinstance(r_['path'], list) else p_[:-1]
                 named = {tuple(r['path']) for r in mine}
                 orphan = [r for r in mine if tuple(r['path']) not in lv and not any(tuple(r['path'])[:len(x)] == x for x in lv)
                           and not any(x[:len(r['path'])] == tuple(r['path']) for x in lv)]

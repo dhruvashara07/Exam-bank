@@ -106,6 +106,11 @@ def _chem_structures(doc, pno, clip, store):
             items.append(('g', r))                                    # a letter drawn as an outline
         elif (min(w, h) < 1.6 and 2.5 <= max(w, h) <= 40) or (d['type'] == 's' and 2.5 <= max(w, h) <= 40 and min(w, h) >= 1.6):
             items.append(('b', r))                                    # a bond (straight, double, slanted)
+    for i_ in page.get_image_info():               # 2024 MS: atom letters pasted as tiny images (~6 x 40 pt boxes, pattern 258)
+        r = (fitz.Rect(i_['bbox']).quad * m).rect
+        if r.intersects(clip) and clip.contains(fitz.Point((r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2)) \
+                and 2.5 <= min(r.width, r.height) <= 11 and max(r.width, r.height) <= 50:
+            items.append(('g', r))
     groups = []
     for k, r in items:
         rr = r + (-17, -17, 17, 17)           # atom letters ~22 pt apart (gaps ~16 pt); the bonds are often no drawing at all

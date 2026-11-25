@@ -61,7 +61,8 @@ Only then start. Skip the other docs unless a step points to them.
 ## 5. Talking with Dhruv
 Physics teacher in India (IST), reads on his phone. Short plain messages. Ask only when you need his input
 (use the question tool with options). Be honest about what is not fixed. Review page (same link every round):
-https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8 (shared account, from round 35; rounds 1-34 were on PCdP6oibAkjQvGz8mKm73e in Dhruv's own account)
+https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8 (shared account, maths rounds 35-40); Dhruv's OWN account (chemistry, from round 41):
+https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e (slug b3c8a710-c92b-4a33-95b2-f7eba1bc0031). Use the page of the account this chat runs in.
 
 ## 5. Usage budget (Dhruv 2026-11-23: the work moves to a SHARED Claude subscription - use it sparingly)
 - Per batch: at most 2 GitHub passes + 1 review round. Wait for GitHub with ONE long poll, never many short ones.

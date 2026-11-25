@@ -4,6 +4,7 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 
 | Batch | Sessions | Papers | Build | GitHub | Claude 1 | Claude 2 | Fix | Ours | Round items | New errors | Repeats | Tokens |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| C0 | 2005-MJ 2015-MJ 2024-MJ 2026-MJ | 56 | 9.0 | 0.2 | 79.2 | 0.0 | 0.0 | 88.2 | 7 | 10 | 1 | n/a |
 | M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 257.5 | 51.4 | 2766.0 | 3084.4 | 40 | 58 | 5 | n/a |
 | M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 | 11.7 | 97.4 | 191.6 | 0.0 | 30.1 | 233.4 | 23 | 42 | 2 | n/a |
 | M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 117 | 100.3 | 131.2 | 0.0 | 0.0 | 0.0 | 100.3 | 13 | 28 | 4 | n/a |
@@ -12,6 +13,19 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 | RD2 | 2014-MJ 2018-MJ 2018-ON 2019-ON 2020-MJ 2020-ON 2021-FM 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON 2024-FM 2024-MJ 2024-ON 2025-FM 2025-MJ 2025-ON 2026-FM 2026-MJ | 0 | 0.0 | 0 | 0.0 | 0.0 | 89.8 | 89.8 | 16 | 5 | 0 | n/a |
 
 ## Errors per batch (new = first time, repeat = a pattern seen before: the doc or the fix failed)
+
+### C0
+- [new] pattern 280: ms_align read chem labels at y 14.0 only → top Q-column word (tool) (found by claude)
+- [new] pattern 281: MS label slip at another level 8(c)(iii) for 8(d) → orphan row after the previous leaf (found by claude)
+- [new] pattern 282: empty Guidance cell cut at the Marks rule: 3-column rows → outer border (_tighten, chem) (found by claude)
+- [new] pattern 283: 2015 paper 2 read as MCQ; ATP total 60 vs 40 → old numbering <2016; MS maximum raw mark (found by claude)
+- [new] pattern 284: MS table under a notes paragraph not read (2024 41 Q1-2) → maths rule for chem (found by claude)
+- [new] pattern 285: end atom H of displayed formulae cut from crops → fit_crop just-touching for chem (found by claude)
+- [new] pattern 286: displayed formulae in MS cells torn apart (glyph outlines / image letters / empty line boxes) → one vector picture per structure (found by claude)
+- [new] pattern 287: MS page without header row skipped (2015 21 Q7) → table starts under the page header box (found by claude)
+- [new] pattern 288: band with pictures shrunk instead of re-wrapped → pictures on own lines move with the re-wrap (found by claude)
+- [new] pattern 289: practical MS marking points (i)-(iv) under an unsplit part → row goes to the leaf part (found by claude)
+- [repeat] pattern 96: straight lines have empty boxes: structure bonds ignored by intersects (my own new chem code) → widened 0.3 pt like extract (found by claude)
 
 ### M0
 - [new] pattern 64: equation-editor symbol fonts drew # for x etc. in print and text → store_text MATHS_GLYPHS/MATHS_WIDE by eye (found by claude)
@@ -184,6 +198,7 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 
 ## Repeats to act on
 
+- C0: pattern 96 came back: straight lines have empty boxes: structure bonds ignored by intersects (my own new chem code)
 - M0: pattern 92 came back: repeat of a round-27 class: the round-27 fix covered the reported item, not the class
 - M0: pattern 93 came back: repeat of a round-27 class: the round-27 fix covered the reported item, not the class
 - M0: pattern 97 came back: repeat of a round-27 class: the round-27 fix covered the reported item, not the class
