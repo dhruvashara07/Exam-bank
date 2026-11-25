@@ -140,6 +140,10 @@ def collect(sessions, skip=()):
             if line.startswith(SYL + '_'):
                 qid, _, rest = line.partition(' ')
                 out.append(_reason(qid, tool, rest))
+    import subjects
+    if not subjects.is_maths(SYL):    # chemistry runs the physics layout in Arial: the maths-only checks do not apply
+        out = [r for r in out if r['check'] not in ('q_font', 'ms_mode')     # (sans words, not laid out by ms_maths)
+               and not (r['check'] == 'ms_sweep' and re.match(r'code in answer \(?M\d', r['detail']))]   # 'M1 ...' = marking point
     # one id per reason: check + question + class detail (+ n for repeats of the same class in one question)
     seen = collections.Counter()
     for r in out:
@@ -241,7 +245,7 @@ def sheets(batch, o):
     tag = o.get('tag', 'x')
     figs = []                          # question-side diagram reasons: the crop drawn on its printed page
     for r in rs:
-        m = re.search(r'(diagram\d+)', r['detail'])
+        m = re.search(r'_(diagram\d+|fig[A-Za-z0-9-]+)\b', r['detail'])   # maths diagram<n>, physics / chemistry figA
         if m and (r['check'].startswith(('fig', 'checks.figure'))):
             q = '_'.join(r['qid'].split('_')[:4])
             figs.append(f'{q}:{m.group(1)}')

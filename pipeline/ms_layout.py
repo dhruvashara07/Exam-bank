@@ -278,6 +278,8 @@ def _tighten(u):
         tmin = min(tmin, f['x'])
     left = max([x for x in full if x < tmin - 1] + [None], key=lambda v: -1e9 if v is None else v)
     right = min([x for x in full if x > tmax + 1] + [None], key=lambda v: 1e9 if v is None else v)
+    if getattr(MP, 'CHEM', False) and right is not None:      # chemistry: an empty Guidance cell (2015, 2026) is still table:
+        right = max(x for x in full if x > tmax + 1)          # the OUTER border, not the first rule (ERROR_PATTERNS 282)
     if left is None or left < 4:
         left = 0.0
     if right is None or u['w'] - right < 4:
@@ -1806,7 +1808,8 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None, g
 
 
 def build(q, store):
-    MP.EQUAL_FLEX = subjects.is_maths(str((q.get('paper') or {}).get('syllabus', '0625')))   # maths: Answer = Partial Marks width
+    MP.EQUAL_FLEX = subjects.is_maths(str((q.get('paper') or {}).get('syllabus', '0625')))
+    MP.CHEM = subjects.is_chem(str((q.get('paper') or {}).get('syllabus', '0625')))   # maths: Answer = Partial Marks width
     sizes = {f['id']: tuple(f['size_pt']) for f in q.get('figures', [])}
     rows = [(r, u) for p in q['parts'] for r in p['ms'] for u in r['layout']]
     seen, uniq = set(), []

@@ -813,3 +813,27 @@ Repeat check: pattern 264's rule 'grep failed after every SPECS edit' caught one
     pages) are no questions. -> extract.data_page_kind (chemistry only: >= 60 element names / the notes headings): skipped like
     a blank page, meta.data_sheet; store writes each DIFFERENT sheet once to store/.../0620-chemistry/data_sheets/ (keyed by its
     text, ~1 MB SVG) and paper.json points to it (Dhruv D3). Coverage counts it.
+
+## Chemistry C0 pass 1 (2026-11-25, GitHub run 45545804757: 56 papers, 2242 reasons, 50 papers exact totals at once)
+280. (tool) ms_align read chemistry labels only at y == 14.0; they sit at 13.96-13.98 (as maths, pattern 164): 151 false
+    hits. -> chemistry uses the top Q-column word like maths. 23 questions left (Cambridge label slips / practical rows).
+281. MS label slip at another LEVEL: '8(c)(iii)' printed for the paper's 8(d) (2024 MJ 33). -> run.py (chemistry): the one
+    orphan row goes to the one free part when it follows the rows of the part just before it.
+282. Guidance tables (2015, 2026 MJ): a row whose Guidance cell is empty was cut at the Marks|Guidance rule (_tighten took the
+    FIRST rule right of the text) and kept 'as printed' with 3 columns: frames of different widths, marks drifting. ->
+    chemistry: the OUTER border (ms_layout._tighten, MP.CHEM). Physics 2026 may have the same: PHYSICS_LATER.
+283. 2015 covers print only 'Paper 2' (no 'Core'): paper 2 read as MCQ (marks 7/40, 'answer key not found'); 2015 ATP total
+    60 (MS 'maximum raw mark 60') taken as the standard 40. -> chemistry < 2016 uses the old numbering; chemistry reads
+    'MAXIMUM (RAW) MARK' from the MS in any year when the cover has no total.
+284. 2024 MJ 41: Q1's table starts under a notes paragraph on MS page 5 -> no mark scheme for Q1/Q2. -> the maths rule
+    'a table can start lower on a page' now also for chemistry (ms._table_area).
+285. Displayed formulae in MCQ / theory figures lost their END atom ('H—' / '—H'): the letter overlaps the crop by <= 15 %, so
+    it was neither 'half inside' nor 'near' (needs 0 overlap). -> fit_crop(chem=True): the maths 'just touching' clause.
+    Blast: 12 of 459 C0 figures grow ~6 pt (one atom), all the target class.
+286. Displayed formulae INSIDE mark-scheme cells (2015 / 2024 / 2026: ~41 questions in C0): atom letters are filled glyph
+    outlines and bonds thin lines (or straight lines with EMPTY boxes - pattern 96 again), laid out piece by piece: letters
+    squeezed, words over the drawing, whole formulae lost. -> store._chem_structures (chemistry MS): a cluster of >= 4
+    letter shapes (or >= 2 + bonds, 5+ pieces, <= 17 pt apart) = ONE vector picture (figures/msfml_*.svg, an 'image' the
+    layout moves whole). Open: a cell with a structure + a long line beside it falls to the 'cell' layout and is shrunk
+    (2026 MJ 41 7(c)(iii) Answer) - counted in pass 2.
+Known (C0, 2 questions): MCQ question line / statements inside the options-table picture (2026 MJ 12 q3, 2015 MJ 11 q1).

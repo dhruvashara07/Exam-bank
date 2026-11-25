@@ -8,6 +8,7 @@ import sys, os, re, json, glob
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import store, subjects
 MATHS = subjects.is_maths(subjects.current())
+CHEM = subjects.is_chem(subjects.current())
 
 
 def qp_leaves(q):
@@ -26,7 +27,8 @@ def ms_rows(sq):
     rows = []
     for v in (sq.get('ms_p') or {}).get('rows', [])[1:-1]:
         L = min([float(re.findall(r'M([\d.]+)', l['d'])[0]) for l in v['lines'] if re.match(r'M[\d.]+ 0', l.get('d', '')) and 5 < float(re.findall(r'M([\d.]+)', l['d'])[0]) < 200] or [44.0])
-        if MATHS:      # maths rows grow / push their label down (fractions): the label is the top Q-column word (M1)
+        if MATHS or CHEM:   # maths rows grow / push their label down (fractions): the label is the top Q-column word (M1);
+                            # chemistry labels sit at 13.96-13.98, not 14.0 (ERROR_PATTERNS 280)
             qc = sorted([t for t in v['text'] if t['x'] + t['w'] < L + 2 and re.match(r'\d', t['t'])], key=lambda t: t['y'])
             ly = qc[0]['y'] if qc else None
         else:

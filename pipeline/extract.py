@@ -55,7 +55,8 @@ def paper_meta(doc, syllabus, year, session, pv):
     old = pv[0] == '0'                     # before 2009 one paper per component: 0625/03 (no variant)
     paper, variant = (int(pv[1]), 0) if old else (int(pv[0]), int(pv[1]))
     if not subjects.is_maths(syllabus):           # physics and chemistry: same numbering and cover wording
-        ptype = paper_type_from_cover(cover, paper, old)
+        # chemistry 2009-2015 covers print only 'Paper 2' (no 'Core'): the old numbering (2 = core theory) until 2016
+        ptype = paper_type_from_cover(cover, paper, old or (subjects.is_chem(syllabus) and int(year) < 2016))
     else:
         ptype = subjects.maths_paper_type(cover, paper)
     return {

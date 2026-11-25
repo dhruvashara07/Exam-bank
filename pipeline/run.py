@@ -178,8 +178,10 @@ def process(qp_path):
     msdoc = fitz.open(ms) if ms else None
     w = Writer(meta)
     ms_scan = bool(msdoc) and not any(pg.get_text().strip() for pg in msdoc[1:])   # Nov 2002: the mark scheme is page pictures
-    if msdoc and meta.get('total_marks_source') == 'standard' and pv[0] == '0':        # old covers print no total: the mark scheme does
-        mm = re.search(r'MAXIMUM\s+MARK:?\s*(\d+)', ' '.join(pg.get_text() for pg in msdoc[:4]), re.I)
+    if msdoc and meta.get('total_marks_source') == 'standard' and (pv[0] == '0' or subjects.is_chem(syl)):   # old covers print no
+        # total: the mark scheme does. Chemistry: any year (2015 ATP = 60, not the standard 40; 'maximum raw mark 60')
+        mm = re.search(r'MAXIMUM\s+(?:RAW\s+)?MARK:?\s*(\d+)' if subjects.is_chem(syl) else r'MAXIMUM\s+MARK:?\s*(\d+)',
+                       ' '.join(pg.get_text() for pg in msdoc[:4]), re.I)
         if mm:
             meta['total_marks'], meta['total_marks_source'] = int(mm.group(1)), 'mark scheme'
         elif f'{year}{session}_{pv}' in SCAN_TOTALS:    # mark scheme cover is a picture: read by eye
@@ -230,7 +232,8 @@ def process(qp_path):
             elif not q['answer'] and msdoc:
                 q['review']['reasons'].append('answer key not found in mark scheme')
         else:
-            if maths:                  # a mark-scheme label slip ('15(d)' for the paper's 15(c), 2025 ON 32, round 32): a
+            chem = subjects.is_chem(syl)
+            if maths or chem:          # a mark-scheme label slip ('15(d)' for the paper's 15(c), 2025 ON 32, round 32): a
                 def leaf_paths(n, pth):    # row whose part does not exist goes to the one leaf part no row names (same level)
                     ks = n.get('parts', [])
                     return [pth] if not ks else [x for k_ in ks for x in leaf_paths(k_, pth + (k_["label"],))]
@@ -240,8 +243,12 @@ def process(qp_path):
                 orphan = [r for r in mine if tuple(r['path']) not in lv and not any(tuple(r['path'])[:len(x)] == x for x in lv)
                           and not any(x[:len(r['path'])] == tuple(r['path']) for x in lv)]
                 free = [x for x in lv if x not in named and not any(tuple(r['path'])[:len(x)] == x for r in mine)]
-                if len(orphan) == 1 and len(free) == 1 and len(orphan[0]['path']) == len(free[0]) \
-                        and tuple(orphan[0]['path'])[:-1] == free[0][:-1]:
+                def _after_prev(o_, f_):   # chemistry: '8(c)(iii)' printed for the paper's 8(d) (2024 MJ 33): the orphan row
+                    i_ = lv.index(f_)          # comes right after the rows of the leaf before the free one (ERROR_PATTERNS 281)
+                    prev = [k_ for k_, r in enumerate(mine) if i_ and tuple(r['path']) == lv[i_ - 1]]
+                    return bool(prev) and mine.index(o_) == max(prev) + 1
+                if len(orphan) == 1 and len(free) == 1 and (len(orphan[0]['path']) == len(free[0])
+                        and tuple(orphan[0]['path'])[:-1] == free[0][:-1] or chem and _after_prev(orphan[0], free[0])):
                     r_ = orphan[0]
                     r_['path'] = free[0]
                     r_['label'] = str(free[0][0]) + ''.join(f'({x})' for x in free[0][1:])

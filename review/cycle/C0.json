@@ -8,7 +8,12 @@
  ],
  "created": "2026-11-25T03:44:14+00:00",
  "phases": {
-  "build": [],
+  "build": [
+   {
+    "start": "2026-11-25T04:17:50+00:00",
+    "end": "2026-11-25T04:23:50+00:00"
+   }
+  ],
   "claude": [
    {
     "start": "2026-11-25T03:44:14+00:00",
@@ -20,7 +25,17 @@
   "review": [],
   "fix": []
  },
- "github_runs": [],
+ "github_runs": [
+  {
+   "id": 45545804757,
+   "name": "Question bank",
+   "branch": "main",
+   "conclusion": null,
+   "start": "2026-11-25T04:17:51Z",
+   "end": "2026-11-25T04:17:55Z",
+   "minutes": 0.1
+  }
+ ],
  "counts": {},
  "errors": [],
  "tokens": [],
@@ -48,6 +63,26 @@
   {
    "at": "2026-11-25T04:12:13+00:00",
    "task": "freeze: golden 0; ms_rebuild new=153 CHANGED, running baseline on HEAD to compare"
+  },
+  {
+   "at": "2026-11-25T04:17:50+00:00",
+   "task": "phase C0 build"
+  },
+  {
+   "at": "2026-11-25T04:18:11+00:00",
+   "task": "gh C0 45545804757"
+  },
+  {
+   "at": "2026-11-25T04:23:50+00:00",
+   "task": "phase C0 build"
+  },
+  {
+   "at": "2026-11-25T04:31:33+00:00",
+   "task": "pass1 classes: types, totals, guidance frame, notes-table, orphan, end atoms fixed; next ms_table/ms_picture/text/rule/options"
+  },
+  {
+   "at": "2026-11-25T04:36:16+00:00",
+   "task": "MS displayed formulae as vector pictures (286) done; freeze checks 2"
   }
  ]
 }

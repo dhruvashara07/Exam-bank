@@ -102,7 +102,8 @@ def mcq_key(doc):
 def _table_area(page, lines):
     """Top (below the header row) and bottom (above the footer) of the answer table."""
     header = [l for l in lines if re.match(r'Question\b', l['text']) and l['y0'] < 120]
-    if not header and _maths(page.parent):     # maths: the table can start lower on a page (general notes above it, 2019 ON 21 p3)
+    if not header and (_maths(page.parent) or subjects.is_chem(subjects.path_syl(page.parent.name) or '')):
+        # maths / chemistry: the table can start lower on a page (general notes above it, 2019 ON 21 p3; chemistry 2024 MJ 41 p5)
         header = [l for l in lines if re.match(r'Question\b', l['text']) and l['x0'] < 130
                   and any(abs(o['y0'] - l['y0']) < 4 and re.match(r'Answer', o['text'].strip()) for o in lines)]
     if not header:

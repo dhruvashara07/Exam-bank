@@ -81,12 +81,63 @@ def _st(span):
     return ''.join(c['c'] for c in span['chars']).strip()
 
 
+def _is_chem_doc(doc):
+    import subjects
+    return subjects.is_chem(subjects.path_syl(doc.name) or '')
+
+
+def _chem_structures(doc, pno, clip, store):
+    """Chemistry mark schemes (2026 MJ ...) draw displayed formulae as vector paths: the atom letters are filled glyph
+    outlines (~5 x 7 pt, ~22 pt apart) joined by bonds (thin lines, or not drawn as paths at all). Laid out piece by piece they
+    fell apart (ERROR_PATTERNS 286). Each cluster (>= 4 glyph shapes, pieces <= 18 pt apart) inside the row is cut as ONE vector
+    picture (figures/msfml_*.svg).
+    Returns [(box in page coordinates, file name)]."""
+    from render import region_svg
+    page = doc[pno]
+    m = page.rotation_matrix
+    items = []
+    for d in page.get_drawings():
+        r = (d['rect'].quad * m).rect
+        r = fitz.Rect(r.x0 - 0.3, r.y0 - 0.3, r.x1 + 0.3, r.y1 + 0.3)   # straight lines have EMPTY boxes (pattern 96)
+        if not r.intersects(clip) or not clip.contains(fitz.Point((r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2)):
+            continue
+        w, h = r.width, r.height
+        if 2.5 <= w <= 11 and 3.5 <= h <= 11 and d.get('fill') is not None:
+            items.append(('g', r))                                    # a letter drawn as an outline
+        elif (min(w, h) < 1.6 and 2.5 <= max(w, h) <= 40) or (d['type'] == 's' and 2.5 <= max(w, h) <= 40 and min(w, h) >= 1.6):
+            items.append(('b', r))                                    # a bond (straight, double, slanted)
+    groups = []
+    for k, r in items:
+        rr = r + (-17, -17, 17, 17)           # atom letters ~22 pt apart (gaps ~16 pt); the bonds are often no drawing at all
+        hit = [g for g in groups if any(rr.intersects(x) for _, x in g)]
+        merged = [(k, r)] + [it for g in hit for it in g]
+        groups = [g for g in groups if g not in hit] + [merged]
+    out = []
+    for g in groups:
+        ng_ = sum(1 for k, _ in g if k == 'g')
+        if ng_ >= 4 or (ng_ >= 2 and len(g) >= 5):      # (a repeat unit '—C—C—' has 2 letters and long bonds)
+            b = fitz.Rect(g[0][1])
+            for _, x in g:
+                b |= x
+            b = (b + (-1.5, -1.5, 1.5, 1.5)) & clip
+            if b.width < 15 or b.height < 12:
+                continue
+            name = f'msfml_{pno + 1}_{round(b.x0)}_{round(b.y0)}.svg'
+            os.makedirs(os.path.join(store, 'figures'), exist_ok=True)
+            pr = fitz.Rect(b) * ~m if page.rotation else b               # region_svg cuts in unrotated page coordinates
+            open(os.path.join(store, 'figures', name), 'w').write(region_svg(doc, pno, [pr.x0, pr.y0, pr.x1, pr.y1]))
+            out.append((b, name))
+    return out
+
+
 def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
     page = doc[pno]
     m = page.rotation_matrix
     MATHS = maths_doc(doc)
     ox, oy = clip.x0, clip.y0
     boxes = [fitz.Rect(f['source']['box']) for f in figs]
+    chem_pics = _chem_structures(doc, pno, clip, store) if docname == 'ms' and _is_chem_doc(doc) else []
+    boxes += [b_ for b_, _ in chem_pics]          # (their letters / bonds are not laid out one by one)
     capboxes = [fitz.Rect(f['caption_box']) for f in figs if f.get('caption_box') and f['source']['page'] == pno + 1]
     def in_fig(r):
         return any(r.x0 >= b.x0 - 1.5 and r.y0 >= b.y0 - 1.5 and r.x1 <= b.x1 + 1.5 and r.y1 <= b.y1 + 1.5 for b in boxes)
@@ -397,6 +448,9 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
         b = fitz.Rect(f['source']['box'])
         if inside(b):
             u['figs'].append({'id': f['id'], 'x': round(b.x0 - ox, 2), 'y': round(b.y0 - oy, 2)})
+    for b_, name_ in chem_pics:                   # chemistry: a displayed formula drawn in a mark-scheme cell = ONE picture (vector)
+        u.setdefault('images', []).append({'file': name_, 'x': round(b_.x0 - ox, 2), 'y': round(b_.y0 - oy, 2),
+                                           'w': round(b_.width, 2), 'h': round(b_.height, 2), 'structure': 1})
     # roles the sheet builder uses
     for i, t in enumerate(u['text']):
         if docname == 'qp' and re.fullmatch(r'\d{1,2}', t['t']) and t['x'] + ox < 60 and t.get('b'):
@@ -452,7 +506,7 @@ FIT_SLANT = True      # maths: a slanted stroke crossing the crop's edge is take
 FIT_HEAD = True       # maths: column headings above a tree / table-like diagram are part of it (pattern 238)
 
 
-def fit_crop(pg, b, max_grow=50.0, maths=False):
+def fit_crop(pg, b, max_grow=50.0, maths=False, chem=False):
     """Mend a figure crop that cuts through ink or a label (review rounds: 80% of 'crop cut' flags were real).
     1. a drawing crossing an edge is taken in (at most max_grow pt per side);
     2. short label lines half inside or just outside (axis label 'day of the month', a row of axis numbers,
@@ -551,7 +605,8 @@ def fit_crop(pg, b, max_grow=50.0, maths=False):
             ov = (l & b).get_area() / max(l.get_area(), 1)
             gap = max(l.y0 - b.y1, b.y0 - l.y1, l.x0 - b.x1, b.x0 - l.x1)
             near = ov > 0.15 or (ov == 0 and 0 <= gap < 14 and l.x0 >= b.x0 - 10 and l.x1 <= b.x1 + 10) or \
-                (maths and ov <= 0.15 and -3 <= gap < 14 and l.x0 >= b.x0 - 10 and l.x1 <= b.x1 + 10)   # (just touching, M1)
+                ((maths or chem) and ov <= 0.15 and -3 <= gap < 14 and l.x0 >= b.x0 - 10 and l.x1 <= b.x1 + 10)   # (just touching, M1;
+            #   chemistry: the end atom 'H' of a displayed formula overlapping the crop by <= 15 %, ERROR_PATTERNS 285)
             half = ov > 0.15
             label_ok = (not sentence(lw, l)) if half else not bad_label(lw, l)
             if maths and re.fullmatch(r'\d{1,2}', ' '.join(w[4] for w in lw).strip()) and l.x0 < 62:
@@ -807,7 +862,7 @@ def save_figure(f, q, meta, qdoc, store):
         FOREIGN.clear()
         import subjects
         mx_ = subjects.subject(meta['syllabus'])['maths_text']
-        nb = fit_crop(pg, b, maths=mx_)
+        nb = fit_crop(pg, b, maths=mx_, chem=subjects.is_chem(meta['syllabus']))
         if mx_:                 # maths: a crop never grows into a sibling figure of the same page (the lower 'Step 2' grid
             for g_ in q.get('figures', []):        # took the upper grid's x axis, 2023 MJ 63 q3, M2 round 34)
                 G = fitz.Rect(g_['bbox'])
