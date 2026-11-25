@@ -3,12 +3,11 @@
  "number": 7,
  "segments": [],
  "text": "",
- "marks": 1,
+ "marks": 11,
  "figures": [],
  "review": {
   "reasons": [
-   "options not found as text (likely in a table or diagrams)",
-   "answer key not found in mark scheme"
+   "no mark scheme for 7(a), 7(b)(i), 7(b)(ii), 7(b)(iii), 7(b)(iv), 7(c)"
   ],
   "status": "flagged"
  },
@@ -67,6 +66,11 @@
      "type": "text",
      "html": "Describe and explain these results using ideas about particles in liquids and gases.",
      "text": "Describe and explain these results using ideas about particles in liquids and gases."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 7
     },
     {
      "type": "marks",
@@ -129,6 +133,11 @@
        "text": "Describe how the density of the liqueﬁ ed noble gases changes down Group 0."
       },
       {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
        "type": "marks",
        "value": 1
       }
@@ -163,6 +172,11 @@
        "type": "text",
        "html": "Deduce the electron arrangement of neon.",
        "text": "Deduce the electron arrangement of neon."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       },
       {
        "type": "marks",
@@ -201,6 +215,11 @@
        "text": "What is the state of argon at –188 °C?"
       },
       {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
        "type": "marks",
        "value": 1
       }
@@ -235,6 +254,11 @@
        "type": "text",
        "html": "Which element in the table has the highest melting point?",
        "text": "Which element in the table has the highest melting point?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       },
       {
        "type": "marks",
@@ -358,6 +382,11 @@
      "text": "10 11"
     },
     {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 3
+    },
+    {
      "type": "marks",
      "value": 3
     }
@@ -365,10 +394,7 @@
   }
  ],
  "total_marks": 11,
- "type": "mcq",
- "options": [],
- "has_diagram": false,
- "answer": null,
+ "type": "structured",
  "syllabus": "0620",
  "subject": "Chemistry",
  "board": "CAIE",
@@ -379,11 +405,10 @@
  "paper": 2,
  "variant": 1,
  "paper_code": "0620/21",
- "paper_type": "mcq_extended",
+ "paper_type": "theory_core",
  "topic": null,
  "subtopic": null,
  "keywords": [],
  "difficulty": null,
- "pipeline_version": "2.1",
- "content": []
+ "pipeline_version": "2.1"
 }

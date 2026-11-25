@@ -21,27 +21,11 @@
   }
  ],
  "text": "2\nA student adds an aqueous solution of sodium hydroxide to an aqueous solution of ethanoic acid.\nShe measures the temperature before and after the addition of sodium hydroxide.\n18°C\n22°C\nsodium hydroxide\nsolution at 18°C\nethanoic acid\nsolution",
- "marks": 1,
- "figures": [
-  {
-   "page": 3,
-   "bbox": [
-    120.7,
-    94.6,
-    474.5,
-    223.8
-   ],
-   "id": "0620_2015MJ_23_q02_figA",
-   "caption": null,
-   "part": "",
-   "alt": ""
-  }
- ],
+ "marks": 9,
+ "figures": [],
  "review": {
-  "reasons": [
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -74,11 +58,36 @@
      "text": "Explain how this experiment shows that the reaction is exothermic.\n.......................................................................................................................................  [1]",
      "marks": 1,
      "path": "2(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "2(a)(i)",
+       "text": "temperature rises / heat given off;",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          58.0,
+          305.0,
+          784.0,
+          325.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "Explain how this experiment shows that the reaction is exothermic.",
        "text": "Explain how this experiment shows that the reaction is exothermic."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       },
       {
        "type": "marks",
@@ -110,6 +119,26 @@
      "text": "Complete the formula of ethanoic acid showing all atoms and bonds.\nH\nH\nC\nC\nH\n[1]",
      "marks": 1,
      "path": "2(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "2(a)(ii)",
+       "text": "structure completed with\nO\n║\n– C – O – H ;",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          58.0,
+          326.8,
+          784.0,
+          383.6
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -161,6 +190,26 @@
      "text": "The product of the reaction is a salt called sodium ethanoate.\nDescribe how you would prepare pure, dry crystals of sodium ethanoate from a solution of\nsodium ethanoate in water.\n.............................................................................................................................................\n.............................................................................................................................................\n.............................................................................................................................................\n.......................................................................................................................................  [3]",
      "marks": 3,
      "path": "2(a)(iii)",
+     "mark_scheme": [
+      {
+       "label": "2(a)(iii)",
+       "text": "Any three of:\n•\nevaporation / heat solution / leave the solution;\n•\nto crystallisation point / to form crystals;\nfilter off crystals / pick out crystals;\n•\n•\ndry crystals between filter papers / heat gently / heat to just above 100 °C;",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          58.0,
+          383.6,
+          784.0,
+          456.0
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -171,6 +220,11 @@
        "type": "text",
        "html": "Describe how you would prepare pure, dry crystals of sodium ethanoate from a solution of sodium ethanoate in water.",
        "text": "Describe how you would prepare pure, dry crystals of sodium ethanoate from a solution of sodium ethanoate in water."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 4
       },
       {
        "type": "marks",
@@ -205,6 +259,26 @@
    "text": "Ethanoic acid belongs to the carboxylic acid homologous series.\nWhich two of the following statements describes the members of the same homologous\nseries?\nTick two boxes.\nThey have the same physical properties.\nThey have different functional groups.\nThey have similar chemical properties.\nThey are all inorganic chemicals.\nThey have the same functional group.\n[2]",
    "marks": 2,
    "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "rd\nth\n3 and 5 boxes ticked (one mark each);",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        58.0,
+        456.0,
+        784.0,
+        476.8
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -271,6 +345,26 @@
    "text": "Ethanoic acid has similar properties to hydrochloric acid.\nWhat would be observed when a small piece of magnesium is added to aqueous ethanoic\nacid?\n....................................................................................................................................................\n..............................................................................................................................................  [2]\n[Total: 9]",
    "marks": 2,
    "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "Any two of:\nbubbles;\n•\n•\nfizzing (sound);\n•\nmagnesium disappears / gets smaller;\n•\nchange in temperature / gets warmer;",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        58.0,
+        104.8,
+        784.0,
+        179.1
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -283,6 +377,11 @@
      "text": "What would be observed when a small piece of magnesium is added to aqueous ethanoic acid?"
     },
     {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
      "type": "marks",
      "value": 2
     }
@@ -290,10 +389,7 @@
   }
  ],
  "total_marks": 9,
- "type": "mcq",
- "options": [],
- "has_diagram": true,
- "answer": null,
+ "type": "structured",
  "syllabus": "0620",
  "subject": "Chemistry",
  "board": "CAIE",
@@ -304,7 +400,7 @@
  "paper": 2,
  "variant": 3,
  "paper_code": "0620/23",
- "paper_type": "mcq_extended",
+ "paper_type": "theory_core",
  "topic": null,
  "subtopic": null,
  "keywords": [],
@@ -317,31 +413,19 @@
    "text": "A student adds an aqueous solution of sodium hydroxide to an aqueous solution of ethanoic acid. She measures the temperature before and after the addition of sodium hydroxide."
   },
   {
-   "type": "figure",
-   "id": "0620_2015MJ_23_q02_figA",
-   "caption": null
+   "type": "text",
+   "html": "°C 22 °C",
+   "text": "°C 22 °C"
   },
   {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
+   "type": "text",
+   "html": "sodium hydroxide solution at 18 °C",
+   "text": "sodium hydroxide solution at 18 °C"
+  },
+  {
+   "type": "text",
+   "html": "ethanoic acid solution",
+   "text": "ethanoic acid solution"
   }
  ]
 }

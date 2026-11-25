@@ -21,14 +21,11 @@
   }
  ],
  "text": "4\nA student investigated the rate of reaction of zinc with dilute hydrochloric acid.\nZn(s)  +  2HCl(aq)\nZnCl2(aq)  +  H2(g)",
- "marks": 1,
+ "marks": 12,
  "figures": [],
  "review": {
-  "reasons": [
-   "options not found as text (likely in a table or diagrams)",
-   "answer key not found in mark scheme"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -55,6 +52,26 @@
    "text": "Complete the labelling of the apparatus by filling in the two boxes.\nthermometer\ndilute\nhydrochloric acid\nwater bath\nat 20°C\nzinc\n[2]",
    "marks": 2,
    "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "(left box) flask / Erlenmeyer;\n(right box) (gas) syringe;",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        27.897998809814453,
+        104.8,
+        813.9920043945312,
+        136.3
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -80,6 +97,11 @@
      "type": "text",
      "html": "zinc",
      "text": "zinc"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 96.8
     },
     {
      "type": "marks",
@@ -135,11 +157,36 @@
      "text": "Describe how the volume of hydrogen changes with time.\n...........................................................................................................................................\n.......................................................................................................................................[2]",
      "marks": 2,
      "path": "4(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(i)",
+       "text": "increases;\nthen levels off / rate of increase less / stops / slows down / stays constant;",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          27.897998809814453,
+          136.3,
+          813.9920043945312,
+          167.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "Describe how the volume of hydrogen changes with time.",
        "text": "Describe how the volume of hydrogen changes with time."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
       },
       {
        "type": "marks",
@@ -171,11 +218,36 @@
      "text": "At what time did the reaction stop?\n.......................................................................................................................................[1]",
      "marks": 1,
      "path": "4(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(ii)",
+       "text": "values between 4.6 and 4.9 (min);",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          27.897998809814453,
+          167.8,
+          813.9920043945312,
+          188.6
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "At what time did the reaction stop?",
        "text": "At what time did the reaction stop?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       },
       {
        "type": "marks",
@@ -207,11 +279,36 @@
      "text": "What volume of gas was produced over the first two minutes of the reaction?\n.......................................................................................................................................[1]",
      "marks": 1,
      "path": "4(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(iii)",
+       "text": "3\n35 (cm );",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          27.897998809814453,
+          189.5,
+          813.9920043945312,
+          210.3
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "What volume of gas was produced over the first two minutes of the reaction?",
        "text": "What volume of gas was produced over the first two minutes of the reaction?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       },
       {
        "type": "marks",
@@ -243,6 +340,26 @@
      "text": "On the graph above draw a line to show how the volume of hydrogen changes when the\nreaction was carried out at 30 °C. All other conditions remain the same.\n[2]",
      "marks": 2,
      "path": "4(b)(iv)",
+     "mark_scheme": [
+      {
+       "label": "4(b)(iv)",
+       "text": "initial gradient steeper;\nlevelling off to same final volume;",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          27.897998809814453,
+          211.3,
+          813.9920043945312,
+          255.4
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -339,6 +456,26 @@
    "text": "How does the rate of reaction change when larger pieces of zinc are used?\nAll other conditions remain the same.\n...............................................................................................................................................[1]",
    "marks": 1,
    "path": "4(c)",
+   "mark_scheme": [
+    {
+     "label": "4(c)",
+     "text": "(rate) decreases / slower / less / takes more time;",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        27.897998809814453,
+        255.4,
+        813.9920043945312,
+        276.2
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -349,6 +486,11 @@
      "type": "text",
      "html": "All other conditions remain the same.",
      "text": "All other conditions remain the same."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
     },
     {
      "type": "marks",
@@ -404,11 +546,46 @@
      "text": "State the names of the product formed at:\nthe anode  ..........................................................................................................................\nthe cathode.  .......................................................................................................................\n[2]",
      "marks": 2,
      "path": "4(d)(i)",
+     "mark_scheme": [
+      {
+       "label": "4(d)(i)",
+       "text": "(anode) chlorine;\n(cathode) zinc;",
+       "codes": [
+        "2",
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          27.897998809814453,
+          277.2,
+          813.9920043945312,
+          308.9
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "State the names of the product formed at:",
        "text": "State the names of the product formed at:"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "the anode"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "the cathode."
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
       },
       {
        "type": "marks",
@@ -440,11 +617,36 @@
      "text": "Graphite conducts electricity. Give one other reason why graphite electrodes are used.\n.......................................................................................................................................[1]\n[Total: 12]",
      "marks": 1,
      "path": "4(d)(ii)",
+     "mark_scheme": [
+      {
+       "label": "4(d)(ii)",
+       "text": "inert / unreactive;",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          27.897998809814453,
+          308.9,
+          813.9920043945312,
+          329.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
        "html": "Graphite conducts electricity. Give one other reason why graphite electrodes are used.",
        "text": "Graphite conducts electricity. Give one other reason why graphite electrodes are used."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
       },
       {
        "type": "marks",
@@ -464,10 +666,7 @@
   }
  ],
  "total_marks": 12,
- "type": "mcq",
- "options": [],
- "has_diagram": false,
- "answer": null,
+ "type": "structured",
  "syllabus": "0620",
  "subject": "Chemistry",
  "board": "CAIE",
@@ -478,7 +677,7 @@
  "paper": 2,
  "variant": 2,
  "paper_code": "0620/22",
- "paper_type": "mcq_extended",
+ "paper_type": "theory_core",
  "topic": null,
  "subtopic": null,
  "keywords": [],
