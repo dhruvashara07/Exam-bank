@@ -614,6 +614,11 @@ def _draw_tree(sp, w, h, size=8.0):
                 T.append({'t': t_, 'x': round(fx + (fw - tw(t_)) / 2, 2), 'y': round(yb, 2), 'w': round(tw(t_), 2), 's': size})
             L.append({'d': f'M{fx:.2f} {fy + 0.5:.2f}H{fx + fw:.2f}V{fy + 1.0:.2f}H{fx:.2f}Z', 'fill': '#000000'})
             return
+        if 'geom' in tr:                                  # (round 40) a decimal like a fraction: right edge left of the
+            fx = mx - tw(prob) - 3                        # branch, the text clear of the line at that x
+            ly = y0 + (y1 - y0) * (fx + tw(prob) - x0) / max(1.0, x1 - x0)
+            T.append({'t': prob, 'x': round(fx, 2), 'y': round(ly - 3 if upper else ly + 3 + size * 0.75, 2), 'w': round(tw(prob), 2), 's': size})
+            return
         if upper:
             T.append({'t': prob, 'x': round(mx - tw(prob) - 1, 2), 'y': round(my - 1.5, 2), 'w': round(tw(prob), 2), 's': size})
         else:
@@ -626,18 +631,21 @@ def _draw_tree(sp, w, h, size=8.0):
     if 'geom' in tr:                           # (round 39) the question's own tree: branch ends (x0, x1, x2, x3, pt) and
         g = tr['geom']                         # the rises (d1, d2) of its first and second branches, scaled to fit
         lw_ = max(tw(t) for _, ls_ in tr['first'] for t in ls_ + [t2 for sec in tr['second'] for _, l2 in sec for t2 in l2])
-        k = min((w - 8 - lw_) / (g[3] - g[0]), (h - 4) / (2 * (g[4] + g[5])))
+        k = min((w - 8 - lw_) / (g[3] - g[0]), (h - 4) / (2 * (g[4] + g[5] + (g[6] if len(g) > 6 else 0))))
         rx = 4.0; e1, f1, e2 = rx + (g[1] - g[0]) * k, rx + (g[2] - g[0]) * k, rx + (g[3] - g[0]) * k
         d1, d2 = g[4] * k, g[5] * k
+        off = g[6] * k if len(g) > 6 else 0.0  # (round 40) each second tree sits this much further out than its branch end
         d1 = max(d1, (2 * (2 * size + 4) + 6 + 0.6 * d2) / 2)   # (a narrow column: the first branches open just enough
-        ry = d1 + d2 + 2                                       #  that the middle fractions never touch)
+        ry = d1 + off + d2 + 2 + 0.5 * size                    #  that the middle fractions never touch; a 2-line end label
+        #                                                        stays inside the cell, round 40)
     for i, (prob, lines) in enumerate(tr['first']):
         yn = ry + (-d1 if i == 0 else d1) if 'geom' in tr else h * (0.26 if i == 0 else 0.74)
         br(rx, ry, e1, yn, prob, i == 0)
         txt(lines, e1 + 3, yn)
+        y2 = yn + ((-off if i == 0 else off) if 'geom' in tr else 0)
         for j, (p2, l2) in enumerate(tr['second'][i]):
-            ye = yn + (-1 if j == 0 else 1) * d2
-            br(f1, yn, e2, ye, p2, j == 0)
+            ye = y2 + (-1 if j == 0 else 1) * d2
+            br(f1, y2, e2, ye, p2, j == 0)
             txt(l2, e2 + 3, ye)
     return L, T
 
@@ -1699,9 +1707,17 @@ for _k in [('0607_2023MJ_53_q01', '1'), ('0607_2023MJ_53_q02', '2(b)'), ('0607_2
            ('0607_2023MJ_53_q05', '5(a)'), ('0607_2023MJ_53_q05', '5(b)'), ('0607_2023MJ_63_q01', '1'), ('0607_2023MJ_63_q02', '2'),
            ('0607_2023MJ_63_q03', '3(b)(i)'), ('0607_2023MJ_63_q04', '4'), ('0607_2023MJ_63_q05', '5(a)'), ('0607_2023MJ_63_q05', '5(b)')]:
     SPECS[_k] = dict(SPECS[_k], plane=dict(SPECS[_k]['plane'], minor=5))   # GeoGebra paper: 5 x 5 small squares per unit (round 39)
-for _k, _g in ((('0607_2026FM_12_q19', '19(a)'), (151.5, 264.6, 303.9, 408.2, 57.6, 46.4)),
-               (('0607_2026MJ_11_q14', '14(b)(i)'), (144.0, 256.9, 307.2, 420.1, 55.3, 37.6))):
+TREE_GEOM = {    # (Dhruv round 40: EVERY MS tree like the question's tree) measured with pipeline/tree_geom.py on the question paper
+    ('0607_2023MJ_32_q11', '11(a)'): (145.9, 221.5, 306.1, 381.6, 34.2, 34.2, 38.5),
+    ('0607_2021ON_31_q07', '7(b)(i)'): (156.5, 256.8, 296.2, 396.4, 48.5, 48.5, 12.2),
+    ('0607_2022MJ_33_q11', '11(a)'): (145.2, 241.2, 280.3, 376.2, 46.0, 37.9, 7.2),
+    ('0607_2023MJ_33_q06', '6(b)(i)'): (156.0, 251.2, 302.3, 397.6, 54.2, 43.7, 1.7),
+    ('0607_2019ON_31_q12', '12(a)'): (97.4, 208.4, 260.5, 371.5, 42.0, 42.0, 15.4),
+    ('0607_2026FM_12_q19', '19(a)'): (151.5, 264.6, 303.9, 408.2, 57.6, 46.4, 2.5),
+    ('0607_2026MJ_11_q14', '14(b)(i)'): (144.0, 256.9, 307.2, 420.1, 55.3, 37.6, 5.1)}
+for _k, _g in TREE_GEOM.items():
     SPECS[_k] = dict(SPECS[_k], tree=dict(SPECS[_k]['tree'], geom=_g))   # branch lengths and angles of the question's tree
+assert all('geom' in v['tree'] for v in SPECS.values() if isinstance(v, dict) and 'tree' in v), 'tree without geom: run tree_geom.py'
 KEPT.pop(('0607_2025FM_62_q10', '10(a)'), None)
 SPECS[('0607_2025FM_62_q10', '10(a)')] = {'w': 200.0, 'h': 70.0, 'plane': {      # (Dhruv round 39: redraw it; the box round
     'style': 'none', 'n': (-4, 100, -33, 14), 'u': 1.9,                            #  the root was the screenshot's edge)
@@ -1714,3 +1730,8 @@ SPECS[('0607_2025FM_62_q10', '10(a)')]['plane']['u'] = 1.8      # (the root sign
 # builder asks for the real label - the same drawing under both
 SPECS[('0607_2023ON_52_q01', '1(d)')] = SPECS[('0607_2023ON_52_q01', '2')]
 SPECS[('0607_2023ON_52_q03', '3(b)')] = SPECS[('0607_2023ON_52_q03', '3')]
+_p = SPECS[('0607_2023MJ_63_q04', '4')]['plane']           # (Dhruv round 40) the area numbers bold, so they stand out
+_p['text'] = [t if len(t) > 3 else (t[0], t[1], t[2], {'b': True}) for t in _p['text']]
+SPECS[('0607_2025ON_62_q02', '2(d)')] = {'alts': [dict(a_, h=40.0) for a_ in SPECS[('0607_2025ON_62_q02', '2(d)')]['alts']]}
+#   (Dhruv round 40: '2(d) layout messed up') the two small sketches at their PRINTED height: drawn 110 pt tall they grew
+#   the row and pushed the text under them down (see ERROR_PATTERNS 278)

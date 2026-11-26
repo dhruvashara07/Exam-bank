@@ -893,3 +893,24 @@ picture (2026 MJ 12 q3, 2015 MJ 11 q1); extra marking points (iii)/(iv) under a 
 305. (round 42, 2026 MJ 52 q1: 'check by yourself') the MS rows were mapped right (301/302) but the Q column still showed
     the print's slips ('1(a)(i)'... for an unsplit (a), '1b(i)', '1(e)' for (e)(i)). -> chemistry: a remapped row shows the
     question paper's label (run.py sets the label; ms_layout rewrites the Q cell, centred, shrunk to fit).
+306. MS tree not the question's shape (Dhruv round 40: 'whenever a tree comes, the MS matches the question's structure'). Five trees
+    were drawn with fixed proportions; two had hand-typed geometry. Now EVERY tree spec carries the question's geometry, measured
+    with pipeline/tree_geom.py (branch ends, rises, and how far each second tree sits further out than its first branch end -
+    2023 MJ 32 11(a): 38 pt); ms_graphs asserts no tree without it. Decimals placed clear of the branch like fractions.
+307. Row did not grow under a moved text (Dhruv round 40, 2024 ON 61 5(c) 'last cell overflowing - why?'): a graph drawn taller
+    than the printed one moves the text under it down; the row's bottom for that text had the same value as the graph's own
+    bottom, which the round-39 rule never moves twice - so the row ended above the text. Now the row ends under its lowest text
+    when that text runs past it. Also fixed 8 approved rows where text was cut by the line under it (2024 FM 62 8(f), 2025 ON 63
+    4(d), 2026 MJ 41 17, ...).
+308. Sub-row rules dropped in a row with a cell across all columns (2025 ON 62 2(e), 'layout messed up'): the extra column entry
+    of the merged cell paired the printed right border with x 44, so every full-width rule was thrown away; where kept it was
+    drawn twice beside the note band's own rule. Edges now pair with the real columns only; a sub-row rule next to a rule the row
+    draws itself is dropped. Rules came back in 2021 MJ 62 q5 / q9, 2023 FM 52 q4, 2025 ON 63 q4. Small sketches drawn 110 pt
+    tall grew the row (2025 ON 62 2(d)): drawn at their printed height. Open: the small table in 2(d) Partial Marks has no right
+    border (lost when the row is read; a 10 pt edge rule changed 60+ papers, so not done).
+309. Dot paper cut as a partial picture (Dhruv round 40: 'it should be whole as a image, partial image is very bad idea in que and
+    ms'; replaces pattern 275's 'keep as dots'). Each connected PATCH of triangle dot paper (dots at most 1.25 diagonal steps apart;
+    text between patches splits them) is ONE picture with the shapes on it, empty answer grids too. Unless whole pictures already
+    cover >= 80 % of the dots (house-of-cards patterns 2024 ON 51/61 unchanged). Dots printed twice counted once. fig_blast: 2025 FM
+    52 q2, 2021 MJ 52 q5, 2022 ON 51 q1/q2/q4/q5/q6, 2022 ON 61 q2/q3/q4 - all looked at, all whole now; rebuilt with run.py.
+    Open: 2022 ON 51 5(a)'s empty grid is not shown (was missing before too).

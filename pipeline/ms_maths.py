@@ -1049,6 +1049,9 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                       for a0, b0, a1, b1, k0 in placed_all]
         own_ = CTX.get('pic_bots', [])           # (Dhruv round 39: the drawing's own bottom moved down by its own growth
         bottoms[:] = [b_ + ext_ if b_ > thr_ + 0.5 and b_ not in own_ else b_ for b_ in bottoms]   # = empty space under it)
+        tb_ = [t_['y'] + 0.3 * t_.get('s', 11) for t_ in v['text'] if not t_.get('_g')]   # (Dhruv round 40,
+        if tb_ and max(tb_) > max(bottoms + [0]) + 1.5:   # 2024 ON 61 5(c)): a text moved down here has its row end
+            bottoms.append(max(tb_))             # under it - its old bottom could equal the drawing's own one and stayed put
     CTX.pop('pic_bots', None)
     for l_ in v['lines']:
         l_.pop('_g', None)
@@ -1140,7 +1143,9 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                 a_ - 1 < sy < b_ + 1 for a_, b_ in pic_spans):
             continue                # the columns are not aligned at this rule: no rule rather than one through content
         def col_x(x):                                  # a printed x on a column edge -> our edge
-            cand = [(abs(x - e), o) for e, o in zip([edges[0]] + list(edges[1:]) + [u['w']], [ours[1][0]] + [ours[c_][0] for c_ in range(2, len(ours))] + [W])]
+            cand = [(abs(x - e), o) for e, o in zip([edges[0]] + list(edges[1:]) + [u['w']],      # (only the real columns:
+                    [ours[1][0]] + [ours[c_][0] for c_ in range(2, len(edges) + 1)] + [W])]    #  a merged cell's extra entry
+            #  in ours paired the right border with x 44 - every full rule of 2025 ON 62 2(e) was dropped, Dhruv round 40)
             return min(cand)[1] if min(cand)[0] < 6.5 else None
         xa, xb = col_x(sx0), col_x(sx1)
         if xa is None or xb is None or xb - xa < 10:
@@ -1149,7 +1154,7 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                for t_ in v['text'] if t_.get('t', '').strip()):
             continue                # never a rule through a word: text laid out under a cell picture is not in placed_all
             #                         ('[on third roll] corner ...' struck through, 2021 MJ 51 q7 / 62 q3, M2 reasons)
-        v['lines'].append({'d': f'M{xa:.2f} {y_ - 0.3:.2f}H{xb:.2f}V{y_ + 0.3:.2f}H{xa:.2f}Z', 'fill': '#000000'})
+        v['lines'].append({'d': f'M{xa:.2f} {y_ - 0.3:.2f}H{xb:.2f}V{y_ + 0.3:.2f}H{xa:.2f}Z', 'fill': '#000000', '_sr': 1})
     lab_items = sorted(by[0], key=lambda i: i.y0)
     s0 = next((i.ref.get('s', 11) for i in lab_items if i.kind == 't'), 11.0)
     if first_unit and label:
@@ -1180,6 +1185,12 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
     for x in ([] if is_note else [QW] if merged else xs):
         for ya_, yb_ in (segs_ if not (note and len(note) == 6 and x == QW and not note[1]) else [(0.0, v['h'])]):
             v['lines'].append({'d': f'M{x - 0.3:.2f} {ya_:.2f}L{x + 0.3:.2f} {ya_:.2f}L{x + 0.3:.2f} {yb_:.2f}L{x - 0.3:.2f} {yb_:.2f}Z', 'fill': '#000000'})
+    hz_ = [b_ for b_ in (_bbox(l_['d']) for l_ in v['lines'] if not l_.get('_sr')) if b_ and b_[3] - b_[1] < 1.3]
+    v['lines'] = [l_ for l_ in v['lines'] if not (l_.get('_sr') and any(          # a sub-row rule next to a rule the row
+        abs((h_[1] + h_[3]) / 2 - (b_[1] + b_[3]) / 2) < 5 and h_[0] <= b_[0] + 2 and h_[2] >= b_[2] - 2   # draws itself
+        for b_ in [_bbox(l_['d'])] for h_ in hz_))]   # (a note band 'Alternative method'): one rule, not two 4 pt apart
+    for l_ in v['lines']:                             # (Dhruv round 40, 2025 ON 62 2(e))
+        l_.pop('_sr', None)
     if fam:                                          # one font for question and mark scheme (Dhruv, round 27)
         for t in v['text']:
             if t.get('f') in ('serif', 'sans'):

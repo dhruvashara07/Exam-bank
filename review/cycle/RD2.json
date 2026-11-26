@@ -99,6 +99,30 @@
    "fix": "RD2_LOOK measured from printed screenshot, unsure list",
    "found_by": "claude",
    "at": "2026-11-24T17:09:05+00:00"
+  },
+  {
+   "pattern": "306",
+   "kind": "new",
+   "what": "MS tree not the question's shape",
+   "fix": "tree_geom.py, geometry on every tree",
+   "found_by": "claude",
+   "at": "2026-11-26T18:59:11+00:00"
+  },
+  {
+   "pattern": "309",
+   "kind": "repeat",
+   "what": "dot paper partial picture again (275 kept dots, Dhruv wants whole picture)",
+   "fix": "one picture per dot patch",
+   "found_by": "claude",
+   "at": "2026-11-26T18:59:11+00:00"
+  },
+  {
+   "pattern": "307",
+   "kind": "new",
+   "what": "row did not grow under moved text",
+   "fix": "row ends under lowest text",
+   "found_by": "claude",
+   "at": "2026-11-26T18:59:11+00:00"
   }
  ],
  "tokens": [],
@@ -202,6 +226,18 @@
   {
    "at": "2026-11-24T17:09:05+00:00",
    "task": "phase RD2 fix"
+  },
+  {
+   "at": "2026-11-26T18:59:11+00:00",
+   "task": "error RD2 --pattern"
+  },
+  {
+   "at": "2026-11-26T18:59:11+00:00",
+   "task": "error RD2 --pattern"
+  },
+  {
+   "at": "2026-11-26T18:59:11+00:00",
+   "task": "error RD2 --pattern"
   }
  ]
 }

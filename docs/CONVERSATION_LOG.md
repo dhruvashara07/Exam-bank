@@ -675,3 +675,7 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   2026 62/63, 2005 06 correct. A local rebuild of single golden papers empties same_as (stubs become full): not a code
   change; restored.
 - C0 approved (56 papers). Pilot complete.
+- 2026-11-26 Round 40 closed (14 ok, 4 wrong). Dhruv: every MS tree must have the question tree's structure (one he marked right
+  still had other angles). All 7 trees now measured from the question (tree_geom.py); area numbers bold (2023 MJ 63 q4); 5(c)
+  overflow explained and fixed as a class (8 more rows fixed); 2025 ON 62 2(d)/2(e) layout (sketch size, sub-row rules); dot paper
+  always one whole picture per patch (4 papers rebuilt). Patterns 306-309. Round 43 published (16 items).

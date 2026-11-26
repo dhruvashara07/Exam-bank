@@ -586,28 +586,57 @@ def diagrams(doc, seg, lines, captioned):
         lattice_ = fitz.Rect(rd_[0])
         for d_ in rd_:
             lattice_ |= d_
+    tri_whole_ = None
     if lattice_ is None and maths_doc(doc):    # (Dhruv round 39, 2025 FM 52 q2) TRIANGLE dot paper (every other row moved
         tri_ = [d_['rect'] for d_ in drs_all if d_.get('fill') is not None and 1.5 <= d_['rect'].width <= 5.5    # half a
                 and abs(d_['rect'].width - d_['rect'].height) < 0.6 and seg_r_.intersects(d_['rect'])]           # step) with
         ok_ = False
-        if len(tri_) >= 20 and len({round(r_.width, 1) for r_ in tri_}) <= 2:     # one dot size, a real lattice:
+        if len(tri_) >= 12 and len({round(r_.width, 1) for r_ in tri_}) <= 2:     # one dot size, a real lattice:
             rows_ = {}
             for r_ in tri_:
                 rows_.setdefault(round((r_.y0 + r_.y1) / 2), []).append((r_.x0 + r_.x1) / 2)
-            full_ = [sorted(v) for v in rows_.values() if len(v) >= 3]
-            if len(full_) >= 3 and sum(len(v) for v in full_) >= 0.9 * len(tri_):
+            full_ = [sorted({round(x_, 0) for x_ in v}) for v in rows_.values()]   # (a dot printed twice: one dot)
+            full_ = [v for v in full_ if len(v) >= 2]
+            if len(full_) >= 4 and sum(len(v) for v in full_) >= 0.9 * len({(round((r_.x0 + r_.x1) / 2), round((r_.y0 + r_.y1) / 2)) for r_ in tri_}):
                 gaps_ = sorted(round(v[i + 1] - v[i], 0) for v in full_ for i in range(len(v) - 1))
                 d_ = gaps_[len(gaps_) // 2]                                         # (same step along every row,
                 if d_ > 12 and all(abs(g - d_) <= 1.5 for g in gaps_):              # neighbouring rows moved half of it)
                     offs_ = sorted({round(v[0] % d_) for v in full_})
                     ys_ = sorted(rows_)
                     ok_ = len(offs_) >= 2 and any(abs(abs(o - offs_[0]) - d_ / 2) <= 2.5 for o in offs_[1:]) and len(ys_) >= 3
-        if ok_ and any(sum(1 for r_ in tri_ if (c_['r'] + (-12, -12, 12, 12)).contains(r_)) >= 0.8 * len(tri_) for c_ in cl):
-            ok_ = False        # the picture already holds the whole lattice (house of cards, 2024 ON 61): approved, unchanged
+        big_ = [c_ for c_ in cl if c_['r'].width >= 25 and c_['r'].height >= 20]
+        if ok_ and sum(1 for r_ in tri_ if any((c_['r'] + (-12, -12, 12, 12)).contains(r_) for c_ in big_)) >= 0.8 * len(tri_):
+            ok_ = False        # the pictures already hold the whole lattice (house-of-cards patterns, 2024 ON 61): approved, unchanged
         if ok_:
             lattice_ = fitz.Rect(tri_[0])
             for d_ in tri_:
                 lattice_ |= d_
+            # (Dhruv round 40: 'it should be whole as a image, partial image is very bad'): each PATCH of dot paper (dots
+            # joined at most 1.6 steps apart - text between two patches splits them, 2022 ON 51 q1) and the shapes on it
+            # are ONE picture, never a piece of it
+            pts_ = list({(round((r_.x0 + r_.x1) / 2, 1), round((r_.y0 + r_.y1) / 2, 1)) for r_ in tri_})
+            nn_ = min(h_ for a in pts_ for b in pts_ for h_ in [math.hypot(a[0] - b[0], a[1] - b[1])] if h_ > 3)   # the diagonal step (a dot printed twice is not a step)
+            par_ = list(range(len(pts_)))
+            def fd_(i):
+                while par_[i] != i:
+                    par_[i] = par_[par_[i]]; i = par_[i]
+                return i
+            for i in range(len(pts_)):
+                for j in range(i + 1, len(pts_)):
+                    if math.hypot(pts_[i][0] - pts_[j][0], pts_[i][1] - pts_[j][1]) <= 1.25 * nn_:
+                        par_[fd_(i)] = fd_(j)
+            grp_ = {}
+            for i, (x_, y_) in enumerate(pts_):
+                grp_.setdefault(fd_(i), []).append((x_, y_))
+            tri_whole_ = []
+            for g_ in grp_.values():
+                if len(g_) < 6:
+                    continue
+                R_ = fitz.Rect(min(x for x, _ in g_) - 2.4, min(y for _, y in g_) - 2.4, max(x for x, _ in g_) + 2.4, max(y for _, y in g_) + 2.4)
+                for c_ in cl:
+                    if (R_ + (-15, -15, 15, 15)).contains(c_['r']):
+                        R_ |= c_['r']
+                tri_whole_.append(R_)
     for c in cl:
         r = c['r']
         if r.width < 25 or r.height < 20:
@@ -940,6 +969,13 @@ def diagrams(doc, seg, lines, captioned):
                         and not re.match(r'^\((?:[a-h]|[ivx]+)\)', t['text'].strip()):     # (never a mark '[2]' or answer dots)
                     A.y1 = max(A.y1, T.y1 + 1); A.x1 = max(A.x1, T.x1 + 1); grown = True
         a['bbox'] = list(A)
+    for tw_ in (tri_whole_ or []):             # each whole patch of triangle dot paper as one picture (round 40)
+        out = [o for o in out if not fitz.Rect(o['bbox']).intersects(tw_)]
+        out.append({'caption': None, 'page': seg['page'],
+                    'bbox': [round(tw_.x0 - 4, 1), round(max(tw_.y0 - 4, seg['y0']), 1),
+                             round(tw_.x1 + 4, 1), round(min(tw_.y1 + 4, seg['y1']), 1)]})
+    if tri_whole_:
+        out.sort(key=lambda o: (o['bbox'][1], o['bbox'][0]))
     return out
 
 
