@@ -135,13 +135,68 @@ def _chem_structures(doc, pno, clip, store):
     return out
 
 
+def _chem_cell_pictures(doc, pno, clip, store):
+    """Chemistry question tables with a drawing in a cell (2024 MJ 61 Table 2.1: a thermometer scale per row): each drawing
+    is ONE picture placed in its cell, the table text stays text (Dhruv round 41, ERROR_PATTERNS 290). A drawing = pieces
+    (not thin rules longer than 40 pt; <= 70 pt) <= 3 pt apart with >= 6 strokes in all, >= 8 x 20 pt, closed in by table rules on all four sides; the numbers printed on
+    its scale (<= 4 pt beside it) go into the picture."""
+    from render import region_svg
+    page = doc[pno]
+    m = page.rotation_matrix
+    short, rules = [], []
+    for d in page.get_drawings():
+        r = (d['rect'].quad * m).rect
+        r = fitz.Rect(r.x0 - 0.3, r.y0 - 0.3, r.x1 + 0.3, r.y1 + 0.3)      # straight lines have EMPTY boxes (pattern 96)
+        if not r.intersects(clip):
+            continue
+        if max(r.width, r.height) > 40 and min(r.width, r.height) < 2.5:
+            rules.append(r)                                              # a table rule
+        elif max(r.width, r.height) <= 70:
+            short.append((r, len(d['items'])))                           # a piece of a drawing (a scale path counts its strokes)
+    groups = []
+    for r, k in short:
+        rr = r + (-3, -3, 3, 3)
+        hit = [g for g in groups if any(rr.intersects(x) for x, _ in g)]
+        groups = [g for g in groups if g not in hit] + [[(r, k)] + [x for g in hit for x in g]]
+    words = [fitz.Rect(w[:4]) * m for w in page.get_text('words')]
+    out = []
+    for g in groups:
+        if sum(k for _, k in g) < 6:
+            continue
+        b = fitz.Rect(g[0][0])
+        for x, _ in g:
+            b |= x
+        if b.width < 8 or b.height < 20:
+            continue
+        hz = [r for r in rules if r.height < 2 and r.x0 <= b.x0 and r.x1 >= b.x1]
+        vt = [r for r in rules if r.width < 2 and r.y0 <= b.y0 and r.y1 >= b.y1]
+        if not (any(r.y1 <= b.y0 + 1 for r in hz) and any(r.y0 >= b.y1 - 1 for r in hz)
+                and any(r.x1 <= b.x0 + 1 for r in vt) and any(r.x0 >= b.x1 - 1 for r in vt)):
+            continue                                                     # not inside a table cell
+        grew = True
+        while grew:                                                      # the scale numbers beside it ('−' and '10' are
+            grew = False                                                 #  two words: repeat until nothing more joins)
+            for w in words:
+                if not b.contains(w) and w.y0 <= b.y1 + 1 and w.y1 >= b.y0 - 1 and w.width < 20 \
+                        and w.x0 <= b.x1 + 4 and w.x1 >= b.x0 - 4:
+                    b |= w; grew = True
+        b = (b + (-1, -1, 1, 1)) & clip
+        name = f'cellpic_{pno + 1}_{round(b.x0)}_{round(b.y0)}.svg'
+        os.makedirs(os.path.join(store, 'figures'), exist_ok=True)
+        pr = fitz.Rect(b) * ~m if page.rotation else b
+        open(os.path.join(store, 'figures', name), 'w').write(region_svg(doc, pno, [pr.x0, pr.y0, pr.x1, pr.y1]))
+        out.append((b, name))
+    return out
+
+
 def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
     page = doc[pno]
     m = page.rotation_matrix
     MATHS = maths_doc(doc)
     ox, oy = clip.x0, clip.y0
     boxes = [fitz.Rect(f['source']['box']) for f in figs]
-    chem_pics = _chem_structures(doc, pno, clip, store) if docname == 'ms' and _is_chem_doc(doc) else []
+    chem_pics = (_chem_structures(doc, pno, clip, store) if docname == 'ms' else _chem_cell_pictures(doc, pno, clip, store)) \
+        if _is_chem_doc(doc) else []
     boxes += [b_ for b_, _ in chem_pics]          # (their letters / bonds are not laid out one by one)
     capboxes = [fitz.Rect(f['caption_box']) for f in figs if f.get('caption_box') and f['source']['page'] == pno + 1]
     def in_fig(r):
@@ -360,9 +415,18 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
             im_.putdata(px); im_.save(os.path.join(store, 'figures', name))
         else:
             pix.save(os.path.join(store, 'figures', name))
+        if _is_chem_doc(doc):                     # chemistry: a faint pasted picture drawn again by hand (Dhruv round 41:
+            rd_ = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'chem_redraw',   # 'redraw properly', pattern 297)
+                               f"{'_'.join(os.path.normpath(store).split(os.sep)[-2:]).replace('-', '').replace('_p', '_')}_{name[:-4]}.svg")
+            rd_ = rd_.replace(os.sep + os.path.basename(rd_), os.sep + '0620_' + os.path.basename(rd_))
+            if os.path.exists(rd_):
+                import shutil
+                name = name[:-4] + '.svg'
+                shutil.copy(rd_, os.path.join(store, 'figures', name))
         u.setdefault('images', []).append({'file': name, 'x': round(r.x0 - ox, 2), 'y': round(r.y0 - oy, 2),
                                             'w': round(r.width, 2), 'h': round(r.height, 2)})
-    if MATHS:                                     # 2014 maths: dotted answer lines are rows of tiny pictures: dots as text
+    if MATHS or _is_chem_doc(doc):                # 2014 maths: dotted answer lines are rows of tiny pictures: dots as text
+        #   (chemistry 2005 too: 3 x 1 pt pictures, Dhruv round 41 'dots are missing', ERROR_PATTERNS 291)
         tiny = sorted(((fitz.Rect(i['bbox']).quad * m).rect for i in page.get_image_info()
                        if i['bbox'][2] - i['bbox'][0] < 5 and i['bbox'][3] - i['bbox'][1] < 3), key=lambda r: (round(r.y1), r.x0))
         runs_ = []
@@ -859,6 +923,38 @@ def merge_contained(figs, qid, store, resave=None):
     return out
 
 
+def _chem_trim_prose(pg, b):
+    """Chemistry: a figure box that starts with sentences (the MCQ question line '... of 7/3 Li ?' 2026 MJ 12 q3; numbered
+    statements '2 Water condenses on a cold surface.' 2015 MJ 11 q1) above its first drawn ink starts below them."""
+    m = pg.rotation_matrix
+    ink = []
+    for d in pg.get_drawings():
+        r = (d['rect'].quad * m).rect
+        r = fitz.Rect(r.x0 - 0.3, r.y0 - 0.3, r.x1 + 0.3, r.y1 + 0.3)
+        if r.intersects(b) and max(r.width, r.height) > 8:
+            ink.append(r.y0)
+    if not ink:
+        return b
+    top = min(ink)
+    lines = {}
+    for w in pg.get_text('words'):
+        r = fitz.Rect(w[:4]) * m
+        if b.contains(fitz.Point((r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2)):
+            lines.setdefault((w[5], w[6]), []).append((r, w[4]))
+    cut = None
+    for ws in sorted(lines.values(), key=lambda v: v[0][0].y0):
+        y0, y1 = min(r.y0 for r, _ in ws), max(r.y1 for r, _ in ws)
+        if y1 > top - 1:
+            break
+        if sum(1 for _, t in ws if re.fullmatch(r'[a-z]{2,}[.,;:?]?', t)) >= 3:
+            cut = y1 + 1
+        elif cut is None:
+            break                                 # a label above the drawing (not a sentence): keep the box as it is
+    if cut is not None and cut < top:
+        return fitz.Rect(b.x0, cut, b.x1, b.y1)
+    return b
+
+
 def save_figure(f, q, meta, qdoc, store):
     b = fitz.Rect(f['bbox'])
     pg = qdoc[f['page'] - 1]
@@ -867,7 +963,12 @@ def save_figure(f, q, meta, qdoc, store):
         FOREIGN.clear()
         import subjects
         mx_ = subjects.subject(meta['syllabus'])['maths_text']
-        nb = fit_crop(pg, b, maths=mx_, chem=subjects.is_chem(meta['syllabus']))
+        if subjects.is_chem(meta['syllabus']) and '_opt' not in f['id']:
+            b = _chem_trim_prose(pg, b)           # question sentences above the drawn table are text, not picture (300)
+        if subjects.is_chem(meta['syllabus']) and '_opt' in f['id']:
+            nb = fitz.Rect(b)     # chemistry MCQ option pictures: diagram_options cut them exactly; growing pulled the NEXT
+        else:                     # option's atoms in, row after row (2026 MJ 23 q36, ERROR_PATTERNS 299)
+            nb = fit_crop(pg, b, maths=mx_, chem=subjects.is_chem(meta['syllabus']))
         if mx_:                 # maths: a crop never grows into a sibling figure of the same page (the lower 'Step 2' grid
             for g_ in q.get('figures', []):        # took the upper grid's x axis, 2023 MJ 63 q3, M2 round 34)
                 G = fitz.Rect(g_['bbox'])

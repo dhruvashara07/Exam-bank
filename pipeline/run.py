@@ -239,6 +239,33 @@ def process(qp_path):
                     return [pth] if not ks else [x for k_ in ks for x in leaf_paths(k_, pth + (k_["label"],))]
                 lv = leaf_paths(q, (q['number'],))
                 mine = [r for r in ms_rows if r['path'][0] == q['number']]
+                seen_, odd_ = set(), set()     # rows whose label is no part, or a part already used (printed twice)
+                for i_, r_ in enumerate(mine):
+                    if tuple(r_['path']) not in lv or tuple(r_['path']) in seen_:
+                        odd_.add(i_)
+                    seen_.add(tuple(r_['path']))
+                if chem and len(mine) == len(lv) and odd_ and all(
+                        tuple(r_['path']) == lv[i_] for i_, r_ in enumerate(mine) if i_ not in odd_):
+                    for i_, r_ in enumerate(mine):  # one row per part, in order, some labels misprinted ('2(b)' twice for
+                        r_['path'] = lv[i_]         # 2(b) and 2(f), 2024 MJ 33; '6(e)(ii)' '6(f)' for 6(d)(ii) 6(e), 32): by order (301)
+                if chem and odd_ and not (len(mine) == len(lv)):   # 2026 practical: every row is ONE marking point, a part's
+                    grp_ = []                      # points run M1, M2, M3 while the rows are numbered (i), (ii), (iii)... (302)
+                    for r_ in mine:
+                        mm_ = re.match(r'[^A-Za-z]{0,4}M(\d)\b', r_.get('text') or '')     # ('+ M2': a charge above)
+                        if grp_ and mm_ and int(mm_.group(1)) > 1:
+                            grp_[-1].append(r_)
+                        else:
+                            grp_.append([r_])
+                    def mk_(rs):
+                        return sum(int(r_['marks_codes'][0]) for r_ in rs if r_.get('marks_codes') and str(r_['marks_codes'][0]).isdigit())
+                    def leaf_marks(n, pth):
+                        ks = n.get('parts', [])
+                        return {pth: n.get('marks')} if not ks else {k: v for k_ in ks for k, v in leaf_marks(k_, pth + (k_['label'],)).items()}
+                    pm_ = leaf_marks(q, (q['number'],))
+                    if len(grp_) == len(lv) and (pm_ is None or all(mk_(g_) == pm_.get(lv[i_]) for i_, g_ in enumerate(grp_))):
+                        for i_, g_ in enumerate(grp_):
+                            for r_ in g_:
+                                r_['path'] = lv[i_]
                 if chem:                   # chemistry practical MS numbers its marking points '1(a)(i)'-'(iv)' under a part the
                     for r_ in mine:        # paper does not split (2026 MJ 51/52): the row belongs to that part (ERROR_PATTERNS 289)
                         p_ = tuple(r_['path'])

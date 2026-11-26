@@ -30,10 +30,19 @@
   "review": [
    {
     "start": "2026-11-25T05:03:25+00:00",
+    "end": "2026-11-26T03:30:03+00:00"
+   },
+   {
+    "start": "2026-11-26T04:03:32+00:00",
     "end": null
    }
   ],
-  "fix": []
+  "fix": [
+   {
+    "start": "2026-11-26T03:30:03+00:00",
+    "end": "2026-11-26T04:03:32+00:00"
+   }
+  ]
  },
  "github_runs": [
   {
@@ -59,7 +68,7 @@
   "papers": 56,
   "questions": 856,
   "flags": 2242,
-  "round_items": 7
+  "round_items": 16
  },
  "errors": [
   {
@@ -149,6 +158,110 @@
    "fix": "widened 0.3 pt like extract",
    "found_by": "claude",
    "at": "2026-11-25T05:03:30+00:00"
+  },
+  {
+   "pattern": "290",
+   "kind": "new",
+   "what": "thermometers in table cells were loose lines",
+   "fix": "one picture per cell drawing",
+   "found_by": "dhruv",
+   "at": "2026-11-26T04:03:32Z"
+  },
+  {
+   "pattern": "291",
+   "kind": "new",
+   "what": "2005 answer dots (tiny pictures) missing",
+   "fix": "maths dot rule for chem",
+   "found_by": "dhruv",
+   "at": "2026-11-26T04:03:32Z"
+  },
+  {
+   "pattern": "292",
+   "kind": "new",
+   "what": "empty band under re-wrapped MS content",
+   "fix": "trim row bottom",
+   "found_by": "dhruv",
+   "at": "2026-11-26T04:03:32Z"
+  },
+  {
+   "pattern": "293",
+   "kind": "new",
+   "what": "column widths followed each print",
+   "fix": "one standard proportion",
+   "found_by": "dhruv",
+   "at": "2026-11-26T04:03:32Z"
+  },
+  {
+   "pattern": "294",
+   "kind": "new",
+   "what": "subscript at line end taken as a mark",
+   "fix": "attached small token never a mark",
+   "found_by": "claude",
+   "at": "2026-11-26T04:03:32Z"
+  },
+  {
+   "pattern": "295",
+   "kind": "new",
+   "what": "2005 MS [1] dropped as part totals: empty Marks column",
+   "fix": "part totals only with codes",
+   "found_by": "claude",
+   "at": "2026-11-26T04:03:32Z"
+  },
+  {
+   "pattern": "296",
+   "kind": "new",
+   "what": "note a total of [3] not [2] lost words; stray =",
+   "fix": "total of is text",
+   "found_by": "claude",
+   "at": "2026-11-26T04:03:32Z"
+  },
+  {
+   "pattern": "297",
+   "kind": "new",
+   "what": "faint pasted structure",
+   "fix": "hand-drawn vector redraw (Dhruv decision)",
+   "found_by": "dhruv",
+   "at": "2026-11-26T04:03:32Z"
+  },
+  {
+   "pattern": "298",
+   "kind": "new",
+   "what": "text just under a picture counted beside it: row shrunk",
+   "fix": "2 pt tolerance",
+   "found_by": "claude",
+   "at": "2026-11-26T04:03:32Z"
+  },
+  {
+   "pattern": "299",
+   "kind": "new",
+   "what": "MCQ option pictures grew into the next option",
+   "fix": "no growth for option pictures",
+   "found_by": "claude",
+   "at": "2026-11-26T04:03:32Z"
+  },
+  {
+   "pattern": "300",
+   "kind": "new",
+   "what": "question sentences inside options-table picture",
+   "fix": "trim prose above the drawn ink",
+   "found_by": "claude",
+   "at": "2026-11-26T04:03:32Z"
+  },
+  {
+   "pattern": "301",
+   "kind": "new",
+   "what": "MS label slips one row per part",
+   "fix": "map by order",
+   "found_by": "claude",
+   "at": "2026-11-26T04:03:32Z"
+  },
+  {
+   "pattern": "302",
+   "kind": "new",
+   "what": "practical marking points numbered (i)(ii)(iii)",
+   "fix": "group by M-number",
+   "found_by": "claude",
+   "at": "2026-11-26T04:03:32Z"
   }
  ],
  "tokens": [],
@@ -268,6 +381,22 @@
   {
    "at": "2026-11-25T05:03:30+00:00",
    "task": "error C0 96"
+  },
+  {
+   "at": "2026-11-26T03:30:03+00:00",
+   "task": "phase C0 review"
+  },
+  {
+   "at": "2026-11-26T03:30:03+00:00",
+   "task": "phase C0 fix"
+  },
+  {
+   "at": "2026-11-26T04:03:32+00:00",
+   "task": "phase C0 fix"
+  },
+  {
+   "at": "2026-11-26T04:03:32+00:00",
+   "task": "phase C0 review"
   }
  ]
 }

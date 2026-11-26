@@ -651,3 +651,17 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   head; also the reasons.py 'set overwrites any status' trap twice (restored by hand). Slowest: the MS structure class (~30 min).
 - Process: both GitHub passes used; final fixes rebuilt locally (as M3). Round 41 on the own-account page (the shared page is
   not reachable from this account).
+
+## 2026-11-26 - Chemistry C0 round 41 answers, fixes, round 42
+- Dhruv: round 41 done (2 ok, 5 wrong). His notes: dots missing (2005); 2015 paper 2 is not MCQ - check the paper codes per
+  year online; empty space in MS 7(a); redraw the faint structure 'properly like that'; thermometers should be pictures inside
+  their own cells with the table as a table; drawn formulae as pictures and everything else as text; and a mark scheme he did
+  not flag 'has no standard proportion in columns' - make it standard. Also: check everything I had left 'not fixed'.
+- Answered: the thermometer table WAS laid out as text, but the thermometers were loose lines (not separate pictures) -> now one
+  picture per cell drawing. Paper codes confirmed online (CHEM_PLAN 10).
+- Fixed 13 classes (290-302). Found myself while checking: 2005 MS Marks column empty ('[1]' dropped as part totals),
+  V2O5 subscripts in the Marks column, notes losing words. The first standard-width try broke every Guidance table (a sliver
+  column became a phantom 5th column) - caught by looking at once. A Marks-column sum check found the empty column; it gives
+  false hits on Guidance-heavy rows (hint only).
+- All open C0 items fixed (MCQ option crops - caused by my own 285 rule; question text in option tables; label slips by order;
+  practical marking points by M-number). Round 42 = 9 recheck items.

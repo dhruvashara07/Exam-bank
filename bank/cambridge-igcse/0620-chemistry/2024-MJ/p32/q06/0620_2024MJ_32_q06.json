@@ -51,10 +51,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "mark scheme row 6(f) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -569,7 +567,26 @@
      "text": "State one way of reducing the emissions of nitrogen dioxide in cars.\n.......................................................................................................................................  [1]",
      "marks": 1,
      "path": "6(d)(ii)",
-     "mark_scheme_on": "6",
+     "mark_scheme": [
+      {
+       "label": "6(e)(ii)",
+       "text": "catalytic converter",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          58.0,
+          414.8,
+          784.0,
+          437.0
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -623,19 +640,19 @@
    "path": "6(e)",
    "mark_scheme": [
     {
-     "label": "6(e)(ii)",
-     "text": "catalytic converter",
+     "label": "6(f)",
+     "text": "1 mark each for any 3 of:\n\ndiffusion\n\nparticles move / collide / travel\n\n(movement of) particles is random / in every direction\n\nparticles spread out / particles mix\n\n(particles spread) from higher concentration to lower concentration",
      "codes": [
-      "1"
+      "3"
      ],
      "segments": [
       {
        "page": 8,
        "bbox": [
         58.0,
-        414.8,
+        439.2,
         784.0,
-        437.0
+        541.1
        ]
       }
      ]
@@ -681,26 +698,6 @@
  ],
  "total_marks": 11,
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "6(f)",
-   "text": "1 mark each for any 3 of:\n\ndiffusion\n\nparticles move / collide / travel\n\n(movement of) particles is random / in every direction\n\nparticles spread out / particles mix\n\n(particles spread) from higher concentration to lower concentration",
-   "codes": [
-    "3"
-   ],
-   "segments": [
-    {
-     "page": 8,
-     "bbox": [
-      58.0,
-      439.2,
-      784.0,
-      541.1
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0620",
  "subject": "Chemistry",
  "board": "CAIE",

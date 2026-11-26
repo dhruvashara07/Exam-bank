@@ -4,7 +4,7 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 
 | Batch | Sessions | Papers | Build | GitHub | Claude 1 | Claude 2 | Fix | Ours | Round items | New errors | Repeats | Tokens |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| C0 | 2005-MJ 2015-MJ 2024-MJ 2026-MJ | 56 | 9.0 | 0.2 | 79.2 | 0.0 | 0.0 | 88.2 | 7 | 10 | 1 | n/a |
+| C0 | 2005-MJ 2015-MJ 2024-MJ 2026-MJ | 56 | 9.0 | 0.2 | 79.2 | 0.0 | 33.5 | 121.7 | 16 | 23 | 1 | n/a |
 | M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 257.5 | 51.4 | 2766.0 | 3084.4 | 40 | 58 | 5 | n/a |
 | M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 | 11.7 | 97.4 | 191.6 | 0.0 | 30.1 | 233.4 | 23 | 42 | 2 | n/a |
 | M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 117 | 100.3 | 131.2 | 0.0 | 0.0 | 0.0 | 100.3 | 13 | 28 | 4 | n/a |
@@ -26,6 +26,19 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - [new] pattern 288: band with pictures shrunk instead of re-wrapped → pictures on own lines move with the re-wrap (found by claude)
 - [new] pattern 289: practical MS marking points (i)-(iv) under an unsplit part → row goes to the leaf part (found by claude)
 - [repeat] pattern 96: straight lines have empty boxes: structure bonds ignored by intersects (my own new chem code) → widened 0.3 pt like extract (found by claude)
+- [new] pattern 290: thermometers in table cells were loose lines → one picture per cell drawing (found by dhruv)
+- [new] pattern 291: 2005 answer dots (tiny pictures) missing → maths dot rule for chem (found by dhruv)
+- [new] pattern 292: empty band under re-wrapped MS content → trim row bottom (found by dhruv)
+- [new] pattern 293: column widths followed each print → one standard proportion (found by dhruv)
+- [new] pattern 294: subscript at line end taken as a mark → attached small token never a mark (found by claude)
+- [new] pattern 295: 2005 MS [1] dropped as part totals: empty Marks column → part totals only with codes (found by claude)
+- [new] pattern 296: note a total of [3] not [2] lost words; stray = → total of is text (found by claude)
+- [new] pattern 297: faint pasted structure → hand-drawn vector redraw (Dhruv decision) (found by dhruv)
+- [new] pattern 298: text just under a picture counted beside it: row shrunk → 2 pt tolerance (found by claude)
+- [new] pattern 299: MCQ option pictures grew into the next option → no growth for option pictures (found by claude)
+- [new] pattern 300: question sentences inside options-table picture → trim prose above the drawn ink (found by claude)
+- [new] pattern 301: MS label slips one row per part → map by order (found by claude)
+- [new] pattern 302: practical marking points numbered (i)(ii)(iii) → group by M-number (found by claude)
 
 ### M0
 - [new] pattern 64: equation-editor symbol fonts drew # for x etc. in print and text → store_text MATHS_GLYPHS/MATHS_WIDE by eye (found by claude)

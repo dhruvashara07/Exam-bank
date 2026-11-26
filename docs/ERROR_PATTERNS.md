@@ -849,3 +849,37 @@ Known (C0, all <= 3 questions, written down under the budget rule): MCQ question
 picture (2026 MJ 12 q3, 2015 MJ 11 q1); extra marking points (iii)/(iv) under a split part stay on the parent (2026 MJ 51 q2,
 52 q1, 52 q2); Cambridge label slips '2(b)' twice / '1(f)' twice / extra '6(f)' (2024 MJ 33 q2, 52 q1, 32 q6); editable text
 93-97 % where labels sit inside pictures (5 questions).
+
+## Chemistry C0 round 41 fixes (2026-11-26; Dhruv: 2 ok, 5 wrong + his notes)
+290. (round 41, 2024 MJ 61 Table 2.1) Thermometer scales drawn inside table cells were loose lines in the layout. Dhruv:
+    'table and images individual inside respective cell'. -> chemistry questions: a drawing closed in by table rules on all
+    four sides (>= 6 strokes, >= 8 x 20 pt) + its scale numbers = ONE picture in its cell (store._chem_cell_pictures); the
+    table text stays text.
+291. (round 41, 2005 MJ 03 q4 'dots are missing') 2005 answer dots are rows of 3 x 1 pt pictures; only maths turned them
+    into dots. -> the maths rule now also for chemistry.
+292. (round 41, 2015 MJ 21 7(a) 'empty space') a re-wrapped row = printed height + extra lines, so the print's empty band
+    under the content stayed. -> chemistry: ms_portrait._trim_bottom (content + 7 pt).
+293. (Dhruv: 'no standard proportion in column') column widths followed each print (Q 40-47, Answer/Guidance 259-325).
+    -> chemistry: ONE standard: 3 columns Q 47 | Answer 436 | Marks 40; 4 columns Q 47 | Answer 218 | Marks 40 | Guidance 218
+    (equal text columns: Guidance at 37 % made 2026 cells very tall); slivers at the table edge stay slivers (a sliver
+    widened to 40 pt became a phantom 5th column and sent every row to the cell fallback - caught by eye at once).
+294. (found while checking) old MS: a subscript at a line end ('V2O5', 2005 4(c)(i)) went into the Marks column. -> a
+    small token touching the word before it is never a mark (chemistry).
+295. (found by a NEW check: Marks column total vs question marks) 2005 MJ 03: every '[1]' dropped as a 'part total' (a rule
+    for papers that print codes) -> empty Marks column. -> chemistry: part totals only when codes exist. The mark-sum
+    check (/tmp/msum.py idea) belongs in reasons pass 1 for chemistry - add it.
+296. old MS notes 'N.B. a total of [3] not [2]' lost 'total' and the numbers; a stray '=' of 'TOTAL = 16' stayed. ->
+    chemistry: 'total of' is text; the '=' goes with the printed total.
+297. (round 41 decision 2015 MJ 33 7(b)(i): 'yes but properly like that') faint pasted structure pictures are redrawn by
+    hand as vector SVG: pipeline/chem_redraw/<paper>_<picture>.svg replaces the picture of that name at build.
+298. text just under a picture (0.5 pt overlap) counted as 'beside it' -> the row shrank (cell fallback). -> chemistry: 2 pt.
+299. (open item) 2026 MJ 23 q36 MCQ option pictures each held two rows: fit_crop growth (my 285 end-atom rule and the
+    half-inside rule) pulled the next option's atoms in. -> chemistry option pictures keep diagram_options' exact cut.
+300. (open item) MCQ question line / statements inside the options-table picture (2026 MJ 12 q3, 2015 MJ 11 q1). ->
+    chemistry: sentences at the top of a figure box above its first drawn ink are text (store._chem_trim_prose); 12 q3's
+    options are now read as text options.
+301. (open item) MS label slips with one row per part ('2(b)' twice for 2(b)/2(f); '6(e)(ii)' '6(f)' for 6(d)(ii) 6(e);
+    '1(f)' twice): chemistry maps rows to parts in order when the counts match and every good label is in place.
+302. (open item) 2026 practical MS: one row per marking point, numbered (i), (ii), (iii) while the part's points run M1 M2
+    M3. -> chemistry: group rows by M-number (a new part at M1 or no M; '+ M2' after a charge counts), map groups to parts
+    in order when the count and every part's marks match.

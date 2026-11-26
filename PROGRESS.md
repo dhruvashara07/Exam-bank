@@ -17,9 +17,15 @@ Read this first in every session. Update it before ending a session.
   (paper NOT to approve until fixed); options-table pictures holding question text (2026 MJ 12 q3, 2015 MJ 11 q1); practical
   marking points (iii)/(iv) under a split part (2026 MJ 51 q2, 52 q1, 52 q2); Cambridge label slips (2024 MJ 33 q2, 52 q1, 32 q6);
   2015 MJ 33 q7 7(b)(i) small text beside a faint picture.
-- NEXT: (1) Chemistry round 41 (Dhruv, own-account page): read feedback_r41 (db_list on slug b3c8a710-c92b-4a33-95b2-f7eba1bc0031),
-  fix what is wrong as a class, apply his redraw decision, fix the known C0 items above (2026 MJ 23 q36 first), rebuild C0, freeze
-  checks, close round 41 (review_round.py close + review_page.py drop 41), approve C0, docs, push. Then C1 (CHEM_PLAN 6) in a new chat.
+- 2026-11-26: round 41 closed (7 answers: 2 ok, 5 wrong). Fixed as classes (patterns 290-302): table cell drawings as one
+  picture each, 2005 answer dots, empty bands, ONE standard MS column proportion, 2005 MS Marks column (was empty) and notes,
+  faint structure redrawn by hand (chem_redraw/), and ALL items left open in C0 (MCQ option crops, question text in option
+  tables, label slips, practical marking points). 2015 paper numbering confirmed online (to 2015: 2 = Core Theory). C0
+  rebuilt locally: 56/56 exact, 0 flags, 0 blocking. Freeze: golden 0, nothing under 0625/0607, maths layout identical.
+  Round 42 (recheck, 9 items) on the own-account page https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e.
+- NEXT: (1) Round 42 (Dhruv): read feedback_r42 (db_list, slug b3c8a710-c92b-4a33-95b2-f7eba1bc0031); fix any wrong item as a
+  class, freeze checks, close + drop round 42, approve C0 (approve.py), docs, push. Then C1 (CHEM_PLAN 6) in a new chat; add the
+  Marks-column sum check (ERROR_PATTERNS 295) to chemistry pass 1 first (as a hint: Guidance rows give false hits).
   (2) Maths round 40 (shared account) is still open - see the maths NEXT below.
 
 ## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md

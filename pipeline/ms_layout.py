@@ -475,6 +475,9 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
             mk_x, tot_x = nx[0] - 0.01, nx[-1] - 0.02
 
     def in_marks(t, u):
+        if MP.CHEM and t.get('s', 11) < 9 and any(o is not t and o.get('s', 11) >= 9 and abs(o['y'] - t['y']) < 5
+                                                  and -1 <= t['x'] - (o['x'] + o['w']) <= 2 for o in u['text']):
+            return False                          # chemistry: the subscript of 'V2O5' at the line end (2005 MJ 03 4(c)(i), 294)
         if pre09 and JOINED.match(t['t']) and t['x'] > 0.5 * u['w']:
             return True
         return t['x'] > mk_x * u['w'] and (MARKISH(t['t']) or bool(code_xs and CODE.match(t['t'])))
@@ -483,6 +486,8 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
         return bool(code_xs) and t['x'] > (code_med + 0.04) * u['w'] and not re.fullmatch(r'[\[(]?\d{1,2}[\])]?', t['t'])
 
     def part_total(t, u):                         # pre-2009 with codes: a bare number in the marks area is the part total
+        if MP.CHEM and not code_xs:               # chemistry 2005 prints no codes: '[1]' per line is a mark (295)
+            return False
         if br_r is not None and re.fullmatch(r'\[\d{1,2}\]', t['t']) and abs(t['x'] + t['w'] - br_r) < 3:
             return False
         if tot_x is not None:
@@ -585,9 +590,13 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
         drop = set()
         for t in ws:
             if re.fullmatch(r'\[?Total:?', t['t']) or (pre09 and re.fullmatch(r'\[?(TOTAL|total):?', t['t'])):
+                if MP.CHEM:                       # chemistry 2005: 'N.B. a total of [3] not [2]' is a note, not the total (296)
+                    nxt = min((o for o in ws if abs(o['y'] - t['y']) < 2.5 and o['x'] > t['x']), key=lambda o: o['x'], default=None)
+                    if nxt is not None and nxt['t'].lower() == 'of':
+                        continue
                 drop.add(id(t))
                 for o in ws:
-                    if abs(o['y'] - t['y']) < 2.5 and o['x'] > t['x'] and re.fullmatch(r'[\d\]\[:]+', o['t']):
+                    if abs(o['y'] - t['y']) < 2.5 and o['x'] > t['x'] and re.fullmatch(r'[\d\]\[:]+' if not MP.CHEM else r'[\d\]\[:=]+', o['t']):
                         drop.add(id(o))
         ws = [t for t in ws if id(t) not in drop and not part_total(t, u) and not (pre09 and side_note(t, u))]
         if pre09:
@@ -1860,11 +1869,15 @@ def build(q, store):
     if not MP.FORCE_WRAP and (all(u['w'] <= W + 2 for u in units) or int(q['id'].split('_')[1][:4]) < 2013):          # the old portrait era: our table too (no printed one to follow)
         first = {'edges': [], 'new_edges': [44.0, W - 44.0], 'new_w': [44.0, W - 88.0, 44.0], 'default': True}
         out = _old_rows(units, q)
+        if MP.CHEM:                                   # chemistry: the same proportion as its other tables (47 | 436 | 40)
+            first = {'edges': [], 'new_edges': [47.0, W - 40.0], 'new_w': [47.0, W - 87.0, 40.0], 'default': True}
+            out = _old_rows(units, q, L=47.0, M=W - 40.0)
         labw = max([t['w'] for v in out for t in v['text'] if t.get('s') == 11.0 and t['x'] < 44 and t['y'] == 14.0] + [0])
-        if labw + 8 > 44:                             # a long label ('1(a)(i)(ii)', '3(a)(iii)(iv)(v)'): a wider Q column
+        if labw + 8 > first['new_w'][0]:              # a long label ('1(a)(i)(ii)', '3(a)(iii)(iv)(v)'): a wider Q column
             Lq_ = float(int(labw + 9))
-            first = {'edges': [], 'new_edges': [Lq_, W - 44.0], 'new_w': [Lq_, W - 44.0 - Lq_, 44.0], 'default': True}
-            out = _old_rows(units, q, L=Lq_)
+            M_, R_ = first['new_edges'][1], first['new_w'][2]     # (44 | 44 physics / maths, 47 | 40 chemistry: unchanged there)
+            first = {'edges': [], 'new_edges': [Lq_, M_], 'new_w': [Lq_, M_ - Lq_, R_], 'default': True}
+            out = _old_rows(units, q, L=Lq_, M=M_)
         old_ = int(q['id'].split('_')[1][:4]) < 2013          # round-26 fixes: old papers only (final years never move)
         if old_:
             out = _merge_headings(out, first['new_edges'][0], first['new_edges'][1])

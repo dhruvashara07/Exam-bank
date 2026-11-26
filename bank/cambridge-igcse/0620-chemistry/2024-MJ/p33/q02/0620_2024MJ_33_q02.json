@@ -33,10 +33,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "no mark scheme for 2(f)"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -249,24 +247,6 @@
         351.0,
         784.0,
         385.9
-       ]
-      }
-     ]
-    },
-    {
-     "label": "2(b)",
-     "text": "H2 (1)\n2 (NaH) (1)",
-     "codes": [
-      "2"
-     ],
-     "segments": [
-      {
-       "page": 5,
-       "bbox": [
-        58.0,
-        487.0,
-        784.0,
-        521.9
        ]
       }
      ]
@@ -531,6 +511,26 @@
    "text": "\u0007Sodium reacts with hydrogen to produce sodium hydride, NaH.\n\u0007Complete the symbol equation for this reaction.\n2Na  +  ........  →  .....NaH\b\n[2]\n\b\n[Total: 10]",
    "marks": 2,
    "path": "2(f)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "H2 (1)\n2 (NaH) (1)",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        58.0,
+        487.0,
+        784.0,
+        521.9
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",

@@ -376,6 +376,14 @@ def portrait_unit(u, W=523.0, widths=None, sizes=None, probe=False):
     if EQUAL_FLEX and sum(1 for f in fixed if not f) == 2:      # maths (Dhruv, M0): Answer and Partial Marks the same width
         half = flex * k / 2
         new_w = [fw if fw is not None else half for fw in fixed_w]
+    if globals().get('CHEM'):                     # chemistry: ONE standard proportion (Dhruv round 41, ERROR_PATTERNS 293):
+        fx = [(max(47.0 if c == 0 else 40.0, fixed_w[c]) if old_w[c] >= 20 else fixed_w[c]) if fixed[c] else None
+              for c in range(ncol)]                                 # Q 47 | Marks 40 (a sliver at the edge stays a sliver)
+        fl = [c for c in range(ncol) if not fixed[c]]
+        rest = W - sum(w for w in fx if w is not None)
+        share = {1: [1.0], 2: [0.5, 0.5]}.get(len(fl))           # Answer | Guidance = 218 | 218 pt (2026 print)
+        if share and rest > 100:
+            new_w = [fx[c] if fixed[c] else rest * share[fl.index(c)] for c in range(ncol)]
     new_edges = [sum(new_w[:i + 1]) for i in range(ncol - 1)]
     def nx_start(c): return 0 if c == 0 else new_edges[c - 1]
     # line pitch of this row
@@ -457,7 +465,8 @@ def portrait_unit(u, W=523.0, widths=None, sizes=None, probe=False):
         if fixed[c]:
             return _scaled(u, W, 'picture in a narrow column')
         b = next((i for i in range(nb) if bounds[i] <= pc['y'] + 1 < bounds[i + 1]), nb - 1)
-        if any(t['x'] < pc['x'] + pc['w'] and t['x'] + t['w'] > pc['x'] and t['y'] > pc['y'] - 2 and t['y'] - t['s'] < pc['y'] + pc['h']
+        tol_ = 2.0 if globals().get('CHEM') else 0.0      # chemistry: a line just under a picture is not beside it (298)
+        if any(t['x'] < pc['x'] + pc['w'] and t['x'] + t['w'] > pc['x'] and t['y'] > pc['y'] - 2 and t['y'] - t['s'] + tol_ < pc['y'] + pc['h']
                for (bb, cc), ws in cells.items() if cc == c for t in ws):
             return _scaled(u, W, 'picture with text beside it')
         rel = pc['x'] - cx0(c)
@@ -536,8 +545,32 @@ def portrait_unit(u, W=523.0, widths=None, sizes=None, probe=False):
             else:
                 v['lines'].append(rect(cur[0], cur[2], cur[1], cur[2] + cur[3])); cur = a[:]
         v['lines'].append(rect(cur[0], cur[2], cur[1], cur[2] + cur[3]))
+    if globals().get('CHEM'):                     # chemistry (Dhruv round 41, 2015 MJ 21 7(a)): the print's empty band under the
+        _trim_bottom(v)                           # content is not kept once the lines are re-wrapped (ERROR_PATTERNS 292)
     return v, {'mode': 'wrap', 'why': '', 'extra_lines': int(sum(band_extra)), 'cols': ncol, 'bands': nb,
                'edges': edges, 'new_edges': new_edges, 'new_w': new_w, 'old_w': old_w}
+
+
+def _trim_bottom(v, pad=7.0):
+    """Close an empty band at the bottom of a row: every y below the content moves up (rules end at the new bottom)."""
+    bot = [t['y'] + 3.0 for t in v['text']]
+    bot += [g['y'] + g.get('h', 0) for g in v.get('figs', []) + v.get('images', []) + v.get('glyphs', [])]
+    for l in v['lines']:                          # ink that is not a full-height rule or the bottom rule
+        ys = [float(y) for y in re.findall(r'[ML][\d.-]+ ([\d.-]+)', l['d'])]
+        if ys and not (min(ys) <= 0.5 and max(ys) >= v['h'] - 0.6) and min(ys) < v['h'] - 1.0:
+            bot.append(max(ys))
+    if not bot:
+        return
+    cb = max(bot)
+    d = v['h'] - (cb + pad)
+    if d < 6:
+        return
+    def mv(m):
+        y = float(m.group(2))
+        return f"{m.group(1)} {y - d if y > cb else y:.2f}"
+    for l in v['lines']:
+        l['d'] = re.sub(r'([ML][\d.-]+) ([\d.-]+)', mv, l['d'])
+    v['h'] = round(v['h'] - d, 2)
 
 
 def check(u, v):

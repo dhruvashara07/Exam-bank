@@ -64,10 +64,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "mark scheme row 1(c)(iii) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -353,6 +351,25 @@
          ]
         }
        ]
+      },
+      {
+       "label": "1(c)(ii)",
+       "text": "M2 cm s\n3/",
+       "codes": [
+        "1",
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          58.0,
+          461.9,
+          783.9199829101562,
+          522.3
+         ]
+        }
+       ]
       }
      ],
      "content": [
@@ -408,20 +425,19 @@
      "path": "1(c)(ii)",
      "mark_scheme": [
       {
-       "label": "1(c)(ii)",
-       "text": "M2 cm s\n3/",
+       "label": "1(c)(iii)",
+       "text": "5",
        "codes": [
-        "1",
-        "3"
+        "1"
        ],
        "segments": [
         {
-         "page": 7,
+         "page": 8,
          "bbox": [
           58.0,
-          461.9,
+          76.5,
           783.9199829101562,
-          522.3
+          111.5
          ]
         }
        ]
@@ -446,26 +462,6 @@
     }
    ],
    "path": "1(c)",
-   "mark_scheme": [
-    {
-     "label": "1(c)(iii)",
-     "text": "5",
-     "codes": [
-      "1"
-     ],
-     "segments": [
-      {
-       "page": 8,
-       "bbox": [
-        58.0,
-        76.5,
-        783.9199829101562,
-        111.5
-       ]
-      }
-     ]
-    }
-   ],
    "content": [
     {
      "type": "text",
@@ -631,20 +627,19 @@
      "path": "1(e)(i)",
      "mark_scheme": [
       {
-       "label": "1(e)(i)",
-       "text": "M1 advantage: (more) accurate",
+       "label": "1(e)",
+       "text": "(10 cm measuring cylinder is more) accurate\n3",
        "codes": [
-        "1",
-        "3"
+        "1"
        ],
        "segments": [
         {
          "page": 8,
          "bbox": [
           58.0,
-          262.1,
+          225.0,
           783.9199829101562,
-          335.0
+          259.9
          ]
         }
        ]
@@ -691,7 +686,27 @@
      "text": "The volume of the dilute ethanoic acid can be measured using a\n10 cm3 volumetric pipette.\nState one advantage of using a 10 cm3 volumetric pipette rather than a\n10 cm3 measuring cylinder to measure the volume of the dilute ethanoic acid.\n...........................................................................................................................................\n..................................................................................................................................... [1]",
      "marks": 1,
      "path": "1(e)(ii)",
-     "mark_scheme_on": "1(e)",
+     "mark_scheme": [
+      {
+       "label": "1(e)(i)",
+       "text": "M1 advantage: (more) accurate",
+       "codes": [
+        "1",
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          58.0,
+          262.1,
+          783.9199829101562,
+          335.0
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -716,26 +731,6 @@
     }
    ],
    "path": "1(e)",
-   "mark_scheme": [
-    {
-     "label": "1(e)",
-     "text": "(10 cm measuring cylinder is more) accurate\n3",
-     "codes": [
-      "1"
-     ],
-     "segments": [
-      {
-       "page": 8,
-       "bbox": [
-        58.0,
-        225.0,
-        783.9199829101562,
-        259.9
-       ]
-      }
-     ]
-    }
-   ],
    "content": [
     {
      "type": "text",
@@ -794,8 +789,8 @@
      "path": "1(f)(i)",
      "mark_scheme": [
       {
-       "label": "1(f)(i)",
-       "text": "M1 experiment 5",
+       "label": "1(f)",
+       "text": "(volume of gas is ) smaller",
        "codes": [
         "1"
        ],
@@ -804,9 +799,9 @@
          "page": 8,
          "bbox": [
           58.0,
-          424.8,
+          337.1,
           783.9199829101562,
-          447.1
+          422.7
          ]
         }
        ]
@@ -855,6 +850,24 @@
      "path": "1(f)(ii)",
      "mark_scheme": [
       {
+       "label": "1(f)(i)",
+       "text": "M1 experiment 5",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          58.0,
+          424.8,
+          783.9199829101562,
+          447.1
+         ]
+        }
+       ]
+      },
+      {
        "label": "1(f)(ii)",
        "text": "M2 fast(er) / makes gas (more) quickly",
        "codes": [
@@ -901,26 +914,6 @@
     }
    ],
    "path": "1(f)",
-   "mark_scheme": [
-    {
-     "label": "1(f)",
-     "text": "(volume of gas is ) smaller",
-     "codes": [
-      "1"
-     ],
-     "segments": [
-      {
-       "page": 8,
-       "bbox": [
-        58.0,
-        337.1,
-        783.9199829101562,
-        422.7
-       ]
-      }
-     ]
-    }
-   ],
    "content": [
     {
      "type": "text",

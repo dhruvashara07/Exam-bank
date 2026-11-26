@@ -108,3 +108,9 @@ displayed formulae (end atoms in crops; one vector picture per structure in MS c
 time for 56 papers (pilot rate); a 3-year batch (~125 papers) should fit one chat now that the classes exist.
 Still to build for later batches: ms_1-2-3-5-6 split (C8), qp_3 holding 31+32 (check C7), equilibrium arrow '⇌' as printed
 (seen as text in 2015 MS, fine so far), LaTeX (D1) only when a part needs it - no part needed it in C0.
+
+## 10. Round 41 (2026-11-26)
+Paper numbering confirmed online: up to 2015 Paper 1 MCQ, 2 Core Theory, 3 Extended Theory, 5 Practical, 6 ATP; from 2016
+Paper 1 MCQ Core, 2 MCQ Extended, 3 Theory Core, 4 Theory Extended, 5 Practical, 6 ATP. Dhruv's round-41 rules: drawings
+in table cells are pictures inside their cells, table text stays text; drawn formulae are pictures, all other words text;
+one standard MS column proportion (MS_TABLE_RULES 'Chemistry'); faint MS pictures redrawn properly.

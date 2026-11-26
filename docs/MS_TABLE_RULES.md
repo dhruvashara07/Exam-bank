@@ -324,3 +324,11 @@ one Total for the task. Built by pipeline/tasks.py after every store build / ms_
   graphs from the question's function on the question's axes. Nothing may spill out of its cell or overlap; text widths are real.
 - A text line under a screenshot is never swallowed by the redraw: only the pasted image is replaced.
 - What cannot be redrawn reliably goes into ms_graphs.KEPT with the reason, and to Dhruv as a decision.
+
+## Chemistry 0620 (2026-11-26, round 41)
+- ONE standard column proportion for every chemistry mark scheme (Dhruv 'no standard proportion'): 3 columns
+  Q 47 | Answer 436 | Marks 40; 4 columns (Guidance printed: 2013-2015, 2026) Q 47 | Answer 218 | Marks 40 | Guidance 218.
+  A long label or a wide mark may add a few pt; slivers at the table edge stay slivers. Old 2002-2012 text MS: 47 | 436 | 40.
+- A drawn formula (atoms as outlines / tiny images / text + bonds) in a cell is ONE vector picture; every other word is text.
+- The empty band under a row's content is not kept; text is never shrunk (pictures on their own lines move with the re-wrap).
+- Faint pasted pictures are redrawn by hand as clean vector SVG (pipeline/chem_redraw/).

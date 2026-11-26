@@ -24,10 +24,8 @@
  "marks": 14,
  "figures": [],
  "review": {
-  "reasons": [
-   "mark scheme row 2(c)(iii) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -246,6 +244,24 @@
          ]
         }
        ]
+      },
+      {
+       "label": "2(c)(ii)",
+       "text": "M2 (precipitate) dissolves / (precipitate) disappears / green\nsolution in excess",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 10,
+         "bbox": [
+          58.0,
+          275.6,
+          783.9199829101562,
+          399.1
+         ]
+        }
+       ]
       }
      ],
      "content": [
@@ -296,8 +312,8 @@
      "path": "2(c)(ii)",
      "mark_scheme": [
       {
-       "label": "2(c)(ii)",
-       "text": "M2 (precipitate) dissolves / (precipitate) disappears / green\nsolution in excess",
+       "label": "2(c)(iii)",
+       "text": "white precipitate",
        "codes": [
         "1"
        ],
@@ -306,9 +322,9 @@
          "page": 10,
          "bbox": [
           58.0,
-          275.6,
+          401.3,
           783.9199829101562,
-          399.1
+          448.8
          ]
         }
        ]
@@ -338,26 +354,6 @@
     }
    ],
    "path": "2(c)",
-   "mark_scheme": [
-    {
-     "label": "2(c)(iii)",
-     "text": "white precipitate",
-     "codes": [
-      "1"
-     ],
-     "segments": [
-      {
-       "page": 10,
-       "bbox": [
-        58.0,
-        401.3,
-        783.9199829101562,
-        448.8
-       ]
-      }
-     ]
-    }
-   ],
    "content": [
     {
      "type": "text",
