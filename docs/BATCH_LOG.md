@@ -4,7 +4,7 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 
 | Batch | Sessions | Papers | Build | GitHub | Claude 1 | Claude 2 | Fix | Ours | Round items | New errors | Repeats | Tokens |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| C0 | 2005-MJ 2015-MJ 2024-MJ 2026-MJ | 56 | 9.0 | 0.2 | 79.2 | 0.0 | 33.5 | 121.7 | 16 | 23 | 1 | n/a |
+| C0 | 2005-MJ 2015-MJ 2024-MJ 2026-MJ | 56 | 9.0 | 0.2 | 79.2 | 0.0 | 58.0 | 146.2 | 16 | 26 | 1 | n/a |
 | M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 257.5 | 51.4 | 2766.0 | 3084.4 | 40 | 58 | 5 | n/a |
 | M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 | 11.7 | 97.4 | 191.6 | 0.0 | 30.1 | 233.4 | 23 | 42 | 2 | n/a |
 | M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 117 | 100.3 | 131.2 | 0.0 | 0.0 | 0.0 | 100.3 | 13 | 28 | 4 | n/a |
@@ -39,6 +39,9 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - [new] pattern 300: question sentences inside options-table picture → trim prose above the drawn ink (found by claude)
 - [new] pattern 301: MS label slips one row per part → map by order (found by claude)
 - [new] pattern 302: practical marking points numbered (i)(ii)(iii) → group by M-number (found by claude)
+- [new] pattern 303: 2026 12 q3: header and atom notation drawn as letter outlines were grabbed as cell pictures; question text in a table box became a picture → letter-shaped outlines are not drawing pieces (store, store_options CHEM_LETTERS); prose trimmed before the option grid; chem_drawn_text.json types drawn text (found by dhruv)
+- [new] pattern 304: 2026 61 q2 row 3: thermometer tube walls (82 pt lines) taken as table rules, so the cell picture fell apart and the scale numbers stayed text → thin lines up to 90 pt also count as drawing pieces in _chem_cell_pictures (found by dhruv)
+- [new] pattern 305: 2026 52 q1 MS Q column showed the print's labels (1(a)(i)-(iv), 1b(i), 1(c)(iii)) for parts the paper numbers differently → chemistry: rows remapped by 301/302 show the paper's label in the Q column (ms_layout, run.py) (found by dhruv)
 
 ### M0
 - [new] pattern 64: equation-editor symbol fonts drew # for x etc. in print and text → store_text MATHS_GLYPHS/MATHS_WIDE by eye (found by claude)

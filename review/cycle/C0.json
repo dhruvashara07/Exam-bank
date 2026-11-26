@@ -34,13 +34,17 @@
    },
    {
     "start": "2026-11-26T04:03:32+00:00",
-    "end": null
+    "end": "2026-11-26T04:29:54+00:00"
    }
   ],
   "fix": [
    {
     "start": "2026-11-26T03:30:03+00:00",
     "end": "2026-11-26T04:03:32+00:00"
+   },
+   {
+    "start": "2026-11-26T04:29:54+00:00",
+    "end": "2026-11-26T04:54:22+00:00"
    }
   ]
  },
@@ -262,6 +266,30 @@
    "fix": "group by M-number",
    "found_by": "claude",
    "at": "2026-11-26T04:03:32Z"
+  },
+  {
+   "pattern": "303",
+   "kind": "new",
+   "what": "2026 12 q3: header and atom notation drawn as letter outlines were grabbed as cell pictures; question text in a table box became a picture",
+   "fix": "letter-shaped outlines are not drawing pieces (store, store_options CHEM_LETTERS); prose trimmed before the option grid; chem_drawn_text.json types drawn text",
+   "found_by": "dhruv",
+   "at": "2026-11-26T04:54:22+00:00"
+  },
+  {
+   "pattern": "304",
+   "kind": "new",
+   "what": "2026 61 q2 row 3: thermometer tube walls (82 pt lines) taken as table rules, so the cell picture fell apart and the scale numbers stayed text",
+   "fix": "thin lines up to 90 pt also count as drawing pieces in _chem_cell_pictures",
+   "found_by": "dhruv",
+   "at": "2026-11-26T04:54:22+00:00"
+  },
+  {
+   "pattern": "305",
+   "kind": "new",
+   "what": "2026 52 q1 MS Q column showed the print's labels (1(a)(i)-(iv), 1b(i), 1(c)(iii)) for parts the paper numbers differently",
+   "fix": "chemistry: rows remapped by 301/302 show the paper's label in the Q column (ms_layout, run.py)",
+   "found_by": "dhruv",
+   "at": "2026-11-26T04:54:22+00:00"
   }
  ],
  "tokens": [],
@@ -397,6 +425,30 @@
   {
    "at": "2026-11-26T04:03:32+00:00",
    "task": "phase C0 review"
+  },
+  {
+   "at": "2026-11-26T04:29:54+00:00",
+   "task": "phase C0 review"
+  },
+  {
+   "at": "2026-11-26T04:29:54+00:00",
+   "task": "phase C0 fix"
+  },
+  {
+   "at": "2026-11-26T04:54:22+00:00",
+   "task": "phase C0 fix"
+  },
+  {
+   "at": "2026-11-26T04:54:22+00:00",
+   "task": "error C0 --pattern"
+  },
+  {
+   "at": "2026-11-26T04:54:22+00:00",
+   "task": "error C0 --pattern"
+  },
+  {
+   "at": "2026-11-26T04:54:22+00:00",
+   "task": "error C0 --pattern"
   }
  ]
 }

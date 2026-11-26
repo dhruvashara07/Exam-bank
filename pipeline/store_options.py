@@ -65,6 +65,9 @@ def labels(page, box, reach=30):
     return {k: [r for r, b in v] for k, v in out.items()}
 
 
+CHEM_LETTERS = False         # set by store.build for chemistry
+
+
 def _segments(page, box, detail=False):
     """Straight axis-aligned rule segments inside box, and whether anything else (curves, slanted lines,
     filled shapes that are not thin rules) is drawn there. detail=True: the third value is a dict
@@ -77,6 +80,9 @@ def _segments(page, box, detail=False):
             continue
         if (dr.get('fill_opacity') or 1) < 0.3 and dr['type'] == 'f':
             continue
+        if CHEM_LETTERS and dr.get('fill') is not None and dr['type'] == 'f' and r.width <= 11 and r.height <= 12 \
+                and min(r.width, r.height) >= 1.2 and len(dr['items']) >= 4:
+            continue                          # chemistry: a letter printed as an outline is text, not drawing (2026 MJ 12 q3, 303)
         for it in dr['items']:
             k = it[0]
             if k == 'l':

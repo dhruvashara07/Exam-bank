@@ -135,6 +135,19 @@ def _chem_structures(doc, pno, clip, store):
     return out
 
 
+def _chem_drawn_text(doc, pno, clip):
+    """pipeline/chem_drawn_text.json: text printed as letter outlines (2026 MJ 12 q3 table header '... one atom of 7/3 Li'),
+    read by eye: the entries of this paper and page that lie inside clip."""
+    import subjects
+    m_ = re.search(r'/(\d{4})/(\d{4})-([A-Z]{2})/qp_(\d{2})', (doc.name or '').replace('\\', '/'))
+    if not m_:
+        return []
+    pid = f'{m_.group(1)}_{m_.group(2)}{m_.group(3)}_{m_.group(4)}'
+    fp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'chem_drawn_text.json')
+    data = json.load(open(fp)) if os.path.exists(fp) else {}
+    return [e for e in data.get(pid, []) if e['page'] == pno + 1 and clip.contains(fitz.Rect(e['box']))]
+
+
 def _chem_cell_pictures(doc, pno, clip, store):
     """Chemistry question tables with a drawing in a cell (2024 MJ 61 Table 2.1: a thermometer scale per row): each drawing
     is ONE picture placed in its cell, the table text stays text (Dhruv round 41, ERROR_PATTERNS 290). A drawing = pieces
@@ -150,9 +163,11 @@ def _chem_cell_pictures(doc, pno, clip, store):
         if not r.intersects(clip):
             continue
         if max(r.width, r.height) > 40 and min(r.width, r.height) < 2.5:
-            rules.append(r)                                              # a table rule
-        elif max(r.width, r.height) <= 70:
-            short.append((r, len(d['items'])))                           # a piece of a drawing (a scale path counts its strokes)
+            rules.append(r)                                              # a table rule (or a long tube wall: below)
+        if max(r.width, r.height) <= 90 and not (d.get('fill') is not None and d['type'] == 'f' and r.width <= 9 and r.height <= 10
+                                                  and min(r.width, r.height) >= 1.2):
+            short.append((r, len(d['items'])))     # a piece of a drawing (a scale path counts its strokes); not a letter drawn
+            #   as an outline (curved, filled, letter-sized: 2026 MJ 12 q3 header 'one atom of 7/3 Li', Dhruv round 42)
     groups = []
     for r, k in short:
         rr = r + (-3, -3, 3, 3)
@@ -198,6 +213,8 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
     chem_pics = (_chem_structures(doc, pno, clip, store) if docname == 'ms' else _chem_cell_pictures(doc, pno, clip, store)) \
         if _is_chem_doc(doc) else []
     boxes += [b_ for b_, _ in chem_pics]          # (their letters / bonds are not laid out one by one)
+    drawn_txt = _chem_drawn_text(doc, pno, clip) if docname != 'ms' and _is_chem_doc(doc) else []
+    boxes += [fitz.Rect(e['box']) for e in drawn_txt]     # text printed as letter outlines: replaced by its words (303)
     capboxes = [fitz.Rect(f['caption_box']) for f in figs if f.get('caption_box') and f['source']['page'] == pno + 1]
     def in_fig(r):
         return any(r.x0 >= b.x0 - 1.5 and r.y0 >= b.y0 - 1.5 and r.x1 <= b.x1 + 1.5 and r.y1 <= b.y1 + 1.5 for b in boxes)
@@ -517,6 +534,9 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
         b = fitz.Rect(f['source']['box'])
         if inside(b):
             u['figs'].append({'id': f['id'], 'x': round(b.x0 - ox, 2), 'y': round(b.y0 - oy, 2)})
+    for e in drawn_txt:
+        for t_ in e['tokens']:
+            u['text'].append(dict(t_, x=round(t_['x'] - ox, 2), y=round(t_['y'] - oy, 2)))
     for b_, name_ in chem_pics:                   # chemistry: a displayed formula drawn in a mark-scheme cell = ONE picture (vector)
         u.setdefault('images', []).append({'file': name_, 'x': round(b_.x0 - ox, 2), 'y': round(b_.y0 - oy, 2),
                                            'w': round(b_.width, 2), 'h': round(b_.height, 2), 'structure': 1})
@@ -931,7 +951,9 @@ def _chem_trim_prose(pg, b):
     for d in pg.get_drawings():
         r = (d['rect'].quad * m).rect
         r = fitz.Rect(r.x0 - 0.3, r.y0 - 0.3, r.x1 + 0.3, r.y1 + 0.3)
-        if r.intersects(b) and max(r.width, r.height) > 8:
+        letter = d.get('fill') is not None and d['type'] == 'f' and r.width <= 11 and r.height <= 12 and \
+            min(r.width, r.height) >= 1.2                      # a letter drawn as an outline ('7/3 Li' in the question line)
+        if r.intersects(b) and max(r.width, r.height) > 8 and not letter:
             ink.append(r.y0)
     if not ink:
         return b
@@ -964,7 +986,9 @@ def save_figure(f, q, meta, qdoc, store):
         import subjects
         mx_ = subjects.subject(meta['syllabus'])['maths_text']
         if subjects.is_chem(meta['syllabus']) and '_opt' not in f['id']:
-            b = _chem_trim_prose(pg, b)           # question sentences above the drawn table are text, not picture (300)
+            b_ = _chem_trim_prose(pg, b)          # question sentences above the drawn table are text, not picture (300)
+            if b_ != b:                           # (the layout reads the figure's own box: keep it in step, round 42)
+                b = b_; f = dict(f, bbox=list(b), svg=None)
         if subjects.is_chem(meta['syllabus']) and '_opt' in f['id']:
             nb = fitz.Rect(b)     # chemistry MCQ option pictures: diagram_options cut them exactly; growing pulled the NEXT
         else:                     # option's atoms in, row after row (2026 MJ 23 q36, ERROR_PATTERNS 299)
@@ -1066,6 +1090,7 @@ def build(pid):
     store = paths.store_dir(pid)
     import subjects
     MATHS_TEXT = subjects.subject(meta['syllabus'])['maths_text']
+    OPT.CHEM_LETTERS = subjects.is_chem(meta['syllabus'])        # (store_options: outlined letters are text, 303)
     V5.MATHS[0] = bool(MATHS_TEXT)
     shutil.rmtree(store, ignore_errors=True)
     for d in ('figures', 'glyphs'):
@@ -1094,6 +1119,10 @@ def build(pid):
             pg, b = qdoc[f['page'] - 1], fitz.Rect(f['bbox'])
             SIBLINGS[:] = [fitz.Rect(o['bbox']) for o in q.get('figures', []) if o is not f and o['page'] == f['page']]
             is_tab = (f.get('caption') or '').startswith('Table')
+            if subjects.is_chem(meta['syllabus']):  # question sentences above a drawn table are text: trim BEFORE the
+                b_ = _chem_trim_prose(pg, b)         # table test, so the table itself can be text + rules (303)
+                if b_ != b:
+                    b = b_; f = dict(f, bbox=list(b), svg=None)
             g = OPT.grid(pg, b, table=is_tab)
             tt = None
             if not g and is_tab:                    # no closed grid: a borderless table is text too; a caption-only crop is no figure

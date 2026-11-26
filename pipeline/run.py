@@ -238,6 +238,7 @@ def process(qp_path):
                     ks = n.get('parts', [])
                     return [pth] if not ks else [x for k_ in ks for x in leaf_paths(k_, pth + (k_["label"],))]
                 lv = leaf_paths(q, (q['number'],))
+                _plab = lambda p_: str(p_[0]) + ''.join(f'({x})' for x in p_[1:])
                 mine = [r for r in ms_rows if r['path'][0] == q['number']]
                 seen_, odd_ = set(), set()     # rows whose label is no part, or a part already used (printed twice)
                 for i_, r_ in enumerate(mine):
@@ -248,6 +249,7 @@ def process(qp_path):
                         tuple(r_['path']) == lv[i_] for i_, r_ in enumerate(mine) if i_ not in odd_):
                     for i_, r_ in enumerate(mine):  # one row per part, in order, some labels misprinted ('2(b)' twice for
                         r_['path'] = lv[i_]         # 2(b) and 2(f), 2024 MJ 33; '6(e)(ii)' '6(f)' for 6(d)(ii) 6(e), 32): by order (301)
+                        r_['label'] = _plab(lv[i_])  # (the Q column shows the paper's label, Dhruv round 42)
                 if chem and odd_ and not (len(mine) == len(lv)):   # 2026 practical: every row is ONE marking point, a part's
                     grp_ = []                      # points run M1, M2, M3 while the rows are numbered (i), (ii), (iii)... (302)
                     for r_ in mine:
@@ -266,11 +268,13 @@ def process(qp_path):
                         for i_, g_ in enumerate(grp_):
                             for r_ in g_:
                                 r_['path'] = lv[i_]
+                                r_['label'] = _plab(lv[i_])
                 if chem:                   # chemistry practical MS numbers its marking points '1(a)(i)'-'(iv)' under a part the
                     for r_ in mine:        # paper does not split (2026 MJ 51/52): the row belongs to that part (ERROR_PATTERNS 289)
                         p_ = tuple(r_['path'])
                         if p_ not in lv and len(p_) > 1 and p_[:-1] in lv:
                             r_['path'] = list(p_[:-1]) if isinstance(r_['path'], list) else p_[:-1]
+                            r_['label'] = _plab(p_[:-1])
                 named = {tuple(r['path']) for r in mine}
                 orphan = [r for r in mine if tuple(r['path']) not in lv and not any(tuple(r['path'])[:len(x)] == x for x in lv)
                           and not any(x[:len(r['path'])] == tuple(r['path']) for x in lv)]

@@ -883,3 +883,13 @@ picture (2026 MJ 12 q3, 2015 MJ 11 q1); extra marking points (iii)/(iv) under a 
 302. (open item) 2026 practical MS: one row per marking point, numbered (i), (ii), (iii) while the part's points run M1 M2
     M3. -> chemistry: group rows by M-number (a new part at M1 or no M; '+ M2' after a charge counts), map groups to parts
     in order when the count and every part's marks match.
+303. (round 42, 2026 MJ 12 q3: 'no need for image, simple table and text and atom notation') a table whose header and
+    atom notation are drawn letter outlines (no text layer) was cut as cell pictures. -> chemistry: filled letter-sized
+    outlines are never drawing pieces (store._chem_cell_pictures, store_options CHEM_LETTERS); prose is trimmed before the
+    option grid; drawn text is typed once in pipeline/chem_drawn_text.json (paper, page, box, tokens).
+304. (round 42, 2026 MJ 61 q2: 'number beside thermometer should be part of image') thermometer tube walls are 82 pt thin
+    lines, so they were taken as table rules and that cell's picture fell apart. -> thin lines up to 90 pt also count as
+    drawing pieces (they stay rules too); all thermometer/syringe/cylinder cells of C0 are pictures with their scale numbers.
+305. (round 42, 2026 MJ 52 q1: 'check by yourself') the MS rows were mapped right (301/302) but the Q column still showed
+    the print's slips ('1(a)(i)'... for an unsplit (a), '1b(i)', '1(e)' for (e)(i)). -> chemistry: a remapped row shows the
+    question paper's label (run.py sets the label; ms_layout rewrites the Q cell, centred, shrunk to fit).

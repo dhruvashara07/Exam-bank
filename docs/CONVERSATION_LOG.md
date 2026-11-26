@@ -665,3 +665,13 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   false hits on Guidance-heavy rows (hint only).
 - All open C0 items fixed (MCQ option crops - caused by my own 285 rule; question text in option tables; label slips by order;
   practical marking points by M-number). Round 42 = 9 recheck items.
+
+## 2026-11-26 (round 42, chemistry C0 finished)
+- Round 42: 6 ok, 3 wrong. Fixed as classes: 303 tables of drawn letter outlines (2026 12 q3) are text, with drawn text typed
+  once in chem_drawn_text.json; 304 thermometer tube walls (82 pt lines) were read as table rules - now also drawing pieces,
+  so every thermometer/syringe cell is one picture with its numbers; 305 2026 52 q1 had correct row mapping but the print's
+  label slips in the Q column - the paper's label is now shown.
+- Side effect checked by eye: 6 MCQ tables that were pictures are now text tables (better); new cell pictures in 2024 63,
+  2026 62/63, 2005 06 correct. A local rebuild of single golden papers empties same_as (stubs become full): not a code
+  change; restored.
+- C0 approved (56 papers). Pilot complete.

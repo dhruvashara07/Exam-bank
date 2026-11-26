@@ -10,6 +10,7 @@ Units are the same layout units as everywhere else (draw with store.unit_svg).
 """
 import collections
 import os, json, copy, re
+import fitz
 import ms_portrait as MP
 import subjects
 from ms import MS_RELABEL, MS_SPLIT
@@ -1926,6 +1927,18 @@ def build(q, store):
             problems += [(r['label'], p) for p in MP.check(u, v)]
         if total_row is None and info['mode'] == 'wrap' and any(re.fullmatch(r'Total:?', t['t']) for t in v['text']):
             v, total_row = _split_total(v, info)      # the printed Total can sit in any row (rows follow the parts' order)
+        if v is not None and MP.CHEM and info.get('mode') == 'wrap' and r.get('label') and info.get('new_edges'):
+            qt_ = sorted((t for t in v['text'] if t['x'] < info['new_edges'][0] - 2), key=lambda t: (t['y'], t['x']))
+            pr_ = ''.join(t['t'] for t in qt_).replace(' ', '')
+            if qt_ and re.match(r'\d', pr_) and pr_ != r['label']:   # chemistry: a misprinted label ('1b(i)', marking points
+                t0 = qt_[0]                                    # '(iii)' of a part the paper does not split) shows the
+                sz_ = t0.get('s', 11)                          # paper's own (304)
+                while fitz.get_text_length(r['label'], 'helv', sz_) > info['new_edges'][0] - 6 and sz_ > 7:
+                    sz_ -= 0.5
+                t0['t'] = r['label']; t0['s'] = sz_; t0['w'] = round(fitz.get_text_length(r['label'], 'helv', sz_), 2)
+                t0['x'] = round((info['new_edges'][0] - t0['w']) / 2, 2); t0.pop('b', None)
+                ids_ = {id(t) for t in qt_[1:]}
+                v['text'] = [t for t in v['text'] if id(t) not in ids_]
         if v is not None:
             out.append((v, info, u))
     if first is None and expected == 4 and MP.EQUAL_FLEX:   # maths: Q | Answer | Marks | Partial Marks from the printed rules

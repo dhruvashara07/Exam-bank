@@ -23,9 +23,12 @@ Read this first in every session. Update it before ending a session.
   tables, label slips, practical marking points). 2015 paper numbering confirmed online (to 2015: 2 = Core Theory). C0
   rebuilt locally: 56/56 exact, 0 flags, 0 blocking. Freeze: golden 0, nothing under 0625/0607, maths layout identical.
   Round 42 (recheck, 9 items) on the own-account page https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e.
-- NEXT: (1) Round 42 (Dhruv): read feedback_r42 (db_list, slug b3c8a710-c92b-4a33-95b2-f7eba1bc0031); fix any wrong item as a
-  class, freeze checks, close + drop round 42, approve C0 (approve.py), docs, push. Then C1 (CHEM_PLAN 6) in a new chat; add the
-  Marks-column sum check (ERROR_PATTERNS 295) to chemistry pass 1 first (as a hint: Guidance rows give false hits).
+- 2026-11-26: round 42 closed (9 answers: 6 ok, 3 wrong), all 3 fixed as classes (patterns 303-305): drawn-letter tables are
+  text, thermometer tube walls join their cell picture, MS Q column shows the paper's labels after remapping. C0 rebuilt: 56/56
+  exact, 0 flags. Freeze: golden 0, nothing under 0625/0607, maths layout identical (192/192), ms_rebuild list = baseline.
+  C0 APPROVED (56 papers). Pilot done.
+- NEXT: (1) C1 (CHEM_PLAN 6) in a new chat; first add the Marks-column sum check (ERROR_PATTERNS 295) to chemistry pass 1
+  (as a hint: Guidance rows give false hits).
   (2) Maths round 40 (shared account) is still open - see the maths NEXT below.
 
 ## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md
