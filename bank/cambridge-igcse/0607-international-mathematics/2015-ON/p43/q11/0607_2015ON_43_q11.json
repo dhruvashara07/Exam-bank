@@ -64,7 +64,7 @@
        "page": 6,
        "bbox": [
         40.9370002746582,
-        329.8,
+        326.1,
         554.3389892578125,
         350.0
        ]
@@ -187,10 +187,7 @@
      "label": "11(c)",
      "text": "–6 and 2",
      "codes": [
-      "4",
-      "2",
-      "2",
-      "2"
+      "4"
      ],
      "segments": [
       {
@@ -278,11 +275,9 @@
      "mark_scheme": [
       {
        "label": "11(d)(i)",
-       "text": "2− x\noe final answer\nx\nlog x\nlog x or\n2\nlog2",
+       "text": "2− x\noe final answer\nx",
        "codes": [
-        "3",
-        "2",
-        "2"
+        "3"
        ],
        "segments": [
         {
@@ -291,7 +286,7 @@
           40.9370002746582,
           480.8,
           554.3389892578125,
-          619.0
+          568.0
          ]
         }
        ]
@@ -342,7 +337,26 @@
      "text": "h(x).\nAnswer(d)(ii)  ................................................................ [2]",
      "marks": 2,
      "path": "11(d)(ii)",
-     "mark_scheme_on": "11",
+     "mark_scheme": [
+      {
+       "label": "11(d)(ii)",
+       "text": "log x\nlog x or\n2\nlog2",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          40.9370002746582,
+          575.8,
+          554.3389892578125,
+          619.0
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -438,14 +452,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "11",
-   "text": "",
-   "codes": [],
-   "segments": []
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

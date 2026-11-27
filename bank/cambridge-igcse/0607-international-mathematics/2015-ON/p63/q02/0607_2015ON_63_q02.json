@@ -24,8 +24,11 @@
  "marks": 4,
  "figures": [],
  "review": {
-  "reasons": [],
-  "status": "auto"
+  "reasons": [
+   "mark scheme row 2(ii) has no matching part in the paper",
+   "mark scheme row 2(iii) has no matching part in the paper"
+  ],
+  "status": "flagged"
  },
  "parts": [
   {
@@ -223,10 +226,8 @@
  "mark_scheme": [
   {
    "label": "2",
-   "text": "χ\noe\nχ\nχ\n[Minimum =] 4\nχ\nχ\nχ\nχ\nχ\nχ\noe\nχ\nχ\nχ\nχ\nχ\noe\n[Minimum =8]\nχ\nχ",
+   "text": "χ\noe\nχ\nχ\n[Minimum =] 4\nχ",
    "codes": [
-    "1",
-    "1",
     "1"
    ],
    "segments": [
@@ -235,6 +236,42 @@
      "bbox": [
       15.197999954223633,
       447.5,
+      580.0769653320312,
+      537.1
+     ]
+    }
+   ]
+  },
+  {
+   "label": "2(ii)",
+   "text": "χ\nχ\nχ\nχ\nχ\noe\nχ",
+   "codes": [
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      15.197999954223633,
+      547.4,
+      580.0769653320312,
+      636.4
+     ]
+    }
+   ]
+  },
+  {
+   "label": "2(iii)",
+   "text": "χ\nχ\nχ\nχ\noe\n[Minimum =8]\nχ\nχ",
+   "codes": [
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      15.197999954223633,
+      641.6,
       580.0769653320312,
       733.4
      ]

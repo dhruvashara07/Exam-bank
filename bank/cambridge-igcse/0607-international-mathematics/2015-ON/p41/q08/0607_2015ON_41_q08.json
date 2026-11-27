@@ -39,10 +39,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "mark scheme row 8(i) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -82,7 +80,7 @@
        "page": 4,
        "bbox": [
         46.35100173950195,
-        607.6,
+        603.9,
         548.89599609375,
         731.1
        ]
@@ -257,7 +255,7 @@
      "mark_scheme": [
       {
        "label": "8(d)(i)",
-       "text": "0.368 or 0.3678 to 0.3679\n0.692 or 0.6922…\n0.692 ⩽ y ⩽ 4 oe",
+       "text": "0.368 or 0.3678 to 0.3679\n0.692 or 0.6922…",
        "codes": [
         "1",
         "1"
@@ -269,7 +267,7 @@
           46.35100173950195,
           127.0,
           548.89599609375,
-          222.2
+          159.8
          ]
         }
        ]
@@ -321,7 +319,24 @@
      "text": "Find the range of g(x) for the domain\n.\n0\n1\nx\n2\nG\nAnswer(d)(ii)  ................................................................. [2]",
      "marks": 2,
      "path": "8(d)(ii)",
-     "mark_scheme_on": "8",
+     "mark_scheme": [
+      {
+       "label": "8(d)(ii)",
+       "text": "0.692 ⩽ y ⩽ 4 oe",
+       "codes": [],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.35100173950195,
+          163.6,
+          548.89599609375,
+          222.2
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -376,7 +391,28 @@
      "text": "Find the values of the following.\ng(0.1) = ..............................      g(0.01) = ..............................      g(0.001) = .............................. [3]",
      "marks": 3,
      "path": "8(e)(i)",
-     "mark_scheme_on": "8(e)",
+     "mark_scheme": [
+      {
+       "label": "8(e)(i)",
+       "text": "0.794 or 0.7943…\n0.955 or 0.9549 to 0.9550\n0.993 or 0.9931…",
+       "codes": [
+        "1",
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.35100173950195,
+          226.0,
+          548.89599609375,
+          271.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -418,7 +454,26 @@
      "text": "Complete the statement.\nStarting from x = 0.1, as x gets closer and closer to 0,\ng(x) gets closer and closer to the value ...................................\n[1]",
      "marks": 1,
      "path": "8(e)(ii)",
-     "mark_scheme_on": "8(e)",
+     "mark_scheme": [
+      {
+       "label": "8(e)(ii)",
+       "text": "1",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.35100173950195,
+          275.2,
+          548.89599609375,
+          295.4
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -453,35 +508,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "8",
-   "text": "",
-   "codes": [],
-   "segments": []
-  },
-  {
-   "label": "8(i)",
-   "text": "0.794 or 0.7943…\n0.955 or 0.9549 to 0.9550\n0.993 or 0.9931…\n1",
-   "codes": [
-    "1",
-    "1",
-    "1",
-    "1"
-   ],
-   "segments": [
-    {
-     "page": 5,
-     "bbox": [
-      46.35100173950195,
-      226.0,
-      548.89599609375,
-      295.4
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

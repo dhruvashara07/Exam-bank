@@ -1,11 +1,32 @@
 {
  "paper": "0607_2015ON_42",
  "pipeline_version": "2.1",
- "checked_at": "2026-11-27T11:16Z",
+ "checked_at": "2026-11-27T13:48Z",
  "clean": true,
  "warnings": 0,
  "problems": [],
- "flags": [],
+ "flags": [
+  {
+   "id": "0607_2015ON_42_q06",
+   "kind": "flag",
+   "detail": "no mark scheme for 6(d)(i), 6(d)(ii), 6(d)(iii)"
+  },
+  {
+   "id": "0607_2015ON_42_q10",
+   "kind": "flag",
+   "detail": "mark scheme row 10(ii) has no matching part in the paper"
+  },
+  {
+   "id": "0607_2015ON_42_q10",
+   "kind": "flag",
+   "detail": "mark scheme row 10(iii) has no matching part in the paper"
+  },
+  {
+   "id": "0607_2015ON_42_q13",
+   "kind": "flag",
+   "detail": "mark scheme row 13(iii) has no matching part in the paper"
+  }
+ ],
  "text_score_min": 0.818,
  "text_scores": {
   "0607_2015ON_42_q01": 1.0,

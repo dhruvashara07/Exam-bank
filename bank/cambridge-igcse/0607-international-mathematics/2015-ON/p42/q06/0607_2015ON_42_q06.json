@@ -39,8 +39,10 @@
   }
  ],
  "review": {
-  "reasons": [],
-  "status": "auto"
+  "reasons": [
+   "no mark scheme for 6(d)(i), 6(d)(ii), 6(d)(iii)"
+  ],
+  "status": "flagged"
  },
  "parts": [
   {
@@ -79,7 +81,7 @@
        "page": 3,
        "bbox": [
         14.461000442504883,
-        355.4,
+        351.7,
         580.843017578125,
         388.2
        ]
@@ -313,7 +315,6 @@
      "text": "the median mark,\nAnswer(d)(i) .................................................................. [1]",
      "marks": 1,
      "path": "6(d)(i)",
-     "mark_scheme_on": "6",
      "content": [
       {
        "type": "text",
@@ -359,7 +360,6 @@
      "text": "the interquartile range,\nAnswer(d)(ii) .................................................................. [2]",
      "marks": 2,
      "path": "6(d)(ii)",
-     "mark_scheme_on": "6",
      "content": [
       {
        "type": "text",
@@ -405,7 +405,6 @@
      "text": "the minimum mark for a candidate to obtain a grade A, given that 15% of students gain a grade A.\nAnswer(d)(iii) .................................................................. [3]",
      "marks": 3,
      "path": "6(d)(iii)",
-     "mark_scheme_on": "6",
      "content": [
       {
        "type": "text",
@@ -439,14 +438,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "6",
-   "text": "",
-   "codes": [],
-   "segments": []
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

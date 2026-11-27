@@ -74,9 +74,28 @@
       }
      ],
      "text": "x = 1,\n.......................................................................",
-     "marks": 0,
+     "marks": 1,
      "path": "5(a)(i)",
-     "mark_scheme_on": "5(a)",
+     "mark_scheme": [
+      {
+       "label": "5(a)(i)",
+       "text": "a + b = 18\noe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          28.663000106811523,
+          210.1,
+          566.583984375,
+          234.0
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -112,9 +131,28 @@
       }
      ],
      "text": "x = 5.\n.......................................................................",
-     "marks": 0,
+     "marks": 1,
      "path": "5(a)(ii)",
-     "mark_scheme_on": "5(a)",
+     "mark_scheme": [
+      {
+       "label": "5(a)(ii)",
+       "text": "125a + 5b = 78\noe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          28.663000106811523,
+          237.7,
+          566.583984375,
+          258.0
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -130,24 +168,6 @@
     }
    ],
    "path": "5(a)",
-   "mark_scheme": [
-    {
-     "label": "5(a)",
-     "text": "",
-     "codes": [],
-     "segments": [
-      {
-       "page": 3,
-       "bbox": [
-        28.663000106811523,
-        511.7,
-        566.583984375,
-        611.4
-       ]
-      }
-     ]
-    }
-   ],
    "content": [
     {
      "type": "text",
@@ -178,23 +198,21 @@
     }
    ],
    "text": "Solve the simultaneous equations from part (a) and write down the model.\n.......................................................................",
-   "marks": 2,
+   "marks": 0,
    "path": "5(b)",
    "mark_scheme": [
     {
      "label": "5(b)",
-     "text": "Accurate oe\nLevels out after 10 years oe",
-     "codes": [
-      "2"
-     ],
+     "text": "3\ny = –0.1x + 18.1x",
+     "codes": [],
      "segments": [
       {
        "page": 3,
        "bbox": [
         28.663000106811523,
-        616.0,
+        261.7,
         566.583984375,
-        661.5
+        332.5
        ]
       }
      ]
@@ -215,14 +233,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "5",
-   "text": "",
-   "codes": [],
-   "segments": []
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

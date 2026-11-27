@@ -6,10 +6,8 @@
  "marks": 18,
  "figures": [],
  "review": {
-  "reasons": [
-   "mark scheme row 7(i) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -63,19 +61,18 @@
      "mark_scheme": [
       {
        "label": "7(a)(i)",
-       "text": "2512 final answer\n34.56 cao",
+       "text": "2512 final answer",
        "codes": [
-        "2",
-        "3"
+        "2"
        ],
        "segments": [
         {
          "page": 4,
          "bbox": [
           46.35100173950195,
-          189.4,
+          185.7,
           548.89599609375,
-          271.5
+          209.6
          ]
         }
        ]
@@ -127,7 +124,26 @@
      "text": "The surface of the cuboid is painted at a cost of 8 cents per cm2.\nCalculate the cost of painting the cuboid.\nGive your answer in dollars.\nAnswer(a)(ii) $  ................................................................. [3]",
      "marks": 3,
      "path": "7(a)(ii)",
-     "mark_scheme_on": "7",
+     "mark_scheme": [
+      {
+       "label": "7(a)(ii)",
+       "text": "34.56 cao",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.35100173950195,
+          213.3,
+          548.89599609375,
+          271.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -277,7 +293,26 @@
      "text": "the largest number of spheres of radius 1.5 cm that can be made,\nAnswer(c)(i)  ................................................................. [3]",
      "marks": 3,
      "path": "7(c)(i)",
-     "mark_scheme_on": "7(c)",
+     "mark_scheme": [
+      {
+       "label": "7(c)(i)",
+       "text": "67",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.35100173950195,
+          307.8,
+          548.89599609375,
+          370.2
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -323,7 +358,26 @@
      "text": "the volume of metal remaining after the spheres have been made,\nAnswer(c)(ii)  ......................................................... cm3 [2]",
      "marks": 2,
      "path": "7(c)(ii)",
-     "mark_scheme_on": "7(c)",
+     "mark_scheme": [
+      {
+       "label": "7(c)(ii)",
+       "text": "12.6 or 12.7 or 12.8\nor 12.62 to 12.82...",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.35100173950195,
+          374.9,
+          548.89599609375,
+          426.4
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -370,7 +424,26 @@
      "text": "the radius of the sphere that can be made using all the remaining metal.\nAnswer(c)(iii)  .......................................................... cm [2]",
      "marks": 2,
      "path": "7(c)(iii)",
-     "mark_scheme_on": "7(c)",
+     "mark_scheme": [
+      {
+       "label": "7(c)(iii)",
+       "text": "1.44 or 1.45 or 1.444 to 1.452 cao",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          46.35100173950195,
+          432.8,
+          548.89599609375,
+          467.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -450,15 +523,7 @@
      "label": "7(d)",
      "text": "3\n8",
      "codes": [
-      "4",
-      "3",
-      "1",
-      "2",
-      "3",
-      "4",
-      "3",
-      "2",
-      "3"
+      "4"
      ],
      "segments": [
       {
@@ -496,43 +561,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "7",
-   "text": "",
-   "codes": [],
-   "segments": []
-  },
-  {
-   "label": "7(i)",
-   "text": "67\n12.6 or 12.7 or 12.8\nor 12.62 to 12.82...\n1.44 or 1.45 or 1.444 to 1.452 cao",
-   "codes": [
-    "3",
-    "3",
-    "3",
-    "3",
-    "3",
-    "2",
-    "3",
-    "3",
-    "4",
-    "3",
-    "2",
-    "3"
-   ],
-   "segments": [
-    {
-     "page": 4,
-     "bbox": [
-      46.35100173950195,
-      307.8,
-      548.89599609375,
-      467.7
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

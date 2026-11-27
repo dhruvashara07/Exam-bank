@@ -64,7 +64,7 @@
        "page": 2,
        "bbox": [
         28.663000106811523,
-        364.3,
+        360.6,
         566.583984375,
         384.5
        ]
@@ -275,14 +275,13 @@
       }
      ],
      "text": "………. , ………. , 421",
-     "marks": 2,
+     "marks": 1,
      "path": "2(d)(i)",
      "mark_scheme": [
       {
        "label": "2(d)(i)",
-       "text": "29, 420\n5100, 5101",
+       "text": "29, 420",
        "codes": [
-        "1",
         "1"
        ],
        "segments": [
@@ -292,7 +291,7 @@
           28.663000106811523,
           506.3,
           566.583984375,
-          550.5
+          526.5
          ]
         }
        ]
@@ -333,9 +332,28 @@
       }
      ],
      "text": "101 , ………. , ……….",
-     "marks": 0,
+     "marks": 1,
      "path": "2(d)(ii)",
-     "mark_scheme_on": "2",
+     "mark_scheme": [
+      {
+       "label": "2(d)(ii)",
+       "text": "5100, 5101",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          28.663000106811523,
+          530.3,
+          566.583984375,
+          550.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "answer",
@@ -362,14 +380,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "2",
-   "text": "",
-   "codes": [],
-   "segments": []
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

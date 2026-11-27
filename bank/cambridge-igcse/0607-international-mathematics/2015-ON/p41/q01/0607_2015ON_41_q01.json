@@ -24,10 +24,8 @@
  "marks": 11,
  "figures": [],
  "review": {
-  "reasons": [
-   "mark scheme row 1(i) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -54,7 +52,26 @@
    "text": "Write the ratio  80 : 75  in its simplest form.\nAnswer(a).............................  :   ............................... [1]",
    "marks": 1,
    "path": "1(a)",
-   "mark_scheme_on": "1",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "16 : 15",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        46.35100173950195,
+        238.6,
+        548.89599609375,
+        259.9
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -109,10 +126,9 @@
      "mark_scheme": [
       {
        "label": "1(b)(i)",
-       "text": "30\n24.3[0] or 24.29 to 24.30",
+       "text": "30",
        "codes": [
-        "1",
-        "4"
+        "1"
        ],
        "segments": [
         {
@@ -121,7 +137,7 @@
           46.35100173950195,
           262.5,
           548.89599609375,
-          333.3
+          283.8
          ]
         }
        ]
@@ -178,7 +194,26 @@
      "text": "Sunil invests $50 at a rate of 2% per year compound interest.\nCalculate the interest Sunil has after 20 years.\nAnswer(b)(ii) $  ................................................................. [4]",
      "marks": 4,
      "path": "1(b)(ii)",
-     "mark_scheme_on": "1",
+     "mark_scheme": [
+      {
+       "label": "1(b)(ii)",
+       "text": "24.3[0] or 24.29 to 24.30",
+       "codes": [
+        "4"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          46.35100173950195,
+          286.5,
+          548.89599609375,
+          333.3
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -251,7 +286,27 @@
      "text": "Work out how much of the $75 Asha has at the end of the 2nd month.\nAnswer(c)(i) $   ................................................................ [2]",
      "marks": 2,
      "path": "1(c)(i)",
-     "mark_scheme_on": "1(c)",
+     "mark_scheme": [
+      {
+       "label": "1(c)(i)",
+       "text": "48",
+       "codes": [
+        "2",
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          46.35100173950195,
+          336.0,
+          548.89599609375,
+          357.3
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -297,7 +352,26 @@
      "text": "Calculate the number of whole months it takes for Asha to have less than $5.\nAnswer(c)(ii)  ................................................................. [3]",
      "marks": 3,
      "path": "1(c)(ii)",
-     "mark_scheme_on": "1(c)",
+     "mark_scheme": [
+      {
+       "label": "1(c)(ii)",
+       "text": "13",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          46.35100173950195,
+          359.9,
+          548.89599609375,
+          393.9
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -339,46 +413,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "1",
-   "text": "16 : 15",
-   "codes": [
-    "1"
-   ],
-   "segments": [
-    {
-     "page": 2,
-     "bbox": [
-      46.35100173950195,
-      238.6,
-      548.89599609375,
-      259.9
-     ]
-    }
-   ]
-  },
-  {
-   "label": "1(i)",
-   "text": "48\n13",
-   "codes": [
-    "2",
-    "2",
-    "3"
-   ],
-   "segments": [
-    {
-     "page": 2,
-     "bbox": [
-      46.35100173950195,
-      336.0,
-      548.89599609375,
-      393.9
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

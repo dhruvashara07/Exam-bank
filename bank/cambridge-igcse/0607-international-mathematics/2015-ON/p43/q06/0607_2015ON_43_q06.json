@@ -86,9 +86,6 @@
      "label": "6(a)",
      "text": "6280 or 6283 to 6284",
      "codes": [
-      "3",
-      "3",
-      "2",
       "3"
      ],
      "segments": [
@@ -96,7 +93,7 @@
        "page": 4,
        "bbox": [
         40.9370002746582,
-        111.1,
+        99.3,
         554.3389892578125,
         170.4
        ]
@@ -177,22 +174,10 @@
      "mark_scheme": [
       {
        "label": "6(b)(i)",
-       "text": "1\n1\n2\n2\n×π ×10 ×30−\n×π ×5 ×15oe\n3\n3\n2748.8 to 2749.3\n1.96 or 1.963 to 1.964",
+       "text": "1\n1\n2\n2\n×π ×10 ×30−\n×π ×5 ×15oe\n3\n3\n2748.8 to 2749.3",
        "codes": [
         "M3",
-        "7",
-        "1",
-        "2",
-        "8",
-        "3",
-        "7",
-        "8",
-        "1",
-        "2",
-        "3",
-        "A1",
-        "3",
-        "2"
+        "A1"
        ],
        "segments": [
         {
@@ -201,7 +186,7 @@
           40.9370002746582,
           176.8,
           554.3389892578125,
-          457.7
+          380.4
          ]
         }
        ]
@@ -248,7 +233,26 @@
      "text": "Calculate the amount of water that has been poured into the cylinder.\nGive your answer in litres.\nAnswer(b)(ii)  ....................................................... litres [3]",
      "marks": 3,
      "path": "6(b)(ii)",
-     "mark_scheme_on": "6",
+     "mark_scheme": [
+      {
+       "label": "6(b)(ii)",
+       "text": "1.96 or 1.963 to 1.964",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          40.9370002746582,
+          384.6,
+          554.3389892578125,
+          457.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -288,27 +292,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "6",
-   "text": "",
-   "codes": [
-    "2",
-    "2"
-   ],
-   "segments": [
-    {
-     "page": 4,
-     "bbox": [
-      40.9370002746582,
-      99.3,
-      554.3389892578125,
-      111.1
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

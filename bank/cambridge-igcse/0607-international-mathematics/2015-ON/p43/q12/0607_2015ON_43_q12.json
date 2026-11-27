@@ -80,7 +80,7 @@
        "page": 7,
        "bbox": [
         40.9370002746582,
-        103.0,
+        96.3,
         554.3389892578125,
         213.1
        ]
@@ -215,7 +215,26 @@
      "text": "x\n(ii)\ny\n2\n- .\n5\n=\nAnswer(b)(ii)  ................................................................ [1]",
      "marks": 1,
      "path": "12(b)(ii)",
-     "mark_scheme_on": "12",
+     "mark_scheme": [
+      {
+       "label": "12(b)(ii)",
+       "text": "y = –5",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          40.9370002746582,
+          260.0,
+          554.3389892578125,
+          284.0
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -274,9 +293,8 @@
    "mark_scheme": [
     {
      "label": "12(c)",
-     "text": "y = –5\nx > 2.9[0] or 2.897…",
+     "text": "x > 2.9[0] or 2.897…",
      "codes": [
-      "1",
       "2"
      ],
      "segments": [
@@ -284,7 +302,7 @@
        "page": 7,
        "bbox": [
         40.9370002746582,
-        260.0,
+        284.0,
         554.3389892578125,
         316.4
        ]
@@ -320,14 +338,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "12",
-   "text": "",
-   "codes": [],
-   "segments": []
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",
