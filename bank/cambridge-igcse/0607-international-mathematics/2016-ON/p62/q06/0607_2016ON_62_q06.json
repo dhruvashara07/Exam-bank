@@ -21,7 +21,7 @@
   }
  ],
  "text": "1\nRosie’s grandmother gave her $10 on her 1st birthday.\nOn each birthday after that her grandmother gave her $5 more than she gave Rosie on her last birthday.",
- "marks": 2,
+ "marks": 3,
  "figures": [],
  "review": {
   "reasons": [],
@@ -55,18 +55,18 @@
    "mark_scheme": [
     {
      "label": "6(a)",
-     "text": "n − 1\nA = d × 1.1",
+     "text": "30",
      "codes": [
       "1"
      ],
      "segments": [
       {
-       "page": 5,
+       "page": 4,
        "bbox": [
         40.97999954223633,
-        239.1,
+        125.2,
         554.3399658203125,
-        261.2
+        147.4
        ]
       }
      ]
@@ -112,18 +112,18 @@
    "mark_scheme": [
     {
      "label": "6(b)",
-     "text": "20",
+     "text": "[A =] 5n + 5 or [A=] 10 + 5(n – 1) isw",
      "codes": [
       "1"
      ],
      "segments": [
       {
-       "page": 5,
+       "page": 4,
        "bbox": [
         40.97999954223633,
-        263.0,
+        149.2,
         554.3399658203125,
-        287.4
+        171.3
        ]
       }
      ]
@@ -164,9 +164,28 @@
     }
    ],
    "text": "Use your model to show that Rosie received $105 from her grandmother on her 20th birthday.",
-   "marks": 0,
+   "marks": 1,
    "path": "6(c)",
-   "mark_scheme_on": "6",
+   "mark_scheme": [
+    {
+     "label": "6(c)",
+     "text": "5 × 20 + 5\nor 10 + 5(20 – 1)\nor 100 + 5\nor 10 + 5 × 19",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        40.97999954223633,
+        173.1,
+        554.3399658203125,
+        210.2
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -177,14 +196,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "6",
-   "text": "",
-   "codes": [],
-   "segments": []
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",
@@ -196,7 +207,7 @@
  "variant": 2,
  "paper_code": "0607/62",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 2,
+ "total_marks": 3,
  "topic": null,
  "subtopic": null,
  "keywords": [],

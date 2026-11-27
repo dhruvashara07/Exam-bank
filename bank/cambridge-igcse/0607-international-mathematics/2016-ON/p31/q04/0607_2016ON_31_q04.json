@@ -76,9 +76,8 @@
      "mark_scheme": [
       {
        "label": "4(a)(i)",
-       "text": "M O E Y\ncao\nO N",
+       "text": "M O E Y\ncao",
        "codes": [
-        "2",
         "2"
        ],
        "segments": [
@@ -88,7 +87,7 @@
           28.200000762939453,
           266.2,
           567.1799926757812,
-          337.5
+          300.9
          ]
         }
        ]
@@ -135,7 +134,26 @@
      "text": "rotational symmetry.\n.................................................... [2]",
      "marks": 2,
      "path": "4(a)(ii)",
-     "mark_scheme_on": "4",
+     "mark_scheme": [
+      {
+       "label": "4(a)(ii)",
+       "text": "O N",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          28.200000762939453,
+          302.8,
+          567.1799926757812,
+          337.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -219,10 +237,9 @@
      "mark_scheme": [
       {
        "label": "4(b)(i)",
-       "text": "[AB = ] 12\n[DF = ] 5\n54 : 6 oe",
+       "text": "[AB = ] 12\n[DF = ] 5",
        "codes": [
-        "3",
-        "2"
+        "3"
        ],
        "segments": [
         {
@@ -231,7 +248,7 @@
           28.200000762939453,
           339.4,
           567.1799926757812,
-          459.1
+          386.7
          ]
         }
        ]
@@ -285,7 +302,24 @@
      "text": "Find the ratio    area of triangle ABC : area of triangle DEF.\n.......................... : .......................... [2]",
      "marks": 2,
      "path": "4(b)(ii)",
-     "mark_scheme_on": "4",
+     "mark_scheme": [
+      {
+       "label": "4(b)(ii)",
+       "text": "54 : 6 oe",
+       "codes": [],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          28.200000762939453,
+          390.9,
+          567.1799926757812,
+          459.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -320,14 +354,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "4",
-   "text": "",
-   "codes": [],
-   "segments": []
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

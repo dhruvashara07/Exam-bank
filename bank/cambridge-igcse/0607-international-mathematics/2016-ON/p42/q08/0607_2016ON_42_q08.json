@@ -52,19 +52,16 @@
    "mark_scheme": [
     {
      "label": "8(a)",
-     "text": "or\nor\n3\n3\n9",
+     "text": "8\n2 2\n8\nor\nor\n3\n3\n9",
      "codes": [
-      "3",
-      "3",
-      "2",
-      "2"
+      "3"
      ],
      "segments": [
       {
        "page": 4,
        "bbox": [
         40.7400016784668,
-        120.6,
+        106.4,
         553.3200073242188,
         204.9
        ]
@@ -145,16 +142,8 @@
      "mark_scheme": [
       {
        "label": "8(b)(i)",
-       "text": "2\n9 +10 −11\n2\n2\n[cosB] =\noe\n2 × 9 ×10\n0.5 × 9 × 10 × their exact (a)\nLeading to 30 2",
+       "text": "2\n9 +10 −11\n2\n2\n[cosB] =\noe\n2 × 9 ×10",
        "codes": [
-        "2",
-        "2",
-        "2",
-        "2",
-        "M2",
-        "A1",
-        "6",
-        "3",
         "2"
        ],
        "segments": [
@@ -164,7 +153,7 @@
           40.7400016784668,
           211.6,
           553.3200073242188,
-          345.1
+          248.6
          ]
         }
        ]
@@ -211,7 +200,27 @@
      "text": "Using your answer to part (a), show that the exact value of the area of triangle ABC is 302 cm2.\n[3]",
      "marks": 3,
      "path": "8(b)(ii)",
-     "mark_scheme_on": "8",
+     "mark_scheme": [
+      {
+       "label": "8(b)(ii)",
+       "text": "0.5 × 9 × 10 × their exact (a)\nLeading to 30 2",
+       "codes": [
+        "M2",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          40.7400016784668,
+          253.3,
+          553.3200073242188,
+          345.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -241,27 +250,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "8",
-   "text": "8\n2 2\n8",
-   "codes": [
-    "2",
-    "2"
-   ],
-   "segments": [
-    {
-     "page": 4,
-     "bbox": [
-      40.7400016784668,
-      106.4,
-      553.3200073242188,
-      120.6
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

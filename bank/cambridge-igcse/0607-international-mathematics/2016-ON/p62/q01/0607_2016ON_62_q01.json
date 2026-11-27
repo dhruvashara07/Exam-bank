@@ -75,9 +75,28 @@
     }
    ],
    "text": "1\n(a) Another line CD is drawn inside the rectangle PQRS.\nP\nQ\nThe total number of rectangles is now 6.\nA\nB\nC\nD\nS\nR\nThree of the 6 rectangles are PQBA, PQRS and ABRS.\nWrite down the other three rectangles.\n...................................................................................................................................................................",
-   "marks": 0,
+   "marks": 3,
    "path": "1(a)",
-   "mark_scheme_on": "1",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "PQDC\nABDC\nCDRS",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        40.97999954223633,
+        264.4,
+        554.3399658203125,
+        311.8
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -425,26 +444,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "1",
-   "text": "PQDC\nABDC\nCDRS",
-   "codes": [
-    "3"
-   ],
-   "segments": [
-    {
-     "page": 2,
-     "bbox": [
-      40.97999954223633,
-      264.4,
-      554.3399658203125,
-      311.8
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

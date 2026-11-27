@@ -39,10 +39,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "mark scheme row 5(i) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -194,7 +192,26 @@
      "text": "Find the co-ordinates of the local maximum point and the local minimum point.\nMaximum (................ , ...............)\nMinimum (................ , ...............) [3]",
      "marks": 3,
      "path": "5(c)(i)",
-     "mark_scheme_on": "5(c)",
+     "mark_scheme": [
+      {
+       "label": "5(c)(i)",
+       "text": "Maximum (–1.15, 9.08)\nMinimum (1.15, 2.92)",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          18.719999313354492,
+          528.7,
+          576.5399780273438,
+          588.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -247,7 +264,24 @@
      "text": "Find the range of values of k for which\nx\nk\nf\nhas only one solution.\n^h\n=\n.................................................... [1]",
      "marks": 1,
      "path": "5(c)(ii)",
-     "mark_scheme_on": "5(c)",
+     "mark_scheme": [
+      {
+       "label": "5(c)(ii)",
+       "text": "k < 2.92 and k > 9.08",
+       "codes": [],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          18.719999313354492,
+          590.5,
+          576.5399780273438,
+          612.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -341,32 +375,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "5",
-   "text": "",
-   "codes": [],
-   "segments": []
-  },
-  {
-   "label": "5(i)",
-   "text": "Maximum (–1.15, 9.08)\nMinimum (1.15, 2.92)\nk < 2.92 and k > 9.08",
-   "codes": [
-    "3"
-   ],
-   "segments": [
-    {
-     "page": 3,
-     "bbox": [
-      18.719999313354492,
-      528.7,
-      576.5399780273438,
-      612.7
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

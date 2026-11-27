@@ -39,10 +39,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "mark scheme row 2(i) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -220,7 +218,26 @@
      "text": "Calculate the total cost of using all six rooms.\n$ .................................................... [1]",
      "marks": 1,
      "path": "2(c)(i)",
-     "mark_scheme_on": "2(c)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(i)",
+       "text": "1800",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          28.200000762939453,
+          576.0,
+          567.1799926757812,
+          598.2
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -266,7 +283,26 @@
      "text": "For Room 4, find the cost per person to use the room.\n$ .................................................... [1]",
      "marks": 1,
      "path": "2(c)(ii)",
-     "mark_scheme_on": "2(c)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(ii)",
+       "text": "30",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          28.200000762939453,
+          600.0,
+          567.1799926757812,
+          622.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -312,7 +348,26 @@
      "text": "Each person in Room 2 has a lunch that costs $8 per person.\nFind the total amount paid by all six people in Room 2.\n$ .................................................... [2]",
      "marks": 2,
      "path": "2(c)(iii)",
-     "mark_scheme_on": "2(c)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(iii)",
+       "text": "348",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          28.200000762939453,
+          623.9,
+          567.1799926757812,
+          649.0
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -354,34 +409,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "2",
-   "text": "",
-   "codes": [],
-   "segments": []
-  },
-  {
-   "label": "2(i)",
-   "text": "1800\n30\n348",
-   "codes": [
-    "1",
-    "1",
-    "2"
-   ],
-   "segments": [
-    {
-     "page": 2,
-     "bbox": [
-      28.200000762939453,
-      576.0,
-      567.1799926757812,
-      649.0
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

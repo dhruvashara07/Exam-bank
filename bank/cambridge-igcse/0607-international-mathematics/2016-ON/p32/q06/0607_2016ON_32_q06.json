@@ -6,10 +6,8 @@
  "marks": 5,
  "figures": [],
  "review": {
-  "reasons": [
-   "no mark scheme for 6(a), 6(b), 6(c)"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -36,6 +34,26 @@
    "text": "6\n(a) Find the value of   6x + 9y  when x = 2 and y = 5.\n.................................................... [2]",
    "marks": 2,
    "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "57",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        26.15999984741211,
+        155.4,
+        569.1599731445312,
+        190.1
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -77,6 +95,26 @@
    "text": "Simplify.\n6x + 9 − x + 4\n.................................................... [2]",
    "marks": 2,
    "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "5x +13",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        26.15999984741211,
+        192.0,
+        569.1599731445312,
+        214.1
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -123,6 +161,26 @@
    "text": "Factorise.\n6x + 9y\n..................................................... [1]",
    "marks": 1,
    "path": "6(c)",
+   "mark_scheme": [
+    {
+     "label": "6(c)",
+     "text": "3(2x + 3y)",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        26.15999984741211,
+        215.9,
+        569.1599731445312,
+        240.4
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",

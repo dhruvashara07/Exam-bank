@@ -6,10 +6,8 @@
  "marks": 11,
  "figures": [],
  "review": {
-  "reasons": [
-   "mark scheme row 4(i) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -413,9 +411,28 @@
       }
      ],
      "text": "(i) Find the number of 5 by 5 squares on a 20 by 20 grid.\n..............................................",
-     "marks": 0,
+     "marks": 1,
      "path": "4(f)(i)",
-     "mark_scheme_on": "4(f)",
+     "mark_scheme": [
+      {
+       "label": "4(f)(i)",
+       "text": "256",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          20.15999984741211,
+          648.0,
+          575.1599731445312,
+          670.2
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -451,9 +468,28 @@
       }
      ],
      "text": "The number of 5 by 5 squares on an n by n grid is 36.\nFind the value of n.\n..............................................",
-     "marks": 0,
+     "marks": 1,
      "path": "4(f)(ii)",
-     "mark_scheme_on": "4(f)",
+     "mark_scheme": [
+      {
+       "label": "4(f)(ii)",
+       "text": "10",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          20.15999984741211,
+          672.0,
+          575.1599731445312,
+          700.4
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -480,33 +516,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "4",
-   "text": "",
-   "codes": [],
-   "segments": []
-  },
-  {
-   "label": "4(i)",
-   "text": "256\n10",
-   "codes": [
-    "1",
-    "1"
-   ],
-   "segments": [
-    {
-     "page": 2,
-     "bbox": [
-      20.15999984741211,
-      648.0,
-      575.1599731445312,
-      700.4
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

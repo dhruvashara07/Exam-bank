@@ -21,10 +21,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "no mark scheme for 11(a), 11(b), 11(c)"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -51,6 +49,27 @@
    "text": "11\n(a) Steve is growing plants.\nHere are the heights, in centimetres, of 11 plants that he grows.\n27        30        10        25        41        32        27        12        20        29        17\nWork out the median and inter-quartile range of these heights.\nMedian =  ............................................. cm\nInter-quartile range =  ............................................. cm [3]",
    "marks": 3,
    "path": "11(a)",
+   "mark_scheme": [
+    {
+     "label": "11(a)",
+     "text": "Steve\nMedian = 27\nIQR = 13",
+     "codes": [
+      "1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        26.15999984741211,
+        76.3,
+        569.1599731445312,
+        123.8
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -131,6 +150,27 @@
    "text": "Tam is growing the same type of plants.\nThe cumulative frequency curve shows the heights of 80 plants that she grows.\n80\n70\n60\n50\nCumulative\n40\nfrequency\n30\n20\n10\n0\n0\n5\n10\n15\n20\n25\n30\n35\n40\n45\nHeight of plant (cm)\nFind the median and inter-quartile range of the heights of Tam’s plants.\nMedian =  ............................................. cm\nInter-quartile range =   ............................................ cm [3]",
    "marks": 3,
    "path": "11(b)",
+   "mark_scheme": [
+    {
+     "label": "11(b)",
+     "text": "Tam\nMedian = 23\nIQR = 11 or 11.5",
+     "codes": [
+      "1",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        26.15999984741211,
+        125.5,
+        569.1599731445312,
+        173.0
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -189,6 +229,27 @@
    "text": "Use your answers to part (a) and part (b) to compare the heights of Steve’s plants and Tam’s plants.\n...................................................................................................................................................................\n...................................................................................................................................................................\n...................................................................................................................................................................\n............................................................................................................................................................. [2]",
    "marks": 2,
    "path": "11(c)",
+   "mark_scheme": [
+    {
+     "label": "11(c)",
+     "text": "Steve’s plants are taller oe\nTam’s plants have a more consistent height oe",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        26.15999984741211,
+        174.8,
+        569.1599731445312,
+        211.9
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",

@@ -57,17 +57,14 @@
      "label": "9(a)",
      "text": "1.2",
      "codes": [
-      "3",
-      "5",
-      "5",
-      "5"
+      "3"
      ],
      "segments": [
       {
        "page": 4,
        "bbox": [
         28.200000762939453,
-        534.4,
+        512.2,
         567.1799926757812,
         620.6
        ]
@@ -147,11 +144,9 @@
      "mark_scheme": [
       {
        "label": "9(b)(i)",
-       "text": "9\n[0]8 04\n[0]7 55 + their (b)(i) + 5 minutes oe",
+       "text": "9",
        "codes": [
-        "6",
-        "3",
-        "6"
+        "3"
        ],
        "segments": [
         {
@@ -160,7 +155,7 @@
           28.200000762939453,
           625.3,
           567.1799926757812,
-          744.6
+          690.5
          ]
         }
        ]
@@ -212,7 +207,24 @@
      "text": "Work out the time that the bus gets to school.\n.................................................... [1]",
      "marks": 1,
      "path": "9(b)(ii)",
-     "mark_scheme_on": "9",
+     "mark_scheme": [
+      {
+       "label": "9(b)(ii)",
+       "text": "[0]8 04",
+       "codes": [],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          28.200000762939453,
+          692.3,
+          567.1799926757812,
+          714.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -254,7 +266,24 @@
      "text": "Sally takes 5 minutes to walk from the bus to the classroom.\nThe lesson starts at 08 15.\nShow that Sally gets to the classroom before the lesson starts.\n[1]",
      "marks": 1,
      "path": "9(b)(iii)",
-     "mark_scheme_on": "9",
+     "mark_scheme": [
+      {
+       "label": "9(b)(iii)",
+       "text": "[0]7 55 + their (b)(i) + 5 minutes oe",
+       "codes": [],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          28.200000762939453,
+          716.2,
+          567.1799926757812,
+          744.6
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -284,24 +313,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "9",
-   "text": "",
-   "codes": [],
-   "segments": [
-    {
-     "page": 4,
-     "bbox": [
-      28.200000762939453,
-      512.2,
-      567.1799926757812,
-      534.4
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

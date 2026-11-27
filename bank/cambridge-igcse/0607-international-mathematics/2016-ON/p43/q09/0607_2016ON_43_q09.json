@@ -144,15 +144,9 @@
      "mark_scheme": [
       {
        "label": "9(b)(i)",
-       "text": "270\nx\n270\n490\n+\n= 62 oe\nx\nx+4\n270(x + 4) + 490x = 62x(x + 4) oe\nCompletion with no errors\n(31x + 54)(x – 10)\n10 and −\n54\n31\nor 10 because x cannot be negative\n14 cao",
+       "text": "270\nx",
        "codes": [
-        "1",
-        "M1",
-        "M1",
-        "A1",
-        "M1",
-        "B2",
-        "B1"
+        "1"
        ],
        "segments": [
         {
@@ -161,7 +155,7 @@
           18.719999313354492,
           328.6,
           576.5399780273438,
-          530.9
+          364.6
          ]
         }
        ]
@@ -212,7 +206,28 @@
      "text": "Altogether Justine’s car uses 62 litres of fuel for the whole journey.\n2 -\nWrite down an equation in x and show that it simplifies to\nx\nx\n.\n-\n=\n31\n256\n540\n0\n[3]",
      "marks": 3,
      "path": "9(b)(ii)",
-     "mark_scheme_on": "9",
+     "mark_scheme": [
+      {
+       "label": "9(b)(ii)",
+       "text": "270\n490\n+\n= 62 oe\nx\nx+4\n270(x + 4) + 490x = 62x(x + 4) oe\nCompletion with no errors",
+       "codes": [
+        "M1",
+        "M1",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          18.719999313354492,
+          369.1,
+          576.5399780273438,
+          447.2
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -264,7 +279,28 @@
      "text": "-\n(iii) Solve the equation\nx\nx\nto find the distance Justine’s car travels on 1 litre of\n-\n=\n31\n256\n540\n0\nfuel on autoroutes.\n.............................................. km [4]",
      "marks": 4,
      "path": "9(b)(iii)",
-     "mark_scheme_on": "9",
+     "mark_scheme": [
+      {
+       "label": "9(b)(iii)",
+       "text": "(31x + 54)(x – 10)\n10 and −\n54\n31\nor 10 because x cannot be negative\n14 cao",
+       "codes": [
+        "M1",
+        "B2",
+        "B1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          18.719999313354492,
+          448.9,
+          576.5399780273438,
+          530.9
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -303,14 +339,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "9",
-   "text": "",
-   "codes": [],
-   "segments": []
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

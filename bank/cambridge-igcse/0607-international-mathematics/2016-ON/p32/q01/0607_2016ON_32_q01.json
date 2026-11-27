@@ -63,7 +63,29 @@
    "text": "1\n(a) Here is a child’s drawing of a house and the path leading to the door.\nComplete each label with the mathematical name of the shaded shape.\n.......................................\n.......................................\n.......................................\n.......................................\n[4]",
    "marks": 4,
    "path": "1(a)",
-   "mark_scheme_on": "1",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "trapezium\ntriangle\nsquare\nparallelogram",
+     "codes": [
+      "1",
+      "1",
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        26.15999984741211,
+        239.9,
+        569.1599731445312,
+        300.0
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -141,10 +163,9 @@
      "mark_scheme": [
       {
        "label": "1(b)(i)",
-       "text": "2\n2 correct lines",
+       "text": "2",
        "codes": [
-        "1",
-        "2"
+        "1"
        ],
        "segments": [
         {
@@ -153,7 +174,7 @@
           26.15999984741211,
           301.8,
           569.1599731445312,
-          363.1
+          324.0
          ]
         }
        ]
@@ -200,7 +221,26 @@
      "text": "On the rectangle, draw all the lines of symmetry.\n[2]",
      "marks": 2,
      "path": "1(b)(ii)",
-     "mark_scheme_on": "1",
+     "mark_scheme": [
+      {
+       "label": "1(b)(ii)",
+       "text": "2 correct lines",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          26.15999984741211,
+          325.8,
+          569.1599731445312,
+          363.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -230,29 +270,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "1",
-   "text": "trapezium\ntriangle\nsquare\nparallelogram",
-   "codes": [
-    "1",
-    "1",
-    "1",
-    "1"
-   ],
-   "segments": [
-    {
-     "page": 2,
-     "bbox": [
-      26.15999984741211,
-      239.9,
-      569.1599731445312,
-      300.0
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

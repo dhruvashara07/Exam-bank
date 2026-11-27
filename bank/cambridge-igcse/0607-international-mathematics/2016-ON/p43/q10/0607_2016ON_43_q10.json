@@ -58,12 +58,9 @@
      "mark_scheme": [
       {
        "label": "10(a)(i)",
-       "text": "(2x – 1)(x – 1)\n(2x+1)(x−2)+3\noe\nx−2\n2\n2x −4x+x−2+3\nx−2\n2x −3x+1\n2\nx−2",
+       "text": "(2x – 1)(x – 1)",
        "codes": [
-        "2",
-        "M1",
-        "A1",
-        "A1"
+        "2"
        ],
        "segments": [
         {
@@ -72,7 +69,7 @@
           18.719999313354492,
           530.9,
           576.5399780273438,
-          656.7
+          553.1
          ]
         }
        ]
@@ -124,7 +121,28 @@
      "text": "x\nx\n^\nh\n^\nh .\n-\n-\n2\n1\n1\n3\n(ii) Show that   x\n-   can be written as\n++\n2\n1\nx\nx\n2\n^\n-\nh\n2\n[3]",
      "marks": 3,
      "path": "10(a)(ii)",
-     "mark_scheme_on": "10",
+     "mark_scheme": [
+      {
+       "label": "10(a)(ii)",
+       "text": "(2x+1)(x−2)+3\noe\nx−2\n2\n2x −4x+x−2+3\nx−2\n2x −3x+1\n2\nx−2",
+       "codes": [
+        "M1",
+        "A1",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          18.719999313354492,
+          556.4,
+          576.5399780273438,
+          656.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -196,14 +214,9 @@
      "mark_scheme": [
       {
        "label": "10(b)(i)",
-       "text": "Correct sketch\ny\n20\nf(x)=(2x-1)(x-1)/(x-2)\nf(x)=2x + 1\n10\nx\n-3\n-2\n-1\n1\n2\n3\n4\n5\n-10\n-20\nCorrect line\ny = 2x + 1\nx = 2\n0.5\n1",
+       "text": "Correct sketch\ny\n20\nf(x)=(2x-1)(x-1)/(x-2)\nf(x)=2x + 1\n10\nx\n-3\n-2\n-1\n1\n2\n3\n4\n5\n-10\n-20",
        "codes": [
-        "2",
-        "2",
-        "1",
-        "1",
-        "1",
-        "1"
+        "2"
        ],
        "segments": [
         {
@@ -213,15 +226,6 @@
           658.4,
           576.5399780273438,
           781.7
-         ]
-        },
-        {
-         "page": 6,
-         "bbox": [
-          18.719999313354492,
-          95.5,
-          576.5399780273438,
-          223.7
          ]
         }
        ]
@@ -263,7 +267,26 @@
      "text": "On the same diagram, sketch the graph of   y\nx\n+.\n[2]\n=\n2\n1",
      "marks": 2,
      "path": "10(b)(ii)",
-     "mark_scheme_on": "10",
+     "mark_scheme": [
+      {
+       "label": "10(b)(ii)",
+       "text": "Correct line",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          18.719999313354492,
+          100.8,
+          576.5399780273438,
+          148.2
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -300,7 +323,27 @@
      "text": "Write down the equations of the asymptotes to the graph of   y\n=^h.\nf\nx\n....................................................\n.................................................... [2]",
      "marks": 2,
      "path": "10(b)(iii)",
-     "mark_scheme_on": "10",
+     "mark_scheme": [
+      {
+       "label": "10(b)(iii)",
+       "text": "y = 2x + 1\nx = 2",
+       "codes": [
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          18.719999313354492,
+          150.0,
+          576.5399780273438,
+          184.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -342,7 +385,27 @@
      "text": "Solve\nx\n.\n^h\n=\nf\n0\nx= ..................... or x= ..................... [2]",
      "marks": 2,
      "path": "10(b)(iv)",
-     "mark_scheme_on": "10",
+     "mark_scheme": [
+      {
+       "label": "10(b)(iv)",
+       "text": "0.5\n1",
+       "codes": [
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          18.719999313354492,
+          186.6,
+          576.5399780273438,
+          223.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -377,14 +440,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "10",
-   "text": "",
-   "codes": [],
-   "segments": []
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",
