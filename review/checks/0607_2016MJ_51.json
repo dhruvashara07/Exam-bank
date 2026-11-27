@@ -1,0 +1,41 @@
+{
+ "paper": "0607_2016MJ_51",
+ "pipeline_version": "2.1",
+ "checked_at": "2026-11-27T11:30Z",
+ "clean": false,
+ "warnings": 2,
+ "problems": [
+  {
+   "id": "0607_2016MJ_51",
+   "kind": "marks",
+   "detail": "marks found 26, cover 24",
+   "blocking": true
+  },
+  {
+   "id": "0607_2016MJ_51_q02",
+   "kind": "figure",
+   "detail": "0607_2016MJ_51_q02_diagram2: crop cut: ink crosses the left edge",
+   "blocking": false
+  },
+  {
+   "id": "0607_2016MJ_51_q02",
+   "kind": "figure",
+   "detail": "0607_2016MJ_51_q02_diagram3: crop cut: ink crosses the left edge, 2 text line(s) half inside",
+   "blocking": false
+  }
+ ],
+ "flags": [
+  {
+   "id": "0607_2016MJ_51_q02",
+   "kind": "flag",
+   "detail": "mark scheme row 2(i) has no matching part in the paper"
+  }
+ ],
+ "text_score_min": 0.98,
+ "text_scores": {
+  "0607_2016MJ_51_q01": 1.0,
+  "0607_2016MJ_51_q02": 0.989,
+  "0607_2016MJ_51_q03": 0.99,
+  "0607_2016MJ_51_q04": 0.98
+ }
+}

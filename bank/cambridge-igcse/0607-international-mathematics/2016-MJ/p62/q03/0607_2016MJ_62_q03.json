@@ -1,0 +1,235 @@
+{
+ "id": "0607_2016MJ_62_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    80.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 23.0
+   }
+  }
+ ],
+ "text": "3\nk, k + 1, k + 2, ......., k + 99 is a sequence of consecutive integers.",
+ "marks": 2,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      83.0,
+      570.0,
+      130.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 11.5,
+      "height_pt": 47.0
+     }
+    }
+   ],
+   "text": "Write down the number of terms in this sequence.\n.......................................................................",
+   "marks": 1,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "100",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        39.26499938964844,
+        475.6,
+        555.9829711914062,
+        495.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the number of terms in this sequence.",
+     "text": "Write down the number of terms in this sequence."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      148.0,
+      570.0,
+      221.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 37.5,
+      "height_pt": 73.0
+     }
+    }
+   ],
+   "text": "Use the first term and the last term to find an expression for the mean in terms of k.\n.......................................................................",
+   "marks": 1,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "2k +99\noe final answer\n2",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        39.26499938964844,
+        501.2,
+        555.9829711914062,
+        535.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use the first term and the last term to find an expression for the mean in terms of <i>k</i>.",
+     "text": "Use the first term and the last term to find an expression for the mean in terms of k."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      239.0,
+      570.0,
+      351.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 63.5,
+      "height_pt": 112.0
+     }
+    }
+   ],
+   "text": "Use your answers to part (a) and part (b) to write down an expression for the sum of all the terms of\nthe sequence.\n.......................................................................",
+   "marks": 0,
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "their (a) × their (b) isw",
+     "codes": [],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        39.26499938964844,
+        539.5,
+        555.9829711914062,
+        559.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your answers to <b>part (a)</b> and <b>part (b)</b> to write down an expression for the sum of all the terms of the sequence.",
+     "text": "Use your answers to part (a) and part (b) to write down an expression for the sum of all the terms of the sequence."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "3",
+   "text": "",
+   "codes": [],
+   "segments": []
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2016,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 2,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<i>k</i>, <i>k </i>+ 1, <i>k </i>+ 2, ......., <i>k </i>+ 99 is a sequence of consecutive integers.",
+   "text": "k, k + 1, k + 2, ......., k + 99 is a sequence of consecutive integers."
+  }
+ ],
+ "marks_source": "mark scheme"
+}

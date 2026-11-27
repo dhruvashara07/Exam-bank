@@ -1,0 +1,451 @@
+{
+ "id": "0607_2016MJ_62_q10",
+ "number": 10,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    192.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 45.6,
+    "height_pt": 135.5
+   }
+  }
+ ],
+ "text": "3\nFor safety, the distance between cars travelling at x km/h must be a + b.\nP\na\nb\n4\nThe average length of a car is 4 metres.\nSo the number of metres between corresponding points on a road is a + b + 4.",
+ "marks": 0,
+ "figures": [
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    65.2,
+    89.5,
+    532.1,
+    145.4
+   ],
+   "id": "0607_2016MJ_62_q10_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    90.3,
+    87.2,
+    506.4,
+    323.8
+   ],
+   "id": "0607_2016MJ_62_q10c_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      195.8,
+      570.0,
+      255.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 24.5,
+      "height_pt": 59.7
+     }
+    }
+   ],
+   "text": "At a speed of x km/h, how many metres does a car travel in one hour?\n.......................................................................",
+   "marks": 0,
+   "path": "10(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "At a speed of <i>x</i> km/h, how many metres does a car travel in one hour?",
+     "text": "At a speed of x km/h, how many metres does a car travel in one hour?"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      260.8,
+      570.0,
+      411.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 3,
+      "answer_line": null,
+      "working_gap_pt": 11.5,
+      "height_pt": 150.7
+     }
+    }
+   ],
+   "text": "Explain why a model for the number of cars, N, safely passing point P in one hour is\nx\n1000\nN\n=\nx\nkx\n2\n+\n+\n0 278\n.\n4\nwhere x km/h is the speed of the cars and k has the value you found in question 2.\n...................................................................................................................................................................\n...................................................................................................................................................................\n...................................................................................................................................................................",
+   "marks": 0,
+   "path": "10(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Explain why a model for the number of cars, <i>N</i>, safely passing point <i>P</i> in one hour is",
+     "text": "Explain why a model for the number of cars, N, safely passing point P in one hour is"
+    },
+    {
+     "type": "text",
+     "html": "<i>N</i> = \\(\\frac{1000x}{0 278. x + \\text{kx}^{2} + 4}\\)",
+     "text": "N = (1000x)/(0 278.x+kx2+4)"
+    },
+    {
+     "type": "text",
+     "html": "where <i>x </i>km/h is the speed of the cars and <i>k </i>has the value you found in <b>question 2</b>.",
+     "text": "where x km/h is the speed of the cars and k has the value you found in question 2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      57.9,
+      570.0,
+      326.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 106.8,
+      "height_pt": 268.6
+     }
+    }
+   ],
+   "text": "Using your value for k from question 2, sketch the graph of N for 0 GxG 60.\nN\nNumber of cars\nper hour\nx\n0\n60\nSpeed(km/h)",
+   "marks": 0,
+   "path": "10(c)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Using your value for <i>k </i>from <b>question 2</b>, sketch the graph of <i>N</i> for 0 G <i>x</i> G 60.",
+     "text": "Using your value for k from question 2, sketch the graph of N for 0 G x G 60."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2016MJ_62_q10c_diagram2",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 106.8
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      335.4,
+      570.0,
+      395.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 24.5,
+      "height_pt": 59.6
+     }
+    }
+   ],
+   "text": "Find the maximum possible number of cars which can safely pass point P in one hour.\n.......................................................................",
+   "marks": 0,
+   "path": "10(d)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the maximum possible number of cars which can safely pass point <i>P</i> in one hour.",
+     "text": "Find the maximum possible number of cars which can safely pass point P in one hour."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        30.0,
+        400.4,
+        570.0,
+        460.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 24.5,
+        "height_pt": 59.6
+       }
+      }
+     ],
+     "text": "Find, correct to one decimal place, the speed that gives this maximum.\n.......................................................................",
+     "marks": 0,
+     "path": "10(e)(i)",
+     "content": [
+      {
+       "type": "text",
+       "html": "Find, correct to one decimal place, the speed that gives this maximum.",
+       "text": "Find, correct to one decimal place, the speed that gives this maximum."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        30.0,
+        465.4,
+        570.0,
+        538.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 37.5,
+        "height_pt": 72.6
+       }
+      }
+     ],
+     "text": "Comment on the size of this answer.\n...........................................................................................................................................................",
+     "marks": 0,
+     "path": "10(e)(ii)",
+     "content": [
+      {
+       "type": "text",
+       "html": "Comment on the size of this answer.",
+       "text": "Comment on the size of this answer."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    }
+   ],
+   "path": "10(e)"
+  },
+  {
+   "label": "f",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      556.4,
+      570.0,
+      579.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 22.6
+     }
+    }
+   ],
+   "text": "When you increase the average length of a car, what is the effect on",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        30.0,
+        582.4,
+        570.0,
+        642.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 24.5,
+        "height_pt": 59.6
+       }
+      }
+     ],
+     "text": "the maximum number of cars that can pass point P in one hour,\n...........................................................................................................................................................",
+     "marks": 0,
+     "path": "10(f)(i)",
+     "content": [
+      {
+       "type": "text",
+       "html": "the maximum number of cars that can pass point <i>P</i> in one hour,",
+       "text": "the maximum number of cars that can pass point P in one hour,"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 8,
+       "bbox": [
+        30.0,
+        660.3,
+        570.0,
+        733.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 37.5,
+        "height_pt": 72.7
+       }
+      }
+     ],
+     "text": "the speed at which this maximum is possible?\n...........................................................................................................................................................",
+     "marks": 0,
+     "path": "10(f)(ii)",
+     "content": [
+      {
+       "type": "text",
+       "html": "the speed at which this maximum is possible?",
+       "text": "the speed at which this maximum is possible?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    }
+   ],
+   "path": "10(f)",
+   "content": [
+    {
+     "type": "text",
+     "html": "When you increase the average length of a car, what is the effect on",
+     "text": "When you increase the average length of a car, what is the effect on"
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2016,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 0,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "For safety, the distance between cars travelling at <i>x</i> km/h must be <i>a</i> + <i>b</i>.",
+   "text": "For safety, the distance between cars travelling at x km/h must be a + b."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2016MJ_62_q10_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The average length of a car is 4 metres. So the number of metres between corresponding points on a road is <i>a + b + </i>4.",
+   "text": "The average length of a car is 4 metres. So the number of metres between corresponding points on a road is a + b + 4."
+  }
+ ],
+ "marks_source": "mark scheme"
+}

@@ -1,0 +1,261 @@
+{
+ "id": "0607_2016MJ_41_q10",
+ "number": 10,
+ "segments": [
+  {
+   "page": 15,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    80.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 23.0
+   }
+  }
+ ],
+ "text": "10\nA is the point (–2, –1) and B is the point (6, 3).",
+ "marks": 10,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      83.0,
+      570.0,
+      314.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 193.5,
+      "height_pt": 231.0
+     }
+    }
+   ],
+   "text": "Calculate   AB .\n................................................................. [3]",
+   "marks": 3,
+   "path": "10(a)",
+   "mark_scheme": [
+    {
+     "label": "10(a)",
+     "text": "8.94 or 8.944... or 4 5",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        25.1200008392334,
+        100.0,
+        570.0709838867188,
+        132.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate <i>AB</i> .",
+     "text": "Calculate AB ."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      317.0,
+      570.0,
+      509.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 128.5,
+      "height_pt": 192.0
+     }
+    }
+   ],
+   "text": "The point P has co-ordinates (x, y) and PA = PB.\nShow that x\ny\n.\n+\n=\n2\n5\n[5]",
+   "marks": 5,
+   "path": "10(b)",
+   "mark_scheme": [
+    {
+     "label": "10(b)",
+     "text": "1\nGradient of AB =\noe\n2\nGradient of perpendicular = –2 oe\ny = (their–2)x + c\nmidpoint (2, 1)\nSubstitute (2, 1) to reach c = 5\nOR\n(x + 2)² + (y + 1)² oe\n(x – 6)² + (y – 3)²\noe\nequating above two expressions\n3 correct expansions\ncorrect completion with no errors or\nomissions",
+     "codes": [
+      "1",
+      "M1",
+      "B1",
+      "A1",
+      "B1",
+      "B1",
+      "M1",
+      "B1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        25.1200008392334,
+        139.7,
+        570.0709838867188,
+        339.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The point <i>P</i> has co-ordinates (<i>x</i>, <i>y</i>) and <i>PA</i> = <i>PB</i>. Show that 2<i>x</i> + <i>y</i> = 5.",
+     "text": "The point P has co-ordinates (x, y) and PA = PB. Show that 2x + y = 5."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 128.5
+    },
+    {
+     "type": "marks",
+     "value": 5
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      512.0,
+      570.0,
+      652.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 102.5,
+      "height_pt": 140.0
+     }
+    }
+   ],
+   "text": "If P is also on the line y\nx\n, find the co-ordinates of P.\n=\n( ................................, ..............................) [2]",
+   "marks": 2,
+   "path": "10(c)",
+   "mark_scheme": [
+    {
+     "label": "10(c)",
+     "text": "5 5\n,\noe\n\n\n3 3\n\n",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        25.1200008392334,
+        345.6,
+        570.0709838867188,
+        390.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "If <i>P</i> is also on the line <i>y</i> = <i>x</i>, find the co-ordinates of <i>P</i>.",
+     "text": "If P is also on the line y = x, find the co-ordinates of P."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "(",
+     "unit": ")"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "10",
+   "text": "",
+   "codes": [],
+   "segments": []
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2016,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_long_answer",
+ "total_marks": 10,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<i>A</i> is the point (–2, –1) and <i>B</i> is the point (6, 3).",
+   "text": "A is the point (–2, –1) and B is the point (6, 3)."
+  }
+ ]
+}

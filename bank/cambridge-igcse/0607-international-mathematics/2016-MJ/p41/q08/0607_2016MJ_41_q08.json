@@ -1,0 +1,418 @@
+{
+ "id": "0607_2016MJ_41_q08",
+ "number": 8,
+ "segments": [],
+ "text": "",
+ "marks": 10,
+ "figures": [
+  {
+   "caption": null,
+   "page": 12,
+   "bbox": [
+    116.3,
+    71.2,
+    480.7,
+    350.8
+   ],
+   "id": "0607_2016MJ_41_q08a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 13,
+   "bbox": [
+    115.9,
+    104.5,
+    480.8,
+    366.4
+   ],
+   "id": "0607_2016MJ_41_q08bi_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)(i)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      56.8,
+      570.0,
+      387.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 123.5,
+      "height_pt": 330.7
+     }
+    }
+   ],
+   "text": "8\n(a)\ny\n2\nx\n0\n–3\n3\n–4\nx\n^\nx\nx\nh\n2\n=\n+\n+\nf()\nlog\n1\n2",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        30.0,
+        390.6,
+        570.0,
+        413.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 4.0,
+        "height_pt": 22.9
+       }
+      }
+     ],
+     "text": "On the diagram, sketch the graph of\ny\nx\nfor values of x between –3 and 3.\n[2]\n=\nf()",
+     "marks": 2,
+     "path": "8(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "8(a)(i)",
+       "text": "Correct sketch\ny\nf(x)=log(1 + 2x + x^2)\n2\nx\n-2\n-1\n1\n2\n3\n-2\n-4\n–2\n0\nx = –1",
+       "codes": [
+        "2",
+        "1",
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          22.22800064086914,
+          100.0,
+          573.0189819335938,
+          260.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "On the diagram, sketch the graph of <i>y</i> = f(<i>x</i>) for values of <i>x</i> between –3 and 3.",
+       "text": "On the diagram, sketch the graph of y = f(x) for values of x between –3 and 3."
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        30.0,
+        416.6,
+        570.0,
+        543.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 1,
+        "answer_line": "x =  …… or x = …… [2]",
+        "working_gap_pt": 89.4,
+        "height_pt": 126.9
+       }
+      }
+     ],
+     "text": "Solve   f()x\n.\n=\n0\nx =  .......................... or x = ........................... [2]",
+     "marks": 2,
+     "path": "8(a)(ii)",
+     "mark_scheme_on": "8",
+     "content": [
+      {
+       "type": "text",
+       "html": "Solve f(<i>x</i>) = 0.",
+       "text": "Solve f(x) = 0."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "x ="
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 12,
+       "bbox": [
+        30.0,
+        546.6,
+        570.0,
+        608.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 24.5,
+        "height_pt": 61.9
+       }
+      }
+     ],
+     "text": "Write down the equation of the asymptote to the graph of\ny\nx\n.\n=\nf()\n................................................................. [1]",
+     "marks": 1,
+     "path": "8(a)(iii)",
+     "mark_scheme_on": "8",
+     "content": [
+      {
+       "type": "text",
+       "html": "Write down the equation of the asymptote to the graph of <i>y</i> = f(<i>x</i>).",
+       "text": "Write down the equation of the asymptote to the graph of y = f(x)."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "8(a)",
+   "content": [
+    {
+     "type": "figure",
+     "id": "0607_2016MJ_41_q08a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "f(<i>x</i>) = log^1 + 2<i>x</i> + <i>x</i><sup>2</sup>h",
+     "text": "f(x) = log^1 + 2x + x2h"
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 13,
+       "bbox": [
+        30.0,
+        60.0,
+        570.0,
+        387.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 123.5,
+        "height_pt": 327.5
+       }
+      }
+     ],
+     "text": "On this diagram, sketch the graph of\ny\nx\nh for values of x between –3 and 3.\n=\n^\n+\n2\nlog\n1\ny\n2\nx\n0\n–3\n3\n–4\n[2]",
+     "marks": 2,
+     "path": "8(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "8(b)(i)",
+       "text": "Correct sketch\ny\n2\nf(x)=2log(1+x)\nx\n-3\n3\n-2\n-4\nSame right hand branch\ne.g.\n2\nlog(1 + 2x + x ) = 2 log(1 + x)\nNo log of a negative number",
+       "codes": [
+        "2",
+        "1",
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          22.22800064086914,
+          265.2,
+          573.0189819335938,
+          444.8
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "On this diagram, sketch the graph of <i>y</i> = 2 log^1 + <i>x</i>h for values of <i>x</i> between –3 and 3.",
+       "text": "On this diagram, sketch the graph of y = 2 log^1 + xh for values of x between –3 and 3."
+      },
+      {
+       "type": "text",
+       "html": "<i>y</i>",
+       "text": "y"
+      },
+      {
+       "type": "figure",
+       "id": "0607_2016MJ_41_q08bi_diagram2",
+       "caption": null
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 123.5
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 13,
+       "bbox": [
+        30.0,
+        390.8,
+        570.0,
+        465.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 2,
+        "answer_line": null,
+        "working_gap_pt": 11.5,
+        "height_pt": 74.7
+       }
+      }
+     ],
+     "text": "Describe a similarity between the graphs in part (a)(i) and part (b)(i).\n...........................................................................................................................................................\n..................................................................................................................................................... [1]",
+     "marks": 1,
+     "path": "8(b)(ii)",
+     "mark_scheme_on": "8",
+     "content": [
+      {
+       "type": "text",
+       "html": "Describe a similarity between the graphs in <b>part (a)(i)</b> and<b> part (b)(i)</b>.",
+       "text": "Describe a similarity between the graphs in part (a)(i) and part (b)(i)."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 13,
+       "bbox": [
+        30.0,
+        468.8,
+        570.0,
+        543.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 2,
+        "answer_line": null,
+        "working_gap_pt": 11.5,
+        "height_pt": 74.7
+       }
+      }
+     ],
+     "text": "Explain the differences between the graphs in part (a)(i) and part (b)(i).\n...........................................................................................................................................................\n..................................................................................................................................................... [2]",
+     "marks": 2,
+     "path": "8(b)(iii)",
+     "mark_scheme_on": "8",
+     "content": [
+      {
+       "type": "text",
+       "html": "Explain the differences between the graphs in <b>part (a)(i)</b> and <b>part (b)(i)</b>.",
+       "text": "Explain the differences between the graphs in part (a)(i) and part (b)(i)."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "8(b)"
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "8",
+   "text": "",
+   "codes": [],
+   "segments": []
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2016,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_long_answer",
+ "total_marks": 10,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}

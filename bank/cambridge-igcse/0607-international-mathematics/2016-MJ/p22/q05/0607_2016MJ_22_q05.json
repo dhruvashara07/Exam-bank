@@ -1,0 +1,218 @@
+{
+ "id": "0607_2016MJ_22_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    219.7,
+    570.0,
+    321.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 19.3,
+    "height_pt": 101.8
+   }
+  }
+ ],
+ "text": "5\nA biased die, that has six faces, is numbered 1 to 6.\nThe table shows the results when the die is rolled 60 times.\nNumber\n1\n2\n3\n4\n5\n6\nFrequency\n3\n12\n8\n16\n7\n14",
+ "marks": 2,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      323.0,
+      570.0,
+      410.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 24.5,
+      "height_pt": 87.5
+     }
+    }
+   ],
+   "text": "Jose rolls the die.\nFind the probability that the number shown is even.\n................................................................. [1]",
+   "marks": 1,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "oe\n60",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        40.9370002746582,
+        374.0,
+        548.9810180664062,
+        403.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Jose rolls the die. Find the probability that the number shown is even.",
+     "text": "Jose rolls the die. Find the probability that the number shown is even."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      414.0,
+      570.0,
+      527.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 50.5,
+      "height_pt": 113.5
+     }
+    }
+   ],
+   "text": "Jose rolls the die 1200 times.\nFind the expected number of times that the number shown on the die is even.\n................................................................. [1]",
+   "marks": 1,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "840",
+     "codes": [],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        40.9370002746582,
+        406.2,
+        548.9810180664062,
+        430.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Jose rolls the die 1200 times. Find the expected number of times that the number shown on the die is even.",
+     "text": "Jose rolls the die 1200 times. Find the expected number of times that the number shown on the die is even."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "5",
+   "text": "42",
+   "codes": [],
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      40.9370002746582,
+      363.0,
+      548.9810180664062,
+      374.0
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2016,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 2,
+ "variant": 2,
+ "paper_code": "0607/22",
+ "paper_type": "extended_short_answer",
+ "total_marks": 2,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A biased die, that has six faces, is numbered 1 to 6. The table shows the results when the die is rolled 60 times.",
+   "text": "A biased die, that has six faces, is numbered 1 to 6. The table shows the results when the die is rolled 60 times."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Number",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6"
+    ],
+    [
+     "Frequency",
+     "3",
+     "12",
+     "8",
+     "16",
+     "7",
+     "14"
+    ]
+   ]
+  }
+ ]
+}
