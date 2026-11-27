@@ -21,7 +21,7 @@
   }
  ],
  "text": "3\nThe table shows the amount of carbon dioxide at the beginning of each year.\nNumber of months\nAmount of carbon\nYear\nsince the beginning of 2012 (x)\ndioxide in ppm (y)\n2012\n0\n393\n2013\n12\n395\n2014\n24\n397\n2015\n36\n399\n2016\n48\n401\n2017\n60\n403",
- "marks": 1,
+ "marks": 4,
  "figures": [
   {
    "caption": null,
@@ -65,9 +65,28 @@
     }
    ],
    "text": "On the grid, plot these points.\ny\n405\n400\n395\nx\n390\n0\n12\n24\n36\n48\n60",
-   "marks": 0,
+   "marks": 2,
    "path": "8(a)",
-   "mark_scheme_on": "8",
+   "mark_scheme": [
+    {
+     "label": "8(a)",
+     "text": "Correct 6 points",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        342.9,
+        563.1599731445312,
+        367.4
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -108,9 +127,28 @@
     }
    ],
    "text": "Find the equation for y in terms of x that fits the data.\n...................................................",
-   "marks": 0,
+   "marks": 2,
    "path": "8(b)",
-   "mark_scheme_on": "8",
+   "mark_scheme": [
+    {
+     "label": "8(b)",
+     "text": "1\ny =\nx+393 oe\n6",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        367.4,
+        563.1599731445312,
+        421.1
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -126,26 +164,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "8",
-   "text": "Valid comment about extrapolation",
-   "codes": [
-    "1"
-   ],
-   "segments": [
-    {
-     "page": 4,
-     "bbox": [
-      32.15999984741211,
-      597.1,
-      563.1599731445312,
-      621.6
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",
@@ -157,7 +175,7 @@
  "variant": 1,
  "paper_code": "0607/61",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 1,
+ "total_marks": 4,
  "topic": null,
  "subtopic": null,
  "keywords": [],

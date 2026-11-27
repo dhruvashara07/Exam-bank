@@ -3,7 +3,7 @@
  "number": 6,
  "segments": [],
  "text": "",
- "marks": 2,
+ "marks": 5,
  "figures": [
   {
    "caption": null,
@@ -47,7 +47,7 @@
     }
    ],
    "text": "1\n(a)\ny\n1\n0.5\nx\n0\n30\n60\n90\n120\n150\n180\n210\n240\n270\n300\n330\n360\n–0.5\n–1",
-   "marks": 1,
+   "marks": 0,
    "parts": [
     {
      "label": "i",
@@ -71,9 +71,28 @@
       }
      ],
      "text": "On the grid, sketch the graph of y = sin(2x)° for\n0\nx\n360\n.\nG\nG",
-     "marks": 0,
+     "marks": 2,
      "path": "6(a)(i)",
-     "mark_scheme_on": "6(a)",
+     "mark_scheme": [
+      {
+       "label": "6(a)(i)",
+       "text": "",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.15999984741211,
+          113.8,
+          563.1599731445312,
+          208.0
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -104,9 +123,28 @@
       }
      ],
      "text": "Write down the period of y = sin(2x)°.\n...................................................",
-     "marks": 0,
+     "marks": 1,
      "path": "6(a)(ii)",
-     "mark_scheme_on": "6(a)",
+     "mark_scheme": [
+      {
+       "label": "6(a)(ii)",
+       "text": "180",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          32.15999984741211,
+          208.0,
+          563.1599731445312,
+          232.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -122,26 +160,6 @@
     }
    ],
    "path": "6(a)",
-   "mark_scheme": [
-    {
-     "label": "6(a)",
-     "text": "405.5",
-     "codes": [
-      "1"
-     ],
-     "segments": [
-      {
-       "page": 4,
-       "bbox": [
-        32.15999984741211,
-        498.5,
-        563.1599731445312,
-        523.0
-       ]
-      }
-     ]
-    }
-   ],
    "content": [
     {
      "type": "figure",
@@ -177,7 +195,7 @@
    "mark_scheme": [
     {
      "label": "6(b)",
-     "text": "401.8",
+     "text": "60",
      "codes": [
       "1"
      ],
@@ -186,9 +204,9 @@
        "page": 4,
        "bbox": [
         32.15999984741211,
-        523.0,
+        232.5,
         563.1599731445312,
-        560.1
+        256.9
        ]
       }
      ]
@@ -229,8 +247,28 @@
     }
    ],
    "text": "Find the value of k when the period of y = sin(kx)° is 40.\n...................................................",
-   "marks": 0,
+   "marks": 1,
    "path": "6(c)",
+   "mark_scheme": [
+    {
+     "label": "6(c)",
+     "text": "9",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        32.15999984741211,
+        256.9,
+        563.1599731445312,
+        281.4
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -257,7 +295,7 @@
  "variant": 1,
  "paper_code": "0607/61",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 2,
+ "total_marks": 5,
  "topic": null,
  "subtopic": null,
  "keywords": [],

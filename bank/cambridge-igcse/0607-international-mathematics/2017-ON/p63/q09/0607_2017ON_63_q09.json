@@ -21,7 +21,7 @@
   }
  ],
  "text": "4\nThe farmer makes an enclosure that is an n-sided regular polygon with a perimeter of 24 m.\nHere is an isosceles triangle from this polygon.\na°\nNOT TO\nSCALE\nh\n24\nnm",
- "marks": 0,
+ "marks": 10,
  "figures": [
   {
    "caption": null,
@@ -85,8 +85,28 @@
       }
      ],
      "text": "Use this triangle and the method from question 3, to show that a model for calculating the\narea (A m2) of a regular n-sided polygon with perimeter 24 m is\n144\nA\n.\n=\nJ\nN\n180\n°\nKK\nOO\nn\ntan\nn\nL\nP\nShow all your working.",
-     "marks": 0,
+     "marks": 1,
      "path": "9(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "9(a)(i)",
+       "text": "12\n24\nn\n0.5 ×\n×\n× n isw\n360\nn\ntan\n2n",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          25.139999389648438,
+          523.5,
+          570.239990234375,
+          590.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -137,8 +157,28 @@
       }
      ],
      "text": "Write down a condition for n.\n...........................................................................................................................................................",
-     "marks": 0,
+     "marks": 1,
      "path": "9(a)(ii)",
+     "mark_scheme": [
+      {
+       "label": "9(a)(ii)",
+       "text": "Integer\nor\nn ⩾ 3 oe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          25.139999389648438,
+          590.7,
+          570.239990234375,
+          640.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -177,8 +217,28 @@
     }
    ],
    "text": "Use the model to show that the area of a regular octagon with a perimeter of 24 m is 43.5 m2,\ncorrect to 1 decimal place.",
-   "marks": 0,
+   "marks": 1,
    "path": "9(b)",
+   "mark_scheme": [
+    {
+     "label": "9(b)",
+     "text": "144\n= 43.45[…] or 43.45 to 43.50\n180\n8tan\n\n\n\n8\n",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        25.139999389648438,
+        640.8,
+        570.239990234375,
+        702.3
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -209,8 +269,28 @@
     }
    ],
    "text": "144\n(c) Sketch the graph of\nA\nfor\n3\nn\n50\non the grid below.\n=\nG\nG\nJ\nN\n180\n°\nKK\nOO\nn\ntan\nn\nL\nP\nA\n50\nn\n0\n3\n50",
-   "marks": 0,
+   "marks": 1,
    "path": "9(c)",
+   "mark_scheme": [
+    {
+     "label": "9(c)",
+     "text": "Correct shape\n50 A\nn\n0\n10\n20\n30\n40\n50",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        25.139999389648438,
+        113.8,
+        570.239990234375,
+        294.2
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -256,8 +336,28 @@
     }
    ],
    "text": "The farmer wants to use the 24 m of fencing to make a regular polygon with an area of 44.0 m2,\ncorrect to the nearest 0.1 m2.\nFind the number of sides of this polygon.\n......................................................\nQuestions 4(e), 4(f) and 4(g) are printed on the next page.",
-   "marks": 0,
+   "marks": 1,
    "path": "9(d)",
+   "mark_scheme": [
+    {
+     "label": "9(d)",
+     "text": "9",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        25.139999389648438,
+        294.2,
+        570.239990234375,
+        318.7
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -298,8 +398,28 @@
     }
    ],
    "text": "Use your graph to write down an estimate of the greatest possible area of a polygon with a\nperimeter of 24 m.\n......................................................",
-   "marks": 0,
+   "marks": 1,
    "path": "9(e)",
+   "mark_scheme": [
+    {
+     "label": "9(e)",
+     "text": "45.8",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        25.139999389648438,
+        318.7,
+        570.239990234375,
+        343.1
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -341,8 +461,28 @@
       }
      ],
      "text": "(i) When n is very large, the shape of the polygon is approximately a  .................................................",
-     "marks": 0,
+     "marks": 1,
      "path": "9(f)(i)",
+     "mark_scheme": [
+      {
+       "label": "9(f)(i)",
+       "text": "circle",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          25.139999389648438,
+          343.1,
+          570.239990234375,
+          367.6
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -377,8 +517,28 @@
       }
      ],
      "text": "Calculate the exact value of the greatest possible area of a shape with a perimeter of 24 m.\n......................................................",
-     "marks": 0,
+     "marks": 2,
      "path": "9(f)(ii)",
+     "mark_scheme": [
+      {
+       "label": "9(f)(ii)",
+       "text": "144\nπ",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          25.139999389648438,
+          367.6,
+          570.239990234375,
+          433.2
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -417,8 +577,28 @@
     }
    ],
    "text": "Change the model in question 4(a) to find the area of any regular polygon with a perimeter of P.\n......................................................",
-   "marks": 0,
+   "marks": 1,
    "path": "9(g)",
+   "mark_scheme": [
+    {
+     "label": "9(g)",
+     "text": "2\nP\n180\n4 ntan\nn",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        25.139999389648438,
+        433.2,
+        570.239990234375,
+        490.0
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -445,7 +625,7 @@
  "variant": 3,
  "paper_code": "0607/63",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 0,
+ "total_marks": 10,
  "topic": null,
  "subtopic": null,
  "keywords": [],
