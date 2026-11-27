@@ -1,0 +1,603 @@
+{
+ "id": "0607_2015MJ_41_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    337.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 131.2,
+    "height_pt": 280.0
+   }
+  }
+ ],
+ "text": "6\nThe Venn diagram shows the sets A, B and C.\nU\nA\nC\nB\nU = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}\nA = {factors of 12}\nB = {factors of 6}\nC = {11, 12, 13, 14}",
+ "marks": 10,
+ "figures": [
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    177.6,
+    88.7,
+    423.9,
+    262.9
+   ],
+   "id": "0607_2015MJ_41_q06_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      340.1,
+      570.0,
+      415.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "Answer(a)  A = { ……}",
+      "working_gap_pt": 11.4,
+      "height_pt": 74.9
+     }
+    }
+   ],
+   "text": "List the elements of sets A and B.\nAnswer(a)  A = { ...............................................................}\nB = { ............................................................... } [2]",
+   "marks": 2,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "A = {1, 2, 3, 4, 6, 12}\n1\nB = {1, 2, 3, 6}\n1",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        551.1,
+        559.0,
+        584.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "List the elements of sets <i>A</i> and <i>B</i>.",
+     "text": "List the elements of sets A and B."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Answer(a) A = {",
+     "unit": "}"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "B = {",
+     "unit": "}"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      418.1,
+      570.0,
+      441.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 22.9
+     }
+    }
+   ],
+   "text": "Write all the elements of U in the correct regions of the Venn diagram above.\n[3]",
+   "marks": 3,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "A\nC\n4\nB\n11\n1 2\n12\n13\n3\nB1 for 4 in correct position\n3 6\n14\nB1 for 12 in correct position\n5\n7\n8\n9 10\n15",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        587.7,
+        559.0,
+        715.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write all the elements of U in the correct regions of the Venn diagram above.",
+     "text": "Write all the elements of U in the correct regions of the Venn diagram above."
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      444.1,
+      570.0,
+      466.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 22.4
+     }
+    }
+   ],
+   "text": "List the elements of",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        470.1,
+        570.0,
+        519.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 11.3,
+        "height_pt": 48.9
+       }
+      }
+     ],
+     "text": "A\nB\n,\n+\nAnswer(c)(i){ ............................................................... } [1]",
+     "marks": 1,
+     "path": "6(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(c)(i)",
+       "text": "FT from their diagram\n{1, 2, 3, 6}\n1FT",
+       "codes": [
+        "1FT"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          79.1,
+          559.0,
+          99.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "<i>A</i> + <i>B</i>,",
+       "text": "A + B,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Answer(c)(i) {",
+       "unit": "}"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        522.1,
+        570.0,
+        571.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 11.4,
+        "height_pt": 48.9
+       }
+      }
+     ],
+     "text": "A\nC\n,\nl\n+\nAnswer(c)(ii){ ............................................................... } [1]",
+     "marks": 1,
+     "path": "6(c)(ii)",
+     "mark_scheme": [
+      {
+       "label": "6(c)(ii)",
+       "text": "FT from their diagram\n{11, 13, 14}\n1FT",
+       "codes": [
+        "1FT"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          103.1,
+          559.0,
+          123.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "<i>A</i>l+ <i>C</i> ,",
+       "text": "Al+ C ,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Answer(c)(ii) {",
+       "unit": "}"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        574.1,
+        570.0,
+        623.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 11.4,
+        "height_pt": 48.9
+       }
+      }
+     ],
+     "text": "B\nC\nl.\n,\nAnswer(c)(iii){ ............................................................... } [1]",
+     "marks": 1,
+     "path": "6(c)(iii)",
+     "mark_scheme": [
+      {
+       "label": "6(c)(iii)",
+       "text": "FT from their diagram\n{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15}\n1FT",
+       "codes": [
+        "1FT"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          127.0,
+          559.0,
+          147.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "<i>B</i> , <i>C</i>l.",
+       "text": "B , Cl."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Answer(c)(iii) {",
+       "unit": "}"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "6(c)",
+   "content": [
+    {
+     "type": "text",
+     "html": "List the elements of",
+     "text": "List the elements of"
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      626.1,
+      570.0,
+      648.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 22.4
+     }
+    }
+   ],
+   "text": "Find",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        652.1,
+        570.0,
+        701.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 11.4,
+        "height_pt": 48.9
+       }
+      }
+     ],
+     "text": "A\nB\nC\nl,\n,\n,\nn(\n)\nAnswer(d)(i)  ................................................................ [1]",
+     "marks": 1,
+     "path": "6(d)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(d)(i)",
+       "text": "FT from their diagram\n6\n1FT",
+       "codes": [
+        "1FT"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          151.0,
+          559.0,
+          171.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "n(<i>A</i> , <i>B</i> , <i>C</i>)l,",
+       "text": "n(A , B , C)l,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Answer(d)(i)"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        30.0,
+        704.1,
+        570.0,
+        765.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 11.4,
+        "height_pt": 60.9
+       }
+      }
+     ],
+     "text": "A\nB\nC\nl.\n+\n+\nn(\n)\nAnswer(d)(ii)  ................................................................ [1]",
+     "marks": 1,
+     "path": "6(d)(ii)",
+     "mark_scheme": [
+      {
+       "label": "6(d)(ii)",
+       "text": "FT from their diagram\n15\n1FT",
+       "codes": [
+        "1FT"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          36.0,
+          174.9,
+          559.0,
+          201.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "n(<i>A</i> + <i>B</i> + <i>C</i>)l.",
+       "text": "n(A + B + C)l."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Answer(d)(ii)"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    }
+   ],
+   "path": "6(d)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Find",
+     "text": "Find"
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_long_answer",
+ "total_marks": 10,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The Venn diagram shows the sets <i>A</i>, <i>B</i> and <i>C</i>.",
+   "text": "The Venn diagram shows the sets A, B and C."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2015MJ_41_q06_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15} <i>A </i>= {factors of 12} <i>B</i> = {factors of 6} <i>C</i> = {11, 12, 13, 14}",
+   "text": "U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15} A = {factors of 12} B = {factors of 6} C = {11, 12, 13, 14}"
+  }
+ ]
+}

@@ -1,0 +1,395 @@
+{
+ "id": "0607_2015MJ_61_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    162.0,
+    570.0,
+    399.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 237.0
+   }
+  }
+ ],
+ "text": "1\nThis is an UP staircase of height 3 made using 6 cubes.\nIt is a 3-step UP staircase because it has a height of 3 cubes.",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    193.0,
+    201.2,
+    402.3,
+    398.4
+   ],
+   "id": "0607_2015MJ_61_q01_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    95.1,
+    483.2,
+    550.0,
+    765.6
+   ],
+   "id": "0607_2015MJ_61_q01b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      405.0,
+      570.0,
+      451.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 11.5,
+      "height_pt": 46.5
+     }
+    }
+   ],
+   "text": "Write down the number of cubes that make an UP staircase of height 2.\n.......................................................................",
+   "marks": 1,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "3\n1",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        241.3,
+        559.0,
+        261.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the number of cubes that make an <i>UP staircase </i>of height 2.",
+     "text": "Write down the number of cubes that make an UP staircase of height 2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      457.0,
+      570.0,
+      766.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 309.5
+     }
+    }
+   ],
+   "text": "On the grid below draw an UP staircase of height 4.",
+   "marks": 1,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "1",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        265.3,
+        559.0,
+        403.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the grid below draw an <i>UP staircase</i> of height 4.",
+     "text": "On the grid below draw an UP staircase of height 4."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2015MJ_61_q01b_diagram2",
+     "caption": null
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      151.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 20.8,
+      "height_pt": 94.5
+     }
+    }
+   ],
+   "text": "Complete the table for the number of cubes that make these UP staircases.\nHeight\n1\n2\n3\n4\n5\n6\nNumber\n1\n6\nof cubes",
+   "marks": 1,
+   "path": "1(c)",
+   "mark_scheme": [
+    {
+     "label": "1(c)",
+     "text": "Height\n1\n2\n3\n4\n5\n6\n1\nCubes\n1\n3\n6\n10\n15\n21",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        409.7,
+        559.0,
+        452.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table for the number of cubes that make these<i> UP staircases.</i>",
+     "text": "Complete the table for the number of cubes that make these UP staircases."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Height",
+       "1",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6"
+      ],
+      [
+       "Number of cubes",
+       "1",
+       "",
+       "6",
+       "",
+       "",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      348.2,
+      570.0,
+      498.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 115.5,
+      "height_pt": 150.3
+     }
+    }
+   ],
+   "text": "Find an expression, in terms of n, for the number of cubes that make an UP staircase of height n.\n.......................................................................",
+   "marks": 1,
+   "path": "1(d)",
+   "mark_scheme": [
+    {
+     "label": "1(d)",
+     "text": "1\n1\n2\nn +\nn oe\nC opportunity\n1\n2\n2",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        459.3,
+        559.0,
+        493.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression, in terms of <i>n</i>, for the number of cubes that make an <i>UP staircase</i> of height <i>n</i>.",
+     "text": "Find an expression, in terms of n, for the number of cubes that make an UP staircase of height n."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      517.2,
+      570.0,
+      654.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 102.5,
+      "height_pt": 137.3
+     }
+    }
+   ],
+   "text": "Find how many cubes make an UP staircase of height 10.\n.......................................................................",
+   "marks": 1,
+   "path": "1(e)",
+   "mark_scheme": [
+    {
+     "label": "1(e)",
+     "text": "FT their (d) provided an expression in\n55\n1FT\nn with numerical coefficients\nC opportunity",
+     "codes": [
+      "1FT"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        497.1,
+        559.0,
+        546.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find how many cubes make an <i>UP staircase</i> of height 10.",
+     "text": "Find how many cubes make an UP staircase of height 10."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This is an<i> UP staircase </i>of height 3 made using 6 cubes. It is a 3-step <i>UP staircase </i>because it has a height of 3 cubes.",
+   "text": "This is an UP staircase of height 3 made using 6 cubes. It is a 3-step UP staircase because it has a height of 3 cubes."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2015MJ_61_q01_diagram1",
+   "caption": null
+  }
+ ],
+ "marks_source": "mark scheme"
+}

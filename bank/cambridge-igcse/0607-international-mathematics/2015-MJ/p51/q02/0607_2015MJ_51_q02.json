@@ -1,0 +1,452 @@
+{
+ "id": "0607_2015MJ_51_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    58.5,
+    570.0,
+    308.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 250.0
+   }
+  }
+ ],
+ "text": "2\nThis is an UP AND DOWN staircase of height 3 made using 9 cubes.\nIt is a 3-step UP AND DOWN staircase because it has a height of 3 cubes.",
+ "marks": 6,
+ "figures": [
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    168.4,
+    96.2,
+    426.8,
+    307.7
+   ],
+   "id": "0607_2015MJ_51_q02_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    70.2,
+    444.3,
+    525.1,
+    684.1
+   ],
+   "id": "0607_2015MJ_51_q02b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      315.6,
+      570.0,
+      412.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 67.7,
+      "height_pt": 96.9
+     }
+    }
+   ],
+   "text": "Find how many cubes make an UP AND DOWN staircase of height 4.\n................................................................",
+   "marks": 1,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "16\n1",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        607.6,
+        559.0,
+        627.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find how many cubes make an <i>UP AND DOWN staircase</i> of height 4.",
+     "text": "Find how many cubes make an UP AND DOWN staircase of height 4."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      419.6,
+      570.0,
+      685.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 265.4
+     }
+    }
+   ],
+   "text": "On the grid below draw an UP AND DOWN staircase of height 2.",
+   "marks": 1,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "1",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        647.7,
+        559.0,
+        777.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the grid below draw an <i>UP AND DOWN staircase</i> of height 2.",
+     "text": "On the grid below draw an UP AND DOWN staircase of height 2."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2015MJ_51_q02b_diagram2",
+     "caption": null
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      58.5,
+      570.0,
+      181.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 30.7,
+      "height_pt": 123.0
+     }
+    }
+   ],
+   "text": "Complete the table for the number of cubes that make these UP AND DOWN staircases.\nHeight\n1\n2\n3\n4\n5\n6\nNumber\n1\n9\nof cubes",
+   "marks": 1,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "1\nB1 for 25 and 36\nHeight\n1\n2\n3\n4\n5\n6\nCubes\n1\n9\n4\n16\n25\n36",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        79.1,
+        559.0,
+        127.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table for the number of cubes that make these <i>UP AND DOWN staircases</i>.",
+     "text": "Complete the table for the number of cubes that make these UP AND DOWN staircases."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Height",
+       "1",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6"
+      ],
+      [
+       "Number of cubes",
+       "1",
+       "",
+       "9",
+       "",
+       "",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      347.3,
+      570.0,
+      431.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 41.7,
+      "height_pt": 83.7
+     }
+    }
+   ],
+   "text": "The numbers of cubes form a sequence.\nWrite down the mathematical name of this sequence.\n................................................................",
+   "marks": 1,
+   "path": "2(d)",
+   "mark_scheme": [
+    {
+     "label": "2(d)",
+     "text": "Square [numbers]\n1",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        135.5,
+        559.0,
+        155.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The numbers of cubes form a sequence. Write down the mathematical name of this sequence.",
+     "text": "The numbers of cubes form a sequence. Write down the mathematical name of this sequence."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      438.3,
+      570.0,
+      535.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 67.7,
+      "height_pt": 96.7
+     }
+    }
+   ],
+   "text": "Find how many cubes make an UP AND DOWN staircase of height 10.\n................................................................",
+   "marks": 1,
+   "path": "2(e)",
+   "mark_scheme": [
+    {
+     "label": "2(e)",
+     "text": "100\n1",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        163.8,
+        559.0,
+        184.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find how many cubes make an <i>UP AND DOWN staircase</i> of height 10.",
+     "text": "Find how many cubes make an UP AND DOWN staircase of height 10."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "f",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      542.3,
+      570.0,
+      678.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 93.7,
+      "height_pt": 135.7
+     }
+    }
+   ],
+   "text": "Find an expression, in terms of n, for the number of cubes that make an UP AND DOWN staircase of\nheight n.\n................................................................",
+   "marks": 1,
+   "path": "2(f)",
+   "mark_scheme": [
+    {
+     "label": "2(f)",
+     "text": "2\n2\nn\nor n × n or 1n\ncao\n1",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        192.0,
+        559.0,
+        220.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression, in terms of <i>n</i>, for the number of cubes that make an <i>UP AND DOWN staircase</i> of height <i>n</i>.",
+     "text": "Find an expression, in terms of n, for the number of cubes that make an UP AND DOWN staircase of height n."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This is an <i>UP AND DOWN staircase</i> of height 3 made using 9 cubes. It is a 3-step <i>UP AND DOWN staircase</i> because it has a height of 3 cubes.",
+   "text": "This is an UP AND DOWN staircase of height 3 made using 9 cubes. It is a 3-step UP AND DOWN staircase because it has a height of 3 cubes."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2015MJ_51_q02_diagram1",
+   "caption": null
+  }
+ ],
+ "marks_source": "mark scheme"
+}

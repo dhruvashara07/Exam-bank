@@ -1,0 +1,113 @@
+{
+ "id": "0607_2015MJ_53_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    58.5,
+    570.0,
+    732.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 131.3,
+    "height_pt": 674.0
+   }
+  }
+ ],
+ "text": "4\nA different T is placed on a grid that is w squares wide.\nThe T has a horizontal bar of length 3 and a vertical bar of length 3.\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nw\nn\nComplete the squares in this T using expressions in terms of n and w.\nn",
+ "marks": 3,
+ "figures": [
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    94.9,
+    101.2,
+    502.3,
+    331.1
+   ],
+   "id": "0607_2015MJ_53_q04_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "4",
+   "text": "[ n + 1\nn + 2]\nn + w + 1\n1\nn + 2w + 1\nFT their pattern adding only 10 each\n1FT\nn + 3w + 1\n1FT\ntime",
+   "codes": [
+    "1FT",
+    "1FT",
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      36.0,
+      79.1,
+      559.0,
+      134.8
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 3,
+ "paper_code": "0607/53",
+ "paper_type": "core_investigation",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A different T is placed on a grid that is <i>w</i> squares wide. The T has a horizontal bar of length 3 and a vertical bar of length 3.",
+   "text": "A different T is placed on a grid that is w squares wide. The T has a horizontal bar of length 3 and a vertical bar of length 3."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2015MJ_53_q04_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "Complete the squares in this T using expressions in terms of <i>n</i> and <i>w</i>.",
+   "text": "Complete the squares in this T using expressions in terms of n and w."
+  },
+  {
+   "type": "text",
+   "html": "<i>n</i>",
+   "text": "n"
+  },
+  {
+   "type": "answer",
+   "kind": "space",
+   "height_pt": 131.3
+  }
+ ],
+ "marks_source": "mark scheme"
+}

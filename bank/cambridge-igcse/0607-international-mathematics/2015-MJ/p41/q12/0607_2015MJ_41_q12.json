@@ -1,0 +1,367 @@
+{
+ "id": "0607_2015MJ_41_q12",
+ "number": 12,
+ "segments": [
+  {
+   "page": 15,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    119.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 62.0
+   }
+  }
+ ],
+ "text": "12\nBag 1 only contains 6 blue balls and 4 red balls.\nBag 2 only contains 8 blue balls and 2 red balls.\nMarco chooses a ball at random from Bag 1 and puts it in Bag 2.\nHe then chooses a ball at random from Bag 2 and puts it in Bag 1.",
+ "marks": 10,
+ "figures": [
+  {
+   "caption": null,
+   "page": 15,
+   "bbox": [
+    175.1,
+    149.8,
+    424.8,
+    437.5
+   ],
+   "id": "0607_2015MJ_41_q12a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      122.0,
+      570.0,
+      453.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 41.1,
+      "height_pt": 331.5
+     }
+    }
+   ],
+   "text": "Complete the tree diagram.\nBag 1\nBag 2\nblue\n........\nblue\n6\n10\nred\n........\nblue\n........\n........\nred\nred\n........\n[2]",
+   "marks": 2,
+   "path": "12(a)",
+   "mark_scheme": [
+    {
+     "label": "12(a)",
+     "text": "4\n9\n2\n8\n3\n,\n,\n2\nB1 for one correct pair on 2nd bag\n10\n11 11\n11 11",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        36.0,
+        520.0,
+        559.0,
+        552.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the tree diagram.",
+     "text": "Complete the tree diagram."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2015MJ_41_q12a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 41.1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      453.5,
+      570.0,
+      475.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 3.0,
+      "height_pt": 22.0
+     }
+    }
+   ],
+   "text": "Find the probability that the two balls chosen are",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 15,
+       "bbox": [
+        30.0,
+        478.5,
+        570.0,
+        566.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 50.4,
+        "height_pt": 88.0
+       }
+      }
+     ],
+     "text": "both blue,\nAnswer(b)(i)  ................................................................ [2]",
+     "marks": 2,
+     "path": "12(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "12(b)(i)",
+       "text": "54\n6\n9\n× their\noe cao\nM1FT for\n2\n110\n10\n11",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          559.8,
+          559.0,
+          592.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "both blue,",
+       "text": "both blue,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Answer(b)(i)"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 15,
+       "bbox": [
+        30.0,
+        569.5,
+        570.0,
+        670.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 63.4,
+        "height_pt": 101.0
+       }
+      }
+     ],
+     "text": "one red and one blue.\nAnswer(b)(ii)  ................................................................ [3]",
+     "marks": 3,
+     "path": "12(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "12(b)(ii)",
+       "text": "44\n6\n2\n4\n× their\noe\ncao\nM2FT for\n+\n3\n110\n10\n11\n10\nor M1FT for one of above products",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          36.0,
+          599.6,
+          559.0,
+          658.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "one red and one blue.",
+       "text": "one red and one blue."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Answer(b)(ii)"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "12(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the probability that the two balls chosen are",
+     "text": "Find the probability that the two balls chosen are"
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      673.5,
+      570.0,
+      796.8
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 76.4,
+      "height_pt": 123.2
+     }
+    }
+   ],
+   "text": "Find the probability that, after Marco chooses the two balls, there are exactly 6 blue balls in Bag 1.\nAnswer(c)  ................................................................ [3]",
+   "marks": 3,
+   "path": "12(c)",
+   "mark_scheme": [
+    {
+     "label": "12(c)",
+     "text": "66\n6\n9\n4\n× their\noe\ncao\nM2FT for\n+\n3\n110\n10\n11\n10\n4\n3\nor (b)(i) +\n× their\nor 1 – their (b)(ii) oe\n10\n11\n6\n9\nor M1FT for\n× their\nor\n10\n11",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        36.0,
+        664.7,
+        559.0,
+        773.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the probability that, after Marco chooses the two balls, there are exactly 6 blue balls in Bag 1.",
+     "text": "Find the probability that, after Marco chooses the two balls, there are exactly 6 blue balls in Bag 1."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Answer(c)"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_long_answer",
+ "total_marks": 10,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Bag 1 only contains 6 blue balls and 4 red balls. Bag 2 only contains 8 blue balls and 2 red balls. Marco chooses a ball at random from Bag 1 and puts it in Bag 2. He then chooses a ball at random from Bag 2 and puts it in Bag 1.",
+   "text": "Bag 1 only contains 6 blue balls and 4 red balls. Bag 2 only contains 8 blue balls and 2 red balls. Marco chooses a ball at random from Bag 1 and puts it in Bag 2. He then chooses a ball at random from Bag 2 and puts it in Bag 1."
+  }
+ ]
+}

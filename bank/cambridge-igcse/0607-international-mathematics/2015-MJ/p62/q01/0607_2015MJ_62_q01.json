@@ -1,0 +1,269 @@
+{
+ "id": "0607_2015MJ_62_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    161.0,
+    570.0,
+    255.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.0,
+    "height_pt": 94.0
+   }
+  }
+ ],
+ "text": "1\nChemists use small spheres and rods to make models of molecules.\nThese diagrams show a sequence of molecules of height 1.\nMolecule 1\nMolecule 2\nMolecule 3",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      260.8,
+      570.0,
+      283.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 22.7
+     }
+    }
+   ],
+   "text": "Draw the next two molecules in this sequence.",
+   "marks": 1,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "1",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        236.7,
+        559.0,
+        284.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Draw the next two molecules in this sequence.",
+     "text": "Draw the next two molecules in this sequence."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      390.8,
+      570.0,
+      605.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 16.0,
+      "height_pt": 214.2
+     }
+    }
+   ],
+   "text": "Complete this table for molecules of height 1.\nMolecule\nNumber of spheres\nNumber of rods\nm\ns\nr\n1\n1\n0\n2\n2\n1\n3\n3\n2\n4\n5\n6",
+   "marks": 1,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "4 3\n1\n5 4\n6 5",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        298.6,
+        559.0,
+        344.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this table for molecules of height 1.",
+     "text": "Complete this table for molecules of height 1."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Molecule",
+       "Number of spheres",
+       "Number of rods"
+      ],
+      [
+       "<i>m</i>",
+       "<i>s</i>",
+       "<i>r</i>"
+      ],
+      [
+       "1",
+       "1",
+       "0"
+      ],
+      [
+       "2",
+       "2",
+       "1"
+      ],
+      [
+       "3",
+       "3",
+       "2"
+      ],
+      [
+       "4",
+       "",
+       ""
+      ],
+      [
+       "5",
+       "",
+       ""
+      ],
+      [
+       "6",
+       "",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      619.7,
+      570.0,
+      692.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "s =  ……",
+      "working_gap_pt": 37.4,
+      "height_pt": 72.8
+     }
+    }
+   ],
+   "text": "Write down a formula for s in terms of m.\ns =  ......................................................................",
+   "marks": 1,
+   "path": "1(c)",
+   "mark_scheme": [
+    {
+     "label": "1(c)",
+     "text": "[s =] m\n1",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        347.8,
+        559.0,
+        372.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down a formula for <i>s</i> in terms of <i>m</i>.",
+     "text": "Write down a formula for s in terms of m."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "s ="
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Chemists use small spheres and rods to make models of molecules. These diagrams show a sequence of molecules of height 1.",
+   "text": "Chemists use small spheres and rods to make models of molecules. These diagrams show a sequence of molecules of height 1."
+  },
+  {
+   "type": "text",
+   "html": "Molecule 1 Molecule 2 Molecule 3",
+   "text": "Molecule 1 Molecule 2 Molecule 3"
+  }
+ ],
+ "marks_source": "mark scheme"
+}

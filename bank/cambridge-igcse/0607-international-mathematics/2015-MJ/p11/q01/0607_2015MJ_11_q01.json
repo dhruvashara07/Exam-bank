@@ -1,0 +1,270 @@
+{
+ "id": "0607_2015MJ_11_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    89.2,
+    570.0,
+    219.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 25.5,
+    "height_pt": 130.3
+   }
+  }
+ ],
+ "text": "1\nHere is a bus timetable.\nBus stop\nBus 1\nBus 2\nBus 3\nBus 4\nA\n1522\n1540\n1609\n1638\nB\n1547\n1605\n1634\n1704\nC\n1602\n1620\n----\n1722\nD\n1615\n----\n1654\n1750\nE\n1630\n1642\n1709\n1811",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      224.6,
+      570.0,
+      297.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 42.4,
+      "height_pt": 72.4
+     }
+    }
+   ],
+   "text": "Find how many minutes it takes Bus 4 to travel from A to E.\nAnswer(a)\nmin\n[1]",
+   "marks": 1,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "93\n1\nAccept 1h 33 min",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        216.9,
+        559.0,
+        237.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find how many minutes it takes Bus 4 to travel from A to E.",
+     "text": "Find how many minutes it takes Bus 4 to travel from A to E."
+    },
+    {
+     "type": "text",
+     "html": "Answer(a) min",
+     "text": "Answer(a) min"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 42.4
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      315.7,
+      570.0,
+      413.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 42.4,
+      "height_pt": 97.8
+     }
+    }
+   ],
+   "text": "Jane arrives at Bat 1610.\nFind how many minutes she has to wait for the next bus.\nAnswer(b)\nmin\n[1]",
+   "marks": 1,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "24\n1",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        240.9,
+        559.0,
+        261.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Jane arrives at B at 16 10.",
+     "text": "Jane arrives at B at 16 10."
+    },
+    {
+     "type": "text",
+     "html": "Find how many minutes she has to wait for the next bus.",
+     "text": "Find how many minutes she has to wait for the next bus."
+    },
+    {
+     "type": "text",
+     "html": "Answer(b) min",
+     "text": "Answer(b) min"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 42.4
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      432.0,
+      570.0,
+      554.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 42.5,
+      "height_pt": 122.5
+     }
+    }
+   ],
+   "text": "Desi travels from C to E.\nHe must arrive at E by 1700.\nWhich is the latest bus that he can catch to arrive on time?\nAnswer(c)\n[1]",
+   "marks": 1,
+   "path": "1(c)",
+   "mark_scheme": [
+    {
+     "label": "1(c)",
+     "text": "Bus 2\nAccept 16 20\n1",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        264.8,
+        559.0,
+        289.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Desi travels from C to E. He must arrive at E by 17 00.",
+     "text": "Desi travels from C to E. He must arrive at E by 17 00."
+    },
+    {
+     "type": "text",
+     "html": "Which is the latest bus that he can catch to arrive on time?",
+     "text": "Which is the latest bus that he can catch to arrive on time?"
+    },
+    {
+     "type": "text",
+     "html": "Answer(c)",
+     "text": "Answer(c)"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 42.5
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 1,
+ "variant": 1,
+ "paper_code": "0607/11",
+ "paper_type": "core_short_answer",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Here is a bus timetable.",
+   "text": "Here is a bus timetable."
+  },
+  {
+   "type": "text",
+   "html": "<b>Bus stop</b> <b>Bus 1</b> <b>Bus 2</b> <b>Bus 3</b> <b>Bus 4</b> <b>A</b> 15 22 15 40 16 09 16 38 <b>B</b> 15 47 16 05 16 34 17 04 <b>C</b> 16 02 16 20 ---- 17 22 <b>D</b> 16 15 ---- 16 54 17 50 <b>E</b> 16 30 16 42 17 09 18 11",
+   "text": "Bus stop Bus 1 Bus 2 Bus 3 Bus 4 A 15 22 15 40 16 09 16 38 B 15 47 16 05 16 34 17 04 C 16 02 16 20 ---- 17 22 D 16 15 ---- 16 54 17 50 E 16 30 16 42 17 09 18 11"
+  }
+ ]
+}

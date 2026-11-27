@@ -1,0 +1,292 @@
+{
+ "id": "0607_2015MJ_33_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 11,
+   "bbox": [
+    30.0,
+    63.7,
+    570.0,
+    127.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": -1.5,
+    "height_pt": 63.3
+   }
+  }
+ ],
+ "text": ".\n9\nThe probability that Dave goes jogging is 3\n3 .\nIf Dave goes jogging, the probability that he goes swimming is 4\n9.\nIf Dave does not go jogging, the probability that he goes swimming is 10",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 11,
+   "bbox": [
+    123.3,
+    158.6,
+    460.7,
+    420.4
+   ],
+   "id": "0607_2015MJ_33_q09a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      127.0,
+      570.0,
+      454.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 5,
+      "answer_line": null,
+      "working_gap_pt": 26.0,
+      "height_pt": 327.5
+     }
+    }
+   ],
+   "text": "Complete the tree diagram.\nswimming\n............\njogging\n2\n3\n............\nnot\nswimming\nswimming\n............\n............\nnot\njogging\n............\nnot\nswimming\n[3]",
+   "marks": 3,
+   "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "2\n1\n3\nB1 for each branch\n \n3\n3\n \n3\n1\n4\n4\n9\n1\n10\n10",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        251.3,
+        559.0,
+        361.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the tree diagram.",
+     "text": "Complete the tree diagram."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2015MJ_33_q09a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      457.8,
+      570.0,
+      545.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 50.4,
+      "height_pt": 87.7
+     }
+    }
+   ],
+   "text": "Find the probability that Dave does not go jogging and does not go swimming.\nAnswer(b)  ................................................................. [2]",
+   "marks": 2,
+   "path": "9(b)",
+   "mark_scheme": [
+    {
+     "label": "9(b)",
+     "text": "1\n1\n1\n\n\noe\n2\nM1 for their\n×\n\n\n30\n3 10\n\n",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        382.3,
+        559.0,
+        417.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the probability that Dave does not go jogging and does not go swimming.",
+     "text": "Find the probability that Dave does not go jogging and does not go swimming."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Answer(b)"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      548.8,
+      570.0,
+      762.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 154.4,
+      "height_pt": 213.7
+     }
+    }
+   ],
+   "text": "Find the probability that Dave goes swimming.\nAnswer(c)  ................................................................. [3]",
+   "marks": 3,
+   "path": "9(c)",
+   "mark_scheme": [
+    {
+     "label": "9(c)",
+     "text": "4\n2\n3\n1\n\noe\n3\nM2 for\n×their\n+ their\n\n5\n3\n4\n3\n\n2\n3\n1\nM1 for\n×their\nor their  ×\n3\n4\n",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        436.0,
+        559.0,
+        509.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the probability that Dave goes swimming.",
+     "text": "Find the probability that Dave goes swimming."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Answer(c)"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 3,
+ "variant": 3,
+ "paper_code": "0607/33",
+ "paper_type": "core_long_answer",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": ".",
+   "text": "."
+  },
+  {
+   "type": "text",
+   "html": "The probability that Dave goes jogging is 3",
+   "text": "The probability that Dave goes jogging is 3"
+  },
+  {
+   "type": "text",
+   "html": ".",
+   "text": "."
+  },
+  {
+   "type": "text",
+   "html": "If Dave goes jogging, the probability that he goes swimming is 4",
+   "text": "If Dave goes jogging, the probability that he goes swimming is 4"
+  },
+  {
+   "type": "text",
+   "html": "9",
+   "text": "9"
+  },
+  {
+   "type": "text",
+   "html": "If Dave does not go jogging, the probability that he goes swimming is 10 .",
+   "text": "If Dave does not go jogging, the probability that he goes swimming is 10 ."
+  }
+ ]
+}

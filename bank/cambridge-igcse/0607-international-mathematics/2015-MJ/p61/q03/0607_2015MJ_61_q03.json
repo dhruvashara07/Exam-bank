@@ -1,0 +1,322 @@
+{
+ "id": "0607_2015MJ_61_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    314.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 257.0
+   }
+  }
+ ],
+ "text": "3\nThis is a DOUBLE staircase of height 3 made using 12 cubes.\nIt is a 3-step DOUBLE staircase because it has a height of 3 cubes.",
+ "marks": 3,
+ "figures": [
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    156.2,
+    96.2,
+    439.1,
+    313.3
+   ],
+   "id": "0607_2015MJ_61_q03_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      319.9,
+      570.0,
+      414.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 20.8,
+      "height_pt": 94.6
+     }
+    }
+   ],
+   "text": "Complete the table for the number of cubes that make these DOUBLE staircases.\nHeight\n1\n2\n3\n4\n5\n6\nNumber\n2\n12\nof cubes",
+   "marks": 0,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "Height\n1\n2\n3\n4\n5\n6\n1(c)\nCubes\n2\n6\n12\n20\n30\n42",
+     "codes": [],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        85.6,
+        559.0,
+        123.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table for the number of cubes that make these <i>DOUBLE staircases</i>.",
+     "text": "Complete the table for the number of cubes that make these DOUBLE staircases."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Height",
+       "1",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6"
+      ],
+      [
+       "Number of cubes",
+       "2",
+       "",
+       "12",
+       "",
+       "",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      468.1,
+      570.0,
+      592.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 89.6,
+      "height_pt": 124.4
+     }
+    }
+   ],
+   "text": "Find an expression, in terms of n, for the number of cubes that make a DOUBLE staircase of height n.\n.......................................................................",
+   "marks": 1,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "2\nn + n oe\n1\nC opportunity",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        127.1,
+        559.0,
+        147.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression, in terms of <i>n</i>, for the number of cubes that make a <i>DOUBLE staircase</i> of height <i>n</i>.",
+     "text": "Find an expression, in terms of n, for the number of cubes that make a DOUBLE staircase of height n."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      598.1,
+      570.0,
+      683.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 50.5,
+      "height_pt": 85.4
+     }
+    }
+   ],
+   "text": "Find how many cubes make a DOUBLE staircase of height 10.\n.......................................................................",
+   "marks": 1,
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "FT their (b) provided an\n110\n1FT\nexpression in n of correct order\nwith numerical coefficients\nC opportunity",
+     "codes": [
+      "1FT"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        151.0,
+        559.0,
+        209.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find how many cubes make a <i>DOUBLE staircase</i> of height 10.",
+     "text": "Find how many cubes make a DOUBLE staircase of height 10."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      689.1,
+      570.0,
+      774.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 50.5,
+      "height_pt": 85.4
+     }
+    }
+   ],
+   "text": "Find the height of a DOUBLE staircase made from 240 cubes.\n.......................................................................",
+   "marks": 1,
+   "path": "3(d)",
+   "mark_scheme": [
+    {
+     "label": "3(d)",
+     "text": "15\n1\nC opportunity",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        212.9,
+        559.0,
+        238.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the height of a <i>DOUBLE staircase</i> made from 240 cubes.",
+     "text": "Find the height of a DOUBLE staircase made from 240 cubes."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This is a<i> DOUBLE staircase </i>of height 3 made using 12 cubes. It is a 3-step <i>DOUBLE staircase</i> because it has a height of 3 cubes.",
+   "text": "This is a DOUBLE staircase of height 3 made using 12 cubes. It is a 3-step DOUBLE staircase because it has a height of 3 cubes."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2015MJ_61_q03_diagram1",
+   "caption": null
+  }
+ ],
+ "marks_source": "mark scheme"
+}

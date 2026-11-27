@@ -1,0 +1,426 @@
+{
+ "id": "0607_2015MJ_43_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    335.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 24.1,
+    "height_pt": 278.5
+   }
+  }
+ ],
+ "text": "5\n40cm\nNOT TO\nSCALE\nA\nB\n30cm\nxcm\nD\nC\nxcm\nThe diagram shows a rectangle, with sides 40 cm and 30 cm, made from a metal sheet.\nA square of side x cm is cut from each of the four corners of the rectangle.\nThe remaining shape is folded up to make a rectangular open box with ABCD as the base.\nThe height of the box is x cm.",
+ "marks": 11,
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    176.4,
+    72.3,
+    543.2,
+    251.5
+   ],
+   "id": "0607_2015MJ_43_q05_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 9,
+   "bbox": [
+    145.9,
+    105.5,
+    453.7,
+    361.1
+   ],
+   "id": "0607_2015MJ_43_q05b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      338.8,
+      570.0,
+      569.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 193.5,
+      "height_pt": 230.7
+     }
+    }
+   ],
+   "text": "2\n3\n(a) Show that the volume of the box is\n1200\nx\n140\nx\n4\nx\n.\n-\n+\n[3]",
+   "marks": 3,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "x(40 – 2x)(30 – 2x)\nor B1 for 40 – 2x or 30 – 2x\n2\n1200 – 80x – 60x + 4x²\n1\nindep",
+     "codes": [
+      "2",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        330.3,
+        559.0,
+        363.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that the volume of the box is 1200<i>x</i> - 140<i>x</i><sup>2</sup> + 4<i>x</i><sup>3</sup> .",
+     "text": "Show that the volume of the box is 1200x - 140x2 + 4x3 ."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 193.5
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      61.0,
+      570.0,
+      380.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 139.9,
+      "height_pt": 319.0
+     }
+    }
+   ],
+   "text": "2\n3\n(b) On the diagram, sketch the graph of\ny\n1200\nx\n140\nx\n4\nx\nfor\n0\nx\n25\n.\n=\n-\n+\nG\nG\ny\n5000\nx\n0\n25\n–1000\n[2]",
+   "marks": 2,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "B1 for any cubic curve ( +x³) with max & min\n2",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        366.9,
+        559.0,
+        412.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the diagram, sketch the graph of <i>y</i> = 1200<i>x</i> - 140<i>x</i><sup>2</sup> + 4<i>x</i><sup>3</sup> for 0 G <i>x</i> G 25.",
+     "text": "On the diagram, sketch the graph of y = 1200x - 140x2 + 4x3 for 0 G x G 25."
+    },
+    {
+     "type": "text",
+     "html": "<i>y</i>",
+     "text": "y"
+    },
+    {
+     "type": "figure",
+     "id": "0607_2015MJ_43_q05b_diagram2",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 139.9
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      383.3,
+      570.0,
+      471.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "Answer(c) x = …… or x = …… or x = …… [3]",
+      "working_gap_pt": 50.4,
+      "height_pt": 87.7
+     }
+    }
+   ],
+   "text": "2\n3\n(c) Solve the equation\nx\nx\nx\n1200\n140\n4\n2000\n.\n-\n+\n=\nAnswer(c) x = .................................. or x = .................................. or x = ................................. [3]",
+   "marks": 3,
+   "path": "5(c)",
+   "mark_scheme": [
+    {
+     "label": "5(c)",
+     "text": "2.19 or 2.192...\n1\n10\n1\n22.8 or 22.80 to 22.81\n1",
+     "codes": [
+      "1",
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        444.2,
+        559.0,
+        489.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Solve the equation 1200<i>x</i> - 140<i>x</i><sup>2</sup> + 4<i>x</i><sup>3</sup> = 2000.",
+     "text": "Solve the equation 1200x - 140x2 + 4x3 = 2000."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Answer(c) x ="
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      474.3,
+      570.0,
+      562.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 11.5,
+      "height_pt": 87.7
+     }
+    }
+   ],
+   "text": "Which solution to part (c) is not a possible value of x when the volume of the box is 2000 cm3? Give a\nreason for your answer.\nAnswer(d)  .................................................................................................................................................\n.......................................................................................................................................................... [1]",
+   "marks": 1,
+   "path": "5(d)",
+   "mark_scheme": [
+    {
+     "label": "5(d)",
+     "text": "22.8 would produce negative\nwidth/length\n1\noe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        493.5,
+        559.0,
+        526.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Which solution to <b>part (c)</b> is not a possible value of <i>x</i> when the volume of the box is 2000 cm<sup>3</sup>? Give a reason for your answer.",
+     "text": "Which solution to part (c) is not a possible value of x when the volume of the box is 2000 cm3? Give a reason for your answer."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Answer(d)"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      565.3,
+      570.0,
+      701.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "Answer(e) Maximum volume =  …… cm3",
+      "working_gap_pt": 49.4,
+      "height_pt": 135.7
+     }
+    }
+   ],
+   "text": "What is the maximum volume of the box?\nFor this volume what is the length of the box?\nAnswer(e) Maximum volume =  .............................................................. cm3\nLength =  ....................................................... cm [2]",
+   "marks": 2,
+   "path": "5(e)",
+   "mark_scheme": [
+    {
+     "label": "5(e)",
+     "text": "3030 or 3032 to 3032.3...\n1\n28.7 or 28.68 to 28.69 or\n1\n18.7 or 18.68 to 18.69",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        530.1,
+        559.0,
+        592.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "What is the maximum volume of the box? For this volume what is the length of the box?",
+     "text": "What is the maximum volume of the box? For this volume what is the length of the box?"
+    },
+    {
+     "type": "text",
+     "html": "<i>Answer(e)</i> Maximum volume = …… cm<sup>3</sup>",
+     "text": "Answer(e) Maximum volume = …… cm3"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Length =",
+     "unit": "cm"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 3,
+ "paper_code": "0607/43",
+ "paper_type": "extended_long_answer",
+ "total_marks": 11,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>5 </b>",
+   "text": "5"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2015MJ_43_q05_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The diagram shows a rectangle, with sides 40 cm and 30 cm, made from a metal sheet. A square of side <i>x</i> cm is cut from each of the four corners of the rectangle. The remaining shape is folded up to make a rectangular open box with <i>ABCD</i> as the base. The height of the box is <i>x</i> cm.",
+   "text": "The diagram shows a rectangle, with sides 40 cm and 30 cm, made from a metal sheet. A square of side x cm is cut from each of the four corners of the rectangle. The remaining shape is folded up to make a rectangular open box with ABCD as the base. The height of the box is x cm."
+  }
+ ]
+}

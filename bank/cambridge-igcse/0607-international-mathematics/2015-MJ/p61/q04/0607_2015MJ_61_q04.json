@@ -1,0 +1,210 @@
+{
+ "id": "0607_2015MJ_61_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    378.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 321.5
+   }
+  }
+ ],
+ "text": "4\nThis is a sequence of MULTIPLE staircases of heights 1, 2 and 3.\nThese are MULTIPLE staircases because, for each staircase, the width, the height and the depth are the\nsame.",
+ "marks": 3,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    45.6,
+    109.2,
+    549.7,
+    377.4
+   ],
+   "id": "0607_2015MJ_61_q04_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      383.8,
+      570.0,
+      478.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 20.8,
+      "height_pt": 94.7
+     }
+    }
+   ],
+   "text": "Complete the table for the number of cubes that make these MULTIPLE staircases.\nHeight\n1\n2\n3\n4\n5\n6\nNumber\n1\n6\n18\nof cubes",
+   "marks": 2,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "Height\n1\n2\n3\n4\n5\n6\n2\nB1FT for any two\nCubes\n1\n6\n18\n40\n75\n126",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        238.5,
+        559.0,
+        281.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table for the number of cubes that make these <i>MULTIPLE staircases</i>.",
+     "text": "Complete the table for the number of cubes that make these MULTIPLE staircases."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Height",
+       "1",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6"
+      ],
+      [
+       "Number of cubes",
+       "1",
+       "6",
+       "18",
+       "",
+       "",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      571.0,
+      570.0,
+      747.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 128.5,
+      "height_pt": 176.5
+     }
+    }
+   ],
+   "text": "Find an expression, in terms of n, for the number of cubes that make a MULTIPLE staircase of\nheight n.\n.......................................................................",
+   "marks": 1,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "1\n1\n3\n2\nn +\nn oe\nC opportunity\n1\n2\n2",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        36.0,
+        288.0,
+        559.0,
+        326.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression, in terms of <i>n</i>, for the number of cubes that make a <i>MULTIPLE staircase</i> of height <i>n</i>.",
+     "text": "Find an expression, in terms of n, for the number of cubes that make a MULTIPLE staircase of height n."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "This is a sequence of <i>MULTIPLE staircases</i> of heights 1, 2 and 3. These are <i>MULTIPLE staircases</i> because, for each staircase, the width, the height and the depth are the same.",
+   "text": "This is a sequence of MULTIPLE staircases of heights 1, 2 and 3. These are MULTIPLE staircases because, for each staircase, the width, the height and the depth are the same."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2015MJ_61_q04_diagram1",
+   "caption": null
+  }
+ ],
+ "marks_source": "mark scheme"
+}
