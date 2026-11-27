@@ -39,10 +39,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "mark scheme row 5(i) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -197,7 +195,26 @@
      "text": "Calculate the mean time.\n................................................................s [1]",
      "marks": 1,
      "path": "5(c)(i)",
-     "mark_scheme_on": "5(c)",
+     "mark_scheme": [
+      {
+       "label": "5(c)(i)",
+       "text": "75",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          22.22800064086914,
+          276.3,
+          573.0189819335938,
+          296.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -243,7 +260,26 @@
      "text": "Calculate the mean number of objects.\n................................................................. [1]",
      "marks": 1,
      "path": "5(c)(ii)",
-     "mark_scheme_on": "5(c)",
+     "mark_scheme": [
+      {
+       "label": "5(c)(ii)",
+       "text": "16.6",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          22.22800064086914,
+          301.6,
+          573.0189819335938,
+          321.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -305,7 +341,7 @@
      "mark_scheme": [
       {
        "label": "5(d)(i)",
-       "text": "0.168t + 3.96\n18",
+       "text": "0.168t + 3.96",
        "codes": [
         "2"
        ],
@@ -316,7 +352,7 @@
           22.22800064086914,
           326.5,
           573.0189819335938,
-          417.9
+          372.4
          ]
         }
        ]
@@ -368,7 +404,24 @@
      "text": "Errol looks at the tray for 85 seconds.\nUse your equation to estimate the number of objects he remembers.\n................................................................. [1]",
      "marks": 1,
      "path": "5(d)(ii)",
-     "mark_scheme_on": "5",
+     "mark_scheme": [
+      {
+       "label": "5(d)(ii)",
+       "text": "18",
+       "codes": [],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          22.22800064086914,
+          377.5,
+          573.0189819335938,
+          417.9
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -391,33 +444,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "5",
-   "text": "",
-   "codes": [],
-   "segments": []
-  },
-  {
-   "label": "5(i)",
-   "text": "75\n16.6",
-   "codes": [
-    "1",
-    "1"
-   ],
-   "segments": [
-    {
-     "page": 3,
-     "bbox": [
-      22.22800064086914,
-      276.3,
-      573.0189819335938,
-      321.8
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

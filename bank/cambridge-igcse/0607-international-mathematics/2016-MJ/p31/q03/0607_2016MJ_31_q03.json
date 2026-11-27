@@ -24,10 +24,8 @@
  "marks": 6,
  "figures": [],
  "review": {
-  "reasons": [
-   "mark scheme row 3(i) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -66,7 +64,7 @@
        "page": 2,
        "bbox": [
         15.992000579833984,
-        532.2,
+        528.5,
         579.2839965820312,
         552.4
        ]
@@ -190,7 +188,26 @@
      "text": "He sells all these cheese balls at a school fair for $0.25 each.\nWork out how much money he received.\n$  ................................................................. [1]",
      "marks": 1,
      "path": "3(c)(i)",
-     "mark_scheme_on": "3(c)",
+     "mark_scheme": [
+      {
+       "label": "3(c)(i)",
+       "text": "50",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          15.992000579833984,
+          580.1,
+          579.2839965820312,
+          600.3
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -241,7 +258,24 @@
      "text": "The profit goes to the school charity.\nWork out how much money goes to the school charity.\n$  ................................................................. [1]",
      "marks": 1,
      "path": "3(c)(ii)",
-     "mark_scheme_on": "3(c)",
+     "mark_scheme": [
+      {
+       "label": "3(c)(ii)",
+       "text": "23",
+       "codes": [],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          15.992000579833984,
+          604.0,
+          579.2839965820312,
+          624.3
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -337,32 +371,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "3",
-   "text": "",
-   "codes": [],
-   "segments": []
-  },
-  {
-   "label": "3(i)",
-   "text": "50\n23",
-   "codes": [
-    "1"
-   ],
-   "segments": [
-    {
-     "page": 2,
-     "bbox": [
-      15.992000579833984,
-      580.1,
-      579.2839965820312,
-      624.3
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

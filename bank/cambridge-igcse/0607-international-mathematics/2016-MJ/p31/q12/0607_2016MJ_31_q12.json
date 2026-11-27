@@ -39,10 +39,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "mark scheme row 12(i) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -81,7 +79,7 @@
        "page": 5,
        "bbox": [
         15.992000579833984,
-        294.6,
+        288.6,
         579.2839965820312,
         316.3
        ]
@@ -139,10 +137,9 @@
      "mark_scheme": [
       {
        "label": "12(b)(i)",
-       "text": "(200+300)\n[\n]\n=250\noe\n2\n638.5",
+       "text": "(200+300)\n[\n]\n=250\noe\n2",
        "codes": [
-        "1",
-        "2"
+        "1"
        ],
        "segments": [
         {
@@ -151,7 +148,7 @@
           15.992000579833984,
           323.1,
           579.2839965820312,
-          409.9
+          360.4
          ]
         }
        ]
@@ -193,7 +190,26 @@
      "text": "Find an estimate of the mean mass of these 200 meerkats.\n............................................................. g [2]",
      "marks": 2,
      "path": "12(b)(ii)",
-     "mark_scheme_on": "12",
+     "mark_scheme": [
+      {
+       "label": "12(b)(ii)",
+       "text": "638.5",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          15.992000579833984,
+          364.4,
+          579.2839965820312,
+          409.9
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -422,7 +438,24 @@
      "text": "the median,\n............................................................. g [1]",
      "marks": 1,
      "path": "12(e)(i)",
-     "mark_scheme_on": "12(e)",
+     "mark_scheme": [
+      {
+       "label": "12(e)(i)",
+       "text": "662 (660 to 680)",
+       "codes": [],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          15.992000579833984,
+          103.0,
+          579.2839965820312,
+          123.2
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -468,7 +501,24 @@
      "text": "the inter-quartile range,\n............................................................. g [2]",
      "marks": 2,
      "path": "12(e)(ii)",
-     "mark_scheme_on": "12(e)",
+     "mark_scheme": [
+      {
+       "label": "12(e)(ii)",
+       "text": "230 (230 to 260)",
+       "codes": [],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          15.992000579833984,
+          127.0,
+          579.2839965820312,
+          178.6
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -514,7 +564,24 @@
      "text": "the number of meerkats with a mass of more than 850 g.\n.................................................................. [2]",
      "marks": 2,
      "path": "12(e)(iii)",
-     "mark_scheme_on": "12(e)",
+     "mark_scheme": [
+      {
+       "label": "12(e)(iii)",
+       "text": "12 (8 to 16)",
+       "codes": [],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          15.992000579833984,
+          182.3,
+          579.2839965820312,
+          228.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -552,30 +619,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "12",
-   "text": "",
-   "codes": [],
-   "segments": []
-  },
-  {
-   "label": "12(i)",
-   "text": "662 (660 to 680)\n230 (230 to 260)\n12 (8 to 16)",
-   "codes": [],
-   "segments": [
-    {
-     "page": 6,
-     "bbox": [
-      15.992000579833984,
-      103.0,
-      579.2839965820312,
-      228.7
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

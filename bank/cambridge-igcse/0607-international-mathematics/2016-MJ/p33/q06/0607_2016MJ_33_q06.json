@@ -39,10 +39,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "mark scheme row 6(v) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -96,11 +94,8 @@
      "mark_scheme": [
       {
        "label": "6(a)(i)",
-       "text": "1 or 4 or 6\n9\n15\n8",
+       "text": "1 or 4 or 6",
        "codes": [
-        "1",
-        "1",
-        "1",
         "1"
        ],
        "segments": [
@@ -108,9 +103,9 @@
          "page": 3,
          "bbox": [
           33.0,
-          262.6,
+          258.8,
           562.2470092773438,
-          354.6
+          282.8
          ]
         }
        ]
@@ -157,7 +152,26 @@
      "text": "81,\n.................................................................. [1]",
      "marks": 1,
      "path": "6(a)(ii)",
-     "mark_scheme_on": "6",
+     "mark_scheme": [
+      {
+       "label": "6(a)(ii)",
+       "text": "9",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          33.0,
+          286.5,
+          562.2470092773438,
+          306.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -199,7 +213,26 @@
      "text": "a multiple of 5,\n.................................................................. [1]",
      "marks": 1,
      "path": "6(a)(iii)",
-     "mark_scheme_on": "6",
+     "mark_scheme": [
+      {
+       "label": "6(a)(iii)",
+       "text": "15",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          33.0,
+          310.5,
+          562.2470092773438,
+          330.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -241,7 +274,26 @@
      "text": "23,\n.................................................................. [1]",
      "marks": 1,
      "path": "6(a)(iv)",
-     "mark_scheme_on": "6",
+     "mark_scheme": [
+      {
+       "label": "6(a)(iv)",
+       "text": "8",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          33.0,
+          334.4,
+          562.2470092773438,
+          354.6
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -283,7 +335,26 @@
      "text": "a prime number.\n.................................................................. [1]",
      "marks": 1,
      "path": "6(a)(v)",
-     "mark_scheme_on": "6",
+     "mark_scheme": [
+      {
+       "label": "6(a)(v)",
+       "text": "7",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          33.0,
+          358.4,
+          562.2470092773438,
+          378.6
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -391,32 +462,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "6",
-   "text": "",
-   "codes": [],
-   "segments": []
-  },
-  {
-   "label": "6(v)",
-   "text": "7",
-   "codes": [
-    "1"
-   ],
-   "segments": [
-    {
-     "page": 3,
-     "bbox": [
-      33.0,
-      358.4,
-      562.2470092773438,
-      378.6
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

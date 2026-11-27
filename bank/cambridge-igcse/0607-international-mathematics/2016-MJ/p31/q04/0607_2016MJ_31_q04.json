@@ -24,10 +24,8 @@
  "marks": 8,
  "figures": [],
  "review": {
-  "reasons": [
-   "mark scheme row 4(i) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -66,7 +64,7 @@
        "page": 3,
        "bbox": [
         15.992000579833984,
-        107.6,
+        99.3,
         579.2839965820312,
         149.8
        ]
@@ -166,11 +164,8 @@
      "mark_scheme": [
       {
        "label": "4(b)(i)",
-       "text": "8\n28\n29\n30",
+       "text": "8",
        "codes": [
-        "1",
-        "1",
-        "1",
         "1"
        ],
        "segments": [
@@ -180,7 +175,23 @@
           15.992000579833984,
           153.7,
           579.2839965820312,
-          245.7
+          173.9
+         ]
+        }
+       ]
+      },
+      {
+       "label": "4(b)(i)",
+       "text": "4",
+       "codes": [],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          15.992000579833984,
+          251.2,
+          579.2839965820312,
+          258.1
          ]
         }
        ]
@@ -227,7 +238,26 @@
      "text": "the mode,\n.................................................................. [1]",
      "marks": 1,
      "path": "4(b)(ii)",
-     "mark_scheme_on": "4",
+     "mark_scheme": [
+      {
+       "label": "4(b)(ii)",
+       "text": "28",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          15.992000579833984,
+          177.6,
+          579.2839965820312,
+          197.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -269,7 +299,26 @@
      "text": "the median,\n.................................................................. [1]",
      "marks": 1,
      "path": "4(b)(iii)",
-     "mark_scheme_on": "4",
+     "mark_scheme": [
+      {
+       "label": "4(b)(iii)",
+       "text": "29",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          15.992000579833984,
+          201.6,
+          579.2839965820312,
+          221.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -311,7 +360,26 @@
      "text": "the mean.\n.................................................................. [1]",
      "marks": 1,
      "path": "4(b)(iv)",
-     "mark_scheme_on": "4",
+     "mark_scheme": [
+      {
+       "label": "4(b)(iv)",
+       "text": "30",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          15.992000579833984,
+          225.5,
+          579.2839965820312,
+          245.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -429,7 +497,24 @@
      "text": "fewer than 30 strawberries.\n.................................................................. [1]",
      "marks": 1,
      "path": "4(c)(ii)",
-     "mark_scheme_on": "4(c)",
+     "mark_scheme": [
+      {
+       "label": "4(c)(ii)",
+       "text": "11\noe isw\n20",
+       "codes": [],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          15.992000579833984,
+          291.7,
+          579.2839965820312,
+          326.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -452,7 +537,7 @@
    "mark_scheme": [
     {
      "label": "4(c)",
-     "text": "oe isw\n20\n11\noe isw\n20",
+     "text": "oe isw\n20",
      "codes": [],
      "segments": [
       {
@@ -461,7 +546,7 @@
         15.992000579833984,
         258.1,
         579.2839965820312,
-        326.5
+        286.0
        ]
       }
      ]
@@ -477,30 +562,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "4",
-   "text": "",
-   "codes": [],
-   "segments": []
-  },
-  {
-   "label": "4(i)",
-   "text": "4",
-   "codes": [],
-   "segments": [
-    {
-     "page": 3,
-     "bbox": [
-      15.992000579833984,
-      251.2,
-      579.2839965820312,
-      258.1
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

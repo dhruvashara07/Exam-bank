@@ -94,10 +94,8 @@
      "mark_scheme": [
       {
        "label": "10(a)(i)",
-       "text": "{1, 4, 9}\n{2, 4, 6, 8}\n{1, 9}",
+       "text": "{1, 4, 9}",
        "codes": [
-        "1",
-        "1",
         "1"
        ],
        "segments": [
@@ -107,7 +105,7 @@
           39.26499938964844,
           597.7,
           556.0390014648438,
-          666.9
+          619.0
          ]
         }
        ]
@@ -149,7 +147,26 @@
      "text": "B′= {\n}\n[1]",
      "marks": 1,
      "path": "10(a)(ii)",
-     "mark_scheme_on": "10",
+     "mark_scheme": [
+      {
+       "label": "10(a)(ii)",
+       "text": "{2, 4, 6, 8}",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          39.26499938964844,
+          621.7,
+          556.0390014648438,
+          643.0
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -186,7 +203,26 @@
      "text": "A∩B = {\n}\n[1]",
      "marks": 1,
      "path": "10(a)(iii)",
-     "mark_scheme_on": "10",
+     "mark_scheme": [
+      {
+       "label": "10(a)(iii)",
+       "text": "{1, 9}",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          39.26499938964844,
+          645.6,
+          556.0390014648438,
+          666.9
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -329,14 +365,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "10",
-   "text": "",
-   "codes": [],
-   "segments": []
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

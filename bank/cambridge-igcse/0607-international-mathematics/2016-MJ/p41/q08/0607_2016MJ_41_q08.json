@@ -90,13 +90,8 @@
      "mark_scheme": [
       {
        "label": "8(a)(i)",
-       "text": "Correct sketch\ny\nf(x)=log(1 + 2x + x^2)\n2\nx\n-2\n-1\n1\n2\n3\n-2\n-4\n–2\n0\nx = –1",
-       "codes": [
-        "2",
-        "1",
-        "1",
-        "1"
-       ],
+       "text": "Correct sketch",
+       "codes": [],
        "segments": [
         {
          "page": 4,
@@ -104,7 +99,7 @@
           22.22800064086914,
           100.0,
           573.0189819335938,
-          260.1
+          113.1
          ]
         }
        ]
@@ -146,7 +141,28 @@
      "text": "Solve   f()x\n.\n=\n0\nx =  .......................... or x = ........................... [2]",
      "marks": 2,
      "path": "8(a)(ii)",
-     "mark_scheme_on": "8",
+     "mark_scheme": [
+      {
+       "label": "8(a)(ii)",
+       "text": "y\nf(x)=log(1 + 2x + x^2)\n2\nx\n-2\n-1\n1\n2\n3\n-2\n-4\n–2\n0",
+       "codes": [
+        "2",
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          22.22800064086914,
+          113.1,
+          573.0189819335938,
+          234.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -188,7 +204,26 @@
      "text": "Write down the equation of the asymptote to the graph of\ny\nx\n.\n=\nf()\n................................................................. [1]",
      "marks": 1,
      "path": "8(a)(iii)",
-     "mark_scheme_on": "8",
+     "mark_scheme": [
+      {
+       "label": "8(a)(iii)",
+       "text": "x = –1",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          22.22800064086914,
+          239.9,
+          573.0189819335938,
+          260.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -254,12 +289,9 @@
      "mark_scheme": [
       {
        "label": "8(b)(i)",
-       "text": "Correct sketch\ny\n2\nf(x)=2log(1+x)\nx\n-3\n3\n-2\n-4\nSame right hand branch\ne.g.\n2\nlog(1 + 2x + x ) = 2 log(1 + x)\nNo log of a negative number",
+       "text": "Correct sketch\ny\n2\nf(x)=2log(1+x)\nx\n-3\n3\n-2\n-4",
        "codes": [
-        "2",
-        "1",
-        "1",
-        "1"
+        "2"
        ],
        "segments": [
         {
@@ -268,7 +300,7 @@
           22.22800064086914,
           265.2,
           573.0189819335938,
-          444.8
+          363.3
          ]
         }
        ]
@@ -325,7 +357,26 @@
      "text": "Describe a similarity between the graphs in part (a)(i) and part (b)(i).\n...........................................................................................................................................................\n..................................................................................................................................................... [1]",
      "marks": 1,
      "path": "8(b)(ii)",
-     "mark_scheme_on": "8",
+     "mark_scheme": [
+      {
+       "label": "8(b)(ii)",
+       "text": "Same right hand branch",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          22.22800064086914,
+          366.4,
+          573.0189819335938,
+          386.6
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -367,7 +418,27 @@
      "text": "Explain the differences between the graphs in part (a)(i) and part (b)(i).\n...........................................................................................................................................................\n..................................................................................................................................................... [2]",
      "marks": 2,
      "path": "8(b)(iii)",
-     "mark_scheme_on": "8",
+     "mark_scheme": [
+      {
+       "label": "8(b)(iii)",
+       "text": "e.g.\n2\nlog(1 + 2x + x ) = 2 log(1 + x)\nNo log of a negative number",
+       "codes": [
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          22.22800064086914,
+          391.7,
+          573.0189819335938,
+          444.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -390,14 +461,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "8",
-   "text": "",
-   "codes": [],
-   "segments": []
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

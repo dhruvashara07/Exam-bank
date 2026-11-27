@@ -61,9 +61,8 @@
      "mark_scheme": [
       {
        "label": "16(a)(i)",
-       "text": "3(x + 2) cao final answer\np(p + q) cao final answer",
+       "text": "3(x + 2) cao final answer",
        "codes": [
-        "1",
         "1"
        ],
        "segments": [
@@ -73,7 +72,7 @@
           39.26499938964844,
           380.1,
           556.0390014648438,
-          425.4
+          401.5
          ]
         }
        ]
@@ -115,7 +114,26 @@
      "text": "p2 + pq\n[1]",
      "marks": 1,
      "path": "16(a)(ii)",
-     "mark_scheme_on": "16",
+     "mark_scheme": [
+      {
+       "label": "16(a)(ii)",
+       "text": "p(p + q) cao final answer",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          39.26499938964844,
+          404.1,
+          556.0390014648438,
+          425.4
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -201,14 +219,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "16",
-   "text": "",
-   "codes": [],
-   "segments": []
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

@@ -6,10 +6,8 @@
  "marks": 6,
  "figures": [],
  "review": {
-  "reasons": [
-   "mark scheme row 9(i) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -48,7 +46,7 @@
        "page": 4,
        "bbox": [
         35.4379997253418,
-        258.3,
+        254.6,
         559.781005859375,
         278.5
        ]
@@ -107,8 +105,6 @@
      "label": "9(b)",
      "text": "1\n2.5 hours or 2\nhours\n2\nor 2 hours 30 minutes or 150 minutes",
      "codes": [
-      "5",
-      "6",
       "2"
      ],
      "segments": [
@@ -193,7 +189,26 @@
      "text": "Work out the range of these times.\n...................................................... hours [1]",
      "marks": 1,
      "path": "9(c)(i)",
-     "mark_scheme_on": "9(c)",
+     "mark_scheme": [
+      {
+       "label": "9(c)(i)",
+       "text": "6\nor 6.5 or 6 hours 30 minutes\n2",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          35.4379997253418,
+          348.9,
+          559.781005859375,
+          379.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -239,7 +254,26 @@
      "text": "Work out the mean time.\n...................................................... hours [1]",
      "marks": 1,
      "path": "9(c)(ii)",
-     "mark_scheme_on": "9(c)",
+     "mark_scheme": [
+      {
+       "label": "9(c)(ii)",
+       "text": "1\n5\nor 5.5 or 5 hours 30 minutes\n2",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          35.4379997253418,
+          385.2,
+          559.781005859375,
+          420.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -296,33 +330,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "9",
-   "text": "",
-   "codes": [],
-   "segments": []
-  },
-  {
-   "label": "9(i)",
-   "text": "6\nor 6.5 or 6 hours 30 minutes\n2\n1\n5\nor 5.5 or 5 hours 30 minutes\n2",
-   "codes": [
-    "1",
-    "1"
-   ],
-   "segments": [
-    {
-     "page": 4,
-     "bbox": [
-      35.4379997253418,
-      348.9,
-      559.781005859375,
-      420.1
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

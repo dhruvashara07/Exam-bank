@@ -46,7 +46,7 @@
        "page": 6,
        "bbox": [
         25.090999603271484,
-        678.1,
+        671.5,
         570.1279907226562,
         697.9
        ]
@@ -109,11 +109,8 @@
      "mark_scheme": [
       {
        "label": "12(b)(i)",
-       "text": "392\n3\n2\nn +n\noe",
+       "text": "392",
        "codes": [
-        "2",
-        "3",
-        "3",
         "2"
        ],
        "segments": [
@@ -123,7 +120,7 @@
           25.090999603271484,
           702.2,
           570.1279907226562,
-          777.7
+          735.0
          ]
         }
        ]
@@ -175,7 +172,26 @@
      "text": "Find the nth term of the sequence.\n2,  12,  36,  80,  150,  252,  …\n.................................................................. [2]",
      "marks": 2,
      "path": "12(b)(ii)",
-     "mark_scheme_on": "12",
+     "mark_scheme": [
+      {
+       "label": "12(b)(ii)",
+       "text": "3\n2\nn +n\noe",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          25.090999603271484,
+          737.9,
+          570.1279907226562,
+          777.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -198,14 +214,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "12",
-   "text": "",
-   "codes": [],
-   "segments": []
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

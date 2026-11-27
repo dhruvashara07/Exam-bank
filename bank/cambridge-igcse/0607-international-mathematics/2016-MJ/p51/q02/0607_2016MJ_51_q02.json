@@ -67,10 +67,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "mark scheme row 2(i) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -100,7 +98,7 @@
    "mark_scheme": [
     {
      "label": "2(a)",
-     "text": "[ =3]\n[ =3] oe seen\nand\n3\n1",
+     "text": "9\n3\n[ =3]\n[ =3] oe seen\nand\n3\n1",
      "codes": [
       "1"
      ],
@@ -109,7 +107,7 @@
        "page": 2,
        "bbox": [
         25.062999725341797,
-        346.5,
+        334.8,
         570.1840209960938,
         375.0
        ]
@@ -238,9 +236,28 @@
       }
      ],
      "text": "Find m.\n......................................................",
-     "marks": 0,
+     "marks": 1,
      "path": "2(c)(i)",
-     "mark_scheme_on": "2(c)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(i)",
+       "text": "147",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          25.062999725341797,
+          419.6,
+          570.1840209960938,
+          439.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -276,9 +293,28 @@
       }
      ],
      "text": "Write down the dimensions of the scale-rectangle.\n........................ by ........................",
-     "marks": 0,
+     "marks": 1,
      "path": "2(c)(ii)",
-     "mark_scheme_on": "2(c)",
+     "mark_scheme": [
+      {
+       "label": "2(c)(ii)",
+       "text": "21 by 150 or 150 by 21",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          25.062999725341797,
+          443.6,
+          570.1840209960938,
+          463.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -381,14 +417,13 @@
       }
      ],
      "text": "Find w.\n......................................................",
-     "marks": 2,
+     "marks": 1,
      "path": "2(d)(i)",
      "mark_scheme": [
       {
        "label": "2(d)(i)",
-       "text": "15\n15 by 78 or 78 by 15",
+       "text": "15",
        "codes": [
-        "1",
         "1"
        ],
        "segments": [
@@ -398,7 +433,7 @@
           25.062999725341797,
           467.5,
           570.1840209960938,
-          511.7
+          487.7
          ]
         }
        ]
@@ -439,9 +474,28 @@
       }
      ],
      "text": "Write down the dimensions of the scale-rectangle.\n........................ by ........................",
-     "marks": 0,
+     "marks": 1,
      "path": "2(d)(ii)",
-     "mark_scheme_on": "2",
+     "mark_scheme": [
+      {
+       "label": "2(d)(ii)",
+       "text": "15 by 78 or 78 by 15",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          25.062999725341797,
+          491.5,
+          570.1840209960938,
+          511.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -492,43 +546,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "2",
-   "text": "9\n3",
-   "codes": [],
-   "segments": [
-    {
-     "page": 2,
-     "bbox": [
-      25.062999725341797,
-      334.8,
-      570.1840209960938,
-      346.5
-     ]
-    }
-   ]
-  },
-  {
-   "label": "2(i)",
-   "text": "147\n21 by 150 or 150 by 21",
-   "codes": [
-    "1",
-    "1"
-   ],
-   "segments": [
-    {
-     "page": 2,
-     "bbox": [
-      25.062999725341797,
-      419.6,
-      570.1840209960938,
-      463.8
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

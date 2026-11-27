@@ -79,11 +79,8 @@
      "mark_scheme": [
       {
        "label": "3(a)(i)",
-       "text": "Green\nYellow\n2\noe isw\n12\n0",
+       "text": "Green",
        "codes": [
-        "1",
-        "1",
-        "1",
         "1"
        ],
        "segments": [
@@ -91,9 +88,9 @@
          "page": 2,
          "bbox": [
           33.0,
-          526.1,
+          522.4,
           562.2470092773438,
-          634.8
+          546.3
          ]
         }
        ]
@@ -140,7 +137,26 @@
      "text": "Which colour sweet has a 50% chance of being picked?\n.................................................................. [1]",
      "marks": 1,
      "path": "3(a)(ii)",
-     "mark_scheme_on": "3",
+     "mark_scheme": [
+      {
+       "label": "3(a)(ii)",
+       "text": "Yellow",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          33.0,
+          550.0,
+          562.2470092773438,
+          570.3
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -182,7 +198,26 @@
      "text": "Find the probability that he picks a red sweet.\n.................................................................. [1]",
      "marks": 1,
      "path": "3(a)(iii)",
-     "mark_scheme_on": "3",
+     "mark_scheme": [
+      {
+       "label": "3(a)(iii)",
+       "text": "2\noe isw\n12",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          33.0,
+          574.0,
+          562.2470092773438,
+          610.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -224,7 +259,26 @@
      "text": "Find the probability that he picks a purple sweet.\n.................................................................. [1]",
      "marks": 1,
      "path": "3(a)(iv)",
-     "mark_scheme_on": "3",
+     "mark_scheme": [
+      {
+       "label": "3(a)(iv)",
+       "text": "0",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          33.0,
+          614.6,
+          562.2470092773438,
+          634.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -346,14 +400,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "3",
-   "text": "",
-   "codes": [],
-   "segments": []
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

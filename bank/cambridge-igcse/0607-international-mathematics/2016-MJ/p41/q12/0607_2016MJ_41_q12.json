@@ -39,10 +39,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "mark scheme row 12(i) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -219,7 +217,26 @@
      "text": "the median mass,\n.............................................................. g [1]",
      "marks": 1,
      "path": "12(c)(i)",
-     "mark_scheme_on": "12(c)",
+     "mark_scheme": [
+      {
+       "label": "12(c)(i)",
+       "text": "63 to 64",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          25.1200008392334,
+          289.8,
+          571.63916015625,
+          310.0
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -265,7 +282,26 @@
      "text": "the interquartile range.\n.............................................................. g [2]",
      "marks": 2,
      "path": "12(c)(ii)",
-     "mark_scheme_on": "12(c)",
+     "mark_scheme": [
+      {
+       "label": "12(c)(ii)",
+       "text": "8.5 to 10.5",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          25.1200008392334,
+          315.1,
+          571.63916015625,
+          360.6
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -356,10 +392,8 @@
      "mark_scheme": [
       {
        "label": "12(d)(i)",
-       "text": "12 to 16\noe\n200\n72\noe\n39800",
-       "codes": [
-        "2"
-       ],
+       "text": "12 to 16\noe\n200",
+       "codes": [],
        "segments": [
         {
          "page": 6,
@@ -367,7 +401,7 @@
           25.1200008392334,
           367.4,
           571.63916015625,
-          451.0
+          411.2
          ]
         }
        ]
@@ -414,7 +448,26 @@
      "text": "Two eggs are chosen from the 200 eggs.\nFind the probability that both are Very Large.\n................................................................. [2]",
      "marks": 2,
      "path": "12(d)(ii)",
-     "mark_scheme_on": "12",
+     "mark_scheme": [
+      {
+       "label": "12(d)(ii)",
+       "text": "72\noe\n39800",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          25.1200008392334,
+          418.0,
+          571.63916015625,
+          451.0
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -463,33 +516,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "12",
-   "text": "",
-   "codes": [],
-   "segments": []
-  },
-  {
-   "label": "12(i)",
-   "text": "63 to 64\n8.5 to 10.5",
-   "codes": [
-    "1",
-    "2"
-   ],
-   "segments": [
-    {
-     "page": 6,
-     "bbox": [
-      25.1200008392334,
-      289.8,
-      571.63916015625,
-      360.6
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

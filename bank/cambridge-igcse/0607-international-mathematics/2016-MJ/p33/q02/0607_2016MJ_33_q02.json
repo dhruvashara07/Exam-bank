@@ -79,7 +79,7 @@
        "page": 2,
        "bbox": [
         33.0,
-        349.9,
+        346.2,
         562.2470092773438,
         395.5
        ]
@@ -159,11 +159,9 @@
      "mark_scheme": [
       {
        "label": "2(b)(i)",
-       "text": "190\n38 pattern tiles\n152 plain tiles\n16 boxes plain, 4 boxes pattern",
+       "text": "190",
        "codes": [
-        "3",
-        "2",
-        "2"
+        "3"
        ],
        "segments": [
         {
@@ -172,7 +170,7 @@
           33.0,
           400.9,
           562.2470092773438,
-          497.9
+          448.7
          ]
         }
        ]
@@ -219,7 +217,27 @@
      "text": "The tiles can be plain or patterned.\nEach type of tile is sold in boxes of 10.\nSophie decides to use 1 patterned tile for every 4 plain tiles.\nWork out the number of boxes of each type of tile that Sophie needs to buy.\n...................................... boxes of patterned tiles\n...................................... boxes of plain tiles\n[5]",
      "marks": 5,
      "path": "2(b)(ii)",
-     "mark_scheme_on": "2",
+     "mark_scheme": [
+      {
+       "label": "2(b)(ii)",
+       "text": "38 pattern tiles\n152 plain tiles\n16 boxes plain, 4 boxes pattern",
+       "codes": [
+        "2",
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          33.0,
+          452.4,
+          562.2470092773438,
+          497.9
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -318,14 +336,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "2",
-   "text": "",
-   "codes": [],
-   "segments": []
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

@@ -6,8 +6,10 @@
  "marks": 7,
  "figures": [],
  "review": {
-  "reasons": [],
-  "status": "auto"
+  "reasons": [
+   "no mark scheme for 13(b)"
+  ],
+  "status": "flagged"
  },
  "parts": [
   {
@@ -61,25 +63,18 @@
      "mark_scheme": [
       {
        "label": "13(a)(i)",
-       "text": "2.25 oe\n–5 + 4x final answer\n5 – x\noe final answer\n2\n3",
+       "text": "2.25 oe",
        "codes": [
-        "2",
-        "2",
-        "2",
-        "5",
-        "2",
-        "2",
-        "2",
-        "1"
+        "2"
        ],
        "segments": [
         {
          "page": 6,
          "bbox": [
           25.1200008392334,
-          456.7,
+          451.0,
           571.63916015625,
-          563.5
+          485.6
          ]
         }
        ]
@@ -136,7 +131,26 @@
      "text": "Find and simplify   ff()x\nh.\n^\n................................................................. [2]",
      "marks": 2,
      "path": "13(a)(ii)",
-     "mark_scheme_on": "13",
+     "mark_scheme": [
+      {
+       "label": "13(a)(ii)",
+       "text": "–5 + 4x final answer",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          25.1200008392334,
+          490.9,
+          571.63916015625,
+          505.3
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -178,7 +192,27 @@
      "text": "Find   f –1(x).\nf –1(x) =  ................................................................ [2]",
      "marks": 2,
      "path": "13(a)(iii)",
-     "mark_scheme_on": "13",
+     "mark_scheme": [
+      {
+       "label": "13(a)(iii)",
+       "text": "5 – x\noe final answer\n2\n3",
+       "codes": [
+        "2",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          25.1200008392334,
+          505.3,
+          571.63916015625,
+          563.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -230,7 +264,6 @@
    "text": "g(x) is a function with an inverse function g–1(x).\nWrite down the value of   g(g–1(3)).\n................................................................. [1]",
    "marks": 1,
    "path": "13(b)",
-   "mark_scheme_on": "13",
    "content": [
     {
      "type": "text",
@@ -250,26 +283,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "13",
-   "text": "",
-   "codes": [
-    "1"
-   ],
-   "segments": [
-    {
-     "page": 6,
-     "bbox": [
-      25.1200008392334,
-      451.0,
-      571.63916015625,
-      456.7
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

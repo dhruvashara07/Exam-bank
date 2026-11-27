@@ -64,7 +64,7 @@
        "page": 4,
        "bbox": [
         25.006000518798828,
-        201.8,
+        198.1,
         570.2689819335938,
         285.2
        ]
@@ -165,12 +165,9 @@
      "mark_scheme": [
       {
        "label": "9(b)(i)",
-       "text": "Points (2, 2) (2, 1) (5, 1)\nPoints (2, –2) (2, –1) (5, –1)\nRotation\n90 [anticlockwise]\noe\n[Centre] (0, 0)\noe",
+       "text": "Points (2, 2) (2, 1) (5, 1)",
        "codes": [
-        "2",
-        "1",
-        "1",
-        "1"
+        "2"
        ],
        "segments": [
         {
@@ -179,7 +176,7 @@
           25.006000518798828,
           289.0,
           570.2689819335938,
-          382.4
+          309.2
          ]
         }
        ]
@@ -221,7 +218,24 @@
      "text": "Draw the image of triangle B after a reflection in the x-axis.\nLabel this image C.\n[1]",
      "marks": 1,
      "path": "9(b)(ii)",
-     "mark_scheme_on": "9",
+     "mark_scheme": [
+      {
+       "label": "9(b)(ii)",
+       "text": "Points (2, –2) (2, –1) (5, –1)",
+       "codes": [],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          25.006000518798828,
+          312.9,
+          570.2689819335938,
+          333.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -258,7 +272,28 @@
      "text": "Describe fully the single transformation that maps triangle C onto triangle A.\n...........................................................................................................................................................\n..................................................................................................................................................... [3]",
      "marks": 3,
      "path": "9(b)(iii)",
-     "mark_scheme_on": "9",
+     "mark_scheme": [
+      {
+       "label": "9(b)(iii)",
+       "text": "Rotation\n90 [anticlockwise]\noe\n[Centre] (0, 0)\noe",
+       "codes": [
+        "1",
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          25.006000518798828,
+          336.9,
+          570.2689819335938,
+          382.4
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -811,14 +846,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "9",
-   "text": "",
-   "codes": [],
-   "segments": []
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

@@ -21,7 +21,7 @@
   }
  ],
  "text": "5\nA different musical scale has 10 notes.\nQ    R    S    T    U    V    W    X    Y    Z\nThe frequency of each note is modelled by the function\n2bn\nhn\na\nwhere n is an integer from 0 to 29.\n=\n#\n()\nWhen n = 0 the note is Q0 and the frequency of this note is 600 Hz.\nThe frequency of the note Q1 is 1200 Hz.",
- "marks": 0,
+ "marks": 2,
  "figures": [],
  "review": {
   "reasons": [],
@@ -50,8 +50,28 @@
     }
    ],
    "text": "Write down the value of a.\n......................................................",
-   "marks": 0,
+   "marks": 1,
    "path": "12(a)",
+   "mark_scheme": [
+    {
+     "label": "12(a)",
+     "text": "600",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        21.490999221801758,
+        99.3,
+        573.7279663085938,
+        123.2
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -87,8 +107,28 @@
     }
    ],
    "text": "Find the value of b.\n......................................................",
-   "marks": 0,
+   "marks": 1,
    "path": "12(b)",
+   "mark_scheme": [
+    {
+     "label": "12(b)",
+     "text": "1\noe isw\n10",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        21.490999221801758,
+        128.7,
+        573.7279663085938,
+        163.5
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -126,6 +166,24 @@
    "text": "Show that\nk\nn\nn\nwhere k is a constant to be found.\n=\n+\nh\n()\nh\n(\n1\n)",
    "marks": 0,
    "path": "12(c)",
+   "mark_scheme": [
+    {
+     "label": "12(c)",
+     "text": "Uses an algebraic process to find either\ntheir\n1\nh(n+1)=2\n10\n×h( n) oe\n1\ntheir\nor k = 2\n10\nor 1.07 or 1.071 to 1.072",
+     "codes": [],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        21.490999221801758,
+        167.5,
+        573.7279663085938,
+        294.2
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -147,7 +205,7 @@
  "variant": 1,
  "paper_code": "0607/61",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 0,
+ "total_marks": 2,
  "topic": null,
  "subtopic": null,
  "keywords": [],

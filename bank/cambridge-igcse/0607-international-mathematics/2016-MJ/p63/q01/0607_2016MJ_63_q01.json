@@ -3,7 +3,7 @@
  "number": 1,
  "segments": [],
  "text": "",
- "marks": 5,
+ "marks": 4,
  "figures": [],
  "review": {
   "reasons": [],
@@ -32,9 +32,28 @@
     }
    ],
    "text": "1\n(a)\n10\n3\nFind the area and perimeter of this rectangle.\nArea =  .....................................................\nPerimeter =  .....................................................",
-   "marks": 0,
+   "marks": 1,
    "path": "1(a)",
-   "mark_scheme_on": "1",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "30 26",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        21.690000534057617,
+        262.9,
+        573.5859985351562,
+        286.8
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -114,7 +133,7 @@
      "mark_scheme": [
       {
        "label": "1(b)(i)",
-       "text": "6\n18",
+       "text": "6",
        "codes": [
         "1"
        ],
@@ -125,7 +144,7 @@
           21.690000534057617,
           290.6,
           573.5859985351562,
-          335.5
+          310.8
          ]
         }
        ]
@@ -168,7 +187,24 @@
      "text": "Write down its perimeter.\n......................................................",
      "marks": 0,
      "path": "1(b)(ii)",
-     "mark_scheme_on": "1",
+     "mark_scheme": [
+      {
+       "label": "1(b)(ii)",
+       "text": "18",
+       "codes": [],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          21.690000534057617,
+          314.5,
+          573.5859985351562,
+          335.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -248,14 +284,13 @@
       }
      ],
      "text": "Write down an expression for the area of this rectangle.\n......................................................",
-     "marks": 2,
+     "marks": 1,
      "path": "1(c)(i)",
      "mark_scheme": [
       {
        "label": "1(c)(i)",
-       "text": "7x oe\n14+2x oe isw\n2.8 oe",
+       "text": "7x oe",
        "codes": [
-        "1",
         "1"
        ],
        "segments": [
@@ -265,7 +300,7 @@
           21.690000534057617,
           339.3,
           573.5859985351562,
-          420.1
+          359.5
          ]
         }
        ]
@@ -306,9 +341,28 @@
       }
      ],
      "text": "Write down an expression for the perimeter of this rectangle.\n......................................................",
-     "marks": 0,
+     "marks": 1,
      "path": "1(c)(ii)",
-     "mark_scheme_on": "1",
+     "mark_scheme": [
+      {
+       "label": "1(c)(ii)",
+       "text": "14+2x oe isw",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          21.690000534057617,
+          363.2,
+          573.5859985351562,
+          383.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -346,7 +400,24 @@
      "text": "The area and the perimeter have the same value.\nWrite down an equation and solve it to find x.\n......................................................",
      "marks": 0,
      "path": "1(c)(iii)",
-     "mark_scheme_on": "1",
+     "mark_scheme": [
+      {
+       "label": "1(c)(iii)",
+       "text": "2.8 oe",
+       "codes": [],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          21.690000534057617,
+          387.2,
+          573.5859985351562,
+          420.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -377,44 +448,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "1",
-   "text": "30 26",
-   "codes": [
-    "1"
-   ],
-   "segments": [
-    {
-     "page": 2,
-     "bbox": [
-      21.690000534057617,
-      262.9,
-      573.5859985351562,
-      286.8
-     ]
-    }
-   ]
-  },
-  {
-   "label": "1",
-   "text": "314 or 314.1…",
-   "codes": [
-    "1"
-   ],
-   "segments": [
-    {
-     "page": 4,
-     "bbox": [
-      21.690000534057617,
-      123.8,
-      573.5859985351562,
-      147.7
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",
@@ -426,7 +459,7 @@
  "variant": 3,
  "paper_code": "0607/63",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 5,
+ "total_marks": 4,
  "topic": null,
  "subtopic": null,
  "keywords": [],

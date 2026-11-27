@@ -79,19 +79,18 @@
      "mark_scheme": [
       {
        "label": "14(a)(i)",
-       "text": "\n\nx\noe final answer\n\n\nx+ y\n\n\nxy\n2×\noe final answer\n2\n(x+ y)",
+       "text": "2\n\n\nx\noe final answer\n\n\nx+ y\n\n",
        "codes": [
-        "2",
-        "3"
+        "2"
        ],
        "segments": [
         {
          "page": 6,
          "bbox": [
           25.006000518798828,
-          110.5,
+          99.3,
           570.2689819335938,
-          218.7
+          146.2
          ]
         }
        ]
@@ -138,7 +137,26 @@
      "text": "one red and one blue.\n................................................................. [3]",
      "marks": 3,
      "path": "14(a)(ii)",
-     "mark_scheme_on": "14",
+     "mark_scheme": [
+      {
+       "label": "14(a)(ii)",
+       "text": "xy\n2×\noe final answer\n2\n(x+ y)",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          25.006000518798828,
+          152.5,
+          570.2689819335938,
+          218.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -217,9 +235,8 @@
      "mark_scheme": [
       {
        "label": "14(b)(i)",
-       "text": "x (x−1)\noe final answer\n(x+ y )(x+ y−1)\nxy\n2×\noe final answer\n(x+ y )(x+ y−1)",
+       "text": "x (x−1)\noe final answer\n(x+ y )(x+ y−1)",
        "codes": [
-        "3",
         "3"
        ],
        "segments": [
@@ -229,7 +246,7 @@
           25.006000518798828,
           227.3,
           570.2689819335938,
-          368.3
+          277.7
          ]
         }
        ]
@@ -276,7 +293,26 @@
      "text": "one red and one blue.\n................................................................. [3]",
      "marks": 3,
      "path": "14(b)(ii)",
-     "mark_scheme_on": "14",
+     "mark_scheme": [
+      {
+       "label": "14(b)(ii)",
+       "text": "xy\n2×\noe final answer\n(x+ y )(x+ y−1)",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          25.006000518798828,
+          285.7,
+          570.2689819335938,
+          368.3
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -306,24 +342,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "14",
-   "text": "2",
-   "codes": [],
-   "segments": [
-    {
-     "page": 6,
-     "bbox": [
-      25.006000518798828,
-      99.3,
-      570.2689819335938,
-      110.5
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

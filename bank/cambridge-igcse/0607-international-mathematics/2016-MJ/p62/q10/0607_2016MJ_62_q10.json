@@ -21,7 +21,7 @@
   }
  ],
  "text": "3\nFor safety, the distance between cars travelling at x km/h must be a + b.\nP\na\nb\n4\nThe average length of a car is 4 metres.\nSo the number of metres between corresponding points on a road is a + b + 4.",
- "marks": 0,
+ "marks": 7,
  "figures": [
   {
    "caption": null,
@@ -79,8 +79,28 @@
     }
    ],
    "text": "At a speed of x km/h, how many metres does a car travel in one hour?\n.......................................................................",
-   "marks": 0,
+   "marks": 1,
    "path": "10(a)",
+   "mark_scheme": [
+    {
+     "label": "10(a)",
+     "text": "1000x",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        39.292999267578125,
+        241.3,
+        555.9829711914062,
+        265.2
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -116,8 +136,28 @@
     }
    ],
    "text": "Explain why a model for the number of cars, N, safely passing point P in one hour is\nx\n1000\nN\n=\nx\nkx\n2\n+\n+\n0 278\n.\n4\nwhere x km/h is the speed of the cars and k has the value you found in question 2.\n...................................................................................................................................................................\n...................................................................................................................................................................\n...................................................................................................................................................................",
-   "marks": 0,
+   "marks": 1,
    "path": "10(b)",
+   "mark_scheme": [
+    {
+     "label": "10(b)",
+     "text": "Numerator = distance in one hour\nDenominator = distance between cars oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        39.292999267578125,
+        268.9,
+        555.9829711914062,
+        301.8
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -163,8 +203,28 @@
     }
    ],
    "text": "Using your value for k from question 2, sketch the graph of N for 0 GxG 60.\nN\nNumber of cars\nper hour\nx\n0\n60\nSpeed(km/h)",
-   "marks": 0,
+   "marks": 2,
    "path": "10(c)",
+   "mark_scheme": [
+    {
+     "label": "10(c)",
+     "text": "Correct shape",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        39.292999267578125,
+        305.5,
+        555.9829711914062,
+        449.3
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -207,6 +267,24 @@
    "text": "Find the maximum possible number of cars which can safely pass point P in one hour.\n.......................................................................",
    "marks": 0,
    "path": "10(d)",
+   "mark_scheme": [
+    {
+     "label": "10(d)",
+     "text": "1570 or 1572 to 1573",
+     "codes": [],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        39.292999267578125,
+        453.1,
+        555.9829711914062,
+        473.5
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -250,6 +328,24 @@
      "text": "Find, correct to one decimal place, the speed that gives this maximum.\n.......................................................................",
      "marks": 0,
      "path": "10(e)(i)",
+     "mark_scheme": [
+      {
+       "label": "10(e)(i)",
+       "text": "22.3 to 22.4 [km / h]",
+       "codes": [],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          39.292999267578125,
+          477.3,
+          555.9829711914062,
+          497.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -285,8 +381,28 @@
       }
      ],
      "text": "Comment on the size of this answer.\n...........................................................................................................................................................",
-     "marks": 0,
+     "marks": 1,
      "path": "10(e)(ii)",
+     "mark_scheme": [
+      {
+       "label": "10(e)(ii)",
+       "text": "It is a low speed oe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          39.292999267578125,
+          501.5,
+          555.9829711914062,
+          521.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -301,7 +417,15 @@
      ]
     }
    ],
-   "path": "10(e)"
+   "path": "10(e)",
+   "mark_scheme": [
+    {
+     "label": "10(e)",
+     "text": "",
+     "codes": [],
+     "segments": []
+    }
+   ]
   },
   {
    "label": "f",
@@ -349,8 +473,28 @@
       }
      ],
      "text": "the maximum number of cars that can pass point P in one hour,\n...........................................................................................................................................................",
-     "marks": 0,
+     "marks": 1,
      "path": "10(f)(i)",
+     "mark_scheme": [
+      {
+       "label": "10(f)(i)",
+       "text": "decreases oe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          39.292999267578125,
+          525.5,
+          555.9829711914062,
+          545.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -386,8 +530,28 @@
       }
      ],
      "text": "the speed at which this maximum is possible?\n...........................................................................................................................................................",
-     "marks": 0,
+     "marks": 1,
      "path": "10(f)(ii)",
+     "mark_scheme": [
+      {
+       "label": "10(f)(ii)",
+       "text": "increases oe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          39.292999267578125,
+          549.4,
+          555.9829711914062,
+          575.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -403,6 +567,14 @@
     }
    ],
    "path": "10(f)",
+   "mark_scheme": [
+    {
+     "label": "10(f)",
+     "text": "",
+     "codes": [],
+     "segments": []
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -424,7 +596,7 @@
  "variant": 2,
  "paper_code": "0607/62",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 0,
+ "total_marks": 7,
  "topic": null,
  "subtopic": null,
  "keywords": [],

@@ -21,7 +21,7 @@
   }
  ],
  "text": "2\nx\ny",
- "marks": 12,
+ "marks": 4,
  "figures": [],
  "review": {
   "reasons": [],
@@ -50,7 +50,7 @@
     }
    ],
    "text": "For this rectangle, find an expression, in terms of x and y, for",
-   "marks": 4,
+   "marks": 0,
    "parts": [
     {
      "label": "i",
@@ -74,14 +74,13 @@
       }
      ],
      "text": "the area,\n......................................................",
-     "marks": 2,
+     "marks": 1,
      "path": "2(a)(i)",
      "mark_scheme": [
       {
        "label": "2(a)(i)",
-       "text": "xy oe\n2x+2y oe",
+       "text": "xy oe",
        "codes": [
-        "1",
         "1"
        ],
        "segments": [
@@ -89,9 +88,9 @@
          "page": 2,
          "bbox": [
           21.690000534057617,
-          424.3,
+          420.6,
           573.5859985351562,
-          471.1
+          444.5
          ]
         }
        ]
@@ -132,9 +131,28 @@
       }
      ],
      "text": "the perimeter.\n......................................................",
-     "marks": 0,
+     "marks": 1,
      "path": "2(a)(ii)",
-     "mark_scheme_on": "2(a)",
+     "mark_scheme": [
+      {
+       "label": "2(a)(ii)",
+       "text": "2x+2y oe",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          21.690000534057617,
+          450.9,
+          573.5859985351562,
+          471.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -150,26 +168,6 @@
     }
    ],
    "path": "2(a)",
-   "mark_scheme": [
-    {
-     "label": "2(a)",
-     "text": "236 or 235.6…",
-     "codes": [
-      "4"
-     ],
-     "segments": [
-      {
-       "page": 4,
-       "bbox": [
-        21.690000534057617,
-        158.8,
-        573.5859985351562,
-        200.6
-       ]
-      }
-     ]
-    }
-   ],
    "content": [
     {
      "type": "text",
@@ -200,7 +198,7 @@
     }
    ],
    "text": "The area and the perimeter have the same value.\n2\nx\nShow that y\n- .\n=\nx\n2",
-   "marks": 3,
+   "marks": 2,
    "path": "2(b)",
    "mark_scheme": [
     {
@@ -221,24 +219,6 @@
        ]
       }
      ]
-    },
-    {
-     "label": "2(b)",
-     "text": "Quarter circle shown on diagram or 5m\nradius implied",
-     "codes": [
-      "1"
-     ],
-     "segments": [
-      {
-       "page": 4,
-       "bbox": [
-        21.690000534057617,
-        204.4,
-        573.5859985351562,
-        237.2
-       ]
-      }
-     ]
     }
    ],
    "content": [
@@ -251,32 +231,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "2",
-   "text": "",
-   "codes": [],
-   "segments": []
-  },
-  {
-   "label": "2",
-   "text": "",
-   "codes": [
-    "3"
-   ],
-   "segments": [
-    {
-     "page": 4,
-     "bbox": [
-      21.690000534057617,
-      148.2,
-      573.5859985351562,
-      158.8
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",
@@ -288,7 +242,7 @@
  "variant": 3,
  "paper_code": "0607/63",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 12,
+ "total_marks": 4,
  "topic": null,
  "subtopic": null,
  "keywords": [],
