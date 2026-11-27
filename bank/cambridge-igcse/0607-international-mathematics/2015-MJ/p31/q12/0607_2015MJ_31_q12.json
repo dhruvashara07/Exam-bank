@@ -39,10 +39,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "no mark scheme for 12(a), 12(b), 12(c)"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -69,6 +67,26 @@
    "text": "Complete the tree diagram.\nlate\n........\nbridge\n1\n80\nclosed\n........\nnot late\nlate\n........\n........\nbridge\nopen\n........\nnot late\n[3]",
    "marks": 3,
    "path": "12(a)",
+   "mark_scheme": [
+    {
+     "label": "12(a)",
+     "text": "1 79\n,\n80 80\n2 1\n,\n3 3\n1 49\n,\n50 50",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        45.643001556396484,
+        465.6,
+        549.5759887695312,
+        586.4
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -125,6 +143,26 @@
    "text": "Find the probability that the bridge is closed and Herr Smit is not late for work.\nAnswer(b)  ............................................................. [2]",
    "marks": 2,
    "path": "12(b)",
+   "mark_scheme": [
+    {
+     "label": "12(b)",
+     "text": "1\n240",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        45.643001556396484,
+        593.1,
+        549.5759887695312,
+        628.0
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -170,6 +208,24 @@
    "text": "In 2014, Herr Smit worked for 250 days.\nEstimate the number of days that the bridge was closed and Herr Smit was not late for work.\nAnswer(c)  ............................................................. [2]",
    "marks": 2,
    "path": "12(c)",
+   "mark_scheme": [
+    {
+     "label": "12(c)",
+     "text": "Accept 1 or 2 days",
+     "codes": [],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        45.643001556396484,
+        632.0,
+        549.5759887695312,
+        659.1
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",

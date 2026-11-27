@@ -24,10 +24,8 @@
  "marks": 12,
  "figures": [],
  "review": {
-  "reasons": [
-   "no mark scheme for 12(b)(ii), 12(c)(ii)"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -146,9 +144,8 @@
      "mark_scheme": [
       {
        "label": "12(b)(i)",
-       "text": "6\n6\nfinal answer\nM1 for\n2\n20x−7\n4(5x−2)+1\nx+2\nM1 for y + 2 = 5x or x = 5y – 2 or\noe final answer\n2\n5\nor better",
+       "text": "6\n6\nfinal answer\nM1 for\n2\n20x−7\n4(5x−2)+1",
        "codes": [
-        "2",
         "2"
        ],
        "segments": [
@@ -158,7 +155,7 @@
           36.0,
           533.3,
           559.0,
-          623.7
+          567.2
          ]
         }
        ]
@@ -209,6 +206,26 @@
      "text": "f –1(x)\nAnswer(b)(ii) .................................................................. [2]",
      "marks": 2,
      "path": "12(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "12(b)(ii)",
+       "text": "x+2\nM1 for y + 2 = 5x or x = 5y – 2 or\noe final answer\n2\n5\nor better",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          36.0,
+          576.8,
+          559.0,
+          623.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -291,9 +308,8 @@
      "mark_scheme": [
       {
        "label": "12(c)(i)",
-       "text": "1\n5x−2\nM2 for\noe\nfinal answer\n3\n(5x−2)(x+1)\nx+1\n5x−2\nor M1 for\noe where ab = –2\n(5x+a)(x+b)\nor a + 5b = 3\nor SC1 for (5x – 2)(x + 1) seen\n26x−13\noe final answer\nM1 for common denominator (4x + 1)( 5x – 2) soi\n3\n(4x+1)(5x−2)\nM1 for 6(5x−2)−(4x+1)oe",
+       "text": "1\n5x−2\nM2 for\noe\nfinal answer\n3\n(5x−2)(x+1)\nx+1\n5x−2\nor M1 for\noe where ab = –2\n(5x+a)(x+b)\nor a + 5b = 3\nor SC1 for (5x – 2)(x + 1) seen",
        "codes": [
-        "3",
         "3"
        ],
        "segments": [
@@ -304,15 +320,6 @@
           630.1,
           559.0,
           727.8
-         ]
-        },
-        {
-         "page": 7,
-         "bbox": [
-          36.0,
-          70.6,
-          559.0,
-          139.5
          ]
         }
        ]
@@ -363,6 +370,26 @@
      "text": "1\n(ii) g(x) –\nx\nf^h\nAnswer(c)(ii) .................................................................. [3]",
      "marks": 3,
      "path": "12(c)(ii)",
+     "mark_scheme": [
+      {
+       "label": "12(c)(ii)",
+       "text": "26x−13\noe final answer\nM1 for common denominator (4x + 1)( 5x – 2) soi\n3\n(4x+1)(5x−2)\nM1 for 6(5x−2)−(4x+1)oe",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          36.0,
+          81.8,
+          559.0,
+          139.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",

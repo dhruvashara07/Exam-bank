@@ -53,10 +53,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "no mark scheme for 6(a), 6(b)(i), 6(b)(ii), 6(c)"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -83,6 +81,26 @@
    "text": "Find the volume of this piece of wood.\nAnswer(a)  ...................................................... cm3 [2]",
    "marks": 2,
    "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "3750",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        45.643001556396484,
+        320.0,
+        549.5759887695312,
+        344.7
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -135,6 +153,26 @@
      "text": "Find the total surface area of this piece of wood.\nAnswer(b)(i)  ...................................................... cm2 [3]",
      "marks": 3,
      "path": "6(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(b)(i)",
+       "text": "4150",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          45.643001556396484,
+          361.1,
+          549.5759887695312,
+          394.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -181,6 +219,24 @@
      "text": "Write your answer to part (b)(i) in square metres.\nAnswer(b)(ii)  ........................................................ m2 [1]",
      "marks": 1,
      "path": "6(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "6(b)(ii)",
+       "text": "0.415",
+       "codes": [],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          45.643001556396484,
+          398.5,
+          549.5759887695312,
+          419.5
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -230,6 +286,26 @@
    "text": "H\nE\nI\nNOT TO\nS\nN\nS\nC\nA\nSCALE\nG\nI\nT\nR\nL\nE\nO\nI\nN\nT\nR\nS\nC\nH\nY\nE\n75cm\nJessie wants to stand 18 books on the bookshelf.\n•\n5 books are each 3 cm wide\n•\n6 books are each 4 cm wide\n•\n4 books are each 2.5 cm wide\n•\n3 books are each 7 cm wide\nCan Jessie stand all these books on the bookshelf?\nShow all your working.\n[2]",
    "marks": 2,
    "path": "6(c)",
+   "mark_scheme": [
+    {
+     "label": "6(c)",
+     "text": "5 × 3 + 6 × 4 + 4 × 2.5 + 3 × 7\n[= 70]\nyes",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        45.643001556396484,
+        423.3,
+        549.5759887695312,
+        469.6
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "figure",

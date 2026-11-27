@@ -6,10 +6,8 @@
  "marks": 5,
  "figures": [],
  "review": {
-  "reasons": [
-   "no mark scheme for 11(a), 11(b)"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -36,6 +34,26 @@
    "text": "11\n(a) Campbell can text at an average speed of 100 characters per minute.\nFind how long it takes her to text a message of 320 characters.\nGive your answer in minutes and seconds.\nAnswer(a)  ............................ min ...................... s [2]",
    "marks": 2,
    "path": "11(a)",
+   "mark_scheme": [
+    {
+     "label": "11(a)",
+     "text": "3 min 12 seconds",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        45.643001556396484,
+        375.3,
+        549.5759887695312,
+        399.2
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -87,6 +105,26 @@
    "text": "Diago texts a message of 168 characters in 1 minute 36 seconds.\nFind the average speed at which he texts.\nGive your answer in characters per minute.\nAnswer(b)  .......................... characters per minute [3]",
    "marks": 3,
    "path": "11(b)",
+   "mark_scheme": [
+    {
+     "label": "11(b)",
+     "text": "105",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        45.643001556396484,
+        417.3,
+        549.5759887695312,
+        465.1
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",

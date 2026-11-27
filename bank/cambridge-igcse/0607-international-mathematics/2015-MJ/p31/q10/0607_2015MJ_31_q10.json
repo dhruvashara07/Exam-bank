@@ -24,10 +24,8 @@
  "marks": 6,
  "figures": [],
  "review": {
-  "reasons": [
-   "no mark scheme for 10(a), 10(b), 10(c)"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -54,6 +52,26 @@
    "text": "Triangle Q is a reflection of triangle P.\nOn the grid, draw the line of reflection.\nWrite down the equation of this line.\nAnswer(a)  ............................................................. [2]",
    "marks": 2,
    "path": "10(a)",
+   "mark_scheme": [
+    {
+     "label": "10(a)",
+     "text": "Correct line\ny =3",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        45.643001556396484,
+        219.6,
+        549.5759887695312,
+        256.2
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -99,6 +117,26 @@
    "text": "Triangle S is a translation of triangle P.\nFind the vector for this translation.\n⎛       ⎞\n⎜       ⎟\nAnswer(b)\n[2]\n⎝       ⎠",
    "marks": 2,
    "path": "10(b)",
+   "mark_scheme": [
+    {
+     "label": "10(b)",
+     "text": " 4 \n\n\n\n\n−3\n\n",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        45.643001556396484,
+        264.8,
+        549.5759887695312,
+        336.6
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -150,6 +188,27 @@
    "text": "Triangle R is a rotation of triangle P.\nFind the centre and the angle of rotation.\nAnswer(c) Centre = ... (............................... , ...............................)\nAngle =  ......................................................................\n[2]",
    "marks": 2,
    "path": "10(c)",
+   "mark_scheme": [
+    {
+     "label": "10(c)",
+     "text": "(0, 0)\n90° [anti-clockwise] or −270°",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        45.643001556396484,
+        341.1,
+        549.5759887695312,
+        374.8
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",

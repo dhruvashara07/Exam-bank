@@ -24,10 +24,8 @@
  "marks": 4,
  "figures": [],
  "review": {
-  "reasons": [
-   "no mark scheme for 7(a), 7(b)"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -54,6 +52,27 @@
    "text": "Find the next two terms in this sequence.\nAnswer(a)  .............................. , ............................ [2]",
    "marks": 2,
    "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "−5\n−12",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        45.643001556396484,
+        470.1,
+        549.5759887695312,
+        508.3
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -99,6 +118,26 @@
    "text": "Find an expression for the nth term of this sequence.\nAnswer(b)  ............................................................. [2]",
    "marks": 2,
    "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "30 − 7n",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        45.643001556396484,
+        512.1,
+        549.5759887695312,
+        533.1
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
