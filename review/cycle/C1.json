@@ -1,0 +1,40 @@
+{
+ "batch": "C1",
+ "subject": "0620",
+ "sessions": [
+  "2024-FM",
+  "2024-ON",
+  "2025-FM",
+  "2025-MJ",
+  "2025-ON",
+  "2026-FM"
+ ],
+ "created": "2026-11-27T07:37:13+00:00",
+ "phases": {
+  "build": [
+   {
+    "start": "2026-11-27T07:37:14+00:00",
+    "end": null
+   }
+  ],
+  "claude": [],
+  "claude1": [],
+  "claude2": [],
+  "review": [],
+  "fix": []
+ },
+ "github_runs": [],
+ "counts": {},
+ "errors": [],
+ "tokens": [],
+ "events": [
+  {
+   "at": "2026-11-27T07:37:13+00:00",
+   "task": "start C1 --subject"
+  },
+  {
+   "at": "2026-11-27T07:37:14+00:00",
+   "task": "phase C1 build"
+  }
+ ]
+}

@@ -100,6 +100,8 @@ def collect(sessions, skip=()):
         run([sys.executable, 'pipeline/store.py', 'verify'] + pids)
     out = []
     import maths_check
+    import ms_marksum
+    import subjects
     for pid in pids:
         try:
             sd = paths.store_dir(pid)
@@ -120,6 +122,9 @@ def collect(sessions, skip=()):
             out.append(_reason(pid, 'checks.missing', 'checks.py result missing', True))
         for h in maths_check.check_paper(pid):
             out.append(_reason(h['id'], h['kind'], h['detail']))
+        if subjects.is_chem(SYL):        # chemistry pass-1 hint: Marks column sum vs question marks (ERROR_PATTERNS 295)
+            for h in ms_marksum.hits(pid):
+                out.append(_reason(h['id'], h['kind'], h['detail']))
         v = os.path.join(paths.STORE_CHECKS, pid + '.json')
         if os.path.exists(v):
             for d in json.load(open(v)).get('differ', []):
