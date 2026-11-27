@@ -1007,3 +1007,44 @@ Hint check (pattern 295, now in pass 1 as ms_marksum): 9 hits in C1, 2 real (313
     so the stop-clock answer boxes of 2025 MJ 63 2(a) became black bars - pushed in pass 2 and NOT seen in my check (I looked
     at the 53 twin only). -> V moves like L, a thin rule moves as one piece; new check: filled black shapes > 4x4 pt in a
     mark scheme (/home/claude/tools idea, 2 hits = bond strokes) - look at EVERY question a layout fix changes, not one twin.
+
+(Numbers 320 and 321 are used twice: maths M4 320-327 above were pushed first, chemistry C1 320/321 here - read each with its subject.)
+
+328. Blurry / faint MS pictures of M4 redrawn in the batch (ms_graphs.SPECS, 27): 14 graphs from the questions' functions and
+    axes ('ar' = printed shape; gridded ones listed in RD2_GRID_UNSURE), a cumulative-frequency curve, a bar chart, 4 Venns, 4
+    tables (answers bold, given values grey), 3 stars on numbered dot circles (new helper ms_graphs._ring), a crosses grid.
+    KEPT for Dhruv: 2015 ON 42 15(a)/(b) (candidate's own graphs, no window in the question), 2015 ON 61 5(a) (3 fitted
+    model curves told apart by colour).
+329. Papers 5/6 marks from the MS (2015-2017): pass 2 still had 11 wrong totals - marks printed '1FT' / 'FT1' / '1dep' /
+    'M1FT' / 'DM1' were not codes; an 'Alternative method' block counted its marks twice (2017 MJ 61 7(b)); the Partial
+    Marks column was not found on pages whose header sits under a title or that have no header (fraction numbers counted);
+    'Communication in 2 from ...' printed in the Answer column (or across the Q column) was no communication row; the C mark
+    printed beside a criteria line was lost (2015 MJ 61). -> ms.py (maths) code regexes, Answer-column 'Alternative method'
+    cut-off, PX from the 'Mark' heading's rule and kept across pages, COMMX labels, fold_communication takes the C mark.
+    All 142 papers of 2014-2017 exact. Lesson: check papers-5/6 totals LOCALLY before the GitHub pass (cost ~25 min).
+330. (my own, caught by the final blast) Pattern 321's 'table on a page without header' also fired on the 2018+ 'Maths-Specific
+    Marking Principles' page (numbered notes 1-6 inside a frame): every 2018-2026 maths MS got rows 1..6 and lost its codes. It
+    was in the pushed pass-1 code; approved papers were NOT rebuilt with it (stored data intact), M4 rebuilt locally after the
+    fix. -> needs >= 4 column rules (a ruled table). Blast after the fix: all 460 approved maths MS have identical labels and
+    cuts; only stored codes change ('(C1)' of Partial Marks dropped, '1FT'/'1dep' read) - none feeds an approved paper's marks.
+    Lesson: run the full MS blast after EVERY ms.py change before a push, not only after the first one.
+331. MS labels printed on ONE text line with the answer ('(a) (i) Correct graph', 2015 ON 42 - q7/q13 rows were '7', '13(iii)'),
+    letter + roman pairs on one row in either x/y order ('(c)' and '(i)' 0.3 pt apart), and Cambridge's 'number going back' slip
+    ('10(b)', '10(c)(i)', '10(c)(ii)' printed after 11(a) for 11(b), 11(c)(i), 11(c)(ii): 2017 ON 43). -> ms.py (maths): the label
+    part of such a line is the words left of the Q column edge; one-row pairs merge left to right; a label one question back
+    inside the next question (not after a Communication row) takes the current number. MS_RELABEL may hold syllabus-keyed
+    entries ('0607_...', looked up first). A table running on with '(b) (i)' and no number on a header-less page (2016 ON 31)
+    starts under the page header (321 extended; still only on a ruled table page). Blast: approved maths MS labels/cuts identical.
+332. Question side: romans printed further right under a diagram (x 112-119, 2015 MJ 43 9(a)(i)-(iii)) were no labels ->
+    layout.label_tokens accepts romans up to x 122 on maths pages. Boundary blast over all 460 maths QPs: only that paper changes.
+333. 2017 MJ Venns (22 q9(a), 32 3(g), 33 10(c), 43 9(g)) are thousands of 1-pt image tiles painted OVER a hidden '.....' text
+    layer: redrawing them from a spec replaced only the tiles and showed the hidden dots as a dark band. -> specs removed, kept as
+    the printed picture (clear enough) in ms_graphs.KEPT for Dhruv's decision; a spec redraw now drops dots-only text inside its
+    drawing area.
+334. 2014 ON 51-53 (paper 5): the ruled table is narrower than our unit, so its outer borders counted as inner rules (5, not 3)
+    and _maths_ruled gave up (old layout with stray braces). -> outer pair dropped when there are 5. q1, q5, q6 right now; KNOWN:
+    q2 (3 columns, 'wrap'), q3 (3(b)(i) misaligned), q4 (cube-drawing table, old layout) - paper 5 of 2014 ON kept PENDING.
+335. KNOWN small leftovers (budget rule): 2017 MJ 42 q7/q8 Partial Marks shrunk (scale fallback); 2015 MJ 43 5(b)/11(d) the
+    wrapped last Partial-Marks line pushed under a redrawn graph (pic_grow moves other columns' text below the printed picture's
+    bottom - needs a 'continuation of a paragraph' test); 2016 MJ 41 13(b)'s answer printed with no label (under 13(a)(iii));
+    picture edges (ms_piccut) 2014 ON 42 q4, 2014 ON 62 q3, 2015 ON 42 q15.

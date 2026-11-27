@@ -121,7 +121,9 @@
     {
      "label": "14(b)",
      "text": "x\nx+3",
-     "codes": [],
+     "codes": [
+      "1FT"
+     ],
      "segments": [
       {
        "page": 7,
@@ -204,7 +206,28 @@
      "text": "+\n(i) Write down an equation in x and show that it simplifies to    x\n3\nx\n40\n0\n.\n-\n=\n[3]",
      "marks": 3,
      "path": "14(c)(i)",
-     "mark_scheme_on": "14(c)",
+     "mark_scheme": [
+      {
+       "label": "14(c)(i)",
+       "text": "All correct with no errors\nx\nx−3\n9\n−\n=\nx+3\nx\n40\n2\nx −(x−3)(x+3) \n9 \n=\noe or\n\n\nx (x+3)\n40\n\n\nbetter\n2\n360=9x +27x oe\n2\nx + 3x−40=0",
+       "codes": [
+        "M1",
+        "M1",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          14.461000442504883,
+          182.3,
+          580.843017578125,
+          347.3
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -251,7 +274,27 @@
      "text": "+\n(ii) Solve the equation    x\n3\nx\n40\n0\n.\n-\n=\nAnswer(c)(ii) x =   .......................... or x = .......................... [2]",
      "marks": 2,
      "path": "14(c)(ii)",
-     "mark_scheme_on": "14(c)",
+     "mark_scheme": [
+      {
+       "label": "14(c)(ii)",
+       "text": "−8\n5",
+       "codes": [
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          14.461000442504883,
+          351.4,
+          580.843017578125,
+          398.0
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -341,30 +384,6 @@
     }
    ],
    "path": "14(c)",
-   "mark_scheme": [
-    {
-     "label": "14(c)",
-     "text": "x\nx−3\n9\n−\n=\nx+3\nx\n40\n2\nx −(x−3)(x+3) \n9 \n=\noe or\n\n\nx (x+3)\n40\n\n\nbetter\n2\n360=9x +27x oe\n2\nx + 3x−40=0\n5",
-     "codes": [
-      "M1",
-      "M1",
-      "A1",
-      "1",
-      "1"
-     ],
-     "segments": [
-      {
-       "page": 7,
-       "bbox": [
-        14.461000442504883,
-        182.6,
-        580.843017578125,
-        398.0
-       ]
-      }
-     ]
-    }
-   ],
    "content": [
     {
      "type": "text",

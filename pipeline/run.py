@@ -205,7 +205,7 @@ def process(qp_path):
                                               'segments': c['segments']})
                 comm_marks += mk
     for r in ms_rows:                  # Cambridge numbered a mark scheme differently from its paper (read by eye, Dhruv round 22)
-        fix = MS_RELABEL.get(f'{year}{session}_{pv}', {}).get(r['label'])
+        fix = (MS_RELABEL.get(f'{syl}_{year}{session}_{pv}') or MS_RELABEL.get(f'{year}{session}_{pv}', {})).get(r['label'])
         if fix:
             r['label'], r['path'] = fix[0], fix[1]
     if not msdoc:
@@ -384,8 +384,8 @@ def process(qp_path):
         def ms_marks(n):
             for k in n.get('parts', []):
                 ms_marks(k)
-            n['marks'] = sum(int(m_.group(1)) for r in n.get('mark_scheme', []) for c in r.get('codes', [])
-                             for m_ in [re.match(r'[ABM]?(\d{1,2})(?:FT|ft)?$', str(c))] if m_)
+            n['marks'] = sum(int(m_.group(1) or m_.group(2)) for r in n.get('mark_scheme', []) for c in r.get('codes', [])
+                             for m_ in [re.match(r'D?[ABM]?(\d{1,2})(?:FT|ft|\s?dep)?$|FT\s?(\d)$', str(c))] if m_)
         for q in questions:
             ms_marks(q)
             q['marks'] = sum_marks(q)

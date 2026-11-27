@@ -21,7 +21,7 @@
   }
  ],
  "text": "4\nA revised model for traffic flow does not include the braking distance, b.\nThis is because the car in front also travels the same braking distance. So the revised model uses k = 0.\nThe model also allows 2 seconds, instead of 1 second, for the driver to react to the car in front stopping\nquickly.\nAssume the average length of a car is 4 metres.",
- "marks": 3,
+ "marks": 4,
  "figures": [
   {
    "caption": null,
@@ -184,13 +184,14 @@
     }
    ],
    "text": "Can 1800 cars safely pass point P in one hour?\nUse algebra to explain your answer.",
-   "marks": 1,
+   "marks": 2,
    "path": "11(c)",
    "mark_scheme": [
     {
      "label": "11(c)",
      "text": "1000x = 7200 + (1800 × their 0.556)x\nor\n1000x\n=their0.556x+4 (or better)\n1800\nNo, and their correct x given\nor\nNo, and correct working leading to “x is negative”\nor\nNo, and correct working leading to an impossible\nequation",
      "codes": [
+      "M1FT",
       "A1"
      ],
      "segments": [
@@ -227,7 +228,7 @@
  "variant": 2,
  "paper_code": "0607/62",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 3,
+ "total_marks": 4,
  "topic": null,
  "subtopic": null,
  "keywords": [],

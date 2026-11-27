@@ -1,6 +1,6 @@
 # M4 pass 2 (diff against pass 1)
 
-Reasons: 684; verified 281, NOT FIXED 29, NEW 61; changed questions 541 (346 collateral).
+Reasons: 723; verified 292, NOT FIXED 18, NEW 0; changed questions 0 (0 collateral).
 
 Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / passed / ask).
 
@@ -8,8 +8,6 @@ Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / pass
 
 - 442aa09def 0607_2015MJ_23_q09 q_font: 3 words in sans
 - 2339ecdf58 0607_2015MJ_43_q09 ms_align: 9(a)(i) 9(a)(ii) 9(a)(iii)
-- 3218e0e7ee 0607_2015MJ_61 checks.marks: marks found 39, cover 40
-- 3f3f37d1a0 0607_2015MJ_62 checks.marks: marks found 21, cover 40
 - 24b5544e97 0607_2015ON_31_q10 checks.figure: 0607_2015ON_31_q10a_diagram1: crop cut: ink crosses the bottom edge, 1 text line(s) half inside
 - cfb22fe0ce 0607_2015ON_32_q10 checks.figure: 0607_2015ON_32_q10a_diagram1: crop cut: ink crosses the bottom edge, 1 text line(s) half inside
 - 95ed1742c3 0607_2015ON_33_q10 checks.figure: 0607_2015ON_33_q10a_diagram1: crop cut: ink crosses the bottom edge, 1 text line(s) half inside
@@ -17,20 +15,11 @@ Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / pass
 - 4467fc47bf 0607_2015ON_42_q14 ms_align: 14(c)(parent)
 - 3c3a31c952 0607_2015ON_43_q10 checks.figure: 0607_2015ON_43_q10a_diagram1: crop cut: ink crosses the bottom edge, 1 text line(s) half inside
 - cca03bc8e2 0607_2015ON_43_q10 checks.figure: 0607_2015ON_43_q10c_diagram2: crop cut: 1 text line(s) half inside
-- 1ba0b70164 0607_2015ON_61 checks.marks: marks found 25, cover 40
-- 4b5cabe946 0607_2015ON_62 checks.marks: marks found 31, cover 40
-- 5135b18f02 0607_2015ON_63 checks.marks: marks found 23, cover 40
 - 3c254cda9f 0607_2016MJ_31_q01 ms_align: 1(b)(parent)
-- 8fd5d97b91 0607_2016MJ_51 checks.marks: marks found 26, cover 24
 - b4dc601091 0607_2016MJ_51_q02 checks.figure: 0607_2016MJ_51_q02_diagram2: crop cut: ink crosses the left edge
 - e2343645c9 0607_2016MJ_51_q02 checks.figure: 0607_2016MJ_51_q02_diagram3: crop cut: ink crosses the left edge, 2 text line(s) half inside
 - 424b2a3962 0607_2016MJ_51_q02 fig_cut: diagram2 left
-- 05862a7d3a 0607_2016MJ_53 checks.marks: marks found 22, cover 24
-- 48f995037e 0607_2016MJ_61 checks.marks: marks found 31, cover 40
-- 6dffa11770 0607_2016MJ_62 checks.marks: marks found 19, cover 40
-- 6557b92a05 0607_2016MJ_63 checks.marks: marks found 81, cover 40
 - 4b4dca2064 0607_2016ON_31_q08 checks.figure: 0607_2016ON_31_q08a_diagram1: crop cut: ink crosses the bottom edge, 1 text line(s) half inside
-- bd2c65bb66 0607_2017MJ_61 checks.marks: marks found 118, cover 40
 - cee6091738 0607_2017MJ_63_q03 checks.figure: 0607_2017MJ_63_q03b_diagram3: crop cut: ink crosses the top edge
 - cc9dafce3b 0607_2017ON_43_q10 ms_align: 10(c)(i) 10(c)(ii)
 - 2bf0a4cc88 0607_2017ON_43_q11 flag.flag: no mark scheme for 11(b), 11(c)(i), 11(c)(ii)
@@ -38,627 +27,80 @@ Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / pass
 
 ## NEW
 
-- bf5ccbb884 0607_2014ON_42_q03 ms_picture: 3(a)(iii): picture cell
-- ca375cacad 0607_2015MJ_31_q14 ms_screenshot: 14(a): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
-- 77596d2ba3 0607_2015MJ_31_q14 ms_screenshot: 14(d): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
-- cb898ba20a 0607_2015MJ_31_q14 ms_picture: 14(a): picture cell
-- 11cc580e81 0607_2015MJ_31_q14 ms_picture: 14(d): picture cell
-- ea4b21fd4e 0607_2015MJ_62_q07 q_font: 1 words in sans
-- 70ace1f139 0607_2015MJ_62_q08 q_font: 2 words in sans
-- 43453bdf82 0607_2015ON_42_q06 flag.flag: no mark scheme for 6(d)(i), 6(d)(ii), 6(d)(iii)
-- 65a23c5a9f 0607_2015ON_42_q10 flag.flag: mark scheme row 10(ii) has no matching part in the paper
-- 8ab781d3fe 0607_2015ON_42_q10 flag.flag: mark scheme row 10(iii) has no matching part in the paper
-- 97be0fd04a 0607_2015ON_42_q13 flag.flag: mark scheme row 13(iii) has no matching part in the paper
-- c3f917e300 0607_2015ON_43_q04 ms_picture: 4(a)(ii): picture cell
-- 3a1956a235 0607_2015ON_61_q08 ms_faint: 8(a): faint picture in the mark scheme - redraw or ask Dhruv
-- 8797913af6 0607_2015ON_61_q08 ms_picture: 8(a): picture cell
-- 51b07e703b 0607_2015ON_63_q02 flag.flag: mark scheme row 2(ii) has no matching part in the paper
-- 97b51b4032 0607_2015ON_63_q02 flag.flag: mark scheme row 2(iii) has no matching part in the paper
-- b931e72208 0607_2015ON_63_q07 ms_screenshot: 7(a): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
-- 4db7874b2f 0607_2015ON_63_q09 ms_screenshot: 9(c): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
-- 8f6bb6c5ba 0607_2015ON_63_q07 ms_picture: 7(a): picture cell
-- 51682b9309 0607_2015ON_63_q09 ms_picture: 9(c): picture cell
-- 7267f291ee 0607_2016MJ_41_q13 flag.flag: no mark scheme for 13(b)
-- 57a96ea5a9 0607_2016MJ_61_q12 ms_edge: Uses an algebraic process
-- d247796e96 0607_2016MJ_61_q13 ms_words: missing: Communication
-- ee7dd5bdda 0607_2016MJ_61_q08 ms_table: 8: table / graph drawn as lines
-- ae7fd3c150 0607_2016MJ_62_q10 ms_screenshot: 10(c): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
-- f22173f7cc 0607_2016MJ_62_q11 ms_screenshot: 11(b): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
-- 4d86fa1634 0607_2016MJ_62_q12 ms_words: missing: Communication
-- b13bc2ffea 0607_2016MJ_62_q10 ms_picture: 10(c): picture cell
-- 9d79112370 0607_2016MJ_62_q11 ms_picture: 11(b): picture cell
-- c4245d0608 0607_2016MJ_63_q09 ms_words: missing: in Communication
-- cb012d35a8 0607_2016MJ_63_q08 ms_picture: 8(a): picture cell
-- a2723d0cc7 0607_2016ON_31_q12 flag.flag: no mark scheme for 12(b)(i), 12(b)(ii)
-- f184f53311 0607_2016ON_31_q12 ms_screenshot: 12(a)(i): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
-- e1023b36d6 0607_2016ON_31_q12 ms_picture: 12(a)(i): picture cell
-- 98c5b9306f 0607_2016ON_52_q01 ms_table: 1(a): table / graph drawn as lines
-- 9d1d9c8640 0607_2016ON_62_q10 ms_screenshot: 10: blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
-- efb6200fe8 0607_2016ON_62_q10 ms_picture: 10: picture cell
-- cf8919ba33 0607_2016ON_63_q05 ms_screenshot: 5(a): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
-- 35f28f866b 0607_2016ON_63_q05 ms_picture: 5(a): picture cell
-- c03c1d160c 0607_2017MJ_61_q07 ms_table: 7(b): table / graph drawn as lines
-- bdd9cbe579 0607_2017MJ_63_q05 ms_screenshot: 5(a)(i): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
-- 26d810d5a5 0607_2017MJ_63_q05 ms_picture: 5(a)(i): picture cell
-- e75abc4737 0607_2017MJ_63_q06 ms_picture: 6(a): picture cell
-- fb6c203c54 0607_2017MJ_63_q06 ms_picture: 6(b)(i): picture cell
-- 172183af9e 0607_2017MJ_63_q06 ms_picture: 6(b)(ii): picture cell
-- 2481f370db 0607_2017ON_61_q06 ms_screenshot: 6(a)(i): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
-- d1e5b33033 0607_2017ON_61_q06 ms_picture: 6(a)(i): picture cell
-- f949a7ffdf 0607_2017ON_63_q06 ms_table: 6(a): table / graph drawn as lines
-- 70ff2dec89 0607_2017ON_63_q09 ms_table: 9(c): table / graph drawn as lines
-- 9c589b3cf6 0607_2014ON_51_q04 ms_sweep: code in answer B1
-- 8529c30214 0607_2014ON_51_q04 ms_sweep: code in answer B1
-- b14d86e141 0607_2014ON_51_q04 ms_sweep: code in answer B1
-- 18db4070e8 0607_2014ON_51_q04 ms_sweep: code in answer B1
-- fde5f6dba9 0607_2015MJ_42_q09 ms_align: 9(a)(i)
-- 0339c3662c 0607_2015ON_42_q10 ms_align: 10(ii) 10(iii)
-- dd2d2ed6d3 0607_2015ON_42_q13 ms_align: 13(iii)
-- 396d451250 0607_2015ON_63_q02 ms_align: 2(ii) 2(iii)
-- b0144367ab 0607_2016MJ_31_q04 ms_align: 4(c)(parent)
-- 0ec8fa262e 0607_2016MJ_32_q13 ms_align: 13(c)(parent)
-- cb3438e44c 0607_2016MJ_41_q13 ms_align: 13(b)
-- 61e2562be0 0607_2016ON_31_q12 ms_align: 12(b)(i) 12(b)(ii)
 
 ## Changed questions
 
-- 0607_2014ON_22_q01 [q] COLLATERAL
-- 0607_2014ON_22_q10 [q+ms] expected
-- 0607_2014ON_42_q03 [q+ms] expected
-- 0607_2014ON_42_q05 [q+ms] expected
-- 0607_2014ON_42_q06 [q+ms] expected
-- 0607_2014ON_42_q07 [q+ms] expected
-- 0607_2014ON_51_q01 [q+ms] COLLATERAL
-- 0607_2014ON_51_q02 [q+ms] COLLATERAL
-- 0607_2014ON_51_q03 [q+ms] COLLATERAL
-- 0607_2014ON_51_q04 [q+ms] COLLATERAL
-- 0607_2014ON_51_t1 [q+ms] COLLATERAL
-- 0607_2014ON_52_q01 [q] COLLATERAL
-- 0607_2014ON_52_q02 [q] COLLATERAL
-- 0607_2014ON_52_q03 [q] COLLATERAL
-- 0607_2014ON_52_q04 [q] COLLATERAL
-- 0607_2014ON_52_t1 [q+ms] COLLATERAL
-- 0607_2014ON_53_q01 [q] COLLATERAL
-- 0607_2014ON_53_q02 [q] COLLATERAL
-- 0607_2014ON_53_q03 [q] COLLATERAL
-- 0607_2014ON_53_q04 [q] COLLATERAL
-- 0607_2014ON_53_t1 [q+ms] COLLATERAL
-- 0607_2014ON_61_q01 [q] COLLATERAL
-- 0607_2014ON_61_q02 [q] COLLATERAL
-- 0607_2014ON_62_q03 [q+ms] COLLATERAL
-- 0607_2014ON_62_q04 [q+ms] COLLATERAL
-- 0607_2014ON_62_tA [q+ms] COLLATERAL
-- 0607_2014ON_62_tB [q+ms] COLLATERAL
-- 0607_2015MJ_22_q02 [q+ms] expected
-- 0607_2015MJ_23_q01 [q] COLLATERAL
-- 0607_2015MJ_23_q02 [q] COLLATERAL
-- 0607_2015MJ_23_q03 [q] COLLATERAL
-- 0607_2015MJ_23_q04 [q] COLLATERAL
-- 0607_2015MJ_23_q05 [q] COLLATERAL
-- 0607_2015MJ_23_q06 [q] COLLATERAL
-- 0607_2015MJ_23_q09 [q] expected
-- 0607_2015MJ_31_q01 [q+ms] COLLATERAL
-- 0607_2015MJ_31_q02 [q+ms] COLLATERAL
-- 0607_2015MJ_31_q04 [q+ms] COLLATERAL
-- 0607_2015MJ_31_q05 [q+ms] expected
-- 0607_2015MJ_31_q06 [q+ms] expected
-- 0607_2015MJ_31_q07 [q+ms] expected
-- 0607_2015MJ_31_q08 [q+ms] expected
-- 0607_2015MJ_31_q09 [q+ms] expected
-- 0607_2015MJ_31_q10 [q+ms] expected
-- 0607_2015MJ_31_q11 [q+ms] expected
-- 0607_2015MJ_31_q12 [q+ms] expected
-- 0607_2015MJ_31_q13 [q+ms] expected
-- 0607_2015MJ_31_q14 [q+ms] expected
-- 0607_2015MJ_32_q01 [q+ms] expected
-- 0607_2015MJ_32_q04 [q+ms] expected
-- 0607_2015MJ_32_q07 [q+ms] expected
-- 0607_2015MJ_32_q08 [q+ms] expected
-- 0607_2015MJ_32_q10 [q+ms] expected
-- 0607_2015MJ_33_q04 [q] COLLATERAL
-- 0607_2015MJ_41_q15 [q] COLLATERAL
-- 0607_2015MJ_42_q01 [q+ms] expected
-- 0607_2015MJ_42_q05 [q+ms] expected
-- 0607_2015MJ_42_q07 [q+ms] expected
-- 0607_2015MJ_42_q08 [q+ms] expected
-- 0607_2015MJ_42_q09 [q+ms] expected
-- 0607_2015MJ_42_q11 [q+ms] expected
-- 0607_2015MJ_42_q12 [q+ms] expected
-- 0607_2015MJ_42_q13 [q+ms] expected
-- 0607_2015MJ_62_q05 [q] expected
-- 0607_2015MJ_62_q06 [added] COLLATERAL
-- 0607_2015MJ_62_q07 [added] COLLATERAL
-- 0607_2015MJ_62_q08 [added] COLLATERAL
-- 0607_2015MJ_62_tA [q] COLLATERAL
-- 0607_2015MJ_62_tB [added] COLLATERAL
-- 0607_2015ON_11_q02 [q+ms] COLLATERAL
-- 0607_2015ON_11_q03 [q+ms] COLLATERAL
-- 0607_2015ON_11_q04 [q+ms] COLLATERAL
-- 0607_2015ON_11_q05 [q+ms] COLLATERAL
-- 0607_2015ON_11_q08 [q+ms] COLLATERAL
-- 0607_2015ON_11_q11 [q+ms] expected
-- 0607_2015ON_11_q12 [q+ms] COLLATERAL
-- 0607_2015ON_11_q13 [q] COLLATERAL
-- 0607_2015ON_11_q14 [q] COLLATERAL
-- 0607_2015ON_21_q03 [q+ms] COLLATERAL
-- 0607_2015ON_21_q06 [q+ms] COLLATERAL
-- 0607_2015ON_21_q08 [q+ms] COLLATERAL
-- 0607_2015ON_21_q09 [q+ms] COLLATERAL
-- 0607_2015ON_21_q11 [q] COLLATERAL
-- 0607_2015ON_21_q12 [q+ms] COLLATERAL
-- 0607_2015ON_21_q14 [q+ms] COLLATERAL
-- 0607_2015ON_21_q15 [q] COLLATERAL
-- 0607_2015ON_22_q01 [q+ms] COLLATERAL
-- 0607_2015ON_22_q02 [q+ms] COLLATERAL
-- 0607_2015ON_22_q03 [q] expected
-- 0607_2015ON_22_q04 [q+ms] COLLATERAL
-- 0607_2015ON_22_q05 [q+ms] COLLATERAL
-- 0607_2015ON_22_q06 [q+ms] COLLATERAL
-- 0607_2015ON_22_q07 [q+ms] COLLATERAL
-- 0607_2015ON_22_q08 [q+ms] COLLATERAL
-- 0607_2015ON_22_q09 [q+ms] COLLATERAL
-- 0607_2015ON_23_q10 [q] COLLATERAL
-- 0607_2015ON_23_q13 [q+ms] COLLATERAL
-- 0607_2015ON_23_q14 [q+ms] expected
-- 0607_2015ON_23_q15 [removed] expected
-- 0607_2015ON_23_q16 [removed] expected
-- 0607_2015ON_23_q17 [removed] expected
-- 0607_2015ON_23_q18 [removed] expected
-- 0607_2015ON_23_q19 [removed] expected
-- 0607_2015ON_23_q20 [removed] expected
-- 0607_2015ON_31_q10 [q] expected
-- 0607_2015ON_41_q01 [q+ms] expected
-- 0607_2015ON_41_q02 [q+ms] expected
-- 0607_2015ON_41_q03 [q] COLLATERAL
-- 0607_2015ON_41_q04 [q+ms] COLLATERAL
-- 0607_2015ON_41_q05 [q+ms] COLLATERAL
-- 0607_2015ON_41_q06 [q+ms] COLLATERAL
-- 0607_2015ON_41_q07 [q+ms] expected
-- 0607_2015ON_41_q08 [q+ms] expected
-- 0607_2015ON_41_q09 [q+ms] COLLATERAL
-- 0607_2015ON_41_q10 [q+ms] COLLATERAL
-- 0607_2015ON_41_q11 [q+ms] COLLATERAL
-- 0607_2015ON_42_q01 [q+ms] COLLATERAL
-- 0607_2015ON_42_q05 [q+ms] COLLATERAL
-- 0607_2015ON_42_q06 [q+ms] expected
-- 0607_2015ON_42_q08 [q+ms] COLLATERAL
-- 0607_2015ON_42_q09 [q+ms] COLLATERAL
-- 0607_2015ON_42_q10 [q+ms] COLLATERAL
-- 0607_2015ON_42_q11 [q+ms] COLLATERAL
-- 0607_2015ON_42_q12 [q+ms] COLLATERAL
-- 0607_2015ON_42_q13 [q+ms] COLLATERAL
-- 0607_2015ON_42_q14 [q+ms] expected
-- 0607_2015ON_42_q15 [q+ms] COLLATERAL
-- 0607_2015ON_43_q01 [q+ms] COLLATERAL
-- 0607_2015ON_43_q02 [q+ms] expected
-- 0607_2015ON_43_q03 [q+ms] expected
-- 0607_2015ON_43_q04 [q+ms] expected
-- 0607_2015ON_43_q05 [q+ms] expected
-- 0607_2015ON_43_q06 [q+ms] expected
-- 0607_2015ON_43_q07 [q+ms] COLLATERAL
-- 0607_2015ON_43_q08 [q+ms] expected
-- 0607_2015ON_43_q09 [q+ms] expected
-- 0607_2015ON_43_q10 [q+ms] expected
-- 0607_2015ON_43_q11 [q+ms] expected
-- 0607_2015ON_43_q12 [q+ms] expected
-- 0607_2015ON_51_q01 [q+ms] COLLATERAL
-- 0607_2015ON_51_q02 [q+ms] COLLATERAL
-- 0607_2015ON_51_q03 [q+ms] COLLATERAL
-- 0607_2015ON_51_t1 [q+ms] COLLATERAL
-- 0607_2015ON_52_t1 [q+ms] COLLATERAL
-- 0607_2015ON_53_t1 [q+ms] COLLATERAL
-- 0607_2015ON_61_q01 [q+ms] COLLATERAL
-- 0607_2015ON_61_q02 [q+ms] COLLATERAL
-- 0607_2015ON_61_q03 [q+ms] COLLATERAL
-- 0607_2015ON_61_q04 [q+ms] COLLATERAL
-- 0607_2015ON_61_q05 [q+ms] expected
-- 0607_2015ON_61_q06 [q+ms] expected
-- 0607_2015ON_61_q07 [q+ms] expected
-- 0607_2015ON_61_q08 [q+ms] expected
-- 0607_2015ON_61_tA [q+ms] COLLATERAL
-- 0607_2015ON_61_tB [q+ms] COLLATERAL
-- 0607_2015ON_62_q01 [q+ms] COLLATERAL
-- 0607_2015ON_62_q02 [q+ms] COLLATERAL
-- 0607_2015ON_62_q04 [q+ms] COLLATERAL
-- 0607_2015ON_62_q05 [q+ms] COLLATERAL
-- 0607_2015ON_62_q06 [q+ms] expected
-- 0607_2015ON_62_q07 [q+ms] expected
-- 0607_2015ON_62_q08 [q+ms] expected
-- 0607_2015ON_62_q09 [q+ms] expected
-- 0607_2015ON_62_q10 [q+ms] expected
-- 0607_2015ON_62_tA [q+ms] COLLATERAL
-- 0607_2015ON_62_tB [q+ms] COLLATERAL
-- 0607_2015ON_63_q01 [q+ms] COLLATERAL
-- 0607_2015ON_63_q02 [q+ms] COLLATERAL
-- 0607_2015ON_63_q04 [q+ms] COLLATERAL
-- 0607_2015ON_63_q05 [q+ms] COLLATERAL
-- 0607_2015ON_63_q06 [q+ms] COLLATERAL
-- 0607_2015ON_63_q07 [q+ms] expected
-- 0607_2015ON_63_q08 [q+ms] expected
-- 0607_2015ON_63_q09 [q+ms] expected
-- 0607_2015ON_63_q10 [q+ms] expected
-- 0607_2015ON_63_tA [q+ms] COLLATERAL
-- 0607_2015ON_63_tB [q+ms] COLLATERAL
-- 0607_2016MJ_11_q04 [q] COLLATERAL
-- 0607_2016MJ_11_q10 [q+ms] expected
-- 0607_2016MJ_11_q16 [q+ms] expected
-- 0607_2016MJ_12_q04 [q+ms] COLLATERAL
-- 0607_2016MJ_12_q05 [q+ms] COLLATERAL
-- 0607_2016MJ_12_q06 [q+ms] COLLATERAL
-- 0607_2016MJ_12_q08 [q+ms] COLLATERAL
-- 0607_2016MJ_12_q09 [q+ms] COLLATERAL
-- 0607_2016MJ_12_q10 [q+ms] COLLATERAL
-- 0607_2016MJ_12_q13 [q+ms] COLLATERAL
-- 0607_2016MJ_12_q15 [q+ms] COLLATERAL
-- 0607_2016MJ_13_q01 [q+ms] COLLATERAL
-- 0607_2016MJ_13_q07 [q+ms] COLLATERAL
-- 0607_2016MJ_13_q09 [q] COLLATERAL
-- 0607_2016MJ_13_q13 [q] COLLATERAL
-- 0607_2016MJ_13_q14 [q] COLLATERAL
-- 0607_2016MJ_13_q15 [q] COLLATERAL
-- 0607_2016MJ_21_q01 [q+ms] COLLATERAL
-- 0607_2016MJ_21_q02 [q] COLLATERAL
-- 0607_2016MJ_21_q04 [q] COLLATERAL
-- 0607_2016MJ_21_q05 [q+ms] expected
-- 0607_2016MJ_21_q07 [q+ms] expected
-- 0607_2016MJ_21_q09 [q] COLLATERAL
-- 0607_2016MJ_21_q10 [q+ms] COLLATERAL
-- 0607_2016MJ_21_q14 [q] COLLATERAL
-- 0607_2016MJ_22_q05 [q+ms] COLLATERAL
-- 0607_2016MJ_22_q09 [q+ms] expected
-- 0607_2016MJ_23_q04 [q+ms] COLLATERAL
-- 0607_2016MJ_23_q06 [q] COLLATERAL
-- 0607_2016MJ_23_q07 [q+ms] COLLATERAL
-- 0607_2016MJ_23_q11 [q+ms] COLLATERAL
-- 0607_2016MJ_23_q13 [q+ms] COLLATERAL
-- 0607_2016MJ_31_q01 [q+ms] expected
-- 0607_2016MJ_31_q02 [q+ms] expected
-- 0607_2016MJ_31_q03 [q+ms] expected
-- 0607_2016MJ_31_q04 [q+ms] expected
-- 0607_2016MJ_31_q05 [q+ms] expected
-- 0607_2016MJ_31_q06 [q+ms] COLLATERAL
-- 0607_2016MJ_31_q07 [q+ms] expected
-- 0607_2016MJ_31_q08 [q+ms] expected
-- 0607_2016MJ_31_q09 [q+ms] COLLATERAL
-- 0607_2016MJ_31_q10 [q+ms] expected
-- 0607_2016MJ_31_q11 [q+ms] COLLATERAL
-- 0607_2016MJ_31_q12 [q+ms] expected
-- 0607_2016MJ_31_q13 [q+ms] COLLATERAL
-- 0607_2016MJ_32_q01 [q+ms] COLLATERAL
-- 0607_2016MJ_32_q02 [q+ms] expected
-- 0607_2016MJ_32_q03 [q+ms] COLLATERAL
-- 0607_2016MJ_32_q04 [q+ms] COLLATERAL
-- 0607_2016MJ_32_q05 [q+ms] COLLATERAL
-- 0607_2016MJ_32_q06 [q+ms] expected
-- 0607_2016MJ_32_q07 [q+ms] expected
-- 0607_2016MJ_32_q08 [q+ms] expected
-- 0607_2016MJ_32_q09 [q+ms] expected
-- 0607_2016MJ_32_q10 [q+ms] COLLATERAL
-- 0607_2016MJ_32_q11 [q+ms] COLLATERAL
-- 0607_2016MJ_32_q12 [q+ms] COLLATERAL
-- 0607_2016MJ_32_q13 [q+ms] expected
-- 0607_2016MJ_32_q14 [q+ms] COLLATERAL
-- 0607_2016MJ_32_q15 [q+ms] COLLATERAL
-- 0607_2016MJ_33_q01 [q+ms] COLLATERAL
-- 0607_2016MJ_33_q02 [q+ms] expected
-- 0607_2016MJ_33_q03 [q+ms] expected
-- 0607_2016MJ_33_q04 [q+ms] expected
-- 0607_2016MJ_33_q05 [q+ms] expected
-- 0607_2016MJ_33_q06 [q+ms] expected
-- 0607_2016MJ_33_q07 [q+ms] COLLATERAL
-- 0607_2016MJ_33_q08 [q+ms] expected
-- 0607_2016MJ_33_q09 [q+ms] COLLATERAL
-- 0607_2016MJ_33_q10 [q+ms] COLLATERAL
-- 0607_2016MJ_33_q11 [q+ms] COLLATERAL
-- 0607_2016MJ_33_q12 [q+ms] COLLATERAL
-- 0607_2016MJ_33_q13 [q+ms] COLLATERAL
-- 0607_2016MJ_33_q14 [q+ms] COLLATERAL
-- 0607_2016MJ_41_q01 [q+ms] COLLATERAL
-- 0607_2016MJ_41_q02 [q+ms] COLLATERAL
-- 0607_2016MJ_41_q03 [q+ms] expected
-- 0607_2016MJ_41_q04 [q+ms] expected
-- 0607_2016MJ_41_q05 [q+ms] expected
-- 0607_2016MJ_41_q06 [q] COLLATERAL
-- 0607_2016MJ_41_q07 [q] COLLATERAL
-- 0607_2016MJ_41_q08 [q+ms] expected
-- 0607_2016MJ_41_q09 [q] COLLATERAL
-- 0607_2016MJ_41_q10 [q] COLLATERAL
-- 0607_2016MJ_41_q11 [q+ms] expected
-- 0607_2016MJ_41_q12 [q+ms] expected
-- 0607_2016MJ_41_q13 [q+ms] expected
-- 0607_2016MJ_42_q01 [q+ms] COLLATERAL
-- 0607_2016MJ_42_q02 [q+ms] expected
-- 0607_2016MJ_42_q03 [q+ms] expected
-- 0607_2016MJ_42_q04 [q+ms] COLLATERAL
-- 0607_2016MJ_42_q05 [q+ms] COLLATERAL
-- 0607_2016MJ_42_q06 [q+ms] COLLATERAL
-- 0607_2016MJ_42_q07 [q+ms] expected
-- 0607_2016MJ_42_q08 [q+ms] COLLATERAL
-- 0607_2016MJ_43_q01 [q+ms] COLLATERAL
-- 0607_2016MJ_43_q02 [q+ms] COLLATERAL
-- 0607_2016MJ_43_q03 [q+ms] COLLATERAL
-- 0607_2016MJ_43_q04 [q+ms] expected
-- 0607_2016MJ_43_q05 [q+ms] COLLATERAL
-- 0607_2016MJ_43_q06 [q+ms] expected
-- 0607_2016MJ_43_q07 [q+ms] COLLATERAL
-- 0607_2016MJ_43_q08 [q+ms] COLLATERAL
-- 0607_2016MJ_43_q09 [q+ms] expected
-- 0607_2016MJ_43_q10 [q+ms] expected
-- 0607_2016MJ_43_q11 [q+ms] COLLATERAL
-- 0607_2016MJ_43_q12 [q+ms] COLLATERAL
-- 0607_2016MJ_43_q13 [q+ms] expected
-- 0607_2016MJ_43_q14 [q+ms] COLLATERAL
-- 0607_2016MJ_51_q01 [q+ms] COLLATERAL
-- 0607_2016MJ_51_q02 [q+ms] expected
-- 0607_2016MJ_51_q03 [q+ms] COLLATERAL
-- 0607_2016MJ_51_q04 [q+ms] COLLATERAL
-- 0607_2016MJ_51_t1 [q+ms] COLLATERAL
-- 0607_2016MJ_52_q01 [q+ms] COLLATERAL
-- 0607_2016MJ_52_q02 [q+ms] COLLATERAL
-- 0607_2016MJ_52_q06 [q+ms] COLLATERAL
-- 0607_2016MJ_52_t1 [q+ms] COLLATERAL
-- 0607_2016MJ_53_q01 [q+ms] COLLATERAL
-- 0607_2016MJ_53_q02 [q+ms] COLLATERAL
-- 0607_2016MJ_53_q03 [q+ms] COLLATERAL
-- 0607_2016MJ_53_q04 [q+ms] COLLATERAL
-- 0607_2016MJ_53_q05 [q+ms] COLLATERAL
-- 0607_2016MJ_53_q06 [q+ms] COLLATERAL
-- 0607_2016MJ_53_q07 [q+ms] COLLATERAL
-- 0607_2016MJ_53_t1 [q+ms] COLLATERAL
-- 0607_2016MJ_61_q01 [q+ms] COLLATERAL
-- 0607_2016MJ_61_q02 [q+ms] COLLATERAL
-- 0607_2016MJ_61_q04 [q+ms] COLLATERAL
-- 0607_2016MJ_61_q06 [q+ms] expected
-- 0607_2016MJ_61_q07 [q+ms] COLLATERAL
-- 0607_2016MJ_61_q08 [q+ms] expected
-- 0607_2016MJ_61_q09 [q+ms] expected
-- 0607_2016MJ_61_q10 [q+ms] expected
-- 0607_2016MJ_61_q11 [q+ms] expected
-- 0607_2016MJ_61_q12 [q+ms] expected
-- 0607_2016MJ_61_q13 [q+ms] expected
-- 0607_2016MJ_61_tA [q+ms] COLLATERAL
-- 0607_2016MJ_61_tB [q+ms] COLLATERAL
-- 0607_2016MJ_62_q02 [q+ms] COLLATERAL
-- 0607_2016MJ_62_q03 [q+ms] COLLATERAL
-- 0607_2016MJ_62_q05 [q+ms] COLLATERAL
-- 0607_2016MJ_62_q06 [q+ms] COLLATERAL
-- 0607_2016MJ_62_q08 [q+ms] expected
-- 0607_2016MJ_62_q09 [q+ms] expected
-- 0607_2016MJ_62_q10 [q+ms] expected
-- 0607_2016MJ_62_q11 [q+ms] expected
-- 0607_2016MJ_62_q12 [q+ms] expected
-- 0607_2016MJ_62_tA [q+ms] COLLATERAL
-- 0607_2016MJ_62_tB [q+ms] COLLATERAL
-- 0607_2016MJ_63_q01 [q+ms] COLLATERAL
-- 0607_2016MJ_63_q02 [q+ms] expected
-- 0607_2016MJ_63_q03 [q+ms] COLLATERAL
-- 0607_2016MJ_63_q04 [q+ms] expected
-- 0607_2016MJ_63_q06 [q+ms] expected
-- 0607_2016MJ_63_q07 [q+ms] expected
-- 0607_2016MJ_63_q08 [q+ms] expected
-- 0607_2016MJ_63_q09 [q+ms] expected
-- 0607_2016MJ_63_tA [q+ms] COLLATERAL
-- 0607_2016MJ_63_tB [q+ms] COLLATERAL
-- 0607_2016ON_11_q01 [q+ms] COLLATERAL
-- 0607_2016ON_11_q04 [q] COLLATERAL
-- 0607_2016ON_11_q07 [q] COLLATERAL
-- 0607_2016ON_11_q08 [q] COLLATERAL
-- 0607_2016ON_11_q09 [q] COLLATERAL
-- 0607_2016ON_11_q10 [q] COLLATERAL
-- 0607_2016ON_11_q12 [q] COLLATERAL
-- 0607_2016ON_11_q13 [q] COLLATERAL
-- 0607_2016ON_11_q16 [q] COLLATERAL
-- 0607_2016ON_12_q01 [q+ms] COLLATERAL
-- 0607_2016ON_12_q04 [q] COLLATERAL
-- 0607_2016ON_12_q05 [q] COLLATERAL
-- 0607_2016ON_12_q07 [q] COLLATERAL
-- 0607_2016ON_12_q16 [q+ms] expected
-- 0607_2016ON_12_q17 [q] COLLATERAL
-- 0607_2016ON_12_q18 [q+ms] expected
-- 0607_2016ON_12_q20 [q] COLLATERAL
-- 0607_2016ON_21_q03 [q] COLLATERAL
-- 0607_2016ON_21_q05 [q] COLLATERAL
-- 0607_2016ON_21_q12 [q] COLLATERAL
-- 0607_2016ON_21_q13 [q] COLLATERAL
-- 0607_2016ON_22_q03 [q] COLLATERAL
-- 0607_2016ON_22_q04 [q+ms] COLLATERAL
-- 0607_2016ON_22_q05 [q] COLLATERAL
-- 0607_2016ON_22_q06 [q] COLLATERAL
-- 0607_2016ON_22_q07 [q] COLLATERAL
-- 0607_2016ON_22_q10 [q+ms] COLLATERAL
-- 0607_2016ON_22_q11 [q] COLLATERAL
-- 0607_2016ON_22_q12 [q+ms] COLLATERAL
-- 0607_2016ON_23_q03 [q] COLLATERAL
-- 0607_2016ON_23_q06 [q] COLLATERAL
-- 0607_2016ON_23_q08 [q] COLLATERAL
-- 0607_2016ON_23_q09 [q] COLLATERAL
-- 0607_2016ON_23_q10 [q] COLLATERAL
-- 0607_2016ON_23_q11 [q] COLLATERAL
-- 0607_2016ON_23_q12 [q+ms] COLLATERAL
-- 0607_2016ON_23_q13 [q+ms] COLLATERAL
-- 0607_2016ON_31_q01 [q+ms] COLLATERAL
-- 0607_2016ON_31_q02 [q+ms] expected
-- 0607_2016ON_31_q03 [q+ms] expected
-- 0607_2016ON_31_q04 [q+ms] expected
-- 0607_2016ON_31_q05 [q] COLLATERAL
-- 0607_2016ON_31_q06 [q] COLLATERAL
-- 0607_2016ON_31_q07 [q+ms] COLLATERAL
-- 0607_2016ON_31_q08 [q+ms] expected
-- 0607_2016ON_31_q09 [q+ms] COLLATERAL
-- 0607_2016ON_31_q10 [q+ms] expected
-- 0607_2016ON_31_q11 [q+ms] expected
-- 0607_2016ON_31_q12 [q+ms] expected
-- 0607_2016ON_32_q01 [q+ms] COLLATERAL
-- 0607_2016ON_32_q02 [q+ms] expected
-- 0607_2016ON_32_q03 [q+ms] expected
-- 0607_2016ON_32_q04 [q] COLLATERAL
-- 0607_2016ON_32_q05 [q+ms] expected
-- 0607_2016ON_32_q06 [q+ms] expected
-- 0607_2016ON_32_q07 [q+ms] expected
-- 0607_2016ON_32_q08 [q+ms] expected
-- 0607_2016ON_32_q09 [q+ms] expected
-- 0607_2016ON_32_q10 [q+ms] expected
-- 0607_2016ON_32_q11 [q+ms] expected
-- 0607_2016ON_32_q12 [q+ms] expected
-- 0607_2016ON_32_q13 [q+ms] expected
-- 0607_2016ON_32_q14 [q+ms] expected
-- 0607_2016ON_32_q15 [q+ms] expected
-- 0607_2016ON_42_q01 [q+ms] COLLATERAL
-- 0607_2016ON_42_q02 [q+ms] COLLATERAL
-- 0607_2016ON_42_q03 [q+ms] expected
-- 0607_2016ON_42_q04 [q] COLLATERAL
-- 0607_2016ON_42_q05 [q] COLLATERAL
-- 0607_2016ON_42_q06 [q] COLLATERAL
-- 0607_2016ON_42_q08 [q+ms] COLLATERAL
-- 0607_2016ON_42_q09 [q+ms] expected
-- 0607_2016ON_42_q10 [q+ms] expected
-- 0607_2016ON_42_q11 [q] COLLATERAL
-- 0607_2016ON_42_q12 [q+ms] expected
-- 0607_2016ON_42_q13 [q+ms] COLLATERAL
-- 0607_2016ON_42_q14 [q] COLLATERAL
-- 0607_2016ON_43_q01 [q+ms] COLLATERAL
-- 0607_2016ON_43_q02 [q+ms] expected
-- 0607_2016ON_43_q03 [q] COLLATERAL
-- 0607_2016ON_43_q04 [q+ms] expected
-- 0607_2016ON_43_q05 [q+ms] expected
-- 0607_2016ON_43_q06 [q] COLLATERAL
-- 0607_2016ON_43_q07 [q+ms] expected
-- 0607_2016ON_43_q08 [q] COLLATERAL
-- 0607_2016ON_43_q09 [q+ms] expected
-- 0607_2016ON_43_q10 [q+ms] expected
-- 0607_2016ON_43_q11 [q+ms] COLLATERAL
-- 0607_2016ON_43_q12 [q+ms] COLLATERAL
-- 0607_2016ON_51_q04 [q+ms] expected
-- 0607_2016ON_51_q05 [q+ms] COLLATERAL
-- 0607_2016ON_51_q06 [q] COLLATERAL
-- 0607_2016ON_51_t1 [q+ms] COLLATERAL
-- 0607_2016ON_52_q01 [q+ms] COLLATERAL
-- 0607_2016ON_52_q02 [q] COLLATERAL
-- 0607_2016ON_52_q04 [q+ms] COLLATERAL
-- 0607_2016ON_52_tA [q+ms] COLLATERAL
-- 0607_2016ON_53_q04 [q] COLLATERAL
-- 0607_2016ON_53_tA [q+ms] COLLATERAL
-- 0607_2016ON_61_q01 [q+ms] COLLATERAL
-- 0607_2016ON_61_q02 [q] COLLATERAL
-- 0607_2016ON_61_q03 [q+ms] COLLATERAL
-- 0607_2016ON_61_q05 [q] COLLATERAL
-- 0607_2016ON_61_q07 [q] COLLATERAL
-- 0607_2016ON_61_q08 [added] COLLATERAL
-- 0607_2016ON_61_q09 [added] COLLATERAL
-- 0607_2016ON_61_q10 [added] COLLATERAL
-- 0607_2016ON_61_q11 [added] COLLATERAL
-- 0607_2016ON_61_tA [q+ms] COLLATERAL
-- 0607_2016ON_61_tB [added] COLLATERAL
-- 0607_2016ON_62_q01 [q+ms] COLLATERAL
-- 0607_2016ON_62_q03 [q] COLLATERAL
-- 0607_2016ON_62_q04 [q] COLLATERAL
-- 0607_2016ON_62_q05 [q+ms] expected
-- 0607_2016ON_62_q06 [q+ms] COLLATERAL
-- 0607_2016ON_62_q07 [q+ms] expected
-- 0607_2016ON_62_q08 [q+ms] expected
-- 0607_2016ON_62_q09 [q+ms] expected
-- 0607_2016ON_62_q10 [q+ms] expected
-- 0607_2016ON_62_q11 [q+ms] expected
-- 0607_2016ON_62_tA [q+ms] COLLATERAL
-- 0607_2016ON_62_tB [q+ms] COLLATERAL
-- 0607_2016ON_63_q01 [q+ms] COLLATERAL
-- 0607_2016ON_63_q02 [q] COLLATERAL
-- 0607_2016ON_63_q03 [q] expected
-- 0607_2016ON_63_q04 [added] COLLATERAL
-- 0607_2016ON_63_q05 [added] COLLATERAL
-- 0607_2016ON_63_q06 [added] COLLATERAL
-- 0607_2016ON_63_tA [q+ms] COLLATERAL
-- 0607_2016ON_63_tB [added] COLLATERAL
-- 0607_2017MJ_12_q09 [q] COLLATERAL
-- 0607_2017MJ_12_q13 [q] COLLATERAL
-- 0607_2017MJ_21_q07 [q] COLLATERAL
-- 0607_2017MJ_21_q08 [q] COLLATERAL
-- 0607_2017MJ_21_q10 [q] COLLATERAL
-- 0607_2017MJ_21_q14 [q] COLLATERAL
-- 0607_2017MJ_21_q15 [q] COLLATERAL
-- 0607_2017MJ_21_q16 [q] COLLATERAL
-- 0607_2017MJ_23_q01 [q] COLLATERAL
-- 0607_2017MJ_23_q05 [q] COLLATERAL
-- 0607_2017MJ_23_q08 [q] COLLATERAL
-- 0607_2017MJ_23_q13 [q] COLLATERAL
-- 0607_2017MJ_23_q15 [q] COLLATERAL
-- 0607_2017MJ_23_q17 [q] COLLATERAL
-- 0607_2017MJ_31_q08 [q] COLLATERAL
-- 0607_2017MJ_31_q09 [q] COLLATERAL
-- 0607_2017MJ_31_q12 [q] COLLATERAL
-- 0607_2017MJ_32_q07 [q] expected
-- 0607_2017MJ_33_q03 [q] COLLATERAL
-- 0607_2017MJ_33_q12 [q] COLLATERAL
-- 0607_2017MJ_43_q01 [q] COLLATERAL
-- 0607_2017MJ_43_q02 [q] COLLATERAL
-- 0607_2017MJ_43_q05 [q] COLLATERAL
-- 0607_2017MJ_43_q07 [q] COLLATERAL
-- 0607_2017MJ_43_q08 [q] COLLATERAL
-- 0607_2017MJ_43_q09 [q] COLLATERAL
-- 0607_2017MJ_43_q11 [q] COLLATERAL
-- 0607_2017MJ_52_q02 [q+ms] COLLATERAL
-- 0607_2017MJ_52_t1 [q+ms] COLLATERAL
-- 0607_2017MJ_61_q02 [q+ms] COLLATERAL
-- 0607_2017MJ_61_q03 [q+ms] expected
-- 0607_2017MJ_61_q04 [q+ms] expected
-- 0607_2017MJ_61_q05 [q+ms] COLLATERAL
-- 0607_2017MJ_61_q06 [q+ms] expected
-- 0607_2017MJ_61_q07 [q+ms] expected
-- 0607_2017MJ_61_q08 [q+ms] expected
-- 0607_2017MJ_61_tA [q+ms] COLLATERAL
-- 0607_2017MJ_61_tB [q+ms] COLLATERAL
-- 0607_2017MJ_62_q01 [q+ms] COLLATERAL
-- 0607_2017MJ_62_q05 [q+ms] expected
-- 0607_2017MJ_62_q06 [q+ms] expected
-- 0607_2017MJ_62_q07 [q+ms] expected
-- 0607_2017MJ_62_q08 [q+ms] expected
-- 0607_2017MJ_62_q09 [q+ms] expected
-- 0607_2017MJ_62_tA [q+ms] COLLATERAL
-- 0607_2017MJ_62_tB [q+ms] COLLATERAL
-- 0607_2017MJ_63_q03 [q] expected
-- 0607_2017MJ_63_q04 [q+ms] expected
-- 0607_2017MJ_63_q05 [q+ms] expected
-- 0607_2017MJ_63_q06 [q+ms] expected
-- 0607_2017MJ_63_tA [q] COLLATERAL
-- 0607_2017MJ_63_tB [q+ms] COLLATERAL
-- 0607_2017ON_32_q13 [q] COLLATERAL
-- 0607_2017ON_61_q06 [q+ms] expected
-- 0607_2017ON_61_q07 [q+ms] COLLATERAL
-- 0607_2017ON_61_q08 [q+ms] COLLATERAL
-- 0607_2017ON_61_q09 [q+ms] expected
-- 0607_2017ON_61_q10 [q+ms] expected
-- 0607_2017ON_61_q11 [q+ms] expected
-- 0607_2017ON_61_q12 [q+ms] expected
-- 0607_2017ON_61_q13 [q+ms] expected
-- 0607_2017ON_61_tB [q+ms] COLLATERAL
-- 0607_2017ON_62_q06 [q] COLLATERAL
-- 0607_2017ON_62_q07 [added] COLLATERAL
-- 0607_2017ON_62_q08 [added] COLLATERAL
-- 0607_2017ON_62_q09 [added] COLLATERAL
-- 0607_2017ON_62_q10 [added] COLLATERAL
-- 0607_2017ON_62_tA [q] COLLATERAL
-- 0607_2017ON_62_tB [added] COLLATERAL
-- 0607_2017ON_63_q06 [q+ms] expected
-- 0607_2017ON_63_q07 [q+ms] expected
-- 0607_2017ON_63_q08 [q+ms] expected
-- 0607_2017ON_63_q09 [q+ms] expected
-- 0607_2017ON_63_tB [q+ms] COLLATERAL
 
 ## gone (open)
 
+- 0607_2014ON_31_q12 ms_picture: 12(a): picture cell
+- 0607_2014ON_31_q12 ms_screenshot: 12(a): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
+- 0607_2014ON_41_q03 ms_picture: 3(a): picture cell
+- 0607_2014ON_41_q03 ms_screenshot: 3(a): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
+- 0607_2014ON_61_q11 ms_picture: 11(b): picture cell
+- 0607_2014ON_61_q11 ms_screenshot: 11(b): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
+- 0607_2014ON_62_q03 ms_picture: 3(c)(iii): picture cell
 - 0607_2014ON_62_q03 ms_screenshot: 3(c)(iii): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
+- 0607_2014ON_62_q04 ms_picture: 4(a)(i): picture cell
+- 0607_2014ON_62_q04 ms_screenshot: 4(a)(i): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
+- 0607_2015MJ_43_q05 ms_piccut: msimg_3_110_367.png
+- 0607_2015MJ_43_q05 ms_picture: 5(b): picture cell
+- 0607_2015MJ_43_q05 ms_screenshot: 5(b): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
+- 0607_2015MJ_43_q11 ms_picture: 11(a): picture cell
+- 0607_2015MJ_43_q11 ms_picture: 11(d): picture cell
+- 0607_2015MJ_43_q11 ms_screenshot: 11(a): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
+- 0607_2015MJ_43_q11 ms_screenshot: 11(d): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
 - 0607_2015ON_41_q04 ms_piccut: msimg_3_343_429.png
 - 0607_2015ON_41_q05 ms_piccut: msimg_3_343_620.png
+- 0607_2015ON_42_q07 ms_picture: 7: picture cell
+- 0607_2015ON_42_q07 ms_screenshot: 7: blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
 - 0607_2015ON_42_q10 ms_table: 10: table / graph drawn as lines
+- 0607_2015ON_42_q13 ms_picture: 13: picture cell
+- 0607_2015ON_42_q13 ms_screenshot: 13: blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
+- 0607_2015ON_42_q15 ms_screenshot: 15(a): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
+- 0607_2015ON_42_q15 ms_screenshot: 15(b): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
 - 0607_2015ON_61_q05 ms_faint: 5(a): faint picture in the mark scheme - redraw or ask Dhruv
 - 0607_2015ON_61_q05 ms_picture: 5(a): picture cell
 - 0607_2015ON_63_q02 ms_table: 2: table / graph drawn as lines
+- 0607_2016MJ_31_q12 ms_picture: 12(d): picture cell
+- 0607_2016MJ_31_q12 ms_screenshot: 12(d): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
+- 0607_2016MJ_31_q13 ms_picture: 13(a): picture cell
+- 0607_2016MJ_31_q13 ms_screenshot: 13(a): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
+- 0607_2016MJ_53_q07 ms_words: missing: x x and and + oe oe No
+- 0607_2016MJ_61_q13 ms_words: missing: Communication
+- 0607_2016MJ_62_q12 ms_words: missing: Communication
 - 0607_2016MJ_63_q03 ms_picture: row 5: picture cell
 - 0607_2016MJ_63_q04 ms_words: missing: in Communication
+- 0607_2016MJ_63_q05 ms_overflow: 'opportunity' crosses a column rule
+- 0607_2016MJ_63_q05 ms_words: missing: [Yes,] showing solution of Communication in from 1(c)(iii),
+- 0607_2016MJ_63_q09 ms_words: missing: in Communication
+- 0607_2016ON_31_q02 ms_faint: 2(b): faint picture in the mark scheme - redraw or ask Dhruv
 - 0607_2016ON_31_q08 ms_piccut: msimg_4_107_258.png
 - 0607_2016ON_42_q08 ms_edge: 2 2 8
 - 0607_2016ON_52_q01 ms_table: 1: table / graph drawn as lines
+- 0607_2017MJ_22_q09 ms_faint: 9(a): faint picture in the mark scheme - redraw or ask Dhruv
+- 0607_2017MJ_32_q03 ms_faint: 3(g): faint picture in the mark scheme - redraw or ask Dhruv
+- 0607_2017MJ_33_q10 ms_faint: 10(c): faint picture in the mark scheme - redraw or ask Dhruv
+- 0607_2017MJ_33_q13 ms_picture: 13(a): picture cell
+- 0607_2017MJ_33_q13 ms_picture: 13(e)(i): picture cell
+- 0607_2017MJ_33_q13 ms_picture: 13(e)(ii): picture cell
+- 0607_2017MJ_33_q13 ms_screenshot: 13(a): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
+- 0607_2017MJ_33_q13 ms_screenshot: 13(e)(i): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
+- 0607_2017MJ_33_q13 ms_screenshot: 13(e)(ii): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
+- 0607_2017MJ_43_q09 ms_screenshot: 9(g): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
+- 0607_2017MJ_53_q01 ms_faint: 1(c)(i): faint picture in the mark scheme - redraw or ask Dhruv
+- 0607_2017MJ_53_q03 ms_picture: 3(a): picture cell
+- 0607_2017MJ_53_q03 ms_screenshot: 3(a): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
+- 0607_2017MJ_53_q04 ms_picture: 4(a)(i): picture cell
+- 0607_2017MJ_53_q04 ms_picture: 4(c): picture cell
+- 0607_2017MJ_53_q04 ms_screenshot: 4(a)(i): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
+- 0607_2017MJ_53_q04 ms_screenshot: 4(c): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
 - 0607_2017MJ_61_q04 ms_table: 4(b): table / graph drawn as lines
+- 0607_2017MJ_63_q01 ms_faint: 1(b)(i): faint picture in the mark scheme - redraw or ask Dhruv
+- 0607_2017MJ_63_q02 ms_faint: 2(a): faint picture in the mark scheme - redraw or ask Dhruv
+- 0607_2017MJ_63_q02 ms_picture: 2(a): picture cell
+- 0607_2017MJ_63_q03 ms_picture: 3(a): picture cell
+- 0607_2017MJ_63_q03 ms_screenshot: 3(a): blurry screenshot in the mark scheme - redraw (ms_graphs.SPECS) or ask Dhruv
 
 ## gone (passed)
 

@@ -24,11 +24,8 @@
  "marks": 10,
  "figures": [],
  "review": {
-  "reasons": [
-   "mark scheme row 10(ii) has no matching part in the paper",
-   "mark scheme row 10(iii) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -79,7 +76,26 @@
      "text": "all red,\nAnswer(a)(i) .................................................................. [2]",
      "marks": 2,
      "path": "10(a)(i)",
-     "mark_scheme_on": "10",
+     "mark_scheme": [
+      {
+       "label": "10(a)(i)",
+       "text": "6\noe\n336",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          14.461000442504883,
+          250.4,
+          580.843017578125,
+          289.9
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -125,7 +141,26 @@
      "text": "two red and one blue,\nAnswer(a)(ii) .................................................................. [3]",
      "marks": 3,
      "path": "10(a)(ii)",
-     "mark_scheme_on": "10",
+     "mark_scheme": [
+      {
+       "label": "10(a)(ii)",
+       "text": "90\noe\n336",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          14.461000442504883,
+          295.6,
+          580.843017578125,
+          371.2
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -171,7 +206,26 @@
      "text": "at least one of each colour.\nAnswer(a)(iii) .................................................................. [3]",
      "marks": 3,
      "path": "10(a)(iii)",
-     "mark_scheme_on": "10",
+     "mark_scheme": [
+      {
+       "label": "10(a)(iii)",
+       "text": "270\n45\noe\n336\n56",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          14.461000442504883,
+          376.6,
+          580.843017578125,
+          467.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -231,7 +285,9 @@
     {
      "label": "10(b)",
      "text": "30",
-     "codes": [],
+     "codes": [
+      "2FT"
+     ],
      "segments": [
       {
        "page": 5,
@@ -268,62 +324,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "10",
-   "text": "oe\n336",
-   "codes": [
-    "2"
-   ],
-   "segments": [
-    {
-     "page": 5,
-     "bbox": [
-      14.461000442504883,
-      262.2,
-      580.843017578125,
-      289.9
-     ]
-    }
-   ]
-  },
-  {
-   "label": "10(ii)",
-   "text": "90\noe\n336",
-   "codes": [
-    "3"
-   ],
-   "segments": [
-    {
-     "page": 5,
-     "bbox": [
-      14.461000442504883,
-      295.6,
-      580.843017578125,
-      371.2
-     ]
-    }
-   ]
-  },
-  {
-   "label": "10(iii)",
-   "text": "270\n45\noe\n336\n56",
-   "codes": [
-    "3"
-   ],
-   "segments": [
-    {
-     "page": 5,
-     "bbox": [
-      14.461000442504883,
-      376.6,
-      580.843017578125,
-      467.7
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

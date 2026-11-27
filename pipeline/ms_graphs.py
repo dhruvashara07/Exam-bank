@@ -1765,3 +1765,114 @@ _p['text'] = [(1.5, -0.55, t[2], t[3]) if t[2] == '3' and t[1] < 0 else t for t 
 #                                                                    '3' in the middle of its rectangle
 CLOSE_TABLES = {('0607_2025ON_62_q02', '2(d)')}   # (Dhruv round 43: the small table in Partial Marks lost its right border
 #   when the row was read - its rules end on an edge with no line: the line is added there, this row only (ms_maths))
+
+
+# ---- M4 (2014 ON - 2017 ON, 2026-11-27): blurry / faint MS pictures redrawn in the batch (ERROR_PATTERNS 328). Functions and
+# axes from the question; 'ar' = the printed screenshot's width / height; grids where the screenshot has one are listed in
+# RD2_GRID_UNSURE (too faint to count for sure - shown to Dhruv).
+def _ring(n, code=None, r=3.0, nums=True, poly=None, sw=1.2):
+    """n dots equally spaced round a circle, numbered clockwise from the top; 'code' = the dots joined in order."""
+    P = lambda k: (r * math.sin(2 * math.pi * (k - 1) / n), r * math.cos(2 * math.pi * (k - 1) / n))
+    pl = {'style': 'none', 'n': (-r - 1.2, r + 1.2, -r - 1.2, r + 1.2), 'circles': [(0, 0, r)],
+          'pts': [P(k) for k in range(1, n + 1)], 'big': 1.6, 'polys': [],
+          'text': [(P(k)[0] * (r + 0.7) / r - 0.15, P(k)[1] * (r + 0.7) / r - 0.25, str(k), {}) for k in range(1, n + 1)] if nums else []}
+    if code:
+        pl['polys'].append({'p': [P(k) for k in code], 'open': True, 'sw': sw})
+    return pl
+
+
+SPECS.update({
+    ('0607_2014ON_31_q12', '12(a)'): dict(NO, f=[('2*x**3 + 5*x**2 - 2*x - 5', '')], x=(-3, 2), y=(-10, 30), grid=(0.5, 5),
+                                          xt=[-3, 2], yt=[-10, 30], ar=3.52),
+    ('0607_2014ON_41_q03', '3(a)'): dict(NO, f=[('x**3 - 3*x + 4', '')], x=(-3, 3), y=(-14, 22), grid=None, xt=[-3, 3],
+                                         yt=[-14, 22], ar=1.62),
+    ('0607_2014ON_61_q11', '11(b)'): dict(NO, f=[('20/(math.pi*x*x) if x >= 1 else None', '')], x=(0, 5), y=(0, 7),
+                                          grid=(0.5, 1), xt=[5], yt=[7], xlab='r', ylab='d', ar=3.79),
+    ('0607_2014ON_62_q04', '4(a)(i)'): dict(NO, f=[('-x*x/8 + 5*x/4', '')], x=(0, 12), y=(-3.5, 4), grid=(1, 1), xt=[12],
+                                            yt=[], ar=2.6),
+    ('0607_2015MJ_43_q05', '5(b)'): dict(NO, f=[('1200*x - 140*x**2 + 4*x**3', '')], x=(0, 25), y=(-1000, 5000), grid=None,
+                                         xt=[25], yt=[-1000, 5000], ar=2.47),
+    ('0607_2015MJ_43_q11', '11(a)'): dict(NO, f=[('(1 - 2*x)/(x + 3)', '')], x=(-6, 4), y=(-12, 12), grid=None, xt=[-6, 4],
+                                          yt=[-12, 12], ar=1.69),
+    ('0607_2015MJ_43_q11', '11(d)'): dict(NO, f=[('abs((1 - 2*x)/(x + 3))', '')], x=(-6, 4), y=(-12, 12), grid=None,
+                                          xt=[-6, 4], yt=[-12, 12], ar=2.32),
+    ('0607_2015ON_42_q07', '7'): {'f': [('(6*x + 11)/(2*x - 3)', 'f(x) = (6x + 11)/(2x − 3)')], 'x': (-4, 6), 'y': (-15, 15),
+                                  'grid': None, 'xt': [-4, 6], 'yt': [-15, 15], 'ar': 1.17,
+                                  'labels': [[('t', 'f('), ('i', 'x'), ('t', ') = '), ('frac', '6x + 11', '2x − 3')]]},
+    ('0607_2015ON_42_q13', '13'): {'f': [('100/2**x - 10', 'f(x) = 100/2ˣ − 10')], 'x': (0, 5), 'y': (-40, 120), 'grid': None,
+                                   'xt': [5], 'yt': [-40, 120], 'ar': 1.17,
+                                   'labels': [[('t', 'f('), ('i', 'x'), ('t', ') = '), ('frac', '100', '2ˣ'), ('t', ' − 10')]]},
+    ('0607_2016MJ_31_q12', '12(d)'): dict(NO, f=[], points=[(200, 0), (300, 5), (400, 15), (500, 41), (600, 75), (700, 115),
+                                                            (800, 177), (900, 195), (1000, 200)], smooth=True, x=(0, 1000),
+                                          y=(0, 200), grid=(100, 20), xt=[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],
+                                          yt=[20, 40, 60, 80, 100, 120, 140, 160, 180, 200], xlab='', ylab='', ar=1.94),
+    ('0607_2016MJ_31_q13', '13(a)'): dict(NO, f=[('x*x + 2/x', '')], x=(-3, 3), y=(-10, 10), grid=(0.5, 2), xt=[-3, 3],
+                                          yt=[-10, 10], ar=1.95),
+    ('0607_2017MJ_33_q13', '13(a)'): dict(NO, f=[('x**3 + x**2 - 6*x', '')], x=(-3.5, 3), y=(-10, 20), grid=(0.5, 2),
+                                          xt=[-3.5, 3], yt=[-10, 20], ar=2.16),
+    ('0607_2017MJ_33_q13', '13(e)(i)'): {'f': [('x**3 + x**2 - 6*x', ''), ('x**3 + x**2 - 6*x + 2', '')], 'label': False,
+                                         'x': (-3.5, 3), 'y': (-10, 20), 'grid': (0.5, 2), 'xt': [-3.5, 3], 'yt': [-10, 20],
+                                         'ar': 2.48},
+    ('0607_2017MJ_33_q13', '13(e)(ii)'): {'f': [('x**3 + x**2 - 6*x', ''), ('(x-1)**3 + (x-1)**2 - 6*(x-1)', '')], 'label': False,
+                                          'x': (-3.5, 3), 'y': (-10, 20), 'grid': (0.5, 2), 'xt': [-3.5, 3], 'yt': [-10, 20],
+                                          'ar': 2.27},
+    # bar chart, Venns, tables, dots round a circle, crosses on a grid
+    ('0607_2016ON_31_q02', '2(b)'): {'bars': [('1', 7), ('2', 6), ('3', 12), ('4', 10), ('5', 9), ('6', 11)], 'y': (0, 14),
+                                     'yt': [0, 2, 4, 6, 8, 10, 12, 14], 'grid': (None, 2), 'w': 200.0, 'h': 190.0},
+    ('0607_2017MJ_22_q09', '9(a)'): {'venn': [{'sets': 'AB', 'shade': 'A and not B'}, {'sets': 'ABC', 'shade': '(A or C) and not B'}],
+                                     'w': 230.0, 'h': 80.0},
+    ('0607_2017MJ_32_q03', '3(g)'): {'venn': {'sets': 'PQ', 'shade': 'Q and not P'}, 'w': 170.0, 'h': 100.0},
+    ('0607_2017MJ_33_q10', '10(c)'): {'venn': {'sets': 'FC', 'shade': 'F and not C'}, 'w': 160.0, 'h': 85.0},
+    ('0607_2017MJ_43_q09', '9(g)'): {'venn': {'sets': 'FB', 'shade': 'not (F and B)'}, 'w': 130.0, 'h': 72.0},
+    ('0607_2017MJ_53_q01', '1(c)(i)'): {'table': {'rows': [['Number of sides (P)\nof the starting polygon', 'Number of sides (S)\nof the star'],
+                                                          ['~5', '~10'], ['~6', '*12'], ['~7', '*14'], ['~8', '*16'], ['~9', '*18']], 'size': 8.0}},
+    ('0607_2017MJ_53_q03', '3(a)'): {'table': {'rows': [['Number of equally\nspaced dots', 'Number of points on\nthe star'],
+                                                       ['~5', '~5'], ['~6', '~3'], ['~7', '*7'], ['~8', '*4'], ['~9', '*9'],
+                                                       ['~10', '*5'], ['~11', '*11'], ['~12', '*6']], 'size': 8.0}},
+    ('0607_2017MJ_53_q04', '4(a)(i)'): {'w': 80.0, 'h': 75.0, 'plane': _ring(5, [1, 3, 5, 2, 4, 1])},
+    ('0607_2017MJ_53_q04', '4(c)'): {'w': 100.0, 'h': 100.0, 'plane': _ring(9, [1, 4, 7, 1])},
+    ('0607_2017MJ_63_q01', '1(b)(i)'): {'table': {'rows': [['Number of sides (P)\nof the starting polygon', 'Number of sides (S)\nof the star'],
+                                                          ['~5', '~10'], ['~6', '*12'], ['~7', '*14'], ['~8', '*16'], ['~9', '*18']], 'size': 8.0}},
+    ('0607_2017MJ_63_q02', '2(a)'): {'table': {'rows': [['Number of equally\nspaced dots', 'Number of points on\nthe star'],
+                                                       ['~5', '~5'], ['~6', '~3'], ['~7', '*7'], ['~8', '*4'], ['~9', '*9'],
+                                                       ['~10', '*5'], ['~11', '*11']], 'size': 8.0}},
+    ('0607_2017MJ_63_q03', '3(a)'): {'w': 100.0, 'h': 100.0, 'plane': _ring(12, [1, 3, 5, 7, 9, 11, 1])},
+    ('0607_2014ON_62_q03', '3(c)(iii)'): {'w': 160.0, 'h': 160.0, 'plane': {
+        'style': 'squares', 'dash': '2 2', 'n': (0, 6, 0, 6),
+        'crosses': [(a, b) for a in (0, 1, 2) for b in (4, 5, 6)] + [(3, 3)] + [(a, b) for a in (4, 5, 6) for b in (0, 1, 2)],
+        'pts': [(2, 2), (4, 4)], 'big': 2.0, 'text': [(2.2, 2.2, 'X', {}), (4.2, 4.2, 'Y', {})]}},
+})
+KEPT.update({
+    ('0607_2015ON_42_q15', '15(a)'): 'the candidate\'s own graph of y = 5/(2x - 1) and y = 3 with no window in the question - Dhruv decides (M4)',
+    ('0607_2015ON_42_q15', '15(b)'): 'the candidate\'s own graph of y = log(2^x) and y = 10 with no window in the question - Dhruv decides (M4)',
+    ('0607_2015ON_61_q05', '5(a)'): 'three fitted model curves through the data (colours tell them apart) - Dhruv decides (M4)',
+})
+RD2_GRID_UNSURE += [('0607_2014ON_31_q12', '12(a)'), ('0607_2014ON_61_q11', '11(b)'), ('0607_2014ON_62_q04', '4(a)(i)'),
+                    ('0607_2016MJ_31_q13', '13(a)'), ('0607_2017MJ_33_q13', '13(a)'), ('0607_2017MJ_33_q13', '13(e)(i)'),
+                    ('0607_2017MJ_33_q13', '13(e)(ii)')]
+SPECS.update({      # M4 (after the local rebuild: rows whose labels are read only now)
+    ('0607_2015MJ_31_q14', '14(a)'): dict(NO, f=[('3*2**(0.5*x) - 1', '')], x=(-10, 3), y=(-3, 8), grid=None, xt=[-10, 3],
+                                          yt=[-3, 8], ar=1.3),
+    ('0607_2015MJ_31_q14', '14(d)'): dict(NO, f=[('3*2**(0.5*x) - 1', ''), ('-2*x + 3', '')], x=(-10, 3), y=(-3, 8), grid=None,
+                                          xt=[-10, 3], yt=[-3, 8], ar=1.3),
+    ('0607_2016ON_31_q12', '12(a)(i)'): dict(NO, f=[('6 + x - x*x', '')], x=(-3, 4), y=(-6, 8), grid=None, xt=[-3, 4], yt=[-6, 8],
+                                             ar=1.6),
+    ('0607_2017ON_61_q06', '6(a)(i)'): dict(NO, f=[('math.sin(math.radians(2*x))', '')], x=(0, 360), y=(-1, 1), grid=(30, 0.5),
+                                            xt=[30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330, 360], yt=[-1, -0.5, 0.5, 1],
+                                            xlow=False, ar=4.4),
+})
+RD2_GRID_UNSURE.append(('0607_2017ON_61_q06', '6(a)(i)'))
+KEPT.update({k: 'a sketch of the candidate\'s own investigation model (fitted curve / constants from an earlier answer) - Dhruv decides (M4)'
+             for k in [('0607_2015ON_61_q08', '8(a)'), ('0607_2015ON_63_q07', '7(a)'), ('0607_2015ON_63_q09', '9(c)'),
+                       ('0607_2016MJ_62_q10', '10(c)'), ('0607_2016MJ_62_q11', '11(b)'), ('0607_2016ON_62_q10', '10'),
+                       ('0607_2016ON_63_q05', '5(a)'), ('0607_2017MJ_63_q05', '5(a)(i)')]})
+SPECS[('0607_2016ON_31_q12', '12(b)(i)')] = dict(NO, f=[('6 + x - x*x', ''), ('x + 4', '')], x=(-3, 4), y=(-6, 8), grid=None,
+                                                xt=[-3, 4], yt=[-6, 8], ar=1.6)    # (the line y = x + 4: through the MS's (±1.41, ...))
+SPECS[('0607_2016ON_31_q02', '2(b)')] = dict(SPECS[('0607_2016ON_31_q02', '2(b)')], vector=True)   # (a vector chart)
+for _k in [('0607_2017MJ_32_q03', '3(g)'), ('0607_2017MJ_33_q10', '10(c)'), ('0607_2017MJ_22_q09', '9(a)'), ('0607_2017MJ_43_q09', '9(g)')]:
+    SPECS.pop(_k, None)     # (M4, pattern 333: Venns printed as 1-pt image tiles painted OVER answer dots - the redraw exposed the
+    KEPT[_k] = 'Venn printed as image tiles over hidden answer dots: kept as printed (clear enough) - Dhruv decides (M4)'   # dots)
+# (M4: the rows' labels are read right since pattern 331 - the specs / decisions follow the new labels)
+SPECS[('0607_2015ON_42_q07', '7(a)(i)')] = SPECS.pop(('0607_2015ON_42_q07', '7'))
+SPECS[('0607_2015ON_42_q13', '13(a)(i)')] = SPECS.pop(('0607_2015ON_42_q13', '13'))
+KEPT[('0607_2016ON_62_q10', '10(a)')] = KEPT.pop(('0607_2016ON_62_q10', '10'))

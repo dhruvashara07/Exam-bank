@@ -38,6 +38,15 @@
    "start": "2026-11-27T11:00:44Z",
    "end": "2026-11-27T11:00:48Z",
    "minutes": 0.1
+  },
+  {
+   "id": 46008096059,
+   "name": "Question bank",
+   "branch": "main",
+   "conclusion": null,
+   "start": "2026-11-27T13:33:13Z",
+   "end": "2026-11-27T13:33:18Z",
+   "minutes": 0.1
   }
  ],
  "counts": {},
@@ -89,6 +98,62 @@
    "fix": "MATHS_GLYPHS",
    "found_by": "claude",
    "at": "2026-11-27T13:31:46+00:00"
+  },
+  {
+   "pattern": "330",
+   "kind": "new",
+   "what": "my 321 rule took the 2018+ marking-principles page as a table (pushed code; approved data not rebuilt)",
+   "fix": "needs >= 4 column rules",
+   "found_by": "claude",
+   "at": "2026-11-27T14:52:44+00:00"
+  },
+  {
+   "pattern": "328",
+   "kind": "new",
+   "what": "see ERROR_PATTERNS 328",
+   "fix": "see ERROR_PATTERNS 328",
+   "found_by": "claude",
+   "at": "2026-11-27T15:07:35+00:00"
+  },
+  {
+   "pattern": "329",
+   "kind": "new",
+   "what": "see ERROR_PATTERNS 329",
+   "fix": "see ERROR_PATTERNS 329",
+   "found_by": "claude",
+   "at": "2026-11-27T15:07:35+00:00"
+  },
+  {
+   "pattern": "331",
+   "kind": "new",
+   "what": "see ERROR_PATTERNS 331",
+   "fix": "see ERROR_PATTERNS 331",
+   "found_by": "claude",
+   "at": "2026-11-27T17:08:44+00:00"
+  },
+  {
+   "pattern": "332",
+   "kind": "new",
+   "what": "see ERROR_PATTERNS 332",
+   "fix": "see ERROR_PATTERNS 332",
+   "found_by": "claude",
+   "at": "2026-11-27T17:08:44+00:00"
+  },
+  {
+   "pattern": "333",
+   "kind": "new",
+   "what": "see ERROR_PATTERNS 333",
+   "fix": "see ERROR_PATTERNS 333",
+   "found_by": "claude",
+   "at": "2026-11-27T17:08:44+00:00"
+  },
+  {
+   "pattern": "334",
+   "kind": "new",
+   "what": "see ERROR_PATTERNS 334",
+   "fix": "see ERROR_PATTERNS 334",
+   "found_by": "claude",
+   "at": "2026-11-27T17:08:44+00:00"
   }
  ],
  "tokens": [],
@@ -147,6 +212,66 @@
   },
   {
    "at": "2026-11-27T13:31:46+00:00",
+   "task": "error M4 --kind"
+  },
+  {
+   "at": "2026-11-27T13:33:39+00:00",
+   "task": "gh M4 46008096059"
+  },
+  {
+   "at": "2026-11-27T13:33:39+00:00",
+   "task": "pass 2 running; MS screenshot redraw specs"
+  },
+  {
+   "at": "2026-11-27T14:23:33+00:00",
+   "task": "pass 2 read: marks of papers 5/6 still off"
+  },
+  {
+   "at": "2026-11-27T14:51:36+00:00",
+   "task": "resume: ms blast, then MS pictures"
+  },
+  {
+   "at": "2026-11-27T14:52:44+00:00",
+   "task": "error M4 --kind"
+  },
+  {
+   "at": "2026-11-27T15:07:19+00:00",
+   "task": "local rebuild of all M4 with final code"
+  },
+  {
+   "at": "2026-11-27T15:07:35+00:00",
+   "task": "error M4 --kind"
+  },
+  {
+   "at": "2026-11-27T15:07:35+00:00",
+   "task": "error M4 --kind"
+  },
+  {
+   "at": "2026-11-27T15:57:17+00:00",
+   "task": "local rebuild done; checks"
+  },
+  {
+   "at": "2026-11-27T16:51:49+00:00",
+   "task": "label fixes 331-332; blast E running"
+  },
+  {
+   "at": "2026-11-27T17:08:24+00:00",
+   "task": "reasons statuses + round"
+  },
+  {
+   "at": "2026-11-27T17:08:44+00:00",
+   "task": "error M4 --kind"
+  },
+  {
+   "at": "2026-11-27T17:08:44+00:00",
+   "task": "error M4 --kind"
+  },
+  {
+   "at": "2026-11-27T17:08:44+00:00",
+   "task": "error M4 --kind"
+  },
+  {
+   "at": "2026-11-27T17:08:44+00:00",
    "task": "error M4 --kind"
   }
  ]

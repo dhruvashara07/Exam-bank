@@ -166,6 +166,11 @@ def ink_boxes(page, top, bottom):
     return [b for b in boxes if not b.is_empty or b.width > 0 or b.height > 0]
 
 
+def _maths_page(page):
+    import subjects
+    return subjects.is_maths(subjects.path_syl(page.parent.name or '') or '')
+
+
 def label_tokens(page, top, bottom):
     """Candidate structural labels on a page: ('q', n) / ('l', 'a') / ('r', 'ii'), with y and x."""
     toks = []
@@ -189,6 +194,9 @@ def label_tokens(page, top, bottom):
                 # boundaries() only takes it when it is the next letter of the current question
                 toks.append({'kind': 'l', 'val': v, 'x0': x0, 'y0': y0, 'y1': y1, 'wide': True})
             elif ROMAN_X[0] <= x0 <= ROMAN_X[1] and v in ROMAN:
+                toks.append({'kind': 'r', 'val': v, 'x0': x0, 'y0': y0, 'y1': y1})
+            elif ROMAN_X[1] < x0 <= 122 and v in ROMAN and w.startswith('(') and _maths_page(page):
+                # maths 2015: romans indented under a diagram (2015 MJ 42/43 9(a)(i)-(iii) at x 112-119; M4, pattern 332)
                 toks.append({'kind': 'r', 'val': v, 'x0': x0, 'y0': y0, 'y1': y1})
     toks.sort(key=lambda t: (round(t['y0']), t['x0']))
     return toks

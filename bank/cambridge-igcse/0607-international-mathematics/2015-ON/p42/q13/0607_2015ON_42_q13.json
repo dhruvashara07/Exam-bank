@@ -39,10 +39,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "mark scheme row 13(iii) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -75,7 +73,26 @@
      "text": "On the diagram, sketch the graph of\ny\n=^h, for\nf\nx\n0\nx\n5\n.\n[2]\nG\nG",
      "marks": 2,
      "path": "13(a)(i)",
-     "mark_scheme_on": "13",
+     "mark_scheme": [
+      {
+       "label": "13(a)(i)",
+       "text": "Correct graph",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          14.461000442504883,
+          404.5,
+          580.843017578125,
+          428.4
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -112,7 +129,26 @@
      "text": "Write down the x co-ordinate of the point where the graph crosses the x-axis.\nAnswer(a)(ii) .................................................................. [1]",
      "marks": 1,
      "path": "13(a)(ii)",
-     "mark_scheme_on": "13",
+     "mark_scheme": [
+      {
+       "label": "13(a)(ii)",
+       "text": "3.32 or 3.321 to 3.322",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          14.461000442504883,
+          570.5,
+          580.843017578125,
+          591.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -158,7 +194,26 @@
      "text": "Write down the range of f(x).\nAnswer(a)(iii) .................................................................. [1]",
      "marks": 1,
      "path": "13(a)(iii)",
-     "mark_scheme_on": "13",
+     "mark_scheme": [
+      {
+       "label": "13(a)(iii)",
+       "text": "[f( x)]>−10",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          14.461000442504883,
+          594.9,
+          580.843017578125,
+          616.7
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -317,45 +372,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "13",
-   "text": "",
-   "codes": [
-    "2",
-    "1"
-   ],
-   "segments": [
-    {
-     "page": 6,
-     "bbox": [
-      14.461000442504883,
-      404.5,
-      580.843017578125,
-      591.1
-     ]
-    }
-   ]
-  },
-  {
-   "label": "13(iii)",
-   "text": "[f( x)]>−10",
-   "codes": [
-    "1"
-   ],
-   "segments": [
-    {
-     "page": 6,
-     "bbox": [
-      14.461000442504883,
-      594.9,
-      580.843017578125,
-      616.7
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

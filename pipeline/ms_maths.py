@@ -1007,6 +1007,10 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                     l2 = dict(l_, _g=1); l2['d'] = _map_path(l_['d'], lambda x: x + ox_, lambda y: y + oy_); v['lines'].append(l2)
                 for t_ in gT:
                     t2 = dict(t_, x=round(t_['x'] + ox_, 2), y=round(t_['y'] + oy_, 2), f=fam or 'serif', _g=1); v['text'].append(t2)
+                v['text'] = [t_ for t_ in v['text'] if t_.get('_g') or not re.fullmatch(r'[.\u2026 ]+', t_['t'])
+                             or not (ox_ - 4 <= t_['x'] <= ox_ + gw + 4 and oy_ - 4 <= t_['y'] <= oy_ + max(gh, py1 - py0) + 90)]
+                #   (M4: answer dots the printed picture paints over - 1-pt image tiles of 2017 MJ Venns - are hidden in
+                #    print: never shown over / under our drawing; pattern 333)
                 CTX.setdefault('pic_spans', []).append((py0, py1))
                 bottoms.append(max(oy_ + gh + 3.0, tb or 0))
                 CTX.setdefault('pic_bots', []).append(bottoms[-1])   # (already below the grown picture: never moved again)

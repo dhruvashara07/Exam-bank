@@ -798,7 +798,8 @@ def _old_rows(units, q, L=44.0, M=W - 44.0):
                     nxt_ = f"{qn}({state['l']})({ROM_[ROM_.index(state['r']) + 1]})"
                     if nxt_ in qparts and nxt_ not in used:
                         state['r'] = ROM_[ROM_.index(state['r']) + 1]; label = nxt_
-            relab = MS_RELABEL.get(q['id'].split('_')[1] + '_' + q['id'].split('_')[2], {}).get(label)
+            relab = (MS_RELABEL.get('_'.join(q['id'].split('_')[:3])) or
+                     MS_RELABEL.get(q['id'].split('_')[1] + '_' + q['id'].split('_')[2], {})).get(label)
             if relab:                                   # Cambridge's own numbering slip (ms.MS_RELABEL)
                 label = relab[0]
             if sg['labs']:
@@ -2193,6 +2194,8 @@ def _maths_ruled(uniq):
         xs = MP._cluster([(b[0] + b[2]) / 2 for b in vs])
         cov = {x: sum(b[3] - b[1] for b in vs if abs((b[0] + b[2]) / 2 - x) < 1.6) for x in xs}
         inner = [x for x in xs if 20 < x < u['w'] - 8 and cov[x] > 0.6 * u['h']]
+        if len(inner) == 5 and inner[-1] - inner[0] < u['w'] - 30:   # a table narrower than the unit: its outer borders
+            inner = inner[1:4]                                        # are no inner rules (2014 ON 51-53; M4, pattern 334)
         if len(inner) != 3:
             return None
         e0 = inner[0]

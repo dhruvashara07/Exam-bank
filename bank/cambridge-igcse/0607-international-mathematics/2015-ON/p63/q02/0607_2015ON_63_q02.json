@@ -24,11 +24,8 @@
  "marks": 4,
  "figures": [],
  "review": {
-  "reasons": [
-   "mark scheme row 2(ii) has no matching part in the paper",
-   "mark scheme row 2(iii) has no matching part in the paper"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -59,9 +56,28 @@
       }
      ],
      "text": "What is the minimum number of cameras needed when there is 1 square in each of three rows?\nDraw crosses on the diagram to show the positions of these cameras.\nMinimum =  ......................................................................",
-     "marks": 0,
+     "marks": 1,
      "path": "2(a)(i)",
-     "mark_scheme_on": "2",
+     "mark_scheme": [
+      {
+       "label": "2(a)(i)",
+       "text": "χ\nχ\noe\nχ\nχ\n[Minimum =] 4\nχ",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          15.197999954223633,
+          443.8,
+          580.0769653320312,
+          537.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -102,9 +118,28 @@
       }
      ],
      "text": "Two squares in each of three rows need a minimum of 6 cameras.\nDraw crosses on the diagram to show the positions of these cameras.\nMinimum = 6",
-     "marks": 0,
+     "marks": 1,
      "path": "2(a)(ii)",
-     "mark_scheme_on": "2",
+     "mark_scheme": [
+      {
+       "label": "2(a)(ii)",
+       "text": "χ\nχ\nχ\nχ\nχ\noe\nχ",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          15.197999954223633,
+          547.4,
+          580.0769653320312,
+          636.4
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -145,9 +180,28 @@
       }
      ],
      "text": "Draw crosses on the diagram to show the positions of the minimum number of cameras for 3\nsquares in each of three rows.\nMinimum =  ......................................................................",
-     "marks": 0,
+     "marks": 1,
      "path": "2(a)(iii)",
-     "mark_scheme_on": "2",
+     "mark_scheme": [
+      {
+       "label": "2(a)(iii)",
+       "text": "χ\nχ\nχ\nχ\noe\n[Minimum =8]\nχ\nχ",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          15.197999954223633,
+          641.6,
+          580.0769653320312,
+          733.4
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -223,62 +277,6 @@
   }
  ],
  "type": "structured",
- "mark_scheme": [
-  {
-   "label": "2",
-   "text": "χ\noe\nχ\nχ\n[Minimum =] 4\nχ",
-   "codes": [
-    "1"
-   ],
-   "segments": [
-    {
-     "page": 2,
-     "bbox": [
-      15.197999954223633,
-      447.5,
-      580.0769653320312,
-      537.1
-     ]
-    }
-   ]
-  },
-  {
-   "label": "2(ii)",
-   "text": "χ\nχ\nχ\nχ\nχ\noe\nχ",
-   "codes": [
-    "1"
-   ],
-   "segments": [
-    {
-     "page": 2,
-     "bbox": [
-      15.197999954223633,
-      547.4,
-      580.0769653320312,
-      636.4
-     ]
-    }
-   ]
-  },
-  {
-   "label": "2(iii)",
-   "text": "χ\nχ\nχ\nχ\noe\n[Minimum =8]\nχ\nχ",
-   "codes": [
-    "1"
-   ],
-   "segments": [
-    {
-     "page": 2,
-     "bbox": [
-      15.197999954223633,
-      641.6,
-      580.0769653320312,
-      733.4
-     ]
-    }
-   ]
-  }
- ],
  "syllabus": "0607",
  "subject": "International Mathematics",
  "board": "CAIE",

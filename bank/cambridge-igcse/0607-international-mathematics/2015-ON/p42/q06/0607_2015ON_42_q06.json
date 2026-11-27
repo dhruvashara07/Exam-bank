@@ -39,10 +39,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "no mark scheme for 6(d)(i), 6(d)(ii), 6(d)(iii)"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -232,9 +230,6 @@
      "label": "6(c)",
      "text": "Correct graph",
      "codes": [
-      "3",
-      "1",
-      "2",
       "3"
      ],
      "segments": [
@@ -244,7 +239,7 @@
         14.461000442504883,
         415.9,
         580.843017578125,
-        578.1
+        474.1
        ]
       }
      ]
@@ -315,6 +310,26 @@
      "text": "the median mark,\nAnswer(d)(i) .................................................................. [1]",
      "marks": 1,
      "path": "6(d)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(d)(i)",
+       "text": "46 to 49",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          14.461000442504883,
+          477.4,
+          580.843017578125,
+          498.0
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -360,6 +375,26 @@
      "text": "the interquartile range,\nAnswer(d)(ii) .................................................................. [2]",
      "marks": 2,
      "path": "6(d)(ii)",
+     "mark_scheme": [
+      {
+       "label": "6(d)(ii)",
+       "text": "26 to 30",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          14.461000442504883,
+          501.4,
+          580.843017578125,
+          522.0
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -405,6 +440,26 @@
      "text": "the minimum mark for a candidate to obtain a grade A, given that 15% of students gain a grade A.\nAnswer(d)(iii) .................................................................. [3]",
      "marks": 3,
      "path": "6(d)(iii)",
+     "mark_scheme": [
+      {
+       "label": "6(d)(iii)",
+       "text": "74 to 77",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 3,
+         "bbox": [
+          14.461000442504883,
+          525.3,
+          580.843017578125,
+          578.1
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
