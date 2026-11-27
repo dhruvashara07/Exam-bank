@@ -610,6 +610,10 @@ def _draw_tree(sp, w, h, size=8.0):
             fx = mx - fw - 3                             # right edge just left of the branch's middle, clear of the
             ly = y0 + (y1 - y0) * (fx + fw - x0) / max(1.0, x1 - x0)   # line (Dhruv round 38: the 15/29 sat on its branch)
             fy = ly - 3 - size if upper else ly + 3 + size * 0.75     # the bar's height
+            if 'geom' in tr:                             # (Dhruv round 44: 'above the middle of the edge', as decimals)
+                fx = (x0 + x1) / 2 - fw / 2              # centred over the branch's middle, clear of the line at both
+                ly_ = lambda x: y0 + (y1 - y0) * (x - x0) / max(1.0, x1 - x0)   # ends of the fraction
+                fy = (min(ly_(fx), ly_(fx + fw)) - 3 - size) if upper else (max(ly_(fx), ly_(fx + fw)) + 3 + size * 0.75)
             for t_, yb in ((nu, fy - 1.5), (de, fy + size - 0.5)):
                 T.append({'t': t_, 'x': round(fx + (fw - tw(t_)) / 2, 2), 'y': round(yb, 2), 'w': round(tw(t_), 2), 's': size})
             L.append({'d': f'M{fx:.2f} {fy + 0.5:.2f}H{fx + fw:.2f}V{fy + 1.0:.2f}H{fx:.2f}Z', 'fill': '#000000'})
@@ -1757,5 +1761,7 @@ SPECS[('0607_2021MJ_62_q05', '5(a)(i)')] = {'vector': True, 'table': {   # (Dhru
     'shade': [(0, 0), (1, 0), (2, 0)], 'size': 10.0, 'minw': 40.0, 'pad': 4.0}}
 _p = SPECS[('0607_2023MJ_63_q04', '4')]['plane']           # (Dhruv round 43) the top '2' sat on the line QP: the middle
 _p['text'] = [(0.5, 3.74, t[2], t[3]) if t[2] == '2' and t[1] > 3 else t for t in _p['text']]   # of its triangle
+_p['text'] = [(1.5, -0.55, t[2], t[3]) if t[2] == '3' and t[1] < 0 else t for t in _p['text']]   # (round 44) the bottom-right
+#                                                                    '3' in the middle of its rectangle
 CLOSE_TABLES = {('0607_2025ON_62_q02', '2(d)')}   # (Dhruv round 43: the small table in Partial Marks lost its right border
 #   when the row was read - its rules end on an edge with no line: the line is added there, this row only (ms_maths))

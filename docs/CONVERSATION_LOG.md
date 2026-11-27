@@ -682,3 +682,6 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - 2026-11-27 Round 43 closed (10 ok, 6 wrong). Trees centred, decimals at the middle of each branch like the question, picture
   cells as tall as their drawing; 2021 MJ 62 5(a)(i) redrawn with wider columns (specs now reach plain tables); 2023 MJ 63 area
   number moved; 2025 ON 62 2(d) table border closed for that question only (Dhruv allowed it). Patterns 310-311. Round 44 (8 items).
+- 2026-11-27 Round 44 closed (3 ok, 5 wrong - all small placement: fractions over the branch middle like the decimals, tree
+  space below, one area number). Fixed (pattern 312), carried as recheck items into M4's first round. Dhruv: batch good ->
+  move to the next batch. RD2 closed; next maths batch M4 in a new chat.

@@ -10,7 +10,7 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 | M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 117 | 100.3 | 131.2 | 0.0 | 0.0 | 0.0 | 100.3 | 13 | 28 | 4 | n/a |
 | M3 | 2018-MJ 2018-ON 2020-MJ 2020-ON | 69 | 29.2 | 0.2 | 38.4 | 0.0 | 0.0 | 67.6 | 8 | 15 | 0 | n/a |
 | RD |  |  | 0.0 | 0 | 0.0 | 0.0 | 13.2 | 13.2 |  | 0 | 0 | n/a |
-| RD2 | 2014-MJ 2018-MJ 2018-ON 2019-ON 2020-MJ 2020-ON 2021-FM 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON 2024-FM 2024-MJ 2024-ON 2025-FM 2025-MJ 2025-ON 2026-FM 2026-MJ | 0 | 0.0 | 0 | 0.0 | 0.0 | 89.8 | 89.8 | 16 | 9 | 1 | n/a |
+| RD2 | 2014-MJ 2018-MJ 2018-ON 2019-ON 2020-MJ 2020-ON 2021-FM 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON 2024-FM 2024-MJ 2024-ON 2025-FM 2025-MJ 2025-ON 2026-FM 2026-MJ | 0 | 0.0 | 0 | 0.0 | 0.0 | 89.8 | 89.8 | 16 | 9 | 2 | n/a |
 
 ## Errors per batch (new = first time, repeat = a pattern seen before: the doc or the fix failed)
 
@@ -216,6 +216,7 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - [new] pattern 307: row did not grow under moved text → row ends under lowest text (found by claude)
 - [new] pattern 310: tree not centred, decimals not at branch middle → centre tree, decimals at middle (found by claude)
 - [new] pattern 311: crowded native table → vector table spec reaches plain tables (found by claude)
+- [repeat] pattern 312: fraction labels not at branch middle (310 only did decimals) → all tree probabilities at branch middle (found by claude)
 
 ## Repeats to act on
 
@@ -232,3 +233,4 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - M2: pattern 230 came back: pass 3: my 225 cut an x axis / tree
 - M2: pattern 232 came back: pass 4: my 231 grouping rules too wide (54 collateral)
 - RD2: pattern 309 came back: dot paper partial picture again (275 kept dots, Dhruv wants whole picture)
+- RD2: pattern 312 came back: fraction labels not at branch middle (310 only did decimals)

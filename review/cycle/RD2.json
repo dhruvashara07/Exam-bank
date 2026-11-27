@@ -139,6 +139,14 @@
    "fix": "vector table spec reaches plain tables",
    "found_by": "claude",
    "at": "2026-11-27T04:11:42+00:00"
+  },
+  {
+   "pattern": "312",
+   "kind": "repeat",
+   "what": "fraction labels not at branch middle (310 only did decimals)",
+   "fix": "all tree probabilities at branch middle",
+   "found_by": "claude",
+   "at": "2026-11-27T04:41:26+00:00"
   }
  ],
  "tokens": [],
@@ -261,6 +269,10 @@
   },
   {
    "at": "2026-11-27T04:11:42+00:00",
+   "task": "error RD2 --pattern"
+  },
+  {
+   "at": "2026-11-27T04:41:26+00:00",
    "task": "error RD2 --pattern"
   }
  ]

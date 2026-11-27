@@ -922,3 +922,8 @@ picture (2026 MJ 12 q3, 2015 MJ 11 q1); extra marking points (iii)/(iv) under a 
     redraws a plain table too (the table branch of layout_row; before, only picture cells looked at specs); the row is as tall
     as the drawn table. 2025 ON 62 2(d): a table that lost its right border when read is closed for that row only
     (ms_graphs.CLOSE_TABLES) - the general fix changed 60+ papers. 2023 MJ 63 q4: the top '2' moved off the line QP.
+312. Fractions on a tree not at the branch middle (Dhruv round 44: 'above the middle of the edge, like I said'): pattern 310 moved
+    only decimals. Every probability on a geometry tree - fraction or decimal - is now centred over the middle of an upper branch
+    / under the middle of a lower one, clear of the line at both ends. A tree cell keeps 5 pt under the tree (it touched the
+    bottom edge, 2023 MJ 33). 2023 MJ 63 q4: the bottom-right '3' centred in its rectangle. Lesson: when Dhruv names a rule for one
+    kind of label, apply it to every label of that drawing.

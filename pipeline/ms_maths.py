@@ -995,7 +995,8 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                 gL, gT = ms_graphs.draw(gsp, gw, gh)
                 yb_ = [b_[3] for b_ in (_bbox(l_['d']) for l_ in gL) if b_] + [t_['y'] + 0.3 * t_.get('s', 9) for t_ in gT]
                 if yb_:                                 # (Dhruv round 39) the cell is as tall as the DRAWING: a drawing
-                    gh = max(yb_) + 2                   # smaller than the printed picture left empty space under it, one
+                    gh = max(yb_) + (5.0 if gsp.get('tree') else 2)   # smaller than the printed picture left empty space
+                    #   under it (a tree keeps the same space under it as above it: round 44, 2023 MJ 33 6(b)(i)), one
                     #                                     taller ran out of its cell (round 43, 2023 MJ 32 11(a) tree)
                 ox_, oy_ = ours[c][0] + PAD, py0 + shift
                 if gh > (py1 - py0) + 0.5:              # the drawing is taller than the printed picture: what is under
