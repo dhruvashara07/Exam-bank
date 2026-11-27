@@ -1,0 +1,230 @@
+{
+ "id": "0607_2016ON_53_q04",
+ "number": 4,
+ "segments": [],
+ "text": "",
+ "marks": 12,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      356.0,
+      570.0,
+      742.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 3,
+      "answer_line": "a=  ……",
+      "working_gap_pt": 208.1,
+      "height_pt": 386.5
+     }
+    }
+   ],
+   "text": "4\n(a) When n vertical lines are drawn inside a rectangle the total number of rectangles, T, is\n1\nT\nn\nan\n+,        where a and b are constants.\nb\n2\n=\n+\n2\nFind the value of a and the value of b.\nUse your answers to write down the formula for T.\na=  ..................................................\nb=  ..................................................\nT=  ......................................................................",
+   "marks": 7,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "3\n[a=]\n2\noe\n[b=] 1",
+     "codes": [
+      "3",
+      "2",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        18.719999313354492,
+        100.8,
+        576.5399780273438,
+        192.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> When <i>n</i> vertical lines are drawn inside a rectangle the total number of rectangles, <i>T</i>, is",
+     "text": "When n vertical lines are drawn inside a rectangle the total number of rectangles, T, is"
+    },
+    {
+     "type": "text",
+     "html": "<i>T</i> = \\(\\frac{1}{2}\\) <i>n</i><sup>2</sup> + <i>an</i> + <i>b</i>, where <i>a</i> and <i>b</i> are constants.",
+     "text": "T = (1)/(2) n2 + an + b, where a and b are constants."
+    },
+    {
+     "type": "text",
+     "html": "Find the value of <i>a</i> and the value of <i>b</i>. Use your answers to write down the formula for <i>T</i>.",
+     "text": "Find the value of a and the value of b. Use your answers to write down the formula for T."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "a ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "b ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "T ="
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      93.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 36.0
+     }
+    }
+   ],
+   "text": "Use your formula in part (a) to show that when 7 vertical lines are drawn inside a rectangle, the\nnumber of rectangles is 36.",
+   "marks": 1,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "Substitution of 7 in their formula",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        18.719999313354492,
+        194.2,
+        576.5399780273438,
+        216.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your formula in <b>part (a)</b> to show that when 7 vertical lines are drawn inside a rectangle, the number of rectangles is 36.",
+     "text": "Use your formula in part (a) to show that when 7 vertical lines are drawn inside a rectangle, the number of rectangles is 36."
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      289.9,
+      570.0,
+      474.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 148.8,
+      "height_pt": 184.1
+     }
+    }
+   ],
+   "text": "Calculate how many vertical lines are drawn when there are 231 rectangles.\n...................................................",
+   "marks": 4,
+   "path": "4(c)",
+   "mark_scheme": [
+    {
+     "label": "4(c)",
+     "text": "20",
+     "codes": [
+      "2",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        18.719999313354492,
+        218.1,
+        576.5399780273438,
+        280.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate how many vertical lines are drawn when there are 231 rectangles.",
+     "text": "Calculate how many vertical lines are drawn when there are 231 rectangles."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "4",
+   "text": "",
+   "codes": [],
+   "segments": []
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2016,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 3,
+ "paper_code": "0607/53",
+ "paper_type": "core_investigation",
+ "total_marks": 12,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "marks_source": "mark scheme"
+}

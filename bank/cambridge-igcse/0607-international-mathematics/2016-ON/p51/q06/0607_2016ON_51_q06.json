@@ -1,0 +1,211 @@
+{
+ "id": "0607_2016ON_51_q06",
+ "number": 6,
+ "segments": [],
+ "text": "",
+ "marks": 3,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    67.5,
+    114.69999694824219,
+    529.5999755859375,
+    321.29998779296875
+   ],
+   "id": "0607_2016ON_51_q06a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    68.5,
+    205.6,
+    532.3,
+    666.3
+   ],
+   "id": "0607_2016ON_51_q06b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      484.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 3,
+      "answer_line": null,
+      "working_gap_pt": 249.5,
+      "height_pt": 427.5
+     }
+    }
+   ],
+   "text": "6\n(a) There are nine 7 by 7 squares on a 9 by 9 grid.\nThe diagrams show a 7 by 7 square drawn in two positions on a 9 by 9 grid.\nIn each diagram the same 2 by 2 square is shaded.\nConsider the possible positions of the 7 by 7 square.\nExplain how the shaded 2 by 2 square can be used to calculate the number of 7 by 7 squares on a\n9 by 9 grid.\n...................................................................................................................................................................\n...................................................................................................................................................................\n...................................................................................................................................................................",
+   "marks": 1,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "The upper right corner of the large square can\nbe put on any of the nine points in the 2 by 2\nsquare oe\nor\nUse the 5 surrounding squares and the 4 squares\ninside the 2 by 2 square oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        20.15999984741211,
+        239.3,
+        575.1599731445312,
+        324.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> There are nine 7 by 7 squares on a 9 by 9 grid.",
+     "text": "There are nine 7 by 7 squares on a 9 by 9 grid."
+    },
+    {
+     "type": "text",
+     "html": "The diagrams show a 7 by 7 square drawn in two positions on a 9 by 9 grid. In each diagram the same 2 by 2 square is shaded.",
+     "text": "The diagrams show a 7 by 7 square drawn in two positions on a 9 by 9 grid. In each diagram the same 2 by 2 square is shaded."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2016ON_51_q06a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Consider the possible positions of the 7 by 7 square. Explain how the shaded 2 by 2 square can be used to calculate the number of 7 by 7 squares on a by 9 grid.",
+     "text": "Consider the possible positions of the 7 by 7 square. Explain how the shaded 2 by 2 square can be used to calculate the number of 7 by 7 squares on a by 9 grid."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      669.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 24.5,
+      "height_pt": 612.5
+     }
+    }
+   ],
+   "text": "A square which is bigger than 9 by 9 is drawn on a square grid.\nIt is only possible to draw 25 of these squares on the square grid.\nFind two possible sizes for the square and the grid it is drawn on.\nYou may use the grid below to help you.\nSquare size  ..........  by  ..........   on a   ..........  by  ..........  grid.\nSquare size  ..........  by  ..........   on a   ..........  by  ..........  grid.",
+   "marks": 2,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "Two from:\n10 by 10 on 14 by 14\n11 by 11 on 15 by 15\n12 by 12 on 16 by 16 etc.",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        20.15999984741211,
+        326.5,
+        575.1599731445312,
+        388.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A square which is bigger than 9 by 9 is drawn on a square grid. It is only possible to draw 25 of these squares on the square grid. Find two possible sizes for the square and the grid it is drawn on. You may use the grid below to help you.",
+     "text": "A square which is bigger than 9 by 9 is drawn on a square grid. It is only possible to draw 25 of these squares on the square grid. Find two possible sizes for the square and the grid it is drawn on. You may use the grid below to help you."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Square size",
+     "unit": "grid."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Square size",
+     "unit": "grid."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2016ON_51_q06b_diagram2",
+     "caption": null
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "6",
+   "text": "",
+   "codes": [],
+   "segments": []
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2016,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "marks_source": "mark scheme"
+}

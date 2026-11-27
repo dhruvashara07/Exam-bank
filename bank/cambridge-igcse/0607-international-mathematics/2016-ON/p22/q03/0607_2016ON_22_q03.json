@@ -1,0 +1,195 @@
+{
+ "id": "0607_2016ON_22_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    395.0,
+    570.0,
+    417.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 22.5
+   }
+  }
+ ],
+ "text": "3\nIn a sale, the price of all furniture is reduced by 30%.",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      421.0,
+      570.0,
+      600.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 115.5,
+      "height_pt": 179.0
+     }
+    }
+   ],
+   "text": "Before the sale the price of a chair was $40.\nFind the price of this chair in the sale.\n$ .................................................... [2]",
+   "marks": 2,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "28",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        40.97999954223633,
+        305.3,
+        554.3399658203125,
+        327.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Before the sale the price of a chair was $40. Find the price of this chair in the sale.",
+     "text": "Before the sale the price of a chair was $40. Find the price of this chair in the sale."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "$"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      603.0,
+      570.0,
+      795.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 128.5,
+      "height_pt": 192.0
+     }
+    }
+   ],
+   "text": "In the sale, the price of a table is $140.\nFind the price of this table before the sale.\n$ .................................................... [3]",
+   "marks": 3,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "200",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        40.97999954223633,
+        331.9,
+        554.3399658203125,
+        368.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "In the sale, the price of a table is $140. Find the price of this table <b>before</b> the sale.",
+     "text": "In the sale, the price of a table is $140. Find the price of this table before the sale."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "$"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "3",
+   "text": "",
+   "codes": [],
+   "segments": []
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2016,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 2,
+ "variant": 2,
+ "paper_code": "0607/22",
+ "paper_type": "extended_short_answer",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In a sale, the price of all furniture is reduced by 30%.",
+   "text": "In a sale, the price of all furniture is reduced by 30%."
+  }
+ ]
+}

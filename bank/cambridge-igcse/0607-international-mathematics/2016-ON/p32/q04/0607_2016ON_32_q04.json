@@ -1,0 +1,345 @@
+{
+ "id": "0607_2016ON_32_q04",
+ "number": 4,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    250.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 158.0,
+    "height_pt": 193.0
+   }
+  }
+ ],
+ "text": "4\nHere are the first three patterns in a sequence.\nPattern 1\nPattern 2\nPattern 3\nPattern 4",
+ "marks": 6,
+ "figures": [
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    75.1,
+    88.6,
+    522.2,
+    234.7
+   ],
+   "id": "0607_2016ON_32_q04_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      261.0,
+      570.0,
+      284.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.0
+     }
+    }
+   ],
+   "text": "In the space above, draw Pattern 4.\n[1]",
+   "marks": 1,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "Correct pattern",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        26.15999984741211,
+        593.6,
+        569.1599731445312,
+        615.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "In the space above, draw Pattern 4.",
+     "text": "In the space above, draw Pattern 4."
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      287.0,
+      570.0,
+      404.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 23.5,
+      "height_pt": 117.0
+     }
+    }
+   ],
+   "text": "Complete the table.\nPattern Number\n1\n2\n3\n4\n5\nNumber of squares\n4\n7\n10\n[1]",
+   "marks": 1,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "13, 16",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        26.15999984741211,
+        617.5,
+        569.1599731445312,
+        639.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Pattern Number",
+       "1",
+       "2",
+       "3",
+       "4",
+       "5"
+      ],
+      [
+       "Number of squares",
+       "4",
+       "7",
+       "10",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      407.3,
+      570.0,
+      482.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 11.5,
+      "height_pt": 74.7
+     }
+    }
+   ],
+   "text": "Explain how you can find the number of squares in Pattern 5 without drawing it.\n...................................................................................................................................................................\n............................................................................................................................................................. [1]",
+   "marks": 1,
+   "path": "4(c)",
+   "mark_scheme": [
+    {
+     "label": "4(c)",
+     "text": "+3 oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        26.15999984741211,
+        641.5,
+        569.1599731445312,
+        663.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Explain how you can find the number of squares in Pattern 5 without drawing it.",
+     "text": "Explain how you can find the number of squares in Pattern 5 without drawing it."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      485.3,
+      570.0,
+      638.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 63.5,
+      "height_pt": 152.7
+     }
+    }
+   ],
+   "text": "Tom thinks the formula for the number of squares in Pattern n is  n + 3.\nSarah thinks the formula is 3n + 1.\nIs Tom correct? Is Sarah correct?\nShow clearly how you decide.\n[3]",
+   "marks": 3,
+   "path": "4(d)",
+   "mark_scheme": [
+    {
+     "label": "4(d)",
+     "text": "Sarah, with correct justification",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        26.15999984741211,
+        665.5,
+        569.1599731445312,
+        731.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Tom thinks the formula for the number of squares in Pattern <i>n</i> is <i>n</i> + 3. Sarah thinks the formula is 3<i>n</i> + 1. Is Tom correct? Is Sarah correct? Show clearly how you decide.",
+     "text": "Tom thinks the formula for the number of squares in Pattern n is n + 3. Sarah thinks the formula is 3n + 1. Is Tom correct? Is Sarah correct? Show clearly how you decide."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 63.5
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "4",
+   "text": "",
+   "codes": [],
+   "segments": []
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2016,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 3,
+ "variant": 2,
+ "paper_code": "0607/32",
+ "paper_type": "core_long_answer",
+ "total_marks": 6,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Here are the first three patterns in a sequence.",
+   "text": "Here are the first three patterns in a sequence."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2016ON_32_q04_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "Pattern 1 Pattern 2 Pattern 3 Pattern 4",
+   "text": "Pattern 1 Pattern 2 Pattern 3 Pattern 4"
+  }
+ ]
+}

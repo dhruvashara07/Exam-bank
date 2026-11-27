@@ -1,0 +1,233 @@
+{
+ "id": "0607_2016ON_61_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    109.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 5.6,
+    "height_pt": 52.0
+   }
+  }
+ ],
+ "text": "3\nHere is a formula for the total number of squares, T, on an n by n grid.\nn\nn\n3\n2\nT\ncn\nd\n=\n+\n+\n+\n3\n2",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      109.0,
+      570.0,
+      131.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 22.5
+     }
+    }
+   ],
+   "text": "Find the values of c and d.",
+   "marks": 2,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "d = 0\n1\nc =\n6",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        40.79999923706055,
+        660.7,
+        556.1399536132812,
+        739.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the values of <i>c</i> and <i>d</i>.",
+     "text": "Find the values of c and d."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      356.0,
+      570.0,
+      379.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.0
+     }
+    }
+   ],
+   "text": "Show that your formula gives a total of 385 squares on a 10 by 10 grid.",
+   "marks": 1,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "1\n1\n1\nT =\n10 +\n3\n10 +\n2\n3\n2\n6\n10 leading to 385",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        40.79999923706055,
+        103.1,
+        556.1399536132812,
+        147.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that your formula gives a <b>total</b> of 385 squares on a 10 by 10 grid.",
+     "text": "Show that your formula gives a total of 385 squares on a 10 by 10 grid."
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      473.0,
+      570.0,
+      702.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 167.5,
+      "height_pt": 229.0
+     }
+    }
+   ],
+   "text": "The total number of squares on an n by n grid is 1240.\nFind the value of n.\n......................................................",
+   "marks": 1,
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "15",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        40.79999923706055,
+        162.0,
+        556.1399536132812,
+        186.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The total number of squares on an <i>n</i> by <i>n</i> grid is 1240. Find the value of <i>n</i>.",
+     "text": "The total number of squares on an n by n grid is 1240. Find the value of n."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "3",
+   "text": "",
+   "codes": [],
+   "segments": []
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2016,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Here is a formula for the total number of squares, <i>T</i>, on an <i>n</i> by <i>n</i> grid.",
+   "text": "Here is a formula for the total number of squares, T, on an n by n grid."
+  },
+  {
+   "type": "text",
+   "html": "<i>T</i> = \\(\\frac{n^{3}}{3}\\) + \\(\\frac{n^{2}}{2}\\) + <i>cn</i> + <i>d</i>",
+   "text": "T = (n3)/(3) + (n2)/(2) + cn + d"
+  }
+ ],
+ "marks_source": "mark scheme"
+}

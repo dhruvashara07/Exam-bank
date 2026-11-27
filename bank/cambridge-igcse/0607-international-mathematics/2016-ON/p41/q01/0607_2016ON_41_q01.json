@@ -1,0 +1,347 @@
+{
+ "id": "0607_2016ON_41_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    83.0,
+    570.0,
+    106.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 23.0
+   }
+  }
+ ],
+ "text": "1\nToby takes a journey from Johannesburg to Zurich.",
+ "marks": 9,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      109.0,
+      570.0,
+      275.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 76.5,
+      "height_pt": 166.0
+     }
+    }
+   ],
+   "text": "He changes 2500 rand into Swiss francs (CHF).\n1 Swiss franc = 12.43 rand.\nCalculate the amount Toby receives in Swiss francs.\nGive your answer correct to the nearest Swiss franc.\n.......................................... CHF  [2]",
+   "marks": 2,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "201\n2\nM1 for 2500 ÷ 12.43 (implied by 201.1…)",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        239.9,
+        559.0,
+        262.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "He changes 2500 rand into Swiss francs (CHF). Swiss franc = 12.43 rand. Calculate the amount Toby receives in Swiss francs. Give your answer correct to the nearest Swiss franc.",
+     "text": "He changes 2500 rand into Swiss francs (CHF). Swiss franc = 12.43 rand. Calculate the amount Toby receives in Swiss francs. Give your answer correct to the nearest Swiss franc."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "CHF"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      278.0,
+      570.0,
+      327.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 49.0
+     }
+    }
+   ],
+   "text": "Toby leaves Johannesburg at 19 30 and arrives in Zurich at 06 10 the next morning.\nLocal time in Zurich is the same as local time in Johannesburg.\nThe distance from Johannesburg to Zurich is 8350 km.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        330.0,
+        570.0,
+        457.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 89.6,
+        "height_pt": 127.0
+       }
+      }
+     ],
+     "text": "Calculate the average speed of the journey.\n........................................... km/h  [3]",
+     "marks": 3,
+     "path": "1(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "1(b)(i)",
+       "text": "B1 for 10h 40min oe 10.66..., 10.67, 10 , 640\n783 or 782.5 to 783.3….\n3\nM1 for 8350 ÷ their journey time",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          36.0,
+          265.9,
+          559.0,
+          303.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Calculate the average speed of the journey.",
+       "text": "Calculate the average speed of the journey."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "unit": "km/h"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        460.0,
+        570.0,
+        548.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 24.5,
+        "height_pt": 88.0
+       }
+      }
+     ],
+     "text": "After arriving at 06 10, Toby takes a further 1 hour 55 minutes to reach his office.\nWork out the time he arrives at his office.\n.................................................... [1]",
+     "marks": 1,
+     "path": "1(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "1(b)(ii)",
+       "text": "[0]8 05 oe\n1",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          36.0,
+          305.8,
+          559.0,
+          327.9
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "After arriving at 06 10, Toby takes a further 1 hour 55 minutes to reach his office. Work out the time he arrives at his office.",
+       "text": "After arriving at 06 10, Toby takes a further 1 hour 55 minutes to reach his office. Work out the time he arrives at his office."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        551.0,
+        570.0,
+        782.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 141.5,
+        "height_pt": 231.0
+       }
+      }
+     ],
+     "text": "Later, Toby takes a taxi from his office to a hotel.\nThe taxi fare is made up of a fixed charge of 20 CHF plus 2.40 CHF per kilometre.\nToby paid 36.80 CHF altogether.\nWork out the distance of Toby’s taxi journey.\n.............................................. km  [3]",
+     "marks": 3,
+     "path": "1(b)(iii)",
+     "mark_scheme": [
+      {
+       "label": "1(b)(iii)",
+       "text": "7\n3\nM2 for (36.8 – 20) ÷ 2.4\noe\nor M1 for 20 + 2.4 × distance = 36.8",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          36.0,
+          329.7,
+          559.0,
+          370.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Later, Toby takes a taxi from his office to a hotel. The taxi fare is made up of a fixed charge of 20 CHF plus 2.40 CHF per kilometre. Toby paid 36.80 CHF altogether. Work out the distance of Toby’s taxi journey.",
+       "text": "Later, Toby takes a taxi from his office to a hotel. The taxi fare is made up of a fixed charge of 20 CHF plus 2.40 CHF per kilometre. Toby paid 36.80 CHF altogether. Work out the distance of Toby’s taxi journey."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "unit": "km"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "1(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Toby leaves Johannesburg at 19 30 and arrives in Zurich at 06 10 the next morning. Local time in Zurich is the same as local time in Johannesburg. The distance from Johannesburg to Zurich is 8350 km.",
+     "text": "Toby leaves Johannesburg at 19 30 and arrives in Zurich at 06 10 the next morning. Local time in Zurich is the same as local time in Johannesburg. The distance from Johannesburg to Zurich is 8350 km."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2016,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_long_answer",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Toby takes a journey from Johannesburg to Zurich.",
+   "text": "Toby takes a journey from Johannesburg to Zurich."
+  }
+ ]
+}

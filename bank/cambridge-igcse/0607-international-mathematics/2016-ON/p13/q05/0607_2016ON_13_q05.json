@@ -1,0 +1,200 @@
+{
+ "id": "0607_2016ON_13_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    58.7,
+    570.0,
+    142.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 19.3,
+    "height_pt": 83.3
+   }
+  }
+ ],
+ "text": "5\nThe table shows the number of books borrowed each day from a library during one week.\nDay\nMonday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nNumber of books\n436\n297\n735\n626\n920\n1297",
+ "marks": 2,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      146.1,
+      570.0,
+      195.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 15.6,
+      "height_pt": 49.4
+     }
+    }
+   ],
+   "text": "On which day was the fewest number of books borrowed?\n[1]",
+   "marks": 1,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "Tuesday",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        43.5,
+        427.6,
+        551.8800048828125,
+        449.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On which day was the fewest number of books borrowed?",
+     "text": "On which day was the fewest number of books borrowed?"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      211.8,
+      570.0,
+      248.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 36.7
+     }
+    }
+   ],
+   "text": "Find the range of the number of books borrowed.\n[1]",
+   "marks": 1,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "1000",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        43.5,
+        451.6,
+        551.8800048828125,
+        476.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the range of the number of books borrowed.",
+     "text": "Find the range of the number of books borrowed."
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "5",
+   "text": "",
+   "codes": [],
+   "segments": []
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2016,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 1,
+ "variant": 3,
+ "paper_code": "0607/13",
+ "paper_type": "core_short_answer",
+ "total_marks": 2,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The table shows the number of books borrowed each day from a library during one week.",
+   "text": "The table shows the number of books borrowed each day from a library during one week."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Day",
+     "Monday",
+     "Tuesday",
+     "Wednesday",
+     "Thursday",
+     "Friday",
+     "Saturday"
+    ],
+    [
+     "Number of books",
+     "436",
+     "297",
+     "735",
+     "626",
+     "920",
+     "1297"
+    ]
+   ]
+  }
+ ]
+}

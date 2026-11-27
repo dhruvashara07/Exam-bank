@@ -1,0 +1,259 @@
+{
+ "id": "0607_2016ON_42_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    243.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 16.0,
+    "height_pt": 186.0
+   }
+  }
+ ],
+ "text": "5\nThe age, h, of each of 120 passengers travelling on a train are shown in the table.\nAge (years)\nFrequency\n12\n0 < h 15\n15 < h 20\n18\n20 < h 25\n13\n27\n25 < h 35\n35 < h 50\n22\n50 < h 90\n28",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      244.6,
+      570.0,
+      345.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 63.4,
+      "height_pt": 100.9
+     }
+    }
+   ],
+   "text": "Calculate an estimate of the mean age of a passenger.\n...........................................years [2]",
+   "marks": 2,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "36.7 or 36.68 to 36.69",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        40.7400016784668,
+        268.4,
+        553.3200073242188,
+        328.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate an estimate of the mean age of a passenger.",
+     "text": "Calculate an estimate of the mean age of a passenger."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": "years"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      348.6,
+      570.0,
+      560.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 16.0,
+      "height_pt": 211.9
+     }
+    }
+   ],
+   "text": "Complete the frequency density column in this table.\nAge (years)\nFrequency\nFrequency density\n0 < h 15\n12\n18\n15 < h 20\n20 < h 25\n13\n27\n25 < h 35\n35 < h 50\n22\n50 < h 90\n28\n[3]",
+   "marks": 3,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "0.8, 3.6, 2.6, 2.7, 1.47 or 1.466 to\n1.467, 0.7",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        40.7400016784668,
+        330.3,
+        553.3200073242188,
+        367.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the frequency density column in this table.",
+     "text": "Complete the frequency density column in this table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Age (years)",
+       "Frequency",
+       "Frequency density"
+      ],
+      [
+       "0 &lt; <i>h</i> 15",
+       "12",
+       ""
+      ],
+      [
+       "15 &lt; <i>h</i> 20",
+       "18",
+       ""
+      ],
+      [
+       "20 &lt; <i>h</i> 25",
+       "13",
+       ""
+      ],
+      [
+       "25 &lt; <i>h</i> 35",
+       "27",
+       ""
+      ],
+      [
+       "35 &lt; <i>h</i> 50",
+       "22",
+       ""
+      ],
+      [
+       "50 &lt; <i>h</i> 90",
+       "28",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "5",
+   "text": "",
+   "codes": [],
+   "segments": []
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2016,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_long_answer",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The age, <i>h</i>, of each of 120 passengers travelling on a train are shown in the table.",
+   "text": "The age, h, of each of 120 passengers travelling on a train are shown in the table."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Age (years)",
+     "Frequency"
+    ],
+    [
+     "0 &lt; <i>h</i> 15",
+     "12"
+    ],
+    [
+     "15 &lt; <i>h</i> 20",
+     "18"
+    ],
+    [
+     "20 &lt; <i>h</i> 25",
+     "13"
+    ],
+    [
+     "25 &lt; <i>h</i> 35",
+     "27"
+    ],
+    [
+     "35 &lt; <i>h</i> 50",
+     "22"
+    ],
+    [
+     "50 &lt; <i>h</i> 90",
+     "28"
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,260 @@
+{
+ "id": "0607_2016ON_13_q17",
+ "number": 17,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    58.7,
+    570.0,
+    104.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 12.0,
+    "height_pt": 45.3
+   }
+  }
+ ],
+ "text": "Twenty students in a class each solve a puzzle.\nThe time taken, t minutes, by each student to solve the puzzle is shown in the table.",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      107.0,
+      570.0,
+      312.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 18.2,
+      "height_pt": 205.5
+     }
+    }
+   ],
+   "text": "Complete the table.\nTime (minutes)\nNumber of students\nMidpoint\n0 < t\n2\n1\n2 < t\n4\n6\n4 < t\n6\n6\n6 < t\n8\n6\n8 < t\n10\n1\n[1]\nTotal\n20",
+   "marks": 1,
+   "path": "17(a)",
+   "mark_scheme": [
+    {
+     "label": "17(a)",
+     "text": "1, 3, 5, 7, 9",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        43.5,
+        215.0,
+        551.8800048828125,
+        237.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Time (minutes)",
+       "Number of students",
+       "Midpoint",
+       "",
+       ""
+      ],
+      [
+       "0 &lt; <i>t</i> 2",
+       "1",
+       "",
+       "",
+       ""
+      ],
+      [
+       "2 &lt; <i>t</i> 4",
+       "6",
+       "",
+       "",
+       ""
+      ],
+      [
+       "4 &lt; <i>t</i> 6",
+       "6",
+       "",
+       "",
+       ""
+      ],
+      [
+       "6 &lt; <i>t</i> 8",
+       "6",
+       "",
+       "",
+       ""
+      ],
+      [
+       "8 &lt; <i>t</i> 10",
+       "1",
+       "",
+       "",
+       ""
+      ],
+      [
+       "Total",
+       "20",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      313.7,
+      570.0,
+      415.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 63.7,
+      "height_pt": 101.8
+     }
+    }
+   ],
+   "text": "Find an estimate for the mean time taken to solve the puzzle.\nmin[3]",
+   "marks": 3,
+   "path": "17(b)",
+   "mark_scheme": [
+    {
+     "label": "17(b)",
+     "text": "5 nfww",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        43.5,
+        238.9,
+        551.8800048828125,
+        288.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an estimate for the mean time taken to solve the puzzle.",
+     "text": "Find an estimate for the mean time taken to solve the puzzle."
+    },
+    {
+     "type": "text",
+     "html": "min",
+     "text": "min"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 63.7
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "17",
+   "text": "",
+   "codes": [],
+   "segments": []
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2016,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 1,
+ "variant": 3,
+ "paper_code": "0607/13",
+ "paper_type": "core_short_answer",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Twenty students in a class each solve a puzzle.",
+   "text": "Twenty students in a class each solve a puzzle."
+  },
+  {
+   "type": "text",
+   "html": "The time taken, <i>t</i> minutes, by each student to solve the puzzle is shown in the table.",
+   "text": "The time taken, t minutes, by each student to solve the puzzle is shown in the table."
+  }
+ ]
+}

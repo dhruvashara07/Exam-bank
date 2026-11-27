@@ -1,0 +1,324 @@
+{
+ "id": "0607_2016ON_31_q08",
+ "number": 8,
+ "segments": [
+  {
+   "page": 12,
+   "bbox": [
+    30.0,
+    62.0,
+    570.0,
+    140.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 3.2,
+    "height_pt": 78.0
+   }
+  }
+ ],
+ "text": ".\n8\nOn any evening, the probability that Elise goes to a café is 5\n1 .\nIf Elise goes to a café, the probability that she then goes to the cinema is 3\n4 .\nIf she does not go to a café, the probability that she then goes to the cinema is 7",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 12,
+   "bbox": [
+    165.6,
+    171.7,
+    420.1,
+    355.1
+   ],
+   "id": "0607_2016ON_31_q08a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      140.0,
+      570.0,
+      404.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 17.1,
+      "height_pt": 264.0
+     }
+    }
+   ],
+   "text": "Complete the tree diagram.\n1\ncinema\n3\ncafé\n2\n5\nnot cinema\n..........\ncinema\n..........\n..........\nnot\ncafé\nnot cinema\n..........\n[3]",
+   "marks": 3,
+   "path": "8(a)",
+   "mark_scheme": [
+    {
+     "label": "8(a)",
+     "text": " \n3\ncinema\n2\ncafe\n \n5\nNot cinema\n2\n3\n4\ncinema\n3\n7\n5\nNot cafe\nNot cinema\n3\n7",
+     "codes": [
+      "3",
+      "5",
+      "2",
+      "3",
+      "4",
+      "3",
+      "7",
+      "7"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        28.200000762939453,
+        257.9,
+        567.1799926757812,
+        399.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the tree diagram.",
+     "text": "Complete the tree diagram."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2016ON_31_q08a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      407.4,
+      570.0,
+      528.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 83.6,
+      "height_pt": 120.6
+     }
+    }
+   ],
+   "text": "Find the probability that, on one evening, Elise goes to a café and goes to the cinema.\n.................................................... [2]",
+   "marks": 2,
+   "path": "8(b)",
+   "mark_scheme": [
+    {
+     "label": "8(b)",
+     "text": "2\noe\n15",
+     "codes": [
+      "2",
+      "1",
+      "2",
+      "5",
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        28.200000762939453,
+        405.7,
+        567.1799926757812,
+        441.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the probability that, on one evening, Elise goes to a café <b>and</b> goes to the cinema.",
+     "text": "Find the probability that, on one evening, Elise goes to a café and goes to the cinema."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      531.5,
+      570.0,
+      709.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 140.3,
+      "height_pt": 177.5
+     }
+    }
+   ],
+   "text": "Find the probability that, on one evening, Elise goes to the cinema.\n.................................................... [3]",
+   "marks": 3,
+   "path": "8(c)",
+   "mark_scheme": [
+    {
+     "label": "8(c)",
+     "text": "10\noe\n21",
+     "codes": [
+      "3",
+      "4",
+      "3",
+      "5",
+      "7",
+      "3",
+      "4",
+      "5",
+      "7"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        28.200000762939453,
+        446.3,
+        567.1799926757812,
+        511.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the probability that, on one evening, Elise goes to the cinema.",
+     "text": "Find the probability that, on one evening, Elise goes to the cinema."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "8",
+   "text": "1",
+   "codes": [
+    "3"
+   ],
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      28.200000762939453,
+      248.3,
+      567.1799926757812,
+      257.9
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2016,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 3,
+ "variant": 1,
+ "paper_code": "0607/31",
+ "paper_type": "core_long_answer",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": ".",
+   "text": "."
+  },
+  {
+   "type": "text",
+   "html": "On any evening, the probability that Elise goes to a café is 5",
+   "text": "On any evening, the probability that Elise goes to a café is 5"
+  },
+  {
+   "type": "text",
+   "html": ".",
+   "text": "."
+  },
+  {
+   "type": "text",
+   "html": "If Elise goes to a café, the probability that she then goes to the cinema is 3",
+   "text": "If Elise goes to a café, the probability that she then goes to the cinema is 3"
+  },
+  {
+   "type": "text",
+   "html": ".",
+   "text": "."
+  },
+  {
+   "type": "text",
+   "html": "If she does not go to a café, the probability that she then goes to the cinema is 7",
+   "text": "If she does not go to a café, the probability that she then goes to the cinema is 7"
+  }
+ ]
+}

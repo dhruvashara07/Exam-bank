@@ -1,0 +1,116 @@
+{
+ "id": "0607_2016ON_62_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    499.0,
+    570.0,
+    561.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 10.5,
+    "height_pt": 62.0
+   }
+  }
+ ],
+ "text": "5\nABCD is a square.\nAn equal number of horizontal lines and vertical lines are drawn inside the square.\nShow that the number of rectangles inside ABCD could not be 762 but it could be 782.",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [
+   "mark scheme row 5(b) has no matching part in the paper",
+   "mark scheme row 5(c) has no matching part in the paper"
+  ],
+  "status": "flagged"
+ },
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "5",
+   "text": "2\n1\n\n(n+2)(n+1)\n2\noe seen\n\n\n\n\nValid working to point where 76 gives non-\ninteger solution and 78 gives integer solution",
+   "codes": [
+    "1",
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      40.97999954223633,
+      99.2,
+      554.3399658203125,
+      210.3
+     ]
+    }
+   ]
+  },
+  {
+   "label": "5(b)",
+   "text": "30",
+   "codes": [
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      40.97999954223633,
+      676.1,
+      554.3399658203125,
+      704.5
+     ]
+    }
+   ]
+  },
+  {
+   "label": "5(c)",
+   "text": "A, with 25 (or 24.0[4]) and 27 (or 26.7[4])\nor\nA, with sketch showing two curves (labelled)\nand straight line and A crossing straight line\nbefore B",
+   "codes": [
+    "2"
+   ],
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      40.97999954223633,
+      100.8,
+      554.3399658203125,
+      239.1
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2016,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<i>ABCD</i> is a square. An equal number of horizontal lines and vertical lines are drawn inside the square. Show that the number of rectangles inside <i>ABCD</i> could not be 76<sup>2</sup> but it could be 78<sup>2</sup>.",
+   "text": "ABCD is a square. An equal number of horizontal lines and vertical lines are drawn inside the square. Show that the number of rectangles inside ABCD could not be 762 but it could be 782."
+  }
+ ],
+ "marks_source": "mark scheme"
+}
