@@ -813,6 +813,21 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                 tb += e_
             thin = lambda i: i.kind == 'lines' and min(i.x1 - i.x0, i.y1 - i.y0) < 1.6
             blk = [i for i in blk if not thin(i)] + [i for i in blk if thin(i)]   # rules over the shading (round 30)
+            _ts = __import__('ms_graphs').spec(CTX.get('qid'), label)
+            _ts = next((a_ for a_ in ([_ts] + (_ts or {}).get('alts', []) if _ts else [])
+                        if a_.get('table') and a_.get('vector') and c == a_.get('col', 1)), None)
+            if _ts:   # (Dhruv round 43, 2021 MJ 62
+                from ms_layout import _map_path          # 5(a)(i): 'wider columns, the coordinates look congested') the
+                tL_, tT_ = __import__('ms_graphs').draw(_ts, room, _ts.get('h', by1_ - by0_))   # printed table drawn again
+                th_ = max([b_[3] for b_ in (_bbox(l_['d']) for l_ in tL_) if b_] + [4.0])   # by its spec, as tall as drawn
+                ox_, oy_ = ours[c][0] + PAD, by0_ + shift
+                for l_ in tL_:
+                    v['lines'].append(dict(l_, d=_map_path(l_['d'], lambda x: x + ox_, lambda y: y + oy_)))
+                for t_ in tT_:
+                    v['text'].append(dict(t_, x=round(t_['x'] + ox_, 2), y=round(t_['y'] + oy_, 2), f=t_.get('f') or fam or 'serif'))
+                placed_all.append((by0_, oy_, by1_, oy_ + th_, c))
+                bottoms.append(max(oy_ + th_ + 3.0, tb or 0))
+                continue
             _emit_block(v, blk, bx0, by0_, ours[c][0] + PAD, by0_ + shift, k_)
             placed_all.append((by0_, by0_ + shift, by1_, by0_ + shift + (by1_ - by0_) * k_, c))   # the table counts too
             bottoms.append(max(by0_ + shift + (by1_ - by0_) * k_ + 3.0, tb or 0))
@@ -953,7 +968,8 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                         _darken(l_)
                 bottoms.append(max(by0 + shift + (by1 - by0) * k_ + 3.0, tb or 0))
                 continue
-            if not broken_pg and _is_table(inpic):       # a table: its own lines + text, one rigid block (round 29)
+            if gsp_ is None and not broken_pg and _is_table(inpic):   # a table: its own lines + text, one rigid block (round
+            #   29) - unless a spec draws it again (Dhruv round 43, 2021 MJ 62 5(a)(i): wider columns)
                 bx0, by0 = min(i.x0 for i in inpic), min(i.y0 for i in inpic)
                 bx1, by1 = max(i.x1 for i in inpic), max(i.y1 for i in inpic)
                 room = ours[c][1] - ours[c][0] - 2 * PAD
@@ -978,8 +994,9 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
                 gh = max(gsp.get('h', 110.0), (py1 - py0))
                 gL, gT = ms_graphs.draw(gsp, gw, gh)
                 yb_ = [b_[3] for b_ in (_bbox(l_['d']) for l_ in gL) if b_] + [t_['y'] + 0.3 * t_.get('s', 9) for t_ in gT]
-                if yb_ and max(yb_) + 2 < gh:           # (Dhruv round 39) the cell is as tall as the DRAWING: a drawing
-                    gh = max(yb_) + 2                   # smaller than the printed picture left empty space under it
+                if yb_:                                 # (Dhruv round 39) the cell is as tall as the DRAWING: a drawing
+                    gh = max(yb_) + 2                   # smaller than the printed picture left empty space under it, one
+                    #                                     taller ran out of its cell (round 43, 2023 MJ 32 11(a) tree)
                 ox_, oy_ = ours[c][0] + PAD, py0 + shift
                 if gh > (py1 - py0) + 0.5:              # the drawing is taller than the printed picture: what is under
                     CTX.setdefault('pic_grow', []).append(  # it in the row moves down (Dhruv round 38, 2021 MJ 63 7(d):
@@ -1191,6 +1208,15 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
         for b_ in [_bbox(l_['d'])] for h_ in hz_))]   # (a note band 'Alternative method'): one rule, not two 4 pt apart
     for l_ in v['lines']:                             # (Dhruv round 40, 2025 ON 62 2(e))
         l_.pop('_sr', None)
+    if (CTX.get('qid'), label) in getattr(__import__('ms_graphs'), 'CLOSE_TABLES', ()):   # (round 43) a table whose rules
+        bb_ = [b_ for b_ in (_bbox(l_['d']) for l_ in v['lines']) if b_]                   # end on an edge with no line
+        hz_ = [b_ for b_ in bb_ if b_[3] - b_[1] < 1.3 and 15 < b_[2] - b_[0] < 60]
+        vt_ = [b_ for b_ in bb_ if b_[2] - b_[0] < 1.3 and b_[3] - b_[1] > 0.5]
+        for xe_ in sorted({round(b_[2], 1) for b_ in hz_}):
+            ys_ = [b_ for b_ in hz_ if abs(b_[2] - xe_) < 0.3]
+            if len(ys_) >= 2 and not any(abs(t_[0] - xe_) < 1.5 for t_ in vt_) and any(abs(t_[2] - (b_[0])) < 1.5 for t_ in vt_ for b_ in ys_):
+                y0_, y1_ = min(b_[1] for b_ in ys_), max(b_[3] for b_ in ys_)
+                v['lines'].append({'d': f'M{xe_:.2f} {y0_:.2f}H{xe_ + 0.8:.2f}V{y1_:.2f}H{xe_:.2f}Z', 'fill': '#000000'})
     if fam:                                          # one font for question and mark scheme (Dhruv, round 27)
         for t in v['text']:
             if t.get('f') in ('serif', 'sans'):

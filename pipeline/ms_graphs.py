@@ -614,10 +614,13 @@ def _draw_tree(sp, w, h, size=8.0):
                 T.append({'t': t_, 'x': round(fx + (fw - tw(t_)) / 2, 2), 'y': round(yb, 2), 'w': round(tw(t_), 2), 's': size})
             L.append({'d': f'M{fx:.2f} {fy + 0.5:.2f}H{fx + fw:.2f}V{fy + 1.0:.2f}H{fx:.2f}Z', 'fill': '#000000'})
             return
-        if 'geom' in tr:                                  # (round 40) a decimal like a fraction: right edge left of the
-            fx = mx - tw(prob) - 3                        # branch, the text clear of the line at that x
-            ly = y0 + (y1 - y0) * (fx + tw(prob) - x0) / max(1.0, x1 - x0)
-            T.append({'t': prob, 'x': round(fx, 2), 'y': round(ly - 3 if upper else ly + 3 + size * 0.75, 2), 'w': round(tw(prob), 2), 's': size})
+        if 'geom' in tr:                                  # (Dhruv round 43: 'like 0.8 in the question tree') a decimal sits
+            cx_ = (x0 + x1) / 2; wd_ = tw(prob)           # over the MIDDLE of an upper branch, under the middle of a lower
+            xe_ = cx_ + wd_ / 2 if upper else cx_ + wd_ / 2   # one, clear of the line at the text's end nearest to it
+            xs_ = cx_ - wd_ / 2
+            ly_ = lambda x: y0 + (y1 - y0) * (x - x0) / max(1.0, x1 - x0)
+            yb_ = min(ly_(xs_), ly_(xe_)) - 3 if upper else max(ly_(xs_), ly_(xe_)) + 3 + size * 0.75
+            T.append({'t': prob, 'x': round(xs_, 2), 'y': round(yb_, 2), 'w': round(wd_, 2), 's': size})
             return
         if upper:
             T.append({'t': prob, 'x': round(mx - tw(prob) - 1, 2), 'y': round(my - 1.5, 2), 'w': round(tw(prob), 2), 's': size})
@@ -647,6 +650,17 @@ def _draw_tree(sp, w, h, size=8.0):
             ye = y2 + (-1 if j == 0 else 1) * d2
             br(f1, y2, e2, ye, p2, j == 0)
             txt(l2, e2 + 3, ye)
+    if 'geom' in tr:                           # (Dhruv round 43, 2019 ON 31 12(a): 'close to the upper edge, centre it
+        from ms_maths import _bbox             #  vertically and horizontally') the whole tree centred left-right in the
+        from ms_layout import _map_path        #  cell, the same small space above it as the cell keeps under it
+        bx = [b_ for b_ in (_bbox(l_['d']) for l_ in L) if b_]
+        x0_ = min([b_[0] for b_ in bx] + [t_['x'] for t_ in T]); x1_ = max([b_[2] for b_ in bx] + [t_['x'] + t_['w'] for t_ in T])
+        y0_ = min([b_[1] for b_ in bx] + [t_['y'] - 0.75 * t_['s'] for t_ in T])
+        dx_, dy_ = max(0.0, (w - (x1_ - x0_)) / 2) - x0_, 5.0 - y0_
+        for l_ in L:
+            l_['d'] = _map_path(l_['d'], lambda x: x + dx_, lambda y: y + dy_)
+        for t_ in T:
+            t_['x'] = round(t_['x'] + dx_, 2); t_['y'] = round(t_['y'] + dy_, 2)
     return L, T
 
 
@@ -1735,3 +1749,13 @@ _p['text'] = [t if len(t) > 3 else (t[0], t[1], t[2], {'b': True}) for t in _p['
 SPECS[('0607_2025ON_62_q02', '2(d)')] = {'alts': [dict(a_, h=40.0) for a_ in SPECS[('0607_2025ON_62_q02', '2(d)')]['alts']]}
 #   (Dhruv round 40: '2(d) layout messed up') the two small sketches at their PRINTED height: drawn 110 pt tall they grew
 #   the row and pushed the text under them down (see ERROR_PATTERNS 278)
+_CK = '✓'
+SPECS[('0607_2021MJ_62_q05', '5(a)(i)')] = {'vector': True, 'table': {   # (Dhruv round 43: 'increase width of columns so the
+    'rows': [['(1, 0)', '(–1, 1)', '(–1, 2)', '(2, –2)', '(2, 2)', '(0, –3)'],   # coordinates do not look congested')
+             ['~' + _CK, _CK, '', _CK, '', _CK],
+             ['', '', _CK, '', _CK, '']],
+    'shade': [(0, 0), (1, 0), (2, 0)], 'size': 10.0, 'minw': 40.0, 'pad': 4.0}}
+_p = SPECS[('0607_2023MJ_63_q04', '4')]['plane']           # (Dhruv round 43) the top '2' sat on the line QP: the middle
+_p['text'] = [(0.5, 3.74, t[2], t[3]) if t[2] == '2' and t[1] > 3 else t for t in _p['text']]   # of its triangle
+CLOSE_TABLES = {('0607_2025ON_62_q02', '2(d)')}   # (Dhruv round 43: the small table in Partial Marks lost its right border
+#   when the row was read - its rules end on an edge with no line: the line is added there, this row only (ms_maths))

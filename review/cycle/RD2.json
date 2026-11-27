@@ -123,6 +123,22 @@
    "fix": "row ends under lowest text",
    "found_by": "claude",
    "at": "2026-11-26T18:59:11+00:00"
+  },
+  {
+   "pattern": "310",
+   "kind": "new",
+   "what": "tree not centred, decimals not at branch middle",
+   "fix": "centre tree, decimals at middle",
+   "found_by": "claude",
+   "at": "2026-11-27T04:11:42+00:00"
+  },
+  {
+   "pattern": "311",
+   "kind": "new",
+   "what": "crowded native table",
+   "fix": "vector table spec reaches plain tables",
+   "found_by": "claude",
+   "at": "2026-11-27T04:11:42+00:00"
   }
  ],
  "tokens": [],
@@ -237,6 +253,14 @@
   },
   {
    "at": "2026-11-26T18:59:11+00:00",
+   "task": "error RD2 --pattern"
+  },
+  {
+   "at": "2026-11-27T04:11:42+00:00",
+   "task": "error RD2 --pattern"
+  },
+  {
+   "at": "2026-11-27T04:11:42+00:00",
    "task": "error RD2 --pattern"
   }
  ]

@@ -12,7 +12,7 @@ Read this first in every session. Update it before ending a session.
   nothing tracked under 0625/0607 changed, maths ms_layout byte-identical on 192 questions, ms_rebuild list = untouched baseline.
 - Round 41 (chemistry pilot, 7 items: 3 new rules, 3 calibration, 1 decision - faint MS structure pictures redraw yes/no) on
   Dhruv's OWN-account review page https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e (this chat runs in his own account; round 34
-  dropped from it). Maths round 43 is on the shared-account page and still open (round 40 closed 2026-11-26).
+  dropped from it). Maths round 44 is on the shared-account page and still open (round 43 closed 2026-11-27).
 - Known C0 items (not in the round, ERROR_PATTERNS 'Known (C0...)'): 2026 MJ 23 q36 MCQ option pictures cut over two rows
   (paper NOT to approve until fixed); options-table pictures holding question text (2026 MJ 12 q3, 2015 MJ 11 q1); practical
   marking points (iii)/(iv) under a split part (2026 MJ 51 q2, 52 q1, 52 q2); Cambridge label slips (2024 MJ 33 q2, 52 q1, 32 q6);
@@ -29,7 +29,7 @@ Read this first in every session. Update it before ending a session.
   C0 APPROVED (56 papers). Pilot done.
 - NEXT: (1) C1 (CHEM_PLAN 6) in a new chat; first add the Marks-column sum check (ERROR_PATTERNS 295) to chemistry pass 1
   (as a hint: Guidance rows give false hits).
-  (2) Maths round 43 (shared account) is still open - see the maths NEXT below.
+  (2) Maths round 44 (shared account) is still open - see the maths NEXT below.
 
 ## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md
 - 2026-11-18: CHEM stored: 1599 of 1600 PDFs in Releases (only chemistry_0652_to_0620_mapping.pdf, not a Cambridge name,
@@ -53,10 +53,9 @@ Read this first in every session. Update it before ending a session.
   2 pies, 2 mappings, 3 sketches), 1 kept (2025 FM 62 10(a), Dhruv decides). maths_check picture_checks: 0 left. One local
   rebuild (ms_rebuild, 105 questions written after the groups; all redraws looked at side by side); golden 0, nothing under
   0625; approvals unchanged (hash = cut + marks). Round 39 published (10 redraws + 5 calibration + 1 decision).
-- MATHS NEXT: (1) Round 43 (Dhruv): read feedback_r43 on the review page (round 40 fixes, every MS tree like the question's tree,
-  whole dot-paper pictures, rows that cut their last line). Fix what is wrong as a class, ms_rebuild + grep 'failed', golden 0, close
-  and drop the round, docs, push with pipeline/push.sh. (2) Open small items: 2025 ON 62 2(d) table right border, 2022 ON 51 5(a)
-  empty grid not shown (ERROR_PATTERNS 308/309).
+- MATHS NEXT: (1) Round 44 (Dhruv): read feedback_r44 on the review page (round 43 fixes: trees centred with decimals at the
+  middle of the branch, wider 5(a)(i) table, area number moved, 2(d) table border). Fix what is wrong as a class, ms_rebuild +
+  grep 'failed', golden 0, close and drop the round, docs, push with pipeline/push.sh. (2) Open: 2022 ON 51 5(a) empty grid not shown.
 - 2026-11-24: ROUND 36 closed (7 ok, 1 wrong: no function label on the redrawn 2019 ON 61 graph - removed). M3 APPROVED:
   62 of 69 papers + re-approved 2019 ON 43, 2021 ON 42, 2022 MJ 31, 2022 MJ 42 (their part marks were corrected); 7 M3
   papers kept pending for the known open MS pictures. Rounds 35-36 removed from the review page.

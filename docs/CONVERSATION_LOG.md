@@ -679,3 +679,6 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   still had other angles). All 7 trees now measured from the question (tree_geom.py); area numbers bold (2023 MJ 63 q4); 5(c)
   overflow explained and fixed as a class (8 more rows fixed); 2025 ON 62 2(d)/2(e) layout (sketch size, sub-row rules); dot paper
   always one whole picture per patch (4 papers rebuilt). Patterns 306-309. Round 43 published (16 items).
+- 2026-11-27 Round 43 closed (10 ok, 6 wrong). Trees centred, decimals at the middle of each branch like the question, picture
+  cells as tall as their drawing; 2021 MJ 62 5(a)(i) redrawn with wider columns (specs now reach plain tables); 2023 MJ 63 area
+  number moved; 2025 ON 62 2(d) table border closed for that question only (Dhruv allowed it). Patterns 310-311. Round 44 (8 items).

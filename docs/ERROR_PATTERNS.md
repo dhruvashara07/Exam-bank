@@ -914,3 +914,11 @@ picture (2026 MJ 12 q3, 2015 MJ 11 q1); extra marking points (iii)/(iv) under a 
     cover >= 80 % of the dots (house-of-cards patterns 2024 ON 51/61 unchanged). Dots printed twice counted once. fig_blast: 2025 FM
     52 q2, 2021 MJ 52 q5, 2022 ON 51 q1/q2/q4/q5/q6, 2022 ON 61 q2/q3/q4 - all looked at, all whole now; rebuilt with run.py.
     Open: 2022 ON 51 5(a)'s empty grid is not shown (was missing before too).
+310. Tree placed against the top of its cell / decimals not at the branch middle (Dhruv round 43, 2019 ON 31, 2023 MJ 32/33):
+    every geometry tree is centred in its cell (same space above as the cell keeps below, centred left-right), and a decimal
+    sits over the MIDDLE of an upper branch / under the middle of a lower one, clear of the line - like 0.8 in the question.
+    A picture cell is now always as tall as its drawing (a tree's last label ran out of its cell; 5 tables gained ~1 pt).
+311. Native MS table too crowded (Dhruv round 43, 2021 MJ 62 5(a)(i) coordinates): a 'vector' table spec in ms_graphs now
+    redraws a plain table too (the table branch of layout_row; before, only picture cells looked at specs); the row is as tall
+    as the drawn table. 2025 ON 62 2(d): a table that lost its right border when read is closed for that row only
+    (ms_graphs.CLOSE_TABLES) - the general fix changed 60+ papers. 2023 MJ 63 q4: the top '2' moved off the line QP.

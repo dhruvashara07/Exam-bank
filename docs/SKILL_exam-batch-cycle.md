@@ -117,7 +117,8 @@ MATHS_PLAN.md if the plan changed; docs/NEXT_CHAT.md prompt; `pipeline/push.sh`;
   2026-11-24 (pattern 264); in a new batch redraw them in the batch itself. After every SPECS edit: ms_rebuild.py <qids> | grep failed.
   Graph redraws copy the PRINTED screenshot's grid, aspect and tick size (ms_graphs.RD2_LOOK, measured; no grid if the original has none);
   where the grid cannot be counted list it in RD2_GRID_UNSURE and ask Dhruv (pattern 274). Dot paper: each patch with its shapes is ONE
-  whole picture, never part of one (pattern 309). Every MS tree takes the question tree's geometry: pipeline/tree_geom.py (pattern 306).
+  whole picture, never part of one (pattern 309). Every MS tree takes the question tree's geometry: pipeline/tree_geom.py (pattern 306), centred in its cell, decimals
+  at the middle of the branch (310). A crowded printed table: a 'vector' table spec redraws it (311).
 
 ## M3 additions (2026-11-23)
 - Blast before every push: figure rules (extract.diagrams, store.fit_crop) -> `pipeline/fig_blast.py` (old git worktree vs
