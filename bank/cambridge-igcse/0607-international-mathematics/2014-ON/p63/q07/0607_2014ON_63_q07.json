@@ -1,0 +1,236 @@
+{
+ "id": "0607_2014ON_63_q07",
+ "number": 7,
+ "segments": [
+  {
+   "page": 12,
+   "bbox": [
+    30.0,
+    61.0,
+    570.0,
+    330.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 24.9,
+    "height_pt": 269.5
+   }
+  }
+ ],
+ "text": "A third plane, Z, is available to assist with the mission.\n5\nThis plane must also be back at the starting airport in less than 24 hours.\nThe maximum loads, flight times and total cost for each plane are shown in the table.\nMaximum number\nMaximum mass of\nMaximum return\nCost for return\nPlane\nof people per flight\nequipment (tonnes)\nflight time (hours)\nflight ($ thousand)\nX\n5\n10\n3\n40\nY\n7\n20\n4\n65\nZ\n4\n8\n2\n50\nLet\nx be the number of return flights made by plane X,\ny be the number of return flights made by plane Y,\nz be the number of return flights made by plane Z.\nand\nThis rescue mission is to be modelled by six inequalities.",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      336.6,
+      570.0,
+      543.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 7,
+      "answer_line": null,
+      "working_gap_pt": 27.4,
+      "height_pt": 206.9
+     }
+    }
+   ],
+   "text": "Find the six inequalities and an expression for the cost in terms of x, y and z.\nInequalities .............................................\n.............................................\n.............................................\n.............................................\n.............................................\n.............................................\nCost ..............................................",
+   "marks": 2,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "5x+7y+4z>35\n2\n10x+20y +8z>80\noe\n3x+4y +2z<24\nFT their x and y from 1(b)\n0< x<7\n0< y<5\n0< z<11\nB1 for any 5 correct\n40x+65y +50z",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        36.0,
+        78.0,
+        559.0,
+        187.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the six inequalities and an expression for the cost in terms of x, y and z.",
+     "text": "Find the six inequalities and an expression for the cost in terms of x, y and z."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Inequalities"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Cost"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 5
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      551.7,
+      570.0,
+      619.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 14.7,
+      "height_pt": 67.3
+     }
+    }
+   ],
+   "text": "Explain why the method of solution used in question 2 is not appropriate for this model.\n....................................................................................................................................................................\n....................................................................................................................................................................",
+   "marks": 2,
+   "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "1\n2 not 3 variables\ne.g. [The graph used in part 2 is] 2\nAll statements must be valid\n[dimensional; the problem is now] 3\n[dimensional]. oe www\nCommunication in 2(c)\n1",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        36.0,
+        204.5,
+        559.0,
+        283.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Explain why the method of solution used in question 2 is not appropriate for this model.",
+     "text": "Explain why the method of solution used in question 2 is not appropriate for this model."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2014,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "A third plane, Z, is available to assist with the mission. This plane must also be back at the starting airport in less than 24 hours. The maximum loads, flight times and total cost for each plane are shown in the table.",
+   "text": "A third plane, Z, is available to assist with the mission. This plane must also be back at the starting airport in less than 24 hours. The maximum loads, flight times and total cost for each plane are shown in the table."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Plane",
+     "Maximum number of people per flight",
+     "Maximum mass of equipment (tonnes)",
+     "Maximum return flight time (hours)",
+     "Cost for return flight ($ thousand)"
+    ],
+    [
+     "X",
+     "5",
+     "10",
+     "3",
+     "40"
+    ],
+    [
+     "Y",
+     "7",
+     "20",
+     "4",
+     "65"
+    ],
+    [
+     "Z",
+     "4",
+     "8",
+     "2",
+     "50"
+    ]
+   ]
+  },
+  {
+   "type": "text",
+   "html": "Let x be the number of return flights made by plane X,",
+   "text": "Let x be the number of return flights made by plane X,"
+  },
+  {
+   "type": "text",
+   "html": "y be the number of return flights made by plane Y,",
+   "text": "y be the number of return flights made by plane Y,"
+  },
+  {
+   "type": "text",
+   "html": "and z be the number of return flights made by plane Z.",
+   "text": "and z be the number of return flights made by plane Z."
+  },
+  {
+   "type": "text",
+   "html": "This rescue mission is to be modelled by six inequalities.",
+   "text": "This rescue mission is to be modelled by six inequalities."
+  }
+ ],
+ "marks_source": "mark scheme"
+}

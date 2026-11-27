@@ -1,0 +1,433 @@
+{
+ "id": "0607_2014ON_62_q01",
+ "number": 1,
+ "segments": [],
+ "text": "",
+ "marks": 7,
+ "figures": [
+  {
+   "caption": null,
+   "page": 2,
+   "bbox": [
+    222.4,
+    366.3,
+    374.1,
+    510.5
+   ],
+   "id": "0607_2014ON_62_q01a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 3,
+   "bbox": [
+    109.4000015258789,
+    99.80000305175781,
+    487.8999938964844,
+    215.60000610351562
+   ],
+   "id": "0607_2014ON_62_q01b_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  },
+  {
+   "caption": null,
+   "page": 3,
+   "bbox": [
+    123.4000015258789,
+    265.1000061035156,
+    473.5,
+    494.29998779296875
+   ],
+   "id": "0607_2014ON_62_q01c_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  },
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    109.4,
+    87.4,
+    416.6,
+    244.7
+   ],
+   "id": "0607_2014ON_62_q01di_diagram4",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(d)(i)"
+  },
+  {
+   "caption": null,
+   "page": 4,
+   "bbox": [
+    109.4000015258789,
+    307.79998779296875,
+    416.6000061035156,
+    669.7999877929688
+   ],
+   "id": "0607_2014ON_62_q01dii_diagram5",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(d)(ii)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      352.1,
+      570.0,
+      588.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 45.2,
+      "height_pt": 235.9
+     }
+    }
+   ],
+   "text": "1\n(a)\nE\nD\nC\nFor this grid, write down the taxicab distance CD and the taxicab distance DE.\nTaxicab distance CD  .............................................\nTaxicab distance DE  .............................................",
+   "marks": 2,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "[CD =] 3\n1\n[DE =] 4\n1",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        103.6,
+        559.0,
+        136.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "figure",
+     "id": "0607_2014ON_62_q01a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "For this grid, write down the taxicab distance CD and the taxicab distance DE.",
+     "text": "For this grid, write down the taxicab distance CD and the taxicab distance DE."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Taxicab distance CD"
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Taxicab distance DE"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      61.0,
+      570.0,
+      219.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 45.3,
+      "height_pt": 158.5
+     }
+    }
+   ],
+   "text": "On the grids below, show the three possible shortest routes from C to D.\nRemember, you must only go along gridlines.\nD\nD\nD\nC\nC\nC",
+   "marks": 1,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "For 3 correct routes\n1",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        140.2,
+        559.0,
+        160.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the grids below, show the three possible shortest routes from C to D. Remember, you must only go along gridlines.",
+     "text": "On the grids below, show the three possible shortest routes from C to D. Remember, you must only go along gridlines."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2014ON_62_q01b_diagram2",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 45.3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      225.6,
+      570.0,
+      498.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 102.4,
+      "height_pt": 272.4
+     }
+    }
+   ],
+   "text": "On the grids below, show all of the possible shortest routes from D to E.\nDraw one route on each grid.\nE\nE\nD\nD\nE\nE\nD\nD",
+   "marks": 2,
+   "path": "1(c)",
+   "mark_scheme": [
+    {
+     "label": "1(c)",
+     "text": "For 4 correct routes\n2\nB1 for 3 correct",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        36.0,
+        164.1,
+        559.0,
+        184.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the grids below, show all of the possible shortest routes from D to E. Draw one route on each grid.",
+     "text": "On the grids below, show all of the possible shortest routes from D to E. Draw one route on each grid."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2014ON_62_q01c_diagram3",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 102.4
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        61.0,
+        570.0,
+        248.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 3.6,
+        "height_pt": 187.5
+       }
+      }
+     ],
+     "text": "On the grid below, plot two points with taxicab distance equal to 5 and only one possible shortest\nroute between them.",
+     "marks": 1,
+     "path": "1(d)(i)",
+     "mark_scheme": [
+      {
+       "label": "1(d)(i)",
+       "text": "1\nCould be vertical",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          36.0,
+          188.1,
+          559.0,
+          208.3
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "On the grid below, plot two points with taxicab distance equal to 5 and only one possible shortest",
+       "text": "On the grid below, plot two points with taxicab distance equal to 5 and only one possible shortest"
+      },
+      {
+       "type": "text",
+       "html": "route between them.",
+       "text": "route between them."
+      },
+      {
+       "type": "figure",
+       "id": "0607_2014ON_62_q01di_diagram4",
+       "caption": null
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        30.0,
+        254.6,
+        570.0,
+        673.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 195.6,
+        "height_pt": 418.9
+       }
+      }
+     ],
+     "text": "On the answer grid below, plot two points with taxicab distance not equal to 6 and exactly six\npossible shortest routes between them.\nYou may use the first grid for your working.\nWorking grid\nAnswer grid",
+     "marks": 1,
+     "path": "1(d)(ii)",
+     "mark_scheme": [
+      {
+       "label": "1(d)(ii)",
+       "text": "1\nIf answer grid blank, mark working grid\n– must have only 2 correctly placed dots\nor",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 2,
+         "bbox": [
+          36.0,
+          257.1,
+          559.0,
+          356.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "On the answer grid below, plot two points with taxicab distance not equal to 6 and exactly six possible shortest routes between them. You may use the first grid for your working.",
+       "text": "On the answer grid below, plot two points with taxicab distance not equal to 6 and exactly six possible shortest routes between them. You may use the first grid for your working."
+      },
+      {
+       "type": "figure",
+       "id": "0607_2014ON_62_q01dii_diagram5",
+       "caption": null
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 195.6
+      }
+     ]
+    }
+   ],
+   "path": "1(d)"
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2014,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "marks_source": "mark scheme"
+}

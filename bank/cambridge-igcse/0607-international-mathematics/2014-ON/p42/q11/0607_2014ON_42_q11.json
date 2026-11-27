@@ -1,0 +1,462 @@
+{
+ "id": "0607_2014ON_42_q11",
+ "number": 11,
+ "segments": [],
+ "text": "",
+ "marks": 10,
+ "figures": [
+  {
+   "caption": null,
+   "page": 18,
+   "bbox": [
+    139.2,
+    191.0,
+    457.5,
+    392.5
+   ],
+   "id": "0607_2014ON_42_q11b_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  },
+  {
+   "caption": null,
+   "page": 19,
+   "bbox": [
+    198.8,
+    153.5,
+    398.3,
+    351.8
+   ],
+   "id": "0607_2014ON_42_q11cii_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)(ii)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 18,
+     "bbox": [
+      30.0,
+      61.5,
+      570.0,
+      171.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 53.3,
+      "height_pt": 110.0
+     }
+    }
+   ],
+   "text": "f(x) = 2x + 1\nFind f(f(2)) .\nAnswer(a)\n[2]",
+   "marks": 2,
+   "path": "11(a)",
+   "mark_scheme": [
+    {
+     "label": "11(a)",
+     "text": "11\nB1 for [f(2) =] 5\n2",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 7,
+       "bbox": [
+        36.0,
+        221.7,
+        559.0,
+        241.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "f(x) = 2x + 1",
+     "text": "f(x) = 2x + 1"
+    },
+    {
+     "type": "text",
+     "html": "Find f(f(2)) .",
+     "text": "Find f(f(2)) ."
+    },
+    {
+     "type": "text",
+     "html": "Answer(a)",
+     "text": "Answer(a)"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 53.3
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 18,
+     "bbox": [
+      30.0,
+      177.9,
+      570.0,
+      425.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 20.7,
+      "height_pt": 247.1
+     }
+    }
+   ],
+   "text": "y\n3\n2\n1\nx\n0\n–5\n–4\n–3\n–2\n–1\n1\n2\n3\n4\n5\n–1\n–2\n–3\nThe diagram shows the graph of   y = g(x) .",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 18,
+       "bbox": [
+        30.0,
+        431.4,
+        570.0,
+        450.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 3.6,
+        "height_pt": 18.6
+       }
+      }
+     ],
+     "text": "On the same diagram, sketch the graph of   y = g(x + 1).\n[2]",
+     "marks": 2,
+     "path": "11(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "11(b)(i)",
+       "text": "Curve translated one to left\nB1 for any other translation parallel to\n2\nx-axis",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          36.0,
+          245.7,
+          559.0,
+          278.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "On the same diagram, sketch the graph of y = g(x + 1).",
+       "text": "On the same diagram, sketch the graph of y = g(x + 1)."
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 18,
+       "bbox": [
+        30.0,
+        469.4,
+        570.0,
+        556.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 45.6,
+        "height_pt": 87.1
+       }
+      }
+     ],
+     "text": "Describe fully the single transformation that maps the graph of  y = g(x)\nonto the graph of y = g(x + 1).\n[2]",
+     "marks": 2,
+     "path": "11(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "11(b)(ii)",
+       "text": "Translation\n1\nMarks independent\n−1\n\n\n1\n\n\n0\n\n",
+       "codes": [
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          36.0,
+          282.3,
+          559.0,
+          348.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Describe fully the single transformation that maps the graph of y = g(x) onto the graph of y = g(x + 1).",
+       "text": "Describe fully the single transformation that maps the graph of y = g(x) onto the graph of y = g(x + 1)."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 45.6
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    }
+   ],
+   "path": "11(b)",
+   "content": [
+    {
+     "type": "figure",
+     "id": "0607_2014ON_42_q11b_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "The diagram shows the graph of y = g(x) .",
+     "text": "The diagram shows the graph of y = g(x) ."
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 19,
+     "bbox": [
+      30.0,
+      61.5,
+      570.0,
+      80.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 0.6,
+      "height_pt": 18.5
+     }
+    }
+   ],
+   "text": "h(x) = x3",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 19,
+       "bbox": [
+        30.0,
+        86.8,
+        570.0,
+        133.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 15.4,
+        "height_pt": 46.7
+       }
+      }
+     ],
+     "text": "Find h–1(x).\nAnswer(c)(i)\n[1]",
+     "marks": 1,
+     "path": "11(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "11(c)(i)",
+       "text": "1\n3\nx or x\n3\n1",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          36.0,
+          354.4,
+          559.0,
+          378.4
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find h<sup>–1</sup>(x).",
+       "text": "Find h–1(x)."
+      },
+      {
+       "type": "text",
+       "html": "Answer(c)(i)",
+       "text": "Answer(c)(i)"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 19,
+       "bbox": [
+        30.0,
+        139.9,
+        570.0,
+        517.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 47.0,
+        "height_pt": 377.1
+       }
+      }
+     ],
+     "text": "y\n1\nx\n0\n–1\n1\n–1\nThe diagram shows the graph of   y = h(x) .\n(a) On the same diagram, sketch the graph of   y = h–1(x).\n[1]\n(b) Describe fully the single transformation that maps the graph of  y = h(x)\nonto the graph of  y =  h–1(x).\n[2]",
+     "marks": 3,
+     "path": "11(c)(ii)",
+     "mark_scheme": [
+      {
+       "label": "11(c)(ii)",
+       "text": "Correct curve\n1\nReflection\n1\ny = x\n1",
+       "codes": [
+        "1",
+        "1",
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 7,
+         "bbox": [
+          36.0,
+          383.7,
+          559.0,
+          446.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "figure",
+       "id": "0607_2014ON_42_q11cii_diagram2",
+       "caption": null
+      },
+      {
+       "type": "text",
+       "html": "The diagram shows the graph of y = h(x) .",
+       "text": "The diagram shows the graph of y = h(x) ."
+      },
+      {
+       "type": "text",
+       "html": "On the same diagram, sketch the graph of y = h<sup>–1</sup>(x).",
+       "text": "On the same diagram, sketch the graph of y = h–1(x)."
+      },
+      {
+       "type": "text",
+       "html": "Describe fully the single transformation that maps the graph of y = h(x) onto the graph of y = h<sub>–1</sub>(x).",
+       "text": "Describe fully the single transformation that maps the graph of y = h(x) onto the graph of y = h–1(x)."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 47.0
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "11(c)",
+   "content": [
+    {
+     "type": "text",
+     "html": "h(x) = x<sup>3</sup>",
+     "text": "h(x) = x3"
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2014,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_long_answer",
+ "total_marks": 10,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}
