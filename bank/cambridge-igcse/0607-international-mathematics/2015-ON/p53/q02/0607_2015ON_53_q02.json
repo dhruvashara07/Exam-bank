@@ -1,0 +1,343 @@
+{
+ "id": "0607_2015ON_53_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    171.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 11.3,
+    "height_pt": 114.0
+   }
+  }
+ ],
+ "text": "2\nThe sum of two square numbers can equal another square number.\nFor example,\n32    +    42\n= 9    +    16\n= 25\n= 52\nWe say that 3, 4, 5 is a Pythagorean Triple.",
+ "marks": 8,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      174.0,
+      570.0,
+      197.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.0
+     }
+    }
+   ],
+   "text": "Show, by calculation, that 7, 24, 25 is a Pythagorean Triple.",
+   "marks": 2,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "49 + 576 = 625\noe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        32.150001525878906,
+        339.8,
+        563.0689697265625,
+        360.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show, by calculation, that 7, 24, 25 is a Pythagorean Triple.",
+     "text": "Show, by calculation, that 7, 24, 25 is a Pythagorean Triple."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      343.0,
+      570.0,
+      618.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 20.0,
+      "height_pt": 275.0
+     }
+    }
+   ],
+   "text": "Each row in this table is a Pythagorean Triple.\nComplete the table.\nUse patterns of numbers in the table to help you.\n3\n4\n5\n5\n12\n13\n7\n24\n25\n9\n40\n11\n60\n13\n113",
+   "marks": 4,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "41\n61\n84\n85\n15\n112",
+     "codes": [
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        32.150001525878906,
+        363.7,
+        563.0689697265625,
+        476.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Each row in this table is a Pythagorean Triple. Complete the table. Use patterns of numbers in the table to help you.",
+     "text": "Each row in this table is a Pythagorean Triple. Complete the table. Use patterns of numbers in the table to help you."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "3",
+       "4",
+       "5"
+      ],
+      [
+       "5",
+       "12",
+       "13"
+      ],
+      [
+       "7",
+       "24",
+       "25"
+      ],
+      [
+       "9",
+       "40",
+       ""
+      ],
+      [
+       "11",
+       "60",
+       ""
+      ],
+      [
+       "13",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "113"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      142.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 13.3,
+      "height_pt": 85.5
+     }
+    }
+   ],
+   "text": "What is the connection between the square of the smallest number and the other two numbers in each\nPythagorean Triple in the table?\n...................................................................................................................................................\n...................................................................................................................................................",
+   "marks": 1,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "equal to the sum oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        32.150001525878906,
+        480.3,
+        563.0689697265625,
+        500.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "What is the connection between the <b>square</b> of the smallest number and the other two numbers in each Pythagorean Triple in the table?",
+     "text": "What is the connection between the square of the smallest number and the other two numbers in each Pythagorean Triple in the table?"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      161.0,
+      570.0,
+      365.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 154.0,
+      "height_pt": 204.5
+     }
+    }
+   ],
+   "text": "Use your answer to part (c) and the patterns of numbers in the table to complete the following\nPythagorean Triple.\n.............  ,  .............  , 421",
+   "marks": 1,
+   "path": "2(d)",
+   "mark_scheme": [
+    {
+     "label": "2(d)",
+     "text": "29, 420",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        32.150001525878906,
+        504.3,
+        563.0689697265625,
+        524.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your answer to<b> part (c)</b> and the patterns of numbers in the table to complete the following Pythagorean Triple.",
+     "text": "Use your answer to part (c) and the patterns of numbers in the table to complete the following Pythagorean Triple."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "unit": ", 421"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "2",
+   "text": "",
+   "codes": [],
+   "segments": []
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 3,
+ "paper_code": "0607/53",
+ "paper_type": "core_investigation",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The sum of two square numbers can equal another square number. For example,",
+   "text": "The sum of two square numbers can equal another square number. For example,"
+  },
+  {
+   "type": "text",
+   "html": "+ <b>4</b><sup>2 </sup> = 9 + 16",
+   "text": "+ 42 = 9 + 16"
+  },
+  {
+   "type": "text",
+   "html": "= 25 = <b>5</b><sup>2</sup>",
+   "text": "= 25 = 52"
+  },
+  {
+   "type": "text",
+   "html": "We say that <b>3</b>, <b>4</b>, <b>5</b> is a <i>Pythagorean Triple</i>.",
+   "text": "We say that 3, 4, 5 is a Pythagorean Triple."
+  }
+ ],
+ "marks_source": "mark scheme"
+}

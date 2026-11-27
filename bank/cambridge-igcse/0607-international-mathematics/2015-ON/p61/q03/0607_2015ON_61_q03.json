@@ -1,0 +1,269 @@
+{
+ "id": "0607_2015ON_61_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    106.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 49.0
+   }
+  }
+ ],
+ "text": "3\nSometimes the sum of two square numbers can equal the sum of another pair of square numbers.\nFor example,\n52\n52\n12\n72\n+\n=\n+\n(Both sums equal 50.)",
+ "marks": 8,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      109.0,
+      570.0,
+      444.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 258.4,
+      "height_pt": 335.0
+     }
+    }
+   ],
+   "text": "(x + y)2 + (m – n)2 = (x – y)2 + (m + n)2 simplifies to    xy = mn.\n(a) Show that\n(x + y)2 + (m – n)2 = (x – y)2 + (m + n)2\nxy      =      mn",
+   "marks": 2,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "Each bracket correctly squared\n4xy = 4mn",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        28.663000106811523,
+        554.7,
+        566.583984375,
+        587.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that (<i>x</i> + <i>y</i>)<sup>2</sup> + (<i>m</i> – <i>n</i>)<sup>2</sup> = (<i>x</i> – <i>y</i>)<sup>2</sup> + (<i>m</i> + <i>n</i>)<sup>2</sup> simplifies to <i>xy</i> = <i>mn</i>.",
+     "text": "Show that (x + y)2 + (m – n)2 = (x – y)2 + (m + n)2 simplifies to xy = mn."
+    },
+    {
+     "type": "text",
+     "html": "(<i>x</i> + <i>y</i>)<sup>2</sup> + (<i>m</i> – <i>n</i>)<sup>2</sup> = (<i>x</i> – <i>y</i>)<sup>2</sup> + (<i>m</i> + <i>n</i>)<sup>2</sup>",
+     "text": "(x + y)2 + (m – n)2 = (x – y)2 + (m + n)2"
+    },
+    {
+     "type": "text",
+     "html": "<i>xy </i>= <i>mn</i>",
+     "text": "xy = mn"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 258.4
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      249.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 11.5,
+      "height_pt": 192.0
+     }
+    }
+   ],
+   "text": "x, y, m and n are different positive integers with x > y and m > n.\nWhen xy = mn = 6 one solution is\nx = 3,  y = 2    and    m = 6,  n = 1.\nThe substitution of these values into\n(x + y)2 + (m – n)2  =  (x – y)2 + (m + n)2  gives these equal sums of square numbers.\n52    +      52     =     12       +      72\nFind all the possible solutions when xy = mn = 12.\nFor each solution, write the equal sums of square numbers.",
+   "marks": 4,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "2\n2\n2\n2\n13 + 4 = 11 + 8\n2\n2\n2\n2\n8 + 1 = 4 + 7\n2\n2\n2\n2\n13 + 1 = 11 + 7",
+     "codes": [
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        28.663000106811523,
+        591.3,
+        566.583984375,
+        674.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<i>x</i>, <i>y</i>, <i>m</i> and <i>n</i> are different positive integers with <i>x</i> &gt; <i>y</i> and <i>m</i> &gt; <i>n</i>. When <i>xy = mn = </i>6 one solution is",
+     "text": "x, y, m and n are different positive integers with x > y and m > n. When xy = mn = 6 one solution is"
+    },
+    {
+     "type": "text",
+     "html": "<i>x</i> = 3, <i>y</i> = 2 and <i>m</i> = 6, <i>n </i>= 1.",
+     "text": "x = 3, y = 2 and m = 6, n = 1."
+    },
+    {
+     "type": "text",
+     "html": "The substitution of these values into (<i>x</i> + <i>y</i>)<sup>2</sup> + (<i>m</i> – <i>n</i>)<sup>2</sup> = (<i>x</i> – <i>y</i>)<sup>2</sup> + (<i>m</i> + <i>n</i>)<sup>2</sup> gives these equal sums of square numbers.",
+     "text": "The substitution of these values into (x + y)2 + (m – n)2 = (x – y)2 + (m + n)2 gives these equal sums of square numbers."
+    },
+    {
+     "type": "text",
+     "html": "+ 5<sup>2</sup> = 1<sup>2 </sup> + 7<sup>2</sup>",
+     "text": "+ 52 = 12 + 72"
+    },
+    {
+     "type": "text",
+     "html": "Find all the possible solutions when <i>xy</i> = <i>mn </i>= 12. For each solution, write the equal sums of square numbers.",
+     "text": "Find all the possible solutions when xy = mn = 12. For each solution, write the equal sums of square numbers."
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      486.0,
+      570.0,
+      546.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 23.5,
+      "height_pt": 60.0
+     }
+    }
+   ],
+   "text": "Complete the following equal sums of square numbers.\n92  +  ……….    =    52  +  ……….",
+   "marks": 2,
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "2\n2\n2\n2\n[9 +] 13 [= 5 +] 15",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        28.663000106811523,
+        678.5,
+        566.583984375,
+        724.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the following equal sums of square numbers.",
+     "text": "Complete the following equal sums of square numbers."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "92 +",
+     "unit": "."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "3",
+   "text": "",
+   "codes": [],
+   "segments": []
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Sometimes the sum of two square numbers can equal the sum of another pair of square numbers. For example,",
+   "text": "Sometimes the sum of two square numbers can equal the sum of another pair of square numbers. For example,"
+  },
+  {
+   "type": "text",
+   "html": "+ 5<sup>2</sup> = 1<sup>2 </sup> + 7<sup>2</sup> (Both sums equal 50.)",
+   "text": "+ 52 = 12 + 72 (Both sums equal 50.)"
+  }
+ ],
+ "marks_source": "mark scheme"
+}

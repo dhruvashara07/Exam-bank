@@ -1,0 +1,272 @@
+{
+ "id": "0607_2015ON_63_q04",
+ "number": 4,
+ "segments": [],
+ "text": "",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      58.5,
+      570.0,
+      256.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 20.8,
+      "height_pt": 198.0
+     }
+    }
+   ],
+   "text": "4\n(a) Complete the table to show the minimum number of cameras for an odd number of rows.\nNumber of squares in each row\n1 square\n2 squares\n3 squares\n4 squares\n5 squares\nn squares\nOne row\n2\n3\n4\n5\nThree rows\n6\nFive rows\n6\nSeven rows\n8",
+   "marks": 2,
+   "path": "4(a)",
+   "mark_scheme": [
+    {
+     "label": "4(a)",
+     "text": "Number of squares in each row\n1\n2\n3\n4\n5\nn\nsquare\nsquares\nsquares\nsquares\nsquares\nsquares\nOne\n6\nrow\nThree\n8\n10\n12\nrows\nFive\n15\n18\nrows\nSeven\n12\n16\n20\n24\n4n + 4\nrows\noe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        15.197999954223633,
+        177.2,
+        580.0769653320312,
+        325.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> Complete the table to show the minimum number of cameras for an odd number of rows.",
+     "text": "Complete the table to show the minimum number of cameras for an odd number of rows."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "",
+       "Number of squares in each row",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "1 square",
+       "2 squares",
+       "3 squares",
+       "4 squares",
+       "5 squares",
+       "",
+       "<i>n</i> squares"
+      ],
+      [
+       "One row",
+       "2",
+       "3",
+       "4",
+       "5",
+       "",
+       "",
+       ""
+      ],
+      [
+       "Three rows",
+       "",
+       "6",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "Five rows",
+       "6",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "Seven rows",
+       "8",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      402.4,
+      570.0,
+      577.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 130.8,
+      "height_pt": 175.1
+     }
+    }
+   ],
+   "text": "Find an expression for the minimum number of cameras for n squares in each of r rows, when r is an\nodd number.\n.......................................................................",
+   "marks": 1,
+   "path": "4(b)",
+   "mark_scheme": [
+    {
+     "label": "4(b)",
+     "text": "1\n1\n(r+1)n+\n(r+1) oe\n2\n2",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        15.197999954223633,
+        328.8,
+        580.0769653320312,
+        365.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression for the minimum number of cameras for <i>n</i> squares in each of <i>r</i> rows, when <i>r </i>is an odd number.",
+     "text": "Find an expression for the minimum number of cameras for n squares in each of r rows, when r is an odd number."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      584.4,
+      570.0,
+      759.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 130.8,
+      "height_pt": 175.1
+     }
+    }
+   ],
+   "text": "For an odd number of rows, the minimum number of cameras is 16.\nFind all the possible numbers of squares in each row.\n.......................................................................",
+   "marks": 1,
+   "path": "4(c)",
+   "mark_scheme": [
+    {
+     "label": "4(c)",
+     "text": "1, 3, 7, 15",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        15.197999954223633,
+        369.4,
+        580.0769653320312,
+        389.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "For an odd number of rows, the minimum number of cameras is 16. Find all the possible numbers of squares in each row.",
+     "text": "For an odd number of rows, the minimum number of cameras is 16. Find all the possible numbers of squares in each row."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "4",
+   "text": "",
+   "codes": [],
+   "segments": []
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "marks_source": "mark scheme"
+}

@@ -1,0 +1,511 @@
+{
+ "id": "0607_2015ON_42_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    281.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 15.8,
+    "height_pt": 224.5
+   }
+  }
+ ],
+ "text": "6\nThe marks, x, of 800 students in a mathematics exam are given in the table.\nMark (x)\nFrequency\n0 < x  20\n62\n20 < x  30\n84\n140\n30 < x  40\n40 < x  50\n160\n142\n50 < x  60\n60 < x  80\n112\n100\n80 < x  100",
+ "marks": 12,
+ "figures": [
+  {
+   "caption": null,
+   "page": 9,
+   "bbox": [
+    96.1,
+    86.5,
+    501.1,
+    363.5
+   ],
+   "id": "0607_2015ON_42_q06c_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      283.1,
+      570.0,
+      384.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 63.4,
+      "height_pt": 100.9
+     }
+    }
+   ],
+   "text": "Calculate an estimate of the mean mark.\nAnswer(a) .................................................................. [2]",
+   "marks": 2,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "49.3 or 49.33 to 49.34",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        14.461000442504883,
+        355.4,
+        580.843017578125,
+        388.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Calculate an estimate of the mean mark.",
+     "text": "Calculate an estimate of the mean mark."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Answer(a)"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      387.1,
+      570.0,
+      623.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 15.8,
+      "height_pt": 235.9
+     }
+    }
+   ],
+   "text": "Complete the cumulative frequency table.\nMark (x)\nCumulative frequency\n0 < x  20\n62\n0 < x  30\n0 < x  40\n0 < x  50\n0 < x  60\n0 < x  80\n800\n0 < x  100\n[1]",
+   "marks": 1,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "146, 286, 446, 588, 700, 800",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        14.461000442504883,
+        392.0,
+        580.843017578125,
+        412.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the cumulative frequency table.",
+     "text": "Complete the cumulative frequency table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Mark (<i>x</i>)",
+       "Cumulative frequency"
+      ],
+      [
+       "0 &lt; <i>x</i> 20",
+       "62"
+      ],
+      [
+       "0 &lt; <i>x</i> 30",
+       ""
+      ],
+      [
+       "0 &lt; <i>x</i> 40",
+       ""
+      ],
+      [
+       "0 &lt; <i>x</i> 50",
+       ""
+      ],
+      [
+       "0 &lt; <i>x</i> 60",
+       ""
+      ],
+      [
+       "0 &lt; <i>x</i> 80",
+       ""
+      ],
+      [
+       "0 &lt; <i>x</i> 100",
+       "800"
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      381.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 22.7,
+      "height_pt": 324.5
+     }
+    }
+   ],
+   "text": "On the grid below, draw a cumulative frequency curve.\n800\n700\n600\n500\nCumulative\n400\nfrequency\n300\n200\n100\nx\n0\n10\n20\n30\n40\n50\n60\n70\n80\n90\n100\nMark\n[3]",
+   "marks": 3,
+   "path": "6(c)",
+   "mark_scheme": [
+    {
+     "label": "6(c)",
+     "text": "Correct graph",
+     "codes": [
+      "3",
+      "1",
+      "2",
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        14.461000442504883,
+        415.9,
+        580.843017578125,
+        578.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the grid below, draw a cumulative frequency curve.",
+     "text": "On the grid below, draw a cumulative frequency curve."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2015ON_42_q06c_diagram1",
+     "caption": null
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 9,
+     "bbox": [
+      30.0,
+      384.7,
+      570.0,
+      407.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 22.8
+     }
+    }
+   ],
+   "text": "Use your graph in part (c) to find estimates for",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        30.0,
+        410.7,
+        570.0,
+        459.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 11.4,
+        "height_pt": 48.8
+       }
+      }
+     ],
+     "text": "the median mark,\nAnswer(d)(i) .................................................................. [1]",
+     "marks": 1,
+     "path": "6(d)(i)",
+     "mark_scheme_on": "6",
+     "content": [
+      {
+       "type": "text",
+       "html": "the median mark,",
+       "text": "the median mark,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Answer(d)(i)"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        30.0,
+        462.7,
+        570.0,
+        537.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 37.4,
+        "height_pt": 74.8
+       }
+      }
+     ],
+     "text": "the interquartile range,\nAnswer(d)(ii) .................................................................. [2]",
+     "marks": 2,
+     "path": "6(d)(ii)",
+     "mark_scheme_on": "6",
+     "content": [
+      {
+       "type": "text",
+       "html": "the interquartile range,",
+       "text": "the interquartile range,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Answer(d)(ii)"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        30.0,
+        540.7,
+        570.0,
+        650.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 63.4,
+        "height_pt": 109.8
+       }
+      }
+     ],
+     "text": "the minimum mark for a candidate to obtain a grade A, given that 15% of students gain a grade A.\nAnswer(d)(iii) .................................................................. [3]",
+     "marks": 3,
+     "path": "6(d)(iii)",
+     "mark_scheme_on": "6",
+     "content": [
+      {
+       "type": "text",
+       "html": "the minimum mark for a candidate to obtain a grade A, given that 15% of students gain a grade A.",
+       "text": "the minimum mark for a candidate to obtain a grade A, given that 15% of students gain a grade A."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Answer(d)(iii)"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "6(d)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your graph in <b>part (c)</b> to find estimates for",
+     "text": "Use your graph in part (c) to find estimates for"
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "6",
+   "text": "",
+   "codes": [],
+   "segments": []
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 2,
+ "paper_code": "0607/42",
+ "paper_type": "extended_long_answer",
+ "total_marks": 12,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The marks, <i>x</i>, of 800 students in a mathematics exam are given in the table.",
+   "text": "The marks, x, of 800 students in a mathematics exam are given in the table."
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Mark (<i>x</i>)",
+     "Frequency"
+    ],
+    [
+     "0 &lt; <i>x</i> 20",
+     "62"
+    ],
+    [
+     "20 &lt; <i>x</i> 30",
+     "84"
+    ],
+    [
+     "30 &lt; <i>x</i> 40",
+     "140"
+    ],
+    [
+     "40 &lt; <i>x</i> 50",
+     "160"
+    ],
+    [
+     "50 &lt; <i>x</i> 60",
+     "142"
+    ],
+    [
+     "60 &lt; <i>x</i> 80",
+     "112"
+    ],
+    [
+     "80 &lt; <i>x</i> 100",
+     "100"
+    ]
+   ]
+  }
+ ]
+}

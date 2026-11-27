@@ -1,0 +1,408 @@
+{
+ "id": "0607_2015ON_41_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 16,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    297.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 25.0,
+    "height_pt": 240.2
+   }
+  }
+ ],
+ "text": "9\n1\n3\n0\n1\nA\nB\nThe diagram shows two unbiased dice, A and B.\nThe numbers on die A are 0, 1, 1, 1, 2, 3.\nThe numbers on die B are 1, 2, 2, 3, 3, 3.\nWhen a die is rolled, the number shown on the top face is recorded.",
+ "marks": 9,
+ "figures": [
+  {
+   "caption": null,
+   "page": 16,
+   "bbox": [
+    155.3000030517578,
+    88.69999694824219,
+    417.79998779296875,
+    197.8000030517578
+   ],
+   "id": "0607_2015ON_41_q09_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      300.2,
+      570.0,
+      349.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 7.3,
+      "height_pt": 48.8
+     }
+    }
+   ],
+   "text": "Both dice are rolled.\nFind the probability that",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 16,
+       "bbox": [
+        30.0,
+        352.2,
+        570.0,
+        504.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 111.3,
+        "height_pt": 152.3
+       }
+      }
+     ],
+     "text": "both dice show 3,\nAnswer(a)(i)  ................................................................. [2]",
+     "marks": 2,
+     "path": "9(a)(i)",
+     "mark_scheme": [
+      {
+       "label": "9(a)(i)",
+       "text": "oe\n36\n5\noe\n36",
+       "codes": [
+        "2",
+        "6",
+        "6",
+        "1",
+        "2",
+        "3",
+        "1",
+        "3",
+        "6",
+        "6",
+        "6",
+        "6",
+        "1",
+        "2",
+        "3",
+        "1",
+        "6",
+        "6",
+        "6",
+        "6"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.35100173950195,
+          311.1,
+          548.89599609375,
+          431.6
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "both dice show 3,",
+       "text": "both dice show 3,"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Answer(a)(i)"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 16,
+       "bbox": [
+        30.0,
+        508.2,
+        570.0,
+        764.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 215.3,
+        "height_pt": 256.3
+       }
+      }
+     ],
+     "text": "the numbers showing on the two dice add up to 2.\nAnswer(a)(ii)  ................................................................. [3]",
+     "marks": 3,
+     "path": "9(a)(ii)",
+     "mark_scheme_on": "9",
+     "content": [
+      {
+       "type": "text",
+       "html": "the numbers showing on the two dice add up to 2.",
+       "text": "the numbers showing on the two dice add up to 2."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Answer(a)(ii)"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "9(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Both dice are rolled. Find the probability that",
+     "text": "Both dice are rolled. Find the probability that"
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      57.6,
+      570.0,
+      288.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 163.3,
+      "height_pt": 230.4
+     }
+    }
+   ],
+   "text": "Die B is rolled until it shows 2.\nFind the probability that this occurs when the die is rolled for the 4th time.\nAnswer(b)  ................................................................. [2]",
+   "marks": 2,
+   "path": "9(b)",
+   "mark_scheme": [
+    {
+     "label": "9(b)",
+     "text": "128\noe\n1296",
+     "codes": [
+      "4",
+      "4",
+      "4",
+      "2",
+      "2",
+      "6",
+      "6",
+      "6",
+      "6"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.35100173950195,
+        437.1,
+        548.89599609375,
+        471.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Die <i>B</i> is rolled until it shows 2. Find the probability that this occurs when the die is rolled for the 4th time.",
+     "text": "Die B is rolled until it shows 2. Find the probability that this occurs when the die is rolled for the 4th time."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Answer(b)"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      291.6,
+      570.0,
+      563.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 163.3,
+      "height_pt": 271.4
+     }
+    }
+   ],
+   "text": "Die A is rolled until it shows 3.\n3125\nThe probability that this occurs when the die is rolled for the nth time is 46656\n.\nFind the value of n.\nAnswer(c)  ................................................................. [2]",
+   "marks": 2,
+   "path": "9(c)",
+   "mark_scheme": [
+    {
+     "label": "9(c)",
+     "text": "6",
+     "codes": [
+      "1",
+      "2",
+      "6",
+      "6"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.35100173950195,
+        477.3,
+        548.89599609375,
+        529.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Die <i>A</i> is rolled until it shows 3. The probability that this occurs when the die is rolled for the <i>n</i>th time is \\(\\frac{3125}{46656}\\) . Find the value of <i>n</i>.",
+     "text": "Die A is rolled until it shows 3. The probability that this occurs when the die is rolled for the nth time is (3125)/(46656) . Find the value of n."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Answer(c)"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "9",
+   "text": "3",
+   "codes": [
+    "1",
+    "3"
+   ],
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      46.35100173950195,
+      296.0,
+      548.89599609375,
+      311.1
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_long_answer",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>9</b>",
+   "text": "9"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2015ON_41_q09_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "The diagram shows two unbiased dice, <i>A </i>and <i>B</i>. The numbers on die <i>A</i> are 0, 1, 1, 1, 2, 3. The numbers on die <i>B</i> are 1, 2, 2, 3, 3, 3. When a die is rolled, the number shown on the top face is recorded.",
+   "text": "The diagram shows two unbiased dice, A and B. The numbers on die A are 0, 1, 1, 1, 2, 3. The numbers on die B are 1, 2, 2, 3, 3, 3. When a die is rolled, the number shown on the top face is recorded."
+  }
+ ]
+}

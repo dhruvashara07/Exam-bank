@@ -1,0 +1,215 @@
+{
+ "id": "0607_2015ON_63_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    58.5,
+    570.0,
+    302.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 108.3,
+    "height_pt": 244.0
+   }
+  }
+ ],
+ "text": "5\nNow consider even numbers of rows with an even number of squares in each row.\nTwo rows, each with two squares, need a minimum of 4 cameras.\nTwo rows, each with four squares, need a minimum\nof 7 cameras.",
+ "marks": 2,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    82.80000305175781,
+    90.9000015258789,
+    343.70001220703125,
+    298.5
+   ],
+   "id": "0607_2015ON_63_q05_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      321.7,
+      570.0,
+      616.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "Minimum =  ……",
+      "working_gap_pt": 125.5,
+      "height_pt": 294.8
+     }
+    }
+   ],
+   "text": "Find the minimum number of cameras for 6 and 8 squares in each of two rows.\nMinimum =  ......................................................................\nMinimum =  ......................................................................",
+   "marks": 1,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "10\n13",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        15.197999954223633,
+        397.8,
+        580.0769653320312,
+        426.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the minimum number of cameras for 6 and 8 squares in each of two rows.",
+     "text": "Find the minimum number of cameras for 6 and 8 squares in each of two rows."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Minimum ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Minimum ="
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      623.0,
+      570.0,
+      733.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 65.8,
+      "height_pt": 110.5
+     }
+    }
+   ],
+   "text": "Find an expression for the minimum number of cameras for two rows each with n squares, when n is\neven.\n.......................................................................",
+   "marks": 1,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "3n\n+1\n2",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        15.197999954223633,
+        432.1,
+        580.0769653320312,
+        466.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression for the minimum number of cameras for two rows each with<i> n</i> squares, when <i>n</i> is even.",
+     "text": "Find an expression for the minimum number of cameras for two rows each with n squares, when n is even."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "5",
+   "text": "",
+   "codes": [],
+   "segments": []
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 2,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Now consider <b>even</b> numbers of rows with an <b>even</b> number of squares in each row.",
+   "text": "Now consider even numbers of rows with an even number of squares in each row."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2015ON_63_q05_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "Two rows, each with two squares, need a minimum of 4 cameras.",
+   "text": "Two rows, each with two squares, need a minimum of 4 cameras."
+  },
+  {
+   "type": "text",
+   "html": "Two rows, each with four squares, need a minimum",
+   "text": "Two rows, each with four squares, need a minimum"
+  }
+ ],
+ "marks_source": "mark scheme"
+}

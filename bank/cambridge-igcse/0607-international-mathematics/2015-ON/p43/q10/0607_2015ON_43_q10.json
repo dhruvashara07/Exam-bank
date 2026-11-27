@@ -1,0 +1,351 @@
+{
+ "id": "0607_2015ON_43_q10",
+ "number": 10,
+ "segments": [
+  {
+   "page": 14,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    155.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 98.0
+   }
+  }
+ ],
+ "text": "10\nIn this question, the weather is only considered to be either wet or dry.\n3 .\nWhen the weather is dry the probability that Sara will go walking is 5\n1.\nWhen the weather is wet the probability that Sara will go walking is 10\n2 .\nThe probability of a dry day is 3",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 14,
+   "bbox": [
+    129.3,
+    185.0,
+    469.0,
+    358.0
+   ],
+   "id": "0607_2015ON_43_q10a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 14,
+   "bbox": [
+    127.6,
+    586.0,
+    468.6,
+    762.8
+   ],
+   "id": "0607_2015ON_43_q10c_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      155.0,
+      570.0,
+      381.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 21.0,
+      "height_pt": 226.0
+     }
+    }
+   ],
+   "text": "Complete the tree diagram.\nWeather\nWalking\n3\nyes\n5\ndry\n2\n3\nno\n..........\nyes\n..........\nwet\n..........\nno\n..........\n[3]",
+   "marks": 3,
+   "path": "10(a)",
+   "mark_scheme": [
+    {
+     "label": "10(a)",
+     "text": "3\n2\n5\n1\n9\nand\n10\n10",
+     "codes": [
+      "1",
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        40.9370002746582,
+        108.8,
+        554.3389892578125,
+        198.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the tree diagram.",
+     "text": "Complete the tree diagram."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2015ON_43_q10a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "no",
+     "text": "no"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      384.3,
+      570.0,
+      524.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 96.5,
+      "height_pt": 139.7
+     }
+    }
+   ],
+   "text": ".\n(b) Show that the probability that Sara goes walking is 30\n[2]",
+   "marks": 2,
+   "path": "10(b)",
+   "mark_scheme": [
+    {
+     "label": "10(b)",
+     "text": "2\n3\n1\n1\n×\n+\n×\n3\n5\n3\n10",
+     "codes": [
+      "M2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        40.9370002746582,
+        203.8,
+        554.3389892578125,
+        238.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": ".",
+     "text": "."
+    },
+    {
+     "type": "text",
+     "html": "Show that the probability that Sara goes walking is 30",
+     "text": "Show that the probability that Sara goes walking is 30"
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 96.5
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      527.3,
+      570.0,
+      795.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 22.6,
+      "height_pt": 267.7
+     }
+    }
+   ],
+   "text": "9.\n(c) The probability that Sara does not go walking when the weather is wet is 30\nComplete this tree diagram.\nWalking\nWeather\ndry\n..........\nyes\n13\n30\n1\nwet\n13\ndry\n..........\nno\n..........\nwet\n..........\n[3]",
+   "marks": 3,
+   "path": "10(c)",
+   "mark_scheme": [
+    {
+     "label": "10(c)",
+     "text": "17\n12\nand\n30\n13\n8\n9\nand\n17\n17",
+     "codes": [
+      "1",
+      "9",
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        40.9370002746582,
+        244.4,
+        554.3389892578125,
+        321.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "9",
+     "text": "9"
+    },
+    {
+     "type": "text",
+     "html": "The probability that Sara does not go walking when the weather is wet is 30 . Complete this tree diagram.",
+     "text": "The probability that Sara does not go walking when the weather is wet is 30 . Complete this tree diagram."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2015ON_43_q10c_diagram2",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "wet",
+     "text": "wet"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "10",
+   "text": "1",
+   "codes": [],
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      40.9370002746582,
+      99.3,
+      554.3389892578125,
+      108.8
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 3,
+ "paper_code": "0607/43",
+ "paper_type": "extended_long_answer",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In this question, the weather is only considered to be either wet or dry.",
+   "text": "In this question, the weather is only considered to be either wet or dry."
+  },
+  {
+   "type": "text",
+   "html": ".",
+   "text": "."
+  },
+  {
+   "type": "text",
+   "html": "When the weather is dry the probability that Sara will go walking is 5",
+   "text": "When the weather is dry the probability that Sara will go walking is 5"
+  },
+  {
+   "type": "text",
+   "html": "1",
+   "text": "1"
+  },
+  {
+   "type": "text",
+   "html": "When the weather is wet the probability that Sara will go walking is 10 .",
+   "text": "When the weather is wet the probability that Sara will go walking is 10 ."
+  },
+  {
+   "type": "text",
+   "html": ".",
+   "text": "."
+  },
+  {
+   "type": "text",
+   "html": "The probability of a dry day is 3",
+   "text": "The probability of a dry day is 3"
+  }
+ ]
+}

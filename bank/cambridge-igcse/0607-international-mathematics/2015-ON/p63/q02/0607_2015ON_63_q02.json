@@ -1,0 +1,270 @@
+{
+ "id": "0607_2015ON_63_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    58.5,
+    570.0,
+    80.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 21.5
+   }
+  }
+ ],
+ "text": "2\nThere are now three rows of squares.",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        84.5,
+        570.0,
+        255.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 1,
+        "answer_line": "Minimum =  ……",
+        "working_gap_pt": 74.4,
+        "height_pt": 171.0
+       }
+      }
+     ],
+     "text": "What is the minimum number of cameras needed when there is 1 square in each of three rows?\nDraw crosses on the diagram to show the positions of these cameras.\nMinimum =  ......................................................................",
+     "marks": 0,
+     "path": "2(a)(i)",
+     "mark_scheme_on": "2",
+     "content": [
+      {
+       "type": "text",
+       "html": "What is the minimum number of cameras needed when there is 1 square in each of three rows?",
+       "text": "What is the minimum number of cameras needed when there is 1 square in each of three rows?"
+      },
+      {
+       "type": "text",
+       "html": "Draw crosses on the diagram to show the positions of these cameras.",
+       "text": "Draw crosses on the diagram to show the positions of these cameras."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Minimum ="
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        275.1,
+        570.0,
+        446.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 74.4,
+        "height_pt": 170.9
+       }
+      }
+     ],
+     "text": "Two squares in each of three rows need a minimum of 6 cameras.\nDraw crosses on the diagram to show the positions of these cameras.\nMinimum = 6",
+     "marks": 0,
+     "path": "2(a)(ii)",
+     "mark_scheme_on": "2",
+     "content": [
+      {
+       "type": "text",
+       "html": "Two squares in each of three rows need a minimum of 6 cameras. Draw crosses on the diagram to show the positions of these cameras.",
+       "text": "Two squares in each of three rows need a minimum of 6 cameras. Draw crosses on the diagram to show the positions of these cameras."
+      },
+      {
+       "type": "text",
+       "html": "Minimum = 6",
+       "text": "Minimum = 6"
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 74.4
+      }
+     ]
+    },
+    {
+     "label": "iii",
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        30.0,
+        465.7,
+        570.0,
+        636.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "answer_line",
+        "dotted_lines": 1,
+        "answer_line": "Minimum =  ……",
+        "working_gap_pt": 74.4,
+        "height_pt": 170.8
+       }
+      }
+     ],
+     "text": "Draw crosses on the diagram to show the positions of the minimum number of cameras for 3\nsquares in each of three rows.\nMinimum =  ......................................................................",
+     "marks": 0,
+     "path": "2(a)(iii)",
+     "mark_scheme_on": "2",
+     "content": [
+      {
+       "type": "text",
+       "html": "Draw crosses on the diagram to show the positions of the minimum number of cameras for 3 squares in each of three rows.",
+       "text": "Draw crosses on the diagram to show the positions of the minimum number of cameras for 3 squares in each of three rows."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "Minimum ="
+      }
+     ]
+    }
+   ],
+   "path": "2(a)"
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      656.3,
+      570.0,
+      792.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 91.8,
+      "height_pt": 136.2
+     }
+    }
+   ],
+   "text": "Find an expression, in terms of n, for the minimum number of cameras for n squares in each of three\nrows.\n.......................................................................",
+   "marks": 1,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "2n + 2 oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        15.197999954223633,
+        738.6,
+        580.0769653320312,
+        765.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression, in terms of <i>n</i>, for the minimum number of cameras for <i>n</i> squares in each of three rows.",
+     "text": "Find an expression, in terms of n, for the minimum number of cameras for n squares in each of three rows."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "2",
+   "text": "χ\noe\nχ\nχ\n[Minimum =] 4\nχ\nχ\nχ\nχ\nχ\nχ\noe\nχ\nχ\nχ\nχ\nχ\noe\n[Minimum =8]\nχ\nχ",
+   "codes": [
+    "1",
+    "1",
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      15.197999954223633,
+      447.5,
+      580.0769653320312,
+      733.4
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "There are now three rows of squares.",
+   "text": "There are now three rows of squares."
+  }
+ ],
+ "marks_source": "mark scheme"
+}

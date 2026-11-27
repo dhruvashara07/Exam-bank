@@ -1,0 +1,246 @@
+{
+ "id": "0607_2015ON_52_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 3,
+   "bbox": [
+    30.0,
+    148.3,
+    570.0,
+    195.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 11.6,
+    "height_pt": 46.7
+   }
+  }
+ ],
+ "text": "1\nHere is a list of the first 11 prime numbers.\n2       3      5       7       11       13       17       19       23       29       31",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      200.3,
+      570.0,
+      300.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 11.5,
+      "height_pt": 100.2
+     }
+    }
+   ],
+   "text": "In the list there are 4 numbers that are one more than a multiple of 4.\nThese are called Pythagorean Primes.\nThe smallest one is 5 and the largest one is 29.\nWrite down the other two.\n5, ............. , ............. , 29",
+   "marks": 0,
+   "path": "1(a)",
+   "mark_scheme_on": "1",
+   "content": [
+    {
+     "type": "text",
+     "html": "In the list there are 4 numbers that are one more than a multiple of 4. These are called <i>Pythagorean Primes</i>. The smallest one is 5 and the largest one is 29. Write down the other two.",
+     "text": "In the list there are 4 numbers that are one more than a multiple of 4. These are called Pythagorean Primes. The smallest one is 5 and the largest one is 29. Write down the other two."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "5,",
+     "unit": ", 29"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      317.3,
+      570.0,
+      559.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "……   =   …… + ……",
+      "working_gap_pt": 37.5,
+      "height_pt": 241.7
+     }
+    }
+   ],
+   "text": "The 17th century French mathematician Albert Girard proved that every Pythagorean Prime equals the\nsum of two square numbers.\nWrite your answers to part (a) as the sum of two square numbers.\nTwo have been written down for you.\n12\n22\n5\n=\n+\n.............   =   ............. + .............\n............. = ............. + .............\n22\n52\n29\n=\n+",
+   "marks": 2,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "2\n2\n13 = 2 + 3\n2\n2\n17 = 1 + 4",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        32.150001525878906,
+        266.1,
+        563.0689697265625,
+        311.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The 17<sup>th</sup> century French mathematician Albert Girard proved that every Pythagorean Prime equals the sum of two square numbers. Write your answers to <b>part (a)</b> as the sum of two square numbers. Two have been written down for you.",
+     "text": "The 17th century French mathematician Albert Girard proved that every Pythagorean Prime equals the sum of two square numbers. Write your answers to part (a) as the sum of two square numbers. Two have been written down for you."
+    },
+    {
+     "type": "text",
+     "html": "= 1<sup>2</sup> + 2<sup>2</sup>",
+     "text": "= 12 + 22"
+    },
+    {
+     "type": "text",
+     "html": "= 2<sup>2</sup> + 5<sup>2</sup>",
+     "text": "= 22 + 52"
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      577.3,
+      570.0,
+      650.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "101     =  ……  +  ……",
+      "working_gap_pt": 24.5,
+      "height_pt": 72.7
+     }
+    }
+   ],
+   "text": "Another Pythagorean Prime is 101.\nWrite 101 as the sum of two square numbers.\n101     =  .............  +  .............",
+   "marks": 1,
+   "path": "1(c)",
+   "mark_scheme": [
+    {
+     "label": "1(c)",
+     "text": "2\n2\n1 + 10",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 2,
+       "bbox": [
+        32.150001525878906,
+        315.4,
+        563.0689697265625,
+        335.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Another Pythagorean Prime is 101. Write 101 as the sum of two square numbers.",
+     "text": "Another Pythagorean Prime is 101. Write 101 as the sum of two square numbers."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "101 ="
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "1",
+   "text": "13 17",
+   "codes": [
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      32.150001525878906,
+      238.5,
+      563.0689697265625,
+      262.4
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 2,
+ "paper_code": "0607/52",
+ "paper_type": "core_investigation",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Here is a list of the first 11 prime numbers.",
+   "text": "Here is a list of the first 11 prime numbers."
+  },
+  {
+   "type": "text",
+   "html": "3 5 7 11 13 17 19 23 29 31",
+   "text": "3 5 7 11 13 17 19 23 29 31"
+  }
+ ],
+ "marks_source": "mark scheme"
+}

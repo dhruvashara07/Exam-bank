@@ -1,0 +1,193 @@
+{
+ "id": "0607_2015ON_31_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 11,
+   "bbox": [
+    30.0,
+    354.0,
+    570.0,
+    400.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 11.5,
+    "height_pt": 46.5
+   }
+  }
+ ],
+ "text": "9\nThese are the first five terms of a sequence.\n−2   1   6   13   22",
+ "marks": 5,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      406.0,
+      570.0,
+      494.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 50.4,
+      "height_pt": 88.0
+     }
+    }
+   ],
+   "text": "Write down the next two terms in this sequence.\nAnswer(a)  ............................. , ............................. [2]",
+   "marks": 2,
+   "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "33\n1\n46\n1",
+     "codes": [
+      "1",
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        78.6,
+        559.0,
+        111.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the next two terms in this sequence.",
+     "text": "Write down the next two terms in this sequence."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Answer(a)"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      497.0,
+      570.0,
+      633.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 89.4,
+      "height_pt": 136.0
+     }
+    }
+   ],
+   "text": "Find an expression for the nth term.\nAnswer(b)  ................................................................ [3]",
+   "marks": 3,
+   "path": "9(b)",
+   "mark_scheme": [
+    {
+     "label": "9(b)",
+     "text": "2\n3\n2\nn −3\nB2 for n ±k\nor M1 for finding second differences or any\nquadratic",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        36.0,
+        115.2,
+        559.0,
+        169.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression for the <i>n</i>th term.",
+     "text": "Find an expression for the nth term."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Answer(b)"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2015,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 3,
+ "variant": 1,
+ "paper_code": "0607/31",
+ "paper_type": "core_long_answer",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "These are the first five terms of a sequence.",
+   "text": "These are the first five terms of a sequence."
+  },
+  {
+   "type": "text",
+   "html": "−2 1 6 13 22",
+   "text": "−2 1 6 13 22"
+  }
+ ]
+}
