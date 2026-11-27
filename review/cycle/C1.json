@@ -14,18 +14,90 @@
   "build": [
    {
     "start": "2026-11-27T07:37:14+00:00",
+    "end": "2026-11-27T07:52:41+00:00"
+   }
+  ],
+  "claude": [
+   {
+    "start": "2026-11-27T07:52:41+00:00",
     "end": null
    }
   ],
-  "claude": [],
   "claude1": [],
   "claude2": [],
   "review": [],
   "fix": []
  },
- "github_runs": [],
+ "github_runs": [
+  {
+   "id": 45959753924,
+   "name": "Question bank",
+   "branch": "main",
+   "conclusion": null,
+   "start": "2026-11-27T07:37:35Z",
+   "end": "2026-11-27T07:37:39Z",
+   "minutes": 0.1
+  }
+ ],
  "counts": {},
- "errors": [],
+ "errors": [
+  {
+   "pattern": "313",
+   "kind": "new",
+   "what": "MS page continuing with no header row but a lower Question header: rows above it lost (2025 ON 33 4(e)-4(h), 7(f))",
+   "fix": "chem: table starts under page header when labels sit above the lower header",
+   "found_by": "claude",
+   "at": "2026-11-27T08:58:19+00:00"
+  },
+  {
+   "pattern": "314",
+   "kind": "new",
+   "what": "label (a)(ii) without number on the same page as 2(a)(i) dropped (2025 MJ 33 q2)",
+   "fix": "maths NONUM rule for chem",
+   "found_by": "claude",
+   "at": "2026-11-27T08:58:19+00:00"
+  },
+  {
+   "pattern": "315",
+   "kind": "repeat",
+   "what": "end atom H beside a displayed formula became question text away from its bond (2025 ON 23 q37, 2025 FM 12 q10) - 285 too narrow",
+   "fix": "lone atom taken into the crop when a bond reaches it (pixel test)",
+   "found_by": "claude",
+   "at": "2026-11-27T08:58:19+00:00"
+  },
+  {
+   "pattern": "316",
+   "kind": "new",
+   "what": "picture under a re-wrapped line did not move down (2025 ON 63 1(e))",
+   "fix": "chem cum_above 0.5 pt",
+   "found_by": "claude",
+   "at": "2026-11-27T08:58:19+00:00"
+  },
+  {
+   "pattern": "317",
+   "kind": "new",
+   "what": "MS row cut at last text line: drawn structure below lost (2025 ON 43 6(d)(iv), 2026 FM 42 6(c), 2025 MJ 31 4(c))",
+   "fix": "small strokes in Answer cell count for the row bottom (chem)",
+   "found_by": "claude",
+   "at": "2026-11-27T08:58:19+00:00"
+  },
+  {
+   "pattern": "318",
+   "kind": "new",
+   "what": "column-rule stub taken as a bond: stray line in MS structure picture (2025 ON 43 6(e)(i))",
+   "fix": "rule pieces in line with a long rule are no bonds",
+   "found_by": "claude",
+   "at": "2026-11-27T08:58:19+00:00"
+  },
+  {
+   "pattern": "319",
+   "kind": "new",
+   "what": "long Answer line over the Marks/Guidance column in fallback rows (2025 MJ 53/63, C0 2015 MJ 32 3(b)(i), 2015 MJ 21 q6)",
+   "fix": "_wrap_overrun: words past the column go to a new line",
+   "found_by": "claude",
+   "at": "2026-11-27T08:58:19+00:00"
+  }
+ ],
  "tokens": [],
  "events": [
   {
@@ -35,6 +107,62 @@
   {
    "at": "2026-11-27T07:37:14+00:00",
    "task": "phase C1 build"
+  },
+  {
+   "at": "2026-11-27T07:38:04+00:00",
+   "task": "gh C1 45959753924"
+  },
+  {
+   "at": "2026-11-27T07:52:41+00:00",
+   "task": "phase C1 build"
+  },
+  {
+   "at": "2026-11-27T07:52:41+00:00",
+   "task": "phase C1 claude"
+  },
+  {
+   "at": "2026-11-27T07:55:52+00:00",
+   "task": "fixes 313/314 written; figure sheets"
+  },
+  {
+   "at": "2026-11-27T08:13:22+00:00",
+   "task": "315 bond-end atoms; blast C0"
+  },
+  {
+   "at": "2026-11-27T08:22:26+00:00",
+   "task": "fixes 313-317; local rebuild of touched papers"
+  },
+  {
+   "at": "2026-11-27T08:42:25+00:00",
+   "task": "freeze: maths baseline"
+  },
+  {
+   "at": "2026-11-27T08:58:19+00:00",
+   "task": "error C1 --pattern"
+  },
+  {
+   "at": "2026-11-27T08:58:19+00:00",
+   "task": "error C1 --pattern"
+  },
+  {
+   "at": "2026-11-27T08:58:19+00:00",
+   "task": "error C1 --pattern"
+  },
+  {
+   "at": "2026-11-27T08:58:19+00:00",
+   "task": "error C1 --pattern"
+  },
+  {
+   "at": "2026-11-27T08:58:19+00:00",
+   "task": "error C1 --pattern"
+  },
+  {
+   "at": "2026-11-27T08:58:19+00:00",
+   "task": "error C1 --pattern"
+  },
+  {
+   "at": "2026-11-27T08:58:19+00:00",
+   "task": "error C1 --pattern"
   }
  ]
 }

@@ -425,7 +425,9 @@ def portrait_unit(u, W=523.0, widths=None, sizes=None, probe=False):
         if b not in ref or len(ps_) > len(paras_of[(b, ref[b])]):
             ref[b] = c
     def cum_above(b, y):
-        before = [p for p in paras_of.get((b, ref.get(b)), []) if p['y'] < y - 2.5]
+        # (chemistry: a line whose baseline is just above the picture's top is above it - the beside test lets it through
+        #  at 2 pt; 2.5 pt here left the picture where it was and the re-wrapped 2nd line ran under it, 2025 ON 63 1(e), 316)
+        before = [p for p in paras_of.get((b, ref.get(b)), []) if p['y'] < y - (0.5 if globals().get('CHEM') else 2.5)]
         return before[-1]['cum'] + before[-1]['extra'] if before else 0
     moved = []
     for (b, c), ws in cells.items():

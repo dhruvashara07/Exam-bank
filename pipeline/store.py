@@ -96,8 +96,16 @@ def _chem_structures(doc, pno, clip, store):
     page = doc[pno]
     m = page.rotation_matrix
     items = []
+    longr = [(d['rect'].quad * m).rect for d in page.get_drawings()]
+    longr = [r for r in longr if min(r.width, r.height) < 1.6 and max(r.width, r.height) > 40]
+    def rule_piece(r):                 # a short piece of a table rule, in line with a long rule it touches (2025 ON 43 6(e)(i):
+        return any((abs(r.x0 - q.x0) < 0.5 and abs(r.x1 - q.x1) < 0.5 and r.y1 >= q.y0 - 0.5 and r.y0 <= q.y1 + 0.5) or
+                   (abs(r.y0 - q.y0) < 0.5 and abs(r.y1 - q.y1) < 0.5 and r.x1 >= q.x0 - 0.5 and r.x0 <= q.x1 + 0.5)
+                   for q in longr)     # the 6 pt stub of the Answer column rule became a 'bond': ERROR_PATTERNS 318)
     for d in page.get_drawings():
         r = (d['rect'].quad * m).rect
+        if min(r.width, r.height) < 1.6 and rule_piece(r):
+            continue
         r = fitz.Rect(r.x0 - 0.3, r.y0 - 0.3, r.x1 + 0.3, r.y1 + 0.3)   # straight lines have EMPTY boxes (pattern 96)
         if not r.intersects(clip) or not clip.contains(fitz.Point((r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2)):
             continue
@@ -595,6 +603,16 @@ FIT_SLANT = True      # maths: a slanted stroke crossing the crop's edge is take
 FIT_HEAD = True       # maths: column headings above a tree / table-like diagram are part of it (pattern 238)
 
 
+def _bond_end(pg, l, b):
+    """Chemistry: ink runs from the atom letter l towards the crop b at the letter's mid-height (a bond; pixels, because
+    some bonds are not reported by get_drawings - 2025 ON 23 q37). An option letter 'C' beside a chain has a gap."""
+    ym = (l.y0 + l.y1) / 2
+    x0, x1 = (l.x1 + 0.5, l.x1 + 6) if l.x1 <= b.x0 else (l.x0 - 6, l.x0 - 0.5)
+    pix = pg.get_pixmap(dpi=288, clip=fitz.Rect(x0, ym - 6, x1, ym + 6), colorspace=fitz.csGRAY)
+    cols = [min(pix.samples[r * pix.stride + c] for r in range(pix.height)) for c in range(pix.width)]
+    return bool(cols) and sum(1 for v in cols if v < 128) >= 0.5 * len(cols)
+
+
 def fit_crop(pg, b, max_grow=50.0, maths=False, chem=False):
     """Mend a figure crop that cuts through ink or a label (review rounds: 80% of 'crop cut' flags were real).
     1. a drawing crossing an edge is taken in (at most max_grow pt per side);
@@ -696,6 +714,11 @@ def fit_crop(pg, b, max_grow=50.0, maths=False, chem=False):
             near = ov > 0.15 or (ov == 0 and 0 <= gap < 14 and l.x0 >= b.x0 - 10 and l.x1 <= b.x1 + 10) or \
                 ((maths or chem) and ov <= 0.15 and -3 <= gap < 14 and l.x0 >= b.x0 - 10 and l.x1 <= b.x1 + 10)   # (just touching, M1;
             #   chemistry: the end atom 'H' of a displayed formula overlapping the crop by <= 15 %, ERROR_PATTERNS 285)
+            if chem and not near and ov == 0 and 0 <= gap < 22 and l.y0 >= b.y0 - 2 and l.y1 <= b.y1 + 2 and \
+                    re.fullmatch(r'(H|O|OH|HO|C|N|Cl|Br|I|F|S)', ' '.join(w[4] for w in lw).strip()) and \
+                    _bond_end(pg, l, b):
+                near = True   # (a bond must reach the atom: an option letter 'C' beside a chain is no atom, 2024 ON 23 q37)   # chemistry: a lone end atom beside a displayed formula, level with it (2025 ON 23 q37 'H—C',
+                #               2025 FM 12 q10 'O—H': the atom became question text far from its bond, ERROR_PATTERNS 315)
             half = ov > 0.15
             label_ok = (not sentence(lw, l)) if half else not bad_label(lw, l)
             if maths and re.fullmatch(r'\d{1,2}', ' '.join(w[4] for w in lw).strip()) and l.x0 < 62:

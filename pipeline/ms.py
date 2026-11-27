@@ -115,6 +115,16 @@ def _table_area(page, lines):
                and re.search(r'Page \d+|Mark Scheme|Syllabus|Paper|IGCSE|^\d{2,4}$', l['text'].strip())]
         if lab and box:
             top = max(l['y1'] for l in box) + 3
+    if header and header[0]['y0'] >= 120 and subjects.is_chem(subjects.path_syl(page.parent.name) or ''):
+        # chemistry 2025: the table runs on from the page before with NO header row and a new question's header row lower on
+        # the page (2025 ON 33 p9: 4(e)(ii)-4(h) above 'Question | Answer | Marks' of Q5 were lost, ERROR_PATTERNS 313):
+        # labels above that header row -> the table starts under the page header text
+        above = [l for l in lines if re.match(r'\d{1,2}\([a-z]\)', l['text'].replace(' ', '')) and l['y0'] < header[0]['y0'] - 2
+                 and l['x0'] < 130]
+        box = [l for l in lines if l['y0'] < min((a['y0'] for a in above), default=0) and l['y0'] < 120
+               and re.search(r'Page \d+|Mark Scheme|Syllabus|Paper|IGCSE|PUBLISHED|^\d{4}/\d{2}$|20\d\d$', l['text'].strip())]
+        if above and box:
+            top = max(l['y1'] for l in box) + 3
     if not header and top is None:
         return None
     top = header[0]['y1'] + 3 if top is None else top
@@ -207,6 +217,7 @@ def structured_rows_table(doc):
     """[{'label': '1(b)(iii)', 'path': (1,'b','iii'), 'segments': [{page, bbox}], 'text', 'marks_codes'}]"""
     rows, current = [], None
     MATHS = _maths(doc)
+    CHEM = subjects.is_chem(subjects.path_syl(doc.name) or '')
     for pno, page in enumerate(doc):
         lines = _lines(page)
         area = _table_area(page, lines)
@@ -242,13 +253,13 @@ def structured_rows_table(doc):
                       for l in lines):
             bottom = min(bottom, max(vb) + 1)
         qcol = [l for l in lines if l['x0'] < QX and top <= l['y0'] <= bottom]
-        labels = [l for l in qcol if LABEL.match(label_text(l['text'])) or ((rows or (MATHS and any(
+        labels = [l for l in qcol if LABEL.match(label_text(l['text'])) or ((rows or ((MATHS or CHEM) and any(
                       LABEL.match(label_text(o['text'])) and o['y0'] < l['y0'] for o in qcol))) and NONUM.match(label_text(l['text'])))
                   or (MATHS and NONUM4.match(label_text(l['text'])))
                   or (MATHS and SUB4.match(label_text(l['text'])))
                   or (MATHS and COMM.match(l['text']))]
         #   maths: '(a)(ii)' without its number is a label also when the first labelled row is on this page (2020 ON 41 q2:
-        #   every row after 2(a)(i) was lost; M3 reasons, pattern 243)
+        #   every row after 2(a)(i) was lost; M3 reasons, pattern 243); chemistry the same (2025 MJ 33 q2, pattern 314)
         if MATHS:                    # a label wrapped in the Q column ('5(a)(iv)' over '(b)', 2023 FM 62, M2 reasons):
             mg = []                  # one label '5(a)(iv)(b)' (a 4th level of 5(a)(iv)), not a row '(b)' = 5(b)
             for l in labels:
@@ -349,7 +360,8 @@ def structured_rows_table(doc):
             ink_y1 = max(r.y1 for r in ink)
             pics = [r for r in pics if not any(ink_y1 - 1 <= ry <= r.y0 + 1 for ry in hrules)]
             drawn = []
-            if MATHS:                                 # vector drawings in the row count too (a Venn diagram / sketch
+            if MATHS or CHEM:                         # vector drawings in the row count too (a Venn diagram / sketch; chemistry: a
+                #   displayed formula drawn under the last text line, 2025 ON 43 6(d)(iv), ERROR_PATTERNS 317)
                 for d_ in page.get_drawings():        # below the last text line was cut off, round 28: 2019 ON 42 q8)
                     r_ = d_['rect']
                     if not (y - 1 <= r_.y0 < y_end - 1 and r_.y1 <= y_end + 1 and r_.x0 >= QX - 2):
@@ -358,6 +370,9 @@ def structured_rows_table(doc):
                         continue                      # table rules (row / column lines), the page box
                     if d_.get('fill') and not d_.get('color') and r_.width > 0.3 * (x1 - x0):
                         continue                      # a shaded cell background
+                    if CHEM and not MATHS and (r_.x1 > CX + 2 or r_.x0 < QX + 2 or max(r_.width, r_.height) > 80
+                                               or min(r_.width, r_.height) > 40):
+                        continue                      # chemistry: only small strokes inside the Answer cell (bonds), no rules
                     drawn.append(r_)
             seg_bottom = min(y_end, max([r.y1 for r in ink] + [r.y1 for r in pics] + [r.y1 for r in drawn]) + 6)
             current['segments'].append({'page': pno + 1, 'bbox': [x0, round(y, 1), x1, round(seg_bottom, 1)]})

@@ -927,3 +927,36 @@ picture (2026 MJ 12 q3, 2015 MJ 11 q1); extra marking points (iii)/(iv) under a 
     / under the middle of a lower one, clear of the line at both ends. A tree cell keeps 5 pt under the tree (it touched the
     bottom edge, 2023 MJ 33). 2023 MJ 63 q4: the bottom-right '3' centred in its rectangle. Lesson: when Dhruv names a rule for one
     kind of label, apply it to every label of that drawing.
+
+## Chemistry C1 pass 1 (2026-11-27, GitHub run 45959753924: 70 papers, 83 reasons - the C0 classes held)
+313. MS page that continues the table with NO header row and has a new question's 'Question | Answer | Marks' header LOWER on
+    the page (2025 ON 33 p9 / p12): the table was read from that lower header only - 4(e)(ii)-4(h) and 7(f) had no mark
+    scheme. -> chemistry (ms._table_area): labels above the lower header -> the table starts under the page header text.
+    Blast over C0 + C1 MS: only these 2 pages.
+314. Label '(a)(ii)' printed without its question number on the SAME page as '2(a)(i)' (2025 MJ 33 q2) was dropped (the
+    rule needed rows from an earlier page). -> the maths rule (pattern 243) now also for chemistry.
+315. (repeat of 285, too narrow) the end atom 'H' of a displayed formula lying 10-17 pt OUTSIDE the crop became question text
+    and drifted away from its bond in the layout (2025 ON 23 q37 'H  -C', 2025 FM 12 q10 'O.   H'). -> chemistry fit_crop: a
+    lone atom symbol level with the drawing, <= 22 pt from the crop, is taken in when ink (a bond) runs from it towards the
+    crop (pixel test: some bonds are not reported by get_drawings). An option letter 'C' beside a chain has a gap and stays
+    out (2024 ON 23 q37 caught by the blast). Blast (all C0 + C1 figures, 1216): exactly the 2 targets.
+    NOTE: fig_blast.py does not see MCQ figures (extract gives them none) - use a bank/ json harness for MCQ crops.
+316. A picture under a line that the re-wrap breaks into two did not move down (2025 ON 63 1(e): 2nd line under the
+    tube picture). The beside test lets a line 2 pt above the picture through, cum_above wanted 2.5 pt. -> chemistry 0.5.
+317. MS row cut at the last TEXT line: a displayed formula drawn under it (vector strokes) was cut off (2025 ON 43 6(d)(iv),
+    2026 FM 42 6(c) - structure missing entirely, 2025 MJ 31 4(c)). -> chemistry: small strokes inside the Answer cell (no
+    rules: <= 80 pt, not both sides > 40) count for the row bottom, as maths drawings do. First try (all drawings) moved
+    3600 rows - narrowed to strokes: 13 rows, all checked.
+318. A 6 pt stub of the Answer column's rule (the rule is drawn in two pieces) was read as a bond and pulled into the
+    structure picture: a stray vertical line left of the formula (2025 ON 43 6(e)(i)). -> rule pieces in line with a long rule
+    they touch are no bonds (_chem_structures). Blast: 1 picture.
+319. A long Answer line kept by the cell / table fallback (or a line the re-wrap could not break) ran over the Marks /
+    Guidance column: words over the mark, words lost past the page edge (2025 MJ 53 1(a), 2025 MJ 63 2(a); C0 approved:
+    2015 MJ 32 3(b)(i), 2015 MJ 21 q6). Found by a new text-overlap check (/home/claude/tools idea: pairs of words of one row
+    overlapping). -> chemistry ms_layout._wrap_overrun: an Answer line = a run of words in reading order (other columns'
+    words on the same line skipped); its words past the column go to a new line, the Answer column below moves down.
+    Known (C0, 2 questions, 4 attempts - budget rule): 2026 MJ 41 4(c)(i) (bulleted lines in a table fallback row still
+    overlap the Guidance column) and 2026 MJ 63 2(a) ('temperature / °C' over two narrowed table columns overlaps itself).
+Known (C1, budget rule, no text lost): polymer chains' open left bond shows as a short stub (2024 ON 21 q38, 22 q36, 22 q37);
+2025 ON 23 q36 options 'A 1 and 3 ...' inside the structures picture (pattern 300 class).
+Hint check (pattern 295, now in pass 1 as ms_marksum): 9 hits in C1, 2 real (313), 7 Cambridge slips / Guidance rows.

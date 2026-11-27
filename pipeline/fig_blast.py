@@ -1,4 +1,4 @@
-"""Blast radius of a figure-rule change (extract.diagrams / store.fit_crop) on EVERY 0607 question figure (M3 lesson:
+"""Blast radius of a figure-rule change (extract.diagrams / store.fit_crop) on EVERY 0607 (or SYL=0620) question figure (M3 lesson:
 an 'arrowhead = graph' rule would have changed ~100 approved crops; ERROR_PATTERNS 251 lesson).
 
     git worktree add /tmp/oldtree HEAD                                   # the code before your change
@@ -15,16 +15,17 @@ import re
 import sys
 from multiprocessing import Pool
 
-RAW = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'raw', '0607')
+SYL = os.environ.get('SYL', '0607')        # SYL=0620: chemistry figures
+RAW = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'raw', SYL)
 
 
 def one(f):
     import warnings
     warnings.filterwarnings('ignore')
     import pymupdf, extract, store
-    m = re.search(r'/0607/(\d{4})-([A-Z]{2})/qp_(\d+)\.pdf', f)
+    m = re.search(r'/' + SYL + r'/(\d{4})-([A-Z]{2})/qp_(\d+)\.pdf', f)
     try:
-        meta, qs = extract.extract(f, '0607', m.group(1), m.group(2), m.group(3))
+        meta, qs = extract.extract(f, SYL, m.group(1), m.group(2), m.group(3))
     except Exception as e:
         return f, {'err': str(e)[:100]}
     d = pymupdf.open(f)
@@ -39,7 +40,7 @@ def one(f):
         walk(q, acc)
         for fg in acc:
             try:
-                fb = store.fit_crop(d[fg['page'] - 1], pymupdf.Rect(fg['bbox']), maths=True)
+                fb = store.fit_crop(d[fg['page'] - 1], pymupdf.Rect(fg['bbox']), maths=SYL == '0607', chem=SYL == '0620')
             except Exception:
                 fb = None
             res[fg.get('id', '?')] = [fg['page'], [round(v, 1) for v in fg['bbox']], [round(v, 1) for v in fb] if fb else None]
@@ -67,7 +68,7 @@ def diff(a_, b_):
             if a.get(k) != b.get(k):
                 A, B = a.get(k), b.get(k)
                 big = not A or not B or max(abs(x - y) for x, y in zip((A[2] or A[1]), (B[2] or B[1]))) > 3
-                print(('BIG ' if big else '    ') + f.split('/0607/')[1], k.split('_', 3)[-1], A and (A[2] or A[1]), '->',
+                print(('BIG ' if big else '    ') + f.split('/' + SYL + '/')[1], k.split('_', 3)[-1], A and (A[2] or A[1]), '->',
                       B and (B[2] or B[1]))
 
 

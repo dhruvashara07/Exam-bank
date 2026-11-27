@@ -1827,6 +1827,75 @@ def _cell_layout(u, h, e1, e2, L, M, has_marks, outer, rr, cov=(), force=None, g
     return v
 
 
+def _wrap_overrun(v, ne):
+    """Chemistry: a text line of the Answer cell that runs past the Answer column (rows kept by the cell / table fallback, a
+    line the re-wrap could not break: 2025 MJ 53 1(a), 2026 MJ 41 4(c)(i), 2015 MJ 32 3(b)(i) - words over the marks /
+    guidance, ERROR_PATTERNS 319): its words past the column go to a new line under it, and everything lower in the row
+    moves down by one line."""
+    if len(ne) < 2:
+        return v
+    a0, a1 = ne[0], ne[1]
+    for _ in range(12):
+        TT = v['text']
+        hit, owned = None, set()      # owned: every word of an Answer line (also the part past the column)
+        i = 0
+        while i < len(TT):           # a line = a run of words in reading order (the list keeps the print's order), left to right
+            t = TT[i]
+            if not (a0 - 1 <= t['x'] < a1 - 40) or not t['t'].strip():
+                i += 1
+                continue
+            ln = [t]
+            j = i + 1
+            while j < len(TT) and abs(TT[j]['y'] - t['y']) < 1.2:
+                o = TT[j]
+                if o['x'] >= a1 - 3 and re.fullmatch(r'\d{1,2}', o['t'].strip()):
+                    j += 1                   # the row's mark in the Marks column (printed inside the long line): not a word
+                    continue
+                if not (-2 <= o['x'] - (ln[-1]['x'] + ln[-1]['w']) <= 8):
+                    j += 1                   # another column's word on the same line (marks, Total, Guidance): skipped,
+                    continue                 # the Answer line may go on after it in the list (2015 MJ 32 3(b)(i) 'anions;')
+                ln.append(o); j += 1
+            owned |= {id(o) for o in ln}
+            if hit is None and ln[-1]['x'] + ln[-1]['w'] > a1 - 3 and ln[0]['x'] + ln[0]['w'] <= a1 - 3:
+                hit = (t['y'], ln)           # (a line whose FIRST word is already too long cannot be broken: skipped)
+            i = j
+        if hit is None:
+            return v
+        y, ln = hit
+        k = next(i for i, t in enumerate(ln) if t['x'] + t['w'] > a1 - 3)
+        s_ = max(t.get('s', 11) for t in ln)
+        pitch = round(1.25 * s_, 2)
+        mv = ln[k:]
+        x0_, dx = ln[0]['x'], mv[0]['x'] - ln[0]['x']
+        ids_ = {id(t) for t in mv}
+        inA = lambda x: a0 - 1 <= x <= a1 + 1      # only the Answer column moves down (Marks / Guidance keep their places)
+        h0 = v['h']
+        for t in v['text']:
+            if id(t) not in ids_ and t['y'] > y + 1.2 and (inA(t['x']) or id(t) in owned):
+                t['y'] = round(t['y'] + pitch, 2)
+        for t in mv:
+            t['x'] = round(t['x'] - dx, 2); t['y'] = round(t['y'] + pitch, 2)
+        for k_ in ('figs', 'images', 'glyphs'):
+            for g in v.get(k_) or []:
+                if g['y'] > y and inA(g['x']):
+                    g['y'] = round(g['y'] + pitch, 2)
+        def mp_(d):
+            out = []
+            for cmd, args in re.findall(r'([A-Za-z])([^A-Za-z]*)', d):
+                n = [float(a) for a in MP.NUM.findall(args)]
+                if cmd in 'MLCSQT':
+                    for i_ in range(1, len(n), 2):
+                        if n[i_] >= h0 - 1 or (n[i_] > y + 1 and inA(n[i_ - 1])):
+                            n[i_] += pitch
+                elif cmd == 'V':
+                    n = [a + pitch if a >= h0 - 1 else a for a in n]
+                out.append(cmd + ' '.join(f'{a:.2f}' for a in n))
+            return ''.join(out)
+        v['lines'] = [{**l, 'd': mp_(l['d'])} for l in v['lines']]
+        v['h'] = round(h0 + pitch, 2)
+    return v
+
+
 def build(q, store):
     MP.EQUAL_FLEX = subjects.is_maths(str((q.get('paper') or {}).get('syllabus', '0625')))
     MP.CHEM = subjects.is_chem(str((q.get('paper') or {}).get('syllabus', '0625')))   # maths: Answer = Partial Marks width
@@ -1969,6 +2038,8 @@ def build(q, store):
                 total_row = _own_total(q['marks'], first, [v]) if q.get('marks') else None
                 if not v['text'] and not v.get('figs') and not v.get('images') and not v.get('glyphs'):
                     continue                          # the row held only the printed total
+        if MP.CHEM and v is not None and first.get('new_edges'):
+            v = _wrap_overrun(v, first['new_edges'])
         fixed.append(v)
     out = []
     for v in fixed:                                   # the PAPER's total ('[Total: 80]' under the last question, 2016 MJ 43): not ours
