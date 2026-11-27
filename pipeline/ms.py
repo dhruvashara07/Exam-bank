@@ -115,6 +115,14 @@ def _table_area(page, lines):
                and re.search(r'Page \d+|Mark Scheme|Syllabus|Paper|IGCSE|^\d{2,4}$', l['text'].strip())]
         if lab and box:
             top = max(l['y1'] for l in box) + 3
+    if not header and _maths(page.parent) and any('Question' in p_.get_text() for p_ in page.parent):
+        # maths 2015-2016: the table runs on to pages with no header row (2015 MJ 31 p3-5: 10 questions without a mark
+        # scheme; M4, pattern 321): it starts under the page's header box, when a question number sits in the Q column
+        lab = [l for l in lines if l['x0'] < 60 and l['y0'] > 80 and re.fullmatch(r'\d{1,2}(\s*\([a-z]\).*)?', l['text'].strip())]
+        box = [l for l in lines if l['y0'] < 80 and re.search(
+            r'Page \d+|Mark Scheme|Syllabus|Paper|IGCSE|Cambridge International Examinations|^\d{2,4}$', l['text'].strip())]
+        if lab and box and min(a['y0'] for a in lab) > max(l['y1'] for l in box) + 10:
+            top = max(l['y1'] for l in box) + 3
     if header and header[0]['y0'] >= 120 and subjects.is_chem(subjects.path_syl(page.parent.name) or ''):
         # chemistry 2025: the table runs on from the page before with NO header row and a new question's header row lower on
         # the page (2025 ON 33 p9: 4(e)(ii)-4(h) above 'Question | Answer | Marks' of Q5 were lost, ERROR_PATTERNS 313):
@@ -218,6 +226,7 @@ def structured_rows_table(doc):
     rows, current = [], None
     MATHS = _maths(doc)
     CHEM = subjects.is_chem(subjects.path_syl(doc.name) or '')
+    qoff = 0                     # maths 2015-2016 paper 6: part B numbers its questions from 1 again (M4, pattern 320)
     for pno, page in enumerate(doc):
         lines = _lines(page)
         area = _table_area(page, lines)
@@ -241,7 +250,8 @@ def structured_rows_table(doc):
         if MATHS and 'MROW' in locals() and MROW < 1e9 and (QX, CX) != _columns(lines, MATHS):
             PX = MROW
         elif MATHS:
-            pm = [l['x0'] for l in lines if l['text'].strip().startswith('Partial') and l['y0'] < 130]
+            pm = [l['x0'] for l in lines if (l['text'].strip().startswith('Partial') or l['text'].strip() == 'Part Marks')
+                  and l['y0'] < 130]           # 2015-2017 print 'Part Marks' (M4, pattern 320)
             if pm:
                 vr = sorted(round(d['rect'].x0) for d in page.get_drawings() if d['rect'].width < 2 and d['rect'].height > 5
                             and CX + 10 < d['rect'].x0 < pm[0])
@@ -254,10 +264,14 @@ def structured_rows_table(doc):
             bottom = min(bottom, max(vb) + 1)
         qcol = [l for l in lines if l['x0'] < QX and top <= l['y0'] <= bottom]
         labels = [l for l in qcol if LABEL.match(label_text(l['text'])) or ((rows or ((MATHS or CHEM) and any(
-                      LABEL.match(label_text(o['text'])) and o['y0'] < l['y0'] for o in qcol))) and NONUM.match(label_text(l['text'])))
+                      LABEL.match(label_text(o['text'])) and o['y0'] < l['y0'] + (1 if MATHS else 0) for o in qcol))) and NONUM.match(label_text(l['text'])))
                   or (MATHS and NONUM4.match(label_text(l['text'])))
                   or (MATHS and SUB4.match(label_text(l['text'])))
-                  or (MATHS and COMM.match(l['text']))]
+                  or (MATHS and COMM.match(l['text']))
+                  or (MATHS and ROMAN1.match(label_text(l['text'])) and (rows or any(
+                      LABEL.match(label_text(o['text'])) and o['y0'] < l['y0'] + (1 if MATHS else 0) for o in qcol)))]
+        #   maths 2015-2016: the roman label printed alone in the Q column ('(ii)' under '(b) (i)'): its rows were lost
+        #   (M4, pattern 320)
         #   maths: '(a)(ii)' without its number is a label also when the first labelled row is on this page (2020 ON 41 q2:
         #   every row after 2(a)(i) was lost; M3 reasons, pattern 243); chemistry the same (2025 MJ 33 q2, pattern 314)
         if MATHS:                    # a label wrapped in the Q column ('5(a)(iv)' over '(b)', 2023 FM 62, M2 reasons):
@@ -270,6 +284,15 @@ def structured_rows_table(doc):
                     continue
                 mg.append(l)
             labels = mg
+            mg = []                  # 2015-2016: number, letter and roman printed apart on ONE row ('1' | '(a) (i)'): one label
+            for l in sorted(labels, key=lambda l_: (round(l_['y0'] / 3), l_['x0'])):    # (M4, pattern 320)
+                if (mg and abs(l['y0'] - mg[-1]['y0']) < 3 and l['x0'] > mg[-1]['x0']
+                        and LABEL.match(label_text(mg[-1]['text'])) and not COMM.match(mg[-1]['text'])
+                        and LABEL.match(label_text(mg[-1]['text']) + label_text(l['text']))):
+                    mg[-1] = dict(mg[-1], text=label_text(mg[-1]['text']) + label_text(l['text']), x1=l['x1'])
+                    continue
+                mg.append(l)
+            labels = sorted(mg, key=lambda l_: l_['y0'])
         if not labels and not current:
             continue
         x0, x1 = 58.0, page.rect.width - 58.0
@@ -317,6 +340,8 @@ def structured_rows_table(doc):
                    or (MATHS and re.fullmatch(r"(Modelling|Investigation)(\s+[A-Z0-9][\w']*)*\s*", l['text'].strip()))]
         #   ('Modelling DELIVERIES BY SCOOTER', 'Modelling Waste Plastic', a bare 'Modelling': 2024-2025 titles, M1)
         #                                                  part B heading ('MODELLING ...' 2021, 'Modelling: ...' 2025; round 28)
+        bheads = [l['y0'] for l in lines if MATHS and (re.match(r'(B\s+)?(MODELLING|Modelling)\b', l['text'].strip())
+                                                       or (l['text'].strip() == 'B' and l['x0'] < 60))]
         for i, (y, lab) in enumerate(cuts):
             y_end = cuts[i + 1][0] if i + 1 < len(cuts) else bottom
             y_end = min([y_end] + [h - 3 for h in headers if h > y + 6 and (lab is None or h > lab['y0'])])
@@ -327,13 +352,30 @@ def structured_rows_table(doc):
                 rows.append(current)
             elif lab is not None:
                 text = label_text(lab['text'])
-                if (NONUM.match(text) or (MATHS and NONUM4.match(text))) and current:
+                cn = next((r_ for r_ in reversed(rows) if isinstance(r_['path'][0], int)), None) if MATHS else current
+                if (MATHS and cn and ROMAN1.match(text) and len(cn['path']) >= 2 and cn['path'][1] not in ROMANS
+                        and isinstance(cn['path'][1], str) and not (text == '(i)' and cn['path'][1] == 'h')):
+                    text = str(cn['path'][0]) + '(' + cn['path'][1] + ')' + text   # lone roman = the current letter's
+                elif MATHS and cn and ROMAN1.match(text) and (len(cn['path']) == 1 or cn['path'][1] in ROMANS):
+                    text = str(cn['path'][0]) + text                          # '1(ii)' (no letter in this question)
+                elif MATHS and cn and (NONUM.match(text) or NONUM4.match(text)):
+                    text = str(cn['path'][0]) + text
+                elif (NONUM.match(text) or (MATHS and NONUM4.match(text))) and current:
                     text = str(current['path'][0]) + text
                 sub4 = SUB4.match(text) if MATHS else None   # '4(b)(iii)(a)': a fourth level, part of 4(b)(iii) (2021 FM 42)
                 if sub4:
                     text = sub4.group(1)
                 m = LABEL.match(text)
+                if m is None:
+                    raise ValueError(f"label {text!r} p{pno+1} y{lab['y0']:.0f} cn={cn and cn['path']}")
                 path = (int(m.group(1)),) + tuple(g.strip('()') for g in m.groups()[1:3] if g)
+                prev_y = cuts[i - 1][1]['y0'] if i and cuts[i - 1][1] is not None else -1
+                if (MATHS and not qoff and path[0] == 1 and rows and any(prev_y < hy < lab['y0'] for hy in bheads)
+                        and not (NONUM.match(label_text(lab['text'])) or ROMAN1.match(label_text(lab['text'])))):
+                    qoff = max(r_['path'][0] for r_ in rows if isinstance(r_['path'][0], int))
+                    #   part B (under its 'B MODELLING' heading) starts again at 1: it continues our numbering (2016 MJ 63)
+                if MATHS and qoff and not (NONUM.match(label_text(lab['text'])) or ROMAN1.match(label_text(lab['text']))):
+                    path = (path[0] + qoff,) + path[1:]
                 extra = [x for x in m.group(4).split(',') if x]        # ',(ii),(iii)'
                 if (MATHS and not m.group(2) and m.group(3) and m.group(3) not in ('(i)',) and current
                         and len(current['path']) == 3 and current['path'][0] == path[0] and isinstance(current['path'][1], str)):
@@ -382,6 +424,7 @@ def structured_rows_table(doc):
 
 
 SUB4 = re.compile(r'^(\d{1,2}\([a-z]\)\([ivx]+\))(\([a-z]\))$')     # maths: 4(b)(iii)(a)
+ROMAN1 = re.compile(r'^\((?:i|ii|iii|iv|v|vi|vii|viii|ix|x)\)$')   # maths: a roman label alone in the Q column
 COMM = re.compile(r'^Communication(?::|\s+seen)')     # maths investigation papers: communication marks (ERROR_PATTERNS 67)
 
 
@@ -531,6 +574,7 @@ def _label_columns(doc):
     20 pt further right than 2015). Taken from where '(a)' and '(i)' tokens are printed most often."""
     import collections
     let, rom, num = collections.Counter(), collections.Counter(), collections.Counter()
+    rom2 = []
     for page in doc:
         for x0, y0, x1, y1, w, *_ in page.get_text('words'):
             if x0 > 200:
@@ -539,16 +583,26 @@ def _label_columns(doc):
                 let[round(x0 / 4)] += 1
             elif re.fullmatch(r'\((?:i|ii|iii|iv)\)', w):
                 rom[round(x0 / 4)] += 1
+                if w in ('(ii)', '(iii)', '(iv)'):
+                    rom2.append(x0)
             elif re.fullmatch(r'\d{1,2}\.?', w):
                 num[round(x0 / 4)] += 1
     if not let:
         return OLD_Q, OLD_L, OLD_R
     lx = let.most_common(1)[0][0] * 4
     if abs(lx - 66) < 8:                      # the 2015-16 layout: keep the tuned ranges
-        return OLD_Q, OLD_L, OLD_R
-    nx = max([k * 4 for k, n in num.items() if k * 4 < lx - 4] or [lx - 20], key=lambda x: num[round(x / 4)])
-    rx = rom.most_common(1)[0][0] * 4 if rom else lx + 16
-    return (nx - 8, lx - 4), (lx - 6, lx + 14), (rx - 6, rx + 14)
+        out = (OLD_Q, OLD_L, OLD_R)
+    else:
+        nx = max([k * 4 for k, n in num.items() if k * 4 < lx - 4] or [lx - 20], key=lambda x: num[round(x / 4)])
+        rx = rom.most_common(1)[0][0] * 4 if rom else lx + 16
+        out = ((nx - 8, lx - 4), (lx - 6, lx + 14), (rx - 6, rx + 14))
+    if _maths(doc) and rom2:
+        # maths 2014-2015: romans are printed RIGHT-aligned ('(iii)' 6 pt left of '(i)'): (ii), (iii) fell outside the roman
+        # column and their rows were lost (2014 ON 42, 2015 MJ 42; M4, pattern 322) -> the column starts at the leftmost one
+        lo = min(rom2) - 2
+        if lo < out[2][0] and lo > lx + 6:
+            out = (out[0], (out[1][0], min(out[1][1], lo - 0.5)), (lo, out[2][1]))
+    return out
 
 
 def structured_rows_columns(doc):
@@ -562,6 +616,11 @@ def structured_rows_columns(doc):
     CODE_X = 480 if cols == (globals()['OLD_Q'], globals()['OLD_L'], globals()['OLD_R']) else 420   # 2005: codes at 470
     rows, current, cur = [], None, [0, None, None]
     MATHS, mr, qoff = _maths(doc), None, 0
+    doc_mr = None
+    if MATHS:
+        import collections as _c
+        mrs = _c.Counter(tuple(m_) for m_ in (_maths_rules(p_) for p_ in doc) if m_)
+        doc_mr = list(mrs.most_common(1)[0][0]) if mrs else None
     for pno, page in enumerate(doc):
         lines = _lines(page)
         words = page.get_text('words')
@@ -577,7 +636,8 @@ def structured_rows_columns(doc):
                         continue
                 fixed.append(w_)
             words = fixed
-        mr = (_maths_rules(page) or (mr if pno else None)) if MATHS else None   # 2014 maths: marks between the 3rd and 4th rule
+        mr = (_maths_rules(page) or (mr if pno else None) or doc_mr) if MATHS else None   # 2014 maths: marks between the 3rd and 4th rule
+        #   (doc_mr: a page whose own rules are hidden by drawn grids takes the scheme's usual rules - 2014 ON 51 p2, pattern 322)
         head = [l['y1'] for l in lines if l['y0'] < 80 and ('Cambridge' in l['text'] or 'Mark Scheme' in l['text'])]
         top = (max(head) + 8) if head else 60
         foot = [l['y0'] for l in lines if l['y0'] > page.rect.height - 80 and ('©' in l['text'] or 'UCLES' in l['text'])]

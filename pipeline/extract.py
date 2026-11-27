@@ -141,7 +141,7 @@ def skipped_page(page):
 def boundaries(doc):
     """Walk pages in order and accept labels that continue the numbering sequence."""
     out, q, letter, roman = [], 0, None, None
-    maths, pq = maths_doc(doc), None
+    maths, pq, bhead = maths_doc(doc), None, False
     for pno in range(1, len(doc)):
         page = doc[pno]
         if skipped_page(page):
@@ -150,12 +150,17 @@ def boundaries(doc):
         # 2014 maths paper 6: part B numbers its questions from 1 again ('B  MODELLING', then '1'): they continue ours
         heads = [l['y0'] for l in visible_lines(page, top - 30, bottom) if maths and q
                  and re.match(r'^(B\s+)?MODELLING\b', l['text'].strip())]
+        if maths and bhead and not heads and q:   # the heading on a page of its own before part B's '1' (2015-2016 paper 6:
+            heads = [-1.0]                        # part B lost; M4, pattern 323)
+        bhead = False
         for t in label_tokens(page, top, bottom):
             if t['kind'] == 'q' and t['val'] == 1 and heads and t['y0'] > min(heads) and q >= 1:
                 q, letter, roman, pq = q + 1, None, None, 1
                 heads = []
                 out.append({'page': pno, 'y': t['y0'], 'path': (q,)})
                 continue
+            if t['kind'] == 'q' and heads:
+                heads = [h_ for h_ in heads if h_ > t['y0']]
             if t['kind'] == 'q' and pq is not None and t['val'] == pq + 1:
                 q, letter, roman, pq = q + 1, None, None, t['val']
                 out.append({'page': pno, 'y': t['y0'], 'path': (q,)})
@@ -169,6 +174,7 @@ def boundaries(doc):
             elif t['kind'] == 'r' and letter and t['val'] == (ROMAN[ROMAN.index(roman) + 1] if roman else 'i'):
                 roman = t['val']
                 out.append({'page': pno, 'y': t['y0'], 'path': (q, letter, roman)})
+        bhead = bool(heads) and maths and pq is None
     return out
 
 

@@ -1,0 +1,153 @@
+{
+ "batch": "M4",
+ "subject": "0607",
+ "sessions": [
+  "2014-ON",
+  "2015-MJ",
+  "2015-ON",
+  "2016-MJ",
+  "2016-ON",
+  "2017-MJ",
+  "2017-ON"
+ ],
+ "created": "2026-11-27T11:00:42+00:00",
+ "phases": {
+  "build": [
+   {
+    "start": "2026-11-27T11:00:42+00:00",
+    "end": "2026-11-27T11:57:32+00:00"
+   }
+  ],
+  "claude": [
+   {
+    "start": "2026-11-27T11:57:47+00:00",
+    "end": null
+   }
+  ],
+  "claude1": [],
+  "claude2": [],
+  "review": [],
+  "fix": []
+ },
+ "github_runs": [
+  {
+   "id": 45986873997,
+   "name": "Question bank",
+   "branch": "main",
+   "conclusion": null,
+   "start": "2026-11-27T11:00:44Z",
+   "end": "2026-11-27T11:00:48Z",
+   "minutes": 0.1
+  }
+ ],
+ "counts": {},
+ "errors": [
+  {
+   "pattern": "320",
+   "kind": "new",
+   "what": "2015-17 MS labels printed apart / lone romans / Part Marks / part B from 1",
+   "fix": "ms.py table parser maths",
+   "found_by": "claude",
+   "at": "2026-11-27T13:31:46+00:00"
+  },
+  {
+   "pattern": "321",
+   "kind": "new",
+   "what": "MS table on pages without header (2015 MJ 31)",
+   "fix": "_table_area maths",
+   "found_by": "claude",
+   "at": "2026-11-27T13:31:46+00:00"
+  },
+  {
+   "pattern": "322",
+   "kind": "new",
+   "what": "right-aligned romans; hidden rules (2014 ON 5x marks 10/24)",
+   "fix": "_label_columns, doc_mr",
+   "found_by": "claude",
+   "at": "2026-11-27T13:31:46+00:00"
+  },
+  {
+   "pattern": "323",
+   "kind": "new",
+   "what": "QP part B lost (heading on its own page)",
+   "fix": "extract.boundaries carries heading",
+   "found_by": "claude",
+   "at": "2026-11-27T13:31:46+00:00"
+  },
+  {
+   "pattern": "324",
+   "kind": "new",
+   "what": "tree slot under last branch / number labels cut",
+   "fix": "fit_crop FIT_M4",
+   "found_by": "claude",
+   "at": "2026-11-27T13:31:46+00:00"
+  },
+  {
+   "pattern": "325",
+   "kind": "new",
+   "what": "MMEtc Q, MMaFermat Q",
+   "fix": "MATHS_GLYPHS",
+   "found_by": "claude",
+   "at": "2026-11-27T13:31:46+00:00"
+  }
+ ],
+ "tokens": [],
+ "events": [
+  {
+   "at": "2026-11-27T11:00:42+00:00",
+   "task": "start M4 --subject"
+  },
+  {
+   "at": "2026-11-27T11:00:42+00:00",
+   "task": "phase M4 build"
+  },
+  {
+   "at": "2026-11-27T11:01:06+00:00",
+   "task": "gh M4 45986873997"
+  },
+  {
+   "at": "2026-11-27T11:57:32+00:00",
+   "task": "phase M4 build"
+  },
+  {
+   "at": "2026-11-27T11:57:47+00:00",
+   "task": "phase M4 claude"
+  },
+  {
+   "at": "2026-11-27T11:57:47+00:00",
+   "task": "pass1 triage: marks of papers 5/6, no-table MS"
+  },
+  {
+   "at": "2026-11-27T12:46:25+00:00",
+   "task": "ms.py label classes 320-323 written; checking other classes"
+  },
+  {
+   "at": "2026-11-27T12:49:19+00:00",
+   "task": "fit_crop 324, glyphs 325; waiting fig blast"
+  },
+  {
+   "at": "2026-11-27T13:31:46+00:00",
+   "task": "error M4 --kind"
+  },
+  {
+   "at": "2026-11-27T13:31:46+00:00",
+   "task": "error M4 --kind"
+  },
+  {
+   "at": "2026-11-27T13:31:46+00:00",
+   "task": "error M4 --kind"
+  },
+  {
+   "at": "2026-11-27T13:31:46+00:00",
+   "task": "error M4 --kind"
+  },
+  {
+   "at": "2026-11-27T13:31:46+00:00",
+   "task": "error M4 --kind"
+  },
+  {
+   "at": "2026-11-27T13:31:46+00:00",
+   "task": "error M4 --kind"
+  }
+ ]
+}

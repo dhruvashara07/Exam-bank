@@ -960,3 +960,34 @@ picture (2026 MJ 12 q3, 2015 MJ 11 q1); extra marking points (iii)/(iv) under a 
 Known (C1, budget rule, no text lost): polymer chains' open left bond shows as a short stub (2024 ON 21 q38, 22 q36, 22 q37);
 2025 ON 23 q36 options 'A 1 and 3 ...' inside the structures picture (pattern 300 class).
 Hint check (pattern 295, now in pass 1 as ms_marksum): 9 hits in C1, 2 real (313), 7 Cambridge slips / Guidance rows.
+
+## M4 (2014 ON - 2017 ON, 124 papers - 2026-11-27), GitHub pass 1: 623 reasons
+320. 2015-2016 maths MS print the labels apart in the Q column ('1' | '(a) (i)' on one row, '(ii)' alone below): the table
+    parser lost every lone roman (its rows went into the row above: ~200 rows, 44 hits in 2016 MJ alone), read '(i)' / '(v)'
+    as LETTERS ('3(i)', '6(v)'), missed the number when '(a) (i)' sat 0.3 pt above it, read 'Part Marks' (2015-2017 header) as
+    no header (numbers of fractions in that column counted as marks: 2017 MJ 61 marks 118/40), and paper 6 part B numbering
+    from 1 again went into part A's questions. -> ms.structured_rows_table (maths): ROMAN1 labels join the current letter;
+    labels on one row merge; 'Part Marks' = Partial Marks column; part B after its 'B MODELLING' heading continues our
+    numbering (never after the 'Communication' criteria lines that name earlier parts). Blast: all 460 approved maths MS
+    unchanged (labels + segments); only 2020 ON 11 q20/q21 lose 2 Part-Marks numbers from their stored codes (not used).
+321. A maths table that runs on to pages with NO header row (2015 MJ 31 p3-5): 10 questions had no mark scheme. -> _table_area
+    (maths): such a page starts under its page-header box when a question number sits in the Q column (chemistry 287 too).
+322. Old column-format MS (2014 ON, 2015 MJ): romans are printed RIGHT-aligned - '(iii)' 6 pt left of '(i)' - so (ii)/(iii)
+    fell outside the roman column (2014 ON 42, 2015 MJ 42: rows lost); a page whose column rules are hidden by drawn grids
+    had no marks column (2014 ON 51-53: marks 10/24). -> _label_columns: the roman column starts at the leftmost (ii)/(iii);
+    _maths_rules falls back to the scheme's most common rule set.
+323. Question side, paper 6 2015-2017: the 'B MODELLING' heading on a page of its own before part B's '1': part B was not
+    found at all (2016 ON 61: 7 of 11 questions; 2015 MJ 62, 2016 ON 63, 2017 ON 62). -> extract.boundaries carries the
+    heading to the next page. Blast: only those 4 M4 papers change.
+324. fit_crop (maths): (a) a tree's answer slot '.........' under its LAST branch was left out (the other slots were in):
+    2015 ON 31-33 q10, 2015 ON 43 q10 (2 trees), 2016 ON 31 q8; (b) number labels of a drawing ('1' over a circle of points,
+    '4' beside a box, the top '6' of a tree) were dropped as 'question numbers'. -> a dots-only line next to a crop that holds
+    other dot slots, and a 1-2 digit line inside the drawing's span away from the margin (not in a ruled cell), are taken in.
+    store.FIT_M4 toggles them. fig_blast (460 papers): 43 crops grow, all looked at - all gain a missing label / heading /
+    slot. 6 are APPROVED (2014 MJ 21 q8, 2014 MJ 32 q9, 2018 MJ 31 q8, 2022 ON 51 q2, 2023 ON 62 q2 clock numerals, 2025 MJ
+    61 q2): not rebuilt now - they improve at their next rebuild (re-show then).
+325. New equation-font codes: MMEtc 'Q' = ∅ (2015 MJ 23), MMaFermat-Regular 'Q' = ℚ (2017 MJ 32) -> MATHS_GLYPHS.
+326. KNOWN (1 question each): α of a nameless subset (2014 ON 22 q5) and π (2015 MJ 12 q12) drawn in sans.
+327. KNOWN (crop fragments, 1 question each): formula sentence under the triangle (2014 ON 63 q2), captions twice + 'r.'
+    (2015 ON 62 q2), a vector bracket piece over a grid (2016 MJ 33 q7), the 2nd camera diagram cut beside its text
+    (2015 ON 63 q5). Pre-existing, found by the blast: approved 2021 FM 42 q4(b)(i) 'Table 1' crop starts at its 2nd row.

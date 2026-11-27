@@ -613,6 +613,9 @@ def _bond_end(pg, l, b):
     return bool(cols) and sum(1 for v in cols if v < 128) >= 0.5 * len(cols)
 
 
+FIT_M4 = {'dots', 'num'}   # M4 rules (pattern 324): tree answer slots, number labels - a flag so fig_blast can toggle it
+
+
 def fit_crop(pg, b, max_grow=50.0, maths=False, chem=False):
     """Mend a figure crop that cuts through ink or a label (review rounds: 80% of 'crop cut' flags were real).
     1. a drawing crossing an edge is taken in (at most max_grow pt per side);
@@ -740,6 +743,19 @@ def fit_crop(pg, b, max_grow=50.0, maths=False, chem=False):
             if maths and label_ok and D is not None and (l.y1 <= D.y0 + 2 or l.y0 >= D.y1 - 2) and \
                     ((l.x1 < D.x0 - 14 or l.x0 > D.x1 + 14) or ('=' in lt_ and len(lt_) > 6)) and not re.search(r'NOT|SCALE', lt_):
                 label_ok = False      # maths: a line above / below the drawing and off to its side is question text
+            if maths and FIT_M4 and not label_ok and near and not half and D is not None:
+                dots_ = lambda r_: re.fullmatch(r'[.\u2026 ]{6,}', ' '.join(w[4] for w in ws if fitz.Rect(w[:4]).intersects(r_)))
+                if 'dots' in FIT_M4 and dots_(l) and l.x0 >= D.x0 - 10 and l.x1 <= D.x1 + 30 and any(
+                        b.contains(o) and dots_(o) for o in lines if o is not l):   # (a dots line's ink box is thinner than its word box)
+                    label_ok = True   # an answer slot under the last branch of a tree (the crop holds the other slots):
+                    #                   2015 ON 31 q10, 2015 ON 43 q10, 2016 ON 31 q8 lost it (M4, pattern 324)
+                elif ('num' in FIT_M4 and re.fullmatch(r'\d{1,2}', lt_.strip()) and l.x0 >= 62 and l.y0 > 60
+                      and D.y0 - 14 <= l.y0 and l.y1 <= D.y1 + 2 and l.x0 >= D.x0 - 20 and l.x1 <= D.x1 + 20
+                      and not (any(r_.width < 1.6 and r_.y0 - 1 <= (l.y0 + l.y1) / 2 <= r_.y1 + 1 and r_.x0 <= l.x0 + 1 for r_ in drw)
+                               and any(r_.width < 1.6 and r_.y0 - 1 <= (l.y0 + l.y1) / 2 <= r_.y1 + 1 and r_.x0 >= l.x1 - 1
+                                       for r_ in drw))):          # (never a number in a ruled table cell)
+                    label_ok = True   # a number label of the drawing ('1' over a circle of points, '4' beside a box): not
+                    #                   the question number, which sits at the margin (2017 MJ 63 q3, 2016 MJ 51 q2; pattern 324)
             if half and re.match(r'(Fig|Table)\.?\s*\d', ' '.join(w[4] for w in lw)):
                 label_ok = False
             if near and label_ok and (len(lw) <= (7 if maths else 4) or numeric(lw) or half):   # (maths: axis titles

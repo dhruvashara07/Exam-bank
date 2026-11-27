@@ -57,10 +57,11 @@ def unpua(ch):
 MATHS_GLYPHS = {
     'AllAndNone': {'!': '≠', '#': '×', "'": '÷'},
     'MMBinary': {'!': '±', '#': '×', "'": '÷', '+': '∩', ',': '∪', 'j': '∪', 'k': '∩'},   # j k: M1 2024 MJ 23
-    'MMEtc': {'f': '…', 'l': '′', 'c': '°', 'g': '⋯', 'k': '…', 'h': '⋮'},          # c g: M1 2024 MJ 43 / 51; k: M2 2022 MJ 61; h: M3 2020 MJ 52
+    'MMEtc': {'f': '…', 'l': '′', 'c': '°', 'g': '⋯', 'k': '…', 'h': '⋮', 'Q': '∅'},   # Q: M4 2015 MJ 23 'R ≠ ∅'          # c g: M1 2024 MJ 43 / 51; k: M2 2022 MJ 61; h: M3 2020 MJ 52
     'MMGreekItalic': {'i': 'θ', 'a': 'α'},                               # M3 2018 ON 23 'sin θ', 2020 ON 23 'α is acute'
     'MMaEtc-Regular': {'g': '⋯'},                                                   # M2 2023 ON 61 'F2 + F3 + ⋯ + Fn'
-    'MathematicalPi-Six': {'N': 'ℕ', 'Z': 'ℤ', 'Q': 'ℚ', 'R': 'ℝ'},               # M2 2021 ON 31 'natural number (ℕ)'
+    'MathematicalPi-Six': {'N': 'ℕ', 'Z': 'ℤ', 'Q': 'ℚ', 'R': 'ℝ'},
+    'MMaFermat-Regular': {'Q': 'ℚ', 'N': 'ℕ', 'Z': 'ℤ', 'R': 'ℝ'},               # M4 2017 MJ 32 'ℚ = { ... }' (pattern 325)               # M2 2021 ON 31 'natural number (ℕ)'
     'MMExtra': {'1': '<', '2': '>'},
     'MMGreek': {'r': 'π'}, 'MMaGreek-Regular': {'r': 'π'},
     'MMNegate': {'!': '≠', 'g': '∉'},
