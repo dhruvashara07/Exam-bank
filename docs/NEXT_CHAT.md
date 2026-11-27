@@ -2,10 +2,12 @@
 Exam-bank (repo dhruvashara07/Exam-bank). First add the repo with push access. Follow docs/START_HERE.md exactly: git pull,
 then every file it lists (for chemistry read docs/CHEM_PLAN.md instead of MATHS_PLAN), PROGRESS.md NEXT line first. Section 5
 (usage budget) applies.
-Task: finish chemistry batch C1 (round 45 on the own-account review page; PROGRESS NEXT). Read feedback_r45, fix every wrong
-item as a class gated to 0620 (look for the same class in C0 + C1), freeze checks (golden 0, nothing under 0625/0607, maths
-ms_layout hash = baseline), review_round close 45, approve the 70 C1 papers, docs, push with pipeline/push.sh. Then the same
-cycle for C2 (CHEM_PLAN 6: 2021-FM .. 2023-ON, 125 papers - split a/b if needed) in a new chat.
+Task: chemistry batch C2 (docs/CHEM_PLAN.md section 6: 2021-FM .. 2023-ON, 125 papers - split C2a / C2b if the chat
+cannot hold it; C1 approved 2026-11-27). Full cycle (skill exam-batch-cycle): GitHub pass 1 (with the ms_marksum hint), ONE
+Claude check round (also a word-overlap and black-shape check over every mark scheme; look at EVERY question a layout fix
+changes), pass 2, my review round on the chemistry review page (own account), fixes as classes gated to 0620, freeze checks
+(golden 0, nothing under 0625/0607, maths ms_layout hash = baseline, computed in the same repo), approve, docs, push with
+pipeline/push.sh, write the NEXT line. Maths runs in the shared account at the same time: pull before every push.
 
 # Maths M4 (separate chat)
 Exam-bank (repo dhruvashara07/Exam-bank). First add the repo with push access. Follow docs/START_HERE.md exactly: git pull,

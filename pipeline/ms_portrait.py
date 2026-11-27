@@ -415,6 +415,25 @@ def portrait_unit(u, W=523.0, widths=None, sizes=None, probe=False):
             cum += extra
         paras_of[(b, c)] = out
         band_extra[b] = max(band_extra[b], cum)
+    if globals().get('CHEM'):
+        # chemistry: a Guidance paragraph stays level with the Answer line it was printed beside - it moves down with the
+        # Answer lines re-wrapped above it, never up into an earlier one (Dhruv round 45: 2015 MJ 32 3(a) 'A if electron
+        # configuration' level with M3, ERROR_PATTERNS 321)
+        ref_ = {}
+        for (b, c), ps_ in paras_of.items():         # the Answer column (the first flexible one) leads
+            if b not in ref_ or c < ref_[b]:
+                ref_[b] = c
+        for (b, c), ps_ in paras_of.items():
+            if c == ref_.get(b) or not ps_ or 'cum' not in ps_[0]:
+                continue
+            rp = paras_of.get((b, ref_[b]), [])
+            base = 0
+            for p in ps_:
+                bf = [q_ for q_ in rp if q_['y'] < p['y'] + 1.5]
+                want = bf[-1]['cum'] if bf else 0     # level with the Answer paragraph it starts beside
+                p['cum'] = max(base, want)
+                base = p['cum'] + p['extra']
+                band_extra[b] = max(band_extra[b], base)
     shift, acc = [0.0] * nb, 0.0
     for b in range(nb):
         shift[b] = acc

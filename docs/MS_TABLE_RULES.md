@@ -338,3 +338,5 @@ A line of the Answer cell never runs into the Marks / Guidance column: rows kept
 re-wrap could not break) are passed through ms_layout._wrap_overrun - the words past the column start a new line under it and
 the Answer column below moves down (Marks and Guidance stay). A row's drawn structure under its last text line belongs to the
 row (317).
+- (C1 round 45) An empty Marks cell takes the question paper's marks for that part (320). A Guidance note stays level with the
+  Answer line it was printed beside, also after the Answer column re-wraps (321).

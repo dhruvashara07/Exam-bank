@@ -38,9 +38,12 @@ Read this first in every session. Update it before ending a session.
   NOT rebuilt - stored as approved); polymer open bonds as short stubs (3 Qs); 2025 ON 23 q36 options inside the picture.
   2026 FM 32: Cambridge removed 3(d)(iv): marks 79/80 is a blocking check - approve with --force-note if approve.py refuses.
   Round 45 (10 items: 5 calibration, 3 fixes, 2 changed pilot questions) on https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e.
-- NEXT: (1) C1: Dhruv answers round 45 -> read feedback_r45 (db_list, slug b3c8a710-c92b-4a33-95b2-f7eba1bc0031), fix wrong
-  items as classes (gated 0620), freeze checks, review_round close 45, approve.py the 70 C1 papers, docs, push. Then C2 (CHEM_PLAN 6)
-  in a new chat.
+- 2026-11-27 (evening): round 45 closed (10 items, 3 wrong -> patterns 320, 321, 319 repeat; fixed as classes, 56 approved C0
+  questions re-laid out by 321 and sampled). C1 APPROVED in git (70 papers). Freeze: golden 0, nothing under 0625/0607, maths
+  ms_layout hash 0 of 5268. The own-account review page is now the CHEMISTRY page ('Chemistry Question Review',
+  PCdP6oibAkjQvGz8mKm73e); the shared account keeps maths (8YDJDKJCXfURh5QFLnpTw8).
+- NEXT: (1) C2 (CHEM_PLAN 6: next 3 years, own account) in a new chat - same cycle as C1 (pass 1 with ms_marksum + word-overlap
+  + black-shape checks, ONE Claude check, round, fixes gated 0620, freeze, approve).
   (2) Maths: RD2 done; next maths batch M4 - see the maths NEXT below.
 
 ## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md

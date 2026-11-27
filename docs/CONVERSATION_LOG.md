@@ -697,3 +697,7 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   columns). fig_blast does not see MCQ figures; a bank-json harness did (write it into fig_blast next time). The maths layout
   hash (old vs new code IN THE SAME REPO: a git worktree has no raw/ and gives false differences) = 0 of 4014.
 - Round 45 published (10 items).
+- Round 45 (same day): 3 wrong - empty Marks cell (my calibration rule was wrong: 320), Guidance not level with M3 (321, also in
+  56 approved pilot questions), extra space after my own overrun fix (319). Found myself while fixing: my 319 fix had turned the
+  2025 MJ 63 stop-clock boxes black (V path commands) - pushed and missed because I only looked at the 53 twin. C1 approved.
+  Dhruv: this (own) account's review page is the chemistry page; the shared account does maths (M4 running there now).

@@ -991,3 +991,19 @@ Hint check (pattern 295, now in pass 1 as ms_marksum): 9 hits in C1, 2 real (313
 327. KNOWN (crop fragments, 1 question each): formula sentence under the triangle (2014 ON 63 q2), captions twice + 'r.'
     (2015 ON 62 q2), a vector bracket piece over a grid (2016 MJ 33 q7), the 2nd camera diagram cut beside its text
     (2015 ON 63 q5). Pre-existing, found by the blast: approved 2021 FM 42 q4(b)(i) 'Table 1' crop starts at its 2nd row.
+
+## Chemistry C1 round 45 (Dhruv, 2026-11-27: 10 items, 3 wrong)
+320. (Dhruv, wrong calibration) a part whose mark scheme prints NO mark number (2025 FM 42 5(d)(iii) M1-M3) - I passed it
+    'as printed'; Dhruv: take the question paper's [n]. -> chemistry ms_layout: a row with no mark code, whose label (and
+    sub-parts) have no mark anywhere, gets the QP part's marks in the Marks column. Blast C0 + C1: 7 rows (6 in 2026 MJ).
+    Rule for passing: an EMPTY Marks cell is never 'as printed' - the QP has the marks.
+321. (Dhruv) a Guidance paragraph was not level with the Answer line it was printed beside once the Answer re-wrapped
+    (2015 MJ 32 3(a): 'A if electron configuration ...' beside M3 sat a line higher). Each column counted only its own
+    added lines. -> chemistry ms_portrait: Guidance paragraphs take the Answer column's added lines (the Answer column, the
+    first flexible one, leads; a paragraph only ever moves down). 56 approved C0 questions (2015 MJ, 2026 MJ: the Guidance
+    papers) changed - sampled 12 + 3 targets, all level; no new overlaps.
+319 (repeat, 2 faults in my own fix). (a) The row grew by a full line though the cell had room under its text (2015 MJ 21
+    6(a)(iv), Dhruv). -> grow only by what the text needs. (b) Paths written with H/V commands: V (a y value) was not moved,
+    so the stop-clock answer boxes of 2025 MJ 63 2(a) became black bars - pushed in pass 2 and NOT seen in my check (I looked
+    at the 53 twin only). -> V moves like L, a thin rule moves as one piece; new check: filled black shapes > 4x4 pt in a
+    mark scheme (/home/claude/tools idea, 2 hits = bond strokes) - look at EVERY question a layout fix changes, not one twin.

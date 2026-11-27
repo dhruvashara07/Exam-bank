@@ -150,7 +150,10 @@ MATHS_PLAN.md if the plan changed; docs/NEXT_CHAT.md prompt; `pipeline/push.sh`;
 - Tools take the syllabus: `SYL=0620` for ms_rebuild / ms_align / ms_sweep; reasons.py reads it from the batch record
   (`batch_log.py start C0 --subject 0620`). reasons.py drops the maths-only checks (q_font, ms_mode, 'M1' marking points).
 - `reasons.py set` changes EVERY matching reason whatever its status: never pass --status to select; use --qid / --match.
-- Review page = the one of the account the chat runs in (own account: PCdP6oibAkjQvGz8mKm73e; shared: 8YDJDKJCXfURh5QFLnpTw8).
+- Review page = the one of the account the chat runs in: own account = CHEMISTRY page (PCdP6oibAkjQvGz8mKm73e, 'Chemistry
+  Question Review'); shared account = MATHS page (8YDJDKJCXfURh5QFLnpTw8). Both accounts work at the same time: pull before push.
+- (C1 round 45) An empty Marks cell is never passed 'as printed': the QP part's marks go in (320). After any layout fix, look
+  at EVERY changed question (a twin paper is not enough: 319 turned boxes black in the one not looked at).
 - (C1) The layout hash 'old vs new' is computed with BOTH codes in the same repo (copy HEAD's files in, hash, copy the new back):
   a git worktree has no raw/ and every picture cell falls back (false differences). fig_blast.py takes SYL=0620 but misses MCQ
   figures: blast fit_crop on the bank/ question jsons as well. claude_check's q_font / ms_mode hits do not apply to chemistry.

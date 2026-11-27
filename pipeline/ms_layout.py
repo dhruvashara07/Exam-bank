@@ -1868,31 +1868,56 @@ def _wrap_overrun(v, ne):
         mv = ln[k:]
         x0_, dx = ln[0]['x'], mv[0]['x'] - ln[0]['x']
         ids_ = {id(t) for t in mv}
-        inA = lambda x: a0 - 1 <= x <= a1 + 1      # only the Answer column moves down (Marks / Guidance keep their places)
+        inA = lambda x: a0 - 1 <= x <= a1 + 1
         h0 = v['h']
+        bot0 = max((t['y'] for t in v['text']), default=0)
+        # Marks / Guidance move down WITH the Answer lines beside them (Dhruv round 45: 2015 MJ 32 3(a) guidance 'A ... electron'
+        # must stay level with M3), except a Guidance paragraph that began at or above the broken line (kept in one piece)
+        other = sorted((t for t in v['text'] if not inA(t['x']) and id(t) not in owned and t['x'] >= a1 - 3), key=lambda t: t['y'])
+        keep, py, start = set(), None, None
+        for t in other:
+            if py is None or t['y'] - py > 1.6 * t.get('s', 11):
+                start = t['y']
+            if start <= y + 1.2:
+                keep.add(id(t))
+            py = t['y']
         for t in v['text']:
-            if id(t) not in ids_ and t['y'] > y + 1.2 and (inA(t['x']) or id(t) in owned):
+            if id(t) not in ids_ and id(t) not in keep and t['y'] > y + 1.2:
                 t['y'] = round(t['y'] + pitch, 2)
         for t in mv:
             t['x'] = round(t['x'] - dx, 2); t['y'] = round(t['y'] + pitch, 2)
         for k_ in ('figs', 'images', 'glyphs'):
             for g in v.get(k_) or []:
-                if g['y'] > y and inA(g['x']):
+                if g['y'] > y:
                     g['y'] = round(g['y'] + pitch, 2)
+        # the row grows only by what the text needs: free space at the bottom of the cell is used first (Dhruv round 45:
+        # 2015 MJ 21 6(a)(iv) had extra space below)
+        grow = max(0.0, max(t['y'] for t in v['text']) - bot0)
+        figb = [g['y'] + g.get('h', 0) for k_ in ('figs', 'images') for g in v.get(k_) or []]
+        if figb:
+            grow = max(grow, max(figb) - h0 + 2)
+        grow = round(min(pitch, grow), 2)
         def mp_(d):
             out = []
+            ys_ = [float(a) for cmd, args in re.findall(r'([A-Za-z])([^A-Za-z]*)', d) if cmd in 'MLCSQTV'
+                   for a in (MP.NUM.findall(args) if cmd == 'V' else MP.NUM.findall(args)[1::2])]
+            thin = bool(ys_) and max(ys_) - min(ys_) < 3      # a thin rule drawn as a filled box moves as ONE piece
             for cmd, args in re.findall(r'([A-Za-z])([^A-Za-z]*)', d):
                 n = [float(a) for a in MP.NUM.findall(args)]
                 if cmd in 'MLCSQT':
                     for i_ in range(1, len(n), 2):
-                        if n[i_] >= h0 - 1 or (n[i_] > y + 1 and inA(n[i_ - 1])):
+                        yy = min(ys_) if thin else n[i_]
+                        if yy >= h0 - 1:
+                            n[i_] += grow
+                        elif yy > y + 1:
                             n[i_] += pitch
-                elif cmd == 'V':
-                    n = [a + pitch if a >= h0 - 1 else a for a in n]
+                elif cmd == 'V':               # (V carries a y too: 2025 MJ 63 stop-clock boxes went black when it did not move)
+                    n = [a + (grow if (min(ys_) if thin else a) >= h0 - 1 else pitch if (min(ys_) if thin else a) > y + 1 else 0)
+                         for a in n]
                 out.append(cmd + ' '.join(f'{a:.2f}' for a in n))
             return ''.join(out)
         v['lines'] = [{**l, 'd': mp_(l['d'])} for l in v['lines']]
-        v['h'] = round(h0 + pitch, 2)
+        v['h'] = round(h0 + grow, 2)
     return v
 
 
@@ -1996,6 +2021,19 @@ def build(q, store):
             problems += [(r['label'], p) for p in MP.check(u, v)]
         if total_row is None and info['mode'] == 'wrap' and any(re.fullmatch(r'Total:?', t['t']) for t in v['text']):
             v, total_row = _split_total(v, info)      # the printed Total can sit in any row (rows follow the parts' order)
+        ne_ = (info.get('new_edges') or (first or {}).get('new_edges')) if v is not None else None
+        if v is not None and MP.CHEM and ne_ and len(ne_) >= 3 and r.get('label') and not r.get('codes') and \
+                not any(x.get('codes') and (x['label'] == r['label'] or x['label'].startswith(r['label'] + '('))
+                        for x, _ in uniq):
+            pm_ = next((p.get('marks') for p in q.get('parts') or [] if p.get('path') == r['label']), None)
+            dig = [t for t in v['text'] if ne_[1] - 1 <= t['x'] < ne_[2] and re.fullmatch(r'\d{1,2}', t['t'].strip())]
+            if pm_ and not dig and v['text']:
+                # chemistry: the mark scheme prints no mark for this part (2025 FM 42 5(d)(iii) M1-M3, 2026 MJ 63 2(h)):
+                # the question paper's [n] goes into the Marks column (Dhruv round 45, ERROR_PATTERNS 320)
+                y0_ = min((t['y'] for t in v['text'] if t['x'] < ne_[0] - 2), default=min(t['y'] for t in v['text']))
+                w_ = round(fitz.get_text_length(str(pm_), 'hebo', 11.23), 2)
+                v['text'].append({'t': str(pm_), 'x': round((ne_[1] + ne_[2]) / 2 - w_ / 2, 2), 'y': y0_, 'w': w_, 's': 11.23,
+                                  'f': 'sans', 'b': 1})
         if v is not None and MP.CHEM and info.get('mode') == 'wrap' and r.get('label') and info.get('new_edges'):
             qt_ = sorted((t for t in v['text'] if t['x'] < info['new_edges'][0] - 2), key=lambda t: (t['y'], t['x']))
             pr_ = ''.join(t['t'] for t in qt_).replace(' ', '')

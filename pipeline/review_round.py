@@ -173,7 +173,8 @@ def new(rnd, pids, sample=3, title=None, intro=None, max_items=None, recheck=Non
                               'Look at the rebuilt question against the original page; tap "Looks right" or say what is wrong.',
             'papers': pids}
     import subjects
-    syl = pids[0][:4] if pids else '0625'
+    ids_ = list(pids) + list(recheck or {})          # a recheck-only round (no papers) takes the syllabus of its items (round 45 said 'Physics')
+    syl = ids_[0][:4] if ids_ else '0625'
     meta.update(syllabus=syl, subject=subjects.subject(syl)['subject'])
     json.dump(meta, open(os.path.join(out_dir, 'round.json'), 'w'), ensure_ascii=False)
     os.makedirs(paths.ROUNDS, exist_ok=True)

@@ -5,11 +5,12 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 | Batch | Sessions | Papers | Build | GitHub | Claude 1 | Claude 2 | Fix | Ours | Round items | New errors | Repeats | Tokens |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | C0 | 2005-MJ 2015-MJ 2024-MJ 2026-MJ | 56 | 9.0 | 0.2 | 79.2 | 0.0 | 58.0 | 146.2 | 16 | 26 | 1 | n/a |
-| C1 | 2024-FM 2024-ON 2025-FM 2025-MJ 2025-ON 2026-FM | 70 | 15.5 | 0.2 | 88.1 | 0.0 | 0.0 | 103.6 | 10 | 6 | 1 | n/a |
+| C1 | 2024-FM 2024-ON 2025-FM 2025-MJ 2025-ON 2026-FM | 70 | 15.5 | 0.2 | 88.1 | 0.0 | 0.4 | 104.0 | 10 | 8 | 2 | n/a |
 | M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 257.5 | 51.4 | 2766.0 | 3084.4 | 40 | 58 | 5 | n/a |
 | M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 | 11.7 | 97.4 | 191.6 | 0.0 | 30.1 | 233.4 | 23 | 42 | 2 | n/a |
 | M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 117 | 100.3 | 131.2 | 0.0 | 0.0 | 0.0 | 100.3 | 13 | 28 | 4 | n/a |
 | M3 | 2018-MJ 2018-ON 2020-MJ 2020-ON | 69 | 29.2 | 0.2 | 38.4 | 0.0 | 0.0 | 67.6 | 8 | 15 | 0 | n/a |
+| M4 | 2014-ON 2015-MJ 2015-ON 2016-MJ 2016-ON 2017-MJ 2017-ON |  | 0.4 | 0.1 | 0.0 | 0.0 | 0.0 | 0.4 |  | 6 | 0 | n/a |
 | RD |  |  | 0.0 | 0 | 0.0 | 0.0 | 13.2 | 13.2 |  | 0 | 0 | n/a |
 | RD2 | 2014-MJ 2018-MJ 2018-ON 2019-ON 2020-MJ 2020-ON 2021-FM 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON 2024-FM 2024-MJ 2024-ON 2025-FM 2025-MJ 2025-ON 2026-FM 2026-MJ | 0 | 0.0 | 0 | 0.0 | 0.0 | 89.8 | 89.8 | 16 | 9 | 2 | n/a |
 
@@ -52,6 +53,9 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - [new] pattern 317: MS row cut at last text line: drawn structure below lost (2025 ON 43 6(d)(iv), 2026 FM 42 6(c), 2025 MJ 31 4(c)) → small strokes in Answer cell count for the row bottom (chem) (found by claude)
 - [new] pattern 318: column-rule stub taken as a bond: stray line in MS structure picture (2025 ON 43 6(e)(i)) → rule pieces in line with a long rule are no bonds (found by claude)
 - [new] pattern 319: long Answer line over the Marks/Guidance column in fallback rows (2025 MJ 53/63, C0 2015 MJ 32 3(b)(i), 2015 MJ 21 q6) → _wrap_overrun: words past the column go to a new line (found by claude)
+- [new] pattern 320: MS part with no printed mark (2025 FM 42 5(d)(iii) M1-M3; 6 more in 2026 MJ): Marks cell empty - I passed it as 'as printed' (wrong calibration) → chemistry: the QP part's [n] goes into the empty Marks column (found by dhruv)
+- [new] pattern 321: Guidance paragraph not level with the Answer line it was printed beside after re-wrap (2015 MJ 32 3(a) 'A if electron' vs M3); 56 approved C0 questions → Guidance paragraphs take the Answer column's added lines (Answer column leads) (found by dhruv)
+- [repeat] pattern 319: _wrap_overrun: row grew by a full line though the cell had room (2015 MJ 21 6(a)(iv)); and V path commands not moved -> stop-clock boxes black (2025 MJ 63 2(a)), missed by my own check → grow only by what text needs; thin rules move as one piece; V moves like L (found by dhruv)
 
 ### M0
 - [new] pattern 64: equation-editor symbol fonts drew # for x etc. in print and text → store_text MATHS_GLYPHS/MATHS_WIDE by eye (found by claude)
@@ -215,6 +219,14 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - [new] pattern 255: round 35: row of diagrams as 3 crops (Dhruv: one picture) → row merge + captions (found by claude)
 - [new] pattern 256: round 35: crop of part of dotty paper → dot lattice drawn (found by claude)
 
+### M4
+- [new] pattern 320: 2015-17 MS labels printed apart / lone romans / Part Marks / part B from 1 → ms.py table parser maths (found by claude)
+- [new] pattern 321: MS table on pages without header (2015 MJ 31) → _table_area maths (found by claude)
+- [new] pattern 322: right-aligned romans; hidden rules (2014 ON 5x marks 10/24) → _label_columns, doc_mr (found by claude)
+- [new] pattern 323: QP part B lost (heading on its own page) → extract.boundaries carries heading (found by claude)
+- [new] pattern 324: tree slot under last branch / number labels cut → fit_crop FIT_M4 (found by claude)
+- [new] pattern 325: MMEtc Q, MMaFermat Q → MATHS_GLYPHS (found by claude)
+
 ### RD2
 - [new] pattern 271: RD2: 181 blurry MS pictures in all batches (tables, grid shapes, dots, pies, Venns, trees, mappings, plots, graphs) had no drawer → ms_graphs: table / plane (squares, dots, iso, isov, panels, stack) / pie / map drawers, smooth data curves, alts per label (found by claude)
 - [new] pattern 272: a formula line under a screenshot (its bar / root lines in the picture's cluster) was swallowed by the redraw (2024 ON 61 2(d)) → ms_maths: the drawing replaces the pasted image's box only; lines/glyphs outside it stay text (found by claude)
@@ -232,6 +244,7 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 
 - C0: pattern 96 came back: straight lines have empty boxes: structure bonds ignored by intersects (my own new chem code)
 - C1: pattern 315 came back: end atom H beside a displayed formula became question text away from its bond (2025 ON 23 q37, 2025 FM 12 q10) - 285 too narrow
+- C1: pattern 319 came back: _wrap_overrun: row grew by a full line though the cell had room (2015 MJ 21 6(a)(iv)); and V path commands not moved -> stop-clock boxes black (2025 MJ 63 2(a)), missed by my own check
 - M0: pattern 92 came back: repeat of a round-27 class: the round-27 fix covered the reported item, not the class
 - M0: pattern 93 came back: repeat of a round-27 class: the round-27 fix covered the reported item, not the class
 - M0: pattern 97 came back: repeat of a round-27 class: the round-27 fix covered the reported item, not the class

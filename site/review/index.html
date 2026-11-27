@@ -1,4 +1,4 @@
-<title>0625 Question Review</title>
+<title>Chemistry Question Review</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
@@ -112,7 +112,7 @@ textarea { width: 100%; box-sizing: border-box; min-height: 64px; font: 14px/1.4
 <div class="wrap">
   <header class="bar">
     <div class="titlerow">
-      <h1 id="title"><span>0625</span> Physics question review</h1>
+      <h1 id="title"><span>0620</span> Chemistry question review</h1>
       <div class="progress" id="progress">Loading…</div>
     </div>
     <div class="rounds" id="rounds" role="group" aria-label="Round" hidden></div>
@@ -331,6 +331,7 @@ async function openRound(r) {
   } catch { $('#list').innerHTML = ''; showNotice('Could not load this review round.'); return; }
   fb = {}; filter = 'todo';
   $('#title').innerHTML = `<span>${esc(round.syllabus || '0625')}</span> ${esc(round.subject || 'Physics')} question review · ${esc(round.title || 'round ' + round.round)}`;
+  document.title = `${round.subject || 'Physics'} Question Review`;   // the page serves one subject per account (own: chemistry)
   $('#intro').textContent = round.intro || '';
   roundButtons(); render(); window.scrollTo({ top: 0 });
   if (!db) return;

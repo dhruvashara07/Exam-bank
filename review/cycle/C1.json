@@ -29,10 +29,17 @@
   "review": [
    {
     "start": "2026-11-27T09:20:47+00:00",
-    "end": null
+    "end": "2026-11-27T14:59:58+00:00",
+    "note": "round 45: 10 items, 3 wrong (1 calibration: 5(d)(iii) mark)"
    }
   ],
-  "fix": []
+  "fix": [
+   {
+    "start": "2026-11-27T14:59:58+00:00",
+    "end": "2026-11-27T15:00:23+00:00",
+    "note": "320 QP marks into empty MS Marks; 321 Guidance level with Answer (56 C0 questions); 319 repeat fixed"
+   }
+  ]
  },
  "github_runs": [
   {
@@ -58,7 +65,8 @@
   "papers": 70,
   "questions": 1203,
   "flags": 83,
-  "round_items": 10
+  "round_items": 10,
+  "wrong_items": 3
  },
  "errors": [
   {
@@ -116,6 +124,30 @@
    "fix": "_wrap_overrun: words past the column go to a new line",
    "found_by": "claude",
    "at": "2026-11-27T08:58:19+00:00"
+  },
+  {
+   "pattern": "320",
+   "kind": "new",
+   "what": "MS part with no printed mark (2025 FM 42 5(d)(iii) M1-M3; 6 more in 2026 MJ): Marks cell empty - I passed it as 'as printed' (wrong calibration)",
+   "fix": "chemistry: the QP part's [n] goes into the empty Marks column",
+   "found_by": "dhruv",
+   "at": "2026-11-27T14:59:58+00:00"
+  },
+  {
+   "pattern": "321",
+   "kind": "new",
+   "what": "Guidance paragraph not level with the Answer line it was printed beside after re-wrap (2015 MJ 32 3(a) 'A if electron' vs M3); 56 approved C0 questions",
+   "fix": "Guidance paragraphs take the Answer column's added lines (Answer column leads)",
+   "found_by": "dhruv",
+   "at": "2026-11-27T14:59:58+00:00"
+  },
+  {
+   "pattern": "319",
+   "kind": "repeat",
+   "what": "_wrap_overrun: row grew by a full line though the cell had room (2015 MJ 21 6(a)(iv)); and V path commands not moved -> stop-clock boxes black (2025 MJ 63 2(a)), missed by my own check",
+   "fix": "grow only by what text needs; thin rules move as one piece; V moves like L",
+   "found_by": "dhruv",
+   "at": "2026-11-27T14:59:58+00:00"
   }
  ],
  "tokens": [],
@@ -211,6 +243,34 @@
   {
    "at": "2026-11-27T09:20:47+00:00",
    "task": "phase C1 review"
+  },
+  {
+   "at": "2026-11-27T14:59:58+00:00",
+   "task": "phase C1 review"
+  },
+  {
+   "at": "2026-11-27T14:59:58+00:00",
+   "task": "phase C1 fix"
+  },
+  {
+   "at": "2026-11-27T14:59:58+00:00",
+   "task": "error C1 --pattern"
+  },
+  {
+   "at": "2026-11-27T14:59:58+00:00",
+   "task": "error C1 --pattern"
+  },
+  {
+   "at": "2026-11-27T14:59:58+00:00",
+   "task": "error C1 --pattern"
+  },
+  {
+   "at": "2026-11-27T14:59:58+00:00",
+   "task": "count C1 wrong_items=3"
+  },
+  {
+   "at": "2026-11-27T15:00:23+00:00",
+   "task": "phase C1 fix"
   }
  ]
 }
