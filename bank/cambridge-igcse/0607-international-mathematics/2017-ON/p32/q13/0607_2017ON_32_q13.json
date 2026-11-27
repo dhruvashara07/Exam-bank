@@ -1,0 +1,214 @@
+{
+ "id": "0607_2017ON_32_q13",
+ "number": 13,
+ "segments": [
+  {
+   "page": 14,
+   "bbox": [
+    30.0,
+    239.0,
+    570.0,
+    275.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 4.0,
+    "height_pt": 36.0
+   }
+  }
+ ],
+ "text": "13\nSandy is playing a game with a fair dice numbered 1 to 6.\nTo win the game she needs a 6 on each of the next two throws.",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 14,
+   "bbox": [
+    156.3,
+    347.5,
+    445.1,
+    514.6
+   ],
+   "id": "0607_2017ON_32_q13a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      278.0,
+      570.0,
+      554.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 26.5,
+      "height_pt": 276.5
+     }
+    }
+   ],
+   "text": "Complete the tree diagram.\nFirst throw\nSecond throw\n6\n.........\n6\n1\n6\n.........\nNot a 6\n6\n.........\n.........\nNot a 6\n.........\nNot a 6\n[2]",
+   "marks": 2,
+   "path": "13(a)",
+   "mark_scheme": [
+    {
+     "label": "13(a)",
+     "text": "Complete, correct tree",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        40.97999954223633,
+        577.2,
+        554.3399658203125,
+        618.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the tree diagram.",
+     "text": "Complete the tree diagram."
+    },
+    {
+     "type": "text",
+     "html": "First throw Second throw",
+     "text": "First throw Second throw"
+    },
+    {
+     "type": "text",
+     "html": "6",
+     "text": "6"
+    },
+    {
+     "type": "figure",
+     "id": "0607_2017ON_32_q13a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Not a 6",
+     "text": "Not a 6"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      557.7,
+      570.0,
+      697.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 102.5,
+      "height_pt": 139.8
+     }
+    }
+   ],
+   "text": "Work out the probability that Sandy does not win the game.\n..................................................... [3]",
+   "marks": 3,
+   "path": "13(b)",
+   "mark_scheme": [
+    {
+     "label": "13(b)",
+     "text": "35\n36",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        40.97999954223633,
+        618.2,
+        554.3399658203125,
+        719.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Work out the probability that Sandy <b>does not</b> win the game.",
+     "text": "Work out the probability that Sandy does not win the game."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2017,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 3,
+ "variant": 2,
+ "paper_code": "0607/32",
+ "paper_type": "core_long_answer",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Sandy is playing a game with a fair dice numbered 1 to 6. To win the game she needs a 6 on each of the next two throws.",
+   "text": "Sandy is playing a game with a fair dice numbered 1 to 6. To win the game she needs a 6 on each of the next two throws."
+  }
+ ]
+}

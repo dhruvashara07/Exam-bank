@@ -1,0 +1,337 @@
+{
+ "id": "0607_2017ON_31_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    196.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 104.2,
+    "height_pt": 139.5
+   }
+  }
+ ],
+ "text": "6\nHere is a pattern of shapes.\nPattern 1\nPattern 2\nPattern 3\nPattern 4",
+ "marks": 7,
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    87.8,
+    88.7,
+    509.4,
+    180.8
+   ],
+   "id": "0607_2017ON_31_q06_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      207.1,
+      570.0,
+      230.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 22.9
+     }
+    }
+   ],
+   "text": "In the space above, draw Pattern 4.\n[1]",
+   "marks": 1,
+   "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "Correct pattern",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        200.6,
+        548.9400024414062,
+        225.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "In the space above, draw Pattern 4.",
+     "text": "In the space above, draw Pattern 4."
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      246.1,
+      570.0,
+      357.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 21.4,
+      "height_pt": 111.4
+     }
+    }
+   ],
+   "text": "Complete the table.\nPattern number\n1\n2\n3\n4\n5\nNumber of dots\n1\n3\n[2]",
+   "marks": 2,
+   "path": "6(b)",
+   "mark_scheme": [
+    {
+     "label": "6(b)",
+     "text": "5, 7, 9",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        225.0,
+        548.9400024414062,
+        249.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the table.",
+     "text": "Complete the table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Pattern number",
+       "1",
+       "2",
+       "3",
+       "4",
+       "5"
+      ],
+      [
+       "Number of dots",
+       "1",
+       "3",
+       "",
+       "",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      360.8,
+      570.0,
+      461.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 63.5,
+      "height_pt": 100.7
+     }
+    }
+   ],
+   "text": "Find an expression for the number of dots in Pattern n.\n..................................................... [2]",
+   "marks": 2,
+   "path": "6(c)",
+   "mark_scheme": [
+    {
+     "label": "6(c)",
+     "text": "2n – 1 oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        249.5,
+        548.9400024414062,
+        273.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression for the number of dots in Pattern <i>n</i>.",
+     "text": "Find an expression for the number of dots in Pattern n."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      464.8,
+      570.0,
+      578.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 76.5,
+      "height_pt": 113.7
+     }
+    }
+   ],
+   "text": "Use your expression in part (c) to find the number of dots in Pattern 18.\n..................................................... [2]",
+   "marks": 2,
+   "path": "6(d)",
+   "mark_scheme": [
+    {
+     "label": "6(d)",
+     "text": "35",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        46.380001068115234,
+        273.9,
+        548.9400024414062,
+        311.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your expression in <b>part (c)</b> to find the number of dots in Pattern 18.",
+     "text": "Use your expression in part (c) to find the number of dots in Pattern 18."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2017,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 3,
+ "variant": 1,
+ "paper_code": "0607/31",
+ "paper_type": "core_long_answer",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Here is a pattern of shapes.",
+   "text": "Here is a pattern of shapes."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2017ON_31_q06_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "Pattern 1 Pattern 2 Pattern 3 Pattern 4",
+   "text": "Pattern 1 Pattern 2 Pattern 3 Pattern 4"
+  }
+ ]
+}

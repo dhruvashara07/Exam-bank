@@ -1,0 +1,325 @@
+{
+ "id": "0607_2017ON_41_q09",
+ "number": 9,
+ "segments": [
+  {
+   "page": 14,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    328.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 130.2,
+    "height_pt": 271.0
+   }
+  }
+ ],
+ "text": "9\nTwo bags each contain white balls and black balls only.\nBag A\nBag B\nBag A contains 3 white balls and 5 black balls.\nBag B contains 6 white balls and 3 black balls.\nA ball is picked at random from the 8 balls in Bag A.\n•\nIf it is white, the ball is not replaced and a second ball is picked at random from Bag A.\n•\nIf it is black, a second ball is picked at random from the 9 balls in Bag B.",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 14,
+   "bbox": [
+    155.5,
+    85.4000015258789,
+    441.79998779296875,
+    215.0
+   ],
+   "id": "0607_2017ON_41_q09_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 14,
+   "bbox": [
+    142.0,
+    365.5,
+    460.5,
+    710.4
+   ],
+   "id": "0607_2017ON_41_q09a_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      331.2,
+      570.0,
+      729.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 50.2,
+      "height_pt": 398.3
+     }
+    }
+   ],
+   "text": "Complete the tree diagram.\n1st ball\n2nd ball\nWhite\nWhite\nBlack\nWhite\nBlack\nBlack\n[3]",
+   "marks": 3,
+   "path": "9(a)",
+   "mark_scheme": [
+    {
+     "label": "9(a)",
+     "text": "3\n5\n8\n,\ncorrectly placed\n8\n2\n5\n7\n,\ncorrectly placed\n7\n6\n3\n9\n,\ncorrectly placed\n9",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        46.380001068115234,
+        543.4,
+        549.0,
+        643.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete the tree diagram.",
+     "text": "Complete the tree diagram."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2017ON_41_q09a_diagram2",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 50.2
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      80.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 23.0
+     }
+    }
+   ],
+   "text": "Find the probability that",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 15,
+       "bbox": [
+        30.0,
+        83.0,
+        570.0,
+        184.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 63.5,
+        "height_pt": 101.0
+       }
+      }
+     ],
+     "text": "both balls are white,\n.................................................... [2]",
+     "marks": 2,
+     "path": "9(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "9(b)(i)",
+       "text": "6\noe\n56",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.380001068115234,
+          643.0,
+          549.0,
+          684.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "both balls are white,",
+       "text": "both balls are white,"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 15,
+       "bbox": [
+        30.0,
+        187.0,
+        570.0,
+        340.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 115.5,
+        "height_pt": 153.0
+       }
+      }
+     ],
+     "text": "exactly one of the two balls is black.\n.................................................... [3]",
+     "marks": 3,
+     "path": "9(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "9(b)(ii)",
+       "text": "115\noe\n168",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 5,
+         "bbox": [
+          46.380001068115234,
+          684.1,
+          549.0,
+          771.0
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "exactly one of the two balls is black.",
+       "text": "exactly one of the two balls is black."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    }
+   ],
+   "path": "9(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the probability that",
+     "text": "Find the probability that"
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2017,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_long_answer",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Two bags each contain white balls and black balls only.",
+   "text": "Two bags each contain white balls and black balls only."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2017ON_41_q09_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "Bag <i>A</i> contains 3 white balls and 5 black balls. Bag <i>B</i> contains 6 white balls and 3 black balls. A ball is picked at random from the 8 balls in Bag <i>A</i>.",
+   "text": "Bag A contains 3 white balls and 5 black balls. Bag B contains 6 white balls and 3 black balls. A ball is picked at random from the 8 balls in Bag A."
+  },
+  {
+   "type": "list",
+   "items": [
+    "If it is white, the ball is not replaced and a second ball is picked at random from <b>Bag </b><b><i>A</i></b>.",
+    "If it is black, a second ball is picked at random from the 9 balls in <b>Bag </b><b><i>B</i></b>."
+   ]
+  }
+ ]
+}

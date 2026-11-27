@@ -1,0 +1,544 @@
+{
+ "id": "0607_2017ON_62_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    689.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "lines",
+    "dotted_lines": 1,
+    "answer_line": null,
+    "working_gap_pt": 544.5,
+    "height_pt": 632.0
+   }
+  }
+ ],
+ "text": "6\nThe bricks on the bottom row of a wall are numbered consecutively using positive integers.\nFor example,          7, 8, 9, …\nThe total for the wall is 80.\nFind all the possible heights of the wall.\n......................................................",
+ "marks": 3,
+ "figures": [
+  {
+   "caption": null,
+   "page": 10,
+   "bbox": [
+    65.0,
+    196.6,
+    531.0,
+    477.6
+   ],
+   "id": "0607_2017ON_62_q06a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 12,
+   "bbox": [
+    112.1,
+    135.5,
+    485.7,
+    388.0
+   ],
+   "id": "0607_2017ON_62_q06e_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(e)"
+  },
+  {
+   "caption": null,
+   "page": 13,
+   "bbox": [
+    110.5,
+    199.3,
+    487.3,
+    468.1
+   ],
+   "id": "0607_2017ON_62_q06e_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(e)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      170.0,
+      570.0,
+      495.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 9.0,
+      "height_pt": 325.5
+     }
+    }
+   ],
+   "text": "On the grid, plot these points and draw a graph to show this information.\nr\n11\n10\n9\n8\n7\n6\nRange\n(metres)\n5\n4\n3\n2\n1\nx\n0\n0\n10\n20\n30\n40\n50\n60\n70\n80\n90\nAngle of elevation(degrees)",
+   "marks": 0,
+   "path": "6(a)",
+   "mark_scheme_on": "6",
+   "content": [
+    {
+     "type": "text",
+     "html": "On the grid, plot these points and draw a graph to show this information.",
+     "text": "On the grid, plot these points and draw a graph to show this information."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2017ON_62_q06a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Angle of elevation (degrees)",
+     "text": "Angle of elevation (degrees)"
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      504.4,
+      570.0,
+      577.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 11.5,
+      "height_pt": 72.6
+     }
+    }
+   ],
+   "text": "Paul wants the range to be 8 m.\nUse the graph to find the angles of elevation he could use.\n......................................................",
+   "marks": 0,
+   "path": "6(b)",
+   "mark_scheme_on": "6",
+   "content": [
+    {
+     "type": "text",
+     "html": "Paul wants the range to be 8 m. Use the graph to find the angles of elevation he could use.",
+     "text": "Paul wants the range to be 8 m. Use the graph to find the angles of elevation he could use."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      582.4,
+      570.0,
+      668.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 24.5,
+      "height_pt": 85.6
+     }
+    }
+   ],
+   "text": "Paul wants the range to be the maximum.\nUse the graph to find the angle of elevation he should use.\n......................................................",
+   "marks": 0,
+   "path": "6(c)",
+   "mark_scheme_on": "6",
+   "content": [
+    {
+     "type": "text",
+     "html": "Paul wants the range to be the maximum. Use the graph to find the angle of elevation he should use.",
+     "text": "Paul wants the range to be the maximum. Use the graph to find the angle of elevation he should use."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      57.6,
+      570.0,
+      221.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 102.5,
+      "height_pt": 163.9
+     }
+    }
+   ],
+   "text": "A model for the range is r = a sin(2x)°.\nFind the value of a and write down the model.\n......................................................",
+   "marks": 0,
+   "path": "6(d)",
+   "mark_scheme_on": "6",
+   "content": [
+    {
+     "type": "text",
+     "html": "A model for the range is <i>r</i> = <i>a</i> sin(2<i>x</i>)°. Find the value of <i>a</i> and write down the model.",
+     "text": "A model for the range is r = a sin(2x)°. Find the value of a and write down the model."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 11,
+     "bbox": [
+      30.0,
+      226.6,
+      570.0,
+      711.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 6,
+      "answer_line": null,
+      "working_gap_pt": 50.5,
+      "height_pt": 484.4
+     }
+    },
+    {
+     "page": 12,
+     "bbox": [
+      30.0,
+      61.0,
+      570.0,
+      606.0
+     ],
+     "continued": true,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 101.3,
+      "height_pt": 545.0
+     }
+    },
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      61.0,
+      570.0,
+      695.0
+     ],
+     "continued": true,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 102.5,
+      "height_pt": 634.0
+     }
+    },
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      61.0,
+      570.0,
+      234.0
+     ],
+     "continued": true,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 3,
+      "answer_line": null,
+      "working_gap_pt": 89.6,
+      "height_pt": 173.0
+     }
+    }
+   ],
+   "text": "Use your model to find r when x = 100.\nExplain your result.\n...................................................................................................................................................................\n...................................................................................................................................................................\n...................................................................................................................................................................\n2\nPaul now fires 8 balls from his cannon.\nEach ball has the same mass and is fired at the same speed of v m/s.\nHe records the angle of elevation and range for each ball.\nAngle of elevation (x degrees)\n10\n20\n30\n40\n50\n60\n70\n80\nRange (r metres)\n3.4\n5.9\n8.3\n9.1\n9.1\n8.0\n5.8\n3.2\n(a) Paul did not use an angle of elevation of 90°.\nGive a reason why.\n...................................................................................................................................................................\n(b) Use the information in the table to draw a graph using the axes on the previous page.\n(c) How can you tell that the model in question 1 is a good model for these results?\n...................................................................................................................................................................\n...................................................................................................................................................................\n3\nPaul now fires balls from his cannon, each with a speed of 20 m/s.\n^h.\n2\nv\n(a) Another model for the range is\nr\nsin\n2\nx\n°\n=\n9 81\n.\nOn the axes below, sketch a graph of the expected ranges using this model.\nr\nRange\n(metres)\nx\n0\n0\n80\nAngle of elevation(degrees)\n(b) Paul records the actual range when he fires the balls.\nAngle of elevation (x degrees).\n10\n20\n30\n40\n50\n60\n70\n80\nRange (r metres).\n12.0\n21.8\n29.2\n30.7\n30.2\n26.3\n19.5\n10.6\nOn the same axes, sketch the graph for these ranges.\nComment on the suitability of using the model to predict the range.\n...................................................................................................................................................................\n...................................................................................................................................................................\n4\nPaul changes the speed with which each ball is fired.\nHe records each speed and the maximum range, R metres.\nSpeed (v m/s)\n1\n5\n10\n15\n20\n25\nMaximum range (R metres)\n0.10\n2.49\n9.62\n19.85\n31.03\n43.26\n(a) On the axes below, sketch the graph of R against v.\nR\nMaximum\nrange\n(metres)\nv\n0\n0\n25\nSpeed(m/s)\n(b) Paul improves his model in question 3(a) to estimate the maximum range, and to take account of air\nresistance.\nThe new model is\n2\n2 #\nkv\nv\nv\n2\nR\nwhere k is a constant.\n=\n-\n9 81\n.\n981\nWhen v = 15 m/s, find the value of k, correct to 2 decimal places.\n......................................................\n(c) Comment on the suitability of the model as speed increases.\n...................................................................................................................................................................\n...................................................................................................................................................................\n...................................................................................................................................................................",
+   "marks": 0,
+   "path": "6(e)",
+   "mark_scheme_on": "6",
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your model to find <i>r</i> when <i>x</i> = 100. Explain your result.",
+     "text": "Use your model to find r when x = 100. Explain your result."
+    },
+    {
+     "type": "text",
+     "html": "Paul now fires 8 balls from his cannon. Each ball has the same mass and is fired at the same speed of <i>v</i> m/s. He records the angle of elevation and range for each ball.",
+     "text": "Paul now fires 8 balls from his cannon. Each ball has the same mass and is fired at the same speed of v m/s. He records the angle of elevation and range for each ball."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Angle of elevation (<i>x</i> degrees)",
+       "10",
+       "20",
+       "30",
+       "40",
+       "50",
+       "60",
+       "70",
+       "80"
+      ],
+      [
+       "Range (<i>r</i> metres)",
+       "3.4",
+       "5.9",
+       "8.3",
+       "9.1",
+       "9.1",
+       "8.0",
+       "5.8",
+       "3.2"
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "html": "Paul did not use an angle of elevation of 90°. Give a reason why.",
+     "text": "Paul did not use an angle of elevation of 90°. Give a reason why."
+    },
+    {
+     "type": "text",
+     "html": "Use the information in the table to draw a graph using the axes on the previous page. How can you tell that the model in <b>question 1</b> is a good model for these results?",
+     "text": "Use the information in the table to draw a graph using the axes on the previous page. How can you tell that the model in question 1 is a good model for these results?"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 6
+    },
+    {
+     "type": "text",
+     "html": "Paul now fires balls from his cannon, each with a speed of 20 m/s. Another model for the range is <i>r</i> = \\(\\frac{v^{2}}{9 81.}\\) sin^2<i>x</i>h°.",
+     "text": "Paul now fires balls from his cannon, each with a speed of 20 m/s. Another model for the range is r = (v2)/(9 81.) sin^2xh°."
+    },
+    {
+     "type": "text",
+     "html": "On the axes below, sketch a graph of the expected ranges using this model.",
+     "text": "On the axes below, sketch a graph of the expected ranges using this model."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2017ON_62_q06e_diagram2",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Angle of elevation (degrees)",
+     "text": "Angle of elevation (degrees)"
+    },
+    {
+     "type": "text",
+     "html": "Paul records the actual range when he fires the balls.",
+     "text": "Paul records the actual range when he fires the balls."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Angle of elevation (<i>x</i> degrees).",
+       "10",
+       "20",
+       "30",
+       "40",
+       "50",
+       "60",
+       "70",
+       "80"
+      ],
+      [
+       "Range (<i>r</i> metres).",
+       "12.0",
+       "21.8",
+       "29.2",
+       "30.7",
+       "30.2",
+       "26.3",
+       "19.5",
+       "10.6"
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "html": "On the same axes, sketch the graph for these ranges. Comment on the suitability of using the model to predict the range.",
+     "text": "On the same axes, sketch the graph for these ranges. Comment on the suitability of using the model to predict the range."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 2
+    },
+    {
+     "type": "text",
+     "html": "Paul changes the speed with which each ball is fired. He records each speed and the maximum range, <i>R</i> metres.",
+     "text": "Paul changes the speed with which each ball is fired. He records each speed and the maximum range, R metres."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Speed (<i>v</i> m/s)",
+       "1",
+       "5",
+       "10",
+       "15",
+       "20",
+       "25"
+      ],
+      [
+       "Maximum range (<i>R</i> metres)",
+       "0.10",
+       "2.49",
+       "9.62",
+       "19.85",
+       "31.03",
+       "43.26"
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "html": "On the axes below, sketch the graph of <i>R</i> against <i>v</i>.",
+     "text": "On the axes below, sketch the graph of R against v."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2017ON_62_q06e_diagram3",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "Paul improves his model in <b>question 3(a)</b> to estimate the maximum range, and to take account of air resistance. The new model is",
+     "text": "Paul improves his model in question 3(a) to estimate the maximum range, and to take account of air resistance. The new model is"
+    },
+    {
+     "type": "text",
+     "html": "<i>R</i> = \\(\\frac{v^{2}}{9 81.}\\) - \\(\\frac{v^{2}^{ #} 2^{\\text{kv}}}{981}\\) where <i>k</i> is a constant.",
+     "text": "R = (v2)/(9 81.) - (v2 #2kv)/(981) where k is a constant."
+    },
+    {
+     "type": "text",
+     "html": "When <i>v</i> = 15 m/s, find the value of <i>k</i>, correct to 2 decimal places.",
+     "text": "When v = 15 m/s, find the value of k, correct to 2 decimal places."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "text",
+     "html": "Comment on the suitability of the model as speed increases.",
+     "text": "Comment on the suitability of the model as speed increases."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "6",
+   "text": "3 and 5 only",
+   "codes": [
+    "3"
+   ],
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      47.15999984741211,
+      84.8,
+      548.0999755859375,
+      174.7
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2017,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 6,
+ "variant": 2,
+ "paper_code": "0607/62",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The bricks on the bottom row of a wall are numbered consecutively using positive integers. For example, 7, 8, 9, … The total for the wall is 80. Find all the possible heights of the wall.",
+   "text": "The bricks on the bottom row of a wall are numbered consecutively using positive integers. For example, 7, 8, 9, … The total for the wall is 80. Find all the possible heights of the wall."
+  },
+  {
+   "type": "answer",
+   "kind": "lines",
+   "lines": 1
+  }
+ ],
+ "marks_source": "mark scheme"
+}

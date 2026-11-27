@@ -1,0 +1,322 @@
+{
+ "id": "0607_2017ON_53_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 6,
+   "bbox": [
+    30.0,
+    422.0,
+    570.0,
+    660.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 14.1,
+    "height_pt": 238.0
+   }
+  }
+ ],
+ "text": "5\nIn 1653 a French mathematician, Blaise Pascal, wrote about a triangle of numbers similar to the one shown\nbelow.\nIt is made in the same way as Number Walls but\n•\nthe number on a brick is the sum of the numbers on the two bricks above\nand\n•\nthe number on the first and last brick in each row is always 1.\nRow 1\n1\n1\nRow 2\n1\n2\n1\nRow 3\n1\n3\n3\n1\nRow 4\n1\n4\n6\n4\n1\nRow 5\n1\n5\n10\n10\n5\n1\nRow 6\n1\n6\n15\n20\n15\n6\n1",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 6,
+   "bbox": [
+    68.3,
+    519.4,
+    515.7,
+    656.0
+   ],
+   "id": "0607_2017ON_53_q05_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      329.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 185.2,
+      "height_pt": 272.5
+     }
+    }
+   ],
+   "text": "The wall in question 4(a) is 4 bricks high.\nShow clearly how your expression for the total in question 4(a) connects to the numbers in one row of\nthis triangle.\nWrite down which row this is.\nRow   ...................................................",
+   "marks": 2,
+   "path": "5(a)",
+   "mark_scheme": [
+    {
+     "label": "5(a)",
+     "text": "Row gives the coefficients of a, b, c and d\n3",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        25.139999389648438,
+        592.4,
+        570.239990234375,
+        642.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The wall in <b>question 4(a)</b> is 4 bricks high. Show clearly how your expression for the total in <b>question 4(a)</b> connects to the numbers in one row of this triangle. Write down which row this is.",
+     "text": "The wall in question 4(a) is 4 bricks high. Show clearly how your expression for the total in question 4(a) connects to the numbers in one row of this triangle. Write down which row this is."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "Row"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      334.7,
+      570.0,
+      446.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 50.5,
+      "height_pt": 111.8
+     }
+    }
+   ],
+   "text": "A wall that is 5 bricks high has a, b, c, d and e, in that order, along the bottom row.\nWrite down an expression in terms of a, b, c, d and e for the total.\n..................................................................................",
+   "marks": 1,
+   "path": "5(b)",
+   "mark_scheme": [
+    {
+     "label": "5(b)",
+     "text": "[1]a + 4b + 6c + 4d + [1]e oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        25.139999389648438,
+        642.1,
+        570.239990234375,
+        666.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A wall that is 5 bricks high has <i>a</i>, <i>b</i>, <i>c</i>, <i>d</i> and <i>e</i>, in that order, along the bottom row. Write down an expression in terms of <i>a</i>, <i>b</i>, <i>c</i>, <i>d</i> and <i>e</i> for the total.",
+     "text": "A wall that is 5 bricks high has a, b, c, d and e, in that order, along the bottom row. Write down an expression in terms of a, b, c, d and e for the total."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      451.7,
+      570.0,
+      487.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 35.8
+     }
+    }
+   ],
+   "text": "Use your expression from part (b) to check that the set of values you found for a, b, c, d and e in\nquestion 4(c) gives a total of 43.",
+   "marks": 1,
+   "path": "5(c)",
+   "mark_scheme": [
+    {
+     "label": "5(c)",
+     "text": "[1] × 3 + 4 × 5 + 6 × 1 + 4 × 2 + [1] × 6 [= 43]\nor\n[1] × 4 + 4 × 4 + 6 × 2 + 4 × 1 + [1] × 7 [= 43]",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        25.139999389648438,
+        666.6,
+        570.239990234375,
+        718.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Use your expression from <b>part (b)</b> to check that the set of values you found for <i>a</i>, <i>b</i>, <i>c</i>, <i>d</i> and <i>e</i> in <b>question 4(c)</b> gives a total of 43.",
+     "text": "Use your expression from part (b) to check that the set of values you found for a, b, c, d and e in question 4(c) gives a total of 43."
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      312.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 193.5,
+      "height_pt": 255.0
+     }
+    }
+   ],
+   "text": "A wall that is 5 bricks high has the number 2017 on each brick of the bottom row.\nFind the total.\n...................................................",
+   "marks": 1,
+   "path": "5(d)",
+   "mark_scheme": [
+    {
+     "label": "5(d)",
+     "text": "32272",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        25.139999389648438,
+        718.0,
+        570.239990234375,
+        746.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "A wall that is 5 bricks high has the number 2017 on <b>each</b> brick of the bottom row. Find the total.",
+     "text": "A wall that is 5 bricks high has the number 2017 on each brick of the bottom row. Find the total."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2017,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 5,
+ "variant": 3,
+ "paper_code": "0607/53",
+ "paper_type": "core_investigation",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In 1653 a French mathematician, Blaise Pascal, wrote about a triangle of numbers similar to the one shown below. It is made in the same way as<i> Number Walls</i> but",
+   "text": "In 1653 a French mathematician, Blaise Pascal, wrote about a triangle of numbers similar to the one shown below. It is made in the same way as Number Walls but"
+  },
+  {
+   "type": "list",
+   "items": [
+    "the number on a brick is the sum of the numbers on the two bricks <b>above</b>"
+   ]
+  },
+  {
+   "type": "text",
+   "html": "and",
+   "text": "and"
+  },
+  {
+   "type": "list",
+   "items": [
+    "the number on the first and last brick in each row is always 1."
+   ]
+  },
+  {
+   "type": "figure",
+   "id": "0607_2017ON_53_q05_diagram1",
+   "caption": null
+  }
+ ],
+ "marks_source": "mark scheme"
+}

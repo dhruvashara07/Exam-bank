@@ -1,0 +1,260 @@
+{
+ "id": "0607_2017ON_41_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    145.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 11.5,
+    "height_pt": 88.0
+   }
+  }
+ ],
+ "text": "2\nTwo banks pay interest in the following ways.\nBank A\nSimple interest at a rate of 2.5% per year for the first year and then compound interest at a\nrate of 1.5% per year for each year after that.\nBank B\nSimple interest at 1.6% per year.",
+ "marks": 10,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      148.0,
+      570.0,
+      262.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 50.5,
+      "height_pt": 114.0
+     }
+    }
+   ],
+   "text": "Cherie invested $3000 in Bank A on 1st January 2016.\nFind how much the investment will be worth on 1st January 2019.\n$  .................................................... [3]",
+   "marks": 3,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "3167.94",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        46.380001068115234,
+        236.0,
+        549.0,
+        288.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Cherie invested $3000 in Bank A on 1st January 2016. Find how much the investment will be worth on 1st January 2019.",
+     "text": "Cherie invested $3000 in Bank A on 1st January 2016. Find how much the investment will be worth on 1st January 2019."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "$"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      265.0,
+      570.0,
+      431.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 102.5,
+      "height_pt": 166.0
+     }
+    }
+   ],
+   "text": "Dieter invested $3000 in Bank B on 1st January 2016.\nFind how much the investment will be worth on 1st January 2019.\n$  .................................................... [3]",
+   "marks": 3,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "3144",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        46.380001068115234,
+        288.2,
+        549.0,
+        340.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Dieter invested $3000 in Bank B on 1st January 2016. Find how much the investment will be worth on 1st January 2019.",
+     "text": "Dieter invested $3000 in Bank B on 1st January 2016. Find how much the investment will be worth on 1st January 2019."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "$"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      434.0,
+      570.0,
+      665.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 193.5,
+      "height_pt": 231.0
+     }
+    }
+   ],
+   "text": "Show that Cherie’s investment will be the first to be worth $3500.\n[4]",
+   "marks": 4,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "3500\n) ÷ log 1.015 oe\nlog (\n3000 ×1.025\n3000 × 0.016 × n + 3000 = 3500 oe\nor 3000 × 0.016 × n = 500 oe\n9.7[0] or 9.695... and 10.4 or 10.41 to\n10.42 oe",
+     "codes": [
+      "M2",
+      "M1",
+      "A1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        46.380001068115234,
+        340.5,
+        549.0,
+        466.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that Cherie’s investment will be the first to be worth $3500.",
+     "text": "Show that Cherie’s investment will be the first to be worth $3500."
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 193.5
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2017,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_long_answer",
+ "total_marks": 10,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "Two banks pay interest in the following ways. Bank A Simple interest at a rate of 2.5% per year for the first year and then compound interest at a",
+   "text": "Two banks pay interest in the following ways. Bank A Simple interest at a rate of 2.5% per year for the first year and then compound interest at a"
+  },
+  {
+   "type": "text",
+   "html": "rate of 1.5% per year for each year after that.",
+   "text": "rate of 1.5% per year for each year after that."
+  },
+  {
+   "type": "text",
+   "html": "Bank B Simple interest at 1.6% per year.",
+   "text": "Bank B Simple interest at 1.6% per year."
+  }
+ ]
+}

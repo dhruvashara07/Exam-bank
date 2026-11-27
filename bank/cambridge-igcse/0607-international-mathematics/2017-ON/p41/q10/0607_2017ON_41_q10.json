@@ -1,0 +1,262 @@
+{
+ "id": "0607_2017ON_41_q10",
+ "number": 10,
+ "segments": [],
+ "text": "",
+ "marks": 9,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      119.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 1,
+      "answer_line": "y =  …… [1]",
+      "working_gap_pt": 24.4,
+      "height_pt": 62.0
+     }
+    }
+   ],
+   "text": "10\n(a)  Make y the subject of 3x + y = 8.\ny =  ................................................... [1]",
+   "marks": 1,
+   "path": "10(a)",
+   "mark_scheme": [
+    {
+     "label": "10(a)",
+     "text": "8 – 3x final answer",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        46.380001068115234,
+        89.3,
+        549.0,
+        113.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "<b>) </b> Make <i>y</i> the subject of 3<i>x</i> + <i>y</i> = 8.",
+     "text": "Make y the subject of 3x + y = 8."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "y ="
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      122.0,
+      570.0,
+      145.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 3.1,
+      "height_pt": 23.0
+     }
+    }
+   ],
+   "text": "The line 3x + y = 8 intersects the curve x2 + y2 = 25 at two points.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 16,
+       "bbox": [
+        30.0,
+        148.0,
+        570.0,
+        366.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 180.5,
+        "height_pt": 218.0
+       }
+      }
+     ],
+     "text": "Use substitution to show that   10x2 − 48x + 39 = 0.\n[3]",
+     "marks": 3,
+     "path": "10(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "10(b)(i)",
+       "text": "2\nx² + (their (8 – 3x)) = 25\n2\n64 – 24x – 24x + 9x\n2\nCompletion to 10x – 48x + 39 = 0",
+       "codes": [
+        "M1",
+        "B1",
+        "A1"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.380001068115234,
+          113.8,
+          549.0,
+          187.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Use substitution to show that 10<i>x</i><sup>2</sup> − 48<i>x</i> + 39 = 0.",
+       "text": "Use substitution to show that 10x2 − 48x + 39 = 0."
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 180.5
+      },
+      {
+       "type": "marks",
+       "value": 3
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 16,
+       "bbox": [
+        30.0,
+        369.0,
+        570.0,
+        639.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 2,
+        "answer_line": null,
+        "working_gap_pt": 193.5,
+        "height_pt": 270.0
+       }
+      }
+     ],
+     "text": "Solve the equation 10x2 − 48x + 39 = 0 and find the co-ordinates of the two points of intersection.\nShow all your working.\n( ........................ , .......................)\n( ........................ , .......................)  [5]",
+     "marks": 5,
+     "path": "10(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "10(b)(ii)",
+       "text": "(1.04 or 1.036... , 4.88 to 4.89...)\nwith working\n(3.76 or 3.763 to 3.764 ,–3.29.. to –3.28)\nwith working",
+       "codes": [
+        "5"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          46.380001068115234,
+          187.1,
+          549.0,
+          311.5
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Solve the equation 10<i>x</i><sup>2</sup> − 48<i>x</i> + 39 = 0 and find the co-ordinates of the two points of intersection. Show all your working.",
+       "text": "Solve the equation 10x2 − 48x + 39 = 0 and find the co-ordinates of the two points of intersection. Show all your working."
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "(",
+       "unit": ")"
+      },
+      {
+       "type": "answer",
+       "kind": "answer_line",
+       "prefix": "(",
+       "unit": ")"
+      },
+      {
+       "type": "answer",
+       "kind": "lines"
+      },
+      {
+       "type": "marks",
+       "value": 5
+      }
+     ]
+    }
+   ],
+   "path": "10(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "The line 3<i>x</i> + <i>y</i> = 8 intersects the curve <i>x</i><sup>2</sup> + <i>y</i><sup>2</sup> = 25 at two points.",
+     "text": "The line 3x + y = 8 intersects the curve x2 + y2 = 25 at two points."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2017,
+ "session": "ON",
+ "season": "October-November",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_long_answer",
+ "total_marks": 9,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1"
+}
