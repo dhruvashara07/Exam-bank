@@ -1,0 +1,454 @@
+{
+ "id": "0607_2017MJ_51_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    161.0,
+    570.0,
+    425.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 39.5,
+    "height_pt": 264.5
+   }
+  }
+ ],
+ "text": "1\nIn a field there are a large number of plants in a straight line.\nThe diagram shows the plants near the middle of the field.\nOn Day 1, one of the plants is infected with a virus (V).\nV\nOn Day 2, that plant is dead (D) and the virus infects the plants next to it.\nV\nD\nV\nThis continues from day to day so this is the pattern on Day 3.\nV\nD\nD\nD\nV\nThe diagram shows that the virus infects two more plants on day 3.\nSo the total number of plants that are infected or dead is five.",
+ "marks": 7,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      428.8,
+      570.0,
+      472.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 43.2
+     }
+    }
+   ],
+   "text": "Draw the pattern for Day 4.",
+   "marks": 1,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "V\nD\nD\nD\nD\nD\nV",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        25.139999389648438,
+        91.3,
+        570.1799926757812,
+        120.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Draw the pattern for Day 4.",
+     "text": "Draw the pattern for Day 4."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      481.3,
+      570.0,
+      654.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 16.0,
+      "height_pt": 173.2
+     }
+    }
+   ],
+   "text": "Complete this table.\nTotal number of plants that are\nDay (n)\ninfected or dead (t)\n1\n1\n2\n3\n3\n5\n4\n5",
+   "marks": 1,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "7\n9",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        25.139999389648438,
+        120.1,
+        570.1799926757812,
+        157.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this table.",
+     "text": "Complete this table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Day (<i>n</i>)",
+       "Total number of plants that are infected or dead (<i>t</i>)"
+      ],
+      [
+       "1",
+       "1"
+      ],
+      [
+       "2",
+       "3"
+      ],
+      [
+       "3",
+       "5"
+      ],
+      [
+       "4",
+       ""
+      ],
+      [
+       "5",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      104.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 11.5,
+      "height_pt": 47.0
+     }
+    }
+   ],
+   "text": "What is the name of the numbers in the t column in part (b)?\n..............................................",
+   "marks": 1,
+   "path": "1(c)",
+   "mark_scheme": [
+    {
+     "label": "1(c)",
+     "text": "Odd",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        25.139999389648438,
+        157.2,
+        570.1799926757812,
+        194.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "What is the name of the numbers in the <i>t</i> column in <b>part (b)</b>?",
+     "text": "What is the name of the numbers in the t column in part (b)?"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      109.0,
+      570.0,
+      169.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 24.5,
+      "height_pt": 60.0
+     }
+    }
+   ],
+   "text": "Find the total number of plants that are infected or dead on Day 9.\n..............................................",
+   "marks": 1,
+   "path": "1(d)",
+   "mark_scheme": [
+    {
+     "label": "1(d)",
+     "text": "17",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        25.139999389648438,
+        194.3,
+        570.1799926757812,
+        231.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find the total number of plants that are infected or dead on Day 9.",
+     "text": "Find the total number of plants that are infected or dead on Day 9."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      187.0,
+      570.0,
+      286.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 63.5,
+      "height_pt": 99.0
+     }
+    }
+   ],
+   "text": "Find a formula for t in terms of n.\n..............................................",
+   "marks": 2,
+   "path": "1(e)",
+   "mark_scheme": [
+    {
+     "label": "1(e)",
+     "text": "[t =] 2n – 1 oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        25.139999389648438,
+        231.4,
+        570.1799926757812,
+        281.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find a formula for <i>t</i> in terms of <i>n</i>.",
+     "text": "Find a formula for t in terms of n."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "f",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      304.0,
+      570.0,
+      403.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 63.5,
+      "height_pt": 99.0
+     }
+    }
+   ],
+   "text": "On which day are there a total of 97 plants that are infected or dead?\n..............................................",
+   "marks": 1,
+   "path": "1(f)",
+   "mark_scheme": [
+    {
+     "label": "1(f)",
+     "text": "49",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        25.139999389648438,
+        281.1,
+        570.1799926757812,
+        305.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On which day are there a total of 97 plants that are infected or dead?",
+     "text": "On which day are there a total of 97 plants that are infected or dead?"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2017,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In a field there are a large number of plants in a straight line. The diagram shows the plants near the middle of the field.",
+   "text": "In a field there are a large number of plants in a straight line. The diagram shows the plants near the middle of the field."
+  },
+  {
+   "type": "text",
+   "html": "On Day 1, one of the plants is infected with a virus (V).",
+   "text": "On Day 1, one of the plants is infected with a virus (V)."
+  },
+  {
+   "type": "text",
+   "html": "V",
+   "text": "V"
+  },
+  {
+   "type": "text",
+   "html": "On Day 2, that plant is dead (D) and the virus infects the plants next to it.",
+   "text": "On Day 2, that plant is dead (D) and the virus infects the plants next to it."
+  },
+  {
+   "type": "text",
+   "html": "V D V",
+   "text": "V D V"
+  },
+  {
+   "type": "text",
+   "html": "This continues from day to day so this is the pattern on Day 3.",
+   "text": "This continues from day to day so this is the pattern on Day 3."
+  },
+  {
+   "type": "text",
+   "html": "V D D D V",
+   "text": "V D D D V"
+  },
+  {
+   "type": "text",
+   "html": "The diagram shows that the virus infects two more plants on day 3. So the total number of plants that are infected or dead is five.",
+   "text": "The diagram shows that the virus infects two more plants on day 3. So the total number of plants that are infected or dead is five."
+  }
+ ],
+ "marks_source": "mark scheme"
+}

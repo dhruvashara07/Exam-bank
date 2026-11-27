@@ -1,0 +1,208 @@
+{
+ "id": "0607_2017MJ_63_q06",
+ "number": 6,
+ "segments": [
+  {
+   "page": 16,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    137.8
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 11.6,
+    "height_pt": 80.8
+   }
+  }
+ ],
+ "text": "3\nOne engineer suggests a simpler model.\nShe says\nTest 100 memory sticks for 1 week.\nThe probability that x fail is x\n100 .",
+ "marks": 0,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      137.8,
+      570.0,
+      262.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 3,
+      "answer_line": null,
+      "working_gap_pt": 11.6,
+      "height_pt": 124.7
+     }
+    }
+   ],
+   "text": "Explain why her model for the percentage of memory sticks still working after t weeks is\na\nx\nk\nt\nW\n100\n1\n=\n-\n#\n100\n...................................................................................................................................................................\n...................................................................................................................................................................\n...................................................................................................................................................................",
+   "marks": 0,
+   "path": "6(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Explain why her model for the percentage of memory sticks still working after <i>t</i> weeks is",
+     "text": "Explain why her model for the percentage of memory sticks still working after t weeks is"
+    },
+    {
+     "type": "text",
+     "html": "<i>W</i> = 100 # a1 - \\(\\frac{x}{100}\\)k<i><sup>t</sup></i>",
+     "text": "W = 100 # a1 - (x)/(100)kt"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 16,
+     "bbox": [
+      30.0,
+      267.8,
+      570.0,
+      290.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 22.7
+     }
+    }
+   ],
+   "text": "One memory stick out of the 100 failed in the first week.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 16,
+       "bbox": [
+        30.0,
+        293.8,
+        570.0,
+        392.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 63.4,
+        "height_pt": 98.2
+       }
+      }
+     ],
+     "text": "Use her model to find the percentage of memory sticks still working after 5 weeks.\n......................................................",
+     "marks": 0,
+     "path": "6(b)(i)",
+     "content": [
+      {
+       "type": "text",
+       "html": "Use her model to find the percentage of memory sticks still working after 5 weeks.",
+       "text": "Use her model to find the percentage of memory sticks still working after 5 weeks."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 16,
+       "bbox": [
+        30.0,
+        397.8,
+        570.0,
+        420.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 4.0,
+        "height_pt": 22.7
+       }
+      }
+     ],
+     "text": "Compare her model with the model in question 2.",
+     "marks": 0,
+     "path": "6(b)(ii)",
+     "content": [
+      {
+       "type": "text",
+       "html": "Compare her model with the model in <b>question 2</b>.",
+       "text": "Compare her model with the model in question 2."
+      }
+     ]
+    }
+   ],
+   "path": "6(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "One memory stick out of the 100 failed in the first week.",
+     "text": "One memory stick out of the 100 failed in the first week."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2017,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 0,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "One engineer suggests a simpler model. She says",
+   "text": "One engineer suggests a simpler model. She says"
+  },
+  {
+   "type": "text",
+   "html": "Test 100 memory sticks for 1 week. The probability that <i>x</i> fail is \\(\\frac{x}{100}\\) .",
+   "text": "Test 100 memory sticks for 1 week. The probability that x fail is (x)/(100) ."
+  }
+ ],
+ "marks_source": "mark scheme"
+}

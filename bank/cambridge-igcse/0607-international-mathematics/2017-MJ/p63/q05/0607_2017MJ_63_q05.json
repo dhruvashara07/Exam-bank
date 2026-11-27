@@ -1,0 +1,327 @@
+{
+ "id": "0607_2017MJ_63_q05",
+ "number": 5,
+ "segments": [
+  {
+   "page": 14,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    267.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 11.6,
+    "height_pt": 210.0
+   }
+  }
+ ],
+ "text": "2\nThe factory’s engineers want to estimate the percentage of USB1 memory sticks that still work after\na year of testing.\nThey use the mean time between failures (MTBF) to measure the reliability.\nTotal testing time\nMTBF\n=\nTotal number offailures\nExample\n15 400 memory sticks are each tested for 10 weeks.\nDuring this time 1100 failed.\n15400\n10\n#\nMTBF =\n= 140 weeks\n1100\nA model for the percentage, W, of memory sticks still working after time t weeks is\n-ak,  where m is the MTBF in weeks.\nt\nW\n100\n3\n=\nm\n#",
+ "marks": 0,
+ "figures": [
+  {
+   "caption": null,
+   "page": 14,
+   "bbox": [
+    131.1,
+    324.4,
+    461.7,
+    547.3
+   ],
+   "id": "0607_2017MJ_63_q05ai_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)(i)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 14,
+     "bbox": [
+      30.0,
+      270.6,
+      570.0,
+      293.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 22.9
+     }
+    }
+   ],
+   "text": "A sample of memory sticks has MTBF = 10 weeks.",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 14,
+       "bbox": [
+        30.0,
+        296.6,
+        570.0,
+        548.0
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": 62.8,
+        "height_pt": 251.4
+       }
+      }
+     ],
+     "text": "Sketch a graph of W against t for tG 30.\nW\nPercentage\nof memory\nsticks still\nworking\nt\n00\nNumber of weeks",
+     "marks": 0,
+     "path": "5(a)(i)",
+     "content": [
+      {
+       "type": "text",
+       "html": "Sketch a graph of <i>W</i> against<i> t</i> for <i>t</i> G 30.",
+       "text": "Sketch a graph of W against t for t G 30."
+      },
+      {
+       "type": "figure",
+       "id": "0607_2017MJ_63_q05ai_diagram1",
+       "caption": null
+      },
+      {
+       "type": "answer",
+       "kind": "space",
+       "height_pt": 62.8
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 14,
+       "bbox": [
+        30.0,
+        555.0,
+        570.0,
+        653.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 63.4,
+        "height_pt": 98.5
+       }
+      }
+     ],
+     "text": "After how many weeks are only half the sticks still working?\n......................................................",
+     "marks": 0,
+     "path": "5(a)(ii)",
+     "content": [
+      {
+       "type": "text",
+       "html": "After how many weeks are only half the sticks still working?",
+       "text": "After how many weeks are only half the sticks still working?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    }
+   ],
+   "path": "5(a)",
+   "content": [
+    {
+     "type": "text",
+     "html": "A sample of memory sticks has MTBF = 10 weeks.",
+     "text": "A sample of memory sticks has MTBF = 10 weeks."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      207.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 76.4,
+      "height_pt": 150.5
+     }
+    }
+   ],
+   "text": "A sample of ten USB1 sticks is tested for 8 weeks.\nDuring this time 4 failed.\nUse the model for W to calculate the percentage of USB1 sticks still working after one year (52 weeks).\n......................................................",
+   "marks": 0,
+   "path": "5(b)",
+   "content": [
+    {
+     "type": "text",
+     "html": "A sample of ten USB1 sticks is tested for 8 weeks. During this time 4 failed. Use the model for <i>W</i> to calculate the percentage of USB1 sticks still working after one year (52 weeks).",
+     "text": "A sample of ten USB1 sticks is tested for 8 weeks. During this time 4 failed. Use the model for W to calculate the percentage of USB1 sticks still working after one year (52 weeks)."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      213.0,
+      570.0,
+      350.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 102.4,
+      "height_pt": 137.5
+     }
+    }
+   ],
+   "text": "Use the model to estimate the probability of a memory stick still working for as long as its MTBF.\n......................................................",
+   "marks": 0,
+   "path": "5(c)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Use the model to estimate the <b>probability</b> of a memory stick still working for as long as its MTBF.",
+     "text": "Use the model to estimate the probability of a memory stick still working for as long as its MTBF."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 15,
+     "bbox": [
+      30.0,
+      356.0,
+      570.0,
+      597.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 180.4,
+      "height_pt": 241.5
+     }
+    }
+   ],
+   "text": "Another factory says that 99% of their memory sticks still work after 52 weeks.\nFind the MTBF.\n......................................................",
+   "marks": 0,
+   "path": "5(d)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Another factory says that 99% of their memory sticks still work after 52 weeks. Find the MTBF.",
+     "text": "Another factory says that 99% of their memory sticks still work after 52 weeks. Find the MTBF."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2017,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 0,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "The factory’s engineers want to estimate the percentage of USB1 memory sticks that still work after a year of testing. They use the mean time between failures (MTBF) to measure the reliability.",
+   "text": "The factory’s engineers want to estimate the percentage of USB1 memory sticks that still work after a year of testing. They use the mean time between failures (MTBF) to measure the reliability."
+  },
+  {
+   "type": "text",
+   "html": "MTBF = \\(\\frac{\\text{Total testing time}}{\\text{Total number of failures}}\\)",
+   "text": "MTBF = (Total testing time)/(Total number offailures)"
+  },
+  {
+   "type": "text",
+   "html": "Example",
+   "text": "Example"
+  },
+  {
+   "type": "text",
+   "html": "400 memory sticks are each tested for 10 weeks. During this time 1100 failed. MTBF = \\(\\frac{15400 # 10}{1100}\\) = 140 weeks",
+   "text": "400 memory sticks are each tested for 10 weeks. During this time 1100 failed. MTBF = (15400#10)/(1100) = 140 weeks"
+  },
+  {
+   "type": "text",
+   "html": "A model for the percentage, <i>W</i>, of memory sticks still working after time <i>t</i> weeks is",
+   "text": "A model for the percentage, W, of memory sticks still working after time t weeks is"
+  },
+  {
+   "type": "text",
+   "html": "a\\(\\frac{t}{m}\\)<sup>k</sup>",
+   "text": "a(t)/(m)k"
+  },
+  {
+   "type": "text",
+   "html": "<i>W</i> = 100 # 3<sup>-</sup> , where <i>m</i> is the MTBF in weeks.",
+   "text": "W = 100 # 3- , where m is the MTBF in weeks."
+  }
+ ],
+ "marks_source": "mark scheme"
+}

@@ -1,0 +1,288 @@
+{
+ "id": "0607_2017MJ_51_q02",
+ "number": 2,
+ "segments": [
+  {
+   "page": 4,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    510.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 46.3,
+    "height_pt": 453.0
+   }
+  }
+ ],
+ "text": "2\nIn another field there are a large number of plants in equally spaced rows and columns.\nThe diagram shows the plants near the middle of the field.\nOne of the plants is infected with the virus (V).\nV\nOn Day 2, that plant is dead (D) and the virus infects the plants next to it.\nThese plants form a cross.\nV\nV\nD\nV\nV\nOn Day 3, the virus spreads along the arms of the cross.\nV\nD\nV\nD\nD\nD\nV\nD\nV\nThis continues from day to day.",
+ "marks": 4,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 4,
+     "bbox": [
+      30.0,
+      513.2,
+      570.0,
+      691.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 178.3
+     }
+    }
+   ],
+   "text": "Draw the pattern for Day 4.",
+   "marks": 1,
+   "path": "2(a)",
+   "mark_scheme": [
+    {
+     "label": "2(a)",
+     "text": "V\nD\nD\nV\nD\nD\nD\nD\nD\nV\nD\nD\nV",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        25.139999389648438,
+        305.6,
+        570.1799926757812,
+        451.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Draw the pattern for Day 4.",
+     "text": "Draw the pattern for Day 4."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      230.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 16.0,
+      "height_pt": 173.0
+     }
+    }
+   ],
+   "text": "Complete this table.\nTotal number of plants that are\nDay (n)\ninfected or dead (t)\n1\n1\n2\n5\n3\n9\n4\n5",
+   "marks": 1,
+   "path": "2(b)",
+   "mark_scheme": [
+    {
+     "label": "2(b)",
+     "text": "13\n17",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        25.139999389648438,
+        451.9,
+        570.1799926757812,
+        489.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this table.",
+     "text": "Complete this table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Day (<i>n</i>)",
+       "Total number of plants that are infected or dead (<i>t</i>)"
+      ],
+      [
+       "1",
+       "1"
+      ],
+      [
+       "2",
+       "5"
+      ],
+      [
+       "3",
+       "9"
+      ],
+      [
+       "4",
+       ""
+      ],
+      [
+       "5",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      231.6,
+      570.0,
+      317.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 50.5,
+      "height_pt": 85.9
+     }
+    }
+   ],
+   "text": "Find a formula for t in terms of n.\n..............................................",
+   "marks": 2,
+   "path": "2(c)",
+   "mark_scheme": [
+    {
+     "label": "2(c)",
+     "text": "[t =] 4n – 3 oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        25.139999389648438,
+        489.0,
+        570.1799926757812,
+        526.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find a formula for <i>t</i> in terms of <i>n</i>.",
+     "text": "Find a formula for t in terms of n."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2017,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 4,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In another field there are a large number of plants in equally spaced rows and columns. The diagram shows the plants near the middle of the field. One of the plants is infected with the virus (V).",
+   "text": "In another field there are a large number of plants in equally spaced rows and columns. The diagram shows the plants near the middle of the field. One of the plants is infected with the virus (V)."
+  },
+  {
+   "type": "text",
+   "html": "V",
+   "text": "V"
+  },
+  {
+   "type": "text",
+   "html": "On Day 2, that plant is dead (D) and the virus infects the plants next to it. These plants form a cross.",
+   "text": "On Day 2, that plant is dead (D) and the virus infects the plants next to it. These plants form a cross."
+  },
+  {
+   "type": "text",
+   "html": "V V D V V",
+   "text": "V V D V V"
+  },
+  {
+   "type": "text",
+   "html": "On Day 3, the virus spreads along the arms of the cross.",
+   "text": "On Day 3, the virus spreads along the arms of the cross."
+  },
+  {
+   "type": "text",
+   "html": "V D",
+   "text": "V D"
+  },
+  {
+   "type": "text",
+   "html": "V D D D V",
+   "text": "V D D D V"
+  },
+  {
+   "type": "text",
+   "html": "D V",
+   "text": "D V"
+  },
+  {
+   "type": "text",
+   "html": "This continues from day to day.",
+   "text": "This continues from day to day."
+  }
+ ],
+ "marks_source": "mark scheme"
+}

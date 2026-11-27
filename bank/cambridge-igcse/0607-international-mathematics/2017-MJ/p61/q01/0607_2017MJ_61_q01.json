@@ -1,0 +1,288 @@
+{
+ "id": "0607_2017MJ_61_q01",
+ "number": 1,
+ "segments": [
+  {
+   "page": 2,
+   "bbox": [
+    30.0,
+    174.0,
+    570.0,
+    489.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 49.3,
+    "height_pt": 315.5
+   }
+  }
+ ],
+ "text": "1\nIn a field there are a large number of plants in a straight line.\nThe diagram shows the plants near the middle of the field.\nOn Day 1, one of the plants is infected with a virus (V).\nV\nOn Day 2, that plant is dead (D) and the virus infects the plants next to it.\nV\nD\nV\nThis continues from day to day so this is the pattern on Day 3.\nV\nD\nD\nD\nV\nThe diagram shows that the virus infects two more plants on day 3.\nSo the total number of plants that are infected or dead is five.",
+ "marks": 3,
+ "figures": [],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 2,
+     "bbox": [
+      30.0,
+      492.9,
+      570.0,
+      686.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 12.0,
+      "height_pt": 193.1
+     }
+    }
+   ],
+   "text": "Complete this table.\nTotal number of plants that are\nDay (n)\ninfected or dead (t)\n1\n1\n2\n3\n3\n5\n4\n5",
+   "marks": 1,
+   "path": "1(a)",
+   "mark_scheme": [
+    {
+     "label": "1(a)",
+     "text": "7, 9",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        35.70000076293945,
+        113.8,
+        559.6199951171875,
+        138.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this table.",
+     "text": "Complete this table."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Day (<i>n</i>)",
+       "Total number of plants that are infected or dead (<i>t</i>)"
+      ],
+      [
+       "1",
+       "1"
+      ],
+      [
+       "2",
+       "3"
+      ],
+      [
+       "3",
+       "5"
+      ],
+      [
+       "4",
+       ""
+      ],
+      [
+       "5",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      156.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 63.4,
+      "height_pt": 99.0
+     }
+    }
+   ],
+   "text": "Find a formula for t in terms of n.\n...................................................",
+   "marks": 1,
+   "path": "1(b)",
+   "mark_scheme": [
+    {
+     "label": "1(b)",
+     "text": "2n −1 oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        35.70000076293945,
+        138.2,
+        559.6199951171875,
+        163.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find a formula for <i>t</i> in terms of <i>n</i>.",
+     "text": "Find a formula for t in terms of n."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 3,
+     "bbox": [
+      30.0,
+      161.0,
+      570.0,
+      260.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 63.4,
+      "height_pt": 99.0
+     }
+    }
+   ],
+   "text": "On which day are there a total of 97 plants that are infected or dead?\n...................................................",
+   "marks": 1,
+   "path": "1(c)",
+   "mark_scheme": [
+    {
+     "label": "1(c)",
+     "text": "49",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        35.70000076293945,
+        163.3,
+        559.6199951171875,
+        187.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On which day are there a total of 97 plants that are infected or dead?",
+     "text": "On which day are there a total of 97 plants that are infected or dead?"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2017,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 3,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In a field there are a large number of plants in a straight line. The diagram shows the plants near the middle of the field.",
+   "text": "In a field there are a large number of plants in a straight line. The diagram shows the plants near the middle of the field."
+  },
+  {
+   "type": "text",
+   "html": "On Day 1, one of the plants is infected with a virus (V).",
+   "text": "On Day 1, one of the plants is infected with a virus (V)."
+  },
+  {
+   "type": "text",
+   "html": "V",
+   "text": "V"
+  },
+  {
+   "type": "text",
+   "html": "On Day 2, that plant is dead (D) and the virus infects the plants next to it.",
+   "text": "On Day 2, that plant is dead (D) and the virus infects the plants next to it."
+  },
+  {
+   "type": "text",
+   "html": "V D V",
+   "text": "V D V"
+  },
+  {
+   "type": "text",
+   "html": "This continues from day to day so this is the pattern on Day 3.",
+   "text": "This continues from day to day so this is the pattern on Day 3."
+  },
+  {
+   "type": "text",
+   "html": "V D D D V",
+   "text": "V D D D V"
+  },
+  {
+   "type": "text",
+   "html": "The diagram shows that the virus infects two more plants on day 3. So the total number of plants that are infected or dead is five.",
+   "text": "The diagram shows that the virus infects two more plants on day 3. So the total number of plants that are infected or dead is five."
+  }
+ ],
+ "marks_source": "mark scheme"
+}

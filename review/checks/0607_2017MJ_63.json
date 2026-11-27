@@ -1,0 +1,43 @@
+{
+ "paper": "0607_2017MJ_63",
+ "pipeline_version": "2.1",
+ "checked_at": "2026-11-27T11:45Z",
+ "clean": false,
+ "warnings": 3,
+ "problems": [
+  {
+   "id": "0607_2017MJ_63",
+   "kind": "marks",
+   "detail": "marks found 21, cover 40",
+   "blocking": true
+  },
+  {
+   "id": "0607_2017MJ_63_q01",
+   "kind": "figure",
+   "detail": "0607_2017MJ_63_q01c_diagram3: crop cut: ink crosses the top/bottom edge",
+   "blocking": false
+  },
+  {
+   "id": "0607_2017MJ_63_q01",
+   "kind": "figure",
+   "detail": "0607_2017MJ_63_q01ci_diagram4: crop cut: ink crosses the top edge, 1 text line(s) half inside",
+   "blocking": false
+  },
+  {
+   "id": "0607_2017MJ_63_q03",
+   "kind": "figure",
+   "detail": "0607_2017MJ_63_q03b_diagram3: crop cut: ink crosses the top edge",
+   "blocking": false
+  }
+ ],
+ "flags": [],
+ "text_score_min": 0.975,
+ "text_scores": {
+  "0607_2017MJ_63_q01": 1.0,
+  "0607_2017MJ_63_q02": 1.0,
+  "0607_2017MJ_63_q03": 0.983,
+  "0607_2017MJ_63_q04": 1.0,
+  "0607_2017MJ_63_q05": 1.0,
+  "0607_2017MJ_63_q06": 0.975
+ }
+}

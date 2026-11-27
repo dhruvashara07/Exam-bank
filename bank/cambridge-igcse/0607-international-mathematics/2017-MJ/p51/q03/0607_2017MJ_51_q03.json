@@ -1,0 +1,516 @@
+{
+ "id": "0607_2017MJ_51_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    335.6,
+    570.0,
+    743.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 49.0,
+    "height_pt": 407.9
+   }
+  }
+ ],
+ "text": "3\nIn another field, one of the plants is infected with a different virus (Z).\nThis virus affects all the plants next to it.\nZ\nOn Day 2 that plant is dead (D) and the plants next to it are infected.\nZ\nZ\nD\nZ\nZ\nOn Day 3 there are 5 dead plants and 8 infected plants.\nZ\nZ\nD\nZ\nZ\nD\nD\nD\nZ\nZ\nZ\nD\nZ",
+ "marks": 11,
+ "figures": [
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    235.1,
+    384.6,
+    367.0,
+    458.0
+   ],
+   "id": "0607_2017MJ_51_q03_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    235.1,
+    508.7,
+    367.0,
+    582.1
+   ],
+   "id": "0607_2017MJ_51_q03_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    235.1,
+    632.7,
+    367.0,
+    740.0
+   ],
+   "id": "0607_2017MJ_51_q03_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      240.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 183.0
+     }
+    }
+   ],
+   "text": "Draw the pattern for Day 4.",
+   "marks": 1,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "Z\nZ\nD\nZ\nZ\nD\nD\nD\nZ\nZ\nD\nD\nD\nD\nD\nZ\nZ\nD\nD\nD\nZ\nZ\nD\nZ\nZ",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        25.139999389648438,
+        526.1,
+        570.1799926757812,
+        656.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Draw the pattern for Day 4.",
+     "text": "Draw the pattern for Day 4."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 6,
+     "bbox": [
+      30.0,
+      252.4,
+      570.0,
+      681.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 15.8,
+      "height_pt": 428.6
+     }
+    }
+   ],
+   "text": "Complete this table to show the number of infected plants each day.\nDay (n)\nNumber of infected plants (p)\n1\n1\n2\n4\n3\n8\n4\n5\nYou may use this grid to help you.",
+   "marks": 2,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "12\n16",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        25.139999389648438,
+        656.9,
+        570.1799926757812,
+        694.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this table to show the number of <b>infected</b> plants each day.",
+     "text": "Complete this table to show the number of infected plants each day."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Day (<i>n</i>)",
+       "Number of infected plants (<i>p</i>)"
+      ],
+      [
+       "1",
+       "1"
+      ],
+      [
+       "2",
+       "4"
+      ],
+      [
+       "3",
+       "8"
+      ],
+      [
+       "4",
+       ""
+      ],
+      [
+       "5",
+       ""
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "html": "You may use this grid to help you.",
+     "text": "You may use this grid to help you."
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      57.9,
+      570.0,
+      145.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 51.9,
+      "height_pt": 87.1
+     }
+    }
+   ],
+   "text": "Work out a formula for the number of infected plants (p) in terms of the day (n) for n\n2\n.\nH\n..............................................",
+   "marks": 2,
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "[p =] 4n – 4 oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        25.139999389648438,
+        694.0,
+        570.1799926757812,
+        731.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Work out a formula for the number of infected plants (<i>p</i>) in terms of the day (<i>n</i>) for <i>n</i> H 2.",
+     "text": "Work out a formula for the number of infected plants (p) in terms of the day (n) for n H 2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      150.3,
+      570.0,
+      323.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 16.0,
+      "height_pt": 173.2
+     }
+    }
+   ],
+   "text": "Complete this table to show the total number of infected or dead plants each day.\nTotal number of infected or\nDay (n)\ndead plants (t)\n1\n1\n2\n5\n3\n13\n4\n5",
+   "marks": 2,
+   "path": "3(d)",
+   "mark_scheme": [
+    {
+     "label": "3(d)",
+     "text": "25\n41",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        25.139999389648438,
+        731.1,
+        570.1799926757812,
+        772.2
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Complete this table to show the total number of infected or dead plants each day.",
+     "text": "Complete this table to show the total number of infected or dead plants each day."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Day (<i>n</i>)",
+       "Total number of infected or dead plants (<i>t</i>)"
+      ],
+      [
+       "1",
+       "1"
+      ],
+      [
+       "2",
+       "5"
+      ],
+      [
+       "3",
+       "13"
+      ],
+      [
+       "4",
+       ""
+      ],
+      [
+       "5",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      324.9,
+      570.0,
+      644.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "answer_line",
+      "dotted_lines": 2,
+      "answer_line": "b =  ……",
+      "working_gap_pt": 219.4,
+      "height_pt": 319.1
+     }
+    }
+   ],
+   "text": "2\n(e) The formula for t in terms of n is t\n2\nn\nbn\n+.\nc\n=\n+\nFind the value of b and the value of c.\nb =  ......................................................\nc =  ......................................................",
+   "marks": 2,
+   "path": "3(e)",
+   "mark_scheme": [
+    {
+     "label": "3(e)",
+     "text": "[b =] –2\n[c =] 1",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        25.139999389648438,
+        91.3,
+        570.1799926757812,
+        128.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The formula for <i>t</i> in terms of <i>n</i> is <i>t</i> = 2<i>n</i><sup>2</sup> + <i>bn</i> + <i>c</i>. Find the value of <i>b</i> and the value of <i>c</i>.",
+     "text": "The formula for t in terms of n is t = 2n2 + bn + c. Find the value of b and the value of c."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "b ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "c ="
+    }
+   ]
+  },
+  {
+   "label": "f",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      409.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 352.0
+     }
+    }
+   ],
+   "text": "Show that your formula works when n = 6.",
+   "marks": 2,
+   "path": "3(f)",
+   "mark_scheme": [
+    {
+     "label": "3(f)",
+     "text": "Substitution leading to 61\nand\ncorrect diagram\nor continued sequence",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        25.139999389648438,
+        128.4,
+        570.1799926757812,
+        241.4
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that your formula works when <i>n</i> = 6.",
+     "text": "Show that your formula works when n = 6."
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2017,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 5,
+ "variant": 1,
+ "paper_code": "0607/51",
+ "paper_type": "core_investigation",
+ "total_marks": 11,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In another field, one of the plants is infected with a different virus (Z). This virus affects <b>all</b> the plants next to it.",
+   "text": "In another field, one of the plants is infected with a different virus (Z). This virus affects all the plants next to it."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2017MJ_51_q03_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "On Day 2 that plant is dead (D) and the plants next to it are infected.",
+   "text": "On Day 2 that plant is dead (D) and the plants next to it are infected."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2017MJ_51_q03_diagram2",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "On Day 3 there are 5 dead plants and 8 infected plants.",
+   "text": "On Day 3 there are 5 dead plants and 8 infected plants."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2017MJ_51_q03_diagram3",
+   "caption": null
+  }
+ ],
+ "marks_source": "mark scheme"
+}

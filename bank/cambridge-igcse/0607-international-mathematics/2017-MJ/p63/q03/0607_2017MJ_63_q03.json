@@ -1,0 +1,552 @@
+{
+ "id": "0607_2017MJ_63_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 8,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    229.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 9.6,
+    "height_pt": 172.5
+   }
+  }
+ ],
+ "text": "3\nIn question 2 you made stars by joining every second dot round a circle.\nYou can also make stars by joining every third dot.\n1\n12\n2\n11\n3\nStarting from 1, dots are numbered clockwise.\n10\n4\nThis gives a code for this star.\n9\n5\n1\n4\n7\n10\n1\n6\n8\n7",
+ "marks": 7,
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    91.5,
+    97.2,
+    223.4,
+    228.7
+   ],
+   "id": "0607_2017MJ_63_q03_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    125.2,
+    255.8,
+    420.3,
+    410.9
+   ],
+   "id": "0607_2017MJ_63_q03a_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    104.0,
+    580.0999755859375,
+    483.0,
+    740.2000122070312
+   ],
+   "id": "0607_2017MJ_63_q03b_diagram3",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      236.2,
+      570.0,
+      411.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 18.8,
+      "height_pt": 175.3
+     }
+    }
+   ],
+   "text": "On the circle below draw the star with this code.\n1\n12\n2\n1\n3\n5\n7\n9\n11\n1\n11\n3\n10\n4\n9\n5\n6\n8\n7",
+   "marks": 1,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        35.70000076293945,
+        163.0,
+        559.6199951171875,
+        264.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the circle below draw the star with this code.",
+     "text": "On the circle below draw the star with this code."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2017MJ_63_q03a_diagram2",
+     "caption": null
+    },
+    {
+     "type": "text",
+     "html": "3",
+     "text": "3"
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 8,
+     "bbox": [
+      30.0,
+      418.2,
+      570.0,
+      740.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 2,
+      "answer_line": null,
+      "working_gap_pt": 25.8,
+      "height_pt": 322.3
+     }
+    }
+   ],
+   "text": "To make stars you join every nth dot round a circle with 12 dots.\nWhen n = 2 not all the dots are used.\nWhen n = 3 not all the dots are used.\nWhen nG 6, find two other values of n and the codes for stars that do not use all the dots.\nThere are some 12-dot circles below if you need them.\nn = ........... with code 1\n...............................................................................\nn = ........... with code 1\n...............................................................................\n1\n1\n12\n12\n2\n2\n11\n11\n3\n3\n10\n4\n10\n4\n9\n9\n5\n5\n8\n6\n8\n6\n7\n7",
+   "marks": 1,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "n = 4 with code 1→ 5 → 9 → 1\nn = 6 with code 1→ 7 → 1",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        35.70000076293945,
+        264.8,
+        559.6199951171875,
+        303.5
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "To make stars you join every <i>n</i>th dot round a circle with 12 dots. When <i>n</i> = 2 not all the dots are used. When <i>n</i> = 3 not all the dots are used. When <i>n</i> G 6, find two other values of <i>n</i> and the codes for stars that do <b>not</b> use all the dots. There are some 12-dot circles below if you need them.",
+     "text": "To make stars you join every nth dot round a circle with 12 dots. When n = 2 not all the dots are used. When n = 3 not all the dots are used. When n G 6, find two other values of n and the codes for stars that do not use all the dots. There are some 12-dot circles below if you need them."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "n ="
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "n ="
+    },
+    {
+     "type": "text",
+     "html": "1",
+     "text": "1"
+    },
+    {
+     "type": "figure",
+     "id": "0607_2017MJ_63_q03b_diagram3",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [],
+   "text": "",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        30.0,
+        57.0,
+        570.0,
+        239.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 4,
+        "answer_line": null,
+        "working_gap_pt": 17.2,
+        "height_pt": 182.5
+       }
+      }
+     ],
+     "text": "To make stars you join every nth dot round a circle with 20 dots.\nFor nG 10, not all the dots are used when n = 2 or 4 or 5 or 10.\nd\nWhen d is the number of dots round a circle and n\n, what is true about n when not all\nG\n2\nthe dots are used?\n...........................................................................................................................................................\n...........................................................................................................................................................\n...........................................................................................................................................................\n...........................................................................................................................................................",
+     "marks": 2,
+     "path": "3(c)(i)",
+     "mark_scheme": [
+      {
+       "label": "3(c)(i)",
+       "text": "It is a factor [of d]\nn ≠1 or n ≠ d",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          35.70000076293945,
+          303.5,
+          559.6199951171875,
+          354.1
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "To make stars you join every <i>n</i>th dot round a circle with 20 dots.",
+       "text": "To make stars you join every nth dot round a circle with 20 dots."
+      },
+      {
+       "type": "text",
+       "html": "For <i>n</i> G 10, not all the dots are used when <i>n</i> = 2 or 4 or 5 or 10. When <i>d</i> is the number of dots round a circle and <i>n</i> G \\(\\frac{d}{2}\\) , what is true about <i>n</i> when not all the dots are used?",
+       "text": "For n G 10, not all the dots are used when n = 2 or 4 or 5 or 10. When d is the number of dots round a circle and n G (d)/(2) , what is true about n when not all the dots are used?"
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 4
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 9,
+       "bbox": [
+        30.0,
+        244.7,
+        570.0,
+        395.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 2,
+        "answer_line": null,
+        "working_gap_pt": 76.5,
+        "height_pt": 150.8
+       }
+      }
+     ],
+     "text": "When d is a prime number greater than 2, find an expression, in terms of d, for the number of\ndifferent stars that can be drawn.\n...........................................................................................................................................................\n...........................................................................................................................................................",
+     "marks": 1,
+     "path": "3(c)(ii)",
+     "mark_scheme": [
+      {
+       "label": "3(c)(ii)",
+       "text": "d −1\noe\n2",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          35.70000076293945,
+          354.1,
+          559.6199951171875,
+          395.2
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "When <i>d</i> is a prime number greater than 2, find an expression, in terms of <i>d</i>, for the number of different stars that can be drawn.",
+       "text": "When d is a prime number greater than 2, find an expression, in terms of d, for the number of different stars that can be drawn."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 2
+      }
+     ]
+    }
+   ],
+   "path": "3(c)"
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 10,
+     "bbox": [
+      30.0,
+      57.0,
+      570.0,
+      102.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 10.0,
+      "height_pt": 45.0
+     }
+    }
+   ],
+   "text": "Here are the last four numbers in the code for a star.\n...      98\n106\n114\n1",
+   "marks": 0,
+   "parts": [
+    {
+     "label": "i",
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        30.0,
+        109.2,
+        570.0,
+        233.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 89.4,
+        "height_pt": 124.3
+       }
+      }
+     ],
+     "text": "Find the number of dots round the circle.\n......................................................",
+     "marks": 1,
+     "path": "3(d)(i)",
+     "mark_scheme": [
+      {
+       "label": "3(d)(i)",
+       "text": "121",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          35.70000076293945,
+          395.2,
+          559.6199951171875,
+          419.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the number of dots round the circle<i>.</i>",
+       "text": "Find the number of dots round the circle."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      }
+     ]
+    },
+    {
+     "label": "ii",
+     "segments": [
+      {
+       "page": 10,
+       "bbox": [
+        30.0,
+        239.2,
+        570.0,
+        376.5
+       ],
+       "continued": false,
+       "answer_space": {
+        "kind": "lines",
+        "dotted_lines": 1,
+        "answer_line": null,
+        "working_gap_pt": 102.4,
+        "height_pt": 137.3
+       }
+      },
+      {
+       "page": 11,
+       "bbox": [
+        30.0,
+        412.0,
+        570.0,
+        431.0
+       ],
+       "continued": true,
+       "answer_space": {
+        "kind": "none",
+        "dotted_lines": 0,
+        "answer_line": null,
+        "working_gap_pt": -0.0,
+        "height_pt": 19.0
+       }
+      }
+     ],
+     "text": "Find the number of points on the star.\n......................................................\nThe modelling task starts on page 12.",
+     "marks": 1,
+     "path": "3(d)(ii)",
+     "mark_scheme": [
+      {
+       "label": "3(d)(ii)",
+       "text": "121",
+       "codes": [
+        "1"
+       ],
+       "segments": [
+        {
+         "page": 4,
+         "bbox": [
+          35.70000076293945,
+          419.7,
+          559.6199951171875,
+          456.7
+         ]
+        }
+       ]
+      }
+     ],
+     "content": [
+      {
+       "type": "text",
+       "html": "Find the number of points on the star.",
+       "text": "Find the number of points on the star."
+      },
+      {
+       "type": "answer",
+       "kind": "lines",
+       "lines": 1
+      },
+      {
+       "type": "text",
+       "html": "<b>The modelling task starts on page 12.</b>",
+       "text": "The modelling task starts on page 12."
+      }
+     ]
+    }
+   ],
+   "path": "3(d)",
+   "content": [
+    {
+     "type": "text",
+     "html": "Here are the last four numbers in the code for a star.",
+     "text": "Here are the last four numbers in the code for a star."
+    },
+    {
+     "type": "text",
+     "html": "... 98 106 114 1",
+     "text": "... 98 106 114 1"
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2017,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 3,
+ "paper_code": "0607/63",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 7,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In <b>question 2</b> you made stars by joining every second dot round a circle. You can also make stars by joining every third dot.",
+   "text": "In question 2 you made stars by joining every second dot round a circle. You can also make stars by joining every third dot."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2017MJ_63_q03_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "Starting from 1, dots are numbered clockwise. This gives a code for this star. 4 7 10 1",
+   "text": "Starting from 1, dots are numbered clockwise. This gives a code for this star. 4 7 10 1"
+  }
+ ],
+ "marks_source": "mark scheme"
+}

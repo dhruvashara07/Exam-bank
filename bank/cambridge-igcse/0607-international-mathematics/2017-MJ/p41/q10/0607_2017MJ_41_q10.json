@@ -1,0 +1,260 @@
+{
+ "id": "0607_2017MJ_41_q10",
+ "number": 10,
+ "segments": [
+  {
+   "page": 17,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    400.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 98.7,
+    "height_pt": 343.7
+   }
+  }
+ ],
+ "text": "10\ny\n3\nx\n0\n90\n180\n270\n360\n–3\n^h\nf\nx\n2\nsin\nx\ncos\nx\nfor °\n0\nx\n360\n°\n=\n+\nG\nG\n^h\ng\nx\n2\nlog\nx\nfor °\n0\nx\n360\n°\n=\n-\nG\nG",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 17,
+   "bbox": [
+    93.6,
+    71.2,
+    504.3,
+    347.3
+   ],
+   "id": "0607_2017MJ_41_q10_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      403.8,
+      570.0,
+      426.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": -3.5,
+      "height_pt": 22.7
+     }
+    }
+   ],
+   "text": "=^h.\n(a) On the diagram, sketch the graph of y\nf\nx\n[3]",
+   "marks": 3,
+   "path": "10(a)",
+   "mark_scheme": [
+    {
+     "label": "10(a)",
+     "text": "Correct Graph\ny\nf(x)=2sin(x)+cos(x)\n3\nf(x)=2-log(x)\nx\n90\n180\n270\n360\n3",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        28.68000030517578,
+        446.7,
+        566.6399536132812,
+        580.1
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the diagram, sketch the graph of <i>y</i> = f^<i>x</i>h.",
+     "text": "On the diagram, sketch the graph of y = f^xh."
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      429.9,
+      570.0,
+      452.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": -3.5,
+      "height_pt": 22.6
+     }
+    }
+   ],
+   "text": "=^h.\n(b) On the same diagram, sketch the graph of y\ng\nx\n[2]",
+   "marks": 2,
+   "path": "10(b)",
+   "mark_scheme": [
+    {
+     "label": "10(b)",
+     "text": "Correct Graph with second\nintersection with other graph (if\ncorrect) below x-axis",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        28.68000030517578,
+        580.1,
+        566.6399536132812,
+        629.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the same diagram, sketch the graph of <i>y</i> = g^<i>x</i>h.",
+     "text": "On the same diagram, sketch the graph of y = g^xh."
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 17,
+     "bbox": [
+      30.0,
+      455.9,
+      570.0,
+      621.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 102.5,
+      "height_pt": 165.6
+     }
+    }
+   ],
+   "text": "Solve the equation.\n2\nsin\nx\ncos\nx\n2\nlog\nx\n+\n=\n-\n.................................................... [3]",
+   "marks": 3,
+   "path": "10(c)",
+   "mark_scheme": [
+    {
+     "label": "10(c)",
+     "text": "6.18 or 6.175...\n159 or 158.5 to 158.6\n320 or 320.3 to 320.4",
+     "codes": [
+      "3"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        28.68000030517578,
+        629.9,
+        566.6399536132812,
+        679.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Solve the equation.",
+     "text": "Solve the equation."
+    },
+    {
+     "type": "text",
+     "html": "sin <i>x</i> + cos <i>x</i> = 2 - log <i>x</i>",
+     "text": "sin x + cos x = 2 - log x"
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 3
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2017,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_long_answer",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>10</b>",
+   "text": "10"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2017MJ_41_q10_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "f^<i>x</i>h = 2 sin <i>x</i> + cos <i>x</i> for °0 G <i>x</i> G 360° g^<i>x</i>h = 2 - log <i>x</i> for °0 G <i>x</i> G 360°",
+   "text": "f^xh = 2 sin x + cos x for °0 G x G 360° g^xh = 2 - log x for °0 G x G 360°"
+  }
+ ]
+}

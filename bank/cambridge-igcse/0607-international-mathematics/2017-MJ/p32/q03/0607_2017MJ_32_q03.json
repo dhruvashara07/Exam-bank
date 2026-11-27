@@ -1,0 +1,538 @@
+{
+ "id": "0607_2017MJ_32_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 5,
+   "bbox": [
+    30.0,
+    58.7,
+    570.0,
+    133.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 11.4,
+    "height_pt": 74.8
+   }
+  }
+ ],
+ "text": "3\nU= {a, b, c, d, e, f, g, h}\nP= {a, c, e, f, g}\nQ= {b, d, f, g}",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    157.5,
+    164.6,
+    439.2,
+    324.3
+   ],
+   "id": "0607_2017MJ_32_q03a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    201.6,
+    664.2,
+    403.0,
+    790.2
+   ],
+   "id": "0607_2017MJ_32_q03g_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(g)"
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      136.7,
+      570.0,
+      344.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 117.6,
+      "height_pt": 207.3
+     }
+    }
+   ],
+   "text": "Write the elements of U in their correct position in the Venn diagram.\nU\nP\nQ\n[2]",
+   "marks": 2,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        34.439998626708984,
+        460.2,
+        560.8800048828125,
+        571.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write the elements of U in their correct position in the Venn diagram.",
+     "text": "Write the elements of U in their correct position in the Venn diagram."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2017MJ_32_q03a_diagram1",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 117.6
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      347.0,
+      570.0,
+      396.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 11.5,
+      "height_pt": 49.0
+     }
+    }
+   ],
+   "text": "Write down an element of P.\n.................................................... [1]",
+   "marks": 1,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "a or c or e or f or g",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        34.439998626708984,
+        575.3,
+        560.8800048828125,
+        601.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down an element of <i>P</i>.",
+     "text": "Write down an element of P."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      399.0,
+      570.0,
+      461.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 24.5,
+      "height_pt": 62.0
+     }
+    }
+   ],
+   "text": "Write down the elements of a proper subset of Q.\n{ ................................................. } [1]",
+   "marks": 1,
+   "path": "3(c)",
+   "mark_scheme": [
+    {
+     "label": "3(c)",
+     "text": "Any proper subset containing some (but not\nall) of b, d, f, g",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        34.439998626708984,
+        601.8,
+        560.8800048828125,
+        638.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the elements of a proper subset of <i>Q</i>.",
+     "text": "Write down the elements of a proper subset of Q."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "{",
+     "unit": "}"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "d",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      464.0,
+      570.0,
+      526.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 24.5,
+      "height_pt": 62.0
+     }
+    }
+   ],
+   "text": "Write down the elements of the complement of P.\n{ ................................................. } [1]",
+   "marks": 1,
+   "path": "3(d)",
+   "mark_scheme": [
+    {
+     "label": "3(d)",
+     "text": "{b, d, h }",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        34.439998626708984,
+        638.8,
+        560.8800048828125,
+        663.3
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down the elements of the complement of <i>P</i>.",
+     "text": "Write down the elements of the complement of P."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "{",
+     "unit": "}"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "e",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      529.0,
+      570.0,
+      591.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 24.5,
+      "height_pt": 62.0
+     }
+    }
+   ],
+   "text": "Write down (\nnP\nQ\n)\nl.\n,\n.................................................... [1]",
+   "marks": 1,
+   "path": "3(e)",
+   "mark_scheme": [
+    {
+     "label": "3(e)",
+     "text": "1",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        34.439998626708984,
+        663.3,
+        560.8800048828125,
+        687.7
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Write down (n <i>P</i> , <i>Q</i>)l.",
+     "text": "Write down (n P , Q)l."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "f",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      594.0,
+      570.0,
+      643.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 11.4,
+      "height_pt": 49.0
+     }
+    }
+   ],
+   "text": "Using set notation, complete the statement.\nc ............ P\n[1]",
+   "marks": 1,
+   "path": "3(f)",
+   "mark_scheme": [
+    {
+     "label": "3(f)",
+     "text": "c ∈ P",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 3,
+       "bbox": [
+        34.439998626708984,
+        687.7,
+        560.8800048828125,
+        717.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Using set notation, complete the statement.",
+     "text": "Using set notation, complete the statement."
+    },
+    {
+     "type": "answer",
+     "kind": "answer_line",
+     "prefix": "c",
+     "unit": "P"
+    },
+    {
+     "type": "answer",
+     "kind": "lines"
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "label": "g",
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      30.0,
+      646.0,
+      570.0,
+      796.8
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 71.7,
+      "height_pt": 150.7
+     }
+    }
+   ],
+   "text": "On the diagram below, shade the region P\nQ\n.\nl\n+\nU\nP\nQ\n[1]",
+   "marks": 1,
+   "path": "3(g)",
+   "mark_scheme": [
+    {
+     "label": "3(g)",
+     "text": "",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        34.439998626708984,
+        89.3,
+        560.8800048828125,
+        207.6
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the diagram below, shade the region <i>P</i>l+ <i>Q</i> .",
+     "text": "On the diagram below, shade the region Pl+ Q ."
+    },
+    {
+     "type": "figure",
+     "id": "0607_2017MJ_32_q03g_diagram2",
+     "caption": null
+    },
+    {
+     "type": "answer",
+     "kind": "space",
+     "height_pt": 71.7
+    },
+    {
+     "type": "marks",
+     "value": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2017,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 3,
+ "variant": 2,
+ "paper_code": "0607/32",
+ "paper_type": "core_long_answer",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "U = {a, b, c, d, e, f, g, h} <i>P</i> = {a, c, e, f, g} <i>Q</i> = {b, d, f, g}",
+   "text": "U = {a, b, c, d, e, f, g, h} P = {a, c, e, f, g} Q = {b, d, f, g}"
+  }
+ ]
+}

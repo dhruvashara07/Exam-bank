@@ -1,0 +1,255 @@
+{
+ "id": "0607_2017MJ_41_q07",
+ "number": 7,
+ "segments": [
+  {
+   "page": 13,
+   "bbox": [
+    30.0,
+    56.8,
+    570.0,
+    462.0
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 141.3,
+    "height_pt": 405.2
+   }
+  }
+ ],
+ "text": "7\ny\n10\nx\n0\n–4\n4\n–10\n^h\n2\nf\nx\n9\nx\n=\n-",
+ "marks": 8,
+ "figures": [
+  {
+   "caption": null,
+   "page": 13,
+   "bbox": [
+    102.5,
+    73.1,
+    487.0,
+    462.0
+   ],
+   "id": "0607_2017MJ_41_q07_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [],
+  "status": "auto"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      464.7,
+      570.0,
+      513.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 2.9,
+      "height_pt": 48.8
+     }
+    }
+   ],
+   "text": "=^h, for values of x between -4 and 4.\n(a) On the diagram, sketch the graph of y\nf\nx\n[4]",
+   "marks": 4,
+   "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "Correct Graph\ny\n10\nf(x)=abs(9-x^2)\nx\n-4\n4\n-10",
+     "codes": [
+      "4"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        28.68000030517578,
+        360.6,
+        566.6399536132812,
+        486.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "On the diagram, sketch the graph of <i>y</i> = f^<i>x</i>h, for values of <i>x</i> between -4 and 4.",
+     "text": "On the diagram, sketch the graph of y = f^xh, for values of x between -4 and 4."
+    },
+    {
+     "type": "marks",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      516.7,
+      570.0,
+      604.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 42.2,
+      "height_pt": 87.8
+     }
+    }
+   ],
+   "text": "^h\n(b) Solve\nf\nx\n7\n.\n=\n............................................................................................. [2]",
+   "marks": 2,
+   "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "[x =] ±4, ±\n2\nor ± 1.41 or ± 1.414...",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        28.68000030517578,
+        486.9,
+        566.6399536132812,
+        527.8
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Solve f^<i>x</i>h = 7.",
+     "text": "Solve f^xh = 7."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "label": "c",
+   "segments": [
+    {
+     "page": 13,
+     "bbox": [
+      30.0,
+      607.7,
+      570.0,
+      747.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 76.5,
+      "height_pt": 139.8
+     }
+    }
+   ],
+   "text": "2\n(c) The equation\n9\nx\nk\nhas two solutions.\n-\n=\nFind the range of values of k.\n............................................................................................. [2]",
+   "marks": 2,
+   "path": "7(c)",
+   "mark_scheme": [
+    {
+     "label": "7(c)",
+     "text": "k > 9\nk = 0",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        28.68000030517578,
+        527.8,
+        566.6399536132812,
+        567.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "The equation 9 - <i>x</i><sup>2</sup> = <i>k</i> has two solutions. Find the range of values of <i>k</i>.",
+     "text": "The equation 9 - x2 = k has two solutions. Find the range of values of k."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    },
+    {
+     "type": "marks",
+     "value": 2
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2017,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 4,
+ "variant": 1,
+ "paper_code": "0607/41",
+ "paper_type": "extended_long_answer",
+ "total_marks": 8,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "<b>7</b>",
+   "text": "7"
+  },
+  {
+   "type": "figure",
+   "id": "0607_2017MJ_41_q07_diagram1",
+   "caption": null
+  }
+ ]
+}

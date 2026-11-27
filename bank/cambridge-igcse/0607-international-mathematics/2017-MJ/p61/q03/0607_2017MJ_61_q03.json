@@ -1,0 +1,214 @@
+{
+ "id": "0607_2017MJ_61_q03",
+ "number": 3,
+ "segments": [
+  {
+   "page": 7,
+   "bbox": [
+    30.0,
+    57.0,
+    570.0,
+    199.5
+   ],
+   "continued": false,
+   "answer_space": {
+    "kind": "none",
+    "dotted_lines": 0,
+    "answer_line": null,
+    "working_gap_pt": 30.0,
+    "height_pt": 142.5
+   }
+  }
+ ],
+ "text": "3\nIn another field on Day 1 eight plants, in the arrangement below, are infected.\nV\nV\nV\nV\nV\nV\nV\nV\nOn Day 2 these plants are dead and the plants next to them are infected.",
+ "marks": 5,
+ "figures": [
+  {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    260.0,
+    90.5,
+    340.9,
+    163.9
+   ],
+   "id": "0607_2017MJ_61_q03_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  }
+ ],
+ "review": {
+  "reasons": [
+   "mark scheme row 3(c) has no matching part in the paper"
+  ],
+  "status": "flagged"
+ },
+ "parts": [
+  {
+   "label": "a",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      202.5,
+      570.0,
+      418.0
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "none",
+      "dotted_lines": 0,
+      "answer_line": null,
+      "working_gap_pt": 4.0,
+      "height_pt": 215.5
+     }
+    }
+   ],
+   "text": "Show that the number of plants that are infected on Day n, where  n\n2\n,  is  n\n4\n+.\n3\nH",
+   "marks": 2,
+   "path": "3(a)",
+   "mark_scheme": [
+    {
+     "label": "3(a)",
+     "text": "[8,] 11, 15, 19 with supporting diagram(s) seen\nand\n4(2) + 3 = 11, 4(3) + 3 = 15,\n4(4) + 3 = 19 soi\nor\nsolving 4n + 3 = 11, 4n + 3 = 15, 4n + 3 = 19 to obtain\nn = 2, 3, 4\nor\ndifferences of 4 implying 4n + k\nand substituting at least one of n = 2, 3, 4, … to find k",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        35.70000076293945,
+        89.3,
+        559.6199951171875,
+        252.9
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Show that the number of plants that are infected on Day <i>n</i>, where <i>n</i> H 2, is 4<i>n</i> + 3.",
+     "text": "Show that the number of plants that are infected on Day n, where n H 2, is 4n + 3."
+    }
+   ]
+  },
+  {
+   "label": "b",
+   "segments": [
+    {
+     "page": 7,
+     "bbox": [
+      30.0,
+      517.8,
+      570.0,
+      792.5
+     ],
+     "continued": false,
+     "answer_space": {
+      "kind": "lines",
+      "dotted_lines": 1,
+      "answer_line": null,
+      "working_gap_pt": 239.3,
+      "height_pt": 274.7
+     }
+    }
+   ],
+   "text": "Find an expression for the total number of plants that are infected or dead on Day n, where n\n2\n.\nH\n...................................................",
+   "marks": 2,
+   "path": "3(b)",
+   "mark_scheme": [
+    {
+     "label": "3(b)",
+     "text": "2n +5n+1 oe\n2",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 4,
+       "bbox": [
+        35.70000076293945,
+        252.9,
+        559.6199951171875,
+        290.0
+       ]
+      }
+     ]
+    }
+   ],
+   "content": [
+    {
+     "type": "text",
+     "html": "Find an expression for the total number of plants that are infected or dead on Day <i>n</i>, where <i>n</i> H 2.",
+     "text": "Find an expression for the total number of plants that are infected or dead on Day n, where n H 2."
+    },
+    {
+     "type": "answer",
+     "kind": "lines",
+     "lines": 1
+    }
+   ]
+  }
+ ],
+ "type": "structured",
+ "mark_scheme": [
+  {
+   "label": "3(c)",
+   "text": "7.2[0] to 7.236",
+   "codes": [
+    "1"
+   ],
+   "segments": [
+    {
+     "page": 5,
+     "bbox": [
+      35.70000076293945,
+      599.6,
+      559.6199951171875,
+      637.5
+     ]
+    }
+   ]
+  }
+ ],
+ "syllabus": "0607",
+ "subject": "International Mathematics",
+ "board": "CAIE",
+ "exam": "IGCSE",
+ "year": 2017,
+ "session": "MJ",
+ "season": "May-June",
+ "paper": 6,
+ "variant": 1,
+ "paper_code": "0607/61",
+ "paper_type": "extended_investigation_modelling",
+ "total_marks": 5,
+ "topic": null,
+ "subtopic": null,
+ "keywords": [],
+ "difficulty": null,
+ "pipeline_version": "2.1",
+ "content": [
+  {
+   "type": "text",
+   "html": "In another field on Day 1 eight plants, in the arrangement below, are infected.",
+   "text": "In another field on Day 1 eight plants, in the arrangement below, are infected."
+  },
+  {
+   "type": "figure",
+   "id": "0607_2017MJ_61_q03_diagram1",
+   "caption": null
+  },
+  {
+   "type": "text",
+   "html": "On Day 2 these plants are dead and the plants next to them are infected.",
+   "text": "On Day 2 these plants are dead and the plants next to them are infected."
+  }
+ ],
+ "marks_source": "mark scheme"
+}
