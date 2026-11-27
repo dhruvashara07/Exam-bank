@@ -27,8 +27,20 @@ Read this first in every session. Update it before ending a session.
   text, thermometer tube walls join their cell picture, MS Q column shows the paper's labels after remapping. C0 rebuilt: 56/56
   exact, 0 flags. Freeze: golden 0, nothing under 0625/0607, maths layout identical (192/192), ms_rebuild list = baseline.
   C0 APPROVED (56 papers). Pilot done.
-- NEXT: (1) C1 (CHEM_PLAN 6) in a new chat; first add the Marks-column sum check (ERROR_PATTERNS 295) to chemistry pass 1
-  (as a hint: Guidance rows give false hits).
+- 2026-11-27: C1 (2024-FM 2024-ON 2025-FM 2025-MJ 2025-ON 2026-FM, 70 papers) built: GitHub pass 1 (run 45959753924, 83 reasons -
+  the C0 classes held; new pass-1 hint ms_marksum = Marks-column sum, ERROR_PATTERNS 295) + pass 2 (45969884881: 12 verified, 0 open).
+  Fixed as classes (patterns 313-319, all gated to chemistry): MS rows lost on a page continuing without header / '(a)(ii)'
+  without number; end atoms of displayed formulae as drifting text; picture under a re-wrapped line; structures under the last
+  text line cut off (2026 FM 42 6(c) missing); column-rule stub in a structure picture; long Answer lines over the Marks/Guidance
+  column (also 2 approved C0 questions: 2015 MJ 32 q3, 2015 MJ 21 q6 - in the round). Freeze: golden 0, nothing under 0625/0607,
+  maths ms_layout hash identical on all 4014 maths questions (so the ms_rebuild list = baseline).
+  Known (budget rule): C0 2026 MJ 41 4(c)(i) and 2026 MJ 63 2(a) text still overlapping (4 tries, 2 questions, approved papers,
+  NOT rebuilt - stored as approved); polymer open bonds as short stubs (3 Qs); 2025 ON 23 q36 options inside the picture.
+  2026 FM 32: Cambridge removed 3(d)(iv): marks 79/80 is a blocking check - approve with --force-note if approve.py refuses.
+  Round 45 (10 items: 5 calibration, 3 fixes, 2 changed pilot questions) on https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e.
+- NEXT: (1) C1: Dhruv answers round 45 -> read feedback_r45 (db_list, slug b3c8a710-c92b-4a33-95b2-f7eba1bc0031), fix wrong
+  items as classes (gated 0620), freeze checks, review_round close 45, approve.py the 70 C1 papers, docs, push. Then C2 (CHEM_PLAN 6)
+  in a new chat.
   (2) Maths: RD2 done; next maths batch M4 - see the maths NEXT below.
 
 ## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md

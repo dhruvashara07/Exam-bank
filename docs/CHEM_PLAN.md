@@ -114,3 +114,7 @@ Paper numbering confirmed online: up to 2015 Paper 1 MCQ, 2 Core Theory, 3 Exten
 Paper 1 MCQ Core, 2 MCQ Extended, 3 Theory Core, 4 Theory Extended, 5 Practical, 6 ATP. Dhruv's round-41 rules: drawings
 in table cells are pictures inside their cells, table text stays text; drawn formulae are pictures, all other words text;
 one standard MS column proportion (MS_TABLE_RULES 'Chemistry'); faint MS pictures redrawn properly.
+
+## 11. C1 (2026-11-27)
+Built (pass 1 + pass 2, 70 papers), 83 reasons (pilot classes hold), patterns 313-319, round 45 (10 items). Pass 1 now also gives
+the Marks-column sum hint (ms_marksum). Tools: fig_blast takes SYL (MCQ figures not covered - harness on bank/ jsons).

@@ -332,3 +332,9 @@ one Total for the task. Built by pipeline/tasks.py after every store build / ms_
 - A drawn formula (atoms as outlines / tiny images / text + bonds) in a cell is ONE vector picture; every other word is text.
 - The empty band under a row's content is not kept; text is never shrunk (pictures on their own lines move with the re-wrap).
 - Faint pasted pictures are redrawn by hand as clean vector SVG (pipeline/chem_redraw/).
+
+## Chemistry: lines wider than the Answer column (C1, ERROR_PATTERNS 319)
+A line of the Answer cell never runs into the Marks / Guidance column: rows kept by the cell / table fallback (and a line the
+re-wrap could not break) are passed through ms_layout._wrap_overrun - the words past the column start a new line under it and
+the Answer column below moves down (Marks and Guidance stay). A row's drawn structure under its last text line belongs to the
+row (317).

@@ -20,12 +20,18 @@
   "claude": [
    {
     "start": "2026-11-27T07:52:41+00:00",
-    "end": null
+    "end": "2026-11-27T09:20:47+00:00",
+    "note": "83 reasons: 64 passed, 15 fixed (313-319), 4 known; pass 2 12 verified"
    }
   ],
   "claude1": [],
   "claude2": [],
-  "review": [],
+  "review": [
+   {
+    "start": "2026-11-27T09:20:47+00:00",
+    "end": null
+   }
+  ],
   "fix": []
  },
  "github_runs": [
@@ -37,9 +43,23 @@
    "start": "2026-11-27T07:37:35Z",
    "end": "2026-11-27T07:37:39Z",
    "minutes": 0.1
+  },
+  {
+   "id": 45969884881,
+   "name": "Question bank",
+   "branch": "main",
+   "conclusion": null,
+   "start": "2026-11-27T08:58:49Z",
+   "end": "2026-11-27T08:58:54Z",
+   "minutes": 0.1
   }
  ],
- "counts": {},
+ "counts": {
+  "papers": 70,
+  "questions": 1203,
+  "flags": 83,
+  "round_items": 10
+ },
  "errors": [
   {
    "pattern": "313",
@@ -163,6 +183,34 @@
   {
    "at": "2026-11-27T08:58:19+00:00",
    "task": "error C1 --pattern"
+  },
+  {
+   "at": "2026-11-27T08:59:10+00:00",
+   "task": "gh C1 45969884881"
+  },
+  {
+   "at": "2026-11-27T08:59:10+00:00",
+   "task": "GitHub pass 2 45969884881"
+  },
+  {
+   "at": "2026-11-27T09:17:28+00:00",
+   "task": "claude check: checks, sweep, align, claude_check"
+  },
+  {
+   "at": "2026-11-27T09:19:35+00:00",
+   "task": "review round build"
+  },
+  {
+   "at": "2026-11-27T09:20:47+00:00",
+   "task": "count C1 papers=70"
+  },
+  {
+   "at": "2026-11-27T09:20:47+00:00",
+   "task": "phase C1 claude"
+  },
+  {
+   "at": "2026-11-27T09:20:47+00:00",
+   "task": "phase C1 review"
   }
  ]
 }

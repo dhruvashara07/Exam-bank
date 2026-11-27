@@ -151,3 +151,8 @@ MATHS_PLAN.md if the plan changed; docs/NEXT_CHAT.md prompt; `pipeline/push.sh`;
   (`batch_log.py start C0 --subject 0620`). reasons.py drops the maths-only checks (q_font, ms_mode, 'M1' marking points).
 - `reasons.py set` changes EVERY matching reason whatever its status: never pass --status to select; use --qid / --match.
 - Review page = the one of the account the chat runs in (own account: PCdP6oibAkjQvGz8mKm73e; shared: 8YDJDKJCXfURh5QFLnpTw8).
+- (C1) The layout hash 'old vs new' is computed with BOTH codes in the same repo (copy HEAD's files in, hash, copy the new back):
+  a git worktree has no raw/ and every picture cell falls back (false differences). fig_blast.py takes SYL=0620 but misses MCQ
+  figures: blast fit_crop on the bank/ question jsons as well. claude_check's q_font / ms_mode hits do not apply to chemistry.
+- (C1) Chemistry pass 1 carries the ms_marksum hint (Marks column sum vs question marks): most hits are Cambridge slips; a hit
+  with rows missing is real. Also run a word-overlap check over every MS row (pairs of words of one row overlapping).

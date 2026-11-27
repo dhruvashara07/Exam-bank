@@ -685,3 +685,15 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - 2026-11-27 Round 44 closed (3 ok, 5 wrong - all small placement: fractions over the branch middle like the decimals, tree
   space below, one area number). Fixed (pattern 312), carried as recheck items into M4's first round. Dhruv: batch good ->
   move to the next batch. RD2 closed; next maths batch M4 in a new chat.
+
+## 2026-11-27 - Chemistry C1 built and checked, round 45
+- Dhruv: C1 (CHEM_PLAN 6), first the Marks-column sum check into chemistry pass 1 as a hint; full cycle; freeze checks incl. a
+  maths layout hash.
+- Done: ms_marksum hint (pipeline/ms_marksum.py, in reasons pass 1 for chemistry): 9 hits, 2 real (rows lost, 313), the rest
+  Cambridge MS slips (marks differ from the QP) - a useful hint. Pass 1: only 83 reasons for 70 papers (C0 had 2242 for 56):
+  the pilot classes hold. 7 new classes (313-319). New check by eye + a word-overlap script found overlapping text in 2 C1 and 3
+  approved C0 questions (319); 2 C0 ones did not converge in 4 tries -> known, approved files left as they were.
+- Analysis: slowest phase = Claude's check (~88 min) - the answer-overrun class took 4 attempts (reading order of words across
+  columns). fig_blast does not see MCQ figures; a bank-json harness did (write it into fig_blast next time). The maths layout
+  hash (old vs new code IN THE SAME REPO: a git worktree has no raw/ and gives false differences) = 0 of 4014.
+- Round 45 published (10 items).

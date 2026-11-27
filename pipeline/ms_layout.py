@@ -1999,7 +1999,7 @@ def build(q, store):
         if v is not None and MP.CHEM and info.get('mode') == 'wrap' and r.get('label') and info.get('new_edges'):
             qt_ = sorted((t for t in v['text'] if t['x'] < info['new_edges'][0] - 2), key=lambda t: (t['y'], t['x']))
             pr_ = ''.join(t['t'] for t in qt_).replace(' ', '')
-            if qt_ and re.match(r'\d', pr_) and pr_ != r['label']:   # chemistry: a misprinted label ('1b(i)', marking points
+            if qt_ and re.match(r'\d|\([a-z]', pr_) and pr_ != r['label']:   # ('(a)(ii)' printed without its number: 2025 MJ 33)   # chemistry: a misprinted label ('1b(i)', marking points
                 t0 = qt_[0]                                    # '(iii)' of a part the paper does not split) shows the
                 sz_ = t0.get('s', 11)                          # paper's own (304)
                 while fitz.get_text_length(r['label'], 'helv', sz_) > info['new_edges'][0] - 6 and sz_ > 7:
