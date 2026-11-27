@@ -21,7 +21,7 @@
   }
  ],
  "text": "3\nOne engineer suggests a simpler model.\nShe says\nTest 100 memory sticks for 1 week.\nThe probability that x fail is x\n100 .",
- "marks": 0,
+ "marks": 6,
  "figures": [],
  "review": {
   "reasons": [],
@@ -50,8 +50,28 @@
     }
    ],
    "text": "Explain why her model for the percentage of memory sticks still working after t weeks is\na\nx\nk\nt\nW\n100\n1\n=\n-\n#\n100\n...................................................................................................................................................................\n...................................................................................................................................................................\n...................................................................................................................................................................",
-   "marks": 0,
+   "marks": 2,
    "path": "6(a)",
+   "mark_scheme": [
+    {
+     "label": "6(a)",
+     "text": "\nx \n1 −\nis the probability of x sticks working\n\n\n\n100\n[after one week]\nprobabilities are multiplied oe\n×100 to change to a percentage oe",
+     "codes": [
+      "2"
+     ],
+     "segments": [
+      {
+       "page": 6,
+       "bbox": [
+        35.7599983215332,
+        99.0,
+        559.739990234375,
+        207.6
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -116,8 +136,28 @@
       }
      ],
      "text": "Use her model to find the percentage of memory sticks still working after 5 weeks.\n......................................................",
-     "marks": 0,
+     "marks": 2,
      "path": "6(b)(i)",
+     "mark_scheme": [
+      {
+       "label": "6(b)(i)",
+       "text": "awrt 95.1",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          35.7599983215332,
+          207.6,
+          559.739990234375,
+          307.4
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -153,8 +193,28 @@
       }
      ],
      "text": "Compare her model with the model in question 2.",
-     "marks": 0,
+     "marks": 2,
      "path": "6(b)(ii)",
+     "mark_scheme": [
+      {
+       "label": "6(b)(ii)",
+       "text": "m = 100\nModels are similar oe\nor differences increase as t increases oe",
+       "codes": [
+        "2"
+       ],
+       "segments": [
+        {
+         "page": 6,
+         "bbox": [
+          35.7599983215332,
+          307.4,
+          559.739990234375,
+          369.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",
@@ -186,7 +246,7 @@
  "variant": 3,
  "paper_code": "0607/63",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 0,
+ "total_marks": 6,
  "topic": null,
  "subtopic": null,
  "keywords": [],

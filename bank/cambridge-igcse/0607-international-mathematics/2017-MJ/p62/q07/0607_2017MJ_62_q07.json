@@ -21,7 +21,7 @@
   }
  ],
  "text": "3\nThe mass carried by an elevator is x kilograms.\nEasyUp say that an elevator is well designed when\n•\nthe probability that x is less than the maximum total mass is greater than 0.95\nand\n•\nit takes at most 5 seconds on average to move between floors.\nExplain whether",
- "marks": 0,
+ "marks": 2,
  "figures": [],
  "review": {
   "reasons": [],
@@ -50,8 +50,28 @@
     }
    ],
    "text": "the EasyUp-5 elevator is well designed,\n...................................................................................................................................................................\n...................................................................................................................................................................",
-   "marks": 0,
+   "marks": 1,
    "path": "7(a)",
+   "mark_scheme": [
+    {
+     "label": "7(a)",
+     "text": "No, and the probability [of less than the\nmaximum] is 0.8 oe\nor\nNo, and the probability [of more than the\nmaximum] is more than 0.05 oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        35.70000076293945,
+        542.5,
+        559.6199951171875,
+        617.5
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -87,8 +107,28 @@
     }
    ],
    "text": "the EasyUp-3 elevator is well designed.\n...................................................................................................................................................................\n...................................................................................................................................................................",
-   "marks": 0,
+   "marks": 1,
    "path": "7(b)",
+   "mark_scheme": [
+    {
+     "label": "7(b)",
+     "text": "No, and EasyUp-3 takes 10 seconds [to move\nbetween floors] oe",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        35.70000076293945,
+        617.5,
+        559.6199951171875,
+        692.5
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",
@@ -115,7 +155,7 @@
  "variant": 2,
  "paper_code": "0607/62",
  "paper_type": "extended_investigation_modelling",
- "total_marks": 0,
+ "total_marks": 2,
  "topic": null,
  "subtopic": null,
  "keywords": [],
