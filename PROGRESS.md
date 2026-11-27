@@ -68,10 +68,22 @@ Read this first in every session. Update it before ending a session.
   2 pies, 2 mappings, 3 sketches), 1 kept (2025 FM 62 10(a), Dhruv decides). maths_check picture_checks: 0 left. One local
   rebuild (ms_rebuild, 105 questions written after the groups; all redraws looked at side by side); golden 0, nothing under
   0625; approvals unchanged (hash = cut + marks). Round 39 published (10 redraws + 5 calibration + 1 decision).
-- MATHS NEXT: (1) Batch M4 (MATHS_PLAN 5: 2014-ON 2015-MJ 2015-ON 2016-MJ 2016-ON 2017-MJ 2017-ON, ~115 papers, PDFs in
-  Releases) in a NEW chat - prompt in docs/NEXT_CHAT.md ('Maths M4'). Put the 5 round-44 fixes in M4's first review round as
-  recheck items (2019 ON 31 q12, 2021 ON 31 q7, 2026 MJ 11 q14: fractions over the branch middle; 2023 MJ 33 q6: space under the
-  tree; 2023 MJ 63 q4: '3' centred). (2) Open: 2022 ON 51 5(a) empty grid not shown; 2024 ON 23 q7 partial marks a bit small.
+- 2026-11-27: M4 BUILT + CHECKED (2014-ON 2015-MJ 2015-ON 2016-MJ 2016-ON 2017-MJ 2017-ON, 124 papers; shared account). GitHub pass 1
+  (45986873997: 623 reasons) + pass 2 (46008096059); the later fixes rebuilt LOCALLY (= Action: fonttools + PDFs). 124/124 papers exact
+  marks (papers 5/6 from the MS: FT/dep codes, alternative methods, Part Marks column, communication rows). Patterns 320-335 (maths;
+  chemistry used 320/321 too - see the note in ERROR_PATTERNS). 31 MS pictures redrawn, 19 kept as printed for Dhruv's decision
+  (ms_graphs.KEPT). Freeze: golden 0, nothing under 0625; approved maths MS labels/cuts identical on all 460 schemes (codes only differ,
+  none feeds an approved paper's marks). My own slip, caught by the blast before approval: pattern 330 (pushed code, approved data
+  untouched). Known (not in the round): 2014 ON 51 q2-q4 layout -> 2014 ON paper 5 (51/52/53) NOT to approve yet; 2017 MJ 42 q7/q8
+  partial marks shrunk; 2015 MJ 43 5(b)/11(d) partial line under the graph; 2016 MJ 41 13(b) unlabelled; crop fragments (327).
+  Improvements waiting for a rebuild of APPROVED papers (pattern 324, re-show then): 2014 MJ 21 q8, 2014 MJ 32 q9, 2018 MJ 31 q8,
+  2022 ON 51 q2, 2023 ON 62 q2, 2025 MJ 61 q2 (labels / tree slots now inside the crop).
+  Round 46 (19 items: 6 fixes, 4 decisions, 5 round-44 rechecks, 4 calibration) on the shared page
+  https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8.
+- MATHS NEXT: (1) M4 round 46: read feedback_r46 (db_list on slug 3d0b9b0b-3d1f-4bbf-be63-d9ae308eaaf3), fix the wrong items as
+  classes, ms_rebuild / run.py the touched M4 papers locally, golden 0, approve M4 EXCEPT 2014 ON 51/52/53 (known 334) - in a new chat
+  (prompt docs/NEXT_CHAT.md 'Maths M4 round 46'). (2) Then batch M3b only when Dhruv uploads 2019 MJ; open: 2022 ON 51 5(a) empty grid;
+  2024 ON 23 q7 partial marks small; known 334/335 items.
 - 2026-11-27: RD2 DONE (rounds 39, 40, 43, 44 closed). 180 MS pictures redrawn; graphs match the printed grid; every MS tree
   has the question's geometry; dot paper = whole pictures; no 0607 paper pending approval (cuts unchanged).
 - 2026-11-24: ROUND 36 closed (7 ok, 1 wrong: no function label on the redrawn 2019 ON 61 graph - removed). M3 APPROVED:

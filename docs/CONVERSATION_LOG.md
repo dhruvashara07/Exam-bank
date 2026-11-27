@@ -701,3 +701,14 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   56 approved pilot questions), extra space after my own overrun fix (319). Found myself while fixing: my 319 fix had turned the
   2025 MJ 63 stop-clock boxes black (V path commands) - pushed and missed because I only looked at the 53 twin. C1 approved.
   Dhruv: this (own) account's review page is the chemistry page; the shared account does maths (M4 running there now).
+
+## 2026-11-27 - Maths M4 built and checked, round 46 (shared account)
+- Dhruv: M4 full cycle in this chat (it first waited for C1 to finish; Dhruv: 'continue here'). Asked why it took 3-4 hours.
+- Analysis: ~1 h 50 min was waiting for the two GitHub passes (57 + 53 min for 124 papers); a 50-min local rebuild of all 124 papers
+  after pass 2; the rest was classes in a layout never met before (2015-2017 MS: labels apart, 'Part Marks', part B from 1, codes
+  '1FT'/'FT1'/'1dep', alternative methods). Slowest phase: Claude's check (fix -> blast -> fix). Repeat/own errors: pattern 330 (my
+  321 rule fired on the marking-principles page of every 2018+ MS - pushed, caught by the blast before any approved paper was
+  rebuilt); a wrong MS_RELABEL guess for 2016 ON 31 (reverted after looking at the next page); Venn redraws that exposed hidden dots
+  (333). Lessons: check papers-5/6 totals locally before a GitHub pass; run the full MS blast after EVERY ms.py change; look at the
+  next MS page before calling a label a Cambridge slip.
+- Round 46 (19 items) published on the shared page. 2014 ON paper 5 stays pending (known 334).

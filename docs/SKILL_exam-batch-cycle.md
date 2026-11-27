@@ -159,3 +159,10 @@ MATHS_PLAN.md if the plan changed; docs/NEXT_CHAT.md prompt; `pipeline/push.sh`;
   figures: blast fit_crop on the bank/ question jsons as well. claude_check's q_font / ms_mode hits do not apply to chemistry.
 - (C1) Chemistry pass 1 carries the ms_marksum hint (Marks column sum vs question marks): most hits are Cambridge slips; a hit
   with rows missing is real. Also run a word-overlap check over every MS row (pairs of words of one row overlapping).
+
+## M4 additions (2026-11-27)
+- Papers 5/6 (2014-2024) take their marks from the MS: before any GitHub pass, check their totals LOCALLY (run.py on the 5x/6x papers,
+  2 min) - codes '1FT', 'FT1', '1dep', 'M1FT', 'DM1', 'Alternative method' blocks, the Partial/Part Marks column on every page.
+- After EVERY ms.py change: the full MS blast (old vs new structured_rows on all 0607 schemes: labels, cuts, codes), not only the first.
+- A label 'slip' is only a slip after looking at the next MS page (2016 ON 31: the (b) rows were on a header-less next page).
+- Spec redraws of vector / tiled pictures: check the redraw side by side - hidden text under image tiles can appear (pattern 333).

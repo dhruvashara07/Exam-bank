@@ -10,7 +10,7 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 | M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 | 11.7 | 97.4 | 191.6 | 0.0 | 30.1 | 233.4 | 23 | 42 | 2 | n/a |
 | M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 117 | 100.3 | 131.2 | 0.0 | 0.0 | 0.0 | 100.3 | 13 | 28 | 4 | n/a |
 | M3 | 2018-MJ 2018-ON 2020-MJ 2020-ON | 69 | 29.2 | 0.2 | 38.4 | 0.0 | 0.0 | 67.6 | 8 | 15 | 0 | n/a |
-| M4 | 2014-ON 2015-MJ 2015-ON 2016-MJ 2016-ON 2017-MJ 2017-ON |  | 0.4 | 0.1 | 0.0 | 0.0 | 0.0 | 0.4 |  | 6 | 0 | n/a |
+| M4 | 2014-ON 2015-MJ 2015-ON 2016-MJ 2016-ON 2017-MJ 2017-ON | 124 | 0.4 | 0.2 | 108.9 | 0.0 | 0.0 | 109.3 | 19 | 13 | 0 | n/a |
 | RD |  |  | 0.0 | 0 | 0.0 | 0.0 | 13.2 | 13.2 |  | 0 | 0 | n/a |
 | RD2 | 2014-MJ 2018-MJ 2018-ON 2019-ON 2020-MJ 2020-ON 2021-FM 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON 2024-FM 2024-MJ 2024-ON 2025-FM 2025-MJ 2025-ON 2026-FM 2026-MJ | 0 | 0.0 | 0 | 0.0 | 0.0 | 89.8 | 89.8 | 16 | 9 | 2 | n/a |
 
@@ -226,6 +226,13 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - [new] pattern 323: QP part B lost (heading on its own page) → extract.boundaries carries heading (found by claude)
 - [new] pattern 324: tree slot under last branch / number labels cut → fit_crop FIT_M4 (found by claude)
 - [new] pattern 325: MMEtc Q, MMaFermat Q → MATHS_GLYPHS (found by claude)
+- [new] pattern 330: my 321 rule took the 2018+ marking-principles page as a table (pushed code; approved data not rebuilt) → needs >= 4 column rules (found by claude)
+- [new] pattern 328: see ERROR_PATTERNS 328 → see ERROR_PATTERNS 328 (found by claude)
+- [new] pattern 329: see ERROR_PATTERNS 329 → see ERROR_PATTERNS 329 (found by claude)
+- [new] pattern 331: see ERROR_PATTERNS 331 → see ERROR_PATTERNS 331 (found by claude)
+- [new] pattern 332: see ERROR_PATTERNS 332 → see ERROR_PATTERNS 332 (found by claude)
+- [new] pattern 333: see ERROR_PATTERNS 333 → see ERROR_PATTERNS 333 (found by claude)
+- [new] pattern 334: see ERROR_PATTERNS 334 → see ERROR_PATTERNS 334 (found by claude)
 
 ### RD2
 - [new] pattern 271: RD2: 181 blurry MS pictures in all batches (tables, grid shapes, dots, pies, Venns, trees, mappings, plots, graphs) had no drawer → ms_graphs: table / plane (squares, dots, iso, isov, panels, stack) / pie / map drawers, smooth data curves, alts per label (found by claude)

@@ -9,11 +9,11 @@ changes), pass 2, my review round on the chemistry review page (own account), fi
 (golden 0, nothing under 0625/0607, maths ms_layout hash = baseline, computed in the same repo), approve, docs, push with
 pipeline/push.sh, write the NEXT line. Maths runs in the shared account at the same time: pull before every push.
 
-# Maths M4 (separate chat)
+# Maths M4 round 46 (separate chat, shared account)
 Exam-bank (repo dhruvashara07/Exam-bank). First add the repo with push access. Follow docs/START_HERE.md exactly: git pull,
 then every file it lists, PROGRESS.md MATHS NEXT line first. Section 5 (usage budget) applies.
-Task: maths batch M4 (docs/MATHS_PLAN.md section 5: 2014-ON 2015-MJ 2015-ON 2016-MJ 2016-ON 2017-MJ 2017-ON, ~115 papers).
-Full cycle (skill exam-batch-cycle): GitHub build, ONE Claude check round, picture redraws in the batch itself (ms_graphs:
-graphs on the printed grid, trees from pipeline/tree_geom.py, dot paper as whole pictures), Dhruv's review round (~10 items +
-the 5 round-44 recheck items in PROGRESS), fix as classes, golden 0, nothing under 0625/0620, approve, docs, push with
-pipeline/push.sh, write the NEXT line. Ask me with options only for real decisions. Keep messages short.
+Task: finish maths M4: read my round-46 answers (shared review page, collection feedback_r46), fix every wrong item as a class
+(maths-gated), rebuild the touched M4 papers locally (run.py / ms_rebuild; PDFs: raw_store.py fetch), run the full MS blast over all
+0607 schemes after EVERY ms.py change (pattern 330), golden 0, nothing under 0625/0620, review_round close 46, approve M4 except
+2014 ON 51/52/53 (known 334), docs, push with pipeline/push.sh, write the NEXT line. Ask me with options only for real decisions.
+Keep messages short.

@@ -21,12 +21,17 @@
   "claude": [
    {
     "start": "2026-11-27T11:57:47+00:00",
-    "end": null
+    "end": "2026-11-27T17:09:30+00:00"
    }
   ],
   "claude1": [],
   "claude2": [],
-  "review": [],
+  "review": [
+   {
+    "start": "2026-11-27T17:12:12+00:00",
+    "end": null
+   }
+  ],
   "fix": []
  },
  "github_runs": [
@@ -49,7 +54,12 @@
    "minutes": 0.1
   }
  ],
- "counts": {},
+ "counts": {
+  "papers": 124,
+  "questions": 1430,
+  "flags": 623,
+  "round_items": 19
+ },
  "errors": [
   {
    "pattern": "320",
@@ -273,6 +283,22 @@
   {
    "at": "2026-11-27T17:08:44+00:00",
    "task": "error M4 --kind"
+  },
+  {
+   "at": "2026-11-27T17:09:30+00:00",
+   "task": "phase M4 claude"
+  },
+  {
+   "at": "2026-11-27T17:12:12+00:00",
+   "task": "count M4 papers=124"
+  },
+  {
+   "at": "2026-11-27T17:12:12+00:00",
+   "task": "phase M4 review"
+  },
+  {
+   "at": "2026-11-27T17:12:39+00:00",
+   "task": "round 46 published; docs"
   }
  ]
 }
