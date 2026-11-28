@@ -1,17 +1,24 @@
 {
  "paper": "0620_2021ON_22",
  "pipeline_version": "2.1",
- "checked_at": "2026-11-28T15:51Z",
+ "checked_at": "2026-11-28T16:41Z",
  "clean": true,
- "warnings": 0,
- "problems": [],
+ "warnings": 1,
+ "problems": [
+  {
+   "id": "0620_2021ON_22_q04",
+   "kind": "text",
+   "detail": "editable text has 94% of the printed words",
+   "blocking": false
+  }
+ ],
  "flags": [],
- "text_score_min": 1.0,
+ "text_score_min": 0.938,
  "text_scores": {
   "0620_2021ON_22_q01": 1.0,
   "0620_2021ON_22_q02": 1.0,
   "0620_2021ON_22_q03": 1.0,
-  "0620_2021ON_22_q04": 1.0,
+  "0620_2021ON_22_q04": 0.938,
   "0620_2021ON_22_q05": 1.0,
   "0620_2021ON_22_q06": 1.0,
   "0620_2021ON_22_q07": 1.0,

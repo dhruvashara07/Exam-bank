@@ -1,10 +1,16 @@
 {
  "paper": "0620_2021ON_12",
  "pipeline_version": "2.1",
- "checked_at": "2026-11-28T15:51Z",
+ "checked_at": "2026-11-28T16:41Z",
  "clean": true,
- "warnings": 1,
+ "warnings": 2,
  "problems": [
+  {
+   "id": "0620_2021ON_12_q04",
+   "kind": "text",
+   "detail": "editable text has 94% of the printed words",
+   "blocking": false
+  },
   {
    "id": "0620_2021ON_12_q09",
    "kind": "text",
@@ -12,13 +18,19 @@
    "blocking": false
   }
  ],
- "flags": [],
+ "flags": [
+  {
+   "id": "0620_2021ON_12_q23",
+   "kind": "flag",
+   "detail": "options not found as text (likely in a table or diagrams)"
+  }
+ ],
  "text_score_min": 0.871,
  "text_scores": {
   "0620_2021ON_12_q01": 1.0,
   "0620_2021ON_12_q02": 1.0,
   "0620_2021ON_12_q03": 1.0,
-  "0620_2021ON_12_q04": 1.0,
+  "0620_2021ON_12_q04": 0.938,
   "0620_2021ON_12_q05": 1.0,
   "0620_2021ON_12_q06": 1.0,
   "0620_2021ON_12_q07": 1.0,
