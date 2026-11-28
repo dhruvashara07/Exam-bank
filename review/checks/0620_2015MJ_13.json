@@ -1,11 +1,24 @@
 {
  "paper": "0620_2015MJ_13",
  "pipeline_version": "2.1",
- "checked_at": "2026-11-26T04:00Z",
+ "checked_at": "2026-11-28T16:47Z",
  "clean": true,
- "warnings": 0,
- "problems": [],
- "flags": [],
+ "warnings": 1,
+ "problems": [
+  {
+   "id": "0620_2015MJ_13_q27",
+   "kind": "figure",
+   "detail": "0620_2015MJ_13_q27_diagram1: crop cut: ink crosses the bottom edge, 4 text line(s) half inside",
+   "blocking": false
+  }
+ ],
+ "flags": [
+  {
+   "id": "0620_2015MJ_13_q12",
+   "kind": "flag",
+   "detail": "options not found as text (likely in a table or diagrams)"
+  }
+ ],
  "text_score_min": 1.0,
  "text_scores": {
   "0620_2015MJ_13_q01": 1.0,

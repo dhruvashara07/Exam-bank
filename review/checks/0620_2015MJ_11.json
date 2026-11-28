@@ -1,9 +1,9 @@
 {
  "paper": "0620_2015MJ_11",
  "pipeline_version": "2.1",
- "checked_at": "2026-11-26T04:00Z",
+ "checked_at": "2026-11-28T16:47Z",
  "clean": true,
- "warnings": 2,
+ "warnings": 3,
  "problems": [
   {
    "id": "0620_2015MJ_11_q01",
@@ -16,9 +16,21 @@
    "kind": "text",
    "detail": "editable text has 91% of the printed words",
    "blocking": false
+  },
+  {
+   "id": "0620_2015MJ_11_q27",
+   "kind": "figure",
+   "detail": "0620_2015MJ_11_q27_diagram1: crop cut: ink crosses the bottom edge, 4 text line(s) half inside",
+   "blocking": false
   }
  ],
- "flags": [],
+ "flags": [
+  {
+   "id": "0620_2015MJ_11_q14",
+   "kind": "flag",
+   "detail": "options not found as text (likely in a table or diagrams)"
+  }
+ ],
  "text_score_min": 0.914,
  "text_scores": {
   "0620_2015MJ_11_q01": 0.914,

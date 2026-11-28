@@ -22,7 +22,22 @@
  ],
  "text": "7\nMany ﬂ owers produce volatile oils. These oils are responsible for the sweet scent (perfume) of\nmany ﬂ owers.",
  "marks": 11,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 14,
+   "bbox": [
+    101.7,
+    455.1,
+    495.6,
+    565.1
+   ],
+   "id": "0620_2015MJ_23_q07c_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -446,44 +461,19 @@
      "text": "Many plant oils are unsaturated hydrocarbons. Alkenes are also unsaturated hydrocarbons. The table shows some properties of four alkenes."
     },
     {
-     "type": "table",
-     "rows": [
-      [
-       "alkene",
-       "molecular formula",
-       "relative molecular mass",
-       "melting point / ºC",
-       "boiling point / ºC"
-      ],
-      [
-       "ethene",
-       "C<sub>2</sub>H<sub>4</sub>",
-       "28",
-       "–161",
-       "–103"
-      ],
-      [
-       "propene",
-       "C<sub>3</sub>H<sub>6</sub>",
-       "42",
-       "–185",
-       "– 47"
-      ],
-      [
-       "butene",
-       "C<sub>4</sub>H<sub>8</sub>",
-       "56",
-       "",
-       "– 6"
-      ],
-      [
-       "pentene",
-       "C<sub>5</sub>H<sub>10</sub>",
-       "70",
-       "–165",
-       "+30"
-      ]
-     ]
+     "type": "text",
+     "html": "molecular relative molecular melting point boiling point",
+     "text": "molecular relative molecular melting point boiling point"
+    },
+    {
+     "type": "text",
+     "html": "alkene",
+     "text": "alkene"
+    },
+    {
+     "type": "figure",
+     "id": "0620_2015MJ_23_q07c_diagram1",
+     "caption": null
     }
    ]
   },
