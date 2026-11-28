@@ -42,8 +42,8 @@ Read this first in every session. Update it before ending a session.
   questions re-laid out by 321 and sampled). C1 APPROVED in git (70 papers). Freeze: golden 0, nothing under 0625/0607, maths
   ms_layout hash 0 of 5268. The own-account review page is now the CHEMISTRY page ('Chemistry Question Review',
   PCdP6oibAkjQvGz8mKm73e); the shared account keeps maths (8YDJDKJCXfURh5QFLnpTw8).
-- NEXT: (1) C2 (CHEM_PLAN 6: next 3 years, own account) in a new chat - same cycle as C1 (pass 1 with ms_marksum + word-overlap
-  + black-shape checks, ONE Claude check, round, fixes gated 0620, freeze, approve).
+- NEXT: (1) C2a (2022-ON 2023-FM 2023-MJ 2023-ON, 59 papers; 2023-ON 51 missing in Releases) in a new chat, prompt NEXT_CHAT.
+  Then C2b (2021-FM .. 2022-MJ, 66 papers). Check tool for the Claude round: pipeline/ms_overlap.py.
   (2) Maths: RD2 done; next maths batch M4 - see the maths NEXT below.
 
 ## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md

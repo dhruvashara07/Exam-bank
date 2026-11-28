@@ -84,7 +84,8 @@ chemistry rules written to ERROR_PATTERNS / MS_TABLE_RULES, measured times -> co
 | C6 | 2009-MJ .. 2011-ON (old_papers.py first for 2009) | 70 |
 | C7 | 2005-ON 2006 2007 2008 | 34 |
 | C8 | 2002-ON 2003 2004 (combined MS files split first) | 25 |
-C2 / C3 are as big as maths M2 (117): split into a / b if the chat cannot hold them.
+C2 / C3 are as big as maths M2 (117): split into a / b. C2a = 2022-ON 2023-FM 2023-MJ 2023-ON (59; 2023-ON paper 51 not in
+Releases), C2b = 2021-FM 2021-MJ 2021-ON 2022-FM 2022-MJ (66).
 
 ## 7. Decisions for Dhruv (asked 2026-11-25; answers recorded in section 8)
 - D1 formulae on the website: runs with sub/superscript as physics (recommended) / LaTeX mhchem.
