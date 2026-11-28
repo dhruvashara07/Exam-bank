@@ -1,18 +1,31 @@
 {
  "paper": "0620_2022ON_41",
  "pipeline_version": "2.1",
- "checked_at": "2026-11-28T12:23Z",
+ "checked_at": "2026-11-28T16:49Z",
  "clean": true,
- "warnings": 0,
- "problems": [],
+ "warnings": 2,
+ "problems": [
+  {
+   "id": "0620_2022ON_41_q02",
+   "kind": "figure",
+   "detail": "0620_2022ON_41_q02bii_diagram1: crop cut: ink crosses the top edge",
+   "blocking": false
+  },
+  {
+   "id": "0620_2022ON_41_q02",
+   "kind": "figure",
+   "detail": "0620_2022ON_41_q02bii_diagram2: crop cut: ink crosses the top edge",
+   "blocking": false
+  }
+ ],
  "flags": [],
- "text_score_min": 0.996,
+ "text_score_min": 0.995,
  "text_scores": {
   "0620_2022ON_41_q01": 1.0,
   "0620_2022ON_41_q02": 1.0,
   "0620_2022ON_41_q03": 1.0,
   "0620_2022ON_41_q04": 1.0,
-  "0620_2022ON_41_q05": 0.996,
+  "0620_2022ON_41_q05": 0.995,
   "0620_2022ON_41_q06": 1.0
  }
 }

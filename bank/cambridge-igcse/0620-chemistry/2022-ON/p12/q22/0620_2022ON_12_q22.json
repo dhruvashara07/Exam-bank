@@ -38,8 +38,10 @@
   }
  ],
  "review": {
-  "reasons": [],
-  "status": "auto"
+  "reasons": [
+   "options not found as text (likely in a table or diagrams)"
+  ],
+  "status": "flagged"
  },
  "type": "mcq",
  "options": [
@@ -82,28 +84,6 @@
    "type": "figure",
    "id": "0620_2022ON_12_q22_figA",
    "caption": null
-  },
-  {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
   }
  ]
 }

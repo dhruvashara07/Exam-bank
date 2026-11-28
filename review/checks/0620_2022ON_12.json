@@ -1,7 +1,7 @@
 {
  "paper": "0620_2022ON_12",
  "pipeline_version": "2.1",
- "checked_at": "2026-11-28T12:23Z",
+ "checked_at": "2026-11-28T16:49Z",
  "clean": true,
  "warnings": 1,
  "problems": [
@@ -12,7 +12,13 @@
    "blocking": false
   }
  ],
- "flags": [],
+ "flags": [
+  {
+   "id": "0620_2022ON_12_q22",
+   "kind": "flag",
+   "detail": "options not found as text (likely in a table or diagrams)"
+  }
+ ],
  "text_score_min": 0.867,
  "text_scores": {
   "0620_2022ON_12_q01": 1.0,
