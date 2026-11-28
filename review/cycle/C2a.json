@@ -28,10 +28,17 @@
   "review": [
    {
     "start": "2026-11-28T12:51:14+00:00",
-    "end": null
+    "end": "2026-11-28T15:44:59+00:00",
+    "note": "round 47: 10 items, 1 wrong (2023 ON 12 q34 options one picture)"
    }
   ],
-  "fix": []
+  "fix": [
+   {
+    "start": "2026-11-28T15:44:59+00:00",
+    "end": "2026-11-28T15:45:23+00:00",
+    "note": "349 options split + bank atom text, 350 SVG matrix precision; 42+15 papers rebuilt locally"
+   }
+  ]
  },
  "github_runs": [
   {
@@ -57,7 +64,8 @@
   "papers": 58,
   "questions": 1008,
   "flags": 51,
-  "round_items": 10
+  "round_items": 10,
+  "wrong_items": 1
  },
  "errors": [
   {
@@ -123,6 +131,22 @@
    "fix": "spans_in drops a U+2009 only right after the Bookman l",
    "found_by": "claude",
    "at": "2026-11-28T12:48:24+00:00"
+  },
+  {
+   "pattern": "349",
+   "kind": "new",
+   "what": "MCQ displayed-formula options kept as ONE picture (2023 ON 12 q34) + stray 'H H' text: end atoms sticking out of the box failed diagram_options' 'everything whole' test; the bank figure box leaked them as text (15 figures, 7 of them in approved C1; 54 stray atom texts)",
+   "fix": "store: edge_words before the option split (chemistry); run.py: bank MCQ figure box grown over atom-symbol words only",
+   "found_by": "dhruv",
+   "at": "2026-11-28T15:44:59+00:00"
+  },
+  {
+   "pattern": "350",
+   "kind": "new",
+   "what": "render.minify cut transform matrices to 3 decimals: a path at scale .04398 on coordinates ~16000 moved ~16 pt - bonds, shells, curves, chromatogram spots out of place in 68 approved 2024-2026 figures (found while checking 349)",
+   "fix": "render.region_svg (chemistry): matrices keep 6 significant digits; 15 approved papers rebuilt, every changed figure compared old|new (rsvg)",
+   "found_by": "claude",
+   "at": "2026-11-28T15:44:59+00:00"
   }
  ],
  "tokens": [],
@@ -206,6 +230,30 @@
   {
    "at": "2026-11-28T12:51:58+00:00",
    "task": "count C2a papers=58"
+  },
+  {
+   "at": "2026-11-28T15:44:59+00:00",
+   "task": "phase C2a review"
+  },
+  {
+   "at": "2026-11-28T15:44:59+00:00",
+   "task": "phase C2a fix"
+  },
+  {
+   "at": "2026-11-28T15:44:59+00:00",
+   "task": "count C2a wrong_items=1"
+  },
+  {
+   "at": "2026-11-28T15:44:59+00:00",
+   "task": "error C2a --pattern"
+  },
+  {
+   "at": "2026-11-28T15:44:59+00:00",
+   "task": "error C2a --pattern"
+  },
+  {
+   "at": "2026-11-28T15:45:23+00:00",
+   "task": "phase C2a fix"
   }
  ]
 }

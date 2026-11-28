@@ -124,4 +124,6 @@ the Marks-column sum hint (ms_marksum). Tools: fig_blast takes SYL (MCQ figures 
 58 papers (2023-ON 51 not in Releases). Pass 1 (8 min) + pass 2 + a local rebuild; patterns 342-346, 348; round 47 (10 items).
 Lessons for every chemistry batch: zoom formulae (Cl in Bookman italic, sub/superscripts) at 2x on every sheet; editable text
 for 'Cl ' / BEL; diff store/ after any local rebuild. Approved C0/C1 must be rebuilt before the MongoDB push (345, 346, 348).
+C2a approved 2026-11-28 after round 47 (1 wrong -> 349) and 350. Every chemistry batch: MCQ option figures must be separate
+pictures (Dhruv r47) - check every MCQ with drawn options A-D.
 

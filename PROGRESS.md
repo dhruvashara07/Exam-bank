@@ -53,12 +53,11 @@ Read this first in every session. Update it before ending a session.
   change is gated to CHEM). Known (budget rule): approved C0/C1 figures (53, 345) and editable text (346, 348: 70 files with BEL)
   improve only at their next rebuild - REBUILD C0/C1 before the MongoDB push.
   Round 47 (10 items: 5 calibration, 4 fixes, 1 approved question changed) on https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e.
-- NEXT: (1) Dhruv's round 47 -> fix wrong items as classes, approve C2a (58 papers), docs, push (same chat if it is still open,
-  else a new chat with docs/NEXT_CHAT.md). Then C2b (2021-FM 2021-MJ 2021-ON 2022-FM 2022-MJ, 66 papers) in a new chat.
-  Check tools for the Claude round: pipeline/ms_overlap.py; /home/claude/tools ideas in ERROR_PATTERNS 344-348 (Cl scan, figure
-  contact sheet with one <img> per SVG).
-
-## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md
+- 2026-11-28 (later): round 47 closed (10 items, 1 wrong: 2023 ON 12 q34 options as one picture -> class 349). Also found
+  350 (SVG matrices cut to 3 decimals: 68 approved 2024-2026 figures out of place - fixed, 15 papers rebuilt). C2a APPROVED
+  (58 papers; 2023-ON 51 not uploaded = not done). Approved C0/C1 papers re-touched by 345/346/348/349/350 keep their approval
+  (cut unchanged). Physics 30 / maths 2 figures carry the 350 risk - frozen, for Dhruv to decide.
+- NEXT: (1) C2b (2021-FM 2021-MJ 2021-ON 2022-FM 2022-MJ, 66 papers) - started 2026-11-28 in the same chat.
 - 2026-11-18: CHEM stored: 1599 of 1600 PDFs in Releases (only chemistry_0652_to_0620_mapping.pdf, not a Cambridge name,
   stays on branch store-chem). inbox.py now keeps gt/ci/ir/in/eq/one-digit/combined files (302 had been skipped).
   Branches store-chem and store-chem-rest: Dhruv deletes them (this session cannot delete branches).

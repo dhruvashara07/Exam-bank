@@ -6,7 +6,7 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | C0 | 2005-MJ 2015-MJ 2024-MJ 2026-MJ | 56 | 9.0 | 0.2 | 79.2 | 0.0 | 58.0 | 146.2 | 16 | 26 | 1 | n/a |
 | C1 | 2024-FM 2024-ON 2025-FM 2025-MJ 2025-ON 2026-FM | 70 | 15.5 | 0.2 | 88.1 | 0.0 | 0.4 | 104.0 | 10 | 8 | 2 | n/a |
-| C2a | 2022-ON 2023-FM 2023-MJ 2023-ON | 58 | 14.1 | 0.1 | 52.0 | 0.0 | 0.0 | 66.1 | 10 | 6 | 2 | n/a |
+| C2a | 2022-ON 2023-FM 2023-MJ 2023-ON | 58 | 14.1 | 0.1 | 52.0 | 0.0 | 0.4 | 66.5 | 10 | 8 | 2 | n/a |
 | M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 257.5 | 51.4 | 2766.0 | 3084.4 | 40 | 58 | 5 | n/a |
 | M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 | 11.7 | 97.4 | 191.6 | 0.0 | 30.1 | 233.4 | 23 | 42 | 2 | n/a |
 | M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 117 | 100.3 | 131.2 | 0.0 | 0.0 | 0.0 | 100.3 | 13 | 28 | 4 | n/a |
@@ -67,6 +67,8 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - [repeat] pattern 297: 2023 ON 43 6(e)(ii): noisy hand-drawn scan structures with a black bar → redrawn by hand in chem_redraw (2 SVGs) (found by claude)
 - [new] pattern 348: BEL control char (\x07) that chemistry 2015+ PDFs put before every paragraph leaked into stored question text/html/prefix (278 files; approved 2015-MJ/2024-FM/2024-MJ keep it until rebuilt) → editable.build (chemistry): BEL removed from the stored text fields only; a first try in layout.norm moved a practical-paper crop (the BEL's box set the line's left edge) - reverted (found by claude)
 - [repeat] pattern 346: first 346 fix missed the thin space U+2009 glued to the next letter ('Al\u2009F3', 'KCl (aq)'); a wider lstrip ate real spaces ('C2H5Cl+') → spans_in drops a U+2009 only right after the Bookman l (found by claude)
+- [new] pattern 349: MCQ displayed-formula options kept as ONE picture (2023 ON 12 q34) + stray 'H H' text: end atoms sticking out of the box failed diagram_options' 'everything whole' test; the bank figure box leaked them as text (15 figures, 7 of them in approved C1; 54 stray atom texts) → store: edge_words before the option split (chemistry); run.py: bank MCQ figure box grown over atom-symbol words only (found by dhruv)
+- [new] pattern 350: render.minify cut transform matrices to 3 decimals: a path at scale .04398 on coordinates ~16000 moved ~16 pt - bonds, shells, curves, chromatogram spots out of place in 68 approved 2024-2026 figures (found while checking 349) → render.region_svg (chemistry): matrices keep 6 significant digits; 15 approved papers rebuilt, every changed figure compared old|new (rsvg) (found by claude)
 
 ### M0
 - [new] pattern 64: equation-editor symbol fonts drew # for x etc. in print and text → store_text MATHS_GLYPHS/MATHS_WIDE by eye (found by claude)

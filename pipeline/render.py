@@ -91,6 +91,8 @@ def region_svg(src_doc, page_index, bbox):
     svg = doc[0].get_svg_image(text_as_path=True)
     if subjects.maths_path(src_doc.name):
         svg = _respace(svg, src_doc[page_index], fitz.Rect(bbox))
+    if subjects.is_chem(subjects.path_syl(src_doc.name) or ''):
+        return minify(fix_cmyk_images(svg), exact_matrix=True)
     return minify(fix_cmyk_images(svg))
 
 
@@ -136,9 +138,18 @@ def _respace(svg, page, clip):
 USE_LIMIT = 900        # Cloudinary rejects SVGs with 1000+ <use> elements ("Resource is invalid")
 
 
-def minify(svg):
+def minify(svg, exact_matrix=False):
     svg = re.sub(r'>\s+<', '><', svg)
+    if exact_matrix:              # chemistry (C2a r47, ERROR_PATTERNS 350): a path drawn at scale .04398 on coordinates ~16000
+        keep = {}                 # moved 16 pt when its matrix was cut to .043 - matrices keep 6 significant digits
+        def _m(m):
+            k = f'@@M{len(keep)}@@'
+            keep[k] = 'matrix(' + ','.join(f'{float(v):.6g}' for v in m.group(1).split(',')) + ')'
+            return k
+        svg = re.sub(r'matrix\(([^)]*)\)', _m, svg)
     svg = re.sub(r'(-?\d*\.\d{3})\d+', r'\1', svg)   # 3 decimals: well below print resolution
+    if exact_matrix:
+        svg = re.sub(r'@@M\d+@@', lambda m: keep[m.group(0)], svg)
     return limit_uses(svg)
 
 

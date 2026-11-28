@@ -955,6 +955,23 @@ def fit_crop(pg, b, max_grow=50.0, maths=False, chem=False):
 
 
 FIT_EDGE_WORDS = True             # toggle for the blast harness (C2a 345)
+OPT_EDGE_WORDS = True             # the same growth before the MCQ option split (C2a round 47, 349)
+
+
+def edge_words(pg, b, atoms_only=False):
+    """b grown sideways over words crossing its left / right edge (>= 1 pt inside, centre level with b) - chemistry 345/349.
+    atoms_only: only atom symbols / groups ('H', 'OH', 'Cl', 'CH3') - the bank figure box (run.py), where a '?' or a question
+    number at the edge belongs to the text."""
+    b = fitz.Rect(b)
+    for w in pg.get_text('words'):
+        if atoms_only and not re.fullmatch(r'(?:[A-Z][a-z]?\d*){1,3}', w[4]):
+            continue
+        r = fitz.Rect(w[:4])
+        if b.y0 < (r.y0 + r.y1) / 2 < b.y1 and r.width < 80 and (r.x0 < b.x0 - 0.3 or r.x1 > b.x1 + 0.3) and (r & b).width >= 1.0:
+            nb = fitz.Rect(min(b.x0, r.x0 - 0.5), b.y0, max(b.x1, r.x1 + 0.5), b.y1)
+            if nb.width - b.width < 20:
+                b = nb
+    return b
 
 
 def merge_contained(figs, qid, store, resave=None):
@@ -1216,7 +1233,9 @@ def build(pid):
                         f = dict(f, bbox=list(ti[1]), svg=None)
                         figs.append(save_figure(f, q, meta, qdoc, store))
                         continue
-            got = OPT.diagram_options(pg, b, with_labels=True) if meta.get('is_mcq') and opts is None else None
+            if meta.get('is_mcq') and opts is None and subjects.is_chem(meta['syllabus']) and OPT_EDGE_WORDS:
+                b = edge_words(pg, b)               # end atoms sticking out of the crop kept the four options as ONE picture
+            got = OPT.diagram_options(pg, b, with_labels=True) if meta.get('is_mcq') and opts is None else None   # (Dhruv r47, 349)
             regions, letters = got if got else (None, {})
             if regions:                             # four option drawings: one figure each, WITHOUT the printed letter A-D
                 opts = []                           # (the site shows the letter; Dhruv 2026-11-05)

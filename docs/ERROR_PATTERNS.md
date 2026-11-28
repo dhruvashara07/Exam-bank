@@ -1124,3 +1124,25 @@ broken figures - use one <img> per SVG (/home/claude/tools/figsheet.py). Maths f
     communication marks (Dhruv: yes; re-approved after a look). Blasts: ms.py rows old vs new on all 461 0607 MS - only 2014 ON
     51/52/53/63 change; ms_maths columns / borders on every stored 0607 unit - only 2014 ON 51. 2014 ON 51/52/53 APPROVED.
     Lesson: a fix in one reader (table path) must be searched for in the other (column path) at once.
+
+## Chemistry C2a fixes after round 47 (2026-11-28)
+349. (Dhruv r47, 2023 ON 12 q34 'All options separate images') MCQ options drawn as displayed formulae stayed ONE picture and
+    their cut end atoms leaked as text lines ('H H', 'OH', 'H Cl') in the editable layer: diagram_options' final test (every
+    piece WHOLE in one option) failed on an end atom sticking out of the box - same root as 345, which fit_crop fixed only
+    AFTER the option split. -> store: edge_words() widens the box before diagram_options (chemistry); run.py widens the bank
+    MCQ figure box over ATOM-SYMBOL words only (a '?' or question number at the edge stays text: 2024 MJ 12 q05 / 2026 MJ 12 q03).
+    15 figures now split (7 in approved C1: 2024 MJ 23 q32, 2024 ON 12 q34, 2024 ON 22 q29, 2025 MJ 22 q33, 2025 ON 11 q27,
+    2025 ON 12 q36, 2025 ON 21 q33); stray atom text gone from 54 questions. Every split and every changed figure looked at.
+    KNOWN (pre-existing): 2024 MJ 12 q05 and 2026 MJ 12 q03 lose their stem in the editable layer (the bank figure box takes
+    the stem line because of its nuclide notation; the print layout is right).
+350. SVG transform matrices cut to 3 decimals by render.minify: a path drawn at scale .04398 on coordinates ~16000 became .043
+    and moved ~16 pt. Bonds / electron shells / graph curves / chromatogram spots / label ends out of place in 68 APPROVED
+    2024-2026 chemistry figures (2024 MJ 11 q24 shells, q38 spots, 2024 MJ 22 q34 bonds, 2024 FM 22 q01 curve, ...) - missed
+    in C0/C1 because the sheets looked plausible. Both rsvg and Chromium agree: the SVG itself was wrong.
+    -> render.region_svg (chemistry only): matrices keep 6 significant digits. 15 approved papers rebuilt; every visibly
+    changed figure compared old | new with rsvg (68, all now right). Physics has 30 and maths 2 figures with the same risk
+    (frozen - NOT changed; listed by /home/claude/tools/matrix_scan.py for Dhruv to decide).
+Tool lesson: never run pipeline/run.py with a computed list without checking it is non-empty - an empty list rebuilds
+EVERYTHING (it reached maths 2014-2015 before it was stopped; all non-chemistry output restored with git, 22 stray chemistry
+rebuilds restored too). Guard: `[ $(echo $P | wc -w) -gt 0 ]`.
+

@@ -223,6 +223,9 @@ def process(qp_path):
         export_segments(q, path, qid)
         if q['type'] == 'mcq':
             for i, f in enumerate(mcq_figures(doc, q)):
+                if subjects.is_chem(syl):  # end atoms sticking out of the crop leaked as text lines ('H H') (C2a r47, 349)
+                    import store as _st
+                    f['bbox'] = [round(v, 1) for v in _st.edge_words(doc[f['page'] - 1], fitz.Rect(f['bbox']), atoms_only=True)]
                 f['id'] = f'{qid}_fig{chr(65 + i)}'
                 f['caption'] = None; f['part'] = ''; f['alt'] = ''
                 q['figures'].append(f)

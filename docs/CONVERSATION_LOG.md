@@ -750,3 +750,9 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   Slowest phase: Claude's check (~52 min), mostly the Cl/editable classes found by zooming.
 - Round 47 published (10 items).
 
+## 2026-11-28 (evening) - C2a round 47 closed and approved; C2b started (own account, same chat)
+- Dhruv: round 47 done -> do next batch. 9/10 ok; wrong: 2023 ON 12 q34 'All options separate images' -> class 349.
+- Checking 349's changes found 350 (SVG matrix precision) - pictures that were approved in C1 looked broken next to the PDF.
+  Lesson: compare a changed approved figure to the PRINT, not only old vs new; rasterise with rsvg to rule out the viewer.
+- Own slip: run.py started with an empty computed list -> rebuilt everything until stopped; restored with git (guard noted).
+
