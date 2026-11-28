@@ -34,6 +34,7 @@ def spans_in(page, rect):
     2025+): one piece per word, bold decided from the printed stroke width (see stroke_bold)."""
     out = []
     gap_after = set()                 # word groups followed by a (thin) space in the PDF
+    prev_l = False                    # chemistry: the span before was the Bookman 'l' of Cl / Al
     for b in page.get_text('rawdict', clip=rect)['blocks']:
         if b['type'] != 0:
             continue
@@ -57,6 +58,9 @@ def spans_in(page, rect):
                         cur.append(c)
                 if cur:
                     groups.append(cur)
+                if CHEM and groups and groups[0] and groups[0][0]['c'] == '\u2009' and prev_l:
+                    groups[0] = groups[0][1:]  # chemistry: a thin space glued after the Bookman 'l' ('Al\u2009F3', 346)
+                prev_l = 'Bookman' in font and ''.join(c['c'] for c in s['chars']).strip() == 'l'
                 for g in groups:
                     t = PUA.sub('', norm(''.join(c['c'] for c in g)))     # bracket/brace pieces of symbol fonts
                     if not t.strip():
@@ -451,6 +455,25 @@ def build(doc, q):
     import subjects
     CHEM = subjects.is_chem(q.get('syllabus') or '')
     build_node(doc, q, q)
+    if CHEM:                      # chemistry 2015+ PDFs put a BEL (\x07) before each paragraph: never in stored text (348)
+        def _nobel(n):            # (only the text fields - layout / crops still see the printed line as it is)
+            if isinstance(n, dict):
+                for k, v in n.items():
+                    if isinstance(v, str) and k in ('text', 'html', 'prefix', 'unit', 'caption', 'label') and '\x07' in v:
+                        n[k] = v.replace('\x07', '')
+                    elif isinstance(v, (dict, list)):
+                        _nobel(v)
+            elif isinstance(n, list):
+                for v in n:
+                    if isinstance(v, str):
+                        continue
+                    _nobel(v)
+        _nobel(q)
+        for b_ in q.get('content', []):
+            if b_.get('type') == 'list':
+                b_['items'] = [i_.replace('\x07', '') if isinstance(i_, str) else i_ for i_ in b_['items']]
+            if b_.get('type') == 'table':
+                b_['rows'] = [[c_.replace('\x07', '') if isinstance(c_, str) else c_ for c_ in r_] for r_ in b_['rows']]
     if q.get('type') == 'mcq':
         q['content'] = [b for b in q.get('content', []) if b['type'] != 'marks']
         for b in q['content']:

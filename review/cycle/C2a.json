@@ -36,6 +36,15 @@
    "start": "2026-11-28T11:46:09Z",
    "end": "2026-11-28T11:46:13Z",
    "minutes": 0.1
+  },
+  {
+   "id": 46144079379,
+   "name": "Question bank",
+   "branch": "main",
+   "conclusion": null,
+   "start": "2026-11-28T12:19:28Z",
+   "end": "2026-11-28T12:19:30Z",
+   "minutes": 0.0
   }
  ],
  "counts": {},
@@ -87,6 +96,22 @@
    "fix": "redrawn by hand in chem_redraw (2 SVGs)",
    "found_by": "claude",
    "at": "2026-11-28T12:18:50+00:00"
+  },
+  {
+   "pattern": 348,
+   "kind": "new",
+   "what": "BEL control char (\\x07) that chemistry 2015+ PDFs put before every paragraph leaked into stored question text/html/prefix (278 files; approved 2015-MJ/2024-FM/2024-MJ keep it until rebuilt)",
+   "fix": "editable.build (chemistry): BEL removed from the stored text fields only; a first try in layout.norm moved a practical-paper crop (the BEL's box set the line's left edge) - reverted",
+   "found_by": "claude",
+   "at": "2026-11-28T12:48:24+00:00"
+  },
+  {
+   "pattern": "346",
+   "kind": "repeat",
+   "what": "first 346 fix missed the thin space U+2009 glued to the next letter ('Al\\u2009F3', 'KCl (aq)'); a wider lstrip ate real spaces ('C2H5Cl+')",
+   "fix": "spans_in drops a U+2009 only right after the Bookman l",
+   "found_by": "claude",
+   "at": "2026-11-28T12:48:24+00:00"
   }
  ],
  "tokens": [],
@@ -142,6 +167,22 @@
   {
    "at": "2026-11-28T12:19:11+00:00",
    "task": "pass-1 fixes pushed, pass 2 next"
+  },
+  {
+   "at": "2026-11-28T12:19:53+00:00",
+   "task": "gh C2a 46144079379"
+  },
+  {
+   "at": "2026-11-28T12:31:19+00:00",
+   "task": "local rebuild C2a for editable thin-space fix"
+  },
+  {
+   "at": "2026-11-28T12:48:24+00:00",
+   "task": "error C2a --pattern"
+  },
+  {
+   "at": "2026-11-28T12:48:24+00:00",
+   "task": "error C2a --pattern"
   }
  ]
 }

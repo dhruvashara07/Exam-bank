@@ -1096,11 +1096,21 @@ Hint check (pattern 295, now in pass 1 as ms_marksum): 9 hits in C1, 2 real (313
     touching the edge ('as', 2024 FM 22 q4) is not taken. Approved C0/C1 figures (53) improve at their next rebuild.
 346. Editable text 'BaCl 2(s)', 'KCl (s)', 'Cl -(aq)' (~200 spots in all chemistry): Cambridge prints a 1.5 pt kerning space
     (a 5.5-7.8 pt space glyph) after the Bookman 'l'; the editable joiner made it a word space. -> editable (chemistry, CHEM set
-    by build): no space after the Bookman / italic 'l' when the gap is < 2.5 pt (line joiner and tok_html). Approved papers
-    improve at their next rebuild.
+    by build): no space after the Bookman / italic 'l' when the gap is < 2.5 pt (line joiner and tok_html); a THIN SPACE
+    (U+2009) glued to the next letter right after the l ('Al\u2009F3', 'KCl\u2009(aq)') is dropped in spans_in. (A first
+    try that stripped any leading space ate real ones: 'C2H5Cl+ HCl', 'H-Clbond' - caught by reading every hit.) Approved
+    papers improve at their next rebuild.
 297 (repeat). 2023 ON 43 6(e)(ii): hand-drawn scan structures (grey paper, a black bar) - redrawn as vector in chem_redraw.
 Checked and passed: ms_marksum hits (rows add up; several M-rows per part), checks.text 87-97 % (tokenisation of isotope
 numbers / scripts), every MS table and picture cell. 2023 ON paper 51 is NOT in Releases: C2a = 58 papers, 51 not done.
+348. BEL control character (\x07) printed before every paragraph in chemistry 2015+ PDFs leaked into stored question
+    text / html / answer prefixes (278 files; physics / maths 0). -> editable.build (chemistry): removed from the stored text
+    fields only. A first try in layout.norm CHANGED 5 practical-paper graph crops: the BEL glyph's box set the line's left
+    edge, so 'Draw a line of best fit ...' no longer counted as a margin sentence and went into the graph picture - reverted
+    (lesson: a text-normalising change is a layout change; diff store/ after every local rebuild). Approved 2015-MJ, 2024-FM,
+    2024-MJ (70 files) keep the BEL until their next rebuild - rebuild before the MongoDB push.
+Tool lessons (C2a): a contact sheet of several SVGs INLINE in one HTML page shares clip-path / glyph ids between them and draws
+broken figures - use one <img> per SVG (/home/claude/tools/figsheet.py). Maths freeze hash: /home/claude/tools/ms_hash.py.
 
 ## M4 finish (2014 ON paper 5, 2026-11-28)
 347. (fixes 334) 2014 ON 51-53 (paper 5): the ruled MS table is narrower than the cut, so ms_maths.columns saw 5 'inner' rules
