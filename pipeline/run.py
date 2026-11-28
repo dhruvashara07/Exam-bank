@@ -265,6 +265,43 @@ def process(qp_path):
                     for i_, r_ in enumerate(mine):  # one row per part, in order, some labels misprinted ('2(b)' twice for
                         r_['path'] = lv[i_]         # 2(b) and 2(f), 2024 MJ 33; '6(e)(ii)' '6(f)' for 6(d)(ii) 6(e), 32): by order (301)
                         r_['label'] = _plab(lv[i_])  # (the Q column shows the paper's label, Dhruv round 42)
+                if chem:                   # ONE paper part with no rows (C2b, ERROR_PATTERNS 351): (a) rows whose printed label is
+                    have_ = {tuple(r_['path']) for r_ in mine}          # no part ('1(v)(i)'-(iii) for 1(a)(vi), 2021 FM 42) and whose
+                    miss_ = [l_ for l_ in lv if l_ not in have_]      # marks add up to its marks; (b) else the extra LAST row of the part
+                    if len(miss_) == 1 and _lm(miss_[0][1:]):       # before it ('pH 4 circled' printed with no label = 2(d), 2021 MJ 31)
+                        L_ = miss_[0]; mL_ = _lm(L_[1:])
+                        oddr_ = [r_ for r_ in mine if tuple(r_['path']) not in lv]
+                        idx_ = [mine.index(r_) for r_ in oddr_]
+                        if oddr_ and idx_ == list(range(idx_[0], idx_[0] + len(idx_))) and sum(_rm(r_) for r_ in oddr_) == mL_:
+                            for r_ in oddr_:
+                                r_['path'] = L_; r_['label'] = _plab(L_)
+                        elif not oddr_ and lv.index(L_) > 0:
+                            P_ = lv[lv.index(L_) - 1]
+                            pr_ = [r_ for r_ in mine if tuple(r_['path']) == P_]
+                            nxt_ = lv[lv.index(L_) + 1] if lv.index(L_) + 1 < len(lv) else None
+                            after_ok = nxt_ is None or all(mine.index(r_) < mine.index(x_) for r_ in pr_ for x_ in mine
+                                                           if tuple(x_['path']) == nxt_)
+                            if len(pr_) >= 2 and after_ok and _lm(P_[1:]) is not None and \
+                                    sum(_rm(r_) for r_ in pr_) - _lm(P_[1:]) == mL_ == _rm(pr_[-1]):
+                                pr_[-1]['path'] = L_; pr_[-1]['label'] = _plab(L_)
+                            elif len(pr_) == 1 and after_ok and msdoc and len(pr_[0].get('segments') or []) == 1 and \
+                                    len(pr_[0].get('marks_codes') or []) == 2 and str(pr_[0]['marks_codes'][-1]) == str(mL_) and \
+                                    _lm(P_[1:]) is not None and _rm(pr_[0]) - _lm(P_[1:]) == mL_:
+                                r0_ = pr_[0]; sg_ = r0_['segments'][0]; pg_ = msdoc[sg_['page'] - 1]; bb_ = fitz.Rect(sg_['bbox'])
+                                hs_ = sorted({round(min(d_['rect'].y0, d_['rect'].y1), 1) for d_ in pg_.get_drawings()
+                                              if d_['rect'].height < 1.5 and d_['rect'].width > 0.5 * bb_.width
+                                              and bb_.y0 + 4 < d_['rect'].y0 < bb_.y1 - 4})
+                                if len(hs_) == 1:   # the printed row has no label of its own: split the merged row at its rule
+                                    ys_ = hs_[0]
+                                    top_ = [l_ for l_ in (r0_.get('text') or '').split('\n')]
+                                    lines_ = [(round(w_[3]), w_[0], w_[4]) for w_ in pg_.get_text('words') if bb_.x0 < w_[0] < bb_.x1]
+                                    below_ = ' '.join(t_ for y_, x_, t_ in sorted(lines_) if ys_ < y_ < bb_.y1 and not re.fullmatch(r'\d+', t_))
+                                    new_ = dict(r0_, path=L_, label=_plab(L_), marks_codes=[r0_['marks_codes'][-1]],
+                                                segments=[dict(sg_, bbox=[bb_.x0, ys_, bb_.x1, bb_.y1])], text=below_)
+                                    r0_['marks_codes'] = r0_['marks_codes'][:-1]
+                                    r0_['segments'] = [dict(sg_, bbox=[bb_.x0, bb_.y0, bb_.x1, ys_])]
+                                    r0_['text'] = '\n'.join(l_ for l_ in top_ if l_.strip() and l_.strip() not in below_)
+                                    ms_rows.insert(ms_rows.index(r0_) + 1, new_); mine.insert(mine.index(r0_) + 1, new_)
                 if chem and odd_ and not (len(mine) == len(lv)):   # 2026 practical: every row is ONE marking point, a part's
                     grp_ = []                      # points run M1, M2, M3 while the rows are numbered (i), (ii), (iii)... (302)
                     for r_ in mine:

@@ -281,6 +281,9 @@ def _tighten(u):
     right = min([x for x in full if x > tmax + 1] + [None], key=lambda v: 1e9 if v is None else v)
     if getattr(MP, 'CHEM', False) and right is not None:      # chemistry: an empty Guidance cell (2015, 2026) is still table:
         right = max(x for x in full if x > tmax + 1)          # the OUTER border, not the first rule (ERROR_PATTERNS 282)
+    if getattr(MP, 'CHEM', False) and left is not None and \
+            any(re.fullmatch(r'\d{1,2}', t['t']) and t['x'] > 0.85 * u['w'] for t in u['text']):   # ... and an empty Q cell of a
+        left = min(x for x in full if x < tmin - 1)           # MARKED row printed with no label (2021 MJ 31 2(d)): outer border (351)
     if left is None or left < 4:
         left = 0.0
     if right is None or u['w'] - right < 4:
@@ -2047,6 +2050,14 @@ def build(q, store):
                 t0['x'] = round((info['new_edges'][0] - t0['w']) / 2, 2); t0.pop('b', None)
                 ids_ = {id(t) for t in qt_[1:]}
                 v['text'] = [t for t in v['text'] if id(t) not in ids_]
+            elif not qt_ and v['text'] and re.match(r'\d', r['label']) and any(re.fullmatch(r'\d{1,2}', t['t']) and
+                    t['x'] > info['new_edges'][-2] - 2 for t in v['text']):   # a MARKED row printed with NO label (2021 MJ 31 'pH 4 circled'
+                sz_ = 11.23                                    # = 2(d), C2b 351): the paper's label in the Q cell
+                while fitz.get_text_length(r['label'], 'helv', sz_) > info['new_edges'][0] - 6 and sz_ > 7:
+                    sz_ -= 0.5
+                w_ = round(fitz.get_text_length(r['label'], 'helv', sz_), 2)
+                y_ = min(t['y'] for t in v['text'])
+                v['text'].append({'t': r['label'], 'x': round((info['new_edges'][0] - w_) / 2, 2), 'y': y_, 'w': w_, 's': sz_, 'f': 'sans'})
         if v is not None:
             out.append((v, info, u))
     if first is None and expected == 4 and MP.EQUAL_FLEX:   # maths: Q | Answer | Marks | Partial Marks from the printed rules

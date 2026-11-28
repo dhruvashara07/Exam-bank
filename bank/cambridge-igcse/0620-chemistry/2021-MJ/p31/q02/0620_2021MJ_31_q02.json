@@ -24,10 +24,8 @@
  "marks": 15,
  "figures": [],
  "review": {
-  "reasons": [
-   "no mark scheme for 2(d)"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -352,8 +350,7 @@
      "label": "2(c)",
      "text": "nitrogen (1)\nphosphorus (1)\npH 4 circled",
      "codes": [
-      "2",
-      "1"
+      "2"
      ],
      "segments": [
       {
@@ -362,7 +359,7 @@
         53.691001892089844,
         445.7,
         784.0,
-        505.0
+        480.2
        ]
       }
      ]
@@ -423,6 +420,26 @@
    "text": "Orange juice is acidic.\nDraw a circle around the pH of orange juice.\npH 4pH 7pH 10pH 13\b\n[1]",
    "marks": 1,
    "path": "2(d)",
+   "mark_scheme": [
+    {
+     "label": "2(d)",
+     "text": "circled pH",
+     "codes": [
+      "1"
+     ],
+     "segments": [
+      {
+       "page": 5,
+       "bbox": [
+        53.691001892089844,
+        480.2,
+        784.0,
+        505.0
+       ]
+      }
+     ]
+    }
+   ],
    "content": [
     {
      "type": "text",

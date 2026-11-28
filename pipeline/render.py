@@ -45,7 +45,10 @@ def _isolated_page(src_doc, page_index, clip):
                         keep.append(bb)
     for r in outside:
         page.add_redact_annot(r, fill=False)
-    page.apply_redactions(images=fitz.PDF_REDACT_IMAGE_REMOVE,
+    chem_ = subjects.is_chem(subjects.path_syl(src_doc.name) or '')
+    page.apply_redactions(images=fitz.PDF_REDACT_IMAGE_PIXELS if chem_ else fitz.PDF_REDACT_IMAGE_REMOVE,   # chemistry: atom letters
+                          # are tiny images taller than the letter (6 x 42 pt): removing every image that reaches outside the cut
+                          # dropped them from the structure pictures (2021 FM 42, C2b 352) - only the pixels outside are blanked
                           graphics=fitz.PDF_REDACT_LINE_ART_REMOVE_IF_COVERED,
                           text=fitz.PDF_REDACT_TEXT_NONE if keep else fitz.PDF_REDACT_TEXT_REMOVE)
     if keep:
@@ -89,7 +92,7 @@ def fix_cmyk_images(svg):
 def region_svg(src_doc, page_index, bbox):
     doc = region_pdf(src_doc, page_index, bbox)
     svg = doc[0].get_svg_image(text_as_path=True)
-    if subjects.maths_path(src_doc.name):
+    if subjects.maths_path(src_doc.name) or subjects.is_chem(subjects.path_syl(src_doc.name) or ''):   # (chemistry: 'leastreactive', 355)
         svg = _respace(svg, src_doc[page_index], fitz.Rect(bbox))
     if subjects.is_chem(subjects.path_syl(src_doc.name) or ''):
         return minify(fix_cmyk_images(svg), exact_matrix=True)

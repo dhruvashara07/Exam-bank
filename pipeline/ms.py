@@ -24,6 +24,7 @@ def label_text(t):
     t = re.sub(r'^\((\d{1,2})([a-z])\)$', r'\1(\2)', t)                 # '(12b)' (2018 ON 22 ms, M3 pattern 244)
     if _CHEM_LABELS:                       # chemistry only (C2a): '7(c)iii)' (2022 ON 33), '4biv' (2023 ON 42), '4(f)(iii)i' (2023 MJ 42)
         t = re.sub(r'^(\d{1,2}\([a-z]\))([ivx]+)\)$', r'\1(\2)', t)
+        t = re.sub(r'\((I[ivx]*|[ivx]*I[ivx]*)\)', lambda m_: '(' + m_.group(1).lower() + ')', t)   # '7(c)(Ii)' (2021 ON 31, C2b 351)
         t = re.sub(r'^(\d{1,2})([a-h])(i|ii|iii|iv|v|vi)$', r'\1(\2)(\3)', t)
         t = re.sub(r'^(\d{1,2}\([a-z]\)\(([ivx]+)\))([ivx])$', lambda m_: m_.group(1) if m_.group(2).endswith(m_.group(3)) else m_.group(0), t)
     return re.sub(r'\(([a-z]+)\(', r'(\1)(', t)

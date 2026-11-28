@@ -455,6 +455,20 @@ def clipped_drawings(page):
     return out
 
 
+_NOCAP = {}
+
+
+def _chem_nocap(doc, syllabus):
+    """Chemistry paper that prints no 'Fig.' / 'Table' caption anywhere (2021-2022 and older): its diagrams are found
+    like maths ones (C2b, ERROR_PATTERNS 355)."""
+    if not subjects.is_chem(syllabus):
+        return False
+    k = id(doc)
+    if k not in _NOCAP:
+        _NOCAP[k] = not any(re.search(r'\b(?:Fig\.|Figure|Table)\s*\d', p.get_text()) for p in doc)
+    return _NOCAP[k]
+
+
 def diagrams(doc, seg, lines, captioned):
     """Maths: drawings with no caption (a triangle 'NOT TO SCALE', axes, a grid to draw on, a stem-and-leaf box ...) inside
     a segment -> figure crops {'caption': None, 'page', 'bbox'}. Not figures: answer lines and dots, fraction bars and
@@ -1272,8 +1286,19 @@ def extract(pdf_path, syllabus, year, session, pv):
                    'answer_space': answer_space(lines, s)}
         node['segments'].append(seg_rec)
         found = find_figures(doc, s, lines)
-        if subjects.subject(syllabus)['maths_text']:      # maths diagrams carry no 'Fig.' caption (ERROR_PATTERNS 68)
+        if subjects.subject(syllabus)['maths_text'] or _chem_nocap(doc, syllabus):   # maths diagrams carry no 'Fig.' caption
+            # (ERROR_PATTERNS 68); nor do chemistry papers before 2023 (C2b, ERROR_PATTERNS 355: 0 figures in every theory /
+            # practical paper of 2015 MJ and 2021-2022 - the diagrams were loose lines + text, rotated labels broken)
             for k, f in enumerate(diagrams(doc, s, lines, found), 1):
+                if _chem_nocap(doc, syllabus):     # chemistry: a mark '[2]' / '[Total: 8]' line is never part of the picture
+                    fb_ = fitz.Rect(f['bbox'])
+                    for w_ in doc[f['page']].get_text('words'):
+                        wr_ = fitz.Rect(w_[:4])
+                        if re.fullmatch(r'\[(?:Total:)?\d*\]?|\d+\]', w_[4]) and fb_.intersects(wr_) and wr_.y0 > fb_.y0 + 0.5 * fb_.height:
+                            fb_.y1 = min(fb_.y1, wr_.y0 - 1)
+                    if fb_.height < 8:
+                        continue
+                    f['bbox'] = [round(v, 1) for v in fb_]
                 near = [g for g in q['figures'] if g.get('kind') == 'diagram' and g['page'] == f['page'] + 1
                         and (fitz.Rect(g['bbox']) + (-3, -3, 3, 3)).intersects(fitz.Rect(f['bbox']))]
                 if near:                                   # one drawing cut by a part boundary: one picture (round 27)

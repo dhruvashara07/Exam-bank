@@ -13,18 +13,79 @@
   "build": [
    {
     "start": "2026-11-28T15:46:00+00:00",
-    "end": null
+    "end": "2026-11-28T15:54:16+00:00",
+    "note": "pass1 run 46161724868"
    }
   ],
-  "claude": [],
+  "claude": [
+   {
+    "start": "2026-11-28T15:54:40+00:00",
+    "end": "2026-11-28T16:34:35+00:00",
+    "note": "pass1 classes 351-355"
+   }
+  ],
   "claude1": [],
   "claude2": [],
   "review": [],
   "fix": []
  },
- "github_runs": [],
- "counts": {},
- "errors": [],
+ "github_runs": [
+  {
+   "id": 46161724868,
+   "name": "Question bank",
+   "branch": "main",
+   "conclusion": null,
+   "start": "2026-11-28T15:47:37Z",
+   "end": "2026-11-28T15:47:41Z",
+   "minutes": 0.1
+  }
+ ],
+ "counts": {
+  "papers": 66,
+  "flags": 54
+ },
+ "errors": [
+  {
+   "pattern": "351",
+   "kind": "new",
+   "what": "MS label slips: '7(c)(Ii)' (capital I), '1(v)(i)'-(iii) printed for 1(a)(vi), 'pH 4 circled' printed with no label (= 2(d)) merged into 2(c)",
+   "fix": "ms.label_text lowercases roman numerals (chem); run.py: ONE part without rows takes the stray-labelled rows whose marks match, or the merged row is split at its printed rule; ms_layout: such a row shows the paper's label in its Q cell, _tighten keeps the outer border for a marked row",
+   "found_by": "claude",
+   "at": "2026-11-28T16:34:35+00:00"
+  },
+  {
+   "pattern": "352",
+   "kind": "new",
+   "what": "atom letters printed as tall tiny images (6 x 42 pt) missing from MS structure pictures: redaction removed every image reaching outside the cut; an image's centre below the row kept the end atoms out",
+   "fix": "render: chemistry redaction blanks only the pixels outside (PDF_REDACT_IMAGE_PIXELS); store._chem_structures: letter images sized by their ink, accepted up to 60 pt tall",
+   "found_by": "claude",
+   "at": "2026-11-28T16:34:35+00:00"
+  },
+  {
+   "pattern": "353",
+   "kind": "new",
+   "what": "a text line under a structure half inside the picture: 'nvoneerepeatunit(1)', '1 anyonerepeatunitwithexte', 'propan-2-ol' cut",
+   "fix": "_chem_structures: a word line the picture only partly covers stays text (picture stops above / starts below it)",
+   "found_by": "claude",
+   "at": "2026-11-28T16:34:35+00:00"
+  },
+  {
+   "pattern": "354",
+   "kind": "new",
+   "what": "the H under a carbon cut by a figure crop's bottom edge (2022 MJ 21-23 q35; 2021 ON q11 bottom H atoms) - bond line starting at the edge",
+   "fix": "fit_crop (chemistry): vertical bond ITEMS at the top/bottom edge followed to their end + the atom letter there (the drawing's rect missed the lower line)",
+   "found_by": "claude",
+   "at": "2026-11-28T16:34:35+00:00"
+  },
+  {
+   "pattern": "355",
+   "kind": "new",
+   "what": "papers before 2023 print no 'Fig.' captions: ZERO figures in every theory/practical paper of 2005 MJ, 2015 MJ, 2021-2022 (approved C0 + 2022 ON included) - diagrams were loose lines + text in the print layout (rotated labels broken), missing from the editable layer",
+   "fix": "extract: chemistry papers with no caption anywhere use the maths uncaptioned-diagram finder; mark lines '[2]' / '[Total: n]' trimmed off; region_svg respaces words for chemistry ('leastreactive')",
+   "found_by": "claude",
+   "at": "2026-11-28T16:34:35+00:00"
+  }
+ ],
  "tokens": [],
  "events": [
   {
@@ -34,6 +95,46 @@
   {
    "at": "2026-11-28T15:46:00+00:00",
    "task": "phase C2b build"
+  },
+  {
+   "at": "2026-11-28T15:48:07+00:00",
+   "task": "gh C2b 46161724868"
+  },
+  {
+   "at": "2026-11-28T15:54:16+00:00",
+   "task": "phase C2b build"
+  },
+  {
+   "at": "2026-11-28T15:54:40+00:00",
+   "task": "phase C2b claude"
+  },
+  {
+   "at": "2026-11-28T16:34:35+00:00",
+   "task": "error C2b --pattern"
+  },
+  {
+   "at": "2026-11-28T16:34:35+00:00",
+   "task": "error C2b --pattern"
+  },
+  {
+   "at": "2026-11-28T16:34:35+00:00",
+   "task": "error C2b --pattern"
+  },
+  {
+   "at": "2026-11-28T16:34:35+00:00",
+   "task": "error C2b --pattern"
+  },
+  {
+   "at": "2026-11-28T16:34:35+00:00",
+   "task": "error C2b --pattern"
+  },
+  {
+   "at": "2026-11-28T16:34:35+00:00",
+   "task": "count C2b papers=66"
+  },
+  {
+   "at": "2026-11-28T16:34:35+00:00",
+   "task": "phase C2b claude"
   }
  ]
 }

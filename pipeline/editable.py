@@ -456,41 +456,22 @@ def build(doc, q):
     CHEM = subjects.is_chem(q.get('syllabus') or '')
     build_node(doc, q, q)
     if CHEM:                      # chemistry 2015+ PDFs put a BEL (\x07) before each paragraph: never in stored text (348)
-        def _nobel(n):            # (only the text fields - layout / crops still see the printed line as it is)
-            if isinstance(n, dict):
+        def _nobel(n):            # every string of the record (table cells in parts, answer lines too - C2b); layout / crops
+            if isinstance(n, dict):   # still see the printed line as it is
                 for k, v in n.items():
-                    if isinstance(v, str) and k in ('text', 'html', 'prefix', 'unit', 'caption', 'label') and '\x07' in v:
-                        n[k] = v.replace('\x07', '')
-                    elif isinstance(v, (dict, list)):
+                    if isinstance(v, str):
+                        if '\x07' in v:
+                            n[k] = v.replace('\x07', '')
+                    else:
                         _nobel(v)
             elif isinstance(n, list):
-                for v in n:
+                for i_, v in enumerate(n):
                     if isinstance(v, str):
-                        continue
-                    _nobel(v)
+                        if '\x07' in v:
+                            n[i_] = v.replace('\x07', '')
+                    else:
+                        _nobel(v)
         _nobel(q)
-        for b_ in q.get('content', []):
-            if b_.get('type') == 'list':
-                b_['items'] = [i_.replace('\x07', '') if isinstance(i_, str) else i_ for i_ in b_['items']]
-            if b_.get('type') == 'table':
-                b_['rows'] = [[c_.replace('\x07', '') if isinstance(c_, str) else c_ for c_ in r_] for r_ in b_['rows']]
-    if q.get('type') == 'mcq':
-        q['content'] = [b for b in q.get('content', []) if b['type'] != 'marks']
-        for b in q['content']:
-            if b['type'] == 'options' and (not any(re.sub(r'<[^>]+>', '', o['html']).strip() for o in b['options'])
-                                           or [o['label'] for o in b['options']] != list('ABCD')[:len(b['options'])]):
-                b['in_figure'] = True                      # options A-D are drawings / labels in the diagram
-                b['options'] = [{'label': x, 'html': ''} for x in 'ABCD']
-            if b['type'] == 'table' and [re.sub(r'<[^>]+>', '', r[0]).strip() for r in b['rows'] if r][-4:] == list('ABCD'):
-                b['options'] = True                        # an options table: one row per answer A-D
-    if q.get('type') == 'mcq' and not any(b['type'] == 'options' or b.get('options') for b in q['content']) \
-            and (q.get('options') or q.get('figures') or q.get('has_diagram')):
-        b = {'type': 'options', 'options': [{'label': o['label'], 'html': htmlmod.escape(o['text'])} for o in q.get('options') or []]}
-        if not any(o['text'].strip() for o in q.get('options') or []) or \
-                [o['label'] for o in q.get('options') or []] != list('ABCD')[:len(q.get('options') or [])]:
-            b = {'type': 'options', 'in_figure': True, 'options': [{'label': x, 'html': ''} for x in 'ABCD']}
-        q['content'].append(b)
-    return q
 
 
 def node_html(node, depth=0):

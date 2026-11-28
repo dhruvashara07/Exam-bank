@@ -114,11 +114,33 @@ def _chem_structures(doc, pno, clip, store):
             items.append(('g', r))                                    # a letter drawn as an outline
         elif (min(w, h) < 1.6 and 2.5 <= max(w, h) <= 40) or (d['type'] == 's' and 2.5 <= max(w, h) <= 40 and min(w, h) >= 1.6):
             items.append(('b', r))                                    # a bond (straight, double, slanted)
+    def _ink(r):                       # chemistry (C2b 353): a letter image is ~6 x 42 pt, the letter only ~6 x 8 of it - its
+        try:                           # box reached into the next text line ('nvoneerepeatunit(1)', 2021 MJ 41): use the ink
+            pr_ = fitz.Rect(r) * ~m if page.rotation else fitz.Rect(r)
+            px = page.get_pixmap(clip=pr_, dpi=144, colorspace=fitz.csGRAY, alpha=False)
+            sx, sy = px.width / max(pr_.width, 1e-6), px.height / max(pr_.height, 1e-6)
+            sm = px.samples; xs, ys = [], []
+            for yy in range(px.height):
+                row = sm[yy * px.stride: yy * px.stride + px.width]
+                for xx, v in enumerate(row):
+                    if v < 128:
+                        xs.append(xx); ys.append(yy)
+            if not xs:
+                return None
+            ib = fitz.Rect(pr_.x0 + min(xs) / sx, pr_.y0 + min(ys) / sy, pr_.x0 + (max(xs) + 1) / sx, pr_.y0 + (max(ys) + 1) / sy)
+            return (ib.quad * m).rect if page.rotation else ib
+        except Exception:
+            return r
     for i_ in page.get_image_info():               # 2024 MS: atom letters pasted as tiny images (~6 x 40 pt boxes, pattern 258)
         r = (fitz.Rect(i_['bbox']).quad * m).rect
-        if r.intersects(clip) and clip.contains(fitz.Point((r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2)) \
+        if r.intersects(clip) and max(r.width, r.height) > 3 * min(r.width, r.height) and max(r.width, r.height) <= 60:
+            r = _ink(r)
+            if r is None:
+                continue
+        if r.intersects(clip) and (clip.contains(fitz.Point((r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2)) or
+                                   (r & clip).height >= 4 and clip.x0 <= (r.x0 + r.x1) / 2 <= clip.x1) \
                 and 2.5 <= min(r.width, r.height) <= 11 and max(r.width, r.height) <= 50:
-            items.append(('g', r))
+            items.append(('g', r))           # (a letter image reaching below the row - its centre is outside: 2021 FM 42, 352)
     groups = []
     for k, r in items:
         rr = r + (-17, -17, 17, 17)           # atom letters ~22 pt apart (gaps ~16 pt); the bonds are often no drawing at all
@@ -133,6 +155,13 @@ def _chem_structures(doc, pno, clip, store):
             for _, x in g:
                 b |= x
             b = (b + (-1.5, -1.5, 1.5, 1.5)) & clip
+            for w_ in page.get_text('words'):         # chemistry (353): a text line the picture only partly covers stays text -
+                wr = (fitz.Rect(w_[:4]).quad * m).rect   # the picture stops above / starts below it
+                if wr.intersects(b) and not (b + (-0.5, -0.5, 0.5, 0.5)).contains(wr) and len(w_[4]) > 2:
+                    if (wr.y0 + wr.y1) / 2 > (b.y0 + b.y1) / 2:
+                        b.y1 = min(b.y1, wr.y0 - 0.3)
+                    else:
+                        b.y0 = max(b.y0, wr.y1 + 0.3)
             if b.width < 15 or b.height < 12:
                 continue
             name = f'msfml_{pno + 1}_{round(b.x0)}_{round(b.y0)}.svg'
@@ -951,9 +980,36 @@ def fit_crop(pg, b, max_grow=50.0, maths=False, chem=False):
                 nb = fitz.Rect(min(b.x0, r.x0 - 0.5), b.y0, max(b.x1, r.x1 + 0.5), b.y1)
                 if nb.width - b.width < 20:
                     b = nb
+    if chem and FIT_BOND_ENDS:    # chemistry (C2b, ERROR_PATTERNS 354): a vertical bond starting at the TOP / BOTTOM edge is
+        segs = []                 # followed to its end, with the atom letter there ('H' under the right carbon, 2022 MJ 21 q35).
+        for d_ in pg.get_drawings():  # Line ITEMS, not the drawing's rect: that rect missed the lower line of the same path
+            for it in d_['items']:
+                if it[0] == 'l' and abs(it[1].x - it[2].x) < 1.6:
+                    segs.append(fitz.Rect(min(it[1].x, it[2].x), min(it[1].y, it[2].y), max(it[1].x, it[2].x), max(it[1].y, it[2].y)))
+        AT = r'(?:[A-Z][a-z]?\d*){1,3}'
+        for r in segs:
+            if not (4 <= r.height <= 20) or not (b.x0 < (r.x0 + r.x1) / 2 < b.x1):
+                continue
+            if b.y1 - 20 < r.y0 < b.y1 + 3 and r.y1 > b.y1 + 1:
+                nb = fitz.Rect(b.x0, b.y0, b.x1, r.y1 + 0.5)
+                for w in ws:
+                    wr = fitz.Rect(w[:4])
+                    if re.fullmatch(AT, w[4]) and wr.x0 < r.x1 + 1 and wr.x1 > r.x0 - 1 and -1 <= wr.y0 - r.y1 <= 4:
+                        nb.y1 = max(nb.y1, wr.y1 + 0.5)
+                if nb.y1 - b.y1 < 30:
+                    b = nb
+            elif b.y0 - 3 < r.y1 < b.y0 + 20 and r.y0 < b.y0 - 1:
+                nb = fitz.Rect(b.x0, r.y0 - 0.5, b.x1, b.y1)
+                for w in ws:
+                    wr = fitz.Rect(w[:4])
+                    if re.fullmatch(AT, w[4]) and wr.x0 < r.x1 + 1 and wr.x1 > r.x0 - 1 and -1 <= r.y0 - wr.y1 <= 4:
+                        nb.y0 = min(nb.y0, wr.y0 - 0.5)
+                if b.y0 - nb.y0 < 30:
+                    b = nb
     return b
 
 
+FIT_BOND_ENDS = True              # toggle for the blast harness (C2b 354)
 FIT_EDGE_WORDS = True             # toggle for the blast harness (C2a 345)
 OPT_EDGE_WORDS = True             # the same growth before the MCQ option split (C2a round 47, 349)
 
