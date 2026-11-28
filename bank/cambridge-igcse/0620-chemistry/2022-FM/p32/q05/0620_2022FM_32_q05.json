@@ -22,7 +22,36 @@
  ],
  "text": "5\nThis question is about air.",
  "marks": 12,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 9,
+   "bbox": [
+    236.8,
+    110.7,
+    360.6,
+    226.9
+   ],
+   "id": "0620_2022FM_32_q05a_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)"
+  },
+  {
+   "caption": null,
+   "page": 9,
+   "bbox": [
+    205.1,
+    370.1,
+    392.2,
+    488.1
+   ],
+   "id": "0620_2022FM_32_q05aii_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(a)(ii)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -178,14 +207,9 @@
        "text": "The graph shows how the volume of a sample of gas G changes as temperature increases. The pressure is kept constant."
       },
       {
-       "type": "text",
-       "html": "volume of gas <b>G</b> / cm<sup>3</sup>",
-       "text": "volume of gas G / cm3"
-      },
-      {
-       "type": "text",
-       "html": "temperature / C",
-       "text": "temperature / C"
+       "type": "figure",
+       "id": "0620_2022FM_32_q05aii_diagram2",
+       "caption": null
       },
       {
        "type": "text",
@@ -348,14 +372,9 @@
      "text": "The pie chart shows the proportions of the main gases in clean, dry air."
     },
     {
-     "type": "text",
-     "html": "gas <b>G</b>",
-     "text": "gas G"
-    },
-    {
-     "type": "text",
-     "html": "gas <b>H</b>",
-     "text": "gas H"
+     "type": "figure",
+     "id": "0620_2022FM_32_q05a_diagram1",
+     "caption": null
     }
    ]
   },
