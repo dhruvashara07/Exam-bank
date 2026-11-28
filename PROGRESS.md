@@ -83,7 +83,7 @@ Read this first in every session. Update it before ending a session.
 - MATHS NEXT: Batch M3b when Dhruv uploads 2019 MJ (prompt NEXT_CHAT 'Maths M3b'); nothing else pending - every 0607 paper is
   approved (approve.py --pending lists no 0607). Open, all KNOWN: 335 leftovers; 2018 ON 62 A spiral grid not an intro figure (338);
   2022 ON 51 5(a) empty grid; 2024 ON 23 q7 partial marks small.
-- 2026-11-28: M4 FINISHED: 2014 ON 51/52/53 approved (pattern 342: narrow ruled MS table now in the maths layout - q2 Partial Marks
+- 2026-11-28: M4 FINISHED: 2014 ON 51/52/53 approved (pattern 347: narrow ruled MS table now in the maths layout - q2 Partial Marks
   column, q3 3(b)(i), q4 cube table + its 4 mark; unlabelled 'Communication in ...' row = paper communication mark). The same
   ms.py fix moved APPROVED 2014 ON 63's 'Communication in 2(c)' out of 7(b) (Dhruv: yes) - re-approved after a look. Blasts: only
   these 4 papers change; golden 0, nothing under 0625/0620.

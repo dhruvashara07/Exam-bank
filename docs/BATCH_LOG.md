@@ -240,7 +240,7 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - [new] pattern 339: duplicate-paper tasks pointed at removed figures → stub tasks; tasks rebuilt after dupes (found by claude)
 - [new] pattern 340: store build failed on tile-heavy pages (5 maths papers, in HEAD) → _notext BT..ET fallback (found by claude)
 - [new] pattern 341: tile pictures lost letters/arrow; crosses read as lines → specs + cross size (found by claude)
-- [repeat] pattern 342: 2014 ON 51 MS: narrow ruled table fell to the wrap/old layout (q2 Partial Marks lost, q3 3(b)(i) boxed, q4 table squashed + marks '1 5 1 6 2 4 5'); unlabelled 'Communication in ...' row inside 6(c) (also 2014 ON 63 7(b)) → ms_maths.columns drops the outer pair of a narrow table + _drop_outer_borders; ms.py column layout reads COMMX rows (found by claude)
+- [repeat] pattern 347: 2014 ON 51 MS: narrow ruled table fell to the wrap/old layout (q2 Partial Marks lost, q3 3(b)(i) boxed, q4 table squashed + marks '1 5 1 6 2 4 5'); unlabelled 'Communication in ...' row inside 6(c) (also 2014 ON 63 7(b)) → ms_maths.columns drops the outer pair of a narrow table + _drop_outer_borders; ms.py column layout reads COMMX rows (found by claude)
 
 ### RD2
 - [new] pattern 271: RD2: 181 blurry MS pictures in all batches (tables, grid shapes, dots, pies, Venns, trees, mappings, plots, graphs) had no drawer → ms_graphs: table / plane (squares, dots, iso, isov, panels, stack) / pie / map drawers, smooth data curves, alts per label (found by claude)
@@ -271,6 +271,6 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - M2: pattern 229 came back: pass 2: my 219 grid rule took boxes for tables; fill-only table lost rows
 - M2: pattern 230 came back: pass 3: my 225 cut an x axis / tree
 - M2: pattern 232 came back: pass 4: my 231 grouping rules too wide (54 collateral)
-- M4: pattern 342 came back: 2014 ON 51 MS: narrow ruled table fell to the wrap/old layout (q2 Partial Marks lost, q3 3(b)(i) boxed, q4 table squashed + marks '1 5 1 6 2 4 5'); unlabelled 'Communication in ...' row inside 6(c) (also 2014 ON 63 7(b))
+- M4: pattern 347 came back: 2014 ON 51 MS: narrow ruled table fell to the wrap/old layout (q2 Partial Marks lost, q3 3(b)(i) boxed, q4 table squashed + marks '1 5 1 6 2 4 5'); unlabelled 'Communication in ...' row inside 6(c) (also 2014 ON 63 7(b))
 - RD2: pattern 309 came back: dot paper partial picture again (275 kept dots, Dhruv wants whole picture)
 - RD2: pattern 312 came back: fraction labels not at branch middle (310 only did decimals)

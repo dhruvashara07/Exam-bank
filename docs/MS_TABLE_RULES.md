@@ -231,7 +231,7 @@ belong to (a), not to (a)(iv): when every sub-part but the last has no mark, the
   balanced"); Q and Marks keep the fixed widths of every other year. Code: `ms_portrait.EQUAL_FLEX` (set for maths).
 - 2014 schemes print the same 4 columns as a ruled table with no header: our header and our full label per row
   (`ms_layout._maths_ruled`). Still open (PROGRESS): rows with fractions / column vectors / long notes.
-- A 2014 ruled table narrower than the cut (2014 ON 51-53) is the same table: its outer borders are no column rules (pattern 342);
+- A 2014 ruled table narrower than the cut (2014 ON 51-53) is the same table: its outer borders are no column rules (pattern 347);
   an unlabelled 'Communication in ...' row is a paper communication mark, never part of the question above it.
 - Communication marks of investigation papers are paper marks (store paper.json `communication`), never a part's row.
 

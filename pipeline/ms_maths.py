@@ -91,13 +91,13 @@ def columns(u):
         top = max(c for _, c in xs)                      # the table's own rules run the full height
         inner = [x for x, c in xs if c > 0.97 * top and 20 < x < u['w'] - 20]
     if len(inner) == 5 and 5 not in ok and inner[-1] - inner[0] < u['w'] - 30:   # a table narrower than the cut (2014 ON
-        inner = inner[1:4]                            # 51-53): its outer borders are no inner rules (patterns 334, 342)
+        inner = inner[1:4]                            # 51-53): its outer borders are no inner rules (patterns 334, 347)
     return inner if len(inner) in ok else None
 
 
 def _drop_outer_borders(u):
     """The outer borders of a table narrower than the cut (columns() dropped them): never cell content - their stub under
-    the last row's bottom rule showed as a tick in the Partial Marks cell (2014 ON 51, pattern 342)."""
+    the last row's bottom rule showed as a tick in the Partial Marks cell (2014 ON 51, pattern 347)."""
     vs = []
     for l in u.get('lines', []):
         for sub in re.findall(r'M[^M]+', l['d']):
