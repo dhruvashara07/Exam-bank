@@ -42,9 +42,21 @@ Read this first in every session. Update it before ending a session.
   questions re-laid out by 321 and sampled). C1 APPROVED in git (70 papers). Freeze: golden 0, nothing under 0625/0607, maths
   ms_layout hash 0 of 5268. The own-account review page is now the CHEMISTRY page ('Chemistry Question Review',
   PCdP6oibAkjQvGz8mKm73e); the shared account keeps maths (8YDJDKJCXfURh5QFLnpTw8).
-- NEXT: (1) C2a (2022-ON 2023-FM 2023-MJ 2023-ON, 59 papers; 2023-ON 51 missing in Releases) in a new chat, prompt NEXT_CHAT.
-  Then C2b (2021-FM .. 2022-MJ, 66 papers). Check tool for the Claude round: pipeline/ms_overlap.py.
-  (2) Maths: RD2 done; next maths batch M4 - see the maths NEXT below.
+- 2026-11-28: C2a (2022-ON 2023-FM 2023-MJ 2023-ON) built: 58 papers - 2023-ON paper 51 is NOT in Releases (not done, like
+  maths 2019 MJ; build it when Dhruv uploads it). Before building: SYL=0620 ms_rebuild over C0+C1 = only 2026-MJ/p41/q04 (known).
+  GitHub pass 1 (run 46141426546, 8 min, 51 reasons) + pass 2 (46144079379: 13 verified, 15 figure items confirmed by eye, 0 new);
+  then a LOCAL rebuild of C2a (= Action: fonttools + PDFs; store/ unchanged) for the editable-text fixes found after pass 2.
+  Classes (all gated to chemistry): 342 MS label typos, 343 doubled label slip, 344 'Cl2' shown 'C2l' in MS rows (41 approved
+  C0/C1 questions re-laid out too), 345 end atoms cut at the crop's left/right edge, 346 editable 'BaCl 2' / 'Al F3' spaces,
+  348 BEL control char in stored text, 297 two hand-drawn MS scans redrawn (2023 ON 43 6(e)(ii)). 58/58 exact marks, 0 flags,
+  0 open reasons. Freeze: golden 0, nothing under 0625/0607, maths ms_layout hash 0 of 5293 (before M4's last merge; my layout
+  change is gated to CHEM). Known (budget rule): approved C0/C1 figures (53, 345) and editable text (346, 348: 70 files with BEL)
+  improve only at their next rebuild - REBUILD C0/C1 before the MongoDB push.
+  Round 47 (10 items: 5 calibration, 4 fixes, 1 approved question changed) on https://claude.ai/artifact/PCdP6oibAkjQvGz8mKm73e.
+- NEXT: (1) Dhruv's round 47 -> fix wrong items as classes, approve C2a (58 papers), docs, push (same chat if it is still open,
+  else a new chat with docs/NEXT_CHAT.md). Then C2b (2021-FM 2021-MJ 2021-ON 2022-FM 2022-MJ, 66 papers) in a new chat.
+  Check tools for the Claude round: pipeline/ms_overlap.py; /home/claude/tools ideas in ERROR_PATTERNS 344-348 (Cl scan, figure
+  contact sheet with one <img> per SVG).
 
 ## Maths 0607 (started 2026-11-12) - plan: docs/MATHS_PLAN.md, entry: docs/START_HERE.md, steps: docs/PLAYBOOK.md
 - 2026-11-18: CHEM stored: 1599 of 1600 PDFs in Releases (only chemistry_0652_to_0620_mapping.pdf, not a Cambridge name,

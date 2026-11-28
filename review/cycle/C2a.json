@@ -19,12 +19,18 @@
   "claude": [
    {
     "start": "2026-11-28T11:59:13+00:00",
-    "end": null
+    "end": "2026-11-28T12:51:14+00:00",
+    "note": "pass1 classes 342-346 + 297, pass2 verified, local rebuild for 346/348"
    }
   ],
   "claude1": [],
   "claude2": [],
-  "review": [],
+  "review": [
+   {
+    "start": "2026-11-28T12:51:14+00:00",
+    "end": null
+   }
+  ],
   "fix": []
  },
  "github_runs": [
@@ -47,7 +53,12 @@
    "minutes": 0.0
   }
  ],
- "counts": {},
+ "counts": {
+  "papers": 58,
+  "questions": 1008,
+  "flags": 51,
+  "round_items": 10
+ },
  "errors": [
   {
    "pattern": "342",
@@ -183,6 +194,18 @@
   {
    "at": "2026-11-28T12:48:24+00:00",
    "task": "error C2a --pattern"
+  },
+  {
+   "at": "2026-11-28T12:51:14+00:00",
+   "task": "phase C2a claude"
+  },
+  {
+   "at": "2026-11-28T12:51:14+00:00",
+   "task": "phase C2a review"
+  },
+  {
+   "at": "2026-11-28T12:51:58+00:00",
+   "task": "count C2a papers=58"
   }
  ]
 }

@@ -6,7 +6,7 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | C0 | 2005-MJ 2015-MJ 2024-MJ 2026-MJ | 56 | 9.0 | 0.2 | 79.2 | 0.0 | 58.0 | 146.2 | 16 | 26 | 1 | n/a |
 | C1 | 2024-FM 2024-ON 2025-FM 2025-MJ 2025-ON 2026-FM | 70 | 15.5 | 0.2 | 88.1 | 0.0 | 0.4 | 104.0 | 10 | 8 | 2 | n/a |
-| C2a | 2022-ON 2023-FM 2023-MJ 2023-ON |  | 0.0 | 0 | 0.0 | 0.0 | 0.0 | 0.0 |  | 0 | 0 | n/a |
+| C2a | 2022-ON 2023-FM 2023-MJ 2023-ON | 58 | 14.1 | 0.1 | 52.0 | 0.0 | 0.0 | 66.1 | 10 | 6 | 2 | n/a |
 | M0 | 2014-MJ 2019-ON 2021-FM 2025-MJ | 60 | 9.5 | 9.6 | 257.5 | 51.4 | 2766.0 | 3084.4 | 40 | 58 | 5 | n/a |
 | M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 | 11.7 | 97.4 | 191.6 | 0.0 | 30.1 | 233.4 | 23 | 42 | 2 | n/a |
 | M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 117 | 100.3 | 131.2 | 0.0 | 0.0 | 0.0 | 100.3 | 13 | 28 | 4 | n/a |
@@ -57,6 +57,16 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - [new] pattern 320: MS part with no printed mark (2025 FM 42 5(d)(iii) M1-M3; 6 more in 2026 MJ): Marks cell empty - I passed it as 'as printed' (wrong calibration) → chemistry: the QP part's [n] goes into the empty Marks column (found by dhruv)
 - [new] pattern 321: Guidance paragraph not level with the Answer line it was printed beside after re-wrap (2015 MJ 32 3(a) 'A if electron' vs M3); 56 approved C0 questions → Guidance paragraphs take the Answer column's added lines (Answer column leads) (found by dhruv)
 - [repeat] pattern 319: _wrap_overrun: row grew by a full line though the cell had room (2015 MJ 21 6(a)(iv)); and V path commands not moved -> stop-clock boxes black (2025 MJ 63 2(a)), missed by my own check → grow only by what text needs; thin rules move as one piece; V moves like L (found by dhruv)
+
+### C2a
+- [new] pattern 342: Cambridge MS label typos '7(c)iii)', '4(f)(iii)i', '4biv' not read as labels: row merged into the one above, 'no mark scheme' flag → ms.label_text (chemistry, _CHEM_LABELS): missing '(' / unbracketed letter+roman / doubled last roman letter (found by claude)
+- [new] pattern 343: '2(e)(iii)' printed twice where the first is 2(e)(ii) (2023 ON 63): rule 301 needed every other row in place → run.py chemistry: the first of a doubled label may be the slip when its marks equal the part's marks (found by claude)
+- [new] pattern 344: 'Cl2' in MS rows shown 'C 2l' (42 questions, C0/C1 approved too): subscript joined the first word reaching it ('C'), not the nearest (Bookman 'l') → ms_portrait._groups (chemistry): nearest word before the subscript; 41 stored questions re-laid out (ms_rebuild --write) (found by claude)
+- [new] pattern 345: end atoms 'H' / 'OH' and key words cut in half by the figure crop's left/right edge (15 C2a figures, 68 in all chemistry) → store.fit_crop (chemistry, FIT_EDGE_WORDS): a word crossing the left/right edge with >= 1 pt inside is taken in (sideways only) (found by claude)
+- [new] pattern 346: editable text 'BaCl 2(s)', 'KCl (s)': Cambridge's 1.5 pt kerning space after the Bookman 'l' became a word space (~200 spots, all chemistry) → editable (chemistry): no space after the Bookman l when the gap < 2.5 pt (found by claude)
+- [repeat] pattern 297: 2023 ON 43 6(e)(ii): noisy hand-drawn scan structures with a black bar → redrawn by hand in chem_redraw (2 SVGs) (found by claude)
+- [new] pattern 348: BEL control char (\x07) that chemistry 2015+ PDFs put before every paragraph leaked into stored question text/html/prefix (278 files; approved 2015-MJ/2024-FM/2024-MJ keep it until rebuilt) → editable.build (chemistry): BEL removed from the stored text fields only; a first try in layout.norm moved a practical-paper crop (the BEL's box set the line's left edge) - reverted (found by claude)
+- [repeat] pattern 346: first 346 fix missed the thin space U+2009 glued to the next letter ('Al\u2009F3', 'KCl (aq)'); a wider lstrip ate real spaces ('C2H5Cl+') → spans_in drops a U+2009 only right after the Bookman l (found by claude)
 
 ### M0
 - [new] pattern 64: equation-editor symbol fonts drew # for x etc. in print and text → store_text MATHS_GLYPHS/MATHS_WIDE by eye (found by claude)
@@ -260,6 +270,8 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - C0: pattern 96 came back: straight lines have empty boxes: structure bonds ignored by intersects (my own new chem code)
 - C1: pattern 315 came back: end atom H beside a displayed formula became question text away from its bond (2025 ON 23 q37, 2025 FM 12 q10) - 285 too narrow
 - C1: pattern 319 came back: _wrap_overrun: row grew by a full line though the cell had room (2015 MJ 21 6(a)(iv)); and V path commands not moved -> stop-clock boxes black (2025 MJ 63 2(a)), missed by my own check
+- C2a: pattern 297 came back: 2023 ON 43 6(e)(ii): noisy hand-drawn scan structures with a black bar
+- C2a: pattern 346 came back: first 346 fix missed the thin space U+2009 glued to the next letter ('Al\u2009F3', 'KCl (aq)'); a wider lstrip ate real spaces ('C2H5Cl+')
 - M0: pattern 92 came back: repeat of a round-27 class: the round-27 fix covered the reported item, not the class
 - M0: pattern 93 came back: repeat of a round-27 class: the round-27 fix covered the reported item, not the class
 - M0: pattern 97 came back: repeat of a round-27 class: the round-27 fix covered the reported item, not the class

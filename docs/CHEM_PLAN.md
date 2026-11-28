@@ -119,3 +119,9 @@ one standard MS column proportion (MS_TABLE_RULES 'Chemistry'); faint MS picture
 ## 11. C1 (2026-11-27)
 Built (pass 1 + pass 2, 70 papers), 83 reasons (pilot classes hold), patterns 313-319, round 45 (10 items). Pass 1 now also gives
 the Marks-column sum hint (ms_marksum). Tools: fig_blast takes SYL (MCQ figures not covered - harness on bank/ jsons).
+
+## 12. C2a (2026-11-28)
+58 papers (2023-ON 51 not in Releases). Pass 1 (8 min) + pass 2 + a local rebuild; patterns 342-346, 348; round 47 (10 items).
+Lessons for every chemistry batch: zoom formulae (Cl in Bookman italic, sub/superscripts) at 2x on every sheet; editable text
+for 'Cl ' / BEL; diff store/ after any local rebuild. Approved C0/C1 must be rebuilt before the MongoDB push (345, 346, 348).
+

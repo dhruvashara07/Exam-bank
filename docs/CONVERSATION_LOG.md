@@ -737,3 +737,16 @@ the other open items (see earlier entries) still wait for approval; hourly task 
 - Time: ~1 h 15 min, mostly the two blasts (461 MS old vs new) and the run.py rebuild. No GitHub pass needed (4 papers, local run).
 - Own detours: first patched ms_layout's wrap path (worked, but the wrong layer) - reverted for the ms_maths fix; ms_rebuild
   without --write rewrote 3 figure PNGs of 2014 MJ 22 (restored with git checkout; noted).
+
+## 2026-11-28 - Chemistry C2a built and checked, round 47 (own account)
+- Dhruv: C2a = 2022-ON 2023-FM 2023-MJ 2023-ON with the full cycle; 2023-ON 51 still not uploaded -> recorded as not done (58
+  papers). Pre-check of M4's shared ms.py change over C0+C1: only the known 2026-MJ/p41/q04 moves.
+- Pass 1 took 8 min on GitHub (chemistry builds fast); 51 reasons. Classes 342-346 + 348 (see ERROR_PATTERNS 'Chemistry C2a').
+- Analysis: the biggest find was NOT in the reasons: chlorine printed 'C 2l' in 42 mark schemes (incl. approved C0/C1) and a
+  stray space in editable 'BaCl 2' - both missed in C0/C1 because sheets are read at a size where the letter order does not show.
+  Own mistakes caught before pushing: an lstrip rule that ate real spaces; a BEL fix in layout.norm that moved 5 practical graph
+  crops (diffed store/ after the local rebuild and reverted); a contact sheet with inline SVGs that drew figures broken (shared
+  ids) - nearly read as a regression. Pattern number clash: the maths chat took 347 at the same time -> my BEL pattern is 348.
+  Slowest phase: Claude's check (~52 min), mostly the Cl/editable classes found by zooming.
+- Round 47 published (10 items).
+

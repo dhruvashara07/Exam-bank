@@ -173,3 +173,9 @@ MATHS_PLAN.md if the plan changed; docs/NEXT_CHAT.md prompt; `pipeline/push.sh`;
 - (M4 finish, 2026-11-28) ms.py has TWO readers (table path 2017+, column path 2014-2016): a class fix in one is searched for in the
   other at once (pattern 347: COMMX was only in the table path). An ms.py change that moves an APPROVED paper's marks is a
   decision for Dhruv (ask with options) before re-approving.
+- (C2a, 2026-11-28) Chemistry check round extras: zoom formulae at 2x ('Cl2' shown 'C2l' does not show at sheet size - 344);
+  scan editable text for 'Cl ' + digit/bracket and BEL (346/348); a word-level crop fix is not seen by the line-based
+  'half inside' check: confirm such items by eye (one <img> per SVG - inline SVGs share ids and draw broken). A text-normalising
+  change is a layout change: diff store/ after a local rebuild. Pattern numbers: check origin/main before taking a number
+  (the maths chat may be writing at the same time).
+
