@@ -57,7 +57,7 @@ Read this first in every session. Update it before ending a session.
   350 (SVG matrices cut to 3 decimals: 68 approved 2024-2026 figures out of place - fixed, 15 papers rebuilt). C2a APPROVED
   (58 papers; 2023-ON 51 not uploaded = not done). Approved C0/C1 papers re-touched by 345/346/348/349/350 keep their approval
   (cut unchanged). Physics 30 / maths 2 figures carry the 350 risk - frozen, for Dhruv to decide.
-- NEXT: (1) C2b (2021-FM 2021-MJ 2021-ON 2022-FM 2022-MJ, 66 papers) - started 2026-11-28 in the same chat.
+- NEXT: (1) C2b (2021-FM 2021-MJ 2021-ON 2022-FM 2022-MJ, 66 papers): round 48 OPEN on the chemistry review page (23 items, 2026-11-28) - read feedback_r48, fix, then approve C2b AND re-approve the sessions re-touched by 355-357 (2005 MJ, 2015 MJ, 2022 ON: new diagrams; 2023 FM/MJ/ON, 2024 FM/MJ/ON, 2025 ON: control-code text, store rebuilt), freeze checks, push. Then C3.
 - 2026-11-18: CHEM stored: 1599 of 1600 PDFs in Releases (only chemistry_0652_to_0620_mapping.pdf, not a Cambridge name,
   stays on branch store-chem). inbox.py now keeps gt/ci/ir/in/eq/one-digit/combined files (302 had been skipped).
   Branches store-chem and store-chem-rest: Dhruv deletes them (this session cannot delete branches).

@@ -756,3 +756,11 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   Lesson: compare a changed approved figure to the PRINT, not only old vs new; rasterise with rsvg to rule out the viewer.
 - Own slip: run.py started with an empty computed list -> rebuilt everything until stopped; restored with git (guard noted).
 
+
+## 2026-11-28 (chemistry chat, continued) - C2b build + check, round 48 out
+- C2a approved (58 papers). C2b: pass 1 + pass 2, fixes 351-357. Two SYSTEMIC classes found late: 355 (pre-2023 papers had no
+  figures at all - uncaptioned drawings were never cut) and 357 (control codes drew whole lines as letter pictures with a ghost
+  letter, approved sessions too). Both slipped through C0-C2a because the checks looked at content, not at the figure count or
+  letter shapes: added both checks to ERROR_PATTERNS.
+- Slowest phase: the 355 diagram crops (4 rounds of contact sheets over 210 diagrams: tables, bullet lines, marks, side labels).
+- Round 48 (23 items) published; approvals of C2b and the re-touched sessions wait for it.
