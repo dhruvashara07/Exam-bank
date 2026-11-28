@@ -111,8 +111,9 @@ def _groups(words):
         for g in G:
             m = g['ws'][0]
             if m['y'] - 11 <= s['y'] <= m['y'] + 8 and m['x'] - 1 <= s['x'] <= m['x'] + m['w'] + 4:
-                if best is None or abs(g['y'] - s['y']) < abs(best['y'] - s['y']):
-                    best = g
+                if best is None or abs(g['y'] - s['y']) < abs(best['y'] - s['y']) or (
+                        globals().get('CHEM') and abs(g['y'] - s['y']) == abs(best['y'] - s['y']) and m['x'] > best['ws'][0]['x']):
+                    best = g          # chemistry: the NEAREST word before it ('C' 'l' '2' of Cl2: the 2 goes with the 'l', C2a 344)
         if best is None:
             G.append({'ws': [s], 'x': s['x'], 'w': s['w'], 'y': s['y']})
         else:

@@ -12,18 +12,83 @@
   "build": [
    {
     "start": "2026-11-28T11:45:01+00:00",
+    "end": "2026-11-28T11:59:05+00:00",
+    "note": "pass1 run 46141426546, 8 min"
+   }
+  ],
+  "claude": [
+   {
+    "start": "2026-11-28T11:59:13+00:00",
     "end": null
    }
   ],
-  "claude": [],
   "claude1": [],
   "claude2": [],
   "review": [],
   "fix": []
  },
- "github_runs": [],
+ "github_runs": [
+  {
+   "id": 46141426546,
+   "name": "Question bank",
+   "branch": "main",
+   "conclusion": null,
+   "start": "2026-11-28T11:46:09Z",
+   "end": "2026-11-28T11:46:13Z",
+   "minutes": 0.1
+  }
+ ],
  "counts": {},
- "errors": [],
+ "errors": [
+  {
+   "pattern": "342",
+   "kind": "new",
+   "what": "Cambridge MS label typos '7(c)iii)', '4(f)(iii)i', '4biv' not read as labels: row merged into the one above, 'no mark scheme' flag",
+   "fix": "ms.label_text (chemistry, _CHEM_LABELS): missing '(' / unbracketed letter+roman / doubled last roman letter",
+   "found_by": "claude",
+   "at": "2026-11-28T12:18:49+00:00"
+  },
+  {
+   "pattern": "343",
+   "kind": "new",
+   "what": "'2(e)(iii)' printed twice where the first is 2(e)(ii) (2023 ON 63): rule 301 needed every other row in place",
+   "fix": "run.py chemistry: the first of a doubled label may be the slip when its marks equal the part's marks",
+   "found_by": "claude",
+   "at": "2026-11-28T12:18:49+00:00"
+  },
+  {
+   "pattern": "344",
+   "kind": "new",
+   "what": "'Cl2' in MS rows shown 'C 2l' (42 questions, C0/C1 approved too): subscript joined the first word reaching it ('C'), not the nearest (Bookman 'l')",
+   "fix": "ms_portrait._groups (chemistry): nearest word before the subscript; 41 stored questions re-laid out (ms_rebuild --write)",
+   "found_by": "claude",
+   "at": "2026-11-28T12:18:49+00:00"
+  },
+  {
+   "pattern": "345",
+   "kind": "new",
+   "what": "end atoms 'H' / 'OH' and key words cut in half by the figure crop's left/right edge (15 C2a figures, 68 in all chemistry)",
+   "fix": "store.fit_crop (chemistry, FIT_EDGE_WORDS): a word crossing the left/right edge with >= 1 pt inside is taken in (sideways only)",
+   "found_by": "claude",
+   "at": "2026-11-28T12:18:50+00:00"
+  },
+  {
+   "pattern": "346",
+   "kind": "new",
+   "what": "editable text 'BaCl 2(s)', 'KCl (s)': Cambridge's 1.5 pt kerning space after the Bookman 'l' became a word space (~200 spots, all chemistry)",
+   "fix": "editable (chemistry): no space after the Bookman l when the gap < 2.5 pt",
+   "found_by": "claude",
+   "at": "2026-11-28T12:18:50+00:00"
+  },
+  {
+   "pattern": "297",
+   "kind": "repeat",
+   "what": "2023 ON 43 6(e)(ii): noisy hand-drawn scan structures with a black bar",
+   "fix": "redrawn by hand in chem_redraw (2 SVGs)",
+   "found_by": "claude",
+   "at": "2026-11-28T12:18:50+00:00"
+  }
+ ],
  "tokens": [],
  "events": [
   {
@@ -37,6 +102,46 @@
   {
    "at": "2026-11-28T11:45:01+00:00",
    "task": "phase C2a build"
+  },
+  {
+   "at": "2026-11-28T11:46:34+00:00",
+   "task": "gh C2a 46141426546"
+  },
+  {
+   "at": "2026-11-28T11:59:05+00:00",
+   "task": "phase C2a build"
+  },
+  {
+   "at": "2026-11-28T11:59:13+00:00",
+   "task": "phase C2a claude"
+  },
+  {
+   "at": "2026-11-28T12:18:49+00:00",
+   "task": "error C2a --pattern"
+  },
+  {
+   "at": "2026-11-28T12:18:49+00:00",
+   "task": "error C2a --pattern"
+  },
+  {
+   "at": "2026-11-28T12:18:49+00:00",
+   "task": "error C2a --pattern"
+  },
+  {
+   "at": "2026-11-28T12:18:50+00:00",
+   "task": "error C2a --pattern"
+  },
+  {
+   "at": "2026-11-28T12:18:50+00:00",
+   "task": "error C2a --pattern"
+  },
+  {
+   "at": "2026-11-28T12:18:50+00:00",
+   "task": "error C2a --pattern"
+  },
+  {
+   "at": "2026-11-28T12:19:11+00:00",
+   "task": "pass-1 fixes pushed, pass 2 next"
   }
  ]
 }

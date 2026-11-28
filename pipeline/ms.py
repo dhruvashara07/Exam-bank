@@ -22,7 +22,14 @@ def label_text(t):
     t = re.sub(r'^(\d{1,2})([a-z])(?=\(|$)', r'\1(\2)', t)          # '9b(i)'
     t = re.sub(r'^(\d{1,2})([a-z])\)', r'\1(\2)', t)                 # '9a)(ii)' (2024 MJ 43 ms, M1)
     t = re.sub(r'^\((\d{1,2})([a-z])\)$', r'\1(\2)', t)                 # '(12b)' (2018 ON 22 ms, M3 pattern 244)
+    if _CHEM_LABELS:                       # chemistry only (C2a): '7(c)iii)' (2022 ON 33), '4biv' (2023 ON 42), '4(f)(iii)i' (2023 MJ 42)
+        t = re.sub(r'^(\d{1,2}\([a-z]\))([ivx]+)\)$', r'\1(\2)', t)
+        t = re.sub(r'^(\d{1,2})([a-h])(i|ii|iii|iv|v|vi)$', r'\1(\2)(\3)', t)
+        t = re.sub(r'^(\d{1,2}\([a-z]\)\(([ivx]+)\))([ivx])$', lambda m_: m_.group(1) if m_.group(2).endswith(m_.group(3)) else m_.group(0), t)
     return re.sub(r'\(([a-z]+)\(', r'(\1)(', t)
+
+
+_CHEM_LABELS = False                       # set by structured_rows_table for a chemistry mark scheme
 
 
 NONUM = re.compile(r'^\([a-z]\)(\([ivx]+\))?$')     # '(b)(ii)' printed without its question number
@@ -230,6 +237,8 @@ def structured_rows_table(doc):
     rows, current = [], None
     MATHS = _maths(doc)
     CHEM = subjects.is_chem(subjects.path_syl(doc.name) or '')
+    global _CHEM_LABELS
+    _CHEM_LABELS = CHEM                    # chemistry label typos (label_text, ERROR_PATTERNS 342)
     last_px = 1e9
     qoff = 0                     # maths 2015-2016 paper 6: part B numbers its questions from 1 again (M4, pattern 320)
     for pno, page in enumerate(doc):

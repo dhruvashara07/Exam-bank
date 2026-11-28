@@ -1073,3 +1073,31 @@ Hint check (pattern 295, now in pass 1 as ms_marksum): 9 hits in C1, 2 real (313
 341. MS pictures built from 1-3 pt image tiles lost their letters / arrow (2016 MJ 21 7(a) Venn F, M, E, U; 2016 ON 31 10(b)
     number line): redrawn from specs (venn; plane with an open circle + arrow). Marker size: spec 'cross' / 'cross_sw' (2016 MJ
     31 12(d): crosses on the axis or under the curve read as lines, Dhruv 'make marking consistent').
+
+## Chemistry C2a pass 1 (2026-11-28, GitHub run 46141426546: 58 papers, 51 reasons in 45 questions - 8 min build)
+342. Cambridge MS label TYPOS '7(c)iii)' (2022 ON 33), '4(f)(iii)i' (2023 MJ 42), '4biv' (2023 ON 42) were no labels: the row
+    merged into the row above it, the part had 'no mark scheme'. -> ms.label_text (chemistry only, `_CHEM_LABELS` set by
+    structured_rows_table): add the missing '(', bracket an unbracketed letter + roman, drop a doubled last roman letter.
+343. A label printed TWICE where the FIRST copy is the slip ('2(e)(iii)' for 2(e)(ii) and again for 2(e)(iii), 2023 ON 63): rule
+    301 needed every other row in place. -> run.py (chemistry): a row whose label is printed twice may be remapped by order when
+    its marks equal the part's marks.
+344. 'Cl2' / 'PCl5' / 'Cl-' in mark-scheme rows shown 'C 2l', 'PC 5l', 'C -l' (42 questions, approved C0/C1 included - missed
+    in C0/C1 because sheets are read at a size where 'Cl2' and 'C2l' look alike): Cambridge prints the l of Cl in Bookman italic,
+    3 pt wide; ms_portrait._groups gave the subscript to the FIRST word whose span (+4 pt) reached it ('C'), and the re-wrap
+    pushed the 'l' behind the C2 group. -> chemistry: the NEAREST word before it. 41 stored questions re-laid out (ms_rebuild
+    --write, every change carries the 'l'; 3 + 3 targets looked at); scan tool /home/claude/tools/cl_scan.py = 0 left.
+    Lesson: zoom chemical formulae (2x) on every sheet - a letter order slip does not show at sheet size.
+345. End atoms 'H' / 'OH' of displayed formulae and key words ('paracetamo|l') cut IN HALF by the figure crop's left/right edge
+    (15 C2a figures; the 'text line half inside' check found them): the atom row is one long text line, so the line rules of
+    fit_crop never took the single letter in. -> store.fit_crop (chemistry, toggle FIT_EDGE_WORDS): a word crossing the left
+    or right edge with >= 1 pt inside and its centre level with the crop is taken in (sideways only - never up/down, 299).
+    Blast (all 0620 figures in bank/, MCQ included): 68 crops grow, ~1.3 pt each (4 by 12-16 pt: a cut 'OH'); a word only
+    touching the edge ('as', 2024 FM 22 q4) is not taken. Approved C0/C1 figures (53) improve at their next rebuild.
+346. Editable text 'BaCl 2(s)', 'KCl (s)', 'Cl -(aq)' (~200 spots in all chemistry): Cambridge prints a 1.5 pt kerning space
+    (a 5.5-7.8 pt space glyph) after the Bookman 'l'; the editable joiner made it a word space. -> editable (chemistry, CHEM set
+    by build): no space after the Bookman / italic 'l' when the gap is < 2.5 pt (line joiner and tok_html). Approved papers
+    improve at their next rebuild.
+297 (repeat). 2023 ON 43 6(e)(ii): hand-drawn scan structures (grey paper, a black bar) - redrawn as vector in chem_redraw.
+Checked and passed: ms_marksum hits (rows add up; several M-rows per part), checks.text 87-97 % (tokenisation of isotope
+numbers / scripts), every MS table and picture cell. 2023 ON paper 51 is NOT in Releases: C2a = 58 papers, 51 not done.
+

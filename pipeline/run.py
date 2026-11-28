@@ -245,8 +245,20 @@ def process(qp_path):
                     if tuple(r_['path']) not in lv or tuple(r_['path']) in seen_:
                         odd_.add(i_)
                     seen_.add(tuple(r_['path']))
+                _cnt = {}
+                for r_ in mine:
+                    _cnt[tuple(r_['path'])] = _cnt.get(tuple(r_['path']), 0) + 1
+                def _lm(pth, n=q):         # a leaf part's marks in the paper
+                    for k_ in n.get('parts', []):
+                        if k_['label'] == pth[0]:
+                            return _lm(pth[1:], k_) if pth[1:] else k_.get('marks')
+                    return None
+                def _rm(r_):
+                    return sum(int(c) for c in r_.get('marks_codes') or [] if str(c).isdigit())
+                def _slip_ok(i_, r_):      # the FIRST of a label printed twice can be the slip ('2(e)(iii)' twice for (ii),
+                    return _cnt[tuple(r_['path'])] > 1 and _rm(r_) == _lm(lv[i_][1:])   # (iii): 2023 ON 63, C2a 343)
                 if chem and len(mine) == len(lv) and odd_ and all(
-                        tuple(r_['path']) == lv[i_] for i_, r_ in enumerate(mine) if i_ not in odd_):
+                        tuple(r_['path']) == lv[i_] or _slip_ok(i_, r_) for i_, r_ in enumerate(mine) if i_ not in odd_):
                     for i_, r_ in enumerate(mine):  # one row per part, in order, some labels misprinted ('2(b)' twice for
                         r_['path'] = lv[i_]         # 2(b) and 2(f), 2024 MJ 33; '6(e)(ii)' '6(f)' for 6(d)(ii) 6(e), 32): by order (301)
                         r_['label'] = _plab(lv[i_])  # (the Q column shows the paper's label, Dhruv round 42)

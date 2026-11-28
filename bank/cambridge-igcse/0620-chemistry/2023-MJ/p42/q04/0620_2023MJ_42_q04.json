@@ -38,10 +38,8 @@
   }
  ],
  "review": {
-  "reasons": [
-   "no mark scheme for 4(f)(iii)"
-  ],
-  "status": "flagged"
+  "reasons": [],
+  "status": "auto"
  },
  "parts": [
   {
@@ -586,10 +584,9 @@
      "mark_scheme": [
       {
        "label": "4(f)(ii)",
-       "text": "3≤ pH < 7\nCH3COOH ⇌ CH3COO + H\n–\n+\nM1 H\n+\nM2 CH3COO\n–\nM3 use of ⇌",
+       "text": "3≤ pH < 7",
        "codes": [
-        "1",
-        "3"
+        "1"
        ],
        "segments": [
         {
@@ -598,7 +595,7 @@
           58.0,
           323.6,
           784.0,
-          408.8
+          345.9
          ]
         }
        ]
@@ -645,6 +642,26 @@
      "text": "\u0007Complete the symbol equation to show the dissociation of ethanoic acid.\nCH3COOH .....................................................................................................................  [3]",
      "marks": 3,
      "path": "4(f)(iii)",
+     "mark_scheme": [
+      {
+       "label": "4(f)(iii)",
+       "text": "CH3COOH ⇌ CH3COO + H\n–\n+\nM1 H\n+\nM2 CH3COO\n–\nM3 use of ⇌",
+       "codes": [
+        "3"
+       ],
+       "segments": [
+        {
+         "page": 8,
+         "bbox": [
+          58.0,
+          348.0,
+          784.0,
+          408.8
+         ]
+        }
+       ]
+      }
+     ],
      "content": [
       {
        "type": "text",

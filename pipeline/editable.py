@@ -241,7 +241,8 @@ def build_segment(page, bbox, figures, tables_out):
     keep = [s for s in spans if not any(f.contains(s['bbox']) or (f & s['bbox']).get_area() > 0.6 * s['bbox'].get_area() for f in fig_rects + table_rects)]
     fr, used = fraction_tokens(page, rect, keep, fig_rects + table_rects)
     toks = [{'html': inline(s, keep), 'text': s['text'], 'bbox': s['bbox'], 'oy': s['oy'],
-             'size': s['size'], 'script': s.get('script'), 'space_after': s.get('space_after')} for i, s in enumerate(keep) if i not in used] + fr
+             'size': s['size'], 'script': s.get('script'), 'space_after': s.get('space_after'), 'font': s.get('font', '')}
+            for i, s in enumerate(keep) if i not in used] + fr
     # lines by baseline; sub/superscripts join the line of the character they sit next to
     main = [t for t in toks if not t.get('script')]
     scripts = [t for t in toks if t.get('script')]
@@ -262,12 +263,14 @@ def build_segment(page, bbox, figures, tables_out):
     out_lines = []
     for L in lines:
         L['toks'].sort(key=lambda t: t['bbox'].x0)
-        h, txt, prev, prev_sp = '', '', None, False
+        h, txt, prev, prev_sp, prev_t = '', '', None, False, {}
         for t in L['toks']:
             gap = (t['bbox'].x0 - prev.x1) if prev else 0
+            if CHEM and prev and prev_t.get('text') == 'l' and 'Bookman' in prev_t.get('font', '') and gap < 2.5:
+                gap = 0           # chemistry: the Bookman 'l' of Cl is followed by a 1.5 pt kerning space, not a word space
             if prev and (gap > 1.0 or (prev_sp and gap > 0.4)) and not h.endswith(' ') and not t['html'].startswith(' ') and not t.get('script'):
                 h += ' '; txt += ' '
-            h += t['html']; txt += t['text']; prev = t['bbox']; prev_sp = t.get('space_after')
+            h += t['html']; txt += t['text']; prev = t['bbox']; prev_sp = t.get('space_after'); prev_t = t
         x0 = min(t['bbox'].x0 for t in L['toks']); y0 = min(t['bbox'].y0 for t in L['toks']); y1 = max(t['bbox'].y1 for t in L['toks'])
         h = re.sub(r'\s+', ' ', h)
         out_lines.append({'html': h.strip(), 'text': re.sub(r'\s+', ' ', txt).strip(), 'x0': x0, 'y0': y0, 'y1': y1,
@@ -313,11 +316,12 @@ def option_starts(line, expect):
 
 
 def tok_html(toks):
-    h, prev = '', None
+    h, prev, pt = '', None, ''
     for th, tt, x0, x1 in toks:
-        if prev is not None and x0 - prev > 1.0 and not h.endswith(' ') and not th.startswith(' '):
+        kern = CHEM and pt == 'l' and h.endswith('<i>l</i>') and x0 - (prev or 0) < 2.5   # Cl's kerning space (346)
+        if prev is not None and x0 - prev > 1.0 and not kern and not h.endswith(' ') and not th.startswith(' '):
             h += ' '
-        h += th; prev = x1
+        h += th; prev = x1; pt = tt
     h = re.sub(r'\s+(</(?:b|i|sub|sup)>)', r'\1 ', h)
     return re.sub(r'\s+', ' ', h).strip()
 
@@ -439,7 +443,13 @@ def build_node(doc, node, q):
         build_node(doc, k, q)
 
 
+CHEM = False                      # chemistry paper (set by build; C2a, ERROR_PATTERNS 346)
+
+
 def build(doc, q):
+    global CHEM
+    import subjects
+    CHEM = subjects.is_chem(q.get('syllabus') or '')
     build_node(doc, q, q)
     if q.get('type') == 'mcq':
         q['content'] = [b for b in q.get('content', []) if b['type'] != 'marks']

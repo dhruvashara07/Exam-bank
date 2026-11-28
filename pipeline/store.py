@@ -944,7 +944,17 @@ def fit_crop(pg, b, max_grow=50.0, maths=False, chem=False):
                 # the neighbour's label words that still reach into our crop ('beaker A with lid' over Fig. 2.2): blanked
                 FOREIGN.extend(r for k, r in enumerate(items) if find(k) not in mine_roots and r.intersects(b)
                                and (k >= n_draw or (r & b).get_area() > 4 or (r.width < 1 or r.height < 1)))
+    if chem and FIT_EDGE_WORDS:   # chemistry (C2a, ERROR_PATTERNS 345): a word crossing the LEFT / RIGHT edge, level with the
+        for w in ws:              # crop, is taken in - end atoms 'H' of displayed formulae cut in half, 'paracetamo|l' of a key
+            r = fitz.Rect(w[:4])  # (sideways only: growing down / up pulled the next option row in, 299)
+            if b.y0 < (r.y0 + r.y1) / 2 < b.y1 and r.width < 80 and (r.x0 < b.x0 - 0.3 or r.x1 > b.x1 + 0.3) and (r & b).width >= 1.0:
+                nb = fitz.Rect(min(b.x0, r.x0 - 0.5), b.y0, max(b.x1, r.x1 + 0.5), b.y1)
+                if nb.width - b.width < 20:
+                    b = nb
     return b
+
+
+FIT_EDGE_WORDS = True             # toggle for the blast harness (C2a 345)
 
 
 def merge_contained(figs, qid, store, resave=None):
