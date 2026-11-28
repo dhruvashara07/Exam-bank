@@ -593,8 +593,16 @@ def _notext(doc, pno):
             for l_ in b_.get('lines', []):
                 for s_ in l_['spans']:
                     pg.add_redact_annot(fitz.Rect(s_['bbox']))
-        pg.apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE, graphics=fitz.PDF_REDACT_LINE_ART_NONE,
-                            text=fitz.PDF_REDACT_TEXT_REMOVE)
+        try:
+            pg.apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE, graphics=fitz.PDF_REDACT_LINE_ART_NONE,
+                                text=fitz.PDF_REDACT_TEXT_REMOVE)
+        except Exception:                 # (M4) a page of ~30 000 image tiles: MuPDF 'Cannot create unique resource name'
+            nd = fitz.open()              # and the whole paper's store build failed (2015 ON 23, 2016 MJ 42, 2017 ON 21):
+            nd.insert_pdf(doc, from_page=pno, to_page=pno)    # the text objects cut out of the page's content instead
+            pg = nd[0]
+            for x_ in pg.get_contents():
+                nd.update_stream(x_, re.sub(rb'(?s)(?<![A-Za-z])BT(?![A-Za-z]).*?(?<![A-Za-z])ET(?![A-Za-z])', b'',
+                                            nd.xref_stream(x_)))
         _NOTEXT[key] = (nd, pg)
     return _NOTEXT[key][1]
 
@@ -1348,8 +1356,18 @@ def paper_record(meta, qdoc, mdoc, store, styles, qstyle, mstyle):
         rec['formula_list'] = {'layout': [unit(qdoc, pno, fitz.Rect(fl['bbox']), [], styles(qdoc, 'qp', pno, qstyle), store, 'qp')],
                                'items': items, 'tex_check': 'ok' if items else 'picture: formula line not known'}
     intros = []
-    for it in meta.get('intros', []):
-        lay = [unit(qdoc, s['page'] - 1, fitz.Rect(s['bbox']), [], styles(qdoc, 'qp', s['page'] - 1, qstyle), store, 'qp')
+    for k_, it in enumerate(meta.get('intros', [])):
+        ifigs = []                           # its pictures (extract: intro 'figures'), saved like a question's diagrams
+        if it.get('figures'):
+            sec_ = it.get('section') or str(k_ + 1)
+            iq = {'id': f"{rec['id'].replace('/', '_')}_t{sec_}", 'figures': [], 'parts': [], 'text': ''}
+            for n_, f in enumerate(it['figures'], 1):
+                f_ = dict(f, id=f"{iq['id']}_diagram{n_}")
+                iq['figures'].append(f_)
+            for f_ in iq['figures']:
+                ifigs.append(save_figure(f_, iq, meta, qdoc, store))
+        lay = [unit(qdoc, s['page'] - 1, fitz.Rect(s['bbox']), [f for f in ifigs if f['source']['page'] == s['page']],
+                    styles(qdoc, 'qp', s['page'] - 1, qstyle), store, 'qp')
                for s in it['segments']]
         if lay and it['segments']:           # a picture of the intro running on beside the first question (the scooter of
             s = it['segments'][-1]           # 2024 FM 62 B, Dhruv round 33 'cut'): its lower part joins the intro
@@ -1377,7 +1395,7 @@ def paper_record(meta, qdoc, mdoc, store, styles, qstyle, mstyle):
         part = {'path': 'intro', 'layout': lay}
         r_ = {'parts': [part]}
         maths_tex.build_record(r_)
-        intros.append({'section': it['section'], 'before': it['before'], 'layout': lay,
+        intros.append({'section': it['section'], 'before': it['before'], 'layout': lay, **({'figures': ifigs} if ifigs else {}),
                        **({'content': part['content']} if part.get('content') else {}), 'tex_check': part.get('tex_check')})
     if intros:
         rec['intros'] = intros
@@ -1437,6 +1455,9 @@ def dupes(session, syl='*'):
             else:
                 json.dump(q, open(f, 'w'), ensure_ascii=False, separators=(',', ':'))
         print('same question:', ' = '.join(x[0] for x in g), '(stored once)' if same_ms else '(mark schemes differ: both kept)')
+    import tasks                                 # maths paper 5/6 tasks again, now that duplicates are stubs (a task built
+    for d_ in sorted({os.path.dirname(f) for f in files}):   # before held figures that were just removed, M4)
+        tasks.build_paper(d_)
     print(f'{session}: {len(files)} questions, {len(groups)} duplicate groups')
 
 

@@ -1048,3 +1048,28 @@ Hint check (pattern 295, now in pass 1 as ms_marksum): 9 hits in C1, 2 real (313
     wrapped last Partial-Marks line pushed under a redrawn graph (pic_grow moves other columns' text below the printed picture's
     bottom - needs a 'continuation of a paragraph' test); 2016 MJ 41 13(b)'s answer printed with no label (under 13(a)(iii));
     picture edges (ms_piccut) 2014 ON 42 q4, 2014 ON 62 q3, 2015 ON 42 q15.
+
+## Round 46 (Dhruv, M4 review: 8 wrong) + M4 final check
+336. MS rows cut short by image tiles: hair-thin image strips (min side < 5 pt, the 2015 ON 31-33 q10 tree, 8(a) Venn) counted
+    as 'ink' for the row edge, so 10(a) ended at its first line and the tree fell into 10(b). -> ms._lift ignores tiles < 5 pt.
+    Blast over 460 maths MS: 8 MS change; approved 2018 MJ 33 8(b) and 2020 MJ 31 11(a) move 2 pt onto the row rule (better).
+    Rows that are now whole showed tile pictures badly: redrawn from specs (2015 ON 31-33 8(a) Venn and q10 tree).
+337. Paper 5/6 task MS: the Q column width came from each question's own labels, so one task's rows had different widths
+    (2016 MJ 62 B). -> ms_maths: papers 5/6 take the widest label of the whole paper.
+338. Intro pictures of paper 5/6 tasks (the chequered flag of 2017 ON 63 A, stars, clocks, graphs ... ~105 intros) were drawn
+    in the print layout only, never figures: the task had 2 figures where 3 are printed and the app content had no picture
+    (Dhruv: 'there should be 3 images'). -> extract.maths_paper_parts finds intro diagrams (extract.diagrams), pieces side by
+    side joined (the 2024 MJ 52/62 tree), pieces inside a sentence dropped (circled 'Corner (1)', one row of a step table);
+    store.paper_record saves them as figures `<paper>_t<S>_diagramN` and lays the intro out around them (its LaTeX check now
+    passes where the drawing was read as a 'table'); tasks.py puts them first in the task's figures. KNOWN: 2018 ON 62 A's
+    spiral grid (dashed zero-width lines) is still not found - it stays in the print layout only.
+339. Duplicate paper 5/6 tasks (2016 ON 53 = 52): built before store.dupes made the questions stubs, so they pointed at figures
+    that were then removed (19 broken links; HEAD had a 1-part empty shell instead). -> a task whose questions are all stubs of
+    one paper is a stub `same_as` that paper's task; store.dupes rebuilds tasks after it.
+340. Store build failed for 5 maths papers (2014 MJ 31/33, 2015 ON 23, 2016 MJ 42, 2017 ON 21: in HEAD, store stopped at the
+    question before): MuPDF 'Cannot create unique resource name' redacting text on a page of ~30 000 image tiles. ->
+    store._notext falls back to cutting the BT..ET text objects out of the page content. Lesson: 'store build failed' in
+    review/queue.json must stop an approval - check it every batch.
+341. MS pictures built from 1-3 pt image tiles lost their letters / arrow (2016 MJ 21 7(a) Venn F, M, E, U; 2016 ON 31 10(b)
+    number line): redrawn from specs (venn; plane with an open circle + arrow). Marker size: spec 'cross' / 'cross_sw' (2016 MJ
+    31 12(d): crosses on the axis or under the curve read as lines, Dhruv 'make marking consistent').

@@ -479,7 +479,10 @@ def _lift(page, cuts, x_min, top=None):
     above it (never above the previous label's line). cuts: [(y, label line or None, ...)] -> same list, y lifted."""
     W = page.rect.width
     ink = [fitz.Rect(w[:4]) for w in page.get_text('words') if w[0] >= x_min]
-    ink += [fitz.Rect(im['bbox']) for im in page.get_image_info() if fitz.Rect(im['bbox']).x0 >= x_min]   # pasted tables
+    ink += [fitz.Rect(im['bbox']) for im in page.get_image_info() if fitz.Rect(im['bbox']).x0 >= x_min   # pasted tables
+            and min(fitz.Rect(im['bbox']).width, fitz.Rect(im['bbox']).height) >= 5]
+    #   (never a picture of < 5 pt image TILES: the 2015 ON 31 tree's white tiles reach under the (b) label, the cut climbed over the
+    #    whole tree and the tree went into row 10(b); M4 round 46, pattern 336)
     drs_ = page.get_drawings()
     import collections as _co
     cover_ = _co.Counter()

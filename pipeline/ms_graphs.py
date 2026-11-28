@@ -937,9 +937,10 @@ def draw(sp, w, h, size=9.0):
     if sp.get('dots') and sp.get('points'):    # (RD2) points printed as dots, not crosses
         L.append({'d': ''.join(_circle(X(a), Y(b), 1.6) for a, b in sp['points']), 'fill': '#000000'})
     for px, py in ([] if sp.get('dots') else sp.get('points', [])):   # plotted points as crosses x (2020 ON 62 6(a))
-        cx, cy, r_ = X(px), Y(py), 2.2
+        cx, cy, r_ = X(px), Y(py), sp.get('cross', 2.2)       # (round 46: 'cross' - bigger, so one on an axis or under
+                                                                  #  the curve still reads as a cross, 2016 MJ 31 12(d))
         L.append({'d': f'M{cx - r_:.2f} {cy - r_:.2f}L{cx + r_:.2f} {cy + r_:.2f}M{cx - r_:.2f} {cy + r_:.2f}L{cx + r_:.2f} {cy - r_:.2f}',
-                  'stroke': '#000000', 'sw': 0.8})
+                  'stroke': '#000000', 'sw': sp.get('cross_sw', 0.8)})
     cpts = []                                  # (round 39) a tick number never sits on a curve: below / above the x axis,
     for l_ in L:                               # left / right of the y axis, whichever is free; only if none is free it
         if l_.get('stroke') == '#000000' and l_['d'].count('L') > 3:     # keeps a white ground (the curve breaks there)
@@ -1876,3 +1877,81 @@ for _k in [('0607_2017MJ_32_q03', '3(g)'), ('0607_2017MJ_33_q10', '10(c)'), ('06
 SPECS[('0607_2015ON_42_q07', '7(a)(i)')] = SPECS.pop(('0607_2015ON_42_q07', '7'))
 SPECS[('0607_2015ON_42_q13', '13(a)(i)')] = SPECS.pop(('0607_2015ON_42_q13', '13'))
 KEPT[('0607_2016ON_62_q10', '10(a)')] = KEPT.pop(('0607_2016ON_62_q10', '10'))
+# ---- M4 round 46 (Dhruv): the 2015 ON 31-33 q10 MS tree (printed as image tiles, poor) redrawn like the question's tree
+for _v in ('31', '32', '33'):
+    SPECS[(f'0607_2015ON_{_v}_q10', '10(a)')] = {'w': 250.0, 'h': 150.0, 'tree': {
+        'first': [('4/5', ['train']), ('1/5', ['car'])],
+        'second': [[('1/20', ['late']), ('19/20', ['not late'])], [('1/15', ['late']), ('14/15', ['not late'])]],
+        'geom': (179.6, 258.1, 284.6, 363.1, 55.0, 35.0, 0.9)}, 'vector': True}   # tree_geom.py raw/0607/2015-ON/qp_3x.pdf
+    #   ('vector': the printed tree is dotted answer lines + hair-thin tiles, no picture: drawn again all the same)
+# (Dhruv round 46: 2015 ON 42 q15 - draw both sides of each inequality from the question)
+for _k in [('0607_2015ON_42_q15', '15(a)'), ('0607_2015ON_42_q15', '15(b)')]:
+    KEPT.pop(_k, None)
+SPECS[('0607_2015ON_42_q15', '15(a)')] = {
+    'f': [('5/(2*x - 1)', 'y = 5/(2x − 1)'), ('3', 'y = 3')], 'x': (-4, 4), 'y': (-6, 6), 'grid': None,
+    'xt': [-4, 4], 'yt': [-6, 6], 'ar': 1.25, 'dash': False,
+    'labels': [[('i', 'y'), ('t', ' = '), ('frac', '5', '2x − 1')], [('i', 'y'), ('t', ' = 3')]]}
+SPECS[('0607_2015ON_42_q15', '15(b)')] = {
+    'f': [('x*math.log10(2)', 'y = log(2ˣ)'), ('10', 'y = 10')], 'x': (0, 40), 'y': (-2, 14), 'grid': None,
+    'xt': [10, 20, 30, 40], 'yt': [10], 'ar': 1.25, 'dash': False,
+    'labels': [[('i', 'y'), ('t', ' = log(2'), ('sup', 'x'), ('t', ')')], [('i', 'y'), ('t', ' = 10')]]}
+# (Dhruv round 46: 2016 MJ 62 10(c) / 11(b) redrawn - the model with k = 0.008 from question 9 (max 1573 at 22.4 = MS 10(d), (e)))
+for _k in [('0607_2016MJ_62_q10', '10(c)'), ('0607_2016MJ_62_q11', '11(b)')]:
+    KEPT.pop(_k, None)
+SPECS[('0607_2016MJ_62_q10', '10(c)')] = dict(NO, f=[('1000*x/(0.008*x*x + 0.278*x + 4)', '')], x=(0, 60), y=(0, 2000), grid=None,
+                                              xt=[60], yt=[500, 1000, 1500, 2000], xlab='x', ylab='N', ar=1.9)
+SPECS[('0607_2016MJ_62_q11', '11(b)')] = dict(NO, f=[('1000*x/(4 + 0.556*x)', '')], x=(0, 60), y=(0, 2000), grid=None,
+                                              xt=[60], yt=[500, 1000, 1500, 2000], xlab='x', ylab='N', ar=1.9)
+# (Dhruv round 46: 2017 MJ 41 8(a) - the printed Venn's numbers crowd its circles: redrawn larger with the same numbers)
+SPECS[('0607_2017MJ_41_q08', '8(a)')] = {'venn': {'sets': 'MET', 'nums': {'M': 7, 'ME': 4, 'E': 6, 'MT': 6, 'MET': '[8]', 'ET': 12,
+                                                                          'T': 9, '': '[4]'}},
+                                         'w': 210.0, 'h': 150.0, 'vector': True}
+for _k in [('0607_2015ON_42_q15', '15(a)'), ('0607_2015ON_42_q15', '15(b)')]:
+    SPECS[_k] = dict(SPECS[_k], col=3)          # (the sketch is printed in the Partial Marks column)
+# (Dhruv round 46: 2017 MJ 53 1(a), 1(b) and 2017 MJ 63 1(a) redrawn) regular stars made by extending the sides of a regular
+# n-gon: its outer points lie between two vertices at R cos(pi/n) / cos(2 pi/n) - the sides extended until they meet
+def _star(n, R, rot, cx=0.0, cy=0.0):
+    a0 = math.radians(rot)
+    poly = [(cx + R * math.cos(a0 + 2 * math.pi * k / n), cy + R * math.sin(a0 + 2 * math.pi * k / n)) for k in range(n)]
+    Ro = R * math.cos(math.pi / n) / math.cos(2 * math.pi / n)
+    star = []
+    for k in range(n):
+        star.append(poly[k])
+        a = a0 + 2 * math.pi * (k + 0.5) / n
+        star.append((cx + Ro * math.cos(a), cy + Ro * math.sin(a)))
+    return poly, star
+
+
+def _star_panel(n, rot, draw_star=True, draw_poly=True, star_sw=1.0, star_col=None):
+    poly, star = _star(n, 1.0, rot)
+    pl = {'style': 'none', 'n': (-1.75, 1.75, -1.75, 1.75), 'polys': []}
+    pl['polys'].append({'p': poly, 'fill': '#c8c8c8', 'sw': 0.9 if draw_poly else 0.6})
+    if draw_star:
+        pl['polys'].append(dict({'p': star, 'sw': star_sw}, **({'stroke': star_col} if star_col else {})))
+    return pl
+
+
+for _q in ('0607_2017MJ_53_q01', '0607_2017MJ_63_q01'):          # 1(a): the stars of the given heptagon and hexagon
+    SPECS[(_q, '1(a)')] = {'w': 230.0, 'h': 105.0, 'panels': [_star_panel(7, 90), _star_panel(6, 0)]}
+SPECS[('0607_2017MJ_53_q01', '1(b)')] = {'w': 130.0, 'h': 125.0, 'plane': _star_panel(7, 90, star_sw=0.6)}   # 1(b): heptagon inside
+for _q in ('0607_2017MJ_53_q01', '0607_2017MJ_63_q01'):
+    SPECS[(_q, '1(a)')]['u'] = 26.0                   # (the 14 pt default unit made the stars tiny)
+SPECS[('0607_2017MJ_53_q01', '1(b)')].update(u=36.0, h=135.0)
+SPECS[('0607_2016MJ_31_q12', '12(d)')].update(cross=3.4, cross_sw=1.0)
+# (M4 final check) pictures built from 1-3 pt image tiles lost their letters / arrow in our MS (never laid out): drawn again
+SPECS[('0607_2016MJ_21_q07', '7(a)')] = {'venn': {'sets': 'FME', 'nums': {'FM': 3, 'M': 15, 'FE': '2\n4', 'FME': 12, 'ME': 18,
+                                                                          'E': 8}}, 'w': 200.0, 'h': 150.0, 'vector': True}
+def _nl_circle(cx, cy, r, n=24):
+    return [(cx + r * math.cos(2 * math.pi * k / n), cy + r * math.sin(2 * math.pi * k / n)) for k in range(n)]
+SPECS[('0607_2016ON_31_q10', '10(b)')] = {'w': 200.0, 'h': 40.0, 'u': 26.0, 'vector': True, 'plane': {
+    'style': 'none', 'n': (-0.4, 6.6, -0.75, 0.75),
+    'polys': [{'p': [(-0.3, 0), (6.4, 0)], 'open': True, 'sw': 0.8},                      # the number line
+              {'p': [(6.2, 0.09), (6.4, 0), (6.2, -0.09)], 'open': True, 'sw': 0.8},
+              {'p': _nl_circle(1.0, 0.42, 0.1), 'sw': 0.8},                               # x > 2: open circle at 2,
+              {'p': [(1.12, 0.42), (3.6, 0.42)], 'open': True, 'sw': 1.0},                 # arrow to the right
+              {'p': [(3.42, 0.51), (3.6, 0.42), (3.42, 0.33)], 'open': True, 'sw': 1.0}],
+    'text': [(0.93, -0.55, '2', {})]}}
+for _v in ('31', '32', '33'):    # (M4 final check) 8(a) Venn printed as image tiles: its row is whole since the tile rule, and
+    SPECS[(f'0607_2015ON_{_v}_q08', '8(a)')] = {'venn': {'sets': 'AB', 'nums': {'A': '5\n6\n8', 'AB': '1\n3\n7', 'B': '4\n9',
+                                                                                '': '2   10'}},   # the tiles drew as garbage
+                                                'w': 190.0, 'h': 120.0, 'vector': True}

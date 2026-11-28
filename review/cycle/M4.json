@@ -29,10 +29,16 @@
   "review": [
    {
     "start": "2026-11-27T17:12:12+00:00",
-    "end": null
+    "end": "2026-11-28T04:13:39+00:00"
    }
   ],
-  "fix": []
+  "fix": [
+   {
+    "start": "2026-11-28T04:13:39+00:00",
+    "end": "2026-11-28T06:32:09+00:00",
+    "note": "round 46: 8 wrong fixed as classes + store-failure fix; 121 approved"
+   }
+  ]
  },
  "github_runs": [
   {
@@ -58,7 +64,9 @@
   "papers": 124,
   "questions": 1430,
   "flags": 623,
-  "round_items": 19
+  "round_items": 19,
+  "approved": 121,
+  "round_wrong": 8
  },
  "errors": [
   {
@@ -164,6 +172,54 @@
    "fix": "see ERROR_PATTERNS 334",
    "found_by": "claude",
    "at": "2026-11-27T17:08:44+00:00"
+  },
+  {
+   "pattern": "336",
+   "kind": "new",
+   "what": "MS rows cut short by hair-thin image tiles (2015 ON 3x q10 tree in 10(b))",
+   "fix": "ms._lift ignores tiles < 5 pt",
+   "found_by": "claude",
+   "at": "2026-11-28T06:32:09+00:00"
+  },
+  {
+   "pattern": "337",
+   "kind": "new",
+   "what": "task MS Q column width differs per question",
+   "fix": "ms_maths: paper-wide qw for papers 5/6",
+   "found_by": "claude",
+   "at": "2026-11-28T06:32:10+00:00"
+  },
+  {
+   "pattern": "338",
+   "kind": "new",
+   "what": "intro pictures of tasks never figures (2017 ON 63 A flag)",
+   "fix": "extract/store/tasks: intro figures",
+   "found_by": "claude",
+   "at": "2026-11-28T06:32:10+00:00"
+  },
+  {
+   "pattern": "339",
+   "kind": "new",
+   "what": "duplicate-paper tasks pointed at removed figures",
+   "fix": "stub tasks; tasks rebuilt after dupes",
+   "found_by": "claude",
+   "at": "2026-11-28T06:32:10+00:00"
+  },
+  {
+   "pattern": "340",
+   "kind": "new",
+   "what": "store build failed on tile-heavy pages (5 maths papers, in HEAD)",
+   "fix": "_notext BT..ET fallback",
+   "found_by": "claude",
+   "at": "2026-11-28T06:32:10+00:00"
+  },
+  {
+   "pattern": "341",
+   "kind": "new",
+   "what": "tile pictures lost letters/arrow; crosses read as lines",
+   "fix": "specs + cross size",
+   "found_by": "claude",
+   "at": "2026-11-28T06:32:10+00:00"
   }
  ],
  "tokens": [],
@@ -299,6 +355,46 @@
   {
    "at": "2026-11-27T17:12:39+00:00",
    "task": "round 46 published; docs"
+  },
+  {
+   "at": "2026-11-28T04:13:39+00:00",
+   "task": "phase M4 review"
+  },
+  {
+   "at": "2026-11-28T04:13:39+00:00",
+   "task": "phase M4 fix"
+  },
+  {
+   "at": "2026-11-28T06:32:09+00:00",
+   "task": "phase M4 fix"
+  },
+  {
+   "at": "2026-11-28T06:32:09+00:00",
+   "task": "count M4 papers=124"
+  },
+  {
+   "at": "2026-11-28T06:32:09+00:00",
+   "task": "error M4 --pattern"
+  },
+  {
+   "at": "2026-11-28T06:32:10+00:00",
+   "task": "error M4 --pattern"
+  },
+  {
+   "at": "2026-11-28T06:32:10+00:00",
+   "task": "error M4 --pattern"
+  },
+  {
+   "at": "2026-11-28T06:32:10+00:00",
+   "task": "error M4 --pattern"
+  },
+  {
+   "at": "2026-11-28T06:32:10+00:00",
+   "task": "error M4 --pattern"
+  },
+  {
+   "at": "2026-11-28T06:32:10+00:00",
+   "task": "error M4 --pattern"
   }
  ]
 }

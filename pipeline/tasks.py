@@ -83,11 +83,27 @@ def build_paper(d):
         sec = it.get('section') or str(k + 1)
         base = '_'.join(mem[0]['id'].split('_')[:3])
         tid = f'{base}_t{sec}'
+        if all(r.get('stub') and r.get('same_as') for r in mem):   # the same task printed in another variant (2016 ON
+            canon = {'_'.join(r['same_as'][0].split('_')[:3]) for r in mem}   # 53 = 52): one stub that points to it,
+            if len(canon) == 1:                                    # like its questions (store.dupes) - its figures live
+                ctid = f'{canon.pop()}_t{sec}'                     # with the canonical copy
+                rec = {'schema': mem[0].get('schema'), 'id': tid, 'paper': mem[0].get('paper'), 'number': mem[0]['number'],
+                       'type': 'task', 'section': sec, 'questions': [r['number'] for r in mem],
+                       'members': [r['id'] for r in mem], 'marks': sum(r.get('marks') or 0 for r in mem),
+                       'answer': None, 'stub': True, 'same_as': [ctid]}
+                json.dump(rec, open(os.path.join(d, f'task_{sec}.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
+                for r in mem:
+                    if r.get('task') != tid:
+                        r['task'] = tid
+                        json.dump(r, open(os.path.join(d, f"q{r['number']:02d}.json"), 'w'), ensure_ascii=False,
+                                  separators=(',', ':'))
+                made.append(tid)
+                continue
         root = {'path': sec, 'label': None, 'parent': None, 'marks': sum(r.get('marks') or 0 for r in mem),
                 'text': '', 'layout': copy.deepcopy(it.get('layout') or []), 'ms': [],
                 'content': copy.deepcopy(it.get('content') or []), 'tex_check': it.get('tex_check')}
         parts = [root]
-        figs = []
+        figs = copy.deepcopy(it.get('figures') or [])     # the intro's own pictures first (Dhruv round 46)
         for r in mem:
             for p in r.get('parts', []):
                 p2 = copy.deepcopy(p)

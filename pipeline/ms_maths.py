@@ -1924,6 +1924,12 @@ def _paper_base(qid):
         return None
 
 
+def _all_ms(n):
+    yield from n.get('mark_scheme') or []
+    for k in n.get('parts') or []:
+        yield from _all_ms(k)
+
+
 def build(q, uniq, store, hdr_unit, own_total, frame):
     """All rows of one maths question -> ms_p dict, or None to let the general path try."""
     import os
@@ -1963,6 +1969,15 @@ def build(q, uniq, store, hdr_unit, own_total, frame):
     good = [(c, w) for c, w in cols if c and len(c) == ncols - 1]
     hint = max(good, key=lambda cw: sum(1 for c2, w2 in good if c2 == cw[0])) if good else None
     qw = max([QW] + [round(text_width(r['label'], fam, 11.0) + 10) for r, _ in uniq])   # long labels ('11(d)(iii)'): wider Q
+    if re.match(r'[56]\d$', (q.get('id') or '___').split('_')[2]):   # papers 5/6: their questions join in ONE task table - one Q
+        try:                                                      # column width for the whole paper (Dhruv round 46, 2016 MJ
+            import glob as _gl, json as _js                        # 62: q8-9 and q10-12 had different widths; pattern 337)
+            bd = store.replace(os.sep + 'store' + os.sep, os.sep + 'bank' + os.sep)
+            labs = [r_['label'] for f_ in _gl.glob(os.path.join(bd, 'q*', '*.json'))
+                    for n_ in [_js.load(open(f_))] for r_ in _all_ms(n_)]
+            qw = max([qw] + [round(text_width(l_, fam, 11.0) + 10) for l_ in labs])
+        except Exception:
+            pass
     out, seen_lab = [], set()
     for r, u in uniq:
         if u['h'] < 4:

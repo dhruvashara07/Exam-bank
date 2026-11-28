@@ -80,10 +80,16 @@ Read this first in every session. Update it before ending a session.
   2022 ON 51 q2, 2023 ON 62 q2, 2025 MJ 61 q2 (labels / tree slots now inside the crop).
   Round 46 (19 items: 6 fixes, 4 decisions, 5 round-44 rechecks, 4 calibration) on the shared page
   https://claude.ai/artifact/8YDJDKJCXfURh5QFLnpTw8.
-- MATHS NEXT: (1) M4 round 46: read feedback_r46 (db_list on slug 3d0b9b0b-3d1f-4bbf-be63-d9ae308eaaf3), fix the wrong items as
-  classes, ms_rebuild / run.py the touched M4 papers locally, golden 0, approve M4 EXCEPT 2014 ON 51/52/53 (known 334) - in a new chat
-  (prompt docs/NEXT_CHAT.md 'Maths M4 round 46'). (2) Then batch M3b only when Dhruv uploads 2019 MJ; open: 2022 ON 51 5(a) empty grid;
-  2024 ON 23 q7 partial marks small; known 334/335 items.
+- MATHS NEXT: M4 DONE (2026-11-28). Maths needs NO chat until Dhruv uploads 2019 MJ (then batch M3b, prompt NEXT_CHAT
+  'Maths M3b'). Open, all KNOWN: 2014 ON 51/52/53 pending (334: q2-q4 layout); 335 leftovers; 2018 ON 62 A spiral grid not an
+  intro figure (338); 2022 ON 51 5(a) empty grid; 2024 ON 23 q7 partial marks small.
+- 2026-11-28: M4 APPROVED: 121 of 124 papers (2014 ON 51/52/53 pending). Round 46: 19 items, 8 wrong, fixed as classes
+  (ERROR_PATTERNS 336-341): row edges ignore hair-thin tiles; one Q-column width per paper 5/6; INTRO PICTURES ARE TASK
+  FIGURES now (~105 intros, every paper 5/6); duplicate-paper tasks are stubs; the store build that failed on tile-heavy pages
+  (5 maths papers, also in HEAD) works; tile pictures redrawn (Venns, tree, number line, stars, inequality and model graphs).
+  Re-approved after a check: 2022 MJ 61, 2023 MJ 51, 2023 MJ 61, 2025 ON 62 (MS code lists only: alternative-method codes no
+  longer counted, '1dep' read), 2024 MJ 62 (intro tree figures). Approved 2018 MJ 33 / 2020 MJ 31: MS cut 2 pt lower onto the
+  row rule after the tile rule - Action rebuild drops their approval only if the cut hash changes (then re-approve: same check).
 - 2026-11-27: RD2 DONE (rounds 39, 40, 43, 44 closed). 180 MS pictures redrawn; graphs match the printed grid; every MS tree
   has the question's geometry; dot paper = whole pictures; no 0607 paper pending approval (cuts unchanged).
 - 2026-11-24: ROUND 36 closed (7 ok, 1 wrong: no function label on the redrawn 2019 ON 61 graph - removed). M3 APPROVED:

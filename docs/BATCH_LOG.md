@@ -10,7 +10,7 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 | M1 | 2024-FM 2024-MJ 2024-ON 2025-FM 2025-ON 2026-FM 2026-MJ | 90 | 11.7 | 97.4 | 191.6 | 0.0 | 30.1 | 233.4 | 23 | 42 | 2 | n/a |
 | M2 | 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON | 117 | 100.3 | 131.2 | 0.0 | 0.0 | 0.0 | 100.3 | 13 | 28 | 4 | n/a |
 | M3 | 2018-MJ 2018-ON 2020-MJ 2020-ON | 69 | 29.2 | 0.2 | 38.4 | 0.0 | 0.0 | 67.6 | 8 | 15 | 0 | n/a |
-| M4 | 2014-ON 2015-MJ 2015-ON 2016-MJ 2016-ON 2017-MJ 2017-ON | 124 | 0.4 | 0.2 | 108.9 | 0.0 | 0.0 | 109.3 | 19 | 13 | 0 | n/a |
+| M4 | 2014-ON 2015-MJ 2015-ON 2016-MJ 2016-ON 2017-MJ 2017-ON | 124 | 0.4 | 0.2 | 108.9 | 0.0 | 138.5 | 247.8 | 19 | 19 | 0 | n/a |
 | RD |  |  | 0.0 | 0 | 0.0 | 0.0 | 13.2 | 13.2 |  | 0 | 0 | n/a |
 | RD2 | 2014-MJ 2018-MJ 2018-ON 2019-ON 2020-MJ 2020-ON 2021-FM 2021-MJ 2021-ON 2022-FM 2022-MJ 2022-ON 2023-FM 2023-MJ 2023-ON 2024-FM 2024-MJ 2024-ON 2025-FM 2025-MJ 2025-ON 2026-FM 2026-MJ | 0 | 0.0 | 0 | 0.0 | 0.0 | 89.8 | 89.8 | 16 | 9 | 2 | n/a |
 
@@ -233,6 +233,12 @@ Minutes are active time (pauses / usage limits not counted). "Ours" = build + Cl
 - [new] pattern 332: see ERROR_PATTERNS 332 → see ERROR_PATTERNS 332 (found by claude)
 - [new] pattern 333: see ERROR_PATTERNS 333 → see ERROR_PATTERNS 333 (found by claude)
 - [new] pattern 334: see ERROR_PATTERNS 334 → see ERROR_PATTERNS 334 (found by claude)
+- [new] pattern 336: MS rows cut short by hair-thin image tiles (2015 ON 3x q10 tree in 10(b)) → ms._lift ignores tiles < 5 pt (found by claude)
+- [new] pattern 337: task MS Q column width differs per question → ms_maths: paper-wide qw for papers 5/6 (found by claude)
+- [new] pattern 338: intro pictures of tasks never figures (2017 ON 63 A flag) → extract/store/tasks: intro figures (found by claude)
+- [new] pattern 339: duplicate-paper tasks pointed at removed figures → stub tasks; tasks rebuilt after dupes (found by claude)
+- [new] pattern 340: store build failed on tile-heavy pages (5 maths papers, in HEAD) → _notext BT..ET fallback (found by claude)
+- [new] pattern 341: tile pictures lost letters/arrow; crosses read as lines → specs + cross size (found by claude)
 
 ### RD2
 - [new] pattern 271: RD2: 181 blurry MS pictures in all batches (tables, grid shapes, dots, pies, Venns, trees, mappings, plots, graphs) had no drawer → ms_graphs: table / plane (squares, dots, iso, isov, panels, stack) / pie / map drawers, smooth data curves, alts per label (found by claude)

@@ -166,3 +166,7 @@ MATHS_PLAN.md if the plan changed; docs/NEXT_CHAT.md prompt; `pipeline/push.sh`;
 - After EVERY ms.py change: the full MS blast (old vs new structured_rows on all 0607 schemes: labels, cuts, codes), not only the first.
 - A label 'slip' is only a slip after looking at the next MS page (2016 ON 31: the (b) rows were on a header-less next page).
 - Spec redraws of vector / tiled pictures: check the redraw side by side - hidden text under image tiles can appear (pattern 333).
+- (M4 round 46, 2026-11-28) Before the check round: `review/queue.json` must have no 'store build failed' for the batch (a failed
+  paper silently misses its later questions in store, so no review shows them - pattern 340). Papers 5/6: each task's figures =
+  its intro pictures + its questions' figures (338); duplicate-paper tasks are stubs (339). After a class fix, list the APPROVED
+  papers whose cut hash changes (run.py drops their approval) and look at exactly what changed before re-approving.

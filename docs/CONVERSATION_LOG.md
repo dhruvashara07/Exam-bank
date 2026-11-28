@@ -712,3 +712,17 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   (333). Lessons: check papers-5/6 totals locally before a GitHub pass; run the full MS blast after EVERY ms.py change; look at the
   next MS page before calling a label a Cambridge slip.
 - Round 46 (19 items) published on the shared page. 2014 ON paper 5 stays pending (known 334).
+
+## 2026-11-28 - Maths M4 round 46 fixed, M4 approved (same chat, shared account)
+- Dhruv: review done; asked whether modelling/investigation parts are one record (intro + every connected question): yes, one
+  task record per part, as built in M0 (e.g. 2016 ON 61 B = q8-q11 with the 'B MODELLING ... (20 marks)' intro).
+- Round 46: 8 wrong, fixed as classes (336-341): tree in the wrong row (tile rule), task Q-column width, the missing intro picture
+  ('there should be 3 images': intro pictures were never figures in ANY paper 5/6), redraws (tree, inequality graphs, model
+  graphs, Venn, stars), consistent crosses. Approved 121 of 124 + re-approved 5 earlier papers after looking at what changed.
+- Found by myself in the final check: 5 maths papers (3 of them M4) whose store build had FAILED in the GitHub passes (MuPDF limit
+  on tile-heavy pages) - their later questions were never stored, so neither my check round nor round 46 saw them; fixed and
+  checked by eye (all fine). Duplicate-paper task records pointed at deleted figures. Two tile pictures had lost letters/arrows.
+- Own errors: I stopped a redundant store run and briefly feared a half-written paper (checked: every referenced file exists);
+  my first intro-figure merge loop did nothing (fitz Rect '|=' is not in place) - caught by the before/after diff.
+- Lessons: read review/queue.json 'store build failed' before every check round; check what a class fix changes in APPROVED
+  papers (cut hash) before approving; a new figure source needs a contact sheet of every crop, not a sample.

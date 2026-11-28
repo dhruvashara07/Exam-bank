@@ -1401,6 +1401,32 @@ def maths_paper_parts(doc, bnds, segs, meta):
         intros.append({'section': _sec_of(head), 'before': s['path'][0] + 1,
                        'segments': [{'page': s['page'] + 1, 'bbox': below['bbox']}] if below else []})
         cut_path = s['path']
+    for it in intros:                     # a picture in the intro (the chequered flag, 2017 ON 63 A; Dhruv round 46
+        figs = []                         # 'there should be 3 images'): a figure of the task like a question's diagram
+        for s_ in it['segments']:
+            sg = {'page': s_['page'] - 1, 'y0': s_['bbox'][1], 'y1': s_['bbox'][3], 'bbox': s_['bbox'],
+                  'path': ('intro',), 'continued': True}
+            lines_ = segment_text(doc, sg)
+            got = [fitz.Rect(f['bbox']) for f in diagrams(doc, sg, lines_, [])]
+            again = True                  # pieces of one drawing beside each other (the arrows left and right of the
+            while again:                  # trunk, 2024 MJ 52 A: the table between them is part of the tree): one picture
+                again = False
+                for i, a in enumerate(got):
+                    for j, b in enumerate(got):
+                        if i != j and min(a.y1, b.y1) - max(a.y0, b.y0) > -25 and min(a.x1, b.x1) - max(a.x0, b.x0) < 0:
+                            got[i] = a | b; del got[j]; again = True
+                            break
+                    if again:
+                        break
+            for r in got:                 # a piece inside a sentence (a circled number 'Corner (1)', 2018 ON 62 A; one row
+                if any(l['y0'] < (r.y0 + r.y1) / 2 < l['y1'] and (l['x1'] - l['x0']) > r.width + 60  #  of a step table,
+                       and l['x0'] < r.x1 and l['x1'] > r.x0 for l in lines_) or \
+                        (r.height < 30 and any((r + (-2, -2, 2, 2)).contains(fitz.Rect(l['x0'], l['y0'], l['x1'], l['y1']))
+                                               and l['x1'] - l['x0'] > 0.5 * r.width for l in lines_)):  #  2024 MJ 61 A): no picture
+                    continue
+                figs.append({'page': s_['page'], 'bbox': [round(v, 1) for v in r], 'caption': None, 'kind': 'diagram'})
+        if figs:
+            it['figures'] = figs
     if intros:
         meta['intros'] = intros
     return out
