@@ -144,9 +144,16 @@ DINGBAT = ('sorts', 'dingbat', 'wingding', 'webding', 'mmvariable')   # MMVariab
 ODD_MATHS = {('MMNegate', 'Y')}    # MathType's negation SLASH laid over a separate '=' ('x =Y 0' = x ≠ 0, M3 2018 MJ 42): drawn
 
 
+CHEM = [False]     # set by store.build: chemistry papers (C2b 357)
+
+
 def odd(ch, font):
-    """A character we cannot write as text: control codes, unmapped private-use codes, dingbat fonts."""
+    """A character we cannot write as text: control codes, unmapped private-use codes, dingbat fonts.
+    Chemistry: a control code (BEL before every line of 2021-2022 papers) is an invisible SPACE, never a glyph picture - its
+    4 pt crop held the next letter's ink and, cached per font, laid that letter over every line start ('Ƭomplete', C2b 357)."""
     o = ord(ch[0])
+    if CHEM[0] and o < 32:
+        return False
     return (font.split('+')[-1], ch) in ODD_MATHS or o < 32 or any(k in font.lower() for k in DINGBAT) or (0xE000 <= o <= 0xF8FF and unpua(ch) == ch)
 
 
@@ -222,7 +229,7 @@ def extract_page(page, fig_boxes, img_dir, tag):
             for s in l['spans']:
                 runs, cur = [], []
                 for c in s['chars']:
-                    if c['c'].strip():
+                    if c['c'].strip() and not (CHEM[0] and ord(c['c'][0]) < 32):
                         cur.append(c)
                     elif cur:
                         runs.append(cur); cur = []

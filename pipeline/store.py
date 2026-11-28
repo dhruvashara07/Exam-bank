@@ -21,6 +21,7 @@ from PIL import Image
 import paths
 from run import cleaned
 from store_text import family, unpua, hexcol, span_len, odd, symbol_family, maths_doc, maths_glyph, nameless_bold, nameless_style, maths_symbol_family, symbol_subset
+import store_text as _stx_
 from store_units import glyph_styles, char_styles, tp, drawing_d, nodes, scale_note
 import store_options as OPT
 import store_v5 as V5
@@ -318,7 +319,7 @@ def unit(doc, pno, clip, figs, cstyle, store, docname, ctx=None):
                     continue
                 runs, cur = [], []
                 for c in s['chars']:
-                    if c['c'].strip():
+                    if c['c'].strip() and not (_stx_.CHEM[0] and ord(c['c'][0]) < 32):     # (chemistry BEL = a space, 357)
                         # a jump of the baseline inside one run is a new word (')' + denominator '1.8' of the fraction
                         # below, 2026 MJ 41 q7(b)(iii): one PDF run over two lines)
                         if cur and abs(c['origin'][1] - cur[-1]['origin'][1]) > 2.5 and abs(dy) < 0.01:
@@ -1226,6 +1227,7 @@ def build(pid):
     store = paths.store_dir(pid)
     import subjects
     MATHS_TEXT = subjects.subject(meta['syllabus'])['maths_text']
+    import store_text as _stx; _stx.CHEM[0] = subjects.is_chem(meta['syllabus'])     # (control codes are spaces, 357)
     OPT.CHEM_LETTERS = subjects.is_chem(meta['syllabus'])        # (store_options: outlined letters are text, 303)
     V5.MATHS[0] = bool(MATHS_TEXT)
     shutil.rmtree(store, ignore_errors=True)

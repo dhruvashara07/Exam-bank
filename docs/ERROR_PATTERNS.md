@@ -1184,3 +1184,9 @@ rebuilds restored too). Guard: `[ $(echo $P | wc -w) -gt 0 ]`.
     side ('at the start' | 'after 20 minutes') were not pulled in (6 words): the pull-in counts words per group. (d) one row of
     small drawings (atoms A-E) lost the smallest one ('B', 2022 FM 32 q1a): drawings of one row in one part are ONE picture.
     Check for every batch: a contact sheet of every new diagram, compare a doubtful one with the page.
+357. SYSTEMIC (found on the round-48 page): chemistry lines that start with a hidden control code (BEL, 2015 MJ and 2021-2025:
+    111 papers, approved C0-C2a sessions too) were drawn as letter PICTURES, and the control code's own 4 pt crop - cached once
+    per font - held the next letter's ink, so a ghost letter sat on every line start ('Ƭomplete', 'Ʌnswer'). Missed in C0-C2a:
+    the review images were read for content, not for the letters' shapes. -> store_text.odd / store.unit (chemistry, store_text.CHEM):
+    a control code is an invisible space, never a glyph; the line stays text. 111 papers' store rebuilt; 0 control-code glyphs left.
+    Check for every batch: `git grep -lE 'g_[A-Za-z]+_(7|9|[0-1][0-9a-f])_' store/.../0620-chemistry` must list nothing.
