@@ -75,10 +75,11 @@
 "part": "",
 "blocking": false,
 "rid": "8555cb25bd",
-"status": "fixed",
+"status": "not fixed",
 "note": "end atom / key word cut by the left-right crop edge: words crossing it are taken in (sideways only)",
 "pattern": 345,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2022ON_12_q04",
@@ -90,7 +91,8 @@
 "status": "passed",
 "note": "every printed word present; the % gap is tokenisation of isotope numbers / sub-superscripts / the Bookman 'l' of Cl",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2022ON_22_q38",
@@ -99,10 +101,11 @@
 "part": "",
 "blocking": false,
 "rid": "1030033046",
-"status": "fixed",
+"status": "not fixed",
 "note": "end atom / key word cut by the left-right crop edge: words crossing it are taken in (sideways only)",
 "pattern": 345,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2022ON_33_q07",
@@ -111,10 +114,11 @@
 "part": "7(c)(iii)",
 "blocking": false,
 "rid": "b477c8b4bf",
-"status": "fixed",
+"status": "verified",
 "note": "Cambridge label typo ('7(c)iii)' / '4(f)(iii)i' / '4biv') merged the row into the one above - typos read as labels",
 "pattern": 342,
-"from": "pass1"
+"from": "pass1",
+"pass2": "gone"
 },
 {
 "qid": "0620_2022ON_33_q07",
@@ -123,10 +127,11 @@
 "part": "7(c)(iii)",
 "blocking": false,
 "rid": "4f3279f75d",
-"status": "fixed",
+"status": "verified",
 "note": "Cambridge label typo ('7(c)iii)' / '4(f)(iii)i' / '4biv') merged the row into the one above - typos read as labels",
 "pattern": 342,
-"from": "pass1"
+"from": "pass1",
+"pass2": "gone"
 },
 {
 "qid": "0620_2022ON_43_q01",
@@ -138,7 +143,8 @@
 "status": "passed",
 "note": "table drawn as lines + text, matches the print (cells, rules, shading)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2022ON_43_q04",
@@ -147,10 +153,11 @@
 "part": "4(a)(i)",
 "blocking": false,
 "rid": "c86031bde1",
-"status": "fixed",
+"status": "verified",
 "note": "table ok; 'Cl2' in the row text read 'C 2l' (subscript joined to C, not to the Bookman l) - fixed",
 "pattern": 344,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2022ON_52_q01",
@@ -162,7 +169,8 @@
 "status": "passed",
 "note": "table drawn as lines + text, matches the print (cells, rules, shading)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2022ON_52_q01",
@@ -174,7 +182,8 @@
 "status": "passed",
 "note": "table drawn as lines + text, matches the print (cells, rules, shading)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2022ON_61_q01",
@@ -186,7 +195,8 @@
 "status": "passed",
 "note": "picture cell whole, at its printed place and size",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023FM_22_q31",
@@ -195,10 +205,11 @@
 "part": "",
 "blocking": false,
 "rid": "6b63616d3c",
-"status": "fixed",
+"status": "not fixed",
 "note": "end atom / key word cut by the left-right crop edge: words crossing it are taken in (sideways only)",
 "pattern": 345,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023FM_42_q02",
@@ -210,7 +221,8 @@
 "status": "passed",
 "note": "table drawn as lines + text, matches the print (cells, rules, shading)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023FM_42_q03",
@@ -222,7 +234,8 @@
 "status": "passed",
 "note": "table drawn as lines + text, matches the print (cells, rules, shading)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023FM_42_q05",
@@ -234,7 +247,8 @@
 "status": "passed",
 "note": "picture cell whole, at its printed place and size",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023FM_52_q01",
@@ -246,7 +260,8 @@
 "status": "passed",
 "note": "rows add up to the question's 18 (several M-rows per part); Marks column matches the print",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023FM_62_q01",
@@ -258,7 +273,8 @@
 "status": "passed",
 "note": "picture cell whole, at its printed place and size",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023FM_62_q02",
@@ -270,7 +286,8 @@
 "status": "passed",
 "note": "rows add up to the question's 18 (several M-rows per part); Marks column matches the print",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023MJ_11_q32",
@@ -279,10 +296,11 @@
 "part": "",
 "blocking": false,
 "rid": "adf91523fb",
-"status": "fixed",
+"status": "not fixed",
 "note": "end atom / key word cut by the left-right crop edge: words crossing it are taken in (sideways only)",
 "pattern": 345,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023MJ_13_q04",
@@ -294,7 +312,8 @@
 "status": "passed",
 "note": "every printed word present; the % gap is tokenisation of isotope numbers / sub-superscripts / the Bookman 'l' of Cl",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023MJ_21_q38",
@@ -306,7 +325,8 @@
 "status": "passed",
 "note": "open continuation bond of the polymer chain: crop starts on the bond as printed (C1 known class)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023MJ_22_q06",
@@ -318,7 +338,8 @@
 "status": "passed",
 "note": "every printed word present; the % gap is tokenisation of isotope numbers / sub-superscripts / the Bookman 'l' of Cl",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023MJ_22_q18",
@@ -330,7 +351,8 @@
 "status": "passed",
 "note": "every printed word present; the % gap is tokenisation of isotope numbers / sub-superscripts / the Bookman 'l' of Cl",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023MJ_23_q32",
@@ -339,10 +361,11 @@
 "part": "",
 "blocking": false,
 "rid": "b5de7fde2b",
-"status": "fixed",
+"status": "not fixed",
 "note": "end atom / key word cut by the left-right crop edge: words crossing it are taken in (sideways only)",
 "pattern": 345,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023MJ_32_q07",
@@ -354,7 +377,8 @@
 "status": "passed",
 "note": "picture cell whole, at its printed place and size",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023MJ_41_q07",
@@ -366,7 +390,8 @@
 "status": "passed",
 "note": "picture cell whole, at its printed place and size",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023MJ_42_q02",
@@ -375,10 +400,11 @@
 "part": "2(c)",
 "blocking": false,
 "rid": "9477f267e8",
-"status": "fixed",
+"status": "verified",
 "note": "table ok; 'Cl2' in the row text read 'C 2l' (subscript joined to C, not to the Bookman l) - fixed",
 "pattern": 344,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023MJ_42_q02",
@@ -387,10 +413,11 @@
 "part": "2(d)(ii)",
 "blocking": false,
 "rid": "89a1d4972a",
-"status": "fixed",
+"status": "verified",
 "note": "table ok; 'Cl2' in the row text read 'C 2l' (subscript joined to C, not to the Bookman l) - fixed",
 "pattern": 344,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023MJ_42_q03",
@@ -402,7 +429,8 @@
 "status": "passed",
 "note": "table drawn as lines + text, matches the print (cells, rules, shading)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023MJ_42_q04",
@@ -411,10 +439,11 @@
 "part": "4(f)(iii)",
 "blocking": false,
 "rid": "01f63270de",
-"status": "fixed",
+"status": "verified",
 "note": "Cambridge label typo ('7(c)iii)' / '4(f)(iii)i' / '4biv') merged the row into the one above - typos read as labels",
 "pattern": 342,
-"from": "pass1"
+"from": "pass1",
+"pass2": "gone"
 },
 {
 "qid": "0620_2023MJ_42_q04",
@@ -423,10 +452,11 @@
 "part": "4(f)(iii)",
 "blocking": false,
 "rid": "bf675fe481",
-"status": "fixed",
+"status": "verified",
 "note": "Cambridge label typo ('7(c)iii)' / '4(f)(iii)i' / '4biv') merged the row into the one above - typos read as labels",
 "pattern": 342,
-"from": "pass1"
+"from": "pass1",
+"pass2": "gone"
 },
 {
 "qid": "0620_2023MJ_61_q01",
@@ -438,7 +468,8 @@
 "status": "passed",
 "note": "picture cell whole, at its printed place and size",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023MJ_61_q04",
@@ -450,7 +481,8 @@
 "status": "passed",
 "note": "table drawn as lines + text, matches the print (cells, rules, shading)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023MJ_62_q01",
@@ -462,7 +494,8 @@
 "status": "passed",
 "note": "picture cell whole, at its printed place and size",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023ON_11_q32",
@@ -471,10 +504,11 @@
 "part": "",
 "blocking": false,
 "rid": "fe110ee9be",
-"status": "fixed",
+"status": "not fixed",
 "note": "end atom / key word cut by the left-right crop edge: words crossing it are taken in (sideways only)",
 "pattern": 345,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023ON_11_q37",
@@ -483,10 +517,11 @@
 "part": "",
 "blocking": false,
 "rid": "837d113b7f",
-"status": "fixed",
+"status": "not fixed",
 "note": "end atom / key word cut by the left-right crop edge: words crossing it are taken in (sideways only)",
 "pattern": 345,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023ON_12_q08",
@@ -495,10 +530,11 @@
 "part": "",
 "blocking": false,
 "rid": "178c9637fc",
-"status": "fixed",
+"status": "not fixed",
 "note": "end atom / key word cut by the left-right crop edge: words crossing it are taken in (sideways only)",
 "pattern": 345,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023ON_12_q34",
@@ -507,10 +543,11 @@
 "part": "",
 "blocking": false,
 "rid": "80810780aa",
-"status": "fixed",
+"status": "not fixed",
 "note": "end atom / key word cut by the left-right crop edge: words crossing it are taken in (sideways only)",
 "pattern": 345,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023ON_21_q31",
@@ -519,10 +556,11 @@
 "part": "",
 "blocking": false,
 "rid": "9abee436c0",
-"status": "fixed",
+"status": "not fixed",
 "note": "end atom / key word cut by the left-right crop edge: words crossing it are taken in (sideways only)",
 "pattern": 345,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023ON_21_q32",
@@ -531,10 +569,11 @@
 "part": "",
 "blocking": false,
 "rid": "002a75d305",
-"status": "fixed",
+"status": "not fixed",
 "note": "end atom / key word cut by the left-right crop edge: words crossing it are taken in (sideways only)",
 "pattern": 345,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023ON_21_q35",
@@ -543,10 +582,11 @@
 "part": "",
 "blocking": false,
 "rid": "823476c3e5",
-"status": "fixed",
+"status": "not fixed",
 "note": "end atom / key word cut by the left-right crop edge: words crossing it are taken in (sideways only)",
 "pattern": 345,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023ON_21_q38",
@@ -555,10 +595,11 @@
 "part": "",
 "blocking": false,
 "rid": "4fb9d42eb0",
-"status": "fixed",
+"status": "not fixed",
 "note": "end atom / key word cut by the left-right crop edge: words crossing it are taken in (sideways only)",
 "pattern": 345,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023ON_22_q07",
@@ -567,10 +608,11 @@
 "part": "",
 "blocking": false,
 "rid": "42ea820547",
-"status": "fixed",
+"status": "not fixed",
 "note": "end atom / key word cut by the left-right crop edge: words crossing it are taken in (sideways only)",
 "pattern": 345,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023ON_22_q33",
@@ -579,10 +621,11 @@
 "part": "",
 "blocking": false,
 "rid": "8e9d34713a",
-"status": "fixed",
+"status": "not fixed",
 "note": "end atom / key word cut by the left-right crop edge: words crossing it are taken in (sideways only)",
 "pattern": 345,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023ON_33_q07",
@@ -594,7 +637,8 @@
 "status": "passed",
 "note": "picture cell whole, at its printed place and size",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023ON_42_q02",
@@ -603,10 +647,11 @@
 "part": "2(a)(i)",
 "blocking": false,
 "rid": "569f86e654",
-"status": "fixed",
+"status": "verified",
 "note": "table ok; 'Cl2' in the row text read 'C 2l' (subscript joined to C, not to the Bookman l) - fixed",
 "pattern": 344,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023ON_42_q04",
@@ -615,10 +660,11 @@
 "part": "4(b)(iv)",
 "blocking": false,
 "rid": "2b5db543a0",
-"status": "fixed",
+"status": "verified",
 "note": "Cambridge label typo ('7(c)iii)' / '4(f)(iii)i' / '4biv') merged the row into the one above - typos read as labels",
 "pattern": 342,
-"from": "pass1"
+"from": "pass1",
+"pass2": "gone"
 },
 {
 "qid": "0620_2023ON_42_q04",
@@ -627,10 +673,11 @@
 "part": "4(b)(iv)",
 "blocking": false,
 "rid": "a3966704d0",
-"status": "fixed",
+"status": "verified",
 "note": "Cambridge label typo ('7(c)iii)' / '4(f)(iii)i' / '4biv') merged the row into the one above - typos read as labels",
 "pattern": 342,
-"from": "pass1"
+"from": "pass1",
+"pass2": "gone"
 },
 {
 "qid": "0620_2023ON_43_q03",
@@ -642,7 +689,8 @@
 "status": "passed",
 "note": "table drawn as lines + text, matches the print (cells, rules, shading)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023ON_43_q06",
@@ -651,10 +699,11 @@
 "part": "6(e)(ii)",
 "blocking": false,
 "rid": "bf5a2bd627",
-"status": "fixed",
+"status": "verified",
 "note": "noisy hand-drawn scans (grey, black bar) redrawn as vector structures (chem_redraw)",
 "pattern": 297,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2023ON_63_q02",
@@ -663,10 +712,11 @@
 "part": "2(e)(ii)",
 "blocking": false,
 "rid": "9957a11609",
-"status": "fixed",
+"status": "verified",
 "note": "'2(e)(iii)' printed twice (first for 2(e)(ii)): rows mapped to parts in order (marks check)",
 "pattern": 343,
-"from": "pass1"
+"from": "pass1",
+"pass2": "gone"
 },
 {
 "qid": "0620_2023ON_63_q02",
@@ -675,10 +725,11 @@
 "part": "2(e)(ii)",
 "blocking": false,
 "rid": "5b92171b53",
-"status": "fixed",
+"status": "verified",
 "note": "'2(e)(iii)' printed twice (first for 2(e)(ii)): rows mapped to parts in order (marks check)",
 "pattern": 343,
-"from": "pass1"
+"from": "pass1",
+"pass2": "gone"
 }
 ]
 }
