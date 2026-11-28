@@ -11,7 +11,7 @@ EVERY question a layout fix changes, not one twin), pass 2, my review round on t
 PCdP6oibAkjQvGz8mKm73e), fixes as classes gated to 0620, freeze checks (golden 0, nothing under 0625/0607, maths ms_layout hash =
 baseline computed in the same repo), approve, docs, push with pipeline/push.sh, write the NEXT line.
 
-# Maths M4 finish: 2014 ON paper 5 (51 = 52 = 53) (separate chat, shared account)
+# DONE 2026-11-28 - Maths M4 finish: 2014 ON paper 5 (51 = 52 = 53) (kept for reference)
 Exam-bank (repo dhruvashara07/Exam-bank). First add the repo with push access. Follow docs/START_HERE.md exactly: git pull,
 then every file it lists, PROGRESS.md MATHS NEXT line first. Section 5 (usage budget) applies.
 Task: make 2014 ON 51 approvable (52 and 53 are stubs of 51, so they follow). Its mark scheme is the only thing wrong

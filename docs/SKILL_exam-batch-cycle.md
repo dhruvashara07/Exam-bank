@@ -170,3 +170,6 @@ MATHS_PLAN.md if the plan changed; docs/NEXT_CHAT.md prompt; `pipeline/push.sh`;
   paper silently misses its later questions in store, so no review shows them - pattern 340). Papers 5/6: each task's figures =
   its intro pictures + its questions' figures (338); duplicate-paper tasks are stubs (339). After a class fix, list the APPROVED
   papers whose cut hash changes (run.py drops their approval) and look at exactly what changed before re-approving.
+- (M4 finish, 2026-11-28) ms.py has TWO readers (table path 2017+, column path 2014-2016): a class fix in one is searched for in the
+  other at once (pattern 342: COMMX was only in the table path). An ms.py change that moves an APPROVED paper's marks is a
+  decision for Dhruv (ask with options) before re-approving.

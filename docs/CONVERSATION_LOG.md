@@ -726,3 +726,14 @@ the other open items (see earlier entries) still wait for approval; hourly task 
   my first intro-figure merge loop did nothing (fitz Rect '|=' is not in place) - caught by the before/after diff.
 - Lessons: read review/queue.json 'store build failed' before every check round; check what a class fix changes in APPROVED
   papers (cut hash) before approving; a new figure source needs a contact sheet of every crop, not a sample.
+
+## 2026-11-28 - Maths M4 finish: 2014 ON paper 5 (separate chat, shared account)
+- Dhruv: fix the 3 MS rows of 2014 ON 51 as classes, blast after every ms.py change, no approved paper may change, approve 51/52/53.
+- Found: all 6 questions of 51 were on the old wrap path because the narrow table's outer borders counted as column rules (334's
+  workaround only in ms_layout); moved them to the maths layout (ms_maths.columns) instead of patching the wrap path - one class,
+  consistent with every other paper 5. Also: the unlabelled communication row of 51 was inside 6(c) (column-layout reader lacked
+  COMMX). That fix also changes APPROVED 2014 ON 63 (7(b) held 'Communication in 2(c)'): asked Dhruv with options - he chose to fix
+  63 too; re-approved after looking at exactly what changed (7(b) 2 -> 1 mark, paper communication +1, totals unchanged).
+- Time: ~1 h 15 min, mostly the two blasts (461 MS old vs new) and the run.py rebuild. No GitHub pass needed (4 papers, local run).
+- Own detours: first patched ms_layout's wrap path (worked, but the wrong layer) - reverted for the ms_maths fix; ms_rebuild
+  without --write rewrote 3 figure PNGs of 2014 MJ 22 (restored with git checkout; noted).

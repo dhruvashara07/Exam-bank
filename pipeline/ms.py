@@ -729,7 +729,9 @@ def structured_rows_columns(doc):
             elif OLD_R[0] <= x0 <= OLD_R[1] and re.fullmatch(r'\([ivx]+\)', w):
                 toks.append((y0, 'r', w[1:-1]))
         if MATHS:
-            toks += [(l['y0'], 'c', None) for l in lines if l['x0'] < 160 and COMM.match(l['text']) and top <= l['y0'] <= bottom]
+            toks += [(l['y0'], 'c', None) for l in lines if l['x0'] < 160 and (COMM.match(l['text']) or COMMX.match(l['text'].strip()))
+                     and top <= l['y0'] <= bottom]   # 'Communication in two of 3(a), ...' in the Answer column (2014 ON 51: 329 in the
+            #                                          column layout too, pattern 342)
             toks += [(l['y0'] - 0.01, 'b', None) for l in lines if l['x0'] < 60 and l['text'].strip() == 'B' and top <= l['y0'] <= bottom]
         order = {'q': 0, 'l': 1, 'r': 2, 'c': 0, 'b': -1}
         toks.sort(key=lambda t: t[0])

@@ -1044,6 +1044,7 @@ Hint check (pattern 295, now in pass 1 as ms_marksum): 9 hits in C1, 2 real (313
 334. 2014 ON 51-53 (paper 5): the ruled table is narrower than our unit, so its outer borders counted as inner rules (5, not 3)
     and _maths_ruled gave up (old layout with stray braces). -> outer pair dropped when there are 5. q1, q5, q6 right now; KNOWN:
     q2 (3 columns, 'wrap'), q3 (3(b)(i) misaligned), q4 (cube-drawing table, old layout) - paper 5 of 2014 ON kept PENDING.
+    FIXED 2026-11-28 by 342 (all 6 questions now take the maths layout).
 335. KNOWN small leftovers (budget rule): 2017 MJ 42 q7/q8 Partial Marks shrunk (scale fallback); 2015 MJ 43 5(b)/11(d) the
     wrapped last Partial-Marks line pushed under a redrawn graph (pic_grow moves other columns' text below the printed picture's
     bottom - needs a 'continuation of a paragraph' test); 2016 MJ 41 13(b)'s answer printed with no label (under 13(a)(iii));
@@ -1101,3 +1102,14 @@ Hint check (pattern 295, now in pass 1 as ms_marksum): 9 hits in C1, 2 real (313
 Checked and passed: ms_marksum hits (rows add up; several M-rows per part), checks.text 87-97 % (tokenisation of isotope
 numbers / scripts), every MS table and picture cell. 2023 ON paper 51 is NOT in Releases: C2a = 58 papers, 51 not done.
 
+342. (fixes 334) 2014 ON 51-53 (paper 5): the ruled MS table is narrower than the cut, so ms_maths.columns saw 5 'inner' rules
+    (its outer borders too) and every question fell to the old wrap/fallback path: q2 lost its empty Partial Marks column (_tighten
+    cut at the last ink), q3 3(b)(i)/(ii) were boxed (our label placed left of the table border), q4's cube table was re-flowed
+    and its partial-mark words 'row 1 column 5' read as marks. -> ms_maths.columns drops the outer pair when 5 rules span less than
+    the cut (as 334 did in _maths_ruled); ms_maths._drop_outer_borders removes those borders from the cells (their stub under the
+    last row's rule showed as a tick). The same paper's 'Communication in two of 3(a), ...' row has no label (printed in the Answer
+    column): the column-layout reader (2014-2016 MS) only knew 'Communication:' / 'Communication seen' -> COMMX there too (329's
+    class, missed in the column path). It also moved APPROVED 2014 ON 63's 'Communication in 2(c)' out of 7(b) into the paper's
+    communication marks (Dhruv: yes; re-approved after a look). Blasts: ms.py rows old vs new on all 461 0607 MS - only 2014 ON
+    51/52/53/63 change; ms_maths columns / borders on every stored 0607 unit - only 2014 ON 51. 2014 ON 51/52/53 APPROVED.
+    Lesson: a fix in one reader (table path) must be searched for in the other (column path) at once.

@@ -90,7 +90,37 @@ def columns(u):
     if len(inner) not in ok and xs:                  # a grid drawn in the answer (2014 MJ 22 q2) has tall lines too:
         top = max(c for _, c in xs)                      # the table's own rules run the full height
         inner = [x for x, c in xs if c > 0.97 * top and 20 < x < u['w'] - 20]
+    if len(inner) == 5 and 5 not in ok and inner[-1] - inner[0] < u['w'] - 30:   # a table narrower than the cut (2014 ON
+        inner = inner[1:4]                            # 51-53): its outer borders are no inner rules (patterns 334, 342)
     return inner if len(inner) in ok else None
+
+
+def _drop_outer_borders(u):
+    """The outer borders of a table narrower than the cut (columns() dropped them): never cell content - their stub under
+    the last row's bottom rule showed as a tick in the Partial Marks cell (2014 ON 51, pattern 342)."""
+    vs = []
+    for l in u.get('lines', []):
+        for sub in re.findall(r'M[^M]+', l['d']):
+            b = _bbox(sub)
+            if b and b[2] - b[0] < 1.3 and b[3] - b[1] > 1.0:
+                vs.append(b)
+    xs = sorted({round((b[0] + b[2]) / 2, 1) for b in vs})
+    cl = []
+    for x in xs:
+        if cl and x - cl[-1][-1] < 1.6:
+            cl[-1].append(x)
+        else:
+            cl.append([x])
+    full = [sum(c) / len(c) for c in cl if sum(b[3] - b[1] for b in vs if abs((b[0] + b[2]) / 2 - sum(c) / len(c)) < 1.6) > 0.6 * u['h']
+            and 20 < sum(c) / len(c) < u['w'] - 20]
+    inn = columns(u)
+    if not inn or len(full) < 5 or full[0] >= inn[0] - 1 or full[-1] <= inn[-1] + 1:
+        return u
+    bx = (full[0], full[-1])
+    def border(l):
+        b = _bbox(l['d'])
+        return b is not None and b[2] - b[0] < 1.3 and any(abs((b[0] + b[2]) / 2 - x) < 1.6 for x in bx)
+    return dict(u, lines=[l for l in u['lines'] if not border(l)])
 
 
 class _Item:
@@ -613,6 +643,8 @@ def layout_row(u, label, ncols, first_unit=True, hint=None, QW=QW, fam=None, bas
         u = _scaled_unit(u, K)
         if hint:
             hint = ([x * K for x in hint[0]], hint[1] * K)
+    if not CTX.get('five'):
+        u = _drop_outer_borders(u)
     edges = columns(u)
     merged = False
     is_note = bool(re.match(r'Throughout the (modelling|investigation)\b', ' '.join(

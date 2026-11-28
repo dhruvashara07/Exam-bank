@@ -37,6 +37,10 @@
     "start": "2026-11-28T04:13:39+00:00",
     "end": "2026-11-28T06:32:09+00:00",
     "note": "round 46: 8 wrong fixed as classes + store-failure fix; 121 approved"
+   },
+   {
+    "start": "2026-11-28T11:56:15+00:00",
+    "end": "2026-11-28T12:47:20+00:00"
    }
   ]
  },
@@ -220,6 +224,14 @@
    "fix": "specs + cross size",
    "found_by": "claude",
    "at": "2026-11-28T06:32:10+00:00"
+  },
+  {
+   "pattern": "342",
+   "kind": "repeat",
+   "what": "2014 ON 51 MS: narrow ruled table fell to the wrap/old layout (q2 Partial Marks lost, q3 3(b)(i) boxed, q4 table squashed + marks '1 5 1 6 2 4 5'); unlabelled 'Communication in ...' row inside 6(c) (also 2014 ON 63 7(b))",
+   "fix": "ms_maths.columns drops the outer pair of a narrow table + _drop_outer_borders; ms.py column layout reads COMMX rows",
+   "found_by": "claude",
+   "at": "2026-11-28T12:47:08+00:00"
   }
  ],
  "tokens": [],
@@ -395,6 +407,34 @@
   {
    "at": "2026-11-28T06:32:10+00:00",
    "task": "error M4 --pattern"
+  },
+  {
+   "at": "2026-11-28T11:56:15+00:00",
+   "task": "M4 finish: 2014 ON paper 5 MS rows q2-q4"
+  },
+  {
+   "at": "2026-11-28T11:56:15+00:00",
+   "task": "phase M4 fix"
+  },
+  {
+   "at": "2026-11-28T12:12:47+00:00",
+   "task": "ms blast old vs new (ms.py COMMX in column layout; ms_maths.columns narrow table)"
+  },
+  {
+   "at": "2026-11-28T12:44:42+00:00",
+   "task": "run.py 2014 ON 51 52 53 63"
+  },
+  {
+   "at": "2026-11-28T12:46:24+00:00",
+   "task": "golden + checks"
+  },
+  {
+   "at": "2026-11-28T12:47:08+00:00",
+   "task": "error M4 --pattern"
+  },
+  {
+   "at": "2026-11-28T12:47:20+00:00",
+   "task": "phase M4 fix"
   }
  ]
 }
