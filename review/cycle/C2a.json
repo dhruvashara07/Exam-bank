@@ -9,7 +9,12 @@
  ],
  "created": "2026-11-28T11:41:12+00:00",
  "phases": {
-  "build": [],
+  "build": [
+   {
+    "start": "2026-11-28T11:45:01+00:00",
+    "end": null
+   }
+  ],
   "claude": [],
   "claude1": [],
   "claude2": [],
@@ -28,6 +33,10 @@
   {
    "at": "2026-11-28T11:41:12+00:00",
    "task": "fetch PDFs C0+C1+C2a, ms_rebuild baseline check"
+  },
+  {
+   "at": "2026-11-28T11:45:01+00:00",
+   "task": "phase C2a build"
   }
  ]
 }
