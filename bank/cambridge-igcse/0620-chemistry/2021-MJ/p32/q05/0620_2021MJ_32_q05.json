@@ -4,7 +4,36 @@
  "segments": [],
  "text": "",
  "marks": 12,
- "figures": [],
+ "figures": [
+  {
+   "caption": null,
+   "page": 8,
+   "bbox": [
+    349.4,
+    485.6,
+    551.3,
+    548.3
+   ],
+   "id": "0620_2021MJ_32_q05bi_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(b)(i)"
+  },
+  {
+   "caption": null,
+   "page": 9,
+   "bbox": [
+    242.8,
+    370.7,
+    354.5,
+    422.5
+   ],
+   "id": "0620_2021MJ_32_q05ci_diagram2",
+   "alt": "",
+   "kind": "diagram",
+   "part": "(c)(i)"
+  }
+ ],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -382,9 +411,9 @@
        "text": "Complete the diagram to show the apparatus used to investigate the volume of carbon dioxide produced during this reaction."
       },
       {
-       "type": "text",
-       "html": "gas syringe",
-       "text": "gas syringe"
+       "type": "figure",
+       "id": "0620_2021MJ_32_q05bi_diagram1",
+       "caption": null
       },
       {
        "type": "text",
@@ -564,8 +593,13 @@
       },
       {
        "type": "text",
-       "html": "H H H H C C C C H H H",
-       "text": "H H H H C C C C H H H"
+       "html": "H H H",
+       "text": "H H H"
+      },
+      {
+       "type": "figure",
+       "id": "0620_2021MJ_32_q05ci_diagram2",
+       "caption": null
       },
       {
        "type": "text",
