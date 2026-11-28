@@ -4,36 +4,7 @@
  "segments": [],
  "text": "",
  "marks": 11,
- "figures": [
-  {
-   "caption": null,
-   "page": 14,
-   "bbox": [
-    64.0,
-    124.1,
-    533.2,
-    331.1
-   ],
-   "id": "0620_2015MJ_21_q07a_diagram1",
-   "alt": "",
-   "kind": "diagram",
-   "part": "(a)"
-  },
-  {
-   "caption": null,
-   "page": 15,
-   "bbox": [
-    92.2,
-    111.2,
-    505.1,
-    228.1
-   ],
-   "id": "0620_2015MJ_21_q07b_diagram2",
-   "alt": "",
-   "kind": "diagram",
-   "part": "(b)"
-  }
- ],
+ "figures": [],
  "review": {
   "reasons": [],
   "status": "auto"
@@ -93,9 +64,19 @@
      "text": "He ﬁ lled one with water and the other with helium gas and sealed the end of both syringes. He then pushed the syringe plungers with equal force. The diagram shows what happened."
     },
     {
-     "type": "figure",
-     "id": "0620_2015MJ_21_q07a_diagram1",
-     "caption": null
+     "type": "text",
+     "html": "syringe plunger",
+     "text": "syringe plunger"
+    },
+    {
+     "type": "text",
+     "html": "syringe",
+     "text": "syringe"
+    },
+    {
+     "type": "text",
+     "html": "water helium",
+     "text": "water helium"
     },
     {
      "type": "text",
@@ -382,24 +363,44 @@
      "text": "The table shows some properties of the Group 0 elements helium, neon, argon and krypton."
     },
     {
-     "type": "text",
-     "html": "density of the",
-     "text": "density of the"
-    },
-    {
-     "type": "text",
-     "html": "electron melting point boiling point",
-     "text": "electron melting point boiling point"
-    },
-    {
-     "type": "text",
-     "html": "element liqueﬁ ed gas",
-     "text": "element liqueﬁ ed gas"
-    },
-    {
-     "type": "figure",
-     "id": "0620_2015MJ_21_q07b_diagram2",
-     "caption": null
+     "type": "table",
+     "rows": [
+      [
+       "element",
+       "electron arrangement",
+       "density of the liqueﬁ ed gas <sup>3</sup> in g / cm",
+       "melting point / °C",
+       "boiling point / °C"
+      ],
+      [
+       "helium",
+       "2",
+       "0.15",
+       "–272",
+       "–269"
+      ],
+      [
+       "neon",
+       "",
+       "1.20",
+       "–248",
+       "–245"
+      ],
+      [
+       "argon",
+       "2,8,8",
+       "1.40",
+       "–189",
+       "–186"
+      ],
+      [
+       "krypton",
+       "2,8,18,8",
+       "2.15",
+       "–157",
+       "–152"
+      ]
+     ]
     }
    ]
   },

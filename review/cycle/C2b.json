@@ -38,6 +38,15 @@
    "start": "2026-11-28T15:47:37Z",
    "end": "2026-11-28T15:47:41Z",
    "minutes": 0.1
+  },
+  {
+   "id": 46165908415,
+   "name": "Question bank",
+   "branch": "main",
+   "conclusion": null,
+   "start": "2026-11-28T16:34:50Z",
+   "end": "2026-11-28T16:34:51Z",
+   "minutes": 0.0
   }
  ],
  "counts": {
@@ -84,6 +93,14 @@
    "fix": "extract: chemistry papers with no caption anywhere use the maths uncaptioned-diagram finder; mark lines '[2]' / '[Total: n]' trimmed off; region_svg respaces words for chemistry ('leastreactive')",
    "found_by": "claude",
    "at": "2026-11-28T16:34:35+00:00"
+  },
+  {
+   "pattern": "356",
+   "kind": "new",
+   "what": "uncaptioned diagrams: ruled tables as pictures, 'Name ester X.' / [5] in crop, side-by-side labels not pulled in, smallest drawing of a row lost",
+   "fix": "extract table skip by merged rule segments, row merge, label groups; store FIT_SENT_DOT (diagrams only) + FIT_MARK_LINE",
+   "found_by": "claude",
+   "at": "2026-11-28T17:54:32+00:00"
   }
  ],
  "tokens": [],
@@ -135,6 +152,14 @@
   {
    "at": "2026-11-28T16:34:35+00:00",
    "task": "phase C2b claude"
+  },
+  {
+   "at": "2026-11-28T16:35:16+00:00",
+   "task": "gh C2b 46165908415"
+  },
+  {
+   "at": "2026-11-28T17:54:32+00:00",
+   "task": "error C2b --pattern"
   }
  ]
 }

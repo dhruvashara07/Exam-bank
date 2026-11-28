@@ -24,20 +24,6 @@
  "marks": 1,
  "figures": [
   {
-   "caption": null,
-   "page": 8,
-   "bbox": [
-    66.9,
-    108.2,
-    482.7,
-    318.2
-   ],
-   "id": "0620_2021MJ_11_q20_diagram1",
-   "alt": "",
-   "kind": "diagram",
-   "part": ""
-  },
-  {
    "page": 8,
    "bbox": [
     114.5,
@@ -105,14 +91,30 @@
    "caption": null
   },
   {
-   "type": "figure",
-   "id": "0620_2021MJ_11_q20_diagram1",
-   "caption": null
+   "type": "text",
+   "html": "What is element M?",
+   "text": "What is element M?"
   },
   {
-   "type": "text",
-   "html": "<b>D </b> sulfur",
-   "text": "D sulfur"
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "carbon"
+    },
+    {
+     "label": "B",
+     "html": "iron"
+    },
+    {
+     "label": "C",
+     "html": "magnesium"
+    },
+    {
+     "label": "D",
+     "html": "sulfur"
+    }
+   ]
   }
  ]
 }

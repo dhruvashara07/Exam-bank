@@ -1286,16 +1286,87 @@ def extract(pdf_path, syllabus, year, session, pv):
                    'answer_space': answer_space(lines, s)}
         node['segments'].append(seg_rec)
         found = find_figures(doc, s, lines)
-        if subjects.subject(syllabus)['maths_text'] or _chem_nocap(doc, syllabus):   # maths diagrams carry no 'Fig.' caption
+        if subjects.subject(syllabus)['maths_text'] or (_chem_nocap(doc, syllabus) and              # maths diagrams carry no 'Fig.' caption
+                                                        int(str(pv)[0]) not in subjects.subject(syllabus).get('mcq_papers', ())):
             # (ERROR_PATTERNS 68); nor do chemistry papers before 2023 (C2b, ERROR_PATTERNS 355: 0 figures in every theory /
             # practical paper of 2015 MJ and 2021-2022 - the diagrams were loose lines + text, rotated labels broken)
-            for k, f in enumerate(diagrams(doc, s, lines, found), 1):
-                if _chem_nocap(doc, syllabus):     # chemistry: a mark '[2]' / '[Total: 8]' line is never part of the picture
+            dg_ = diagrams(doc, s, lines, found)
+            if subjects.is_chem(syllabus):         # drawings of one row side by side are ONE picture: a small one between
+                mg_ = []                           # them was lost ('B' of five atoms A-E, 2022 FM 32 q1a; C2b 355)
+                for f in sorted(dg_, key=lambda g: (g['page'], g['bbox'][0])):
+                    o_ = next((m for m in mg_ if m['page'] == f['page'] and
+                               min(m['bbox'][3], f['bbox'][3]) - max(m['bbox'][1], f['bbox'][1]) >
+                               0.8 * min(m['bbox'][3] - m['bbox'][1], f['bbox'][3] - f['bbox'][1])), None)
+                    if o_ is None:
+                        mg_.append(dict(f))
+                    else:
+                        o_['bbox'] = [min(o_['bbox'][0], f['bbox'][0]), min(o_['bbox'][1], f['bbox'][1]),
+                                      max(o_['bbox'][2], f['bbox'][2]), max(o_['bbox'][3], f['bbox'][3])]
+                dg_ = mg_
+            for k, f in enumerate(dg_, 1):
+                if not subjects.subject(syllabus)['maths_text']:     # chemistry: a mark '[2]' / '[Total: 8]' line is never part of the picture
                     fb_ = fitz.Rect(f['bbox'])
+                    hseg_, vseg_ = {}, {}            # ruled TABLE: full-width horizontal rules (one by one, as the frame of
+                    for d_ in doc[f['page']].get_drawings():          # one drawing, or cell by cell: 2022 MJ 61 q2, 2015 MJ 51 q2)
+                        for it_ in d_['items']:
+                            if it_[0] == 'l':
+                                p_, q_ = it_[1], it_[2]
+                                if abs(p_.y - q_.y) < 1:
+                                    hseg_.setdefault(round(p_.y), []).append((min(p_.x, q_.x), max(p_.x, q_.x)))
+                                elif abs(p_.x - q_.x) < 1:
+                                    vseg_.setdefault(round(p_.x), []).append((min(p_.y, q_.y), max(p_.y, q_.y)))
+                            elif it_[0] == 're':
+                                r_ = it_[1]
+                                for y_ in (r_.y0, r_.y1):
+                                    hseg_.setdefault(round(y_), []).append((r_.x0, r_.x1))
+                                for x_ in (r_.x0, r_.x1):
+                                    vseg_.setdefault(round(x_), []).append((r_.y0, r_.y1))
+                    def _cov(segs, lo, hi):
+                        segs = sorted((max(a, lo), min(b, hi)) for a, b in segs if b > lo and a < hi)
+                        tot, end = 0, lo
+                        for a, b in segs:
+                            if b > end:
+                                tot += b - max(a, end); end = b
+                        return tot
+                    hy_ = {y_ for y_, sg in hseg_.items() if fb_.y0 - 1 <= y_ <= fb_.y1 + 1 and _cov(sg, fb_.x0, fb_.x1) > 0.8 * fb_.width}
+                    vx_ = {x_ for x_, sg in vseg_.items() if fb_.x0 + 10 < x_ < fb_.x1 - 10 and _cov(sg, fb_.y0, fb_.y1) > 0.9 * fb_.height}
+                    vx7_ = {x_ for x_, sg in vseg_.items() if fb_.x0 + 10 < x_ < fb_.x1 - 10 and _cov(sg, fb_.y0, fb_.y1) > 0.7 * fb_.height}
+                    side_ = [x_ for x_, sg in vseg_.items() if (abs(x_ - fb_.x0) < 8 or abs(x_ - fb_.x1) < 8)
+                             and _cov(sg, fb_.y0, fb_.y1) > 0.9 * fb_.height]
+                    if len(hy_) <= 25 and (1 <= len(vx_) <= 8 and (len(hy_) >= 2 or len(side_) >= 2)
+                                           or len(hy_) >= 4 and 1 <= len(vx7_) <= 12):   # (columns: a framed
+                                                     # chromatogram with its two lines is a drawing, 2015 MJ 61 q3; a grid has many)
+                        continue                     # a ruled TABLE (thermometers in its cells, 2022 FM 62 q2): stays a table (round 41)
                     for w_ in doc[f['page']].get_text('words'):
                         wr_ = fitz.Rect(w_[:4])
                         if re.fullmatch(r'\[(?:Total:)?\d*\]?|\d+\]', w_[4]) and fb_.intersects(wr_) and wr_.y0 > fb_.y0 + 0.5 * fb_.height:
                             fb_.y1 = min(fb_.y1, wr_.y0 - 1)
+                    pw_ = doc[f['page']].get_text('words')
+                    for _ in range(3):               # ... but a short label line right under it belongs to it (the 2nd line
+                        below_ = [fitz.Rect(w_[:4]) for w_ in pw_         # of an axis label, 2021 MJ 31 q4(e); C2b 355)
+                                  if -3 <= w_[1] - fb_.y1 <= 5 and w_[3] > fb_.y1 + 2 and fb_.x0 - 2 <= w_[0] and w_[2] <= fb_.x1 + 2]
+                        row_ = [fitz.Rect(w_[:4]) for w_ in pw_ if below_ and abs(w_[1] - below_[0].y0) < 2]
+                        rs_ = sorted(row_, key=lambda r_: r_.x0)      # (labels of drawings side by side: each group short)
+                        grp_ = [1]
+                        for a_, b_ in zip(rs_, rs_[1:]):
+                            grp_ = grp_[:-1] + [grp_[-1] + 1] if b_.x0 - a_.x1 < 15 else grp_ + [1]
+                        if not below_ or max(grp_) > 5 or any(r_.x0 < fb_.x0 - 2 or r_.x1 > fb_.x1 + 2 for r_ in row_) \
+                                or any(w_[4] in ('●', '•') or re.match(r'\(|\[|\d+\]$', w_[4]) for w_ in pw_ if fitz.Rect(w_[:4]) in row_):
+                            break
+                        fb_.y1 = max(r_.y1 for r_ in row_) + 0.5
+                    lns_ = {}                        # ... nor a line of the question under the drawing: a bullet, an
+                    for w_ in doc[f['page']].get_text('words'):      # 'Experiment 1' heading or a long sentence (C2b 355)
+                        wr_ = fitz.Rect(w_[:4])
+                        if fb_.intersects(wr_) and (wr_.y0 + wr_.y1) / 2 > fb_.y0 + 0.4 * fb_.height:
+                            lns_.setdefault(round((wr_.y0 + wr_.y1) / 2 / 3), []).append((wr_, w_[4]))
+                    for k_ in sorted(lns_):
+                        ws_ = sorted(lns_[k_], key=lambda t: t[0].x0); txt_ = ' '.join(t[1] for t in ws_)
+                        gaps_ = [b_[0].x0 - a_[0].x1 for a_, b_ in zip(ws_, ws_[1:])]
+                        if ws_[0][1] in ('●', '•') or re.match(r'Experiment \d', txt_) or \
+                                (len(ws_) >= 3 and txt_[-1:] in '.?' and ws_[0][1][:1].isupper() and ws_[0][0].x0 <= fb_.x0 + 8) or \
+                                (len(ws_) >= 8 and max(gaps_ or [0]) < 15):     # (labels of three drawings side by side: no)
+                            fb_.y1 = min(fb_.y1, min(t[0].y0 for t in ws_) - 1)
+                            break
                     if fb_.height < 8:
                         continue
                     f['bbox'] = [round(v, 1) for v in fb_]

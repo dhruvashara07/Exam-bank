@@ -682,6 +682,10 @@ def fit_crop(pg, b, max_grow=50.0, maths=False, chem=False):
                              or len(real) >= 3 and lw[-1][4][-1:] in '.?:'):
             return True           # maths: part lines are indented under their label ('(ii) Sketch the model ...', round 28)
         real = [w for w in lw if REALW.fullmatch(w[4])]
+        if chem and lw and (lw[0][4] in ('●', '•') or (lw[0][4] == 'Experiment' and len(lw) <= 3)
+                            or FIT_MARK_LINE and (re.match(r'\[(?:Total:|\d)', lw[0][4]) or re.fullmatch(r'\d+\]', lw[-1][4]))
+                            or (FIT_SENT_DOT and chem == 'dia' and len(lw) >= 3 and lw[-1][4][-1:] in '.?' and lw[0][4][:1].isupper())):   # 'Name ester X.'
+            return True           # chemistry practical: '● Use a 25 cm3 ...' and its 'Experiment 1' heading (C2b 355)
         long_ = len(real) >= 5 or (len(real) >= 3 and lw and lw[-1][4][-1:] in '.?:')
         at_margin = l is None or l.x0 <= body_x0 + 25
         return (not numeric(lw) and long_ and at_margin) or (l is not None and (continues(l) or bulleted(l)))
@@ -1010,6 +1014,8 @@ def fit_crop(pg, b, max_grow=50.0, maths=False, chem=False):
 
 
 FIT_BOND_ENDS = True              # toggle for the blast harness (C2b 354)
+FIT_MARK_LINE = True     # chemistry: a '[2]' / '[Total: 8]' mark line is never taken into a picture (C2b 355)
+FIT_SENT_DOT = True      # chemistry: a short line ending in '.' under a drawing is question text ('Name ester X.', C2b 356)
 FIT_EDGE_WORDS = True             # toggle for the blast harness (C2a 345)
 OPT_EDGE_WORDS = True             # the same growth before the MCQ option split (C2a round 47, 349)
 
@@ -1122,7 +1128,7 @@ def save_figure(f, q, meta, qdoc, store):
         if subjects.is_chem(meta['syllabus']) and '_opt' in f['id']:
             nb = fitz.Rect(b)     # chemistry MCQ option pictures: diagram_options cut them exactly; growing pulled the NEXT
         else:                     # option's atoms in, row after row (2026 MJ 23 q36, ERROR_PATTERNS 299)
-            nb = fit_crop(pg, b, maths=mx_, chem=subjects.is_chem(meta['syllabus']))
+            nb = fit_crop(pg, b, maths=mx_, chem=subjects.is_chem(meta['syllabus']) and ('dia' if '_diagram' in f['id'] else True))
         if mx_:                 # maths: a crop never grows into a sibling figure of the same page (the lower 'Step 2' grid
             for g_ in q.get('figures', []):        # took the upper grid's x axis, 2023 MJ 63 q3, M2 round 34)
                 G = fitz.Rect(g_['bbox'])

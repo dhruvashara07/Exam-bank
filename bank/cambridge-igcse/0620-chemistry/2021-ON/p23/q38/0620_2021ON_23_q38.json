@@ -24,20 +24,6 @@
  "marks": 1,
  "figures": [
   {
-   "caption": null,
-   "page": 14,
-   "bbox": [
-    66.9,
-    88.4,
-    502.3,
-    307.1
-   ],
-   "id": "0620_2021ON_23_q38_diagram1",
-   "alt": "",
-   "kind": "diagram",
-   "part": ""
-  },
-  {
    "page": 14,
    "bbox": [
     95.2,
@@ -105,14 +91,30 @@
    "caption": null
   },
   {
-   "type": "figure",
-   "id": "0620_2021ON_23_q38_diagram1",
-   "caption": null
+   "type": "text",
+   "html": "What is P?",
+   "text": "What is P?"
   },
   {
-   "type": "text",
-   "html": "<b>D</b> poly(ethene)",
-   "text": "D poly(ethene)"
+   "type": "options",
+   "options": [
+    {
+     "label": "A",
+     "html": "ethane"
+    },
+    {
+     "label": "B",
+     "html": "ethanoic acid"
+    },
+    {
+     "label": "C",
+     "html": "ethene"
+    },
+    {
+     "label": "D",
+     "html": "poly(ethene)"
+    }
+   ]
   }
  ]
 }

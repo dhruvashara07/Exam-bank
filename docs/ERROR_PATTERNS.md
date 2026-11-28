@@ -1146,3 +1146,41 @@ Tool lesson: never run pipeline/run.py with a computed list without checking it 
 EVERYTHING (it reached maths 2014-2015 before it was stopped; all non-chemistry output restored with git, 22 stray chemistry
 rebuilds restored too). Guard: `[ $(echo $P | wc -w) -gt 0 ]`.
 
+## Chemistry C2b (2021-FM .. 2022-MJ, 2026-11-28)
+351. MS label slips Cambridge printed: '7(c)(Ii)' (capital I, 2021 ON 31); '1(v)(i)'-(iii) for the three marks of 1(a)(vi) (2021 FM
+    42); 'pH 4 circled' printed with NO label (= 2(d), 2021 MJ 31) - parsed into the 2(c) row. -> ms.label_text lowercases roman
+    numerals in brackets (chemistry); run.py (chemistry): when exactly ONE paper part has no rows it takes (a) the contiguous rows
+    whose printed label is no part, if their marks add up to its marks, or (b) the surplus last row of the part before it - a row
+    merged with it is split at its single printed rule; ms_layout: such a MARKED row shows the paper's label in its empty Q cell,
+    and _tighten keeps the table's outer left border (it cut the whole Q column off). Unmarked heading rows ('Tests on solid O')
+    keep no label (first try labelled them '1(j)' - caught by the blast over all chemistry).
+352. Atom letters printed as tiny IMAGES taller than the letter (6 x 42-51 pt, the glyph at one end) vanished from MS structure
+    pictures: render._isolated_page redacts with PDF_REDACT_IMAGE_REMOVE, which deletes every image reaching outside the cut; and
+    an image whose centre lay below the row was not counted, so the end atoms fell outside the picture box. -> chemistry:
+    PDF_REDACT_IMAGE_PIXELS (only pixels outside are blanked); store._chem_structures sizes letter images by their INK and takes
+    them up to 60 pt tall (51 pt ones were laid out one by one and the narrow 'C' / 'H' dropped).
+353. A text line just under a structure picture came out squeezed or half cut ('nvoneerepeatunit(1)', '1 anyonerepeatunitwithexte',
+    'propan-2-ol'): the picture box (tall letter images) reached into it. -> a word line the picture only partly covers stays text;
+    the picture stops above / starts below it.
+354. The H under a carbon cut off at a figure's bottom edge (2022 MJ 21-23 q35; 2021 ON 21-23 q11 lost both bottom H rows): the bond
+    STARTS at the edge, so 'ink crossing the edge' never fired, and the drawing's rect did not even cover its lower line. ->
+    fit_crop (chemistry, FIT_BOND_ENDS): vertical bond line ITEMS starting within 3 pt of the top / bottom edge are followed to
+    their end, plus the atom letter there. Blast: 6 crops, all wanted.
+355. SYSTEMIC: chemistry papers before 2023 print no 'Fig.' captions - every theory / practical paper of 2005 MJ, 2015 MJ and
+    2021-2022 had ZERO figures (approved C0 2005/2015 and C2a 2022 ON included): diagrams were loose lines + text in the print
+    layout (rotated labels drawn as blobs: 2021 ON 32 q6 'Br') and missing from the editable layer. Missed in C0-C2a because the
+    print layout looked complete on the sheets. -> extract: a chemistry paper with no caption anywhere uses the maths
+    uncaptioned-diagram finder (diagrams()); mark lines '[2]' / '[Total: n]' trimmed off the crop; region_svg respaces words for
+    chemistry ('leastreactive' -> 'least reactive'). 2005 MJ, 2015 MJ, 2022 ON rebuilt in C2b's pass 2 and re-checked.
+    Check for every batch: count figures per theory paper (0 = this class).
+
+356. Uncaptioned-diagram crops (355) after the first look at all 210 new diagrams (C2b): (a) ruled TABLES became pictures
+    ('tests | observations' of 2005 / 2015 practicals, the burette / gas-syringe / thermometer tables) - the rules are drawn cell by
+    cell or as one drawing's frame + lines -> extract merges horizontal / vertical segments per line and skips a box with 1-8
+    full-height column rules + 2 full-width rules or both side rules (or 4+ rules with 1-12 columns at 70 %); a framed chromatogram
+    (no column rule) and graph grids (many) stay pictures. (b) question text inside the crop: 'Name ester X.' under a structure
+    (extract trim + store fit_crop FIT_SENT_DOT for '_diagram' crops only - captioned figures lost their top line when it was
+    global, 27 of 28 blast hits), '[5]' / '[Total: n]' (store FIT_MARK_LINE, blast 1 = wanted). (c) labels of two drawings side by
+    side ('at the start' | 'after 20 minutes') were not pulled in (6 words): the pull-in counts words per group. (d) one row of
+    small drawings (atoms A-E) lost the smallest one ('B', 2022 FM 32 q1a): drawings of one row in one part are ONE picture.
+    Check for every batch: a contact sheet of every new diagram, compare a doubtful one with the page.
