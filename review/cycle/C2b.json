@@ -1,0 +1,39 @@
+{
+ "batch": "C2b",
+ "subject": "0620",
+ "sessions": [
+  "2021-FM",
+  "2021-MJ",
+  "2021-ON",
+  "2022-FM",
+  "2022-MJ"
+ ],
+ "created": "2026-11-28T15:46:00+00:00",
+ "phases": {
+  "build": [
+   {
+    "start": "2026-11-28T15:46:00+00:00",
+    "end": null
+   }
+  ],
+  "claude": [],
+  "claude1": [],
+  "claude2": [],
+  "review": [],
+  "fix": []
+ },
+ "github_runs": [],
+ "counts": {},
+ "errors": [],
+ "tokens": [],
+ "events": [
+  {
+   "at": "2026-11-28T15:46:00+00:00",
+   "task": "start C2b --subject"
+  },
+  {
+   "at": "2026-11-28T15:46:00+00:00",
+   "task": "phase C2b build"
+  }
+ ]
+}
