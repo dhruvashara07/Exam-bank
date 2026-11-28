@@ -1,0 +1,390 @@
+# C2b pass 2 (diff against pass 1)
+
+Reasons: 235; verified 17, NOT FIXED 4, NEW 181; changed questions 190 (179 collateral).
+
+Look only at: NOT FIXED, NEW and COLLATERAL changes (each is set to fixed / passed / ask).
+
+## not fixed
+
+- 427ffc1794 0620_2022MJ_21_q35 checks.figure: 0620_2022MJ_21_q35_figA: crop cut: ink crosses the bottom edge, 2 text line(s) half inside
+- fc62bce19c 0620_2022MJ_22_q35 checks.figure: 0620_2022MJ_22_q35_figA: crop cut: ink crosses the left/bottom edge, 2 text line(s) half inside
+- d6c98c833f 0620_2022MJ_23_q35 checks.figure: 0620_2022MJ_23_q35_figA: crop cut: ink crosses the left/bottom edge, 2 text line(s) half inside
+- 0172dc38dd 0620_2022MJ_41_q05 ms_picture: 5(f): picture cell
+
+## NEW
+
+- 131f642e58 0620_2021FM_12_q35 flag.flag: options not found as text (likely in a table or diagrams)
+- 0840b06ef7 0620_2021FM_12_q04 fig_overlap: diagram1 / figA
+- e7fc4c1189 0620_2021FM_12_q11 fig_overlap: diagram1 / figA
+- 26481f3115 0620_2021FM_12_q16 fig_overlap: diagram1 / figA
+- e28715c922 0620_2021FM_12_q30 fig_overlap: diagram1 / figA
+- 6552cf7013 0620_2021FM_12_q35 fig_overlap: diagram1 / figA
+- 6a2fcd48ed 0620_2021FM_22_q35 flag.flag: options not found as text (likely in a table or diagrams)
+- f4c34b9f31 0620_2021FM_22_q03 fig_overlap: diagram1 / figA
+- c21efb2895 0620_2021FM_22_q05 fig_overlap: optA / figA
+- 681fc7093c 0620_2021FM_22_q05 fig_overlap: optB / figA
+- 762cc02f43 0620_2021FM_22_q05 fig_overlap: optC / figA
+- 47c1f08832 0620_2021FM_22_q05 fig_overlap: optD / figA
+- bc2b647000 0620_2021FM_22_q40 fig_overlap: diagram1 / figA
+- f3564261b9 0620_2021FM_32_q05 fig_text: diagram2: cotton wool soaked in filter paper soake
+- 4b4cf9bad5 0620_2021MJ_11_q12 checks.figure: 0620_2021MJ_11_q12_diagram1: crop cut: ink crosses the bottom edge
+- 479a1941e1 0620_2021MJ_11_q20 checks.figure: 0620_2021MJ_11_q20_diagram1: crop cut: ink crosses the top edge
+- a6c3d377cc 0620_2021MJ_11_q02 fig_overlap: diagram1 / figA
+- d545b84005 0620_2021MJ_11_q07 fig_overlap: optA / figA
+- b625ccf376 0620_2021MJ_11_q07 fig_overlap: optB / figA
+- c66f084ca2 0620_2021MJ_11_q07 fig_overlap: optC / figA
+- 9e4c951e34 0620_2021MJ_11_q07 fig_overlap: optD / figA
+- f5b4d56aa2 0620_2021MJ_11_q12 fig_overlap: optA / figA
+- 287d40c2e4 0620_2021MJ_11_q12 fig_overlap: optB / figA
+- c22db83eb2 0620_2021MJ_11_q12 fig_overlap: optC / figA
+- 3cba67afb7 0620_2021MJ_11_q12 fig_overlap: optD / figA
+- d7618da641 0620_2021MJ_11_q15 fig_overlap: diagram1 / figA
+- cdf1d318df 0620_2021MJ_11_q20 fig_overlap: diagram1 / figA
+- 90e02df3d9 0620_2021MJ_11_q28 fig_overlap: diagram1 / figA
+- 6c76b7f278 0620_2021MJ_11_q37 fig_overlap: optA / figA
+- d48584257e 0620_2021MJ_11_q37 fig_overlap: optB / figA
+- d4ecd5838a 0620_2021MJ_11_q37 fig_overlap: optC / figA
+- 5e9fa9b283 0620_2021MJ_11_q37 fig_overlap: optD / figA
+- b09672f914 0620_2021MJ_12_q21 flag.flag: options not found as text (likely in a table or diagrams)
+- 74a80700fc 0620_2021MJ_12_q12 fig_overlap: diagram1 / figA
+- e1060086c8 0620_2021MJ_12_q12 fig_cut: diagram1 top
+- 152d44d990 0620_2021MJ_12_q15 fig_overlap: diagram1 / figA
+- fa1012dd06 0620_2021MJ_12_q37 fig_overlap: diagram1 / optB
+- b287c57140 0620_2021MJ_12_q39 fig_overlap: diagram1 / figA
+- 9db43147af 0620_2021MJ_21_q12 checks.figure: 0620_2021MJ_21_q12_diagram1: crop cut: ink crosses the bottom edge
+- 5ecba1e42f 0620_2021MJ_21_q20 checks.figure: 0620_2021MJ_21_q20_diagram1: crop cut: ink crosses the top edge
+- 5990efef1f 0620_2021MJ_21_q01 fig_overlap: diagram1 / figA
+- f7b3b4d80a 0620_2021MJ_21_q06 fig_overlap: diagram1 / figA
+- c029c916a3 0620_2021MJ_21_q08 fig_overlap: diagram1 / figA
+- 4733aac79e 0620_2021MJ_22_q39 fig_overlap: diagram1 / figA
+- 9882e6f8bb 0620_2021MJ_23_q13 checks.figure: 0620_2021MJ_23_q13_diagram1: crop cut: ink crosses the bottom edge
+- 31c31e1248 0620_2021MJ_23_q13 fig_overlap: diagram1 / figA
+- 80e4b2a533 0620_2021MJ_23_q13 fig_overlap: diagram2 / figA
+- b10b7aa19b 0620_2021MJ_23_q35 fig_overlap: diagram1 / figA
+- 0a08e6d97b 0620_2021MJ_23_q35 fig_overlap: diagram2 / figA
+- d961dff8ec 0620_2021MJ_31_q02 checks.figure: 0620_2021MJ_31_q02fii_diagram1: crop cut: 1 text line(s) half inside
+- 3fb349158d 0620_2021MJ_31_q06 checks.figure: 0620_2021MJ_31_q06b_diagram1: crop cut: ink crosses the top edge, 1 text line(s) half inside
+- 98fa9e25a5 0620_2021MJ_31_q02 fig_text: diagram1: cotton wool soaked in damp blue litmus p
+- 71ad7dbb13 0620_2021MJ_32_q02 checks.figure: 0620_2021MJ_32_q02d_diagram1: crop cut: 1 text line(s) half inside
+- 9d829cd32c 0620_2021MJ_32_q05 checks.figure: 0620_2021MJ_32_q05ci_diagram2: crop cut: ink crosses the top edge
+- f6d907e9d9 0620_2021MJ_33_q02 fig_text: diagram1: cotton wool soaked in damp red litmus pa
+- f049baa31c 0620_2021MJ_41_q03 checks.figure: 0620_2021MJ_41_q03b_diagram1: crop cut: ink crosses the top edge
+- 7c8418dedb 0620_2021MJ_42_q05 checks.figure: 0620_2021MJ_42_q05aii_diagram1: crop cut: ink crosses the top edge
+- 730d23d939 0620_2021MJ_43_q03 checks.figure: 0620_2021MJ_43_q03b_diagram1: crop cut: ink crosses the top edge
+- 5944eba517 0620_2021MJ_43_q04 fig_cut: diagram1 top
+- 660c4863ef 0620_2021MJ_52_q01 checks.figure: 0620_2021MJ_52_q01_diagram1: crop cut: ink crosses the top edge
+- bcceee906d 0620_2021MJ_52_q01 fig_cut: diagram1 bottom
+- adfcb3a90e 0620_2021MJ_52_q01 fig_text: diagram1: ● ● Use a 25 cm3 measuring cylinder to 
+- 05c40d9ee3 0620_2021MJ_53_q01 checks.figure: 0620_2021MJ_53_q01_diagram1: crop cut: ink crosses the top edge
+- f308335be8 0620_2021MJ_53_q01 fig_cut: diagram1 bottom
+- 7b9866a8c6 0620_2021MJ_53_q01 fig_text: diagram1: ● Use a 25 cm3 measuring cylinder to po
+- 63c94b2320 0620_2021MJ_61_q01 fig_text: diagram1: the berries the crushed berries were the
+- 3e2e5028c3 0620_2021MJ_61_q01 fig_text: diagram3: dilute hydrochloric acid aqueous sodium 
+- ef43b6f750 0620_2021MJ_62_q02 checks.figure: 0620_2021MJ_62_q02_diagram1: crop cut: ink crosses the top edge
+- 5fed8ef3f4 0620_2021MJ_62_q01 fig_text: diagram1: excess aqueous the mixture the solid bar
+- c59cfc2529 0620_2021MJ_62_q02 fig_cut: diagram1 bottom
+- 8c9b72f1ff 0620_2021MJ_62_q02 fig_text: diagram1: ● ● Using a measuring cylinder, 16 cm3 
+- 0e8c507836 0620_2021MJ_63_q02 checks.figure: 0620_2021MJ_63_q02_diagram1: crop cut: ink crosses the top edge
+- 9af8b64368 0620_2021MJ_63_q01 fig_text: diagram1: cobalt(II) oxide was added the mixture w
+- 9e26db1b8c 0620_2021MJ_63_q02 fig_cut: diagram1 bottom
+- 9d8a57dae5 0620_2021MJ_63_q02 fig_text: diagram1: ● Using a measuring cylinder, 25 cm3 of
+- b95cf588cd 0620_2021ON_11_q03 fig_overlap: diagram1 / figA
+- b27f49a594 0620_2021ON_11_q28 fig_overlap: diagram1 / figA
+- 7e6b55ea52 0620_2021ON_11_q33 fig_overlap: diagram1 / optA
+- 6d6c14c8db 0620_2021ON_11_q33 fig_overlap: diagram1 / optB
+- 8aed3aabd1 0620_2021ON_11_q33 fig_overlap: diagram1 / optC
+- 1e0d964a9e 0620_2021ON_12_q04 checks.text: editable text has 94% of the printed words
+- f96ebc28f6 0620_2021ON_12_q23 flag.flag: options not found as text (likely in a table or diagrams)
+- 1848aafdaa 0620_2021ON_12_q11 fig_overlap: diagram1 / figA
+- 6950aba85a 0620_2021ON_12_q36 fig_overlap: diagram1 / optC
+- 1de76b5152 0620_2021ON_13_q11 fig_overlap: diagram1 / figA
+- b35d25a07a 0620_2021ON_13_q14 fig_overlap: diagram1 / figA
+- a8832441da 0620_2021ON_21_q11 fig_overlap: diagram1 / figA
+- 33917348f7 0620_2021ON_22_q04 checks.text: editable text has 94% of the printed words
+- 4a3bf806f3 0620_2021ON_22_q01 fig_overlap: diagram1 / figA
+- f8bcaac07a 0620_2021ON_22_q01 fig_overlap: diagram2 / figB
+- 3dba2f46d2 0620_2021ON_22_q01 fig_text: diagram1: cotton wool soaked cotton wool soaked
+- 29c830fb82 0620_2021ON_22_q33 fig_overlap: optA / figA
+- 0ec76e00be 0620_2021ON_22_q33 fig_overlap: optB / figA
+- bbc7e842f4 0620_2021ON_22_q33 fig_overlap: optC / figA
+- 7568c30525 0620_2021ON_22_q33 fig_overlap: optD / figA
+- ce7cdaf68c 0620_2021ON_22_q35 fig_overlap: diagram1 / figA
+- b3f3034c9c 0620_2021ON_23_q08 fig_overlap: optA / figA
+- 5239e55cbe 0620_2021ON_23_q08 fig_overlap: optB / figA
+- a98b0b41eb 0620_2021ON_23_q08 fig_overlap: optC / figA
+- 3d15aa93df 0620_2021ON_23_q08 fig_overlap: optD / figA
+- afb4fc8d27 0620_2021ON_23_q17 fig_overlap: diagram1 / figA
+- 77ea074f36 0620_2021ON_23_q37 fig_overlap: diagram1 / figA
+- d8a6b36ccc 0620_2021ON_23_q38 fig_overlap: diagram1 / figA
+- bbc6be8eef 0620_2021ON_61_q01 checks.figure: 0620_2021ON_61_q01_diagram1: crop cut: ink crosses the bottom edge
+- d073356b49 0620_2022FM_12_q03 fig_overlap: diagram1 / figA
+- e0fd003e09 0620_2022FM_12_q07 fig_overlap: diagram1 / figA
+- 381502fa01 0620_2022FM_12_q11 fig_overlap: diagram1 / figA
+- 9330b4c42f 0620_2022FM_12_q31 fig_overlap: diagram1 / figA
+- 31ee7d7d36 0620_2022FM_22_q04 fig_overlap: diagram1 / figA
+- a38c347459 0620_2022FM_22_q11 fig_overlap: optA / figA
+- 6d363adc93 0620_2022FM_22_q11 fig_overlap: optB / figA
+- 8e1c20f123 0620_2022FM_22_q11 fig_overlap: optC / figA
+- df32640e2e 0620_2022FM_22_q11 fig_overlap: optD / figA
+- da0ed2646e 0620_2022FM_22_q33 fig_overlap: diagram1 / figA
+- adbcfca13d 0620_2022FM_22_q36 fig_overlap: diagram1 / figB
+- c554125d33 0620_2022FM_22_q40 fig_overlap: diagram1 / figA
+- f69ccf1806 0620_2022FM_32_q07 checks.figure: 0620_2022FM_32_q07c_diagram2: crop cut: ink crosses the bottom edge
+- ea4a81f2d8 0620_2022FM_42_q02 checks.figure: 0620_2022FM_42_q02b_diagram1: crop cut: ink crosses the top edge
+- bc286ac05b 0620_2022FM_42_q02 checks.figure: 0620_2022FM_42_q02b_diagram2: crop cut: ink crosses the top edge
+- 24b77aa2bc 0620_2022FM_62_q02 checks.figure: 0620_2022FM_62_q02a_diagram1: crop cut: ink crosses the top edge, 1 text line(s) half inside
+- 78f895a5c5 0620_2022FM_62_q02 fig_text: diagram1: thermometer temperature thermometer temp
+- 7a7080725f 0620_2022MJ_11_q10 checks.figure: 0620_2022MJ_11_q10_diagram1: crop cut: ink crosses the bottom edge, 1 text line(s) half inside
+- 88cccca9d8 0620_2022MJ_11_q01 fig_overlap: diagram1 / figA
+- 9851ffd9cb 0620_2022MJ_11_q10 fig_overlap: diagram1 / figA
+- 23c09f9769 0620_2022MJ_11_q16 fig_overlap: diagram1 / figA
+- 4d636dbc50 0620_2022MJ_11_q25 fig_overlap: optA / figA
+- 99a7eaff6f 0620_2022MJ_11_q25 fig_overlap: optB / figA
+- 4bf602b3e3 0620_2022MJ_11_q25 fig_overlap: optC / figA
+- 12f0fcbc25 0620_2022MJ_11_q25 fig_overlap: optD / figA
+- fc81f02db2 0620_2022MJ_12_q07 fig_overlap: optA / figA
+- 61c17617d3 0620_2022MJ_12_q07 fig_overlap: optB / figA
+- 63b5c5c22c 0620_2022MJ_12_q07 fig_overlap: optC / figA
+- ad3902c0a9 0620_2022MJ_12_q07 fig_overlap: optD / figA
+- ac7339ab3c 0620_2022MJ_12_q27 fig_overlap: diagram1 / figA
+- effa2778a2 0620_2022MJ_12_q38 fig_overlap: diagram1 / figA
+- f0e9f5a1b3 0620_2022MJ_13_q10 checks.figure: 0620_2022MJ_13_q10_diagram1: crop cut: ink crosses the bottom edge
+- 51b853510d 0620_2022MJ_13_q04 fig_overlap: diagram1 / figA
+- 8b0b250350 0620_2022MJ_13_q11 fig_overlap: diagram1 / figA
+- 39ba2e73bb 0620_2022MJ_13_q17 fig_overlap: diagram1 / figA
+- 9f0f0c1623 0620_2022MJ_21_q06 checks.figure: 0620_2022MJ_21_q06_diagram1: crop cut: ink crosses the right edge
+- 24951b8f85 0620_2022MJ_21_q10 checks.figure: 0620_2022MJ_21_q10_diagram1: crop cut: ink crosses the bottom edge, 1 text line(s) half inside
+- 79cd6ba9fd 0620_2022MJ_21_q29 checks.figure: 0620_2022MJ_21_q29_diagram1: crop cut: ink crosses the top edge
+- 5f1e15959b 0620_2022MJ_21_q06 fig_overlap: optA / figA
+- 941a02ab5e 0620_2022MJ_21_q06 fig_overlap: optB / figA
+- a18e08c5b4 0620_2022MJ_21_q06 fig_overlap: optC / figA
+- 08b8513a2a 0620_2022MJ_21_q06 fig_overlap: optD / figA
+- fa36778b80 0620_2022MJ_21_q25 fig_overlap: optA / figA
+- ddd2782e81 0620_2022MJ_21_q25 fig_overlap: optB / figA
+- 287fe5dce2 0620_2022MJ_21_q25 fig_overlap: optC / figA
+- 44ea7ae6ac 0620_2022MJ_21_q25 fig_overlap: optD / figA
+- 1e02456cb0 0620_2022MJ_21_q29 fig_overlap: diagram1 / figA
+- e6e5c21098 0620_2022MJ_21_q29 fig_text: diagram1: muddy river water clear river water disi
+- a5436b8870 0620_2022MJ_21_q32 fig_overlap: diagram1 / figA
+- ae88570a41 0620_2022MJ_21_q35 fig_overlap: diagram1 / figA
+- ac0b492967 0620_2022MJ_22_q10 checks.figure: 0620_2022MJ_22_q10_diagram1: crop cut: ink crosses the bottom edge
+- 6e6130d680 0620_2022MJ_22_q38 checks.figure: 0620_2022MJ_22_q38_diagram1: crop cut: ink crosses the bottom edge
+- 57efd26875 0620_2022MJ_22_q16 flag.flag: options not found as text (likely in a table or diagrams)
+- d8220bf6d1 0620_2022MJ_22_q03 fig_overlap: diagram1 / figA
+- 643f8f12ca 0620_2022MJ_22_q05 fig_overlap: diagram1 / figA
+- 003bc45413 0620_2022MJ_22_q06 fig_overlap: optA / figA
+- a9982126c3 0620_2022MJ_22_q06 fig_overlap: optB / figA
+- 8c1b3cf559 0620_2022MJ_22_q06 fig_overlap: optC / figA
+- e78a3cbb65 0620_2022MJ_22_q06 fig_overlap: optD / figA
+- 0b95fbaf6a 0620_2022MJ_22_q11 fig_overlap: diagram1 / figA
+- 8d64f96ed6 0620_2022MJ_22_q16 fig_overlap: diagram1 / figA
+- 2f1eeae37b 0620_2022MJ_22_q35 fig_overlap: diagram1 / figA
+- 553e6ebd72 0620_2022MJ_22_q38 fig_overlap: diagram1 / figA
+- c494ad3ff9 0620_2022MJ_22_q40 fig_overlap: diagram1 / optA
+- 8bb57e6823 0620_2022MJ_22_q40 fig_overlap: diagram1 / optB
+- b8d9292368 0620_2022MJ_22_q40 fig_overlap: diagram2 / optC
+- 80edd5825e 0620_2022MJ_22_q40 fig_overlap: diagram2 / optD
+- 17cc54203a 0620_2022MJ_23_q10 checks.figure: 0620_2022MJ_23_q10_diagram1: crop cut: ink crosses the bottom edge
+- 695862ad60 0620_2022MJ_31_q06 checks.figure: 0620_2022MJ_31_q06a_diagram1: crop cut: 5 text line(s) half inside
+- b93982d7ba 0620_2022MJ_32_q04 fig_cut: diagram1 top
+- 3933966374 0620_2022MJ_51_q01 checks.figure: 0620_2022MJ_51_q01_diagram1: crop cut: ink crosses the top/bottom edge
+- 401119b643 0620_2022MJ_61_q02 fig_cut: diagram1 bottom
+- a08235bc5c 0620_2022MJ_61_q02 fig_text: diagram1: ● A measuring cylinder was used to pour
+- 272bd98baa 0620_2022MJ_62_q02 checks.figure: 0620_2022MJ_62_q02a_diagram1: crop cut: 1 text line(s) half inside
+- 741db8d84c 0620_2022MJ_62_q02 checks.figure: 0620_2022MJ_62_q02b_diagram2: crop cut: 1 text line(s) half inside
+- ff899dd32c 0620_2022MJ_62_q02 fig_text: diagram1: initial burette reading burette reading 
+- 4731375328 0620_2022MJ_62_q02 fig_text: diagram2: initial burette reading burette reading 
+
+## Changed questions
+
+- 0620_2021FM_12_q04 [q] COLLATERAL
+- 0620_2021FM_12_q11 [q] COLLATERAL
+- 0620_2021FM_12_q16 [q] COLLATERAL
+- 0620_2021FM_12_q30 [q] COLLATERAL
+- 0620_2021FM_12_q35 [q] COLLATERAL
+- 0620_2021FM_22_q03 [q] COLLATERAL
+- 0620_2021FM_22_q05 [q] COLLATERAL
+- 0620_2021FM_22_q40 [q] COLLATERAL
+- 0620_2021FM_32_q04 [q] COLLATERAL
+- 0620_2021FM_32_q05 [q] COLLATERAL
+- 0620_2021FM_32_q06 [q] COLLATERAL
+- 0620_2021FM_32_q07 [q] COLLATERAL
+- 0620_2021FM_32_q08 [q] COLLATERAL
+- 0620_2021FM_42_q01 [q+ms] expected
+- 0620_2021FM_42_q05 [q+ms] expected
+- 0620_2021FM_42_q06 [q+ms] expected
+- 0620_2021FM_62_q01 [q] COLLATERAL
+- 0620_2021FM_62_q02 [q] COLLATERAL
+- 0620_2021MJ_11_q02 [q] COLLATERAL
+- 0620_2021MJ_11_q07 [q] COLLATERAL
+- 0620_2021MJ_11_q12 [q] COLLATERAL
+- 0620_2021MJ_11_q15 [q] COLLATERAL
+- 0620_2021MJ_11_q20 [q] COLLATERAL
+- 0620_2021MJ_11_q28 [q] COLLATERAL
+- 0620_2021MJ_11_q37 [q] COLLATERAL
+- 0620_2021MJ_12_q12 [q] COLLATERAL
+- 0620_2021MJ_12_q15 [q] COLLATERAL
+- 0620_2021MJ_12_q37 [q] COLLATERAL
+- 0620_2021MJ_12_q39 [q] COLLATERAL
+- 0620_2021MJ_21_q01 [q] COLLATERAL
+- 0620_2021MJ_21_q06 [q] COLLATERAL
+- 0620_2021MJ_21_q08 [q] COLLATERAL
+- 0620_2021MJ_21_q39 [q] COLLATERAL
+- 0620_2021MJ_22_q39 [q] COLLATERAL
+- 0620_2021MJ_23_q13 [q] COLLATERAL
+- 0620_2021MJ_23_q35 [q] COLLATERAL
+- 0620_2021MJ_31_q01 [q] COLLATERAL
+- 0620_2021MJ_31_q02 [q+ms] expected
+- 0620_2021MJ_31_q04 [q] COLLATERAL
+- 0620_2021MJ_31_q05 [q] COLLATERAL
+- 0620_2021MJ_31_q06 [q] COLLATERAL
+- 0620_2021MJ_31_q07 [q] COLLATERAL
+- 0620_2021MJ_31_q08 [q] COLLATERAL
+- 0620_2021MJ_32_q01 [q] COLLATERAL
+- 0620_2021MJ_32_q02 [q] COLLATERAL
+- 0620_2021MJ_32_q04 [q] COLLATERAL
+- 0620_2021MJ_32_q05 [q] COLLATERAL
+- 0620_2021MJ_32_q06 [q] COLLATERAL
+- 0620_2021MJ_32_q08 [q] COLLATERAL
+- 0620_2021MJ_33_q01 [q] COLLATERAL
+- 0620_2021MJ_33_q02 [q] COLLATERAL
+- 0620_2021MJ_33_q03 [q] COLLATERAL
+- 0620_2021MJ_33_q04 [q] COLLATERAL
+- 0620_2021MJ_33_q05 [q] COLLATERAL
+- 0620_2021MJ_33_q08 [q] COLLATERAL
+- 0620_2021MJ_41_q03 [q] COLLATERAL
+- 0620_2021MJ_41_q04 [q] COLLATERAL
+- 0620_2021MJ_41_q06 [q] COLLATERAL
+- 0620_2021MJ_41_q07 [q+ms] expected
+- 0620_2021MJ_42_q04 [q] COLLATERAL
+- 0620_2021MJ_42_q05 [q] COLLATERAL
+- 0620_2021MJ_43_q03 [q] COLLATERAL
+- 0620_2021MJ_43_q04 [q] COLLATERAL
+- 0620_2021MJ_43_q06 [q] COLLATERAL
+- 0620_2021MJ_51_q03 [q] COLLATERAL
+- 0620_2021MJ_52_q01 [q] COLLATERAL
+- 0620_2021MJ_53_q01 [q] COLLATERAL
+- 0620_2021MJ_53_q03 [q] COLLATERAL
+- 0620_2021MJ_61_q01 [q] COLLATERAL
+- 0620_2021MJ_61_q04 [q] COLLATERAL
+- 0620_2021MJ_62_q01 [q] COLLATERAL
+- 0620_2021MJ_62_q02 [q] COLLATERAL
+- 0620_2021MJ_63_q01 [q] COLLATERAL
+- 0620_2021MJ_63_q02 [q] COLLATERAL
+- 0620_2021MJ_63_q04 [q] COLLATERAL
+- 0620_2021ON_11_q03 [q] COLLATERAL
+- 0620_2021ON_11_q28 [q] COLLATERAL
+- 0620_2021ON_11_q33 [q] COLLATERAL
+- 0620_2021ON_12_q11 [q] COLLATERAL
+- 0620_2021ON_12_q36 [q] COLLATERAL
+- 0620_2021ON_13_q11 [q] COLLATERAL
+- 0620_2021ON_13_q14 [q] COLLATERAL
+- 0620_2021ON_21_q11 [q] COLLATERAL
+- 0620_2021ON_22_q01 [q] COLLATERAL
+- 0620_2021ON_22_q33 [q] COLLATERAL
+- 0620_2021ON_22_q35 [q] COLLATERAL
+- 0620_2021ON_23_q08 [q] COLLATERAL
+- 0620_2021ON_23_q17 [q] COLLATERAL
+- 0620_2021ON_23_q37 [q] COLLATERAL
+- 0620_2021ON_23_q38 [q] COLLATERAL
+- 0620_2021ON_31_q01 [q] COLLATERAL
+- 0620_2021ON_31_q02 [q] COLLATERAL
+- 0620_2021ON_31_q03 [q] COLLATERAL
+- 0620_2021ON_31_q06 [q] COLLATERAL
+- 0620_2021ON_31_q07 [q+ms] expected
+- 0620_2021ON_31_q08 [q] COLLATERAL
+- 0620_2021ON_32_q01 [q] COLLATERAL
+- 0620_2021ON_32_q02 [q] COLLATERAL
+- 0620_2021ON_32_q06 [q] expected
+- 0620_2021ON_32_q08 [q] COLLATERAL
+- 0620_2021ON_33_q01 [q] COLLATERAL
+- 0620_2021ON_33_q02 [q] COLLATERAL
+- 0620_2021ON_33_q03 [q] COLLATERAL
+- 0620_2021ON_33_q06 [q] COLLATERAL
+- 0620_2021ON_33_q07 [q] COLLATERAL
+- 0620_2021ON_33_q08 [q] COLLATERAL
+- 0620_2021ON_41_q03 [q] COLLATERAL
+- 0620_2021ON_42_q01 [q] COLLATERAL
+- 0620_2021ON_42_q04 [q] COLLATERAL
+- 0620_2021ON_42_q06 [q] COLLATERAL
+- 0620_2021ON_43_q03 [q] COLLATERAL
+- 0620_2021ON_43_q05 [q] COLLATERAL
+- 0620_2021ON_43_q06 [q] COLLATERAL
+- 0620_2021ON_43_q07 [q+ms] expected
+- 0620_2021ON_61_q01 [q] COLLATERAL
+- 0620_2021ON_61_q02 [q] COLLATERAL
+- 0620_2021ON_62_q01 [q] COLLATERAL
+- 0620_2021ON_62_q02 [q] COLLATERAL
+- 0620_2021ON_63_q01 [q] COLLATERAL
+- 0620_2022FM_12_q03 [q] COLLATERAL
+- 0620_2022FM_12_q07 [q] COLLATERAL
+- 0620_2022FM_12_q11 [q] COLLATERAL
+- 0620_2022FM_12_q31 [q] COLLATERAL
+- 0620_2022FM_22_q04 [q] COLLATERAL
+- 0620_2022FM_22_q11 [q] COLLATERAL
+- 0620_2022FM_22_q33 [q] COLLATERAL
+- 0620_2022FM_22_q36 [q] COLLATERAL
+- 0620_2022FM_22_q40 [q] COLLATERAL
+- 0620_2022FM_32_q01 [q] COLLATERAL
+- 0620_2022FM_32_q02 [q] COLLATERAL
+- 0620_2022FM_32_q03 [q] COLLATERAL
+- 0620_2022FM_32_q05 [q] COLLATERAL
+- 0620_2022FM_32_q07 [q] COLLATERAL
+- 0620_2022FM_42_q02 [q] COLLATERAL
+- 0620_2022FM_42_q04 [q] COLLATERAL
+- 0620_2022FM_42_q05 [q] COLLATERAL
+- 0620_2022FM_62_q01 [q] COLLATERAL
+- 0620_2022FM_62_q02 [q] COLLATERAL
+- 0620_2022MJ_11_q01 [q] COLLATERAL
+- 0620_2022MJ_11_q10 [q] COLLATERAL
+- 0620_2022MJ_11_q16 [q] COLLATERAL
+- 0620_2022MJ_11_q25 [q] COLLATERAL
+- 0620_2022MJ_12_q07 [q] COLLATERAL
+- 0620_2022MJ_12_q27 [q] COLLATERAL
+- 0620_2022MJ_12_q38 [q] COLLATERAL
+- 0620_2022MJ_13_q04 [q] COLLATERAL
+- 0620_2022MJ_13_q11 [q] COLLATERAL
+- 0620_2022MJ_13_q17 [q] COLLATERAL
+- 0620_2022MJ_21_q06 [q] COLLATERAL
+- 0620_2022MJ_21_q25 [q] COLLATERAL
+- 0620_2022MJ_21_q29 [q] COLLATERAL
+- 0620_2022MJ_21_q32 [q] COLLATERAL
+- 0620_2022MJ_21_q35 [q] expected
+- 0620_2022MJ_22_q03 [q] COLLATERAL
+- 0620_2022MJ_22_q05 [q] COLLATERAL
+- 0620_2022MJ_22_q06 [q] COLLATERAL
+- 0620_2022MJ_22_q11 [q] COLLATERAL
+- 0620_2022MJ_22_q16 [q] COLLATERAL
+- 0620_2022MJ_22_q35 [q] expected
+- 0620_2022MJ_22_q38 [q] COLLATERAL
+- 0620_2022MJ_22_q40 [q] COLLATERAL
+- 0620_2022MJ_31_q02 [q] COLLATERAL
+- 0620_2022MJ_31_q04 [q] COLLATERAL
+- 0620_2022MJ_31_q05 [q] COLLATERAL
+- 0620_2022MJ_31_q06 [q] COLLATERAL
+- 0620_2022MJ_31_q08 [q] COLLATERAL
+- 0620_2022MJ_32_q04 [q] COLLATERAL
+- 0620_2022MJ_32_q05 [q] COLLATERAL
+- 0620_2022MJ_32_q06 [q] COLLATERAL
+- 0620_2022MJ_32_q07 [q] COLLATERAL
+- 0620_2022MJ_32_q08 [q] COLLATERAL
+- 0620_2022MJ_33_q04 [q] COLLATERAL
+- 0620_2022MJ_33_q06 [q] COLLATERAL
+- 0620_2022MJ_33_q07 [q] COLLATERAL
+- 0620_2022MJ_33_q08 [q] COLLATERAL
+- 0620_2022MJ_41_q04 [q] COLLATERAL
+- 0620_2022MJ_41_q07 [q] COLLATERAL
+- 0620_2022MJ_42_q04 [q] COLLATERAL
+- 0620_2022MJ_42_q05 [q] COLLATERAL
+- 0620_2022MJ_43_q03 [q] COLLATERAL
+- 0620_2022MJ_43_q04 [q+ms] expected
+- 0620_2022MJ_51_q01 [q] COLLATERAL
+- 0620_2022MJ_52_q03 [q] COLLATERAL
+- 0620_2022MJ_61_q01 [q] COLLATERAL
+- 0620_2022MJ_61_q02 [q] COLLATERAL
+- 0620_2022MJ_62_q01 [q] COLLATERAL
+- 0620_2022MJ_62_q02 [q] COLLATERAL
+- 0620_2022MJ_62_q04 [q] COLLATERAL
+- 0620_2022MJ_63_q01 [q] COLLATERAL
+- 0620_2022MJ_63_q02 [q] COLLATERAL
+

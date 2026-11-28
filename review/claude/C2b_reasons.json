@@ -77,6 +77,174 @@
 ],
 "reasons": [
 {
+"qid": "0620_2021FM_12_q04",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "0840b06ef7",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021FM_12_q11",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "e7fc4c1189",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021FM_12_q16",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "26481f3115",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021FM_12_q30",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "e28715c922",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021FM_12_q35",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "6552cf7013",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021FM_12_q35",
+"check": "flag.flag",
+"detail": "options not found as text (likely in a table or diagrams)",
+"part": "",
+"blocking": false,
+"rid": "131f642e58",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021FM_22_q03",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "f4c34b9f31",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021FM_22_q05",
+"check": "fig_overlap",
+"detail": "optA / figA",
+"part": "",
+"blocking": false,
+"rid": "c21efb2895",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021FM_22_q05",
+"check": "fig_overlap",
+"detail": "optB / figA",
+"part": "",
+"blocking": false,
+"rid": "681fc7093c",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021FM_22_q05",
+"check": "fig_overlap",
+"detail": "optC / figA",
+"part": "",
+"blocking": false,
+"rid": "762cc02f43",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021FM_22_q05",
+"check": "fig_overlap",
+"detail": "optD / figA",
+"part": "",
+"blocking": false,
+"rid": "47c1f08832",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021FM_22_q35",
+"check": "flag.flag",
+"detail": "options not found as text (likely in a table or diagrams)",
+"part": "",
+"blocking": false,
+"rid": "6a2fcd48ed",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021FM_22_q40",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "bc2b647000",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021FM_32_q05",
+"check": "fig_text",
+"detail": "diagram2: cotton wool soaked in filter paper soake",
+"part": "",
+"blocking": false,
+"rid": "f3564261b9",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
 "qid": "0620_2021FM_32_q06",
 "check": "ms_picture",
 "detail": "6(b): picture cell",
@@ -86,7 +254,8 @@
 "status": "passed",
 "note": "picture cell whole and as printed",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021FM_42_q01",
@@ -95,10 +264,11 @@
 "part": "1(v)(i)",
 "blocking": false,
 "rid": "ef9d8a2806",
-"status": "fixed",
+"status": "verified",
 "note": "'1(v)(i)'-(iii) printed for the three marks of 1(a)(vi)",
 "pattern": 351,
-"from": "pass1"
+"from": "pass1",
+"pass2": "gone"
 },
 {
 "qid": "0620_2021FM_42_q01",
@@ -107,10 +277,11 @@
 "part": "1(v)(ii)",
 "blocking": false,
 "rid": "1684a2a992",
-"status": "fixed",
+"status": "verified",
 "note": "'1(v)(i)'-(iii) printed for the three marks of 1(a)(vi)",
 "pattern": 351,
-"from": "pass1"
+"from": "pass1",
+"pass2": "gone"
 },
 {
 "qid": "0620_2021FM_42_q01",
@@ -119,10 +290,11 @@
 "part": "1(v)(iii)",
 "blocking": false,
 "rid": "f6feceb2fc",
-"status": "fixed",
+"status": "verified",
 "note": "'1(v)(i)'-(iii) printed for the three marks of 1(a)(vi)",
 "pattern": 351,
-"from": "pass1"
+"from": "pass1",
+"pass2": "gone"
 },
 {
 "qid": "0620_2021FM_42_q01",
@@ -131,10 +303,11 @@
 "part": "1(v)(i)",
 "blocking": false,
 "rid": "975992b6b5",
-"status": "fixed",
+"status": "verified",
 "note": "as flag",
 "pattern": 351,
-"from": "pass1"
+"from": "pass1",
+"pass2": "gone"
 },
 {
 "qid": "0620_2021FM_42_q05",
@@ -143,10 +316,11 @@
 "part": "5(c)(ii)",
 "blocking": false,
 "rid": "7b590a1e88",
-"status": "fixed",
+"status": "verified",
 "note": "atom letters (tall letter images) missing from the structure pictures - fixed",
 "pattern": 352,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021FM_42_q05",
@@ -155,10 +329,11 @@
 "part": "5(g)(ii)",
 "blocking": false,
 "rid": "6af4282e4f",
-"status": "fixed",
+"status": "verified",
 "note": "atom letters (tall letter images) missing from the structure pictures - fixed",
 "pattern": 352,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021FM_42_q06",
@@ -167,10 +342,11 @@
 "part": "6(b)(i)",
 "blocking": false,
 "rid": "7f241a5490",
-"status": "fixed",
+"status": "verified",
 "note": "atom letters (tall letter images) missing from the structure pictures - fixed",
 "pattern": 352,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021FM_42_q06",
@@ -179,10 +355,11 @@
 "part": "6(c)(ii)",
 "blocking": false,
 "rid": "6547652c6e",
-"status": "fixed",
+"status": "verified",
 "note": "atom letters (tall letter images) missing from the structure pictures - fixed",
 "pattern": 352,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021FM_62_q01",
@@ -194,7 +371,356 @@
 "status": "passed",
 "note": "picture cell whole and as printed",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2021MJ_11_q02",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "a6c3d377cc",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_11_q07",
+"check": "fig_overlap",
+"detail": "optA / figA",
+"part": "",
+"blocking": false,
+"rid": "d545b84005",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_11_q07",
+"check": "fig_overlap",
+"detail": "optB / figA",
+"part": "",
+"blocking": false,
+"rid": "b625ccf376",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_11_q07",
+"check": "fig_overlap",
+"detail": "optC / figA",
+"part": "",
+"blocking": false,
+"rid": "c66f084ca2",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_11_q07",
+"check": "fig_overlap",
+"detail": "optD / figA",
+"part": "",
+"blocking": false,
+"rid": "9e4c951e34",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_11_q12",
+"check": "checks.figure",
+"detail": "0620_2021MJ_11_q12_diagram1: crop cut: ink crosses the bottom edge",
+"part": "",
+"blocking": false,
+"rid": "4b4cf9bad5",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_11_q12",
+"check": "fig_overlap",
+"detail": "optA / figA",
+"part": "",
+"blocking": false,
+"rid": "f5b4d56aa2",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_11_q12",
+"check": "fig_overlap",
+"detail": "optB / figA",
+"part": "",
+"blocking": false,
+"rid": "287d40c2e4",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_11_q12",
+"check": "fig_overlap",
+"detail": "optC / figA",
+"part": "",
+"blocking": false,
+"rid": "c22db83eb2",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_11_q12",
+"check": "fig_overlap",
+"detail": "optD / figA",
+"part": "",
+"blocking": false,
+"rid": "3cba67afb7",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_11_q15",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "d7618da641",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_11_q20",
+"check": "checks.figure",
+"detail": "0620_2021MJ_11_q20_diagram1: crop cut: ink crosses the top edge",
+"part": "",
+"blocking": false,
+"rid": "479a1941e1",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_11_q20",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "cdf1d318df",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_11_q28",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "90e02df3d9",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_11_q37",
+"check": "fig_overlap",
+"detail": "optA / figA",
+"part": "",
+"blocking": false,
+"rid": "6c76b7f278",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_11_q37",
+"check": "fig_overlap",
+"detail": "optB / figA",
+"part": "",
+"blocking": false,
+"rid": "d48584257e",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_11_q37",
+"check": "fig_overlap",
+"detail": "optC / figA",
+"part": "",
+"blocking": false,
+"rid": "d4ecd5838a",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_11_q37",
+"check": "fig_overlap",
+"detail": "optD / figA",
+"part": "",
+"blocking": false,
+"rid": "5e9fa9b283",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_12_q12",
+"check": "fig_cut",
+"detail": "diagram1 top",
+"part": "",
+"blocking": false,
+"rid": "e1060086c8",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_12_q12",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "74a80700fc",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_12_q15",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "152d44d990",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_12_q21",
+"check": "flag.flag",
+"detail": "options not found as text (likely in a table or diagrams)",
+"part": "",
+"blocking": false,
+"rid": "b09672f914",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_12_q37",
+"check": "fig_overlap",
+"detail": "diagram1 / optB",
+"part": "",
+"blocking": false,
+"rid": "fa1012dd06",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_12_q39",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "b287c57140",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_21_q01",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "5990efef1f",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_21_q06",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "f7b3b4d80a",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_21_q08",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "c029c916a3",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_21_q12",
+"check": "checks.figure",
+"detail": "0620_2021MJ_21_q12_diagram1: crop cut: ink crosses the bottom edge",
+"part": "",
+"blocking": false,
+"rid": "9db43147af",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_21_q20",
+"check": "checks.figure",
+"detail": "0620_2021MJ_21_q20_diagram1: crop cut: ink crosses the top edge",
+"part": "",
+"blocking": false,
+"rid": "5ecba1e42f",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2021MJ_22_q39",
@@ -206,7 +732,80 @@
 "status": "passed",
 "note": "open continuation bond of the polymer chain (C1 known class)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2021MJ_22_q39",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "4733aac79e",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_23_q13",
+"check": "checks.figure",
+"detail": "0620_2021MJ_23_q13_diagram1: crop cut: ink crosses the bottom edge",
+"part": "",
+"blocking": false,
+"rid": "9882e6f8bb",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_23_q13",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "31c31e1248",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_23_q13",
+"check": "fig_overlap",
+"detail": "diagram2 / figA",
+"part": "",
+"blocking": false,
+"rid": "80e4b2a533",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_23_q35",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "b10b7aa19b",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_23_q35",
+"check": "fig_overlap",
+"detail": "diagram2 / figA",
+"part": "",
+"blocking": false,
+"rid": "0a08e6d97b",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2021MJ_23_q39",
@@ -218,7 +817,32 @@
 "status": "passed",
 "note": "open continuation bond of the polymer chain (C1 known class)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2021MJ_31_q02",
+"check": "checks.figure",
+"detail": "0620_2021MJ_31_q02fii_diagram1: crop cut: 1 text line(s) half inside",
+"part": "",
+"blocking": false,
+"rid": "d961dff8ec",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_31_q02",
+"check": "fig_text",
+"detail": "diagram1: cotton wool soaked in damp blue litmus p",
+"part": "",
+"blocking": false,
+"rid": "98fa9e25a5",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2021MJ_31_q02",
@@ -227,10 +851,11 @@
 "part": "2(d)",
 "blocking": false,
 "rid": "1552da5a7d",
-"status": "fixed",
+"status": "verified",
 "note": "'pH 4 circled' printed with no label = 2(d): split off the 2(c) row",
 "pattern": 351,
-"from": "pass1"
+"from": "pass1",
+"pass2": "gone"
 },
 {
 "qid": "0620_2021MJ_31_q02",
@@ -239,10 +864,59 @@
 "part": "2(d)",
 "blocking": false,
 "rid": "89e6e0197a",
-"status": "fixed",
+"status": "verified",
 "note": "'pH 4 circled' printed with no label = 2(d): split off the 2(c) row",
 "pattern": 351,
-"from": "pass1"
+"from": "pass1",
+"pass2": "gone"
+},
+{
+"qid": "0620_2021MJ_31_q06",
+"check": "checks.figure",
+"detail": "0620_2021MJ_31_q06b_diagram1: crop cut: ink crosses the top edge, 1 text line(s) half inside",
+"part": "",
+"blocking": false,
+"rid": "3fb349158d",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_32_q02",
+"check": "checks.figure",
+"detail": "0620_2021MJ_32_q02d_diagram1: crop cut: 1 text line(s) half inside",
+"part": "",
+"blocking": false,
+"rid": "71ad7dbb13",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_32_q05",
+"check": "checks.figure",
+"detail": "0620_2021MJ_32_q05ci_diagram2: crop cut: ink crosses the top edge",
+"part": "",
+"blocking": false,
+"rid": "9d829cd32c",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_33_q02",
+"check": "fig_text",
+"detail": "diagram1: cotton wool soaked in damp red litmus pa",
+"part": "",
+"blocking": false,
+"rid": "f6d907e9d9",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2021MJ_33_q04",
@@ -254,7 +928,8 @@
 "status": "passed",
 "note": "picture cell whole and as printed",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021MJ_33_q05",
@@ -266,7 +941,20 @@
 "status": "passed",
 "note": "rows match the print; sums differ by Cambridge slips (2022 MJ 63 2(e) prints 1 of the paper's 2 marks)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2021MJ_41_q03",
+"check": "checks.figure",
+"detail": "0620_2021MJ_41_q03b_diagram1: crop cut: ink crosses the top edge",
+"part": "",
+"blocking": false,
+"rid": "f049baa31c",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2021MJ_41_q03",
@@ -278,7 +966,8 @@
 "status": "passed",
 "note": "rows match the print; sums differ by Cambridge slips (2022 MJ 63 2(e) prints 1 of the paper's 2 marks)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021MJ_41_q07",
@@ -287,10 +976,11 @@
 "part": "7(c)(ii)",
 "blocking": false,
 "rid": "d1b12e7769",
-"status": "fixed",
+"status": "verified",
 "note": "atom letters (tall letter images) missing from the structure pictures - fixed",
 "pattern": 352,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021MJ_41_q07",
@@ -299,10 +989,11 @@
 "part": "7(d)(iv)",
 "blocking": false,
 "rid": "a8b634c5b7",
-"status": "fixed",
+"status": "verified",
 "note": "atom letters (tall letter images) missing from the structure pictures - fixed",
 "pattern": 352,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021MJ_42_q02",
@@ -314,7 +1005,44 @@
 "status": "passed",
 "note": "tables (incl. isotope notation, ticks, shading) match the print at 2x",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2021MJ_42_q05",
+"check": "checks.figure",
+"detail": "0620_2021MJ_42_q05aii_diagram1: crop cut: ink crosses the top edge",
+"part": "",
+"blocking": false,
+"rid": "7c8418dedb",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_43_q03",
+"check": "checks.figure",
+"detail": "0620_2021MJ_43_q03b_diagram1: crop cut: ink crosses the top edge",
+"part": "",
+"blocking": false,
+"rid": "730d23d939",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_43_q04",
+"check": "fig_cut",
+"detail": "diagram1 top",
+"part": "",
+"blocking": false,
+"rid": "5944eba517",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2021MJ_51_q01",
@@ -326,7 +1054,104 @@
 "status": "passed",
 "note": "tables (incl. isotope notation, ticks, shading) match the print at 2x",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2021MJ_52_q01",
+"check": "checks.figure",
+"detail": "0620_2021MJ_52_q01_diagram1: crop cut: ink crosses the top edge",
+"part": "",
+"blocking": false,
+"rid": "660c4863ef",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_52_q01",
+"check": "fig_cut",
+"detail": "diagram1 bottom",
+"part": "",
+"blocking": false,
+"rid": "bcceee906d",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_52_q01",
+"check": "fig_text",
+"detail": "diagram1: ● ● \u0007Use a 25 cm3 measuring cylinder to ",
+"part": "",
+"blocking": false,
+"rid": "adfcb3a90e",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_53_q01",
+"check": "checks.figure",
+"detail": "0620_2021MJ_53_q01_diagram1: crop cut: ink crosses the top edge",
+"part": "",
+"blocking": false,
+"rid": "05c40d9ee3",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_53_q01",
+"check": "fig_cut",
+"detail": "diagram1 bottom",
+"part": "",
+"blocking": false,
+"rid": "f308335be8",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_53_q01",
+"check": "fig_text",
+"detail": "diagram1: ● \u0007Use a 25 cm3 measuring cylinder to po",
+"part": "",
+"blocking": false,
+"rid": "7b9866a8c6",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_61_q01",
+"check": "fig_text",
+"detail": "diagram1: the berries the crushed berries were the",
+"part": "",
+"blocking": false,
+"rid": "63c94b2320",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_61_q01",
+"check": "fig_text",
+"detail": "diagram3: dilute hydrochloric acid aqueous sodium ",
+"part": "",
+"blocking": false,
+"rid": "3e2e5028c3",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2021MJ_61_q01",
@@ -338,7 +1163,116 @@
 "status": "passed",
 "note": "picture cell whole and as printed",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2021MJ_62_q01",
+"check": "fig_text",
+"detail": "diagram1: excess aqueous the mixture the solid bar",
+"part": "",
+"blocking": false,
+"rid": "5fed8ef3f4",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_62_q02",
+"check": "checks.figure",
+"detail": "0620_2021MJ_62_q02_diagram1: crop cut: ink crosses the top edge",
+"part": "",
+"blocking": false,
+"rid": "ef43b6f750",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_62_q02",
+"check": "fig_cut",
+"detail": "diagram1 bottom",
+"part": "",
+"blocking": false,
+"rid": "c59cfc2529",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_62_q02",
+"check": "fig_text",
+"detail": "diagram1: ● ● \u0007Using a measuring cylinder, 16 cm3 ",
+"part": "",
+"blocking": false,
+"rid": "8c9b72f1ff",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_63_q01",
+"check": "fig_text",
+"detail": "diagram1: cobalt(II) oxide was added the mixture w",
+"part": "",
+"blocking": false,
+"rid": "9af8b64368",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_63_q02",
+"check": "checks.figure",
+"detail": "0620_2021MJ_63_q02_diagram1: crop cut: ink crosses the top edge",
+"part": "",
+"blocking": false,
+"rid": "0e8c507836",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_63_q02",
+"check": "fig_cut",
+"detail": "diagram1 bottom",
+"part": "",
+"blocking": false,
+"rid": "9e26db1b8c",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021MJ_63_q02",
+"check": "fig_text",
+"detail": "diagram1: ● \u0007Using a measuring cylinder, 25 cm3 of",
+"part": "",
+"blocking": false,
+"rid": "9d8a57dae5",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_11_q03",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "b95cf588cd",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2021ON_11_q09",
@@ -350,7 +1284,68 @@
 "status": "passed",
 "note": "every printed word present (NaClO3 tokenisation)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2021ON_11_q28",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "b27f49a594",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_11_q33",
+"check": "fig_overlap",
+"detail": "diagram1 / optA",
+"part": "",
+"blocking": false,
+"rid": "7e6b55ea52",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_11_q33",
+"check": "fig_overlap",
+"detail": "diagram1 / optB",
+"part": "",
+"blocking": false,
+"rid": "6d6c14c8db",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_11_q33",
+"check": "fig_overlap",
+"detail": "diagram1 / optC",
+"part": "",
+"blocking": false,
+"rid": "8aed3aabd1",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_12_q04",
+"check": "checks.text",
+"detail": "editable text has 94% of the printed words",
+"part": "",
+"blocking": false,
+"rid": "1e0d964a9e",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2021ON_12_q09",
@@ -362,7 +1357,44 @@
 "status": "passed",
 "note": "every printed word present (NaClO3 tokenisation)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2021ON_12_q11",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "1848aafdaa",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_12_q23",
+"check": "flag.flag",
+"detail": "options not found as text (likely in a table or diagrams)",
+"part": "",
+"blocking": false,
+"rid": "f96ebc28f6",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_12_q36",
+"check": "fig_overlap",
+"detail": "diagram1 / optC",
+"part": "",
+"blocking": false,
+"rid": "6950aba85a",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2021ON_13_q09",
@@ -374,7 +1406,236 @@
 "status": "passed",
 "note": "every printed word present (NaClO3 tokenisation)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2021ON_13_q11",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "1de76b5152",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_13_q14",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "b35d25a07a",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_21_q11",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "a8832441da",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_22_q01",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "4a3bf806f3",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_22_q01",
+"check": "fig_overlap",
+"detail": "diagram2 / figB",
+"part": "",
+"blocking": false,
+"rid": "f8bcaac07a",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_22_q01",
+"check": "fig_text",
+"detail": "diagram1: cotton wool soaked cotton wool soaked",
+"part": "",
+"blocking": false,
+"rid": "3dba2f46d2",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_22_q04",
+"check": "checks.text",
+"detail": "editable text has 94% of the printed words",
+"part": "",
+"blocking": false,
+"rid": "33917348f7",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_22_q33",
+"check": "fig_overlap",
+"detail": "optA / figA",
+"part": "",
+"blocking": false,
+"rid": "29c830fb82",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_22_q33",
+"check": "fig_overlap",
+"detail": "optB / figA",
+"part": "",
+"blocking": false,
+"rid": "0ec76e00be",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_22_q33",
+"check": "fig_overlap",
+"detail": "optC / figA",
+"part": "",
+"blocking": false,
+"rid": "bbc7e842f4",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_22_q33",
+"check": "fig_overlap",
+"detail": "optD / figA",
+"part": "",
+"blocking": false,
+"rid": "7568c30525",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_22_q35",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "ce7cdaf68c",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_23_q08",
+"check": "fig_overlap",
+"detail": "optA / figA",
+"part": "",
+"blocking": false,
+"rid": "b3f3034c9c",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_23_q08",
+"check": "fig_overlap",
+"detail": "optB / figA",
+"part": "",
+"blocking": false,
+"rid": "5239e55cbe",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_23_q08",
+"check": "fig_overlap",
+"detail": "optC / figA",
+"part": "",
+"blocking": false,
+"rid": "a98b0b41eb",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_23_q08",
+"check": "fig_overlap",
+"detail": "optD / figA",
+"part": "",
+"blocking": false,
+"rid": "3d15aa93df",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_23_q17",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "afb4fc8d27",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_23_q37",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "77ea074f36",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2021ON_23_q38",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "d8a6b36ccc",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2021ON_31_q07",
@@ -383,10 +1644,11 @@
 "part": "7(c)(ii)",
 "blocking": false,
 "rid": "3be5a6ff15",
-"status": "fixed",
+"status": "verified",
 "note": "'7(c)(Ii)' (capital I) read as 7(c)(ii)",
 "pattern": 351,
-"from": "pass1"
+"from": "pass1",
+"pass2": "gone"
 },
 {
 "qid": "0620_2021ON_31_q07",
@@ -395,10 +1657,11 @@
 "part": "7(c)(ii)",
 "blocking": false,
 "rid": "e8253190ef",
-"status": "fixed",
+"status": "verified",
 "note": "'7(c)(Ii)' (capital I) read as 7(c)(ii)",
 "pattern": 351,
-"from": "pass1"
+"from": "pass1",
+"pass2": "gone"
 },
 {
 "qid": "0620_2021ON_32_q05",
@@ -410,7 +1673,8 @@
 "status": "passed",
 "note": "picture cell whole and as printed",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021ON_32_q06",
@@ -419,10 +1683,11 @@
 "part": "",
 "blocking": false,
 "rid": "96cd10ddee",
-"status": "fixed",
+"status": "verified",
 "note": "the diagram was no figure (pre-2023 papers print no 'Fig.' captions): now a picture, rotated 'Br' labels right",
 "pattern": 355,
-"from": "pass1"
+"from": "pass1",
+"pass2": "gone"
 },
 {
 "qid": "0620_2021ON_41_q02",
@@ -434,7 +1699,8 @@
 "status": "passed",
 "note": "tables (incl. isotope notation, ticks, shading) match the print at 2x",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021ON_41_q05",
@@ -446,7 +1712,8 @@
 "status": "passed",
 "note": "picture cell whole and as printed",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021ON_41_q05",
@@ -458,7 +1725,8 @@
 "status": "passed",
 "note": "picture cell whole and as printed",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021ON_42_q01",
@@ -470,7 +1738,8 @@
 "status": "passed",
 "note": "tables (incl. isotope notation, ticks, shading) match the print at 2x",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021ON_42_q03",
@@ -482,7 +1751,8 @@
 "status": "passed",
 "note": "tables (incl. isotope notation, ticks, shading) match the print at 2x",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021ON_42_q03",
@@ -494,7 +1764,8 @@
 "status": "passed",
 "note": "tables (incl. isotope notation, ticks, shading) match the print at 2x",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021ON_42_q04",
@@ -506,7 +1777,8 @@
 "status": "passed",
 "note": "rows match the print; sums differ by Cambridge slips (2022 MJ 63 2(e) prints 1 of the paper's 2 marks)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021ON_43_q04",
@@ -518,7 +1790,8 @@
 "status": "passed",
 "note": "tables (incl. isotope notation, ticks, shading) match the print at 2x",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021ON_43_q07",
@@ -527,10 +1800,11 @@
 "part": "7(d)(iii)",
 "blocking": false,
 "rid": "4831819091",
-"status": "fixed",
+"status": "verified",
 "note": "a text line under the structure half inside the picture (squeezed / cut) - now text",
 "pattern": 353,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021ON_52_q01",
@@ -542,7 +1816,20 @@
 "status": "passed",
 "note": "tables (incl. isotope notation, ticks, shading) match the print at 2x",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2021ON_61_q01",
+"check": "checks.figure",
+"detail": "0620_2021ON_61_q01_diagram1: crop cut: ink crosses the bottom edge",
+"part": "",
+"blocking": false,
+"rid": "bbc6be8eef",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2021ON_62_q02",
@@ -554,7 +1841,8 @@
 "status": "passed",
 "note": "tables (incl. isotope notation, ticks, shading) match the print at 2x",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2021ON_63_q01",
@@ -566,7 +1854,128 @@
 "status": "passed",
 "note": "picture cell whole and as printed",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2022FM_12_q03",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "d073356b49",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022FM_12_q07",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "e0fd003e09",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022FM_12_q11",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "381502fa01",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022FM_12_q31",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "9330b4c42f",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022FM_22_q04",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "31ee7d7d36",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022FM_22_q11",
+"check": "fig_overlap",
+"detail": "optA / figA",
+"part": "",
+"blocking": false,
+"rid": "a38c347459",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022FM_22_q11",
+"check": "fig_overlap",
+"detail": "optB / figA",
+"part": "",
+"blocking": false,
+"rid": "6d363adc93",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022FM_22_q11",
+"check": "fig_overlap",
+"detail": "optC / figA",
+"part": "",
+"blocking": false,
+"rid": "8e1c20f123",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022FM_22_q11",
+"check": "fig_overlap",
+"detail": "optD / figA",
+"part": "",
+"blocking": false,
+"rid": "df32640e2e",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022FM_22_q33",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "da0ed2646e",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2022FM_22_q36",
@@ -578,7 +1987,68 @@
 "status": "passed",
 "note": "open continuation bond of the polymer chain (C1 known class)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2022FM_22_q36",
+"check": "fig_overlap",
+"detail": "diagram1 / figB",
+"part": "",
+"blocking": false,
+"rid": "adbcfca13d",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022FM_22_q40",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "c554125d33",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022FM_32_q07",
+"check": "checks.figure",
+"detail": "0620_2022FM_32_q07c_diagram2: crop cut: ink crosses the bottom edge",
+"part": "",
+"blocking": false,
+"rid": "f69ccf1806",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022FM_42_q02",
+"check": "checks.figure",
+"detail": "0620_2022FM_42_q02b_diagram1: crop cut: ink crosses the top edge",
+"part": "",
+"blocking": false,
+"rid": "ea4a81f2d8",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022FM_42_q02",
+"check": "checks.figure",
+"detail": "0620_2022FM_42_q02b_diagram2: crop cut: ink crosses the top edge",
+"part": "",
+"blocking": false,
+"rid": "bc286ac05b",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2022FM_42_q05",
@@ -590,7 +2060,416 @@
 "status": "passed",
 "note": "rows match the print; sums differ by Cambridge slips (2022 MJ 63 2(e) prints 1 of the paper's 2 marks)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2022FM_62_q02",
+"check": "checks.figure",
+"detail": "0620_2022FM_62_q02a_diagram1: crop cut: ink crosses the top edge, 1 text line(s) half inside",
+"part": "",
+"blocking": false,
+"rid": "24b77aa2bc",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022FM_62_q02",
+"check": "fig_text",
+"detail": "diagram1: thermometer temperature thermometer temp",
+"part": "",
+"blocking": false,
+"rid": "78f895a5c5",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_11_q01",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "88cccca9d8",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_11_q10",
+"check": "checks.figure",
+"detail": "0620_2022MJ_11_q10_diagram1: crop cut: ink crosses the bottom edge, 1 text line(s) half inside",
+"part": "",
+"blocking": false,
+"rid": "7a7080725f",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_11_q10",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "9851ffd9cb",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_11_q16",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "23c09f9769",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_11_q25",
+"check": "fig_overlap",
+"detail": "optA / figA",
+"part": "",
+"blocking": false,
+"rid": "4d636dbc50",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_11_q25",
+"check": "fig_overlap",
+"detail": "optB / figA",
+"part": "",
+"blocking": false,
+"rid": "99a7eaff6f",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_11_q25",
+"check": "fig_overlap",
+"detail": "optC / figA",
+"part": "",
+"blocking": false,
+"rid": "4bf602b3e3",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_11_q25",
+"check": "fig_overlap",
+"detail": "optD / figA",
+"part": "",
+"blocking": false,
+"rid": "12f0fcbc25",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_12_q07",
+"check": "fig_overlap",
+"detail": "optA / figA",
+"part": "",
+"blocking": false,
+"rid": "fc81f02db2",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_12_q07",
+"check": "fig_overlap",
+"detail": "optB / figA",
+"part": "",
+"blocking": false,
+"rid": "61c17617d3",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_12_q07",
+"check": "fig_overlap",
+"detail": "optC / figA",
+"part": "",
+"blocking": false,
+"rid": "63b5c5c22c",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_12_q07",
+"check": "fig_overlap",
+"detail": "optD / figA",
+"part": "",
+"blocking": false,
+"rid": "ad3902c0a9",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_12_q27",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "ac7339ab3c",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_12_q38",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "effa2778a2",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_13_q04",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "51b853510d",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_13_q10",
+"check": "checks.figure",
+"detail": "0620_2022MJ_13_q10_diagram1: crop cut: ink crosses the bottom edge",
+"part": "",
+"blocking": false,
+"rid": "f0e9f5a1b3",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_13_q11",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "8b0b250350",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_13_q17",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "39ba2e73bb",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_21_q06",
+"check": "checks.figure",
+"detail": "0620_2022MJ_21_q06_diagram1: crop cut: ink crosses the right edge",
+"part": "",
+"blocking": false,
+"rid": "9f0f0c1623",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_21_q06",
+"check": "fig_overlap",
+"detail": "optA / figA",
+"part": "",
+"blocking": false,
+"rid": "5f1e15959b",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_21_q06",
+"check": "fig_overlap",
+"detail": "optB / figA",
+"part": "",
+"blocking": false,
+"rid": "941a02ab5e",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_21_q06",
+"check": "fig_overlap",
+"detail": "optC / figA",
+"part": "",
+"blocking": false,
+"rid": "a18e08c5b4",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_21_q06",
+"check": "fig_overlap",
+"detail": "optD / figA",
+"part": "",
+"blocking": false,
+"rid": "08b8513a2a",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_21_q10",
+"check": "checks.figure",
+"detail": "0620_2022MJ_21_q10_diagram1: crop cut: ink crosses the bottom edge, 1 text line(s) half inside",
+"part": "",
+"blocking": false,
+"rid": "24951b8f85",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_21_q25",
+"check": "fig_overlap",
+"detail": "optA / figA",
+"part": "",
+"blocking": false,
+"rid": "fa36778b80",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_21_q25",
+"check": "fig_overlap",
+"detail": "optB / figA",
+"part": "",
+"blocking": false,
+"rid": "ddd2782e81",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_21_q25",
+"check": "fig_overlap",
+"detail": "optC / figA",
+"part": "",
+"blocking": false,
+"rid": "287fe5dce2",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_21_q25",
+"check": "fig_overlap",
+"detail": "optD / figA",
+"part": "",
+"blocking": false,
+"rid": "44ea7ae6ac",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_21_q29",
+"check": "checks.figure",
+"detail": "0620_2022MJ_21_q29_diagram1: crop cut: ink crosses the top edge",
+"part": "",
+"blocking": false,
+"rid": "79cd6ba9fd",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_21_q29",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "1e02456cb0",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_21_q29",
+"check": "fig_text",
+"detail": "diagram1: muddy river water clear river water disi",
+"part": "",
+"blocking": false,
+"rid": "e6e5c21098",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_21_q32",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "a5436b8870",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2022MJ_21_q35",
@@ -599,10 +2478,143 @@
 "part": "",
 "blocking": false,
 "rid": "427ffc1794",
-"status": "fixed",
+"status": "not fixed",
 "note": "H under the right carbon cut by the crop's bottom edge - bond followed to its atom",
 "pattern": 354,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2022MJ_21_q35",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "ae88570a41",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_22_q03",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "d8220bf6d1",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_22_q05",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "643f8f12ca",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_22_q06",
+"check": "fig_overlap",
+"detail": "optA / figA",
+"part": "",
+"blocking": false,
+"rid": "003bc45413",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_22_q06",
+"check": "fig_overlap",
+"detail": "optB / figA",
+"part": "",
+"blocking": false,
+"rid": "a9982126c3",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_22_q06",
+"check": "fig_overlap",
+"detail": "optC / figA",
+"part": "",
+"blocking": false,
+"rid": "8c1b3cf559",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_22_q06",
+"check": "fig_overlap",
+"detail": "optD / figA",
+"part": "",
+"blocking": false,
+"rid": "e78a3cbb65",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_22_q10",
+"check": "checks.figure",
+"detail": "0620_2022MJ_22_q10_diagram1: crop cut: ink crosses the bottom edge",
+"part": "",
+"blocking": false,
+"rid": "ac0b492967",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_22_q11",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "0b95fbaf6a",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_22_q16",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "8d64f96ed6",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_22_q16",
+"check": "flag.flag",
+"detail": "options not found as text (likely in a table or diagrams)",
+"part": "",
+"blocking": false,
+"rid": "57efd26875",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2022MJ_22_q35",
@@ -611,10 +2623,107 @@
 "part": "",
 "blocking": false,
 "rid": "fc62bce19c",
-"status": "fixed",
+"status": "not fixed",
 "note": "H under the right carbon cut by the crop's bottom edge - bond followed to its atom",
 "pattern": 354,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2022MJ_22_q35",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "2f1eeae37b",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_22_q38",
+"check": "checks.figure",
+"detail": "0620_2022MJ_22_q38_diagram1: crop cut: ink crosses the bottom edge",
+"part": "",
+"blocking": false,
+"rid": "6e6130d680",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_22_q38",
+"check": "fig_overlap",
+"detail": "diagram1 / figA",
+"part": "",
+"blocking": false,
+"rid": "553e6ebd72",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_22_q40",
+"check": "fig_overlap",
+"detail": "diagram1 / optA",
+"part": "",
+"blocking": false,
+"rid": "c494ad3ff9",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_22_q40",
+"check": "fig_overlap",
+"detail": "diagram1 / optB",
+"part": "",
+"blocking": false,
+"rid": "8bb57e6823",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_22_q40",
+"check": "fig_overlap",
+"detail": "diagram2 / optC",
+"part": "",
+"blocking": false,
+"rid": "b8d9292368",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_22_q40",
+"check": "fig_overlap",
+"detail": "diagram2 / optD",
+"part": "",
+"blocking": false,
+"rid": "80edd5825e",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_23_q10",
+"check": "checks.figure",
+"detail": "0620_2022MJ_23_q10_diagram1: crop cut: ink crosses the bottom edge",
+"part": "",
+"blocking": false,
+"rid": "17cc54203a",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2022MJ_23_q35",
@@ -623,10 +2732,35 @@
 "part": "",
 "blocking": false,
 "rid": "d6c98c833f",
-"status": "fixed",
+"status": "not fixed",
 "note": "H under the right carbon cut by the crop's bottom edge - bond followed to its atom",
 "pattern": 354,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2022MJ_31_q06",
+"check": "checks.figure",
+"detail": "0620_2022MJ_31_q06a_diagram1: crop cut: 5 text line(s) half inside",
+"part": "",
+"blocking": false,
+"rid": "695862ad60",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_32_q04",
+"check": "fig_cut",
+"detail": "diagram1 top",
+"part": "",
+"blocking": false,
+"rid": "b93982d7ba",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2022MJ_41_q02",
@@ -638,7 +2772,8 @@
 "status": "passed",
 "note": "tables (incl. isotope notation, ticks, shading) match the print at 2x",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2022MJ_41_q02",
@@ -650,7 +2785,8 @@
 "status": "passed",
 "note": "tables (incl. isotope notation, ticks, shading) match the print at 2x",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2022MJ_41_q05",
@@ -659,10 +2795,11 @@
 "part": "5(f)",
 "blocking": false,
 "rid": "0172dc38dd",
-"status": "fixed",
+"status": "not fixed",
 "note": "atom letters (tall letter images) missing from the structure pictures - fixed",
 "pattern": 352,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2022MJ_43_q04",
@@ -671,10 +2808,23 @@
 "part": "4(c)(iii)",
 "blocking": false,
 "rid": "f6d5900004",
-"status": "fixed",
+"status": "verified",
 "note": "a text line under the structure half inside the picture (squeezed / cut) - now text",
 "pattern": 353,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2022MJ_51_q01",
+"check": "checks.figure",
+"detail": "0620_2022MJ_51_q01_diagram1: crop cut: ink crosses the top/bottom edge",
+"part": "",
+"blocking": false,
+"rid": "3933966374",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2022MJ_52_q01",
@@ -686,7 +2836,32 @@
 "status": "passed",
 "note": "rows match the print; '1(i)(i)' = part (i) sub (i), the checker reads it ambiguously",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2022MJ_61_q02",
+"check": "fig_cut",
+"detail": "diagram1 bottom",
+"part": "",
+"blocking": false,
+"rid": "401119b643",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_61_q02",
+"check": "fig_text",
+"detail": "diagram1: ● \u0007A measuring cylinder was used to pour",
+"part": "",
+"blocking": false,
+"rid": "a08235bc5c",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2022MJ_62_q01",
@@ -698,7 +2873,56 @@
 "status": "passed",
 "note": "picture cell whole and as printed",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
+},
+{
+"qid": "0620_2022MJ_62_q02",
+"check": "checks.figure",
+"detail": "0620_2022MJ_62_q02a_diagram1: crop cut: 1 text line(s) half inside",
+"part": "",
+"blocking": false,
+"rid": "272bd98baa",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_62_q02",
+"check": "checks.figure",
+"detail": "0620_2022MJ_62_q02b_diagram2: crop cut: 1 text line(s) half inside",
+"part": "",
+"blocking": false,
+"rid": "741db8d84c",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_62_q02",
+"check": "fig_text",
+"detail": "diagram1: initial burette reading burette reading ",
+"part": "",
+"blocking": false,
+"rid": "ff899dd32c",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
+},
+{
+"qid": "0620_2022MJ_62_q02",
+"check": "fig_text",
+"detail": "diagram2: initial burette reading burette reading ",
+"part": "",
+"blocking": false,
+"rid": "4731375328",
+"status": "open",
+"note": "",
+"pattern": null,
+"from": "pass2"
 },
 {
 "qid": "0620_2022MJ_62_q02",
@@ -710,7 +2934,8 @@
 "status": "passed",
 "note": "rows match the print; '1(i)(i)' = part (i) sub (i), the checker reads it ambiguously",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 },
 {
 "qid": "0620_2022MJ_63_q02",
@@ -722,7 +2947,8 @@
 "status": "passed",
 "note": "rows match the print; sums differ by Cambridge slips (2022 MJ 63 2(e) prints 1 of the paper's 2 marks)",
 "pattern": null,
-"from": "pass1"
+"from": "pass1",
+"pass2": "present"
 }
 ]
 }
