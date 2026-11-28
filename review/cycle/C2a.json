@@ -1,0 +1,33 @@
+{
+ "batch": "C2a",
+ "subject": "0620",
+ "sessions": [
+  "2022-ON",
+  "2023-FM",
+  "2023-MJ",
+  "2023-ON"
+ ],
+ "created": "2026-11-28T11:41:12+00:00",
+ "phases": {
+  "build": [],
+  "claude": [],
+  "claude1": [],
+  "claude2": [],
+  "review": [],
+  "fix": []
+ },
+ "github_runs": [],
+ "counts": {},
+ "errors": [],
+ "tokens": [],
+ "events": [
+  {
+   "at": "2026-11-28T11:41:12+00:00",
+   "task": "start C2a --subject"
+  },
+  {
+   "at": "2026-11-28T11:41:12+00:00",
+   "task": "fetch PDFs C0+C1+C2a, ms_rebuild baseline check"
+  }
+ ]
+}
