@@ -24,6 +24,20 @@
  "marks": 1,
  "figures": [
   {
+   "caption": null,
+   "page": 5,
+   "bbox": [
+    67.4,
+    290.8,
+    554.4,
+    308.7
+   ],
+   "id": "0620_2005MJ_01_q11_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
    "page": 5,
    "bbox": [
     68.0,
@@ -38,8 +52,10 @@
   }
  ],
  "review": {
-  "reasons": [],
-  "status": "auto"
+  "reasons": [
+   "options not found as text (likely in a table or diagrams)"
+  ],
+  "status": "flagged"
  },
  "type": "mcq",
  "options": [],
@@ -74,26 +90,9 @@
    "caption": null
   },
   {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
+   "type": "figure",
+   "id": "0620_2005MJ_01_q11_diagram1",
+   "caption": null
   }
  ]
 }
