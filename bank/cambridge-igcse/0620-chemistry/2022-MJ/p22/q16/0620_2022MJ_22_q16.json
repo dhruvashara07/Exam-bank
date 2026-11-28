@@ -24,6 +24,20 @@
  "marks": 1,
  "figures": [
   {
+   "caption": null,
+   "page": 7,
+   "bbox": [
+    179.2,
+    100.1,
+    417.7,
+    240.4
+   ],
+   "id": "0620_2022MJ_22_q16_diagram1",
+   "alt": "",
+   "kind": "diagram",
+   "part": ""
+  },
+  {
    "page": 7,
    "bbox": [
     180.2,
@@ -38,8 +52,10 @@
   }
  ],
  "review": {
-  "reasons": [],
-  "status": "auto"
+  "reasons": [
+   "options not found as text (likely in a table or diagrams)"
+  ],
+  "status": "flagged"
  },
  "type": "mcq",
  "options": [
@@ -83,26 +99,9 @@
    "caption": null
   },
   {
-   "type": "options",
-   "in_figure": true,
-   "options": [
-    {
-     "label": "A",
-     "html": ""
-    },
-    {
-     "label": "B",
-     "html": ""
-    },
-    {
-     "label": "C",
-     "html": ""
-    },
-    {
-     "label": "D",
-     "html": ""
-    }
-   ]
+   "type": "figure",
+   "id": "0620_2022MJ_22_q16_diagram1",
+   "caption": null
   }
  ]
 }
